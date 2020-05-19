@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Record object [ADO]
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6a7c3b44498dee88be8dc3f37cd713038375753
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917360"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754046"
 ---
 # <a name="record-object-ado"></a>Record オブジェクト (ADO)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)またはデータプロバイダーの行、またはファイルやディレクトリなどの半構造化データプロバイダーによって返されるオブジェクトを表します。  
@@ -59,7 +59,7 @@ ms.locfileid: "67917360"
   
 -   [State](../../../ado/reference/ado-api/state-property-ado.md)プロパティを使用して、**レコード**の現在の状態を示します。  
   
--   [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)プロパティを使用して、*単純*、*コレクション*、または*構造化ドキュメント*の**レコード** - の種類を示します。  
+-   **Record**  -  [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)プロパティを使用して、*単純*、*コレクション*、または*構造化ドキュメント*のレコードの種類を示します。  
   
 -   [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)メソッドを使用して非同期操作の実行を停止します。  
   

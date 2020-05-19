@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - LoadFromFile method [ADO]
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ce90b13a677246fb64462fbe691eb9e3efaa3c7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b7f4b28a7d63654441d8a66730e729483596b3a8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918268"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754580"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile メソッド (ADO)
 既存のファイルの内容を[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)に読み込みます。  
@@ -36,7 +36,7 @@ Stream.LoadFromFileFileName
  *FileName*  
  **ストリーム**に読み込むファイルの名前を含む**文字列**値です。 *FileName*には、任意の有効なパスと名前を UNC 形式で含めることができます。 指定したファイルが存在しない場合は、実行時エラーが発生します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドを使用すると、ローカルファイルの内容を**ストリーム**オブジェクトに読み込むことができます。 これは、ローカルファイルの内容をサーバーにアップロードするために使用できます。  
   
  **LoadFromFile**を呼び出す前に、**ストリーム**オブジェクトが既に開かれている必要があります。 このメソッドは、**ストリーム**オブジェクトのバインディングを変更しません。それでも、**ストリーム**が最初に開かれた URL または**レコード**で指定されたオブジェクトにバインドされます。  

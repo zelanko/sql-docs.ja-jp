@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c2b07bb18aab0cde13a82540226fa477c306f268
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932892"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755095"
 ---
 # <a name="execute-method-ado-connection"></a>Execute メソッド (ADO Connection)
 指定されたクエリ、SQL ステートメント、ストアドプロシージャ、またはプロバイダー固有のテキストを実行します。  
@@ -39,7 +39,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
 #### <a name="parameters"></a>パラメーター  
  *CommandText*  
- 実行する SQL ステートメント、ストアドプロシージャ、URL、またはプロバイダー固有のテキストを含む**文字列**値です。 **必要に応じ**て、プロバイダーが SQL 対応である場合にのみ、テーブル名を使用できます。 たとえば、"Customers" という名前のテーブルが使用されている場合、ADO は自動的に標準の SQL Select 構文を先頭に付加し、" [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT * FROM Customers" をステートメントとしてプロバイダーに渡します。  
+ 実行する SQL ステートメント、ストアドプロシージャ、URL、またはプロバイダー固有のテキストを含む**文字列**値です。 **必要に応じ**て、プロバイダーが SQL 対応である場合にのみ、テーブル名を使用できます。 たとえば、"Customers" という名前のテーブルが使用されている場合、ADO は自動的に標準の SQL Select 構文を先頭に付加し、"SELECT * FROM Customers" をステートメントとして [!INCLUDE[tsql](../../../includes/tsql-md.md)] プロバイダーに渡します。  
   
  *RecordsAffected*  
  任意。 操作によって影響を受けたレコードの数をプロバイダーが返す**長い**変数。  

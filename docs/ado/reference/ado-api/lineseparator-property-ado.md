@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - LineSeparator property [ADO]
 ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0343954f549f2cba4b535b8ab4ebafec5a842015
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9248dcabb4c52ceceb6e4876b034480415e77963
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918283"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754819"
 ---
 # <a name="lineseparator-property-ado"></a>LineSeparator プロパティ (ADO)
 テキスト[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトの行区切り記号として使用されるバイナリ文字を示します。  

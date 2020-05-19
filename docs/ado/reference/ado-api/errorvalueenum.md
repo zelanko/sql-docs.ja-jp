@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18117be8dccc64f7ed2583170cf062145836f337
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e0280faf3399c24015fd07ec2e62c688a3d8e799
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932874"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755227"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 ADO ランタイムエラーの種類を指定します。  
@@ -36,7 +36,7 @@ ADO ランタイムエラーの種類を指定します。
 > [!NOTE]
 >  ADO アプリケーションに OLE DB エラーが渡される場合があります。 通常、これらは Windows ファシリティコード*4*で識別できます。 たとえば、0x800***4***のようになります。  
   
-|Constant|値|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|Source として**Command**オブジェクトを含む**Recordset**オブジェクトの**ActiveConnection**プロパティを変更することはできません。|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|サーバーは操作を完了できません。|  
@@ -98,7 +98,7 @@ ADO ランタイムエラーの種類を指定します。
   
  次に示す ADO/WFC のサブセットのみが定義されています。  
   
-|Constant|  
+|定数|  
 |--------------|  
 |AdoEnums. BOUNDTOCOMMAND|  
 |AdoEnums DATACONVERSION|  

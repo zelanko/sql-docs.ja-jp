@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - LockType property [ADO]
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7b50ab4a6fa31ec74371b86129f30abf11a1ba6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4a8d0f94d4482649030561f2ac71ed6de1374e46
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932250"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754486"
 ---
 # <a name="locktype-property-ado"></a>LockType プロパティ (ADO)
 編集中にレコードに配置されたロックの種類を示します。  
@@ -28,7 +28,7 @@ ms.locfileid: "67932250"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [Locktypeenum](../../../ado/reference/ado-api/locktypeenum.md)値を設定または返します。 既定値は**Adlockreadonly**です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開く前に、 **LockType**プロパティを設定して、プロバイダーが使用するロックの種類を指定します。 開いている**レコードセット**オブジェクトで使用中のロックの種類を返すには、プロパティを読み取ります。  
   
  プロバイダーは、すべてのロックの種類をサポートしているとは限りません。 プロバイダーが要求された**LockType**設定をサポートできない場合は、別の種類のロックに置き換えられます。 **レコードセット**オブジェクトで使用できる実際のロック機能を確認するには、 **Adupdate**と**adupdate**の[サポート](../../../ado/reference/ado-api/supports-method.md)メソッドを使用します。  

@@ -1,7 +1,6 @@
 ---
 title: Read メソッド |Microsoft Docs
 ms.prod: sql
-ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Read method [ADO]
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 992631b8fb3864b6d7404f86d2f65de222f0b1c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 75b39b758d48a173bcfbe84e3fecbd20cce5ee12
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917416"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754269"
 ---
 # <a name="read-method"></a>Read メソッド
 バイナリ[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトから、指定されたバイト数を読み取ります。  
@@ -40,7 +39,7 @@ Variant = Stream.Read ( NumBytes)
 ## <a name="return-value"></a>戻り値  
  **Read**メソッドは、指定されたバイト数またはストリーム全体を**ストリーム**オブジェクトから読み取り、結果のデータを**バリアント**として返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *Numbytes*が**ストリーム**の残りのバイト数よりも大きい場合は、残っているバイトだけが返されます。 読み取られたデータは、 *Numbytes*によって指定された長さと一致するように埋め込まれていません。 読み取るバイトが残っていない場合は、null 値を持つバリアントが返されます。 **Read**を使用して後方に読み取ることはできません。  
   
 > [!NOTE]

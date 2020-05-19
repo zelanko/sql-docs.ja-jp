@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - DeleteRecord method [ADO]
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 550638de710f709616e03cb79afd69f1e533ce9e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919081"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755313"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord メソッド (ADO)
 [レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるエンティティを削除します。  
@@ -37,7 +37,7 @@ Record.DeleteRecord Source, Async
  *ソース*  
  任意。 削除するエンティティ (ファイルやディレクトリなど) を識別する URL を含む**文字列**値です。 *Source*を省略した場合、または空の文字列を指定した場合は、現在の[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるエンティティが削除されます。 レコードがコレクションレコード (ディレクトリなどの**Adcollectionrecord**の[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) ) である場合は、すべての子 (サブディレクトリなど) も削除されます。  
   
- *Io*  
+ *Async*  
  任意。 **ブール**値。 **True**の場合、削除操作が非同期であることを指定します。  
   
 ## <a name="remarks"></a>Remarks  

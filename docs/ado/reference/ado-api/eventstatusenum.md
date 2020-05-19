@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - EventStatusEnum enumeration [ADO]
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8883679a85d1e134b1759c90cde524bb97995130
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1abce457e64c7f6865f94b85473fbc589e5ffb4f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932862"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755146"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 イベントの実行の現在の状態を指定します。  
   
-|Constant|値|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|イベントの発生原因となった操作のキャンセルを要求します。|  
 |**adStatusCantDeny**|3|操作が保留中の操作の取り消しを要求できないことを示します。|  
@@ -36,7 +36,7 @@ ms.locfileid: "67932862"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|Constant|  
+|定数|  
 |--------------|  
 |AdoEnums (キャンセル)|  
 |AdoEnums. CANTDENY|  

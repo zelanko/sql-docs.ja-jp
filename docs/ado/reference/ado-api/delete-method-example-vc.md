@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Delete method [ADO], VC++ example
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: af20890a9c75ee815145b78f1c10de377b861436
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 121db203f5f30abe54bf021f1ecf52784215074d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933102"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755351"
 ---
 # <a name="delete-method-example-vc"></a>Delete メソッドの例 (VC++)
 この例では、 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)メソッドを使用して、レコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)から指定されたレコードを削除します。  
@@ -271,7 +271,7 @@ void PrintComError(_com_error &e) {
 TC4203  
 ```  
   
-## <a name="sample-output"></a>サンプル出力  
+## <a name="sample-output"></a>出力例  
   
 ```  
 Before delete there are 7 titles with 20 percent royalty :  

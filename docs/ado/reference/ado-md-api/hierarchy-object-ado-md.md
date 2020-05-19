@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Hierarchy object [ADO MD]
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 35e02e4823d0a3abf245e1885b95176d6350d712
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1232d228d597188364cb20a7f60dfaa11c8af21a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949693"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753966"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy オブジェクト (ADO MD)
 [ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)のメンバーを集計または "ロールアップ" できる1つの方法を表します。 ディメンションは、1つまたは複数の階層に沿って集計できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Hierarchy**オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
   
 -   [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)プロパティと[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティを使用して、**階層**を識別します。  
