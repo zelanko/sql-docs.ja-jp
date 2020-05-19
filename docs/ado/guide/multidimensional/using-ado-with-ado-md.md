@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, using with ADO MD
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3c634ec056d42e97dcbea3422a0e19a33596d54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 591a10e8c91aa22f939ff48f341b376bbd8ebe1b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923146"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748007"
 ---
 # <a name="using-ado-with-ado-md"></a>ADO MD と ADO の併用
 ADO と ADO MD は関連がありますが、個別のオブジェクトモデルです。 ADO には、データソースに接続したり、コマンドを実行したり、表形式のデータとスキーマメタデータを表形式で取得したり、プロバイダーのエラー情報を表示したりするためのオブジェクトが用意されています。 ADO MD には、多次元データを取得し、多次元スキーマメタデータを表示するためのオブジェクトが用意されています。  

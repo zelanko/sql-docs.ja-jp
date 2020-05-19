@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dcd4839fc984dacddc79f54b350a98cdbe53355b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923131"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747992"
 ---
 # <a name="working-with-multidimensional-data"></a>多次元データの操作
 *セルセット*は、多次元データに対するクエリの結果です。 これは、軸のコレクションで構成されており、通常は4つの軸を超えていません。通常は2つまたは3つです。 *軸*は、1つまたは複数のディメンションのメンバーのコレクションであり、キューブ内の特定の値を検索またはフィルター処理するために使用されます。  
