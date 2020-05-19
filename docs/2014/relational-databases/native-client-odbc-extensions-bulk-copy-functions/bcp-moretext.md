@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83142e83ba04328ddf025e0a2f16ff18ad947075
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfa6968d4bb4254b52efd3e09d7f04e3c7fa9268
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688843"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701926"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
   長い可変長データ型の値の一部を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信します。  
@@ -58,20 +58,20 @@ pData
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>Remarks  
- この関数を[bcp_bind](bcp-bind.md)および[bcp_sendrow](bcp-sendrow.md)と組み合わせて使用すると、長い可変長のデータ値を多数の小さなチャンクで SQL Server にコピーできます。 **bcp_moretext**は`text`、 `ntext`、、 `image`、 `varchar(max)` `nvarchar(max)`、、 `varbinary(max)`、ユーザー定義型 (UDT)、および XML の SQL Server 各データ型を持つ列で使用できます。 **bcp_moretext**は、データ変換をサポートしていません。指定されたデータは、ターゲット列のデータ型と一致している必要があります。  
+## <a name="remarks"></a>解説  
+ この関数を[bcp_bind](bcp-bind.md)および[bcp_sendrow](bcp-sendrow.md)と組み合わせて使用すると、長い可変長のデータ値を多数の小さなチャンクで SQL Server にコピーできます。 **bcp_moretext**は、、、、、、 `text` `ntext` `image` `varchar(max)` `nvarchar(max)` `varbinary(max)` 、ユーザー定義型 (UDT)、および XML の SQL Server 各データ型を持つ列で使用できます。 **bcp_moretext**は、データ変換をサポートしていません。指定されたデータは、ターゲット列のデータ型と一致している必要があります。  
   
- **Bcp_moretext**でサポートされているデータ型に対して null 以外の*pData*パラメーターを`bcp_sendrow`指定して**bcp_bind**を呼び出すと、は長さに関係なく、データ値全体を送信します。 ただし、 **bcp_bind**がサポートされているデータ型に対して NULL の*pData*パラメーターを持っている場合、 **bcp_moretext**を使用し`bcp_sendrow`て、データが存在するバインド列が処理されたことを示すから正常に返された直後にデータをコピーできます。  
+ **Bcp_moretext**でサポートされているデータ型に対して null 以外の*pData*パラメーターを指定して**bcp_bind**を呼び出すと、は `bcp_sendrow` 長さに関係なく、データ値全体を送信します。 ただし、 **bcp_bind**がサポートされているデータ型に対して NULL の*pData*パラメーターを持っている場合、 **bcp_moretext**を使用して、 `bcp_sendrow` データが存在するバインド列が処理されたことを示すから正常に返された直後にデータをコピーできます。  
   
  **Bcp_moretext**を使用して、サポートされているデータ型の列を1つの行で送信する場合は、その行でサポートされている他のすべてのデータ型の列を送信するためにも使用する必要があります。 列はスキップされません。 サポートされるデータ型は、SQLTEXT、SQLNTEXT、SQLIMAGE、SQLUDT、および SQLXML です。 列の型が varchar(max)、nvarchar(max)、または varbinary(max) の場合、SQLCHARACTER、SQLVARCHAR、SQNCHAR、SQLBINARY、SQLVARBINARY も、サポート対象となります。  
   
- **Bcp_bind**または[bcp_collen](bcp-collen.md)のいずれかを呼び出すと、SQL Server 列にコピーされるすべてのデータパーツの合計長が設定されます。 **Bcp_bind**への呼び出しで指定されたよりも多くのバイト SQL Server `bcp_collen`を送信しようとしたか、エラーが発生しました。 このエラーは、たとえば、SQL Server `bcp_collen` `text`の列の使用可能なデータの長さを4500に設定するために使用されたアプリケーションで、データバッファーの長さが1000バイトであることを各呼び出しに対して示す**bcp_moretext** 5 回呼び出された場合に発生します。  
+ **Bcp_bind**または[bcp_collen](bcp-collen.md)のいずれかを呼び出すと、SQL Server 列にコピーされるすべてのデータパーツの合計長が設定されます。 **Bcp_bind**への呼び出しで指定されたよりも多くのバイト SQL Server を送信しようとしたか、 `bcp_collen` エラーが発生しました。 このエラーは、たとえば、 `bcp_collen` SQL Server の列の使用可能なデータの長さを4500に設定するために使用されたアプリケーションで、 `text` データバッファーの長さが1000バイトであることを各呼び出しに対して示す**bcp_moretext** 5 回呼び出された場合に発生します。  
   
  コピーされた行に複数の長い可変長列が含まれている場合、 **bcp_moretext**は最初にそのデータを最も低い順序の列に送信し、次に、その後に最も低い2番目の列に番号が付けられます。 コピーするデータの合計長を正しく設定することが重要です。 長さの設定以外に、一括コピーによって列のすべてのデータを受け取ったことを示す方法はありません。  
   
- Bcp_sendrow `var(max)`と bcp_moretext を使用して値がサーバーに送信される場合、列の長さを設定するために bcp_collen を呼び出す必要はありません。 代わりに、これらの型に対してのみ、長さ0の bcp_sendrow を呼び出すことによって値が終了します。  
+ `var(max)`Bcp_sendrow と bcp_moretext を使用して値がサーバーに送信される場合、列の長さを設定するために bcp_collen を呼び出す必要はありません。 代わりに、これらの型に対してのみ、長さ0の bcp_sendrow を呼び出すことによって値が終了します。  
   
- 通常、アプリケーションで`bcp_sendrow`は、ループ内でを呼び出し、 **bcp_moretext**して、多数のデータ行を送信します。 2つ`text`の列を含むテーブルに対してこれを行う方法の概要を次に示します。  
+ 通常、アプリケーションでは `bcp_sendrow` 、ループ内でを呼び出し、 **bcp_moretext**して、多数のデータ行を送信します。 2つの列を含むテーブルに対してこれを行う方法の概要を次に示し `text` ます。  
   
 ```  
 while (there are still rows to send)  
@@ -91,7 +91,7 @@ bcp_moretext(hdbc, 0, NULL);
 ```  
   
 ## <a name="example"></a>例  
- この例では、 **bcp_bind**と`bcp_sendrow`で**bcp_moretext**を使用する方法を示します。  
+ この例では、 **bcp_bind**とで**bcp_moretext**を使用する方法を示し `bcp_sendrow` ます。  
   
 ```  
 // Variables like henv not specified.  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xsd:simpleType declarations
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f0b24a9c02e38ba8165e015cdf8d1b107e64cbaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6682bdb7443ae9ee41bd1a7f77d7b5d5ae4d7359
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193076"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702302"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>&lt;xsd:simpleType&gt; 宣言の値
   次の表に、認識されるすべての XSD 単純型を列挙して、適用される制限の概要を示します。  
@@ -26,7 +26,7 @@ ms.locfileid: "63193076"
   
 |単純型|制限事項|  
 |-----------------|----------------|  
-|`duration`|年の部分は、-2<sup>^</sup>31 ~ 2<sup>^</sup>31-1 の範囲内である必要があります。 月、日、時、分、秒は、いずれも 0 ～ 9999 の範囲で指定する必要があります。 秒部分の小数点以下桁数は 3 桁まで指定できます。|  
+|`duration`|年の部分は、-2 31 ~ 2 31-1 の範囲内である必要があり <sup>^</sup> <sup>^</sup> ます。 月、日、時、分、秒は、いずれも 0 ～ 9999 の範囲で指定する必要があります。 秒部分の小数点以下桁数は 3 桁まで指定できます。|  
 |`dateTime`|タイム ゾーンのサブフィールド内の時間部分は、-14 ～ 14 の範囲で指定する必要があります。 年部分は 1 ～ 9999 の範囲で指定する必要があります。 月部分は 1 ～ 12 の範囲で指定する必要があります。 日部分は 1 ～ 31 の範囲で指定し、さらにカレンダーの日付として有効な値である必要があります。 たとえば、1974-02-31 を指定した場合、2 月には 31 日までないので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では無効な日付として検出され、エラーを返します。<br /><br /> 秒部分は、100 ナノ秒の精度をサポートします。 タイムゾーンは省略可能です。<br /><br /> SQL Server 2005 では、-9999 ～ 9999 の範囲で年がサポートされていました。 SQL Server では、さらに制限された年の範囲がサポートされるようになりました。 詳細については、「 [型指定された XML と型指定されていない XML の比較](compare-typed-xml-to-untyped-xml.md)」を参照してください。|  
 |`date`|年部分は 1 ～ 9999 の範囲で指定する必要があります。 月部分は 1 ～ 12 の範囲で指定する必要があります。 日部分は 1 ～ 31 の範囲で指定し、さらにカレンダーの日付として有効な値である必要があります。 たとえば、1974-02-31 を指定した場合、2 月には 31 日までないので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では無効な日付として検出され、エラーを返します。<br /><br /> SQL Server 2005 では、-9999 ～ 9999 の範囲で年がサポートされていました。 SQL Server では、さらに制限された年の範囲がサポートされるようになりました。 詳細については、「 [型指定された XML と型指定されていない XML の比較](compare-typed-xml-to-untyped-xml.md)」を参照してください。|  
 |`gYearMonth`|年部分は -9999 ～ 9999 の範囲で指定する必要があります。|  

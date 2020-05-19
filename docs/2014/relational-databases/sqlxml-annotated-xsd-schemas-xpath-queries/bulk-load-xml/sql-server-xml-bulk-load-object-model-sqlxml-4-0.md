@@ -28,15 +28,15 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bf68b7f2c8fd1a2cc8d753ddd6348e8161b55c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9189617e7d572cd46805e34eaa258e81362827d7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013293"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703345"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 一括読み込みオブジェクト モデル (SQLXML 4.0)
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 一括読み込みオブジェクトモデルは、SQLXMLBulkLoad オブジェクトで構成されています。 このオブジェクトでは、次のメソッドとプロパティがサポートされます。  
@@ -118,7 +118,7 @@ ms.locfileid: "66013293"
  SchemaGen  
  一括読み込み操作の前に、必要なテーブルを作成するかどうかを指定します。 このプロパティはブール値をとります。 このプロパティを TRUE に設定すると、マッピング スキーマで指定されているテーブルが作成されます (データベースは存在している必要があります)。 データベース内に1つ以上のテーブルが既に存在する場合、SGDropTables プロパティは、これらの既存のテーブルを削除して再作成するかどうかを決定します。  
   
- SchemaGen プロパティの既定値は FALSE です。 SchemaGen では、新しく作成されたテーブルに PRIMARY KEY 制約は作成されません。 ただし、SchemaGen では、マッピングスキーマで一致する`sql:relationship`注釈と`sql:key-fields`注釈が見つかる場合や、キーフィールドが1つの列で構成されている場合、データベースに外部キー制約が作成されます。  
+ SchemaGen プロパティの既定値は FALSE です。 SchemaGen では、新しく作成されたテーブルに PRIMARY KEY 制約は作成されません。 ただし、SchemaGen では、 `sql:relationship` マッピングスキーマで一致する注釈と注釈が見つかる場合 `sql:key-fields` や、キーフィールドが1つの列で構成されている場合、データベースに外部キー制約が作成されます。  
   
  SchemaGen プロパティを TRUE に設定すると、XML 一括読み込みでは次のことが行われることに注意してください。  
   
@@ -132,18 +132,18 @@ ms.locfileid: "66013293"
  既定値は FALSE です。  
   
  SGUseID  
- `id` 型として指定されているマッピング スキーマの属性を、テーブル作成時の PRIMARY KEY 制約の作成に使用できるかどうかを指定します。 このプロパティは、SchemaGen プロパティが TRUE に設定されている場合に使用します。 SGUseID が TRUE の場合、SchemaGen ユーティリティは、 `dt:type="id"`が主キー列として指定されている属性を使用し、テーブルの作成時に適切な primary key 制約を追加します。  
+ `id` 型として指定されているマッピング スキーマの属性を、テーブル作成時の PRIMARY KEY 制約の作成に使用できるかどうかを指定します。 このプロパティは、SchemaGen プロパティが TRUE に設定されている場合に使用します。 SGUseID が TRUE の場合、SchemaGen ユーティリティは、 `dt:type="id"` が主キー列として指定されている属性を使用し、テーブルの作成時に適切な PRIMARY key 制約を追加します。  
   
  既定値は FALSE です。  
   
  TempFilePath  
- XML 一括読み込みで、読み込んだデータ用の一時ファイルを作成するファイル パスを指定します。 (このプロパティは、Transaction プロパティが TRUE に設定されている場合にのみ役立ちます)。XML 一括読み込みに使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]するアカウントにこのパスへのアクセス権があることを確認する必要があります。 このプロパティを設定しない場合、XML 一括読み込みでは、TEMP 環境変数で指定された場所に一時ファイルが格納されます。  
+ XML 一括読み込みで、読み込んだデータ用の一時ファイルを作成するファイル パスを指定します。 (このプロパティは、Transaction プロパティが TRUE に設定されている場合にのみ役立ちます)。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]XML 一括読み込みに使用するアカウントにこのパスへのアクセス権があることを確認する必要があります。 このプロパティを設定しない場合、XML 一括読み込みでは、TEMP 環境変数で指定された場所に一時ファイルが格納されます。  
   
  トランザクション  
  一括読み込みをトランザクションとして実行するよう指定します。この場合、一括読み込みが失敗するとロールバックが実行されます。 このプロパティはブール値をとります。 このプロパティを TRUE に設定すると、一括読み込みはトランザクション コンテキストで実行されます。 TempFilePath プロパティは、Transaction が TRUE に設定されている場合にのみ役立ちます。  
   
 > [!NOTE]  
->  バイナリデータ (たとえば、bin. hex, bin. base64 XML データ型) をバイナリ、image [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型に読み込んでいる場合は、Transaction プロパティを FALSE に設定する必要があります。  
+>  バイナリデータ (たとえば、bin. hex, bin. base64 XML データ型) をバイナリ、image データ型に読み込んでいる場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Transaction プロパティを FALSE に設定する必要があります。  
   
  既定値は FALSE です。  
   

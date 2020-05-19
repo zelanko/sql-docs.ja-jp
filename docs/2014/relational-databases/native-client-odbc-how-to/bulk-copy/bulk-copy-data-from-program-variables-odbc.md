@@ -10,15 +10,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], program variables
 - bulk copy [ODBC]
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f85df61f612cb91d39b15e6c91e2fb8495c2347
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753644"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701927"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>プログラム変数からのデータの一括コピー (ODBC)
   このサンプルでは、一括コピー関数 `bcp_bind` と `bcp_sendrow` を使用して、プログラム変数から SQL Server にデータを一括コピーする方法を示します  (この例では、簡略化のためエラーチェック コードが削除されています)。  
@@ -53,7 +53,7 @@ ms.locfileid: "62753644"
   
 8.  すべての行が送信されたら、 [bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)を呼び出して操作を完了します。  
   
- 一括コピー操作中に、 [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)と[bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)を呼び出すことによって、プログラム変数の場所と長さを変更できます。 [Bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)を使用して、さまざまな一括コピーオプションを設定します。 、、および`image`データ`text`を`ntext`セグメント内のサーバーに送信するには、 [bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)を使用します。  
+ 一括コピー操作中に、 [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)と[bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)を呼び出すことによって、プログラム変数の場所と長さを変更できます。 [Bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)を使用して、さまざまな一括コピーオプションを設定します。 、 [bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 、 `text` `ntext` および `image` データをセグメント内のサーバーに送信するには、bcp_moretext を使用します。  
   
 ## <a name="example"></a>例  
  このサンプルは IA64 ではサポートされていません。  
@@ -62,11 +62,11 @@ ms.locfileid: "62753644"
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 最初の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コードリストを実行して、サンプルで使用するテーブルを作成します。  
+ 最初の ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) コードリストを実行して、サンプルで使用するテーブルを作成します。  
   
  odbc32.lib と odbcbcp.lib を使用して 2 つ目の (C++) コード リストをコンパイルします。 MSBuild.exe でビルドした場合は、まずプロジェクト ディレクトリの Bcpfmt.fmt と Bcpodbc.bcp を .exe があるディレクトリにコピーし、次に .exe を起動します。  
   
- 3番目の[!INCLUDE[tsql](../../../includes/tsql-md.md)]() コードリストを実行して、サンプルで使用したテーブルを削除します。  
+ 3番目の ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) コードリストを実行して、サンプルで使用したテーブルを削除します。  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  

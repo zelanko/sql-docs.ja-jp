@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cache [SQLXML]
 - schemas [SQLXML]
 ms.assetid: 7e5fda21-b435-41fd-b637-8b616560a93f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6ca536125be481766e41c3665dd313d483160ae0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6c481dbba3f8e077854b12e755544d97af5f692
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013274"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703309"
 ---
 # <a name="schema-caching-sqlxml-40"></a>スキーマのキャッシュ (SQLXML 4.0)
   Microsoft SQL Server 2000 Web Release 1、Microsoft SQLXML 2.0、SQLXML 3.0 の XML のサイド バイ サイド インストールで、次のレジストリ キーを使用すると、すべてのバージョンでスキーマのキャッシュを明示的に制御できます。  

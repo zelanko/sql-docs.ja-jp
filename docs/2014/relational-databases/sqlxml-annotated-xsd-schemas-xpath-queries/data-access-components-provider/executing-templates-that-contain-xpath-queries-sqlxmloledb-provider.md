@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Mapping Schema property
 - XML templates [SQLXML]
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c4b5d51597f41b5355acd4995aaf7f988ed53a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60b20a1ee5a90b2b51abbe71a189add066e1b7e4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013088"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703248"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>XPath クエリを含むテンプレートの実行 (SQLXMLOLEDB プロバイダー)
   この例では、次の SQLXMLOLEDB プロバイダー固有のプロパティについて、使用法を示します。  
@@ -43,7 +43,7 @@ ms.locfileid: "66013088"
  このアプリケーションでは、XPath クエリを直接指定します。 したがって、言語 {5d531cb2-e6ed-11d2-b252-00c04f681b71} を含める必要があります。  
   
 > [!NOTE]  
->  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例では、追加の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネットワーククライアントソフトウェアをインストールする必要があるデータプロバイダーに対して Native CLIENT (SQLNCLI11) を使用するように指定しています。 詳細については、「 [SQL Server Native Client のシステム要件](../../native-client/system-requirements-for-sql-server-native-client.md)」を参照してください。  
+>  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例では、追加の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ネットワーククライアントソフトウェアをインストールする必要があるデータプロバイダーに対して Native Client (SQLNCLI11) を使用するように指定しています。 詳細については、「 [SQL Server Native Client のシステム要件](../../native-client/system-requirements-for-sql-server-native-client.md)」を参照してください。  
   
 ```  
 Option Explicit  

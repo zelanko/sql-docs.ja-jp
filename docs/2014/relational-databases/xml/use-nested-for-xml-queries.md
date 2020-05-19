@@ -11,18 +11,18 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6abc209e200be39fe79209d89cfb6f3a492e0e6a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232406"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702371"
 ---
 # <a name="use-nested-for-xml-queries"></a>入れ子になった FOR XML クエリの使用
-  `xml`データ型と[for Xml クエリの type ディレクティブ](type-directive-in-for-xml-queries.md)を使用すると、for xml クエリによって返された xml を、サーバーとクライアントの両方で処理できます。  
+  `xml`データ型と[for xml クエリの type ディレクティブ](type-directive-in-for-xml-queries.md)を使用すると、for xml クエリによって返された xml を、サーバーとクライアントの両方で処理できます。  
   
 ## <a name="processing-with-xml-type-variables"></a>xml 型の変数を使用した処理  
  FOR XML クエリの結果を `xml` 型の変数に代入できます。また、XQuery を使用して結果にクエリを実行し、その結果を `xml` 型の変数に代入してからさらに処理を加えることができます。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - RAW mode
 - XMLDATA option
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06054f9a107e2aaf9fea83cb3879ef672a8520b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193249"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702353"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML での RAW モードの使用
   RAW モードでは、クエリの結果セットの各行が XML 要素に変換されます。この XML 要素は、汎用識別子 \<row> を持つか、必要に応じて要素名が付けられます。 既定では、NULL 以外の行セットの各列の値が \<row> 要素の属性にマップされます。 FOR XML 句に ELEMENTS ディレクティブが追加されると、各列の値が \<row> 要素のサブ要素にマップされます。 必要に応じて ELEMENTS ディレクティブと共に XSINIL オプションを指定して、xsi:nil=`"`true`"`の属性を持つ要素に結果セットの NULL 列値をマップできます。  

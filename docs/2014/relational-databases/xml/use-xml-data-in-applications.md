@@ -22,15 +22,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], ADO.NET
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4aed312c01e47245d3b2c3d360652ab2b366cfd9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232430"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702317"
 ---
 # <a name="use-xml-data-in-applications"></a>アプリケーションでの XML データの使用
   このトピックでは、アプリケーションで `xml` データ型を操作する際のオプションについて説明します。 このトピックには、次の項目に関する情報が含まれています。  
@@ -88,7 +88,7 @@ Set objRs = Nothing
 Set objConn = Nothing  
 ```  
   
- この例は、DataTypeCompatibility を設定する方法を示しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用している場合、このプロパティには既定値の 0 が設定されています。 値を80に設定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml`と、Native Client プロバイダーによって、ユーザー定義型の列がデータ[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]型として表示されます。 それぞれのデータ型は、DBTYPE_WSTR および DBTYPE_BYTES になります。  
+ この例は、DataTypeCompatibility を設定する方法を示しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用している場合、このプロパティには既定値の 0 が設定されています。 値を80に設定すると、Native Client プロバイダーによって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` ユーザー定義型の列がデータ型として表示され [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ます。 それぞれのデータ型は、DBTYPE_WSTR および DBTYPE_BYTES になります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client はクライアント コンピューターにもインストールし、データ プロバイダーとして使用するために、"`Provider=SQLNCLI11;...`" を含む接続文字列を指定する必要があります。  
   
@@ -145,7 +145,7 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>ADO.NET を使用した、xml 型の列に含まれている XML の操作  
- `xml` ADO.NET および[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]を使用してデータ型の列の XML を処理するには、 `SqlCommand`クラスの標準動作を使用します。 たとえば、`xml` データ型の列とその値は、`SqlDataReader` を使用して SQL 列を取得するときと同じ方法で取得できます。ただし、XML として `xml` データ型の列のコンテンツを使用して作業を行う場合は、最初にそのコンテンツを `XmlReader` 型に割り当てる必要があります。  
+ ADO.NET およびを使用してデータ型の列の XML を処理するには、 `xml` [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスの標準動作を使用し `SqlCommand` ます。 たとえば、`xml` データ型の列とその値は、`SqlDataReader` を使用して SQL 列を取得するときと同じ方法で取得できます。ただし、XML として `xml` データ型の列のコンテンツを使用して作業を行う場合は、最初にそのコンテンツを `XmlReader` 型に割り当てる必要があります。  
   
  詳細とコード例については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK ドキュメントの「データ リーダーの XML 列の値」を参照してください。  
   
