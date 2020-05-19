@@ -12,15 +12,15 @@ helpviewer_keywords:
 - annotated XDR schemas
 - schemas [SQLXML]
 ms.assetid: 874c6dca-8a0c-4a2e-891c-ba6e326154d2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b19deb48073462ce26c86afdd586e2b9e5426ecb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ee928fe485b64024839a0afc792f734ad6c6abf
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014623"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702960"
 ---
 # <a name="annotated-xdr-schemas-deprecated-in-sqlxml-40"></a>注釈付き XDR スキーマ (SQLXML 4.0 では非推奨)
   注釈付き XDR スキーマは非推奨です。 この機能は今後更新されません。 新しい開発作業では、この機能を使用しないでください。 代わりに、注釈付き XSD スキーマを使用します。 既存の注釈付き XDR スキーマは、XSD スキーマに変換できます。 詳細については、「[注釈付き XDR スキーマから同等の XSD スキーマへの変換 &#40;SQLXML 4.0&#41;](converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)」を参照してください。 非推奨の XDR スキーマの詳細については、 [SQL Server 2008 のドキュメント](https://go.microsoft.com/fwlink/?LinkId=202011)を参照してください。  

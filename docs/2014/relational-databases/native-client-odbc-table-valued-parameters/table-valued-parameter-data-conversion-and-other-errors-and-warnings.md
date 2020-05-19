@@ -10,15 +10,15 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), data conversion
 - table-valued parameters (ODBC), error messages
 ms.assetid: edd45234-59dc-4338-94fc-330e820cc248
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 576e8e49411412264afc5828fe606a19cc3751f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a82c6f5e76693ac03ddfd0c442249d7935927848
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62468255"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698295"
 ---
 # <a name="table-valued-parameter-data-conversion-and-other-errors-and-warnings"></a>テーブル値パラメーターのデータ変換およびその他のエラーと警告
   テーブル値パラメーターの列の値は、他の列やパラメーターの値と同じ方法で、クライアントのデータ型とサーバーのデータ型間で変換できます。 ただし、テーブル値パラメーターには複数の列と複数の行を含めることができるため、エラーが発生した箇所の実際の値を識別できることが重要です。  

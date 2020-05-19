@@ -10,15 +10,15 @@ helpviewer_keywords:
 - PATH FOR XML mode, namespace support
 - namespaces [XML in SQL Server]
 ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ad1a6af717dcfa8ea42d9171e5ab23d9c24c6225
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39fd399838ac2e94672f3f416a2c83e4233060d3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240783"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702578"
 ---
 # <a name="namespace-support-in-path-mode"></a>PATH モードでの名前空間のサポート
   PATH モードでは、WITH NAMESPACES を使用することで名前空間がサポートされます。 たとえば、次のクエリは WITH NAMESPACES 構文を使用して、後続の SELECT ステートメントで使用できる名前空間 ("a:") を宣言する例を示しています。  

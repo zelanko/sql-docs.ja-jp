@@ -20,22 +20,22 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a40eb3451ed249cf1ac582179fbda67e04fdfb3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc2a5b9d56f5c4d07c4e998439bd3b38d3c06058
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174051"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702570"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQLServer)
   [!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードの 1 つである OPENXML を使用すると、インメモリ XML ドキュメントに対してテーブルやビューと同様の行セットが提供されます。 OPENXML を使用することで、リレーショナル行セット同様に XML データにアクセスできるようになります。 これを実現するため、XML ドキュメントの内部表現の行セット ビューが用意されています。 行セット内のレコードは、データベース テーブルに格納できます。
 
  OPENXML を使用できるのは、行セット プロバイダー、ビュー、または OPENROWSET をソースとして指定できる SELECT ステートメントおよび SELECT INTO ステートメントです。 OPENXML の構文の詳細については、「 [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)」を参照してください。
 
- OPENXML を使用して XML ドキュメントに対するクエリを作成するには`sp_xml_preparedocument`、まずを呼び出す必要があります。 このプロシージャは XML ドキュメントを解析し、使用準備が整った解析後のドキュメントへのハンドルを返します。 解析後のドキュメントは、XML ドキュメント内のさまざまなノードを DOM (ドキュメント オブジェクト モデル) ツリーで表現したものです。 このドキュメント ハンドルは OPENXML に渡されます。 OPENXML では渡されたパラメーターを基にドキュメントの行セット ビューを用意します。
+ OPENXML を使用して XML ドキュメントに対するクエリを作成するには、まずを呼び出す必要があり `sp_xml_preparedocument` ます。 このプロシージャは XML ドキュメントを解析し、使用準備が整った解析後のドキュメントへのハンドルを返します。 解析後のドキュメントは、XML ドキュメント内のさまざまなノードを DOM (ドキュメント オブジェクト モデル) ツリーで表現したものです。 このドキュメント ハンドルは OPENXML に渡されます。 OPENXML では渡されたパラメーターを基にドキュメントの行セット ビューを用意します。
 
 > [!NOTE]
 >  `sp_xml_preparedocument`では、SQL 更新バージョンの MSXML parser Msxmlsql.dll が使用されます。 このバージョンの MSXML パーサーは、MSXML Version 2.6 との後方互換性を維持したまま [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] もサポートするように設計されました。
@@ -110,7 +110,7 @@ EXEC sp_xml_removedocument @docHandle;
 -   行セット列と XML ノード間のマッピング
 
 ### <a name="xml-document-handle-idoc"></a>XML ドキュメント ハンドル (idoc)
- ドキュメントハンドルは、 `sp_xml_preparedocument`ストアドプロシージャによって返されます。
+ ドキュメントハンドルは、ストアドプロシージャによって返され `sp_xml_preparedocument` ます。
 
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>処理するノードを特定するための XPath 式 (rowpattern)
  *rowpattern* として指定する XPath 式で、XML ドキュメントに含まれる一連のノードを特定します。 *rowpattern* によって特定される各ノードが、OPENXML で生成される行セット内の 1 行に相当します。

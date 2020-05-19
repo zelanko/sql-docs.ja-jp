@@ -11,15 +11,15 @@ helpviewer_keywords:
 - W3C XPath specification
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69fe9c7decd7521ca752b0b5092748c907036f40
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012707"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703117"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath クエリの使用について (SQLXML 4.0)
   XML パス言語 (XPath) クエリは、URL の一部として、またはテンプレート内で指定できます。 この結果のフラグメントの構造はマッピング スキーマによって決定され、値はデータベースから取得されます。 このプロセスは、CREATE VIEW ステートメントを使用してビューを作成し、そのビューに対して SQL クエリを記述するのと概念的には同じです。  
@@ -45,17 +45,17 @@ ms.locfileid: "66012707"
 </root>  
 ```  
   
- このドキュメントでは、 ** \<Customer>** が要素ノード、 **cid**が属性ノード、 **"Important"** がテキストノードです。  
+ このドキュメントでは、 ** \< Customer>** が要素ノード、 **cid**が属性ノード、 **"Important"** がテキストノードです。  
   
- XPath は、XML ドキュメントからノード セットを選択するときに使用できるグラフ ナビゲーション言語です。 XPath の各演算子では、前の XPath 演算子によって選択されたノード セットに基づいて、ノード セットを選択します。 たとえば、 ** \<顧客>** ノードのセットを指定した場合、XPath では、 **date**属性値が **"7/14/1999"** であるすべて** \<の注文>** ノードを選択できます。 結果のノード セットには、注文日が 1999 年 7 月 14 日となっているすべての注文が含まれます。  
+ XPath は、XML ドキュメントからノード セットを選択するときに使用できるグラフ ナビゲーション言語です。 XPath の各演算子では、前の XPath 演算子によって選択されたノード セットに基づいて、ノード セットを選択します。 たとえば、 ** \< 顧客>** ノードのセットを指定した場合、XPath では、 **date**属性値が **"7/14/1999"** であるすべての** \< 注文>** ノードを選択できます。 結果のノード セットには、注文日が 1999 年 7 月 14 日となっているすべての注文が含まれます。  
   
- XPath 言語は W3C (World Wide Web Consortium) によって標準のナビゲーション言語として定義されています。 SQLXML 4.0 は、W3C XPath 仕様のサブセットを実装します。 http://www.w3.org/TR/1999/PR-xpath-19991008.htmlこのサブセットは、にあります。  
+ XPath 言語は W3C (World Wide Web Consortium) によって標準のナビゲーション言語として定義されています。 SQLXML 4.0 は、W3C XPath 仕様のサブセットを実装します。このサブセットは、にあり http://www.w3.org/TR/1999/PR-xpath-19991008.html ます。  
   
  次に、W3C XPath 実装と SQLXML 4.0 実装の主な違いを示します。  
   
 -   **ルート クエリ**  
   
-     SQLXML 4.0 では、ルート クエリ (/) はサポートされません。 すべての XPath クエリは、スキーマ内の最上位レベル** \<の ElementType>** から開始する必要があります。  
+     SQLXML 4.0 では、ルート クエリ (/) はサポートされません。 すべての XPath クエリは、スキーマ内の最上位レベルの** \< ElementType>** から開始する必要があります。  
   
 -   **エラーの報告**  
   
@@ -89,11 +89,11 @@ ms.locfileid: "66012707"
 ## <a name="supported-functionality"></a>サポートされる機能  
  次の表は、SQLXML 4.0 で実装されている XPath 言語の機能です。  
   
-|機能|Item|サンプル クエリへのリンク|  
+|特徴|項目|サンプル クエリへのリンク|  
 |-------------|----------|----------------------------|  
 |軸|`attribute`、`child`、`parent`、`self` 軸|[XPath クエリでの軸の指定 &#40;SQLXML 4.0&#41;](samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |連続する述語や入れ子になった述語など、ブール値を使用する述語||[XPath クエリでの算術演算子の指定 &#40;SQLXML 4.0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|すべての関係演算子|=、! =、<、 \<=、>、>=|[XPath クエリでの関係演算子の指定 &#40;SQLXML 4.0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|すべての関係演算子|=、! =、<、 \< =、>、>=|[XPath クエリでの関係演算子の指定 &#40;SQLXML 4.0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |算術演算子|+、-、*、div|[XPath クエリでの算術演算子の指定 &#40;SQLXML 4.0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |明示的な変換関数|`number()`, `string()`, `Boolean()`|[XPath クエリでの明示的な変換関数の指定 &#40;SQLXML 4.0&#41;](samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |ブール演算子|AND、OR|[XPath クエリでのブール演算子の指定 &#40;SQLXML 4.0&#41;](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -103,7 +103,7 @@ ms.locfileid: "66012707"
 ## <a name="unsupported-functionality"></a>サポートされていない機能  
  次の表は、SQLXML 4.0 で実装されていない XPath 言語の機能です。  
   
-|機能|Item|  
+|特徴|項目|  
 |-------------|----------|  
 |軸|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
 |数値を使用する述語||  

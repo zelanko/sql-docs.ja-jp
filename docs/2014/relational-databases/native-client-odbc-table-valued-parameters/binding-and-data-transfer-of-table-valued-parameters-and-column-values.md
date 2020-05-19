@@ -9,22 +9,22 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), binding and data transfer
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5aa061f51d63085cc55e59aca7d7e4d69e1a2e27
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199956"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698740"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>テーブル値パラメーターおよび列の値のバインドとデータ転送
   テーブル値パラメーターは、他のパラメーターと同様、サーバーに渡す前にバインドする必要があります。 アプリケーションは、他のパラメーターをバインドするのと同じ方法で、テーブル値パラメーターをバインドします。 SQLBindParameter を使用するか、SQLSetDescField または SQLSetDescRec の同等の呼び出しを使用します。 テーブル値パラメーター用のサーバーのデータ型は SQL_SS_TABLE です。 C 型は SQL_C_DEFAULT または SQL_C_BINARY として指定できます。  
   
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では、入力のテーブル値パラメーターのみがサポートされています。 そのため、SQL_DESC_PARAMETER_TYPE に SQL_PARAM_INPUT 以外の値を設定しようとすると、SQLSTATE = HY105 の SQL_ERROR が発生し、"パラメーターの型が無効です。" というメッセージが返されます。  
   
- 属性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE を使用すると、テーブル値パラメーターのすべての列に既定値を割り当てることができます。 ただし、テーブル値パラメーターの個々の列値には、SQLBindParameter で*StrLen_or_IndPtr*の SQL_DEFAULT_PARAM を使用して既定値を割り当てることはできません。 テーブル値パラメーター全体を既定値に設定するには、with SQLBindParameter を*StrLen_or_IndPtr*で SQL_DEFAULT_PARAM を使用します。 これらの規則に従わないと、SQLExecute または SQLExecDirect は SQL_ERROR を返します。 生成される診断レコードは SQLSTATE = 07S01 で、"パラメーター \<p> に既定のパラメーターが正しく使用されてい\<ません" というメッセージが表示されます。ここで、p> はクエリステートメントの tvp の序数です。  
+ 属性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE を使用すると、テーブル値パラメーターのすべての列に既定値を割り当てることができます。 ただし、テーブル値パラメーターの個々の列値には、SQLBindParameter で*StrLen_or_IndPtr*の SQL_DEFAULT_PARAM を使用して既定値を割り当てることはできません。 テーブル値パラメーター全体を既定値に設定するには、with SQLBindParameter を*StrLen_or_IndPtr*で SQL_DEFAULT_PARAM を使用します。 これらの規則に従わないと、SQLExecute または SQLExecDirect は SQL_ERROR を返します。 生成される診断レコードは SQLSTATE = 07S01 で、"パラメーター p> に既定のパラメーターが正しく使用されていません" というメッセージが表示され \< \< ます。ここで、p> はクエリステートメントの tvp の序数です。  
   
  テーブル値パラメーターをバインドしたら、アプリケーションでは、次に、テーブル値パラメーターの各列をバインドする必要があります。 これを行うには、アプリケーションはまず SQLSetStmtAttr を呼び出して、テーブル値パラメーターの序数に SQL_SOPT_SS_PARAM_FOCUS を設定します。 次に、アプリケーションは、SQLBindParameter、SQLSetDescRec、および SQLSetDescField の各ルーチンを呼び出して、テーブル値パラメーターの列をバインドします。 SQL_SOPT_SS_PARAM_FOCUS を0に設定すると、通常の最上位レベルのパラメーターを操作するときに、SQLBindParameter、SQLSetDescRec、および SQLSetDescField の通常の効果が復元されます。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63199956"
   
 3.  SQLSetStmtAttr を呼び出して、SQL_SOPT_SS_PARAM_FOCUS を0に設定します。 これは、SQLExecute または SQLExecDirect が呼び出される前に実行する必要があります。 そうしないと、SQL_ERROR が返され、"属性値 SQL_SOPT_SS_PARAM_FOCUS が無効です (実行時に 0 である必要があります)" というメッセージを含む、SQLSTATE=HY024 の診断レコードが生成されます。  
   
-4.  行を含まないテーブル値パラメーターの SQL_DEFAULT_PARAM に*StrLen_or_IndPtr*または SQL_DESC_OCTET_LENGTH_PTR を設定します。または、テーブル値パラメーターに行がある場合は、sqlexecute または SQLExecDirect の次回の呼び出し時に転送される行の数を設定します。 *StrLen_or_IndPtr*または SQL_DESC_OCTET_LENGTH_PTR は、テーブル値パラメーターが null 値を許容しないため、テーブル値パラメーターに対して SQL_NULL_DATA に設定できません (ただし、テーブル値パラメーターには null 値が許容される可能性があります)。 この値が無効な値に設定されている場合、SQLExecute または SQLExecDirect は SQL_ERROR を返し、"パラメーター \<p> の文字列またはバッファーの長さが無効です" というメッセージ (p はパラメーター番号) を使用して診断レコードが生成されます。  
+4.  行を含まないテーブル値パラメーターの SQL_DEFAULT_PARAM に*StrLen_or_IndPtr*または SQL_DESC_OCTET_LENGTH_PTR を設定します。または、テーブル値パラメーターに行がある場合は、sqlexecute または SQLExecDirect の次回の呼び出し時に転送される行の数を設定します。 *StrLen_or_IndPtr*または SQL_DESC_OCTET_LENGTH_PTR は、テーブル値パラメーターが null 値を許容しないため、テーブル値パラメーターに対して SQL_NULL_DATA に設定できません (ただし、テーブル値パラメーターには null 値が許容される可能性があります)。 この値が無効な値に設定されている場合、SQLExecute または SQLExecDirect は SQL_ERROR を返し、"パラメーター p> の文字列またはバッファーの長さが無効です" というメッセージ ( \< p はパラメーター番号) を使用して診断レコードが生成されます。  
   
 5.  SQLExecute または SQLExecDirect を呼び出します。  
   

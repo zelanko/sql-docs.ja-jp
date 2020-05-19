@@ -14,15 +14,15 @@ helpviewer_keywords:
 - filtering [SQLXML]
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5d35b70c157dc5285355fcd15b38739757f0be9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77d70ed7310358d9fac5ccfb7cf4d78693c9475b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012579"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703051"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>ロケーション パスでの選択述語の指定 (SQLXML 4.0)
   述語は、SELECT ステートメントの WHERE 句と同様に、軸についてノード セットをフィルター選択するものです。 述語はかっこで囲みます。 フィルター選択されたノード セットの各ノードに対し、ノードをコンテキスト ノード、ノード セット内のノード数をコンテキストのサイズとして、述語式が評価されます。 述語式が TRUE と評価された場合、そのノードは結果のノード セットに含められます。  
@@ -33,13 +33,13 @@ ms.locfileid: "66012579"
 >  Xpath のこの XPath 実装と W3C 仕様の違いについては、「 [Xpath クエリの使用の概要 &#40;SQLXML 4.0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md)」を参照してください。  
   
 ## <a name="selection-predicate-example-1"></a>選択述語: 例1  
- 次の XPath 式 (ロケーションパス) では、現在のコンテキストノードから、 **CustomerID**属性が ALFKI という値が指定されているすべての** \<顧客>** 子要素が選択されます。  
+ 次の XPath 式 (ロケーションパス) では、現在のコンテキストノードから、 **CustomerID**属性が ALFKI という値が指定されているすべての** \< 顧客>** 子要素が選択されます。  
   
 ```  
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- この XPath クエリでは、`child` と `attribute` は軸名で、 `Customer`はノードテストです。は、 `Customer`が** \<要素ノード>** である場合は TRUE になります。これは、 `child` ** \<要素>** が軸の主ノード型であるためです。 `attribute::CustomerID="ALFKI"` は述語です。 述語`attribute`では、は軸で、 `CustomerID`はノードテストです ( **CustomerID**がコンテキストノードの属性である場合は TRUE になります。これは、 ** \<属性>** が軸の`attribute`主ノード型であるためです)。  
+ この XPath クエリでは、`child` と `attribute` は軸名で、 `Customer`はノードテストです。は、 `Customer` が** \< 要素ノード>** である場合は TRUE になります。これは、 ** \< 要素>** が軸の主ノード型であるためです `child` 。 `attribute::CustomerID="ALFKI"` は述語です。 述語では、 `attribute` は軸で、は `CustomerID` ノードテストです ( **CustomerID**がコンテキストノードの属性である場合は TRUE になります。これは、 ** \< 属性>** が軸の主ノード型であるためです `attribute` )。  
   
  省略構文を使用した場合、XPath クエリは次のように指定できます。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66012579"
 ```  
   
 ## <a name="selection-predicate-example-2"></a>選択述語: 例2  
- 次の XPath 式 (ロケーションパス) は、現在のコンテキストノードから、 **salesorderid**属性が値1であるすべての** \<順序>** 孫を選択します。  
+ 次の XPath 式 (ロケーションパス) は、現在のコンテキストノードから、 **Salesorderid**属性が値1であるすべての** \< 順序>** 孫を選択します。  
   
 ```  
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
@@ -63,17 +63,17 @@ ms.locfileid: "66012579"
 ```  
   
 ## <a name="selection-predicate-example-3"></a>選択述語: 例3  
- 次の XPath 式 (ロケーションパス) は、現在のコンテキストノードから、すべての** \<顧客>** 子** \<>** 1 人以上のユーザーを持つ子を選択します。  
+ 次の XPath 式 (ロケーションパス) は、現在のコンテキストノードから、すべての** \< 顧客>** 子** \<>** 1 人以上のユーザーを持つ子を選択します。  
   
 ```  
 child::Customer[child::ContactName]  
 ```  
   
- この例では、担当の** \<>** が、XML ドキュメント内** \<の Customer>** 要素の子要素であることを前提としています。これは、注釈付き XSD スキーマでは*要素中心のマッピング*と呼ばれています。  
+ この例では、担当の** \<>** が、XML ドキュメント内の** \< Customer>** 要素の子要素であることを前提としています。これは、注釈付き XSD スキーマでは*要素中心のマッピング*と呼ばれています。  
   
- この XPath 式では、`child` が軸名で、 `Customer`ノードテストを示します。が`Customer` ** \<要素>** ノードの場合は TRUE になります。これは、 ** \<要素>** が軸の`child`主ノード型であるためです。 `child::ContactName` は述語です。 述語では、 `child`は軸`ContactName`で、はノードテストです。が`ContactName` ** \<要素>** ノードの場合は TRUE になります。  
+ この XPath 式では、`child` が軸名で、 `Customer`ノードテストを示し `Customer` ます。が** \< 要素>** ノードの場合は TRUE になります。これは、 ** \< 要素>** が軸の主ノード型であるためです `child` 。 `child::ContactName` は述語です。 述語では、 `child` は軸で、は `ContactName` ノードテストです `ContactName` 。が** \< 要素>** ノードの場合は TRUE になります。  
   
- この式で返されるのは、 ** \<Customer>** 子要素** \<>** 子を持つコンテキストノードの子要素だけです。  
+ この式で返されるのは、 ** \< Customer>** 子要素** \<>** 子を持つコンテキストノードの子要素だけです。  
   
  省略構文を使用した場合、XPath クエリは次のように指定できます。  
   
@@ -82,15 +82,15 @@ Customer[ContactName]
 ```  
   
 ## <a name="selection-predicate-example-4"></a>選択述語: 例4  
- 次の XPath 式は、 ** \<Customer>** 要素の子要素** \<>** 子を持たないコンテキストノードの子要素を選択します。  
+ 次の XPath 式は、 ** \< Customer>** 要素の子要素** \<>** 子を持たないコンテキストノードの子要素を選択します。  
   
 ```  
 child::Customer[not(child::ContactName)]  
 ```  
   
- この例では、 ** \<>** の** \<ユーザー**が XML ドキュメント内の Customer>要素の子要素であり、データベースでは [担当側] フィールドが必須ではないことを前提としています。  
+ この例では、 ** \<>** のユーザーが XML ドキュメント内の** \< Customer>** 要素の子要素であり、データベースでは [担当側] フィールドが必須ではないことを前提としています。  
   
- この例では、`child` は軸で、 `Customer`はノードテストです。が`Customer` \<要素> ノードの場合は TRUE です。 `not(child::ContactName)` は述語です。 述語では、 `child`は軸`ContactName`で、はノードテストです。が`ContactName` \<要素> ノードの場合は TRUE になります。  
+ この例では、`child` は軸で、 `Customer`はノードテストです `Customer` \< 。が要素> ノードの場合は TRUE です。 `not(child::ContactName)` は述語です。 述語では、 `child` は軸で、は `ContactName` ノードテストです `ContactName` 。が要素> ノードの場合は TRUE に \< なります。  
   
  省略構文を使用した場合、XPath クエリは次のように指定できます。  
   
@@ -99,13 +99,13 @@ Customer[not(ContactName)]
 ```  
   
 ## <a name="selection-predicate-example-5"></a>選択述語: 例5  
- 次の XPath 式は、現在のコンテキストノードから、 **CustomerID**属性が指定されているすべての** \<顧客>** 子を選択します。  
+ 次の XPath 式は、現在のコンテキストノードから、 **CustomerID**属性が指定されているすべての** \< 顧客>** 子を選択します。  
   
 ```  
 child::Customer[attribute::CustomerID]  
 ```  
   
- この例では`child` 、は軸で`Customer` 、はノードテストです ( `Customer`が\<要素> ノードの場合は TRUE)。 `attribute::CustomerID` は述語です。 述語では、 `attribute`は軸で、 `CustomerID`は述語です (が`CustomerID` ** \<属性>** ノードの場合は TRUE)。  
+ この例では、は軸で、は `child` `Customer` ノードテストです ( `Customer` が要素> ノードの場合は TRUE \< )。 `attribute::CustomerID` は述語です。 述語では、 `attribute` は軸で、は `CustomerID` 述語です ( `CustomerID` が** \< 属性>** ノードの場合は TRUE)。  
   
  省略構文を使用した場合、XPath クエリは次のように指定できます。  
   

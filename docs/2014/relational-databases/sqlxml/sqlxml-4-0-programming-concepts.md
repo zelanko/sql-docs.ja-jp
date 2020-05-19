@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQLXML, about SQLXML
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03d6069358c1591233aa892a723b7367a21be569
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea7fe33f087fd814d44592677cc70b9ba1e7e244
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012233"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702833"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 のプログラミング概念
   クライアント側の XML 機能を追加し既存の機能を拡張するため、SQLXML 3.0 が Web リリースとして提供されました。この機能には、注釈付き XSD スキーマ、XML 一括読み込み、Web サービス (SOAP) サポート、アップデートグラムなどが含まれます。  

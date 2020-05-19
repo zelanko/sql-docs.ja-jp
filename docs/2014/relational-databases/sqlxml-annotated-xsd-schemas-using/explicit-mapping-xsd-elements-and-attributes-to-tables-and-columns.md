@@ -25,15 +25,15 @@ helpviewer_keywords:
 - table mapping [SQLXML], explicit mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11144714addb50dc4c481512399228802390f2f3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013842"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703612"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>テーブルおよび列への XSD 要素および属性の明示的なマッピング (SQLXML 4.0)
   XSD スキーマを使用してリレーショナル データベースの XML ビューを作成するときには、スキーマの要素と属性をデータベースのテーブルと列にマップする必要があります。 データベースのテーブルおよびビューの行は、XML ドキュメントの要素にマップされます。 データベースの列値は属性または要素にマップされます。  
@@ -45,7 +45,7 @@ ms.locfileid: "66013842"
   
  `sql:relation` を要素に指定した場合は、この注釈のスコープが、要素の複合型定義で指定されているすべての属性と子要素に適用されます。これによって、注釈の記述を簡素化できます。  
   
- 注釈`sql:relation`は、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有効な識別子が XML で有効でない場合にも便利です。 たとえば、"Order Details" は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では有効なテーブル名ですが、XML では無効です。 この場合、`sql:relation` 注釈を使用して、次のようなマッピングを指定できます。  
+ 注釈は、 `sql:relation` で有効な識別子 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が XML で有効でない場合にも便利です。 たとえば、"Order Details" は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では有効なテーブル名ですが、XML では無効です。 この場合、`sql:relation` 注釈を使用して、次のようなマッピングを指定できます。  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -58,9 +58,9 @@ ms.locfileid: "66013842"
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. sql:relation 注釈と sql:field 注釈を指定する  
- この例では、XSD スキーマは、 ** \<FName>** と** \<LName>** 子要素および**ContactID**属性を持つ複合型の** \<Contact>** 要素で構成されています。  
+ この例では、XSD スキーマは、 ** \< FName>** と** \< LName>** 子要素および**ContactID**属性を持つ複合型の** \< Contact>** 要素で構成されています。  
   
- この`sql:relation`注釈によっ** \<て、contact>** 要素が AdventureWorks データベースの Person. contact テーブルにマップされます。 注釈`sql:field`は、 ** \<FName>** 要素を FirstName 列に、 ** \<LName>** 要素を LastName 列にマップします。  
+ この `sql:relation` 注釈によっ** \< て、contact>** 要素が AdventureWorks データベースの Person. contact テーブルにマップされます。 注釈は、 `sql:field` ** \< FName>** 要素を FirstName 列に、 ** \< LName>** 要素を LastName 列にマップします。  
   
  **ContactID**属性に注釈が指定されていません。 このため、既定のマッピングが使用され、属性が同じ名前の列にマップされます。  
   

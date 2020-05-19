@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ODBC functions
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 43ccc784d0d8759c559e705cbbb65861040f6e8a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9dc6aadde75d1d4df797f85c0343bb11083b80f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205675"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702051"
 ---
 # <a name="disconnecting-from-a-data-source"></a>データ ソースからの切断
   アプリケーションでデータソースの使用が完了すると、 **Sqldisconnect**が呼び出されます。 **Sqldisconnect**は、接続に割り当てられているすべてのステートメントを解放し、データソースからドライバーを切断します。 切断後、アプリケーションは[Sqlfreehandle](../native-client-odbc-api/sqlfreehandle.md)を呼び出して接続ハンドルを解放できます。 終了する前に、アプリケーションは**Sqlfreehandle**を呼び出して環境ハンドルを解放します。  

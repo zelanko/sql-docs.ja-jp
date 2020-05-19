@@ -9,20 +9,20 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bd58bdb611a070c812364baf2fa3e1544c2ffdc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a2d4b96d837edc1fa0fcb2ce2c9d48449eb59e7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228963"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698201"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>テーブル値パラメーターの記述子フィールド
   テーブル値パラメーターのサポートには、ODBC アプリケーション パラメーター記述子 (APD) および実装パラメーター記述子 (IPD) の新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有のフィールドが含まれます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 |名前|場所|種類|説明|  
 |----------|--------------|----------|-----------------|  

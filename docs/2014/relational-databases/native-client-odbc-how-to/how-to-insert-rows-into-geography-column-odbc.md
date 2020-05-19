@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77d4bea058b9fc4cf63436ec055c597393d5496f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206809"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82700825"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Geography 列に行を挿入する方法 (ODBC)
   このサンプルでは、2 つの異なるバインド (SQLCCHAR および SQLCBINARY) を使用して WellKnownBinary (WKB) から geography 列を持つテーブルに 2 行追加します。 次に、そのテーブルから 1 行選択し、::STAsText() を使用してその行を表示します。WKB は 0x01010000000700ECFAD03A4C4001008000B5DF07C0 で、アプリケーションは POINT(56.4595 -2.9842) をコンソールに出力します。  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c6ac510751f20856151e6d89280cbac76c74420
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241203"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702520"
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML データの取得および XML データに対するクエリの実行
   このトピックでは、XML データのクエリを実行するために指定する必要があるクエリ オプションについて説明します。 また、XML インスタンスをデータベースに格納するときに保持されない部分についても説明します。  
@@ -40,7 +40,7 @@ FROM T1
   
  結果は `<doc/>`です。  
   
- `<?xml version='1.0'?>` などの XML 宣言は、XML データを `xml` データ型インスタンスに格納するときに保持されません。 これは仕様です。 XML 宣言 () とその属性 (バージョン/エンコーディング/スタンドアロン) は、データを型`xml`に変換した後に失われます。 XML 宣言は、XML パーサーが使用するディレクティブとして扱われます。 XML データは、ucs-2 として内部的に保存されます。 XML インスタンスのその他すべての PI は保持されます。  
+ `<?xml version='1.0'?>` などの XML 宣言は、XML データを `xml` データ型インスタンスに格納するときに保持されません。 これは仕様です。 XML 宣言 () とその属性 (バージョン/エンコーディング/スタンドアロン) は、データを型に変換した後に失われ `xml` ます。 XML 宣言は、XML パーサーが使用するディレクティブとして扱われます。 XML データは、ucs-2 として内部的に保存されます。 XML インスタンスのその他すべての PI は保持されます。  
   
   
 ### <a name="order-of-attributes"></a>属性の順序  
@@ -87,7 +87,7 @@ GO
   
   
 ##  <a name="setting-required-query-options"></a><a name="query"></a> 必要なクエリ オプションの設定  
- データ型`xml`のメソッドを使用し`xml`て型の列または変数に対してクエリを実行する場合は、次のオプションを示すように設定する必要があります。  
+ `xml`データ型のメソッドを使用して型の列または変数に対してクエリを実行する場合は、 `xml` 次のオプションを示すように設定する必要があります。  
   
 |SET オプション|設定する値|  
 |-----------------|---------------------|  
@@ -99,7 +99,7 @@ GO
 |NUMERIC_ROUNDABORT|OFF|  
 |QUOTED_IDENTIFIER|ON|  
   
- オプションが表示されるように設定されていない`xml`場合、データ型のメソッドに対するクエリおよび変更は失敗します。  
+ オプションが表示されるように設定されていない場合、データ型のメソッドに対するクエリおよび変更 `xml` は失敗します。  
   
   
 ## <a name="see-also"></a>参照  

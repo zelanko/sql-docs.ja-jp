@@ -14,22 +14,22 @@ helpviewer_keywords:
 - XPath queries [SQLXML], SQLXMLOLEDB Provider
 - namespaces [SQLXML], XPath queries
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f72c5841989eb12f89eda34fbfb310e125612d1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa708c4b439e3a556ea7dac345cc04f32c59e2d6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013079"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703231"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>名前空間を使用した、XPath クエリの実行 (SQLXMLOLEDB Provider)
   XPath クエリには名前空間を使用できます。 スキーマ要素が名前空間で限定されている (対象の名前空間を含んでいる) 場合、そのスキーマに対する XPath クエリでは、この名前空間を指定する必要があります。  
   
  SQLXML 4.0 ではワイルドカード文字 (*) の使用がサポートされないため、XPath クエリは、名前空間プレフィックスを使用して指定する必要があります。 このプレフィックスを解決するには、名前空間プロパティを使用して名前空間のバインドを指定します。  
   
- 次の例では、XPath クエリは、ワイルドカード文字 (\*) およびローカル名 () および名前空間 uri () の xpath 関数を使用して名前空間を指定します。 この XPath クエリは、ローカル名が`Contact`で、名前空間 URI が`urn:myschema:Contacts`であるすべての要素を返します。  
+ 次の例では、XPath クエリは、ワイルドカード文字 ( \* ) およびローカル名 () および名前空間 uri () の xpath 関数を使用して名前空間を指定します。 この XPath クエリは、ローカル名がで、名前空間 URI がであるすべての要素を返し `Contact` `urn:myschema:Contacts` ます。  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

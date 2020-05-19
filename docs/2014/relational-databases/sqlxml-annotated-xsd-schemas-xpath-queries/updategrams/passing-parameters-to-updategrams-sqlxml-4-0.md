@@ -13,15 +13,15 @@ helpviewer_keywords:
 - updategrams [SQLXML], passing parameters
 - null values [SQLXML]
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 92238e27c364c8f09721a55d00c750022b53a18f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea22b1c0bc435006e05fde02043ca9f44a8ca681
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014732"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703023"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>アップデートグラムへのパラメーターの引き渡し (SQLXML 4.0)
   アップデートグラムはテンプレートであり、パラメーターを渡すことができます。 テンプレートにパラメーターを渡す方法の詳細については、「[アップデートグラムのセキュリティに関する考慮事項 &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)」を参照してください。  
@@ -62,7 +62,7 @@ ms.locfileid: "66014732"
   
 1.  上のアップデートグラムをメモ帳にコピーし、UpdategramWithParameters.xml としてファイルに保存します。  
   
-2.  次の行を追加して、 `cmd.Properties("Output Stream").Value = outStream` [ADO を使用して sqlxml 4.0 クエリを実行](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)し、アップデートグラムを実行するための sqlxml 4.0 テストスクリプト (sqlxml4test.vbs) を準備します。  
+2.  次の行を追加して、 [ADO を使用して sqlxml 4.0 クエリを実行](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)し、アップデートグラムを実行するための sqlxml 4.0 テストスクリプト (sqlxml4test.vbs) を準備し `cmd.Properties("Output Stream").Value = outStream` ます。  
   
     ```  
     cmd.NamedParameters = True  
@@ -97,7 +97,7 @@ ms.locfileid: "66014732"
   
 1.  上のアップデートグラムをメモ帳にコピーし、UpdategramPassingNullvalues.xml としてファイルに保存します。  
   
-2.  次の行を追加して、 `cmd.Properties("Output Stream").Value = outStream` [ADO を使用して sqlxml 4.0 クエリを実行](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)し、アップデートグラムを実行するための sqlxml 4.0 テストスクリプト (sqlxml4test.vbs) を準備します。  
+2.  次の行を追加して、 [ADO を使用して sqlxml 4.0 クエリを実行](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)し、アップデートグラムを実行するための sqlxml 4.0 テストスクリプト (sqlxml4test.vbs) を準備し `cmd.Properties("Output Stream").Value = outStream` ます。  
   
     ```  
     cmd.NamedParameters = True  

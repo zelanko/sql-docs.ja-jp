@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - HIDE directive
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 901fa0d72798862f54ebc23131870b704538cb8a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17fd92b523b5956069299a678139e222c303572b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287736"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702800"
 ---
 # <a name="example-specifying-the-hide-directive"></a>例 : HIDE ディレクティブの指定
   この例では、 **HIDE** ディレクティブの使用方法を示します。 クエリから返されたユニバーサル テーブル内の行を並べ替える目的でクエリから属性を返し、最終的な結果の XML ドキュメントにはその属性を含めない場合に、このディレクティブが役立ちます。  

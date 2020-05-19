@@ -11,15 +11,15 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0592a7635b0208624ab511af4ef68382548090c8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63231272"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702411"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML での EXPLICIT モードの使用
   トピック「 [FOR XML を使用した XML の構築](../xml/for-xml-sql-server.md)」で説明されているように、RAW モードと AUTO モードでは、クエリ結果から生成される XML の構造を厳密に制御することはできません。 一方、EXPLICIT モードを使用すると、クエリ結果から生成される XML の構造を柔軟に制御することができます。  

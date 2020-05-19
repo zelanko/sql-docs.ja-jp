@@ -12,15 +12,15 @@ helpviewer_keywords:
 - GetColumns method
 - BLOBs, fetching
 ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04eb0e01b1c98552c0364c5b60d918608ae23faa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2fcb0f6a7e31908d4286cdcb1fbd7ba9ffc47913
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62511377"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82694487"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>IRow::GetColumns と ISequentialStream を使用した BLOB データのフェッチ
   次の関数では、**IRow::GetColumns** と **ISequentialStream** を使用して大きなデータをフェッチします。  

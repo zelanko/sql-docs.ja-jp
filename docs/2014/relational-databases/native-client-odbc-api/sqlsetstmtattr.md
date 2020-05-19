@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 507ef6e5c5ebb566cdfbce028933b9faffad1de3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188688"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702138"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、混合 (キーセット/動的) カーソル モデルをサポートしません。 SQL_ATTR_KEYSET_SIZE を使用してキーセットのサイズを設定する場合、0 以外の値を設定すると失敗します。  
@@ -50,7 +50,7 @@ ms.locfileid: "63188688"
   
 |*Valueptr*値|説明|  
 |----------------------|-----------------|  
-|SQL_CO_OFF|既定値。 高速順方向専用、読み取り専用のカーソル、および autofetch を無効にして、前方参照専用の読み取り専用カーソルに対して**SQLGetData**を有効にします。 SQL_SOPT_SS_CURSOR_OPTIONS を SQL_CO_OFF に設定すると、カーソルの種類は変更されません。 つまり、高速順方向専用カーソルは高速順方向専用カーソルのままです。 カーソルの種類を変更するには、アプリケーションで/SQL_ATTR_CURSOR_TYPE を使用し`SQLSetStmtAttr`て別の種類のカーソルを設定する必要があります。|  
+|SQL_CO_OFF|既定値。 高速順方向専用、読み取り専用のカーソル、および autofetch を無効にして、前方参照専用の読み取り専用カーソルに対して**SQLGetData**を有効にします。 SQL_SOPT_SS_CURSOR_OPTIONS を SQL_CO_OFF に設定すると、カーソルの種類は変更されません。 つまり、高速順方向専用カーソルは高速順方向専用カーソルのままです。 カーソルの種類を変更するには、アプリケーションで/SQL_ATTR_CURSOR_TYPE を使用して別の種類のカーソルを設定する必要があり `SQLSetStmtAttr` ます。|  
 |SQL_CO_FFO|高速順方向専用の読み取り専用カーソルを有効にし、順方向専用、読み取り専用のカーソルでの**SQLGetData**を無効にします。|  
 |SQL_CO_AF|すべてのカーソルの種類で autofetch オプションを有効にします。 このオプションがステートメントハンドルに対して設定されている場合、 **Sqlexecute**または**SQLExecDirect**は暗黙的な**sqlfetchscroll** (SQL_FIRST) を生成します。 カーソルが開かれ、最初の行バッチが 1 回のラウンドトリップでサーバーに返されます。|  
 |SQL_CO_FFO_AF|autofetch オプションを設定して高速順方向専用カーソルを有効にします。 これは、SQL_CO_AF と SQL_CO_FFO の両方を指定した場合と同じです。|  
@@ -131,10 +131,10 @@ ms.locfileid: "63188688"
   
 |*Valueptr*値|説明|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|既定値。<br /><br /> テーブル値パラメーターを使用する場合は、実際のテーブルのメタデータが返される必要があることを示します。<br /><br /> スパース列機能を使用する場合、SQLColumns は、スパース`column_set`のメンバーでない列のみを返します。|  
+|SQL_SS_NAME_SCOPE_TABLE|既定値。<br /><br /> テーブル値パラメーターを使用する場合は、実際のテーブルのメタデータが返される必要があることを示します。<br /><br /> スパース列機能を使用する場合、SQLColumns は、スパースのメンバーでない列のみを返し `column_set` ます。|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|アプリケーションが実際のテーブルではなくテーブル型のメタデータを必要としていること (テーブル型のメタデータが返される必要があること) を示します。 その後、アプリケーションはテーブル値パラメーターの TYPE_NAME を*TableName*パラメーターとして渡します。|  
-|SQL_SS_NAME_SCOPE_EXTENDED|スパース列機能を使用する場合、SQLColumns は、 `column_set`メンバーシップに関係なくすべての列を返します。|  
-|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|スパース列機能を使用する場合、SQLColumns は、スパース`column_set`のメンバーである列のみを返します。|  
+|SQL_SS_NAME_SCOPE_EXTENDED|スパース列機能を使用する場合、SQLColumns は、メンバーシップに関係なくすべての列を返し `column_set` ます。|  
+|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|スパース列機能を使用する場合、SQLColumns は、スパースのメンバーである列のみを返し `column_set` ます。|  
 |SQL_SS_NAME_SCOPE_DEFAULT|SQL_SS_NAME_SCOPE_TABLE と同等です。|  
   
  SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME は、 *CatalogName*パラメーターと*SchemaName*パラメーターでそれぞれ使用され、テーブル値パラメーターのカタログとスキーマを識別します。 テーブル値パラメーターのメタデータの取得が完了すると、アプリケーションによって、SQL_SOPT_SS_NAME_SCOPE は既定値 SQL_SS_NAME_SCOPE_TABLE に設定し直す必要があります。  

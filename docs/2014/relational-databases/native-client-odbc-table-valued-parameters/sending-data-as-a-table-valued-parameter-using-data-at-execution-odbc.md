@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure one row at a time
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2b1e6b5b366a6c4132be78ff089dbe0001efd41
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205464"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698616"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>実行時データを使用したテーブル値パラメーターとしてのデータの送信 (ODBC)
   これは、「[すべてのメモリ内」](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)の手順に似ていますが、テーブル値パラメーターの実行時データを使用します。  

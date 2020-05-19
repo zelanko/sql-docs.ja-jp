@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ee2ff452e8544e37977e46055fdb9b32af877366
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18927234a3a8a985a15c645cfc931bc907feb557
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206669"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82695985"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>テーブル値パラメーターの使用 (OLE DB)
   このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。 このサンプルでは、次の処理を実行します。  

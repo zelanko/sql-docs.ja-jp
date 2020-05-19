@@ -10,15 +10,15 @@ helpviewer_keywords:
 - xml columns [full-text search]
 - indexes [full-text search]
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 897002d437dcee8a6c64750f964c957c18a077f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b546ea99aac7d645cc41746bc0bae757f852050
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193254"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702391"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>XML 列でのフルテキスト検索の使用
   XML 列にフルテキスト インデックスを作成して XML 値のコンテンツにインデックスを設定できますが、XML マークアップは無視されます。 要素タグはトークンの境界として使用されます。 インデックスは次の項目に設定されます。  

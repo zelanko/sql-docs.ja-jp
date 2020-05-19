@@ -10,18 +10,18 @@ helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f0288e88e10433a3c74487b1fd1418b14a58094b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75667beed815ef93cd071935ce7e5a24cf5b7166
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012164"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702811"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0 での xml データ型のサポート
-  以降[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、データ型を使用`xml`した XML 型のデータがサポートされています。 ここでは、SQLXML 4.0 で `xml` データ型のインスタンスがどのように認識されるかと、それらがどのようにサポートされるかについて情報を提供します。  
+  以降 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を使用した XML 型のデータがサポートされてい `xml` ます。 ここでは、SQLXML 4.0 で `xml` データ型のインスタンスがどのように認識されるかと、それらがどのようにサポートされるかについて情報を提供します。  
   
 ## <a name="working-with-xml-data-types"></a>xml データ型の使用  
  `xml` データ型の列を実装する SQL テーブルの処理方法の理解に役立つように、次の例が用意されています。  
@@ -34,7 +34,7 @@ ms.locfileid: "66012164"
   
 ## <a name="guidelines-and-limitations"></a>ガイドラインと制限  
   
--   **xsd: 任意の>を、データ型を含む列にマップすることはできません。 \<** `xml` この場合、SQLXML では `sql:overflow-field` 注釈を使用して対処できます。 または、`xml` データ型のフィールドに `xsd:anyType` の要素としてマップすることもできます。 この方法は、上の表の例 "XML 要素を XML データ型の列にマップする" に示されています。  
+-   ** \< xsd: 任意の>** を、データ型を含む列にマップすることはできません `xml` 。 この場合、SQLXML では `sql:overflow-field` 注釈を使用して対処できます。 または、`xml` データ型のフィールドに `xsd:anyType` の要素としてマップすることもできます。 この方法は、上の表の例 "XML 要素を XML データ型の列にマップする" に示されています。  
   
 -   `xml` データ型の列のコンテンツに XPath クエリを実行することはできません。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66012164"
   
 -   SQLXML 4.0 は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で提供される DTD の制限付きサポートに依存しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では `xml` データ型のデータの内部 DTD が許可されるので、既定値の設定や、エンティティ参照の拡張コンテンツへの置き換えに使用できます。 SQLXML では、サーバーに XML データが "そのまま" (内部 DTD を含めて) 渡されます。 ここで、サード パーティのツールを使用して DTD を XML スキーマ (XSD) ドキュメントに変換し、データをインライン XSD スキーマと共にデータベースに読み込むことができます。  
   
--   SQLXML 4.0 では、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]動作に基づいて、XML 宣言の処理命令 (たとえば、) は保持されません。 代わりに、XML 宣言は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML パーサーに対するディレクティブとして扱われ、データが `xml` データ型に変換された後は、属性 (バージョン、エンコーディング、およびスタンドアロン) は失われます。 XML データは内部的に UCS-2 として保存されます。 XML インスタンス内のその他すべての処理命令は保持されます。これらは `xml` 列で許可され、SQLXML でサポートされます。  
+-   SQLXML 4.0 では、の動作に基づいて、XML 宣言の処理命令 (たとえば、) は保持されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 代わりに、XML 宣言は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML パーサーに対するディレクティブとして扱われ、データが `xml` データ型に変換された後は、属性 (バージョン、エンコーディング、およびスタンドアロン) は失われます。 XML データは内部的に UCS-2 として保存されます。 XML インスタンス内のその他すべての処理命令は保持されます。これらは `xml` 列で許可され、SQLXML でサポートされます。  
   
 ## <a name="see-also"></a>参照  
  [XML データ &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  

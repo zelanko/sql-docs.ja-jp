@@ -21,18 +21,18 @@ helpviewer_keywords:
 - deleting data
 - inserting data
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b615062ae70c5a7b7ee18869aaa20951dec29b2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb266c198b7c828f1f8842cf4ffa3dc9c1de10e9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014600"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702992"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>SQLXML 4.0 での、アップデートグラムを使用したデータ変更
-  アップデートグラムまたは OPENXML [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)]関数を使用して、既存の XML ドキュメントからデータベースを変更 (挿入、更新、または削除) することができます。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アップデートグラムまたは OPENXML 関数を使用して、既存の XML ドキュメントからデータベースを変更 (挿入、更新、または削除) することができ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ます。  
   
  ここでは、アップデートグラムについての情報と、その使用例を示します。  
   

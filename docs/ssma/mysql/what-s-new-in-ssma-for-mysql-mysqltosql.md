@@ -3,22 +3,29 @@ title: SSMA for MySQL の新機能 (MySQLToSql) |Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 9d5c33bbb9e09a5a833c928547a5ec659fe43c96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 288056843e8868c5738f8f1e101015c0142bb6bd
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625546"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220197"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL の新機能 (MySqlToSql)
 
 この記事では、各リリースでの MySQL 変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v89"></a>SSMA v 8.9
+
+SSMA for MySQL の v1.0 リリースには、次の変更が含まれています。
+
+* 空間型のデータ移行の修正
+* プロジェクト名に特殊文字が含まれている問題の修正
 
 ## <a name="ssma-v88"></a>SSMA v 8.8
 
@@ -31,7 +38,7 @@ SSMA for MySQL のバージョン8.8 には次のものが含まれています�
 
 SSMA for MySQL のバージョン8.7 リリースでは、グラフィカルユーザーインターフェイスが多少修正され、パフォーマンスが向上しています。
 
-さらに、SSMA for MySQL では、Azure `LIMIT` SQL を対象とする場合に句の変換が提供されるようになりました。
+さらに、SSMA for MySQL では、 `LIMIT` AZURE SQL を対象とする場合に句の変換が提供されるようになりました。
 
 > [!IMPORTANT]
 > SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
@@ -40,7 +47,7 @@ SSMA for MySQL のバージョン8.7 リリースでは、グラフィカルユ�
 
 ユーザビリティとパフォーマンスを向上させるために設計された一連の修正に加えて、SSMA for MySQL のリリースは、ユーザーが変換されたコードで SSMA の拡張プロパティを省略できるようにする設定を追加することによって強化されています。
 
-Ssma for MySQL でこの設定を利用するには、 **[ツール** > ] [プロジェクト] [**設定** > **[全般** > **変換**] に移動し、[その**他**] の [**拡張プロパティを省略**する] 設定の値を **[はい]** に更新します。
+Ssma for MySQL でこの設定を利用するには、[**ツール**] [プロジェクト] [  >  **設定**]  >  **[全般**  >  **変換**] に移動し、[その**他**] の [**拡張プロパティを省略**する] 設定の値を **[はい]** に更新します。
 
 ![拡張プロパティの設定を省略する](../mysql/media/ssma-omit-extended-properties.png)
 
@@ -66,7 +73,7 @@ SSMA for MySQL の v2.0 リリースは、ユーザー補助の問題に対処�
 SSMA for MySQL の v2.0 リリースは、品質と変換のメトリックを向上させるように設計された対象の修正によって強化されています。 また、SSMA for MySQL のこのリリースでは、次のような修正が行われています。
 
 * アクセシビリティの問題に対処します。
-* SQL Server に種類の`hierarchyid`基本サポートを追加します。
+* SQL Server に種類の基本サポートを追加 `hierarchyid` します。
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -193,8 +200,8 @@ SSMA for MySQL の2016年5月のリリースには、次の変更が含まれて
 * .NET 2.0 のインストーラーチェックが削除されました。
 * .NET 3.5 から .NET 4.0 への拡張パックの依存関係を更新しました。
 * MySql の既定の BigInt 型マッピングを修正します。
-* SSMA コンソールのコマンドとコマンドを修正`save-project`し`open-project`ます。
-* SSMA コンソールのコマンドを修正`securepassword`します。
+* `save-project` `open-project` Ssma コンソールのコマンドとコマンドを修正します。
+* `securepassword`SSMA コンソールのコマンドを修正します。
 * 初期読み込みのオブジェクトのカウントを固定します。
 * MsSql オブジェクトの読み込みを修正した。
 * グローバル設定のバグを修正した。
@@ -236,15 +243,15 @@ SSMA for MySQL の2014年4月のリリースには、次の変更が含まれて
 
 SSMA for MySQL の2011年7月のリリースには、次の変更が含まれています。
   
-* からへ`LIMIT` [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] `OFFSET`の変換のサポート。
+* からへの変換のサポート `LIMIT` [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] `OFFSET` 。
 * データ移行中のエラー報告の向上。
   
 ## <a name="april-2011"></a>2011年4月
 
 SSMA for MySQL の2011年4月のリリースには、次の変更が含まれています。
   
-* 、 [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)]、 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]および Azure SQL をサポートする "ssma for MySQL" の単一インストール可能。
-* 接続[!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]する権限です。
+* [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]、、 [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] および Azure SQL をサポートする "ssma for MySQL" の単一インストール可能 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 。
+* 接続する権限 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] です。
 * 拡張されたクライアント側のデータ移行エンジンで、データの並列移行がサポートされています。
 * 単純復旧モデルと一括ログ復旧モデルにより、データ移行のパフォーマンスが向上しました。
 * SSMA for MySQL コンソールのバージョンでは、旧バージョンとの互換性がサポートされています。 以前のバージョンで作成されたプロジェクトを SSMA v1.0 に開くことができます。

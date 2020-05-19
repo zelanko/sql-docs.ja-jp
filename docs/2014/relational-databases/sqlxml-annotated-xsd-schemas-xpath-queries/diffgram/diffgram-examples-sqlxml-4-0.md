@@ -12,15 +12,15 @@ helpviewer_keywords:
 - diffgr:parentID
 - parentID annotation
 ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 38bee43ed5b727bca552c1b44010dd692012d823
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 975fd3a984418c20ae0e142b447aea6645284cbc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012972"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703189"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram の例 (SQLXML 4.0)
   ここでは、データベースに対して挿入、変更、および削除の各操作を実行する DiffGram の例を示します。 例を使用する前に、次のことに注意してください。  
@@ -99,7 +99,7 @@ ms.locfileid: "66012972"
 </ROOT>  
 ```  
   
- ** \<** ** \<Before>** block には、Order>要素 (Customer1 **: id = "Order1"**) と** \<Customer>** 要素 (**diffgram: id = ""**) があります。 これらの要素はデータベースの既存のレコードを表します。 ** \<Datainstance>** 要素には、対応するレコードがありません (同一の場合は、 **id**)。 これは削除操作を表します。  
+ ** \< Before>** block には、 ** \< Order>** 要素 (Customer1 **: id = "Order1"**) と** \< Customer>** 要素 (**diffgram: id = ""**) があります。 これらの要素はデータベースの既存のレコードを表します。 ** \< Datainstance>** 要素には、対応するレコードがありません (同一の場合は、 **id**)。 これは削除操作を表します。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   
@@ -166,7 +166,7 @@ ms.locfileid: "66012972"
 </ROOT>  
 ```  
   
- この DiffGram では** \<>** ブロックが指定されていません (既存のデータベースレコードが特定されていません)。 Cust テーブルと Ord テーブルにマップされている2つのレコードインスタンス ( ** \<顧客>** と** \<** 、 ** \<datainstance>** block の>要素によって識別される) があります。 これらの要素はどちらも **、** "属性の変更" 属性 (**haschanges = "inserted"**) を指定します。 これは挿入操作を表します。 この DiffGram では、 **Haschanges = "modified"** を指定した場合、存在しないレコードを変更しようとするとエラーになります。  
+ この DiffGram では** \<>** ブロックが指定されていません (既存のデータベースレコードが特定されていません)。 Cust テーブルと Ord テーブルにマップされている2つのレコードインスタンス ( ** \< 顧客>** と、 ** \< datainstance>** block の** \<>** 要素によって識別される) があります。 これらの要素はどちらも **、** "属性の変更" 属性 (**haschanges = "inserted"**) を指定します。 これは挿入操作を表します。 この DiffGram では、 **Haschanges = "modified"** を指定した場合、存在しないレコードを変更しようとするとエラーになります。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   
@@ -238,7 +238,7 @@ ms.locfileid: "66012972"
 </ROOT>  
 ```  
   
- ** \<Before>** ブロックには、 ** \<Customer>** 要素 (**Customer1**) が含まれています。 ** \<Datainstance>** block には、同じ**id**を持つ対応する** \<Customer>** 要素が含まれています。Newdataset>の** \<customer>** 要素では、[変更後のデータ] を指定することもできます。 **haschanges = "modified"** です。 ** \<** これは更新操作であることを示し、 **Cust**テーブルの顧客レコードがそれに応じて更新されます。 DiffGram **: hasChanges**属性が指定されていない場合、diffgram 処理ロジックはこの要素を無視し、更新は実行されないことに注意してください。  
+ ** \< Before>** ブロックには、 ** \< Customer>** 要素 (**Customer1**) が含まれています。 ** \< Datainstance>** block には、同じ**id**を持つ対応する** \< Customer>** 要素が含まれています。** \< Newdataset>** の** \< customer>** 要素では、[変更後のデータ] を指定することもできます。 **haschanges = "modified"** です。 これは更新操作であることを示し、 **Cust**テーブルの顧客レコードがそれに応じて更新されます。 DiffGram **: hasChanges**属性が指定されていない場合、diffgram 処理ロジックはこの要素を無視し、更新は実行されないことに注意してください。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   
@@ -339,15 +339,15 @@ ms.locfileid: "66012972"
   
  この DiffGram は、DiffGram のロジックにより次のように処理されます。  
   
--   DiffGram 処理ロジックに従うと、マッピングスキーマで説明されているように、 ** \<before>** ブロックの最上位レベルのすべての要素が対応するテーブルにマップされます。  
+-   DiffGram 処理ロジックに従うと、マッピングスキーマで説明されているように、 ** \< before>** ブロックの最上位レベルのすべての要素が対応するテーブルにマップされます。  
   
--   ** \<Before>** ブロックには、 ** \<Order>** 要素 (**dffgr: id = "Order1"**) と** \<Customer>** 要素 (**Customer1**) があります。この要素は、 ** \<datainstance>** ブロック (同じ id) に対応する要素が存在しません。 これは削除操作を表し、レコードは Cust テーブルと Ord テーブルから削除されます。  
+-   ** \< Before>** ブロックには、 ** \< Order>** 要素 (**dffgr: id = "Order1"**) と** \< Customer>** 要素 (**Customer1**) があります。この要素は、 ** \< datainstance>** ブロック (同じ id) に対応する要素が存在しません。 これは削除操作を表し、レコードは Cust テーブルと Ord テーブルから削除されます。  
   
--   ** \<** ** \<** ** \<Before>** ブロックには、customer>要素 (例 **: id = "Customer2"**) があります。この要素には、(同じ id の) datainstance>ブロックに対応する customer>要素があります。 ** \<** Datainstance>ブロック内の要素では、次のように指定します。 **haschanges = "modified"**。 ** \<** これは更新操作であり、顧客 ANATR に対して、 ** \<datainstance>** block で指定された値を使用して、Cust テーブルの CompanyName との情報が更新されます。  
+-   ** \< Before>** ブロックには、 ** \< customer>** 要素 (例 **: id = "Customer2"**) があります。この要素には、(同じ id の) ** \< datainstance>** ブロックに対応する** \< customer>** 要素があります。 ** \< Datainstance>** ブロック内の要素では、次のように指定します。 **haschanges = "modified"**。 これは更新操作であり、顧客 ANATR に対して、 ** \< datainstance>** block で指定された値を使用して、Cust テーブルの CompanyName との情報が更新されます。  
   
--   ** \<** ** \<** **diffgr:id="Customer3"** ** \<Datainstance>** ブロックには、Customer>要素 (Order3: id = "Customer3") と Order>要素 (**diffgram: id = ""**) があります。 これらの要素のどちらにも、 **diffgram: hasChanges**属性が指定されていません。 このため、DiffGram の処理ロジックで、これらの要素は無視されます。  
+-   ** \< Datainstance>** ブロックには、 ** \< Customer>** 要素 (Order3 **: id = "Customer3"**) と** \< Order>** 要素 (**diffgram: id = ""**) があります。 これらの要素のどちらにも、 **diffgram: hasChanges**属性が指定されていません。 このため、DiffGram の処理ロジックで、これらの要素は無視されます。  
   
--   ** \<** \< ** \<** **diffgr:id="Order4"** ** \<Datainstance>** ブロックには、Customer>要素 (Order4 **: id = "Customer4"**) と Order>要素 () があります。この要素には、before> ブロックに対応する要素がありません。 Datainstance>ブロック内のこれらの要素は、次のように指定します **: haschanges = "inserted"**。 ** \<** このため、新しいレコードが Cust テーブルと Ord テーブルに追加されます。  
+-   ** \< Datainstance>** ブロックには、 ** \< Customer>** 要素 (Order4 **: id = "Customer4"**) と** \< Order>** 要素 (**diffgr:id="Order4"**) があります。この要素には、 \< before> ブロックに対応する要素がありません。 ** \< Datainstance>** ブロック内のこれらの要素は、次のように指定します **: haschanges = "inserted"**。 このため、新しいレコードが Cust テーブルと Ord テーブルに追加されます。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   
@@ -390,7 +390,7 @@ ms.locfileid: "66012972"
      詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
 ## <a name="e-applying-updates-by-using-a-diffgram-with-the-diffgrparentid-annotation"></a>E. DiffGram で diffgr:parentID 注釈を指定して更新を適用する  
- この例は、更新プログラムを適用するときに、DiffGram の** \<before>** ブロックで指定されている**parentID**注釈を使用する方法を示しています。  
+ この例は、更新プログラムを適用するときに、DiffGram の** \< before>** ブロックで指定されている**parentID**注釈を使用する方法を示しています。  
   
 ```  
 <NewDataSet />  
@@ -411,6 +411,6 @@ ms.locfileid: "66012972"
 </diffgr:diffgram>  
 ```  
   
- この DiffGram では、 ** \<before>** ブロックのみが存在するため、削除操作を指定します。 DiffGram では、 **parentID**注釈を使用して、注文と注文の詳細の間に親子リレーションシップを指定します。 SQLXML でレコードが削除されるときには、このリレーションシップで指定された子テーブルからレコードが削除された後、対応する親テーブルからレコードが削除されます。  
+ この DiffGram では、 ** \< before>** ブロックのみが存在するため、削除操作を指定します。 DiffGram では、 **parentID**注釈を使用して、注文と注文の詳細の間に親子リレーションシップを指定します。 SQLXML でレコードが削除されるときには、このリレーションシップで指定された子テーブルからレコードが削除された後、対応する親テーブルからレコードが削除されます。  
   
   

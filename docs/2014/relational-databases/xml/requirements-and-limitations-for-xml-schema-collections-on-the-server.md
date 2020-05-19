@@ -21,15 +21,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efee2d8c9dea38beda1ba3398230dce8d1163d77
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241258"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702534"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>サーバー上の XML スキーマ コレクションの要件と制限
   XSD (XML Schema Definition Language) の検証には、`xml` データ型を使用する SQL 列に関して制限事項がいくつかあります。 次の表は、このような制限事項に関する詳細と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で機能するように XSD スキーマを変更するためのガイドラインを示しています。 このセクションのトピックでは、具体的な制限事項の詳細とその対処方法について説明します。  
@@ -47,7 +47,7 @@ ms.locfileid: "63241258"
 |既存の置換グループへのメンバーの追加|XML スキーマ コレクション内の既存の置換グループにメンバーを追加することはできません。 XML スキーマの置換グループは先頭要素のみで使用するように制限されているので、同じ CREATE XML SCHEMA COLLECTION ステートメントまたは ALTER XML SCHEMA COLLECTION ステートメントで置換グループのすべてのメンバー要素を定義する必要があります。|  
 |正規の形式とパターン制限|値の正規表現は、その値の型のパターン制限に従う必要があります。 詳細については、「 [Canonical Forms and Pattern Restrictions](canonical-forms-and-pattern-restrictions.md)」を参照してください。|  
 |列挙ファセット|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ファセットに違反するパターン ファセットや列挙を含む型を使用した XML スキーマはサポートしません。|  
-|ファセット長|**Length**、 **MinLength**、および**maxLength**ファセットは、 `long`型として格納されます。 この型は 32 ビット型です。 そのため、これらの値に許容される値の<sup>^</sup>範囲は 2 31 です。|  
+|ファセット長|**Length**、 **MinLength**、および**maxLength**ファセットは、型として格納され `long` ます。 この型は 32 ビット型です。 そのため、これらの値に許容される値の範囲は 2 <sup>^</sup> 31 です。|  
 |ID 属性|XML スキーマ コンポーネントは、それぞれ ID 属性を 1 つ含むことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**ID\< 型の** **xsd:attribute>** 宣言に一意性を適用しますが、これらの値を格納しません。 一意性のスコープは、CREATE XML SCHEMA COLLECTION ステートメントまたは ALTER XML SCHEMA COLLECTION ステートメントで適用します。|  
 |ID 型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **xs:ID**型、 **xs:IDREF**型、または **xs:IDREFS**型の要素はサポートしません。 スキーマでは、この型の要素や、この型の制限または拡張によって派生した要素を宣言できません。|  
 |ローカル名前空間|**\<xsd:any>** 要素では、ローカル名前空間を明示的に指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、名前空間属性の値に空文字列 ("") を使用するスキーマを拒否します。 代わりに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では "##local" を明示的に使用して、修飾されない要素や属性をワイルドカード文字によるインスタンスとして示す必要があります。|  

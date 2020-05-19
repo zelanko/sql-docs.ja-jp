@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b614db01d4128ec30d6d52260a781fffd69e8c8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70477e5fc741949a42aa5eebfd7a1d0a2b3568b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68207024"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696231"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>強化された日付/時刻機能の使用 (OLE DB)
-  このサンプルでは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で導入された日付/時刻機能を使用する方法を示します。 このサンプルでは、4つの新しい日付/`date`時刻型 ( `datetime2`、 **time**、、および`datetimeoffset`) を使用して、パラメーターを指定してコマンドを実行し、行セットの結果を取得します。  
+  このサンプルでは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で導入された日付/時刻機能を使用する方法を示します。 このサンプルでは、4つの新しい日付/時刻型 ( `date` 、 **time**、、および) を使用して、パラメーターを指定 `datetime2` してコマンドを `datetimeoffset` 実行し、行セットの結果を取得します。  
   
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   

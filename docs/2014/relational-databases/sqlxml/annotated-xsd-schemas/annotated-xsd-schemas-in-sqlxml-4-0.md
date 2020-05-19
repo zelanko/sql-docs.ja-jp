@@ -14,15 +14,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], annotations
 - schemas [SQLXML]
 ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5eecc52bb683f19582a539992b0668d3fe6e175
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59940c88f72ed46da3e4b81ce3fabe3bb73ec4b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014516"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702940"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 における注釈付き XSD スキーマ
   ここでは、SQLXML 4.0 での注釈付き XSD スキーマの使用について、情報を提供します。 以前のバージョンの SQLXML では、同様の機能が XML-Data Reduced (XDR) スキーマで提供されていました。 ここではレガシ アプリケーション用の XDR に関する情報も提供します。  
@@ -43,7 +43,7 @@ ms.locfileid: "66014516"
  [注釈付き XDR スキーマ &#40;SQLXML 4.0 で非推奨とされました&#41;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
  以前のバージョンの SQLXML では、XDR スキーマの注釈がサポートされていました。 注釈付き XDR スキーマは SQLXML 4.0 では非推奨とされますが、ここでは、レガシ アプリケーションの参照用として説明します。  
   
-## <a name="other-resources"></a>その他のリソース  
+## <a name="other-resources"></a>その他の参照情報  
  XML スキーマ定義言語 (XSD)、XML パス言語 (XPath)、Extensible Stylesheet Language Transformations (XSLT) の詳細については、次の Web サイトを参照してください。  
   
 -   XML スキーマパート 0: 入門、W3C 勧告 (http://www.w3.org/TR/xmlschema-0/)  

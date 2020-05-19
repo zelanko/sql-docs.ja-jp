@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9ee8e8eeb7552d9a4c875a64be85b9b7734b1dc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 532099a9d60a4fa5ccc3a206d2e7e86194423ace
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206666"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696118"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>大きな CLR UDT の使用 (OLE DB)
   このサンプルでは、大きなユーザー定義型を持つ行を結果セットからフェッチする方法を示します。 詳細については、「[大きな CLR ユーザー定義型 &#40;OLE DB&#41;](../native-client/ole-db/large-clr-user-defined-types-ole-db.md)」を参照してください。 このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。  

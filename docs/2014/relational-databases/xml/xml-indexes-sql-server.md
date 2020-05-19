@@ -30,15 +30,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62631368"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702284"
 ---
 # <a name="xml-indexes-sql-server"></a>XML インデックス (SQL Server)
   `xml` データ型の列には XML インデックスを作成できます。 列に保存されている XML インスタンスのすべてのタグ、値、およびパスにインデックスが設定されるので、クエリのパフォーマンスが向上します。 次のような場合、XML インデックスの効果が得られる可能性があります。  
@@ -103,7 +103,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  [xml データ型のメソッド](/sql/t-sql/xml/xml-data-type-methods) に関係するクエリの場合、クエリ プロセッサでプライマリ XML インデックスが使用され、スカラー値またはプライマリ インデックス自体の XML サブツリーのどちらかが返されます。 (このプライマリ XML インデックスには XML インスタンスの再構築に必要なすべての情報が格納されています)。  
   
- たとえば、次のクエリでは、 `CatalogDescription``xml` `ProductModel`テーブルの type 列に格納されている概要情報が返されます。 このクエリでは、カタログの説明に <`Summary`> の説明も含まれている製品モデルに限り <`Features`> 情報が返されます。  
+ たとえば、次のクエリでは、テーブルの type 列に格納されている概要情報が返され `CatalogDescription``xml` `ProductModel` ます。 このクエリでは、カタログの説明に <`Summary`> の説明も含まれている製品モデルに限り <`Features`> 情報が返されます。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -168,7 +168,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/book[@* = "someValue"]`: `book` という値の属性を持つ <`"someValue"`> 要素を検索します。  
   
- 次のクエリは、 `ContactID` テーブルから `Contact` を返します。 句`WHERE`は、 `AdditionalContactInfo``xml`型の列の値を検索するフィルターを指定します。 連絡先 ID は、対応する追加の連絡先情報の XML バイナリ ラージ オブジェクトに特定の電話番号が含まれている場合にのみ返されます。 <`telephoneNumber`> 要素は XML 内のどこにでも存在し得るので、パス式で descendent-or-self 軸を指定しています。  
+ 次のクエリは、 `ContactID` テーブルから `Contact` を返します。 句は、 `WHERE` 型の列の値を検索するフィルターを指定し `AdditionalContactInfo``xml` ます。 連絡先 ID は、対応する追加の連絡先情報の XML バイナリ ラージ オブジェクトに特定の電話番号が含まれている場合にのみ返されます。 <`telephoneNumber`> 要素は XML 内のどこにでも存在し得るので、パス式で descendent-or-self 軸を指定しています。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -183,7 +183,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  この場合、検索する <`number`> の値はわかっていますが、この値は <`telephoneNumber`> 要素の子として XML インスタンス内のどこにでも存在できます。 このようなクエリでは特定の値に基づいてインデックス参照を行うと、効率的になる場合があります。  
   
 ### <a name="property-secondary-index"></a>PROPERTY セカンダリ XML インデックス  
- 個々の XML インスタンスから 1 つ以上の値を取得するクエリでは、PROPERTY インデックスを使用するとメリットが得られる場合があります。 このシナリオは、 `xml`型の**value ()** メソッドを使用してオブジェクトのプロパティを取得し、オブジェクトの主キーの値がわかっている場合に発生します。  
+ 個々の XML インスタンスから 1 つ以上の値を取得するクエリでは、PROPERTY インデックスを使用するとメリットが得られる場合があります。 このシナリオは、型の**value ()** メソッドを使用してオブジェクトのプロパティを取得し、 `xml` オブジェクトの主キーの値がわかっている場合に発生します。  
   
  PROPERTY インデックスは、プライマリ XML インデックスの列 (PK、パス、およびノード値) について構築されます。PK はベース テーブルの主キーです。  
   
@@ -198,7 +198,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- このトピックで後述する相違点を除いて、`xml`型の列に XML インデックスを作成することは、非`xml`型列にインデックスを作成することと似ています。 XML インデックスの作成と管理には、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL ステートメントを使用できます。  
+ このトピックで後述する相違点を除いて、型の列に XML インデックスを作成 `xml` することは、非型列にインデックスを作成することと似てい `xml` ます。 XML インデックスの作成と管理には、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL ステートメントを使用できます。  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   

@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689027"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701943"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   指定された BCP 型トークンの SQL 型名を返します。  
@@ -52,7 +52,7 @@ fIsMaxType
 ## <a name="returns"></a>戻り値  
  BCP 型に対応する SQL 型名を含む文字列を返します。 無効な BCP 型が指定されると、空文字列を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  BCP 型トークンは、sqlncli.h ヘッダー ファイルと sqlncli11.lib ライブラリで定義されています。  
   
  次の表では、指定できる BCP 型、それらの BCP 型が max 型かどうか、および予想される出力を示しています。  

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - stored procedures [ODBC]
 - ODBC CALL syntax
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 609322d265d18345e7ef39b4598cb6e1c226c97a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65a3c9c87a0551050ba95bdc247afdcfaa421da8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206691"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82697052"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>ODBC CALL 構文を使用したストアド プロシージャの実行と、リターン コードおよび出力パラメーターの処理 (OLE DB)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーターはサーバーからの最後のパケットで送信されるため、行セットが完全に解放されるまでアプリケーションでは使用できません。 コマンドから複数の結果が返された場合は、が`IMultipleResults::GetResult` DB_S_NORESULT を返した`IMultipleResults`とき、またはインターフェイスが完全に解放されたときのいずれか早い方で、出力パラメーターのデータを使用できます。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーターはサーバーからの最後のパケットで送信されるため、行セットが完全に解放されるまでアプリケーションでは使用できません。 コマンドから複数の結果が返された場合は、が `IMultipleResults::GetResult` DB_S_NORESULT を返したとき、または `IMultipleResults` インターフェイスが完全に解放されたときのいずれか早い方で、出力パラメーターのデータを使用できます。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)を使用して暗号化する必要があります。  

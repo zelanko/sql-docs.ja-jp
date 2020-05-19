@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e343e7e9657b69ebd06a147cb99fa19e3c36aab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 287acb7986b3e518260f82278f8079391932ab6f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120253"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262138"
 ---
 # <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>fn_hadr_backup_is_preferred_replica (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
  バックアップするデータベースの名前です。 *dbname*の型は sysname です。  
   
 ## <a name="returns"></a>戻り値  
- 現在のインスタンス上のデータベースが優先レプリカに存在する場合は 1 を返します。 それ以外の場合は 0 を返します。  
+ 現在のインスタンス上のデータベースが優先レプリカ上にある場合は、データ型**bool**: 1 を返します。それ以外の場合は0を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  バックアップスクリプトでこの関数を使用して、現在のデータベースがバックアップに適したレプリカに存在するかどうかを確認します。 すべての可用性レプリカでスクリプトを実行できます。 これらの各ジョブは、どのジョブを実行するかを決定するために同じデータを確認するので、スケジュールされたジョブの1つだけがバックアップステージに進みます。 サンプル コードは次のようになります。  
   
 ```  

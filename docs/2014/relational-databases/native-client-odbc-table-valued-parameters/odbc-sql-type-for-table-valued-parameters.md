@@ -9,20 +9,20 @@ ms.topic: reference
 helpviewer_keywords:
 - SQL_SS_TABLE
 ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 90857b24fb467df0292beeb88fb9751e68204d12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c9ba511746375a902a1643631c86ec8c72dbd02
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199982"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698855"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>テーブル値パラメーター用の ODBC SQL 型
   テーブル値パラメーターは、新しい ODBC SQL 型である SQL_SS_TABLE でサポートされます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SQL_SS_TABLE は、他の ODBC データ型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に変換できません。  
   
  SQL_SS_TABLE が SQLBindParameter の*ValueType*パラメーターで C データ型として使用されている場合、またはアプリケーションパラメーター記述子 (APD) レコードの SQL_DESC_TYPE を SQL_SS_TABLE に設定しようとした場合、SQL_ERROR が返され、"アプリケーションバッファーの種類が無効です" という内容の診断レコードが生成されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "63199982"
   
  SQLGetData を呼び出すときに*TargetType*パラメーターが SQL_SS_TABLE 場合、SQL_ERROR が返され、"アプリケーションバッファーの種類が無効です" という SQLSTATE = HY003 の診断レコードが生成されます。  
   
- テーブル値パラメーターの列は、SQL_SS_TABLE 型としてバインドできません。 ParameterType `SQLBindParameter`を SQL_SS_TABLE に*ParameterType*設定してを呼び出した場合、SQL_ERROR が返され、"SQL データ型が無効です" という SQLSTATE = HY004 の診断レコードが生成されます。 これは、SQLSetDescField および SQLSetDescRec でも発生する可能性があります。  
+ テーブル値パラメーターの列は、SQL_SS_TABLE 型としてバインドできません。 `SQLBindParameter` *ParameterType*を SQL_SS_TABLE に設定してを呼び出した場合、SQL_ERROR が返され、"SQL データ型が無効です" という SQLSTATE = HY004 の診断レコードが生成されます。 これは、SQLSetDescField および SQLSetDescRec でも発生する可能性があります。  
   
  テーブル値パラメーターの列の値には、パラメーターおよび結果列と同じデータ変換オプションが設定されています。  
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - RPC syntax
 - stored procedures [SQL Server], RPC syntax
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e00adccfa6e75434fe398e21faafccc22f99914e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64264593271636ba38a693346b8537e637debedd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206685"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696887"
 ---
 # <a name="execute-a-stored-procedure-using-rpc-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>RPC 構文を使用したストアド プロシージャの実行と、リターン コードおよび出力パラメーターの処理 (OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーターはサーバーからの最後のパケットで送信されるため、行セットが完全に解放されるまでアプリケーションでは使用できません。 コマンドが複数の結果を返す場合は、`IMultipleResults::GetResult` が DB_S_NORESULT を返すとき、または `IMultipleResults` インターフェイスが完全に解放されるとき、いずれか早いほうの時点で、出力パラメーター データを使用できるようになります。  

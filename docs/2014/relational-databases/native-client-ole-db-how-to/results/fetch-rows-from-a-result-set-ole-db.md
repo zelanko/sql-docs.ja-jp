@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - rows [OLE DB]
 ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3ea6619eede506326cdbb1442f86dc76c44e1765
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2dd44bd25dcf4c3c77ab099e97efff7177c829e3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225512"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696596"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>結果セットからの行のフェッチ (OLE DB)
   このサンプルでは、結果セットから行をフェッチする方法を示します。 このサンプルは IA64 ではサポートされていません。  

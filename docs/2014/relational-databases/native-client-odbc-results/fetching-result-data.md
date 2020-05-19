@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b803ca3742f9cb831e51105aab9d0ed75ad78e16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d4dc78d946f76161cbe7210e183d9b3b77be955
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200083"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699284"
 ---
 # <a name="fetching-result-data"></a>結果データのフェッチ
   ODBC アプリケーションでは、結果データのフェッチを 3 つの方法で実行できます。  
@@ -56,7 +56,7 @@ ms.locfileid: "63200083"
   
  SQL_C_DEFAULT を使用して C 変数のデータ型を指定する場合は注意が必要です。 SQL_C_DEFAULT は、C 変数のデータ型と、列やパラメーターの SQL データ型を一致させることを指定します。 SQL_C_DEFAULT が**ntext**、 **nchar**、または**nvarchar**列に対して指定されている場合、Unicode データがアプリケーションに返されます。 そのため、アプリケーションが Unicode データを処理するようにコーディングされていないと、さまざまな問題が発生する可能性があります。 **Uniqueidentifier** (SQL_GUID) データ型でも、同じ種類の問題が発生する可能性があります。  
   
- 通常、 **text**、 **ntext**、および**image**型のデータは、1つのプログラム変数に格納するには大きすぎるため、通常は**SQLBindCol**ではなく**SQLGetData**を使用して処理されます。 サーバーカーソルを使用する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、NATIVE Client ODBC ドライバーは、行がフェッチされるときに、バインドされていない**text**、 **ntext**、または**image**型の列のデータを転送しないように最適化されています。 **Text**型、 **ntext**型、または**image**型のデータは、アプリケーションが列に対して**SQLGetData**を発行するまで、実際にはサーバーから取得されません。  
+ 通常、 **text**、 **ntext**、および**image**型のデータは、1つのプログラム変数に格納するには大きすぎるため、通常は**SQLBindCol**ではなく**SQLGetData**を使用して処理されます。 サーバーカーソルを使用する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーは、行がフェッチされるときに、バインドされていない**text**、 **ntext**、または**image**型の列のデータを転送しないように最適化されています。 **Text**型、 **ntext**型、または**image**型のデータは、アプリケーションが列に対して**SQLGetData**を発行するまで、実際にはサーバーから取得されません。  
   
  この最適化をアプリケーションに適用すると、ユーザーがカーソルを上下にスクロールしている間に**text**、 **ntext**、または**image**データが表示されないようにすることができます。 ユーザーが行を選択すると、アプリケーションは**SQLGetData**を呼び出して、 **text**、 **ntext**、または**image**型のデータを取得できます。 これにより、ユーザーが選択していない行の**text**型、 **ntext**型、または**image**型のデータが送信され、大量のデータの転送を保存できるようになります。  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - minimally logged operations [SQL Server Native Client]
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 25144e13b4e129209356d0e4e4ebe37f9a3c5d1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1937f3b81a920312aa1f1a4b804352b9674043dc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200819"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702086"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>一括コピー操作の実行 (ODBC)
   ODBC 標準では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一括コピー操作が直接サポートされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 以降のインスタンスに接続するときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一括コピー操作を実行する DB-Library 関数がサポートされます。 このドライバー固有の拡張機能では、一括コピー関数を使用する既存の DB-Library アプリケーションを簡単にアップグレードできる手段が用意されています。 次のファイルには、一括コピー専用のサポートが含まれています。  
@@ -39,15 +39,15 @@ ms.locfileid: "63200819"
      実行時に存在する必要があります。 sqlncli11.dll は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーに付属しています。  
   
 > [!NOTE]  
->  ODBC **Sqlbulkoperations**関数には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一括コピー関数との関係はありません。 アプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の一括コピー関数を使用して、一括コピー操作を実行する必要があります。  
+>  ODBC **Sqlbulkoperations**関数には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一括コピー関数との関係はありません。 アプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の一括コピー関数を使用して、一括コピー操作を実行する必要があります。  
   
 ## <a name="minimally-logging-bulk-copies"></a>一括コピーの最小ログ記録  
  完全復旧モデルでは、一括読み込みで実行されたすべての行挿入操作が、トランザクション ログに完全に記録されます。 ただし大量のデータを読み込むと、トランザクション ログがすぐにいっぱいになる可能性があります。 特定の条件下では、最小ログ記録が可能になります。 最小ログ記録を行うことで、一括読み込み操作によってログ領域がいっぱいになる可能性が少なくなります。また、これは完全なログ記録よりも効率的です。  
   
  最小ログ記録の使用の詳細については、「[一括インポートで最小ログ記録を行うための前提条件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降で bcp.exe を使用すると、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のバージョンでは発生しなかった状況でエラーが発生することがあります。 これは、新しいバージョンでは bcp.exe でデータ型が暗黙的に変換されなくなったためです。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のバージョンでは、対象テーブルのデータ型が money データ型の場合、bcp.exe で数値データが money データ型に変換されました。 ただし、その際には、余分なフィールドは単純に切り捨てられていました。 以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]は、データ型がファイルと対象テーブルの間で一致しない場合、変換先のテーブルに合わせるために切り捨てが必要なデータがあると、bcp によってエラーが発生します。 このエラーを解決するには、対象のデータ型に合わせてデータを修正します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のリリースの bcp.exe を使用することもできます。  
+## <a name="remarks"></a>解説  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降で bcp.exe を使用すると、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のバージョンでは発生しなかった状況でエラーが発生することがあります。 これは、新しいバージョンでは bcp.exe でデータ型が暗黙的に変換されなくなったためです。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のバージョンでは、対象テーブルのデータ型が money データ型の場合、bcp.exe で数値データが money データ型に変換されました。 ただし、その際には、余分なフィールドは単純に切り捨てられていました。 以降では [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、データ型がファイルと対象テーブルの間で一致しない場合、変換先のテーブルに合わせるために切り捨てが必要なデータがあると、bcp によってエラーが発生します。 このエラーを解決するには、対象のデータ型に合わせてデータを修正します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のリリースの bcp.exe を使用することもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

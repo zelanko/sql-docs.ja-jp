@@ -10,15 +10,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30d1f6540a8be6cc45af4d396daf10ca0d1a7d88
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287357"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702701"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>入れ子になった AUTO モードのクエリを使用した兄弟の生成
   次の例では、入れ子になった AUTO モードのクエリを使用して兄弟を作成する方法を示します。 他の方法では、EXPLICIT モードを使用する以外に、このような XML を生成する方法はありません。 ただし、この方法は複雑になる場合があります。  
@@ -66,7 +66,7 @@ FOR XML AUTO, TYPE
   
 -   `SalesOrder` 句で指定された行セット `FROM` に対してクエリを実行しています。 結果は、1 つ以上の <`SalesOrder`> 要素を含む XML になります。  
   
--   `AUTO` モードと `TYPE` ディレクティブが指定されています。 `AUTO`モードはクエリの結果を XML に変換し`TYPE` 、ディレクティブは結果を`xml`型として返します。  
+-   `AUTO` モードと `TYPE` ディレクティブが指定されています。 `AUTO`モードはクエリの結果を XML に変換し、 `TYPE` ディレクティブは結果を型として返し `xml` ます。  
   
 -   2 つの `SELECT` ステートメントが含まれており、コンマで区切られ、入れ子構造になっています。 入れ子の最初の `SELECT` ステートメントで、販売注文情報、ヘッダー、および明細を取得し、入れ子の 2 番目の `SELECT` ステートメントで販売員情報を取得しています。  
   

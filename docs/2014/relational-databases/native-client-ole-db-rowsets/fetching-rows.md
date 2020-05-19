@@ -13,15 +13,15 @@ helpviewer_keywords:
 - IRowset interface
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a68c66eaaccfa3ea32a4fb940eba71026d49361
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140469"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82694420"
 ---
 # <a name="fetching-rows"></a>行のフェッチ
   **IRowset** インターフェイスは、行セットの基本インターフェイスです。 **IRowset** インターフェイスには、行を順番にフェッチするメソッド、フェッチした行からデータを取得するメソッド、行を管理するメソッドが用意されています。 コンシューマーは、すべての基本的な行セット操作に **IRowset** のメソッドを使用します。 基本的な操作には、行のフェッチと解放、列値の取得などがあります。  

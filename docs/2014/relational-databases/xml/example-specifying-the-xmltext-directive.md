@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b76d727657530cfd872b04535f9413f86ff32b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67597553"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702773"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>例: XMLTEXT ディレクティブの指定
   この例では、EXPLICIT モードを使用した `SELECT` ステートメントで、`XMLTEXT` ディレクティブによりオーバーフロー列のデータを指定する方法を示します。  
@@ -100,7 +100,7 @@ FOR XML EXPLICIT;
   
  *AttributeName* と `xmltext` ディレクティブの両方を指定した場合、<`overflow`> 要素の属性は、囲み要素である <`Parent`> のサブ要素の属性として追加されます。 *AttributeName*に指定された名前がサブ要素の名前になります。  
   
- このクエリでは、 *AttributeName*、 `overflow` <> が`xmltext`ディレクティブと共に指定されています。  
+ このクエリでは、 *AttributeName*、<`overflow`> がディレクティブと共に指定されてい `xmltext` ます。  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - queries [SQLXML], ADO
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 02dfe2bfe1a5893a2ef121f279648c5962d6cce9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c513c643ebae58c0670abd18e3da1736eabfdd3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251417"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702850"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO を使用した、SQLXML 4.0 クエリの実行
   以前のバージョンの SQLXML では、SQLXML IIS 仮想ディレクトリと SQLXML ISAPI フィルターを使用して、HTTP ベースのクエリを実行することができました。 SQLXML 4.0 では、重複する類似の機能が [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のネイティブ XML Web サービスに付属しているため、これらのコンポーネントが削除されました。  
@@ -119,9 +119,9 @@ ms.locfileid: "75251417"
     3.  現在インストールされているプログラムの一覧で、[ **Microsoft SQL Server Native Client** ] が一覧に表示されていることを確認します。  
   
         > [!NOTE]  
-        >  Native Client をインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する必要がある場合は、「SQL Server Native Client の[インストール](../native-client/applications/installing-sql-server-native-client.md)」を参照してください。  
+        >  Native Client をインストールする必要がある場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「 [SQL Server Native Client のインストール](../native-client/applications/installing-sql-server-native-client.md)」を参照してください。  
   
-2.  クライアント コンピューターにインストールされている MDAC のバージョンが 2.6 以降であることを確認します。 MDAC のバージョン情報を確認する必要がある場合は、MDAC コンポーネントチェッカーツールを使用できます。このツールは、Microsoft Web サイト[https://www.microsoft.com/](https://www.microsoft.com/)から無料でダウンロードできます。 詳細については、Microsoft Web サイトの「MDAC Component Checker」を検索してください。  
+2.  クライアント コンピューターにインストールされている MDAC のバージョンが 2.6 以降であることを確認します。 MDAC のバージョン情報を確認する必要がある場合は、MDAC コンポーネントチェッカーツールを使用できます。このツールは、Microsoft Web サイトから無料でダウンロードでき [https://www.microsoft.com/](https://www.microsoft.com/) ます。 詳細については、Microsoft Web サイトの「MDAC Component Checker」を検索してください。  
   
 3.  スクリプトを実行します。  
   

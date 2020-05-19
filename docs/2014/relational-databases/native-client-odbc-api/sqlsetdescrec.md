@@ -9,18 +9,18 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLSetDescRec function
 ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d323b1b92ba02e55064d2f86c62ee36a4a38d904
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 967e2db04a4cf03aa826d5b9f8c3cb1d07417689
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188783"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702174"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
-  このトピックでは、Native Client に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固有の SQLSetDescRec 機能について説明します。  
+  このトピックでは、Native Client に固有の SQLSetDescRec 機能について説明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
 ## <a name="sqlsetdescrec-and-table-valued-parameters"></a>SQLSetDescRec とテーブル値パラメーター  
  SQLSetDescRec を使用すると、テーブル値パラメーターおよびテーブル値パラメーター列の記述子フィールドを設定できます。 テーブル値パラメーター列は、記述子のヘッダー フィールド SQL_SOPT_SS_PARAM_FOCUS に、SQL_DESC_TYPE が SQL_SS_TABLE に設定されているレコードの序数が設定される場合のみ使用できます。 SQL_SOPT_SS_PARAM_FOCUS の詳細については、「 [SQLSetStmtAttr](sqlsetstmtattr.md)」を参照してください。  
@@ -45,9 +45,9 @@ ms.locfileid: "63188783"
   
 ||*Type*|*内部*|*[データ型]*|*[精度]*|*スケール*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
-|datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
+|DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|日付|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  

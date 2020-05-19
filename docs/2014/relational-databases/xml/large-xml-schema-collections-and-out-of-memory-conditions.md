@@ -10,15 +10,15 @@ helpviewer_keywords:
 - out-of-memory conditions
 - XML schema collections [SQL Server], large
 ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 513e95798062f85484b5693d5c75e6aef3efcc82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5c82509505cb0497ffd67aa490e9b7d5f9b2a25
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63285546"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702610"
 ---
 # <a name="large-xml-schema-collections-and-out-of-memory-conditions"></a>大きな XML スキーマ コレクションとメモリ不足状態
   大きな XML スキーマ コレクションで組み込み XML_SCHEMA_NAMESPACE() 関数を呼び出しているとき、または大きな XML スキーマ コレクションを削除するときに、メモリが不足することがあります。 次に示すのは、このような状態に対処する際に使用できる解決策です。  

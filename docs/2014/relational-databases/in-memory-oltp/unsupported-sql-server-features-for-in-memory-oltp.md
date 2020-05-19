@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157237"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702226"
 ---
 # <a name="supported-sql-server-features"></a>サポートされる SQL Server の機能
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の、メモリ最適化オブジェクトの使用に関してサポートされる機能またはサポートされない機能について説明します。  
@@ -59,7 +59,7 @@ ms.locfileid: "63157237"
   
 -   サービス ブローカー (制限付き)。 ネイティブ コンパイル ストアド プロシージャからキューにアクセスできません。 メモリ最適化テーブルにアクセスするトランザクションでリモート データベースのキューにアクセスできません。  
   
--   フェールオーバークラスタリング: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alwayson サービスの一部として、Alwayson フェールオーバークラスターインスタンスでは、Windows Server フェールオーバークラスタリング (WSFC) の機能を利用して、サーバーインスタンスレベルでの冗長性によるローカル高可用性を実現します (フェールオーバークラスターインスタンス (fci))。 詳細については、「[Always On フェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
+-   フェールオーバークラスタリング: alwayson サービスの一部として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Alwayson フェールオーバークラスターインスタンスでは、Windows Server フェールオーバークラスタリング (WSFC) の機能を利用して、サーバーインスタンスレベルでの冗長性によるローカル高可用性を実現します (フェールオーバークラスターインスタンス (FCI))。 詳細については、「[Always On フェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
 -   AlwaysOn との統合: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、サーバーやデータベースの高可用性を実現するために、AlwaysOn などの複数の方法が用意されています。 詳細については、「[高可用性ソリューション &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)」を参照してください。  
   

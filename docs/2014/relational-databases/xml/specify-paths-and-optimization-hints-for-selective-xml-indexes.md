@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26f19f7e1b31d566fd70e4d8b1dbd55a40fa677f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62679800"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702494"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>選択的 XML インデックスのパスと最適化ヒントの指定
   このトピックでは、選択的な XML インデックスを作成または変更するときに、インデックス設定用のインデックス ヒントと最適化ヒントへのノード パスを指定する方法について説明します。  

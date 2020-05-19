@@ -10,15 +10,15 @@ helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f985745f450b402781685ded5c0a655e3f4e497c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a56fb4684b1326e600860da60858fcfae1d469ca
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704831"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702789"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>例 : ID ディレクティブと IDREF ディレクティブの指定
   この例は、「 [ELEMENTXSINIL ディレクティブの指定](example-specifying-the-elementxsinil-directive.md) 」の例とほぼ同じで、 クエリで **ID** ディレクティブと **IDREF** ディレクティブを指定している点のみが異なります。 これらのディレクティブは、< **> 要素と <** > 要素の `OrderHeader`SalesPersonID`OrderDetail` 属性の型を上書きします。 これにより、ドキュメント内のリンクが形成されます。 上書きされた型を確認するには、スキーマが必要です。 そのため、このクエリでは、FOR XML 句に **XMLDATA** オプションを指定して、スキーマを取得しています。  

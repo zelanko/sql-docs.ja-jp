@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3cccb676574fe4b767d567fbe48cdb887baddf8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e5bb88f57d471a199d925039d551a1f206e511b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205055"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702740"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML クエリと入れ子になった FOR XML クエリの比較
   ここでは、単一レベルの FOR XML クエリと入れ子になった FOR XML クエリを比較します。 入れ子になった FOR XML クエリを使用すると、たとえば、属性中心の XML と要素中心の XML の組み合わせをクエリの結果に指定できるなどの利点があります。 次の例はこのことを示しています。  

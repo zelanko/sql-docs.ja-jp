@@ -10,18 +10,18 @@ helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecb9f384634d1c2f3991ad0c07a9b98217314499
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193287"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702445"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML クエリの TYPE ディレクティブ
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)のサポートにより、必要に応じて、type ディレクティブを指定することにより、for xml `xml`クエリの結果をデータ型として返すように要求できます。 これにより、サーバーで FOR XML クエリの結果を処理できるようになります。 たとえば、XQuery を指定したり、その結果を`xml`型の変数に割り当てたり、[入れ子になった FOR XML クエリ](use-nested-for-xml-queries.md)を記述したりできます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)のサポートにより、必要に応じて、type ディレクティブを指定することにより、for xml クエリの結果をデータ型として返すように要求でき `xml` ます。 これにより、サーバーで FOR XML クエリの結果を処理できるようになります。 たとえば、XQuery を指定したり、その結果を `xml` 型の変数に割り当てたり、[入れ子になった FOR XML クエリ](use-nested-for-xml-queries.md)を記述したりできます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、TYPE ディレクティブを使用した FOR XML クエリなど、サーバーでのさまざまな構成の結果として、または SQL テーブルの列および出力パラメーターの XML インスタンス データ値を返すために `xml` データ型が使用された場合に、XML データ型のインスタンス データをクライアントに返します。 クライアント アプリケーション コードでは、ADO.NET プロバイダーが、この XML データ型の情報をサーバーからバイナリ エンコードで送信するように要求します。 ただし、TYPE ディレクティブを指定せずに FOR XML を使用した場合、この XML データは文字列型として返されます。 どんな場合でも、クライアント プロバイダーは常にいずれかの形式の XML を処理できます。 TYPE ディレクティブを指定していない最上位レベルでの FOR XML 句は、カーソルと共に使用できません。  
@@ -50,7 +50,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>FOR XML クエリ結果の xml 型の変数への代入  
- 次の例では、FOR XML の結果が `xml` 型の変数 `@x` に代入されます。 クエリでは、 `BusinessEntityID`の`FirstName` `LastName` `AdditionalContactInfo` `xml``TYPE`列から、、、、追加の電話番号などの連絡先情報を取得します。 `FOR XML` 句に `TYPE` ディレクティブを指定するので、この XML は `xml` 型として返され、変数に代入されます。  
+ 次の例では、FOR XML の結果が `xml` 型の変数 `@x` に代入されます。 クエリでは、 `BusinessEntityID` の列から、、、 `FirstName` `LastName` 、追加の電話番号などの連絡先情報を取得し `AdditionalContactInfo` `xml``TYPE` ます。 `FOR XML` 句に `TYPE` ディレクティブを指定するので、この XML は `xml` 型として返され、変数に代入されます。  
   
 ```  
 USE AdventureWorks2012;  

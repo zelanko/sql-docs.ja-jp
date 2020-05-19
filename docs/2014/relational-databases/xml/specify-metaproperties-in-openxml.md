@@ -13,15 +13,15 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb5245b401e5ec64f3b45170ff18a33f580e38b5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62679503"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702471"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML 内でのメタプロパティの指定
   XML ドキュメントに含まれるメタプロパティ属性は、XML アイテム (要素、属性、その他の DOM ノードなど) のプロパティを示す属性です。 これらの属性は、物理的に XML ドキュメントのテキスト内に存在するものではありません。 ただし、OPENXML では、すべての XML アイテムに、これらのメタプロパティが提供されます。 これらのメタプロパティを使用すると、XML ノードの情報 (ローカルの位置や名前空間の情報など) を抽出できます。 これらの情報からは、テキストで表現されている情報よりも詳細な情報を得られます。  

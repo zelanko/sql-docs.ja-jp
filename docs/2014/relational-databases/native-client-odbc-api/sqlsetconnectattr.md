@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1b48f9ee2e7ee3092e3f31fd6ef97e91c5cd9db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d70b89f20beed9c4bd13aa30ab0bdddda2b97a9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68207104"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702195"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、SQL_ATTR_CONNECTION_TIMEOUT の設定が無視されます。  
@@ -39,39 +39,39 @@ ms.locfileid: "68207104"
   
 |SQL Server の属性|設定タイミング (サーバーへの接続前または接続後)|  
 |--------------------------|----------------------------------------------|  
-|SQL_COPT_SS_ANSI_NPW|[指定日付より前]|  
-|SQL_COPT_SS_APPLICATION_INTENT|[指定日付より前]|  
-|SQL_COPT_SS_ATTACHDBFILENAME|[指定日付より前]|  
-|SQL_COPT_SS_BCP|[指定日付より前]|  
-|SQL_COPT_SS_BROWSE_CONNECT|[指定日付より前]|  
-|SQL_COPT_SS_BROWSE_SERVER|[指定日付より前]|  
-|SQL_COPT_SS_CONCAT_NULL|[指定日付より前]|  
-|SQL_COPT_SS_CONNECTION_DEAD|After|  
-|SQL_COPT_SS_ENCRYPT|[指定日付より前]|  
-|SQL_COPT_SS_ENLIST_IN_DTC|After|  
-|SQL_COPT_SS_ENLIST_IN_XA|After|  
-|SQL_COPT_SS_FALLBACK_CONNECT|[指定日付より前]|  
-|SQL_COPT_SS_FAILOVER_PARTNER|[指定日付より前]|  
-|SQL_COPT_SS_INTEGRATED_SECURITY|[指定日付より前]|  
-|SQL_COPT_SS_MARS_ENABLED|[指定日付より前]|  
-|SQL_COPT_SS_MULTISUBMIT_FAILOVER|[指定日付より前]|  
-|SQL_COPT_SS_OLDPWD|[指定日付より前]|  
-|SQL_COPT_SS_PERF_DATA|After|  
-|SQL_COPT_SS_PERF_DATA_LOG|After|  
-|SQL_COPT_SS_PERF_DATA_LOG_NOW|After|  
-|SQL_COPT_SS_PERF_QUERY|After|  
-|SQL_COPT_SS_PERF_QUERY_INTERVAL|After|  
-|SQL_COPT_SS_PERF_QUERY_LOG|After|  
-|SQL_COPT_SS_PRESERVE_CURSORS|[指定日付より前]|  
+|SQL_COPT_SS_ANSI_NPW|以前|  
+|SQL_COPT_SS_APPLICATION_INTENT|以前|  
+|SQL_COPT_SS_ATTACHDBFILENAME|以前|  
+|SQL_COPT_SS_BCP|以前|  
+|SQL_COPT_SS_BROWSE_CONNECT|以前|  
+|SQL_COPT_SS_BROWSE_SERVER|以前|  
+|SQL_COPT_SS_CONCAT_NULL|以前|  
+|SQL_COPT_SS_CONNECTION_DEAD|これらの手順の完了後、|  
+|SQL_COPT_SS_ENCRYPT|以前|  
+|SQL_COPT_SS_ENLIST_IN_DTC|これらの手順の完了後、|  
+|SQL_COPT_SS_ENLIST_IN_XA|これらの手順の完了後、|  
+|SQL_COPT_SS_FALLBACK_CONNECT|以前|  
+|SQL_COPT_SS_FAILOVER_PARTNER|以前|  
+|SQL_COPT_SS_INTEGRATED_SECURITY|以前|  
+|SQL_COPT_SS_MARS_ENABLED|以前|  
+|SQL_COPT_SS_MULTISUBMIT_FAILOVER|以前|  
+|SQL_COPT_SS_OLDPWD|以前|  
+|SQL_COPT_SS_PERF_DATA|これらの手順の完了後、|  
+|SQL_COPT_SS_PERF_DATA_LOG|これらの手順の完了後、|  
+|SQL_COPT_SS_PERF_DATA_LOG_NOW|これらの手順の完了後、|  
+|SQL_COPT_SS_PERF_QUERY|これらの手順の完了後、|  
+|SQL_COPT_SS_PERF_QUERY_INTERVAL|これらの手順の完了後、|  
+|SQL_COPT_SS_PERF_QUERY_LOG|これらの手順の完了後、|  
+|SQL_COPT_SS_PRESERVE_CURSORS|以前|  
 |SQL_COPT_SS_QUOTED_IDENT|接続前/接続後|  
 |SQL_COPT_SS_TRANSLATE|接続前/接続後|  
-|SQL_COPT_SS_TRUST_SERVER_CERTIFICATE|[指定日付より前]|  
+|SQL_COPT_SS_TRUST_SERVER_CERTIFICATE|以前|  
 |SQL_COPT_SS_TXN_ISOLATION|接続前/接続後|  
 |SQL_COPT_SS_USE_PROC_FOR_PREP|接続前/接続後|  
 |SQL_COPT_SS_USER_DATA|接続前/接続後|  
-|SQL_COPT_SS_WARN_ON_CP_ERROR|[指定日付より前]|  
+|SQL_COPT_SS_WARN_ON_CP_ERROR|以前|  
   
- 同じセッション、データベース、または [!INCLUDE[tsql](../../includes/tsql-md.md)] の状態に対して接続前の属性および同等の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドを使用すると、予期しない動作が発生する場合があります。 たとえば、  
+ 同じセッション、データベース、または [!INCLUDE[tsql](../../includes/tsql-md.md)] の状態に対して接続前の属性および同等の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドを使用すると、予期しない動作が発生する場合があります。 たとえば、オブジェクトに適用された  
   
 ```  
 SQLSetConnectAttr(SQL_COPT_SS_QUOTED_IDENT, SQL_QI_ON) // turn ON via attribute  
@@ -97,7 +97,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- 既定値は、`ReadWrite` です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client による ag の[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]サポートの詳細については、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。  
+ 既定値は `ReadWrite` です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client による ag のサポートの詳細につい [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ては、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。  
   
 ## <a name="sql_copt_ss_attachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
  SQL_COPT_SS_ATTACHDBFILENAME 属性は、アタッチ可能なデータベースのプライマリ ファイルの名前を指定します。 このデータベースがアタッチされ、接続の既定のデータベースとして使用されます。 SQL_COPT_SS_ATTACHDBFILENAME 使用するには、データベースの名前を接続 SQL_ATTR_CURRENT_CATALOG 属性の値として指定するか、 [SQLDriverConnect](sqldriverconnect.md)の database = パラメーターに指定する必要があります。 データベースが以前にアタッチされていた場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はそのデータベースを再アタッチしません。  
@@ -127,7 +127,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |[値]|説明|  
 |-----------|-----------------|  
-|computername|**SQLBrowseConnect**は、指定された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンピューター上ののインスタンスの一覧を返します。 サーバー名に\\\\は二重の\\円記号 () を使用しないでください (たとえば、\ myserver ではなく、myserver を使用する必要があります)。|  
+|computername|**SQLBrowseConnect**は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、指定されたコンピューター上ののインスタンスの一覧を返します。 サーバー名には二重の円記号 ( \\ \\ ) を使用しないでください (たとえば、 \\ \ myserver ではなく、myserver を使用する必要があります)。|  
 |NULL|既定値。 **SQLBrowseConnect**は、ドメイン内のすべてのサーバーに関する情報を返します。|  
   
 ## <a name="sql_copt_ss_concat_null"></a>SQL_COPT_SS_CONCAT_NULL  
@@ -146,10 +146,10 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |[値]|説明|  
 |-----------|-----------------|  
 |SQL_EN_ON|接続が暗号化されます。|  
-|SQL_EN_OFF|接続は暗号化されません。 これは既定です。|  
+|SQL_EN_OFF|接続は暗号化されません。 既定値です。|  
   
 ## <a name="sql_copt_ss_enlist_in_dtc"></a>SQL_COPT_SS_ENLIST_IN_DTC  
- クライアントは、Microsoft 分散トランザクションコーディネーター (MS DTC) OLE DB **ITransactionDispenser:: BeginTransaction**メソッドを呼び出して ms dtc トランザクションを開始し、トランザクションを表す ms dtc トランザクションオブジェクトを作成します。 次に、アプリケーション`SQLSetConnectAttr`は、SQL_COPT_SS_ENLIST_IN_DTC オプションを指定してを呼び出し、トランザクションオブジェクトを ODBC 接続に関連付けます。 関連のあるすべてのデータベース操作は、MS DTC トランザクションで保護されます。 アプリケーションは SQL_DTC_DONE `SQLSetConnectAttr`を使用してを呼び出し、接続の DTC 関連付けを終了します。  
+ クライアントは、Microsoft 分散トランザクションコーディネーター (MS DTC) OLE DB **ITransactionDispenser:: BeginTransaction**メソッドを呼び出して ms dtc トランザクションを開始し、トランザクションを表す ms dtc トランザクションオブジェクトを作成します。 次に、アプリケーションは、SQL_COPT_SS_ENLIST_IN_DTC オプションを指定してを呼び出し、 `SQLSetConnectAttr` トランザクションオブジェクトを ODBC 接続に関連付けます。 関連のあるすべてのデータベース操作は、MS DTC トランザクションで保護されます。 アプリケーションは `SQLSetConnectAttr` SQL_DTC_DONE を使用してを呼び出し、接続の DTC 関連付けを終了します。  
   
 |[値]|説明|  
 |-----------|-----------------|  
@@ -157,7 +157,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_DTC_DONE|トランザクションの末尾を区切ります。|  
   
 ## <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA  
- Xa 準拠トランザクションプロセッサ (TP) で XA トランザクションを開始するには、クライアントは Open Group **tx_begin**関数を呼び出します。 次に、アプリケーション`SQLSetConnectAttr`は SQL_COPT_SS_ENLIST_IN_XA パラメーター TRUE を指定してを呼び出し、XA トランザクションを ODBC 接続に関連付けます。 関連のあるすべてのデータベース操作は、XA トランザクションで保護されます。 XA と ODBC の関連付けを終了するには、クライアントは SQL_COPT_SS_ENLIST_IN_XA `SQLSetConnectAttr`パラメーター FALSE を指定してを呼び出す必要があります。 詳細については、分散トランザクション コーディネーターのマニュアルを参照してください。  
+ Xa 準拠トランザクションプロセッサ (TP) で XA トランザクションを開始するには、クライアントは Open Group **tx_begin**関数を呼び出します。 次に、アプリケーションは SQL_COPT_SS_ENLIST_IN_XA パラメーター TRUE を指定してを呼び出し、 `SQLSetConnectAttr` XA トランザクションを ODBC 接続に関連付けます。 関連のあるすべてのデータベース操作は、XA トランザクションで保護されます。 XA と ODBC の関連付けを終了するには、クライアントは SQL_COPT_SS_ENLIST_IN_XA パラメーター FALSE を指定してを呼び出す必要があり `SQLSetConnectAttr` ます。 詳細については、分散トランザクション コーディネーターのマニュアルを参照してください。  
   
 ## <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT  
  この属性は現在サポートされていません。  
@@ -194,7 +194,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client による ag の[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]サポートの詳細については、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client による ag のサポートの詳細につい [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ては、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。  
   
 |[値]|説明|  
 |-----------|-----------------|  

@@ -11,30 +11,30 @@ topic_type:
 helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 410aa819e2d4af056c53fc30a971625001b1186e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046627"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702202"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-  SQLPutData を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、SQL_LONGVARCHAR (`text`)、SQL_WLONGVARCHAR (`ntext`)、または SQL_LONGVARBINARY (`image`) 列に対して65535バイトを超えるデータ 400 (SQL Server バージョン6.0 以降) を送信する場合は、次の制限が適用されます。  
+  SQLPutData を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_LONGVARCHAR ( `text` )、SQL_WLONGVARCHAR ( `ntext` )、または SQL_LONGVARBINARY () 列に対して65535バイトを超えるデータ 400 (SQL Server バージョン6.0 以降) を送信する場合は、次の制限が適用され `image` ます。  
   
 -   参照されるパラメーターには、INSERT ステートメント内の*insert_value*を指定できます。  
   
 -   参照されるパラメーターは、UPDATE ステートメントの SET 句の*式*にすることができます。  
   
- を実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しているサーバーにブロック内のデータを提供する sqlputdata 呼び出しのシーケンスをキャンセルすると、バージョン6.5 以前を使用しているときに列の値が部分的に更新されます。 SQLCancel `text`が`ntext`呼び出され`image`たときに参照された、、または列は、中間プレースホルダー値に設定されます。  
+ を実行しているサーバーにブロック内のデータを提供する SQLPutData 呼び出しのシーケンスをキャンセルすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン6.5 以前を使用しているときに列の値が部分的に更新されます。 `text` `ntext` SQLCancel が呼び出されたときに参照された、、または `image` 列は、中間プレースホルダー値に設定されます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 以前のバージョンへの接続をサポートしません。  
   
 ## <a name="diagnostics"></a>診断  
- SQLPutData [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、Native Client 固有の SQLSTATE が1つあります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLPutData には、Native Client 固有の SQLSTATE が1つあります。  
   
 |SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  

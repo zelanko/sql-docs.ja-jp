@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68cb7c9d0a4fdc96f181281d78f7011231752375
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240270"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82695688"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
   プログラム変数と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列のバインドを作成します。  
@@ -75,7 +75,7 @@ DBORDINALidxServerCol);
  ユーザー データ ファイル内のフィールドのインデックス。  
   
  *eUserDataType*[in]  
- ユーザー データ ファイル内のフィールドのデータ型。 使用できるデータ型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ヘッダーファイル (sqlncli) に、BCP_TYPE_SQLINT4 などの BCP_TYPE_XXX 形式で一覧表示されます。 BCP_TYPE_DEFAULT 値を指定すると、プロバイダーはテーブルやビューの列と同じ型を使用します。 引数が BCP_TYPE_SQLDECIMAL または BCP_TYPE_SQLNUMERIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合に、ファイル内で一括コピー操作を実行するには、次のようにします。 `eUserDataType`  
+ ユーザー データ ファイル内のフィールドのデータ型。 使用できるデータ型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ヘッダーファイル (sqlncli) に、BCP_TYPE_SQLINT4 などの BCP_TYPE_XXX 形式で一覧表示されます。 BCP_TYPE_DEFAULT 値を指定すると、プロバイダーはテーブルやビューの列と同じ型を使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `eUserDataType` 引数が BCP_TYPE_SQLDECIMAL または BCP_TYPE_SQLNUMERIC の場合に、ファイル内で一括コピー操作を実行するには、次のようにします。  
   
 -   コピー元の列が decimal 型または numeric 型以外の場合は、既定の有効桁数と小数点以下桁数が使用されます。  
   
@@ -87,13 +87,13 @@ DBORDINALidxServerCol);
  *cbUserData*[in]  
  ユーザー ファイル内にあるフィールド データの最大長 (バイト単位)。長さのインジケーターやターミネータの長さは含まれません。  
   
- を`cbUserData` BCP_LENGTH_NULL に設定すると、データファイルのフィールドのすべての値がであるか、NULL に設定される必要があることを示します。 を`cbUserData` BCP_LENGTH_VARIABLE に設定すると、各フィールドのデータの長さがシステムによって決定されることになります。 これは、フィールドによっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からコピーされるデータの前に長さのインジケーターや NULL インジケーターを生成したり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするデータにインジケーターが必要になる場合があることを意味します。  
+ `cbUserData`を BCP_LENGTH_NULL に設定すると、データファイルのフィールドのすべての値がであるか、NULL に設定される必要があることを示します。 `cbUserData`を BCP_LENGTH_VARIABLE に設定すると、各フィールドのデータの長さがシステムによって決定されることになります。 これは、フィールドによっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からコピーされるデータの前に長さのインジケーターや NULL インジケーターを生成したり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするデータにインジケーターが必要になる場合があることを意味します。  
   
- 文字[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型およびバイナリデータ型`cbUserData`の場合、には BCP_LENGTH_VARIABLE、BCP_LENGTH_NULL、0、または正の値を指定できます。 が`cbUserData` BCP_LENGTH_VARIABLE の場合、システムは長さインジケーター (存在する場合) またはターミネータシーケンスを使用してデータの長さを決定します。 長さのインジケーターとターミネータ シーケンスの両方を指定した場合、一括コピーはコピーするデータ量が少なくなる方法を使用します。 が`cbUserData` BCP_LENGTH_VARIABLE の場合、データ型は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字型またはバイナリ型です。長さのインジケーターもターミネータシーケンスも指定されていない場合、システムはエラーメッセージを返します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字データ型およびバイナリデータ型の場合、には `cbUserData` BCP_LENGTH_VARIABLE、BCP_LENGTH_NULL、0、または正の値を指定できます。 が BCP_LENGTH_VARIABLE の場合、 `cbUserData` システムは長さインジケーター (存在する場合) またはターミネータシーケンスを使用してデータの長さを決定します。 長さのインジケーターとターミネータ シーケンスの両方を指定した場合、一括コピーはコピーするデータ量が少なくなる方法を使用します。 `cbUserData`が BCP_LENGTH_VARIABLE の場合、データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字型またはバイナリ型です。長さのインジケーターもターミネータシーケンスも指定されていない場合、システムはエラーメッセージを返します。  
   
- が`cbUserData` 0 または正の値の場合、システム`cbUserData`は最大データ長としてを使用します。 ただし、正`cbUserData`の長さのインジケーターまたはターミネータシーケンスが指定されている場合、システムは、コピーされるデータ量が最小になるメソッドを使用してデータ長を決定します。  
+ `cbUserData`が0または正の値の場合、システムは `cbUserData` 最大データ長としてを使用します。 ただし、正の `cbUserData` 長さのインジケーターまたはターミネータシーケンスが指定されている場合、システムは、コピーされるデータ量が最小になるメソッドを使用してデータ長を決定します。  
   
- 値`cbUserData`は、データのバイト数を表します。 文字データが Unicode ワイド文字で表されている場合、 `cbUserData`正のパラメーター値は、各文字のサイズ (バイト単位) を乗算した文字数を表します。  
+ 値は、 `cbUserData` データのバイト数を表します。 文字データが Unicode ワイド文字で表されている場合、正の `cbUserData` パラメーター値は、各文字のサイズ (バイト単位) を乗算した文字数を表します。  
   
  *pbUserDataTerm*[size_is][in]  
  フィールドに使用するターミネータ シーケンス。 このパラメーターは主に文字データ型に対して有効です。これは、他のすべての型は固定長であったり、バイト数を正確に記録するために長さのインジケーターが必要になる (バイナリ データの場合) ためです。  

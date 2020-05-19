@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f96d90f620f563877e554c282d9443313bad1b14
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193065"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702243"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML データ型と列 (SQL Server)
-  このトピックでは、の`xml` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型の利点と制限事項について説明します。また、XML データの格納方法を選択する際にも役立ちます。  
+  このトピックでは、のデータ型の利点と制限事項について説明 `xml` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。また、XML データの格納方法を選択する際にも役立ちます。  
   
 ## <a name="relational-or-xml-data-model"></a>リレーショナル データ モデルと XML データ モデル  
  使用するデータが既知のスキーマにより十分に構造化されている場合、データ ストレージとしてはリレーショナル モデルが最適です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に用意されています。 ただし、データが構造化されていないか構造化が部分的である場合、または構造化の状態が不明な場合は、データのモデリングを検討する必要があります。  
@@ -61,7 +61,7 @@ ms.locfileid: "63193065"
   
      データの XML コンテンツを保持できる内部表現を使用してデータが保存されます。 内部表現には、包含階層、表示順、要素や属性の値に関する情報などがあります。 具体的には、XML データの InfoSet コンテンツが保持されます。 InfoSet の詳細については、「[http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843)」を参照してください。 InfoSet コンテンツでは、重要でない空白文字、属性の順序、名前空間プレフィックス、および XML 宣言が保持されないので、テキスト形式の XML のまったく同一のコピーにはならない場合があります。  
   
-     型指定`xml`されたデータ`xml`型、XML スキーマにバインドされたデータ型の場合、スキーマ検証後の infoset (PSVI) は infoset に型情報を追加し、内部表現でエンコードされます。 その結果、解析速度が大幅に向上します。 詳細については、[http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) と [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871) で W3C の XML スキーマの仕様を参照してください。  
+     型指定された `xml` データ型、 `xml` XML スキーマにバインドされたデータ型の場合、スキーマ検証後の INFOSET (PSVI) は infoset に型情報を追加し、内部表現でエンコードされます。 その結果、解析速度が大幅に向上します。 詳細については、[http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) と [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871) で W3C の XML スキーマの仕様を参照してください。  
   
 -   XML ストレージとリレーショナル ストレージのマッピング  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63193065"
   
      データの完全なコピーが保存されます。 これは、法務文書など、特殊な用途に使用します。 ほとんどの場合、正確なコピーは不要であり、XML コンテンツ (InfoSet レベルの忠実性) で十分です。  
   
- 一般的には、上記のいくつかの方法を組み合わせることができます。 たとえば、`xml` データ型の列に XML データを保存して、列のプロパティをリレーショナル列に昇格させることができます。 または、マッピングテクノロジを使用して、再帰的部分を XML 以外の列に格納し、再帰部分のみ`xml`をデータ型の列に格納することもできます。  
+ 一般的には、上記のいくつかの方法を組み合わせることができます。 たとえば、`xml` データ型の列に XML データを保存して、列のプロパティをリレーショナル列に昇格させることができます。 または、マッピングテクノロジを使用して、再帰的部分を XML 以外の列に格納し、再帰部分のみをデータ型の列に格納することもでき `xml` ます。  
   
 ### <a name="choice-of-xml-technology"></a>XML テクノロジの選択  
  ネイティブ XML と XML ビューのどちらの XML テクノロジを選択するかは、主に次の要因によって決まります。  
@@ -123,7 +123,7 @@ ms.locfileid: "63193065"
   
  クエリを行うには、実行時にデータを `xml` データ型に変換して XQuery を実行します。 実行時の変換は、ドキュメントが大きい場合は特にコストが高くなる可能性があります。 頻繁にクエリを実行する場合は、`xml` データ型の列にドキュメントを冗長に保存してインデックスを設定しておき、`[n]varchar(max)` 型の列からドキュメントの正確なコピーを返すことができます。  
   
- XML 列は `[n]varchar(max)` 型の列を基にした計算列にすることができます。 ただし、xml インデックスは、計算された XML 列に対して作成したり、xml インデックスを作成`[n]varchar(max)`し`varbinary(max)`たりすることはできません。  
+ XML 列は `[n]varchar(max)` 型の列を基にした計算列にすることができます。 ただし、xml インデックスは、計算された XML 列に対して作成したり、xml インデックスを作成したりすることはできません `[n]varchar(max)` `varbinary(max)` 。  
   
 ### <a name="xml-view-technology"></a>XML ビュー テクノロジ  
  XML スキーマとデータベース内のテーブルとのマッピングを定義することで、永続的なデータの "XML ビュー" を作成します。 XML ビューを使用して基になるテーブルのデータを格納する場合に、XML 一括読み込みを行うことができます。 XML ビューには XPath Version 1.0 を使用してクエリを実行できます。テーブルでクエリが実行されるときには SQL クエリに変換されます。 これと同様に、更新もテーブルに反映されます。  
@@ -146,7 +146,7 @@ ms.locfileid: "63193065"
  たとえば、顧客、注文、品目などの既存のリレーショナル データを XML として処理するとします。 リレーショナル データに AXSD を使用して、XML ビューを定義します。 XML ビューを使用すると、テーブルに XML データを一括で読み込み、XML ビューでリレーショナル データに対するクエリや更新を行うことができます。 SQL アプリケーションの実行を中断することなく、XML でマークアップされたデータを他のアプリケーションと交換する必要がある場合に、このモデルが役立ちます。  
   
 ### <a name="hybrid-model"></a>ハイブリッド モデル  
- 多くの場合、リレーショナル列と`xml`データ型の列の組み合わせがデータモデリングに適しています。 XML データの値の一部をリレーショナル列に保存し、残り (または XML 値全体) を XML 列に保存することができます。 そうすることで、リレーショナル列に作成したインデックスやロック特性を制御しやすくなり、パフォーマンスが向上する場合があります。  
+ 多くの場合、リレーショナル列と `xml` データ型の列の組み合わせがデータモデリングに適しています。 XML データの値の一部をリレーショナル列に保存し、残り (または XML 値全体) を XML 列に保存することができます。 そうすることで、リレーショナル列に作成したインデックスやロック特性を制御しやすくなり、パフォーマンスが向上する場合があります。  
   
  リレーショナル列に保存する方が適切な値はワークロードによって異なります。 たとえば、パス式 /Customer/@CustId を基にすべての XML 値を取得する場合、**CustId** 属性の値をリレーショナル列に昇格してインデックスを設定することにより、クエリ パフォーマンスが向上する可能性があります。 一方で、XML データが冗長性なしで多数のリレーショナル列に分解されている場合、再構成のコストが甚大になる可能性があります。  
   

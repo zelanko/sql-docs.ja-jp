@@ -3,22 +3,29 @@ title: SSMA for SAP ASE の新機能 (SybaseToSQL) |Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 7f23c7e1c676b4ade42b43cf963e0fa6956f93c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 258ddb758824c1d823cc1a7a306b05bf491d087b
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625593"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220677"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE の新機能 (SybaseToSQL)
 
 この記事では、各リリースでの SAP ASE (旧称 SSMA for Sybase) の変更 (SSMA) の SQL Server Migration Assistant を示します。
+
+## <a name="ssma-v89"></a>SSMA v 8.9
+
+SSMA for SAP ASE の v1.0 リリースには、次の変更が含まれています。
+
+* 日付と時刻の形式の変換の改善
+* オブジェクトの SQL 定義に含まれていない文字に関する問題の修正
 
 ## <a name="ssma-v88"></a>SSMA v 8.8
 
@@ -39,7 +46,7 @@ SSMA for SAP ASE のバージョン8.7 リリースでは、グラフィカル�
 
 ユーザビリティとパフォーマンスを向上させるために設計された一連の修正に加えて、SSMA for SAP ASE のリリースは、ユーザーが変換されたコードで SSMA の拡張プロパティを省略できるようにする設定を追加することによって強化されています。
 
-Ssma for SAP ASE でこの設定を利用するには、 **[ツール** > ] [プロジェクト] [**設定** > **[全般** > **変換**] に移動し、[その**他**] の [**拡張プロパティを省略**] 設定の値を **[はい]** に更新します。
+Ssma for SAP ASE でこの設定を利用するには、[**ツール**] [プロジェクト] [  >  **設定**]  >  **[全般**  >  **変換**] に移動し、[その**他**] の [**拡張プロパティを省略**] 設定の値を **[はい]** に更新します。
 
 ![拡張プロパティの設定を省略する](../sybase/media/ssma-omit-extended-properties.png)
 
@@ -67,7 +74,7 @@ SSMA for SAP ASE の v1.0 リリースは、ユーザー補助の問題に対処
 SSMA for SAP ASE の v2.0 リリースは、品質と変換のメトリックを向上させるように設計された対象の修正によって強化されています。 また、SSMA for SAP ASE の今回のリリースでは、次のような修正が行われています。
 
 * アクセシビリティに関する問題の解決
-* SQL Server の型の`hierarchyid`基本サポートを追加する
+* SQL Server の型の基本サポートを追加する `hierarchyid`
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -142,7 +149,7 @@ SSMA for SAP ASE の v1.1 リリースには、次の変更が含まれていま
 SSMA for SAP ASE のバージョン7.5 リリース (以前の SSMA for Sybase) には、次の変更が含まれています。
 
 * 障碍のある方にとってアクセシビリティを向上させるためにいくつかの機能強化が行われました。
-* 構文の`CREATE OR REPLACE`サポート。
+* 構文のサポート `CREATE OR REPLACE` 。
 
 ## <a name="ssma-v74"></a>SSMA v1.0
 
@@ -193,8 +200,8 @@ SSMA for Sybase の2016年5月のリリースには、次の変更が含まれ�
 * SQL Server 2016 のサポートが追加されました。
 * .NET 2.0 のインストーラーチェックが削除されました。
 * .NET 3.5 から .NET 4.0 への拡張パックの依存関係を更新しました。
-* SSMA コンソールのコマンドとコマンドを修正`save-project`し`open-project`ます。
-* SSMA コンソールのコマンドを修正`securepassword`します。
+* `save-project` `open-project` Ssma コンソールのコマンドとコマンドを修正します。
+* `securepassword`SSMA コンソールのコマンドを修正します。
 * 初期読み込みのオブジェクトのカウントを固定します。
 * グローバル設定のバグを修正した。
 
@@ -236,7 +243,7 @@ SSMA for Sybase の2014年4月のリリースには、次の変更が含まれ�
 SSMA for Sybase の2012年1月リリースには、次の変更が含まれています。
 
 * ロールバックトリガー変換のサポートが追加されました。
-* とを`@@ERROR`同じ`SET`ステートメント`@@ROWCOUNT`内で変換するための修正を提供しました。
+* `@@ROWCOUNT`とを `@@ERROR` 同じステートメント内で変換するための修正を提供しました `SET` 。
 
 ## <a name="july-2011"></a>2011 年 7 月
 
@@ -246,16 +253,16 @@ SSMA for Sybase の2011年7月のリリースでは、データ移行中のエ�
 
 SSMA for Sybase の2011年4月のリリースには、次の変更が含まれています。
 
-* "Ssma for Sybase" 製品が統合され[!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE [ssSQL11](../../includes/ssSQL11-md.md)]て[!INCLUDE [ssSQL10](../../includes/sssql10-md.md)]います。これは、、、および Azure SQL をサポートしています。
-* への接続と移行のサポート[!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]が追加されました。
+* "Ssma for Sybase" 製品が統合さ [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] れています。これは、、、 [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] および Azure SQL をサポートし [!INCLUDE [ssSQL11](../../includes/ssSQL11-md.md)] ています。
+* への接続と移行のサポートが追加されました [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 。
 * Sybase データベースを変換して Azure SQL に移行するための新機能が追加されました。
 * 拡張されたクライアント側のデータ移行エンジンで、データの並列移行がサポートされています。
 * 単純復旧モデルと一括ログ復旧モデルにより、データ移行のパフォーマンスが向上しました。
 * 大文字と小文字を区別する Sybase データベースを適切に変換し、大文字と小文字を区別する SQL Server に移行する機能が追加されました。
 * Ansi join ステートメントの SQL Server への変換のサポートが追加され、ステートメントを削除および更新できるようになりました。
 * Sybase ASE ODBC プロバイダと Sybase ASE ADO.NET プロバイダを使用して Sybase ASE サーバーに接続するための追加の接続オプションが用意されています。
-* という`SysDB`別のデータベースへの依存関係を削除しました。これには、Sybase エミュレーション関数 (拡張パックの一部としてインストールされます) が含まれています。
-* SSMA for Sybase Extension Pack をクラスターに[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]インストールする機能が追加されました。
+* という別のデータベースへの依存関係を削除しました `SysDB` 。これには、Sybase エミュレーション関数 (拡張パックの一部としてインストールされます) が含まれています。
+* SSMA for Sybase Extension Pack をクラスターにインストールする機能が追加されました [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 。
 * 以前のバージョンの SSMA (v1.0 および v1.1) で作成されたプロジェクトの下位互換性が追加されました。
 * Ssma for Sybase version 5.0 製品を旧バージョンの SSMA (v2.0 および v1.1) とサイドバイサイド (SxS) でインストールする機能が追加されました。
 
@@ -278,11 +285,11 @@ SSMA for Sybase の2008年6月のリリースには、次の変更が含まれ�
 * オブジェクト変換の機能強化が追加されました。
   * 結合変換の変更。
   * /Group by 句を指定せずに集計と非集計を行います。
-  * ステートメント`IDENTITY`を`SELECT INTO`含む関数。
+  * `IDENTITY`ステートメントを含む関数 `SELECT INTO` 。
   * データのみがロックされているクラスター化された制約とインデックス。
-  * によって`SELECT INTO`作成された一時テーブル。
+  * によって作成された一時テーブル `SELECT INTO` 。
   * 一時テーブルの制約/インデックス。
-  * 新しい[!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] datetime 型がサポートされています。
+  * 新しい [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] datetime 型がサポートされています。
   * Sybase 15.0 の接続とデータ型のサポート。
 
 ## <a name="may-2007"></a>5月2007
@@ -301,15 +308,15 @@ SSMA for Sybase の2006年11月のリリースには、次の変更が含まれ�
   * エディターウィンドウで行番号を表示するように選択できます。
   * SSMA を構成して、重複するオブジェクトの置換を求めるメッセージを表示したり、スキーマの変換中に重複するオブジェクトを常に置き換えることができます。
 * 次の状況を SSMA が処理する方法を構成できる新しい変換オプションが追加されました。
-  * バイナリ`CAST`文字列`CONVERT`を含むまたはステートメント。
+  * `CAST` `CONVERT` バイナリ文字列を含むまたはステートメント。
   * 等値式で null 値をチェックします。
   * プロキシテーブル。
-  * の`RAISERROR`ユーザーメッセージエラー番号。
+  * のユーザーメッセージエラー番号 `RAISERROR` 。
   * `UPDATE`未解決の識別子を含むステートメント。
-* 新しい移行オプションが追加されました。このオプションを使用すると、 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ssma が日付範囲外の日付をどのように処理するかを指定できます。
+* 新しい移行オプションが追加されました。このオプションを使用すると、SSMA が日付範囲外の日付をどのように処理するかを指定でき [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ます。
 * [ **Sql** ] タブに、書式設定された**sql**設定が追加されました。これにより、コードの読みやすさが向上します。
 * バグの修正 (次を含む):
-  * SSMA では`LOCK TABLE <table> IN { SHARED | EXCLUSIVE } MODE` 、またはヒント`TABLOCK`を`TABLOCKX`テーブルの後続`SELECT`のクエリに追加することによって、ステートメントを変換するようになりました。
+  * SSMA で `LOCK TABLE <table> IN { SHARED | EXCLUSIVE } MODE` `TABLOCK` は、またはヒントを `TABLOCKX` テーブルの後続のクエリに追加することによって、ステートメントを変換するようになりました `SELECT` 。
   * 文字式でバイナリ型を使用するときに、必要なキャストが追加されるようになりました。
   * メモリとパフォーマンスの向上。
 

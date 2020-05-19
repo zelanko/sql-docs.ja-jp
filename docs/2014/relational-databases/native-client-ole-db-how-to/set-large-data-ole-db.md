@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9789ddf12272dd6c33c8cfbbb8677ecc3bb4b191
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63218663"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696198"
 ---
 # <a name="set-large-data-ole-db"></a>大きなデータの設定 (OLE DB)
   このサンプルでは、BLOB データを設定し、テーブルを作成して、サンプル レコードを追加し、行セット内のそのレコードをフェッチして、BLOB フィールドの値を設定する方法を示します。 このサンプルは IA64 ではサポートされていません。  
@@ -33,7 +33,7 @@ ms.locfileid: "63218663"
   
 #### <a name="to-set-blob-data"></a>BLOB データを設定するには  
   
-1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 DBOBJECT 構造体の**Dwflag**要素を STGM_READ に設定し、iid 要素を ( `IID_ISequentialStream`公開するインターフェイス) に設定します。  
+1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 DBOBJECT 構造体の**Dwflag**要素を STGM_READ に設定し、iid 要素を `IID_ISequentialStream` (公開するインターフェイス) に設定します。  
   
 2.  行セットが更新可能になるように、DBPROPSET_ROWSET プロパティ グループのプロパティを設定します。  
   

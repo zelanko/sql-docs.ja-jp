@@ -11,22 +11,22 @@ helpviewer_keywords:
 - ODBC applications, communicating with SQL Server
 - ODBC, communicating with SQL Server
 ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5bf07f4e83cb58966b384a4bf0f523b7a1dd3881
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 015cec73c97a3a02179bb65735aaed4dd4f0da6c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032882"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702059"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>SQL Server との通信 (ODBC)
-  ODBC アプリケーションがの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスと通信するには、環境ハンドルと接続ハンドルを割り当て、データソースに接続する必要があります。 接続が確立されると、アプリケーションからサーバーにクエリを送信し、任意の結果セットを処理できます。 データ ソースの使用が終了したら、アプリケーションでデータ ソースを切断して接続ハンドルを解放します。 すべての接続ハンドルを解放してから、環境ハンドルを解放します。  
+  ODBC アプリケーションがのインスタンスと通信するには [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、環境ハンドルと接続ハンドルを割り当て、データソースに接続する必要があります。 接続が確立されると、アプリケーションからサーバーにクエリを送信し、任意の結果セットを処理できます。 データ ソースの使用が終了したら、アプリケーションでデータ ソースを切断して接続ハンドルを解放します。 すべての接続ハンドルを解放してから、環境ハンドルを解放します。  
   
  アプリケーションからは任意の数のデータ ソースに接続できます。 また、アプリケーションでは、複数のドライバーと複数のデータ ソースの組み合わせ、1 つのドライバーと複数データ ソースの組み合わせ、1 つのドライバーと 1 つのデータ ソースへの複数の接続を使用できます。  
   
- Native Client ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サンプルは、MSDN の[SQL Server ダウンロード](https://go.microsoft.com/fwlink/?LinkId=62796)ページからダウンロードできます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC サンプルは、MSDN の[SQL Server ダウンロード](https://go.microsoft.com/fwlink/?LinkId=62796)ページからダウンロードできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

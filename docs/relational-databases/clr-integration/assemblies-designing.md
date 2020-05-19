@@ -2,7 +2,7 @@
 title: アセンブリのデザイン |Microsoft Docs
 description: この記事では、アセンブリのパッケージ化、管理、制限など、SQL Server でホストするアセンブリを設計するときに考慮する必要がある要素について説明します。
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/24/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65dbc1a4fdabbf234f4676d75011522a8f3481d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f2a5281d0e5fd7ac18f908ba4c28302b3bfdd5f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488057"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262058"
 ---
 # <a name="assemblies---designing"></a>アセンブリ - デザイン
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>禁止されている .NET Framework API  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]許可されていない**hostprotectionattributes**のいずれかで注釈が付けられている API は、SAFE および EXTERNAL_ACCESS アセンブリからは呼び出せません。  
+ 許可されていない [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **hostprotectionattributes**のいずれかで注釈が付けられている API は、SAFE および EXTERNAL_ACCESS アセンブリからは呼び出せません。  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -102,19 +102,22 @@ eUI
  カスタム アセンブリで参照されているアセンブリは、CREATE ASSEMBLY を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込む必要があります。 次の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリは既に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込まれているため、CREATE ASSEMBLY を使用しなくてもカスタム アセンブリで参照できます。  
   
 ```  
-custommarshallers.dll  
-Microsoft.visualbasic.dll  
-Microsoft.visualc.dll  
+CustomMarshalers.dll  
+Microsoft.VisualBasic.dll  
+Microsoft.VisualC.dll  
 mscorlib.dll  
-system.data.dll  
+System.dll  
+System.Configuration.dll  
+System.Core.dll  
+System.Data.dll  
+System.Data.OracleClient.dll  
 System.Data.SqlXml.dll  
-system.dll  
-system.security.dll  
-system.web.services.dll  
-system.xml.dll  
-System.Transactions  
-System.Data.OracleClient  
-System.Configuration  
+System.Deployment.dll  
+System.Security.dll  
+System.Transactions.dll  
+System.Web.Services.dll  
+system.Xml.dll  
+System.Xml.Linq.dll  
 ```  
   
 ## <a name="see-also"></a>参照  
