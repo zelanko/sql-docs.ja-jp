@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ae2d78f4647e2aefa707e97349daa73d08ee492
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964512"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748849"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset メソッド (RDS)
 空の非接続[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を作成します。  
@@ -40,7 +40,7 @@ object.CreateRecordset(ColumnInfos)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Object*  
+ *オブジェクト*  
  [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)または RDS を表すオブジェクト変数です[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
  *ColumnsInfos*  
@@ -49,14 +49,14 @@ object.CreateRecordset(ColumnInfos)
 |属性|説明|  
 |---------------|-----------------|  
 |名前|列ヘッダーの名前。|  
-|Type|データ型の整数。|  
+|種類|データ型の整数。|  
 |サイズ|データ型に関係なく、文字単位の幅の整数。|  
 |NULL 値の許容|ブール値。|  
 |Scale (省略可能)|この省略可能な属性は、数値フィールドの小数点以下桁数を定義します。 この値が指定されていない場合、数値は3桁に切り捨てられます。 有効桁数は影響を受けませんが、小数点の後の桁数は3桁に切り捨てられます。|  
   
  次に、一連の列配列が配列にグループ化されて、**レコードセット**が定義されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サーバー側ビジネスオブジェクトは、結果の**レコードセット**に、株価を含むオペレーティングシステムファイルなど、OLE DB 以外のデータプロバイダーからのデータを設定できます。  
   
  次の表に、 **CreateRecordset**メソッドでサポートされる[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)の値を示します。 表示される数値は、フィールドを定義するために使用される参照番号です。  
@@ -65,7 +65,7 @@ object.CreateRecordset(ColumnInfos)
   
  変数のデータ型によっては、代入列に示されている型に型を強制的に変換することができます。 **レコードセット**が作成され、いっぱいになるまで、置換は表示されません。 その後、必要に応じて、実際のデータ型を確認できます。  
   
-|長さ|Constant|数値|Substitution|  
+|長さ|定数|Number|Substitution|  
 |------------|--------------|------------|------------------|  
 |固定|**adTinyInt**|16||  
 |固定|**adSmallInt**|2||  

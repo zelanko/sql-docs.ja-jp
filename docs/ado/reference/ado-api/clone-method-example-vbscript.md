@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc82f72b175373d504b7fda658f1c7ed8eb7f1ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8382abfb78b67f900101ec27c33abeba988800e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920005"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748999"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone メソッドの例 (VBScript)
 この例では、 [Clone](../../../ado/reference/ado-api/clone-method-ado.md)メソッドを使用して[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のコピーを作成し、ユーザーが各コピーのレコードポインターを個別に配置できるようにします。  
   
  Active Server ページ (ASP) で次の例を使用します。 この例では、Microsoft Access と共に配布される**Northwind**データベースを使用します。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、CloneVBS として保存します。 結果は任意のクライアントブラウザーで表示できます。  
   
- この例を実行するには、 `RsCustomerList.Source = "Customers"`行`RsCustomerList.Source = "Products"`をに変更して、より大きなテーブルをカウントします。  
+ この例を実行するには、行をに変更して、 `RsCustomerList.Source = "Customers"` `RsCustomerList.Source = "Products"` より大きなテーブルをカウントします。  
   
 ```  
 <!-- BeginCloneVBS -->  

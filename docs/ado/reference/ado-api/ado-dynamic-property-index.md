@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f7d2c5bcc1b07107164b8df73c8239ebd66b9fa4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921083"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749226"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO Dynamic プロパティ インデックス
 データプロバイダー、サービスプロバイダー、およびサービスコンポーネントは、開かれていない[接続](../../../ado/reference/ado-api/connection-object-ado.md)および[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの**プロパティ**コレクションに動的なプロパティを追加できます。 また、これらのオブジェクトを開いたときに、指定したプロバイダーによって追加のプロパティが挿入される場合もあります。 これらのプロパティの一部は、「 [ADO Dynamic properties](../../../ado/reference/ado-api/ado-dynamic-properties.md) 」セクションに一覧表示されています。 詳細については、 [「付録 a: providers](../../../ado/guide/appendixes/appendix-a-providers.md) 」セクションの特定のプロバイダーに記載されています。  
@@ -38,7 +38,7 @@ ms.locfileid: "67921083"
 |列の定義|DBPROP_COLUMNDEFINITION|  
 |Connect Timeout|DBPROP_INIT_TIMEOUT|  
 |現在のカタログ|DBPROP_CURRENTCATALOG|  
-|データ ソース|DBPROP_INIT_DATASOURCE|  
+|Data Source|DBPROP_INIT_DATASOURCE|  
 |データ ソース名|DBPROP_DATASOURCENAME|  
 |データソースオブジェクトのスレッドモデル|DBPROP_DSOTHREADMODEL|  
 |DBMS 名|DBPROP_DBMSNAME|  
@@ -51,7 +51,7 @@ ms.locfileid: "67921083"
 |分離レベル|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |分離の保持|DBPROP_SUPPORTEDTXNISORETAIN|  
 |[Locale Identifier]|DBPROP_INIT_LCID|  
-|インストール先|DBPROP_INIT_LOCATION|  
+|Location|DBPROP_INIT_LOCATION|  
 |インデックスの最大サイズ|DBPROP_MAXINDEXSIZE|  
 |行の最大サイズ|DBPROP_MAXROWSIZE|  
 |行の最大サイズに BLOB が含まれる|DBPROP_MAXROWSIZEINCLUDESBLOB|  

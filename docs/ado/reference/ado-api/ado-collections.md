@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO collections [ADO]
 - collections [ADO]
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a06e51f5c5077a70f9b5a76ecdf4922d8e006f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: faad4d819939362f7e3b9c22062768bee71a0cda
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921108"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749357"
 ---
 # <a name="ado-collections"></a>ADO のコレクション
 これらのコレクションと ADO オブジェクトの間のリレーションシップは、 [Ado オブジェクトモデル](../../../ado/reference/ado-api/ado-object-model.md)で表現されます。  
@@ -29,8 +29,8 @@ ms.locfileid: "67921108"
 |-|-|  
 |[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)|プロバイダーに関連する単一のエラーへの応答として作成されたすべての**エラー**オブジェクトが含まれます。|  
 |[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)|**レコードセット**オブジェクトのすべての**Field**オブジェクトを格納します。|  
-|[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)|**Command**オブジェクトのすべての**パラメーター**オブジェクトを含みます。|  
-|[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)|オブジェクトの特定のインスタンスのすべての**プロパティ**オブジェクトを含みます。|  
+|[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)|**Command**オブジェクトのすべての**パラメーター**オブジェクトを含みます。|  
+|[[プロパティ]](../../../ado/reference/ado-api/properties-collection-ado.md)|オブジェクトの特定のインスタンスのすべての**プロパティ**オブジェクトを含みます。|  
   
 ## <a name="see-also"></a>参照  
  [ADO API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
