@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Unique property [ADOX], VC++ example
 - PrimaryKey property [ADOX], VC++ example
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ce3541843bc0eb82aa035864cd5c2490c4399ff5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13fbb034f1b8d41c0455482663b625dcb0475d62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76918396"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763713"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey および Unique プロパティの例 (VC++)
 この例では、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)および[Unique](../../../ado/reference/adox-api/unique-property-adox.md)プロパティを示します。 このコードでは、2つの列を持つ新しいテーブルを作成します。 **PrimaryKey**および**Unique**プロパティを使用して、重複する値が許可されない主キーを1つの列に設定します。  

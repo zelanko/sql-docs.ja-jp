@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], locking
 - locks [ADO], about locking
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c1607c9434e6c30ffd317277aadab27af96868fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: df46dd1ba112dfc592dee34bc37e50c5b727fed7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923445"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762993"
 ---
 # <a name="what-is-a-lock"></a>ロックとは
 ロックは、DBMS がマルチユーザー環境の行へのアクセスを制限するプロセスです。 行または列が排他的にロックされている場合、ロックが解除されるまで、他のユーザーはロックされたデータにアクセスできません。 これにより、2人のユーザーが行の同じ列を同時に更新することができなくなります。  

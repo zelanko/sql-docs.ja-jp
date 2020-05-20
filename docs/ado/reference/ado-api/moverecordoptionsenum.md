@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecordOptionsEnum enumeration [ADO]
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dcdb825073b267c3e3351001ecc7b11c969582e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 849f3720d831c17b6b9d6d2829ae0b28f19992de
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932044"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762443"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 [Record](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)メソッドの動作を指定します。  
   
-|Constant|値|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|既定値。 既定の移動操作を実行します。コピー先のファイルまたはディレクトリが既に存在する場合、操作は失敗し、ハイパーテキストリンクが更新されます。|  
 |**adMoveOverWrite**|1|コピー先のファイルまたはディレクトリが既に存在する場合でも、上書きします。|  

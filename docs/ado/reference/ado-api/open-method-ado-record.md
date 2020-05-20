@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 723d42cda8ac741f697dec7be4a2c4f5ad662508
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917923"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762193"
 ---
 # <a name="open-method-ado-record"></a>Open メソッド (ADO Record)
 既存の[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトを開くか、ファイルやディレクトリなどの**レコード**によって表される新しい項目を作成します。  
@@ -55,7 +55,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *パスワード*  
  任意。 必要に応じて*ユーザー名*を確認するパスワードを含む**文字列**値です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *ソース*は次のようになります。  
   
 -   URL。 URL のプロトコルが http の場合、インターネットプロバイダーが既定で呼び出されます。 URL が、のような実行可能スクリプトを含むノードを指している場合は。ASP ページ) 既定では、実行されたコンテンツではなく、ソースを含む**レコード**が開かれます。 この動作を変更するには、 *Options*引数を使用します。  

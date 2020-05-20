@@ -13,22 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - FieldEnum enumeration [ADO]
 ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5fe89d90510e95468e18b0d744ff566f69654320
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 24d69ac1406363458c8dbd3168e6d25309cfa2c4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932680"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762573"
 ---
 # <a name="fieldenum"></a>FieldEnum
 [レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの[fields](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションで参照される特殊なフィールドを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  これらの定数は、**レコード**に関連付けられている特殊なフィールドにアクセスするための "ショートカット" を提供します。 **フィールドコレクションから**[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトを取得し、**フィールド**オブジェクトの[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを使用してその内容を取得します。  
   
-|Constant|値|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adDefaultStream**|-1|**レコード**に関連付けられている既定の[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトを格納しているフィールドを参照します。|  
 |**adRecordURL**|-2|現在の**レコード**の絶対 URL 文字列を含むフィールドを参照します。|

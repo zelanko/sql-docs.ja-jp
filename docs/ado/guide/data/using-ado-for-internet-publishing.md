@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - urls [ADO]
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b95700d30337363091815763a5e9fbf1547902e6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923619"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763063"
 ---
 # <a name="using-ado-for-internet-publishing"></a>インターネットへの発行に ADO を使用する
 [インターネット発行用の OLE DB プロバイダーは、](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) ADO を使用して異種データにアクセスする具体的な例を示しています。 このセクションの例は、インターネット公開プロバイダーの使用に固有のものですが、他のプロバイダーで ADO を電子メールストアのプロバイダーなどの異種データに対して使用する場合は、このような原則が似ています。  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8a091a606cf3049c055794bc16cc51db78a40978
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931905"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762180"
 ---
 # <a name="open-method-ado-recordset"></a>Open メソッド (ADO Recordset)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトのカーソルを開きます。  
@@ -55,12 +55,12 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 > [!NOTE]
 >  **AdExecuteNoRecords**または**AdExecuteStream**の**executeopenenum**値は、 **Open**では使用できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ADO**レコードセット**の既定のカーソルは、サーバー上にある順方向専用の読み取り専用カーソルです。  
   
  **Recordset**オブジェクトで**Open**メソッドを使用すると、ベーステーブル、クエリの結果、または以前に保存した**レコードセット**のレコードを表すカーソルが開きます。  
   
- オプションの*source*引数を使用して、次のいずれかを使用してデータソースを指定します:**コマンド**オブジェクト変数、SQL ステートメント、ストアドプロシージャ、テーブル名、URL、または完全なファイルパス名。 *Source*がファイルパス名の場合は、完全なパス ("c:\dir\file.rst")、相対パス ("..\file.rst ")、または URL ("<https://files/file.rst>")。  
+ オプションの*source*引数を使用して、次のいずれかを使用してデータソースを指定します:**コマンド**オブジェクト変数、SQL ステートメント、ストアドプロシージャ、テーブル名、URL、または完全なファイルパス名。 *Source*がファイルパス名の場合は、完全なパス ("c:\dir\file.rst")、相対パス ("..\file.rst ")、または URL (" <https://files/file.rst> ")。  
   
  **Open**メソッドの*Source*引数を使用して、レコードを返さないアクションクエリを実行することはお勧めできません。これは、呼び出しが成功したかどうかを判断する簡単な方法がないためです。 このようなクエリによって返された**レコードセット**は閉じられます。 SQL INSERT ステートメントなど、レコードを返さないクエリを実行するには、 **Command**オブジェクトの[execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッド、または[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)メソッドを呼び出します。  
   

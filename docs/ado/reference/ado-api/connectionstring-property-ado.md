@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e391ad7c61bd6c303b0558892435af344a2768fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 39eb67a98d710e27c051d77aa7843663c853b9e0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933498"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762633"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString プロパティ (ADO)
 データソースへの接続を確立するために使用される情報を示します。  
@@ -28,7 +28,7 @@ ms.locfileid: "67933498"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **文字列**値を設定または返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **ConnectionString**プロパティを使用して、セミコロンで区切られた一連の*引数* *= value*ステートメントを含む詳細な接続文字列を渡して、データソースを指定します。  
   
  ADO は**ConnectionString**プロパティの5つの引数をサポートしています。その他の引数は、ADO によって処理されることなくプロバイダーに直接渡されます。 ADO でサポートされる引数は次のとおりです。  

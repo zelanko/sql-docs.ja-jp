@@ -14,14 +14,14 @@ helpviewer_keywords:
 - ConnectionTimeout property [ADO], Visual Basic example
 - State property [ADO], Visual Basic example
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1d0cd34b13889ed44e32e29a058ca01d48aea1b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 861db15ef9e47bc814aff445b8b8887df5df7a7c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933473"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762653"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、ConnectionTimeout、State プロパティの例 (VB)
 この例では、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを使用して[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを開くさまざまな方法を示します。 また、 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)プロパティを使用して接続タイムアウト期間を設定し、 [state](../../../ado/reference/ado-api/state-property-ado.md)プロパティを使用して接続の状態を確認します。 このプロシージャを実行するには、GetState 関数が必要です。  

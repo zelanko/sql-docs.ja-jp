@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Prepared property [ADO], VC++ example
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 58da870e9c65be459e6bd4a8c35bb84aef325c61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f2820f149c079a20e79297d98c1f265031a77ca7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917584"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761931"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared プロパティの例 (VC++)
 次の例では、2つの[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトを開いて、準備さ[れたプロパティ](../../../ado/reference/ado-api/prepared-property-ado.md)を示しています。1つは準備されています。  

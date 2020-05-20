@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3afbec77df9a80ab7e304d2e3101e795b939eef2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924591"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763613"
 ---
 # <a name="persisting-records-in-xml-format"></a>レコードを XML 形式で保持する
 ADTG 形式と同様に、XML 形式の**レコードセット**の永続化は、Microsoft OLE DB の永続化プロバイダーと共に実装されます。 このプロバイダーは、ADO によって生成されたスキーマ情報を格納する、保存されている XML ファイルまたはストリームから、順方向専用の読み取り専用の行セットを生成します。 同様に、ADO**レコードセット**を取得し、XML を生成して、COM **IStream**インターフェイスを実装するファイルまたは任意のオブジェクトに保存することもできます。 (実際には、ファイルは、 **IStream**をサポートするオブジェクトの別の例にすぎません)。バージョン2.5 以降では、ADO は Microsoft XML Parser (MSXML) を使用して XML を**レコードセット**に読み込みます。そのため、msxml.dll が必要です。  
@@ -59,7 +59,7 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO では、**レコードセット**オブジェクト全体が常に保持されます。 **Recordset**オブジェクトの行のサブセットを保持する場合は、**フィルター**メソッドを使用して行を絞り込むか、選択句を変更します。 ただし、**フィルター**メソッドを使用して行のサブセットを保存するには、クライアント側のカーソル (**cursor location** = **adUseClient**) を使用して**レコードセット**オブジェクトを開く必要があります。 たとえば、文字 "b" で始まるタイトルを取得するには、開いている**レコードセット**オブジェクトにフィルターを適用できます。  
+ ADO では、**レコードセット**オブジェクト全体が常に保持されます。 **Recordset**オブジェクトの行のサブセットを保持する場合は、**フィルター**メソッドを使用して行を絞り込むか、選択句を変更します。 ただし、フィルターメソッドを使用して行のサブセットを保存するには、クライアント側のカーソル (**cursor location**adUseClient) を使用して**レコードセット**オブジェクトを開く必要があり  =  **adUseClient** **Filter**ます。 たとえば、文字 "b" で始まるタイトルを取得するには、開いている**レコードセット**オブジェクトにフィルターを適用できます。  
   
 ```  
 rs.Filter "title_id like 'B*'"  

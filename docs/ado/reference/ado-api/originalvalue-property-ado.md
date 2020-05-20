@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - OriginalValue property [ADO]
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 512569ce2baa8acabdf8bcbf8f637ebf20e4f613
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b46b9e76a397d81b339aef231634b3b16f717ce4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917845"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762025"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue プロパティ (ADO)
 変更が行われる前にレコード内に存在していた[フィールド](../../../ado/reference/ado-api/field-object.md)の値を示します。  
@@ -28,7 +28,7 @@ ms.locfileid: "67917845"
 ## <a name="return-value"></a>戻り値  
  変更前のフィールドの値を表す**バリアント**値を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  現在のレコードからフィールドの元のフィールド値を返すには、 **Originalvalue**プロパティを使用します。  
   
  *即時更新モード*( [update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出した後に、プロバイダーが基になるデータソースに変更を書き込む) では、 **originalvalue**プロパティは、変更前 (つまり、最後の**更新**メソッドの呼び出し以降) に存在していたフィールド値を返します。 これは、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)メソッドが[value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを置き換えるために使用するのと同じ値です。  

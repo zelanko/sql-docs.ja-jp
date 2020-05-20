@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - NamedParameters property [ADO]
 ms.assetid: 42409387-026c-435f-a9b1-bf4167095875
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d63c413ebed585782ca5ce0568119dd7e05bf8ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 432a4968a301e51c1ca69e3b84ea80e0a19e32bb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932062"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762413"
 ---
 # <a name="namedparameters-property-ado"></a>NamedParameters プロパティ (ADO)
 パラメーター名をプロバイダーに渡す必要があるかどうかを示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このプロパティが true の場合、ADO は[コマンドオブジェクト](../../../ado/reference/ado-api/command-object-ado.md)の**パラメーター**コレクション内の各パラメーターの**Name**プロパティの値を渡します。 プロバイダーは、パラメーター名を使用して、 **CommandText**または**commandstream**プロパティのパラメーターを照合します。 このプロパティが false (既定値) の場合、パラメーター名は無視され、パラメーターの順序を使用して、 **CommandText**または**commandstream**プロパティのパラメーターに値が一致します。  
   
 ## <a name="applies-to"></a>適用対象  

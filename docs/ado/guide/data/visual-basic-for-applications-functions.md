@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 155eda8cf8361abff080d52db9a226fa9237b2eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923460"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763013"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications の関数
 次の Visual Basic for Applications 関数は、データシェイプの CALC 式で使用できます。  
@@ -30,18 +30,18 @@ ms.locfileid: "67923460"
 |Abs|Asc|Atn|CBool|CByte|CCur|  
 |CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
 |ChrB $|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|日付|Date$|DateAdd|  
-|DateDiff|DatePart|DateSerial|DateValue|日|DDB|  
-|Error|Error$|Exp|Fix|フォーマット|Format$|  
-|FV|Hex|Hex$|時|IIF|InStr|  
+|Cvar|CVDate|CVErr|Date|Date$|DateAdd|  
+|DateDiff|DatePart|DateSerial|DateValue|日間|DDB|  
+|Error|Error$|Exp|Fix|形式|Format$|  
+|FV|Hex|Hex$|時間|IIF|InStr|  
 |int|IPmt|IRR|IsDate|IsEmpty|IsError|  
-|IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
+|IsNull|IsNumeric|IsObject|LCase|LCase$|左|  
 |LeftB|Left$|LeftB $|Len|ログ|LTrim|  
-|LTrim$|Mid|Mid$|分|MIRR|月|  
+|LTrim$|Mid|Mid$|Minute|MIRR|月|  
 |Now|NPer|NPV|Oct|Oct$|Pmt|  
-|PPmt|PV|QBColor|料金|RGB|Right|  
+|PPmt|PV|QBColor|料金|RGB|権限|  
 |RightB|Right$|RightB $|Rnd|RTrim|RTrim $|  
-|秒|Sgn|Sin|SLN|Space|Space$|  
+|Second|Sgn|Sin|SLN|Space|Space$|  
 |R-sqr|Str|Str$|StrComp|StrConv|String|  
 |String$|SYD|Tan|Time|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  

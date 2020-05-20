@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b8cf7f5629158ccd1bdd74e30b7ba9bc5bb6942
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964543"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762673"
 ---
 # <a name="createobject-method-rds"></a>CreateObject メソッド (RDS)
 対象のビジネスオブジェクトのプロキシを作成し、そのオブジェクトへのポインターを返します。 プロキシは、ビジネスオブジェクトとの通信のためにデータをパッケージ化してサーバー側スタブにマーシャリングし、インターネット経由で要求とデータを送信します。 インプロセスコンポーネントオブジェクトの場合、プロキシは使用されません。オブジェクトへのポインターだけが使用されます。  
@@ -31,13 +31,13 @@ ms.locfileid: "67964543"
   
 |Protocol|構文|  
 |--------------|------------|  
-|HTTP|Set object = の場合は、CreateObject. CreateObject ("ProgId\:", "https/websrvr")|  
-|HTTPS|Set object = の場合は、CreateObject. CreateObject ("ProgId\:", "https/websrvr")|  
+|HTTP|Set object = の場合は、CreateObject. CreateObject ("ProgId", "https/ \: websrvr")|  
+|HTTPS|Set object = の場合は、CreateObject. CreateObject ("ProgId", "https/ \: websrvr")|  
 |DCOM|Set object = の場合は、CreateObject. CreateObject ("ProgId", "computername")|  
 |インプロセス|Set object = を設定します。 CreateObject ("ProgId", "")|  
   
 ## <a name="parameters"></a>パラメーター  
- *Object*  
+ *オブジェクト*  
  *ProgID*で指定された型のオブジェクトに評価されるオブジェクト変数。  
   
  *DataSpace*  
@@ -49,7 +49,7 @@ ms.locfileid: "67964543"
  *awebsrvr*または*computername*  
  サーバービジネスオブジェクトのインスタンスが作成されるインターネットインフォメーションサービス (IIS) Web サーバーを識別する URL を表す**文字列**値です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *HTTP プロトコル*は標準の Web プロトコルです。*HTTPS*はセキュリティで保護された Web プロトコルです。 HTTP を使用せずにローカルエリアネットワークを実行する場合は、 *DCOM プロトコル*を使用します。 *インプロセス*プロトコルは、ローカルダイナミックリンクライブラリ (DLL) です。ネットワークを使用しません。  
   
 ## <a name="applies-to"></a>適用対象  

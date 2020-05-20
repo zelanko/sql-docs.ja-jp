@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - RDS tutorial [ADO], VBScript
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d45347bcdf212158fb6a0ee9f4599e1e1b00ff54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1fc60383f0862c845ee70be11a051b9da48b36a2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922425"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763573"
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS のチュートリアル (VBScript)
 これは、Microsoft Visual Basic Scripting Edition で記述された RDS チュートリアルです。 このチュートリアルの目的の詳細については、 [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)を参照してください。  
@@ -27,7 +27,7 @@ ms.locfileid: "67922425"
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- このチュートリアルでは、 [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)と[RDS。領域スペース](../../../ado/reference/rds-api/dataspace-object-rds.md)はデザイン時に作成され`<OBJECT>...</OBJECT>`ます。つまり、というオブジェクトタグで定義されます。 または、実行時に[CreateObject メソッド (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)メソッドを使用して作成することもできます。 たとえば、RDS のように**なります。DataControl**オブジェクトは次のように作成できます。  
+ このチュートリアルでは、 [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)と[RDS。領域スペース](../../../ado/reference/rds-api/dataspace-object-rds.md)はデザイン時に作成されます。つまり、というオブジェクトタグで定義され `<OBJECT>...</OBJECT>` ます。 または、実行時に[CreateObject メソッド (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)メソッドを使用して作成することもできます。 たとえば、RDS のように**なります。DataControl**オブジェクトは次のように作成できます。  
   
 ```vb
 Set DC = Server.CreateObject("RDS.DataControl")  

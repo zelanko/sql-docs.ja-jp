@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Cell object [ADO MD]
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bbf97a4095f2295b8851f87ba20ab083938e70ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d309ba98c1e50d8eb6fbe47fb9452f8ea7df35ba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947742"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761800"
 ---
 # <a name="cell-object-ado-md"></a>Cell オブジェクト (ADO MD)
 セルセットに含まれる軸の座標の交差部分にあるデータを表します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  セルオブジェクトは、**セル**[セット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクトの[Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティによって返されます。  
   
  **Cell**オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  

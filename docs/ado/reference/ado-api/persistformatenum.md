@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - PersistFormatEnum enumeration [ADO]
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a26fd370e80cb288ee62b0fc53ed6670300172e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 909fd5a292f5f071ec287aba9c8e3f6dc3881ef3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917612"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763363"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を保存する形式を指定します。  
   
-|Constant|[値]|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adPersistADTG**|0|Microsoft Advanced Data TableGram (ADTG) 形式を示します。|  
 |**adPersistADO**|1|ADO の独自の拡張マークアップ言語 (XML) 形式が使用されることを示します。 この値は adPersistXML と同じであり、旧バージョンとの互換性のために用意されています。|  
@@ -35,7 +35,7 @@ ms.locfileid: "67917612"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|Constant|  
+|定数|  
 |--------------|  
 |AdoEnums ADTG|  
 |AdoEnums の形式|  

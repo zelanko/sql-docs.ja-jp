@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Mode property [ADO]
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc5b2e2bce410309656bad5591a3df90781cc8bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1bdd16d8e98bd1c038c5bc6c761305e87b65b765
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932225"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762513"
 ---
 # <a name="mode-property-ado"></a>Mode プロパティ (ADO)
 [接続](../../../ado/reference/ado-api/connection-object-ado.md)、[レコード](../../../ado/reference/ado-api/record-object-ado.md)、または[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトのデータを変更するために使用できるアクセス許可を示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "67932225"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [Connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md)値を設定または返します。 **接続**の既定値は**admodeunknown**です。 **レコード**オブジェクトの既定値は**adModeRead**です。 基になるソースに関連付けられている**ストリーム**の既定値 (ソースとして URL を使用して開かれるか、**レコード**の既定の**ストリーム**として開かれる) は、 **adModeRead**です。 基になるソース (メモリ内でインスタンス化) に関連付けられていない**ストリーム**の既定値は**admodeunknown**です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Mode**プロパティを使用して、現在の接続でプロバイダーによって使用されているアクセス許可を設定または取得します。 **Mode**プロパティを設定できるのは、**接続**オブジェクトが閉じている場合のみです。  
   
  **ストリーム**オブジェクトの場合、アクセスモードが指定されていない場合は、**ストリーム**オブジェクトを開くために使用されるソースから継承されます。 たとえば、**レコード**オブジェクトから**ストリーム**が開かれている場合、既定では、**レコード**と同じモードで開かれます。  

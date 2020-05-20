@@ -13,26 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - DataSource property [ADO]
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd677e29631e53eeb71c43e8174baff553defc85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cbaff4a2bf03e524018c0c8d1b163925aa40b3ea
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933248"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763473"
 ---
 # <a name="datasource-property-ado"></a>DataSource プロパティ (ADO)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトとして表されるデータを格納するオブジェクトを示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このプロパティは、データ環境を使用してデータバインドコントロールを作成するために使用されます。 データ環境では、**レコードセット**オブジェクトとして表される名前付きオブジェクト (データメンバー) を含むデータ (データソース) のコレクションを保持します。  
   
  [DataMember](../../../ado/reference/ado-api/datamember-property.md)プロパティと**DataSource**プロパティは、組み合わせて使用する必要があります。  
   
  参照されるオブジェクトは、 **IDataSource**インターフェイスを実装する必要があり、 **IRowset**インターフェイスを含んでいる必要があります。  
   
-## <a name="usage"></a>使用方法  
+## <a name="usage"></a>使用  
   
 ```  
 Dim rs as New ADODB.Recordset  

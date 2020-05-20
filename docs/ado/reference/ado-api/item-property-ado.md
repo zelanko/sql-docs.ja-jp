@@ -43,14 +43,14 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a5925bc0e2ab4991c1067c6d1c26cfff2c237b37
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918360"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763433"
 ---
 # <a name="item-property-ado"></a>Item プロパティ (ADO)
 名前または序数を指定して、コレクションの特定のメンバーを示します。  
@@ -65,10 +65,10 @@ Set object = collection.Item ( Index )
  オブジェクト参照を返します。  
   
 ## <a name="parameters"></a>パラメーター  
- *インデックス*  
+ *化*  
  コレクション内のオブジェクトの名前または序数に評価される**バリアント**式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  コレクション内の特定のオブジェクトを返すには、 **Item**プロパティを使用します。 **Item**が*Index*引数に対応するコレクション内のオブジェクトを見つけられない場合、エラーが発生します。 また、一部のコレクションでは名前付きオブジェクトがサポートされていません。これらのコレクションでは、序数参照を使用する必要があります。  
   
  **Item**プロパティは、すべてのコレクションの既定のプロパティです。したがって、次の構文形式は置き換えることができます。  

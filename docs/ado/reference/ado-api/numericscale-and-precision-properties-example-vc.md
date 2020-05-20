@@ -13,14 +13,14 @@ helpviewer_keywords:
 - NumericScale property [ADO], VC++ example
 - Precision property [ADO], VC++ example
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70a751db424cec07a0ac617b3620316a07936400
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 35df19bc706e1844e7f6c9e5f3004614c1df5bd2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917965"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762311"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale および Precision プロパティの例 (VC++)
 この例では、 [numericscale](../../../ado/reference/ado-api/numericscale-property-ado.md)プロパティと[precision](../../../ado/reference/ado-api/precision-property-ado.md)プロパティを使用して、 ***Pubs***データベースの***割引***テーブルのフィールドの数値の小数点以下桁数と有効桁数を表示します。  

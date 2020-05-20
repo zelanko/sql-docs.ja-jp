@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 716eec332690d1a6e9df1f16d67d82afc1a30985
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931860"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762103"
 ---
 # <a name="openschema-method"></a>OpenSchema メソッド
 プロバイダーからデータベーススキーマ情報を取得します。  
@@ -46,7 +46,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  *SchemaID*  
  OLE DB 仕様で定義されていないプロバイダースキーマクエリの GUID。 *QueryType*が**Adschemaproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **OpenSchema**メソッドは、データソース内のテーブル、テーブル内の列、サポートされるデータ型など、データソースに関する自己記述的な情報を返します。  
   
  *QueryType*引数は、返される列 (スキーマ) を示す GUID です。 OLE DB 仕様には、スキーマの完全な一覧が含まれています。  

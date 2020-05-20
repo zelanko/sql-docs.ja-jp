@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - AppendChunk method [ADO]
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9d575460daf0f801f6d6dd2e80b0c67f4886dc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5ebf6f52e4c2ac9cc4875db26e633457915c0a5e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920561"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762941"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk メソッド (ADO)
 大きなテキストまたはバイナリデータ[フィールド](../../../ado/reference/ado-api/field-object.md)、または[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトにデータを追加します。  
@@ -40,7 +40,7 @@ object.AppendChunk Data
  *データ*  
  オブジェクトに追加するデータを格納している**バリアント**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **フィールド**または**パラメーター**オブジェクトに対して**appendchunk**メソッドを使用して、長いバイナリまたは文字データを格納します。 システムメモリが制限されている場合は、 **Appendchunk**メソッドを使用して、長い値を全体ではなく部分的に操作することができます。  
   
 ## <a name="field"></a>フィールド  

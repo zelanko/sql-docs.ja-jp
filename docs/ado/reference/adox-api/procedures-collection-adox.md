@@ -14,24 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - Procedures collection [ADOX]
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 693029bf83fe28343b450906da3e16e2665819d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 91ce9f74f0198c52ecce404cb0145e33b941271c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965437"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763652"
 ---
 # <a name="procedures-collection-adox"></a>Procedures コレクション (ADOX)
 カタログのすべての[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>Remarks  
- **Procedures**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-procedures.md)メソッドは、ADOX で一意です。 次の操作を行うことができます。  
+## <a name="remarks"></a>解説  
+ **Procedures**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-procedures.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
   
 -   **追加**メソッドを使用して、新しいプロシージャをコレクションに追加します。  
   
- その他のプロパティとメソッドは、ADO コレクションの標準です。 次の操作を行うことができます。  
+ その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
   
 -   [項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクション内のプロシージャにアクセスします。  
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO]
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38846bcb832df7cc535d35d8f07fb636f2db37f7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918036"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762423"
 ---
 # <a name="name-property-ado"></a>Name プロパティ (ADO)
 オブジェクトの名前を示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "67918036"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  オブジェクトの名前を示す**文字列**値を設定または返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Name プロパティを**使用して、**コマンド**、**プロパティ**、**フィールド**、または**パラメーター**オブジェクトの名前を割り当てるか、名前を取得します。  
   
  この値は、 **Command**オブジェクトでは読み取り/書き込みが可能で、**プロパティ**オブジェクトでは読み取り専用です。  
@@ -38,7 +38,7 @@ ms.locfileid: "67918036"
   
  [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションにまだ追加されていない**パラメーター**オブジェクトの場合、 **Name**プロパティは読み取り/書き込み可能です。 追加された**パラメーター**オブジェクトおよびその他すべてのオブジェクトについては、 **Name**プロパティは読み取り専用です。 名前はコレクション内で一意である必要はありません。  
   
- オブジェクトの**name**プロパティは、序数参照によって取得できます。その後、オブジェクトを名前で直接参照できます。 たとえば、がを`rstMain.Properties(20).Name`生成`Updatability`した場合、このプロパティをと`rstMain.Properties("Updatability")`して参照できます。  
+ オブジェクトの**name**プロパティは、序数参照によって取得できます。その後、オブジェクトを名前で直接参照できます。 たとえば、がを生成した場合、 `rstMain.Properties(20).Name` `Updatability` このプロパティをとして参照でき `rstMain.Properties("Updatability")` ます。  
   
 ## <a name="applies-to"></a>適用対象  
   

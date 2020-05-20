@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 204aca25a330dd912e1a9354adc92bbb7c58f847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926644"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763213"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet の概要
 Microsoft Jet の OLE DB プロバイダーにより、ADO は Microsoft Jet データベースにアクセスできます。
@@ -42,11 +42,11 @@ Microsoft.Jet.OLEDB.4.0
 
  文字列は、次のキーワードで構成されています。
 
-|キーワード|説明|
+|Keyword|説明|
 |-------------|-----------------|
 |**プロバイダー**|Microsoft Jet の OLE DB プロバイダーを指定します。|
-|**データ ソース**|データベースパスとファイル名 (など`c:\Northwind.mdb`) を指定します。|
-|**[ユーザー ID]**|ユーザー名を指定します。 このキーワードが指定されていない場合、`admin`既定では "" という文字列が使用されます。|
+|**データ ソース**|データベースパスとファイル名 (など) を指定し `c:\Northwind.mdb` ます。|
+|**[ユーザー ID]**|ユーザー名を指定します。 このキーワードが指定されていない場合、 `admin` 既定では "" という文字列が使用されます。|
 |**パスワード**|ユーザーのパスワードを指定します。 このキーワードが指定されていない場合、既定では空の文字列 ("") が使用されます。|
 
 > [!NOTE]
@@ -131,7 +131,7 @@ Microsoft.Jet.OLEDB.4.0
 |カタログ用語|DBPROP_CATALOGTERM|
 |列の定義|DBPROP_COLUMNDEFINITION|
 |現在のカタログ|DBPROP_CURRENTCATALOG|
-|データ ソース|DBPROP_INIT_DATASOURCE|
+|Data Source|DBPROP_INIT_DATASOURCE|
 |データ ソース名|DBPROP_DATASOURCENAME|
 |データソースオブジェクトのスレッドモデル|DBPROP_DSOTHREADMODEL|
 |DBMS 名|DBPROP_DBMSNAME|

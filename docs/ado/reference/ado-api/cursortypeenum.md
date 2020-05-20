@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CursorTypeEnum enumeration [ADO]
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f6333934997c9de38b8df1dd08849886ff3dd7f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0af12cbad09990add1e5f42c05a68a0d249377fa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933270"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763493"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトで使用されるカーソルの種類を指定します。  
   
-|Constant|値|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|動的カーソルを使用します。 他のユーザーによる追加、変更、および削除が表示され、プロバイダーがサポートしていない場合は、ブックマークを除くすべての種類の**移動が許可され**ます。|  
 |**adOpenForwardOnly**|0|既定値。 順方向専用カーソルを使用します。 レコードをスクロールするだけでスクロールできる点を除いて、静的カーソルと同じです。 これにより、**レコードセット**のパススルーを1回だけ行う必要がある場合に、パフォーマンスが向上します。|  
@@ -36,7 +36,7 @@ ms.locfileid: "67933270"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|Constant|  
+|定数|  
 |--------------|  
 |AdoEnums CursorType|  
 |AdoEnums. CursorType. FORWARDONLY|  

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3e8bb3c3787effe8418db735a72425a793b73e35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8d27195b00d1e1867f6bf037cd6c20500ec35e84
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931851"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762085"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize プロパティ - 動的 (ADO)
 [フィールド](../../../ado/reference/ado-api/field-object.md)にインデックスを作成するかどうかを指定します。  
@@ -26,14 +26,14 @@ ms.locfileid: "67931851"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  インデックスを作成する必要があるかどうかを示す**ブール**値を設定または返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  インデックスを使用すると、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の値を検索したり並べ替えたりする操作のパフォーマンスを向上させることができます。 インデックスは ADO の内部にあります。アプリケーションで明示的にアクセスしたり、使用したりすることはできません。  
   
  フィールドにインデックスを作成するには、 **Optimize**プロパティを**True**に設定します。 インデックスを削除するには、このプロパティを**False**に設定します。  
   
  **[最適化**] は、[[カーソルの場所](../../../ado/reference/ado-api/cursorlocation-property-ado.md)] プロパティが**adUseClient**に設定されている場合に、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクションに追加される動的プロパティです。  
   
-## <a name="usage"></a>使用方法  
+## <a name="usage"></a>使用  
   
 ```  
 Dim rs As New Recordset  
