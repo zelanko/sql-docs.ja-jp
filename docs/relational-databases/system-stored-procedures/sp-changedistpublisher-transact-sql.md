@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistpublisher
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb90ec6a3d5413d22f4721491d3b151a7e28ac05
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771361"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833434"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 |**distribution_db**||ディストリビューションデータベースの名前。|  
 |**ログイン**||ログイン名。|  
 |**password**||指定されたログインの強力なパスワード。|  
-|**security_mode**|**1**|パブリッシャーに接続するときに Windows 認証を使用。 *これは、以外*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーに対しては変更できません *。*|  
-||**0**|パブリッシャー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するときに認証を使用します。 *これは、以外*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーに対しては変更できません *。*|  
+|**security_mode**|**1**|パブリッシャーに接続するときに Windows 認証を使用。 *これは、以外* [!INCLUDE[msCoName](../../includes/msconame-md.md)] のでは変更できません。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*パブリッシャー。*|  
+||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証を使用します。 *これは、以外* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のでは変更できません。*パブリッシャー。*|  
 |**working_directory**||パブリケーションのデータおよびスキーマ ファイルを保存するために使用する作業ディレクトリです。|  
 |NULL (既定値)||使用可能なすべての*プロパティ*オプションが印刷されます。| 
 |**storage_connection_string**| アクセス キー | データベースが Azure SQL Database Managed Instance ときの作業ディレクトリのアクセスキー。 
@@ -69,7 +69,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_changedistpublisher**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  

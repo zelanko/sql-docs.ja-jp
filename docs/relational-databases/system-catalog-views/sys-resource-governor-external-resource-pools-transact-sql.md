@@ -16,20 +16,20 @@ helpviewer_keywords:
 - sys.resource_governor_external_resource_pools
 - resource_governor_external_resource_pools
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4751cb9164d5ca11cfdaca4365fa7156c2c2425e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4d9b7a733acaf5f6136f6746b313c30c03f63683
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80662998"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834107"
 ---
 # <a name="sysresource_governor_external_resource_pools-transact-sql"></a>resource_governor_external_resource_pools (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]および[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]および [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]格納されている外部リソースプール構成を返します。 ビューの各行によって、プールの構成が決まります。
+に格納されている外部リソースプール構成を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ビューの各行によって、プールの構成が決まります。
   
 |列名|データ型|説明|
 |-----------------|---------------|-----------------|

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_schemas dynamic management function
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 152a8b7f4c933874d8190b95404cbbeb91bb098f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cf6739feb49e3ee365dc5c7421563952d50ed63b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088581"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833724"
 ---
 # <a name="sysdm_repl_schemas-transact-sql"></a>dm_repl_schemas (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "68088581"
 ## <a name="permissions"></a>アクセス許可  
  **Dm_repl_schemas**を呼び出すには、パブリケーションデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  情報は、レプリケーションアーティクルキャッシュに現在読み込まれているレプリケートされたデータベースオブジェクトに対してのみ返されます。  
   
 ## <a name="see-also"></a>参照  

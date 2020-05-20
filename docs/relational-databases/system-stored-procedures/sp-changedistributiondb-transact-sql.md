@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistributiondb
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9db4f3a40311e94d94d8910f4d1625f89f29926a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3c2cba0fa65271a7668ae1945b458f26138fe36d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768961"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833388"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_changedistributiondb [ @database= ] 'database'
   
 `[ @property = ] 'property'`特定のデータベースに対して変更するプロパティを指定します。 *プロパティ*は**sysname**で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**history_retention**|履歴テーブルの保持期間です。|  
 |**max_distretention**|ディストリビューションの最大保有期間。|  
@@ -55,7 +55,7 @@ sp_changedistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_changedistributiondb**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="example"></a>例  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_get_distributor
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 63916a86757877dc6ae601c798ba7a987256580c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0e714018ed35a7b6c12c0c00bd8eeffda5630b67
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124115"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833256"
 ---
 # <a name="sp_get_distributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ sp_get_distributor
 |**is distribution publisher**|**int**|**0** = いいえ、**1** = はい|  
 |**リモートディストリビューションパブリッシャーがある**|**int**|**0** = いいえ、**1** = はい|  
   
-## <a name="remarks"></a>Remarks  
- **sp_get_distributor**は、主に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_get_distributor**は、主に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  すべてのユーザーが**sp_get_distributor**を実行できます。 ディストリビューションデータベースの固定データベースロール**db_owner**または**replmonitor**のメンバー、または少なくとも1つのパブリッシュされたデータベースの**db_owner**固定データベースロールのメンバーによって、このストアドプロシージャが実行されると、NULL 以外の結果セットが返されます。 また、少なくとも1つのパブリッシュされたデータベースのパブリケーションアクセスリスト (PAL) のユーザーがこのストアドプロシージャを実行した場合、または SQL Server 以外のパブリッシャーのディストリビューションデータベースの PAL で**sp_get_distributor**も、NULL 以外の結果セットが返されます。  

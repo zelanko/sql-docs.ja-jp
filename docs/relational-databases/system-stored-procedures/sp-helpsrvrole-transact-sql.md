@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrole
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a632e6923ab3127a363650c63533fa548d1acc12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9abcbec940d9afa7b5aeb36183610b471bb3a3df
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006120"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833192"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,12 +62,12 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |ServerRole|**sysname**|サーバーロールの名前|  
 |説明|**sysname**|ServerRole の説明。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  固定サーバー ロールは、サーバー レベルで定義され、特定のサーバーレベルの管理操作を実行する権限が与えられます。 固定サーバー ロールは、追加、削除、または変更することはできません。  
   
  サーバーロールのメンバーを追加または削除するには、「 [ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)」を参照してください。  
   
- すべてのログインは public のメンバーです。 内部で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は public がロールとして実装されていないため、sp_helpsrvrole はパブリックロールを認識しません。  
+ すべてのログインは public のメンバーです。 内部で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は public がロールとして実装されていないため、sp_helpsrvrole はパブリックロールを認識しません。  
   
  sp_helpsrvrole は、ユーザー定義のサーバーロールを引数として受け取りません。 ユーザー定義サーバーロールの一覧を表示するには、「 [ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)」の例を参照してください。  
   

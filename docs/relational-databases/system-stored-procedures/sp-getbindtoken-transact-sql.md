@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dca4015832f8bebf5501c4b3a7e84339bf62957b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124003"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833212"
 ---
 # <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,17 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ```  
   
 ## <a name="arguments"></a>引数  
- [@out_token=] '*return_value*'  
+ [ @out_token =] '*return_value*'  
  セッションをバインドするために使用するトークンです。 *return_value*は**varchar (255)** で、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  None  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
- sp_getbindtoken は、アクティブなトランザクション内でストアドプロシージャが実行された場合にのみ、有効なトークンを返します。 それ以外の[!INCLUDE[ssDE](../../includes/ssde-md.md)]場合、はエラーメッセージを返します。 次に例を示します。  
+## <a name="remarks"></a>解説  
+ sp_getbindtoken は、アクティブなトランザクション内でストアドプロシージャが実行された場合にのみ、有効なトークンを返します。 それ以外の場合、は [!INCLUDE[ssDE](../../includes/ssde-md.md)] エラーメッセージを返します。 次に例を示します。  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -65,7 +65,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- 開いているトランザクション内に分散トランザクション接続を参加させるために[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_getbindtoken を使用すると、は同じトークンを返します。 次に例を示します。  
+ 開いているトランザクション内に分散トランザクション接続を参加させるために sp_getbindtoken を使用すると、は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同じトークンを返します。 次に例を示します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -83,7 +83,7 @@ EXECUTE sp_getbindtoken @bind_token OUTPUT;
 SELECT @bind_token AS Token;  
 ```  
   
- どちら`SELECT`のステートメントも同じトークンを返します。  
+ どちら `SELECT` のステートメントも同じトークンを返します。  
   
 ```  
 Token  
@@ -97,7 +97,7 @@ PKb'gN5<9aGEedk_16>8U=5---/5G=--
 (1 row(s_) affected)  
 ```  
   
- sp_bindsession でバインド トークンを使用して、新規セッションを同じトランザクションにバインドできます。 バインドトークンは、の各インスタンス内でのみローカルに[!INCLUDE[ssDE](../../includes/ssde-md.md)]有効であり、複数のインスタンス間で共有することはできません。  
+ sp_bindsession でバインド トークンを使用して、新規セッションを同じトランザクションにバインドできます。 バインドトークンは、の各インスタンス内でのみローカルに有効であり、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 複数のインスタンス間で共有することはできません。  
   
  バインド トークンを取得して渡すには、sp_getbindtoken を実行してから sp_bindsession を実行して、同じロック領域を共有します。 バインド トークンの取得後は、sp_bindsession を正常に実行できます。  
   

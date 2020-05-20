@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, login migration
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
+author: rajeshsetlem
+ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f721800de13d11eefa1cabdd2f23fda838db9396
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056479"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885789"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Data Migration Assistant を使用して SQL Server ログインを移行する
 
@@ -34,7 +34,7 @@ ms.locfileid: "74056479"
 
 - 現在、Data Migration Assistant では、スタンドアロンのセキュリティ証明書 (証明書にマップされたログイン) に関連付けられているログイン、スタンドアロンの非対称キー (非対称キーにマップされたログイン)、および資格情報にマップされたログインはサポートされていません。
 
-- Data Migration Assistant は、 **sa**ログインとサーバーの原則を、2つのハッシュマーク (\#\#) で囲まれた名前で移動しません。これは内部でのみ使用されます。
+- Data Migration Assistant は、 **sa**ログインとサーバーの原則を、2つのハッシュマーク () で囲まれた名前で移動しません \# \# 。これは内部でのみ使用されます。
 
 - 既定では、Data Migration Assistant は、移行するすべての修飾されたログインを選択します。 必要に応じて、移行する特定のログインを選択できます。 すべての修飾されたログインを Data Migration Assistant 移行する場合、ログインユーザーマッピングは、移行されるデータベース内にそのまま残ります。
 
@@ -52,7 +52,7 @@ ms.locfileid: "74056479"
 
 - 移行の結果を確認して、ログインの移行の全体的な状態と、推奨される移行後の操作について理解することをお勧めします。
 
-## <a name="resources"></a>参照情報
+## <a name="resources"></a>リソース
 
 [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 

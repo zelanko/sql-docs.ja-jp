@@ -16,14 +16,14 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c16bc1e0c8d8d6b5a62e2823aa011b58520b1d00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 30b325dcd012defe3755f769c74ec2fc5d57522e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018358"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834506"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>SQL Server システム カタログに対するクエリに関してよく寄せられる質問
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ ms.locfileid: "68018358"
 ## <a name="answers"></a>回答  
   
 ###  <a name="how-do-i-find-all-the-tables-that-do-not-have-a-clustered-index-in-a-specified-database"></a><a name="_FAQ1"></a>指定されたデータベースにクラスター化インデックスがないすべてのテーブルを検索操作方法には、  
- 次のクエリを実行する前に`<database_name>` 、を有効なデータベース名に置き換えます。  
+ 次のクエリを実行する前に、を `<database_name>` 有効なデータベース名に置き換えます。  
   
 ```  
 SELECT SCHEMA_NAME(t.schema_id) AS schema_name, t.name AS table_name  
@@ -126,7 +126,7 @@ GO
   
 ```  
   
- または、次の例`OBJECTPROPERTY`に示すように、関数を使用することもできます。  
+ または、 `OBJECTPROPERTY` 次の例に示すように、関数を使用することもできます。  
   
 ```  
 USE <database_name>;  
@@ -142,7 +142,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-owners-of-entities-contained-in-a-specified-schema"></a><a name="_FAQ2"></a>指定したスキーマに含まれるエンティティのすべての所有者を検索操作方法には、  
- 次のクエリを実行する前に`<database_name>` 、 `<schema_name>`とを有効な名前に置き換えます。  
+ 次のクエリを実行する前に、 `<database_name>` とを `<schema_name>` 有効な名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -170,7 +170,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-tables-that-do-not-have-a-primary-key"></a><a name="_FAQ3"></a>主キーを持たないすべてのテーブルを検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、を有効なデータベース名に置き換えます。  
+ 次のクエリを実行する前に、を `<database_name>` 有効なデータベース名に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -205,7 +205,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-tables-that-do-not-have-an-index"></a><a name="_FAQ4"></a>インデックスを持たないすべてのテーブルを検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、を有効なデータベース名に置き換えます。  
+ 次のクエリを実行する前に、を `<database_name>` 有効なデータベース名に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -222,7 +222,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-tables-that-have-an-identity-column"></a><a name="_FAQ5"></a>Id 列を含むすべてのテーブルを検索操作方法には、  
- 次のクエリを実行する前に`<database_name>` 、を有効なデータベース名に置き換えます。  
+ 次のクエリを実行する前に、を `<database_name>` 有効なデータベース名に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -257,7 +257,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-the-data-types-of-the-columns-of-a-specified-table"></a><a name="_FAQ7"></a>指定されたテーブルの列のデータ型を検索操作方法には、  
- 次のクエリを実行する前に`<database_name>` 、 `<schema_name.table_name>`とを有効な名前に置き換えます。  
+ 次のクエリを実行する前に、 `<database_name>` とを `<schema_name.table_name>` 有効な名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -282,7 +282,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-the-dependencies-on-a-specified-function"></a><a name="_FAQ8"></a>指定された関数の依存関係を検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、 `<schema_name.function_name>`とを有効な名前に置き換えます。  
+ 次のクエリを実行する前に、 `<database_name>` とを `<schema_name.function_name>` 有効な名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -300,7 +300,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-stored-procedures-in-a-database"></a><a name="_FAQ9"></a>データベース内のすべてのストアドプロシージャを検索操作方法には、  
- 次のクエリを実行する前に`<database_name>` 、を有効な名前に置き換えます。  
+ 次のクエリを実行する前に、を `<database_name>` 有効な名前に置き換えます。  
   
 ```  
   
@@ -319,7 +319,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-the-parameters-for-a-specified-stored-procedure-or-function"></a><a name="_FAQ10"></a>指定されたストアドプロシージャまたは関数のパラメーターを検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、 `<schema_name.object_name>`とを有効な名前に置き換えます。  
+ 次のクエリを実行する前に、 `<database_name>` とを `<schema_name.object_name>` 有効な名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -345,7 +345,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-user-defined-functions-in-a-database"></a><a name="_FAQ12"></a>データベース内のすべてのユーザー定義関数を検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、を有効なデータベース名に置き換えます。  
+ 次のクエリを実行する前に、を `<database_name>` 有効なデータベース名に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -364,7 +364,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-all-views-in-a-database"></a><a name="_FAQ13"></a>データベース内のすべてのビューを検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、を有効なデータベース名に置き換えます。  
+ 次のクエリを実行する前に、を `<database_name>` 有効なデータベース名に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -402,7 +402,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-the-lob-data-types-of-a-specified-table"></a><a name="_FAQ14"></a>指定されたテーブルの LOB データ型を検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、 `<schema_name.table_name>`とを有効な名前に置き換えます。  
+ 次のクエリを実行する前に、 `<database_name>` とを `<schema_name.table_name>` 有効な名前に置き換えます。  
   
 ```  
   
@@ -430,7 +430,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-view-the-definition-of-a-module"></a><a name="_FAQ15"></a>モジュールの定義を表示操作方法には  
- 次のクエリを実行する前に`<database_name>` 、 `<schema_name.object_name>`とを有効な名前に置き換えます。  
+ 次のクエリを実行する前に、 `<database_name>` とを `<schema_name.object_name>` 有効な名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -442,7 +442,7 @@ GO
   
 ```  
   
- または、次の例`OBJECT_DEFINITION`に示すように、関数を使用することもできます。  
+ または、 `OBJECT_DEFINITION` 次の例に示すように、関数を使用することもできます。  
   
 ```  
 USE <database_name>;  
@@ -466,7 +466,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-the-columns-of-a-primary-key-for-a-specified-table"></a><a name="_FAQ16"></a>指定されたテーブルの主キーの列を検索操作方法には、次のようにします。  
- 次のクエリを実行する前に`<database_name>` 、 `<schema_name.table_name>`とを有効な名前に置き換えます。  
+ 次のクエリを実行する前に、 `<database_name>` とを `<schema_name.table_name>` 有効な名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -488,7 +488,7 @@ GO
   
 ```  
   
- または、次の例`COL_NAME`に示すように、関数を使用することもできます。  
+ または、 `COL_NAME` 次の例に示すように、関数を使用することもできます。  
   
 ```  
 USE <database_name>;  
@@ -509,7 +509,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-the-columns-of-a-foreign-key-for-a-specified-table"></a><a name="_FAQ17"></a>指定されたテーブルの外部キーの列を検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、 `<schema_name.table_name>`とを有効な名前に置き換えます。  
+ 次のクエリを実行する前に、 `<database_name>` とを `<schema_name.table_name>` 有効な名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -616,7 +616,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-determine-if-a-column-is-used-in-a-computed-column-expression"></a><a name="_FAQ20"></a>列が計算列の式で使用されているかどうかを判断操作方法には  
- 次のクエリを実行する前に`<database_name>`、 `<schema_name.table_name>`、、 `<column_name`および> を有効な名前に置き換えてください。  
+ 次のクエリを実行する前に、、、 `<database_name>` `<schema_name.table_name>` および `<column_name`> を有効な名前に置き換えてください。  
   
 ```  
 USE <database_name>;  
@@ -638,7 +638,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-columns-that-are-used-in-a-computed-column-expression"></a><a name="_FAQ21"></a>計算列の式で使用されているすべての列を検索操作方法には、  
- 次のクエリを実行する前に`<database_name>` 、を有効な名前に置き換えます。  
+ 次のクエリを実行する前に、を `<database_name>` 有効な名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -660,7 +660,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-the-columns-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ22"></a>指定された CLR ユーザー定義型または別名型に依存する列を検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、を有効な名前`<schema_name.data_type_name>`に置き換え、をスキーマ修飾の CLR ユーザー定義型またはスキーマ修飾された別名型の名前に置き換えます。 次のクエリでは、 **db_owner**ロールのメンバーシップ、またはデータベース内のすべての依存列および計算列のメタデータを表示する権限が必要です。  
+ 次のクエリを実行する前に、を有効な名前に置き換え、を `<database_name>` `<schema_name.data_type_name>` スキーマ修飾の CLR ユーザー定義型またはスキーマ修飾された別名型の名前に置き換えます。 次のクエリでは、 **db_owner**ロールのメンバーシップ、またはデータベース内のすべての依存列および計算列のメタデータを表示する権限が必要です。  
   
 ```  
 USE <database_name>;  
@@ -757,7 +757,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-the-check-constraints-that-depend-on-a-specified-clr-user-defined-type"></a><a name="_FAQ25"></a>指定された CLR ユーザー定義型に依存する CHECK 制約を検索操作方法には、  
- 次のクエリを実行する前に`<database_name>` 、を有効な名前`<schema_name.data_type_name>`に置き換え、をスキーマ修飾の CLR ユーザー定義型の有効な名前に置き換えます。  
+ 次のクエリを実行する前に、を有効な名前に置き換え、を `<database_name>` `<schema_name.data_type_name>` スキーマ修飾の CLR ユーザー定義型の有効な名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -805,7 +805,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-constraints-for-a-specified-table"></a><a name="_FAQ27"></a>指定されたテーブルのすべての制約を検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、 `<schema_name.table_name>`とを有効な名前に置き換えます。  
+ 次のクエリを実行する前に、 `<database_name>` とを `<schema_name.table_name>` 有効な名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -829,7 +829,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-indexes-for-a-specified-table"></a><a name="_FAQ28"></a>指定されたテーブルのすべてのインデックスを検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、 `<schema_name.table_name>`とを有効な名前に置き換えます。  
+ 次のクエリを実行する前に、 `<database_name>` とを `<schema_name.table_name>` 有効な名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -858,7 +858,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-objects-that-have-a-specified-column-name"></a><a name="_FAQ30"></a>指定された列名を持つすべてのオブジェクトを検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、 `<column_name>`とを有効な名前に置き換えます。  
+ 次のクエリを実行する前に、 `<database_name>` とを `<column_name>` 有効な名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -888,7 +888,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-user-defined-tables-in-a-specified-database"></a><a name="_FAQ31"></a>指定されたデータベース内のすべてのユーザー定義テーブルを検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、を有効な名前に置き換えます。  
+ 次のクエリを実行する前に、を `<database_name>` 有効な名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -902,7 +902,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-tables-and-indexes-that-are-partitioned"></a><a name="_FAQ32"></a>パーティション分割されているすべてのテーブルとインデックスを検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、を有効な名前に置き換えます。  
+ 次のクエリを実行する前に、を `<database_name>` 有効な名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -924,7 +924,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-statistics-on-a-specified-object"></a><a name="_FAQ33"></a>指定されたオブジェクトのすべての統計を検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、を有効な名前`<schema_name.object_name>`に置き換え、を有効なテーブル、インデックス付きビュー、またはテーブル値関数の名前に置き換えます。  
+ 次のクエリを実行する前に、を有効な名前に置き換え、を `<database_name>` `<schema_name.object_name>` 有効なテーブル、インデックス付きビュー、またはテーブル値関数の名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -943,7 +943,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-statistics-and-statistics-columns-on-a-specified-object"></a><a name="_FAQ34"></a>指定されたオブジェクトのすべての統計列と統計列を検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、を有効な名前`<schema_name.object_name>`に置き換え、を有効なテーブル、インデックス付きビュー、またはテーブル値関数の名前に置き換えます。  
+ 次のクエリを実行する前に、を有効な名前に置き換え、を `<database_name>` `<schema_name.object_name>` 有効なテーブル、インデックス付きビュー、またはテーブル値関数の名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -964,7 +964,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-the-definition-of-a-view"></a><a name="_FAQ35"></a>ビューの定義を検索操作方法には  
- 次のクエリを実行する前に`<database_name>` 、 `<schema_name.object_name>`とを有効な名前に置き換えます。  
+ 次のクエリを実行する前に、 `<database_name>` とを `<schema_name.object_name>` 有効な名前に置き換えます。  
   
 ```  
 USE <database_name>;  
@@ -976,7 +976,7 @@ GO
   
 ```  
   
- または、次の例`OBJECT_DEFINITION`に示すように、関数を使用することもできます。  
+ または、 `OBJECT_DEFINITION` 次の例に示すように、関数を使用することもできます。  
   
 ```  
 USE <database_name>;  

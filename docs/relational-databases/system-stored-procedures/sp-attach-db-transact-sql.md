@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 88b0dffa84674b2d7e55895830f28cf1b95cd3dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b800997c3f978b0bf06472f7e72dd24743956fa8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305266"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833490"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>引数  
 `[ @dbname = ] 'dbnam_ '`サーバーにアタッチするデータベースの名前を指定します。 名前は一意である必要があります。 *dbname*は**sysname**,、既定値は NULL です。  
   
-`[ @filename1 = ] 'filename_n'`データベースファイルの物理名 (パスを含む) を指定します。 *filename_n*は**nvarchar (260)**,、既定値は NULL です。 ファイル名は 16 個まで指定できます。 パラメーター名は** \@filename1**から始まり、 ** \@filename16**にインクリメントされます。 ファイル名の一覧には、少なくともプライマリファイルが含まれている必要があります。 プライマリファイルには、データベース内の他のファイルを指すシステムテーブルが含まれています。 また、データベースをデタッチした後に移動されたすべてのファイルを一覧に含める必要があります。  
+`[ @filename1 = ] 'filename_n'`データベースファイルの物理名 (パスを含む) を指定します。 *filename_n*は**nvarchar (260)**,、既定値は NULL です。 ファイル名は 16 個まで指定できます。 パラメーター名は** \@ filename1**から始まり、 ** \@ filename16**にインクリメントされます。 ファイル名の一覧には、少なくともプライマリファイルが含まれている必要があります。 プライマリファイルには、データベース内の他のファイルを指すシステムテーブルが含まれています。 また、データベースをデタッチした後に移動されたすべてのファイルを一覧に含める必要があります。  
   
 > [!NOTE]  
 >  この引数は、CREATE DATABASE ステートメントの FILENAME パラメーターにマップされます。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
@@ -60,9 +60,9 @@ sp_attach_db [ @dbname= ] 'dbname'
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Sp_attach_db**ストアドプロシージャは、明示的な**sp_detach_db**操作またはコピーしたデータベースに対してデータベースサーバーから以前にデタッチされたデータベースでのみ実行する必要があります。 16個を超えるファイルを指定する必要がある場合は、CREATE DATABASE *database_name* FOR ATTACH または create database *database_name* FOR_ATTACH_REBUILD_LOG を使用します。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
   
  指定されていないファイルは、最後の既知の場所にあると見なされます。 異なる場所にあるファイルを使用するには、新しい場所を指定する必要があります。  
@@ -86,7 +86,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  データベースがアタッチされているときの権限の処理方法については、「 [CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]から現在のサーバーにファイルをアタッチします。  
+ 次の例では、から [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 現在のサーバーにファイルをアタッチします。  
   
 ```  
 EXEC sp_attach_db @dbname = N'AdventureWorks2012',   

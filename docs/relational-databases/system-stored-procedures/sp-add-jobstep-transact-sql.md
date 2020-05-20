@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d9f68c1e3b4f0bec4ba338af12fb1f24c5ff204
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412848"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833697"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "74412848"
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では、ほとんどの SQL Server エージェントジョブの種類はサポートされていません。 詳細については[、「Azure SQL Database Managed Instance t-sql の相違 SQL Server 点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+  > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では、ほとんどの SQL Server エージェントジョブの種類はサポートされていません。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
   
 ## <a name="syntax"></a>構文  
   
@@ -73,11 +73,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @step_name = ] 'step_name'`ステップの名前。 *step_name*は**sysname**であり、既定値はありません。  
   
-`[ @subsystem = ] 'subsystem'`エージェントサービスが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *コマンド*を実行するために使用するサブシステム。 *サブシステム*は**nvarchar (40)**,、これらの値のいずれかを指定することができます。  
+`[ @subsystem = ] 'subsystem'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービスが*コマンド*を実行するために使用するサブシステム。 *サブシステム*は**nvarchar (40)**,、これらの値のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**'|アクティブスクリプト<br /><br /> ** \*重要\* \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|'**ACTIVESCRIPTING**'|アクティブスクリプト<br /><br /> ** \* \* \* 重要 \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|オペレーティング システム コマンドまたは実行可能なプログラム|  
 |'**DISTRIBUTION**'|レプリケーションディストリビューションエージェントジョブ|  
 |'**SNAPSHOT**'|レプリケーションスナップショットエージェントジョブ|  
@@ -93,7 +93,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 `[ @command = ] 'command'`*サブシステム*を介して**SQLServerAgent**サービスによって実行されるコマンドです。 *コマンド*は**nvarchar (max)**,、既定値は NULL です。 SQL Server エージェントでは、ソフトウェア プログラムを記述するときの変数と同じような柔軟性を持つトークン置換を使用できます。  
   
 > [!IMPORTANT]  
->  エスケープマクロには、ジョブステップで使用されるすべてのトークンが含まれている必要があります。そうでない場合、これらのジョブステップは失敗します。 さらに、トークン名をかっこで囲み、トークン構文の先頭にドル記号`$`() を付ける必要があります。 次に例を示します。  
+>  エスケープマクロには、ジョブステップで使用されるすべてのトークンが含まれている必要があります。そうでない場合、これらのジョブステップは失敗します。 さらに、トークン名をかっこで囲み、 `$` トークン構文の先頭にドル記号 () を付ける必要があります。 次に例を示します。  
 >   
 >  `$(ESCAPE_` *マクロ名* `(DATE))`  
   
@@ -104,13 +104,13 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >   
 >  これらのトークンを使用する必要がある場合は、まず、Administrators グループなどの信頼されている Windows セキュリティ グループのメンバーのみが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が存在するコンピューターのイベント ログに対して書き込みのアクセス許可を持っていることを確認してください。 確認したら、[オブジェクト エクスプローラー] で **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** をクリックします。次に、 **[警告システム]** ページで、 **[警告に応答するすべてのジョブのトークンを置き換える]** チェック ボックスをオンにして、これらのトークンを有効にします。  
   
-`[ @additional_parameters = ] 'parameters'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *パラメーター*は**ntext**,、既定値は NULL です。  
+`[ @additional_parameters = ] 'parameters'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*パラメーター*は**ntext**,、既定値は NULL です。  
   
 `[ @cmdexec_success_code = ] code`*コマンド*が正常に実行されたことを示すために、 **CmdExec**サブシステムコマンドによって返される値。 *コード*は**int**,、既定値は**0**です。  
   
 `[ @on_success_action = ] success_action`ステップが成功した場合に実行するアクション。 *success_action*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|値|説明 (アクション)|  
+|[値]|説明 (アクション)|  
 |-----------|----------------------------|  
 |**1** (既定値)|成功時に終了|  
 |**2**|失敗した状態で終了します。|  
@@ -121,7 +121,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_fail_action = ] fail_action`ステップが失敗した場合に実行するアクション。 *fail_action*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|値|説明 (アクション)|  
+|[値]|説明 (アクション)|  
 |-----------|----------------------------|  
 |**1**|成功時に終了|  
 |**2** (既定値)|失敗した状態で終了します。|  
@@ -130,11 +130,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_fail_step_id = ] fail_step_id`ステップが失敗し、 *fail_action*が**4**の場合に実行する、このジョブのステップの ID。 *fail_step_id*は**int**,、既定値は**0**です。  
   
-`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *サーバー*は**nvarchar (30)**,、既定値は NULL です。  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*サーバー*は**nvarchar (30)**,、既定値は NULL です。  
   
-`[ @database_name = ] 'database'`ステップを[!INCLUDE[tsql](../../includes/tsql-md.md)]実行するデータベースの名前です。 *データベースのデータ*型は**sysname**で、既定値は NULL です。この場合、 **master**データベースが使用されます。 角かっこ ([]) で囲まれた名前は使用できません。 ActiveX ジョブステップの場合、*データベース*は、ステップで使用するスクリプト言語の名前です。  
+`[ @database_name = ] 'database'`ステップを実行するデータベースの名前です [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *データベースのデータ*型は**sysname**で、既定値は NULL です。この場合、 **master**データベースが使用されます。 角かっこ ([]) で囲まれた名前は使用できません。 ActiveX ジョブステップの場合、*データベース*は、ステップで使用するスクリプト言語の名前です。  
   
-`[ @database_user_name = ] 'user'`[!INCLUDE[tsql](../../includes/tsql-md.md)]ステップの実行時に使用するユーザーアカウントの名前。 *user*の部分は**sysname**で、既定値は NULL です。 *ユーザー*が NULL の場合、ステップは*データベース*のジョブ所有者のユーザーコンテキストで実行されます。  このパラメーターは、ジョブの所有者が SQL Server sysadmin である場合にのみ SQL Server エージェントに含まれます。 その場合、指定された Transact-sql ステップは、指定された SQL Server ユーザー名のコンテキストで実行されます。 ジョブの所有者が SQL Server sysadmin でない場合、Transact-sql ステップは常にこのジョブを所有するログインのコンテキストで実行され、 @database_user_nameパラメーターは無視されます。  
+`[ @database_user_name = ] 'user'`ステップの実行時に使用するユーザーアカウントの名前 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *user*の部分は**sysname**で、既定値は NULL です。 *ユーザー*が NULL の場合、ステップは*データベース*のジョブ所有者のユーザーコンテキストで実行されます。  このパラメーターは、ジョブの所有者が SQL Server sysadmin である場合にのみ SQL Server エージェントに含まれます。 その場合、指定された Transact-sql ステップは、指定された SQL Server ユーザー名のコンテキストで実行されます。 ジョブの所有者が SQL Server sysadmin でない場合、Transact-sql ステップは常にこのジョブを所有するログインのコンテキストで実行され、 @database_user_name パラメーターは無視されます。  
   
 `[ @retry_attempts = ] retry_attempts`このステップが失敗した場合に使用する再試行回数。 *retry_attempts*は**int**,、既定値は**0**,、これは再試行がないことを示します。  
   
@@ -142,36 +142,36 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @os_run_priority = ] run_priority`確保.  
   
-`[ @output_file_name = ] 'file_name'`このステップの出力が保存されるファイルの名前。 *file_name*は**nvarchar (200)**,、既定値は NULL です。 *file_name*には、[*コマンド*] に一覧表示されているトークンを1つ以上含めることができます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]このパラメーターは、、 **CmdExec**、 **PowerShell**、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、または[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]サブシステムで実行されているコマンドでのみ有効です。  
+`[ @output_file_name = ] 'file_name'`このステップの出力が保存されるファイルの名前。 *file_name*は**nvarchar (200)**,、既定値は NULL です。 *file_name*には、[*コマンド*] に一覧表示されているトークンを1つ以上含めることができます。 このパラメーターは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、 **CmdExec**、 **PowerShell**、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 、またはサブシステムで実行されているコマンドでのみ有効です [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
   
 `[ @flags = ] flags`は、動作を制御するオプションです。 *フラグ*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|出力ファイルを上書きする|  
 |**2**|出力ファイルに追加|  
-|**4**|ジョブ[!INCLUDE[tsql](../../includes/tsql-md.md)]ステップの出力をステップ履歴に書き込む|  
+|**4**|[!INCLUDE[tsql](../../includes/tsql-md.md)]ジョブステップの出力をステップ履歴に書き込む|  
 |**8**|テーブルにログを書き込む (既存の履歴を上書きする)|  
 |**まで**|ログをテーブルに書き込む (既存の履歴に追加する)|  
 |**32**|すべての出力をジョブ履歴に書き込みます。|  
 |**64**|Windows イベントを作成して、Cmd jobstep が中止するシグナルとして使用する|  
   
-`[ @proxy_id = ] proxy_id`ジョブステップを実行するプロキシの id 番号を指定します。 *proxy_id*の型は**int**で、既定値は NULL です。 *Proxy_id*が指定されておらず、 *proxy_name*が指定されておらず、 *user_name*が指定されていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合、ジョブステップはエージェントのサービスアカウントとして実行されます。  
+`[ @proxy_id = ] proxy_id`ジョブステップを実行するプロキシの id 番号を指定します。 *proxy_id*の型は**int**で、既定値は NULL です。 *Proxy_id*が指定されておらず、 *proxy_name*が指定されておらず、 *user_name*が指定されていない場合、ジョブステップはエージェントのサービスアカウントとして実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-`[ @proxy_name = ] 'proxy_name'`ジョブステップを実行するプロキシの名前を指定します。 *proxy_name*の型は**sysname**で、既定値は NULL です。 *Proxy_id*が指定されておらず、 *proxy_name*が指定されておらず、 *user_name*が指定されていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合、ジョブステップはエージェントのサービスアカウントとして実行されます。  
+`[ @proxy_name = ] 'proxy_name'`ジョブステップを実行するプロキシの名前を指定します。 *proxy_name*の型は**sysname**で、既定値は NULL です。 *Proxy_id*が指定されておらず、 *proxy_name*が指定されておらず、 *user_name*が指定されていない場合、ジョブステップはエージェントのサービスアカウントとして実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_add_jobstep**は、 **msdb**データベースから実行する必要があります。  
   
  SQL Server Management Studio は、簡単かつ直観的な方法でジョブを管理するためのツールで、ジョブ体系の作成および管理に最適です。  
   
- 既定では、別のプロキシが指定されてい[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ない限り、ジョブステップはエージェントのサービスアカウントとして実行されます。 このアカウントの要件は、 **sysadmin**固定セキュリティロールのメンバーである必要があります。
+ 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 別のプロキシが指定されていない限り、ジョブステップはエージェントのサービスアカウントとして実行されます。 このアカウントの要件は、 **sysadmin**固定セキュリティロールのメンバーである必要があります。
   
  プロキシは*proxy_name*または*proxy_id*によって識別できます。  
   
@@ -192,7 +192,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  次の例では、Sales データベースのデータベースアクセスを読み取り専用に変更するジョブステップを作成します。 さらに、この例では、5分間待機した後に再試行が5回発生する5回の再試行が指定されています。  
   
 > [!NOTE]  
->  この例では、 `Weekly Sales Data Backup`ジョブが既に存在していることを前提としています。  
+>  この例では、ジョブが既に存在していることを前提としてい `Weekly Sales Data Backup` ます。  
   
 ```sql
 USE msdb;  

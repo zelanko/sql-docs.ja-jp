@@ -19,21 +19,21 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_db
 - change data capture [SQL Server], disabling databases
 ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: f8d85103b48b04284966e77595d0cfa927cd6338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 16ce8ad7a388a7f1e0d492c186bf4aaddf6acbcd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083764"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832556"
 ---
 # <a name="syssp_cdc_disable_db-transact-sql"></a>sp_cdc_disable_db (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベースの変更データ キャプチャ機能を無効にします。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
-**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
+**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (を [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,9 +47,9 @@ sys.sp_cdc_disable_db
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_cdc_disable_db**は、現在有効になっているデータベース内のすべてのテーブルについて、変更データキャプチャを無効にします。 変更テーブル、ジョブ、ストアドプロシージャ、関数など、変更データキャプチャに関連するすべてのシステムオブジェクトが削除されます。 データベースエントリの**is_cdc_enabled**列、[データベースカタログビュー](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)は0に設定されています。  
   
 > [!NOTE]  

@@ -16,19 +16,19 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cd8e54f8de50ffe1912dd58abc6484198fac46c9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68117911"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833607"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
+**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (を [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
 
 バックアップ デバイスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに追加します。  
   
@@ -49,18 +49,18 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ## <a name="arguments"></a>引数  
 `[ @devtype = ] 'device_type'`バックアップデバイスの種類を示します。 *device_type*は**varchar (20)** で、既定値はありません。次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**ディスク**|バックアップデバイスとしてのハードディスクファイル。|  
-|**tape**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows でサポートされるテープ デバイス。<br /><br /> 注: テープ バックアップ デバイスは、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
+|**テープ**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows でサポートされるテープ デバイス。<br /><br /> 注:テープ バックアップ デバイスは、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
   
 `[ @logicalname = ] 'logical_name'`BACKUP ステートメントおよび RESTORE ステートメントで使用するバックアップデバイスの論理名を指定します。 *logical_name*は**sysname**であり、既定値はありません。 NULL にすることはできません。  
   
 `[ @physicalname = ] 'physical_name'`バックアップデバイスの物理名を指定します。 物理名は、オペレーティングシステムのファイル名の規則またはネットワークデバイスの汎用名前付け規則に従う必要があり、完全なパスを含める必要があります。 *physical_name*は**nvarchar (260)** で、既定値はありません。 NULL にすることはできません。  
   
- リモートネットワークの場所にバックアップデバイスを作成する場合は、を起動し[!INCLUDE[ssDE](../../includes/ssde-md.md)]たときに使用されていた名前に、リモートコンピューターに対する適切な書き込み機能があることを確認してください。  
+ リモートネットワークの場所にバックアップデバイスを作成する場合は、を起動したときに使用されていた名前に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] リモートコンピューターに対する適切な書き込み機能があることを確認してください。  
   
- テープデバイスを追加する場合、このパラメーターには、Windows によってローカルテープデバイスに割り当てられた物理名を指定する必要があります。たとえば、 ** \\ \\**コンピューター上の最初のテープデバイスの .\TAPE0 です。 テープデバイスがサーバーコンピューターに接続されている必要があります。リモートで使用することはできません。 英数字以外の文字を含む名前は引用符で囲みます。  
+ テープデバイスを追加する場合、このパラメーターには、Windows によってローカルテープデバイスに割り当てられた物理名を指定する必要があります。たとえば、コンピューター上の最初のテープデバイスの** \\ \\ .\TAPE0**です。 テープデバイスがサーバーコンピューターに接続されている必要があります。リモートで使用することはできません。 英数字以外の文字を含む名前は引用符で囲みます。  
   
 > [!NOTE]  
 >  このプロシージャは、指定された物理名をカタログに入力します。 この手順では、デバイスにアクセスしたり、デバイスを作成したりすることはありません。  
@@ -73,9 +73,9 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_addumpdevice**により、バックアップデバイスが**backup_devices**カタログビューに追加されます。 その後、そのデバイスを BACKUP ステートメントや RESTORE ステートメントで論理的に参照できるようになります。 **sp_addumpdevice**では、物理デバイスへのアクセスは一切実行されません。 BACKUP ステートメントや RESTORE ステートメントが実行されるときにだけ、指定されたデバイスにアクセスされます。 論理バックアップデバイスを作成すると、BACKUP ステートメントと RESTORE ステートメントが簡略化されます。デバイス名を指定する場合は、"TAPE =" または "DISK =" 句を使用してデバイスパスを指定します。  
   
  所有権とアクセス許可の問題によって、ディスクまたはファイルバックアップデバイスの使用が妨げられることがあります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]を起動する Windows アカウントに適切なファイル権限が付与されているかどうかを確認してください。  
@@ -96,7 +96,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ## <a name="examples"></a>例  
   
 ### <a name="a-adding-a-disk-dump-device"></a>A. ディスクダンプデバイスを追加する  
- 次の例では、という名前`mydiskdump`のディスクバックアップデバイスを`c:\dump\dump1.bak`物理名で追加します。  
+ 次の例では、という名前のディスクバックアップデバイスを `mydiskdump` 物理名で追加し `c:\dump\dump1.bak` ます。  
   
 ```  
 USE master;  
@@ -115,7 +115,7 @@ EXEC sp_addumpdevice 'disk', 'networkdevice',
 ```  
   
 ### <a name="c-adding-a-tape-backup-device"></a>C. テープ バックアップ デバイスを追加する  
- 次の例では`tapedump1` 、物理名`\\.\tape0`を使用してデバイスを追加します。  
+ 次の例では、 `tapedump1` 物理名を使用してデバイスを追加し `\\.\tape0` ます。  
   
 ```  
 USE master;  
@@ -124,7 +124,7 @@ EXEC sp_addumpdevice 'tape', 'tapedump1', '\\.\tape0';
 ```  
   
 ### <a name="d-backing-up-to-a-logical-backup-device"></a>D. 論理バックアップデバイスへのバックアップ  
- 次の例では、バックアップディスクファイル`AdvWorksData`用の論理バックアップデバイスを作成します。 作成した論理バックアップ デバイスに [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースをバックアップします。  
+ 次の例では、 `AdvWorksData` バックアップディスクファイル用の論理バックアップデバイスを作成します。 作成した論理バックアップ デバイスに [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースをバックアップします。  
   
 ```  
 USE master;  
@@ -139,13 +139,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [バックアップデバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
+ [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [ディスクファイル &#40;SQL Server の論理バックアップデバイスを定義&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [テープドライブ &#40;SQL Server の論理バックアップデバイスを定義&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [ディスク ファイルの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [テープ ドライブの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [sp_dropdevice &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [backup_devices &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
+ [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

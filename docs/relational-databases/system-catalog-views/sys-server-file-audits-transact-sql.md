@@ -17,19 +17,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_file_audits catalog view
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7b3ed8e08d333c4aed2576154c645a0050ebf4df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e81cb385da40b5d8aff52368bb59d0c91322321d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133130"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832750"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>server_file_audits (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サーバーインスタンス上の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]監査に含まれるファイル監査の種類に関する拡張情報を格納します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
+  サーバーインスタンス上の監査に含まれるファイル監査の種類に関する拡張情報を格納 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "68133130"
 |create_date|**datetime**|ファイル監査が作成された UTC 日付。|  
 |modify_date|**datatime**|ファイル監査が最後に変更された UTC 日付。|  
 |principal_id|**int**|サーバーに登録されている監査の所有者の ID。|  
-|type|**char(2)**|監査の種類。<br /><br /> 0 = NT セキュリティ イベント ログ<br /><br /> 1 = NT アプリケーションイベントログ<br /><br /> 2 = ファイル システムのファイル|  
+|型|**char(2)**|監査の種類。<br /><br /> 0 = NT セキュリティ イベント ログ<br /><br /> 1 = NT アプリケーションイベントログ<br /><br /> 2 = ファイル システムのファイル|  
 |type_desc|**nvarchar(60)**|監査の種類の説明。|  
 |on_failure|**tinyint**|エラー状態時:<br /><br /> 0 = 続行<br /><br /> 1 = サーバー インスタンスのシャットダウン<br /><br /> 2 = 失敗の操作|  
 |on_failure_desc|**nvarchar(60)**|アクションエントリの書き込みに失敗した場合:<br /><br /> CONTINUE<br /><br /> サーバーインスタンスのシャットダウン<br /><br /> 失敗した操作|  
@@ -78,6 +78,6 @@ ms.locfileid: "68133130"
  [dm_server_audit_status &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
  [dm_audit_actions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [dm_audit_class_type_map &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
- [サーバー監査およびサーバー監査の仕様を作成する方法](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
+ [サーバー監査およびサーバー監査の仕様を作成する](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

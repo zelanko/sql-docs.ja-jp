@@ -11,21 +11,21 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 456d71e2abccdddb4b14c06dc2ad9b2e4ce9a032
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056648"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886169"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>DMA で企業を評価し評価レポートを統合する
 
 次のステップバイステップの手順では、Data Migration Assistant を使用して、オンプレミスの SQL Server または Azure Vm で実行されている SQL Server のアップグレード、または Azure SQL Database への移行について、適切なスケール評価を実行する方法について説明します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - DMA を開始するネットワーク上のツールコンピューターを指定します。 このコンピューターが SQL Server ターゲットに接続されていることを確認します。
 - 次をダウンロードし、インストールします。
@@ -263,7 +263,7 @@ Power BI レポートに表示される詳細については、次のセクシ�
 
 - InstanceDatabase
 - ChangeCategory
-- タイトル
+- Title
 - ObjectType
 - ImpactedObjectName
 

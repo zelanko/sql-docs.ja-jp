@@ -1,5 +1,6 @@
 ---
 title: Azure へのマネージバックアップを監視 SQL Server |Microsoft Docs
+description: この記事では、Azure への管理されたバックアップ SQL Server 使用してバックアップの全体的な正常性を判断し、エラーを特定するために使用できるツールについて説明します。
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,18 +11,18 @@ ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25e45e5877d528d1f01fe8695d8575466991c381
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ed32927e38f67c718031930023bd246048e2db5
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798039"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849611"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>Azure への SQL Server マネージド バックアップの監視
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では、バックアップ プロセス中に問題やエラーを特定し、可能な限り修正措置によって解消するための方法が組み込まれています。  ただし、ユーザーの介入が必要になる場合もあります。 このトピックでは、バックアップの全体的な正常性状態を判定し、解決する必要があるエラーを特定するために使用できるツールについて説明します。  
   
 ## <a name="overview-of-ss_smartbackup-built-in-debugging"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の組み込みデバッグの概要  
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、スケジュールされたバックアップを定期的に確認して、失敗したバックアップのスケジュールを組み直します。 ストレージアカウントを定期的にポーリングして、データベースの復旧に影響するログチェーンの中断を特定し、それに応じて新しいバックアップをスケジュールします。 また、Azure の調整ポリシーを考慮し、複数のデータベースのバックアップを管理するためのメカニズムが用意されています。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では、拡張イベントを使用してすべてのアクティビティを追跡します。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] エージェントで使用される拡張イベント チャネルには、管理、運用、分析、およびデバッグが含まれます。 管理カテゴリに分類されるイベントは、通常、エラーに関連しているため、ユーザーの介入を必要とし、既定で有効になっています。 分析イベントも既定で有効になっていますが、通常、ユーザーの介入を必要とするエラーには関連していません。 一般的に、運用イベントは情報イベントです。 たとえば、運用イベントには、バックアップのスケジュール設定、バックアップの正常な完了などがあります。デバッグは最も詳細であり、によって内部[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]的に使用され、問題を特定し、必要に応じて修正します。  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、スケジュールされたバックアップを定期的に確認して、失敗したバックアップのスケジュールを組み直します。 ストレージアカウントを定期的にポーリングして、データベースの復旧に影響するログチェーンの中断を特定し、それに応じて新しいバックアップをスケジュールします。 また、Azure の調整ポリシーを考慮し、複数のデータベースのバックアップを管理するためのメカニズムが用意されています。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では、拡張イベントを使用してすべてのアクティビティを追跡します。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] エージェントで使用される拡張イベント チャネルには、管理、運用、分析、およびデバッグが含まれます。 管理カテゴリに分類されるイベントは、通常、エラーに関連しているため、ユーザーの介入を必要とし、既定で有効になっています。 分析イベントも既定で有効になっていますが、通常、ユーザーの介入を必要とするエラーには関連していません。 一般的に、運用イベントは情報イベントです。 たとえば、運用イベントには、バックアップのスケジュール設定、バックアップの正常な完了などがあります。デバッグは最も詳細であり、によって内部的に使用され、 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 問題を特定し、必要に応じて修正します。  
   
 ### <a name="configure-monitoring-parameters-for-ss_smartbackup"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の監視パラメーターの構成  
  **Smart_admin sp_set_parameter**システムストアドプロシージャを使用すると、監視設定を指定できます。 以下のセクションでは、拡張イベントの有効化、およびエラーと警告の電子メール通知の有効化の手順について説明します。  
@@ -32,7 +33,7 @@ ms.locfileid: "72798039"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーし、クエリウィンドウに貼り付けて、[**実行**] をクリックします。 これにより、拡張イベントの現在の構成、および電子メール通知が返されます。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 これにより、拡張イベントの現在の構成、および電子メール通知が返されます。  
   
 ```sql
 Use msdb  
@@ -108,13 +109,13 @@ GO
     ```  
   
 ### <a name="aggregated-error-countshealth-status"></a>集計されたエラー数/正常性状態  
- **Smart_admin fn_get_health_status**関数は、の[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]正常性状態の監視に使用できる各カテゴリの集計されたエラー数のテーブルを返します。 この関数は、このトピックの後半で説明する、システムで構成された電子メール通知メカニズムでも使用されます。   
+ **Smart_admin fn_get_health_status**関数は、の正常性状態の監視に使用できる各カテゴリの集計されたエラー数のテーブルを返し [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ます。 この関数は、このトピックの後半で説明する、システムで構成された電子メール通知メカニズムでも使用されます。   
 これらの集計数は、システムの正常性を監視するために使用できます。 たとえば、number_of_retention_loops 列が 30 分間 0 だった場合、保有期間の管理に長時間がかかる可能性や保有期間の管理が正常に動作しない可能性があります。 エラー列が 0 以外の場合は問題を示す可能性があるため、拡張イベント ログで問題がないかどうかをチェックする必要があります。 または、 **smart_admin. sp_get_backup_diagnostics**ストアドプロシージャを呼び出して、エラーの詳細を確認します。  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>バックアップ状態と正常性の評価にエージェント通知を使用する  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]には、SQL Server ポリシー ベースの管理ポリシーに基づく通知メカニズムが含まれています。  
   
- **応募**  
+ **前提条件:**  
   
 -   この機能を使用するには、データベース メールが必要です。 SQL Server のインスタンスの DB メールを有効にする方法の詳細については、「 [Configure データベースメール](../relational-databases/database-mail/configure-database-mail.md)」を参照してください。  
   
@@ -203,7 +204,7 @@ $policyResults = Get-SqlSmartAdmin | Test-SqlSmartAdmin -AllowUserPolicies
 $policyResults.PolicyEvaluationDetails | Select Name, Category, Expression, Result, Exception | fl
 ```  
   
- 次のスクリプトは、既定のインスタンス (`\SQL\COMPUTER\DEFAULT`) のエラーと警告の詳細レポートを返します。  
+ 次のスクリプトは、既定のインスタンス () のエラーと警告の詳細レポートを返し `\SQL\COMPUTER\DEFAULT` ます。  
   
 ```powershell
 (Get-SqlSmartAdmin ).EnumHealthStatus()  
@@ -248,8 +249,8 @@ smart_backup_files;
   
 -   **コピーに失敗しました-F:** コピーの進行状況と同様に、これは可用性グループの特定のデータベースです。 コピー プロセスが失敗した場合、状態は F としてマークされます。  
   
--   **破損-C:** が[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]複数回試行された後でも [RESTORE HEADER_ONLY] コマンドを実行して記憶域のバックアップファイルを確認できない場合、このファイルは破損しているとマークされます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、破損したファイルによってバックアップ チェーンが中断されないように、バックアップをスケジュールします。  
+-   **破損-C:**[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]が複数回試行された後でも [RESTORE HEADER_ONLY] コマンドを実行して記憶域のバックアップファイルを確認できない場合、このファイルは破損しているとマークされます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、破損したファイルによってバックアップ チェーンが中断されないように、バックアップをスケジュールします。  
   
 -   **削除済み-D:** 対応するファイルが Azure storage に見つかりません。 ファイルの削除によってバックアップ チェーンが中断された場合、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]はバックアップをスケジュールします。  
   
--   **不明-U:** この状態は、 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Azure storage 内のファイルの存在とそのプロパティをまだ確認できていないことを示しています。 プロセスが次回実行されたときに (約 15 分間隔)、この状態が更新されます。  
+-   **不明-U:** この状態 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] は、Azure storage 内のファイルの存在とそのプロパティをまだ確認できていないことを示しています。 プロセスが次回実行されたときに (約 15 分間隔)、この状態が更新されます。  

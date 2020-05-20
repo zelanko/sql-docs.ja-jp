@@ -1,5 +1,6 @@
 ---
 title: Azure へのマネージバックアップの SQL Server-保有期間とストレージの設定 |Microsoft Docs
+description: このトピックでは SQL Server マネージバックアップをデータベースの Microsoft Azure に構成し、インスタンスの既定の設定を構成する方法について説明します。
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
@@ -10,17 +11,17 @@ ms.assetid: c4aa26ea-5465-40cc-8b83-f50603cb9db1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a427c12d8296ffc7f3f2603c9f34c33d1fd94bc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 698af283d24598c7ccd669b7e1d14ebcfd26d8d6
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797829"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849816"
 ---
 # <a name="sql-server-managed-backup-to-azure---retention-and-storage-settings"></a>Azure への SQL Server マネージド バックアップ - 保有期間とストレージの設定
   このトピックでは、データベースの [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を構成する基本手順と、インスタンスの既定の設定を構成する手順について説明します。 また、インスタンスの [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] サービスを一時停止して再開するために必要な手順についても説明します。  
   
- セットアップ[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の完全なチュートリアルについては、「 [Azure への管理](../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)されたバックアップ SQL Server のセットアップ」 SQL Server と「 [azure への管理](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)されたバックアップの設定」を参照してください。  
+ セットアップの完全なチュートリアルについ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ては、「 [azure への管理](../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)されたバックアップ SQL Server のセットアップ」 SQL Server と「 [azure への管理](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)されたバックアップの設定」を参照してください。  
   
  
   
@@ -30,14 +31,14 @@ ms.locfileid: "72797829"
   
 -   現在メンテナンス プランまたはログ配布を使用しているデータベースで [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を有効にしないでください。 他の SQL Server 機能との相互運用性と共存の詳細については、「 [Azure へのマネージバックアップの SQL Server: 相互運用性と共存](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)」を参照してください。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要条件  
   
 -   SQL Server エージェントを実行している必要があります。  
   
     > [!WARNING]  
     >  SQL Server エージェントが一定期間停止された後に再起動された場合、SQL エージェントの停止から起動までの経過時間によっては、バックアップ アクティビティが増加する可能性があり、実行を待機しているログ バックアップのバックログが存在することがあります。 起動時に SQL Server エージェントが自動的に開始されるように構成することを検討してください。  
   
--   を構成[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]する前に、Azure ストレージアカウントと、認証情報をストレージアカウントに格納する SQL 資格情報の両方を作成する必要があります。 詳細については、「 [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md#intorkeyconcepts) 」の「 **Introduction to Key Components and Concepts** 」のセクション、および「 [Lesson 2: Create a SQL Server Credential](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md)」を参照してください。  
+-   を構成する前に、Azure ストレージアカウントと、認証情報をストレージアカウントに格納する SQL 資格情報の両方を作成する必要があり [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ます。 詳細については、「 [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md#intorkeyconcepts) 」の「 **Introduction to Key Components and Concepts** 」のセクション、および「 [Lesson 2: Create a SQL Server Credential](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md)」を参照してください。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、バックアップを格納するために必要なコンテナーを作成します。 コンテナー名は、"コンピューター名-インスタンス名" の形式を使用して作成されます。 AlwaysOn 可用性グループの場合、コンテナーの名前には、可用性グループの GUID が使用されます。  
@@ -45,11 +46,11 @@ ms.locfileid: "72797829"
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
- を有効[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]にするストアドプロシージャを実行するに`System Administrator`は、 **ALTER ANY CREDENTIAL**権限を持つまたは**db_backupoperator**データベースロールのメンバーであるか`EXECUTE` 、 **sp_delete_backuphistory**、および`smart_admin.sp_backup_master_switch`ストアドプロシージャに対する権限を持っている必要があります。  既存の設定を確認するために使用するストアド プロシージャと関数には、通常、ストアド プロシージャに対する `Execute` 権限と、関数に対する `Select` 権限がそれぞれ必要です。  
+ を有効にするストアドプロシージャを実行するに [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] `System Administrator` は、 **ALTER ANY CREDENTIAL**権限を持つまたは**db_backupoperator**データベースロールのメンバーであるか、 `EXECUTE` **sp_delete_backuphistory**、およびストアドプロシージャに対する権限を持っている必要があり `smart_admin.sp_backup_master_switch` ます。  既存の設定を確認するために使用するストアド プロシージャと関数には、通常、ストアド プロシージャに対する `Execute` 権限と、関数に対する `Select` 権限がそれぞれ必要です。  
   
 
   
-###  <a name="considerations-for-enabling-ss_smartbackup-for-databases-and-instances"></a><a name="Considerations"></a>データベースとインスタンス[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]に対してを有効にする場合の考慮事項  
+###  <a name="considerations-for-enabling-ss_smartbackup-for-databases-and-instances"></a><a name="Considerations"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]データベースとインスタンスに対してを有効にする場合の考慮事項  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、個々のデータベースに対して個別に有効にするか、インスタンス全体に対して有効にすることができます。 選択肢は、インスタンス上のデータベースの復旧要件、複数のデータベースとインスタンスを管理するための要件、および Azure storage の戦略的な使用によって異なります。  
   
 #### <a name="enabling-ss_smartbackup-at-the-database-level"></a>データベース レベルで [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を有効にする  
@@ -72,9 +73,9 @@ ms.locfileid: "72797829"
   
 -   保有期間の要件が同じであるデータベースに適用できます。  
   
--   既定の設定を使用してインスタンス レベルで [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] のバックアップが有効になっている場合でも、別の保有期間を必要とするデータベースを個別に構成できます。 バックアップに Azure storage [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を使用しない場合は、データベースに対してを無効にすることもできます。  
+-   既定の設定を使用してインスタンス レベルで [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] のバックアップが有効になっている場合でも、別の保有期間を必要とするデータベースを個別に構成できます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]バックアップに Azure storage を使用しない場合は、データベースに対してを無効にすることもできます。  
   
-##  <a name="enable-and-configure-ss_smartbackup-for-a-database"></a><a name="DatabaseConfigure"></a>データベースに対し[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]てを有効にして構成する  
+##  <a name="enable-and-configure-ss_smartbackup-for-a-database"></a><a name="DatabaseConfigure"></a>データベースに対してを有効にして構成する [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  特定のデータベースについて [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を有効にするには、システム ストアド プロシージャ `smart_admin.sp_set_db_backup` を使用します。 データベースについて初めて [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を有効にする場合は、 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の有効化に加えて、次の情報の指定が必要です。  
   
 -   データベースの名前。  
@@ -83,7 +84,7 @@ ms.locfileid: "72797829"
   
 -   Azure ストレージアカウントに対する認証に使用される SQL 資格情報。  
   
--   * \@Encryption_algorithm* = **NO_ENCRYPTION**を使用して暗号化しないように指定するか、サポートされている暗号化アルゴリズムを指定してください。 暗号化の詳細については、「 [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)」を参照してください。  
+-   * \@ Encryption_algorithm*NO_ENCRYPTION を使用して暗号化しないように指定するか、  =  **NO_ENCRYPTION**サポートされている暗号化アルゴリズムを指定してください。 暗号化の詳細については、「 [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)」を参照してください。  
   
  データベース レベル構成の [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、Transact-SQL でのみサポートされます。  
   
@@ -94,13 +95,13 @@ ms.locfileid: "72797829"
   
 -   **Transact-sql の使用:**  
   
-     を初めて有効[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]にする場合、必要なパラメーターは、 * \@database_name*、 * \@credential_name*、 * \@encryption_algorithm*、 * \@enable_backup* * \@storage_url*パラメーターは省略可能です。 @storage_urlパラメーターの値を指定しない場合、値は SQL 資格情報のストレージアカウント情報を使用して取得されます。 ストレージ URL を指定する場合、指定する必要があるのはストレージ アカウントのルート URL のみです。この値は、指定した SQL 資格情報と一致する必要があります。  
+     を初めて有効にする場合 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 、必要なパラメーターは、 * \@ database_name*、 * \@ credential_name*、 * \@ encryption_algorithm*、 * \@ enable_backup* * \@ storage_url*パラメーターは省略可能です。 パラメーターの値を指定しない場合、 @storage_url 値は SQL 資格情報のストレージアカウント情報を使用して取得されます。 ストレージ URL を指定する場合、指定する必要があるのはストレージ アカウントのルート URL のみです。この値は、指定した SQL 資格情報と一致する必要があります。  
   
     1.  [!INCLUDE[ssDE](../includes/ssde-md.md)]に接続します。  
   
     2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-    3.  次の例をコピーし、クエリウィンドウに貼り付け`Execute`て、をクリックします。 この例で[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、データベース ' TestDB ' に対してを有効にします。 保有期間は 30 日に設定されています。 このサンプルでは、暗号化アルゴリズムおよび暗号化機能情報を指定して暗号化オプションを使用します。  
+    3.  次の例をコピーし、クエリウィンドウに貼り付けて、をクリックし `Execute` ます。 この例 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] では、データベース ' TestDB ' に対してを有効にします。 保有期間は 30 日に設定されています。 このサンプルでは、暗号化アルゴリズムおよび暗号化機能情報を指定して暗号化オプションを使用します。  
   
     ```sql
     Use msdb;  
@@ -131,16 +132,16 @@ ms.locfileid: "72797829"
     SELECT * FROM smart_admin.fn_backup_db_config('TestDB')  
     ```  
   
-##  <a name="enable-and-configure-default-ss_smartbackup-settings-for-the-instance"></a><a name="InstanceConfigure"></a>インスタンスの既定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の設定を有効にして構成する  
- インスタンスレベルで既定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の設定を有効にして構成するには、システムストアドプロシージャ`smart_admin.set_instance_backup`または**SQL Server Management Studio**を使用する方法があります。 これら 2 つの方法について以下で説明します。  
+##  <a name="enable-and-configure-default-ss_smartbackup-settings-for-the-instance"></a><a name="InstanceConfigure"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]インスタンスの既定の設定を有効にして構成する  
+ インスタンスレベルで既定の設定を有効にして構成するには [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 、システムストアドプロシージャ `smart_admin.set_instance_backup` または**SQL Server Management Studio**を使用する方法があります。 これら 2 つの方法について以下で説明します。  
   
- **smart_admin。 set_instance_backup:** * \@Enable_backup*パラメーターに値**1**を指定することによって、バックアップを有効にし、既定の構成を設定することができます。 これらの既定の設定は、インスタンス レベルで適用すると、このインスタンスに追加されるすべての新しいデータベースに適用されます。  初めて [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を有効にする場合は、インスタンスでの [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] の有効化に加えて、次の情報の指定が必要です。  
+ **smart_admin。 set_instance_backup:** * \@ Enable_backup*パラメーターに値**1**を指定することによって、バックアップを有効にし、既定の構成を設定することができます。 これらの既定の設定は、インスタンス レベルで適用すると、このインスタンスに追加されるすべての新しいデータベースに適用されます。  初めて [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を有効にする場合は、インスタンスでの [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] の有効化に加えて、次の情報の指定が必要です。  
   
 -   保有期間。  
   
 -   Azure ストレージアカウントに対する認証に使用される SQL 資格情報。  
   
--   暗号化オプション。 * \@Encryption_algorithm* = **NO_ENCRYPTION**を使用して暗号化しないように指定するか、サポートされている暗号化アルゴリズムを指定してください。 暗号化の詳細については、「 [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)」を参照してください。  
+-   暗号化オプション。 * \@ Encryption_algorithm*NO_ENCRYPTION を使用して暗号化しないように指定するか、  =  **NO_ENCRYPTION**サポートされている暗号化アルゴリズムを指定してください。 暗号化の詳細については、「 [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)」を参照してください。  
   
  有効にすると、これらの設定は保持されます。 構成を変更する場合は、データベース名と変更する設定のみが必要です。 指定がなければ、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では既存値がそのまま使用されます。  
   
@@ -155,7 +156,7 @@ ms.locfileid: "72797829"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーし、クエリウィンドウに貼り付け`Execute`て、をクリックします。  
+3.  次の例をコピーし、クエリウィンドウに貼り付けて、をクリックし `Execute` ます。  
   
 ```sql
 Use msdb;  
@@ -200,7 +201,7 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
 >  既定の設定を構成した後に新しいデータベースを作成すると、データベースが既定の設定で構成されるまで最大 15 分かかる場合があります。 これは、復旧モデルが **Simple** から **Full** または **Bulk-Logged** に変更されるデータベースにも適用されます。  
   
 ##  <a name="disable-ss_smartbackup-for-a-database"></a><a name="DatabaseDisable"></a> データベースに対して [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を無効にする  
- システムストアドプロシージャ[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を使用して設定を無効にすることができます。 `sp_set_db_backup` Enableparameter は、特定のデータベースの構成[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を有効または無効にするために使用されます。1では、構成設定が有効になり、0が無効になります。 * \@*  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]システムストアドプロシージャを使用して設定を無効にすることができ `sp_set_db_backup` ます。 * \@ Enableparameter*は、特定のデータベースの構成を有効または無効にするために使用され [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ます。1では、構成設定が有効になり、0が無効になります。  
   
 #### <a name="to-disable-ss_smartbackup-for-a-specific-database"></a>特定のデータベースに対して [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を無効にするには  
   
@@ -208,7 +209,7 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーし、クエリウィンドウに貼り付け`Execute`て、をクリックします。  
+3.  次の例をコピーし、クエリウィンドウに貼り付けて、をクリックし `Execute` ます。  
   
 ```sql
 Use msdb;  
@@ -228,7 +229,7 @@ GO
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーし、クエリウィンドウに貼り付け`Execute`て、をクリックします。 次の例では、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]がインスタンス レベルで構成されているかどうかと、インスタンス上のすべての [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]対応データベースを識別し、システム ストアド プロシージャ `sp_set_db_backup` を実行して [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を無効にします。  
+3.  次の例をコピーし、クエリウィンドウに貼り付けて、をクリックし `Execute` ます。 次の例では、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]がインスタンス レベルで構成されているかどうかと、インスタンス上のすべての [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]対応データベースを識別し、システム ストアド プロシージャ `sp_set_db_backup` を実行して [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を無効にします。  
   
 ```sql
 -- Create a working table to store the database names  
@@ -291,7 +292,7 @@ GO
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーし、クエリウィンドウに貼り付け`Execute`て、をクリックします。  
+3.  次の例をコピーし、クエリウィンドウに貼り付けて、をクリックし `Execute` ます。  
   
     ```sql
     Use msdb;  
@@ -348,7 +349,7 @@ Go
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーし、クエリウィンドウに貼り付けて`Execute`、をクリックします。  
+3.  次の例をコピーし、クエリウィンドウに貼り付けて、をクリックし `Execute` ます。  
   
 ```sql
 Use msdb;  

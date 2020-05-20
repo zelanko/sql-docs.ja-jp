@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MScached_peer_lsns system table
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2134429ae9d14e00e99c88f1596b1216170e5b66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7e062d1f7ef5a1c184211a8f4040ac8c295216e7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078149"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832383"
 ---
 # <a name="mscached_peer_lsns-transact-sql"></a>MScached_peer_lsns (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68078149"
 |**originator_db_version**|**int**|発信元のデータベースのバージョン番号識別子。|  
 |**originator_lsn**|**varbinary(16)**|発信元のトランザクションの LSN。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  LSN 値は挿入直後にのみ使用され、システムでは永続的な意味を持ちません。  
   
 ## <a name="see-also"></a>参照  

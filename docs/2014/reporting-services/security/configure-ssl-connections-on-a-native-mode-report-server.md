@@ -12,18 +12,18 @@ ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7fb33e6ccb5afbdee1bf6c3673a24548d6fe9961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 952690e4f37be304d80a542e38d461ef92ce2c21
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66102116"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886439"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーでの SSL 接続の構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、HTTP SSL (Secure Sockets Layer) サービスを使用してレポート サーバーへの暗号化接続を確立します。 レポート サーバー コンピューター上のローカルの証明書ストアに証明書 (.cer) ファイルがインストールされている場合、その証明書を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約にバインドして、暗号化チャネルでのレポート サーバー接続をサポートできます。  
   
 > [!TIP]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードを使用している場合、詳細については、SharePoint のマニュアルを参照してください。 たとえば、「[How to enable SSL on a SharePoint 2010 web application」(SQL Server 2010 Web アプリケーションで SSL を有効にする方法) (https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx) を参照してください。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードを使用している場合、詳細については、SharePoint のマニュアルを参照してください。 たとえば、「[How to enable SSL on a SharePoint 2010 web application」(SQL Server 2010 Web アプリケーションで SSL を有効にする方法) (https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application)](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application) を参照してください。  
   
  インターネット インフォメーション サービス (IIS) でも HTTP SSL が使用されるため、IIS と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を同じコンピューター上で実行する場合は、相互運用性に関する重要な問題について考慮する必要があります。 これらの問題の対処方法については、「IIS との相互運用性の問題」を確認してください。  
   

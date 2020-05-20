@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobsteplog
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 66b353c7fc79b49cb9cd3fb9fe228075f3a0d473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e56f2c544f168dbcedc0424f26818aad2e3c2c79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305093"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833356"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,26 +49,26 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 > **注:***Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @step_id = ] step_id`ジョブステップログを削除するジョブのステップの識別番号を指定します。 含まれていない場合、 ** \@older_than**または** \@larger_than**が指定されていない限り、ジョブ内のすべてのジョブステップのログが削除されます。 *step_id*は**int**,、既定値は NULL です。  
+`[ @step_id = ] step_id`ジョブステップログを削除するジョブのステップの識別番号を指定します。 含まれていない場合、 ** \@ older_than**または** \@ larger_than**が指定されていない限り、ジョブ内のすべてのジョブステップのログが削除されます。 *step_id*は**int**,、既定値は NULL です。  
   
 `[ @step_name = ] 'step_name'`ジョブステップのログを削除するジョブのステップの名前です。 *step_name*は**sysname**,、既定値は NULL です。  
   
 > **注:***Step_id*または*step_name*のいずれかを指定できますが、両方を指定することはできません。  
   
-`[ @older_than = ] 'date'`保持する最も古いジョブステップログの日付と時刻。 この日時より前のジョブ ステップ ログはすべて削除されます。 *日付*は**datetime**,、既定値は NULL です。 ** \@Older_than**と** \@larger_than**の両方を指定できます。  
+`[ @older_than = ] 'date'`保持する最も古いジョブステップログの日付と時刻。 この日時より前のジョブ ステップ ログはすべて削除されます。 *日付*は**datetime**,、既定値は NULL です。 ** \@ Older_than**と** \@ larger_than**の両方を指定できます。  
   
-`[ @larger_than = ] 'size_in_bytes'`保持する最大のジョブステップログのサイズ (バイト単位)。 このサイズより大きいすべてのジョブ ステップ ログは、削除されます。 ** \@Larger_than**と** \@older_than**の両方を指定できます。  
+`[ @larger_than = ] 'size_in_bytes'`保持する最大のジョブステップログのサイズ (バイト単位)。 このサイズより大きいすべてのジョブ ステップ ログは、削除されます。 ** \@ Larger_than**と** \@ older_than**の両方を指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_delete_jobsteplog**は**msdb**データベースにあります。  
   
- ** \@Job_id**または** \@job_name**以外の引数が指定されていない場合は、指定されたジョブのすべてのジョブステップログが削除されます。  
+ ** \@ Job_id**または** \@ job_name**以外の引数が指定されていない場合は、指定されたジョブのすべてのジョブステップログが削除されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
@@ -86,7 +86,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="examples"></a>例  
   
 ### <a name="a-removing-all-job-step-logs-from-a-job"></a>A. ジョブからすべてのジョブステップログを削除する  
- 次の例では、ジョブ`Weekly Sales Data Backup`のすべてのジョブステップログを削除します。  
+ 次の例では、ジョブのすべてのジョブステップログを削除し `Weekly Sales Data Backup` ます。  
   
 ```  
 USE msdb ;  
@@ -111,7 +111,7 @@ GO
 ```  
   
 ### <a name="c-removing-all-job-step-logs-based-on-age-and-size"></a>C. 有効期間とサイズに基づいてすべてのジョブステップログを削除する  
- 次の例では、ジョブから100メガバイト (MB) を超える2005年10月25日よりも前のジョブステップ`Weekly Sales Data Backup`ログをすべて削除します。  
+ 次の例では、ジョブから100メガバイト (MB) を超える2005年10月25日よりも前のジョブステップログをすべて削除し `Weekly Sales Data Backup` ます。  
   
 ```  
 USE msdb ;  

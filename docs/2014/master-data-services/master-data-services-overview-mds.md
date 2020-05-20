@@ -13,19 +13,19 @@ ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0beb45070e9f6c0294dc18d966f3100263f7d852
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ac1acb47c6345bb2b746b2e3a3e1817b63a3e75
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176031"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886379"
 ---
 # <a name="master-data-services-overview"></a>マスター データ サービス概要
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデルはマスター データ構造の最上位のコンテナーです。 モデルを作成すると、類似したデータのグループを管理できます。たとえば、オンラインの製品データを管理するなどです。 モデルには 1 つ以上のエンティティが含まれています。エンティティにはメンバーが含まれており、これはデータ レコードです。
 
 |||
 |-|-|
-|![Azure Virtual Machine](../../2014/master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|SQL Server 2016 をお試しになりますか? Microsoft Azure にサインアップし、**[ここ](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** にアクセスして、SQL Server 2016 が既にインストールされている仮想マシンを起動します。 完了したら、仮想マシンを削除することができます。|
+|![Azure Virtual Machine](../../2014/master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|SQL Server 2016 をお試しになりますか? Microsoft Azure にサインアップし、**[ここ](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** にアクセスして、SQL Server 2016 が既にインストールされている仮想マシンを起動します。 完了したら、仮想マシンを削除することができます。|
 
  たとえば、オンラインの製品モデルには、Product、Color、Style などのエンティティが含まれていることがあります。 Color エンティティには、赤、シルバー、黒の色のメンバーを含めることができます。
 

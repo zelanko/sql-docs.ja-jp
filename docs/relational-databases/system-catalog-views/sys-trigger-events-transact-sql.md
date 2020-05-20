@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.trigger_events catalog view
 ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc2732797551317a392b0ab55d9ecbeb28d990a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a4a15ab9d38297ee1376d70a817efcf603d47df
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091941"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833886"
 ---
 # <a name="systrigger_events-transact-sql"></a>trigger_events (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68091941"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<Sys. events から継承された列>**|適用なし|**Object_id**、**型**、 **type_desc**列を、 [sys. events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)から継承します。|  
+|**\<Sys. events から継承された列>**|該当なし|**Object_id**、**型**、 **type_desc**列を、 [sys. events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)から継承します。|  
 |**is_first**|**bit**|トリガーは、このイベントに対して最初に起動するようにマークされています。|  
 |**is_last**|**bit**|トリガーは、このイベントに対して最後に起動されるようにマークされています。|  
 |**event_group_type**|**int**|トリガーが作成されるイベントグループ。イベントグループに作成されていない場合は null。|  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a9163e6d34a0de6200eafd413d163bb6d92fd4a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7ba2cebf6c4b779119696f19ee78b7ce8ec1cf66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "72174003"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831892"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'`アーティクルを含むパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
-`[ @article = ] 'article'`アーティクルの名前を指定します。 名前はパブリケーション内で一意であることが必要です。 *アーティクル*は**sysname**で、既定値はありません。 *アーティクル*は、を実行している[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカルコンピューター上に存在する必要があり、識別子の規則に従っている必要があります。  
+`[ @article = ] 'article'`アーティクルの名前を指定します。 名前はパブリケーション内で一意であることが必要です。 *アーティクル*は**sysname**で、既定値はありません。 *アーティクル*は、を実行しているローカルコンピューター上に存在する必要があり、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子の規則に従っている必要があります。  
   
 `[ @source_object = ] 'source_object'`パブリッシュするデータベースオブジェクトを指定します。 *source_object*は**sysname**であり、既定値はありません。 マージレプリケーションを使用してパブリッシュできるオブジェクトの種類の詳細については、「[データとデータベースオブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)」を参照してください。  
   
@@ -144,17 +144,17 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x4000000**|**Xml**列のインデックスをレプリケートします。|  
 |**0x8000000**|サブスクライバーにまだ存在しないスキーマを作成します。|  
 |**0x10000000**|サブスクライバーで**xml**列を**ntext**に変換します。|  
-|**0x20000000**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]で導入されたラージオブジェクトデータ型 (**nvarchar (max)**、 **varchar (max)**、 **varbinary (max)**) を、でサポートされ[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]ているデータ型に変換します。|  
+|**0x20000000**|で導入されたラージオブジェクトデータ型 (**nvarchar (max)**、 **varchar (max)**、 **varbinary (max)**) を、で [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] サポートされているデータ型に変換し [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ます。|  
 |**0x40000000**|権限をレプリケートします。|  
 |**0x80000000**|パブリケーションに含まれていないオブジェクトへの依存関係の削除を試みます。|  
-|**0x100000000**|このオプションを使用すると、 **varbinary (max)** 列に FILESTREAM 属性が指定されている場合に、その属性をレプリケートできます。 テーブルをサブスクライバーに[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]レプリケートする場合は、このオプションを指定しないでください。 このスキーマオプションを設定する方法[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]に関係なく、FILESTREAM 列を持つテーブルをサブスクライバーにレプリケートすることはサポートされていません。 関連オプション**0x800000000**を参照してください。|  
-|**0x200000000**|で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]導入された日付と時刻のデータ型 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**date**、 **time**、 **datetimeoffset**、および**datetime2**) を、以前のバージョンのでサポートされているデータ型に変換します。|  
+|**0x100000000**|このオプションを使用すると、 **varbinary (max)** 列に FILESTREAM 属性が指定されている場合に、その属性をレプリケートできます。 テーブルをサブスクライバーにレプリケートする場合は、このオプションを指定しないでください [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 このスキーマオプションを設定する方法に関係なく、FILESTREAM 列を持つテーブルをサブスクライバーにレプリケートすること [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] はサポートされていません。 関連オプション**0x800000000**を参照してください。|  
+|**0x200000000**|で導入された日付と時刻のデータ型 (**date**、 **time**、 **datetimeoffset**、および**datetime2**) [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] を、以前のバージョンのでサポートされているデータ型に変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
 |**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイルグループに格納されます。 レプリケーションでは、ファイルグループは作成されません。したがって、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイルグループを作成する必要があります。 スナップショットを適用する前にオブジェクトを作成する方法の詳細については、「[スナップショットが適用される前および後のスクリプトの実行](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)」を参照してください。<br /><br /> 関連オプション**0x100000000**を参照してください。|  
-|**0x1000000000**|共通言語ランタイム (CLR) ユーザー定義型 (Udt) を**varbinary (max)** に変換します。これにより、udt 型の列を、を[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]実行しているサブスクライバーにレプリケートできるようになります。|  
-|**0x2000000000**|**Hierarchyid**データ型を**varbinary (max)** に変換します。これにより、 **hierarchyid**型の列を、を[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]実行しているサブスクライバーにレプリケートできるようになります。 レプリケートされたテーブルで**hierarchyid**列を使用する方法の詳細については、「 [hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)」を参照してください。|  
+|**0x1000000000**|共通言語ランタイム (CLR) ユーザー定義型 (Udt) を**varbinary (max)** に変換します。これにより、udt 型の列を、を実行しているサブスクライバーにレプリケートできるようになり [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。|  
+|**0x2000000000**|**Hierarchyid**データ型を**varbinary (max)** に変換します。これにより、 **hierarchyid**型の列を、を実行しているサブスクライバーにレプリケートできるようになり [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。 レプリケートされたテーブルで**hierarchyid**列を使用する方法の詳細については、「 [hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)」を参照してください。|  
 |**0x4000000000**|テーブルのフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、「[フィルター選択](../../relational-databases/indexes/create-filtered-indexes.md)されたインデックスの作成」をご覧ください。|  
-|**0x8000000000**|**Geography**および**geometry**データ型を**varbinary (max)** に変換して、これらの型の列を、を実行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]しているサブスクライバーにレプリケートできるようにします。|  
+|**0x8000000000**|**Geography**および**geometry**データ型を**varbinary (max)** に変換して、これらの型の列を、を実行しているサブスクライバーにレプリケートできるようにし [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。|  
 |**0x10000000000**|**Geography**型および**geometry**型の列のインデックスをレプリケートします。|  
   
  この値が NULL の場合、システムはアーティクルに対して有効なスキーマオプションを自動生成します。 「解説」の**既定のスキーマオプション**の表は、アーティクルの種類に基づいて選択される値を示しています。 また、すべての*schema_option*値がすべての種類のレプリケーションとアーティクルの種類に対して有効であるとは限りません。 「解説」に記載されている**有効なスキーマオプション**テーブルは、特定のアーティクルの種類に対して指定できるオプションを示しています。  
@@ -169,7 +169,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @article_resolver = ] 'article_resolver'`テーブルアーティクルまたはテーブルアーティクルでカスタムビジネスロジックを実行するために呼び出される .NET Framework アセンブリの競合を解決するために使用される COM ベースの競合回避モジュールです。 *article_resolver*は**varchar (255)**,、既定値は NULL です。 このパラメーターで利用できる値の一覧については、「[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタム競合回避モジュール」を参照してください。 指定した値が [!INCLUDE[msCoName](../../includes/msconame-md.md)] 競合回避モジュールの値でない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、システムに付属の競合回避モジュールの代わりに指定した競合回避モジュールが使用されます。 **Sp_enumcustomresolvers**を使用して、使用可能なカスタム競合回避モジュールの一覧を列挙します。 詳細については、「[マージ同期中のビジネスロジックの実行](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)」と「[マージレプリケーションの競合の検出と解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
-`[ @resolver_info = ] 'resolver_info'`は、カスタム競合回避モジュールに必要な追加情報を指定するために使用されます。 一部の[!INCLUDE[msCoName](../../includes/msconame-md.md)]競合回避モジュールには、入力として指定された列が必要です。 *resolver_info*は**nvarchar (255)**,、既定値は NULL です。 詳細については、「 [Microsoft COM ベースの競合回避モジュール](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。  
+`[ @resolver_info = ] 'resolver_info'`は、カスタム競合回避モジュールに必要な追加情報を指定するために使用されます。 一部の [!INCLUDE[msCoName](../../includes/msconame-md.md)] 競合回避モジュールには、入力として指定された列が必要です。 *resolver_info*は**nvarchar (255)**,、既定値は NULL です。 詳細については、「 [Microsoft COM ベースの競合回避モジュール](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。  
   
 `[ @source_owner = ] 'source_owner'`*Source_object*の所有者の名前を指定します。 *source_owner*は**sysname**,、既定値は NULL です。 NULL の場合、現在のユーザーは所有者であると見なされます。  
   
@@ -191,7 +191,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 `[ @identity_range = ] identity_range`自動 id 範囲管理を使用する場合に、パブリッシャーとサブスクライバーの両方に割り当てられる id 範囲のサイズを制御します。 *identity_range*は**bigint**,、既定値は NULL です。 *Identityrangemanagementoption*が**auto**の場合、または*auto_identity_range*が**true**の場合は、このパラメーターを指定する必要があります。  
   
 > [!NOTE]  
->  *identity_range*は、以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用してサブスクライバーを再パブリッシュするときに、id 範囲のサイズを制御します。  
+>  *identity_range*は、以前のバージョンのを使用してサブスクライバーを再パブリッシュするときに、id 範囲のサイズを制御し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 `[ @threshold = ] threshold`マージエージェントによって新しい id 範囲が割り当てられるタイミングを制御するパーセント値。 [*しきい*値] で指定した値のパーセンテージが使用されると、マージエージェントによって新しい id 範囲が作成されます。 *しきい値*は**int**,、既定値は NULL です。 *Identityrangemanagementoption*が**auto**の場合、または*auto_identity_range*が**true**の場合は、このパラメーターを指定する必要があります。  
   
@@ -201,12 +201,12 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1**は、署名が信頼できるソースからのものかどうかを確認することを指定します。  
   
-`[ @destination_object = ] 'destination_object'`サブスクリプションデータベース内のオブジェクトの名前を指定します。 *destination_object*のデータ型は**sysname**で、既定値は** \@source_object**になります。 このパラメーターは、アーティクルがストアドプロシージャ、ビュー、Udf などのスキーマのみのアーティクルである場合にのみ指定できます。 指定したアーティクルがテーブルアーティクルの場合、の*@source_object*値は*destination_object*の値よりも優先されます。  
+`[ @destination_object = ] 'destination_object'`サブスクリプションデータベース内のオブジェクトの名前を指定します。 *destination_object*のデータ型は**sysname**で、既定値は** \@ source_object**になります。 このパラメーターは、アーティクルがストアドプロシージャ、ビュー、Udf などのスキーマのみのアーティクルである場合にのみ指定できます。 指定したアーティクルがテーブルアーティクルの場合、の値は *@source_object* *destination_object*の値よりも優先されます。  
   
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`アーティクルに対してインタラクティブ競合回避モジュールの使用を有効または無効にします。 *allow_interactive_resolver*は**nvarchar (5)**,、既定値は FALSE です。 **true**にすると、アーティクルでインタラクティブ競合回避モジュールを使用できるようになります。**false**を無効にします。  
   
 > [!NOTE]  
->  インタラクティブ競合回避モジュールは、 [!INCLUDE[ssEW](../../includes/ssew-md.md)]サブスクライバーではサポートされていません。  
+>  インタラクティブ競合回避モジュールは、サブスクライバーではサポートされていません [!INCLUDE[ssEW](../../includes/ssew-md.md)] 。  
   
 `[ @fast_multicol_updateproc = ] 'fast_multicol_updateproc'`このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。  
   
@@ -240,7 +240,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **false**を指定すると、既定の競合検出が*column_tracking*によって指定されたとおりに使用されます。 詳細については、「[Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」 (論理レコードによる関連行への変更のグループ化) を参照してください。  
   
 > [!NOTE]  
->  論理レコードはサブスクライバーで[!INCLUDE[ssEW](../../includes/ssew-md.md)]サポートされていないため、これらのサブスクライバーをサポートするには、 *logical_record_level_conflict_detection*に**false**の値を指定する必要があります。  
+>  論理レコードはサブスクライバーでサポートされていないため [!INCLUDE[ssEW](../../includes/ssew-md.md)] 、これらのサブスクライバーをサポートするには、 *logical_record_level_conflict_detection*に**false**の値を指定する必要があります。  
   
 `[ @logical_record_level_conflict_resolution = ] 'logical_record_level_conflict_resolution'`論理レコードのメンバーであるアーティクルの競合解決レベルを指定します。 *logical_record_level_conflict_resolution*は**nvarchar (5)**,、既定値は FALSE です。  
   
@@ -249,7 +249,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **false**は、優先される行が論理レコードに制約されないことを指定します。 *Logical_record_level_conflict_detection*が**true**の場合、 *logical_record_level_conflict_resolution*も**true**に設定する必要があります。 詳細については、「[Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」 (論理レコードによる関連行への変更のグループ化) を参照してください。  
   
 > [!NOTE]  
->  論理レコードはサブスクライバーで[!INCLUDE[ssEW](../../includes/ssew-md.md)]サポートされていないため、これらのサブスクライバーをサポートするには、 *logical_record_level_conflict_resolution*に**false**の値を指定する必要があります。  
+>  論理レコードはサブスクライバーでサポートされていないため [!INCLUDE[ssEW](../../includes/ssew-md.md)] 、これらのサブスクライバーをサポートするには、 *logical_record_level_conflict_resolution*に**false**の値を指定する必要があります。  
   
 `[ @partition_options = ] partition_options`アーティクル内のデータをパーティション分割する方法を定義します。これにより、すべての行が1つのパーティションまたは1つのサブスクリプションのみに属している場合に、パフォーマンスを最適化できます。 *partition_options*は**tinyint**で、次のいずれかの値を指定できます。  
   
@@ -284,7 +284,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |-----------|-----------------|  
 |"**なし**"|Id 範囲の管理を無効にします。|  
 |**手動**|NOT FOR REPLICATION を使用して id 列をマークし、手動による id 範囲処理を有効にします。|  
-|**自動**|Id 範囲の自動管理を指定します。|  
+|**auto**|Id 範囲の自動管理を指定します。|  
 |NULL (既定値)|*Auto_identity_range*の値が**true**でない場合、既定値は**none**です。|  
   
  旧バージョンとの互換性のために、 *identityrangemanagementoption*の値が NULL の場合、 *auto_identity_range*の値がチェックされます。 ただし、 *identityrangemanagementoption*の値が NULL でない場合、 *auto_identity_range*の値は無視されます。 詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
@@ -313,7 +313,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_addmergearticle**は、マージレプリケーションで使用します。  
   
  オブジェクトをパブリッシュすると、その定義がサブスクライバーにコピーされます。 1つ以上の他のオブジェクトに依存するデータベースオブジェクトをパブリッシュする場合は、参照されているすべてのオブジェクトをパブリッシュする必要があります。 たとえば、テーブルに依存しているビューをパブリッシュする場合は、そのテーブルもパブリッシュする必要があります。  
@@ -334,11 +334,11 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func スキーマのみ**|**0x01**|  
 |**インデックス付きビュースキーマのみ**|**0x01**|  
 |**proc スキーマのみ**|**0x01**|  
-|**テーブル**|**0x0c034fd1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降の互換パブリケーションとネイティブモードのスナップショット。<br /><br /> **0x08034FF1** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]キャラクターモードのスナップショットを使用した、0x08034ff1 以降の互換性のあるパブリケーション。|  
+|**テーブル**|**0x0c034fd1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降の互換パブリケーションとネイティブモードのスナップショット。<br /><br /> キャラクターモードのスナップショットを使用した、 **0x08034ff1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降の互換性のあるパブリケーション。|  
 |**view schema only**|**0x01**|  
   
 > [!NOTE]  
->  パブリケーションが以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をサポートしている場合、**テーブル**の既定のスキーマオプションは**0x30034ff1**です。  
+>  パブリケーションが以前のバージョンのをサポートしている場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、**テーブル**の既定のスキーマオプションは**0X30034ff1**です。  
   
 ## <a name="valid-schema-option-table"></a>有効なスキーマオプションテーブル  
  次の表では、アーティクルの種類に応じて*schema_option*許可される値について説明します。  

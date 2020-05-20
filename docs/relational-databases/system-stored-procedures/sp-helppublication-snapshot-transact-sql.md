@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication_snapshot
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d8909396e7a7da39ed2ae27c475a154c58bad090
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bf93b6f3045a9eb48c64e50c789e0ce79dec7f4c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771502"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834416"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,23 +40,23 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
-`[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  *publisher*パブリッシャーにアーティクルを追加する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを使用しないでください。  
+>  パブリッシャーにアーティクルを追加する場合は、*パブリッシャー*を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|スナップショットエージェントの ID。|  
+|**ID**|**int**|スナップショットエージェントの ID。|  
 |**name**|**nvarchar (100)**|スナップショットエージェントの名前。|  
-|**publisher_security_mode**|**smallint**|パブリッシャーに接続するときにエージェントによって使用されるセキュリティモード。次のいずれかになります。<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証。|  
+|**publisher_security_mode**|**smallint**|パブリッシャーに接続するときにエージェントによって使用されるセキュリティモード。次のいずれかになります。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証<br /><br /> **1** = Windows 認証。|  
 |**publisher_login**|**sysname**|パブリッシャーに接続するときに使用されるログインです。|  
-|**publisher_password**|**nvarchar (524)**|セキュリティ上の理由から、 ** \* \* \* \* \* \* \*の\*値は常に返されます。 \* **|  
+|**publisher_password**|**nvarchar (524)**|セキュリティ上の理由から、の値 **\*\*\*\*\*\*\*\*\*\*** は常に返されます。|  
 |**job_id**|**uniqueidentifier**|エージェントジョブの一意の ID。|  
-|**job_login**|**nvarchar(512)**|スナップショットエージェントを実行する Windows アカウントを指定します。このアカウントは、"*ドメイン*\\*ユーザー名*" の形式で返されます。|  
-|**job_password**|**sysname**|セキュリティ上の理由から、 ** \* \* \* \* \* \* \*の\*値は常に返されます。 \* **|  
+|**job_login**|**nvarchar(512)**|スナップショットエージェントを実行する Windows アカウントを指定します。このアカウントは、"*ドメイン* \\ *ユーザー名*" の形式で返されます。|  
+|**job_password**|**sysname**|セキュリティ上の理由から、の値 **\*\*\*\*\*\*\*\*\*\*** は常に返されます。|  
 |**schedule_name**|**sysname**|このエージェントジョブに使用するスケジュールの名前。|  
 |**frequency_type**|**int**|エージェントの実行スケジュールを設定する頻度を指定します。次のいずれかの値を指定できます。<br /><br /> **1** = 1 回<br /><br /> **2** = 要求時<br /><br /> **4** = 日単位<br /><br /> **8** = 週単位<br /><br /> **16** = 月単位<br /><br /> **32** = 毎月の相対<br /><br /> **64** = 自動開始<br /><br /> **128** = 定期的|  
 |**frequency_interval**|**int**|エージェントの実行日。次のいずれかの値になります。<br /><br /> **1** = 日曜日<br /><br /> **2** = 月曜日<br /><br /> **3** = 火曜日<br /><br /> **4** = 水曜日<br /><br /> **5** = 木曜日<br /><br /> **6** = 金曜日<br /><br /> **7** = 土曜日<br /><br /> **8** = 日<br /><br /> **9** = 平日<br /><br /> **10** = 週末|  
@@ -72,7 +72,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_help_publication_snapshot**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  

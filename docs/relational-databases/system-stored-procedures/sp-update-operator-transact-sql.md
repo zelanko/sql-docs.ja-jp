@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 098d027ff74bad7b4215a96044f4044fda9ee98e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084839"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832528"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,43 +53,43 @@ sp_update_operator
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @name=]'*name*'  
+ [ @name =] '*name*'  
  変更するオペレーターの名前を指定します。 *名前*は**sysname**,、既定値はありません。  
   
- [ @new_name=]'*new_name*'  
+ [ @new_name =] '*new_name*'  
  オペレーターの新しい名前です。 この名前は一意である必要があります。 *new_name*は**sysname**,、既定値は NULL です。  
   
- [ @enabled=]*有効*  
+ [ @enabled =]*有効*  
  オペレーターの現在の状態を示す数値 (現在有効になっている場合は**1** 、それ以外の場合は**0** )。 *有効*になっているは**tinyint**,、既定値は NULL です。 有効でない場合、オペレーターは警告通知を受信しません。  
   
- [ @email_address=]'*email_address*'  
+ [ @email_address =] '*email_address*'  
  オペレーターの電子メールアドレス。 この文字列はメール システムに直接渡されます。 *email_address*は**nvarchar (100)**,、既定値は NULL です。  
   
- [ @pager_address=]'*pager_number*'  
+ [ @pager_address =] '*pager_number*'  
  オペレーターのポケットベルアドレス。 この文字列はメール システムに直接渡されます。 *pager_number*は**nvarchar (100)**,、既定値は NULL です。  
   
- [ @weekday_pager_start_time=]*weekday_pager_start_time*  
+ [ @weekday_pager_start_time =] *weekday_pager_start_time*  
  月曜日から金曜日までの間に、ポケットベルによる通知がこのオペレーターに送信されるまでの時間を指定します。 *weekday_pager_start_time*は**int**,、既定値は NULL の場合、24時間制で使用するために HHMMSS 形式で入力する必要があります。  
   
- [ @weekday_pager_end_time=]*weekday_pager_end_time*  
+ [ @weekday_pager_end_time =] *weekday_pager_end_time*  
  月曜日から金曜日までの間で、指定したオペレーターに対してポケットベル通知を終了する時間を指定します。 *weekday_pager_end_time*は**int**,、既定値は NULL の場合、24時間制で使用するために HHMMSS 形式で入力する必要があります。  
   
- [ @saturday_pager_start_time=]*saturday_pager_start_time*  
+ [ @saturday_pager_start_time =] *saturday_pager_start_time*  
  土曜日に、指定したオペレーターにポケットベルによる通知が送信されるまでの時間を指定します。 *saturday_pager_start_time*は**int**,、既定値は NULL の場合、24時間制で使用するために HHMMSS 形式で入力する必要があります。  
   
- [ @saturday_pager_end_time=]*saturday_pager_end_time*  
+ [ @saturday_pager_end_time =] *saturday_pager_end_time*  
  土曜日に、指定したオペレーターにポケットベルによる通知を送信できない時間を指定します。 *saturday_pager_end_time*は**int**,、既定値は NULL の場合、24時間制で使用するために HHMMSS 形式で入力する必要があります。  
   
- [ @sunday_pager_start_time=]*sunday_pager_start_time*  
+ [ @sunday_pager_start_time =] *sunday_pager_start_time*  
  日曜日に、指定したオペレーターにポケットベルによる通知が送信されるまでの時間を指定します。 *sunday_pager_start_time*は**int**,、既定値は NULL の場合、24時間制で使用するために HHMMSS 形式で入力する必要があります。  
   
- [ @sunday_pager_end_time=]*sunday_pager_end_time*  
+ [ @sunday_pager_end_time =] *sunday_pager_end_time*  
  毎週日曜日に、指定したオペレーターに対してポケットベル通知を終了する時間を指定します。 *sunday_pager_end_time*は**int**,、既定値は NULL の場合、24時間制で使用するために HHMMSS 形式で入力する必要があります。  
   
- [ @pager_days=]*pager_days*  
- オペレーターがページの受信に使用できる曜日を指定します (指定した開始/終了時刻に従います)。 *pager_days*は**tinyint**,、既定値は NULL の場合、 **0** ~ **127**の値である必要があります。 *pager_days*は、必要な日数の個々の値を加算することによって計算されます。 たとえば、月曜日から金曜日の場合は、 **2**+**4**+**8**+**16**+**32** = **64**になります。  
+ [ @pager_days =] *pager_days*  
+ オペレーターがページの受信に使用できる曜日を指定します (指定した開始/終了時刻に従います)。 *pager_days*は**tinyint**,、既定値は NULL の場合、 **0** ~ **127**の値である必要があります。 *pager_days*は、必要な日数の個々の値を加算することによって計算されます。 たとえば、月曜日から金曜日の場合は、 **2** + **4** + **8** + **16** + **32**  =  **64**になります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|土曜日|  
 |**2**|月曜日|  
@@ -99,16 +99,16 @@ sp_update_operator
 |**32**|金曜日|  
 |**64**|土曜日|  
   
- [ @netsend_address=]'*netsend_address*'  
+ [ @netsend_address =] '*netsend_address*'  
  ネットワークメッセージの送信先オペレーターのネットワークアドレス。 *netsend_address*は**nvarchar (100)**,、既定値は NULL です。  
   
- [ @category_name=]'*category*'  
+ [ @category_name =] '*category*'  
  このアラートのカテゴリの名前。 *category*は**sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  sp_update_operator は、msdb データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.servers catalog view
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b9cb03b97660bedc9c8e86cc72ae2bf9ebdd56d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68132947"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832732"
 ---
 # <a name="sysservers-transact-sql"></a>sys. servers (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68132947"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|リンクサーバーのローカル ID。|  
 |**name**|**sysname**|**Server_id** = 0 の場合、返される値はサーバー名です。<br /><br /> **Server_id** > 0 の場合、返される値はリンクサーバーのローカル名になります。|  
-|**product**|**sysname**|リンクサーバーの製品名。 値 "SQL Server" は、の別の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを示します。|  
+|**梱包**|**sysname**|リンクサーバーの製品名。 値 "SQL Server" は、の別のインスタンスを示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**provider**|**sysname**|リンク サーバー接続用の OLE DB プロバイダー名です。|  
 |**data_source**|**nvarchar (4000)**|データソース接続プロパティを OLE DB します。|  
 |**location**|**nvarchar (4000)**|OLE DB 場所接続プロパティです。 None の場合は NULL です。|  
@@ -65,7 +65,7 @@ ms.locfileid: "68132947"
   
  ローカルサーバーを表示するためにアクセス許可は必要ありません (**server_id** = 0)。  
   
- リンクサーバーまたはリモートサーバーを作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と、によって、既定のログインマッピングが**public**サーバーロールに対して作成されます。 既定のログインマッピングは、すべてのログインがリンクされたサーバーとリモートサーバーをすべて表示できることを意味します。 これらのサーバーの可視性を制限するには、 [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)を実行し、 *LOCALLOGIN*パラメーターに NULL を指定することで、既定のログインマッピングを削除します。  
+ リンクサーバーまたはリモートサーバーを作成すると、に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] よって、既定のログインマッピングが**public**サーバーロールに対して作成されます。 既定のログインマッピングは、すべてのログインがリンクされたサーバーとリモートサーバーをすべて表示できることを意味します。 これらのサーバーの可視性を制限するには、 [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)を実行し、 *LOCALLOGIN*パラメーターに NULL を指定することで、既定のログインマッピングを削除します。  
   
  既定のログインマッピングが削除された場合、リンクされたログインまたはリモートログインとして明示的に追加されたユーザーのみが、ログインがあるリンクサーバーまたはリモートサーバーを表示できます。  既定のログインマッピングの後、すべてのリンクサーバーとリモートサーバーを表示するには、次のアクセス許可が必要です。  
   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_autostats
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3fdb095ed869ba2e8f060bdba7a3dc9db81a405
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b56b53b90bc8c66b72d68de4b83def5712cdc54
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70026248"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833409"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  テーブルまたはインデックス付きビューの結果セットには、インデックスに対して作成された統計、AUTO_CREATE_STATISTICS オプションで生成された単一列統計、 [CREATE statistics](../../t-sql/statements/create-statistics-transact-sql.md)ステートメントで作成された統計が含まれます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  指定したインデックスが無効な場合、または指定したテーブルに無効なクラスター化インデックスがある場合は、エラー メッセージが表示されます。  
   
  AUTO_UPDATE_STATISTICS はメモリ最適化テーブルでは常に OFF です。  
@@ -85,7 +85,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ## <a name="examples"></a>例  
   
 ### <a name="a-display-the-status-of-all-statistics-on-a-table"></a>A. テーブルのすべての統計の状態を表示する  
- 次の`Product`表に、テーブルのすべての統計の状態を示します。  
+ 次の表に、テーブルのすべての統計の状態を示し `Product` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="c-disable-auto_update_statistics-for-a-specific-index"></a>C. 特定のインデックスの AUTO_UPDATE_STATISTICS を無効にする  
- 次の例では、 `AK_Product_Name` `Product`テーブルのインデックスの AUTO_UPDATE_STATISTICS オプションを無効にします。  
+ 次の例では、テーブルのインデックスの AUTO_UPDATE_STATISTICS オプションを無効にし `AK_Product_Name` `Product` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -116,7 +116,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [値](../../relational-databases/statistics/statistics.md)   
- [Transact-sql&#41;&#40;の ALTER DATABASE SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;の統計の作成](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   

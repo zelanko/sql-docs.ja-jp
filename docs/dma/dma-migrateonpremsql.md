@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 00d27decc533d33056a7cc0cb19c2584fea564fb
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056532"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885870"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Data Migration Assistant を使用した SQL Server のアップグレード
 
@@ -64,7 +64,7 @@ Data Migration Assistant は、オンプレミスの SQL Server と、それ以�
    > [!NOTE]
    > 移行するすべてのデータベースに移行設定を適用するには、左側のウィンドウでサーバーを選択します。 左側のウィンドウでデータベースを選択して、特定の設定で個々のデータベースを構成することもできます。
 
-    a。 **バックアップ操作のためにソースとターゲットの SQL server がアクセスできる共有場所**を指定します。 ソース SQL Server インスタンスを実行しているサービスアカウントが、共有の場所に対する書き込み権限を持っていて、ターゲットサービスアカウントに共有場所に対する読み取り権限があることを確認します。
+    a. **バックアップ操作のためにソースとターゲットの SQL server がアクセスできる共有場所**を指定します。 ソース SQL Server インスタンスを実行しているサービスアカウントが、共有の場所に対する書き込み権限を持っていて、ターゲットサービスアカウントに共有場所に対する読み取り権限があることを確認します。
 
     b. 対象サーバー上のデータファイルとトランザクションログファイルを復元する場所を指定します。
 

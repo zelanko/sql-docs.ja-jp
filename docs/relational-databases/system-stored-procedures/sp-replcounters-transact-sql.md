@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcounters
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 12ddbfe11a2b1a29dadaacde845f96e70959bebb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 859e214a0caccc9e515a5377d707aeb3d29c69da
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770999"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833129"
 ---
 # <a name="sp_replcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,14 +41,14 @@ sp_replcounters
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**[データベース]**|**sysname**|データベースの名前です。|  
+|**[データベース]**|**sysname**|データベース名。|  
 |**replicated transactions**|**int**|ディストリビューションデータベースへの配信を待機しているログ内のトランザクションの数。|  
 |**レプリケーションレートトランザクション/秒**|**float**|ディストリビューションデータベースに1秒間に配信された平均トランザクション数。|  
 |**レプリケーションの潜在期間**|**float**|トランザクションがログに記録されてから、配布されるまでの平均時間 (秒)。|  
 |**replbeginlsn**|**binary(10)**|ログ内の現在の切り捨てポイントのログシーケンス番号 (LSN)。|  
 |**Replnextlsn**|**binary(10)**|ディストリビューション データベースへの配信を待機する、次のコミット レコードの LSN。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_replcounters**は、トランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

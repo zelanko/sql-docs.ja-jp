@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_targetserver
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0ccefc43c687c60d1dee030bf5f16a4b138224dd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68111991"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833297"
 ---
 # <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,16 +51,16 @@ sp_delete_targetserver [ @server_name = ] 'server'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  対象サーバーを削除する通常の方法は、対象サーバーで**sp_msx_defect**を呼び出すことです。 手動で参加解除する必要がある場合にのみ**sp_delete_targetserver**を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールがユーザーに付与されている必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 `LONDON1`使用可能なジョブサーバーからサーバーを削除します。  
+ 次の例では、 `LONDON1` 使用可能なジョブサーバーからサーバーを削除します。  
   
 ```  
 USE msdb ;  

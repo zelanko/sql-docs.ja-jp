@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80f5bc86498bc33e0cb04e8ca54154b96307c480
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124082"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833236"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +43,22 @@ sp_get_query_template
   
 ## <a name="arguments"></a>引数  
  '*query_text*'  
- パラメーター化されたバージョンを生成するクエリを指定します。 '*query_text*' は、単一引用符で囲む必要があります。また、前には N Unicode 指定子を指定する必要があります。 N '*query_text*' は、 @querytextパラメーターに割り当てられた値です。 **Nvarchar (max)** 型です。  
+ パラメーター化されたバージョンを生成するクエリを指定します。 '*query_text*' は、単一引用符で囲む必要があります。また、前には N Unicode 指定子を指定する必要があります。 N '*query_text*' は、パラメーターに割り当てられた値です @querytext 。 **Nvarchar (max)** 型です。  
   
  @templatetext  
  パラメーター化された形式の*query_text*を文字列リテラルとして受け取る、 **nvarchar (max)** 型の出力パラメーターを指定します。  
   
  @parameters  
- は、に@templatetextよってパラメーター化されたパラメーター名とデータ型の文字列リテラルを受け取る、 **nvarchar (max)** 型の出力パラメーターです。  
+ は、によってパラメーター化されたパラメーター名とデータ型の文字列リテラルを受け取る、 **nvarchar (max)** 型の出力パラメーターです @templatetext 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  sp_get_query_template は、以下のことが発生した場合にエラーを返します。  
   
 -   *Query_text*の定数リテラル値をパラメーター化しません。  
   
 -   *query_text*が NULL であるか、Unicode 文字列ではないか、構文が正しくないか、またはコンパイルできません。  
   
- Sp_get_query_template がエラーを返す場合、 @templatetextと@parametersの出力パラメーターの値は変更されません。  
+ Sp_get_query_template がエラーを返す場合、との出力パラメーターの値は変更されません @templatetext @parameters 。  
   
 ## <a name="permissions"></a>アクセス許可  
  public データベース ロールのメンバーシップが必要です。  
@@ -85,7 +85,7 @@ SELECT @my_templatetext;
 SELECT @my_parameters;  
 ```  
   
- `@my_templatetext``OUTPUT`パラメーターのパラメーター化された結果を次に示します。  
+ パラメーターのパラメーター化された結果を次に示し `@my_templatetext``OUTPUT` ます。  
   
  `select pi . ProductID , SUM ( pi . Quantity ) as Total`  
   
@@ -101,9 +101,9 @@ SELECT @my_parameters;
   
  `having SUM ( pi . Quantity ) > 400`  
   
- 最初の定数リテラル`2`のは、パラメーターに変換されることに注意してください。 2 番目のリテラル `400` は `HAVING` 句の内部にあるため、変換されません。 sp_get_query_template によって返される結果は、ALTER DATABASE の PARAMETERIZATION オプションが FORCED に設定されている場合のパラメーター化形式クエリに似ています。  
+ 最初の定数リテラルのは、パラメーターに変換されることに注意して `2` ください。 2 番目のリテラル `400` は `HAVING` 句の内部にあるため、変換されません。 sp_get_query_template によって返される結果は、ALTER DATABASE の PARAMETERIZATION オプションが FORCED に設定されている場合のパラメーター化形式クエリに似ています。  
   
- `@my_parameters OUTPUT`パラメーターのパラメーター化された結果を次に示します。  
+ パラメーターのパラメーター化された結果を次に示し `@my_parameters OUTPUT` ます。  
   
 ```  
 @0 int  

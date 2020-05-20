@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056542"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885999"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant の設定を構成する
 
@@ -29,11 +29,11 @@ Data Migration Assistant の特定の動作を微調整するには、machine.co
 
 - デスクトップアプリケーション
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\dma. .config
+  % ProgramFiles% \\ Microsoft Data Migration Assistant \\ dma. .config
 
 - コマンドラインユーティリティ
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\dmacmd .exe. .config 
+  % ProgramFiles% \\ Microsoft Data Migration Assistant \\ dmacmd .exe. .config 
 
 変更を加える前に、元の構成ファイルのコピーを保存してください。 変更を行った後、Data Migration Assistant を再起動して、新しい構成値を有効にします。
 
@@ -82,7 +82,7 @@ Data Migration Assistant v2.0 以降では、この問題が発生した場合�
 評価時に、Data Migration Assistant はデータ層アプリケーション (dacpac) を抽出してデータベーススキーマを理解します。 この操作は、非常に大規模なデータベースのタイムアウトが発生した場合、またはサーバーに負荷がかかっている場合に失敗することがあります。 Data Migration v1.0 以降では、エラーを回避するために、次の構成値を変更できます。 
 
 > [!NOTE]
-> 既定で&lt;は、&gt; dacfx エントリ全体にコメントが付いています。 コメントを削除し、必要に応じて値を変更します。
+> &lt;既定では、dacfx エントリ全体に &gt; コメントが付いています。 コメントを削除し、必要に応じて値を変更します。
 
 - commandTimeout
 
@@ -90,7 +90,7 @@ Data Migration Assistant v2.0 以降では、この問題が発生した場合�
 
 - databaseLockTimeout
 
-   このパラメーターは、 [SET LOCK\_timeout\_timeout 期間](../t-sql/statements/set-lock-timeout-transact-sql.md) *(ミリ秒単位)* に相当します。(既定値は 5000)
+   このパラメーターは、 [SET LOCK \_ timeout timeout \_ 期間](../t-sql/statements/set-lock-timeout-transact-sql.md) *(ミリ秒単位)* に相当します。(既定値は 5000)
 
 - maxDataReaderDegreeOfParallelism
 

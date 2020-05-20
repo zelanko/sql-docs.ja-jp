@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsynctriggers
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b99d42216f188771219f711f34ccd7f105770f27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096211"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833614"
 ---
 # <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,12 +91,12 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 `[ @distributor = ] 'distributor'`ディストリビューターの名前を指定します。 *ディストリビューター*は**sysname**,、既定値はありません。  
   
-`[ @pubversion = ] pubversion`パブリッシャーのバージョンを示します。 *pubversion*は**int**,、既定値は1です。 **1**は、パブリッシャーのバージョンが[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 以前であることを示します。**2**は、パブリッシャーが[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SERVICE Pack 3 (SP3) 以降であることを意味します。 パブリッシャーのバージョンが[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 以降の場合は、 *pubversion*を明示的に**2**に設定する必要があります。  
+`[ @pubversion = ] pubversion`パブリッシャーのバージョンを示します。 *pubversion*は**int**,、既定値は1です。 **1**は、パブリッシャーのバージョンが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 以前であることを示します。**2**は、パブリッシャーが [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service PACK 3 (SP3) 以降であることを意味します。 パブリッシャーのバージョンが SP3 以降の場合は、 *pubversion*を明示的に**2**に設定する必要があり [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_addsynctriggers**は、サブスクリプションの初期化の一部としてディストリビューションエージェントによって使用されます。 このストアドプロシージャは、一般にユーザーによって実行されるのではなく、ユーザーが同期なしのサブスクリプションを手動で設定する必要がある場合に便利です。  
   
 ## <a name="permissions"></a>アクセス許可  

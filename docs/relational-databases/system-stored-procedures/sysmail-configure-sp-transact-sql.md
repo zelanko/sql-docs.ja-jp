@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6e0f410a73d010d2931cfda2e87a4a4b4cbc1c64
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017723"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832510"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベース メールの構成設定を変更します。 **Sysmail_configure_sp**で指定された構成設定は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス全体に適用されます。  
+  データベース メールの構成設定を変更します。 **Sysmail_configure_sp**で指定された構成設定は、インスタンス全体に適用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,22 +41,22 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [**@parameter_name** = ]**'**_parameter_name_**'**  
+ [ **@parameter_name** =] **'**_parameter_name_**'**  
  変更するパラメーターの名前。  
   
- [**@parameter_value** = ]**'**_parameter_value_**'**  
+ [ **@parameter_value** =] **'**_parameter_value_**'**  
  パラメーターの新しい値を指定します。  
   
- [**@description** = ]**'**_description_**'**  
+ [ **@description** =] **'**_description_**'**  
  パラメーターの説明。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベース メールでは次のパラメーターが使用されます。  
   
 ||||  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_profile_sp
 ms.assetid: 71998653-4a02-446d-b6f7-50646a29e8a2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9442f4d3637fcb7c891eacbe7546254708918ad3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e6e39ee5afb5171eee87b30ab83b9636f91a4b0b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67909199"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832471"
 ---
 # <a name="sysmail_delete_profile_sp-transact-sql"></a>sysmail_delete_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  プロファイルを削除しても、プロファイルで使用されているアカウントは削除されません。  
   
  このストアドプロシージャは、ユーザーがプロファイルにアクセスできるかどうかに関係なく、プロファイルを削除します。 ユーザーの既定のプライベートプロファイルまたは**msdb**データベースの既定のパブリックプロファイルを削除するときは注意してください。 既定のプロファイルが使用できない場合、 **sp_send_dbmail**にはプロファイルの名前を引数として指定する必要があります。 したがって、既定のプロファイルを削除すると、 **sp_send_dbmail**の呼び出しが失敗する可能性があります。 詳細については、「 [sp_send_dbmail &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)」を参照してください。  

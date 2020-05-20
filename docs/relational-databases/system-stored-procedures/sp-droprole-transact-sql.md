@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droprole
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2573019948a326c9171fc83d62428e7e2f888eb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: df28493f6229a28b0f10d53bebad8bf031e63822
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933817"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833328"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67933817"
   現在のデータベースからデータベース ロールを削除します。  
   
 > [!IMPORTANT]  
->  で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]は、 **sp_droprole**は DROP ROLE ステートメントに置き換えられました。 **sp_droprole**は、以前のバージョンのとの互換性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のためだけに含まれており、将来のリリースではサポートされない可能性があります。  
+>  では [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、 **SP_DROPROLE**は DROP ROLE ステートメントに置き換えられました。 **sp_droprole**は、以前のバージョンのとの互換性のためだけに含まれて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] おり、将来のリリースではサポートされない可能性があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ sp_droprole [ @rolename= ] 'role'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Sp_droprole**を使用すると、データベースロールのみを削除できます。  
   
  メンバーが既に存在するデータベース ロールは削除できません。 データベース ロールを削除するには、あらかじめそのデータベース ロールのすべてのメンバーを削除しておく必要があります。 ロールからユーザーを削除するには、 **sp_droprolemember**を使用します。 ロールのメンバーであるユーザーがいる場合、 **sp_droprole**にはそれらのメンバーが表示されます。  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprole
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4caa5d8ab850c06aec62b84088463dc21bb40ea2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 674da069c1c47c9e577327e9482add64353de881
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997496"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832626"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 |**RoleId**|**smallint**|**RoleName**の ID。|  
 |**IsAppRole**|**int**|0 = **RoleName**はアプリケーションロールではありません。<br /><br /> 1 = **RoleName**はアプリケーションロールです。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ロールに関連付けられている権限を表示するには、 **sp_helprotect**を使用します。 データベースロールのメンバーを表示するには、 **sp_helprolemember**を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

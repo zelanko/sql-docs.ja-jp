@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.server_event_session_events catalog view
 - xe
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9ac3c2bd13b5f89ea8d87336e579e196e3754c5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b15a38ac2b0bc18d1c0bcf101d0636436ffce111
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133225"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834044"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,12 +45,12 @@ ms.locfileid: "68133225"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューには、次のリレーションシップ基数があります。  
   
 ||||  
 |-|-|-|  
-|ソース|終了|リレーションシップ|  
+|From|終了|リレーションシップ|  
 |sys.server_event_session_events.event_session_id|server_event_sessions。 event_session_id|多対一|  
   
 ## <a name="see-also"></a>参照  

@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: ad6bf673fb9bfe435d517dfd9e2dcf71774191a1
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632854"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885799"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant の概要
 
@@ -42,15 +42,15 @@ DMA をインストールするには、 [Microsoft ダウンロードセンタ�
 
 - オンプレミスの SQL Server へのアップグレードに影響する可能性がある問題を検出します。これらは、互換性の問題として記述され、次のカテゴリに分類されます。
 
-  - 重大な変更
+  - 互換性に影響する変更
   - 動作の変更
   - 非推奨の機能
 
 - アップグレード後にデータベースが恩恵を受けることのできるターゲット SQL Server プラットフォームの新機能について説明します。 これらは、機能に関する推奨事項として説明されており、次のカテゴリに分類されています。
 
-  - パフォーマンス
+  - [パフォーマンス]
   - セキュリティ
-  - ストレージ
+  - Storage
 
 - オンプレミスの SQL Server インスタンスを、オンプレミスでホストされている最新の SQL Server インスタンスに、またはオンプレミスネットワークからアクセス可能な Azure 仮想マシン (VM) に移行します。 Azure VM には、VPN またはその他のテクノロジを使用してアクセスできます。 移行ワークフローは、次のコンポーネントを移行するのに役立ちます。
 
@@ -67,7 +67,7 @@ DMA をインストールするには、 [Microsoft ダウンロードセンタ�
 
   - 情報に関する問題: ソースパッケージで使用される部分的にサポートされている機能または非推奨の機能を検出します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 評価を実行するには、SQL Server **sysadmin**ロールのメンバーである必要があります。
 

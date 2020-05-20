@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1db3a16b8072df38937bb482ac85a75dec6e83b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a906f17e655775308d72d04ed8917ca67b205b6a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124143"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833235"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -53,11 +53,11 @@ sp_fulltext_table
   
 `[ @action = ] 'action'`実行するアクションを指定します。 *アクション*は**nvarchar (50)**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**作成**|*Qualified_table_name*によって参照されるテーブルのフルテキストインデックスのメタデータを作成し、このテーブルのフルテキストインデックスデータが*fulltext_catalog_name*に存在する必要があることを指定します。 この操作では、フルテキストキー列として*unique_index_name*を使用することも指定します。 この一意なインデックスは既に存在していて、テーブル内の列に定義しておく必要があります。<br /><br /> フルテキストカタログが設定されるまで、このテーブルに対してフルテキスト検索を実行することはできません。|  
 |**」**|*Qualified_table_name*のフルテキストインデックスのメタデータを削除します。 フルテキストインデックスがアクティブな場合は、自動的に非アクティブ化されてから削除されます。 フルテキスト インデックスを削除する前に、列を削除する必要はありません。|  
-|**アクティブ化**|非アクティブ化された後、 *qualified_table_name*に対してフルテキストインデックスデータを収集する機能をアクティブにします。 フルテキスト インデックスをアクティブにするには、フルテキスト インデックスの対象となる列が少なくとも 1 つ必要です。<br /><br /> フルテキスト インデックスは、インデックス作成用の最初の列が追加されるとすぐに自動的にアクティブになり、作成を開始できるようになります。 最後の列がインデックスから削除されると、インデックスは非アクティブになります。 変更の追跡がオンの場合、非アクティブなインデックスをアクティブにすると、新しく作成が開始されます。<br /><br /> この方法では、実際にフルテキストインデックスが設定されるわけではありませんが、次のフルテキストインデックスの作成時に*qualified_table_name*の行を取得できるように、ファイルシステムのフルテキストカタログにテーブルを登録するだけです。|  
+|**する**|非アクティブ化された後、 *qualified_table_name*に対してフルテキストインデックスデータを収集する機能をアクティブにします。 フルテキスト インデックスをアクティブにするには、フルテキスト インデックスの対象となる列が少なくとも 1 つ必要です。<br /><br /> フルテキスト インデックスは、インデックス作成用の最初の列が追加されるとすぐに自動的にアクティブになり、作成を開始できるようになります。 最後の列がインデックスから削除されると、インデックスは非アクティブになります。 変更の追跡がオンの場合、非アクティブなインデックスをアクティブにすると、新しく作成が開始されます。<br /><br /> この方法では、実際にフルテキストインデックスが設定されるわけではありませんが、次のフルテキストインデックスの作成時に*qualified_table_name*の行を取得できるように、ファイルシステムのフルテキストカタログにテーブルを登録するだけです。|  
 |**非アクティブ化**|*Qualified_table_name*のフルテキストインデックスを非アクティブ化して、 *qualified_table_name*に対してフルテキストインデックスデータを収集できないようにします。 フルテキスト インデックス メタデータはそのまま残り、テーブルは再びアクティブにできます。<br /><br /> 変更の追跡がオンになっている場合、アクティブなインデックスを非アクティブにすると、インデックス作成は停止します。つまり、実行中の作成操作は停止し、インデックスは変更されなくなります。|  
 |**start_change_tracking**|フルテキストインデックスの増分作成を開始します。 テーブルが timestamp 型でない場合は、フルテキスト インデックスの完全作成を開始します。 テーブルに対する変更の追跡を開始します。<br /><br /> フルテキスト変更の追跡では、 **image**、 **text**、または**ntext**型のフルテキストインデックス列に対して実行される WRITETEXT または UPDATETEXT 操作は追跡されません。|  
 |**stop_change_tracking**|テーブルに対する変更の追跡を停止します。|  
@@ -76,10 +76,10 @@ sp_fulltext_table
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
- 特定のテーブルに対してフルテキストインデックスを非アクティブ化した後、既存のフルテキストインデックスは、次の完全作成まで保持されます。ただし、では、非アクティブ化[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]されたテーブルに対するクエリがブロックされるため、このインデックスは使用されません。  
+## <a name="remarks"></a>解説  
+ 特定のテーブルに対してフルテキストインデックスを非アクティブ化した後、既存のフルテキストインデックスは、次の完全作成まで保持されます。ただし、では、非アクティブ化された [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに対するクエリがブロックされるため、このインデックスは使用されません。  
   
  テーブルが再アクティブ化され、インデックスが再作成されなかった場合でも、新しいフルテキストが有効になっている以外のすべての列に対するクエリでは、古いインデックスが引き続き使用できます。 削除された列のデータは、フルテキスト列検索をすべて指定するクエリで照合されます。  
   
@@ -93,7 +93,7 @@ sp_fulltext_table
 ## <a name="examples"></a>例  
   
 ### <a name="a-enabling-a-table-for-full-text-indexing"></a>A. フルテキスト インデックスに対してテーブルを有効にする  
- 次の例では、 `Document` `AdventureWorks`データベースのテーブルのフルテキストインデックスメタデータを作成します。 `Cat_Desc`フルテキストカタログです。 `PK_Document_DocumentID` は `Document` の一意な単一列のインデックスです。  
+ 次の例では、データベースのテーブルのフルテキストインデックスメタデータを作成し `Document` `AdventureWorks` ます。 `Cat_Desc`フルテキストカタログです。 `PK_Document_DocumentID` は `Document` の一意な単一列のインデックスです。  
   
 ```  
 USE AdventureWorks2012;  

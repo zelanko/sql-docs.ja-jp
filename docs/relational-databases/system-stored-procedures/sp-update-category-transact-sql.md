@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3ebee467890e26aa58171690f5fdabaef3607ee1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b0af70ae46d73a7eedde55c2fcd7e93f63be8928
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084923"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832541"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_update_category
 ## <a name="arguments"></a>引数  
 `[ @class = ] 'class'`更新するカテゴリのクラス。 *クラス*は**varchar (8)**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**アラート**|アラートカテゴリを更新します。|  
 |**補足**|ジョブ カテゴリを更新します。|  
@@ -57,7 +57,7 @@ sp_update_category
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_update_category**は、 **msdb**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  

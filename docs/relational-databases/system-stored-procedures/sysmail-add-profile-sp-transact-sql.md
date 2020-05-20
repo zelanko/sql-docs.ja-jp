@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_profile_sp
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a4bd7f90688d61f9ecee487d553393e38bed82e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 258d5b77178bbf7603516e7db7b0aaf666c9acd3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70211277"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832480"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -53,12 +53,12 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベースメールプロファイルには、任意の数のデータベースメールアカウントが保持されます。 データベース メールのストアド プロシージャでは、このプロシージャで生成されたプロファイル名またはプロファイル ID によって、プロファイルを参照できます。 アカウントをプロファイルに追加する方法の詳細については、「 [sysmail_add_profileaccount_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)」を参照してください。  
   
  プロファイルの名前と説明はストアドプロシージャ**sysmail_update_profile_sp**で変更できますが、プロファイル id はプロファイルの有効期間中は一定のままです。  
   
- プロファイル名は Microsoft [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に対して一意である必要があります。または、ストアドプロシージャからエラーが返されます。  
+ プロファイル名は Microsoft に対して一意である必要があり [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。または、ストアドプロシージャからエラーが返されます。  
   
  ストアドプロシージャ**sysmail_add_profile_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
@@ -78,7 +78,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
   
  **B. 新しいプロファイルを作成し、プロファイル ID を変数に格納する**  
   
- 次の例では、`AdventureWorks Administrator` という新しいデータベース メール プロファイルを作成します。 この例では、プロファイル id 番号を変数`@profileId`に格納し、新しいプロファイルのプロファイル id 番号を含む結果セットを返します。  
+ 次の例では、`AdventureWorks Administrator` という新しいデータベース メール プロファイルを作成します。 この例では、プロファイル id 番号を変数に格納 `@profileId` し、新しいプロファイルのプロファイル id 番号を含む結果セットを返します。  
   
 ```  
 DECLARE @profileId INT ;  

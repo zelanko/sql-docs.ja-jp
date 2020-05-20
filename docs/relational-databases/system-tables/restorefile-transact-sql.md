@@ -17,14 +17,14 @@ helpviewer_keywords:
 - restoring files [SQL Server], restorefile system table
 - file restores [SQL Server], restorefile system table
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 788d0296087ee8980be0b0ecf56c43f09fb3780c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7003ce993893261d2381f11895ee4df2e6fef71b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910189"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834156"
 ---
 # <a name="restorefile-transact-sql"></a>restorefile (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67910189"
 |**destination_phys_drive**|**nvarchar(260)**|ファイルが復元されたドライブまたはパーティション。 NULL にすることができます。<br /><br /> データベースをデータベーススナップショットに戻すと、完全復元の場合と同じ方法でこの値が設定されます。|  
 |**destination_phys_name**|**nvarchar(260)**|ファイルの復元先のファイル名。ドライブやパーティション情報は含みません。 NULL にすることができます。<br /><br /> データベースをデータベーススナップショットに戻すと、完全復元の場合と同じ方法でこの値が設定されます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このテーブルおよびその他のバックアップテーブルと履歴テーブルの行の数を減らすには、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)ストアドプロシージャを実行します。  
   
 ## <a name="see-also"></a>参照  

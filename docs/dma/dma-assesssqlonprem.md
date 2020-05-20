@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 59dc8c96ebda5ac66fb6701d480cb6d633e83158
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f45a598c9e96d33f1edcc41c748a6751df712391
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80809748"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886109"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant を使用した SQL Server 移行評価の実行
 
@@ -37,7 +37,7 @@ ms.locfileid: "80809748"
 
     オンプレミスの SQL Server インスタンスを最新のオンプレミスの SQL Server インスタンスにアップグレードする場合、または Azure VM でホストされている SQL Server にアップグレードする場合は、ソースとターゲットのサーバーの種類を**SQL Server**に設定します。 Azure SQL Database に移行している場合は、代わりに対象サーバーの種類を**Azure SQL Database**に設定します。
 
-3. **[作成]** をクリックします。
+3. **Create** をクリックしてください。
 
    ![評価を作成する](../dma/media/dma-assesssqlonprem/new-assessment.png)
 

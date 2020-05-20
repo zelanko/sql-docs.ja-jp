@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5e4f5b003eccda5fdada81e49d2a1f5347591869
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768998"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831807"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 `[ @agent_id = ] agent_id`特定のレプリケーションエージェントのコマンドのみが返されるように指定します。 *agent_id*は**int**,、既定値は NULL です。  
   
-`[ @compatibility_level = ] compatibility_level`*Compatibility_level*が**int**で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]あるのバージョンを指定します。既定値は900万です。  
+`[ @compatibility_level = ] compatibility_level`Compatibility_level が int であるのバージョンを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定**int**します。既定値は900万です。 *compatibility_level*  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -73,7 +73,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**article_id**|**int**|アーティクルの ID。|  
 |**type**|**int**|コマンドの種類。|  
 |**partial_command**|**bit**|部分的なコマンドかどうかを示します。|  
-|**hashkey**|**int**|内部使用のみです。|  
+|**hashkey**|**int**|内部使用のみ。|  
 |**originator_publication_id**|**int**|トランザクションが発生したパブリケーションの ID。|  
 |**originator_db_version**|**int**|トランザクションが発生したデータベースのバージョン。|  
 |**originator_lsn**|**varbinary(16)**|元のパブリケーションのコマンドのログシーケンス番号 (LSN) を識別します。 ピアツーピアトランザクションレプリケーションで使用されます。|  
@@ -82,7 +82,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
  長いコマンドは、結果セット内の複数の行に分割できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_browsereplcmds**は、トランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

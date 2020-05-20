@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_schedule
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f85095941311459da2fdc757a11895795ebb418e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0dba6501e3a61f634220d9fe008d761aa17d9159
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046165"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833500"
 ---
 # <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_attach_schedule
 > [!NOTE]  
 >  *Schedule_id*または*schedule_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  スケジュールとジョブの所有者は同じである必要があります。  
   
  スケジュールは複数のジョブに対して設定できます。 ジョブは、複数のスケジュールで実行できます。  
@@ -79,10 +79,10 @@ sp_attach_schedule
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ユーザーがジョブとスケジュールの両方を所有しているかどうかを確認します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、と`NightlyJobs`いう名前のスケジュールを作成します。 このスケジュールを使用するジョブは、毎日、サーバーの時間が `01:00` になると実行されます。 この例では、スケジュールをジョブ`BackupDatabase`とジョブ`RunReports`にアタッチします。  
+ 次の例では、という名前のスケジュールを作成し `NightlyJobs` ます。 このスケジュールを使用するジョブは、毎日、サーバーの時間が `01:00` になると実行されます。 この例では、スケジュールをジョブ `BackupDatabase` とジョブにアタッチし `RunReports` ます。  
   
 > [!NOTE]  
->  この例では、ジョブ`BackupDatabase`とジョブ`RunReports`が既に存在していることを前提としています。  
+>  この例では、ジョブ `BackupDatabase` とジョブが既に存在していることを前提としてい `RunReports` ます。  
   
 ```  
 USE msdb ;  

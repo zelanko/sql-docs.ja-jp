@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69890843"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832548"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,15 +76,15 @@ sp_update_alert
   
 `[ @notification_message = ] 'notification_message'`電子メール、 **net send**、またはポケットベルによる通知の一部としてオペレーターに送信される追加メッセージの変更されたテキスト。 *notification_message*は**nvarchar (512)**,、既定値は NULL です。  
   
-`[ @include_event_description_in = ] include_event_description_in`Windows アプリケーションログからの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーの説明を通知メッセージに含めるかどうかを指定します。 *include_event_description_in*は**tinyint**,、既定値は NULL の場合、これらの値の1つ以上を指定できます。  
+`[ @include_event_description_in = ] include_event_description_in`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows アプリケーションログからのエラーの説明を通知メッセージに含めるかどうかを指定します。 *include_event_description_in*は**tinyint**,、既定値は NULL の場合、これらの値の1つ以上を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|None|  
 |**1**|電子メール|  
 |**2**|ポケットベル|  
 |**4**|**net send**|  
-|**7**|All|  
+|**7**|すべて|  
   
 `[ @database_name = ] 'database'`警告を起動するためにエラーが発生する必要があるデータベースの名前。 *データベース*は**sysname です。** 角かっこ ([]) で囲まれた名前は使用できません。 既定値は NULL です。  
   
@@ -114,9 +114,9 @@ sp_update_alert
   
 |要素の書式設定|説明|  
 |--------------------|-----------------|  
-|*項目*|パフォーマンス オブジェクト、パフォーマンス カウンター、またはカウンターの名前付きインスタンス。|  
-|*演算子*|次のいずれかの**>** 演算子**<**:、、**=**|  
-|*[値]*|カウンターの数値|  
+|*Item*|パフォーマンス オブジェクト、パフォーマンス カウンター、またはカウンターの名前付きインスタンス。|  
+|*演算子*|次のいずれかの演算子: **>** 、 **<** 、**=**|  
+|*値*|カウンターの数値|  
   
 `[ @category_name = ] 'category'`警告カテゴリの名前。 *category*は**sysname**で、既定値は NULL です。  
   
@@ -127,8 +127,8 @@ sp_update_alert
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- Windows アプリケーションログに書き込まれた sysmessages のみが、アラートを発生させることができます。 **sysmessages** [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+## <a name="remarks"></a>解説  
+ Windows アプリケーションログに書き込まれた**sysmessages**のみ [!INCLUDE[msCoName](../../includes/msconame-md.md)] が、アラートを発生させることができます。  
   
  **sp_update_alert**は、パラメーター値が指定されている警告設定のみを変更します。 パラメーターを省略した場合は、現在の設定が保持されます。  
   

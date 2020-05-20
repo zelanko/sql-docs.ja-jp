@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dm_operation_status dynamic management view
 - sys.dm_operation_status dynamic management view
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c49e4e01dd8ddaf0667546a8cc221a7918f42c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911203"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833762"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Azure SQL データベース)
 
@@ -39,7 +39,7 @@ ms.locfileid: "70911203"
 |resource_type_desc|**nvarchar(2048)**|操作が実行される対象のリソースの種類の説明。 現在のリリースでは、このビューは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のみで実行される操作を追跡します。|  
 |major_resource_id|**sql_variant**|操作が実行される対象の [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の名前。 NULL 以外。|  
 |minor_resource_id|**sql_variant**|内部使用専用です。 NULL 以外。|  
-|operation|**nvarchar(60)**|CREATE や ALTER など[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、に対して実行される操作。|  
+|operation|**nvarchar(60)**|CREATE や ALTER など、に対して実行される操作 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。|  
 |state|**tinyint**|操作の状態。<br /><br /> 0 = 保留<br />1 = 実行中<br />2 = 完了<br />3 = 失敗<br />4 = 取り消し|  
 |state_desc|**nvarchar(120)**|PENDING = 操作はリソースまたはクォータが利用可能になるのを待機しています。<br /><br /> IN_PROGRESS = 操作が開始され、進行中です。<br /><br /> COMPLETED = 操作が正常に完了しました。<br /><br /> FAILED = 操作が失敗しました。 詳細については、 **error_desc**列を参照してください。<br /><br /> CANCELLED = ユーザーの要求によって操作が停止しました。|  
 |percent_complete|**int**|操作が完了した割合 (%)。 値が連続しておらず、有効な値が以下に一覧表示されます。 Not NULL。<br/><br/>0 = 操作は開始されていません<br/>50 = 操作が進行中です<br/>100 = 操作の完了|  
@@ -53,8 +53,8 @@ ms.locfileid: "70911203"
 ## <a name="permissions"></a>アクセス許可  
  このビューは、サーバーレベルプリンシパルログインの**master**データベースでのみ使用できます。  
   
-## <a name="remarks"></a>Remarks  
- このビューを使用するには、 **master**データベースに接続している必要があります。 サーバーの`sys.dm_operation_status` **master**データベースのビューを使用して、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に対して実行される次の操作の状態を追跡します。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+## <a name="remarks"></a>解説  
+ このビューを使用するには、 **master**データベースに接続している必要があります。 `sys.dm_operation_status`サーバーの**master**データベースのビューを使用して [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 、に対して実行される次の操作の状態を追跡し [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ます。  
   
 -   データベースの作成  
   

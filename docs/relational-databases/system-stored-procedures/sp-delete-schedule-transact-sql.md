@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_schedule
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7a2a4e8a7cf58f8c4519d15ae46e2b278fcd1383
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 57dea8c65cf1541030b87e965591b98c64c9b261
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008965"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833336"
 ---
 # <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  既定では、スケジュールがジョブに関連付けられている場合、スケジュールを削除することはできません。 ジョブに関連付けられているスケジュールを削除するには、 *force_delete*に値**1**を指定します。 スケジュールを削除しても、現在実行中のジョブは停止されません。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -77,7 +77,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ## <a name="examples"></a>例  
   
 ### <a name="a-deleting-a-schedule"></a>A. スケジュールを削除する  
- 次の例では、 `NightlyJobs`スケジュールを削除します。 スケジュールがジョブにアタッチされている場合、この例ではスケジュールは削除されません。  
+ 次の例では、スケジュールを削除し `NightlyJobs` ます。 スケジュールがジョブにアタッチされている場合、この例ではスケジュールは削除されません。  
   
 ```  
 USE msdb ;  

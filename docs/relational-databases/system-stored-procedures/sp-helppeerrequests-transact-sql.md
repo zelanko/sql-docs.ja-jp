@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppeerrequests
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5b9e2a370c9acc9c22dac7e5e60ceb10e08e46ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8aa3fc831b81827d230274b95bf3cbfbe0d5a560
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137630"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834429"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'`状態要求が送信されたピアツーピアトポロジ内のパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
-`[ @description = ] 'description'`個々の状態要求を識別するために使用できる値。これにより、 [transact-sql&#41;&#40;sp_requestpeerresponse](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)を呼び出すときに指定されたユーザー定義情報に基づいて、返された応答をフィルター処理できます。 *説明*は**nvarchar (4000)**,、既定値は**%** です。 既定では、パブリケーションに対するすべてのステータス要求が返されます。 このパラメーターを使用して、 *description*に指定された値と一致する説明を含むステータス要求だけを返します。この場合、文字列は、 [LIKE &#40;transact-sql&#41;](../../t-sql/language-elements/like-transact-sql.md)句を使用して照合されます。  
+`[ @description = ] 'description'`個々の状態要求を識別するために使用できる値。これにより、 [transact-sql&#41;&#40;sp_requestpeerresponse](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)を呼び出すときに指定されたユーザー定義情報に基づいて、返された応答をフィルター処理できます。 *説明*は**nvarchar (4000)**,、既定値は **%** です。 既定では、パブリケーションに対するすべてのステータス要求が返されます。 このパラメーターを使用して、 *description*に指定された値と一致する説明を含むステータス要求だけを返します。この場合、文字列は、 [LIKE &#40;transact-sql&#41;](../../t-sql/language-elements/like-transact-sql.md)句を使用して照合されます。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|要求を識別します。|  
+|**ID**|**int**|要求を識別します。|  
 |**レプリケーション**|**sysname**|ステータス要求が送信されたパブリケーションの名前。|  
 |**sent_date**|**datetime**|ステータス要求が送信された日付と時刻。|  
 |**記述**|**nvarchar (4000)**|個々の状態要求を識別するために使用できるユーザー定義情報。|  
@@ -54,7 +54,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_helppeerrequests**は、ピアツーピアトランザクションレプリケーションで使用されます。  
   
  **sp_helppeerrequests**は、ピアツーピアトポロジでパブリッシュされたデータベースを復元する場合に使用します。  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_link_publication
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0948b01e404b5eca475b344390ff105d4e094cce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139898"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834395"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68139898"
 >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
 > 
 > [!IMPORTANT]
->  特定の条件下で、サブスクライバーが Service Pack 1 以降を実行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]していて、パブリッシャーが以前のバージョンを実行している場合、このストアドプロシージャは失敗する可能性があります。 このシナリオでストアドプロシージャが失敗した場合は、パブリッシャー [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]を Service Pack 1 以降にアップグレードしてください。  
+>  特定の条件下で、サブスクライバーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 以降を実行していて、パブリッシャーが以前のバージョンを実行している場合、このストアドプロシージャは失敗する可能性があります。 このシナリオでストアドプロシージャが失敗した場合は、パブリッシャーを [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 以降にアップグレードしてください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,10 +57,10 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 `[ @security_mode = ] security_mode`サブスクライバーが即時更新のためにリモートパブリッシャーに接続するために使用するセキュリティモードを示します。 *security_mode*は**int**,、これらの値のいずれかを指定できます。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**0**|で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、*ログイン*と*パスワード*として、このストアドプロシージャで指定されたログインで認証を使用します。<br /><br /> 注: 以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、このオプションを使用して動的リモートプロシージャ呼び出し (RPC) を指定していました。|  
-|**1**|サブスクライバーで変更を行う[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーのセキュリティコンテキスト (認証または Windows 認証) を使用します。<br /><br /> 注: このアカウントは、十分な特権を持つパブリッシャーにも存在する必要があります。 Windows 認証を使用する場合は、セキュリティアカウントの委任がサポートされている必要があります。|  
+|**0**|では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、*ログイン*と*パスワード*として、このストアドプロシージャで指定されたログインで認証を使用します。<br /><br /> 注: 以前のバージョンのでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、このオプションを使用して動的リモートプロシージャ呼び出し (RPC) を指定していました。|  
+|**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーで変更を行うユーザーのセキュリティコンテキスト (認証または Windows 認証) を使用します。<br /><br /> 注: このアカウントは、十分な特権を持つパブリッシャーにも存在する必要があります。 Windows 認証を使用する場合は、セキュリティアカウントの委任がサポートされている必要があります。|  
 |**2**|**Sp_link_publication**を使用して作成された、既存のユーザー定義のリンクサーバーログインを使用します。|  
   
 `[ @login = ] 'login'`ログインを示します。 *login* のデータ型は **sysname** で、既定値は NULL です。 *Security_mode*が**0**の場合は、このパラメーターを指定する必要があります。  
@@ -72,14 +72,14 @@ sp_link_publication [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_link_publication**は、トランザクションレプリケーションで即時更新サブスクリプションによって使用されます。  
   
  **sp_link_publication**は、プッシュサブスクリプションとプルサブスクリプションの両方に使用できます。 サブスクリプションが作成される前または後に呼び出すことができます。 [MSsubscription_properties &#40;transact-sql&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)システムテーブルにエントリが挿入または更新されます。  
   
  プッシュサブスクリプションの場合、このエントリは[sp_subscription_cleanup &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)によってクリーンアップできます。 プルサブスクリプションの場合、エントリをクリーンアップするには[&#40;transact-sql&#41;を sp_droppullsubscription](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)するか、 [transact-sql &#40;&#41;sp_subscription_cleanup](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)します。 また、セキュリティ上の問題については、 [MSsubscription_properties &#40;transact-sql&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)システムテーブルのエントリをクリアするために、NULL パスワードを使用して**sp_link_publication**を呼び出すこともできます。  
   
- 即時更新サブスクライバーがパブリッシャーに接続するときに使用される既定のモードでは、Windows 認証を使用した接続は許可されません。 Windows 認証のモードで接続するには、パブリッシャーに対してリンクサーバーを設定する必要があります。また、即時更新サブスクライバーは、サブスクライバーの更新時にこの接続を使用する必要があります。 そのためには、 **sp_link_publication**を*security_mode* = **2**で実行する必要があります。 Windows 認証を使用する場合は、セキュリティアカウントの委任がサポートされている必要があります。  
+ 即時更新サブスクライバーがパブリッシャーに接続するときに使用される既定のモードでは、Windows 認証を使用した接続は許可されません。 Windows 認証のモードで接続するには、パブリッシャーに対してリンクサーバーを設定する必要があります。また、即時更新サブスクライバーは、サブスクライバーの更新時にこの接続を使用する必要があります。 そのためには、 **sp_link_publication**を*security_mode*2 で実行する必要があり  =  **2**ます。 Windows 認証を使用する場合は、セキュリティアカウントの委任がサポートされている必要があります。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent_failover](../../relational-databases/replication/codesnippet/tsql/sp-link-publication-tran_1.sql)]  

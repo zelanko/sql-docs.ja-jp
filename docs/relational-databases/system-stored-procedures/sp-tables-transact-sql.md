@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14c618ef31562f6e6af70a569e21fdd4105d663e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096052"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834225"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,9 +52,9 @@ sp_tables [ [ @table_name = ] 'name' ]
   
 `[ @table_owner = ] 'owner'`カタログ情報を返すために使用するテーブルのテーブル所有者を示します。 *owner*は**nvarchar (384)**,、既定値は NULL です。 ワイルドカードパターンマッチングがサポートされています。 所有者が指定されていない場合は、基になる DBMS の既定のテーブル可視性ルールが適用されます。  
   
- で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、指定された名前のテーブルが現在のユーザーによって所有されている場合、そのテーブルの列が返されます。 所有者が指定されておらず、現在のユーザーが指定された名前のテーブルを所有していない場合、このプロシージャは、データベース所有者が所有する、指定された名前のテーブルを検索します。 そのテーブルが存在する場合、そのテーブルの列が返されます。  
+ では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、指定された名前のテーブルが現在のユーザーによって所有されている場合、そのテーブルの列が返されます。 所有者が指定されておらず、現在のユーザーが指定された名前のテーブルを所有していない場合、このプロシージャは、データベース所有者が所有する、指定された名前のテーブルを検索します。 そのテーブルが存在する場合、そのテーブルの列が返されます。  
   
-`[ @table_qualifier = ] 'qualifier'`テーブル修飾子の名前を指定します。 *修飾子*は**sysname**,、既定値は NULL です。 さまざまな DBMS 製品では、3つの要素で構成するテーブル (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列はデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
+`[ @table_qualifier = ] 'qualifier'`テーブル修飾子の名前を指定します。 *修飾子*は**sysname**,、既定値は NULL です。 さまざまな DBMS 製品では、3つの要素で構成するテーブル (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この列はデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
   
 ``[ , [ @table_type = ] "'type', 'type'" ]``指定されているテーブル型のすべてのテーブルに関する情報を提供する、コンマで区切られた値の一覧です。 これには、**テーブル**、**システムテーブル**、および**ビュー**が含まれます。 *型*は**varchar (100)**,、既定値は NULL です。  
   
@@ -70,13 +70,13 @@ sp_tables [ [ @table_name = ] 'name' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**TABLE_QUALIFIER**|**sysname**|テーブル修飾子の名前。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列はデータベース名を表します。 このフィールドは NULL にすることができます。|  
-|**TABLE_OWNER**|**sysname**|テーブル所有者の名前。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列は、テーブルを作成したデータベースユーザーの名前を表します。 このフィールドは常に値を返します。|  
+|**TABLE_QUALIFIER**|**sysname**|テーブル修飾子の名前。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この列はデータベース名を表します。 このフィールドは NULL にすることができます。|  
+|**TABLE_OWNER**|**sysname**|テーブル所有者の名前。 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列は、テーブルを作成したデータベースユーザーの名前を表します。 このフィールドは常に値を返します。|  
 |**TABLE_NAME**|**sysname**|テーブル名。 このフィールドは常に値を返します。|  
 |**TABLE_TYPE**|**varchar(32)**|テーブル、システムテーブル、またはビュー。|  
 |**備考**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はこの列の値を返しません。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  相互運用性を最大にするために、ゲートウェイクライアントは SQL-92-標準の SQL パターン照合 (% と _ ワイルドカード文字) のみを想定する必要があります。  
   
  現在のユーザーの特定のテーブルに対する読み取りまたは書き込みアクセスに関する特権情報は、常にチェックされません。 そのため、アクセスは保証されません。 この結果セットには、テーブルとビューだけでなく、これらの型をサポートする DBMS 製品へのゲートウェイのシノニムと別名も含まれています。 **Sp_server_info**の結果セットで server 属性**ACCESSIBLE_TABLES**が Y の場合は、現在のユーザーがアクセスできるテーブルだけが返されます。  
@@ -117,7 +117,7 @@ EXEC sp_tables ;
 ```  
   
 ### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D. 指定されたスキーマ内のテーブルに関する情報を返す  
- 次の例では、 `AdventureWorksPDW201`データベース内のディメンションテーブルに関する情報を返します。  
+ 次の例では、データベース内のディメンションテーブルに関する情報を返し `AdventureWorksPDW201` ます。  
   
 ```  
 -- Uses AdventureWorks  

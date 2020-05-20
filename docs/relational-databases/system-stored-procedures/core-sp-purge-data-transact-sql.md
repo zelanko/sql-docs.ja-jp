@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 72737a9b623e7979617784c1ef49c3f6d09aaea8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 27f2d95a23a89c4e50924944709ba38a39a6ff2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942491"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833715"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,27 +46,27 @@ core.sp_purge_data
 ```  
   
 ## <a name="arguments"></a>引数  
- [@retention_days =]*retention_days*  
+ [ @retention_days =] *retention_days*  
  管理データウェアハウスのテーブルにデータを保持する日数を指定します。 *Retention_days*よりも古いタイムスタンプを持つデータは削除されます。 *retention_days*は**smallint**,、既定値は NULL です。 指定する場合、値は正の値である必要があります。 NULL の場合は、core.snapshots ビューの valid_through 列の値によって、削除対象の行が判断されます。  
   
- [@instance_name = ]'*instance_name*'  
+ [ @instance_name =] '*instance_name*'  
  コレクションセットのインスタンスの名前です。 *instance_name*は**sysname**,、既定値は NULL です。  
   
- *instance_name*には、コンピューター名と、 *computername*\\*instancename*という形式のインスタンス名で構成される完全修飾インスタンス名を指定する必要があります。 NULL の場合は、ローカルサーバー上の既定のインスタンスが使用されます。  
+ *instance_name*には、コンピューター名と、 *computername*instancename という形式のインスタンス名で構成される完全修飾インスタンス名を指定する必要があり \\ *instancename*ます。 NULL の場合は、ローカルサーバー上の既定のインスタンスが使用されます。  
   
- [@collection_set_uid = ]'*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  コレクション セットの GUID を指定します。 *collection_set_uid*は**uniqueidentifier**,、既定値は NULL です。 NULL の場合、すべてのコレクションセットからの条件を満たす行が削除されます。 この値を取得するには、syscollector_collection_sets カタログ ビューに対してクエリを実行します。  
   
- [@duration = ]*期間*  
+ [ @duration =]*期間*  
  消去操作を実行する最大時間 (分) です。 *duration*は**smallint**,、既定値は NULL です。 指定する場合、値はゼロまたは正の整数にする必要があります。 NULL の場合は、条件を満たすすべての行が削除されるか操作が手動で停止されるまで、操作は実行されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このプロシージャでは、保有期間に基づいて削除対象となる core.snapshots ビューの行が選択されます。 削除の対象となるすべての行が、snapshots_internal テーブルから削除されます。 前の行を削除すると、すべての管理データウェアハウステーブルで連鎖削除操作がトリガーされます。 これは、収集されたデータを格納するすべてのテーブルに対して定義されている ON DELETE CASCADE 句を使って実行されます。  
   
- 各スナップショットとその関連データは、明示的なトランザクションで削除されてからコミットされます。 そのため、パージ操作が手動で停止された場合、また@durationはに指定された値を超えた場合は、コミットされていないデータのみが残ります。 このデータは、ジョブの次回の実行時に削除できます。  
+ 各スナップショットとその関連データは、明示的なトランザクションで削除されてからコミットされます。 そのため、パージ操作が手動で停止された場合、またはに指定された値を超えた場合は、コミットされて @duration いないデータのみが残ります。 このデータは、ジョブの次回の実行時に削除できます。  
   
  プロシージャは、管理データウェアハウスデータベースのコンテキストで実行する必要があります。  
   
@@ -85,7 +85,7 @@ GO
 ```  
   
 ### <a name="b-specifying-retention-and-duration-values"></a>B. 保有期間と実行時間の値を指定する  
- 次の例では、7日よりも前の管理データウェアハウスからデータを削除します。 また、 @durationパラメーターを指定して、操作が5分以内に実行されるようにします。  
+ 次の例では、7日よりも前の管理データウェアハウスからデータを削除します。 また、パラメーターを指定して、 @duration 操作が5分以内に実行されるようにします。  
   
 ```  
 USE <management_data_warehouse>;  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ### <a name="c-specifying-an-instance-name-and-collection-set"></a>C. インスタンス名とコレクションセットの指定  
- 次の例では、指定されたインスタンスの特定のコレクションセットの管理データウェアハウス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からデータを削除します。 @retention_daysが指定されていないので、valid_through 列の値は、削除の対象となるコレクションセットの行を決定するために使用されます。  
+ 次の例では、指定されたインスタンスの特定のコレクションセットの管理データウェアハウスからデータを削除し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 @retention_daysが指定されていないので、valid_through 列の値は、削除の対象となるコレクションセットの行を決定するために使用されます。  
   
 ```  
 USE <management_data_warehouse>;  

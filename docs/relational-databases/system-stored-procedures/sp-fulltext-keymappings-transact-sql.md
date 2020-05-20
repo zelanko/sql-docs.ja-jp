@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sp_fulltext_keymappings
 - full-text indexes [SQL Server], troubleshooting
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc68be51382b72dee1b143a3535d631ae93dbb7c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124238"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833279"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -55,7 +55,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 >  1 つ、2 つ、または 3 つのパラメーターを使用する方法の詳細については、後の「解説」を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし。  
+ [なし] :  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -69,7 +69,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="permissions"></a>アクセス許可  
  この関数はパブリックであり、特別な権限は必要ありません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表に、1 つ、2 つ、または 3 つのパラメーターを使用した場合の効果を示します。  
   
 |このパラメーターリスト...|次の結果がある...|  
@@ -92,7 +92,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 >  このセクションの例では、 `Production.ProductReview` サンプル データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルを使用します。 このインデックスを作成するには、「 `ProductReview` [CREATE フルテキストインデックス &#40;transact-sql&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)」の表に示されている例を実行します。  
   
 ### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. すべてのキーと DocId 値を取得する  
- 次の例では、 [DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md)ステートメントを使用`@table_id`してローカル変数を作成し、 `ProductReview`テーブルの ID をその値として割り当てます。 この例では、 `@table_id` *table_id*パラメーターにを指定して**sp_fulltext_keymappings**を実行します。  
+ 次の例では、 [DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md)ステートメントを使用してローカル変数を作成 `@table_id` し、テーブルの ID を `ProductReview` その値として割り当てます。 この例で**sp_fulltext_keymappings**は、 `@table_id` *table_id*パラメーターにを指定して sp_fulltext_keymappings を実行します。  
   
 > [!NOTE]  
 >  *Table_id*パラメーターのみを指定して**sp_fulltext_keymappings**を使用することは、小さなテーブルに適しています。  
@@ -117,7 +117,7 @@ GO
 |`4`|`4`|`4`|  
   
 ### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>B. 特定のキー値の DocId 値を取得する  
- 次の例では、DECLARE ステートメントを使用してローカル変数 `@table_id`を作成し、 `ProductReview` テーブルの ID をその値として割り当てます。 この例では、 `@table_id` *table_id*パラメーターにを指定し、 *docid*パラメーターに NULL を指定し、*キー*パラメーターに4を指定して**sp_fulltext_keymappings**を実行します。  
+ 次の例では、DECLARE ステートメントを使用してローカル変数 `@table_id`を作成し、 `ProductReview` テーブルの ID をその値として割り当てます。 この例で**sp_fulltext_keymappings**は、 `@table_id` *table_id*パラメーターにを指定し、 *docid*パラメーターに NULL を指定し、*キー*パラメーターに4を指定して sp_fulltext_keymappings を実行します。  
   
 > [!NOTE]  
 >  小さなテーブルに適した*table_id*指しだけで**sp_fulltext_keymappings**を使用します。  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adjustpublisheridentityrange
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eb9fdd324ba6275cd20f99a32f0a82aa112626b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ad89d48f90ee82e8ae7c30728a50378f9f2cc521
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68117877"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833571"
 ---
 # <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_adjustpublisheridentityrange**は、すべての種類のレプリケーションで使用されます。  
   
  自動 ID 範囲が有効になっているパブリケーションの場合は、ディストリビューション エージェントまたはマージ エージェントが、パブリケーションのしきい値に基づいてパブリケーションの ID 範囲を自動的に調整します。 ただし、何らかの理由でディストリビューションエージェントまたはマージエージェントが一定期間実行されていない場合や、id 範囲のリソースがしきい値のポイントまで頻繁に使用されている場合、ユーザーは**sp_adjustpublisheridentityrange**を呼び出して、パブリッシャーの新しい範囲の値を割り当てることができます。  

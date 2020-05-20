@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_agents system table
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b82585e75be46cc38372564a68661815430c2be4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907411"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833084"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "67907411"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|ディストリビューションエージェントの ID。|  
+|**ID**|**int**|ディストリビューションエージェントの ID。|  
 |**name**|**nvarchar (100)**|ディストリビューションエージェントの名前。|  
 |**publisher_database_id**|**int**|パブリッシャーデータベースの ID。|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
@@ -49,16 +49,16 @@ ms.locfileid: "67907411"
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|分布またはマージエージェントが作成された日時。|  
-|**queue_id**|**sysname**|キュー更新サブスクリプションのキューを検索する識別子。 キューに登録されていないサブスクリプションの場合、値は NULL になります。 メッセージ[!INCLUDE[msCoName](../../includes/msconame-md.md)]キューベースのパブリケーションの場合、この値は、サブスクリプションに使用するキューを一意に識別する GUID です。 SQL Server ベースのキューパブリケーションの場合、列には**SQL**という値が含まれます。<br /><br /> 注: メッセージ[!INCLUDE[msCoName](../../includes/msconame-md.md)]キューの使用は推奨されておらず、サポートされなくなりました。|  
+|**queue_id**|**sysname**|キュー更新サブスクリプションのキューを検索する識別子。 キューに登録されていないサブスクリプションの場合、値は NULL になります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]メッセージキューベースのパブリケーションの場合、この値は、サブスクリプションに使用するキューを一意に識別する GUID です。 SQL Server ベースのキューパブリケーションの場合、列には**SQL**という値が含まれます。<br /><br /> 注: [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージキューの使用は推奨されておらず、サポートされなくなりました。|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|エージェントをリモートからアクティブ化できるかどうかを示します。<br /><br /> **0**は、エージェントをリモートでアクティブ化できないことを示します。<br /><br /> **1**は、エージェントをリモートでアクティブにすること、および*offload_server*プロパティで指定されたリモートコンピューターで実行することを指定します。|  
 |**offload_server**|**sysname**|リモートエージェントのアクティブ化に使用するサーバーのネットワーク名。|  
-|**dts_package_name**|**sysname**|DTS パッケージの名前です。 たとえば、 **DTSPub_Package**という名前のパッケージの場合`@dts_package_name = N'DTSPub_Package'`は、を指定します。|  
+|**dts_package_name**|**sysname**|DTS パッケージの名前です。 たとえば、 **DTSPub_Package**という名前のパッケージの場合は、を指定し `@dts_package_name = N'DTSPub_Package'` ます。|  
 |**dts_package_password**|**nvarchar (524)**|パッケージのパスワード。|  
 |**dts_package_location**|**int**|パッケージの場所です。 パッケージの場所には、**ディストリビューター**または**サブスクライバー**を指定できます。|  
 |**sid**|**varbinary (85)**|最初の実行時の、ディストリビューション エージェントまたはマージ エージェントのセキュリティ識別番号 (SID) です。|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**subscriber_security_mode**|**smallint**|サブスクライバーへの接続時にエージェントによって使用されるセキュリティモード。次のいずれかになります。<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 認証<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。|  
+|**subscriber_security_mode**|**smallint**|サブスクライバーへの接続時にエージェントによって使用されるセキュリティモード。次のいずれかになります。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 認証<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。|  
 |**subscriber_login**|**sysname**|サブスクライバーへの接続時に使用されるログインです。|  
 |**subscriber_password**|**nvarchar (524)**|サブスクライバーに接続するときに使用するパスワードの暗号化された値。|  
 |**reset_partial_snapshot_progress**|**bit**|部分的にダウンロードされたスナップショットを破棄して、スナップショットプロセス全体を再び開始できるかどうかを指定します。|  

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_configuration catalog view
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8e4068d9763460995335fe5adbd6684ecb70d8b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fc74dfc20c55093cce817ab4eb5b2cf67c1ec6eb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982615"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834092"
 ---
 # <a name="sysresource_governor_configuration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "73982615"
 |is_enabled|**bit**|リソース ガバナーの現在の状態を示します。<br /><br /> 0 = Resource Governor が有効になっていません。<br /><br /> 1 = Resource Governor が有効になっています。<br /><br /> NULL 値は許可されません。|  
 |max_outstanding_io_per_volume|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> ボリュームごとの未処理の I/O の最大数。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  カタログ ビューには、メタデータに格納されているリソース ガバナー構成が表示されます。 メモリ内の構成を表示するには、対応する動的管理ビューを使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

@@ -19,12 +19,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bff80fbe2b5022e12eca58de42192a3a1bb18d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3c94f7f23697539b000c9c76dc1d0970a56a96d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74190372"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834102"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>query_store_wait_stats (Transact-sql)
 
@@ -41,11 +41,11 @@ ms.locfileid: "74190372"
 |**wait_category_desc**|**nvarchar(128)**|[待機カテゴリ] フィールドの説明テキストを表示するには、次の表を確認してください。|
 |**execution_type**|**tinyint**|クエリ実行の種類を決定します。<br /><br /> 0-通常の実行 (正常に完了)<br /><br /> 3-クライアントが開始した実行中止<br /><br /> 4-例外が実行を中止しました|  
 |**execution_type_desc**|**nvarchar(128)**|実行の種類のフィールドの説明テキストです。<br /><br /> 0-標準<br /><br /> 3-中止<br /><br /> 4-例外|  
-|**total_query_wait_time_ms**|**bigint**|集計`CPU wait`間隔および待機カテゴリ内のクエリプランの合計時間 (ミリ秒単位で報告)。|
+|**total_query_wait_time_ms**|**bigint**|`CPU wait`集計間隔および待機カテゴリ内のクエリプランの合計時間 (ミリ秒単位で報告)。|
 |**avg_query_wait_time_ms**|**float**|集計間隔と待機カテゴリ内の実行ごとのクエリプランの平均待機時間 (ミリ秒単位で報告)。|
 |**last_query_wait_time_ms**|**bigint**|集計間隔および待機カテゴリ内のクエリプランの最後の待機時間 (ミリ秒単位で報告)。|
-|**min_query_wait_time_ms**|**bigint**|集計`CPU wait`間隔および待機カテゴリ内のクエリプランの最小時間 (ミリ秒単位で報告)。|
-|**max_query_wait_time_ms**|**bigint**|集計`CPU wait`間隔および待機カテゴリ内のクエリプランの最大時間 (ミリ秒単位で報告)。|
+|**min_query_wait_time_ms**|**bigint**|`CPU wait`集計間隔および待機カテゴリ内のクエリプランの最小時間 (ミリ秒単位で報告)。|
+|**max_query_wait_time_ms**|**bigint**|`CPU wait`集計間隔および待機カテゴリ内のクエリプランの最大時間 (ミリ秒単位で報告)。|
 |**stdev_query_wait_time_ms**|**float**|`Query wait`集計間隔および待機カテゴリ内のクエリプランの標準偏差 (ミリ秒単位で報告されます)。|
 
 ## <a name="wait-categories-mapping-table"></a>待機カテゴリマッピングテーブル
@@ -54,7 +54,7 @@ ms.locfileid: "74190372"
   
 |整数値|待機のカテゴリ|カテゴリには待機の種類が含まれます|  
 |-----------------|---------------|-----------------|  
-|**0**|**Unknown**|Unknown |  
+|**0**|**不明**|不明 |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**ワーカースレッド**|THREADPOOL|
 |**3**|**制限**|LCK_M_%|
@@ -64,8 +64,8 @@ ms.locfileid: "74190372"
 |**7**|**Asp.net***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
 |**8**|**SQL CLR**|CLR%、SQLCLR%|
 |**9**|**ミラーリング**|DBMIRROR|
-|**10**|**トランザクション**|XACT%、DTC%、TRAN_MARKLATCH_%、MSQL_XACT_%、TRANSACTION_MUTEX|
-|**11**|**Idle**|SLEEP_%、LAZYWRITER_SLEEP、SQLTRACE_BUFFER_FLUSH、SQLTRACE_INCREMENTAL_FLUSH_SLEEP、SQLTRACE_WAIT_ENTRIES、FT_IFTS_SCHEDULER_IDLE_WAIT、XE_DISPATCHER_WAIT、REQUEST_FOR_DEADLOCK_SEARCH、LOGMGR_QUEUE、ONDEMAND_TASK_QUEUE、CHECKPOINT_QUEUE、XE_TIMER_EVENT|
+|"**10**"|**トランザクション**|XACT%、DTC%、TRAN_MARKLATCH_%、MSQL_XACT_%、TRANSACTION_MUTEX|
+|**11**|**退席**|SLEEP_%、LAZYWRITER_SLEEP、SQLTRACE_BUFFER_FLUSH、SQLTRACE_INCREMENTAL_FLUSH_SLEEP、SQLTRACE_WAIT_ENTRIES、FT_IFTS_SCHEDULER_IDLE_WAIT、XE_DISPATCHER_WAIT、REQUEST_FOR_DEADLOCK_SEARCH、LOGMGR_QUEUE、ONDEMAND_TASK_QUEUE、CHECKPOINT_QUEUE、XE_TIMER_EVENT|
 |**12**|**事前**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_% **(BROKER_RECEIVE_WAITFOR ではありません)**|
 |**14**|**Tran Log IO**|LOGMGR、LOGMGR、LOGMGR_RESERVE_APPEND、LOGMGR_FLUSH、LOGMGR_PMM_LOG、CHKPT.、WRITELOG|
@@ -76,7 +76,7 @@ ms.locfileid: "74190372"
 |**21**|**トレース**|TRACEWRITE、SQLTRACE_LOCK、SQLTRACE_FILE_BUFFER、SQLTRACE_FILE_WRITE_IO_COMPLETION、SQLTRACE_FILE_READ_IO_COMPLETION、SQLTRACE_PENDING_BUFFER_WRITERS、SQLTRACE_SHUTDOWN、QUERY_TRACEOUT、TRACE_EVTNOTIFF|
 |**20@@**|**フルテキスト検索**|FT_RESTART_CRAWL、フルテキスト GATHERER、MSSEARCH、FT_METADATA_MUTEX、FT_IFTSHC_MUTEX、FT_IFTSISM_MUTEX、FT_IFTS_RWLOCK、FT_COMPROWSET_RWLOCK、FT_MASTER_MERGE、FT_PROPERTYLIST_CACHE、FT_MASTER_MERGE_COORDINATOR、PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC|
 |**22**|**その他のディスク IO**|ASYNC_IO_COMPLETION、IO_COMPLETION、BACKUPIO、WRITE_COMPLETION、IO_QUEUE_LIMIT、IO_RETRY|
-|**22**|**Replication**|SE_REPL_%、REPL_%、HADR_% **(HADR_THROTTLE_LOG_RATE_GOVERNOR ではありません)**、PWAIT_HADR_%、REPLICA_WRITES、FCB_REPLICA_WRITE、FCB_REPLICA_READ、PWAIT_HADRSIM|
+|**22**|**レプリケーション**|SE_REPL_%、REPL_%、HADR_% **(HADR_THROTTLE_LOG_RATE_GOVERNOR ではありません)**、PWAIT_HADR_%、REPLICA_WRITES、FCB_REPLICA_WRITE、FCB_REPLICA_READ、PWAIT_HADRSIM|
 |**23**|**ログレートガバナー**|LOG_RATE_GOVERNOR、POOL_LOG_RATE_GOVERNOR、HADR_THROTTLE_LOG_RATE_GOVERNOR、INSTANCE_LOG_RATE_GOVERNOR|
 
 **コンパイル**待機カテゴリは現在サポートされていません。

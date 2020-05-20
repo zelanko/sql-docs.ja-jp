@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a3b575b39055976262858fcf527d1b892790a02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762782"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833404"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="arguments"></a>引数  
 `[ @subscriber = ] 'subscriber'`オプションを変更するサブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**,、既定値はありません。  
   
-`[ @type = ] type`サブスクライバーの種類を示します。 *種類*は**tinyint**,、既定値は NULL です。 **0**はサブスクライバー [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を示します。 **1** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、以外の ODBC データソースサーバーサブスクライバーを指定します。  
+`[ @type = ] type`サブスクライバーの種類を示します。 *種類*は**tinyint**,、既定値は NULL です。 **0**はサブスクライバーを示し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1**は、以外 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の ODBC データソースサーバーサブスクライバーを指定します。  
   
 `[ @login = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ログイン ID を示します。 *login* のデータ型は **sysname** で、既定値は NULL です。  
   
-`[ @password = ] 'password'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証パスワードを入力します。 *パスワード*は**sysname**,、既定値は**%** です。 **%** password プロパティが変更されていないことを示します。  
+`[ @password = ] 'password'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証パスワードを入力します。 *パスワード*は**sysname**,、既定値は **%** です。 **%** password プロパティが変更されていないことを示します。  
   
 `[ @commit_batch_size = ] commit_batch_size`旧バージョンとの互換性のためにのみサポートされています。  
   
@@ -72,12 +72,12 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_type = ] frequency_type`ディストリビューションタスクをスケジュールする頻度を指定します。 *frequency_type*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
-|**8**|週単位|  
+|**8**|週次|  
 |**まで**|月 1 回|  
 |**32**|月単位の相対|  
 |**64**|自動開始|  
@@ -87,24 +87,24 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`ディストリビューションタスクの日付を指定します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**1**|First (先頭へ)|  
-|**2**|秒|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|Last (最後へ)|  
+|**まで**|末尾|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`定義された*frequency_type*中にディストリビューションタスクを繰り返す頻度を指定します。 *frequency_recurrence_factor*は**int**,、既定値は NULL です。  
   
 `[ @frequency_subday = ] frequency_subday`定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
-|**2**|秒|  
-|**4**|分|  
-|**8**|時|  
+|**2**|Second|  
+|**4**|Minute|  
+|**8**|時間|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequence_subday*の間隔を指定します。 *frequency_subday_interval*は**int**,、既定値は NULL です。  
   
@@ -120,20 +120,20 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @security_mode = ] security_mode`実装されているセキュリティモードです。 *security_mode*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [認証]|  
 |**1**|Windows 認証|  
   
-`[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  *publisher*パブリッシャーでアーティクルの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロパティを変更する場合は、パブリッシャーを使用しないでください。  
+>  パブリッシャーでアーティクルのプロパティを変更する場合は、*パブリッシャー*を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_changesubscriber**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  

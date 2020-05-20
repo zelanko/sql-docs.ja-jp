@@ -1,5 +1,6 @@
 ---
 title: 可用性グループのための Azure への SQL Server マネージバックアップの設定 |Microsoft Docs
+description: このチュートリアルでは、Always On 可用性グループに参加しているデータベースの Microsoft Azure に SQL Server マネージバックアップを構成する方法について説明します。
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +11,12 @@ ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75ab1892641fa3bf805d52c649a8526e256d14b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228204"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849531"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>可用性グループに対する Azure への SQL Server マネージド バックアップの設定
   このトピックは、AlwaysOn 可用性グループに参加しているデータベースの [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の構成に関するチュートリアルです。  
@@ -30,13 +31,13 @@ ms.locfileid: "75228204"
 ### <a name="configuring-ss_smartbackup-for-availability-databases"></a>可用性データベースに対する [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の構成  
  **許可**  
   
--   **Db_backupoperator**データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL**権限、および`EXECUTE` **sp_delete_backuphistory**ストアドプロシージャに対する権限が必要です。  
+-   **Db_backupoperator**データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL**権限、および `EXECUTE` **sp_delete_backuphistory**ストアドプロシージャに対する権限が必要です。  
   
 -   **Smart_admin fn_get_current_xevent_settings**関数に対する**SELECT**権限が必要です。  
   
 -   `EXECUTE` **Smart_admin sp_get_backup_diagnostics**ストアドプロシージャに対する権限が必要です。 さらに、`VIEW SERVER STATE` 権限も必要です (この権限を必要とする他のシステム オブジェクトを内部的に呼び出すため)。  
   
--   ストアド`EXECUTE`プロシージャ`smart_admin.sp_set_instance_backup`および`smart_admin.sp_backup_master_switch`ストアドプロシージャに対する権限が必要です。  
+-   `EXECUTE` `smart_admin.sp_set_instance_backup` ストアドプロシージャおよびストアドプロシージャに対する権限が必要です `smart_admin.sp_backup_master_switch` 。  
   
  次に、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]で AlwaysOn 可用性グループを設定する基本的な手順を説明します。 詳細手順のチュートリアルについては、このトピックの後半で説明します。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "75228204"
   
 4.  各レプリカで、 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] **smart admin. sp_set_db_backup**ストアドプロシージャを使用してデータベースの構成を実行します。  
   
-     **フェールオーバー後の動作: は、フェールオーバーイベント後も引き続き機能し、バックアップコピーと回復性を維持します。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] フェールオーバー後に特別な操作は必要ありません。  
+     ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] フェールオーバー後の動作:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] は、フェールオーバーイベント後も引き続き機能し、バックアップコピーと回復性を維持します。 フェールオーバー後に特別な操作は必要ありません。  
   
 #### <a name="considerations-and-requirements"></a>注意点と要件:  
  AlwaysOn 可用性グループに参加しているデータベースに対して [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を構成する場合は、特定の注意点と要件があります。 次に、考慮事項と要件の一覧を示します。  
@@ -66,7 +67,7 @@ ms.locfileid: "75228204"
 -   暗号化を使用する場合は、すべてのレプリカで同じ証明書を使用します。 この結果、フェールオーバー イベントが発生した場合や、別のレプリカへの復元を行う場合に、継続的で途切れることのないバックアップ操作が容易になります。  
   
 #### <a name="enable-and-configure-ss_smartbackup-for-an-availability-database"></a>可用性データベースに対する [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の有効化と構成  
- このチュートリアルでは、Node1 と Node2 の[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]コンピューターでデータベース (agtestdb 対し) を有効にして構成する手順について説明し[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 、その後、正常性状態の監視を有効にする手順について説明します。  
+ このチュートリアルでは、Node1 と Node2 のコンピューターでデータベース (Agtestdb 対し) を有効にして構成する手順について説明し、 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] その後、正常性状態の監視を有効にする手順について説明し [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ます。  
   
 1.  **Azure ストレージアカウントを作成します。** バックアップは、Azure Blob ストレージサービスに格納されます。 Azure ストレージアカウントをまだ作成していない場合は、最初に作成する必要があります。 詳細については、「 [Azure Storage アカウントの作成](https://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)」を参照してください。 ストレージ アカウントの名前、アクセス キー、および URL をメモしておきます。 ストレージ アカウント名およびアクセス キー情報は、SQL 資格情報の作成に使用します。 SQL 資格情報は、バックアップ操作中にストレージ アカウントへの認証を行うために [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]によって使用されます。  
   
@@ -78,7 +79,7 @@ ms.locfileid: "75228204"
   
 5.  **バックアップ中の暗号化に使用する証明書または非対称キーを作成します。** 最初のノード Node1 で証明書を作成してから、バックアップ証明書を使用してファイルにエクスポートします。これには、 [transact-sql&#41;&#40;](/sql/t-sql/statements/backup-certificate-transact-sql)ます。 Node 2 で、Node 1 からエクスポートしたファイルを使用して証明書を作成します。 ファイルから証明書を作成する方法の詳細については、「 [CREATE certificate &#40;transact-sql&#41;](/sql/t-sql/statements/create-certificate-transact-sql)」の例を参照してください。  
   
-6.  **Node1 で agtestdb 対し[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を有効にして構成します。** SQL Server Management Studio を起動し、可用性データベースがインストールされている Node1 上のインスタンスに接続します。 要件に合わせて、データベース名、ストレージ URL、SQL 資格情報、および保有期間の値を変更した後、クエリ ウィンドウから次のステートメントを実行します。  
+6.  ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Node1 で Agtestdb 対しを有効にして構成する:** SQL Server Management Studio を開始し、可用性データベースがインストールされている node1 上のインスタンスに接続します。 要件に合わせて、データベース名、ストレージ URL、SQL 資格情報、および保有期間の値を変更した後、クエリ ウィンドウから次のステートメントを実行します。  
   
     ```  
     Use msdb;  
@@ -97,7 +98,7 @@ ms.locfileid: "75228204"
   
      暗号化用の証明書の作成の詳細については、「[暗号化されたバックアップを作成](../relational-databases/backup-restore/create-an-encrypted-backup.md)する」の「**バックアップ証明書**の作成」を参照してください。  
   
-7.  **Node2 で agtestdb 対し[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を有効にして構成します。** SQL Server Management Studio を起動し、可用性データベースがインストールされている Node2 上のインスタンスに接続します。 要件に合わせて、データベース名、ストレージ URL、SQL 資格情報、および保有期間の値を変更した後、クエリ ウィンドウから次のステートメントを実行します。  
+7.  ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Node2 で Agtestdb 対しを有効にして構成する:** SQL Server Management Studio を開始し、可用性データベースがインストールされている node2 上のインスタンスに接続します。 要件に合わせて、データベース名、ストレージ URL、SQL 資格情報、および保有期間の値を変更した後、クエリ ウィンドウから次のステートメントを実行します。  
   
     ```  
     Use msdb;  
@@ -116,7 +117,7 @@ ms.locfileid: "75228204"
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] は、指定したデータベースで有効になります。 データベースでのバックアップ操作の実行が開始されるまで最大 15 分かかる場合があります。 バックアップは、優先されるバックアップ レプリカに対して実行されます。  
   
-8.  **拡張イベントの既定の構成を確認します。** を使用してバックアップのスケジュールを設定するレプリカ[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]で、次の transact-sql ステートメントを実行して、拡張イベントの構成を確認します。 これは、通常、データベースが属している可用性グループの優先されるバックアップ レプリカの設定です。  
+8.  **拡張イベントの既定の構成を確認します。** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を使用してバックアップのスケジュールを設定するレプリカで、次の transact-sql ステートメントを実行して、拡張イベントの構成を確認します。 これは、通常、データベースが属している可用性グループの優先されるバックアップ レプリカの設定です。  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
@@ -128,7 +129,7 @@ ms.locfileid: "75228204"
   
     1.  データベース メールがインスタンス上でまだ有効になっていない場合は設定します。 詳細については、「 [Configure Database Mail](../relational-databases/database-mail/configure-database-mail.md)」を参照してください。  
   
-    2.  データベース メールを使用するように SQL Server エージェント通知を構成します。 詳細については、「[データベースメールを使用するように SQL Server エージェントメールを構成する](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)」を参照してください。  
+    2.  データベース メールを使用するように SQL Server エージェント通知を構成します。 詳細については、「 [Configure SQL Server Agent Mail to Use Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)」を参照してください。  
   
     3.  **電子メール通知を有効にして、バックアップ エラーおよび警告を受け取る:** クエリ ウィンドウから、次の Transact-SQL ステートメントを実行します。  
   
@@ -143,7 +144,7 @@ ms.locfileid: "75228204"
   
 10. **Azure Storage アカウントでバックアップファイルを表示します。** SQL Server Management Studio または Azure 管理ポータルからストレージアカウントに接続します。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を使用するように構成したデータベースをホストする SQL Server インスタンスのコンテナーが表示されます。 また、データベースに対して [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を有効にしてから 15 分以内のデータベースとログ バックアップも表示される場合があります。  
   
-11. **正常性状態を監視する:**  前の手順で構成した電子メール通知から監視するか、ログに記録されているイベントをアクティブに監視することができます。 イベントを表示するための Transact-SQL ステートメントのいくつかの例を示します。  
+11. **正常性状態を監視する:** 前の手順で構成した電子メール通知から監視するか、ログに記録されているイベントをアクティブに監視することができます。 イベントを表示するための Transact-SQL ステートメントのいくつかの例を示します。  
   
     ```  
     --  view all admin events  

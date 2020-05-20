@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_registry dynamic management view
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8daa2d195ab1f4cf4602b9633394ed1705a3d7d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2b0a50ee81aa2247d569dab8125924fd6a2c7cf7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80530823"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831871"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>dm_server_registry (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンスについて Windows レジストリに格納されている構成情報とインストール情報を返します。 レジストリキーごとに1行を返します。 この動的管理ビューを使用すると、ホストコンピューター [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用できるサービスやの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのネットワーク構成値などの情報を返すことができます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンスについて Windows レジストリに格納されている構成情報とインストール情報を返します。 レジストリキーごとに1行を返します。 この動的管理ビューを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ホストコンピューターで使用できるサービスやのインスタンスのネットワーク構成値などの情報を返すことができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

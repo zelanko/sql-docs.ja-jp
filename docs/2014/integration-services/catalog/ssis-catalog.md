@@ -10,33 +10,33 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4657bf58a7160f075759a265fef883c92fee0c9
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771578"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921715"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
-  `SSISDB`カタログは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバーに配置した (SSIS) プロジェクトを[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]操作するための中心となるポイントです。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
+  `SSISDB`カタログは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置した (SSIS) プロジェクトを操作するための中心となるポイントです [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
   
- `SSISDB`カタログに格納されているオブジェクトには、プロジェクト、パッケージ、パラメーター、環境、および操作履歴があります。  
+ カタログに格納されているオブジェクトには、 `SSISDB` プロジェクト、パッケージ、パラメーター、環境、および操作履歴があります。  
   
- データベース内のビューに対してクエリを実行することで、 `SSISDB`カタログに格納されているオブジェクト、設定、および操作データを検査します。 `SSISDB` オブジェクトを管理するには、 `SSISDB`データベースでストアドプロシージャを呼び出すか、 `SSISDB`カタログの UI を使用します。 多くの場合、UI でもストアド プロシージャの呼び出しでも同じタスクを実行できます。  
+ データベース内のビューに対してクエリを実行することで、カタログに格納されているオブジェクト、設定、および操作データを検査し `SSISDB` `SSISDB` ます。 オブジェクトを管理するには、データベースでストアドプロシージャを呼び出す `SSISDB` か、カタログの UI を使用し `SSISDB` ます。 多くの場合、UI でもストアド プロシージャの呼び出しでも同じタスクを実行できます。  
   
  `SSISDB` データベースを保守するには、ユーザー データベースの管理に標準的なエンタープライズ ポリシーを適用することをお勧めします。 メンテナンス プランの作成については、「 [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)」をご覧ください。  
   
- カタログ`SSISDB`と`SSISDB`データベースは、Windows PowerShell をサポートしています。 Windows PowerShell による SQL Server の使用の詳細については、「 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)」をご覧ください。 Windows PowerShell を使用してプロジェクトの配置などのタスクを実行する方法の例については、blogs.msdn.com のブログ エントリ「 [SQL Server 2012 での SSIS と PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)」をご覧ください。  
+ `SSISDB`カタログとデータベースは、 `SSISDB` Windows PowerShell をサポートしています。 Windows PowerShell による SQL Server の使用の詳細については、「 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)」をご覧ください。 Windows PowerShell を使用してプロジェクトの配置などのタスクを実行する方法の例については、blogs.msdn.com のブログ エントリ「 [SQL Server 2012 での SSIS と PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)」をご覧ください。  
   
  操作データの表示の詳細については、「[パッケージ実行とその他の操作の監視](../performance/monitor-running-packages-and-other-operations.md)」を参照してください。  
   
- で`SSISDB` [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]カタログにアクセスするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースエンジンに接続し、オブジェクトエクスプローラーで [ **Integration Services カタログ**] ノードを展開します。 で`SSISDB` [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]データベースにアクセスするには、オブジェクトエクスプローラーの [データベースノードを展開します。  
+ でカタログにアクセスするには `SSISDB` [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、データベースエンジンに接続し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトエクスプローラーで [ **Integration Services カタログ**] ノードを展開します。 でデータベースにアクセスするには `SSISDB` [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、オブジェクトエクスプローラーの [データベースノードを展開します。  
   
 > [!NOTE]  
->  データベースの`SSISDB`名前を変更することはできません。  
+>  データベースの名前を変更することはできません `SSISDB` 。  
   
 > [!NOTE]  
->  データベースが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アタッチされているインスタンスが停止した場合、または応答しない場合は、ISServerExec プロセスが終了します。 `SSISDB` メッセージが Windows イベント ログに書き込まれます。  
+>  データベースがアタッチされているインスタンスが停止した場合、または応答しない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `SSISDB` ISServerExec プロセスが終了します。 メッセージが Windows イベント ログに書き込まれます。  
 >   
 >  クラスター フェールオーバーの一環として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースがフェールオーバーした場合、実行中のパッケージは再開されません。 チェックポイントを使用してパッケージを再開できます。 詳細については、「 [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
@@ -92,9 +92,9 @@ ms.locfileid: "62771578"
 ### <a name="operations-and-project-version-cleanup"></a>操作とプロジェクト バージョンのクリーンアップ  
  カタログの多くの操作の状態データは、内部データベース テーブルに格納されます。 たとえば、カタログではパッケージの実行とプロジェクトの配置の状態が追跡されます。 操作データのサイズを維持するには、 **の** SSIS サーバー メンテナンス ジョブ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して古いデータを削除します。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール時に作成されます。  
   
- 同じ名前の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトをカタログの同じフォルダーに配置することで、このプロジェクトを更新または再配置できます。 既定では、プロジェクトを再配置するたびに`SSISDB` 、カタログに以前のバージョンのプロジェクトが保持されます。 操作データのサイズを維持するには、 **SSIS サーバー メンテナンス ジョブ** を使用して古いバージョンのプロジェクトを削除します。  
+ 同じ名前の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトをカタログの同じフォルダーに配置することで、このプロジェクトを更新または再配置できます。 既定では、プロジェクトを再配置するたびに、 `SSISDB` カタログに以前のバージョンのプロジェクトが保持されます。 操作データのサイズを維持するには、 **SSIS サーバー メンテナンス ジョブ** を使用して古いバージョンのプロジェクトを削除します。  
   
- 次`SSISDB`のカタログプロパティで、この[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントジョブの動作を定義します。 **[カタログ プロパティ]** ダイアログ ボックスを利用するか、[catalog.catalog_properties (SSISDB データベース)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) と [catalog.configure_catalog (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database) を利用し、プロパティを表示し、変更できます。  
+ 次の `SSISDB` カタログプロパティで、この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントジョブの動作を定義します。 **[カタログ プロパティ]** ダイアログ ボックスを利用するか、[catalog.catalog_properties (SSISDB データベース)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) と [catalog.configure_catalog (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database) を利用し、プロパティを表示し、変更できます。  
   
  **ログを定期的に消去する**  
  このプロパティが `True` に設定されている場合は、操作のクリーンアップのジョブ ステップが実行されます。  
@@ -102,7 +102,7 @@ ms.locfileid: "62771578"
  **保有期間 (日)**  
  操作データの最大保有期間を日数で定義します。 この期間を経過したデータは削除されます。  
   
- 最小値は 1 日です。 最大値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int`データの最大値によってのみ制限されます。 このデータ型に関する詳細については、「[int、bigint、smallint、および tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)」を参照してください。  
+ 最小値は 1 日です。 最大値は、データの最大値によってのみ制限され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` ます。 このデータ型に関する詳細については、「[int、bigint、smallint、および tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)」を参照してください。  
   
  **古いバージョンを定期的に削除する**  
  このプロパティが `True` に設定されている場合は、プロジェクト バージョンのクリーンアップのジョブ ステップが実行されます。  
@@ -131,7 +131,7 @@ ms.locfileid: "62771578"
   
  暗号化アルゴリズムの変更は、時間のかかる操作です。 最初に、サーバーで以前に指定したアルゴリズムを使用して、すべての構成値の暗号化を解除する必要があります。 次に、新しいアルゴリズムを使用して、その値を再暗号化する必要があります。 この間、サーバーで他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作を実行できません。 そのため、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作を途切れることなく続行できるように、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]では、暗号化アルゴリズムが読み取り専用の値になっています。  
   
- **暗号化アルゴリズム**のプロパティ設定を変更するには`SSISDB` 、データベースをシングルユーザーモードに設定してから、configure_catalog ストアドプロシージャを呼び出します。 *property_name* 引数の ENCRYPTION_ALGORITHM を使用します。 プロパティの値の詳細については、「[catalog.catalog_properties (SSISDB データベース)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)」を参照してください。 ストアド プロシージャの詳細については、「[catalog.configure_catalog (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)」を参照してください。  
+ **暗号化アルゴリズム**のプロパティ設定を変更するには、 `SSISDB` データベースをシングルユーザーモードに設定してから、configure_catalog ストアドプロシージャを呼び出します。 *property_name* 引数の ENCRYPTION_ALGORITHM を使用します。 プロパティの値の詳細については、「[catalog.catalog_properties (SSISDB データベース)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)」を参照してください。 ストアド プロシージャの詳細については、「[catalog.configure_catalog (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)」を参照してください。  
   
  シングル ユーザー モードの詳細については、「 [データベースをシングル ユーザー モードに設定する](../../relational-databases/databases/set-a-database-to-single-user-mode.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の暗号化と暗号化アルゴリズムの詳細については、「 [SQL Server の暗号化](../../relational-databases/security/encryption/sql-server-encryption.md)」のトピックを参照してください。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62771578"
 |サーバー全体の既定のログ記録レベル|SERVER_LOGGING_LEVEL|  
   
 ## <a name="permissions"></a>アクセス許可  
- プロジェクト、環境、およびパッケージは、セキュリティ保護可能なオブジェクトであるフォルダーに格納されます。 MANAGE_OBJECT_PERMISSIONS 権限などのフォルダーに対する権限を許可することができます。 MANAGE_OBJECT_PERMISSIONS を許可すると、ユーザーに ssis_admin ロールのメンバーシップを許可しなくても、フォルダー内容の管理をユーザーに委任できます。 プロジェクト、環境、および操作に権限を付与することもできます。 操作には[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、の初期化、プロジェクトの配置、実行の作成と開始、プロジェクトとパッケージ`SSISDB`の検証、カタログの構成などがあります。  
+ プロジェクト、環境、およびパッケージは、セキュリティ保護可能なオブジェクトであるフォルダーに格納されます。 MANAGE_OBJECT_PERMISSIONS 権限などのフォルダーに対する権限を許可することができます。 MANAGE_OBJECT_PERMISSIONS を許可すると、ユーザーに ssis_admin ロールのメンバーシップを許可しなくても、フォルダー内容の管理をユーザーに委任できます。 プロジェクト、環境、および操作に権限を付与することもできます。 操作には [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 、の初期化、プロジェクトの配置、実行の作成と開始、プロジェクトとパッケージの検証、カタログの構成などがあり `SSISDB` ます。  
   
  データベース ロールの詳細については、「 [データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)」を参照してください。  
   
@@ -157,9 +157,9 @@ ms.locfileid: "62771578"
   
  このプリンシパルによって他のプリンシパルに権限が許可または拒否されている場合は、プリンシパルを削除する前に、権限の許可者が付与した権限を取り消してください。 取り消していない場合は、プリンシパルの削除が試行されるとエラー メッセージが返されます。 トリガーでは、データベース プリンシパルが権限付与対象ユーザーであるすべての権限レコードが削除されます。  
   
- トリガーを無効にしないことをお勧めします。これは、データベースプリンシパルが`SSISDB`データベースから削除された後に、孤立した権限レコードが存在しないようにするためです。  
+ トリガーを無効にしないことをお勧めします。これは、データベースプリンシパルがデータベースから削除された後に、孤立した権限レコードが存在しないようにするためです `SSISDB` 。  
   
-### <a name="managing-permissions"></a>権限の管理  
+### <a name="managing-permissions"></a>アクセス許可の管理  
  権限は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の UI、ストアド プロシージャ、<xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間を使って管理できます。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の UI を使って権限を管理するには、次のダイアログ ボックスを使用します。  
@@ -170,8 +170,8 @@ ms.locfileid: "62771578"
   
  Transact-SQL を利用して権限を管理するには、[catalog.grant_permission (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)、[catalog.deny_permission (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database)、[catalog.revoke_permission (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database) を呼び出します。 すべてのオブジェクトの現在のプリンシパルで有効な権限を表示するには、[catalog.effective_object_permissions (SSISDB データベース)](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database) にクエリを実行します。 このトピックでは、さまざまな種類の権限について説明します。 ユーザーに明示的に割り当てられている権限を表示するには、[catalog.explicit_object_permissions (SSISDB データベース)](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database) にクエリを実行します。  
   
-## <a name="folders"></a>フォルダー  
- フォルダーには、 `SSISDB`カタログ内の1つ以上のプロジェクトおよび環境が含まれます。 [catalog.folders (SSISDB データベース)](/sql/integration-services/system-views/catalog-folders-ssisdb-database) ビューを使用して、カタログのフォルダーに関する情報にアクセスできます。 次のストアド プロシージャを使用して、フォルダーを管理することができます。  
+## <a name="folders"></a>Folders  
+ フォルダーには、カタログ内の1つ以上のプロジェクトおよび環境が含まれ `SSISDB` ます。 [catalog.folders (SSISDB データベース)](/sql/integration-services/system-views/catalog-folders-ssisdb-database) ビューを使用して、カタログのフォルダーに関する情報にアクセスできます。 次のストアド プロシージャを使用して、フォルダーを管理することができます。  
   
 -   [catalog.create_folder &#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database)  
   
@@ -287,6 +287,6 @@ ms.locfileid: "62771578"
   
 -   blogs.msdn.com のブログ エントリ「 [SSIS カタログのアクセス制御のヒント](https://go.microsoft.com/fwlink/?LinkId=246669)」  
   
--   blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](https://go.microsoft.com/fwlink/?LinkId=254267)」  
+-   blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)」  
   
   

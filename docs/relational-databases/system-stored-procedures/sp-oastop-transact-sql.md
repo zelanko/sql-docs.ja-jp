@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAStop
 ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ead1a768a89e9b43c02d7e80619dbf52165d2a38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cce5ea4d449070bd6757ad268be76a2db9ae6ec9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097612"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834315"
 ---
 # <a name="sp_oastop-transact-sql"></a>sp_OAStop (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_OAStop
   
  HRESULT のリターンコードの詳細については、「 [OLE オートメーションのリターンコードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  1つの実行環境は、OLE オートメーションストアドプロシージャを使用するすべてのクライアントによって共有されます。 1つのクライアントがを呼び出すと**sp_OAStop**すべてのクライアントに対して共有実行環境が停止します。 実行環境が停止した後、 **sp_OACreate**を呼び出すと、実行環境が再起動されます。  
   
 ## <a name="permissions"></a>アクセス許可  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergearticles system table
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d712f462ebe504df20ded93d6a9730ce31e4d0db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8328c332fe35b8e157c8631d90b8de67c6e96e17
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251938"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831943"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "72251938"
 |**記述**|**nvarchar(255)**|記事の簡単な説明。|  
 |**pre_creation_command**|**tinyint**|サブスクリプションデータベースでアーティクルが作成されたときに実行する既定のアクションです。<br /><br /> **0 =** なし-サブスクライバーにテーブルが既に存在する場合、アクションは実行されません。<br /><br /> **1** = Drop-テーブルを再作成する前に削除します。<br /><br /> **2** = 削除-サブセットフィルターの WHERE 句に基づいて削除を発行します。<br /><br /> **3** = 切り捨て- **2**と同じですが、行ではなくページを削除します。 ただし、は WHERE 句を受け取りません。|  
 |**pubid**|**uniqueidentifier**|現在のアーティクルが属するパブリケーションの ID。|  
-|**ニックネーム**|**int**|アーティクル id のニックネームマッピングです。|  
+|**nickname**|**int**|アーティクル id のニックネームマッピングです。|  
 |**column_tracking**|**int**|列の追跡がアーティクルに対して実装されているかどうかを示します。|  
 |**status**|**tinyint**|アーティクルの状態。次のいずれかになります。<br /><br /> **1** = 同期されていない-テーブルをパブリッシュする初期処理スクリプトは、次にスナップショットエージェントが実行されるときに実行されます。<br /><br /> **2** = アクティブ-テーブルをパブリッシュする初期処理スクリプトが実行されました。<br /><br /> **5** = New_inactive 追加されます。<br /><br /> **6** = New_active 追加されます。|  
 |**conflict_table**|**sysname**|現在のアーティクルに対して競合しているレコードを含むローカルテーブルの名前です。 このテーブルには情報提供のみを目的としています。このテーブルの内容は、カスタム競合解決ルーチンによって変更または削除されるか、管理者によって直接削除される可能性があります。|  
@@ -69,8 +69,8 @@ ms.locfileid: "72251938"
 |**gen_cur**|**int**|アーティクルのベーステーブルに対するローカルの変更の生成番号。|  
 |**vertical_partition**|**int**|列のフィルター選択がテーブル アーティクルで有効かどうかを示します。 **0**は、垂直フィルターがないことを示し、すべての列をパブリッシュします。|  
 |**identity_support**|**int**|Id 範囲の自動処理を有効にするかどうかを指定します。 **1**は、id 範囲の処理が有効になっていることを示し、 **0**は id 範囲のサポートがないことを意味します。|  
-|**before_image_objid**|**int**|追跡テーブルオブジェクト ID です。 * \@Keep_partition_changes* = **true**を指定してパブリケーションを作成する場合、追跡テーブルには特定のキー列の値が含まれます。|  
-|**before_view_objid**|**int**|ビューテーブルのオブジェクト ID。 ビューは、削除または更新される前に、行が特定のサブスクライバーに属しているかどうかを追跡するテーブルにあります。 * \@Keep_partition_changes* = true を使用してパブリケーションが作成された場合にのみ適用され**ます。**|  
+|**before_image_objid**|**int**|追跡テーブルオブジェクト ID です。 * \@ Keep_partition_changes*true を指定してパブリケーションを作成する場合、追跡テーブルには特定のキー列の値が含まれ  =  **true**ます。|  
+|**before_view_objid**|**int**|ビューテーブルのオブジェクト ID。 ビューは、削除または更新される前に、行が特定のサブスクライバーに属しているかどうかを追跡するテーブルにあります。 * \@ Keep_partition_changes*true を使用してパブリケーションが作成された場合にのみ適用され  =  **ます。**|  
 |**verify_resolver_signature**|**int**|マージレプリケーションで競合回避モジュールを使用する前に、デジタル署名を検証するかどうかを指定します。<br /><br /> **0** = 署名は検証されません。<br /><br /> **1** = 署名は、信頼されたソースからのものかどうかを確認するために検証されます。|  
 |**allow_interactive_resolver**|**bit**|アーティクルに対してインタラクティブ競合回避モジュールの使用を有効にするかどうかを指定します。 **1**は、インタラクティブ競合回避モジュールがアーティクルで使用されることを示します。|  
 |**fast_multicol_updateproc**|**bit**|1 つの UPDATE ステートメントで同じ行の複数の列に対して変更を適用するように、マージ エージェントが有効になっているかどうかを示します。<br /><br /> **0** = 変更された列ごとに個別の更新を発行します。<br /><br /> **1** = update ステートメントを発行して、1つのステートメントで複数の列に対して更新が行われるようにします。|  

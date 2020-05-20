@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addsrvrolemember
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab49a6572bfe8b2879b832642eeb1cf692177bb6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022418"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833648"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>引数  
  [ @loginame **=** ] **'**_ログイン_**'**  
- 固定サーバーロールに追加するログインの名前を指定します。 *login*は**sysname**,、既定値はありません。 *ログインに*は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインを指定できます。 Windows ログインに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセスが許可されていない場合は、アクセスが自動的に許可されます。  
+ 固定サーバーロールに追加するログインの名前を指定します。 *login*は**sysname**,、既定値はありません。 *ログインに*は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは Windows ログインを指定できます。 Windows ログインに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセスが許可されていない場合は、アクセスが自動的に許可されます。  
   
  [ @rolename **=** ] **'**_role_**'**  
  ログインを追加する固定サーバーロールの名前を指定します。 *role*の部分は**sysname**で、既定値は NULL です。次のいずれかの値を指定する必要があります。  
@@ -68,7 +68,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ログインを固定サーバー ロールに追加すると、そのロールに関係付けられている権限がログインに与えられます。  
   
  sa ログインと public のロール メンバーシップを変更することはできません。  
@@ -81,7 +81,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
  新しいメンバーを追加するロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、Windows `Corporate\HelenS`ログインを`sysadmin`固定サーバーロールに追加します。  
+ 次の例では、Windows ログイン `Corporate\HelenS` を `sysadmin` 固定サーバーロールに追加します。  
   
 ```  
 EXEC sp_addsrvrolemember 'Corporate\HelenS', 'sysadmin';  

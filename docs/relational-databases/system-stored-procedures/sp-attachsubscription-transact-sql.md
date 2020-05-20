@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_attachsubscription
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2e059b78a886735ce53b86de77effa43b03136df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3ac5075f3bedeb889536fe90ebe7f6c4049199a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768966"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833452"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のみを維持しています。 *Subscriber_security_mode*が**1**ではなく*subscriber_password*が指定されている場合は、エラーが返されます。  
   
-`[ @distributor_security_mode = ] distributor_security_mode`は、同期時にディストリビューターに接続するときに使用するセキュリティモードです。 *distributor_security_mode*は**int**,、既定値は**0**です。 **0**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。 **1** Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @distributor_security_mode = ] distributor_security_mode`は、同期時にディストリビューターに接続するときに使用するセキュリティモードです。 *distributor_security_mode*は**int**,、既定値は**0**です。 **0**は認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1** Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @distributor_login = ] 'distributor_login'`ディストリビューターへの接続時に、同期時に使用するディストリビューターログインを示します。 *distributor_security_mode*が**0**に設定されている場合は*distributor_login*が必要です。 *distributor_login*は**sysname**,、既定値は NULL です。  
   
@@ -81,7 +81,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`同期時にパブリッシャーに接続するときに使用するセキュリティモードを示します。 *publisher_security_mode*は**int**,、既定値は**1**です。 **0**の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。 **1**の場合、Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`同期時にパブリッシャーに接続するときに使用するセキュリティモードを示します。 *publisher_security_mode*は**int**,、既定値は**1**です。 **0**の場合、認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1**の場合、Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @publisher_login = ] 'publisher_login'`同期時にパブリッシャーに接続するときに使用するログインを示します。 *publisher_login*は**sysname**,、既定値は NULL です。  
   
@@ -105,7 +105,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_attachsubscription**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
  パブリケーションの保有期間が終了している場合、サブスクリプションをパブリケーションにアタッチすることはできません。 保有期間が経過したサブスクリプションが指定されている場合、サブスクリプションがアタッチされているか、最初に同期されたときに、エラーが発生します。 パブリケーションの保有期間が**0** (期限切れにならない) のパブリケーションは無視されます。  

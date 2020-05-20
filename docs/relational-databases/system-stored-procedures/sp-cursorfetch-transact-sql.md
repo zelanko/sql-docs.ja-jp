@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108509"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831803"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_cursorfetch cursor
   
 ## <a name="arguments"></a>引数  
  *cursor*  
- によっ*handle* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]て生成され、sp_cursoropen によって返されるハンドル値です。 *cursor*は、 **int**入力値を必要とする必須パラメーターです。 詳細については、このトピックで後述する「解説」を参照してください。  
+ によっ*handle*て生成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_cursoropen によって返されるハンドル値です。 *cursor*は、 **int**入力値を必要とする必須パラメーターです。 詳細については、このトピックで後述する「解説」を参照してください。  
   
  *fetchtype*  
  フェッチするカーソル バッファーを指定します。 *fetchtype*は省略可能なパラメーターで、次のいずれかの整数入力値を必要とします。  
@@ -96,7 +96,7 @@ sp_cursorfetch cursor
 |キーセットと静的カーソルの場合|通常、現在のキーセットのサイズ。<br /><br /> カーソルが非同期に作成され、この時点までに見つかっ*た行がある場合*は **、-m** 。|  
 |動的カーソルの場合|-1|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="cursor-parameter"></a>cursor パラメーター  
  フェッチ操作が行われる前は、カーソルの既定の位置が結果セットの最初の行の前になります。  
@@ -133,7 +133,7 @@ sp_cursorfetch cursor
   
  RPC 状態パラメーターは、次の表に示すいずれかの値に設定されています。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0|プロシージャが正常に実行されました。|  
 |0x0001|プロシージャが失敗しました。|  
@@ -142,7 +142,7 @@ sp_cursorfetch cursor
   
  行は、通常の結果セットとして返されます。つまり、列形式 (0x2a)、rows (0xd1)、done (0xfd) の順に続きます。 メタデータトークンは sp_cursoropen に対して指定されたものと同じ形式で送信されます。これは、SQL Server 7.0 ユーザーの場合は0x81、0xa5、および0xa5 です。 行の状態インジケーターは、ブラウズ モードのように、各行の末尾の非表示の列として送信されます (列名は rowstat、データ型は INT4)。 この rowstat 列には、次のいずれかの値が含まれます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

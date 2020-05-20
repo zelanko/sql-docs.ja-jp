@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80ffd207d44f8c53bed0fe7fb5f7efb4ed54ebc8
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727791"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886229"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>マスター データ サービス (MDS) の新機能
 
@@ -29,9 +29,9 @@ ms.locfileid: "73727791"
   
  **ダウンロード**  
   
--   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]をダウンロードするには、  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** にアクセスしてください。  
+-   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** に移動してください。  
   
--   Azure アカウントをすでにお持ちですか?  次に**[Here](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 、が[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]既にインストールされている仮想マシンを起動するには、ここにアクセスします。  
+-   Azure アカウントをすでにお持ちですか?  既にお持ちの場合は、 **[こちら](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** にアクセスして、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。  
   
 ##  <a name="improved-performance"></a>パフォーマンスの向上  
   

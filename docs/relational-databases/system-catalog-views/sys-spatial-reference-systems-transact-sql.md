@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.spatial_reference_systems catalog view
 - spatial_reference_systems
 ms.assetid: 3c9bc120-67c3-463f-9e24-29fd623f25a0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6ffd36516fecba70618c79a7bbd0415f6bb2cb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7beb40f3810a4e9793eaadd912a501edacfa222e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68073249"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833986"
 ---
 # <a name="sysspatial_reference_systems-transact-sql"></a>spatial_reference_systems (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68073249"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|spatial_reference_id|**int**|で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サポートされている SRID。|  
+|spatial_reference_id|**int**|でサポートされている SRID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |authority_name|**nvarchar(128)**|SRID の機関。|  
 |authorized_spatial_reference_id|**int**|**Authority_name**のという名前の機関によって指定された SRID。|  
 |well_known_text|**nvarchar (4000)**|SRID の WKT 表現。|  

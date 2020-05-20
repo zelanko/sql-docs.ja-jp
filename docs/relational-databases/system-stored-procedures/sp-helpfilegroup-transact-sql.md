@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpfilegroup
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6fe9798b6a9f560621eba9806e25081f72e316c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c212c587efbf32067d575f488416256f35312f2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122544"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832637"
 ---
 # <a name="sp_helpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|ファイルグループ内のファイルの論理名。|  
 |**fileid**|**smallint**|数値ファイル識別子。|  
-|**/db**|**nchar (260)**|ディレクトリパスを含むファイルの物理名。|  
+|**filename**|**nchar (260)**|ディレクトリパスを含むファイルの物理名。|  
 |**size**|**nvarchar (15)**|ファイル サイズ (KB 単位) です。|  
 |**maxsize**|**nvarchar (15)**|ファイルの最大サイズ。<br /><br /> この値は、ファイルのサイズの上限です。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
 |**成長**|**nvarchar (15)**|ファイルの拡張増分値。 これは、新しい領域が必要になるたびにファイルに追加される領域の量を示します。<br /><br /> 0 = ファイルのサイズは固定されており、容量を追加することはできません。|  

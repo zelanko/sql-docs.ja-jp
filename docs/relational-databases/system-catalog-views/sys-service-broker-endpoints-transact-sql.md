@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_broker_endpoints catalog view
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 33d94bf5a709c2581c6ee99a1e019f4eebcabe0d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 221a490f6accb13706c19860f70c1de2db6d2bf8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68132955"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832673"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>service_broker_endpoints (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68132955"
 |**encryption_algorithm**|**tinyint**|暗号化アルゴリズム。 使用可能な値とその説明および対応する DDL オプションを次に示します。<br /><br /> **0** : なし。 対応する DDL オプション: Disabled。<br /><br /> **1** : RC4。 対応する DDL オプション: {必須 &#124; アルゴリズム RC4}。<br /><br /> **2** : AES。 対応する DDL オプション: アルゴリズム AES が必要です。<br /><br /> **3** : なし、RC4。 対応する DDL オプション: {supported &#124; サポートされているアルゴリズム RC4}。<br /><br /> **4** : NONE、AES。 対応する DDL オプション: アルゴリズム AES がサポートされています。<br /><br /> **5** : RC4、AES。 対応する DDL オプション: アルゴリズム RC4 AES が必要です。<br /><br /> **6** : AES、RC4。 対応する DDL オプション: アルゴリズム AES RC4 が必要です。<br /><br /> **7** : NONE、RC4、AES。 対応する DDL オプション: アルゴリズム RC4 AES がサポートされています。<br /><br /> **8** : NONE、AES、RC4。 対応する DDL オプション: アルゴリズム AES RC4 がサポートされています。<br /><br /> NULL 値は許容されません。|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|暗号化アルゴリズムの説明。 有効な値とそれに対応する DDL オプションを以下に示します。<br /><br /> なし: 無効<br /><br /> RC4: {必須 &#124; アルゴリズム RC4}<br /><br /> AES: アルゴリズム AES が必要です。<br /><br /> なし、RC4: {サポートされている &#124; アルゴリズム RC4}<br /><br /> NONE、AES: サポートされているアルゴリズム AES<br /><br /> RC4、AES: アルゴリズム RC4 AES が必要です。<br /><br /> AES、RC4: アルゴリズム AES RC4 が必要<br /><br /> NONE、RC4、AES: サポートされているアルゴリズム RC4 AES<br /><br /> NONE、AES、RC4: サポートされているアルゴリズム AES RC4<br /><br /> NULLABLE.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]  
 >  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のバージョンでは、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  

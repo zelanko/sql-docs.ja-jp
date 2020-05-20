@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b5e29916d4dc8419311c9639cc5321b1cf391940
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d275b0666ae80ff933d7d236d0d04f2648b744fd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75321623"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834287"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**ArticleName**|**sysname**|同期するアーティクルの名前を指定します。 **ArticleName**には、アーティクルの詳細を表さない結果セット内の行の概要情報も含まれています。|  
 |**PercentComplete**|**decimal**|現在実行中のセッションまたは失敗したセッションに関する特定のアーティクル詳細行で適用された合計変更のパーセントを示します。|  
 |**RelativeCost**|**decimal**|セッションの合計同期時間に対する割合として、アーティクルの同期に要した時間を示します。|  
-|**Duration**|**int**|エージェント セッションの長さです。|  
+|**期間**|**int**|エージェント セッションの長さです。|  
 |**Inserts**|**int**|セッションの挿入数。|  
 |**更新プログラム**|**int**|セッションにおける更新数です。|  
 |**Deletes**|**int**|セッションにおける削除数です。|  
@@ -61,7 +61,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_replmonitorhelpmergesessiondetail**は、マージレプリケーションの監視に使用されます。  
   
  サブスクライバーで実行された場合、 **sp_replmonitorhelpmergesessiondetail**は、最後の5つのマージエージェントセッションに関する詳細情報のみを返します。  

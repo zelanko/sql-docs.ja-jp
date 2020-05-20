@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ef2bce1ff84172d01b1304a416f84865f1cb36bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98963dbab83ffea8590c213284b2540393d7c0fd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078220"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831853"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>sp_create_snapshot (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,28 +47,28 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collection_set_uid = ]'*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  コレクション セットの GUID を指定します。 *collection_set_uid*は**uniqueidentifier**で、既定値はありません。 GUID を取得するには、msdb データベースの dbo.syscollector_collection_sets ビューにクエリを実行します。  
   
- [ @collector_type_uid = ]'*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  コレクター型の GUID。 *collector_type_uid*は**uniqueidentifier**で、既定値はありません。 GUID を取得するには、msdb データベースの dbo.syscollector_collector_types ビューにクエリを実行します。  
   
- [ @machine_name= ]'*machine_name*'  
+ [ @machine_name =] '*machine_name*'  
  コレクション セットが存在するサーバーの名前を指定します。 *machine_name*は**sysname**であり、既定値はありません。  
   
- [ @named_instance= ]'*named_instance*'  
+ [ @named_instance =] '*named_instance*'  
  コレクションセットのインスタンスの名前です。 *named_instance*は**sysname**であり、既定値はありません。  
   
- [ @log_id = ]*log_id*  
+ [ @log_id =] *log_id*  
  データを収集したサーバー上のコレクションセットのイベントログにマップされる一意の識別子。 *log_id*は**bigint**で、既定値はありません。 *Log_id*の値を取得するには、msdb データベースの dbo. syscollector_execution_log ビューに対してクエリを実行します。  
   
- [ @snapshot_id = ]*snapshot_id*  
+ [ @snapshot_id =] *snapshot_id*  
  コアスナップショットビューに挿入される行の一意の識別子です。 *snapshot_id*は**INT**で、出力として返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  アップロード パッケージが管理データ ウェアハウスへのデータのアップロードを開始するごとに、データ コレクターの実行時コンポーネントが core.sp_create_snapshot を呼び出します。  
   
  このプロシージャでは、次の条件がチェックされます。  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55b69995dc6fb639acad84c561ce3530af991c6e
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017995"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872732"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>変更データキャプチャ-sys. dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68017995"
    
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|セッションの ID。<br /><br /> 0 = この行で返されるデータは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが最後に起動されてからのすべてのセッションの集計です。|  
+|**session_id**|**int**|セッションの ID。<br /><br /> 0 = この行で返されるデータは、のインスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最後に起動されてからのすべてのセッションの集計です。|  
 |**start_time**|**datetime**|セッションの開始時刻です。<br /><br /> **Session_id** = 0 の場合、集計されたデータの収集が開始されます。|  
 |**end_time**|**datetime**|セッションが終了した時刻。<br /><br /> NULL は、セッションがアクティブであることを表します。<br /><br /> **Session_id** = 0 の場合、最後のセッションが終了した時刻。|  
 |**duration**|**bigint**|セッションの実行時間 (秒単位) です。<br /><br /> 0 = セッションには変更データキャプチャトランザクションが含まれていません。<br /><br /> **Session_id** = 0 の場合、変更データキャプチャトランザクションを含むすべてのセッションの期間 (秒単位) の合計。|  
@@ -55,8 +55,8 @@ ms.locfileid: "68017995"
 |**empty_scan_count**|**int**|変更データキャプチャトランザクションが含まれていない連続したセッションの数。|  
 |**failed_sessions_count**|**int**|失敗したセッションの数。|  
   
-## <a name="remarks"></a>Remarks  
- この動的管理ビューの値は、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが起動されるたびにリセットされます。  
+## <a name="remarks"></a>解説  
+ この動的管理ビューの値は、のインスタンスが起動されるたびにリセットされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Dm_cdc_log_scan_sessions**動的管理ビューに対してクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 動的管理ビューに対する権限の詳細については、「 [transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
@@ -67,9 +67,9 @@ ms.locfileid: "68017995"
 ```  
 USE AdventureWorks2012;  
 GO  
-SELECT session_id, start_time, end_time, duration, scan_phase  
-    error_count, start_lsn, current_lsn, end_lsn, tran_count  
-    last_commit_lsn, last_commit_time, log_record_count, schema_change_count  
+SELECT session_id, start_time, end_time, duration, scan_phase,  
+    error_count, start_lsn, current_lsn, end_lsn, tran_count,  
+    last_commit_lsn, last_commit_time, log_record_count, schema_change_count,  
     command_count, first_begin_cdc_lsn, last_commit_cdc_lsn,   
     last_commit_cdc_time, latency, empty_scan_count, failed_sessions_count  
 FROM sys.dm_cdc_log_scan_sessions  

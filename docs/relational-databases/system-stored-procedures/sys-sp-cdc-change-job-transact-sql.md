@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_change_job
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 0c2c39363ca1b0824b27645df8c8501931b674a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c0cc477647150a11fc644378196f97cfc21007ff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056764"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832517"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sp_cdc_change_job (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,9 +63,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *Continuous* = 0 の場合、 **sp_cdc_scan**ジョブはログの*max_scans*スキャンまで実行され、各スキャン中に*max_trans*トランザクションまで処理された後、終了します。  
   
- ** \@Continuous**が1から0に変更された場合、 ** \@pollinginterval**は自動的に0に設定されます。 0以外の** \@pollinginterval**に指定された値は無視されます。  
+ ** \@ Continuous**が1から0に変更された場合、 ** \@ pollinginterval**は自動的に0に設定されます。 0以外の** \@ pollinginterval**に指定された値は無視されます。  
   
- ** \@Continuous**が省略された場合、または明示的に NULL に設定され、 ** \@pollinginterval**が明示的に0よりも大きい値に設定されている場合、 ** \@continuous**は自動的に1に設定されます。  
+ ** \@ Continuous**が省略された場合、または明示的に NULL に設定され、 ** \@ pollinginterval**が明示的に0よりも大きい値に設定されている場合、 ** \@ continuous**は自動的に1に設定されます。  
   
  *continuous*は、キャプチャジョブに対してのみ有効です。  
   
@@ -83,9 +83,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  パラメーターを省略した場合、 [cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)テーブルの関連付けられた値は更新されません。 明示的に NULL に設定されたパラメーターは、パラメーターが省略されているかのように扱われます。  
   
  ジョブの種類に対して無効なパラメーターを指定すると、ステートメントは失敗します。  
@@ -98,7 +98,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-changing-a-capture-job"></a>A. キャプチャ ジョブを変更する  
- 次の例では`@job_type`、 `@maxscans` `AdventureWorks2012`データベース内`@maxtrans`のキャプチャジョブの、、およびの各パラメーターを更新します。 キャプチャジョブの他の有効なパラメーターで`@continuous`ある`@pollinginterval`とは省略されています。これらの値は変更されません。  
+ 次の例では `@job_type` 、 `@maxscans` データベース内のキャプチャジョブの、、およびの各パラメーターを更新し `@maxtrans` `AdventureWorks2012` ます。 キャプチャジョブのその他の有効なパラメーターである `@continuous` とは `@pollinginterval` 省略されます。これらの値は変更されません。  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. クリーンアップジョブの変更  
- 次の例では、 `AdventureWorks2012`データベース内のクリーンアップジョブを更新します。 このジョブの種類の有効なパラメーター ( ** \@threshold**を除く) はすべて指定されています。 しきい値は変更されません。 ** \@**  
+ 次の例では、データベース内のクリーンアップジョブを更新し `AdventureWorks2012` ます。 このジョブの種類の有効なパラメーター ( ** \@ threshold**を除く) はすべて指定されています。 ** \@ しきい**値は変更されません。  
   
 ```  
 USE AdventureWorks2012;  

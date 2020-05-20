@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_stats dynamic management view
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23fd1a0c896436dad27ab771e2ed04c775938091
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a04468a272cb3d344ef55074e60d2dca4eec9bb9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77429016"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833853"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,14 +34,14 @@ ms.locfileid: "77429016"
   
 > [!NOTE]
 > - データには完了したクエリだけが反映され、まだ処理中ではないため、dm_exec_query_stats の結果は実行ごとに異なる場合があります **。**
-> - またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_exec_query_stats**という名前を使用します。    
+> - またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_exec_query_stats**という名前を使用します。    
 
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**sql_handle**|**varbinary(64)**  |クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。<br /><br /> **sql_handle** を **statement_start_offset** および **statement_end_offset** と共に使用し、**sys.dm_exec_sql_text** 動的管理関数を呼び出して、クエリの SQL テキストを取得できます。|  
 |**statement_start_offset**|**int**|バッチまたは保存されるオブジェクトのテキスト内での、行が示すクエリの開始位置 (バイト単位)。0 で始まります。|  
-|**statement_end_offset**|**int**|バッチまたは保存されるオブジェクトのテキスト内での、行が示すクエリの終了位置 (バイト単位)。0 で始まります。 以前[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]のバージョンでは、値-1 はバッチの終了を示します。 末尾のコメントは削除されました。|  
+|**statement_end_offset**|**int**|バッチまたは保存されるオブジェクトのテキスト内での、行が示すクエリの終了位置 (バイト単位)。0 で始まります。 以前のバージョンでは [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 、値-1 はバッチの終了を示します。 末尾のコメントは削除されました。|  
 |**plan_generation_num**|**bigint**|再コンパイル後、プランのインスタンスを区別するために使用できるシーケンス番号。|  
 |**plan_handle**|**varbinary(64)**|は、実行され、そのプランがプランキャッシュに存在するか、現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 この値を [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) 動的管理関数に渡して、クエリ プランを取得できます。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
 |**creation_time**|**datetime**|プランがコンパイルされた時刻。|  
@@ -63,7 +63,7 @@ ms.locfileid: "77429016"
 |**last_logical_reads**|**bigint**|プランを前回実行したときに行われた論理読み取りの数。<br /><br /> は常にメモリ最適化テーブルを照会する0になります。|  
 |**min_logical_reads**|**bigint**|プランの 1 回の実行で行われた論理読み取りの最小数。<br /><br /> は常にメモリ最適化テーブルを照会する0になります。|  
 |**max_logical_reads**|**bigint**|プランの 1 回の実行で行われた論理読み取りの最大数。<br /><br /> は常にメモリ最適化テーブルを照会する0になります。|  
-|**total_clr_time**|**bigint**|コンパイル後にこのプランの実行によって共通言語ランタイム (CLR [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ) オブジェクト内で使用された時間 (マイクロ秒単位)。ただし、精度はミリ秒単位までです。 CLR オブジェクトには、ストアド プロシージャ、関数、トリガー、型、および集計を指定できます。|  
+|**total_clr_time**|**bigint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] コンパイル後にこのプランの実行によって共通言語ランタイム (CLR) オブジェクト内で使用された時間 (マイクロ秒単位)。ただし、精度はミリ秒単位までです。 CLR オブジェクトには、ストアド プロシージャ、関数、トリガー、型、および集計を指定できます。|  
 |**last_clr_time**|**bigint**|このプランの前回の実行中に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR オブジェクト内で実行に使用された時間 (マイクロ秒単位)。ただし、精度はミリ秒単位までです。 CLR オブジェクトには、ストアド プロシージャ、関数、トリガー、型、および集計を指定できます。|  
 |**min_clr_time**|**bigint**|プランの 1 回の実行で、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR オブジェクト内部で使用された最小時間 (マイクロ秒単位)。ただし、精度はミリ秒単位までです。 CLR オブジェクトには、ストアド プロシージャ、関数、トリガー、型、および集計を指定できます。|  
 |**max_clr_time**|**bigint**|プランの 1 回の実行で、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 内部で使用された最大時間 (マイクロ秒単位)。ただし、精度はミリ秒単位までです。 CLR オブジェクトには、ストアド プロシージャ、関数、トリガー、型、および集計を指定できます。|  
@@ -103,19 +103,19 @@ ms.locfileid: "77429016"
 |**last_used_threads**|**bigint**|このプランの前回の実行時に使用された並列スレッドの数。 メモリ最適化テーブルに対してクエリを実行する場合は、常に0になります。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
 |**min_used_threads**|**bigint**|このプランで1回の実行中に使用された並列スレッドの最小数。 メモリ最適化テーブルに対してクエリを実行する場合は、常に0になります。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
 |**max_used_threads**|**bigint**|使用される並列スレッドの最大数。このプランでは、1回の実行中に使用されます。 メモリ最適化テーブルに対してクエリを実行する場合は、常に0になります。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
-|**total_columnstore_segment_reads**|**bigint**|クエリによって読み取られた列ストアセグメントの合計。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|    
-|**last_columnstore_segment_reads**|**bigint**|クエリが最後に実行されたときに読み取られた列ストアセグメントの数。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|    
-|**min_columnstore_segment_reads**|**bigint**|1回の実行中にクエリによって読み取られた列ストアセグメントの最小数。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|    
-|**max_columnstore_segment_reads**|**bigint**|1回の実行中にクエリによって読み取られた列ストアセグメントの最大数。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|    
-|**total_columnstore_segment_skips**|**bigint**|クエリでスキップされた列ストアセグメントの合計合計。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|    
-|**last_columnstore_segment_skips**|**bigint**|クエリの最後の実行でスキップされた列ストアセグメントの数。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|    
-|**min_columnstore_segment_skips**|**bigint**|1回の実行中にクエリによってスキップされた列ストアセグメントの最小数。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|    
-|**max_columnstore_segment_skips**|**bigint**|1回の実行中にクエリによってスキップされた列ストアセグメントの最大数。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|
-|**total_spills**|**bigint**|コンパイル後にこのクエリの実行によって書き込まれたページの合計数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|  
-|**last_spills**|**bigint**|クエリが最後に実行されたときに書き込まれたページの数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|  
-|**min_spills**|**bigint**|このクエリで1回の実行中に書き込まれたページの最小数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|  
-|**max_spills**|**bigint**|このクエリで1回の実行中に書き込まれたページの最大数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|  
-|**pdw_node_id**|**int**|このディストリビューションが配置されているノードの識別子。<br /><br /> **適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**total_columnstore_segment_reads**|**bigint**|クエリによって読み取られた列ストアセグメントの合計。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|    
+|**last_columnstore_segment_reads**|**bigint**|クエリが最後に実行されたときに読み取られた列ストアセグメントの数。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|    
+|**min_columnstore_segment_reads**|**bigint**|1回の実行中にクエリによって読み取られた列ストアセグメントの最小数。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|    
+|**max_columnstore_segment_reads**|**bigint**|1回の実行中にクエリによって読み取られた列ストアセグメントの最大数。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|    
+|**total_columnstore_segment_skips**|**bigint**|クエリでスキップされた列ストアセグメントの合計合計。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|    
+|**last_columnstore_segment_skips**|**bigint**|クエリの最後の実行でスキップされた列ストアセグメントの数。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|    
+|**min_columnstore_segment_skips**|**bigint**|1回の実行中にクエリによってスキップされた列ストアセグメントの最小数。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|    
+|**max_columnstore_segment_skips**|**bigint**|1回の実行中にクエリによってスキップされた列ストアセグメントの最大数。 null にすることはできません。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|
+|**total_spills**|**bigint**|コンパイル後にこのクエリの実行によって書き込まれたページの合計数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|**last_spills**|**bigint**|クエリが最後に実行されたときに書き込まれたページの数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|**min_spills**|**bigint**|このクエリで1回の実行中に書き込まれたページの最小数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|**max_spills**|**bigint**|このクエリで1回の実行中に書き込まれたページの最大数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|**pdw_node_id**|**int**|このディストリビューションが配置されているノードの識別子。<br /><br /> **適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|このプランがコンパイルされてから、このプランの実行でリモートページサーバーの読み取り回数の合計。<br /><br /> **適用対象:** Azure SQL DB のハイパースケール |  
 |**last_page_server_reads**|**bigint**|プランを最後に実行したときに実行されたリモートページサーバーの読み取り回数。<br /><br /> **適用対象:** Azure SQL DB のハイパースケール |  
 |**min_page_server_reads**|**bigint**|このプランの1回の実行で行われたリモートページサーバー読み取りの最小数。<br /><br /> **適用対象:** Azure SQL DB のハイパースケール |  
@@ -125,10 +125,10 @@ ms.locfileid: "77429016"
   
 ## <a name="permissions"></a>アクセス許可  
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
    
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ビュー内の統計は、クエリが完了したときに更新されます。  
   
 ## <a name="examples"></a>例  

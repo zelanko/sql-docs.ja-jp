@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobstep
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8e55465dfe2424144d74bc40492fdb897d4aa72b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 08f442197857b76adcaf9e7f5e03d8fe227517fa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130623"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833373"
 ---
 # <a name="sp_delete_jobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,9 +53,9 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ジョブ ステップを削除すると、削除したステップを参照する他のジョブ ステップは自動的に更新されます。  
   
  特定のジョブに関連付けられている手順の詳細については、 **sp_help_jobstep**を実行してください。  
@@ -78,7 +78,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  別のユーザーが所有するジョブステップを削除できるのは、 **sysadmin**のメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 `1`ジョブからジョブ`Weekly Sales Data Backup`ステップを削除します。  
+ 次の例では、ジョブからジョブステップを削除し `1` `Weekly Sales Data Backup` ます。  
   
 ```  
 USE msdb ;  

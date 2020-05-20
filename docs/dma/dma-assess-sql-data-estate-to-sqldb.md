@@ -12,16 +12,16 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30f840c9fe558382c5a0549f09657c917c69c3d4
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253511"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886189"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant を使用して Azure SQL Database に移行する SQL Server のデータ資産の準備状況を評価する
 
@@ -84,7 +84,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
     ![Azure Migrate-レビュー + ツールの追加] タブ](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-tools.png)
 
-    プロジェクトを作成した後、サーバー、ワークロード、データベース、および web アプリの評価と移行に使用する追加のツールを選択できます。
+    プロジェクトを作成した後、サーバーとワークロード、データベース、Web アプリの評価と移行のための追加のツールを選択できます。
 
 ## <a name="assess-and-upload-assessment-results"></a>評価結果の評価とアップロード
 
@@ -97,7 +97,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
 ### <a name="create-an-assessment"></a>評価を作成する
 
-1. 左側で**+** アイコンを選択し、[評価]**プロジェクトタイプ**を選択します。
+1. 左側でアイコンを選択 **+** し、[評価]**プロジェクトタイプ**を選択します。
 2. プロジェクト名を指定し、移行元サーバーと移行先サーバーの種類を選択します。
 
     オンプレミスの SQL Server インスタンスを SQL Server の新しいバージョンまたは Azure VM でホストされている SQL Server にアップグレードする場合は、ソースとターゲットのサーバーの種類を**SQL Server**に設定します。 Azure SQL Database (PaaS) ターゲット準備の評価の対象サーバーの種類を**Azure SQL Database Managed Instance**に設定します。
@@ -127,7 +127,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
    > [!NOTE]
    > 複数のデータベースを削除するには、Shift キーまたは Ctrl キーを押しながら選択し、[ソースの削除] をクリックします。 [ソースの追加] ボタンを使用して、複数の SQL Server インスタンスからデータベースを追加することもできます。
 
-4. [**次**へ] を選択して評価を開始します。
+4. **[次へ]** を選択して評価を開始します。
 
    ![Azure Migrate-Data Migration Assistant-[ソースの選択] 画面](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-select-sources-screen.png)
 

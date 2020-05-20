@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_modules catalog view
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f3e007a0676afd507af54e3b3406297cf40042e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11c4b17c786506f3cad456a766fa6b0394ef3e72
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108988"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833938"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  ネイティブコンパイルのスカラーユーザー定義関数を含む、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL 言語定義モジュールであるオブジェクトごとに1行の値を返します。 型 P、RF、V、TR、FN、IF、TF、および R のオブジェクトには、SQL モジュールが関連付けられています。 スタンドアロンの既定値である種類 D のオブジェクトにも、このビューで SQL モジュール定義が関連付けられています。 これらの型の詳細については、「 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログビューの**type**列」を参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブコンパイルのスカラーユーザー定義関数を含む、の SQL 言語定義モジュールであるオブジェクトごとに1行の値を返します。 型 P、RF、V、TR、FN、IF、TF、および R のオブジェクトには、SQL モジュールが関連付けられています。 スタンドアロンの既定値である種類 D のオブジェクトにも、このビューで SQL モジュール定義が関連付けられています。 これらの型の詳細については、「 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログビューの**type**列」を参照してください。  
   
  詳しくは、「[インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」をご覧ください。  
   
@@ -44,13 +44,13 @@ ms.locfileid: "68108988"
 |**uses_database_collation**|**bit**|スキーマ バインドのモジュール定義が適切な評価のためにデータベースの既定の照合順序に依存する場合は 1 になります。それ以外の場合は 0 になります。 このような依存関係によって、データベースの既定の照合順序が変更されることはありません。|  
 |**is_recompiled**|**bit**|プロシージャは、RECOMPILE オプションを使用して作成されました。|  
 |**null_on_null_input**|**bit**|モジュールは、任意の NULL 入力上で NULL 出力を生成するように宣言されました。|  
-|**execute_as_principal_id**|**Int**|実行データベースプリンシパルの ID。<br /><br /> 既定では NULL、または EXECUTE AS CALLER の場合は NULL です。<br /><br /> [SELF として実行するか、プリンシパルとし\<て実行する場合> 指定されたプリンシパルの ID です。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**Int**|実行データベースプリンシパルの ID。<br /><br /> 既定では NULL、または EXECUTE AS CALLER の場合は NULL です。<br /><br /> [SELF として実行するか、プリンシパルとして実行する場合> 指定されたプリンシパルの ID \< です。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**uses_native_compilation**|**bit**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 0 = ネイティブでコンパイルされていない<br /><br /> 1 = ネイティブコンパイル<br /><br /> 既定値は 0 です。|  
 |**is_inlineable**|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 以降。<br/><br />モジュールがインライン化可能かどうかを示します。 Inlineability は、[ここで](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)指定した条件に基づいています。<br /><br /> 0 = not インライン化可能<br /><br /> 1 = はインライン化可能です。 <br /><br /> スカラー Udf の場合、UDF がインライン化可能の場合、値は1になり、それ以外の場合は0になります。 インライン Tvf の場合は値1、その他のすべてのモジュール型の場合は0を格納します。<br />|  
 |**inline_type**|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 以降。<br /><br />現在モジュールに対してインライン展開が有効になっているかどうかを示します。 <br /><br />0 = インライン展開は無効になっています<br /><br /> 1 = インライン展開が有効になっています。<br /><br /> スカラー Udf では、インライン展開が有効になっている場合 (明示的または暗黙的)、値は1になります。 インライン Tvf の場合、値は常に1になり、その他のモジュールの種類では0になります。<br />|  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  既定の制約の SQL 式、D 型のオブジェクトは、 [default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)カタログビューにあります。 CHECK 制約の SQL 式、C 型のオブジェクトは、 [check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)カタログビューにあります。  
   
  この情報については、「 [sys. dm_db_uncontained_entities &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)」を参照してください。  

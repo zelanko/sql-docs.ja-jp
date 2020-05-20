@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_facets catalog view
 ms.assetid: 4402dde9-1877-4872-8550-140dc2a177d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 41e00ca05205fcb1384d436de2f423c63e05ba5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fa9d06f18f1e5d401e730a8216d3bb43f4894e06
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103364"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833849"
 ---
 # <a name="sysxml_schema_facets-transact-sql"></a>xml_schema_facets (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68103364"
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|このファセットが属する XML コンポーネント (型) の ID。|  
 |**facet_id**|**int**|ファセットの ID (1 から始まる序数)。コンポーネント id 内で一意です。|  
-|**同様**|**char(2)**|ファセットの種類。<br /><br /> LG = 長さ<br /><br /> LN = 最小の長さ<br /><br /> LX = 最大の長さ<br /><br /> PT = パターン (正規表現)<br /><br /> EU = 列挙型<br /><br /> IN = 最小の包含値<br /><br /> IX = 最大包括値<br /><br /> EN = 最小の排他値<br /><br /> EX = 最大排他値<br /><br /> DT = 総桁数<br /><br /> DF = 小数点以下桁数<br /><br /> WS = 空白の正規化|  
+|**kind**|**char(2)**|ファセットの種類。<br /><br /> LG = 長さ<br /><br /> LN = 最小の長さ<br /><br /> LX = 最大の長さ<br /><br /> PT = パターン (正規表現)<br /><br /> EU = 列挙型<br /><br /> IN = 最小の包含値<br /><br /> IX = 最大包括値<br /><br /> EN = 最小の排他値<br /><br /> EX = 最大排他値<br /><br /> DT = 総桁数<br /><br /> DF = 小数点以下桁数<br /><br /> WS = 空白の正規化|  
 |**kind_desc**|**nvarchar (60)**|ファセットの種類の説明。<br /><br /> LENGTH<br /><br /> MINIMUM_LENGTH<br /><br /> MAXIMUM_LENGTH<br /><br /> 種類<br /><br /> ENUMERATION<br /><br /> MINIMUM_INCLUSIVE_VALUE<br /><br /> MAXIMUM_INCLUSIVE_VALUE<br /><br /> MINIMUM_EXCLUSIVE_VALUE<br /><br /> MAXIMUM_EXCLUSIVE_VALUE<br /><br /> TOTAL_DIGITS<br /><br /> FRACTION_DIGITS<br /><br /> WHITESPACE_NORMALIZATION|  
 |**is_fixed**|**bit**|1 = ファセットには事前に指定された固定値があります。<br /><br /> 0 = 固定値はありません  (既定値)。|  
 |**value**|**nvarchar (4000)**|ファセットの事前に指定された値を修正しました。|  

@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f1b28766eab6ecd5035dd8a58e88abaccc97c5
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228473"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921731"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>インメモリ OLTP を実証する AdventureWorks の拡張
     
@@ -35,24 +35,24 @@ ms.locfileid: "75228473"
   
 -   [AdventureWorksに基づくインメモリOLTPサンプルのインストール](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)する手順  
   
--   [サンプルテーブルおよびプロシージャの説明](#Descriptionofthesampletablesandprocedures)- [!INCLUDE[hek_2](../includes/hek-2-md.md)]サンプルによって adventureworks に追加されたテーブルとプロシージャの説明、および一部の adventureworks テーブルをメモリ最適化に移行する際の考慮事項についても説明します。  
+-   [サンプルテーブルおよびプロシージャの説明](#Descriptionofthesampletablesandprocedures)-サンプルによって adventureworks に追加されたテーブルとプロシージャの説明 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 、および一部の adventureworks テーブルをメモリ最適化に移行する際の考慮事項についても説明します。  
   
 -   [デモワークロードを使用してパフォーマンス測定](#PerformanceMeasurementsusingtheDemoWorkload)を実行する手順-これには、ostress をインストールして実行する手順、ワークロードを実行するために使用するツール、およびデモワークロード自体を実行する手順が含まれます。  
   
 -   [サンプルにおけるメモリおよびディスク領域の使用率](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要条件  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-評価版、Developer edition、または Enterprise edition  
   
--   運用環境と仕様が似ているサーバー (パフォーマンス テスト用)。 このサンプルでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に使用できるメモリが 16 GB 以上必要です。 の[!INCLUDE[hek_2](../includes/hek-2-md.md)]ハードウェアに関する一般的なガイドラインについては、次のブログ投稿を参照してください。[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   運用環境と仕様が似ているサーバー (パフォーマンス テスト用)。 このサンプルでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に使用できるメモリが 16 GB 以上必要です。 のハードウェアに関する一般的なガイドラインについ [!INCLUDE[hek_2](../includes/hek-2-md.md)] ては、次のブログ投稿を参照してください。[https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/](https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/)  
   
-##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>AdventureWorks に[!INCLUDE[hek_2](../includes/hek-2-md.md)]基づくサンプルのインストール  
+##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>[!INCLUDE[hek_2](../includes/hek-2-md.md)]AdventureWorks に基づくサンプルのインストール  
  サンプルをインストールするには、次の手順を実行します。  
   
 1.  AdventureWorks2014 データベースの完全バックアップのアーカイブをダウンロードします。  
   
-    1.  次のもの[https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661)を開きます。  
+    1.  次のものを開き [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) ます。  
   
     2.  メッセージが表示されたら、ファイルをローカル フォルダーに保存します。  
   
@@ -87,13 +87,13 @@ ms.locfileid: "75228473"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  サンプルスクリプト '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] rtm [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample. sql ' を[SQL Server 2014 RTM のインメモリ OLTP サンプル](https://go.microsoft.com/fwlink/?LinkID=396372)からローカルフォルダーにダウンロードします。  
+5.  サンプルスクリプト ' [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] rtm [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample. sql ' を[SQL Server 2014 RTM のインメモリ OLTP サンプル](https://go.microsoft.com/fwlink/?LinkID=396372)からローカルフォルダーにダウンロードします。  
   
-6.  スクリプト '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. sql ' の変数 ' checkpoint_files_location ' の値を更新して、 [!INCLUDE[hek_2](../includes/hek-2-md.md)]チェックポイントファイルのターゲットの場所をポイントします。 チェックポイント ファイルは、シーケンシャル IO パフォーマンスに優れたドライブに配置します。  
+6.  スクリプト ' RTM Sample. sql ' の変数 ' checkpoint_files_location ' の値を更新して、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[hek_2](../includes/hek-2-md.md)] チェックポイントファイルのターゲットの場所をポイントし [!INCLUDE[hek_2](../includes/hek-2-md.md)] ます。 チェックポイント ファイルは、シーケンシャル IO パフォーマンスに優れたドライブに配置します。  
   
      AdventureWorks2014 データベースを指すように変数 'database_name' の値を更新します。  
   
-    1.  パス名の一部\'として円記号 (\) を含めるようにしてください。  
+    1.  \'パス名の一部として円記号 (\) を含めるようにしてください。  
   
     2.  例:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "75228473"
   
     2.  Management Studio を使用します。  
   
-        1.  クエリウィンドウで "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample .sql" スクリプトを開きます。  
+        1.  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[hek_2](../includes/hek-2-md.md)] クエリウィンドウで "RTM Sample .sql" スクリプトを開きます。  
   
         2.  AdventureWorks2014 データベースが含まれているターゲット サーバーに接続します  
   
@@ -223,7 +223,7 @@ ms.locfileid: "75228473"
   
 -   "*エイリアス UDT*" - 元のテーブルでは、ユーザー定義データ型 dbo.Flag が使用されます。これは、システム データ型 bit と同じです。 移行したテーブルでは、代わりに bit データ型が使用されます。  
   
--   *BIN2 collation* -列名と productnumber は、インデックスキーに含まれます。したがって、で[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]は BIN2 照合順序を持つ必要があります。 ここでは、アプリケーションが、照合順序の詳細 (大文字と小文字を区別など) に依存しないものと見なされます。  
+-   *BIN2 collation* -列名と productnumber は、インデックスキーに含まれます。したがって、では BIN2 照合順序を持つ必要があり [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ます。 ここでは、アプリケーションが、照合順序の詳細 (大文字と小文字を区別など) に依存しないものと見なされます。  
   
 -   *Rowguid* - rowguid 列は省略されます。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
   
@@ -412,7 +412,7 @@ ms.locfileid: "75228473"
   
 -   -S 接続先の [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの名前  
   
--   -E Windows 認証を使用して接続します (既定)。認証を使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]する場合は、ユーザー名と-P オプションを使用して、ユーザー名とパスワードをそれぞれ指定します。  
+-   -E Windows 認証を使用して接続します (既定)。認証を使用する場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーザー名と-P オプションを使用して、ユーザー名とパスワードをそれぞれ指定します。  
   
 -   -d データベースの名前。この例では AdventureWorks2014  
   
@@ -462,7 +462,7 @@ END
  ostress ツールを使って、複数のコンカレント接続を使用してスクリプトを実行します。 "-n" パラメーターで接続数を制御し、"r" パラメーターで各接続のスクリプト実行回数を制御します。  
   
 #### <a name="functional-validation-of-the-workload"></a>ワークロードの機能検証  
- すべてが正しく動作することを確認するために、10個の同時接続と5回の反復処理を使用してサンプル\*テストを開始し、合計 10 * 5 20 = 1000 の販売注文を挿入します。  
+ すべてが正しく動作することを確認するために、10個の同時接続と5回の反復処理を使用してサンプルテストを開始し、合計 10 * 5 \* 20 = 1000 の販売注文を挿入します。  
   
  次のコマンドでは、既定のインスタンスがローカル コンピューターで使用されていることを前提としています。 名前付きインスタンスまたはリモート サーバーを使用している場合は、- S パラメーターを使用してサーバー名を適宜変更します。  
   
@@ -519,7 +519,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
   
  合計 8 個の物理 (16 個の論理) コアを備えたテスト サーバーでの所要時間は 41 分 25 秒でした。 合計 24 個の物理 (48 個の論理) コアを備えた 2 台目のテスト サーバーでの所要時間は 52 分 16 秒でした。  
   
- ディスク ベース テーブルを使用していると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では CPU をフルに活用できません。これが主な要因となり、このテストでは、メモリ最適化テーブルとディスク ベース テーブルのパフォーマンスに差が生じました。 CPU をフル活用できない原因はラッチ競合です。同時実行トランザクションは同じデータ ページに書き込もうとしますが、ラッチにより、一度に 1 つのトランザクションしかページに書き込むことができなくなります。 [!INCLUDE[hek_2](../includes/hek-2-md.md)] エンジンはラッチ フリーで、データ行はページ単位で整理されていません。 このため、同時実行トランザクションでは、互いの挿入がブロック[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]されることはないため、が CPU を完全に利用できるようになります。  
+ ディスク ベース テーブルを使用していると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では CPU をフルに活用できません。これが主な要因となり、このテストでは、メモリ最適化テーブルとディスク ベース テーブルのパフォーマンスに差が生じました。 CPU をフル活用できない原因はラッチ競合です。同時実行トランザクションは同じデータ ページに書き込もうとしますが、ラッチにより、一度に 1 つのトランザクションしかページに書き込むことができなくなります。 [!INCLUDE[hek_2](../includes/hek-2-md.md)] エンジンはラッチ フリーで、データ行はページ単位で整理されていません。 このため、同時実行トランザクションでは、互いの挿入がブロックされることはないため、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が CPU を完全に利用できるようになります。  
   
  ワークロードの実行中、タスク マネージャーなどを使用して、CPU の使用率を確認できます。 ディスク ベース テーブルの CPU 使用率が、100% からはかけ離れていることがわかります。 16 個の論理プロセッサを備えたテスト構成では、使用率は 24% 前後で推移します。  
   
