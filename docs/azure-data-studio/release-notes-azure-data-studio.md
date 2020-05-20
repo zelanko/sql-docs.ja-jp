@@ -674,7 +674,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 | Change | 詳細 |
 | :----- | :------ |
 | [新しい通知 UI](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui)。 | SQL Operations Studio の通知を簡単に管理して確認できます。 |
-| [統合型のターミナル分割](https://code.visualstudio.com/updates/v1_21#_split-terminals)。 | 複数の開いている端末を同時に操作できます。 |
+| [統合型のターミナル分割](https://code.visualstudio.com/updates/v1_21#_split-terminals)。 | 複数の開いているターミナルを同時に操作できます。 |
 | [大きなファイルと保護されたファイルの保存](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges)。 | 管理者権限で保護された \>256M のファイルを SQL Operations Studio 内に保存できます。 |
 | [大きなファイルのサポートの改善](https://code.visualstudio.com/updates/v1_21#_text-buffer-improvements)。 | 大きなファイルのテキスト バッファーが最適化されました。 |
 | [設定検索の改善](https://code.visualstudio.com/updates/v1_20#_settings-search)。 | 自然言語検索で適切な設定を簡単に見つけることができます。 |
