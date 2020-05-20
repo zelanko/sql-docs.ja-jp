@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68255600"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829454"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,8 +80,8 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="permissions"></a>アクセス許可  
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
 ## <a name="remarks"></a>Remarks  
   
@@ -91,7 +91,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
 ### <a name="evaluating-set-options"></a>Set オプションの評価  
  **Set_options**に返された値を、プランをコンパイルしたオプションに変換するには、 **set_options**値から値を減算します。値の最大値は、可能な限り多く、0に達するまで続きます。 減算する各値は、クエリ プランに使用されたオプションに対応しています。 たとえば、 **set_options**の値が251の場合、プランをコンパイルしたオプションは ANSI_NULL_DFLT_ON (128)、QUOTED_IDENTIFIER (64)、ANSI_NULLS (32)、ANSI_WARNINGS (16)、CONCAT_NULL_YIELDS_NULL (8)、並列プラン (2)、および ANSI_PADDING (1) になります。  
   
-|オプション|値|  
+|オプション|[値]|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Parallel Plan|2|  
@@ -111,7 +111,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |基本<br /><br /> プランがコンパイルされたときに、データベースオプションのパラメーター化が FORCED に設定されたことを示します。|131072|  
-|ROWCOUNT|**適用対象:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]から[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**適用対象:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]宛先[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>カーソル  
  非アクティブなカーソルは、カーソルの格納に使用されたメモリをカーソルの同時ユーザーが再利用できるように、コンパイル済みプランにキャッシュされます。 たとえば、カーソルの割り当てを解除せずに、バッチでそのカーソルを宣言して使用するとします。 2 人のユーザーが同じバッチを実行している場合、アクティブなカーソルが 2 つになります。 カーソルの割り当てが解除されると (場合によっては、別のバッチに存在する可能性があります)、カーソルの格納に使用されるメモリはキャッシュされ、解放されません。 この非アクティブなカーソルの一覧は、コンパイル済みのプランに保持されます。 次にユーザーがバッチを実行するときに、キャッシュされたカーソルのメモリが再利用され、アクティブなカーソルとして適切に初期化されます。  
@@ -119,7 +119,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
 ### <a name="evaluating-cursor-options"></a>カーソルオプションの評価  
  **Acceptable_cursor_options** **required_cursor_options**に返された値を、プランをコンパイルしたオプションに変換するには、列の値から、可能な最大値から順に、0に達するまで値を減算します。 減算する各値は、クエリ プランに使用されたカーソル オプションに対応しています。  
   
-|オプション|値|  
+|オプション|[値]|  
 |------------|-----------|  
 |None|0|  
 |INSENSITIVE|1|  
@@ -141,7 +141,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
 ## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. 特定のプランの属性を返す  
- 次の例では、指定されたプランのすべてのプラン属性を返します。 指定`sys.dm_exec_cached_plans`されたプランのプランハンドルを取得するために、最初に動的管理ビューが照会されます。 2番目のクエリで`<plan_handle>`は、を最初のクエリのプランハンドル値に置き換えます。  
+ 次の例では、指定されたプランのすべてのプラン属性を返します。 `sys.dm_exec_cached_plans`指定されたプランのプランハンドルを取得するために、最初に動的管理ビューが照会されます。 2番目のクエリでは、を `<plan_handle>` 最初のクエリのプランハンドル値に置き換えます。  
   
 ```sql  
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097681"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829608"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,8 +74,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|競合レコードは、競合の解決で失われたサーバーに格納されます。 このプロパティを変更する場合は、既存のサブスクライバーを再初期化する必要があります。|  
 |**compress_snapshot**|**true**|代替スナップショット フォルダー内のスナップショットは CAB 形式に圧縮されます。 既定のスナップショットフォルダー内のスナップショットは圧縮できません。 このプロパティを変更するには、新しいスナップショットが必要です。|  
 ||**false**|既定では、スナップショットは圧縮されません。 このプロパティを変更するには、新しいスナップショットが必要です。|  
-|**conflict_logging**|**文書**|競合レコードはパブリッシャーに格納されます。|  
-||**サブスクライバ**|競合レコードは、競合の原因となったサブスクライバーに保存されます。 サブスクライバーで[!INCLUDE[ssEW](../../includes/ssew-md.md)]はサポートされていません *。*|  
+|**conflict_logging**|**publisher**|競合レコードはパブリッシャーに格納されます。|  
+||**サブスクライバ**|競合レコードは、競合の原因となったサブスクライバーに保存されます。 サブスクライバーではサポートされていません [!INCLUDE[ssEW](../../includes/ssew-md.md)] *。*|  
 ||**両方とも**|競合レコードは、パブリッシャーとサブスクライバーの両方に保存されます。|  
 |**conflict_retention**||競合を保持する保有期間を日数で指定する**int**です。 *Conflict_retention*を**0**に設定すると、競合のクリーンアップは必要ありません。|  
 |**記述**||パブリケーションの説明です。|  
@@ -113,7 +113,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**status**|**active**|パブリケーションはアクティブな状態です。|  
 ||**稼動**|パブリケーションは非アクティブな状態です。|  
 |**sync_mode**|**ネイティブ**または<br /><br /> **bcp ネイティブ**|すべてのテーブルのネイティブモードの一括コピープログラム出力は、初期スナップショットに使用されます。|  
-||**記号**<br /><br /> または**bcp 文字**|すべての非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーに必要な初期スナップショットには、すべてのテーブルのキャラクターモードの一括コピープログラム出力が使用されます。|  
+||**記号**<br /><br /> または**bcp 文字**|すべての非サブスクライバーに必要な初期スナップショットには、すべてのテーブルのキャラクターモードの一括コピープログラム出力が使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**use_partition_groups**<br /><br /> 注: partition_groups を使用すると、 **setupbelongs**使用されるように復帰し、 **changemergearticle**で**use_partition_groups = false**に設定した場合、スナップショットの取得後に正しく反映されない可能性があります。 スナップショットによって生成されるトリガーは、パーティショングループに準拠しています。<br /><br /> このシナリオの回避策は、状態を非アクティブに設定し、 **use_partition_groups**を変更して、状態をアクティブに設定することです。|**true**|パブリケーションは事前計算済みパーティションを使用します。|  
 ||**false**|パブリケーションは事前計算済みパーティションを使用しません。|  
 |**validate_subscriber_info**||サブスクライバー情報の取得に使用する関数を一覧表示します。 次に、情報のパーティション分割が一貫性を保っていることをサブスクライバーが確認するときに使用する動的フィルター選択の基準の妥当性を検証します。|  
@@ -178,7 +178,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 -   **validate_subscriber_info**  
   
- *Publish_to_active_directory*を使用して Active Directory するパブリケーションオブジェクトの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一覧を表示するには、オブジェクトが Active Directory で既に作成されている必要があります。  
+ *Publish_to_active_directory*を使用して Active Directory するパブリケーションオブジェクトの一覧を表示するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトが Active Directory で既に作成されている必要があります。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-author: mashamsft
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6e768f447cd53321861eae91bbe40e2e34ad12f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e31935a52d4819023b5ed17ac0ef12c106ec49ba
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68043163"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828992"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
 
@@ -40,10 +40,10 @@ ms.locfileid: "68043163"
 |partner_database|**sysname**|リンクされた SQL Database サーバー上の geo レプリケートされたデータベースの名前。|  
 |replication_state|**tinyint**|このデータベースの geo レプリケーションの状態。次のいずれかになります。<br /><br /> 0 = 保留中。 アクティブなセカンダリデータベースの作成がスケジュールされていますが、必要な準備手順がまだ完了していません。<br /><br /> 1 = シード処理。 Geo レプリケーションターゲットはシードされていますが、2つのデータベースがまだ同期されていません。 シード処理が完了するまで、セカンダリデータベースに接続することはできません。 プライマリからセカンダリデータベースを削除すると、シード処理操作が取り消されます。<br /><br /> 2 = キャッチアップ。 セカンダリデータベースはトランザクション一貫性のある状態であり、常にプライマリデータベースと同期されています。|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|role|**tinyint**|Geo レプリケーションロール。次のいずれかになります。<br /><br /> 0 = プライマリ。 Database_id は、geo レプリケーションパートナーシップのプライマリデータベースを参照します。<br /><br /> 1 = セカンダリ。  Database_id は、geo レプリケーションパートナーシップのプライマリデータベースを参照します。|  
+|ロール|**tinyint**|Geo レプリケーションロール。次のいずれかになります。<br /><br /> 0 = プライマリ。 Database_id は、geo レプリケーションパートナーシップのプライマリデータベースを参照します。<br /><br /> 1 = セカンダリ。  Database_id は、geo レプリケーションパートナーシップのプライマリデータベースを参照します。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|セカンダリ型。次のいずれかになります。<br /><br /> 0 = いいえ。 セカンダリデータベースには、フェールオーバーまでアクセスできません。<br /><br /> 1 = ReadOnly。 セカンダリデータベースは、ApplicationIntent = ReadOnly のクライアント接続のみにアクセスできます。<br /><br /> 2 = すべて。 セカンダリデータベースには、任意のクライアント接続からアクセスできます。|  
-|secondary_allow_connections _desc|**nvarchar(256)**|いいえ<br /><br /> All<br /><br /> 読み取り専用|  
+|secondary_allow_connections _desc|**nvarchar(256)**|いいえ<br /><br /> すべて<br /><br /> 読み取り専用|  
   
 ## <a name="permissions"></a>アクセス許可
 

@@ -55,7 +55,7 @@ SQL Server Reporting Services (SSRS) とインターネット インフォメー
 |Application|URL 予約|説明|受信する要求|  
 |-----------------|---------------------|-----------------|---------------------|  
 |レポート サーバー|`https://+:80/ReportServer`|厳密なワイルドカード、ポート 80、レポート サーバーの仮想ディレクトリ|レポート サーバーの仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 https://\<コンピューター名>/reportserver に対するすべての要求が、レポート サーバー Web サービスによって受信されます。|  
-|Web ポータル|`https://+:80/Reports`|厳密なワイルドカード、ポート 80、Reports という仮想ディレクトリ|reports という仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 https://[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]コンピューター名>/reports に対するすべての要求が \<によって受信されます。|  
+|Web ポータル|`https://+:80/Reports`|厳密なワイルドカード、ポート 80、Reports という仮想ディレクトリ|reports という仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 https://\<コンピューター名>/reports に対するすべての要求が [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]によって受信されます。|  
 |IIS|`https://*:80/`|弱いワイルドカード、ポート 80|まだ他のアプリケーションによって受信されていない残りの要求をすべてポート 80 で受信します。|  
 
 ## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>IIS 8.0、8.5 での SQL Server Reporting Services のサイド バイ サイド配置

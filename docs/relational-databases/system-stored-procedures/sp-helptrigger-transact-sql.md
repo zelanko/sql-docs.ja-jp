@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helptrigger
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c01290f0f95a7e240931a9398ab7acea1b287be
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048218"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824405"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helptrigger [ @tabname = ] 'table'
   
 `[ @triggertype = ] 'type'`情報を返す DML トリガーの種類を示します。 *種類*は**char (6)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**DELETE**|DELETE トリガー情報を返します。|  
 |**INSERT**|挿入トリガー情報を返します。|  
@@ -71,8 +71,8 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="permissions"></a>アクセス許可  
  テーブルに対する[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例で`sp_helptrigger`は、を実行して、 `Person.Person`テーブルのトリガーに関する情報を生成します。  
+## <a name="examples"></a>例  
+ 次の例では、を実行し `sp_helptrigger` て、テーブルのトリガーに関する情報を生成し `Person.Person` ます。  
   
 ```  
 USE AdventureWorks2012;  

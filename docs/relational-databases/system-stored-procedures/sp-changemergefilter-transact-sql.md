@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergefilter
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bfe3cd91150d1990acc410cb4a61af9485c61f4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 32ba968dc5e6ef78ff507b783e6212e4453586d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304942"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829588"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 |プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
-|**filter_type**|**1**|結合フィルター。<br /><br /> このオプションは、サブスクライバーを[!INCLUDE[ssEW](../../includes/ssew-md.md)]サポートするために必要です。|  
+|**filter_type**|**1**|結合フィルター。<br /><br /> このオプションは、サブスクライバーをサポートするために必要です [!INCLUDE[ssEW](../../includes/ssew-md.md)] 。|  
 ||**2**|論理レコードリレーションシップ。|  
 ||**3**|結合フィルターは論理レコードリレーションシップでもあります。|  
 |**filtername**||フィルターの名前。|  
@@ -84,7 +84,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>Remarks  
  **sp_changemergefilter**は、マージレプリケーションで使用します。  
   
- マージアーティクルのフィルターを変更するには、スナップショットが存在する場合は再作成する必要があります。 これを行うには、 ** \@force_invalidate_snapshot**を**1**に設定します。 また、この記事へのサブスクリプションがある場合は、サブスクリプションを再初期化する必要があります。 これを行うには、 ** \@force_reinit_subscription**を**1**に設定します。  
+ マージアーティクルのフィルターを変更するには、スナップショットが存在する場合は再作成する必要があります。 これを行うには、 ** \@ force_invalidate_snapshot**を**1**に設定します。 また、この記事へのサブスクリプションがある場合は、サブスクリプションを再初期化する必要があります。 これを行うには、 ** \@ force_reinit_subscription**を**1**に設定します。  
   
  論理レコードを使用するには、パブリケーションとアーティクルが多くの要件を満たしている必要があります。 詳細については、「[Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」 (論理レコードによる関連行への変更のグループ化) を参照してください。  
   

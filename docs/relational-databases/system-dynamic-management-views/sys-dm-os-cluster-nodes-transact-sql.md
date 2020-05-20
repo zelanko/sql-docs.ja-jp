@@ -16,31 +16,31 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_cluster_nodes dynamic management view
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 44c42bfebdd1a5b4e74a4a95243fb0c0606e9908
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5af8ef828e6d05fc221a410692b057f9fc5054ed
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900253"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820887"
 ---
 # <a name="sysdm_os_cluster_nodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   フェールオーバークラスターインスタンス構成内のノードごとに1行の値を返します。 現在のインスタンスがフェールオーバークラスターインスタンスの場合は、このフェールオーバークラスターインスタンス (以前の "仮想サーバー") が定義されているノードの一覧を返します。 現在のサーバー インスタンスがフェールオーバー クラスター インスタンスではない場合は、空の行セットを返します。  
   
-> **注:** またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_cluster_nodes**という名前を使用します。  
+> **注:** またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_os_cluster_nodes**という名前を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**ノード**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバークラスターインスタンス (仮想サーバー) 構成のノードの名前。|  
-|status|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバークラスターインスタンス内のノードの状態: 0、1、2、3、-1。 詳細については、「 [Getclusternodestate 関数](https://go.microsoft.com/fwlink/?LinkId=204794)」を参照してください。|  
+|status|**int**|フェールオーバークラスターインスタンス内のノードの状態 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : 0、1、2、3、-1。 詳細については、「 [Getclusternodestate 関数](https://go.microsoft.com/fwlink/?LinkId=204794)」を参照してください。|  
 |status_description|**nvarchar (20)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター ノードの状態の説明。<br /><br /> 0 = up<br /><br /> 1 = ダウン<br /><br /> 2 = 一時停止<br /><br /> 3 = 結合<br /><br /> -1 = 不明|  
-|is_current_owner|bit|1は、このノードが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバークラスターリソースの現在の所有者であることを示します。|  
-|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|is_current_owner|bit|1は、このノードがフェールオーバークラスターリソースの現在の所有者であることを示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  フェールオーバー クラスタリングが有効な場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (仮想サーバー) 構成の一部として指定されているフェールオーバー クラスター内のどのノードでも実行できます。  
   
 > **注:** このビューは fn_virtualservernodes 関数を置き換えます。これは今後のリリースで非推奨とされる予定です。  

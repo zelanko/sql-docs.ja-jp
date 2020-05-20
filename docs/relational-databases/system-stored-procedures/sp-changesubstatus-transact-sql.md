@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771328"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824057"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,15 +64,15 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication* **%** の**sysname**,、既定値はです。 *パブリケーション*が指定されていない場合は、すべてのパブリケーションが影響を受けます。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*の**sysname**,、既定値は **%** です。 *パブリケーション*が指定されていない場合は、すべてのパブリケーションが影響を受けます。  
   
-`[ @article = ] 'article'`アーティクルの名前を指定します。 アーティクルの名前はパブリケーションに対して一意である必要があります。 *アーティクル*は**sysname**で、既定値は**%** です。 *アーティクル*が指定されていない場合は、すべてのアーティクルが影響を受けます。  
+`[ @article = ] 'article'`アーティクルの名前を指定します。 アーティクルの名前はパブリケーションに対して一意である必要があります。 *アーティクル*は**sysname**で、既定値は **%** です。 *アーティクル*が指定されていない場合は、すべてのアーティクルが影響を受けます。  
   
-`[ @subscriber = ] 'subscriber'`状態を変更するサブスクライバーの名前を指定します。 *サブスクライバー*の**sysname**,、既定値は**%** です。 *サブスクライバー*が指定されていない場合、指定されたアーティクルのすべてのサブスクライバーについて状態が変更されます。  
+`[ @subscriber = ] 'subscriber'`状態を変更するサブスクライバーの名前を指定します。 *サブスクライバー*の**sysname**,、既定値は **%** です。 *サブスクライバー*が指定されていない場合、指定されたアーティクルのすべてのサブスクライバーについて状態が変更されます。  
   
 `[ @status = ] 'status'`**Syssubscriptions**テーブルのサブスクリプションの状態を示します。 *status*の部分は**sysname**で、既定値はありません。これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**active**|サブスクライバーが同期され、データを受信しています。|  
 |**稼動**|サブスクライブはしていませんが、サブスクライバーのエントリが存在します。|  
@@ -80,7 +80,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @previous_status = ] 'previous_status'`は、サブスクリプションの以前の状態です。 *previous_status*は**sysname**,、既定値は NULL です。 このパラメーターを使用すると、現在その状態になっているすべてのサブスクリプションを変更することができます。これにより、特定のサブスクリプションセットに対してグループ関数が許可されます (たとえば、すべてのアクティブなサブスクリプションを**サブスクライブ**済みに設定します)。  
   
-`[ @destination_db = ] 'destination_db'`転送先データベースの名前を指定します。 *destination_db*は**sysname**で、既定値は**%** です。  
+`[ @destination_db = ] 'destination_db'`転送先データベースの名前を指定します。 *destination_db*は**sysname**で、既定値は **%** です。  
   
 `[ @frequency_type = ] frequency_type`ディストリビューションタスクをスケジュールする頻度を指定します。 *frequency_type*は**int**,、既定値は NULL です。  
   
@@ -88,25 +88,25 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`ディストリビューションタスクの日付を指定します。 このパラメーターは、 *frequency_type*が 32 (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**1**|First (先頭へ)|  
-|**2**|秒|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|Last (最後へ)|  
+|**まで**|末尾|  
 |NULL (既定値)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*によって使用される定期実行係数です。 *frequency_recurrence_factor*は**int**,、既定値は NULL です。  
   
 `[ @frequency_subday = ] frequency_subday`定義した期間にスケジュールを再設定する頻度を分単位で指定します。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
-|**2**|秒|  
-|**4**|分|  
-|**8**|時|  
+|**2**|Second|  
+|**4**|Minute|  
+|**8**|時間|  
 |NULL (既定値)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*の間隔を指定します。 *frequency_subday_interval*は**int**,、既定値は NULL です。  
@@ -135,7 +135,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  > [!NOTE]  
 >  リモートエージェントのアクティブ化は非推奨とされており、サポートされなくなりました。 このパラメーターは、スクリプトの旧バージョンとの互換性を維持するためにのみサポートされています。 *Remote_agent_server_name*を NULL 以外の値に設定すると、エラーが生成されます。  
   
-`[ @dts_package_name = ] 'dts_package_name'`データ変換サービス (DTS) パッケージの名前を指定します。 *dts_package_name*は**sysname**で、既定値は NULL です。 たとえば、 **DTSPub_Package**という名前のパッケージの場合、 `@dts_package_name = N'DTSPub_Package'`を指定します。  
+`[ @dts_package_name = ] 'dts_package_name'`データ変換サービス (DTS) パッケージの名前を指定します。 *dts_package_name*は**sysname**で、既定値は NULL です。 たとえば、 **DTSPub_Package**という名前のパッケージの場合、を指定し `@dts_package_name = N'DTSPub_Package'` ます。  
   
 `[ @dts_package_password = ] 'dts_package_password'`パッケージのパスワードを指定します。 *dts_package_password*は**sysname**で、既定値は NULL です。これは、password プロパティを変更せずに残すことを指定します。  
   
@@ -148,10 +148,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @distribution_job_name = ] 'distribution_job_name'`ディストリビューションジョブの名前を指定します。 *distribution_job_name*は**sysname**,、既定値は NULL です。  
   
-`[ @publisher = ] 'publisher'`以外[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  *publisher*パブリッシャーでアーティクルの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロパティを変更する場合は、パブリッシャーを使用しないでください。  
+>  パブリッシャーでアーティクルのプロパティを変更する場合は、*パブリッシャー*を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

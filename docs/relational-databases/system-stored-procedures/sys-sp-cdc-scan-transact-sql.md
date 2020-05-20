@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_scan
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: a064b49df3f45d9cbc4b148b8d78c3661f9a2bcc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 84e404ffb9459abc3f0ab2a7a1604d3f4c5609a8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066734"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827420"
 ---
 # <a name="syssp_cdc_scan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +56,9 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのキャプチャ ジョブが変更データ キャプチャによって使用されている場合、sys.sp_cdc_scan は sys.sp_MScdc_capture_job によって内部的に呼び出されます。 変更データ キャプチャのログ スキャン操作が既にアクティブである場合、またはデータベースのトランザクション レプリケーションが有効になっている場合は、プロシージャは明示的に実行できません。 このストアドプロシージャは、自動的に構成されるキャプチャジョブの動作をカスタマイズする管理者が使用する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  

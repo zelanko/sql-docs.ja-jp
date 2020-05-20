@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setstatus
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1e6d3ed9c31307fb032d4ccc3cc950565c39c52c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98eaa39475b58c7fad5b20c4f6a65101d33b103d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095933"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809809"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
  次の表に、指定できる状態を示します。  
   
-|Status|説明|  
+|状態|説明|  
 |------------|-----------------|  
 |**0**|指定されたトレースを停止します。|  
 |**1**|指定されたトレースを開始します。|  
@@ -68,7 +68,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 |**9**|指定されたトレースハンドルは無効です。|  
 |**13**|メモリ不足。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
   
- トレースが既に指定された状態に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ある場合、は**0**を返します。  
+ トレースが既に指定された状態にある場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は**0**を返します。  
   
 ## <a name="remarks"></a>Remarks  
  すべての SQL トレースストアドプロシージャ (**sp_trace_xx**) のパラメーターは厳密に型指定されます。 これらのパラメーターを、引数の説明で指定されている正しいデータ型で指定しないと、このストアド プロシージャではエラーが返されます。  

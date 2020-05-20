@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sys.table_types
 - UDTT
 ms.assetid: c05fd873-aff2-4a89-9936-a54c2ea09996
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc4e77bd978432bf6e1e11930c121e0e7fc6b6ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e000d4e4f7f46d57bb1ae9a4e5c370169eb1227f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982099"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821323"
 ---
 # <a name="systable_types-transact-sql"></a>table_types (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  ユーザー定義テーブル型のプロパティを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表示します。 テーブル型は、テーブル変数またはテーブル値パラメーターを宣言できる型です。 各テーブル型には、 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログビューの外部キーである**type_table_object_id**があります。 この ID 列を使用すると、通常のテーブルの**object_id**列に似た方法でさまざまなカタログビューに対してクエリを実行し、列や制約などのテーブル型の構造を検出することができます。    
+  ユーザー定義テーブル型のプロパティを表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 テーブル型は、テーブル変数またはテーブル値パラメーターを宣言できる型です。 各テーブル型には、 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログビューの外部キーである**type_table_object_id**があります。 この ID 列を使用すると、通常のテーブルの**object_id**列に似た方法でさまざまなカタログビューに対してクエリを実行し、列や制約などのテーブル型の構造を検出することができます。    
  
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

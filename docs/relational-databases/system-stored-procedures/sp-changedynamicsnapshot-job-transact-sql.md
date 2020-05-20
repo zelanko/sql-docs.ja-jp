@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 67aeb7243b52ef4675b9effea27d3c81c1078538
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768946"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829626"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,12 +59,12 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_type = ] frequency_type`エージェントをスケジュールする頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
-|**8**|週単位|  
+|**8**|週次|  
 |**まで**|月 1 回|  
 |**32**|月単位の相対|  
 |**64**|自動開始|  
@@ -73,7 +73,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`エージェントを実行する曜日。 *frequency_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|土曜日|  
 |**2**|月曜日|  
@@ -82,32 +82,32 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**5**|Thursday|  
 |**6**|金曜日|  
 |**7**|土曜日|  
-|**8**|日|  
+|**8**|日間|  
 |**9**|平日|  
-|**10**|週末|  
+|"**10**"|週末|  
 |NULL (既定値)||  
   
 `[ @frequency_subday = ] frequency_subday`定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
-|**2**|秒|  
-|**4**|分|  
-|**8**|時|  
+|**2**|Second|  
+|**4**|Minute|  
+|**8**|時間|  
 |NULL (既定値)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*の間隔を指定します。 *frequency_subday_interval*は**int**,、既定値は NULL です。  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`マージエージェントが実行される日付を指定します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**1**|First (先頭へ)|  
-|**2**|秒|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|Last (最後へ)|  
+|**まで**|末尾|  
 |NULL (既定値)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*によって使用される定期実行係数です。 *frequency_recurrence_factor*は**int**,、既定値は NULL です。  
@@ -120,7 +120,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day`マージエージェントのスケジュール設定を停止する時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**,、既定値は NULL です。  
   
-`[ @job_login = ] 'job_login'`パラメーター化[!INCLUDE[msCoName](../../includes/msconame-md.md)]された行フィルターを使用してサブスクリプションのスナップショットを生成するときに、スナップショットエージェントを実行する Windows アカウントを指定します。 *job_login*は**nvarchar (257)** で、既定値は NULL です。  
+`[ @job_login = ] 'job_login'`パラメーター化された [!INCLUDE[msCoName](../../includes/msconame-md.md)] 行フィルターを使用してサブスクリプションのスナップショットを生成するときに、スナップショットエージェントを実行する Windows アカウントを指定します。 *job_login*は**nvarchar (257)** で、既定値は NULL です。  
   
 `[ @job_password = ] 'job_password'`パラメーター化された行フィルターを使用してサブスクリプションのスナップショットを生成するときに、スナップショットエージェントを実行する Windows アカウントのパスワードを指定します。 *job_password*は**nvarchar (257)** で、既定値は NULL です。  
   

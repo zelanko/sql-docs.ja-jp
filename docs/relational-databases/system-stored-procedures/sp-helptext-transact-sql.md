@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_helptext
 ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 160d52c8c145828f6a63c104aecb17e04867cee8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 39bc13882e3293bca022f52240f18de696f3b7c1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048289"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826671"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  ユーザー定義ルール、既定値、暗号化[!INCLUDE[tsql](../../includes/tsql-md.md)]されていないストアドプロシージャ、ユーザー定義[!INCLUDE[tsql](../../includes/tsql-md.md)]関数、トリガー、計算列、check 制約、ビュー、システムストアドプロシージャなどのシステムオブジェクトの定義を表示します。  
+  ユーザー定義ルール、既定値、暗号化されていない [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアドプロシージャ、ユーザー定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数、トリガー、計算列、check 制約、ビュー、システムストアドプロシージャなどのシステムオブジェクトの定義を表示します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**[テキスト]**|**nvarchar(255)**|オブジェクトの定義|  
+|**テキスト**|**nvarchar(255)**|オブジェクトの定義|  
   
 ## <a name="remarks"></a>Remarks  
- sp_helptext は、複数の行でオブジェクトを作成するために使用される定義を表示します。 各行には、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 255 文字の定義が含まれています。 定義は、 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログビューの**定義**列に存在します。  
+ sp_helptext は、複数の行でオブジェクトを作成するために使用される定義を表示します。 各行には、255文字の定義が含まれてい [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 定義は、 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログビューの**定義**列に存在します。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。  
@@ -62,7 +62,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-displaying-the-definition-of-a-trigger"></a>A. トリガーの定義の表示  
- 次の例では、 `dEmployee` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース内のトリガーの定義を表示します。  
+ 次の例では、データベース内のトリガーの定義を表示し `dEmployee` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -72,7 +72,7 @@ GO
 ```  
   
 ### <a name="b-displaying-the-definition-of-a-computed-column"></a>B. 計算列の定義を表示する  
- 次の例では、 `TotalDue` `SalesOrderHeader` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース内のテーブルの計算列の定義を表示します。  
+ 次の例では、データベース内のテーブルの計算列の定義を表示し `TotalDue` `SalesOrderHeader` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
 USE AdventureWorks2012;  

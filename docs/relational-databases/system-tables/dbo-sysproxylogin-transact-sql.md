@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysproxylogin system table
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2fb62d70c1b0a41edf684a8216205fb43e070eea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cfa29500a798cdcfe535a377abd8c649972415b0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67984883"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825958"
 ---
 # <a name="dbosysproxylogin-transact-sql"></a>dbo. sysproxylogin (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67984883"
 |**proxy_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントの ID。 この値は、 **sysproxies**テーブルの**proxy_id**列に対応しています。|  
 |**sid**|**varbinary (85)**|SQL Server ログイン用の Microsoft Windows *security_identifier* 。|  
 |**principal_id**|**int**|指定されたサブシステムステップでプロキシアカウントを使用する権限を持つユーザーまたはグループの ID。|  
-|**flags**|**int**|ログインの種類:<br /><br /> **0** = Windows ユーザーまたはグループ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン。<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定システムロール<br /><br /> **2** = **msdb**データベースロール|  
+|**flags**|**int**|ログインの種類:<br /><br /> **0** = Windows ユーザーまたはグループ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン。<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定システムロール<br /><br /> **2**  = **msdb**データベースロール|  
   
 ## <a name="remarks"></a>Remarks  
  このテーブルにアクセスできるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  

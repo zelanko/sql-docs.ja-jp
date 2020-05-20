@@ -17,24 +17,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_stacks dynamic management view
 ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f287c548a7ebb71b1ebf3e1bce30e43b412c755
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2db6fb4245b98abe36ec4b2813fe6fbc366e7046
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265718"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824536"
 ---
 # <a name="sysdm_os_stacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  この動的管理ビューは、次の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]操作を実行するためにによって内部的に使用されます。  
+  この動的管理ビューは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、次の操作を実行するためにによって内部的に使用されます。  
   
 -   未処理の割り当てなど、デバッグデータを追跡します。  
   
--   コンポーネントが特定の呼び出しが行われ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]たと想定している場所のコンポーネントによって使用されるロジックを想定または検証します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネントが特定の呼び出しが行われたと想定している場所のコンポーネントによって使用されるロジックを想定または検証します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -47,8 +47,8 @@ ms.locfileid: "68265718"
   
 ## <a name="permissions"></a>アクセス許可
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
 
 ## <a name="see-also"></a>参照  

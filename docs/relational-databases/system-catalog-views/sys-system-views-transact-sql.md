@@ -17,19 +17,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.system_views catalog view
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fce2816d8cb169c5761f47dd0f9dd0a6ed1959f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dbfca799f3c3dc4b3930f487fb45413c7711af48
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078613"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821301"
 ---
 # <a name="syssystem_views-transact-sql"></a>system_views (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  に[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]付属しているシステムビューごとに1行の値を格納します。 すべてのシステムビューは、 **sys**または**INFORMATION_SCHEMA**という名前のスキーマに含まれています。  
+  に付属しているシステムビューごとに1行の値を格納 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] します。 すべてのシステムビューは、 **sys**または**INFORMATION_SCHEMA**という名前のスキーマに含まれています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

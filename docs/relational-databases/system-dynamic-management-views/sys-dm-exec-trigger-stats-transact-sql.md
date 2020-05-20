@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_trigger_stats dynamic management function
 ms.assetid: 863498b4-849c-434d-b748-837411458738
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65e54b90fa036e738f2e1e6a28498559051011a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65072bd42e1e1f85189afe8bb832a2b0811417e2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262208"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824572"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ ms.locfileid: "68262208"
 |**last_elapsed_time**|**bigint**|このトリガーの前回の実行完了までの経過時間 (マイクロ秒単位)。|  
 |**min_elapsed_time**|**bigint**|このトリガーの実行完了までの最小経過時間 (マイクロ秒単位)。|  
 |**max_elapsed_time**|**bigint**|このトリガーの実行完了までの最大経過時間 (マイクロ秒単位)。| 
-|**total_spills**|**bigint**|コンパイル後にこのトリガーの実行によって書き込まれたページの合計数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|  
-|**last_spills**|**bigint**|最後にトリガーが実行されたときに書き込まれたページの数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|  
-|**min_spills**|**bigint**|このトリガーによって1回の実行中に書き込まれたページの最小数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|  
-|**max_spills**|**bigint**|このトリガーによって1回の実行中に書き込まれたページの最大数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降|  
+|**total_spills**|**bigint**|コンパイル後にこのトリガーの実行によって書き込まれたページの合計数。<br /><br /> **適用対象**: CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|**last_spills**|**bigint**|最後にトリガーが実行されたときに書き込まれたページの数。<br /><br /> **適用対象**: CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|**min_spills**|**bigint**|このトリガーによって1回の実行中に書き込まれたページの最小数。<br /><br /> **適用対象**: CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|**max_spills**|**bigint**|このトリガーによって1回の実行中に書き込まれたページの最大数。<br /><br /> **適用対象**: CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |**total_page_server_reads**|**bigint**|コンパイル後にこのトリガーの実行によって実行されたページサーバー読み取りの合計数。<br /><br /> **適用対象**: Azure SQL Database ハイパースケール|  
 |**last_page_server_reads**|**bigint**|最後にトリガーを実行したときに実行されたページサーバーの読み取り回数。<br /><br /> **適用対象**: Azure SQL Database ハイパースケール|  
 |**min_page_server_reads**|**bigint**|このトリガーの1回の実行で行われた、ページサーバーの読み取りの最小数。<br /><br /> **適用対象**: Azure SQL Database ハイパースケール|  
@@ -80,8 +80,8 @@ ms.locfileid: "68262208"
   
 ## <a name="permissions"></a>アクセス許可  
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
 ## <a name="examples"></a>使用例  
  次の例では、平均経過時間で識別される上位 5 つのトリガーに関する情報を返します。  

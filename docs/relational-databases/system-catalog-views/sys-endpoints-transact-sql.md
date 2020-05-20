@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.endpoints catalog view
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b814f8cb0013a202f88aba76b99cf52c49dd1c1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa68fc9a434a93e506099e715b435fe717e9834e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061409"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829725"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68061409"
 |**protocol_desc**|**nvarchar(60)**|エンドポイントプロトコルの説明。 NULLABLE. 次のいずれかの値です。<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **VIA**注: VIA プロトコルは非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**type**|**tinyint**|エンドポイントのペイロードの種類。<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> NULL 値は許可されません。|  
 |**type_desc**|**nvarchar(60)**|エンドポイントのペイロードの種類の説明。 NULL 値が許可されます。 次のいずれかの値です。<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
-|**state**|**tinyint**|エンドポイントの状態。<br /><br /> 0 = 要求を開始し、リッスンし、処理します。<br /><br /> 1 = 要求を停止、リッスン、処理していません。<br /><br /> 2 = 無効、リッスンしていません。<br /><br /> 既定の状態は1です。 NULL 値が許可されます。|  
+|**状態**|**tinyint**|エンドポイントの状態。<br /><br /> 0 = 要求を開始し、リッスンし、処理します。<br /><br /> 1 = 要求を停止、リッスン、処理していません。<br /><br /> 2 = 無効、リッスンしていません。<br /><br /> 既定の状態は1です。 NULL 値が許可されます。|  
 |**state_desc**|**nvarchar(60)**|エンドポイントの状態の説明。<br /><br /> 開始 = 要求をリッスンして処理しています。<br /><br /> STOPPED = 要求のリスニング中で、処理は行っていません。<br /><br /> DISABLED = リッスンしていません。<br /><br /> 既定の状態は STOPPED です。<br /><br /> NULL 値が許可されます。|  
 |**is_admin_endpoint**|**bit**|エンドポイントが管理用であるかどうかを示します。<br /><br /> 0 = 管理者用以外のエンドポイント。<br /><br /> 1 = エンドポイントは管理エンドポイントです。<br /><br /> NULL 値は許可されません。|  
   

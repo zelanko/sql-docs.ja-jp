@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitsubscription
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eaeeaa5009cb119b40dcde9b8f9baa170d8f7bef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee9af1ee7057b7a64a62e0ead12ba7e386839587
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762529"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828252"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
 `[ @for_schema_change = ] 'for_schema_change'`パブリケーションデータベースでのスキーマ変更の結果、再初期化が行われるかどうかを示します。 *for_schema_change*は**ビット**,、既定値は0です。 **0**の場合、即時更新を許可するパブリケーションのアクティブなサブスクリプションは、そのアーティクルの一部ではなく、パブリケーション全体が再初期化される限り、再アクティブ化されます。 これは、スキーマ変更の結果として再初期化が開始されることを意味します。 **1**の場合、スナップショットエージェントが実行されるまで、アクティブなサブスクリプションは再アクティブ化されません。  
   
-`[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  *パブリッシャーはパブリッシャー*に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は使用できません。  
+>  *パブリッシャーはパブリッシャー*には使用できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ @ignore_distributor_failure = ] ignore_distributor_failure`ディストリビューターが存在しないかオフラインになっている場合でも、再初期化を許可します。 *ignore_distributor_failure*は**ビット**,、既定値は0です。 **0**の場合、ディストリビューターが存在しないかオフラインになっていると、再初期化は失敗します。  
   

@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_name_id_map dynamic management view
 ms.assetid: e07bb8a9-37de-4a39-a257-950d7c3ae8fb
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4fc446efc410ff13d5697c7ab195e3e3895b4839
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ef571a14c0d4679930f04ed0353231ba5a0c44aa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900432"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827941"
 ---
 # <a name="sysdm_hadr_name_id_map-transact-sql"></a>dm_hadr_name_id_map (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  の現在の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが、可用性グループ ID、WSFC リソース id、および WSFC グループ id という3つの一意の id に結合した Always On 可用性グループのマッピングを示します。 このマッピングの目的は、WSFC リソースまたは WSFC グループの名前が変更されるシナリオを処理することです。  
+  の現在のインスタンスが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用性グループ id、wsfc リソース id、および Wsfc グループ id という3つの一意の id に結合した Always On 可用性グループのマッピングを示します。 このマッピングの目的は、WSFC リソースまたは WSFC グループの名前が変更されるシナリオを処理することです。  
    
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f6ad28ace9f8b3a1b4852c54e3e4f427bd22c06d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771566"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824447"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`関連付けられているパブリケーションの名前を指定します。 *publication*のデータ型は**sysname**で、 **%** 既定値はです。この場合、このサーバーのすべてのサブスクリプション情報が返されます。  
+`[ @publication = ] 'publication'`関連付けられているパブリケーションの名前を指定します。 *publication*のデータ型は**sysname**で、既定値はです **%** 。この場合、このサーバーのすべてのサブスクリプション情報が返されます。  
   
-`[ @article = ] 'article'`アーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値は**%** です。これにより、選択したパブリケーションとサブスクライバーのすべてのサブスクリプション情報が返されます。 **All**の場合、パブリケーションの完全なサブスクリプションに対して1つのエントリのみが返されます。  
+`[ @article = ] 'article'`アーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値はです **%** 。これにより、選択したパブリケーションとサブスクライバーのすべてのサブスクリプション情報が返されます。 **All**の場合、パブリケーションの完全なサブスクリプションに対して1つのエントリのみが返されます。  
   
-`[ @subscriber = ] 'subscriber'`サブスクリプション情報を取得するサブスクライバーの名前を指定します。 *サブスクライバー*のデータ型は**sysname**で、 **%** 既定値はです。これにより、選択したパブリケーションとアーティクルのすべてのサブスクリプション情報が返されます。  
+`[ @subscriber = ] 'subscriber'`サブスクリプション情報を取得するサブスクライバーの名前を指定します。 *サブスクライバー*のデータ型は**sysname**で、既定値はです **%** 。これにより、選択したパブリケーションとアーティクルのすべてのサブスクリプション情報が返されます。  
   
-`[ @destination_db = ] 'destination_db'`転送先データベースの名前を指定します。 *destination_db*は**sysname**で、既定値は**%** です。  
+`[ @destination_db = ] 'destination_db'`転送先データベースの名前を指定します。 *destination_db*は**sysname**で、既定値は **%** です。  
   
 `[ @found = ] 'found'OUTPUT`は、行を返すことを示すフラグです。 *見つかった*は**int**と出力パラメーターで、既定値は23456です。  
   
@@ -81,7 +81,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**offload_server**|**sysname**|リモートエージェントのアクティブ化が有効になっているサーバーの名前。 NULL の場合は、 [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md)テーブルに一覧表示されている現在の offload_server が使用されます。|  
 |**dts_package_name**|**sysname**|データ変換サービス (DTS) パッケージの名前を指定します。|  
 |**dts_package_location**|**int**|DTS パッケージの場所 (サブスクリプションに割り当てられている場合)。 パッケージがある場合、値**0**は**ディストリビューター**でのパッケージの場所を指定します。 値**1**は**サブスクライバー**を指定します。|  
-|**subscriber_security_mode**|**smallint**|サブスクライバーのセキュリティモードを指定します。 **1**は Windows 認証を、 **0**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を意味します。|  
+|**subscriber_security_mode**|**smallint**|サブスクライバーのセキュリティモードを指定します。 **1**は Windows 認証を、 **0**は認証を意味し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**subscriber_login**|**sysname**|サブスクライバーのログイン名を指定します。|  
 |**subscriber_password**||実際のサブスクライバーパスワードは返されません。 結果は、"**&#42;&#42;&#42;&#42;&#42;&#42;**" 文字列によってマスクされます。|  
 |**job_login**|**sysname**|ディストリビューションエージェントの実行に使用する Windows アカウントの名前。|  

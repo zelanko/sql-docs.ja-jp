@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d040fa0ccfe9b962f8847db0a841b95a534326fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c046d562164e47ed72580801196756714547755e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531032"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820722"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  のインスタンスに新しいユーザー定義エラーメッセージを格納[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 **Sp_addmessage**を使用して格納されたメッセージを表示するには、**メッセージ**カタログビューを使用します。  
+  のインスタンスに新しいユーザー定義エラーメッセージを格納 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] します。 **Sp_addmessage**を使用して格納されたメッセージを表示するには、**メッセージ**カタログビューを使用します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 `[ @lang = ] 'language'`は、このメッセージの言語です。 *language*は**sysname**既定値は NULL です。 複数の言語を同じサーバーにインストールすることができるため、 *language*は各メッセージを記述する言語を指定します。 *Language*を省略すると、その言語はセッションの既定の言語になります。  
   
-`[ @with_log = ] { 'TRUE' | 'FALSE' }`メッセージが発生したときに Windows アプリケーションログに書き込むかどうかを指定します。 with_log は**varchar (5)** で、既定値は FALSE です。 ** \@** TRUE の場合、エラーは常に Windows アプリケーションログに書き込まれます。 FALSE の場合、常に Windows のアプリケーション ログに書き込まれるわけではありませんが、エラーの発生状況によっては書き込まれることもあります。 このオプションを使用できるのは、 **sysadmin**サーバーロールのメンバーだけです。  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }`メッセージが発生したときに Windows アプリケーションログに書き込むかどうかを指定します。 ** \@ with_log**は**varchar (5)** で、既定値は FALSE です。 TRUE の場合、エラーは常に Windows アプリケーションログに書き込まれます。 FALSE の場合、常に Windows のアプリケーション ログに書き込まれるわけではありませんが、エラーの発生状況によっては書き込まれることもあります。 このオプションを使用できるのは、 **sysadmin**サーバーロールのメンバーだけです。  
   
 > [!NOTE]  
 >  Windows のアプリケーション ログにメッセージを書き込む場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のエラー ログ ファイルにも同じ内容が書き込まれます。  
@@ -61,9 +61,9 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の英語以外のバージョンで、別の言語を使用してメッセージを追加するには、あらかじめ英語版のメッセージが存在している必要があります。 2 つのバージョンのメッセージの重大度は同じであることが必要です。  
   
  パラメーターを含むメッセージをローカライズする場合は、元のメッセージのパラメーターに対応するパラメーター番号を使用します。 各パラメーター番号の後に感嘆符 (!) を挿入します。  

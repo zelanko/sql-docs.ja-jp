@@ -17,28 +17,28 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_tasks dynamic management view
 ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 086065aa79ca6fba7ad84e5b7e7f99f6f462f7dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2bea6efbfe3f3703df80325a08ccbcf617aea54f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74164898"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829301"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>dm_os_tasks (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスでアクティブになっているタスクごとに1行の値を返します。 タスクは、SQL Server での実行の基本単位です。 タスクの例としては、クエリ、ログイン、ログアウト、およびゴーストクリーンアップアクティビティ、チェックポイントアクティビティ、ログライター、並列再実行アクティビティなどのシステムタスクがあります。 タスクの詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
+  のインスタンスでアクティブになっているタスクごとに1行の値を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 タスクは、SQL Server での実行の基本単位です。 タスクの例としては、クエリ、ログイン、ログアウト、およびゴーストクリーンアップアクティビティ、チェックポイントアクティビティ、ログライター、並列再実行アクティビティなどのシステムタスクがあります。 タスクの詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
   
 > [!NOTE]  
-> またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_tasks**という名前を使用します。  
+> またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_os_tasks**という名前を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary (8)**|オブジェクトのメモリアドレス。|  
-|**task_state**|**nvarchar(60)**|タスクの状態です。 これは次のいずれかです。<br /><br /> PENDING: ワーカー スレッドを待機しています。<br /><br /> RUNNABLE: 実行可能ですが、クォンタムの受信を待機しています。<br /><br /> 実行中: 現在スケジューラ上で実行されています。<br /><br /> [中断]: ワーカーがありますが、イベントを待機しています。<br /><br /> 完了: 完了しました。<br /><br /> SPINLOOP: スピンロックで停止しています。|  
+|**task_state**|**nvarchar(60)**|タスクの状態です。 DLL は、次のいずれかの場所に置くことができます。<br /><br /> PENDING: ワーカー スレッドを待機しています。<br /><br /> RUNNABLE: 実行可能ですが、クォンタムの受信を待機しています。<br /><br /> 実行中: 現在スケジューラ上で実行されています。<br /><br /> [中断]: ワーカーがありますが、イベントを待機しています。<br /><br /> 完了: 完了しました。<br /><br /> SPINLOOP: スピンロックで停止しています。|  
 |**context_switches_count**|**int**|このタスクが完了したスケジューラコンテキストスイッチの数。|  
 |**pending_io_count**|**int**|このタスクによって実行される物理 i/o の数。|  
 |**pending_io_byte_count**|**bigint**|このタスクによって実行される i/o の合計バイト数。|  
@@ -50,16 +50,16 @@ ms.locfileid: "74164898"
 |**worker_address**|**varbinary (8)**|タスクを実行しているワーカーのメモリアドレス。<br /><br /> NULL = タスクは、ワーカーが実行可能になるのを待機しているか、タスクの実行が完了した直後です。<br /><br /> 詳細については、「 [sys. dm_os_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)」を参照してください。|  
 |**host_address**|**varbinary (8)**|ホストのメモリアドレス。<br /><br /> 0 = ホストはタスクの作成に使用されませんでした。 これは、このタスクの作成に使用されたホストを識別するのに役立ちます。<br /><br /> 詳細については、「 [sys. dm_os_hosts &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md)」を参照してください。|  
 |**parent_task_address**|**varbinary (8)**|オブジェクトの親であるタスクのメモリアドレス。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
 ## <a name="examples"></a>例  
   
 ### <a name="a-monitoring-parallel-requests"></a>A. 並列要求の監視  
- 並列で実行される要求の場合は、同じ組み合わせ (\<**session_id**>、 \< **request_id**>) に対して複数の行が表示されます。 次のクエリを使用して、すべてのアクティブな要求に対する[並列処理の最大限度を構成するサーバー構成オプション](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)を検索します。  
+ 並列で実行される要求の場合は、同じ組み合わせ ( \< **session_id**>、 \< **request_id**>) に対して複数の行が表示されます。 次のクエリを使用して、すべてのアクティブな要求に対する[並列処理の最大限度を構成するサーバー構成オプション](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)を検索します。  
   
 > [!NOTE]  
 >  **Request_id**は、セッション内で一意です。  

@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatestats
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c00bdd453bc4d1bf467b37aca3639eb43f55e022
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e28564c44dc226054f0b08e8ba75fe36509cf064
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085791"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808953"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-現在`UPDATE STATISTICS`のデータベース内のすべてのユーザー定義テーブルと内部テーブルに対して実行します。  
+`UPDATE STATISTICS`現在のデータベース内のすべてのユーザー定義テーブルと内部テーブルに対して実行します。  
   
-の詳細につい`UPDATE STATISTICS`ては、「 [UPDATE STATISTICS &#40;transact-sql&#41;](../../t-sql/statements/update-statistics-transact-sql.md)」を参照してください。 統計の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。  
+の詳細について `UPDATE STATISTICS` は、「 [UPDATE STATISTICS &#40;transact-sql&#41;](../../t-sql/statements/update-statistics-transact-sql.md)」を参照してください。 統計の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。  
     
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 `[ @resample = ] 'resample'`**Sp_updatestats**で、 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)ステートメントのリサンプリングオプションを使用することを指定します。 **' リサンプリング '** が指定されていない場合、 **sp_updatestats**は既定のサンプリングを使用して統計を更新します。 **リサンプリング**は**varchar (8)** で、既定値は NO です。  
   
 ## <a name="remarks"></a>Remarks  
- **sp_updatestats**は`UPDATE STATISTICS`、 `ALL`キーワードを指定することによって、データベース内のすべてのユーザー定義テーブルと内部テーブルに対して実行します。 sp_updatestats の進行状況を示すメッセージが表示されます。 更新が完了すると、すべてのテーブルの統計が更新されたことが報告されます。  
+ **sp_updatestats**は、 `UPDATE STATISTICS` キーワードを指定することによって、 `ALL` データベース内のすべてのユーザー定義テーブルと内部テーブルに対して実行します。 sp_updatestats の進行状況を示すメッセージが表示されます。 更新が完了すると、すべてのテーブルの統計が更新されたことが報告されます。  
   
 無効な非クラスター化インデックスの統計を更新し、無効になっているクラスター化インデックスの統計を更新しません。 sp_updatestats。  
   
@@ -61,7 +61,7 @@ sp_updatestats [ [ @resample = ] 'resample']
  **Sysadmin**固定サーバーロールのメンバーシップ、またはデータベースの所有権 (**dbo**) が必要です。  
 
 ## <a name="examples"></a>使用例  
-次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース内のテーブルの統計を更新します。  
+次の例では、データベース内のテーブルの統計を更新し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -73,7 +73,7 @@ EXEC sp_updatestats;
 [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) のようなソリューションを活用し、1 つまたは複数のデータベースに対するインデックスの最適化と統計更新を自動管理します。 このプロシージャでは、断片化レベルやその他のパラメーターに基づいてインデックスを再構築または再構成するか、線形しきい値で統計を更新するかが自動的に選択されます。
 
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;の ALTER DATABASE SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Transact-sql&#41;&#40;の統計の作成](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-sql&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   

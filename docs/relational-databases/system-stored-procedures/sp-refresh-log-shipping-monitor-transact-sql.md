@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_refresh_log_shipping_monitor
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c19f9b99173ca04e6ce15862e22a25f8a2bf06e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b375c1861d532445cd39d42f59f0a8d753e53b85
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002498"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828838"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_refresh_log_shipping_monitor
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし。  
+ [なし] :  
   
 ## <a name="remarks"></a>Remarks  
  **sp_refresh_log_shipping_monitor**は、まだ転送されていないセッション情報を使用して、 **log_shipping_monitor_primary**、 **log_shipping_monitor_secondary**、 **log_shipping_monitor_history_detail**、および**log_shipping_monitor_error_detail**のテーブルを更新します。 これにより、モニターがしばらく同期されていない場合に、監視サーバーをプライマリサーバーまたはセカンダリサーバーと同期することができます。 また、必要に応じて、監視サーバーのモニター情報をクリーンアップすることができます。  

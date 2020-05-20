@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_upgrade_log_shipping
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 493fcac9f5de8ee85a2e3c014763045c697bbe0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e96326c97dde209f37104e66e562b66e96c8acd3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119443"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809103"
 ---
 # <a name="sp_upgrade_log_shipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,16 +39,16 @@ sp_upgrade_log_shipping
 ```  
   
 ## <a name="arguments"></a>引数  
- なし。  
+ [なし] :  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (そうでない場合)  
   
 ## <a name="result-sets"></a>結果セット  
- なし。  
+ [なし] :  
   
 ## <a name="remarks"></a>Remarks  
- このストアドプロシージャは、ログ配布[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用にメタデータをアップグレードするためのアップグレード時に自動的に呼び出されます。 アップグレード中にメタデータで問題が発生しない限り、このプロシージャを明示的に実行する必要はありません。  
+ このストアドプロシージャは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ配布用にメタデータをアップグレードするためのアップグレード時に自動的に呼び出されます。 アップグレード中にメタデータで問題が発生しない限り、このプロシージャを明示的に実行する必要はありません。  
   
  sp_upgrade_log_shipping は、プライマリ、セカンダリ、または監視サーバーの master データベースから実行する必要があります。  
   

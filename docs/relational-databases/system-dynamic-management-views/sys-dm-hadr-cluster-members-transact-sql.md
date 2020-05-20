@@ -19,20 +19,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_cluster_members catalog view
 ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b28b708aabfdf3ec4e569aab6d8a95e2330b370
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffa67137c4b7d99cd0aa394319e9415a72b73103
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900763"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829395"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  が有効になっているの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカルインスタンスをホストする wsfc ノード[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]に wsfc クォーラムがある場合、はクォーラムを構成するメンバーごとに1行の値を返し、それぞれの状態を返します。 これには、クラスター内のすべてのノード ( **Clusterenum**関数によって CLUSTER_ENUM_NODE の種類で返されます) とディスクまたはファイル共有監視 (存在する場合) が含まれます。 特定のメンバーに対して返される行には、そのメンバーの状態に関する情報が含まれています。 たとえば、1つのノードがダウンしているノードが5つあるノードクラスターの場合、クォーラムを持つノード上に存在するが有効になっ[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]ているサーバーインスタンスから**sys. dm_hadr_cluster_members**を照会すると、dm_hadr_cluster_members には、ダウンノードの状態が "NODE_DOWN" として反映され**ます**。  
+  が有効になっているのローカルインスタンスをホストする WSFC ノードに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] wsfc クォーラムがある場合、はクォーラムを構成するメンバーごとに1行の値を返し、それぞれの状態を返します。 これには、クラスター内のすべてのノード ( **Clusterenum**関数によって CLUSTER_ENUM_NODE の種類で返されます) とディスクまたはファイル共有監視 (存在する場合) が含まれます。 特定のメンバーに対して返される行には、そのメンバーの状態に関する情報が含まれています。 たとえば、1つのノードがダウンしているノードが5つあるノードクラスターの場合、クォーラムを持つノード上に存在するが有効になっているサーバーインスタンスから**sys. dm_hadr_cluster_members**を照会すると、dm_hadr_cluster_members には、 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ダウンノードの状態が "NODE_DOWN" として反映され**ます**。  
   
  WSFC ノードにクォーラムが存在しない場合、行は返されません。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67900763"
 -   マジョリティ ノードのクォーラムが失われるまでに、WSFC クラスターがあと何回の障害に耐えられるか。  
 
  > [!TIP]
- > 以降で[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]は、この動的管理ビューは Always On 可用性グループに加えて Always On フェールオーバークラスターインスタンスをサポートしています。  
+ > 以降で [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は、この動的管理ビューは Always On 可用性グループに加えて Always On フェールオーバークラスターインスタンスをサポートしています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

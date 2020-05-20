@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_properties
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 274e801bfb8e627564f5586574c16ecd916e9859
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21007e66d8f193ce8e2a166e1615619be409cb9d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910712"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828018"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  現在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベース内の指定されたデータベースオブジェクト (テーブルまたはインデックス付きビュー) の統計のプロパティを返します。 パーティションテーブルについては、同様の[dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)を参照してください。 
+  現在のデータベース内の指定されたデータベースオブジェクト (テーブルまたはインデックス付きビュー) の統計のプロパティを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 パーティションテーブルについては、同様の[dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)を参照してください。 
  
 ## <a name="syntax"></a>構文  
   
@@ -56,8 +56,8 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |rows_sampled|**bigint**|統計の計算時にサンプリングされた行の合計数。|  
 |steps|**int**|ヒストグラムの区間の数。 詳細については、「[DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)」を参照してください。|  
 |unfiltered_rows|**bigint**|フィルター式を適用する前のテーブル内の行の合計数 (フィルター選択された統計情報の場合)。 統計がフィルター選択されていない場合は unfiltered_rows は行の列に返される値と同じです。|  
-|modification_counter|**bigint**|統計情報が前回更新されてから先頭の統計列 (構築するヒストグラムの基になる列) に対して行われた変更の総数。<br /><br /> メモリ最適化テーブル: この列[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]の先頭[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]と末尾には、統計が最後に更新された後、またはデータベースが再起動されてからの、テーブルに対する変更の合計数が含まれます。|  
-|persisted_sample_percent|**float**|サンプリングの割合を明示的に指定しない統計情報の更新に使用される永続化されたサンプルのパーセンテージです。 値がゼロの場合、永続化されたサンプルのパーセンテージがこの統計に設定されていません。<br /><br /> **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
+|modification_counter|**bigint**|統計情報が前回更新されてから先頭の統計列 (構築するヒストグラムの基になる列) に対して行われた変更の総数。<br /><br /> メモリ最適化テーブル: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] この列の先頭と末尾には、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 統計が最後に更新された後、またはデータベースが再起動されてからの、テーブルに対する変更の合計数が含まれます。|  
+|persisted_sample_percent|**float**|サンプリングの割合を明示的に指定しない統計情報の更新に使用される永続化されたサンプルのパーセンテージです。 値がゼロの場合、永続化されたサンプルのパーセンテージがこの統計に設定されていません。<br /><br /> **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4|  
   
 ## <a name="remarks"></a><a name="Remarks"></a> 解説  
  **dm_db_stats_properties**は、次のいずれかの条件に該当する場合に空の行セットを返します。  
@@ -72,12 +72,12 @@ sys.dm_db_stats_properties (object_id, stats_id)
 統計の更新日付は、メタデータではなく[統計 BLOB オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)に[ヒストグラム](../../relational-databases/statistics/statistics.md#histogram)および[密度ベクトル](../../relational-databases/statistics/statistics.md#density)と共に格納されます。 統計データを生成するためのデータが読み取られない場合、統計 blob は作成されず、日付は使用できず、 *last_updated*列は NULL になります。 これは、述語が行を返さないフィルター選択された統計情報や、新しい空のテーブルの場合です。
   
 ## <a name="permissions"></a>アクセス許可  
- では、ユーザーが統計列に対する select 権限を持っているか、ユーザーがテーブルを所有して`sysadmin`いるか、固定サーバー `db_owner`ロール、固定データベースロール、 `db_ddladmin`または固定データベースロールのメンバーである必要があります。  
+ では、ユーザーが統計列に対する select 権限を持っているか、ユーザーがテーブルを所有しているか、固定 `sysadmin` サーバーロール、 `db_owner` 固定データベースロール、または固定データベースロールのメンバーである必要があり `db_ddladmin` ます。  
   
 ## <a name="examples"></a>例  
 
 ### <a name="a-simple-example"></a>A. 簡単な例
-次の例では、AdventureWorks データベース`Person.Person`内のテーブルの統計を返します。
+次の例では、AdventureWorks データベース内のテーブルの統計を返し `Person.Person` ます。
 
 ```sql
 SELECT * FROM sys.dm_db_stats_properties (object_id('Person.Person'), 1);

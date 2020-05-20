@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_configuration dynamic management view
 ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6d37a6ad94056007dd7c941d53ce52b4b84498a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: df38bbb333e3cadb328b9701c19f21ae657a544b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983299"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830484"
 ---
 # <a name="sysdm_resource_governor_configuration-transact-sql"></a>dm_resource_governor_configuration (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "73983299"
 |is_reconfiguration_pending|**bit**|グループまたはプールに対する変更が ALTER RESOURCE GOVERNOR 再構成ステートメントで行われたが、メモリ内の構成に適用されていないかどうかを示します。 返される値は次のいずれかです。<br /><br /> 0-再構成ステートメントは必要ありません。<br /><br /> 1: 保留中の構成変更を適用するため、再構成ステートメントまたはサーバーの再起動が必要です。<br /><br /> **注:** Resource Governor が無効になっている場合、返される値は常に0です。<br /><br /> NULL 値は許可されません。|  
 |max_outstanding_io_per_volume|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> ボリュームごとの未処理の I/O の最大数。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この動的管理ビューには、メモリ内の構成が表示されます。 格納されている構成メタデータを表示するには、対応するカタログビューを使用します。  
   
  次の例では、格納されているメタデータ値と Resource Governor 構成のメモリ内の値を取得して比較する方法を示します。  

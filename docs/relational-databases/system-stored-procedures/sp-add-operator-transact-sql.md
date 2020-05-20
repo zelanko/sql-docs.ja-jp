@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f410024e1458d20e436df72cc2978ce41b5d60df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 080933e13c2f72deef536885b9d3b5c1c4c7593b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "74095510"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821090"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'`オペレーター (通知受信者) の名前。 この名前は一意である必要があり、パーセント**%**() 文字を含めることはできません。 *名前*は**sysname**,、既定値はありません。  
+`[ @name = ] 'name'`オペレーター (通知受信者) の名前。 この名前は一意である必要があり、パーセント () 文字を含めることはできません **%** 。 *名前*は**sysname**,、既定値はありません。  
   
 `[ @enabled = ] enabled`オペレーターの現在の状態を示します。 *有効*になっているは**tinyint**,、既定値は**1** (有効) です。 **0**の場合、オペレーターは無効になり、通知を受信しません。  
   
@@ -60,14 +60,14 @@ sp_add_operator [ @name = ] 'name'
   
  *Email_address*には、物理電子メールアドレスまたはエイリアスを指定できます。 次に例を示します。  
   
- '**jdoe**' または **'\@jdoe xyz.com**'  
+ '**jdoe**' または '**jdoe \@ xyz.com**'  
   
 > [!NOTE]  
 >  データベース メールには電子メール アドレスを使用する必要があります。  
   
 `[ @pager_address = ] 'pager_address'`オペレーターのポケットベルアドレス。 この文字列はメール システムに直接渡されます。 *pager_address*は**nvarchar (100)**,、既定値は NULL です。  
   
-`[ @weekday_pager_start_time = ] weekday_pager_start_time`月曜日から金曜日まで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の平日に、指定したオペレーターにエージェントがポケットベルによる通知を送信するまでの時間。 *weekday_pager_start_time*は**int**,、既定値は**090000**,、9:00 A.M. を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]月曜日から金曜日までの平日に、指定したオペレーターにエージェントがポケットベルによる通知を送信するまでの時間。 *weekday_pager_start_time*は**int**,、既定値は**090000**,、9:00 A.M. を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
 `[ @weekday_pager_end_time = ] weekday_pager_end_time`月曜日から金曜日までの平日に、 **SQLServerAgent**サービスが、指定されたオペレーターにポケットベルによる通知を送信しなくなる時刻。 *weekday_pager_end_time*は**int**,、既定値は 18万,、6:00 pm を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
@@ -79,7 +79,7 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @sunday_pager_end_time = ] sunday_pager_end_time`日曜日に、 **SQLServerAgent**サービスが、指定されたオペレーターにポケットベルによる通知を送信しなくなる時刻。 *sunday_pager_end_time*は**int**,、既定値は**18万**,、6:00 pm を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
-`[ @pager_days = ] pager_days`ページで演算子が使用できる曜日を示す数値です (指定された開始/終了時刻に従います)。 *pager_days*は**tinyint**,、既定値は**0**の場合、操作がページを受信できないことを示します。 有効な値は**0** ~ **127**です。 *pager_days*は、必要な日数の個々の値を加算することによって計算されます。 たとえば、月曜日から金曜日の場合は、 **2**+**4**+**8**+**16**+**32** = **62**になります。 次の表は、各曜日の値を示しています。  
+`[ @pager_days = ] pager_days`ページで演算子が使用できる曜日を示す数値です (指定された開始/終了時刻に従います)。 *pager_days*は**tinyint**,、既定値は**0**の場合、操作がページを受信できないことを示します。 有効な値は**0** ~ **127**です。 *pager_days*は、必要な日数の個々の値を加算することによって計算されます。 たとえば、月曜日から金曜日の場合は、 **2** + **4** + **8** + **16** + **32**  =  **62**になります。 次の表は、各曜日の値を示しています。  
   
 |[値]|説明|  
 |-----------|-----------------|  
@@ -99,9 +99,9 @@ sp_add_operator [ @name = ] 'name'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_add_operator**は、 **msdb**データベースから実行する必要があります。  
   
  ページングは電子メールシステムでサポートされています。ページングを使用する場合は、電子メールとポケットベルの機能が必要です。  

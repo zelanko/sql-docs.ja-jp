@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_detach_schedule
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: aed989cc09922b7b480a7dd7b3ca6820d6b77ab2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0941103ab9dc8037c3036290bd35bba9c4b85866
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936743"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826626"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_detach_schedule
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
 ## <a name="permissions"></a>アクセス許可  
  既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
@@ -79,8 +79,8 @@ sp_detach_schedule
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーがスケジュールを所有しているかどうかが判断されます。 **Sysadmin**固定サーバーロールのメンバーだけが、別のユーザーが所有するジョブからスケジュールをデタッチできます。  
   
-## <a name="examples"></a>使用例  
- 次の例では、 `'NightlyJobs'`スケジュールと`'BackupDatabase'`ジョブの関連付けを削除します。  
+## <a name="examples"></a>例  
+ 次の例では、スケジュールとジョブの関連付けを削除し `'NightlyJobs'` `'BackupDatabase'` ます。  
   
 ```  
 USE msdb ;  

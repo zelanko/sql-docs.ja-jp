@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_database_replica_states dynamic management view
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0b8fab1b53e5a86139728f49169c50cfa014698a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b3a9bf27341663de266b0b45f003fd5fdb4a1a79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983064"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824627"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "73983064"
 > [!IMPORTANT]
 > アクションと上位レベルの状態によっては、データベース状態情報が使用できなくなったり、古くなったりする可能性があります。 また、値はローカルに関連しているものに限られます。 
    
-|列名|データの種類|説明 (プライマリレプリカ上)|  
+|列名|データ型|説明 (プライマリレプリカ上)|  
 |-----------------|---------------|----------------------------------------|  
 |**database_id**|**int**|データベースの識別子。|  
 |**group_id**|**uniqueidentifier**|データベースが属する可用性グループの識別子。|  
 |**replica_id**|**uniqueidentifier**|可用性グループ内の可用性レプリカの識別子。|  
 |**group_database_id**|**uniqueidentifier**|可用性グループ内のデータベースの識別子。 この識別子は、このデータベースが参加しているすべてのレプリカで同じです。|  
-|**is_local**|**bit**|可用性データベースがローカルであるかどうか。次のいずれかになります。<br /><br /> 0 = データベースは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対してローカルではありません。<br /><br /> 1 = データベースはサーバー インスタンスに対してローカルです。|  
+|**is_local**|**bit**|可用性データベースがローカルであるかどうか。次のいずれかになります。<br /><br /> 0 = データベースはインスタンスに対してローカルではありません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 1 = データベースはサーバー インスタンスに対してローカルです。|  
 |**is_primary_replica**|**bit**|レプリカがプライマリの場合は1、データベースが属する可用性グループのセカンダリレプリカである場合は0を返します。 これは、分散型可用性グループまたはアクティブ geo レプリケーション関係のプライマリデータベースまたはセカンダリデータベースを参照しません。<br /><br />**適用対象:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降。|  
 |**synchronization_state**|**tinyint**|データ移動の状態。次のいずれかの値です。<br /><br /> 0 = 同期されていません。 プライマリ データベースの場合、データベースがそのトランザクション ログを対応するセカンダリ データベースと同期する準備ができていないことを示します。 セカンダリ データベースの場合、データベースが接続の問題によりログの同期を開始していないか、データベースが中断されているか、起動中またはロールの切り替え中にデータベースが遷移状態になっていることを示します。<br /><br /> 1 = 同期中です。 プライマリデータベースの場合は、データベースがセカンダリデータベースからのスキャン要求を受け入れる準備ができていることを示します。 セカンダリ データベースについては、そのデータベースのアクティブなデータ移動が行われていることを示します。<br /><br /> 2 = 同期済み。 プライマリ データベースでは、"SYNCHRONIZING" の代わりに、"SYNCHRONIZED" と表示されます。 同期コミットのセカンダリ データベースでは、データベース レプリカでフェールオーバーの準備ができていることをローカル キャッシュが示している場合、およびデータベース レプリカが同期中である場合、"同期済み" と表示されます。<br /><br /> 3 = 元に戻す。 セカンダリ データベースがプライマリ データベースからページをアクティブに取得している場合の元に戻すプロセスのフェーズを示します。<br />**注意:** セカンダリレプリカ上のデータベースが復元中の状態にある場合、セカンダリレプリカに強制的にフェールオーバーすると、そのデータベースはプライマリデータベースとして起動できない状態のままになります。 データベースをセカンダリデータベースとして再接続する必要があるか、ログバックアップから新しいログレコードを適用する必要があります。<br /><br /> 4 = 初期化中。 セカンダリ データベースが元に戻す LSN からの遅れを取り戻すために必要なトランザクション ログがセカンダリ レプリカに配布され、書き込まれている場合の元に戻すフェーズを示します。<br />**注意:** セカンダリレプリカ上のデータベースが初期化中の状態である場合、セカンダリレプリカに強制的にフェールオーバーすると、そのデータベースはプライマリデータベースとして起動できない状態のままになります。 データベースをセカンダリデータベースとして再接続する必要があるか、ログバックアップから新しいログレコードを適用する必要があります。|  
 |**synchronization_state_desc**|**nvarchar(60)**|データ移動の状態の説明。次のいずれかになります。<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> 戻し<br /><br /> 初期化|  

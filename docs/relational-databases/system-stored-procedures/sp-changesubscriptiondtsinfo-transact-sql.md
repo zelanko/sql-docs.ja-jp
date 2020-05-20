@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriptiondtsinfo
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a091df0cbbeb2883ff9905d7c5b3718d50efa86b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fd0d08a045f67b436bd732b01a2279c923fc9461
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762548"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824082"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ## <a name="arguments"></a>引数  
 `[ @job_id = ] job_id`プッシュサブスクリプションのディストリビューションエージェントのジョブ ID を示します。 *job_id*は**varbinary (16)**,、既定値はありません。 配布ジョブ ID を検索するには、 **sp_helpsubscription**または**sp_helppullsubscription**を実行します。  
   
-`[ @dts_package_name = ] 'dts_package_name'`DTS パッケージの名前を指定します。 *dts_package_name*は**sysname**で、既定値は NULL です。 たとえば、 **DTSPub_Package**という名前のパッケージを指定するには`@dts_package_name = N'DTSPub_Package'`、を指定します。  
+`[ @dts_package_name = ] 'dts_package_name'`DTS パッケージの名前を指定します。 *dts_package_name*は**sysname**で、既定値は NULL です。 たとえば、 **DTSPub_Package**という名前のパッケージを指定するには、を指定し `@dts_package_name = N'DTSPub_Package'` ます。  
   
 `[ @dts_package_password = ] 'dts_package_password'`パッケージのパスワードを指定します。 *dts_package_password*は**sysname**で、既定値は NULL です。これは、password プロパティを変更せずに残すことを指定します。  
   

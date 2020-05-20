@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8275ed39d49c8fdb64c1d2f26cc1d218c525500c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900158"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830513"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>dm_os_host_info (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "67900158"
 |**host_sku**|**int**|Windows 株価保持ユニット (SKU) ID。 SKU Id と説明の一覧については、「 [Getproductinfo 関数](https://msdn.microsoft.com/library/ms724358.aspx)」を参照してください。 NULL 値が許可されます。 <br> Linux の場合、は NULL を返します。 |  
 |**os_language_version**|**int**|オペレーティングシステムの Windows ロケール識別子 (LCID)。 LCID 値と説明の一覧については、「 [Microsoft によって割り当てられたロケール id](https://go.microsoft.com/fwlink/?LinkId=208080)」を参照してください。 null にすることはできません。|  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 このビューは、Windows と Linux を区別するために列を追加する dm_os_windows_info に似てい[ます。](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
-既定`SELECT`では`sys.dm_os_host_info` 、 `public`に対する権限がロールに付与されます。 取り消す場合は、 `VIEW SERVER STATE`サーバーに対する権限が必要です。   
+`SELECT`既定では、に対する権限 `sys.dm_os_host_info` がロールに付与され `public` ます。 取り消す場合は、 `VIEW SERVER STATE` サーバーに対する権限が必要です。   
  
 > [!CAUTION]
->  バージョン[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3 以降では[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 、に`SELECT` [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]接続するため`sys.dm_os_host_info`に、バージョン17でに対するアクセス許可が必要です。 権限`SELECT`がから`public`取り消された場合、最新`VIEW SERVER STATE`バージョンの SSMS で接続できるのは、権限を持つログインのみです。 (などの他のツール`sqlcmd.exe`は、に`SELECT` `sys.dm_os_host_info`対する権限なしで接続できます)。
+>  バージョン [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3 以降では、 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] `SELECT` `sys.dm_os_host_info` に接続するために、バージョン17でに対するアクセス許可が必要です [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 。 `SELECT`権限がから取り消された場合 `public` 、 `VIEW SERVER STATE` 最新バージョンの SSMS で接続できるのは、権限を持つログインのみです。 (などの他のツールは、 `sqlcmd.exe` に対する権限なしで接続でき `SELECT` `sys.dm_os_host_info` ます)。
 
   
 ## <a name="examples"></a>使用例  

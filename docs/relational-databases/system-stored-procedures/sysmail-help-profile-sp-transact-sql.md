@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profile_sp
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2d8f2af3894377cc0922274ca26c231c003f3bd6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 95660c293ef8a5efcca132407cd930ab0b721d89
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68044503"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827426"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,14 +57,14 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |**記述**|**nvarchar(256)**|プロファイルの説明。|  
   
 ## <a name="remarks"></a>Remarks  
- プロファイル名またはプロファイル id が指定されている場合、 **sysmail_help_profile_sp**はそのプロファイルに関する情報を返します。 それ以外の場合、 **sysmail_help_profile_sp**は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内のすべてのプロファイルに関する情報を返します。  
+ プロファイル名またはプロファイル id が指定されている場合、 **sysmail_help_profile_sp**はそのプロファイルに関する情報を返します。 それ以外の場合、 **sysmail_help_profile_sp**は、インスタンス内のすべてのプロファイルに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  ストアドプロシージャ**sysmail_help_profile_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **A. すべてのプロファイルを一覧表示する**  
   
  次の例では、インスタンス内のすべてのプロファイルを一覧表示します。  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindrule
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76d1572e1f99162c8daebeafadb0c8d75a53a4d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c89b2cb803df80872d82f18b5f26b207e9e4bc38
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046027"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828492"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="examples"></a>例  
   
 ### <a name="a-binding-a-rule-to-a-column"></a>A. ルールを列にバインドする  
- CREATE RULE ステートメントを使用`today`して、という名前のルールが現在のデータベースに作成されていると仮定すると`HireDate` 、次の`Employee`例では、ルールをテーブルの列にバインドしています。 行が `Employee` テーブルに追加されると、`HireDate` 列のデータは `today` ルールと照らし合わせてチェックされます。  
+ CREATE RULE ステートメントを使用して、という名前のルールが現在のデータベースに作成されていると仮定すると、 `today` 次の例では、ルールをテーブルの列にバインドしてい `HireDate` `Employee` ます。 行が `Employee` テーブルに追加されると、`HireDate` 列のデータは `today` ルールと照らし合わせてチェックされます。  
   
 ```  
 USE master;  
@@ -86,7 +86,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. 別名データ型にルールをバインドする  
- `rule_ssn` という名前のルールがあり、`ssn` という名前の別名データ型があるものとします。次の例では、`rule_ssn` を `ssn` にバインドします。 CREATE TABLE ステートメントでは、型`ssn`の列がルール`rule_ssn`を継承します。 *Futureonly_flag*に対して`ssn` **futureonly**が指定されていない場合、または`ssn`ルールが直接バインドされている場合を除き、型の既存の列も`rule_ssn`ルールを継承します。 列にバインドされたルールは、データ型にバインドされたルールよりも常に優先されます。  
+ `rule_ssn` という名前のルールがあり、`ssn` という名前の別名データ型があるものとします。次の例では、`rule_ssn` を `ssn` にバインドします。 CREATE TABLE ステートメントでは、型の列が `ssn` ルールを継承し `rule_ssn` ます。 `ssn` `rule_ssn` *Futureonly_flag*に対して**futureonly**が指定されていない場合、または `ssn` ルールが直接バインドされている場合を除き、型の既存の列もルールを継承します。 列にバインドされたルールは、データ型にバインドされたルールよりも常に優先されます。  
   
 ```  
 USE master;  

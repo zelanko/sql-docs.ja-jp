@@ -8,15 +8,15 @@ ms.prod_service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 36dfed5d0c24082d01248d7e6e8e1e62e1725e0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d24f6413d9641b58795dc9950aba27dae974d7b1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844417"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826710"
 ---
 # <a name="sysdm_xe_database_session_object_columns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "73844417"
   
 ### <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|ソース|終了|リレーションシップ|  
+|From|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |dm_xe_database_session_object_columns。 object_name<br /><br /> dm_xe_database_session_object_columns。 object_package_guid|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|多対一|  
 |dm_xe_database_session_object_columns。 column_name<br /><br /> dm_xe_database_session_object_columns。 column_id|sys.dm_xe_object_columns.name<br /><br /> sys.dm_xe_object_columns.column_id|多対一|  

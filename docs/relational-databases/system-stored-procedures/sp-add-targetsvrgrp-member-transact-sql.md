@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_targetsvrgrp_member
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cf0feb3b7747f7488c8688c902760e90cbe66838
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb35ca1a700390b51776333e5a62280d5de842ff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68033019"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826288"
 ---
 # <a name="sp_add_targetsvrgrp_member-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  対象サーバーは、複数の対象サーバーグループのメンバーになることができます。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
- 次の例では、 `Servers Maintaining Customer Information`グループを追加`LONDON1`し、そのグループにサーバーを追加します。  
+## <a name="examples"></a>例  
+ 次の例では、グループを追加 `Servers Maintaining Customer Information` し、 `LONDON1` そのグループにサーバーを追加します。  
   
 ```  
 USE msdb ;  

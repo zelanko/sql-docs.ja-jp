@@ -16,14 +16,14 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c12575ae2eb07b5984d1e4a383830ff6fb44573a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 85271f37c441ab88ce5ad14279c07f6feda3d95d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091863"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827365"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "68091863"
 |**page_size**|**int**|ページのサイズ (バイト単位)。|  
 |**file_number**|**numeric (10, 0)**|データベース内で一意なファイル識別番号 ( **database_files**に対応し**ます。file_id**)。|  
 |**backed_up_page_count**|**numeric (10, 0)**|バックアップされたページ数。 NULL にすることができます。|  
-|**file_type**|**char (1)**|バックアップされたファイル。次のいずれかです。<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイル<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログファイル。<br /><br /> F = フルテキスト カタログ<br /><br /> NULL にすることができます。|  
+|**file_type**|**char (1)**|バックアップされたファイル。次のいずれかです。<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイル<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログファイル。<br /><br /> F = フルテキスト カタログ<br /><br /> NULL にすることができます。|  
 |**source_file_block_size**|**numeric (10, 0)**|バックアップ時に元のデータファイルまたはログファイルが格納されていたデバイス。 NULL にすることができます。|  
 |**file_size**|**numeric(20,0)**|バックアップされたファイルの長さ (バイト単位)。 NULL にすることができます。|  
 |**logical_name**|**nvarchar(128)**|バックアップされたファイルの論理名。 NULL にすることができます。|  
 |**physical_drive**|**nvarchar(260)**|物理ドライブまたはパーティション名。 NULL にすることができます。|  
 |**physical_name**|**nvarchar(260)**|残りの物理 (オペレーティングシステム) ファイル名。 NULL にすることができます。|  
-|**state**|**tinyint**|ファイルの状態。次のいずれかになります。<br /><br /> 0 = ONLINE<br /><br /> 1 = 復元中<br /><br /> 2 = 回復中<br /><br /> 3 = RECOVERY PENDING <br /><br /> 4 = 問題あり<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT<br /><br /> 8 = ドロップされました<br /><br /> 注: 値5はスキップされるので、これらの値はデータベースの状態の値に対応します。|  
+|**状態**|**tinyint**|ファイルの状態。次のいずれかになります。<br /><br /> 0 = ONLINE<br /><br /> 1 = 復元中<br /><br /> 2 = 回復中<br /><br /> 3 = RECOVERY PENDING <br /><br /> 4 = 問題あり<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT<br /><br /> 8 = ドロップされました<br /><br /> 注: 値5はスキップされるので、これらの値はデータベースの状態の値に対応します。|  
 |**state_desc**|**nvarchar (64)**|ファイルの状態の説明。次のいずれかになります。<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|ファイルが作成されたときのログ シーケンス番号。|  
 |**drop_lsn**|**numeric(25,0)**|ファイルが削除されたときのログ シーケンス番号。 NULL にすることができます。<br /><br /> ファイルが削除されていない場合、この値は NULL です。|  
@@ -66,10 +66,10 @@ ms.locfileid: "68091863"
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のテーブルのバックアップと復元](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupmediaset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [backupset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

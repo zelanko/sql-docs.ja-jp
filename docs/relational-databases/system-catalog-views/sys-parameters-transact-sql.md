@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.parameters catalog view
 - table-valued parameters,sys.parameters
 ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f91339990e5d12d1b2b674ea9fd124fc4161424
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b478dcb30bbe95c9c8f3aa6256330634bbc0c1b3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125352"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825008"
 ---
 # <a name="sysparameters-transact-sql"></a>sys. parameters (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68125352"
 |**scale**|**tinyint**|数値ベースの場合はパラメーターの小数点以下桁数。それ以外の場合は0です。|  
 |**is_output**|**bit**|1 = パラメーターは OUTPUT または RETURN です。それ以外の場合は 0 です。|  
 |**is_cursor_ref**|**bit**|1 = パラメーターはカーソル参照パラメーターです。|  
-|**has_default_value**|**bit**|1 = パラメーターには既定値があります。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このカタログ ビュー内の CLR オブジェクトの既定値のみが保持されます。したがって、[!INCLUDE[tsql](../../includes/tsql-md.md)] オブジェクトに対してこの列の値は 0 になります。 オブジェクトのパラメーターの既定値を表示するには、 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログビューの定義列に対してクエリを実行するか、 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)システム関数を使用します。 **definition** [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
+|**has_default_value**|**bit**|1 = パラメーターには既定値があります。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このカタログ ビュー内の CLR オブジェクトの既定値のみが保持されます。したがって、[!INCLUDE[tsql](../../includes/tsql-md.md)] オブジェクトに対してこの列の値は 0 になります。 オブジェクトのパラメーターの既定値を表示するに [!INCLUDE[tsql](../../includes/tsql-md.md)] は、 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログビューの**定義**列に対してクエリを実行するか、 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)システム関数を使用します。|  
 |**is_xml_document**|**bit**|1 = コンテンツは完全な XML ドキュメントです。<br /><br /> 0 = コンテンツがドキュメントフラグメントであるか、列のデータ型が**xml**ではありません。|  
 |**default_value**|**sql_variant**|**Has_default_value**が1の場合、この列の値はパラメーターの既定値になります。それ以外の場合は NULL。|  
 |**xml_collection_id**|**int**|パラメーターのデータ型が**xml**で xml が型指定されている場合は0以外の値。 この値は、パラメーターの検証 XML スキーマ名前空間を含むコレクションの ID です。<br /><br /> 0 = XML スキーマコレクションがありません。|  

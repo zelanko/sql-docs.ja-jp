@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 64621f1d675fc7cd4e64b690b1e440a1dbad2d1c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045930"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826677"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   データ ファイル グループを読み取り専用としてマークし、ファイルを読み取り専用メディアにコピーできるようにする。  
   
- システム管理者は、データベースとすべてのデータベース オブジェクトの所有者であることが必要です。 システム管理者は、を実行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しているすべてのサーバー上に存在する既知のユーザーであり、データベースが後で配布およびインストールされるときに存在することが予想されます。  
+ システム管理者は、データベースとすべてのデータベース オブジェクトの所有者であることが必要です。 システム管理者は、を実行しているすべてのサーバー上に存在する既知のユーザーであり、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースが後で配布およびインストールされるときに存在することが予想されます。  
   
  **Auto**値を指定せずに**sp_certify_removable**を実行すると、次のいずれかの条件に関する情報が返されます。  
   
@@ -73,7 +73,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  これらの条件は、次の方法で修正できます。  
   
--   ツール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と手順を使用し、 **sp_certify_removable**を再実行します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ツールと手順を使用し、 **sp_certify_removable**を再実行します。  
   
 -   **Auto**値を指定して**sp_certify_removable**を実行するだけです。  
   
@@ -82,7 +82,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、 **sysadmin**固定サーバーロールのメンバーに制限されています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`inventory` データベースを削除できるかどうかを確認します。  
   
 ```  

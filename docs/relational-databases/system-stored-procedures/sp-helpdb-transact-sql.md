@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb3ab70170f1b96bcfd62a9d7108792871ccd5d7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67903017"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828960"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**責任**|**sysname**|**Sa**などのデータベース所有者。|  
 |**dbid**|**smallint**|データベース ID。|  
 |**created**|**nvarchar(11)**|データベースの作成日です。|  
-|**status**|**nvarchar (600)**|データベースで現在設定されているデータベースオプションの値のコンマ区切りの一覧です。<br /><br /> ブール値を持つオプションは、有効になっている場合にのみリストに追加されます。 ブール型以外のオプションは、 *option_name*=*値*の形式で対応する値と共に一覧表示されます。<br /><br /> 詳細については、「 [ALTER DATABASE &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
+|**status**|**nvarchar (600)**|データベースで現在設定されているデータベースオプションの値のコンマ区切りの一覧です。<br /><br /> ブール値を持つオプションは、有効になっている場合にのみリストに追加されます。 ブール型以外のオプションは、 *option_name*値の形式で対応する値と共に一覧表示され = *value*ます。<br /><br /> 詳細については、「 [ALTER DATABASE &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
 |**compatibility_level**|**tinyint**|データベースの互換性レベル (60、65、70、80、および 90) です。|  
   
  *Name*を指定した場合は、指定されたデータベースのファイル割り当てを示す追加の結果セットが存在します。  
@@ -62,7 +62,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**name**|**nchar(128)**|論理ファイル名です。|  
 |**fileid**|**smallint**|ファイル ID。|  
-|**/db**|**nchar (260)**|オペレーティングシステムのファイル名 (物理ファイル名)。|  
+|**filename**|**nchar (260)**|オペレーティングシステムのファイル名 (物理ファイル名)。|  
 |**ファイル グループ (filegroup)**|**nvarchar(128)**|ファイルが属するファイルグループ。<br /><br /> NULL = ファイルはログファイルです。 これは、ファイルグループの一部ではありません。|  
 |**size**|**nvarchar (18)**|ファイルサイズ (mb)。|  
 |**maxsize**|**nvarchar (18)**|ファイルの最大拡張サイズです。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  

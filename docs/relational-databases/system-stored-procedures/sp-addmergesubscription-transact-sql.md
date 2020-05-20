@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769135"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820708"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,12 +74,12 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'`サブスクライバーの種類を示します。 *subscriber_type*は**nvarchar (15)** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**local** (既定値)|パブリッシャーだけが認識しているサブスクライバー。|  
 |**global**|すべてのサーバーが認識しているサブスクライバー。|  
   
- 以降[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のバージョンでは、ローカルサブスクリプションはクライアントサブスクリプションと呼ばれ、グローバルサブスクリプションはサーバーサブスクリプションと呼ばれます。  
+ 以降のバージョンでは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、ローカルサブスクリプションはクライアントサブスクリプションと呼ばれ、グローバルサブスクリプションはサーバーサブスクリプションと呼ばれます。  
   
 `[ @subscription_priority = ] subscription_priority`サブスクリプションの優先度を示す数値です。 *subscription_priority*は**real**で、既定値は NULL です。 ローカルサブスクリプションと匿名サブスクリプションの場合、優先度は0.0 です。 グローバル サブスクリプションの場合は、優先度を 100.0 未満にする必要があります。  
   
@@ -90,19 +90,19 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`マージエージェントがいつ実行されるかを示す値です。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**4**|毎日|  
-|**8**|週単位|  
-|**10**|月 1 回|  
+|**8**|週次|  
+|"**10**"|月 1 回|  
 |**20@@**|frequency_interval を基準とした月単位|  
 |**40**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの起動時|  
 |NULL (既定値)||  
   
 `[ @frequency_interval = ] frequency_interval`マージエージェントが実行される日または日。 *frequency_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|土曜日|  
 |**2**|月曜日|  
@@ -111,32 +111,32 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**5**|Thursday|  
 |**6**|金曜日|  
 |**7**|土曜日|  
-|**8**|日|  
+|**8**|日間|  
 |**9**|平日|  
-|**10**|週末|  
+|"**10**"|週末|  
 |NULL (既定値)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`スケジュールされたマージの実行間隔を月単位で指定します。 *frequency_relative_interval*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**1**|First (先頭へ)|  
-|**2**|秒|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|Last (最後へ)|  
+|**まで**|末尾|  
 |NULL (既定値)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*によって使用される定期実行係数です。 *frequency_recurrence_factor*は**int**,、既定値は NULL です。  
   
 `[ @frequency_subday = ] frequency_subday`*Frequency_subday_interval*の単位です。 *frequency_subday*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
-|**2**|秒|  
-|**4**|分|  
-|**8**|時|  
+|**2**|Second|  
+|**4**|Minute|  
+|**8**|時間|  
 |NULL (既定値)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`各マージ間で*frequency_subday*が発生する頻度を示します。 *frequency_subday_interval*は**int**,、既定値は NULL です。  
@@ -153,7 +153,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @description = ] 'description'`このマージサブスクリプションの簡単な説明を示します。 *説明*は**nvarchar (255)**,、既定値は NULL です。 この値は、レプリケーションモニターの [**フレンドリ名**] 列に表示されます。この列を使用して、監視されるパブリケーションのサブスクリプションを並べ替えることができます。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Windows 同期マネージャーを使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)]サブスクリプションを同期できるかどうかを指定します。 *enabled_for_syncmgr*は**nvarchar (5)**,、既定値は FALSE です。 **False**の場合、サブスクリプションは同期マネージャーに登録されていません。 **True**の場合、サブスクリプションは同期マネージャーに登録され、を起動[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]せずに同期できます。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Windows 同期マネージャーを使用してサブスクリプションを同期できるかどうかを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 *enabled_for_syncmgr*は**nvarchar (5)**,、既定値は FALSE です。 **False**の場合、サブスクリプションは同期マネージャーに登録されていません。 **True**の場合、サブスクリプションは同期マネージャーに登録され、を起動せずに同期でき [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。  
   
 `[ @offloadagent = ] remote_agent_activation`エージェントをリモートでアクティブ化できることを指定します。 *remote_agent_activation*の部分は**bit**で、既定値は**0**です。  
   
@@ -164,7 +164,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @use_interactive_resolver = ] 'use_interactive_resolver'`対話的な解決を可能にするすべてのアーティクルについて、対話形式で競合を解決できます。 *use_interactive_resolver*は**nvarchar (5)**,、既定値は FALSE です。  
   
-`[ @merge_job_name = ] 'merge_job_name'`Merge_job_name パラメーターは推奨されていないため、設定できません。 * \@* *merge_job_name*は**sysname**,、既定値は NULL です。  
+`[ @merge_job_name = ] 'merge_job_name'`* \@ Merge_job_name*パラメーターは推奨されていないため、設定できません。 *merge_job_name*は**sysname**,、既定値は NULL です。  
   
 `[ @hostname = ] 'hostname'`パラメーター化されたフィルターの WHERE 句でこの関数を使用する場合に、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)によって返される値をオーバーライドします。 *Hostname*は**sysname**,、既定値は NULL です。  
   
@@ -174,10 +174,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_addmergesubscription**は、マージレプリケーションで使用します。  
   
- プッシュサブスクリプションを作成するために**sysadmin**固定サーバーロールのメンバーによって**sp_addmergesubscription**が実行されると、マージエージェントジョブが暗黙的に作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]され、エージェントサービスアカウントで実行されます。 [Sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)を実行し、 ** \@job_login**と** \@job_password**のために、エージェント固有の別の Windows アカウントの資格情報を指定することをお勧めします。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
+ プッシュサブスクリプションを作成するために**sysadmin**固定サーバーロールのメンバーによって**sp_addmergesubscription**が実行されると、マージエージェントジョブが暗黙的に作成され、エージェントサービスアカウントで実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [Sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)を実行し、 ** \@ job_login**と** \@ job_password**のために、エージェント固有の別の Windows アカウントの資格情報を指定することをお勧めします。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  

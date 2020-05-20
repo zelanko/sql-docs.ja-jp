@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_stop_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3e09efe938dabb031e1c57020f051cd5ab03e55a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6385f4dd17f4b3f04d145db7ce5a59169dbc4ccb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010570"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828227"
 ---
 # <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_syscollector_stop_collection_set
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collection_set_id = ]*collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  コレクションセットの一意なローカル識別子を設定します。 *collection_set_id*は**int**で、既定値は NULL です。 *名前*が NULL の場合、 *collection_set_id*には値が必要です。  
   
- [ @name = ]'*name*'  
+ [ @name =] '*name*'  
  コレクションセットの名前を指定します。 *名前*は**sysname**で、既定値は NULL です。 *collection_set_id*が NULL の場合、*名前*には値を指定する必要があります。  
   
- [ @stop_collection_job = ]*stop_collection_job*  
+ [ @stop_collection_job =] *stop_collection_job*  
  コレクション セットのコレクション ジョブが実行されている場合に、停止を指定します。 *stop_collection_job*の部分は**bit**で、既定値は1です。  
   
  *stop_collection_job*は、コレクションモードがキャッシュに設定されているコレクションセットにのみ適用されます。 詳細については、「 [sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)」を参照してください。  
@@ -63,7 +63,7 @@ sp_syscollector_stop_collection_set
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) dc_operator 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、識別子を使用してコレクションセットを停止します。  
   
 ```  

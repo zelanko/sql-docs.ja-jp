@@ -17,26 +17,26 @@ dev_langs:
 helpviewer_keywords:
 - sys.tables catalog view
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1a6d6be7a51cf03442bb5576556b10c5c099ab0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25661cc9d9166da61bd7cef8e3368c2a393a931e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983307"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821290"
 ---
 # <a name="systables-transact-sql"></a>sys. tables (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーテーブルごとに1行の値を返します。  
+  のユーザーテーブルごとに1行の値を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |\<継承された列>||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。|  
 |lob_data_space_id|**int**|0 以外の値は、このテーブルのラージ オブジェクト バイナリ (LOB) データを格納するデータ領域 (ファイル グループまたはパーティション構成) の ID です。 LOB データ型の例としては、 **varbinary (max)**、 **varchar (max)**、 **geography**、 **xml**などがあります。<br /><br /> 0 = テーブルは LOB データではありません。|  
-|filestream_data_space_id|**int**|FILESTREAM ファイル グループまたは FILESTREAM ファイル グループから成るパーティション構成のデータ領域 ID です。<br /><br /> FILESTREAM ファイルグループの名前を報告するには、クエリ`SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables`を実行します。<br /><br /> sys.tables は、filestream_data_space_id = data_space_id で次のビューに結合できます。<br /><br /> -sys. ファイルグループ<br /><br /> -sys. partition_schemes<br /><br /> -sys. インデックス<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup (filegroup_id での結合)|  
+|filestream_data_space_id|**int**|FILESTREAM ファイル グループまたは FILESTREAM ファイル グループから成るパーティション構成のデータ領域 ID です。<br /><br /> FILESTREAM ファイルグループの名前を報告するには、クエリを実行し `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` ます。<br /><br /> sys.tables は、filestream_data_space_id = data_space_id で次のビューに結合できます。<br /><br /> -sys. ファイルグループ<br /><br /> -sys. partition_schemes<br /><br /> -sys. インデックス<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup (filegroup_id での結合)|  
 |max_column_id_used|**int**|このテーブルで使用される最大列 ID。|  
 |lock_on_bulk_load|**bit**|テーブルは一括読み込みでロックされています。 詳細については、「[sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)」を参照してください。|  
 |uses_ansi_nulls|**bit**|テーブルは、SET ANSI_NULLS データベース オプションが ON の場合に作成されます。|  
@@ -57,8 +57,8 @@ ms.locfileid: "73983307"
 |temporal_type|**tinyint**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> テーブルの種類を表す数値。<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |temporal_type_desc|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> テーブルの種類の説明テキスト。<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |history_table_id|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> (2, 4) で temporal_type ときに、履歴データを保持するテーブルの object_id を返します。それ以外の場合は、NULL を返します。|  
-|is_remote_data_archive_enabled|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降および[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> テーブルで Stretch が有効になっているかどうかを示します。<br /><br /> 0 = テーブルは Stretch が有効になっていません。<br /><br /> 1 = テーブルは Stretch が有効です。<br /><br /> 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。|  
-|is_external|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]、および[!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]。<br /><br /> テーブルが外部テーブルであることを示します。<br /><br /> 0 = テーブルは、外部テーブルではありません。<br /><br /> 1 = テーブルは外部テーブルです。| 
+|is_remote_data_archive_enabled|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降および[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> テーブルで Stretch が有効になっているかどうかを示します。<br /><br /> 0 = テーブルは Stretch が有効になっていません。<br /><br /> 1 = テーブルは Stretch が有効です。<br /><br /> 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。|  
+|is_external|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、、 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] 。<br /><br /> テーブルが外部テーブルであることを示します。<br /><br /> 0 = テーブルは、外部テーブルではありません。<br /><br /> 1 = テーブルは外部テーブルです。| 
 |history_retention_period|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>History_retention_period_unit で指定された単位で表した、テンポラル履歴の保有期間を表す数値。 |  
 |history_retention_period_unit|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴の保有期間の単位の種類を表す数値。 <br /><br />-1: 無制限 <br /><br />3: 日 <br /><br />4: 週 <br /><br />5: 月 <br /><br />6: 年 |  
 |history_retention_period_unit_desc|**nvarchar (10)**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴保有期間の単位の種類の説明テキスト。 <br /><br />INFINITE <br /><br />DAY <br /><br />[WEEK] <br /><br />MONTH <br /><br />YEAR |  

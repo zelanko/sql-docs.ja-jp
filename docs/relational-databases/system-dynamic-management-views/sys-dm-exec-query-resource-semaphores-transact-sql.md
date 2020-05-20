@@ -17,27 +17,27 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_resource_semaphores dynamic management view
 ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 026c13a461d6b4efe7244a08a9f3cdbe117deee9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6ea2f693b49f2b8eebd2c2348883607e08112600
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68255284"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827961"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>dm_exec_query_resource_semaphores (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  現在のクエリのリソースセマフォの状態に関する情報を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返しますです。 **dm_exec_query_resource_semaphores**は、一般的なクエリ実行メモリの状態を提供し、システムが十分なメモリにアクセスできるかどうかを判断できます。 このビューは、サーバーのメモリステータスの完全な画像を提供するために、dm_os_memory_clerks から取得したメモリ情報を補完し[ます](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。 **dm_exec_query_resource_semaphores**は、通常のリソースセマフォに対して1つの行を返し、小さいクエリのリソースセマフォ用に別の行を返します。 小規模クエリセマフォには、次の2つの要件があります。  
+  現在のクエリのリソースセマフォの状態に関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ますです。 **dm_exec_query_resource_semaphores**は、一般的なクエリ実行メモリの状態を提供し、システムが十分なメモリにアクセスできるかどうかを判断できます。 このビューは、サーバーのメモリステータスの完全な画像を提供するために、dm_os_memory_clerks から取得したメモリ情報を補完し[ます](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。 **dm_exec_query_resource_semaphores**は、通常のリソースセマフォに対して1つの行を返し、小さいクエリのリソースセマフォ用に別の行を返します。 小規模クエリセマフォには、次の2つの要件があります。  
   
 -   要求されたメモリ許可は 5 MB 未満である必要があります  
   
 -   クエリコストは、3コスト単位未満にする必要があります  
   
 > [!NOTE]  
->  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_exec_query_resource_semaphores**という名前を使用します。  
+>  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_exec_query_resource_semaphores**という名前を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -53,17 +53,17 @@ ms.locfileid: "68255284"
 |**timeout_error_count**|**bigint**|サーバーが起動した後のタイムアウト エラーの合計数。 小さいクエリのリソースセマフォの場合は NULL です。|  
 |**forced_grant_count**|**bigint**|サーバーが起動してからの強制された最小メモリ許可の合計数。 小さいクエリのリソースセマフォの場合は NULL です。|  
 |**pool_id**|**int**|このリソースセマフォが属するリソースプールの ID。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
 ## <a name="remarks"></a>Remarks  
  ORDER BY または集計を含む動的管理ビューを使用するクエリでは、メモリ使用量が増加し、トラブルシューティングの問題に寄与する可能性があります。  
   
- トラブルシューティングには**dm_exec_query_resource_semaphores**を使用しますが、今後のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用するアプリケーションには含めないでください。  
+ トラブルシューティングには**dm_exec_query_resource_semaphores**を使用しますが、今後のバージョンのを使用するアプリケーションには含めないでください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  データベース管理者は、リソース ガバナー機能を使用することで、サーバー リソースを最大 64 個までのリソース プールに分散できます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、各プールが小規模の独立したサーバー インスタンスのように動作し、2 つのセマフォを必要とします。  
   

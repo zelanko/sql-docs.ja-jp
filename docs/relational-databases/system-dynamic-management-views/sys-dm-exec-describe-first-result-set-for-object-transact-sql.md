@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set_for_object catalog view
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9bf2dff5e5d7a3cb1581de9c0b15ff8a58dc6be7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199335"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827990"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  この動的管理関数は、 @object_idをパラメーターとして受け取り、その ID を持つモジュールの最初の結果メタデータを記述します。 指定@object_idできるは、 [!INCLUDE[tsql](../../includes/tsql-md.md)]ストアドプロシージャまたは[!INCLUDE[tsql](../../includes/tsql-md.md)]トリガーの ID です。 その他のオブジェクト (ビュー、テーブル、関数、または CLR プロシージャ) などの ID の場合は、結果のエラー列にエラーが記載されます。  
+  この動的管理関数は、を @object_id パラメーターとして受け取り、その ID を持つモジュールの最初の結果メタデータを記述します。 @object_id指定できるは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアドプロシージャまたはトリガーの ID [!INCLUDE[tsql](../../includes/tsql-md.md)] です。 その他のオブジェクト (ビュー、テーブル、関数、または CLR プロシージャ) などの ID の場合は、結果のエラー列にエラーが記載されます。  
   
  **dm_exec_describe_first_result_set_for_object**には、 [transact-sql&#41;&#40;dm_exec_describe_first_result_set](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)と同じ結果セットの定義があります。 [sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)に似ています。  
   
@@ -44,7 +44,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>引数  
  *\@object_id*  
- ストアドプロシージャまたは@object_id [!INCLUDE[tsql](../../includes/tsql-md.md)]トリガーの。 [!INCLUDE[tsql](../../includes/tsql-md.md)] @object_id のデータ型は **int** 型です。  
+ @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアドプロシージャまたは [!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーの。 @object_id のデータ型は **int** 型です。  
   
  *\@include_browse_information*  
  @include_browse_informationの型は**bit**です。 1 に設定すると、各クエリは FOR BROWSE オプションが指定されているように分析されます。 追加のキー列とソース テーブル情報を返します。  
@@ -114,11 +114,11 @@ sys.dm_exec_describe_first_result_set_for_object
 |9|RECURSION|バッチに再帰的なステートメントが含まれているため、結果を特定できませんでした。|  
 |10|TEMPORARY_TABLE|バッチに一時テーブルが含まれており、バッチが **sp_describe_first_result_set** でサポートされていないため、結果を特定できませんでした。|  
 |11|UNSUPPORTED_STATEMENT|バッチに **sp_describe_first_result_set** でサポートされていないステートメント (FETCH、REVERT など) が含まれているため、結果を特定できませんでした。|  
-|12|OBJECT_ID_NOT_SUPPORTED|関数@object_idに渡されたはサポートされていません (つまり、ストアドプロシージャではありません)。|  
-|13|OBJECT_ID_DOES_NOT_EXIST|関数@object_idに渡されたがシステムカタログに見つかりませんでした。|  
+|12|OBJECT_ID_NOT_SUPPORTED|関数に渡されたはサポートされ @object_id ていません (つまり、ストアドプロシージャではありません)。|  
+|13|OBJECT_ID_DOES_NOT_EXIST|@object_id関数に渡されたがシステムカタログに見つかりませんでした。|  
   
 ## <a name="permissions"></a>アクセス許可  
- @tsql引数を実行する権限が必要です。  
+ 引数を実行する権限が必要です @tsql 。  
   
 ## <a name="examples"></a>例  
   
@@ -138,7 +138,7 @@ GO
 ```  
   
 ### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B. Dm_exec_describe_first_result_set_for_object 関数とテーブルまたはビューの結合  
- 次の例では、両方のシステムカタログビューを使用し**sys.dm_exec_describe_first_result_set_for_object**て、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース内のすべてのストアドプロシージャの結果セットのメタデータを表示する、dm_exec_describe_first_result_set_for_object 関数。  
+ 次の例では、両方のシステムカタログビューを使用して、データベース内のすべてのストアドプロシージャの結果セットのメタデータを表示する、 **dm_exec_describe_first_result_set_for_object**関数。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
   
 ```  
 USE AdventureWorks2012;  

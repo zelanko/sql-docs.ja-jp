@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9dd52e6d2e4bf8a1a099ea2391a2c6ce2d6decdc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055194"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827726"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'`指定されたジョブの有効な操作です。 *操作*は**varchar (64)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**不具合**|マスター **SQLServerAgent**サービスからの参加を解除する対象サーバーを要求するサーバー操作。|  
 |**DELETE**|ジョブ全体を削除するジョブ操作。|  
@@ -87,7 +87,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|命令の一意な整数識別番号。|  
-|**source_server**|**nvarchar(30)**|命令の送信元のサーバーのコンピューター名。 バージョン[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 では、これは常にマスター (MSX) サーバーのコンピューター名です。|  
+|**source_server**|**nvarchar(30)**|命令の送信元のサーバーのコンピューター名。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン7.0 では、これは常にマスター (MSX) サーバーのコンピューター名です。|  
 |**operation_code**|**nvarchar (4000)**|命令の操作コード。|  
 |**object_name**|**sysname**|命令によって影響を受けるオブジェクト。|  
 |**object_id**|**uniqueidentifier**|命令によって影響を受けるオブジェクトの識別番号 (ジョブオブジェクトの場合は**job_id** 、サーバーオブジェクトの場合は 0x00)、または**operation_code**に固有のデータ値。|  
@@ -100,7 +100,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`sysdownloadlist` 内の `NightlyBackups` ジョブに関する行を一覧表示します。  
   
 ```  

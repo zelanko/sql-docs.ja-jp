@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpullsubscription_agent
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ea558eafb665538b90cc4d9e41d16166dd9475c5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028953"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820729"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`同期時にサブスクライバーに接続するときに使用するセキュリティモードを示します。 *subscriber_security_mode*は**int,、** 既定値は NULL です。 **0**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。 **1** Windows 認証を指定します。  
+`[ @subscriber_security_mode = ] subscriber_security_mode`同期時にサブスクライバーに接続するときに使用するセキュリティモードを示します。 *subscriber_security_mode*は**int,、** 既定値は NULL です。 **0**は認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1** Windows 認証を指定します。  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 ディストリビューションエージェントは、常に Windows 認証を使用してローカルサブスクライバーに接続します。 このパラメーターに NULL または**1**以外の値が指定されている場合は、警告メッセージが返されます。  
@@ -114,7 +114,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @distribution_db = ] 'distribution_db'`ディストリビューションデータベースの名前を指定します。 *distribution_db*は**sysname**で、既定値は NULL です。  
   
-`[ @distributor_security_mode = ] distributor_security_mode`は、同期時にディストリビューターに接続するときに使用するセキュリティモードです。 *distributor_security_mode*は**int**,、既定値は**1**です。 **0**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。 **1** Windows 認証を指定します。  
+`[ @distributor_security_mode = ] distributor_security_mode`は、同期時にディストリビューターに接続するときに使用するセキュリティモードです。 *distributor_security_mode*は**int**,、既定値は**1**です。 **0**は認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1** Windows 認証を指定します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -130,12 +130,12 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_type = ] frequency_type`ディストリビューションエージェントをスケジュールする頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2** (既定値)|オン デマンド|  
 |**4**|毎日|  
-|**8**|週単位|  
+|**8**|週次|  
 |**まで**|月 1 回|  
 |**32**|月単位の相対|  
 |**64**|自動開始|  
@@ -148,24 +148,24 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`ディストリビューションエージェントの日付を指定します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**1** (既定値)|First (先頭へ)|  
-|**2**|秒|  
+|**1** (既定値)|First|  
+|**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|Last (最後へ)|  
+|**まで**|末尾|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*によって使用される定期実行係数です。 *frequency_recurrence_factor*は**int**,、既定値は**1**です。  
   
 `[ @frequency_subday = ] frequency_subday`定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|1 度|  
-|**2**|秒|  
-|**4**|分|  
-|**8**|時|  
+|**2**|Second|  
+|**4**|Minute|  
+|**8**|時間|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*の間隔を指定します。 *frequency_subday_interval*は**int**,、既定値は**1**です。  
   
@@ -181,7 +181,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @encrypted_distributor_password = ] encrypted_distributor_password`*Encrypted_distributor_password*の設定はサポートされなくなりました。 この**ビット**パラメーターを**1**に設定しようとすると、エラーが発生します。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`同期マネージャーを使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)]サブスクリプションを同期できるかどうかを指定します。 *enabled_for_syncmgr*は**nvarchar (5)**,、既定値は FALSE です。 **False**の場合、サブスクリプションは同期マネージャーに登録されていません。 **True**の場合、サブスクリプションは同期マネージャーに登録され、を起動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]せずに同期できます。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`同期マネージャーを使用してサブスクリプションを同期できるかどうかを指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] します。 *enabled_for_syncmgr*は**nvarchar (5)**,、既定値は FALSE です。 **False**の場合、サブスクリプションは同期マネージャーに登録されていません。 **True**の場合、サブスクリプションは同期マネージャーに登録され、を起動せずに同期でき [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。  
   
 `[ @ftp_address = ] 'ftp_address'`旧バージョンとの互換性のためにのみ使用します。  
   

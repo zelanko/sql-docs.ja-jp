@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistpublisher
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a47a81b2b19ceccf76a031e298ab60cf4a6f8c9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a0e6ab6c9c633181d72c6916f92606a9c71b177a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770951"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824559"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`プロパティが返されるパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は**%** です。  
+`[ @publisher = ] 'publisher'`プロパティが返されるパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は **%** です。  
   
 `[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -48,13 +48,13 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|発行元の名前。|  
 |**distribution_db**|**sysname**|指定されたパブリッシャーのディストリビューションデータベースです。|  
-|**security_mode**|**int**|キュー更新サブスクリプションのパブリッシャー、または以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するために、レプリケーションエージェントによって使用されるセキュリティモード。<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
+|**security_mode**|**int**|キュー更新サブスクリプションのパブリッシャー、または以外のパブリッシャーに接続するために、レプリケーションエージェントによって使用されるセキュリティモード [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証<br /><br /> **1** = Windows 認証|  
 |**ログイン**|**sysname**|キュー更新サブスクリプションのパブリッシャーへの接続、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーとの接続のため、レプリケーション エージェントで使用されるログイン名です。|  
 |**password**|**nvarchar (524)**|単純な暗号化形式で返されるパスワードです。 **Sysadmin**以外のユーザーのパスワードは NULL です。|  
 |**active**|**bit**|リモートパブリッシャーがローカルサーバーをディストリビューターとして使用しているかどうか。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
 |**working_directory**|**nvarchar(255)**|作業ディレクトリの名前。|  
-|**テッド**|**bit**|パブリッシャーがディストリビューターに接続するときにパスワードが必要かどうかを示します。 以降[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のバージョンでは、これは常に**0**を返す必要があります。これは、パスワードが必要であることを意味します。|  
-|**thirdparty_flag**|**bit**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはサード パーティのアプリケーションによってパブリケーションが有効にされるかどうかを示します。<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、oracle、または oracle ゲートウェイパブリッシャー。<br /><br /> **1** = サードパーティのアプリケーションを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用して、パブリッシャーはと統合されています。|  
+|**テッド**|**bit**|パブリッシャーがディストリビューターに接続するときにパスワードが必要かどうかを示します。 以降のバージョンでは [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、これは常に**0**を返す必要があります。これは、パスワードが必要であることを意味します。|  
+|**thirdparty_flag**|**bit**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはサード パーティのアプリケーションによってパブリケーションが有効にされるかどうかを示します。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、oracle、または oracle ゲートウェイパブリッシャー。<br /><br /> **1** = サードパーティのアプリケーションを使用して、パブリッシャーはと統合されてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**publisher_type**|**sysname**|パブリッシャーの種類です。次のいずれかを指定できます。<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE11I**<br /><br /> **ORACLE GATEWAY **|  
 |**publisher_data_source**|**nvarchar (4000)**|パブリッシャーでの OLE DB データ ソースの名前です。|  
 |**storage_connection_string**|**nvarchar (4000)**|ディストリビューターまたはパブリッシャーが Azure SQL Database にある場合の作業ディレクトリのストレージアクセスキー。|  

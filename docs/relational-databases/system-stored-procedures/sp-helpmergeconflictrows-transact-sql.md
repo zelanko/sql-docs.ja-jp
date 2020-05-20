@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergeconflictrows
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b6963d3a2b28ba103c731f015fd352ff105cfb95
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137772"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828941"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication* **%** の**sysname**,、既定値はです。 パブリケーションが指定されている場合は、パブリケーションによって修飾されたすべての競合が返されます。 たとえば、 **MSmerge_conflict_Customers**テーブルに**WA**および**ca**パブリケーションの競合行がある場合、パブリケーション名**ca**を渡すと、 **ca**パブリケーションに関連する競合が取得されます。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*の**sysname**,、既定値は **%** です。 パブリケーションが指定されている場合は、パブリケーションによって修飾されたすべての競合が返されます。 たとえば、 **MSmerge_conflict_Customers**テーブルに**WA**および**ca**パブリケーションの競合行がある場合、パブリケーション名**ca**を渡すと、 **ca**パブリケーションに関連する競合が取得されます。  
   
-`[ @conflict_table = ] 'conflict_table'`競合テーブルの名前を指定します。 *conflict_table*は**sysname**であり、既定値はありません。 以降[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のバージョンでは、競合テーブルの名前は、パブリッシュされたアーティクルごとに1つのテーブルと共に、 **\_MSmerge_conflict パブリケーション\_アーティクル**での形式名を使用して付けられます。  
+`[ @conflict_table = ] 'conflict_table'`競合テーブルの名前を指定します。 *conflict_table*は**sysname**であり、既定値はありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは、競合テーブルの名前は、パブリッシュされたアーティクルごとに1つのテーブルと共に、 **MSmerge_conflict \_ _パブリケーション \_ アーティクル_** での形式名を使用して付けられます。  
   
 `[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   

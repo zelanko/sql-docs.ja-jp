@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e033e446fc771ad87542474edb1e90caf08faebd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 511276581464f366214bfd9bdd8543e3fb339ab8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81528788"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828456"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`パブリケーションのレプリケーションの種類を指定します。 *publication_type*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|パブリケーションの種類|  
+|[値]|パブリケーションの種類|  
 |-----------|----------------------|  
 |**0**|トランザクション|  
 |**1**|スナップショット|  
@@ -71,7 +71,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_login**||ディストリビューターログイン。|  
 |**distributor_password**||ディストリビューター パスワード。|  
 |**distributor_security_mode**|**1**|ディストリビューターへの接続時に Windows 認証を使用します。|  
-||**0**|ディストリビューター [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への接続時に認証を使用します。|  
+||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディストリビューターへの接続時に認証を使用します。|  
 |**dts_package_name**||SQL Server 2000 データ変換サービス (DTS) パッケージの名前。 この値は、パブリケーションがトランザクションまたはスナップショットの場合にのみ指定できます。|  
 |**dts_package_password**||パッケージのパスワードを指定します。 *dts_package_password*は**sysname**で、既定値は NULL です。これは、password プロパティを変更せずに残すことを指定します。<br /><br /> 注: DTS パッケージにはパスワードが必要です。<br /><br /> この値は、パブリケーションがトランザクションまたはスナップショットの場合にのみ指定できます。|  
 |**dts_package_location**||DTS パッケージが格納されている場所。 この値は、パブリケーションがトランザクションまたはスナップショットの場合にのみ指定できます。|  
@@ -92,7 +92,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**publisher_login**||パブリッシャーログイン。 *Publisher_login*の変更は、マージパブリケーションへのサブスクリプションでのみサポートされています。|  
 |**publisher_password**||パブリッシャーのパスワード。 *Publisher_password*の変更は、マージパブリケーションへのサブスクリプションでのみサポートされています。|  
 |**publisher_security_mode**|**1**|パブリッシャーに接続するときに Windows 認証を使用。 *Publisher_security_mode*の変更は、マージパブリケーションへのサブスクリプションでのみサポートされています。|  
-||**0**|パブリッシャー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するときに認証を使用します。|  
+||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証を使用します。|  
 |**use_ftp**|**true**|スナップショットを取得するには、通常のプロトコルの代わりに FTP を使用します。|  
 ||**false**|標準のプロトコルを使用してスナップショットを取得。|  
 |**use_web_sync**|**true**|Web 同期を有効にします。|  

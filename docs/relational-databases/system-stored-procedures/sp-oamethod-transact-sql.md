@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98a8b4ce231c907231646379a3730ab0c1c535db
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252196"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828266"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,13 +68,13 @@ sp_OAMethod objecttoken , methodname
   
  出力パラメーターの戻り値を取得するには、*パラメーター*を適切なデータ型のローカル変数にする必要があり、**出力**を指定する必要があります。 定数パラメーターが指定されている場合、または**output**が指定されていない場合、出力パラメーターからの戻り値は無視されます。  
   
- 指定する場合、 *parametername*は[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]名前付きパラメーターの名前である必要があります。 _Parametername_is ローカル**@** 変数では[!INCLUDE[tsql](../../includes/tsql-md.md)]ないことに注意してください。 アットマーク (**@**) は削除され、 *parametername*はパラメーター名として OLE オブジェクトに渡されます。 すべての位置指定パラメーターを指定した後に、すべての名前付きパラメーターを指定する必要があります。  
+ 指定する場合、 *parametername*は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 名前付きパラメーターの名前である必要があります。 **@**_Parametername_is ローカル変数ではないことに注意 [!INCLUDE[tsql](../../includes/tsql-md.md)] してください。 アットマーク ( **@** ) は削除され、 *parametername*はパラメーター名として OLE オブジェクトに渡されます。 すべての位置指定パラメーターを指定した後に、すべての名前付きパラメーターを指定する必要があります。  
   
  *n*  
  複数のパラメーターを指定できることを示すプレースホルダーです。  
   
 > [!NOTE]
->  parametername は、指定されたメソッドの一部であり、オブジェクトに渡されるため、名前付きパラメーターにすることができます。 * \@* このストアドプロシージャの他のパラメーターは、名前ではなく位置によって指定されます。  
+>  * \@ parametername*は、指定されたメソッドの一部であり、オブジェクトに渡されるため、名前付きパラメーターにすることができます。 このストアドプロシージャの他のパラメーターは、名前ではなく位置によって指定されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または0以外の数 (失敗)。これは、OLE オートメーションオブジェクトによって返される HRESULT の整数値です。  
@@ -92,7 +92,7 @@ sp_OAMethod objecttoken , methodname
   
  列内のすべてのデータ値が同じデータ型を共有する場合は、そのデータ型を列全体で使用します。 列のデータ値のデータ型が異なる場合、列全体のデータ型が次のグラフに基づいて選択されます。  
   
-||int|float|money|DATETIME|varchar|nvarchar|  
+||INT|float|money|DATETIME|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -110,7 +110,7 @@ sp_OAMethod objecttoken , methodname
 ## <a name="examples"></a>例  
   
 ### <a name="a-calling-a-method"></a>A. メソッドを呼び出す  
- 次の例では`Connect` 、以前に作成した**SQLServer**オブジェクトのメソッドを呼び出します。  
+ 次の例では、 `Connect` 以前に作成した**SQLServer**オブジェクトのメソッドを呼び出します。  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -123,7 +123,7 @@ END;
 ```  
   
 ### <a name="b-getting-a-property"></a>B. プロパティを取得する  
- 次の例では`HostName` 、(以前に作成した**SQLServer**オブジェクトの) プロパティを取得し、ローカル変数に格納します。  
+ 次の例では、 `HostName` (以前に作成した**SQLServer**オブジェクトの) プロパティを取得し、ローカル変数に格納します。  
   
 ```  
 DECLARE @property varchar(255);  

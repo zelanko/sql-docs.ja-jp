@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_requestpeertopologyinfo
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d137706da49f666ce66abea52249796a0094c7e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 61439aeb9fd4a58d8b003473a4e55fa19ca06a36
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129659"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824341"
 ---
 # <a name="sp_requestpeertopologyinfo-transact-sql"></a>sp_requestpeertopologyinfo (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ sp_requestpeertopologyinfo [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @publication= ]'*publication*'  
+ [ @publication =] '*パブリケーション*'  
  トポロジ全体の状態要求を実行するパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
- [ @request_id= ]*request_id*  
+ [ @request_id =] *request_id*  
  トポロジ状態要求に割り当てられている ID 番号を指定します。 *request_id*は**int**,、既定値は NULL です。 この ID は[sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)で使用できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

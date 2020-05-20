@@ -13,15 +13,15 @@ keywords:
 f1_keywords:
 - DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 465416e87966ba3a80c8e98394c0b1f2009f591b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7a7dc1ff6c67845a02af431d2e36727c83fd279a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844457"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826455"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ Azure SQL database または Azure SQL Data Warehouse について、エディ�
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|database_id|int|データベースの ID。 Azure SQL Database server のインスタンス内で一意です。 [Transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)に付属しています。|  
+|database_id|INT|データベースの ID。 Azure SQL Database server のインスタンス内で一意です。 [Transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)に付属しています。|  
 |edition|sysname|データベースまたはデータウェアハウスのサービスレベル: **Basic**、 **Standard**、 **Premium** 、または**data warehouse**。|  
 |service_objective|sysname|データベースの価格レベル。 データベースがエラスティックプール内にある場合、は**ElasticPool**を返します。<br /><br /> **Basic**レベルでは、は**basic**を返します。<br /><br /> **Standard サービスレベルの単一データベースで**は、次のいずれかが返されます。 S0、S1、S2、S3、S4、S6、S7、S9、または S12。<br /><br /> **Premium レベルの単一のデータベース**は、次の値を返します: P1、P2、P4、P6、P11、または P15。<br /><br /> **SQL Data Warehouse**は DW30000C から DW100 を返します。<br /><br /> 詳細については、「[単一データベース](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/)、[エラスティックプール](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)、[データウェアハウス](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)」を参照してください。|  
 |elastic_pool_name|sysname|データベースが属する[エラスティックプール](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)の名前。 データベースが単一データベースまたはデータ warehoue の場合は**NULL**を返します。|  

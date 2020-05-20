@@ -17,14 +17,14 @@ helpviewer_keywords:
 - dm_resource_governor_resource_pool_affinity
 - sys.dm_resource_governor_resource_pool_affinity
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3b51cd98cd9ef0e6adc3d17d2b1263a62604ab52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7738b79c85c8a36eab671799ebf01797b67a3080
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053274"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830444"
 ---
 # <a name="sysdm_resource_governor_resource_pool_affinity-transact-sql"></a>dm_resource_governor_resource_pool_affinity (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68053274"
 |Processor_group|**smallint**|Windows 論理プロセッサグループの ID。 NULL 値は許可されません。|  
 |Scheduler_mask|**bigint**|このプールに関連付けられているスケジューラを表すバイナリマスク。 NULL 値は許可されません。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [自動] のアフィニティを使用して作成されたプールは、アフィニティがないため、このビューに表示されません。 詳細については、「 [CREATE RESOURCE pool &#40;transact-sql&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md) 」および「 [ALTER Resource pool &#40;transact-sql&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)ステートメント」を参照してください。  
   
 ## <a name="see-also"></a>参照  

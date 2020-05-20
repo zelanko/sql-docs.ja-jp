@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppullsubscription
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ce6fe81cc037e8e704758155aa302c61418ce65b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771443"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824487"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`リモートサーバーの名前を指定します。 *publisher*のデータ型は**sysname**で、 **%** 既定値はです。これにより、すべてのパブリッシャーの情報が返されます。  
+`[ @publisher = ] 'publisher'`リモートサーバーの名前を指定します。 *publisher*のデータ型は**sysname**で、既定値はです **%** 。これにより、すべてのパブリッシャーの情報が返されます。  
   
-`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*は**sysname**で、既定値**%** はです。これにより、すべてのパブリッシャーデータベースが返されます。  
+`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*は**sysname**で、既定値はです。これにより、 **%** すべてのパブリッシャーデータベースが返されます。  
   
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *パブリケーション*は**sysname**で、既定値**%** はです。これにより、すべてのパブリケーションが返されます。 このパラメーターが ALL と等しい場合は、independent_agent = **0**のプルサブスクリプションのみが返されます。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *パブリケーション*は**sysname**で、既定値はです。これにより、 **%** すべてのパブリケーションが返されます。 このパラメーターが ALL と等しい場合は、independent_agent = **0**のプルサブスクリプションのみが返されます。  
   
 `[ @show_push = ] 'show_push'`すべてのプッシュサブスクリプションを返すかどうかを指定します。 *show_push*は**nvarchar (5)**,、既定値は FALSE の場合、プッシュサブスクリプションは返されません。  
   
@@ -52,7 +52,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**文書**|**sysname**|パブリッシャーの名前。|  
+|**publisher**|**sysname**|パブリッシャーの名前。|  
 |**パブリッシャー データベース (publisher database)**|**sysname**|パブリッシャーデータベースの名前。|  
 |**レプリケーション**|**sysname**|パブリケーションの名前。|  
 |**independent_agent**|**bit**|このパブリケーションに対してスタンドアロンのディストリビューションエージェントがあるかどうかを示します。|  
@@ -64,17 +64,17 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**最後のトランザクションのタイムスタンプ**|**varbinary(16)**|最後にレプリケートされたトランザクションのタイムスタンプ。|  
 |**更新モード**|**tinyint**|許可される更新の種類。|  
 |**distribution agent job_id**|**int**|ディストリビューション エージェントのジョブ ID。|  
-|**enabled_for_synmgr**|**int**|同期マネージャーを[!INCLUDE[msCoName](../../includes/msconame-md.md)]使用してサブスクリプションを同期できるかどうかを指定します。|  
+|**enabled_for_synmgr**|**int**|同期マネージャーを使用してサブスクリプションを同期できるかどうかを指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] します。|  
 |**サブスクリプション guid**|**binary(16)**|パブリケーションのサブスクリプションのバージョンのグローバル識別子。|  
 |**subid**|**binary(16)**|匿名サブスクリプションのグローバル識別子。|  
 |**immediate_sync**|**bit**|スナップショット エージェントを実行するたびに、同期ファイルを作成または再作成するかどうかを示します。|  
-|**パブリッシャーログイン**|**sysname**|パブリッシャーで認証に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用されるログイン ID。|  
-|**パブリッシャーのパスワード**|**nvarchar (524)**|認証のため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にパブリッシャーで使用されるパスワード (暗号化)。|  
-|**パブリッシャーの security_mode**|**int**|パブリッシャーで実装されているセキュリティ モード。<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証<br /><br /> **2** = 同期トリガーは、静的な**sysservers**エントリを使用してリモートプロシージャコール (RPC) を実行します。また、*パブリッシャー*は、 **sysservers**テーブルのリモートサーバーまたはリンクサーバーとして定義されている必要があります。|  
+|**パブリッシャーログイン**|**sysname**|パブリッシャーで認証に使用されるログイン ID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**パブリッシャーのパスワード**|**nvarchar (524)**|認証のためにパブリッシャーで使用されるパスワード (暗号化) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**パブリッシャーの security_mode**|**int**|パブリッシャーで実装されているセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証<br /><br /> **1** = Windows 認証<br /><br /> **2** = 同期トリガーは、静的な**sysservers**エントリを使用してリモートプロシージャコール (RPC) を実行します。また、*パブリッシャー*は、 **sysservers**テーブルのリモートサーバーまたはリンクサーバーとして定義されている必要があります。|  
 |**ディストリビューター**|**sysname**|ディストリビューターの名前。|  
-|**distributor_login**|**sysname**|ディストリビューターで認証に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用されるログイン ID。|  
-|**distributor_password**|**nvarchar (524)**|認証のために[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディストリビューターで使用されるパスワード (暗号化)。|  
-|**distributor_security_mode**|**int**|ディストリビューターで実装されているセキュリティモード:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
+|**distributor_login**|**sysname**|ディストリビューターで認証に使用されるログイン ID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**distributor_password**|**nvarchar (524)**|認証のためにディストリビューターで使用されるパスワード (暗号化) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**distributor_security_mode**|**int**|ディストリビューターで実装されているセキュリティモード:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証<br /><br /> **1** = Windows 認証|  
 |**ftp_address**|**sysname**|これは旧バージョンとの互換性のためにだけ用意されています。|  
 |**ftp_port**|**int**|これは旧バージョンとの互換性のためにだけ用意されています。|  
 |**ftp_login**|**sysname**|これは旧バージョンとの互換性のためにだけ用意されています。|  
@@ -90,8 +90,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**last_sync_status**|**int**|サブスクリプションの状態:<br /><br /> **0** = すべてのジョブが開始を待機しています<br /><br /> **1** = 1 つ以上のジョブが開始されています<br /><br /> **2** = すべてのジョブが正常に実行されました<br /><br /> **3** = 少なくとも1つのジョブが実行されています<br /><br /> **4** = すべてのジョブがスケジュールされ、アイドル状態になっている<br /><br /> **5** = 少なくとも1つのジョブが前回のエラーの発生後に実行しようとしています<br /><br /> **6** = 少なくとも1つのジョブを正常に実行できませんでした|  
 |**last_sync_summary**|**sysname**|前回の同期の結果の説明。|  
 |**last_sync_time**|**datetime**|サブスクリプション情報が更新された時刻。 ISO 日付 (114) + ODBC 時刻 (121) の UNICODE 文字列です。 形式は yyyymmdd hh: mi: sss. mmm です。 ' yyyy ' は年、' mm ' は月、' dd ' は日、' hh ' は時間、' mi ' は分、' sss ' は秒、' mmm ' はミリ秒です。|  
-|**job_login**|**nvarchar(512)**|ディストリビューションエージェントを実行する Windows アカウントを指定します。このアカウントは、*ドメイン*\\*ユーザー名*の形式で返されます。|  
-|**job_password**|**sysname**|セキュリティ上の理由から、値**\*\*\*\*\*\*\*\*"\***" は常に返されます。|  
+|**job_login**|**nvarchar(512)**|ディストリビューションエージェントを実行する Windows アカウントを指定します。このアカウントは、*ドメイン* \\ *ユーザー名*の形式で返されます。|  
+|**job_password**|**sysname**|セキュリティ上の理由から、値 " **\*\*\*\*\*\*\*\*\*\*** " は常に返されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

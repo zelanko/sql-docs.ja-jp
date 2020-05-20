@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_transaction_stats dynamic management view
 ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 755b5f836b833512a122ad92e5cedbd7e938a4e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3e272d66fef1a6426e13cc6ab8ea72d3912003d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090071"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829017"
 ---
 # <a name="sysdm_xtp_transaction_stats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,30 +39,30 @@ ms.locfileid: "68090071"
 |total_aborts|**bigint**|ユーザーまたはシステムの中止によって中止されたトランザクションの総数。|  
 |user_aborts|**bigint**|システムによって開始された中止の回数。 たとえば、書き込みの競合、検証の失敗、依存関係のエラーなどがあります。|  
 |validation_failures|**bigint**|検証エラーによってトランザクションが中止された回数。|  
-|dependencies_taken|**bigint**|内部使用のみです。|  
+|dependencies_taken|**bigint**|内部使用のみ。|  
 |dependencies_failed|**bigint**|トランザクションが依存していたトランザクションが中止されたためにトランザクションが中止された回数。|  
 |savepoint_create|**bigint**|作成されたセーブポイントの数。 ATOMIC ブロックごとに新しいセーブポイントが作成されます。|  
 |savepoint_rollbacks|**bigint**|前のセーブポイントにロールバックする回数。|  
-|savepoint_refreshes|**bigint**|内部使用のみです。|  
+|savepoint_refreshes|**bigint**|内部使用のみ。|  
 |log_bytes_written|**bigint**|インメモリ OLTP ログレコードに書き込まれた合計バイト数。|  
 |log_IO_count|**bigint**|ログ IO を必要とするトランザクションの総数。 持続性のあるテーブルのトランザクションのみを考慮します。|  
-|phantom_scans_started|**bigint**|内部使用のみです。|  
-|phatom_scans_retries|**bigint**|内部使用のみです。|  
-|phantom_rows_touched|**bigint**|内部使用のみです。|  
-|phantom_rows_expiring|**bigint**|内部使用のみです。|  
-|phantom_rows_expired|**bigint**|内部使用のみです。|  
-|phantom_rows_expired_removed|**bigint**|内部使用のみです。|  
-|scans_started|**bigint**|内部使用のみです。|  
-|scans_retried|**bigint**|内部使用のみです。|  
-|rows_returned|**bigint**|内部使用のみです。|  
-|rows_touched|**bigint**|内部使用のみです。|  
-|rows_expiring|**bigint**|内部使用のみです。|  
-|rows_expired|**bigint**|内部使用のみです。|  
-|rows_expired_removed|**bigint**|内部使用のみです。|  
-|rows_inserted|**bigint**|内部使用のみです。|  
-|rows_updated|**bigint**|内部使用のみです。|  
-|rows_deleted|**bigint**|内部使用のみです。|  
-|write_conflicts|**bigint**|内部使用のみです。|  
+|phantom_scans_started|**bigint**|内部使用のみ。|  
+|phatom_scans_retries|**bigint**|内部使用のみ。|  
+|phantom_rows_touched|**bigint**|内部使用のみ。|  
+|phantom_rows_expiring|**bigint**|内部使用のみ。|  
+|phantom_rows_expired|**bigint**|内部使用のみ。|  
+|phantom_rows_expired_removed|**bigint**|内部使用のみ。|  
+|scans_started|**bigint**|内部使用のみ。|  
+|scans_retried|**bigint**|内部使用のみ。|  
+|rows_returned|**bigint**|内部使用のみ。|  
+|rows_touched|**bigint**|内部使用のみ。|  
+|rows_expiring|**bigint**|内部使用のみ。|  
+|rows_expired|**bigint**|内部使用のみ。|  
+|rows_expired_removed|**bigint**|内部使用のみ。|  
+|rows_inserted|**bigint**|内部使用のみ。|  
+|rows_updated|**bigint**|内部使用のみ。|  
+|rows_deleted|**bigint**|内部使用のみ。|  
+|write_conflicts|**bigint**|内部使用のみ。|  
 |unique_constraint_violations|**bigint**|UNIQUE 制約の違反の総数。|  
   
 ## <a name="permissions"></a>アクセス許可  

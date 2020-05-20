@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_memory_grants dynamic management view
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2e3cfbea2f7ff9bb7cd976142db28acec3105fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097703"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829416"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68097703"
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。また、列**scheduler_id**、 **wait_order**、 **pool_id**、 **group_id**の値がフィルター処理されます。列の値が NULL に設定されています。  
   
 > [!NOTE]  
-> またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_exec_query_memory_grants**という名前を使用します。  
+> またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_exec_query_memory_grants**という名前を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "68097703"
 |**max_used_memory_kb**|**bigint**|この時点までに使用された最大物理メモリ (KB 単位)。|  
 |**query_cost**|**float**|推定クエリ コスト。|  
 |**timeout_sec**|**int**|このクエリがメモリ許可要求をやめるまでのタイムアウト (秒単位)。|  
-|**resource_semaphore_id**|**smallint**|このクエリが待機しているリソース セマフォの非一意の ID。<br /><br /> **注:** この ID は、よりも[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]前のバージョンので一意です。 この変更は、クエリの実行のトラブルシューティングに影響する可能性があります。 詳細については、後の「解説」を参照してください。|  
+|**resource_semaphore_id**|**smallint**|このクエリが待機しているリソース セマフォの非一意の ID。<br /><br /> **注:** この ID は、よりも前のバージョンので一意です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。 この変更は、クエリの実行のトラブルシューティングに影響する可能性があります。 詳細については、後の「解説」を参照してください。|  
 |**queue_id**|**smallint**|このクエリがメモリ許可を待機している待機キューの ID。 メモリが既に許可されている場合は NULL です。|  
 |**wait_order**|**int**|指定した **queue_id** 内の待機キューの順番。 この値は、他のクエリがメモリ許可を取得したり、タイムアウトしたりした場合に、特定のクエリで変更される可能性があります。メモリが既に許可されている場合は NULL です。|  
 |**is_next_candidate**|**bit**|次のメモリ許可の候補。<br /><br /> 1 = はい<br /><br /> 0 = いいえ<br /><br /> NULL = メモリが既に許可されている|  
@@ -63,11 +63,11 @@ ms.locfileid: "68097703"
 |**pool_id**|**int**|このワークロード グループが属するリソース プールの ID。|  
 |**is_small**|**tinyint**|1 に設定すると、この許可で小さなリソース セマフォが使用されます。 0 に設定すると、通常のセマフォが使用されます。|  
 |**ideal_memory_kb**|**bigint**|物理メモリ内にすべてを収めるために必要なメモリ許可のサイズ (KB 単位)。 これはカーディナリティの推定値に基づいています。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上では、データベース内の `VIEW DATABASE STATE` アクセス許可が必要です。   
    
 ## <a name="remarks"></a>Remarks  
@@ -110,9 +110,9 @@ ms.locfileid: "68097703"
   
 -   ランナウェイ クエリの疑いがある場合は、[sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) のプラン表示と、[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) のバッチ テキストを調べます。  
   
- または集計を含む`ORDER BY`動的管理ビューを使用するクエリでは、メモリ使用量が増加し、トラブルシューティングの問題に寄与する場合があります。  
+ または集計を含む動的管理ビューを使用するクエリで `ORDER BY` は、メモリ使用量が増加し、トラブルシューティングの問題に寄与する場合があります。  
   
- データベース管理者は、リソース ガバナー機能を使用することで、サーバー リソースを最大 64 個までのリソース プールに分散できます。 以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]では、各プールは小規模の独立したサーバーインスタンスのように動作し、2つのセマフォが必要です。 **Dm_exec_query_resource_semaphores**から返される行の数は、で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]返された行より最大で20倍になることがあります。  
+ データベース管理者は、リソース ガバナー機能を使用することで、サーバー リソースを最大 64 個までのリソース プールに分散できます。 以降 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、各プールは小規模の独立したサーバーインスタンスのように動作し、2つのセマフォが必要です。 **Dm_exec_query_resource_semaphores**から返される行の数は、で返された行より最大で20倍になることがあります [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
 ## <a name="see-also"></a>参照  
  [dm_exec_query_resource_semaphores &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     

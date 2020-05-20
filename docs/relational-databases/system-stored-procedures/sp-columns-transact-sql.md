@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbc724b9178ec867768fde3dc3d9ff58add554e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070355"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826271"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,9 +51,9 @@ sp_columns [ @table_name = ] object
   
  指定した名前のオブジェクトを現在のユーザーが所有している場合は、そのオブジェクトの列が返されます。 *Owner*が指定されておらず、現在のユーザーが指定された*オブジェクト*を持つオブジェクトを所有していない場合、 **sp_columns**は、データベース所有者が所有する、指定された*オブジェクト*を持つオブジェクトを検索します。 存在する場合は、そのオブジェクトの列が返されます。  
   
-`[ \@table_qualifier = ] qualifier`オブジェクト修飾子の名前を指定します。 *修飾子*は**sysname**,、既定値は NULL です。 さまざまな DBMS 製品では、3つの要素で構成するオブジェクト (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列はデータベース名を表します。 一部の製品では、オブジェクトのデータベース環境のサーバー名を表します。  
+`[ \@table_qualifier = ] qualifier`オブジェクト修飾子の名前を指定します。 *修飾子*は**sysname**,、既定値は NULL です。 さまざまな DBMS 製品では、3つの要素で構成するオブジェクト (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この列はデータベース名を表します。 一部の製品では、オブジェクトのデータベース環境のサーバー名を表します。  
   
-`[ \@column_name = ] column`は1つの列であり、カタログ情報の列が1つだけ必要な場合に使用します。 *列*は**nvarchar (384)**,、既定値は NULL です。 *列*が指定されていない場合は、すべての列が返されます。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、*列*は**syscolumns**テーブルに示されている列名を表します。 ワイルドカードパターンマッチングがサポートされています。 相互運用性を最大にするために、ゲートウェイクライアントでは、SQL-92 標準のパターン照合 (% と _ ワイルドカード文字) のみを想定する必要があります。  
+`[ \@column_name = ] column`は1つの列であり、カタログ情報の列が1つだけ必要な場合に使用します。 *列*は**nvarchar (384)**,、既定値は NULL です。 *列*が指定されていない場合は、すべての列が返されます。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、*列*は**syscolumns**テーブルに示されている列名を表します。 ワイルドカードパターンマッチングがサポートされています。 相互運用性を最大にするために、ゲートウェイクライアントでは、SQL-92 標準のパターン照合 (% と _ ワイルドカード文字) のみを想定する必要があります。  
   
 `[ \@ODBCVer = ] ODBCVer`使用されている ODBC のバージョンを示します。 *Odbcver*は**int**,、既定値は2です。 これは、ODBC バージョン2を示します。 有効な値は2または3です。 バージョン2とバージョン3の動作の違いについては、ODBC **Sqlcolumns**の仕様を参照してください。  
   
@@ -71,10 +71,10 @@ sp_columns [ @table_name = ] object
 |**COLUMN_NAME**|**sysname**|返される**TABLE_NAME**の各列の列名。 このフィールドは常に値を返します。|  
 |**DATA_TYPE**|**smallint**|ODBC データ型の整数コードです。 ODBC のデータ型にマップできないデータ型の場合は、NULL になります。 ネイティブデータ型の名前が**TYPE_NAME**列に返されます。|  
 |**TYPE_NAME**|**sysname**|データ型を表す文字列。 基になる DBMS は、このデータ型の名前を提示します。|  
-|**精度**|**int**|有効桁数。 **有効桁数**列の戻り値は、10進数値です。|  
+|**PRECISION**|**int**|有効桁数。 **有効桁数**列の戻り値は、10進数値です。|  
 |**LENGTH**|**int**|データの転送サイズ。<sup>1</sup>|  
 |**段階**|**smallint**|小数点の右側の桁数。|  
-|**RADIX**|**smallint**|数値データ型のベース。|  
+|**ベース**|**smallint**|数値データ型のベース。|  
 |**NULLABLE**|**smallint**|Null 値の許容属性を指定します。<br /><br /> 1 = NULL 値を許容します。<br /><br /> 0 = NULL 値を許容しません。|  
 |**備考**|**varchar (254)**|このフィールドは常に NULL を返します。|  
 |**COLUMN_DEF**|**nvarchar (4000)**|列の既定値です。|  
@@ -93,7 +93,7 @@ sp_columns [ @table_name = ] object
 ## <a name="remarks"></a>Remarks  
  **sp_columns**は、区切られた識別子の要件に従います。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、指定されたテーブルの列情報を返します。  
   
 ```  

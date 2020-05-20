@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_filestream_options catalog view
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 95d9c980927d565b907d666af1317e883126087e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4c9ec7c14bf192891e547c68ca85b5b055eb6815
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67915036"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823503"
 ---
 # <a name="sysdatabase_filestream_options-transact-sql"></a>database_filestream_options (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "67915036"
  FileTables について詳しくは、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。  
   
   
-|列|種類|説明|  
+|Column|種類|説明|  
 |------------|----------|-----------------|  
 |**database_id**|**int**|データベースの ID です。 この値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意になっています。|  
 |**directory_name**|**nvarchar(255)**|すべての FileTable 名前空間のデータベースレベルのディレクトリです。|  
-|**non_transacted_access**|**tinyint**|有効になっている FILESTREAM データへの非トランザクションアクセスのレベル。 アクセスのレベルは、 **CREATE database**または**ALTER database**ステートメントの NON_TRANSACTED_ACCESS オプションによって設定されます。<br /><br /> この設定には、次のいずれかの値が含まれます。<br /><br /> 0-有効ではありません。 これは、既定値です。 このレベルは、 **NON_TRANSACTED_ACCESS**オプションに値**OFF**を指定することによって設定します。<br /><br /> 1-読み取り専用アクセス。 このレベルは、 **NON_TRANSACTED_ACCESS**オプションの**READ_ONLY**値を指定することによって設定されます。<br /><br /> 3-フルアクセス。 このレベルは、 **NON_TRANSACTED_ACCESS**オプションに値**FULL**を指定することによって設定されます。<br /><br /> 5 - READONLY に移行中。<br /><br /> 6-OFF に移行中|  
+|**non_transacted_access**|**tinyint**|有効になっている FILESTREAM データへの非トランザクションアクセスのレベル。 アクセスのレベルは、 **CREATE database**または**ALTER database**ステートメントの NON_TRANSACTED_ACCESS オプションによって設定されます。<br /><br /> この設定には、次のいずれかの値が含まれます。<br /><br /> 0-有効ではありません。 これが既定値です。 このレベルは、 **NON_TRANSACTED_ACCESS**オプションに値**OFF**を指定することによって設定します。<br /><br /> 1-読み取り専用アクセス。 このレベルは、 **NON_TRANSACTED_ACCESS**オプションの**READ_ONLY**値を指定することによって設定されます。<br /><br /> 3-フルアクセス。 このレベルは、 **NON_TRANSACTED_ACCESS**オプションに値**FULL**を指定することによって設定されます。<br /><br /> 5 - READONLY に移行中。<br /><br /> 6-OFF に移行中|  
 |**non_transacted_access_desc**|**nvarchar(60)**|Non_transacted_access で特定された非トランザクションアクセスのレベルの説明。<br /><br /> この設定には、次のいずれかの値が含まれます。<br /><br /> NONE-これは既定値です。<br /><br /> READ_ONLY<br /><br /> FULL<br /><br /> IN_TRANSITION_TO_READ_ONLY<br /><br /> IN_TRANSITION_TO_OFF|  
   
 ## <a name="see-also"></a>参照  
