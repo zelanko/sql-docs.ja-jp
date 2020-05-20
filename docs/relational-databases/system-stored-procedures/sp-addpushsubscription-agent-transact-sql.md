@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpushsubscription_agent
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 740437178b6d9ab444cabdbda3e37febc65b3897
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68894040"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820707"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'`サブスクリプションデータベースの名前を指定します。 *subscriber_db*は**sysname**,、既定値は NULL です。 SQL Server 以外のサブスクライバーの場合は、 *subscriber_db*の値 **(既定の転送先)** を指定します。  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`同期時にサブスクライバーに接続するときに使用するセキュリティモードを示します。 *subscriber_security_mode*は**int**,、既定値は1です。 **0**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。 **1** Windows 認証を指定します。  
+`[ @subscriber_security_mode = ] subscriber_security_mode`同期時にサブスクライバーに接続するときに使用するセキュリティモードを示します。 *subscriber_security_mode*は**int**,、既定値は1です。 **0**は認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1** Windows 認証を指定します。  
   
 > [!IMPORTANT]  
 >  キュー更新サブスクリプションの場合、サブスクライバーへの接続には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用し、各サブスクライバーへの接続にはそれぞれ異なるアカウントを指定してください。 他のすべてのサブスクリプションでは、Windows 認証を使用します。  
@@ -98,12 +98,12 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`ディストリビューションエージェントをスケジュールする頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
-|**8**|週単位|  
+|**8**|週次|  
 |**まで**|月 1 回|  
 |**32**|月単位の相対|  
 |**64** (既定値)|自動開始|  
@@ -116,24 +116,24 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`ディストリビューションエージェントの日付を指定します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**1** (既定値)|First (先頭へ)|  
-|**2**|秒|  
+|**1** (既定値)|First|  
+|**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|Last (最後へ)|  
+|**まで**|末尾|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*によって使用される定期実行係数です。 *frequency_recurrence_factor*は**int**,、既定値は0です。  
   
 `[ @frequency_subday = ] frequency_subday`定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
-|**2**|秒|  
-|**4** (既定値)|分|  
-|**8**|時|  
+|**2**|Second|  
+|**4** (既定値)|Minute|  
+|**8**|時間|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*の間隔を指定します。 *frequency_subday_interval*は**int**,、既定値は5です。  
   
@@ -145,7 +145,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @active_end_date = ] active_end_date`ディストリビューションエージェントのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**,、既定値は99991231です。  
   
-`[ @dts_package_name = ] 'dts_package_name'`データ変換サービス (DTS) パッケージの名前を指定します。 *dts_package_name*は**sysname**で、既定値は NULL です。 たとえば、というパッケージ名`DTSPub_Package`を指定する場合、パラメーターはに`@dts_package_name = N'DTSPub_Package'`なります。  
+`[ @dts_package_name = ] 'dts_package_name'`データ変換サービス (DTS) パッケージの名前を指定します。 *dts_package_name*は**sysname**で、既定値は NULL です。 たとえば、というパッケージ名を指定する場合、パラメーターはになり `DTSPub_Package` `@dts_package_name = N'DTSPub_Package'` ます。  
   
 `[ @dts_package_password = ] 'dts_package_password'`パッケージを実行するために必要なパスワードを指定します。 *dts_package_password*は**sysname**で、既定値は NULL です。  
   
@@ -154,26 +154,26 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @dts_package_location = ] 'dts_package_location'`パッケージの場所を指定します。 *dts_package_location*は**nvarchar (12)**,、既定値はディストリビューターです。 パッケージの場所には、**ディストリビューター**または**サブスクライバー**を指定できます。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`同期マネージャーを使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)]サブスクリプションを同期できるかどうかを指定します。 *enabled_for_syncmgr*は**nvarchar (5)**,、既定値は FALSE です。 **False**の場合、サブスクリプションは同期マネージャーに登録されていません。 **True**の場合、サブスクリプションは同期マネージャーに登録され、を起動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]せずに同期できます。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`同期マネージャーを使用してサブスクリプションを同期できるかどうかを指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] します。 *enabled_for_syncmgr*は**nvarchar (5)**,、既定値は FALSE です。 **False**の場合、サブスクリプションは同期マネージャーに登録されていません。 **True**の場合、サブスクリプションは同期マネージャーに登録され、を起動せずに同期でき [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。  
   
 `[ @distribution_job_name = ] 'distribution_job_name'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
-`[ @subscriber_provider = ] 'subscriber_provider'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データソースの OLE DB プロバイダーが登録されている一意のプログラム識別子 (PROGID) を指定します。 *subscriber_provider*は**sysname**で、既定値は NULL です。 *subscriber_provider*は、ディストリビューターにインストールされている OLE DB プロバイダーに対して一意である必要があります。 *subscriber_provider*は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のサブスクライバーに対してのみサポートされます。  
+`[ @subscriber_provider = ] 'subscriber_provider'`以外のデータソースの OLE DB プロバイダーが登録されている一意のプログラム識別子 (PROGID) を指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 *subscriber_provider*は**sysname**で、既定値は NULL です。 *subscriber_provider*は、ディストリビューターにインストールされている OLE DB プロバイダーに対して一意である必要があります。 *subscriber_provider*は、以外のサブスクライバーに対してのみサポートされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-`[ @subscriber_datasrc = ] 'subscriber_datasrc'`OLE DB プロバイダーによって認識されるデータソースの名前を指定します。 *subscriber_datasrc*は**nvarchar (4000)**,、既定値は NULL です。 OLE DB プロバイダーを初期化するために、DBPROP_INIT_DATASOURCE プロパティとして*subscriber_datasrc*が渡されます。 *subscriber_datasrc*は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のサブスクライバーに対してのみサポートされます。  
+`[ @subscriber_datasrc = ] 'subscriber_datasrc'`OLE DB プロバイダーによって認識されるデータソースの名前を指定します。 *subscriber_datasrc*は**nvarchar (4000)**,、既定値は NULL です。 OLE DB プロバイダーを初期化するために、DBPROP_INIT_DATASOURCE プロパティとして*subscriber_datasrc*が渡されます。 *subscriber_datasrc*は、以外のサブスクライバーに対してのみサポートされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-`[ @subscriber_location = ] 'subscriber_location'`OLE DB プロバイダーによって認識されるデータベースの場所を指定します。 *subscriber_location*は**nvarchar (4000)**,、既定値は NULL です。 OLE DB プロバイダーを初期化するために、DBPROP_INIT_LOCATION プロパティとして*subscriber_location*が渡されます。 *subscriber_location*は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のサブスクライバーに対してのみサポートされます。  
+`[ @subscriber_location = ] 'subscriber_location'`OLE DB プロバイダーによって認識されるデータベースの場所を指定します。 *subscriber_location*は**nvarchar (4000)**,、既定値は NULL です。 OLE DB プロバイダーを初期化するために、DBPROP_INIT_LOCATION プロパティとして*subscriber_location*が渡されます。 *subscriber_location*は、以外のサブスクライバーに対してのみサポートされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-`[ @subscriber_provider_string = ] 'subscriber_provider_string'`データソースを識別する OLE DB プロバイダー固有の接続文字列を指定します。 *subscriber_provider_string*は**nvarchar (4000)**,、既定値は NULL です。 *subscriber_provider_string*は、IDataInitialize に渡されるか、DBPROP_INIT_PROVIDERSTRING プロパティとして設定され、OLE DB プロバイダーが初期化されます。 *subscriber_provider_string*は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のサブスクライバーに対してのみサポートされます。  
+`[ @subscriber_provider_string = ] 'subscriber_provider_string'`データソースを識別する OLE DB プロバイダー固有の接続文字列を指定します。 *subscriber_provider_string*は**nvarchar (4000)**,、既定値は NULL です。 *subscriber_provider_string*は、IDataInitialize に渡されるか、DBPROP_INIT_PROVIDERSTRING プロパティとして設定され、OLE DB プロバイダーが初期化されます。 *subscriber_provider_string*は、以外のサブスクライバーに対してのみサポートされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-`[ @subscriber_catalog = ] 'subscriber_catalog'`OLE DB プロバイダーに接続するときに使用するカタログを指定します。 *subscriber_catalog*は**sysname**で、既定値は NULL です。 OLE DB プロバイダーを初期化するために、DBPROP_INIT_CATALOG プロパティとして*subscriber_catalog*が渡されます。 *subscriber_catalog*は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のサブスクライバーに対してのみサポートされます。  
+`[ @subscriber_catalog = ] 'subscriber_catalog'`OLE DB プロバイダーに接続するときに使用するカタログを指定します。 *subscriber_catalog*は**sysname**で、既定値は NULL です。 OLE DB プロバイダーを初期化するために、DBPROP_INIT_CATALOG プロパティとして*subscriber_catalog*が渡されます。 *subscriber_catalog*は、以外のサブスクライバーに対してのみサポートされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_addpushsubscription_agent**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 ## <a name="example"></a>例  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 724c3b71012014d6858554614fbed9239bbfeddc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124338"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820454"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -56,12 +56,12 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 `[ @action = ] 'action'`実行するアクションを指定します。 *アクション*は**varchar (20)**,、既定値はありません、次の値のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**add**|テーブルの非アクティブなフルテキストインデックスに*qualified_table_name*の*column_name*を追加します。 この操作により、列でフルテキストインデックスを作成できるようになります。|  
 |**」**|テーブルの非アクティブなフルテキストインデックスから*qualified_table_name*の*column_name*を削除します。|  
   
-`[ @language = ] 'language_term'`列に格納されているデータの言語を示します。 に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]含まれる言語の一覧については、「 [fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)」を参照してください。  
+`[ @language = ] 'language_term'`列に格納されているデータの言語を示します。 に含まれる言語の一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [Fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
 >  列に複数の言語またはサポートされていない言語のデータが含まれている場合は、' ニュートラル ' を使用してください。 既定値は、構成オプション ' default full text language ' によって指定されます。  
@@ -72,9 +72,9 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  フルテキストインデックスがアクティブな場合、実行中の作成は停止されます。 また、アクティブなフルテキスト インデックスを持つテーブルで変更の追跡が有効になっている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在のインデックスが維持されます。 たとえば [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、あるテーブルに対して現在行われているインデックス作成がすべて停止され、既存のインデックスの削除、および新しいインデックスの作成が開始されます。  
   
  変更の追跡がオンになっていて、インデックスを保持しながら列をフルテキストインデックスから追加または削除する必要がある場合は、テーブルを非アクティブ化し、必要な列を追加または削除する必要があります。 この操作では、インデックスは変化しません。 作成を開始することが実用的な場合は、テーブルを後でアクティブにすることができます。  
@@ -107,7 +107,7 @@ FROM spanishTbl
 WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')  
 ```  
   
- 結果`trabajar`セットには`trabajo`、、 `trabajamos`、など、さまざまな形式の行が含まれ`trabajan`ます。  
+ 結果セットには、、、など、さまざまな形式の行が含まれ `trabajar` `trabajo` `trabajamos` `trabajan` ます。  
   
 > [!NOTE]  
 >  1つのフルテキストクエリ関数句に示されているすべての列は、同じ言語を使用する必要があります。  

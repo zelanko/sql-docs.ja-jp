@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_purge_jobhistory
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad5e7a1d03dde408da52ca2b5ebe6b40f10c06c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64832f713153e6eaed126e30a2a0fd56c38a4bc6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313761"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820367"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ sp_purge_jobhistory
 > [!NOTE]  
 >  **Sysadmin**固定サーバーロールのメンバー、または**Sqlagentoperatorrole**固定データベースロールのメンバーは、 *job_name*または*job_id*を指定せずに**sp_purge_jobhistory**を実行できます。 **Sysadmin**ユーザーがこれらの引数を指定しない場合、すべてのローカルジョブとマルチサーバージョブのジョブ履歴が*oldest_date*によって指定された時間内に削除されます。 **Sqlagentoperatorrole**ユーザーがこれらの引数を指定しない場合、すべてのローカルジョブのジョブ履歴は*oldest_date*で指定された時間内に削除されます。  
   
-`[ @job_id = ] job_id`削除するレコードのジョブのジョブ識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。 *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 **Sysadmin**または**sqlagentoperatorrole**ユーザーがこの引数を使用する方法については、 ** \@job_name**の説明にある注を参照してください。  
+`[ @job_id = ] job_id`削除するレコードのジョブのジョブ識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。 *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 **Sysadmin**または**Sqlagentoperatorrole**ユーザーがこの引数を使用する方法については、 ** \@ job_name**の説明にある注を参照してください。  
   
 `[ @oldest_date = ] oldest_date`履歴に保持する最も古いレコード。 *oldest_date*は**datetime**,、既定値は NULL です。 *Oldest_date*を指定した場合、 **sp_purge_jobhistory**指定された値よりも古いレコードだけが削除されます。  
   
@@ -56,9 +56,9 @@ sp_purge_jobhistory
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Sp_purge_jobhistory**が正常に完了すると、メッセージが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -71,7 +71,7 @@ sp_purge_jobhistory
 ## <a name="examples"></a>例  
   
 ### <a name="a-remove-history-for-a-specific-job"></a>A. 特定のジョブの履歴を削除する  
- 次の例では、という名前`NightlyBackups`のジョブの履歴を削除します。  
+ 次の例では、という名前のジョブの履歴を削除し `NightlyBackups` ます。  
   
 ```  
 USE msdb ;  

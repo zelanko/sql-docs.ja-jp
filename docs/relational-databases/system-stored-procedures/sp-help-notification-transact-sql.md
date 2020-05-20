@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dbba9ea2f9df7e9a9fd154193c8f52fe904899c7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906106"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820444"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_help_notification
   
 `[ @enum_type = ] 'enum_type'`返される*object_type*情報。 ほとんどの場合、 *enum_type*は実際のものです。 *enum_type*は**char (10)** で、既定値はありません。これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |ACTUAL|*名前*に関連付けられている*object_types*のみを一覧表示します。|  
 |ALL|*名前*に関連付けられていないものを含むすべての*object_types*を一覧表示します。|  
@@ -97,7 +97,7 @@ sp_help_notification
 |**has_pager**|**int**|オペレーターがポケットベル アドレスを持っているかどうか。<br /><br /> **1** = はい<br /><br /> **0** = いいえ|  
 |**has_netsend**|**int**|オペレーターには、net send 通知が構成されています。<br /><br /> **1** = はい<br /><br /> **0** = いいえ|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このストアドプロシージャは、 **msdb**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -121,7 +121,7 @@ GO
 ```  
   
 ### <a name="b-listing-operators-for-a-specific-alert"></a>B. 特定の警告の送信先となるオペレーターを表示する  
- 次の例では、 `Test Alert`警告に対して任意の種類の通知を受け取るすべてのオペレーターを返します。  
+ 次の例では、警告に対して任意の種類の通知を受け取るすべてのオペレーターを返し `Test Alert` ます。  
   
 ```  
 USE msdb ;  

@@ -6,27 +6,27 @@ ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4ef8388e18ee73a0f1217e4e04adc13379892520
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7384cf9bfcf08f307a4e81cb0cdebe78e8011ea3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67915082"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823538"
 ---
 # <a name="sysdatabase_event_sessions-azure-sql-database"></a>sys.database_event_sessions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  現在のデータベースに存在するすべてのイベントセッション定義を一覧表示[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]します。  
+  現在のデータベースに存在するすべてのイベントセッション定義を一覧表示 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] します。  
   
 > [!NOTE]
->  という`sys.server_event_sessions`類似のカタログビューは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にのみ適用されます。  
+>  という類似のカタログビューは、 `sys.server_event_sessions` にのみ適用さ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] れます。  
   
 ||  
 |-|  
-|**に適用さ**れます: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、、およびそれ以降のすべてのバージョン。|  
+|**に適用さ**れます: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 、、およびそれ以降のすべてのバージョン。|  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

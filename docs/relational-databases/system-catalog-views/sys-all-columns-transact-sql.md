@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.all_columns catalog view
 ms.assetid: 40e04fe9-0b64-4799-84c0-57f128b2bdc2
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 712898faaf9ca24cf4b5a01b1b726231f76f0c22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 15278192b1d6df497ee37220a08fa38474184e4a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981820"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823408"
 ---
 # <a name="sysall_columns-transact-sql"></a>sys.all_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,9 +50,9 @@ ms.locfileid: "73981820"
 |is_computed|**bit**|1 = 列は計算列です。|  
 |is_filestream|**bit**|1 = 列は、filestream ストレージを使用するように宣言されています。|  
 |is_replicated|**bit**|1 = 列はレプリケートされています。|  
-|is_non_sql_subscribed|**bit**|1 = 列には、以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のサブスクライバーがあります。|  
+|is_non_sql_subscribed|**bit**|1 = 列には、以外のサブスクライバーがあり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |is_merge_published|**bit**|1 = 列はマージパブリッシュされています。|  
-|is_dts_replicated|**bit**|1 = 列は、を使用[!INCLUDE[ssIS](../../includes/ssis-md.md)]してレプリケートされます。|  
+|is_dts_replicated|**bit**|1 = 列は、を使用してレプリケートされ [!INCLUDE[ssIS](../../includes/ssis-md.md)] ます。|  
 |is_xml_document|**bit**|1 = コンテンツは完全な XML ドキュメントです。<br /><br /> 0 = 内容がドキュメントの一部であるか、列のデータ型が XML ではありません。|  
 |xml_collection_id|**int**|列のデータ型が**xml**で xml が型指定されている場合は、0以外の値です。 値は、列の検証 XML スキーマ名前空間を含むコレクションの ID になります。<br /><br /> 0 = XML スキーマコレクションがありません。|  
 |default_object_id|**int**|既定のオブジェクトの ID を指定します。スタンドアロンの[sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)であるか、インラインの列レベルの default 制約であるかは関係ありません。 インラインの列レベルの既定のオブジェクトの parent_object_id 列は、テーブル自体への参照です。<br /><br /> 0 = 既定値はありません。|  

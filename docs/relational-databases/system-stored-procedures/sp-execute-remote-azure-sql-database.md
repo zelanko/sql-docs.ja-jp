@@ -12,20 +12,20 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 021a6e689dfc109f8a58ca080956aec7efc49291
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 32655955bc150a57a6f15ebccdcf30187d3128fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124473"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820577"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  シャードと[!INCLUDE[tsql](../../includes/tsql-md.md)]して機能する単一のリモート Azure SQL Database またはデータベースのセットに対して、行方向のパーティション構成でステートメントを実行します。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]シャードとして機能する単一のリモート Azure SQL Database またはデータベースのセットに対して、行方向のパーティション構成でステートメントを実行します。  
   
  このストアドプロシージャは、エラスティッククエリ機能の一部です。  「[エラスティックデータベースクエリの概要](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)」および「[シャーディングのエラスティックデータベースクエリ (行方向のパーティション分割)」を](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-horizontal-partitioning/)参照して Azure SQL Database ください。  
   
@@ -43,22 +43,22 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>引数  
- [ \@data_source_name =]*datasourcename*  
+ [ \@ data_source_name =] *datasourcename*  
  ステートメントが実行される外部データソースを識別します。 「 [CREATE EXTERNAL DATA SOURCE &#40;transact-sql&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)」を参照してください。 外部データソースの種類は、"RDBMS" または "SHARD_MAP_MANAGER" にすることができます。  
   
- [ \@stmt =]*ステートメント*  
- ステートメントまたはバッチを[!INCLUDE[tsql](../../includes/tsql-md.md)]含む Unicode 文字列を指定します。 \@stmt は、Unicode 定数または Unicode 変数のいずれかである必要があります。 + 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数を指定する場合は、先頭に**N**を付ける必要があります。たとえば、Unicode 定数**N ' sp_who '** は有効ですが、文字定数 **' sp_who '** は有効ではありません。 文字列のサイズは、使用可能なデータベースサーバーのメモリによってのみ制限されます。 64ビットサーバーでは、文字列のサイズは、最大サイズである**nvarchar (max)** の 2 GB に制限されています。  
+ [ \@ stmt =]*ステートメント*  
+ ステートメントまたはバッチを含む Unicode 文字列を指定し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 \@stmt は、Unicode 定数または Unicode 変数のいずれかである必要があります。 + 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数を指定する場合は、先頭に**N**を付ける必要があります。たとえば、Unicode 定数**N ' sp_who '** は有効ですが、文字定数 **' sp_who '** は有効ではありません。 文字列のサイズは、使用可能なデータベースサーバーのメモリによってのみ制限されます。 64ビットサーバーでは、文字列のサイズは、最大サイズである**nvarchar (max)** の 2 GB に制限されています。  
   
 > [!NOTE]  
 >  \@stmt には、変数名と同じ形式のパラメーターを含めることができます。次に例を示します。`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- Stmt に\@含まれる各パラメーターには、 \@params パラメーター定義リストとパラメーター値リストの両方に対応するエントリが必要です。  
+ Stmt に含まれる各パラメーターには、 \@ \@ params パラメーター定義リストとパラメーター値リストの両方に対応するエントリが必要です。  
   
- [ \@params =]N '\@*parameter_name * * data_type* [,...*n* ] '  
- Stmt に\@埋め込まれているすべてのパラメーターの定義を含む1つの文字列を指定します。文字列は、Unicode 定数または Unicode 変数のいずれかである必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は、追加のパラメーター定義を示すプレースホルダーです。 Stmtmust で指定さ\@れたすべての\@パラメーターは、params で定義されます。 Stmt の[!INCLUDE[tsql](../../includes/tsql-md.md)] \@ステートメントまたはバッチにパラメーターが含まれて\@いない場合、params は必要ありません。 このパラメーターの既定値は NULL です。  
+ [ \@ params =] N ' \@*parameter_name * * data_type* [,...*n* ] '  
+ Stmt に埋め込まれているすべてのパラメーターの定義を含む1つの文字列を指定 \@ します。文字列は、Unicode 定数または Unicode 変数のいずれかである必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は、追加のパラメーター定義を示すプレースホルダーです。 Stmtmust で指定されたすべてのパラメーター \@ は、params で定義され \@ ます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]Stmt のステートメントまたはバッチにパラメーターが含まれていない場合 \@ 、 \@ params は必要ありません。 このパラメーターの既定値は NULL です。  
   
- [ \@param1 =]'*value1*'  
- パラメーター文字列に定義する最初のパラメーターの値を指定します。 Unicode 定数または Unicode 変数を指定できます。 Stmt に\@含まれるすべてのパラメーターにパラメーター値が指定されている必要があります。Stmt の[!INCLUDE[tsql](../../includes/tsql-md.md)] \@ステートメントまたはバッチにパラメーターがない場合、値は必要ありません。  
+ [ \@ param1 =] '*value1*'  
+ パラメーター文字列に定義する最初のパラメーターの値を指定します。 Unicode 定数または Unicode 変数を指定できます。 Stmt に含まれるすべてのパラメーターにパラメーター値が指定されている必要があり \@ ます。[!INCLUDE[tsql](../../includes/tsql-md.md)]Stmt のステートメントまたはバッチにパラメーターがない場合、値は必要ありません \@ 。  
   
  *n*  
  追加のパラメーターの値のプレースホルダーです。 定数または変数のみを指定できます。 値には、関数や演算子を使用して作成された式など、より複雑な式を指定することはできません。  
@@ -72,10 +72,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>アクセス許可  
  `ALTER ANY EXTERNAL DATA SOURCE` 権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `sp_execute_remote`パラメーターは、前の「構文」セクションで説明されているように、特定の順序で入力する必要があります。 パラメーターが順序どおりに入力されていない場合は、エラーメッセージが表示されます。  
   
- `sp_execute_remote`には、バッチと名前のスコープに関して、 [transact-sql&#41;の実行 &#40;](../../t-sql/language-elements/execute-transact-sql.md)と同じ動作があります。 Sp_execute_remote * \@stmt*パラメーター内の transact-sql ステートメントまたはバッチは、sp_execute_remote ステートメントが実行されるまでコンパイルされません。  
+ `sp_execute_remote`には、バッチと名前のスコープに関して、 [transact-sql&#41;の実行 &#40;](../../t-sql/language-elements/execute-transact-sql.md)と同じ動作があります。 Sp_execute_remote * \@ stmt*パラメーター内の transact-sql ステートメントまたはバッチは、sp_execute_remote ステートメントが実行されるまでコンパイルされません。  
   
  `sp_execute_remote`行を生成したリモートデータベースの名前を含む ' $ShardName ' という名前の結果セットに列を追加します。  
   
@@ -92,7 +92,7 @@ EXEC sp_execute_remote
 ```  
   
 ### <a name="example-with-multiple-parameters"></a>複数のパラメーターを使用した例  
-ユーザーデータベースにデータベーススコープの資格情報を作成し、master データベースの管理者の資格情報を指定します。 マスターデータベースを指す外部データソースを作成し、データベーススコープの資格情報を指定します。 次に、ユーザーデータベースの例では、master `sp_set_firewall_rule`データベースでプロシージャを実行します。 この`sp_set_firewall_rule`プロシージャには3つのパラメーターが`@name`必要であり、パラメーターは Unicode である必要があります。
+ユーザーデータベースにデータベーススコープの資格情報を作成し、master データベースの管理者の資格情報を指定します。 マスターデータベースを指す外部データソースを作成し、データベーススコープの資格情報を指定します。 次に、ユーザーデータベースの例では、 `sp_set_firewall_rule` master データベースでプロシージャを実行します。 この `sp_set_firewall_rule` プロシージャには3つのパラメーターが必要であり、 `@name` パラメーターは Unicode である必要があります。
 
 ```
 EXEC sp_execute_remote @data_source_name  = N'PointToMaster', 

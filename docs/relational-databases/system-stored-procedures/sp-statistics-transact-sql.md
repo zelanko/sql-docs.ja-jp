@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_statistics
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3cdde96f57f813dbc25434867ed78ff884c2e7ab
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032737"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820304"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,9 +50,9 @@ sp_statistics [ @table_name = ] 'table_name'
   
 `[ @table_owner = ] 'owner'`カタログ情報を返すために使用するテーブルのテーブル所有者の名前を指定します。 *table_owner*は**sysname**,、既定値は NULL です。 ワイルドカードのパターンマッチングはサポートされていません。 *Owner*が指定されていない場合、基になる DBMS の既定のテーブル可視性ルールが適用されます。  
   
- で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、指定された名前のテーブルが現在のユーザーによって所有されている場合、そのテーブルのインデックスが返されます。 *Owner*が指定されておらず、現在のユーザーが指定された*名前*のテーブルを所有していない場合、このプロシージャは、データベース所有者が所有する、指定された*名前*のテーブルを検索します。 存在する場合は、そのテーブルのインデックスが返されます。  
+ では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、指定された名前のテーブルが現在のユーザーによって所有されている場合、そのテーブルのインデックスが返されます。 *Owner*が指定されておらず、現在のユーザーが指定された*名前*のテーブルを所有していない場合、このプロシージャは、データベース所有者が所有する、指定された*名前*のテーブルを検索します。 存在する場合は、そのテーブルのインデックスが返されます。  
   
-`[ @table_qualifier = ] 'qualifier'`テーブル修飾子の名前を指定します。 *修飾子*は**sysname**,、既定値は NULL です。 さまざまな DBMS 製品では、3つの要素で構成するテーブル (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、このパラメーターはデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
+`[ @table_qualifier = ] 'qualifier'`テーブル修飾子の名前を指定します。 *修飾子*は**sysname**,、既定値は NULL です。 さまざまな DBMS 製品では、3つの要素で構成するテーブル (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、このパラメーターはデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
   
 `[ @index_name = ] 'index_name'`インデックス名を指定します。 *index_name*は**sysname**,、既定値は% です。 ワイルドカードパターンマッチングがサポートされています。  
   
@@ -72,23 +72,23 @@ sp_statistics [ @table_name = ] 'table_name'
 |**TABLE_OWNER**|**sysname**|テーブル所有者の名前。 この列は常に値が返されます。|  
 |**TABLE_NAME**|**sysname**|テーブル名。 この列は常に値が返されます。|  
 |**NON_UNIQUE**|**smallint**|NOT NULL。<br /><br /> 0 = 一意<br /><br /> 1 = 一意ではない|  
-|**INDEX_QUALIFIER**|**sysname**|インデックス所有者の名前。 一部の DBMS 製品では、テーブル所有者以外のユーザーがインデックスを作成できます。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列は常に**TABLE_NAME**と同じです。|  
+|**INDEX_QUALIFIER**|**sysname**|インデックス所有者の名前。 一部の DBMS 製品では、テーブル所有者以外のユーザーがインデックスを作成できます。 で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、この列は常に**TABLE_NAME**と同じです。|  
 |**INDEX_NAME**|**sysname**|インデックスの名前です。 この列は常に値が返されます。|  
 |**種類**|**smallint**|この列は常に値を返します。<br /><br /> 0 = テーブルの統計<br /><br /> 1 = クラスター化<br /><br /> 2 = ハッシュされる<br /><br /> 3 = 非クラスター化|  
 |**SEQ_IN_INDEX**|**smallint**|インデックス内での列の位置。|  
 |**COLUMN_NAME**|**sysname**|返される**TABLE_NAME**の各列の列名。 この列は常に値が返されます。|  
 |**規則**|**char (1)**|照合順序で使用されている並べ替え順。 次の値をとります。<br /><br /> A = 昇順<br /><br /> D = 降順<br /><br /> NULL = 適用なし|  
-|**基数**|**int**|テーブルの行数またはインデックス内の一意の値。|  
+|**CARDINALITY**|**int**|テーブルの行数またはインデックス内の一意の値。|  
 |**トピック**|**int**|インデックスまたはテーブルを格納するページ数。|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では値は返されません。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  結果セットのインデックスは、 **NON_UNIQUE**、**型**、 **INDEX_NAME**、および**SEQ_IN_INDEX**列の昇順で表示されます。  
   
- クラスター化インデックス型は、テーブルのデータがインデックスの順に格納されているインデックス型を指します。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クラスター化インデックスに対応します。  
+ クラスター化インデックス型は、テーブルのデータがインデックスの順に格納されているインデックス型を指します。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クラスター化インデックスに対応します。  
   
  ハッシュ化インデックス型は、完全一致検索または範囲検索を受け付けますが、パターン照合検索ではインデックスは使用されません。  
   
@@ -97,8 +97,8 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="example-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]および[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例では、 `DimEmployee`テーブルに関する情報を返します。  
+## <a name="example-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例では、テーブルに関する情報を返し `DimEmployee` ます。  
   
 ```  
 -- Uses AdventureWorks  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2b473019a20a962a41c44aade08e4a1daa2a765
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004897"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820863"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>dm_db_index_operational_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ sys.dm_db_index_operational_stats (
 |**object_id**|**int**|テーブルまたはビューの ID。|    
 |**index_id**|**int**|インデックスまたはヒープの ID。<br /><br /> 0 = ヒープ| 
 |**partition_number**|**int**|インデックスまたはヒープ内の、1 から始まるパーティション番号。| 
-|**hobt_id**|**bigint**|**に適用さ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れ[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ます: (を通じ[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]て[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))、です。<br /><br /> 列ストアインデックスの内部データを追跡するデータヒープまたは B ツリー行セットの ID。<br /><br /> NULL-これは内部列ストア行セットではありません。<br /><br /> 詳細については、「 [sys. internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md) 」を参照してください。|       
+|**hobt_id**|**bigint**|**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (を [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] です。<br /><br /> 列ストアインデックスの内部データを追跡するデータヒープまたは B ツリー行セットの ID。<br /><br /> NULL-これは内部列ストア行セットではありません。<br /><br /> 詳細については、「 [sys. internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md) 」を参照してください。|       
 |**leaf_insert_count**|**bigint**|リーフレベルの挿入の累積数。|    
 |**leaf_delete_count**|**bigint**|リーフレベルの削除の累積数。 leaf_delete_count は、まずゴーストとしてマークされていない削除済みレコードに対してのみインクリメントされます。 削除されたレコードが最初にゴーストである場合は、代わりに**leaf_ghost_count**がインクリメントされます。|    
 |**leaf_update_count**|**bigint**|リーフレベルの更新の累積数。|    
@@ -128,7 +128,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|テーブル、インデックス、またはインデックス付きビューの特定のパーティションで、ページ レベルの圧縮が評価されたページの数。 大幅な節減を実現できないため圧縮されなかったページも含まれます。 列ストア インデックスでは、常に 0 です。|    
 |**page_compression_success_count**|**bigint**|テーブル、インデックス、またはインデックス付きビューの特定のパーティションで、ページの圧縮を使用して圧縮されたデータ ページの数。 列ストア インデックスでは、常に 0 です。|    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>解説    
  この動的管理オブジェクトには、CROSS APPLY および OUTER APPLY からの相関パラメーターは受け入れられません。    
     
  **sys.dm_db_index_operational_stats** を使用すると、テーブル、インデックス、またはパーティションに対する読み書きを行うために、ユーザーが待機する必要がある時間の長さを追跡でき、重大な I/O 動作やホット スポットが発生したテーブルまたはインデックスを特定できます。    
@@ -172,7 +172,7 @@ sys.dm_db_index_operational_stats (
 ## <a name="column-remarks"></a>列の解説    
  **lob_orphan_create_count** および **lob_orphan_insert_count** 内の値は、常に同じになります。    
     
- 付加列として 1 つ以上の LOB 列を含む非クラスター化インデックスの場合、**lob_fetch_in_pages** および **lob_fetch_in_bytes** 列内の値は 0 より大きくなります。 詳細については、「[付加列を使用したインデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。 同様に、行外に出される可能性がある列を含む非クラスター化インデックスの場合は、**row_overflow_fetch_in_pages** および **row_overflow_fetch_in_bytes** 列内の値は 0 より大きくなります。    
+ 付加列として 1 つ以上の LOB 列を含む非クラスター化インデックスの場合、**lob_fetch_in_pages** および **lob_fetch_in_bytes** 列内の値は 0 より大きくなります。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。 同様に、行外に出される可能性がある列を含む非クラスター化インデックスの場合は、**row_overflow_fetch_in_pages** および **row_overflow_fetch_in_bytes** 列内の値は 0 より大きくなります。    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>メタデータ キャッシュ内のカウンターのリセット方法    
  **sys.dm_db_index_operational_stats** により返されるデータが存在するのは、ヒープまたはインデックスを表すメタデータ キャッシュ オブジェクトが使用できる間だけです。 このデータは持続性はなく、トランザクション上の一貫性もありません。 つまり、これらのカウンターを使って、インデックスが使用されているかどうかや、インデックスが最後に使用されたのはいつであるかを判断することはできません。 詳細については、「 [sys. dm_db_index_usage_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)」を参照してください。    

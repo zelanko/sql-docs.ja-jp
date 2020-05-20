@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_account_sp
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4b6adc5f6c02eae49a5f5e2598c6b02e5b00534e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 823f6abad57e057bf6682f3daa6a282f8726fd88
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70211265"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820124"
 ---
 # <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この手順では、アカウントがプロファイルで使用されているかどうかに関係なく、指定されたアカウントを削除します。 アカウントが含まれていないプロファイルは、正常に電子メールを送信できません。  
   
  ストアドプロシージャ**sysmail_delete_account_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
@@ -58,7 +58,7 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、という名前`AdventureWorks Administrator`のデータベースメールアカウントを削除します。  
+ 次の例では、という名前のデータベースメールアカウントを削除し `AdventureWorks Administrator` ます。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_delete_account_sp  

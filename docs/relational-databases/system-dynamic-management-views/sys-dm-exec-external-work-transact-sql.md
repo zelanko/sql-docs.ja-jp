@@ -19,15 +19,15 @@ helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0ba7eecc8e117e429f6992622d0c7bb2073f86a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8348ebacb68f2df122b73d6ad3480cadedd27c1b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74834335"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821107"
 ---
 # <a name="sysdm_exec_external_work-transact-sql"></a>dm_exec_external_work (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "74834335"
 |step_index|`int`|このワーカーが実行している要求。|『 [Transact-sql&#41;&#40;dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)の*step_index*を参照してください。|  
 |dms_step_index|`int`|このワーカーが実行している DMS プランのステップ。|「 [Sys. dm_exec_dms_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)」を参照してください。|  
 |compute_node_id|`int`|ワーカーが実行されているノード。|「 [Sys. dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)」を参照してください。|  
-|type|`nvarchar(60)`|外部作業の種類。|' ファイル分割 '|  
+|型|`nvarchar(60)`|外部作業の種類。|' ファイル分割 '|  
 |work_id|`int`|実際の分割の ID。|0以上。|  
 |input_name|`nvarchar(4000)`|読み取る入力の名前|Hadoop を使用する場合のファイル名。|  
 |read_location|`bigint`|オフセットまたは読み取り位置。|読み取るファイルのオフセット。|  

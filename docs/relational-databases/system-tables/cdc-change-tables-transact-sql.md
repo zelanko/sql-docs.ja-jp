@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - cdc.change_tables
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 52f7a58c854d7081c13cfad606f71044361a02ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 585ebf4a2a01160eec18c4af8f6d25ec4480ddb7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73962447"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820077"
 ---
 # <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73962447"
 |**source_object_id**|**int**|変更データ キャプチャが有効になっているソース テーブルの ID です。|  
 |**capture_instance**|**sysname**|インスタンス固有の追跡オブジェクトの名前を指定するために使用されるキャプチャインスタンスの名前。 既定では、ソーススキーマ名とソーステーブル名を*schemaname_sourcename*の形式で指定します。|  
 |**start_lsn**|**binary(10)**|変更テーブル内の変更データを照会するときに、低いエンドポイントを表すログシーケンス番号 (LSN)。<br /><br /> NULL = 低いエンドポイントが確立されていません。|  
-|**end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> の[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]場合、この列は常に NULL を返します。|  
+|**end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> の場合 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 、この列は常に NULL を返します。|  
 |**supports_net_changes**|**bit**|変更テーブルでは、差分変更のクエリのサポートが有効になっています。|  
 |**has_drop_pending**|**bit**|キャプチャプロセスで、ソーステーブルが削除されたことを示す通知を受信しました。|  
 |**role_name**|**sysname**|変更データへのアクセスをゲートするために使用されるデータベースロールの名前。<br /><br /> NULL = ロールは使用されません。|  

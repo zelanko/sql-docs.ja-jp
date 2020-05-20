@@ -16,23 +16,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_memory_dumps dynamic management view
 ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7f31bc59e918a2a2ca4f0cf9e3833571028e85a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 643cd663510877760893bf33944f01dac93d4ded
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090798"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821009"
 ---
 # <a name="sysdm_server_memory_dumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  によって生成されたメモリダンプファイルごと[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に1行の値を返します。 この動的管理ビューを使用して、潜在的な問題のトラブルシューティングを行います。  
+  によって生成されたメモリダンプファイルごとに1行の値を返し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。 この動的管理ビューを使用して、潜在的な問題のトラブルシューティングを行います。  
  
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**/db**|**nvarchar(256)**|メモリダンプファイルのパスと名前。 null にすることはできません。|  
+|**ファイル名**|**nvarchar(256)**|メモリダンプファイルのパスと名前。 null にすることはできません。|  
 |**creation_time**|**datetimeoffset(7)**|ファイルが作成された日付と時刻。 null にすることはできません。|  
 |**size_in_bytes**|**bigint**|ファイルのサイズ (バイト単位)。 NULL 値が許可されます。|  
   

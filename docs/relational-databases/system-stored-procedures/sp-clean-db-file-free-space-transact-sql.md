@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ghost records
 - sp_clean_db_file_free_space
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c788d78dac45f2371829bb450ac98c94164d97ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1761c3546d043dd74a3fe2b491618140635fe61c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070389"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823457"
 ---
 # <a name="sp_clean_db_file_free_space-transact-sql"></a>sp_clean_db_file_free_space (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,20 @@ sp_clean_db_file_free_space
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @dbname= ]'*database_name*'  
+ [ @dbname =] '*database_name*'  
  クリーニングするデータベースの名前です。 *dbname*は**sysname**であり、NULL にすることはできません。  
   
- [ @fileid= ]'*file_number*'  
+ [ @fileid =] '*file_number*'  
  クリーニングするデータファイルの id を示します。 *file_number*は**int**であり、NULL にすることはできません。  
   
- [ @cleaning_delay= ]'*delay_in_seconds*'  
+ [ @cleaning_delay =] '*delay_in_seconds*'  
  ページをクリーニングする間隔を指定します。 これにより、i/o システムへの影響が軽減されます。 *delay_in_seconds*は**int**で、既定値は0です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
- 行への参照を削除することにより、行の移動を発生させるテーブルまたは更新操作の操作を削除できます。 ただし、特定の状況下では、行がゴースト レコードとして、物理的にデータ ページ上に残ってしまう場合があります。 ゴーストレコードは、バックグラウンドプロセスによって定期的に削除されます。 この残存データは、クエリへの[!INCLUDE[ssDE](../../includes/ssde-md.md)]応答としてによって返されることはありません。 ただし、データまたはバックアップ ファイルの物理的なセキュリティに不安があるような環境では、sp_clean_db_file_free_space を使用することで、これらのゴースト レコードをクリーニングすることができます。  
+## <a name="remarks"></a>解説  
+ 行への参照を削除することにより、行の移動を発生させるテーブルまたは更新操作の操作を削除できます。 ただし、特定の状況下では、行がゴースト レコードとして、物理的にデータ ページ上に残ってしまう場合があります。 ゴーストレコードは、バックグラウンドプロセスによって定期的に削除されます。 この残存データは、クエリへの応答としてによって返されることはありません [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 ただし、データまたはバックアップ ファイルの物理的なセキュリティに不安があるような環境では、sp_clean_db_file_free_space を使用することで、これらのゴースト レコードをクリーニングすることができます。  
   
  sp_clean_db_file_free_space の実行にかかる時間は、ファイルのサイズ、使用可能な空き領域、および、ディスク容量によって異なります。 sp_clean_db_file_free_space プロシージャは、I/O アクティビティに著しく影響する場合があるため、通常の業務時間を避けて実行することをお勧めします。  
   
@@ -68,7 +68,7 @@ sp_clean_db_file_free_space
  Db_owner データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 `AdventureWorks2012`データベースのプライマリデータファイルから残存情報をすべて消去します。  
+ 次の例では、データベースのプライマリデータファイルから残存情報をすべて消去し `AdventureWorks2012` ます。  
   
 ```  
 USE master;  

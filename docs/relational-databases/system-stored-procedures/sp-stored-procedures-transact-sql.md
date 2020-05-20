@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_stored_procedures
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 865e86976a6da117d41ba2f22020f7137dee5038
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68702782"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820277"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-sql)
 
@@ -55,7 +55,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   現在のデータベースの **dbo** スキーマ。  
   
-`[ @qualifier = ] 'qualifier'`プロシージャ修飾子の名前を指定します。 *修飾子*は**sysname**,、既定値は NULL です。 さまざまな DBMS 製品で、3つの要素で構成されるテーブル名 (_修飾子_) がサポートさ**れています。**_スキーマ_**。**_名前_。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、*修飾子*はデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
+`[ @qualifier = ] 'qualifier'`プロシージャ修飾子の名前を指定します。 *修飾子*は**sysname**,、既定値は NULL です。 さまざまな DBMS 製品で、3つの要素で構成されるテーブル名 (_修飾子_) がサポートさ**れています。**_スキーマ_**。**_名前_。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、*修飾子*はデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
   
 `[ @fUsePattern = ] 'fUsePattern'`アンダースコア (_)、パーセント (%)、または角かっこ []) をワイルドカード文字として解釈するかどうかを決定します。 *Fusepattern*は**ビット**,、既定値は1です。  
   
@@ -79,10 +79,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**備考**|**varchar (254)**|プロシージャの説明。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はこの列の値を返しません。|  
 |**PROCEDURE_TYPE**|**smallint**|プロシージャの種類。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常に 2.0 を返します。 この値は、次のいずれかです。<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  相互運用性を最大限に高めるために、ゲートウェイのクライアントでは、SQL 標準のパターン照合 (パーセント (%) とアンダースコア (_) ワイルドカード文字) のみを前提としています。  
   
- 現在のユーザーに対する特定のストアドプロシージャへの実行アクセスに関する権限情報は必ずしもチェックされません。そのため、アクセスは保証されません。 3部構成の名前付けのみが使用されていることに注意してください。 これは、リモートストアドプロシージャ (4 つの部分で構成される名前を必要とする) ではなく、ローカルストアドプロシージャ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけが返されることを意味します。 **Sp_server_info**の結果セットで server 属性 ACCESSIBLE_SPROC が Y の場合は、現在のユーザーが実行できるストアドプロシージャのみが返されます。  
+ 現在のユーザーに対する特定のストアドプロシージャへの実行アクセスに関する権限情報は必ずしもチェックされません。そのため、アクセスは保証されません。 3部構成の名前付けのみが使用されていることに注意してください。 これは、リモートストアドプロシージャ (4 つの部分で構成される名前を必要とする) ではなく、ローカルストアドプロシージャだけが返されることを意味 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 **Sp_server_info**の結果セットで server 属性 ACCESSIBLE_SPROC が Y の場合は、現在のユーザーが実行できるストアドプロシージャのみが返されます。  
   
  **sp_stored_procedures**は、ODBC の**sqlprocedures**に相当します。 返される結果は、 **PROCEDURE_QUALIFIER**、 **PROCEDURE_OWNER**、および**PROCEDURE_NAME**順に並べ替えられます。  
   
@@ -101,7 +101,7 @@ EXEC sp_stored_procedures;
 ```  
   
 ### <a name="b-returning-a-single-stored-procedure"></a>B. 1 つのストアド プロシージャを返す  
- 次の例では、 `uspLogError`ストアドプロシージャの結果セットが返されます。  
+ 次の例では、ストアドプロシージャの結果セットが返さ `uspLogError` れます。  
   
 ```  
 USE AdventureWorks2012;  

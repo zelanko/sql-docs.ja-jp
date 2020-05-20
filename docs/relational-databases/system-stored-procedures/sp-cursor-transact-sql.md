@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108574"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820612"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68108574"
   
 ||  
 |-|  
-|**適用対象**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
+|**適用対象**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -125,7 +125,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="value-parameter"></a>値パラメーター  
  「引数」セクションで前述したように、*値*を使用するための規則には、次の2つの方法があります。  
   
-1.  任意の名前付きの*値*パラメーターに\@対して、選択リスト内の列の名前に ' ' という名前を付けることができます。 この方法には、データ変換が不要になる可能性があるという利点があります。  
+1.  任意の名前 \@ 付きの*値*パラメーターに対して、選択リスト内の列の名前に ' ' という名前を付けることができます。 この方法には、データ変換が不要になる可能性があるという利点があります。  
   
 2.  パラメーターを使用して、完全な UPDATE または INSERT ステートメントを送信するか、複数のパラメーターを使用して UPDATE ステートメントまたは INSERT ステートメントの一部を送信します。このとき、SQL Server が完全なステートメントに組み込まれます。 この例については、このトピックで後述する「例」のセクションを参照してください。  
   
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  UPDATE \<table name> が指定されている場合、 *table*パラメーターに指定された値はすべて無視されます。  
+>  UPDATE \< table name> が指定されている場合、 *table*パラメーターに指定された値はすべて無視されます。  
   
  複数のパラメーターを使用する場合、最初のパラメーターは次の形式の文字列である必要があります。  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- この場合、構築さ\<れた update ステートメント内の> テーブル名は、指定されているか、*テーブル*パラメーターによって既定値になります。  
+ この場合、 \< 構築された update ステートメント内の> テーブル名は、指定されているか、*テーブル*パラメーターによって既定値になります。  
   
  挿入の場合:  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  INSERT * \<table name>* が指定されている場合、 *table*パラメーターに指定された値はすべて無視されます。  
+>  INSERT * \< table name>* が指定されている場合、 *table*パラメーターに指定された値はすべて無視されます。  
   
  複数のパラメーターを使用する場合、最初のパラメーターは次の形式の文字列である必要があります。  
   

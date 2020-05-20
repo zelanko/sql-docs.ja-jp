@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqueued_artinfo
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 25f91084afe2c2bdfc27bc0b2ad874bd87447b67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 33769260b25ef3f6127f6f12ac54af07c5951ad1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769008"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820673"
 ---
 # <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
 `[ @dest_table = ] _'dest_table'`コピー先テーブルの名前を指定します。 *dest_table*は**sysname**であり、既定値はありません。  
   
- [**@owner =** ]**'**_owner_**'**  
+ [** @owner =** ] **'**_owner_**'**  
  サブスクリプションの所有者を示します。 *owner*は**sysname**,、既定値はありません。  
   
 `[ @cft_table = ] 'cft_table'`このアーティクルのキュー更新の競合テーブルの名前。 *cft_table*は**sysname**であり、既定値はありません。  
@@ -69,7 +69,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_addqueued_artinfo**は、サブスクリプションの初期化の一部としてディストリビューションエージェントによって使用されます。 このストアド プロシージャは、ユーザーが頻繁に実行するものではありません。ただし、サブスクリプションを手動で設定する場合に利用できるストアド プロシージャです。  
   
  **sp_addqueued_artinfo**ではなく[sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)します。  

@@ -19,12 +19,12 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d33b78710605841e4559f9c402a18210e25b2daa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 143ed8e5487772a39e4e98c92f8f07d78de7f370
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73980301"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823383"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>index_resumable_operations (Transact-sql)
 
@@ -40,7 +40,7 @@ ms.locfileid: "73980301"
 |**sql_text**|**nvarchar(max)**|DDL T-sql ステートメントのテキスト|
 |**last_max_dop**|**smallint**|最後に使用された MAX_DOP (既定 = 0)|
 |**partition_number**|**int**|所有しているインデックスまたはヒープ内のパーティション番号。 パーティション分割されていないテーブルとインデックスの場合、またはすべてのパーティションが再構築される場合は、この列の値が NULL になります。|
-|**state**|**tinyint**|再開可能なインデックスの動作状態:<br /><br />0 = 実行中<br /><br />1 = 一時停止|
+|**状態**|**tinyint**|再開可能なインデックスの動作状態:<br /><br />0 = 実行中<br /><br />1 = 一時停止|
 |**state_desc**|**nvarchar(60)**|再開可能なインデックスの動作状態の説明 (実行中または一時停止)|  
 |**start_time**|**datetime**|インデックス操作の開始時刻 (null 非許容)|
 |**last_pause_time**|**datatime**| インデックス操作の最後の一時停止時刻 (null 許容)。 操作が実行中で一時停止されていない場合は NULL です。|

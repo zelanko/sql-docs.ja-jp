@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_job
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 35653ce883733b7e1b3c2969fc4e62c61ad12eb9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084892"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820213"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,12 +76,12 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 `[ @notify_level_eventlog = ] eventlog_level`このジョブの Microsoft Windows アプリケーションログにエントリを配置するタイミングを指定します。 *eventlog_level*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|説明 (アクション)|  
+|[値]|説明 (アクション)|  
 |-----------|----------------------------|  
-|**0**|なし|  
+|**0**|行わない|  
 |**1**|成功時|  
 |**2**|失敗時|  
-|**3**|Always (常に)|  
+|**3**|Always|  
   
 `[ @notify_level_email = ] email_level`このジョブの完了時に電子メールを送信するタイミングを指定します。 *email_level*は**int**です。*email_level*は*eventlog_level*と同じ値を使用します。  
   
@@ -121,7 +121,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  **Sysadmin**のメンバーだけが、このストアドプロシージャを使用して、他のユーザーが所有するジョブの属性を編集できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、ジョブ`NightlyBackups`の名前、説明、および有効な状態を変更します。  
+ 次の例では、ジョブの名前、説明、および有効な状態を変更し `NightlyBackups` ます。  
   
 ```  
 USE msdb ;  

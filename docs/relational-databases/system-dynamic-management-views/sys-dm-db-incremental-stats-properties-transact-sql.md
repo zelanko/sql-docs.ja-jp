@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_incremental_stats_properties
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 17ef15033281f040e00444dfbfc2e739bfa7a338
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1f958e122277e28665b10ff27be4c0224574690d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004926"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820916"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内にある指定されたデータベース オブジェクト (テーブル) について、増分統計のプロパティを返します。 `sys.dm_db_incremental_stats_properties` (パーティション番号を含む) の使用方法は、非増分統計に使用される `sys.dm_db_stats_properties` と似ています。 
   
-  この機能は、service [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] pack 2 および[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] service pack 1 で導入されました。
+  この機能は [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 、Service pack 2 および [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] service pack 1 で導入されました。
   
 ## <a name="syntax"></a>構文  
   
@@ -72,7 +72,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 統計の更新日付は、メタデータではなく[統計 BLOB オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)に[ヒストグラム](../../relational-databases/statistics/statistics.md#histogram)および[密度ベクトル](../../relational-databases/statistics/statistics.md#density)と共に格納されます。 統計データを生成するためのデータが読み取られない場合、統計 blob は作成されず、日付は使用できず、 *last_updated*列は NULL になります。 これは、述語が行を返さないフィルター選択された統計情報や、新しい空のテーブルの場合です。
 
 ## <a name="permissions"></a>アクセス許可  
- では、ユーザーが統計列に対する select 権限を持っているか、ユーザーがテーブルを所有して`sysadmin`いるか、固定サーバー `db_owner`ロール、固定データベースロール、 `db_ddladmin`または固定データベースロールのメンバーである必要があります。  
+ では、ユーザーが統計列に対する select 権限を持っているか、ユーザーがテーブルを所有しているか、固定 `sysadmin` サーバーロール、 `db_owner` 固定データベースロール、または固定データベースロールのメンバーである必要があり `db_ddladmin` ます。  
   
 ## <a name="examples"></a>例  
 

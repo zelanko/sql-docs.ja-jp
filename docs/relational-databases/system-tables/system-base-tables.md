@@ -14,14 +14,14 @@ helpviewer_keywords:
 - hobt [SQL Server]
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5ac374b9222f9bd592312f79173859691b495276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1e436807a5738a1ad844a07b3403eb99d1a5cf18
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531191"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819816"
 ---
 # <a name="system-base-tables"></a>システム ベース テーブル
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "80531191"
 ## <a name="system-base-table-metadata"></a>システム ベース テーブルのメタデータ  
  データベースに対する CONTROL、ALTER、または VIEW DEFINITION 権限を持つ権限付与対象ユーザーは、システムベーステーブルのメタデータを使用して、システム**のカタログビュー**を表示できます。 権限付与対象ユーザーは、 [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md)や[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)などの組み込み関数を使用して、システムベーステーブルの名前とオブジェクト id を解決することもできます。  
   
- システムベーステーブルにバインドするには、ユーザーが専用管理者接続 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DAC) を使用してのインスタンスに接続する必要があります。 DAC で接続せずにシステム ベース テーブルから SELECT クエリを実行しようとすると、エラーが発生します。  
+ システムベーステーブルにバインドするには、ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 専用管理者接続 (DAC) を使用してのインスタンスに接続する必要があります。 DAC で接続せずにシステム ベース テーブルから SELECT クエリを実行しようとすると、エラーが発生します。  
   
 > [!IMPORTANT]  
->  DAC を使用したシステムベーステーブルへのアクセスは[!INCLUDE[msCoName](../../includes/msconame-md.md)] 、担当者向けに設計されており、サポートされている顧客シナリオではありません。  
+>  DAC を使用したシステムベーステーブルへのアクセスは、担当者向けに設計されて [!INCLUDE[msCoName](../../includes/msconame-md.md)] おり、サポートされている顧客シナリオではありません。  
   
 ## <a name="system-base-tables"></a>システム ベース テーブル  
  次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム ベース テーブルの一覧とその説明を示します。  
@@ -46,7 +46,7 @@ ms.locfileid: "80531191"
 |----------------|-----------------|  
 |**sys.sysschobjs**|すべてのデータベースに存在します。 各行は、データベース内のオブジェクトを表します。|  
 |**sysbinobjs**|すべてのデータベースに存在します。 データベース内の Service Broker エンティティごとに1行のデータを格納します。 Service Broker エンティティには次のものがあります。<br /><br /> メッセージ型<br /><br /> サービスコントラクト<br /><br /> サービス<br /><br /> 名前および型では、固定されているバイナリ照合順序を使用します。|  
-|**sys.sysclsobjs**|すべてのデータベースに存在します。 次のような共通プロパティを共有する、分類されたエンティティごとに1行の情報を格納します。<br /><br /> Assembly<br /><br /> バックアップ デバイス<br /><br /> フルテキスト カタログ<br /><br /> パーティション関数<br /><br /> パーティション構成<br /><br /> ファイル グループ<br /><br /> 隠ぺいキー|  
+|**sys.sysclsobjs**|すべてのデータベースに存在します。 次のような共通プロパティを共有する、分類されたエンティティごとに1行の情報を格納します。<br /><br /> アセンブリ<br /><br /> バックアップ デバイス<br /><br /> フルテキスト カタログ<br /><br /> パーティション関数<br /><br /> パーティション構成<br /><br /> ファイル グループ<br /><br /> 隠ぺいキー|  
 |**sys.sysnsobjs**|すべてのデータベースに存在します。 名前空間スコープのエンティティごとに1行の値を格納します。 このテーブルは、XML コレクション エンティティの格納に使用されます。|  
 |**sys.syscolpars**|すべてのデータベースに存在します。 テーブル、ビュー、またはテーブル値関数内のすべての列に対応する行が含まれています。 また、プロシージャまたは関数のパラメーターごとの行も格納します。|  
 |**sys.systypedsubobjs**|すべてのデータベースに存在します。 型指定されたサブエンティティごとに 1 行のデータを格納します。 パーティション関数のパラメーターだけがこのカテゴリに分類されます。|  

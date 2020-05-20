@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_foreignkeys
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2c1aaa12ed6ffb86b6e3f7979deac0e6f933dff8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0951bd857b6fbf2e3bdc8f5bc1ff850f80c43bcd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124375"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820487"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
 `[ @pktab_schema = ] 'pktab_schema'`主キーを持つスキーマの名前を指定します。 *pktab_schema*は**sysname**,、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、所有者名に相当します。  
   
-`[ @pktab_catalog = ] 'pktab_catalog'`主キーを持つカタログの名前を指定します。 *pktab_catalog*は**sysname**,、既定値は NULL です。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、これにはデータベース名が含まれます。  
+`[ @pktab_catalog = ] 'pktab_catalog'`主キーを持つカタログの名前を指定します。 *pktab_catalog*は**sysname**,、既定値は NULL です。 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これにはデータベース名が含まれます。  
   
 `[ @fktab_name = ] 'fktab_name'`外部キーを持つテーブルの名前を指定します。 *fktab_name*は**sysname**,、既定値は NULL です。  
   
@@ -91,7 +91,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、リンクサーバー上`Department`の[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース内のテーブルに関する外部キー `Seattle1`情報を返します。  
+ 次の例では、 `Department` リンクサーバー上のデータベース内のテーブルに関する外部キー情報を返し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] `Seattle1` ます。  
   
 ```  
 EXEC sp_foreignkeys @table_server = N'Seattle1',   

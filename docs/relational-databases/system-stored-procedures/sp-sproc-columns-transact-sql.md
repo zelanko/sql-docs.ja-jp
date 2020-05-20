@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_sproc_columns
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6739d9bcff2639b4b4f3562624beaf2cb3a76507
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24263a7e2428c0399fb7b655e9cb5d86e130e85d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032824"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820299"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
   
  指定した名前のプロシージャが現在のユーザーによって所有されている場合は、そのプロシージャに関する情報が返されます。 *Owner*が指定されておらず、現在のユーザーが指定された名前のプロシージャを所有していない場合、 **sp_sproc_columns**は、データベース所有者が所有している、指定された名前のプロシージャを検索します。 プロシージャが存在する場合は、その列に関する情報が返されます。  
   
-`[ @procedure_qualifier = ] 'qualifier'`プロシージャ修飾子の名前を指定します。 *修飾子*は**sysname**,、既定値は NULL です。 さまざまな DBMS 製品では、3部構成のテーブル名 (*qualifier.owner.name*) がサポートしています。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、このパラメーターはデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
+`[ @procedure_qualifier = ] 'qualifier'`プロシージャ修飾子の名前を指定します。 *修飾子*は**sysname**,、既定値は NULL です。 さまざまな DBMS 製品では、3部構成のテーブル名 (*qualifier.owner.name*) がサポートしています。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、このパラメーターはデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
   
 `[ @column_name = ] 'column_name'`1つの列を指定します。カタログ情報の列が1つだけ必要な場合に使用します。 *column_name*は**nvarchar (** 384 **)**,、既定値は NULL です。 *Column_name*を省略すると、すべての列が返されます。 ワイルドカードパターンマッチングがサポートされています。 相互運用性を最大にするために、ゲートウェイクライアントは ISO 標準のパターン照合 (% と _ ワイルドカード文字) のみを想定する必要があります。  
   
@@ -74,10 +74,10 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**COLUMN_TYPE**|**smallint**|このフィールドは常に値を返します。<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE|  
 |**DATA_TYPE**|**smallint**|ODBC データ型用の整数コードです。 このデータ型を ISO 型にマップできない場合、値は NULL になります。 ネイティブデータ型の名前が**TYPE_NAME**列に返されます。|  
 |**TYPE_NAME**|**sysname**|データ型の文字列表現。 これは、基になる DBMS によって示されるデータ型の名前です。|  
-|**精度**|**int**|有効桁数。 **有効桁数**列の戻り値は、10進数値です。|  
+|**PRECISION**|**int**|有効桁数。 **有効桁数**列の戻り値は、10進数値です。|  
 |**LENGTH**|**int**|データの転送サイズです。|  
 |**段階**|**smallint**|小数点の右側の桁数。|  
-|**RADIX**|**smallint**|数値型の基数です。|  
+|**ベース**|**smallint**|数値型の基数です。|  
 |**NULLABLE**|**smallint**|Null 値の許容属性を指定します。<br /><br /> 1 = null 値を許容するデータ型を作成できます。<br /><br /> 0 = Null 値は使用できません。|  
 |**備考**|**varchar (** 254 **)**|プロシージャの列の説明です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はこの列の値を返しません。|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|列の既定値です。|  
@@ -88,7 +88,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**IS_NULLABLE**|**varchar (254)**|テーブル内の列の null 値の許容属性。 ISO ルールの後に、null 値の許容属性が決定されます。 ISO に準拠している DBMS は、空の文字列を返すことはできません。<br /><br /> 列が NULL を含むことができる場合は YES、含むことができない場合は NO を表示します。<br /><br /> Null 値許容属性が不明の場合、この列は長さ0の文字列を返します。<br /><br /> この列に返される値は、NULLABLE 列に返される値とは異なります。|  
 |**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]拡張ストアドプロシージャによって使用されるデータ型。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_sproc_columns**は、ODBC の**SQLProcedureColumns**に相当します。 返される結果は、 **PROCEDURE_QUALIFIER**、 **PROCEDURE_OWNER**、 **PROCEDURE_NAME**の順に並べ替えられ、プロシージャの定義にパラメーターが表示される順序に従って並べ替えられます。  
   
 ## <a name="permissions"></a>アクセス許可  

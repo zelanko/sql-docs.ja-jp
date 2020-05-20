@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_catalog
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b51e4e38b7587074a39f850c2e56dbd8c09ed6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a180f10f0b0ac4bb1836d529ac437d917b559e16
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72005964"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820535"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,31 +52,31 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 > [!NOTE]  
 >  必要に応じて、フルテキストカタログの作成、削除、変更を行うことができます。 複数のカタログで同時にスキーマを変更することは避けてください。 これらのアクションは、 **sp_fulltext_table**ストアドプロシージャを使用して実行できます。この方法をお勧めします。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**作成**|ファイルシステムに空の新しいフルテキストカタログを作成し、 *fulltext_catalog_name*と*root_directory*(存在する場合) を使用して、関連付けられた行を**sysfulltextcatalogs**に追加します。 *fulltext_catalog_name*は、データベース内で一意である必要があります。|  
 |**」**|*Fulltext_catalog_name*を削除するには、ファイルシステムから削除し、関連付けられている行を**sysfulltextcatalogs**で削除します。 このカタログに1つ以上のテーブルのインデックスが含まれている場合、このアクションは失敗します。 **sp_fulltext_table**カタログからテーブルを削除するには、'*table_name*'、' drop ' を実行する必要があります。<br /><br /> カタログが存在しない場合、エラーが表示されます。|  
 |**start_incremental**|*Fulltext_catalog_name*の増分作成を開始します。 カタログが存在しない場合、エラーが表示されます。 フルテキストインデックスの作成が既にアクティブになっている場合は、警告が表示されますが、作成操作は行われません。 増分作成では、フルテキストインデックスが作成されているテーブルに**timestamp**列がある場合に限り、変更された行のみがフルテキストインデックスに対して取得されます。|  
 |**start_full**|*Fulltext_catalog_name*の完全作成を開始します。 このフルテキストカタログに関連付けられているすべてのテーブルのすべての行は、インデックスが既に作成されている場合でも、フルテキストインデックス作成のために取得されます。|  
 |**Stop**|*Fulltext_catalog_name*のインデックスの作成を停止します。 カタログが存在しない場合、エラーが表示されます。 インデックスの作成を既に中止している場合、警告は表示されません。|  
-|**修正**|*Fulltext_catalog_name*を再構築します。 カタログの再構築では、既存のカタログが削除され、代わりに新しいカタログが作成されます。 フルテキスト インデックスの参照を持つすべてのテーブルが新しいカタログに関連付けられます。 再構築すると、データベース システム テーブル内のフルテキスト メタデータがリセットされます。<br /><br /> 変更の追跡が無効になっている場合、再構築しても、新しく作成されたフルテキストカタログの再作成は行われません。 この場合、再作成するには、 **start_full**または**start_incremental**アクションを使用して**sp_fulltext_catalog**を実行します。|  
+|**リビルド**|*Fulltext_catalog_name*を再構築します。 カタログの再構築では、既存のカタログが削除され、代わりに新しいカタログが作成されます。 フルテキスト インデックスの参照を持つすべてのテーブルが新しいカタログに関連付けられます。 再構築すると、データベース システム テーブル内のフルテキスト メタデータがリセットされます。<br /><br /> 変更の追跡が無効になっている場合、再構築しても、新しく作成されたフルテキストカタログの再作成は行われません。 この場合、再作成するには、 **start_full**または**start_incremental**アクションを使用して**sp_fulltext_catalog**を実行します。|  
   
-`[ @path = ] 'root_directory'`**Create**アクションのルートディレクトリです (完全な物理パスではありません)。 *root_directory*は**nvarchar (100)** で、既定値は NULL です。これは、セットアップ時に指定された既定の場所を使用することを示します。 Mssql ディレクトリの Ftdata サブディレクトリです。たとえば、C:\Program ・ SQL Server\MSSQL13. のようになります。MSSQLSERVER\MSSQL\FTData. 指定されたルートディレクトリは、同じコンピューター上のドライブに存在し、ドライブ文字以外で構成されている必要があり、相対パスにすることはできません。 ネットワークドライブ、リムーバブルドライブ、フロッピーディスク、および UNC パスはサポートされていません。 フルテキストカタログは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに関連付けられているローカルハードドライブ上に作成する必要があります。  
+`[ @path = ] 'root_directory'`**Create**アクションのルートディレクトリです (完全な物理パスではありません)。 *root_directory*は**nvarchar (100)** で、既定値は NULL です。これは、セットアップ時に指定された既定の場所を使用することを示します。 Mssql ディレクトリの Ftdata サブディレクトリです。たとえば、C:\Program ・ SQL Server\MSSQL13. のようになります。MSSQLSERVER\MSSQL\FTData. 指定されたルートディレクトリは、同じコンピューター上のドライブに存在し、ドライブ文字以外で構成されている必要があり、相対パスにすることはできません。 ネットワークドライブ、リムーバブルドライブ、フロッピーディスク、および UNC パスはサポートされていません。 フルテキストカタログは、のインスタンスに関連付けられているローカルハードドライブ上に作成する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
- path は*action*が**create**の場合にのみ有効です。 ** \@** **Create** (**stop**、 **rebuild**など) 以外のアクションでは、 ** \@パス**を NULL にするか、省略する必要があります。  
+ ** \@ path**は*action*が**create**の場合にのみ有効です。 **Create** (**stop**、 **rebuild**など) 以外のアクションでは、 ** \@ パス**を NULL にするか、省略する必要があります。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスがクラスター内の仮想サーバーの場合、指定するカタログ ディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースが依存する共有ディスク ドライブ上にある必要があります。 が@path指定されていない場合、既定のカタログディレクトリの場所は、仮想サーバーのインストール時に指定されたディレクトリ内の共有ディスクドライブに配置されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスがクラスター内の仮想サーバーの場合、指定するカタログ ディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースが依存する共有ディスク ドライブ上にある必要があります。 @pathが指定されていない場合、既定のカタログディレクトリの場所は、仮想サーバーのインストール時に指定されたディレクトリ内の共有ディスクドライブに配置されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Start_full**アクションは、 *fulltext_catalog_name*にフルテキストデータの完全なスナップショットを作成するために使用されます。 **Start_incremental**アクションは、データベース内の変更された行のインデックスを再作成するために使用されます。 増分作成は、テーブルに**timestamp**型の列がある場合にのみ適用できます。 フルテキストカタログ内のテーブルに**timestamp**型の列が含まれていない場合、テーブルは完全作成を行います。  
   
- フルテキスト カタログおよびインデックス データは、フルテキスト カタログ ディレクトリに作成したファイルに格納されます。 フルテキストカタログディレクトリは、 ** \@path に指定**されたディレクトリのサブディレクトリとして作成されるか、 ** \@path**が指定されていない場合はサーバーの既定のフルテキストカタログディレクトリに作成されます。 フルテキストカタログディレクトリの名前は、サーバー上で一意であることを保証するように構築されています。 このため、サーバー上のすべてのフルテキストカタログディレクトリは、同じパスを共有できます。  
+ フルテキスト カタログおよびインデックス データは、フルテキスト カタログ ディレクトリに作成したファイルに格納されます。 フルテキストカタログディレクトリは、path に指定されたディレクトリのサブディレクトリとして作成されるか、 ** \@ path**が指定されていない** \@ 場合はサーバー**の既定のフルテキストカタログディレクトリに作成されます。 フルテキストカタログディレクトリの名前は、サーバー上で一意であることを保証するように構築されています。 このため、サーバー上のすべてのフルテキストカタログディレクトリは、同じパスを共有できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  呼び出し元は、 **db_owner**ロールのメンバーである必要があります。 要求されたアクションに応じて、呼び出し元は、対象のフルテキストカタログに対する ALTER 権限または CONTROL 権限を拒否しないようにする必要があります ( **db_owner** )。  

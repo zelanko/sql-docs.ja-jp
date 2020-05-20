@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysreplicationalerts system table
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6cbeab4c673390cb80300eb5ced2b4cb5c1bcf1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 163b5aba5f676f14afd26b962c856b325ccc4dc4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029738"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819932"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68029738"
 |**error_id**|**int**|**MSrepl_errors**に格納されているエラーの ID。|  
 |**alert_error_code**|**int**|このレコードをログに記録するときに発生する警告のメッセージ ID。|  
 |**time**|**datetime**|レコードが挿入された時刻。|  
-|**文書**|**sysname**|この警告を発生したエージェントに関係するパブリッシャー名です。|  
+|**publisher**|**sysname**|この警告を発生したエージェントに関係するパブリッシャー名です。|  
 |**publisher_db**|**sysname**|この警告を発生したエージェントに関連付けられているパブリッシャーデータベース。|  
 |**レプリケーション**|**sysname**|この警告を発生したエージェントに関係するパブリケーションです。|  
 |**publication_type**|**int**|パブリケーションの種類です。<br /><br /> **0** = スナップショット。<br /><br /> **1** = トランザクション。<br /><br /> **2** = Merge。|  
