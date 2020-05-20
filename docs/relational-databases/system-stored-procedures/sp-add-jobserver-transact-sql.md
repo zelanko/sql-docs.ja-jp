@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobserver
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bc4d3bca563079c7e1dd7f3ee93e5947f65700b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 046a5b9c4c162dd29c812d326f6d8a448e860604
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305241"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819034"
 ---
 # <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
- automatic_post は**sp_add_jobserver**に存在しますが、[引数] の下には表示されません。 ** \@** automatic_post は、内部使用のために予約されています。 ** \@**  
+## <a name="remarks"></a>解説  
+ ** \@ automatic_post**は**sp_add_jobserver**に存在しますが、[引数] の下には表示されません。 ** \@ automatic_post**は、内部使用のために予約されています。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
@@ -76,10 +76,10 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ## <a name="examples"></a>例  
   
 ### <a name="a-assigning-a-job-to-the-local-server"></a>A. ローカルサーバーへのジョブの割り当て  
- 次の例では、 `NightlyBackups`ジョブをローカルサーバーで実行するように割り当てます。  
+ 次の例では、ジョブを `NightlyBackups` ローカルサーバーで実行するように割り当てます。  
   
 > [!NOTE]  
->  この例では、 `NightlyBackups`ジョブが既に存在していることを前提としています。  
+>  この例では、ジョブが既に存在していることを前提としてい `NightlyBackups` ます。  
   
 ```  
 USE msdb ;  
@@ -91,7 +91,7 @@ GO
 ```  
   
 ### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>B. 別のサーバーで実行するジョブの割り当て  
- 次の例では、マルチ`Weekly Sales Backups`サーバージョブを`SEATTLE2`サーバーに割り当てます。  
+ 次の例では、マルチ `Weekly Sales Backups` サーバージョブをサーバーに割り当て `SEATTLE2` ます。  
   
 > [!NOTE]  
 >  この例では、`Weekly Sales Backups` ジョブが既に存在し、`SEATTLE2` が現在のインスタンスに対するターゲット サーバーとして登録されていることを前提としています。  

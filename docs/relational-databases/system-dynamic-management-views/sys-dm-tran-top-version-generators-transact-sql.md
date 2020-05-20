@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_top_version_generators dynamic management view
 ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8fb59e9cfe636f6cab775fa2cb000c60ba08ad2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 552ca2de9ac8077beb25b9ad77f259790b92a1be
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262606"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819039"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68262606"
   バージョン ストアに最も多くバージョンを作成しているオブジェクトの仮想テーブルを返します。 **dm_tran_top_version_generators**は、 **database_id**と**rowset_id**によってグループ化された上位256の集計レコード長を返します。 **dm_tran_top_version_generators**は、 **dm_tran_version_store**仮想テーブルに対してクエリを実行してデータを取得します。 このビューはバージョンストアに対してクエリを実行し、バージョンストアは非常に大きくなる可能性があるため、dm_tran_top_version_generators を実行するには、非効率的なビューを使用し**ます。** この関数を使用して、バージョンストアの最大のコンシューマーを検索することをお勧めします。  
   
 > [!NOTE]  
->  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_tran_top_version_generators**という名前を使用します。  
+>  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_tran_top_version_generators**という名前を使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,12 +49,12 @@ sys.dm_tran_top_version_generators
 |**database_id**|**int**|データベース ID。|  
 |**rowset_id**|**bigint**|行セット ID。|  
 |**aggregated_record_length_in_bytes**|**int**|バージョンストア内の各**database_id**および**rowset_id ペア**のレコード長の合計。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
 ## <a name="remarks"></a>Remarks  
  **Dm_tran_top_version_generators**はバージョンストア全体をスキャンするので、多くのページを読み取る必要があるため、 **dm_tran_top_version_generators**を実行すると、システムのパフォーマンスが低下する可能性があります。  
@@ -89,7 +89,7 @@ database_id rowset_id            aggregated_record_length_in_bytes
 9           72057594038386688    33  
 ```  
   
- 出力には、すべてのバージョンがに`database_id``9`よって作成され、バージョンが2つのテーブルから生成されることが示されています。  
+ 出力には、すべてのバージョンがによって作成され、バージョンが2つのテーブルから生成されることが示されて `database_id``9` います。  
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
