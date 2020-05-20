@@ -71,7 +71,7 @@ ms.locfileid: "68086775"
 |{ ts 'yyyy-mm-dd hh:mm:ss[.fractional seconds]' }|ODBC API 固有:<br /><br /> 1 秒未満の秒を表す小数点の右側の桁数は、0 から 7 (100 ナノ秒) の範囲で指定できます。|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI および ISO 8601 への準拠  
-[datetime2](../../t-sql/data-types/date-transact-sql.md) の ANSI および ISO 8601 への準拠は、[date](../../t-sql/data-types/time-transact-sql.md) 型および **time** 型と同じです。
+**datetime2** の ANSI および ISO 8601 への準拠は、[date](../../t-sql/data-types/date-transact-sql.md) 型および [time](../../t-sql/data-types/time-transact-sql.md) 型と同じです。
   
 ##  <a name="backward-compatibility-for-down-level-clients"></a>下位クライアントの下位互換性  
 一部の下位レベル クライアントは、**time**、**date**、**datetime2**、**datetimeoffset** データ型をサポートしていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の上位インスタンスと下位クライアントの間のデータ型マッピングを次の表に示します。

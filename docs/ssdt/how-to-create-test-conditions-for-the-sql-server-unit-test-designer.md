@@ -174,7 +174,7 @@ namespace Ssdt.Samples.SqlUnitTesting
   
 カスタムのテスト条件のクラスは、[TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 基本クラスから継承します。 カスタムのテスト条件のインストール後は、条件の追加プロパティを使用して、[プロパティ] ウィンドウから条件を構成できます。  
   
-[TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) を拡張したクラスに [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) を追加する必要があります。 この属性により、このクラスは SQL Server Data Tools で探索可能になり、単体テストの設計および実行中に使用できるようになります。 この属性は、次の 2 つのパラメーターを受け取ります。  
+[TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) を拡張したクラスに [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) を追加する必要があります。 この属性により、このクラスは SQL Server Data Tools で探索可能になり、単体テストの設計および実行中に使用できるようになります。 この属性は、次の 2 つのパラメーターを受け取ります。  
   
 |属性パラメーター|[位置]|説明|  
 |-----------------------|------------|---------------|  

@@ -65,7 +65,7 @@ GO
 ```  
   
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>フルテキスト カタログのフルテキスト インデックスとセマンティック インデックスの合計サイズは?  
- **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** メタデータ関数の [IndexSize](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) プロパティに対してクエリを実行します。  
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) メタデータ関数の **IndexSize** プロパティに対してクエリを実行します。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>フルテキスト カタログのフルテキスト インデックスおよびセマンティック インデックスでインデックス化されているアイテム数は?  
- **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** メタデータ関数の [ItemCount](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) プロパティに対してクエリを実行します。  
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) メタデータ関数の **ItemCount** プロパティに対してクエリを実行します。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  

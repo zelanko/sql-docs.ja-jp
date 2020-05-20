@@ -192,7 +192,7 @@ GO
  FileTable によって取得されるほとんどのロックは、アプリケーションによって開かれたファイルに対応します。  
   
  **開いているファイルおよび関連付けられているロックを識別するには**  
- 動的管理ビュー **sys.dm_tran_locks &#40;Transact-SQL&#41;** の [request_owner_id](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) フィールドを **sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;** の [fcb_id](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) フィールドと結合します。 場合によっては、ロックが単一の開いているファイル ハンドルと対応しないこともあります。  
+ 動的管理ビュー [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) の **request_owner_id** フィールドを [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) の **fcb_id** フィールドと結合します。 場合によっては、ロックが単一の開いているファイル ハンドルと対応しないこともあります。  
   
 ```sql  
 SELECT opened_file_name  
