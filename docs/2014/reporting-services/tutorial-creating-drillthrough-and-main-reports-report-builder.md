@@ -10,12 +10,12 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 087ca52acea1cace7eb218cc33ce31cd21e10cc8
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82086887"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922237"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
   このチュートリアルでは、詳細レポートとメイン レポートの 2 種類のレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 次の図は、作成するレポートを示しています。  
@@ -81,7 +81,7 @@ ms.locfileid: "82086887"
   
  このチュートリアルの推定所要時間: 30 分。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  このチュートリアルでは、Contoso Sales キューブにアクセスする必要があります。 この必要条件は、詳細レポートとメイン レポートの両方に適用されます。 要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/report-builder-tutorials.md)」を参照してください。  
   
 ##  <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1. テーブルまたはマトリックスウィザードから詳細レポートを作成する  
@@ -89,7 +89,7 @@ ms.locfileid: "82086887"
   
 #### <a name="to-create-a-new-report"></a>新しいレポートを作成するには  
   
-1.  [**スタート**] をクリックし、[**プログラム**]、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **レポートビルダー**] の順にポイントし、[**レポートビルダー**] をクリックします。  
+1.  [**スタート**] をクリックし、[**プログラム**]、[レポートビルダー] の順にポイントし、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder****レポートビルダー**] をクリックします。  
   
      **[作業の開始]** ダイアログ ボックスが開きます。 表示されない場合は、[**レポートビルダー** ] ボタンの [**新規**] をクリックします。  
   
@@ -340,7 +340,7 @@ ms.locfileid: "82086887"
   
 1.  レポート データ ペインで **[パラメーター]** を展開します。  
   
-2.  [Productproductcategoryname を右クリック\@し、[**パラメーターのプロパティ**] をクリックします。  
+2.  [ \@ Productproductcategoryname を右クリックし、[**パラメーターのプロパティ**] をクリックします。  
   
     > [!NOTE]  
     >  名前の横の \@ 文字は、これがパラメーターであることを示しています。  
@@ -376,7 +376,7 @@ ms.locfileid: "82086887"
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  **[Save]** (保存) をクリックします。  
+4.  **[保存]** をクリックします。  
   
      **[最近使ったサイトとサーバー]** に、SharePoint サイトのライブラリの一覧が表示されます。  
   
@@ -387,14 +387,14 @@ ms.locfileid: "82086887"
     > [!NOTE]  
     >  メイン レポートも同じ場所に保存します。 メイン レポートと詳細レポートをそれぞれ異なるサイトまたはライブラリに保存する場合は、メイン レポートの **[レポートに移動する]** アクションのパスを更新する必要があります。  
   
-7.  **[Save]** (保存) をクリックします。  
+7.  **[保存]** をクリックします。  
   
 ##  <a name="1-create-a-new-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. テーブルまたはマトリックスウィザードから新しいレポートを作成する  
  **[作業の開始]** ダイアログ ボックスから、 **テーブルまたはマトリックス ウィザード**を使用してマトリックス レポートを作成します。  
   
 #### <a name="to-create-a-new-report"></a>新しいレポートを作成するには  
   
-1.  [**スタート**] をクリックし、[**プログラム**]、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **レポートビルダー**] の順にポイントし、[**レポートビルダー**] をクリックします。  
+1.  [**スタート**] をクリックし、[**プログラム**]、[レポートビルダー] の順にポイントし、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder****レポートビルダー**] をクリックします。  
   
 2.  **[作業の開始]** ダイアログ ボックスで、 **[新しいレポート]** が選択されていることを確認し、 **[テーブルまたはマトリックス ウィザード]** をクリックします。  
   
@@ -413,7 +413,7 @@ ms.locfileid: "82086887"
   
 5.  **[データ ソース]** で、データ ソースが **[Microsoft SQL Server Analysis Services (AdomdClient)]** になっていることを確認します。  
   
-6.  [**サーバー名**] に、の[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスがインストールされているサーバーの名前を入力します。  
+6.  [**サーバー名**] に、のインスタンスがインストールされているサーバーの名前を入力し [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。  
   
 7.  **[データベース名の選択または入力]** で、Contoso キューブを選択します。  
   
@@ -447,7 +447,7 @@ ms.locfileid: "82086887"
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
     > [!TIP]  
-    >  MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "デザイン モードに切り替える") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替え、完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#MSkip)」の手順 5 に進みます。  
+    >  MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](media/rsqdicon-designmode.gif "デザイン モードに切り替える") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替え、完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#MSkip)」の手順 5 に進みます。  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -716,7 +716,7 @@ ms.locfileid: "82086887"
     > [!IMPORTANT]  
     >  メイン レポートは、詳細レポートを保存した場所と同じ場所に保存します。 メイン レポートと詳細レポートをそれぞれ異なるサイトまたはライブラリに保存する場合は、メイン レポートの **[レポートに移動する]** アクションで指定されている詳細レポートの場所が正しいことを確認してください。  
   
-7.  **[Save]** (保存) をクリックします。  
+7.  **[保存]** をクリックします。  
   
 ##  <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. メインレポートと詳細レポートを実行する  
  メイン レポートを実行し、製品カテゴリの列の値をクリックして詳細レポートを実行します。  

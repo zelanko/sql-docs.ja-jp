@@ -10,12 +10,12 @@ ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4106de497a43404cb44606259d53beb1ed8f5a58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 435aa6a89b1b7aafd243efbc6de86bcb8f731346
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797453"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925020"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout プロパティ設定の構成
   HealthCheckTimeout 設定は、SQL Server リソース DLL が[sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)ストアドプロシージャから返された情報を待機する時間 (ミリ秒単位) を指定するために使用されます。この時間を経過すると、AlwaysOn フェールオーバークラスターインスタンス (fci) は応答不能として報告されます。 タイムアウトの設定に加えられた変更は直ちに有効になり、SQL Server リソースを再起動する必要はありません。  
@@ -42,7 +42,7 @@ ms.locfileid: "72797453"
   
 2.  `FailoverClusters` モジュールをインポートしてクラスター コマンドレットを有効にします。  
   
-3.  `Get-ClusterResource`コマンドレットを使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]リソースを検索し`Set-ClusterParameter` 、次にコマンドレットを使用して、フェールオーバークラスターインスタンスの**HealthCheckTimeout**プロパティを設定します。  
+3.  コマンドレットを使用して `Get-ClusterResource` リソースを検索 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] し、次にコマンドレットを使用して、 `Set-ClusterParameter` フェールオーバークラスターインスタンスの**HealthCheckTimeout**プロパティを設定します。  
   
 > [!TIP]  
 >  新しい PowerShell ウィンドウを開くたびに、`FailoverClusters` モジュールをインポートする必要があります。  
@@ -58,7 +58,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ### <a name="related-content-powershell"></a>関連コンテンツ (PowerShell)  
   
--   [クラスターと高可用性](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (フェールオーバー クラスタリングとネットワーク負荷分散のチームのブログ)  
+-   [クラスターと高可用性](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (フェールオーバー クラスタリングとネットワーク負荷分散のチームのブログ)  
   
 -   [フェールオーバー クラスターの Windows PowerShell の概要](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -76,9 +76,9 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
 4.  **[プロパティ]** タブをクリックし、 **[HealthCheckTimeout]** プロパティに適切な値を入力し、 **[OK]** をクリックして変更を適用します。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
- [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントを使用して、HealthCheckTimeOut プロパティ値を指定できます。  
+ [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql)ステートメントを使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] HealthCheckTimeOut プロパティ値を指定できます。  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>例 (Transact-sql)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、HealthCheckTimeout オプションを 15,000 ミリ秒 (15 秒) に設定します。  
   
 ```sql

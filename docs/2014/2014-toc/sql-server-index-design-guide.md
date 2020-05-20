@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe493927d269c092e775970b3089550203271f0e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68475981"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000512"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server インデックス デザイン ガイド
 
   不完全なデザインのインデックスやインデックスの不備は、データベース アプリケーションのボトルネックの主な原因となります。 効率的なインデックスのデザインは、データベースとアプリケーションの高パフォーマンスを実現するための最優先事項です。 この SQL Server インデックス デザイン ガイドには、効果的なインデックスをデザインしてアプリケーションのニーズを満たすために役立つ情報および推奨事項が含まれています。  
   
-**に適用さ**れます。特に指定がない限り、を[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]使用[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]します。  
+**に適用さ**れます。特に指定が [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ない限り、を使用します。  
   
  このガイドでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で使用できるインデックスの種類に関して一般的な知識があることを前提としています。 インデックスの種類に関する全般的な説明については、「 [インデックス](../relational-databases/indexes/indexes.md)」を参照してください。  
   
@@ -213,7 +213,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   範囲クエリで使用可能。  
   
- UNIQUE プロパティを使用してクラスター化インデックスが作成され[!INCLUDE[ssDE](../includes/ssde-md.md)]ていない場合、は自動的に4バイトの uniquifier 列をテーブルに追加します。 必要に応じて、 [!INCLUDE[ssDE](../includes/ssde-md.md)] uniquifier 値が自動的に行に追加され、各キーが一意になります。 この列とその値は、内部的に使用されるもので、ユーザーが参照したりアクセスすることはできません。  
+ UNIQUE プロパティを使用してクラスター化インデックスが作成されていない場合、は [!INCLUDE[ssDE](../includes/ssde-md.md)] 自動的に4バイトの uniquifier 列をテーブルに追加します。 必要に応じて、 [!INCLUDE[ssDE](../includes/ssde-md.md)] uniquifier 値が自動的に行に追加され、各キーが一意になります。 この列とその値は、内部的に使用されるもので、ユーザーが参照したりアクセスすることはできません。  
   
 ### <a name="clustered-index-architecture"></a>クラスター化インデックスのアーキテクチャ  
 
@@ -267,7 +267,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   頻繁に変更される列  
   
-     [!INCLUDE[ssDE](../includes/ssde-md.md)] では各行のデータ値を物理的な順序で維持する必要があるので、データが変更されると行全体が移動します。 データが頻繁に変更される大規模トランザクション処理システムでは、特にこの点に留意してください。  
+     これにより、は [!INCLUDE[ssDE](../includes/ssde-md.md)] 行のデータ値を物理的な順序で保持する必要があるため、行全体が移動します。 データが頻繁に変更される大規模トランザクション処理システムでは、特にこの点に留意してください。  
   
 -   広範なキー  
   
@@ -628,10 +628,10 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  [このガイドの [](#Top) ![トップに戻る] リンクで使用される矢印アイコン](media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")  
   
-##  <a name="additional-reading"></a><a name="Additional_Reading"></a>その他の参考資料  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> その他の情報  
 
  [SQL Server 2008 のインデックス付きビューによるパフォーマンスの向上](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
- [パーティションテーブルとパーティションインデックス](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [パーティション テーブルとパーティション インデックス](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

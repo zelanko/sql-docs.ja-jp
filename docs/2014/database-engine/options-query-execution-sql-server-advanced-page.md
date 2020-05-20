@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5323054b77ed26a3ada816f44c1bf6764ded931d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fcb8be3b7803402d6e20510d95f293107b66540
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089370"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000822"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>[オプション] ([クエリ実行]: [SQL Server]: [詳細設定] ページ)
   SET コマンドを使用する場合は、いくつかのオプションを使用できます。 このページを使用すると、SQL Server クエリ エディターで [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリを実行するための **set** オプションを指定できます。 他のコード エディターには影響しません。 これらのオプションに加えられた変更は、新しい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリだけに適用されます。 現在のクエリのオプションを変更するには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ ウィンドウの **[クエリ]** メニューまたはショートカット メニューの **[クエリ オプション]** をクリックします。 **[実行]** の **[詳細設定]** をクリックします。 各オプションの詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックを参照してください。  
@@ -29,7 +29,7 @@ ms.locfileid: "66089370"
  **SET NOEXEC**  
  クエリを実行しません。 既定では、このチェック ボックスはオフです。  
   
- **SET PARSEONLY**  
+ **[SET PARSEONLY]**  
  各クエリの構文をチェックするだけで、クエリを実行しません。 既定では、このチェック ボックスはオフです。  
   
  **SET CONCAT_NULL_YIELDS_NULL**  

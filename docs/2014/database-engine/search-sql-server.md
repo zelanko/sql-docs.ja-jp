@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 2b4e890a-f83d-482f-b558-8fa6882c9556
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab4fbf86cffea9af6aef03a176aef3d559472506
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843718"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000562"
 ---
 # <a name="search-sql-server"></a>検索 (SQL Server)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]には、 [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE`キーワードの機能を超えるテキストおよびドキュメントの検索機能が用意されています。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]には、キーワードの機能を超えるテキストおよびドキュメントの検索機能が用意されて [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` います。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [フルテキスト検索](../relational-databases/search/full-text-search.md)  

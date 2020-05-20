@@ -10,12 +10,12 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2db6a47de02b49397847dc9d713277ffcb152156
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feed59c01a9fe77c226164c6b5b5df5caf0c77c1
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656579"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922161"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>SQL Server 2005 からアップグレードしますか?
   SQL Server 2005 の延長サポートの終了は、新しいバージョンの SQL Server や Azure SQL Database への早めのアップグレードをお勧めする 1 つの理由です。 アップグレードすると、セキュリティとコンプライアンスを維持し、パフォーマンスを大きく改善し、データ プラットフォームのインフラストラクチャを最適化できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "75656579"
   
  これらのオプションの包括的な分析の詳細を確認するには、 [こちら](https://sql05upgrade.azurewebsites.net/)をクリックします。  
   
-|リレーショナル ストレージのオプション|利点|その他の考慮すべき要素|  
+|リレーショナル ストレージのオプション|メリット|その他の考慮すべき要素|  
 |-------------------------------|--------------|-------------------------------|  
 |**オンプレミスの SQL Server**<br /><br /> トランザクション システムからデータ ウェアハウスまで、あらゆる種類のデータベース アプリケーションに対して、このオプションをご検討ください。<br /><br /> 詳細については、「 [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/)」を参照してください。|ハードウェアとソフトウェアの両方を管理するので、機能と拡張性の大部分を制御できます。<br /><br /> SQL Server 2005 からアップグレードする場合は、これが最も類似した環境です。|自前のハードウェアとソフトウェアを購入、維持、管理する必要があるため、必要な先行投資は最大で、管理は最も継続的なものとなります。|  
 |**Azure 仮想マシンでホストされる SQL Server**<br /><br /> 次のことが必要な場合は、このオプションをご検討ください。<br />-ホストされた環境への移行の利点。<br />-オペレーティング環境を制御します。<br />-SQL Server の使い慣れた機能セット。<br /><br /> 詳細については、「 [Azure Virtual Machines の概要」の SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)を参照してください。<br /><br /> 移行について詳しくは、「 [Azure VM の SQL Server へのデータベースの移行](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)」をご覧ください。|仮想マシン イメージのライブラリからすばやく展開できます。<br /><br /> SQL Server の完全な機能セットが利用できます。<br /><br /> ハードウェアとサーバー ソフトウェアのコストを節約できます。 1 時間単位で使用した分だけ課金されます。|SQL Server と、オペレーティング システム ソフトウェアの両方を構成して管理する必要があります。|  
@@ -44,7 +44,7 @@ ms.locfileid: "75656579"
   
  また、特定のデータおよびアプリケーションに対して、非リレーショナル ソリューションまたは NoSQL ソリューションを検討することもできます。  
   
-|非リレーショナル ソリューション|利点|  
+|非リレーショナル ソリューション|メリット|  
 |------------------------------|--------------|  
 |**Azure DocumentDB**<br /><br /> JSON データを使用し、かつ堅牢なクエリ処理とトランザクション データ処理の組み合わせを必要とする最新のスケーラブルなモバイル アプリケーションや Web アプリケーションには、このオプションをご検討ください。<br /><br /> 詳しくは、「 [DocumentDB](https://azure.microsoft.com/services/documentdb/)」をご覧ください。|ドキュメントにはインデックスが作成されるので、使い慣れた SQL 構文を使用してクエリを実行することができます。<br /><br /> データベースはスキーマ フリーです。<br /><br /> インデックスを再構築せずに、ドキュメントにプロパティを追加できます。<br /><br /> データベース エンジンの中でも JSON および JavaScript のサポートを利用できます。<br /><br /> 地理空間データがネイティブでサポートされており、Azure Search、HDInsight、Data Factory などの他のAzure サービスと統合できます。<br /><br /> 確保されたスループット レベルで、待機時間の短い、高パフォーマンスのストレージを利用できます。|  
 |**Azure テーブルストレージ**<br /><br /> ペタバイト級の半構造化データをコスト効率の高いソリューションで保存するには、このオプションをご検討ください。<br /><br /> 詳しくは、「 [テーブル ストレージ](https://azure.microsoft.com/services/storage/tables/)」をご覧ください。|データをオフラインにせずに、アプリとテーブル スキーマを改善できます。<br /><br /> シャーディングせずに、データセットをスケール アップできます。<br /><br /> 複数の領域間でデータをレプリケートする地理的冗長ストレージを利用できます。|  
@@ -57,11 +57,11 @@ ms.locfileid: "75656579"
   
 -   アップグレードを計画する方法については、SQL Server チームからの次の一連のブログ投稿をご確認ください。  
   
-    -   [SQL Server 2005 からの効率的なアップグレードの計画: ステップ 1/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
+    -   [SQL Server 2005 からの効率的なアップグレードの計画: ステップ 1/3](https://cloudblogs.microsoft.com/sqlserver/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3/)  
   
-    -   [SQL Server 2005 からの効率的なアップグレードの計画: ステップ 2/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
+    -   [SQL Server 2005 からの効率的なアップグレードの計画: ステップ 2/3](https://cloudblogs.microsoft.com/sqlserver/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3/)  
   
-    -   [SQL Server 2005 からの効率的なアップグレードの計画: ステップ 3/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
+    -   [SQL Server 2005 からの効率的なアップグレードの計画: ステップ 3/3](https://cloudblogs.microsoft.com/sqlserver/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3/)  
   
 -   [SQL Server 2014 をインストールするためのハードウェアとソフトウェアの要件](hardware-and-software-requirements-for-installing-sql-server.md)など、 [SQL Server インストールの計画](../../../2014/sql-server/install/planning-a-sql-server-installation.md)に関する要件と考慮事項を確認します。  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b32dcfc95c5fc6929454add71ff4452e00fdda6e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089198"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001045"
 ---
 # <a name="options-text-editor---xml---general-page"></a>[オプション] ([テキスト エディター]/[XML]/[全般] ページ)
   このダイアログ ボックスを使用すると、XML ドキュメントの編集に使用される XML エディターの全般的な編集の動作を変更できます。 これらの設定を変更するには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[XML]** サブフォルダーを展開します。次に、 **[全般]** をクリックします。  
@@ -30,7 +30,7 @@ ms.locfileid: "66089198"
  **[メンバーの詳細を非表示]**  
  このチェック ボックスは使用できません。  
   
- **パラメータ情報**  
+ **パラメーター情報**  
  このチェック ボックスがオンの場合、エディター内の挿入ポイントの左側に、現在の宣言またはプロシージャの完全な構文が、使用可能なすべてのパラメーターと共に表示されます。 割り当て可能な次のパラメーターは、太字で表示されます。  
   
 ## <a name="settings"></a>設定  

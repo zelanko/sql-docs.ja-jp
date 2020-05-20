@@ -10,23 +10,23 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f11321b20c4238fdf9b3376d79edcb12c0e9204b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721159"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000472"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>レッスン 1 : レプリケーション用の Windows アカウントの作成
   このレッスンでは、レプリケーション エージェントを実行するための Windows アカウントを作成します。 また、次のエージェントを実行するための別の Windows アカウントをローカル サーバー上に作成します。  
   
-|エージェント|インストール先|アカウント名|  
+|エージェント|Location|アカウント名|  
 |-----------|--------------|------------------|  
-|スナップショット エージェント|発行元|\<*machine_name*>\repl_snapshot|  
-|ログ リーダー エージェント (Log Reader Agent)|発行元|\<*machine_name*>\repl_logreader|  
+|スナップショット エージェント|Publisher|\<*machine_name*>\repl_snapshot|  
+|ログ リーダー エージェント (Log Reader Agent)|Publisher|\<*machine_name*>\repl_logreader|  
 |ディストリビューション エージェント|パブリッシャーおよびサブスクライバー|\<*machine_name*>\repl_distribution|  
 |[マージ エージェント]|パブリッシャーおよびサブスクライバー|\<*machine_name*>\repl_merge|  
   

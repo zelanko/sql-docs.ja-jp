@@ -9,18 +9,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.ansi.f1
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b383c290bb507cdafaf824c16b3a1587b998bd3
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089077"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000623"
 ---
 # <a name="query-options-execution-ansi-page"></a>[クエリ オプション] の [実行] ([ANSI] ページ)
-  このページを使用すると[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、ISO (ANSI) 規格で指定されているすべてまたは一部の設定を使用してクエリを実行するように指定できます。  
+  このページを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ISO (ANSI) 規格で指定されているすべてまたは一部の設定を使用してクエリを実行するように指定できます。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **SET ANSI_DEFAULTS**  

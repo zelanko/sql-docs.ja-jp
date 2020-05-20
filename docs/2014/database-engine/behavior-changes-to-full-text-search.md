@@ -11,15 +11,15 @@ helpviewer_keywords:
 - behavior changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00dc0fbda03bb7f729123a84e7e91fb2361aee9f
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813195"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001081"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>フルテキスト検索の動作の変更
   このトピックでは、フルテキスト検索の動作変更について説明します。 動作変更によって、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の機能や操作方法が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の以前のバージョンと異なっています。  
@@ -77,9 +77,9 @@ ms.locfileid: "62813195"
 |Mt. Kent and Mt Challenger|challenger<br /><br /> kent<br /><br /> mt<br /><br /> Mt.|mt<br /><br /> kent<br /><br /> challenger|  
   
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>SQL Server 2008 でのフルテキスト検索の動作の変更  
- 以降[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]のバージョンでは、フルテキストエンジンは、サーバークエリおよびストレージエンジンインフラストラクチャの一部として、リレーショナルデータベースにデータベースサービスとして統合されています。 フルテキスト検索の新しいアーキテクチャにより、次の目的が達成されます。  
+ [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]以降のバージョンでは、フルテキストエンジンは、サーバークエリおよびストレージエンジンインフラストラクチャの一部として、リレーショナルデータベースにデータベースサービスとして統合されています。 フルテキスト検索の新しいアーキテクチャにより、次の目的が達成されます。  
   
--   統合ストレージと管理-フルテキスト検索は、の固有の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ストレージおよび管理機能と直接統合され、MSFTESQL サービスは存在しなくなりました。  
+-   統合ストレージと管理-フルテキスト検索は、の固有のストレージおよび管理機能と直接統合され、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] MSFTESQL サービスは存在しなくなりました。  
   
     -   フルテキスト インデックスが、ファイル システム内ではなくデータベース ファイル グループ内に格納されます。 バックアップの作成など、データベースに対する管理操作は、自動的にフルテキスト インデックスにも影響します。  
   
@@ -94,11 +94,11 @@ ms.locfileid: "62813195"
   
 -   ノイズ ワードとノイズ ワード ファイルが、ストップワードとストップリストに置き換えられました。 ストップリストは、ストップワードの管理タスクを容易にし、異なるサーバー インスタンスや環境間の整合性を向上させるデータベース オブジェクトです。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)」を参照してください。  
   
--   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 以降のバージョンには、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] に存在する言語のうち、多くの言語に対する新しいワード ブレーカーが含まれています。 変更がないのは、英語、韓国語、タイ語、中国語 (すべての形式) のワード ブレーカーだけです。 その他の言語では、データベースを[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]以降のバージョンに[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]アップグレードしたときにフルテキストカタログがインポートされた場合、フルテキストカタログのフルテキストインデックスで使用される1つ以上の言語が、インポートされたワードブレーカーとは少し異なる動作をする新しいワードブレーカーに関連付けられるようになりました。 クエリとフルテキストインデックスコンテンツの一貫性を確保する方法の詳細については、「[フルテキスト検索のアップグレード](../relational-databases/search/upgrade-full-text-search.md)」を参照してください。  
+-   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 以降のバージョンには、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] に存在する言語のうち、多くの言語に対する新しいワード ブレーカーが含まれています。 変更がないのは、英語、韓国語、タイ語、中国語 (すべての形式) のワード ブレーカーだけです。 その他の言語では、データベースを以降のバージョンにアップグレードしたときにフルテキストカタログがインポートされた場合、フルテキスト [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] カタログのフルテキストインデックスで使用される1つ以上の言語が、インポートされたワードブレーカーとは少し異なる動作をする新しいワードブレーカーに関連付けられるようになりました。 クエリとフルテキストインデックスコンテンツの一貫性を確保する方法の詳細については、「[フルテキスト検索のアップグレード](../relational-databases/search/upgrade-full-text-search.md)」を参照してください。  
   
 -   新しい FDHOST ランチャー (MSSQLFDLauncher) サービスが追加されました。 詳細については、「[フルテキスト検索の概要](../relational-databases/search/get-started-with-full-text-search.md)」を参照してください。  
   
--   フルテキストインデックス作成は、 `varbinary(max)`列と同じように[FILESTREAM](../relational-databases/blob/filestream-sql-server.md)列で動作します。 FILESTREAM テーブルに、各 FILESTREAM BLOB のファイル名拡張子を含む列が含まれている必要があります。 詳細については、「[フルテキスト検索を使用したクエリ](../relational-databases/search/query-with-full-text-search.md)」、「[検索用フィルターの構成と管理](../relational-databases/search/configure-and-manage-filters-for-search.md)」、および「 [fulltext_document_types &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)」を参照してください。  
+-   フルテキストインデックス作成は、列と同じように[FILESTREAM](../relational-databases/blob/filestream-sql-server.md)列で動作し `varbinary(max)` ます。 FILESTREAM テーブルに、各 FILESTREAM BLOB のファイル名拡張子を含む列が含まれている必要があります。 詳細については、「[フルテキスト検索を使用したクエリ](../relational-databases/search/query-with-full-text-search.md)」、「[検索用フィルターの構成と管理](../relational-databases/search/configure-and-manage-filters-for-search.md)」、および「 [fulltext_document_types &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)」を参照してください。  
   
      フルテキスト エンジンは、FILESTREAM BLOB の内容のインデックスを作成します。 イメージなど、インデックスを作成しても役に立たないファイルもあります。 FILESTREAM BLOB が更新されると、インデックスが再作成されます。  
   

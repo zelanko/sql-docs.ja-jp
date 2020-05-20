@@ -10,15 +10,15 @@ ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ffe6a854e24240c6298dfbf7b4c195d787e07c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5f25a42b54e0ae310c7033a81f75cad75582416
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172041"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925066"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>replay オプション (Distributed Replay 管理ツール)
-  分散再生管理ツール`DReplay.exe`は、分散再生コントローラーとの通信に使用できるコマンドラインツールです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] このトピックでは、 **replay** コマンド ライン オプションとそれに対応する構文について説明します。
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散再生管理ツールは、 `DReplay.exe` 分散再生コントローラーとの通信に使用できるコマンドラインツールです。 このトピックでは、 **replay** コマンド ライン オプションとそれに対応する構文について説明します。
 
  **replay** オプションはイベント再生段階を開始します。ここでは、コントローラーは、指定されたクライアントに再生データをディスパッチし、分散再生を開始して、クライアントを同期します。 必要に応じて、再生に参加している各クライアントは再生アクティビティを記録し、結果トレース ファイルをローカルに保存できます。
 
@@ -50,11 +50,11 @@ ms.locfileid: "78172041"
 
 -   UNC パスはサポートされません。
 
- **-o**クライアントの再生アクティビティをキャプチャし、クライアント構成ファイルの`<ResultDirectory>`要素によって指定されたパスの結果トレースファイルに保存`DReplayClient.xml`します。
+ **-o**クライアントの再生アクティビティをキャプチャし、クライアント構成ファイルの要素によって指定されたパスの結果トレースファイルに保存し `<ResultDirectory>` `DReplayClient.xml` ます。
 
  **-O**パラメーターが指定されていない場合、結果トレースファイルは生成されません。 コンソール出力は再生の最後に概要情報を返しますが、他の再生統計情報は提供されません。
 
- **-s** *target_server*分散ワークロードの再生[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に使用するの対象インスタンスを指定します。 このパラメーターは、 **server_name[\instance name]** の形式で指定します。
+ **-s** *target_server* [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散ワークロードの再生に使用するの対象インスタンスを指定します。 このパラメーターは、 **server_name[\instance name]** の形式で指定します。
 
  "`localhost`" または "`.`" をターゲット サーバーとして使用することはできません。
 
@@ -148,6 +148,6 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
  詳細については、「 [Distributed Replay Security](distributed-replay-security.md)」を参照してください。
 
 ## <a name="see-also"></a>参照
- [トレースデータ](replay-trace-data.md)[の再生再生結果を確認](review-the-replay-results.md)[する:](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)分散再生を使用して分散再生[SQL Server 分散再生フォーラム](https://social.technet.microsoft.com/Forums/sl/sqldru/)の分散再生[構成](configure-distributed-replay.md)し、SQL Server を使用して分散再生のロードテストを実行し、SQL Server を使用してをロードテストします。[第1部](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx) [SQL Server](sql-server-distributed-replay.md)
+ [トレースデータ](replay-trace-data.md)[の再生再生結果を確認](review-the-replay-results.md)[する:](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)分散再生を使用して分散再生[SQL Server 分散再生フォーラム](https://social.technet.microsoft.com/Forums/sl/sqldru/)の分散再生[構成](configure-distributed-replay.md)し、SQL Server を使用して分散再生のロードテストを実行し、SQL Server を使用してをロードテストします。[第1部](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1) [SQL Server](sql-server-distributed-replay.md)
 
 

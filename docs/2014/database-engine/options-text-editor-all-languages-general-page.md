@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 385380e6e51c3b8519e7dbc6ec3d934e1ef14846
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55e89850c3b3f19c30a4943f5d787407da7e3c88
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089247"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000740"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>[オプション] ([テキスト エディター]/[すべての言語]/[全般] ページ)
   このダイアログ ボックスを使用すると、全部で 5 つある [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のすべてのエディターの全般的な編集オプションを設定できます。 これらのオプションを表示するには、**[ツール]** メニューの **[オプション]** をクリックします。 **[テキスト エディター]** フォルダーを選択し、**[すべての言語]** フォルダーを展開して、**[全般]** をクリックします。  
@@ -35,7 +35,7 @@ ms.locfileid: "66089247"
  **[メンバーの詳細を非表示]**  
  最もよく使われる項目だけを一覧に表示して、入力候補のポップアップ リストを簡潔にします。 他の項目は一覧から除外されます。 高度なメンバーとしてマークされているメンバーがない場合、このオプションは使用できません。  
   
- **パラメータ情報**  
+ **パラメーター情報**  
  現在の宣言またはプロシージャの完全な構文、および使用できるすべてのパラメーターをエディター内のカーソルの左側に表示します。 割り当て可能な次のパラメーターは、太字で表示されます。  
   
 ## <a name="settings"></a>設定  

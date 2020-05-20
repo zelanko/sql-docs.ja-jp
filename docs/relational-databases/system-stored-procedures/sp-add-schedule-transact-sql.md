@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_schedule
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 21fe2a05c87caf5270967381e9ebeefc1069729f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dcaf10a680540a533e539783a1fc9ed289998a40
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "70810389"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151979"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,8 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
     [ , [ @active_end_time = ] active_end_time ]   
     [ , [ @owner_login_name = ] 'owner_login_name' ]  
     [ , [ @schedule_uid = ] schedule_uid OUTPUT ]  
-    [ , [ @schedule_id = ] schedule_id OUTPUT ]  
+    [ , [ @schedule_id = ] schedule_id OUTPUT ]
+    [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
     [ , [ @originating_server = ] server_name ] /* internal */  
 ```  
   
@@ -64,7 +65,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |-----------|-----------------|  
 |**1**|1 度|  
 |**4**|毎日|  
-|**8**|週単位|  
+|**8**|週次|  
 |**まで**|月 1 回|  
 |**32**|毎月 ( *freq_interval*を基準)|  
 |**64**|SQL エージェントサービスの開始時に実行する|  
@@ -97,11 +98,11 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 |[値]|説明 (単位)|  
 |-----------|--------------------------|  
-|**1**|First (先頭へ)|  
-|**2**|秒|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|Last (最後へ)|  
+|**まで**|末尾|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`ジョブのスケジュールされた実行の間隔を週または月単位で指定します。 *freq_recurrence_factor*は*freq_type*が**8**、 **16**、または**32**の場合にのみ使用されます。 *freq_recurrence_factor*は**int**,、既定値は**0**です。  
   
@@ -129,9 +130,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -148,7 +149,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-schedule"></a>A. スケジュールを作成する  
- 次の例では、と`RunOnce`いう名前のスケジュールを作成します。 スケジュールは 1 回のみ、スケジュールが作成された日の `23:30` に実行されます。  
+ 次の例では、という名前のスケジュールを作成し `RunOnce` ます。 スケジュールは 1 回のみ、スケジュールが作成された日の `23:30` に実行されます。  
   
 ```  
 USE msdb ;  
@@ -163,10 +164,10 @@ GO
 ```  
   
 ### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>B. スケジュールを作成し、複数のジョブにスケジュールをアタッチする  
- 次の例では、と`NightlyJobs`いう名前のスケジュールを作成します。 このスケジュールを使用するジョブは、毎日、サーバーの時間が `01:00` になると実行されます。 この例では、スケジュールをジョブ`BackupDatabase`とジョブ`RunReports`にアタッチします。  
+ 次の例では、という名前のスケジュールを作成し `NightlyJobs` ます。 このスケジュールを使用するジョブは、毎日、サーバーの時間が `01:00` になると実行されます。 この例では、スケジュールをジョブ `BackupDatabase` とジョブにアタッチし `RunReports` ます。  
   
 > [!NOTE]  
->  この例では、ジョブ`BackupDatabase`とジョブ`RunReports`が既に存在していることを前提としています。  
+>  この例では、ジョブ `BackupDatabase` とジョブが既に存在していることを前提としてい `RunReports` ます。  
   
 ```  
 USE msdb ;  

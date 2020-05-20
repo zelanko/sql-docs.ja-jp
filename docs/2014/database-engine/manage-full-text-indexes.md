@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de736c48763973b48be41d4d63f5237a10b3fff6
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775044"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000882"
 ---
 # <a name="manage-full-text-indexes"></a>フルテキスト インデックスの管理
      
@@ -37,7 +37,7 @@ ms.locfileid: "62775044"
     |----------|-----------------|  
     |**全般**|フルテキスト インデックスの基本的なプロパティが表示されます。 これには、いくつかの変更可能なプロパティと、データベース名、テーブル名、フルテキスト キー列の名前など多数の変更不可能なプロパティが含まれます。 変更可能なプロパティは次のとおりです。<br /><br /> **フルテキスト インデックス ストップリスト**<br /><br /> **フルテキスト インデックス有効**<br /><br /> **変更の追跡**<br /><br /> **検索プロパティ リスト**<br /><br /> <br /><br /> 詳細については、「 [フルテキスト インデックス プロパティ &#40;[全般] ページ&#41;](full-text-index-properties-general-page.md)」を参照してください。|  
     |**[列]**|フルテキスト インデックスを作成できるテーブル列が表示されます。 選択した列にフルテキスト インデックスが作成されます。 フルテキスト インデックスに含める列はいくつでも選択できます。 詳細については、「 [フルテキスト インデックス プロパティ &#40;[列] ページ&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)」を参照してください。|  
-    |**スケジュール**|このページでは、フルテキスト インデックスを作成するためのテーブルの増分作成を開始する SQL Server エージェント ジョブのスケジュールを作成または管理できます。 詳細については、「 [フルテキスト インデックスの作成](../relational-databases/indexes/indexes.md)」をご覧ください。<br /><br /> <strong> \*重要\* \* </strong>[**フルテキストインデックスのプロパティ**] ダイアログボックスを閉じると、新しく作成されたスケジュールが SQL Server エージェントジョブに関連付けられます ( *database_name*でテーブルの増分作成を開始します)。*table_name*)。|  
+    |**スケジュール**|このページでは、フルテキスト インデックスを作成するためのテーブルの増分作成を開始する SQL Server エージェント ジョブのスケジュールを作成または管理できます。 詳細については、「 [フルテキスト インデックスの作成](../relational-databases/indexes/indexes.md)」をご覧ください。<br /><br /> <strong> \* \* 重要 \* : \* </strong> [**フルテキストインデックスのプロパティ**] ダイアログボックスを閉じると、新しく作成されたスケジュールが SQL Server エージェントジョブに関連付けられます ( *database_name*でテーブルの増分作成を開始します)。*table_name*)。|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] をクリックして変更を保存し、 **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスを終了します。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62775044"
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>一意のインデックスがフルテキスト キー列として使用されているかどうかを調査するには  
   
-1.  [SELECT](/sql/t-sql/queries/select-transact-sql) ステートメントを使用して、 [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) 関数を呼び出します。 関数呼び出しでは、OBJECT_ID 関数を使用してテーブルの名前 (*table_name*) をテーブル ID に変換し、テーブルに一意のインデックスの名前を指定して、次`IsFulltextKey`のようにインデックスのプロパティを指定します。  
+1.  [SELECT](/sql/t-sql/queries/select-transact-sql) ステートメントを使用して、 [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) 関数を呼び出します。 関数呼び出しでは、OBJECT_ID 関数を使用してテーブルの名前 (*table_name*) をテーブル ID に変換し、テーブルに一意のインデックスの名前を指定して、次のようにインデックスのプロパティを指定し `IsFulltextKey` ます。  
   
     ```  
     SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
@@ -92,7 +92,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 1.  フルテキスト処理に対応する各テーブルには、テーブルの行を一意にするための列があります ("*一意なキー列*")。 OBJECTPROPERTYEX 関数で取得できる `TableFulltextKeyColumn` プロパティには、この一意なキー列の列 ID が格納されます。  
   
-     この識別子を取得するには、SELECT ステートメントで OBJECTPROPERTYEX 関数を呼び出します。 OBJECT_ID 関数を使用してテーブルの名前 (*table_name*) をテーブル ID に変換し、次の`TableFulltextKeyColumn`ようにプロパティを指定します。  
+     この識別子を取得するには、SELECT ステートメントで OBJECTPROPERTYEX 関数を呼び出します。 OBJECT_ID 関数を使用してテーブルの名前 (*table_name*) をテーブル ID に変換し、次のようにプロパティを指定し `TableFulltextKeyColumn` ます。  
   
     ```  
     SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  

@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b12b9030d27e371e0299e06917464b1467b9b10e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c018a020fd86925ff14efcb37e2f5734c7e5f141
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782956"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925021"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 (SQL Server)
   このトピックでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の展開に関して、各種コンポーネント (ホスト コンピューター、Windows Server フェールオーバー クラスタリング (WSFC) クラスター、サーバー インスタンス、可用性グループ) の前提条件、制限、推奨事項などの考慮事項について説明します。 各コンポーネントのセキュリティに関する考慮事項のほか、要求される権限 (該当する場合) にも触れています。  
@@ -34,12 +34,12 @@ ms.locfileid: "72782956"
   
  
   
-##  <a name="net-hotfixes-that-support-alwayson-availability-groups"></a><a name="DotNetHotfixes"></a>AlwaysOn 可用性グループをサポートする .net 修正プログラム  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で使用する [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]コンポーネントと機能によっては、次の表で指定されている追加の .Net 修正プログラムのインストールが必要になる場合があります。 これらの修正プログラムは任意の順序でインストールできます。  
+##  <a name="net-hotfixes-that-support-alwayson-availability-groups"></a><a name="DotNetHotfixes"></a>AlwaysOn 可用性グループをサポートする .NET 修正プログラム  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]で使用するコンポーネントと機能によっては [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、次の表で示されている追加の .net 修正プログラムのインストールが必要になる場合があります。 これらの修正プログラムは任意の順序でインストールできます。  
   
 ||依存機能|修正プログラム|Link|  
 |------|-----------------------|------------|----------|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 の修正プログラムは、SQL クライアントに読み取り目的、読み取り専用、および multisubnetfailover の AlwaysOn 機能のサポートを追加します。 修正プログラムは、各 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーにインストールする必要があります。|KB 2654347: [AlwaysOn 機能のサポートを追加する .Net 3.5 SP1 の修正プログラム](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.NET 3.5 SP1 の修正プログラムでは、SQL クライアントに読み取り目的、readonly、および multisubnetfailover の AlwaysOn 機能のサポートが追加されます。 修正プログラムは、各 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーにインストールする必要があります。|KB 2654347: [AlwaysOn 機能のサポートを追加する .net 3.5 SP1 の修正プログラム](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 ##  <a name="windows-system-requirements-and-recommendations"></a><a name="SystemReqsForAOAG"></a>Windows のシステム要件と推奨事項  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72782956"
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|すべてのコンピューターで x86 (WOW64 は不可) または x64 Windows Server 2008 以降のバージョンが実行されていることを確認します。|WOW64 (Windows 64 ビット上の Windows 32 ビット) では、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]がサポートされません。|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|すべてのコンピューターが、Windows Server フェールオーバー クラスタリング (WSFC) クラスター内のノードであることを確認します。|[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|必要な可用性グループの構成に耐える十分なノードが WSFC クラスターに存在することを確認します。|WSFC ノードは、1 つの可用性グループにつき 1 つだけ可用性レプリカをホストすることができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスは、特定の WSFC ノード上で複数の可用性グループの可用性レプリカをホストできます。<br /><br /> 予定している可用性グループの可用性レプリカをサポートするために必要な WSFC ノードの数については、データベース管理者にお問い合わせください。<br /><br /> [AlwaysOn 可用性グループ &#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)。|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|すべての適用可能な Windows 修正プログラムが WSFC クラスター内のすべてのノードにインストールされていることを確認します。|** \*重要\* \* **をデプロイする[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] WSFC クラスターのノードには、いくつかの修正プログラムが必要または推奨されます。 詳細については、後の「[AlwaysOn 可用性グループをサポートする Windows 修正プログラム (Windows システム)](#WinHotfixes)」を参照してください。|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|すべての適用可能な Windows 修正プログラムが WSFC クラスター内のすべてのノードにインストールされていることを確認します。|重要いくつかの修正プログラムが必要か、またはをデプロイする WSFC クラスターのノードに推奨されます。 ** \* \* \* \* ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 詳細については、後の「[AlwaysOn 可用性グループをサポートする Windows 修正プログラム (Windows システム)](#WinHotfixes)」を参照してください。|  
   
 > [!IMPORTANT]  
 >  可用性グループへの接続に必要な構成が環境に対して正しく実施されていることも確認します。 詳細については、「 [AlwaysOn クライアント接続 (SQL Server)](always-on-client-connectivity-sql-server.md)」を参照してください。  
@@ -65,10 +65,10 @@ ms.locfileid: "72782956"
 |------|---------------------------------|------------------------------------|------------------------------|-----------------|------------|----------|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|はい|はい|はい|**最適な WSFC クォーラムの構成**|サポート技術情報の記事 2494036 に記載されている修正プログラムが、各 WSFC ノードにインストールされていることを確認します。<br /><br /> この修正プログラムは、非自動フェールオーバー ターゲットでの最適なクォーラム構成をサポートします。 投票するノードを自分で選択できるようにすることで、マルチサイト クラスターの改善を図ります。|KB 2494036:  [クォーラムの投票のないクラスター ノードを Windows Server 2008 および Windows Server 2008 R2 で構成できる修正プログラムを公開](https://support.microsoft.com/kb/2494036)<br /><br /> クォーラムの投票の詳細については、「[WSFC クォーラム モードと投票構成 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)」を参照してください。|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|はい|はい|はい|**ネットワーク帯域幅の効率的な使用**|サポート技術情報の記事 2616514 に記載されている修正プログラムが、各 WSFC ノードにインストールされていることを確認します。<br /><br /> この修正プログラムがないと、クラスター サービスはクラスター ノード間で不要なレジストリ通知を送信します。 この動作によりネットワークの帯域幅が制限され、 [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]にとって深刻な問題となります。|KB 2616514:  [クラスター サービスは、Windows Server 2008 または Windows Server 2008 R2 のクラスター ノード間で不要なレジストリ キー変更通知を送信する](https://support.microsoft.com/kb/2616514)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")||はい|適用なし|**一部の WSFC ノードから利用できないディスクに対する VPD ストレージ テスト**|WSFC ノードで Windows Server 2008 R2 Service Pack 1 (SP1) が実行されている場合に、オンラインの (なおかつ WSFC クラスター内の一部のノードから利用できない) ディスクに対して誤って Validate SCSI Device Vital Product Data (VPD) ストレージ テストを実行し、その結果不合格になった場合は、サポート技術情報の記事 2531907 に掲載されている修正プログラムをインストールします。<br /><br /> この修正プログラムは、ディスクがオンラインである場合に、誤った警告やエラーが検証レポートに出力されるのを防ぎます。|KB 2531907: [Windows Server 2008 R2 SP1 のインストール後、Validate SCSI Device Vital Product Data (VPD) テストで不合格になる](https://support.microsoft.com/kb/2531907)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")||はい|該当なし|**一部の WSFC ノードから利用できないディスクに対する VPD ストレージ テスト**|WSFC ノードで Windows Server 2008 R2 Service Pack 1 (SP1) が実行されている場合に、オンラインの (なおかつ WSFC クラスター内の一部のノードから利用できない) ディスクに対して誤って Validate SCSI Device Vital Product Data (VPD) ストレージ テストを実行し、その結果不合格になった場合は、サポート技術情報の記事 2531907 に掲載されている修正プログラムをインストールします。<br /><br /> この修正プログラムは、ディスクがオンラインである場合に、誤った警告やエラーが検証レポートに出力されるのを防ぎます。|KB 2531907: [Windows Server 2008 R2 SP1 のインストール後、Validate SCSI Device Vital Product Data (VPD) テストで不合格になる](https://support.microsoft.com/kb/2531907)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")||はい|はい|**ローカル レプリカへのフェールオーバーの高速化**|WSFC ノードで Windows Server 2008 R2 Service Pack 1 (SP1) を実行している場合は、サポート技術情報の記事 2687741 に記載されている修正プログラムがインストールされていることを確認します。<br /><br /> この修正プログラムにより、ローカル レプリカへの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] フェールオーバーのパフォーマンスが向上します。|KB 2687741:  [Windows server 2008 R2 で使用できる、SQL Server 2012 の "AlwaysOn 可用性グループ" 機能のパフォーマンスを向上させる修正プログラム](https://support.microsoft.com/KB/2687741)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|はい|はい|はい|**非対称ストレージ-フェールオーバークラスターインスタンス (FCIs)**|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に対してフェールオーバー クラスター インスタンス (FCI) が有効になっている場合は、Windows Server 2008 修正プログラム 976097 をインストールします。<br /><br /> この修正プログラムにより、フェールオーバークラスター管理 Microsoft 管理コンソール (MMC) スナップインが有効になり、一部の WSFC ノードでのみ使用できる非対称の記憶域共有ディスクがサポートされます。|KB 976097: [非対称ストレージのサポートをフェールオーバー クラスターの管理 MMC スナップインに追加するための修正プログラム (Windows Server 2008 または Windows Server 2008 R2 を実行するフェールオーバー クラスター用)](https://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn アーキテクチャ ガイド: フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性および災害復旧ソリューションの構築](https://technet.microsoft.com/library/jj215886.aspx)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|はい|はい|適用なし|**インターネット プロトコル セキュリティ (IPSec)**|環境で IPsec 接続を使用する場合、クライアント コンピューターが仮想ネットワーク名 (このコンテキストでは可用性グループ リスナー) への IPsec 接続を再確立するときに、長時間 (約 2 ～ 3 分) の遅延が発生する可能性があります。 IPsec 接続を使用する場合は、サポート技術情報の記事 (KB 980915) に詳細が記載されている特定のシナリオについてお読みになることをお勧めします。|KB 980915:  [Windows Server 2003、Windows Vista、Windows Server 2008、Windows 7、または Windows Server 2008 R2 を実行しているコンピューターからの IPSec 接続の再接続時に長時間の遅延が発生する](https://support.microsoft.com/kb/980915)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|はい|はい|該当なし|**インターネット プロトコル セキュリティ (IPSec)**|環境で IPsec 接続を使用する場合、クライアント コンピューターが仮想ネットワーク名 (このコンテキストでは可用性グループ リスナー) への IPsec 接続を再確立するときに、長時間 (約 2 ～ 3 分) の遅延が発生する可能性があります。 IPsec 接続を使用する場合は、サポート技術情報の記事 (KB 980915) に詳細が記載されている特定のシナリオについてお読みになることをお勧めします。|KB 980915:  [Windows Server 2003、Windows Vista、Windows Server 2008、Windows 7、または Windows Server 2008 R2 を実行しているコンピューターからの IPSec 接続の再接続時に長時間の遅延が発生する](https://support.microsoft.com/kb/980915)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|はい|はい|はい|**IPv6**|IPv6 を使用する場合は、Windows Server オペレーティング システムに応じて、サポート技術情報の記事 2578103 または 2578113 に詳細が記載されている特定のシナリオについてお読みになることをお勧めします。<br /><br /> Windows Server トポロジが IP version 6 (IPv6) を使用する場合、WSFC クラスター サービスが IPv6 IP アドレスのフェールオーバーに約 30 秒かかります。 このため、クライアントは IPv6 IP アドレスに再接続するまでに、約 30 秒待機することになります。|KB 2578103 (Windows Server 2008): [クラスター サービスが Windows Server 2008 で IPv6 IP アドレスのフェールオーバーに約 30 秒かかる](https://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2): **Windows Server 2008 R2: ** [クラスター サービスが Windows Server 2008 R2 で IPv6 IP アドレスのフェールオーバーに約 30 秒かかる](https://support.microsoft.com/kb/2578113)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|はい|はい|はい|**クラスターとアプリケーション サーバー間にルーターが存在しない**|フェールオーバー クラスターとアプリケーション サーバー間にルーターがない場合に、クラスター サービスのネットワーク関連リソースのフェールオーバー操作が遅くなります。 これにより、可用性グループがフェールオーバーした後でクライアントの再接続が遅延します。 ルーターがない場合は、サポート技術情報の記事 2582281 に詳細が記載されている特定のシナリオについてお読みになり、環境に該当する場合は修正プログラムをインストールすることをお勧めします。|KB 2582281:  [クラスターとアプリケーション サーバー間にルーターがない場合にフェールオーバー操作が遅い](https://support.microsoft.com/kb/2582281)|  
   
@@ -99,7 +99,7 @@ ms.locfileid: "72782956"
   
 3.  `Get-ClusterResource` コマンドレットを使用してネットワーク名リソースを検索し、次に `Set-ClusterParameter` コマンドレットを使用して `HostRecordTTL` 値を設定します。次に例を示します。  
   
-     Get clusterresource "*\<networkresourcename>*" |Set clusterparameter HostRecordTTL * \<TimeInSeconds>*  
+     Get ClusterResource "* \< networkresourcename>*" |Set ClusterParameter HostRecordTTL * \< TimeInSeconds>*  
   
      次に示す PowerShell の例では、"`SQL Network Name (SQL35)`" というネットワーク名リソースの HostRecordTTL を 300 秒に設定します。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "72782956"
   
 ##### <a name="related-content-powershell"></a>関連コンテンツ (PowerShell)  
   
--   [クラスターと高可用性](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (フェールオーバー クラスタリングとネットワーク負荷分散のチームのブログ)  
+-   [クラスターと高可用性](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (フェールオーバー クラスタリングとネットワーク負荷分散のチームのブログ)  
   
 -   [フェールオーバー クラスターの Windows PowerShell の概要](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "72782956"
   
 -   [マルチサイト フェールオーバー クラスターの DNS 設定を構成する](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [ネットワーク名リソースを使用した DNS 登録](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [ネットワーク名リソースを使用した DNS 登録](https://techcommunity.microsoft.com/t5/failover-clustering/dns-registration-with-the-network-name-resource/ba-p/371482)  
   
 -   [Windows 2008 R2 フェールオーバー マルチサイト クラスタリング](https://kiruba4u.blogspot.com/2012/03/failover-clustering-in-windows-server.html)  
   
@@ -139,12 +139,12 @@ ms.locfileid: "72782956"
 ||前提条件|リンク|  
 |-|------------------|-----------|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|ホスト コンピューターは、Windows Server フェールオーバー クラスタリング (WSFC) ノードであることが必要です。 可用性グループの可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスは、同じ WSFC クラスターの別のノードに存在する必要があります。 唯一の例外は、別の WSFC クラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができるという点です。|[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [フェールオーバークラスタリングと AlwaysOn 可用性グループ &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|可用性グループで Kerberos を操作するには:<br /><br /> 可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで、同じ SQL Server サービス アカウントを使用する必要があります。<br /><br /> ドメイン管理者は、可用性グループ リスナーの仮想ネットワーク名 (VNN) の SQL Server サービス アカウントに、Active Directory でサーバー プリンシパル名 (SPN) を手動で登録する必要があります。 SQL Server サービス アカウント以外のアカウントに SPN が登録されている場合は、認証が失敗します。<br /><br /> ** \*重要\* \* **SQL Server サービスアカウントを変更する場合は、ドメイン管理者が SPN を手動で再登録する必要があります。|[Kerberos 接続用のサービス プリンシパル名の登録](../../configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **簡単な説明:**<br /><br /> Kerberos と SPN は相互認証を行います。 SPN は、SQL Server サービスを起動する Windows アカウントにマップされます。 SPN が正常に登録されていないか登録に失敗した場合、Windows セキュリティ レイヤーは、SPN に関連するアカウントを決定することができず、Kerberos 認証は使用できません。<br /><br /> 注: NTLM には、この要件はありません。|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|可用性グループで Kerberos を操作するには:<br /><br /> 可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで、同じ SQL Server サービス アカウントを使用する必要があります。<br /><br /> ドメイン管理者は、可用性グループ リスナーの仮想ネットワーク名 (VNN) の SQL Server サービス アカウントに、Active Directory でサーバー プリンシパル名 (SPN) を手動で登録する必要があります。 SQL Server サービス アカウント以外のアカウントに SPN が登録されている場合は、認証が失敗します。<br /><br /> 重要 SQL Server サービスアカウントを変更する場合は、ドメイン管理者が SPN を手動で再登録する必要があります。 ** \* \* \* \* **|[Kerberos 接続用のサービス プリンシパル名の登録](../../configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **簡単な説明:**<br /><br /> Kerberos と SPN は相互認証を行います。 SPN は、SQL Server サービスを起動する Windows アカウントにマップされます。 SPN が正常に登録されていないか登録に失敗した場合、Windows セキュリティ レイヤーは、SPN に関連するアカウントを決定することができず、Kerberos 認証は使用できません。<br /><br /> 注: NTLM には、この要件はありません。|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストする予定がある場合は、FCI の制限を確実に理解し、FCI の要件が満たされていることを確認してください。|[SQL Server のフェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストするための前提条件と要件](#FciArLimitations) (このトピックの後半)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|すべてのサーバー インスタンスで Enterprise Edition の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]が実行されている必要があります。|[SQL Server 2014 の各エディションがサポートする機能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|特定の可用性グループの可用性レプリカをホストするすべてのサーバー インスタンス間で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の照合順序を統一する必要があります。|[サーバーの照合順序の設定または変更](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を有効にします。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のサーバー インスタンスは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 環境がサポートする範囲内であれば、1 台のコンピューターでいくつでも有効にすることができます。|[AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> ** \*重要\* \* **WSFC クラスターを削除して再作成した場合は、元の[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] wsfc クラスターでが有効になっていた各サーバーインスタンスで、この機能を無効にしてから再度有効にする必要があります。|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|すべてのサーバー インスタンスには、データベース ミラーリング エンドポイントが必要です。 このエンドポイントは、サーバー インスタンス上のミラーリング監視サーバーとデータベース ミラーリング パートナー、および可用性レプリカすべてによって共有されます。<br /><br /> 可用性レプリカのホストとして選んだサーバー インスタンスがドメイン ユーザー アカウントで実行されていて、まだデータベース ミラーリング エンドポイントが存在しない場合、 [新しい可用性グループ ウィザード](use-the-availability-group-wizard-sql-server-management-studio.md) (または [可用性グループへのレプリカの追加ウィザード](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) でエンドポイントを作成し、サーバー インスタンス サービス アカウントに CONNECT 権限を許可することができます。 ただし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがビルトイン アカウント (Local System、Local Service、Network Service など) で実行されている場合または非ドメイン アカウントで実行されている場合は、エンドポイント認証に証明書を使用する必要があります。ウィザードは、サーバー インスタンス上でデータベース ミラーリング エンドポイントを作成できなくなります。 この場合は、データベース ミラーリング エンドポイントを手動で作成してからウィザードを起動することをお勧めします。<br /><br /> **セキュリティに\*関する注意\* \* **の[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]トランスポートセキュリティは、データベースミラーリングの場合と同じです。|[データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [データベースミラーリングと AlwaysOn 可用性グループ &#40;SQL Server のトランスポートセキュリティ&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を有効にします。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のサーバー インスタンスは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 環境がサポートする範囲内であれば、1 台のコンピューターでいくつでも有効にすることができます。|[AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> 重要 wsfc クラスターを削除して再作成する場合は、元の**wsfc \* \* クラスターでが有効にされていた各サーバーインスタンスで、この機能を無効にしてから再度有効にする必要があります。 \* \* ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|すべてのサーバー インスタンスには、データベース ミラーリング エンドポイントが必要です。 このエンドポイントは、サーバー インスタンス上のミラーリング監視サーバーとデータベース ミラーリング パートナー、および可用性レプリカすべてによって共有されます。<br /><br /> 可用性レプリカのホストとして選んだサーバー インスタンスがドメイン ユーザー アカウントで実行されていて、まだデータベース ミラーリング エンドポイントが存在しない場合、 [新しい可用性グループ ウィザード](use-the-availability-group-wizard-sql-server-management-studio.md) (または [可用性グループへのレプリカの追加ウィザード](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) でエンドポイントを作成し、サーバー インスタンス サービス アカウントに CONNECT 権限を許可することができます。 ただし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがビルトイン アカウント (Local System、Local Service、Network Service など) で実行されている場合または非ドメイン アカウントで実行されている場合は、エンドポイント認証に証明書を使用する必要があります。ウィザードは、サーバー インスタンス上でデータベース ミラーリング エンドポイントを作成できなくなります。 この場合は、データベース ミラーリング エンドポイントを手動で作成してからウィザードを起動することをお勧めします。<br /><br /> ** \* \* セキュリティ \* \* **に関する注意のトランスポートセキュリティ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、データベースミラーリングの場合と同じです。|[データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [データベースミラーリングと AlwaysOn 可用性グループ &#40;SQL Server のトランスポートセキュリティ&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|FILESTREAM を使用するデータベースを可用性グループに追加する場合は、その可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで FILESTREAM が有効になっていることを確認してください。|[FILESTREAM の有効化と構成](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|包含データベースを可用性グループに追加する場合は、その可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで `contained database authentication` サーバー オプションが `1` に設定されていることを確認してください。|[contained database authentication サーバー構成オプション](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [サーバー構成オプション &#40;SQL Server&#41;](../../configure-windows/server-configuration-options-sql-server.md)|  
   
@@ -198,7 +198,7 @@ ms.locfileid: "72782956"
  たとえば、自動フェールオーバーをサポートする可用性グループでは、自動フェールオーバー パートナーであるセカンダリ レプリカの状態が SYNCHRONIZED である必要があります。 このセカンダリ レプリカへのネットワーク リンクにエラーが発生した場合 (断続的なエラーであっても)、レプリカが UNSYNCHRONIZED 状態になり、リンクが復元されるまで再同期を開始できません。 セカンダリ レプリカが非同期状態にある間に WSFC クラスターが自動フェールオーバーを要求しても、自動フェールオーバーは行われません。  
   
 ##  <a name="client-connectivity-support"></a><a name="ClientConnSupport"></a>クライアント接続のサポート  
- クライアント接続の[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]サポートの詳細については、「 [AlwaysOn クライアント接続 (SQL Server)](always-on-client-connectivity-sql-server.md)」を参照してください。  
+ クライアント接続のサポートの詳細について [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、「 [AlwaysOn クライアント接続 (SQL Server)](always-on-client-connectivity-sql-server.md)」を参照してください。  
   
 ##  <a name="prerequisites-and-restrictions-for-using-a-sql-server-failover-cluster-instance-fci-to-host-an-availability-replica"></a><a name="FciArLimitations"></a>SQL Server フェールオーバークラスターインスタンス (FCI) を使用して可用性レプリカをホストするための前提条件と制限  
  
@@ -309,7 +309,7 @@ ms.locfileid: "72782956"
 ###  <a name="checklist-requirements-availability-databases"></a><a name="RequirementsDb"></a>チェックリスト: 要件 (可用性データベース)  
  可用性グループに追加するデータベースは、次の条件を満たしている必要があります。  
   
-||要件|Link|  
+||必要条件|Link|  
 |-|------------------|----------|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|ユーザー データベースであること。 システム データベースを可用性グループに追加することはできません。||  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|可用性グループの作成先となる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス上に存在し、そのサーバー インスタンスからアクセスできること。||  
@@ -330,7 +330,7 @@ ms.locfileid: "72782956"
   
 -   セカンダリ データベースのファイル パス (ドライブ文字を含む) が、対応するプライマリ データベースのパスと異なる場合、次の制限が適用されます。  
   
-    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:** [**完全**] オプションはサポートされていません ([[最初のデータの同期を選択] ページ](select-initial-data-synchronization-page-always-on-availability-group-wizards.md))。  
+    -   ** [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] / [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] :** [**完全**] オプションはサポートされていません ([[最初のデータの同期を選択] ページ](select-initial-data-synchronization-page-always-on-availability-group-wizards.md))。  
   
     -   **RESTORE WITH MOVE:**  セカンダリ データベースを作成するには、セカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンス上で、WITH MOVE を使用してデータベース ファイルを復元する必要があります。  
   

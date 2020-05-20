@@ -1,6 +1,7 @@
 ---
 title: トレースの再生
 titleSuffix: SQL Server Profiler
+description: 1 台のコンピューターからの SQL Server Profiler のデータを再生する方法と、再生でブレークポイントとシミュレートされたユーザー接続を使用して問題をトラブルシューティングする方法を確認します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 50ef296f7ce7198dc0e233aca08e33c5f1cf7af0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 46d8a93d917917c0b0dec57e26633f564b9c1d01
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307466"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151719"
 ---
 # <a name="replay-traces"></a>トレースの再生
 
@@ -28,7 +29,7 @@ ms.locfileid: "75307466"
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] には、ユーザー接続と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証をシミュレートできるマルチスレッド再生エンジンが備わっています。 再生は、アプリケーションまたはプロセスに関する問題のトラブルシューティングを行う際に役立ちます。 問題を特定して修正を実装したら、発生する可能性がある問題を検出したトレースを、修正されたアプリケーションまたはプロセスに対して実行します。 その後、元のトレースを再生し、結果を比較します。  
   
- トレースの再生では、**の**[再生]**メニューの**[ブレークポイントの設定/解除][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] や **[カーソルまで実行]** オプションを使用したデバッグがサポートされます。 これらのオプションでは、長いスクリプトを段階的に分析できるように、トレースの再生を短いセグメントに分割できるので、長いスクリプトの分析が特に強化されます。  
+ トレースの再生では、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の **[再生]** メニューの **[ブレークポイントの設定/解除]** や **[カーソルまで実行]** オプションを使用したデバッグがサポートされます。 これらのオプションでは、長いスクリプトを段階的に分析できるように、トレースの再生を短いセグメントに分割できるので、長いスクリプトの分析が特に強化されます。  
   
  トレースの再生に必要な権限については、「 [SQL Server Profiler の実行に必要な権限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)」を参照してください。  
   

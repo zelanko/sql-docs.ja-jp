@@ -20,12 +20,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2175ae19218592a2742aa1404ffa6620da333846
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921018"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925086"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>復元と復旧の概要 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをエラーから復旧するには、データベース管理者が論理的に正しく意味のある復元シーケンスで一連の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを復元する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の復元および復旧では、次に示すように、データベース全体、データ ファイル、またはデータ ページの各バックアップからのデータの復元をサポートしています。  
@@ -52,13 +52,13 @@ ms.locfileid: "62921018"
   
 -   [単純復旧モデルの復元に関する制限事項](#RMsimpleScenarios)  
   
--   [一括ログ復旧モデルを使用した復元](#RMblogRestore)  
+-   [一括ログ復旧モデルでの復元](#RMblogRestore)  
   
 -   [データベース復旧アドバイザー (SQL Server Management Studio)](#DRA)  
   
 -   [関連コンテンツ](#RelatedContent)  
   
-##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a>復元シナリオの概要  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a> 復元シナリオの概要  
  *の* 復元シナリオ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とは、1 つ以上のバックアップからデータを復元した後にデータベースを復旧するプロセスです。 サポートされている復元シナリオは、データベースの復旧モデルおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによって異なります。  
   
  次の表では、さまざまな復旧モデルでサポートされている復元シナリオについて説明しています。  
@@ -66,11 +66,11 @@ ms.locfileid: "62921018"
 |の|単純復旧モデルの場合|完全/一括ログ復旧モデルの場合|  
 |----------------------|---------------------------------|----------------------------------------------|  
 |データベースの全体復元|基本的な復元ストラテジです。 データベースの全体復元では、データベースの完全バックアップを復元し復旧するだけになる場合があります。 また、データベースの完全バックアップを復元した後で差分バックアップを復元し復旧する場合もあります。<br /><br /> 詳細については、「[データベースの全体復元 &#40;単純復旧モデル&#41;](complete-database-restores-simple-recovery-model.md)」を参照してください。|基本的な復元ストラテジです。 データベースの全体復元を行うには、データベースの完全バックアップと差分バックアップ (存在する場合) を復元し、その後で後続のすべてのログ バックアップを順番に復元する必要があります。差分バックアップの復元は省略できます。 データベースの全体復元を完了するには、最新のログ バックアップを復旧して、さらにそれを復元します (RESTORE WITH RECOVERY)。<br /><br /> 詳細については、「[データベースの全体復元 &#40;完全復旧モデル&#41;](complete-database-restores-full-recovery-model.md)」を参照してください。|  
-|ファイルの復元**\***|データベース全体を復元することなく、破損した 1 つ以上の読み取り専用ファイルを復元します。 ファイル復元は、データベースに読み取り専用のファイル グループが少なくとも 1 つ含まれている場合だけ使用できます。|データベース全体を復元することなく、1 つ以上のファイルを復元します。 ファイル復元は、データベースがオフラインのときに実行できますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによってはオンラインのままでも実行できます。 ファイル復元の間、復元対象のファイルを含むファイル グループは常にオフラインです。|  
+|File restore **\***|データベース全体を復元することなく、破損した 1 つ以上の読み取り専用ファイルを復元します。 ファイル復元は、データベースに読み取り専用のファイル グループが少なくとも 1 つ含まれている場合だけ使用できます。|データベース全体を復元することなく、1 つ以上のファイルを復元します。 ファイル復元は、データベースがオフラインのときに実行できますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによってはオンラインのままでも実行できます。 ファイル復元の間、復元対象のファイルを含むファイル グループは常にオフラインです。|  
 |ページ復元|適用なし|破損した 1 つ以上のページを復元します。 ページ復元は、データベースがオフラインのときに実行できますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによってはオンラインのままでも実行できます。 ページ復元の間、復元対象のページは常にオフラインです。<br /><br /> 現在のログ ファイルまで、ログ バックアップのチェーンが途切れていないことが必要です。ページを現在のログ ファイルまでの最新状態にするためには、それまでのログ バックアップをすべて適用する必要があります。<br /><br /> 詳細については、「[ページ復元 &#40;SQL Server&#41;](restore-pages-sql-server.md)」を参照してください。|  
-|段階的な部分復元**\***|データベースをファイル グループ レベルで段階的に復元および復旧します。プライマリ ファイル グループとすべての読み書き可能セカンダリ ファイル グループの復元から行います。|データベースをファイル グループ レベルでプライマリ ファイル グループから段階的に復元および復旧します。|  
+|段階的な部分復元 **\***|データベースをファイル グループ レベルで段階的に復元および復旧します。プライマリ ファイル グループとすべての読み書き可能セカンダリ ファイル グループの復元から行います。|データベースをファイル グループ レベルでプライマリ ファイル グループから段階的に復元および復旧します。|  
   
- **\*** オンライン復元は、Enterprise edition でのみサポートされています。  
+ **\*** オンライン復元は、Enterprise Edition でのみサポートされます。  
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] では、データの復元方法に関係なく、データベース全体の論理的な一貫性が確保されないと、データベースを復旧できません。 たとえば、ファイルを復元する場合、データベースとの一貫性を維持できるように十分なロールフォワードを行うまでは、ファイルを復旧してオンラインにすることはできません。  
   
@@ -88,13 +88,13 @@ ms.locfileid: "62921018"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |データの復旧|完全な復旧 (ログが使用可能な場合)。|一部データ損失の可能性。|最新の完全バックアップまたは差分バックアップ以降のデータが損失。|  
 |ポイントインタイム リストア|ログ バックアップに含まれる任意の時点。|ログ バックアップに一括ログ記録された変更が含まれている場合は不可。|サポートされていません。|  
-|ファイルの復元**\***|完全にサポートされます。|たまに。**\*\***|読み取り専用セカンダリ ファイルの場合のみ使用可能です。|  
-|ページ復元**\***|完全にサポートされます。|たまに。**\*\***|なし。|  
-|段階的な部分 (ファイルグループレベル) の復元**\***|完全にサポートされます。|たまに。**\*\***|読み取り専用セカンダリ ファイルの場合のみ使用可能です。|  
+|File restore **\***|完全にサポートされます。|場合によりサポートされます。 **\*\***|読み取り専用セカンダリ ファイルの場合のみ使用可能です。|  
+|Page restore **\***|完全にサポートされます。|場合によりサポートされます。 **\*\***|[なし] :|  
+|段階的な (ファイル グループ レベルの) 部分復元 **\***|完全にサポートされます。|場合によりサポートされます。 **\*\***|読み取り専用セカンダリ ファイルの場合のみ使用可能です。|  
   
- **\*** の Enterprise edition でのみ使用できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ **\*** の Enterprise Edition でのみ使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- **\*\*** 必要な条件については、このトピックの「[単純復旧モデルの復元に関する制限事項](#RMsimpleScenarios)」を参照してください。  
+ **\*\*** 必要な条件については、このトピックの「 [単純復旧モデルの復元に関する制限事項](#RMsimpleScenarios)」を参照してください。  
   
 > [!IMPORTANT]  
 >  データベースの復旧モデルにかかわらず、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップは、バックアップを作成したバージョンより古いバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では復元できません。  
@@ -113,7 +113,7 @@ ms.locfileid: "62921018"
 > [!IMPORTANT]  
 >  データベースの復旧モデルにかかわらず、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップは、バックアップを作成したバージョンより古いバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では復元できません。  
   
-##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a>一括ログ復旧モデルでの復元  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a> 一括ログ復旧モデルを使用した復元  
  このセクションでは、一括ログ復旧モデルを使用した復元の考慮事項について説明します。一括ログ復旧モデルは、完全復旧モデルの補完のみを目的としたモデルです。  
   
 > [!NOTE]  
@@ -140,18 +140,18 @@ ms.locfileid: "62921018"
   
  オンライン復元の実行方法の詳細については、「[オンライン復元 &#40;SQL Server&#41;](online-restore-sql-server.md)」を参照してください。  
   
-##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a>データベース復旧アドバイザー (SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> データベース復旧アドバイザー (SQL Server Management Studio)  
  データベース復旧アドバイザーにより、最適な復元シーケンスを実装する復元プランを容易に構築できるようになります。 お客様からご要望のあった、データベース復元に関するさまざまな既知の問題の解決や機能強化が実施されました。 データベース復旧アドバイザーによって導入された主な機能強化は次のとおりです。  
   
--   **復元プラン アルゴリズム:**  特に、複雑な復元シナリオの復元プランの構築に使用されるアルゴリズムが大幅に改善されました。 特定の時点への復元時の分岐シナリオなど、多数のエッジ ケースが以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よりも効率的に処理されます。  
+-   **復元プラン アルゴリズム:** 特に、複雑な復元シナリオの復元プランの構築に使用されるアルゴリズムが大幅に改善されました。 特定の時点への復元時の分岐シナリオなど、多数のエッジ ケースが以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よりも効率的に処理されます。  
   
--   **特定の時点への復元:**  データベース復旧アドバイザーにより、特定の時点へのデータベースの復元が大幅に簡素化されます。 バックアップの視覚的タイムラインにより、特定の時点への復元のサポートが大幅に強化されています。 この視覚的タイムラインにより、データベースを復元する際の目的の復旧ポイントとして適切な時点を特定できます。 タイムラインにより、分岐した復旧パス (複数の復旧分岐にまたがるパス) をたどることが容易になります。 特定の時点への復元プランには、目的の時点 (日時) への復元に関連するバックアップが自動的に含まれます。 詳細については、「[SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
+-   **特定の時点への復元:** データベース復旧アドバイザーにより、特定の時点へのデータベースの復元が大幅に簡素化されます。 バックアップの視覚的タイムラインにより、特定の時点への復元のサポートが大幅に強化されています。 この視覚的タイムラインにより、データベースを復元する際の目的の復旧ポイントとして適切な時点を特定できます。 タイムラインにより、分岐した復旧パス (複数の復旧分岐にまたがるパス) をたどることが容易になります。 特定の時点への復元プランには、目的の時点 (日時) への復元に関連するバックアップが自動的に含まれます。 詳細については、「[SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
   
  データベース復旧アドバイザーの詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manageability の次のブログを参照してください。  
   
--   [Recovery Advisor: An Introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [復旧アドバイザー: 概要](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Recovery Advisor: Using SSMS to create/restore split backups](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [復旧アドバイザー: SSMS を使用して分割バックアップを作成/復元する](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
  [なし] :  

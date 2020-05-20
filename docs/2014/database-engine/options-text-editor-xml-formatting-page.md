@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0d36c5a92dba9f3f92943b65107e7eedb178554
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089851"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000634"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>[オプション] ([テキスト エディター]/[XML]/[書式設定] ページ)
 
@@ -26,7 +26,7 @@ ms.locfileid: "66089851"
   
 ## <a name="attributes"></a>属性  
  **[手動による属性の書式設定を保持する]**  
- 属性の書式設定を変更しません。 これは既定です。  
+ 属性の書式設定を変更しません。 既定値です。  
   
 > [!NOTE]  
 >  属性が複数行にある場合、エディターは属性の各行にインデントを設定して、親要素のインデントに一致させます。  
@@ -48,9 +48,9 @@ ms.locfileid: "66089851"
  **[終了タグの完了時]**  
  終了タグが完了するときに、要素の書式設定を変更します。  
   
-## <a name="mixed-content"></a>[混合コンテンツ]  
+## <a name="mixed-content"></a>混合コンテンツ  
  **[混合したコンテンツを既定でフォーマットする]**  
- コンテンツが `xml:space="preserve"` 範囲内で検出された場合以外は、混合コンテンツの書式設定を変更します。 これは既定です。  
+ コンテンツが `xml:space="preserve"` 範囲内で検出された場合以外は、混合コンテンツの書式設定を変更します。 既定値です。  
   
  要素にテキストとマークアップが混在している場合、コンテンツは混合コンテンツと見なされます。 次に、混合コンテンツを含む要素の例を示します。  
   

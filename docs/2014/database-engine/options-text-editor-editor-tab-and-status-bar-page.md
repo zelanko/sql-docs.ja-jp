@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7a64d8fe198b5660715488b6e1b15d5e4831a99
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089242"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000722"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>オプション ([テキスト エディター]: [エディターのタブとステータス バー] ページ)
   **[エディターのタブとステータス バー]** ページでは、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] クエリ エディターによって表示される情報をカスタマイズできます。 クエリ エディター ウィンドウのタブおよびステータス バーに表示される情報のレベル、およびステータス バーをエディター ウィンドウの上部と下部のどちらに表示するかを指定することができます。  
@@ -34,7 +34,7 @@ ms.locfileid: "66089242"
  **[実行時間を表示する]**  
  スクリプトの実行時間を含めます。 設定は次のとおりです。  
   
- **なし**  
+ **None**  
  ステータス バーには時間の情報が表示されません。  
   
  **終わり**  
@@ -67,10 +67,10 @@ ms.locfileid: "66089242"
  **[ステータス バーの位置]**  
  ステータス バーの位置を指定します。 設定は次のとおりです。  
   
- **ページのトップへ**  
+ **上**  
  ステータス バーは、クエリ エディター ウィンドウの上部に表示されます。  
   
- **最終**  
+ **下**  
  ステータス バーは、クエリ エディター ウィンドウの下部に表示されます。  
   
 ## <a name="tab-text"></a>タブのテキスト  

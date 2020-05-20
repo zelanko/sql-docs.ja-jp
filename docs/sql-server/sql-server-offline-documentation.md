@@ -1,5 +1,5 @@
 ---
-title: 以前のバージョンの SQL Server ドキュメントをオフラインでインストールする
+title: SQL Server ドキュメントをインストールしてオフラインで表示する
 description: SQL Server 2019、2017、2016、2014、および 2012 のオフライン ドキュメントをインストールする方法について説明します。 オフライン コンテンツを表示するには、SQL Server Management Studio (SSMS) を使用します。
 ms.prod: sql
 ms.technology: install
@@ -8,15 +8,15 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
-ms.date: 05/05/2020
-ms.openlocfilehash: d505a8435dc222e1ef9c76539e5a7b37e891778e
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.date: 05/08/2020
+ms.openlocfilehash: 5ca11e672e91b8d2b8801838c40057d6b2c8fbfd
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849727"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151544"
 ---
-# <a name="install-previous-versions-of-sql-server-documentation-to-view-offline-in-ssms"></a>SSMS で以前のバージョンの SQL Server ドキュメントをインストールしてオフラインで表示する
+# <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>SQL Server ドキュメントをインストールし、オフラインで SSMS に表示する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -97,6 +97,9 @@ ms.locfileid: "82849727"
 
    ![自動的に更新された SQL Server 2014 ブック](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
 
+> [!Tip]
+> SQL 2014 Transact-SQL コンテンツは、オフラインでのみ利用できます。
+
 ## <a name="sql-server-2012-offline-content"></a>SQL Server 2012 オフライン コンテンツ
 
 次の手順では、SQL Server 2012 のオフライン コンテンツを読み込む方法について説明しています。
@@ -167,7 +170,7 @@ SQL Server のヘルプ コンテンツは、最新バージョンの [SQL Serve
 
 アーカイブされたコンテンツとヘルプ ビューアーの詳細については、以下のリンクを参照してください。
 
-- [以前のバージョンの SQL Server ドキュメントへの直接リンク](https://docs.microsoft.com/previous-versions/sql/)
-- [Microsoft ヘルプ ビューアー - Visual Studio](https://docs.microsoft.com/visualstudio/help-viewer/overview)
-- [SQL Server ドキュメント、スタート](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server のドキュメント](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server 2014 のドキュメント](../2014/database-engine/install-windows/installation-for-sql-server.md)
+- [SQL Server の以前のバージョンに関するドキュメント](https://docs.microsoft.com/previous-versions/sql/)
 - [SQL ドキュメントのバージョン管理システム](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

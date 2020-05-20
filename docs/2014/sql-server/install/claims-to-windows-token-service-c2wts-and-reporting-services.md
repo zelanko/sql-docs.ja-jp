@@ -15,21 +15,21 @@ ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0ec82b7cca2062e1ed918e300eeb76dad16cbb20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc6636946f7c94992fc831f814df57baf6397a1f
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245619"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922150"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) と Reporting Services
-  Sharepoint ファームの外部にあるデータソースに対して windows 認証[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を使用する場合、sharepoint モードでは、Windows トークンサービスに対する sharepoint クレーム (c2WTS) が必要です。 これは、Web フロントエンド (WFE) と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共有サービス間の通信が常に要求認証になるため、ユーザーが Windows 認証を使用してデータ ソースにアクセスする場合にも当てはまります。  
+  Sharepoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ファームの外部にあるデータソースに対して windows 認証を使用する場合、sharepoint モードでは、Windows トークンサービスに対する Sharepoint クレーム (c2WTS) が必要です。 これは、Web フロントエンド (WFE) と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共有サービス間の通信が常に要求認証になるため、ユーザーが Windows 認証を使用してデータ ソースにアクセスする場合にも当てはまります。  
   
  c2WTS は、データ ソースが共有サービスと同じコンピューター上にある場合でも必要です。 ただし、このシナリオでは、制約付き委任は必要ありません。  
   
  c2WTS によって作成されたトークンは、制約付き委任 (特定のサービスへの制約) と "認証プロトコルの使用" 構成オプションでのみ機能します。 既に述べたとおり、データ ソースが共有サービスと同じコンピューター上にある場合は、制約付き委任は必要ありません。  
   
- Kerberos の制約付き委任を使用する環境では、SharePoint Server サービスと外部データ ソースが同じ Windows ドメインに属している必要があります。 Claims to Windows Token Service (c2WTS) に依存する任意のサービスでは、Kerberos の **制約付き** 委任を使用して、c2WTS が Kerberos プロトコル遷移を使用して要求を Windows 資格情報に変換できるようにする必要があります。 これらの要件は、すべての SharePoint 共有サービスに共通です。 詳細については、「 [Microsoft SharePoint 2010 製品の Kerberos 認証のhttps://technet.microsoft.com/library/gg502594.aspx)概要」 (](https://technet.microsoft.com/library/gg502594.aspx)を参照してください。  
+ Kerberos の制約付き委任を使用する環境では、SharePoint Server サービスと外部データ ソースが同じ Windows ドメインに属している必要があります。 Claims to Windows Token Service (c2WTS) に依存する任意のサービスでは、Kerberos の **制約付き** 委任を使用して、c2WTS が Kerberos プロトコル遷移を使用して要求を Windows 資格情報に変換できるようにする必要があります。 これらの要件は、すべての SharePoint 共有サービスに共通です。 詳細については、「 [Microsoft SharePoint 2010 製品の Kerberos 認証の https://technet.microsoft.com/library/gg502594.aspx) 概要」 (](https://technet.microsoft.com/library/gg502594.aspx)を参照してください。  
   
  このトピックでは、手順をまとめています。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75245619"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** Sharepoint 2013 &#124; sharepoint 2010|  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
   
 > [!NOTE]  
 >  注: 構成手順によっては、変更されたり、特定のファーム トポロジで機能しない場合があります。 たとえば、シングル サーバー インストールでは Windows Identity Foundation c2WTS サービスをサポートしていないため、Windows トークンに対するクレームの委任シナリオは、このファーム構成では可能でありません。  
@@ -65,7 +65,7 @@ ms.locfileid: "75245619"
   
         -   [任意の認証プロトコルを使用する] を選択します。  
   
-         詳細については、ホワイトペーパー「 [SharePoint 2010 および SQL Server 2008 R2 製品の kerberos 認証の構成](https://blogs.technet.com/b/tothesharepoint/archive/2010/07/22/whitepaper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products.aspx)」の「コンピューターとサービスアカウント用に kerberos の制約付き委任を構成する」セクションを参照してください。  
+         詳細については、ホワイトペーパー「 [SharePoint 2010 および SQL Server 2008 R2 製品の kerberos 認証の構成](https://docs.microsoft.com/archive/blogs/tothesharepoint/white-paper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products)」の「コンピューターとサービスアカウント用に kerberos の制約付き委任を構成する」セクションを参照してください。  
   
 2.  C2WTS ' AllowedCallers 元 ' を構成します  
   

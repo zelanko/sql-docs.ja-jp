@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.searchpropertylisteditor.f1
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97061590525a7e644319d7c8ff407d4905e59418
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773670"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000552"
 ---
 # <a name="search-property-list-editor"></a>検索プロパティ リスト エディター
   このダイアログ ボックスを使用すると、検索プロパティ リストの検索プロパティを追加または削除できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "62773670"
  **プロパティの説明**  
  必要に応じてプロパティの説明を指定します。 これは最大 512 文字までの文字列です。 説明には、たとえばプロパティのプロパティ セットに関する情報、または名前からはその内容がわかりにくいプロパティに関する情報などが含まれる場合があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  検索プロパティ リストに検索プロパティを追加するには、プロパティが属するプロパティ セットのグローバル一意識別子 (GUID) とプロパティのプロパティ整数識別子を指定する必要があります。 これらの識別子の組み合わせが、検索プロパティ リスト内で一意である必要があります。 既存の組み合わせを追加しようとすると、操作が失敗しエラーが発生します。 つまり、1 つの名前は 1 つのプロパティに対してのみ構成できます。  
   
  このプロパティの説明は省略できます。  

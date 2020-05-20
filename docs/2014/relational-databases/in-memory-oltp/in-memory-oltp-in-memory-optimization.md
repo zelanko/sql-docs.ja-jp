@@ -10,15 +10,15 @@ helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 530e620be1a1c0f9d457eb23712c5228a3883d45
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 418cdbb85781cd99d3febc2371ed69751d29f588
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175931"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922100"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>インメモリ OLTP (インメモリ最適化)
 
@@ -26,7 +26,7 @@ ms.locfileid: "78175931"
 
 |||
 |-|-|
-|![Azure Virtual Machine](../../master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|SQL Server 2016 をお試しになりますか? Microsoft Azure にサインアップし、 **[ここ](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** に移動して、SQL Server 2016 がインストール済みの仮想マシンを起動します。 完了したら、仮想マシンを削除することができます。|
+|![Azure Virtual Machine](../../master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|SQL Server 2016 をお試しになりますか? Microsoft Azure にサインアップし、 **[ここ](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** に移動して、SQL Server 2016 がインストール済みの仮想マシンを起動します。 完了したら、仮想マシンを削除することができます。|
 
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]を使用するには、頻繁にアクセスされるテーブルをメモリ最適化として定義します。 メモリ最適化テーブルは完全にトランザクション型であり、持続性があり、ディスク ベース テーブルと同じ方法で [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用してアクセスされます。 クエリでは、メモリ最適化テーブルとディスク ベース テーブルの両方を参照できます。 トランザクションでは、メモリ最適化テーブルおよびディスク ベース テーブル内のデータを更新できます。 メモリ最適化テーブルのみを参照するストアド プロシージャは、パフォーマンスをさらに向上させるために、マシン語コードにネイティブ コンパイルできます。 ph x="1" /&gt; エンジンは、高度にスケールアウトされた中間層によって、OLTP タイプのトランザクションで発生する、非常に高いセッションコンカレンシーに対応するように設計されています。 このことを実現するために、ラッチ フリー データ構造と複数のバージョンから成るオプティミスティック コンカレンシーが使用されます。 結果は、予測可能なミリ秒未満の低待機時間と、データベース トランザクションの線形スケールによる高いスループットです。 実際にパフォーマンスがどの程度向上するかは多くの要因によって異なりますが、一般的にはパフォーマンスが 5 ～ 20 倍向上します。
 
@@ -40,7 +40,7 @@ ms.locfileid: "78175931"
 |低待機時間|通常のデータベース ソリューションでは実現できない待機時間の短いビジネス トランザクションが必要|競合の排除<br /><br /> コードの実行時間の最小化<br /><br /> 待機時間の短いコード実行<br /><br /> 効率的なデータの取得|
 |セッション状態管理|頻繁な挿入、更新、およびポイント参照<br /><br /> 多数のステートレス Web サーバーからの高い負荷|競合の排除<br /><br /> 効率的なデータの取得<br /><br /> 持続性のないテーブルを使用する場合のオプションの IO 削減または削除|
 
- によってパフォーマンスが最大[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]に向上するシナリオの詳細については、「[インメモリ OLTP-一般的なワークロードパターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)」を参照してください。
+ によってパフォーマンスが最大に向上するシナリオの詳細については [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 、「[インメモリ OLTP-一般的なワークロードパターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)」を参照してください。
 
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] によって、特にトランザクションの実行時間が短い OLTP のパフォーマンスが向上します。
 
@@ -87,7 +87,7 @@ ms.locfileid: "78175931"
 
 -   [Microsoft?SQL Server。。2014製品ガイド](https://www.microsoft.com/download/confirmation.aspx?id=39269)
 
--   [インメモリ OLTP ブログ](https://go.microsoft.com/fwlink/?LinkId=311696)
+-   [インメモリ OLTP ブログ](https://cloudblogs.microsoft.com/sqlserver/2013/06/26/sql-server-2014-in-memory-technologies-blog-series-introduction/)
 
 -   [インメモリ OLTP-一般的なワークロードパターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)
 

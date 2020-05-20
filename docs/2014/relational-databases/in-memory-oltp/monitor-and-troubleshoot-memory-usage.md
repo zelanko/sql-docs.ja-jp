@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 968d1bb6ce5eee2d25860353586d14f31dc67807
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f770ea7ed5257cdca5def868b1bdfa8359af79a
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175913"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925096"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>メモリ使用量の監視とトラブルシューティング
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] は、ディスク ベース テーブルとは異なるパターンでメモリを消費します。 メモリおよびガベージ コレクション サブシステムに提供される DMV またはパフォーマンス カウンターを使用して、データベース内のメモリ最適化テーブルとインデックス向けに割り当てられて使用されているメモリの量を監視できます。  これによって、システム レベルとデータベース レベルの両方で状況を表示でき、メモリの枯渇による問題を回避できます。
@@ -113,7 +113,7 @@ ms.locfileid: "78175913"
 ##  <a name="monitoring-memory-usage"></a>メモリ使用率の監視
 
 ###  <a name="using-ssmanstudiofull"></a>[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用する
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] には、インメモリ テーブルによって消費されるメモリを監視するための標準レポートが組み込まれています。 これらのレポートには、 [ここ](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)で説明しているようにオブジェクト エクスプローラーを使用してアクセスできます。 オブジェクト エクスプローラーを使用すると、個々のメモリ最適化テーブルで消費されるメモリも監視できます。
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] には、インメモリ テーブルによって消費されるメモリを監視するための標準レポートが組み込まれています。 これらのレポートには、オブジェクト エクスプローラーを使用してアクセスできます。 オブジェクト エクスプローラーを使用すると、個々のメモリ最適化テーブルで消費されるメモリも監視できます。
 
 #### <a name="consumption-at-the-database-level"></a>データベース レベルでの消費量
  次のように、データベース レベルでのメモリ使用を監視できます。
@@ -122,7 +122,7 @@ ms.locfileid: "78175913"
 
 2.  オブジェクト エクスプローラーで、レポートが必要なデータベースを右クリックします。
 
-3.  コンテキストメニューで、[**レポート** -> ] [**標準レポート** -> ] [**メモリ最適化オブジェクトによるメモリ使用量**] の順に選択します。
+3.  コンテキストメニューで、[**レポート**] [  ->  **標準レポート**] [  ->  **メモリ最適化オブジェクトによるメモリ使用量**] の順に選択します。
 
  ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")
 

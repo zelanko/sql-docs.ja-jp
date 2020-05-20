@@ -12,15 +12,15 @@ helpviewer_keywords:
 - breaking changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a223060768c35b2daf00837153e59218ff1c50e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787760"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001022"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>フルテキスト検索の重大な変更
   このトピックでは、フルテキスト検索の重要な変更について説明します。 これらの変更によって、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に基づくアプリケーション、スクリプト、または機能が使用できなくなる場合があります。 この問題は、アップグレードするときに発生することがあります。 詳細については、「 [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)」を参照してください。  
@@ -36,10 +36,10 @@ ms.locfileid: "62787760"
 ## <a name="breaking-changes-in-full-text-search-in-sql-server-2008"></a>SQL Server 2008 におけるフルテキスト検索の重大な変更  
  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] と [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 以降のバージョン間のフルテキスト検索に、次の重大な変更が適用されています。  
   
-|機能|シナリオ|SQL Server 2005|SQL Server 2008 以降のバージョン|  
+|特徴|シナリオ|SQL Server 2005|SQL Server 2008 以降のバージョン|  
 |-------------|--------------|---------------------|----------------------------------------|  
 |ユーザー定義型 (Udt) を使用した[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|フルテキスト キーが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーザー定義型である (たとえば、`MyType = char(1)`)。|ユーザー定義型に割り当てられた型のキーが返されます。<br /><br /> この例では、 **char (1)** です。|ユーザー定義型のキーが返されます。 この例では、 **MyType**になります。|  
-|*top_n_by_rank*パラメーター (CONTAINSTABLE ステートメントと[FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)]ステートメント)|パラメーターとして0を使用してクエリを*top_n_by_rank*します。|ゼロより大きな値を使用するよう通知するエラー メッセージが表示されて処理が失敗します。|処理が成功し、ゼロ行を返します。|  
+|*top_n_by_rank*パラメーター (CONTAINSTABLE ステートメントと[FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント)|パラメーターとして0を使用してクエリを*top_n_by_rank*します。|ゼロより大きな値を使用するよう通知するエラー メッセージが表示されて処理が失敗します。|処理が成功し、ゼロ行を返します。|  
 |CONTAINSTABLE と**ItemCount**|MSSearch に変更を適用する前に、ベース テーブルから行を削除する。|CONTAINSTABLE からゴースト レコードが返されます。 **ItemCount**は変更されません。|CONTAINSTABLE からゴースト レコードが返されません。|  
 |**ItemCount**|テーブルに null のドキュメントまたは null 型の列が含まれている。|インデックス付きドキュメントに加えて、null または null 型のドキュメントは、 **ItemCount**値でカウントされます。|**ItemCount**値でカウントされるのは、インデックス付きドキュメントだけです。|  
 |カタログ**ItemCount**|NULL 拡張機能を持つ BLOB 列。|**ItemCount**のカタログにカウントされます。|カタログの**ItemCount**にはカウントされません。|  
@@ -50,7 +50,7 @@ ms.locfileid: "62787760"
 |[sp_fulltext_database](/sql/relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql)|sp_fulltext_database を使用してフルテキスト検索を有効または無効にする。|フルテキスト クエリには結果が返されません。 データベースでフルテキストが無効になっている場合は、フルテキスト操作を実行できません。|データベースでフルテキストが無効になっていても、フルテキスト クエリに結果が返され、フルテキスト操作も実行できます。|  
 |ロケール固有のストップ ワード|ベルギーフランス語やカナダフランス語など、親言語のロケール固有のバリアントをクエリします。|ロケール固有のバリアント内のクエリは、その親言語のコンポーネント (ワードブレーカー、ステミング機能、およびストップワード) によって処理されます。 たとえば、フランス語 (ベルギー) の解析にはフランス語 (フランス) のコンポーネントが使用されます。|ロケール識別子 (LCID) ごとにストップ ワードを明示的に追加する必要があります。 たとえば、ベルギー、カナダ、フランスの LCID を指定する必要があります。|  
 |類義語辞典のステミング処理|類義語辞典と変化形 (ステミング) を使用する。|類義語辞典は、その展開後に自動的にステミングされます。|展開でステミング形式が必要な場合は、ステミング形式を明示的に追加する必要があります。|  
-|フルテキスト カタログのパスとファイル グループ|フルテキスト カタログを使用する。|フルテキスト カタログは、それぞれに物理パスを持ち、ファイル グループに属します。 これらは、データベース ファイルとして扱われます。|フルテキスト カタログは仮想オブジェクトであり、ファイル グループには属しません。 フルテキスト カタログは、フルテキスト インデックスのグループを指す論理的概念です。<br /><br /> 注: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)]フルテキストカタログを指定する DDL ステートメントは正常に動作します。|  
+|フルテキスト カタログのパスとファイル グループ|フルテキスト カタログを使用する。|フルテキスト カタログは、それぞれに物理パスを持ち、ファイル グループに属します。 これらは、データベース ファイルとして扱われます。|フルテキスト カタログは仮想オブジェクトであり、ファイル グループには属しません。 フルテキスト カタログは、フルテキスト インデックスのグループを指す論理的概念です。<br /><br /> 注: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] フルテキストカタログを指定する DDL ステートメントは正常に動作します。|  
 |[sys.fulltext_catalogs](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql)|このカタログ ビューの path、data_space_id、および file_id を使用する。|これらの列から特定の値が返されます。|これらの列から NULL が返されます。これは、フルテキスト カタログがファイル システムに配置されなくなったためです。|  
 |[sys.sysfulltextcatalogs](/sql/relational-databases/system-compatibility-views/sys-sysfulltextcatalogs-transact-sql)|この非推奨システム テーブルの path 列を使用する。|フルテキスト カタログのファイル システム パスが返されます。|NULL が返されます。これは、フルテキスト カタログがファイル システムに配置されなくなったためです。|  
 |[sp_help_fulltext_catalogs](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql)<br /><br /> [sp_help_fulltext_catalogs_cursor](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql)|これらの非推奨ストアド プロシージャの PATH 列を使用する。|フルテキスト カタログのファイル システム パスが返されます。|NULL が返されます。これは、フルテキスト カタログがファイル システムに配置されなくなったためです。|  

@@ -13,12 +13,12 @@ ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 583af6e77d699c88e7712ac03053467138bd5a5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 021e37ee7efb8d525cdbc16d2f7b1111045ea7a6
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177352"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925046"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散再生機能を使用すると、将来の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のアップグレードによる影響を評価できます。 また、ハードウェアとオペレーティング システムのアップグレード、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のチューニングの影響を評価する場合にも使用できます。
@@ -47,7 +47,7 @@ ms.locfileid: "78177352"
 ## <a name="distributed-replay-concepts"></a>Distributed Replay の概念
  Distributed Replay 環境は次のコンポーネントで構成されます。
 
--   **分散再生管理ツール**: 分散再生コントローラーと`DReplay.exe`の通信に使用されるコンソールアプリケーション。 Distributed Replay を制御するには管理ツールを使用します。
+-   **分散再生管理ツール**: `DReplay.exe` 分散再生コントローラーとの通信に使用されるコンソールアプリケーション。 Distributed Replay を制御するには管理ツールを使用します。
 
 -   **Distributed Replay Controller**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Controller という名前の Windows サービスを実行するコンピューター。 分散再生コントローラーは、分散再生クライアントのアクションを統制します。 各分散再生環境には、コントローラーのインスタンスを 1 つだけ置くことができます。
 
@@ -72,6 +72,6 @@ ms.locfileid: "78177352"
 |管理ツールを使用して、コントローラー上の操作を開始、監視、取り消す方法について説明します。|[管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|
 
 ## <a name="see-also"></a>参照
- [SQL Server 分散再生を使用して](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)[分散再生フォーラムを SQL Server](https://social.technet.microsoft.com/Forums/sl/sqldru/)して、分散再生[を使用して SQL Server をロードテストし、をロードテストします。第1部](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)
+ [SQL Server 分散再生を使用して](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)[分散再生フォーラムを SQL Server](https://social.technet.microsoft.com/Forums/sl/sqldru/)して、分散再生[を使用して SQL Server をロードテストし、をロードテストします。第1部](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)
 
 

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalog.general.f1
 ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52eb88fa2607068f01f41be9d14d828c0a04e1e3
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62844100"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000849"
 ---
 # <a name="new-full-text-catalog-general-page"></a>[新しいフルテキスト カタログ] ([全般] ページ)
   新しいフルテキスト カタログを作成するには、このダイアログ ボックスを使用します。  
@@ -38,7 +38,7 @@ ms.locfileid: "62844100"
  このカタログを新しいフルテキスト カタログの既定のカタログに設定する場合にオンにします。  
   
  **[アクセントの区別]**  
- 大文字と小文字が区別されるかどうかを示します (チルダ**~**()、アキュートアクセントマーク (**́**)、ウムラウト (**ィ**) など)。 **[区別しない]** を選択した場合、このフルテキスト カタログに関連付けられているフルテキスト インデックスで分音記号は無視されます。 分音記号の詳細については、「web サイト」の「分[音記号](https://www.merriam-webster.com/dictionary/diacritic)」を参照してください。  
+ 大文字と小文字が区別されるかどうかを示します (チルダ ( **~** )、アキュートアクセントマーク (**́**)、ウムラウト (**ィ**) など)。 **[区別しない]** を選択した場合、このフルテキスト カタログに関連付けられているフルテキスト インデックスで分音記号は無視されます。 分音記号の詳細については、「web サイト」の「分[音記号](https://www.merriam-webster.com/dictionary/diacritic)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

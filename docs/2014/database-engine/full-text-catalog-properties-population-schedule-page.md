@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.schedule.f1
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e8ac94f235e08f2217edb9504722ebac998cb28
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778824"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000934"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>[フルテキスト カタログのプロパティ] ([作成スケジュール] ページ)
   このダイアログ ボックスを使用すると、フルテキスト カタログをいつ作成または再作成するかを決定するスケジュールを追加または変更できます。  
@@ -37,7 +37,7 @@ ms.locfileid: "62778824"
  **説明**  
  スケジュールされている操作の説明です。  
   
- **新しい**  
+ **新規**  
  新しいインデックス作成スケジュールを作成するには、このボタンをクリックします。 このボタンをクリックすると、 **[新しいフルテキスト インデックス カタログのスケジュール]** ダイアログ ボックスが表示されます。  
   
  **[編集]**  

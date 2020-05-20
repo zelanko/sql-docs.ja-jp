@@ -11,15 +11,15 @@ f1_keywords:
 dev_langs:
 - TSQL
 ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cc649ee021012774a0f199b97ea3cbf6bae4adef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 761c84612c207397e33ae96dfcfb088b05bc24b8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089135"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000667"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>[オプション] ([テキストエディター]/[Transact-sql]/[タブ] ページ)
   このダイアログ ボックスを使用すると、[!INCLUDE[ssDE](../includes/ssde-md.md)] スクリプトのプログラミングに使用される[!INCLUDE[tsql](../includes/tsql-md.md)] クエリ エディターのタブの動作を変更できます。 この設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックして、**[テキスト エディター]** フォルダーを展開し、さらに **[Transact-SQL]** サブフォルダーを展開して、**[タブ]** をクリックします。  
@@ -28,10 +28,10 @@ ms.locfileid: "66089135"
  [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターのオプションは、**[すべての言語] の [タブ]** ダイアログで設定することもできます。 ただし、DMX エディターや MDX エディターなど、他の **エディターに対し、** [すべての言語] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のダイアログを使用して異なるオプションを設定する場合は、ここで紹介したダイアログを使用して [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターのオプションを設定し直す必要があります。  
   
 ## <a name="indenting"></a>インデント  
- **なし**  
+ **None**  
  このオプションが選択されている場合、Enter キーを押したときに作成される新しい行は、インデントされません。 カーソルは、新しい行の 1 列目に置かれます。  
   
- **帯**  
+ **ブロック**  
  このオプションが選択されている場合、Enter キーを押したときに作成される新しい行は、直前の行と同じ位置まで自動的にインデントされます。  
   
  **[スマート]**  
@@ -45,7 +45,7 @@ ms.locfileid: "66089135"
  自動インデントのサイズをスペース数で設定します。 既定値は、スペースが 4 つです。 指定されたサイズになるように、タブ文字、スペース文字、またはその両方が挿入されます。  
   
  **[空白の挿入]**  
- このオプションを選択すると、タブ文字を使用せずにスペース文字だけを挿入してインデントします。 たとえば、[**インデントサイズ**] が5に設定されている場合、tab キーを押すか、メイン[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ウィンドウのツールバーの [**インデント**] ボタンをクリックするたびに、5つのスペース文字が挿入されます。  
+ このオプションを選択すると、タブ文字を使用せずにスペース文字だけを挿入してインデントします。 たとえば、[**インデントサイズ**] が5に設定されている場合、tab キーを押すか、メインウィンドウのツールバーの [**インデント**] ボタンをクリックするたびに、5つのスペース文字が挿入され [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ます。  
   
  **[タブの保持]**  
  このオプションを選択すると、インデントするときにできる限り多くのタブ文字を挿入します。 それぞれのタブ文字が、[ **タブ サイズ**] で指定された数のスペースを満たします。 [ **インデント サイズ** ] が [ **タブ サイズ**] の倍数でない場合は、その差を埋めるためにスペース文字が追加されます。  

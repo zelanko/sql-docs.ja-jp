@@ -1,5 +1,6 @@
 ---
 title: Server の Name 要素 (DTA)
+description: dta ユーティリティでは、Server の Name 要素に、チューニングするデータベースが置かれているサーバーの名前が含まれます。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: b678397b9af9aac55dff61181cd449e119e84d1e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4efa5cd3285a9247c9319db789e4c17d66cacb29
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307971"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151227"
 ---
 # <a name="name-element-for-server-dta"></a>Server の Name 要素 (DTA)
 

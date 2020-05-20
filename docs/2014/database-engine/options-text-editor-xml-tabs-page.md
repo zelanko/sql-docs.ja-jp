@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Tabs
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ae595b42274e012032e79754650b573b5d80053b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 01721e60e2f70462d606586225ab98329dad7daa
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089128"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000608"
 ---
 # <a name="options-text-editorxmltabs-page"></a>[オプション] ([テキスト エディター]: [XML]: [タブ] ページ)
   このダイアログ ボックスを使用すると、XML ドキュメントの編集に使用される XML エディターのタブの動作を変更できます。 この設定を表示するには、[ **ツール** ] メニューの [ **オプション** ] をクリックして、[ **テキスト エディター** ] フォルダーを展開し、さらに [ **XML** ] サブフォルダーを展開して、[ **タブ**] をクリックします。  
@@ -26,10 +26,10 @@ ms.locfileid: "66089128"
  XML エディターのオプションは、[すべての言語] の [全般] **** ダイアログで設定することもできます。 ただし、DMX エディターや MDX エディターなど、他の **エディターに対し、** [すべての言語] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のダイアログを使用して異なるオプションを設定する場合は、ここで紹介したダイアログを使用して XML エディターのオプションを設定し直す必要があります。  
   
 ## <a name="indenting"></a>インデント  
- **なし**  
+ **None**  
  このオプションが選択されている場合、Enter キーを押したときに作成される新しい行は、インデントされません。 カーソルは、新しい行の 1 列目に置かれます。  
   
- **帯**  
+ **ブロック**  
  このオプションが選択されている場合、Enter キーを押したときに作成される新しい行は、直前の行と同じ位置まで自動的にインデントされます。  
   
  **[スマート]**  
@@ -43,7 +43,7 @@ ms.locfileid: "66089128"
  自動インデントのサイズをスペース数で設定します。 既定値は、スペースが 4 つです。 指定されたサイズになるように、タブ文字、スペース文字、またはその両方が挿入されます。  
   
  **[空白の挿入]**  
- このオプションを選択すると、タブ文字を使用せずにスペース文字だけを挿入してインデントします。 たとえば、[**インデントサイズ**] が5に設定されている場合、tab キーを押すか、メイン[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ウィンドウのツールバーの [**インデント**] ボタンをクリックするたびに、5つのスペース文字が挿入されます。  
+ このオプションを選択すると、タブ文字を使用せずにスペース文字だけを挿入してインデントします。 たとえば、[**インデントサイズ**] が5に設定されている場合、tab キーを押すか、メインウィンドウのツールバーの [**インデント**] ボタンをクリックするたびに、5つのスペース文字が挿入され [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ます。  
   
  **[タブの保持]**  
  このオプションを選択すると、インデントするときにできる限り多くのタブ文字を挿入します。 それぞれのタブ文字が、[ **タブ サイズ**] で指定された数のスペースを満たします。 [ **インデント サイズ** ] が [ **タブ サイズ**] の倍数でない場合は、その差を埋めるためにスペース文字が追加されます。  
