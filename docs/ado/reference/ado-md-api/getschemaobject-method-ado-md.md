@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetSchemaObject method [ADO MD]
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 690c81a46c62c8844780e82b5c82a0ff7301105d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a8853e967a75a67aadccc7e48d684ab92819a71d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949760"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764213"
 ---
 # <a name="getschemaobject-method-ado-md"></a>GetSchemaObject メソッド (ADO MD)
 [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)によって ADO MD スキーマオブジェクト ([ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)、または[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)) を取得します。  

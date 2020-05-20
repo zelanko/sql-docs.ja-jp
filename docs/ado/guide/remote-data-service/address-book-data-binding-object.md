@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 71b1897830c4a5382e6903f5e05aa29d1ce37d1b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922972"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764733"
 ---
 # <a name="address-book-data-binding-object"></a>アドレス帳のデータ バインディング オブジェクト
 アドレス帳アプリケーションは、RDS を使用し[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)データベースの SQL Server データを、アプリケーションのクライアント HTML ページ内のビジュアルオブジェクト (この場合は DHTML テーブル) にバインドするオブジェクト。 イベントドリブンの VBScript プログラムロジックは、RDS を使用し[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) :  
@@ -60,7 +60,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|HTTP を使用している場合、値は、の前に`https://`あるサーバーコンピューターの名前になります。|  
+|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|HTTP を使用している場合、値は、の前にあるサーバーコンピューターの名前になり `https://` ます。|  
 |[関連付け](../../../ado/reference/rds-api/connect-property-rds.md)|RDS に必要な接続情報を提供し**ます。** SQL Server に接続するための DataControl。|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を取得するために使用するクエリ文字列を設定または返します。|  
   

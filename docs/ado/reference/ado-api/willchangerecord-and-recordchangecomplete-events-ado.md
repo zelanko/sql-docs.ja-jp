@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WillChangeRecord event [ADO]
 - recordchangecomplete event [ADO]
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6e632db34fbbacbee61cd943067052af27a8cfe8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c34aa614b7e152f21479e09a16fd2ed9d22febfc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938672"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764483"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord および RecordChangeComplete イベント (ADO)
 この**イベントは、** [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の1つ以上のレコード (行) が変更される前に呼び出されます。 **RecordChangeComplete**イベントは、1つ以上のレコードが変更された後に呼び出されます。  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - MoveComplete event [ADO]
 - WillMove event [ADO]
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c91f3166b493ac1e2fada3e759cb107e34c7ca81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a714b0c8f6d41060dfe66e898f01d7ce1037e516
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67945913"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764443"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove および MoveComplete イベント (ADO)
 "イベントの**移動**" は、保留中の操作が[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在の位置を変更する前に呼び出されます。 **MoveComplete**イベントは、**レコードセット**内の現在の位置が変更された後に呼び出されます。  

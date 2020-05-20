@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ADO MD, methods
 - methods [ADO MD]
 ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9aa722813994ec950516c513c7e0e673b83b0c73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 44cdaf1ea526a85816ddee18157a4a11052fa040
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67939985"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765223"
 ---
 # <a name="ado-md-methods"></a>ADO MD のメソッド
 
 |||  
 |-|-|  
-|[閉じる](../../../ado/reference/ado-md-api/close-method-ado-md.md)|開いているセルセットを閉じます。|  
+|[[閉じる]](../../../ado/reference/ado-md-api/close-method-ado-md.md)|開いているセルセットを閉じます。|  
 |[GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)|一意の名前で ADO MD スキーマオブジェクト (ディメンション、階層、レベル、またはメンバー) を取得します。|  
 |[開く](../../../ado/reference/ado-md-api/open-method-ado-md.md)|多次元クエリの結果を取得し、結果をセルセットに返します。|  
   

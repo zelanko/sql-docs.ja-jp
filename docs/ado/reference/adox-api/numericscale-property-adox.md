@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - NumericScale property [ADOX]
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16fdefcb06d2b1b90dfc3da39aaf6b1c9659debc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a0a0090a24207e6faad1b14aa3cb5afd6091bc87
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965748"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763813"
 ---
 # <a name="numericscale-property-adox"></a>NumericScale プロパティ (ADOX)
 列の数値の小数点以下桁数を示します。  
@@ -32,7 +32,7 @@ ms.locfileid: "67965748"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [Type](../../../ado/reference/adox-api/type-property-column-adox.md)プロパティが**Adnumeric**または**adDecimal**の場合に、列のデータ値の小数点以下桁数を示す**バイト**値を設定して返します。 他のすべてのデータ型では、 **Numericscale**は無視されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  既定値は 0 です。  
   
  既にコレクションに追加されている[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトの**numericscale**は読み取り専用です。  

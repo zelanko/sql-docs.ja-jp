@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Ordinal property [ADO MD]
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 194b72ce66eb2efdc3a246f24948b01c790f7b8e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b0563912d49ba6baff085fd83be88693e8f8ba1f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949376"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765073"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Ordinal プロパティ (ADO MD セル)
 セルセット内の位置によって[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)を一意に識別します。  

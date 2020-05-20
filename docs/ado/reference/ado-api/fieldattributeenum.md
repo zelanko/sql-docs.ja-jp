@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - FieldAttributeEnum enumeration [ADO]
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d375ed3dd4ea7ae7e2e5405d1feec962c5f56ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ca14531410942a77add7c6c99756b64bf99e785c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918701"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764523"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 [Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの1つまたは複数の属性を指定します。  
   
-|Constant|[値]|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|プロバイダーがフィールド値をキャッシュし、それ以降の読み取りがキャッシュから実行されることを示します。|  
 |**adFldFixed**|0x10|フィールドに固定長のデータが含まれていることを示します。|  
@@ -48,7 +48,7 @@ ms.locfileid: "67918701"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|Constant|  
+|定数|  
 |--------------|  
 |AdoEnums FieldAttribute|  
 |AdoEnums FieldAttribute|  

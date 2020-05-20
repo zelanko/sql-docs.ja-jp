@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS [ADO]
 - remote data service [ADO]
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26d3a5d785db3ae138e26225ea5b37b182f6b076
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 601dce83ad5dc71a015c2fa8a66c85f975521d96
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922400"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764703"
 ---
 # <a name="rds-usage-and-security"></a>RDS の使用方法とセキュリティ
 サーバーをセットアップし、RDS をすばやく使用するには、このセクションの情報を参照してください。 このセクションには、rds を実装するときに必要になる可能性がある特定の構成手順、RDS と他のテクノロジ間の重要な関係について説明し、RDS ソリューションの設定時に発生する可能性がある問題の解決策を特定するのに役立ちます。  

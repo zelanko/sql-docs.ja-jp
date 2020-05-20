@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c064120e3c658cafd88a96953ff00e18fbaa9b88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cb004c33ae413c93506bc1c90b331494b7e56adc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931118"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765433"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)メソッドによって取得されるスキーマ**レコードセット**の種類を指定します。  
@@ -34,7 +34,7 @@ ms.locfileid: "67931118"
   
  ADO では、定数、 **Adschemadbina キーワード**、および**adschemadbinを**使用したスキーマのような結果が生成されます。 ADO は**レコードセット**を作成し、各行に、 **IDBInfo:: Getkeywords**メソッドと**IDBInfo:: GetLiteralInfo**メソッドによって返された値を格納します。 これらのメソッドに関する追加情報については、OLE DB プログラマーリファレンス』の「 [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) 」セクションを参照してください。  
   
-|Constant|値|説明|制約列|  
+|定数|[値]|説明|制約列|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|特定のユーザーが所有する、カタログで定義されているアサーションを返します。<br /><br /> (アサーション行セット)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|DBMS からアクセスできるカタログに関連付けられている物理属性を返します。<br /><br /> (カタログ行セット)|CATALOG_NAME|  
@@ -81,7 +81,7 @@ ms.locfileid: "67931118"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|Constant|  
+|定数|  
 |--------------|  
 |AdoEnums|  
 |AdoEnums|  

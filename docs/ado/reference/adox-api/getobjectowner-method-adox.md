@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetObjectOwner method [ADOX]
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ff85491cf7ca30e3f95526aa7043f321a65cccc5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7c9892ddc3be28e63dae0f3f6440cc4a668498e3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966270"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764909"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner メソッド (ADOX)
 [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)内のオブジェクトの所有者を返します。  

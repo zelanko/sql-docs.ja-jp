@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Command property [ADOX], Visual Basic example
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd8595cf8089ce6fd15549680da538946414b9c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4feb9c7ec12bbf560c874b15389adcd3a7eec04a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965625"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763783"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Parameters コレクションおよび Command プロパティの例 (VB)
 次のコード[は、command プロパティを](../../../ado/reference/adox-api/command-property-adox.md) [command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと共に使用して、プロシージャのパラメーター情報を取得する方法を示しています。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abfa226c5bc6c94613a5d45c48a351811235455f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924514"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764793"
 ---
 # <a name="records-and-provider-supplied-fields"></a>レコードとプロバイダーが指定したフィールド
 [Record](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトが開かれている場合、そのソースは、開いている[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の現在の行、絶対 url、または開いている[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトと組み合わせた相対 url にすることができます。  
@@ -55,7 +55,7 @@ ms.locfileid: "67924514"
 ## <a name="resource-recordset-columns"></a>リソースレコードセットの列  
  *リソースレコードセット*は、次の列で構成されます。  
   
-|列名|Type|説明|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|読み取り専用です。 リソースの URL を示します。|  
 |RESOURCE_PARENTNAME|AdVarWChar|読み取り専用です。 親レコードの絶対 URL を示します。|  
@@ -63,7 +63,7 @@ ms.locfileid: "67924514"
 |RESOURCE_ISHIDDEN|AdBoolean|リソースが非表示の場合は True。 行が返されるのは、行セットを作成するコマンドが RESOURCE_ISHIDDEN が True の行を明示的に選択した場合だけです。|  
 |RESOURCE_ISREADONLY|AdBoolean|リソースが読み取り専用の場合は True。 DBBINDFLAG_WRITE を使用してこのリソースを開こうとすると、DB_E_READONLY で失敗します。 このプロパティは、リソースが読み取り用に開かれている場合でも編集できます。|  
 |RESOURCE_CONTENTTYPE|AdVarWChar|ドキュメントが使用されている可能性があることを示します。たとえば、弁護士の brief などです。 これは、ドキュメントの作成に使用された Office テンプレートに対応する場合があります。|  
-|RESOURCE_CONTENTCLASS|AdVarWChar|ドキュメントの MIME の種類を示します。 "`text/html`" などの形式を示します。|  
+|RESOURCE_CONTENTCLASS|AdVarWChar|ドキュメントの MIME の種類を示します。 "" などの形式を示し `text/html` ます。|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|コンテンツが格納される言語を示します。|  
 |RESOURCE_CREATIONTIME|adFileTime|読み取り専用です。 リソースが作成された時刻を含む FILETIME 構造体を示します。 時刻は協定世界時 (UTC) 形式で報告されます。|  
 |RESOURCE_LASTACCESSTIME|AdFileTime|読み取り専用です。 リソースが最後にアクセスされた時刻を含む FILETIME 構造体を示します。 時刻は UTC 形式です。 プロバイダーがこの時間メンバーをサポートしていない場合、FILETIME メンバーは0になります。|  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 17d2d282eddcd358d8b3efe90ffda2d40e9e1574
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924735"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764803"
 ---
 # <a name="operation-of-parameterized-commands"></a>パラメーター化コマンドの操作
 大きな子**レコードセット**で作業している場合は、特に親**レコード**セットのサイズとは異なりますが、いくつかの子チャプターにのみアクセスする必要がある場合は、パラメーター化されたコマンドを使用する方が効率的です。  
@@ -54,7 +54,7 @@ SHAPE {SELECT * FROM customer}
   
 6.  別の行のチャプター列にアクセスすると、手順3-5 が繰り返されます。  
   
- 既定では、"**子行のキャッシュ**" 動的プロパティは**True**に設定されています。 キャッシュの動作は、クエリのパラメーター値によって異なります。 1つのパラメーターを持つクエリでは、指定されたパラメーター値の子**レコードセット**が、その値を持つ子の要求間でキャッシュされます。 次のコードはこれを示しています。  
+ 既定では、"**子行のキャッシュ**" 動的プロパティは**True**に設定されています。 キャッシュの動作は、クエリのパラメーター値によって異なります。 1つのパラメーターを持つクエリでは、指定されたパラメーター値の子**レコードセット**が、その値を持つ子の要求間でキャッシュされます。 その例を次のコードに示します。  
   
 ```  
 SCmd = "SHAPE {select * from customer} " & _  
@@ -74,7 +74,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  パラメーター化されていない階層を使用する場合、各チームの子**レコードセット**に完全なスケジュールが含まれるように、チームとゲームテーブルを関連付けることはできません。 ホームスケジュールまたは道路スケジュールを含むチャプターを作成できますが、両方を指定することはできません。 これは、関連付け句によって、フォーム (pc1 = cc1) と (pc2 = pc2) という形式の親子関係が制限されるためです。 このため、コマンドに "team_id を home_team に関連付ける"、team_id を visiting_team "にすると、チームが自身をプレイしていたゲームのみが表示されます。 必要なのは、"(team_id = home_team) または (team_id = visiting_team)" ですが、図形プロバイダーはまたは句をサポートしていません。  
   
- 目的の結果を得るには、パラメーター化されたコマンドを使用します。 次に例を示します。  
+ 目的の結果を得るには、パラメーター化されたコマンドを使用します。 例:  
   
 ```  
 SHAPE {SELECT * FROM teams}   
@@ -86,7 +86,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
  この例では、必要な結果を得るために、SQL の WHERE 句の柔軟性が向上しています。  
   
 > [!NOTE]
->  WHERE 句を使用する場合、text、ntext、および image の SQL データ型をパラメーターで使用することはできません`Invalid operator for data type`。また、次のようなエラーが発生します。  
+>  WHERE 句を使用する場合、text、ntext、および image の SQL データ型をパラメーターで使用することはできません。また、次のようなエラーが発生 `Invalid operator for data type` します。  
   
 ## <a name="see-also"></a>参照  
  [データシェイプの例](../../../ado/guide/data/data-shaping-example.md)   

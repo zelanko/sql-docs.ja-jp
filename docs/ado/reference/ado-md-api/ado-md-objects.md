@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO MD, objects
 - objects [ADO MD]
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 01a35a38812d105a1e26454022321e57448efadd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930575"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765253"
 ---
 # <a name="ado-md-objects"></a>ADO MD オブジェクト
 
@@ -32,8 +32,8 @@ ms.locfileid: "67930575"
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|メンバーの1つ以上の階層を含む多次元キューブのディメンションの1つを表します。|  
 |[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|ディメンションのメンバーを集計または "ロールアップ" できる1つの方法を表します。 ディメンションは、1つまたは複数の階層に沿って集計できます。|  
 |[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|にはメンバーのセットが含まれており、各メンバーは階層内で同じランクを持ちます。|  
-|[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)|キューブ内のレベルのメンバー、レベルのメンバーの子、またはセルセットの軸に沿った位置のメンバーを表します。|  
-|[移動](../../../ado/reference/ado-md-api/position-object-ado-md.md)|軸に沿って点を定義する、異なる次元の1つ以上のメンバーのセットを表します。|  
+|[Member](../../../ado/reference/ado-md-api/member-object-ado-md.md)|キューブ内のレベルのメンバー、レベルのメンバーの子、またはセルセットの軸に沿った位置のメンバーを表します。|  
+|[Position](../../../ado/reference/ado-md-api/position-object-ado-md.md)|軸に沿って点を定義する、異なる次元の1つ以上のメンバーのセットを表します。|  
   
  また、**カタログ**オブジェクトは、標準の ado ライブラリに含まれる ado **Connection**オブジェクトに接続されています。  
   

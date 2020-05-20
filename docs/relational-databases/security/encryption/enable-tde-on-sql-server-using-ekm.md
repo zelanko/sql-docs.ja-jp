@@ -24,7 +24,7 @@ ms.locfileid: "74957436"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>EKM の使用による TDE の有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  この記事では、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で拡張キー管理 (EKM) モジュールに格納されている非対称キーを使用してデータベース暗号化キーを保護するために、[!INCLUDE[tsql](../../../includes/tsql-md.md)] で Transparent Data Encryption (TDE) を有効にする方法について説明します。  
+  この記事では、[!INCLUDE[tsql](../../../includes/tsql-md.md)] で拡張キー管理 (EKM) モジュールに格納されている非対称キーを使用してデータベース暗号化キーを保護するために、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で Transparent Data Encryption (TDE) を有効にする方法について説明します。  
   
  TDE は、データベース暗号化キーと呼ばれる対称キーを使用してデータベース全体のストレージを暗号化します。 データベース暗号化キーは、master データベースのデータベース マスター キーによって保護される証明書を使用して保護することもできます。 データベース マスター キーを使用してデータベース暗号化キーを保護する方法の詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が Azure 仮想マシンで実行されているときに TDE を構成する方法については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)」を参照してください。 Azure Key Vault でキーを使用して TDE を構成する方法の詳細については、「 [SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)」を参照してください。 
 
