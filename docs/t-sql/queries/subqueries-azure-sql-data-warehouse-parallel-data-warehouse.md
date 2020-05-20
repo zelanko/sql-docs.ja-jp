@@ -115,7 +115,7 @@ SELECT Rb.b1, (SELECT RA.a1 FROM RA WHERE RB.b1 = RA.a1) FROM RB GROUP BY RB.b1;
 ```  
   
 ### <a name="i-using-in-with-a-correlated-subquery"></a>I. 相関サブクエリで IN を使用する  
- 次の例では、相関または繰り返しサブクエリ内で `IN` を使用しています。 これは、外側のクエリによって値が決まるクエリです。 内側のクエリは、外側のクエリが選択する行に対して 1 回ずつ、繰り返し実行されます。 このクエリは、`EmployeeKey` テーブルの `OrderQuantity` が `FactResellerSales` で、従業員の ID 番号が `5` テーブルと `DimEmployee` テーブルで一致する各従業員の `FactResellerSales` と姓名のインスタンスを 1 つ取得します。  
+ 次の例では、相関または繰り返しサブクエリ内で `IN` を使用しています。 これは、外側のクエリによって値が決まるクエリです。 内側のクエリは、外側のクエリが選択する行に対して 1 回ずつ、繰り返し実行されます。 このクエリは、`FactResellerSales` テーブルの `OrderQuantity` が `5` で、従業員の ID 番号が `DimEmployee` テーブルと `FactResellerSales` テーブルで一致する各従業員の `EmployeeKey` と姓名のインスタンスを 1 つ取得します。  
   
 ```  
 SELECT DISTINCT dm.EmployeeKey, dm.FirstName, dm.LastName   

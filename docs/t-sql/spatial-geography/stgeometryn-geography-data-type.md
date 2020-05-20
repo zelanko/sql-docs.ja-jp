@@ -45,10 +45,10 @@ ms.locfileid: "68042263"
  CLR の戻り値の型: **SqlGeography**  
   
 ## <a name="remarks"></a>解説  
- パラメーターが [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) の結果よりも大きい場合、このメソッドは null を返します。**expression** パラメーターが 1 より小さい場合は、*ArgumentOutOfRangeException* をスローします。  
+ パラメーターが [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) の結果よりも大きい場合、このメソッドは null を返します。*expression* パラメーターが 1 より小さい場合は、**ArgumentOutOfRangeException** をスローします。  
   
 ## <a name="examples"></a>例  
- `MultiPoint``geography` インスタンスを作成し、`STGeometryN()` を使用して `geography`GeometryCollection**の 2 番目の** インスタンスを見つける例を次に示します。  
+ `MultiPoint``geography` インスタンスを作成し、`STGeometryN()` を使用して **GeometryCollection** の 2 番目の `geography` インスタンスを見つける例を次に示します。  
   
 ```  
 DECLARE @g geography;  

@@ -67,7 +67,7 @@ ms.locfileid: "68011817"
   
 2.  タスク バーから Windows PowerShell を起動するか、[スタート] ボタンをクリックし、[すべてのプログラム]、[アクセサリ]、[Windows PowerShell]、[Windows PowerShell] の順にクリックします。  
   
-3.  「**Import-Module "sqlps"** 」と入力して、**sqlps** モジュールをインポートします  
+3.  「**Import-Module "sqlps"**」と入力して、**sqlps** モジュールをインポートします  
   
 4.  次のステートメントを実行して TCP プロトコルおよび名前付きパイプ プロトコルの両方を有効にします。 `<computer_name>` を、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているコンピューターの名前に置き換えます。 名前付きインスタンスを構成する場合は、 `MSSQLSERVER` をインスタンス名に置き換えます。  
   

@@ -35,7 +35,7 @@ ms.locfileid: "68120853"
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- **を呼び出したインスタンスと比較される、別の**geography`STOverlaps()` インスタンスです。  
+ `STOverlaps()` を呼び出したインスタンスと比較される、別の **geography** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  

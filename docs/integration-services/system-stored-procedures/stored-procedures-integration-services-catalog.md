@@ -26,7 +26,7 @@ ms.locfileid: "71296687"
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  このセクションでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] のインスタンスに配置されている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを管理できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャについて説明します。  
+  このセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに配置されている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを管理できる [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャについて説明します。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ストアド プロシージャを呼び出して、**SSISDB** カタログに格納されているオブジェクトを追加、削除、変更、または実行します。  
   

@@ -115,7 +115,7 @@ ODBC でサポートされていません **sql_variant**です。 クエリで�
 ## <a name="examples"></a>例  
 
 ### <a name="a-using-a-sql_variant-in-a-table"></a>A. テーブルで sql_variant を使用する  
- 次の例では、sql_variant データ型でテーブルを作成します。 次の例では、`SQL_VARIANT_PROPERTY` の `colA``46279.1``colB` 値  = に関する `1689` 情報を取得しています。 `tableA` には `colA` 型の `sql_variant` と、`colB` が含まれているものとします。  
+ 次の例では、sql_variant データ型でテーブルを作成します。 次の例では、`colA` の `colB` =`1689` 値 `46279.1` に関する `SQL_VARIANT_PROPERTY` 情報を取得しています。 `tableA` には `sql_variant` 型の `colA` と、`colB` が含まれているものとします。  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -138,7 +138,7 @@ decimal      8           2
 ```  
   
 ### <a name="b-using-a-sql_variant-as-a-variable"></a>B. 変数として sql_variant を使用する   
- 次の例では、sql_variant データ型を使用して変数を作成し、`SQL_VARIANT_PROPERTY` という名前の変数に関する @v1情報を取得します。  
+ 次の例では、sql_variant データ型を使用して変数を作成し、@v1 という名前の変数に関する `SQL_VARIANT_PROPERTY`情報を取得します。  
   
 ```sql    
 DECLARE @v1 sql_variant;  

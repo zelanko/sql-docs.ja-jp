@@ -62,7 +62,7 @@ ms.locfileid: "71290727"
 
 - サンプル データ、完成したパッケージ、構成、Readme。 サンプル データとレッスン パッケージを ZIP ファイルとしてダウンロードする場合は、[SQL Server Integration Services のチュートリアル ファイル](https://www.microsoft.com/download/details.aspx?id=56827)に関するページを参照してください。 Zip ファイル内のファイルのほとんどは、意図しない変更を回避するために読み取り専用になっています。 ファイルに出力を書き込んだり、ファイルを変更したりするには、ファイルのプロパティで読み取り専用属性をオフにする必要がある場合があります。
 
--   **AdventureWorks2014** サンプル データベース。 **AdventureWorks2014** データベースをダウンロードするには、`AdventureWorks2014.bak`AdventureWorks サンプル データベース[から ](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) をダウンロードし、バックアップを復元します。  
+-   **AdventureWorks2014** サンプル データベース。 **AdventureWorks2014** データベースをダウンロードするには、[AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)から `AdventureWorks2014.bak` をダウンロードし、バックアップを復元します。  
 
 -   AdventureWorks データベースでテーブルを作成および削除するための権限が必要です。
     
@@ -76,7 +76,7 @@ ms.locfileid: "71290727"
 
 - サンプル データ、完成したパッケージ、構成、Readme。 サンプル データとレッスン パッケージを ZIP ファイルとしてダウンロードする場合は、[SQL Server Integration Services のチュートリアル ファイル](https://www.microsoft.com/download/details.aspx?id=56827)に関するページを参照してください。 Zip ファイル内のファイルのほとんどは、意図しない変更を回避するために読み取り専用になっています。 ファイルに出力を書き込んだり、ファイルを変更したりするには、ファイルのプロパティで読み取り専用属性をオフにする必要がある場合があります。
 
--   **AdventureWorks2014** サンプル データベース。 **AdventureWorks2014** データベースをダウンロードするには、`AdventureWorks2014.bak`AdventureWorks サンプル データベース[から ](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) をダウンロードし、バックアップを復元します。  
+-   **AdventureWorks2014** サンプル データベース。 **AdventureWorks2014** データベースをダウンロードするには、[AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)から `AdventureWorks2014.bak` をダウンロードし、バックアップを復元します。  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。    
     

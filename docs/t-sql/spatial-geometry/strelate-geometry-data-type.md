@@ -38,7 +38,7 @@ ms.locfileid: "68066312"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- **を呼び出したインスタンスと比較される、別の**geometry`STRelate()` インスタンスです。  
+ `STRelate()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
   
  *intersection_pattern_matrix*  
  **nchar(9)** 型の文字列です。2 つの **geometry** インスタンスの間にある、DE-9IM パターンのマトリックス デバイスで受け付けることができる値にエンコードされます。  

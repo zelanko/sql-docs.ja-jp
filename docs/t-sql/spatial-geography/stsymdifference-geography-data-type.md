@@ -66,7 +66,7 @@ SELECT @g.STSymDifference(@h).ToString();
 ```  
   
 ### <a name="b-computing-the-symmetric-difference-with-fullglobe"></a>B. FullGlobe を使用して、対称差を計算する  
- `Polygon` を使用して、`FullGlobe` の対称差を比較する例を次に示します。  
+ `FullGlobe` を使用して、`Polygon` の対称差を比較する例を次に示します。  
   
 ```
  DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  

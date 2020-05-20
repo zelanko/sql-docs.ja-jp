@@ -65,7 +65,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 |**BadPasswordCount**|正しくないパスワードで連続してログインが試行された回数を返します。|  
 |**BadPasswordTime**|正しくないパスワードで最後にログインが試行された時刻を返します。|  
 |**DaysUntilExpiration**|パスワードの有効期限が切れるまでの日数を返します。|  
-|**DefaultDatabase**|データベースが指定されていない場合に、メタデータまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]master**に格納されている** ログインの既定のデータベースを返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外でプロビジョニングされているユーザーの場合は NULL を返します (Windows 認証ユーザーなど)。|  
+|**DefaultDatabase**|データベースが指定されていない場合に、メタデータまたは **master** に格納されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの既定のデータベースを返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外でプロビジョニングされているユーザーの場合は NULL を返します (Windows 認証ユーザーなど)。|  
 |**DefaultLanguage**|メタデータに格納されているログインの既定の言語を返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外でプロビジョニングされているユーザーの場合は NULL を返します (Windows 認証ユーザーなど)。|  
 |**HistoryLength**|パスワード ポリシーの適用メカニズムを使用して、追跡されたログインのパスワードの数を返します。 パスワード ポリシーが適用されていない場合は 0 です。 パスワード ポリシーの適用は 1 から再開されます。|  
 |**IsExpired**|ログインの期限が切れているかどうかを示します。|  

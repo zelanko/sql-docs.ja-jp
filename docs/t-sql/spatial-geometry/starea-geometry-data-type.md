@@ -42,7 +42,7 @@ ms.locfileid: "68100991"
  CLR の戻り値の型: **SqlDouble**  
   
 ## <a name="remarks"></a>解説  
- `STArea()`geometry **インスタンスに含まれるすべての図形が 0 次元または 1 次元の図形の場合、** は 0 を返します。 `STArea()`geometry **インスタンスが初期化されていない場合、** は **NULL** を返します。  
+ **geometry** インスタンスに含まれるすべての図形が 0 次元または 1 次元の図形の場合、`STArea()` は 0 を返します。 **geometry** インスタンスが初期化されていない場合、`STArea()` は **NULL** を返します。  
   
 ## <a name="examples"></a>例  
   

@@ -49,7 +49,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
  CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="remarks"></a>解説  
- **によって返される**geometry`STGeomCollFromWKB()` インスタンスの OGC 型は、対応する WKB 入力に基づき、**GeomCollection**、**MultiPolygon**、**MultiLineString**、**MultiPoint** のいずれかに設定されます。  
+ `STGeomCollFromWKB()` によって返される **geometry** インスタンスの OGC 型は、対応する WKB 入力に基づき、**GeomCollection**、**MultiPolygon**、**MultiLineString**、**MultiPoint** のいずれかに設定されます。  
   
  このメソッドは、入力が適切な形式でない場合に、FormatException 例外をスローします。  
   

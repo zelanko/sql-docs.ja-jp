@@ -38,7 +38,7 @@ ms.locfileid: "68066220"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- **を呼び出したインスタンスとの和集合を形成する、別の**geometry`STUnion()` インスタンスです。  
+ `STUnion()` を呼び出したインスタンスとの和集合を形成する、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  

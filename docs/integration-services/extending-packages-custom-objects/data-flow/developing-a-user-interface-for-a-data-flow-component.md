@@ -91,7 +91,7 @@ End Class
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> メソッドの戻り値は、コンポーネントに加えられた変更が保存されたか、破棄されたかを示します。 このメソッドによって **false** が返される場合、変更はすべて破棄されます。**true** の場合、コンポーネントに対する変更が保存され、パッケージを保存する必要があることを示すマークが付けられます。  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>SSIS デザイナーのサービスの使用  
- **メソッドの**IServiceProvider<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> パラメーターにより、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの、次のサービスにアクセスすることができます。  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> メソッドの **IServiceProvider** パラメーターにより、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの、次のサービスにアクセスすることができます。  
   
 |サービス|説明|  
 |-------------|-----------------|  

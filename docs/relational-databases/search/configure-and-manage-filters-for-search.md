@@ -27,7 +27,7 @@ ms.locfileid: "68093304"
 ## <a name="filters-and-document-types"></a>フィルターおよびドキュメントの種類
 フィルターは、ドキュメント型 (.doc、.pdf、.xls、.xml など) に固有です。 これらのフィルターは IFilter インターフェイスを実装しています。 ドキュメント型の一覧を参照するには、 [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) カタログ ビューに対してクエリを実行してください。  
   
-バイナリ ドキュメントは、単一の **varbinary(max)** 列または **image** 列に格納できます。 各ドキュメントについて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はファイル拡張子を基に正しいフィルターを選択します。 ファイルが **varbinary(max)** 列または **image** 列に格納されている場合にはファイル拡張子が表示されないため、ファイル拡張子 (.doc、.xls、.pdf など) を型列と呼ばれるテーブル内の別の列に格納する必要があります。 この型列は、任意の文字ベースのデータ型で、文書ファイルの拡張子 (たとえば [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 文書の場合は .doc) を格納します。 **の**Document[!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] テーブルでは、 **Document** 列は型 **varbinary(max)** 、型列 **FileExtension**は型 **nvarchar(8)** です。  
+バイナリ ドキュメントは、単一の **varbinary(max)** 列または **image** 列に格納できます。 各ドキュメントについて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はファイル拡張子を基に正しいフィルターを選択します。 ファイルが **varbinary(max)** 列または **image** 列に格納されている場合にはファイル拡張子が表示されないため、ファイル拡張子 (.doc、.xls、.pdf など) を型列と呼ばれるテーブル内の別の列に格納する必要があります。 この型列は、任意の文字ベースのデータ型で、文書ファイルの拡張子 (たとえば [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 文書の場合は .doc) を格納します。 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] の **Document** テーブルでは、 **Document** 列は型 **varbinary(max)**、型列 **FileExtension**は型 **nvarchar(8)** です。  
 
 **既存のフルテキスト インデックスの型列を表示するには**  
   

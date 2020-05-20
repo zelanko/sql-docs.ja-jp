@@ -27,7 +27,7 @@ ms.locfileid: "67934640"
   
  ## <a name="run-ssnoversion-features-discovery-report"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポートを実行する  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][スタート] **メニューを使用し、** [すべてのプログラム] **、** [ **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン名>]\<、** [構成ツール] **の順にポイントし、** [ **インストール センター][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をクリックして、** インストール センターを起動します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポートを実行するには、 **[** インストール センター] **の左側のナビゲーション領域にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][ツール]** をクリックし、 **[インストール済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポート]** をクリックします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][スタート] **メニューを使用し、** [すべてのプログラム] **、** [ **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン名>]\<、** [構成ツール] **の順にポイントし、** [ **インストール センター][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をクリックして、** インストール センターを起動します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポートを実行するには、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センター]** の左側のナビゲーション領域にある **[ツール]** をクリックし、**[インストール済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポート]** をクリックします。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の検出レポートは、%ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<最後のセットアップ セッション\> に保存されます。  
   

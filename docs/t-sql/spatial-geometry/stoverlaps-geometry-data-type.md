@@ -38,7 +38,7 @@ ms.locfileid: "68140922"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- **を呼び出したインスタンスと比較される、別の**geometry`STOverlaps()` インスタンスです。  
+ `STOverlaps()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
@@ -48,7 +48,7 @@ ms.locfileid: "68140922"
 ## <a name="remarks"></a>解説  
  2 つの **geometry** インスタンスが重なるのは、重なる部分を表す領域がインスタンスと同次元にあり、その領域がどちらのインスタンスとも異なる場合です。  
   
- `STOverlaps()`geometry **インスタンスが重なる地点の次元が異なる場合、** は常に 0 を返します。  
+ **geometry** インスタンスが重なる地点の次元が異なる場合、`STOverlaps()` は常に 0 を返します。  
   
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   

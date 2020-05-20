@@ -313,7 +313,7 @@ WHERE EXISTS
 ```  
   
 ### <a name="g-using-not-exists"></a>G. NOT EXISTS を使用する  
- NOT EXISTS の動作は EXISTS と逆です。 NOT EXISTS 内の WHERE 句の条件は、サブクエリから行が返されない場合に満たされます。 次の例では、`DimCustomer` と `LastName` が `BirthDate` テーブルのどのエントリとも一致しない `ProspectiveBuyers` テーブルの行を検出します。  
+ NOT EXISTS の動作は EXISTS と逆です。 NOT EXISTS 内の WHERE 句の条件は、サブクエリから行が返されない場合に満たされます。 次の例では、`LastName` と `BirthDate` が `ProspectiveBuyers` テーブルのどのエントリとも一致しない `DimCustomer` テーブルの行を検出します。  
   
 ```  
 -- Uses AdventureWorks  

@@ -38,7 +38,7 @@ ms.locfileid: "68107752"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- **を呼び出したインスタンスと比較される、別の**geometry`STEquals()` インスタンスです。  
+ `STEquals()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
@@ -49,7 +49,7 @@ ms.locfileid: "68107752"
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
 ## <a name="examples"></a>例  
- `geometry` を含むほぼ同じ `STGeomFromText()` インスタンスを 2 つ作成し、`STEquals()` を使用して 2 つのインスタンスが同一であるかどうかをテストする例を次に示します。  
+ `STGeomFromText()` を含むほぼ同じ `geometry` インスタンスを 2 つ作成し、`STEquals()` を使用して 2 つのインスタンスが同一であるかどうかをテストする例を次に示します。  
   
 ```  
 DECLARE @g geometry  
