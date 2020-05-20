@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_account_sp
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ccb5cfd245148c97288a34b1857955f48f3efc73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb61b115689472c5be3ec14de2e7387de3317d4d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81528416"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814143"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**server**|**sysname**|アカウントの電子メールサーバーの名前。|  
 |**port**|**int**|電子メールサーバーが使用するポート番号。|  
 |**username**|**nvarchar(128)**|電子メールサーバーが認証を使用する場合は、電子メールサーバーへのサインインに使用するユーザー名。 **Username**が NULL の場合、データベースメールはこのアカウントに対して認証を使用しません。|  
-|**use_default_credentials**|**bit**|の資格情報を使用して SMTP サーバーにメールを送信するか[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]どうかを指定します。 **use_default_credentials**はビット,、既定値はありません。 このパラメーターが1の場合、データベースメールは[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]サービスの資格情報を使用します。 このパラメーターが0の場合、データベースメールは、SMTP サーバーの認証に** \@ユーザー名**と** \@パスワード**を使用します。 ** \@ユーザー名**と** \@パスワード**が NULL の場合、データベースメールは匿名認証を使用します。 このパラメーターを指定する前に、SMTP 管理者に問い合わせてください。|  
+|**use_default_credentials**|**bit**|の資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。 **use_default_credentials**はビット,、既定値はありません。 このパラメーターが1の場合、データベースメールはサービスの資格情報を使用し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。 このパラメーターが0の場合、データベースメールは、SMTP サーバーの認証に** \@ ユーザー名**と** \@ パスワード**を使用します。 ** \@ ユーザー名**と** \@ パスワード**が NULL の場合、データベースメールは匿名認証を使用します。 このパラメーターを指定する前に、SMTP 管理者に問い合わせてください。|  
 |**enable_ssl**|**bit**|データベースメールトランスポート層セキュリティ (TLS) を使用して通信を暗号化するかどうかを指定します。これは、以前 Secure Sockets Layer (SSL) と呼ばれていました。 このオプションは、SMTP サーバーで TLS が必要な場合に使用します。 **enable_ssl**はビット,、既定値はありません。 1データベースメール TLS を使用して通信を暗号化することを示します。 0は、データベースメールが TLS 暗号化を使用せずにメールを送信することを示します。|  
   
 ## <a name="remarks"></a>Remarks  

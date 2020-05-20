@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription_properties
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 28305f4676c9323b364703feb0b668615a159e6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cf8c3510ffbd2d40c882061cc81bb8f6a80d294f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771564"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815430"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,15 +40,15 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*のデータ型は**sysname**で、 **%** 既定値はです。これにより、すべてのパブリッシャーに関する情報が返されます。  
+`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*のデータ型は**sysname**で、既定値はです **%** 。これにより、すべてのパブリッシャーに関する情報が返されます。  
   
-`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*のデータ型は**sysname**で、 **%** 既定値はです。これにより、すべてのパブリッシャーデータベースに関する情報が返されます。  
+`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*のデータ型は**sysname**で、既定値はです **%** 。これにより、すべてのパブリッシャーデータベースに関する情報が返されます。  
   
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*のデータ型は**sysname**で、 **%** 既定値はです。これにより、すべてのパブリケーションに関する情報が返されます。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*のデータ型は**sysname**で、既定値はです **%** 。これにより、すべてのパブリケーションに関する情報が返されます。  
   
 `[ @publication_type = ] publication_type`パブリケーションの種類を示します。*publication_type*は**int**,、既定値は NULL です。 指定する場合は、次のいずれかの値を*publication_type*必要があります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|トランザクション パブリケーション|  
 |**1**|スナップショット パブリケーション|  
@@ -58,17 +58,17 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**文書**|**sysname**|パブリッシャーの名前。|  
+|**publisher**|**sysname**|パブリッシャーの名前。|  
 |**publisher_db**|**sysname**|パブリッシャーデータベースの名前。|  
 |**レプリケーション**|**sysname**|パブリケーションの名前。|  
 |**publication_type**|**int**|パブリケーションの種類:<br /><br /> **0** = トランザクション<br /><br /> **1** = スナップショット<br /><br /> **2** = マージ|  
-|**publisher_login**|**sysname**|パブリッシャーで認証に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用されるログイン ID。|  
-|**publisher_password**|**nvarchar (524)**|パブリッシャーで認証 (暗号化) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のために使用されるパスワード。|  
-|**publisher_security_mode**|**int**|パブリッシャーで使用されているセキュリティ モードです。<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
+|**publisher_login**|**sysname**|パブリッシャーで認証に使用されるログイン ID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**publisher_password**|**nvarchar (524)**|パブリッシャーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証 (暗号化) のために使用されるパスワード。|  
+|**publisher_security_mode**|**int**|パブリッシャーで使用されているセキュリティ モードです。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証<br /><br /> **1** = Windows 認証|  
 |**ディストリビューター**|**sysname**|ディストリビューターの名前。|  
 |**distributor_login**|**sysname**|ディストリビューターログイン。|  
 |**distributor_password**|**nvarchar (524)**|ディストリビューターパスワード (暗号化)。|  
-|**distributor_security_mode**|**int**|ディストリビューターで使用されるセキュリティモード:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
+|**distributor_security_mode**|**int**|ディストリビューターで使用されるセキュリティモード:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証<br /><br /> **1** = Windows 認証|  
 |**ftp_address**|**sysname**|これは旧バージョンとの互換性のためにだけ用意されています。 ディストリビューターのファイル転送プロトコル (FTP) サービスのネットワークアドレス。|  
 |**ftp_port**|**int**|これは旧バージョンとの互換性のためにだけ用意されています。 ディストリビューター用 FTP サービスのポート番号。|  
 |**ftp_login**|**sysname**|これは旧バージョンとの互換性のためにだけ用意されています。 FTP サービスへの接続に使用するユーザー名。|  

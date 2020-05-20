@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d851461ae4cd07f3dd89e2cff4326d03e05a5d66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107932"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815275"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +65,9 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  指定しない場合、既定値は**5**です。 この値は、 **CoCreateInstance**への呼び出しの*dwclscontext*パラメーターとして渡されます。  
   
- インプロセス OLE サーバーが許可されている場合 (コンテキスト値が**1**または**5**の場合、またはコンテキスト値が指定されていない場合)、それはに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よって所有されているメモリおよびその他のリソースにアクセスできます。 組み込み OLE サーバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリやリソースに損傷を与え、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアクセス違反など予期しない結果を招く場合があります。  
+ インプロセス OLE サーバーが許可されている場合 (コンテキスト値が**1**または**5**の場合、またはコンテキスト値が指定されていない場合)、それはによって所有されているメモリおよびその他のリソースにアクセスでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 組み込み OLE サーバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリやリソースに損傷を与え、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアクセス違反など予期しない結果を招く場合があります。  
   
- コンテキスト値を**4**に指定すると、ローカルの OLE サーバーは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リソースにアクセスできず、メモリやリソースに損傷[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を与えることはありません。  
+ コンテキスト値を**4**に指定すると、ローカルの OLE サーバーはリソースにアクセスできず、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリやリソースに損傷を与えることはありません。  
   
 > [!NOTE]  
 >  このストアドプロシージャのパラメーターは、名前ではなく位置によって指定されます。  

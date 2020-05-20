@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysalerts system table
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4645b586c07635a405b2e678b84c4846762f7582
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 277cd9ae3fdbe2414c9c3eb96208e79730ebdde6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084685"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813939"
 ---
 # <a name="dbosysalerts-transact-sql"></a>sysalerts (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68084685"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|警告 ID。|  
+|**ID**|**int**|警告 ID。|  
 |**name**|**sysname**|アラート名。|  
 |**event_source**|**nvarchar (100)**|イベントのソース ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。|  
 |**event_category_id**|**int**|将来利用するために予約されています。|  
@@ -63,7 +63,7 @@ ms.locfileid: "68084685"
 
 次の表は、include_event_description ビットマスクの値を示しています。 10進値は、sysalerts によって返されます。 
 
-|decimal | binary | 意味 |
+|decimal | バイナリ | 意味 |
 |------|------|------|
 |0 |0000 |メッセージがありません |
 |1 |0001 |email |

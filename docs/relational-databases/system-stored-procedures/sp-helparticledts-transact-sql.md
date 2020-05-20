@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticledts
 ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a9c489a08291aea3d1c50a6418dc8e1e853dce12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1b5355ea4993944a4a47b59eb2cad0565e0c396c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771074"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815825"
 ---
 # <a name="sp_helparticledts-transact-sql"></a>sp_helparticledts (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Visual Basic を使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)]変換サブスクリプションを作成するときに使用する、正しいカスタムタスク名に関する情報を取得するために使用します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
+  Visual Basic を使用して変換サブスクリプションを作成するときに使用する、正しいカスタムタスク名に関する情報を取得するために使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

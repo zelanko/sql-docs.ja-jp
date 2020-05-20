@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticlecolumns
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c15a9051c6d706ddec55d031e93858a3d33c9d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771091"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815882"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`返される列が含まれているアーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値はありません。  
   
-`[ @publisher = ] 'publisher'`以外[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  *publisher*要求されたアーティクルが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーによってパブリッシュされている場合、パブリッシャーを指定することはできません。  
+>  要求されたアーティクルがパブリッシャーによってパブリッシュされている場合、*パブリッシャー*を指定することはできません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (パブリッシュされていない列) または**1** (パブリッシュされた列)  
@@ -56,7 +56,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**列 id**|**int**|列の識別子です。|  
-|**項目**|**sysname**|列の名前です。|  
+|**column**|**sysname**|列の名前です。|  
 |**投稿**|**bit**|列をパブリッシュしたかどうかを示します。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
 |**パブリッシャーの種類**|**sysname**|パブリッシャー側の列のデータ型。|  
 |**サブスクライバーの種類**|**sysname**|サブスクライバー側の列のデータ型。|  

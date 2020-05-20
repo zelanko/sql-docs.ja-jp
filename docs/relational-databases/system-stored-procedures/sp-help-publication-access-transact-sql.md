@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_publication_access
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8fe57e26392a2a01c7074d7d019baa20c4b9cb5f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770991"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815823"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'`アクセスするパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
-`[ @return_granted = ] 'return_granted'`ログイン ID を示します。 *return_granted*は**ビット**,、既定値は1です。 **0**を指定し[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、認証を使用する場合、パブリッシャーで表示され、ディストリビューターでは使用できないログインが返されます。 **0**を指定し、Windows 認証を使用する場合、パブリッシャーまたはディストリビューターでのアクセスが明示的に拒否されていないログインが返されます。  
+`[ @return_granted = ] 'return_granted'`ログイン ID を示します。 *return_granted*は**ビット**,、既定値は1です。 **0**を指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合、パブリッシャーで表示され、ディストリビューターでは使用できないログインが返されます。 **0**を指定し、Windows 認証を使用する場合、パブリッシャーまたはディストリビューターでのアクセスが明示的に拒否されていないログインが返されます。  
   
-`[ @login = ] 'login'`標準的なセキュリティログイン ID を示します。 *login*は**sysname**,、既定値は**%** です。  
+`[ @login = ] 'login'`標準的なセキュリティログイン ID を示します。 *login*は**sysname**,、既定値は **%** です。  
   
 `[ @initial_list = ] initial_list`パブリケーションアクセス権を持つすべてのメンバーを返すか、または新しいメンバーがリストに追加される前にアクセスしたメンバーのみを返すかを指定します。 *initial_list*はビット,、既定値は**0**です。  
   
@@ -66,7 +66,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="remarks"></a>Remarks  
  **sp_help_publication_access**は、すべての種類のレプリケーションで使用されます。  
   
- 結果セットの**Isntname**と**Isntgroup**の両方が**0**の場合は、ログインが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインであると見なされます。  
+ 結果セットの**Isntname**と**Isntgroup**の両方が**0**の場合は、ログインがログインであると見なされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_help_publication_access**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  

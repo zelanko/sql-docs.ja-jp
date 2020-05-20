@@ -18,21 +18,21 @@ helpviewer_keywords:
 - sp_xtp_bind_db_resource_pool
 - sys.sp_xtp_bind_db_resource_pool
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: af0e10f23d376c96fd7be0a75cf713dd76a2c149
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dfdfbe678e5b91d72e19a0300f9f1feec77c9d75
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041011"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814518"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  指定されたリソース プールに指定された[!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースをバインドします。 実行`sys.sp_xtp_bind_db_resource_pool`する前に、データベースとリソースプールの両方が存在している必要があります。  
+  指定されたリソース プールに指定された[!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースをバインドします。 実行する前に、データベースとリソースプールの両方が存在している必要があり `sys.sp_xtp_bind_db_resource_pool` ます。  
   
- このシステムプロシージャは、resource_pool_name によって識別される Resource Governor プールと database_name によって識別されるデータベースとの間のバインドを作成します。 バインド時にデータベースにメモリ最適化オブジェクトが含まれている必要はありません。 メモリ最適化オブジェクトが存在しない場合、リソース プールからメモリは取得されません。 このバインドは、以下で説明するように、アロケーター [!INCLUDE[hek_2](../../includes/hek-2-md.md)]によって割り当てられたメモリを管理するために Resource Governor によって使用されます。  
+ このシステムプロシージャは、resource_pool_name によって識別される Resource Governor プールと database_name によって識別されるデータベースとの間のバインドを作成します。 バインド時にデータベースにメモリ最適化オブジェクトが含まれている必要はありません。 メモリ最適化オブジェクトが存在しない場合、リソース プールからメモリは取得されません。 このバインドは、以下で説明するように、アロケーターによって割り当てられたメモリを管理するために Resource Governor によって使用され [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ます。  
   
  指定されたデータベースのバインドが既に存在する場合、プロシージャはエラーを返します。  どのような場合でも、データベースがアクティブなバインドを複数持つことはできません。  
   
@@ -47,13 +47,13 @@ sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'
   
 ## <a name="arguments"></a>引数  
  database_name  
- 既存[!INCLUDE[hek_2](../../includes/hek-2-md.md)]の有効なデータベースの名前。  
+ 既存の [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 有効なデータベースの名前。  
   
  resource_pool_name  
  既存のリソースプールの名前。  
   
 ## <a name="messages"></a>メッセージ  
- エラーが発生する`sp_xtp_bind_db_resource_pool`と、これらのメッセージのいずれかが返されます。  
+ エラーが発生すると、 `sp_xtp_bind_db_resource_pool` これらのメッセージのいずれかが返されます。  
   
  **データベースが存在しません**  
  Database_name は既存のデータベースを参照する必要があります。 指定した ID を持つデータベースが存在しない場合は、次のメッセージが返されます。   
@@ -74,7 +74,7 @@ Binding to a resource pool is not supported for system database 'master'. This o
 ```  
   
 **リソースプールが存在しません**  
- Resource_pool_name によって識別されるリソースプールは、 `sp_xtp_bind_db_resource_pool`実行前に存在している必要があります。  指定した ID のプールが存在しない場合、次のエラーが返されます。  
+ Resource_pool_name によって識別されるリソースプールは、実行前に存在している必要があり `sp_xtp_bind_db_resource_pool` ます。  指定した ID のプールが存在しない場合、次のエラーが返されます。  
 *リソースプール% s は存在しません。 有効なリソースプール名を入力してください。*  
   
 ```  
@@ -100,7 +100,7 @@ Msg 41372, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, L
 Database 'Hekaton_DB' is currently bound to a resource pool. A database must be unbound before creating a new binding.  
 ```  
   
- 成功すると`sp_xtp_bind_db_resource_pool` 、次のメッセージが返されます。  
+ 成功すると、 `sp_xtp_bind_db_resource_pool` 次のメッセージが返されます。  
   
 **バインドに成功**  
  成功すると、次の成功メッセージを返します。このメッセージは SQL ERRORLOG に記録されます。  
@@ -115,7 +115,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  バインドは、データベースが次にオンラインになったときに有効になります。  
  
- B. いくつかの基本的なチェックを含む、上記の例の拡張された例。  で次[!INCLUDE[tsql](../../includes/tsql-md.md)]を実行します。[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ B. いくつかの基本的なチェックを含む、上記の例の拡張された例。  で次を実行します。 [!INCLUDE[tsql](../../includes/tsql-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -145,7 +145,7 @@ ELSE BEGIN
 END 
 ``` 
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 -   `database_name` で指定するデータベースと `resource_pool_name` で指定するリソース プールはどちらも、バインドする前に存在している必要があります。  
   

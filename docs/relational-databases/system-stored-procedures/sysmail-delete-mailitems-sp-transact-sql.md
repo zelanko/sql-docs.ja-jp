@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_mailitems_sp
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ad69cc6933b4f3d51d3b9ec11fad4edd6d555abe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee0298a714394bdf90009657c3d5b7a4daafebcd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70846639"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814357"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>Remarks  
- データベースメールメッセージとその添付ファイルは、 **msdb**データベースに格納されます。 **Msdb**が予想以上に大きくなり、組織のドキュメント保持プログラムに準拠するように、メッセージを定期的に削除する必要があります。 データベースメールテーブルから電子メールメッセージを完全に削除するには、 **sysmail_delete_mailitems_sp**ストアドプロシージャを使用します。 日時を指定する引数を使用すると、古い電子メールだけを削除できます。 この場合、引数で指定した日時より前の電子メールが削除されます。 もう1つの省略可能な引数を使用すると、 **sent_status**の引数として指定された特定の種類の電子メールのみを削除できます。 ** \@Sent_before**または** \@sent_status**の引数を指定する必要があります。 すべてのメッセージを削除するには、 ** \@sent_before = getdate ()** を使用します。  
+ データベースメールメッセージとその添付ファイルは、 **msdb**データベースに格納されます。 **Msdb**が予想以上に大きくなり、組織のドキュメント保持プログラムに準拠するように、メッセージを定期的に削除する必要があります。 データベースメールテーブルから電子メールメッセージを完全に削除するには、 **sysmail_delete_mailitems_sp**ストアドプロシージャを使用します。 日時を指定する引数を使用すると、古い電子メールだけを削除できます。 この場合、引数で指定した日時より前の電子メールが削除されます。 もう1つの省略可能な引数を使用すると、 **sent_status**の引数として指定された特定の種類の電子メールのみを削除できます。 ** \@ Sent_before**または** \@ sent_status**の引数を指定する必要があります。 すべてのメッセージを削除するには、 ** \@ sent_before = getdate ()** を使用します。  
   
  電子メールを削除すると、そのメッセージに関係する添付ファイルも削除されます。 電子メールを削除しても、 **sysmail_event_log**内の対応するエントリは削除されません。 [Sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)を使用して、ログから項目を削除します。  
   
@@ -68,7 +68,7 @@ GO
 ```  
   
 ### <a name="b-deleting-the-oldest-e-mails"></a>B. 最も古いメールを削除する  
- 次の例では、データベースメールログでよりも`October 9, 2005`古い電子メールを削除します。  
+ 次の例では、データベースメールログでよりも古い電子メールを削除し `October 9, 2005` ます。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_delete_mailitems_sp   

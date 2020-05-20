@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5e9a1ab72140a08423fa50c10eeb1f2d06ad79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac6e69db443bd23c3e9b1119b21d8fd98ebe39c4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909091"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815728"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**所有者**|**nvarchar (** 128 **)**|オブジェクトの所有者 (これは、オブジェクトを所有するデータベースプリンシパルです。 既定値は、オブジェクトを含むスキーマの所有者です)。|  
     |**Object_type**|**nvarchar (** 31 **)**|オブジェクトの種類|  
   
-2.  *名前*が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型またはユーザー定義データ型である場合、 **sp_help**はこの結果セットを返します。  
+2.  *名前*が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型またはユーザー定義データ型である場合、 **sp_help**はこの結果セットを返します。  
   
     |列名|データ型|説明|  
     |-----------------|---------------|-----------------|  
@@ -105,7 +105,7 @@ sp_help [ [ @objname = ] 'name' ]
         |列名|データ型|説明|  
         |-----------------|---------------|-----------------|  
         |**ID**|**nvarchar (** 128 **)**|データ型が id として宣言されている列の名前。|  
-        |**シード**|**numeric**|Id 列の開始値。|  
+        |**Seed**|**numeric**|Id 列の開始値。|  
         |**許容**|**numeric**|この列の値に使用する増分です。|  
         |**レプリケーション用ではない**|**int**|**Sqlrepl**などのレプリケーションログインでテーブルにデータを挿入するときに、IDENTITY プロパティは適用されません。<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -171,7 +171,7 @@ sp_help [ [ @objname = ] 'name' ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-returning-information-about-all-objects"></a>A. すべてのオブジェクトに関する情報を返す  
- 次の例では、 `master`データベース内の各オブジェクトに関する情報を一覧表示します。  
+ 次の例では、データベース内の各オブジェクトに関する情報を一覧表示し `master` ます。  
   
 ```  
 USE master;  
@@ -181,7 +181,7 @@ GO
 ```  
   
 ### <a name="b-returning-information-about-a-single-object"></a>B. 1つのオブジェクトに関する情報を返す  
- 次の例では、 `Person`テーブルに関する情報を表示します。  
+ 次の例では、テーブルに関する情報を表示し `Person` ます。  
   
 ```  
 USE AdventureWorks2012;  
