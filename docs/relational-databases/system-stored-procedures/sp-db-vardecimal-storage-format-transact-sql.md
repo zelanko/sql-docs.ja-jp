@@ -20,19 +20,19 @@ helpviewer_keywords:
 - database compression [SQL Server]
 - table compression [SQL Server]
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 91667feca7974f66233b7549af9f75838d2ce32d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108220"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831709"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベースの現在の vardecimal ストレージ形式の状態を返します。または、データベースで vardecimal ストレージ形式を有効にします。  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では、ユーザー データベースは常に有効になります。 で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]は、vardecimal ストレージ形式のデータベースを有効にする必要があります。  
+  データベースの現在の vardecimal ストレージ形式の状態を返します。または、データベースで vardecimal ストレージ形式を有効にします。  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では、ユーザー データベースは常に有効になります。 では、vardecimal ストレージ形式のデータベースを有効にする必要が [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] あります。  
   
 > [!IMPORTANT]  
 >  データベースの vardecimal ストレージ形式の状態を変更すると、バックアップとリカバリ、データベース ミラーリング、sp_attach_db、ログ配布、レプリケーションに影響が生じることがあります。  
@@ -47,11 +47,11 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @dbname= ]'*database_name*'  
- ストレージ形式を変更するデータベースの名前を指定します。 *database_name*は**sysname**であり、既定値はありません。 データベース名を省略すると、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内のすべてのデータベースの vardecimal ストレージ形式の状態が返されます。  
+ [ @dbname =] '*database_name*'  
+ ストレージ形式を変更するデータベースの名前を指定します。 *database_name*は**sysname**であり、既定値はありません。 データベース名を省略すると、のインスタンス内のすべてのデータベースの vardecimal ストレージ形式の状態 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が返されます。  
   
- [ @vardecimal_storage_format= ]' | ' の {'オフ '}  
- vardecimal ストレージ形式を有効にするかどうかを指定します。 @vardecimal_storage_format を ON または OFF にできます。 パラメーターは**varchar (3)**,、既定値はありません。 データベース名が指定されて@vardecimal_storage_formatいるが省略されている場合は、指定されたデータベースの現在の設定が返されます。 この引数は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンには影響しません。  
+ [ @vardecimal_storage_format =] {' (' | ' 上)オフ '}  
+ vardecimal ストレージ形式を有効にするかどうかを指定します。 @vardecimal_storage_format を ON または OFF にできます。 パラメーターは**varchar (3)**,、既定値はありません。 データベース名が指定されているが省略されている場合は、 @vardecimal_storage_format 指定されたデータベースの現在の設定が返されます。 この引数は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンには影響しません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -61,7 +61,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  @vardecimal_storage_format引数が指定されていない場合は、データベース名と Vardecimal 状態の列が返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  sp_db_vardecimal_storage_format は vardecimal 状態を返しますが、vardecimal 状態を変更することはできません。  
   
  次の場合、sp_db_vardecimal_storage_format は失敗します。  
@@ -70,7 +70,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
 -   データベースのミラーリングが有効になっています。  
   
--   の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エディションでは、vardecimal ストレージ形式はサポートされていません。  
+-   のエディションで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、vardecimal ストレージ形式はサポートされていません。  
   
  Vardecimal ストレージ形式の状態を OFF に変更するには、データベースを単純復旧モードに設定する必要があります。 データベースを単純復旧モードに設定した場合、ログ チェーンは分断されます。 vardecimal ストレージ形式の状態を OFF に設定した後は、完全データベース バックアップを実行してください。  
   

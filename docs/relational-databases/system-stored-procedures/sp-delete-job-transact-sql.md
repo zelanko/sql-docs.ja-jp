@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 53bb2daacf55bf86693f2e083262083d7cbff22b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72306268"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831250"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 `[ @delete_history = ] delete_history`ジョブの履歴を削除するかどうかを指定します。 *delete_history*は**ビット**,、既定値は**1**です。 *Delete_history*が**1**の場合、ジョブのジョブ履歴は削除されます。 *Delete_history*が**0**の場合、ジョブ履歴は削除されません。  
   
- ジョブが削除され、履歴が削除されていない場合、ジョブの履歴情報は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントのグラフィカルユーザーインターフェイスのジョブ履歴に表示されませんが、情報は**msdb**データベースの**sysjobhistory**テーブルに残ります。  
+ ジョブが削除され、履歴が削除されていない場合、ジョブの履歴情報はエージェントのグラフィカルユーザーインターフェイスのジョブ履歴に表示されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、情報は**msdb**データベースの**sysjobhistory**テーブルに残ります。  
   
 `[ @delete_unused_schedule = ] delete_unused_schedule`他のジョブにアタッチされていない場合に、このジョブにアタッチされているスケジュールを削除するかどうかを指定します。 *delete_unused_schedule*は**ビット**,、既定値は**1**です。 *Delete_unused_schedule*が**1**の場合、そのスケジュールを参照するジョブが他にない場合、このジョブにアタッチされているスケジュールは削除されます。 *Delete_unused_schedule*が**0**の場合、スケジュールは削除されません。  
   
@@ -61,12 +61,12 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
- ** \@Originating_server**引数は、内部使用のために予約されています。  
+## <a name="remarks"></a>解説  
+ ** \@ Originating_server**引数は、内部使用のために予約されています。  
   
- ** \@Delete_unused_schedule**引数は、どのジョブにもアタッチされていないスケジュールを自動的に削除することによって、以前のバージョンの SQL Server との下位互換性を提供します。 このパラメーターでは、既定で互換動作が設定されることに注意してください。 ジョブにアタッチされていないスケジュールを保持するには、 ** \@delete_unused_schedule**引数として値**0**を指定する必要があります。  
+ ** \@ Delete_unused_schedule**引数は、どのジョブにもアタッチされていないスケジュールを自動的に削除することによって、以前のバージョンの SQL Server との下位互換性を提供します。 このパラメーターでは、既定で互換動作が設定されることに注意してください。 ジョブにアタッチされていないスケジュールを保持するには、 ** \@ delete_unused_schedule**引数として値**0**を指定する必要があります。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   

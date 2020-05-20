@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_nonclustered_index_stats
 ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 726fd7d44ed64dfee609ad29181a2077364d72e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c66bc0d20274819de2c9dc1b4a20e125e6e9044
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026789"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830813"
 ---
 # <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>dm_db_xtp_nonclustered_index_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68026789"
   
  DML 操作中やデータベースがオンラインになったときに、インデックスの利用状況を把握して監視するには、dm_db_xtp_nonclustered_index_stats を使用します。 メモリ最適化テーブルを含むデータベースを再起動すると、一度に1行ずつメモリに挿入することによってインデックスが作成されます。 ページ分割、マージ、および統合の数は、データベースがオンラインになったときにインデックスを構築するために実行された作業を理解するのに役立ちます。 また、一連の DML 操作の前後にこれらのカウントを確認することもできます。  
   
- 再試行回数が多い場合は、同時実行の問題を示しています。サポート[!INCLUDE[msCoName](../../includes/msconame-md.md)]にお問い合わせください。  
+ 再試行回数が多い場合は、同時実行の問題を示しています。サポートにお問い合わせ [!INCLUDE[msCoName](../../includes/msconame-md.md)] ください。  
   
  メモリ最適化された非クラスター化インデックスの詳細については、 [SQL Server インメモリ OLTP の概要](https://t.co/T6zToWc6y6)、ページ17を参照してください。  
   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobserver
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a2f4b2e8dbcf8e8427f51388c7bead75263d95a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4499183a8cf5019fe7a4ce10bdb9ffc83726551a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130641"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831204"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,16 +53,16 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールのメンバーである必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 `SEATTLE2`ジョブの`Weekly Sales Backups`処理からサーバーを削除します。  
+ 次の例では、 `SEATTLE2` ジョブの処理からサーバーを削除し `Weekly Sales Backups` ます。  
   
 > [!NOTE]  
->  この例では、 `Weekly Sales Backups`ジョブが既に作成されていることを前提としています。  
+>  この例では、ジョブが既に作成されていることを前提としてい `Weekly Sales Backups` ます。  
   
 ```  
 USE msdb ;  

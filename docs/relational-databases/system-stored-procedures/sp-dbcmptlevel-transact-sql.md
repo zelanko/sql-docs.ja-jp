@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbcmptlevel
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0f6ffcb7a43fbfc2a840cbbbeb95de4bbb875cbe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 69b98f779a30e15a83e7ce6eed681f8c7c0df04b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108209"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831688"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="arguments"></a>引数  
 `[ @dbname = ] name`互換性レベルを変更するデータベースの名前を指定します。 データベース名は、識別子の規則に従っている必要があります。 *名前*は**sysname**,、既定値は NULL です。  
   
-`[ @new_cmptlevel = ] version`データベースに互換性を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]持たせるのバージョンを指定します。 *version*は**tinyint**,、既定値は NULL です。 値は、次のいずれかである必要があります。  
+`[ @new_cmptlevel = ] version`データベースに互換性を持たせるのバージョンを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定します。 *version*は**tinyint**,、既定値は NULL です。 値は、次のいずれかである必要があります。  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -63,9 +63,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="result-sets"></a>結果セット  
  パラメーターが指定されていない場合、または*name*パラメーターが指定されていない場合、 **sp_dbcmptlevel**はエラーを返します。  
   
- *Name*が指定されて*いない場合、は* [!INCLUDE[ssDE](../../includes/ssde-md.md)] 、指定されたデータベースの現在の互換性レベルを表示するメッセージを返します。  
+ *Name*が指定されて*いない場合、は*、指定された [!INCLUDE[ssDE](../../includes/ssde-md.md)] データベースの現在の互換性レベルを表示するメッセージを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  互換性レベルの詳細については、「 [ALTER Database Compatibility Level &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  

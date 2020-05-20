@@ -18,15 +18,15 @@ helpviewer_keywords:
 - query_store_query catalog view
 - sys.query_store_query catalog view
 ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5b7eea64a807af96094767ef5aca00167d5946c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 073c90b18d9f6fb8b75bf5da44f3d3817d8f296c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067961"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831420"
 ---
 # <a name="sysquery_store_query-transact-sql"></a>query_store_query (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "68067961"
 |**avg_compile_memory_kb**|**float**|メモリの統計情報をコンパイルします。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
 |**last_compile_memory_kb**|**bigint**|メモリの統計情報をコンパイルします。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
 |**max_compile_memory_kb**|**bigint**|メモリの統計情報をコンパイルします。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**is_clouddb_internal_query**|**bit**|オンプレミス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では常に0です。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
+|**is_clouddb_internal_query**|**bit**|オンプレミスでは常に 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
   
 ## <a name="permissions"></a>アクセス許可  
  **VIEW DATABASE STATE**権限が必要です。  
@@ -77,7 +77,7 @@ ms.locfileid: "68067961"
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [クエリストアを使用したパフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのクエリストア](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  

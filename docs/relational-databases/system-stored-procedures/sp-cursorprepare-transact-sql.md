@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 641086797c9d6b8ddf6a86a83de1b5d7b69dcb39
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165912"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831718"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,14 +61,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *options*  
  カーソル結果セット列の説明を返す省略可能なパラメーターです。 *オプション*には、次の**int**入力値が必要です。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  スクロールオプション。 *scrollopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,7 +90,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  同時実行制御オプション。 *ccopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (以前の LOCKCC)|  
@@ -104,15 +104,15 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- *同様 scrollpt,* と同様に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、では、要求されたものとは異なる値を割り当てることができます。  
+ *同様 scrollpt,* と同様に、では、要求されたものとは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 異なる値を割り当てることができます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  RPC 状態パラメーターは、次のいずれかになります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|0|成功|  
-|0x0001|失敗|  
+|0|Success|  
+|0x0001|障害|  
 |1FF6|メタデータを返せませんでした。<br /><br /> 注: これは、ステートメントによって結果セットが生成されないためです。たとえば、INSERT ステートメントや DDL ステートメントなどです。|  
   
 ## <a name="examples"></a>使用例  
@@ -144,7 +144,7 @@ exec sp_cursorclose @p2
  
  *Stmt*がパラメーター化され、 *scrollopt* PARAMETERIZED_STMT 値が ON の場合、文字列の形式は次のようになります。  
   
- { * \<ローカル変数名> * *\<データ型>* }[ ,...*n* ]  
+ { * \< ローカル変数名> * * \< データ型>* } [,...*n* ]  
   
 ## <a name="see-also"></a>参照  
  [sp_cursorexecute &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

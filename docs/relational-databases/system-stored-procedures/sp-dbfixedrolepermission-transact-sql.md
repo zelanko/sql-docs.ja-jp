@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbfixedrolepermission
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fe4c8864856ef9b324a5f44b4811cfff4e8de218
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180117"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831687"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  固定データベース ロールの権限を表示します。 **sp_dbfixedrolepermission**では、に[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]正しい情報が返されます。 出力には、に[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]実装された権限階層への変更は反映されません。 詳細については、「[データベースレベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles)」を参照してください。これには、固定データベースロールの一覧と、それに対応する権限が表示されます。  
+  固定データベース ロールの権限を表示します。 **sp_dbfixedrolepermission**では、に正しい情報が返さ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] れます。 出力には、に実装された権限階層への変更は反映されません [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 詳細については、「[データベースレベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles)」を参照してください。これには、固定データベースロールの一覧と、それに対応する権限が表示されます。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -42,7 +42,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @rolename = ] 'role'`有効な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定データベースロールの名前を指定します。 *role*の部分は**sysname**で、既定値は NULL です。 *Role*が指定されていない場合は、すべての固定データベースロールの権限が表示されます。  
+`[ @rolename = ] 'role'`有効な固定データベースロールの名前を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *role*の部分は**sysname**で、既定値は NULL です。 *Role*が指定されていない場合は、すべての固定データベースロールの権限が表示されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -52,9 +52,9 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|固定データベース ロールの名前。|  
-|[**アクセス許可**]|**nvarchar (70)**|**Dbfixedrole**に関連付けられている権限|  
+|**権限**|**nvarchar (70)**|**Dbfixedrole**に関連付けられている権限|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  固定データベースロールの一覧を表示するには、 **sp_helpdbfixedrole**を実行します。 次の表は、固定データベースロールを示しています。  
   
 |固定データベースロール|説明|  
@@ -71,7 +71,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
   
  **Db_owner**固定データベースロールのメンバーは、他のすべての固定データベースロールの権限を持っています。 固定サーバーロールの権限を表示するには、 **sp_srvrolepermission**を実行します。  
   
- 結果セットには、 [!INCLUDE[tsql](../../includes/tsql-md.md)]実行可能なステートメントと、データベースロールのメンバーによって実行可能なその他の特別な操作が含まれます。  
+ 結果セットには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 実行可能なステートメントと、データベースロールのメンバーによって実行可能なその他の特別な操作が含まれます。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  

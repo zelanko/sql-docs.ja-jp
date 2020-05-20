@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 25d292ed7f45d921d2fc9eafbc1d2d5fe5912dbe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278183"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830230"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,15 +54,15 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`デタッチされているデータベースに関連付けられているフルテキストインデックスファイルが、データベースのデタッチ操作中に削除されないように指定します。 *KeepFulltextIndexFile*は**nvarchar (10)** 値、既定値は**true**です。 *KeepFulltextIndexFile*が**false**の場合、データベースに関連付けられているすべてのフルテキストインデックスファイルとフルテキストインデックスのメタデータは、データベースが読み取り専用でない限り削除されます。 NULL または**true**の場合、フルテキスト関連のメタデータが保持されます。  
   
 > [!IMPORTANT]
->  ** \@Keepfulltextindexfile**パラメーターは、将来のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では削除される予定です。 新しい開発作業ではこのパラメーターを使用しないようにし、現在このパラメーターを使用しているアプリケーションはできるだけ早く変更してください。  
+>  ** \@ Keepfulltextindexfile**パラメーターは、将来のバージョンのでは削除される予定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。 新しい開発作業ではこのパラメーターを使用しないようにし、現在このパラメーターを使用しているアプリケーションはできるだけ早く変更してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベースをデタッチすると、そのすべてのメタデータが削除されます。 データベースが任意のログインアカウントの既定のデータベースであった場合、 **master**が既定のデータベースになります。  
   
 > [!NOTE]  
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  データベースを SINGLE_USER に設定する前に、AUTO_UPDATE_STATISTICS_ASYNC オプションが OFF に設定されていることを確認します。 このオプションが ON に設定されていると、統計の更新に使用されるバックグラウンド スレッドによってデータベースへの接続が使用されるため、シングル ユーザー モードではデータベースにアクセスできなくなります。 詳細については、「[データベースをシングルユーザーモードに設定する](../databases/set-a-database-to-single-user-mode.md)」を参照してください。
 
- たとえば、次`ALTER DATABASE`のステートメントは、すべての現在の[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]ユーザーがデータベースから切断された後に、データベースへの排他アクセスを取得します。  
+ たとえば、次のステートメントは、 `ALTER DATABASE` すべての現在のユーザーがデータベースから切断された後に、データベースへの排他アクセスを取得し [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ます。  
   
 ```  
 USE master;  
@@ -121,13 +121,13 @@ GO
  **Sysadmin**固定サーバーロールのメンバーシップ、またはデータベースの**db_owner**ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 、 *skipchecks チェック*を true に設定してデータベースをデタッチします。  
+ 次の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] *skipchecks チェック*を true に設定してデータベースをデタッチします。  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
 ```  
   
- 次の例では[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 、データベースをデタッチし、フルテキストインデックスファイルとフルテキストインデックスのメタデータを保持します。 このコマンドでは、UPDATE STATISTICS が実行されます。これは既定の動作です。  
+ 次の例では、データベースをデタッチし、フル [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テキストインデックスファイルとフルテキストインデックスのメタデータを保持します。 このコマンドでは、UPDATE STATISTICS が実行されます。これは既定の動作です。  
   
 ```  
 exec sp_detach_db @dbname='AdventureWorks2012'  

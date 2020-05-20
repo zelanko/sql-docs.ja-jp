@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsesnapshotfolder
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dcc7c4031253f83df49b45feae17449814af3fc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 67d4520998dd87c14a817ec05bc14c987e4810a1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768981"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831743"
 ---
 # <a name="sp_browsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar(512)**|スナップショットディレクトリへの完全パスです。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_browsesnapshotfolder**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  *サブスクライバー*と*subscriber_db*のフィールドが NULL のままになっている場合、ストアドプロシージャは、パブリケーションに対して検索できる最新のスナップショットのスナップショットフォルダーを返します。 *サブスクライバー*と*subscriber_db*のフィールドが指定されている場合、ストアドプロシージャは、指定されたサブスクリプションのスナップショットフォルダーを返します。 パブリケーションに対するスナップショットが生成されていない場合は、空の結果セットが返されます。  

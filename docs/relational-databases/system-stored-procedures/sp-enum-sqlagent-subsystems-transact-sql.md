@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_sqlagent_subsystems
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 963cbcea93091eb48b8c73214ee3bc509f118e67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 356357df8d2c8a3202a5ff088ba2c277aa9fd73c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124673"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831126"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  エージェントサブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システムの一覧を表示します。  
+  エージェントサブシステムの一覧を表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,10 +55,10 @@ sp_enum_sqlagent_subsystems
 |**start_entry_point**|**nvarchar(30)**|ジョブステップの実行中に SQL Server エージェント呼び出しを行う手順。|  
 |**event_entry_point**|**nvarchar(30)**|ジョブステップの実行中に SQL Server エージェント呼び出しを行う手順。|  
 |**stop_entry_point**|**nvarchar(30)**|ジョブステップの実行中に SQL Server エージェント呼び出しを行う手順。|  
-|**max_worker_threads**|**int**|このサブシステムに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]対してエージェントが開始するスレッドの最大数。|  
+|**max_worker_threads**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このサブシステムに対してエージェントが開始するスレッドの最大数。|  
 |**subsystem_id**|**int**|サブシステムの識別子|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この手順では、インスタンスで使用可能なサブシステムの一覧を示します。  
   
 ## <a name="permissions"></a>アクセス許可  

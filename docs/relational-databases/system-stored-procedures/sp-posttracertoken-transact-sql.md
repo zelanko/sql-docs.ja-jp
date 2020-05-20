@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_posttracertoken
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7629c25264f0b45d68e29e947b1d5c40d02707e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 42401f5d99d7cf89563a0088260ab21e9df9fd67
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72041183"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831026"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,12 +45,12 @@ sp_posttracertoken [ @publication = ] 'publication'
   
 `[ @tracer_token_id = ] _tracer_token_id OUTPUT`挿入されるトレーサートークンの ID を示します。 *tracer_token_id*は**int**で、既定値は NULL です。これは出力パラメーターです。 この値を使用して[sp_helptracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)を実行したり、 [transact-sql &#40;を](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)最初に実行せずに transact-sql&#41;を[sp_deletetracertokenhistory](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)することができます。  
   
-`[ @publisher = ] 'publisher'`以外[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**であり、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに対して指定することはできません。  
+`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**であり、既定値は NULL です。パブリッシャーに対して指定することはできません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_posttracertoken**は、トランザクションレプリケーションで使用します。  
   
 ## <a name="example"></a>例  

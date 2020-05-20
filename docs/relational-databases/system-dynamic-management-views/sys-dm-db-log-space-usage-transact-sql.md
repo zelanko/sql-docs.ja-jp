@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_log_space_usage dynamic management view
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfa102163012456e9b2660d26cb54dec3d58cfbb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4ded8d065c43dcabdf9e57b5940e7c1baa0edd8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264577"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829514"
 ---
 # <a name="sysdm_db_log_space_usage-transact-sql"></a>dm_db_log_space_usage (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "68264577"
 |total_log_size_in_bytes |**bigint** |ログのサイズ  |
 |used_log_space_in_bytes |**bigint** |ログの占有サイズ  |     
 |used_log_space_in_percent |**real** |ログサイズの合計に対するログの占有サイズ。 |
-|log_space_in_bytes_since_last_backup |**bigint** |前回のログバックアップ以降に使用された領域のサイズ <br />**適用対象:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)]から[!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|
+|log_space_in_bytes_since_last_backup |**bigint** |前回のログバックアップ以降に使用された領域のサイズ <br />**適用対象:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)]から [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。|
     
   
 ## <a name="permissions"></a>アクセス許可  
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
 ## <a name="examples"></a>例  
   

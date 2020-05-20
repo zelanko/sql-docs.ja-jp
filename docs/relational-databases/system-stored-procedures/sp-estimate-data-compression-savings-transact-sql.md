@@ -16,14 +16,14 @@ helpviewer_keywords:
 - compression [SQL Server], estimating
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2ecc9f44e28296b79cc5e1dc9a9c70caa93bd94f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 37c6a32b7970d8bfb0a44eaf407914c5de27f593
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71682139"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831099"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "71682139"
   要求されたオブジェクトの現在のサイズを返し、要求された圧縮状態のオブジェクトサイズを推定します。 圧縮は、テーブル全体またはテーブルの一部について評価できます。 これには、ヒープ、クラスター化インデックス、非クラスター化インデックス、列ストアインデックス、インデックス付きビュー、およびテーブルとインデックスのパーティションが含まれます。 オブジェクトは、行、ページ、列ストア、または列ストアアーカイブの圧縮を使用して圧縮できます。 テーブル、インデックス、またはパーティションが既に圧縮されている場合は、この手順を使用して、テーブル、インデックス、またはパーティションが上げの場合のサイズを見積もることができます。  
   
 > [!NOTE]
-> 圧縮と**sp_estimate_data_compression_savings**は、のすべての[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
+> 圧縮と**sp_estimate_data_compression_savings**は、のすべてのエディションで使用できるわけではありません [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
  要求された圧縮設定を使用した場合のオブジェクト サイズを推定するために、このストアド プロシージャでは、ソース オブジェクトがサンプリングされ、そのデータが tempdb に作成された同等のテーブルとインデックスに読み込まれます。 さらに、tempdb に作成されたテーブルまたはインデックスが要求された設定に圧縮され、圧縮で削減される推定領域が計算されます。  
   
@@ -55,21 +55,21 @@ sp_estimate_data_compression_savings
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @schema_name= ]'*schema_name*'  
+ [ @schema_name =] '*schema_name*'  
  テーブルまたはインデックス付きビューを含んでいるデータベース スキーマの名前です。 *schema_name*は**sysname**です。 *Schema_name*が NULL の場合は、現在のユーザーの既定のスキーマが使用されます。  
   
- [ @object_name= ]'*object_name*'  
+ [ @object_name =] '*object_name*'  
  インデックスがあるテーブルまたはインデックス付きビューの名前を指定します。 *object_name* は **sysname** です。  
   
- [ @index_id= ]*index_id*  
+ [ @index_id =] *index_id*  
  インデックスの ID です。 *index_id*は**int**で、次のいずれかの値を指定できます。インデックスの id 番号、NULL、または、 *object_id*がヒープの場合は0です。 ベーステーブルまたはビューのすべてのインデックスに関する情報を返すには、NULL を指定します。 NULL を指定する場合は、 *partition_number*に null も指定する必要があります。  
   
- [ @partition_number= ]*partition_number*  
+ [ @partition_number =] *partition_number*  
  オブジェクトのパーティション番号です。 *partition_number*は**int**で、次のいずれかの値を指定できます。インデックスまたはヒープのパーティション番号、NULL、または1、非パーティションインデックスまたはヒープ。  
   
  パーティションを指定するには、 [$partition](../../t-sql/functions/partition-transact-sql.md)関数を指定することもできます。 所有するオブジェクトのすべてのパーティションについて情報を返すには、NULL を指定します。  
   
- [ @data_compression= ]'*data_compression*'  
+ [ @data_compression =] '*data_compression*'  
  評価する圧縮の種類を指定します。 *data_compression* 、NONE、ROW、PAGE、列ストア、または COLUMNSTORE_ARCHIVE のいずれかの値を指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -89,8 +89,8 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (KB)|**bigint**|現在の圧縮設定を使用したサンプルのサイズ。 この列には、断片化も含まれます。|  
 |sample_size_with_requested_compression_setting (KB)|**bigint**|要求された圧縮設定を使用して作成されるサンプルのサイズ。また、該当する場合は、既存の FILL FACTOR と断片化はありません。|  
   
-## <a name="remarks"></a>Remarks  
- を`sp_estimate_data_compression_savings`使用すると、行、ページ、列ストア、または列ストアアーカイブの圧縮に対してテーブルまたはパーティションを有効にした場合に発生する節約量を見積もることができます。 たとえば、行の平均サイズを40% 削減できる場合は、オブジェクトのサイズを40% 小さくすることができます。 これは FILL FACTOR と行サイズに左右されるため、領域を削減できない場合もあります。 たとえば、8000バイトの長さの行があり、そのサイズを40% 削減した場合でも、データページには1つの行だけを収めることができます。 領域は削減されません。  
+## <a name="remarks"></a>解説  
+ を使用 `sp_estimate_data_compression_savings` すると、行、ページ、列ストア、または列ストアアーカイブの圧縮に対してテーブルまたはパーティションを有効にした場合に発生する節約量を見積もることができます。 たとえば、行の平均サイズを40% 削減できる場合は、オブジェクトのサイズを40% 小さくすることができます。 これは FILL FACTOR と行サイズに左右されるため、領域を削減できない場合もあります。 たとえば、8000バイトの長さの行があり、そのサイズを40% 削減した場合でも、データページには1つの行だけを収めることができます。 領域は削減されません。  
   
  `sp_estimate_data_compression_savings` を実行してテーブルが増大するという結果が示される場合は、テーブルの多くの行でデータ型の有効桁数がほとんど使用されており、圧縮された形式に必要なわずかなオーバーヘッドが積み重なって、圧縮による削減量を上回ることを意味しています。 このようなまれなケースでは、圧縮を使用しないでください。  
   
@@ -103,16 +103,16 @@ sp_estimate_data_compression_savings
  インデックスまたはパーティション ID が存在しない場合、結果は返されません。  
   
 ## <a name="permissions"></a>アクセス許可  
- テーブル`SELECT`に対する権限が必要です。  
+ テーブルに対する権限が必要です `SELECT` 。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  SQL Server 2019 より前では、このプロシージャは列ストアインデックスには適用されませんでした。したがって、データ圧縮パラメーターの列ストアと COLUMNSTORE_ARCHIVE は受け入れられませんでした。  SQL Server 2019 以降では、列ストアインデックスは、推定のソースオブジェクトとしても、要求された圧縮の種類としても使用できます。
 
  > [!IMPORTANT]
- > メモリ最適化された[TempDB メタデータ](../databases/tempdb-database.md#memory-optimized-tempdb-metadata)が[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]で有効になっている場合、一時テーブルでの列ストアインデックスの作成はサポートされていません。 この制限により、メモリ最適化された TempDB メタデータが有効になっている場合、列ストアおよび COLUMNSTORE_ARCHIVE データ圧縮パラメーターで sp_estimate_data_compression_savings はサポートされません。
+ > メモリ最適化された[TempDB メタデータ](../databases/tempdb-database.md#memory-optimized-tempdb-metadata)がで有効になっている場合 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 、一時テーブルでの列ストアインデックスの作成はサポートされていません。 この制限により、メモリ最適化された TempDB メタデータが有効になっている場合、列ストアおよび COLUMNSTORE_ARCHIVE データ圧縮パラメーターで sp_estimate_data_compression_savings はサポートされません。
 
 ## <a name="considerations-for-columnstore-indexes"></a>列ストア インデックスに関する考慮事項
- 以降で[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]は`sp_estimate_compression_savings` 、列ストアと列ストアアーカイブの両方の圧縮の推定がサポートされています。 ページと行の圧縮とは異なり、列ストア圧縮をオブジェクトに適用するには、新しい列ストアインデックスを作成する必要があります。 このため、このプロシージャの列ストアと COLUMNSTORE_ARCHIVE オプションを使用する場合、プロシージャに提供されたソースオブジェクトの型によって、圧縮サイズの推定に使用される列ストアインデックスの種類が決まります。 次の表は、 @data_compressionパラメーターが列ストアまたは COLUMNSTORE_ARCHIVE に設定されている場合に、各ソースオブジェクトの種類の圧縮節約量を推定するために使用される参照オブジェクトを示しています。
+ 以降で [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] は、 `sp_estimate_compression_savings` 列ストアと列ストアアーカイブの両方の圧縮の推定がサポートされています。 ページと行の圧縮とは異なり、列ストア圧縮をオブジェクトに適用するには、新しい列ストアインデックスを作成する必要があります。 このため、このプロシージャの列ストアと COLUMNSTORE_ARCHIVE オプションを使用する場合、プロシージャに提供されたソースオブジェクトの型によって、圧縮サイズの推定に使用される列ストアインデックスの種類が決まります。 次の表は、 @data_compression パラメーターが列ストアまたは COLUMNSTORE_ARCHIVE に設定されている場合に、各ソースオブジェクトの種類の圧縮節約量を推定するために使用される参照オブジェクトを示しています。
 
  |ソースオブジェクト|参照オブジェクト|
  |-----------------|---------------|
@@ -125,7 +125,7 @@ sp_estimate_data_compression_savings
 > [!NOTE]  
 > 行ストアのソースオブジェクト (クラスター化インデックス、非クラスター化インデックス、またはヒープ) から列ストア圧縮を推定するときに、列ストアインデックスでサポートされていないデータ型を持つ列がソースオブジェクトに存在する場合、sp_estimate_compression_savings はエラーで失敗します。
 
- 同様に`@data_compression` 、パラメーターが`NONE`、 `ROW`、または`PAGE`に設定され、ソースオブジェクトが列ストアインデックスの場合、使用される参照オブジェクトの概要を次の表に示します。
+ 同様に、 `@data_compression` パラメーターが、、またはに設定され、 `NONE` `ROW` `PAGE` ソースオブジェクトが列ストアインデックスの場合、使用される参照オブジェクトの概要を次の表に示します。
 
  |ソースオブジェクト|参照オブジェクト|
  |-----------------|---------------|

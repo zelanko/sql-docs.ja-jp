@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_queue system table
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 914cf3ad65c881383a6d625c07d4fb5ed028b36a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7763f7406f865194743c43a6d182466767799b41
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68080015"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829843"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68080015"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**文書**|**sysname**|パブリッシャーの名前です。|  
+|**publisher**|**sysname**|パブリッシャーの名前です。|  
 |**publisher_db**|**sysname**|パブリケーションデータベースの名前です。|  
 |**レプリケーション**|**sysname**|パブリケーションの名前を指定します。|  
 |**tranid**|**sysname**|キューに登録されたコマンドが実行されたときのトランザクション ID。|  

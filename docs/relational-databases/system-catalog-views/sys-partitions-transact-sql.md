@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.partitions catalog view
 ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2531dde9237734d3c6eb4b3ea96ed2ac18e9d399
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 39ae65e980d8f35f3a59d2f1d17481fed4d2a596
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982795"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831532"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "73982795"
 |hobt_id|**bigint**|このパーティションの行を含むデータヒープまたは B ツリー (HoBT) の ID を示します。|  
 |rows|**bigint**|このパーティション内の行の概数を示します。|  
 |filestream_filegroup_id|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> このパーティションに格納されている FILESTREAM ファイルグループの ID を示します。|  
-|data_compression|**tinyint**|各パーティションの圧縮の状態を示します。<br /><br /> 0 = NONE <br />1 = 行 <br />2 = ページ <br />3 = 列ストア: 以降**に適用さ**れます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br />4 = COLUMNSTORE_ARCHIVE: 以降**に適用さ**れます。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> **注:** フルテキストインデックスは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]どのエディションでも圧縮されます。|  
+|data_compression|**tinyint**|各パーティションの圧縮の状態を示します。<br /><br /> 0 = NONE <br />1 = 行 <br />2 = ページ <br />3 = 列ストア: 以降**に適用さ**れます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br />4 = COLUMNSTORE_ARCHIVE:**以降に適用さ**れます。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> **注:** フルテキストインデックスは、のどのエディションでも圧縮され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |data_compression_desc|**nvarchar(60)**|各パーティションの圧縮の状態を示します。 行ストア テーブルに指定できる値は、NONE、ROW、および PAGE です。 列ストアテーブルに指定できる値は、列ストアと COLUMNSTORE_ARCHIVE です。|  
   
 ## <a name="permissions"></a>アクセス許可  

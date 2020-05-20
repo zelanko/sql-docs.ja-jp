@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_replica_states dynamic management view
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 05964e0557cb08e874424af542b8fc8a57ce0835
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: be2e9ce380f9d761c29e86cef20f87556b634c3c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900621"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829402"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "67900621"
 |**replica_id**|**uniqueidentifier**|レプリカの一意識別子。|  
 |**group_id**|**uniqueidentifier**|可用性グループの一意識別子。|  
 |**is_local**|**bit**|レプリカがローカルであるかどうか。次のいずれかになります。<br /><br /> 0 = ローカルサーバーインスタンスによってホストされるプライマリレプリカを持つ可用性グループ内のリモートセカンダリレプリカを示します。 この値は、プライマリレプリカの場所でのみ発生します。<br /><br /> 1 = ローカルレプリカを示します。 セカンダリ レプリカの場合、これはそのレプリカが属する可用性グループに対して使用できる唯一の値です。|  
-|**role**|**tinyint**|ローカル[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]レプリカまたは接続されているリモートレプリカの現在のロール。次のいずれかになります。<br /><br /> 0 = 解決中<br /><br /> 1 = プライマリ<br /><br /> 2 = セカンダリ<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] のロールについては、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。|  
+|**role**|**tinyint**|[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]ローカルレプリカまたは接続されているリモートレプリカの現在のロール。次のいずれかになります。<br /><br /> 0 = 解決中<br /><br /> 1 = プライマリ<br /><br /> 2 = セカンダリ<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] のロールについては、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。|  
 |**role_desc**|**nvarchar(60)**|**ロール**の説明。次のいずれかになります。<br /><br /> 修復<br /><br /> PRIMARY<br /><br /> SECONDARY|  
 |**operational_state**|**tinyint**|レプリカの現在の操作状態。次のいずれかになります。<br /><br /> 0 = フェールオーバー保留中<br /><br /> 1 = 保留中<br /><br /> 2 = オンライン<br /><br /> 3 = オフライン<br /><br /> 4 = 失敗<br /><br /> 5 = 失敗、クォーラムなし<br /><br /> NULL = レプリカがローカルでない<br /><br /> 詳細については、このトピックの「[役割と操作状態](#RolesAndOperationalStates)」を参照してください。|  
-|**動作\_状態\_の説明**|**nvarchar(60)**|**動作\_状態**の説明。次のいずれかになります。<br /><br /> PENDING_FAILOVER<br /><br /> PENDING<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> FAILED<br /><br /> FAILED_NO_QUORUM<br /><br /> NULL|  
-|**回復\_の正常性**|**tinyint**|[Dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)動的管理ビューの [**データベース\_の状態**] 列のロールアップ。 使用可能な値とその説明を次に示します。<br /><br /> 0: 処理中です。  少なくとも1つの結合されたデータベースのデータベース状態がオンライン以外です (**データベース\_の状態**が0ではありません)。<br /><br /> 1: オンライン。 すべての結合されたデータベースのデータベースの状態がオンラインになっています (**database_state**は0です)。<br /><br /> NULL: **is_local** = 0|  
+|**動作 \_ 状態の説明 \_**|**nvarchar(60)**|**動作 \_ 状態**の説明。次のいずれかになります。<br /><br /> PENDING_FAILOVER<br /><br /> PENDING<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> FAILED<br /><br /> FAILED_NO_QUORUM<br /><br /> NULL|  
+|**回復の \_ 正常性**|**tinyint**|[Dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)動的管理ビューの [**データベースの \_ 状態**] 列のロールアップ。 使用可能な値とその説明を次に示します。<br /><br /> 0: 処理中です。  少なくとも1つの結合されたデータベースのデータベース状態がオンライン以外です (**データベースの \_ 状態**が0ではありません)。<br /><br /> 1: オンライン。 すべての結合されたデータベースのデータベースの状態がオンラインになっています (**database_state**は0です)。<br /><br /> NULL: **is_local** = 0|  
 |**recovery_health_desc**|**nvarchar(60)**|**Recovery_health**の説明。次のいずれかになります。<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**同期\_の正常性**|**tinyint**|すべての参加している可用性データベース (*レプリカ*とも呼ばれます) とレプリカの可用性モード (同期コミットモードまたは非同期コミットモード) のデータベース同期状態 (**synchronization_state**) のロールアップを反映します。 ロールアップには、レプリカ上のデータベースに対する正常な累積状態が反映されます。 使用可能な値とその説明を次に示します。<br /><br /> 0: 異常です。   少なくとも1つの結合されたデータベースが未同期状態です。<br /><br /> 1: 部分的に正常です。 一部のレプリカが目標の同期状態ではありません: 同期コミット レプリカは SYNCHRONIZED である必要があり、非同期コミット レプリカは SYNCHRONIZING である必要があります。<br /><br /> 2: 正常。 すべてのレプリカが目標の同期状態です。同期コミットレプリカは同期され、非同期コミットレプリカは同期されています。|  
+|**同期の \_ 正常性**|**tinyint**|すべての参加している可用性データベース (*レプリカ*とも呼ばれます) とレプリカの可用性モード (同期コミットモードまたは非同期コミットモード) のデータベース同期状態 (**synchronization_state**) のロールアップを反映します。 ロールアップには、レプリカ上のデータベースに対する正常な累積状態が反映されます。 使用可能な値とその説明を次に示します。<br /><br /> 0: 異常です。   少なくとも1つの結合されたデータベースが未同期状態です。<br /><br /> 1: 部分的に正常です。 一部のレプリカが目標の同期状態ではありません: 同期コミット レプリカは SYNCHRONIZED である必要があり、非同期コミット レプリカは SYNCHRONIZING である必要があります。<br /><br /> 2: 正常。 すべてのレプリカが目標の同期状態です。同期コミットレプリカは同期され、非同期コミットレプリカは同期されています。|  
 |**synchronization_health_desc**|**nvarchar(60)**|**Synchronization_health**の説明。次のいずれかになります。<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> 戻ら|  
 |**connected_state**|**tinyint**|セカンダリレプリカが現在プライマリレプリカに接続されているかどうか。 次に、使用可能な値とその説明を示します。<br /><br /> 0: 切断されました。 切断された状態への可用性レプリカの応答は、そのロールによって異なります。プライマリレプリカでは、セカンダリレプリカが切断された場合、プライマリレプリカでセカンダリデータベースが同期されていないとマークされ、セカンダリが再接続するのを待機します。セカンダリレプリカでは、切断されていることを検出すると、セカンダリレプリカはプライマリレプリカへの再接続を試みます。<br /><br /> 1: 接続されています。<br /><br /> 各プライマリ レプリカでは、同じ可用性グループに含まれるすべてのセカンダリ レプリカの接続状態を追跡します。 セカンダリ レプリカでは、プライマリ レプリカの接続状態のみを追跡します。|  
 |**connected_state_desc**|**nvarchar(60)**|**Connection_state**の説明。次のいずれかになります。<br /><br /> DISCONNECTED<br /><br /> CONNECTED|  

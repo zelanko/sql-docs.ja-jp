@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_enumcustomresolvers
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 361a0d8e47372612eddf40cdf1663df2e70da0a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5282daf1aa889742e6926fe5b97632b664499bc4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124630"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831115"
 ---
 # <a name="sp_enumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 |**resolver_clsid**|**nvarchar (50)**|COM ベースの競合回避モジュールのクラス ID (CLSID) です。 ビジネスロジックハンドラーの場合、この列には0の CLSID 値が返されます。|  
 |**is_dotnet_assembly**|**bit**|ビジネス ロジック ハンドラーに対する登録かどうかを示します。<br /><br /> **0** = COM ベースの競合回避モジュール<br /><br /> **1** = ビジネスロジックハンドラー|  
 |**dotnet_assembly_name**|**nvarchar(255)**|ビジネス ロジック ハンドラーを実装している [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework アセンブリの名前です。|  
-|**dotnet_class_name**|**nvarchar(255)**|は、ビジネスロジックハンドラーを実装する<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>ためにをオーバーライドするクラスの名前です。|  
+|**dotnet_class_name**|**nvarchar(255)**|は、 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> ビジネスロジックハンドラーを実装するためにをオーバーライドするクラスの名前です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_enumcustomresolvers**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

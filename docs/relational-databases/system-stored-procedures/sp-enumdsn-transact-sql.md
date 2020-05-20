@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_enumdsn
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d84d366483cd5a887eb299b0f8d9208998e835c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 151b0f504080523e99fad839c17e02b786b619c0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124590"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831119"
 ---
 # <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_enumdsn
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**データソース名**|**sysname**|データソースの名前。|  
+|**データ ソース名**|**sysname**|データソースの名前。|  
 |**説明**|**varchar(255)**|データ ソースの説明です。|  
 |**Type**|**int**|データ ソースの種類です。<br /><br /> **1** = ODBC DSN<br /><br /> **3** = データソースの OLE DB|  
 |**プロバイダー名**|**varchar(255)**|OLE DB プロバイダーの名前です。 ODBC DSN の場合、値は NULL です。|  
   
-## <a name="remarks"></a>Remarks  
- すべて[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のサービスにユーザーコンテキストがあります。 ユーザーコンテキストは、ユーザーの ODBC データソースの定義を含むレジストリエントリのセットです。 ユーザーコンテキストは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されているユーザー名によって提供されます。  
+## <a name="remarks"></a>解説  
+ すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスにユーザーコンテキストがあります。 ユーザーコンテキストは、ユーザーの ODBC データソースの定義を含むレジストリエントリのセットです。 ユーザーコンテキストは、が実行されているユーザー名によって提供され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  たとえば、サーバーがシステムアカウントのユーザーコンテキストで実行されている場合、返されるデータソース名 (Dsn) はすべて、システムアカウントに関連付けられているシステム Dsn になります。 サーバーがプライベートユーザーアカウントで実行されている場合は、そのユーザーのそのプライベートアカウントに対して定義されている Dsn だけが返されます。  
   

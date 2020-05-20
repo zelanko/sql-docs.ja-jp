@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_droplinkedsrvlogin
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3040f585e10816d4f8664566be8af1523048db88
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097663"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830129"
 ---
 # <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  を実行している[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカルサーバー上のログインと、リンクサーバー上のログインとの間の既存のマッピングを削除します。  
+  を実行しているローカルサーバー上のログインと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リンクサーバー上のログインとの間の既存のマッピングを削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,14 +40,14 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @rmtsrvname = ] 'rmtsrvname'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインマッピングが適用されるリンクサーバーの名前を指定します。 *rmtsrvname*は**sysname**,、既定値はありません。 *rmtsrvname*は既に存在している必要があります。  
+`[ @rmtsrvname = ] 'rmtsrvname'`ログインマッピングが適用されるリンクサーバーの名前を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *rmtsrvname*は**sysname**,、既定値はありません。 *rmtsrvname*は既に存在している必要があります。  
   
-`[ @locallogin = ] 'locallogin'`リンクサーバー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *rmtsrvname*へのマッピングを持つローカルサーバー上のログインを指定します。 *locallogin*は**sysname**,、既定値はありません。 *Locallogin*から*rmtsrvname*へのマッピングが既に存在している必要があります。 NULL の場合、 **sp_addlinkedserver**によって作成された既定のマッピングは、ローカルサーバー上のすべてのログインをリンクサーバー上のログインにマップします。  
+`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リンクサーバー *rmtsrvname*へのマッピングを持つローカルサーバー上のログインを指定します。 *locallogin*は**sysname**,、既定値はありません。 *Locallogin*から*rmtsrvname*へのマッピングが既に存在している必要があります。 NULL の場合、 **sp_addlinkedserver**によって作成された既定のマッピングは、ローカルサーバー上のすべてのログインをリンクサーバー上のログインにマップします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ログインの既存のマッピングが削除されると、ローカルサーバーは、そのログインに代わってリンクサーバーに接続するときに、 **sp_addlinkedserver**によって作成された既定のマッピングを使用します。 既定のマッピングを変更するには、 **sp_addlinkedsrvlogin**を使用します。  
   
  既定のマッピングも削除された場合、 **sp_addlinkedsrvlogin**を使用して、リンクサーバーへのログインマッピングが明示的に指定されているログインだけが、リンクサーバーにアクセスできます。  
@@ -67,7 +67,7 @@ EXEC sp_droplinkedsrvlogin 'Accounts', 'Mary';
 ```  
   
 ### <a name="b-removing-the-default-login-mapping"></a>B. 既定のログインマッピングを削除しています  
- 次の例では、リンクサーバー `sp_addlinkedserver` `Accounts`でを実行して作成された既定のログインマッピングを削除します。  
+ 次の例では、リンクサーバーでを実行して作成された既定のログインマッピングを削除し `sp_addlinkedserver` `Accounts` ます。  
   
 ```  
 EXEC sp_droplinkedsrvlogin 'Accounts', NULL;  

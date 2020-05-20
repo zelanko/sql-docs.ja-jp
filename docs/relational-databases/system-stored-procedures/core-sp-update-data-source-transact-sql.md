@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a840c749222cc7c01fa1b1ff5a27489e0e9d322a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 207b27a4d7006f8181cbfe7a6cb6e072ee741d82
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942465"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829670"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>sp_update_data_source (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +46,22 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collection_set_uid = ]'*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  コレクション セットの GUID を指定します。 *collection_set_uid*は**uniqueidentifier**,、既定値はありません。 GUID を取得するには、msdb データベースの dbo.syscollector_collection_sets ビューにクエリを実行します。  
   
- [ @machine_name = ]'*machine_name*'  
+ [ @machine_name =] '*machine_name*'  
  コレクション セットが存在するサーバーの名前を指定します。 *machine_name*は**sysname**で、既定値はありません。  
   
- [ @named_instance = ]'*named_instance*'  
+ [ @named_instance =] '*named_instance*'  
  コレクションセットのインスタンスの名前です。 *named_instance*は**sysname**であり、既定値はありません。  
   
 > [!NOTE]  
->  *named_instance*には、コンピューター名と、 *computername*\\*instancename*という形式のインスタンス名で構成される完全修飾インスタンス名を指定する必要があります。  
+>  *named_instance*には、コンピューター名と、 *computername*instancename という形式のインスタンス名で構成される完全修飾インスタンス名を指定する必要があり \\ *instancename*ます。  
   
- [ @days_until_expiration = ]*days_until_expiration*  
+ [ @days_until_expiration =] *days_until_expiration*  
  スナップショット データ保持期間の日数を指定します。 *days_until_expiration*は**smallint**です。  
   
- [ @source_id = ]*source_id*  
+ [ @source_id =] *source_id*  
  更新元の一意の識別子。 *source_id*は**INT**で、出力として返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -77,7 +77,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="permissions"></a>アクセス許可  
  **Mdw_writer** (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データソース (この場合はディスク使用量コレクションセット) を更新し、有効期限までの日数を設定して、ソースの識別子を返します。 この例では、既定のインスタンスが使用されています。  
   
 ```  

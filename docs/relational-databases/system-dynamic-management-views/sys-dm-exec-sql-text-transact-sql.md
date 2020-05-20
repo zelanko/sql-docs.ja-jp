@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sql_text dynamic management function
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ff8d99bd31e2638aa63393fb5ba052f442bf75f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de6ed0a0b8f91157b61c7d38564c8ab0941f1c6c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936890"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830640"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 アドホッククエリの場合、SQL ハンドルは、サーバーに送信される SQL テキストに基づくハッシュ値であり、任意のデータベースからのものである可能性があります。 
 
 ストアドプロシージャ、トリガー、関数などのデータベースオブジェクトでは、SQL ハンドルはデータベース ID、オブジェクト ID、およびオブジェクト番号から取得されます。 
@@ -100,7 +100,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ### <a name="a-conceptual-example"></a>A. 概念例
 次に、 **sql_handle**を直接または**クロス適用**を使用して渡す方法を示す基本的な例を示します。
   1.  アクティビティを作成します。  
-の[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]新しいクエリウィンドウで、次の t-sql を実行します。   
+の新しいクエリウィンドウで、次の T-sql を実行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。   
       ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
@@ -111,7 +111,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
       ```
       
     2.  **クロス適用**を使用しています。  
-    **Dm_exec_requests**からの sql_handle は、**クロス適用**を使用して**dm_exec_sql_text**に渡されます。 新しいクエリウィンドウを開き、手順 1. で識別された spid を渡します。 この例では`59`、spid はとなります。
+    **Dm_exec_requests**からの sql_handle は、**クロス適用**を使用して**dm_exec_sql_text**に渡されます。 新しいクエリウィンドウを開き、手順 1. で識別された spid を渡します。 この例では、spid はとなり `59` ます。
 
         ```sql
         SELECT t.*
@@ -121,7 +121,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
          ```      
  
     2.  **Sql_handle**を直接渡しています。  
-**Dm_exec_requests**から**sql_handle**を取得します。 次に、 **sql_handle**を直接**dm_exec_sql_text**に渡します。 新しいクエリウィンドウを開き、手順 1. で識別した spid を**dm_exec_requests**に渡します。 この例では`59`、spid はとなります。 次に、返された**sql_handle**を引数として**sys. dm_exec_sql_text**に渡します。
+**Dm_exec_requests**から**sql_handle**を取得します。 次に、 **sql_handle**を直接**dm_exec_sql_text**に渡します。 新しいクエリウィンドウを開き、手順 1. で識別した spid を**dm_exec_requests**に渡します。 この例では、spid はとなり `59` ます。 次に、返された**sql_handle**を引数として**sys. dm_exec_sql_text**に渡します。
 
         ```sql
         -- acquire sql_handle
@@ -186,5 +186,5 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
  [dm_exec_cursors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [dm_exec_xml_handles &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [dm_exec_query_memory_grants &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
-   Using [dm_exec_text_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) [を使用する](../../t-sql/queries/from-transact-sql.md#using-apply)  
+ APPLY を使用[する](../../t-sql/queries/from-transact-sql.md#using-apply)  [dm_exec_text_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 

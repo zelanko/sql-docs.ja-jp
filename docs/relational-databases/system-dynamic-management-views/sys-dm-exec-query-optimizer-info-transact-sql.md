@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_optimizer_info dynamic management view
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d15b171b20e81ea928528dc2124a0f33b697d2a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68255353"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829403"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>dm_exec_query_optimizer_info (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,26 +33,26 @@ ms.locfileid: "68255353"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーの操作に関する詳細な統計を返します。 ワークロードをチューニングするときにこのビューを使用すると、クエリの最適化に関する問題や改善点を特定できます。 たとえば、最適化の合計数、所要時間、および最終的なコストを使用して、現在のワークロードのクエリの最適化と、チューニング処理中に確認された変更を比較できます。 一部のカウンターでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部診断で使用するためだけに適用されるデータを提供します。 このようなカウンターには、"内部使用のみ" と記載してあります。  
   
 > [!NOTE]  
->  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_exec_query_optimizer_info**という名前を使用します。  
+>  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_exec_query_optimizer_info**という名前を使用します。  
   
 |名前|データ型|説明|  
 |----------|---------------|-----------------|  
 |**対抗**|**nvarchar (4000)**|オプティマイザーの統計イベントの名前。|  
 |**occurrence**|**bigint**|このカウンターの最適化イベントの発生回数。|  
 |**value**|**float**|イベント発生ごとの平均プロパティ値。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
     
 ## <a name="remarks"></a>Remarks  
- **dm_exec_query_optimizer_info**には、次のプロパティ (カウンター) が含まれています。 発生した値はすべて累積され、システムの再起動時に0に設定されます。 値フィールドのすべての値は、システムの再起動時に NULL に設定されます。 平均を示す列のすべての値では、平均計算の分母として、同一行を基にした発生回数の値が使用されます。 では、ユーザーとシステム[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が生成したクエリの両方を含め、 **dm_exec_query_optimizer_info**の変更を決定するときに、すべてのクエリの最適化が測定されます。 既にキャッシュされているプランの実行では、 **dm_exec_query_optimizer_info**の値は変更されません。最適化のみが重要です。  
+ **dm_exec_query_optimizer_info**には、次のプロパティ (カウンター) が含まれています。 発生した値はすべて累積され、システムの再起動時に0に設定されます。 値フィールドのすべての値は、システムの再起動時に NULL に設定されます。 平均を示す列のすべての値では、平均計算の分母として、同一行を基にした発生回数の値が使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、ユーザーとシステムが生成したクエリの両方を含め、 **dm_exec_query_optimizer_info**の変更を決定するときに、すべてのクエリの最適化が測定されます。 既にキャッシュされているプランの実行では、 **dm_exec_query_optimizer_info**の値は変更されません。最適化のみが重要です。  
   
-|カウンタ|個数|値|  
+|カウンター|個数|[値]|  
 |-------------|----------------|-----------|  
-|最適化|最適化の合計数。|適用なし|  
+|最適化|最適化の合計数。|該当なし|  
 |elapsed time|最適化の合計数。|個別のステートメント (クエリ) の最適化ごとの平均経過時間 (秒単位)。|  
 |最終的なコスト|最適化の合計数。|内部コスト単位での最適化されたプランの平均推定コスト。|  
 |簡易プラン|内部使用のみ|内部使用のみ|  
@@ -71,26 +71,26 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
 |gain stage 1 to stage 2|内部使用のみ|内部使用のみ|  
 |timeout|内部使用のみ|内部使用のみ|  
 |memory limit exceeded|内部使用のみ|内部使用のみ|  
-|stmt の挿入|INSERT ステートメントの最適化の数。|適用なし|  
-|stmt の削除|DELETE ステートメントに対する最適化の数。|適用なし|  
-|update stmt|UPDATE ステートメントに対する最適化の数。|適用なし|  
-|contains subquery|少なくとも1つのサブクエリを含むクエリの最適化の数。|適用なし|  
+|stmt の挿入|INSERT ステートメントの最適化の数。|該当なし|  
+|stmt の削除|DELETE ステートメントに対する最適化の数。|該当なし|  
+|update stmt|UPDATE ステートメントに対する最適化の数。|該当なし|  
+|contains subquery|少なくとも1つのサブクエリを含むクエリの最適化の数。|該当なし|  
 |unnest failed|内部使用のみ|内部使用のみ|  
 |表|最適化の合計数。|最適化された 1 つのクエリあたりの、参照テーブルの平均数。|  
-|ヒント|ヒントが指定された回数。 カウントされるヒントには、JOIN、GROUP、UNION、および FORCE ORDER クエリヒント、FORCE PLAN set オプション、および結合ヒントがあります。|適用なし|  
-|order hint|FORCE ORDER ヒントが指定された回数。|適用なし|  
-|結合ヒント|結合のヒントによって結合アルゴリズムが強制的に適用された回数。|適用なし|  
-|view reference|ビューがクエリで参照された回数。|適用なし|  
-|remote query|4部構成の名前または OPENROWSET の結果を含むテーブルなど、クエリが少なくとも1つのリモートデータソースを参照した最適化の数。|適用なし|  
+|ヒント|ヒントが指定された回数。 カウントされるヒントには、JOIN、GROUP、UNION、および FORCE ORDER クエリヒント、FORCE PLAN set オプション、および結合ヒントがあります。|該当なし|  
+|order hint|FORCE ORDER ヒントが指定された回数。|該当なし|  
+|結合ヒント|結合のヒントによって結合アルゴリズムが強制的に適用された回数。|該当なし|  
+|view reference|ビューがクエリで参照された回数。|該当なし|  
+|remote query|4部構成の名前または OPENROWSET の結果を含むテーブルなど、クエリが少なくとも1つのリモートデータソースを参照した最適化の数。|該当なし|  
 |最大 DOP|最適化の合計数。|最適化されたプランの平均有効 MAXDOP 値。 既定では、有効な MAXDOP は [**並列処理の最大限度**] サーバー構成オプションによって決定され、maxdop クエリヒントの値によって特定のクエリに対して上書きされる可能性があります。|  
 |maximum recursion level|クエリ ヒントで 0 より大きい MAXRECURSION レベルが指定された最適化の数。|クエリヒントで最大再帰レベルが指定されている最適化の平均 MAXRECURSION レベル。|  
 |indexed views loaded|内部使用のみ|内部使用のみ|  
 |indexed views matched|1 つ以上のインデックス付きビューが一致した、最適化の数。|一致したビューの平均数。|  
 |使用されるインデックス付きビュー|出力プラン内で照合された後に 1 つ以上のインデックス付きビューが使用されている、最適化の数。|使用されたビューの平均数。|  
 |更新されたインデックス付きビュー|1 つ以上のインデックス付きビューを管理するプランを作成する DML ステートメントの最適化の数。|管理されるビューの平均数。|  
-|動的カーソル要求|動的カーソルの要求が指定された最適化の数。|適用なし|  
-|高速順方向カーソル要求|高速順方向カーソルの要求が指定された最適化の数。|適用なし|  
-|マージ stmt|MERGE ステートメントの最適化の数。|適用なし|  
+|動的カーソル要求|動的カーソルの要求が指定された最適化の数。|該当なし|  
+|高速順方向カーソル要求|高速順方向カーソルの要求が指定された最適化の数。|該当なし|  
+|マージ stmt|MERGE ステートメントの最適化の数。|該当なし|  
   
 ## <a name="examples"></a>例  
   

@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_prepexec
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 670b64cb107610fe8b5506654b9e655b0da5fb16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee9e291a0ff8b2fc14e7bc249ceea8320facedf9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68794716"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830986"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パラメーター化[!INCLUDE[tsql](../../includes/tsql-md.md)]されたステートメントを準備して実行します。 sp_prepexec sp_prepare と sp_execute の機能を組み合わせたものです。 このアクションは、ID = 13 によって表形式のデータストリーム (TDS) パケットで呼び出されます。  
+  パラメーター化されたステートメントを準備して実行 [!INCLUDE[tsql](../../includes/tsql-md.md)] します。 sp_prepexec sp_prepare と sp_execute の機能を組み合わせたものです。 このアクションは、ID = 13 によって表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

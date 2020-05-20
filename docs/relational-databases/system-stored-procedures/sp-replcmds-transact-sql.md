@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771007"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829982"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,12 +56,12 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**command_type**|**int**|コマンドの種類。|  
 |**originator_srvname**|**sysname**|トランザクションが発生したサーバー。|  
 |**originator_db**|**sysname**|トランザクションが発生したデータベース。|  
-|**pkHash**|**int**|内部使用のみです。|  
+|**pkHash**|**int**|内部使用のみ。|  
 |**originator_publication_id**|**int**|トランザクションが発生したパブリケーションの ID。|  
 |**originator_db_version**|**int**|トランザクションが発生したデータベースのバージョン。|  
 |**originator_lsn**|**varbinary(16)**|元のパブリケーションのコマンドのログシーケンス番号 (LSN) を識別します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_replcmds**は、トランザクションレプリケーションのログリーダープロセスによって使用されます。  
   
  レプリケーションでは、指定されたデータベース内の**sp_replcmds**を実行する最初のクライアントがログリーダーとして扱われます。  
@@ -73,7 +73,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  クライアントが同じデータベース内で**sp_replcmds**を実行しようとすると、最初のクライアントが切断されるまで、エラー18752が発生します。 最初のクライアントが切断されると、別のクライアントが**sp_replcmds**を実行し、新しいログリーダーになります。  
   
- テキストポインターが同じトランザクションで取得されなかっ[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]たために[!INCLUDE[msCoName](../../includes/msconame-md.md)] **sp_replcmds**がテキストコマンドをレプリケートできない場合、エラーログと Windows アプリケーションログの両方に警告メッセージ番号18759が追加されます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] テキストポインターが同じトランザクションで取得されなかったために**sp_replcmds**がテキストコマンドをレプリケートできない場合、エラーログと Windows アプリケーションログの両方に警告メッセージ番号18759が追加されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_replcmds**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  

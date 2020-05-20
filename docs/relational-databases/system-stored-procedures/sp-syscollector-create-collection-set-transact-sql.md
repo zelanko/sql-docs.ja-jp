@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3998211b12b942df15ebb4e7978c1e989486e013
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032640"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830959"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_syscollector_create_collection_set
   
 `[ @days_until_expiration = ] days_until_expiration`収集したデータを管理データウェアハウスに保存する日数を指定します。 *days_until_expiration*は**smallint**で、既定値は 730 (2 年) です。 *days_until_expiration*は、0または正の整数である必要があります。  
   
-`[ @proxy_id = ] proxy_id`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントプロキシアカウントの一意の識別子を示します。 *proxy_id*は**int**で、既定値は NULL です。 指定する場合、 *proxy_name*は NULL である必要があります。 *Proxy_id*を取得するには、sysproxies システムテーブルに対してクエリを実行します。 Dc_admin 固定データベースロールには、プロキシにアクセスする権限が必要です。 詳細については、「 [Create a SQL Server エージェント Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)」を参照してください。  
+`[ @proxy_id = ] proxy_id`エージェントプロキシアカウントの一意の識別子を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *proxy_id*は**int**で、既定値は NULL です。 指定する場合、 *proxy_name*は NULL である必要があります。 *Proxy_id*を取得するには、sysproxies システムテーブルに対してクエリを実行します。 Dc_admin 固定データベースロールには、プロキシにアクセスする権限が必要です。 詳細については、「 [Create a SQL Server エージェント Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)」を参照してください。  
   
 `[ @proxy_name = ] 'proxy_name'`プロキシアカウントの名前を指定します。 *proxy_name*は**sysname**で、既定値は NULL です。 指定する場合、 *proxy_id*は NULL である必要があります。 *Proxy_name*を取得するには、sysproxies システムテーブルに対してクエリを実行します。  
   
@@ -83,7 +83,7 @@ sp_syscollector_create_collection_set
   
 `[ @logging_level = ] logging_level`はログ記録レベルです。 *logging_level*は、次のいずれかの**値を使用**します。  
   
- 0: 実行情報と追跡[!INCLUDE[ssIS](../../includes/ssis-md.md)]するイベントを記録します。  
+ 0: 実行情報と [!INCLUDE[ssIS](../../includes/ssis-md.md)] 追跡するイベントを記録します。  
   
 -   コレクションセットの開始/停止  
   
@@ -112,7 +112,7 @@ sp_syscollector_create_collection_set
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  sp_syscollector_create_collection_set は、msdb システム データベースのコンテキストで実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  

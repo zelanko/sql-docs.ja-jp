@@ -16,14 +16,14 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cbf1658fd1567d9cdd3c35e02195435b6e86adcc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942283"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830403"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_filestream_force_garbage_collection
   
 |||  
 |-|-|  
-|値|説明|  
+|[値]|説明|  
 |0|操作に成功しました。|  
 |1|操作エラー|  
   
 ## <a name="result-sets"></a>結果セット  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*file_name*|FILESTREAM コンテナー名を示します。|  
 |*num_collected_items*|このコンテナー内の、ガベージ コレクションが実行 (削除) された FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。|  
@@ -69,7 +69,7 @@ sp_filestream_force_garbage_collection
 |*num_unprocessed_items*|この FILESTREAM コンテナー内の、ガベージ コレクションで処理されなかった対象となる FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。 アイテムは次のようなさまざまな理由で処理されないことがあります。<br /><br /> ログのバックアップまたはチェックポイントが作成されていないために、固定する必要があるファイル。<br /><br /> 完全復旧モデルまたは BULK_LOGGED 復旧モデル内のファイル。<br /><br /> 実行時間の長いアクティブなトランザクションが存在している。<br /><br /> レプリケーションログリーダージョブが実行されていません。 詳細については、ホワイトペーパー「 [SQL Server 2008 の FILESTREAM ストレージ](https://go.microsoft.com/fwlink/?LinkId=209156)」を参照してください。|  
 |*last_collected_xact_seqno*|指定した FILESTREAM コンテナー内の、ガベージ コレクションが実行されたファイルに対応する最後のログ シーケンス番号 (LSN) を返します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  要求されたデータベース (および FILESTREAM コンテナー) で、FILESTREAM ガベージコレクタータスクが明示的に完了するように実行します。 不要になったファイルは、ガベージ コレクション プロセスによって削除されます。 この操作の完了に必要な時間は、そのデータベースまたはコンテナー内の FILESTREAM データのサイズに加え、FILESTREAM データで最近発生した DML アクティビティの量によって異なります。 この操作はデータベースがオンラインのときに実行できますが、ガベージ コレクション プロセスによってさまざまな I/O 操作が行われるため、実行中にデータベースのパフォーマンスに影響を与える可能性があります。  
   
 > [!NOTE]  
@@ -79,14 +79,14 @@ sp_filestream_force_garbage_collection
 
 2フェーズの操作が発生したため、基になる Filestream ファイルを実際に削除するには、ストアドプロシージャを2回実行する必要があります。  
 
-ガベージコレクション (GC) は、ログの切り捨てに依存します。 したがって、完全復旧モデルを使用してデータベースで最近削除されたファイルの場合は、それらのトランザクションログ部分のログバックアップが実行され、ログ部分が非アクティブとマークされた後にのみ、GC が実行されます。 単純復旧モデルを使用するデータベースでは、 `CHECKPOINT`がデータベースに対して発行された後に、ログの切り捨てが行われます。  
+ガベージコレクション (GC) は、ログの切り捨てに依存します。 したがって、完全復旧モデルを使用してデータベースで最近削除されたファイルの場合は、それらのトランザクションログ部分のログバックアップが実行され、ログ部分が非アクティブとマークされた後にのみ、GC が実行されます。 単純復旧モデルを使用するデータベースでは、がデータベースに対して発行された後に、ログの切り捨てが行わ `CHECKPOINT` れます。  
 
 
 ## <a name="permissions"></a>アクセス許可  
  Db_owner データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 `FSDB`データベースの FILESTREAM コンテナーに対してガベージコレクターを実行します。  
+ 次の例では、データベースの FILESTREAM コンテナーに対してガベージコレクターを実行し `FSDB` ます。  
   
 ### <a name="a-specifying-no-container"></a>A. コンテナーを指定しない  
   

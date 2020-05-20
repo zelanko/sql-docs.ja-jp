@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergesubscription
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c205bab104bd81eda3e7d14dc30844352caa7f66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b3f7597272a1547a11f2c76e65fab391e2fbcd05
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124870"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829606"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,11 +59,11 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |**merge_job_login**||エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントのログイン。|  
 |**merge_job_password**||エージェントを実行する Windows アカウントのパスワード。|  
 |**publisher_security_mode**|**1**|パブリッシャーに接続するときに Windows 認証を使用。|  
-||**0**|パブリッシャー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するときに認証を使用します。|  
+||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証を使用します。|  
 |**publisher_login**||パブリッシャーでのログイン名。|  
 |**publisher_password**||指定されたパブリッシャーログインの強力なパスワード。|  
 |**subscriber_security_mode**|**1**|サブスクライバーに接続するときに Windows 認証を使用。|  
-||**0**|サブスクライバー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への接続時に認証を使用します。|  
+||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーへの接続時に認証を使用します。|  
 |**subscriber_login**||サブスクライバーでのログイン名。|  
 |**subscriber_password**||指定されたサブスクライバーログインの強力なパスワード。|  
 |**sync_type**|**自動**|パブリッシュされたテーブルのスキーマと初期データは、最初にサブスクライバーに転送されます。|  

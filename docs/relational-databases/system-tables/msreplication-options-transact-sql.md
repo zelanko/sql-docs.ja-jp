@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_options system table
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c48a57b876cde41d6bb514c522bcaa241eec11fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 67a74ab8487c6ff9d6655d4b7039d85bb0d906a3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68063004"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829877"
 ---
 # <a name="msreplication_options-transact-sql"></a>MSreplication_options (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,12 +31,12 @@ ms.locfileid: "68063004"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|内部使用のみです。|  
-|**value**|**bit**|内部使用のみです。|  
-|**major_version**|**int**|内部使用のみです。|  
-|**minor_version**|**int**|内部使用のみです。|  
-|**revision**|**int**|内部使用のみです。|  
-|**install_failures**|**int**|内部使用のみです。|  
+|**optname**|**sysname**|内部使用のみ。|  
+|**value**|**bit**|内部使用のみ。|  
+|**major_version**|**int**|内部使用のみ。|  
+|**minor_version**|**int**|内部使用のみ。|  
+|**revision**|**int**|内部使用のみ。|  
+|**install_failures**|**int**|内部使用のみ。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

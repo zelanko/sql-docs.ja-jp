@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletemergeconflictrow
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a315bc147cf86df40cf6fa216b8c45eeb1fcccca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d778a90adf2579ca136603847762b2577a5155f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68111965"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830281"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @conflict_table = ] 'conflict_table'`競合テーブルの名前を指定します。 *conflict_table*は**sysname**で、既定値は**%** です。 *Conflict_table*が**%** NULL またはとして指定されている場合、競合は削除競合であると見なされ、 *rowguid*と*origin_datasource*と*source_object*に一致する行が[MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブルから削除されます。  
+`[ @conflict_table = ] 'conflict_table'`競合テーブルの名前を指定します。 *conflict_table*は**sysname**で、既定値は **%** です。 *Conflict_table*が NULL またはとして指定されている場合、 **%** 競合は削除競合であると見なされ、 *rowguid*と*origin_datasource*と*Source_object*に一致する行が[MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブルから削除されます。  
   
 `[ @source_object = ] 'source_object'`ソーステーブルの名前を指定します。 *source_object*は**nvarchar (386)**,、既定値は NULL です。  
   
@@ -54,7 +54,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_deletemergeconflictrow**は、マージレプリケーションで使用します。  
   
  [MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブルはシステムテーブルであり、空の場合でも、データベースからは削除されません。  

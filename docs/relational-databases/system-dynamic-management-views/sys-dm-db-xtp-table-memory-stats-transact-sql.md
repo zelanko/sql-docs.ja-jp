@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sys.dm_db_xtp_table_memory_stats
 - dm_db_xtp_table_memory_stats
 ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d04238e0f476f39b0158fad4aa3350875d471ecc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6ea40fa0a40e90b0ab31912bcda185cc21258b0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097941"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830756"
 ---
 # <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>dm_db_xtp_table_memory_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  現在のデータベースの各 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] テーブル (ユーザーおよびシステム) におけるメモリ使用量に関する統計を返します。 システムテーブルには負のオブジェクト Id があり、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]エンジンの実行時の情報を格納するために使用されます。 ユーザー オブジェクトとは異なり、システム テーブルは内部で使用され、メモリ内にしか存在しないため、カタログ ビューには表示されません。 システムテーブルは、ストレージ内のすべてのデータ/デルタファイルのメタデータ、マージ要求、行をフィルター処理するためのデルタファイルのウォーターマーク、削除されたテーブル、回復とバックアップに関する関連情報などの情報を格納するために使用されます。 エンジンは[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 、最大8192のデータファイルとデルタファイルのペアを持つことができるため、大規模なインメモリデータベースでは、システムテーブルによって使用されるメモリが数メガバイトになることがあります。  
+  現在のデータベースの各 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] テーブル (ユーザーおよびシステム) におけるメモリ使用量に関する統計を返します。 システムテーブルには負のオブジェクト Id があり、エンジンの実行時の情報を格納するために使用され [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ます。 ユーザー オブジェクトとは異なり、システム テーブルは内部で使用され、メモリ内にしか存在しないため、カタログ ビューには表示されません。 システムテーブルは、ストレージ内のすべてのデータ/デルタファイルのメタデータ、マージ要求、行をフィルター処理するためのデルタファイルのウォーターマーク、削除されたテーブル、回復とバックアップに関する関連情報などの情報を格納するために使用されます。 エンジンは、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 最大8192のデータファイルとデルタファイルのペアを持つことができるため、大規模なインメモリデータベースでは、システムテーブルによって使用されるメモリが数メガバイトになることがあります。  
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3d107b78c9b982285c19b678bebbc027facebe1e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942043"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830416"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup。 sp_get_backup_diagnostics (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
  現在有効になっているイベントの種類の一覧を取得するには、 **managed_backup. fn_get_current_xevent_settings**関数を使用します。  
   
  [@begin_time  
- イベントが表示対象となる期間の開始時刻。 パラメーター @begin_timeは DATETIME で、既定値は NULL です。 これが指定されていない場合は、過去30分間のイベントが表示されます。  
+ イベントが表示対象となる期間の開始時刻。 @begin_timeパラメーターは DATETIME で、既定値は NULL です。 これが指定されていない場合は、過去30分間のイベントが表示されます。  
   
  @end_time  
- イベントが表示対象となる期間の終了時刻。 パラメーター @end_timeは DATATIME で、既定値は NULL です。  これを指定しない場合は、現在までのイベントが表示されます。  
+ イベントが表示対象となる期間の終了時刻。 @end_timeパラメーターは DATATIME で、既定値は NULL です。  これを指定しない場合は、現在までのイベントが表示されます。  
   
 ## <a name="table-returned"></a>返されるテーブル  
  このストアドプロシージャは、次の情報を含むテーブルを返します。  
@@ -61,8 +61,8 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 |-|-|-|  
 |列名|データ型|説明|  
 |event_type|NVARCHAR (512)|拡張イベントの種類。|  
-|event|NVARCHAR (512)|イベント ログの概要|  
-|Timestamp|timestamp|イベントの発生時刻を示す、イベントのタイムスタンプ|  
+|イベント|NVARCHAR (512)|イベント ログの概要|  
+|Timestamp|TIMESTAMP|イベントの発生時刻を示す、イベントのタイムスタンプ|  
   
 ## <a name="security"></a>Security  
   

@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropuser
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42628ab49e30a4c6dada2eafb505435b8b389de6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d4f4b08f21d29fead3f2cebf477be69cfaf766ad
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124720"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831136"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在のデータベースからデータベースユーザーを削除します。 **sp_dropuser**は、以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と互換性があります。  
+  現在のデータベースからデータベースユーザーを削除します。 **sp_dropuser**は、以前のバージョンのと互換性が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] あります。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[DROP USER](../../t-sql/statements/drop-user-transact-sql.md)を使用してください。  
@@ -47,14 +47,14 @@ sp_dropuser [ @name_in_db = ] 'user'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_dropuser**は**sp_revokedbaccess**を実行して、現在のデータベースからユーザーを削除します。  
   
  現在のデータベースから削除できるユーザー名の一覧を表示するには、 **sp_helpuser**を使用します。  
   
  データベースユーザーが削除されると、そのユーザーのエイリアスもすべて削除されます。 ユーザーがユーザーと同じ名前の空のスキーマを所有している場合、スキーマは削除されます。 ユーザーがデータベース内の他の securables を所有している場合、そのユーザーは削除されません。 オブジェクトの所有権は、最初に別のプリンシパルに転送する必要があります。 詳細については、「[ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)」を参照してください。 データベースユーザーを削除すると、そのユーザーに関連付けられている権限が自動的に削除され、そのユーザーがメンバーとなっているデータベースロールから削除されます。  
   
- **sp_dropuser**を使用して、データベース所有者 (**dbo**) **INFORMATION_SCHEMA**ユーザー、または**マスター**データベースまたは**tempdb**データベースから**guest**ユーザーを削除することはできません。 システム以外のデータベース`EXEC sp_dropuser 'guest'`では、ユーザーの**ゲスト**から CONNECT 権限が取り消されます。 ただし、ユーザー自体は削除されません。  
+ **sp_dropuser**を使用して、データベース所有者 (**dbo**) **INFORMATION_SCHEMA**ユーザー、または**マスター**データベースまたは**tempdb**データベースから**guest**ユーザーを削除することはできません。 システム以外のデータベースで `EXEC sp_dropuser 'guest'` は、ユーザーの**ゲスト**から CONNECT 権限が取り消されます。 ただし、ユーザー自体は削除されません。  
   
  **sp_dropuser**は、ユーザー定義のトランザクション内では実行できません。  
   
@@ -62,7 +62,7 @@ sp_dropuser [ @name_in_db = ] 'user'
  データベースに対する ALTER ANY USER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 `Albert`ユーザーを現在のデータベースから削除します。  
+ 次の例では、ユーザーを `Albert` 現在のデータベースから削除します。  
   
 ```  
 EXEC sp_dropuser 'Albert';  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_backup_tapes dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 98902f096bb960436d764416e2563af5056f00dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f7d0e9c5198b65a6e4ddce148dbafd46821e2f40
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874154"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830541"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "70874154"
 |**media_sequence_number**|**int**|メディアファミリ内のボリュームのインデックス (1.* ..n*)。 NULL 値が許可されます。|  
 |**tape_operation**|**int**|実行中のテープ操作:<br /><br /> 1 = 読み取り<br /><br /> 2 = 形式<br /><br /> 3 = 初期化<br /><br /> 4 = 追加<br /><br /> NULL 値が許可されます。|  
 |**tape_operation_desc**|**nvarchar(120)**|実行中のテープ操作:<br /><br /> READ<br /><br /> FORMAT<br /><br /> INIT<br /><br /> 追記<br /><br /> NULL 値が許可されます。|  
-|**mount_request_type**|**int**|マウント要求の種類:<br /><br /> 1 = 特定のテープ。 **Media_\* **フィールドによって識別されるテープが必要です。<br /><br /> 2 = 次のメディアファミリ。 まだ復元されていない次のメディアファミリが要求されます。 これは、メディアファミリの数よりも多くのデバイスから復元する場合に使用します。<br /><br /> 3 = 後続テープ。 メディア ファミリが拡張され、後続テープが要求されています。<br /><br /> NULL 値が許可されます。|  
+|**mount_request_type**|**int**|マウント要求の種類:<br /><br /> 1 = 特定のテープ。 **Media_ \* **フィールドによって識別されるテープが必要です。<br /><br /> 2 = 次のメディアファミリ。 まだ復元されていない次のメディアファミリが要求されます。 これは、メディアファミリの数よりも多くのデバイスから復元する場合に使用します。<br /><br /> 3 = 後続テープ。 メディア ファミリが拡張され、後続テープが要求されています。<br /><br /> NULL 値が許可されます。|  
 |**mount_request_type_desc**|**nvarchar(120)**|マウント要求の種類:<br /><br /> SPECIFIC TAPE <br /><br /> NEXT MEDIA FAMILY <br /><br /> CONTINUATION VOLUME <br /><br /> NULL 値が許可されます。|  
   
 ## <a name="permissions"></a>アクセス許可  

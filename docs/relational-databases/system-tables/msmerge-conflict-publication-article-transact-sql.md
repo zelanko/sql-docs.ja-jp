@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_conflict_publication_article system table
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8d2c324f032f9cdd3206f6f2bed77fba74c2c0f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 070b8cfe44190f89db8e7adf142debbc29e64d15
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75322123"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829246"
 ---
 # <a name="msmerge_conflict_publication_article-transact-sql"></a>MSmerge_conflict_publication_article (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "75322123"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**_アーティクル\_列\_名_**|**変動**|レプリケートされたテーブルの列。 このシステム テーブルにはテーブル アーティクルの列ごとに 1 行のデータが格納されます。|  
+|**_アーティクル \_ 列 \_ 名_**|**可変**|レプリケートされたテーブルの列。 このシステム テーブルにはテーブル アーティクルの列ごとに 1 行のデータが格納されます。|  
 |**rowguid**|**uniqueidentifier**|競合行の行識別子。|  
 |**ModifiedDate**|**datetime**|競合が発生した時刻。|  
-|**配信\_元\_データソース id**|**uniqueidentifier**|行変更が取り消された、または競合が失われたサブスクリプション。|  
+|**配信元 \_ データソース \_ id**|**uniqueidentifier**|行変更が取り消された、または競合が失われたサブスクリプション。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

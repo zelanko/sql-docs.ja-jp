@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_log_stats dynamic management function
 ms.assetid: ''
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25488898f7f8c6fb56ea75bc62480aefea171b59
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004838"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829487"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -43,8 +43,8 @@ ms.locfileid: "68004838"
 
 *database_id* |NULL |**既定**
 
-データベースの ID を示します。 `database_id` は `int` です。 有効な入力値は、データベースの ID 番号`NULL`、、 `DEFAULT`またはです。 既定値は、`NULL` です。 `NULL`と`DEFAULT`は、現在のデータベースのコンテキストでは同等の値です。  
-組み込み関数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) を指定できます。 データベース名`DB_ID`を指定せずにを使用する場合は、現在のデータベースの互換性レベルが90以上である必要があります。
+データベースの ID を示します。 `database_id` は `int` です。 有効な入力値は、データベースの ID 番号、 `NULL` 、または `DEFAULT` です。 既定値は `NULL` です。 `NULL`と `DEFAULT` は、現在のデータベースのコンテキストでは同等の値です。  
+組み込み関数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) を指定できます。 データベース名を指定せずにを使用する場合は、 `DB_ID` 現在のデータベースの互換性レベルが90以上である必要があります。
 
   
 ## <a name="tables-returned"></a>返されるテーブル  
@@ -61,26 +61,26 @@ ms.locfileid: "68004838"
 |total_log_size_mb  |**float**  |   トランザクションログの合計サイズ (MB)。 |  
 |active_vlf_count   |**bigint** |   トランザクションログ内のアクティブな[仮想ログファイル (vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)の合計数。|  
 |active_log_size_mb |**float**  |   アクティブなトランザクションログの合計サイズ (MB)。|  
-|log_truncation_holdup_reason   |**nvarchar(60)**   |   ログの切り捨てホールドアップ理由。 値は、の`log_reuse_wait_desc` `sys.databases`列と同じです。  (これらの値の詳細については、「[トランザクションログ](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください)。 <br />指定できる値は、次のとおりです。 <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />レプリケーション<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />その他の一時的な |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   ログの切り捨てホールドアップ理由。 値は、 `log_reuse_wait_desc` の列と同じ `sys.databases` です。  (これらの値の詳細については、「[トランザクションログ](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください)。 <br />指定できる値は、次のとおりです。 <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />レプリケーション<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />その他の一時的な |  
 |log_backup_time    |**datetime**   |   トランザクションログの最後のバックアップ時刻。|   
 |log_backup_lsn |**nvarchar(24)**   |   最後のトランザクションログバックアップ[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|   
 |log_since_last_log_backup_mb   |**float**  |   最後のトランザクションログバックアップ[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)以降のログサイズ (MB)。|  
 |log_checkpoint_lsn |**nvarchar(24)**   |   最後のチェックポイント[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|  
 |log_since_last_checkpoint_mb   |**float**  |   最後のチェックポイント[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)からのログサイズ (MB)。|  
-|log_recovery_lsn   |**nvarchar(24)**   |   データベースの復旧[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。 チェック`log_recovery_lsn`ポイント lsn の前にが`log_recovery_lsn`発生した場合は、最も古い`log_recovery_lsn`アクティブなトランザクション LSN、それ以外の場合はチェックポイント lsn です。|  
+|log_recovery_lsn   |**nvarchar(24)**   |   データベースの復旧[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。 `log_recovery_lsn`チェックポイント lsn の前にが発生した場合 `log_recovery_lsn` は、最も古いアクティブなトランザクション LSN、それ以外の場合 `log_recovery_lsn` はチェックポイント lsn です。|  
 |log_recovery_size_mb   |**float**  |   ログ復旧[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)以降のログサイズ (MB)。|  
 |recovery_vlf_count |**bigint** |   フェールオーバーまたはサーバーの再起動があった場合に、回復する[仮想ログファイル (vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)の合計数。 |  
 
 
 ## <a name="remarks"></a>Remarks
-セカンダリレプリカ`sys.dm_db_log_stats`として可用性グループに参加しているデータベースに対して実行する場合は、上記で説明したフィールドのサブセットのみが返されます。  現在、セカンダリ`database_id`データベース`recovery_model`に対し`log_backup_time`て実行すると、、、およびのみが返されます。   
+`sys.dm_db_log_stats`セカンダリレプリカとして可用性グループに参加しているデータベースに対して実行する場合は、上記で説明したフィールドのサブセットのみが返されます。  現在、 `database_id` `recovery_model` `log_backup_time` セカンダリデータベースに対して実行すると、、、およびのみが返されます。   
 
 ## <a name="permissions"></a>アクセス許可  
-データベースの`VIEW DATABASE STATE`権限が必要です。   
+データベースの権限が必要です `VIEW DATABASE STATE` 。   
   
 ## <a name="examples"></a>例  
 
-### <a name="a-determining-databases-in-a-ssnoversion-instance-with-high-number-of-vlfs"></a>A. 多数の Vlf を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]持つインスタンス内のデータベースの特定   
+### <a name="a-determining-databases-in-a-ssnoversion-instance-with-high-number-of-vlfs"></a>A. 多数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の vlf を持つインスタンス内のデータベースの特定   
 次のクエリでは、ログファイルに 100 Vlf を超えるデータベースが返されます。 多数の Vlf が、データベースの起動、復元、および復旧時間に影響を与える可能性があります。
 
 ```sql  
@@ -90,7 +90,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id)
 WHERE total_vlf_count  > 100;
 ```   
 
-### <a name="b-determining-databases-in-a-ssnoversion-instance-with-transaction-log-backups-older-than-4-hours"></a>B. 4時間を経過[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]したトランザクションログバックアップを使用してインスタンス内のデータベースを特定する   
+### <a name="b-determining-databases-in-a-ssnoversion-instance-with-transaction-log-backups-older-than-4-hours"></a>B. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4 時間を経過したトランザクションログバックアップを使用してインスタンス内のデータベースを特定する   
 次のクエリでは、インスタンス内のデータベースの最後のログバックアップ時刻を決定します。
 
 ```sql  

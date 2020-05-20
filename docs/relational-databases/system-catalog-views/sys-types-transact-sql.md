@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.types catalog view
 - table-valued parameters,sys.types
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff4cd58fcd7d11679cf410c9f379b101d42ce4bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc3072c78ed74324345832daeb709fc6090b8763
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095572"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831294"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68095572"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|型の名前。 スキーマ内で一意です。|  
 |**system_type_id**|**tinyint**|型の内部システム型の ID。|  
-|**user_type_id**|**int**|型の ID です。 データベース内で一意です。 システムデータ型の場合は、 **user_type_id** = **system_type_id**ます。|  
+|**user_type_id**|**int**|型の ID です。 データベース内で一意です。 システムデータ型の場合は、 **user_type_id**  =  **system_type_id**ます。|  
 |**schema_id**|**int**|型が属するスキーマの ID。|  
 |**principal_id**|**int**|スキーマの所有者と異なる場合は、個々の所有者の ID。 既定では、スキーマに含まれるオブジェクトはスキーマの所有者によって所有されます。 ただし、ALTER AUTHORIZATION ステートメントを使用して所有権を変更することによって、代替所有者を指定できます。<br /><br /> 別の所有者がいない場合は NULL になります。|  
 |**max_length**|**smallint**|型の最大長 (バイト単位)。<br /><br /> -1 = 列のデータ型は**varchar (max)**,、 **nvarchar (max)**,、 **varbinary (max)**,、または**xml**です。<br /><br /> **テキスト**列の場合、 **max_length**値は16になります。|  
@@ -46,7 +46,7 @@ ms.locfileid: "68095572"
 |**collation_name**|**sysname**|文字ベースの場合は、型の照合順序の名前。それ以外の場合は NULL です。|  
 |**is_nullable**|**bit**|型は nullable です。|  
 |**is_user_defined**|**bit**|1 = ユーザー定義型。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型。|  
-|**is_assembly_type**|**bit**|1 = 型の実装は CLR アセンブリで定義されています。<br /><br /> 0 = 型は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システムデータ型に基づいています。|  
+|**is_assembly_type**|**bit**|1 = 型の実装は CLR アセンブリで定義されています。<br /><br /> 0 = 型はシステムデータ型に基づいてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**default_object_id**|**int**|[Sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)を使用して型にバインドされているスタンドアロンの既定の ID。<br /><br /> 0 = 既定値は存在しません。|  
 |**rule_object_id**|**int**|[Sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)を使用して型にバインドされているスタンドアロンルールの ID。<br /><br /> 0 = ルールは存在しません。|  
 |**is_table_type**|**bit**|型がテーブルであることを示します。|  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_stats dynamic management view
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c93cc5f34d86e15645b4d53c02244e2705bbeda5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026857"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830836"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]は、より新しいバージョンとは大幅に異なります。 [SQL Server 2014](#bkmk_2014)のトピックでは、この点について説明します。**
   
 ## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降  
- 次の表では、で`sys.dm_db_xtp_checkpoint_stats`始まるの列**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** について説明します。  
+ 次の表では、で始まるの列について説明し `sys.dm_db_xtp_checkpoint_stats` **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** ます。  
   
-|列名|Type|説明|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|コントローラーによって表示される最後の LSN。|  
 |end_of_log_lsn|**数値 (38)**|ログの末尾の LSN。|  
-|bytes_to_end_of_log|**bigint**|と`last_lsn_processed` `end_of_log_lsn`の間のバイトに対応する、コントローラーによって処理されたログのバイト数。|  
+|bytes_to_end_of_log|**bigint**|との間のバイトに対応する、コントローラーによって処理されたログのバイト数 `last_lsn_processed` `end_of_log_lsn` 。|  
 |log_consumption_rate|**bigint**|コントローラーによるトランザクションログの使用率 (KB/秒)。|  
 |active_scan_time_in_ms|**bigint**|トランザクションログをアクティブにスキャンするためにコントローラーによって費やされた時間。|  
 |total_wait_time_in_ms|**bigint**|ログをスキャンしていないときの、コントローラーの累積待機時間。|  
@@ -84,9 +84,9 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |bytes_of_large_data_serialized|**bigint**|シリアル化されたデータの量。 |  
   
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 次の表では、の`sys.dm_db_xtp_checkpoint_stats` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 列について説明します。  
+ 次の表では、の列について説明し `sys.dm_db_xtp_checkpoint_stats` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** ます。  
   
-|列名|Type|説明|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|スレッドの現在のログシーケンス番号 (LSN) とログの末尾との間のログバイト数。|  
 |total_log_blocks_processed|**bigint**|サーバーの起動後に処理されたログブロックの合計数。|  

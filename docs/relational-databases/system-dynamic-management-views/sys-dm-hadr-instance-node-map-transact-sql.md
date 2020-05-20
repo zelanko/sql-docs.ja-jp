@@ -18,28 +18,28 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC
 - sys.sys.dm_hadr_instance_node_map dynamic management view
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: edd2ea7a215f01c25539753dff4bd170cf9d422f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2ae75aa570b20a21c31d75b66ddf5c01635eee51
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900415"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830572"
 ---
 # <a name="sysdm_hadr_instance_node_map-transact-sql"></a>dm_hadr_instance_node_map (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Always On 可用性グループに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]参加している可用性レプリカをホストするのすべてのインスタンスについて、は、サーバーインスタンスをホストする Windows Server フェールオーバークラスター (WSFC) ノードの名前を返します。 この動的管理ビューには、次の用途があります。  
+  Always On 可用性グループに参加している可用性レプリカをホストするのすべてのインスタンスについて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、は、サーバーインスタンスをホストする Windows Server フェールオーバークラスター (WSFC) ノードの名前を返します。 この動的管理ビューには、次の用途があります。  
   
 -   この動的管理ビューは、同一の WSFC ノードでホストされている複数の可用性レプリカを持つ可用性グループを検出するために役に立ちます。これはサポート外の構成であり、可用性グループが間違って構成されているときに FCI フェールオーバーが発生した場合にこの状態になることがあります。 詳細については、「[フェールオーバー クラスタリングと Always On 可用性グループ #40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」を参照してください。  
   
--   複数の SQL Server インスタンスが同じ WSFC ノードでホストされている場合、リソース DLL はこの動的管理ビューを使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]して、接続先ののインスタンスを決定します。  
+-   複数の SQL Server インスタンスが同じ WSFC ノードでホストされている場合、リソース DLL はこの動的管理ビューを使用して、接続先ののインスタンスを決定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
    
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|WSFC 内のリソースとしての可用性グループの一意の ID。|  
-|**instance_name**|**nvarchar(256)**|名前-*サーバー*/*インスタンス*-可用性グループのレプリカをホストするサーバーインスタンス。|  
+|**instance_name**|**nvarchar(256)**|名前-*サーバー* / *インスタンス*-可用性グループのレプリカをホストするサーバーインスタンス。|  
 |**node_name**|**nvarchar(256)**|WSFC ノードの名前。|  
   
 ## <a name="permissions"></a>アクセス許可  

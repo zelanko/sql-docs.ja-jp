@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff669af64b6aed312481264127d69eee1ad674e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 20967420eeb22a1c6418d06a9be3fc728106c141
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078160"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831005"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`パブリケーション内のアーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値はありません。  
   
-`[ @column = ] 'column'`列分割を作成する列を指定します。 *列*は**sysname**,、既定値は NULL です。 値が NULL で `@operation = N'add'` の場合、既定ではソース テーブルのすべての列がアーティクルに追加されます。 *操作*が**drop**に設定されている場合、*列*を NULL にすることはできません。 アーティクルから列を除外するには、 **sp_mergearticlecolumn**を実行し、指定された*アーティクル*から削除される各列に対して*列*および`@operation = N'drop'`を指定します。  
+`[ @column = ] 'column'`列分割を作成する列を指定します。 *列*は**sysname**,、既定値は NULL です。 値が NULL で `@operation = N'add'` の場合、既定ではソース テーブルのすべての列がアーティクルに追加されます。 *操作*が**drop**に設定されている場合、*列*を NULL にすることはできません。 アーティクルから列を除外するには、 **sp_mergearticlecolumn**を実行し、 *column* `@operation = N'drop'` 指定された*アーティクル*から削除される各列に対して列およびを指定します。  
   
 `[ @operation = ] 'operation'`レプリケーションの状態を示します。 *操作*は**nvarchar (4)**,、既定値は ADD です。 **add**は、レプリケーションの列にマークを付けます。 **drop**列をクリアします。  
   
@@ -71,7 +71,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_mergearticlecolumn**は、マージレプリケーションで使用します。  
   
  自動 ID 範囲管理が使用されている場合、アーティクルから ID 列を削除することはできません。 詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_columns dynamic management function
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_columns dynamic management function
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b917a22efd85cf1dcc83f358d334683c579ee6d4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002653"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829466"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|列の ID。|  
 |**column_name**|**sysname**|テーブル列の名前。|  
-|**column_usage**|**varchar (20)**|クエリでの列の使用方法。 使用可能な値とその説明は次のとおりです。<br /><br /> 等値: 列は、次の形式の等価性を表す述語に貢献します。 <br />                        *テーブル. 列* = *constant_value*<br /><br /> 非等値: 列は *、次の* > ような非等値を表す述語に寄与します。たとえば、*constant_value*の形式の述語です。 "=" 以外の比較演算子はすべて、不等値を表します。<br /><br /> INCLUDE: 列は述語の評価には使用されませんが、別の理由 (たとえば、クエリに対応するため) に使用されます。|  
+|**column_usage**|**varchar (20)**|クエリでの列の使用方法。 使用可能な値とその説明は次のとおりです。<br /><br /> 等値: 列は、次の形式の等価性を表す述語に貢献します。 <br />                        *表. 列*  = *constant_value*<br /><br /> 非等値: 列は、次のような非等値を表す述語に寄与し*ます。たとえば*、  >  *constant_value*の形式の述語です。 "=" 以外の比較演算子はすべて、不等値を表します。<br /><br /> INCLUDE: 列は述語の評価には使用されませんが、別の理由 (たとえば、クエリに対応するため) に使用されます。|  
   
 ## <a name="remarks"></a>Remarks  
  **sys.dm_db_missing_index_columns** によって返される情報は、クエリ オプティマイザーでクエリが最適化されるときに更新されますが、保存されません。 欠落インデックスの情報が保持されるのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の再起動までです。 欠落インデックスの情報を、サーバーの再利用後も保持する場合は、データベース管理者が情報のバックアップ コピーを定期的に作成する必要があります。  

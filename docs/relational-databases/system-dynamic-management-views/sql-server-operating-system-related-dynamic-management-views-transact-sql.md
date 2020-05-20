@@ -14,23 +14,23 @@ helpviewer_keywords:
 - SQL OS dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], SQL OS
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 862f54351eb67d2170d8e9806347eb8608178c23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5ea0bbe308e3b0e49f6250dd02d2c6c1f636751c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71342040"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830923"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>SQL Server オペレーティングシステム関連の動的管理ビュー (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-このセクションでは、オペレーティングシステム (SQLOS) に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]関連付けられている動的管理ビュー (DMV) について説明します。 SQLOS は、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固有のオペレーティングシステムリソースの管理を担当します。
+このセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オペレーティングシステム (SQLOS) に関連付けられている動的管理ビュー (DMV) について説明します。 SQLOS は、に固有のオペレーティングシステムリソースの管理を担当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。
 
-SQLOS Dmv が目次に一覧表示されます。 これらのほとんどは、と`sys.dm_os_<description>`いう名前です。
+SQLOS Dmv が目次に一覧表示されます。 これらのほとんどは、という名前 `sys.dm_os_<description>` です。
 
- 次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のオペレーティングシステム関連の動的管理ビューは[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]です。  
+ 次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オペレーティングシステム関連の動的管理ビューは [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] です。  
   
 |||  
 |-|-|  

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sp_add_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3e0f91b88a9f58ed290183ae48676572204ac98b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2e8d56f2959b78779f4ef8761053eab61cb7dd58
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078211"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829678"
 ---
 # <a name="coresp_add_collector_type-transact-sql"></a>sp_add_collector_type (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collector_type_uid = ]'*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  コレクター型の GUID を指定します。 *collector_type_uid*は**uniqueidentifier**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

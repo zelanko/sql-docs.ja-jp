@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorprepexec
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 660a75f1e6fea9b5a825372501c2e65f2dd3874b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e82a82df5f532df05ad0f04a14c95b24850484bd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69652436"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831670"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
   
 ## <a name="arguments"></a>引数  
  *準備済みハンドル*  
- は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成される準備済み*ハンドル*識別子です。 *準備*されたハンドルが必要です。 **int**を返します。  
+ は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成される準備済み*ハンドル*識別子です。 *準備*されたハンドルが必要です。 **int**を返します。  
   
  *cursor*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成されたカーソル識別子です。 *cursor*は必須のパラメーターであり、このカーソルに対して操作する後続のすべてのプロシージャ (sp_cursorfetch など) で指定する必要があります。  
@@ -62,14 +62,14 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *options*  
  カーソル結果セット列の説明を返す省略可能なパラメーターです。 * オプションには、次の**int**入力値が必要です。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  スクロールオプション。 *scrollopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -86,12 +86,12 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- 要求されたオプションが* \<stmt>* によって定義されたカーソルに適していない可能性があるため、このパラメーターは入力と出力の両方として機能します。 このような場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって適切な型が割り当てられ、この値が変更されます。  
+ 要求されたオプションが* \< stmt>* によって定義されたカーソルに適していない可能性があるため、このパラメーターは入力と出力の両方として機能します。 このような場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって適切な型が割り当てられ、この値が変更されます。  
   
  *ccopt*  
  同時実行制御オプション。 *ccopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (以前の LOCKCC)|  
@@ -105,7 +105,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- *同様 scrollpt,* と同様に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、は要求された値とは異なる値を割り当てることができます。  
+ *同様 scrollpt,* と同様に、は要求された値とは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 異なる値を割り当てることができます。  
   
  *行*  
  AUTO_FETCH で使用するフェッチバッファー行の数を示す省略可能なパラメーターです。 既定値は20行です。 *rowcount*の動作は、入力値と戻り値として割り当てられた場合に異なります。  

@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053050"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831183"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]バッチの最初の使用可能な結果セットのメタデータを返します。 バッチが結果を返さない場合は、空の結果セットを返します。 では、静的分析[!INCLUDE[ssDE](../../includes/ssde-md.md)]を実行することによって実行される最初のクエリのメタデータをが判別できない場合に、エラーが発生します。 動的管理ビューの[dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)は同じ情報を返します。  
+  バッチの最初の使用可能な結果セットのメタデータを返し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 バッチが結果を返さない場合は、空の結果セットを返します。 では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 静的分析を実行することによって実行される最初のクエリのメタデータをが判別できない場合に、エラーが発生します。 動的管理ビューの[dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)は同じ情報を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +42,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ \@tsql = ] 'Transact-SQL_batch'`1つ以上[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメント。 *Transact-sql SQL_batch*は**nvarchar (***n***)** または**nvarchar (max)** です。  
+`[ \@tsql = ] 'Transact-SQL_batch'`1つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント。 *Transact-sql SQL_batch*は**nvarchar (***n***)** または**nvarchar (max)** です。  
   
-`[ \@params = ] N'parameters'`\@params は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]バッチのパラメーターの宣言文字列を提供します。これは sp_executesql に似ています。 パラメーターには、 **nvarchar (n)** または**nvarchar (max)** を指定できます。  
+`[ \@params = ] N'parameters'`\@params は、バッチのパラメーターの宣言文字列を提供し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。これは sp_executesql に似ています。 パラメーターには、 **nvarchar (n)** または**nvarchar (max)** を指定できます。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] *_Batch*に埋め込まれているすべてのパラメーターの定義を含む1つの文字列を指定します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は、追加のパラメーター定義を示すプレースホルダーです。 ステートメントで指定するすべてのパラメーターは、params \@で定義する必要があります。 ステートメント内[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントまたはバッチにパラメーターが含まれて\@いない場合、params は必要ありません。 このパラメーターの既定値は NULL です。  
+ _Batch に埋め込まれているすべてのパラメーターの定義を含む1つの文字列を指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は、追加のパラメーター定義を示すプレースホルダーです。 ステートメントで指定するすべてのパラメーターは、params で定義する必要があり \@ ます。 ステートメント [!INCLUDE[tsql](../../includes/tsql-md.md)] 内のステートメントまたはバッチにパラメーターが含まれていない場合、 \@ params は必要ありません。 このパラメーターの既定値は NULL です。  
   
 `[ \@browse_information_mode = ] tinyint`追加のキー列とソーステーブル情報を返すかどうかを指定します。 1に設定すると、各クエリはクエリに FOR BROWSE オプションが含まれているかのように分析されます。 追加のキー列とソース テーブル情報が返されます。  
   
@@ -57,7 +57,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 -   2に設定すると、各クエリは、カーソルの準備または実行時に使用されるかのように分析されます。 ビュー名がソース列情報として返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **sp_describe_first_result_set**は、成功した場合に常に0の状態を返します。 プロシージャがエラーをスローし、プロシージャが RPC として呼び出された場合、返される状態は、dm_exec_describe_first_result_set の error_type 列に記述されているエラーの種類によって設定されます。 プロシージャがから[!INCLUDE[tsql](../../includes/tsql-md.md)]呼び出された場合、エラーが発生した場合でも、戻り値は常に0になります。  
+ **sp_describe_first_result_set**は、成功した場合に常に0の状態を返します。 プロシージャがエラーをスローし、プロシージャが RPC として呼び出された場合、返される状態は、dm_exec_describe_first_result_set の error_type 列に記述されているエラーの種類によって設定されます。 プロシージャがから呼び出された場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、エラーが発生した場合でも、戻り値は常に0になります。  
   
 ## <a name="result-sets"></a>結果セット  
  この共通メタデータは、結果のメタデータの各列に対する 1 行の結果セットとして返されます。 各行には、列の種類と NULL 値の許容属性が次のセクションに示す形式で記述されます。 各コントロールのパスに最初のステートメントが存在しない場合は、0 行の結果セットが返されます。  
@@ -104,7 +104,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|内部使用です。|  
 |**tds_collation_sort_id**|**tinyint NULL**|内部使用です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_describe_first_result_set**は、プロシージャが (仮定の) バッチ a に対して最初の結果セットのメタデータを返す場合に、そのバッチ (a) が後で実行されると、バッチによって (1) 最適化時のエラーが発生することを保証します。 (2) 実行時エラーが発生します。 (3) は結果セットを返しません。または、(4) **sp_describe_first_result_set**によって記述されたものと同じメタデータを持つ最初の結果セットを返します。  
   
  名前、NULL 値の許容属性、およびデータ型が異なる可能性があります。 **Sp_describe_first_result_set**が空の結果セットを返す場合、バッチ実行で結果セットが返されないという保証があります。  
@@ -113,17 +113,17 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set**は、次のいずれかの場合にエラーを返します。  
   
--   入力\@tsql が有効な[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチではない場合。 有効性は、バッチの[!INCLUDE[tsql](../../includes/tsql-md.md)]解析と分析によって決まります。 バッチが有効であるかどうか[!INCLUDE[tsql](../../includes/tsql-md.md)]を判断するときに、クエリの最適化中または実行中のバッチによって発生したエラーは考慮されません。  
+-   入力 \@ tsql が有効なバッチではない場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 有効性は、バッチの解析と分析によって決まり [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 バッチが有効であるかどうかを判断するときに、クエリの最適化中または実行中のバッチによって発生したエラーは考慮されません [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
--   Params \@が NULL ではなく、パラメーターに対して構文的に有効な宣言文字列ではない文字列が含まれている場合、またはパラメーターに複数回宣言する文字列が含まれている場合。  
+-   \@Params が NULL ではなく、パラメーターに対して構文的に有効な宣言文字列ではない文字列が含まれている場合、またはパラメーターに複数回宣言する文字列が含まれている場合。  
   
--   入力[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチが、params で\@宣言されたパラメーターと同じ名前のローカル変数を宣言している場合。  
+-   入力バッチが、 [!INCLUDE[tsql](../../includes/tsql-md.md)] params で宣言されたパラメーターと同じ名前のローカル変数を宣言している場合 \@ 。  
   
 -   ステートメントで一時テーブルを使用する場合はです。  
   
 -   クエリには、パーマネントテーブルの作成が含まれ、その後クエリが実行されます。  
   
- 他のすべてのチェックが成功した場合は、入力バッチ内のすべての制御フローパスが考慮されます。 この操作では、すべての制御フローステートメントが考慮される必要があります[!INCLUDE[tsql](../../includes/tsql-md.md)] (GOTO、IF/ELSE、WHILE、および TRY/ [!INCLUDE[tsql](../../includes/tsql-md.md)] CATCH ブロック) に加えて、EXEC ステートメントによって入力バッチから呼び出されたプロシージャ、動的バッチ、またはトリガー、ddl トリガーを起動する ddl ステートメント、または外部キー制約の連鎖アクションによって変更された対象テーブルまたはテーブルでトリガーが起動される DML ステートメント。 制御パスの多くが考えられる場合、ある時点でアルゴリズムは停止します。  
+ 他のすべてのチェックが成功した場合は、入力バッチ内のすべての制御フローパスが考慮されます。 この操作では、すべての制御フローステートメントが考慮される必要があります (GOTO、IF/ELSE、WHILE、および [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY/CATCH ブロック) に加えて、 [!INCLUDE[tsql](../../includes/tsql-md.md)] EXEC ステートメントによって入力バッチから呼び出されたプロシージャ、動的バッチ、またはトリガー、ddl トリガーを起動する ddl ステートメント、または外部キー制約の連鎖アクションによって変更された対象テーブルまたはテーブルでトリガーが起動される DML ステートメント。 制御パスの多くが考えられる場合、ある時点でアルゴリズムは停止します。  
   
  制御フローパスごとに、結果セットを返す最初のステートメント (存在する場合) が**sp_describe_first_result_set**によって決定されます。  
   
@@ -152,7 +152,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **sp_describe_first_result_set**は間接再帰をサポートしていません。  
   
 ## <a name="permissions"></a>アクセス許可  
- \@Tsql 引数を実行する権限が必要です。  
+ Tsql 引数を実行する権限が必要です \@ 。  
   
 ## <a name="examples"></a>使用例  
   
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- 結果: \<不明な列名> **varchar (20) NULL**  
+ 結果: \< 不明な列名> **varchar (20) NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>別名を使用して列名を強制的に同一にする  
  前の例と同じですが、列の別名を使用して列名を同じにしています。  

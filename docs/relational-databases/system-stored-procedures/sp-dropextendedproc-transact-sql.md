@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropextendedproc
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b12ebcfb662db9740efdf918f0857b94144e0ceb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 645d9d6f1951c1e35bd8e72f764f46a209a77161
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054299"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830142"
 ---
 # <a name="sp_dropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ sp_dropextendedproc [ @functname = ] 'procedure'
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Sp_dropextendedproc**を実行すると、ユーザー定義の拡張ストアドプロシージャ名[が、](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) extended_procedures カタログビューから削除され、そのエントリが削除されます[。](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) このストアドプロシージャは、 **master**データベースでのみ実行できます。  
   
 **sp_dropextendedproc**では、システム拡張ストアドプロシージャは削除されません。 代わりに、システム管理者は、拡張ストアドプロシージャに対する EXECUTE 権限を**public**ロールに対して拒否する必要があります。  
@@ -61,7 +61,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
  **Sp_dropextendedproc**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
- 次の例では`xp_hello` 、拡張ストアドプロシージャを削除します。  
+ 次の例では、 `xp_hello` 拡張ストアドプロシージャを削除します。  
   
 > [!NOTE]  
 >  この拡張ストアドプロシージャは既に存在している必要があります。このような場合、この例ではエラーメッセージが返されます。  

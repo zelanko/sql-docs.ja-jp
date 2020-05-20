@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032895"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830948"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +56,9 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|このエントリを作成したデータベースの名前です。|  
 |**db_nickname**|**binary(6)**|このエントリを作成したデータベースのニックネーム。|  
 |**version**|**int**|エントリのバージョン。|  
-|**current_state**|**nvarchar (9)**|行の現在の状態に関する情報を返します。<br /><br /> **y**行のデータは、行の現在の状態を表します。<br /><br /> **n**行のデータは、行の現在の状態を表していません。<br /><br /> n/a>-適用されません。 ** \<**<br /><br /> 不明な>-現在の状態を特定できません。 ** \<**|  
+|**current_state**|**nvarchar (9)**|行の現在の状態に関する情報を返します。<br /><br /> **y**行のデータは、行の現在の状態を表します。<br /><br /> **n**行のデータは、行の現在の状態を表していません。<br /><br /> ** \< n/a>** -適用されません。<br /><br /> ** \< 不明な>** -現在の状態を特定できません。|  
 |**rowversion_table**|**nchar (17)**|行のバージョンが[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)テーブルと[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)テーブルのどちらに格納されているかを示します。|  
-|**関する**|**nvarchar(255)**|この行バージョンエントリに関する追加情報。 通常、このフィールドは空です。|  
+|**comment**|**nvarchar(255)**|この行バージョンエントリに関する追加情報。 通常、このフィールドは空です。|  
   
 ## <a name="result-sets-for-column-information"></a>列情報の結果セット  
   
@@ -69,12 +69,12 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_nickname**|**binary(6)**|このエントリを作成したデータベースのニックネーム。|  
 |**version**|**int**|エントリのバージョン。|  
 |**colname**|**sysname**|列バージョンエントリが表すアーティクル列の名前。|  
-|**関する**|**nvarchar(255)**|この列バージョン エントリに関する追加情報です。 通常、このフィールドは空です。|  
+|**comment**|**nvarchar(255)**|この列バージョン エントリに関する追加情報です。 通常、このフィールドは空です。|  
   
 ## <a name="result-set-for-both"></a>両方の結果セット  
  **両方**の値が*show*に選択されている場合、行と列の両方の結果セットが返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_showrowreplicainfo**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

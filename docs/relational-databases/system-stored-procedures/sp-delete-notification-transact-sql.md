@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_notification
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 19c0a4d2a95b81c26b746a8ece9defce61fe712f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: eb3c5166aef24bcc9890295809b8b69a68ed4112
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68009136"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830324"
 ---
 # <a name="sp_delete_notification-transact-sql"></a>sp_delete_notification (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_delete_notification
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  通知を削除すると、通知だけが削除されます。アラートとオペレーターはそのまま残ります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールがユーザーに付与されている必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、警告`François Ajenstat` `Test Alert`が発生したときにオペレーターに送信される通知を削除します。  
+ 次の例では、警告が発生したときにオペレーターに送信される通知を削除し `François Ajenstat` `Test Alert` ます。  
   
 ```  
 USE msdb ;  

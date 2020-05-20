@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4fb51b33655756d9c3c65dfcb5de3bae380ee9a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b7b44d76ad893775216e6566add3636603ea7dce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67951034"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830626"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定した時点で名前空間の所有者 (NSO) によって処理されている i/o 要求の一覧を表示します。  
   
-|列|Type|説明|  
+|Column|種類|説明|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary (8)**|ドライバーからの I/O 要求を含む NSO メモリ ブロックの内部アドレスを示します。 NULL 値は許可されません。|  
 |**current_spid**|**smallint**|現在の SQL Server の接続のシステムプロセス id (SPID) を表示します。 NULL 値は許可されません。|  
@@ -39,7 +39,7 @@ ms.locfileid: "67951034"
 |**request_id**|**int**|ドライバーによってこの要求に割り当てられた一意の要求 ID が表示されます。 NULL 値は許可されません。|  
 |**irp_id**|**int**|一意の IRP ID を表示します。 これは、特定の IRP に関連するすべての I/O 要求を識別する場合に役立ちます。 NULL 値は許可されません。|  
 |**handle_id**|**int**|名前空間ハンドル ID が指定されました。 これは NSO 固有の識別子で、インスタンス内で一意です。 NULL 値は許可されません。|  
-|**client_thread_id**|**varbinary (8)**|要求元のクライアントアプリケーションのスレッド ID が表示されます。<br /><br /> ** \*警告\* \* **これは、クライアントアプリケーションが SQL Server と同じコンピューター上で実行されている場合にのみ意味があります。 クライアントアプリケーションがリモートで実行されている場合、 **client_thread_id**には、リモートクライアントの代わりに動作するシステムプロセスのスレッド id が表示されます。<br /><br /> NULL 値が許可されます。|  
+|**client_thread_id**|**varbinary (8)**|要求元のクライアントアプリケーションのスレッド ID が表示されます。<br /><br /> 警告これは、クライアントアプリケーションが SQL Server と同じコンピューター上で実行されている場合にのみ意味があります。 ** \* \* \* \* ** クライアントアプリケーションがリモートで実行されている場合、 **client_thread_id**には、リモートクライアントの代わりに動作するシステムプロセスのスレッド id が表示されます。<br /><br /> NULL 値が許可されます。|  
 |**client_process_id**|**varbinary (8)**|クライアントアプリケーションが SQL Server と同じコンピューター上で実行されている場合に、クライアントアプリケーションのプロセス ID を表示します。 リモート クライアントの場合は、クライアント アプリケーションの代わりに動作しているシステム プロセス ID を示します。 NULL 値が許可されます。|  
 |**handle_context_address**|**varbinary (8)**|クライアントのハンドルに関連付けられた内部 NSO 構造体のアドレスを表示します。 NULL 値が許可されます。|  
 |**filestream_transaction_id**|**varbinary (128)**|指定したハンドルと、このハンドルに関連付けられているすべての要求に関連付けられているトランザクションの ID を表示します。 **Get_filestream_transaction_context**関数によって返される値です。 NULL 値が許可されます。|  

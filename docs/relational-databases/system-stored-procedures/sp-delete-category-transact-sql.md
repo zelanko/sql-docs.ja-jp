@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a9a6812e12366900dfc1c5808eaede727c05f958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2e150318d4c334c67c51f6cf47c127793a25edb2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68120050"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831260"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="arguments"></a>引数  
 `[ @class = ] 'class'`カテゴリのクラス。 *クラス*は**varchar (8)**,、既定値はありませんが、次のいずれかの値を持つ必要があります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**補足**|ジョブカテゴリを削除します。|  
 |**アラート**|アラートカテゴリを削除します。|  
@@ -54,9 +54,9 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_delete_category**は、 **msdb**データベースから実行する必要があります。  
   
  カテゴリを削除すると、そのカテゴリのすべてのジョブ、警告、または演算子が、クラスの既定のカテゴリに recategorizes ます。  

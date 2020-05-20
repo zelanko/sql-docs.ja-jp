@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_denylogin
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 00ba2f254d2ff676eab7c93bb6d0cca7c4ae0901
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 07bc4084e96a6164fe6f057d49593499c4f69f44
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053183"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830260"
 ---
 # <a name="sp_denylogin-transact-sql"></a>sp_denylogin (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_denylogin [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  指定した Windows ユーザーまたは Windows グループにマップされているサーバーレベルのプリンシパルに対する CONNECT SQL 権限を拒否**sp_denylogin**ます。 サーバープリンシパルが存在しない場合は、作成されます。 新しいプリンシパルは、 [server_principals &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)カタログビューに表示されます。  
   
  **sp_denylogin**は、ユーザー定義のトランザクション内では実行できません。  
@@ -56,7 +56,7 @@ sp_denylogin [ @loginame = ] 'login'
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 **sp_denylogin**を使用して、 `CORPORATE\GeorgeV` Windows ユーザーがサーバーに接続できないようにする方法を示します。  
+ 次の例では、 **sp_denylogin**を使用して、Windows ユーザーがサーバーに接続できないようにする方法を示し `CORPORATE\GeorgeV` ます。  
   
 ```  
 EXEC sp_denylogin 'CORPORATE\GeorgeV';  

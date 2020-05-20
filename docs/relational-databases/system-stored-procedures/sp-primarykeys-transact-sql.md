@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_primarykeys
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ccae0385ef8c9305f4972ff6dcbd7a7960200370
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b7b4abd30b4fb62a6f9983fc0dd12348cca52467
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056310"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830970"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
   
 `[ @table_schema = ] 'table_schema'`テーブルスキーマを示します。 *table_schema*は**sysname**,、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境では、これはテーブル所有者に相当します。  
   
-`[ @table_catalog = ] 'table_catalog'`指定した*table_name*が存在するカタログの名前を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]環境では、これはデータベース名に対応しています。 *table_catalog*は**sysname**,、既定値は NULL です。  
+`[ @table_catalog = ] 'table_catalog'`指定した*table_name*が存在するカタログの名前を指定します。 環境では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、これはデータベース名に対応しています。 *table_catalog*は**sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  None  
@@ -64,7 +64,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |**KEY_SEQ**|**int**|複数列の主キーの列のシーケンス番号。|  
 |**PK_NAME**|**sysname**|主キー識別子。 データソースに該当しない場合は NULL を返します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_primarykeys**は、 *table_server*に対応する OLE DB プロバイダーの**IDBSchemaRowset**インターフェイスの PRIMARY_KEYS 行セットを照会することによって実行されます。 返される行を制限するために、 *table_name*、 *table_schema*、 *table_catalog*、および*列*の各パラメーターがこのインターフェイスに渡されます。  
   
  指定されたリンクサーバーの OLE DB プロバイダーが**IDBSchemaRowset**インターフェイスの PRIMARY_KEYS 行セットをサポートしていない場合、 **sp_primarykeys**は空の結果セットを返します。  
@@ -73,7 +73,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 `LONDON1` `HumanResources.JobCandidate` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース内のテーブルの主キー列をサーバーから返します。  
+ 次の例では、データベース内のテーブルの主キー列をサーバーから返し `LONDON1` `HumanResources.JobCandidate` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
 EXEC sp_primarykeys @table_server = N'LONDON1',   

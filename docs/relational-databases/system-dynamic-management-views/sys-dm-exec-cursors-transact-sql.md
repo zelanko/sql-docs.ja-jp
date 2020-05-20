@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 79959d61b1753d833523e0618a41eef89dcb5e58
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097837"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830646"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>dm_exec_cursors (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ dm_exec_cursors (session_id | 0 )
 |**is_open**|**bit**|カーソルが開いているかどうかを示します。|  
 |**is_async_population**|**bit**|バックグラウンドスレッドがキーセットまたは静的カーソルに非同期的に設定するかどうかを指定します。|  
 |**is_close_on_commit**|**bit**|カーソルが CURSOR_CLOSE_ON_COMMIT を使用して宣言されたかどうかを指定します。<br /><br /> 1 = カーソルはトランザクションが終了したときに閉じられます。|  
-|**fetch_status**|**int**|カーソルの最後のフェッチの状態を返します。 これは、最後に返さ@FETCH_STATUSれた @ value です。|  
+|**fetch_status**|**int**|カーソルの最後のフェッチの状態を返します。 これは、最後に返された @ @FETCH_STATUS value です。|  
 |**fetch_buffer_size**|**int**|フェッチ バッファーのサイズに関する情報。<br /><br /> 1 = Transact-SQL カーソル。 これは、API カーソルに対してより高い値に設定できます。|  
 |**fetch_buffer_start**|**int**|カーソルが開いていない場合、またはカーソルが最初の行の前に配置されている場合は、FAST_FORWARD および動的カーソルの場合は0を返します。 それ以外のときは -1 が返されます。<br /><br /> 静的カーソルとキーセットカーソルの場合は、カーソルが開いていない場合は0、カーソルが最後の行の次の位置にある場合は-1 を返します。<br /><br /> それ以外の場合は、配置されている行番号を返します。|  
 |**ansi_position**|**int**|フェッチバッファー内のカーソル位置。|  
@@ -71,7 +71,7 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表では、cursor 宣言インターフェイスについて説明し、properties 列に使用できる値を示します。  
   
 |プロパティ|[説明]|  
@@ -81,7 +81,7 @@ dm_exec_cursors (session_id | 0 )
   
  次の表は、カーソルの種類に関する説明と、プロパティ列に返される値です。  
   
-|Type|説明|  
+|種類|Description|  
 |----------|-----------------|  
 |Keyset|カーソルはキーセットとして宣言されています。|  
 |動的|カーソルは動的として宣言されました。|  

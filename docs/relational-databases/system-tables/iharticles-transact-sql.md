@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHarticles system table
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 45278a6d9501b75b624e11bbeb11d24d10e482c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e5ccf91f17022ccf910c840c1af2abb7a4048dfb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056213"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829902"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "68056213"
 |**objid**|**int**|この列は使用されず、SQL Server アーティクル ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)) に使用される[Sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) view と**IHarticles**テーブルの[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)ビューとの互換性を確保するためだけに含まれています。|  
 |**sync_objid**|**int**|この列は使用されず、SQL Server アーティクル ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)) に使用される[Sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) view と**IHarticles**テーブルの[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)ビューとの互換性を確保するためだけに含まれています。|  
 |**記述**|**nvarchar(255)**|アーティクルの説明エントリです。|  
-|**publisher_status**|**int**|パブリッシュされたアーティクルを定義するビューが[sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)を呼び出すことによって定義されているかどうかを示すために使用します。<br /><br /> **0** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)が呼び出されました。<br /><br /> **1** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)が呼び出されていません。|  
+|**publisher_status**|**int**|パブリッシュされたアーティクルを定義するビューが[sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)を呼び出すことによって定義されているかどうかを示すために使用します。<br /><br /> **0**  = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)が呼び出されました。<br /><br /> **1**  = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)が呼び出されていません。|  
 |**article_view_owner**|**nvarchar(255)**|ログ リーダー エージェントによって使用されるパブリッシャー上の同期オブジェクトの所有者です。|  
 |**article_view**|**nvarchar(255)**|ログ リーダー エージェントによって使用されるパブリッシャー上の同期オブジェクトです。|  
 |**ins_scripting_proc**|**int**|この列は使用されず、SQL Server アーティクル ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)) に使用される[Sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) view と**IHarticles**テーブルの[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)ビューとの互換性を確保するためだけに含まれています。|  

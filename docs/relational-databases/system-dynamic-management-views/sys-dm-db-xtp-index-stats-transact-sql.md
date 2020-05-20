@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_index_stats dynamic management view
 ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e6370f4cbfcbc38478e562c3b74ff24ffde962f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aeb38baa9671366f7291828e662afed30ad999f8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026832"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830829"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -38,23 +38,23 @@ ms.locfileid: "68026832"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|このインデックスが所属するオブジェクトの ID。|  
-|xtp_object_id|**bigint**|オブジェクトの現在のバージョンに対応する内部 ID。<br /><br /> 注: に[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]適用されます。|  
+|xtp_object_id|**bigint**|オブジェクトの現在のバージョンに対応する内部 ID。<br /><br /> 注: に適用さ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] れます。|  
 |index_id|**bigint**|インデックスの ID。 index_id は、オブジェクト内でのみ一意です。|  
 |scans_started|**bigint**|実行されたインメモリ OLTP のインデックス スキャンの回数。 すべての select、insert、update、または delete には、インデックススキャンが必要です。|  
 |scans_retries|**bigint**|再試行が必要なインデックススキャンの数。|  
-|rows_returned|**bigint**|テーブルが作成された後、またはが開始され[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]てから返された、累積行数。|  
-|rows_touched|**bigint**|テーブルの作成以降にアクセスされた行の累積数また[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はの先頭。|  
-|rows_expiring|**bigint**|内部使用のみです。|  
-|rows_expired|**bigint**|内部使用のみです。|  
-|rows_expired_removed|**bigint**|内部使用のみです。|  
-|phantom_scans_started|**bigint**|内部使用のみです。|  
-|phatom_scans_retries|**bigint**|内部使用のみです。|  
-|phantom_rows_touched|**bigint**|内部使用のみです。|  
-|phantom_expiring_rows_encountered|**bigint**|内部使用のみです。|  
-|phantom_expired_rows_encountered|**bigint**|内部使用のみです。|  
-|phantom_expired_removed_rows_encountered|**bigint**|内部使用のみです。|  
-|phantom_expired_rows_removed|**bigint**|内部使用のみです。|  
-|object_address|**varbinary (8)**|内部使用のみです。|  
+|rows_returned|**bigint**|テーブルが作成された後、またはが開始されてから返された、累積行数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|rows_touched|**bigint**|テーブルの作成以降にアクセスされた行の累積数またはの先頭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|rows_expiring|**bigint**|内部使用のみ。|  
+|rows_expired|**bigint**|内部使用のみ。|  
+|rows_expired_removed|**bigint**|内部使用のみ。|  
+|phantom_scans_started|**bigint**|内部使用のみ。|  
+|phatom_scans_retries|**bigint**|内部使用のみ。|  
+|phantom_rows_touched|**bigint**|内部使用のみ。|  
+|phantom_expiring_rows_encountered|**bigint**|内部使用のみ。|  
+|phantom_expired_rows_encountered|**bigint**|内部使用のみ。|  
+|phantom_expired_removed_rows_encountered|**bigint**|内部使用のみ。|  
+|phantom_expired_rows_removed|**bigint**|内部使用のみ。|  
+|object_address|**varbinary (8)**|内部使用のみ。|  
   
 ## <a name="permissions"></a>アクセス許可  
  現在のデータベースに対する VIEW DATABASE STATE 権限が必要です。  

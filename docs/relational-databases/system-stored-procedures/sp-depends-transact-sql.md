@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053104"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830235"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,17 +63,17 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>結果セット  
  **sp_depends**には、2つの結果セットが表示されます。  
   
- 次の結果セットは、 * \<オブジェクト>* が依存するオブジェクトを示しています。  
+ 次の結果セットは、 * \< オブジェクト>* が依存するオブジェクトを示しています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|依存関係が存在するアイテムの名前。|  
 |**type**|**nvarchar (16)**|項目の種類。|  
-|**まし**|**nvarchar (7)**|項目が更新されているかどうか。|  
-|**オン**|**nvarchar(8)**|項目が SELECT ステートメントで使用されているかどうか。|  
-|**項目**|**sysname**|従属性が存在する列またはパラメーター。|  
+|**更新済み**|**nvarchar (7)**|項目が更新されているかどうか。|  
+|**オフ**|**nvarchar(8)**|項目が SELECT ステートメントで使用されているかどうか。|  
+|**column**|**sysname**|従属性が存在する列またはパラメーター。|  
   
- 次の結果セットは、 * \<オブジェクト>* に依存するオブジェクトを示しています。  
+ 次の結果セットは、 * \< オブジェクト>* に依存するオブジェクトを示しています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -86,7 +86,7 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="examples"></a>例  
   
 ### <a name="a-listing-dependencies-on-a-table"></a>A. テーブルの従属性を一覧表示する  
- 次の例では、 `Sales.Customer` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース内のテーブルに依存するデータベースオブジェクトを一覧表示します。 ここではスキーマ名とテーブル名の両方を指定します。  
+ 次の例では、データベース内のテーブルに依存するデータベースオブジェクトを一覧表示し `Sales.Customer` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。 ここではスキーマ名とテーブル名の両方を指定します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -95,7 +95,7 @@ EXEC sp_depends @objname = N'Sales.Customer' ;
 ```  
   
 ### <a name="b-listing-dependencies-on-a-trigger"></a>B. トリガーの従属性を一覧表示する  
- 次の例では、トリガー `iWorkOrder`が依存しているデータベースオブジェクトを一覧表示します。  
+ 次の例では、トリガーが依存しているデータベースオブジェクトを一覧表示し `iWorkOrder` ます。  
   
 ```  
 EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;  

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - estimate decimal compression
 - table compression [SQL Server]
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 90de7b95febdf2f1a25a5e584b2ca77bb67f93d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 292bd66b8c30cec9bc55442a3ab768dd23b731ff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124507"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831076"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 |**avg_rowlen_vardecimal_format**|**decimal (12, 2)**|Vardecimal ストレージ形式が使用されている場合の平均行サイズを表します。|  
 |**row_count**|**int**|テーブル内の行の数。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  テーブルで vardecimal ストレージ形式を有効にした場合の結果の節約量を見積もるには、 **sp_estimated_rowsize_reduction_for_vardecimal**を使用します。 たとえば、行の平均サイズを40% に減らすことができる場合は、テーブルのサイズを40% 小さくすることができます。 ただし FILL FACTOR と行サイズによっては、テーブル領域を削減できない場合もあります。 たとえば、長さ 8,000 バイトの行があり、そのサイズを 40% を削減したとしても、データ ページに収まるのは 1 行のみであることに変わりはないので、領域は削減されません。  
   
  **Sp_estimated_rowsize_reduction_for_vardecimal**の結果によってテーブルが大きくなることが示された場合、テーブルの多くの行では decimal データ型の有効桁数がほぼすべて使用されます。また、vardecimal ストレージ形式に必要な少量のオーバーヘッドの追加は、vardecimal ストレージ形式の節約よりも大きくなります。 このようなまれなケースでは、vardecimal ストレージ形式を有効にしないでください。  
@@ -71,7 +71,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
  テーブルに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 `Production.WorkOrderRouting` `AdventureWorks2012`データベース内のテーブルが圧縮されている場合に行サイズの削減を推定します。  
+ 次の例では、 `Production.WorkOrderRouting` データベース内のテーブルが圧縮されている場合に行サイズの削減を推定し `AdventureWorks2012` ます。  
   
 ```  
 USE AdventureWorks2012;  

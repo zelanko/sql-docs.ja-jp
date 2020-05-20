@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_object_stats dynamic management view
 ms.assetid: 07300b59-3cab-4d3e-8138-5ea8f584f88f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e14d5162c15f38cf741ceead94c2bacb230c42a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf3997a3c0f8ed4c51651e3d32311b0c43725d59
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68043174"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830784"
 ---
 # <a name="sysdm_db_xtp_object_stats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  最後にデータベースを再起動してから、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]各オブジェクトに対する操作の影響を受けた行数を報告します。 トランザクションのコミットまたはロールバックが行われたかどうかに関係なく、操作の実行時に統計が更新されます。  
+  最後にデータベースを再起動してから、各オブジェクトに対する操作の影響を受けた行数を報告し [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ます。 トランザクションのコミットまたはロールバックが行われたかどうかに関係なく、操作の実行時に統計が更新されます。  
   
  sys.dm_db_xtp_object_stats は、変化の著しいメモリ最適化テーブルを特定するために役立ちます。 各インデックスはパフォーマンスに影響するため、テーブル内でまったく使用されていないインデックスまたはほとんど使用されていないインデックスの削除を検討することができます。 ハッシュインデックスがある場合は、バケット数を定期的に再評価する必要があります。 詳細については、「 [Determining the Correct Bucket Count for Hash Indexes](https://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5)」を参照してください。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68043174"
 |row_delete_attempts|**bigint**|コミットされたトランザクションと中止されたトランザクションの両方によって、前回のデータベースの再起動以降にテーブルから削除された行の数。|  
 |write_conflicts|**bigint**|前回データベースが再起動されてから発生した書き込み競合の数。|  
 |unique_constraint_violations|**bigint**|前回のデータベースの再起動以降に発生した unique 制約違反の数。|  
-|object_address|**varbinary (8)**|内部使用のみです。|  
+|object_address|**varbinary (8)**|内部使用のみ。|  
   
 ## <a name="permissions"></a>アクセス許可  
  現在のデータベースに対する VIEW DATABASE STATE 権限が必要です。  

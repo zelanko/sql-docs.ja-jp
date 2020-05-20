@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7fe788192aac7f7bd3e4723b615391c5d8c6e86
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97339050b2bb6b81945b6bc7604befdfd45f360b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811522"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829543"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>dm_db_index_physical_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定されたテーブルまたはビューのデータとインデックスのサイズと断片化に関する情報を返します。 インデックスの場合、各パーティションの B ツリーのレベルごとに 1 行のデータが返されます。 ヒープの場合、各パーティションの IN_ROW_DATA アロケーション ユニットごとに 1 行のデータが返されます。 ラージ オブジェクト (LOB) データの場合、各パーティションの LOB_DATA アロケーション ユニットごとに 1 行のデータが返されます。 テーブルに行オーバーフロー データが存在する場合、各パーティションの ROW_OVERFLOW_DATA アロケーション ユニットごとに 1 行のデータが返されます。 xVelocity メモリが最適化された列ストア インデックスに関する情報は返されません。  
+  に指定されたテーブルまたはビューのデータとインデックスのサイズと断片化に関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 インデックスの場合、各パーティションの B ツリーのレベルごとに 1 行のデータが返されます。 ヒープの場合、各パーティションの IN_ROW_DATA アロケーション ユニットごとに 1 行のデータが返されます。 ラージ オブジェクト (LOB) データの場合、各パーティションの LOB_DATA アロケーション ユニットごとに 1 行のデータが返されます。 テーブルに行オーバーフロー データが存在する場合、各パーティションの ROW_OVERFLOW_DATA アロケーション ユニットごとに 1 行のデータが返されます。 xVelocity メモリが最適化された列ストア インデックスに関する情報は返されません。  
   
 > [!IMPORTANT]
 > [読み取り可能なセカンダリレプリカ](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)Always On をホストしているサーバーインスタンスで、 **dm_db_index_physical_stats**に対してクエリを実行すると、再実行のブロックの問題が発生する可能性があります。 これは、この動的管理ビューが、指定したユーザー テーブルまたはビューで IS ロックを獲得することが原因です。IS ロックは、そのユーザー テーブルまたはビューの X ロックに関して REDO スレッドの要求をブロックする可能性があります。  
@@ -65,7 +65,7 @@ sys.dm_db_index_physical_stats (
  *object_id* |NULL |0 |標準  
  インデックスがあるテーブルまたはビューのオブジェクト ID を示します。 *object_id*は**int**です。  
   
- 有効な入力値は、テーブルおよびビューの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。 以降[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、有効な入力には、service broker のキュー名またはキューの内部テーブル名も含まれます。 既定のパラメーター (つまり、すべてのオブジェクト、すべてのインデックスなど) が適用されると、すべてのキューの断片化情報が結果セットに含まれます。  
+ 有効な入力値は、テーブルおよびビューの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、有効な入力には、service broker のキュー名またはキューの内部テーブル名も含まれます。 既定のパラメーター (つまり、すべてのオブジェクト、すべてのインデックスなど) が適用されると、すべてのキューの断片化情報が結果セットに含まれます。  
   
  NULL を指定すると、指定されたデータベース内にあるすべてのテーブルとビューに関する情報が返されます。 *Object_id*に null を指定する場合は、 *index_id*と*partition_number*にも null を指定する必要があります。  
   
@@ -102,7 +102,7 @@ sys.dm_db_index_physical_stats (
 |avg_fragment_size_in_pages|**float**|IN_ROW_DATA アロケーション ユニットのリーフ レベルにおける、フラグメントあたりのページの平均数。<br /><br /> インデックスの非リーフ レベル、および LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは NULL になります。<br /><br /> *Mode* = サンプリングされた場合のヒープの場合は NULL です。|  
 |page_count|**bigint**|インデックス ページまたはデータ ページの合計数。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルにおけるインデックス ページの合計数になります。<br /><br /> ヒープでは、IN_ROW_DATA アロケーション ユニットに含まれるデータ ページの合計数になります。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは、アロケーション ユニットに含まれる合計ページ数になります。|  
 |avg_page_space_used_in_percent|**float**|すべてのページで、使用可能なデータ ストレージ領域のうち使用されているパーセンテージ (%) の平均。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルでの平均になります。<br /><br /> ヒープでは、IN_ROW_DATA アロケーション ユニットに含まれるすべてのデータ ページの平均になります。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは、アロケーション ユニットに含まれるすべてのページの平均になります。<br /><br /> *Mode* = が制限されている場合は NULL です。|  
-|record_count|**bigint**|レコードの総数。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルにおけるレコードの合計数になります。<br /><br /> ヒープでは、IN_ROW_DATA アロケーション ユニットに含まれるレコードの合計数になります。<br /><br /> **注:** ヒープの場合、この関数から返されるレコードの数が、ヒープに対して SELECT COUNT (\*) を実行することによって返される行数と一致しない可能性があります。 これは、1 行に複数のレコードが含まれる場合があるためです。 たとえば、更新の状況によっては、更新操作の結果として転送元レコードと転送先レコードが 1 つのヒープ行に含まれることがあります。 また、大きな LOB 行のほとんどは、LOB_DATA ストレージ内で複数のレコードに分割されます。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは、アロケーション ユニット全体でのレコードの合計数になります。<br /><br /> *Mode* = が制限されている場合は NULL です。|  
+|record_count|**bigint**|レコードの総数。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルにおけるレコードの合計数になります。<br /><br /> ヒープでは、IN_ROW_DATA アロケーション ユニットに含まれるレコードの合計数になります。<br /><br /> **注:** ヒープの場合、この関数から返されるレコードの数が、ヒープに対して SELECT COUNT () を実行することによって返される行数と一致しない可能性があり \* ます。 これは、1 行に複数のレコードが含まれる場合があるためです。 たとえば、更新の状況によっては、更新操作の結果として転送元レコードと転送先レコードが 1 つのヒープ行に含まれることがあります。 また、大きな LOB 行のほとんどは、LOB_DATA ストレージ内で複数のレコードに分割されます。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは、アロケーション ユニット全体でのレコードの合計数になります。<br /><br /> *Mode* = が制限されている場合は NULL です。|  
 |ghost_record_count|**bigint**|アロケーション ユニットで、非実体クリーンアップ タスクによる削除の準備ができているゴースト レコードの数。<br /><br /> IN_ROW_DATA アロケーション ユニットに含まれるインデックスの非リーフ レベルでは 0 になります。<br /><br /> *Mode* = が制限されている場合は NULL です。|  
 |version_ghost_record_count|**bigint**|アロケーション ユニット内で、未処理のスナップショット分離トランザクションによって保持されているゴースト レコードの数。<br /><br /> IN_ROW_DATA アロケーション ユニットに含まれるインデックスの非リーフ レベルでは 0 になります。<br /><br /> *Mode* = が制限されている場合は NULL です。|  
 |min_record_size_in_bytes|**int**|最小レコード サイズ (バイト単位)。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルでの最小レコード サイズになります。<br /><br /> ヒープでは、IN_ROW_DATA アロケーション ユニットに含まれる最小レコード サイズになります。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは、アロケーション ユニット全体での最小レコード サイズになります。<br /><br /> *Mode* = が制限されている場合は NULL です。|  
@@ -110,9 +110,9 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|平均レコード サイズ (バイト単位)。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルでの平均レコード サイズになります。<br /><br /> ヒープでは、IN_ROW_DATA アロケーション ユニットに含まれる平均レコード サイズになります。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは、アロケーション ユニット全体での平均レコード サイズになります。<br /><br /> *Mode* = が制限されている場合は NULL です。|  
 |forwarded_record_count|**bigint**|別のデータの場所への転送ポインターを持つ、ヒープ内の転送されたレコード数 (この状態は、更新中に、新しい行を格納できる十分なスペースが元の場所にない場合に発生します)。<br /><br /> ヒープの IN_ROW_DATA アロケーション ユニット以外のアロケーション ユニットでは NULL になります。<br /><br /> *Mode*が制限されている場合のヒープの場合は NULL です。|  
 |compressed_page_count|**bigint**|圧縮されたページ数。<br /><br /> ヒープの場合、新しく割り当てられたページはページ圧縮されません。 ヒープは、2 つの特殊な条件、つまりデータを一括インポートする場合、またはヒープを再構築する場合に、ページ圧縮されます。 ページ割り当ての原因となる通常の DML 操作ではページ圧縮されません。 compressed_page_count の値が目標のしきい値を超えた場合は、ヒープを再構築してください。<br /><br /> クラスター化インデックスを含むテーブルの場合、compressed_page_count の値はページ圧縮の効果を示します。|  
-|hobt_id|bigint|**に適用さ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れ[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ます: (を通じ[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]て[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))、です。<br /><br /> 列ストアインデックスの場合にのみ、これはパーティションの内部列ストアデータを追跡する行セットの ID です。 行セットは、データヒープまたはバイナリツリーとして格納されます。 親列ストアインデックスと同じインデックス ID を持っています。 詳細については、「 [sys. internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)」を参照してください。<br /><br /> NULL の場合|  
-|column_store_delete_buffer_state|tinyint|**に適用さ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れ[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ます: (を通じ[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]て[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))、です。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN <br /><br /> 2 = ドレイン中<br /><br /> 3 = フラッシュ<br /><br /> 4 = インベントリからの削除<br /><br /> 5 = 準備完了|  
-|column_store_delete_buff_state_desc||**に適用さ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れ[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ます: (を通じ[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]て[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))、です。<br /><br /> 無効-親インデックスが列ストアインデックスではありません。<br /><br /> OPEN-deleters とスキャナーはこれを使用します。<br /><br /> ドレイン中-deleters はドレインされますが、スキャナーでは引き続き使用されます。<br /><br /> フラッシュ-バッファーが閉じられ、バッファー内の行が削除ビットマップに書き込まれています。<br /><br /> 削除-閉じた削除バッファーの行が delete ビットマップに書き込まれましたが、スキャナーがまだ使用しているため、バッファーが切り捨てられていません。 開いているバッファーが十分であるため、新しいスキャナーでは、インベントリから削除するバッファーを使用する必要はありません。<br /><br /> READY-この削除バッファーは使用する準備ができています。|  
+|hobt_id|bigint|**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (を [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] です。<br /><br /> 列ストアインデックスの場合にのみ、これはパーティションの内部列ストアデータを追跡する行セットの ID です。 行セットは、データヒープまたはバイナリツリーとして格納されます。 親列ストアインデックスと同じインデックス ID を持っています。 詳細については、「 [sys. internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)」を参照してください。<br /><br /> NULL の場合|  
+|column_store_delete_buffer_state|tinyint|**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (を [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] です。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN <br /><br /> 2 = ドレイン中<br /><br /> 3 = フラッシュ<br /><br /> 4 = インベントリからの削除<br /><br /> 5 = 準備完了|  
+|column_store_delete_buff_state_desc||**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (を [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] です。<br /><br /> 無効-親インデックスが列ストアインデックスではありません。<br /><br /> OPEN-deleters とスキャナーはこれを使用します。<br /><br /> ドレイン中-deleters はドレインされますが、スキャナーでは引き続き使用されます。<br /><br /> フラッシュ-バッファーが閉じられ、バッファー内の行が削除ビットマップに書き込まれています。<br /><br /> 削除-閉じた削除バッファーの行が delete ビットマップに書き込まれましたが、スキャナーがまだ使用しているため、バッファーが切り捨てられていません。 開いているバッファーが十分であるため、新しいスキャナーでは、インベントリから削除するバッファーを使用する必要はありません。<br /><br /> READY-この削除バッファーは使用する準備ができています。|  
   
 ## <a name="remarks"></a>Remarks  
  sys.dm_db_index_physical_stats 動的管理関数は、DBCC SHOWCONTIG ステートメントの代わりに使用できます。  
@@ -168,7 +168,7 @@ GO
 ```  
   
 ### <a name="best-practice"></a>推奨事項  
- DB_ID または OBJECT_ID を使用する場合は、必ず有効な ID が返されるようにしてください。 たとえば、OBJECT_ID を使用する場合は、などの3つの部分で`OBJECT_ID(N'AdventureWorks2012.Person.Address')`構成される名前を指定するか、関数によって返される値を、dm_db_index_physical_stats 関数で使用する前にテストします。 後の例 A と B は、データベース ID とオブジェクト ID を安全に指定する方法を示しています。  
+ DB_ID または OBJECT_ID を使用する場合は、必ず有効な ID が返されるようにしてください。 たとえば、OBJECT_ID を使用する場合は、などの3つの部分で構成される名前を指定する `OBJECT_ID(N'AdventureWorks2012.Person.Address')` か、関数によって返される値を、dm_db_index_physical_stats 関数で使用する前にテストします。 後の例 A と B は、データベース ID とオブジェクト ID を安全に指定する方法を示しています。  
   
 ## <a name="detecting-fragmentation"></a>断片化の検出  
  断片化は、テーブルとテーブルに定義されたインデックスに対して、INSERT、UPDATE、DELETE ステートメントによるデータ変更が行われる過程で発生します。 これらの変更は、テーブルとインデックスのすべての行に均等に分散されるわけではないので、時間が経つにつれ各ページのゆとりに差が生じることになります。 このような断片化があるときに、クエリでテーブルのインデックスの一部または全部をスキャンしようとすると、余分なページの読み取りが必要になり、 データの並列スキャンの妨げになります。  

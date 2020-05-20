@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 560c425c5bda4ee1f9dd7ecf454c65d3ba7eab1e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108454"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831726"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +40,15 @@ sp_cursoroption cursor, code, value
   
 ## <a name="arguments"></a>引数  
  *cursor*  
- は、 *handle*によって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成され、sp_cursoropen ストアドプロシージャによって返されるハンドル値です。 *カーソル*の実行には**int**入力値が必要です。  
+ は、 *handle*によって生成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_cursoropen ストアドプロシージャによって返されるハンドル値です。 *カーソル*の実行には**int**入力値が必要です。  
   
  *code*  
  カーソル戻り値のさまざまな要因を指定するために使用されます。 *コード*には、次のいずれかの**int**入力値が必要です。  
   
 |値|名前|説明|  
 |-----------|----------|-----------------|  
-|0x0001|TEXTPTR_ONLY|指定された特定の text 列または image 列の実際のデータではなくテキスト ポインターを返します。<br /><br /> TEXTPTR_ONLY を使用すると、テキストポインターを blob オブジェクトへの*ハンドル*として使用できるように[!INCLUDE[tsql](../../includes/tsql-md.md)]なります。このオブジェクトは[!INCLUDE[tsql](../../includes/tsql-md.md)] 、後でまたは dbwritetext など機能 (READTEXT やなど) を使用して選択的に取得または更新することができます。<br /><br /> 値 0 が割り当てられている場合は、選択リスト内のすべての text 列および image 列がデータではなくテキスト ポインターを返します。|  
-|0x0002|CURSOR_NAME|*Value*で指定された名前をカーソルに割り当てます。 これにより、ODBC では、sp_cursoropen [!INCLUDE[tsql](../../includes/tsql-md.md)]によって開かれたカーソルに対して位置指定更新/削除ステートメントを使用できます。<br /><br /> 文字列は任意の文字または Unicode データ型として指定できます。<br /><br /> 配置[!INCLUDE[tsql](../../includes/tsql-md.md)]された UPDATE/delete ステートメントは、既定では fat カーソルの最初の行で動作するため、位置指定の UPDATE/delete ステートメントを実行する前に、SP_CURSOR setposition を使用してカーソルを配置する必要があります。|  
+|0x0001|TEXTPTR_ONLY|指定された特定の text 列または image 列の実際のデータではなくテキスト ポインターを返します。<br /><br /> TEXTPTR_ONLY を使用すると、テキストポインターを blob オブジェクトへの*ハンドル*として使用できるようになり [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。このオブジェクトは、後でまたは dbwritetext など機能 (READTEXT やなど) を使用して選択的に取得または更新することができ [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。<br /><br /> 値 0 が割り当てられている場合は、選択リスト内のすべての text 列および image 列がデータではなくテキスト ポインターを返します。|  
+|0x0002|CURSOR_NAME|*Value*で指定された名前をカーソルに割り当てます。 これにより、ODBC では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_cursoropen によって開かれたカーソルに対して位置指定更新/削除ステートメントを使用できます。<br /><br /> 文字列は任意の文字または Unicode データ型として指定できます。<br /><br /> 配置された [!INCLUDE[tsql](../../includes/tsql-md.md)] update/delete ステートメントは、既定では fat カーソルの最初の行で動作するため、位置指定の update/delete ステートメントを実行する前に、SP_CURSOR SETPOSITION を使用してカーソルを配置する必要があります。|  
 |0x0003|TEXTDATA|以降のフェッチで、特定の text 列または image 列のテキスト ポインターではなく実際のデータを返します (これにより、TEXTPTR_ONLY の効力が取り消されます)。<br /><br /> 特定の列で TEXTDATA が有効になると、行は再フェッチ (更新) されます。後で TEXTPTR_ONLY に戻すことができます。 TEXTPTR_ONLY と同様に、value パラメーターは列番号を指定する整数で、値が 0 の場合はすべての text 列および image 列が返されます。|  
 |0x0004|SCROLLOPT|スクロール オプションです。 詳細については、このトピックで後述する「返されるコード値」を参照してください。|  
 |0x0005|CCOPT|同時実行制御オプション。 詳細については、このトピックで後述する「返されるコード値」を参照してください。|  

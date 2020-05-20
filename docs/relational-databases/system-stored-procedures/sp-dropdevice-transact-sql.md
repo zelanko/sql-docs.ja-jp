@@ -16,19 +16,19 @@ helpviewer_keywords:
 - backup devices [SQL Server], deleting
 - sp_dropdevice
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 998794fd2e5fe5521587ebbb2a88c61c80cff39e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8d9176624f661cb012fe8ed3124a1b868ec72195
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927823"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830204"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  のインスタンスからデータベースデバイスまたはバックアップデバイスを削除し[!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)]、 **master. dbo. sysdevices**からエントリを削除します。  
+  のインスタンスからデータベースデバイスまたはバックアップデバイスを削除し [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] 、 **master. dbo. sysdevices**からエントリを削除します。  
    
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,9 +49,9 @@ sp_dropdevice [ @logicalname = ] 'device'
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_dropdevice**をトランザクション内で使用することはできません。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -65,9 +65,9 @@ EXEC sp_dropdevice 'tapedump1';
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [バックアップデバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
+ [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [バックアップデバイス &#40;SQL Server を削除&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)   
- [sp_addumpdevice &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_helpdb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpdevice &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdevice-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

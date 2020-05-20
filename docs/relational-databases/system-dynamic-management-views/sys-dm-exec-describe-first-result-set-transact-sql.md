@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set catalog view
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 523a94718f123fab9d501de9497ca5ecc2b09c95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1591c84de006308e96a3b8079ea05ef9ad6802b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097812"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830616"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  この動的管理関数は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントをパラメーターとして受け取り、ステートメントの最初の結果セットのメタデータを記述します。  
+  この動的管理関数は、ステートメントをパラメーターとして受け取り、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの最初の結果セットのメタデータを記述します。  
   
  **dm_exec_describe_first_result_set**には、 [transact-sql&#41;&#40;dm_exec_describe_first_result_set_for_object](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)と同じ結果セットの定義があります。 [sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)に似ています。  
   
@@ -44,12 +44,12 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
 ## <a name="arguments"></a>引数  
  *\@tsql*  
- 1つ以上[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメント。 *Transact-sql SQL_batch*は**nvarchar (***n***)** または**nvarchar (max)** です。  
+ 1つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント。 *Transact-sql SQL_batch*は**nvarchar (***n***)** または**nvarchar (max)** です。  
   
  *\@params*  
- \@params は、sp_executesql と同様に、 [!INCLUDE[tsql](../../includes/tsql-md.md)]バッチのパラメーターの宣言文字列を提供します。 パラメーターには、 **nvarchar (n)** または**nvarchar (max)** を指定できます。  
+ \@params は、sp_executesql と同様に、バッチのパラメーターの宣言文字列を提供 [!INCLUDE[tsql](../../includes/tsql-md.md)] します。 パラメーターには、 **nvarchar (n)** または**nvarchar (max)** を指定できます。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] *_Batch*に埋め込まれているすべてのパラメーターの定義を含む1つの文字列を指定します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は、追加のパラメーター定義を示すプレースホルダーです。 Stmt に指定するすべてのパラメーターは、 \@params で定義する必要があります。 ステートメント内[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントまたはバッチにパラメーターが含まれて\@いない場合、params は必要ありません。 このパラメーターの既定値は NULL です。  
+ _Batch に埋め込まれているすべてのパラメーターの定義を含む1つの文字列を指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は、追加のパラメーター定義を示すプレースホルダーです。 Stmt に指定するすべてのパラメーターは、params で定義する必要があり \@ ます。 ステートメント [!INCLUDE[tsql](../../includes/tsql-md.md)] 内のステートメントまたはバッチにパラメーターが含まれていない場合、 \@ params は必要ありません。 このパラメーターの既定値は NULL です。  
   
  *\@include_browse_information*  
  1 に設定すると、各クエリは FOR BROWSE オプションが指定されているように分析されます。 追加のキー列とソース テーブル情報が返されます。  
@@ -101,7 +101,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type**|**int**|返されるエラーを表す整数が格納されます。 error_type_desc にマップされます。 解説の下の一覧を参照してください。|  
 |**error_type_desc**|**nvarchar(60)**|返されるエラーを表す短い大文字の文字列が格納されます。 error_type にマップされます。 解説の下の一覧を参照してください。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数は、**sp_describe_first_result_set** と同じアルゴリズムを使用します。 詳細については、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) を参照してください。  
   
  次の表に、エラーの種類とその説明を示します。  
@@ -119,11 +119,11 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |9|RECURSION|バッチに再帰的なステートメントが含まれているため、結果を特定できませんでした。|  
 |10|TEMPORARY_TABLE|バッチに一時テーブルが含まれており、バッチが **sp_describe_first_result_set** でサポートされていないため、結果を特定できませんでした。|  
 |11|UNSUPPORTED_STATEMENT|バッチに **sp_describe_first_result_set** でサポートされていないステートメント (FETCH、REVERT など) が含まれているため、結果を特定できませんでした。|  
-|12|OBJECT_TYPE_NOT_SUPPORTED|関数\@に渡された object_id はサポートされていません (つまり、ストアドプロシージャではありません)。|  
-|13|OBJECT_DOES_NOT_EXIST|関数\@に渡された object_id がシステムカタログに見つかりませんでした。|  
+|12|OBJECT_TYPE_NOT_SUPPORTED|\@関数に渡された object_id はサポートされていません (つまり、ストアドプロシージャではありません)。|  
+|13|OBJECT_DOES_NOT_EXIST|\@関数に渡された object_id がシステムカタログに見つかりませんでした。|  
   
 ## <a name="permissions"></a>アクセス許可  
- \@Tsql 引数を実行する権限が必要です。  
+ Tsql 引数を実行する権限が必要です \@ 。  
   
 ## <a name="examples"></a>使用例  
  トピックのその他の例については[sp_describe_first_result_set 「transact-sql&#41;&#40;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)使用して、 **dm_exec_describe_first_result_set**を使用するように調整することもできます。  

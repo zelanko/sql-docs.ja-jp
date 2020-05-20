@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpublications system table
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 31f7d9c3e5d297a39fd0278c51014793a4b8dbd0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67939010"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829245"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67939010"
 |**レプリケーション**|**sysname**|パブリケーションの名前を指定します。|  
 |**publication_id**|**int**|パブリケーションの ID です。|  
 |**publication_type**|**int**|パブリケーションの種類です。<br /><br /> **0** = トランザクション。<br /><br /> **1** = スナップショット。<br /><br /> **2** = Merge。|  
-|**thirdparty_flag**|**bit**|パブリケーションがデータベースで[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]あるかどうかを示します。<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> **1** = 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータソース。|  
+|**thirdparty_flag**|**bit**|パブリケーションがデータベースであるかどうかを示し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> **1** = 以外のデータソース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**independent_agent**|**bit**|このパブリケーションに対してスタンドアロンのディストリビューションエージェントがあるかどうかを示します。|  
 |**immediate_sync**|**bit**|スナップショットエージェントが実行されるたびに同期ファイルが作成または再作成されるかどうかを示します。|  
 |**allow_push**|**bit**|指定されたパブリケーションに対してプッシュサブスクリプションを作成できるかどうかを示します。|  
@@ -47,7 +47,7 @@ ms.locfileid: "67939010"
 |**保有**|**int**|パブリケーションの保有期間 (時間) です。|  
 |**sync_method**|**int**|同期方法:<br /><br /> **0** = native (すべてのテーブルのネイティブモードの一括コピー出力を生成します)。<br /><br /> **1** = 文字 (すべてのテーブルのキャラクターモードの一括コピー出力を生成します)。<br /><br /> **3** = 同時実行 (すべてのテーブルのネイティブモードの一括コピー出力を作成しますが、スナップショット時にテーブルをロックしません)。<br /><br /> **4** = Concurrent_c (すべてのテーブルのキャラクターモードの一括コピー出力を生成しますが、スナップショット時にテーブルをロックしません)<br /><br /> 値**3**および**4**は、トランザクションレプリケーションとマージレプリケーションで使用できますが、スナップショットレプリケーションでは使用できません。|  
 |**allow_subscription_copy**|**bit**|このパブリケーションをサブスクライブするサブスクリプションデータベースをコピーする機能を有効または無効にします。 **0**は、コピーが無効であることを示します。 **1**は、コピーが有効になっていることを示します。|  
-|**thirdparty_options**|**int**|の[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]レプリケーションフォルダー内のパブリケーションの表示を抑制するかどうかを指定します。<br /><br /> **0** = の[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]レプリケーションフォルダーに異種パブリケーションを表示します。<br /><br /> **1** = のレプリケーションフォルダーに異種パブリケーションを表示しないよう[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]にします。|  
+|**thirdparty_options**|**int**|のレプリケーションフォルダー内のパブリケーションの表示を抑制するかどうかを指定し [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。<br /><br /> **0** = のレプリケーションフォルダーに異種パブリケーションを表示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。<br /><br /> **1** = のレプリケーションフォルダーに異種パブリケーションを表示しないように [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。|  
 |**allow_queued_tran**|**bit**|パブリケーションがキュー更新を許可するかどうかを指定します。<br /><br /> **0 =** パブリケーションはキューに登録されていません。<br /><br /> **1** = パブリケーションはキューに登録されています。|  
 |**options**|**int**|このリリースに関する情報はありません。|  
   

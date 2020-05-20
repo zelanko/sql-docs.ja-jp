@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysoperators system table
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e4336fdeeb0867018e9a2a630f2212cc06259482
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3c4d8b72eb4c8083ce17541b12305dcf008090d4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67984909"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829937"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67984909"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|オペレーターの ID。|  
+|**ID**|**int**|オペレーターの ID。|  
 |**name**|**sysname**|演算子の名前。|  
 |**enabled**|**tinyint**|アラート通知の状態 (ブール値)。 **1**の場合、このオペレーターは警告が発生したときに通知を受け取ることができます。|  
 |**email_address**|**nvarchar (100)**|このオペレーターの電子メールアドレス。|  

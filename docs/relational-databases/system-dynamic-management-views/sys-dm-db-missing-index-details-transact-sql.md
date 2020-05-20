@@ -18,15 +18,15 @@ helpviewer_keywords:
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_details dynamic management view
 - sys.dm_db_missing_index_details dynamic management view
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8218ff5c92613b0f152c699a81314cb6a3530885
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 77b3faae57764a936e6115d22ac00ca855d3acb9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68263789"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829438"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>dm_db_missing_index_details (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "68263789"
 |**index_handle**|**int**|特定の欠落インデックスの識別子。 識別子はサーバー全体で一意です。 **index_handle**は、このテーブルのキーです。|  
 |**database_id**|**smallint**|欠落インデックスを含むテーブルがあるデータベースの識別子。|  
 |**object_id**|**int**|インデックスが欠落しているテーブルの識別子。|  
-|**equality_columns**|**nvarchar (4000)**|次の形式の等値述語に使用できる列のコンマ区切り一覧。<br /><br /> *テーブル. 列* =*constant_value*|  
-|**inequality_columns**|**nvarchar (4000)**|次の形式のような不等値述語に使用できる列のコンマ区切り一覧。<br /><br /> *テーブル. 列* > *constant_value*<br /><br /> "=" 以外の比較演算子はすべて、不等値を表します。|  
+|**equality_columns**|**nvarchar (4000)**|次の形式の等値述語に使用できる列のコンマ区切り一覧。<br /><br /> *表. 列*  =*constant_value*|  
+|**inequality_columns**|**nvarchar (4000)**|次の形式のような不等値述語に使用できる列のコンマ区切り一覧。<br /><br /> *表. 列*  > *constant_value*<br /><br /> "=" 以外の比較演算子はすべて、不等値を表します。|  
 |**included_columns**|**nvarchar (4000)**|クエリの包括列として必要な列のコンマ区切り一覧。 カバリング列または付加列の詳細については、「[付加列を使用したインデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。<br /><br /> メモリ最適化インデックス (ハッシュとメモリ最適化された非クラスター化) の場合は、 **included_columns**を無視します。 すべてのメモリ最適化インデックスには、テーブルのすべての列が含まれています。|  
 |**諸表**|**nvarchar (4000)**|インデックスが欠落しているテーブルの名前。|  
   
@@ -64,8 +64,8 @@ ms.locfileid: "68263789"
   
 ## <a name="permissions"></a>アクセス許可
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
 ## <a name="see-also"></a>参照  
  [dm_db_missing_index_columns &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

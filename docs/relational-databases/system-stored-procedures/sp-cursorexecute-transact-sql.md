@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_execute
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5d0979ba7df97ebc9fc5b79d8fd0cbd34b6a59a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b3152e180ceb1681f259f0b1cfcfbccce224a68c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108530"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831742"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,12 +79,12 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>コードの戻り値  
  *rowcount*は次の値を返す場合があります。  
   
-|値|説明|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |-1|不明な行の数。|  
 |-n|非同期設定が有効になっています。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>scrollopt パラメーターと ccopt パラメーター  
  *scrollopt*と*ccopt*は、キャッシュされたプランがサーバーキャッシュに対して割り込まれる場合に役立ちます。つまり、ステートメントを識別する準備済みハンドルを再コンパイルする必要があります。 *Scrollopt*および*ccopt*パラメーターの値は、元の要求で sp_cursorprepare に送信された値と一致している必要があります。  

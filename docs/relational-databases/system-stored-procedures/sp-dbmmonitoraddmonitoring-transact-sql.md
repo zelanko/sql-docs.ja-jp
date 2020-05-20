@@ -16,14 +16,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitoraddmonitoring
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4b8ddf9753578f6d73cd6baf7511c73d90377e1a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108153"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831650"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,12 +50,12 @@ sp_dbmmonitoraddmonitoring [ update_period ]
  None  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このプロシージャを実行するには、サーバー インスタンス上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを実行できることが必要です。また、データベース ミラーリング監視ジョブを実行するにはエージェントが実行中であることが必要です。  
   
- データベースミラーリングがから[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]開始された場合、 **sp_dbmmonitoraddmonitoring**プロシージャは自動的に実行されます。 ALTER DATABASE ステートメントを使用して手動でミラーリングを開始する場合、サーバーインスタンス上のミラー化されたデータベースを監視するには、 **sp_dbmmonitoraddmonitoring**を手動で実行する必要があります。  
+ データベースミラーリングがから開始された場合 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、 **sp_dbmmonitoraddmonitoring**プロシージャは自動的に実行されます。 ALTER DATABASE ステートメントを使用して手動でミラーリングを開始する場合、サーバーインスタンス上のミラー化されたデータベースを監視するには、 **sp_dbmmonitoraddmonitoring**を手動で実行する必要があります。  
   
 > [!NOTE]  
 >  データベースミラーリングをセットアップする前に**sp_dbmmonitoraddmonitoring**を実行すると、監視ジョブは実行されますが、データベースミラーリングモニターの履歴が保存されている状態テーブルは更新されません。  
@@ -64,7 +64,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、更新間隔`3` (分) で監視を開始します。  
+ 次の例では、更新間隔 (分) で監視を開始し `3` ます。  
   
 ```  
 EXEC sp_dbmmonitoraddmonitoring 3;  

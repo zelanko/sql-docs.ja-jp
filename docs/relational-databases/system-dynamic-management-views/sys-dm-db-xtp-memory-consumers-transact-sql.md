@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_memory_consumers dynamic management view
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9579de52a155bd3d5eaa26862f1a7da93d7b19f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2efcff0a713c4f7f59206b484c26c4c797cd343
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026821"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830777"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>dm_db_xtp_memory_consumers (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ ms.locfileid: "68026821"
 |allocated_bytes|**bigint**|このコンシューマーのために予約されたバイト数。|  
 |used_bytes|**bigint**|このコンシューマーによって使用されているバイト数。 VARHEAP のみに適用されます。|  
 |allocation_count|**int**|割り当ての数。|  
-|partition_count|**int**|内部使用のみです。|  
-|sizeclass_count|**int**|内部使用のみです。|  
-|min_sizeclass|**int**|内部使用のみです。|  
-|max_sizeclass|**int**|内部使用のみです。|  
+|partition_count|**int**|内部使用のみ。|  
+|sizeclass_count|**int**|内部使用のみ。|  
+|min_sizeclass|**int**|内部使用のみ。|  
+|max_sizeclass|**int**|内部使用のみ。|  
 |memory_consumer_address|**varbinary**|コンシューマーの内部アドレス。 内部使用専用です。|  
 |xtp_object_id|**bigint**|メモリ最適化テーブルに対応するインメモリ OLTP オブジェクト ID。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  出力では、データベース レベルのアロケーターは、ユーザー テーブル、インデックス、およびシステム テーブルを参照します。 object_id = NULL の VARHEAP は、可変長列を含むテーブルに割り当てられたメモリを参照します。  
   
 ## <a name="permissions"></a>アクセス許可  
