@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges_ex
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd4251c4b47f67d348b6978c05c07d0ae64d16c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 46abd2a21441cdf911cecb9b21f02451400258f3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070357"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823992"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|テーブル修飾子の名前。 さまざまな DBMS 製品では、3つの要素で構成するテーブル (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列はデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。 このフィールドは NULL にすることができます。|  
-|**TABLE_SCHEM**|**sysname**|テーブル所有者の名前。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列は、テーブルを作成したデータベースユーザーの名前を表します。 このフィールドは常に値を返します。|  
+|**TABLE_CAT**|**sysname**|テーブル修飾子の名前。 さまざまな DBMS 製品では、3つの要素で構成するテーブル (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この列はデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。 このフィールドは NULL にすることができます。|  
+|**TABLE_SCHEM**|**sysname**|テーブル所有者の名前。 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列は、テーブルを作成したデータベースユーザーの名前を表します。 このフィールドは常に値を返します。|  
 |**TABLE_NAME**|**sysname**|テーブル名。 このフィールドは常に値を返します。|  
 |**COLUMN_NAME**|**sysname**|返される**TABLE_NAME**の各列の列名。 このフィールドは常に値を返します。|  
-|**GRANTOR**|**sysname**|**一覧表示された**権限付与対象ユーザーに対し、この**COLUMN_NAME**に対する権限を許可したデータベースユーザー名です。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列は常に**TABLE_OWNER**と同じです。 このフィールドは常に値を返します。<br /><br /> 権限**の許可者の列に**は、データベース所有者 (**TABLE_OWNER**)、またはデータベース所有者が GRANT ステートメントで WITH GRANT OPTION 句を使用して権限を許可したユーザーのいずれかを指定できます。|  
+|**GRANTOR**|**sysname**|**一覧表示された**権限付与対象ユーザーに対し、この**COLUMN_NAME**に対する権限を許可したデータベースユーザー名です。 で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、この列は常に**TABLE_OWNER**と同じです。 このフィールドは常に値を返します。<br /><br /> 権限**の許可者の列に**は、データベース所有者 (**TABLE_OWNER**)、またはデータベース所有者が GRANT ステートメントで WITH GRANT OPTION 句を使用して権限を許可したユーザーのいずれかを指定できます。|  
 |**GRANTEE**|**sysname**|**一覧表示された**権限付与者によって、この**COLUMN_NAME**に対する権限が許可されたデータベースユーザー名。 このフィールドは常に値を返します。|  
 |**持っ**|**varchar (** 32 **)**|使用可能な列権限の1つ。 列権限は、次の値のいずれかになります (または、実装が定義されている場合に、データソースによってサポートされるその他の値)。<br /><br /> SELECT = 権限付与対象ユーザーは、列の**データを取得**できます。<br /><br /> 挿入 = 権限付与対象**ユーザーは、** テーブルに新しい行 (権限付与対象ユーザー**が挿入) を**挿入するときに、この列にデータを提供できます。<br /><br /> UPDATE = 権限付与対象ユーザーは、列内の既存の**データを変更**できます。<br /><br /> REFERENCES = 権限付与対象ユーザーは、主キー/外部キーのリレーションシップで外部テーブルの列を参照**できます。** 主キー/外部キーのリレーションシップはテーブル制約で定義されます。|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|権限付与対象ユーザーに対し、他のユーザーに対する権限の許可を許可するかどうかを示します ("grant with grant" 権限と**呼ばれること**もあります)。 YES、NO、または NULL を指定できます。 不明な値 (つまり NULL) は、"許可の許可" 権限が適用されないデータ ソースを示します。|  

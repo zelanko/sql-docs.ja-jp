@@ -16,19 +16,19 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4290d2ecff4b76675f464c5e2a396703e7fc370c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032635"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824287"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データコレクターのコレクター型を作成します。 コレクター型は、データを収集して[!INCLUDE[ssIS](../../includes/ssis-md.md)]管理データウェアハウスにアップロードするための実際のメカニズムを提供する、パッケージの論理ラッパーです。  
+  データコレクターのコレクター型を作成します。 コレクター型は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] データを収集して管理データウェアハウスにアップロードするための実際のメカニズムを提供する、パッケージの論理ラッパーです。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,23 +46,23 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collector_type_uid = ]'*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  コレクター型の GUID を示します。 *collector_type_uid*は**UNIQUEIDENTIFIER**で、NULL の場合は自動的に作成され、出力として返されます。  
   
- [ @name = ]'*name*'  
+ [ @name =] '*name*'  
  コレクター型の名前を指定します。 *名前*は**sysname**ので、指定する必要があります。  
   
- [ @parameter_schema = ]'*parameter_schema*'  
+ [ @parameter_schema =] '*parameter_schema*'  
  このコレクター型の XML スキーマを指定します。 *parameter_schema*は**xml**で、既定値は NULL です。  
   
- [ @parameter_formatter = ]'*parameter_formatter*'  
+ [ @parameter_formatter =] '*parameter_formatter*'  
  コレクション セットのプロパティ ページで使用するために XML を変換するときのテンプレートです。 *parameter_formatter*は**xml**で、既定値は NULL です。  
   
- [@collection_package_id = ]*collection_package_id*  
- コレクションセットによって使用される[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションパッケージを指すローカル一意識別子です。 *collection_package_id*は**uniqueidentifer**であり、必須です。  
+ [ @collection_package_id =] *collection_package_id*  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるコレクションパッケージを指すローカル一意識別子です。 *collection_package_id*は**uniqueidentifer**であり、必須です。  
   
- [@upload_package_id = ]*upload_package_id*  
- コレクションセットによって使用される[!INCLUDE[ssIS](../../includes/ssis-md.md)]アップロードパッケージを指すローカル一意識別子です。 *upload_package_id*は**uniqueidentifier**であり、必須です。  
+ [ @upload_package_id =] *upload_package_id*  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるアップロードパッケージを指すローカル一意識別子です。 *upload_package_id*は**uniqueidentifier**であり、必須です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7e4260d05e0ed2967e9fbf151faeb53007080c21
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251244"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824039"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>引数  
- [**@tabid =** ]'*tabid*'  
+ [** @tabid =** ] '*tabid*'  
  即時更新トリガーに対してチェックされるテーブルのオブジェクト ID です。 *tabid*は**int**で、既定値はありません。  
   
- [**@trigger_op =** ]'*trigger_output_parameters*' 出力  
+ [** @trigger_op =** ] '*trigger_output_parameters*' 出力  
  出力パラメーターが呼び出し元のトリガーの種類を返すかどうかを指定します。 *trigger_output_parameters*は**char (10)** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**アドイン**|INSERT トリガーです。|  
 |**Upd**|UPDATE トリガーです。|  
@@ -55,7 +55,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 `[ @fonpublisher = ] fonpublisher`ストアドプロシージャが実行される場所を指定します。 この**場合、既定***値は 0*です。 0の場合、サブスクライバーで実行されます。1の場合、パブリッシャーで実行されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0は、ストアドプロシージャが即時更新トリガーのコンテキスト内で呼び出されていないことを示します。 1は、即時更新トリガーのコンテキスト内で呼び出されており、 * \@trigger_op*で返されるトリガーの種類であることを示します。  
+ 0は、ストアドプロシージャが即時更新トリガーのコンテキスト内で呼び出されていないことを示します。 1は、即時更新トリガーのコンテキスト内で呼び出されており、 * \@ trigger_op*で返されるトリガーの種類であることを示します。  
   
 ## <a name="remarks"></a>Remarks  
  **sp_check_for_sync_trigger**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
