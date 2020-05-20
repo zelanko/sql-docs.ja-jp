@@ -49,7 +49,7 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
  CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="remarks"></a>解説  
- **によって返された**geometry`STGeomFromText()` インスタンスの OGC 型は、対応する WKB 入力に設定されます。  
+ `STGeomFromText()` によって返された **geometry** インスタンスの OGC 型は、対応する WKB 入力に設定されます。  
   
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   

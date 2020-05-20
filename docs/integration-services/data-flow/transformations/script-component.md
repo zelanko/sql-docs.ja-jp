@@ -214,7 +214,7 @@ ms.locfileid: "71297877"
 |**[ReadOnlyVariables]**|スクリプト変換が読み取り専用でアクセスする変数の、コンマ区切りの一覧を入力します。<br /><br /> 注: 変数名では大文字と小文字が区別されます。|  
 |**[ReadWriteVariables]**|スクリプト変換が読み取り/書き込み用にアクセスする変数の、コンマ区切りの一覧を入力します。<br /><br /> 注: 変数名では大文字と小文字が区別されます。|  
 |**[ScriptLanguage]**|スクリプト コンポーネントが使用するスクリプト言語を選択します。<br /><br /> スクリプト コンポーネントとスクリプト タスクの既定のスクリプト言語を設定するには、 **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。|  
-|**[UserComponentTypeName]**|<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> インフラストラクチャをサポートする **クラスと**Microsoft.SqlServer.TxScript[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アセンブリを指定します。|  
+|**[UserComponentTypeName]**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インフラストラクチャをサポートする <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> クラスと **Microsoft.SqlServer.TxScript** アセンブリを指定します。|  
   
  **[スクリプトの編集]**  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) を使用して、スクリプトを作成または変更します。  

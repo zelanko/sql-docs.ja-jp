@@ -47,7 +47,7 @@ ms.locfileid: "68140258"
 ## <a name="boolean-data-type"></a>ブール値型  
  比較演算子の結果は**ブール** データ型になります。 有効値には、TRUE、FALSE、UNKNOWN があります。 **ブール** データ型を返す式は、ブール式とも呼ばれます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ブール**データ型は** の他のデータ型と異なり、テーブルの列や変数のデータ型として指定することはできず、結果セットで返すこともできません。  
+ **ブール** データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他のデータ型と異なり、テーブルの列や変数のデータ型として指定することはできず、結果セットで返すこともできません。  
   
  SET ANSI_NULLS が ON の場合、1 つまたは 2 つの NULL 式が含まれる演算子では UNKNOWN が返されます。 SET ANSI_NULLS が OFF の場合、等号 (=) 演算子と不等号 (<>) 演算子を除き、同じ規則が適用されます。 SET ANSI_NULLS が OFF の場合、これらの演算子では、他の NULL と同等の、既知の値として NULL を処理し、TRUE または FALSE のみを返します (UNKNOWN を返すことはありません)。  
   

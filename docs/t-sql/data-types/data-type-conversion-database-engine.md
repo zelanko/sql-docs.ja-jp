@@ -68,7 +68,7 @@ SET @string = 1;
 SELECT @string + ' is a string.'
 ```
 
-`int` の `1` 値は `varchar` に変換されるため、`SELECT` ステートメントからは値 `1 is a string.` が返されます。
+`1` の `int` 値は `varchar` に変換されるため、`SELECT` ステートメントからは値 `1 is a string.` が返されます。
 
 次の例は、代わりに `int` 変数を使用した同様のスクリプトを示しています。
 
@@ -135,7 +135,7 @@ SELECT @notastring + '1'
 |**datetime**、**smalldatetime**|**Date**|  
 |上記以外は NULL に設定|null 値に設定された **Variant**|  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]binary[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]、**varbinary**、**image** の各型の値を除いて、1 つの **値はすべて 1 つの** 値に変換されます。 これらの値は **の 1 次元**Byte()[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 配列に変換されます。 この配列の範囲は、**Byte(** 0 から _length_ 1 **)** です。*length* は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **binary**、**varbinary**、または **image** の値のバイト数です。
+**binary**、**varbinary**、**image** の各型の値を除いて、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値はすべて 1 つの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 値に変換されます。 これらの値は [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の 1 次元 **Byte()** 配列に変換されます。 この配列の範囲は、**Byte(** 0 から _length_ 1 **)** です。*length* は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **binary**、**varbinary**、または **image** の値のバイト数です。
   
 次の表は、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] データ型から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型への変換を示しています。
   

@@ -79,7 +79,7 @@ ms.locfileid: "68120587"
     SELECT a.c2 FROM a, b;   
     ```  
   
-    UDT `myudt2` が `c2` という名前のプロパティを持たないと仮定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、識別子 `a.c2` がテーブル `c2` の列 `a` を参照するのか、テーブル `a` の列 `c2` のプロパティ `b` を参照するのかを判断できません。  
+    UDT `myudt2` が `c2` という名前のプロパティを持たないと仮定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、識別子 `a.c2` がテーブル `a` の列 `c2` を参照するのか、テーブル `b` の列 `a` のプロパティ `c2` を参照するのかを判断できません。  
   
 ## <a name="user-action"></a>ユーザーの操作  
   

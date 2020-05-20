@@ -76,7 +76,7 @@ EKM プロバイダーの dll の作成に使用されたヘッダー ファイ�
  暗号化サービス プロバイダーに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、`SecurityProvider` 内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という暗号化サービス プロバイダーを新しいバージョンの .dll ファイルに変更します。 この新しいバージョンの .dll ファイルは、`c:\SecurityProvider\SecurityProvider_v2.dll` という名前でサーバーにインストールされています。 プロバイダーの証明書をサーバーにインストールする必要があります。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の `SecurityProvider` という暗号化サービス プロバイダーを新しいバージョンの .dll ファイルに変更します。 この新しいバージョンの .dll ファイルは、`c:\SecurityProvider\SecurityProvider_v2.dll` という名前でサーバーにインストールされています。 プロバイダーの証明書をサーバーにインストールする必要があります。  
   
 1. アップグレードを実行するプロバイダーを無効にします。 これにより、開いているすべての暗号化セッションが終了します。  
 ```  

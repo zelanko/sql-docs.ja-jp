@@ -101,7 +101,7 @@ ms.locfileid: "75322149"
   
 1.  パブリッシャーで、[sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) を実行して、アセンブリがまだビジネス ロジック ハンドラーとして登録されていないことを確認します。  
   
-2.  ディストリビューターで、[sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) を実行します。 **\@article_resolver** にビジネス ロジック ハンドラーの表示名を、 **\@is_dotnet_assembly** に **true** を、 **\@dotnet_assembly_name** にアセンブリの名前を、 **\@dotnet_class_name** に <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> をオーバーライドするクラスの完全修飾名を指定します。  
+2.  ディストリビューターで、[sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) を実行します。**\@article_resolver** にビジネス ロジック ハンドラーの表示名を、**\@is_dotnet_assembly** に **true** を、**\@dotnet_assembly_name** にアセンブリの名前を、**\@dotnet_class_name** に <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> をオーバーライドするクラスの完全修飾名を指定します。  
   
     > [!NOTE]  
     >  マージ エージェント実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にアセンブリが配置されている場合は、 **\@dotnet_assembly_name** にアセンブリ名を含む完全なパスを指定する必要があります。 Web 同期を使用する場合は、Web サーバーでアセンブリの位置を指定する必要があります。  
@@ -112,7 +112,7 @@ ms.locfileid: "75322149"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>既存のテーブル アーティクルでビジネス ロジック ハンドラーを使用するには  
   
-1.  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行し、 **\@publication**、 **\@article** を指定し、 **\@property** に **article_resolver** 値、 **\@value** にビジネス ロジック ハンドラーの表示名を指定します。  
+1.  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行し、**\@publication**、**\@article** を指定し、**\@property** に **article_resolver** 値、**\@value** にビジネス ロジック ハンドラーの表示名を指定します。  
   
 ###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> 例 (レプリケーション プログラミング)  
  次の例に、監査ログを作成するビジネス ロジック ハンドラーを示します。  

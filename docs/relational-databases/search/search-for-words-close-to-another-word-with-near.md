@@ -152,7 +152,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
 -   **transform noise words** サーバー オプション  
   
-     **transform noise words** の値は、ストップワードが近接検索で指定されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がストップワードを処理する方法に影響を与えます。 詳細については、「 [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)」を参照してください。   
+     **transform noise words[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の値は、ストップワードが近接検索で指定されている場合、** がストップワードを処理する方法に影響を与えます。 詳細については、「 [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)」を参照してください。   
   
 ## <a name="see-also"></a>参照  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  

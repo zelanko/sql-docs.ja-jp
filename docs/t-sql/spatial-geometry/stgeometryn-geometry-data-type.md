@@ -46,7 +46,7 @@ ms.locfileid: "67950209"
  CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="remarks"></a>解説  
- パラメーターが **の結果よりも大きい場合、このメソッドは**null`STNumGeometries()` を返します。また、**expression** パラメーターが 1 より小さい場合は、*ArgumentOutOfRangeException* をスローします。  
+ パラメーターが `STNumGeometries()` の結果よりも大きい場合、このメソッドは **null** を返します。また、*expression* パラメーターが 1 より小さい場合は、**ArgumentOutOfRangeException** をスローします。  
   
 ## <a name="examples"></a>例  
  `MultiPoint``geometry collection` を作成し、`STGeometryN()` を使用してコレクションの 2 番目の `geometry` インスタンスを探す例を次に示します。  

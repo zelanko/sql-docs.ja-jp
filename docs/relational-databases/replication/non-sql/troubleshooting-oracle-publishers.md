@@ -62,14 +62,14 @@ ms.locfileid: "72907961"
   
 -   正しい Oracle ホームおよびパスが使用されているかどうか。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターに Oracle バイナリのセットが 1 つしかインストールされていない場合でも、Oracle ホーム関連の環境変数が正しく設定されていることを確認してください。 環境変数の値を変更した場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を停止してから再起動して、変更を有効にする必要があります。  
   
- 接続の構成とテストの詳細については、「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configure an Oracle Publisher (Oracle パブリッシャーの構成)[」の「Installing and Configuring Oracle Client Networking Software on the ](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md) Distributor (SQL Server ディストリビューターへの Oracle クライアント ネットワーク ソフトウェアのインストールと構成)」を参照してください。  
+ 接続の構成とテストの詳細については、「[Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」の「Installing and Configuring Oracle Client Networking Software on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor (SQL Server ディストリビューターへの Oracle クライアント ネットワーク ソフトウェアのインストールと構成)」を参照してください。  
   
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>Oracle パブリッシャーが別のディストリビューターに関連付けられている  
  Oracle パブリッシャーは、1 つの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターにのみ関連付けることができます。 別のディストリビューターを Oracle パブリッシャーに関連付ける場合は、関連付けられているディストリビューターを削除してから、別のディストリビューターを使用する必要があります。 ディストリビューターを最初に削除しない場合、次のエラー メッセージのいずれかが表示されます。  
   
 -   "Oracle サーバー インスタンス '\<*OraclePublisherName*>' は、'\<*SQLServerDistributorName*>' をディストリビューターとして使用するように構成されています。 '\<*NewSQLServerDistributorName*>' をディストリビューターとして使用するためには、Oracle サーバー インスタンスの現在のレプリケーション構成を削除する必要があります。その場合、サーバー インスタンス上のすべてのパブリケーションが削除されます。"  
   
--   "Oracle サーバー '\<*OracleServerName*>' は、既にディストリビューター '\<*SQLServerDistributorName*>.\<*DistributionDatabaseName>* ' のパブリッシャー ' *\<OraclePublisherName*>' として定義されています。 パブリッシャーを削除するか、パブリック シノニム ' *\<SynonymName>* ' を削除して、再作成してください。"  
+-   "Oracle サーバー '\<*OracleServerName*>' は、既にディストリビューター '\<*SQLServerDistributorName*>.*\<DistributionDatabaseName>*' のパブリッシャー '\<*OraclePublisherName*>' として定義されています。 パブリッシャーを削除するか、パブリック シノニム ' *\<SynonymName>* ' を削除して、再作成してください。"  
   
  Oracle パブリッシャーが削除されると、Oracle データベース内のレプリケーション オブジェクトが自動的にクリーンアップされます。 ただし、Oracle レプリケーション オブジェクトを手動でクリーンアップすることが必要な場合もあります。 レプリケーションで作成した Oracle レプリケーション オブジェクトを手動でクリーン アップするには、次の手順を実行します。  
   

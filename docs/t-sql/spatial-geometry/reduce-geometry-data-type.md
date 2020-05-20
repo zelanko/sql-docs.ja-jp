@@ -54,7 +54,7 @@ ms.locfileid: "68101041"
   
  `Reduce()` は、**CircularString** インスタンスに対して **LineString**、**CircularString**、**CompoundCurve** インスタンスを返します。  `Reduce()` は、**CompoundCurve** インスタンスに対して **CompoundCurve** または **LineString** インスタンスを返します。  
   
- **Polygon** インスタンスでは、近似アルゴリズムが各リングに個別に適用されます。 返された `FormatException`Polygon**インスタンスが無効な場合、メソッドは** を生成します。たとえば、インスタンス内の各リングを簡略化するために **が適用され、その結果リングが重なる場合、無効な**MultiPolygon`Reduce()` が作成されます。  外部リングがあり、内部リングがない **CurvePolygon** インスタンスでは、`Reduce()` は **CurvePolygon**、**LineString**、**Point** インスタンスを返します。  **CurvePolygon** に内部リングがある場合、**CurvePolygon** または **MultiPoint** インスタンスが返されます。  
+ **Polygon** インスタンスでは、近似アルゴリズムが各リングに個別に適用されます。 返された **Polygon** インスタンスが無効な場合、メソッドは `FormatException` を生成します。たとえば、インスタンス内の各リングを簡略化するために `Reduce()` が適用され、その結果リングが重なる場合、無効な **MultiPolygon** が作成されます。  外部リングがあり、内部リングがない **CurvePolygon** インスタンスでは、`Reduce()` は **CurvePolygon**、**LineString**、**Point** インスタンスを返します。  **CurvePolygon** に内部リングがある場合、**CurvePolygon** または **MultiPoint** インスタンスが返されます。  
   
  円弧が検出されると、指定された許容範囲の半分以内で弦によって円弧を近似できるかどうかが近似アルゴリズムによってチェックされます。 弦がこの条件を満たす場合、円弧は計算において弦で置き換えられます。 弦がこの条件を満たしていない場合は、円弧が保持され、近似アルゴリズムが残りのセグメントに適用されます。  
   
@@ -70,7 +70,7 @@ SELECT @g.Reduce(.75).ToString();
 ```  
   
 ### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>B. CircularString に対し許容レベルを変えて Reduce() を使用する  
- 次の例では、`Reduce()`CircularString**インスタンスに対して 3 つの許容レベルを適用して** を使用します。  
+ 次の例では、**CircularString** インスタンスに対して 3 つの許容レベルを適用して `Reduce()` を使用します。  
   
 ```
  DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)'; 
@@ -90,7 +90,7 @@ SELECT @g.Reduce(.75).ToString();
  返されるそれぞれのインスタンスには、終点 (0 0) と (24 0) が含まれます。  
   
 ### <a name="c-using-reduce-with-varying-tolerance-levels-on-a-compoundcurve"></a>C. CompoundCurve に対し許容レベルを変えて Reduce() を使用する  
- 次の例では、`Reduce()`CompoundCurve**インスタンスに対して 2 つの許容レベルを適用して** を使用します。  
+ 次の例では、**CompoundCurve** インスタンスに対して 2 つの許容レベルを適用して `Reduce()` を使用します。  
   
 ```
  DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';  

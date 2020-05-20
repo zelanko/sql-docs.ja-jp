@@ -391,7 +391,7 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用する `SELECT *` ステートメントは、最初の列としてではなく最後の列として、新しい列を受け取ります。 この動作を許容できない場合は、新しいテーブルを作成してデータをそこに移動した後、新しいテーブルに対する権限を再作成する必要があります。  
+ `SELECT *` を使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、最初の列としてではなく最後の列として、新しい列を受け取ります。 この動作を許容できない場合は、新しいテーブルを作成してデータをそこに移動した後、新しいテーブルに対する権限を再作成する必要があります。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  

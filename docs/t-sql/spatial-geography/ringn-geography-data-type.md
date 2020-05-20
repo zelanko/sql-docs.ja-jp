@@ -27,7 +27,7 @@ ms.locfileid: "68042663"
 # <a name="ringn-geography-data-type"></a>RingN (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **の範囲で、** geography`1 ≤ n ≤ NumRings()` インスタンスの指定したリングを返します。  
+  `1 ≤ n ≤ NumRings()` の範囲で、**geography** インスタンスの指定したリングを返します。  
   
 ## <a name="syntax"></a>構文  
   

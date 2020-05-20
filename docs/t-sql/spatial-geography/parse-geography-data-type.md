@@ -46,7 +46,7 @@ Parse ( 'geography_tagged_text' )
  CLR の戻り値の型: **SqlGeography**  
   
 ## <a name="remarks"></a>解説  
- **によって返された**geography`Parse()` インスタンスの OGC 型は、対応する WKT 入力に設定されます。  
+ `Parse()` によって返された **geography** インスタンスの OGC 型は、対応する WKT 入力に設定されます。  
   
  "NULL" 文字列は、**geography** の NULL インスタンスと解釈されます。  
   

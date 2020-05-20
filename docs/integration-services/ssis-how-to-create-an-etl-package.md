@@ -48,7 +48,7 @@ ms.locfileid: "71281889"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 SQL Server と SSIS のインストールについては、「[Integration Services のインストール](install-windows/install-integration-services.md)」をご覧ください。
 
--   **AdventureWorksDW2012** サンプル データベース。 **AdventureWorksDW2012** データベースをダウンロードするには、`AdventureWorksDW2012.bak`AdventureWorks サンプル データベース[から ](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) をダウンロードし、バックアップを復元します。  
+-   **AdventureWorksDW2012** サンプル データベース。 **AdventureWorksDW2012** データベースをダウンロードするには、[AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)から `AdventureWorksDW2012.bak` をダウンロードし、バックアップを復元します。  
 
 -   **サンプル データ** ファイル。 このサンプル データは、 [!INCLUDE[ssIS](../includes/ssis-md.md)] のレッスン パッケージに含まれています。 サンプル データとレッスン パッケージを ZIP ファイルとしてダウンロードする場合は、[SQL Server Integration Services のチュートリアル ファイル](https://www.microsoft.com/download/details.aspx?id=56827)に関するページを参照してください。
 

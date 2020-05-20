@@ -28,7 +28,7 @@ ms.locfileid: "71295269"
   
  このストアド プロシージャは、[!INCLUDE[ssIS](../../includes/ssis-md.md)] サーバー インスタンスがダウンした場合に、実行されていたパッケージの状態を修正します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)][カタログの作成]**ダイアログ ボックスの**[Enable automatic execution of Integration Services stored procedure at SQL Server startup]\(SQL Server の起動時に Integration Services ストアド プロシージャの自動実行を有効にする\) **オプションを選択すると、** インスタンスが再起動されるたびに、ストアド プロシージャが自動実行されるようにできます。  
+ **[カタログの作成]** ダイアログ ボックスの **[Enable automatic execution of Integration Services stored procedure at SQL Server startup]\(SQL Server の起動時に Integration Services ストアド プロシージャの自動実行を有効にする\)** オプションを選択すると、[!INCLUDE[ssIS](../../includes/ssis-md.md)] インスタンスが再起動されるたびに、ストアド プロシージャが自動実行されるようにできます。  
   
 ## <a name="syntax"></a>構文  
   

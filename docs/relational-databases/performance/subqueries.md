@@ -76,7 +76,7 @@ GO
 
 サブクエリの SELECT クエリは常にかっこで囲みます。 `COMPUTE` 句または `FOR BROWSE` 句を含むことはできず、TOP 句も指定された場合に `ORDER BY` 句を含むことだけができます。   
 
-サブクエリは、1 つ上のレベルの `WHERE`、`HAVING`、`SELECT`、または `INSERT` の各ステートメントの `UPDATE` 句または `DELETE` 句の中、あるいは別のサブクエリの中で入れ子にできます。 32 レベルまで入れ子にできますが、上限はクエリの複雑さと使用可能なメモリによって変わります。 個々のクエリでは 32 レベルまで入れ子にすることはできません。 サブクエリは、単一の値を返す限り、式が使えるところであればどこにでも使用できます。   
+サブクエリは、1 つ上のレベルの `SELECT`、`INSERT`、`UPDATE`、または `DELETE` の各ステートメントの `WHERE` 句または `HAVING` 句の中、あるいは別のサブクエリの中で入れ子にできます。 32 レベルまで入れ子にできますが、上限はクエリの複雑さと使用可能なメモリによって変わります。 個々のクエリでは 32 レベルまで入れ子にすることはできません。 サブクエリは、単一の値を返す限り、式が使えるところであればどこにでも使用できます。   
 
 あるテーブルがサブクエリにのみ現れていて、1 つ上のレベルのクエリに現れていない場合、そのテーブルの列は出力 (1 つ上のレベルのクエリの選択リスト) に含めることはできません。   
 
@@ -85,7 +85,7 @@ GO
 -   WHERE 式 comparison_operator \[ANY | ALL] (サブクエリ)
 -   WHERE \[NOT] EXISTS (サブクエリ)   
 
-[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの中には、サブクエリが独立したクエリであるように評価されるものがあります。 概念的には、サブクエリの結果が 1 つ上のレベルのクエリに代入されることになります。ただし、サブクエリを含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントが、[!INCLUDE[tsql](../../includes/tsql-md.md)] によってこのように処理されるとは限りません。    
+[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの中には、サブクエリが独立したクエリであるように評価されるものがあります。 概念的には、サブクエリの結果が 1 つ上のレベルのクエリに代入されることになります。ただし、サブクエリを含む [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってこのように処理されるとは限りません。    
 
 サブクエリの種類は、大きく 3 つに分けられます。 具体的には、次のように大別されます。 
 -   `IN` で導かれるリスト、あるいは `ANY` または `ALL` で修飾された比較演算子で導かれるリストを操作するサブクエリ。
@@ -105,7 +105,7 @@ GO
 -   `EXISTS` で導かれたサブクエリの選択リストには、通例、単一の列名ではなくアスタリスク (\*) が使用されます。 `EXISTS` で導かれるサブクエリの規則は、標準の選択リストの規則と同じです。これは、`EXISTS` で導かれるサブクエリは存在検査を行うもので、データではなく TRUE または FALSE を返すためです。   
 
 ## <a name="qualifying-column-names-in-subqueries"></a><a name="qualifying"></a> サブクエリで使用する列名の修飾
-次の例で、外側のクエリの *句内の*BusinessEntityID`WHERE` 列は、外側のクエリの `FROM` 句内のテーブル名 (*Sales.Store*) で暗黙的に修飾されています。 サブクエリの選択リスト内の *CustomerID* への参照は、サブクエリの `FROM` 句、つまり *Sales.Customer* テーブルで修飾されています。
+次の例で、外側のクエリの `WHERE` 句内の *BusinessEntityID* 列は、外側のクエリの `FROM` 句内のテーブル名 (*Sales.Store*) で暗黙的に修飾されています。 サブクエリの選択リスト内の *CustomerID* への参照は、サブクエリの `FROM` 句、つまり *Sales.Customer* テーブルで修飾されています。
 
 ```sql
 USE AdventureWorks2016;
@@ -232,7 +232,7 @@ Saraiva José 282
 
 上記のステートメントのサブクエリは、外側のクエリから独立して評価できません。 このサブクエリでは *Employee.BusinessEntityID* の値が必要ですが、その値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により *Employee* テーブルの他の行が調べられると、それに応じて変化します。   
 このクエリでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、Employee テーブルの各行の値が内側のクエリに代入されることによって、各行を結果に含めるかどうかが判断されます。
-たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、最初に `Syed Abbas` の行が調べられると、*により内側のクエリに代入された値 285 が変数*Employee.BusinessEntityID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で取得されます。
+たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、最初に `Syed Abbas` の行が調べられると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により内側のクエリに代入された値 285 が変数 *Employee.BusinessEntityID* で取得されます。
 
 ```sql
 USE AdventureWorks2016;
@@ -665,7 +665,7 @@ GO
 
 同様の理由で、このクエリで `NOT IN` を使用すると、結果にはどの顧客も含められません。      
 
-`<>ALL` と同じ意味の `NOT IN` 演算子を使用しても同じ結果が得られます。   
+`NOT IN` と同じ意味の `<>ALL` 演算子を使用しても同じ結果が得られます。   
 
 ### <a name="subqueries-with-exists"></a><a name="exists"></a> EXISTS を使ったサブクエリ
 サブクエリの導入にキーワード `EXISTS` を使用した場合、そのサブクエリは存在検査として機能します。 外側のクエリの `WHERE` 句により、このサブクエリから返される行が存在するかどうかがテストされます。 サブクエリは実際にはデータを生成せず、TRUE または FALSE の値を返します。   

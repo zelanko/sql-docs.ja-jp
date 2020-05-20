@@ -38,7 +38,7 @@ ms.locfileid: "67950134"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- 交差する地点を特定するために、**を呼び出したインスタンスと比較される、別の**geometry`STIntersection()` インスタンスです。  
+ 交差する地点を特定するために、`STIntersection()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
@@ -46,7 +46,7 @@ ms.locfileid: "67950134"
  CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="remarks"></a>解説  
- `STIntersection()`geometry **インスタンスの SRID (spatial reference ID) が一致しない場合、** は常に null を返します。 結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
+ **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、`STIntersection()` は常に null を返します。 結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
 ## <a name="examples"></a>例  
   

@@ -38,7 +38,7 @@ ms.locfileid: "68127367"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- **を呼び出したインスタンスからどの地点を削除するかを示す、別の**geometry`STDifference()` インスタンスです。  
+ `STDifference()` を呼び出したインスタンスからどの地点を削除するかを示す、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  

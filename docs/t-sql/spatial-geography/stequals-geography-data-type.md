@@ -38,7 +38,7 @@ ms.locfileid: "68042268"
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- **を呼び出したインスタンスと比較される、別の**geography`STEquals()` インスタンスです。  
+ `STEquals()` を呼び出したインスタンスと比較される、別の **geography** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
@@ -49,7 +49,7 @@ ms.locfileid: "68042268"
  2 つの **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
 ## <a name="examples"></a>例  
- `geography` を含むほぼ同じ `STGeomFromText()` インスタンスを 2 つ作成し、`STEquals()` を使用して 2 つのインスタンスが同一であるかどうかをテストする例を次に示します。 `LINESTRING` の中に `POINT` および `POLYGON` が含まれているため、2 つのインスタンスは等しいと見なされます。  
+ `STGeomFromText()` を含むほぼ同じ `geography` インスタンスを 2 つ作成し、`STEquals()` を使用して 2 つのインスタンスが同一であるかどうかをテストする例を次に示します。 `POLYGON` の中に `LINESTRING` および `POINT` が含まれているため、2 つのインスタンスは等しいと見なされます。  
   
 ```  
 DECLARE @g geography;  

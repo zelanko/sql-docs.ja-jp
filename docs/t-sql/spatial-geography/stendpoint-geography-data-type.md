@@ -49,7 +49,7 @@ ms.locfileid: "71118132"
  このメソッドは、空の **geometry** インスタンスに対して呼び出された場合は null を返します。  
   
 ## <a name="examples"></a>例  
- `LineString` で `STGeomFromText()` インスタンスを作成し、`STEndPoint()` を使用して、`LineString` の終点を取得する例を次に示します。  
+ `STGeomFromText()` で `LineString` インスタンスを作成し、`STEndPoint()` を使用して、`LineString` の終点を取得する例を次に示します。  
   
 ```  
 DECLARE @g geography;  

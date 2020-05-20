@@ -44,9 +44,9 @@ ms.locfileid: "71296992"
     FORMATNAME:DIRECT=OS:<computername>\private$\<queuename>  
     ```  
   
-2.  メッセージ テキストをスクリプトに渡すために、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]String**型の**MessageText**という名前の** 変数を作成します。 この変数の値として既定のメッセージを入力します。  
+2.  メッセージ テキストをスクリプトに渡すために、**String** 型の **MessageText** という名前の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変数を作成します。 この変数の値として既定のメッセージを入力します。  
   
-3.  スクリプト タスクをデザイン画面に追加して編集します。 **[スクリプト タスク エディター]** の **[スクリプト]** タブで、`MessageText`ReadOnlyVariables**プロパティに** 変数を追加し、この変数をスクリプト内で使用できるようにします。  
+3.  スクリプト タスクをデザイン画面に追加して編集します。 **[スクリプト タスク エディター]** の **[スクリプト]** タブで、**ReadOnlyVariables** プロパティに `MessageText` 変数を追加し、この変数をスクリプト内で使用できるようにします。  
   
 4.  **[スクリプトの編集]** をクリックして、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) スクリプト エディターを開きます。  
   

@@ -30,7 +30,7 @@ ms.locfileid: "71297257"
  1 つのカスタム ユーザー インターフェイスのプロジェクトまたはアセンブリには、通常 2 つのクラスがあります。<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> を実装するクラスと、このクラスによって表示される、ユーザーから情報を収集するための Windows フォームです。  
   
 > [!IMPORTANT]  
->  「[カスタム接続マネージャーのコーディング](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)」で説明されているようにカスタム ユーザー インターフェイスに署名してビルドし、グローバル アセンブリ キャッシュにインストールしたら、このクラスの完全修飾名を <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> プロパティで忘れずに指定してください。  
+>  「[カスタム接続マネージャーのコーディング](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)」で説明されているようにカスタム ユーザー インターフェイスに署名してビルドし、グローバル アセンブリ キャッシュにインストールしたら、このクラスの完全修飾名を <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> の <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> プロパティで忘れずに指定してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に組み込まれているタスク、変換元、および変換先の多くは、組み込みの接続マネージャーの特定の種類でのみ機能します。 そのため、これらのサンプルは組み込みのタスクおよびコンポーネントではテストできません。  

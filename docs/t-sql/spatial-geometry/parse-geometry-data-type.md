@@ -43,7 +43,7 @@ Parse ( 'geometry_tagged_text' )
  CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="remarks"></a>解説  
- **によって返された**geometry`Parse()` インスタンスの OGC 型は、対応する WKT 入力に設定されます。  
+ `Parse()` によって返された **geometry** インスタンスの OGC 型は、対応する WKT 入力に設定されます。  
   
  "NULL" 文字列は、**geography** の NULL インスタンスと解釈されます。  
   

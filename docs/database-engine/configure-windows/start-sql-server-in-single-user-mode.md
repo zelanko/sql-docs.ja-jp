@@ -22,7 +22,7 @@ ms.locfileid: "68037165"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>シングル ユーザー モードでの SQL Server の起動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  特定の状況では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]startup option -m**を使用して、** のインスタンスをシングル ユーザー モードで起動する必要が生じる場合があります。 たとえば、サーバーの構成オプションを変更したり、破損した master データベースや他のシステム データベースを復旧したりすることがあります。 いずれの場合も、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをシングル ユーザー モードで起動する必要があります。  
+  特定の状況では、 **startup option -m** を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをシングル ユーザー モードで起動する必要が生じる場合があります。 たとえば、サーバーの構成オプションを変更したり、破損した master データベースや他のシステム データベースを復旧したりすることがあります。 いずれの場合も、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをシングル ユーザー モードで起動する必要があります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシングル ユーザー モードで起動すると、コンピューターのローカル Administrators グループのメンバーはすべて、固定サーバー ロール sysadmin のメンバーとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続できるようになります。 詳細については、「 [システム管理者がロックアウトされた場合の SQL Server への接続](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)」を参照してください。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68037165"
   
 シングル ユーザー モードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを起動すると、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーでは、一部の操作で複数の接続が必要になるため失敗することがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシングル ユーザー モードで管理するには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のクエリ エディターのみを介して接続することにより [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ステートメントを実行するか、 [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)を使用します。  
   
-**SQLCMD** または **で**-m[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] オプションを使用すると、接続を特定のクライアント アプリケーションに限定できます。 
+**SQLCMD** または [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で **-m** オプションを使用すると、接続を特定のクライアント アプリケーションに限定できます。 
 
 > [!NOTE]
 > Linux では、**SQLCMD** は、このように大文字で入力する必要があります。

@@ -54,7 +54,7 @@ EnvelopeAggregate ( geography_operand )
 >  メソッドは、入力された値がすべて **null** の場合、**null** を返します。  
   
 ## <a name="examples"></a>例  
- 次の例は、都市内の `EnvelopeAggregate`geography**ロケーション ポイントのセットで** を実行します。  
+ 次の例は、都市内の **geography** ロケーション ポイントのセットで `EnvelopeAggregate` を実行します。  
   
  ```
  USE AdventureWorks2012  

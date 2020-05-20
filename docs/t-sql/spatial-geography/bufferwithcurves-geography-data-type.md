@@ -27,7 +27,7 @@ ms.locfileid: "68066549"
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  呼び出し元の **geography** インスタンスからの距離が **distance** パラメーターの値以下となる、すべての地点のセットを表す *geography* インスタンスを返します。  
+  呼び出し元の **geography** インスタンスからの距離が *distance* パラメーターの値以下となる、すべての地点のセットを表す **geography** インスタンスを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68066549"
   
 -   `@g.BufferWithCurves('a')` のように、数値以外のパラメーターがメソッドに渡された。  
   
--   **のように、** NULL`@g.BufferWithCurves(NULL)` がメソッドに渡された。  
+-   `@g.BufferWithCurves(NULL)` のように、**NULL** がメソッドに渡された。  
   
 ## <a name="remarks"></a>解説  
  次の表に、さまざまな distance 値に対して返される結果を示します。  

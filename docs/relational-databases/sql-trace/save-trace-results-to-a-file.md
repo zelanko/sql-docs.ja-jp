@@ -35,7 +35,7 @@ ms.locfileid: "70846825"
   
 -   クエリの最適化の実行  
   
- ストアド プロシージャ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_trace_create **の \@** tracefile **引数にパスとファイル名を指定すると、** によりファイルにトレース結果が保存されます。  
+ ストアド プロシージャ **sp_trace_create** の **\@tracefile** 引数にパスとファイル名を指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりファイルにトレース結果が保存されます。  
   
 > [!NOTE]  
 >  トレース ファイルの保存用に、 **sp_trace_create** ストアド プロシージャにパスを指定する場合は、サーバーからそのディレクトリにアクセスできる必要があります。 また、 **sp_trace_create**にローカル ディレクトリを指定すると、サーバー コンピューターのローカル ディレクトリを指定したことになるので注意してください。  

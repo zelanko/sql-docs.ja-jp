@@ -45,19 +45,19 @@ ms.locfileid: "71286575"
   
 2.  **変数**。 **[変数]** ウィンドウを開き、次の変数を定義します。  
   
-    -   `ExcelFile`String**型の**。 既存の Excel ワークブックの完全なパスとファイル名を入力します。  
+    -   **String** 型の `ExcelFile`。 既存の Excel ワークブックの完全なパスとファイル名を入力します。  
   
-    -   `ExcelTable`String**型の**。 `ExcelFile` 変数の値で指定されたワークブック内の既存のワークシートまたは名前付き範囲の名前を入力します。 この値は、大文字と小文字が区別されます。  
+    -   **String** 型の `ExcelTable`。 `ExcelFile` 変数の値で指定されたワークブック内の既存のワークシートまたは名前付き範囲の名前を入力します。 この値は、大文字と小文字が区別されます。  
   
-    -   `ExcelFileExists`Boolean**型の**。  
+    -   **Boolean** 型の `ExcelFileExists`。  
   
-    -   `ExcelTableExists`Boolean**型の**。  
+    -   **Boolean** 型の `ExcelTableExists`。  
   
-    -   `ExcelFolder`String**型の**。 少なくとも 1 つの Excel ワークブックを含むフォルダーの完全なパスを入力します。  
+    -   **String** 型の `ExcelFolder`。 少なくとも 1 つの Excel ワークブックを含むフォルダーの完全なパスを入力します。  
   
-    -   `ExcelFiles`Object**型の**。  
+    -   **Object** 型の `ExcelFiles`。  
   
-    -   `ExcelTables`Object**型の**。  
+    -   **Object** 型の `ExcelTables`。  
   
 3.  **Imports ステートメント**。 ほとんどのコード サンプルでは、スクリプト ファイルの先頭で次の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 名前空間のいずれかまたは両方をインポートする必要があります。  
   

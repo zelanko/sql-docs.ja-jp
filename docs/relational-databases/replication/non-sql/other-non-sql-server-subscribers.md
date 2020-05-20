@@ -21,7 +21,7 @@ ms.locfileid: "68110949"
 ---
 # <a name="other-non-sql-server-subscribers"></a>その他の SQL Server 以外のサブスクライバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がサポートしている [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 以外のサブスクライバーの一覧については、「[SQL Server 以外のサブスクライバー](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。 ここでは、ODBC ドライバーと OLE DB プロバイダーの要件について説明します。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] がサポートしている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーの一覧については、「[SQL Server 以外のサブスクライバー](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。 ここでは、ODBC ドライバーと OLE DB プロバイダーの要件について説明します。  
   
 ## <a name="odbc-driver-requirements"></a>ODBC ドライバーの要件  
  ODBC ドライバーは、以下の要件を満たす必要があります。  

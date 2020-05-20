@@ -51,7 +51,7 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
  CLR の戻り値の型: **SqlGeography**  
   
 ## <a name="remarks"></a>解説  
- **によって返された**geography`STGeomFromText()` インスタンスの OGC 型は、対応する WKB 入力に設定されます。  
+ `STGeomFromText()` によって返された **geography** インスタンスの OGC 型は、対応する WKB 入力に設定されます。  
   
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  
   

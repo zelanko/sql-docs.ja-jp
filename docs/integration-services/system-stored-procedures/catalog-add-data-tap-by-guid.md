@@ -47,7 +47,7 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
  [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
  データ フロー パスの識別文字列。 パスは、2 つのデータ フロー コンポーネントを連結します。 パスの **IdentificationString** プロパティは文字列を指定します。  
   
- 識別文字列を特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で 2 つのデータ フロー コンポーネント間のパスを右クリックし、 **[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、 **[IdentificationString]** プロパティが表示されます。  
+ 識別文字列を特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で 2 つのデータ フロー コンポーネント間のパスを右クリックし、 **[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、**[IdentificationString]** プロパティが表示されます。  
   
  *dataflow_path_id_string* は **nvarchar (4000)** です。  
   
@@ -61,7 +61,7 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
  データ タップの ID。 *data_tap_id* は **bigint** です。  
   
 ## <a name="example"></a>例  
- 次の例では、データ フロー タスク `Paths[SRC DimDCVentor.OLE DB Source Output]` において、データ フロー パス `{D978A2E4-E05D-4374-9B05-50178A8817E8}` 上にデータ タップが作成されます。 タップされたデータは、DCVendorOutput.csv ファイルに格納されます。  
+ 次の例では、データ フロー タスク `{D978A2E4-E05D-4374-9B05-50178A8817E8}` において、データ フロー パス `Paths[SRC DimDCVentor.OLE DB Source Output]` 上にデータ タップが作成されます。 タップされたデータは、DCVendorOutput.csv ファイルに格納されます。  
   
 ```sql
 exec catalog.add_data_tap_by_guid   @execution_id,   
@@ -71,7 +71,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
 ```  
   
 ## <a name="remarks"></a>解説  
- データ タップを追加するには、実行のインスタンスが作成された状態である必要があります (**catalog.operations &#40;SSISDB データベース&#41;** ビューの [[状態]](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 列の値が 1)。 実行を処理すると状態の値が変わります。 [catalog.create_execution &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)を呼び出すことによって、実行を作成できます。  
+ データ タップを追加するには、実行のインスタンスが作成された状態である必要があります ([catalog.operations &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューの **[状態]** 列の値が 1)。 実行を処理すると状態の値が変わります。 [catalog.create_execution &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)を呼び出すことによって、実行を作成できます。  
   
  add_data_tap_by_guid ストアド プロシージャに関する考慮事項を以下に示します。  
   

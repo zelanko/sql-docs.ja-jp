@@ -40,7 +40,7 @@ ms.locfileid: "68101751"
   
 ## <a name="arguments"></a>引数  
 _geography_  
-**を呼び出したときの別の**geography`ReorientObject()` インスタンスです。  
+`ReorientObject()` を呼び出したときの別の **geography** インスタンスです。  
   
 ## <a name="return-value"></a>戻り値  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  

@@ -42,9 +42,9 @@ ms.locfileid: "71287383"
   
  値 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISBROKEN> は、コンポーネントにエラーがあるが、デザイナーで編集することにより修復できることを示します。 このエラーが発生するのは、通常、カスタム プロパティまたは必要な接続が指定されていない、または正しく設定されていないためです。  
   
- 値 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT> は、パッケージ XML の編集、またはオブジェクト モデルの使用により、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> プロパティが直接修正された場合にのみ発生するエラーがコンポーネントで見つかったことを示します。 たとえば、コンポーネントに入力が 1 つしか追加されていないのに、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> に複数の入力が存在することが検証で確認された場合、この種のエラーが発生します。 この戻り値を生成するエラーを修正するには、 **[詳細エディター]** ダイアログ ボックスで **[リセット]** をクリックして、コンポーネントをリセットするしか方法がありません。  
+ 値 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT> は、パッケージ XML の編集、またはオブジェクト モデルの使用により、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> プロパティが直接修正された場合にのみ発生するエラーがコンポーネントで見つかったことを示します。 たとえば、コンポーネントに入力が 1 つしか追加されていないのに、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> に複数の入力が存在することが検証で確認された場合、この種のエラーが発生します。 この戻り値を生成するエラーを修正するには、**[詳細エディター]** ダイアログ ボックスで **[リセット]** をクリックして、コンポーネントをリセットするしか方法がありません。  
   
- 戻り値としてエラーを返す以外に、検証中に警告やエラーを通知し、コンポーネントにフィードバックを送信する方法もあります。 このメカニズムは、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> メソッドおよび <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> メソッドによって提供されます。 これらのメソッドが呼び出されると、**の**[エラー一覧][!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] ウィンドウにイベントが表示されます。 コンポーネント開発者は、発生したエラーに関するフィードバックや、必要に応じて、修正方法を直接ユーザーに通知することもできます。  
+ 戻り値としてエラーを返す以外に、検証中に警告やエラーを通知し、コンポーネントにフィードバックを送信する方法もあります。 このメカニズムは、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> メソッドおよび <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> メソッドによって提供されます。 これらのメソッドが呼び出されると、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] の **[エラー一覧]** ウィンドウにイベントが表示されます。 コンポーネント開発者は、発生したエラーに関するフィードバックや、必要に応じて、修正方法を直接ユーザーに通知することもできます。  
   
  次のコード例は、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> メソッドをオーバーライドして実装する方法を示しています。  
   
@@ -112,7 +112,7 @@ End Function
 ```  
   
 ## <a name="reinitializemetadata-method"></a>ReinitializeMetaData メソッド  
- <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> メソッドは、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] メソッドの戻り値が <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA> のコンポーネントを編集する場合に、常に <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> デザイナーによって呼び出されます。 コンポーネントには、検証中に見つかった問題を検出して修正するコードを含める必要があります。  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> メソッドは、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA> メソッドの戻り値が <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> のコンポーネントを編集する場合に、常に [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーによって呼び出されます。 コンポーネントには、検証中に見つかった問題を検出して修正するコードを含める必要があります。  
   
  次の例は、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> メソッドで、検証中に問題を検出して修正するコンポーネントを示しています。  
   

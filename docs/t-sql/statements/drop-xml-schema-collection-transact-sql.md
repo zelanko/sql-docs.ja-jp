@@ -59,7 +59,7 @@ XML スキーマ コレクションの削除は、トランザクション操作
   
 -   任意のテーブル制約で指定されているコレクション。  
   
--   スキーマ バインド関数またはストアド プロシージャで参照されているコレクション。 たとえば、次の関数では `MyCollection` が指定されるので、XML スキーマ コレクション `WITH SCHEMABINDING` はロックされます。 このコレクションを削除すると、XML SCHEMA COLLECTION のロックはなくなります。  
+-   スキーマ バインド関数またはストアド プロシージャで参照されているコレクション。 たとえば、次の関数では `WITH SCHEMABINDING` が指定されるので、XML スキーマ コレクション `MyCollection` はロックされます。 このコレクションを削除すると、XML SCHEMA COLLECTION のロックはなくなります。  
   
     ```  
     CREATE FUNCTION dbo.MyFunction()  

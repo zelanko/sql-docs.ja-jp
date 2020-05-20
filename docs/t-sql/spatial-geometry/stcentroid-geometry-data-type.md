@@ -44,7 +44,7 @@ ms.locfileid: "67930166"
  Open Geospatial Consortium (OGC) の型: **Point**  
   
 ## <a name="remarks"></a>解説  
- `STCentroid()`geometry**インスタンスが**Polygon, CurvePolygon**型または**MultiPolygon **型ではない場合、** は NULL を返します。  
+ **geometry** インスタンスが **Polygon, CurvePolygon** 型または **MultiPolygon** 型ではない場合、`STCentroid()` は NULL を返します。  
   
 ## <a name="examples"></a>例  
   

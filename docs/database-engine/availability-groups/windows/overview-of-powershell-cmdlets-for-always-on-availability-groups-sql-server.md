@@ -30,7 +30,7 @@ ms.locfileid: "75236092"
 >  PowerShell コマンドレットは、アクションを正常に開始した時点で完了できます。 つまり、目的の操作 (可用性グループのフェールオーバーなど) の完了を示すわけではありません。 一連の操作をスクリプト化している場合は、アクションの状態を確認し、完了するまで待機しなければならないことがあります。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のタスクを実行するコマンドレットの使用方法を説明している [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] オンライン ブックのトピックの一覧については、「[Always On 可用性グループ &#40;SQL Server&#41 の概要](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」の「関連タスク」を参照してください。  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のタスクを実行するコマンドレットの使用方法を説明している [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] オンライン ブックのトピックの一覧については、「[Always On 可用性グループ &#40;SQL Server&#41 の概要](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」の「関連タスク」を参照してください。  
   
 ##  <a name="configuring-a-server-instance-for-always-on-availability-groups"></a><a name="ConfiguringServerInstance"></a> Always On 可用性グループのサーバー インスタンスの構成  
   

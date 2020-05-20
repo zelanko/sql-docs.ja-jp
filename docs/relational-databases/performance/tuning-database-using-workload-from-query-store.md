@@ -22,12 +22,12 @@ ms.locfileid: "68113169"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
-[ の](../../relational-databases/performance/how-query-store-collects-data.md)クエリ ストア[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能では、クエリ履歴、計画、および実行時統計を自動的にキャプチャし、これらの情報をデータベース内に保持します。 [データベース エンジン チューニング アドバイザー (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) は、クエリ ストアを使用してチューニングの適切なワークロードを自動的に選択するという新しいオプションをサポートしています。 大半のユーザーは、この機能を使用すれば、チューニングのワークロードを明示的に収集する必要がなくなります。 この機能は、データベースでクエリ ストア機能がオンになっている場合のみ有効です。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の[クエリ ストア](../../relational-databases/performance/how-query-store-collects-data.md)機能では、クエリ履歴、計画、および実行時統計を自動的にキャプチャし、これらの情報をデータベース内に保持します。 [データベース エンジン チューニング アドバイザー (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) は、クエリ ストアを使用してチューニングの適切なワークロードを自動的に選択するという新しいオプションをサポートしています。 大半のユーザーは、この機能を使用すれば、チューニングのワークロードを明示的に収集する必要がなくなります。 この機能は、データベースでクエリ ストア機能がオンになっている場合のみ有効です。 
   
 この機能は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **v16.4** 以降で使用できます。 
   
 ## <a name="how-to-tune-a-workload-from-query-store-in-database-engine-tuning-advisor-gui"></a>データベース エンジン チューニング アドバイザー GUI でクエリ ストアからのワークロードをチューニングする方法
-DTA の GUI で、 **[全般]** ペインの **[クエリ ストア]** をクリックして、この機能を有効にします (以下の図を参照)。
+DTA の GUI で、**[全般]** ペインの **[クエリ ストア]** をクリックして、この機能を有効にします (以下の図を参照)。
 
 ![クエリ ストアからの DTA ワークロード](../../relational-databases/performance/media/dta-workload-from-query-store.gif)
  
