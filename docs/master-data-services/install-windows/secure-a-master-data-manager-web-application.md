@@ -1,5 +1,6 @@
 ---
 title: マスター データ マネージャー Web アプリケーションのセキュリティ保護
+description: SQL Server では、HTTPS を使用してマスターデータマネージャー web アプリケーションをセキュリティで保護することができます。 管理者である必要があります。 web サーバーに MDS をインストールする必要があります。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 57ba6a83d48254bdd0d86fee9a5d2d6300cb58bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ac70d45886904032e1f61c01c35ee8542351029
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728496"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606514"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>マスター データ マネージャー Web アプリケーションのセキュリティ保護
 
@@ -25,7 +26,7 @@ ms.locfileid: "81728496"
 > [!NOTE]  
 >  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションは、HTTP または HTTPS のいずれかを使用できますが、両方を使用することはできません。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] がインストールされている Web サーバーの管理者である必要があります。  

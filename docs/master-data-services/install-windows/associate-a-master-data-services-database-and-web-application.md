@@ -1,5 +1,6 @@
 ---
 title: データベースと web アプリケーションの関連付け
+description: SQL Server では、マスターデータマネージャー web アプリケーションをマスターデータサービスデータベースに関連付けて、web 操作に使用するデータベースを指定できます。
 ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d82bee5e275365b72adb3700cae8c11e6e67c9e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 685758e8671455103c0510db254381eecefaf676
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253079"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606764"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>Master Data Services データベースと Web アプリケーションの関連付け
 
@@ -23,7 +24,7 @@ ms.locfileid: "75253079"
 
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースに関連付け、Web 操作に使用するデータベースを指定します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
   
 -   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] がローカル コンピューターにインストールされている必要があります。 詳細については、「 [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)」を参照してください。  
   
@@ -33,7 +34,7 @@ ms.locfileid: "75253079"
   
 ### <a name="to-associate-a-master-data-services-database-and-web-application"></a>Master Data Services データベースと Web アプリケーションを関連付けるには  
   
-1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
+1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を開きます。  
   
 2.  左ペインで **[Web の構成]** をクリックします。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "75253079"
   
 8.  **[アプリケーションとデータベースの関連付け]** で、インスタンスおよびデータベースの情報が正しいことを確認し、 **[適用]** をクリックします。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
   
 -   Web アプリケーションが作成されると、プログラムによる [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サービスへのアクセスが自動的に有効になります。 開発者がサービス メタデータにアクセスし、プログラムからプロキシ クラスを簡単に生成するには、メタデータ パブリッシュを有効にします。 詳細については、「 [マスター データ マネージャー Web サービス プロキシ クラスの作成](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)」を参照してください。  
   

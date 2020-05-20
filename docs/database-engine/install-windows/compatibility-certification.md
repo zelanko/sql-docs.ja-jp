@@ -1,5 +1,6 @@
 ---
 title: 互換性証明書 | Microsoft Docs
+description: 互換性証明書により、アプリケーションの互換性のリスクがなくなり、オンプレミスとクラウドで SQL Server データベースをアップグレードできるようになります。
 ms.custom: ''
 ms.date: 08/26/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2b993647898865d0b67c25c1ab6040b9b7eedaf1
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73632932"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606474"
 ---
 # <a name="compatibility-certification"></a>互換性証明書
 
@@ -98,7 +99,7 @@ ms.locfileid: "73632932"
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] は、次の場合にクエリ プラン シェイプ保護を提供します。
 >
 > - 前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン (ソース) が実行されていたハードウェアに相当するハードウェアで新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン (ターゲット) が実行されるとき。
-> - ターゲット [ とソース ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) の両方で同じ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サポートされているデータベース互換性レベル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が使用されるとき。
+> - ターゲット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とソース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の両方で同じ[サポートされているデータベース互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats)が使用されるとき。
 >
 > 上の条件で発生する (ソース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と比較したときの) クエリ プラン シェイプ退化は対処されます。 このような場合は、Microsoft カスタマー サポートにお問い合わせください。
   

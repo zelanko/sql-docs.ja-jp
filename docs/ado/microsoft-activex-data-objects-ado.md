@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0ca9c22cb54c54441f848ecbf367e92e30c1fd83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18b9a6590ce777402456c8e9f8c8f28807ec5670
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921878"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606614"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
-ADO は、C++ プログラムで SQL Server に接続するために使用されます。 もちろん、クラウド内の Azure SQL Database に接続することもできます。
+ActiveX データオブジェクトは、特定のバックエンドエンジンに依存しないことを意味するプログラミングモデルです。 ただし、現在のところ、ADO モデルをサポートするエンジンは OLE DB のみです。 OLE db Provider for ODBC には、多くのネイティブ OLE DB プロバイダーが用意されています。 ADO は、C++ および Visual Basic プログラムで SQL Server およびその他のデータベースに接続するために使用されます。 もちろん、クラウド内の Azure SQL Database に接続することもできます。
 
 この記事の各セクションでは、ADO のコンポーネントについて説明します。
 

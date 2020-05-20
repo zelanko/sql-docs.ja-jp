@@ -1,5 +1,6 @@
 ---
 title: マスター データ サービス データベースの作成
+description: マスターデータマネージャー web アプリケーションとマスターデータサービス web サービスをサポートする新しいデータベースが必要な場合は、マスターデータサービスデータベースを作成します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0bef34cdd61393e8aaf8ad312428e51affba892c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3e3993816d0811f7e23563b758ab2169240dc48
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728120"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606834"
 ---
 # <a name="create-a-master-data-services-database"></a>マスター データ サービス データベースの作成
 
@@ -23,13 +24,13 @@ ms.locfileid: "73728120"
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web アプリケーションと [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web サービスをサポートする新しいデータベースが必要な場合は、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースを作成します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
   
 -   データベースをホストするコンピューターの要件の詳細については、「[データベース要件 &#40;マスター データ サービス&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md)」を参照してください。  
   
 ### <a name="to-create-a-master-data-services-database"></a>Master Data Services データベースを作成するには  
   
-1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
+1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を開きます。  
   
 2.  左ペインで **[データベース構成]** をクリックします。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "73728120"
   
 4.  データベースを作成および構成する **データベースの作成** ウィザードを完了します。 ウィザードのユーザー インターフェイス (UI) オプションの詳細については、「[データベースの作成ウィザード &#40;マスター データ サービス構成マネージャー&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)」を参照してください。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
   
 -   データベースと Web アプリケーションのシステム設定を構成します。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../../master-data-services/system-settings-master-data-services.md)」を参照してください。  
   

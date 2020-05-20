@@ -1,32 +1,34 @@
 ### YamlMime:Landing
-title: SQL Server Machine Learning Services (Python と R) のドキュメント
-summary: SQL Server Machine Learning Services を使用してリレーショナル データで Python および R スクリプトを実行する方法について説明します。 チュートリアル、コード例、インストール ガイドなどのドキュメントでその方法が紹介されています。
+title: SQL の機械学習のドキュメント
+summary: SQL で機械学習を使用して、オンプレミスとクラウドの両方でリレーショナル データに対して Python と R を実行する方法について説明します。 チュートリアル、コード例、インストール ガイド、そのほかのドキュメントで SQL の機械学習の使い方が紹介されています。
 metadata:
-  title: SQL Server Machine Learning Services (Python、R) のドキュメント - チュートリアル、クイックスタート、およびインストール ガイド
-  description: SQL Server Machine Learning Services を使用してリレーショナル データで Python および R スクリプトを実行する方法について説明します。 チュートリアル、コード例、インストール ガイドなどのドキュメントでその方法が紹介されています。
+  title: SQL の機械学習のドキュメント - チュートリアルとインストール ガイド
+  description: SQL で機械学習を使用して、オンプレミスとクラウドの両方でリレーショナル データに対して Python と R を実行する方法について説明します。 チュートリアル、コード例、インストール ガイド、そのほかのドキュメントで SQL の機械学習の使い方が紹介されています。
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 09/12/2019
-  ms.openlocfilehash: 94675074f4c9399f3192253a294ff8df8bd6c722
-  ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+  ms.date: 04/24/2020
+  ms.openlocfilehash: 41832dfd555df827e14182900a4faa07ad22ab1e
+  ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/16/2020
-  ms.locfileid: "81487523"
+  ms.lasthandoff: 05/19/2020
+  ms.locfileid: "83606826"
 landingContent:
-- title: Machine Learning Services について
+- title: SQL Server での機械学習
   linkLists:
   - linkListType: overview
     links:
-    - text: SQL Server Machine Learning Services とは (Python と R)
+    - text: SQL Server Machine Learning Services (Python と R) とは
       url: sql-server-machine-learning-services.md
-  - linkListType: whats-new
+  - linkListType: get-started
     links:
-    - text: Machine Learning Services の新機能
-      url: what-s-new-in-sql-server-machine-learning-services.md
+    - text: Windows への Machine Learning Services のインストール
+      url: install/sql-machine-learning-services-windows-install.md
+    - text: Linux への Machine Learning Services のインストール
+      url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
   - linkListType: video
     links:
     - text: Machine Learning Services を使用して SQL Server で R/Python を実行する方法
@@ -35,11 +37,11 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: SQL Server での "Hello world" Python スクリプトの実行
+    - text: 単純な Python スクリプトを実行する
       url: tutorials/quickstart-python-create-script.md
     - text: 入力と出力の処理
       url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
-    - text: SQL Server での Python データ構造の使用
+    - text: SQL で Python のデータ構造を使用する
       url: tutorials/quickstart-python-data-structures.md
     - text: 最初のモデルのトレーニングと使用
       url: tutorials/quickstart-python-train-score-model.md
@@ -53,11 +55,11 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: SQL Server での "Hello world" R スクリプトの実行
+    - text: 単純な R スクリプトを実行する
       url: tutorials/quickstart-r-create-script.md
     - text: 入力と出力の処理
       url: tutorials/quickstart-r-create-script.md#use-inputs-and-outputs
-    - text: SQL Server での R データ構造の使用
+    - text: SQL で R のデータ構造を使用する
       url: tutorials/quickstart-r-data-types-and-objects.md
     - text: 最初のモデルのトレーニングと使用
       url: tutorials/quickstart-r-train-score-model.md
@@ -67,43 +69,45 @@ landingContent:
       url: tutorials/sqldev-in-database-r-for-sql-developers.md
     - text: R ツールでの Machine Learning Services の使用
       url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-- title: Machine Learning Services のインストール
+- title: ビッグ データ クラスターでの ML
   linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Server ビッグ データ クラスターとは
+      url: ../big-data-cluster/big-data-cluster-overview.md
   - linkListType: get-started
     links:
-    - text: Windows への Machine Learning Services のインストール
-      url: install/sql-machine-learning-services-windows-install.md
-    - text: Linux への Machine Learning Services のインストール
-      url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
+    - text: SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする
+      url: ../big-data-cluster/machine-learning-services.md
   - linkListType: how-to-guide
     links:
-    - text: Python クライアントのセットアップ
-      url: python/setup-python-client-tools-sql.md
-    - text: R クライアントのセットアップ
-      url: r/set-up-a-data-science-client.md
-- title: アーキテクチャとセキュリティ
+    - text: MLeap での Spark の機械学習モデル
+      url: ../big-data-cluster/spark-create-machine-learning-model.md
+    - text: SQL Server のビッグ データ クラスターの Sparklyr
+      url: ../big-data-cluster/sparklyr-from-rstudio.md
+    - text: SQL Server での Spark を統合する
+      url: ../big-data-cluster/spark-mssql-connector.md
+- title: Azure Synapse Analytics での ML
   linkLists:
-  - linkListType: architecture
+  - linkListType: overview
     links:
-    - text: 機能拡張フレームワーク
-      url: concepts/extensibility-framework.md
-    - text: Python の拡張機能
-      url: concepts/extension-python.md
-    - text: R の拡張機能
-      url: concepts/extension-r.md
-  - linkListType: concept
+    - text: Azure Synapse Analytics とは
+      url: /azure/synapse-analytics/overview-what-is
+  - linkListType: tutorial
     links:
-    - text: 機能拡張フレームワークのセキュリティ
-      url: concepts/security.md
-- title: Python および R パッケージの管理
-  linkLists:
+    - text: Apache Spark MLlib と Azure Synapse Analytics を使用して機械学習アプリを構築する
+      url: /azure/synapse-analytics/spark/apache-spark-machine-learning-mllib-notebook
   - linkListType: how-to-guide
     links:
-    - text: Python パッケージ情報の取得
-      url: package-management/python-package-information.md
-    - text: sqlmlutils を使用した Python パッケージのインストール
-      url: package-management/install-additional-python-packages-on-sql-server.md
-    - text: R パッケージ情報の取得
-      url: package-management/r-package-information.md
-    - text: sqlmlutils で新しい R パッケージをインストールする
-      url: package-management/install-additional-r-packages-on-sql-server.md
+    - text: Azure Synapse Studio ノートブックを作成、開発、管理する
+      url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
+- title: Azure SQL Database Edge での ML
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Database Edge での ONNX を使用した機械学習と AI
+      url: /azure/sql-database-edge/onnx-overview
+  - linkListType: how-to-guide
+    links:
+    - text: SQL Database Edge での ONNX モデルを使用したデプロイと予測
+      url: /azure/sql-database-edge/deploy-onnx

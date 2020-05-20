@@ -1,6 +1,7 @@
 ---
 title: トレース ファイル内のサーバー プロセス ID (SPID) をフィルター処理する
 titleSuffix: SQL Server Profiler
+description: サーバー プロセス ID (SPID) にフィルターを適用して、SQL Server Profiler のトレース出力を制限する方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4e565ab93f927c5ccb973a85c810d778e392845a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e4c3d5b6d69b55a588b9be957d2a3226c6b4719
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307223"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152065"
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>トレースでのサーバー プロセス ID (SPID) のフィルター選択 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

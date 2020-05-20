@@ -1,5 +1,6 @@
 ---
 title: マスターデータマネージャー web アプリケーションの作成
+description: マスターデータマネージャー web アプリケーションは、ユーザーがマスターデータを操作するためのインターフェイスを提供し、管理者が MDS を構成および管理できるようにします。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5617adb01ffc566319905942376ecaa9b78065bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4df60a40ff57ee7d51b7a34a2452815239ab491
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728507"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606658"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>マスターデータマネージャー web アプリケーションを作成する (マスターデータサービス)
 
@@ -33,7 +34,7 @@ ms.locfileid: "81728507"
   
  Web アプリケーションを作成したら、それを [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースに関連付けます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
   
 -   データベースをホストするコンピューターの要件の詳細については、「[Web アプリケーションの要件 &#40;マスター データ サービス&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)」を参照してください。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "81728507"
   
 #### <a name="to-create-a-master-data-manager-web-application-in-a-new-website"></a>新しい Web サイトにマスター データ マネージャー Web アプリケーションを作成するには  
   
-1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
+1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を開きます。  
   
 2.  左ペインで **[Web の構成]** をクリックします。  
   
@@ -62,7 +63,7 @@ ms.locfileid: "81728507"
   
 #### <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>既存の Web サイトにマスター データ マネージャー Web アプリケーションを作成するには  
   
-1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
+1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を開きます。  
   
 2.  左ペインで **[Web の構成]** をクリックします。  
   
@@ -74,11 +75,11 @@ ms.locfileid: "81728507"
   
 6.  **[OK]** をクリックします。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
   
 -   Web アプリケーションを [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースに関連付けます。 詳細については、「 [Master Data Services データベースと Web アプリケーションの関連付け](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)」を参照してください。  
   
--   または、トランスポート層セキュリティ (TLS [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ) を使用してコンテンツを暗号化する場合は、web アプリケーションをホストする web サイトを構成します (これは SECURE SOCKETS LAYER (SSL) と呼ばれます)。 Web サーバーのサーバー証明書を構成し、サイトの HTTPS バインドと TLS 設定を構成するには、IIS マネージャーなどのインターネットインフォメーションサービス (IIS) ツールを使用する必要があります。 詳細については、「 [マスター データ マネージャー Web アプリケーションのセキュリティ保護](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)」を参照してください。  
+-   または、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] トランスポート層セキュリティ (TLS) を使用してコンテンツを暗号化する場合は、web アプリケーションをホストする web サイトを構成します (これは Secure Sockets Layer (SSL) と呼ばれます)。 Web サーバーのサーバー証明書を構成し、サイトの HTTPS バインドと TLS 設定を構成するには、IIS マネージャーなどのインターネットインフォメーションサービス (IIS) ツールを使用する必要があります。 詳細については、「 [マスター データ マネージャー Web アプリケーションのセキュリティ保護](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)  
