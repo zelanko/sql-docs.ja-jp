@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sp_helplanguage
 - default languages
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4097629a1642c952384ed96ac8349f241237332b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122509"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818523"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**alias**|**sysname**|言語の別名です。|  
 |**months**|**nvarchar(372)**|月の名前。|  
 |**shortmonths**|**nvarchar(132)**|短い月の名前。|  
-|**days**|**nvarchar(217)**|曜日名。|  
+|**日時**|**nvarchar(217)**|曜日名。|  
 |**lcid**|**int**|この言語を使用する  Windows のロケール ID。|  
 |**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メッセージグループ ID。|  
   
@@ -68,7 +68,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-returning-information-about-a-single-language"></a>A. 1つの言語に関する情報を返す  
- 次の例では、代替言語`French`に関する情報を表示します。  
+ 次の例では、代替言語に関する情報を表示し `French` ます。  
   
 ```  
 sp_helplanguage French;  

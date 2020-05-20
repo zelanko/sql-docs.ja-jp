@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3e75d1d43c37d0e758b02025df4f601c87f44f2e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104387"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816794"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リモートインスタンスの実際のネットワークコンピューター名に、 **sys. サーバー**のネットワーク名を設定します。 このプロシージャを使用すると、無効な識別子が含ま[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れているネットワーク名を持つコンピューターに対して、リモートストアドプロシージャ呼び出しを実行できます。  
+  のリモートインスタンスの実際のネットワークコンピューター名に、 **sys. サーバー**のネットワーク名を設定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このプロシージャを使用すると、無効な識別子が含まれているネットワーク名を持つコンピューターに対して、リモートストアドプロシージャ呼び出しを実行でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,21 +41,21 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>引数  
- *server* ** @server = '** サーバー **'**  
+ ** @server = '** *サーバー* **'**  
  ユーザーが作成したリモート ストアド プロシージャ呼び出しの構文で参照しているリモート サーバーの名前を指定します。 この*サーバー*を使用するには、既に1行の**サーバーが存在**している必要があります。 *server* のデータ型は **sysname**で、既定値はありません。  
   
- *network_name* ** @netname = '** network_name **'**  
+ ** @netname = '** *network_name* **'**  
  リモートストアドプロシージャ呼び出しが行われるコンピューターのネットワーク名を指定します。 *network_name*は**sysname**であり、既定値はありません。  
   
- この名前は[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コンピューター名と一致する必要があり、名前には識別子で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]許可されていない文字を含めることができます。  
+ この名前は Windows コンピューター名と一致する必要があり、名前には [!INCLUDE[msCoName](../../includes/msconame-md.md)] 識別子で許可されていない文字を含めることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  コンピューター名に無効な識別子が含まれていると、Windows コンピューターへのリモートストアドプロシージャの呼び出しで問題が発生することがあります。  
   
  リンク サーバーとリモート サーバーは同じ名前空間に存在するため、同じ名前にはできません。 ただし、指定したサーバーに対してリンクサーバーとリモートサーバーの両方を定義するには、別の名前を割り当て、 **sp_setnetname**を使用して、いずれかのネットワーク名を基になるサーバーのネットワーク名に設定します。  
@@ -77,7 +77,7 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
  **Sysadmin**固定サーバーロールと**setupadmin**固定サーバーロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、リモートストアドプロシージャ呼び出しを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行するためにで使用される一般的な管理シーケンスを示しています。  
+ 次の例は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リモートストアドプロシージャ呼び出しを実行するためにで使用される一般的な管理シーケンスを示しています。  
   
 ```  
 USE master;  

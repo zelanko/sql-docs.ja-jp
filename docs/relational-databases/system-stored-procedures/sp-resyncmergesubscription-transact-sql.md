@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e77488a379543dd6f2749a07048fa67a92d530ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a20fd73874ddb93af5224c3ce6c86383c0e15ace
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041032"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816843"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
   
 `[ @resync_type = ] resync_type`再同期が開始されるタイミングを定義します。 *resync_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|初期スナップショットの後から同期が開始されます。 初期スナップショット以降のすべての変更がサブスクライバーに再適用されるため、これは最もリソースを大量に消費するオプションです。|  
 |**1**|前回の検証が正常に完了した後に同期が開始されます。 最後に検証が正常に完了した後に発生した、新規または不完全なすべてのジェネレーションがサブスクライバーに再適用されます。|  

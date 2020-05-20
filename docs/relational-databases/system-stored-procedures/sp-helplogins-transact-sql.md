@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c26bf0ff225a593a6427402fc15543edbfc15637
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122451"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818270"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**ログイン**|**sysname**|ログイン名。|  
 |**SID**|**varbinary (85)**|ログインセキュリティ識別子 (SID)。|  
-|**DefDBName**|**sysname**|のインスタンスに接続するときに、 **loginが**使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する既定のデータベースです。|  
+|**DefDBName**|**sysname**|のインスタンスに接続するときに、 **loginが**使用する既定のデータベース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。|  
 |**DefLangName**|**sysname**|**ログイン**で使用される既定の言語。|  
 |**Auser**|**char (5)**|はい = データベースにユーザー名が関連付けられ**ています**。<br /><br /> No =**ログイン**には、関連付けられたユーザー名がありません。|  
 |**ARemote**|**char (7)**|はい =**ログイン**に関連付けられているリモートログインです。<br /><br /> No = **loginlogin**には、関連付けられたログインがありません。|  
@@ -61,7 +61,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**ログイン**|**sysname**|ログイン名。|  
-|**DBName**|**sysname**|のインスタンスに接続するときに、 **loginが**使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する既定のデータベースです。|  
+|**DBName**|**sysname**|のインスタンスに接続するときに、 **loginが**使用する既定のデータベース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。|  
 |**ユーザー名**|**sysname**|の場合、このユーザーアカウントは、 **dbname**でに**マップされ**、その**ログイン**が**dbname**のメンバーであるロールです。|  
 |**UserOrAlias**|**char (8)**|MemberOf = **UserName**はロールです。<br /><br /> User = **UserName**はユーザーアカウントです。|  
   
@@ -80,7 +80,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
  **Sp_helplogins**がデータベースにアクセスできない場合、 **sp_helplogins**は可能な限り多くの情報を返し、エラーメッセージ15622を表示します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、ログイン`John`に関する情報を報告します。  
+ 次の例では、ログインに関する情報を報告し `John` ます。  
   
 ```  
 EXEC sp_helplogins 'John';  

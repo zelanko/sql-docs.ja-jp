@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpindex
 ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17e43f9739b0306a42c4c454cf93fdf92b255177
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3e0d18029c69ab988934b3e1c68fae90a9e8173a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122527"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818622"
 ---
 # <a name="sp_helpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_helpindex [ @objname = ] 'name'
   
  降順のインデックス付き列は、名前の後にマイナス記号 (-) を付けて結果セットに一覧表示されます。既定の昇順のインデックス列は、名前だけで一覧表示されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  UPDATE STATISTICS の NORECOMPUTE オプションを使用してインデックスが設定されている場合、その情報は**index_description**列に含まれます。  
   
  **sp_helpindex**は、順序付け可能インデックス列のみを公開します。そのため、XML インデックスや空間インデックスに関する情報は公開されません。  

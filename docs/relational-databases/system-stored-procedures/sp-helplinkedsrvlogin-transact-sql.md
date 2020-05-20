@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplinkedsrvlogin
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f1728b3e5d4cd3189a8d9a01a8b72ecedaf7cb6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7c9e0a996728c6bf0b352afc9615808773eefec0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122464"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818413"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ## <a name="arguments"></a>引数  
 `[ @rmtsrvname = ] 'rmtsrvname'`ログインマッピングが適用されるリンクサーバーの名前を指定します。 *rmtsrvname*は**sysname**,、既定値は NULL です。 NULL の場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行中のローカル コンピューターで定義されているすべてのリンク サーバーに対して定義された、すべてのログインのマッピングが返されます。  
   
-`[ @locallogin = ] 'locallogin'`リンクサーバー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *rmtsrvname*へのマッピングを持つローカルサーバー上のログインを指定します。 *locallogin*は**sysname**,、既定値は NULL です。 NULL を指定すると、 *rmtsrvname*に定義されているすべてのログインマッピングが返されます。 NULL でない場合は、 *locallogin*から*rmtsrvname*へのマッピングが既に存在している必要があります。 *locallogin*には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ユーザーを指定できます。 Windows ユーザーには、直接またはアクセス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]権が付与されている windows グループのメンバーシップを使用して、へのアクセスが許可されている必要があります。  
+`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リンクサーバー *rmtsrvname*へのマッピングを持つローカルサーバー上のログインを指定します。 *locallogin*は**sysname**,、既定値は NULL です。 NULL を指定すると、 *rmtsrvname*に定義されているすべてのログインマッピングが返されます。 NULL でない場合は、 *locallogin*から*rmtsrvname*へのマッピングが既に存在している必要があります。 *locallogin*には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは Windows ユーザーを指定できます。 Windows ユーザーに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、直接またはアクセス権が付与されている windows グループのメンバーシップを使用して、へのアクセスが許可されている必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -86,7 +86,7 @@ Marketing        NULL          1               NULL
 ```  
   
 ### <a name="b-displaying-all-login-mappings-for-a-linked-server"></a>B. リンクサーバーのすべてのログインマッピングを表示する  
- 次の例では、 `Sales`リンクサーバーに対してローカルに定義されているすべてのログインマッピングを表示します。  
+ 次の例では、リンクサーバーに対してローカルに定義されているすべてのログインマッピングを表示し `Sales` ます。  
   
 ```  
 EXEC sp_helplinkedsrvlogin 'Sales';  
@@ -105,7 +105,7 @@ Sales            Mary          0               sa
 ```  
   
 ### <a name="c-displaying-all-login-mappings-for-a-local-login"></a>C. ローカルログインのすべてのログインマッピングを表示する  
- 次の例では、ログイン`Mary`に対してローカルに定義されているすべてのログインマッピングを表示します。  
+ 次の例では、ログインに対してローカルに定義されているすべてのログインマッピングを表示し `Mary` ます。  
   
 ```  
 EXEC sp_helplinkedsrvlogin NULL, 'Mary';  

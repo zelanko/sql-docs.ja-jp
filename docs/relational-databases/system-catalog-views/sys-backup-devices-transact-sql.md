@@ -18,19 +18,19 @@ helpviewer_keywords:
 - backup devices [SQL Server], viewing information
 - sys.backup_devices catalog view
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b70d87a6f1a72662c1ca466a532d3050b4fe58ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b5f70fa8b486688a6c83133781b63d188742e345
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942587"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816182"
 ---
 # <a name="sysbackup_devices-transact-sql"></a>backup_devices (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **Sp_addumpdevice**を使用して登録された、またはで[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]作成されたバックアップデバイスごとに1行の値を格納します。  
+  **Sp_addumpdevice**を使用して登録された、またはで作成されたバックアップデバイスごとに1行の値を格納し [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -45,8 +45,8 @@ ms.locfileid: "67942587"
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [バックアップデバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
- [sp_addumpdevice &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
+ [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [データベースとファイルのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

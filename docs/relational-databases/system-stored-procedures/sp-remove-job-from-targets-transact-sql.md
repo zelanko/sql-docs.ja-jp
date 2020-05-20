@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_remove_job_from_targets
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ba55c2744d1fad0b6453e0f1d1cd2ea96934bfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6d195ca70eb1c1236518ce9af804dc4c5771cd37
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006969"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817336"
 ---
 # <a name="sp_remove_job_from_targets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_remove_job_from_targets [ @job_id = ] job_id
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、以前`Weekly Sales Backups`に作成し`Servers Processing Customer Orders`たジョブを対象サーバーグループ、 `SEATTLE1`および`SEATTLE2`サーバーから削除します。  
+ 次の例では、以前に作成した `Weekly Sales Backups` ジョブを `Servers Processing Customer Orders` 対象サーバーグループ、 `SEATTLE1` およびサーバーから削除し `SEATTLE2` ます。  
   
 ```  
 USE msdb ;  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0a351eaa746654d26d7f51536a41fc2677a2f67e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cb261fdfb745e935b94fc5c2944640c507674ece
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010551"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816492"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_syscollector_update_collection_set
   
 `[ @days_until_expiration = ] days_until_expiration`収集したデータを管理データウェアハウスに保存する日数を指定します。 *days_until_expiration*は**smallint**です。 *days_until_expiration*は、0または正の整数である必要があります。  
   
-`[ @proxy_id = ] proxy_id`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントプロキシアカウントの一意の識別子を示します。 *proxy_id*は**int**です。  
+`[ @proxy_id = ] proxy_id`エージェントプロキシアカウントの一意の識別子を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *proxy_id*は**int**です。  
   
 `[ @proxy_name = ] 'proxy_name'`プロキシの名前を指定します。 *proxy_name*は**sysname**で、null 値が許容されます。  
   
@@ -87,7 +87,7 @@ sp_syscollector_update_collection_set
   
 `[ @logging_level = ] logging_level`はログ記録レベルです。 *logging_level*は、次のいずれかの**値を使用**します。  
   
- 0: 実行情報と追跡[!INCLUDE[ssIS](../../includes/ssis-md.md)]するイベントを記録します。  
+ 0: 実行情報と [!INCLUDE[ssIS](../../includes/ssis-md.md)] 追跡するイベントを記録します。  
   
 -   コレクションセットの開始/停止  
   
@@ -103,7 +103,7 @@ sp_syscollector_update_collection_set
   
 -   からの警告イベント[!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
- 2-レベル1のログ記録と、からの[!INCLUDE[ssIS](../../includes/ssis-md.md)]詳細なイベント情報。  
+ 2-レベル1のログ記録と、からの詳細なイベント情報 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 。  
   
  *Logging_level*の既定値は1です。  
   

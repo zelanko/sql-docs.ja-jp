@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpsubscription
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 845b9bc59b2232dfa6760087c4a18af84a3c65b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3eaaeb7715086bf5b411a016239bb24d147fcda
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68764350"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817393"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`パブリケーションの種類。 *publication_type*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**0**|トランザクションパブリケーション。|  
 |**1**|スナップショットパブリケーション。|  
@@ -61,7 +61,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @mode = ] mode`サブスクリプションの監視情報を返すときに使用するフィルター処理モードを選択します。 *モード*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|すべてのサブスクリプションを返します。|  
 |**1**|エラーがあるサブスクリプションだけを返します。|  
@@ -89,7 +89,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**publisher_db**|**sysname**|パブリケーション データベースの名前です。|  
 |**レプリケーション**|**sysname**|パブリケーションの名前を指定します。|  
 |**publication_type**|**int**|パブリケーションの種類を指定します。次のいずれかの値を指定できます。<br /><br /> **0** = トランザクションパブリケーション<br /><br /> **1** = スナップショットパブリケーション<br /><br /> **2** = マージパブリケーション|  
-|**内部**|**int**|サブスクリプションの種類です。次のいずれかの値をとります。<br /><br /> **0** = プッシュ<br /><br /> **1** = プル<br /><br /> **2** = 匿名|  
+|**subtype**|**int**|サブスクリプションの種類です。次のいずれかの値をとります。<br /><br /> **0** = プッシュ<br /><br /> **1** = プル<br /><br /> **2** = 匿名|  
 |**短い**|**int**|トランザクションパブリケーションのログリーダーまたはディストリビューションエージェントによって反映されたデータ変更の待機時間の最大値 (秒単位)。|  
 |**latencythreshold**|**int**|トランザクションパブリケーションの最大待機時間です。この値を超えると警告が生成されます。|  
 |**agentnotrunning**|**int**|エージェントが実行されていない時間の長さを時間単位で指定します。|  
@@ -116,7 +116,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_replmonitorhelpsubscription**は、すべての種類のレプリケーションで使用されます。  
   
  **sp_replmonitorhelpsubscription**は、サブスクリプションの状態の重大度に基づいて結果セットを並べ替えます。これは、 *monitorranking*の値によって決定されます。 たとえば、エラー状態のすべてのサブスクリプションの列は、警告状態のサブスクリプションの列よりも上に並べられます。  

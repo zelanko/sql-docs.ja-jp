@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_notify_operator
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 00d4462ac9e597c0cdb17ff68594eb751ff04d66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107979"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817653"
 ---
 # <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_notify_operator
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ここでは、指定したメッセージが、指定したオペレーターの電子メール アドレスに送信されます。 オペレーターに電子メール アドレスが構成されていない場合、エラーが返されます。  
   
  通知をオペレーターに送信する前に、データベースメールとメールホストデータベースを構成する必要があります。  
@@ -83,7 +83,7 @@ sp_notify_operator
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、データベース メール プロファイル `François Ajenstat` を使用して、電子メールをオペレーター `AdventureWorks Administrator` に送信します。 電子メールの件名は`Test Notification`です。 電子メール メッセージには、"This is a test of notification via e-mail." という文が記載されています。  
+ 次の例では、データベース メール プロファイル `François Ajenstat` を使用して、電子メールをオペレーター `AdventureWorks Administrator` に送信します。 電子メールの件名は `Test Notification` です。 電子メール メッセージには、"This is a test of notification via e-mail." という文が記載されています。  
   
 ```  
 USE msdb ;  

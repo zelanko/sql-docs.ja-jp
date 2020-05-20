@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_scriptpublicationcustomprocs
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8436616ced84892dc7e484a5d83f3f0c3779f244
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bb59b3ce367a7f936d4d8bec28b363e493857632
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771579"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816670"
 ---
 # <a name="sp_scriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ## <a name="result-sets"></a>結果セット  
  1つの**nvarchar (4000)** 列で構成される結果セットを返します。 この結果セットは、カスタム ストアド プロシージャの作成に必要な、完全な CREATE PROCEDURE ステートメントを構成します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  カスタムプロシージャは、自動生成カスタムプロシージャ (0x2) スキーマオプションを指定しないと、アーティクルに対してスクリプト化されません。  
   
  次の手順は、 **sp_scriptpublicationcustomprocs**がサブスクライバーのプロシージャを作成するために使用します。このプロシージャを直接実行することはできません。  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42a98fe7af16c4e8aab22d6ace02f359dfe02c54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9fac6fcf8e6728d666e46ace86f82c5f968bddb2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096199"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818795"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|-----------------|  
 |**job_id**|メンテナンスプランに関連付けられているすべてのジョブの ID。 *job_id*は**uniqueidentifier**です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_help_maintenance_plan**は**msdb**データベースにあります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -95,7 +95,7 @@ EXECUTE   sp_help_maintenance_plan
 ```  
   
 ## <a name="see-also"></a>参照  
- [メンテナンスプラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
+ [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [データベースメンテナンスプランのストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

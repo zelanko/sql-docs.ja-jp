@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sequence number object, sp_sequence_get_range procedure
 - sp_sequence_get_range
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd17110b5a5f2abf8f64662221f334ebf769b258
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab7e05eba835f5cee47e0256f5866623bc658e44
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77114568"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816611"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -53,19 +53,19 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ## <a name="arguments"></a>引数  
 `[ @sequence_name = ] N'sequence'`シーケンスオブジェクトの名前。 スキーマは省略可能です。 *sequence_name*は**nvarchar (776)** です。  
   
-`[ @range_size = ] range_size`シーケンスからフェッチする値の数。 range_size は**bigint**です。 ** \@**  
+`[ @range_size = ] range_size`シーケンスからフェッチする値の数。 ** \@ range_size**は**bigint**です。  
   
-`[ @range_first_value = ] range_first_value`出力パラメーターは、要求された範囲の計算に使用されるシーケンスオブジェクトの最初 (最小値または最大値) の値を返します。 range_first_value は、要求で使用されているシーケンスオブジェクトと同じ基本型で**sql_variant**ます。 ** \@**  
+`[ @range_first_value = ] range_first_value`出力パラメーターは、要求された範囲の計算に使用されるシーケンスオブジェクトの最初 (最小値または最大値) の値を返します。 ** \@ range_first_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型で**sql_variant**ます。  
   
-`[ @range_last_value = ] range_last_value`省略可能な出力パラメーターは、要求された範囲の最後の値を返します。 range_last_value は、要求で使用されているシーケンスオブジェクトと同じ基本型で**sql_variant**ます。 ** \@**  
+`[ @range_last_value = ] range_last_value`省略可能な出力パラメーターは、要求された範囲の最後の値を返します。 ** \@ range_last_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型で**sql_variant**ます。  
   
-`[ @range_cycle_count = ] range_cycle_count`省略可能な出力パラメーターは、要求された範囲を返すためにシーケンスオブジェクトが循環した回数を返します。 range_cycle_count は**int**です。 ** \@**  
+`[ @range_cycle_count = ] range_cycle_count`省略可能な出力パラメーターは、要求された範囲を返すためにシーケンスオブジェクトが循環した回数を返します。 ** \@ range_cycle_count**は**int**です。  
   
-`[ @sequence_increment = ] sequence_increment`省略可能な出力パラメーターは、要求された範囲の計算に使用されるシーケンスオブジェクトのインクリメントを返します。 sequence_increment は、要求で使用されているシーケンスオブジェクトと同じ基本型で**sql_variant**ます。 ** \@**  
+`[ @sequence_increment = ] sequence_increment`省略可能な出力パラメーターは、要求された範囲の計算に使用されるシーケンスオブジェクトのインクリメントを返します。 ** \@ sequence_increment**は、要求で使用されているシーケンスオブジェクトと同じ基本型で**sql_variant**ます。  
   
-`[ @sequence_min_value = ] sequence_min_value`省略可能な出力パラメーターは、シーケンスオブジェクトの最小値を返します。 sequence_min_value は、要求で使用されているシーケンスオブジェクトと同じ基本型で**sql_variant**ます。 ** \@**  
+`[ @sequence_min_value = ] sequence_min_value`省略可能な出力パラメーターは、シーケンスオブジェクトの最小値を返します。 ** \@ sequence_min_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型で**sql_variant**ます。  
   
-`[ @sequence_max_value = ] sequence_max_value`省略可能な出力パラメーターは、シーケンスオブジェクトの最大値を返します。 sequence_max_value は、要求で使用されているシーケンスオブジェクトと同じ基本型で**sql_variant**ます。 ** \@**  
+`[ @sequence_max_value = ] sequence_max_value`省略可能な出力パラメーターは、シーケンスオブジェクトの最大値を返します。 ** \@ sequence_max_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型で**sql_variant**ます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_releaseapplock
 ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ad6ca284f99a777b8909d2f96ea68ff83c9f467
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075628"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818082"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @Resource= ]'*resource_name*'  
+ [ @Resource =] '*resource_name*'  
  は、クライアントアプリケーションによって指定されたロックリソース名です。 アプリケーションでは、リソースが一意であることを確認する必要があります。 指定した名前は内部的にハッシュされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーに格納できる値に変換されます。 *resource_name*は**nvarchar (255)** で、既定値はありません。 *resource_name*はバイナリ比較されます。したがって、現在のデータベースの照合順序の設定に関係なく、大文字と小文字が区別されます。  
   
- [ @LockOwner= ]'*lock_owner*'  
+ [ @LockOwner =] '*lock_owner*'  
  ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)** です。 この値は **Transaction** (既定値) または **Session** のいずれかです。 *Lock_owner*値が**transaction**、既定で、または明示的に指定されている場合、sp_getapplock はトランザクション内から実行する必要があります。  
   
- [ @DbPrincipal= ]'*database_principal*'  
+ [ @DbPrincipal =] '*database_principal*'  
  データベース内のオブジェクトに対する権限を持つユーザー、ロール、またはアプリケーションロールを設定します。 関数を正常に呼び出すには、関数の呼び出し元が*database_principal*、dbo、または db_owner 固定データベースロールのメンバーである必要があります。 既定値はパブリックです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -69,7 +69,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 `Form1` `AdventureWorks2012`データベース内のリソースの現在のトランザクションに関連付けられているロックを解放します。  
+ 次の例では、データベース内のリソースの現在のトランザクションに関連付けられているロックを解放し `Form1` `AdventureWorks2012` ます。  
   
 ```  
 USE AdventureWorks2012;  

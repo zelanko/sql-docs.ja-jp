@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticle
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e01a1c9c96813c14827ca2f941c84d151c147195
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122340"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818119"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,15 +38,15 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`情報を取得するパブリケーションの名前を指定します。 *publication*のデータ型は**sysname**で、 **%** 既定値はです。これにより、現在のデータベースのすべてのパブリケーションに含まれるすべてのマージアーティクルに関する情報が返されます。  
+`[ @publication = ] 'publication'`情報を取得するパブリケーションの名前を指定します。 *publication*のデータ型は**sysname**で、既定値はです **%** 。これにより、現在のデータベースのすべてのパブリケーションに含まれるすべてのマージアーティクルに関する情報が返されます。  
   
-`[ @article = ] 'article'`情報を返すアーティクルの名前を指定します。 *アーティクル*のデータ型は**sysname**で、 **%** 既定値はです。これにより、指定されたパブリケーションのすべてのマージアーティクルに関する情報が返されます。  
+`[ @article = ] 'article'`情報を返すアーティクルの名前を指定します。 *アーティクル*のデータ型は**sysname**で、既定値はです **%** 。これにより、指定されたパブリケーションのすべてのマージアーティクルに関する情報が返されます。  
   
 ## <a name="result-set"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|アーティクルの識別子。|  
+|**ID**|**int**|アーティクルの識別子。|  
 |**name**|**sysname**|アーティクルの名前。|  
 |**source_owner**|**sysname**|ソースオブジェクトの所有者の名前。|  
 |**source_object**|**sysname**|追加するアーティクルのソース オブジェクトの名前。|  
@@ -68,7 +68,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**int**|自動 id 範囲の処理が有効になっている場合は。**1**は有効で、 **0**は無効になっています。|  
 |**pub_identity_range**|**bigint**|新しい id 値を割り当てるときに使用する範囲のサイズ。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
 |**identity_range**|**bigint**|新しい id 値を割り当てるときに使用する範囲のサイズ。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
-|**進入**|**int**|または以前のバージョンの[!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているサブスクライバーで使用されるパーセンテージ値。 **しきい値**は、マージエージェントが新しい id 範囲を割り当てるタイミングを制御します。 [しきい値] で指定した値のパーセンテージが使用されると、マージエージェントによって新しい id 範囲が作成されます。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
+|**進入**|**int**|[!INCLUDE[ssEW](../../includes/ssew-md.md)]または以前のバージョンのを実行しているサブスクライバーで使用されるパーセンテージ値 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **しきい値**は、マージエージェントが新しい id 範囲を割り当てるタイミングを制御します。 [しきい値] で指定した値のパーセンテージが使用されると、マージエージェントによって新しい id 範囲が作成されます。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
 |**verify_resolver_signature**|**int**|マージレプリケーションで競合回避モジュールを使用する前にデジタル署名を検証する場合は、**0**は、署名が検証されないことを示します。 **1**は、署名が信頼できるソースからのものかどうかを確認することを意味します。|  
 |**destination_object**|**sysname**|対象オブジェクトの名前。 ストアド プロシージャ、ビュー、および UDF スキーマ アーティクルをマージするときのみ適用されます。|  
 |**allow_interactive_resolver**|**int**|インタラクティブ競合回避モジュールが記事で使用されている場合**1**は、このリゾルバーが使用されることを示し、 **0**は使用されないことを示します。|  
@@ -87,7 +87,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_helpmergearticle**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

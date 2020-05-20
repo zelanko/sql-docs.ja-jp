@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_update_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 393b5622964ea3f240d31a2a90c555f7020c500d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 224ee81383c247d3b2ba8d02aaa99f5a649d0e74
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010542"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816438"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
   
 `[ @parameter_schema = ] 'parameter_schema'`このコレクター型の XML スキーマです。 *parameter_schema*は**xml**であり、特定のコレクター型で必要になる場合があります。 必須ではない場合、この引数は NULL にすることができます。  
   
-`[ @collection_package_id = ] collection_package_id`コレクションセットによって使用される[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションパッケージを指すローカル一意識別子です。 *collection_package_id*は**uniqueidentifer**であり、必須です。 *Collection_package_id*の値を取得するには、msdb データベースの dbo. syscollector_collector_types システムビューに対してクエリを実行します。  
+`[ @collection_package_id = ] collection_package_id`[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるコレクションパッケージを指すローカル一意識別子です。 *collection_package_id*は**uniqueidentifer**であり、必須です。 *Collection_package_id*の値を取得するには、msdb データベースの dbo. syscollector_collector_types システムビューに対してクエリを実行します。  
   
-`[ @upload_package_id = ] upload_package_id`コレクションセットによって使用される[!INCLUDE[ssIS](../../includes/ssis-md.md)]アップロードパッケージを指すローカル一意識別子です。 *upload_package_id*は**uniqueidentifier**であり、必須です。 *Upload_package_id*の値を取得するには、msdb データベースの dbo. syscollector_collector_types システムビューに対してクエリを実行します。  
+`[ @upload_package_id = ] upload_package_id`[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるアップロードパッケージを指すローカル一意識別子です。 *upload_package_id*は**uniqueidentifier**であり、必須です。 *Upload_package_id*の値を取得するには、msdb データベースの dbo. syscollector_collector_types システムビューに対してクエリを実行します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

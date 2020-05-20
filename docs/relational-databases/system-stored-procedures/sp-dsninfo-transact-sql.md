@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cb67524304807eba6765387590fd53a52b92f19a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa9033b52851b6b678671e94c6d10d71b5a488fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124705"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818694"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @infotype = ] 'info_type'`返される情報の種類を示します。 *Info_type*が指定されていない場合、または NULL が指定されている場合は、すべての情報の種類が返されます。 *info_type*は**varchar (128)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**DBMS_NAME**|データソースのベンダ名を指定します。|  
 |**DBMS_VERSION**|データソースのバージョンを指定します。|  
@@ -58,7 +58,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @dso_type = ] dso_type`データソースの種類を入力します。 *dso_type*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**1** (既定値)|ODBC データ ソース (ODBC data source)|  
 |**3**|OLE DB データ ソース|  
@@ -71,9 +71,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**情報の種類**|**nvarchar (64)**|DBMS_NAME、DBMS_VERSION、DATABASE_NAME、SQL_SUBSCRIBER などの情報の種類です。|  
-|**[値]**|**nvarchar(512)**|関連付けられている情報の種類の値。|  
+|**値**|**nvarchar(512)**|関連付けられている情報の種類の値。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_dsninfo**は、すべての種類のレプリケーションで使用されます。  
   
  **sp_dsninfo**は、データベースをレプリケーションまたはクエリに使用できるかどうかを示す ODBC または OLE DB データソース情報を取得します。  
