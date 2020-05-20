@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RecordStatusEnum enumeration [ADO]
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 233b2f84b6a60c7b5162edce6c1b76b63946ae81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f84f43a90479064c2a95d407b7f816fd48c1c679
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931283"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756756"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 バッチ更新やその他の一括操作に関して、レコードの[状態](../../../ado/reference/ado-api/status-property-ado-recordset.md)を指定します。  
   
-|Constant|値|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|操作が取り消されたため、レコードが保存されなかったことを示します。|  
 |**adRecCantRelease**|0x400|既存のレコードがロックされていたため、新しいレコードが保存されなかったことを示します。|  
@@ -51,7 +51,7 @@ ms.locfileid: "67931283"
   
  パッケージ: **com. ms. wfc. データ**  
   
-|Constant|  
+|定数|  
 |--------------|  
 |AdoEnums.RecordStatus.CANCELED|  
 |AdoEnums.RecordStatus.CANTRELEASE|  

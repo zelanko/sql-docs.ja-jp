@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [ADO]
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a676bf5eb3d8d98f1b2eb9367aa8ad56f0da209d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 48fc3a1adf8dbeae010e4035ac4f2e390c015e54
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931253"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756534"
 ---
 # <a name="refresh-method-ado"></a>Refresh メソッド (ADO)
 プロバイダーによって使用可能なオブジェクトを反映するように、コレクション内のオブジェクトを更新します。  
@@ -50,7 +50,7 @@ collection.Refresh
 ### <a name="fields"></a>フィールド  
  [フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに対して**Refresh**メソッドを使用しても、可視効果はありません。 基になるデータベース構造から変更を取得するには、 [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドを使用するか、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトでブックマークがサポートされていない場合は[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッドを使用する必要があります。  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
  一部のオブジェクトの**プロパティ**コレクションで**Refresh**メソッドを使用すると、プロバイダーが公開する動的プロパティがコレクションに設定されます。 これらのプロパティは、ADO によってサポートされる組み込みプロパティ以外の、プロバイダー固有の機能に関する情報を提供します。  
   
 ## <a name="applies-to"></a>適用対象  

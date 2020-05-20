@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bee7d185d5f598a2f0a086bb7e3bea49ddfff88c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c45f457cdf633cc16052ed2945f71da176efe472
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924911"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757588"
 ---
 # <a name="more-about-recordset-persistence"></a>レコードセットの保持に関する詳細情報
 ADO レコードセットオブジェクトは、 [Save](../../../ado/reference/ado-api/save-method.md)メソッドを使用して、**レコードセット**オブジェクトの内容をファイルに格納することをサポートしています。 永続的に格納されたファイルは、ローカルドライブ、サーバー、または Web サイト上の URL として存在する場合があります。 その後、**レコードセット**オブジェクトの[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドまたは[Connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)メソッドのいずれかを使用して、ファイルを復元できます。  

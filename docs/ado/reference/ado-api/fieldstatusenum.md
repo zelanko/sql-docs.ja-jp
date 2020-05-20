@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ea1fc2d8347df28e983b412976c545327456ad8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918666"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756817"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 [フィールドオブジェクト](../../../ado/reference/ado-api/field-object.md)の[状態](../../../ado/reference/ado-api/status-property-ado-field.md)を指定します。  
   
- **Adfieldpending\* **値は、状態が設定される原因となった操作を示し、他のステータス値と組み合わせることができます。  
+ **Adfieldpending \* **値は、状態が設定される原因となった操作を示し、他のステータス値と組み合わせることができます。  
   
-|Constant|[値]|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**Adfieldexists が既に存在します**|26|指定したフィールドが既に存在することを示します。|  
 |**Adの Dbadstatus**|12|無効な状態値が ADO から OLE DB プロバイダーに送信されたことを示します。 原因としては、1.0 または1.1 プロバイダーの OLE DB、または[値](../../../ado/reference/ado-api/value-property-ado.md)と[状態](../../../ado/reference/ado-api/status-property-ado-field.md)の不適切な組み合わせが考えられます。|  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1c195b3f9897d0bc71ab9e03e69153a66cdd80ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0bffe36980f06bc187bdaf819b373cdb547ecc92
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924933"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757798"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>レコードセットを返す JScript コードの例
 ## <a name="jscript-code-rsjs"></a>JScript コード (rs .js)  
@@ -85,4 +85,4 @@ function alert(str)
   
 2.  JScript ファイル (rs-232c) を保存したディレクトリで、コマンドプロンプトと cd を開きます。  
   
-3.  コマンド`CScript rs.js`プロンプトで「」と入力します。
+3.  `CScript rs.js`コマンドプロンプトで「」と入力します。
