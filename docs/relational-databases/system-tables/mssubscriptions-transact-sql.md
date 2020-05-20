@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscriptions system table
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ca4364709462eee9df62baa8193dec9f8ea36241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b4ed943e0768e031c07fa1748961e311373af8ad
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74866044"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812260"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "74866044"
 |**subscription_seqno**|**varbinary(16)**|スナップショットトランザクションのシーケンス番号です。|  
 |**snapshot_seqno_flag**|**bit**|スナップショットトランザクションのシーケンス番号のソースを示します。値が**1**の場合、 **subscription_seqno**がスナップショットのシーケンス番号であることを意味します。|  
 |**independent_agent**|**bit**|このパブリケーションに対してスタンドアロンのディストリビューションエージェントがあるかどうかを示します。|  
-|**subscription_time**|**datetime**|内部使用のみです。|  
+|**subscription_time**|**datetime**|内部使用のみ。|  
 |**loopback_detection**|**bit**|双方向トランザクションレプリケーショントポロジの一部であるサブスクリプションに適用されます。 ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **1** = を返しません。<br /><br /> **0** = 返送します。<br /><br />|  
 |**agent_id**|**int**|エージェントの ID。|  
 |**update_mode**|**tinyint**|更新の種類。|  

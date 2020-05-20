@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd30a6c07bccde04bb38189fab00f688dd763356
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8a060195e5fba5ae5e97e2ded6afb51c1636687
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165498"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812047"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "74165498"
 クエリの実行中にリアルタイムでクエリの進行状況を監視します。 たとえば、この DMV を使用して、クエリのどの部分が低速で実行されているかを判断します。 この DMV をシステムの他の DMV と結合するには、説明フィールドで特定されている列を使用します。 または、timestamp 列を使用して、この DMV を他のパフォーマンスカウンター (Performance Monitor、xperf など) に結合します。  
   
 ## <a name="table-returned"></a>返されるテーブル  
-返されるカウンターは、スレッドごとの演算子ごとになります。 結果は動的であり、クエリの終了時にのみ出力を作成`SET STATISTICS XML ON`するなど、既存のオプションの結果とは一致しません。  
+返されるカウンターは、スレッドごとの演算子ごとになります。 結果は動的であり、 `SET STATISTICS XML ON` クエリの終了時にのみ出力を作成するなど、既存のオプションの結果とは一致しません。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -72,28 +72,28 @@ ms.locfileid: "74165498"
 |segment_read_count|**int**|これまでのセグメント先行読み取りの数。|  
 |segment_skip_count|**int**|これまでにスキップされたセグメントの数。| 
 |actual_read_row_count|**bigint**|残存述語が適用される前に演算子によって読み取られた行の数。| 
-|estimated_read_row_count|**bigint**|**適用対象:**[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 以降。 <br/>残存述語が適用される前に、演算子によって読み取られると推定される行の数。|  
+|estimated_read_row_count|**bigint**|**適用対象:** SP1 以降 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 。 <br/>残存述語が適用される前に、演算子によって読み取られると推定される行の数。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  [クエリプラン] ノードに i/o がない場合は、i/o 関連のすべてのカウンターが NULL に設定されます。  
   
- この DMV によって報告される i/o 関連のカウンターは、次の2つの`SET STATISTICS IO`方法でによって報告されるものよりも細かくなります。  
+ この DMV によって報告される i/o 関連のカウンターは、次の2つの方法でによって報告されるものよりも細かく `SET STATISTICS IO` なります。  
   
 -   `SET STATISTICS IO`指定されたテーブルに対するすべての i/o のカウンターをグループ化します。 この DMV では、テーブルに対して i/o を実行するクエリプラン内のすべてのノードに対して個別のカウンターを取得します。  
   
 -   並列スキャンがある場合、この DMV では、スキャンで使用される並列スレッドごとにカウンターがレポートされます。
  
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降では、*標準のクエリ実行統計プロファイルインフラストラクチャ*は、*軽量のクエリ実行統計プロファイルインフラストラクチャ*とサイドバイサイドで存在します。 `SET STATISTICS XML ON`と`SET STATISTICS PROFILE ON`は、常に*標準のクエリ実行統計プロファイルインフラストラクチャ*を使用します。 `sys.dm_exec_query_profiles`にデータを設定するには、クエリプロファイルインフラストラクチャの1つを有効にする必要があります。 詳細については、「[クエリプロファイリングインフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。    
+SP1 以降では [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 、*標準のクエリ実行統計プロファイルインフラストラクチャ*は、*軽量のクエリ実行統計プロファイルインフラストラクチャ*とサイドバイサイドで存在します。 `SET STATISTICS XML ON`と `SET STATISTICS PROFILE ON` は、常に*標準のクエリ実行統計プロファイルインフラストラクチャ*を使用します。 にデータを設定するには `sys.dm_exec_query_profiles` 、クエリプロファイルインフラストラクチャの1つを有効にする必要があります。 詳細については、「[クエリプロファイリングインフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。    
 
 >[!NOTE]
-> 調査対象のクエリは、クエリのプロファイルインフラストラクチャが有効になっ**た後**に開始する必要があります。クエリを開始`sys.dm_exec_query_profiles`した後で有効にすると、で結果が生成されません。 クエリプロファイルインフラストラクチャを有効にする方法の詳細については、「[クエリプロファイリングインフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。
+> 調査対象のクエリは、クエリのプロファイルインフラストラクチャが有効になっ**た後**に開始する必要があります。クエリを開始した後で有効にすると、で結果が生成されません `sys.dm_exec_query_profiles` 。 クエリプロファイルインフラストラクチャを有効にする方法の詳細については、「[クエリプロファイリングインフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可  
-および[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]マネージインスタンスでは、 `VIEW DATABASE STATE` `db_owner`データベースロールの権限とメンバーシップが必要です。   
-Premium [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] マネージインスタンスでは、 `VIEW DATABASE STATE` データベースロールの権限とメンバーシップが必要です `db_owner` 。   
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
    
 ## <a name="examples"></a>使用例  
- 手順 1: によって分析されるクエリの実行を計画して`sys.dm_exec_query_profiles`いるセッションにログインします。 プロファイル`SET STATISTICS PROFILE ON`用のクエリを構成するには 同じセッションでクエリを実行します。  
+ 手順 1: によって分析されるクエリの実行を計画しているセッションにログインし `sys.dm_exec_query_profiles` ます。 プロファイル用のクエリを構成するには `SET STATISTICS PROFILE ON` 同じセッションでクエリを実行します。  
   
 ```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  

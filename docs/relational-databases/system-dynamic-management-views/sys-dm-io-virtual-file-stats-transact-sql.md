@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ad2d38c031f97e46ef36f33f5e7a0fc82bcb5e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f74fcfb00286d79699eed1e40c3dc36f907026ec
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412839"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811846"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>dm_io_virtual_file_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "74412839"
   データファイルとログファイルの i/o 統計を返します。 この動的管理ビューでは、 [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)関数が置き換えられます。  
   
 > [!NOTE]  
->  これをから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]呼び出すには、 **dm_pdw_nodes_io_virtual_file_stats**という名前を使用します。 
+>  これをから呼び出すには [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 **dm_pdw_nodes_io_virtual_file_stats**という名前を使用します。 
 
 ## <a name="syntax"></a>構文  
   
@@ -78,7 +78,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**database_name**|**sysname**|データベース名。</br></br>SQL Data Warehouse の場合、これは pdw_node_id によって識別されるノードに格納されているデータベースの名前です。 各ノードには、13個のファイルを持つ tempdb データベースが1つあります。 各ノードには、ディストリビューションごとに1つのデータベースがあり、各ディストリビューションデータベースには5つのファイルがあります。 たとえば、各ノードに4つのディストリビューションが含まれている場合、結果には pdw_node_id あたり20個のディストリビューションデータベースファイルが表示されます。 
 |**database_id**|**smallint**|データベースの ID。|  
 |**file_id**|**smallint**|ファイルの ID。|  
-|**sample_ms**|**bigint**|コンピューターの起動後に経過した時間 (ミリ秒単位)。 この列を使用して、この関数とは異なる出力を比較できます。</br></br>の[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]データ型は**int**です。[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|コンピューターの起動後に経過した時間 (ミリ秒単位)。 この列を使用して、この関数とは異なる出力を比較できます。</br></br>のデータ型は**int**です [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|ファイルに対して発行された読み取りの数。|  
 |**num_of_bytes_read**|**bigint**|ファイルで読み込まれた総バイト数。|  
 |**io_stall_read_ms**|**bigint**|ファイルの読み取りをユーザーが待機した合計時間 (ミリ秒単位)。|  
@@ -88,8 +88,8 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|ファイルでの i/o の完了をユーザーが待機した合計時間 (ミリ秒単位)。|  
 |**size_on_disk_bytes**|**bigint**|このファイルのディスクで使用されているバイト数。 スパースファイルの場合、この数は、データベーススナップショットに使用されるディスク上の実際のバイト数です。|  
 |**file_handle**|**varbinary**|このファイルの Windows ファイルハンドル。|  
-|**io_stall_queued_read_ms**|**bigint**|は、:: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]から[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]**には適用されません**。<br /><br /> 読み取りの IO リソースガバナンスによって導入された IO 待機時間の合計。 NULL 値は許可されません。 詳細については、「 [sys. dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)」を参照してください。|  
-|**io_stall_queued_write_ms**|**bigint**|は、:: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]から[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]**には適用されません**。<br /><br />  書き込みの IO リソースガバナンスによって導入された IO 待機時間の合計。 NULL 値は許可されません。|
+|**io_stall_queued_read_ms**|**bigint**|**は、:: からには適用されません** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br /> 読み取りの IO リソースガバナンスによって導入された IO 待機時間の合計。 NULL 値は許可されません。 詳細については、「 [sys. dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)」を参照してください。|  
+|**io_stall_queued_write_ms**|**bigint**|**は、:: からには適用されません** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br />  書き込みの IO リソースガバナンスによって導入された IO 待機時間の合計。 NULL 値は許可されません。|
 |**pdw_node_id**|**int**|**適用対象:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分布のノードの識別子。
  
 ## <a name="remarks"></a>Remarks

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublications system table
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 112d237781ecbe257ef0b9d8c3f4bdee37ca5bc4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67990335"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813606"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67990335"
 |**alt_snapshot_folder**|**nvarchar (510)**|スナップショットの代替フォルダーの場所を指定します。|  
 |**pre_snapshot_script**|**nvarchar (510)**|**.Sql**ファイルの場所へのポインターを指定します。 ディストリビューション エージェントは、サブスクライバー側でスナップショットを適用するとき、レプリケートされたオブジェクト スクリプトより前に、プリスナップショット スクリプトを実行します。|  
 |**post_snapshot_script**|**nvarchar (510)**|**.Sql**ファイルの場所へのポインターを指定します。 ディストリビューションエージェントは、他のすべてのレプリケートされたオブジェクトスクリプトとデータが初期同期中に適用された後に、ポストスナップショットスクリプトを実行します。|  
-|**compress_snapshot**|**bit**|*Alt_snapshot_folder*の場所に書き込まれるスナップショットを[!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 形式で圧縮することを指定します。 **0**を指定すると、スナップショットは圧縮されません。|  
+|**compress_snapshot**|**bit**|*Alt_snapshot_folder*の場所に書き込まれるスナップショットを CAB 形式で圧縮することを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 **0**を指定すると、スナップショットは圧縮されません。|  
 |**ftp_address**|**sysname**|ディストリビューター用の FTP サービスのネットワークアドレス。 ディストリビューション エージェントが受け取るパブリケーション スナップショット ファイルの場所を示します。|  
 |**ftp_port**|**int**|ディストリビューターの FTP サービスのポート番号。 ディストリビューションエージェントが取得するパブリケーションスナップショットファイルの場所を指定します。|  
 |**ftp_subdirectory**|**nvarchar (510)**|パブリケーションが FTP を使用したスナップショットの配布をサポートしている場合に、ディストリビューションエージェントでスナップショットファイルを取得できる場所を指定します。|  
@@ -57,9 +57,9 @@ ms.locfileid: "67990335"
 |**centralized_conflicts**|**bit**|競合レコードがパブリッシャーに格納されるかどうかを示します。<br /><br /> **0** = 競合レコードは、競合の原因となったパブリッシャーとサブスクライバーの両方に格納されます。<br /><br /> **1** = 競合レコードはパブリッシャーに格納されます。<br /><br /> *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
 |**conflict_retention**|**int**|競合の保有期間を日数で指定します。 *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
 |**conflict_policy**|**int**|キュー更新サブスクライバーオプションを使用する場合の競合解決ポリシーを指定します。 次のいずれかの値を指定します。<br /><br /> **1** = パブリッシャー優先。<br /><br /> **2** = サブスクライバー優先。<br /><br /> **3** = サブスクリプションは再初期化されます。<br /><br /> *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
-|**queue_type**|**int**|使用されるキューの種類。 次のいずれかの値を指定します。<br /><br /> **1** = msmq は、メッセージ[!INCLUDE[msCoName](../../includes/msconame-md.md)]キューを使用してトランザクションを格納します。<br /><br /> **2** = sql: を使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]してトランザクションを格納します。<br /><br /> この列は、以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーでは使用されません。<br /><br /> 注: メッセージ[!INCLUDE[msCoName](../../includes/msconame-md.md)]キューの使用は推奨されておらず、サポートされなくなりました。<br /><br /> *この列は、SQL 以外のパブリッシャーではサポートされていません。*|  
-|**ad_guidname**|**sysname**|パブリケーションが[!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory でパブリッシュされるかどうかを指定します。 有効なグローバル一意識別子 (GUID) は、パブリケーションが[!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory にパブリッシュされることを指定します。 guid は、対応する Active Directory パブリケーションオブジェクトの**objectGUID**です。 NULL の場合、パブリケーションは Active Directory で[!INCLUDE[msCoName](../../includes/msconame-md.md)]パブリッシュされません。 *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
-|**backward_comp_level**|**int**|データベースの互換性レベル。次のいずれかの値になります。<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。<br /><br /> *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
+|**queue_type**|**int**|使用されるキューの種類。 次のいずれかの値を指定します。<br /><br /> **1** = msmq は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージキューを使用してトランザクションを格納します。<br /><br /> **2** = sql: を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションを格納します。<br /><br /> この列は、以外のパブリッシャーでは使用されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 注: [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージキューの使用は推奨されておらず、サポートされなくなりました。<br /><br /> *この列は、SQL 以外のパブリッシャーではサポートされていません。*|  
+|**ad_guidname**|**sysname**|パブリケーションが Active Directory でパブリッシュされるかどうかを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 有効なグローバル一意識別子 (GUID) は、パブリケーションが Active Directory にパブリッシュされることを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 guid は、対応する Active Directory パブリケーションオブジェクトの**objectGUID**です。 NULL の場合、パブリケーションは Active Directory でパブリッシュされません [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
+|**backward_comp_level**|**int**|データベースの互換性レベル。次のいずれかの値になります。<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。<br /><br /> *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
 |**記述**|**nvarchar(255)**|パブリケーションの内容を示すエントリ。|  
 |**independent_agent**|**bit**|このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを示します。<br /><br /> **0** = パブリケーションは共有ディストリビューションエージェントを使用し、各パブリッシャーデータベース/サブスクライバーデータベースのペアには1つの共有エージェントがあります。<br /><br /> **1** = このパブリケーションには、スタンドアロンのディストリビューションエージェントがあります。|  
 |**immediate_sync**|**bit**|スナップショットエージェントを実行するたびに同期ファイルを作成または再作成するかどうかを示します。 **1**は、エージェントを実行するたびに同期ファイルが作成されることを意味します。|  

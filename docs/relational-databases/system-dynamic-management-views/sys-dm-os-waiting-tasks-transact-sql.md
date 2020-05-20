@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_waiting_tasks dynamic management view
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0a89a48fa960812ee955cd3b7ecb30069161f61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0efa4a5b5c8144807c27014a96b3fa90ed77971
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72260379"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811758"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "72260379"
   あるリソースで待機しているタスクの待機キューに関する情報を返します。 タスクの詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
    
 > [!NOTE]  
->  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_waiting_tasks**という名前を使用します。  
+>  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_os_waiting_tasks**という名前を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -47,18 +47,18 @@ ms.locfileid: "72260379"
 |**blocking_session_id**|**smallint**|要求をブロックしているセッションの ID。 この列が NULL の場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用または識別できません。<br /><br /> -2 = ブロックしているリソースは、孤立した分散トランザクションが所有しています。<br /><br /> -3 = ブロックしているリソースは、遅延復旧トランザクションが所有しています。<br /><br /> -4 = 内部ラッチの状態遷移のため、ブロックしているラッチの所有者のセッション ID を特定できませんでした。|  
 |**blocking_exec_context_id**|**int**|ブロックしているタスクの実行コンテキストの ID。|  
 |**resource_description**|**nvarchar (3072)**|消費されているリソースの説明。 詳細については、以下の説明を参照してください。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="resource_description-column"></a>resource_description 列  
  resource_description 列に返される値は次のとおりです。  
   
  **スレッドプールリソース所有者:**  
   
--   threadpool id = scheduler\<hex-address>  
+-   threadpool id = scheduler \< hex-address>  
   
  **並列クエリリソース所有者:**  
   
--   exchangeEvent id = {Port |パイプ}\<16 進数アドレス> WaitType =\<Exchange-wait> nodeId =\<exchange-node-id>  
+-   exchangeEvent id = {Port |パイプ} \< 16 進数アドレス> WaitType = \< exchange-Wait> nodeId = \< exchange-node-id>  
   
  **Exchange-待機の種類:**  
   
@@ -78,31 +78,31 @@ ms.locfileid: "72260379"
   
  **ロック リソース所有者:**  
   
--   \<種類固有-説明> id = ロック\<のロック-16 進数アドレス> mode =\<mode> associatedObjectId =\<関連付けられている obj-id>  
+-   \<種類固有-説明> id = ロック \< のロック-16 進数アドレス> mode = \< Mode> associatedObjectId = \< 関連付けられている obj-id>  
   
      **\<型固有の説明> 次のように指定できます。**  
   
-    -   データベースの場合: databaselock subresource\<= databaselock-subresource> dbid\<= db id>  
+    -   データベースの場合: databaselock subresource = \< databaselock-subresource> dbid = \< db id>  
   
-    -   ファイルの場合: filelock fileid\<= ファイル id> subresource =\<filelock-subresource> dbid =\<db id>  
+    -   ファイルの場合: filelock fileid = \< ファイル id> subresource = \< filelock-subresource> dbid = \< db id>  
   
-    -   オブジェクトの場合: objectlock lockPartition\<= ロックパーティション id> objid =\<obj-id> subresource =\<objectlock-subresource> dbid =\<db-id>  
+    -   オブジェクトの場合: objectlock lockPartition = \< ロックパーティション id> objid = \< obj-id> subresource = \< objectlock-subresource> dbid = \< db-id>  
   
-    -   PAGE の場合: pagelock fileid\<= ファイル id> ページ id =\<ページ id> dbid =\<db-id> subresource =\<pagelock-subresource>  
+    -   PAGE の場合: pagelock fileid = \< ファイル id> ページ id = \< ページ id> dbid = \< db-id> subresource = \< pagelock-subresource>  
   
-    -   キーの場合: キーロック\<hobtid = hobt> dbid =\<db id>  
+    -   キーの場合: キーロック hobtid = \< hobt> dbid = \< db id>  
   
-    -   エクステントの場合: extentlock fileid\<= ファイル id> ページ id =\<ページ id> dbid =\<db-id>  
+    -   エクステントの場合: extentlock fileid = \< ファイル id> ページ id = \< ページ id> dbid = \< db-id>  
   
-    -   RID の場合: ridlock fileid\<= ファイル id> ページ id =\<ページ id> dbid =\<db-id>  
+    -   RID の場合: ridlock fileid = \< ファイル id> ページ id = \< ページ id> dbid = \< db-id>  
   
-    -   アプリケーションの場合: applicationlock hash\<= Hash> databasePrincipalId\<= role-id> dbid\<= db-id>  
+    -   アプリケーションの場合: applicationlock hash = \< hash> databasePrincipalId = \< role-id> dbid = \< db-id>  
   
-    -   メタデータの場合: metadatalock subresource =\<metadata-subresource>\<classid = metadatalock> dbid =\<db-id>  
+    -   メタデータの場合: metadatalock subresource = \< metadata-subresource> classid = \< metadatalock> dbid = \< db-id>  
   
-    -   HOBT の場合: hobtlock hobtid\<= HOBT> subresource =\<HOBT-subresource> dbid =\<db-id>  
+    -   HOBT の場合: hobtlock hobtid = \< HOBT> subresource = \< HOBT-subresource> dbid = \< db-id>  
   
-    -   ALLOCATION_UNIT の場合: allocunitlock hobtid\<= hobt> subresource =\<alloc-UNIT-subresource> dbid =\<db id>  
+    -   ALLOCATION_UNIT の場合: allocunitlock hobtid = \< hobt> subresource = \< alloc-UNIT-subresource> dbid = \< db id>  
   
      **\<モード> は次のようになります。**  
   
@@ -110,11 +110,11 @@ ms.locfileid: "72260379"
   
  **外部リソース所有者:**  
   
--   外部 ExternalResource =\<待機型>  
+-   外部 ExternalResource = \< 待機型>  
   
  **汎用リソース所有者:**  
   
--   TransactionMutex Transactionmutex Workspace =\<workspace-id>  
+-   TransactionMutex Transactionmutex Workspace = \< workspace-id>  
   
 -   Mutex  
   
@@ -128,19 +128,19 @@ ms.locfileid: "72260379"
   
  **ラッチリソース所有者:**  
   
--   \<db id>:\<ファイル id>:\<ファイルの>  
+-   \<db id>: \< ファイル id>: \< ファイルの>  
   
 -   \<GUID>  
   
--   \<ラッチクラス> (\<ラッチアドレス>)  
+-   \<ラッチクラス> ( \< ラッチアドレス>)  
   
 ## <a name="permissions"></a>アクセス許可
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
  
 ## <a name="example"></a>例
-この例では、ブロックされているセッションを識別します。 で[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]クエリ[!INCLUDE[tsql](../../includes/tsql-md.md)]を実行します。
+この例では、ブロックされているセッションを識別します。 [!INCLUDE[tsql](../../includes/tsql-md.md)]でクエリを実行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。
 
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
