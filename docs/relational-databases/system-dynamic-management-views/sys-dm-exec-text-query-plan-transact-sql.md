@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d23813078c2a90b18af0a1df48079b571e77a13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 082de052d40cc41a81ea7a0963b2e3174338b8a5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983139"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824583"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73983139"
 -   クエリ プランの出力のサイズに制限がない。  
 -   バッチ内の個々のステートメントを指定できる。  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降)、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降)、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -100,7 +100,7 @@ sys.dm_exec_text_query_plan
   
 -   一括操作ステートメントや、8 KB よりも大きなサイズの文字列リテラルを含むステートメントなど、キャッシュされない [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがいくつかあります。 これらのステートメントはキャッシュに存在しないため、**sys.dm_exec_text_query_plan** を使用してこれらのステートメントのプラン表示を取得することはできません。  
   
--   バッチまたはストアドプロシージャにユーザー定義関数への呼び出し、または EXEC (*string*) を使用するなどの動的 SQL の呼び出しが含まれている場合、ユーザー定義関数のコンパイル済み XML プラン表示は、バッチまたはストアドプロシージャの dm_exec_text_query_plan によって返されるテーブルには含まれません **。** [!INCLUDE[tsql](../../includes/tsql-md.md)] 代わりに、ユーザー定義関数に対応する*plan_handle*に対して、 **dm_exec_text_query_plan**の個別の呼び出しを行う必要があります。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]バッチまたはストアドプロシージャにユーザー定義関数への呼び出し、または EXEC (*string*) を使用するなどの動的 SQL の呼び出しが含まれている場合、ユーザー定義関数のコンパイル済み XML プラン表示は、バッチまたはストアドプロシージャの dm_exec_text_query_plan によって返されるテーブルには含まれません **。** 代わりに、ユーザー定義関数に対応する*plan_handle*に対して、 **dm_exec_text_query_plan**の個別の呼び出しを行う必要があります。  
   
 アドホッククエリで[簡易](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)または[強制パラメーター](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)化を使用する場合、 **query_plan**列にはステートメントテキストのみが含まれ、実際のクエリプランは含まれません。 クエリ プランを返すには、**sys.dm_exec_text_query_plan** を呼び出して、準備されたパラメーター化クエリのプラン ハンドルを取得します。 クエリがパラメーター化されたかどうかを判断するには、[sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) ビューの **sql** 列、または [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 動的管理ビューの text 列を参照します。  
   
@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. プランキャッシュからすべてのクエリプランを取得する  
- プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得するには、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得します。 プラン ハンドルは、`plan_handle` の `sys.dm_exec_cached_plans` 列に格納されます。 その後、次のように CROSS APPLY 演算子を使用して、プラン ハンドルを `sys.dm_exec_text_query_plan` に渡します。 現在プランキャッシュにある各プランのプラン表示出力は、返さ`query_plan`れるテーブルの列にあります。  
+ プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得するには、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得します。 プラン ハンドルは、`plan_handle` の `sys.dm_exec_cached_plans` 列に格納されます。 その後、次のように CROSS APPLY 演算子を使用して、プラン ハンドルを `sys.dm_exec_text_query_plan` に渡します。 現在プランキャッシュにある各プランのプラン表示出力は、 `query_plan` 返されるテーブルの列にあります。  
   
 ```sql  
 USE master;  

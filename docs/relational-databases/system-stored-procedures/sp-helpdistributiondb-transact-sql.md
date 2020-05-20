@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributiondb
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e0efc86400b0858e387a83e8ea765f0058e30459
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770930"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824499"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @database = ] 'database_name'`プロパティを返すデータベース名を指定します。 *database_name*は**sysname**で、既定値は**%** ディストリビューターに関連付けられているすべてのデータベースに対して、ユーザーには権限が与えられています。  
+`[ @database = ] 'database_name'`プロパティを返すデータベース名を指定します。 *database_name*は**sysname**で、既定値は **%** ディストリビューターに関連付けられているすべてのデータベースに対して、ユーザーには権限が与えられています。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -49,7 +49,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|履歴を保持する時間数。|  
 |**history_cleanup_agent**|**sysname**|履歴クリーンアップエージェントの名前。|  
 |**distribution_cleanup_agent**|**sysname**|ディストリビューションクリーンアップエージェントの名前。|  
-|**status**|**int**|内部使用のみです。|  
+|**status**|**int**|内部使用のみ。|  
 |**data_folder**|**nvarchar(255)**|データベース ファイルを格納するときに使用するディレクトリの名前。|  
 |**data_file**|**nvarchar(255)**|データベースファイルの名前。|  
 |**data_file_size**|**int**|データ ファイルの初期サイズ (MB 単位)。|  

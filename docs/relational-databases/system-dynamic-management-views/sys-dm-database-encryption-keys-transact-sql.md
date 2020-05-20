@@ -17,17 +17,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_database_encryption_keys dynamic management view
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e716c826fd366fda4505b7fcf9ec8e3b756ec25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a1057be51a987e694fa1a29de4299ff63a70733
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531058"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824632"
 ---
-# <a name="sysdm_database_encryption_keys-transact-sql"></a>dm_database_encryption_keys (Transact-sql)
+# <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   データベースの暗号化の状態と、それに関連付けられているデータベース暗号化キーに関する情報を返します。 データベース暗号化の詳細については、「[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。  
@@ -44,7 +44,7 @@ ms.locfileid: "80531058"
 |key_algorithm|**nvarchar(32)**|キーに使用されるアルゴリズムが表示されます。|  
 |key_length|**int**|キーの長さを表示します。|  
 |encryptor_thumbprint|**varbinary(20)**|暗号化のサムプリントを表示します。|  
-|encryptor_type|**nvarchar(32)**|**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))。<br /><br /> 暗号化機能について説明します。|  
+|encryptor_type|**nvarchar(32)**|**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (を [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))。<br /><br /> 暗号化機能について説明します。|  
 |percent_complete|**real**|データベース暗号化状態の変更の完了率。 状態の変更がない場合、これは0になります。|
 |encryption_state_desc|**nvarchar(32)**|**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降。<br><br> データベースが暗号化されているか、暗号化されていないかを示す文字列。<br><br>NONE<br><br>暗号化<br><br>暗号<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
 |encryption_scan_state|**int**|**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降。<br><br>暗号化スキャンの現在の状態を示します。 <br><br>0 = スキャンが開始されていません。 TDE が有効になっていません。<br><br>1 = スキャンが進行中です。<br><br>2 = スキャンは実行中ですが、中断されているため、ユーザーは再開できます。<br><br>3 = 何らかの理由でスキャンが中止されました。手動介入が必要です。 詳細については、Microsoft サポートにお問い合わせください。<br><br>4 = スキャンが正常に完了し、TDE が有効になり、暗号化が完了しました。|
@@ -53,8 +53,8 @@ ms.locfileid: "80531058"
   
 ## <a name="permissions"></a>アクセス許可
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
 ## <a name="see-also"></a>参照  
 
@@ -63,7 +63,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
  [SQL Server の暗号化](../../relational-databases/security/encryption/sql-server-encryption.md)   
  [SQL Server とデータベースの暗号化キー &#40;データベースエンジン&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [Transact-sql&#41;&#40;の ALTER DATABASE SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Transact-sql&#41;&#40;データベース暗号化キーを作成する](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [Transact-sql&#41;&#40;データベース暗号化キーの変更](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  

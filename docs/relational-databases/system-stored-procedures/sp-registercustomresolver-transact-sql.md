@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_registercustomresolver
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0d003cccfa6fdedd0610ea34f15acb6ee1833e5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cfced9a7fa554149b491f8ff350ca81723c81d20
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075735"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824357"
 ---
 # <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
   
 `[ @dotnet_assembly_name = ] 'dotnet_assembly_name'`は、ビジネスロジックハンドラーを実装するアセンブリの名前です。 *dotnet_assembly_name*は**nvarchar (255)**,、既定値は NULL です。 マージ エージェントの実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にアセンブリが配置されている場合は、アセンブリの完全なパスを指定する必要があります。  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name'`は、ビジネスロジックハンドラーを実装する<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>ためにをオーバーライドするクラスの名前です。 名前は、 **Namespace. Classname**という形式で指定する必要があります。 *dotnet_class_name*は**nvarchar (255)**,、既定値は NULL です。  
+`[ @dotnet_class_name = ] 'dotnet_class_name'`は、 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> ビジネスロジックハンドラーを実装するためにをオーバーライドするクラスの名前です。 名前は、 **Namespace. Classname**という形式で指定する必要があります。 *dotnet_class_name*は**nvarchar (255)**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
