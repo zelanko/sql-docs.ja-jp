@@ -11,19 +11,19 @@ helpviewer_keywords:
 - field-related errors [ADO]
 - errors [ADO], field-related
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7094c2dba004e35593f5ab11b1162efbdf3283c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e61850ca788f6cff11d2a665000f68b89cd3ed45
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925312"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758293"
 ---
 # <a name="field-related-error-information"></a>フィールドに関連するエラー情報
 データが欠落している場合や、フィールドの型が正しくない場合などに、エラーがフィールドに直接関連している場合は、**フィールド**オブジェクトの**Status**プロパティを調べて、問題の原因に関する詳細情報を取得できます。 このプロパティは、問題に関する特定の情報を提供するように強化されています。 そのため、たとえば、 **UpdateBatch**の呼び出しが失敗した場合は、影響を受ける各レコードの**フィールド**の**Status**プロパティを調べて、問題の原因を特定できます。 プロパティは、 **Fieldstatusenum**定数内のいずれかの値を格納します。 次の表には、エラーが発生した場合に特に関心のある値が含まれています。  
   
-|Constant|値|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|データを失うことなく、フィールドを取得または保存できないことを示します。|  
 |**adFieldDataOverflow**|6|プロバイダーから返されたデータがフィールドのデータ型でオーバーフローしたことを示します。|  

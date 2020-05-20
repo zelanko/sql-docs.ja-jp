@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d06cf8343bf100077fccc34645ccb14dbdbfaae6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ed57bb3087378ac6529fc5bd8c8a0aa01e06cfa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926870"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758528"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>付録 C: 開発環境での ADO を使用したプログラミング
 ADO は、Microsoft Visual Basic、VBScript、JScript、Visual C++ など、多くのプログラミング言語で使用できる COM オートメーションインターフェイスコンポーネントです。 ADO のバージョンは、これらの各ツールと、Microsoft Office や Microsoft SQL Server などの他のアプリケーションと共にインストールされます。
 
- ADO のライブラリは msado15.dll で、プログラム ID (ProgID) のプレフィックスは "ADODB" です。 たとえば、ADO[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を明示的に参照するに`ADODB.Recordset`は、を使用します。
+ ADO のライブラリは msado15.dll で、プログラム ID (ProgID) のプレフィックスは "ADODB" です。 たとえば、ADO[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を明示的に参照するには、を使用 `ADODB.Recordset` します。
 
  さまざまな開発環境で ADO を使用したプログラミングの詳細については、次のトピックを参照してください。
 

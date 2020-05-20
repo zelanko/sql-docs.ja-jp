@@ -13,14 +13,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 837f5fbcbb6c7730cdfcbe08e532a73c5faad06f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926674"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758328"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory サービス
 Active Directory サービスインターフェイス (ADSI) プロバイダーにより、ADO は、ADSI を介して異種のディレクトリサービスに接続できます。 これにより、ADO アプリケーションは、LDAP に準拠しているディレクトリサービスと Novell ディレクトリサービスに加えて、Microsoft Windows NT 4.0 および Microsoft Windows 2000 ディレクトリサービスへの読み取り専用アクセスを提供します。 ADSI 自体はプロバイダーモデルに基づいているため、別のディレクトリへのアクセスを提供する新しいプロバイダーがあると、ADO アプリケーションはシームレスにアクセスできるようになります。 ADSI プロバイダーは、フリースレッドで、Unicode が有効になっています。  
@@ -43,7 +43,7 @@ ADSDSOObject
   
  文字列は、次のキーワードで構成されています。  
   
-|キーワード|説明|  
+|Keyword|説明|  
 |-------------|-----------------|  
 |**プロバイダー**|Active Directory サービスの OLE DB プロバイダーを指定します。|  
 |**[ユーザー ID]**|ユーザー名を指定します。 このキーワードを省略した場合は、現在のログオンが使用されます。|  
@@ -59,12 +59,12 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|値|説明|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |*ルート*|検索を開始する**ADsPath**オブジェクト (つまり、検索のルート) を示します。|  
 |*Assert*|RFC 1960 形式の検索フィルターを示します。|  
 |*属性*|返される属性のコンマ区切りのリストを示します。|  
-|*Scope*|任意。 検索のスコープを指定する**文字列**。 次のいずれかを指定できます。<br /><br /> -Base-ベースオブジェクト (検索のルート) のみを検索します。<br />-OneLevel-1 つのレベルのみを検索します。<br />-Subtree-サブツリー全体を検索します。|  
+|*スコープ*|任意。 検索のスコープを指定する**文字列**。 次のいずれかを指定できます。<br /><br /> -Base-ベースオブジェクト (検索のルート) のみを検索します。<br />-OneLevel-1 つのレベルのみを検索します。<br />-Subtree-サブツリー全体を検索します。|  
   
  次に例を示します。  
   
@@ -89,7 +89,7 @@ objectClass='user' AND objectCategory='Person'"
   
  **標準の ADO レコードセットプロパティの可用性:**  
   
-|プロパティ|可用性|  
+|プロパティ|使用できるかどうか|  
 |--------------|------------------|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|読み取り/書き込み|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|読み取り/書き込み|  
@@ -109,7 +109,7 @@ objectClass='user' AND objectCategory='Person'"
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|読み取り/書き込み|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|読み取り専用|  
 |[ソース](../../../ado/reference/ado-api/source-property-ado-recordset.md)|読み取り/書き込み|  
-|[状態](../../../ado/reference/ado-api/state-property-ado.md)|読み取り専用|  
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|読み取り専用|  
 |[状態](../../../ado/reference/ado-api/status-property-ado-recordset.md)|読み取り専用|  
   
  **標準の ADO レコードセットメソッドの可用性:**  
@@ -121,10 +121,10 @@ objectClass='user' AND objectCategory='Person'"
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|いいえ|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|いいえ|  
 |[複製](../../../ado/reference/ado-api/clone-method-ado.md)|はい|  
-|[閉じる](../../../ado/reference/ado-api/close-method-ado.md)|はい|  
+|[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|はい|  
 |[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|いいえ|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|はい|  
-|[合わせ](../../../ado/reference/ado-api/move-method-ado.md)|はい|  
+|[移動](../../../ado/reference/ado-api/move-method-ado.md)|はい|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|  
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|  
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|  
@@ -134,7 +134,7 @@ objectClass='user' AND objectCategory='Person'"
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|はい|  
 |[再同期](../../../ado/reference/ado-api/resync-method.md)|はい|  
 |[サポート](../../../ado/reference/ado-api/supports-method.md)|はい|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|いいえ|  
+|[アップデート](../../../ado/reference/ado-api/update-method.md)|いいえ|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|いいえ|  
   
  ADSI とプロバイダーの詳細については、Active Directory サービスインターフェイスに関するドキュメントを参照するか、ADSI の Web ページを参照してください。  

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04dbf3069896b9a7668d64a2f1d322f0b17ca5f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8a50d9f3354f9d5eb5a7615c244d8a8990ffc0c9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918684"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758768"
 ---
 # <a name="field-object"></a>Field オブジェクト
 共通のデータ型のデータ列を表します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  各**Field**オブジェクトは、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の列に対応します。 現在のレコードのデータを設定または取得するには、 **Field**オブジェクトの[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを使用します。 プロバイダーが公開する機能によっては、**フィールド**オブジェクトの一部のコレクション、メソッド、またはプロパティが使用できないことがあります。  
   
  **Field**オブジェクトのコレクション、メソッド、およびプロパティを使用して、次の操作を実行できます。  

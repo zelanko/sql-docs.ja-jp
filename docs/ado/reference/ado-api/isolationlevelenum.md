@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevelEnum enumeration [ADO]
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15ae2aac2851c496b6cac9e47d37fe5fa26b8e34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 864938729153a1cd3f8f31f2e4ba04b075d2f713
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918370"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758648"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトのトランザクション分離レベルを指定します。  
   
-|Constant|[値]|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|プロバイダーが指定とは異なる分離レベルを使用しているが、レベルを特定できないことを示します。|  
 |**adXactChaos**|16|より高度な分離トランザクションからの保留中の変更を上書きできないことを示します。|  
@@ -40,7 +40,7 @@ ms.locfileid: "67918370"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|Constant|  
+|定数|  
 |--------------|  
 |AdoEnums. IsolationLevel|  
 |AdoEnums IsolationLevel|  

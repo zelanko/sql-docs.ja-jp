@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ADO, events
 - event handlers [ADO]
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 452259b6e4e406d7a406211a9e9b42ebbf60da53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0628c0af52473c3b7eb7200cb4a06bfc45123a10
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925224"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758878"
 ---
 # <a name="handling-ado-events"></a>ADO イベントの処理
 ADO イベントモデルでは、操作の開始前または完了後に*イベント*(通知) を発行する、特定の同期および非同期の ado 操作がサポートされています。 イベントは実際には、アプリケーションで定義するイベントハンドラールーチンの呼び出しです。  

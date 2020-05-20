@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Version property [ADO]
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: addae0713fc175c7a261668c532b771ee0f4fa34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3dbd13ac245ad10d4300e76a4c86d326b8b9b9ad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938735"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758608"
 ---
 # <a name="version-property-ado"></a>Version プロパティ (ADO)
 ADO のバージョン番号を示します。  
@@ -30,7 +30,7 @@ ADO のバージョン番号を示します。
 ## <a name="return-value"></a>戻り値  
  バージョンを示す**文字列**値を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Version**プロパティを使用して、ADO 実装のバージョン番号を返します。  
   
  プロバイダーのバージョンは、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションで動的プロパティとして使用できるようになります。  

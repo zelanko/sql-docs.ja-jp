@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Index property
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba871d6d0e84b8068cb36a3ed2516a2665db28d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2a77aa3c2e144859eaead332e71c5c4c8776608c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932435"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758698"
 ---
 # <a name="index-property"></a>Index プロパティ
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトに現在適用されているインデックスの名前を示します。  
@@ -28,7 +28,7 @@ ms.locfileid: "67932435"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  インデックスの名前を設定するか、**文字列**値を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Index**プロパティによって指定されたインデックスは、**レコードセット**オブジェクトの基になるベーステーブルで既に宣言されている必要があります。 つまり、インデックスは、ADOX [index](../../../ado/reference/adox-api/index-object-adox.md)オブジェクトとして、またはベーステーブルが作成されたときに、プログラムによって宣言されている必要があります。  
   
  インデックスを設定できない場合は、実行時エラーが発生します。 **Index**プロパティは、次の条件下では設定できません。  

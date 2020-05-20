@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], forward-only
 - forward-only cursors [ADO]
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e84fbf2b8fda2fa2b14088af1e0830d8109aba8a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8943e97e8ce246732f0153a53f8be8d80d4fa88f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925307"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758198"
 ---
 # <a name="forward-only-cursors"></a>順方向専用カーソル
 既定のカーソルの種類 (順方向専用 (またはスクロール不可能) のカーソル) は、結果セットを前方にのみ移動できます。 順方向専用カーソルは、スクロールをサポートしていません (結果セット内で前後に移動する機能)。結果セットの先頭から末尾までの行のフェッチのみがサポートされます。 一部の順方向専用カーソル (SQL Server カーソルライブラリなど) では、結果セット内の行に影響を与えるすべての insert、update、および delete ステートメントが、行がフェッチされたときに表示されます。 ただし、カーソルは後方にスクロールできないので、データベース内の行のフェッチ後にその行に対して行われた変更内容は、カーソル内で確認できません。  

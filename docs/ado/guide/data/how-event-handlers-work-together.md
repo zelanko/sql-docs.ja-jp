@@ -15,14 +15,14 @@ helpviewer_keywords:
 - event handlers [ADO]
 - multiple object event handlers [ADO]
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 98144b1dacb406de4f57f9d051547640edd09397
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925049"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758108"
 ---
 # <a name="how-event-handlers-work-together"></a>複数のイベント ハンドラーの連携方法
 Visual Basic でプログラミングする場合を除き、すべてのイベントを実際に処理するかどうかに関係なく、**接続**イベントと**レコードセット**イベントのすべてのイベントハンドラーを実装する必要があります。 実行する必要のある実装作業の量は、プログラミング言語によって異なります。 詳細については、「[言語別の ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)」を参照してください。  
@@ -45,7 +45,7 @@ Visual Basic でプログラミングする場合を除き、すべてのイベ�
   
  単一の**完全な**イベントハンドラーは、非同期操作の管理に役立ちます。 各非同期操作には、適切な**完全**なイベントがあります。  
   
- たとえば、大きな[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを設定するには、長い時間がかかることがあります。 アプリケーションが適切に記述されている場合は`Recordset.Open(...,adAsyncExecute)` 、操作を開始して他の処理を続行できます。 **レコードセット**に**ExecuteComplete**イベントが設定されると、最終的に通知が表示されます。  
+ たとえば、大きな[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを設定するには、長い時間がかかることがあります。 アプリケーションが適切に記述されている場合は、操作を開始 `Recordset.Open(...,adAsyncExecute)` して他の処理を続行できます。 **レコードセット**に**ExecuteComplete**イベントが設定されると、最終的に通知が表示されます。  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>単一のイベントハンドラーと複数のオブジェクト  
  Microsoft Visual C++®のようなプログラミング言語の柔軟性により、複数のオブジェクトのイベントを1つのイベントハンドラーで処理できます。 たとえば、1つの**Disconnect**イベントハンドラーで複数の**接続**オブジェクトからイベントを処理することができます。 接続のいずれかが終了した場合、**切断**イベントハンドラーが呼び出されます。 イベントハンドラーオブジェクトのパラメーターが対応する**接続**オブジェクトに設定されるため、イベントが発生した接続を特定できます。  
