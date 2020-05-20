@@ -58,7 +58,7 @@ HRESULT BCPInit(
 > [!NOTE]  
 >  データ ファイルに指定したデータ形式値を変更するには、[IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) メソッドと [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) メソッドを使用します。  
   
- テーブルにインデックスが含まれていない場合は、データベース オプション [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]select into/bulkcopy **を設定することにより、** への一括コピーを最適化できます。  
+ テーブルにインデックスが含まれていない場合は、データベース オプション **select into/bulkcopy** を設定することにより、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への一括コピーを最適化できます。  
   
 ## <a name="arguments"></a>引数  
  *pwszTable*[in]  

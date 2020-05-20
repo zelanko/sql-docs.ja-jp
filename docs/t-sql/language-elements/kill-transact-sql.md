@@ -102,7 +102,7 @@ KILL は、通常は、他の重要なプロセスをロックを使用してブ
   
 使用中のセッション ID 値に関するレポートを取得するには、sys.dm_tran_locks、sys.dm_exec_sessions、および sys.dm_exec_requests の各動的管理ビューで session_id 列のクエリを実行します。 sp_who システム ストアド プロシージャが返す SPID 列を確認することもできます。 特定の SPID のロールバックが進行中である場合、その SPID に関する sp_who 結果セット内の cmd 列には、KILLED/ROLLBACK が示されます。  
   
-特定の接続がデータベース リソースをロックして別の接続の進行を妨げている場合、`blocking_session_id` の `sys.dm_exec_requests` 列、または `blk` が返す `sp_who` 列に、ブロックしている接続のセッション ID が示されます。  
+特定の接続がデータベース リソースをロックして別の接続の進行を妨げている場合、`sys.dm_exec_requests` の `blocking_session_id` 列、または `sp_who` が返す `blk` 列に、ブロックしている接続のセッション ID が示されます。  
   
 KILL コマンドは、状態が不明な分散トランザクションの解決にも使用できます。 これらのトランザクションは、データベース サーバーまたは MS DTC コーディネーターを予定外に再起動したために生じた未解決の分散トランザクションです。 未確定トランザクションの詳細については、「[マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)」の「2 フェーズ コミット」を参照してください。  
   
@@ -150,7 +150,7 @@ spid 54: Transaction rollback in progress. Estimated rollback completion: 80% Es
 ```  
   
 ### <a name="c-using-kill-to-stop-an-orphaned-distributed-transaction"></a>C. KILL を使用して、孤立した分散トランザクションを停止する  
-次の例は、*の*UOW`D5499C66-E398-45CA-BF7E-DC9C194B48CF` で、孤立した分散トランザクション (セッション ID = -2) を停止する例を示しています。  
+次の例は、`D5499C66-E398-45CA-BF7E-DC9C194B48CF` の *UOW* で、孤立した分散トランザクション (セッション ID = -2) を停止する例を示しています。  
   
 ```sql  
 KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';  

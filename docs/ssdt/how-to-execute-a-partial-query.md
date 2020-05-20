@@ -26,7 +26,7 @@ Transact\-SQL エディターでは、スクリプトの一部を選択し、そ
   
 ## <a name="to-partially-execute-a-query"></a>クエリを部分的に実行するには  
   
-1. **SQL Server オブジェクト エクスプローラー**で、 **[ビュー]** の下にある **PerishableFruits** をダブルクリックし、Transact\-SQL エディターで開きます。  
+1. **SQL Server オブジェクト エクスプローラー**で、**[ビュー]** の下にある **PerishableFruits** をダブルクリックし、Transact\-SQL エディターで開きます。  
   
 2. コード内の「`SELECT p.Id, p.Name FROM dbo.Product p`」という部分を選択し、右クリックして、 **[クエリの実行]** をクリックします。  
   

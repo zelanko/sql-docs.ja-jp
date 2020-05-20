@@ -46,7 +46,7 @@ ms.locfileid: "74055184"
 > [!WARNING]  
 >  現在のバージョンのファイル (NaturalLanguage6.dll) を別のバージョンに置き換えると、そのファイルを使用するすべての言語の動作が影響を受けます。  
   
- この記事で説明するファイルは、`MSSQL\Binn` インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フォルダーにインストールされる DLL ファイルです。 通常、完全なパスは次のようになります。  
+ この記事で説明するファイルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの `MSSQL\Binn` フォルダーにインストールされる DLL ファイルです。 通常、完全なパスは次のようになります。  
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   

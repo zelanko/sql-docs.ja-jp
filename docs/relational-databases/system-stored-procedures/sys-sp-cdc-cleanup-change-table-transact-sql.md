@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.sp_cdc_cleanup_change_tables
 - sp_cdc_cleanup_change_tables
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 51c0af34fb3158cc5032ee9ef53abce22d8ecc3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ae48ceffec12ce840ab436cc80a46c036da329b6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909330"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808298"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sp_cdc_cleanup_change_table (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,28 +45,28 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @capture_instance = ]'*capture_instance*'  
+ [ @capture_instance =] '*capture_instance*'  
  変更テーブルに関連付けられたキャプチャ インスタンスの名前を指定します。 *capture_instance*は**sysname**であり、既定値はありません。 NULL にすることはできません。  
   
  *capture_instance*は、現在のデータベースに存在するキャプチャインスタンスに名前を指定する必要があります。  
   
- [ @low_water_mark = ]*low_water_mark*  
+ [ @low_water_mark =] *low_water_mark*  
  *キャプチャインスタンス*の新しい低レベルのウォーターマークとして使用するログシーケンス番号 (LSN) を指定します。 *low_water_mark*は**binary (10)**,、既定値はありません。  
   
  値が null 以外の場合は、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)テーブル内の現在のエントリの start_lsn 値として表示される必要があります。 cdc.lsn_time_mapping の他のエントリが、新しい低レベルのウォーターマークで識別されたエントリと同じコミット時間を共有する場合、そのグループのエントリに関連付けられた最小 LSN が低レベルのウォーターマークとして選択されます。  
   
  値が明示的に NULL に設定されている場合、*キャプチャインスタンス*の現在の*低レベルのウォーターマーク*は、クリーンアップ操作の上限を定義するために使用されます。  
   
- [ @threshold= ]'*削除のしきい値*'  
+ [ @threshold =] '*削除のしきい値*'  
  クリーンアップで1つのステートメントを使用して削除できる削除エントリの最大数を指定します。 *delete_threshold*は**bigint**,、既定値は5000です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  sys.sp_cdc_cleanup_change_table は次の操作を実行します。  
   
 1.  @low_water_markパラメーターが NULL でない場合は、*キャプチャインスタンス*の start_lsn の値を新しい*低レベルのウォーターマーク*に設定します。  
@@ -80,7 +80,7 @@ sys.sp_cdc_cleanup_change_table
   
 -   クリーンアップエージェントジョブによって削除エラーが報告されます。  
   
-     管理者は、このストアドプロシージャを明示的に実行して、失敗した操作を再試行できます。 特定のキャプチャインスタンスのクリーンアップを再試行するには、sp_cdc_cleanup_change_table を実行し、 @low_water_markパラメーターに NULL を指定します。  
+     管理者は、このストアドプロシージャを明示的に実行して、失敗した操作を再試行できます。 特定のキャプチャインスタンスのクリーンアップを再試行するには、sp_cdc_cleanup_change_table を実行し、パラメーターに NULL を指定し @low_water_mark ます。  
   
 -   クリーンアップエージェントジョブで使用される単純なリテンション期間に基づくポリシーは、十分ではありません。  
   

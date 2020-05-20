@@ -54,7 +54,7 @@ IDENT_SEED ( 'table_or_view' )
 ## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-seed-value-from-a-specified-table"></a>A. 指定したテーブルのシード値を返す  
- 次の例では、`Person.Address` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルのシード値を返します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Person.Address` テーブルのシード値を返します。  
   
 ```sql  
 USE AdventureWorks2012;  

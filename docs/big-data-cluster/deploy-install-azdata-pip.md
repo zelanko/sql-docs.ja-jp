@@ -20,7 +20,7 @@ ms.locfileid: "75726949"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、`azdata` を使用して Windows または Linux 用の `pip` ツールをインストールする方法について説明します。
+この記事では、`pip` を使用して Windows または Linux 用の `azdata` ツールをインストールする方法について説明します。
 
 Windows および Linux (Ubuntu ディストリビューション) の場合は、[パッケージ マネージャー](./deploy-install-azdata-installer.md)を使用してインストールすると、操作が簡単になります。
 

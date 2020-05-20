@@ -27,7 +27,7 @@ ms.locfileid: "67994174"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server では、**カーソルがサポートされている行セットに対してのみ**IRowsetResynch[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がサポートされます。 **IRowsetResynch** を、要求時に使用することはできません。 コンシューマーは、行セットを開く前にインターフェイスを要求する必要があります。  
+  OLE DB Driver for SQL Server では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルがサポートされている行セットに対してのみ **IRowsetResynch** がサポートされます。 **IRowsetResynch** を、要求時に使用することはできません。 コンシューマーは、行セットを開く前にインターフェイスを要求する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [行セット内のデータの更新](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  

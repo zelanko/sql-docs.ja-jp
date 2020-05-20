@@ -45,7 +45,7 @@ ms.locfileid: "71299095"
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- これは、マネージド接続マネージャー オブジェクトを、その基になる接続オブジェクトにキャストします。 C++ を使用している場合は、**オブジェクトの**QueryInterface<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> メソッドが呼び出され、基になる接続オブジェクトのインターフェイスが要求されます。  
+ これは、マネージド接続マネージャー オブジェクトを、その基になる接続オブジェクトにキャストします。 C++ を使用している場合は、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトの **QueryInterface** メソッドが呼び出され、基になる接続オブジェクトのインターフェイスが要求されます。  
   
  次の表は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が備えている接続マネージャーと `package.Connections.Add("xxx")` ステートメントで使用される文字列を示しています。 すべての接続マネージャーのリストについては、「[Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   

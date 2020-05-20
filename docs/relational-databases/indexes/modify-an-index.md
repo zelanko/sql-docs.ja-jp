@@ -60,7 +60,7 @@ ms.locfileid: "68316966"
   
 #### <a name="to-modify-an-index"></a>インデックスを変更するには  
   
-次の例では、AdventureWorks データベース内で、`ProductID` オプションを使って `Production.WorkOrder` テーブルの `DROP_EXISTING` 列にある既存のインデックスを削除して再作成します。 ここではオプション `FILLFACTOR` および `PAD_INDEX` も設定されています。  
+次の例では、AdventureWorks データベース内で、`DROP_EXISTING` オプションを使って `Production.WorkOrder` テーブルの `ProductID` 列にある既存のインデックスを削除して再作成します。 ここではオプション `FILLFACTOR` および `PAD_INDEX` も設定されています。  
   
 [!code-sql[IndexDDL#CreateIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_1.sql)]  
   

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b5ceaaa02d07e34e1e93789d2c72f80a3459a472
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905171"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808033"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sp_cdc_help_change_data_capture (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,14 @@ sys.sp_cdc_help_change_data_capture
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @source_schema = ]'*source_schema*'  
+ [ @source_schema =] '*source_schema*'  
  ソーステーブルが属しているスキーマの名前を指定します。 *source_schema*は**sysname**,、既定値は NULL です。 *Source_schema*が指定されている場合は、 *source_name*も指定する必要があります。  
   
  NULL 以外の場合は、 *source_schema*が現在のデータベースに存在している必要があります。  
   
  *Source_schema*が null 以外の場合、 *source_name*も null 以外である必要があります。  
   
- [ @source_name = ]'*source_name*'  
+ [ @source_name =] '*source_name*'  
  ソーステーブルの名前を指定します。 *source_name*は**sysname**,、既定値は NULL です。 *Source_name*が指定されている場合は、 *source_schema*も指定する必要があります。  
   
  NULL 以外の場合は、 *source_name*が現在のデータベースに存在している必要があります。  
@@ -72,7 +72,7 @@ sys.sp_cdc_help_change_data_capture
 |object_id|**int**|ソーステーブルに関連付けられている変更テーブルの ID。|  
 |source_object_id|**int**|ソーステーブルの ID。|  
 |start_lsn|**binary(10)**|変更テーブルをクエリする際の下端を表すログ シーケンス番号 (LSN) です。<br /><br /> NULL = 低いエンドポイントが確立されていません。|  
-|end_lsn|**binary(10)**|変更テーブルに対してクエリを実行するための高エンドポイントを表す LSN。 で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]は、この列は常に NULL です。|  
+|end_lsn|**binary(10)**|変更テーブルに対してクエリを実行するための高エンドポイントを表す LSN。 で [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] は、この列は常に NULL です。|  
 |supports_net_changes|**bit**|Net change サポートが有効になっています。|  
 |has_drop_pending|**bit**|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では使用されません。|  
 |role_name|**sysname**|変更データへのアクセスを制御するデータベース ロールの名前です。<br /><br /> NULL = ロールは使用されません。|  

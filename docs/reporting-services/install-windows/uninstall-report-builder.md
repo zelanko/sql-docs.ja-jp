@@ -28,7 +28,7 @@ ms.locfileid: "65502661"
   
 2.  コントロール パネルで、 **[プログラムと機能]** をクリックします。  
   
-3.  [!INCLUDE[msCoName](../../includes/msconame-md.md)][名前] **の一覧で、** SQL Server レポート ビルダーを見つけてクリックします。  
+3.  **[名前]** の一覧で、[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server レポート ビルダーを見つけてクリックします。  
   
 4.  **[アンインストール]** をクリックします。  
   

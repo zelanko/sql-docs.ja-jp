@@ -257,7 +257,7 @@ ms.locfileid: "75257029"
     |AvoidWaitForDelay_ProblemDescription|WAITFOR DELAY ステートメントは {0} にありました。|  
     |AvoidWaitForDelay_RuleName|ストアド プロシージャ、関数、およびトリガーで WaitFor Delay ステートメントの使用を回避します。|  
     |CategorySamples|SamplesCategory|  
-    |CannotCreateResourceManager|{0} から {1} の ResourceManager は作成できません。|  
+    |CannotCreateResourceManager|{1} から {0} の ResourceManager は作成できません。|  
   
 7. **[ファイル]** メニューで、 **[RuleResources.resx の保存]** をクリックします。  
   

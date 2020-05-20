@@ -98,7 +98,7 @@ AG のディストリビューション データベースを下記の手順に�
 
 ### <a name="distributors-workflow"></a>ディストリビューターのワークフロー
 
-1. `sp_adddistributor @@servername` を使用して DIST1、DIST2、DIST3 をディストリビューターとして構成します。 `distributor_admin` によって `@password` のパスワードを指定します。 `@password` は、DIST1、DIST2、DIST3 の間で同じにする必要があります。
+1. `sp_adddistributor @@servername` を使用して DIST1、DIST2、DIST3 をディストリビューターとして構成します。 `@password` によって `distributor_admin` のパスワードを指定します。 `@password` は、DIST1、DIST2、DIST3 の間で同じにする必要があります。
 2. `sp_adddistributiondb` を使用して DIST1 上にディストリビューション データベースを作成します。 ディストリビューション データベースの名前は `distribution` です。 `distribution` データベースの回復モードを簡易から完全に変更します。
 3. DIST1、DIST2、および DIST3 上でレプリカを使用して `distribution` データベース用の AG を作成します。 すべてのレプリカを同期させることをお勧めします。 セカンダリ レプリカを読み取り可能に構成するか、読み取りを許可するように構成します。 この時点では、ディストリビューション データベースは AG であり、DIST1 がプライマリ レプリカ、DIST2 と DIST3 がセカンダリ レプリカです。
 4. AG 用に `DISTLISTENER` という名前のリスナーを構成します。
@@ -188,7 +188,7 @@ PUB 上で、このパブリッシャー用のサブスクリプションとパ�
 
 ### <a name="distributors-workflow"></a>ディストリビューターのワークフロー
 
-1. `sp_adddistributor @@servername` を使用して DIST3 をディストリビューターとしてする必要があります。 `distributor_admin` パラメーターを使用して、@password のパスワードを指定する必要があります。 パスワードは、DIST1 および DIST2 に対して指定したものと同じにする必要があります。
+1. `sp_adddistributor @@servername` を使用して DIST3 をディストリビューターとしてする必要があります。 @password パラメーターを使用して、`distributor_admin` のパスワードを指定する必要があります。 パスワードは、DIST1 および DIST2 に対して指定したものと同じにする必要があります。
 2. 現在のディストリビューション データベース用の AG に DIST3 を追加します。
 3. DIST3 上で次を実行します。
 

@@ -71,7 +71,7 @@ IDENT_CURRENT 値が NULL の場合 (テーブルに行が格納されたこと�
 ## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-last-identity-value-generated-for-a-specified-table"></a>A. 指定したテーブルに対して生成された最新の ID 値を返す  
- 次の例では、`Person.Address` データベースの `AdventureWorks2012` テーブルに対して生成された最新の ID 値を返します。  
+ 次の例では、`AdventureWorks2012` データベースの `Person.Address` テーブルに対して生成された最新の ID 値を返します。  
   
 ```sql  
 USE AdventureWorks2012;  

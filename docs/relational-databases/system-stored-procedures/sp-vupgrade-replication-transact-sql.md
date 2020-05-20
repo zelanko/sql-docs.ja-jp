@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_vupgrade_replication
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f6b2c736087b2f860bf8419264904e8669ba8951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8c63f54756d3bde1ab3c79a0beee9cc06b709d05
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771548"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808634"
 ---
 # <a name="sp_vupgrade_replication-transact-sql"></a>sp_vupgrade_replication (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,15 +49,15 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 `[ @password = ] 'password'`ディストリビューションデータベースに新しいシステムオブジェクトを作成するときに使用するシステム管理者のパスワードを入力します。 *パスワード*は**sysname**,、既定値は **' '** (空の文字列)。 *Security_mode*が Windows 認証である**1**に設定されている場合、このパラメーターは必要ありません。  
   
 > [!NOTE]  
->  SQL [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンにアップグレードする場合、このパラメーターは無視されます。  
+>  SQL 以降のバージョンにアップグレードする場合、このパラメーターは無視され [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。  
   
 `[ @ver_old = ] 'old_version'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- このストアドプロシージャは非推奨とされており、の将来[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリリースで削除される予定です。  
+ このストアドプロシージャは非推奨とされており、の将来のリリースで削除される予定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。  
   
 `[ @force_remove = ] 'force_removal'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @security_mode = ] 'security_mode'`ディストリビューションデータベースに新しいシステムオブジェクトを作成するときに使用するログインセキュリティモードを示します。 *security_mode*の部分は**bit**で、既定値は**0**です。 **0**の場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、認証が使用されます。 **1**の場合、Windows 認証が使用されます。  
+`[ @security_mode = ] 'security_mode'`ディストリビューションデータベースに新しいシステムオブジェクトを作成するときに使用するログインセキュリティモードを示します。 *security_mode*の部分は**bit**で、既定値は**0**です。 **0**の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証が使用されます。 **1**の場合、Windows 認証が使用されます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンへのアップグレードの場合、このパラメーターは無視されます。  

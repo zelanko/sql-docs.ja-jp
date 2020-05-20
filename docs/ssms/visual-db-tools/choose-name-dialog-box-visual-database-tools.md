@@ -24,7 +24,7 @@ ms.locfileid: "75255507"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>[名前の選択] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-このダイアログ ボックスは、 **[ファイル]\< メニューの** [**テーブル名<DiagramName>> を保存]、** [**を保存]<ViewName>、または**[ **を保存]** を選択したときに表示されます。  
+このダイアログ ボックスは、**[ファイル]** メニューの **[\<テーブル名**> を保存]、**[<DiagramName> を保存]**、または **[<ViewName> を保存]** を選択したときに表示されます。  
   
 **[テーブルの名前を入力してください]、[ダイアグラムの名前を入力してください]、または [ビュー名を入力してください]**  
 テーブル、ダイアグラム、またはビューの名前を入力するためのテキスト ボックスが用意されています。  

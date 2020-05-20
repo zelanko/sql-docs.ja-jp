@@ -80,9 +80,9 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>分散 R 計算
 
-sparklyr の機能の 1 つとして、[spark_apply](https://spark.rstudio.com/guides/distributed-r/) を使用して [R 計算を分散](https://spark.rstudio.com/reference/spark_apply/)する機能があります。
+sparklyr の機能の 1 つとして、[spark_apply](https://spark.rstudio.com/reference/spark_apply/) を使用して [R 計算を分散](https://spark.rstudio.com/guides/distributed-r/)する機能があります。
 
-ビッグ データ クラスターは Livy 接続が使用されるため、`packages = FALSE`spark_apply**の呼び出しで** を設定する必要があります。 詳細については、分散 R 計算に関する sparklyr のドキュメントの「[Livy](https://spark.rstudio.com/guides/distributed-r/#livy)」セクションを参照してください。 この設定では、**spark_apply** に渡された R コードで、Spark クラスターに既にインストールされている R パッケージのみを使用できます。 この機能について、次の例を示します。
+ビッグ データ クラスターは Livy 接続が使用されるため、**spark_apply** の呼び出しで `packages = FALSE` を設定する必要があります。 詳細については、分散 R 計算に関する sparklyr のドキュメントの「[Livy](https://spark.rstudio.com/guides/distributed-r/#livy)」セクションを参照してください。 この設定では、**spark_apply** に渡された R コードで、Spark クラスターに既にインストールされている R パッケージのみを使用できます。 この機能について、次の例を示します。
 
 ```r
 iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Species", packages = FALSE)

@@ -94,7 +94,7 @@ CPU を追加しても、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
 ## <a name="best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus"></a>64 基を超える CPU を搭載したコンピューター上で SQL Server を実行する場合のベスト プラクティス
 
 ### <a name="assigning-hardware-threads-with-cpus"></a>CPU へのハードウェア スレッドの割り当て
-プロセッサを特定のスレッドにバインドするために、affinity mask および affinity64 mask サーバー構成オプションを使用しないでください。 これらのオプションは、64 基までの CPU に制限されます。 代わりに、`SET PROCESS AFFINITY`ALTER SERVER CONFIGURATION[ の ](../t-sql/statements/alter-server-configuration-transact-sql.md) オプションを使用してください。
+プロセッサを特定のスレッドにバインドするために、affinity mask および affinity64 mask サーバー構成オプションを使用しないでください。 これらのオプションは、64 基までの CPU に制限されます。 代わりに、[ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) の `SET PROCESS AFFINITY` オプションを使用してください。
 
 ### <a name="managing-the-transaction-log-file-size"></a>トランザクション ログ ファイル サイズの管理
 トランザクション ログ ファイルのサイズの拡張に関して、自動拡張に依存しないでください。 トランザクション ログの拡張は、シリアルなプロセスである必要があります。 ログを拡張すると、ログの拡張が完了するまでトランザクションの書き込み操作が実行されなくなる場合があります。 ログ ファイルに対する領域をあらかじめ割り当てるには、その代わりに、環境における一般的なワークロードに十分に対応できる大きさの値にファイル サイズを設定します。

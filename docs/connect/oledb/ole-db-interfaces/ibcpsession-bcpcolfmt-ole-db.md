@@ -67,7 +67,7 @@ HRESULT BCPColFmt(
  **BCPColFmt** を呼び出すたびに、ユーザー ファイルの 1 つのフィールドの形式が指定されます。 たとえば、5 つのフィールドから構成されるユーザー データ ファイルの 3 つのフィールドの既定の設定を変更するには、まず、`BCPColumns(5)` を呼び出し、**BCPColFmt** を 5 回呼び出します。この 5 回の呼び出しのうち 3 回は独自の形式を設定して呼び出します。 残りの 2 回の呼び出しでは、*eUserDataType* を BCP_TYPE_DEFAULT に設定し、*cbIndicator*、*cbUserData*、*cbUserDataTerm* をそれぞれ 0、BCP_VARIABLE_LENGTH、0 に設定します。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
   
 > [!NOTE]  
->  [BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) を呼び出す前に、**IBCPSession::BCPColumns** メソッドを呼び出す必要があります。 **BCPColFmt** は、ユーザー ファイル内の列ごとに 1 回呼び出す必要があります。 **BCPColFmt** をユーザー ファイルの任意の列に対して複数回呼び出すと、エラーが発生します。  
+>  **BCPColFmt** を呼び出す前に、[IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) メソッドを呼び出す必要があります。 **BCPColFmt** は、ユーザー ファイル内の列ごとに 1 回呼び出す必要があります。 **BCPColFmt** をユーザー ファイルの任意の列に対して複数回呼び出すと、エラーが発生します。  
   
  ユーザー ファイル内の全データを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルにコピーする必要はありません。 列をスキップするには、列のデータの形式を指定する際に idxServerCol パラメーターを 0 に設定します。 一方、フィールドをスキップする場合は、メソッドを正しく機能させるためにすべての情報が必要になります。  
   
@@ -78,7 +78,7 @@ HRESULT BCPColFmt(
  ユーザー データ ファイル内のフィールドのインデックス。  
   
  *eUserDataType*[in]  
- ユーザー データ ファイル内のフィールドのデータ型。 指定できるデータ型は、OLE DB Driver for SQL Server ヘッダー ファイル (msoledbsql.h) に、BCP_TYPE_XXX という形式 (BCP_TYPE_SQLINT4 など) でリストされています。 BCP_TYPE_DEFAULT 値を指定すると、プロバイダーはテーブルやビューの列と同じ型を使用します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]eUserDataType **引数に BCP_TYPE_SQLDECIMAL または BCP_TYPE_SQLNUMERIC を指定し、** からファイルへの一括コピー操作を行う場合の動作を次に示します。  
+ ユーザー データ ファイル内のフィールドのデータ型。 指定できるデータ型は、OLE DB Driver for SQL Server ヘッダー ファイル (msoledbsql.h) に、BCP_TYPE_XXX という形式 (BCP_TYPE_SQLINT4 など) でリストされています。 BCP_TYPE_DEFAULT 値を指定すると、プロバイダーはテーブルやビューの列と同じ型を使用します。 **eUserDataType** 引数に BCP_TYPE_SQLDECIMAL または BCP_TYPE_SQLNUMERIC を指定し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からファイルへの一括コピー操作を行う場合の動作を次に示します。  
   
 -   コピー元の列が decimal 型または numeric 型以外の場合は、既定の有効桁数と小数点以下桁数が使用されます。  
   

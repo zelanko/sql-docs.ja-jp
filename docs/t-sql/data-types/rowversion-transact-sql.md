@@ -81,7 +81,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-次に、以下のサンプル [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、更新中に `MyTest` テーブルにオプティミスティック コンカレンシーを実装します。 このスクリプトでは、前回の行の読み取りからの `<myRv>`rowversion**値を表すために** を使用します。 実際の **rowversion** 値でこの値を置き換えます。 実際の **rowversion** 値の例は、`0x00000000000007D3` などになります。
+次に、以下のサンプル [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、更新中に `MyTest` テーブルにオプティミスティック コンカレンシーを実装します。 このスクリプトでは、前回の行の読み取りからの **rowversion** 値を表すために `<myRv>` を使用します。 実際の **rowversion** 値でこの値を置き換えます。 実際の **rowversion** 値の例は、`0x00000000000007D3` などになります。
   
 ```sql
 DECLARE @t TABLE (myKey int);  
@@ -101,9 +101,9 @@ IF (SELECT COUNT(*) FROM @t) = 0
   
 
 
-また、サンプル [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをトランザクションに置くことができます。 トランザクションの範囲内で `@t` 変数に対してクエリを実行すると、`myKey` テーブルに対するクエリを再度実行しなくても、テーブルの更新済みの `MyTest` 列を取得できます。
+また、サンプル [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをトランザクションに置くことができます。 トランザクションの範囲内で `@t` 変数に対してクエリを実行すると、`MyTest` テーブルに対するクエリを再度実行しなくても、テーブルの更新済みの `myKey` 列を取得できます。
 
-**timestamp** 構文を使用した同じ例を次に示します。 実際の `<myTS>`timestamp**で** を置き換えます。
+**timestamp** 構文を使用した同じ例を次に示します。 実際の **timestamp** で `<myTS>` を置き換えます。
 
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  

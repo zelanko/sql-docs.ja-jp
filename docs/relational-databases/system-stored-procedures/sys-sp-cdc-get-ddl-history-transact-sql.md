@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sp_cdc_get_ddl_history
 - sys.sp_cdc_get_ddl_history
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: bb4622b36901afc7ff04eacbfe840a9adda5b214
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7e7b22c489c7237bd9793aa590e92c1145f071b1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083733"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808153"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sp_cdc_get_ddl_history (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @capture_instance = ]'*capture_instance*'  
+ [ @capture_instance =] '*capture_instance*'  
  ソーステーブルに関連付けられたキャプチャインスタンスの名前を指定します。 *capture_instance*は**sysname**であり、NULL にすることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -67,8 +67,8 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 ## <a name="permissions"></a>アクセス許可  
  データベースのすべてのキャプチャ インスタンスの行を取得するには、db_owner 固定データベース ロールのメンバーシップが必要です。 他のすべてのユーザーに対して、ソーステーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。また、キャプチャインスタンスのゲートロールが定義されている場合は、そのデータベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、ソーステーブル`HumanResources.Employee`に列を追加し、 `sys.sp_cdc_get_ddl_history`そのストアドプロシージャを実行して、キャプチャインスタンス`HumanResources_Employee`に関連付けられているソーステーブルに適用される DDL の変更を報告します。  
+## <a name="examples"></a>例  
+ 次の例では、ソーステーブルに列を追加し、 `HumanResources.Employee` そのストアドプロシージャを実行して、 `sys.sp_cdc_get_ddl_history` キャプチャインスタンスに関連付けられているソーステーブルに適用される DDL の変更を報告し `HumanResources_Employee` ます。  
   
 ```  
 USE AdventureWorks2012;  

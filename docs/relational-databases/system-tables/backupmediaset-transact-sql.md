@@ -16,14 +16,14 @@ helpviewer_keywords:
 - backup media [SQL Server], backupmediaset system table
 - backupmediaset system table
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1dbaf429acb94334540f0e147eae2808e1655309
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4b268bf205245f8c63ca9e8273e4b80607282a00
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119354"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807485"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "68119354"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**media_set_id**|**int**|一意のメディアセット識別番号。 Id、主キー。|  
-|**media_uuid**|**uniqueidentifier**|メディアセットの UUID。 すべて[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のメディアセットに UUID があります。<br /><br /> 以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、メディアセットに1つのメディアファミリしか含まれていない場合、 **MEDIA_UUID**列が NULL になることがあります (**media_family_count**は 1)。|  
+|**media_uuid**|**uniqueidentifier**|メディアセットの UUID。 すべて [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメディアセットに UUID があります。<br /><br /> 以前のバージョンのでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メディアセットに1つのメディアファミリしか含まれていない場合、 **media_uuid**列が NULL になることがあります (**media_family_count**は 1)。|  
 |**media_family_count**|**tinyint**|メディア セット内のメディア ファミリの数。 NULL にすることができます。|  
 |**name**|**nvarchar(128)**|メディアセットの名前。 NULL にすることができます。<br /><br /> 詳細については、「[バックアップ &#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)」の「MEDIANAME と MEDIADESCRIPTION」を参照してください。|  
 |**記述**|**nvarchar(255)**|メディア セットの説明。 NULL にすることができます。<br /><br /> 詳細については、「[バックアップ &#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)」の「MEDIANAME と MEDIADESCRIPTION」を参照してください。|  
 |**software_name**|**nvarchar(128)**|メディアラベルを書き込んだバックアップソフトウェアの名前。 NULL にすることができます。|  
-|**software_vendor_id**|**int**|バックアップ メディア ラベルを記述したソフトウェア ベンダーの識別番号。 NULL にすることができます。<br /><br /> の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]値は16進数の0x1200 です。|  
-|**MTF_major_version**|**tinyint**|このメディアセットの[!INCLUDE[msCoName](../../includes/msconame-md.md)]生成に使用されるテープ形式のメジャーバージョン番号。 NULL にすることができます。|  
+|**software_vendor_id**|**int**|バックアップ メディア ラベルを記述したソフトウェア ベンダーの識別番号。 NULL にすることができます。<br /><br /> の値 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は16進数の0x1200 です。|  
+|**MTF_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]このメディアセットの生成に使用されるテープ形式のメジャーバージョン番号。 NULL にすることができます。|  
 |**mirror_count**|**tinyint**|メディアセット内のミラーの数。|  
 |**is_password_protected**|**bit**|メディアセットパスワードが保護されているかを示します。<br /><br /> 0 = 保護されていない<br /><br /> 1 = 保護されている|  
 |**is_compressed**|**bit**|バックアップが圧縮されているかどうか。<br /><br /> 0 = 圧縮されていません。<br /><br /> 1 = 圧縮<br /><br /> この値は、 **msdb**のアップグレード中に NULL に設定されます。 これは圧縮されていないバックアップを示します。|  
@@ -53,10 +53,10 @@ ms.locfileid: "68119354"
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のテーブルのバックアップと復元](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

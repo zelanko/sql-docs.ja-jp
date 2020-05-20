@@ -40,7 +40,7 @@ ms.locfileid: "77004711"
 
 **enclaveAttestationProtocol:** 構成証明サービスのプロトコルです。 現在唯一サポートされている値は **HGS** (ホスト ガーディアン サービス) です。
 
-セキュア エンクレーブを使用する Always Encrypted をユーザーが  **から有効にするためには、** columnEncryptionSetting **を有効にし、上記の接続文字列プロパティの**両方[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]を正しく設定する必要があります。
+セキュア エンクレーブを使用する Always Encrypted をユーザーが [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] から有効にするためには、**columnEncryptionSetting** を有効にし、上記の接続文字列プロパティの**両方**を正しく設定する必要があります。
 
 ## <a name="working-with-secure-enclaves"></a>セキュア エンクレーブの使用
 エンクレーブ接続プロパティが適切に設定されている場合、この機能の動作は透過的です。 セキュア エンクレーブをクエリに使用する必要があるかどうかが、ドライバーによって自動的に判断されます。 エンクレーブの計算をトリガーするクエリの例を次に示します。 データベースとテーブルの設定については [Always Encrypted エンクレーブの概要](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)に関するページを参照してください。

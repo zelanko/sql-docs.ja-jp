@@ -42,7 +42,7 @@ SQL Server エージェントで使用されるモジュールの変更はあり
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダー。プロバイダーを使用すると、ファイル システム パスと同様の簡単なナビゲーション メカニズムを使用できます。 ファイル システム パスと同様に、ドライブが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト モデルに関連付けられ、ノードがオブジェクト モデルのクラスに基づくパスを構築できます。 その後、 **cd** や **dir** などのなじみのあるコマンドを使用して、コマンド プロンプト ウィンドウでフォルダーを操作するのと同様の方法でパスを操作できます。 **ren** や **del**などの他のコマンドを使用すると、パスのノードで操作を実行できます。  
   
--   **または XQuery ステートメントを含む**sqlcmd[!INCLUDE[tsql](../includes/tsql-md.md)] コマンドレットを実行するなどの操作をサポートする、コマンドレットのセット。  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)] または XQuery ステートメントを含む **sqlcmd** コマンドレットを実行するなどの操作をサポートする、コマンドレットのセット。  
   
   
 ## <a name="sql-server-versions"></a>SQL Server のバージョン  

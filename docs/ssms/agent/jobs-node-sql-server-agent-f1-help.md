@@ -25,5 +25,5 @@ ms.locfileid: "75246064"
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-ここでは、**のオブジェクト エクスプローラーの**[ジョブ][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ノードの F1 ヘルプについて紹介します。  
+ここでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーの **[ジョブ]** ノードの F1 ヘルプについて紹介します。  
   

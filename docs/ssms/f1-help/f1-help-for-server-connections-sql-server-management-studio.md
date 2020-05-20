@@ -27,7 +27,7 @@ ms.locfileid: "78261891"
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-ここでは、 **の**[サーバーへの接続][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ダイアログ ボックス ページの F1 ヘルプについて紹介します。  
+ここでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[サーバーへの接続]** ダイアログ ボックス ページの F1 ヘルプについて紹介します。  
   
 [[サーバーの参照] ([ローカル サーバー])](../../ssms/f1-help/browse-for-servers-local-servers.md)  
   

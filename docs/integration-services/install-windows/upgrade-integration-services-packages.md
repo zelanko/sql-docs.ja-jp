@@ -59,14 +59,14 @@ ms.locfileid: "68262780"
   
 -   DTExecUI.exe.config  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使って、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] カスタム コンポーネントを含むパッケージを設計するには、 *\<ドライブ*>:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE にある devenv.exe.config ファイルを変更する必要があります。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使って、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] カスタム コンポーネントを含むパッケージを設計するには、\<*ドライブ*>:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE にある devenv.exe.config ファイルを変更する必要があります。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のランタイムで構築された顧客アプリケーションでこれらのパッケージを使用するには、実行可能ファイルに対応する *.exe.config ファイルの configuration セクションにリダイレクト ルールを含めます。 これらのルールにより、ランタイム アセンブリが Version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) にリダイレクトされます。 アセンブリ バージョン リダイレクトについて詳しくは、「[\<runtime> の \<assemblyBinding> 要素](https://msdn.microsoft.com/library/twy1dw1e.aspx)」をご覧ください。  
   
 ### <a name="locating-the-assemblies"></a>アセンブリの場所  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリが .NET 4 にアップグレードされました。 *\<ドライブ*>:\Windows\Microsoft.NET\assembly に、.NET 4 用の別のグローバル アセンブリ キャッシュが用意されています。 すべての [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリは、通常、このパスの GAC_MSIL フォルダーにあります。  
   
- 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同様に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のコア機能拡張 .dll ファイルは *\<ドライブ*>:\Program Files\Microsoft SQL Server\130\SDK\Assemblies にあります。  
+ 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同様に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のコア機能拡張 .dll ファイルは \<*ドライブ*>:\Program Files\Microsoft SQL Server\130\SDK\Assemblies にあります。  
   
 ## <a name="understanding-sql-server-package-upgrade-results"></a>SQL Server パッケージのアップグレード結果について  
  パッケージのアップグレード プロセス中に、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] パッケージ内のほとんどのコンポーネントと機能が、現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の対応するコンポーネントと機能にシームレスに変換されます。 ただし、いくつかのコンポーネントと機能については、アップグレードされないか、アップグレード結果に注意が必要です。 それらのコンポーネントと機能を次の表に示します。  

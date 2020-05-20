@@ -76,14 +76,14 @@ ms.locfileid: "76287746"
   
 1.  ディストリビューターのディストリビューション データベースで [sp_helpuser (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md) を実行します。 対象のユーザーが結果セットの **UserName** に含まれていなかった場合は、そのユーザーに対し、[CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md) ステートメントを使って、ディストリビューション データベースへのアクセスを許可する必要があります。  
   
-2.  ディストリビューターのディストリビューション データベースで [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) を実行します。このとき、**パラメーターには値**replmonitor`@rolename` を指定します。 対象のユーザーが結果セットの **MemberName** に含まれていた場合、そのユーザーは既にこのロールに所属しています。  
+2.  ディストリビューターのディストリビューション データベースで [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) を実行します。このとき、`@rolename` パラメーターには値 **replmonitor** を指定します。 対象のユーザーが結果セットの **MemberName** に含まれていた場合、そのユーザーは既にこのロールに所属しています。  
   
-3.  ユーザーが **replmonitor** ロールに属していなかった場合は、ディストリビューターのディストリビューション データベースで [sp_addrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) を実行します。 **には値**replmonitor`@rolename` を、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] には、追加するデータベース ユーザーの名前または `@membername` Windows ログイン名を指定します。  
+3.  ユーザーが **replmonitor** ロールに属していなかった場合は、ディストリビューターのディストリビューション データベースで [sp_addrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) を実行します。 `@rolename` には値 **replmonitor** を、`@membername` には、追加するデータベース ユーザーの名前または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows ログイン名を指定します。  
   
 #### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>固定データベース ロール replmonitor からユーザーを削除するには  
   
-1.  ユーザーが **replmonitor** ロールに属しているかどうかを確認するには、ディストリビューターのディストリビューション データベースで [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) を実行します。このとき、**に値**replmonitor`@rolename` を指定します。 対象のユーザーが結果セットの **MemberName** に含まれていなかった場合、そのユーザーは現在、このロールに所属していません。  
+1.  ユーザーが **replmonitor** ロールに属しているかどうかを確認するには、ディストリビューターのディストリビューション データベースで [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) を実行します。このとき、`@rolename` に値 **replmonitor** を指定します。 対象のユーザーが結果セットの **MemberName** に含まれていなかった場合、そのユーザーは現在、このロールに所属していません。  
   
-2.  ユーザーが **replmonitor** ロールに属している場合は、ディストリビューターのディストリビューション データベースで [sp_droprolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) を実行します。 **には値**replmonitor`@rolename` を、`@membername` には、削除するデータベース ユーザーの名前または Windows ログイン名を指定します。 
+2.  ユーザーが **replmonitor** ロールに属している場合は、ディストリビューターのディストリビューション データベースで [sp_droprolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) を実行します。 `@rolename` には値 **replmonitor** を、`@membername` には、削除するデータベース ユーザーの名前または Windows ログイン名を指定します。 
   
   

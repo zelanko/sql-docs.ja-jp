@@ -24,7 +24,7 @@ ms.locfileid: "79287206"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このトピックでは、*の*、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループ上でデータを失わずに手動フェールオーバー ([!INCLUDE[tsql](../../../includes/tsql-md.md)]計画的な手動フェールオーバー[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]) を実行する方法について説明します。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 AlwaysOn 可用性グループのフェールオーバーのように、計画的な手動フェールオーバーではセカンダリ レプリカがプライマリ ロールに移行します。 同時に、フェールオーバーによって元のプライマリ レプリカがセカンダリ ロールに移行します。  
+このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループ上でデータを失わずに手動フェールオーバー (*計画的な手動フェールオーバー*) を実行する方法について説明します。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 AlwaysOn 可用性グループのフェールオーバーのように、計画的な手動フェールオーバーではセカンダリ レプリカがプライマリ ロールに移行します。 同時に、フェールオーバーによって元のプライマリ レプリカがセカンダリ ロールに移行します。  
   
 計画的な手動フェールオーバーは、プライマリ レプリカおよびターゲット セカンダリ レプリカが同期コミット モードで動作していて、現在同期されている場合にのみサポートされます。 計画的な手動フェールオーバーでは、ターゲット セカンダリ レプリカの可用性グループに参加しているセカンダリ データベース内のすべてのデータが維持されます。 プライマリ レプリカがセカンダリ ロールに移行すると、そのデータベースがセカンダリ データベースになります。 次に、新しいプライマリ データベースとの同期が開始されます。 すべてが SYNCHRONIZED 状態に移行した後は、新しいセカンダリ レプリカが、将来の計画的な手動フェールオーバーのターゲットとして機能できるようになります。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "79287206"
 -   現在、ターゲットのセカンダリ レプリカはプライマリ レプリカと同期されている必要があります。 このセカンダリ レプリカのすべてのセカンダリ データベースが可用性グループに参加している必要があります。 これらは対応するプライマリ データベースとも同期されている必要があります (つまり、ローカルのセカンダリ データベースが同期されている必要があります)。 
   
     > [!TIP] 
-    >  セカンダリ レプリカのフェールオーバーの準備状態を調べるには、**sys.dm_hadr_database_replica_cluster_states** 動的管理ビューで [is_failover_ready](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 列をクエリします。 または、**AlwaysOn グループ ダッシュボード**の [[フェールオーバーの準備]](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) 列を確認します。 
+    >  セカンダリ レプリカのフェールオーバーの準備状態を調べるには、[sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 動的管理ビューで **is_failover_ready** 列をクエリします。 または、[AlwaysOn グループ ダッシュボード](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)の **[フェールオーバーの準備]** 列を確認します。 
 -   このタスクは、ターゲット セカンダリ レプリカ上でのみサポートされます。 ターゲット セカンダリ レプリカをホストするサーバー インスタンスに接続されている必要があります。 
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ 

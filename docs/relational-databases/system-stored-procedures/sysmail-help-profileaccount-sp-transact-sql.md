@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ea49facab2c91961a49fbb0c4d04ddc30e6253cb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68044487"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807527"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sysmail_help_profileaccount_sp
 ## <a name="examples"></a>使用例  
  **A. 特定のプロファイルのアカウントを名前順に一覧表示する**  
   
- 次の例では、プロファイル名を`AdventureWorks Administrator`指定して、プロファイルの情報を一覧表示します。  
+ 次の例では、プロファイル名を指定して、プロファイルの情報を一覧表示し `AdventureWorks Administrator` ます。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_help_profileaccount_sp  

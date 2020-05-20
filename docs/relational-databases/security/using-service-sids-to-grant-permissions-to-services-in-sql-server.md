@@ -42,7 +42,7 @@ SQL Server では、特定のサービスにアクセス許可を直接付与で
 
 これまで、システム アカウントにアクセス許可を付与するには、[LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190) ([en-us で NT AUTHORITY\SYSTEM](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) または [NetworkService](/windows/desktop/Services/networkservice-account) ([en-us で NT AUTHORITY\NETWORK SERVICE](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) アカウント用のログインを作成し、それらのログインにアクセス許可を付与していました。 この方法では、システム アカウントとして実行されている SQL への任意のプロセスまたはサービスのアクセス許可が付与されます。
 
-サービス SID を使用すると、特定のサービスにアクセス許可を付与することができます。 そのサービスは、実行時にアクセス許可を与えられたリソースにのみアクセスできます。 たとえば、`HealthService` が `LocalSystem` として実行されていて、それに `View Server State` が付与されている場合、`LocalSystem`アカウントは、`View Server State` のコンテキストで実行されているときに、`HealthService` に対してのみアクセスできます。 その他のどのプロセスが `LocalSystem` として SQL のサーバー状態にアクセスを試みても、アクセスは拒否されます。
+サービス SID を使用すると、特定のサービスにアクセス許可を付与することができます。 そのサービスは、実行時にアクセス許可を与えられたリソースにのみアクセスできます。 たとえば、`HealthService` が `LocalSystem` として実行されていて、それに `View Server State` が付与されている場合、`LocalSystem`アカウントは、`HealthService` のコンテキストで実行されているときに、`View Server State` に対してのみアクセスできます。 その他のどのプロセスが `LocalSystem` として SQL のサーバー状態にアクセスを試みても、アクセスは拒否されます。
 
 ## <a name="examples"></a>例
 

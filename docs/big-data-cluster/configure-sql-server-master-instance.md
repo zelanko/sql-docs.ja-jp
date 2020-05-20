@@ -43,7 +43,7 @@ ms.locfileid: "79090516"
    traceflag0 = 1204
    ```
 
-1. `mssql-custom.conf` ファイルを `/var/opt/mssql` ポッドの `mssql-server` コンテナー内の `master-0` にコピーします。 `<namespaceName>` をビッグ データ クラスター名に置き換えます。
+1. `mssql-custom.conf` ファイルを `master-0` ポッドの `mssql-server` コンテナー内の `/var/opt/mssql` にコピーします。 `<namespaceName>` をビッグ データ クラスター名に置き換えます。
 
    ```bash
    kubectl cp mssql-custom.conf master-0:/var/opt/mssql/mssql-custom.conf -c mssql-server -n <namespaceName>
@@ -58,7 +58,7 @@ ms.locfileid: "79090516"
    ```
 
 > [!IMPORTANT]
-> SQL Server マスター インスタンスが可用性グループ構成内にある場合は、すべての `mssql-custom.conf` ポッドに `master` ファイルをコピーします。 再起動のたびにフェールオーバーが発生するので、このアクティビティのタイミングをダウンタイム期間中にする必要があることに注意してください。
+> SQL Server マスター インスタンスが可用性グループ構成内にある場合は、すべての `master` ポッドに `mssql-custom.conf` ファイルをコピーします。 再起動のたびにフェールオーバーが発生するので、このアクティビティのタイミングをダウンタイム期間中にする必要があることに注意してください。
 
 ## <a name="known-limitations"></a>既知の制限事項
 

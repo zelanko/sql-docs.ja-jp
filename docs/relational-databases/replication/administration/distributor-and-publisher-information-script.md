@@ -27,7 +27,7 @@ ms.locfileid: "76288199"
   
 -   `use AdventureWorks2012` の行を、使用するパブリケーション データベース名に変更します。  
   
--   `--` 行のコメント (`exec sp_helparticle @publication='<PublicationName>'`) を削除して、\<PublicationName> をパブリケーション名に置き換えます。  
+-   `exec sp_helparticle @publication='<PublicationName>'` 行のコメント (`--`) を削除して、\<PublicationName> をパブリケーション名に置き換えます。  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

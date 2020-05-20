@@ -38,7 +38,7 @@ ms.locfileid: "67994163"
 ## <a name="immediate-and-delayed-update-modes"></a>即時更新モードと遅延更新モード  
  即時更新モードでは、**IRowsetChange::SetData** を呼び出すたびに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との間にラウンドトリップが発生します。 コンシューマーが 1 つの行に複数の変更を加える場合は、**SetData** を 1 回呼び出してすべての変更を実行する方が効率が高くなります。  
   
- 遅延更新モードでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]IRowsetUpdate::Update*の*cRows*パラメーターと*rghRows **パラメーターに示される行ごとに、** との間にラウンドトリップが発生します。  
+ 遅延更新モードでは、**IRowsetUpdate::Update** の *cRows* パラメーターと *rghRows* パラメーターに示される行ごとに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との間にラウンドトリップが発生します。  
   
  どちらのモードでも、行セットに対してトランザクション オブジェクトが開いていないときは、1 つのラウンドトリップが個別のトランザクションを表します。  
   

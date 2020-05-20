@@ -50,12 +50,12 @@ ms.locfileid: "76287683"
 
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>アーティクルをマージ パブリケーションから削除するには  
   
-1.  [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) を実行して、 **\@article** で指定されているアーティクルを **\@publication** で指定されているパブリケーションから削除します。 必要に応じて、 **\@force_invalidate_snapshot** に **1** を指定し、 **\@force_reinit_subscription** に **1** を指定します。  
+1.  [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) を実行して、 **\@article** で指定されているアーティクルを **\@publication** で指定されているパブリケーションから削除します。 必要に応じて、**\@force_invalidate_snapshot** に **1** を指定し、**\@force_reinit_subscription** に **1** を指定します。  
   
 2.  (省略可) パブリッシュされたオブジェクトをデータベースから完全に削除するには、パブリッシャーのパブリケーション データベースに対して `DROP <objectname>` コマンドを実行します。  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
- 次の例では、トランザクション パブリケーションからアーティクルを削除します。 この変更によって既存のスナップショットが無効になるため、 **\@force_invalidate_snapshot** パラメーターに **1** が指定されます。  
+ 次の例では、トランザクション パブリケーションからアーティクルを削除します。 この変更によって既存のスナップショットが無効になるため、**\@force_invalidate_snapshot** パラメーターに **1** が指定されます。  
   
 ```  
 DECLARE @publication AS sysname;  
@@ -72,7 +72,7 @@ EXEC sp_droparticle
 GO  
 ```  
   
- 次の例では、マージ パブリケーションから 2 つのアーティクルを削除します。 この変更によって既存のスナップショットが無効になるため、 **\@force_invalidate_snapshot** パラメーターに **1** が指定されます。  
+ 次の例では、マージ パブリケーションから 2 つのアーティクルを削除します。 この変更によって既存のスナップショットが無効になるため、**\@force_invalidate_snapshot** パラメーターに **1** が指定されます。  
   
 ```  
 DECLARE @publication AS sysname;  

@@ -75,7 +75,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  たとえば、サーバーでは **ServerCollection** クラスを、データベースでは **DatabaseCollection** クラスを指定します。  
   
  \@*PropertyName*  
- *Object*に指定したオブジェクトと関連付けるクラスのいずれかのプロパティの名前を指定します。 プロパティの名前の前に \@ 文字を付ける必要があります。 たとえば、\@Database**クラスのプロパティ**IsAnsiNull**には、** IsAnsiNull と指定します。  
+ *Object*に指定したオブジェクトと関連付けるクラスのいずれかのプロパティの名前を指定します。 プロパティの名前の前に \@ 文字を付ける必要があります。 たとえば、**Database** クラスのプロパティ **IsAnsiNull**には、\@IsAnsiNull と指定します。  
   
  \@*BooleanPropertyName*=true()  
  指定したブール型のプロパティが TRUE に設定されているすべてのオブジェクトを列挙します。  

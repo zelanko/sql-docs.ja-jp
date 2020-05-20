@@ -29,9 +29,9 @@ ms.locfileid: "71952709"
   
 ### <a name="to-delete-a-trace"></a>トレースを削除するには  
   
-1.  **を指定して**sp_trace_setstatus`@status = 0` を実行し、トレースを停止します。  
+1.  `@status = 0` を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
   
-2.  **を指定して**sp_trace_setstatus`@status = 2` を実行し、トレースを閉じてトレースの情報をサーバーから削除します。  
+2.  `@status = 2` を指定して **sp_trace_setstatus** を実行し、トレースを閉じてトレースの情報をサーバーから削除します。  
   
 > [!NOTE]  
 >  トレースを閉じるには、最初にそのトレースを停止する必要があります。  

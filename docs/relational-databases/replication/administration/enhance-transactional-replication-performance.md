@@ -116,7 +116,7 @@ ms.locfileid: "76288179"
   
 **–SubscriptionStreams** パラメーターを使用すると、集計レプリケーションのスループットを大幅に向上できます。 このパラメーターを使用すると、単一のスレッドを使用するときに存在するトランザクション特性の多くを維持しつつ、変更のバッチをサブスクライバーへの複数の接続で並列的に適用できます。 いずれかの接続が実行またはコミットに失敗した場合、進行中のバッチがすべての接続について中止されます。その場合、エージェントは、単一のストリームを使用して、失敗したバッチを再試行します。 この再試行フェーズが完了するまでは、サブスクライバー側に、トランザクションの一時的な不整合が存在する可能性があります。 サブスクライバーのトランザクション一貫性は、前回失敗したバッチが正常にコミットされた後で復元されます。  
   
-このエージェント パラメーターの値は、`@subscriptionstreams`sp_addsubscription &#40;Transact-SQL&#41;[ の ](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) を使用して指定できます。  
+このエージェント パラメーターの値は、[sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) の `@subscriptionstreams` を使用して指定できます。  
 
 サブスクリプション ストリームの実装について詳しくは、「[Navigating SQL replication subscriptionStream setting](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting)」(SQL レプリケーション サブスクリプション ストリームの設定のナビゲーション) をご覧ください。
   

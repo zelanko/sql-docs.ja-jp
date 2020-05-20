@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1f29541162381923faa6baa4ca6ce8d362a0f27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083751"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808196"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sp_cdc_generate_wrapper_function (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sys.sp_cdc_generate_wrapper_function
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @capture_instance= ]'*capture_instance*'  
+ [ @capture_instance =] '*capture_instance*'  
  スクリプトが生成されるキャプチャ インスタンスです。 *capture_instance*は**sysname**で、既定値は NULL です。 値を省略するか、明示的に NULL に設定すると、すべてのキャプチャインスタンスに対してラッパースクリプトが生成されます。  
   
- [ @closed_high_end_point= ]*high_end_pt_flag*  
+ [ @closed_high_end_point =] *high_end_pt_flag*  
  コミット時間が高エンドポイントと等しい変更を、生成されたプロシージャによって抽出範囲内に含めるかどうかを示すフラグビットです。 *high_end_pt_flag*は**ビット**であり、既定値は1です。これは、エンドポイントを含める必要があることを示します。 値0は、すべてのコミット時間が最大のエンドポイントより厳密に小さくなることを示します。  
   
- [ @column_list= ]'*column_list*'  
+ [ @column_list =] '*column_list*'  
  ラッパー関数から返される結果セットに含めるキャプチャ対象列の一覧です。 *column_list*は**nvarchar (max)** で、既定値は NULL です。 NULL を指定した場合、キャプチャされたすべての列が含まれます。  
   
- [ @update_flag_list= ]'*update_flag_list*'  
+ [ @update_flag_list =] '*update_flag_list*'  
  ラッパー関数によって返される結果セットに更新フラグが含まれる付加列の一覧です。 *update_flag_list*は**nvarchar (max)** で、既定値は NULL です。 NULL を指定した場合、更新フラグは含まれません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

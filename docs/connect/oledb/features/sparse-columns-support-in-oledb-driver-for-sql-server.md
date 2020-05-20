@@ -51,7 +51,7 @@ ms.locfileid: "67988906"
 ## <a name="down-level-client-behavior"></a>下位クライアントの動作  
  下位クライアントでは、SQLColumns および DBSCHMA_COLUMNS でメタデータが返されるのは、スパース **column_set** のメンバーでない列のみです。
   
- 下位クライアントでは、スパース **column_set** のメンバーである列に名前でアクセスできます。**クライアントでは、XML 列として**column_set[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 列にアクセスできます。  
+ 下位クライアントでは、スパース **column_set** のメンバーである列に名前でアクセスできます。[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] クライアントでは、XML 列として **column_set** 列にアクセスできます。  
   
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>一括コピー (BCP) によるスパース列のサポート  
  OLE DB の BCP API には、スパース列や **column_set** 機能のための変更はありません。  

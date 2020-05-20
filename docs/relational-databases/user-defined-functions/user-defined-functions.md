@@ -103,7 +103,7 @@ ms.locfileid: "78370545"
 |@@IDLE|@@TOTAL_WRITE|  
 |@@IO_BUSY||  
   
- **ユーザー定義関数では、次の非決定論的な組み込み関数を使用**できません[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数では、次の非決定論的な組み込み関数を使用**できません**。  
   
 |||  
 |-|-|  
@@ -115,7 +115,7 @@ ms.locfileid: "78370545"
 ##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a> スキーマ バインド関数  
  `CREATE FUNCTION` は、`SCHEMABINDING` 句をサポートしています。この句は、テーブル、ビュー、およびその他のユーザー定義関数など、参照対象オブジェクトのスキーマにその関数をバインドします。 スキーマ バインド関数によって参照されるオブジェクトを変更または削除しようとすると、失敗します。  
   
- `SCHEMABINDING`CREATE FUNCTION[ に ](../../t-sql/statements/create-function-transact-sql.md) を指定するには、次の条件を満たしている必要があります。  
+ [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) に `SCHEMABINDING` を指定するには、次の条件を満たしている必要があります。  
   
 -   CREATE 関数が参照するすべてのビューとユーザー定義関数が、スキーマにバインドされている必要があります。  
   

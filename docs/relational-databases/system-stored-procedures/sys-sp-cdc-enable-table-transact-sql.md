@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.sp_cdc_enable_table
 - sp_cdc_enable_table
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: b846ff31d4acbc9d87f66a76a19f688384c88982
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f66891393527b12f859d1a0aa6447470473a4d49
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106459"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808580"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ sys.sp_cdc_enable_table
   
  ソーステーブルには、最大2つのキャプチャインスタンスを含めることができます。 詳細については、「 [sp_cdc_help_change_data_capture &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)」を参照してください。  
   
-`[ @supports_net_changes = ] supports_net_changes`差分変更のクエリのサポートをこのキャプチャインスタンスで有効にするかどうかを示します。 テーブルに**bit**主キーがある場合、またはテーブルに@index_nameパラメーターを使用して識別された一意のインデックスがある場合、 *supports_net_changes*はビットの既定値は1です。 それ以外の場合、既定値は 0 になります。  
+`[ @supports_net_changes = ] supports_net_changes`差分変更のクエリのサポートをこのキャプチャインスタンスで有効にするかどうかを示します。 テーブルに主キーがある場合、またはテーブルにパラメーターを使用して識別された一意のインデックスがある場合、 *supports_net_changes*は**ビット**の既定値は1です @index_name 。 それ以外の場合、既定値は 0 になります。  
   
  0の場合は、すべての変更をクエリするサポート関数のみが生成されます。  
   
@@ -103,9 +103,9 @@ sys.sp_cdc_enable_table
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  テーブルで変更データキャプチャを有効にするには、その前にデータベースを有効にする必要があります。 データベースで変更データキャプチャが有効になっているかどうかを確認するには、[データベースカタログビューの](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) **is_cdc_enabled**列に対してクエリを実行します。 データベースを有効にするには、 [sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)ストアドプロシージャを使用します。  
   
  テーブルに対して変更データ キャプチャを有効にすると、変更テーブルと 1 つまたは 2 つのクエリ関数が生成されます。 変更テーブルは、キャプチャ プロセスによってトランザクション ログから抽出されたソース テーブルの変更に関するリポジトリとして機能します。 クエリ関数は、変更テーブルからデータを抽出するために使用されます。 これらの関数の名前は、次の方法で*capture_instance*パラメーターから派生します。  
@@ -117,7 +117,7 @@ sys.sp_cdc_enable_table
  また、ソーステーブルが変更データキャプチャを有効にするデータベース内の最初のテーブルであり、データベースにトランザクションパブリケーションが存在しない場合は、データベースのキャプチャジョブとクリーンアップジョブも作成され**ます sp_cdc_enable_table。** この例では、 **is_tracked_by_cdc**列を1に設定[します。](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)  
   
 > [!NOTE]  
->  テーブルで変更データ キャプチャが有効になっている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されている必要はありません。 ただし、エージェントが実行されていない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、キャプチャプロセスではトランザクションログを処理し、変更テーブルにエントリを書き込むことはありません。  
+>  テーブルで変更データ キャプチャが有効になっている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されている必要はありません。 ただし、エージェントが実行されていない場合、キャプチャプロセスではトランザクションログを処理し、変更テーブルにエントリを書き込むことはありません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Db_owner**固定データベースロールのメンバーシップが必要です。  
@@ -125,7 +125,7 @@ sys.sp_cdc_enable_table
 ## <a name="examples"></a>例  
   
 ### <a name="a-enabling-change-data-capture-by-specifying-only-required-parameters"></a>A. 必須パラメーターのみを指定して変更データキャプチャを有効にする  
- 次の例では、 `HumanResources.Employee`テーブルに対して変更データキャプチャを有効にします。 必須のパラメーターのみが指定されています。  
+ 次の例では、テーブルに対して変更データキャプチャを有効にし `HumanResources.Employee` ます。 必須のパラメーターのみが指定されています。  
   
 ```  
 USE AdventureWorks2012;  
@@ -138,7 +138,7 @@ GO
 ```  
   
 ### <a name="b-enabling-change-data-capture-by-specifying-additional-optional-parameters"></a>B. 追加の省略可能なパラメーターを指定して変更データキャプチャを有効にする  
- 次の例では、 `HumanResources.Department`テーブルに対して変更データキャプチャを有効にします。 を除く`@allow_partition_switch`すべてのパラメーターが指定されています。  
+ 次の例では、テーブルに対して変更データキャプチャを有効にし `HumanResources.Department` ます。 を除くすべてのパラメーターが指定されてい `@allow_partition_switch` ます。  
   
 ```  
 USE AdventureWorks2012;  

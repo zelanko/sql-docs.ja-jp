@@ -48,7 +48,7 @@ ms.locfileid: "76287795"
 ## <a name="user-action"></a>ユーザーの操作  
  この再試行のメッセージの発生頻度が低い場合、ユーザー操作は不要です。  
   
- [sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md) を使用して、指定されたレプリケーション エージェントの **[エージェントを実行します。]** ステップが再試行される最大回数の現在の設定を表示します。 `@retry_attempts`sp_update_jobstep[ ストアド プロシージャの ](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md) パラメーターを使用して、ジョブ ステップが再試行される回数を調整することができます。  
+ [sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md) を使用して、指定されたレプリケーション エージェントの **[エージェントを実行します。]** ステップが再試行される最大回数の現在の設定を表示します。 [sp_update_jobstep](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md) ストアド プロシージャの `@retry_attempts` パラメーターを使用して、ジョブ ステップが再試行される回数を調整することができます。  
   
  再試行のメッセージが頻繁に表示される場合は、再試行が発生するメッセージに基づく問題のトラブルシューティングを行います。 エージェントの履歴で、再試行をスケジュール設定する必要があった理由を示すメッセージを確認します。 場合によっては、レプリケーション エージェントに対してより詳細なログ記録を有効にする必要があります。 レプリケーションのログ記録を構成する方法については、サポート技術情報の資料 [312292](https://support.microsoft.com/kb/312292)を参照してください。  
   
