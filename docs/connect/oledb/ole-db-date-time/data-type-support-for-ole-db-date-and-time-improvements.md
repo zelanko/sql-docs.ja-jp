@@ -181,7 +181,7 @@ enum SQLVARENUM {
 |DBTYPE_DBTIME2|**time**(p)|OLE DB Driver for SQL Server によって、DBCOLUMDESC の *bScale* メンバーが調査され、秒の小数部の桁数が決定されます。|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|OLE DB Driver for SQL Server によって、DBCOLUMDESC の *bScale* メンバーが調査され、秒の小数部の桁数が決定されます。|  
   
- アプリケーションで *wType* に DBTYPE_DBTIMESTAMP を指定した場合、**pwszTypeName** に型名を指定することで、*datetime2* へのマッピングをオーバーライドします。 **datetime** を指定する場合、*bScale* は 3 にする必要があります。 **smalldatetime** を指定する場合、*bScale* は 0 にする必要があります。 *bScale* が *wType* および *pwszTypeName* と一致しない場合、DB_E_BADSCALE が返されます。  
+ アプリケーションで *wType* に DBTYPE_DBTIMESTAMP を指定した場合、*pwszTypeName* に型名を指定することで、**datetime2** へのマッピングをオーバーライドします。 **datetime** を指定する場合、*bScale* は 3 にする必要があります。 **smalldatetime** を指定する場合、*bScale* は 0 にする必要があります。 *bScale* が *wType* および *pwszTypeName* と一致しない場合、DB_E_BADSCALE が返されます。  
   
 ## <a name="see-also"></a>参照  
  [日付と時刻の強化機能 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

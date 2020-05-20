@@ -50,7 +50,7 @@ ms.locfileid: "74200508"
   
 ## <a name="remarks"></a>解説  
  この結果は、空間データの [SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) によって定義された測定単位で表されます。
-*geography* インスタンスの SRID (spatial reference ID) が一致しない場合、STDistance() は常に **null** を返します。  
+**geography** インスタンスの SRID (spatial reference ID) が一致しない場合、STDistance() は常に *null* を返します。  
   
 > [!NOTE]  
 >  面積や距離を計算する、**geography** データ型のメソッドの結果は、メソッドで使用されるインスタンスの SRID に応じて異なります。 SRID の詳細については、「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  

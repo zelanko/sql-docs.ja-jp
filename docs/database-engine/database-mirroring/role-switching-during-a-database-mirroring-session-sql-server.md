@@ -109,7 +109,7 @@ ms.locfileid: "75252791"
 2.  フェールオーバーのログ シーケンス番号 (LSN) としてプリンシパルから受信した、最後のログ レコードの LSN が、ミラー サーバーに記録されます。  
   
     > [!NOTE]  
-    >  この LSN を表示するには、**sys.database_mirroring &#40;Transact-SQL&#41;** から [mirroring_failover_lsn](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 列を選択します。  
+    >  この LSN を表示するには、[sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) から **mirroring_failover_lsn** 列を選択します。  
   
 3.  再実行キューで待機しているログがある場合は、ミラー サーバーがミラー データベースのロールフォワードを完了します。 必要な時間は、システムの処理速度、最近の作業負荷、および再実行キューのログの量によって異なります。 同期動作モードの場合、再実行キューのサイズを制限することでフェールオーバーの時間を調節できます。 ただし、同期動作モードでは、ミラー サーバーの遅れを取り戻すためにプリンシパル サーバーの処理速度が低下する場合があります。  
   

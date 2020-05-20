@@ -65,7 +65,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |Format|説明|  
 |------------|-----------------|  
-|String|*language_term* には、**sys.syslanguages (Transact-SQL)** 互換性ビューの [alias](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 列の値と同じ値を指定します。 文字列は、 **'***language_term***'** のように引用符 (') で囲む必要があります。|  
+|String|*language_term* には、[sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 互換性ビューの **alias** 列の値と同じ値を指定します。 文字列は、 **'***language_term***'** のように引用符 (') で囲む必要があります。|  
 |整数|*language_term* には、言語の LCID を指定します。|  
 |16 進数|*language_term* には、"0x" の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。 値を 2 バイト文字セット (DBCS) の形式で指定すると、SQL Server で Unicode に変換されます。|  
   

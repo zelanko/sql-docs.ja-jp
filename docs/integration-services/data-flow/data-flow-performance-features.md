@@ -178,7 +178,7 @@ ms.locfileid: "73637956"
   
 -   technet.microsoft.com の技術記事、「 [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=98900)」。  
   
--   [BI と分析に関する SQLCAT のガイド](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)の技術資料「_同期変換を複数タスクに分割してパイプラインのスループットを向上_」
+-   _BI と分析に関する SQLCAT のガイド_の技術資料「[同期変換を複数タスクに分割してパイプラインのスループットを向上](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)」
   
 -   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=220816)  
   

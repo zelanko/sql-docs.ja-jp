@@ -27,7 +27,7 @@ ms.locfileid: "68077986"
 # <a name="getancestor-database-engine"></a>GetAncestor (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-**this** の *n* 番目の先祖を表す *hierarchyid* が返されます。
+*this* の *n* 番目の先祖を表す **hierarchyid** が返されます。
   
 ## <a name="syntax"></a>構文  
   

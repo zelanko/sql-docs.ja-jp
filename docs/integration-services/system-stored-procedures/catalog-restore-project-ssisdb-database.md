@@ -49,7 +49,7 @@ catalog.restore_project [ @folder_name = ] folder_name
  成功した場合は 0 を返します。  
   
 ## <a name="result-sets"></a>結果セット  
- **project_name** が見つかった場合、結果セットの一部として、プロジェクトの詳細が *varbinary(MAX)* として返されます。  
+ *project_name* が見つかった場合、結果セットの一部として、プロジェクトの詳細が **varbinary(MAX)** として返されます。  
   
  指定のフォルダーにプロジェクトを復元できない場合、**NO RESULT SET** が返されます。  
   

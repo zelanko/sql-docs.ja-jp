@@ -48,7 +48,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  なし  
   
 ## <a name="remarks"></a>解説  
- データ タップを削除するには、実行のインスタンスが作成済みの状態 (**catalog.operations &#40;SSISDB データベース&#41;** ビューの [status](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 列の値が 1) である必要があります。  
+ データ タップを削除するには、実行のインスタンスが作成済みの状態 ([catalog.operations &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューの **status** 列の値が 1) である必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャには、次の権限のいずれかが必要です。  

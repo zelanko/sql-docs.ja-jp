@@ -38,7 +38,7 @@ APPROX_COUNT_DISTINCT ( expression )
   
 ## <a name="arguments"></a>引数  
 *式 (expression)*  
-[image](../../t-sql/language-elements/expressions-transact-sql.md)、**sql_variant**、**ntext**、**text** を除く、任意の型の**式**です。 
+**image**、**sql_variant**、**ntext**、**text** を除く、任意の型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 
 
 ## <a name="return-types"></a>戻り値の型
  **bigint**  

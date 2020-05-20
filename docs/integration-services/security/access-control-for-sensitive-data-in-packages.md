@@ -98,7 +98,7 @@ ms.locfileid: "79288186"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>SQL Server データ ツールでパッケージの保護レベルを設定または変更するには  
   
-1.  「**保護レベル**」セクションで [ProtectionLevel](#protection-levels) プロパティに使用できる値を確認し、パッケージに適した値を判断します。  
+1.  「[保護レベル](#protection-levels)」セクションで **ProtectionLevel** プロパティに使用できる値を確認し、パッケージに適した値を判断します。  
   
 2.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、パッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "79288186"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>コマンド プロンプトでパッケージの保護レベルを設定または変更するには  
   
-1.  「**保護レベル**」セクションで [ProtectionLevel](#protection-levels) プロパティに使用できる値を確認し、パッケージに適した値を判断します。  
+1.  「[保護レベル](#protection-levels)」セクションで **ProtectionLevel** プロパティに使用できる値を確認し、パッケージに適した値を判断します。  
   
 2.  「 **dtutil ユーティリティ** 」で [Encrypt](../../integration-services/dtutil-utility.md)オプションのマッピングを確認し、選択した **ProtectionLevel** プロパティの値として使用するのに適した整数を判断します。  
   

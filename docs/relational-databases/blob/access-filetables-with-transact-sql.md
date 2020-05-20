@@ -30,7 +30,7 @@ ms.locfileid: "68018893"
   
 -   INSERT ステートメントで **name**、 **path_locator**、 **parent_path_locator**、またはファイル属性を設定する場合、システム定義の制約が適用されます。  
   
--   アプリケーションは、**GetPathLocator &#40;Transact-SQL&#41;** 関数にファイル システム パスを渡すことで、ファイルまたはディレクトリの [path_locator](../../relational-databases/system-functions/getpathlocator-transact-sql.md) を取得できます。  
+-   アプリケーションは、[GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) 関数にファイル システム パスを渡すことで、ファイルまたはディレクトリの **path_locator** を取得できます。  
   
 ##  <a name="update-operations-on-filetables"></a><a name="BasicsUpdate"></a> FileTable での UPDATE 操作  
  FileTable で **UPDATE** 操作を行う場合は、次の点に注意してください。  

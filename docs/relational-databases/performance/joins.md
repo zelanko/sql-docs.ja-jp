@@ -173,7 +173,7 @@ Merge Join 操作は、標準の操作または多対多操作のいずれかに
 ハッシュの保留について詳しくは、「[Hash Warning イベント クラス](../../relational-databases/event-classes/hash-warning-event-class.md)」をご覧ください。    
 
 ## <a name="understanding-adaptive-joins"></a><a name="adaptive"></a> アダプティブ結合について
-[バッチ モード](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) アダプティブ結合機能を使用すると、最初の入力のスキャンが[終わる](#hash)まで、[ハッシュ結合](#nested_loops)方法または**ネステッド ループ**結合方法のどちらを選ぶかを、遅延することができます。 アダプティブ結合演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 したがって、クエリ プランでは、再コンパイルを行わなくても、実行中により適切な結合方法に動的に切り替えることができます。 
+[バッチ モード](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) アダプティブ結合機能を使用すると、最初の入力のスキャンが**終わる**まで、[ハッシュ結合](#hash)方法または[ネステッド ループ](#nested_loops)結合方法のどちらを選ぶかを、遅延することができます。 アダプティブ結合演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 したがって、クエリ プランでは、再コンパイルを行わなくても、実行中により適切な結合方法に動的に切り替えることができます。 
 
 > [!TIP]
 > 大小の結合入力スキャンが頻繁に切り替わるワークロードの場合、この機能から最もメリットがあります。

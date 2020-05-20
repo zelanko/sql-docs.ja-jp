@@ -45,7 +45,7 @@ ms.locfileid: "72251295"
   
 -   クエリ ストアではインメモリ OLTP のプラン生成メカニズムを活用して、コンパイル時にクエリ実行プランをキャプチャします。 ストアド プランは、 `SET SHOWPLAN_XML ON` を使用して取得するものと意味的には同じです。ただし、クエリ ストアのプランはステートメントごとに分割され、格納されます。  
     
--   混合ワークロードのデータベースでクエリ ストアを実行する場合は、**sys.query_store_plan &#40;Transact-SQL&#41;** の [is_natively_compiled](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) フィールドを使用して、ネイティブ コード コンパイルで生成されたクエリ プランをすばやく見つけることができます。  
+-   混合ワークロードのデータベースでクエリ ストアを実行する場合は、[sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) の **is_natively_compiled** フィールドを使用して、ネイティブ コード コンパイルで生成されたクエリ プランをすばやく見つけることができます。  
   
 -   クエリ ストアのキャプチャ モード (*ALTER TABLE* ステートメントの **QUERY_CAPTURE_MODE** パラメーター) が、ネイティブ コンパイル モジュールからのクエリに影響することはありません。構成値に関係なく、常にキャプチャされるためです。 これには `QUERY_CAPTURE_MODE = NONE`の設定も含まれます。  
   

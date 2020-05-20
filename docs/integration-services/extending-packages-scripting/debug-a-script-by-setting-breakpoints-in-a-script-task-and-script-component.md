@@ -30,7 +30,7 @@ ms.locfileid: "71286280"
  スクリプトにブレークポイントを設定すると、 **[ブレークポイントの設定 - \<オブジェクト名>]** ダイアログ ボックスに、組み込みブレークポイントと共に、設定したブレークポイントの一覧が表示されるようになります。  
   
 > [!IMPORTANT]  
->  状況によっては、スクリプト タスクおよびスクリプト コンポーネント内のブレークポイントは無視されます。 詳細については、「**スクリプト タスクのコーディングおよびデバッグ**」の「[スクリプト タスクのデバッグ](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)」セクションおよび「**スクリプト コンポーネントのコーディングおよびデバッグ**」の「[スクリプト コンポーネントのデバッグ](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)」セクションを参照してください。  
+>  状況によっては、スクリプト タスクおよびスクリプト コンポーネント内のブレークポイントは無視されます。 詳細については、「[スクリプト タスクのコーディングおよびデバッグ](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)」の「**スクリプト タスクのデバッグ**」セクションおよび「[スクリプト コンポーネントのコーディングおよびデバッグ](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)」の「**スクリプト コンポーネントのデバッグ**」セクションを参照してください。  
   
 ### <a name="to-set-a-breakpoint-in-script"></a>スクリプトにブレークポイントを設定するには  
   

@@ -42,7 +42,7 @@ ms.locfileid: "68140889"
   
  「[XML データ型と列 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md)」の説明に従って **XML** データ型の変数と列を作成し、それらに XML ドキュメントやフラグメントを割り当てることができます。 このような XML インスタンスを変更または更新するには、次の操作を実行します。  
   
--   [xml](../../t-sql/xml/modify-method-xml-data-type.md) データ型の **modify() メソッド (xml データ型)** を使用します。  
+-   **xml** データ型の [modify() メソッド (xml データ型)](../../t-sql/xml/modify-method-xml-data-type.md) を使用します。  
   
 -   **modify()** メソッド内に適切な XML DML ステートメントを指定します。  
   

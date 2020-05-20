@@ -88,7 +88,7 @@ ALTER DATABASE msdb SET ENABLE_BROKER ;
 GO
 ``` 
 
-データベース メールは、多数の内部ストアド プロシージャに依存しています。 外部からのアクセスを制限するには、これらのストアド プロシージャを新しくインストールした SQL Server で無効にします。 これらのストアド プロシージャを有効にするには、次の例のように、[sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) システム ストアド プロシージャの **Database Mail XPs オプション**を使用します。
+データベース メールは、多数の内部ストアド プロシージャに依存しています。 外部からのアクセスを制限するには、これらのストアド プロシージャを新しくインストールした SQL Server で無効にします。 これらのストアド プロシージャを有効にするには、次の例のように、**sp_configure** システム ストアド プロシージャの [Database Mail XPs オプション](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)を使用します。
 
 ```sql
 EXEC sp_configure 'show advanced options', 1;  

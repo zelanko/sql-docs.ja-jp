@@ -41,7 +41,7 @@ ms.locfileid: "65103312"
 - [!INCLUDE[msconame-md](../includes/msconame-md.md)] SQL Server データベース エンジン。  
 - SQL Server 2016 Reporting Services 以降 (SSRS)。
 - AdventureWorks2016 データベース。  詳細については、「[AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases)」 (AdventureWorks サンプル データベース) を参照してください。
-- [レポート デザイナー](../ssdt/download-sql-server-data-tools-ssdt.md)にアクセスできるようにするには、Visual Studio 向けの *SQL Server Data Tools* を Reporting Services 拡張機能とともにインストールする必要があります。
+- *レポート デザイナー*にアクセスできるようにするには、Visual Studio 向けの [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) を Reporting Services 拡張機能とともにインストールする必要があります。
   
 AdventureWorks2016 データベースからデータを取得するには読み取り専用権限も必要です。
 

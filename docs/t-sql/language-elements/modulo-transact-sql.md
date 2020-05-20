@@ -47,7 +47,7 @@ dividend % divisor
   
 ## <a name="arguments"></a>引数  
  *dividend*  
- 除算される数値式です。 *dividend* には、整数および通貨型に分類されるデータ型、または [numeric](../../t-sql/language-elements/expressions-transact-sql.md) データ型の有効な**式**を指定する必要があります。  
+ 除算される数値式です。 *dividend* には、整数および通貨型に分類されるデータ型、または **numeric** データ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定する必要があります。  
   
  *divisor*  
  被除数を除算する数値式です。 *divisor* には、整数および通貨型に分類されるデータ型、または **numeric** データ型の任意の有効な式を指定する必要があります。  

@@ -43,7 +43,7 @@ expression & expression
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- 整数データ型に分類されるデータ型のいずれか、または [bit](../../t-sql/language-elements/expressions-transact-sql.md)、または **binary** または **varbinary** データ型の有効な**式**を指定します。 *式*は、ビットごとの演算に対して 2 進数として扱われます。  
+ 整数データ型に分類されるデータ型のいずれか、または **bit**、または **binary** または **varbinary** データ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *式*は、ビットごとの演算に対して 2 進数として扱われます。  
   
 > [!NOTE]  
 >  ビットごとの演算では、1 つの*式*のみが **binary** または **varbinary** データ型のいずれかになります。  

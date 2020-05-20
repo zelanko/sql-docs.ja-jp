@@ -44,7 +44,7 @@ HRESULT BCPReadFmt(
   
  フォーマット ファイルを保存するには、[IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) メソッドを呼び出します。 **BCPReadFmt** メソッドの呼び出しでは、保存した形式を参照することができます。 また、一括コピー ユーティリティ (**bcp**) を使用して、**BCPReadFmt** メソッドで参照できるファイルに、ユーザー定義のデータ形式を保存することもできます。  
   
- **IBCPSession::BCPControl** の *eOption* パラメーターの [BCP_OPTION_DELAYREADFMT](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 値によって、IBCPSession::BCPReadFmt の動作が変更されます。  
+ [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) の *eOption* パラメーターの **BCP_OPTION_DELAYREADFMT** 値によって、IBCPSession::BCPReadFmt の動作が変更されます。  
   
 ## <a name="arguments"></a>引数  
  *pwszFormatFile*[in]  
