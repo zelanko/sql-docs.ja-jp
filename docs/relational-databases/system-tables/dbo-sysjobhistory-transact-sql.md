@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobhistory system table
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cc488958513f4a84ac776ff26f1fe2c867f8fa74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2ff3c872b195123608c12515fb3c19a03c3e3f44
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761836"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807093"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo. sysjobhistory (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "76761836"
 |**job_id**|**uniqueidentifier**|ジョブ ID。|  
 |**step_id**|**int**|ジョブ ステップの ID。|  
 |**step_name**|**sysname**|ステップの名前。|  
-|**sql_message_id**|**int**|ジョブが失敗[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]した場合に返されるエラーメッセージの ID。|  
-|**sql_severity**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーの重大度。|  
+|**sql_message_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ジョブが失敗した場合に返されるエラーメッセージの ID。|  
+|**sql_severity**|**int**|エラーの重大度 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**message**|**nvarchar (4000)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーのテキスト (存在する場合)。|  
 |**run_status**|**int**|ジョブ実行のステータス。<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **2** = 再試行<br /><br /> **3** = キャンセル<br /><br />**4** = 実行中|  
 |**run_date**|**int**|ジョブまたはステップの実行を開始した日付。 進行中の履歴については、履歴が書き込まれた日付/時刻です。|  
@@ -56,7 +56,7 @@ ms.locfileid: "76761836"
 |**server**|**sysname**|ジョブが実行されたサーバーの名前。|  
   
   ## <a name="example"></a>例
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のクエリでは、 **run_time**と**run_duration**列をユーザーフレンドリな形式に変換します。  で[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]スクリプトを実行します。
+ 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリでは、 **run_time**と**run_duration**列をユーザーフレンドリな形式に変換します。  でスクリプトを実行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。
  
  ```sql
  SET NOCOUNT ON;

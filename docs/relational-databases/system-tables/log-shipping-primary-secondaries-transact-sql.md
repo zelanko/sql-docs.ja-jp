@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_primary_secondaries system table
 ms.assetid: 4b315c70-7265-4acd-b35b-a4dbb7881d98
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6bf9b02afe0312a2be1a057ee19a594c9c488675
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 61a7bd0550a5f61aa8b3c1d15687aa4ba4b012b6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095850"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82806141"
 ---
 # <a name="log_shipping_primary_secondaries-transact-sql"></a>log_shipping_primary_secondaries (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68095850"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**primary_id**|**uniqueidentifier**|ログ配布構成のプライマリデータベースの ID。|  
-|**secondary_server**|**sysname**|ログ配布構成[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]におけるのセカンダリインスタンスの名前です。|  
+|**secondary_server**|**sysname**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ログ配布構成におけるのセカンダリインスタンスの名前です。|  
 |**secondary_database**|**sysname**|ログ配布構成のセカンダリデータベースの名前。|  
   
 ## <a name="see-also"></a>参照  

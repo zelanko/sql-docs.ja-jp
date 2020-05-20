@@ -14,19 +14,19 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], system tables
 - system tables [SQL Server], database maintenance plans
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f6fe1c0734864f8bde8b579ced77dc8106cb80ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 720d439449870e2b0e620f67cf0321b5c5cde043
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084754"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807043"
 ---
 # <a name="database-maintenance-plan-tables-transact-sql"></a>データベースメンテナンスプランのテーブル (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  このセクションのトピックでは、データベースメンテナンスプランで使用される情報を格納するシステムテーブルについて説明します。 これらのテーブルは、以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からアップグレードされたインスタンスの情報を保持します。  
+  このセクションのトピックでは、データベースメンテナンスプランで使用される情報を格納するシステムテーブルについて説明します。 これらのテーブルは、以前のバージョンのからアップグレードされたインスタンスの情報を保持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  

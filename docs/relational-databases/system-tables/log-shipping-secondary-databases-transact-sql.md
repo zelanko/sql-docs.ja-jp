@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_secondary_databases system table
 ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ad6d61f4267e30c6c0b3f6cede9085cad5d39006
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4c1c1e48608c9f6125ec9fa4c31cdab215b56911
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095786"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82806084"
 ---
 # <a name="log_shipping_secondary_databases-transact-sql"></a>log_shipping_secondary_databases (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68095786"
 |**disconnect_users**|**bit**|1に設定すると、復元操作の実行時に、ユーザーはセカンダリデータベースから切断されます。 既定値は0です。|  
 |**block_size**|**int**|バックアップデバイスのブロックサイズとして使用されるサイズ (バイト単位)。|  
 |**buffer_count**|**int**|バックアップまたは復元操作によって使用されるバッファーの合計数。|  
-|**max_transfer_size**|**int**|によって[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バックアップデバイスに発行される入力要求または出力要求の最大サイズ (バイト単位)。|  
+|**max_transfer_size**|**int**|によって [!INCLUDE[msCoName](../../includes/msconame-md.md)] バックアップデバイスに発行される入力要求または出力要求の最大サイズ (バイト単位) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**last_restored_file**|**nvarchar (500)**|セカンダリデータベースに復元された最後のバックアップファイルのファイル名。|  
 |**last_restored_date**|**datetime**|セカンダリデータベースに対する最後の復元操作の日時。|  
   
