@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 090ad6a9651a01532af528f5f78316eeadb9798d
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815757"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922011"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループでの運用上の問題のポリシー ベースの管理 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性モデルは、定義済みポリシー ベースの管理 (PBM) ポリシーのセットを評価します。 これらのポリシーを使用すると、可用性グループとその可用性レプリカおよびデータベースの正常性を [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]で表示できます。  
@@ -48,15 +48,15 @@ ms.locfileid: "62815757"
   
 |ポリシー名|問題|別**<sup>*</sup>**|ファセット|  
 |-----------------|-----------|------------------------------|-----------|  
-|WSFC クラスターの状態|[WSFC クラスターサービスはオフライン](wsfc-cluster-service-is-offline.md)です。|Critical|SQL Server のインスタンス|  
-|可用性グループのオンライン状態|[可用性グループはオフライン](availability-group-is-offline.md)です。|Critical|可用性グループ|  
-|可用性グループの自動フェールオーバーの準備|[可用性グループで自動フェールオーバーの準備ができていません](availability-group-is-not-ready-for-automatic-failover.md)。|Critical|可用性グループ|  
+|WSFC クラスターの状態|[WSFC クラスターサービスはオフライン](wsfc-cluster-service-is-offline.md)です。|重要|SQL Server のインスタンス|  
+|可用性グループのオンライン状態|[可用性グループはオフライン](availability-group-is-offline.md)です。|重要|可用性グループ|  
+|可用性グループの自動フェールオーバーの準備|[可用性グループで自動フェールオーバーの準備ができていません](availability-group-is-not-ready-for-automatic-failover.md)。|重要|可用性グループ|  
 |可用性レプリカのデータ同期状態|[一部の可用性レプリカがデータを同期していません](some-availability-replicas-are-not-synchronizing-data.md)。|警告|可用性グループ|  
 |同期レプリカのデータの同期状態|[一部の同期レプリカが同期されていません](some-synchronous-replicas-are-not-synchronized.md)。|警告|可用性グループ|  
 |可用性レプリカのロールの状態|[一部の可用性レプリカに正常なロールがありません](some-availability-replicas-do-not-have-a-healthy-role.md)。|警告|可用性グループ|  
 |可用性レプリカの接続状態|[一部の可用性レプリカが切断され](some-availability-replicas-are-disconnected.md)ています。|警告|可用性グループ|  
-|可用性レプリカのロールの状態|[可用性レプリカに正常なロールがありません](availability-replica-does-not-have-a-healthy-role.md)。|Critical|可用性レプリカ|  
-|可用性レプリカの接続状態|[可用性レプリカが切断され](availability-replica-is-disconnected.md)ています。|Critical|可用性レプリカ|  
+|可用性レプリカのロールの状態|[可用性レプリカに正常なロールがありません](availability-replica-does-not-have-a-healthy-role.md)。|重要|可用性レプリカ|  
+|可用性レプリカの接続状態|[可用性レプリカが切断され](availability-replica-is-disconnected.md)ています。|重要|可用性レプリカ|  
 |可用性レプリカの参加状態|[可用性レプリカが参加していません](availability-replica-is-not-joined.md)。|警告|可用性レプリカ|  
 |可用性レプリカのデータの同期状態|[一部の可用性データベースのデータ同期状態が正常ではありません](data-synchronization-state-of-some-availability-database-is-not-healthy.md)。|警告|可用性レプリカ|  
 |可用性データベースの中断状態|[可用性データベースが中断され](availability-database-is-suspended.md)ています。|警告|可用性データベース|  
@@ -86,7 +86,7 @@ ms.locfileid: "62815757"
   
  ユーザー定義ポリシーでは、AlwaysOn の定義済みポリシーで使用されているものを含め、使用可能なすべての PBM ファセットを使用できます (このトピックの「[定義済みのポリシーと問題点](#AlwaysOnPBM)」を参照してください)。 サーバーのファセットは、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性状態の監視用に、`IsHadrEnabled` プロパティおよび `HadrManagerStatus` プロパティを提供します。 サーバーのファセットは、WSFC クラスター構成の監視用に、`ClusterQuorumType` プロパティおよび `ClusterQuorumState` プロパティも提供します。  
   
- 詳細については、「[AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)」を参照してください (SQL Server AlwaysOn チームのブログ)。  
+ 詳細については、「[AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)」を参照してください (SQL Server AlwaysOn チームのブログ)。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
@@ -104,9 +104,9 @@ ms.locfileid: "62815757"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
--   [AlwaysOn の正常性モデル: パート 1: 正常性モデルのアーキテクチャ](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [AlwaysOn の正常性モデル: パート 1: 正常性モデルのアーキテクチャ](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
--   [AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
 -   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
