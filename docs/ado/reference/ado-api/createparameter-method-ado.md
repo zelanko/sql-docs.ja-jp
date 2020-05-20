@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6cd78e3cbe992a3f2df5046a26eca990479cb3fd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933296"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760218"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter メソッド (ADO)
 指定したプロパティを使用して、新しい[Parameter](../../../ado/reference/ado-api/parameter-object.md)オブジェクトを作成します。  
@@ -49,10 +49,10 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *[サイズ]*  
  任意。 パラメーター値の最大長を文字数またはバイト数で指定する**Long 型**の値。  
   
- *[値]*  
+ *値*  
  任意。 **Parameter**オブジェクトの値を指定する**バリアント**です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Createparameter**メソッドを使用して、指定した名前、型、方向、サイズ、および値を使用して新しい**パラメーター**オブジェクトを作成します。 引数で渡す値は、対応する**パラメーター**プロパティに書き込まれます。  
   
  このメソッドは、 **Parameter**オブジェクトを[Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの**Parameters**コレクションに自動的に追加しません。 これにより、**パラメーター**オブジェクトをコレクションに追加したときに ADO によって検証される値を持つ追加のプロパティを設定できます。  

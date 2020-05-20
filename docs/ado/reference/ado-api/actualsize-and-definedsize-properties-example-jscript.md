@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ActualSize property [ADO], JScript example
 - DefinedSize property [ADO], JScript example
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b465f5e567262aead6ffe73f696968d736b472eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b2282aa7df82f7bb7b42c1ab9e37b3c2a2cf94bc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921503"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760738"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize および DefinedSize プロパティの例 (JScript)
 この例では、 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)プロパティと defined [size](../../../ado/reference/ado-api/definedsize-property.md)プロパティを使用して、フィールドの定義済みのサイズと実際のサイズを表示します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Actualsizejs .asp**として保存します。  

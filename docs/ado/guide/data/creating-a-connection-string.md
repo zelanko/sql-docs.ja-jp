@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connections [ADO]
 - connection strings [ADO]
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b58dc19097d01630fa1ab1c2707e8be379ae83cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925760"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761148"
 ---
 # <a name="creating-a-connection-string"></a>接続文字列の作成
 接続文字列は、セミコロンで区切られた引数と値のペアのリスト (パラメーター) で構成されます。 次に例を示します。  
@@ -48,7 +48,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
   
- この接続文字列では、ado は`"Provider=SQLOLEDB"`パラメーターのみを認識します。これにより、ado データソースとして SQL Server の Microsoft OLE DB Provider が指定されます。 残りの引数と値のペア`"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`は、そのままこのプロバイダーに渡されます。 このようなパラメーターの型と有効性は、プロバイダー固有です。 接続文字列に渡すことができる有効なパラメーターの詳細については、個々のプロバイダーのドキュメントを参照してください。  
+ この接続文字列では、ado はパラメーターのみを認識し `"Provider=SQLOLEDB"` ます。これにより、ado データソースとして SQL Server の Microsoft OLE DB Provider が指定されます。 残りの引数と値のペアは、そのまま `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"` このプロバイダーに渡されます。 このようなパラメーターの型と有効性は、プロバイダー固有です。 接続文字列に渡すことができる有効なパラメーターの詳細については、個々のプロバイダーのドキュメントを参照してください。  
   
  SQL Server ドキュメントの OLE DB プロバイダーに従って、*データソース*パラメーターに "Server" を、 *Initial Catalog*パラメーターに "Database" を使用できます。 したがって、次の接続文字列では、上記と同じ結果が得られます。  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursor service for ole db [ADO]
 - cursors [ADO], cursor service for OLE DB
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aeac8c848f01f01e8969f94c571ad15f5e7f615a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3b36ebd9ce3af6769e87dbc4cf826713288b722
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923918"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759088"
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>OLE DB 向けの Microsoft カーソル サービス
 クライアント側のカーソルを選択するか、 **Cursor location**プロパティを**adUseClient**に設定すると、Microsoft cursor Service for OLE DB が呼び出されます。 また、"クライアントカーソルエンジン" への参照が表示される場合もあります。これは、基本的には ADO のコンテキストでも同じです。 このサービスは、データプロバイダーのカーソルサポート機能を補完します。 その結果、すべてのデータプロバイダーから比較的一様な機能を認識できます。  

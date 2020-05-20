@@ -13,14 +13,14 @@ helpviewer_keywords:
 - repositioning record [ADO]
 - AbsolutePosition property [ADO]
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cdce4c7b08a8b15cdb0a9ee1111a216aeef005bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e48c80c59a51b007832b8c68c8e27c66333f57dc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924432"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760978"
 ---
 # <a name="recordset-positioning"></a>レコードセットを配置する
 **AbsolutePosition**プロパティを使用して、レコード**セット**オブジェクトの序数位置に基づいてレコードに移動するか、現在のレコードの位置を表す序数を指定します。 このプロパティを使用できるようにするには、プロバイダーが適切な機能をサポートしている必要があります。  

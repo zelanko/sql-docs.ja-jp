@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924180"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760868"
 ---
 # <a name="shape-append-clause"></a>Shape の APPEND 句
 Shape コマンド APPEND 句は、1つまたは複数の列を**レコードセット**に追加します。 多くの場合、これらの列は、子**レコードセット**を参照するチャプター列です。  
@@ -36,7 +36,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *親-コマンド*  
  0または次のいずれかです (*親コマンド*を完全に省略できます)。  
   
--   **レコードセット**オブジェクトを返す、中かっこ{}("") で囲まれたプロバイダーコマンド。 コマンドは基になるデータプロバイダーに対して発行され、その構文はそのプロバイダーの要件によって異なります。 これは通常 SQL 言語ですが、ADO では特定のクエリ言語を必要としません。  
+-   {}**レコードセット**オブジェクトを返す、中かっこ ("") で囲まれたプロバイダーコマンド。 コマンドは基になるデータプロバイダーに対して発行され、その構文はそのプロバイダーの要件によって異なります。 これは通常 SQL 言語ですが、ADO では特定のクエリ言語を必要としません。  
   
 -   かっこで囲まれた別の shape コマンド。  
   
@@ -64,9 +64,9 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *子レコードセット*  
- -   **レコードセット**オブジェクトを返す、中かっこ{}("") で囲まれたプロバイダーコマンド。 コマンドは基になるデータプロバイダーに対して発行され、その構文はそのプロバイダーの要件によって異なります。 これは通常 SQL 言語ですが、ADO では特定のクエリ言語を必要としません。  
+ -   {}**レコードセット**オブジェクトを返す、中かっこ ("") で囲まれたプロバイダーコマンド。 コマンドは基になるデータプロバイダーに対して発行され、その構文はそのプロバイダーの要件によって異なります。 これは通常 SQL 言語ですが、ADO では特定のクエリ言語を必要としません。  
   
 -   かっこで囲まれた別の shape コマンド。  
   
@@ -95,20 +95,20 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  APPEND キーワードの後の句は実際にはリストです。各句はコンマで区切り、親に追加する別の列を定義します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SHAPE コマンドの一部としてユーザー入力からプロバイダーコマンドを構築すると、SHAPE はユーザーが指定したプロバイダーコマンドを不透明な文字列として扱い、そのコマンドをプロバイダーに忠実に渡します。 たとえば、次の SHAPE コマンドでは、  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- 図形は2つ`select * from t1`のコマンド (`select * from t2 RELATE k1 TO k2)`と) を実行します。 ユーザーが複数のプロバイダーコマンドで構成される複合コマンドをセミコロンで区切って指定した場合、図形はその違いを区別できません。 したがって、次の SHAPE コマンドでは、  
+ 図形は2つのコマンド `select * from t1` (と) を実行し `select * from t2 RELATE k1 TO k2)` ます。 ユーザーが複数のプロバイダーコマンドで構成される複合コマンドをセミコロンで区切って指定した場合、図形はその違いを区別できません。 したがって、次の SHAPE コマンドでは、  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- 図形`drop table t1`が`select * from t1; drop table t1`実行さ`select * from t2 RELATE k1 TO k2),`れます (これは独立したものであり、この場合は危険なプロバイダーコマンドです)。 アプリケーションは、このようなハッカー攻撃が発生するのを防ぐために、常にユーザー入力を検証する必要があります。  
+ 図形 `select * from t1; drop table t1` が実行され `select * from t2 RELATE k1 TO k2),` ます ( `drop table t1` これは独立したものであり、この場合は危険なプロバイダーコマンドです)。 アプリケーションは、このようなハッカー攻撃が発生するのを防ぐために、常にユーザー入力を検証する必要があります。  
   
  このセクションでは、次のトピックを扱います。  
   

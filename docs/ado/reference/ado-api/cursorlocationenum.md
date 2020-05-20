@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CursorLocationEnum enumeration [ADO]
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b3af18120af91fe06da48c2e3636bf8a7c572161
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 278f69e504ed4af7589b7e2be2c281e5de5957fa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919292"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760178"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 カーソルサービスの場所を指定します。  
   
-|Constant|[値]|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adUseClient**|3|では、ローカルカーソルライブラリによって提供されるクライアント側カーソルが使用されます。 多くの場合、ローカルカーソルサービスでは、ドライバーによって提供されるカーソルが使用できない多くの機能を使用できます。そのため、この設定を使用すると、有効になる機能に対して利点が得られる可能性があります。 旧バージョンとの互換性のために、シノニム**adUseClientBatch**もサポートされています。|  
 |**adUseNone**|1|カーソルサービスを使用しません。 (この定数は互換性のために残されており、旧バージョンとの互換性のためだけに残されています)。|  
@@ -34,7 +34,7 @@ ms.locfileid: "67919292"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|Constant|  
+|定数|  
 |--------------|  
 |AdoEnums を指定します。|  
 |AdoEnums. NONE|  

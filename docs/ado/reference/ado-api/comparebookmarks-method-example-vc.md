@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - CompareBookmarks method [ADO], VC++ example
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 137805600b30876baa96e8b795b99b62b140e915
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 52c11d385b6ae77208843d8eac430f65e18d3a35
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933596"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760348"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks メソッドの例 (VC++)
 この例は、 [Comparebookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)メソッドを示しています。 ブックマークの相対値は、特定のブックマークが特別に特殊な場合を除き、ほとんど必要ありません。  

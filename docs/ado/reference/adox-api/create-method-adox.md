@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Create method [ADOX]
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aafcab3ad379dc25a2681a5d4f0d3f5e8d6eab5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 15ea5cf8b565a943f4905a890cb08ba0afed202f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966676"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759268"
 ---
 # <a name="create-method-adox"></a>Create メソッド (ADOX)
 新しいカタログを作成します。  
@@ -37,7 +37,7 @@ Catalog.Create ConnectString
  *ConnectString*  
  データソースへの接続に使用する**文字列**値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Create**メソッドは、 *connectstring*に指定されたデータソースへの新しい ADO[接続](../../../ado/reference/ado-api/connection-object-ado.md)を作成して開きます。 成功した場合は、新しい**接続**オブジェクトが[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティに割り当てられます。  
   
  プロバイダーが新しいカタログの作成をサポートしていない場合は、エラーが発生します。  

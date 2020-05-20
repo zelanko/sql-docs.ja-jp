@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Size property [ADO Stream]
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e52d05cdbc0fe0ca397c3a7b417fec72703b8e1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e17bb879c63e01d8f912bb7147061099bd3e2c10
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916936"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759868"
 ---
 # <a name="size-property-ado-stream"></a>Size プロパティ (ADO Stream)
 ストリームのサイズをバイト数で示します。  
@@ -28,7 +28,7 @@ ms.locfileid: "67916936"
 ## <a name="return-values"></a>戻り値  
  ストリームのサイズをバイト数で指定する**Long 型**の値を返します。 既定値はストリームのサイズです。ストリームのサイズが不明な場合は-1 です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Size**は、開いている[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトでのみ使用できます。  
   
 > [!NOTE]

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CommandText property [ADO]
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c0288dde74d2a172c9b0f8bdb865f4467fb0f637
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0fea58e679e11ac068189ad622b3dce627fc8a63
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919727"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760438"
 ---
 # <a name="commandtext-property-ado"></a>CommandText プロパティ (ADO)
 プロバイダーに対して発行されるコマンドのテキストを示します。  
@@ -28,7 +28,7 @@ ms.locfileid: "67919727"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  SQL ステートメント、テーブル名、相対 URL、またはストアドプロシージャの呼び出しなど、プロバイダーコマンドを含む**文字列**値を取得します。値の設定もできます。 既定値は空の文字列 ("") です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **CommandText**プロパティを使用して、 [command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトによって表されるコマンドのテキストを設定または取得します。 通常、これは SQL ステートメントですが、ストアドプロシージャの呼び出しなど、プロバイダーによって認識される他の種類のコマンドステートメントにすることもできます。 SQL ステートメントは、プロバイダーのクエリプロセッサでサポートされている特定の言語またはバージョンである必要があります。  
   
  **Command**オブジェクトの[準備](../../../ado/reference/ado-api/prepared-property-ado.md)されたプロパティが**True**に設定されていて、 **CommandText**プロパティを設定するときに**command**オブジェクトが開いている接続にバインドされている場合、ADO は[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッドまたは[open](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドを呼び出すと、クエリ (つまり、プロバイダーによって格納されるクエリのコンパイル済みの形式) を準備します。  

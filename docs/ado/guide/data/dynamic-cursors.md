@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], dynamic
 - dynamic cursors [ADO]
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 86e51b7880004117e8efc96bd310c6de705d43a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4a2b251e23c2408e75acd77debbc0876fd3f9c98
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925502"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761048"
 ---
 # <a name="dynamic-cursors"></a>動的カーソル
 動的カーソルは、結果セット内の行に対して行われたすべての変更を検出します。変更がカーソルの内部から行われるか、カーソル外の他のユーザーによって行われるかは関係ありません。 すべてのユーザーによって行われたすべての insert、update、および delete ステートメントは、カーソルを通じて表示されます。 動的カーソルは、カーソルを開いた後に、結果セットの行、順序、および値に対して行われたすべての変更を検出できます。 カーソルの外部で行われた更新は、コミットされるまで表示されません (カーソルトランザクション分離レベルが "未コミット" に設定されている場合を除く)。  

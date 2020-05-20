@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - StreamOpenOptionsEnum enumeration [ADO]
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 562e79590a2a5f1f5e9bb609b9a0ad0ea8b2bfd9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1d61b11ee6fedd4229433570f6b159cccf658853
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928689"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759588"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 [ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトを開くためのオプションを指定します。 値は OR 演算と組み合わせることができます。  
   
-|Constant|値|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adOpenStreamAsync**|1|非同期モードで**ストリーム**オブジェクトを開きます。|  
 |**adOpenStreamFromRecord**|4|*ソース*パラメーターの内容を、既に開いている[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトとして識別します。 既定の動作では、*ソース*はツリー構造内のノードを直接指す URL として扱われます。 そのノードに関連付けられている既定のストリームが開きます。|  

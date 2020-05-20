@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Getrows method [ADO], JScript example
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ae1a96f2f5a72f354e376faa3e9e7370f9fcb92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8ba091ff7db668cc049c50eeb26492a2c9ee3422
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932479"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760028"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows メソッドの例 (JScript)
 この例では、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)メソッドを使用して、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)から*Custiomers*テーブルのすべての行を取得し、結果のデータを配列に格納します。 **Getrows**メソッドは、必要な数の行を返します。2つの場合は、 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に達した場合、または別のユーザーによって削除されたレコードを**getrows**が取得しようとした場合のいずれかです。 関数は、2番目のケースが発生した場合にのみ**False**を返します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **GetRowsJS**として保存します。  

@@ -11,21 +11,21 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d3b3a9f4c5482d0171c59a734aa6139bc2239c55
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925564"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761088"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>競合の検出および解決
 イミディエイトモードでレコードセットを処理する場合、同時実行の問題が発生する可能性は非常に低くなります。 一方、アプリケーションでバッチモードの更新を使用している場合、同じレコードを編集している別のユーザーが行った変更が保存される前に、1人のユーザーがレコードを変更する可能性があります。 このような場合は、アプリケーションで競合を適切に処理する必要があります。 最後のユーザーがサーバーに更新プログラムを送信することになります。 または、競合する2つの値のいずれかを選択することによって、優先する更新プログラムを最新のユーザーが判断できるようにすることもできます。  
   
  どのような場合でも、ADO では Field オブジェクトの UnderlyingValue プロパティと OriginalValue プロパティを使用して、これらの種類の競合を処理します。 これらのプロパティは、レコードセットの Resync メソッドおよび Filter プロパティと組み合わせて使用します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ADO でバッチ更新中に競合が発生すると、エラーコレクションに警告が追加されます。 そのため、BatchUpdate を呼び出した直後にエラーを確認し、問題が見つかった場合は、競合が発生したと仮定してテストを開始する必要があります。 最初の手順では、レコードセットの Filter プロパティを Adfilter衝突 Tingrecords に設定します。 これにより、レコードセットのビューが競合しているレコードのみに制限されます。 この手順の後に RecordCount プロパティが0に等しい場合は、競合以外の方法でエラーが発生したことがわかります。  
   
  BatchUpdate を呼び出すと、ADO およびプロバイダーが、データソースに対する更新を実行する SQL ステートメントを生成しています。 特定のデータソースでは、WHERE 句で使用できる列の型に制限があることに注意してください。  

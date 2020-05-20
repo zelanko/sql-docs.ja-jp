@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2d6b03137e920be036d1dd47cb4612076247fa3f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925640"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761098"
 ---
 # <a name="data-section"></a>データ セクション
 データセクションでは、保留中の更新、挿入、または削除と共に、行セットのデータを定義します。 Data セクションには、0個以上の行を含めることができます。 行がスキーマによって定義されている場合にのみ、1つの行セットからデータを格納できます。 また、前述のように、データのない列は省略できます。 Data セクションで属性またはサブ要素が使用されていて、そのコンストラクトが schema セクションで定義されていない場合、そのコンストラクトは警告なしで無視されます。  
@@ -29,7 +29,7 @@ ms.locfileid: "67925640"
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- 次の文字は XML で予約されており、文字エンティティ {'、"、&、\<、>} で置き換える必要があります。  
+ 次の文字は XML で予約されており、文字エンティティ {'、"、&、、>} で置き換える必要があり \< ます。  
   
 ## <a name="binary"></a>Binary  
  バイナリデータは、16進数でエンコードされます (つまり、1バイトが2文字にマップされ、1つの文字がニブルごとに1文字)。  

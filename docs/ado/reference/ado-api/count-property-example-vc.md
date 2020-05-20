@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Count property [ADO], VC++ example
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 73557703a1375128a141de8194929f9284b86930
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d8d6f40ebbb7ba4c90ba6d00291f40dc38118a13
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919337"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760208"
 ---
 # <a name="count-property-example-vc"></a>Count プロパティの例 (VC++)
 この例では、 ***Employee***データベースに2つのコレクションがある[Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを示します。 プロパティは、各コレクション内のオブジェクトの数を取得し、これらのコレクションを列挙するループの上限を設定します。  

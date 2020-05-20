@@ -12,14 +12,14 @@ helpviewer_keywords:
 - query results into stream [ADO]
 - retrieving results into stream [ADO]
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2f0c76a668c7191467e9f66ba48c486aceea16df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b20363f3ffae96750046ab98bd623ea44d68a8e2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924346"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760928"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>ストリーム形式で結果セットを取得する
 ADO では、従来の**Recordset**オブジェクトの結果を受け取る代わりに、クエリの結果をストリームに取得できます。 ADO**ストリーム**オブジェクト (または、ASP**要求**オブジェクトや**応答**オブジェクトなど、COM **IStream**インターフェイスをサポートするその他のオブジェクト) は、これらの結果を格納するために使用できます。 この機能の使用方法の1つは、結果を XML 形式で取得することです。 たとえば、SQL Server では、XML の結果を複数の方法で返すことができます。たとえば、SQL SELECT クエリで FOR XML 句を使用する場合や、XPath クエリを使用する場合などです。  
@@ -178,5 +178,5 @@ adoCmd.Execute , , adExecuteStream
 Response.write "</XML>"  
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>解説  
  この時点で、XML がクライアントブラウザーにストリームされ、表示されるようになります。 これを行うには、クライアント側の VBScript を使用して XML ドキュメントを DOM のインスタンスにバインドし、各子ノードをループして HTML で製品の一覧を作成します。

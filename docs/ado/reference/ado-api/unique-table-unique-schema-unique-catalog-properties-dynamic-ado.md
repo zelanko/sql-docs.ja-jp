@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Unique Schema property [ADO]
 - Unique Catalog property [ADO]
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ac7fa0cf50a92b2738d3e83d5e7b9d5fac46fd9b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911677"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759518"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>一意のテーブル、一意のスキーマ、一意のカタログのプロパティ-動的 (ADO)
 複数のベーステーブルに対する結合操作によって形成された[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の特定のベーステーブルに対する変更を厳密に制御できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "67911677"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  テーブル、スキーマ、またはカタログの名前を示す**文字列**値を設定または返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  目的のベーステーブルは、そのカタログ名、スキーマ名、およびテーブル名によって一意に識別されます。 一意の**テーブル**プロパティが設定されている場合は、**一意のスキーマ**または一意の**カタログ**プロパティの値を使用してベーステーブルが検索されます。 一意の**テーブル**プロパティが設定される前に、一意の**スキーマ**と**一意のカタログ**プロパティのどちらかまたは両方が設定されていることを前提としていますが、必須ではありません。  
   
  **一意のテーブル**の主キーは、**レコードセット**全体の主キーとして扱われます。 これは、主キーを必要とする任意のメソッドに使用されるキーです。  

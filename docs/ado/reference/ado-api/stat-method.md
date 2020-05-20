@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Stat method [ADO]
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0538a3afae1e4c0bf4159d8ef6a42872f21ff6ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6295640a0d9ec0815ebac9086efc3835915e0e0c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916868"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759778"
 ---
 # <a name="stat-method"></a>Stat メソッド
 [ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトに関する情報を取得します。  
@@ -42,7 +42,7 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  このメソッドが STATSTG 構造体の一部のメンバーを返さないことを指定します。これにより、メモリ割り当て操作が保存されます。 値は STATFLAG 列挙体から取得されます。 STATFLAG 列挙体には2つの値があります  
   
-|Constant|[値]|  
+|定数|[値]|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  

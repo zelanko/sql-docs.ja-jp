@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], static
 - static cursors [ADO]
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 520c484bdaaa6eb59488900208993a607c5b0f7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4baacc48beffda2d83a23ce24d3a31c314da5841
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924115"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760828"
 ---
 # <a name="static-cursors"></a>静的カーソル
 静的カーソルは、カーソルが最初に開かれたときと同じように、常に結果セットを表示します。 実装によっては、静的カーソルは読み取り専用または読み取り/書き込みのいずれかになり、前方スクロールと後方スクロールが提供されます。 通常、静的カーソルは、カーソルを開いた後に、結果セットのメンバーシップ、順序、または値に対して行われた変更を検出しません。 静的カーソルは、それ自体の更新、削除、挿入を検出してもかまいませんが、必ず行う必要はありません。  

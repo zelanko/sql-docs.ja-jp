@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ad89d806f8a6774cb0fe2de056e30fd274a517c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c6aaf4d87e4e01e6f32e1d681d93e5a2291c3999
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924083"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760818"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>手順 2:Main リスト ボックスを初期化する
 グローバルレコードとレコードセットオブジェクトを宣言するには、Form1 の (宣言) に次のコードを挿入します。  
@@ -45,9 +45,9 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- このコードは、グローバルレコードとレコードセットオブジェクトをインスタンス化します。 レコードオブジェクト`grec`は、ActiveConnection として指定された URL で開かれます。 URL が存在する場合は、それが開かれます。まだ存在しない場合は、作成されます。 "<https://servername/foldername/>" は、使用している環境の有効な URL に置き換える必要があることに注意してください。  
+ このコードは、グローバルレコードとレコードセットオブジェクトをインスタンス化します。 レコードオブジェクトは、 `grec` ActiveConnection として指定された URL で開かれます。 URL が存在する場合は、それが開かれます。まだ存在しない場合は、作成されます。 " <https://servername/foldername/> " は、使用している環境の有効な URL に置き換える必要があることに注意してください。  
   
- レコードセットオブジェクト`grs`は、レコードの子で開かれ`grec`ます。 次`lstMain`に、URL に発行されたリソースのファイル名を入力します。  
+ レコードセットオブジェクトは、 `grs` レコードの子で開かれ `grec` ます。 次に、 `lstMain` URL に発行されたリソースのファイル名を入力します。  
   
 ## <a name="see-also"></a>参照  
  [インターネット公開のシナリオ](../../../ado/guide/data/internet-publishing-scenario.md)   

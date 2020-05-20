@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - ADCPROP_ASYNCTHREADPRIORITY_ENUM [ADO]
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22a8cd4bb8d1bdddbaaa68e92349d9c728557ac0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ecdc80a2f1e1ace36170a9b4527ba01f0b02ee11
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921468"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760658"
 ---
 # <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 RDS[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの場合は、データを取得する非同期スレッドの実行の優先度を指定します。  
   
  これらの定数は、**レコードセット**の "**バックグラウンドスレッド優先順位**" 動的プロパティと共に使用します。これは、ADO から OLE DB の動的プロパティインデックスで参照され、 [OLE DB のドキュメントについては Microsoft Cursor Service](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)に記載されています。  
   
-|Constant|値|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adPriorityAboveNormal**|4|通常と最高の間の優先順位を設定します。|  
 |**adPriorityBelowNormal**|2|最低と通常の優先順位を設定します。|  
@@ -38,7 +38,7 @@ RDS[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.m
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|Constant|  
+|定数|  
 |--------------|  
 |AdoEnums を ABOVENORMAL します。|  
 |AdoEnums を BELOWNORMAL します。|  

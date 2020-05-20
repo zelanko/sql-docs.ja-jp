@@ -14,14 +14,14 @@ helpviewer_keywords:
 - service providers [ADO]
 - service components [ADO]
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 39e1670d9d37b1404e65ecb50f09dc214abdaaff
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926977"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760548"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>付録 A: データおよびサービスプロバイダー
 このセクションでは、データプロバイダー、サービスプロバイダー、およびサービスコンポーネントの3種類のプロバイダーについて説明します。 プロバイダーは、データを提供するカテゴリとサービスを提供するカテゴリの2つのカテゴリに分類されます。 *データプロバイダー*は独自のデータを所有し、アプリケーションに表形式で公開します。 *サービスプロバイダー*は、データを生成して使用することによってサービスをカプセル化し、ADO アプリケーションの機能を強化します。 サービスプロバイダーは、他のサービスプロバイダーまたはコンポーネントと連携して動作する必要がある*サービスコンポーネント*としてさらに定義することもできます。
@@ -70,7 +70,7 @@ ms.locfileid: "67926977"
  OLE DB プロバイダーの詳細については、「 [Microsoft OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)」を参照してください。
 
 ## <a name="provider-commands"></a>プロバイダーコマンド
- ここに一覧表示されているプロバイダーごとに、アプリケーションでプロバイダーコマンドとして SQL ステートメントを入力できるようにするには、ユーザー入力を常に検証する必要があります。 `DROP TABLE t1`また、ユーザー入力の一部として、などの危険な sql ステートメントを使用してハッカー攻撃を受ける可能性があります。
+ ここに一覧表示されているプロバイダーごとに、アプリケーションでプロバイダーコマンドとして SQL ステートメントを入力できるようにするには、ユーザー入力を常に検証する必要があり `DROP TABLE t1` ます。また、ユーザー入力の一部として、などの危険な sql ステートメントを使用してハッカー攻撃を受ける可能性があります。
 
 ## <a name="see-also"></a>参照
  [コマンドオブジェクト (ado)](../../../ado/reference/ado-api/command-object-ado.md) [接続オブジェクト (ado)](../../../ado/reference/ado-api/connection-object-ado.md) Microsoft [OLE DB provider For Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) Microsoft [OLE DB Provider for microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [microsoft OLE DB PROVIDER for microsoft インデックスサービス](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)Microsoft OLE DB provider For [ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) microsoft OLE DB provider For [MICROSOFT Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties Collection (](../../../ado/reference/ado-api/properties-collection-ado.md) ado) [Recordset Object (](../../../ado/reference/ado-api/recordset-object-ado.md) ado) [Refresh Method (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md) [を実行](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)します。

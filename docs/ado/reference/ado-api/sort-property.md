@@ -19,14 +19,14 @@ helpviewer_keywords:
 - ASC [ADO]
 - Sort property [ADO]
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 946314f7be9f6c39d47a3f26b577e10834064dab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3dc6f7799e28fff65a1b6e60329ba9fb94d84824
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930946"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759838"
 ---
 # <a name="sort-property"></a>Sort プロパティ
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)が並べ替えられる1つ以上のフィールド名と、各フィールドを昇順と降順のどちらで並べ替えるかを示します。  
@@ -45,7 +45,7 @@ ms.locfileid: "67930946"
   
  **Sort**プロパティを空の文字列に設定すると、行が元の順序にリセットされ、一時インデックスが削除されます。 既存のインデックスは削除されません。  
   
- **レコードセット**に*firstName*、 *middleInitial*、 *lastName*という3つのフィールドが含まれているとします。 [**並べ替え**] プロパティを "`lastName DESC, firstName ASC`" に設定します。この文字列は、**レコードセット**を姓で降順に並べ替え、名を昇順に並べ替えます。 ミドルネームのイニシャルは無視されます。  
+ **レコードセット**に*firstName*、 *middleInitial*、 *lastName*という3つのフィールドが含まれているとします。 [**並べ替え**] プロパティを "" に設定します。この文字列は、 `lastName DESC, firstName ASC` **レコードセット**を姓で降順に並べ替え、名を昇順に並べ替えます。 ミドルネームのイニシャルは無視されます。  
   
  "ASC" または "DESC" という名前のフィールドは使用できません。これらの名前は、キーワード**ASC**および**DESC**と競合しています。 **レコードセット**を返すクエリで AS キーワードを使用する**と**、競合する名前を持つフィールドの別名を作成できます。  
   

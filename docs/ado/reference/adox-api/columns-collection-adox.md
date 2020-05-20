@@ -16,24 +16,24 @@ f1_keywords:
 helpviewer_keywords:
 - Columns collection [ADOX]
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc3686ac69d7afeeebec14939a42e073f796b1ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 46168e694f87c4a8a827420f8b395b843da1d29b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966845"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759338"
 ---
 # <a name="columns-collection-adox"></a>Columns コレクション (ADOX)
 テーブル、インデックス、またはキーのすべての[Column](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>Remarks  
- **Columns**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-columns.md)メソッドは、ADOX で一意です。 次の操作を行うことができます。  
+## <a name="remarks"></a>解説  
+ **Columns**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-columns.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
   
 -   **追加**メソッドを使用して、新しい列をコレクションに追加します。  
   
- その他のプロパティとメソッドは、ADO コレクションの標準です。 次の操作を行うことができます。  
+ その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
   
 -   [Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクション内の列にアクセスします。  
   

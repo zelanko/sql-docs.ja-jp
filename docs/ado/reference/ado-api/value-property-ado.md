@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Value property [ADO]
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e35dd93e6d90a81934d8f272ea79c5eb7c8a97c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6648fcabe8890ef653558636738735a4f5e4012f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67913923"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759448"
 ---
 # <a name="value-property-ado"></a>Value プロパティ (ADO)
 
@@ -31,7 +31,7 @@ ms.locfileid: "67913923"
 
 オブジェクトの値を示す**バリアント**値を設定または返します。 既定値は[Type](../../../ado/reference/ado-api/type-property-ado.md)プロパティによって異なります。
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Value**プロパティを使用して、**フィールド**オブジェクトのデータを設定または取得します。また、**パラメーターオブジェクトを**使用してパラメーター値を設定または取得するか、プロパティオブジェクトを使用し**てプロパティ設定**を設定または取得します。 **値**プロパティが読み取り/書き込みか、読み取り専用かは、さまざまな要因によって決まります。 詳細については、各オブジェクトのトピックを参照してください。
 
@@ -50,5 +50,5 @@ ADO では、 **Value**プロパティを使用して長いバイナリデータ
   
 ## <a name="see-also"></a>参照
 
-[Value プロパティの例 (VB)](../../../ado/reference/ado-api/value-property-example-vb.md)
-の[値プロパティの例 (VC + +)](../../../ado/reference/ado-api/value-property-example-vc.md) 
+[Value プロパティの例 (VB)](../../../ado/reference/ado-api/value-property-example-vb.md) 
+[Value プロパティの例 (VC + +)](../../../ado/reference/ado-api/value-property-example-vc.md) 

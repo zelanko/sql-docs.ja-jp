@@ -14,14 +14,14 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2fce89dd6df633f8cdcf78271c63336b3ecc7b05
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924546"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760998"
 ---
 # <a name="provider-errors"></a>プロバイダー エラー
 プロバイダーエラーが発生すると、-2147467259 の実行時エラーが返されます。 このエラーが発生した場合は、アクティブな**接続**オブジェクトの**エラー**コレクションを確認します。これには、発生した問題を説明する1つ以上のエラーが含まれます。  

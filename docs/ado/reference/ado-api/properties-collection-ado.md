@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - Properties collection [ADO]
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 01c2ea6b885ed2619b79413beb09ca4bf2835162
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9d3d6d019d00f683826a417aa73c216e8fca9565
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917573"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759988"
 ---
 # <a name="properties-collection-ado"></a>Properties コレクション (ADO)
 オブジェクトの特定のインスタンスのすべての[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトを含みます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  一部の ADO**オブジェクトには、プロパティオブジェクトで**構成される**Properties**コレクションがあります。 各**プロパティ**オブジェクトは、プロバイダー固有の ADO オブジェクトの特性に対応します。  
   
 > [!NOTE]

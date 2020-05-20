@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63323fd8ed18f57a68633dce0525d1d37e4978ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 60b3a9e036bb199b72373055b299f262862a5d16
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924707"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759118"
 ---
 # <a name="persisting-data"></a>データの保持
 ポータブルコンピューティング (ラップトップの使用など) によって、接続状態と切断状態の両方で実行できるアプリケーションが生成されます。 ADO では、クライアントカーソル**レコードセット**をディスクに保存し、後で再読み込みする機能を開発者に提供することにより、このサポートが追加されました。  
@@ -112,7 +112,7 @@ Destination, PersistFormat
 'EndPersist  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このセクションでは、次のトピックを扱います。  
   
 -   [レコードセットの保持に関する詳細情報](../../../ado/guide/data/more-about-recordset-persistence.md)  

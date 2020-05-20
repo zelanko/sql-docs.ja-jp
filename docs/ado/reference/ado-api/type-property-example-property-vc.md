@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Type property [property] [ADO], VC++ example
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e13079d18c8887aa0cdba8e5ae06f86eebca897c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 16f3e7152c939567b6fdcccf670a7df26334d588
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938862"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759548"
 ---
 # <a name="type-property-example-property-vc"></a>Type プロパティの例 (プロパティ) (VC++)
 この例では、 [Type](../../../ado/reference/ado-api/type-property-ado.md)プロパティを示します。 これは、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)などのコレクションの名前と種類を一覧表示するためのユーティリティのモデルです。  

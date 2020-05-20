@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Parameter object [ADO]
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15df27e3dc48decf743a78dd4d147a22dc7cf276
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 22af5fadda96adbe67c1c03aaa5cde3527df1113
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931661"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759998"
 ---
 # <a name="parameter-object"></a>Parameter オブジェクト
 パラメーター化クエリまたはストアドプロシージャに基づいて[Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトに関連付けられたパラメーターまたは引数を表します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  多くのプロバイダーがパラメーター化コマンドをサポートしています。 これらのコマンドは、必要なアクションが1回定義されていますが、変数 (またはパラメーター) を使用してコマンドの詳細を変更します。 たとえば、SQL の SELECT ステートメントでは、パラメーターを使用して WHERE 句の一致条件を定義し、別のステートメントを使用して SORT by 句の列名を定義することができます。  
   
  **パラメーター**オブジェクトは、パラメーター化クエリに関連付けられているパラメーター、またはストアドプロシージャの in/out 引数と戻り値を表します。 プロバイダーの機能によっては、**パラメーター**オブジェクトの一部のコレクション、メソッド、またはプロパティが使用できないことがあります。  

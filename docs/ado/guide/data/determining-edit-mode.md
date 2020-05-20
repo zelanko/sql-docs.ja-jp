@@ -11,21 +11,21 @@ helpviewer_keywords:
 - editing data [ADO], edit mode
 - ADO, editing data
 ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22e63bad49586bbbc1a5616114055779cd3ea041
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6df3765b8dd9461349937fc14f6edebcaab3fbfb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925548"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761078"
 ---
 # <a name="determining-edit-mode"></a>編集モードの決定
 ADO は、現在のレコードに関連付けられている編集バッファーを保持します。 **EditMode**プロパティは、このバッファーに変更が加えられたかどうか、または新しいレコードが作成されたかどうかを示します。 現在のレコードの編集状態を確認するには、 **EditMode**を使用します。 編集プロセスが中断されている場合は、保留中の変更をテストし、 **Update**または**CancelUpdate**メソッドを使用する必要があるかどうかを判断できます。  
   
  **EditMode**は、次の表に示すいずれかの**editmodeenum**定数を返します。  
   
-|Constant|説明|  
+|定数|説明|  
 |--------------|-----------------|  
 |**adEditNone**|編集操作が実行中でないことを示します。|  
 |**adEditInProgress**|現在のレコードのデータが変更されていても保存されていないことを示します。|  

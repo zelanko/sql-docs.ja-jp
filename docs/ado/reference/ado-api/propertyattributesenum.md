@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - PropertyAttributesEnum enumeration [ADO]
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 624fa1976792a700342a114f82aa5ca6b75c70ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dcb17116d7332e9afb359a7dd47d69cb3eb75df4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931569"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759938"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 [プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトの属性を指定します。  
   
-|Constant|値|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|プロパティがプロバイダーによってサポートされていないことを示します。|  
 |**adPropRequired**|1|データソースが初期化される前に、ユーザーがこのプロパティの値を指定する必要があることを示します。|  
@@ -36,7 +36,7 @@ ms.locfileid: "67931569"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|Constant|  
+|定数|  
 |--------------|  
 |AdoEnums NOTSUPPORTED|  
 |AdoEnums。必須|  

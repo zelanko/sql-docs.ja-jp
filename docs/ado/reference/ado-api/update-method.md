@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Update method [ADO]
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6ce247905afd6ed34366424f5f905d57b42d988f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c0d75e8f9fb6d11315e327edd6f7d064c13e063
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938842"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759498"
 ---
 # <a name="update-method"></a>Update メソッド
 レコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの現在の行、または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに対して行ったすべての変更を保存します。  
@@ -40,7 +40,7 @@ record.Fields.Update
  *値*  
  任意。 単一の値を表す**バリアント**、または新しいレコードのフィールドの値を表す**バリアント**配列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="recordset"></a>レコードセット  
  [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを呼び出した後、または既存のレコードのフィールド値を変更した後に、**レコードセット**オブジェクトの現在のレコードに対して行った変更を保存するには、 **Update**メソッドを使用します。 **レコードセット**オブジェクトは更新をサポートしている必要があります。  

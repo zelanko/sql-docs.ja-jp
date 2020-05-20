@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CommandStream property [ADO]
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 23ec65380bfea16d38f02cab0a070ab69f85d525
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 20d2cb62b51a73066da242b3446a4d991f3bc79b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919746"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760412"
 ---
 # <a name="commandstream-property-ado"></a>CommandStream プロパティ (ADO)
 [Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの入力として使用されるストリームを示します。  
@@ -28,7 +28,7 @@ ms.locfileid: "67919746"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **Command**オブジェクトの入力として使用されるストリームを設定または返します。 このストリームの形式はプロバイダー固有です。詳細については、プロバイダーのドキュメントを参照してください。 このプロパティは、**コマンド**の入力の文字列を指定するために使用される[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティに似ています。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Commandstream**と**CommandText**は相互に排他的です。 ユーザーが**Commandstream**プロパティを設定すると、 **CommandText**プロパティが空の文字列 ("") に設定されます。 ユーザーが**CommandText**プロパティを設定した場合、 **Commandstream**プロパティは**Nothing**に設定されます。  
   
  コマンドの動作。**パラメーターの更新**とコマンドの**Prepare**メソッドは、プロバイダーによって定義されます。 ストリーム内のパラメーターの値は更新できません。  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Status property [ADO Recordset], Visual Basic example
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f1f418ed4c8ac74a023203606ebf3934129525a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d2789a69b9ac96e3dbe42ab3828d5afe49fc387a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916791"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759698"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status プロパティの例 (Recordset) (VB)
 この例では、 [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)プロパティを使用して、バッチ更新が行われる前にバッチ操作で変更されたレコードを表示します。  

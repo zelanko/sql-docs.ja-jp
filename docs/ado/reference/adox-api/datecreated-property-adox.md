@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - DateCreated property [ADOX]
 ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0151b6388a19fc95227cbfa55a571e0a797d0acc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 566e815350bd59effc4802495bda4846e9a77691
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966575"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759218"
 ---
 # <a name="datecreated-property-adox"></a>DateCreated プロパティ (ADOX)
 オブジェクトが作成された日付を示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "67966575"
 ## <a name="return-values"></a>戻り値  
  作成された日付を指定する**Variant**値を返します。 **DateCreated**がプロバイダーでサポートされていない場合、値は null になります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  新しく追加されたオブジェクトの場合、 **DateCreated**プロパティは null になります。 新しい[ビュー](../../../ado/reference/adox-api/view-object-adox.md)または[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)を追加した後、 [Views](../../../ado/reference/adox-api/views-collection-adox.md)または[Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md)コレクションの[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを呼び出して、 **DateCreated**プロパティの値を取得する必要があります。  
   
 ## <a name="applies-to"></a>適用対象  

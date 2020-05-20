@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - CommandTypeEnum enumeration [ADO]
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a2de155d9c4a61246245b2c7f9c3c73a535994a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68572a642333e4e9c2c334cd7680b96b0cacced3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919682"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760378"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 コマンド引数をどのように解釈するかを指定します。  
   
  ユーザーが指定した*Commandstring*値を検証して、ADO にとって危険な可能性のあるコマンドを挿入する機会をアプリケーションユーザーに与えないようにすることが重要です。  
   
-|Constant|値|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|は、コマンドの型引数を指定していません。|  
 |**Adodb.commandtypeenum.adcmdtext**|1|[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)をコマンドまたはストアドプロシージャの呼び出しのテキスト定義として評価します。|  
@@ -40,7 +40,7 @@ ms.locfileid: "67919682"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|Constant|  
+|定数|  
 |--------------|  
 |AdoEnums|  
 |AdoEnums|  
