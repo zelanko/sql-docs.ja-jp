@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3557f9f77a310a9e72e8a9fb1e11a6976256d2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982339"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811425"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>dm_sql_referencing_entities (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "73982339"
   
 -   サーバーレベルの DDL トリガー  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降)、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降)、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -99,10 +99,10 @@ sys.dm_sql_referencing_entities (
 ## <a name="remarks"></a>Remarks  
  次の表に、依存関係情報が作成および管理されるエンティティの種類を示します。 依存関係情報は、ルール、既定値、一時テーブル、一時ストアドプロシージャ、またはシステムオブジェクトに対して作成または管理されません。  
   
-|エンティティの種類|参照元エンティティ|参照先エンティティ|  
+|エンティティ型|参照元エンティティ|参照先エンティティ|  
 |-----------------|------------------------|-----------------------|  
 |テーブル|はい*|はい|  
-|表示|はい|はい|  
+|View|はい|はい|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ**|はい|はい|  
 |CLR ストアド プロシージャ (CLR stored procedure)|いいえ|はい|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|はい|はい|  
@@ -118,7 +118,7 @@ sys.dm_sql_referencing_entities (
 |XML スキーマ コレクション|いいえ|はい|  
 |パーティション関数|いいえ|はい|  
   
- \*テーブルは、計算列、CHECK 制約、または DEFAULT 制約[!INCLUDE[tsql](../../includes/tsql-md.md)]の定義でモジュール、ユーザー定義型、または XML スキーマコレクションを参照している場合にのみ、参照元エンティティとして追跡されます。  
+ \*テーブルは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 計算列、check 制約、または DEFAULT 制約の定義でモジュール、ユーザー定義型、または XML スキーマコレクションを参照している場合にのみ、参照元エンティティとして追跡されます。  
   
  ** 1 より大きな整数値を持つ番号付きストアド プロシージャは、参照元エンティティとしても、参照先エンティティとしても追跡されません。  
   
@@ -154,7 +154,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. 指定された型を参照するエンティティを返す  
- 次の例では、別名型`dbo.Flag`を参照するエンティティを返します。 結果セットは、2つのストアドプロシージャがこの型を使用することを示しています。 この`dbo.Flag`型は、 `HumanResources.Employee`テーブル内の複数の列の定義でも使用されます。ただし、この型はテーブルの計算列、CHECK 制約、または DEFAULT 制約の定義に含まれていないため、 `HumanResources.Employee`テーブルに対して行は返されません。  
+ 次の例では、別名型を参照するエンティティを返し `dbo.Flag` ます。 結果セットは、2つのストアドプロシージャがこの型を使用することを示しています。 この型は、テーブル `dbo.Flag` 内の複数の列の定義でも使用されます `HumanResources.Employee` 。ただし、この型はテーブルの計算列、check 制約、または DEFAULT 制約の定義に含まれていないため、テーブルに対して行は返されません `HumanResources.Employee` 。  
   
 ```sql  
 USE AdventureWorks2012;  

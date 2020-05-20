@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_schedule
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 51e21d189a9302c2dc7b74a013846460e9cb7bc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bad747d2c88b7d159b9d043d12c81cc380c84c7b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946643"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809258"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントスケジュールの設定を変更します。  
+  エージェントスケジュールの設定を変更し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,11 +65,11 @@ sp_update_schedule
   
 `[ @freq_type = ] freq_type`ジョブがいつ実行されるかを示す値です。 *freq_type*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**4**|毎日|  
-|**8**|週単位|  
+|**8**|週次|  
 |**まで**|月 1 回|  
 |**32**|毎月 ( *freq 間隔*を基準)|  
 |**64**|SQLServerAgent サービスの開始時に実行する|  
@@ -89,7 +89,7 @@ sp_update_schedule
   
 `[ @freq_subday_type = ] freq_subday_type`*Freq_subday_interval * ** の単位を指定します。 *freq_subday_type*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。  
   
-|値|説明 (単位)|  
+|[値]|説明 (単位)|  
 |-----------|--------------------------|  
 |**0x1**|指定された時間|  
 |**0x2**|Seconds|  
@@ -100,13 +100,13 @@ sp_update_schedule
   
 `[ @freq_relative_interval = ] freq_relative_interval`*Freq_interval*が**32** (月単位) の場合、各月における*freq_interval*のジョブの発生回数。 *freq_relative_interval*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。  
   
-|値|説明 (単位)|  
+|[値]|説明 (単位)|  
 |-----------|--------------------------|  
-|**1**|First (先頭へ)|  
-|**2**|秒|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|Last (最後へ)|  
+|**まで**|末尾|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`ジョブのスケジュールされた実行の間隔を週または月単位で指定します。 *freq_recurrence_factor*は*freq_type*が**8**、 **16**、または**32**の場合にのみ使用されます。 *freq_recurrence_factor*は**int**,、既定値は**0**です。  
   
@@ -144,7 +144,7 @@ sp_update_schedule
  **Sysadmin**のメンバーだけが、別のユーザーが所有するスケジュールを変更できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 `NightlyJobs`スケジュールの有効な状態`0`をに変更し、 `terrid`所有者をに設定します。  
+ 次の例では、スケジュールの有効な状態 `NightlyJobs` をに変更 `0` し、所有者をに設定し `terrid` ます。  
   
 ```  
 USE msdb ;  

@@ -19,14 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 55d7ad0dfd941102cfeb6661e65980f980fa8b2d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 866f05904cfa1b6c7b3ce6b20a59a5be3096be2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770985"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810707"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*のデータ型は**sysname**で、 **%** 既定値はです。これは、すべてのパブリケーションについて、指定した*dynamic_snapshot_jobid*と*dynamic_snapshot_jobname*一致するすべてのフィルター選択されたデータスナップショットジョブに関する情報を返します。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*のデータ型は**sysname**で、既定値はです **%** 。これは、すべてのパブリケーションについて、指定した*dynamic_snapshot_jobid*と*dynamic_snapshot_jobname*一致するすべてのフィルター選択されたデータスナップショットジョブに関する情報を返します。  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`フィルター選択されたデータスナップショットジョブの名前を指定します。 *dynamic_snapshot_jobname*は**sysname**であり、既定**%** 値は ' です。これは、指定された*dynamic_snapshot_jobid*を持つパブリケーションのすべての動的ジョブを返します。 ジョブの作成時にジョブ名が明示的に指定されなかった場合、ジョブ名は次の形式になります。  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`フィルター選択されたデータスナップショットジョブの名前を指定します。 *dynamic_snapshot_jobname*は**sysname**であり、既定値は **%** ' です。これは、指定された*dynamic_snapshot_jobid*を持つパブリケーションのすべての動的ジョブを返します。 ジョブの作成時にジョブ名が明示的に指定されなかった場合、ジョブ名は次の形式になります。  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -59,9 +59,9 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|フィルター選択されたデータスナップショットジョブを識別します。|  
+|**ID**|**int**|フィルター選択されたデータスナップショットジョブを識別します。|  
 |**job_name**|**sysname**|フィルター選択されたデータスナップショットジョブの名前。|  
-|**job_id**|**uniqueidentifier**|ディストリビューター側[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエージェントジョブを識別します。|  
+|**job_id**|**uniqueidentifier**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディストリビューター側のエージェントジョブを識別します。|  
 |**dynamic_filter_login**|**sysname**|パブリケーションに対して定義されたパラメーター化された行フィルターの[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)関数を評価するために使用される値。|  
 |**dynamic_filter_hostname**|**sysname**|パブリケーションに対して定義されたパラメーター化された行フィルターの[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)関数を評価するために使用される値。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|パラメーター化された行フィルターが使用されている場合に、スナップショットファイルの読み取り元フォルダーへのパス。|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_unbindrule
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 54c5c0f9bfa6bc64a79e0f4dcde72c09b2a281fb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095857"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809423"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ## <a name="examples"></a>例  
   
 ### <a name="a-unbinding-a-rule-from-a-column"></a>A. 列からのルールのバインド解除  
- 次の例では、 `startdate` `employees`テーブルの列からルールをバインド解除します。  
+ 次の例では、テーブルの列からルールをバインド解除し `startdate` `employees` ます。  
   
 ```  
 EXEC sp_unbindrule 'employees.startdate';  

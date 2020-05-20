@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5c5807225c2bda185b61050433cc3378b25b6fe1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096026"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809814"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義イベントを作成します。  
+  でユーザー定義イベントを作成し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 >**注:** このストアドプロシージャは**非推奨とされます**。 他のすべてのトレース関連のストアド プロシージャの使用は非推奨とされます。  
   
@@ -61,7 +61,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**13**|メモリ不足。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
   
 ## <a name="remarks"></a>Remarks  
- **sp_trace_generateevent**は、 **xp_trace_\* **の拡張ストアドプロシージャによって以前に実行された多くの操作を実行します。 **Xp_trace_generate_event**ではなく**sp_trace_generateevent**を使用します。  
+ **sp_trace_generateevent**は、 **xp_trace_ \* **の拡張ストアドプロシージャによって以前に実行された多くの操作を実行します。 **Xp_trace_generate_event**ではなく**sp_trace_generateevent**を使用します。  
   
  **Sp_trace_generateevent**では、ユーザー定義イベントの ID 番号のみを使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で他のイベント ID 番号を使用すると、エラーが発生します。  
   
@@ -70,7 +70,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは ALTER TRACE 権限を持っている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、サンプルテーブルにユーザーが構成可能なイベントを作成します。  
   
 ```  

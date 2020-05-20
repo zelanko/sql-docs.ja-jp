@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrolemember
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 73a8052af35854b0e2a1d557b1b31050dbb560ea
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010764"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810734"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ## <a name="remarks"></a>Remarks  
  データベースロールのメンバーを表示するには、sp_helprolemember を使用します。  
   
- すべてのログインは public のメンバーです。 内部で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は public がロールとして実装されていないため、sp_helpsrvrolemember はパブリックロールを認識しません。  
+ すべてのログインは public のメンバーです。 内部で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は public がロールとして実装されていないため、sp_helpsrvrolemember はパブリックロールを認識しません。  
   
  サーバーロールのメンバーを追加または削除するには、「 [ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)」を参照してください。  
   
@@ -77,8 +77,8 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、 `sysadmin`固定サーバーロールのメンバーを一覧表示します。  
+## <a name="examples"></a>例  
+ 次の例では、固定サーバーロールのメンバーを一覧表示し `sysadmin` ます。  
   
 ```  
 EXEC sp_helpsrvrolemember 'sysadmin';  

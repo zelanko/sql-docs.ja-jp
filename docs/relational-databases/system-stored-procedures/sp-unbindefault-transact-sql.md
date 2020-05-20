@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_unbindefault
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7616401e8dcc9461d5eb3c7d67aedccf3a8c7af9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7fdce8d2fad56d56e13343bc3397353e72d3be1b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095880"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809627"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ EXEC sp_unbindefault 'ssn';
 ```  
   
 ### <a name="c-using-the-futureonly_flag"></a>C. Futureonly_flag の使用  
- 次の例では、既存`ssn` `ssn`の列に影響を与えずに別名データ型の将来の使用をバインド解除します。  
+ 次の例では、既存の列に影響を与えずに別名データ型の将来の使用をバインド解除し `ssn` `ssn` ます。  
   
 ```  
 EXEC sp_unbindefault 'ssn', 'futureonly';  

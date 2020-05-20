@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8d6d418bcdefbb3977a98f04743b7e1b2a58bf54
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982115"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810601"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +59,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |列|データ型|説明|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|行の作成のタイムスタンプを示します。 単一の行セットの各行は、同じタイムスタンプを持っています。|  
-|**component_type**|**sysname**|行に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスレベルコンポーネントまたは Always On 可用性グループの情報が含まれているかどうかを示します。<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
+|**component_type**|**sysname**|行に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスレベルコンポーネントまたは Always On 可用性グループの情報が含まれているかどうかを示します。<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
 |**component_name**|**sysname**|コンポーネントの名前または可用性グループの名前を示します。<br /><br /> システム<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<可用性グループの名前>*|  
-|**state**|**int**|コンポーネントの正常性状態を示します。<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**状態**|**int**|コンポーネントの正常性状態を示します。<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|状態列について説明します。 State 列の値に対応する説明は次のとおりです。<br /><br /> 0: 不明<br /><br /> 1: クリーン<br /><br /> 2: 警告<br /><br /> 3: エラー|  
 |**データ**|**varchar (max)**|コンポーネントに固有のデータを指定します。|  
   
@@ -77,14 +77,14 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **イベント**: サーバーによって記録されたエラーとイベントについて、ストアドプロシージャを介してデータを収集します。これには、リングバッファーの例外の詳細、メモリブローカーに関するリングバッファーイベント、メモリ不足、スケジューラモニター、バッファープール、スピンロック、セキュリティ、および接続が含まれます。 イベントには、常に状態として0が表示されます。  
   
--   **可用性グループの名前>: 指定した可用性グループのデータを収集します (component_type = "Always On: AvailabilityGroup" の場合)。 \< **  
+-   ** \< 可用性グループの名前>**: 指定した可用性グループのデータを収集します (component_type = "Always On: AvailabilityGroup" の場合)。  
   
 ## <a name="remarks"></a>Remarks  
 障害の観点から見ると、システム、リソース、および query_processing コンポーネントはエラーの検出に利用され、io_subsystem とイベントのコンポーネントは診断目的でのみ利用されます。  
   
 次の表は、コンポーネントと関連する正常性状態の対応を示しています。  
   
-|コンポーネント|クリーン (1)|警告 (2)|エラー (3)|不明 (0)|  
+|Components|クリーン (1)|警告 (2)|エラー (3)|不明 (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |システム|x|x|x||  
 |resource|x|x|x||  
@@ -100,7 +100,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="permissions"></a>アクセス許可  
 サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 拡張セッションを使用して正常性の情報をキャプチャし、SQL Server の外部にあるファイルに保存することをお勧めします。 そのため、エラーが発生してもアクセスできます。 次の例は、イベント セッションからの出力をファイルに保存します。  
 ```sql  
 CREATE EVENT SESSION [diag]  
