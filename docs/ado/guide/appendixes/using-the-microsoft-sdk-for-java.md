@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Java (Microsoft SDK for)
 - Microsoft SDK for Java [ADO]
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0e6c5f2eb5ad792141e77122ff9e132d97f62ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ae18edeeb66691f0875a196e11e10f9f761b30c5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926463"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761560"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Microsoft SDK for Java を使用する
 
@@ -29,7 +29,7 @@ Microsoft SDK for Java は、Microsoft Internet Explorer 環境の developer kit
   
  Jactivex ユーティリティは、タイプライブラリからクラスを生成しますが、コマンドラインでのみ呼び出すことができます。 この機能は、Visual J++ 開発環境には統合されていません。 Java タイプライブラリウィザードによって生成されるクラスとは異なり、SDK によって作成されたクラスラッパーにステップインできます。 これは、コードで ADO ラッパークラスを使用する方法をデバッグする場合に便利です。  
   
- この機構は、ADO タイプライブラリを読み取り、アプリケーション内でインスタンス化できるクラスを生成します。 これらのクラスは、<windows directory \\ \>\Java\trustlib\msado15. に生成されます。  
+ この機構は、ADO タイプライブラリを読み取り、アプリケーション内でインスタンス化できるクラスを生成します。 これらのクラスは、 \\<windows directory \Java\trustlib\msado15. に生成されます。 \>  
   
  Microsoft SDK for Java を使用して Java で ADO アプリケーションを作成することは、ソースコードの観点から Java タイプライブラリウィザードを使用することと基本的に同じです。 サンプルコードについては、「 [ADO Java クラスラッパー](../../../ado/guide/appendixes/ado-java-class-wrappers.md)」を参照してください。 実際の違いは、次の手順に示すように、最初にラッパークラスを生成する方法です。  
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, VBScript
 - VBScript [ADO]
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f242a3596735a4bc43256d05b87100e71295a3da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2029b6d661e520a4ed18631c611ed9e283e4aa7c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926437"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761540"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript での ADO プログラミング
 ## <a name="creating-an-ado-project"></a>ADO プロジェクトの作成  
@@ -81,6 +81,6 @@ Response.Write("Success!")
   
 -   VBScript は、さまざまな種類のデータを保持できる Variant データ型のみをサポートしています。 必要なデータをバリアントデータ型に格納すると、VBScript によって実行されるキャストによってデータが適切に機能します。 ADO が必要とする型を認識し、それに応じてバリアントの値を変換します。  
   
--   VBScript 内で **>on error \<goto label**を使用することはできません。  
+-   VBScript 内で **>on error goto \< label**を使用することはできません。  
   
 -   VBScript では、 **Msgbox**、 **Date**、 **IsNumeric**などの組み込みの Visual Basic 関数の一部がサポートされています。 ただし、VBScript は Visual Basic のサブセットであるため、一部の組み込み関数はサポートされていません。 たとえば、VBScript では**Format**関数とファイル i/o 関数はサポートされていません。

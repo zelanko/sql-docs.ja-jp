@@ -11,14 +11,14 @@ helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 79ba71c38f6ccff4e5a55471839df09252344c68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cfae068fdac58f7e6e6d1320b301aa9c52701dd4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927024"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761670"
 ---
 # <a name="ado-programming-task-table"></a>ADO プログラミングタスクテーブル
 次の表に、 *ADO プログラマーズガイド*に含まれるプログラミングタスクと、各タスクのリファレンスを示します。 これらの参照には、テキストの説明、またはタスクを実行する ADO 機能に関する情報が記載されているコード例を使用できます。

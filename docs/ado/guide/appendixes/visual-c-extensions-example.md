@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions example
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d3517f40b15081ca2ee4621d07455cc13bb577d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d48315598c17b9462e9a42de58bd54313a4fd794
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926392"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761510"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ 拡張機能の例
 このプログラムは、フィールドから値を取得し、C/c + + 変数に変換する方法を示しています。  
   
- また、この例では "スマートポインター" を利用しています。これは、 `QueryInterface` **IADORecordBinding**インターフェイスの呼び出しと参照カウントの COM 固有の詳細を自動的に処理します。  
+ また、この例では "スマートポインター" を利用 `QueryInterface` しています。これは、 **IADORecordBinding**インターフェイスの呼び出しと参照カウントの COM 固有の詳細を自動的に処理します。  
   
  スマートポインターを使用しない場合、コードは次のようになります。  
   
@@ -38,7 +38,7 @@ TESTHR(pRs->QueryInterface(
 if (picRs) picRs->Release();  
 ```  
   
- スマートポインターを使用すると、 `IADORecordBindingPtr`次のステートメント`IADORecordBinding`を使用してインターフェイスから型を派生させます。  
+ スマートポインターを使用すると、次の `IADORecordBindingPtr` ステートメントを使用してインターフェイスから型を派生させ `IADORecordBinding` ます。  
   
 ```cpp
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
@@ -50,7 +50,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- Visual C++ の拡張機能は**Recordset**オブジェクトによって実装されるため、スマートポインター `picRs`のコンストラクターは、_`RecordsetPtr`ポインターを`pRs`受け取ります。 コンストラクターは、 `QueryInterface` `IADORecordBinding`を`pRs`使用してインターフェイスを検索します。  
+ Visual C++ の拡張機能は**Recordset**オブジェクトによって実装されるため、スマートポインターのコンストラクターは、 `picRs` _ `RecordsetPtr` ポインターを受け取り `pRs` ます。 コンストラクターは `QueryInterface` 、を使用して `pRs` インターフェイスを検索し `IADORecordBinding` ます。  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  

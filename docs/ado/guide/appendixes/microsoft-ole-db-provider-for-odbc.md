@@ -11,14 +11,14 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b84ce6679071cc3ea90ce23b4dcd9f8e1894bb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926636"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761630"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC の概要
 ADO または RDS プログラマーにとって理想的な世界は、ADO がデータソースを直接呼び出すことができるように、すべてのデータソースが OLE DB インターフェイスを公開することです。 OLE DB インターフェイスを実装しているデータベースベンダーはますます増えていますが、一部のデータソースはまだこのように公開されていません。 ただし、現在使用されている DBMS システムのほとんどは、ODBC を使用してアクセスできます。
@@ -49,7 +49,7 @@ MSDASQL
 
  文字列は、次のキーワードで構成されています。
 
-|キーワード|説明|
+|Keyword|説明|
 |-------------|-----------------|
 |**プロバイダー**|ODBC の OLE DB プロバイダーを指定します。|
 |**DSN**|データソース名を指定します。|
@@ -80,7 +80,7 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
  **DSN**または**FileDSN**を使用する場合は、Windows のコントロールパネルで ODBC データソースアドミニストレーターを使用して定義する必要があります。 Microsoft Windows 2000 では、ODBC 管理者は [管理ツール] の下にあります。 以前のバージョンの Windows では、ODBC 管理者アイコンには、 **32 ビット odbc**または**odbc**のみという名前が付けられていました。
 
  **DSN**を設定する代わりに、ODBC ドライバー (**driver =**) を指定することもできます。たとえば、"SQL Server;" のようにサーバー名 (**server =**) を指定できます。データベース名 (**データベース =**) を指定します。
@@ -172,7 +172,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  標準の ADO**レコードセット**プロパティの可用性:
 
-|プロパティ|ForwardOnly|動的|Keyset|Static|
+|プロパティ|ForwardOnly|動的|Keyset|静的|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|利用不可|利用不可|読み取り/書き込み|読み取り/書き込み|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|利用不可|利用不可|読み取り/書き込み|読み取り/書き込み|
@@ -191,24 +191,24 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|読み取り/書き込み|利用不可|読み取り専用|読み取り専用|
 |[ソース](../../../ado/reference/ado-api/source-property-ado-recordset.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
-|[状態](../../../ado/reference/ado-api/state-property-ado.md)|読み取り専用|読み取り専用|読み取り専用|読み取り専用|
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|読み取り専用|読み取り専用|読み取り専用|読み取り専用|
 |[状態](../../../ado/reference/ado-api/status-property-ado-recordset.md)|読み取り専用|読み取り専用|読み取り専用|読み取り専用|
 
  [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティと[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)プロパティは、MICROSOFT OLE DB Provider for ODBC のバージョン1.0 で ADO が使用されている場合は書き込み専用です。
 
  標準の ADO**レコードセット**メソッドの可用性:
 
-|メソッド|ForwardOnly|動的|Keyset|Static|
+|メソッド|ForwardOnly|動的|Keyset|静的|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|はい|はい|はい|はい|
 |[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)|はい|はい|はい|はい|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|はい|はい|はい|はい|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|はい|はい|はい|はい|
 |[複製](../../../ado/reference/ado-api/clone-method-ado.md)|いいえ|いいえ|はい|はい|
-|[閉じる](../../../ado/reference/ado-api/close-method-ado.md)|はい|はい|はい|はい|
+|[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|はい|はい|はい|はい|
 |[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|はい|はい|はい|はい|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|はい|はい|はい|はい|
-|[合わせ](../../../ado/reference/ado-api/move-method-ado.md)|はい|はい|はい|はい|
+|[移動](../../../ado/reference/ado-api/move-method-ado.md)|はい|はい|はい|はい|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|はい|はい|はい|
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|いいえ|はい|はい|はい|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|はい|はい|はい|
@@ -218,7 +218,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|はい|はい|はい|はい|
 |[再同期](../../../ado/reference/ado-api/resync-method.md)|いいえ|いいえ|はい|はい|
 |[サポート](../../../ado/reference/ado-api/supports-method.md)|はい|はい|はい|はい|
-|[Update](../../../ado/reference/ado-api/update-method.md)|はい|はい|はい|はい|
+|[アップデート](../../../ado/reference/ado-api/update-method.md)|はい|はい|はい|はい|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|はい|はい|はい|はい|
 
  * Microsoft Access データベースではサポートされていません。
@@ -242,7 +242,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |列の定義|DBPROP_COLUMNDEFINITION|
 |Connect Timeout|DBPROP_INIT_TIMEOUT|
 |現在のカタログ|DBPROP_CURRENTCATALOG|
-|データ ソース|DBPROP_INIT_DATASOURCE|
+|Data Source|DBPROP_INIT_DATASOURCE|
 |データ ソース名|DBPROP_DATASOURCENAME|
 |データソースオブジェクトのスレッドモデル|DBPROP_DSOTHREADMODEL|
 |DBMS 名|DBPROP_DBMSNAME|
@@ -255,7 +255,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |分離レベル|DBPROP_SUPPORTEDTXNISOLEVELS|
 |分離の保持|DBPROP_SUPPORTEDTXNISORETAIN|
 |[Locale Identifier]|DBPROP_INIT_LCID|
-|インストール先|DBPROP_INIT_LOCATION|
+|Location|DBPROP_INIT_LOCATION|
 |インデックスの最大サイズ|DBPROP_MAXINDEXSIZE|
 |行の最大サイズ|DBPROP_MAXROWSIZE|
 |行の最大サイズに BLOB が含まれる|DBPROP_MAXROWSIZEINCLUDESBLOB|

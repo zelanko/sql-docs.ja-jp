@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a051329efa32a155cc368d3d01c38b40593b8898
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926452"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761550"
 ---
 # <a name="visual-c-extensions"></a>Visual C++ 拡張機能
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding インターフェイス
@@ -118,7 +118,7 @@ Update(CADORecordBinding *binding)
 |*Buffer*|**レコードセット**フィールドが格納される C/c + + 変数の名前。|
 |*[サイズ]*|*バッファー*の最大サイズ (バイト単位)。 *Buffer*に可変長文字列が含まれている場合は、終了ゼロに対してスペースを許可します。|
 |*状態*|*バッファー*の内容が有効かどうか、およびフィールドから*データ型*への変換が成功したかどうかを示す変数の名前。<br /><br /> この変数の最も重要な2つの値は**Adfldok**です。これは、変換が成功したことを意味します。と**Adfldnull**。これは、フィールドの値が VT_NULL 型のバリアントであり、単に空ではないことを意味します。<br /><br /> *状態*に使用できる値は、次の表「状態の値」に記載されています。|
-|*変更*|ブール型のフラグ。TRUE の場合、ADO は、対応する**レコードセット**フィールドを*Buffer*に含まれる値で更新することが許可されていることを示します。<br /><br /> ブール型の*modify*パラメーターを TRUE に設定して、ADO でバインドされたフィールドを更新できるようにします。また、フィールドを確認し、変更しない場合は FALSE に設定します。|
+|*Modify*|ブール型のフラグ。TRUE の場合、ADO は、対応する**レコードセット**フィールドを*Buffer*に含まれる値で更新することが許可されていることを示します。<br /><br /> ブール型の*modify*パラメーターを TRUE に設定して、ADO でバインドされたフィールドを更新できるようにします。また、フィールドを確認し、変更しない場合は FALSE に設定します。|
 |*[精度]*|数値変数で表すことができる桁数。|
 |*スケール*|数値変数の小数点以下の桁数。|
 |*[データ型]*|*バッファー*内のデータの実際の長さを格納する4バイト変数の名前。|
@@ -128,7 +128,7 @@ Update(CADORecordBinding *binding)
 
  データを設定するときに、*状態*を**Adfldnull**に設定して、**レコードセット**フィールドを null に設定する必要があることを示すことができます。
 
-|Constant|値|説明|
+|定数|[値]|[説明]|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Null 以外のフィールド値が返されました。|
 |**adFldBadAccessor**|1|バインドが無効です。|

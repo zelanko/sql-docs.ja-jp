@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual Basic
 - Visual Basic [ADO]
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22286cbe571420475cf273ca377d16e79610fc3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e86bc925313a24a390dffc8f4e2d9e91e4db1c61
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926565"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761590"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Microsoft Visual Basic および Visual Basic for Applications での ADO の使用
 Visual Basic と Visual Basic for Applications のどちらを使用する場合でも、ADO プロジェクトの設定と ADO コードの記述は似ています。 このトピックでは、Visual Basic と Visual Basic for Applications の両方で ADO を使用する方法について説明し、相違点について説明します。
@@ -80,7 +80,7 @@ Set conn = New ADODB.Connection
 ```
 
 > [!NOTE]
->  プロジェクトで ADO ライブラリを正しく参照し`ADODB`ている場合は、 **Dim**ステートメントで progid を明示的に使用する必要はありません。 ただし、これを使用すると、他のライブラリとの名前の競合を防ぐことができます。
+>  `ADODB`プロジェクトで ADO ライブラリを正しく参照している場合は、 **Dim**ステートメントで progid を明示的に使用する必要はありません。 ただし、これを使用すると、他のライブラリとの名前の競合を防ぐことができます。
 
 > [!NOTE]
 >  たとえば、同じプロジェクトに ADO と DAO の両方への参照を含める場合は、次のコードのように、**レコードセット**オブジェクトをインスタンス化するときに使用するオブジェクトモデルを指定するための修飾子を含める必要があります。

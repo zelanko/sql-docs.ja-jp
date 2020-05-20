@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e956ca5486485c3dde8079f6b9067a8fef7e2f3a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926625"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761640"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle の概要
 > [!IMPORTANT]
@@ -47,7 +47,7 @@ MSDAORA
 
  文字列は、次のキーワードで構成されています。
 
-|キーワード|説明|
+|Keyword|説明|
 |-------------|-----------------|
 |**プロバイダー**|Oracle の OLE DB プロバイダーを指定します。|
 |**データ ソース**|サーバーの名前を指定します。|
@@ -67,7 +67,7 @@ MSDAORA
 |**ウィンドウ ハンドル**|追加情報の入力を求めるために使用するウィンドウハンドルを示します。|
 |**[Locale Identifier]**|ユーザーの言語に関連する設定を指定する32ビットの一意の数値 (1033 など) を示します。 これらの設定は、日付と時刻を書式設定する方法、アルファベット順に並べ替えられる項目、文字列を比較する方法などを指定します。|
 |**OLE DB サービス**|有効または無効にする OLE DB サービスを指定するビットマスクを示します。|
-|**Prompt**|接続の確立中にユーザーにプロンプトを表示するかどうかを示します。|
+|**プロンプト**|接続の確立中にユーザーにプロンプトを表示するかどうかを示します。|
 |**拡張プロパティ**|プロバイダー固有の拡張接続情報を含む文字列。 このプロパティは、プロパティメカニズムでは記述できないプロバイダー固有の接続情報に対してのみ使用します。|
 
 ## <a name="see-also"></a>参照

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programmer's guide
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 91200b79a075f594968fd5700993d96219e35b40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 399dd83a531267ada3456ccbe9c71308a7c99b92
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927049"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761690"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>Ado オブジェクトを使用するための ADO プログラマーズガイド
 このドキュメントでは、ADO オブジェクトを使用してさまざまなデータソースのデータを操作する方法の概要について説明します。 最初に、新しい機能の概要と、ADO コンポーネントのインストール、使用、および再配布のための要件について説明します。 次のセクションでは、さまざまな種類の ADO オブジェクトの使用について説明します。 最後に、Microsoft が提供するさまざまなデータおよびサービスプロバイダー、エラーメッセージ、および ADO を複数のプログラミング言語で使用する方法に関するヒントと、サンプルと用語集について説明します。

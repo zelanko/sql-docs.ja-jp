@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5c60567da677564c168f0601625686bdfb8b3d67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3ad2ebe195bdcdf97548f040f3ef7dcc1fb1a38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926598"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761610"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB リモート処理プロバイダーの概要
 Microsoft OLE DB リモート処理プロバイダーを使用すると、クライアントコンピューターのローカルユーザーは、リモートコンピューター上のデータプロバイダーを呼び出すことができます。 リモートコンピューターのローカルユーザーの場合と同様に、リモートコンピューターのデータプロバイダーパラメーターを指定します。 次に、リモートコンピューターにアクセスするためにリモート処理プロバイダーによって使用されるパラメーターを指定します。 これにより、ローカルユーザーと同じようにリモートコンピューターにアクセスできます。
@@ -37,7 +37,7 @@ Microsoft OLE DB リモート処理プロバイダーを使用すると、クラ
 ## <a name="additional-keywords"></a>その他のキーワード
  このサービスプロバイダーが呼び出されると、次の追加のキーワードが関連します。
 
-|キーワード|説明|
+|Keyword|説明|
 |-------------|-----------------|
 |**データ ソース**|リモートデータソースの名前を指定します。 これは、処理のために OLE DB リモート処理プロバイダーに渡されます。<br /><br /> このキーワードは、RDS に相当し[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトの[Connect](../../../ado/reference/rds-api/connect-property-rds.md)プロパティ。|
 
@@ -69,7 +69,7 @@ Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
  ADO 2.0 では、OLE DB リモート処理プロバイダーは、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト**Open**メソッドの*ActiveConnection*パラメーターでのみ指定できました。 ADO 2.1 以降では、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト**Open**メソッドの*ConnectionString*パラメーターでプロバイダーを指定することもできます。
 
  RDS に相当する **。DataControl** Object [SQL](../../../ado/reference/rds-api/sql-property.md)プロパティは使用できません。 代わりに、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト**Open** method *Source*引数が使用されます。

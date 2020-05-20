@@ -10,14 +10,14 @@ ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a839ffc977981c977c2675f25dae4d505e89b081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cc3f3e0f70864444e4ff07ba16ac37cbd42234df
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926059"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761308"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO イベントのインスタンス化: Visual C++
 ここでは、Microsoft® Visual C++®で ADO イベントをインスタンス化する方法について説明します。 詳細については、「 [ADO Events Model example (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) 」を参照してください。  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8f4efddad1b55ce57c62ce52418539ec06599bb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3819ba4951307a6f1ada11030fdc2808e568df0d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925910"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761228"
 ---
 # <a name="boundaries-of-a-recordset"></a>レコードセットの境界
 **レコードセット**では、データセットの先頭と末尾を区切るために、 **BOF**プロパティと**EOF**プロパティがサポートされています。 **BOF**と**EOF**は、**レコードセット**の先頭と末尾に配置される "ファントム" レコードと考えることができます。 **BOF**と**EOF**をカウントすると、サンプル**レコードセット**は次のようになります。  
