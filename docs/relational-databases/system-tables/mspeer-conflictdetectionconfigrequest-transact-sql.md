@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_conflictdetectionconfigurerequest
 ms.assetid: 83afa0ca-707e-4468-a888-228268ed4e10
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 090236bd5e0bd0429985ff9c54039a576950ec84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3fa3f6ead24faff78fd37eeb4e7cd9d427346d00
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75322099"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829206"
 ---
 # <a name="mspeer_conflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "75322099"
 |sent_date|**datetime**|競合構成要求が開始された日付と時刻。|  
 |timeout|**int**|すべてのピアから競合情報が返されるのをプロシージャが待機する時間です。|  
 |modified_date|**datetime**|フェーズが完了した日付と時刻。|  
-|progress_phase|**nvarchar(32)**|次のいずれかの値を使用して、処理の現在のフェーズを識別します。<br /><br /> Started<br /><br /> トポロジの探索<br /><br /> 収集 (ステータスを)<br /><br /> 収集された状態|  
+|progress_phase|**nvarchar(32)**|次のいずれかの値を使用して、処理の現在のフェーズを識別します。<br /><br /> 開始済み<br /><br /> トポロジの探索<br /><br /> 収集 (ステータスを)<br /><br /> 収集された状態|  
 |phase_timed_out|**bit**|現在のフェーズがタイムアウトしたかどうかを示します。|  
   
 ## <a name="see-also"></a>参照  

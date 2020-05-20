@@ -21,15 +21,15 @@ helpviewer_keywords:
 - server scoped dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server]
 ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ab6b2c35bb3507dbf7debc4b2e0d5f3a27df937
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05d1cde6aa017bdfa34ed6efd724f258e16f9aeb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68043131"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828970"
 ---
 # <a name="system-dynamic-management-views"></a>システム動的管理ビュー
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68043131"
   動的管理ビューと動的管理関数では、サーバーの状態情報が返されます。返された情報は、サーバー インスタンスのヘルス状態の監視、問題の診断、パフォーマンスのチューニングに使用できます。  
   
 > [!IMPORTANT]  
->  動的管理ビューおよび関数は、実装固有の内部状態データを返します。 これらのスキーマおよび返されるデータは、の将来の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リリースで変更される可能性があります。 そのため、今後のリリースの動的管理ビューおよび関数は、このリリースの動的管理ビューおよび関数と互換性がない可能性があります。 たとえば、の将来の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リリースでは、列リストの末尾に列を追加することにより、動的管理ビューの定義が拡張される可能性があります。 返される列の数が`SELECT * FROM dynamic_management_view_name`変更され、アプリケーションが中断される可能性があるため、実稼働コードでは構文を使用しないことをお勧めします。  
+>  動的管理ビューおよび関数は、実装固有の内部状態データを返します。 これらのスキーマおよび返されるデータは、の将来のリリースで変更される可能性があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 そのため、今後のリリースの動的管理ビューおよび関数は、このリリースの動的管理ビューおよび関数と互換性がない可能性があります。 たとえば、の将来のリリースでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列リストの末尾に列を追加することにより、動的管理ビューの定義が拡張される可能性があります。 `SELECT * FROM dynamic_management_view_name`返される列の数が変更され、アプリケーションが中断される可能性があるため、実稼働コードでは構文を使用しないことをお勧めします。  
   
  動的管理ビューと関数には、次の2種類があります。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68043131"
 -   データベース スコープの動的管理ビューと動的管理関数。 そのためには、データベースに対する VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="querying-dynamic-management-views"></a>動的管理ビューのクエリ  
- 動的管理ビューは、ステートメントで[!INCLUDE[tsql](../../includes/tsql-md.md)] 2 部構成、3部構成、または4部構成の名前を使用して参照できます。 一方、動的管理関数は、ステートメントで[!INCLUDE[tsql](../../includes/tsql-md.md)] 2 部構成または3部構成の名前を使用して参照できます。 動的管理ビューおよび関数は、ステートメント内[!INCLUDE[tsql](../../includes/tsql-md.md)]で1つの部分で構成される名前を使用して参照することはできません。  
+ 動的管理ビューは、ステートメントで2部構成、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 3 部構成、または4部構成の名前を使用して参照できます。 一方、動的管理関数は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで2部構成または3部構成の名前を使用して参照できます。 動的管理ビューおよび関数は、ステートメント内で [!INCLUDE[tsql](../../includes/tsql-md.md)] 1 つの部分で構成される名前を使用して参照することはできません。  
   
  すべての動的管理ビューと動的管理関数は sys スキーマに含まれ、dm_* という名前付け規則に従います。 動的管理ビューまたは動的管理関数を使用するときには、sys スキーマを使用して、ビューまたは関数の名前にプレフィックスを付ける必要があります。 たとえば、動的管理ビュー dm_os_wait_stats をクエリするには、次のクエリを実行します。  
   

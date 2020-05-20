@@ -19,21 +19,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - sys.availability_group_listener_ip_addresses catalog view
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a9c66e12ec326ba5021de0829b0d7cc479f858c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 49f7322dc32634631a991d76bab58394a26c491e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997587"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829128"
 ---
 # <a name="sysavailability_group_listener_ip_addresses-transact-sql"></a>availability_group_listener_ip_addresses (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Windows Server フェールオーバー クラスタリング (WSFC) クラスター内の任意の AlwaysOn 可用性グループ リスナーに関連付けられている IP アドレスごとに 1 行のデータを返します。  
   
- 主キー: **listener_id** + **ip_address** + **ip_sub_mask**  
+ 主キー: **listener_id**  +  **ip_address**  +  **ip_sub_mask**  
   
   
 |列名|データ型|説明|  
@@ -44,8 +44,8 @@ ms.locfileid: "67997587"
 |**is_dhcp**|**bit**|IP アドレスが DHCP によって構成されているかどうかは、次のいずれかになります。<br /><br /> 0 = IP アドレスは DHCP によって構成されていません。<br /><br /> 1 = IP アドレスは DHCP によって構成されます。|  
 |**network_subnet_ip**|**nvarchar (48)**|IP アドレスが属するサブネットを指定するネットワークサブネットの IP アドレス。|  
 |**network_subnet_prefix_length**|**int**|IP アドレスが属するサブネットのネットワーク サブネット プレフィックス長。|  
-|**network_subnet_ipv4_mask**|**nvarchar (45)**|IP アドレスが属するサブネットのネットワークサブネットマスク。 [CREATE AVAILABILITY group](../../t-sql/statements/create-availability-group-transact-sql.md)または[ALTER availability group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントの WITH dhcp 句で dhcp <network_subnet_option> オプションを指定するには、 **network_subnet_ipv4_mask**します。<br /><br /> NULL = IPv6 サブネット|  
-|**state**|**tinyint**|WSFC のクラスターからの IP リソースのオンラインまたはオフライン状態。次のいずれかになります。<br /><br /> 1 = オンライン。 IP リソースはオンラインです。<br /><br /> 0 = オフライン。 IP リソースはオフラインです。<br /><br /> 2 = オンライン待ち。 IP リソースはオフラインですが、オンラインになっています。<br /><br /> 3 = 失敗しました。 IP リソースがオンラインになっていましたが、失敗しました。|  
+|**network_subnet_ipv4_mask**|**nvarchar (45)**|IP アドレスが属するサブネットのネットワークサブネットマスク。 [CREATE AVAILABILITY group](../../t-sql/statements/create-availability-group-transact-sql.md)または[ALTER availability GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)ステートメントの WITH dhcp 句で dhcp <network_subnet_option> オプションを指定するには、 **network_subnet_ipv4_mask**し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。<br /><br /> NULL = IPv6 サブネット|  
+|**状態**|**tinyint**|WSFC のクラスターからの IP リソースのオンラインまたはオフライン状態。次のいずれかになります。<br /><br /> 1 = オンライン。 IP リソースはオンラインです。<br /><br /> 0 = オフライン。 IP リソースはオフラインです。<br /><br /> 2 = オンライン待ち。 IP リソースはオフラインですが、オンラインになっています。<br /><br /> 3 = 失敗しました。 IP リソースがオンラインになっていましたが、失敗しました。|  
 |**state_desc**|**nvarchar(60)**|**状態**の説明。次のいずれかになります。<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
   
 ## <a name="security"></a>Security  

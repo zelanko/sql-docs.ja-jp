@@ -16,25 +16,25 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 28d98f7f95d9e9c2af967976b875f61388342583
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2e9e9502dda9eab45c27065c37b31109c99c4c4f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090171"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829026"
 ---
 # <a name="sysdm_xtp_gc_stats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)]ガベージコレクションプロセスの現在の動作に関する情報 (全体的な統計情報) を提供します。  
+  ガベージコレクションプロセスの現在の動作に関する情報 (全体的な統計情報) を提供 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] します。  
   
  行は、通常のトランザクション処理の一部として、またはメインのガベージコレクションスレッド (アイドルワーカーと呼ばれます) によってガベージコレクトされます。 ユーザートランザクションがコミットされると、ガベージコレクションキュー dm_xtp_gc_queue_stats (デキュー[&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)) から1つの作業項目がされます。 ガベージ コレクションが可能であってもメイン ユーザー トランザクションでアクセスされなかった行のガベージ コレクションは、ダスティ コーナー スキャン (使用頻度が低いインデックスの領域のスキャン) の一環としてアイドル ワーカーによって実行されます。  
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
-|列名|Type|説明|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|サーバーの起動後にガベージコレクションサブシステムによって検査された行の数。|  
 |rows_no_sweep_needed|**bigint**|ダスティコーナースキャンなしで削除された行の数。|  

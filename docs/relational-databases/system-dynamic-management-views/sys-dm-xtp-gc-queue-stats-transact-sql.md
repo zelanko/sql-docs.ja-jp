@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 286449b00f20858f641e25fd1b4e3f1914925bb0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090197"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829053"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>dm_xtp_gc_queue_stats (Transact-sql)
 
@@ -39,7 +39,7 @@ ms.locfileid: "68090197"
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
 
-|列名|Type|説明|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|キューの一意識別子。|  
 |total_enqueues|**bigint**|サーバーが起動してからこのキューにエンキューされたガベージコレクション作業項目の総数。|  

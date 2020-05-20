@@ -20,19 +20,19 @@ helpviewer_keywords:
 - sys.availability_databases_cluster catalog view
 - Availability Groups [SQL Server], databases
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 206c9b1c250cb95a6ad49ccf20f8badf11f870ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c36c1574ae1ad289c9980e1df9bfbe3b241e164
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046537"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829169"
 ---
 # <a name="sysavailability_databases_cluster-transact-sql"></a>availability_databases_cluster (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  ローカルコピーデータベースが可用性グループにまだ参加して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]いるかどうかに関係なく、Windows Server フェールオーバークラスタリング (WSFC) クラスター内の任意の Always On 可用性グループの可用性レプリカをホストしているのインスタンス上の可用性データベースごとに1行のデータを格納します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカルコピーデータベースが可用性グループにまだ参加しているかどうかに関係なく、Windows Server フェールオーバークラスタリング (WSFC) クラスター内の任意の Always On 可用性グループの可用性レプリカをホストしているのインスタンス上の可用性データベースごとに1行のデータを格納します。  
   
 > [!NOTE]  
 >  データベースを可用性グループに追加すると、プライマリ データベースは自動的にそのグループに参加します。 セカンダリ データベースを可用性グループに参加させるには、各セカンダリ レプリカでそのデータベースを準備する必要があります。   
