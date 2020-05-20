@@ -65,7 +65,7 @@ ms.locfileid: "74095426"
 ##  <a name="change-data-capture"></a><a name="Capture"></a> 変更データ キャプチャ  
  変更データ キャプチャでは、DML の変更が行われたという事実と変更された実際のデータの両方がキャプチャされ、ユーザー テーブルの変更情報の履歴が提供されます。 変更は、非同期プロセスを使用してトランザクション ログを読み取ることによってキャプチャされます。これは、システムへの影響が少ない方法です。  
   
- 次の図に示すように、ユーザー テーブルに対して行われた変更は、対応する変更テーブルにキャプチャされます。 これらの変更テーブルには、時間の経過に伴う変更の履歴が表示されます。 [ の](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)変更データ キャプチャ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]関数を使用して、変更データを簡単かつ体系的に利用できます。  
+ 次の図に示すように、ユーザー テーブルに対して行われた変更は、対応する変更テーブルにキャプチャされます。 これらの変更テーブルには、時間の経過に伴う変更の履歴が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の[変更データ キャプチャ](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)関数を使用して、変更データを簡単かつ体系的に利用できます。  
   
  ![変更データ キャプチャの概念図](../../relational-databases/track-changes/media/cdcart1.gif "変更データ キャプチャの概念図")  
   

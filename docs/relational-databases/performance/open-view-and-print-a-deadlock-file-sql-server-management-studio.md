@@ -30,13 +30,13 @@ ms.locfileid: "74165758"
   
 ## <a name="open-and-view-a-deadlock-file"></a>デッドロック ファイルを開いて表示する  
   
-1. **で**[ファイル][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] メニューの **[開く]** をポイントし、 **[ファイル]** を選択します。  
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[ファイル]** メニューの **[開く]** をポイントし、**[ファイル]** を選択します。  
   
 2. **[ファイルを開く]** ダイアログ ボックスで、 **[ファイルの種類]** ボックスの一覧から [SQL デッドロック ファイル] を選択します。 これにより、デッドロック ファイルだけが一覧表示されます。  
   
 ## <a name="print-a-deadlock-file"></a>デッドロック ファイルを印刷する  
   
-1. **で**[ファイル][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] メニューの **[開く]** をポイントし、 **[ファイル]** を選択します。  
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[ファイル]** メニューの **[開く]** をポイントし、**[ファイル]** を選択します。  
   
 2. **[ファイルを開く]** ダイアログ ボックスで、 **[ファイルの種類]** ボックスの一覧から [SQL デッドロック ファイル] を選択します。 これにより、デッドロック ファイルだけが一覧表示されます。  
   

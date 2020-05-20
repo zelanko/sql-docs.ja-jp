@@ -38,7 +38,7 @@ ms.locfileid: "68107799"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- **を呼び出したインスタンスまでの距離が測定される、別の**geometry`STDistance()` インスタンスです。 *other_geometry* が空のセットである場合、`STDistance()` は NULL を返します。  
+ `STDistance()` を呼び出したインスタンスまでの距離が測定される、別の **geometry** インスタンスです。 *other_geometry* が空のセットである場合、`STDistance()` は NULL を返します。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **float**  
@@ -46,7 +46,7 @@ ms.locfileid: "68107799"
  CLR の戻り値の型: **SqlDouble**  
   
 ## <a name="remarks"></a>解説  
- `STDistance()`geometry **インスタンスの SRID (spatial reference ID) が一致しない場合、** は常に null を返します。  
+ **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、`STDistance()` は常に null を返します。  
   
 ## <a name="examples"></a>例  
   

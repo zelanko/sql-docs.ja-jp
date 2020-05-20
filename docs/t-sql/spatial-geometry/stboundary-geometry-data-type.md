@@ -42,7 +42,7 @@ ms.locfileid: "67930383"
  CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="remarks"></a>解説  
- `STBoundary()`LineString **、** CircularString **、または** CompoundCurve **インスタンスのエンドポイントが同じである場合、** は空白の **GeometryCollection** を返します。  
+ **LineString**、**CircularString**、または **CompoundCurve** インスタンスのエンドポイントが同じである場合、`STBoundary()` は空白の **GeometryCollection** を返します。  
   
 ## <a name="examples"></a>例  
   

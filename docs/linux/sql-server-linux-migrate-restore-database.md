@@ -91,7 +91,7 @@ Windows でデータベースのバックアップ ファイルを作成する�
    cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'
    ```
 
-1. **scp** コマンドを使って、ターゲットの Linux コンピューターにファイルを転送します。 次の例では、IP アドレスが **192.0.2.9** である Linux サーバー上の *user1* のホーム ディレクトリに、*YourDB.bak* を転送します。
+1. **scp** コマンドを使って、ターゲットの Linux コンピューターにファイルを転送します。 次の例では、IP アドレスが *192.0.2.9* である Linux サーバー上の *user1* のホーム ディレクトリに、**YourDB.bak** を転送します。
 
    ```bash
    scp YourDB.bak user1@192.0.2.9:./
@@ -170,7 +170,7 @@ Windows でデータベースのバックアップ ファイルを作成する�
    Directory lookup for the file "Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf" failed with the operating system error 2(The system cannot find the file specified.).
    ```
    
-   この場合、データベースにはセカンダリ ファイルが含まれています。 これらのファイルを `MOVE` の `RESTORE DATABASE` 句で指定しないと、復元プロシージャでは元のサーバーと同じパスにこれらのファイルの作成が試みられます。 
+   この場合、データベースにはセカンダリ ファイルが含まれています。 これらのファイルを `RESTORE DATABASE` の `MOVE` 句で指定しないと、復元プロシージャでは元のサーバーと同じパスにこれらのファイルの作成が試みられます。 
 
    バックアップに含まれるすべてのファイルの一覧を表示できます。
    ```sql

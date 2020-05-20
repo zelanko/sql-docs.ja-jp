@@ -75,7 +75,7 @@ End Module
   
  **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- また、ディスク上、ファイル システム、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に保存されている既存のパッケージを読み込むことにより、パッケージを作成することもできます。 その場合、<xref:Microsoft.SqlServer.Dts.Runtime.Application> オブジェクトが最初に作成され、そのパッケージ オブジェクトが、オーバーロードされた次のアプリケーションのメソッドのいずれかによって設定される点が異なります。そのメソッドとは、フラット ファイル用の **LoadPackage**、**に保存されているパッケージ用の**LoadFromSQLServer[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、またはファイル システムに保存されているパッケージ用の <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> です。 次の例では、ディスクから既存のパッケージを読み込み、パッケージの複数のプロパティを表示します。  
+ また、ディスク上、ファイル システム、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に保存されている既存のパッケージを読み込むことにより、パッケージを作成することもできます。 その場合、<xref:Microsoft.SqlServer.Dts.Runtime.Application> オブジェクトが最初に作成され、そのパッケージ オブジェクトが、オーバーロードされた次のアプリケーションのメソッドのいずれかによって設定される点が異なります。そのメソッドとは、フラット ファイル用の **LoadPackage**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に保存されているパッケージ用の **LoadFromSQLServer**、またはファイル システムに保存されているパッケージ用の <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> です。 次の例では、ディスクから既存のパッケージを読み込み、パッケージの複数のプロパティを表示します。  
   
 ```csharp  
 using System;  

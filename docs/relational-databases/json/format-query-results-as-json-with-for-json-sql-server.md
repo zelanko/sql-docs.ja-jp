@@ -77,7 +77,7 @@ FOR JSON AUTO;
 
 以下の `SELECT...FOR JSON AUTO` の例には、`JOIN` されたテーブルからのデータ間に 1 対多の関係がある場合に JSON の結果がどのように表示されるかが含まれています。
 
-返された JSON に null 値が存在しないことも示されています。 ただし、この既定の動作は、`INCLUDE_NULL_VALUES` 句で `FOR` キーワードを使用することでオーバーライドできます。
+返された JSON に null 値が存在しないことも示されています。 ただし、この既定の動作は、`FOR` 句で `INCLUDE_NULL_VALUES` キーワードを使用することでオーバーライドできます。
 
 ```sql
 go

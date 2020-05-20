@@ -114,7 +114,7 @@ PVS は、ベースラインより大幅に大きいか、データベース サ
 
    アクティブなトランザクションがあると、PVS を消去できません。
 
-1. データベースが可用性グループに含まれる場合、`secondary_low_water_mark` を確認してください。 これは `low_water_mark_for_ghosts` によって報告される `sys.dm_hadr_database_replica_states` と同じです。 `sys.dm_hadr_database_replica_states` を問い合わせ、いずれかのレプリカでこの値が隠されていないか確認します。これも PVS の消去を妨げるためです。
-1. `min_transaction_timestamp` (あるいは、オンライン PVS の消去が妨げられている場合は `online_index_min_transaction_timestamp`) を確認し、それに基づいて列 `sys.dm_tran_active_snapshot_database_transactions` の `transaction_sequence_num` を確認し、古いスナップショット トランザクションが PVS の消去を妨げているセッションを見つけます。
+1. データベースが可用性グループに含まれる場合、`secondary_low_water_mark` を確認してください。 これは `sys.dm_hadr_database_replica_states` によって報告される `low_water_mark_for_ghosts` と同じです。 `sys.dm_hadr_database_replica_states` を問い合わせ、いずれかのレプリカでこの値が隠されていないか確認します。これも PVS の消去を妨げるためです。
+1. `min_transaction_timestamp` (あるいは、オンライン PVS の消去が妨げられている場合は `online_index_min_transaction_timestamp`) を確認し、それに基づいて列 `transaction_sequence_num` の `sys.dm_tran_active_snapshot_database_transactions` を確認し、古いスナップショット トランザクションが PVS の消去を妨げているセッションを見つけます。
 1. 上記のいずれも該当しない場合、中止となったトランザクションによって消去が妨げられていることになります。 `aborted_version_cleaner_last_start_time` と `aborted_version_cleaner_last_end_time` を確認し、中止となったトランザクションの消去が完了しているかを確認します。 中止となったトランザクションの消去が完了した後は、`oldest_aborted_transaction_id` の値が上位に移動するはずです。
 1. 中止となったトランザクションが最近、正常に完了しなかった場合、エラー ログを確認し、`VersionCleaner` の問題を報告しているメッセージがないか確認します。

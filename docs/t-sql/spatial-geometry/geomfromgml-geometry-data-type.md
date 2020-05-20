@@ -27,7 +27,7 @@ ms.locfileid: "68101270"
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-GML (Geography Markup Language) の **サブセットによる表現が指定された**geometry[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを構築します。
+GML (Geography Markup Language) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブセットによる表現が指定された **geometry** インスタンスを構築します。
   
 GML (Geography Markup Language) の詳細については、以下の Open Geospatial Consortium (OGC) 仕様を参照してください。
   

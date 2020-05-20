@@ -42,7 +42,7 @@ ms.locfileid: "68107837"
  CLR の戻り値の型: **SqlInt32**  
   
 ## <a name="remarks"></a>解説  
- `STDimension()`geometry **インスタンスが空の場合、** は 1 を返します。  
+ **geometry** インスタンスが空の場合、`STDimension()` は 1 を返します。  
   
 ## <a name="examples"></a>例  
  **geometry** インスタンスを保持するテーブル変数を作成し、`Point`、`LineString`、`Polygon` を挿入する例を次に示します。  その後、`STDimension()` を使用して各 **geometry** インスタンスの次元を返します。  

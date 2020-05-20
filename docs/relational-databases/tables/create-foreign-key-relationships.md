@@ -24,7 +24,7 @@ ms.locfileid: "68123745"
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-この記事では、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] で外部キーのリレーションシップを作成する方法について説明します。 あるテーブルの行と他のテーブルの行を関連付ける場合は、2 つのテーブル間にリレーションシップを作成します。
+この記事では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で外部キーのリレーションシップを作成する方法について説明します。 あるテーブルの行と他のテーブルの行を関連付ける場合は、2 つのテーブル間にリレーションシップを作成します。
 
 ## <a name="before-you-begin-limits-and-restrictions"></a><a name="BeforeYouBegin"></a> はじめに 制限事項と制約事項
 
@@ -73,7 +73,7 @@ ms.locfileid: "68123745"
 
 ### <a name="using-transact-sql"></a>Transact-SQL の使用
 
-次の例では、AdventureWorks データベース内で、テーブルを作成し、`TempID` テーブル内の `SalesReasonID` 列を参照する外部キー制約を `Sales.SalesReason` 列に定義します。 ON DELETE CASCADE 句および ON UPDATE CASCADE 句を使用することによって、`Sales.SalesReason` テーブルに対する変更が自動的に `Sales.TempSalesReason` テーブルにも反映されるようにしています。    
+次の例では、AdventureWorks データベース内で、テーブルを作成し、`Sales.SalesReason` テーブル内の `SalesReasonID` 列を参照する外部キー制約を `TempID` 列に定義します。 ON DELETE CASCADE 句および ON UPDATE CASCADE 句を使用することによって、`Sales.SalesReason` テーブルに対する変更が自動的に `Sales.TempSalesReason` テーブルにも反映されるようにしています。    
 
 ```sql
 CREATE TABLE Sales.TempSalesReason 
@@ -91,7 +91,7 @@ CREATE TABLE Sales.TempSalesReason
 ## <a name="create-a-foreign-key-in-an-existing-table"></a>既存のテーブルに外部キーを作成する
 
 ### <a name="using-transact-sql"></a>Transact-SQL の使用
-次の例では、AdventureWorks データベース内で、`TempID` 列に外部キーを作成し、`SalesReasonID` テーブルの `Sales.SalesReason` 列を参照します。
+次の例では、AdventureWorks データベース内で、`TempID` 列に外部キーを作成し、`Sales.SalesReason` テーブルの `SalesReasonID` 列を参照します。
 
 ```sql
 ALTER TABLE Sales.TempSalesReason

@@ -120,7 +120,7 @@ ms.locfileid: "75322162"
   
 1.  パブリッシャーで [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) を実行し、目的の競合回避モジュールの表示名をメモします。  
   
-2.  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行し、 **\@publication**、 **\@article** を指定し、 **\@property** に **article_resolver** 値、 **\@value** に手順 1 のアーティクル競合回避モジュールの表示名を指定します。  
+2.  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行し、**\@publication**、**\@article** を指定し、**\@property** に **article_resolver** 値、**\@value** に手順 1 のアーティクル競合回避モジュールの表示名を指定します。  
   
 
 ## <a name="see-also"></a>関連項目  

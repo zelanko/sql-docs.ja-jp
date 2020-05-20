@@ -27,7 +27,7 @@ ms.locfileid: "75558066"
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure Key Vault を使用する拡張キー管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] コネクタを使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化において、Azure Key Vault サービスを[拡張キー管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md) プロバイダーに使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化キーを保護することができます。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 用の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタを使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化において、Azure Key Vault サービスを[拡張キー管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md) プロバイダーに使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化キーを保護することができます。  
   
  このトピックでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタについて説明します。 その他の情報については、「 [Azure Key Vault を使用した拡張キー管理のセットアップ手順](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)」、「 [SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)」、「 [SQL Server コネクタのメンテナンスとトラブルシューティング](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)」を参照してください。  
   

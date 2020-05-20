@@ -158,7 +158,7 @@ GO
 **ALTER FULLTEXT INDEX** ステートメントを使用して既存のフルテキスト インデックスを変更するとき、セマンティック インデックス作成を削除できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のさまざまなダイアログ ボックスを使用して、セマンティック インデックス作成を削除することもできます。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Transact-SQL を使用してセマンティック インデックスを削除する  
-1 つまたは複数の列からセマンティック インデックス作成だけを削除するには、**ALTER COLUMN** **column**name _\_DROP STATISTICAL_SEMANTICS_ オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。 1 つの **ALTER** ステートメントを使用して複数の列からインデックス作成を削除できます。  
+1 つまたは複数の列からセマンティック インデックス作成だけを削除するには、**ALTER COLUMN**_column\_name_**DROP STATISTICAL_SEMANTICS** オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。 1 つの **ALTER** ステートメントを使用して複数の列からインデックス作成を削除できます。  
   
 ```sql  
 USE database_name  
@@ -170,7 +170,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-列からフルテキスト インデックス作成とセマンティック インデックス作成の両方を削除するには、**ALTER COLUMN** **column**name _\_DROP_ オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。  
+列からフルテキスト インデックス作成とセマンティック インデックス作成の両方を削除するには、**ALTER COLUMN**_column\_name_**DROP** オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。  
   
 ```sql  
 USE database_name  
@@ -194,7 +194,7 @@ GO
 ## <a name="check-whether-semantic-search-is-enabled-on-database-objects"></a>データベース オブジェクトでセマンティック検索が有効かどうかの確認  
 ### <a name="is-semantic-search-enabled-for-a-database"></a>データベースに対してセマンティック検索が有効化されていますか?
   
- **DATABASEPROPERTYEX &#40;Transact-SQL&#41;** メタデータ関数の [IsFullTextEnabled](../../t-sql/functions/databasepropertyex-transact-sql.md) プロパティのクエリを実行します。  
+ [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) メタデータ関数の **IsFullTextEnabled** プロパティのクエリを実行します。  
   
  戻り値 1 は、データベースに対してフルテキスト検索とセマンティック検索が有効化されていることを示します。戻り値 0 は、フルテキスト検索とセマンティック検索が有効化されていないことを示します。  
   
@@ -205,7 +205,7 @@ GO
   
 ### <a name="is-semantic-search-enabled-for-a-table"></a>テーブルに対してセマンティック検索が有効化されていますか?  
  
- **OBJECTPROPERTYEX &#40;Transact-SQL&#41;** メタデータ関数の [TableFullTextSemanticExtraction](../../t-sql/functions/objectpropertyex-transact-sql.md) プロパティのクエリを実行します。  
+ [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md) メタデータ関数の **TableFullTextSemanticExtraction** プロパティのクエリを実行します。  
   
  戻り値 1 は、テーブルに対してセマンティック検索が有効化されていることを示します。戻り値 0 は、セマンティック検索が有効化されていないことを示します。  
   
@@ -218,7 +218,7 @@ GO
    
  特定の列に対して統計的セマンティック検索が有効化されているかどうかを確認するには、次の操作を実行します。  
   
--   **COLUMNPROPERTY &#40;Transact-SQL&#41;** メタデータ関数の [StatisticalSemantics](../../t-sql/functions/columnproperty-transact-sql.md) プロパティのクエリを実行します。  
+-   [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md) メタデータ関数の **StatisticalSemantics** プロパティのクエリを実行します。  
   
      戻り値 1 は、列に対してセマンティック検索が有効化されていることを示します。戻り値 0 は、セマンティック検索が有効化されていないことを示します。  
   

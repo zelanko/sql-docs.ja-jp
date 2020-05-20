@@ -87,7 +87,7 @@ ms.locfileid: "68041091"
   
 -   ディストリビューション エージェントが引き続き変更を適用できるようにすることで、ノードの同期を再試行します。  
   
-    1.  [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。このとき、@property パラメーターに 'p2p_continue_onconflict' を指定し、**パラメーターに**true@value を指定します。  
+    1.  [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。このとき、@property パラメーターに 'p2p_continue_onconflict' を指定し、@value パラメーターに **true** を指定します。  
   
     2.  ディストリビューション エージェントを再起動します。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68041091"
         > [!NOTE]  
         >  この手順の実行後にデータに一貫性がない場合は、最も優先度の高いノードの行を手動で更新して、そのノードから変更を反映する必要があります。 競合する変更がトポロジ内になくなると、すべてのノードが一貫性のある状態になります。  
   
-    5.  [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。このとき、@property パラメーターに 'p2p_continue_onconflict' を指定し、**パラメーターに**false@value を指定します。  
+    5.  [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。このとき、@property パラメーターに 'p2p_continue_onconflict' を指定し、@value パラメーターに **false** を指定します。  
   
 ## <a name="see-also"></a>参照  
  [ピア ツー ピア トランザクション レプリケーション](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  

@@ -81,7 +81,7 @@ SELECT * FROM
 COMMIT TRANSACTION;
 ```
 
-データベース オプション `WITH (SNAPSHOT)` を使用することで、`MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` ヒントの必要はなくなります。 このオプションを `ON`に設定すると、低い分離レベルでのメモリ最適化テーブルへのアクセスは、自動的に SNAPSHOT 分離に昇格されます。  
+データベース オプション `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` を使用することで、`WITH (SNAPSHOT)` ヒントの必要はなくなります。 このオプションを `ON`に設定すると、低い分離レベルでのメモリ最適化テーブルへのアクセスは、自動的に SNAPSHOT 分離に昇格されます。  
 
 ```sql
 ALTER DATABASE CURRENT

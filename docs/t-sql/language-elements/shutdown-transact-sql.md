@@ -71,7 +71,7 @@ SHUTDOWN [ WITH NOWAIT ]
  **sqlservr.exe** をコマンド プロンプトから起動した場合は、Ctrl キーを押しながら C キーを押すと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がシャットダウンされます。 Ctrl+C キーを押してもチェックポイントは挿入されません。  
   
 > [!NOTE]  
->  どの方法で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止しても、`SERVICE_CONTROL_STOP` には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メッセージが送信されます。  
+>  どの方法で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止しても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には `SERVICE_CONTROL_STOP` メッセージが送信されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  SHUTDOWN アクセス許可は、既定では固定サーバー ロール **sysadmin** および **serveradmin** のメンバーに与えられています。このアクセス許可を譲渡することはできません。  

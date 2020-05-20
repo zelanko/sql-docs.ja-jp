@@ -59,7 +59,7 @@ tolerance <= 0 を設定すると、**ArgumentOutOfRange** 例外がスローさ
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. CircularString インスタンスに対して異なる tolerance 値を使用する  
-次の例では、許容値の設定によって、`LineString` から返される `CircularString` インスタンスが変化するしくみを確認できます。  
+次の例では、許容値の設定によって、`CircularString` から返される `LineString` インスタンスが変化するしくみを確認できます。  
   
 ```
 DECLARE @g geography;  
@@ -86,7 +86,7 @@ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
 ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 呼び出し元の CurvePolygon インスタンスに対して relative を true に設定する  
-次の例では、`CurvePolygon` インスタンスを使用し、`CurveToLineWithTolerance()`relative*を true に設定して* を呼び出します。  
+次の例では、`CurvePolygon` インスタンスを使用し、*relative* を true に設定して `CurveToLineWithTolerance()` を呼び出します。  
   
 ```
 DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  

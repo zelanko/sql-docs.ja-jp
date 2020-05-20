@@ -47,7 +47,7 @@ ms.locfileid: "67930308"
   
 -   **CurvePolygon** インスタンスに対して **Polygon** インスタンスを返します。  
   
--   そのインスタンスが **CircularString**、**CompoundCurve**、**CurvePolygon** インスタンスではない場合、**geometry** インスタンスのコピーを返します。 たとえば、`STCurveToLine`Point**インスタンスである**geometry **インスタンスに対しては、** メソッドは **Point** インスタンスを返します。  
+-   そのインスタンスが **CircularString**、**CompoundCurve**、**CurvePolygon** インスタンスではない場合、**geometry** インスタンスのコピーを返します。 たとえば、**Point** インスタンスである **geometry** インスタンスに対しては、`STCurveToLine` メソッドは **Point** インスタンスを返します。  
   
  SQL/MM 仕様とは異なり、`STCurveToLine` メソッドでは、多角形近似の計算に z 座標の値が使用されません。 このメソッドでは、呼び出し元 **geography** インスタンスに存在する z 座標値は無視されます。  
   

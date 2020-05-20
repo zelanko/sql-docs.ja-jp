@@ -96,7 +96,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 ## <a name="examples"></a>例  
   
 ### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. 空のプロパティ リストを作成し、インデックスに関連付ける  
- 次の例では、`DocumentPropertyList` という名前の新しい検索プロパティ リストを作成します。 次に、[ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ステートメントを使って、新しいプロパティ リストを `Production.Document` データベースにある `AdventureWorks` テーブルのフルテキスト インデックスに関連付けます。このとき、カタログの作成は開始されません。  
+ 次の例では、`DocumentPropertyList` という名前の新しい検索プロパティ リストを作成します。 次に、[ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ステートメントを使って、新しいプロパティ リストを `AdventureWorks` データベースにある `Production.Document` テーブルのフルテキスト インデックスに関連付けます。このとき、カタログの作成は開始されません。  
   
 > [!NOTE]  
 >  定義済みで既知の検索プロパティをこの検索プロパティ リストに追加する例については、「[ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)」をご覧ください。 検索プロパティをリストに追加した後、データベース管理者は、START FULL POPULATION 句を指定して別の ALTER FULLTEXT INDEX ステートメントを使用する必要があります。  
