@@ -18,21 +18,21 @@ helpviewer_keywords:
 - internal tables
 - sys.internal_tables catalog view
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0b3f262943d41f1cd9592ab805d02bce3ade77a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a5878b5f1e52241a8d733bd6414d73db4e7e7cb8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68044541"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825385"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>internal_tables (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  内部テーブルであるオブジェクトごとに1行の値を返します。 内部テーブルは、さまざまな[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能をサポートするためにによって自動的に生成されます。 たとえば、プライマリ XML インデックスを作成すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]細分化 xml ドキュメントデータを保持する内部テーブルがによって自動的に作成されます。 内部テーブルは、各データベースの**sys**スキーマに表示され、システムによって生成される一意の名前を持ちます。たとえば、 **xml_index_nodes_2021582240_32001**や**queue_messages_1977058079**  
+  内部テーブルであるオブジェクトごとに1行の値を返します。 内部テーブルは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] さまざまな機能をサポートするためにによって自動的に生成されます。 たとえば、プライマリ XML インデックスを作成すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 細分化 xml ドキュメントデータを保持する内部テーブルがによって自動的に作成されます。 内部テーブルは、各データベースの**sys**スキーマに表示され、システムによって生成される一意の名前を持ちます。たとえば、 **xml_index_nodes_2021582240_32001**や**queue_messages_1977058079**  
   
- 内部テーブルにはユーザーがアクセスできるデータは含まれず、スキーマは固定され、unalterable ます。 内部テーブルの名前を [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで参照することはできません。 たとえば、select \* FROM * \<sys. internal_table_name>* などのステートメントを実行することはできません。 ただし、カタログ ビューにクエリを実行して、内部テーブルのメタデータを表示することはできます。  
+ 内部テーブルにはユーザーがアクセスできるデータは含まれず、スキーマは固定され、unalterable ます。 内部テーブルの名前を [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで参照することはできません。 たとえば、SELECT \* FROM * \< sys. internal_table_name>* などのステートメントを実行することはできません。 ただし、カタログ ビューにクエリを実行して、内部テーブルのメタデータを表示することはできます。  
   
   
 |列名|データ型|説明|  
@@ -40,8 +40,8 @@ ms.locfileid: "68044541"
 |**\<Sys. オブジェクトから継承された列>**||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。|  
 |**internal_type**|**tinyint**|内部テーブルの種類。<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (空間インデックスなど)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  
 |**internal_type_desc**|**nvarchar(60)**|内部テーブルの種類の説明。<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
-|**parent_id**|**int**|スキーマスコープであるかどうかに関係なく、親の ID。 それ以外の場合は、親が存在しない場合は0です。<br /><br /> **queue_messages** = キューの**object_id**の queue_messages<br /><br /> **xml_index_nodes** = xml インデックスの xml_index_nodes**object_id**<br /><br /> **fulltext_catalog_freelist** = フルテキストカタログの fulltext_catalog_freelist**fulltext_catalog_id**<br /><br /> **fulltext_index_map** = フルテキストインデックスの fulltext_index_map**object_id**<br /><br /> **query_notification**、または**service_broker_map** = 0<br /><br /> **extended_indexes** = 空間インデックスなどの拡張インデックスの**object_id**を extended_indexes します。<br /><br /> テーブル追跡が有効になっているテーブルの**object_id** = **change_tracking**|  
-|**parent_minor_id**|**int**|親のマイナー ID。<br /><br /> **xml_index_nodes** = XML インデックスの xml_index_nodes**index_id**<br /><br /> **extended_indexes** = 空間インデックスなどの拡張インデックスの**index_id**を extended_indexes します。<br /><br /> 0 = **queue_messages**、 **fulltext_catalog_freelist**、 **fulltext_index_map**、 **query_notification**、 **service_broker_map**、または**change_tracking**|  
+|**parent_id**|**int**|スキーマスコープであるかどうかに関係なく、親の ID。 それ以外の場合は、親が存在しない場合は0です。<br /><br /> **queue_messages**  = キューの**object_id**<br /><br /> **xml_index_nodes**  = xml インデックスの**object_id**<br /><br /> **fulltext_catalog_freelist**  = フルテキストカタログの**fulltext_catalog_id**<br /><br /> **fulltext_index_map**  = フルテキストインデックスの**object_id**<br /><br /> **query_notification**、または**service_broker_map** = 0<br /><br /> **extended_indexes**  = 空間インデックスなどの拡張インデックスの**object_id**<br /><br /> テーブル追跡が有効になっているテーブルの**object_id** = **change_tracking**|  
+|**parent_minor_id**|**int**|親のマイナー ID。<br /><br /> **xml_index_nodes**  = XML インデックスの**index_id**<br /><br /> **extended_indexes**  = 空間インデックスなどの拡張インデックスの**index_id**<br /><br /> 0 = **queue_messages**、 **fulltext_catalog_freelist**、 **fulltext_index_map**、 **query_notification**、 **service_broker_map**、または**change_tracking**|  
 |**lob_data_space_id**|**int**|0以外の値は、このテーブルのラージオブジェクト (LOB) データを保持するデータ領域 (ファイルグループまたはパーティション構成) の ID です。|  
 |**filestream_data_space_id**|**int**|将来利用するために予約されています。|  
   

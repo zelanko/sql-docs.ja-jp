@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17189e3acebd81e977b02b1b1b235f8e300e5e9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030910"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826031"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 `[ @OptionName = ] 'option_name'`インデックスオプションの名前を指定します。 *option_name*は**varchar (35)**,、既定値はありません。 *option_name*には、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**AllowRowLocks**|TRUE の場合、インデックスにアクセスするときに行ロックが許可されます。 いつ行ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって決定されます。 FALSE の場合、行ロックは使用されません。 既定値は TRUE です。|  
 |**AllowPageLocks**|TRUE の場合、インデックスにアクセスするときにページ ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって決定されます。 FALSE の場合、ページ ロックは使用されません。 既定値は TRUE です。|  
@@ -85,7 +85,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="examples"></a>例  
   
 ### <a name="a-setting-an-option-on-a-specific-index"></a>A. 特定のインデックスに対してオプションを設定する  
- 次の例では、 `IX_Customer_TerritoryID` `Customer`テーブルのインデックスでページロックを許可しません。  
+ 次の例では、テーブルのインデックスでページロックを許可し `IX_Customer_TerritoryID` `Customer` ません。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -95,7 +95,7 @@ EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',
 ```  
   
 ### <a name="b-setting-an-option-on-all-indexes-on-a-table"></a>B. テーブルのすべてのインデックスに対してオプションを設定する  
- 次の例では、 `Product`テーブルに関連付けられているすべてのインデックスに対して行ロックを許可しません。 `sys.indexes` プロシージャの実行前と後に `sp_indexoption` カタログ ビューに対するクエリを実行して、ステートメントの結果を表示します。  
+ 次の例では、テーブルに関連付けられているすべてのインデックスに対して行ロックを許可 `Product` しません。 `sys.indexes` プロシージャの実行前と後に `sp_indexoption` カタログ ビューに対するクエリを実行して、ステートメントの結果を表示します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -117,7 +117,7 @@ GO
 ```  
   
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>C. クラスター化インデックスのないテーブルに対してオプションを設定する  
- 次の例では、クラスター化インデックスを持たないテーブル (ヒープ) について、ページ ロックを許可していません。 ステートメント`sys.indexes`の結果を表示するには、 `sp_indexoption`プロシージャを実行する前と後にカタログビューを照会します。  
+ 次の例では、クラスター化インデックスを持たないテーブル (ヒープ) について、ページ ロックを許可していません。 `sys.indexes`ステートメントの結果を表示するには、プロシージャを実行する前と後にカタログビューを照会し `sp_indexoption` ます。  
   
 ```sql  
 USE AdventureWorks2012;  

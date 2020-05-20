@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a170c5e43329d90a4977db12a98bd9d2e556e91d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e186b87680ec0592f5c69ee5659c3b9c74f680b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048164"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826052"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68048164"
   現在のデータベースに存在するデータベース レベルのプリンシパルに関する情報をレポートします。  
   
 > [!IMPORTANT]  
->  **sp_helpuser**は、で導入された securables に関する[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]情報を返しません。 代わりに、 [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)を使用してください。  
+>  **sp_helpuser**は、で導入された securables に関する情報を返しません [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 代わりに、 [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- 次の表は、ユーザーアカウントも Windows ユーザーも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *security_account*に対して指定されていない場合の結果セットを示しています。  
+ 次の表は、ユーザーアカウントも [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows ユーザーも、 *security_account*に対して指定されていない場合の結果セットを示しています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -94,7 +94,7 @@ EXEC sp_helpuser;
 ```  
   
 ### <a name="b-listing-information-for-a-single-user"></a>B. 特定のユーザーの情報を表示する  
- 次の例では、ユーザーデータベースの所有者`dbo`() に関する情報を一覧表示します。  
+ 次の例では、ユーザーデータベースの所有者 () に関する情報を一覧表示し `dbo` ます。  
   
 ```  
 EXEC sp_helpuser 'dbo';  

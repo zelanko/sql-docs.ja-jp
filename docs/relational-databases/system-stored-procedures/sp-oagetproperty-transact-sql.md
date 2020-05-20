@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetProperty
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fc92c675902309179865593b03f51a385f61621e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107880"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828839"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  *Propertyvalue*が指定されていても、プロパティが値を返さない場合は、エラーが発生します。 プロパティが3次元以上の配列を返す場合、エラーが発生します。  
   
- *index*  
+ *インデックス*  
  はインデックスパラメーターです。 指定する場合、*インデックス*は、適切なデータ型の値である必要があります。  
   
  一部のプロパティにはパラメーターがあります。 これらのプロパティはインデックス付きプロパティと呼ばれ、パラメーターはインデックスパラメーターと呼ばれます。 プロパティは、複数のインデックスパラメーターを持つことができます。  
@@ -82,7 +82,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  列内のすべてのデータ値が同じデータ型を共有する場合は、そのデータ型を列全体で使用します。 列のデータ値のデータ型が異なる場合、列全体のデータ型が次のグラフに基づいて選択されます。  
   
-||int|float|money|DATETIME|varchar|nvarchar|  
+||INT|float|money|DATETIME|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -100,7 +100,7 @@ sp_OAGetProperty objecttoken , propertyname
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-a-local-variable"></a>A. ローカル変数を使用する  
- 次の例では`HostName` 、(以前に作成した**SQLServer**オブジェクトの) プロパティを取得し、ローカル変数に格納します。  
+ 次の例では、 `HostName` (以前に作成した**SQLServer**オブジェクトの) プロパティを取得し、ローカル変数に格納します。  
   
 ```  
 DECLARE @property varchar(255);  
@@ -114,7 +114,7 @@ PRINT @property;
 ```  
   
 ### <a name="b-using-a-result-set"></a>B. 結果セットの使用  
- 次の例では`HostName` 、(以前に作成した**SQLServer**オブジェクトの) プロパティを取得し、結果セットとしてクライアントに返します。  
+ 次の例では、 `HostName` (以前に作成した**SQLServer**オブジェクトの) プロパティを取得し、結果セットとしてクライアントに返します。  
   
 ```  
 EXEC @hr = sp_OAGetProperty @object, 'HostName';  

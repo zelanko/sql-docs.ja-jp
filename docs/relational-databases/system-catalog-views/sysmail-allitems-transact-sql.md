@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_allitems database mail view
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: be5c74e58e5c107a804903ab09de38b931f676e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0ba144f6cf06104f406545e3c7651072784de3c3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70745452"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824893"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "70745452"
 |**send_request_date**|**datetime**|メッセージがメールキューに置かれた日付と時刻。|  
 |**send_request_user**|**sysname**|メッセージを送信したユーザー。 これは、メッセージの From: フィールドではなく、データベースメールプロシージャのユーザーコンテキストです。|  
 |**sent_account_id**|**int**|メッセージの送信に使用されるデータベースメールアカウントの識別子。|  
-|**sent_status**|**varchar (8)**|メールの状態。 設定可能な値は、次のとおりです。<br /><br /> **送信**済み-メールが送信されました。<br /><br /> **未送信**-データベースメールはまだメッセージの送信を試みています。<br /><br /> データベースメール**再試行**しています。メッセージを送信できませんでしたが、もう一度送信しようとしています。<br /><br /> **失敗しました**-データベースメールはメッセージを送信できませんでした。|  
+|**sent_status**|**varchar (8)**|メールの状態。 次のいずれかの値になります。<br /><br /> **送信**済み-メールが送信されました。<br /><br /> **未送信**-データベースメールはまだメッセージの送信を試みています。<br /><br /> データベースメール**再試行**しています。メッセージを送信できませんでしたが、もう一度送信しようとしています。<br /><br /> **失敗しました**-データベースメールはメッセージを送信できませんでした。|  
 |**sent_date**|**datetime**|メッセージが送信された日時。|  
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。|  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 57087264554d228ec02ed22baa2afb932e646b10
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061921"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826390"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>クエリ通知-sys. dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,17 +32,17 @@ ms.locfileid: "68061921"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|サブスクリプションの ID。|  
+|**ID**|**int**|サブスクリプションの ID。|  
 |**database_id**|**int**|通知クエリが実行されたデータベースの ID。 このデータベースには、このサブスクリプションに関連する情報が格納されます。|  
 |**sid**|**varbinary (85)**|このサブスクリプションを作成して所有しているサーバー プリンシパルのセキュリティ ID。|  
 |**object_id**|**int**|サブスクリプションパラメーターに関する情報を格納する内部テーブルの ID。|  
 |**created**|**datetime**|サブスクリプションが作成された日付と時刻。|  
-|**timeout**|**int**|サブスクリプションのタイムアウト (秒単位)。 この時間が経過すると、通知のフラグが設定されます。<br /><br /> 注: 実際の起動時間は、指定されたタイムアウトよりも長くなる場合があります。ただし、サブスクリプションを無効にする変更が、指定されたタイムアウトの後、サブスクリプションが開始される前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に発生した場合、は、変更が行われた時点で発生していることを確認します。|  
+|**timeout**|**int**|サブスクリプションのタイムアウト (秒単位)。 この時間が経過すると、通知のフラグが設定されます。<br /><br /> 注: 実際の起動時間は、指定されたタイムアウトよりも長くなる場合があります。ただし、サブスクリプションを無効にする変更が、指定されたタイムアウトの後、サブスクリプションが開始される前に発生した場合、は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変更が行われた時点で発生していることを確認します。|  
 |**status**|**int**|サブスクリプションの状態を示します。 コードの一覧については、「解説」の表を参照してください。|  
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|ソース|終了|On|Type|  
+|From|終了|オン|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多対一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多対一|  

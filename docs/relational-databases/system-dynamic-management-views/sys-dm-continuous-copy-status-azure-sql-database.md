@@ -16,16 +16,16 @@ helpviewer_keywords:
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6d0bda2d1851d7ec7900a23ad6203d4f85beb73f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98d71c76b927e0dcb7cfdf87459f15eb82ef3c9e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844500"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824668"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ SQL Database V12 を使用している場合は、 [dm_geo_replication_link_stat
 ## <a name="permissions"></a>アクセス許可  
  データを取得するには、 **db_owner**データベースロールのメンバーシップが必要です。 Dbo ユーザー、 **dbmanager**データベースロールのメンバー、および sa ログインでも、このビューに対してクエリを実行できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  Dm_continuous_copy_status ビューは**リソース**データベースに作成され、論理マスターを含むすべてのデータベースで表示**でき**ます。 ただし、論理 master データベースでこのビューにクエリを実行しても、空のセットが返されます。  
   
  連続コピーリレーションシップがデータベースで終了した場合、そのデータベースの行は**dm_continuous_copy_status**ビューに表示されなくなります。  

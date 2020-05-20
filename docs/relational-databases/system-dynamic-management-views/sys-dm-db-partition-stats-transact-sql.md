@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_partition_stats dynamic management view
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb9ab9e3cbf5948e5e832171c179d6daa2c0bc28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eff14464f5913508d8d95fec8a11a70438f95880
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096282"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828034"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68096282"
   現在のデータベースのパーティションごとに、ページ数と行数の情報を返します。  
   
 > [!NOTE]  
->  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_db_partition_stats**という名前を使用します。 Dm_pdw_nodes_db_partition_stats の partition_id は、Azure SQL Data Warehouse のための、sys. パーティションカタログビューの partition_id とは異なります。
+>  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_db_partition_stats**という名前を使用します。 Dm_pdw_nodes_db_partition_stats の partition_id は、Azure SQL Data Warehouse のための、sys. パーティションカタログビューの partition_id とは異なります。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -48,11 +48,11 @@ ms.locfileid: "68096282"
 |**lob_reserved_page_count**|**bigint**|パーティションで行外の **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml** 型列の格納と管理に予約されているページの合計数。ページが使用されているかどうかは考慮されません。 IAM ページは含まれます。<br /><br /> パーティションで列ストア インデックスの格納と管理のために予約されている LOB の合計数。|  
 |**row_overflow_used_page_count**|**bigint**|パーティションで行オーバーフローの **varchar**、**nvarchar**、**varbinary**、**sql_variant** 型列の格納と管理に使用されているページ数。 IAM ページは含まれます。<br /><br /> 列ストア インデックスでは、常に 0 です。|  
 |**row_overflow_reserved_page_count**|**bigint**|パーティションで行オーバーフローの **varchar**、**nvarchar**、**varbinary**、**sql_variant** 型列の格納と管理に予約されているページの合計数。ページが使用されているかどうかは考慮されません。 IAM ページは含まれます。<br /><br /> 列ストア インデックスでは、常に 0 です。|  
-|**used_page_count**|**bigint**|パーティションで使用されているページの合計数。 **In_row_used_page_count** + **lob_used_page_count**lob_used_page_count + **row_overflow_used_page_count**として計算されます。|  
-|**reserved_page_count**|**bigint**|パーティションで予約されているページの合計数。 **In_row_reserved_page_count** + **lob_reserved_page_count**lob_reserved_page_count + **row_overflow_reserved_page_count**として計算されます。|  
+|**used_page_count**|**bigint**|パーティションで使用されているページの合計数。 **In_row_used_page_count**lob_used_page_count row_overflow_used_page_count として計算さ  +  **lob_used_page_count**  +  **row_overflow_used_page_count**れます。|  
+|**reserved_page_count**|**bigint**|パーティションで予約されているページの合計数。 **In_row_reserved_page_count**lob_reserved_page_count row_overflow_reserved_page_count として計算さ  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**れます。|  
 |**row_count**|**bigint**|パーティション内の行数の概算値です。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
-|**distribution_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 分布に関連付けられている一意の数値 id です。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**distribution_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 分布に関連付けられている一意の数値 id です。|  
   
 ## <a name="remarks"></a>Remarks  
  **sys.dm_db_partition_stats** では、データベースにあるすべてのパーティションの行内データ、LOB データ、行オーバーフロー データについて、格納と管理に使用されている領域に関する情報が表示されます。 ここではパーティションごとに 1 行が表示されます。  

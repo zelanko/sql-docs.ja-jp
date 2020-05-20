@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8d3284d8231b01b58cc807aeb70c55f5fe18c2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73536214"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828426"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -60,7 +60,7 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @configname = ] 'option_name'`構成オプションの名前を指定します。 *option_name* は **varchar(35)**、既定値は NULL です。 は[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 、構成名の一部である一意の文字列を認識します。 指定しない場合、オプションの完全な一覧が返されます。  
+`[ @configname = ] 'option_name'`構成オプションの名前を指定します。 *option_name* は **varchar(35)**、既定値は NULL です。 は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 構成名の一部である一意の文字列を認識します。 指定しない場合、オプションの完全な一覧が返されます。  
   
  使用可能な構成オプションとその設定の詳細については、「[サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   
@@ -99,14 +99,14 @@ RECONFIGURE
 > [!CAUTION]  
 > オプション値が適切でない場合、サーバー インスタンスの構成に悪影響を及ぼす可能性があります。 上書きを伴う再構成を慎重に使用してください。  
   
- 一部のオプションは、RECONFIGURE ステートメントにより動的に更新されます。その他のオプションを使用する場合は、サーバーの停止と再起動が必要になります。 たとえば、 **min server memory**および**max server memory** server memory オプションは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]で動的に更新されます。そのため、サーバーを再起動しなくても変更できます。 これに対して、 **FILL FACTOR**オプションの実行中の値を再[!INCLUDE[ssDE](../../includes/ssde-md.md)]構成するには、を再起動する必要があります。  
+ 一部のオプションは、RECONFIGURE ステートメントにより動的に更新されます。その他のオプションを使用する場合は、サーバーの停止と再起動が必要になります。 たとえば、 **min server memory**および**max server memory** server memory オプションは、で動的に更新されます [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。したがって、サーバーを再起動しなくても、これらを変更できます。 これに対して、 **FILL FACTOR**オプションの実行中の値を再構成するには、を再起動する必要があり [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。  
   
  構成オプションで再構成を実行した後、 **sp_configure '***option_name***'** を実行することで、オプションが動的に更新されたかどうかを確認できます。 動的に更新されるオプションでは、 **run_value**列と**config_value**列の値が一致する必要があります。 また、[**構成**] カタログビューの [ **is_dynamic** ] 列を参照して、動的なオプションを確認することもできます。  
  
  変更は、SQL Server のエラーログにも書き込まれます。
   
 > [!NOTE]  
->  指定された値がオプションに対して大きすぎる場合、 **run_value**列には、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]が有効ではない設定を使用するのではなく、動的メモリに既定*値*が設定されているという事実が反映されます。  
+>  指定された*値*がオプションに対して大きすぎる場合、 **run_value**列には、が [!INCLUDE[ssDE](../../includes/ssde-md.md)] 有効ではない設定を使用するのではなく、動的メモリに既定値が設定されているという事実が反映されます。  
   
  詳細については、「 [transact-sql&#41;の再構成 &#40;](../../t-sql/language-elements/reconfigure-transact-sql.md)」を参照してください。  
   
@@ -121,7 +121,7 @@ RECONFIGURE
 ## <a name="examples"></a>例  
   
 ### <a name="a-listing-the-advanced-configuration-options"></a>A. 詳細構成オプションの一覧表示  
- 次の例は、すべての構成オプションを設定および一覧表示する方法を示しています。 詳細な構成オプションは、最初の`show advanced option`設定`1`でに表示されます。 このオプションを変更した後、 `sp_configure`パラメーターを指定せずにを実行すると、すべての構成オプションが表示されます。  
+ 次の例は、すべての構成オプションを設定および一覧表示する方法を示しています。 詳細な構成オプションは、最初の設定でに表示され `show advanced option` `1` ます。 このオプションを変更した後、 `sp_configure` パラメーターを指定せずにを実行すると、すべての構成オプションが表示されます。  
   
 ```sql  
 USE master;  
@@ -157,7 +157,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- 結果は、オプションの最小値と最大値が続くオプション名を返します。 **Config_value**は、再構成が[!INCLUDE[ssDW](../../includes/ssdw-md.md)]完了したときにが使用する値です。 **run_value** は、現在使用されている値です。 値が変更中のプロセスではない限り、 **config_value** と **run_value** は、通常は同じ値です。  
+ 結果は、オプションの最小値と最大値が続くオプション名を返します。 **Config_value**は、再 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 構成が完了したときにが使用する値です。 **run_value** は、現在使用されている値です。 値が変更中のプロセスではない限り、 **config_value** と **run_value** は、通常は同じ値です。  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. 1 つの構成名の構成設定を一覧表示する  
   

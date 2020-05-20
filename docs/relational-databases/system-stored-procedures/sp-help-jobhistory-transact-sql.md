@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c9ad27602bbaa537fd74b1c6c730675c904f0b7e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054931"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827617"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,14 +75,14 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @run_status = ] run_status`ジョブの実行状態です。 *run_status*は**int**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**0**|Failed|  
+|**0**|失敗|  
 |**1**|成功|  
 |**2**|再試行 (ステップのみ)|  
 |**3**|Canceled|  
 |**4**|実行中のメッセージ|  
-|**5**|Unknown|  
+|**5**|不明|  
   
 `[ @minimum_retries = ] minimum_retries`ジョブの実行を再試行する最小回数。 *minimum_retries*は**int**,、既定値は NULL です。  
   
@@ -137,7 +137,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-listing-all-job-information-for-a-job"></a>A. ジョブのすべてのジョブ情報を一覧表示する  
- 次の例では、 `NightlyBackups`ジョブのすべてのジョブ情報を一覧表示します。  
+ 次の例では、ジョブのすべてのジョブ情報を一覧表示し `NightlyBackups` ます。  
   
 ```  
 USE msdb ;  
@@ -149,7 +149,7 @@ GO
 ```  
   
 ### <a name="b-listing-information-for-jobs-that-match-certain-conditions"></a>B. 一定の条件に一致するジョブに関する情報を一覧表示する  
- 次の例では、すべての`50100`列と、失敗したジョブのすべてのジョブ情報を出力し`20`ます。エラーメッセージ (ユーザー定義のエラーメッセージ) と重大度を指定して、失敗したジョブステップを表示します。  
+ 次の例では、すべての列と、失敗したジョブのすべてのジョブ情報を出力し `50100` ます。エラーメッセージ (ユーザー定義のエラーメッセージ) と重大度を指定して、失敗したジョブステップを表示し `20` ます。  
   
 ```  
 USE msdb  

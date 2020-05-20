@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 35cfa3aeda8e296cd1a85a0e8a098aaddac90954
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7282472dcb916d7122625534cb64f80ce9f4ea6a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084865"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827485"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_update_notification
   
 `[ @notification_method = ] notification`オペレーターに通知する方法。 *通知*は**tinyint**,、既定値はありませんが、これらの値の1つ以上を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|電子メール|  
 |**2**|ポケットベル|  
@@ -68,7 +68,7 @@ sp_update_notification
  このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールがユーザーに付与されている必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、アラート`François Ajenstat` `Test Alert`のに送信される通知の通知方法を変更します。  
+ 次の例では、アラートのに送信される通知の通知方法を変更し `François Ajenstat` `Test Alert` ます。  
   
 ```  
 USE msdb ;  

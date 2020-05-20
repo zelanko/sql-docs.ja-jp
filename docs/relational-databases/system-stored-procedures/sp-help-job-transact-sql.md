@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 29870a0ffb3d2c3b1872acbb40266aef0d16b62c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75546565"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827649"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'`表示するジョブ属性。 *job_aspect*は**varchar (9)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**ALL**|ジョブのすべての属性情報|  
 |**補足**|ジョブ情報|  
@@ -81,7 +81,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status`ジョブの実行状態です。 *状態*は**int**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|アイドルまたは中断されていないジョブのみを返します。|  
 |**1**|実行.|  
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|状態.|  
 |**7**|完了操作の実行中。|  
   
-`[ @date_comparator = ] 'date_comparison'`*Date_created*と*date_modified*の比較に使用する比較演算子。 *date_comparison*は**char (1)** で、=、 \<、または > にすることができます。  
+`[ @date_comparator = ] 'date_comparison'`*Date_created*と*date_modified*の比較に使用する比較演算子。 *date_comparison*は**char (1)** で、=、、または > にすることができ \< ます。  
   
 `[ @date_created = ] date_created`ジョブが作成された日付。 *date_created*は**datetime**,、既定値は NULL です。  
   
@@ -157,12 +157,12 @@ sp_help_job { [ @job_id = ] job_id
 |**on_fail_action**|**nvarchar (4000)**|ステップが失敗した場合に実行する動作。 値は**on_success_action**の場合と同じです。|  
 |**on_fail_step_id**|**int**|**On_fail_action**が**4**の場合は、次に実行する手順を示します。|  
 |**server**|**sysname**|予約済み。|  
-|**database_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)]ステップの場合、これはコマンドを実行するデータベースです。|  
+|**database_name**|**sysname**|ステップの場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、これはコマンドを実行するデータベースです。|  
 |**database_user_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合は、コマンドを実行するデータベース ユーザー コンテキスト。|  
 |**retry_attempts**|**int**|ステップを正常に実行できない場合、コマンドを再試行する最大回数。この回数に達すると、ステップが失敗したと判断されます。|  
 |**retry_interval**|**int**|再試行の間隔 (分単位)。|  
 |**os_run_priority**|**varchar (4000)**|予約済み。|  
-|**output_file_name**|**varchar (200)**|コマンド出力を書き込むファイル ([!INCLUDE[tsql](../../includes/tsql-md.md)]および**CmdExec**ステップのみ)。|  
+|**output_file_name**|**varchar (200)**|コマンド出力を書き込むファイル ( [!INCLUDE[tsql](../../includes/tsql-md.md)] および**CmdExec**ステップのみ)。|  
 |**last_run_outcome**|**int**|最後に実行したときのステップの結果。<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = キャンセル<br /><br /> **5** = 不明|  
 |**last_run_duration**|**int**|最後に実行したときのステップの経過時間 (秒単位)。|  
 |**last_run_retries**|**int**|最後にステップを実行したときにコマンドが再試行された回数。|  
@@ -224,7 +224,7 @@ sp_help_job { [ @job_id = ] job_id
 ## <a name="examples"></a>例  
   
 ### <a name="a-list-information-for-all-jobs"></a>A. すべてのジョブの情報を一覧表示する  
- 次の例では`sp_help_job` 、パラメーターを指定せずにプロシージャを実行し、 `msdb`データベースで現在定義されているすべてのジョブの情報を返します。  
+ 次の例では、パラメーターを指定せずにプロシージャを実行し、 `sp_help_job` データベースで現在定義されているすべてのジョブの情報を返し `msdb` ます。  
   
 ```  
 USE msdb ;  

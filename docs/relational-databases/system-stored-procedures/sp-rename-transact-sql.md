@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac92f07acb7e7322adcf00e09774f72e93e39963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983065"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826575"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  現在のデータベース内のユーザーが作成したオブジェクトの名前を変更します。 このオブジェクトには、テーブル、インデックス、列、別名データ型、また[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]は共通言語ランタイム (CLR) ユーザー定義型を使用できます。  
+  現在のデータベース内のユーザーが作成したオブジェクトの名前を変更します。 このオブジェクトには、テーブル、インデックス、列、別名データ型、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) ユーザー定義型を使用できます。  
   
 > [!CAUTION]  
 >  オブジェクト名の一部または全部を変更すると、スクリプトおよびストアド プロシージャが壊れる可能性があります。 ストアド プロシージャ、トリガー、ユーザー定義関数、またはビューの名前を変更する場合は、このステートメントを使用しないことをお勧めします。代わりに、オブジェクトを削除して新しい名前で再作成してください。  
@@ -47,21 +47,21 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @objname = ]'*object_name*'  
+ [ @objname =] '*object_name*'  
  ユーザーオブジェクトまたはデータ型の現在の修飾名または修飾され名を指定します。 名前を変更するオブジェクトがテーブル内の列である場合は、 *object_name*の形式である必要があります *。 column また*は schema.*テーブル*です。 名前を変更するオブジェクトがインデックスの場合、 *object_name* *テーブル*の形式である必要があります。インデックスまたは*スキーマ。* 名前を変更するオブジェクトが制約の場合、 *object_name*は*schema. 制約*の形式である必要があります。  
   
  引用符は、修飾オブジェクトを指定する場合のみ必要です。 データベース名を含む完全修飾名を指定する場合は、データベース名を現在のデータベースの名前にする必要があります。 *object_name*は**nvarchar (776)**,、既定値はありません。  
   
- [ @newname = ]'*new_name*'  
+ [ @newname =] '*new_name*'  
  指定したオブジェクトの新しい名前を指定します。 *new_name*は、1部構成の名前である必要があり、識別子の規則に従っている必要があります。 *newname*は**sysname**,、既定値はありません。  
   
 > [!NOTE]  
 >  トリガー名の先頭に # または ## は使用できません。  
   
- [ @objtype = ]'*object_type*'  
+ [ @objtype =] '*object_type*'  
  名前を変更するオブジェクトの種類を指定します。 *object_type*は**varchar (13)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |COLUMN|名前を変更する列。|  
 |DATABASE|ユーザー定義データベース。 このオブジェクトの種類は、データベースの名前を変更するときに必要です。|  
@@ -100,7 +100,7 @@ GO
 ```  
   
 ### <a name="b-renaming-a-column"></a>B. 列の名前を変更する  
- 次の例では`TerritoryID` 、 `SalesTerritory`テーブルの列の`TerrID`名前をに変更します。  
+ 次の例では、テーブルの列の名前 `TerritoryID` `SalesTerritory` をに変更 `TerrID` します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -110,7 +110,7 @@ GO
 ```  
   
 ### <a name="c-renaming-an-index"></a>C. インデックス名を変更する  
- 次の例では`IX_ProductVendor_VendorID` 、インデックス`IX_VendorID`の名前をに変更します。  
+ 次の例では、インデックスの名前 `IX_ProductVendor_VendorID` をに変更 `IX_VendorID` します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -120,7 +120,7 @@ GO
 ```  
   
 ### <a name="d-renaming-an-alias-data-type"></a>D. 別名データ型の名前を変更する  
- 次の例では`Phone` 、別名データ型`Telephone`の名前をに変更します。  
+ 次の例では、 `Phone` 別名データ型の名前をに変更し `Telephone` ます。  
   
 ```  
 USE AdventureWorks2012;  

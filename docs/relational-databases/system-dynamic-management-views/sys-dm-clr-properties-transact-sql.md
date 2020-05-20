@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266061"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824727"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "68266061"
 |**name**|**nvarchar(128)**|プロパティの名前。|  
 |**value**|**nvarchar(128)**|プロパティの値。|  
   
-## <a name="properties"></a>Properties  
- **ディレクトリ**プロパティは、.NET Framework がサーバーにインストールされたディレクトリを示します。 サーバーコンピューターに複数の .NET Framework がインストールされている可能性があります。このプロパティの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]値によって、どのインストールが使用されているかが識別されます。  
+## <a name="properties"></a>プロパティ  
+ **ディレクトリ**プロパティは、.NET Framework がサーバーにインストールされたディレクトリを示します。 サーバーコンピューターに複数の .NET Framework がインストールされている可能性があります。このプロパティの値によって、どのインストール [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用されているかが識別されます。  
   
  **Version**プロパティは、サーバー上の .NET Framework およびホストされている CLR のバージョンを示します。  
   
- **Dm_clr_properties**動的マネージビューは、**状態**プロパティに対して6つの異なる値を返すことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]これには、ホストされる clr の状態が反映されます。 それらは次のとおりです。  
+ **Dm_clr_properties**動的マネージビューは、**状態**プロパティに対して6つの異なる値を返すことができます。これには、ホストされる clr の状態が反映されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これらは次のとおりです。  
   
 -   Mscoree is not loaded. (mscoree が読み込まれていない。)  
   
@@ -62,19 +62,19 @@ ms.locfileid: "68266061"
   
  **Mscoree.dll 状態のロック**された clr バージョンは、ホストされている clr が使用されていないため、まだ初期化されていない場合に表示されることがあります。 ホストされる CLR は、DDL ステートメント ( [CREATE ASSEMBLY &#40;transact-sql&#41;](../../t-sql/statements/create-assembly-transact-sql.md)など) またはマネージデータベースオブジェクトが実行されるときに初期化されます。  
   
- **Clr が初期化**された状態は、ホストされている clr が正常に初期化されたことを示します。 これは、ユーザー CLR コードの実行が有効になっているかどうかを示すものではないことに注意してください。 ユーザー CLR コードの実行が最初に有効になっていて、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)ストアドプロシージャを使用して無効にした場合でも、状態値は**CLR に初期化**されます。  
+ **Clr が初期化**された状態は、ホストされている clr が正常に初期化されたことを示します。 これは、ユーザー CLR コードの実行が有効になっているかどうかを示すものではないことに注意してください。 ユーザー CLR コードの実行が最初に有効になっていて、sp_configure ストアドプロシージャを使用して無効にした場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)でも、状態値は**CLR に初期化**されます。  
   
  **Clr 初期化が完全に失敗**した状態は、ホストされた clr の初期化が失敗したことを示します。 これは多くの場合メモリ不足が原因ですが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と CLR の間でホスティングのハンドシェイクが失敗していることも考えられます。 このような場合は、エラーメッセージ6512または6513がスローされます。  
   
- **CLR が停止状態**は、がシャットダウン処理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中の場合にのみ表示されます。  
+ **CLR が停止状態**は、がシャットダウン処理中の場合にのみ表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="remarks"></a>Remarks  
- CLR 統合機能の強化により、このビューのプロパティおよび値[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、の将来のバージョンで変更される可能性があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR 統合機能の強化により、このビューのプロパティおよび値は、の将来のバージョンで変更される可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  
   
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
 ## <a name="examples"></a>使用例  
  次の例では、ホストされる CLR に関する情報を取得します。  

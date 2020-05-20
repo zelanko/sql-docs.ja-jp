@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107914"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828862"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |エラーおよび HRESULT|一般的な原因|  
 |-----------------------|------------------|  
-|**変数型が不正です&amp;#x2028;(0x80020008)**|メソッドパラメーターとし[!INCLUDE[tsql](../../includes/tsql-md.md)]て渡された値のデータ型が[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 、メソッドパラメーターのデータ型と一致しなかったか、またはメソッドパラメーターとして NULL 値が渡されました。|  
+|**変数型が不正です&amp;#x2028;(0x80020008)**|メソッドパラメーター [!INCLUDE[tsql](../../includes/tsql-md.md)] として渡された値のデータ型が、メソッドパラメーターのデータ型と一致しなかった [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] か、またはメソッドパラメーターとして NULL 値が渡されました。|  
 |**不明な名前です&amp;#x2028;(0x8002006)**|指定したプロパティ名またはメソッド名が、指定したオブジェクトに見つかりませんでした。|  
 |**無効なクラス文字列です&amp;#x2028;(0x800401f3)**|指定した ProgID または CLSID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに OLE オブジェクトとして登録されていません。 **Sp_OACreate**を使用してインスタンス化するには、事前にカスタム OLE オートメーションサーバーを登録しておく必要があります。 これを行うには、インプロセス (.dll) サーバーの場合は Regsvr32 ユーティリティを使用し、ローカル (.exe) サーバーの場合**はコマンドライン**スイッチを使用します。|  
 |**サーバーの実行に失敗しました (0x80080005)**|指定した OLE オブジェクトは、ローカル OLE サーバー (.exe ファイル) として登録されていますが、.exe ファイルが見つからないか、起動できません。|  
@@ -97,7 +97,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures`OLE オートメーションに関連するシステムプロシージャを使用するには、構成を**有効**にする必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、OLE オートメーションのエラー情報を表示します。  
   
 ```  

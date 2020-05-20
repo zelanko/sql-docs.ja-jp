@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 72e321b74f3e949030a6d599c082acf36db12687
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 30ffe0203b3f9aacf23d811e48e6e6d8094a4ee2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054910"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827607"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  自動化された活動を実行するため[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]にによって使用されるジョブのスケジュールに関する情報を返します。  
+  自動化された [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 活動を実行するためにによって使用されるジョブのスケジュールに関する情報を返します。  
  
  
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -104,7 +104,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-job-schedule-for-a-specific-job"></a>A. 特定のジョブのジョブ スケジュールを返す  
- 次の例では、という名前`BackupDatabase`のジョブのスケジュール情報が返されます。  
+ 次の例では、という名前のジョブのスケジュール情報が返され `BackupDatabase` ます。  
   
 ```  
 USE msdb ;  

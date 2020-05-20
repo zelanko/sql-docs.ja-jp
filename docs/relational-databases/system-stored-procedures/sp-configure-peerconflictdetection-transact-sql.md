@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_configure_peerconflictdetection
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a332257b640124c04ed339ff11473b89a7c3b83b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68215941"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828436"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,41 +44,41 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @publication=]'*publication*'  
+ [ @publication =] '*パブリケーション*'  
  競合検出を構成するパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
- [ @action= ]'*action*'  
+ [ @action =] '*action*'  
  パブリケーションの競合検出を有効にするか無効にするかを指定します。 *アクション*は**nvarchar (5)**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**を**|パブリケーションの競合検出を有効にします。|  
-|**切り替える**|パブリケーションの競合検出を無効にします。|  
+|**enable**|パブリケーションの競合検出を有効にします。|  
+|**disable**|パブリケーションの競合検出を無効にします。|  
 |NULL (既定値)||  
   
- [ @originator_id= ]*originator_id*  
+ [ @originator_id =] *originator_id*  
  ピア ツー ピア トポロジ内のノードの ID を指定します。 *originator_id*は**int**,、既定値は NULL です。 *アクション*が**有効**に設定されている場合、この ID は競合検出に使用されます。 トポロジで使用されていないゼロ以外の正の ID を指定してください。 既に使用されている ID を確認するには、 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) システム テーブルに対してクエリを実行します。  
   
- [ @conflict_retention= ]*conflict_retention*  
+ [ @conflict_retention =] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @continue_onconflict= ]'*continue_onconflict*']  
+ [ @continue_onconflict =] '*continue_onconflict*']  
  競合が検出された後もディストリビューションエージェントが変更を処理するかどうかを決定します。 *continue_onconflict*は**nvarchar (5)** で、既定値は FALSE です。  
   
 > [!CAUTION]  
 >  既定値の FALSE を使用することをお勧めします。 このオプションが TRUE に設定されている場合、ディストリビューションエージェントは、発信元 ID が最も大きいノードから競合する行を適用してトポロジ内のデータを収束しようとします。 この方法では、収束は保証されません。 競合が検出された後、トポロジが一貫していることを確認する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。  
   
- [ @local= ]'*local*'  
+ [ @local =] '*local*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @timeout= ]*タイムアウト*  
+ [ @timeout =]*タイムアウト*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>Remarks  
- sp_configure_peerconflictdetection は、ピア ツー ピア トランザクション レプリケーションで使用されます。 競合検出を使用するには、すべての[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]ノードが以降のバージョンを実行している必要があります。すべてのノードに対して検出を有効にする必要があります。  
+ sp_configure_peerconflictdetection は、ピア ツー ピア トランザクション レプリケーションで使用されます。 競合検出を使用するには、すべてのノードが以降のバージョンを実行している必要があり、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] すべてのノードに対して検出を有効にする必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  Sysadmin 固定サーバーロールまたは db_owner 固定データベースロールのメンバーシップが必要です。  

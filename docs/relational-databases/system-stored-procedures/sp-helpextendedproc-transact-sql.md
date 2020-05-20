@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpextendedproc
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3dcbe6d187b56b0b15ae829eeecf1811b02dfee7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8341f752b266d245603f849325dc32f90f9d92c2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67943504"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828913"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>B. 1つの拡張ストアドプロシージャに関するヘルプをレポートする  
- 次の例では、 `xp_cmdshell`拡張ストアドプロシージャに関するレポートを作成します。  
+ 次の例では、拡張ストアドプロシージャに関するレポートを作成し `xp_cmdshell` ます。  
   
 ```  
 USE master;  

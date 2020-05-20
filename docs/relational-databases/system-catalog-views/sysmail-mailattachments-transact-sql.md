@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_mailattachments database mail view
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab020c70d1d1062f507bbb745f2e5f00d9faba6a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060200"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824877"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68060200"
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|添付ファイルの識別子。|  
 |**mailitem_id**|**int**|添付ファイルが含まれていたメール アイテムの識別子。|  
-|**/db**|**nvarchar (520)**|添付ファイルのファイル名。 **Attach_query_result**が1で**query_attachment_filename**が NULL の場合、データベースメールによって任意のファイル名が作成されます。|  
+|**filename**|**nvarchar (520)**|添付ファイルのファイル名。 **Attach_query_result**が1で**query_attachment_filename**が NULL の場合、データベースメールによって任意のファイル名が作成されます。|  
 |**filesize**|**int**|添付ファイルのサイズ (バイト単位)。|  
 |**資料**|**varbinary(max)**|添付ファイルのコンテンツ。|  
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  

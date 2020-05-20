@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_tables
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9af57e2f3a3bcf6554e88d8c6f9d54b8ec069009
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053087"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827816"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,33 +48,33 @@ sp_describe_cursor_tables
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @cursor_return= ]*output_cursor_variable*OUTPUT  
+ [ @cursor_return =] *output_cursor_variable*出力  
  カーソル出力を受け取るように宣言したカーソル変数の名前です。 *output_cursor_variable*は**カーソル**であり、既定値はありません。 sp_describe_cursor_tables が呼び出されたときに、どのカーソルにも関連付けないでください。 返されるカーソルは、スクロール可能、動的、読み取り専用のカーソルです。  
   
- [ @cursor_source= ]{N'local ' |N'global ' |N'variable' }  
+ [ @cursor_source =] {N'local ' |N'global ' |N'variable' }  
  ローカルカーソル、グローバルカーソル、またはカーソル変数の名前を使用して、レポートされるカーソルが指定されているかどうかを指定します。 パラメーターは**nvarchar (30)** です。  
   
- [ @cursor_identity= ]N '*local_cursor_name*'  
+ [ @cursor_identity =] N '*local_cursor_name*'  
  DECLARE CURSOR ステートメントによって作成されたカーソルの名前を指定します。 DECLARE CURSOR ステートメントは、LOCAL キーワードを持つか、既定値は LOCAL になります。 *local_cursor_name*は**nvarchar (128)** です。  
   
- [ @cursor_identity= ]N '*global_cursor_name*'  
+ [ @cursor_identity =] N '*global_cursor_name*'  
  DECLARE CURSOR ステートメントによって作成されたカーソルの名前を指定します。 GLOBAL キーワードを持つか、またはグローバルに既定値が指定されています。 *global_cursor_name*には、ODBC アプリケーションによって開かれた API サーバーカーソルの名前を指定することもできます。その後、SQLSetCursorName を呼び出してカーソルに名前を付けます。*global_cursor_name*は**nvarchar (128)** です。  
   
- [ @cursor_identity= ]N '*input_cursor_variable*'  
+ [ @cursor_identity =] N '*input_cursor_variable*'  
  開いているカーソルに関連付けられたカーソル変数の名前です。 *input_cursor_variable*は**nvarchar (128)** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  None  
   
 ## <a name="cursors-returned"></a>返されるカーソル  
- sp_describe_cursor_tables は、そのレポートを[!INCLUDE[tsql](../../includes/tsql-md.md)] 、**カーソル**出力パラメーターとしてカプセル化します。 これに[!INCLUDE[tsql](../../includes/tsql-md.md)]より、バッチ、ストアドプロシージャ、およびトリガーは、一度に1行ずつ出力を処理できます。 これは、このプロシージャを API 関数から直接呼び出すことができないことも意味します。 **Cursor**出力パラメーターはプログラム変数にバインドする必要がありますが、api では**カーソル**パラメーターまたは変数のバインドがサポートされていません。  
+ sp_describe_cursor_tables は、そのレポートを、カーソル出力パラメーターとしてカプセル化 [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor**します。 これにより、 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ、ストアドプロシージャ、およびトリガーは、一度に1行ずつ出力を処理できます。 これは、このプロシージャを API 関数から直接呼び出すことができないことも意味します。 **Cursor**出力パラメーターはプログラム変数にバインドする必要がありますが、api では**カーソル**パラメーターまたは変数のバインドがサポートされていません。  
   
  次の表に、sp_describe_cursor_tables が返すカーソルの形式を示します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |テーブルの所有者|**sysname**|テーブル所有者のユーザー ID。|  
-|Table_name|**sysname**|オブジェクトまたはベース テーブルの名前。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、サーバーカーソルは常に、ベーステーブルではなく、ユーザーが指定したオブジェクトを返します。|  
+|Table_name|**sysname**|オブジェクトまたはベース テーブルの名前。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、サーバーカーソルは常に、ベーステーブルではなく、ユーザーが指定したオブジェクトを返します。|  
 |optimizer_hints|**smallint**|次の1つ以上で構成されるビットマップ。<br /><br /> 1 = 行レベルのロック (ROWLOCK)<br /><br /> 4 = ページレベルのロック (PAGELOCK)<br /><br /> 8 = テーブルロック (TABLOCK)<br /><br /> 16 = 排他テーブルロック (TABLOCKX)<br /><br /> 32 = 更新ロック (UPDLOCK)<br /><br /> 64 = ロックなし (NOLOCK)<br /><br /> 128 = 高速順方向参照 (FASTFIRST)<br /><br /> 4096 = DECLARE CURSOR で使用する場合、反復可能セマンティックの読み取り (HOLDLOCK)<br /><br /> 複数のオプションを指定する場合、システムは最も限定的なオプションを使用します。 ただし、sp_describe_cursor_tables は、クエリに指定されているフラグを表示します。|  
 |lock_type|**smallint**|このカーソルの基になる各ベーステーブルに対して、明示的または暗黙的に要求されたスクロールロックの種類。 値は次のいずれかになります。<br /><br /> 0 = なし<br /><br /> 1 = 共有<br /><br /> 3 = 更新|  
 |server_name|**sysname、nullable**|テーブルが存在するリンクサーバーの名前。 OPENQUERY または OPENROWSET が使用されている場合は NULL です。|  
@@ -89,7 +89,7 @@ sp_describe_cursor_tables
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、グローバルカーソルを`sp_describe_cursor_tables`開き、を使用して、カーソルによって参照されているテーブルに関するレポートを作成します。  
+ 次の例では、グローバルカーソルを開き、を使用し `sp_describe_cursor_tables` て、カーソルによって参照されているテーブルに関するレポートを作成します。  
   
 ```  
 USE AdventureWorks2012;  

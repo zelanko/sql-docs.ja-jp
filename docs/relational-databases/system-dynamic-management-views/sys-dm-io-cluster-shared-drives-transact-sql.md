@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_cluster_shared_drives dynamic management view
 ms.assetid: c8fcced8-c780-49dc-99bd-6beb3ca532c4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6633988bf660de8225b201266a4f2ef7ebea55e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e89252effd6e8fbb14d800837328c9ff8042e0d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900386"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827946"
 ---
 # <a name="sysdm_io_cluster_shared_drives-transact-sql"></a>dm_io_cluster_shared_drives (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67900386"
   現在のサーバーインスタンスがクラスター化されたサーバーの場合、このビューは各共有ドライブのドライブ名を返します。 現在のサーバーインスタンスがクラスター化されたインスタンスでない場合は、空の行セットが返されます。  
   
 > [!NOTE]  
->  これをから[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_io_cluster_shared_drives**という名前を使用します。  
+>  これをから呼び出すには [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_io_cluster_shared_drives**という名前を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -41,7 +41,7 @@ ms.locfileid: "67900386"
 |**pdw_node_id**|**int**|**適用対象**: ssPDW<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="remarks"></a>Remarks  
- クラスタリングが有効になっている場合、フェールオーバークラスターインスタンスは、インスタンスが別のノードにフェールオーバーした後にアクセスできるように、共有ディスク上にデータファイルとログファイルを配置する必要があります。 このビューの各行は、クラスター化された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで使用される 1 つの共有ディスクを表します。 このビューによって一覧表示されたディスクのみを使用して、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このインスタンスのデータファイルまたはログファイルを格納できます。 このビューに表示されているディスクは、そのインスタンスに関連付けられているクラスターリソースグループ内のディスクです。  
+ クラスタリングが有効になっている場合、フェールオーバークラスターインスタンスは、インスタンスが別のノードにフェールオーバーした後にアクセスできるように、共有ディスク上にデータファイルとログファイルを配置する必要があります。 このビューの各行は、クラスター化された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで使用される 1 つの共有ディスクを表します。 このビューによって一覧表示されたディスクのみを使用して、のこのインスタンスのデータファイルまたはログファイルを格納でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このビューに表示されているディスクは、そのインスタンスに関連付けられているクラスターリソースグループ内のディスクです。  
   
 > [!NOTE]  
 >  このビューは、今後のリリースで非推奨とされる予定です。 代わりに、 [dm_io_cluster_valid_path_names &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)を使用することをお勧めします。  

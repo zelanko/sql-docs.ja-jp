@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c09dfe73df914a38e53a39b99c99388590c8d9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304804"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827765"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>引数  
 `[ @class = ] 'class'`要求する情報に関するクラス。 *クラス*は**varchar (8)**,、既定値は**JOB**です。 *クラス*には、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**補足**|ジョブカテゴリに関する情報を提供します。|  
 |**アラート**|アラートカテゴリに関する情報を提供します。|  
@@ -52,11 +52,11 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'`情報を要求するカテゴリの種類。 *型*は**varchar (12)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**地元の**|ローカルジョブカテゴリ。|  
 |**MULTI -SERVER**|マルチサーバージョブカテゴリ。|  
-|**存在**|**JOB**以外のクラスのカテゴリ。|  
+|**NONE**|**JOB**以外のクラスのカテゴリ。|  
   
 `[ @name = ] 'name'`情報が要求されるカテゴリの名前。 *名前*は**sysname**,、既定値は NULL です。  
   
@@ -66,7 +66,7 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- ** \@サフィックス**が**0**の場合、 **sp_help_category**は次の結果セットを返します。  
+ ** \@ サフィックス**が**0**の場合、 **sp_help_category**は次の結果セットを返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|カテゴリの種類:<br /><br /> **1** = ローカル<br /><br /> **2** = マルチサーバー<br /><br /> **3** = なし|  
 |**name**|**sysname**|カテゴリ名|  
   
- ** \@サフィックス**が**1**の場合、 **sp_help_category**は次の結果セットを返します。  
+ ** \@ サフィックス**が**1**の場合、 **sp_help_category**は次の結果セットを返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

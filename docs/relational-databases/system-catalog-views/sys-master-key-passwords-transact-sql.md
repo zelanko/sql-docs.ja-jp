@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_key_passwords catalog view
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 926acd9beb00102e19dbc2844e282d74bc890915
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7d4bdd76786d4c70b0c27bf60c1a51f08828d1b2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80752898"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825097"
 ---
 # <a name="sysmaster_key_passwords-transact-sql"></a>master_key_passwords (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "80752898"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**credential_id**|**int**|パスワードが属する資格情報の ID。 この ID はサーバー インスタンス内で一意です。|  
-|**family_guid**|**uniqueidentifier**|作成時の元のデータベースの一意の ID。 この GUID は、データベースが復元または添付されたり、データベース名が変更されたりしても変わりません。<br /><br /> サービスマスターキーによる自動暗号化解除が失敗[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]した場合、は**family_guid**を使用して、データベースマスターキーの保護に使用されるパスワードを含む可能性のある資格情報を識別します。|  
+|**family_guid**|**uniqueidentifier**|作成時の元のデータベースの一意の ID。 この GUID は、データベースが復元または添付されたり、データベース名が変更されたりしても変わりません。<br /><br /> サービスマスターキーによる自動暗号化解除が失敗した場合、は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **family_guid**を使用して、データベースマスターキーの保護に使用されるパスワードを含む可能性のある資格情報を識別します。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

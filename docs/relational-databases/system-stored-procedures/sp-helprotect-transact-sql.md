@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8ff791855f7e65652f64d18f3128831172da9229
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997473"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828883"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67997473"
   現在のデータベース内のオブジェクトまたはステートメント権限に対するユーザー権限に関する情報を含むレポートを返します。  
   
 > [!IMPORTANT]  
->  **sp_helprotect**は、で導入された securables に関する[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]情報を返しません。 代わりに、 [database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)を使用し、 [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)してください。  
+>  **sp_helprotect**は、で導入された securables に関する情報を返しません [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 代わりに、 [database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)を使用し、 [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)してください。  
   
  固定サーバー ロールまたは固定データベース ロールに常に割り当てられる権限は表示されません。 には、ロールのメンバーシップに基づいて権限を受け取るログインやユーザーは含まれません。  
   
@@ -65,17 +65,17 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**所有者**|**sysname**|オブジェクト所有者の名前。|  
-|**Object**|**sysname**|オブジェクトの名前。|  
+|**オブジェクト**|**sysname**|オブジェクト名。|  
 |**権限**|**sysname**|権限が許可されたプリンシパルの名前。|  
 |**権限**|**sysname**|指定された権限付与対象ユーザーに権限を許可したプリンシパルの名前。|  
 |**ProtectType**|**nvarchar (10)**|保護の種類の名前:<br /><br /> 取り消しの許可|  
-|**動作**|**nvarchar(60)**|アクセス許可の名前。 有効な権限ステートメントは、オブジェクトの種類によって異なります。|  
+|**操作**|**nvarchar(60)**|アクセス許可の名前。 有効な権限ステートメントは、オブジェクトの種類によって異なります。|  
 |**列**|**sysname**|アクセス許可の種類:<br /><br /> All = オブジェクトの現在の列すべてに対する権限<br /><br /> 新規 = アクセス許可は、後でオブジェクトに対して変更される可能性のある新しい列 (ALTER ステートメントを使用) を対象とします。<br /><br /> All+New = All と New を組み合わせた権限<br /><br /> 権限の種類が列に適用されない場合は、ピリオドを返します。|  
   
 ## <a name="remarks"></a>Remarks  
- 次のプロシージャでは、すべてのパラメーターが省略可能です。 パラメーターを使用せずに`sp_helprotect`実行すると、現在のデータベースで許可または拒否されたすべての権限が表示されます。  
+ 次のプロシージャでは、すべてのパラメーターが省略可能です。 パラメーターを使用せずに実行すると、 `sp_helprotect` 現在のデータベースで許可または拒否されたすべての権限が表示されます。  
   
- すべてではなく一部のパラメーターだけを指定する場合は、特定のパラメーターを示す名前付きのパラメーターを使用するか、プレースホルダーとして `NULL` を使用します。 たとえば、データベース所有者 (`dbo`) のすべてのアクセス許可を報告するには、次のように実行します。  
+ すべてではなく一部のパラメーターだけを指定する場合は、特定のパラメーターを示す名前付きのパラメーターを使用するか、プレースホルダーとして `NULL` を使用します。 たとえば、データベース所有者 () のすべてのアクセス許可を報告するには、 `dbo` 次のように実行します。  
   
 ```  
 EXEC sp_helprotect NULL, NULL, dbo;  
@@ -104,7 +104,7 @@ EXEC sp_helprotect 'titles';
 ```  
   
 ### <a name="b-listing-the-permissions-for-a-user"></a>B. ユーザーに対する権限を一覧表示する  
- 次の例では、ユーザー `Judy`が現在のデータベースに保持しているすべてのアクセス許可を一覧表示します。  
+ 次の例では、ユーザー `Judy` が現在のデータベースに保持しているすべてのアクセス許可を一覧表示します。  
   
 ```  
 EXEC sp_helprotect NULL, 'Judy';  

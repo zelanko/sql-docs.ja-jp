@@ -10,20 +10,20 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ccd82fed-1a3f-47de-85c4-1c9bdd80b027
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4981203eb0712eb1989959af38117d12f05bf9cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fed156af798fe13380a576e96ea76416a9bcbfcc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412828"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826406"
 ---
 # <a name="memory-optimized-table-dynamic-management-views-transact-sql"></a>メモリ最適化テーブルの動的管理ビュー (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  インメモリ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP では、次の動的管理ビュー (dmv) が使用されます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インメモリ OLTP では、次の動的管理ビュー (dmv) が使用されます。  
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   

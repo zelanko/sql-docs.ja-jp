@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bdfe70e3df86f792d250cd7abcc3ef3013e9df19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4fd1c7bf329334bee0d8b3c29ba5d1d97909818e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056235"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826009"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @rowcount_only = ] 'rowcount_only'`テーブルの行数のみを返すかどうかを指定します。 *rowcount_only*は**smallint**であり、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**0**|互換性の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ある7.0 のチェックサムを実行します。<br /><br /> 注: アーティクルが行方向にフィルター選択されている場合、チェックサム操作ではなく rowcount 操作が実行されます。|  
+|**0**|互換性の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ある7.0 のチェックサムを実行します。<br /><br /> 注: アーティクルが行方向にフィルター選択されている場合、チェックサム操作ではなく rowcount 操作が実行されます。|  
 |**1** (既定値)|行数チェックのみを実行します。|  
-|**2**|行数とバイナリチェックサムを実行します。<br /><br /> 注: バージョン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 のサブスクライバーの場合、行数の検証のみが実行されます。|  
+|**2**|行数とバイナリチェックサムを実行します。<br /><br /> 注: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン7.0 のサブスクライバーの場合、行数の検証のみが実行されます。|  
   
 `[ @full_or_fast = ] 'full_or_fast'`行数を計算するために使用されるメソッドです。 *full_or_fast*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|COUNT(*) を使用してフル カウントします。|  
 |**1**|Sysindexes から高速にカウントさ**れ**ます。 [Sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)内の行のカウントは、実際のテーブルの行をカウントするよりもはるかに高速です。 ただし、 [sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)は遅延更新されるため、行数が正確でない場合があります。|  
@@ -61,10 +61,10 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @shutdown_agent = ] 'shutdown_agent'`検証の完了時にディストリビューションエージェントを直ちにシャットダウンするかどうかを指定します。 *shutdown_agent*は**ビット**,、既定値は**0**です。 **0**の場合、レプリケーションエージェントはシャットダウンされません。 **1**の場合、最後の記事が検証された後にレプリケーションエージェントがシャットダウンします。  
   
-`[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  *publisher*パブリッシャーの検証を要求するときは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを使用しないでください。  
+>  パブリッシャーの検証を要求するときは、*パブリッシャー*を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

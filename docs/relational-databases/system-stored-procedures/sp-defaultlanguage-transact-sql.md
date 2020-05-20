@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_defaultlanguage
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: af2402ce4f1e49ee572a9d271497c2798d679070
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7c06f03af5ab9cc8d06b8d7d0f87208895c1fc33
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68120091"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826156"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @loginame = ] 'login'`ログイン名を指定します。 *login*は**sysname**,、既定値はありません。 *ログイン*には、既存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のログインまたは Windows ユーザーまたはグループを指定できます。  
+`[ @loginame = ] 'login'`ログイン名を指定します。 *login*は**sysname**,、既定値はありません。 *ログイン*には、既存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインまたは Windows ユーザーまたはグループを指定できます。  
   
 `[ @language = ] 'language'`ログインの既定の言語を設定します。 *language*は**sysname**,、既定値は NULL です。 *言語*は、サーバーで有効な言語である必要があります。 *Language*が指定されていない場合、 *language*はサーバーの既定の言語に設定されます。既定の言語は、 **sp_configure**構成変数の**既定の言語**によって定義されます。 サーバーの既定の言語を変更しても、既存のログインの既定の言語は変更されません。  
   
@@ -53,7 +53,7 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ## <a name="remarks"></a>Remarks  
  **sp_defaultlanguage**は ALTER LOGIN を呼び出します。この場合、追加のオプションがサポートされます。 他のログインの既定値の変更については、「 [ALTER login &#40;transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)」を参照してください。  
   
- SET LANGUAGE ステートメントを使用して、現在のセッションの言語を変更します。 現在の言語@LANGUAGE設定を表示するには、@ 関数を使用します。  
+ SET LANGUAGE ステートメントを使用して、現在のセッションの言語を変更します。 @LANGUAGE現在の言語設定を表示するには、@ 関数を使用します。  
   
  ログインの既定の言語がサーバーから削除された場合、ログインはサーバーの既定の言語を取得します。 **sp_defaultlanguage**は、ユーザー定義のトランザクション内では実行できません。  
   

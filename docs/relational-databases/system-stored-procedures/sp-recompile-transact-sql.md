@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_recompile
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241a0594f3487d47c49a96fb2539b660b294b8a4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002566"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827516"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_recompile [ @objname = ] 'object'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @objname= ]'*object*'  
+ [ @objname =] '*オブジェクト*'  
  現在のデータベースにあるストアド プロシージャ、トリガー、テーブル、ビュー、またはユーザー定義関数の修飾名または非修飾名を指定します。 *オブジェクト*は**nvarchar (776)**,、既定値はありません。 *オブジェクト*がストアドプロシージャ、トリガー、またはユーザー定義関数の名前である場合、ストアドプロシージャ、トリガー、または関数は、次回実行時に再コンパイルされます。 *オブジェクト*がテーブルまたはビューの名前である場合、テーブルまたはビューを参照するすべてのストアドプロシージャ、トリガー、またはユーザー定義関数は、次回の実行時に再コンパイルされます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -57,7 +57,7 @@ sp_recompile [ @objname = ] 'object'
 ## <a name="permissions"></a>アクセス許可  
  指定されたオブジェクトに対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`Customer` テーブルを対象とするストアド プロシージャ、トリガー、およびユーザー定義関数が次回実行時に再コンパイルされます。  
   
 ```  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsort
 ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 511b5b8f01a96f860d9f0c4266f92b323e6f1240
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a9eeca46571b2e61e73f9f5670bfeba0fd5f908
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997359"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826084"
 ---
 # <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpsort
  サーバーの既定の照合順序を返します。  
   
 ## <a name="remarks"></a>Remarks  
- のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が、以前のの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールと互換性があるように指定された照合順序でインストールされている場合、 **sp_helpsort**は空白の結果を返します。 この動作が発生した場合、`SELECT SERVERPROPERTY ('Collation');` のように、SERVERPROPERTY オブジェクトに対してクエリを実行して、照合順序を決定できます。  
+ のインスタンスが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以前ののインストールと互換性があるように指定された照合順序でインストールされている場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sp_helpsort**は空白の結果を返します。 この動作が発生した場合、`SELECT SERVERPROPERTY ('Collation');` のように、SERVERPROPERTY オブジェクトに対してクエリを実行して、照合順序を決定できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  

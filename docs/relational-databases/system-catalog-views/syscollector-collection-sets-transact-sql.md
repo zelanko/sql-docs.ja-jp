@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collection_sets view
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a001a6a2da2532ac6d0e2a00079c8bd7c7036b66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e258fbd2e0d7a9d15e3c8aa9c2ec3e7bcc7ddc0c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060384"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824942"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68060384"
 |logging_level|**smallint**|ログ記録レベルを 0、1、または 2 から指定します。 NULL 値は許可されません。|  
 |days_until_expiration|**smallint**|収集したデータを管理データウェアハウスに保存する日数。 NULL 値は許可されません。|  
 |description|**nvarchar (4000)**|コレクションセットについて説明します。 NULL 値が許可されます。|  
-|dump_on_any_error|**bit**|エラーが発生した[!INCLUDE[ssIS](../../includes/ssis-md.md)]場合にダンプファイルを作成するかどうかを指定するために、(1) または off (0) をオンにします。 NULL 値は許可されません。|  
+|dump_on_any_error|**bit**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]エラーが発生した場合にダンプファイルを作成するかどうかを指定するために、(1) または off (0) をオンにします。 NULL 値は許可されません。|  
 |dump_on_codes|**nvarchar(max)**|ダンプ ファイルの原因となった [!INCLUDE[ssIS](../../includes/ssis-md.md)] エラー コードのリストです。 NULL 値が許可されます。|  
   
 ## <a name="permissions"></a>アクセス許可  

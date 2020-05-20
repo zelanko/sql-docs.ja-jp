@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobstep
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090052"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827567"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービスが自動化された活動を実行するために使用するジョブのステップに関する情報を返します。  
+  エージェントサービスが自動化された活動を実行するために使用するジョブのステップに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -78,7 +78,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|正常に実行できない場合にコマンドを再試行する最大回数。|  
 |**retry_interval**|**int**|再試行の間隔 (分)。|  
 |**os_run_priority**|**int**|予約済み。|  
-|**output_file_name**|**nvarchar(200)**|コマンドの出力の書き込み先のファイル ([!INCLUDE[tsql](../../includes/tsql-md.md)]、 **CmdExec**、および**PowerShell**の手順のみ)。|  
+|**output_file_name**|**nvarchar(200)**|コマンドの出力の書き込み先のファイル ( [!INCLUDE[tsql](../../includes/tsql-md.md)] 、 **CmdExec**、および**PowerShell**の手順のみ)。|  
 |**last_run_outcome**|**int**|最後に実行したときのステップの結果。<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **2** = 再試行<br /><br /> **3** = キャンセル<br /><br /> **5** = 不明|  
 |**last_run_duration**|**int**|最後に実行されたときのステップの期間 (hhmmss)。|  
 |**last_run_retries**|**int**|最後にステップを実行したときにコマンドが再試行された回数。|  
@@ -117,7 +117,7 @@ GO
 ```  
   
 ### <a name="b-return-information-about-a-specific-job-step"></a>B. 特定のジョブステップに関する情報を返す  
- 次の例では、という名前`Weekly Sales Data Backup`のジョブの最初のジョブステップに関する情報を返します。  
+ 次の例では、という名前のジョブの最初のジョブステップに関する情報を返し `Weekly Sales Data Backup` ます。  
   
 ```  
 USE msdb ;  

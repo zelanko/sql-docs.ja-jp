@@ -23,15 +23,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server], refreshing metadata
 - user-defined functions [SQL Server], refreshing metadata
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2de8653c0a18cc6fabaf2570a10c73184e5c9706
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982771"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825988"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="arguments"></a>引数  
 `[ @name = ] 'module\_name'`ストアドプロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベースレベルの DDL トリガー、またはサーバーレベルの DDL トリガーの名前を指定します。 *module_name*を共通言語ランタイム (clr) ストアドプロシージャまたは clr 関数にすることはできません。 *module_name*をスキーマバインドにすることはできません。 *module_name*は**nvarchar**,、既定値はありません。 *module_name*にはマルチパート識別子を指定できますが、参照できるのは現在のデータベース内のオブジェクトだけです。  
   
-`[ , @namespace = ] ' \<class> '`は、指定されたモジュールのクラスです。 *Module_name*が DDL トリガーである場合\<は、クラス> が必要です。 クラス>は**nvarchar**(20) です。 * \<* 有効な入力は次のとおりです。  
+`[ , @namespace = ] ' \<class> '`は、指定されたモジュールのクラスです。 *Module_name*が DDL トリガーである場合は、 \< クラス> が必要です。 * \< クラス>* は**nvarchar**(20) です。 有効な入力は次のとおりです。  
   
 |||  
 |-|-|  
@@ -86,7 +86,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="examples"></a>例  
   
 ### <a name="a-refreshing-a-user-defined-function"></a>A. ユーザー定義関数の更新  
- 次の例では、ユーザー定義関数を更新します。 この例では、を使用`mytype` `to_upper` `mytype`する別名データ型、、およびユーザー定義関数を作成します。 `mytype`次に、をに`myoldtype`変更し、別`mytype`の定義を持つ新しいを作成します。 `dbo.to_upper`関数は、古いものではなく、の`mytype`新しい実装を参照するように更新されます。  
+ 次の例では、ユーザー定義関数を更新します。 この例では、を使用する別名データ型、 `mytype` 、およびユーザー定義関数を作成し `to_upper` `mytype` ます。 次に、を `mytype` に変更し、 `myoldtype` 別の `mytype` 定義を持つ新しいを作成します。 `dbo.to_upper`関数は、古いものではなく、の新しい実装を参照するように更新され `mytype` ます。  
   
 ```  
 -- Create an alias type.  

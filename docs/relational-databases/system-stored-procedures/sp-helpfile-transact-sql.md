@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpfile
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7b60f4929bd537089c05211cc3ecc548b82b6307
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 812be95c9584e75d8452c946d1935625468a79a1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67943492"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828336"
 ---
 # <a name="sp_helpfile-transact-sql"></a>sp_helpfile (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|論理ファイル名です。|  
 |**fileid**|**smallint**|ファイルの数値識別子。 *Name*が指定されている場合、は返されません *。*|  
-|**/db**|**nchar (260)**|物理ファイル名。|  
+|**filename**|**nchar (260)**|物理ファイル名。|  
 |**ファイル グループ (filegroup)**|**sysname**|ファイルが属するファイルグループ。<br /><br /> NULL = ファイルはログファイルです。 これは、ファイルグループの一部ではありません。|  
 |**size**|**nvarchar (15)**|ファイル サイズ (KB 単位) です。|  
 |**maxsize**|**nvarchar (15)**|ファイルの最大拡張サイズです。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
@@ -61,7 +61,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、内[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]のファイルに関する情報を返します。  
+ 次の例では、内のファイルに関する情報を返し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```sql  
 USE AdventureWorks2012;  

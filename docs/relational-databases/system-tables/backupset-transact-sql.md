@@ -17,15 +17,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0eb367dd29a96f5819563f0b10e036b7274c4303
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119331"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827376"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "68119331"
 |**database_name**|**nvarchar(128)**|バックアップ操作に関係するデータベース名。 NULL にすることができます。|  
 |**server_name**|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップ操作を実行しているサーバー名。 NULL にすることができます。|  
 |**machine_name**|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているコンピューターの名前。 NULL にすることができます。|  
-|**flags**|**int**|で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、 **flags**列は非推奨とされており、次のビット列に置き換えられています。<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> NULL にすることができます。<br /><br /> 以前のバージョンのの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バックアップセットでは、フラグビット:<br />1 = バックアップには最小限のログ データが含まれている。 <br />2 = WITH SNAPSHOT が使用されました。 <br />4 = バックアップ時にデータベースは読み取り専用でした。<br />8 = バックアップ時にデータベースがシングルユーザーモードになっています。|  
+|**flags**|**int**|では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **flags**列は非推奨とされており、次のビット列に置き換えられています。<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> NULL にすることができます。<br /><br /> 以前のバージョンののバックアップセットで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、フラグビット:<br />1 = バックアップには最小限のログ データが含まれている。 <br />2 = WITH SNAPSHOT が使用されました。 <br />4 = バックアップ時にデータベースは読み取り専用でした。<br />8 = バックアップ時にデータベースがシングルユーザーモードになっています。|  
 |**unicode_locale**|**int**|Unicode ロケール。 NULL にすることができます。|  
 |**unicode_compare_style**|**int**|Unicode 比較スタイル。 NULL にすることができます。|  
 |**collation_name**|**nvarchar(128)**|照合順序名。 NULL にすることができます。|  
@@ -108,14 +108,14 @@ ms.locfileid: "68119331"
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のテーブルのバックアップと復元](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupmediaset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [バックアップおよび復元中に発生する可能性のあるメディアエラー &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [メディアセット、メディアファミリ、およびバックアップセット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
+ [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
+ [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
- [RESTORE HEADERONLY &#40;Transact-sql&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [Transact-sql&#41;&#40;のテーブルのバックアップと復元](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

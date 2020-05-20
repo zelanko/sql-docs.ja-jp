@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_identity_range system table
 ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 38f5037598e240585333d246a99c29c5fd8f40fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c1949134790942ea510060534a4760e76b63469d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079163"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824856"
 ---
 # <a name="msrepl_identity_range-transact-sql"></a>MSrepl_identity_range (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68079163"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**文書**|**sysname**|パブリッシャーの名前です。|  
+|**publisher**|**sysname**|パブリッシャーの名前です。|  
 |**publisher_db**|**sysname**|パブリケーションデータベースの名前です。|  
 |**テーブル**|**sysname**|テーブルの名前。|  
 |**identity_support**|**int**|Id 範囲の自動処理を有効にするかどうかを指定します。 0は、自動 id 範囲の処理が有効になっていないことを示します。|  

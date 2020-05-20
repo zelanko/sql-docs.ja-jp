@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_objects dynamic management view
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3d0691a82607a207a64f4a6c7ed8c937f052abc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eece83b3c1fcde0d33a515c85eeb2cdac0a72cf4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983077"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827880"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>dm_os_memory_objects (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,30 +38,30 @@ ms.locfileid: "73983077"
 |**parent_address**|**varbinary (8)**|親メモリ オブジェクトのアドレス。 NULL 値が許可されます。|  
 |**pages_allocated_count**|**int**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /><br /> メモリ オブジェクトによって割り当てられているページ数。 NULL 値は許可されません。|  
 |**pages_in_bytes**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> メモリオブジェクトのこのインスタンスによって割り当てられたメモリの量 (バイト単位)。 NULL 値は許可されません。|  
-|**creation_options**|**int**|内部使用のみです。 NULL 値が許可されます。|  
-|**bytes_used**|**bigint**|内部使用のみです。 NULL 値が許可されます。|  
+|**creation_options**|**int**|内部使用のみ。 NULL 値が許可されます。|  
+|**bytes_used**|**bigint**|内部使用のみ。 NULL 値が許可されます。|  
 |**type**|**nvarchar(60)**|メモリ オブジェクトの種類。<br /><br /> これは、このメモリオブジェクトが属するコンポーネント、またはメモリオブジェクトの関数を示します。 NULL 値が許可されます。|  
-|**name**|**varchar(128)**|内部使用のみです。 NULL 値は許可されます。|  
+|**name**|**varchar(128)**|内部使用のみ。 NULL 値は許可されます。|  
 |**memory_node_id**|**smallint**|メモリ オブジェクトが使用しているメモリ ノードの ID。 NULL 値は許可されません。|  
-|**creation_time**|**datetime**|内部使用のみです。 NULL 値が許可されます。|  
+|**creation_time**|**datetime**|内部使用のみ。 NULL 値が許可されます。|  
 |**max_pages_allocated_count**|**int**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /><br /> このメモリオブジェクトによって割り当てられたページの最大数。 NULL 値は許可されません。|  
 |**page_size_in_bytes**|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> メモリ オブジェクトによって割り当てられているのページのサイズ (バイト単位)。 NULL 値は許可されません。|  
 |**max_pages_in_bytes**|**bigint**|このメモリオブジェクトによって使用されるメモリの最大量。 NULL 値は許可されません。|  
 |**page_allocator_address**|**varbinary (8)**|ページアロケーターのメモリアドレス。 NULL 値は許可されません。 詳細については、「 [sys. dm_os_memory_clerks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)」を参照してください。|  
-|**creation_stack_address**|**varbinary (8)**|内部使用のみです。 NULL 値が許可されます。|  
-|**sequence_num**|**int**|内部使用のみです。 NULL 値が許可されます。|  
+|**creation_stack_address**|**varbinary (8)**|内部使用のみ。 NULL 値が許可されます。|  
+|**sequence_num**|**int**|内部使用のみ。 NULL 値が許可されます。|  
 |**partition_type**|**int**|パーティションの種類。<br /><br /> 0-パーティション分割が不可能なメモリオブジェクト<br /><br /> 1-分割できないメモリオブジェクト (現在パーティション分割されていません)<br /><br /> 2-分割されたメモリオブジェクト。 NUMA ノードによってパーティション分割されます。 1つの NUMA ノードを持つ環境では、これは1に相当します。<br /><br /> 3-CPU でパーティション分割された、パーティション分割されたメモリオブジェクト。|  
 |**contention_factor**|**real**|このメモリオブジェクトの競合を指定する値。0は競合しないことを意味します。 値は、指定された数のメモリ割り当てがその期間中に競合を反映したときに更新されます。 スレッドセーフなメモリオブジェクトにのみ適用されます。|  
 |**waiting_tasks_count**|**bigint**|このメモリオブジェクトで待機している回数。 このカウンターは、メモリオブジェクトからメモリが割り当てられるたびにインクリメントされます。 インクリメントは、このメモリオブジェクトへのアクセスを現在待機しているタスクの数です。 スレッドセーフなメモリオブジェクトにのみ適用されます。 これは、正確性を保証せずに、ベストエフォートの値です。|  
 |**exclusive_access_count**|**bigint**|このメモリオブジェクトに排他的にアクセスする頻度を指定します。 スレッドセーフなメモリオブジェクトにのみ適用されます。  これは、正確性を保証せずに、ベストエフォートの値です。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
- **partition_type**、 **contention_factor**、 **waiting_tasks_count**、および**exclusive_access_count**は、に[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]まだ実装されていません。  
+ **partition_type**、 **contention_factor**、 **waiting_tasks_count**、および**exclusive_access_count**は、にまだ実装されていません [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 。  
   
 ## <a name="permissions"></a>アクセス許可
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
 ## <a name="remarks"></a>Remarks  
  メモリ オブジェクトはヒープであり、 割り当ての粒度はメモリ クラークよりも細かくなります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントでは、メモリ クラークの代わりにメモリ オブジェクトが使用されます。 メモリオブジェクトは、メモリクラークのページアロケーターインターフェイスを使用してページを割り当てます。 メモリオブジェクトは、仮想または共有メモリインターフェイスを使用しません。 割り当てパターンに応じて、コンポーネントでは各種メモリ オブジェクトを作成し、任意のサイズの領域を割り当てることができます。  
@@ -71,7 +71,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、デー
 > [!NOTE]  
 >  ページサイズが最大割り当てではありません。 メモリ クラークによって実装されたページ アロケーターでサポートされている割り当ての粒度です。 メモリ オブジェクトから、8 KB を超える割り当てを要求することができます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、それぞれのメモリ オブジェクトの種類によって割り当てられたメモリのサイズを返します。  
   
 ```  

@@ -17,19 +17,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.filetables catalog view
 ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 791bba2f5ec1830e343acff24fd55628a3f13d2e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4cd2890f1dc5975895814067ab577e9bde93aea8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68134002"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828128"
 ---
 # <a name="sysfiletables-transact-sql"></a>sys.filetables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  内[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の各 FileTable の行を返しますです。 FileTables について詳しくは、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。    
+  内の各 FileTable の行を返し [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ますです。 FileTables について詳しくは、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。    
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

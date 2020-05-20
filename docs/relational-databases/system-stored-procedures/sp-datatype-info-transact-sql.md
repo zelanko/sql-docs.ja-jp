@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_datatype_info
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 39e8f688c23cffb1512be1cd1142d38c010668a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e88bc45995574dcde29427773e3e8d9bec62ed96
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108301"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826216"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -78,8 +78,8 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、 *data_type*の`-9`値を指定して、 **sysname**および**nvarchar**データ型の情報を取得します。  
+## <a name="examples"></a>例  
+ 次の例では、 *data_type*の値を指定して、 **sysname**および**nvarchar**データ型の情報を取得 `-9` します。  
   
 ```  
 USE master;  

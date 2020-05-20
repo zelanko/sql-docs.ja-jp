@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_renamedb
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eebf9be216d61163c018e0d43075e636cb383d28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a707a2dc0f7e4350e4447550d218f243ed07f8da
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006927"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826554"
 ---
 # <a name="sp_renamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
  **Sysadmin**または**dbcreator**固定サーバーロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`Accounting` データベースを作成し、このデータベース名を `Financial` に変更します。 次`sys.databases`に、カタログビューに対してクエリを行い、データベースの新しい名前を確認します。  
+ 次の例では、`Accounting` データベースを作成し、このデータベース名を `Financial` に変更します。 `sys.databases`次に、カタログビューに対してクエリを行い、データベースの新しい名前を確認します。  
   
 ```  
 USE master;  

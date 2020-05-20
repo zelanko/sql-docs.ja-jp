@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_delete_collecton_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5ae8cb259f1dfa424de37c7342cf1f6081a8c8b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ecf578b1ce23aa47e9bf71360f1211b5667c08c5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68000907"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826533"
 ---
 # <a name="sp_syscollector_delete_collection_item-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collection_item_id = ]*collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  コレクション アイテムの一意な識別子を指定します。 *collection_item_id*は**int**で、既定値は NULL です。 *名前*が NULL の場合、 *collection_item_id*には値が必要です。  
   
- [ @name = ]'*name*'  
+ [ @name =] '*name*'  
  コレクションアイテムの名前を指定します。 *名前*は**sysname**で、既定値は NULL です。 *collection_item_id*が NULL の場合、*名前*には値を指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -59,7 +59,7 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
  このプロシージャを実行するには、dc_admin (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、という`MyCollectionItem1`名前のコレクションアイテムを削除します。  
+ 次の例では、という名前のコレクションアイテムを削除し `MyCollectionItem1` ます。  
   
 ```  
 USE msdb;  

@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: ba22ffe282e6b4248ed58bed850bc6ac08255df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa3b52dbc2f08e9cb504263afeb672956e4972d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278113"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826373"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## <a name="arguments"></a>引数  
- head_node_address = N '*head_node_address*' * \@*  
- PolyBase スケールアウトグループの SQL Server ヘッドノードをホストするコンピューターの名前。 head_node_address は nvarchar (255) です。 * \@*  
+ * \@ head_node_address* = N '*head_node_address*'  
+ PolyBase スケールアウトグループの SQL Server ヘッドノードをホストするコンピューターの名前。 * \@ head_node_address*は nvarchar (255) です。  
   
- * \@dms_control_channel_port* = dms_control_channel_port  
- ヘッドノード PolyBase Data Movement サービスのコントロールチャネルが実行されているポート。 dms_control_channel_port は、署名されていない __int16 です。 * \@* 既定値は**16450**です。  
+ * \@ dms_control_channel_port* = dms_control_channel_port  
+ ヘッドノード PolyBase Data Movement サービスのコントロールチャネルが実行されているポート。 * \@ dms_control_channel_port*は、署名されていない __int16 です。 既定値は**16450**です。  
   
- * \@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- PolyBase スケールアウトグループのヘッドノード SQL Server インスタンスの名前。 head_node_sql_server_instance_name は nvarchar (16) です。 * \@*  
+ * \@ head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
+ PolyBase スケールアウトグループのヘッドノード SQL Server インスタンスの名前。 * \@ head_node_sql_server_instance_name*は nvarchar (16) です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

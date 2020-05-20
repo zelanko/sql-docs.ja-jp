@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - spatial indexes [SQL Server], stored procedures
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: be45e7dd794ab7e03ffc70eb9b73109411fd3a02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028904"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827456"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空間インデックスストアドプロシージャ-引数とプロパティ
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +58,8 @@ ms.locfileid: "69028904"
   
 `[ @xml_output = ] 'xml_output'`XML フラグメントに結果セットを返す出力パラメーターを指定します。 *xml_output*は**xml**で、既定値はありません。  
   
-## <a name="properties"></a>Properties  
- 次の表に示すように、 ** \@verboseoutput** = 0 を設定してコアプロパティを返します。verboseoutput > 0 にすると、空間インデックスのすべてのプロパティが返されます。 ** \@**  
+## <a name="properties"></a>プロパティ  
+ 次の表に示すように、 ** \@ verboseoutput** = 0 を設定してコアプロパティを返します。** \@ verboseoutput** > 0 にすると、空間インデックスのすべてのプロパティが返されます。  
   
  **Base_Table_Rows**  
  ベーステーブル内の行の数。 値は**bigint**です。  
@@ -303,7 +303,7 @@ ms.locfileid: "69028904"
 ## <a name="remarks"></a>Remarks  
  NULL 値を含むプロパティは、返されるセットに含まれません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  例については、次のトピックを参照してください。  
   
 -   [sp_help_spatial_geometry_index &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  

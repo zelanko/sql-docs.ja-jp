@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_catalogs
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0844001016f67d227b4612176b2804dcda0a3d29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b760e27d7a0b320c0e911a1a485d1e5e9033146a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045941"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824855"
 ---
 # <a name="sp_catalogs-transact-sql"></a>sp_catalogs (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定されたリンクサーバーのカタログの一覧を返します。 これは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースに相当します。  
+  指定されたリンクサーバーのカタログの一覧を返します。 これは、のデータベースに相当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,11 +51,11 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`OLE DB ODBC Linked Server #3` というリンク サーバーのカタログ情報を返します。  
   
 > [!NOTE]  
->  有用な情報を提供する**sp_catalogs**に`OLE DB ODBC Linked Server #3`は、が既に存在している必要があります。  
+>  有用な情報を提供する**sp_catalogs**には、が `OLE DB ODBC Linked Server #3` 既に存在している必要があります。  
   
 ```  
 USE master;  

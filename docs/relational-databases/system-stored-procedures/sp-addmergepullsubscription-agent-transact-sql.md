@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription_agent
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 07cc514d615c86a90dcf37fbd4748c3ab1776f06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81528976"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826302"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -98,7 +98,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`同期時にパブリッシャーに接続するときに使用するセキュリティモードを示します。 *publisher_security_mode*は**int**,、既定値は1です。 **0**の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。 **1**の場合、Windows 認証を指定します。  
+`[ @publisher_security_mode = ] publisher_security_mode`同期時にパブリッシャーに接続するときに使用するセキュリティモードを示します。 *publisher_security_mode*は**int**,、既定値は1です。 **0**の場合、認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1**の場合、Windows 認証を指定します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -116,7 +116,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @subscriber_db = ] 'subscriber_db'`サブスクリプションデータベースの名前を指定します。 *subscriber_db*は**sysname**,、既定値は NULL です。  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`同期時にサブスクライバーに接続するときに使用するセキュリティモードを示します。 *subscriber_security_mode*は**int**,、既定値は1です。 **0**の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。 **1**の場合、Windows 認証を指定します。  
+`[ @subscriber_security_mode = ] subscriber_security_mode`同期時にサブスクライバーに接続するときに使用するセキュリティモードを示します。 *subscriber_security_mode*は**int**,、既定値は1です。 **0**の場合、認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1**の場合、Windows 認証を指定します。  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 マージエージェントは、常に Windows 認証を使用してローカルサブスクライバーに接続します。 このパラメーターに値が指定されている場合は、警告メッセージが返されますが、値は無視されます。  
@@ -126,14 +126,14 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このパラメーターに値が指定されている場合は、警告メッセージが返されますが、値は無視されます。  
   
-`[ @subscriber_password = ] 'subscriber_password'`認証用の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーパスワードを入力します。 *subscriber_security_mode*が**0**に設定されている場合は*subscriber_password*が必要です。 *subscriber_password*は**sysname**,、既定値は NULL です。  
+`[ @subscriber_password = ] 'subscriber_password'`認証用のサブスクライバーパスワードを入力し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *subscriber_security_mode*が**0**に設定されている場合は*subscriber_password*が必要です。 *subscriber_password*は**sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このパラメーターに値が指定されている場合は、警告メッセージが返されますが、値は無視されます。  
   
 `[ @distributor = ] 'distributor'`ディストリビューターの名前を指定します。 *ディストリビューター*は**sysname**,、既定値は*publisher*です。つまり、パブリッシャーはディストリビューターでもあります。  
   
-`[ @distributor_security_mode = ] distributor_security_mode`は、同期時にディストリビューターに接続するときに使用するセキュリティモードです。 *distributor_security_mode*は**int**,、既定値は0です。 **0**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。 **1** Windows 認証を指定します。  
+`[ @distributor_security_mode = ] distributor_security_mode`は、同期時にディストリビューターに接続するときに使用するセキュリティモードです。 *distributor_security_mode*は**int**,、既定値は0です。 **0**は認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1** Windows 認証を指定します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -154,7 +154,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
-|**8**|週単位|  
+|**8**|週次|  
 |**まで**|月 1 回|  
 |**32**|月単位の相対|  
 |**64**|自動開始|  
@@ -175,20 +175,20 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**5**|Thursday|  
 |**6**|金曜日|  
 |**7**|土曜日|  
-|**8**|日|  
+|**8**|日間|  
 |**9**|平日|  
-|**10**|週末|  
+|"**10**"|週末|  
 |NULL (既定値)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`マージエージェントの日付を指定します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、これらの値のいずれかを指定できます。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|**1**|First (先頭へ)|  
-|**2**|秒|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|Last (最後へ)|  
+|**まで**|末尾|  
 |NULL (既定値)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*によって使用される定期実行係数です。 *frequency_recurrence_factor*は**int**,、既定値は NULL です。  
@@ -198,9 +198,9 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
-|**2**|秒|  
-|**4**|分|  
-|**8**|時|  
+|**2**|Second|  
+|**4**|Minute|  
+|**8**|時間|  
 |NULL (既定値)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*の間隔を指定します。 *frequency_subday_interval*は**int**,、既定値は NULL です。  
@@ -221,7 +221,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @merge_jobid = ] merge_jobid`ジョブ ID の出力パラメーターを指定します。 *merge_jobid*は**binary (16)**,、既定値は NULL です。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Windows 同期マネージャーを使用してサブスクリプションを同期できるかどうかを指定します。 *enabled_for_syncmgr*は**nvarchar (5)**,、既定値は FALSE です。 **False**の場合、サブスクリプションは同期マネージャーに登録されていません。 **True**の場合、サブスクリプションは同期マネージャーに登録され、を起動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]せずに同期できます。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Windows 同期マネージャーを使用してサブスクリプションを同期できるかどうかを指定します。 *enabled_for_syncmgr*は**nvarchar (5)**,、既定値は FALSE です。 **False**の場合、サブスクリプションは同期マネージャーに登録されていません。 **True**の場合、サブスクリプションは同期マネージャーに登録され、を起動せずに同期でき [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。  
   
 `[ @ftp_address = ] 'ftp_address'`旧バージョンとの互換性のためにのみ使用します。  
   
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`Web 同期が有効になっていることを示します。 *use_web_sync*は**ビット**,、既定値は0です。 **1**は、HTTP を使用してインターネット経由でプルサブスクリプションを同期できることを指定します。  
   
-`[ @internet_url = ] 'internet_url'`レプリケーションリスナーの場所を指定します (REPLISAPI.DLL) を使用します。 *internet_url*は**nvarchar (260)**,、既定値は NULL です。 *internet_url*は、という形式`http://server.domain.com/directory/replisapi.dll`の完全修飾 url です。 サーバーの構成で、リッスンするポートがポート 80 以外の場合は、`http://server.domain.com:portnumber/directory/replisapi.dll` の形式のポート番号も指定する必要があります。ここで `portnumber` はポートを表します。  
+`[ @internet_url = ] 'internet_url'`レプリケーションリスナーの場所を指定します (REPLISAPI.DLL) を使用します。 *internet_url*は**nvarchar (260)**,、既定値は NULL です。 *internet_url*は、という形式の完全修飾 url です `http://server.domain.com/directory/replisapi.dll` 。 サーバーの構成で、リッスンするポートがポート 80 以外の場合は、`http://server.domain.com:portnumber/directory/replisapi.dll` の形式のポート番号も指定する必要があります。ここで `portnumber` はポートを表します。  
   
 `[ @internet_login = ] 'internet_login'`HTTP 基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージエージェントが使用するログインを示します。 *internet_login*は**sysname**,、既定値は NULL です。  
   

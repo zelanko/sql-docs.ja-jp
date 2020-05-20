@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_files catalog view
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2aa7c30f132f0c0e8774dcb39f31e1a254e8689c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2baa122d56582cfdf0bef780434f9f5ba98711ca
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313723"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825150"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "72313723"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|このファイルが適用されるデータベースの ID。 Masterdatabase_id は常に1です。|  
 |file_id|**int**|データベース内のファイルの ID。 プライマリ ファイルの file_id は常に 1 です。|  
-|file_guid|**uniqueidentifier**|ファイルの一意識別子。<br /><br /> NULL = データベースは、以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からアップグレードされました (SQL Server 2005 以前では有効)。|  
-|type|**tinyint**|ファイルの種類です。<br /><br /> 0 = 行。<br /><br /> 1 = ログ<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のフルテキスト カタログです。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降用にアップグレードまたは作成されたフルテキスト カタログの場合、ファイルの種類は 0 で報告されます。)|  
+|file_guid|**uniqueidentifier**|ファイルの一意識別子。<br /><br /> NULL = データベースは、以前のバージョンのからアップグレードされました [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2005 以前では有効)。|  
+|型|**tinyint**|ファイルの種類です。<br /><br /> 0 = 行。<br /><br /> 1 = ログ<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のフルテキスト カタログです。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降用にアップグレードまたは作成されたフルテキスト カタログの場合、ファイルの種類は 0 で報告されます。)|  
 |type_desc|**nvarchar(60)**|ファイルの種類の説明。<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のフルテキスト カタログです。)|  
 |data_space_id|**int**|このファイルが属しているデータ領域の ID。 データ領域はファイルグループです。<br /><br /> 0 = ログ ファイル|  
 |name|**sysname**|データベース内のファイルの論理名。|  
@@ -64,10 +64,10 @@ ms.locfileid: "72313723"
 |redo_target_lsn|**numeric(25,0)**|このファイルのオンラインロールフォワードが停止できる LSN です。<br /><br /> state = RESTORING または state = RECOVERY_PENDING でない場合は NULL です。|  
 |redo_target_fork_guid|**uniqueidentifier**|コンテナーを回復できる復旧分岐。 redo_target_lsn と組み合わせて使用します。|  
 |backup_lsn|**numeric(25,0)**|ファイルの最新のデータまたは差分バックアップの LSN。|  
-|credential_id|**int**|ファイル`credential_id`の`sys.credentials`格納に使用された。 たとえば、が Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]仮想マシンで実行されていて、データベースファイルが azure blob storage に格納されている場合、資格情報はストレージの場所のアクセス資格情報を使用して構成されます。|  
+|credential_id|**int**|`credential_id`ファイルの `sys.credentials` 格納に使用された。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が Azure 仮想マシンで実行されていて、データベースファイルが azure blob storage に格納されている場合、資格情報はストレージの場所のアクセス資格情報を使用して構成されます。|  
   
 > [!NOTE]  
->  大きなインデックスを削除または再構築したり、大きなテーブルを削除し[!INCLUDE[ssDE](../../includes/ssde-md.md)]たり切り捨てたりすると、では、トランザクションがコミットされるまで、実際のページの割り当て解除とそれに関連付けられているロックが延期されます。 遅延削除操作では、割り当てられた領域はすぐに解放されません。 そのため、ラージ オブジェクトを削除または切り捨てた後すぐに sys.master_files から返される値は、実際の使用可能ディスク領域を表していない場合があります。  
+>  大きなインデックスを削除または再構築したり、大きなテーブルを削除したり切り捨てたりすると、では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] トランザクションがコミットされるまで、実際のページの割り当て解除とそれに関連付けられているロックが延期されます。 遅延削除操作では、割り当てられた領域はすぐに解放されません。 そのため、ラージ オブジェクトを削除または切り捨てた後すぐに sys.master_files から返される値は、実際の使用可能ディスク領域を表していない場合があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  対応する行を表示するために必要な最小限の権限は、CREATE DATABASE、ALTER ANY DATABASE、または VIEW ANY DEFINITION です。  
