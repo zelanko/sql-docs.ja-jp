@@ -71,7 +71,7 @@ ms.locfileid: "75321422"
  各サブスクリプションの名前です。*SubscriberName: SubscriptionDatabaseName*という形式になります。  
   
  **表示名**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 各サブスクリプションの説明です。 この説明は、 **[サブスクリプションのプロパティ]** ダイアログ ボックスで入力するか、`@description`sp_addmergesubscription[ または ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)sp_addmergepullsubscription[ の ](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) パラメーターで示します。 多くの場合、この説明は "表示名"、つまりサブスクリプションの通称として使用されます。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 各サブスクリプションの説明です。 この説明は、**[サブスクリプションのプロパティ]** ダイアログ ボックスで入力するか、[sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) または [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) の `@description` パラメーターで示します。 多くの場合、この説明は "表示名"、つまりサブスクリプションの通称として使用されます。  
   
  **パフォーマンス**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 各サブスクリプションのパフォーマンス評価です。これはレプリケーション モニターにより取得された、最新の配信率の計測結果に基づいています。 パフォーマンス評価は、接続の種類が同じ (ダイヤルアップまたは LAN) パブリケーションに対するサブスクリプションの履歴の平均パフォーマンスと、個々のサブスクリプションのパフォーマンスを比較することで決定されます。 レプリケーション モニターには、50 以上の変更を伴う同期がそれぞれ同じ種類の接続により 5 回行われた後で、値が表示されます。 50 以上の変更を伴う同期が 5 回未満の場合、または最新の同期における変更が 50 未満の場合には、この列は空白になります。  

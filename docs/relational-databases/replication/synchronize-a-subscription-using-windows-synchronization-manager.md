@@ -37,7 +37,7 @@ ms.locfileid: "76287029"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効化するには  
   
-1.  **[サブスクリプションのプロパティ -** Subscriber>: **SubscriptionDatabase>]\< ダイアログ ボックスの \<[全般]** ページで、 **[Windows 同期マネージャーを使用]** オプションの値として **[有効化]** を選択します。  
+1.  **[サブスクリプションのプロパティ - \<Subscriber>: \<SubscriptionDatabase>]** ダイアログ ボックスの **[全般]** ページで、**[Windows 同期マネージャーを使用]** オプションの値として **[有効化]** を選択します。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

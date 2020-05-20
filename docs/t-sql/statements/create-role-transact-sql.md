@@ -77,7 +77,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 以下のすべての例では、AdventureWorks データベースを使います。   
 
 ### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>A. データベース ユーザーが所有するデータベース ロールを作成する  
- 次の例では、ユーザー `buyers` が所有するデータベース ロール `BenMiller` を作成します。  
+ 次の例では、ユーザー `BenMiller` が所有するデータベース ロール `buyers` を作成します。  
   
 ```sql  
 CREATE ROLE buyers AUTHORIZATION BenMiller;  
@@ -85,7 +85,7 @@ GO
 ```  
   
 ### <a name="b-creating-a-database-role-that-is-owned-by-a-fixed-database-role"></a>B. 固定データベース ロールが所有するデータベース ロールを作成する  
- 次の例では、固定データベース ロール `auditors` が所有するデータベース ロール `db_securityadmin` を作成します。  
+ 次の例では、固定データベース ロール `db_securityadmin` が所有するデータベース ロール `auditors` を作成します。  
   
 ```sql  
 CREATE ROLE auditors AUTHORIZATION db_securityadmin;  

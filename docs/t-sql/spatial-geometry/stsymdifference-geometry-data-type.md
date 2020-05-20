@@ -38,7 +38,7 @@ ms.locfileid: "77051682"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- **を呼び出したインスタンスの対象となる、別の**geometry`STSymDifference()` インスタンスです。  
+ `STSymDifference()` を呼び出したインスタンスの対象となる、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
@@ -71,7 +71,7 @@ SELECT @g.STSymDifference(@h).ToString();
  ```  
   
 ## <a name="c-using-stsymdifference-on-curvepolygon-instance-with-an-inscribed-polygon-instance"></a>C. Polygon インスタンスが内接する CurvePolygon インスタンスで STSymDifference() を使用する  
- 次の例は、比較対象の 2 つのインスタンスの対称差を表す、内部 `CurvePolygon` リングを含む `Polygon` インスタンスを返します。  
+ 次の例は、比較対象の 2 つのインスタンスの対称差を表す、内部 `Polygon` リングを含む `CurvePolygon` インスタンスを返します。  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';  

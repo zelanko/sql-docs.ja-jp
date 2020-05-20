@@ -66,7 +66,7 @@ ms.locfileid: "74094563"
 ## <a name="using-the-import-data-tier-application-wizard"></a>データ層アプリケーションのインポート ウィザードの使用  
  **ウィザードを起動するには、次の手順を実行します。**  
   
-1.  内部設置型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のインスタンスに接続します。  
+1.  内部設置型または [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 内で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
   
 2.  **オブジェクト エクスプローラー**で、 **[データベース]** を右クリックしてから、 **[データ層アプリケーションのインポート]** メニュー項目を選択してウィザードを起動します。  
   

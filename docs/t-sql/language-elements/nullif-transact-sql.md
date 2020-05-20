@@ -58,7 +58,7 @@ NULLIF ( expression , expression )
 ## <a name="examples"></a>例  
   
 ### <a name="a-returning-budget-amounts-that-have-not-changed"></a>A. 変更のない予算額を返す  
- 次の例では、部門 (`budgets`)、今年度予算 (`dept`)、および昨年度予算 (`current_year`) で構成される `previous_year` テーブルを作成します。 今年度予算が昨年度予算と変わらない部門については `NULL` を使用し、今年度予算がまだ決定していない場合は `0` を使用します。 昨年度予算の値を使用する場合も含めて (`previous_year` が `current_year` の場合は `NULL` の値を使用)、今年度予算を受け取った部門についてだけその平均値を求めるには、`NULLIF` 関数と `COALESCE` 関数を組み合わせて使用します。  
+ 次の例では、部門 (`dept`)、今年度予算 (`current_year`)、および昨年度予算 (`previous_year`) で構成される `budgets` テーブルを作成します。 今年度予算が昨年度予算と変わらない部門については `NULL` を使用し、今年度予算がまだ決定していない場合は `0` を使用します。 昨年度予算の値を使用する場合も含めて (`previous_year` が `current_year` の場合は `NULL` の値を使用)、今年度予算を受け取った部門についてだけその平均値を求めるには、`NULLIF` 関数と `COALESCE` 関数を組み合わせて使用します。  
   
 ```sql  
 CREATE TABLE dbo.budgets  
@@ -112,7 +112,7 @@ GO
 ```  
 
 ### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C. データを含まない予算額を返す  
- 次の例では、`budgets` テーブルを作成し、データを読み込み、`NULLIF` と `current_year` のいずれにもデータが含まれない場合は `previous_year` を使用して null を返します。  
+ 次の例では、`budgets` テーブルを作成し、データを読み込み、`current_year` と `previous_year` のいずれにもデータが含まれない場合は `NULLIF` を使用して null を返します。  
   
 ```sql  
 CREATE TABLE budgets (  

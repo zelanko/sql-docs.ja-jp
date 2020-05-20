@@ -48,7 +48,7 @@ ms.locfileid: "71711066"
   
      サブスクライバーまたはディストリビューターの名前以外の値で、この関数をオーバーライドすることも可能です。 通常、アプリケーションでは、販売員の名前や ID など、より具体的な意味のある値でこの関数をオーバーライドします。 詳細については、このトピックの「HOST_NAME() 値のオーバーライド」を参照してください。  
   
- システム関数によって返された値は、フィルター選択しているテーブルで指定した列と比較され、適切なデータがサブスクライバーにダウンロードされます。 この比較は、サブスクリプションが初期化されたときに実行され (これにより初期スナップショットには適切なデータのみが含まれます)、またサブスクリプションが同期されるたびに実行されます。 既定では、パブリッシャーでの変更によってパーティションから行が移動すると、その行はサブスクライバーで削除されます (この動作は、`@allow_partition_realignment`sp_addmergepublication &#40;Transact-SQL&#41;[ の ](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) パラメーターを使用して制御されます)。  
+ システム関数によって返された値は、フィルター選択しているテーブルで指定した列と比較され、適切なデータがサブスクライバーにダウンロードされます。 この比較は、サブスクリプションが初期化されたときに実行され (これにより初期スナップショットには適切なデータのみが含まれます)、またサブスクリプションが同期されるたびに実行されます。 既定では、パブリッシャーでの変更によってパーティションから行が移動すると、その行はサブスクライバーで削除されます (この動作は、[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の `@allow_partition_realignment` パラメーターを使用して制御されます)。  
   
 > [!NOTE]  
 >  パラメーター化されたフィルターの比較が実行されるときは、常にデータベース照合順序が使用されます。 たとえば、データベース照合順序で大文字と小文字が区別されず、テーブルまたは列の照合順序で大文字と小文字が区別される場合、比較では大文字と小文字は区別されません。  
@@ -95,7 +95,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  たとえば、従業員の Pamela Ansman-Wolfe には、280 という従業員 ID が割り当てられています。 この従業員のサブスクリプションの作成時に、従業員 ID の値 (この場合は 280) を HOST_NAME() 値に指定します。 マージ エージェントはパブリッシャーに接続すると、HOST_NAME() によって返された値をこのテーブル内の値と比較し、 **EmployeeID** 列に 280 という値が格納された行のみをダウンロードします。  
   
 > [!IMPORTANT]
->  HOST_NAME() 関数は **nchar** 型の値を返します。したがって、上記の例のようにフィルター句の列が数値データ型の場合は、CONVERT を使用する必要があります。 `CONVERT(nchar,EmployeeID) = HOST_NAME()`のように、パラメーター化された行フィルターの句で列名に関数を適用するとパフォーマンスが低下するため、使用しないことをお勧めします。 代わりに、この例で示されている `EmployeeID = CONVERT(int,HOST_NAME())`という句を使用することをお勧めします。 この句は、`@subset_filterclause`sp_addmergearticle[ の ](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) パラメーターに使用できますが、通常はパブリケーションの新規作成ウィザードでは使用できません (このウィザードではフィルター句を実行して検証が行われますが、コンピューター名を **int** に変換できないので、失敗します)。 パブリケーションの新規作成ウィザードを使用する場合は、このウィザードで `CONVERT(nchar,EmployeeID) = HOST_NAME()` を指定し、次に [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を使用して句を `EmployeeID = CONVERT(int,HOST_NAME())` に変更してから、パブリケーションのスナップショットを作成することをお勧めします。  
+>  HOST_NAME() 関数は **nchar** 型の値を返します。したがって、上記の例のようにフィルター句の列が数値データ型の場合は、CONVERT を使用する必要があります。 `CONVERT(nchar,EmployeeID) = HOST_NAME()`のように、パラメーター化された行フィルターの句で列名に関数を適用するとパフォーマンスが低下するため、使用しないことをお勧めします。 代わりに、この例で示されている `EmployeeID = CONVERT(int,HOST_NAME())`という句を使用することをお勧めします。 この句は、[sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) の `@subset_filterclause` パラメーターに使用できますが、通常はパブリケーションの新規作成ウィザードでは使用できません (このウィザードではフィルター句を実行して検証が行われますが、コンピューター名を **int** に変換できないので、失敗します)。 パブリケーションの新規作成ウィザードを使用する場合は、このウィザードで `CONVERT(nchar,EmployeeID) = HOST_NAME()` を指定し、次に [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を使用して句を `EmployeeID = CONVERT(int,HOST_NAME())` に変更してから、パブリケーションのスナップショットを作成することをお勧めします。  
   
  **HOST_NAME() 値をオーバーライドするには**  
   
@@ -103,7 +103,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: サブスクリプションの新規作成ウィザードの **HOST\_NAME\(\) 値** ページで値を指定します。 サブスクリプションの作成については、「[パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)」を参照してください。  
   
--   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミング: (プッシュ サブスクリプション用に) `@hostname`sp_addmergesubscription &#40;Transact-SQL&#41;[ または、(プル サブスクリプション用に) ](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;[ の ](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) パラメーターの値を指定します。  
+-   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミング: (プッシュ サブスクリプション用に) [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) または、(プル サブスクリプション用に) [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) の `@hostname` パラメーターの値を指定します。  
   
 -   マージ エージェント: コマンド ラインまたはエージェント プロファイルで **-Hostname** パラメーターの値を指定します。 マージ エージェントの詳細については、「 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)」を参照してください。 エージェント プロファイルの詳細については、「 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
   

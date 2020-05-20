@@ -23,7 +23,7 @@ ms.locfileid: "73983011"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`ALTER` ステートメントを使用して、ネイティブ コンパイル ストアド プロシージャおよびスカラー UDF やトリガーなどの他のネイティブ コンパイル [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールに対して、`ALTER` 操作を実行できます。  
   
-ネイティブ コンパイル `ALTER` モジュールに対して [!INCLUDE[tsql](../../includes/tsql-md.md)] を実行すると、モジュールは新しい定義を使用して再コンパイルされます。 再コンパイルの進行中、古いバージョンのモジュールは引き続き実行に使用できます。 コンパイルが完了すると、モジュールの実行は削除され、新しいバージョンのモジュールがインストールされます。 ネイティブ コンパイル [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールを変更する場合、次のオプションを変更できます。  
+ネイティブ コンパイル [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールに対して `ALTER` を実行すると、モジュールは新しい定義を使用して再コンパイルされます。 再コンパイルの進行中、古いバージョンのモジュールは引き続き実行に使用できます。 コンパイルが完了すると、モジュールの実行は削除され、新しいバージョンのモジュールがインストールされます。 ネイティブ コンパイル [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールを変更する場合、次のオプションを変更できます。  
   
 -   パラメーター  
 -   EXECUTE AS  
@@ -38,7 +38,7 @@ ms.locfileid: "73983011"
   
 `ALTER PROCEDURE` の機能と構文の詳細については、「[ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)」を参照してください。  
   
-ネイティブ コンパイル [ モジュールに対して ](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)sp_recompile[!INCLUDE[tsql](../../includes/tsql-md.md)] を実行できます。これにより、モジュールは次の実行時に再コンパイルされます。  
+ネイティブ コンパイル [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールに対して [sp_recompile](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) を実行できます。これにより、モジュールは次の実行時に再コンパイルされます。  
   
 ## <a name="example"></a>例  
 次の例では、メモリ最適化テーブル (T1) と、T1 のすべての列を選択するネイティブ コンパイル ストアド プロシージャ (usp_1) が作成されます。 その後、usp_1 は、`EXECUTE AS` 句を削除し、`LANGUAGE` を変更して、T1 からただ 1 つの列 (C1) を選択するように変更されます。  

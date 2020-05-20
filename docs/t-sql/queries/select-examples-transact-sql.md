@@ -43,15 +43,15 @@ ms.locfileid: "74191084"
   ここでは、[SELECT](../../t-sql/queries/select-transact-sql.md) ステートメントの使用例を紹介します。  
   
 ## <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. SELECT を使用して行および列を取得する  
- 3 つのプログラム例を次に示します。 最初の例では、`*` データベース内の `Product` テーブルから、WHERE 句を指定せずにすべての行を返し、また [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] を使用してすべての列を返しています。  
+ 3 つのプログラム例を次に示します。 最初の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内の `*` テーブルから、WHERE 句を指定せずにすべての行を返し、また `Product` を使用してすべての列を返しています。  
   
  [!code-sql[Select#SelectExamples1](../../t-sql/queries/codesnippet/tsql/select-examples-transact_1.sql)]  
   
- この例では、`Name` データベース内の `ProductNumber` テーブルから、WHERE 句を指定せずにすべての行と、一部の列 (`ListPrice`、`Product`、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]) のみを返しています。 さらに、列ヘッダーが追加されています。  
+ この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内の `Name` テーブルから、WHERE 句を指定せずにすべての行と、一部の列 (`ProductNumber`、`ListPrice`、`Product`) のみを返しています。 さらに、列ヘッダーが追加されています。  
   
  [!code-sql[Select#SelectExamples2](../../t-sql/queries/codesnippet/tsql/select-examples-transact_2.sql)]  
   
- この例では、製品ラインが `Product` で、製造所要日数が `R` 日未満の `4` の行のみを返しています。  
+ この例では、製品ラインが `R` で、製造所要日数が `4` 日未満の `Product` の行のみを返しています。  
   
  [!code-sql[Select#SelectExamples3](../../t-sql/queries/codesnippet/tsql/select-examples-transact_3.sql)]  
   
@@ -145,7 +145,7 @@ GO
 ```  
   
 ## <a name="l-using-having-and-group-by"></a>L. HAVING と GROUP BY を使用する  
- 次の例では、1 つの `GROUP BY` ステートメントの中で `HAVING` 句、`WHERE` 句、`ORDER BY` 句、および `SELECT` 句を使用しています。 これによって、$25 より高く平均注文数量が 5 未満の製品を除外した、グループとサマリー値が作成されます。 この結果は `ProductID` 別にまとめられます。  
+ 次の例では、1 つの `SELECT` ステートメントの中で `GROUP BY` 句、`HAVING` 句、`WHERE` 句、および `ORDER BY` 句を使用しています。 これによって、$25 より高く平均注文数量が 5 未満の製品を除外した、グループとサマリー値が作成されます。 この結果は `ProductID` 別にまとめられます。  
   
  [!code-sql[Select#SelectExamples21](../../t-sql/queries/codesnippet/tsql/select-examples-transact_19.sql)]  
   
@@ -188,14 +188,14 @@ GO
  [!code-sql[Select#SelectExamples49](../../t-sql/queries/codesnippet/tsql/select-examples-transact_27.sql)]  
   
 ## <a name="r-using-union-of-two-select-statements-with-order-by"></a>R. ORDER BY 句を指定した 2 つの SELECT ステートメントで UNION 句を使用する  
- UNION 句で使用するある種のパラメーターの順序には重要な意味があります。 次の例では、出力時に列名を変更する 2 つの `UNION` ステートメントでの `SELECT` の誤った使用法と正しい使用法を示しています。  
+ UNION 句で使用するある種のパラメーターの順序には重要な意味があります。 次の例では、出力時に列名を変更する 2 つの `SELECT` ステートメントでの `UNION` の誤った使用法と正しい使用法を示しています。  
   
  [!code-sql[Select#SelectExamples50](../../t-sql/queries/codesnippet/tsql/select-examples-transact_28.sql)]  
   
 ## <a name="s-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>S. 3 つの SELECT ステートメントで UNION を使用して、ALL とかっこの効果を示す  
- 次の例では、`UNION` を使用して 3 つのテーブルのクエリ結果を結合します。これらのテーブルはすべて同じ 5 行のデータで構成されます。 最初の例では、`UNION ALL` を使用して、重複するレコードも含めて 15 行すべてを返します。 2 番目の例では、`UNION` を指定せずに `ALL` を使用して、3 つの `SELECT` ステートメントの結果を結合したものから重複する行を削除し、5 行を返します。  
+ 次の例では、`UNION` を使用して 3 つのテーブルのクエリ結果を結合します。これらのテーブルはすべて同じ 5 行のデータで構成されます。 最初の例では、`UNION ALL` を使用して、重複するレコードも含めて 15 行すべてを返します。 2 番目の例では、`ALL` を指定せずに `UNION` を使用して、3 つの `SELECT` ステートメントの結果を結合したものから重複する行を削除し、5 行を返します。  
   
- 3 番目の例では、最初の `ALL` と共に `UNION` を使用し、`UNION` を使用していない 2 番目の `ALL` をかっこで囲んでいます。 2 番目の `UNION` はかっこで囲まれているので、最初に処理されます。また、`ALL` オプションを使用せずに重複を削除するので、5 行を返します。 これらの 5 行は、`SELECT` キーワードを使用して最初の `UNION ALL` の結果と結合されます。 これによって 2 組の 5 行の間での重複が削除されることはありません。 最終的な結果は 10 行になります。  
+ 3 番目の例では、最初の `ALL` と共に `UNION` を使用し、`UNION` を使用していない 2 番目の `ALL` をかっこで囲んでいます。 2 番目の `UNION` はかっこで囲まれているので、最初に処理されます。また、`ALL` オプションを使用せずに重複を削除するので、5 行を返します。 これらの 5 行は、`UNION ALL` キーワードを使用して最初の `SELECT` の結果と結合されます。 これによって 2 組の 5 行の間での重複が削除されることはありません。 最終的な結果は 10 行になります。  
   
  [!code-sql[Select#SelectExamples51](../../t-sql/queries/codesnippet/tsql/select-examples-transact_29.sql)]  
   

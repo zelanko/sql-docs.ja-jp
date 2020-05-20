@@ -77,7 +77,7 @@ WITH NO_INFOMSGS
 |**状態**|ログ ファイルの状態。 常に 0 です。|  
   
 ## <a name="remarks"></a><a name="Remarks"></a> 解説  
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、データベース別のトランザクション ログの容量利用情報を返すには、[ の代わりに ](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)sys.dm_db_log_space_usage`DBCC SQLPERF(LOGSPACE)` DMV を使用します。    
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、データベース別のトランザクション ログの容量利用情報を返すには、`DBCC SQLPERF(LOGSPACE)` の代わりに [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV を使用します。    
  
 トランザクション ログには、データベースで実行された各トランザクションが記録されます。 詳細については、「[トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」と「[SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)」を参照してください。
   
@@ -89,7 +89,7 @@ WITH NO_INFOMSGS
 ## <a name="examples"></a>例  
   
 ### <a name="a-displaying-log-space-information-for-all-databases"></a>A. すべてのデータベースのログ領域情報を表示する  
-次の例では、`LOGSPACE` インスタンスに含まれているすべてのデータベースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 情報を表示します。
+次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれているすべてのデータベースの `LOGSPACE` 情報を表示します。
   
 ```sql  
 DBCC SQLPERF(LOGSPACE);  

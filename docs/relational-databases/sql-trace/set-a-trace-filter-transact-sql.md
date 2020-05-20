@@ -26,7 +26,7 @@ ms.locfileid: "72907046"
   
 ### <a name="to-set-a-trace-filter"></a>トレース フィルターを設定するには  
   
-1.  トレースが既に実行中の場合は、**を指定して**sp_trace_setstatus`@status = 0` を実行し、トレースを停止します。  
+1.  トレースが既に実行中の場合は、`@status = 0` を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
   
 2.  **sp_trace_setfilter** を実行して、トレース中のイベントに関して取得する情報の種類を構成します。  
 

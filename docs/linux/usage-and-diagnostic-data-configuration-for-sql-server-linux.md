@@ -61,7 +61,7 @@ Docker 上で使用状況と診断データの収集を無効にするには、D
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-1. `mssql.conf` および `[telemetry]` という行を含む `customerfeedback = false` ファイルをホスト ディレクトリに追加します。
+1. `[telemetry]` および `customerfeedback = false` という行を含む `mssql.conf` ファイルをホスト ディレクトリに追加します。
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -85,7 +85,7 @@ Docker 上で使用状況と診断データの収集を無効にするには、D
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-1. `mssql.conf` および `[telemetry]` という行を含む `customerfeedback = false` ファイルをホスト ディレクトリに追加します。
+1. `[telemetry]` および `customerfeedback = false` という行を含む `mssql.conf` ファイルをホスト ディレクトリに追加します。
 
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -154,7 +154,7 @@ Docker 上で Local Audit を有効にするには、Docker で[データを保�
    sudo mkdir <host directory>/audit
    ```
 
-1. `mssql.conf` および `[telemetry]` という行を含む `userrequestedlocalauditdirectory = <host directory>/audit` ファイルをホスト ディレクトリに追加します。
+1. `[telemetry]` および `userrequestedlocalauditdirectory = <host directory>/audit` という行を含む `mssql.conf` ファイルをホスト ディレクトリに追加します。
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -184,7 +184,7 @@ Docker 上で Local Audit を有効にするには、Docker で[データを保�
    sudo mkdir <host directory>/audit
    ```
 
-1. `mssql.conf` および `[telemetry]` という行を含む `userrequestedlocalauditdirectory = <host directory>/audit` ファイルをホスト ディレクトリに追加します。
+1. `[telemetry]` および `userrequestedlocalauditdirectory = <host directory>/audit` という行を含む `mssql.conf` ファイルをホスト ディレクトリに追加します。
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf

@@ -121,7 +121,7 @@ ms.locfileid: "75321909"
   
 -   標準的なトランザクション パブリケーションは、最大 1000 列のテーブルをサポートします。 Oracle のトランザクション パブリケーションがサポートするのは 995 列です (レプリケーションにより、パブリッシュされた各テーブルに 5 列が追加されます)。  
   
--   COLLATE 句は、CREATE TABLE ステートメントに追加され、大文字と小文字を区別する比較を有効にします。この比較は、主キーおよび一意の制約にとって重要です。 この動作はスキーマ オプション 0x1000 で制御されます。これは、`@schema_option`sp_addarticle &#40;Transact-SQL&#41;[ の ](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) パラメーターで指定します。  
+-   COLLATE 句は、CREATE TABLE ステートメントに追加され、大文字と小文字を区別する比較を有効にします。この比較は、主キーおよび一意の制約にとって重要です。 この動作はスキーマ オプション 0x1000 で制御されます。これは、[sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) の `@schema_option` パラメーターで指定します。  
   
 -   ストアド プロシージャを使用して Oracle パブリッシャーを構成またはメンテナンスする場合、プロシージャを明示的なトランザクションに入れないでください。 これは Oracle パブリッシャーへの接続に使用するリンク サーバーではサポートされていません。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "75321909"
   
 -   スナップショット エージェントおよびログ リーダー エージェントがディストリビューターからパブリッシャーへの接続に使用するアカウントは、次のいずれかの方法で指定されます。  
   
-    -   `@security_mode`sp_adddistpublisher &#40;Transact-SQL&#41;[ の ](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) パラメーター (Oracle 認証が使用される場合、`@login` と `@password` にも値を指定します)  
+    -   [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) の `@security_mode` パラメーター (Oracle 認証が使用される場合、`@login` と `@password` にも値を指定します)  
   
     -   SQL Server Management Studio の **[サーバーへの接続]** ダイアログ ボックス。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle パブリッシャーを構成するときに、これを使用します。  
   
@@ -159,11 +159,11 @@ ms.locfileid: "75321909"
   
 -   スナップショット エージェントおよびログ リーダー エージェントが接続に使用するアカウントは、[sp_changedistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) またはプロパティ シートで変更することはできませんが、パスワードは変更できます。  
   
--   `@security_mode`sp_adddistpublisher &#40;Transact-SQL&#41;[ の ](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) パラメーターに 1 (Windows 統合認証) の値を指定する場合:  
+-   [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) の `@security_mode` パラメーターに 1 (Windows 統合認証) の値を指定する場合:   
   
-    -   スナップショット エージェントとログ リーダー エージェントの両方で使用するプロセス アカウントおよびパスワード (`@job_login`sp_addpublication_snapshot &#40;Transact-SQL&#41;`@job_password` および [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) の [ および ](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) パラメーター) は、Oracle パブリッシャーへの接続に使用するアカウントおよびパスワードと同じにする必要があります。  
+    -   スナップショット エージェントとログ リーダー エージェントの両方で使用するプロセス アカウントおよびパスワード ([sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) および [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) の `@job_login` および `@job_password` パラメーター) は、Oracle パブリッシャーへの接続に使用するアカウントおよびパスワードと同じにする必要があります。  
   
-    -   `@job_login`sp_changepublication_snapshot &#40;Transact-SQL&#41;[ または ](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)sp_changelogreader_agent &#40;Transact-SQL&#41;[ から ](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) パラメーターを変更することはできませんが、パスワードは変更できます。  
+    -   [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) または [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) から `@job_login` パラメーターを変更することはできませんが、パスワードは変更できます。  
   
  レプリケーションのセキュリティの詳細については、「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   

@@ -43,7 +43,7 @@ ms.locfileid: "79288366"
   
 -   Web ページ間のリンクのグラフ  
   
- 階層構造を持つテーブルを作成したり、別の場所に格納されているデータの階層構造を表したりするには、 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) を使用します。 階層データのクエリや管理を実行するには、 [ の ](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)hierarchyid 関数[!INCLUDE[tsql](../includes/tsql-md.md)] を使用します。  
+ 階層構造を持つテーブルを作成したり、別の場所に格納されているデータの階層構造を表したりするには、 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) を使用します。 階層データのクエリや管理を実行するには、 [!INCLUDE[tsql](../includes/tsql-md.md)] の [hierarchyid 関数](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) を使用します。  
   
 ##  <a name="key-properties-of-hierarchyid"></a><a name="keyprops"></a> hierarchyid の主要な特性  
  値、 **hierarchyid** データ型は、ツリー階層内の位置を表します。 値を **hierarchyid** 、次のプロパティがあります。  
@@ -398,7 +398,7 @@ GO
   
   
 ###  <a name="finding-ancestors-by-using-the-clr"></a><a name="findclr"></a> CLR を使用した先祖の検索  
- 階層内の 2 つのノードに関連する一般的な操作は、最下位の共通の先祖を見つけることです。 [!INCLUDE[tsql](../includes/tsql-md.md)]hierarchyid**型は** と CLR の両方で使用できるので、どちらでもこの操作を記述できます。 パフォーマンスが向上するため、CLR の使用をお勧めします。  
+ 階層内の 2 つのノードに関連する一般的な操作は、最下位の共通の先祖を見つけることです。 **hierarchyid** 型は [!INCLUDE[tsql](../includes/tsql-md.md)] と CLR の両方で使用できるので、どちらでもこの操作を記述できます。 パフォーマンスが向上するため、CLR の使用をお勧めします。  
   
  次の CLR コードを使用すると、先祖を一覧表示し、最下位の共通の先祖を見つけることができます。  
   
@@ -441,7 +441,7 @@ public partial class HierarchyId_Operations
 }  
 ```  
   
- 以下の **の例で**ListAncestor**メソッドおよび**CommonAncestor[!INCLUDE[tsql](../includes/tsql-md.md)] メソッドを使用するには、DLL をビルドし、次のようなコードを実行して **の**HierarchyId_Operations[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アセンブリを作成します。  
+ 以下の [!INCLUDE[tsql](../includes/tsql-md.md)] の例で **ListAncestor** メソッドおよび **CommonAncestor** メソッドを使用するには、DLL をビルドし、次のようなコードを実行して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の **HierarchyId_Operations** アセンブリを作成します。  
   
 ```sql
 CREATE ASSEMBLY HierarchyId_Operations   
