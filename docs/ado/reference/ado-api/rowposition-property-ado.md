@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - RowPosition property [ADO]
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a333a2be2728f3c0b412246b0a793dae64096ae5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f2621e82fef8d7e9baffa9d6cc8c30c65ea476ea
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931227"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756211"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition プロパティ (ADO)
 **ADORecordsetConstruction**オブジェクトからの OLE DB **rowposition**オブジェクトを取得します。値の設定もできます。 **Put_RowPosition**を使用して**rowposition**オブジェクトを設定すると、結果として得られる**レコードセット**オブジェクトは**rowposition**オブジェクトを使用して現在の行を決定します。  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Save method [ADO], VC++ example
 - Open method [ADO]
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 245affed25c7fb3d0ccc91504de0cfaaeee1807a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 90360589fb15e9b71bdd8776a709d1464db428ff
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917072"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755908"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Save および Open メソッドの例 (VC + +)
 次の3つの例は、 [Save](../../../ado/reference/ado-api/save-method.md)メソッドと**Open**メソッドを一緒に使用する方法を示しています。  
