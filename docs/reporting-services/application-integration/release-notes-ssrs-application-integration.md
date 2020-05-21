@@ -62,7 +62,7 @@ SSRS のリリース ノートについては、「[SQL Server Reporting Service
 | 変更の説明 | 詳細 |
 | :----------------- | :------ |
 | パラメーターのないレポートが **Server.LoadReportDefinition** によって読み込まれないバグが修正されています。 | &nbsp; |
-| WebForms レポート ビューアー コントロール。 | RTL ページ (*direction: rtl;* css を使用してテキスト フローをを変更するページ) への埋め込みがサポートされました。<br/><br/>*IReportViewerMessages5* ローカリゼーション インターフェイスを使用した、印刷ダイアログ テキストのカスタマイズがサポートされました。<br/><br/>ユーザー補助のサポートが改善されました。<br/><br/>&bull; &nbsp; &nbsp; [WebForms のレポート ビューアー コントロール用の NuGet パッケージ](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148) |
+| WebForms レポート ビューアー コントロール。 | RTL ページ (*direction: rtl;* css を使用してテキスト フローを変更するページ) への埋め込みがサポートされました。<br/><br/>*IReportViewerMessages5* ローカリゼーション インターフェイスを使用した、印刷ダイアログ テキストのカスタマイズがサポートされました。<br/><br/>ユーザー補助のサポートが改善されました。<br/><br/>&bull; &nbsp; &nbsp; [WebForms のレポート ビューアー コントロール用の NuGet パッケージ](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148) |
 | WinForms レポート ビューアー コントロール。 | アプリが高 DPI モードで実行されている場合の印刷機能が修正されました。<br/><br/>&bull; &nbsp; &nbsp; [WinForms のレポート ビューアー コントロール用の NuGet パッケージ](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/150.900.148) |
 | &nbsp; | &nbsp; |
 
