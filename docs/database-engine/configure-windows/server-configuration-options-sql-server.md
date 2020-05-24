@@ -81,7 +81,7 @@ ms.locfileid: "75002015"
     |[Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが起動すると 1 に変わります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが自動的に起動するようにセットアップ時に設定されている場合の既定値は 0 です。)|  
     |[allow updates](../../database-engine/configure-windows/allow-updates-server-configuration-option.md) (旧バージョンで使用。 使用しないでください。 再構成中にエラーが発生する原因になる場合があります。)|0|1|0|  
     |[automatic soft-NUMA disabled](soft-numa-sql-server.md)|0|1|0|  
-    |[バックアップ チェックサムの既定](../../database-engine/configure-windows/backup-checksum-default.md)|0|1|0|  
+    |[backup checksum default](../../database-engine/configure-windows/backup-checksum-default.md)|0|1|0|  
     |[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0| 
     |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
     |[c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A、RR)|0|1|0|  
