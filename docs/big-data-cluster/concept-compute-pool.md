@@ -1,7 +1,7 @@
 ---
 title: Spark コンピューティング プールとは
 titleSuffix: SQL Server big data clusters
-description: この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 内のコンピューティング プールについて説明します。
+description: この記事では、SQL Server 2019 ビッグ データ クラスターのコンピューティング プールについて説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e54ee601b180e8883ec9fea49fff810c52fe5f49
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: be8766f00a8c6b4d9fd47c976c5a2e1235cacd41
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253141"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606344"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのコンピューティング プールとは
 

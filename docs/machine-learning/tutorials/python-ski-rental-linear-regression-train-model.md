@@ -1,25 +1,31 @@
 ---
 title: Python のチュートリアル:モデルのトレーニング
-description: この 4 部構成のチュートリアル シリーズのパート 3 では、SQL Server Machine Learning Services でスキー レンタルを予測する線形回帰モデルを Python でトレーニングします。
+titleSuffix: SQL machine learning
+description: この 4 部構成のチュートリアル シリーズのパート 3 では、SQL 機械学習でスキー レンタルを予測する線形回帰モデルを Python でトレーニングします。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/20/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c564ac26c5706e67d9a633a05f81cb48d00fb771
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2d2335c982a75d924bfc60293632650b2d887527
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116435"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606536"
 ---
-# <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python のチュートリアル:SQL Server Machine Learning Services で線形回帰モデルをトレーニングします。
+# <a name="python-tutorial-train-a-linear-regression-model-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習で線形回帰モデルをトレーニングする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズの第 3 部では、Python で線形回帰モデルをトレーニングします。 このシリーズの次のパートでは、Machine Learning Services またはビッグ データ クラスターを使用して、このモデルを SQL Server データベースにデプロイします。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズの第 3 部では、Python で線形回帰モデルをトレーニングします。 このシリーズの次の部では、Machine Learning Services を使用して、このモデルを SQL Server データベースにデプロイします。
+::: moniker-end
 
 この記事では、次の方法について学習します。
 
@@ -29,9 +35,9 @@ ms.locfileid: "81116435"
 
 [第 1 部](python-ski-rental-linear-regression.md)では、サンプル データベースを復元する方法を学習しました。
 
-[第 2 部](python-ski-rental-linear-regression-prepare-data.md)では、SQL Server から Python データ フレームにデータを読み込み、Python でデータを準備する方法を学習しました。
+[パート 2](python-ski-rental-linear-regression-prepare-data.md) では、データベースから Python データ フレームにデータを読み込み、Python でデータを準備する方法を学習しました。
 
-[第 4 部](python-ski-rental-linear-regression-deploy-model.md)では、モデルを SQL Server に格納し、そして第 2 部と第 3 部で開発した Python スクリプトからストアド プロシージャを作成する方法について学習します。 ストアド プロシージャは、新しいデータに基づいて予測を行うために SQL Server で実行されます。
+[パート 4](python-ski-rental-linear-regression-deploy-model.md) では、モデルをデータベースに格納した後、パート 2 と 3 で開発した Python スクリプトからストアド プロシージャを作成する方法について学習します。 ストアド プロシージャは、新しいデータに基づいて予測を行うためにサーバーで実行されます。
 
 ## <a name="prerequisites"></a>前提条件
 

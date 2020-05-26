@@ -1,7 +1,7 @@
 ---
 title: azdata を使用してアプリケーションをデプロイする
 titleSuffix: SQL Server Big Data Clusters
-description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]に Python または R スクリプトをアプリケーションとして展開します。'
+description: SQL Server 2019 ビッグ データ クラスターに、Python または R スクリプトをアプリケーションとして展開します。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab28a6bbe7bbf108305f065dcdf7b870c0f76602
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253154"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606627"
 ---
 # <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] にアプリを展開する方法
 
@@ -46,7 +46,7 @@ ms.locfileid: "75253154"
 
 SQL Server 2019 では、アプリケーションの作成、削除、説明、初期化、一覧の実行、更新を行うことができます。 次の表では、**azdata** で使用できるアプリケーションの展開コマンドについて説明します。
 
-|command |説明 |
+|コマンド |説明 |
 |:---|:---|
 |`azdata login` | SQL Server ビッグ データ クラスターにサインインします |
 |`azdata app create` | アプリケーションを作成します。 |
@@ -106,11 +106,11 @@ azdata app create --spec <directory containing spec file>
 azdata app create --spec ./addpy
 ```
 
-これは、アプリケーションが `addpy` フォルダーに格納されていることを前提としています。 このフォルダーには、`spec.yaml` というアプリケーションの仕様ファイルも含まれています。 [ ファイルの詳細については、](concept-application-deployment.md)アプリケーションの展開`spec.yaml`に関するページを参照してください。
+これは、アプリケーションが `addpy` フォルダーに格納されていることを前提としています。 このフォルダーには、`spec.yaml` というアプリケーションの仕様ファイルも含まれています。 `spec.yaml` ファイルの詳細については、[アプリケーションの展開](concept-application-deployment.md)に関するページを参照してください。
 
 このアプリ サンプル アプリを展開するには、`addpy` というディレクトリに次のファイルを作成します。
 
-- [https://login.microsoftonline.com/consumers/](`add.py`) 次の Python コードをこのファイルにコピーします。
+- `add.py` 次の Python コードをこのファイルにコピーします。
    ```py
    #add.py
   def add(x, y):
@@ -118,7 +118,7 @@ azdata app create --spec ./addpy
     return result
   result=add(x,y)
    ```
-- [https://login.microsoftonline.com/consumers/](`spec.yaml`) 次のコードをこのファイルにコピーします。
+- `spec.yaml` 次のコードをこのファイルにコピーします。
    ```yaml
    #spec.yaml
    name: add-app #name of your python script

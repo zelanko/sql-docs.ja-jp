@@ -1,7 +1,7 @@
 ---
 title: Spark を使用したサンプル ノートブックの実行
 titleSuffix: SQL Server big data clusters
-description: このチュートリアルでは、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] でサンプルの Spark ノートブックを読み込んで実行する方法について説明します。
+description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスターでサンプルの Spark ノートブックを読み込んで実行する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 440deb44e98a29136fa540efb8619702c51b7342
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: ce2b2439f136150348409f591550b8fc07383bd9
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531305"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606891"
 ---
 # <a name="run-a-sample-notebook-using-spark"></a>Spark を使用したサンプル ノートブックの実行
 

@@ -4,17 +4,18 @@ description: SQL Server Machine Learning Services にインストールした Py
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/22/2019
+ms.date: 05/01/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
+ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 173be52a343ad6f19395d6c532124ddd837ed70f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fb08940a9a6c9c15d8c633f5b3c439514bc43646
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118005"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606004"
 ---
 # <a name="get-python-package-information"></a>Python パッケージ情報の取得
 
@@ -24,7 +25,13 @@ ms.locfileid: "81118005"
 
 ## <a name="default-python-library-location"></a>Python ライブラリの既定の場所
 
-SQL Server と共に機械学習をインストールすると、インストールした言語ごとに 1 つのパッケージ ライブラリがインスタンス レベルで作成されます。 このインスタンス ライブラリは、Windows では SQL Server に登録されているセキュリティで保護されたフォルダーです。
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+SQL Server と共に機械学習をインストールすると、インストールした言語ごとに 1 つのパッケージ ライブラリがインスタンス レベルで作成されます。 このインスタンス ライブラリは、SQL Server に登録されているセキュリティで保護されたフォルダーです。
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+SQL Server と共に機械学習をインストールすると、インストールした言語ごとに 1 つのパッケージ ライブラリがインスタンス レベルで作成されます。
+::: moniker-end
 
 SQL Server のデータベース内で実行されるすべてのスクリプトまたはコードは、このインスタンス ライブラリから関数を読み込む必要があります。 SQL Server は、他のライブラリにインストールされているパッケージにはアクセスできません。 これはリモート クライアントにも当てはまります。サーバーの計算のコンテキストで実行されているすべての Python コードは、インスタンス ライブラリにインストールされているパッケージしか使用できません。
 既定のインスタンス ライブラリは、サーバーの資産を保護するために、コンピューターの管理者のみが変更できるようになっています。
@@ -33,15 +40,24 @@ SQL Server のデータベース内で実行されるすべてのスクリプト
 Python のバイナリの既定のパスは次のとおりです。
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
+
+既定の SQL インスタンスは、MSSQLSERVER と想定されています。 SQL Server がユーザー定義の名前付きインスタンスとしてインストールされている場合、代わりにその指定の名前を使用します。
 ::: moniker-end
 
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 Python のバイナリの既定のパスは次のとおりです。
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES`
-::: moniker-end
 
 既定の SQL インスタンスは、MSSQLSERVER と想定されています。 SQL Server がユーザー定義の名前付きインスタンスとしてインストールされている場合、代わりにその指定の名前を使用します。
+::: moniker-end
+
+次の SQL コマンドを実行して、外部スクリプトを有効にします。
+
+```sql
+sp_configure 'external scripts enabled', 1;
+RECONFIGURE WITH override;
+```
 
 次のステートメントを実行すると、現在のインスタンスの既定のライブラリを確認することができます。 この例では、Python の `sys.path` 変数に含まれるフォルダーの一覧が返されます。 一覧には、現在のディレクトリと標準ライブラリ パスが含まれています。
 
@@ -53,14 +69,16 @@ EXECUTE sp_execute_external_script
 
 変数 `sys.path` の詳細と、これを使用したモジュールのインタープリターの検索パスの設定方法については、[モジュールの検索パス](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)に関する記事を参照してください。
 
-## <a name="default-python-packages"></a>Python の既定のパッケージ
+## <a name="default-microsoft-python-packages"></a>既定の Microsoft Python パッケージ
 
-セットアップ時に Python の機能を選択すると、SQL Server Machine Learning Services と共に次の Python パッケージがインストールされます。
+セットアップ時に Python の機能を選択すると、SQL Server Machine Learning Services と共に次の Microsoft Python パッケージがインストールされます。
 
 | パッケージ | Version |  説明 |
 | ---------|---------|--------------|
-| [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
-| [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2 | Python に機械学習アルゴリズムを追加します。 |
+| [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.4.7 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
+| [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.4.7 | Python に機械学習アルゴリズムを追加します。 |
+
+含まれている Python のバージョンの詳細については、「[Python および R のバージョン](../sql-server-machine-learning-services.md#versions)」を参照してください。
 
 ### <a name="component-upgrades"></a>コンポーネントのアップグレード
 
@@ -77,7 +95,7 @@ EXECUTE sp_execute_external_script
 
 ## <a name="list-all-installed-python-packages"></a>インストールされているすべての Python パッケージの一覧表示
 
-次のスクリプト例では、インストールされているパッケージとそのバージョンが一覧表示されます。
+次のスクリプトの例では、SQL Server インスタンスにインストールされているすべての Python パッケージの一覧を表示します。
 
 ```sql
 EXECUTE sp_execute_external_script 
@@ -89,42 +107,58 @@ installed_packages = pkg_resources.working_set
 installed_packages_list = sorted(["%s==%s" % (i.key, i.version) for i in installed_packages])
 df = pd.DataFrame(installed_packages_list)
 OutputDataSet = df
-  '
+'
 WITH RESULT SETS (( PackageVersion nvarchar (150) ))
 ```
 
 ## <a name="find-a-single-python-package"></a>1 つの Python パッケージの検索
 
-インストールした Python パッケージが、特定の SQL Server インスタンスで使用できることを確認したい場合、ストアド プロシージャを実行してパッケージを読み込み、メッセージが返されるようにします。
+インストールした Python パッケージが、特定の SQL Server インスタンスで使用できることを確認したい場合、ストアド プロシージャを実行してパッケージを検索し、メッセージが返されるようにします。
 
 たとえば、次のコードでは `scikit-learn` パッケージが検索されます。
-パッケージが見つかった場合、コードによって「パッケージ scikit-learn がインストールされています」というメッセージが返されます。
+パッケージが見つかった場合、コードによりパッケージのバージョンが出力されます。
 
 ```sql
 EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
 import pkg_resources
-pckg_name = "scikit-learn"
-pckgs = pandas.DataFrame([(i.key) for i in pkg_resources.working_set], columns = ["key"])
-installed_pckg = pckgs.query(''key == @pckg_name'')
-print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")
-  '
+pkg_name = "pandas"
+try:
+    version = pkg_resources.get_distribution(pkg_name).version
+    print("Package " + pkg_name + " is version " + version)
+except:
+    print("Package " + pkg_name + " not found")
+'
 ```
 
-<a name="get-package-vers"></a>
+結果:
 
-次の例では、revoscalepy パッケージと Python のバージョンが返されます。
+```text
+STDOUT message(s) from external script: Package pandas is version 0.23.4
+```
+
+次の例では、パッケージ `pandas` のバージョンを出力します。
 
 ```sql
 EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
-import revoscalepy
+import pkg_resources
+pkg_name = "pandas"
+print(pkg_name + " package is version " + pkg_resources.get_distribution(pkg_name).version)
+'
+```
+
+次の例では、Python のバージョンが返されます。
+
+```sql
+EXECUTE sp_execute_external_script
+  @language = N'Python',
+  @script = N'
 import sys
-print(revoscalepy.__version__)
 print(sys.version)
-  '
+'
 ```
 
 ## <a name="next-steps"></a>次のステップ
@@ -132,6 +166,6 @@ print(sys.version)
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [Python ツールを使用してパッケージをインストールする](install-python-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [sqlmlutils を使用した新しい Python パッケージのインストール](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

@@ -4,17 +4,18 @@ description: SQL Server Machine Learning Services と SQL Server R Services に�
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 05/01/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7e2b1b438b1563749a999ed8170046d67eef6b63
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.reviewer: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 78dc96f3568bd2a19f2604d76d47010f9d9104a0
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117965"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606489"
 ---
 # <a name="get-r-package-information"></a>R パッケージ情報の取得
 
@@ -33,26 +34,25 @@ SQL Server のデータベース内で実行されるすべてのスクリプト
 R のバイナリの既定のパスは次のとおりです。
 
 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
+
+既定の SQL インスタンスは、MSSQLSERVER と想定されています。 SQL Server がユーザー定義の名前付きインスタンスとしてインストールされている場合、代わりにその指定の名前を使用します。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 R のバイナリの既定のパスは次のとおりです。
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library`
+
+既定の SQL インスタンスは、MSSQLSERVER と想定されています。 SQL Server がユーザー定義の名前付きインスタンスとしてインストールされている場合、代わりにその指定の名前を使用します。
 ::: moniker-end
 
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 R のバイナリの既定のパスは次のとおりです。
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\library`
-::: moniker-end
 
 既定の SQL インスタンスは、MSSQLSERVER と想定されています。 SQL Server がユーザー定義の名前付きインスタンスとしてインストールされている場合、代わりにその指定の名前を使用します。
-
-<!-- I don't think this note is necessary. If you have these other products installed, you'd already know about them.
-> [!NOTE]
-> If you find other folders having similar subfolder names and files, you probably have a standalone installation of  Microsoft R Server or Machine Learning Server. These server products have different installers and paths: C:\Program Files\Microsoft\R Server\R_SERVER or C:\Program Files\Microsoft\ML SERVER\R_SERVER. For more information, see [Install R Server 9.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) or [Install Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
--->
+::: moniker-end
 
 次のステートメントを実行すると、現在のインスタンスの既定の R パッケージ ライブラリを確認することができます。
 
@@ -64,26 +64,11 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-次のステートメントでは、SQL Server が使用するインスタンス ライブラリのパスと RevoScaleR のバージョンを返すために、[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) を使用しています。
-
-```sql
-EXECUTE sp_execute_external_script
-  @language =N'R',
-  @script=N'
-  sql_r_path <- rxSqlLibPaths("local")
-  print(sql_r_path)
-  version_info <-packageVersion("RevoScaleR")
-  print(version_info)'
-```
-
-> [!NOTE]
-> [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) 関数は、ローカル コンピューター上でのみ実行できます。 この関数では、リモート接続のライブラリ パスは返せません。
-
-## <a name="default-r-packages"></a>既定の R パッケージ
+## <a name="default-microsoft-r-packages"></a>既定の Microsoft R パッケージ
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-次の R パッケージは、SQL Server R Services と共にインストールされます。
+次の Microsoft R パッケージは、SQL Server R Services と共にインストールされます。
 
 |パッケージ | Version | 説明 |
 |---------|---------|-------------|
@@ -92,15 +77,28 @@ EXECUTE sp_execute_external_script
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 
-次の R パッケージは、セットアップ時に R 機能を選択すると、SQL Server Machine Learning Services と共にインストールされます。
+次の Microsoft R パッケージは、セットアップ時に R 機能を選択すると、SQL Server Machine Learning Services と共にインストールされます。
 
 |パッケージ | Version | 説明 |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | ストアド プロシージャに R スクリプトを含めるために使用します。 |
 | [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | R に機械学習アルゴリズムを追加します。 | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | R で MDX ステートメントを記述するために使用します。 |
+
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+次の Microsoft R パッケージは、セットアップ時に R 機能を選択すると、SQL Server Machine Learning Services と共にインストールされます。
+
+|パッケージ | Version | 説明 |
+|---------|---------|-------------|
+| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.4.7 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | ストアド プロシージャに R スクリプトを含めるために使用します。 |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.4.7 | R に機械学習アルゴリズムを追加します。 |
 | [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | R で MDX ステートメントを記述するために使用します。 |
 
 ::: moniker-end
@@ -121,20 +119,14 @@ R では、オープンソースの R をサポートしているので、base R
 
 お使いのインストールに含まれるオープンソースの R のディストリビューションは、[Microsoft R Open (MRO)](https://mran.microsoft.com/open) です。 MRO では、base R に [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library) などのオープンソースのパッケージの付加価値が追加されています。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-SQL Server R Services のセットアップで MRO が提供する R のバージョンは 3.2.2 です。
-::: moniker-end
-
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-SQL Server Machine Learning Services のセットアップで MRO が提供する R のバージョンは 3.3.3 です。
-::: moniker-end
+SQL Server バージョンごとに含まれている R のバージョンの詳細については、「[Python および R のバージョン](../sql-server-machine-learning-services.md#versions)」を参照してください。
 
 > [!IMPORTANT]
 > SQL Server のセットアップでインストールされた R のバージョンは、手動で Web 上の新しいバージョンに上書きしないでください。 Microsoft R パッケージは、R の特定のバージョンに基づいています。インストールを変更すると、それが不安定になる可能性があります。
 
 ## <a name="list-all-installed-r-packages"></a>インストールされているすべての R パッケージの列挙
 
-次の `installed.packages()` ストアド プロシージャの例では、R 関数 [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、現在の SQL インスタンスの R_SERVICES ライブラリにインストールされている R パッケージを一覧表示します。 このスクリプトでは、DESCRIPTION ファイルのパッケージ名とバージョン フィールドを返します。
+次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャの例では、R 関数 `installed.packages()` を使用して、現在の SQL インスタンスの R_SERVICES ライブラリにインストールされている R パッケージを一覧表示します。 このスクリプトでは、DESCRIPTION ファイルのパッケージ名とバージョン フィールドを返します。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -156,24 +148,25 @@ R パッケージの DESCRIPTION フィールドのオプション フィール�
 インストールした R パッケージが、特定の SQL Server インスタンスで使用できることを確認したい場合、ストアド プロシージャを実行してパッケージを読み込み、メッセージが返されるようにします。
 
 たとえば、次のステートメントは、使用可能な場合に [glue](https://cran.r-project.org/web/packages/glue/) パッケージを検索して読み込みます。
-パッケージが見つからないか、読み込めない場合は、「'glue' という名前のパッケージはありません」というテキストを含むエラーが表示されます。
+パッケージが見つからないか、または読み込めない場合は、エラーが発生します。
 
 ```sql
 EXECUTE sp_execute_external_script  
   @language =N'R',
-  @script=N'require("glue")'
-GO
+  @script=N'
+require("glue")
+'
 ```
 
 パッケージの詳細については、「`packageDescription`」を参照してください。
-次のステートメントでは、**glue** パッケージの情報が返されます。
+次のステートメントでは、**MicrosoftML** パッケージの情報が返されます。
 
 ```sql
 EXECUTE sp_execute_external_script
   @language = N'R',
   @script = N'
-print(packageDescription("glue"))
-  '
+print(packageDescription("MicrosoftML"))
+'
 ```
 
 ## <a name="next-steps"></a>次のステップ
@@ -181,6 +174,6 @@ print(packageDescription("glue"))
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [R ツールを使用してパッケージをインストールする](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [sqlmlutils で新しい R パッケージをインストールする](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

@@ -1,36 +1,40 @@
 ---
 title: SQL Server Machine Learning Services とは (Python と R)
 titleSuffix: ''
-description: Machine Learning Services は、リレーショナル データを使用して Python および R スクリプトを実行できるようになる SQL Server の機能です。 オープンソースのパッケージとフレームワーク、および予測分析と機械学習用の Microsoft Python および R パッケージを使用できます。 スクリプトは、SQL Server の外部またはネットワーク経由でデータを移動することなく、データベース内で実行されます。 この記事では、SQL Server Machine Learning Services の基本について説明します。
+description: Machine Learning Services は、リレーショナル データを使用して Python および R スクリプトを実行できるようになる SQL Server の機能です。 オープンソースのパッケージとフレームワーク、および予測分析と機械学習用の Microsoft Python および R パッケージを使用できます。 スクリプトは、SQL Server の外部またはネットワーク経由でデータを移動することなく、データベース内で実行されます。 この記事では、SQL Server Machine Learning Services の基本と開始方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/06/2020
+ms.date: 04/16/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: afce689bffe69de78970006aea51ddd49481e614
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 8a3ce585c69cd0ee026d81c4bd1f75c235af4752
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220657"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606584"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>SQL Server Machine Learning Services とは (Python と R)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Machine Learning Services は、リレーショナル データを使用して Python および R スクリプトを実行できるようになる SQL Server の機能です。 オープンソースのパッケージとフレームワーク、および予測分析と機械学習用の [Microsoft Python および R パッケージ](#packages)を使用できます。 スクリプトは、SQL Server の外部またはネットワーク経由でデータを移動することなく、データベース内で実行されます。 この記事では、SQL Server Machine Learning Services の基本について説明します。
+Machine Learning Services は、リレーショナル データを使用して Python および R スクリプトを実行できるようになる SQL Server の機能です。 オープンソースのパッケージとフレームワーク、および予測分析と機械学習用の [Microsoft Python および R パッケージ](#packages)を使用できます。 スクリプトは、SQL Server の外部またはネットワーク経由でデータを移動することなく、データベース内で実行されます。 この記事では、SQL Server Machine Learning Services の基本と開始方法について説明します。
+
+他の SQL プラットフォームの機械学習については、[SQL 機械学習のドキュメント](index.yml)を参照してください。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
 > SQL Server で Java を実行する方法については、[言語拡張のドキュメント](../language-extensions/language-extensions-overview.md)を参照してください。
 ::: moniker-end
 
-## <a name="what-is-machine-learning-services"></a>Machine Learning Services とは
+## <a name="execute-python-and-r-scripts-in-sql-server"></a>SQL Server で Python および R スクリプトを実行する
 
 SQL Server Machine Learning Services では、データベース内で Python および R スクリプトを実行できます。 この機能を使用して、データの準備とクリーンアップ、特徴エンジニアリング、およびデータベース内での機械学習モデルのトレーニング、評価、およびデプロイを行うことができます。 この機能により、データが存在する場所でスクリプトが実行され、ネットワークを介して別のサーバーにデータが転送されなくなります。
 
-Python と R のベース ディストリビューションは Machine Learning Services に含まれています。 Python 用の Microsoft パッケージ [revoscalepy](python/ref-py-revoscalepy.md) および [microsoftml](python/ref-py-microsoftml.md) と、R 用の [RevoScaleR](r/ref-r-revoscaler.md)、[MicrosoftML](r/ref-r-microsoftml.md)、[olapR](r/ref-r-olapr.md)、および [sqlrutils](r/ref-r-sqlrutils.md) に加え、PyTorch、TensorFlow、scikit-learn などのオープンソースのパッケージとフレームワークをインストールおよび使用できます。
+ストアド プロシージャ [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して、SQL Server インスタンスで Python および R のスクリプトを実行できます。
+
+Python と R のベース ディストリビューションは Machine Learning Services に含まれています。 Microsoft パッケージに加え、PyTorch、TensorFlow、scikit-learn などのオープンソースのパッケージとフレームワークをインストールして使用できます。
 
 Machine Learning Services では、SQL Server での Python および R スクリプトの実行に拡張フレーム ワークを使用します。 このしくみについては以下を参照してください。
 
@@ -38,39 +42,41 @@ Machine Learning Services では、SQL Server での Python および R スク�
 + [Python の拡張機能](concepts/extension-python.md)
 + [R の拡張機能](concepts/extension-r.md)
 
-## <a name="what-can-i-do-with-machine-learning-services"></a>Machine Learning Services でできること
+## <a name="get-started-with-machine-learning-services"></a>Machine Learning Services の概要
 
-Machine Learning Services を使用して、SQL Server 内で機械学習モデルとディープ ラーニング モデルを構築およびトレーニングできます。 また、既存のモデルを Machine Learning Services にデプロイし、予測にリレーショナル データを使用することもできます。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+1. [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json)または [Windows に SQL Server Machine Learning Services をインストールする](install/sql-machine-learning-services-windows-install.md)。 [ビッグ データ クラスターの Machine Learning Services](../big-data-cluster/machine-learning-services.md) も使用できます。
 
-SQL Server Machine Learning Services を使用できる予測の種類の例としては、次のものがあります。
+1. 開発ツールを構成します。 「[Azure Data Studio のノートブックで Python スクリプトと R スクリプトを実行する](install/sql-machine-learning-azure-data-studio.md)」を使用できます。 [Azure Data Studio](../azure-data-studio/what-is.md) で T-SQL を実行することもできます。
 
-|||
-|-|-|
-|分類/カテゴリ|顧客からのフィードバックを肯定的なカテゴリと否定的なカテゴリに自動的に分割します|
-|回帰/予測の連続値|サイズと場所に基づいて家の価格を予測します|
-|異常検出|不正な銀行取引を検出します |
-|Recommendations|以前の購入に基づいて、オンラインの顧客が購入する商品を提案します|
+1. 初めての Python または R スクリプトを作成する。
 
-### <a name="how-to-execute-python-and-r-scripts"></a>Python および R スクリプトを実行する方法
+    + [SQL 機械学習用の Python チュートリアル](tutorials/python-tutorials.md)
+    + [SQL 機械学習用の R チュートリアル](tutorials/r-tutorials.md)
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+1. [Windows に SQL Server Machine Learning Services をインストールする](install/sql-machine-learning-services-windows-install.md)。
 
-Machine Learning Services で Python および R スクリプトを実行するには、次の 2 つの方法があります。
+1. 開発ツールを構成します。 「[Azure Data Studio のノートブックで Python スクリプトと R スクリプトを実行する](install/sql-machine-learning-azure-data-studio.md)」を使用できます。 [Azure Data Studio](../azure-data-studio/what-is.md) で T-SQL を使用することもできます。
 
-+ 最も一般的な方法は、T-SQL ストアド プロシージャ [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用することです。
+1. 初めての Python または R スクリプトを作成する。
 
-+ また、任意の Python または R クライアントを使用して、実行をリモートの SQL Server にプッシュするスクリプト (*リモート計算コンテキスト*と呼ばれます) を書くこともできます。 詳細については、[Python 開発](python/setup-python-client-tools-sql.md)と [R 開発](r/set-up-a-data-science-client.md)のためにデータ サイエンス クライアントを設定する方法に関する記事を参照してください。
+    + [SQL 機械学習用の Python チュートリアル](tutorials/python-tutorials.md)
+    + [SQL 機械学習用の R チュートリアル](tutorials/r-tutorials.md)
+::: moniker-end
 
 <a name="versions"></a>
 
 ## <a name="python-and-r-versions"></a>Python および R のバージョン
 
-以下では、SQL Server の各バージョンと Machine Learning Services に含まれる Python および R のバージョンの一覧を示します。
+以下に、Machine Learning Services に含まれる Python および R のバージョンの一覧を示します。
 
 | SQL Server のバージョン | Python バージョン | R バージョン |
 |-|-|-|
 | SQL Server 2017 | 3.5.2 | 3.3.3 |
 | SQL Server 2019 | 3.7.3 | 3.5.2 |
 
-SQL Server 2016 の R バージョンについては、[「R Services とは」の「R バージョン」セクション](r/sql-server-r-services.md#version)を参照してください。
+SQL Server 2016 の R バージョンについては、[「R Services とは」の「R バージョン」セクション](r/sql-server-r-services.md?view=sql-server-2016#version)を参照してください。
 
 <a name="packages"></a>
 
@@ -90,28 +96,21 @@ Microsoft のエンタープライズ パッケージに加えて、オープン
 
 Machine Learning Services と共にインストールされるパッケージと、他のパッケージをインストールする方法の詳細については、以下を参照してください。
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [Python パッケージ情報の取得](package-management/python-package-information.md)
 + [sqlmlutils を使用した Python パッケージのインストール](package-management/install-additional-python-packages-on-sql-server.md)
 + [R パッケージ情報の取得](package-management/r-package-information.md)
 + [sqlmlutils を使用した新しい R パッケージのインストール](package-management/install-additional-r-packages-on-sql-server.md)
-
-## <a name="how-do-i-get-started-with-machine-learning-services"></a>Machine Learning Services の基本的な使用方法
-
-1. [SQL Server Machine Learning Services のインストール](install/sql-machine-learning-services-windows-install.md)
-
-1. 開発ツールを構成します。 使用できるもの:
-
-    + T-SQL およびストアド プロシージャ [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して Python または R スクリプトを実行する [Azure Data Studio](../azure-data-studio/what-is.md) または [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)。
-    + スクリプトを実行する開発用のノート PC またはワークステーション上の Python または R。 [revoscalepy](python/ref-py-revoscalepy.md) と [RevoScaleR](r/ref-r-revoscaler.md) を使用してデータをローカルにプルすることや、リモートから SQL Server に実行をプッシュすることができます。 詳細については、[Python 開発](python/setup-python-client-tools-sql.md)と [R 開発](r/set-up-a-data-science-client.md)のためにデータ サイエンス クライアントを設定する方法に関する記事を参照してください。
-
-1. 初めての Python または R スクリプトを作成する
-
-    + クイック スタート:[単純な Python スクリプトを実行する](tutorials/quickstart-python-create-script.md)
-    + クイック スタート:[単純な R スクリプトを実行する](tutorials/quickstart-r-create-script.md)
-    + チュートリアル:[T-SQL で Python を使用する](tutorials/sqldev-in-database-python-for-sql-developers.md):データの探索、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (5 部構成シリーズ)
-    + チュートリアル:[T-SQL で R を使用する](tutorials/sqldev-in-database-r-for-sql-developers.md):データの探索、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (5 部構成シリーズ)
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
++ [Python パッケージ情報の取得](package-management/python-package-information.md)
++ [Python ツールを使用して SQL Server 上にパッケージをインストールする](package-management/install-python-packages-standard-tools.md)
++ [R パッケージ情報の取得](package-management/r-package-information.md)
++ [T-SQL (CREATE EXTERNAL LIBRARY) を使用して SQL Server に R パッケージをインストールする](package-management/install-r-packages-with-tsql.md)。
+::: moniker-end
 
 ## <a name="next-steps"></a>次のステップ
 
-+ [SQL Server Machine Learning Services のインストール](install/sql-machine-learning-services-windows-install.md)
-+ [Python 開発](python/setup-python-client-tools-sql.md)と [R 開発](r/set-up-a-data-science-client.md)のためにデータ サイエンス クライアントを設定する
++ [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json) に [SQL Server Machine Learning Services をインストールする](install/sql-machine-learning-services-windows-install.md)
++ [SQL 機械学習用の Python チュートリアル](tutorials/python-tutorials.md)
++ [SQL 機械学習用の R チュートリアル](tutorials/r-tutorials.md)

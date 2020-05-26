@@ -1,28 +1,34 @@
 ---
 title: Python のチュートリアル:クラスター モデルをビルドする
-description: この 4 部構成のチュートリアル シリーズのパート 3 では、K-Means モデルをビルドして、SQL Server Machine Learning Services を使用して Python でクラスタリングを実行します。
+titleSuffix: SQL machine learning
+description: この 4 部構成のチュートリアル シリーズのパート 3 では、SQL 機械学習を使用して Python でクラスタリングを実行するために、K-Means モデルをビルドします。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/14/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6e0aa1bcbf1bc79b6f77fc0b564d840194ffa8ec
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116595"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606444"
 ---
-# <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>チュートリアル:モデルを Python にビルドし、SQL Server Machine Learning Services で顧客を分類する
+# <a name="python-tutorial-build-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習を使用して顧客を分類するモデルを構築する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この 4 部構成のチュートリアル シリーズのパート 3 では、クラスタリングを実行するために、Python で K-Means モデルをビルドします。 このシリーズの次の部では、SQL Server Machine Learning Services を使用して、このモデルを SQL データベースにデプロイします。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズのパート 3 では、クラスタリングを実行するために、Python で K-Means モデルをビルドします。 このシリーズの次のパートでは、SQL Server Machine Learning Services またはビッグ データ クラスターを使用して、このモデルをデータベースにデプロイします。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズのパート 3 では、クラスタリングを実行するために、Python で K-Means モデルをビルドします。 このシリーズの次のパートでは、SQL Server Machine Learning Services を使用して、このモデルをデータベースにデプロイします。
+::: moniker-end
 
 この記事では、次の方法について学習します。
 
@@ -33,9 +39,9 @@ ms.locfileid: "81116595"
 
 [パート 1 ](python-clustering-model.md)では、前提条件をインストールしてサンプル データベースを復元しました。
 
-[パート 2 ](python-clustering-model-prepare-data.md)では、SQL データベースからデータを準備してクラスタリングを実行する方法を学びました。
+[パート 2 ](python-clustering-model-prepare-data.md)では、データベースからデータを準備してクラスタリングを実行する方法を学びました。
 
-[パート 4 ](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できるストアド プロシージャを SQL データベースに作成する方法について説明します。
+[パート 4 ](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できるストアド プロシージャをデータベースに作成する方法について説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -147,7 +153,7 @@ cluster
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 
-このチュートリアルを続行しない場合は、SQL Server から tpcxbb_1gb データベースを削除してください。
+このチュートリアルを続行しない場合は、tpcxbb_1gb データベースを削除してください。
 
 ## <a name="next-steps"></a>次のステップ
 
@@ -160,4 +166,4 @@ cluster
 作成した機械学習モデルをデプロイするには、このチュートリアル シリーズのパート 4 の手順に従います。
 
 > [!div class="nextstepaction"]
-> [チュートリアル:SQL Server Machine Learning Services を使用して Python でクラスタリング モデルをデプロイする](python-clustering-model-deploy.md)
+> [Python のチュートリアル:クラスタリング モデルをデプロイする](python-clustering-model-deploy.md)

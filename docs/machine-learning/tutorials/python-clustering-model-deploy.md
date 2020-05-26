@@ -1,6 +1,6 @@
 ---
 title: Python のチュートリアル:クラスター モデルのデプロイ
-description: この 4 部構成チュートリアル シリーズの第 4 部では、SQL Server Machine Learning Services などのクラスター モデルを Python にデプロイします。
+description: この 4 部構成のチュートリアル シリーズのパート 4 では、SQL 機械学習を使用して Python でクラスタリング モデルをデプロイします。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -11,28 +11,33 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116565"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606445"
 ---
-# <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>チュートリアル:モデルを Python に配置し、SQL Server Machine Learning Services で顧客を分類する
+# <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習を使用して顧客を分類するモデルをデプロイする
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズのパート 4 では、SQL Server Machine Learning Services またはビッグ データ クラスターを使用して、Python で開発されたクラスタリング モデルを SQL データベースにデプロイします。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 この 4 部構成チュートリアルシリーズの第 4 部では、SQL Server Machine Learning Services を使用して、Python で開発されたクラスター モデルを SQL データベースにデプロイします。
+::: moniker-end
 
-新しい顧客が登録する際、クラスターを定期的に実行するには、どのアプリからでも Python スクリプトを呼び出せる必要があります。 これを行うには、データベースの SQL ストアドプロシージャ内に Python スクリプトを置き、SQL Server に Python スクリプトをデプロイします。 モデルは SQL database で実行されるため、データベースに格納されているデータに対して、容易にトレーニングできます。
+新しい顧客が登録する際、クラスターを定期的に実行するには、どのアプリからでも Python スクリプトを呼び出せる必要があります。 これを行うには、SQL ストアド プロシージャ内に Python スクリプトを配置して、データベースに Python スクリプトをデプロイします。 モデルはデータベースで実行されるため、データベースに格納されているデータに対して、容易にトレーニングできます。
 
-このセクションでは、SQL Server に先ほど書き込んだ Python コードを移動し、SQL Server Machine Learning Services を使用して、クラスタリングをデプロイします。
+このセクションでは、先ほど書き込んだ Python コードをサーバーに移動し、クラスタリングをデプロイします。
 
 この記事では、次の方法について学習します。
 
 > [!div class="checklist"]
 > * モデルを生成するストアド プロシージャの作成
-> * SQL Server でのクラスタリング
+> * サーバーでのクラスタリング実行
 > * クラスタリング情報の使用
 
 [パート 1 ](python-clustering-model.md)では、前提条件をインストールしてサンプル データベースを復元しました。
@@ -175,19 +180,18 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 
-このチュートリアルの終了後は、SQL Server から tpcxbb_1gb データベースを削除してかまいません。
+このチュートリアルの終了後は、tpcxbb_1gb データベースを削除してかまいません。
 
 ## <a name="next-steps"></a>次のステップ
 
 本チュートリアル シリーズのパート 4 では、以下の手順を完了しました。
 
 * モデルを生成するストアド プロシージャの作成
-* SQL Server でのクラスタリング
+* サーバーでのクラスタリング実行
 * クラスタリング情報の使用
 
-SQL Server Machine Learning Services における Python の使用について、詳しくは以下の記事を参照してください。
+SQL 機械学習における Python の使用について詳しくは、以下を参照してください。
 
-* [クイック スタート: SQL Server Machine Learning Services を使用した単純な Python スクリプトの作成と実行](quickstart-python-create-script.md)
-* [SQL Server Machine Learning Services 用の、その他の Python チュートリアル](sql-server-python-tutorials.md)
+* [クイック スタート: 単純な Python スクリプトを作成して実行する](quickstart-python-create-script.md)
+* [SQL 機械学習用のその他の Python チュートリアル](python-tutorials.md)
 * [sqlmlutils を使用した Python パッケージのインストール](../package-management/install-additional-python-packages-on-sql-server.md)
-

@@ -1,7 +1,7 @@
 ---
 title: curl を使用して HDFS にデータを読み込む |Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: curl を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上の HDFS にデータを読み込む。
+description: curl を使用して、SQL Server 2019 ビッグ データ クラスター上の HDFS にデータを読み込みます。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 970c4f51535395a940a9c47e77d864d00c1f403c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 45974b3b59a97af8e432f059c0facfb27ece2fbd
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73706631"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606854"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-big-data-clusters-2019"></a>curl を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上の HDFS にデータを読み込む
 
@@ -65,7 +65,7 @@ curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP ext
 
 ## <a name="create-a-directory"></a>ディレクトリを作成する
 
-**の下に**test`hdfs:///` というディレクトリを作成するには、次のコマンドを使用します。
+`hdfs:///` の下に **test** というディレクトリを作成するには、次のコマンドを使用します。
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'

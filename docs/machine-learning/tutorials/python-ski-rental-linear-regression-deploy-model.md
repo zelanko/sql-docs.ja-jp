@@ -1,25 +1,31 @@
 ---
 title: Python のチュートリアル:モデルのデプロイ
-description: この 4 部構成のチュートリアル シリーズのパート 4 では、Machine Learning Services を使用して、スキー レンタルを予測する Python モデルを SQL Server データベースにデプロイします。
+titleSuffix: SQL machine learning
+description: この 4 部構成のチュートリアル シリーズのパート 4 では、SQL 機械学習を使用して、スキー レンタルを予測する Python モデルをデータベースにデプロイします。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/02/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e78f099f108f9affa58f53d1ad46b802eae004dd
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1771cc70a2e5b36109ba028c86939ce66fa00993
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116485"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606734"
 ---
-# <a name="python-tutorial-deploy-a-linear-regression-model-to-sql-server-machine-learning-services"></a>Python のチュートリアル:SQL Server Machine Learning Services に線形回帰モデルをデプロイする
+# <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習で線形回帰モデルをデプロイする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズのパート 4 では、Machine Learning Services またはビッグ データ クラスターを使用して、Python で開発された線形回帰モデルを SQL Server データベースにデプロイします。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズのパート 4 では、Machine Learning Services を使用して、Python で開発された線形回帰モデルを SQL Server データベースにデプロイします。
+::: moniker-end
 
 この記事では、次の方法について学習します。
 
@@ -31,7 +37,7 @@ ms.locfileid: "81116485"
 
 [第 1 部](python-ski-rental-linear-regression.md)では、サンプル データベースを復元する方法を学習しました。
 
-[第 2 部](python-ski-rental-linear-regression-prepare-data.md)では、SQL Server から Python データ フレームにデータを読み込み、Python でデータを準備する方法を学習しました。
+[パート 2](python-ski-rental-linear-regression-prepare-data.md) では、データベースから Python データ フレームにデータを読み込み、Python でデータを準備する方法を学習しました。
 
 [パート 3](python-ski-rental-linear-regression-train-model.md) では、Python で線形回帰機械学習モデルをトレーニングする方法について学習しました。
 
@@ -119,11 +125,11 @@ TutorialDB データベースにテーブルを作成し、そのテーブルに
    CREATE PROCEDURE py_predict_rentalcount (@model varchar(100))
    AS
    BEGIN
-    DECLARE @py_model varbinary(max) = (select model from rental_py_models where model_name = @model);
+       DECLARE @py_model varbinary(max) = (select model from rental_py_models where model_name = @model);
    
-    EXECUTE sp_execute_external_script
-                @language = N'Python',
-                @script = N'
+       EXECUTE sp_execute_external_script
+                   @language = N'Python',
+                   @script = N'
    
    # Import the scikit-learn function to compute error.
    from sklearn.metrics import mean_squared_error
@@ -196,7 +202,7 @@ TutorialDB データベースにテーブルを作成し、そのテーブルに
 
    :::image type="content" source="media/python-tutorial-prediction-results.png" alt-text="ストアド プロシージャからの予測結果":::
 
-これで、SQL Server Machine Learning Services にモデルを作成、トレーニング、およびデプロイすることができました。 そうしたら、ストアド プロシージャでそのモデルを使用して、新しいデータに基づいて値を予測します。
+モデルを正常に作成し、トレーニングしてデプロイしました。 そうしたら、ストアド プロシージャでそのモデルを使用して、新しいデータに基づいて値を予測します。
 
 ## <a name="next-steps"></a>次のステップ
 
@@ -207,6 +213,6 @@ TutorialDB データベースにテーブルを作成し、そのテーブルに
 * モデルを使用して予測を行うストアド プロシージャを作成する
 * 新しいデータでモデルを実行する
 
-SQL Server Machine Learning Services における Python の使用について、詳しくは以下の記事を参照してください。
+SQL 機械学習における Python の使用について詳しくは、以下を参照してください。
 
-+ [SQL Server Machine Learning Services 用の Python のチュートリアル](sql-server-python-tutorials.md)
++ [Python のチュートリアル](python-tutorials.md)

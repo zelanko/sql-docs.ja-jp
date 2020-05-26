@@ -1,26 +1,35 @@
 ---
 title: クイック スタート:R データ構造体、データ型、およびオブジェクト
-description: このクイックスタートでは、SQL Server Machine Learning Services で R を使用するときに、データ構造体、データ型、およびオブジェクトを使用する方法について説明します。 R と SQL Server 間のデータの移動と、発生する可能性のある一般的な問題について説明します。
+titleSuffix: SQL machine learning
+description: このクイックスタートでは、SQL 機械学習で R を使用するときに、データ構造体、データ型、およびオブジェクトを使用する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2019
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 07d167ddc39f281a3330ffd80460d9cc34ccfa65
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: e5b5f4e90b680f5ae06944eedc997a43b8a40024
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487324"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606574"
 ---
-# <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services での R を使用したデータ構造体、データ型、およびオブジェクト
+# <a name="quickstart-data-structures-data-types-and-objects-using-r-with-sql-machine-learning"></a>クイック スタート:SQL 機械学習での R を使用したデータ構造体、データ型、およびオブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイックスタートでは、SQL Server Machine Learning Services で R を使用するときに、データ構造体とデータ型を使用する方法について説明します。 R と SQL Server 間のデータの移動と、発生する可能性のある一般的な問題について説明します。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+このクイックスタートでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) または[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)で R を使用するときに、データ構造体とデータ型を使用する方法について説明します。 R と SQL Server 間のデータの移動と、発生する可能性のある一般的な問題について説明します。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+このクイックスタートでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で R を使用するときに、データ構造体とデータ型を使用する方法について説明します。 R と SQL Server 間のデータの移動と、発生する可能性のある一般的な問題について説明します。
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+このクイックスタートでは、[SQL Server R Services](../r/sql-server-r-services.md) で R を使用するときに、データ構造体とデータ型を使用する方法について説明します。 R と SQL Server 間のデータの移動と、発生する可能性のある一般的な問題について説明します。
+::: moniker-end
 
 前もって知っておくべき一般的な問題は、次のとおりです。
 
@@ -31,11 +40,19 @@ ms.locfileid: "81487324"
 
 ## <a name="prerequisites"></a>前提条件
 
-- このクイックスタートでは、R 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) をもつ SQL Server のインスタンスへのアクセスが必要となります。
+このクイック スタートを実行するには、次の前提条件を用意しておく必要があります。
 
-  あなたの SQL Server インスタンスは、Azure 仮想マシンまたはオンプレミスに配置できます。 外部スクリプト機能が既定で無効になっていることに注意してください。そのため、開始する前に、[外部スクリプトを有効にし](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)、**SQL Server Launchpad サービス**が実行されていることを確認する必要があります。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)に関するページを参照してください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に関するページを参照してください。 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services。 R Services をインストールする方法については、[Windows インストール ガイド](../install/sql-r-services-windows-install.md)に関するページを参照してください。 
+::: moniker-end
 
-- また、R スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイック スタートでは、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) を使用します。
+- R スクリプトを含む SQL クエリを実行するためのツール。 このクイックスタートでは [Azure Data Studio](../../azure-data-studio/what-is.md) を使用します。
 
 ## <a name="always-return-a-data-frame"></a>常にデータ フレームを返す
 
@@ -68,7 +85,7 @@ EXECUTE sp_execute_external_script
 
 なぜ結果がこれほど異なるのでしょうか。
 
-答えは通常、R の `str()` コマンドを使用すればわかります。 指定の R オブジェクトのデータ スキーマが情報メッセージとして返されるよう、R スクリプトの任意の場所に関数 `str(object_name)` を追加します。 メッセージを確認するには、Visual Studio Code の **[メッセージ]** ウィンドウまたは SSMS の **[メッセージ]** タブを参照してください。
+答えは通常、R の `str()` コマンドを使用すればわかります。 指定の R オブジェクトのデータ スキーマが情報メッセージとして返されるよう、R スクリプトの任意の場所に関数 `str(object_name)` を追加します。
 
 なぜ例 1 と例 2 の結果がこれほど異なるのかを理解するため、各ステートメントの `@script` 変数定義の最後に、行 `str(OutputDataSet)` を次のように挿入します。
 
@@ -225,7 +242,7 @@ EXECUTE sp_execute_external_script
 
 データ フレームはテーブルのような外見ですが、実際はベクトルのリストであることを思い出してください。
 
-## <a name="cast-or-convert-sql-server-data"></a>SQL Server データのキャストまたは変換
+## <a name="cast-or-convert-data"></a>データのキャストまたは変換
 
 R と SQL Server は同じデータ型を使用しないため、データを取得して R ランタイムに渡すためのクエリを SQL Server で実行する際は、通常何らかの暗黙的な変換を行います。 R から SQL Server にデータを返す場合は、別の変換を行います。
 
@@ -296,16 +313,9 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 
 サポート対象およびサポート対象外のデータ型について詳しくは、「[R ライブラリとデータ型](../r/r-libraries-and-data-types.md)」に関するページを参照してください。
 
-文字列から数値因子への実行時の変換がパフォーマンスに及ぼす影響について詳しくは、「[SQL Server R Services のパフォーマンス チューニング](../r/sql-server-r-services-performance-tuning.md)」を参照してください。
-
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server で高度な R 関数を作成する方法については、次のクイックスタートを参照してください。
+SQL 機械学習で高度な R 関数を作成する方法については、次のクイックスタートを参照してください。
 
 > [!div class="nextstepaction"]
-> [SQL Server Machine Learning Services を使用した高度な R 関数の作成](quickstart-r-functions.md)
-
-SQL Server Machine Learning Services での R の使用に関する詳細は、次の記事を参照してください。
-
-- [SQL Server Machine Learning Services を使用して R で予測モデルを作成してスコア付けする](quickstart-r-train-score-model.md)
-- [SQL Server Machine Learning Services (Python と R) とは](../sql-server-machine-learning-services.md)
+> [SQL 機械学習を使用した高度な R 関数の作成](quickstart-r-functions.md)

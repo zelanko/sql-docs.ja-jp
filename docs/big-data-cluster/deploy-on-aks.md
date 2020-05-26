@@ -1,7 +1,7 @@
 ---
 title: Azure Kubernetes Service の構成
 titleSuffix: SQL Server Big Data Clusters
-description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のデプロイ用に Azure Kubernetes Service (AKS) を構成する方法について説明します。'
+description: SQL Server 2019 ビッグ データ クラスターの展開のために Azure Kubernetes Service (AKS) を構成する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6a725cdbc5424da3820e5cd404306465482b3d94
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77173606"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606934"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために Azure Kubernetes Service を構成する
 
@@ -28,7 +28,7 @@ AKS を使用すると、コンテナー化されたアプリケーションを�
 この記事では、Azure CLI を使用して AKS 上に Kubernetes を展開する手順について説明します。 Azure サブスクリプションをお持ちでない場合は、開始する前に無料アカウントを作成してください。
 
 > [!TIP]
-> また、1 つの手順で AKS とビッグ データ クラスターの展開をスクリプト化することもできます。 詳細については、[Python スクリプト](quickstart-big-data-cluster-deploy.md)または Azure Data Studio の[ノートブック](deploy-notebooks.md)において、この操作を行う方法を確認してください。
+> また、1 つの手順で AKS とビッグ データ クラスターの展開をスクリプト化することもできます。 詳細については、[Python スクリプト](quickstart-big-data-cluster-deploy.md)または Azure Data Studio の[ノートブック](notebooks-deploy.md)において、この操作を行う方法を確認してください。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -76,7 +76,7 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
    az account list-locations -o table
    ```
 
-1. **az group create** コマンドを使用して、リソース グループを作成します。 次の例では、`sqlbdcgroup` の場所に `westus2` という名前のリソース グループを作成します。
+1. **az group create** コマンドを使用して、リソース グループを作成します。 次の例では、`westus2` の場所に `sqlbdcgroup` という名前のリソース グループを作成します。
 
    ```azurecli
    az group create --name sqlbdcgroup --location westus2
@@ -110,7 +110,7 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
 
 ## <a name="create-a-kubernetes-cluster"></a>Kubernetes クラスターを作成する
 
-1. [az aks create](https://docs.microsoft.com/cli/azure/aks) コマンドを利用して、AKS に Kubernetes クラスターを作成します。 次の例では、サイズが *Standard_L8s* の Linux エージェント ノードを 1 つ備えた **kubcluster** という名前の Kubernetes クラスターを作成します。
+1. [az aks create](https://docs.microsoft.com/cli/azure/aks) コマンドを利用して、AKS に Kubernetes クラスターを作成します。 次の例では、サイズが **Standard_L8s** の Linux エージェント ノードを 1 つ備えた *kubcluster* という名前の Kubernetes クラスターを作成します。
 
    スクリプトを実行する前に、`<version number>` を前の手順で特定したバージョン番号に置き換えます。
 
