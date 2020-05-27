@@ -31,7 +31,7 @@ ms.locfileid: "79286846"
 
 - **ノードまたは CPU に PROCESS AFFINITY を使用する**
 
-   Linux オペレーティング システム上の SQL Server (通常はすべてのノードと CPU) に使用しているすべての `ALTER SERVER CONFIGURATION`NUMANODE`PROCESS AFFINITY`、CPU、または両方に **を使用して** を設定することをお勧めします。 プロセッサ関係は、効率的な Linux および SQL スケジューリングの動作を維持するために役立ちます。 **NUMANODE** オプションを使用するのが最も簡単な方法です。 コンピューターに NUMA ノードが 1 つしかない場合でも、**PROCESS AFFINITY** を使用する必要があることに注意してください。  [PROCESS AFFINITY](../t-sql/statements/alter-server-configuration-transact-sql.md) の設定方法の詳細については、「**ALTER SERVER CONFIGURATION**」のドキュメントを参照してください。
+   Linux オペレーティング システム上の SQL Server (通常はすべてのノードと CPU) に使用しているすべての **NUMANODE**、CPU、または両方に `ALTER SERVER CONFIGURATION` を使用して `PROCESS AFFINITY` を設定することをお勧めします。 プロセッサ関係は、効率的な Linux および SQL スケジューリングの動作を維持するために役立ちます。 **NUMANODE** オプションを使用するのが最も簡単な方法です。 コンピューターに NUMA ノードが 1 つしかない場合でも、**PROCESS AFFINITY** を使用する必要があることに注意してください。  **PROCESS AFFINITY** の設定方法の詳細については、「[ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md)」のドキュメントを参照してください。
 
 - **複数の tempdb データ ファイルを構成する**
 

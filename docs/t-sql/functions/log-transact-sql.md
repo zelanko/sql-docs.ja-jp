@@ -50,7 +50,7 @@ LOG ( float_expression )
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- [float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に **float** 型に変換できる**式**を指定します。  
+ **float** 型、または暗黙的に **float** 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
  *base*  
  対数の底を設定するオプションの整数引数です。  
@@ -70,7 +70,7 @@ LOG ( float_expression )
 ## <a name="examples"></a>例  
   
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>A. 数値の自然対数を計算する  
- 次の例では、指定された `LOG`float**式の** を計算します。  
+ 次の例では、指定された **float** 式の `LOG` を計算します。  
   
 ```  
 DECLARE @var float = 10;  
@@ -106,7 +106,7 @@ SELECT LOG (EXP (10));
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. 数値の自然対数を計算する  
- 次の例では、指定された `LOG`float**式の** を計算します。  
+ 次の例では、指定された **float** 式の `LOG` を計算します。  
   
 ```  
 SELECT LOG(10);  

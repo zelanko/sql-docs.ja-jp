@@ -38,7 +38,7 @@ ms.locfileid: "79315056"
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 
-[!INCLUDE[tsql](../../includes/tsql-md.md)] への接続によって発行される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントの、ロックと行のバージョン管理に関する動作を制御します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続によって発行される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの、ロックと行のバージョン管理に関する動作を制御します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
