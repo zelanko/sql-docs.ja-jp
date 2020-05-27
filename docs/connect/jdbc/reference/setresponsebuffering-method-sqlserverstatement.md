@@ -49,7 +49,7 @@ public final void setResponseBuffering(java.lang.String value)
   
  adaptive は、JDBC ドライバー バージョン 2.0 および 3.0 の既定値です。 JDBC ドライバー バージョン 2.0 より前の既定値は full でした。  
   
- [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを使用すると、現在の **SQLServerStatement** オブジェクトの **responseBuffering** 接続の [String](../../../connect/jdbc/reference/sqlserverstatement-class.md) プロパティをオーバーライドできます。 応答バッファリング モードの使用方法の詳細については、「[アダプティブ バッファリングの使用](../../../connect/jdbc/using-adaptive-buffering.md)」を参照してください。  
+ [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを使用すると、現在の [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの **responseBuffering** 接続の **String** プロパティをオーバーライドできます。 応答バッファリング モードの使用方法の詳細については、「[アダプティブ バッファリングの使用](../../../connect/jdbc/using-adaptive-buffering.md)」を参照してください。  
   
  アプリケーションで [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドに無効なパラメーター値が指定された場合は、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) がスローされます。  
   

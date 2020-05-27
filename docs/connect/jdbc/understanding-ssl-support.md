@@ -23,7 +23,7 @@ ms.locfileid: "71713297"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する際、アプリケーションによって暗号化が要求され、なおかつ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで TLS 暗号化がサポートされる構成になっていた場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では TLS ハンドシェイクが開始されます。 サーバーとクライアントは、このハンドシェイクによって、データの保護に使用する暗号化と暗号アルゴリズムをネゴシエートします。 TLS ハンドシェイクが完了すると、暗号化されたデータを安全に送信できるようになります。 サーバーでは、TLS ハンドシェイクの際にクライアントに公開キー証明書が送信されます。 公開キー証明書の発行者は証明機関 (CA) と呼ばれます。 その証明機関が、クライアントが信頼するいずれかの証明機関に該当するかどうかは、クライアント側で検証する必要があります。  
   
-アプリケーションから暗号化を要求されなかった場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、TLS 暗号化をサポートするよう [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって強制されることはありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが TLS 暗号化を強制的に使用するように構成されていない場合、接続は暗号化なしで確立されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが TLS 暗号化を強制的に使用するように構成されている場合は、使用中の Java 仮想マシン (JVM) が正常に構成されていれば自動的に TLS 暗号化が有効になり、そうでなければ接続が終了してエラーが生成されます。  
+アプリケーションから暗号化を要求されなかった場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、TLS 暗号化をサポートするよう [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] によって強制されることはありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが TLS 暗号化を強制的に使用するように構成されていない場合、接続は暗号化なしで確立されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが TLS 暗号化を強制的に使用するように構成されている場合は、使用中の Java 仮想マシン (JVM) が正常に構成されていれば自動的に TLS 暗号化が有効になり、そうでなければ接続が終了してエラーが生成されます。  
   
 > [!NOTE]  
 > TLS 接続に成功するためには、**serverName** に渡された値が、サーバー証明書に含まれる Subject Alternate Name (SAN) の Common Name (CN) または DNS 名と厳密に一致している必要があります。  

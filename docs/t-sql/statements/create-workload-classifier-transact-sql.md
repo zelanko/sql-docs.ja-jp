@@ -84,7 +84,7 @@ SELECT COUNT(*)
 ```
 
 *WLM_CONTEXT*  
-要求を分類できるセッション コンテキスト値を指定します。  コンテキストは、nvarchar(255) 型の省略可能なパラメーターです。  セッション コンテキストを設定する要求を送信する前に、[ と同じ変数名と共に ](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)sys. sp_set_session_context`wlm_context` を使用します。
+要求を分類できるセッション コンテキスト値を指定します。  コンテキストは、nvarchar(255) 型の省略可能なパラメーターです。  セッション コンテキストを設定する要求を送信する前に、`wlm_context` と同じ変数名と共に [sys. sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest) を使用します。
 
 例:
 

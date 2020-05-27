@@ -113,14 +113,14 @@ DROP TABLE ProductVendor1 ;
 ```  
   
 ### <a name="b-dropping-a-table-in-another-database"></a>B. 他のデータベースのテーブルを削除する  
- 次の例では、`SalesPerson2` データベースにある [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルを削除します。 この例は、サーバー インスタンス上にあるどのデータベースからでも実行できます。  
+ 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースにある `SalesPerson2` テーブルを削除します。 この例は、サーバー インスタンス上にあるどのデータベースからでも実行できます。  
   
 ```  
 DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;  
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>C. 一時テーブルを削除する  
- 次の例では、一時テーブルを作成して、その存在テストを行います。さらに、このテーブルを削除して、再度存在テストを行います。 この例では、**以降で使用できる**IF EXISTS[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 構文は使用しません。  
+ 次の例では、一時テーブルを作成して、その存在テストを行います。さらに、このテーブルを削除して、再度存在テストを行います。 この例では、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で使用できる **IF EXISTS** 構文は使用しません。  
   
 ```  
 CREATE TABLE #temptable (col1 int);  

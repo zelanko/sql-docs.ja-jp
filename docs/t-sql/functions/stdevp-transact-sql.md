@@ -69,7 +69,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-stdevp"></a>A: STDEVP を使用する  
- この例では、`SalesPerson` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブル内のすべてのボーナス額を母集団として標準偏差を返します。  
+ この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `SalesPerson` テーブル内のすべてのボーナス額を母集団として標準偏差を返します。  
   
 ```  
 SELECT STDEVP(Bonus)  
@@ -80,7 +80,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-stdevp"></a>B: STDEVP を使用する  
- 次の例は、テーブル `STDEVP` の販売ノルマの値の `dbo.FactSalesQuota` を返します。 最初の列にはすべての個別値の標準偏差が含まれ、2 番目の列には重複値を含むすべての値の標準偏差が含まれます。  
+ 次の例は、テーブル `dbo.FactSalesQuota` の販売ノルマの値の `STDEVP` を返します。 最初の列にはすべての個別値の標準偏差が含まれ、2 番目の列には重複値を含むすべての値の標準偏差が含まれます。  
   
 ```  
 -- Uses AdventureWorks  

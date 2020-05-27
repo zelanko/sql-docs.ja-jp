@@ -113,7 +113,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>例  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. DBCC INDEXDEFRAG を使用してインデックスの断片化を解消する  
-次の例では、`PK_Product_ProductID` データベースの `Production.Product` テーブルにある `AdventureWorks` インデックスのすべてのパーティションをデフラグします。
+次の例では、`AdventureWorks` データベースの `Production.Product` テーブルにある `PK_Product_ProductID` インデックスのすべてのパーティションをデフラグします。
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

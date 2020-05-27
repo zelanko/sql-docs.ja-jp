@@ -38,7 +38,7 @@ public javax.naming.Reference getReference()
  Reference オブジェクト。  
   
 ## <a name="remarks"></a>解説  
- この getReference メソッドは、javax.naming.Referenceable インターフェイスの getReference メソッドで指定されています。 [SQLServerDataSource](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md) クラスの [getReference](../../../connect/jdbc/reference/sqlserverdatasource-class.md) メソッドをオーバーライドします。  
+ この getReference メソッドは、javax.naming.Referenceable インターフェイスの getReference メソッドで指定されています。 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスの [getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md) メソッドをオーバーライドします。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnectionPoolDataSource のメソッド](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-methods.md)   

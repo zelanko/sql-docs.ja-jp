@@ -82,7 +82,7 @@ column_name <data_type>
   
 ## <a name="arguments"></a>引数  
  *column_name*  
- 変更、追加、または削除する列の名前を指定します。 *column_name* は 1 ～ 128 文字で指定できます。 timestamp データ型で作成される新しい列の場合は、*column_name* を省略できます。 *timestamp* データ型の列に対して **column_name** を指定しない場合には、名前 **timestamp** が使われます。  
+ 変更、追加、または削除する列の名前を指定します。 *column_name* は 1 ～ 128 文字で指定できます。 timestamp データ型で作成される新しい列の場合は、*column_name* を省略できます。 **timestamp** データ型の列に対して *column_name* を指定しない場合には、名前 **timestamp** が使われます。  
   
  [ _type_schema_name_ **.** ] *type_name*  
  追加する列のデータ型と、それが属するスキーマを指定します。  
@@ -113,10 +113,10 @@ column_name <data_type>
  **varchar**、**nvarchar**、**varbinary** データ型のみに適用されます。 これらは 2^31 バイトの文字とバイナリ データ、および 2^30 バイトの Unicode データを格納するときに使用されます。  
   
 **CONTENT**  
- **column_name** 内の *xml* データ型の各インスタンスが複数のトップレベル要素で構成できることを指定します。 CONTENT は、**xml** データ型のみに適用され、*xml_schema_collection* も指定されている場合にだけ指定できます。 指定しない場合は、CONTENT が既定の動作になります。  
+ *column_name* 内の **xml** データ型の各インスタンスが複数のトップレベル要素で構成できることを指定します。 CONTENT は、**xml** データ型のみに適用され、*xml_schema_collection* も指定されている場合にだけ指定できます。 指定しない場合は、CONTENT が既定の動作になります。  
   
 DOCUMENT  
- **column_name** 内の *xml* データ型の各インスタンスは 1 つのトップレベル要素のみで構成できることを指定します。 DOCUMENT は、**xml** データ型のみに適用され、*xml_schema_collection* も指定されている場合にだけ指定できます。  
+ *column_name* 内の **xml** データ型の各インスタンスは 1 つのトップレベル要素のみで構成できることを指定します。 DOCUMENT は、**xml** データ型のみに適用され、*xml_schema_collection* も指定されている場合にだけ指定できます。  
   
  *xml_schema_collection*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  

@@ -42,13 +42,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
   
 ## <a name="arguments"></a>引数  
 *non_Unicode_character_string_expression*  
-第 3 の SQL 照合順序で定義される [char](../../t-sql/language-elements/expressions-transact-sql.md)、**varchar**、または **varchar(max)** 型の文字列**式** です。 これらの照合順序の一覧については、「解説」を参照してください。
+第 3 の SQL 照合順序で定義される **char**、**varchar**、または **varchar(max)** 型の文字列[式](../../t-sql/language-elements/expressions-transact-sql.md) です。 これらの照合順序の一覧については、「解説」を参照してください。
   
 ## <a name="return-types"></a>戻り値の型
-`TERTIARY_WEIGHTS` は、**non_Unicode_character_string_expression** が *char* または **varchar** であるときに **varbinary** を返し、**non_Unicode_character_string_expression** に *varchar(max)* データ型が含まれるときには **varbinary(max)** を返します。
+`TERTIARY_WEIGHTS` は、*non_Unicode_character_string_expression* が **char** または **varchar** であるときに **varbinary** を返し、*non_Unicode_character_string_expression* に **varchar(max)** データ型が含まれるときには **varbinary(max)** を返します。
   
 ## <a name="remarks"></a>解説  
-第 3 の SQL 照合順序で `TERTIARY_WEIGHTS`non_Unicode_character_string_expression *が定義されていない場合、* は NULL を返します。 次の表に、第 3 の SQL 照合順序を示します。
+第 3 の SQL 照合順序で *non_Unicode_character_string_expression* が定義されていない場合、`TERTIARY_WEIGHTS` は NULL を返します。 次の表に、第 3 の SQL 照合順序を示します。
   
 |並べ替え順 ID|SQL 照合順序|  
 |---|---|
@@ -85,7 +85,7 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-`TERTIARY_WEIGHTS`char **、** varchar **、または** varchar (max)**列の値で定義されている計算列の定義に対して** を使用します。 クエリの ORDER BY 句で **char**、**varchar**、または **varchar(max)** 列を指定する場合は、計算列と、**char**、**varchar**、または **varchar(max)** 列の両方に対するインデックス定義によって、パフォーマンスを向上させることができます。
+**char**、**varchar**、または **varchar (max)** 列の値で定義されている計算列の定義に対して `TERTIARY_WEIGHTS` を使用します。 クエリの ORDER BY 句で **char**、**varchar**、または **varchar(max)** 列を指定する場合は、計算列と、**char**、**varchar**、または **varchar(max)** 列の両方に対するインデックス定義によって、パフォーマンスを向上させることができます。
   
 ## <a name="examples"></a>例  
 この例では、`TERTIARY_WEIGHTS` 関数を `char` 列の値に適用するテーブルに計算列を作成します。

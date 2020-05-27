@@ -138,7 +138,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、`default` を `MAX_CPU_PERCENT` に変更する以外は、すべて `25` プールの既定のリソース プール設定が保持されます。  
+ 次の例では、`MAX_CPU_PERCENT` を `25` に変更する以外は、すべて `default` プールの既定のリソース プール設定が保持されます。  
   
 ```  
 ALTER RESOURCE POOL "default"  

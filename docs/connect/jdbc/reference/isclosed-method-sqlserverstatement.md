@@ -30,7 +30,7 @@ public boolean isClosed()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **SQLServerStatement** オブジェクトが閉じられている場合は [true](../../../connect/jdbc/reference/sqlserverstatement-class.md)、開かれたままである場合は **false** です。  
+ [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトが閉じられている場合は **true**、開かれたままである場合は **false** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

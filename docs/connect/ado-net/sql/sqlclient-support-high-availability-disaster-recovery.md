@@ -76,7 +76,7 @@ SqlClient の接続文字列キーワードの詳細については、「<xref:M
 プライマリ レプリカが読み取り専用ワークロードを拒否するように構成されているとき、接続文字列に `ApplicationIntent=ReadOnly` が含まれていると、接続は失敗します。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>データベース ミラーリングからマルチサブネット クラスターの使用へのアップグレード  
-接続文字列に <xref:System.ArgumentException> および `MultiSubnetFailover` 接続キーワードが存在する場合や、`Failover Partner` でかつ TCP 以外のプロトコルが使用されている場合は、接続エラー (`MultiSubnetFailover=True`) が発生します。 また、<xref:Microsoft.Data.SqlClient.SqlException> が使用されているとき、SQL Server から、データベース ミラーリング ペアに属していることを示すフェールオーバー パートナー応答が返された場合にも、エラー (`MultiSubnetFailover`) が発生します。  
+接続文字列に `MultiSubnetFailover` および `Failover Partner` 接続キーワードが存在する場合や、`MultiSubnetFailover=True` でかつ TCP 以外のプロトコルが使用されている場合は、接続エラー (<xref:System.ArgumentException>) が発生します。 また、`MultiSubnetFailover` が使用されているとき、SQL Server から、データベース ミラーリング ペアに属していることを示すフェールオーバー パートナー応答が返された場合にも、エラー (<xref:Microsoft.Data.SqlClient.SqlException>) が発生します。  
   
 データベース ミラーリングを現在使用している SqlClient アプリケーションをマルチサブネットのシナリオにアップグレードする場合、`Failover Partner` 接続プロパティを削除して `MultiSubnetFailover` に置き換え、それを `True` に設定し、接続文字列内のサーバー名を可用性グループ リスナーの名前に置き換えます。 接続文字列に `Failover Partner` と `MultiSubnetFailover=True` が使用されている場合、ドライバーはエラーを生成します。 ただし、接続文字列で `Failover Partner` および `MultiSubnetFailover=False` (または `ApplicationIntent=ReadWrite`) が使用されている場合、アプリケーションではデータベース ミラーリングが使用されます。  
   
@@ -87,7 +87,7 @@ AG のプライマリ データベースでデータベース ミラーリング
   
 `ApplicationIntent` キーワードは、従来型の読み取り専用データベースに対しては動作しません。  
   
-対象の AlwaysOn データベースのワークロードの読み取りを許可または禁止することができます (これは、`ALLOW_CONNECTIONS` および `PRIMARY_ROLE` Transact-SQL ステートメントの `SECONDARY_ROLE` 句を使用して実行されます。)  
+対象の AlwaysOn データベースのワークロードの読み取りを許可または禁止することができます (これは、`PRIMARY_ROLE` および `SECONDARY_ROLE` Transact-SQL ステートメントの `ALLOW_CONNECTIONS` 句を使用して実行されます。)  
   
 `ApplicationIntent` キーワードを使用して、読み取り専用のルーティングを有効にします。  
   

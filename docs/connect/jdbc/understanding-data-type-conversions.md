@@ -25,7 +25,7 @@ Java プログラミング言語のデータ型を [!INCLUDE[ssNoVersion](../../
 
 ## <a name="getter-method-conversions"></a>getter メソッドの変換
 
-次の図は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に基づいて、\<SQLServerResultSet[ クラスの get](../../connect/jdbc/reference/sqlserverresultset-class.md)Type>() メソッド用の JDBC ドライバーの変換マップ、および \<SQLServerCallableStatement[ クラスの get](../../connect/jdbc/reference/sqlservercallablestatement-class.md)Type> メソッドでサポートされている変換を示しています。
+次の図は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に基づいて、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの get\<Type>() メソッド用の JDBC ドライバーの変換マップ、および [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスの get\<Type> メソッドでサポートされている変換を示しています。
 
 ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
@@ -41,7 +41,7 @@ JDBC ドライバーの getter メソッドでサポートされている変換�
 
 ## <a name="updater-method-conversions"></a>updater メソッドの変換
 
-\<SQLServerResultSet[ クラスの update](../../connect/jdbc/reference/sqlserverresultset-class.md)Type>() メソッドに渡された、Java で型指定されたデータには、次の変換が適用されます。
+[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの update\<Type>() メソッドに渡された、Java で型指定されたデータには、次の変換が適用されます。
 
 ![JDBCUpdaterConversions](../../connect/jdbc/media/jdbc_jdbcupdatterconversions.gif "JDBCUpdaterConversions")
 
@@ -65,7 +65,7 @@ XML 文字に特定の文字エンコードが使用されている場合は、�
 
 ## <a name="setter-method-conversions"></a>setter メソッドの変換
 
-\<SQLServerPreparedStatement[ クラスおよび ](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)SQLServerCallableStatement[ クラスの set](../../connect/jdbc/reference/sqlservercallablestatement-class.md)Type>() メソッドに渡された、Java で型指定されたデータには、次の変換が適用されます。
+[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスおよび [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスの set\<Type>() メソッドに渡された、Java で型指定されたデータには、次の変換が適用されます。
 
 ![JDBCSetterConversions](../../connect/jdbc/media/jdbc_jdbcsetterconversions_v2.gif "JDBCSetterConversions")
 
@@ -79,7 +79,7 @@ JDBC ドライバーの setter メソッドでサポートされている変換�
 
 - **変換 (y)** : Java の **numeric** 型から基になるサーバーの **numeric** 型への変換です。これは変換前より小さくなります。 この変換は通常の変換で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変換規則に従って行われます。 有効桁数は常に切り捨てられ、四捨五入されることはありません。オーバーフローするとサポートされていない変換のエラーがスローされます。 たとえば、"1.9999" の値を持つ基になる整数列に updateDecimal を使用すると、変換先の列は "1" になりますが、"3000000000" が渡されるとドライバーはエラーをスローします。
 
-- **データに依存 (z)** : Java の **String** 型から基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型への変換は、次の条件に依存します。ドライバーが **String** 値を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が必要に応じて変換を実行します。 sendStringParametersAsUnicode が true に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型が **image** である場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **nvarchar** の **image** への変換が許可されず、SQLServerException がスローされます。 sendStringParametersAsUnicode が false に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型が **image** である場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]varchar**から**image**への変換が** によって許可され、例外はスローされません。
+- **データに依存 (z)** : Java の **String** 型から基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型への変換は、次の条件に依存します。ドライバーが **String** 値を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が必要に応じて変換を実行します。 sendStringParametersAsUnicode が true に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型が **image** である場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **nvarchar** の **image** への変換が許可されず、SQLServerException がスローされます。 sendStringParametersAsUnicode が false に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型が **image** である場合、**varchar** から **image** への変換が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって許可され、例外はスローされません。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は変換を行い、問題が発生すると JDBC ドライバーにエラーを返します。
 
@@ -96,7 +96,7 @@ XML 文字に特定の文字エンコードが使用されている場合は、�
 > [!NOTE]  
 > Microsoft JDBC Driver 4.2 for SQL Server (以降) では、JDBC 4.1 と 4.2 がサポートされています。 4\.1、4.2 のデータ型マッピングと変換の詳細については、下記の情報に加えて、「[JDBC ドライバーの JDBC 4.1 への準拠](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md)」と「[JDBC ドライバーの JDBC 4.2 への準拠](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)」を参照してください。
 
-\<SQLServerPreparedStatement[ クラスの setObject(](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)Type>) メソッドに渡された、Java で型指定されたデータには、次の変換が適用されます。
+[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスの setObject(\<Type>) メソッドに渡された、Java で型指定されたデータには、次の変換が適用されます。
 
 ![JDBCSetObjectConversions](../../connect/jdbc/media/jdbc_jdbcsetobjectconversions.gif "JDBCSetObjectConversions")
 
@@ -108,7 +108,7 @@ JDBC ドライバーの setObject メソッドでサポートされている変�
 
 - **変換 (y)** : Java の **numeric** 型から基になるサーバーの **numeric** 型への変換です。これは変換前より小さくなります。 この変換は通常の変換で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変換規則に従って行われます。 有効桁数は常に切り捨てられ、四捨五入されることはありません。オーバーフローするとサポートされていない変換のエラーがスローされます。 たとえば、"1.9999" の値を持つ基になる整数列に updateDecimal を使用すると、変換先の列は "1" になりますが、"3000000000" が渡されるとドライバーはエラーをスローします。
 
-- **データに依存 (z)** : Java の **String** 型から基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型への変換は、次の条件に依存します。ドライバーが **String** 値を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が必要に応じて変換を実行します。 sendStringParametersAsUnicode 接続プロパティが true に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型が **image** である場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **nvarchar** の **image** への変換が許可されず、SQLServerException がスローされます。 sendStringParametersAsUnicode が false に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型が **image** である場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]varchar**から**image**への変換が** によって許可され、例外はスローされません。
+- **データに依存 (z)** : Java の **String** 型から基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型への変換は、次の条件に依存します。ドライバーが **String** 値を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が必要に応じて変換を実行します。 sendStringParametersAsUnicode 接続プロパティが true に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型が **image** である場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **nvarchar** の **image** への変換が許可されず、SQLServerException がスローされます。 sendStringParametersAsUnicode が false に設定されており、なおかつ、基になる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型が **image** である場合、**varchar** から **image** への変換が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって許可され、例外はスローされません。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は一括して設定の変換を行い、問題が発生すると JDBC ドライバーにエラーを返します。 クライアント側で行われる変換は例外で、**date**、**time**、**timestamp**、**Boolean**、および **String** の値の場合のみ実行されます。
 

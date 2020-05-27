@@ -47,7 +47,7 @@ ms.locfileid: "68136030"
 トランザクション分離レベルでの変更は、@@DBTS 関数に影響を与えません。
   
 ## <a name="examples"></a>例  
-この例は、**データベースから現在の**timestamp[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] を返します。
+この例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースから現在の **timestamp** を返します。
   
 ```sql
 USE AdventureWorks2012;  

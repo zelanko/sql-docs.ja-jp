@@ -23,7 +23,7 @@ ms.locfileid: "67971147"
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException コンストラクター (java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [object](../../../connect/jdbc/reference/sqlserverexception-class.md)、**string** オブジェクト、**string** オブジェクト、**int**、および **boolean** が渡されたときに、**SQLServerException** クラスの新しいインスタンスが初期化されます。
+  **object**、**string** オブジェクト、**string** オブジェクト、**int**、および **boolean** が渡されたときに、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) クラスの新しいインスタンスが初期化されます。
 
 ## <a name="syntax"></a>構文  
   

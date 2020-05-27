@@ -64,7 +64,7 @@ DROP EXTERNAL TABLE ProductVendor1;
 ```  
   
 ### <a name="c-dropping-a-table-from-another-database"></a>C. 別のデータベースからテーブルを削除します  
- 次の例では、`SalesPerson` データベースにある `EasternDivision` テーブルを削除します。  
+ 次の例では、`EasternDivision` データベースにある `SalesPerson` テーブルを削除します。  
   
 ```  
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  

@@ -45,7 +45,7 @@ public <T> T unwrap(Class<T> iface)
   
  アプリケーションは [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に固有の JDBC API 拡張機能にアクセスする必要がある場合があります。 unwrap メソッドは、クラスがベンダー拡張を公開する場合、このオブジェクトが拡張するパブリック クラスへのアンラッピングをサポートします。  
   
- [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) は、[ISQLServerStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスから拡張された [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスを実装します。 このメソッドが呼び出されると、オブジェクトは [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)、および [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) の各クラスにアンラップされます。  
+ [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) は、[ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスから拡張された [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスを実装します。 このメソッドが呼び出されると、オブジェクトは [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)、および [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) の各クラスにアンラップされます。  
   
  詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
   

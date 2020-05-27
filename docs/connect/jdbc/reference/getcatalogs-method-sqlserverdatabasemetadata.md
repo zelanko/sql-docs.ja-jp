@@ -44,7 +44,7 @@ public java.sql.ResultSet getCatalogs()
  この getCatalogs メソッドは、java.sql.DatabaseMetaData インターフェイスの getCatalogs メソッドで規定されています。  
   
 > [!NOTE]  
->  SQL Azure では、master データベースに接続して **SQLServerDatabaseMetaData.getCatalogs** を呼び出す必要があります。 SQL Azure では、ユーザー データベースからカタログ全体を返すことがサポートされていません。 カタログを取得するために、**SQLServerDatabaseMetaData.getCatalogs** によって sys.databases ビューが使用されます。 SQL Azure での [SQLServerDatabaseMetaData.getCatalogs](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) の動作を理解するには、**sys.database_usage (Azure SQL Database)** のアクセス許可に関する説明を参照してください。  
+>  SQL Azure では、master データベースに接続して **SQLServerDatabaseMetaData.getCatalogs** を呼び出す必要があります。 SQL Azure では、ユーザー データベースからカタログ全体を返すことがサポートされていません。 カタログを取得するために、**SQLServerDatabaseMetaData.getCatalogs** によって sys.databases ビューが使用されます。 SQL Azure での **SQLServerDatabaseMetaData.getCatalogs** の動作を理解するには、[sys.database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) のアクセス許可に関する説明を参照してください。  
   
  getCatalogs メソッドによって返される結果セットには、次の情報が含まれます。  
   

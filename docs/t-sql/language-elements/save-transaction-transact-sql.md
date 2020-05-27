@@ -49,7 +49,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>引数  
  *savepoint_name*  
- セーブポイントに割り当てる名前を指定します。 セーブポイント名は識別子の規則に従う必要があります。文字数は半角 32 文字に制限されます。 *のインスタンスで大文字と小文字が区別されない場合であっても、* savepoint_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では常に大文字と小文字が区別されます。  
+ セーブポイントに割り当てる名前を指定します。 セーブポイント名は識別子の規則に従う必要があります。文字数は半角 32 文字に制限されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで大文字と小文字が区別されない場合であっても、*savepoint_name* では常に大文字と小文字が区別されます。  
   
  @*savepoint_variable*  
  有効なセーブポイント名を含むユーザー定義の変数名を指定します。 変数は、**char**、**varchar**、**nchar**、または **nvarchar** データ型を使用して宣言する必要があります。 この変数には 32 文字を超える文字列も渡されますが、使用されるのは最初の 32 文字だけです。  

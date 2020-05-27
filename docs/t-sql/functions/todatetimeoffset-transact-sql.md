@@ -46,7 +46,7 @@ TODATETIMEOFFSET ( expression , time_zone )
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- [datetime2](../../t-sql/language-elements/expressions-transact-sql.md) 値に解決される[式](../../t-sql/data-types/datetime2-transact-sql.md)です。  
+ [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) 値に解決される[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 > [!NOTE]  
 >  型の式をすることはできません **テキスト**, 、**ntext**, 、または **イメージ** に、これらの型を暗黙的に変換できないため **varchar** または **nvarchar**です。  

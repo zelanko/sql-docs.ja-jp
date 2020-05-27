@@ -31,7 +31,7 @@ ms.locfileid: "68132074"
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-この関数は、現在のセッションまたはバッチに設定された、または **SET CONTEXT_INFO** ステートメントを使用して派生した [context_info](../../t-sql/statements/set-context-info-transact-sql.md) 値を返します。
+この関数は、現在のセッションまたはバッチに設定された、または [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) ステートメントを使用して派生した **context_info** 値を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

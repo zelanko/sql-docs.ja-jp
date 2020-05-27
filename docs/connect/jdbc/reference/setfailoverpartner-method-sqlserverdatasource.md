@@ -42,7 +42,7 @@ public void setFailoverPartner(java.lang.String serverName)
 ## <a name="remarks"></a>解説  
  このメソッドで設定された値は、プリンシパル サーバーへの初期接続に失敗した場合に使用されます。初期接続が行われた後は、この値は無視されます。 [setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md) メソッドは、このメソッドと共に使用する必要があります。そうしなければ例外がスローされます。  
   
- フェールオーバー サーバーの名前を設定する場合、ドライバーではフェールオーバー サーバーのポート番号を指定することはできません。 ただし、[setFailoverPartner](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md) メソッドで [setServerName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md) メソッドおよび [setInstanceName](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) メソッドを呼び出すことはできます。  
+ フェールオーバー サーバーの名前を設定する場合、ドライバーではフェールオーバー サーバーのポート番号を指定することはできません。 ただし、[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) メソッドで [setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md) メソッドおよび [setInstanceName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md) メソッドを呼び出すことはできます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

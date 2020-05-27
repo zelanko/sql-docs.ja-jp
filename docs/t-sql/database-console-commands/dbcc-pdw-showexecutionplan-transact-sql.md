@@ -22,7 +22,7 @@ ms.locfileid: "68809844"
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 計算ノードまたは制御ノードで実行されているクエリの [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 実行プランを表示します。 クエリの計算ノードと制御ノードでの実行中に、クエリ パフォーマンスの問題のトラブルシューティングを行うにはこれを使用します。
+特定の [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 計算ノードまたは制御ノードで実行されているクエリの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行プランを表示します。 クエリの計算ノードと制御ノードでの実行中に、クエリ パフォーマンスの問題のトラブルシューティングを行うにはこれを使用します。
   
 計算ノードで実行されている SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリについて、クエリのパフォーマンスに問題があることがわかった場合、パフォーマンスを向上する方法がいくつかあります。 計算ノードでのクエリのパフォーマンスを向上させる方法として、複数列統計の作成、非クラスター化インデックスの作成、クエリ ヒントの使用が考えられます。
   

@@ -25,7 +25,7 @@ ms.locfileid: "67982072"
 # <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトによって生成される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトが含むことのできる最大行数を取得します。  
+  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトによって生成される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトが含むことのできる最大行数を取得します。  
   
 ## <a name="syntax"></a>構文  
   

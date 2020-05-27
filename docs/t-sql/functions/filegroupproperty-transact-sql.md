@@ -42,7 +42,7 @@ FILEGROUPPROPERTY ( filegroup_name, property )
   
 ## <a name="arguments"></a>引数  
  *filegroup_name*  
-**によって名前付けされたプロパティ情報が返されるファイル グループの名前を表す、** sysname`FILEGROUPPROPERTY` 型の式を指定します。  
+`FILEGROUPPROPERTY` によって名前付けされたプロパティ情報が返されるファイル グループの名前を表す、**sysname** 型の式を指定します。  
   
  *property*  
 ファイル グループのプロパティの名前を返す **varchar(128)** 型の式を指定します。 *property* によって返される値は次のいずれかです。  
@@ -60,7 +60,7 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 *filegroup_name* は、**sys.filegroups** カタログ ビューの **name** 列に対応します。  
   
 ## <a name="examples"></a>例  
-この例では、`IsDefault` データベース内のプライマリ ファイル グループに対する [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] プロパティの設定値が返されます。  
+この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内のプライマリ ファイル グループに対する `IsDefault` プロパティの設定値が返されます。  
   
 ```  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  

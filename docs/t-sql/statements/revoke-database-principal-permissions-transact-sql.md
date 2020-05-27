@@ -161,7 +161,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. ユーザーに対する CONTROL 権限を別のユーザーから取り消す  
- 次の例では、`CONTROL` ユーザー [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] に対する `Wanida` 権限を、ユーザー `RolandX` から取り消します。  
+ 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ユーザー `Wanida` に対する `CONTROL` 権限を、ユーザー `RolandX` から取り消します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -170,7 +170,7 @@ GO
 ```  
   
 ### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>B. ロールに対する VIEW DEFINITION 権限を、WITH GRANT OPTION で権限が許可されたユーザーから取り消す  
- 次の例では、`VIEW DEFINITION` ロール [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] に対する `SammamishParking` 権限を、データベース ユーザー `JinghaoLiu` から取り消します。 ユーザー `CASCADE` には、`JinghaoLiu` を指定して `VIEW DEFINITION` 権限が許可されているため、`WITH GRANT OPTION` オプションを指定します。  
+ 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ロール `VIEW DEFINITION` に対する `SammamishParking` 権限を、データベース ユーザー `JinghaoLiu` から取り消します。 ユーザー `JinghaoLiu` には、`WITH GRANT OPTION` を指定して `VIEW DEFINITION` 権限が許可されているため、`CASCADE` オプションを指定します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. ユーザーに対する IMPERSONATE 権限をアプリケーション ロールから取り消す  
- 次の例では、ユーザー `IMPERSONATE` に対する `HamithaL` 権限を、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] アプリケーション ロール `AccountsPayable17` から取り消します。  
+ 次の例では、ユーザー `HamithaL` に対する `IMPERSONATE` 権限を、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] アプリケーション ロール `AccountsPayable17` から取り消します。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

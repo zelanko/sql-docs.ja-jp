@@ -52,7 +52,7 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  重複する値は 1 つだけカウントします。  
   
  *式 (expression)*  
- [bit](../../t-sql/language-elements/expressions-transact-sql.md) データ型を除く、真数または概数データ型カテゴリの**式**です。 集計関数とサブクエリは使用できません。  
+ **bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 集計関数とサブクエリは使用できません。  
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  _partition\_by\_clause_ は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 _order\_by\_clause_ は、操作が実行される論理的順序を決定します。 _order\_by\_clause_は必須です。 詳細については、を参照してください。 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
@@ -68,7 +68,7 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-varp"></a>A: VARP を使用する  
- この例では、`SalesPerson` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブル内のすべてのボーナス額を母集団として偏差を返します。  
+ この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `SalesPerson` テーブル内のすべてのボーナス額を母集団として偏差を返します。  
   
 ```  
 SELECT VARP(Bonus)  
@@ -79,7 +79,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-varp"></a>B: VARP を使用する  
- 次の例は、テーブル `VARP` の販売ノルマの値の `dbo.FactSalesQuota` を返します。 最初の列にはすべての個別値の分散が含まれ、2 番目の列には重複値を含むすべての値の分散が含まれます。  
+ 次の例は、テーブル `dbo.FactSalesQuota` の販売ノルマの値の `VARP` を返します。 最初の列にはすべての個別値の分散が含まれ、2 番目の列には重複値を含むすべての値の分散が含まれます。  
   
 ```  
 -- Uses AdventureWorks  

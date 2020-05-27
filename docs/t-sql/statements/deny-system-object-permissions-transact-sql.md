@@ -76,7 +76,7 @@ GO
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、`EXECUTE` に対し、`xp_cmdshell` の `public` 権限を拒否します。  
+ 次の例では、`public` に対し、`xp_cmdshell` の `EXECUTE` 権限を拒否します。  
   
 ```  
 DENY EXECUTE ON sys.xp_cmdshell TO public;  

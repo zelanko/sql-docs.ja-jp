@@ -37,7 +37,7 @@ ms.locfileid: "69025864"
 > [!NOTE]  
 > ストアド プロシージャは、更新数および複数の結果セットを返すこともできます。 詳細については、「[更新数があるストアド プロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)」と「[複数の結果セットの使用](../../connect/jdbc/using-multiple-result-sets.md)」を参照してください。  
   
-JDBC ドライバーを使用してパラメーターがあるストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) クラスの [prepareCall](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドと一緒に使用する必要があります。 `call` エスケープ シーケンスの完全な構文は次のとおりです。  
+JDBC ドライバーを使用してパラメーターがあるストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドと一緒に使用する必要があります。 `call` エスケープ シーケンスの完全な構文は次のとおりです。  
   
  `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`  
   

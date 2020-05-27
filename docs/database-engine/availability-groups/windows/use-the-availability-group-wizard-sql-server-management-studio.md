@@ -26,7 +26,7 @@ ms.locfileid: "77507738"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>可用性グループ ウィザードの使用 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、 **の**新しい可用性グループ ウィザード[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で Always On 可用性グループを作成および構成する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
+  このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の**新しい可用性グループ ウィザード**を使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で Always On 可用性グループを作成および構成する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
   
 > [!NOTE]  
 >  可用性グループの概要については、「 [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)の Always On 可用性グループを PowerShell コマンドレットで作成および構成する方法について説明します。  

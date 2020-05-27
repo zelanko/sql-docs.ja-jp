@@ -46,7 +46,7 @@ CURRENT_USER
 **sysname**
   
 ## <a name="remarks"></a>解説  
-`CURRENT_USER` によって、現在のセキュリティ コンテキストの名前が返されます。 `CURRENT_USER` を呼び出してコンテキストを切り替えた後に `EXECUTE AS` が実行された場合、`CURRENT_USER` によって、偽装コンテキストの名前が返されます。 Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、`CURRENT_USER` はグループの名前ではなく Windows プリンシパルの名前を返します。
+`CURRENT_USER` によって、現在のセキュリティ コンテキストの名前が返されます。 `EXECUTE AS` を呼び出してコンテキストを切り替えた後に `CURRENT_USER` が実行された場合、`CURRENT_USER` によって、偽装コンテキストの名前が返されます。 Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、`CURRENT_USER` はグループの名前ではなく Windows プリンシパルの名前を返します。
   
 現在のユーザーのログインを返す方法については、「[SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)」と「[SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)」を参照してください。
   
@@ -61,7 +61,7 @@ GO
 ```  
   
 ### <a name="b-using-current_user-as-a-default-constraint"></a>B. DEFAULT 制約として CURRENT_USER を使用する  
-この例では、sales 行の `CURRENT_USER` 列に対する `DEFAULT` 制約として `order_person` を使用するテーブルを作成します。
+この例では、sales 行の `order_person` 列に対する `DEFAULT` 制約として `CURRENT_USER` を使用するテーブルを作成します。
   
 ```sql
 USE AdventureWorks2012;  

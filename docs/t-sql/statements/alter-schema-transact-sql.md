@@ -97,7 +97,7 @@ ALTER SCHEMA schema_name
 ## <a name="examples"></a>例  
   
 ### <a name="a-transferring-ownership-of-a-table"></a>A. テーブルの所有権を譲渡する  
- 次の例では、テーブル `HumanResources` をスキーマ `Address` からスキーマ "HumanResources" に移動することで、スキーマ `Person` を変更します。  
+ 次の例では、テーブル `Address` をスキーマ `Person` からスキーマ "HumanResources" に移動することで、スキーマ `HumanResources` を変更します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -138,7 +138,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. テーブルの所有権を譲渡する  
- 次の例では、`Region` スキーマで `dbo` テーブルを作成し、`Sales` スキーマを作成し、`Region` テーブルを `dbo` スキーマから `Sales` スキーマに移動します。  
+ 次の例では、`dbo` スキーマで `Region` テーブルを作成し、`Sales` スキーマを作成し、`Region` テーブルを `dbo` スキーマから `Sales` スキーマに移動します。  
   
 ```  
 CREATE TABLE dbo.Region   

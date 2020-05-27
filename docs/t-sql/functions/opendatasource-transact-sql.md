@@ -80,7 +80,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
   
 各プロバイダーの接続要件は、リンク サーバー作成時におけるこれらのパラメーターの要件に似ています。 多くの一般的なプロバイダーについて詳しくは、「[sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)」の一覧をご覧ください。  
   
-`OPENDATASOURCE` 句での `OPENQUERY`、`OPENROWSET`、または `FROM` の呼び出しは、更新のターゲットとして使用されるこれらの関数の呼び出しとは別に評価されます。これは、両方の呼び出しに同じ引数が指定されている場合にも当てはまります。 特に、いずれか一方の呼び出しの結果に適用されるフィルター条件または結合条件は、もう一方の結果に影響しません。  
+`FROM` 句での `OPENDATASOURCE`、`OPENQUERY`、または `OPENROWSET` の呼び出しは、更新のターゲットとして使用されるこれらの関数の呼び出しとは別に評価されます。これは、両方の呼び出しに同じ引数が指定されている場合にも当てはまります。 特に、いずれか一方の呼び出しの結果に適用されるフィルター条件または結合条件は、もう一方の結果に影響しません。  
   
 ## <a name="permissions"></a>アクセス許可  
  すべてのユーザーが OPENDATASOURCE を実行できます。 リモート サーバーへの接続に使用される権限は、接続文字列によって決まります。  
@@ -88,7 +88,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 ## <a name="examples"></a>例  
 
 ### <a name="a-using-opendatasource-with-select-and-the-sql-server-ole-db-driver"></a>A. OPENDATASOURCE を SELECT および SQL Server OLE DB Driver と共に使用する  
- 次の例では、[Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) を使用して、リモート サーバー `HumanResources.Department` の [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの `Seattle1` テーブルにアクセスします。 `SELECT` ステートメントは、返す行セットの定義に使用します。 プロバイダーの文字列には、`Server` と `Trusted_Connection` キーワードが含まれます。 これらのキーワードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver によって認識されます。  
+ 次の例では、[Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) を使用して、リモート サーバー `Seattle1` の [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの `HumanResources.Department` テーブルにアクセスします。 `SELECT` ステートメントは、返す行セットの定義に使用します。 プロバイダーの文字列には、`Server` と `Trusted_Connection` キーワードが含まれます。 これらのキーワードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver によって認識されます。  
   
 ```sql  
 SELECT GroupName, Name, DepartmentID  
@@ -97,7 +97,7 @@ ORDER BY GroupName, Name;
 ``` 
 
 ### <a name="b-using-opendatasource-with-select-and-the-sql-server-ole-db-provider"></a>B. OPENDATASOURCE を SELECT および SQL Server OLE DB プロバイダーと共に使用する  
-次の例では、サーバー `Payroll` 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の `London` インスタンスにアドホック接続を作成し、`AdventureWorks2012.HumanResources.Employee` テーブルをクエリします。 
+次の例では、サーバー `London` 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の `Payroll` インスタンスにアドホック接続を作成し、`AdventureWorks2012.HumanResources.Employee` テーブルをクエリします。 
 
 > [!NOTE] 
 > SQLNCLI を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最新バージョンの SQL Server Native Client OLE DB プロバイダーにリダイレクトされます。 OLE DB プロバイダーは、指定の PROGID を使用してレジストリに登録されることが想定されています。 

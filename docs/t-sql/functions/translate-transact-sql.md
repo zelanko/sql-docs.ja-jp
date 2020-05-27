@@ -49,7 +49,7 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="remarks"></a>解説
 
-`TRANSLATE`characters*式と*translations *式の長さが異なる場合、* はエラーを返します。 `TRANSLATE` は、いずれかの引数が NULL の場合は NULL を返します。  
+*characters* 式と *translations* 式の長さが異なる場合、`TRANSLATE` はエラーを返します。 `TRANSLATE` は、いずれかの引数が NULL の場合は NULL を返します。  
 
 `TRANSLATE` 関数の動作は、複数の [REPLACE](../../t-sql/functions/replace-transact-sql.md) 関数を使用した場合と似ています。 ただし、`TRANSLATE` では `inputString` 内の個々の文字が複数回置き換えられることはありません。 `characters` パラメーター内の 1 つの値で、`inputString` 内の複数の文字を置き換えることができます。 
 

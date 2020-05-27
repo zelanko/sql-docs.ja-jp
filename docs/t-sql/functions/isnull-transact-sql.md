@@ -61,7 +61,7 @@ ISNULL ( check_expression , replacement_value )
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-isnull-with-avg"></a>A. AVG で ISNULL を使用する  
- 次の例では、すべての製品の重量の平均を求めます。 `50` テーブルの `Weight` 列にあるすべての NULL エントリに、値 `Product` を代入します。  
+ 次の例では、すべての製品の重量の平均を求めます。 `Product` テーブルの `Weight` 列にあるすべての NULL エントリに、値 `50` を代入します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -129,7 +129,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-isnull-with-avg"></a>D. AVG で ISNULL を使用する  
- 次の例では、サンプル テーブルのすべての製品の重量の平均を求めます。 `50` テーブルの `Weight` 列にあるすべての NULL エントリに、値 `Product` を代入します。  
+ 次の例では、サンプル テーブルのすべての製品の重量の平均を求めます。 `Product` テーブルの `Weight` 列にあるすべての NULL エントリに、値 `50` を代入します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -170,7 +170,7 @@ ORDER BY ResellerName;
 |  Acceptable Sales & Service  |     0.0000         |
   
 ### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. IS NULL を使用して WHERE 句の NULL をテストする  
- 次の例では、`NULL` 列が `Weight` の製品をすべて検索しています。 `IS` と `NULL` の間にスペースがあることに注意してください。  
+ 次の例では、`Weight` 列が `NULL` の製品をすべて検索しています。 `IS` と `NULL` の間にスペースがあることに注意してください。  
   
 ```  
 -- Uses AdventureWorks  

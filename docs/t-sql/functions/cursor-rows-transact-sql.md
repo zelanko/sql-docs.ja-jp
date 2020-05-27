@@ -30,7 +30,7 @@ ms.locfileid: "68026273"
 # <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-接続で開いた最後のカーソルで現在登録されている行数を返します。 パフォーマンスを向上させるために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、大きなキーセットと静的カーソルを非同期に作成できます。 あるカーソルに登録されている行数が @`@@CURSOR_ROWS` の呼び出し時に取得されることは、@CURSOR_ROWS を呼び出すことで決定できます。
+接続で開いた最後のカーソルで現在登録されている行数を返します。 パフォーマンスを向上させるために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、大きなキーセットと静的カーソルを非同期に作成できます。 あるカーソルに登録されている行数が @@CURSOR_ROWS の呼び出し時に取得されることは、`@@CURSOR_ROWS` を呼び出すことで決定できます。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

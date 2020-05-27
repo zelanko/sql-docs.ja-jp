@@ -25,7 +25,7 @@ ms.locfileid: "67979581"
 # <a name="getstatement-method-sqlserverresultset"></a>getStatement メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトを生成した [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを取得します。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを生成した [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
   

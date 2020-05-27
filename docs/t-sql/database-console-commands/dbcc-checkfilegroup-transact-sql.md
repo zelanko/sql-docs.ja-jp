@@ -206,7 +206,7 @@ GO
 ```  
   
 ### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. 非クラスター化インデックスを除く AdventureWorks データベースの PRIMARY ファイル グループをチェックする  
-次の例では、プライマリ ファイル グループの ID 番号を指定し、`AdventureWorks2012` オプションを指定することによって、非クラスター化インデックスを除く `NOINDEX` データベースのプライマリ ファイル グループをチェックします。
+次の例では、プライマリ ファイル グループの ID 番号を指定し、`NOINDEX` オプションを指定することによって、非クラスター化インデックスを除く `AdventureWorks2012` データベースのプライマリ ファイル グループをチェックします。
   
 ```sql  
 USE AdventureWorks2012;  

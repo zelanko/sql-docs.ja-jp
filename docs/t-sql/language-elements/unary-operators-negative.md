@@ -136,7 +136,7 @@ SELECT TOP (1) - ( - 17) FROM DimEmployee;
 ```  
   
 ### <a name="e-returning-the-negative-of-a-column"></a>E. 列の負の値を返す  
- 次の例では、`BaseRate` テーブルの各従業員に対し、`dimEmployee` 値の負の値を返します。  
+ 次の例では、`dimEmployee` テーブルの各従業員に対し、`BaseRate` 値の負の値を返します。  
   
 ```  
 USE ssawPDW;  

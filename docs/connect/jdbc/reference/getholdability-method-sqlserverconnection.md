@@ -25,7 +25,7 @@ ms.locfileid: "67982930"
 # <a name="getholdability-method-sqlserverconnection"></a>getHoldability メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを使用して作成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトの現在の保持機能を取得します。  
+  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを使用して作成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の保持機能を取得します。  
   
 ## <a name="syntax"></a>構文  
   

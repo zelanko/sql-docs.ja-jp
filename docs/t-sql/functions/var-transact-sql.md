@@ -52,7 +52,7 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  重複する値は 1 つだけカウントします。  
   
  *式 (expression)*  
- [bit](../../t-sql/language-elements/expressions-transact-sql.md) データ型を除く、真数または概数データ型カテゴリの**式**です。 集計関数とサブクエリは使用できません。  
+ **bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 集計関数とサブクエリは使用できません。  
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 _order\_by\_clause_ は、操作が実行される論理的順序を決定します。 _order\_by\_clause_は必須です。 詳細については、を参照してください。 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
@@ -68,7 +68,7 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-var"></a>A: VAR の使用  
- 次の例では、`SalesPerson` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルにあるすべてのボーナス値の分散を返します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `SalesPerson` テーブルにあるすべてのボーナス値の分散を返します。  
   
 ```  
 SELECT VAR(Bonus)  

@@ -40,7 +40,7 @@ POWER ( float_expression , y )
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- [float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に **float** 型に変換できる**式**を指定します。  
+ **float** 型、または暗黙的に **float** 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
  *y*  
  *float_expression* の乗数を指定します。 *y* を除く、真数または概数数値の正確なデータ型に分類される式を指定できます、 **ビット** データ型。  
@@ -149,7 +149,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D: POWER を使用して数値の 3 乗を返す  
- 次の例は、`POWER` の 3 乗の `2.0` 結果を示しています。  
+ 次の例は、`2.0` の 3 乗の `POWER` 結果を示しています。  
   
 ```  
 SELECT POWER(2.0, 3);  

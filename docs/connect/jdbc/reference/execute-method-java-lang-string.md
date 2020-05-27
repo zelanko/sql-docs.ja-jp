@@ -48,7 +48,7 @@ public final boolean execute(java.lang.String sql)
 ## <a name="remarks"></a>解説  
  この execute メソッドは、java.sql.Statement インターフェイスの execute メソッドで規定されています。  
   
- このメソッドは、[SQLServerStatement](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) クラスで見つかる [execute](../../../connect/jdbc/reference/sqlserverstatement-class.md) メソッドをオーバーライドします。  
+ このメソッドは、[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスで見つかる [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) メソッドをオーバーライドします。  
   
  SQLServerPreparedStatement オブジェクトが作成される際、オブジェクトの SQL ステートメントが指定されるため、このメソッドを呼び出すと例外が発生します。  
   

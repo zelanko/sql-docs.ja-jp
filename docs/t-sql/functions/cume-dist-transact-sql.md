@@ -29,7 +29,7 @@ ms.locfileid: "68026462"
 # <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] について、値のグループ内の値の累積分布を計算します。 つまり、`CUME_DIST` は、値のグループにおける指定された値の相対位置を計算します。 行 `CUME_DIST`r_の値の_ は行 _r_ の値以下の値を持つ行数として定義されます。これは、パーティションまたはクエリ結果セットで評価された行数で割った値です。 `CUME_DIST` は `PERCENT_RANK` 関数に似ています。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] について、値のグループ内の値の累積分布を計算します。 つまり、`CUME_DIST` は、値のグループにおける指定された値の相対位置を計算します。 行 _r_ の値の `CUME_DIST` は行 _r_ の値以下の値を持つ行数として定義されます。これは、パーティションまたはクエリ結果セットで評価された行数で割った値です。 `CUME_DIST` は `PERCENT_RANK` 関数に似ています。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

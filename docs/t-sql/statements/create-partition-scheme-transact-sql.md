@@ -67,7 +67,7 @@ AS PARTITION partition_function_name
  *file_group_name* |  **[** PRIMARY **]** [ **,** _...n_]  
  *partition_function_name* によって指定されたパーティションを保持するファイル グループの名前を指定します。 *file_group_name* がデータベースに既に存在する必要があります。  
   
- **[** PRIMARY **]** を指定した場合、パーティションはプライマリ ファイル グループに格納されます。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。 パーティションは、パーティション 1 から始まり、[ **,** _...n_] で一覧表示されているファイル グループの順序で、ファイル グループに割り当てられます。 [ *,* **...n**] では、同じ _file_group_name_ を複数回指定できます。 *n* が *partition_function_name* で指定されたパーティションの数を保持するのに十分ではない場合、CREATE PARTITION SCHEME は失敗し、エラーが発生します。  
+ **[** PRIMARY **]** を指定した場合、パーティションはプライマリ ファイル グループに格納されます。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。 パーティションは、パーティション 1 から始まり、[ **,** _...n_] で一覧表示されているファイル グループの順序で、ファイル グループに割り当てられます。 [ **,** _...n_] では、同じ *file_group_name* を複数回指定できます。 *n* が *partition_function_name* で指定されたパーティションの数を保持するのに十分ではない場合、CREATE PARTITION SCHEME は失敗し、エラーが発生します。  
   
  *partition_function_name* によって生成されるパーティションの数がファイル グループより少ない場合、割り当てられていない最初のファイル グループが NEXT USED とマークされ、情報メッセージに NEXT USED ファイル グループの名前が表示されます。 ALL を指定した場合、唯一の *file_group_name* に、この *partition_function_name* に対する NEXT USED プロパティが設定されます。 ALTER PARTITION FUNCTION ステートメントで追加のパーティションを作成した場合は、NEXT USED ファイル グループがそのパーティションを受け取ります。 追加の割り当てられていないファイル グループを作成して新しいパーティションを保持するには、ALTER PARTITION SCHEME を使用します。  
   
@@ -98,7 +98,7 @@ AS PARTITION myRangePF1
 TO (test1fg, test2fg, test3fg, test4fg);  
 ```  
   
- パーティション分割列 `myRangePF1`col1**でパーティション関数** を使用するテーブルのパーティションは、次の表に示すように割り当てられます。  
+ パーティション分割列 **col1** でパーティション関数 `myRangePF1` を使用するテーブルのパーティションは、次の表に示すように割り当てられます。  
   
 ||||||  
 |-|-|-|-|-|  
@@ -118,7 +118,7 @@ AS PARTITION myRangePF2
 TO ( test1fg, test1fg, test1fg, test2fg );  
 ```  
   
- パーティション分割列 `myRangePF2`col1**でパーティション関数** を使用するテーブルのパーティションは、次の表に示すように割り当てられます。  
+ パーティション分割列 **col1** でパーティション関数 `myRangePF2` を使用するテーブルのパーティションは、次の表に示すように割り当てられます。  
   
 ||||||  
 |-|-|-|-|-|  

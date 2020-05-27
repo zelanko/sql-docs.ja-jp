@@ -99,7 +99,7 @@ EXCEPT と INTERSECT は分散クエリで使用できますが、この場合�
 EXCEPT 演算が、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のグラフィカル プラン表示機能を使用して表示される場合、この演算は [left anti semi join](../../relational-databases/showplan-logical-and-physical-operators-reference.md) として表示され、INTERSECT 演算は [left semi join](../../relational-databases/showplan-logical-and-physical-operators-reference.md) として表示されます。  
   
 ## <a name="examples"></a>例  
-次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`Production.Product` および `INTERSECT` の結果と比較するため、`EXCEPT` テーブルからすべての値を返します。  
+次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`INTERSECT` および `EXCEPT` の結果と比較するため、`Production.Product` テーブルからすべての値を返します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -149,7 +149,7 @@ FROM Production.Product ;
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`FactInternetSales` および `INTERSECT` の結果と比較するため、`EXCEPT` テーブルからすべての値を返します。  
+次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`INTERSECT` および `EXCEPT` の結果と比較するため、`FactInternetSales` テーブルからすべての値を返します。  
   
 ```  
 -- Uses AdventureWorks  

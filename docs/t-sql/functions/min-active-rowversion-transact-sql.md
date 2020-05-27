@@ -52,7 +52,7 @@ MIN_ACTIVE_ROWVERSION
  MIN_ACTIVE_ROWVERSION 関数は、トランザクション分離レベルでの変更の影響を受けません。  
   
 ## <a name="examples"></a>例  
- 次の例では、**および** を使用して、`MIN_ACTIVE_ROWVERSION`rowversion`@@DBTS` 値を返します。 データベース内にアクティブなトランザクションがない場合、値が異なることがわかります。  
+ 次の例では、`MIN_ACTIVE_ROWVERSION` および `@@DBTS` を使用して、**rowversion** 値を返します。 データベース内にアクティブなトランザクションがない場合、値が異なることがわかります。  
   
 ```  
 -- Create a table that has a ROWVERSION column in it.  

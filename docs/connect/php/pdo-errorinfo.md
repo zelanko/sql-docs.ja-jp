@@ -46,7 +46,7 @@ PDO::errorInfo は、データベースで直接実行された操作のエラ�
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  
-この例では、列の名前が間違っており (`Cityx` ではなく `City`)、エラーが発生します。そのエラーは報告されます。  
+この例では、列の名前が間違っており (`City` ではなく `Cityx`)、エラーが発生します。そのエラーは報告されます。  
   
 ```  
 <?php  

@@ -25,7 +25,7 @@ ms.locfileid: "67981013"
 # <a name="getparameterclassname-method-sqlserverparametermetadata"></a>getParameterClassName メソッド (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerPreparedStatement](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) クラスの [setObject](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) メソッドにインスタンスを渡す必要のある、Java クラスの完全修飾名を取得します。  
+  [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスの [setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) メソッドにインスタンスを渡す必要のある、Java クラスの完全修飾名を取得します。  
   
 ## <a name="syntax"></a>構文  
   

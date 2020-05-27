@@ -67,7 +67,7 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 `DECRYPTBYCERT` には、証明書に対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>例  
-この例では、証明書 `[AdventureWorks2012].[ProtectedData04]` によって最初に暗号化されたデータとしてマークされている、`JanainaCert02` からの行が選択されます。 最初に、証明書 `JanainaCert02` のパスワードで証明書 `pGFD4bb925DGvbd2439587y` の秘密キーが復号されます。 次に、この秘密キーで暗号化テキストが復号されます。 暗号化データが **varbinary** から **nvarchar** に変換されます。  
+この例では、証明書 `JanainaCert02` によって最初に暗号化されたデータとしてマークされている、`[AdventureWorks2012].[ProtectedData04]` からの行が選択されます。 最初に、証明書 `pGFD4bb925DGvbd2439587y` のパスワードで証明書 `JanainaCert02` の秘密キーが復号されます。 次に、この秘密キーで暗号化テキストが復号されます。 暗号化データが **varbinary** から **nvarchar** に変換されます。  
 
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  

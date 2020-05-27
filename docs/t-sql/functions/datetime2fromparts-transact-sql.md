@@ -61,7 +61,7 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
 秒の小数部を指定する整数式。
   
 *有効桁数 (precision)*  
-**が返す**datetime2`DATETIME2FROMPARTS` 値の有効桁数を指定する整数式。
+`DATETIME2FROMPARTS` が返す **datetime2** 値の有効桁数を指定する整数式。
   
 ## <a name="return-types"></a>戻り値の型
 **datetime2(** *precision* **)**

@@ -23,7 +23,7 @@ ms.locfileid: "69026199"
 
 既定では、トランザクション内で作成される結果セットは、トランザクションがデータベースにコミットされた後、またはロールバックされるときに開かれたままになります。 ただし、トランザクションがコミットされた後で結果セットを閉じると便利な場合があります。 このため、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は結果セットの保持機能をサポートしています。
 
-結果セットの保持機能は、[SQLServerConnection](../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md) クラスの [setHoldability](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドを使用して設定できます。 setHoldability メソッドを使用して保持機能を設定する場合、結果セット保持機能の定数である `ResultSet.HOLD_CURSORS_OVER_COMMIT` または `ResultSet.CLOSE_CURSORS_AT_COMMIT` を使用できます。
+結果セットの保持機能は、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [setHoldability](../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md) メソッドを使用して設定できます。 setHoldability メソッドを使用して保持機能を設定する場合、結果セット保持機能の定数である `ResultSet.HOLD_CURSORS_OVER_COMMIT` または `ResultSet.CLOSE_CURSORS_AT_COMMIT` を使用できます。
 
 JDBC ドライバーも、Statement オブジェクトのいずれか 1 つを作成する場合に、保持機能の設定をサポートします。 結果セットの保持機能パラメーターがあるオーバーロードを持つ Statement オブジェクトを作成する場合、ステートメント オブジェクトの保持機能が接続の保持機能と一致する必要があります。 両者が一致しない場合、例外がスローされます。 これは、SQL Server では接続レベルのみで保持機能がサポートされるためです。
 

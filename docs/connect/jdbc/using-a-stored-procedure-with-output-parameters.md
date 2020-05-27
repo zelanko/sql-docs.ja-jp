@@ -23,7 +23,7 @@ ms.locfileid: "69026832"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャのうち、呼び出すことができるのは、OUT パラメーター (呼び出し元のアプリケーションにデータを返す目的で使用されるパラメーター) を少なくとも 1 つ返すストアド プロシージャです。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が提供する [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスを使用することで、この種類のストアド プロシージャを呼び出し、返されるデータを処理することができます。
 
-JDBC ドライバーを使用してこの種類のストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) クラスの [prepareCall](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドと一緒に使用する必要があります。 OUT パラメーターを持つ `call` エスケープ シーケンスの構文は次のとおりです。
+JDBC ドライバーを使用してこの種類のストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドと一緒に使用する必要があります。 OUT パラメーターを持つ `call` エスケープ シーケンスの構文は次のとおりです。
 
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 

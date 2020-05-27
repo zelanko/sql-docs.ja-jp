@@ -55,7 +55,7 @@ ms.locfileid: "69027392"
   
 2 つのトランザクションが同じ行を取得すると、更新内容の喪失が生じる可能性がありますが、この状況を防ぐためには、REPEATABLE READ 以上の分離レベルでトランザクションを実行し、その後で、元の取得した値に基づいて行を更新する必要があります。 2 つのトランザクションが、元の取得した値に基づかずに 1 つの UPDATE ステートメントを使用して行を更新する場合、既定の分離レベル READ COMMITTED では更新データの喪失が発生しません。  
 
-トランザクションの分離レベルを設定するには、[SQLServerConnection](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) クラスの [setTransactionIsolation](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドを使用できます。 このメソッドは、引数として **int** 値を受け取ります。この値は、次のように接続定数のいずれかに基づいています。  
+トランザクションの分離レベルを設定するには、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) メソッドを使用できます。 このメソッドは、引数として **int** 値を受け取ります。この値は、次のように接続定数のいずれかに基づいています。  
 
 ```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
@@ -73,7 +73,7 @@ con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の分離レベルの詳細については、[!INCLUDE[ssDE](../../includes/ssde_md.md)] オンライン ブックの「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]における分離レベル」を参照してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の分離レベルの詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[!INCLUDE[ssDE](../../includes/ssde_md.md)]における分離レベル」を参照してください。  
 
 ## <a name="see-also"></a>参照
 

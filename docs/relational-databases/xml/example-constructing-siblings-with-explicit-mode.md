@@ -33,7 +33,7 @@ ms.locfileid: "68006825"
 <OrderHeader ...</OrderHeader>  
 ```  
   
- 次に示す EXPLICIT モードのクエリは、上記の形式の XML を生成します。 このクエリでは、<`Tag`> 要素の `OrderHeader` 列に 1 を、<`SalesPerson`> 要素には 2 を、<`OrderDetail`> 要素には 3 を指定しています。 <`SalesPerson`> 要素と <`OrderDetail`> 要素は兄弟なので、これらの要素の `Parent` 列に値 1 を指定し、<`OrderHeader`> 要素を親要素として特定しています。  
+ 次に示す EXPLICIT モードのクエリは、上記の形式の XML を生成します。 このクエリでは、<`OrderHeader`> 要素の `Tag` 列に 1 を、<`SalesPerson`> 要素には 2 を、<`OrderDetail`> 要素には 3 を指定しています。 <`SalesPerson`> 要素と <`OrderDetail`> 要素は兄弟なので、これらの要素の `Parent` 列に値 1 を指定し、<`OrderHeader`> 要素を親要素として特定しています。  
   
 ```  
 USE AdventureWorks2012;  

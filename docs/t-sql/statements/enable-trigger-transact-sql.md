@@ -78,7 +78,7 @@ DML トリガーを有効化するには、少なくとも、そのトリガー�
 ## <a name="examples"></a>例  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. テーブル上の DML トリガーを有効化する  
-次の例では、AdventureWorks データベースのテーブル `uAddress` 上に作成されたトリガー `Address` を無効化し、次に有効化します。  
+次の例では、AdventureWorks データベースのテーブル `Address` 上に作成されたトリガー `uAddress` を無効化し、次に有効化します。  
   
 ```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  

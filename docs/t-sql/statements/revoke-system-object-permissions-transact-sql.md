@@ -64,7 +64,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、`EXECUTE` に対する `sp_addlinkedserver` 権限を、`public` から取り消します。  
+ 次の例では、`sp_addlinkedserver` に対する `EXECUTE` 権限を、`public` から取り消します。  
   
 ```  
 REVOKE EXECUTE ON sys.sp_addlinkedserver FROM public;  

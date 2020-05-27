@@ -25,7 +25,7 @@ ms.locfileid: "67982106"
 # <a name="getmaxfieldsize-method-sqlserverstatement"></a>getMaxFieldSize メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトによって生成される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの文字列やバイナリ列の値に対して返すことができる最大バイト数を取得します。  
+  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトによって生成される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの文字列やバイナリ列の値に対して返すことができる最大バイト数を取得します。  
   
 ## <a name="syntax"></a>構文  
   

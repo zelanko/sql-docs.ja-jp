@@ -156,7 +156,7 @@ ms.locfileid: "75681703"
 
 |Name|説明|  
 |----------|-----------------|  
-|DATETIME、SMALLDATETIME、MONEY、SMALLMONEY、GUID|**API メソッドを使用して**暗号化された`setObject()/updateObject()` datetime、smalldatetime、money、smallmoney、uniqueidentifier 列にパラメーター値を送信するときは、これらの型をターゲット SQL 型として使用します。|  
+|DATETIME、SMALLDATETIME、MONEY、SMALLMONEY、GUID|`setObject()/updateObject()` API メソッドを使用して**暗号化された** datetime、smalldatetime、money、smallmoney、uniqueidentifier 列にパラメーター値を送信するときは、これらの型をターゲット SQL 型として使用します。|  
   
   
  **SQLServerStatementColumnEncryptionSetting Enum**  

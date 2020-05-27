@@ -92,7 +92,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 句を使用する  
- 次の例では、MIN、MAX、AVG、および COUNT 関数を OVER 句と共に使用して、`HumanResources.Department` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルの部署ごとに集計値を入力します。  
+ 次の例では、MIN、MAX、AVG、および COUNT 関数を OVER 句と共に使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `HumanResources.Department` テーブルの部署ごとに集計値を入力します。  
   
 ```  
 SELECT DISTINCT Name  

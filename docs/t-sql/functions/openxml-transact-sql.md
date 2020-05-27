@@ -68,7 +68,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  行セット内の列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を指定します。 列のデータ型が、基になる属性の **xml** データ型とは異なる場合、強制型変換が行われます。  
   
  *ColPattern*  
- XML ノードを列へマップする方法を表す標準 XPath パターンを指定します (省略可能)。 *ColPattern* を指定しない場合、既定のマッピング (**flags** で指定した**属性中心**または*要素中心*のマッピング) が適用されます。  
+ XML ノードを列へマップする方法を表す標準 XPath パターンを指定します (省略可能)。 *ColPattern* を指定しない場合、既定のマッピング (*flags* で指定した**属性中心**または**要素中心**のマッピング) が適用されます。  
   
  *ColPattern* として指定した XPath パターンは、**属性中心**および**要素中心**のマッピングの場合に、*flags* で指定される既定のマッピングを上書きまたは拡張する、特殊なマッピング特性を指定するときに使用されます。  
   
@@ -143,7 +143,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- `SELECT`flags*を* に設定して (`2`要素中心**のマッピングを示します) 同じ**  ステートメントを実行すると、XML ドキュメント内の両方の顧客に対する `CustomerID` および `ContactName` の値が NULL として返されます。これは、`CustomerID` または `ContactName` という名前の要素が XML ドキュメント内に存在しないためです。  
+ *flags* を `2` に設定して (**要素中心**のマッピングを示します) 同じ `SELECT` ステートメントを実行すると、XML ドキュメント内の両方の顧客に対する `CustomerID` および `ContactName` の値が NULL として返されます。これは、`CustomerID` または `ContactName` という名前の要素が XML ドキュメント内に存在しないためです。  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -161,9 +161,9 @@ NULL       NULL
   
 -   行セット内の `OrderID`、`CustomerID`、および `OrderDate` 列は、XML ドキュメント内の *rowpattern* によって識別されるノードの親の属性にマップされます。  
   
--   行セット内の `ProdID` 列は `ProductID` 属性にマップされます。行セット内の `Qty` 列は `Quantity`rowpattern*によって識別されるノードの* 属性にマップされます。  
+-   行セット内の `ProdID` 列は `ProductID` 属性にマップされます。行セット内の `Qty` 列は *rowpattern* によって識別されるノードの `Quantity` 属性にマップされます。  
   
- **flags** パラメーターでは*要素中心*のマッピングを指定しますが、これは *ColPattern* で指定するマッピングで上書きされます。  
+ *flags* パラメーターでは**要素中心**のマッピングを指定しますが、これは *ColPattern* で指定するマッピングで上書きされます。  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   

@@ -43,7 +43,7 @@ public java.lang.String getExtraNameCharacters()
 ## <a name="remarks"></a>解説  
  この getExtraNameCharacters メソッドは、java.sql.DatabaseMetaData インターフェイスの getExtraNameCharacters メソッドで指定されています。  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] データベースで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用している場合、このメソッドは $、#、および \@ の特殊文字を返します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースで [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を使用している場合、このメソッドは $、#、および \@ の特殊文字を返します。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

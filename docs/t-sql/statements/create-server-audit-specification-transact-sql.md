@@ -67,7 +67,7 @@ FOR SERVER AUDIT audit_name
  サーバー監査仕様の作成後は、CONTROL SERVER 権限または ALTER ANY SERVER AUDIT 権限を持つプリンシパル、sysadmin アカウント、またはその監査への明示的なアクセス権を持つプリンシパルがその仕様を表示できます。  
   
 ## <a name="examples"></a>例  
- 次の例では、失敗したログインを監査する `HIPAA_Audit_Specification` というサーバー監査仕様を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という `HIPAA_Audit` 監査に対して作成します。  
+ 次の例では、失敗したログインを監査する `HIPAA_Audit_Specification` というサーバー監査仕様を、`HIPAA_Audit` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査に対して作成します。  
   
 ```  
 CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  

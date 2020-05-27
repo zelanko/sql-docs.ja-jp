@@ -56,7 +56,7 @@ DISTINCT
 `COUNT` で一意の NULL ではない値の数を返すことを指定します。
   
 *式 (expression)*  
-[image](../../t-sql/language-elements/expressions-transact-sql.md)、**ntext**、**text** を除く、任意の型の**式**です。 `COUNT` は、式の集計関数またはサブクエリをサポートしていません。
+**image**、**ntext**、**text** を除く、任意の型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 `COUNT` は、式の集計関数またはサブクエリをサポートしていません。
   
 \*  
 `COUNT` ですべての行をカウントし、返すテーブルの合計行数を決定することを指定します。 `COUNT(*)` はパラメーターを受け取らず、DISTINCT の使用をサポートしていません。 `COUNT(*)` では、この関数の定義上、特定の列についての情報は使用されないため、*expression* パラメーターは必要ありません。 `COUNT(*)` は、指定されたテーブル内の行数を返し、重複する行を保持します。 各行は 1 行としてカウントされ、 これには NULL 値を保持している行も含まれます。

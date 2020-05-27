@@ -48,11 +48,11 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="remarks"></a>解説  
  この executeQuery メソッドは、java.sql.Statement インターフェイスの executeQuery メソッドで規定されています。  
   
- このメソッドは、[SQLServerStatement](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) クラスで見つかる [executeQuery](../../../connect/jdbc/reference/sqlserverstatement-class.md) メソッドをオーバーライドします。  
+ このメソッドは、[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスで見つかる [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドをオーバーライドします。  
   
  SQLServerPreparedStatement オブジェクトが作成される際、オブジェクトの SQL ステートメントが指定されるため、このメソッドを呼び出すと例外が発生します。  
   
- 渡された SQL ステートメントによって 1 つの [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverexception-class.md) オブジェクト以外のものが生成された場合は、[SQLServerException](../../../connect/jdbc/reference/sqlserverresultset-class.md) がスローされます。  
+ 渡された SQL ステートメントによって 1 つの [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクト以外のものが生成された場合は、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [executeQuery メソッド &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   

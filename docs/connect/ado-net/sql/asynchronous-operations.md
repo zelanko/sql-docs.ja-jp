@@ -23,7 +23,7 @@ ms.locfileid: "78897064"
 
 コマンドの実行など、一部のデータベース操作は、完了するまでに時間がかかる場合があります。 このような場合、シングルスレッド アプリケーションでは、他の操作をブロックしなければならず、そのコマンドの完了を待ってから独自の操作を続行する必要があります。 これに対して、実行時間の長い操作をバックグラウンド スレッドに割り当てることができると、フォアグラウンド スレッドが途中でブロックされることがなくなります。 たとえば、Windows アプリケーションでは、実行時間の長い操作をバックグラウンド スレッドに委任すると、その操作の実行中にユーザー インターフェイス スレッドの応答性を維持することができます。  
   
-.NET には、開発者がバックグラウンド スレッドを利用し、ユーザー インターフェイスや優先順位の高いスレッドを解放してその <xref:Microsoft.Data.SqlClient.SqlCommand> クラスの他の操作を完了するために使用できる、標準の非同期デザイン パターンがいくつか用意されています。 具体的には、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> メソッドを <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A> メソッドと組み合わせて非同期サポートが提供されます。  
+.NET には、開発者がバックグラウンド スレッドを利用し、ユーザー インターフェイスや優先順位の高いスレッドを解放してその <xref:Microsoft.Data.SqlClient.SqlCommand> クラスの他の操作を完了するために使用できる、標準の非同期デザイン パターンがいくつか用意されています。 具体的には、<xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A> メソッドを <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> メソッドと組み合わせて非同期サポートが提供されます。  
   
 > [!NOTE]
 >  非同期プログラミングは .NET のコアとなる機能です。 開発者が使用できるさまざまな非同期技法の詳細については、「[同期メソッドの非同期呼び出し](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)」を参照してください。  

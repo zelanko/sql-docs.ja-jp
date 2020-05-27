@@ -537,7 +537,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName;  
 ```  
   
- 次の例では、2 つの列を基準に並べ替えます。 このクエリでは、`FirstName` 列で昇順に並べ替えを行ってから、`FirstName` 列の共通の `LastName` 値を降順に並べ替えます。  
+ 次の例では、2 つの列を基準に並べ替えます。 このクエリでは、`FirstName` 列で昇順に並べ替えを行ってから、`LastName` 列の共通の `FirstName` 値を降順に並べ替えます。  
   
 ```sql
 -- Uses AdventureWorks  

@@ -50,7 +50,7 @@ DATALENGTH ( expression )
 任意の型の[式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>戻り値の型
-**expression** が *varchar(max)* 、**nvarchar(max)** 、**varbinary(max)** データ型の場合は **bigint**、それ以外の場合は **int**。
+*expression* が **varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** データ型の場合は **bigint**、それ以外の場合は **int**。
   
 ## <a name="remarks"></a>解説  
 次のような可変長データを格納できるデータ型で使用すると、`DATALENGTH` は非常に便利です。
@@ -70,7 +70,7 @@ NULL 値の場合、`DATALENGTH` は NULL を返します。
 > 特定の文字列式にエンコードされた文字数を取得するには [LEN](../../t-sql/functions/len-transact-sql.md) を使用し、特定の文字列式のバイト サイズを取得するには [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) を使用します。 これらの出力は、データ型および列で使用されているエンコードの種類によっては、異なる場合があります。 異なる種類のエンコードでの記憶域の違いについて詳しくは、「[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」をご覧ください。
 
 ## <a name="examples"></a>例  
-この例では、`Name` テーブルの `Product` 列の長さが返されます。
+この例では、`Product` テーブルの `Name` 列の長さが返されます。
   
 ```sql
 USE AdventureWorks2016  

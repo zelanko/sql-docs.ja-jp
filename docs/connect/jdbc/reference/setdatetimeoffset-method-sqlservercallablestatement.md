@@ -44,7 +44,7 @@ public void setDateTimeOffset(String sCol, microsoft.sql.DateTimeOffset t)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>解説  
- [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) を使用して [DateTimeOffset クラス](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)値を取得できます。  
+ [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md) を使用して [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)値を取得できます。  
   
  [setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md) は列の序数を受け取ります。  
   

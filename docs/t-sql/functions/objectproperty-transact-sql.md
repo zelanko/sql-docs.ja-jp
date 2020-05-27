@@ -201,7 +201,7 @@ GO
 ```  
   
 ### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. スカラー値ユーザー定義関数の決定性を確認する  
- 次の例では、`ufnGetProductDealerPrice`money**値を返すユーザー定義のスカラー値関数である** が決定的であるかどうかをテストします。  
+ 次の例では、**money** 値を返すユーザー定義のスカラー値関数である `ufnGetProductDealerPrice` が決定的であるかどうかをテストします。  
   
 ```  
 USE AdventureWorks2012;  

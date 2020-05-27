@@ -41,7 +41,7 @@ EXP ( float_expression )
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- [float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に **float** 型に変換できる**式**を指定します。  
+ **float** 型、または暗黙的に **float** 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  

@@ -25,7 +25,7 @@ ms.locfileid: "67981865"
 # <a name="getmetadata-method-sqlserverpreparedstatement"></a>getMetaData メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) オブジェクトを取得します。このオブジェクトには、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの実行時に返される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトの列に関する情報が含まれます。  
+  [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) オブジェクトを取得します。このオブジェクトには、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトの実行時に返される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの列に関する情報が含まれます。  
   
 ## <a name="syntax"></a>構文  
   

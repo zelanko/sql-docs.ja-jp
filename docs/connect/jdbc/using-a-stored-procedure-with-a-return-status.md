@@ -23,7 +23,7 @@ ms.locfileid: "69027111"
 
 呼び出すことができる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャは、状態パラメーターまたは結果パラメーターを返すプロシージャです。 この戻り値は一般的に、ストアド プロシージャの成功または失敗を示すために使用されます。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が提供する [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスを使用することで、この種類のストアド プロシージャを呼び出し、返されるデータを処理することができます。
 
-JDBC ドライバーを使用してこの種類のストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) クラスの [prepareCall](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドと組み合わせて使用する必要があります。 状態の戻り値パラメーターを持つ `call` エスケープ シーケンスの構文は次のとおりです。
+JDBC ドライバーを使用してこの種類のストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドと組み合わせて使用する必要があります。 状態の戻り値パラメーターを持つ `call` エスケープ シーケンスの構文は次のとおりです。
 
 `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`
 

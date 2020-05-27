@@ -54,7 +54,7 @@ FOR(
   
  **例**  
   
- ALTER INDEX ステートメントの例を次に示します。 このステートメントは、インデックスの XQuery の部分にパス `'/a/b/m'` を追加し、「`'/a/b/e'`CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;[」のトピックの例で作成したインデックスの SQL の部分からパス ](../../t-sql/statements/create-selective-xml-index-transact-sql.md) を削除します。 削除するパスは、作成時に指定された名前によって識別されます。  
+ ALTER INDEX ステートメントの例を次に示します。 このステートメントは、インデックスの XQuery の部分にパス `'/a/b/m'` を追加し、「[CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md)」のトピックの例で作成したインデックスの SQL の部分からパス `'/a/b/e'` を削除します。 削除するパスは、作成時に指定された名前によって識別されます。  
   
 ```sql  
 ALTER INDEX sxi_index  

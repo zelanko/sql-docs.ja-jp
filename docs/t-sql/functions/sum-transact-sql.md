@@ -107,7 +107,7 @@ White           19.00                 6.7926
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 句を使用する  
- 次の例では、OVER 句を指定した SUM 関数を使用して、`Sales.SalesPerson` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルに各区域の年間売り上げの累積合計を入力します。 データは `TerritoryID` によってパーティションに分割され、`SalesYTD` によって論理的に順序付けされます。 つまり、SUM 関数は年を基にして区域ごとに計算されます。 `TerritoryID` 1 の 2005 年については、その年の 2 人の営業担当者を表す 2 行があります。 これら 2 行の合計売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。  
+ 次の例では、OVER 句を指定した SUM 関数を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Sales.SalesPerson` テーブルに各区域の年間売り上げの累積合計を入力します。 データは `TerritoryID` によってパーティションに分割され、`SalesYTD` によって論理的に順序付けされます。 つまり、SUM 関数は年を基にして区域ごとに計算されます。 `TerritoryID` 1 の 2005 年については、その年の 2 人の営業担当者を表す 2 行があります。 これら 2 行の合計売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。  
   
 ```  
 SELECT BusinessEntityID, TerritoryID   

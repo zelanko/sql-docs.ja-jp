@@ -62,7 +62,7 @@ TYPE_NAME ( type_id )
  システム関数は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 詳しくは、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」および「[WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)」をご覧ください。  
   
 ## <a name="examples"></a>例  
- 次の例では、`Vendor` データベースの [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルにある各列の、オブジェクト名、列名、型名を返します。  
+ 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの `Vendor` テーブルにある各列の、オブジェクト名、列名、型名を返します。  
   
 ```  
 SELECT o.name AS obj_name, c.name AS col_name,  
@@ -92,7 +92,7 @@ Vendor          PurchasingWebServiceURL  nvarchar
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例では、ID が `TYPE ID` のデータ型の `1` が返されます。  
+ 次の例では、ID が `1` のデータ型の `TYPE ID` が返されます。  
   
 ```  
 SELECT TYPE_NAME(36) AS Type36, TYPE_NAME(239) AS Type239;  

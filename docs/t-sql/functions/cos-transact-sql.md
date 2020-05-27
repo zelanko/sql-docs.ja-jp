@@ -41,7 +41,7 @@ COS ( float_expression )
   
 ## <a name="arguments"></a>引数  
 *float_expression*  
-[float](../../t-sql/language-elements/expressions-transact-sql.md) 型の**式**を指定します。
+**float** 型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。
   
 ## <a name="return-types"></a>戻り値の型
 **float**

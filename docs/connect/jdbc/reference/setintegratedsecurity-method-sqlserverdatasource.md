@@ -40,7 +40,7 @@ public void setIntegratedSecurity(boolean enable)
  integratedSecurity が有効である場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="remarks"></a>解説  
- アプリケーションのユーザーを認証するために  **によって Windows 資格情報が使用されることを示す場合は、"** true[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]" に設定します。 "**true**" の場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] では、コンピューターまたはネットワーク ログオン時に提供された資格情報を見つけるために、ローカル コンピューターの資格情報のキャッシュが検索されます。 "**false**" の場合は、ユーザー名とパスワードを指定する必要があります。  
+ アプリケーションのユーザーを認証するために [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって Windows 資格情報が使用されることを示す場合は、"**true**" に設定します。 "**true**" の場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] では、コンピューターまたはネットワーク ログオン時に提供された資格情報を見つけるために、ローカル コンピューターの資格情報のキャッシュが検索されます。 "**false**" の場合は、ユーザー名とパスワードを指定する必要があります。  
   
 > [!NOTE]  
 >  このプロパティは、[!INCLUDE[msCoName](../../../includes/msconame_md.md)] Windows オペレーティング システムのみでサポートされています。  

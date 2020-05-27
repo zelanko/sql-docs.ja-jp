@@ -142,7 +142,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 ## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-schema-and-granting-permissions"></a>A. スキーマを作成して、権限を付与する  
- 次の例では、`Sprockets` が所有するスキーマ `Annik` を作成します。このスキーマにはテーブル `NineProngs` が含まれます。 このステートメントでは、`SELECT` に対して `Mandar` を許可し、`SELECT` に対して `Prasanna` を拒否します。 `Sprockets` と `NineProngs` は単一のステートメントで作成されることに注意してください。  
+ 次の例では、`Annik` が所有するスキーマ `Sprockets` を作成します。このスキーマにはテーブル `NineProngs` が含まれます。 このステートメントでは、`SELECT` に対して `Mandar` を許可し、`SELECT` に対して `Prasanna` を拒否します。 `Sprockets` と `NineProngs` は単一のステートメントで作成されることに注意してください。  
   
 ```  
 USE AdventureWorks2012;  
@@ -171,7 +171,7 @@ GO
 ```  
   
 ### <a name="c-setting-the-owner-of-a-schema"></a>C. スキーマの所有者を設定する  
- 次の例では、`Production` が所有するスキーマ `Mary` を作成します。  
+ 次の例では、`Mary` が所有するスキーマ `Production` を作成します。  
   
 ```  
 CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  

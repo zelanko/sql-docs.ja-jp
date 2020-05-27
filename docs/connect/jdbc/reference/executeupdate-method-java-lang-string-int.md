@@ -25,7 +25,7 @@ ms.locfileid: "67954755"
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate (java.lang.String, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  渡された SQL ステートメントを実行し、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]SQLServerStatement[ オブジェクトによって自動生成されたキーを検索可能にするかどうかについて、渡されたフラグを使用して ](../../../connect/jdbc/reference/sqlserverstatement-class.md) に通知します。  
+  渡された SQL ステートメントを実行し、[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトによって自動生成されたキーを検索可能にするかどうかについて、渡されたフラグを使用して [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に通知します。  
   
 ## <a name="syntax"></a>構文  
   

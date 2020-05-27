@@ -43,13 +43,13 @@ ASCII ( character_expression )
   
 ## <a name="arguments"></a>引数  
 *character_expression*  
-[char](../../t-sql/language-elements/expressions-transact-sql.md) 型または **varchar** 型の**式**。
+**char** 型または **varchar** 型の[式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>戻り値の型
  **int**  
   
 ## <a name="remarks"></a>解説
-ASCII は、情報交換用米国標準コード (**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange) の略語です。 最新のコンピューター上で文字エンコード標準として機能します。 ASCII 文字の一覧については、「**ASCII**」の[印刷可能文字](https://www.wikipedia.org/wiki/ASCII)に関するセクションを参照してください。
+ASCII は、情報交換用米国標準コード (**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange) の略語です。 最新のコンピューター上で文字エンコード標準として機能します。 ASCII 文字の一覧については、「[ASCII](https://www.wikipedia.org/wiki/ASCII)」の**印刷可能文字**に関するセクションを参照してください。
 
 ASCII は 7 ビット文字セットです。 拡張 ASCII または高 ASCII は、`ASCII` 関数によって処理されない 8 ビット文字セットです。 
 

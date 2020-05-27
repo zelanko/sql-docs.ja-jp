@@ -40,7 +40,7 @@ ms.locfileid: "68117523"
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  **のインスタンスを実行しているコンピューターの日付と時刻を含む**datetimeoffset(7)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値を返します。 タイム ゾーン オフセットが含まれます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行しているコンピューターの日付と時刻を含む **datetimeoffset(7)** 値を返します。 タイム ゾーン オフセットが含まれます。  
   
  すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付および時刻のデータ型と関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   

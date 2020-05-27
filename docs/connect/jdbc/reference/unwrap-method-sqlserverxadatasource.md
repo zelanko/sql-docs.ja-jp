@@ -45,7 +45,7 @@ public <T> T unwrap(Class<T> iface)
   
  アプリケーションは [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に固有の JDBC API 拡張機能にアクセスする必要がある場合があります。 unwrap メソッドは、クラスがベンダー拡張を公開する場合、このオブジェクトが拡張するパブリック クラスへのアンラッピングをサポートします。  
   
- [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) クラスは、[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) クラスから拡張された [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスを拡張します。 このメソッドが呼び出されると、オブジェクトは [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)、および [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) の各クラスにアンラップされます。  
+ [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) クラスは、[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスから拡張された [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) クラスを拡張します。 このメソッドが呼び出されると、オブジェクトは [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)、および [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) の各クラスにアンラップされます。  
   
  詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
   

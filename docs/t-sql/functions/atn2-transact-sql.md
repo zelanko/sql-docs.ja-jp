@@ -42,7 +42,7 @@ ATN2 ( float_expression , float_expression )
   
 ## <a name="arguments"></a>引数  
 *float_expression*  
-[float](../../t-sql/language-elements/expressions-transact-sql.md) データ型の**式**。
+**float** データ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>戻り値の型
 **float**

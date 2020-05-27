@@ -25,10 +25,10 @@ ms.locfileid: "67971993"
 # <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>SQLServerBlob コンストラクター (SQLServerConnection, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverblob-class.md) オブジェクトと [byte](../../../connect/jdbc/reference/sqlserverconnection-class.md) 配列が渡されたときに、**SQLServerBlob** クラスの新しいインスタンスを初期化します。  
+  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトと **byte** 配列が渡されたときに、[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md) クラスの新しいインスタンスを初期化します。  
   
 > [!NOTE]  
->  このメソッドは、JDBC Driver Version 2.0 では非推奨とされました。 代わりに、[SQLServerConnection](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md) クラスの [createBlob](../../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドを使用してください。  
+>  このメソッドは、JDBC Driver Version 2.0 では非推奨とされました。 代わりに、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   

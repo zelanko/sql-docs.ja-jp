@@ -388,7 +388,7 @@ GO
 ```  
   
 ### <a name="d-using-output-into-to-return-an-expression"></a>D. OUTPUT INTO を使用して式を返す  
- 次の例は例 C を基に構築され、更新後の `OUTPUT` の値と更新が適用される前の `VacationHours` の値の差として、`VacationHours` 句の中で式を定義しています。 この式の値は、`@MyTableVar``table` 列の `VacationHoursDifference` 変数に返されます。  
+ 次の例は例 C を基に構築され、更新後の `VacationHours` の値と更新が適用される前の `VacationHours` の値の差として、`OUTPUT` 句の中で式を定義しています。 この式の値は、`VacationHoursDifference` 列の `@MyTableVar``table` 変数に返されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -422,7 +422,7 @@ GO
 ```  
   
 ### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>E. OUTPUT INTO を UPDATE ステートメント内で from_table_name と共に使用する  
- 次の例は、`ScrapReasonID` テーブルの `WorkOrder` 列の、指定された `ProductID` と `ScrapReasonID` を持つすべての作業指示を更新します。 `OUTPUT INTO` 句は、更新するテーブルの値 (`WorkOrder`) と、`Product` テーブルの値を返します。 更新する行を指定するために、`Product` テーブルを `FROM` 句の中で使用します。 `WorkOrder` テーブルには `AFTER UPDATE` トリガーが定義されているため、`INTO` キーワードが必要です。  
+ 次の例は、`WorkOrder` テーブルの `ScrapReasonID` 列の、指定された `ProductID` と `ScrapReasonID` を持つすべての作業指示を更新します。 `OUTPUT INTO` 句は、更新するテーブルの値 (`WorkOrder`) と、`Product` テーブルの値を返します。 更新する行を指定するために、`Product` テーブルを `FROM` 句の中で使用します。 `WorkOrder` テーブルには `AFTER UPDATE` トリガーが定義されているため、`INTO` キーワードが必要です。  
   
 ```  
 USE AdventureWorks2012;  
@@ -630,7 +630,7 @@ GO
 ```  
   
 ### <a name="k-inserting-data-returned-from-an-output-clause"></a>K. OUTPUT 句から返されたデータを挿入する  
- 次の例では、`OUTPUT` ステートメントの `MERGE` 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 `MERGE` ステートメントは、`Quantity` テーブル内で処理された注文に基づいて、`ProductInventory` テーブルの `SalesOrderDetail` 列を毎日更新します。 また、在庫が `0` 以下になった製品の行を削除します。 この例では、削除された行をキャプチャし、在庫がない製品を追跡する別のテーブル `ZeroInventory` に挿入します。  
+ 次の例では、`OUTPUT` ステートメントの `MERGE` 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 `MERGE` ステートメントは、`SalesOrderDetail` テーブル内で処理された注文に基づいて、`ProductInventory` テーブルの `Quantity` 列を毎日更新します。 また、在庫が `0` 以下になった製品の行を削除します。 この例では、削除された行をキャプチャし、在庫がない製品を追跡する別のテーブル `ZeroInventory` に挿入します。  
   
 ```  
 USE AdventureWorks2012;  

@@ -231,7 +231,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 Sysadmin 固定サーバー ロールまたは db_owner 固定データベース ロールのメンバーシップが必要です。
   
 ## <a name="examples"></a>例  
-次の例では、現在のデータベースと `DBCC CHECKALLOC` データベースに対して `AdventureWorks2012` を実行します。
+次の例では、現在のデータベースと `AdventureWorks2012` データベースに対して `DBCC CHECKALLOC` を実行します。
   
 ```sql  
 -- Check the current database.  

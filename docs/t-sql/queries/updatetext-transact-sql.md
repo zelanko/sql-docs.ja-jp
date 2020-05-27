@@ -33,7 +33,7 @@ ms.locfileid: "67948222"
   既存の **text**、**ntext**、または **image** フィールドを更新します。 **text**、**ntext**、または **image** 型の列の一部だけを適切に変更するには、UPDATETEXT を使用します。 **text**、**ntext**、または **image** 型のフィールド全体を更新して置き換えるには、WRITETEXT を使用します。  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、large-value データ型と **UPDATE** ステートメントの [.](../../t-sql/queries/update-transact-sql.md)WRITE 句を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、large-value データ型と [UPDATE](../../t-sql/queries/update-transact-sql.md) ステートメントの **.** WRITE 句を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,7 +66,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  更新の開始位置を 0 を起点として指定します。 **text** または **image** 型の列の場合、*insert_offset* には、既存の列の開始位置から新しいデータの開始位置までにスキップするバイト数を指定します。 **Ntext** 列の場合、*insert_offset* は文字数です (各 **ntext** 文字は 2 バイトを使用します)。 この 0 を起点とした開始位置から始まる既存の **text**、**ntext**、または **image** 型の各データは、新しいデータの分だけ右に移動します。 値 0 を指定した場合、新しいデータは既存のデータの先頭に挿入されます。 NULL の場合、新しいデータは既存のデータの最後に追加されます。  
   
  *delete_length*  
- 既存の**text**、**ntext**、または **image** 型の列で、*insert_offset* で指定した位置から後にある、削除するデータの長さを指定します。 *delete_length* 値は、**text** および **image** 型の列ではバイト単位で指定され、**ntext** 型の列では文字数で指定されます。 各 **ntext** 文字は 2 バイトを使用します。 値 0 を指定した場合、データは削除されません。 NULL の場合、既存の *text* 型または **image** 型の列で、**insert_offset** の位置から終わりまでのすべてのデータが削除されます。  
+ 既存の**text**、**ntext**、または **image** 型の列で、*insert_offset* で指定した位置から後にある、削除するデータの長さを指定します。 *delete_length* 値は、**text** および **image** 型の列ではバイト単位で指定され、**ntext** 型の列では文字数で指定されます。 各 **ntext** 文字は 2 バイトを使用します。 値 0 を指定した場合、データは削除されません。 NULL の場合、既存の **text** 型または **image** 型の列で、*insert_offset* の位置から終わりまでのすべてのデータが削除されます。  
   
  WITH LOG  
  ログ記録は、データベースで有効になっている復旧モデルによって異なります。  

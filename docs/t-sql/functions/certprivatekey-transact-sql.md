@@ -79,7 +79,7 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-[CERTPRIVATEKEY](../../t-sql/functions/certencoded-transact-sql.md) と **CERTENCODED** を使用して証明書を別のデータベースにコピーするより複雑な例については、 **CERTENCODED &#40;Transact-SQL&#41;** の例 B を参照してください。
+**CERTPRIVATEKEY** と **CERTENCODED** を使用して証明書を別のデータベースにコピーするより複雑な例については、 [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) の例 B を参照してください。
   
 ## <a name="see-also"></a>参照
 [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

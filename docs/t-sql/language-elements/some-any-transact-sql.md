@@ -60,7 +60,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **Boolean**  
   
 ## <a name="result-value"></a>結果の値  
- 指定された比較が (**scalar_expression** _,_ **x**) の任意の組で _TRUE_ の場合、SOME または ANY から TRUE が返されます。ここで、*x* は単一列セットの中の値です。それ以外の場合は、**FALSE** が返されます。  
+ 指定された比較が (_scalar_expression_ **,** _x_) の任意の組で **TRUE** の場合、SOME または ANY から TRUE が返されます。ここで、*x* は単一列セットの中の値です。それ以外の場合は、**FALSE** が返されます。  
   
 ## <a name="remarks"></a>解説  
  SOME の場合、*scalar_expression* ではサブクエリによって返される 1 つ以上の値に対し肯定的な比較を行う必要があります。 サブクエリによって返されるすべての値に対し肯定的な比較を行うために *scalar_expression* を必要とするステートメントについては、「[ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).」を参照してください。 たとえば、*scalar_express* を 2 とすると、サブクエリによって値 2 と 3 が返される場合、*scalar_expression* = SOME (subquery) は TRUE と評価されます。 サブクエリによって値 2 と値 3 が返される場合、*scalar_expression* = ALL (subquery) は FALSE と評価されます。これは、サブクエリのいくつかの値 (値 3) が式の条件を満たさないためです。  
@@ -80,7 +80,7 @@ INSERT T1 VALUES (3) ;
 INSERT T1 VALUES (4) ;  
 ```  
   
- テーブルには`TRUE` より大きい値があるため、次のクエリは `3` を返します。  
+ テーブルには`3` より大きい値があるため、次のクエリは `TRUE` を返します。  
   
 ```  
 IF 3 < SOME (SELECT ID FROM T1)  

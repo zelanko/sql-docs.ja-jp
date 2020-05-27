@@ -21,7 +21,7 @@ ms.locfileid: "69027821"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-この [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] サンプル アプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]getCharacterStream[ メソッドを使用して ](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) データベースから大きな単一列値を取得する方法を示します。
+この [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] サンプル アプリケーションでは、[getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) メソッドを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースから大きな単一列値を取得する方法を示します。
 
 このサンプルのコード ファイルは ReadLargeData.java という名前で、次の場所にあります。
 
@@ -40,7 +40,7 @@ ms.locfileid: "69027821"
 
 次の例のサンプル コードでは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] データベースへの接続を行います。 次に、サンプル データを作成し、パラメーター化クエリを使用して Production.Document テーブルを更新します。
 
-さらに、このサンプル コードでは、[SQLServerStatement](../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) クラスの [getResponseBuffering](../../connect/jdbc/reference/sqlserverstatement-class.md) メソッドを使用してアダプティブ バッファリング モードを取得する方法も示されています。 JDBC Driver Version 2.0 リリース以降では、responseBuffering 接続プロパティが既定で "adaptive" に設定されていることに注意してください。
+さらに、このサンプル コードでは、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [getResponseBuffering](../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) メソッドを使用してアダプティブ バッファリング モードを取得する方法も示されています。 JDBC Driver Version 2.0 リリース以降では、responseBuffering 接続プロパティが既定で "adaptive" に設定されていることに注意してください。
 
 次に、サンプル コードでは、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトで SQL ステートメントを使用して、SQL ステートメントを実行し、返されたデータを [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトに配置します。
 

@@ -38,8 +38,8 @@ ms.locfileid: "67970874"
   
 |Name|説明|  
 |----------|-----------------|  
-|[getParameterClassName](../../../connect/jdbc/reference/getparameterclassname-method-sqlserverparametermetadata.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) クラスの [setObject](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) メソッドにインスタンスを渡す必要のある、Java クラスの完全修飾名を取得します。|  
-|[getParameterCount](../../../connect/jdbc/reference/getparametercount-method-sqlserverparametermetadata.md)|[SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトに情報が含まれる [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) オブジェクトのパラメーター数を取得します。|  
+|[getParameterClassName](../../../connect/jdbc/reference/getparameterclassname-method-sqlserverparametermetadata.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスの [setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) メソッドにインスタンスを渡す必要のある、Java クラスの完全修飾名を取得します。|  
+|[getParameterCount](../../../connect/jdbc/reference/getparametercount-method-sqlserverparametermetadata.md)|[SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) オブジェクトに情報が含まれる [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトのパラメーター数を取得します。|  
 |[getParameterMode](../../../connect/jdbc/reference/getparametermode-method-sqlserverparametermetadata.md)|指定されたパラメーターのモードを取得します。|  
 |[getParameterType](../../../connect/jdbc/reference/getparametertype-method-sqlserverparametermetadata.md)|指定されたパラメーターの SQL 型を取得します。|  
 |[getParameterTypeName](../../../connect/jdbc/reference/getparametertypename-method-sqlserverparametermetadata.md)|指定されたパラメーターのデータベース固有の型名を取得します。|  

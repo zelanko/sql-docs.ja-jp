@@ -26,7 +26,7 @@ ms.locfileid: "78896597"
 SQL Server の一括コピー操作を実行する最も簡単な方法は、データベースに対して単一操作を実行することです。 既定では、一括コピー操作は分離された操作として実行されます。このコピー操作は非トランザクション方式で処理され、ロールバックできません。  
   
 > [!NOTE]
->  エラーの発生時に一括コピー処理の全部または一部をロールバックする必要がある場合は、<xref:Microsoft.Data.SqlClient.SqlBulkCopy> により管理されるトランザクションを使用するか、既存のトランザクション内で一括コピー操作を実行できます。 **SqlBulkCopy** は、<xref:System.Transactions>System.Transactions**トランザクションに (明示的または暗黙的に) 接続が参加している場合は** も使用します。  
+>  エラーの発生時に一括コピー処理の全部または一部をロールバックする必要がある場合は、<xref:Microsoft.Data.SqlClient.SqlBulkCopy> により管理されるトランザクションを使用するか、既存のトランザクション内で一括コピー操作を実行できます。 **SqlBulkCopy** は、**System.Transactions** トランザクションに (明示的または暗黙的に) 接続が参加している場合は <xref:System.Transactions> も使用します。  
 >   
 >  詳細については、「[トランザクションと一括コピー操作](transaction-bulk-copy-operations.md)」を参照してください。  
   

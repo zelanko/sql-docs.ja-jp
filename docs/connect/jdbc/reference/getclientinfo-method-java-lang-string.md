@@ -45,7 +45,7 @@ public java.lang.String getClientInfo (java.lang.String name)
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] では、クライアント情報のプロパティはサポートされていません。 そのため、このメソッドでは **null** が返されます。  
   
- 同様に、アプリケーションでは、[SQLServerDatabaseMetaData](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) クラスの [getClientInfoProperties](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) メソッドを使用して、ドライバーがサポートするクライアント情報プロパティの一覧を取得できます。 [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) メソッドでは、空の結果セットが返されます。  
+ 同様に、アプリケーションでは、[SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) クラスの [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) メソッドを使用して、ドライバーがサポートするクライアント情報プロパティの一覧を取得できます。 [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) メソッドでは、空の結果セットが返されます。  
   
 ## <a name="see-also"></a>参照  
  [getClientInfo メソッド &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)   

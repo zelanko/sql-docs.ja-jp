@@ -48,7 +48,7 @@ LEN ( string_expression )
  評価される文字列[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *string_expression* には、文字データまたはバイナリ データの定数、変数、または列を使用できます。  
   
 ## <a name="return-types"></a>戻り値の型  
- **式**が *varchar(max)* 、**nvarchar(max)** 、または **varbinary(max)** データ型の場合は **bigint**。それ以外の場合は **int**。  
+ *式*が **varchar(max)** 、**nvarchar(max)** 、または **varbinary(max)** データ型の場合は **bigint**。それ以外の場合は **int**。  
   
  SC の照合順序を使用する場合、返される整数値では、UTF-16 サロゲート ペアが 1 文字としてカウントされます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   

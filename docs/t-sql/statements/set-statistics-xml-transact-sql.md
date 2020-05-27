@@ -60,7 +60,7 @@ SET STATISTICS XML { ON | OFF }
  SET STATISTICS PROFILE と SET STATISTICS XML は、同時に使用できません。 前者ではテキスト形式の出力が生成され、後者では XML 形式の出力が生成されます。 将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいクエリ実行プランの情報は STATISTICS XML ステートメントでのみ表示され、SET STATISTICS PROFILE ステートメントでは表示されなくなります。  
   
 > [!NOTE]  
->  **で**[実際の実行プランを含める][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を選ぶと、この SET オプションによって XML プラン表示出力が生成されません。 SET オプションを使う前に、 **[実際の実行プランを含める]** ボタンの選択を解除してください。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[実際の実行プランを含める]** を選ぶと、この SET オプションによって XML プラン表示出力が生成されません。 SET オプションを使う前に、 **[実際の実行プランを含める]** ボタンの選択を解除してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  SET STATISTICS XML を使用して出力を表示するには、ユーザーに次の権限が必要です。  

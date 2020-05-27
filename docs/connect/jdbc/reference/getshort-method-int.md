@@ -48,7 +48,7 @@ public short getShort(int index)
 ## <a name="remarks"></a>解説  
  この getShort メソッドは、java.sql.CallableStatement インターフェイスの getShort メソッドで規定されています。  
   
- このメソッドは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]smallint **、** tinyint **、** bit**などの整数値を安全に返すことができる** データ型でのみサポートされます。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
+ このメソッドは、**smallint**、**tinyint**、**bit** などの整数値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型でのみサポートされます。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [getShort メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)   

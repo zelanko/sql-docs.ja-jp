@@ -49,7 +49,7 @@ public final void setMaxRows(int max)
   
  setMaxRows メソッドが呼び出されると、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] ではアプリケーションのクエリの実行時に SET ROWCOUNT SQL ステートメントが実行されます。 これにより、そのクエリによって返される行の数だけでなく、そのクエリで実行されるすべての [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントによって影響を受ける行の最大数も JDBC ドライバーによって制限されます。 アプリケーションで最上位の [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトに対してのみ制限を設定する必要がある場合は、setMaxRows メソッドではなく、SELECT TOP N SQL 構文をクエリで使用してください。  
   
- SET ROWCOUNT SQL ステートメントの詳細については、[ オンライン ブックの「](https://go.microsoft.com/fwlink/?LinkId=139522)SET ROWCOUNT (Transact-SQL)[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]」を参照してください。  
+ SET ROWCOUNT SQL ステートメントの詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの「[SET ROWCOUNT (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=139522)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

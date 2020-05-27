@@ -50,7 +50,7 @@ ms.locfileid: "69028235"
   
  アプリケーションの動作が **sendTimeAsDatetime** 接続プロパティの既定値に左右されないようにするための対策としては、次のような方法があります。  
   
--   **の**time[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を使用する場合は java.sql.Time を使用する。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **time** データ型を使用する場合は java.sql.Time を使用する。  
   
 -   **datetime**、**smalldatetime**、および **datetime2**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を操作する場合は、java.sql.Timestamp を使用する。  
   

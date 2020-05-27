@@ -25,7 +25,7 @@ ms.locfileid: "67980382"
 # <a name="getresultsetconcurrency-method-sqlserverstatement"></a>getResultSetConcurrency メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトによって生成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの結果セットのコンカレンシーを取得します。  
+  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトによって生成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの結果セットのコンカレンシーを取得します。  
   
 ## <a name="syntax"></a>構文  
   

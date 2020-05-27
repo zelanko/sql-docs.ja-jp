@@ -138,7 +138,7 @@ ms.locfileid: "70929695"
 
 インデックスで非効率なパフォーマンスを回避する方法の例を紹介します。
 
-`Customers` に主キーが、列 `CustomerId`にインデックスがある `CustomerCategoryID` テーブルを考えてみてください。 一般的に、特定のカテゴリに多くの顧客がいます。 そのため、インデックスの特定のキー内には、CustomerCategoryID の重複値がたくさんできます。
+`CustomerId` に主キーが、列 `CustomerCategoryID`にインデックスがある `Customers` テーブルを考えてみてください。 一般的に、特定のカテゴリに多くの顧客がいます。 そのため、インデックスの特定のキー内には、CustomerCategoryID の重複値がたくさんできます。
 
 このシナリオでは、`(CustomerCategoryID, CustomerId)` で非クラスター化インデックスを使用することを推奨します。 このインデックスは、`CustomerCategoryID` を伴う述語を使用するクエリに使用できます。それでも、インデックス キーには重複が含まれません。 そのため、重複する CustomerCategoryID 値やインデックスの追加列によりインデックスの保守管理が非効率になることはありません。
 

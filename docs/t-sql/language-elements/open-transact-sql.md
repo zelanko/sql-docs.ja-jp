@@ -31,7 +31,7 @@ ms.locfileid: "68121934"
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー カーソルをオープンし、DECLARE CURSOR または SET [!INCLUDE[tsql](../../includes/tsql-md.md)]cursor_variable*ステートメントで指定される* ステートメントを実行することによって、カーソルを生成します。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー カーソルをオープンし、DECLARE CURSOR または SET *cursor_variable* ステートメントで指定される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することによって、カーソルを生成します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -48,7 +48,7 @@ ms.locfileid: "68026412"
   
 この関数には、等価な ANSI SQL [GETDATE](../../t-sql/functions/getdate-transact-sql.md)です。
   
-[ の日付と時刻のデータ型と関数については、](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日付と時刻のデータ型と関数[!INCLUDE[tsql](../../includes/tsql-md.md)]に関するページで概要をご覧ください。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のデータ型と関数については、[日付と時刻のデータ型と関数](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)に関するページで概要をご覧ください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -65,7 +65,7 @@ CURRENT_TIMESTAMP
 **datetime**
   
 ## <a name="remarks"></a>解説  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]datetime`CURRENT_TIMESTAMP` 式を参照できる場所であれば、**ステートメントは** を参照できます。
+**datetime** 式を参照できる場所であれば、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは `CURRENT_TIMESTAMP` を参照できます。
   
 `CURRENT_TIMESTAMP` は非決定論的関数です。 この列を参照するビューと式には、インデックスを付けることができません。
   

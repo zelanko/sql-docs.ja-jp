@@ -26,7 +26,7 @@ ms.locfileid: "67955129"
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) クラスの [rowDeleted](../../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを呼び出すことで可視の行が削除されたことを検出できるかどうかを取得します。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) メソッドを呼び出すことで可視の行が削除されたことを検出できるかどうかを取得します。  
   
 ## <a name="syntax"></a>構文  
   

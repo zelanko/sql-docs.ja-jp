@@ -78,7 +78,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  ステートメントの実行時エラー以外のエラーによりトランザクションを正常に完了できない場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] によってトランザクションが自動的にロールバックされ、そのトランザクションで保持されていたすべてのリソースが解放されます。 たとえば、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] のインスタンスへのクライアントのネットワーク接続が切断された場合、またはクライアントがアプリケーションからログオフした場合、ネットワークからインスタンスにこの切断が通知されると、その接続に対する未処理のトランザクションがすべてロールバックされます。  
   
- バッチでステートメントの実行時エラーが発生した場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ON**に設定された** **XACT_ABORT** と一致する動作をし、トランザクション全体がロールバックされます。 **XACT_ABORT** 設定の詳細については、「[SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)」を参照してください。  
+ バッチでステートメントの実行時エラーが発生した場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は **ON** に設定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** と一致する動作をし、トランザクション全体がロールバックされます。 **XACT_ABORT** 設定の詳細については、「[SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)」を参照してください。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  セッションで実行できるトランザクション数は一度に 1 つのみです。セーブ ポイントと入れ子になったトランザクションはサポートされません。  

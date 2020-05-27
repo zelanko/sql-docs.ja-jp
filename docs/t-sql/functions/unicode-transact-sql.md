@@ -48,7 +48,7 @@ UNICODE ( 'ncharacter_expression' )
 **int**  
   
 ## <a name="remarks"></a>解説  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、UNICODE 関数で 000000 ～ 00FFFF の範囲の UCS-2 コードポイントが返されます。これにより、Unicode Basic Multilingual Plane (BMP) で 65,535 文字を表現できます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) が有効になっている照合順序を使用すると、UNICODE では 000000 から 10FFFF の範囲の UTF-16 コードポイントが返されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]の Unicode サポートの詳細については、[照合順序および Unicode サポートに関するページ](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn)を参照してください。 
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、UNICODE 関数で 000000 ～ 00FFFF の範囲の UCS-2 コードポイントが返されます。これにより、Unicode Basic Multilingual Plane (BMP) で 65,535 文字を表現できます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) が有効になっている照合順序を使用すると、UNICODE では 000000 から 10FFFF の範囲の UTF-16 コードポイントが返されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]の Unicode サポートの詳細については、[照合順序および Unicode サポートに関するページ](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn)を参照してください。 
   
 ## <a name="examples"></a>例  
   

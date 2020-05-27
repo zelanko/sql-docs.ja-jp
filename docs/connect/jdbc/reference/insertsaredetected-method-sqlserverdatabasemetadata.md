@@ -25,7 +25,7 @@ ms.locfileid: "67977876"
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>insertsAreDetected メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) クラスの [rowInserted](../../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを呼び出すことで、可視の行が挿入されたことを検出できるかどうかが取得されます。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) メソッドを呼び出すことで、可視の行が挿入されたことを検出できるかどうかが取得されます。  
   
 ## <a name="syntax"></a>構文  
   

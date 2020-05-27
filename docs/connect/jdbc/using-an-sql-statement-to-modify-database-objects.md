@@ -21,9 +21,9 @@ ms.locfileid: "69026562"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-SQL ステートメントを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトを変更するには、[SQLServerStatement](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) クラスの [executeUpdate](../../connect/jdbc/reference/sqlserverstatement-class.md) メソッドを使用します。 executeUpdate メソッドは、SQL ステートメントをデータベースに渡して処理し、影響を受けた行がないために値 0 を返します。
+SQL ステートメントを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトを変更するには、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) メソッドを使用します。 executeUpdate メソッドは、SQL ステートメントをデータベースに渡して処理し、影響を受けた行がないために値 0 を返します。
 
-この場合、最初に [SQLServerConnection](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) クラスの [createStatement](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドを使用して、SQLServerStatement オブジェクトを作成する必要があります。
+この場合、最初に [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) メソッドを使用して、SQLServerStatement オブジェクトを作成する必要があります。
 
 > [!NOTE]  
 > データベース内のオブジェクトを変更する SQL ステートメントは、データ定義言語 (DDL) ステートメントと呼ばれます。 これには、`CREATE TABLE`、`DROP TABLE`、`CREATE INDEX`、`DROP INDEX` などのステートメントが含まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされる DDL ステートメントの種類の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックを参照してください。

@@ -133,7 +133,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 >  これらの例をコピーして実行するには、この GUID をお使いのコンピューターおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの GUID に置き換える必要があります。 前述の「引数」セクションで説明したように、sys.databases カタログ ビューの service_broker_guid 列に対してクエリを実行することで **'** _broker\_instance\_specifier_ **'** を取得することができます。  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. サーバー スコープのイベント通知を作成する  
- 次の例では、[!INCLUDE[ssSB](../../includes/sssb-md.md)] を使用する対象サービスの設定で必要となるオブジェクトを作成します。 対象サービスでは、イベント通知専用の開始サービスのメッセージ型とコントラクトが参照されます。 作成後は、`Object_Created` インスタンスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トレース イベントが発生するたびに通知を送信する対象サービスに対して、イベント通知が作成されます。  
+ 次の例では、[!INCLUDE[ssSB](../../includes/sssb-md.md)] を使用する対象サービスの設定で必要となるオブジェクトを作成します。 対象サービスでは、イベント通知専用の開始サービスのメッセージ型とコントラクトが参照されます。 作成後は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで `Object_Created` トレース イベントが発生するたびに通知を送信する対象サービスに対して、イベント通知が作成されます。  
   
 ```sql  
 --Create a queue to receive messages.  
@@ -160,7 +160,7 @@ TO SERVICE 'NotifyService',
 ```  
   
 ### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>B. データベース スコープのイベント通知を作成する  
- 次の例では、前の例と同じターゲット サービスに対してイベント通知を作成します。 イベント通知は、`ALTER_TABLE` サンプル データベースで [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] イベントが発生した後に行われます。  
+ 次の例では、前の例と同じターゲット サービスに対してイベント通知を作成します。 イベント通知は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースで `ALTER_TABLE` イベントが発生した後に行われます。  
   
 ```sql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  

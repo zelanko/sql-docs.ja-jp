@@ -133,7 +133,7 @@ AS *granting_principal*
 ## <a name="examples"></a>例  
   
 ### <a name="a-granting-permissions-to-a-full-text-catalog"></a>A. フルテキスト カタログに対する権限を許可する  
- 次の例では、フルテキスト カタログ `Ted` に対する `CONTROL` 権限を `ProductCatalog` に許可します。  
+ 次の例では、フルテキスト カタログ `ProductCatalog` に対する `CONTROL` 権限を `Ted` に許可します。  
   
 ```  
 GRANT CONTROL  
@@ -142,7 +142,7 @@ GRANT CONTROL
 ```  
   
 ### <a name="b-granting-permissions-to-a-stoplist"></a>B. ストップリストに対する権限を許可する  
- 次の例では、フルテキスト ストップリスト `Mary` に対する `VIEW DEFINITION` 権限を `ProductStoplist` に許可します。  
+ 次の例では、フルテキスト ストップリスト `ProductStoplist` に対する `VIEW DEFINITION` 権限を `Mary` に許可します。  
   
 ```  
 GRANT VIEW DEFINITION  

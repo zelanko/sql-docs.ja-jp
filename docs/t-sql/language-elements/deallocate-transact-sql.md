@@ -43,7 +43,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
   
 ## <a name="arguments"></a>引数  
  *cursor_name*  
- 宣言済みのカーソル名を指定します。 *cursor_name* という名前のカーソルとして、グローバル カーソルとローカル カーソルの両方がある場合は、*を指定すると*cursor_name`GLOBAL` ではグローバル カーソルが参照され、`GLOBAL` を指定しないとローカル カーソルが参照されます。  
+ 宣言済みのカーソル名を指定します。 *cursor_name* という名前のカーソルとして、グローバル カーソルとローカル カーソルの両方がある場合は、`GLOBAL` を指定すると *cursor_name* ではグローバル カーソルが参照され、`GLOBAL` を指定しないとローカル カーソルが参照されます。  
   
  @*cursor_variable_name*  
  **cursor** 変数の名前を指定します。 @*cursor_variable_name* は **cursor** 型である必要があります。  

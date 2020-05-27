@@ -40,7 +40,7 @@ ms.locfileid: "71952347"
 > [!NOTE]
 > **THROW** ステートメントは **SET XACT_ABORT** に従いますが、 **RAISERROR** は従いません。 新しいアプリケーションでは、**RAISERROR** の代わりに **THROW** を使ってください。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントによって実行時エラーが発生した場合に、[!INCLUDE[tsql](../../includes/tsql-md.md)] が自動的に現在のトランザクションをロールバックするかどうかを指定します。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントによって実行時エラーが発生した場合に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が自動的に現在のトランザクションをロールバックするかどうかを指定します。
 
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

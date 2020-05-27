@@ -51,7 +51,7 @@ ms.locfileid: "68086155"
   
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
- [datetime](../../t-sql/language-elements/expressions-transact-sql.md) および **smalldatetime** データ型を除く、数値データ型カテゴリ内のいずれかのデータ型の有効な**式**です。  
+ **datetime** および **smalldatetime** データ型を除く、数値データ型カテゴリ内のいずれかのデータ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 ## <a name="result-types"></a>戻り値の型  
  データ型を返す *numeric_expression*です。  

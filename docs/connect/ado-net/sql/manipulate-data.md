@@ -26,7 +26,7 @@ ms.locfileid: "78896692"
 複数のアクティブな結果セット (MARS) を導入する場合は、開発者が事前に複数の接続またはサーバー側のカーソルを使用して、特定のシナリオを解決しておく必要がありました。 さらに、トランザクションの状況で複数の接続を使用するときは、接続をバインド (**sp_getbindtoken** と **sp_bindsession**) する必要がありました。 次のシナリオは、MARS が有効になっている接続を、複数の接続の代わりに使用する方法を示しています。  
   
 ## <a name="using-multiple-commands-with-mars"></a>MARS を使った複数コマンドの使用  
-次のコンソール アプリケーションは、MARS を有効にして、2 つの <xref:Microsoft.Data.SqlClient.SqlDataReader> オブジェクトと 1 つの <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトを使って、2 つの <xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトを使用する方法を示しています。  
+次のコンソール アプリケーションは、MARS を有効にして、2 つの <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトと 1 つの <xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトを使って、2 つの <xref:Microsoft.Data.SqlClient.SqlDataReader> オブジェクトを使用する方法を示しています。  
   
 ### <a name="example"></a>例  
 この例では、**AdventureWorks** データベースへの 1 つの接続を開きます。 <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトを使用することで、<xref:Microsoft.Data.SqlClient.SqlDataReader> が作成されます。 そのリーダーが使用されるとき、最初の <xref:Microsoft.Data.SqlClient.SqlDataReader> のデータが 2 番目のリーダーの WHERE 句への入力として使用され、2 番目の <xref:Microsoft.Data.SqlClient.SqlDataReader> が開きます。  
@@ -109,7 +109,7 @@ static void Main()
 MARS を使用すると、複数の保留中の操作を使用して、読み取り操作およびデータ操作言語 (DML) 操作の両方に対して接続を使用できます。 この機能により、アプリケーションが接続ビジー エラーを処理する必要がなくなります。 さらに、MARS によって、通常多くのリソースを消費するサーバー側カーソルのユーザーを置き換えることができます。 最後に、複数の操作を単一の接続で実行できるので、同じトランザクション コンテキストを共有することにより、システムのストアド プロシージャである **sp_getbindtoken** と **sp_bindsession** を使用する必要がなくなります。  
   
 ### <a name="example"></a>例  
-次のコンソール アプリケーションは、MARS を有効にして、3 つの <xref:Microsoft.Data.SqlClient.SqlDataReader> オブジェクトと 1 つの <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトを使って、2 つの <xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトを使用する方法を示しています。 最初のコマンド オブジェクトは、信用格付けの評価が 5 であるベンダーの一覧を取得します。 2 番目のコマンド オブジェクトは、<xref:Microsoft.Data.SqlClient.SqlDataReader> から提供されているベンダー ID を使用して、特定のベンダーの全製品を含む 2 番目の <xref:Microsoft.Data.SqlClient.SqlDataReader> を読み込みます。 各製品レコードには、2 番目の <xref:Microsoft.Data.SqlClient.SqlDataReader> によってアクセスされます。 計算が実行され、新規 **OnOrderQty** を判定します。 3 番目のコマンド オブジェクトでは、**ProductVendor** テーブルを新しい値で更新します。 このプロセスはすべて 1 つのトランザクション内で実行され、最後にロールバックされます。  
+次のコンソール アプリケーションは、MARS を有効にして、3 つの <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトと 1 つの <xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトを使って、2 つの <xref:Microsoft.Data.SqlClient.SqlDataReader> オブジェクトを使用する方法を示しています。 最初のコマンド オブジェクトは、信用格付けの評価が 5 であるベンダーの一覧を取得します。 2 番目のコマンド オブジェクトは、<xref:Microsoft.Data.SqlClient.SqlDataReader> から提供されているベンダー ID を使用して、特定のベンダーの全製品を含む 2 番目の <xref:Microsoft.Data.SqlClient.SqlDataReader> を読み込みます。 各製品レコードには、2 番目の <xref:Microsoft.Data.SqlClient.SqlDataReader> によってアクセスされます。 計算が実行され、新規 **OnOrderQty** を判定します。 3 番目のコマンド オブジェクトでは、**ProductVendor** テーブルを新しい値で更新します。 このプロセスはすべて 1 つのトランザクション内で実行され、最後にロールバックされます。  
   
 > [!NOTE]
 >  次の例では、SQL Server に含まれるサンプルの **AdventureWorks** データベースを使用します。 サンプル コードに示されている接続文字列では、データベースがローカル コンピューターにインストールされ、使用可能であることを前提としています。 実際の環境では必要に応じて接続文字列を変更してください。  

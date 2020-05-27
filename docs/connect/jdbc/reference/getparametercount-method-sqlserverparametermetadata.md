@@ -25,7 +25,7 @@ ms.locfileid: "67980992"
 # <a name="getparametercount-method-sqlserverparametermetadata"></a>getParameterCount メソッド (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトに情報が含まれる [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) オブジェクトのパラメーター数を取得します。  
+  [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) オブジェクトに情報が含まれる [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトのパラメーター数を取得します。  
   
 ## <a name="syntax"></a>構文  
   

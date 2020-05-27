@@ -41,9 +41,9 @@ XML インスタンス内の XML ノード (要素や属性など) をクエリ�
 このセクションでは、**xml** データ型の query() メソッドの使用例について説明します。  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. xml 型変数に対する query() メソッドの使用  
-次の例では、**xml\@ 型の変数** **myDoc** を宣言し、XML インスタンスをこれに代入します。 その後 **query()** メソッドを使用して、ドキュメントに対して XQuery を指定します。  
+次の例では、**xml** 型の変数 **\@myDoc** を宣言し、XML インスタンスをこれに代入します。 その後 **query()** メソッドを使用して、ドキュメントに対して XQuery を指定します。  
   
-次のクエリは、<`Features`> 要素の <`ProductDescription`> 子要素を取得します。  
+次のクエリは、<`ProductDescription`> 要素の <`Features`> 子要素を取得します。  
   
 ```  
 declare @myDoc xml  

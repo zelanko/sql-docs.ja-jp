@@ -25,7 +25,7 @@ ms.locfileid: "67969266"
 # <a name="supportsmultipleopenresults-method-sqlserverdatabasemetadata"></a>supportsMultipleOpenResults メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトから同時に返された複数の [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトを持つことが可能かどうかを取得します。  
+  [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトから同時に返された複数の [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを持つことが可能かどうかを取得します。  
   
 ## <a name="syntax"></a>構文  
   

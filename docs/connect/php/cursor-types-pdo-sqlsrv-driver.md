@@ -48,7 +48,7 @@ PDO_SQLSRV ドライバーを使用してカーソルを指定する方法と、
 
 クライアント側のカーソルを使用しているときにバッファーが結果セット全体を保持するために十分な大きさではない場合、クエリから false が返されます。 バッファーのサイズは PHP メモリの上限まで増やすことができます。
 
-`PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE`PDO::setAttribute[ または ](../../connect/php/pdo-setattribute.md)PDOStatement::setAttribute[ の ](../../connect/php/pdostatement-setattribute.md) の属性を使用すると、結果セットを保持するバッファーのサイズを構成することができます。 php.ini ファイルで pdo_sqlsrv.client_buffer_max_kb_size を使用して最大バッファー サイズを設定することもできます (たとえば、pdo_sqlsrv.client_buffer_max_kb_size = 1024)。
+[PDO::setAttribute](../../connect/php/pdo-setattribute.md) または [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) の `PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE` の属性を使用すると、結果セットを保持するバッファーのサイズを構成することができます。 php.ini ファイルで pdo_sqlsrv.client_buffer_max_kb_size を使用して最大バッファー サイズを設定することもできます (たとえば、pdo_sqlsrv.client_buffer_max_kb_size = 1024)。
 
 [PDO::prepare](../../connect/php/pdo-prepare.md) を使用し、`PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` カーソルの種類を指定し、その後 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_BUFFERED` を指定することで、クライアント側のカーソルを要求できます。
 

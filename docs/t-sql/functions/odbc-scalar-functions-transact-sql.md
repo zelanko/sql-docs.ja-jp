@@ -62,7 +62,7 @@ ms.locfileid: "76909832"
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC スカラー関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [ ステートメントでは、](https://go.microsoft.com/fwlink/?LinkID=88579)ODBC スカラー関数[!INCLUDE[tsql](../../includes/tsql-md.md)]を使用できます。 これらのステートメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって解釈されます。 具体的には、ストアド プロシージャやユーザー定義関数の中で、 文字列、数値、時刻、日付、間隔を扱う関数のほか、システム関数を使用することができます。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、[ODBC スカラー関数](https://go.microsoft.com/fwlink/?LinkID=88579)を使用できます。 これらのステートメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって解釈されます。 具体的には、ストアド プロシージャやユーザー定義関数の中で、 文字列、数値、時刻、日付、間隔を扱う関数のほか、システム関数を使用することができます。  
   
 ## <a name="usage"></a>使用法  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  

@@ -57,7 +57,7 @@ WHILE Boolean_expression
   
 ## <a name="arguments"></a>引数  
  *Boolean_expression*  
- [TRUE](../../t-sql/language-elements/expressions-transact-sql.md) または **FALSE** を返す**式**です。 ブール式が SELECT ステートメントを含む場合は、SELECT ステートメントをかっこで囲む必要があります。  
+ **TRUE** または **FALSE** を返す[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 ブール式が SELECT ステートメントを含む場合は、SELECT ステートメントをかっこで囲む必要があります。  
   
  {*sql_statement* | *statement_block*}  
  1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、またはステートメント ブロックとして定義した一連のステートメントです。 ステートメント ブロックを定義するには、流れ制御キーワードの BEGIN と END を使用してください。  

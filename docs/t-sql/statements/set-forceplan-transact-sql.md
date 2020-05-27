@@ -55,7 +55,7 @@ SET FORCEPLAN { ON | OFF }
  SET FORCEPLAN の実行権限は、既定ですべてのユーザーに与えられます。  
   
 ## <a name="examples"></a>例  
- 次の例では、4 つのテーブルの結合を実行します。 `SHOWPLAN_TEXT` が ON に設定されているので、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が ON に設定された後、`SET FORCE_PLAN` は、クエリの処理方法がどのように変更されたかに関する情報を返します。  
+ 次の例では、4 つのテーブルの結合を実行します。 `SHOWPLAN_TEXT` が ON に設定されているので、`SET FORCE_PLAN` が ON に設定された後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、クエリの処理方法がどのように変更されたかに関する情報を返します。  
   
 ```  
 USE AdventureWorks2012;  

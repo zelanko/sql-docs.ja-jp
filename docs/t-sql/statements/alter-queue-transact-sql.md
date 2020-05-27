@@ -191,7 +191,7 @@ ALTER QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. キュー リーダーの数を変更する  
- 次の例では、このキュー用に `7` で起動されるストアド プロシージャ インスタンスの最大数を [!INCLUDE[ssSB](../../includes/sssb-md.md)] に設定します。  
+ 次の例では、このキュー用に [!INCLUDE[ssSB](../../includes/sssb-md.md)] で起動されるストアド プロシージャ インスタンスの最大数を `7` に設定します。  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  

@@ -48,7 +48,7 @@ public java.sql.Time getTime(int index)
 ## <a name="remarks"></a>解説  
  この getTime メソッドは、java.sql.CallableStatement インターフェイスの getTime メソッドで規定されています。  
   
- このメソッドで取得できる [ データ型を確認するには、「](../../../connect/jdbc/understanding-data-type-conversions.md)データ型変換について[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]」の「getter メソッドの変換」というタイトルの図を参照してください。  
+ このメソッドで取得できる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型を確認するには、「[データ型変換について](../../../connect/jdbc/understanding-data-type-conversions.md)」の「getter メソッドの変換」というタイトルの図を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [getTime メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

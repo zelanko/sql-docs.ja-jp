@@ -60,7 +60,7 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
   
  REMOTE_PROC_TRANSACTIONS が OFF の場合、ローカル トランザクションの一部としてリモート ストアド プロシージャは呼び出されません。 リモート ストアド プロシージャによる変更は、ストアド プロシージャの完了時にコミットまたはロールバックされます。 リモート ストアド プロシージャを呼び出した接続によって実行される後続の COMMIT TRANSACTION または ROLLBACK TRANSACTION ステートメントは、ストアド プロシージャによる処理に影響を与えません。  
   
- REMOTE_PROC_TRANSACTIONS オプションは互換性のためのオプションであり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_addserver**でリモート サーバーとして定義された** のインスタンスに対してリモート ストアド プロシージャを呼び出す場合にのみ、影響を及ぼします。 このオプションは、インスタンス上でストアド プロシージャを実行する分散クエリには適用されません。このインスタンスは、**sp_addlinkedserver** でリンク サーバーとして定義されたインスタンスです。  
+ REMOTE_PROC_TRANSACTIONS オプションは互換性のためのオプションであり、**sp_addserver** でリモート サーバーとして定義された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対してリモート ストアド プロシージャを呼び出す場合にのみ、影響を及ぼします。 このオプションは、インスタンス上でストアド プロシージャを実行する分散クエリには適用されません。このインスタンスは、**sp_addlinkedserver** でリンク サーバーとして定義されたインスタンスです。  
   
  SET REMOTE_PROC_TRANSACTIONS は、解析時ではなく実行時に設定されます。  
   

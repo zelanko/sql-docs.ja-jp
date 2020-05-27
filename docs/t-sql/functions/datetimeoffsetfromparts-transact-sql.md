@@ -68,7 +68,7 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 タイム ゾーン オフセットの分部分を指定する整数式。  
   
 *有効桁数 (precision)*  
-**が返す**datetimeoffset`DATETIMEOFFSETFROMPARTS` 値の有効桁数を指定する整数リテラル値です。  
+`DATETIMEOFFSETFROMPARTS` が返す **datetimeoffset** 値の有効桁数を指定する整数リテラル値です。  
   
 ## <a name="return-types"></a>戻り値の型
 **datetimeoffset(** *precision* **)**  

@@ -25,7 +25,7 @@ ms.locfileid: "69025592"
 
 サーバーへの無駄なラウンド トリップを行わないようにするには、ユーザー入力の検証をクライアント コードで行うことが重要です。 同様に、ストアド プロシージャへのパラメータをサーバー上で検証し、有効でない入力や、クライアント側の検証をバイパスする入力を検出することも重要です。
 
-SQL インジェクションと、この攻撃を避ける方法の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「SQL インジェクション」を参照してください。 ストアド プロシージャのパラメーターの検証の詳細については、[!INCLUDE[ssDE](../../includes/ssde_md.md)] オンライン ブックの「ストアド プロシージャ ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])」およびその下位のトピックを参照してください。
+SQL インジェクションと、この攻撃を避ける方法の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「SQL インジェクション」を参照してください。 ストアド プロシージャのパラメーターの検証の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「ストアド プロシージャ ([!INCLUDE[ssDE](../../includes/ssde_md.md)])」およびその下位のトピックを参照してください。
 
 ## <a name="see-also"></a>参照
 

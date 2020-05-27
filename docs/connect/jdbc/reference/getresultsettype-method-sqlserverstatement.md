@@ -25,7 +25,7 @@ ms.locfileid: "67980299"
 # <a name="getresultsettype-method-sqlserverstatement"></a>getResultSetType メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトによって生成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの結果セットの種類を取得します。  
+  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトによって生成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの結果セットの種類を取得します。  
   
 ## <a name="syntax"></a>構文  
   

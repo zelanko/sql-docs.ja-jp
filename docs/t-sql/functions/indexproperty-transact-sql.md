@@ -80,7 +80,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (INDEXPROPERTY など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
- 次の例では、**データベースにある** テーブルの **インデックスについて**IsClustered **、** IndexDepth`PK_Employee_BusinessEntityID`、および `Employee`IndexFillFactor[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] プロパティの値を返します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにある `Employee` テーブルの `PK_Employee_BusinessEntityID` インデックスについて **IsClustered**、**IndexDepth**、および **IndexFillFactor** プロパティの値を返します。  
   
 ```  
 SELECT   

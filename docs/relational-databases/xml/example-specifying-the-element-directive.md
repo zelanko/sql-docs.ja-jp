@@ -32,7 +32,7 @@ ms.locfileid: "68006728"
 </Employee>  
 ```  
   
- クエリも似ていますが、列名に `ELEMENT` ディレクティブを指定する点が異なります。 そのため、<`FName`> 要素には、属性ではなく、<`LName`> 子要素と <`Name`> 子要素が追加されます。 `Employee!1!EmpID` 列では `ELEMENT` ディレクティブが指定されていないので、`EmpID` は <`Employee`> 要素の属性として追加されます。  
+ クエリも似ていますが、列名に `ELEMENT` ディレクティブを指定する点が異なります。 そのため、<`Name`> 要素には、属性ではなく、<`FName`> 子要素と <`LName`> 子要素が追加されます。 `Employee!1!EmpID` 列では `ELEMENT` ディレクティブが指定されていないので、`EmpID` は <`Employee`> 要素の属性として追加されます。  
   
 ```  
 SELECT 1    as Tag,  

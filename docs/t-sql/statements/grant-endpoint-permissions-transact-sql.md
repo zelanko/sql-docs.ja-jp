@@ -96,7 +96,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="examples"></a>例  
   
 ### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>A. エンドポイントの VIEW DEFINITION 権限を許可する  
- 次の例では、エンドポイント `VIEW DEFINITION` での `Mirror7` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に許可します。  
+ 次の例では、エンドポイント `Mirror7` での `VIEW DEFINITION` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に許可します。  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. GRANT OPTION を指定して TAKE OWNERSHIP 権限を許可する  
- 次の例では、エンドポイント `TAKE OWNERSHIP` での `Shipping83` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー `PKomosinski` に許可します。ここでは `GRANT OPTION` を使用します。  
+ 次の例では、エンドポイント `Shipping83` での `TAKE OWNERSHIP` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー `PKomosinski` に許可します。ここでは `GRANT OPTION` を使用します。  
   
 ```  
 USE master;  

@@ -23,7 +23,7 @@ ms.locfileid: "67971071"
 # <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>SQLServerException コンストラクター (java.lang.String, java.lang.String, int, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [string](../../../connect/jdbc/reference/sqlserverexception-class.md) オブジェクト、**string** オブジェクト、**int**、および **throwable** オブジェクトが渡されたときに、**SQLServerException** クラスの新しいインスタンスが初期化されます。
+  **string** オブジェクト、**string** オブジェクト、**int**、および **throwable** オブジェクトが渡されたときに、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) クラスの新しいインスタンスが初期化されます。
 
 ## <a name="syntax"></a>構文  
   

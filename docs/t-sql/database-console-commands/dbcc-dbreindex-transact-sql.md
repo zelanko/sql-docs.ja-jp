@@ -93,7 +93,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>例  
 ### <a name="a-rebuilding-an-index"></a>A. インデックスを再構築する  
-次の例では、`Employee_EmployeeID` データベースの `80` テーブルで、`Employee` クラスター化インデックスを FILL FACTOR `AdventureWorks` で再構築します。
+次の例では、`AdventureWorks` データベースの `Employee` テーブルで、`Employee_EmployeeID` クラスター化インデックスを FILL FACTOR `80` で再構築します。
   
 ```sql  
 USE AdventureWorks2012;   

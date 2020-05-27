@@ -27,7 +27,7 @@ ms.locfileid: "68071169"
 # <a name="insert-sql-graph"></a>INSERT (SQL グラフ)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-`node` で、1 つまたは複数の行を`edge`や[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に追加します。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、1 つまたは複数の行を`node`や`edge`に追加します。 
 
 > [!NOTE]   
 >  標準の Transact-SQL ステートメントについては、「[INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)」を参照してください。

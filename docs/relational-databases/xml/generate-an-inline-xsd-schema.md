@@ -274,9 +274,9 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  このインライン XSD スキーマでは、次の点に注意してください。  
   
--   ListPrice と DealerPrice は `money`という同じ型で、テーブルではどちらも NULL 値が許容されます。 したがって、これらの要素は返される XML に含まれないので、<`Price`> 要素の複合型の宣言には、minOccurs が 0、maxOccurs が 2 に指定された 1 つの <`row`> 子要素のみが含まれます。  
+-   ListPrice と DealerPrice は `money`という同じ型で、テーブルではどちらも NULL 値が許容されます。 したがって、これらの要素は返される XML に含まれないので、<`row`> 要素の複合型の宣言には、minOccurs が 0、maxOccurs が 2 に指定された 1 つの <`Price`> 子要素のみが含まれます。  
   
--   テーブルの `DealerPrice` の値が NULL なので、クエリ結果には、`ListPrice` のみが <`Price`> 要素として返されます。 `XSINIL` パラメーターを ELEMENTS ディレクティブに追加すると、返される両方の要素で、DealerPrice に対応する <`xsi:nil`> 要素の `Price` の値が TRUE に設定されます。 また、インライン XSD スキーマの <`Price`> の複合型の定義として 2 つの <`row`> 子要素が返されます。どちらの要素でも `nillable` 属性が TRUE に設定されます。 結果の一部を次に示します。  
+-   テーブルの `DealerPrice` の値が NULL なので、クエリ結果には、`ListPrice` のみが <`Price`> 要素として返されます。 `XSINIL` パラメーターを ELEMENTS ディレクティブに追加すると、返される両方の要素で、DealerPrice に対応する <`Price`> 要素の `xsi:nil` の値が TRUE に設定されます。 また、インライン XSD スキーマの <`row`> の複合型の定義として 2 つの <`Price`> 子要素が返されます。どちらの要素でも `nillable` 属性が TRUE に設定されます。 結果の一部を次に示します。  
   
  `...`  
   

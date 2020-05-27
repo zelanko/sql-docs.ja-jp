@@ -35,7 +35,7 @@ ms.locfileid: "68119057"
 
 この関数は、指定された *date* の日 (月の日にち) を表す整数を返します。
   
-[ の日付と時刻のあらゆるデータ型と関数に関する概要については、「](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)]」を参照してください。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のあらゆるデータ型と関数に関する概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

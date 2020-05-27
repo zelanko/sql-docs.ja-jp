@@ -35,7 +35,7 @@ public boolean getSendTimeAsDatetime();
  java.sql.Time 値が **の**datetime[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 型としてサーバーに送信される場合は、**true** です。 java.sql.Time 値が **の**time[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 型としてサーバーに送信される場合は、**false** です。  
   
 ## <a name="remarks"></a>解説  
- [sendTimeAsDatetime](../../../connect/jdbc/setting-the-connection-properties.md) 接続プロパティの詳細については、「**接続プロパティの設定**」を参照してください。  
+ **sendTimeAsDatetime** 接続プロパティの詳細については、「[接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。  
   
  [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) を使用すると、**sendTimeAsDatetime** 接続プロパティをプログラムから設定することができます。  
   

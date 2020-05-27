@@ -69,7 +69,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 
 ## <a name="examples"></a>例  
 ### <a name="return-the-hash-of-a-variable"></a>変数のハッシュを返す  
- 次の例では、変数 `SHA2_256` に格納されている **nvarchar** 型のデータの `@HashThis` ハッシュを返します。  
+ 次の例では、変数 `@HashThis` に格納されている **nvarchar** 型のデータの `SHA2_256` ハッシュを返します。  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  
@@ -78,7 +78,7 @@ SELECT HASHBYTES('SHA2_256', @HashThis);
 ```  
   
 ### <a name="return-the-hash-of-a-table-column"></a>テーブル列のハッシュを返す  
- 次の例では、テーブル `c1` 内の列 `Test1` の値の SHA2_256 ハッシュを返します。  
+ 次の例では、テーブル `Test1` 内の列 `c1` の値の SHA2_256 ハッシュを返します。  
   
 ```sql  
 CREATE TABLE dbo.Test1 (c1 nvarchar(32));  

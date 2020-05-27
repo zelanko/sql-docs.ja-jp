@@ -43,7 +43,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 ## <a name="arguments"></a>引数  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]LogSize**プロパティと**PopulateStatus **プロパティは、** の将来のリリースでは削除される予定です。 新しい開発作業では、これらのプロパティの使用は避け、現在これらのプロパティのいずれかを使用しているアプリケーションは修正するようにしてください。  
+>  **LogSize** プロパティと **PopulateStatus** プロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のリリースでは削除される予定です。 新しい開発作業では、これらのプロパティの使用は避け、現在これらのプロパティのいずれかを使用しているアプリケーションは修正するようにしてください。  
   
 _catalog\_name_  
 フルテキスト カタログの名前を含む式を指定します。  

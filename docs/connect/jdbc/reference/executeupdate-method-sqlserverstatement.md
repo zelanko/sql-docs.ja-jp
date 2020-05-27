@@ -32,7 +32,7 @@ ms.locfileid: "67954594"
 |Name|説明|  
 |----------|-----------------|  
 |[executeUpdate (java.lang.String)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string-sqlserverstatement.md)|渡された SQL ステートメントを実行します。ステートメントは INSERT、UPDATE、DELETE、MERGE、または SQL DDL ステートメントのような何も返さない SQL ステートメントが可能です。|  
-|[executeUpdate (java.lang.String, int)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string-int.md)|渡された SQL ステートメントを実行し、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]SQLServerStatement[ オブジェクトによって自動生成されたキーを検索可能にするかどうかについて、渡されたフラグを使用して ](../../../connect/jdbc/reference/sqlserverstatement-class.md) に通知します。|  
+|[executeUpdate (java.lang.String, int)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string-int.md)|渡された SQL ステートメントを実行し、[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトによって自動生成されたキーを検索可能にするかどうかについて、渡されたフラグを使用して [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に通知します。|  
 |[executeUpdate (java.lang.String, int&#91;&#93;)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string.md)|渡された SQL ステートメントを実行し、渡された配列に示される自動生成キーを検索可能にするように、JDBC ドライバーに通知します。|  
 |[executeUpdate (java.lang.String, java.lang.String&#91;&#93;)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string-java-lang-string.md)|渡された SQL ステートメントを実行し、渡された配列に示される自動生成キーを検索可能にするように、JDBC ドライバーに通知します。|  
   

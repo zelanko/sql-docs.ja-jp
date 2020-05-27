@@ -50,7 +50,7 @@ PWDCOMPARE ( 'clear_text_password'
  パスワードの暗号化ハッシュです。 *password_hash* が **varbinary (128)** です。  
   
  *version*  
- *以降に移行されたが* システムには変換されていない [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 以前のログインからの値を [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]password_hash[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] が表している場合に、1 に設定される可能性がある、古いパラメーターです。 *バージョン* は **int**です。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降に移行されたが [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] システムには変換されていない [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 以前のログインからの値を *password_hash* が表している場合に、1 に設定される可能性がある、古いパラメーターです。 *バージョン* は **int**です。  
   
 > [!CAUTION]  
 >  このパラメーターは旧バージョンとの互換性を維持するために提供されていますが、パスワード ハッシュ BLOB は独自のバージョンの説明を含んでいるため、無視されます。 [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  

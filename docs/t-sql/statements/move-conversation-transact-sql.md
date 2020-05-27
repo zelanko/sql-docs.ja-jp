@@ -57,7 +57,7 @@ MOVE CONVERSATION conversation_handle
  MOVE CONVERSATION ステートメントは、*conversation_handle* で指定されたメッセージ交換を、*conversation_group_id* で識別されるメッセージ交換グループに移動します。 同じキューに関連付けられているメッセージ交換グループ間でのみ、ダイアログをリダイレクトできます。  
   
 > [!IMPORTANT]  
->  MOVE CONVERSATION ステートメントがバッチまたはストアド プロシージャで最初のステートメントではない場合は、前のステートメントの後に、 **ステートメントのターミネータであるセミコロン (** ;[!INCLUDE[tsql](../../includes/tsql-md.md)]) を指定する必要があります。  
+>  MOVE CONVERSATION ステートメントがバッチまたはストアド プロシージャで最初のステートメントではない場合は、前のステートメントの後に、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのターミネータであるセミコロン ( **;** ) を指定する必要があります。  
   
  MOVE CONVERSATION ステートメントは、ステートメントを含むトランザクションがコミットまたはロールバックされるまで、*conversation_handle* に関連付けられているメッセージ交換グループ、および *conversation_group_id* で指定されたメッセージ交換グループをロックします。  
   

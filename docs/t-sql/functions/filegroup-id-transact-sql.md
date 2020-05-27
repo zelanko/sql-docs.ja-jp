@@ -51,7 +51,7 @@ FILEGROUP_ID ( 'filegroup_name' )
 *filegroup_name* に対応する、 **名前** 内の列、 **sys.filegroups** カタログ ビューです。  
   
 ## <a name="examples"></a>例  
-この例では、`PRIMARY` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] という名前のファイル グループのファイル グループ ID を取得します。  
+この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `PRIMARY` という名前のファイル グループのファイル グループ ID を取得します。  
   
 ```  
 SELECT FILEGROUP_ID('PRIMARY') AS [Filegroup ID];  

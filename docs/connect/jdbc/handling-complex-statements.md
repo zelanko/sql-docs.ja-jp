@@ -22,7 +22,7 @@ ms.locfileid: "69027987"
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用するときは、実行時に動的に生成されるステートメントなど、複雑なステートメントに対処しなければならないことがあります。 複雑なステートメントは、更新、挿入、および削除などのさまざまなタスクを頻繁に実行します。 これらの種類のステートメントは、複数の結果セットや出力パラメーターを返すこともあります。 こうした状況では、ステートメントを実行する Java コードが、返されるデータやオブジェクトの型および数について事前に知らない場合があります。  
   
- 複雑なステートメントを効率的に処理するため、JDBC ドライバーでは、返されるオブジェクトやデータをクエリし、アプリケーションがそれらを正しく処理するための多くのメソッドが用意されています。 複雑なステートメントを処理するために重要となるのは、[SQLServerStatement](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) クラスの [execute](../../connect/jdbc/reference/sqlserverstatement-class.md) メソッドです。 このメソッドは、**ブール**値を返します。 値が true の場合、ステートメントから返される最初の結果は結果セットです。 値が false の場合、返される最初の結果は更新数です。  
+ 複雑なステートメントを効率的に処理するため、JDBC ドライバーでは、返されるオブジェクトやデータをクエリし、アプリケーションがそれらを正しく処理するための多くのメソッドが用意されています。 複雑なステートメントを処理するために重要となるのは、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) メソッドです。 このメソッドは、**ブール**値を返します。 値が true の場合、ステートメントから返される最初の結果は結果セットです。 値が false の場合、返される最初の結果は更新数です。  
   
  返されたオブジェクトまたはデータの型がわかっている場合、[getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) メソッドまたは [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) メソッドのいずれかを使用してそのデータを処理することができます。 複雑なステートメントから返された次のオブジェクトまたはデータへ進むため、[getMoreResults](../../connect/jdbc/reference/getmoreresults-method.md) メソッドを呼び出すことができます。  
   

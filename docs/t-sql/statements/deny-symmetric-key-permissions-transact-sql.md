@@ -109,7 +109,7 @@ DENY permission [ ,...n ]
  対称キーに対する CONTROL 権限、またはデータベースに対する ALTER ANY SYMMETRIC KEY 権限が必要です。 AS オプションを使用する場合は、指定したプリンシパルが対称キーを所有している必要があります。  
   
 ## <a name="examples"></a>例  
- 次の例では、対称キー `ALTER` の `SamInventory42` 権限を、データベース ユーザー `HamidS` に対して拒否します。  
+ 次の例では、対称キー `SamInventory42` の `ALTER` 権限を、データベース ユーザー `HamidS` に対して拒否します。  
   
 ```  
 USE AdventureWorks2012;  

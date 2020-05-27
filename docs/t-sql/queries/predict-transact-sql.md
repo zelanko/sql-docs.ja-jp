@@ -110,7 +110,7 @@ WITH 句は、`PREDICT` 関数によって返される出力のスキーマを�
 
 ### <a name="using-predict-in-a-from-clause"></a>FROM 句で PREDICT を使用する
 
-この例では、`PREDICT` ステートメントの `FROM` 句内の `SELECT` 関数を参照します。
+この例では、`SELECT` ステートメントの `FROM` 句内の `PREDICT` 関数を参照します。
 
 ```sql
 SELECT d.*, p.Score
@@ -118,7 +118,7 @@ FROM PREDICT(MODEL = @logit_model,
   DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-**パラメーターでテーブル ソースに指定された別名**d`DATA` は、dbo.mytable に属する列を参照するために使用されます。 **PREDICT** 関数に指定された別名 **p** は、PREDICT 関数によって返される列を参照するために使用されます。
+`DATA` パラメーターでテーブル ソースに指定された別名 **d** は、dbo.mytable に属する列を参照するために使用されます。 **PREDICT** 関数に指定された別名 **p** は、PREDICT 関数によって返される列を参照するために使用されます。
 
 ### <a name="combining-predict-with-an-insert-statement"></a>PREDICT を INSERT ステートメントと結合する
 

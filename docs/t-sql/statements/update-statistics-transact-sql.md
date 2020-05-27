@@ -247,7 +247,7 @@ GO
 ```  
   
 ### <a name="b-update-the-statistics-for-an-index"></a>B. 1 つのインデックスの統計を更新する  
- 次の例では、`AK_SalesOrderDetail_rowguid` テーブルの `SalesOrderDetail` インデックスの統計を更新します。  
+ 次の例では、`SalesOrderDetail` テーブルの `AK_SalesOrderDetail_rowguid` インデックスの統計を更新します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -257,7 +257,7 @@ GO
 ```  
   
 ### <a name="c-update-statistics-by-using-50-percent-sampling"></a>C. 50% サンプリングで統計を更新する  
- 次の例では、`Name` テーブルの `ProductNumber` および `Product` 列に統計を作成し、更新します。  
+ 次の例では、`Product` テーブルの `Name` および `ProductNumber` 列に統計を作成し、更新します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -271,7 +271,7 @@ UPDATE STATISTICS Production.Product(Products)
 ```  
   
 ### <a name="d-update-statistics-by-using-fullscan-and-norecompute"></a>D. FULLSCAN および NORECOMPUTE を使用して統計を更新する  
- 次の例では、`Products` テーブル内の `Product` 統計を更新し、`Product` テーブル内のすべての行でフル スキャンを強制的に実行し、`Products` 統計の自動統計更新を無効にします。  
+ 次の例では、`Product` テーブル内の `Products` 統計を更新し、`Product` テーブル内のすべての行でフル スキャンを強制的に実行し、`Products` 統計の自動統計更新を無効にします。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -284,14 +284,14 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-update-statistics-on-a-table"></a>E. テーブルの統計を更新する  
- 次の例では、`CustomerStats1` テーブルの `Customer` 統計を更新します。  
+ 次の例では、`Customer` テーブルの `CustomerStats1` 統計を更新します。  
   
 ```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>F. フル スキャンを使用して統計を更新する  
- 次の例では、`CustomerStats1` テーブルのすべての行のスキャンに基づいて `Customer` 統計を更新します。  
+ 次の例では、`Customer` テーブルのすべての行のスキャンに基づいて `CustomerStats1` 統計を更新します。  
   
 ```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  

@@ -107,7 +107,7 @@ ALTER SERVER AUDIT audit_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作を続行します。 監査レコードは保持されません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 続行オプションを選択すると、セキュリティ ポリシーに違反する可能性がある、監査されない活動を許可する場合があります。 完全な監査を維持することより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の操作を続行することの方が重要である場合に、このオプションを使用します。  
   
 SHUTDOWN  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がなんらかの理由で監査ターゲットへのデータの書き込みに失敗した場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを強制的にシャットダウンします。 `ALTER` ステートメントを実行しているログインには、`SHUTDOWN` 内での [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 権限が必要です。 実行中のログインから `SHUTDOWN` 権限が後で取り消された場合でも、シャットダウンの動作は継続します。 ユーザーがこの権限を持っていない場合は、ステートメントが失敗し、監査は変更されません。 監査エラーによってシステムのセキュリティまたは整合性が阻害される可能性がある場合に、このオプションを使用します。 詳細については、「[SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)」を参照してください。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がなんらかの理由で監査ターゲットへのデータの書き込みに失敗した場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを強制的にシャットダウンします。 `ALTER` ステートメントを実行しているログインには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内での `SHUTDOWN` 権限が必要です。 実行中のログインから `SHUTDOWN` 権限が後で取り消された場合でも、シャットダウンの動作は継続します。 ユーザーがこの権限を持っていない場合は、ステートメントが失敗し、監査は変更されません。 監査エラーによってシステムのセキュリティまたは整合性が阻害される可能性がある場合に、このオプションを使用します。 詳細については、「[SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)」を参照してください。 
   
  FAIL_OPERATION  
  監査イベントを発生させるデータベース アクションを失敗させます。 監査イベントを発生させないアクションは続行できますが、監査イベントを発生させることはできません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]へのフル アクセスより、完全な監査の維持の方が重要である場合に、このオプションを使用します。  

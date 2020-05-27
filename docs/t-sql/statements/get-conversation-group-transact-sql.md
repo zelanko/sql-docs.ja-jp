@@ -77,7 +77,7 @@ ms.locfileid: "72252187"
 ## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
->  GET CONVERSATION GROUP ステートメントがバッチまたはストアド プロシージャの最初のステートメントではない場合は、前のステートメントの後に、 **ステートメントのターミネータであるセミコロン (** ;[!INCLUDE[tsql](../../includes/tsql-md.md)]) を指定する必要があります。  
+>  GET CONVERSATION GROUP ステートメントがバッチまたはストアド プロシージャの最初のステートメントではない場合は、前のステートメントの後に、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのターミネータであるセミコロン ( **;** ) を指定する必要があります。  
   
  GET CONVERSATION GROUP ステートメントで指定したキューが使用できない場合、ステートメントは失敗し、[!INCLUDE[tsql](../../includes/tsql-md.md)] エラーが返されます。  
   

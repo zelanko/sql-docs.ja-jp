@@ -40,7 +40,7 @@ RADIANS ( numeric_expression )
   
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
- [bit](../../t-sql/language-elements/expressions-transact-sql.md) データ型を除く、真数または概数データ型カテゴリの**式**です。  
+ **bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 ## <a name="return-types"></a>戻り値の型  
  *numeric_expression*と同じ型を返します。  
@@ -48,7 +48,7 @@ RADIANS ( numeric_expression )
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-radians-to-show-00"></a>A. RADIANS を使用して 0.0 を表示する  
- 次の例では、ラジアンに変換する数値式が `0.0` 関数にとって小さすぎる値であるため、`RADIANS` という結果を返します。  
+ 次の例では、ラジアンに変換する数値式が `RADIANS` 関数にとって小さすぎる値であるため、`0.0` という結果を返します。  
   
 ```  
 SELECT RADIANS(1e-307)  

@@ -156,7 +156,7 @@ CREATE SYMMETRIC KEY key_name
 ## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-symmetric-key"></a>A. 対称キーを作成する  
- 次の例では、`JanainaKey09` アルゴリズムを使用して対称キー `AES 256` を作成し、新しいキーを証明書 `Shipping04` を使用して暗号化します。  
+ 次の例では、`AES 256` アルゴリズムを使用して対称キー `JanainaKey09` を作成し、新しいキーを証明書 `Shipping04` を使用して暗号化します。  
   
 ```  
 CREATE SYMMETRIC KEY JanainaKey09   
@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. 拡張キー管理 (EKM) デバイスを使用して対称キーを作成する  
- 次の例では、`MySymKey` というプロバイダーとキー名 `MyEKMProvider` を使用して、`KeyForSensitiveData` という対称キーを作成します。 `User1` に承認を割り当てています。また、システム管理者が `MyEKMProvider` というプロバイダーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に既に登録していることを前提としています。  
+ 次の例では、`MyEKMProvider` というプロバイダーとキー名 `KeyForSensitiveData` を使用して、`MySymKey` という対称キーを作成します。 `User1` に承認を割り当てています。また、システム管理者が `MyEKMProvider` というプロバイダーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に既に登録していることを前提としています。  
   
 ```  
 CREATE SYMMETRIC KEY MySymKey  

@@ -54,7 +54,7 @@ ms.locfileid: "69028000"
 ## <a name="collation-support"></a>照合順序のサポート  
  JDBC Driver 3.0 では、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] と [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] でサポートされるすべての照合順序に加え、新しい照合順序 ([!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] で導入された新バージョンの Windows 照合順序名) がサポートされます。  
   
- 照合順序の詳細については、[ オンライン ブックで「](https://go.microsoft.com/fwlink/?LinkId=131366)照合順序と Unicode のサポート[」と「](https://go.microsoft.com/fwlink/?LinkId=131367)WWindows 照合順序名 (Transact-SQL)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]」を参照してください。  
+ 照合順序の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックで「[照合順序と Unicode のサポート](https://go.microsoft.com/fwlink/?LinkId=131366)」と「[WWindows 照合順序名 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367)」を参照してください。  
   
 ## <a name="using-international-domain-names-idn"></a>国際ドメイン名 (IDN) の使用  
  SQL Server 用 JDBC Driver 6.0 は国際ドメイン名 (IDN) の使用に対応しており、接続で要求されるとき、Unicode serverName を ASCII 互換エンコーディング (Punycode) に変換できます。  IDN がドメイン名システム (DNS) に Punycode 形式 (仕様は RFC 3490 で既定) で ASCII 文字列として保存されている場合、serverNameAsACE プロパティを「true」に設定することで Unicode サーバー名を変換できます。  そのように保存されていなければ、DNS サービスが Unicode 文字を使用できるように構成されている場合、serverNameAsACE プロパティを既定の「false」に設定します。  以前のバージョンの JDBC ドライバーの場合、[Java の IDN.toASCII](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) メソッドを使って serverName を Punycode に変換してから、そのプロパティを接続のために設定することもできます。  

@@ -53,7 +53,7 @@ PATINDEX ( '%pattern%' , expression )
  [式](../../t-sql/language-elements/expressions-transact-sql.md)です。通常は、指定したパターンで検索する列です。 *式*は文字列データ型に分類されます。  
   
 ## <a name="return-types"></a>戻り値の型  
-**expression** が *varchar(max)* または **nvarchar(max)** データ型の場合は **bigint**。それ以外の場合は **int**。  
+*expression* が **varchar(max)** または **nvarchar(max)** データ型の場合は **bigint**。それ以外の場合は **int**。  
   
 ## <a name="remarks"></a>解説  
 *pattern* または*式*が NULL の場合、PATINDEX は NULL を返します。  
@@ -70,7 +70,7 @@ SC の照合順序を使用する場合、戻り値では、*expression* パラ�
 ## <a name="examples"></a>例  
   
 ### <a name="a-simple-patindex-example"></a>A. 簡単な PATINDEX の例  
- 次の例では、文字 `interesting data` の開始位置の短い文字列 (`ter`) を確認します。  
+ 次の例では、文字 `ter` の開始位置の短い文字列 (`interesting data`) を確認します。  
   
 ```sql  
 SELECT position = PATINDEX('%ter%', 'interesting data');  
@@ -85,7 +85,7 @@ position
 ```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. PATINDEX でパターンを使用する  
-次の例では、`ensure` データベースの `DocumentSummary` テーブルにある `Document` 列の特定の行で、パターン [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] が始まる位置を検出します。  
+次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `ensure` テーブルにある `DocumentSummary` 列の特定の行で、パターン `Document` が始まる位置を検出します。  
   
 ```sql  
 SELECT position = PATINDEX('%ensure%',DocumentSummary)  

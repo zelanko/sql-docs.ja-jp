@@ -44,7 +44,7 @@ ms.locfileid: "75244250"
     CACHE 10  
     ```  
   
-4.  プロジェクトのターゲット プラットフォームが Microsoft SQL Server 2012 に設定されていない場合は、**ステートメントに対する構文エラーが**[エラー一覧]`CREATE SEQUENCE` に表示されます。 これを修正するには、「[ターゲット プラットフォームを変更し、データベース プロジェクトを公開する方法](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)」の手順に従ってターゲット プラットフォームを変更します。  
+4.  プロジェクトのターゲット プラットフォームが Microsoft SQL Server 2012 に設定されていない場合は、`CREATE SEQUENCE` ステートメントに対する構文エラーが **[エラー一覧]** に表示されます。 これを修正するには、「[ターゲット プラットフォームを変更し、データベース プロジェクトを公開する方法](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)」の手順に従ってターゲット プラットフォームを変更します。  
   
 5.  「[ターゲット プラットフォームを変更し、データベース プロジェクトを公開する方法](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)」の手順に従って、接続された Microsoft SQL Server 2012 サーバーにあるデータベースにプロジェクトを公開します。  
   

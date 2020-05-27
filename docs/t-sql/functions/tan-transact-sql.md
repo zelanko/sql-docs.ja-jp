@@ -41,7 +41,7 @@ TAN ( float_expression )
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- ラジアン数として解釈される、[float](../../t-sql/language-elements/expressions-transact-sql.md) 型または暗黙的に **float** 型に変換できる**式**を指定します。  
+ ラジアン数として解釈される、**float** 型または暗黙的に **float** 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  

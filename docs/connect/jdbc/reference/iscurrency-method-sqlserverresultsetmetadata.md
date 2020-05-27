@@ -48,7 +48,7 @@ public boolean isCurrency(int column)
 ## <a name="remarks"></a>解説  
  この isCurrency メソッドは、java.sql.ResultSetMetaData インターフェイスの isCurrency メソッドで指定されています。  
   
- このメソッドは、**の money データ型と smallmoney データ型の場合にのみ**true[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が返されます。  
+ このメソッドは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の money データ型と smallmoney データ型の場合にのみ **true** が返されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSetMetaData メソッド](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

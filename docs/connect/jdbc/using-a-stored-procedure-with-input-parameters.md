@@ -23,7 +23,7 @@ ms.locfileid: "69026904"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャのうち、呼び出すことができるのは、IN パラメーター (ストアド プロシージャにデータを渡す際に使用できるパラメーター) を少なくとも 1 つ持つストアド プロシージャです。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が提供する [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスを使用することで、この種類のストアド プロシージャを呼び出し、返されるデータを処理することができます。
 
-JDBC ドライバーを使用して IN パラメーターがあるストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) クラスの [prepareCall](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドと一緒に使用する必要があります。 IN パラメーターを持つ `call` エスケープ シーケンスの構文は次のとおりです。
+JDBC ドライバーを使用して IN パラメーターがあるストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドと一緒に使用する必要があります。 IN パラメーターを持つ `call` エスケープ シーケンスの構文は次のとおりです。
 
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 

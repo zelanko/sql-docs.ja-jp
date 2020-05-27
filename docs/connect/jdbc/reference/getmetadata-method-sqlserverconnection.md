@@ -25,7 +25,7 @@ ms.locfileid: "67981872"
 # <a name="getmetadata-method-sqlserverconnection"></a>getMetaData メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この [SQLServerConnection](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) オブジェクトが表す接続の接続先データベースについてのメタデータを含む [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを取得します。  
+  この [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトが表す接続の接続先データベースについてのメタデータを含む [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) オブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
   

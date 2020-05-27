@@ -26,7 +26,7 @@ ms.locfileid: "69028295"
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] および JDBC ドライバーのデータ型について、その相違点や Java 言語のデータ型への変換方法など、詳細については、「[JDBC ドライバーのデータ型について](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)」を参照してください。  
   
-SQL Server のデータ型を処理するために、JDBC ドライバーには、\<SQLServerPreparedStatement\< クラスおよび [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスに get[Type> メソッドおよび set](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)Type> メソッドがあり、\<SQLServerResultSet\< クラスに get[Type> メソッドおよび update](../../../connect/jdbc/reference/sqlserverresultset-class.md)Type> メソッドがあります。 使用するメソッドは、処理するデータの型と、結果セットまたはクエリを使用するかどうかによって決まります。  
+SQL Server のデータ型を処理するために、JDBC ドライバーには、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスおよび [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスに get\<Type> メソッドおよび set\<Type> メソッドがあり、[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスに get\<Type> メソッドおよび update\<Type> メソッドがあります。 使用するメソッドは、処理するデータの型と、結果セットまたはクエリを使用するかどうかによって決まります。  
   
 このセクションのトピックでは、JDBC ドライバーのデータ型を使用して Java アプリケーションの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データにアクセスする方法について説明します。  
   

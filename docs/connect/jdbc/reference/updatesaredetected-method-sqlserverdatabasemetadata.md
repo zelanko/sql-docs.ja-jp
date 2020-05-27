@@ -25,7 +25,7 @@ ms.locfileid: "67998339"
 # <a name="updatesaredetected-method-sqlserverdatabasemetadata"></a>updatesAreDetected メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) クラスの [rowUpdated](../../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを呼び出すことで表示されている行が更新されたことを検出できるかどうかを取得します。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) メソッドを呼び出すことで表示されている行が更新されたことを検出できるかどうかを取得します。  
   
 ## <a name="syntax"></a>構文  
   

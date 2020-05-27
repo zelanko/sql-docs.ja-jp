@@ -49,7 +49,7 @@ ms.locfileid: "73982470"
   
  **\@\@OPTIONS** 関数によって、10 進数の整数に変換された、オプションのビットマップが返されます。 ビット設定は、「[user options サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)」トピックで説明されている場所に格納されます。  
   
- **\@\@OPTIONS** 値をデコードするには、 **\@\@OPTIONS** によって返された整数をバイナリに変換し、その値を「[user options サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)」の表で検索します。 たとえば、`SELECT @@OPTIONS;` によって値 `5496` が返された場合、Windows のプログラマ電卓 (**calc.exe**) を使用して、10 進数の `5496` をバイナリに変換します。 結果は `1010101111000`です。 右端の文字 (バイナリ 1、2、および 4) は 0 で、テーブル内の最初の 3 つの項目がオフであることを示します。 表を見ると、これらは **DISABLE_DEF_CNST_CHK**、**IMPLICIT_TRANSACTIONS**、**CURSOR_CLOSE_ON_COMMIT** であることがわかります。 次の項目 (**位置の**ANSI_WARNINGS`1000`) はオンです。 ビットマップを左へ、オプションの一覧を下へ見ていきます。 左端のオプションが 0 の場合、これらは型変換によって切り捨てられています。 ビットマップ `1010101111000` は実際は `001010101111000` であり、全部で 15 個のオプションを表しています。  
+ **\@\@OPTIONS** 値をデコードするには、 **\@\@OPTIONS** によって返された整数をバイナリに変換し、その値を「[user options サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)」の表で検索します。 たとえば、`SELECT @@OPTIONS;` によって値 `5496` が返された場合、Windows のプログラマ電卓 (**calc.exe**) を使用して、10 進数の `5496` をバイナリに変換します。 結果は `1010101111000`です。 右端の文字 (バイナリ 1、2、および 4) は 0 で、テーブル内の最初の 3 つの項目がオフであることを示します。 表を見ると、これらは **DISABLE_DEF_CNST_CHK**、**IMPLICIT_TRANSACTIONS**、**CURSOR_CLOSE_ON_COMMIT** であることがわかります。 次の項目 (`1000` 位置の **ANSI_WARNINGS**) はオンです。 ビットマップを左へ、オプションの一覧を下へ見ていきます。 左端のオプションが 0 の場合、これらは型変換によって切り捨てられています。 ビットマップ `1010101111000` は実際は `001010101111000` であり、全部で 15 個のオプションを表しています。  
   
 ## <a name="examples"></a>例  
   

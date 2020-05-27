@@ -71,7 +71,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 **適用対象**:  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 次の例では、`cust`uniqueidentifier**データ型を使用して** テーブルを作成し、NEWID を使用してテーブルに既定値を入力します。 `NEWID()` の既定値が代入されると、新しい行と既存の行の `CustomerID` 列にそれぞれ一意な値が設定されます。  
+ 次の例では、**uniqueidentifier** データ型を使用して `cust` テーブルを作成し、NEWID を使用してテーブルに既定値を入力します。 `NEWID()` の既定値が代入されると、新しい行と既存の行の `CustomerID` 列にそれぞれ一意な値が設定されます。  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  

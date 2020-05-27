@@ -43,7 +43,7 @@ public java.io.Reader getNCharacterStream(int columnIndex)
 ## <a name="remarks"></a>解説  
  この getNCharacterStream メソッドは、java.sql.ResultSet インターフェイスの getNCharacterStream メソッドで規定されています。  
   
- このメソッドは、**SQLServerResultSet** オブジェクトの現在の行にある**nvarchar**、**nchar**、**nvarchar(max)** 、**ntext**、または [xml](../../../connect/jdbc/reference/sqlserverresultset-class.md) 列の値を取得するために使用できます。 このメソッドを使用して他のデータ型の値を取得しようとすると、例外がスローされます。  
+ このメソッドは、[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある**nvarchar**、**nchar**、**nvarchar(max)** 、**ntext**、または **xml** 列の値を取得するために使用できます。 このメソッドを使用して他のデータ型の値を取得しようとすると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [getNCharacterStream メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   

@@ -126,7 +126,7 @@ Mary        Dempsey     Marketing Assistant
 ```  
   
 ### <a name="b-using-in-with-a-subquery"></a>B. IN とサブクエリを使用する  
- 次の例では、年間の販売ノルマが 250,000 ドルを超えるすべての販売員の ID が `SalesPerson` テーブルから検索され、次に、`Employee` テーブルから、`EmployeeID` サブクエリの結果に一致する `SELECT` の従業員の名前がすべて選択されます。  
+ 次の例では、年間の販売ノルマが 250,000 ドルを超えるすべての販売員の ID が `SalesPerson` テーブルから検索され、次に、`Employee` テーブルから、`SELECT` サブクエリの結果に一致する `EmployeeID` の従業員の名前がすべて選択されます。  
   
 ```  
 -- Uses AdventureWorks  
@@ -174,7 +174,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-in-and-not-in"></a>D. IN と NOT IN の使用  
- 次の例では、`FactInternetSales` テーブルの `SalesReasonKey` 値と一致する `DimSalesReason` テーブルのすべてのエントリを検出します。  
+ 次の例では、`DimSalesReason` テーブルの `SalesReasonKey` 値と一致する `FactInternetSales` テーブルのすべてのエントリを検出します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -184,7 +184,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- 次の例では、`FactInternetSalesReason` テーブルの `SalesReasonKey` 値と一致しない `DimSalesReason` テーブルのすべてのエントリを検出します。  
+ 次の例では、`DimSalesReason` テーブルの `SalesReasonKey` 値と一致しない `FactInternetSalesReason` テーブルのすべてのエントリを検出します。  
   
 ```  
 -- Uses AdventureWorks  

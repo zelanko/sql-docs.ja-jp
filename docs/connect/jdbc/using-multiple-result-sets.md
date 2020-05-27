@@ -21,7 +21,7 @@ ms.locfileid: "69026274"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-複数の結果セットを返すインライン SQL または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャを処理する場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では返される各データのセットを取得するために、[SQLServerStatement](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) クラスの [getResultSet](../../connect/jdbc/reference/sqlserverstatement-class.md) メソッドを提供します。 また、複数の結果セットを返すステートメントの実行時には、SQLServerStatement クラスの [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) メソッドを使用できます。これは、返される値が結果セットと更新数のどちらであるかを示す **boolean** 値を返せるためです。
+複数の結果セットを返すインライン SQL または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャを処理する場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では返される各データのセットを取得するために、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) メソッドを提供します。 また、複数の結果セットを返すステートメントの実行時には、SQLServerStatement クラスの [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) メソッドを使用できます。これは、返される値が結果セットと更新数のどちらであるかを示す **boolean** 値を返せるためです。
 
 execute メソッドから **true** が返された場合、実行されたステートメントから返されるのは 1 つ以上の結果セットです。 最初の結果セットには、getResultSet メソッドを呼び出すことでアクセスできます。 他にも使用可能な結果セットがあるかどうかを判断するには、[getMoreResults](../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md) メソッドを呼び出すことができます。このメソッドでは、他にも使用可能な結果セットがある場合、**boolean** 値として **true** が返されます。 他にも結果セットが使用可能な場合は、getResultSet メソッドを再度呼び出して結果セットにアクセスし、すべての結果セットが処理されるまで続けます。 getMoreResults メソッドから **false** が返された場合は、処理対象となる結果セットがなくなったことを意味します。
 

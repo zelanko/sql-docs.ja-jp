@@ -101,7 +101,7 @@ GO
 ```  
   
 ### <a name="b-using-select-into-with-union"></a>B. UNION と共に SELECT INTO を使用する  
-次の例では、2 番目の `INTO` ステートメントの `SELECT` 句で、`ProductResults` テーブルと `ProductModel` テーブルから選択された列の UNION の最終的な結果セットを `Gloves` という名前のテーブルに格納することを指定します。 `Gloves` テーブルは、最初の `SELECT` ステートメントで作成されます。  
+次の例では、2 番目の `SELECT` ステートメントの `INTO` 句で、`ProductModel` テーブルと `Gloves` テーブルから選択された列の UNION の最終的な結果セットを `ProductResults` という名前のテーブルに格納することを指定します。 `Gloves` テーブルは、最初の `SELECT` ステートメントで作成されます。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -135,7 +135,7 @@ FROM dbo.ProductResults;
 ```  
   
 ### <a name="c-using-union-of-two-select-statements-with-order-by"></a>C. ORDER BY 句を指定した 2 つの SELECT ステートメントで UNION 句を使用する  
-UNION 句で使用するある種のパラメーターの順序には重要な意味があります。 次の例では、出力時に列名を変更する 2 つの `UNION` ステートメントでの `SELECT` の誤った使用法と正しい使用法を示しています。  
+UNION 句で使用するある種のパラメーターの順序には重要な意味があります。 次の例では、出力時に列名を変更する 2 つの `SELECT` ステートメントでの `UNION` の誤った使用法と正しい使用法を示しています。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -176,9 +176,9 @@ GO
 ```  
   
 ### <a name="d-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>D. 3 つの SELECT ステートメントで UNION を使用して、ALL とかっこの効果を示す  
-次の例では、`UNION` を使用して 3 つのテーブルのクエリ結果を結合します。これらのテーブルはすべて同じ 5 行のデータで構成されます。 最初の例では、`UNION ALL` を使用して、重複するレコードも含めて 15 行すべてを返します。 2 番目の例では、`UNION` を指定せずに `ALL` を使用して、3 つの `SELECT` ステートメントの結果を結合したものから重複する行を削除し、5 行を返します。  
+次の例では、`UNION` を使用して 3 つのテーブルのクエリ結果を結合します。これらのテーブルはすべて同じ 5 行のデータで構成されます。 最初の例では、`UNION ALL` を使用して、重複するレコードも含めて 15 行すべてを返します。 2 番目の例では、`ALL` を指定せずに `UNION` を使用して、3 つの `SELECT` ステートメントの結果を結合したものから重複する行を削除し、5 行を返します。  
   
-3 番目の例では、最初の `ALL` と共に `UNION` を使用し、`UNION` を使用していない 2 番目の `ALL` をかっこで囲んでいます。 2 番目の `UNION` はかっこで囲まれているので、最初に処理されます。また、`ALL` オプションが使用されず、重複が削除されるため、5 行が返されます。 これらの 5 行は、`SELECT` キーワードを使用して最初の `UNION ALL` の結果と結合されます。 この例では、5 行で構成される 2 つのセットの重複は削除されません。 最終的な結果は 10 行になります。  
+3 番目の例では、最初の `UNION` と共に `ALL` を使用し、`ALL` を使用していない 2 番目の `UNION` をかっこで囲んでいます。 2 番目の `UNION` はかっこで囲まれているので、最初に処理されます。また、`ALL` オプションが使用されず、重複が削除されるため、5 行が返されます。 これらの 5 行は、`UNION ALL` キーワードを使用して最初の `SELECT` の結果と結合されます。 この例では、5 行で構成される 2 つのセットの重複は削除されません。 最終的な結果は 10 行になります。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -249,7 +249,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-a-simple-union"></a>E. 単純な UNION を使用する  
-次の例では、結果セットに `CustomerKey` テーブルと `FactInternetSales` テーブルの `DimCustomer` 列の内容が含まれています。 ALL キーワードが使用されていないため、重複が結果から除外されます。  
+次の例では、結果セットに `FactInternetSales` テーブルと `DimCustomer` テーブルの `CustomerKey` 列の内容が含まれています。 ALL キーワードが使用されていないため、重複が結果から除外されます。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -317,11 +317,11 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="h-using-union-of-three-select-statements-to-show-effects-of-all-and-parentheses"></a>H. 3 つの SELECT ステートメントで UNION を使用して、ALL とかっこの効果を示す  
-次の例では、`UNION` 利用時の ALL とかっこの効果を示す目的で、 **を使用して**同じテーブル`UNION`の結果を結合しています。  
+次の例では、`UNION` 利用時の ALL とかっこの効果を示す目的で、`UNION` を使用して**同じテーブル**の結果を結合しています。  
   
-最初の例では `UNION ALL` を使用し、重複レコードを表示し、ソース テーブルの各行を 3 回返しています。 2 番目の例では、`UNION` を指定せずに `ALL` を使用して、3 つの `SELECT` ステートメントの結果を結合したものから重複する行を削除し、ソース テーブルから重複しない行のみ返します。  
+最初の例では `UNION ALL` を使用し、重複レコードを表示し、ソース テーブルの各行を 3 回返しています。 2 番目の例では、`ALL` を指定せずに `UNION` を使用して、3 つの `SELECT` ステートメントの結果を結合したものから重複する行を削除し、ソース テーブルから重複しない行のみ返します。  
   
-3 番目の例では、最初の `ALL` と共に `UNION` を使用し、`UNION` を使用していない 2 番目の `ALL` をかっこで囲んでいます。 2 番目の `UNION` はかっこで囲まれているために最初に処理されます。 `ALL` オプションが使用されず、重複は削除されるため、重複なしの行のみがテーブルから返されます。 これらの行は、`SELECT` キーワードを使用して最初の `UNION ALL` の結果と結合されます。 この例では、2 つのセットの重複は削除されません。  
+3 番目の例では、最初の `UNION` と共に `ALL` を使用し、`ALL` を使用していない 2 番目の `UNION` をかっこで囲んでいます。 2 番目の `UNION` はかっこで囲まれているために最初に処理されます。 `ALL` オプションが使用されず、重複は削除されるため、重複なしの行のみがテーブルから返されます。 これらの行は、`SELECT` キーワードを使用して最初の `UNION ALL` の結果と結合されます。 この例では、2 つのセットの重複は削除されません。  
   
 ```sql
 -- Uses AdventureWorks  

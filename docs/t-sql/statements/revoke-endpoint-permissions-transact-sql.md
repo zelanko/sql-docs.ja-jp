@@ -104,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>A. エンドポイントの VIEW DEFINITION 権限を取り消す  
- 次の例では、エンドポイント `VIEW DEFINITION` での `Mirror7` アクセス許可を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` から取り消します。  
+ 次の例では、エンドポイント `Mirror7` での `VIEW DEFINITION` アクセス許可を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` から取り消します。  
   
 ```  
 USE master;  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. CASCADE オプションを指定して TAKE OWNERSHIP 権限を取り消す  
- 次の例では、エンドポイント `TAKE OWNERSHIP` での `Shipping83` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー `PKomosinski` と、`PKomosinski` が `TAKE OWNERSHIP` の `Shipping83` 権限を許可したすべてのプリンシパルから取り消します。  
+ 次の例では、エンドポイント `Shipping83` での `TAKE OWNERSHIP` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー `PKomosinski` と、`PKomosinski` が `Shipping83` の `TAKE OWNERSHIP` 権限を許可したすべてのプリンシパルから取り消します。  
   
 ```  
 USE master;  

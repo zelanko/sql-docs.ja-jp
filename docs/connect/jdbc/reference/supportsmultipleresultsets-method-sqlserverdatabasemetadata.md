@@ -25,7 +25,7 @@ ms.locfileid: "67969227"
 # <a name="supportsmultipleresultsets-method-sqlserverdatabasemetadata"></a>supportsMultipleResultSets メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [execute](../../../connect/jdbc/reference/execute-method.md) メソッドへの 1 回の呼び出しから複数の [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトを取得することを、データベースがサポートするかどうかを取得します。  
+  [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスの [execute](../../../connect/jdbc/reference/execute-method.md) メソッドへの 1 回の呼び出しから複数の [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを取得することを、データベースがサポートするかどうかを取得します。  
   
 ## <a name="syntax"></a>構文  
   

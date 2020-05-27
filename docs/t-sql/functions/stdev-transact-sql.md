@@ -68,7 +68,7 @@ STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-stdev"></a>A: STDEV を使用する  
- 次の例は、`SalesPerson` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルにあるすべてのボーナス値の標準偏差を返します。  
+ 次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `SalesPerson` テーブルにあるすべてのボーナス値の標準偏差を返します。  
   
 ```  
 SELECT STDEV(Bonus)  

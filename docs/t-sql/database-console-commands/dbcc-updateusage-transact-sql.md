@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. Employee テーブルに対してページ数または行数、あるいはその両方を更新する  
-次の例では、`Employee` データベースの [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルに関して、更新されたページ数または行数をレポートします。
+次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの `Employee` テーブルに関して、更新されたページ数または行数をレポートします。
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  

@@ -38,7 +38,7 @@ public final int getFetchDirection()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **setFetchDirection** メソッドによって指定されるフェッチ方向を示す [int](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md) です。  
+ [setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md) メソッドによって指定されるフェッチ方向を示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

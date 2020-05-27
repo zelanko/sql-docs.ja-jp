@@ -78,7 +78,7 @@ FROM OldTable;
 ```  
   
 ## <a name="examples"></a>例  
- 次の例では、`Contact` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルにあるすべての行を、`NewContact` という新しいテーブルに追加します。 IDENTITY 関数を使用して、`NewContact` テーブルの識別番号を 1 ではなく 100 から開始するようにします。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Contact` テーブルにあるすべての行を、`NewContact` という新しいテーブルに追加します。 IDENTITY 関数を使用して、`NewContact` テーブルの識別番号を 1 ではなく 100 から開始するようにします。  
   
 ```  
 USE AdventureWorks2012;  

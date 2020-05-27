@@ -56,7 +56,7 @@ FILEGROUP_NAME ( filegroup_id )
 *filegroup_id* は、**sys.filegroups** カタログ ビューの **data_space_id** 列に対応します。  
   
 ## <a name="examples"></a>例  
-この例では、`1` データベース内のファイル グループ ID [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] に対するファイル グループの名前を取得します。  
+この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内のファイル グループ ID `1` に対するファイル グループの名前を取得します。  
   
 ```  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  

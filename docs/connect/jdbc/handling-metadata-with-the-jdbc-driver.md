@@ -20,7 +20,7 @@ ms.locfileid: "69028023"
 # <a name="handling-metadata-with-the-jdbc-driver"></a>JDBC ドライバーによるメタデータの処理
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] データベース内のメタデータは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して、さまざまな方法で操作することができます。 JDBC ドライバーでは、データベースのメタデータを、結果セットまたはパラメーターとして取得することができます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内のメタデータは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用して、さまざまな方法で操作することができます。 JDBC ドライバーでは、データベースのメタデータを、結果セットまたはパラメーターとして取得することができます。  
   
  JDBC ドライバーには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースからメタデータを取得するための 3 つのクラスがあります。  
   

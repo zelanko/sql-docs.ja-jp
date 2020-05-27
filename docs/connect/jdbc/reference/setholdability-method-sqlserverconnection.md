@@ -25,7 +25,7 @@ ms.locfileid: "68213665"
 # <a name="setholdability-method-sqlserverconnection"></a>setHoldability メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを使用して作成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserversavepoint-class.md) オブジェクトの保持機能を、渡された保持機能に変更します。  
+  [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) オブジェクトを使用して作成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの保持機能を、渡された保持機能に変更します。  
   
 ## <a name="syntax"></a>構文  
   

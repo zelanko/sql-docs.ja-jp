@@ -36,9 +36,9 @@ ms.locfileid: "74901873"
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で別名データ型またはユーザー定義型を現在のデータベースで作成します。 別名データ型の実装は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブ システム型に基づきます。 ユーザー定義型は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) のアセンブリのクラスを使用して実装します。 ユーザー定義型を実装にバインドするには、先に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CREATE ASSEMBLY[ を使用して、その実装を含む CLR アセンブリを ](../../t-sql/statements/create-assembly-transact-sql.md) で登録しておく必要があります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で別名データ型またはユーザー定義型を現在のデータベースで作成します。 別名データ型の実装は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブ システム型に基づきます。 ユーザー定義型は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) のアセンブリのクラスを使用して実装します。 ユーザー定義型を実装にバインドするには、先に [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) を使用して、その実装を含む CLR アセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で登録しておく必要があります。  
   
- 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の CLR コード実行機能は無効になっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、および削除できますが、それらの参照を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行するには、[sp_configure](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) を使用して [clr enabled オプション](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)を有効にする必要があります。  
+ 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の CLR コード実行機能は無効になっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、および削除できますが、それらの参照を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行するには、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して [clr enabled オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)を有効にする必要があります。  
  
 > [!NOTE]  
 >  このトピックでは、SQL Server への .NET Framework CLR の統合について説明します。 CLR 統合は、Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] には適用されません。
@@ -258,7 +258,7 @@ column_name <data_type>
   
 -   クラスにはオーバーロードされたメソッドが存在する可能性があります。ただし、これらのメソッドはマネージド コード内からのみ呼び出すことができ、[!INCLUDE[tsql](../../includes/tsql-md.md)] から呼び出すことはできません。  
   
--   **assembly_name** が SAFE または EXTERNAL_ACCESS の場合、すべての静的メンバーは **const** または *readonly* として宣言する必要があります。  
+-   *assembly_name* が SAFE または EXTERNAL_ACCESS の場合、すべての静的メンバーは **const** または **readonly** として宣言する必要があります。  
   
  データベース内では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で CLR からアップロードされた任意の指定された型に対して、1 つのユーザー定義型のみを登録できます。 データベース内にユーザー定義型が既に存在する CLR 型に対してユーザー定義型を作成した場合、CREATE TYPE は失敗し、エラーが発生します。 この制約が必要なのは、CLR 型を複数のユーザー定義型にマップすることが可能な場合の、SQL 型の解決時のあいまいな状態を避けるためです。  
   
@@ -295,7 +295,7 @@ FROM varchar(11) NOT NULL ;
 ```  
   
 ### <a name="b-creating-a-user-defined-type"></a>B. ユーザー定義型を作成する  
- 次の例では、アセンブリ `Utf8String` 内のクラス `utf8string` を参照する型 `utf8string` を作成します。 型を作成する前に、アセンブリ `utf8string` がローカル データベースに登録されます。 CREATE ASSEMBLY ステートメントのバイナリ部分を有効な記述と置き換えます。  
+ 次の例では、アセンブリ `utf8string` 内のクラス `utf8string` を参照する型 `Utf8String` を作成します。 型を作成する前に、アセンブリ `utf8string` がローカル データベースに登録されます。 CREATE ASSEMBLY ステートメントのバイナリ部分を有効な記述と置き換えます。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   

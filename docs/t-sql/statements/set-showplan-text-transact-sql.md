@@ -60,7 +60,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
 |列名|説明|  
 |-----------------|-----------------|  
-|**StmtText**|PLAN_ROW 型でない行の場合、この列には [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのテキストが含まれます。 PLAN_ROW 型の行の場合、この列には操作の説明が含まれます。 またこの列には物理操作と、必要に応じて論理操作が含まれます。 場合によっては、この列の後に説明が含まれます。説明が後に続くかどうかは、物理操作によって決まります。 物理操作の詳細については、「**SET SHOWPLAN_ALL &#40;Transact-SQL&#41;** 」の「[Argument](../../t-sql/statements/set-showplan-all-transact-sql.md)」列を参照してください。|  
+|**StmtText**|PLAN_ROW 型でない行の場合、この列には [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのテキストが含まれます。 PLAN_ROW 型の行の場合、この列には操作の説明が含まれます。 またこの列には物理操作と、必要に応じて論理操作が含まれます。 場合によっては、この列の後に説明が含まれます。説明が後に続くかどうかは、物理操作によって決まります。 物理操作の詳細については、「[SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)」の「**Argument**」列を参照してください。|  
   
  プラン表示の出力に含まれる物理操作と論理操作の詳細については、「[プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)」を参照してください。  
   

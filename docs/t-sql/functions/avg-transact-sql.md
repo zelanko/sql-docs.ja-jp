@@ -51,7 +51,7 @@ DISTINCT
 値の出現回数にかかわらず、各値の一意の 1 つのインスタンスだけに AVG を適用することを指定します。
   
 *式 (expression)*  
-[bit](../../t-sql/language-elements/expressions-transact-sql.md) データ型を除く、真数または概数データ型カテゴリの**式**です。 集計関数とサブクエリは使用できません。
+**bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 集計関数とサブクエリは使用できません。
   
 OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**  
 *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* 操作が実行される論理的順序を決定します。 *order_by_clause* が必要です。 詳細については、を参照してください。 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
@@ -146,7 +146,7 @@ FROM Production.Product;
 ```
   
 ### <a name="d-using-avg-without-distinct"></a>D. DISTINCT を伴わない AVG を使用する  
-DISTINCT がない場合、`AVG` 関数は重複する値を含め、`Product` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブル内のすべての製品の平均表示価格を返します。
+DISTINCT がない場合、`AVG` 関数は重複する値を含め、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Product` テーブル内のすべての製品の平均表示価格を返します。
   
 ```sql
 SELECT AVG(ListPrice)  
@@ -163,7 +163,7 @@ FROM Production.Product;
 ```
   
 ### <a name="e-using-the-over-clause"></a>E. OVER 句を使用する  
-次の例では、OVER 句を指定した AVG 関数を使用して、`Sales.SalesPerson` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルに各区域の年間売上の移動平均を入力します。 データは `TerritoryID` によってパーティションに分割され、`SalesYTD` によって論理的に順序付けされます。 つまり、AVG 関数は年を基にして区域ごとに計算されます。 `TerritoryID` 1 の 2005 年の売上については、その年の 2 人の営業担当者の売上を表す 2 行があります。 これら 2 行の平均売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。
+次の例では、OVER 句を指定した AVG 関数を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Sales.SalesPerson` テーブルに各区域の年間売上の移動平均を入力します。 データは `TerritoryID` によってパーティションに分割され、`SalesYTD` によって論理的に順序付けされます。 つまり、AVG 関数は年を基にして区域ごとに計算されます。 `TerritoryID` 1 の 2005 年の売上については、その年の 2 人の営業担当者の売上を表す 2 行があります。 これら 2 行の平均売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   

@@ -126,7 +126,7 @@ GRANT permission [ ,...n ]
  sysadmin 固定サーバー ロールのメンバーなど、CONTROL SERVER 権限が許可されているユーザーは、サーバー内のセキュリティ保護可能なリソースに対する権限を許可できます。 db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を許可できます。  
   
 ## <a name="examples"></a>例  
- 次の例では、対称キー `ALTER` の `SamInventory42` 権限を、データベース ユーザー `HamidS` に対して許可します。  
+ 次の例では、対称キー `SamInventory42` の `ALTER` 権限を、データベース ユーザー `HamidS` に対して許可します。  
   
 ```  
 USE AdventureWorks2012;  

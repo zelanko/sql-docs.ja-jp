@@ -69,7 +69,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="remarks"></a>解説  
  現在のユーザーがサーバー ロールの権限を必要とするアクションを実行できるかどうかを判断するには IS_SRVROLEMEMBER を使用します。  
   
- Contoso\Mary5 などの Windows ログインを *login* に指定した場合、**IS_SRVROLEMEMBER** は、そのログインに  **への直接アクセスが許可または拒否されている場合を除き、** NULL[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を返します。  
+ Contoso\Mary5 などの Windows ログインを *login* に指定した場合、**IS_SRVROLEMEMBER** は、そのログインに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への直接アクセスが許可または拒否されている場合を除き、**NULL** を返します。  
   
  省略可能な *login* パラメーターを指定しない場合、*login* が Windows ドメインのログインであると、そのログインは、Windows グループのメンバーシップを通じて、固定サーバー ロールのメンバーになっている可能性があります。 そのような間接的なメンバーシップを解決するために、IS_SRVROLEMEMBER は、Windows グループのメンバーシップ情報をドメイン コントローラーに要求します。 ドメイン コントローラーにアクセスできないか、またはドメイン コントローラーが応答しない場合、**IS_SRVROLEMEMBER** はユーザーとそのローカル グループのみを考慮したロール メンバーシップ情報を返します。 指定されたユーザーが現在のユーザーでない場合、IS_SRVROLEMEMBER が返す値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対する認証システム (Active Directory など) の最後のデータ更新と異なることがあります。  
   

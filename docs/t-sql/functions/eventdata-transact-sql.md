@@ -85,7 +85,7 @@ EVENTDATA は、**xml** データ型の値を返します。 既定では、す�
 この例では、新しいデータベース テーブルが作成されないようにする DDL トリガーを作成します。 `EVENTDATA` によって生成された XML データに対して XQuery を使用して、トリガーを発生させる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをキャプチャします。 詳しくは、「[XQuery 言語リファレンス &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)」をご覧ください。  
   
 > [!NOTE]  
->  **で**[結果をグリッドに表示][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して `<TSQLCommand>` 要素をクエリすると、コマンド テキストに改行が表示されません。 代わりに、 **[結果をテキストで表示]** を使用してください。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[結果をグリッドに表示]** を使用して `<TSQLCommand>` 要素をクエリすると、コマンド テキストに改行が表示されません。 代わりに、 **[結果をテキストで表示]** を使用してください。  
   
 ```  
 USE AdventureWorks2012;  

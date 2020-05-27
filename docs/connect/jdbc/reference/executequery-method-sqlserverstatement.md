@@ -48,7 +48,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="remarks"></a>解説  
  この executeQuery メソッドは、java.sql.Statement インターフェイスの executeQuery メソッドで規定されています。  
   
- 渡された SQL ステートメントによって 1 つの [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverexception-class.md) オブジェクト以外のものが生成された場合は、[SQLServerException](../../../connect/jdbc/reference/sqlserverresultset-class.md) がスローされます。  
+ 渡された SQL ステートメントによって 1 つの [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクト以外のものが生成された場合は、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) がスローされます。  
   
  更新数が 1 より大きくなる (または複数の結果セットが生成される) ストアド プロシージャは [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) メソッドを使用して実行してください。  
   

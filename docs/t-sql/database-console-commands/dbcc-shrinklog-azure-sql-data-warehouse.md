@@ -21,7 +21,7 @@ ms.locfileid: "67930316"
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-現在の  *データベースの "* アプライアンス全体[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]" でトランザクション ログのサイズを減らします。 トランザクション ログの圧縮するのには、データを最適化します。 時間の経過と共に、データベースのトランザクション ログは、断片化され非効率的になります。 断片化を軽減し、ログのサイズを小さくするには、DBCC SHRINKLOG を使用します。
+現在の [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] データベースの "*アプライアンス全体*" でトランザクション ログのサイズを減らします。 トランザクション ログの圧縮するのには、データを最適化します。 時間の経過と共に、データベースのトランザクション ログは、断片化され非効率的になります。 断片化を軽減し、ログのサイズを小さくするには、DBCC SHRINKLOG を使用します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

@@ -41,7 +41,7 @@ DEGREES ( numeric_expression )
   
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
-[bit](../../t-sql/language-elements/expressions-transact-sql.md) データ型を除く、真数または概数データ型カテゴリの**式**です。  
+**bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
 データ型が *numeric_expression* のデータ型に一致する値を返します。  

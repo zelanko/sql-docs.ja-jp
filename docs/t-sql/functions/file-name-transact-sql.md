@@ -56,7 +56,7 @@ FILE_NAME ( file_id )
 *file_ID* は、sys.master_files カタログ ビューまたは sys.database_files カタログ ビューの file_id 列に対応します。  
   
 ## <a name="examples"></a>例  
-この例では、`file_ID 1` データベースの `file_ID` および [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] に対するファイル名を返します。  
+この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `file_ID 1` および `file_ID` に対するファイル名を返します。  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  

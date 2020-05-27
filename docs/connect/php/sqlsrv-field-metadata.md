@@ -128,7 +128,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>秘密度データ分類のメタデータ
 
-バージョン5.8.0 では、Microsoft SQL Server 2019 上で `DataClassification` を使用して、ユーザーが[秘密度データ分類のメタデータ](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)にアクセスするために、新しいオプション `sqlsrv_field_metadata` が導入されています。Microsoft ODBC Driver 17.4.2 以降が必要になります。
+バージョン5.8.0 では、Microsoft SQL Server 2019 上で `sqlsrv_field_metadata` を使用して、ユーザーが[秘密度データ分類のメタデータ](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)にアクセスするために、新しいオプション `DataClassification` が導入されています。Microsoft ODBC Driver 17.4.2 以降が必要になります。
 
 既定で、オプション `DataClassification` は `false` になっていますが、`true` に設定されると、秘密度データ分類のメタデータがある場合には、`sqlsrv_field_metadata` によって返された配列には、そのデータが入力されます。 
 
@@ -213,7 +213,7 @@ Array
 )
 ```
 
-`sqlsrv_query` ではなく `sqlsrv_prepare` を使用する場合、上記のスニペットは次のように変更できます。
+`sqlsrv_prepare` ではなく `sqlsrv_query` を使用する場合、上記のスニペットは次のように変更できます。
 
 ```
 $tableName = 'Patients';

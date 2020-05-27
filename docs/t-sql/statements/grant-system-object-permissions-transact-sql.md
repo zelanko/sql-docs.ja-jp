@@ -76,7 +76,7 @@ GO
 ## <a name="examples"></a>例  
   
 ### <a name="a-granting-select-permission-on-a-view"></a>A. ビューに対する SELECT 権限を許可する  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの一覧を表示するビューを選択する権限を、`Sylvester1` ログイン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に許可します。 その後、ユーザーが所有していない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインでメタデータを表示するために必要な追加権限を許可します。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの一覧を表示するビューを選択する権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `Sylvester1` に許可します。 その後、ユーザーが所有していない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインでメタデータを表示するために必要な追加権限を許可します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -86,7 +86,7 @@ GO
 ```  
   
 ### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>B. 拡張ストアド プロシージャに対する EXECUTE 権限を許可する  
- 次の例では、`EXECUTE` に対し、`xp_readmail` の `Sylvester1` 権限を許可します。  
+ 次の例では、`Sylvester1` に対し、`xp_readmail` の `EXECUTE` 権限を許可します。  
   
 ```  
 GRANT EXECUTE ON xp_readmail TO Sylvester1;  

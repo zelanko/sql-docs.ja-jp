@@ -153,7 +153,7 @@ DENY permission [ ,...n ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-denying-control-permission-on-a-user-to-another-user"></a>A. ユーザーの CONTROL 権限を別のユーザーに対して拒否する  
- 次の例では、`CONTROL` ユーザー [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] の `Wanida` 権限を、ユーザー `RolandX` に対して拒否します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ユーザー `CONTROL` の `Wanida` 権限を、ユーザー `RolandX` に対して拒否します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -162,7 +162,7 @@ GO
 ```  
   
 ### <a name="b-denying-view-definition-permission-on-a-role-to-a-user-to-which-it-was-granted-with-grant-option"></a>B. ロールの VIEW DEFINITION 権限を、GRANT OPTION で権限が許可されたユーザーに対して拒否する  
- 次の例では、`VIEW DEFINITION` ロール [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] の `SammamishParking` 権限を、データベース ユーザー `JinghaoLiu` に対して拒否します。 ユーザー `CASCADE` には、GRANT OPTION を指定して VIEW DEFINITION 権限が許可されているため、`JinghaoLiu` オプションを指定します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ロール `VIEW DEFINITION` の `SammamishParking` 権限を、データベース ユーザー `JinghaoLiu` に対して拒否します。 ユーザー `CASCADE` には、GRANT OPTION を指定して VIEW DEFINITION 権限が許可されているため、`JinghaoLiu` オプションを指定します。  
   
 ```  
 USE AdventureWorks2012;  

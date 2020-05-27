@@ -47,7 +47,7 @@ ms.locfileid: "68132079"
 ## <a name="remarks"></a>解説  
 接続の数はユーザーの数とは異なります。 たとえば、アプリケーションでは、ユーザーがこれらの接続を監視することなく、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への複数の接続を開くことができます。
   
-接続試行回数など、いくつかの  **統計情報を含むレポートを表示するには、** sp_monitor[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行します。
+接続試行回数など、いくつかの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 統計情報を含むレポートを表示するには、**sp_monitor** を実行します。
   
 @@MAX_CONNECTIONS は、サーバーに対する同時接続の最大許容数です。 @@CONNECTIONS はログインが試行されるたびに増えるため、@@CONNECTIONS は @@MAX_CONNECTIONS を超える可能性があります。
   

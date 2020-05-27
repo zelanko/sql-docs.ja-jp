@@ -127,7 +127,7 @@ CREATE ASYMMETRIC KEY asym_key_name
 ## <a name="examples"></a>例  
   
 ### <a name="a-creating-an-asymmetric-key"></a>A. 非対称キーを作成する  
- 次の例では、`PacificSales09` アルゴリズムを使って `RSA_2048` という非対称キーを作成し、パスワードで秘密キーを保護します。  
+ 次の例では、`RSA_2048` アルゴリズムを使って `PacificSales09` という非対称キーを作成し、パスワードで秘密キーを保護します。  
   
 ```sql  
 CREATE ASYMMETRIC KEY PacificSales09   
@@ -147,7 +147,7 @@ GO
 ```  
   
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>C. EKM プロバイダーから非対称キーを作成する  
- 次の例では、`EKM_askey1` という拡張キー管理プロバイダーに格納されているキー ペアから非対称キー `EKM_Provider1` を作成し、そのプロバイダー上の `key10_user1` というキーを作成します。  
+ 次の例では、`EKM_Provider1` という拡張キー管理プロバイダーに格納されているキー ペアから非対称キー `EKM_askey1` を作成し、そのプロバイダー上の `key10_user1` というキーを作成します。  
   
 ```sql  
 CREATE ASYMMETRIC KEY EKM_askey1   

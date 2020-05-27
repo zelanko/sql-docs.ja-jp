@@ -27,13 +27,13 @@ ms.locfileid: "69027769"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>SQLXML オブジェクトを使用した XML データの読み取りと書き込み  
  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] API のメソッドと SQLXML オブジェクトを使用して、XML データの読み取りと書き込みを行う方法は次のとおりです。  
   
--   SQLXML オブジェクトを作成するには、[SQLServerConnection](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) クラスの [createSQLXML](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドを使用します。 このメソッドで作成される SQLXML オブジェクトにはデータが一切含まれていないことに注意してください。 SQLXML オブジェクトに **xml** データを追加するには、SQLXML インターフェイスで指定されている、setResult、setCharacterStream、setBinaryStream、setString のいずれかのメソッドを呼び出します。  
+-   SQLXML オブジェクトを作成するには、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) メソッドを使用します。 このメソッドで作成される SQLXML オブジェクトにはデータが一切含まれていないことに注意してください。 SQLXML オブジェクトに **xml** データを追加するには、SQLXML インターフェイスで指定されている、setResult、setCharacterStream、setBinaryStream、setString のいずれかのメソッドを呼び出します。  
   
 -   SQLXML オブジェクトそのものを取得するには、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスまたは [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスの getSQLXML メソッドを使用します。  
   
 -   SQLXML オブジェクトから **xml** データを取得するには、SQLXML インターフェイスで指定されている、getSource、getCharacterStream、getBinaryStream、getString のいずれかのメソッドを使用します。  
   
--   SQLXML オブジェクト内の **xml** データを更新するには、[SQLServerResultSet](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) クラスの [updateSQLXML](../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを使用します。  
+-   SQLXML オブジェクト内の **xml** データを更新するには、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) メソッドを使用します。  
   
 -   SQLXML オブジェクトをデータベース テーブルの **xml** 型の列に格納するには、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスまたは [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスの setSQLXML メソッドを使用します。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "69027769"
   
 -   「**メソッド名**」列は、JDBC API でサポートされている getter、setter、および updater メソッドの一覧です。  
   
--   「**getter SQLXML オブジェクト**」列は、[SQLServerCallableStatement](../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md) クラスの [getSQLXML](../../connect/jdbc/reference/sqlservercallablestatement-class.md) メソッドまたは [SQLServerResultSet](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) クラスの [getSQLXML](../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドによって作成される SQLXML オブジェクトを表します。  
+-   「**getter SQLXML オブジェクト**」列は、[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスの [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md) メソッドまたは [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) メソッドによって作成される SQLXML オブジェクトを表します。  
   
--   「**setter SQLXML オブジェクト**」列は、[SQLServerConnection](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) クラスの [createSQLXML](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドによって作成される SQLXML オブジェクトを表します。 以下の setter メソッドは、[createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) メソッドによって作成された SQLXML オブジェクトしか受け付けない点に注意してください。  
+-   「**setter SQLXML オブジェクト**」列は、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) メソッドによって作成される SQLXML オブジェクトを表します。 以下の setter メソッドは、[createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) メソッドによって作成された SQLXML オブジェクトしか受け付けない点に注意してください。  
   
 |メソッド名|getter SQLXML オブジェクト<br /><br /> (読み取り可能)|setter SQLXML オブジェクト<br /><br /> (書き込み可能)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "69027769"
   
 -   SQLXML オブジェクトに対してデータを設定するには、返されたオブジェクトの適切な setter メソッドや関数を使用する必要があります。  
   
--   基になる列が [null](../../connect/jdbc/reference/sqlservercallablestatement-class.md) の場合、[SQLServerCallableStatement](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスおよび **SQLServerResultSet** クラスの getSQLXML メソッドは、**null** データを返します。  
+-   基になる列が **null** の場合、[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスおよび [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの getSQLXML メソッドは、**null** データを返します。  
   
 -   setter オブジェクトは、そのオブジェクトが作成された接続の間、有効です。  
   

@@ -73,7 +73,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ## <a name="examples"></a>例  
   
 ### <a name="a-dropping-statistics-from-a-table"></a>A. テーブルから統計を削除する  
- 次の例では、2 つのテーブルの統計グループ (コレクション) を削除します。 `VendorCredit` テーブルの `Vendor` 統計グループ (コレクション) と `CustomerTotal` テーブルの `SalesOrderHeader` 統計グループ (コレクション) が削除されます。  
+ 次の例では、2 つのテーブルの統計グループ (コレクション) を削除します。 `Vendor` テーブルの `VendorCredit` 統計グループ (コレクション) と `SalesOrderHeader` テーブルの `CustomerTotal` 統計グループ (コレクション) が削除されます。  
   
 ```  
 -- Create the statistics groups.  

@@ -23,7 +23,7 @@ ms.locfileid: "78896224"
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-このセクションの例は、ASP.NET <xref:Microsoft.Data.SqlClient.SqlDependency> オブジェクトを利用して <xref:System.Web.Caching.SqlCacheDependency> を間接的に使用する方法を示しています。 <xref:System.Web.Caching.SqlCacheDependency> オブジェクトは <xref:Microsoft.Data.SqlClient.SqlDependency> を使用して通知をリッスンし、キャッシュを正しく更新します。  
+このセクションの例は、ASP.NET <xref:System.Web.Caching.SqlCacheDependency> オブジェクトを利用して <xref:Microsoft.Data.SqlClient.SqlDependency> を間接的に使用する方法を示しています。 <xref:System.Web.Caching.SqlCacheDependency> オブジェクトは <xref:Microsoft.Data.SqlClient.SqlDependency> を使用して通知をリッスンし、キャッシュを正しく更新します。  
   
 > [!NOTE]
 >  このサンプル コードを実行するには、「[クエリ通知の有効化](enable-query-notifications.md)」のスクリプトを実行してクエリ通知を有効にしておく必要があります。  

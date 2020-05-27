@@ -36,7 +36,7 @@ System.Data.Sql.SqlDataSourceEnumerator instance =
    System.Data.Sql.SqlDataSourceEnumerator.Instance  
 ```  
   
-静的インスタンスを取得したら、使用可能なサーバーに関する情報を含む <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> を返す <xref:System.Data.DataTable> メソッドを呼び出すことができます。  
+静的インスタンスを取得したら、使用可能なサーバーに関する情報を含む <xref:System.Data.DataTable> を返す <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> メソッドを呼び出すことができます。  
   
 ```csharp  
 System.Data.DataTable dataTable = instance.GetDataSources();  

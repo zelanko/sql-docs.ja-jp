@@ -118,7 +118,7 @@ table 変数は作成後に変更できません。
 ## <a name="examples"></a>例  
   
 ### <a name="a-declaring-a-variable-of-type-table"></a>A. table 型の変数を宣言する  
-次の例では、UPDATE ステートメントの OUTPUT 句で指定される値を格納する `table` 変数を作成します。 この後に、`SELECT` 内の値、および `@MyTableVar` テーブルの更新操作の結果を返す 2 つの `Employee` ステートメントが続きます。 `INSERTED.ModifiedDate` 列の結果が、`ModifiedDate` テーブルの `Employee` 列の値と異なります。 この違いは、`AFTER UPDATE` の値を現在の日付に更新する `ModifiedDate` トリガーが `Employee` テーブルで定義されることに起因します。 ただし、`OUTPUT` が返す列には、トリガーが起動される前の値が反映されています。 詳細については、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」を参照してください。
+次の例では、UPDATE ステートメントの OUTPUT 句で指定される値を格納する `table` 変数を作成します。 この後に、`SELECT` 内の値、および `@MyTableVar` テーブルの更新操作の結果を返す 2 つの `Employee` ステートメントが続きます。 `INSERTED.ModifiedDate` 列の結果が、`Employee` テーブルの `ModifiedDate` 列の値と異なります。 この違いは、`AFTER UPDATE` の値を現在の日付に更新する `ModifiedDate` トリガーが `Employee` テーブルで定義されることに起因します。 ただし、`OUTPUT` が返す列には、トリガーが起動される前の値が反映されています。 詳細については、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」を参照してください。
   
 ```sql
 USE AdventureWorks2012;  

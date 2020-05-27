@@ -25,7 +25,7 @@ ms.locfileid: "67952994"
 # <a name="getcolumnclassname-method-sqlserverresultsetmetadata"></a>getColumnClassName メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) クラスの [getObject](../../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを呼び出して列から値を取得する場合、インスタンスが生成される Java クラスの完全修飾名を返します。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) メソッドを呼び出して列から値を取得する場合、インスタンスが生成される Java クラスの完全修飾名を返します。  
   
 ## <a name="syntax"></a>構文  
   

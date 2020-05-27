@@ -29,7 +29,7 @@ SQL Server 2008 には、ビジネス ニーズを満たすように設計され
   
 ## <a name="in-this-section"></a>このセクションの内容  
 [SqlTypes とデータセット](sqltypes-dataset.md)  
-`SqlTypes` 内の `DataSet` に対する新しい型のサポートについて説明します。  
+`DataSet` 内の `SqlTypes` に対する新しい型のサポートについて説明します。  
   
 [null 値の処理](handle-null-values.md)  
 null 値と 3 値ロジックを操作する方法について説明します。  

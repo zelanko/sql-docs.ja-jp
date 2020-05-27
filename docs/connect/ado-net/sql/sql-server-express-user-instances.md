@@ -113,7 +113,7 @@ private static void OpenSqlConnection()
 ```  
   
 > [!NOTE]
->  ユーザー インスタンスは、SQL Server 内で実行されている共通言語ランタイム (CLR) コードではサポートされていません。 接続文字列に <xref:System.InvalidOperationException> が含まれる `Open` で <xref:Microsoft.Data.SqlClient.SqlConnection> が呼び出されると、`User Instance=true` がスローされます。  
+>  ユーザー インスタンスは、SQL Server 内で実行されている共通言語ランタイム (CLR) コードではサポートされていません。 接続文字列に `User Instance=true` が含まれる <xref:Microsoft.Data.SqlClient.SqlConnection> で `Open` が呼び出されると、<xref:System.InvalidOperationException> がスローされます。  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>ユーザー インスタンスの接続の有効期間  
 サービスとして実行される SQL Server のバージョンとは異なり、SQL Server Express インスタンスは手動で起動したり停止したりする必要はありません。 ユーザーがログインしてユーザー インスタンスに接続するたびに、ユーザー インスタンスが起動されます (まだ実行されていない場合)。 ユーザー インスタンス データベースでは `AutoClose` オプションが設定されており、非アクティブな状態が一定期間続くとデータベースが自動的にシャットダウンされます。 開始された sqlservr.exe プロセスは、インスタンスへの最後の接続が終了した後、一定のタイムアウト期間、実行されたままになります。そのため、タイムアウトの期限が切れる前であれば、別の接続を開いても再起動する必要がありません。 タイムアウト期間が過ぎるまでに新しい接続が開かれないと、ユーザー インスタンスは自動的にシャットダウンされます。 親インスタンスのシステム管理者は、**sp_configure** を使用し、**user instance timeout** オプションを変更することにより、ユーザー インスタンスのタイムアウト期間を設定できます。 既定値は 60 分です。  

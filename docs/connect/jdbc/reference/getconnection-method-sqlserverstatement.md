@@ -25,7 +25,7 @@ ms.locfileid: "67952680"
 # <a name="getconnection-method-sqlserverstatement"></a>getConnection メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを生成した [SQLServerConnection](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトを取得します。  
+  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトを生成した [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
   

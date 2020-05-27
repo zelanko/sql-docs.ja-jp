@@ -48,7 +48,7 @@ public long getLong(java.lang.String sCol)
 ## <a name="remarks"></a>解説  
  この getLong メソッドは、java.sql.CallableStatement インターフェイスの getLong メソッドで規定されています。  
   
- このメソッドは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bigint **、** int **、** smallint **、** tinyint **、** bit**などの整数値を安全に返すことができる** のデータ型でのみサポートされています。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
+ このメソッドは、**bigint**、**int**、**smallint**、**tinyint**、**bit** などの整数値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型でのみサポートされています。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [getLong メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   

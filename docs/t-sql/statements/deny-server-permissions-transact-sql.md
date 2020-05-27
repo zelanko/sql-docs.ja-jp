@@ -150,7 +150,7 @@ AS <principal> 句は、権限の拒否者として記録されるプリンシ�
 ## <a name="examples"></a>例  
   
 ### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>A. SQL Server ログインと、このログインが権限を許可したプリンシパルに対して CONNECT SQL 権限を拒否する  
- 次の例では、`CONNECT SQL` ログイン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と、このログインが権限を許可したプリンシパルに対して、`Annika` 権限を拒否します。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `CONNECT SQL` と、このログインが権限を許可したプリンシパルに対して、`Annika` 権限を拒否します。  
   
 ```  
 USE master;  

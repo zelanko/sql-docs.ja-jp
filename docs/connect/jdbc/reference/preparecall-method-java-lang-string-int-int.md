@@ -25,7 +25,7 @@ ms.locfileid: "67976256"
 # <a name="preparecall-method-javalangstring-int-int"></a>prepareCall (java.lang.String, int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  渡された結果セットの種類およびコンカレンシーの [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトを生成する [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを作成します。  
+  渡された結果セットの種類およびコンカレンシーの [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを生成する [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   

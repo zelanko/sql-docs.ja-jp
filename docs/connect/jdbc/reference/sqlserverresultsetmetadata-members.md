@@ -39,7 +39,7 @@ ms.locfileid: "67970520"
 |Name|説明|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|指定した列が含まれるテーブルのカタログ名を取得します。|  
-|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) クラスの [getObject](../../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを呼び出して列から値を取得する場合、インスタンスが生成される Java クラスの完全修飾名を返します。|  
+|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) メソッドを呼び出して列から値を取得する場合、インスタンスが生成される Java クラスの完全修飾名を返します。|  
 |[getColumnCount](../../../connect/jdbc/reference/getcolumncount-method-sqlserverresultsetmetadata.md)|結果セット内の列数を返します。|  
 |[getColumnDisplaySize](../../../connect/jdbc/reference/getcolumndisplaysize-method-sqlserverresultsetmetadata.md)|指定された列の通常の最大幅を表す文字数を返します。|  
 |[getColumnLabel](../../../connect/jdbc/reference/getcolumnlabel-method-sqlserverresultsetmetadata.md)|指定された列の印刷や表示に使用する推奨タイトルを取得します。|  

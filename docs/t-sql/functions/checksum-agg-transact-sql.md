@@ -62,7 +62,7 @@ DISTINCT
 `CHECKSUM_AGG` には、他の集計関数と同様の機能があります。 詳細については、[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)を参照してください。
   
 ## <a name="examples"></a>例  
-次の例では、`CHECKSUM_AGG` を使用して、`Quantity` データベースの `ProductInventory` テーブルの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列の変更を検出します。
+次の例では、`CHECKSUM_AGG` を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `ProductInventory` テーブルの `Quantity` 列の変更を検出します。
   
 ```sql
 --Get the checksum value before the column value is changed.  

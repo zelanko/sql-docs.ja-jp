@@ -61,7 +61,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  証明書に対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、証明書 `@SensitiveData` を使用して `ABerglundCert07` 内のテキストに署名します。署名の前にはパスワード "pGFD4bb925DGvbd2439587y" を使用して証明書を暗号化解除します。 その後、クリアテキストと署名をテーブル `SignedData04` に挿入します。  
+ 次の例では、証明書 `ABerglundCert07` を使用して `@SensitiveData` 内のテキストに署名します。署名の前にはパスワード "pGFD4bb925DGvbd2439587y" を使用して証明書を暗号化解除します。 その後、クリアテキストと署名をテーブル `SignedData04` に挿入します。  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  
