@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 133d28e8-55eb-4783-bb8b-d3776a95ebda
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2730d14bb0ffc0bab6c0f6dc8a331bae62644da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80d98b29b4d35978864d4a2289e9d351e20f661b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081081"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544444"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>[テーブルの検索] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [テーブルの検索] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、ディメンション、キューブ、またはマイニング構造に関連付けられているデータ ソース ビュー内のテーブルを検索できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でこのダイアログ ボックスを表示するには、次の手順に従います。  

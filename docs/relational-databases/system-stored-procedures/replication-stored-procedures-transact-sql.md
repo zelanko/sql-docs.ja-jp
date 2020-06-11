@@ -1,5 +1,6 @@
 ---
 title: レプリケーションストアドプロシージャ (Transact-sql) |Microsoft Docs
+description: SQL Server では、レプリケーションシステムストアドプロシージャは、レプリケーションの実装やバッチファイルやスクリプトでの使用など、1回限りのタスクを実行できます。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f8865167aaddeed91a071992244754e307ba69e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b62346e11923a1c9e1683ae0ccff1b3898b528a2
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770973"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807776"
 ---
 # <a name="replication-stored-procedures-transact-sql"></a>レプリケーションストアドプロシージャ (Transact-sql)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68770973"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックには、[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを使用したレプリケーション タスクのプログラミング例が、一般的なさまざまなタスクについて記載されています。 詳細については、「[Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)」 (レプリケーション システム ストアド プロシージャの概念) を参照してください。  
   
 > [!IMPORTANT]  
->  サポートされているのは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、オンラインブックに記載されているレプリケーションストアドプロシージャだけです。 記載されていないストアド プロシージャは、内部レプリケーション コンポーネント専用です。レプリケーションの管理には使用しないでください。  
+>  サポートされているのは、オンラインブックに記載されているレプリケーションストアドプロシージャだけ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。 記載されていないストアド プロシージャは、内部レプリケーション コンポーネント専用です。レプリケーションの管理には使用しないでください。  
   
 |||  
 |-|-|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aca2cd956850de245f507e8cf24b93e87404429b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39a1622ceccf6465b616fcc23de7093b4aa45d8c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174295"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543557"
 ---
 # <a name="granting-process-database-permissions"></a>データベースの処理権限の許可
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスをインストールすると、そのインスタンス内の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバー管理者ロールのすべてのメンバーは、サーバー全体について [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンス内で任意のタスクを実行する権限を与えられます。 既定では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンス内のオブジェクトを管理および表示する権限は他のユーザーに一切与えられません。
@@ -30,7 +29,7 @@ ms.locfileid: "78174295"
 
 2.  **[データベースの処理]** チェック ボックスをオンにします。
 
-3.  プロパティウィンドウで、この新しいロールの**Name**プロパティをに`Process Database Objects Role`変更します。
+3.  プロパティウィンドウで、この新しいロールの**Name**プロパティをに変更し `Process Database Objects Role` ます。
 
      ![ロール デザイナー](../../2014/tutorials/media/l10-security-1.png "ロール デザイナー")
 

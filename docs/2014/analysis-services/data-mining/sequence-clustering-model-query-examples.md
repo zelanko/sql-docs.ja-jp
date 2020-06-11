@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d871ba87147f24fdd60c9effe5f279d9ea355db1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d56924f27f7986861895cf4fff21fa758cc47070
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082920"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520430"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、モデルに格納されている情報の詳細を取得できます。予測クエリでは、モデル内のパターンを使用して、指定した新しいデータに基づく予測を行うことができます。 シーケンス クラスター モデルでコンテンツ クエリを使用すると、一般に、検出されたクラスターやクラスター内の遷移に関する追加情報を取得できます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
@@ -28,7 +27,7 @@ ms.locfileid: "66082920"
   
  ここでは、Microsoft シーケンス クラスター アルゴリズムに基づいたモデルに対するクエリの作成方法について説明します。 クエリの作成に関する一般的な情報については、「 [データ マイニング クエリ](data-mining-queries.md)」を参照してください。  
   
- **コンテンツクエリ**  
+ **コンテンツ クエリ**  
   
  [データ マイニング スキーマ行セットを使用してモデル パラメーターを取得する](#bkmk_Query1)  
   
@@ -253,7 +252,7 @@ AS t
   
 |||  
 |-|-|  
-|予測関数|使用方法|  
+|予測関数|使用法|  
 |[Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx)|入力したケースを含む可能性の最も高いクラスターを返します。|  
 |[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|指定されたクラスターと入力したケース間の距離を返します。ただしクラスターが指定されていない場合は、最も可能性の高いクラスターと入力したケース間の距離を返します。<br /><br /> この関数は任意の種類のクラスター モデル (EM、K-Means など) と共に使用できますが、結果はアルゴリズムによって異なります。|  
 |[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|入力ケースが指定されたクラスターに所属する確率を返します。|  

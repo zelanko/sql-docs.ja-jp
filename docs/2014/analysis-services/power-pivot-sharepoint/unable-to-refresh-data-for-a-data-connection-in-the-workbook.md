@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81a72e0009659e06fd27e9c402f17ddab259d228
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070942"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540178"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>ブック内のデータ接続に関するデータを更新できません。 再試行するか、システム管理者に問い合わせてください。 次の接続の更新に失敗しました:PowerPivot データ
   PowerPivot データを含む Excel ブックで、Excel Services は、PowerPivot サーバーに送信した接続要求が失敗した場合にこのエラーを返します。  
@@ -40,7 +39,7 @@ ms.locfileid: "66070942"
   
  開こうとしているブックが、SQL Server 2008 R2 バージョンの PowerPivot for Excel で作成された可能性があります。 ほとんどの場合、データ接続文字列で指定された Analysis Services データ プロバイダーは、要求を処理しているコンピューター上に存在しません。  
   
- このような場合は、ULS ログに "ブックの\<URL> ' に対する ' PowerPivot データ ' の更新に失敗しました" というメッセージが表示され、その後に "接続を取得できません" というメッセージが表示されます。  
+ このような場合は、ULS ログに "ブック ' ' の ' PowerPivot データ ' の更新に失敗しました" というメッセージが表示され、 \<URL to workbook> その後に "接続を取得できません" というメッセージが表示されます。  
   
  ブックのバージョンを決定するには、Excel で開き、接続文字列にどのデータ プロバイダーが指定されているか確認します。 SQL Server 2008 R2 ブックは、MSOLAP.4 をデータ プロバイダーとして使用します。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66070942"
   
  この問題を回避するには、PowerPivot サーバーと同じドメインにコンピューターを所属させるか、ローカル コンピューターにドメイン コントローラーをインストールします。 2 番目の解決策として、ドメイン コントローラーのインストールを行う場合は、すべてのサービスとユーザーのローカル ドメイン アカウントを作成することが必要になります。 それには、サービス アカウントを構成して、定義したアカウントの SharePoint 権限を構成する必要があります。  
   
- PowerPivot for SharePoint をオフライン状態で使用することを目的とする場合は、コンピューターにドメイン コントローラーをインストールすると便利です。 PowerPivot をオフラインで使用する方法の詳細については、「」のブログ記事「PowerPivot サーバーをネットワークから[http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241)切断する」を参照してください。  
+ PowerPivot for SharePoint をオフライン状態で使用することを目的とする場合は、コンピューターにドメイン コントローラーをインストールすると便利です。 PowerPivot をオフラインで使用する方法の詳細については、「」のブログ記事「PowerPivot サーバーをネットワークから切断する」を参照してください [http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241) 。  
   
  **シナリオ 4: 不安定なサーバー**  
   

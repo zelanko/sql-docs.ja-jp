@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db6a51b44e9b467881c4aeaa8e0a63f48b617a22
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069693"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538324"
 ---
 # <a name="select-calendars-dimension-wizard"></a>[カレンダーの選択] (ディメンション ウィザード)
   **[カレンダーの選択]** ページを使用すると、会計カレンダー、レポート カレンダー、製造カレンダー、ISO (国際標準化機構) 8601 カレンダーを表す階層を作成し、時間ディメンションに追加できます。  
@@ -58,7 +57,7 @@ ms.locfileid: "66069693"
   
  次の表に、[月単位の週のパターン] に指定できるオプションを示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[週 445]**|四半期の 1 番目の月が 4 週、四半期の 2 番目の月が 4 週、四半期の 3 番目の月が 5 週になります。|  
 |**[週 454]**|四半期の 1 番目の月が 4 週、四半期の 2 番目の月が 5 週、四半期の 3 番目の月が 4 週になります。|  

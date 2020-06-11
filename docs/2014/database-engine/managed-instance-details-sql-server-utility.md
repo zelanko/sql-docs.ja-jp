@@ -10,17 +10,17 @@ ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89f962ead45c4c0670cd5adfb5da0be9373c4097
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774344"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858937"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>マネージド インスタンスの詳細 (SQL Server ユーティリティ)
   ユーティリティ エクスプローラーの [マネージド インスタンス] ビューでは、個々の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスの使用率に関するデータ、CPU 使用率の履歴、ファイル レベルでの記憶域使用率の詳細を参照できます。ポリシーしきい値の表示と更新も可能です。 ポリシーのしきい値は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス レベルでコンピューター、データベース ファイル、およびログ ファイルを対象に制御するか、記憶域ボリュームのレベルで制御することができます。 特定の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]マネージド インスタンスのプロパティ詳細を参照することもできます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  リスト ビュー  
  上部のペインには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の個々のインスタンス (ComputerName\InstanceName) とそのデータがリスト表示されます。  
   

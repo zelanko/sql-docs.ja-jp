@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc38d7977e13fb76c33a0399fd6a7325783abb1e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077923"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541590"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>[メジャー] (キューブ デザイナーの [キューブ構造] タブ) (Analysis Services - 多次元データ)
   **[メジャー]** ペインを使用すると、キューブ デザイナーの **[キューブ構造]** タブでメジャー グループとメンバーを操作できます。  
@@ -45,7 +44,7 @@ ms.locfileid: "66077923"
  データ型  
  メジャーのデータ型を選択します。  
   
- 集計  
+ 集約  
  メジャーの集計関数を選択します。  
   
 ## <a name="context-menu"></a>コンテキスト メニュー  

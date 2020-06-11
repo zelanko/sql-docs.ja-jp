@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c6b4df30ec422df0dd79b2fc9d58766e6dbcf7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071118"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535044"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理ダッシュボードと使用状況データ
   PowerPivot 管理ダッシュボードとは、SQL Server PowerPivot for SharePoint の配置の管理に役立つ SharePoint サーバーの全体管理の定義済みのレポートおよび Web パーツのコレクションです。 管理ダッシュボードでは、サーバーの状態、ブックの利用状況、およびデータ更新に関連する情報が示されます。 ダッシュボードは、SharePoint 使用状況データ コレクションのデータを使用します。  
@@ -41,7 +40,7 @@ ms.locfileid: "66071118"
 |ダッシュボード|説明|  
 |---------------|-----------------|  
 |インフラストラクチャ - サーバーの状態|CPU 使用率、メモリ消費量、およびクエリ応答時間の時間の経過に伴う変化の傾向を表示し、システム リソースが最大容量に近づいていないかどうか、または使用率が低くなっていないかどうかを評価できるようにします。|  
-|Actions|現在のサービス アプリケーション、サービス アプリケーションの一覧、および使用状況ログを含む、サーバーの全体管理内の他のページへのリンクを示します。|  
+|アクション|現在のサービス アプリケーション、サービス アプリケーションの一覧、および使用状況ログを含む、サーバーの全体管理内の他のページへのリンクを示します。|  
 |ブックの利用状況 - グラフ|データ アクセスの頻度をレポートします。 PowerPivot データ ソースへの接続が発生する頻度を日単位または週単位で確認できます。|  
 |ブックの利用状況 - リスト|データ アクセスの頻度をレポートします。 PowerPivot データ ソースへの接続が発生する頻度を日単位または週単位で確認できます。|  
 |データ更新 - 最近の利用状況|データ更新ジョブの状態をレポートします (実行に失敗したジョブを含む)。 このレポートは、データ更新操作をアプリケーション レベルで総合的に理解するのに役立ちます。 管理者は、PowerPivot サービス アプリケーション全体に対して定義されているデータ更新ジョブの数が一目でわかります。|  

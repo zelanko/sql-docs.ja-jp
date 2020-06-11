@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f68b89a7-17df-45f8-ba7f-b458cd9b1ec3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8edfea95968bee0dc1103f8069ecfe9e0d08e3ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79dd1eca0d12061cef0ab5453933df08f78954d1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069769"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538354"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>[入れ子になったテーブル キー列の選択] ダイアログ ボックス ([マイニング構造] ビュー)
   **[入れ子になったテーブル キー列の選択]** ダイアログ ボックスを使用すると、新しい入れ子になったテーブルのキーとして動作する列を指定できます。 ダイアログ ボックスを閉じると、指定したキー列を含む新しいテーブルがマイニング構造に追加されます。 入れ子になったテーブルに新たに列を追加するには、構造を右クリックして **[列の追加]** をクリックします。 このダイアログ ボックスに含まれているオプションは、OLAP マイニング モデルを使用するか、リレーショナル マイニング モデルを使用するかによって異なります。  

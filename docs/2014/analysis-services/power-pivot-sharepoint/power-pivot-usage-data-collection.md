@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 46504906b13323ac4881ca2289e87e31f1cea72f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5d28ef26a24f65be180b73620cf3f665db24d3c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071088"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547814"
 ---
 # <a name="powerpivot-usage-data-collection"></a>PowerPivot 使用状況データ収集
   使用状況データ収集は、ファーム レベルの SharePoint 機能です。 PowerPivot for SharePoint では、このシステムを使用および拡張して、PowerPivot のデータやサービスがどのように使用されているかを示すレポートが PowerPivot 管理ダッシュボードに用意されています。 SharePoint のインストール方法によっては、使用状況データ収集がファームに対して無効になっていることがあります。 ファーム管理者は、使用状況のログ記録を有効にして、PowerPivot 管理ダッシュボードに表示される使用状況データを作成する必要があります。 PowerPivot イベントの使用状況データ収集を有効にして構成する方法の詳細については、「 [&#40;PowerPivot for SharePoint の使用状況データ収集の構成](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)」を参照してください。  
@@ -41,7 +40,7 @@ ms.locfileid: "66071088"
   
  ![使用状況データ収集のコンポーネントおよびプロセス](../media/gmni-usagedata.gif "使用状況データ収集のコンポーネントおよびプロセス")  
   
-|段階|説明|  
+|フェーズ|[説明]|  
 |-----------|-----------------|  
 |1|使用状況データ収集は、SharePoint 配置の PowerPivot コンポーネントと [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ プロバイダーで生成されるイベントによってトリガーされます。 有効または無効にできる構成可能なイベントには、接続要求、読み込み要求とアンロード要求、およびアプリケーション サーバー上の PowerPivot サービスによって監視されるクエリ応答タイミング イベントがあります。 その他のイベントは、サーバーのみによって管理され、無効にすることはできません。 このようなイベントには、データ更新イベントとサーバー状態イベントがあります。<br /><br /> 最初に、使用状況データは SharePoint システムのデータ収集機能を使用して収集され、ローカル ログ ファイルに格納されます。 ファイルとファイルの場所は、SharePoint の標準の使用状況データ収集システムの一部になります。 ファイルの場所は、ファーム内のすべてのサーバーで同じです。 ログ ディレクトリの場所を表示または変更するには、SharePoint サーバーの全体管理の **[監視]** に移動し、 **[Usage and Health data collection の構成]** をクリックします。|  
 |2|スケジュール設定された間隔 (既定では毎時) で、Microsoft SharePoint Foundation 利用状況データのインポート タイマー ジョブは、ローカル ファイルから PowerPivot サービス アプリケーション データベースに使用状況データを移動します。 ファーム内に複数の PowerPivot サービス アプリケーションが存在する場合、それぞれが独自のデータベースを持ちます。 イベントには、イベントを生成した PowerPivot サービス アプリケーションを識別する内部情報が含まれます。 このアプリケーション識別子により、使用状況データがその作成元のアプリケーションにバインドされるようになります。|  
@@ -52,7 +51,7 @@ ms.locfileid: "66071088"
 ##  <a name="sources-of-usage-data"></a><a name="sources"></a> 使用状況データのソース  
  使用状況データ収集が有効の場合、次のサーバー イベントに対してデータが生成されます。  
   
-|event|説明|構成可能|  
+|Event|説明|構成可能|  
 |-----------|-----------------|------------------|  
 |接続|Excel ブックの PowerPivot データに対してクエリを実行しているユーザーに代わって実行されるサーバー接続。 接続イベントは、PowerPivot ブックへの接続を開いたユーザーを特定します。 レポートでは、この情報を使用して、最も頻繁に使用するユーザー、同じユーザーによってアクセスされる PowerPivot データ ソース、および長期的な接続の傾向が提示されます。|[&#40;PowerPivot for SharePoint の使用状況データ収集の構成](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)を有効または無効にすることができます。|  
 |クエリ応答時間|完了に要する時間に基づいてクエリを分類するクエリ応答統計。 クエリ応答統計は、サーバーがクエリ要求への応答に要する時間のパターンを示します。|[&#40;PowerPivot for SharePoint の使用状況データ収集の構成](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)を有効または無効にすることができます。|  
@@ -68,7 +67,7 @@ ms.locfileid: "66071088"
 |---------------|----------------------|-----------------|  
 |SharePoint Timer Service (SPTimerV4)||この Windows サービスは、ファーム内のすべてのメンバー コンピューターでローカルに実行され、ファーム レベルで定義されるすべてのタイマー ジョブを処理します。|  
 |Microsoft SharePoint Foundation 利用状況データのインポート (Microsoft SharePoint Foundation Usage Data Import)|30 分ごと (SharePoint 2010 の場合)。 5 分ごと (SharePoint 2013 の場合)。|このタイマー ジョブは、ファーム レベルでグローバルに構成されます。 このタイマー ジョブは、使用状況データをローカルの使用状況ログ ファイルから中央の使用状況データ収集データベースに移動します。 このタイマー ジョブを手動で実行して、データ インポート操作を強制的に実行できます。|  
-|Microsoft SharePoint Foundation 使用状況データ処理タイマー ジョブ|毎日午前 3 時|**(\*)** SQL Server 2012 PowerPivot for SharePoint 以降では、SharePoint 使用状況データベースに古い使用状況データが残っている可能性があるアップグレードシナリオまたは移行シナリオで、このタイムジョブがサポートされます。 SQL Server 2012 PowerPivot for SharePoint 以降、PowerPivot の使用状況データ収集および管理ダッシュボード ワークフローには、SharePoint 利用状況データベースが使用されません。 このタイマー ジョブを手動で実行して、SharePoint 利用状況データベースに残っている PowerPivot の関連データを PowerPivot サービス アプリケーション データベースに移動することができます。<br /><br /> このタイマー ジョブは、ファーム レベルでグローバルに構成されます。 このタイマージョブは、中央の使用状況データ収集データベース内にある期限切れになった使用状況データ (つまり、30 日を超えているすべてのレコード) を調べます。 ファーム内の PowerPivot サーバーに対して、このタイマー ジョブは PowerPivot 使用状況データの追加確認を実行します。 PowerPivot 使用状況データを検出した場合、このタイマー ジョブは、アプリケーション識別子を使用して適切なサービス アプリケーション データベースを検索し、データをそのデータベースに移動します。<br /><br /> このタイマー ジョブを手動で実行して、期限切れになったデータを強制的に確認したり、PowerPivot サービス アプリケーション データベースへ PowerPivot 使用状況データを強制的にインポートしたりできます。|  
+|Microsoft SharePoint Foundation 使用状況データ処理タイマー ジョブ|毎日午前 3 時|**( \* )** SQL Server 2012 PowerPivot for SharePoint 以降では、SharePoint 使用状況データベースに古い使用状況データが残っている可能性があるアップグレードシナリオまたは移行シナリオで、このタイムジョブがサポートされます。 SQL Server 2012 PowerPivot for SharePoint 以降、PowerPivot の使用状況データ収集および管理ダッシュボード ワークフローには、SharePoint 利用状況データベースが使用されません。 このタイマー ジョブを手動で実行して、SharePoint 利用状況データベースに残っている PowerPivot の関連データを PowerPivot サービス アプリケーション データベースに移動することができます。<br /><br /> このタイマー ジョブは、ファーム レベルでグローバルに構成されます。 このタイマージョブは、中央の使用状況データ収集データベース内にある期限切れになった使用状況データ (つまり、30 日を超えているすべてのレコード) を調べます。 ファーム内の PowerPivot サーバーに対して、このタイマー ジョブは PowerPivot 使用状況データの追加確認を実行します。 PowerPivot 使用状況データを検出した場合、このタイマー ジョブは、アプリケーション識別子を使用して適切なサービス アプリケーション データベースを検索し、データをそのデータベースに移動します。<br /><br /> このタイマー ジョブを手動で実行して、期限切れになったデータを強制的に確認したり、PowerPivot サービス アプリケーション データベースへ PowerPivot 使用状況データを強制的にインポートしたりできます。|  
 |PowerPivot 管理ダッシュボード処理タイマー ジョブ|毎日午前 3 時|このタイマー ジョブは、管理データを PowerPivot 管理ダッシュボードに提供する内部 PowerPivot ブックを更新します。 これは、ダッシュボード レポートまたは Web パーツに表示されるサーバー名、ユーザー名、アプリケーション名、およびファイル名など、SharePoint により管理される更新情報を取得します。|  
   
 ##  <a name="reporting-on-usage-data"></a><a name="reporting"></a> 使用状況データのレポート  

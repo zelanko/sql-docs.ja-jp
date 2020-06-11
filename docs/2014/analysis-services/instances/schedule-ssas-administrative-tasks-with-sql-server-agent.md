@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd751efccc038c131bc61338d7adcd8e10a67d93
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079682"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543774"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>SQL Server エージェントで SSAS 管理タスクのスケジュール設定を行う
   SQL Server エージェント サービスを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理タスクのスケジュールを設定して、必要なときに必要な順序で実行できます。 定期タスクは、一定の周期または指定した周期で実行されるプロセスを自動化するのに役立ちます。 キューブ処理などの管理タスクは、ビジネス活動が盛んでない時間帯に実行されるようにスケジュールできます。 また、SQL Server エージェント ジョブでジョブ ステップを作成することにより、タスクの実行順序を指定できます。 たとえば、キューブを処理した後でバックアップを実行できます。  
@@ -27,7 +26,7 @@ ms.locfileid: "66079682"
 ## <a name="prerequisites"></a>前提条件  
  SQL Server エージェント サービスがインストールされている必要があります。  
   
- 既定では、ジョブはサービス アカウントで実行されます。 で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]は、SQL Server エージェントの既定のアカウントは NT Service\ SQLAgent\<$ instancename> です。 バックアップまたは処理タスクを実行するには、このアカウントが Analysis Services インスタンスのシステム管理者である必要があります。 詳細については、「 [Analysis Services&#41;&#40;サーバー管理者のアクセス許可を付与](grant-server-admin-rights-to-an-analysis-services-instance.md)する」を参照してください。  
+ 既定では、ジョブはサービス アカウントで実行されます。 で [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] は、SQL Server エージェントの既定のアカウントは NT Service\ SQLAgent $ \<instancename> です。 バックアップまたは処理タスクを実行するには、このアカウントが Analysis Services インスタンスのシステム管理者である必要があります。 詳細については、「 [Analysis Services&#41;&#40;サーバー管理者のアクセス許可を付与](grant-server-admin-rights-to-an-analysis-services-instance.md)する」を参照してください。  
   
  操作対象のテスト データベースも必要です。 AdventureWorks 多次元サンプル データベースまたはプロジェクトを Analysis Services 多次元チュートリアルから配置して、このチュートリアルで使用できます。 詳細については、「 [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](../install-sample-data-and-projects.md)」を参照してください。  
   
@@ -81,9 +80,9 @@ ms.locfileid: "66079682"
   
 6.  **[新しいジョブ ステップ]** ダイアログ ボックスで、 **[ステップ名]** にステップ名を入力します。  
   
-7.  **[サーバー]** で、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスの **localhost** と、名前付きインスタンスの **localhost\\**\<*インスタンス名*> を入力します。  
+7.  [**サーバー**] で、既定のインスタンスの場合は「 **localhost** 」、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 名前付きインスタンスの場合は「 **localhost \\ ** 」と入力し \<*instance name*> ます。  
   
-     リモート コンピューターからジョブを実行する場合は、ジョブが実行されるサーバー名およびインスタンス名を使用します。 既定のインスタンス\< \<には*サーバー名*>、名前付きインスタンスの場合は*サーバー名*>\\<*インスタンス名*> を使用します。  
+     リモート コンピューターからジョブを実行する場合は、ジョブが実行されるサーバー名およびインスタンス名を使用します。 既定のインスタンスの場合は形式を使用し、 \<*server name*> \<*server name*> \\ < 名前付きインスタンスの場合は*インスタンス名*> を使用します。  
   
 8.  **[種類]** で、 **[SQL Server Analysis Services コマンド]** を選択します。  
   

@@ -12,17 +12,17 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e119a0f4423b07a4c97339d843fbc60181886eb3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66107616"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858594"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>[設定] (レポート ビルダーの [オプション] ダイアログ ボックス) (レポート ビルダー)
   [**レポートビルダー** ] ボタンをクリックし、[**オプション**] をクリックして、最近使用したファイルと接続の表示オプションを設定します。 既定のレポート サーバーを変更することも、既定のレポート サーバーがなければ追加することもできます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[既定で使用するレポート サーバーまたは SharePoint サイト]**  
  このオプションは、管理者によって設定されている可能性があります。 値には、http:// または https:// で始まる整形式の URL を設定できます。 この設定によって、テーブル/マトリックス ウィザードやグラフ ウィザードで既定で表示されるデータ ソース接続が決まります。 また、レポートはこのサーバーで処理され、このサーバーのリソースを参照できます。  
   

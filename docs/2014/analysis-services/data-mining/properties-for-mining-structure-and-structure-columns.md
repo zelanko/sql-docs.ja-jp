@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbec968f39b8a7cf6ebebaedf55161da2d3cb172
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083058"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520618"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>マイニング構造と構造列のプロパティ
   データ マイニング デザイナーの **[マイニング構造]** タブを使用すると、マイニング構造のプロパティと、そのマイニング構造に関連付けられた列および入れ子になったテーブルのプロパティを設定または変更できます。 このタブで設定したプロパティは、その構造に関連付けられている各マイニング モデルに反映されます。  
@@ -39,15 +38,15 @@ ms.locfileid: "66083058"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|**CacheMode**|トレーニングに使用したケースを、トレーニングの完了後にキャッシュするか破棄するかを指定します。<br /><br /> 注: ドリルスルーと提示を有効`KeepTrainingCases`にするには、このプロパティをに設定する必要があります。|  
+|**CacheMode**|トレーニングに使用したケースを、トレーニングの完了後にキャッシュするか破棄するかを指定します。<br /><br /> 注: `KeepTrainingCases` ドリルスルーと提示を有効にするには、このプロパティをに設定する必要があります。|  
 |**Collation**|列の既定の照合順序を指定します。 照合順序を指定しない場合は、サーバーの照合順序が使用されます。|  
 |**説明**|マイニング構造について説明します。 構造のデータの目的と構成について説明することをお勧めします。|  
 |**ErrorConfiguration (既定)**|特別なエラー処理が行われる場合のオプションを指定します。|  
-|**HoldoutMaxCases**|テスト データセットとして予約できる構造ケースの最大数を指定します。  **HoldoutMaxCases** と **HoldoutPercent**の両方に値を指定すると、それらの条件が結合されます。<br /><br /> 注: このプロパティを設定する<xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A>には、を`KeepTrainingCases`に設定する必要があります。|  
-|**HoldoutPercent**|テスト データセットとして予約する構造ケースの割合を指定します。 **HoldoutMaxCases** と **HoldoutPercent**の両方に値を指定すると、それらの条件が結合されます。<br /><br /> 注: このプロパティを設定する<xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A>には、を`KeepTrainingCases`に設定する必要があります。|  
-|**HoldoutSeed**|提示されたテスト セットのパーティション分割を初期化するシードを指定して、テスト データセットを確実に再作成できるようにします。<br /><br /> 注: このプロパティを設定する<xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A>には、を`KeepTrainingCases`に設定する必要があります。|  
+|**HoldoutMaxCases**|テスト データセットとして予約できる構造ケースの最大数を指定します。  **HoldoutMaxCases** と **HoldoutPercent**の両方に値を指定すると、それらの条件が結合されます。<br /><br /> 注: このプロパティを設定するには、を <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> に設定する必要があり `KeepTrainingCases` ます。|  
+|**HoldoutPercent**|テスト データセットとして予約する構造ケースの割合を指定します。 **HoldoutMaxCases** と **HoldoutPercent**の両方に値を指定すると、それらの条件が結合されます。<br /><br /> 注: このプロパティを設定するには、を <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> に設定する必要があり `KeepTrainingCases` ます。|  
+|**HoldoutSeed**|提示されたテスト セットのパーティション分割を初期化するシードを指定して、テスト データセットを確実に再作成できるようにします。<br /><br /> 注: このプロパティを設定するには、を <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> に設定する必要があり `KeepTrainingCases` ます。|  
 |**ID**|マイニング構造の一意識別子を表示します。<br /><br /> マイニング構造の作成時に構造に割り当てた名前が、ID として使用されます。 その後 `Name` プロパティに新しい値を入力して名前を変更した場合、新しい名前は別名としてのみ使用され、ID は変化しません。|  
-|**Language**|マイニング構造内のキャプションの言語を指定します。|  
+|**言語**|マイニング構造内のキャプションの言語を指定します。|  
 |`Name`|マイニング構造の名前または別名を指定します。<br /><br /> Name プロパティの値を変更した場合、新しい名前はキャプションまたは別名としてのみ使用されます。マイニング構造の識別子は変化しません。|  
 |**ソース**|データ ソースの名前と種類を表示します。|  
   

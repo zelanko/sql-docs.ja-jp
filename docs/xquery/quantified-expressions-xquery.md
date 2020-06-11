@@ -1,5 +1,6 @@
 ---
 title: 定量化式 (XQuery) |Microsoft Docs
+description: XQuery で定量化式を使用して、1つまたは複数のシーケンスに対する式に存在する全称または universal を適用する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1cdbff23d2158dec00b6b8d050d6a4a90341bd23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f7c79cd185b88b8681460d2811f0d0ac4c20557
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946376"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215249"
 ---
 # <a name="quantified-expressions-xquery"></a>量化式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +47,9 @@ ms.locfileid: "67946376"
 ( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
- クエリでこれらの式を使用して、1つまたは複数のシーケンスに対する式に明示的に存在する全称または universal を適用することができます。 で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、 `satisfies`句内の式は、ノードシーケンス、空のシーケンス、またはブール値のいずれかになる必要があります。 この式の結果の有効なブール値が、量化に使用されます。 一部を使用する存在する全称は、量指定子によってバインドされた値の少なくと**も**1 つが、対応する式の真の結果を持っている場合に true を返します。 を使用するユニバーサル全称**は、** 量指定子によってバインドされたすべての値に対して True を持つ必要があります。  
+ クエリでこれらの式を使用して、1つまたは複数のシーケンスに対する式に明示的に存在する全称または universal を適用することができます。 では [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、句内の式は、 `satisfies` ノードシーケンス、空のシーケンス、またはブール値のいずれかになる必要があります。 この式の結果の有効なブール値が、量化に使用されます。 一部を使用する存在する全称は、量指定子によってバインドされた値の少なくと**も**1 つが、対応する式の真の結果を持っている場合に true を返します。 を使用するユニバーサル全称**は、** 量指定子によってバインドされたすべての値に対して True を持つ必要があります。  
   
- たとえば、次のクエリでは、 \<すべての場所> 要素に対して、locationid 属性があるかどうかを確認します。  
+ たとえば、次のクエリでは、すべての \<Location> 要素が LocationID 属性を持っているかどうかを確認します。  
   
 ```  
 SELECT Instructions.query('  
@@ -64,7 +65,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- LocationID は\<Location> 要素の必須属性であるため、予想される結果を受け取ります。  
+ LocationID は要素の必須属性であるため、 \<Location> 期待される結果を受け取ります。  
   
 ```  
 <Result>All work centers have Location ID</Result>   

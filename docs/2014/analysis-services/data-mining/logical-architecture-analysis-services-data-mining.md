@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5702e3e2e5b12edecff4dd6d6f46b632575d211d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1af06d7ffe12301f6b8b678f41665e5c3146a13
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084264"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522319"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>論理アーキテクチャ (Analysis Services - データ マイニング)
   データ マイニングは、複数のコンポーネントの相互作用を伴うプロセスです。  
@@ -41,7 +40,7 @@ ms.locfileid: "66084264"
 ##  <a name="data-mining-source-data"></a><a name="bkmk_SourceData"></a>データマイニングソースデータ  
  データ マイニングで使用するデータは、データ マイニング ソリューションに格納されません。バインドのみが格納されます。 データは前のバージョンの SQL Server、CRM システム、またはフラット ファイルで作成されたデータベースにも存在する場合があります。 処理によって構造またはモデルをトレーニングすると、データの統計サマリーが作成され、キャッシュに格納されます。そのサマリーは、後の操作で使用するために保持することも、処理後に削除することもできます。 詳細については、「[マイニング構造 (Analysis Services - データ マイニング)](mining-structures-analysis-services-data-mining.md)」を参照してください。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソース ビュー (DSV) オブジェクト内のさまざまなデータを組み合わせることで、データ ソースの上に抽象化レイヤーが提供されます。 テーブル間の結合を指定できます。また、多対一のリレーションシップを持つテーブルを追加して、入れ子になったテーブル列を作成することができます。 これらのオブジェクト (データ ソースおよびデータ ソース ビュー) の定義は、*.ds および \*.dsv というファイル名拡張子でソリューション内に保存されます。 データソースとデータソースビューの[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]作成と使用の詳細については、「 [SSAS 多次元&#41;&#40;サポートされるデータソース](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソース ビュー (DSV) オブジェクト内のさまざまなデータを組み合わせることで、データ ソースの上に抽象化レイヤーが提供されます。 テーブル間の結合を指定できます。また、多対一のリレーションシップを持つテーブルを追加して、入れ子になったテーブル列を作成することができます。 これらのオブジェクト (データ ソースおよびデータ ソース ビュー) の定義は、*.ds および \*.dsv というファイル名拡張子でソリューション内に保存されます。 データソースとデータソースビューの作成と使用の詳細につい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ては、「 [SSAS 多次元&#41;&#40;サポートされるデータソース](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)」を参照してください。  
   
  AMO または XMLA を使用して、データ ソースおよびデータ ソース ビューを定義および変更することもできます。 プログラムによってこれらのオブジェクトを操作する方法の詳細については、「[論理アーキテクチャの概要 (Analysis Services - 多次元データ)](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md)」を参照してください。  
   

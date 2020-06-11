@@ -19,12 +19,12 @@ ms.assetid: e9577fd2-c349-4dff-874c-9e57d2e5a3ec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8df7b7dd55fd1436493cc736d8771955dbb7965
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4d9ab825760659741d17e9154a90779e2ae3b47
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68794712"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670154"
 ---
 # <a name="check_constraints-transact-sql"></a>CHECK_CONSTRAINTS (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68794712"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|制約修飾子。|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|制約が属するスキーマの名前。<br /><br /> &#42;&#42; 重要 &#42;&#42; では、オブジェクトのスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|制約が属するスキーマの名前。<br /><br /> &#42;&#42; 重要 &#42;&#42; では、オブジェクトのスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 INFORMATION_SCHEMA ビューは、オブジェクトのメタデータのサブセットのみを表します。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**CONSTRAINT_NAME**|**sysname**|制約名。|  
 |**CHECK_CLAUSE**|**nvarchar (** 4000 **)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 定義ステートメントの実際のテキスト|  
   

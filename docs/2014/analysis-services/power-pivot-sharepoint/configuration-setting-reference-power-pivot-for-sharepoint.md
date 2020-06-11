@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45ef593e13643ac38184f8b88cbe4cdf38f0126c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf17937a53d6f2f85640e80e9123f8329864e174
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071889"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547594"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>構成設定のリファレンス (PowerPivot for SharePoint)
   ここでは、SharePoint ファームの PowerPivot サービス アプリケーションで使用される構成設定に関するリファレンス ドキュメントを提供します。 PowerShell スクリプトを使用してサーバーを構成している場合や、特定の設定に関する情報を必要としている場合は、このトピックの詳細な説明を参照してください。  
@@ -76,8 +75,8 @@ ms.locfileid: "66071889"
 |----------|-------------|------------------|-----------------|  
 |開始時刻|午前 04 時 00 分|有効な範囲は、1 ～ 12 時の範囲の有効な整数です。<br /><br /> 型は Time です。|営業時間の範囲の下限を設定します。|  
 |終了時刻|午後 08 時 00 分|有効な範囲は、1 ～ 12 時の範囲の有効な整数です。<br /><br /> 型は Time です。|営業時間の範囲の上限を設定します。|  
-|PowerPivot 自動データ更新アカウント|None|対象アプリケーション ID|このアカウントは、スケジュールの所有者に代わってデータ更新ジョブを実行するために使用します。<br /><br /> 自動データ更新アカウントをサービス アプリケーションの構成ページで参照するには、あらかじめ定義しておく必要があります。 詳細については、「 [PowerPivot 自動データ更新アカウントの構成 &#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)」を参照してください。|  
-|ユーザーによるカスタムの Windows 資格情報の入力を許可する|Enabled|ブール型|スケジュールの所有者が Windows ユーザー アカウントとパスワードを指定してデータ更新ジョブを実行できるようにするオプションを定期データ更新の構成ページに表示するかどうかを指定します。<br /><br /> このオプションを使用するには、Secure Store Service を有効にする必要があります。 詳細については、「[PowerPivot データ更新用の保存された資格情報の構成 &#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)」を参照してください。|  
+|PowerPivot 自動データ更新アカウント|なし|対象アプリケーション ID|このアカウントは、スケジュールの所有者に代わってデータ更新ジョブを実行するために使用します。<br /><br /> 自動データ更新アカウントをサービス アプリケーションの構成ページで参照するには、あらかじめ定義しておく必要があります。 詳細については、「 [PowerPivot 自動データ更新アカウントの構成 &#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)」を参照してください。|  
+|ユーザーによるカスタムの Windows 資格情報の入力を許可する|Enabled|Boolean|スケジュールの所有者が Windows ユーザー アカウントとパスワードを指定してデータ更新ジョブを実行できるようにするオプションを定期データ更新の構成ページに表示するかどうかを指定します。<br /><br /> このオプションを使用するには、Secure Store Service を有効にする必要があります。 詳細については、「[PowerPivot データ更新用の保存された資格情報の構成 &#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)」を参照してください。|  
 |処理履歴の最大の長さ|365|1 ～ 5000 日|データ更新履歴を PowerPivot サービス アプリケーション データベースに保持しておく期間を指定します。 詳細については、「 [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md)」を参照してください。|  
   
 ##  <a name="usage-data-collection"></a><a name="UsageData"></a>使用状況データ収集  

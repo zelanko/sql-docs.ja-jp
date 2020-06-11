@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb8a451d9904edffe665d90dba5bd3ba1c18aac3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b62bcdd7bb492a877572621bd7cfe9a3b150d04
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071742"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547524"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>使用状況データ収集の構成 (対象は PowerPivot for SharePoint)
   使用状況データ収集は、ファーム レベルの SharePoint 機能です。 PowerPivot for SharePoint では、このシステムを使用および拡張して、PowerPivot のデータやサービスがどのように使用されているかを示すレポートが PowerPivot 管理ダッシュボードに用意されています。 SharePoint のインストール方法によっては、使用状況データ収集がファームに対して無効になっていることがあります。 ファーム管理者は、使用状況のログ記録を有効にして、PowerPivot 管理ダッシュボードに表示される使用状況データを作成する必要があります。  
@@ -54,7 +53,7 @@ ms.locfileid: "66071742"
   
 4.  **[ログ対象イベント]** セクションで、チェック ボックスをオンまたはオフにして、次の Analysis Services イベントを有効または無効にします。  
   
-    |event|説明|  
+    |Event|説明|  
     |-----------|-----------------|  
     |**PowerPivot 接続**|PowerPivot 接続イベントは、ユーザーに代わって実行される PowerPivot サーバー接続を監視するために使用します。|  
     |**PowerPivot 読み込みデータの使用状況**|PowerPivot 読み込みデータ使用状況は、PowerPivot データをサーバーのメモリに読み込む要求を監視するために使用します。 読み込みイベントは、コンテンツ データベースまたはキャッシュから読み込まれた PowerPivot データ ファイルに対して生成されます。|  
@@ -181,7 +180,7 @@ ms.locfileid: "66071742"
   
 |設定|Default value|種類|有効な範囲|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services 使用状況イベント** (接続、読み込み、アンロード、要求)|\<有効な>|ブール型|これらの値は、有効または無効のいずれかです。|  
+|**Analysis Services 使用状況イベント** (接続、読み込み、アンロード、要求)|\<enabled>|Boolean|これらの値は、有効または無効のいずれかです。|  
 |**Query Reporting interval**|300 (秒)|Integer|1 から任意の正の整数まで。 既定値は 5 分です。|  
 |**[使用状況データの履歴]**|365 (日)|Integer|0 は無制限を示しますが、履歴データが期限切れとなる上限を設定し、履歴データを自動的に削除することもできます。 限られた保持期間の有効な値は 1 ～ 5,000 (日) です。|  
 |[簡易応答の上限]|500 (ミリ秒単位)|Integer|簡易要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。 0 ～ 500 ミリ秒で完了する要求は簡易要求であり、レポートでは無視されます。|  

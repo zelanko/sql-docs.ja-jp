@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95642654da9492087b3720e1b85c369131b55ed2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82836ab9b7d4d191f48895e215ffb9293f4ffe97
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487396"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543946"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 のインストール
   このトピックでは、SharePoint 配置モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーのシングル サーバー インストールの手順について説明します。 手順には、SQL Server インストール ウィザードの実行と、SharePoint 2013 サーバーの全体管理を使用する構成タスクが含まれます。  
@@ -24,9 +23,9 @@ ms.locfileid: "81487396"
   
  **このトピックの内容:**  
   
- [バックグラウンド](#bkmk_background)  
+ [背景](#bkmk_background)  
   
- [必要条件](#bkmk_prereq)  
+ [前提条件](#bkmk_prereq)  
   
  [手順 1. PowerPivot for SharePoint のインストール](#InstallSQL)  
   
@@ -65,14 +64,14 @@ ms.locfileid: "81487396"
   
 5.  [SharePoint モードの Analysis Services Server のハードウェアとソフトウェアの要件 &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)を参照してください。  
   
-6.  リリースノートについては[SQL Server 2012 Service Pack 1 のリリースノート](https://go.microsoft.com/fwlink/?LinkID=248389)(https://go.microsoft.com/fwlink/?LinkID=248389)) を参照してください。  
+6.  リリースノートについては[SQL Server 2012 Service Pack 1 のリリースノート](https://go.microsoft.com/fwlink/?LinkID=248389)() を参照して https://go.microsoft.com/fwlink/?LinkID=248389) ください。  
   
 ###  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a> SQL Server エディションの要件  
- ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、「 [SQL Server 2012 の各エディションがhttps://go.microsoft.com/fwlink/?linkid=232473)サポートする機能」 (](https://go.microsoft.com/fwlink/?linkid=232473)および[SQL Server 2014 の各エディションとコンポーネント](../../../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
+ ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、「 [SQL Server 2012 の各エディションが https://go.microsoft.com/fwlink/?linkid=232473) サポートする機能」 (](https://go.microsoft.com/fwlink/?linkid=232473)および[SQL Server 2014 の各エディションとコンポーネント](../../../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
   
- 最新のリリースノートについては、 [SQL Server 2012 SP1 リリースノート](https://go.microsoft.com/fwlink/?LinkID=248389)(https://go.microsoft.com/fwlink/?LinkID=248389)) を参照してください。  
+ 最新のリリースノートについては、 [SQL Server 2012 SP1 リリースノート](https://go.microsoft.com/fwlink/?LinkID=248389)() を参照して https://go.microsoft.com/fwlink/?LinkID=248389) ください。  
   
- [Microsoft SQL Server 2012 リリースノート (https://go.microsoft.com/fwlink/?LinkId=236893)](https://go.microsoft.com/fwlink/?LinkId=236893).  
+ [Microsoft SQL Server 2012 リリースノート ( https://go.microsoft.com/fwlink/?LinkId=236893) ](https://go.microsoft.com/fwlink/?LinkId=236893).  
   
 ##  <a name="step-1-install-powerpivot-for-sharepoint"></a><a name="InstallSQL"></a>手順 1: PowerPivot for SharePoint をインストールする  
  この手順では、SQL Server セットアップを実行して、SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーをインストールします。 後の手順で、このサーバーをブックのデータ モデルで使用するように Excel Services を構成します。  
@@ -236,7 +235,7 @@ ms.locfileid: "81487396"
   
 15. フィールド リストの [行]、[列]、[値] の各領域にフィールドを追加します。  
   
-16. ピボットテーブルにスライサーまたはフィルターを追加します。 **この手順は省略しないでください**。 スライサーまたはフィルターは、Analysis Services のインストールの確認に役立つ要素です。  
+16. ピボットテーブルにスライサーまたはフィルターを追加します。 **この手順は省略しないで**ください。 スライサーまたはフィルターは、Analysis Services のインストールの確認に役立つ要素です。  
   
 17. Excel Services が構成されている SharePoint Server 2013 のドキュメント ライブラリにブックを保存します。 また、ブックをファイル共有に保存し、SharePoint Server 2013 ドキュメント ライブラリにアップロードすることもできます。  
   
@@ -261,11 +260,11 @@ ms.locfileid: "81487396"
   
  **冗長性とサーバー負荷:** 2 台目またはそれ以上の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーを SharePoint モードでインストールすると、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバー機能の冗長性が実現します。 サーバーを追加すると、サーバー間の負荷分散も行われます。 詳細については、「  
   
--   [Excel Services でデータモデルを処理するための Analysis Services の構成](https://technet.microsoft.com/library/jj614437\(v=office.15\))(https://technet.microsoft.com/library/jj614437(v=office.15)))  
+-   [Excel Services でデータモデルを処理するための Analysis Services の構成](https://technet.microsoft.com/library/jj614437\(v=office.15\)) https://technet.microsoft.com/library/jj614437(v=office.15)) ()  
   
--   [Excel Services のデータモデルの設定を管理する (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\)) (https://technet.microsoft.com/library/jj219780(v=office.15))。  
+-   [Excel Services のデータモデルの設定を管理する (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\)) ( https://technet.microsoft.com/library/jj219780(v=office.15)) 。  
   
- ![SharePoint の設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定")では Microsoft SQL Server Connect (https://connect.microsoft.com/SQLServer/Feedback))[を使用してフィードバックと連絡先情報を送信し](https://connect.microsoft.com/SQLServer/Feedback)ます。  
+ ![SharePoint の設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定")[では Microsoft SQL Server Connect () を使用してフィードバックと連絡先情報を送信し](https://connect.microsoft.com/SQLServer/Feedback) https://connect.microsoft.com/SQLServer/Feedback) ます。  
   
 ## <a name="see-also"></a>参照  
  [PowerPivot から SharePoint への移行2013](https://docs.microsoft.com/analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013)   

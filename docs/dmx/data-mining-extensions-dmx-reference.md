@@ -4,26 +4,26 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c47514f551ec07a8c8837533cb38c0e6283645cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eeaeef25f27f29234aaa5a96a9272b4bea43dca3
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892883"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670402"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>データ マイニング拡張機能 (DMX) リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  データマイニング拡張機能 (DMX) は、で[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データマイニングモデルを作成および操作するために使用できる言語です。 DMX を使用して、新しいデータ マイニング モデルの構造の作成、これらのモデルの学習、およびモデルの参照、管理、予測を行うことができます。 DMX は、データ定義言語 (DDL) ステートメント、データ操作言語 (DML) ステートメント、および関数と演算子で構成されています。  
+  データマイニング拡張機能 (DMX) は、でデータマイニングモデルを作成および操作するために使用できる言語です [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 DMX を使用して、新しいデータ マイニング モデルの構造の作成、これらのモデルの学習、およびモデルの参照、管理、予測を行うことができます。 DMX は、データ定義言語 (DDL) ステートメント、データ操作言語 (DML) ステートメント、および関数と演算子で構成されています。  
   
 ## <a name="microsoft-ole-db-for-data-mining-specification"></a>Microsoft OLE DB for Data Mining 仕様  
- のデータマイニング機能は[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、 [!INCLUDE[msCoName](../includes/msconame-md.md)]データマイニング仕様の OLE DB に準拠するように構築されています。  
+ のデータマイニング機能は [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、 [!INCLUDE[msCoName](../includes/msconame-md.md)] データマイニング仕様の OLE DB に準拠するように構築されています。  
   
- データ[!INCLUDE[msCoName](../includes/msconame-md.md)]マイニング仕様の OLE DB では、次のものを定義します。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]データマイニング仕様の OLE DB では、次のものを定義します。  
   
 -   データ マイニング モデルを定義する情報を保持するための構造。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68892883"
   
  DMX のデータ操作ステートメントを使用して、次のタスクを実行できます。  
   
--   [INSERT INTO](../dmx/insert-into-dmx.md)ステートメントを使用して、マイニングモデルをトレーニングします。 これは、実際のソースデータをデータマイニングモデルオブジェクトに挿入するのではなく、アルゴリズムによって作成されるマイニングモデルを記述する抽象化を作成します。 INSERT INTO ステートメントのソースクエリについては、「 [ \<source data query>](../dmx/source-data-query.md)」を参照してください。  
+-   [INSERT INTO](../dmx/insert-into-dmx.md)ステートメントを使用して、マイニングモデルをトレーニングします。 これは、実際のソースデータをデータマイニングモデルオブジェクトに挿入するのではなく、アルゴリズムによって作成されるマイニングモデルを記述する抽象化を作成します。 INSERT INTO ステートメントのソースクエリについては、「 [ \< source data query>](../dmx/source-data-query.md)」を参照してください。  
   
 -   モデルのトレーニング中に計算され、ソースデータの統計情報など、データマイニングモデルに格納されている情報を参照するには、SELECT ステートメントを拡張します。 SELECT ステートメントの機能を拡張するために含めることができる句は次のとおりです。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68892883"
   
     -   [&#60;モデル&#62; から選択します。DMX&#41;&#40;の DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)  
   
--   SELECT ステートメントの[予測結合](../dmx/select-from-model-prediction-join-dmx.md)句を使用して、既存のマイニングモデルに基づく予測を作成します。 予測結合ステートメントのソースクエリについては、「 [ \<source data query>](../dmx/source-data-query.md)」を参照してください。  
+-   SELECT ステートメントの[予測結合](../dmx/select-from-model-prediction-join-dmx.md)句を使用して、既存のマイニングモデルに基づく予測を作成します。 予測結合ステートメントのソースクエリについては、「 [ \< source data query>](../dmx/source-data-query.md)」を参照してください。  
   
 -   [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md)ステートメントを使用して、モデルまたは構造からすべてのトレーニング済みデータを削除します。  
   

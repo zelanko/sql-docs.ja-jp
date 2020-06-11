@@ -1,7 +1,7 @@
 ---
 title: sp_addpullsubscription_agent (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea558eafb665538b90cc4d9e41d16166dd9475c5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f0704ff7d6764ca06c7de37d0d02bfbcb9148ce7
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820729"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627430"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -80,6 +80,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>引数  
 `[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値はありません。  
+
+> [!NOTE]
+> サーバー名はとして指定でき `<Hostname>,<PortNumber>` ます。 SQL Server が Linux または Windows でカスタムポートを使用して展開され、browser サービスが無効になっている場合は、接続のポート番号を指定する必要があります。
   
 `[ @publisher_db = ] 'publisher_db'_`パブリッシャーデータベースの名前を指定します。 *publisher_db*は**sysname**で、既定値は NULL です。 *publisher_db*は、Oracle パブリッシャーでは無視されます。  
   
@@ -130,13 +133,13 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_type = ] frequency_type`ディストリビューションエージェントをスケジュールする頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2** (既定値)|オン デマンド|  
 |**4**|毎日|  
 |**8**|週次|  
-|**まで**|月 1 回|  
+|**まで**|月単位|  
 |**32**|月単位の相対|  
 |**64**|自動開始|  
 |**128**|繰り返し|  
@@ -148,7 +151,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`ディストリビューションエージェントの日付を指定します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|First|  
 |**2**|Second|  
@@ -160,11 +163,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_subday = ] frequency_subday`定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday*は**int**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|1 度|  
 |**2**|Second|  
-|**4**|Minute|  
+|**4**|分|  
 |**8**|時間|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*の間隔を指定します。 *frequency_subday_interval*は**int**,、既定値は**1**です。  

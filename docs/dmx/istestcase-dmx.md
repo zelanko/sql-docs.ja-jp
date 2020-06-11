@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 050ceeaa8eb5700f108b7135616817e09c0031cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 33c84ada33abee06a78fe0a9f8cc3f37242458ac
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889037"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670234"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,8 +40,8 @@ IsTestCase()
   
  トレーニングデータセットの一部であるケースを返すには、関数[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)を使用します。  
   
-## <a name="examples"></a>使用例  
- 次の例では`Targeted Mailing` 、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」で作成したマイニング構造を使用します。 このクエリでは、テストに使用される構造内のすべてのケースが返されます。  
+## <a name="examples"></a>例  
+ 次の例では、 `Targeted Mailing` 「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」で作成したマイニング構造を使用します。 このクエリでは、テストに使用される構造内のすべてのケースが返されます。  
   
 ```  
 SELECT *  

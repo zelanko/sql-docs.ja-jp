@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5675cdbf-bfaa-4b6e-b716-31b8e9da72b4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23845118c4c202db781fe325c4afc2402ceee271
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8905ba7019ba85d8e9e0711b1102bf37e1185d42
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072203"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541114"
 ---
 # <a name="notifications-storage-options-dialog-box-analysis-services---multidimensional-data"></a>[通知] ([ストレージのオプション] ダイアログ ボックス) (Analysis Services - 多次元データ)
   **の** [ストレージのオプション] **ダイアログ ボックスの** [通知] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] タブを使用すると、ディメンション、キューブ、メジャー グループ、またはパーティションの通知方法およびそれに関連する設定を行うことができます。  
@@ -27,11 +26,11 @@ ms.locfileid: "66072203"
   
 ## <a name="options"></a>オプション  
   
-|用語|定義|  
+|期間|定義|  
 |----------|----------------|  
-|**[ストレージ モード]**|オブジェクトで使用するストレージ モードを選択します。<br /><br /> **[MOLAP]**<br /> 多次元 OLAP (MOLAP) ストレージが使用されます。<br /><br /> **HOLAP**<br /> ハイブリッド OLAP (HOLAP) ストレージが使用されます。<br /><br /> **[ROLAP]**<br /> リレーショナル OLAP (ROLAP) ストレージが使用されます。|  
+|**ストレージモード**|オブジェクトで使用するストレージ モードを選択します。<br /><br /> **[MOLAP]**<br /> 多次元 OLAP (MOLAP) ストレージが使用されます。<br /><br /> **HOLAP**<br /> ハイブリッド OLAP (HOLAP) ストレージが使用されます。<br /><br /> **[ROLAP]**<br /> リレーショナル OLAP (ROLAP) ストレージが使用されます。|  
 |**プロアクティブ キャッシュを有効にします。**|プロアクティブ キャッシュを有効にします。<br /><br /> 注: このオプションが選択されていない場合、 **[ストレージ モード]** を除くすべてのオプションは無効です。|  
-|**SQL Server**|は、の[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]特殊なトレース機構を使用して、オブジェクトの基になるテーブルに対する変更を識別します。|  
+|**SQL Server**|は、の特殊なトレース機構を使用して [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、オブジェクトの基になるテーブルに対する変更を識別します。|  
 |**[追跡テーブルを指定する]**|オブジェクトに関して追跡する基底のテーブルを指定した後、セミコロン (;) で区切ったテーブルの一覧を入力するか、参照ボタン (**[...]**) をクリックして **[リレーショナル オブジェクト]** ダイアログ ボックスを開き、追跡するテーブルを選択します。 詳細については、「[[リレーショナル オブジェクト] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](relational-objects-dialog-box-analysis-services-multidimensional-data.md)」をご覧ください。<br /><br /> このオプションが選択されていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、特定の条件が満たされたときに、追跡する基底のテーブルの一覧を取得しようとします。 これらの要件の詳細については、「[プロアクティブ キャッシュ &#40;パーティション&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)」をご覧ください。|  
 |**[起動済みのクライアント]**|選択すると、XML for Analysis (XMLA) コマンドの `NotifyTableChange` を使用して、オブジェクトの基底のテーブルに加えられた変更を識別できます。 通常、クライアント ベースの通知プロセスを使用する場合は、このオプションを選択します。|  
 |**[追跡テーブルを指定する]**|選択した場合は、オブジェクトに関して追跡する基底のテーブルを指定した後、セミコロン (;) で区切ったテーブルの一覧を入力するか、参照ボタン (**[...]**) をクリックして **[リレーショナル オブジェクト]** ダイアログ ボックスを開き、追跡するテーブルを選択します。 詳細については、「[[リレーショナル オブジェクト] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](relational-objects-dialog-box-analysis-services-multidimensional-data.md)」をご覧ください。<br /><br /> このオプションが選択されていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、特定の条件が満たされたときに、追跡する基底のテーブルの一覧を取得しようとします。 これらの要件の詳細については、「[プロアクティブ キャッシュ &#40;パーティション&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)」をご覧ください。|  

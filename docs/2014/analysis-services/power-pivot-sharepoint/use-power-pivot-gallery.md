@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f8c14a123fcdb23efade07e78dec94d242df7fc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f634f6c0a435c733af7f223de333cb52d95ce897
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175691"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547714"
 ---
 # <a name="use-powerpivot-gallery"></a>PowerPivot ギャラリーの使用
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーは、特殊な用途の SharePoint ドキュメント ライブラリです。PowerPivot データを含むパブリッシュ済みの Excel ブックおよび Reporting Services レポートを対象とする、豊富なプレビュー機能とドキュメント管理機能を提供します。
@@ -23,7 +22,7 @@ ms.locfileid: "78175691"
 > [!NOTE]
 >  サーバーの設定によっては、特定のドキュメントのプレビュー領域に警告またはエラー メッセージが表示されることがあります。 Excel ブックが開くたびにデータを自動更新するように設定されている場合は、メッセージが表示されることがあります。 データ更新に関する警告エラー メッセージを表示するように Excel Services が構成されている場合は、データ更新警告メッセージがプレビュー画像として表示されます。 ファーム管理者またはサービス管理者は、実際のワークシートのプレビューが表示されるように構成設定を変更できます。 詳細については、「 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。
 
-##  <a name="in-this-topic"></a><a name="bkmk_top"></a>このトピックの内容
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a> このトピックの内容
 
 -   [PowerPivot ギャラリーのアイコン イメージ](#icons)
 
@@ -41,7 +40,7 @@ ms.locfileid: "78175691"
 
 -   [既知の問題](#bkmk_known_issues)
 
- [必要条件](#prereq)
+ [前提条件](#prereq)
 
 ##  <a name="prerequisites"></a><a name="prereq"></a> 前提条件
 
@@ -146,16 +145,16 @@ ms.locfileid: "78175691"
 
 3.  右側にある下矢印をクリックし、 **[プロパティの編集]** を選択します。
 
-4.  **[Save]** (保存) をクリックします。 ドキュメントを保存すると、スナップショット サービスにより強制的にプレビュー画像が再生成されます。
+4.  **[保存]** をクリックします。 ドキュメントを保存すると、スナップショット サービスにより強制的にプレビュー画像が再生成されます。
 
-##  <a name="known-issues"></a><a name="bkmk_known_issues"></a>既知の問題
+##  <a name="known-issues"></a><a name="bkmk_known_issues"></a> 既知の問題
 
 ### <a name="document-type-is-not-supported"></a>ドキュメントの種類がサポートされていません
  コンテンツの種類 " **PowerPivot ギャラリー ドキュメント** " はサポートされていません。 ドキュメント ライブラリに対してコンテンツの種類 " **PowerPivot ギャラリー ドキュメント** " を有効にし、その種類の新しいドキュメントを作成しようとすると、次のようなエラー メッセージが表示されます。
 
 -   ' 新しいドキュメント ' には、Microsoft Sharepoint Foundation 互換のアプリケーションと web ブラウザーが必要です。 このドキュメントライブラリにドキュメントを追加するには、[ドキュメントのアップロード] ボタンをクリックします。
 
--   "インターネットアドレス ' http://[server name]/Testsite/powerpivot gallery Gallery/ReportGallery/Forms/Template .xlsx ' は無効です。" "Microsoft Excel がファイル ' http://[server name]/Testsite/powerpivot gallery Gallery/ReportGallery/Forms/Template. .xlsx ' にアクセスできません。 さまざまな原因が考えられます。
+-   "インターネットアドレス ' http://[server name]/Testsite/powerpivot gallery Gallery/ReportGallery/Forms/Template.xlsx ' は無効です。" "Microsoft Excel がファイル ' http://[server name]/Testsite/powerpivot gallery Gallery/ReportGallery/Forms/Template.xlsx ' にアクセスできません。 さまざまな原因が考えられます。
 
  コンテンツの種類 " **PowerPivot ギャラリー ドキュメント** " は、ドキュメント ライブラリに自動的に追加されません。サポートされていないコンテンツの種類を手動で有効にしない限り、この問題は発生しません。
 

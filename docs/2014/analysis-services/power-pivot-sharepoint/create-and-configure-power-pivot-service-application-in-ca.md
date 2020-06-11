@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a48211455a8ac3de9ef0f4b0c7e2fb3cba5f473
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071583"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540505"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>サーバーの全体管理での PowerPivot サービス アプリケーションの作成および構成
   PowerPivot サービス アプリケーションは、PowerPivot System サービスの共有サービス インスタンスです。 各サービス アプリケーションは、固有のアプリケーション ID、構成設定、プロパティ、および内部データ ストレージを備えています。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
  [新しい PowerPivot サービス アプリケーションを作成するかどうかの決定](#determine)  
   
@@ -57,13 +56,13 @@ ms.locfileid: "66071583"
   
 3.  [ **PowerPivot サービスアプリケーションの SQL Server**] を選択します。 この項目が一覧に表示されない場合は、PowerPivot for SharePoint がインストールされていないか、正しく構成されていません。  
   
-4.  [**新しい PowerPivot サービスアプリケーションの作成**] ページで、アプリケーションの名前を入力します。 既定値は Remove-powerpivotserviceapplication\<number> です。 複数の PowerPivot サービス アプリケーションを作成する場合は、それぞれの用途を明確に示す名前を付けると他の管理者にわかりやすくなります。  
+4.  [**新しい PowerPivot サービスアプリケーションの作成**] ページで、アプリケーションの名前を入力します。 既定値は Remove-powerpivotserviceapplication \<number> です。 複数の PowerPivot サービス アプリケーションを作成する場合は、それぞれの用途を明確に示す名前を付けると他の管理者にわかりやすくなります。  
   
 5.  [アプリケーション プール] で、このアプリケーションのための新しいアプリケーション プールを作成し (推奨)、 そのアプリケーション プールの管理アカウントを選択または作成します。 必ずドメイン ユーザー アカウントを指定してください。 ドメイン ユーザー アカウントにより、パスワードやアカウント情報をまとめて更新できる SharePoint の管理アカウント機能を使用できるようになります。 ドメイン アカウントは、配置をスケールアウトして、同じ ID で実行されるサービス インスタンスを追加する場合にも必要です。  
   
 6.  **[データベース サーバー]** の既定値は、ファーム構成データベースをホストする SQL Server データベース エンジン インスタンスです。 このサーバーを使用することも、別の SQL Server を選択することもできます。  
   
-7.  [**データベース名**] の既定値は PowerPivotServiceApplication1_\<guid> です。 各 PowerPivot サービス アプリケーションに固有のデータベースを作成する必要があります。 既定のデータベース名は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
+7.  [**データベース名**] の既定値は PowerPivotServiceApplication1_ \<guid> です。 各 PowerPivot サービス アプリケーションに固有のデータベースを作成する必要があります。 既定のデータベース名は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
   
 8.  **[データベース認証]** の既定値は、"Windows 認証" です。 **[SQL 認証]** を選択する場合は、SharePoint 管理者ガイドを参照して、SharePoint 配置でその認証の種類を使用するためのベスト プラクティスを確認してください。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66071583"
   
      サービスの関連付けの詳細については、「[サーバーの全体管理で PowerPivot サービスアプリケーションを SharePoint Web アプリケーションに接続する](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)」を参照してください。  
   
-10. [ **OK] をクリックします。** 作成したサービスが、他のマネージド サービスと共にファームのサービス アプリケーションの一覧に表示されます。  
+10. **[OK]** をクリックします。 作成したサービスが、他のマネージド サービスと共にファームのサービス アプリケーションの一覧に表示されます。  
   
 ##  <a name="configure-powerpivot-service-application"></a><a name="ConfigApp"></a>PowerPivot サービスアプリケーションの構成  
  PowerPivot サービス アプリケーションは、既定の構成を使用して作成されます。 既定の設定は、ほとんどのシナリオで推奨されます。 既定の設定を変更するのは、応答の遅延や接続の切断などの問題が発生した場合や、PowerPivot サービスの構成を特定の SharePoint Web アプリケーションに対して変更する場合だけにしてください。  
@@ -139,7 +138,7 @@ ms.locfileid: "66071583"
   
 4.  **[次の関連付けのグループを編集する]** で、 **[既定]** または **[カスタム]** を選択します。  
   
-5.  **[カスタム]** を選択した場合は、使用する各サービス アプリケーション接続の横のチェック ボックスをオンにします。 複数の PowerPivot サービスアプリケーション (Type がに`PowerPivot Service Application Proxy`設定されている) がある場合は、必ず1つを選択してください。  
+5.  **[カスタム]** を選択した場合は、使用する各サービス アプリケーション接続の横のチェック ボックスをオンにします。 複数の PowerPivot サービスアプリケーション (Type がに設定されている) がある場合は `PowerPivot Service Application Proxy` 、必ず1つを選択してください。  
   
 6.  **[OK]** をクリックします。  
   

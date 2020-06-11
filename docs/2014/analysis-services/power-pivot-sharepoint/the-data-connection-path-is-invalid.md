@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd22e41a-0931-4d32-888a-633a3046fc5e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc18a2c7111c71b62f77f5f52727a4a50a661ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9000b78601bfb4ea9abae5cd1c63387fe502256
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071036"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547784"
 ---
 # <a name="the-data-connection-path-in-the-workbook-points-to-a-file-on-the-local-drive-or-is-an-invalid-uri-the-following-connections-failed-to-refresh-powerpivot-data"></a>ブックのデータ接続パスがローカル ドライブ上のファイルを指しているか、無効な URI です。 次の接続の更新に失敗しました:PowerPivot データ
   PowerPivot データを含む Excel ブックで、Excel Services は、埋め込みデータ ソースに接続できない場合にこのエラーを返します。  

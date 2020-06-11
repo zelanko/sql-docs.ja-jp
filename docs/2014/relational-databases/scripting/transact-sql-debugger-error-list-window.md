@@ -15,12 +15,12 @@ ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c88fb6beda0bef5a9e3d1980c1ffa78ed4944b70
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b4ee09b1cd960a58dbf26ecc1b1cc898af4fad96
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718411"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857847"
 ---
 # <a name="error-list-window-management-studio"></a>[エラー一覧] ウィンドウ (Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[エラー一覧]** には、[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense コードによって生成された構文エラーとセマンティック エラーが表示されます。  
@@ -67,7 +67,7 @@ ms.locfileid: "82718411"
 > [!NOTE]  
 >  **[エラー一覧]** に表示されるのは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターからのエラーのみです。MDX、DMX、または XML/A エディターからのエラーは表示されません。 MDX、DMX、および XML/A のすべてのエラーは、それらのエディターの **[メッセージ]** タブに表示されます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[エラー一覧]** を開くと、次の列に情報が表示されます。  
   
  **[既定の順序]**  

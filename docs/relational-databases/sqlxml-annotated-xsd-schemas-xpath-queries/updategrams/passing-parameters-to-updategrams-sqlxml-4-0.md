@@ -1,5 +1,6 @@
 ---
 title: アップデートグラムへのパラメーターの引き渡し (SQLXML)
+description: SQLXML 4.0 でアップデートグラムにパラメーターを渡す方法について説明します。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e109543de3b45b5af0930a14541bf3e89c66edc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 462b9b2b8cd5239e6185b59dfabc028c4d7d8d6a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252410"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529806"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>アップデートグラムへのパラメーターの引き渡し (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +32,9 @@ ms.locfileid: "75252410"
  アップデートグラムでは、パラメーター値として NULL を渡すことができます。 NULL パラメーター値を渡すには、 **nullvalue**属性を指定します。 **Nullvalue**属性に割り当てられた値は、パラメーター値として指定されます。 アップデートグラムでは、この値は NULL として扱われます。  
   
 > [!NOTE]  
->  ** \<Sql: header>** と** \<updg: header>** では、 **nullvalue**を非修飾として指定する必要があります。一方、 ** \<updg: sync>** では、 **nullvalue**を qualified として指定します (たとえば、 **updg: nullvalue**)。  
+>  とでは、 **\<sql:header>** **\<updg:header>** **nullvalue**を非修飾として指定する必要があります。一方、では、 **\<updg:sync>** **nullvalue**を qualified として指定します ( **updg: nullvalue**など)。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例を使用して実際のサンプルを作成するには、 [SQLXML の例を実行するための要件](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)を満たす必要があります。  
   
  アップデートグラムの例を使用する前に、次の点に注意してください。  
@@ -64,7 +65,7 @@ ms.locfileid: "75252410"
   
 1.  上のアップデートグラムをメモ帳にコピーし、UpdategramWithParameters.xml としてファイルに保存します。  
   
-2.  次の行を追加して、 `cmd.Properties("Output Stream").Value = outStream` [ADO を使用して sqlxml 4.0 クエリを実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)し、アップデートグラムを実行するための sqlxml 4.0 テストスクリプト (sqlxml4test.vbs) を準備します。  
+2.  次の行を追加して、 [ADO を使用して sqlxml 4.0 クエリを実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)し、アップデートグラムを実行するための sqlxml 4.0 テストスクリプト (sqlxml4test.vbs) を準備し `cmd.Properties("Output Stream").Value = outStream` ます。  
 
     ```  
     cmd.NamedParameters = True  
@@ -99,7 +100,7 @@ ms.locfileid: "75252410"
   
 1.  上のアップデートグラムをメモ帳にコピーし、UpdategramPassingNullvalues.xml としてファイルに保存します。  
   
-2.  次の行を追加して、 `cmd.Properties("Output Stream").Value = outStream` [ADO を使用して sqlxml 4.0 クエリを実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)し、アップデートグラムを実行するための sqlxml 4.0 テストスクリプト (sqlxml4test.vbs) を準備します。  
+2.  次の行を追加して、 [ADO を使用して sqlxml 4.0 クエリを実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)し、アップデートグラムを実行するための sqlxml 4.0 テストスクリプト (sqlxml4test.vbs) を準備し `cmd.Properties("Output Stream").Value = outStream` ます。  
   
     ```  
     cmd.NamedParameters = True  

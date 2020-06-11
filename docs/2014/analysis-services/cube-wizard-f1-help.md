@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2a500f75-6cb7-42bc-8d98-019841fa924b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 333a812963bf58ada0450243d3fced6891f08915
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2495d6159a2fd76e0278ea101eb35d770b9162e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086562"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526138"
 ---
 # <a name="cube-wizard-f1-help"></a>キューブ ウィザードの F1 ヘルプ
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクト[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のキューブを作成するには、キューブウィザードを使用します。  
+  でプロジェクトのキューブを作成するには、キューブウィザードを使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] します。  
   
  **キューブ ウィザードを開くには**  
   

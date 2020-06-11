@@ -1,6 +1,7 @@
 ---
 title: sp_addsubscription (Transact-sql) |Microsoft Docs
-ms.date: 10/28/2015
+description: パブリケーションにサブスクリプションを追加し、サブスクライバーの状態を設定します。 このストアドプロシージャは、パブリッシャー側のパブリケーションデータベースで実行されます。
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73789c16cbea481cc159774e6c629d3a131d7478
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a87ba30f69027849ea5444163291465dec00d9be
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833632"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627618"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-sql)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +84,9 @@ sp_addsubscription [ @publication = ] 'publication'
   
  [ @subscriber =] '*サブスクライバー*'  
  サブスクライバーの名前です。 *サブスクライバー*の**sysname**,、既定値は NULL です。  
+
+> [!NOTE]
+> サーバー名はとして指定でき `<Hostname>,<PortNumber>` ます。 SQL Server が Linux または Windows でカスタムポートを使用して展開され、browser サービスが無効になっている場合は、接続のポート番号を指定する必要があります。
   
  [ @destination_db =] '*destination_db*'  
  レプリケートされたデータの格納先となるデータベースの名前を指定します。 *destination_db*は**sysname**,、既定値は NULL です。 NULL の場合、 *destination_db*はパブリケーションデータベースの名前に設定されます。 Oracle パブリッシャーの場合は、 *destination_db*を指定する必要があります。 SQL Server 以外のサブスクライバーの場合は、 *destination_db*の値 (既定の転送先) を指定します。  
@@ -90,7 +94,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @sync_type =] '*sync_type*'  
  サブスクリプションの同期の種類を示します。 *sync_type*は**nvarchar (255)** で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |なし|サブスクライバーには、パブリッシュされたテーブルのスキーマと初期データが既に存在します。<br /><br /> 注: このオプションは非推奨とされます。 代わりに replication support only を使用してください。|  
 |automatic (既定値)|パブリッシュされたテーブルのスキーマと初期データは、最初にサブスクライバーに転送されます。|  
@@ -104,7 +108,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status =] '*status*'  
  はサブスクリプションの状態です。 *status*の部分は**sysname**で、既定値は NULL です。 このパラメーターが明示的に設定されていない場合、レプリケーションによって、次のいずれかの値に自動的に設定されます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |active|サブスクリプションが初期化され、変更を受け入れる準備ができました。 このオプションは、 *sync_type*の値が none、initialize with backup、または replication support only の場合に設定されます。|  
 |subscribed|サブスクリプションを初期化する必要があります。 このオプションは、 *sync_type*の値が automatic の場合に設定されます。|  
@@ -118,7 +122,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode =] '*update_mode*'  
  更新の種類を示します。*update_mode*は**nvarchar (30)** で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |read only (既定値)|サブスクリプションは読み取り専用です。 サブスクライバーでの変更は、パブリッシャーに送信されません。|  
 |sync tran|即時更新サブスクリプションのサポートを有効にします。 Oracle パブリッシャーではサポートされていません。|  
@@ -131,7 +135,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection =] '*loopback_detection*'  
  ディストリビューションエージェントがサブスクライバーに送信されたトランザクションをサブスクライバーに戻すかどうかを指定します。 *loopback_detection*は**nvarchar (5)** で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |true|ディストリビューションエージェントは、サブスクライバーで発生したトランザクションをサブスクライバーに送り返しません。 双方向トランザクション レプリケーションで使用されます。 詳細については、「 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)」を参照してください。|  
 |false|ディストリビューション エージェントは、サブスクライバーで発生したトランザクションをサブスクライバーに戻します。|  
@@ -140,13 +144,13 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_type =] *frequency_type*  
  ディストリビューションタスクをスケジュールする頻度を指定します。 *frequency_type*は int,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |1|1 回|  
 |2|オン デマンド|  
 |4|毎日|  
 |8|週次|  
-|16|月 1 回|  
+|16|月単位|  
 |32|月単位の相対|  
 |64 (既定値)|自動開始|  
 |128|繰り返し|  
@@ -157,7 +161,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval =] *frequency_relative_interval*  
  ディストリビューションエージェントの日付を指定します。 このパラメーターは、 *frequency_type*が 32 (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |1|First|  
 |2|Second|  
@@ -172,11 +176,11 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday =] *frequency_subday*  
  定義した期間にスケジュールを組み直す頻度を分単位で指定します。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |1|1 度|  
 |2|Second|  
-|4|Minute|  
+|4|分|  
 |8|時間|  
 |NULL||  
   
@@ -237,7 +241,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicetype =] '*backupdevicetype*'  
  バックアップからサブスクライバーを初期化する際に使用するバックアップ デバイスの種類を指定します。 *backupdevicetype*は**nvarchar (20)**,、次の値のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |logical (既定値)|バックアップデバイスは論理デバイスです。|  
 |disk|バックアップデバイスはディスクドライブです。|  
@@ -275,7 +279,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type =] *subscriber_type*  
  サブスクライバーの種類を示します。 *subscriber_type*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0 (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバ|  
 |1|ODBC データソースサーバー|  

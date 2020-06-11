@@ -1,21 +1,21 @@
 ---
-title: '[モデル&lt;&gt;から] を選択します。ケース (DMX) |Microsoft Docs'
+title: '[モデルから] を選択し &lt; &gt; ます。ケース (DMX) |Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5f0334c37eeedafee7066f01d61745fcb82d1629
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6753f90b76f70de9f7368a5656ba93b16a3740d1
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892843"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669610"
 ---
-# <a name="select-from-ltmodelgtcases-dmx"></a>[モデル&lt;&gt;から] を選択します。ケース (DMX)
+# <a name="select-from-ltmodelgtcases-dmx"></a>[モデルから] を選択し &lt; &gt; ます。ケース (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   ドリルスルーをサポートし、モデルのトレーニングに使用されたケースを返します。 マイニング構造とマイニング モデルについてドリルスルーを有効にした場合、ユーザーが適切な権限を持っているときは、モデルに含まれていない構造列も返すことができます。  
@@ -23,7 +23,7 @@ ms.locfileid: "68892843"
  マイニングモデルでドリルスルーが有効になっていない場合、このステートメントは失敗します。  
   
 > [!NOTE]  
->  データ マイニング拡張機能 (DMX) では、ドリルスルーはモデルの作成時にのみ可能です。 を使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]して既存のモデルにドリルスルーを追加することはできますが、ケースを表示または照会する前にモデルを再処理する必要があります。  
+>  データ マイニング拡張機能 (DMX) では、ドリルスルーはモデルの作成時にのみ可能です。 を使用して既存のモデルにドリルスルーを追加することはでき [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ますが、ケースを表示または照会する前にモデルを再処理する必要があります。  
   
  ドリルスルーを有効にする方法の詳細については、「 [dmx&#41;&#40;のマイニングモデルの作成](../dmx/create-mining-model-dmx.md)」、「dmx [&#41;の &#40;の選択](../dmx/select-into-dmx.md)」、および「 [DMX &#40;&#41;のマイニング構造の変更](../dmx/alter-mining-structure-dmx.md)」を参照してください。  
   
@@ -60,8 +60,8 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
  **WHERE**句で[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)関数を使用すると、スキーマ行セットの NODE_UNIQUE_NAME 列によって指定されたノードに関連付けられているケースのみが返されます。  
   
-## <a name="examples"></a>使用例  
- 次の例は、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]データベースとそれに関連付けられているマイニングモデルに基づいた、マイニング構造を対象としたメーリングに基づいています。 詳細については、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を参照してください。  
+## <a name="examples"></a>例  
+ 次の例は、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベースとそれに関連付けられているマイニングモデルに基づいた、マイニング構造を対象としたメーリングに基づいています。 詳細については、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を参照してください。  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>例 1: モデルケースおよび構造列へのドリルスルー  
  次の例では、対象となるメーリングモデルのテストに使用されたすべてのケースの列が返されます。 モデルが作成されているマイニング構造に、提示されたテストデータセットがない場合、このクエリは0ケースを返します。 必要な列のみを返す式のリストを使用できます。  
@@ -72,7 +72,7 @@ WHERE IsTestCase();
 ```  
   
 ### <a name="example-2-drillthrough-to-training-cases-in-a-specific-node"></a>例 2 : 特定のノードのトレーニング ケースにドリルスルーする  
- 次の例では、クラスター2のトレーニングに使用されたケースのみが返されます。 Cluster 2 のノードの NODE_UNIQUE_NAME 列の値は '002' です。 また、この例では、マイニングモデルの一部ではない1つの構造列 [Customer Key] が返され、 `CustomerID`列の別名が指定されています。 構造列の名前は文字列値として渡されるため、角かっこではなく引用符で囲む必要があることに注意してください。  
+ 次の例では、クラスター2のトレーニングに使用されたケースのみが返されます。 Cluster 2 のノードの NODE_UNIQUE_NAME 列の値は '002' です。 また、この例では、マイニングモデルの一部ではない1つの構造列 [Customer Key] が返され、列の別名が指定されてい `CustomerID` ます。 構造列の名前は文字列値として渡されるため、角かっこではなく引用符で囲む必要があることに注意してください。  
   
 ```  
 SELECT StructureColumn('Customer Key') AS CustomerID, *   

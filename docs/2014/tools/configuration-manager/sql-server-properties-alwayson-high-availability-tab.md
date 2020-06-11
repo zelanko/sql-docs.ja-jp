@@ -10,12 +10,12 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: daf3ed025405b753116bba267ce6f4c50d350601
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44282a8495bdefc9c817de1bd8340bca1379944c
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678470"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857744"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>SQL Server のプロパティ ([AlwaysOn 高可用性] タブ)
   **構成マネージャーの** [SQL Server のプロパティ] **ダイアログ ボックスの** [AlwaysOn 高可用性] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] タブを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の AlwaysOn 可用性グループを有効または無効にします。 AlwaysOn 可用性グループの有効化は、高可用性およびディザスター リカバリー ソリューションとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが可用性グループを使用するための前提条件です。  
@@ -38,7 +38,7 @@ ms.locfileid: "62678470"
  **[Windows フェールオーバー クラスター名]**  
  ローカル コンピューターのノードが含まれる WSFC クラスターの名前が表示されます。  
   
- **[AlwaysOn 可用性グループを有効にする]**  
+ **AlwaysOn 可用性グループの有効化**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のこのインスタンスで AlwaysOn 可用性グループを有効または無効にするには、このチェック ボックスを使用します。  
   
 -   このチェック ボックスがオフの場合、AlwaysOn 可用性グループは現在無効になっています。 AlwaysOn 可用性グループを有効にするには、このチェック ボックスをオンにして、 **[OK]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを手動で再起動します。  
@@ -48,7 +48,7 @@ ms.locfileid: "62678470"
     > [!TIP]  
     >  AlwaysOn 可用性グループを無効にした後は、サーバー インスタンスからローカル可用性レプリカをすべて削除する必要があります。 各可用性グループの最後のレプリカを削除したら、グループも削除する必要があります。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
   
 > [!NOTE]  
 >  AlwaysOn 可用性グループを無効にした後の設定と、可用性グループの作成および構成方法については、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] オンライン ブックを参照してください。  

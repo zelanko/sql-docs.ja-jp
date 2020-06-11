@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddd54c22af1e7130940fb8ff3073de0821f4fc90
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525463"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536024"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>多次元モデルの Power View について
   この記事では、Microsoft SQL Server 2014 の多次元モデル機能の Power View について説明し、組織に多次元モデルの Power View を実装する BI プロフェッショナルと管理者にとって重要な情報を提供します。  
@@ -39,7 +38,7 @@ ms.locfileid: "79525463"
   
 -   Power View クライアント機能には、Microsoft Silverlight 5 が必要です。 詳細については、「 [Planning for Reporting Services」および「Power View Browser Support &#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。  
   
-## <a name="features"></a>特徴  
+## <a name="features"></a>フィーチャー  
  **Power View のネイティブ サポート**  
   
  このリリースでは、多次元モデルで、SharePoint モードの Power View を使用した分析とビジュアル化がサポートされています。 多次元モデルで特別な構成は必要ありません。 ただし、Microsoft Excel や Microsoft Performance Point など、その他のクライアント ツールと比較すると、Power View での多次元モデル オブジェクトの表示形式にはいくつか違いがあります。 このリリースでは、Excel 2013 の Power View を使用した多次元モデルの分析とビジュアル化はサポートされていません。  
@@ -57,7 +56,7 @@ ms.locfileid: "79525463"
 |-----------------------------|--------------------|  
 |Cube|モデル|  
 |キューブ ディメンション|テーブル|  
-|ディメンション属性 (キー、名前)|列|  
+|ディメンション属性 (キー、名前)|Column|  
 |[メジャー グループ]|テーブル|  
 |Measure|Measure|  
 |メジャー グループのないメジャー|Measures という名前のテーブル内|  

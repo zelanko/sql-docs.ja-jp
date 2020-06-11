@@ -19,17 +19,17 @@ ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25b16d4380157b49031cd05fb1ecbe5dac1ba811
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789112"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858704"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>[進行状況] ページ (AlwaysOn 可用性グループ ウィザード)
   このダイアログ ボックスを使用すると、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で実行中の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ウィザードの進行状況を表示できます。 進行状況バーには、ウィザードが実行している手順の相対的な進行状況が示されます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[詳細]**  
  下矢印をクリックすると、完了した手順を順に示す一覧と現在進行中の操作が進行状況グリッドに表示されます。 このグリッドには次の列が含まれています。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62789112"
 |------------|-----------------|  
 |**Error**|この手順の操作がエラーになったことを示します。 リンクをクリックすると、エラーを説明するメッセージ ダイアログ ボックスが表示されます。|  
 |**実行中 ( "** *完了率" * **)**|操作が現在実行中であることを示し、この手順の進行状況をパーセンテージで示します。|  
-|**成功**|この手順の操作が正常に完了したことを示します。|  
+|**Success**|この手順の操作が正常に完了したことを示します。|  
   
  **[詳細の非表示]**  
  進行状況グリッドを非表示にします。  

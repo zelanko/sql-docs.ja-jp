@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c87de5fb72036848088afd2fbfd651be5d7b850
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076261"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536124"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>リモート パーティションの作成と管理 (Analysis Services)
   メジャー グループをパーティション分割する場合は、パーティションのストレージとして [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のリモート インスタンスでセカンダリ データベースを構成できます。  
@@ -27,7 +26,7 @@ ms.locfileid: "66076261"
   
  専用のセカンダリ データベースは、1 つの master データベースのみのリモート パーティションを格納できます。これに対し、master データベースは、すべてのセカンダリ データベースが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の同一のリモート インスタンスに存在する場合に限り、複数のセカンダリ データベースを使用できます。 リモート パーティション専用のデータベース内のディメンションは、リンク ディメンションとして作成されます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  リモート パーティションを作成するには、次の条件を満たしている必要があります。  
   
 -   パーティションを格納するために、もう 1 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスと専用データベースが必要です。 セカンダリ データベースには、master データベースのリモート パーティションのストレージを提供するという専用の目的があります。  
@@ -45,7 +44,7 @@ ms.locfileid: "66076261"
 -   ディザスター リカバリー計画がリモート パーティションのバックアップと復元に対応していることを確認する必要があります。 リモート パーティションを使用すると、バックアップ操作と復元操作が複雑になる場合があります。 必要なデータを復元できるように、計画を十分にテストしてください。  
   
 ## <a name="configure-remote-partitions"></a>リモート パーティションの構成  
- のインスタンスを実行している2台[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の異なるコンピューターは、1台のコンピューターをマスターサーバーとして、もう一方のコンピューターを下位サーバーとして指定するリモートパーティションの配置を作成するために必要です。  
+ のインスタンスを実行している2台の異なるコンピューター [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、1台のコンピューターをマスターサーバーとして、もう一方のコンピューターを下位サーバーとして指定するリモートパーティションの配置を作成するために必要です。  
   
  次の手順では、マスター サーバーにキューブ データベースが配置されている、2 つのサーバー インスタンスがあることを前提としています。 この手順では、キューブ データベースを db-master と呼びます。 リモート パーティションが含まれているストレージ データベースを db-storage と呼びます。  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66076261"
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>リモート サーバーで MasterDataSourceID データベース プロパティを設定する (SSMS)  
   
-1.  下位サーバー: ストレージデータベース db ストレージを右クリックし、[**データベース** | をスクリプト化] [**ALTER** | **] [新しいクエリエディターウィンドウ]** の順にポイントします。  
+1.  下位サーバー: ストレージデータベース db ストレージを右クリックし、[**データベースをスクリプト**化] [  |  **ALTER**  |  **] [新しいクエリエディターウィンドウ]** の順にポイントします。  
   
 2.  **[MasterDataSourceID]** を XMLA に追加して、キューブ データベース db-master の ID を値として指定します。 XMLA は次のようになります。  
   

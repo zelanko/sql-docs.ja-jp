@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 1b9cae0a-8990-4194-af5f-a1ea5f2aff06
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 074659d42e1960c5f24cf4afa20668a3d8c823b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93361fb14bc6544ffa7376439c2da0c8e06c3fb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725486"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545955"
 ---
 # <a name="logical-architecture-analysis-services---multidimensional-data"></a>論理アーキテクチャ (Analysis Services - 多次元データ)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、サーバーコンポーネントとクライアントコンポーネントの両方を使用して、ビジネスインテリジェンスアプリケーションのオンライン分析処理 (OLAP) およびデータマイニング機能を提供し[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ます。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、サーバーコンポーネントとクライアントコンポーネントの両方を使用して、ビジネスインテリジェンスアプリケーションのオンライン分析処理 (OLAP) およびデータマイニング機能を提供します。  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のサーバー コンポーネントは、Microsoft Windows サービスとして実装されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]は、同じコンピューター上の複数のインスタンスをサポートし[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、の各インスタンスは Windows サービスの個別のインスタンスとして実装されます。  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のサーバー コンポーネントは、Microsoft Windows サービスとして実装されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 同じコンピューター上の複数のインスタンスをサポートし、の各インスタンス [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は Windows サービスの個別のインスタンスとして実装されます。  
   
 -   クライアントは、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] との通信に、コマンドの発行や応答の受信のための SOAP ベースのプロトコルで、Web サービスとして公開されているパブリック標準の XML for Analysis (XMLA) を使用します。 クライアント オブジェクト モデルも XMLA 経由で提供されます。クライアント オブジェクト モデルには、ADOMD.NET などのマネージド プロバイダーまたはネイティブ OLE DB プロバイダーを使用してアクセスできます。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef23d99b4542880d9756bbdad2e5cfb368b4f43c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070316"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539364"
 ---
 # <a name="lesson-3-rename-columns"></a>レッスン 3:列名の変更
   このレッスンでは、インポートした各テーブル内の多くの列の名前を変更します。 名前を変更することで、列がより識別しやすくなり、モデル デザイナー内でも、またクライアント アプリケーションでユーザーがフィールドを選択する際にも、移動が行いやすくなります。 詳細については、「[テーブルまたは列名の変更 (SSAS テーブル)](tabular-models/rename-a-table-or-column-ssas-tabular.md)」を参照してください。  
@@ -36,7 +35,7 @@ ms.locfileid: "66070316"
   
      タブをクリックすると、そのテーブルがモデル デザイナー ウィンドウでアクティブになります。  
   
-2.  [**顧客キー** ] 列の名前をダブルクリック`Customer  Id`し、「」と入力して、enter キーを押します。  
+2.  [**顧客キー** ] 列の名前をダブルクリックし、「」と入力して `Customer  Id` 、enter キーを押します。  
   
     > [!TIP]  
     >  列の名前を変更するには、列の [**プロパティ**] ウィンドウまたはダイアグラムビューの [**列名**] プロパティを使用することもできます。  
@@ -59,7 +58,7 @@ ms.locfileid: "66070316"
     |YearlyIncome|Yearly Income|  
     |TotalChildren|Total Children|  
     |NumberChildrenAtHome|Number of Children At Home|  
-    |EnglishEducation|教育|  
+    |EnglishEducation|Education|  
     |EnglishOccupation|Occupation|  
     |HouseOwnerFlag|Owns House|  
     |NumberCarsOwned|Number of Cars Owned|  
@@ -69,7 +68,7 @@ ms.locfileid: "66070316"
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|Commute Distance|  
   
-     **Date**  
+     **日付**  
   
     |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
@@ -80,7 +79,7 @@ ms.locfileid: "66070316"
     |DayNumberOfYear|Day of Year|  
     |WeekNumberOfYear|Week Number of Year|  
     |EnglishMonthName|Month Name|  
-    |MonthNumberOfYear|月|  
+    |MonthNumberOfYear|Month|  
     |CalendarQuarter|Calendar Quarter|  
     |CalendarYear|Calendar Year|  
     |CalendarSemester|Calendar Semester|  
@@ -100,7 +99,7 @@ ms.locfileid: "66070316"
     |PostalCode|郵便番号|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **梱包**  
+     **製品**  
   
     |ソース名|フレンドリ名|  
     |-----------------|-------------------|  

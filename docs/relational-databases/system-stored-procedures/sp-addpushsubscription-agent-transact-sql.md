@@ -1,7 +1,7 @@
 ---
 title: sp_addpushsubscription_agent (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 740437178b6d9ab444cabdbda3e37febc65b3897
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 22957ce497f47c56ace0f264cc2068014a2f43af
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820707"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627377"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +72,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 `[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
 `[ @subscriber = ] 'subscriber'`サブスクライバーインスタンスの名前を指定します。または、サブスクライバーデータベースが可用性グループの場合は、AG リスナーの名前を指定します。 *サブスクライバー*の**sysname**,、既定値は NULL です。 
-  
+
+> [!NOTE]
+> サーバー名はとして指定でき `<Hostname>,<PortNumber>` ます。 SQL Server が Linux または Windows でカスタムポートを使用して展開され、browser サービスが無効になっている場合は、接続のポート番号を指定する必要があります。
+
 `[ @subscriber_db = ] 'subscriber_db'`サブスクリプションデータベースの名前を指定します。 *subscriber_db*は**sysname**,、既定値は NULL です。 SQL Server 以外のサブスクライバーの場合は、 *subscriber_db*の値 **(既定の転送先)** を指定します。  
   
 `[ @subscriber_security_mode = ] subscriber_security_mode`同期時にサブスクライバーに接続するときに使用するセキュリティモードを示します。 *subscriber_security_mode*は**int**,、既定値は1です。 **0**は認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1** Windows 認証を指定します。  
@@ -98,13 +101,13 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`ディストリビューションエージェントをスケジュールする頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
 |**8**|週次|  
-|**まで**|月 1 回|  
+|**まで**|月単位|  
 |**32**|月単位の相対|  
 |**64** (既定値)|自動開始|  
 |**128**|繰り返し|  
@@ -116,7 +119,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`ディストリビューションエージェントの日付を指定します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|First|  
 |**2**|Second|  
@@ -128,11 +131,11 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday*は**int**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**2**|Second|  
-|**4** (既定値)|Minute|  
+|**4** (既定値)|分|  
 |**8**|時間|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*の間隔を指定します。 *frequency_subday_interval*は**int**,、既定値は5です。  
@@ -173,7 +176,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addpushsubscription_agent**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 ## <a name="example"></a>例  

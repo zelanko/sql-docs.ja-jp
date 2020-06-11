@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d90a12f8-7bc3-4fdb-95a1-7c89058f0d9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab9289705bbea8d1e2c21d5f5820746e58b48cc5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080762"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544294"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>例外の強調表示 (Excel 用のテーブル分析ツール)
   ![リボンの [例外の強調表示] ボタン](media/tat-highlightex.gif "リボンの [例外の強調表示] ボタン")  
@@ -39,7 +38,7 @@ ms.locfileid: "66080762"
   
 3.  **[実行]** をクリックします。  
   
-4.  [テーブル名> \<外れ値] という名前のワークシートを開いて、検出された外れ値の概要を表示します。  
+4.  外れ値というタイトルのワークシートを開いて、 \<table name> 検出された外れ値の概要を表示します。  
   
 5.  ハイライトの数を変更するには、[例外の**強調表示] レポート**の [**例外のしきい値**] 行にある上下の矢印をクリックします。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66080762"
 ## <a name="related-tools"></a>関連ツール  
  データ マイニングに備えてデータを消去または確認する段階で、Excel 用のデータ マイニング クライアントのデータ探索機能を利用することもできます。 このアドインには、外れ値を検出したり、データのラベルを変更したり、データの分布を確認したりするための、より高度なツールが用意されています。 Excel 用のデータマイニングクライアントのデータ探索ツールの詳細については、「[データの探索とクリーンアップ](exploring-and-cleaning-data.md)」を参照してください。  
   
- **例外の強調表示**ツールで[!INCLUDE[msCoName](../includes/msconame-md.md)]は、クラスタリングアルゴリズムが使用されます。 クラスター モデルにより、似た特性を共有する行グループが検出されます。 Excel 用のデータマイニングクライアントには、グラフと特性プロファイルを使用して、クラスタリングによって作成されたデータマイニングモデルを調べるための [**参照**] ウィンドウが用意されています。 [**例外の強調表示**] ツールによって作成されたクラスターモデルを参照する方法については、「[モデルの参照 (Excel 用データマイニングクライアント)](highlight-exceptions-table-analysis-tools-for-excel.md)」を参照してください。  
+ **例外の強調表示**ツールでは、クラスタリングアルゴリズムが使用され [!INCLUDE[msCoName](../includes/msconame-md.md)] ます。 クラスター モデルにより、似た特性を共有する行グループが検出されます。 Excel 用のデータマイニングクライアントには、グラフと特性プロファイルを使用して、クラスタリングによって作成されたデータマイニングモデルを調べるための [**参照**] ウィンドウが用意されています。 [**例外の強調表示**] ツールによって作成されたクラスターモデルを参照する方法については、「[モデルの参照 (Excel 用データマイニングクライアント)](highlight-exceptions-table-analysis-tools-for-excel.md)」を参照してください。  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスタリング アルゴリズムの詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックの「Microsoft クラスタリング アルゴリズム」を参照してください。  
   

@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00ecb4487119251f1b86c2daf29b7481966f09f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b4f5a2949d82f612ed9a85c81a89a4ab1588bbe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071152"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547774"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>データフィードライブラリを使用したデータフィードの共有 (PowerPivot for SharePoint)
-  データ フィードとは、データを Atom ワイヤ形式で公開するサービスまたはアプリケーションから生成される XML データ ストリームです。 データをアプリケーション間で転送したり、クライアント側のビューアーに転送したりするために使用されることが増えています。 PowerPivot for SharePoint の配置では、データフィードを使用して[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 、Atom 対応のアプリケーションまたはサービスからのデータをデータソースに設定します。  
+  データ フィードとは、データを Atom ワイヤ形式で公開するサービスまたはアプリケーションから生成される XML データ ストリームです。 データをアプリケーション間で転送したり、クライアント側のビューアーに転送したりするために使用されることが増えています。 PowerPivot for SharePoint の配置では、データフィードを使用し [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] て、Atom 対応のアプリケーションまたはサービスからのデータをデータソースに設定します。  
   
  Atom 対応アプリケーションの組み合わせを既に使用している場合は、データがアプリケーション間でシームレスに転送されるので、フィードの生成方法と使用方法を理解する必要はありません。 ただし、カスタム ソリューションを使用して Atom フィードをパブリッシュする組織は、インフォメーション ワーカーがフィードを使用できるようにしなければならないことがよくあります。 これを実現する方法の 1 つに、フィードを生成するオンライン ソースへの接続が指定されるデータ サービス ドキュメント (.atomsvc) ファイルを作成して共有する方法があります。 データ フィード ライブラリと呼ばれる特別な用途のライブラリによって、SharePoint Web アプリケーションでのデータ サービス ドキュメントの作成と共有がサポートされます。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
  [前提条件](#prereq)  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66071152"
 >  データ フィードは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] で作成した [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]データ ソースに Web データを追加するために使用されますが、データ サービス ドキュメントの処理は、Atom フィードを読み取ることができる任意のクライアント アプリケーションで実行できます。  
   
 ##  <a name="prerequisites"></a><a name="prereq"></a> 前提条件  
- クエリ処理を SharePoint ファームに[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]追加[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]する PowerPivot for SharePoint の配置が必要です。 データ フィードは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージによってサポートされます。  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クエリ処理を SharePoint ファームに追加する PowerPivot for SharePoint の配置が必要です。 データ フィードは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージによってサポートされます。  
   
  データ サービス ドキュメントのコンテンツ タイプをサポートする SharePoint ライブラリが必要です。 この場合は既定のデータ フィード ライブラリをお勧めしますが、コンテンツ タイプを任意のライブラリに手動で追加することもできます。 詳細については、「[データフィードライブラリの作成またはカスタマイズ &#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)」を参照してください。  
   
@@ -95,8 +94,8 @@ ms.locfileid: "66071152"
 |タスク|SharePoint 権限の要件|  
 |----------|----------------------------------------|  
 |データ フィードを PowerPivot 対応のブックにインポートする。|ライブラリのデータ サービス ドキュメントに対する表示権限。|  
-|PowerPivot クライアント アプリケーションで、以前にフィードを介して取得されたデータを更新する。|適用されません。 PowerPivot クライアント アプリケーションは、埋め込まれた HTTP 接続情報を使用して、フィードを提供するデータ サービスおよびアプリケーションに直接接続します。 PowerPivot クライアント アプリケーションでは、データ サービス ドキュメントは使用されません。|  
-|SharePoint ファームで、ユーザー入力を要求せずにデータを定期タスクとして更新する。|適用されません。 PowerPivot サービスは、埋め込まれた HTTP 接続情報を使用して、フィードを提供するデータ サービスおよびアプリケーションに直接接続します。 PowerPivot サービスでは、データ サービス ドキュメントは使用されません。|  
+|PowerPivot クライアント アプリケーションで、以前にフィードを介して取得されたデータを更新する。|適用不可。 PowerPivot クライアント アプリケーションは、埋め込まれた HTTP 接続情報を使用して、フィードを提供するデータ サービスおよびアプリケーションに直接接続します。 PowerPivot クライアント アプリケーションでは、データ サービス ドキュメントは使用されません。|  
+|SharePoint ファームで、ユーザー入力を要求せずにデータを定期タスクとして更新する。|適用不可。 PowerPivot サービスは、埋め込まれた HTTP 接続情報を使用して、フィードを提供するデータ サービスおよびアプリケーションに直接接続します。 PowerPivot サービスでは、データ サービス ドキュメントは使用されません。|  
 |ライブラリのデータ サービス ドキュメントを削除する。|ライブラリに対する投稿権限。|  
   
 ##  <a name="modify-a-data-service-document"></a><a name="modifydsdoc"></a> データ サービス ドキュメントの変更  

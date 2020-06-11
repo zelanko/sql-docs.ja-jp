@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9e68187207798a04b49f87b2a4b004661d873834
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08c0eeb1315b9ca7ab63a870e2e31ad4896b2d59
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175301"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542924"
 ---
 # <a name="defining-a-referenced-relationship"></a>参照リレーションシップの定義
   このチュートリアルのこれまでの実習では、主キーから外部キーへのリレーションシップを使用し、メジャー グループのファクト テーブルに直接リンクしているテーブルに基づいて、各キューブ ディメンションを定義しました。 このトピックの実習では、 **Reseller** ディメンションを介し、 **Geography** ディメンションを再販業者販売のファクト テーブルにリンクさせます。このようにリンクを中継するディメンションを、 *参照ディメンション*といいます。 参照ディメンションにより、販売店の売上と地域を関連付けることができます。 詳細については、「 [参照リレーションシップと参照リレーションシップのプロパティの定義](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)」を参照してください。
@@ -88,7 +87,7 @@ ms.locfileid: "78175301"
 
      Reseller ディメンションの Geography Key 属性は、Geography ディメンションを Reseller Sales ファクト テーブルにリンクするためにのみ使用されます。 Geography Key 属性は表示しないため、この属性階層の表示を定義する値はありません。 また、この属性階層の並べ替えや最適化を行っても、処理パフォーマンスを低下させるだけです。 しかし、2 つのディメンション間を結ぶリンクとしてのみ機能するように、この属性を有効にする必要があります。
 
-4.  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]チュートリアルキューブのキューブデザイナーに切り替え、[ディメンションの**使用法**] タブをクリックし、**再販業者の Sales**メジャーグループと**Geography**キューブディメンションの交差部分にある省略記号ボタン ([.**..**]) をクリックします。
+4.  チュートリアルキューブのキューブデザイナーに切り替え [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、[ディメンションの**使用法**] タブをクリックし、**再販業者の Sales**メジャーグループと**Geography**キューブディメンションの交差部分にある省略記号ボタン ([.**..**]) をクリックします。
 
 5.  **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]** をクリックします。
 
@@ -104,7 +103,7 @@ ms.locfileid: "78175301"
 
 9. **[ディメンションの使用法]** タブを開き、 **[ディメンション]** の一覧で **[Geography]** を右クリックし、 **[名前の変更]** をクリックします。
 
-10. このキューブディメンションの名前をに`Reseller Geography`変更します。
+10. このキューブディメンションの名前をに変更 `Reseller Geography` します。
 
      このキューブ ディメンションを **Reseller Sales** メジャー グループにリンクしたので、以降は同キューブ ディメンションを明示的にキューブ内で使用できます。これにより、ユーザーの混乱を避けることができます。
 
@@ -114,7 +113,7 @@ ms.locfileid: "78175301"
 
 2.  配置が正常に完了したら、 **Tutorial キューブのキューブ デザイナーで** [ブラウザー] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブをクリックし、 **[再接続]** ボタンをクリックします。
 
-3.  メタデータペインで、[ `Reseller Geography`] を展開し、[**地域**] を右クリックして、[**行領域に追加**] をクリックします。
+3.  メタデータペインで、[] を展開し、[ `Reseller Geography` **地域**] を右クリックして、[**行領域に追加**] をクリックします。
 
      次の図を見ると、 **Reseller Sales-Sales Amount** メジャーが、 **Geographies** ユーザー定義階層の **Country-Region** 属性によって正しく多次元化されたことがわかります。
 

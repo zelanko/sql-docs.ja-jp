@@ -14,17 +14,17 @@ ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4580b41b9854b749f4ed6f66d2c7bea77647cef1
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999551"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859214"
 ---
 # <a name="name-not-found-dialog-box"></a>[名前が見つかりません] ダイアログ ボックス
   ダイアログ ボックスに表示されている 1 つまたは複数のオブジェクト名が見つかりませんでした。 オプションを選択して続行してください。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[この情報を訂正して再検索する]**  
  選択すると、 **[このオブジェクトの種類を選択してください]** 、 **[オブジェクトの種類]** 、および **[オブジェクト名を入力してください]** 領域が利用可能になります。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62999551"
  **[オブジェクト名を入力してください]**  
  見つからなかったオブジェクトの名前が表示されます。 オブジェクト名を訂正するか、新しいオブジェクト名を入力してください。  
   
- **Remove***\<オブジェクト名の>***を選択から**削除      
+ **Remove*** \< オブジェクト名の>***を選択から**削除      
  選択すると、 **[名前が見つかりません]** ダイアログ ボックスが閉じ、 **[オブジェクトの選択]** ダイアログ ボックスから項目が削除されます。  
   
   

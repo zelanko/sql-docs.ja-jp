@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 535d1e05fc82882e0a2b5ea43ac9b2147e62338b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b60d721a69213ad52536830b49b40d6bb82a3811
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388015"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545934"
 ---
 # <a name="olap-engine-server-components"></a>OLAP エンジンのサーバー コンポーネント
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]サーバーコンポーネントは、Windows サービスとして実行される**msmdsrv.exe**アプリケーションです。 このアプリケーションは、セキュリティ コンポーネント、XML for Analysis (XMLA) リスナー コンポーネント、クエリ プロセッサ コンポーネント、および次の機能を実行するその他多くの内部コンポーネントで構成されています。
+  のサーバーコンポーネント [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、Windows サービスとして実行される**msmdsrv.exe**アプリケーションです。 このアプリケーションは、セキュリティ コンポーネント、XML for Analysis (XMLA) リスナー コンポーネント、クエリ プロセッサ コンポーネント、および次の機能を実行するその他多くの内部コンポーネントで構成されています。
 
 -   クライアントから受信したステートメントの解析
 
@@ -51,13 +50,13 @@ ms.locfileid: "81388015"
  ![Analysis Services のシステム アーキテクチャ図](../../../analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services のシステム アーキテクチャ図")
 
 ## <a name="xmla-listener"></a>XMLA リスナー
- XMLA リスナー コンポーネントでは、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] とそのクライアントの間のすべての XMLA 通信が処理されます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` Msmdsrv.exe ファイルの構成設定を使用して、インスタンスが[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]リッスンするポートを指定できます。 このファイルの 0 の値は、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が既定のポートをリッスンすることを示します。 特に指定がなければ、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では次の既定の TCP ポートが使用されます。
+ XMLA リスナー コンポーネントでは、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] とそのクライアントの間のすべての XMLA 通信が処理されます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` msmdsrv.ini ファイルの構成設定を使用して、インスタンスがリッスンするポートを指定でき [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ます。 このファイルの 0 の値は、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が既定のポートをリッスンすることを示します。 特に指定がなければ、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では次の既定の TCP ポートが使用されます。
 
 |Port|説明|
 |----------|-----------------|
-|2383|の既定の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。|
-|2382|の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]他のインスタンスのリダイレクター。|
-|サーバーの起動時に動的に割り当てられます。|の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]名前付きインスタンス。|
+|2383|の既定のインスタンス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。|
+|2382|の他のインスタンスのリダイレクター [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。|
+|サーバーの起動時に動的に割り当てられます。|の名前付きインスタンス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。|
 
  詳細については[、「Analysis Services アクセスを許可するための Windows ファイアウォールの構成」を](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)参照してください。
 

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee9019f821c5608527e0bdca5eddc8f1ead52f41
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084031"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522136"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft クラスタリング アルゴリズム テクニカル リファレンス
   ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの実装について、クラスター モデルの動作を制御するために使用できるパラメーターを含めて説明します。 クラスター モデルの作成時や処理時のパフォーマンスを向上させる方法に関するアドバイスも含まれています。  
@@ -94,7 +93,7 @@ ms.locfileid: "66084031"
  CLUSTERING_METHOD  
  アルゴリズムで使用するクラスタリング手法を指定します。 使用可能なクラスタリング手法は次のとおりです。  
   
-|ID|メソッド|  
+|id|Method|  
 |--------|------------|  
 |1|スケーラブル EM|  
 |2|非スケーラブル EM (Non-scalable EM)|  
@@ -170,7 +169,7 @@ ms.locfileid: "66084031"
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)」を参照してください。  
   
-|列|コンテンツの種類|  
+|Column|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Cyclical、Discrete、Discretized、Key、Table、Ordered|  
 |予測可能な属性|Continuous、Cyclical、Discrete、Discretized、Table、Ordered|  

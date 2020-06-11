@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b39909acacb29f68b0de49ba2093c9b812510172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078556"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542714"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>レッスン 6: 計算列の作成
   このレッスンでは、計算列を追加して、モデル内に新しいデータを作成します。 計算列は、モデル内の既存のデータに基づいて機能します。 詳細については、「[計算列 (SSAS テーブル)](tabular-models/ssas-calculated-columns.md)」を参照してください。  
@@ -52,7 +51,7 @@ ms.locfileid: "66078556"
     > [!NOTE]  
     >  エラーが返された場合は、数式内の列名が、「 [レッスン 3: 列名の変更](rename-columns.md)」で変更した列名と一致していることを確認してください。  
   
-5.  この列の名前`Month Calendar`をに変更します。  
+5.  この列の名前をに変更 `Month Calendar` します。  
   
  Month Calendar 計算列は、Month の並べ替え可能な名前を提供します。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66078556"
   
      数式の入力が終了したら、Enter キーを押します。  
   
-3.  列の名前を`Day of Week`に変更します。  
+3.  列の名前をに変更 `Day of Week` します。  
   
 4.  列見出しをクリックし、列を **Day Name** 列と **Day of Month** 列の間にドラッグします。  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66078556"
   
      数式の入力が終了したら、Enter キーを押します。  
   
-4.  列の名前を`Product Subcategory Name`に変更します。  
+4.  列の名前をに変更 `Product Subcategory Name` します。  
   
  Product Subcategory Name 計算列は、Product テーブル内に、Product Subcategory テーブルの Product Subcategory Name 列のデータを含んだ階層を作成するために使用されます。 階層が複数のテーブルにまたがることはできません｡ 階層の作成は、この後のレッスン 7 で行います。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66078556"
   
      数式の入力が終了したら、Enter キーを押します。  
   
-3.  列の名前を`Product Category Name`に変更します。  
+3.  列の名前をに変更 `Product Category Name` します。  
   
  Product Category Name 計算列は、Product テーブル内に、Product Category テーブルの Product Category Name 列のデータを含んだ階層を作成するために使用されます。 階層が複数のテーブルにまたがることはできません｡  
   
@@ -119,7 +118,7 @@ ms.locfileid: "66078556"
   
      数式の入力が終了したら、Enter キーを押します。  
   
-4.  列の名前を`Margin`に変更します。  
+4.  列の名前をに変更 `Margin` します。  
   
 5.  列を、 **Sales Amount** 列と **Tax Amt** 列の間にドラッグします。  
   

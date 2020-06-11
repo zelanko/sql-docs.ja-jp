@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a69b2a2c8225c19dfb18a4b41b6fd1adc6aab266
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1dae97cc76eb09ce0ac4ef9d61d571a6d10c1bc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388021"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545964"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 開発に関するクライアント アーキテクチャの要件
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は、シンクライアントアーキテクチャをサポートしてい[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]計算エンジンは完全にサーバーベースであるため、すべてのクエリがサーバー上で解決されます。 つまり、クエリごとにクライアントとサーバー間での単一ラウンド トリップが必要です。この結果、クエリの複雑さが増すにつれてパフォーマンスが変化します。
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、シンクライアントアーキテクチャをサポートしています。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]計算エンジンは完全にサーバーベースであるため、すべてのクエリがサーバー上で解決されます。 つまり、クエリごとにクライアントとサーバー間での単一ラウンド トリップが必要です。この結果、クエリの複雑さが増すにつれてパフォーマンスが変化します。
 
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のネイティブ プロトコルは、XML for Analysis (XMLA) です。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、クライアント アプリケーション用のデータ アクセス インターフェイスがいくつか用意されていますが、これらのすべてのコンポーネントは XML for Analysis を使用して [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスと通信を行います。
 
@@ -51,9 +50,9 @@ ms.locfileid: "81388021"
  クライアントおよび中間層アプリケーションは、いずれも、プロバイダーを使用せずに直接 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] と通信できます。 クライアントおよび中間層アプリケーションによっては、TCP/IP、HTTP、または HTTPS を使用して SOAP パケットで XML for Analysis を送信する場合もあります。 また、クライアントは SOAP をサポートする任意の言語を使用して記述されている場合もあります。 この場合、通信の管理には、TCP/IP を使用したサーバーへの直接接続が記述されている場合でも、HTTP を介したインターネット インフォメーション サービス (IIS) を使用する方法が最も管理が簡単です。 これが [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] に最適のシン クライアント ソリューションです。
 
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>テーブル モードまたは SharePoint モードの Analysis Services
- で[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]は、表形式データベースの場合は xvelocity メモリ内分析エンジン (VertiPaq) モード、SharePoint サイトにパブリッシュ[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]されたブックの場合はサーバーを起動できます。
+ では [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、表形式データベースの場合は xVelocity メモリ内分析エンジン (VertiPaq) モード、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint サイトにパブリッシュされたブックの場合はサーバーを起動できます。
 
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] および [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] は、それぞれ SharePoint モードまたは表形式モードを使用するインメモリ データベースの作成とクエリがサポートされる、ただ 1 つのクライアント環境です。 Excel および[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ツールを使用して作成した埋め込み PowerPivot データベースは、excel ブック内に格納され、excel .xlsx ファイルの一部として保存されます。
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] および [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] は、それぞれ SharePoint モードまたは表形式モードを使用するインメモリ データベースの作成とクエリがサポートされる、ただ 1 つのクライアント環境です。 Excel およびツールを使用して作成した埋め込み PowerPivot データベースは、excel ブック内に格納され、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] excel .xlsx ファイルの一部として保存されます。
 
  ただし、キューブ データをブックにインポートすると、従来のキューブに格納されたデータを [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックで使用できます。 また、SharePoint サイトにパブリッシュされている場合、別の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックからデータをインポートすることもできます。
 
@@ -64,7 +63,7 @@ ms.locfileid: "81388021"
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]Analysis Services に対して確立されたインターフェイスと言語 (AMO および ADOMD.NET、MDX および XMLA) を使用して、ブック内の xVelocity メモリ内分析エンジン (VertiPaq) ストレージエンジンと対話します。 アドイン内では、メジャーは、Excel、Data Analysis Expressions (DAX) と同様の数式言語を使用して定義されます。 DAX の式は、インプロセス サーバーに送信される XMLA メッセージ内に埋め込まれます。
 
 ### <a name="providers"></a>プロバイダー
- と Excel [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]の間の通信では、MSOLAP OLEDB プロバイダー (バージョン 11.0) が使用されます。 MSOLAP プロバイダー内には、4 つの異なるモジュールまたはトランスポートがあり、クライアントとサーバー間のメッセージの送信に使用できます。
+ と Excel の間の通信で [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] は、MSOLAP OLEDB プロバイダー (バージョン 11.0) が使用されます。 MSOLAP プロバイダー内には、4 つの異なるモジュールまたはトランスポートがあり、クライアントとサーバー間のメッセージの送信に使用できます。
 
  **TCP/IP**通常のクライアント/サーバー接続に使用されます。
 

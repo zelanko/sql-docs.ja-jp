@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fe4c204b-1031-4ac4-9916-8052ce2301cc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 51e19ed19c78903be0565461871ccc0b00460002
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be3668378a2711e3da42126f5d0e06ff557bafb1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082198"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528908"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>[勘定科目インテリジェンスの定義] (ビジネス インテリジェンス ウィザード)
   **[勘定科目インテリジェンスの定義]** ページでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスで定義された勘定科目の種類を、勘定科目ディメンションにデータを供給するデータ ソース内のソース テーブルによって定義される勘定科目の種類にマップできます。  
@@ -34,7 +33,7 @@ ms.locfileid: "66082198"
   
  次の表は、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスで定義される勘定科目の種類を示しています。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[Asset]**|ある時点で所有している物の価値です。|  
 |**Balance**|ある時点でのある物の数です。|  

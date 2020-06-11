@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6051f62caac2878b689a50e5773b047cb8df7afe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2164c617bae69264dce2a237ca48a125b096765
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076848"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544544"
 ---
 # <a name="enable-dimension-writeback"></a>[ディメンションの書き戻しの有効化]
   キューブまたはディメンションにディメンション書き戻し拡張機能を追加すると、ユーザーはディメンション構造とメンバーを手動で変更できます。 書き込みが可能なディメンションに加えた更新は、ディメンション テーブルに直接記録されます。 この拡張機能により、ディメンションの `WriteEnabled` プロパティ設定が変更されます。  

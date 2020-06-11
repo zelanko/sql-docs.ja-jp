@@ -12,17 +12,17 @@ ms.assetid: 69928b3e-53c8-4e6c-83a5-3dd3cf7ece7c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c657b4670acaab008bafa24def05102938a99d0e
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068831"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858042"
 ---
 # <a name="set-advanced-properties-ssas"></a>[詳細プロパティの設定] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、データ ソース接続のプロパティ設定を追加指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **プロバイダー**  
  データ ソース接続に使用するプロバイダーを選択します。 データ ソースに接続するには、適切なプロバイダーがコンピューターにインストールされている必要があります。  
   

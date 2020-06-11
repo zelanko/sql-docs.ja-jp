@@ -12,17 +12,17 @@ ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 23e46eaf73be4f14e90065627379bb778525051a
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 49727ad5168bbd5438a57ae161f669482e412cae
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000842"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856857"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>[オプション] ([クエリ実行]-SQL Server-[ANSI] ページ)
   ユーザーのクエリや、トリガーやストアド プロシージャが実行されている間、これらの ANSI (ISO) 規格の SET オプションの組み合わせによってクエリ処理環境が定義されます。 ただし、これらの SET オプションに、ISO 規格に準拠するために必要なオプションがすべて含まれているとは限りません。 このページを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ISO 規格で指定されているすべての設定または設定の一部を使用してクエリを実行するように指定できます。 このオプションに加えた変更は、新規の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、[**クエリ**] メニューの [**クエリオプション**] をクリックするか、クエリウィンドウを右クリック [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] して [**クエリオプション**] を選択します。 **[クエリ オプション]** ダイアログ ボックスで、**[実行]** の下にある **[ANSI]** をクリックします。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **SET ANSI_DEFAULTS**  
  このチェック ボックスをオンにすると、既定の ISO 設定がすべて選択されます。 既定では、すべての ISO オプションが選択されるとは限りません。  
   

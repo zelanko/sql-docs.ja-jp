@@ -12,17 +12,17 @@ ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56df884317c13b860ba19d66d9680c79356c9080
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470019"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859244"
 ---
 # <a name="customize-commands-page"></a>[カスタマイズ] ([コマンド] ページ)
   このダイアログ ボックスでは、ツール バーおよびメニューのコマンドを追加したり、削除したりできます。また、ツール バー ボタンやメニュー コマンドに使用されているイメージを変更できます。 **[コマンド]** ページにアクセスするには、 **[ツール]** メニューの **[カスタマイズ]** をクリックし、次に **[コマンド]** をクリックします。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **Categories (カテゴリ)**  
  **[コマンド]** リスト ボックスに表示されるコマンドのセットを指定します。 コマンドのカテゴリは、現在の環境がサポートしているツールおよびデザイナーによって提供されたメニュー タイトルに基づいています。 このタイトルの一覧は動的であるため、カテゴリの順序とメニュー タイトルは、ツールとデザイナーおよび実行されたカスタマイズによって異なります。 したがって、異なるデザイナーの 2 つのメニューが同じ名前を持つ可能性があります。その場合、同じタイトルが 2 回表示されても別のコマンド セットが表示されます。  
   

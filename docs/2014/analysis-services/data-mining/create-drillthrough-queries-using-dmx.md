@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 42c896ee-e5ee-4017-b66e-31d1fe66d369
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 618732bfe48f7b1fe777f7841d686b07877d10ae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085238"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523658"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>DMX を使用したドリルスルー クエリの作成
   ドリルスルーをサポートするすべてのモデルでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または DMX をサポートするその他のクライアントで DMX クエリを作成することで、ケース データと構造データを取得できます。  
@@ -32,7 +31,7 @@ SELECT <model column list>, StructureColumn('<structure column name') FROM <mode
   
  DMX クエリを使用してケース データを返す方法については、「[SELECT FROM &#60;model&#62;.CASES (DMX)](/sql/dmx/select-from-model-content-dmx)」と「[SELECT FROM &#60;structure&#62;.CASES](/sql/dmx/select-from-structure-cases)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次に示す DMX クエリでは、タイム シリーズ モデルから特定の製品シリーズのケース データが返されます。 このクエリでは、`Amount` 列も返されます。この列はモデルでは使用されていませんが、マイニング構造では使用可能です。  
   
 ```  

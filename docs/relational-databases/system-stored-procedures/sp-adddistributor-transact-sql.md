@@ -1,7 +1,7 @@
 ---
 title: sp_adddistributor (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 45088122cfb6824598aaf40486264d41216d3c39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c82ffa7ad254fc56f1c544a714d8633b7d1a33c
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771319"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627178"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  は、(存在しない場合は) このテーブルにエントリを作成し、サーバーエントリをディストリビューターとしてマークし、プロパティ情報を格納[します。](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) このストアドプロシージャは、ディストリビューター側で master データベースに対して実行され、サーバーをディストリビューターとして登録してマークします。 リモート ディストリビューターの場合、このストアド プロシージャは、master データベースからパブリッシャー側でも実行され、リモート ディストリビューターを登録します。  
+  [sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md)テーブルにエントリを作成します (存在しない場合)。は、サーバーエントリをディストリビューターとしてマークし、プロパティ情報を格納します。 このストアドプロシージャは、ディストリビューター側で master データベースに対して実行され、サーバーをディストリビューターとして登録してマークします。 リモート ディストリビューターの場合、このストアド プロシージャは、master データベースからパブリッシャー側でも実行され、リモート ディストリビューターを登録します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,10 @@ sp_adddistributor [ @distributor= ] 'distributor'
   
 ## <a name="arguments"></a>引数  
 `[ @distributor = ] 'distributor'`ディストリビューションサーバーの名前を指定します。 *ディストリビューター*は**sysname**,、既定値はありません。 このパラメーターは、リモート ディストリビューターを設定する場合にのみ使用します。 このメソッドは、ディストリビューターのプロパティのエントリを msdb. に追加します。 **MSdistributor**テーブル。  
-  
+
+> [!NOTE]
+> サーバー名はとして指定でき `<Hostname>,<PortNumber>` ます。 SQL Server が Linux または Windows でカスタムポートを使用して展開され、browser サービスが無効になっている場合は、接続のポート番号を指定する必要があります。
+
 `[ @heartbeat_interval = ] heartbeat_interval`エージェントが進行状況メッセージをログに記録しなくてもよい最大時間を分単位で指定します。 *heartbeat_interval*は**int**,、既定値は10分です。 この間隔で実行され、実行されているレプリケーションエージェントの状態を確認する SQL Server エージェントジョブが作成されます。  
   
 `[ @password = ] 'password']`**Distributor_admin**ログインのパスワードを入力します。 *パスワード*は**sysname**,、既定値は NULL です。 NULL または空の文字列の場合、パスワードはランダムな値にリセットされます。 パスワードは最初のリモート ディストリビューターを追加するときに構成する必要があります。 **distributor_admin**ログインと*パスワード*は、ローカル接続を含む*ディストリビューター* RPC 接続に使用されるリンクサーバーエントリ用に格納されます。 *ディストリビューター*がローカルの場合、 **distributor_admin**のパスワードは新しい値に設定されます。 リモートディストリビューターを持つパブリッシャーの場合、パブリッシャーとディストリビューターの両方で**sp_adddistributor**を実行するときに、 *password*に同じ値を指定する必要があります。 [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)を使用して、ディストリビューターのパスワードを変更できます。  
@@ -56,7 +59,7 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_adddistributor**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="example"></a>例  
@@ -71,6 +74,6 @@ sp_adddistributor [ @distributor= ] 'distributor'
  [sp_dropdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)  
+ [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)  
   
   

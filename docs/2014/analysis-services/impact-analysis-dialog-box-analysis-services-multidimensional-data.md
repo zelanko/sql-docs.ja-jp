@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 208268eb-4e14-44db-9c64-6f74b776adb6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92c7e91e090b8e82e2844cf1999328c6ef7a8684
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080751"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544274"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>[影響分析] ダイアログ ボックス (Analysis Services - 多次元データ)
   **および** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [影響分析] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 **[処理]** ダイアログ ボックスに一覧表示されているオブジェクトが処理された場合に影響を受ける依存オブジェクトを特定し、必要に応じて処理できます。 **[影響分析]** ダイアログ ボックスを表示するには、 **[処理]** ダイアログ ボックスの **[影響分析]** をクリックします。  
@@ -29,7 +28,7 @@ ms.locfileid: "66080751"
  **オブジェクトの一覧**  
  依存オブジェクトの一覧をグリッドに表示します。 このグリッドには次の列が含まれています。  
   
- **オブジェクト名**  
+ **[オブジェクト名]**  
  処理する必要がある可能性がある依存オブジェクトの名前を表示します。 名前の左にあるアイコンはオブジェクトの種類を示しています。  
   
  **Type**  
@@ -41,7 +40,7 @@ ms.locfileid: "66080751"
 |影響|Message|  
 |------------|-------------|  
 |オブジェクトがクリアされます (処理されません)。|警告|  
-|オブジェクトが無効になります。|Error|  
+|オブジェクトが無効になります。|エラー|  
 |集計が削除されます。|警告|  
 |柔軟な集計が削除されます。|警告|  
 |インデックスが削除されます。|警告|  

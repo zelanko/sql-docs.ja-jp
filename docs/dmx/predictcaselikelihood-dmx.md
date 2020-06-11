@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0302af7f2241f3e158e8fa95691544c6fdf2dfac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18e988f55f68717f4e2054ec5c38869efba74ab1
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893926"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668195"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood 度 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  戻り値は、ケースの未加工の確率、つまりケース属性の確率の積を格納します。  
   
 ## <a name="applies-to"></a>適用対象  
- [!INCLUDE[msCoName](../includes/msconame-md.md)]クラスタリングアルゴリズムと[!INCLUDE[msCoName](../includes/msconame-md.md)]シーケンスクラスターアルゴリズムを使用して作成されたモデル。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]クラスタリング [!INCLUDE[msCoName](../includes/msconame-md.md)] アルゴリズムとシーケンスクラスターアルゴリズムを使用して作成されたモデル。  
   
 ## <a name="return-type"></a>戻り値の型  
  0から1までの倍精度浮動小数点数。 1に近い数値は、このモデルでケースが発生する確率が高いことを示します。 値が 0 に近いほど、このモデルでケースが発生する確率が低くなります。  
@@ -53,8 +53,8 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
   
  正規化 = (z/(1 + z))  
   
-## <a name="examples"></a>使用例  
- 次の例では、 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW データベースに基づくクラスターモデル内で、指定したケースが発生する確率を返します。  
+## <a name="examples"></a>例  
+ 次の例では、DW データベースに基づくクラスターモデル内で、指定したケースが発生する確率を返し [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] ます。  
   
 ```  
 SELECT  

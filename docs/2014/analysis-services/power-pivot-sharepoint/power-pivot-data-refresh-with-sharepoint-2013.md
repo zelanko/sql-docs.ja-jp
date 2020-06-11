@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4076e27a800f9c9653e8a191c1fd53467cba9f75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13e33fbc80dc7253ee67dc55235765bcd1e6250c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071233"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535192"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013 での PowerPivot データ更新
-  Sharepoint 2013 でのデータ[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]モデルの更新の設計では、主要なコンポーネントとして Excel Services を使用して、sharepoint [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]モードで実行されているのインスタンス上のデータモデルを読み込んで更新します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーは、SharePoint ファームの外部で実行されます。  
+  SharePoint 2013 でのデータモデルの更新の設計では、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 主要なコンポーネントとして Excel Services を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sharepoint モードで実行されているのインスタンス上のデータモデルを読み込んで更新します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーは、SharePoint ファームの外部で実行されます。  
   
  以前に使用されていたデータ更新のアーキテクチャは、PowerPivot System サービスのみを使用して、SharePoint モードの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスでデータ モデルを読み込んで更新していました。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスは、PowerPivot アプリケーション サーバーでローカルに実行されていました。 新しいアーキテクチャには、ドキュメント ライブラリのブック アイテムのメタデータとしてスケジュール情報を管理する新しい方法も導入されています。 SharePoint 2013 の Excel Services のアーキテクチャでは、 **対話型のデータ更新** と **定期データ更新**の両方がサポートされています。  
   
@@ -36,10 +35,10 @@ ms.locfileid: "66071233"
   
 -   [認証に関するその他の注意点](#datarefresh_additional_authentication)  
   
--   [詳細](#bkmk_moreinformation)  
+-   [その他の情報](#bkmk_moreinformation)  
   
-## <a name="background"></a>背景  
- Sharepoint Server 2013 excel Services では、excel 2013 ブックのデータ更新を管理し、sharepoint モード[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で実行されているサーバーでデータモデル処理をトリガーします。 Excel 2010 ブックの場合、Excel Services はブックおよびデータ モデルの読み込みと保存も管理します。 ただし、Excel Services は PowerPivot System サービスを使用して処理コマンドをデータ モデルに送信します。 次の表は、データ更新の処理コマンドを送信するコンポーネントをブックのバージョンごとにまとめたものです。 想定した環境は、SharePoint モードで実行されている [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 分析サーバーを使用するように構成された SharePoint 2013 ファームです。  
+## <a name="background"></a>バックグラウンド  
+ SharePoint Server 2013 Excel Services では、Excel 2013 ブックのデータ更新を管理し、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sharepoint モードで実行されているサーバーでデータモデル処理をトリガーし [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。 Excel 2010 ブックの場合、Excel Services はブックおよびデータ モデルの読み込みと保存も管理します。 ただし、Excel Services は PowerPivot System サービスを使用して処理コマンドをデータ モデルに送信します。 次の表は、データ更新の処理コマンドを送信するコンポーネントをブックのバージョンごとにまとめたものです。 想定した環境は、SharePoint モードで実行されている [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 分析サーバーを使用するように構成された SharePoint 2013 ファームです。  
   
 ||||  
 |-|-|-|  
@@ -53,13 +52,13 @@ ms.locfileid: "66071233"
   
  次の表は、SharePoint モードで実行されている [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 分析サーバーを使用するように構成された SharePoint 2013 ファームでサポートされている更新機能をまとめたものです。  
   
-|ブックの作成環境|定期データ更新|対話型の更新|  
+|ブックの作成環境|スケジュールされたデータ更新|対話型の更新|  
 |-------------------------|----------------------------|-------------------------|  
-|2008 R2 PowerPivot for Excel|サポートされていません。 ブックをアップグレード**する\*()**|サポートされていません。 ブックをアップグレード**する\*()**|  
-|2012 PowerPivot for Excel|サポート|サポートされていません。 ブックをアップグレード**する\*()**|  
-|Excel 2013|サポート|サポート|  
+|2008 R2 PowerPivot for Excel|サポートされていません。 ブックをアップグレードする **( \* )**|サポートされていません。 ブックをアップグレードする **( \* )**|  
+|2012 PowerPivot for Excel|サポートされています|サポートされていません。 ブックをアップグレードする **( \* )**|  
+|Excel 2013|サポートされています|サポートされています|  
   
- **(\*)** ブックのアップグレードの詳細については、「 [SharePoint 2013&#41;&#40;ブックのアップグレードと定期データ更新](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)」を参照してください。  
+ **( \* )** ブックのアップグレードの詳細については、「 [SharePoint 2013&#41;&#40;ブックのアップグレードと定期データ更新](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)」を参照してください。  
   
 ##  <a name="interactive-data-refresh"></a><a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
  SharePoint Server 2013 の Excel Services で、対話型または手動のデータ更新は、元のデータ ソースから取得したデータを使用してデータ モデルを更新できます。 対話型のデータ更新は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーに登録して Excel Services アプリケーションを構成すると使用できるようになり、SharePoint モードで実行されます。 詳細については、「 [Excel Services のデータ モデルの設定を管理する (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx)」を参照してください。  
@@ -94,7 +93,7 @@ ms.locfileid: "66071233"
   
  一般的なユーザーエクスペリエンス: 顧客が PowerPivot モデルを含む Excel 2013 ブックで [すべての接続を更新] を選択すると、次のようなエラーメッセージが表示されます。  
   
--   **外部データの更新に失敗しました:** ブックのデータ モデルでの作業中にエラーが発生しました。 再試行してください。 このブックの 1 つ以上のデータ接続を更新できません。  
+-   **外部データの更新に失敗しました:** ブックのデータ モデルでの作業中にエラーが発生しました。 もう一度やり直してください。 このブックの 1 つ以上のデータ接続を更新できません。  
   
  使用しているデータ プロバイダーによっては、ULS ログに次のようなメッセージが表示されます。  
   
@@ -114,7 +113,7 @@ ms.locfileid: "66071233"
   
 1.  SharePoint モードで実行されている Analysis Services サーバーで、**[オペレーティング システムの一部として機能]** 権限に Analysis Services のサービス アカウントを追加します。  
   
-    1.  "`secpol.msc`" を実行します。  
+    1.  "" を実行します。 `secpol.msc`  
   
     2.  **[ローカル セキュリティ ポリシー]**、 **[ローカル ポリシー]**、 **[ユーザー権利の割り当て]** の順にクリックします。  
   
@@ -128,7 +127,7 @@ ms.locfileid: "66071233"
   
  詳細については、「[オペレーティングシステムの一部としての動作](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx)」を参照してください。  
   
-##  <a name="scheduled-data-refresh"></a><a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
+##  <a name="scheduled-data-refresh"></a><a name="bkmk_scheduled_refresh"></a>定期データ更新  
  **定期データ更新の要点**  
   
 -   SharePoint アドイン用の PowerPivot の配置が必要です。 詳細については、「 [SharePoint 2013&#41;&#40;PowerPivot for SharePoint アドインをインストールまたはアンインストールする](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)」を参照してください。  
@@ -143,7 +142,7 @@ ms.locfileid: "66071233"
   
 -   **資格情報:** 保存された資格情報を使用します。 現在のユーザーの ID は使用しません。  
   
--   **サポートされているブック:** Excel 2010 用[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot アドインまたは excel 2013 を使用して作成されたブック。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot アドインを使用して Excel 2010 で作成されたブックはサポートされていません。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 以上の形式でブックをアップグレードしてください。 ブックのアップグレードの詳細については、「[ブックのアップグレードと定期データ更新 (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)」を参照してください。  
+-   **サポートされているブック:**[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Excel 2010 用 PowerPivot アドインまたは excel 2013 を使用して作成されたブック。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot アドインを使用して Excel 2010 で作成されたブックはサポートされていません。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 以上の形式でブックをアップグレードしてください。 ブックのアップグレードの詳細については、「[ブックのアップグレードと定期データ更新 (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)」を参照してください。  
   
  **[データ更新の管理]** ページを表示するには  
   
@@ -166,7 +165,7 @@ ms.locfileid: "66071233"
  ![[データ更新の管理] コンテキスト メニュー](../media/as-manage-datarefresh-sharepoint2013.gif "[データ更新の管理] コンテキスト メニュー")  
   
 > [!TIP]  
->  SharePoint online からのブックの更新については、「 [Sharepoint online からの埋め込み PowerPivot モデルを使用した Excel ブックの更新」 (ホワイトペーパー) ()](https://technet.microsoft.com/library/jj992650.aspx)を参照してくださいhttps://technet.microsoft.com/library/jj992650.aspx)。  
+>  SharePoint online からのブックの更新については、「 [Sharepoint online からの埋め込み PowerPivot モデルを使用した Excel ブックの更新」 (ホワイトペーパー) ()](https://technet.microsoft.com/library/jj992650.aspx)を参照してください https://technet.microsoft.com/library/jj992650.aspx) 。  
   
 ##  <a name="scheduled-data-refresh-architecture-in-sharepoint-2013"></a><a name="bkmk_refresh_architecture"></a>SharePoint 2013 でのスケジュールされたデータ更新のアーキテクチャ  
  次の図は、SharePoint 2013 および SQL Server 2012 SP1 のデータ更新のアーキテクチャをまとめたものです。  
@@ -229,7 +228,7 @@ ms.locfileid: "66071233"
   
  データ更新認証と資格情報の利用状況の詳細については、ブログ記事「 [SharePoint 2013 での PowerPivot データの更新](https://blogs.msdn.com/b/analysisservices/archive/2012/12/21/refreshing-powerpivot-data-in-sharepoint-2013.aspx)」を参照してください。  
   
-##  <a name="more-information"></a><a name="bkmk_moreinformation"></a> 詳細情報  
+##  <a name="more-information"></a><a name="bkmk_moreinformation"></a> その他の情報  
  [PowerPivot データ更新のトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
   
  [SharePoint 2013 の Excel Services](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/)。 

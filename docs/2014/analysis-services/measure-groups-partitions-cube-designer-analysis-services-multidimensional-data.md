@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 58e44b24-cfcd-4908-b445-d4374b961b98
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 058248b5b2cb66a73124d8632ad6426ee9f3ad59
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077911"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541591"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>[メジャー グループ] (キューブ デザイナーの [パーティション] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[パーティション]** タブの **[メジャー グループ]** ペインを使用すると、キューブ内の各メジャー グループに関連付けられたパーティションを管理できます。  
@@ -70,7 +69,7 @@ ms.locfileid: "66077911"
 |**ストレージの設定**|クリックすると、 **[ストレージ設定]** ダイアログ ボックスが表示され、選択したパーティションのストレージ モード、プロアクティブ キャッシュ、および通知の設定を指定できます。|  
 |**書き戻しの設定**|クリックすると、 **[書き戻しの有効化]/[書き戻しの無効化]** ダイアログ ボックスが表示され、選択したパーティションを含むメジャー グループの書き戻し設定を指定できます。|  
 |**[使用法に基づく最適化]**|クリックすると、 **使用法に基づく最適化ウィザード** が表示され、選択したパーティションの既存の使用パターンに基づいた集計デザインを作成できます。<br /><br /> 注: このオプションは、書き戻しパーティションが選択されている場合は無効です。|  
-|**プロセス**|クリックすると、 **[処理]** ダイアログ ボックスが表示され、選択したパーティションを処理できます。|  
+|**処理**|クリックすると、 **[処理]** ダイアログ ボックスが表示され、選択したパーティションを処理できます。|  
 |**コピー**|このオプションは無効です。|  
 |**貼り付け**|このオプションは無効です。|  
 |**プロパティ**|**で選択したパーティションの** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ウィンドウを表示する場合に選択します。|  

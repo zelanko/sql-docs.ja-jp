@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 106415df-81ff-4ec3-b2e1-ca66324f4cab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 69ccdaf9bf0f8b67309a1f88c0c44a90f3167b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 660f0d52d4057a9bdb9e2a0af0ed268d64a7747a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530919"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538859"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>Analysis Services の管理タスクのスクリプト作成
   SQL Server エージェントで手動、またはスケジュールして実行できるスクリプトを記述または生成することで、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理タスクを自動化できます。 次の表は、使用可能なスクリプト作成オプションについてまとめ、詳細情報へのリンクを提供します。  
@@ -33,7 +32,7 @@ ms.locfileid: "69530919"
 |MDX Script|.mdx|多次元式 (MDX) 言語は、分析データ ソースに対する業界標準クエリ言語で、XMLA 仕様の一部でもあります。<br /><br /> データまたはシステム情報をクエリするスタンドアロンの MDX スクリプト ファイルを作成することができます。 たとえば、ローカル サーバーの操作やサーバーの正常性に関する情報を公開する動的管理ビュー (DMV) は、MDX の Select ステートメントを介してアクセスします。<br /><br /> MDX スクリプトは、多次元モードとテーブル モードの両方のサーバーで実行されます。 SQL Server Management Studio、または `Invoke-ASCmd` を使用して PowerShell セッションから対話的にスクリプトを実行することができます。|[MDX スクリプティングの基礎 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)<br /><br /> [動的管理ビュー (DMV) を使用した Analysis Services の監視](instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)<br /><br /> [SQL Server Management Studio での Analysis Services テンプレートの使用](instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |DMX Script|.dmx|データ マイニング拡張機能 (DMX) は、データ マイニング モデルに対するデータ定義、データ操作、およびデータ クエリ言語です。 最初に、テンプレートを使用できます。|[SQL Server Management Studio で DMX クエリを作成する](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [SQL Server Management Studio での Analysis Services テンプレートの使用](instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ|.dtsx|[!INCLUDE[ssIS](../includes/ssis-md.md)] は、データ マイニング モデルを含む、Analysis Services オブジェクトを作成、変更、削除、および処理するタスクとデータ フローを提供します。 SQL Server エージェントを使用して、パッケージの実行をスケジュールできます。|[Analysis Services DDL 実行タスク](../integration-services/control-flow/analysis-services-execute-ddl-task.md)<br /><br /> [Analysis Services 処理タスク](../integration-services/control-flow/analysis-services-processing-task.md)<br /><br /> [データ マイニング クエリ タスク](../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [データ マイニング モデル トレーニング変換先](../integration-services/data-flow/data-mining-model-training-destination.md)<br /><br /> [ディメンション処理変換先](../integration-services/data-flow/dimension-processing-destination.md)<br /><br /> [パーティション処理変換先](../integration-services/data-flow/partition-processing-destination.md)|  
-|分析管理オブジェクト (Analysis Management Objects)||分析管理オブジェクト (AMO) は、管理操作を自動化するカスタム アプリケーションを開発するために、プログラマが使用できる管理インターフェイスです。 AMO を使用して、指定した XMLA、MDX または DMX スクリプトを実行するカスタム アプリケーションを開発することができます。|[AMO による管理タスクのプログラミング](https://docs.microsoft.com/bi-reference/amo/programming-administrative-tasks-with-amo)|  
+|分析管理オブジェクト (Analysis Management Objects)||分析管理オブジェクト (AMO) は、管理操作を自動化するカスタム アプリケーションを開発するために、プログラマが使用できる管理インターフェイスです。 AMO を使用して、指定した XMLA、MDX または DMX スクリプトを実行するカスタム アプリケーションを開発することができます。|[AMO を使用した管理タスクのプログラミング](https://docs.microsoft.com/bi-reference/amo/programming-administrative-tasks-with-amo)|  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services スクリプト言語 &#40;ASSL&#41; リファレンス](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   

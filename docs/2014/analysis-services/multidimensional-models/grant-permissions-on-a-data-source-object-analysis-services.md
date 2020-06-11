@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a869d2033adaa57be0ace522787332c03a69bcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0a7de676f5863187c2c137e056392a605af474f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074999"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546674"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>データ ソース オブジェクトに対する権限の付与 (Analysis Services)
   通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のユーザーは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの基になるデータ ソースへのアクセスを必要とすることはほとんどありません。 ユーザーは通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内部のデータを要求するクエリを発行するだけです。 ただし、データ マイニングのコンテキストでは、マイニング モデルに基づいた予測の実行など、マイニング モデルの登録済みデータをユーザーが入力したデータに結合しなければならない場合があります。 ユーザーが入力したデータが含まれているデータ ソースに接続するには、[OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery) 句または [OPENROWSET &#40;DMX&#41;](/sql/dmx/source-data-query-openrowset) 句を含んでいるデータ マイニング拡張機能 (DMX) クエリを使用します。  

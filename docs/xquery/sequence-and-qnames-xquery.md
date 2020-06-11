@@ -1,5 +1,6 @@
 ---
 title: Sequence と QNames (XQuery) |Microsoft Docs
+description: XQuery におけるシーケンスと QNames の基本的な概念について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 017c2289864b8d2d475bea63a5828d37543b7292
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380783"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305811"
 ---
 # <a name="sequence-and-qnames-xquery"></a>シーケンスと QName (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、XQuery の次の基本的な概念について説明します。  
   
--   Sequence  
+-   シーケンス  
   
 -   QName と事前に定義された名前空間  
   
-## <a name="sequence"></a>Sequence  
+## <a name="sequence"></a>シーケンス  
  XQuery では、式の結果は、XML ノードのリストと XSD アトミック型のインスタンスで構成されるシーケンスになります。 シーケンス内の個々のエントリは、項目と呼ばれます。 シーケンス内のアイテムは、次のいずれかになります。  
   
 -   要素、属性、テキスト、処理命令、コメント、ドキュメントなどのノード  
@@ -59,7 +60,7 @@ WHERE ProductModelID=7;
 <step2> Step 2 description goes here </step2>   
 ```  
   
- 前のクエリでは、`,` `<step1>`構築の最後にあるコンマ () はシーケンスコンストラクターであり、必須です。 結果の空白は、説明のためだけに追加されており、このドキュメントのすべての例の結果に含まれています。  
+ 前のクエリでは、 `,` 構築の最後にあるコンマ () `<step1>` はシーケンスコンストラクターであり、必須です。 結果の空白は、説明のためだけに追加されており、このドキュメントのすべての例の結果に含まれています。  
   
  シーケンスについて理解しておく必要がある追加情報を次に示します。  
   
@@ -111,7 +112,7 @@ SELECT @x.query('/Root/a');
   
  式 (`/Root/a`) では、`Root` と `a` が QName です。  
   
- 次の例では、型指定された**xml**列に対してクエリが指定されています。 クエリは、最初の\<ワークセンターの場所にあるすべてのステップ> 要素を反復処理します。  
+ 次の例では、型指定された**xml**列に対してクエリが指定されています。 クエリは、 \<step> 最初のワークセンターの場所にあるすべての要素を反復処理します。  
   
 ```  
 SELECT Instructions.query('  
@@ -126,11 +127,11 @@ WHERE ProductModelID=7;
   
  クエリ式では、次の点に注意してください。  
   
--   `AWMI root`、`AWMI:Location`、`AWMI:step`、`$Step` は、すべて QName です。 `AWMI`はプレフィックスであり、 `root`、 `Location`、および`Step`はすべてローカル名です。  
+-   `AWMI root`、`AWMI:Location`、`AWMI:step`、`$Step` は、すべて QName です。 `AWMI`はプレフィックスであり、 `root` 、 `Location` 、および `Step` はすべてローカル名です。  
   
 -   `$step`変数は QName であり、プレフィックスを持っていません。  
   
- 次の名前空間は、の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]XQuery サポートで使用するために事前に定義されています。  
+ 次の名前空間は、の XQuery サポートで使用するために事前に定義されてい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。  
   
 |Prefix|URI|  
 |------------|---------|  
@@ -146,7 +147,7 @@ WHERE ProductModelID=7;
  作成するすべてのデータベースには、 **sys** XML スキーマコレクションがあります。 これらのスキーマは、ユーザーが作成した XML スキーマコレクションからアクセスできるように予約されています。  
   
 > [!NOTE]  
->  この実装では、の`local` http://www.w3.org/2004/07/xquery-local-functionsXQuery 仕様で説明されているように、プレフィックスはサポートされません。  
+>  この実装では、 `local` の XQuery 仕様で説明されているように、プレフィックスはサポートされません http://www.w3.org/2004/07/xquery-local-functions 。  
   
 ## <a name="see-also"></a>参照  
  [XQuery の基礎](../xquery/xquery-basics.md)  

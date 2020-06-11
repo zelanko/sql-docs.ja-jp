@@ -10,19 +10,19 @@ ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f095429070a16cb4a99dabd84ffe99d169ce35a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5453bb0f67f670d20f239957ebc1e7bc799d0170
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095331"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859579"
 ---
 # <a name="feature-review"></a>[機能の確認]
   [機能の確認] ページは、準備された機能の読み取り専用の一覧です。これらの機能は、イメージの完了ステップの最後に構成されて完了となります。 機能一覧はイメージの準備ステップ時に選択されます。イメージの完了ステップで変更することはできません。 表示されている機能に加え、準備済みインスタンスには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client も含まれます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスの構成が完了した後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの準備済みインスタンスに含まれていない他の機能を追加することができます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
   
 |コンポーネント グループ|コンポーネントおよび機能|  
 |---------------------|-----------------------------|  

@@ -19,12 +19,12 @@ ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e302d454ba0bf243f702b90b24cf7076ed97cb6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078521"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669465"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "68078521"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar (** 128 **)**|カタログ固有の名前。 この名前は ROUTINE_CATALOG と同じです。|  
-|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|スキーマ固有の名前。<br /><br /> ** \*重要\* \* **オブジェクトのスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|スキーマ固有の名前。<br /><br /> 重要オブジェクトのスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 ** \* \* \* \* ** INFORMATION_SCHEMA ビューは、オブジェクトのメタデータのサブセットのみを表します。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |SPECIFIC_NAME|**nvarchar (** 128 **)**|カタログ固有の名前。 この名前は ROUTINE_NAME と同じです。|  
 |ROUTINE_CATALOG|**nvarchar (** 128 **)**|関数のカタログの名前。|  
-|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|関数を含むスキーマの名前。<br /><br /> ** \*重要\* \* **オブジェクトのスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|関数を含むスキーマの名前。<br /><br /> 重要オブジェクトのスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 ** \* \* \* \* ** INFORMATION_SCHEMA ビューは、オブジェクトのメタデータのサブセットのみを表します。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |ROUTINE_NAME|**nvarchar (** 128 **)**|関数の名前です。|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|ストアドプロシージャのプロシージャと関数の関数を返します。|  
 |MODULE_CATALOG|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
@@ -74,7 +74,7 @@ ms.locfileid: "68078521"
 |SCOPE_NAME|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
 |MAXIMUM_CARDINALITY|**bigint**|NULL。 将来利用するために予約されています。|  
 |DTD_IDENTIFIER|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
-|ROUTINE_BODY|**nvarchar (** 30 **)**|外部で記述さ[!INCLUDE[tsql](../../includes/tsql-md.md)]れた関数の場合は、関数の場合は SQL を返します。<br /><br /> 関数は常に SQL です。|  
+|ROUTINE_BODY|**nvarchar (** 30 **)**|外部で記述された関数の場合は、関数の場合は SQL を返し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。<br /><br /> 関数は常に SQL です。|  
 |ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|関数またはストアドプロシージャが暗号化されていない場合、関数またはストアドプロシージャの定義テキストの最初の4000文字を返します。 その他の場合は NULL が返されます。<br /><br /> 完全な定義を確実に取得するには、 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)関数または[sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログビューの定義列に対してクエリを実行します。|  
 |EXTERNAL_NAME|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
 |EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL。 将来利用するために予約されています。|  

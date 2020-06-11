@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ed6668b4e9b35cb6c311fbbbbc7b17be88d6296
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071807"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547559"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>ディスクの使用領域の構成 (PowerPivot for SharePoint)
   PowerPivot for SharePoint の配置では、再読み込みを高速化するために、ホスト コンピューターのディスク領域を使用して、PowerPivot データベースをキャッシュします。 後ですばやく再読み込みして新しい要求を処理できるように、メモリに読み込まれているすべての PowerPivot データベースが最初にディスクにキャッシュされます。 既定では、PowerPivot for SharePoint は、使用できるすべてのディスク領域を使用してデータベースをキャッシュします。ただし、この動作は、使用するディスク領域を制限するプロパティを設定することにより変更できます。  
@@ -42,7 +41,7 @@ ms.locfileid: "66071807"
   
  Backup フォルダーは、ローカル コンピューターのメモリに読み込まれる任意の PowerPivot データベースの共通のキャッシュ ストレージです。 ファームで複数の PowerPivot サービス アプリケーションを定義した場合は、それぞれがローカル サーバーを使用して PowerPivot データを読み込み、キャッシュすることができます。 データの読み込みとキャッシュは、どちらも Analysis Services サーバーの操作です。 したがって、ディスクの合計使用量は、Backup フォルダーにおいて Analysis Services インスタンス レベルで管理されます。 このため、ディスク使用量を制限する構成設定は、SharePoint アプリケーション サーバー上で実行される単一の SQL Server Analysis Services インスタンスで設定します。  
   
- キャッシュには、PowerPivot データベースのみが格納されます。 PowerPivot データベースは、1 つの親フォルダー (Backup フォルダー) の下に複数のファイルとして格納されます。 PowerPivot データベースは Excel ブックの内部データとして使用することが意図されているため、データベース名はわかりやすい名前ではなく、GUID ベースになっています。 ** \<Serviceapplicationname>** の下にある GUID フォルダーは、PowerPivot データベースの親フォルダーです。 PowerPivot データベースがサーバーに読み込まれると、データベースごとに追加のフォルダーが作成されます。  
+ キャッシュには、PowerPivot データベースのみが格納されます。 PowerPivot データベースは、1 つの親フォルダー (Backup フォルダー) の下に複数のファイルとして格納されます。 PowerPivot データベースは Excel ブックの内部データとして使用することが意図されているため、データベース名はわかりやすい名前ではなく、GUID ベースになっています。 の下の GUID フォルダー **\<serviceApplicationName>** は、PowerPivot データベースの親フォルダーです。 PowerPivot データベースがサーバーに読み込まれると、データベースごとに追加のフォルダーが作成されます。  
   
  PowerPivot データはファーム内の Analysis Services インスタンスに読み込まれることがあるため、同じデータがファーム内の複数のコンピューターにキャッシュされる可能性があります。 この処理ではディスク領域の使用率よりパフォーマンスを優先していますが、その代わりに、既にディスク上で使用可能になっているデータにユーザーが迅速にアクセスできます。  
   
@@ -50,11 +49,11 @@ ms.locfileid: "66071807"
   
  システム レベルでは、ディスク領域が少なくなったときに通知する電子メールによる警告を作成できます。 Microsoft System Center には、電子メール警告機能があります。 また、ファイル サーバー リソース マネージャー、タスク スケジューラ、または PowerShell スクリプトを使用して、警告を設定することもできます。 次のリンクでは、ディスク領域不足に関する通知を設定するための有用な情報が提供されています。  
   
--   [ファイルサーバーリソースマネージャーの新機能](https://technet.microsoft.com/library/hh831746.aspx)(https://technet.microsoft.com/library/hh831746.aspx).  
+-   [ファイルサーバーリソースマネージャーの新機能](https://technet.microsoft.com/library/hh831746.aspx)( https://technet.microsoft.com/library/hh831746.aspx) .  
   
--   [Windows server 2008 R2 のファイルサーバーリソースマネージャーのステップバイステップガイド](https://go.microsoft.com/fwlink/?LinkID=204875)(「https://go.microsoft.com/fwlink/?LinkID=204875)」を参照してください。  
+-   [Windows server 2008 R2 のファイルサーバーリソースマネージャーのステップバイステップガイド (「」を](https://go.microsoft.com/fwlink/?LinkID=204875)参照 https://go.microsoft.com/fwlink/?LinkID=204875) してください。  
   
--   [Windows Server 2008 でディスク領域不足のアラートを設定](https://go.microsoft.com/fwlink/?LinkID=204870)する ( https://go.microsoft.com/fwlink/?LinkID=204870)  
+-   [Windows Server 2008 でディスク領域不足のアラートを設定](https://go.microsoft.com/fwlink/?LinkID=204870) https://go.microsoft.com/fwlink/?LinkID=204870) する (  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>キャッシュされたファイルの格納に使用するディスク領域のサイズを制限する方法  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26877c4892b050cbf9c8dcc6553530dff513f8fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b714999109d4935130d7787983e18b76f9a442a7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078786"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543384"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>レッスン 4:日付テーブルとしてマーク
   「レッスン 2: データの追加」では、DimDate という名前のディメンション テーブルをインポートしました。 次に、「レッスン 3: 列名の変更」では DimDate テーブルの名前を単純な Date に変更しました。 このモデルでは、このテーブルは Date という名前になりましたが、実際は日付と時刻のデータが含まれた*日付テーブル*になります。  

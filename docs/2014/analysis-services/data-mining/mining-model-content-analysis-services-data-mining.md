@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d09f32cb21762ca56eab156701ee013ef2c03ec3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0943e3f98ae65ec6c142fb1b98f86da054e88638
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083777"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521619"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   基になるマイニング構造のデータを使用してマイニング モデルをデザインおよび処理したら、マイニング モデルが完成し、そのモデルには *マイニング モデル コンテンツ*が含まれます。 このコンテンツを使用して、予測やデータの分析を行うことができます。  
@@ -87,8 +86,8 @@ ms.locfileid: "66083777"
 |9|PredictableAttribute|予測可能な属性。 すべての種類のモデルに適用されます。|  
 |10|InputAttribute|入力属性。 デシジョン ツリーと Naïve Bayes モデルに適用されます。|  
 |11|InputAttributeState|入力属性の状態の統計。 デシジョン ツリーと Naïve Bayes モデルに適用されます。|  
-|13|Sequence|シーケンス クラスターの Markov モデル コンポーネントの最上位ノード。 シーケンス クラスター モデルに適用されます。|  
-|14|移行|Markov 遷移マトリックス。 シーケンス クラスター モデルに適用されます。|  
+|13|シーケンス|シーケンス クラスターの Markov モデル コンポーネントの最上位ノード。 シーケンス クラスター モデルに適用されます。|  
+|14|切り替え効果|Markov 遷移マトリックス。 シーケンス クラスター モデルに適用されます。|  
 |15|TimeSeries|時系列ツリーの非ルート ノード。 タイム シリーズ モデルだけに適用されます。|  
 |16|TsTree|予測可能な時系列に対応する、時系列ツリーのルート ノード。 タイム シリーズ モデルに適用されます。また、モデルが MIXED パラメーターを使用して作成された場合にのみ適用されます。|  
 |17|NNetSubnetwork|1 つのサブネットワーク。 ニューラル ネットワーク モデルに適用されます。|  
@@ -221,14 +220,14 @@ ms.locfileid: "66083777"
 |6|Existing|属性の値が連続する数値で、値がデータで指定されていることを示します (不足値または推定値と比較)。|  
 |7|Coefficient|係数を表す数値を示します。<br /><br /> 係数は、従属変数の値の計算時に適用される値です。 たとえば、年齢に基づいて収入を予測する回帰式をモデルで作成する場合は、年齢を収入に関連付ける式で係数が使用されます。|  
 |8|Score gain|属性のスコア ゲインを表す数値を示します。|  
-|9|統計|リグレッサーの統計を表す数値を示します。|  
+|9|統計情報|リグレッサーの統計を表す数値を示します。|  
 |10|Node unique name|値を数値または文字列として扱わずに、モデルの別のコンテンツ ノードの一意識別子として扱うことを示します。<br /><br /> たとえば、ニューラル ネットワーク モデルでは、ID によって、出力層のノードから非表示層のノード、および非表示層のノードから入力層のノードへのポインターが提供されます。|  
 |11|Intercept|回帰式における切片を表す数値を示します。|  
 |12|Periodicity|値がモデルの周期構造を表すことを示します。<br /><br /> ARIMA モデルを含むタイム シリーズ モデルだけに適用されます。<br /><br /> 注: Microsoft Time Series アルゴリズムでは、周期構造はトレーニング データに基づいて自動的に検出されます。 したがって、最終的なモデルの周期性には、モデルの作成時にパラメーターとして指定しなかった周期性の値が含まれる場合があります。|  
 |13|Autoregressive order|値が自己回帰系列の数を表すことを示します。<br /><br /> ARIMA アルゴリズムを使用するタイム シリーズ モデルに適用されます。|  
 |14|Moving average order|系列の移動平均の数を表す値を表します。<br /><br /> ARIMA アルゴリズムを使用するタイム シリーズ モデルに適用されます。|  
 |15|Difference order|系列が区別される回数を示す値を表します。<br /><br /> ARIMA アルゴリズムを使用するタイム シリーズ モデルに適用されます。|  
-|16|ブール型|Boolean 型を表します。|  
+|16|Boolean|Boolean 型を表します。|  
 |17|その他|アルゴリズムで定義されたカスタム値を表します。|  
 |18|Prerendered string|アルゴリズムによって文字列として表示されるカスタム値を表します。 オブジェクト モデルによって書式設定は適用されませんでした。|  
   
@@ -278,9 +277,9 @@ ms.locfileid: "66083777"
 |線形回帰モデル|[線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)|  
 |ロジスティック回帰モデル|[ロジスティック回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-logistic-regression-models.md)|[線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)|  
 |Naïve Bayes モデル|[Naive Bayes モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes モデルのクエリ例](naive-bayes-model-query-examples.md)|  
-|ニューラル ネットワーク モデル|[ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[ニューラル ネットワーク モデルのクエリ例](neural-network-model-query-examples.md)|  
+|ニューラル ネットワーク モデル|[ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Neural Network Model Query Examples](neural-network-model-query-examples.md)|  
 |シーケンス クラスター|[シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](sequence-clustering-model-query-examples.md)|  
-|タイム シリーズ モデル|[タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[タイム シリーズ モデルのクエリ例](time-series-model-query-examples.md)|  
+|タイム シリーズ モデル|[タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Time Series Model Query Examples](time-series-model-query-examples.md)|  
   
 ##  <a name="tools-for-viewing-mining-model-content"></a><a name="bkmk_Viewing"></a>マイニングモデルコンテンツを表示するためのツール  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でモデルを参照または調査する場合、 **Microsoft 汎用コンテンツ ツリー ビューアー**で情報を表示できます。このビューアーは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の両方で使用できます。  

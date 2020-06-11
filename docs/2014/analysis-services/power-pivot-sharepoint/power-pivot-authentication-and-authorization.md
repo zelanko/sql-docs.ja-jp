@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fabd1de8361d9cc8753b42c35e0597769545c6b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67826335"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540324"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot の認証および承認
   SharePoint 2010 ファーム内で実行される PowerPivot for SharePoint の配置では、SharePoint サーバーによって提供される認証サブシステムと承認モデルを使用します。 PowerPivot 関連のすべてのコンテンツは SharePoint コンテンツ データベースに格納され、PowerPivot 関連のすべての操作はファーム内の PowerPivot 共有サービスによって実行されるので、SharePoint のセキュリティ インフラストラクチャは PowerPivot のコンテンツや操作にまで及ぶことになります。 PowerPivot データが含まれているブックを要求するユーザーは、Windows ユーザー ID に基づく SharePoint ユーザー ID を使用して認証されます。 この要求が許可されるか拒否されるかは、ブックに対する表示権限によって決まります。  
@@ -108,7 +107,7 @@ ms.locfileid: "67826335"
 ||更新時の警告|PowerPivot ギャラリーを使用してブックやレポートを格納している場合は、この値を無効にする必要があります。 PowerPivot ギャラリーには、[開くときに更新する] と [更新時の警告] の両方がオフになっているときに最適に動作するドキュメント プレビュー機能が含まれています。|  
 |信頼できるデータ プロバイダー|MSOLAP.4<br /><br /> MSOLAP.5|既定では MSOLAP.4 が含まれますが、PowerPivot データ アクセスでは、MSOLAP.4 プロバイダーが SQL Server 2008 R2 バージョンである必要があります。<br /><br /> MSOLAP.5 は、PowerPivot for SharePoint の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンと共にインストールされます。<br /><br /> これらのプロバイダーは、信頼できるデータ プロバイダー一覧から削除しないでください。 場合によっては、ファーム内の別の SharePoint サーバーにもこのプロバイダーの追加のコピーをインストールすることが必要になることもあります。 「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)」を参照してください。|  
 |信頼できるデータ接続ライブラリ|任意。|PowerPivot ブックでは、Office データ接続 (.odc) ファイルを使用できます。 .odc ファイルを使用してローカル PowerPivot ブックに接続情報を提供する場合、同じ .odc ファイルをこのライブラリに追加できます。|  
-|ユーザー定義関数アセンブリ|適用されません。|PowerPivot for SharePoint では、Excel Services 用にビルドおよび配置するユーザー定義関数アセンブリは無視されます。 特定の動作についてユーザー定義アセンブリに依存する場合、作成したユーザー定義関数は PowerPivot クエリ処理では使用されないことに留意してください。|  
+|ユーザー定義関数アセンブリ|適用不可。|PowerPivot for SharePoint では、Excel Services 用にビルドおよび配置するユーザー定義関数アセンブリは無視されます。 特定の動作についてユーザー定義アセンブリに依存する場合、作成したユーザー定義関数は PowerPivot クエリ処理では使用されないことに留意してください。|  
   
 ## <a name="see-also"></a>参照  
  [PowerPivot サービスアカウントの構成](configure-power-pivot-service-accounts.md)   

@@ -19,12 +19,12 @@ ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b0ed500b1217ae70dca72ab6eab64ab661c22ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08d9a3d71cb099e171e4e8a850766e685319d556
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078534"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669496"
 ---
 # <a name="routine_columns-transact-sql"></a>ROUTINE_COLUMNS (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,15 +36,15 @@ ms.locfileid: "68078534"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|テーブル値関数のカタログ名またはデータベース名。|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|テーブル値関数を含むスキーマの名前。<br /><br /> <strong> \*重要\* \* </strong>オブジェクトのスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|テーブル値関数を含むスキーマの名前。<br /><br /> 重要オブジェクトのスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 <strong> \* \* \* \* </strong> INFORMATION_SCHEMA ビューは、オブジェクトのメタデータのサブセットのみを表します。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|テーブル値関数の名前。|  
 |**COLUMN_NAME**|**nvarchar (** 128 **)**|列名。|  
 |**ORDINAL_POSITION**|**int**|列の識別番号。|  
 |**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|列の既定値です。|  
 |**IS_NULLABLE**|**varchar (** 3 **)**|この列が NULL 値を許容する場合、は YES を返します。 その他の場合は NO が返されます。|  
-|**DATA_TYPE**|**nvarchar (** 128 **)**|システム提供のデータ型。|  
+|**DATA_TYPE**|**nvarchar (** 128 **)**|システムにより提供されるデータ型。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|バイナリ データ、文字データ、またはテキストおよびイメージ データの最大文字列長。<br /><br /> **xml**と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|  
-|**CHARACTER_OCTET_LENGTH**|**int**|バイナリ データ、文字データ、またはテキスト/イメージ データの最大長 (バイト単位)。<br /><br /> **xml**と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。|  
+|**CHARACTER_OCTET_LENGTH**|**int**|バイナリ データ、文字データ、またはテキストおよびイメージ データの最大バイト長。<br /><br /> **xml**と大きな値の型のデータの場合は-1。 その他の場合は NULL が返されます。|  
 |**NUMERIC_PRECISION**|**tinyint**|数値データの概数、正確な数値データ、整数データ、または通貨データの有効桁数。 その他の場合は NULL が返されます。|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|数値データの概数、正確な数値データ、整数データ、または通貨データの有効桁数の基数。 その他の場合は NULL が返されます。|  
 |**NUMERIC_SCALE**|**tinyint**|数値データの概数、正確な数値データ、整数データ、または通貨データの桁数。 その他の場合は NULL が返されます。|  
@@ -56,7 +56,7 @@ ms.locfileid: "68078534"
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|常に NULL が返されます。|  
 |**COLLATION_NAME**|**nvarchar (** 128 **)**|列が文字データまたは**テキスト**データ型の場合、並べ替え順序の一意な名前を返します。 その他の場合は NULL が返されます。|  
 |**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|列が別名データ型の場合、この列はユーザー定義データ型が作成されたデータベース名になります。 その他の場合は NULL が返されます。|  
-|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|列がユーザー定義データ型の場合、この列はユーザー定義データ型を含むスキーマの名前です。 その他の場合は NULL が返されます。<br /><br /> <strong> \*重要\* \* </strong>オブジェクトのスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|列がユーザー定義データ型の場合、この列はユーザー定義データ型を含むスキーマの名前です。 その他の場合は NULL が返されます。<br /><br /> 重要オブジェクトのスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 <strong> \* \* \* \* </strong> INFORMATION_SCHEMA ビューは、オブジェクトのメタデータのサブセットのみを表します。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**DOMAIN_NAME**|**nvarchar (** 128 **)**|列がユーザー定義データ型の場合、この列はユーザー定義データ型の名前になります。 その他の場合は NULL が返されます。|  
   
 ## <a name="see-also"></a>参照  

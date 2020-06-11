@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e4c7df84bc7bf3a4804db76d952b1219100ef5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2966868205cdf06ddabf1a86245d2f53da5c82e5
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008363"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670161"
 ---
 # <a name="isinnode-dmx"></a>IsInNode (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ IsInNode(<NodeID>)
 ## <a name="remarks"></a>Remarks  
  **IsInNode**は、 [SELECT FROM &#60;model&#62; でのみ使用されます。DMX&#41;&#40;ケース](../dmx/select-from-model-cases-dmx.md)は[&#60;モデル&#62; から選択します。DMX&#41;クエリを &#40;SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、IsInNode 関数で指定されたノードに関連付けられているモデルの作成に使用されたすべてのケースを返します。  
   
 ```  

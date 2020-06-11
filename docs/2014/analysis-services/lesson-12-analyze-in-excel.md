@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a1564a2b190703e011624162ad4bc25fd5de794
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 509f44565a1535e1502cb3862250cf04f654711e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079189"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543544"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>レッスン 13:[Excel で分析]
   このレッスンでは、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で "Excel で分析" 機能を使用して Microsoft Excel を開き、モデル ワークスペースへのデータ ソース接続を自動的に作成して、ワークシートにピボットテーブルを自動的に追加します。 Analyze in Excel 機能は､モデルをデプロイする前にモデル デザインの有効性を迅速かつ簡単にテストする手段を提供することを意図しています｡ このレッスンでは、データの分析は行いません。 このレッスンの目的はモデル作成者が､モデル デザインのテストに利用できるツールを慣れてもらうことにあります｡ モデル作成者向けの "Excel で分析" 機能を使用する場合とは異なり、エンド ユーザーは Excel や [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] などのクライアント レポート アプリケーションを使用して、配置済みのモデル データへの接続と参照を行います。  

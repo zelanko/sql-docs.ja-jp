@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05d840d4e43d9856dedeb3fd446c8158f23275b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 434eb332c7fc8829d515ac33102604dd9ca46d5e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081072"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544414"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>[全般] ([パーティションのプロパティ] ダイアログ ボックス) (SSMS)
   SQL Server Management Studio の **[パーティションのプロパティ]** ダイアログ ボックスの **[全般]** ページを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのキューブに対してメジャー グループのパーティションの全般プロパティを設定できます。  
   
 ## <a name="options"></a>オプション  
   
-|用語|定義|  
+|期間|定義|  
 |----------|----------------|  
 |**[集計デザイン ID]**|パーティションによって使用される集計デザインの識別子を表示します。|  
 |**[集計プレフィックス]**|パーティションによって含まれる集計インスタンスの既定のプレフィックスを表示します。|  
@@ -37,11 +36,11 @@ ms.locfileid: "66081072"
 |**[最終処理]**|パーティションが最終処理された日時を表示します。|  
 |**[スキーマの最終更新]**|パーティションのメタデータが最後に更新された日時を表示します。|  
 |**名前**|パーティションの名前が表示されます。|  
-|**[処理モード]**|パーティションの処理モードを選択します。 オブジェクトの処理モードの詳細に[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ついては、「[多次元モデルオブジェクトの処理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)」を参照してください。|  
+|**[処理モード]**|パーティションの処理モードを選択します。 オブジェクトの処理モードの詳細について [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、「[多次元モデルオブジェクトの処理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)」を参照してください。|  
 |**[リモート データ ソース ID]**|パーティションのソース データの取得元となるリモート データ ソースの識別子を表示します。<br /><br /> 注: このプロパティには、リモート パーティションの値のみが含まれます。|  
-|**扇形**|パーティションによって表示されるデータ スライスを識別する式を表示します。|  
+|**スライス**|パーティションによって表示されるデータ スライスを識別する式を表示します。|  
 |**ソース**|パーティションにソース データを提供するテーブルまたはクエリを表示します。|  
-|**状態**|パーティションの現在の処理状態を表示します。|  
+|**State**|パーティションの現在の処理状態を表示します。|  
 |**ストレージの場所**|パーティションのデータが格納されるフォルダーを表示します。<br /><br /> 注: このプロパティには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスの既定以外の場所にストレージの場所が指定されている場合にのみ、値が示されます。|  
 |**Type**|パーティションの種類を表示します。|  
   

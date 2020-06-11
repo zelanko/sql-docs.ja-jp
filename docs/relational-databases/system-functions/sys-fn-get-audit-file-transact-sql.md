@@ -21,12 +21,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d0702848a6fce3255e9bb54597dc20b518b50c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c8aeffd66f812b682610ad16abc6c4336b77b9c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "77507522"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668391"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>fn_get_audit_file (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,19 +51,19 @@ fn_get_audit_file ( file_pattern,
     
     この引数には、パス (ドライブ文字またはネットワーク共有) とファイル名の両方を含める必要があります。ファイル名にはワイルドカードを使用できます。 1つのアスタリスク (*) を使用して、監査ファイルセットから複数のファイルを収集できます。 次に例を示します。  
   
-    -   **パス>\\ -指定した場所にあるすべての監査ファイルを収集し\<** ます。  
+    -   ** \< パス \\>\* ** -指定した場所にあるすべての監査ファイルを収集します。  
   
-    -   **パス> \ LoginsAudit_ {guid}-指定された名前と GUID のペアを持つすべての監査ファイルを収集します。 \<**  
+    -   ** \< パス> \ LOGINSAUDIT_ {guid}***-指定した名前と GUID のペアを持つすべての監査ファイルを収集します。  
   
-    -   **パス> \ LoginsAudit_ {GUID} (& 29); sqlaudit-特定の監査ファイルを収集します。 \<**  
+    -   ** \< パス> \ LOGINSAUDIT_ {GUID} (& 29); sqlaudit** -特定の監査ファイルを収集します。  
   
  - **Azure SQL Database**:
  
     この引数は、blob の URL (ストレージエンドポイントとコンテナーを含む) を指定するために使用されます。 アスタリスクのワイルドカードはサポートされていませんが、完全な blob 名ではなく、部分的なファイル (blob) 名プレフィックスを使用して、このプレフィックスで始まる複数のファイル (blob) を収集できます。 次に例を示します。
  
-      - **/\> Storage_endpoint\>\<Container\>ServerName\>-特定のデータベースのすべての監査ファイル (blob) を収集し/\</ \<\<**    
+      - ** \< Storage_endpoint \> / \< Container \> / \< ServerName \> / \< DatabaseName \> - / **特定のデータベースのすべての監査ファイル (blob) を収集します。    
       
-      - **/Storage_endpoint\>/Container\>ServerName\>DatabaseName\>auditname\>CreationDate\>FileName. xel-特定の監査ファイル (blob) を収集します。/\<\>\</\<//\< \<\<\<**
+      - ** \< Storage_endpoint \> / \< Container \> / \< ServerName \> / \< DatabaseName \> / \< auditname \> / \< CreationDate \> / \< FileName \> . xel** -特定の監査ファイル (blob) を収集します。
   
 > [!NOTE]  
 >  ファイル名のパターンがないパスを渡すとエラーが発生します。  
@@ -85,8 +85,8 @@ fn_get_audit_file ( file_pattern,
   
 | 列名 | 種類 | 説明 |  
 |-------------|------|-------------|  
-| action_id | **varchar (4)** | アクションの ID。 Null 値は許容されません。 |  
-| additional_information | **nvarchar (4000)** | 単一のイベントに対してだけ適用される固有の情報が XML として返されます。 少数の監査可能なアクションには、この種の情報が含まれています。<br /><br /> Tsql スタックが関連付けられているアクションに対して、1レベルの TSQL スタックが XML 形式で表示されます。 XML 形式は次のようになります。<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> frame nest_level は、フレームの現在の入れ子レベルを示します。 モジュール名は、3つの部分形式 (database_name、schema_name と object_name) で表されます。  `'\<'`モジュール名は`'>'`、、、 `'/'`、 `'_x'`などの無効な xml 文字をエスケープするために解析されます。 これらは、とし`_xHHHH\_`てエスケープされます。 HHHH は、文字の4桁の16進数の UCS 2 コードを表します。<br /><br /> NULL 値が許可されます。 イベントから追加情報が報告されない場合は NULL を返します。 |
+| action_id | **varchar (4)** | アクションの ID。 NULL 値は許可されません。 |  
+| additional_information | **nvarchar (4000)** | 単一のイベントに対してだけ適用される固有の情報が XML として返されます。 少数の監査可能なアクションには、この種の情報が含まれています。<br /><br /> Tsql スタックが関連付けられているアクションに対して、1レベルの TSQL スタックが XML 形式で表示されます。 XML 形式は次のようになります。<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> frame nest_level は、フレームの現在の入れ子レベルを示します。 モジュール名は、3つの部分形式 (database_name、schema_name と object_name) で表されます。  モジュール名は、、、、などの無効な xml 文字をエスケープするために解析され `'\<'` `'>'` `'/'` `'_x'` ます。 これらは、としてエスケープされ `_xHHHH\_` ます。 HHHH は、文字の4桁の16進数の UCS 2 コードを表します。<br /><br /> NULL 値が許可されます。 イベントから追加情報が報告されない場合は NULL を返します。 |
 | affected_rows | **bigint** | **適用対象**: AZURE SQL DB のみ<br /><br /> 実行されたステートメントの影響を受けた行の数。 |  
 | application_name | **nvarchar(128)** | **適用対象**: AZURE SQL DB + SQL Server (2017 以降)<br /><br /> 監査イベントの原因となったステートメントを実行したクライアントアプリケーションの名前 |  
 | audit_file_offset | **bigint** | **適用対象**: SQL Server のみ<br /><br /> 監査レコードを格納しているファイル内のバッファーオフセット。 NULL 値は許可されません。 |  
@@ -116,15 +116,15 @@ fn_get_audit_file ( file_pattern,
 | session_id | **smallint** | イベントが発生したセッションの ID。 NULL 値は許可されません。 |  
 | session_server_principal_name | **sysname** | セッションのサーバープリンシパル。 NULL 値が許可されます。 |  
 | statement | **nvarchar (4000)** | TSQL ステートメント (存在する場合)。 NULL 値が許可されます。 該当しない場合は NULL を返します。 |  
-| succeeded | **bit** | イベントをトリガーしたアクションが成功したかどうかを示します。 NULL 値は許可されません。 ログイン イベント以外のすべてのイベントで、操作ではなく、権限チェックが成功したか失敗したかのみを報告します。<br /> 1 = 成功 (success)<br /> 0 = 失敗 |
+| 成功 | **bit** | イベントをトリガーしたアクションが成功したかどうかを示します。 NULL 値は許可されません。 ログイン イベント以外のすべてのイベントで、操作ではなく、権限チェックが成功したか失敗したかのみを報告します。<br /> 1 = 成功 (success)<br /> 0 = 失敗 |
 | target_database_principal_id | **int** | 許可、拒否、取り消し操作が実行されるデータベース プリンシパル。 NULL 値は許可されません。 該当しない場合は0を返します。 |  
 | target_database_principal_name | **sysname** | アクションの対象ユーザー。 NULL 値が許可されます。 該当しない場合は NULL を返します。 |  
 | target_server_principal_id | **int** | 許可、拒否または取り消し操作が実行されるサーバー プリンシパル。 NULL 値は許可されません。 該当しない場合は0を返します。 |  
 | target_server_principal_name | **sysname** | アクションの対象ログイン。 NULL 値が許可されます。 該当しない場合は NULL を返します。 |  
 | target_server_principal_sid | **varbinary** | 対象ログインのセキュリティ ID。 NULL 値が許可されます。 該当しない場合は NULL を返します。 |  
 | transaction_id | **bigint** | **適用対象**: SQL Server のみ (2016 以降)<br /><br /> 1つのトランザクションで複数の監査イベントを識別するための一意の識別子 |  
-| user_defined_event_id | **smallint** | **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降、Azure SQL DB、およびマネージインスタンス<br /><br /> **Sp_audit_write**に引数として渡されたユーザー定義イベント id。 システムイベント (既定値) の場合は**NULL** 、ユーザー定義イベントの場合は0以外。 詳細については、「 [sp_audit_write &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)」を参照してください。 |  
-| user_defined_information | **nvarchar (4000)** | **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降、Azure SQL DB、およびマネージインスタンス<br /><br /> **Sp_audit_write**ストアドプロシージャを使用して、監査ログに記録する必要のある追加情報を記録するために使用します。 |  
+| user_defined_event_id | **smallint** | **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、Azure SQL DB、およびマネージインスタンス<br /><br /> **Sp_audit_write**に引数として渡されたユーザー定義イベント id。 システムイベント (既定値) の場合は**NULL** 、ユーザー定義イベントの場合は0以外。 詳細については、「 [sp_audit_write &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)」を参照してください。 |  
+| user_defined_information | **nvarchar (4000)** | **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、Azure SQL DB、およびマネージインスタンス<br /><br /> **Sp_audit_write**ストアドプロシージャを使用して、監査ログに記録する必要のある追加情報を記録するために使用します。 |  
 
   
 ## <a name="remarks"></a>Remarks  
@@ -138,7 +138,7 @@ fn_get_audit_file ( file_pattern,
   - 非サーバー管理者は、現在のデータベースからの監査ログにのみアクセスできます。
   - 上記の条件を満たしていない blob はスキップされます (スキップされた blob の一覧がクエリ出力メッセージに表示されます)。関数は、アクセスが許可されている blob からのログのみを返します。  
   
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 - **SQL Server**
 
@@ -151,7 +151,7 @@ fn_get_audit_file ( file_pattern,
 
 - **Azure SQL Database**
 
-  この例では、という名前`ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`のファイルを読み取ります。  
+  この例では、という名前のファイルを読み取り `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel` ます。  
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);
@@ -167,7 +167,7 @@ fn_get_audit_file ( file_pattern,
   GO
   ```  
 
-  次の例では、で`Sh`始まるサーバーからすべての監査ログを読み取ります。 
+  次の例では、で始まるサーバーからすべての監査ログを読み取り `Sh` ます。 
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh',default,default);

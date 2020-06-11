@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 76b1f8ac9a5f7ad584f42110f2c3b22e5c1918ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ce963b2322e19e4e3a98982a88f99d3546cabc2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008145"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668728"
 ---
 # <a name="or-dmx"></a>OR (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,10 +44,10 @@ Expression1 OR Expression2
   
 |Expression1|Expression2|戻り値はです。|  
 |-----------------------|-----------------------|---------------------|  
-|TRUE|TRUE|TRUE|  
-|TRUE|FALSE|TRUE|  
-|FALSE|TRUE|TRUE|  
-|FALSE|FALSE|FALSE|  
+|true|true|true|  
+|true|FALSE|TRUE|  
+|FALSE|TRUE|true|  
+|false|false|false|  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; オペレーターリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-operator-reference.md)   

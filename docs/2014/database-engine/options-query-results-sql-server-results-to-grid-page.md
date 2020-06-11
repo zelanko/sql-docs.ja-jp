@@ -12,17 +12,17 @@ ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 914daa6a44df3410224616efbe8285598c95dbd3
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 9bde39c64fdf2fbabaec85772d4bfa44d86fd1da
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000762"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856654"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>[オプション] ([クエリ結果]-[SQL Server-グリッドへの結果] ページ)
   このページを使用すると、クエリ結果セットをグリッド形式で表示するためのオプションを指定できます。 このオプションに加えた変更は、新規の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、[**クエリ**] メニューの [**クエリオプション**] をクリックするか、クエリウィンドウを右クリック [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] して [**クエリオプション**] を選択します。 **[クエリ オプション]** ダイアログ ボックスの左ペインで、**[結果]** の **[グリッド]** をクリックします。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[結果セットにクエリを含める]**  
  クエリのテキストをクエリ出力の一部として返します。  
   

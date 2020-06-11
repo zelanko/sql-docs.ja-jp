@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6908998b-9302-4a90-976e-770106b48d18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 94718b35efdcf31a0c9de19930cc765f7d9db5d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d686d8100e30d7608e8d90f135022bdf46785723
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082333"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528958"
 ---
 # <a name="data-sources-ssas-tabular"></a>データ ソース (SSAS テーブル)
   データ ソースは、テーブル モデル ソリューションに含まれるデータを提供します。 モデルには、リレーショナル データベース、データ フィード、Analysis Services キューブなどの多次元データ ソース、Microsoft Excel ブックなどのテキスト ファイルなど、さまざまなソースからデータをインポートできます。 このセクションのトピックでは、インポート元のデータ ソースの種類、インポートできるさまざまなデータ型、およびそれらのソースからデータをインポートする方法を記述するタスクについて説明します。  

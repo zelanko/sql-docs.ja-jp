@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889864"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669874"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>引数  
- *structure*  
+ *データ*  
  マイニング モデルが追加されるマイニング構造の名前です。  
   
  *model*  
@@ -55,7 +55,7 @@ USING <algorithm> [(<parameter list>)]
  プロバイダーによって定義されたデータマイニングアルゴリズムの名前。  
   
 > [!NOTE]  
->  現在のプロバイダーでサポートされているアルゴリズムの一覧は[DMSCHEMA_MINING_SERVICES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)を使用して取得できます。 の現在のインスタンスでサポートされている[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]アルゴリズムを表示するには、「[データマイニングのプロパティ](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)」を参照してください。  
+>  現在のプロバイダーでサポートされているアルゴリズムの一覧は[DMSCHEMA_MINING_SERVICES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)を使用して取得できます。 の現在のインスタンスでサポートされているアルゴリズムを表示するには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、「[データマイニングのプロパティ](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)」を参照してください。  
   
  *パラメーターリスト*  
  任意。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
@@ -66,7 +66,7 @@ USING <algorithm> [(<parameter list>)]
 ## <a name="remarks"></a>Remarks  
  マイニング構造に複合キーが含まれている場合、マイニングモデルには、構造体で定義されているすべてのキー列が含まれている必要があります。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)]クラスタリングアルゴリズムと[!INCLUDE[msCoName](../includes/msconame-md.md)]シーケンスクラスターアルゴリズムを使用して作成されたモデルなど、予測可能な列がモデルに必要ない場合は、ステートメントに列定義を含める必要はありません。 結果として得られるモデルのすべての属性が入力として扱われます。  
+ クラスタリングアルゴリズムとシーケンスクラスターアルゴリズムを使用して作成されたモデルなど、予測可能な列がモデルに必要ない場合は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] ステートメントに列定義を含める必要はありません。 結果として得られるモデルのすべての属性が入力として扱われます。  
   
  ケーステーブルに適用される**WITH**句では、フィルター処理とドリルスルーの両方のオプションを指定できます。  
   
@@ -110,7 +110,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|用語|定義|  
+|期間|定義|  
 |**リグレッサー**|アルゴリズムが、指定した列を回帰アルゴリズムの回帰式に使用できることを示します。|  
 |**MODEL_EXISTENCE_ONLY**|属性列の値が属性の有無ほど重要ではないことを示します。|  
   
@@ -161,7 +161,7 @@ USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)
 ```  
   
 ## <a name="example-2-add-a-filtered-model-to-a-structure"></a>例 2: 構造へのフィルター選択されたモデルの追加  
- 次の例では、マイニングモデル`Naive Bayes Women`を**新しいメーリング**マイニング構造に追加します。 新しいモデルには、例1で追加したマイニングモデルと同じ基本的な構造があります。ただし、このモデルでは、50年の年齢を超えて、マイニング構造のケースを女性の顧客に限定しています。  
+ 次の例では、マイニングモデルを `Naive Bayes Women` **新しいメーリング**マイニング構造に追加します。 新しいモデルには、例1で追加したマイニングモデルと同じ基本的な構造があります。ただし、このモデルでは、50年の年齢を超えて、マイニング構造のケースを女性の顧客に限定しています。  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  

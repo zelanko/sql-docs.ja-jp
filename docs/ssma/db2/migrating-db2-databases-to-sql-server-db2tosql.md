@@ -1,5 +1,6 @@
 ---
 title: DB2 データベースの SQL Server への移行 (DB2ToSQL) |Microsoft Docs
+description: SQL Server Migration Assistant (SSMA) を使用して SQL Server または Azure SQL Database に DB2 データベースを移行するには、この推奨プロセスを使用します。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 79cc961148add0bf2096a716b669199360a565b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a351723f12261e07c4cdbd1d707224278067522e
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084652"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293679"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>DB2 データベースの SQL Server への移行 (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for DB2 は、DB2 データベースをまたは Azure SQL DB に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]すばやく移行するのに役立つ包括的な環境です。 SSMA for DB2 を使用することにより、データベースオブジェクトとデータの確認、移行のためのデータベースの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]評価、データベースオブジェクトのまたは AZURE sql db [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への移行、または azure sql db へのデータの移行を行うことができます。 SYS スキーマとシステム DB2 スキーマは移行できないことに注意してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for DB2 は、DB2 データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または AZURE SQL DB にすばやく移行するのに役立つ包括的な環境です。 SSMA for DB2 を使用することにより、データベースオブジェクトとデータの確認、移行のためのデータベースの評価、データベースオブジェクトの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または AZURE SQL db への移行、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または AZURE sql db へのデータの移行を行うことができます。 SYS スキーマとシステム DB2 スキーマは移行できないことに注意してください。  
   
 ## <a name="recommended-migration-process"></a>推奨される移行プロセス  
-オブジェクトとデータを DB2 データベースからまたは Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL DB に正常に移行するには、次の手順を使用します。  
+オブジェクトとデータを DB2 データベースからまたは Azure SQL DB に正常に移行するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、次の手順を使用します。  
   
 1.  [新しい SSMA プロジェクト](https://msdn.microsoft.com/66437b45-4686-4fc7-a91b-ebde45e0f1b0)。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "68084652"
   
     これは、次の方法のいずれかで実行できます。  
   
-    -   スクリプトを保存し、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行します。  
+    -   スクリプトを保存し、で実行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
     -   データベースオブジェクトを同期します。  
   

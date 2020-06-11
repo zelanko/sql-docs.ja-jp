@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ea766d26034b9ee0d1fcefbd215f41c19da1f9ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da6b52d4b1d6b4179a88860b5fe1dc79b92657cf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075224"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546834"
 ---
 # <a name="specifying-processing-options"></a>処理オプションの指定
-  配置[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ウィザードでは、 \<*プロジェクト名*> deploymentoptions ファイルから処理オプションを読み取ります。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]は、プロジェクトのビルド時に[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]このファイルを作成します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]では、[ * \<プロジェクト名>* **プロパティページ**] ダイアログボックスの [**配置**] ページで指定さ\<れた処理オプションを使用して、*プロジェクト名*> deploymentoptions ファイルを作成します。  
+  配置ウィザードでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deploymentoptions ファイルから処理オプションを読み取ります \<*project name*> 。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]は、プロジェクトのビルド時にこのファイルを作成し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]では、[ **Deployment** *\<project name>* **プロパティページ**] ダイアログボックスの [配置] ページで指定された処理オプションを使用して、 \<*project name*> deploymentoptions ファイルを作成します。  
   
 ## <a name="reviewing-the-processing-options-for-deployment"></a>配置に関する処理オプションの確認  
- \<*プロジェクト名*> deploymentoptions ファイル内に格納されている構成設定は次のとおりです。  
+ Deploymentoptions ファイル内に格納され \<*project name*> ている構成設定は次のとおりです。  
   
 -   **処理方法** この設定では、配置するオブジェクトを配置後に処理するかどうかと、実行する処理の種類を制御します。 処理オプションには次の 3 つがあります。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66075224"
   
     -   完全処理  
   
-    -   None  
+    -   なし  
   
 -   **書き戻しテーブル オプション**[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトで書き戻しが有効になっている場合、この設定では書き戻しの処理方法を定義します。 書き戻しテーブル オプションには次の 3 つがあります。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66075224"
     -   このオプションが `False` の場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ではメタデータ変更が 1 つのトランザクションで配置され、各処理コマンドがそれぞれ別個のトランザクションで配置されます。  
   
 ## <a name="modifying-the-processing-options-for-deployment"></a>配置に関する処理オプションの変更  
- ただし、プロジェクト[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] \<*名*> deploymentoptions ファイルに格納されているものとは異なる処理オプションを使用して、プロジェクトを配置することが必要になる場合があります。 たとえば、すべてのオブジェクトを完全に処理するか、既定の処理オプションを使用して処理するか、まったく処理しないようにする必要が生じることがあります。 キューブまたはディメンションが書き込み可能である場合は、新しい書き戻しテーブルまたは既存の書き戻しテーブルのどちらを使用するかを指定できます。  
+ ただし、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deploymentoptions ファイルに格納されているものとは異なる処理オプションを使用して、プロジェクトを配置することが必要になる場合があります。 \<*project name*> たとえば、すべてのオブジェクトを完全に処理するか、既定の処理オプションを使用して処理するか、まったく処理しないようにする必要が生じることがあります。 キューブまたはディメンションが書き込み可能である場合は、新しい書き戻しテーブルまたは既存の書き戻しテーブルのどちらを使用するかを指定できます。  
   
  配置時に使用する処理オプションを変更するには、プロジェクトを編集して再作成するか、次の手順のいずれかの方法に従って入力ファイル内の処理オプションを変更できます。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66075224"
   
      \- または -  
   
--   任意の\<テキストエディターを使用して、*プロジェクト名*> deploymentoptions ファイルに変更します。  
+-   任意の \<*project name*> テキストエディターを使用して、deploymentoptions ファイルを変更します。  
   
 ## <a name="see-also"></a>参照  
  [インストール先の指定](deployment-script-files-specifying-the-installation-target.md)   

@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: b74c6957-3f64-4e09-aa09-d06ee93f82fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cc127a8bafc9ad2f53465caeca013d5033e5c396
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95e0627e4f794050438ba392be6911d661f243aa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702975"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537391"
 ---
 # <a name="adomdnet-server-functionality"></a>ADOMD.NET のサーバー機能
   すべての ADOMD.NET サーバー オブジェクトは、サーバー上のデータやメタデータへの読み取り専用アクセスを提供します。 データやメタデータを取得するには、ADOMD.NET サーバー オブジェクト モデルを使用します。スキーマ行セットはサポートされていません。  
   
- ADOMD.NET server オブジェクトを使用すると、の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ユーザー定義関数 (UDF) またはストアドプロシージャを作成できます。 これらのインプロセス メソッドは、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、SQL などの言語で作成されたクエリ ステートメントを通じて呼び出されます。 また、これらのインプロセス メソッドを使用すると、ネットワーク通信に関連する待機時間なしに追加の機能を利用できます。  
+ ADOMD.NET server オブジェクトを使用すると、のユーザー定義関数 (UDF) またはストアドプロシージャを作成でき [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。 これらのインプロセス メソッドは、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、SQL などの言語で作成されたクエリ ステートメントを通じて呼び出されます。 また、これらのインプロセス メソッドを使用すると、ネットワーク通信に関連する待機時間なしに追加の機能を利用できます。  
   
 > [!NOTE]  
 >  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> オブジェクトでサポートされているのは DMX だけです。  

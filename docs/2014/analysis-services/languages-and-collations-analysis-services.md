@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 62956774e203b1438de1ea07708940d0711053ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 641f161ede6daebdd879c3316ce73a2e446c21c1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079379"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543664"
 ---
 # <a name="languages-and-collations-analysis-services"></a>言語および照合順序 (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows オペレーティング システムが提供する言語と照合順序をサポートします。 `Language` プロパティと `Collation` プロパティはインストール中、最初にインスタンス レベルで設定されますが、後でオブジェクト階層のさまざまなレベルで変更できます。  
@@ -51,7 +50,7 @@ ms.locfileid: "66079379"
 -   [Analysis Services での GB18030 のサポート](#bkmk_gb18030)  
   
 ##  <a name="objects-that-support-language-and-collation-properties"></a><a name="bkmk_object"></a>言語および照合順序のプロパティをサポートするオブジェクト  
- `Language`プロパティ`Collation`とプロパティは一緒に公開されることが`Language`よくあります。を`Collation`設定すると、を設定することもできます。  
+ `Language``Collation`プロパティとプロパティは一緒に公開されることがよくあります。を設定すると、を設定すること `Language` もでき `Collation` ます。  
   
  次のオブジェクトでは、`Language` と `Collation` を設定できます。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079379"
   
      キューブにどの言語と照合順序を設定しても、キューブに含まれるすべてのメジャーとディメンションが使用されます。 照合順序プロパティを詳細に設定する唯一の方法は、ディメンション属性で翻訳を作成する場合です。 それ以外の場合、属性のレベルでの翻訳がない場合は、キューブあたり 1 つの照合順序になります。  
   
- さらに、を単独`Language`で**変換**オブジェクトに設定することもできます。  
+ さらに、 `Language` を単独で**変換**オブジェクトに設定することもできます。  
   
  キューブまたはディメンションに翻訳を追加するときに、翻訳オブジェクトが作成されます。 `Language` は、翻訳定義の一部です。 対照的に、`Collation` はキューブ以上で設定され、すべての翻訳で共有されます。 これは、翻訳を含むキューブの XMLA で、複数の言語プロパティが (各翻訳に 1 つ) 表示されるのに、照合順序は 1 つしか表示されないことから明らかです。 ディメンションの属性の翻訳には、1 つの例外があり、キューブの照合順序をオーバーライドして、ソース列と一致する属性の照合順序を指定できます (データベース エンジンは個々の列の照合順序の設定をサポートし、各翻訳が別のソース列からメンバー データを取得するよう構成することは一般的です)。 しかし、そうでない場合は、他のすべての翻訳で `Language` が単独で使用され、`Collation` の推論は使用されません。 詳細については、「[翻訳 &#40;Analysis Services&#41;](translations-analysis-services.md)」を参照してください。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66079379"
   
  Analysis Services には、言語が名前順に表示されますが、プロパティについて格納されている実際の値は LCID です。 言語プロパティをプログラムにより設定、または msmdsrv.ini ファイルで設定する場合は、 [ロケール識別子 (LCID)](http://en.wikipedia.org/wiki/Locale) を値として使用します。 LCID は、言語 ID、並べ替え ID、および特定の言語を識別する予約されたビットから構成される 32 ビット値です。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、LCID を使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスおよびオブジェクトに選択された言語を指定します。  
   
- 16 進数または 10 進数のいずれかの形式を使用して、LCID を設定することができます。 `Language`プロパティの有効な値の例をいくつか次に示します。  
+ 16 進数または 10 進数のいずれかの形式を使用して、LCID を設定することができます。 プロパティの有効な値の例をいくつか次に示し `Language` ます。  
   
 -   0x0409 または 1033 ( **英語、米国**)  
   
@@ -140,9 +139,9 @@ ms.locfileid: "66079379"
   
 -   照合順序が更新された後は、パーティションおよびディメンションを再処理します。  
   
- SQL Server Management Studio または AMO PowerShell を使用して、サーバー レベルの既定の言語または照合順序を変更することができます。 または、言語の LCID を指定して、msmdsrv.exe ファイルの** \<言語>** と** \<CollationName の>** 設定を変更することもできます。  
+ SQL Server Management Studio または AMO PowerShell を使用して、サーバー レベルの既定の言語または照合順序を変更することができます。 または、msmdsrv.ini ファイルのおよび設定を変更して、言語の LCID を指定することもでき **\<Language>** **\<CollationName>** ます。  
   
-1.  Management Studio で、[サーバー名 |] を右クリックします。**プロパティ** | **言語/照合順序**。  
+1.  Management Studio で、[サーバー名 |] を右クリックします。**プロパティ**  | **言語/照合順序**。  
   
 2.  並べ替えオプションを選択します。 [ **バイナリ** ] または [ **バイナリ 2**] のいずれかを選択するには、まず [ **アクセントの区別**] のチェック ボックスをオフにします。  
   
@@ -169,7 +168,7 @@ ms.locfileid: "66079379"
   
  XMLA を使用して、既存のデータベースを変更するには、データベースとそれをビルドするために使用するソース ファイルの間の相違点がないことを確認します。 たとえば、XMLA を使用して、概念実証のテストで言語や照合順序をすばやく変更した後、ソース ファイルの変更によるフォローアップをし (「 [キューブの言語または照合順序を変更します。](#bkmk_cube)」を参照)、既に存在する運用手順を使用してソリューションを再展開するということが考えられます。  
   
-1.  Management Studio で、データベースを右クリックします。データベースを**新しいクエリエディターウィンドウ** | **に** | 変更**としてスクリプト**化します。  
+1.  Management Studio で、データベースを右クリックします。**データベースを**  |  スクリプト化**ALTER**  | **新しいクエリエディターウィンドウ**。  
   
 2.  既存の言語または照合順序を検索して別の値に置き換えます。  
   

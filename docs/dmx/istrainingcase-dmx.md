@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 23f36181d0ee4902f56aa4acb8163f7f43af8b31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1c2719323bad884db77860590d0a95080c1a234
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889025"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670204"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ IsTrainingCase()
   
  テストデータセットの一部であるケースを返すには、関数[IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)を使用します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」の絞り込みメール配信シナリオのクラスタリングデータマイニングモデルを使用します。 このクエリは、マイニングモデルのトレーニングに使用されたケースのみを返します。 さらに、トレーニングケースは40よりも前の顧客に制限されています。  
   
 ```  

@@ -1,7 +1,7 @@
 ---
 title: sp_adddistpublisher (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f341a881ca33c66121d6b87ee30d437c621f973
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771387"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627146"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,14 +48,17 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>引数  
 `[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値はありません。  
+
+> [!NOTE]
+> サーバー名はとして指定でき `<Hostname>,<PortNumber>` ます。 SQL Server が Linux または Windows でカスタムポートを使用して展開され、browser サービスが無効になっている場合は、接続のポート番号を指定する必要があります。
   
 `[ @distribution_db = ] 'distribution_db'`ディストリビューションデータベースの名前を指定します。 *distributor_db*は**sysname**であり、既定値はありません。 このパラメーターは、レプリケーションエージェントがパブリッシャーに接続するために使用されます。  
   
-`[ @security_mode = ] security_mode`実装されているセキュリティモードです。 このパラメーターは、キュー更新サブスクリプションのパブリッシャーまたは以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するために、レプリケーションエージェントによってのみ使用されます。 *security_mode*は**int**,、これらの値のいずれかを指定できます。  
+`[ @security_mode = ] security_mode`実装されているセキュリティモードです。 このパラメーターは、キュー更新サブスクリプションのパブリッシャーまたは以外のパブリッシャーに接続するために、レプリケーションエージェントによってのみ使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *security_mode*は**int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|**0**|ディストリビューター側のレプリケーションエージェントは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、認証を使用してパブリッシャーに接続します。|  
+|**0**|ディストリビューター側のレプリケーションエージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、認証を使用してパブリッシャーに接続します。|  
 |**1** (既定値)|ディストリビューター側のレプリケーション エージェントは Windows 認証を使用してパブリッシャーに接続します。|  
   
 `[ @login = ] 'login'`ログインを示します。 *Security_mode*が**0**の場合、このパラメーターは必須です。 *login* のデータ型は **sysname** で、既定値は NULL です。 このパラメーターは、レプリケーションエージェントがパブリッシャーに接続するために使用されます。  
@@ -65,9 +68,9 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。  
   
-`[ @working_directory = ] 'working_directory'`パブリケーションのデータとスキーマファイルを格納するために使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)** で、既定値は、のこのインスタンスの ReplData [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フォルダーです。 `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`たとえば、のようになります。 名前は UNC 形式で指定する必要があります。  
+`[ @working_directory = ] 'working_directory'`パブリケーションのデータとスキーマファイルを格納するために使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)** で、既定値は、のこのインスタンスの ReplData フォルダー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。たとえば、のように `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` なります。 名前は UNC 形式で指定する必要があります。  
 
- Azure SQL Database には、 `\\<storage_account>.file.core.windows.net\<share>`を使用します。
+ Azure SQL Database には、を使用 `\\<storage_account>.file.core.windows.net\<share>` します。
 
 `[ @storage_connection_string = ] 'storage_connection_string'`は SQL Database に必要です。 Azure Portal からアクセスキーを使用して、[ストレージ > 設定] を表示します。
 
@@ -77,18 +80,18 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @encrypted_password = ] encrypted_password`*Encrypted_password*の設定はサポートされなくなりました。 この**ビット**パラメーターを**1**に設定しようとすると、エラーが発生します。  
   
-`[ @thirdparty_flag = ] thirdparty_flag`パブリッシャーが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合。 *thirdparty_flag*は**ビット**で、次のいずれかの値を指定できます。  
+`[ @thirdparty_flag = ] thirdparty_flag`パブリッシャーがの場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *thirdparty_flag*は**ビット**で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース.|  
 |**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のデータベース|  
   
-`[ @publisher_type = ] 'publisher_type'`パブリッシャーがでない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合に、パブリッシャーの種類を指定します。 *publisher_type*は sysname で、次のいずれかの値を指定できます。  
+`[ @publisher_type = ] 'publisher_type'`パブリッシャーがでない場合に、パブリッシャーの種類を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher_type*は sysname で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|**MSSQLSERVER**<br /><br /> (既定値)。|パブリッシャーを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定します。|  
+|**MSSQLSERVER**<br /><br /> (既定値)。|パブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**ORACLE11I**|標準の Oracle パブリッシャーを指定します。|  
 |**ORACLE GATEWAY **|Oracle ゲートウェイ パブリッシャーを指定します。|  
   
@@ -97,7 +100,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_adddistpublisher**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用されます。  
   
 ## <a name="example"></a>例  
@@ -112,6 +115,6 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [sp_dropdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)  
+ [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)  
   
   

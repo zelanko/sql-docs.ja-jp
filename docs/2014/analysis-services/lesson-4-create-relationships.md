@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a80f607c3187e967404ce018b7eed00497d9c01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63fe9b7d83eea026a9a0f61213e2ccd30bba3591
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078580"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542909"
 ---
 # <a name="lesson-5-create-relationships"></a>レッスン 5: [リレーションシップの作成]
   このレッスンでは、データをインポートした際に自動的に作成されたリレーションシップを確認し、異なるテーブル間に新しいリレーションシップを追加します。 リレーションシップとは、2 つのテーブル間を接続し、それらのテーブル内のデータをどのように関連付けるかを決定するものです。 たとえば、Product テーブルと Product Subcategory テーブルの間には、どの製品も特定のサブカテゴリに属しているという事実に基づいたリレーションシップが存在します。 詳細については、[「リレーションシップ (SSAS テーブル)」](tabular-models/relationships-ssas-tabular.md) を参照してください。  

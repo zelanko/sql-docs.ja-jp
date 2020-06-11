@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d92ccd9d1eeb05272a95c6f429f8c756bcb0022e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75229430"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546384"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>パス順序と解決順序の概要 (MDX)
   MDX スクリプトの結果としてキューブが計算される場合、計算に関連するさまざまな機能の使われ方によっては、キューブは多数の計算段階をたどることがあります。 それらの各段階は、計算パスと呼ばれます。  
@@ -37,7 +36,7 @@ ms.locfileid: "75229430"
 ## <a name="solve-order"></a>解決順序  
  解決順序は、競合する式がある場合に計算の優先順位を決定します。 1 つのパスの中では、解決順序によって以下の 2 つの順序が決まります。  
   
--   がディメンション、メンバー [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、計算されるメンバー、カスタムロールアップ、および計算されるセルを評価する順序。  
+-   が [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ディメンション、メンバー、計算されるメンバー、カスタムロールアップ、および計算されるセルを評価する順序。  
   
 -   カスタム メンバー、計算されるメンバー、カスタム ロールアップ、および計算されるセルが [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] によって計算される順序。  
   
@@ -209,7 +208,7 @@ FROM [Adventure Works]
 0.4145 - 0.4160= -0.15  
 ```  
   
-## <a name="additional-considerations"></a>その他の注意点  
+## <a name="additional-considerations"></a>その他の考慮事項  
  解決順序の問題は、計算されるメンバー、カスタム ロールアップ式、または計算されるセルの関係するディメンションが多数あるキューブの場合は特に、非常に複雑になります。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が MDX クエリを評価するとき、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、MDX クエリで指定されているキューブのディメンションも含め、特定のパスに関係するものすべての解決順序の値を考慮します。  
   
 ## <a name="see-also"></a>参照  

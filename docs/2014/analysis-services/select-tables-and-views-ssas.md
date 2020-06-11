@@ -12,12 +12,12 @@ ms.assetid: 5e8121cc-03f0-4168-98cf-63c5c032bb0b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ff8ada00af8b70659a19f863a52a5f1005e20b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf29721888fb672c242baa8a5984da4de40cd020
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069238"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858139"
 ---
 # <a name="select-tables-and-views-ssas"></a>[テーブルとビューの選択] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、データのインポート元となるテーブルとビューを選択できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
@@ -26,20 +26,20 @@ ms.locfileid: "66069238"
   
  Windows 認証を使用したデータ ソースの場合、[テーブルとビューの選択] ダイアログにおけるテーブルおよびビューは、現在のユーザーの資格情報を使用してフェッチされます。 その他のデータ ソースについては、接続文字列に指定された資格情報を使用してデータがフェッチされます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[サーバー]**  
  接続先のサーバーが表示されます。  
   
  **[データベース]**  
  選択したデータベースが表示されます。  
   
- **[テーブルとビュー]**  
+ **Tables と Views**  
  データベース内のテーブルとビューの一覧が表示されます。 インポートする各テーブルとビューの横にあるチェック ボックスをオンにします。  
   
  **基になるテーブル**  
  データ ソースの種類に応じて、ソース テーブルの名前を指定します。  
   
- **スキーマ**  
+ **[スキーマ]**  
  ソース テーブルが含まれているスキーマを指定します。 データベースの種類によっては、スキーマは、他のオブジェクトのコンテナーの機能を果たし (テーブルなど)、それらのオブジェクトの所有権を示すこともできます。  
   
  **フレンドリ名**  

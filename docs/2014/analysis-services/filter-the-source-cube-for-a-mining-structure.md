@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 058ba6e78fd6c6e5aa7b06fbd5d34c256dac07b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081147"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544454"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>マイニング構造のソース キューブのフィルター選択
   多次元モデル (OLAP キューブ) のデータに基づくマイニング構造を作成する場合は、マイニング構造の基になっているキューブを*スライス*することができます。 スライスを行うことにより、マイニング モデルのトレーニングに使用するデータに対するフィルターの種類として、データのサブセットを作成できます。  
   
 ### <a name="to-slice-a-cube"></a>キューブをスライスするには  
   
-1.  のデータマイニングデザイナー [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で、[**マイニング構造**] タブまたは [**マイニングモデル**] タブを選択します。  
+1.  のデータマイニングデザイナーで、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] [**マイニング構造**] タブまたは [**マイニングモデル**] タブを選択します。  
   
 2.  [**マイニングモデル**] メニューの [**マイニング構造キューブスライスの定義**] をクリックします。  
   

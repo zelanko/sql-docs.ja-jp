@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4f14a1f853a99ccb6b2dbbed72bd38b70f2ea7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889330"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535634"
 ---
 # <a name="ragged-hierarchies"></a>不規則階層
   不規則階層はユーザー定義の階層で、不均一な数のレベルが含まれています。 一般的な例として、部門の管理者と管理者以外のメンバーの両方が直属の部下として上級管理者に属している組織図や、国 - 地域 - 市から構成される地理的な階層 (ワシントン D.C.、バチカン、ニューデリーなど、親となる州や省などを持たない市がいくつかあります) などを挙げることができます。  
@@ -28,7 +27,7 @@ ms.locfileid: "68889330"
   
  まず、クライアント アプリケーションを調べて、ドリル ダウン パスの処理方法を確認します。 たとえば、Excel では、不足値のプレースホルダーとして親の名前が繰り返されます。 この動作を確認するには、Adventure Works 多次元モデルの Sales Territory ディメンションを使用してピボットテーブルを構築します。 ピボットテーブルでは、Sales Territory 属性として "グループ"、"国"、"地域" を設定します。地域の値が欠落している場合、国がプレースホルダーとして使用されることを確認します。この場合は、地域の上の親 (国名) が繰り返し使用されます。 この動作は、Excel 内で固定されている MDX Compatibility=1 接続文字列プロパティから派生します。 必要としているドリル ダウンの動作をクライアントが実現しない場合は、それらの動作のいくつかを変更するように、モデルのプロパティを設定することができます。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
 -   [不規則階層でのドリルダウンナビゲーションを変更する方法](#bkmk_approach)  
   
@@ -56,7 +55,7 @@ ms.locfileid: "68889330"
   
     |HideMemberIf の設定値|説明|  
     |--------------------------|-----------------|  
-    |`Never`|レベル メンバーがすべて表示されます。 これは、既定値です。|  
+    |`Never`|レベル メンバーがすべて表示されます。 これが既定値です。|  
     |**OnlyChildWithNoName**|レベル メンバーは、その親の唯一の子で、その名前が null または空の文字列である場合、表示されません。|  
     |**OnlyChildWithParentName**|レベル メンバーは、その親の唯一の子で、その名前がその親の名前と同じである場合、表示されません。|  
     |**NoName**|レベル メンバーは、その名前が空の場合、表示されません。|  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ac3ce774-eebf-4915-9307-90d0ac11c271
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59a6bb7d661e7761e2c28259bf8d95ae05545fa1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7feff5a0c905e3975aeb840ab6a1883a5084b31e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072079"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540704"
 ---
 # <a name="partitions-cube-designer-analysis-services---multidimensional-data"></a>[パーティション] (キューブ デザイナー) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[パーティション]** タブを使用すると、キューブ内の各メジャー グループに対して、ストレージ、プロアクティブ キャッシュ、および書き戻しの設定を含む、パーティションの作成と修正を行うことができます。  
@@ -25,7 +24,7 @@ ms.locfileid: "66072079"
  **[パーティション]** タブには、次のペインが含まれます。  
   
 ## <a name="panes"></a>ペイン  
- **Toolbar**  
+ **ツール バー**  
  ツール バーを使用して、共通のアクションをタブで実行します。  
   
  **メジャー**  
