@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a748a81412f015f556f9224fb6e390eb0be1ef24
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080408"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544139"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>[関数の挿入] ダイアログ ボックス (SSAS)
   **[関数の挿入]** ダイアログ ボックスを使用すると、数式の作成時に使用できる関数の一覧から関数を選択できます。 モデル デザイナーからこのダイアログ ボックスにアクセスするには、各テーブルの上にある数式バーで、関数 (**[fx]**) ボタンをクリックします。 数式で使用する関数の選択の詳細については、「DAX の概要」と「数式の作成」を参照してください。  
@@ -32,11 +31,11 @@ ms.locfileid: "66080408"
 ## <a name="function-categories"></a>関数のカテゴリ  
  Data Analysis Expressions (DAX) には、 **[関数の挿入]** ダイアログ ボックスに表示される次の種類の関数のカテゴリが用意されています。  
   
- All  
+ すべて  
   
  日付と時刻の関数  
   
- Assert  
+ フィルター  
   
  論理  
   

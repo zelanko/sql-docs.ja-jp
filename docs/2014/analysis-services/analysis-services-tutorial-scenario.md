@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 71e2d7f2bce555cca469a46a95a1fc3e000eea76
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062437"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528038"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services のチュートリアル シナリオ
   このチュートリアルには、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]という架空の会社が登場します。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、特殊合金自転車を北米、ヨーロッパ、およびアジアの市場に供給する大規模な多国籍製造会社です。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] はワシントン州のボセルに本社を置き、500 名の従業員を抱えています。 さらに、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の各市場には、その地域を担当する販売チームがいます。  
@@ -46,7 +45,7 @@ ms.locfileid: "66062437"
 -   情報の監査が難しい。 現在、経理部門は、一括クエリを行うためのデータ ソースとしてのみ **AdventureWorksDW2012** データベースを使用しています。 その後、各スプレッドシートにデータがダウンロードされ、スプレッドシートの準備と操作に膨大な時間が費やされます。 したがって、経理レポートの準備、監査、および全社的な管理が困難です。  
   
 ## <a name="the-solution"></a>解決策  
- 先ごろ、データ ウェアハウス チームは、現在の分析システムの設計を再評価しました。 この評価には、現在の問題点と今後の要望のずれを調査するギャップ分析も含まれています。 データ ウェアハウス チームは、 **AdventureWorksDW2012** データベースが適切なディメンションと代理キーを持つ優れた設計のディメンショナル データベースであると判断しました。 適切なディメンションにより、時間ディメンションや製品ディメンションなど複数のデータ マートでディメンションを使用できます。 代理キーは、ディメンションとファクト テーブルをリンクする擬似的なキーです。一意性を確保し、パフォーマンスを向上させるために使用されます。 また、 **AdventureWorksDW2012** データベースでベース テーブルの読み込みと管理を行う分には、現在のところ大きな問題はないと判断しました。 このため、を使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]して次のことを行うことが決定されました。  
+ 先ごろ、データ ウェアハウス チームは、現在の分析システムの設計を再評価しました。 この評価には、現在の問題点と今後の要望のずれを調査するギャップ分析も含まれています。 データ ウェアハウス チームは、 **AdventureWorksDW2012** データベースが適切なディメンションと代理キーを持つ優れた設計のディメンショナル データベースであると判断しました。 適切なディメンションにより、時間ディメンションや製品ディメンションなど複数のデータ マートでディメンションを使用できます。 代理キーは、ディメンションとファクト テーブルをリンクする擬似的なキーです。一意性を確保し、パフォーマンスを向上させるために使用されます。 また、 **AdventureWorksDW2012** データベースでベース テーブルの読み込みと管理を行う分には、現在のところ大きな問題はないと判断しました。 このため、を使用して次のことを行うことが決定されました [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
 -   分析的な調査やレポート生成では、共通のメタデータ層を経由するようデータへのアクセス経路を統合する。  
   

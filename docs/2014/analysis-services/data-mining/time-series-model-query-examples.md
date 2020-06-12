@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d7451c82261e23c75b748d4b1cde473191b7749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f6b6ed2674d5f1d852b6281c6244af4f2f6ad3a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082748"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520322"
 ---
 # <a name="time-series-model-query-examples"></a>Time Series Model Query Examples
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、時系列モデルでコンテンツ クエリを使用すると、検出された周期的構造に関する追加情報を取得できます。一方、予測クエリを使用すると、次の 5 ～ 10 のタイム スライスの予測などを取得できます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
   
  ここでは、Microsoft Time Series アルゴリズムに基づくモデルに対してこの両方の種類のクエリを作成する方法について説明します。  
   
- **コンテンツクエリ**  
+ **コンテンツ クエリ**  
   
  [モデルの周期性のヒントを取得する](#bkmk_Query1)  
   
@@ -66,7 +65,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY = 0.1、MINIMUM_SUPPORT = 10、PERIODICITY_HINT ={1,3},....|  
+|COMPLEXITY_PENALTY = 0.1、MINIMUM_SUPPORT = 10、PERIODICITY_HINT = {1,3} ,....|  
   
  既定の周期性のヒントである {1} は、すべてのモデルで表示されます。このサンプル モデルでは、そのほかにもう 1 つ追加のヒントが作成時に使用されています。これは、最終的なモデルには存在しない可能性があります。  
   
@@ -156,7 +155,7 @@ AND NODE_TYPE = 15
   
  たとえば、既存のモデルに 6 か月分のデータがあるとします。 過去 3 か月間の販売成績を追加してこのモデルを拡張し、 同時に、次の 3 か月間の予測も作成したいと考えています。 新しいデータを追加したときの新しい予測のみを取得するには、開始位置をタイム スライス 4、終了位置をタイム スライス 7 に指定します。 また、合計 6 つの予測を要求することもできますが、最初の 3 つのタイム スライスは追加した新しいデータと重複します。  
   
- と`REPLACE_MODEL_CASES` `EXTEND_MODEL_CASES`を使用するためのクエリの例と構文の詳細については、「 [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)」を参照してください。  
+ とを使用するためのクエリの例と構文の詳細については `REPLACE_MODEL_CASES` `EXTEND_MODEL_CASES` 、「 [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)」を参照してください。  
   
 ###  <a name="making-predictions-with-extend_model_cases"></a><a name="bkmk_EXTEND"></a>EXTEND_MODEL_CASES を使用した予測の作成  
  予測動作は、モデル ケースを拡張するか置換するかによって異なります。 モデルを拡張するときは、新しいデータは系列の末尾に追加され、トレーニング セットのサイズは増加します。 ただし、予測クエリに使用されるタイム スライスは常に元の系列の末尾から開始されます。 このため、3 つの新しいデータ ポイントを追加し、6 つの予測を要求した場合、返される最初の 3 つの予測は新しいデータと重複します。 この場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はすべての新しいデータ ポイントをすべて使用するまで予測を作成せずに実際の新しいデータ ポイントを返します。 その後、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は複合系列に基づいて予測を作成します。  
@@ -198,17 +197,17 @@ AND NODE_TYPE = 15
     > [!NOTE]  
     >  REPLACE_MODEL_CASES では、タイムスタンプ 1 から開始すると、古いトレーニング データを置換する新しいデータに基づく新しい予測が取得されます。  
   
- と`REPLACE_MODEL_CASES` `EXTEND_MODEL_CASES`を使用するためのクエリの例と構文の詳細については、「 [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)」を参照してください。  
+ とを使用するためのクエリの例と構文の詳細については `REPLACE_MODEL_CASES` `EXTEND_MODEL_CASES` 、「 [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)」を参照してください。  
   
 ###  <a name="missing-value-substitution-in-time-series-models"></a><a name="bkmk_MissingValues"></a> 時系列モデルで不足値を置換する  
- `PREDICTION JOIN` ステートメントを使用して時系列モデルに新しいデータを追加するとき、新しいデータセットに不足値があってはいけません。 系列が不完全である場合、モデルでは NULL、数値平均、特定の数値平均、予測値のいずれかを使用して不足値を指定する必要があります。 `EXTEND_MODEL_CASES` を指定する場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって不足値が元のモデルに基づく予測で置換されます。 を使用`REPLACE_MODEL_CASES`する場合[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、不足値は*MISSING_VALUE_SUBSTITUTION*パラメーターで指定した値に置き換えられます。  
+ `PREDICTION JOIN` ステートメントを使用して時系列モデルに新しいデータを追加するとき、新しいデータセットに不足値があってはいけません。 系列が不完全である場合、モデルでは NULL、数値平均、特定の数値平均、予測値のいずれかを使用して不足値を指定する必要があります。 `EXTEND_MODEL_CASES` を指定する場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって不足値が元のモデルに基づく予測で置換されます。 を使用する場合 `REPLACE_MODEL_CASES` 、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不足値は*MISSING_VALUE_SUBSTITUTION*パラメーターで指定した値に置き換えられます。  
   
 ## <a name="list-of-prediction-functions"></a>予測関数の一覧  
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、共通の関数セットがサポートされています。 ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは、次の表のような追加の関数がサポートされています。  
   
 |||  
 |-|-|  
-|予測関数|使用方法|  
+|予測関数|使用法|  
 |[Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)|現在のケースの日付とトレーニング セットの最後の日付の間のタイム スライス数を返します。<br /><br /> この関数の一般的な使用方法は、最近のトレーニング ケースに関する詳細なデータを取得できるように、そのようなケースを判別することです。|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|指定した予測可能列のノードの ID を返します。<br /><br /> この関数の一般的な使用目的は、特定の予測値を生成したノードを識別して、そのノードに関連付けられているケースの表示や、式などの詳細の取得ができるようにすることです。|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|指定した予測可能列の予測の標準偏差を返します。<br /><br /> この関数を、時系列モデルでサポートされない INCLUDE_STATISTICS 引数の代わりに使用できます。|  

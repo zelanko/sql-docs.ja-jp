@@ -1,5 +1,6 @@
 ---
 title: パス式での省略構文の使用 |Microsoft Docs
+description: XQuery パス式での省略構文の使用方法について説明します。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e75db08f283631cf9b5daf064790786a1abc10f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eeb7026f341af60f289a1d3854e24656073add61
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946414"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306012"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>パス式 - 省略構文の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +36,13 @@ child::ProductDescription[attribute::ProductModelID=19]
   
  XQuery は、パス式で次の省略をサポートしています。  
   
--   **子**軸は既定の軸です。 したがって、式のステップでは、 **child::** axis を省略できます。 たとえば、 `/child::ProductDescription/child::Summary`はとして`/ProductDescription/Summary`書き込むことができます。  
+-   **子**軸は既定の軸です。 したがって、式のステップでは、 **child::** axis を省略できます。 たとえば、は `/child::ProductDescription/child::Summary` として書き込むことができ `/ProductDescription/Summary` ます。  
   
--   **属性**軸はとして@省略できます。 たとえば、 `/child::ProductDescription[attribute::ProductModelID=10]`はとして`/ProudctDescription[@ProductModelID=10]`書き込むことができます。  
+-   **属性**軸はとして省略でき @ ます。 たとえば、は `/child::ProductDescription[attribute::ProductModelID=10]` として書き込むことができ `/ProudctDescription[@ProductModelID=10]` ます。  
   
--   **/Descendant-or-self:: node ()/** は//のように省略できます。 たとえば、 `/descendant-or-self::node()/child::act:telephoneNumber`はとして`//act:telephoneNumber`書き込むことができます。  
+-   **/Descendant-or-self:: node ()/** は//のように省略できます。 たとえば、は `/descendant-or-self::node()/child::act:telephoneNumber` として書き込むことができ `//act:telephoneNumber` ます。  
   
-     上記のクエリは、Contact テーブルの AdditionalContactInfo 列に格納されているすべての電話番号を取得します。 AdditionalContactInfo のスキーマは、ドキュメント内の任意の場所\<で telephoneNumber> 要素を表示できる方法で定義されます。 したがって、すべての電話番号を取得するには、ドキュメント内のすべてのノードを検索する必要があります。 検索は、ドキュメントのルートから開始され、続いてすべての子孫ノードが検索されます。  
+     上記のクエリは、Contact テーブルの AdditionalContactInfo 列に格納されているすべての電話番号を取得します。 AdditionalContactInfo のスキーマは、 \<telephoneNumber> 要素がドキュメント内の任意の場所に表示されるように定義されています。 したがって、すべての電話番号を取得するには、ドキュメント内のすべてのノードを検索する必要があります。 検索は、ドキュメントのルートから開始され、続いてすべての子孫ノードが検索されます。  
   
      次のクエリは、特定の顧客の連絡先のすべての電話番号を取得します。  
   
@@ -56,7 +57,7 @@ child::ProductDescription[attribute::ProductModelID=19]
     WHERE ContactID=1             
     ```  
   
-     パス式を省略構文に置き換えると`//act:telephoneNumber`、同じ結果が得られます。  
+     パス式を省略構文に置き換えると `//act:telephoneNumber` 、同じ結果が得られます。  
   
 -   ステップの**self:: node ()** は、1つのドット (.) に省略できます。 ただし、ドットは、**自己:: node ()** と同等ではないか、交換できません。  
   

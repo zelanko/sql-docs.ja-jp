@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9529fbcb784d0f6a2a2ae88f5a976e8607e0705a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b4e5ac88a81728d6e29d32b0d330ba8fd408633
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175734"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546684"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>データベース権限の付与 (Analysis Services)
   リレーショナル データベースのバックグラウンドを持つ方が Analysis Services データベース管理を始める場合に、まず理解する必要があることは、データ アクセスの観点で、データベースは Analysis Services の主要なセキュリティ保護可能なオブジェクトではないということです。
@@ -61,7 +60,7 @@ ms.locfileid: "78175734"
 
 #### <a name="create-roles-in-ssms"></a>SSMS でのロールの作成
 
-1.  で[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、の[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンスに接続し、[**データベース**] フォルダーを開いてデータベースを選択し、[**ロール** | ] [**新しいロール**] を右クリックします。
+1.  で、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のインスタンスに接続し、[ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] **データベース**] フォルダーを開いてデータベースを選択し、[**ロール**] [  |  **新しいロール**] を右クリックします。
 
 2.  **[全般]** ペインで、DBAdmin などのような名前を入力します。
 
@@ -72,10 +71,10 @@ ms.locfileid: "78175734"
 5.  **[OK]** をクリックして、ロールの作成を終了します。
 
 ## <a name="process-database"></a>Process database (データベースのプロセス)
- データベースのアクセス許可を付与するロールを定義する場合`Full Control`は、スキップ`Process Database`してだけを選択できます。 この権限はデータベース レベルで設定され、データベース内のすべてのオブジェクトに対する処理を許可します。 詳細については、「 [処理権限の付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)
+ データベースのアクセス許可を付与するロールを定義する場合は、スキップ `Full Control` してだけを選択でき `Process Database` ます。 この権限はデータベース レベルで設定され、データベース内のすべてのオブジェクトに対する処理を許可します。 詳細については、「 [処理権限の付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)
 
 ## <a name="read-definition"></a>[定義の読み取り]
- と`Process Database`同様に`Read Definition` 、データベースレベルでの権限の設定は、データベース内の他のオブジェクトに対する連鎖効果を持ちます。 よりきめ細かいレベルで定義の読み取り権限を設定する場合は、[全般] ペインでデータベース プロパティとして [定義の読み取り] をオフにする必要があります。 詳細については、「[オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)」を参照してください。
+ と同様に `Process Database` 、 `Read Definition` データベースレベルでの権限の設定は、データベース内の他のオブジェクトに対する連鎖効果を持ちます。 よりきめ細かいレベルで定義の読み取り権限を設定する場合は、[全般] ペインでデータベース プロパティとして [定義の読み取り] をオフにする必要があります。 詳細については、「[オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)」を参照してください。
 
 ## <a name="see-also"></a>参照
  [サーバー管理者のアクセス許可を付与 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) [プロセスアクセス許可を &#40;Analysis Services](grant-process-permissions-analysis-services.md)&#41;

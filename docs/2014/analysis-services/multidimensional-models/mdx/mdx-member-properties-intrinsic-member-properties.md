@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 268203d044734bb4e6a1d2acf6311ee7ef828a53
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074208"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546364"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>固有メンバー プロパティ (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、カスタム アプリケーションで使用する追加のデータまたはメタデータを返したり、モデルの調査や構築を支援したりするために、クエリに含めることができるディメンション メンバーの固有プロパティを公開します。 SQL Server クライアント ツールを使用している場合は、SQL Server Management Studio (SSMS) で固有プロパティを表示できます。  
@@ -29,12 +28,12 @@ ms.locfileid: "66074208"
  ディメンション メンバー プロパティの使用および表示の概要については、「 [SSMS で MDX クエリ ウィンドウ内の SSAS メンバー プロパティを表示する](https://go.microsoft.com/fwlink/?LinkId=317362)」を参照してください。  
   
 > [!NOTE]  
->  1999年3月 (2.6) の OLE DB 仕様の OLAP セクションに準拠しているプロバイダーは[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、このトピックに記載されている固有メンバープロパティをサポートしています。  
+>  1999年3月 (2.6) の OLE DB 仕様の OLAP セクションに準拠しているプロバイダーは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] このトピックに記載されている固有メンバープロパティをサポートしています。  
 >   
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 以外のプロバイダーは、この他にも追加の固有メンバー プロパティをサポートする場合があります。 他のプロバイダーによってサポートされる固有メンバー プロパティについての詳細は、各プロバイダーに付属の資料を参照してください。  
   
 ## <a name="types-of-member-properties"></a>メンバー プロパティの種類  
- で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]サポートされる固有メンバープロパティには、次の2種類があります。  
+ でサポートされる固有メンバープロパティに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、次の2種類があります。  
   
  状況依存メンバー プロパティ  
  この種類のメンバー プロパティは、特定の階層またはレベルのコンテキストで使用する必要があり、特定のディメンションまたはレベルの各メンバーに関する値を提供します。  
@@ -54,7 +53,7 @@ ms.locfileid: "66074208"
   
 -   プロパティを照会するには、キーワード `PROPERTIES` を使用します。  
   
- 以下のセクションでは、で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]使用できるさまざまな状況依存の固有メンバープロパティと、非状況依存の固有メンバー `PROPERTIES`プロパティの両方について説明します。また、キーワードを各種類のプロパティと共に使用する方法についても説明します。  
+ 以下のセクションでは、で使用できるさまざまな状況依存の固有メンバープロパティと、非状況依存の固有メンバープロパティの両方につい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] て説明し `PROPERTIES` ます。また、キーワードを各種類のプロパティと共に使用する方法についても説明します。  
   
 ## <a name="context-sensitive-member-properties"></a>状況依存メンバー プロパティ  
  すべてのディメンション メンバーとレベル メンバーでは、状況に依存する固有メンバー プロパティがいくつかサポートされます。 次の表は、それらの状況依存プロパティを示しています。  
@@ -84,10 +83,10 @@ ms.locfileid: "66074208"
 ## <a name="non-context-sensitive-member-properties"></a>非状況依存メンバー プロパティ  
  すべてのメンバーでは、コンテキストに関係なく同じである固有メンバー プロパティがいくつかサポートされます。 これらのプロパティが提供する追加情報をアプリケーションで使用すれば、ユーザー エクスペリエンスを向上させることができます。  
   
- 次の表に、で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]サポートされる非状況依存の固有プロパティを示します。  
+ 次の表に、でサポートされる非状況依存の固有プロパティを示し [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ます。  
   
 > [!NOTE]  
->  MEMBERS スキーマ行セット内の列は、以下の表に示されている固有メンバー プロパティをサポートします。 スキーマ行セットの`MEMBERS`詳細については、「 [MDSCHEMA_MEMBERS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)」を参照してください。  
+>  MEMBERS スキーマ行セット内の列は、以下の表に示されている固有メンバー プロパティをサポートします。 スキーマ行セットの詳細については `MEMBERS` 、「 [MDSCHEMA_MEMBERS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)」を参照してください。  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
@@ -128,7 +127,7 @@ ms.locfileid: "66074208"
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
- このステートメントは、軸ディメンション内の各メンバーに関する説明を返します。 ディメンション*または*`.DESCRIPTION` *レベル*`.DESCRIPTION`のように、プロパティをディメンションまたはレベルで修飾しようとすると、ステートメントは検証されません。  
+ このステートメントは、軸ディメンション内の各メンバーに関する説明を返します。 ディメンション*または*レベルのように、プロパティをディメンションまたはレベルで修飾しようとすると、 `.DESCRIPTION` *Level* `.DESCRIPTION` ステートメントは検証されません。  
   
 ### <a name="example"></a>例  
  固有プロパティを返す MDX クエリの例を次に示します。  

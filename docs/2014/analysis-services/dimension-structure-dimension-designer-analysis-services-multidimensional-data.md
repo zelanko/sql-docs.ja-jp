@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 88409278-4f8a-4f1f-8730-e602866dbb36
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cb5c593d07d0df235fb173c02229bcf784847306
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00bcf528f8f2c9a1541016d716d9d41c2ea7ee62
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081753"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528584"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>[ディメンション構造] (ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[ディメンション構造]** ページを使用すると、選択したディメンションの属性、階層、およびレベルを変更できます。 **[ディメンション構造]** ページには、1 つのツール バーと 3 つのペインがあります。  

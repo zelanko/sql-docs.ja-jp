@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a48316bb89f92ba8b44e3160a6b38e77762f3be
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080098"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543984"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Analysis Services 接続に使用するデータ プロバイダー
   Analysis Services では、サーバーとデータにアクセスするために 3 種類のデータ プロバイダーを用意しています。 Analysis Services に接続するすべてのアプリケーションでは、これらのプロバイダーのいずれかを使用します。 これらのプロバイダーのうち、ADOMD.NET および Analysis Services 管理オブジェクト (AMO) の 2 つは、マネージド データ プロバイダーです。 Analysis Services OLE DB Provider (MSOLAP DLL) は、ネイティブ データ プロバイダーです。  
@@ -54,7 +53,7 @@ ms.locfileid: "66080098"
   
 1.  \Program Files\Microsoft Analysis Services\AS OLEDB\120 に移動します。  
   
-2.  Msolap120.dll を右クリックし、[**プロパティ**] をクリックします。  
+2.  msolap120.dll を右クリックし、[**プロパティ**] をクリックします。  
   
  この場所にファイルが見つからない場合、またはフォルダーのパスに "AS OLEDB\110" または "AS OLEDB\90" が含まれている場合は、使用しているプロバイダーが古いため、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に接続するには、新しいバージョン (AS OLEDB\11) をインストールする必要があります。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66080098"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に付属する Analysis Services OLE DB プロバイダーのバージョンは、MSOLAP130.dll です。 最近のバージョンとしては、MSOLAP10.dll (SQL Server 2008 および 2008 R2) と MSOLAP90.dll (SQL Server 2005) があります。  
   
- OLE DB Provider は多くの場合、接続文字列で指定されます。 Analysis Services 接続文字列は、OLE DB プロバイダーを参照するために別の用語を使用します: MSOLAP。\<バージョン> .dll  
+ OLE DB Provider は多くの場合、接続文字列で指定されます。 Analysis Services 接続文字列は、OLE DB プロバイダーを参照するために別の用語を使用します: MSOLAP. \<version> 。dll  
   
  Excel 2013 と同時にインストールされる最新の Analysis Services OLE DB Provider は、MSOLAP.5.dll です。 以前のバージョンの Excel を実行しているワークステーションでは、多くの場合、MSOLAP.4.dll や MSOLAP.3.dll など、以前のバージョンを使用しています。 PowerPivot アドインなど、一部の Analysis Services 機能では、特定のバージョンの OLE DB Provider が必要です。 詳細については、「[接続文字列プロパティ (Analysis Services)](connection-string-properties-analysis-services.md)」を参照してください。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "66080098"
   
  SQL Server セットアップによりインストールされた AMO を SQL Server クライアント アプリケーションが使用して、Analysis Services に接続します。 カスタム コードで AMO を使用する際に、AMO をダウンロードして手動でインストールすることもできます (このトピックの「 [Analysis Services データ プロバイダーのバージョンを確認する方法](#bkmk_LibUpdate) 」を参照)。 AMO は、グローバル アセンブリ キャッシュに `Microsoft.AnalysisServices`という名前で記載されています。  
   
- AMO を使用した接続は、通常、"data source =\<servername>" で構成される最小の接続です。 接続の確立後は、API を使用して、データベース コレクションおよび主要なオブジェクトを操作します。 SSDT と SSMS のどちらも、AMO を使用して Analysis Services インスタンスに接続します。  
+ AMO を使用した接続は、通常、"data source =" で構成される最小の接続です \<servername> 。 接続の確立後は、API を使用して、データベース コレクションおよび主要なオブジェクトを操作します。 SSDT と SSMS のどちらも、AMO を使用して Analysis Services インスタンスに接続します。  
   
  プログラムによる接続の詳細については、「 [AMO 基本オブジェクトのプログラミング](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects)」を参照してください。  
   

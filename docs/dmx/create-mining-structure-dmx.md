@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b27f9e1c5927392b4ea221dcb6b7468a42ff9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07cda29c288f574fd960398f8a607c04f1d8dce7
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892822"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669455"
 ---
 # <a name="create-mining-structure-dmx"></a>マイニング構造の作成 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>引数  
- *structure*  
+ *データ*  
  構造の一意の名前です。  
   
  *列定義の一覧*  
@@ -73,7 +73,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
 -   データ型 (必須)  
   
--   Distribution  
+-   配布  
   
 -   モデリングフラグの一覧  
   
@@ -106,7 +106,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  列には複数のモデリング フラグ値を定義できます。 ただし、1つの列に対して使用できるコンテンツの種類は1つとデータ型は1つだけです。  
   
 ### <a name="column-relationships"></a>列のリレーションシップ  
- 任意の列定義ステートメントに句を追加して、2つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、次\<の列リレーションシップ> 句の使用がサポートされています。  
+ 任意の列定義ステートメントに句を追加して、2つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、次の列リレーションシップ> 句の使用がサポートされてい \< ます。  
   
  **関連**  
  値の階層を示します。 関連する列のターゲットには、入れ子になったテーブルのキー列、ケース行の個別値列、または関連する TO 句を持つ別の列 (より深い階層を示す) を指定できます。  
@@ -131,13 +131,13 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  提示されたシードは、トレーニングデータセットまたはテストデータセットにケースをランダムに割り当てるプロセスの開始点を制御します。 提示されたシードを設定すると、パーティションを反復可能にすることができます。 提示されたシードを指定しない場合、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、マイニング構造の名前を使用してシードが作成されます。 構造の名前を変更すると、シード値が変わります。 提示されたシードパラメーターは、他の提示されたパラメーターのいずれかまたは両方で使用できます。  
   
 > [!NOTE]  
->  パーティション情報はトレーニングデータと共にキャッシュされるため、提示を使用するには、マイニング構造の**Cachemode**プロパティが**KeepTrainingData**に設定されていることを確認する必要があります。 これは、の新しいマイニング[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]構造の既定の設定です。 提示されたパーティションを含む既存のマイニング構造で**Cachemode**プロパティを**ClearTrainingCases**に変更しても、処理されたマイニングモデルには影響しません。 ただし、が<xref:Microsoft.AnalysisServices.MiningStructureCacheMode> **KeepTrainingData**に設定されていない場合、提示されたパラメーターは無効になります。 これは、すべてのソースデータがトレーニングに使用され、テストセットは使用できなくなることを意味します。 パーティションの定義は、構造体を使用してキャッシュされます。トレーニングケースのキャッシュをクリアすると、テストデータのキャッシュと提示されたセットの定義もクリアされます。  
+>  パーティション情報はトレーニングデータと共にキャッシュされるため、提示を使用するには、マイニング構造の**Cachemode**プロパティが**KeepTrainingData**に設定されていることを確認する必要があります。 これは、の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 新しいマイニング構造の既定の設定です。 提示されたパーティションを含む既存のマイニング構造で**Cachemode**プロパティを**ClearTrainingCases**に変更しても、処理されたマイニングモデルには影響しません。 ただし、 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> が**KeepTrainingData**に設定されていない場合、提示されたパラメーターは無効になります。 これは、すべてのソースデータがトレーニングに使用され、テストセットは使用できなくなることを意味します。 パーティションの定義は、構造体を使用してキャッシュされます。トレーニングケースのキャッシュをクリアすると、テストデータのキャッシュと提示されたセットの定義もクリアされます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、DMX を使用して、提示されたマイニング構造を作成する方法を示します。  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>例 1 : トレーニング セットを含まない構造を追加する  
- 次の例では、関連するマイニング`New Mailing`モデルを作成せず、予約を使用せずに、という名前の新しいマイニング構造を作成します。 マイニングモデルを構造に追加する方法については、「 [ALTER マイニング structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)」を参照してください。  
+ 次の例では、 `New Mailing` 関連するマイニングモデルを作成せず、予約を使用せずに、という名前の新しいマイニング構造を作成します。 マイニングモデルを構造に追加する方法については、「 [ALTER マイニング structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)」を参照してください。  
   
 ```  
 CREATE MINING STRUCTURE [New Mailing]  

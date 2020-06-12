@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67cc581c177f5d07df035927eb979c09061a537
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087510"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527298"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>データ更新専用またはクエリ専用処理の構成 (PowerPivot for SharePoint)
   SharePoint 統合モードでは、データ更新専用の処理やクエリ専用の処理など、特定の種類の処理要求をサポートするように Analysis Services サーバー インスタンスを構成できます。 既定では、どちらの種類の読み込み要求も有効になっています。 これらのどちらかの種類を無効にすることで、専用のクエリ エンジンまたはデータ更新サーバーを作成することができます。  
@@ -25,7 +24,7 @@ ms.locfileid: "66087510"
 > [!NOTE]  
 >  このリリースでは、データ更新ジョブまたはオンデマンド クエリについて、メモリまたは CPU の使用量を制限する構成設定はありません。 [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)] インスタンスでは、管理しているクエリおよびデータ更新ジョブを実行するために使用できるすべてのリソースが使用されます。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
  [処理モードの構成](#config)  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66087510"
   
 6.  必要に応じて、データ更新操作の同時更新ジョブの数を変更できます。 サーバーをデータ更新専用に構成する場合やサーバーに他にもプロセッサがある場合は、同時ジョブの数を増やすことをお勧めします。 他のオンデマンド クエリ用にシステム リソースを解放する場合は、同時ジョブの数を減らします。  
   
-7.  変更を保存します。 処理イベントが発生するまでは、サーバーで入力内容の検証は行われません。 入力した同時ジョブの数が無効な場合は、次の要求の処理時にエラーが検出されてログに記録されます。  
+7.  変更内容を保存します。 処理イベントが発生するまでは、サーバーで入力内容の検証は行われません。 入力した同時ジョブの数が無効な場合は、次の要求の処理時にエラーが検出されてログに記録されます。  
   
 ##  <a name="change-the-number-of-data-refresh-jobs-that-can-run-in-parallel"></a><a name="change"></a>並列で実行できるデータ更新ジョブの数を変更する  
  データ更新ジョブは、PowerPivot サービス アプリケーションで管理および監視される処理キューに追加される定期タスクです。 ジョブは、PowerPivot ブックの 1 つ以上のデータ ソースのスケジュール情報で構成されます。 定義されているスケジュールごとに個別のジョブが作成されます。 ブックの所有者がすべてのデータ ソースに対して 1 つのスケジュールを定義している場合は、データ更新操作全体に対してジョブが 1 つだけ作成されます。 ブックの所有者が外部データ ソースに対して個別のスケジュールを作成している場合は、そのブック全体のデータ更新を完了するために複数のジョブが作成されて実行されます。  

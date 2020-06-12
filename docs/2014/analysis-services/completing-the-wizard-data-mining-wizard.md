@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fea2db082448fa96ad26733a2fad5f294575a74
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087708"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527368"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>[ウィザードの完了] (データ マイニング ウィザード)
   **[ウィザードの完了]** ページを使用すると、ウィザードの完了時に作成されるマイニング構造を確認できます。 マイニング構造の名前を設定することもできます。  
@@ -44,7 +43,7 @@ ms.locfileid: "66087708"
   
  ドリルスルー オプションの詳細については、「[ドリルスルー クエリ (データ マイニング)](data-mining/drillthrough-queries-data-mining.md)」を参照してください。  
   
- **［プレビュー］**  
+ **プレビュー**  
  作成されるマイニング構造を表示します。  
   
  **マイニングモデルディメンションの作成**  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 950a498e10205050fb610b7afb369e61ea3fb799
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075353"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546887"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>配置ユーティリティを使用したモデル ソリューションの配置
   **Microsoft.AnalysisServices.Deployment** ユーティリティを使用すると、コマンド プロンプトから [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Engine を起動することができます。 入力ファイルとして、このユーティリティは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]プロジェクトを構築することによって生成される XML 出力ファイルを使用します。 この入力ファイルを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの配置をカスタマイズするための変更を容易に行うことができます。 生成された配置スクリプトは直ちに実行することも、今後の配置のために保存することもできます。  
@@ -40,7 +39,7 @@ ms.locfileid: "66075353"
  **/s**  
  このユーティリティをサイレント モードで実行し、ダイアログ ボックスが表示されないようにします。 モードの詳細については、このトピックの後半にある「 [モード](#Modes)」を参照してください。  
   
- *logfile*  
+ *ログファイル*  
  ログ ファイルの完全パスとファイル名を指定します。 指定したログ ファイルにトレース イベントのログが記録されます。 ログ ファイルが既に存在する場合は、ファイルの内容が置き換えられます。  
   
  **/a**  
@@ -76,7 +75,7 @@ ms.locfileid: "66075353"
   
  [引数に戻る](#Arguments)  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトをサイレント モードで配置する方法を紹介します。また後で参照できるように、進行状況とエラー メッセージのログを記録します。  
   
  `Microsoft.AnalysisServices.Deployment.exe`  

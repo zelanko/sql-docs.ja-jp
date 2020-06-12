@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16ebdd2ac874784c071fea7aa962d005436aac60
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0500cca6b59ce1510d274dc0a8336ee2ac1db394
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820877"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859811"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>dm_os_latch_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "82820877"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar(120)**|ラッチクラスの名前。|  
+|latch_class|**nvarchar(60)**|ラッチクラスの名前。|  
 |waiting_requests_count|**bigint**|このクラスのラッチでの待機の数。 このカウンターは、ラッチ待機の開始時にインクリメントされます。|  
 |wait_time_ms|**bigint**|クラス内のラッチに対する合計待機時間 (ミリ秒単位)。<br /><br /> **注:** この列は、ラッチ待機中、およびラッチ待機の終了時に5分ごとに更新されます。|  
 |max_wait_time_ms|**bigint**|メモリ オブジェクトがラッチを待機した最大時間。 この値が著しく大きい場合、内部デッドロックを示している可能性があります。|  
@@ -45,7 +45,7 @@ ms.locfileid: "82820877"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sys.dm_os_latch_stats を使用すると、別のラッチ クラスの待機数や待機時間を相対的に確認することにより、ラッチの競合の発生源を特定できます。 場合によっては、ラッチの競合を解決または減らすことができます。 ただし、場合によっては、カスタマーサポートサービスに問い合わせる必要があり [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   
 次のように `DBCC SQLPERF` を使用すると、sys.dm_os_latch_stats の内容をリセットできます。  
@@ -103,95 +103,95 @@ GO
 |格納|短期的なアクセスをデータベースページに同期するために使用されます。 データベースページの読み取りまたは変更を行う前に、バッファーラッチが必要です。 バッファーラッチの競合は、ホットページや低速の i/o など、いくつかの問題を示す場合があります。<br /><br /> このラッチ クラスは、ページ ラッチを使用するすべての状況に対応しています。 dm_os_wait_stats は、ページ上の i/o 操作および読み取りおよび書き込み操作によって発生するページラッチ待機の差を大きくします。|  
 |BUFFER_POOL_GROW|バッファー プールの拡張操作中、内部バッファー マネージャーの同期に使用します。|  
 |DATABASE_CHECKPOINT|データベース内のチェックポイントをシリアル化するために使用されます。|  
-|CLR_PROCEDURE_HASHTABLE|内部使用のみ。|  
-|CLR_UDX_STORE|内部使用のみ。|  
-|CLR_DATAT_ACCESS|内部使用のみ。|  
-|CLR_XVAR_PROXY_LIST|内部使用のみ。|  
-|DBCC_CHECK_AGGREGATE|内部使用のみ。|  
-|DBCC_CHECK_RESULTSET|内部使用のみ。|  
-|DBCC_CHECK_TABLE|内部使用のみ。|  
-|DBCC_CHECK_TABLE_INIT|内部使用のみ。|  
-|DBCC_CHECK_TRACE_LIST|内部使用のみ。|  
-|DBCC_FILE_CHECK_OBJECT|内部使用のみ。|  
+|CLR_PROCEDURE_HASHTABLE|内部使用のみです。|  
+|CLR_UDX_STORE|内部使用のみです。|  
+|CLR_DATAT_ACCESS|内部使用のみです。|  
+|CLR_XVAR_PROXY_LIST|内部使用のみです。|  
+|DBCC_CHECK_AGGREGATE|内部使用のみです。|  
+|DBCC_CHECK_RESULTSET|内部使用のみです。|  
+|DBCC_CHECK_TABLE|内部使用のみです。|  
+|DBCC_CHECK_TABLE_INIT|内部使用のみです。|  
+|DBCC_CHECK_TRACE_LIST|内部使用のみです。|  
+|DBCC_FILE_CHECK_OBJECT|内部使用のみです。|  
 |DBCC_PERF|内部パフォーマンスモニターカウンターを同期するために使用します。|  
-|DBCC_PFS_STATUS|内部使用のみ。|  
-|DBCC_OBJECT_METADATA|内部使用のみ。|  
-|DBCC_HASH_DLL|内部使用のみ。|  
-|EVENTING_CACHE|内部使用のみ。|  
+|DBCC_PFS_STATUS|内部使用のみです。|  
+|DBCC_OBJECT_METADATA|内部使用のみです。|  
+|DBCC_HASH_DLL|内部使用のみです。|  
+|EVENTING_CACHE|内部使用のみです。|  
 |FCB|ファイル制御ブロックへのアクセスを同期するために使用します。|  
-|FCB_REPLICA|内部使用のみ。|  
+|FCB_REPLICA|内部使用のみです。|  
 |FGCB_ALLOC|ファイル グループ内のラウンド ロビン割り当て情報へのアクセスを同期するために使用します。|  
 |FGCB_ADD_REMOVE|ファイルの追加、削除、拡張、および圧縮を行うために、ファイルグループへのアクセスを同期するために使用します。|  
-|FILEGROUP_MANAGER|内部使用のみ。|  
-|FILE_MANAGER|内部使用のみ。|  
-|FILESTREAM_FCB|内部使用のみ。|  
-|FILESTREAM_FILE_MANAGER|内部使用のみ。|  
-|FILESTREAM_GHOST_FILES|内部使用のみ。|  
-|FILESTREAM_DFS_ROOT|内部使用のみ。|  
-|LOG_MANAGER|内部使用のみ。|  
-|FULLTEXT_DOCUMENT_ID|内部使用のみ。|  
-|FULLTEXT_DOCUMENT_ID_TRANSACTION|内部使用のみ。|  
-|FULLTEXT_DOCUMENT_ID_NOTIFY|内部使用のみ。|  
-|FULLTEXT_LOGS|内部使用のみ。|  
-|FULLTEXT_CRAWL_LOG|内部使用のみ。|  
-|FULLTEXT_ADMIN|内部使用のみ。|  
-|FULLTEXT_AMDIN_COMMAND_CACHE|内部使用のみ。|  
-|FULLTEXT_LANGUAGE_TABLE|内部使用のみ。|  
-|FULLTEXT_CRAWL_DM_LIST|内部使用のみ。|  
-|FULLTEXT_CRAWL_CATALOG|内部使用のみ。|  
-|FULLTEXT_FILE_MANAGER|内部使用のみ。|  
-|DATABASE_MIRRORING_REDO|内部使用のみ。|  
-|DATABASE_MIRRORING_SERVER|内部使用のみ。|  
-|DATABASE_MIRRORING_CONNECTION|内部使用のみ。|  
-|DATABASE_MIRRORING_STREAM|内部使用のみ。|  
-|QUERY_OPTIMIZER_VD_MANAGER|内部使用のみ。|  
-|QUERY_OPTIMIZER_ID_MANAGER|内部使用のみ。|  
-|QUERY_OPTIMIZER_VIEW_REP|内部使用のみ。|  
-|RECOVERY_BAD_PAGE_TABLE|内部使用のみ。|  
-|RECOVERY_MANAGER|内部使用のみ。|  
-|SECURITY_OPERATION_RULE_TABLE|内部使用のみ。|  
-|SECURITY_OBJPERM_CACHE|内部使用のみ。|  
-|SECURITY_CRYPTO|内部使用のみ。|  
-|SECURITY_KEY_RING|内部使用のみ。|  
-|SECURITY_KEY_LIST|内部使用のみ。|  
-|SERVICE_BROKER_CONNECTION_RECEIVE|内部使用のみ。|  
-|SERVICE_BROKER_TRANSMISSION|内部使用のみ。|  
-|SERVICE_BROKER_TRANSMISSION_UPDATE|内部使用のみ。|  
-|SERVICE_BROKER_TRANSMISSION_STATE|内部使用のみ。|  
-|SERVICE_BROKER_TRANSMISSION_ERRORS|内部使用のみ。|  
-|SSBXmitWork|内部使用のみ。|  
-|SERVICE_BROKER_MESSAGE_TRANSMISSION|内部使用のみ。|  
-|SERVICE_BROKER_MAP_MANAGER|内部使用のみ。|  
-|SERVICE_BROKER_HOST_NAME|内部使用のみ。|  
-|SERVICE_BROKER_READ_CACHE|内部使用のみ。|  
+|FILEGROUP_MANAGER|内部使用のみです。|  
+|FILE_MANAGER|内部使用のみです。|  
+|FILESTREAM_FCB|内部使用のみです。|  
+|FILESTREAM_FILE_MANAGER|内部使用のみです。|  
+|FILESTREAM_GHOST_FILES|内部使用のみです。|  
+|FILESTREAM_DFS_ROOT|内部使用のみです。|  
+|LOG_MANAGER|内部使用のみです。|  
+|FULLTEXT_DOCUMENT_ID|内部使用のみです。|  
+|FULLTEXT_DOCUMENT_ID_TRANSACTION|内部使用のみです。|  
+|FULLTEXT_DOCUMENT_ID_NOTIFY|内部使用のみです。|  
+|FULLTEXT_LOGS|内部使用のみです。|  
+|FULLTEXT_CRAWL_LOG|内部使用のみです。|  
+|FULLTEXT_ADMIN|内部使用のみです。|  
+|FULLTEXT_AMDIN_COMMAND_CACHE|内部使用のみです。|  
+|FULLTEXT_LANGUAGE_TABLE|内部使用のみです。|  
+|FULLTEXT_CRAWL_DM_LIST|内部使用のみです。|  
+|FULLTEXT_CRAWL_CATALOG|内部使用のみです。|  
+|FULLTEXT_FILE_MANAGER|内部使用のみです。|  
+|DATABASE_MIRRORING_REDO|内部使用のみです。|  
+|DATABASE_MIRRORING_SERVER|内部使用のみです。|  
+|DATABASE_MIRRORING_CONNECTION|内部使用のみです。|  
+|DATABASE_MIRRORING_STREAM|内部使用のみです。|  
+|QUERY_OPTIMIZER_VD_MANAGER|内部使用のみです。|  
+|QUERY_OPTIMIZER_ID_MANAGER|内部使用のみです。|  
+|QUERY_OPTIMIZER_VIEW_REP|内部使用のみです。|  
+|RECOVERY_BAD_PAGE_TABLE|内部使用のみです。|  
+|RECOVERY_MANAGER|内部使用のみです。|  
+|SECURITY_OPERATION_RULE_TABLE|内部使用のみです。|  
+|SECURITY_OBJPERM_CACHE|内部使用のみです。|  
+|SECURITY_CRYPTO|内部使用のみです。|  
+|SECURITY_KEY_RING|内部使用のみです。|  
+|SECURITY_KEY_LIST|内部使用のみです。|  
+|SERVICE_BROKER_CONNECTION_RECEIVE|内部使用のみです。|  
+|SERVICE_BROKER_TRANSMISSION|内部使用のみです。|  
+|SERVICE_BROKER_TRANSMISSION_UPDATE|内部使用のみです。|  
+|SERVICE_BROKER_TRANSMISSION_STATE|内部使用のみです。|  
+|SERVICE_BROKER_TRANSMISSION_ERRORS|内部使用のみです。|  
+|SSBXmitWork|内部使用のみです。|  
+|SERVICE_BROKER_MESSAGE_TRANSMISSION|内部使用のみです。|  
+|SERVICE_BROKER_MAP_MANAGER|内部使用のみです。|  
+|SERVICE_BROKER_HOST_NAME|内部使用のみです。|  
+|SERVICE_BROKER_READ_CACHE|内部使用のみです。|  
 |SERVICE_BROKER_WAITFOR_MANAGER| 待機キューのインスタンスレベルのマップを同期するために使用します。 データベース ID、データベースのバージョン、およびキュー ID の組ごとに1つのキューが存在します。 このクラスのラッチの競合は、WAITFOR (RECEIVE) wait 状態での多くの接続がある場合に発生する可能性があります。WAITFOR (RECEIVE) の呼び出しWAITFOR timeout を超えています。メッセージを受信しています。WAITFOR (RECEIVE) を含むトランザクションのコミットまたはロールバックWAITFOR (RECEIVE) の待機状態にあるスレッドの数を減らすことで、競合を軽減できます。 |  
-|SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|内部使用のみ。|  
-|SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|内部使用のみ。|  
-|SERVICE_BROKER_TRANSPORT|内部使用のみ。|  
-|SERVICE_BROKER_MIRROR_ROUTE|内部使用のみ。|  
-|TRACE_ID|内部使用のみ。|  
-|TRACE_AUDIT_ID|内部使用のみ。|  
-|TRACE|内部使用のみ。|  
-|TRACE_CONTROLLER|内部使用のみ。|  
-|TRACE_EVENT_QUEUE|内部使用のみ。|  
-|TRANSACTION_DISTRIBUTED_MARK|内部使用のみ。|  
-|TRANSACTION_OUTCOME|内部使用のみ。|  
-|NESTING_TRANSACTION_READONLY|内部使用のみ。|  
-|NESTING_TRANSACTION_FULL|内部使用のみ。|  
-|MSQL_TRANSACTION_MANAGER|内部使用のみ。|  
-|DATABASE_AUTONAME_MANAGER|内部使用のみ。|  
-|UTILITY_DYNAMIC_VECTOR|内部使用のみ。|  
-|UTILITY_SPARSE_BITMAP|内部使用のみ。|  
-|UTILITY_DATABASE_DROP|内部使用のみ。|  
-|UTILITY_DYNAMIC_MANAGER_VIEW|内部使用のみ。|  
-|UTILITY_DEBUG_FILESTREAM|内部使用のみ。|  
-|UTILITY_LOCK_INFORMATION|内部使用のみ。|  
-|VERSIONING_TRANSACTION|内部使用のみ。|  
-|VERSIONING_TRANSACTION_LIST|内部使用のみ。|  
-|VERSIONING_TRANSACTION_CHAIN|内部使用のみ。|  
-|VERSIONING_STATE|内部使用のみ。|  
-|VERSIONING_STATE_CHANGE|内部使用のみ。|  
-|KTM_VIRTUAL_CLOCK|内部使用のみ。|  
+|SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|内部使用のみです。|  
+|SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|内部使用のみです。|  
+|SERVICE_BROKER_TRANSPORT|内部使用のみです。|  
+|SERVICE_BROKER_MIRROR_ROUTE|内部使用のみです。|  
+|TRACE_ID|内部使用のみです。|  
+|TRACE_AUDIT_ID|内部使用のみです。|  
+|TRACE|内部使用のみです。|  
+|TRACE_CONTROLLER|内部使用のみです。|  
+|TRACE_EVENT_QUEUE|内部使用のみです。|  
+|TRANSACTION_DISTRIBUTED_MARK|内部使用のみです。|  
+|TRANSACTION_OUTCOME|内部使用のみです。|  
+|NESTING_TRANSACTION_READONLY|内部使用のみです。|  
+|NESTING_TRANSACTION_FULL|内部使用のみです。|  
+|MSQL_TRANSACTION_MANAGER|内部使用のみです。|  
+|DATABASE_AUTONAME_MANAGER|内部使用のみです。|  
+|UTILITY_DYNAMIC_VECTOR|内部使用のみです。|  
+|UTILITY_SPARSE_BITMAP|内部使用のみです。|  
+|UTILITY_DATABASE_DROP|内部使用のみです。|  
+|UTILITY_DYNAMIC_MANAGER_VIEW|内部使用のみです。|  
+|UTILITY_DEBUG_FILESTREAM|内部使用のみです。|  
+|UTILITY_LOCK_INFORMATION|内部使用のみです。|  
+|VERSIONING_TRANSACTION|内部使用のみです。|  
+|VERSIONING_TRANSACTION_LIST|内部使用のみです。|  
+|VERSIONING_TRANSACTION_CHAIN|内部使用のみです。|  
+|VERSIONING_STATE|内部使用のみです。|  
+|VERSIONING_STATE_CHANGE|内部使用のみです。|  
+|KTM_VIRTUAL_CLOCK|内部使用のみです。|  
   
 ## <a name="see-also"></a>参照  
 [DBCC SQLPERF &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       

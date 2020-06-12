@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fa1d14c1a96a89cbd890dbf4d133d84897b9197
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085308"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523678"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>データ マイニング デザイナーでの単一クエリの作成
   単一クエリは、1 つのケースに関する予測を作成する場合に便利です。 単一クエリの詳細については、「 [データ マイニング クエリ](data-mining-queries.md)」を参照してください。  
@@ -57,7 +56,7 @@ AS [t]
   
 4.  **[単一クエリ入力]** テーブルの **[値]** 列で、予測を作成するケースについて説明した値を選択します。  
   
-     たとえば、[ **Number Children At Home**] で [ **2** ] を選択`45`し、「 **Age**」と入力します。  
+     たとえば、[ **Number Children At Home**] で [ **2** ] を選択し、「Age」と入力し `45` ます。 **Age**  
   
 5.  [**マイニングモデル**] テーブルの予測可能列を、タブの下部にある [**ソース**] 列にドラッグします。必要に応じて、列の別名を入力できます。  
   

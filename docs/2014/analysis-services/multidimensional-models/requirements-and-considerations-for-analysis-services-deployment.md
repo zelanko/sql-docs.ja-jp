@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc862bcad512123dd7c31ce59a8c777c2423bedc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073171"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545735"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services の配置に関する要件と注意点
   あるソリューションのパフォーマンスと可用性は、多くの因子に左右されます。たとえば、基になるハードウェアの機能、サーバーの配置トポロジ、ソリューションの特性 (たとえば、パーティションが複数サーバーに分散されているとか、リレーショナル エンジンへの直接アクセスを必要とする ROLAP ストレージを使用するなど)、サービス レベル契約、データ モデルの複雑さなどです。  
@@ -48,7 +47,7 @@ ms.locfileid: "66073171"
   
  [SQL Server 2014 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
- [SQLServer のエディション別の計算容量制限](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
+ [SQL Server のエディション別の計算容量制限](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
  [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
@@ -87,7 +86,7 @@ ms.locfileid: "66073171"
  ソース データの増分更新を簡単に処理するには、プロアクティブ キャッシュを有効にします。 プロアクティブ キャッシュでは、新しいソース データを使用してキューブが更新されます。手動での処理は必要なく、キューブの可用性に影響を与えることもありません。 詳細については、「[プロアクティブ キャッシュ (パーティション)](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)」をご覧ください。  
   
 ##  <a name="scalability-considerations"></a><a name="BKMK_Scalability"></a>スケーラビリティに関する考慮事項  
- との複数[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスが同じコンピューター上にあると、パフォーマンスの問題が発生する可能性があります。 このような問題を解決する 1 つの方法は、サーバー上のプロセッサ、メモリ、およびディスク リソースを増やすことです。 ただし、複数のコンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスをスケーリングすることが必要な場合もあります。  
+ との複数のインスタンス [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が同じコンピューター上にあると、パフォーマンスの問題が発生する可能性があります。 このような問題を解決する 1 つの方法は、サーバー上のプロセッサ、メモリ、およびディスク リソースを増やすことです。 ただし、複数のコンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスをスケーリングすることが必要な場合もあります。  
   
 ### <a name="scaling-analysis-services-across-multiple-computers"></a>複数のコンピューターにおける Analysis Services のスケーリング  
  複数のコンピューターで [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインストールをスケーリングするには、いくつかの方法があります。 これらのオプションについては、次の一覧をご覧ください。  

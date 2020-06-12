@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c7772d73-31c9-4b22-a899-bac424d603bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2925542236adfc7e79ea1dccd0ca3ca1008e7de1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064628"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527768"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>[ブラウザー] (ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[ブラウザー]** タブを使用すると、ディメンションのディメンション データとメタデータを参照できます。 現在選択しているディメンションで、ディメンションの書き戻しが可能な場合は、このビューを使用してディメンションのメンバー データを変更します。  
@@ -27,7 +26,7 @@ ms.locfileid: "66064628"
 ## <a name="panes"></a>ペイン  
  **[ブラウザー]** タブには、次のペインがあります。  
   
- [Toolbar](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [ツール バー](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  ツール バーを使用して、ディメンション デザイナーの **[ブラウザー]** タブで一般的なアクションを実行します。  
   
  [レベルとメンバー](level-members-dimension-designer-analysis-services-multidimensional-data.md)  

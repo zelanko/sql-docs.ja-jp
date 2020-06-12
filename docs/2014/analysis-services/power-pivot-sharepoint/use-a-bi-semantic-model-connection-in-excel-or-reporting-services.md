@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a8e2b976fca00293d93cbf1e9987e115631bd81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05cd74af77cc62dc637eeb4141478a79fee4ad02
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070927"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547724"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Excel または Reporting Services での BI セマンティック モデル接続の使用
   このトピックでは、他のトピックの手順に従って作成した BI セマンティック モデル接続の使用方法について説明します。 BI セマンティックモデルをまだ作成していない場合は、「 [PowerPivot ブックへの Bi セマンティックモデル接続の作成](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)」および「[テーブルモデルデータベースへの Bi セマンティックモデル接続の作成](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」を参照してください。  
@@ -39,7 +38,7 @@ ms.locfileid: "66070927"
   
 2.  **[Analysis Services から]** をクリックし、データ接続ウィザードを使用して、データをインポートします。  
   
-3.  BI セマンティックモデル接続ファイルの SharePoint URL を入力します (たとえば、 ** http://mysharepoint/shared documents/myData. bism**)。 既定のログオン資格情報オプション **[Windows 認証を使用する]** を受け入れます。 **[次へ]** をクリックします。  
+3.  BI セマンティックモデル接続ファイルの SharePoint URL を入力します (たとえば、 ** http://mysharepoint/shared Documents/myData. bism**)。 既定のログオン資格情報オプション **[Windows 認証を使用する]** を受け入れます。 **[次へ]** をクリックします。  
   
 4.  次のページで **[次へ]** を再度クリックします。 データベースを選択するように求められますが、使用できるのは BI セマンティック モデル接続で指定されている 1 つのデータベースのみです。  
   

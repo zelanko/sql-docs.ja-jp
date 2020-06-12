@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 225fd818-b5ea-494f-b67b-66e09798274a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 546448bd05f3af45b7093acb2dbb9d1e1a8f1bd5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081454"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528511"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>ドリルスルー アクション フォーム エディター (キューブ デザイナーの [アクション] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[アクション]** タブの **[ドリルスルー アクション フォーム エディター]** ペインを使用すると、 **[アクション オーガナイザー]** ペインで選択したドリルスルー アクションを変更できます。 アクションの種類の詳細については、「[アクション (Analysis Services - 多次元データ)](multidimensional-models/actions-analysis-services-multidimensional-data.md)」を参照してください。  
@@ -48,7 +47,7 @@ ms.locfileid: "66081454"
   
  このグリッドには次の列が含まれています。  
   
-|列|説明|  
+|Column|説明|  
 |------------|-----------------|  
 |**Dimensions**|返される属性の派生元のディメンションを選択します。 メジャーをドリルスルーするには、[メジャー] を選択します。|  
 |**[返される列]**|アクションが実行されたときに、選択されたディメンションから返される属性またはメジャーを選択します。|  
@@ -59,7 +58,7 @@ ms.locfileid: "66081454"
  **[Default]**  
  このドリルスルー アクションを既定のドリルスルー アクションとして含める場合は **[True]** を選択します。それ以外の場合は、 **[False]** を選択します。  
   
- クライアントアプリケーション`RETURN`によって実行される`DRILLTHROUGH` MDX ステートメントで句を省略した[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]場合、インスタンスはすべての既定のドリルスルーアクションを評価し、空でないセットを返す最初の既定のドリルスルーアクションを実行します。 MDX `DRILLTHROUGH`ステートメントの詳細については、「 [mdx&#41;&#40;のドリルスルーステートメント](/sql/mdx/mdx-data-manipulation-drillthrough)」を参照してください。  
+ `RETURN`クライアントアプリケーションによって実行される MDX ステートメントで句を省略した場合 `DRILLTHROUGH` 、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスはすべての既定のドリルスルーアクションを評価し、空でないセットを返す最初の既定のドリルスルーアクションを実行します。 MDX ステートメントの詳細につい `DRILLTHROUGH` ては、「 [mdx&#41;&#40;のドリルスルーステートメント](/sql/mdx/mdx-data-manipulation-drillthrough)」を参照してください。  
   
 > [!NOTE]  
 >  このオプションは、下位互換性を保つために使用します。  
@@ -67,7 +66,7 @@ ms.locfileid: "66081454"
  **[最大行数]**  
  ドリルスルー アクションによって返される最大行数を入力します。 このオプションを 0 または空の値に設定すると、ドリルスルー アクションによって取得されたすべての行がクライアント アプリケーションに返されます。  
   
- **[呼び出し]**  
+ **呼び出し**  
  いつアクションを実行する必要があるかを設定します。  
   
 > [!NOTE]  
@@ -75,13 +74,13 @@ ms.locfileid: "66081454"
   
  次の表では、使用可能な設定について説明しています。  
   
-|[値]|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |Batch|アクションは、バッチ操作または [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] タスクの一部として実行されます。|  
-|Interactive (対話型)|アクションは、ユーザーがアクションを呼び出したときに実行されます。|  
+|Interactive|アクションは、ユーザーがアクションを呼び出したときに実行されます。|  
 |[オープン時]|アクションは、キューブが最初に開いたときに実行されます。|  
   
- **アプリケーション**  
+ **Application**  
  ドリルスルー アクションを実行できるアプリケーションの名前を入力します。  
   
  このオプションを使用して、どのクライアント アプリケーションが最もよくこのアクションを使用するか識別したり、ポップアップ メニューのアクションの横に適切なアイコンを表示したりできます。  
@@ -92,7 +91,7 @@ ms.locfileid: "66081454"
  **説明**  
  アクションの説明をオプションで入力します。  
   
- **キャプション**  
+ **Caption**  
  **[キャプションに MDX を使用]** を **[False]** に設定する場合は、クライアント アプリケーションでアクションに対して表示されるキャプションを入力します。  
   
  **[キャプションに MDX を使用]** を **[True]** に設定する場合は、キャプションの文字列を返す多次元式 (MDX) を入力します。  

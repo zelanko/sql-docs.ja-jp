@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0d6bea885a03d09da28d5f49ada36cf17375a507
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8cd8da4cc1128d125009c0f3bd9d6e62c468d83
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217149"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546174"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多次元モデルのデータ アクセス (Analysis Services - 多次元データ)
   このトピックには、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の多次元データにアクセスするために役立つ情報が記載されています。ネットワーク上の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーに接続するための機能が組み込まれたクライアント アプリケーションのほか、プログラミングによる手法やスクリプトを使用した方法を取り上げます。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
- [クライアントアプリケーション](#bkmk_clientapps)  
+ [クライアント アプリケーション](#bkmk_clientapps)  
   
  [クエリ言語](#bkmk_querylang)  
   
@@ -86,7 +85,7 @@ ms.locfileid: "79217149"
   
  Analysis Services をカスタム アプリケーションに接続するためのクライアント ライブラリについて、より詳しい情報とリンクを次の表に示します。  
   
-|Interface|説明|  
+|インターフェイス|説明|  
 |---------------|-----------------|  
 |Analysis Services 管理オブジェクト (AMO)|AMO は、Analysis Services のインスタンスと多次元データベースをコードで管理するための主要なオブジェクト モデルです。 たとえば、SQL Server Management Studio では、サーバーとデータベースの管理をサポートするために AMO が使用されています。 詳細については、「[分析管理オブジェクト (AMO) による開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)」を参照してください。|  
 |ADOMD.NET|ADOMD.NET は、カスタム アプリケーションから多次元データを作成し、利用するための主要なオブジェクト モデルです。 マネージド クライアント アプリケーションでは ADOMD.NET を使用して、共通の Microsoft .NET Framework データ アクセス インターフェイスを経由して [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 情報を取得できます。 詳細については、「 [ADOMD.NET での開発](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net) 」と「 [ADOMD.NET クライアント プログラミング](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)」を参照してください。|  

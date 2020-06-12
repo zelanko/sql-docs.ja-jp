@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 887e3b8c57d0aaf13cc88dea944cf8b74e78266a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175341"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543394"
 ---
 # <a name="automatically-grouping-attribute-members"></a>属性メンバーの自動的なグループ化
-  キューブを表示するとき、通常は、ある属性階層のメンバーと別の属性階層のメンバーとを多次元化します。 たとえば、都市別、製品別、または性別ごとに顧客の売上をグループ化して表示します。 ただし、属性の種類によっては、属性階層内[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のメンバーの分布に基づいて、属性メンバーのグループを自動的に作成すると便利です。 たとえば、顧客の年収に基づいてグループが作成されるように [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を設定できます。 このようにグループ化した場合、属性階層を表示したときには、メンバーそのものではなく、グループの名前と値が表示されます。 ユーザーに提示されるレベル数が限定されるので、分析が容易になります。
+  キューブを表示するとき、通常は、ある属性階層のメンバーと別の属性階層のメンバーとを多次元化します。 たとえば、都市別、製品別、または性別ごとに顧客の売上をグループ化して表示します。 ただし、属性の種類によっては、属性 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 階層内のメンバーの分布に基づいて、属性メンバーのグループを自動的に作成すると便利です。 たとえば、顧客の年収に基づいてグループが作成されるように [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を設定できます。 このようにグループ化した場合、属性階層を表示したときには、メンバーそのものではなく、グループの名前と値が表示されます。 ユーザーに提示されるレベル数が限定されるので、分析が容易になります。
 
  **DiscretizationMethod** プロパティは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] にグループを作成させるかどうか、どのような種類のグループ化を実行するかを指定します。 既定では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] はグループ化を実行しません。 自動グループ化を有効にすると、属性の構造に基づいて、最適なグループ化の方法が [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によって自動的に判断されます。また、次の一覧からいずれかのグループ化アルゴリズムを選択してグループ化の方法を指定することもできます。
 
- **[Equalareas]** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]は、ディメンションメンバーの母集団全体がグループ全体に均等に分散されるように、グループ範囲を作成します。
+ **[Equalareas]** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ディメンションメンバーの母集団全体がグループ全体に均等に分散されるように、グループ範囲を作成します。
 
- **クラスター** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、ガウス分布を使用して K を意味するクラスター化方法を使用して、入力値に対して1次元クラスタリングを実行することで、グループを作成します。 このオプションは、数値列でのみ使用できます。
+ **クラスター** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ガウス分布を使用して K を意味するクラスター化方法を使用して、入力値に対して1次元クラスタリングを実行することで、グループを作成します。 このオプションは、数値列でのみ使用できます。
 
  グループ化方法を指定したら、 **DiscretizationBucketCount** プロパティでグループの数を指定します。 詳細については、「[グループ属性メンバー &#40;分離&#41;](multidimensional-models/attribute-properties-group-attribute-members.md) 」を参照してください。
 
@@ -42,7 +41,7 @@ ms.locfileid: "78175341"
 
 4.  **[属性]** ペインで、 **[Yearly Income]** を選択します。
 
-5.  プロパティウィンドウで、 **DiscretizationMethod**プロパティの値を**Automatic**に変更し、 **DiscretizationBucketCount**プロパティの値をに`5`変更します。
+5.  プロパティウィンドウで、 **DiscretizationMethod**プロパティの値を**Automatic**に変更し、 **DiscretizationBucketCount**プロパティの値をに変更し `5` ます。
 
      次の図は、変更後の **Yearly Income**プロパティを示しています。
 
@@ -60,11 +59,11 @@ ms.locfileid: "78175341"
 
 4.  **[属性]** ペインで、 **[Sick Leave Hours]** を選択します。
 
-5.  プロパティウィンドウで、 **DiscretizationMethod**プロパティの値を**クラスター**に変更し、 **DiscretizationBucketCount**プロパティの値をに`5`変更します。
+5.  プロパティウィンドウで、 **DiscretizationMethod**プロパティの値を**クラスター**に変更し、 **DiscretizationBucketCount**プロパティの値をに変更し `5` ます。
 
 6.  **[属性]** ペインで、 **[Vacation Hours]** を選択します。
 
-7.  プロパティウィンドウで、 **DiscretizationMethod**プロパティの値を**Equal Areas**に変更し、 **DiscretizationBucketCount**プロパティの値をに`5`変更します。
+7.  プロパティウィンドウで、 **DiscretizationMethod**プロパティの値を**Equal Areas**に変更し、 **DiscretizationBucketCount**プロパティの値をに変更し `5` ます。
 
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>変更した属性階層の表示
 

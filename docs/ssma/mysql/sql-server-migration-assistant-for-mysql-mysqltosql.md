@@ -1,5 +1,6 @@
 ---
 title: MySQL の SQL Server Migration Assistant (MySQLToSQL) |Microsoft Docs
+description: SSMA for MySQL について説明し、MySQL データベースを SQL Server または Azure SQL Database に移行する手順について説明します。
 ms.prod: sql
 ms.custom: ''
 ms.date: 10/10/2019
@@ -10,18 +11,18 @@ ms.assetid: 2793bc33-38d3-46ed-8277-b8580cf78ced
 author: Jtoland
 ms.author: Jtoland
 manager: murato
-ms.openlocfilehash: 61f1edc662e7b4a510d616dbee47cfaa615b9c0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff0f81088d4da835a24b59c1629dc7d59ef2e5b1
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252143"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293609"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>MySQL の SQL Server Migration Assistant (MySQLToSQL)
 
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (ssma) for mysql は、mysql データベースを2012、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 on windows および linux [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、2019 (windows と linux、または Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] Database) に移行するためのツールです。 SSMA for MySQL は、MySQL データベースオブジェクトを SQL Server データベースオブジェクトに変換し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]それらのオブジェクトをで作成した[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]後、mysql からにデータを移行します。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for MySQL は、MySQL データベースを [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 on Windows および linux、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2019 (windows と linux、または Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] Database) に移行するためのツールです。 SSMA for MySQL は、MySQL データベースオブジェクトを SQL Server データベースオブジェクトに変換し、それらのオブジェクトをで作成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] した後、mysql からにデータを移行し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-このドキュメントでは、SSMA for MySQL について説明し、MySQL データベースをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行するための詳細な手順を示します。 次の表に、詳細を学習するのに役立つ記事を示します。  
+このドキュメントでは、SSMA for MySQL について説明し、MySQL データベースをに移行するための詳細な手順を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 次の表に、詳細を学習するのに役立つ記事を示します。  
   
 ## <a name="contents"></a>内容  
   

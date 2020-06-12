@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c6828b77af36b5dbbc50fbca0210961a7f2ed20c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 09911d0d0d8553ab26d0fc141bcc07ed2f479728
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041923"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666972"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,8 +39,8 @@ PredictSequence(\<table column reference, n-start, n-end>)
   
 -   *N 開始*と*n エンド*の両方が指定されている場合は、 *n から開始*まで*のシーケンス値です。*  
   
-## <a name="examples"></a>使用例  
- 次の例では、シーケンスクラスターマイニングモデルに基づいて、 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]データベース内の顧客によって購入される可能性が最も高い5つの製品のシーケンスを返します。  
+## <a name="examples"></a>例  
+ 次の例では、 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] シーケンスクラスターマイニングモデルに基づいて、データベース内の顧客によって購入される可能性が最も高い5つの製品のシーケンスを返します。  
   
 ```  
 SELECT  

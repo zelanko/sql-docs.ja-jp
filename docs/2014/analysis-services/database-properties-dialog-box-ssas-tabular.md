@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 0f0ec02f-7b55-40ea-8a04-ed0deb1efd7a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8361508d678e407be9bed6eb18e8c221364daf61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41bf7838a714c35e2149e8163e21a7b8044a77c6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082360"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528928"
 ---
 # <a name="database-properties-dialog-box-ssas---tabular"></a>[データベースのプロパティ] ダイアログ ボックス (SSAS - テーブル)
   このダイアログ ボックスは、タイムスタンプとその他の情報に加え、データベースがキャッシュされたデータを使用するかどうかを決定するカスタマイズ可能なプロパティを提供します。 他のカスタマイズ可能なプロパティには、データベース名の変更と権限借用オプションの指定が含まれます。  
   
 ## <a name="options"></a>オプション  
   
-|用語|定義|  
+|期間|定義|  
 |----------|----------------|  
 |**名前**|**[名前]** は、サーバー上のデータベースを識別するデータベース名です。 データベース名を変更するときは、既存の接続文字列で現在の名前を使用するレポートおよびクライアント アプリケーションへの影響を考慮します。 アクセス拒否エラーを避けるために、既存のレポートの接続文字列を更新する必要があります。 また、このデータベースのソースであるテーブル モデルでは、ほとんどの場合、元の名前を使用します。 モデルへの今後の更新が目的のデータベースに発行されるように、モデル内のデータベース配置プロパティを更新することを検討してください。|  
 |**ID**|データベースの ID が表示されます。|  

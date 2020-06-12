@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02eb89db44e08daf7de5d89a932a097df277b961
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084418"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522507"
 ---
 # <a name="feature-selection-data-mining"></a>機能の選択 (データ マイニング)
   *機能の選択*は、データマイニングで一般的に使用される用語であり、処理と分析のために管理しやすいサイズに入力を減らすために使用できるツールと手法を記述します。 特徴選択は、*カーディナリティの削減*だけではなく、モデルの構築時に考慮できる属性の数に対して任意または事前に定義されたカットオフを強制することを意味します。つまり、アナリストまたはモデリングツールは、分析のためにその有用性に基づいて属性をアクティブに選択または破棄します。  
@@ -103,7 +102,7 @@ ms.locfileid: "66084418"
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Analysis Services のアルゴリズムで使用される機能の選択の方法  
  次の表は、機能の選択をサポートするアルゴリズム、そのアルゴリズムによって使用される機能の選択の方法、および機能の選択の動作を制御するために設定するパラメーターの一覧です。  
   
-|アルゴリズム|分析の方法|備考|  
+|アルゴリズム|分析の方法|コメント|  
 |---------------|------------------------|--------------|  
 |Naive Bayes|Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|Microsoft Naïve Bayes アルゴリズムで使用できる属性は、不連続属性と分離された属性だけです。したがって、興味深さのスコアは使用できません。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft Naive Bayes アルゴリズム テクニカル リファレンス](microsoft-naive-bayes-algorithm-technical-reference.md)」を参照してください。|  
 |デシジョン ツリー|興味深さのスコア<br /><br /> Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|非バイナリの連続する値を含む列がある場合は、一貫性を保つため、すべての列に対して興味深さのスコアが使用されます。 それ以外の場合は、既定の機能の選択の方法か、モデルを作成したときに指定した方法が使用されます。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス](microsoft-decision-trees-algorithm-technical-reference.md)」を参照してください。|  

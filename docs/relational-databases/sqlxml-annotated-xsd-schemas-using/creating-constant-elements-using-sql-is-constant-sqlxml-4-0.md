@@ -1,5 +1,6 @@
 ---
 title: 'Sql: 定数 (SQLXML) を使用して定数要素を作成する'
+description: 'SQLXML 4.0 の sql: 定数注釈を使用して、データベーステーブルまたは列にマップされない XSD スキーマ内に定数要素を作成する方法について説明します。'
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45ab0c13ad2c631a438e2a8637e36d192165094b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 854378b57a4798375e4f97841c8bd72ef0d7d0f3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257478"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524908"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant を使用した、定数要素の作成 (SQLXML 4.0)
 
@@ -35,17 +36,17 @@ ms.locfileid: "75257478"
   
 -   最上位要素を XML ドキュメントに追加する。 XML では、ドキュメントに 1 つの最上位要素 (ルート要素) が必要です。  
   
--   すべての注文をラップする** \<注文>** 要素などのコンテナー要素を作成する。  
+-   **\<Orders>** すべての注文をラップする要素などのコンテナー要素を作成する。  
   
- **Sql: 定数**注釈は、 ** \<complexType>** 要素に追加できます。  
+ **Sql: は定数**注釈を要素に追加でき **\<complexType>** ます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. sql:is-constant を指定してコンテナー要素を追加する  
- この注釈付き XSD スキーマでは、値が1の**sql:** CustomerOrders 属性を指定することにより、 ** \<>** が定数要素として定義されます。 したがって、 ** \<CustomerOrders>** は、どのデータベーステーブルまたは列にもマップされません。 この定数要素は、 ** \<子要素>順序**で構成されます。  
+ この注釈付き XSD スキーマで **\<CustomerOrders>** は、値が1である**sql: の定数**属性を指定することにより、が定数要素として定義されます。 したがって、 **\<CustomerOrders>** は、どのデータベーステーブルまたは列にもマップされません。 この定数要素は、子要素で構成さ **\<Order>** れます。  
   
- CustomerOrders>はどのデータベーステーブルまたは列にもマップされませんが、結果の XML には、 ** \<順序>** 子要素を含むコンテナー要素として表示されます。 ** \<**  
+ **\<CustomerOrders>** はどのデータベーステーブルまたは列にもマップされませんが、結果の XML には子要素を含むコンテナー要素として表示され **\<Order>** ます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

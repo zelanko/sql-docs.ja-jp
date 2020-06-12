@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: bd24dd4a-624f-478a-9c94-b1361e857680
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d9f375eb2d55c396000b7c2d7a14614153861e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 907fba85ff44fc0c22cd3a4743f5ab1475f2dd25
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085822"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524928"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>精度チャートの種類の選択とグラフのオプションの設定
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]には、マイニングモデルの有効性を判断するための複数の方法が用意されています。 各モデルまたは構造に対して作成できる精度チャートの種類は、以下の要因によって異なります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、マイニングモデルの有効性を判断するための複数の方法が用意されています。 各モデルまたは構造に対して作成できる精度チャートの種類は、以下の要因によって異なります。  
   
 -   モデルの作成に使用したアルゴリズムの種類  
   

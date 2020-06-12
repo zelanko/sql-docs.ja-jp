@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20acb57a4c2ddb60d2daefc6733ac7ef52310f3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084056"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522008"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線形回帰アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムは、連続属性のペアのモデリングに最適化された、特殊な Microsoft デシジョン ツリー アルゴリズムです。 このトピックでは、アルゴリズムの実装について説明し、アルゴリズムの動作をカスタマイズする方法を示します。モデルのクエリに関する追加情報へのリンクも示します。  
@@ -34,7 +33,7 @@ ms.locfileid: "66084056"
 ### <a name="scoring-methods-and-feature-selection"></a>スコアリング方法と機能の選択  
  すべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング アルゴリズムでは、分析の向上と処理負荷の削減のため、機能の選択が自動的に使用されます。 モデルでサポートされるのは連続列だけであるため、線形回帰の機能選択に使用される方法は興味深さのスコアです。 参考のため、次の表に線形回帰アルゴリズムとデシジョン ツリー アルゴリズムの機能選択の違いを示します。  
   
-|アルゴリズム|分析の方法|備考|  
+|アルゴリズム|分析の方法|コメント|  
 |---------------|------------------------|--------------|  
 |線形回帰|興味深さのスコア|既定値。<br /><br /> デシジョン ツリー アルゴリズムで使用できるその他の機能選択の方法は、離散変数のみに適用されるため、線形回帰モデルには適用できません。|  
 |デシジョン ツリー|興味深さのスコア<br /><br /> Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|非バイナリの連続する値を含む列がある場合は、一貫性を保つため、すべての列に対して興味深さのスコアが使用されます。 それ以外の場合は、既定の方法か、指定した方法が使用されます。|  
@@ -64,7 +63,7 @@ ms.locfileid: "66084056"
 ### <a name="regressors-in-linear-regression-models"></a>線形回帰モデルのリグレッサー  
  線形回帰モデルは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムに基づいています。 ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用していない場合でも、連続属性の回帰を表すツリーやノードがデシジョン ツリー モデルに含まれることはあります。  
   
- 連続列がリグレッサーを表すことを指定する必要はありません。 列に REGRESSOR フラグを設定しなくても、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムにより、データセットが意味のあるパターンを持つ領域に分割されます。 違いは、モデリングフラグを設定すると、アルゴリズムによって、* C1 + b\*C2 +... という形式の回帰式が検索されます。は、ツリーのノードのパターンに適合します。 残差の合計が計算され、偏差が大きすぎる場合には、ツリーが強制的に分割されます。  
+ 連続列がリグレッサーを表すことを指定する必要はありません。 列に REGRESSOR フラグを設定しなくても、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムにより、データセットが意味のあるパターンを持つ領域に分割されます。 違いは、モデリングフラグを設定すると、アルゴリズムによって、* C1 + b \* C2 +... という形式の回帰式が検索されます。は、ツリーのノードのパターンに適合します。 残差の合計が計算され、偏差が大きすぎる場合には、ツリーが強制的に分割されます。  
   
  たとえば、 **Income** を属性として使用して顧客の購入行動を予測する場合に、その列に REGRESSOR モデリング フラグを設定すると、アルゴリズムはまず、標準の回帰式を使用して **Income** の値を試します。 偏差が大きすぎる場合はその回帰式が放棄され、ツリーが他の属性で分割されます。 その後、デシジョン ツリー アルゴリズムは、分割後の各分岐で Income をリグレッサーとして使用できるかどうかを試します。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66084056"
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)」を参照してください。  
   
-|列|コンテンツの種類|  
+|Column|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Cyclical、Key、Table、Ordered|  
 |予測可能な属性|Continuous、Cyclical、Ordered|  

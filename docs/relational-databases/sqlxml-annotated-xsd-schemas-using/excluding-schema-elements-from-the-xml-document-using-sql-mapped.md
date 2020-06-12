@@ -1,5 +1,6 @@
 ---
 title: 'Sql: マップされた XML ドキュメントからスキーマ要素を除外する'
+description: 'Sql: マップされた注釈を使用して、データベーステーブル (ビュー) または列にマップしない XSD スキーマに要素を作成する方法について説明します。'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -23,12 +24,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6cf2f3302d4e609975ebb993e5388cbd6561c2bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2753924d37734d0f3198949f9e75102ff6030744
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257440"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689393"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>sql:mapped を使用した XML ドキュメントからのスキーマ要素の除外
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,11 +39,11 @@ ms.locfileid: "75257440"
   
  **Sql: マップ**された注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. sql:mapped 注釈を指定する  
- 他のソースからの XSD スキーマがあるとします。 この XSD **FirstName**スキーマは**ContactID** **LastName** **HomeAddress** ** \<** 、ContactID、FirstName、LastName、およびホームアドレスの属性を持つ Person>要素で構成されています。  
+ 他のソースからの XSD スキーマがあるとします。 この XSD スキーマは、 **ContactID**、 **FirstName**、 **LastName**、および**ホームアドレス**の属性を持つ Person>要素で構成され** \< ています。**  
   
  この XSD スキーマを AdventureWorks データベースの Person. Contact テーブルにマップする場合、Employee テーブルには従業員の自宅の住所が格納されていないため、 **sql:** mapping がホーム**アドレス**属性に指定されています。 この結果、マッピング スキーマに対して Xpath クエリを指定すると、属性はデータベースにマップされず、結果の XML ドキュメント内に返されません。  
   

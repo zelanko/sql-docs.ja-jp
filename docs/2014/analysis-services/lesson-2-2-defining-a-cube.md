@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b69cf276335267e283db35dce37a6192cc7f866
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079056"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543514"
 ---
 # <a name="defining-a-cube"></a>キューブの定義
   キューブ ウィザードを使用すると、キューブのメジャー グループとディメンションを定義できます。 この実習では、キューブ ウィザードを使用してキューブを作成します。  
@@ -44,7 +43,7 @@ ms.locfileid: "66079056"
   
     -   **Sales Territory Key**  
   
-    -   **Revision Number**  
+    -   **リビジョン番号**  
   
      既定では、ファクト テーブル内で、ディメンションにリンクしていないすべての数値列がメジャーとして選択されます。 ただし、上の 4 つの列は実際にはメジャーではありません。 最初の 3 つは、ファクト テーブルとディメンション テーブルをリンクするキー値で、この初期段階のキューブでは使用しません。  
   
@@ -56,15 +55,15 @@ ms.locfileid: "66079056"
   
 11. **[次へ]** をクリックします。  
   
-12. [**ウィザードの完了**] ページで、キューブの名前をに`Analysis Services Tutorial`変更します。 [プレビュー] ペインで、 **InternetSales** メジャー グループとそのメジャーを表示できます。 **Date**、 **Customer** 、 **Product** の各ディメンションも表示できます。  
+12. [**ウィザードの完了**] ページで、キューブの名前をに変更し `Analysis Services Tutorial` ます。 [プレビュー] ペインで、 **InternetSales** メジャー グループとそのメジャーを表示できます。 **Date**、 **Customer** 、 **Product** の各ディメンションも表示できます。  
   
-13. **[完了]** をクリックして、ウィザードを完了します。  
+13. **[完了]** をクリックしてウィザードを終了します。  
   
      ソリューション エクスプローラーで、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [キューブ] **フォルダー内に** Tutorial キューブが表示されます。また、 **[ディメンション]** フォルダーの下には、Customer、Product というデータベース ディメンションが表示されます。 さらに、開発環境の中央の [キューブ構造] タブには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブが表示されます。  
   
 14. キューブ内のディメンション テーブルとファクト テーブルをすべて表示できるよう、[キューブ構造] タブのツール バーで、 **ズーム** レベルを 50% に変更します。 ファクト テーブルは黄色、ディメンション テーブルは青で表示されています。  
   
-15. [**ファイル**] メニューの [**すべてを保存**] をクリックします。  
+15. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [ディメンションへの属性の追加](lesson-2-3-adding-attributes-to-dimensions.md)  

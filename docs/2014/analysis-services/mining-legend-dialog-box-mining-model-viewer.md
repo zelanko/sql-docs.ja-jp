@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9040e213-a6fd-420e-be3e-37cc3a17c111
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44c109694f0a3263ff1ad40d1c343a1af91ce630
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb621d6adc4729785e551a985d349ebf5650f3a3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077766"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545464"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>[マイニング凡例] ダイアログ ボックス (マイニング モデル ビューアー)
   マイニング モデル ビューアーで選択したノードまたはアイテムの詳細情報を取得するには、 **[マイニング凡例]** ダイアログ ボックスを使用します。  

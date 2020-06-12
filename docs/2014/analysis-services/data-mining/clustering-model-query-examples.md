@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe12b82ce2d237acd060b1e387e7a6dfbf958851
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085718"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524208"
 ---
 # <a name="clustering-model-query-examples"></a>クラスタリング モデルのクエリ例
   データ マイニング モデルに対するクエリを作成すると、モデルに関するメタデータを取得できます。また、分析で検出されたパターンに関する詳細を取得するためのコンテンツ クエリも作成できます。 モデル内のパターンを使用して新しいデータの予測を行う予測クエリを作成することもできます。 取得できる情報は、クエリの種類によって異なります。 たとえばコンテンツ クエリを使用すると、検出されたクラスターに関する追加情報を取得できるのに対し、予測クエリを使用すると、新しいデータ ポイントが所属する可能性が高いクラスターを調べることができます。  
   
  ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムに基づいたモデルに対するクエリの作成方法について説明します。  
   
- **コンテンツクエリ**  
+ **コンテンツ クエリ**  
   
  [DMX を使用してモデル メタデータを取得する](#bkmk_Query1)  
   
@@ -77,7 +76,7 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Cluster Model|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|All|  
+|NODE_DESCRIPTION|すべて|  
   
  アソシエーション モデル内でのこれらの列の意味については、「[クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)」を参照してください。  
   
@@ -216,7 +215,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  結果の例:  
   
-|属性|値|スコア|  
+|属性|値|Score|  
 |----------------|------------|-----------|  
 |リージョン|北米|100|  
 |English Occupation|Skilled Manual|94.9003803898654|  
@@ -328,7 +327,7 @@ NATURAL PREDICTION JOIN
 |--------------|----------------|  
 |Cluster 2|0.397918596951617|  
   
- **メモ**既定では、 `ClusterProbability`関数は最も可能性の高いクラスターの確率を返します。 ただし、 `ClusterProbability('cluster name')`という構文を使用して別のクラスターを指定することもできます。 その場合は、この 2 つの予測関数の結果は互いに無関係であるため、 2 番目の列の確率スコアが、1 番目の列のクラスターとは別のクラスターのものになる場合もあることに注意してください。  
+ **メモ**既定では、 `ClusterProbability` 関数は最も可能性の高いクラスターの確率を返します。 ただし、 `ClusterProbability('cluster name')`という構文を使用して別のクラスターを指定することもできます。 その場合は、この 2 つの予測関数の結果は互いに無関係であるため、 2 番目の列の確率スコアが、1 番目の列のクラスターとは別のクラスターのものになる場合もあることに注意してください。  
   
  [トップに戻る](#bkmk_top2)  
   
@@ -369,7 +368,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|予測関数|使用方法|  
+|予測関数|使用法|  
 |[Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx)|入力ケースを含んでいる可能性が最も高いクラスターを返します。|  
 |[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|指定されたクラスターと入力したケース間の距離を返します。ただしクラスターが指定されていない場合は、最も可能性の高いクラスターと入力したケース間の距離を返します。<br /><br /> 入力ケースが指定されたクラスターに所属する確率を返します。|  
 |[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|入力ケースが指定されたクラスターに所属する確率を返します。|  

@@ -10,17 +10,17 @@ ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773754"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857854"
 ---
 # <a name="utility-administration-sql-server-utility"></a>ユーティリティの管理 (SQL Server ユーティリティ)
   ユーティリティの管理の各タブでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのポリシー設定、セキュリティ設定、およびデータ ウェアハウス設定を管理できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティの概念の詳細については、「 [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  [ポリシー] タブ - このタブでは、グローバル監視ポリシーを表示または指定できます。  
   
  [グローバル データ層アプリケーション監視ポリシーを設定する] : このオプションの値一覧を表示するには、ポリシー名の横にある矢印をクリックするか、ポリシーのタイトルをクリックします。  
@@ -64,7 +64,7 @@ ms.locfileid: "62773754"
  [変動の激しいリソースによって生じるポリシー違反ノイズの軽減] : この機能のコントロールを表示するには、画面の右側にある下向き矢印をクリックします。  
  詳細については、「 [CPU 使用率のポリシー &#40;SQL Server ユーティリティのノイズを減らす](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください&#41;  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  [セキュリティ] タブ - UCP の管理または読み取りの権限とログイン名が表示されます。  
   
  [Utility Reader ロールに追加される UCP のログインを選択する]  
@@ -80,7 +80,7 @@ ms.locfileid: "62773754"
   
  ユーティリティ管理者になるには、SQL Server のインスタンスに対する sysadmin 特権が必要です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP のユーザー アカウントを追加または変更するには、SSMS のオブジェクト エクスプローラーを使用して、SQL Server の UCP インスタンスのサーバー ログインにユーザーを追加します。 詳細については、「[sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)」を参照してください。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  [データ ウェアハウス] タブ - ユーティリティ管理データ ウェアハウスの構成の詳細が表示されます。  
   
  データ保有期間  

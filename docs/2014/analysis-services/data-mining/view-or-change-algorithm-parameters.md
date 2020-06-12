@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 151b899b-c27a-4a09-bcf5-5c9f0ec24168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b7f41394c2adb8cbaaee2011e52ba6155a24e2e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd144d3adba59fd179ab756f95223ea5e0e2968c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082690"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520279"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>アルゴリズム パラメーターの表示または変更
   データ マイニング モデルをビルドするためのアルゴリズムで提供されているパラメーターを変更して、モデルの結果をカスタマイズできます。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用意されているアルゴリズムパラメーターは、モデルのプロパティだけでなく、データの処理方法、グループ化方法、および表示方法を根本的に変更するために使用できます。 たとえば、アルゴリズム パラメーターを使用すると、次の操作を実行できます。  
+ に用意されているアルゴリズムパラメーターは、モデルのプロパティだけでなく、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データの処理方法、グループ化方法、および表示方法を根本的に変更するために使用できます。 たとえば、アルゴリズム パラメーターを使用すると、次の操作を実行できます。  
   
 -   分析方法 (クラスタリング方法など) を変更する。  
   

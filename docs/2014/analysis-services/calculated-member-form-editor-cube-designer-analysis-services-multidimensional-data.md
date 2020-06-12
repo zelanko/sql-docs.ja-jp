@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35c9ee36bf30b18859fa3ded540e607a48d0beb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088371"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527659"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>計算されるメンバー フォーム エディター (キューブ デザイナーの [計算] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[計算]** タブの **計算されるメンバー フォーム エディター** ペインを使用すると、計算されるメンバーを作成したり変更したりできます。  
@@ -39,7 +38,7 @@ ms.locfileid: "66088371"
   
  **注** &nbsp;&nbsp;&nbsp;このオプションは、 **[親階層]** に [メジャー] 以外の階層が指定されている場合に利用できます。  
   
- **変更**  
+ **変更点**  
  **[親メンバーの選択]** ダイアログ ボックスを表示し、 **[親メンバー]** のメンバーを選択します。 **[親メンバーの選択]** ダイアログ ボックスの詳細については、「[[親メンバーの選択] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  
   
  **正規表現**  
@@ -53,7 +52,7 @@ ms.locfileid: "66088371"
  **追加のプロパティ**  
  展開して、 **[書式設定文字列]**、 **[表示]**、 **[空以外の動作]**、 **[色の式]**、および **[フォントの式]** の各オプションを表示します。  
   
- **書式設定文字列**  
+ **[書式設定文字列]**  
  計算されるメンバーが返す値の書式設定に使用するために、MDX 書式設定文字列を入力するか、定義済みの書式設定文字列を選択します。  
   
  MDX 書式設定文字列の詳細については、「[FORMAT_STRING の内容 &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)」を参照してください。  
@@ -87,14 +86,14 @@ ms.locfileid: "66088371"
  **[フォントの式]**  
  展開して **[フォント名]**、 **[フォント サイズ]**、および **[フォント フラグ]** の各オプションを表示します。  
   
- **[フォント名]**  
+ **フォント名**  
  計算されるメンバーに使用するフォント名を指定するために、MDX 式を入力します。  
   
  選択した要素を **[計算ツール]** ペインからこのオプションへドラッグして、選択した要素に対して MDX 構文を含めます。  
   
  フォントの選択ボタンをクリックして、 **[フォント]** ダイアログ ボックスを表示し、指定するフォントのプロパティ値を MDX 式に挿入します。 プロパティ値の詳細については、「[プロパティ値の作成および使用 &#40;MDX&#41;](creating-and-using-property-values-mdx.md)」を参照してください。  
   
- **フォントサイズ**  
+ **フォント サイズ**  
  計算されたメンバーに使用するフォント サイズを指定するために、MDX 式を入力します。  
   
  選択した要素を **[計算ツール]** ペインからこのオプションへドラッグして、選択した要素に対して MDX 構文を含めます。  

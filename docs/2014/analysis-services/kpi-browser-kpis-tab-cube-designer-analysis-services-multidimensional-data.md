@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41000c78c4ff3a68e1d3acd107ce57c221a16e28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b6d15cbb75f3528546c566a72f8b23323df8772
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079499"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543727"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI ブラウザー (キューブ デザイナーの [KPI] タブ) (Analysis Services - 多次元データ)
-  キューブ デザイナーの **[KPI]** タブの **[KPI ブラウザー]** ペインを使用すると、主要業績評価指標 (KPI) の結果を表示およびテストできます。 Kpi は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]参照する前に最初にインスタンスに配置する必要があります。  
+  キューブ デザイナーの **[KPI]** タブの **[KPI ブラウザー]** ペインを使用すると、主要業績評価指標 (KPI) の結果を表示およびテストできます。 Kpi は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 参照する前に最初にインスタンスに配置する必要があり [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。  
   
 > [!NOTE]  
 >  このペインは、ブラウザー ビューでのみ表示されます。  
@@ -35,16 +34,16 @@ ms.locfileid: "66079499"
  **Hierarchy**  
  このフィルターを適用する階層を選択します。  
   
- **演算子**  
+ **Operator**  
  **[フィルター式]** の式を、選択した階層に適用する方法を定義する演算子を選択します。 次の表では、使用可能な演算子について説明しています。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**Equal**|結果は **[フィルター式]** で定義された設定に制限されます。|  
 |**等しくない**|結果は **[フィルター式]** で定義された設定によって除外されたメンバーに制限されます。|  
-|**から**|結果は **[フィルター式]** で選択された名前付きセットに制限されます。|  
+|**In**|結果は **[フィルター式]** で選択された名前付きセットに制限されます。|  
 |**含まれない**|結果は **[フィルター式]** で選択された名前付きセットによって除外されたメンバーに制限されます。|  
-|**は**|結果は **[フィルター式]** にある文字列をメンバー名に含むメンバーに制限されます。|  
+|**内容**|結果は **[フィルター式]** にある文字列をメンバー名に含むメンバーに制限されます。|  
 |**で始まる**|結果は **[フィルター式]** にある文字列で始まるメンバー名を持つメンバーに制限されます。|  
 |**[範囲 (包含)]**|結果は **[フィルター式]** で選択された範囲に制限されます。|  
 |**[範囲 (排他)]**|結果は **[フィルター式]** で選択された範囲によって除外されたメンバーに制限されます。|  
@@ -65,7 +64,7 @@ ms.locfileid: "66079499"
  **Value**  
  KPI の値を表示します。  
   
- **目標**  
+ **Goal**  
  KPI の目標値を表示します。  
   
  **状態**  

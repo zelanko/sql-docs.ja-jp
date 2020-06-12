@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c9fb5d1300b6f50f7ef0a765881896069becf0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41471645e3443d59294f980eba35fbf9074d7728
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073902"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546146"
 ---
 # <a name="subselects-in-queries"></a>クエリのサブセレクト
   サブセレクト式とは、入れ子になった SELECT 式です。この式は、外側にある外部の SELECT が評価されているキューブ空間を制限するために使用されます。 サブセレクトにより、すべての計算が評価される新しい空間を定義できます。  
@@ -202,7 +201,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|  
 ||Internet Sales Amount|Reseller Sales Amount|  
 |All Customers|$29,358,677.22|$80,450,596.98|  
-|United States|$9,389,789.51|$80,450,596.98|  
+|アメリカ合衆国|$9,389,789.51|$80,450,596.98|  
 |オレゴン|$1,170,991.54|$80,450,596.98|  
 |Portland|$110,649.54|$80,450,596.98|  
 |ワシントン|$2,467,248.34|$80,450,596.98|  
@@ -230,7 +229,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|  
 ||Internet Sales Amount|Reseller Sales Amount|  
 |All Customers|$2,467,248.34|$80,450,596.98|  
-|United States|$2,467,248.34|$80,450,596.98|  
+|アメリカ合衆国|$2,467,248.34|$80,450,596.98|  
 |ワシントン|$2,467,248.34|$80,450,596.98|  
 |Seattle|$75,164.86|$80,450,596.98|  
   
@@ -255,9 +254,9 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|Components|Mountain|道路|Touring|  
+||All Products|Accessory|コンポーネント|Mountain|道路|Touring|  
 |All Customers|$29,358,677.22|$604,053.30|(null)|$10,251,183.52|$14,624,108.58|$3,879,331.82|  
-|United States|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
+|アメリカ合衆国|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
 |オレゴン|$1,170,991.54|$30,513.17|(null)|$443,607.98|$565,372.10|$131,498.29|  
 |Portland|$110,649.54|$2,834.17|(null)|$47,099.91|$53,917.17|$6,798.29|  
 |ワシントン|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
@@ -280,9 +279,9 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|Components|Mountain|道路|Touring|  
+||All Products|Accessory|コンポーネント|Mountain|道路|Touring|  
 |All Customers|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
-|United States|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
+|アメリカ合衆国|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |ワシントン|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Seattle|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
   
@@ -349,6 +348,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   HAVING 句は軸句では使用できません。代わりに [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx) 関数式を使用します。  
   
--   既定では、計算されるメンバーはサブセレクトでは許可されません。`SubQueries`ただし、[サポートされている XMLA プロパティ &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)の接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> `DBPROP_MSMD_SUBQUERIES`に値を割り当てることによって、セッションごとにこの制限を変更できます。 または`SubQueries` `DBPROP_MSMD_SUBQUERIES`の値に応じて計算されるメンバーの動作の詳細については、「サブ[セレクトとサブキューブで計算されるメンバー](calculated-members-in-subselects-and-subcubes.md) 」を参照してください。  
+-   既定では、計算されるメンバーはサブセレクトでは許可されません。ただし、 `SubQueries` <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> `DBPROP_MSMD_SUBQUERIES` [サポートされている xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)の接続文字列プロパティに値を割り当てることによって、セッションごとにこの制限を変更できます。 またはの値に応じて計算されるメンバーの動作の詳細については、「サブ[セレクトとサブキューブで計算されるメンバー](calculated-members-in-subselects-and-subcubes.md) 」を参照してください `SubQueries` `DBPROP_MSMD_SUBQUERIES` 。  
   
   

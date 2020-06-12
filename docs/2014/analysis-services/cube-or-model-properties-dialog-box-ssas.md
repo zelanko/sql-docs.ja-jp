@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: adeb16a91ef4d7b540e09b5e1f8b5b004be472e4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086599"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526258"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>[キューブのプロパティ] または [モデルのプロパティ] ダイアログ ボックス (SSAS)
   キューブまたはモデル データベースのプロパティを設定するには、 **の** [データベースのプロパティ] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用します。 ダイアログ ボックスを表示するには、 **オブジェクト エクスプローラー** でキューブまたはモデルを右クリックして、 **[プロパティ]** をクリックします。  
@@ -32,7 +31,7 @@ ms.locfileid: "66086599"
   
 ## <a name="options"></a>オプション  
   
-|用語|定義|  
+|期間|定義|  
 |----------|----------------|  
 |**名前**|キューブまたはモデルの名前が表示されます。|  
 |**ID**|キューブまたはモデルの識別子が表示されます。|  
@@ -42,7 +41,7 @@ ms.locfileid: "66086599"
 |**[スクリプト キャッシュ処理モード]**|キューブまたはモデルのスクリプト キャッシュに使用する処理モードを選択します。 このプロパティの値の詳細については、「<xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>」を参照してください。|  
 |**[処理モード]**|キューブまたはモデルに対して使用する処理モードを選択します。 このプロパティの値の詳細については、「<xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>」を参照してください。|  
 |**ストレージの場所**|キューブまたはモデルに関連付けられたメジャー グループおよびパーティションで使用する既定のストレージの場所を入力します。または、参照ボタン (**[...]**) をクリックして、**[リモート フォルダーの参照]** ダイアログ ボックスを開いてフォルダーを選択します。 **[リモート フォルダーの参照]** ダイアログ ボックスの詳細については、「[[リモート フォルダーの参照] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。<br /><br /> このプロパティの値の詳細については、「<xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>」を参照してください。|  
-|**状態**|キューブまたはモデルの処理状態が表示されます。 このプロパティの値の詳細については、「<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>」を参照してください。|  
+|**State**|キューブまたはモデルの処理状態が表示されます。 このプロパティの値の詳細については、「<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>」を参照してください。|  
 |**[最終処理]**|キューブまたはモデルが最後に処理された日時が表示されます。|  
   
 ## <a name="see-also"></a>参照  

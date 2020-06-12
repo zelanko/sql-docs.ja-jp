@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 71212f81a2f42fbbff28e04b4632bc2120362089
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8b3dad28227547f88956f1ac49e2878b2940f91
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084579"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522546"
 ---
 # <a name="drillthrough-on-mining-structures"></a>マイニング構造でのドリルスルー
   *ドリルスルー* とは、マイニング モデルまたはマイニング構造に対してクエリを実行し、モデルで公開されていない詳細データを取得する機能です。  
@@ -36,9 +35,9 @@ ms.locfileid: "66084579"
   
 -   DMX を使用してマイニング構造を作成する場合は、WITH DRILLTHROUGH 句を使用します。 詳細については、「[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)」を参照してください。  
   
--   マイニング構造を処理したときにキャッシュされたトレーニング ケースに関する情報が取得されることで、ドリルスルーが機能します。 したがって、 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode>プロパティをに`ClearAfterProcessing`変更して、構造の処理後にキャッシュされたデータをクリアすると、ドリルスルーは機能しません。 構造列へのドリルスルーを有効にするには、<xref:Microsoft.AnalysisServices.MiningStructureCacheMode> プロパティを `KeepTrainingCases` に変更してから構造を再処理する必要があります。  
+-   マイニング構造を処理したときにキャッシュされたトレーニング ケースに関する情報が取得されることで、ドリルスルーが機能します。 したがって、プロパティをに変更して、構造の処理後にキャッシュされたデータをクリアすると <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> `ClearAfterProcessing` 、ドリルスルーは機能しません。 構造列へのドリルスルーを有効にするには、<xref:Microsoft.AnalysisServices.MiningStructureCacheMode> プロパティを `KeepTrainingCases` に変更してから構造を再処理する必要があります。  
   
--   マイニング構造とマイニングモデルの両方で[Allowdrillthrough スルー](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl)プロパティがに`True`設定されていることを確認します。 さらに、構造とモデルの両方に対するドリルスルー権限を持つロールのメンバーである必要があります。  
+-   マイニング構造とマイニングモデルの両方で[Allowdrillthrough スルー](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl)プロパティがに設定されていることを確認し `True` ます。 さらに、構造とモデルの両方に対するドリルスルー権限を持つロールのメンバーである必要があります。  
   
 ## <a name="security-issues-for-drillthrough"></a>ドリルスルーのセキュリティに関する問題  
  ドリルスルー権限は、構造およびモデルで個別に設定されます。 構造で権限が与えられていない場合でも、モデル権限があればモデルからドリルスルーを行うことができます。 構造のドリルスルー権限がある場合は、[StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 関数を使用して、構造列をモデルからドリルスルー クエリに含めることもできます。  

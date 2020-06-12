@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 606d453235529fbfed4dc0f07178ce2ae7132067
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062879"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528258"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>構造へのモデルの追加 (Excel 用データ マイニング アドイン)
   ![[構造へのモデルの追加] ボタン](media/dmc-addmodel.gif "[構造へのモデルの追加] ボタン")  
@@ -86,15 +85,15 @@ ms.locfileid: "66062879"
   
 ### <a name="related-options"></a>関連オプション  
   
-|オプション|備考|  
+|オプション|コメント|  
 |------------|--------------|  
 |**[構造またはモデルの選択**] ダイアログボックス|新しいモデルの作成の基礎として使用する既存のマイニング構造を選択します。  選択する構造は、現在の接続にある必要があります。 接続されていない場合は、[ [Excel 用データマイニングクライアント &#40;データマイニングクライアント]&#41;](connect-to-source-data-data-mining-client-for-excel.md)ツールを使用して接続を変更します。|  
-|**[マイニングアルゴリズムの選択**] ダイアログボックス|接続先のサーバーに応じて、データ マイニング アルゴリズムの一覧は異なります。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の Standard Edition と Enterprise Edition には異なるアルゴリズムが用意されています。 管理者が、カスタム アルゴリズムを追加している場合もあります。<br /><br /> アルゴリズムが表示されない場合は、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスに接続していることを確認します。|  
+|**[マイニングアルゴリズムの選択**] ダイアログボックス|接続先のサーバーに応じて、データ マイニング アルゴリズムの一覧は異なります。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の Standard Edition と Enterprise Edition には異なるアルゴリズムが用意されています。 管理者が、カスタム アルゴリズムを追加している場合もあります。<br /><br /> アルゴリズムが表示されない場合は、のインスタンスに接続していることを確認し [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。|  
 |**アルゴリズムパラメーター**ダイアログボックス|これらの設定では、分析メソッドに固有のパラメーターを使用して各アルゴリズムをカスタマイズできます。 また、モデルの結果を複数のトレーニング パス間で再現できるようにシードを設定することもできます。<br /><br /> 詳細については、「 [SQL Server データマイニングアドイン&#41;&#40;のアルゴリズムパラメーター ](algorithm-parameters-sql-server-data-mining-add-ins.md)」を参照してください。|  
 |**列モデルフラグの設定**ダイアログボックス|モデリング フラグを使用すると、欠落しているデータの処理方法を指定してモデルを改善できます。 詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](data-mining/modeling-flags-data-mining.md)」を参照してください。|  
   
 ###  <a name="setting-column-usage"></a><a name="Bkmk_mdlcolumn"></a>列の使用法の設定  
- 新しいモデルを既存のマイニング構造に追加する場合は、マイニング構造の各データ列をどのようにモデルで使用するかを指定する必要があります。 このウィザードのオプションは、マイニング構造のオプションよりもはるかに詳細であることがわかります。 なぜですか?  
+ 新しいモデルを既存のマイニング構造に追加する場合は、マイニング構造の各データ列をどのようにモデルで使用するかを指定する必要があります。 このウィザードのオプションは、マイニング構造のオプションよりもはるかに詳細であることがわかります。 なぜでしょうか。  
   
  これは、ウィザードを使用してモデルと構造を一緒に作成すると、アルゴリズムでデータが使用される方法を制御する多くのオプションが自動的に設定されるためです。 ただし、既存のモデルに新しいモデルを追加する場合は、これらのオプションを手動で確認し、データを分析に使用するかどうか、データ型が正しいかどうかなどを指定する必要があります。  
   

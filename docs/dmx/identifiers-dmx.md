@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9dfbe291c1aa7d856862de54ed10c845b4e5544
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074809"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670391"
 ---
 # <a name="identifiers-dmx"></a>識別子 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  内のすべて[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のオブジェクトには識別子が必要です。 オブジェクトの名前は識別子です。 サーバー、データベース、およびデータベースオブジェクト (データソース、データソースビュー、キューブ、ディメンション、マイニングモデルなど) には識別子があります。  
+  内のすべてのオブジェクトには [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 識別子が必要です。 オブジェクトの名前は識別子です。 サーバー、データベース、およびデータベースオブジェクト (データソース、データソースビュー、キューブ、ディメンション、マイニングモデルなど) には識別子があります。  
   
  データマイニング拡張機能 (DMX) には、次の2つの識別子のクラスがあります。  
   
@@ -75,7 +75,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   予約語をオブジェクト名やオブジェクト名の一部に使用する場合。  
   
-     予約されたキーワードをオブジェクト名として使用しないことをお勧めします。 以前のバージョン[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のからアップグレードしたデータベースには、以前の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]バージョンので予約されていないものの、に[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]予約されている単語を含む識別子が含まれる場合があります。 オブジェクトの名前を変更できるようにするには、区切られた識別子を使用して、このようなオブジェクトを参照します。  
+     予約されたキーワードをオブジェクト名として使用しないことをお勧めします。 以前のバージョンのからアップグレードしたデータベースには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、以前のバージョンので予約されていないものの、に予約されている単語を含む識別子が含まれる場合があり [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 オブジェクトの名前を変更できるようにするには、区切られた識別子を使用して、このようなオブジェクトを参照します。  
   
 -   修飾された識別子として示されていない文字を使用する場合。  
   

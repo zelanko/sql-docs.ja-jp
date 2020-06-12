@@ -12,17 +12,17 @@ ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2cabbd38f05ffd45976eac6d18c8ea5f6615816
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283656"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859824"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>[オプション] ([デザイナー]/[テーブルおよびデータベースデザイナー] ページ)
   このページを使用すると、デザイナーの既定の動作を設定できます。 この設定にアクセスするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[デザイナー]** フォルダーを展開して、 **[テーブル デザイナー]** をクリックします。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[テーブル デザイナーの更新のために接続文字列のタイムアウト値をオーバーライドする]**  
  テーブル デザイナーの処理に新しいタイムアウト値を設定することを許可します。 テーブル デザイナーで大きなテーブルを処理する必要があり、テーブルの変更に時間がかかる場合に、この設定が役立ちます。  
   

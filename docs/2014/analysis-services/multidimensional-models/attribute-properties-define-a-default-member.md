@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e781e26dc2e45c6637b6868304be08452d31a996
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077418"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544824"
 ---
 # <a name="define-a-default-member"></a>既定のメンバーの定義
   属性階層がクエリに含まれていない場合は、属性階層の既定のメンバーが式の評価に使用されます。 属性階層を示す属性を含む属性階層またはユーザー階層がクエリに含まれる場合は必ず、既定のメンバーは無視されます。 これは、クエリで指定されたメンバーが使用されるためです。  
@@ -33,11 +32,11 @@ ms.locfileid: "66077418"
  属性階層に既定のメンバーが指定されておらず、属性階層が集計可能な場合 (属性の `IsAggregatable` プロパティが `True` に設定されている場合)、(All) メンバーが既定のメンバーです。 既定のメンバーが指定されおらず、属性階層が集計可能でない場合 (属性の `IsAggregatable` プロパティが `False` に設定されている場合)、既定のメンバーは属性階層の最上位から選択されます。  
   
 ## <a name="specifying-the-default-member"></a>既定のメンバーの指定  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ディメンションのすべての属性には、既定のメンバーがあります。このメンバー `DefaultMember`は、属性のプロパティを使用して指定できます。 この設定は、属性がクエリに含まれていない場合、式の評価に使用されます。 クエリがディメンションの階層を指定する場合は、階層にある属性の既定のメンバーは無視されます。 ディメンションに階層が指定されていないクエリの場合`DefaultMember` 、ディメンション属性の設定が有効になります。  
+ のディメンションのすべての属性に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、既定のメンバーがあります。このメンバーは、属性のプロパティを使用して指定でき `DefaultMember` ます。 この設定は、属性がクエリに含まれていない場合、式の評価に使用されます。 クエリがディメンションの階層を指定する場合は、階層にある属性の既定のメンバーは無視されます。 ディメンションに階層が指定されていないクエリの場合、 `DefaultMember` ディメンション属性の設定が有効になります。  
   
- 属性の`DefaultMember`設定が空白で、その`IsAggregatable`プロパティがに`True`設定されている場合、既定のメンバーは All メンバーです。 `IsAggregatable`プロパティがに`False`設定されている場合、既定のメンバーは最初に表示されるレベルの最初のメンバーになります。  
+ `DefaultMember`属性の設定が空白で、その `IsAggregatable` プロパティがに設定されている場合 `True` 、既定のメンバーは All メンバーです。 `IsAggregatable`プロパティがに設定されている場合 `False` 、既定のメンバーは最初に表示されるレベルの最初のメンバーになります。  
   
- 属性`DefaultMember`の設定は、属性が参加するすべての階層に適用されます。 ディメンションの別の階層に異なる設定を使用することはできません。 たとえば、[1998] メンバーが [Year] 属性の既定のメンバーである場合、この設定はディメンションのすべての階層に適用されます。 この`DefaultMember`場合の設定は、1つの階層では [1998]、別の階層では [1997] にすることはできません。  
+ 属性 `DefaultMember` の設定は、属性が参加するすべての階層に適用されます。 ディメンションの別の階層に異なる設定を使用することはできません。 たとえば、[1998] メンバーが [Year] 属性の既定のメンバーである場合、この設定はディメンションのすべての階層に適用されます。 `DefaultMember`この場合の設定は、1つの階層では [1998]、別の階層では [1997] にすることはできません。  
   
  自動的には集計されない階層にある、特定のレベルの既定のメンバーを定義する場合は、階層の上のレベルにあるすべてのレベルの既定のメンバーを定義する必要があります。 たとえば、[すべての国-環境] という階層では、国の既定のメンバーを定義しない限り、気候の既定のメンバーを定義することはできません。 これを行わないと、クエリタイム エラーが発生します。  
   

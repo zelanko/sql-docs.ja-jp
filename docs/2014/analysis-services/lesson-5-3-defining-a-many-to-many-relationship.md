@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 013a56ef71c33a283fb298ca322ed0e30b8933eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b0b1d50095584a86074ebe1fb7eac9b7de98256
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175291"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542854"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>多対多関係の定義
   通常、ディメンションを定義する場合、1 つのディメンション メンバーは多数のファクトに結合できますが、各ファクトを結合できるのは 1 つのディメンションのみです。 たとえば、各顧客は多数の商品を注文できますが、それぞれの注文は 1 人の顧客に所属します。 リレーショナルデータベースの用語では、これを*一対多のリレーションシップ*と呼びます。 しかし、1 つのファクトが複数のディメンション メンバーに結合する場合があります。 リレーショナル データベース用語では、これを *多対多のリレーションシップ*と呼びます。 たとえば、1 回の購入には複数の購入動機があることが考えられ、また、1 つの購入動機が複数の購入に結び付く (関連付けられる) ことがあります。 結合テーブルは、各購入に関連する購入動機の定義に使用されます。 このようなリレーションシップから作成された Sales Reason ディメンションには、1 回の販売取り引きに関連付けられるメンバーが複数存在します。 多対多のディメンションは、従来のスター スキーマ以上にディメンショナル モデルを展開し、ディメンションが直接ファクト テーブルに関連付けられていなくても複雑な分析を可能にします。
@@ -35,7 +34,7 @@ ms.locfileid: "78175291"
 
 1.  データ ソース ビュー デザイナーを開き、 **Adventure Works DW 2012** データ ソース ビューを表示します。
 
-2.  [**ダイアグラムオーガナイザー** ] ペイン内の任意の場所を右クリックし、[ `Internet Sales Order Reasons` **新しいダイアグラム**] をクリックして、この新しいダイアグラムの名前としてを指定します。
+2.  [**ダイアグラムオーガナイザー** ] ペイン内の任意の場所を右クリックし、[**新しいダイアグラム**] をクリックし `Internet Sales Order Reasons` て、この新しいダイアグラムの名前としてを指定します。
 
 3.  **[テーブル]** ペインの **[InternetSales]** テーブルを、 **[ダイアグラム]** ペインにドラッグします。
 
@@ -47,13 +46,13 @@ ms.locfileid: "78175291"
 
 6.  **[書式]** メニューで **[自動レイアウト]** をポイントし、 **[ダイアグラム]** をクリックします。
 
-7.  プロパティウィンドウで、 **DimSalesReason**テーブル`SalesReason`の**friendlyname**プロパティをに変更し、 **FactInternetSalesReason**テーブルの`InternetSalesReason` **friendlyname**プロパティをに変更します。
+7.  プロパティウィンドウで、 **DimSalesReason**テーブルの**friendlyname**プロパティをに変更し、 `SalesReason` **FactInternetSalesReason**テーブルの**friendlyname**プロパティをに変更し `InternetSalesReason` ます。
 
 8.  **[テーブル]** ペインで **[InternetSalesReason (dbo.FactInternetSalesReason)]** を展開し、 **[SalesOrderNumber]** をクリックします。次に、[プロパティ] ウィンドウで、このデータ列の **DataType** プロパティを確認します。
 
      **[SalesOrderNumber]** 列のデータ型は文字列になっています。
 
-9. `InternetSalesReason`テーブル内の他の列のデータ型を確認します。
+9. テーブル内の他の列のデータ型を確認し `InternetSalesReason` ます。
 
      このテーブルでは、他の 2 つの列のデータ型が数値型になっています。
 
@@ -69,7 +68,7 @@ ms.locfileid: "78175291"
 
 2.  **[メジャー]** ペイン内を右クリックし、 **[新しいメジャー グループ]** をクリックします。 詳細については、「 [多次元モデル内のメジャーおよびメジャー グループの作成](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)」を参照してください。
 
-3.  [**新しいメジャーグループ**] ダイアログボックスで、 `InternetSalesReason` [**データソースビュー** ] ボックスの一覧から [テーブルの選択] を選択し、[ **OK**] をクリックします。
+3.  [**新しいメジャーグループ**] ダイアログボックスで、[ `InternetSalesReason` **データソースビュー** ] ボックスの一覧から [テーブルの選択] を選択し、[ **OK**] をクリックします。
 
      **Internet Sales Reason** メジャー グループが **[メジャー]** ペインに表示されます。
 
@@ -99,7 +98,7 @@ ms.locfileid: "78175291"
 
 4.  **[基になる情報の指定]** ページで、 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012 データ ソース ビューが選択されていることを確認します。
 
-5.  [**メインテーブル**] ボックスの一覧`SalesReason`で、を選択します。
+5.  [**メインテーブル**] ボックスの一覧で、を選択し `SalesReason` ます。
 
 6.  **[キー列]** ボックスの一覧に **[SalesReasonKey]** が表示されていることを確認します。
 
@@ -107,25 +106,25 @@ ms.locfileid: "78175291"
 
 8.  **[次へ]** をクリックします。
 
-9. **[ディメンション属性の選択]** ページで、 **Sales Reason Key** 属性が自動的に選択されます。これは、この属性がキー属性であるためです。 **Sales Reason Reason Type**属性の横にあるチェックボックスをオンにし、 `Sales Reason Type`その名前をに変更して、[**次へ**] をクリックします。
+9. **[ディメンション属性の選択]** ページで、 **Sales Reason Key** 属性が自動的に選択されます。これは、この属性がキー属性であるためです。 **Sales Reason Reason Type**属性の横にあるチェックボックスをオンにし、その名前をに変更し `Sales Reason Type` て、[**次へ**] をクリックします。
 
 10. **[ウィザードの完了]** ページで **[完了]** をクリックすると、Sales Reason ディメンションが作成されます。
 
-11. [**ファイル**] メニューの [**すべてを保存**] をクリックします。
+11. **[ファイル]** メニューの **[すべてを保存]** をクリックします。
 
 12. **Sales reason**ディメンションのディメンションデザイナーの [**属性**] ペインで、[ **sales reason Key**] を選択し、プロパティウィンドウの**Name**プロパティをに変更します。`Sales Reason.`
 
-13. ディメンションデザイナーの [**階層**] ペインで、 `Sales Reason Type`レベルと**販売理由**レベルを含む**sales** Reason ユーザー階層をこの順序で作成します。
+13. ディメンションデザイナーの [**階層**] ペインで、 **Sales Reasons** `Sales Reason Type` レベルと**販売理由**レベルを含む sales Reason ユーザー階層をこの順序で作成します。
 
-14. プロパティウィンドウで、Sales 理由`All Sales Reasons`階層の**allmembername**プロパティの値としてを定義します。
+14. プロパティウィンドウで、 `All Sales Reasons` Sales 理由階層の**allmembername**プロパティの値としてを定義します。
 
-15. Sales `All Sales Reasons` Reason ディメンションの**attributeallmembername**プロパティの値としてを定義します。
+15. `All Sales Reasons`Sales Reason ディメンションの**Attributeallmembername**プロパティの値としてを定義します。
 
 16. 新しく作成したディメンションをキューブ ディメンションとして [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加するには、 **キューブ デザイナー**に切り替えます。 **[キューブ構造]** タブの **[ディメンション]** ペイン内で右クリックし、 **[キューブ ディメンションの追加]** をクリックします。
 
 17. **[キューブ ディメンションの追加]** ダイアログ ボックスで、 **[Sales Reason]** を選択し、 **[OK]** をクリックします。
 
-18. [**ファイル**] メニューの [**すべてを保存**] をクリックします。
+18. **[ファイル]** メニューの **[すべてを保存]** をクリックします。
 
 ## <a name="defining-the-many-to-many-relationship"></a>多対多リレーションシップの定義
 
@@ -161,7 +160,7 @@ ms.locfileid: "78175291"
 
 5.  メタデータ ペインで、 **[Customer]**、 **[Location]**、 **[Customer Geography]**、 **[Members]**、 **[All Customers]**、 **[Australia]** の順にクリックし、 **[Queensland]** を右クリックして **[フィルターに追加]** をクリックします。
 
-6.  `Sales Reason Type`レベルの各メンバーを展開し、Queensland の顧客がインターネット経由で[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]製品を購入するために使用した各理由に関連付けられているドル値を確認します。
+6.  レベルの各メンバーを展開し、 `Sales Reason Type` Queensland の顧客が [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] インターネット経由で製品を購入するために使用した各理由に関連付けられているドル値を確認します。
 
      購入理由に関連付けられている売上金額をすべて加算すると、総売上額を上回ります。 これは、製品の購入理由を複数選択した顧客がいたためです。
 

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dda2dc57-923d-4db9-93a7-38e95770f3df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73340613b14c8f0e90340b589c8b97bad7cd5599
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60294db73475d97c487b33d41dd6f9637ae94ba1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070649"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539984"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>[処理およびストレージの場所] (パーティション ウィザード)
   **[処理およびストレージの場所]** ページを使用すると、パーティションを所有するキューブの [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスや、パーティションのデータを格納する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスを指定できます。 リモートの [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンス、または既定のストレージの場所とは異なるストレージの場所の、どちらかを指定することにより、リモート パーティションとしてパーティションを定義することができます。 リモート パーティションの詳細については、「 [リモート パーティション](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)」をご覧ください。  
@@ -34,7 +33,7 @@ ms.locfileid: "66070649"
 > [!NOTE]  
 >  `Initial Catalog` 接続文字列プロパティで選択したデータ ソースに有効な [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースが設定されていない場合や、`Initial Catalog` 接続文字列プロパティに指定されたデータベースがリモート パーティションをサポートしていない (つまり、指定されたデータベースの `MasterDatasourceID` プロパティが有効な値に設定されていない) 場合は、エラーが発生します。  
   
- **新しい**  
+ **[新規作成]**  
  パーティションを処理するリモート [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスを表す、新しいデータ ソースを作成します。  
   
 ## <a name="storage-location-options"></a>[ストレージの場所] オプション  

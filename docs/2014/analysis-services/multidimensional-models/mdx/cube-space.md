@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a6a6da73815f06aa5ab80f6ad5a9d06227ed842
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074710"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546569"
 ---
 # <a name="cube-space"></a>キューブ空間
   キューブ空間は、そのキューブのメジャーを伴った、キューブの属性階層のメンバーから構成されます。 したがって、キューブ空間はキューブ内のすべての属性階層のメンバーとキューブのメジャーの組み合わせによって決まり、キューブの最大サイズを定義します。 重要なのは、この空間には属性階層メンバーで考えられるすべての組み合わせが含まれるということです。現実世界において不可能と考えられるような組み合わせ (たとえば、都市を Paris、国を England、Spain、Japan、India などに指定する) も含まれます。  
@@ -78,7 +77,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  結果セットのメタデータが異なりますが、返されるセルの値は同一です。 たとえば上のクエリで、Country 階層は (WHERE 句の) スライサー軸に移動されたので、結果セットに明示的には出現しません。  
   
- 上記の3つのクエリはそれぞれ、の自動存在の動作[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の効果を示しています。  
+ 上記の3つのクエリはそれぞれ、の自動存在の動作の効果を示して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] います。  
   
 ## <a name="user-defined-hierarchies-and-cube-space"></a>ユーザー定義階層とキューブ空間  
  このトピックのここまでの例では、属性階層を使用してキューブ空間内の位置を定義していました。 キューブ空間内の位置は、ディメンション内の属性階層を基に定義したユーザー定義階層を使用して定義することもできます。 ユーザー定義階層は、ユーザーによるキューブ データの参照を容易にするための、属性階層の階層です。  
@@ -112,7 +111,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  `WITH`キーワードを使用して、 [CURRENTMEMBER (mdx)](/sql/mdx/current-mdx)関数と[Name (mdx)](/sql/mdx/members-string-mdx)関数では、クエリで使用するための計算されるメンバーを作成することに注意してください。 詳細については、「[MDX の基本的なクエリ &#40;MDX&#41;](mdx-query-the-basic-query.md)」を参照してください。  
+>  キーワードを使用して、 `WITH` [currentmember (mdx)](/sql/mdx/current-mdx)関数と[Name (mdx)](/sql/mdx/members-string-mdx)関数では、クエリで使用するための計算されるメンバーを作成することに注意してください。 詳細については、「[MDX の基本的なクエリ &#40;MDX&#41;](mdx-query-the-basic-query.md)」を参照してください。  
   
  上のクエリでは、State 属性階層の各メンバーに関連付けられた Country 属性階層のメンバーの名前が返されます。 City 属性と Country 属性の間には属性リレーションシップが定義されているので、予測どおりに Country メンバーが返されます。 ところが、次のクエリで示すように、同一ディメンションの属性階層間に属性リレーションシップが定義されていない場合は、(All) メンバーが返されます。  
   

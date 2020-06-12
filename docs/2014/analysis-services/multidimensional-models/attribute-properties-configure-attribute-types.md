@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5223444f58326b7530388f3fe2fc06d72488a5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c73600d934bb87540487e0d82874650d708e034f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077409"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544794"
 ---
 # <a name="configure-attribute-types"></a>属性の種類の構成
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、属性の型によって、ビジネス機能の観点から属性を分類できます。 属性の型は多数用意されており、そのほとんどは属性の表示やサポートのためにクライアント アプリケーションで使用されています。 ただし、属性の型の中には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で特定の意味を持つものもあります。 たとえば、時間ディメンションのさまざまなカレンダーで時刻を表す属性を識別する属性の型がいくつか用意されています。  
+  では [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、属性の型によって、ビジネス機能の観点から属性を分類できます。 属性の型は多数用意されており、そのほとんどは属性の表示やサポートのためにクライアント アプリケーションで使用されています。 ただし、属性の型の中には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で特定の意味を持つものもあります。 たとえば、時間ディメンションのさまざまなカレンダーで時刻を表す属性を識別する属性の型がいくつか用意されています。  
   
 ##  <a name="setting-attribute-types"></a><a name="setting_attibute_types"></a>属性の型の設定  
  属性の型は、その属性の `Type` プロパティの値によって決まります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のいくつかのウィザードでは、ディメンションまたは属性の定義時に属性の型を設定します。 これらの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ウィザードでは、ウィザードによってディメンションに機能が追加された場合にも属性の型を設定します。 たとえば、ビジネス インテリジェンス ウィザードでは、ディメンション内の勘定科目の名前、コード、番号、構造を含んでいる属性を識別するための勘定科目インテリジェンスの追加時に、ディメンション内の属性に複数の属性の型を適用します。 また、ビジネス インテリジェンス ウィザードでは、通貨換算などにも属性の型を使用します。 詳細については、「 [通貨ディメンションの作成](database-dimensions-create-a-currency-type-dimension.md)」を参照してください。  
   
  次の表では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で使用可能な属性の型について説明します。 表内の属性の型は次のカテゴリに区分されています。  
   
-|用語|定義|  
+|期間|定義|  
 |----------|----------------|  
 |[一般的な属性の型](#general_attribute_types)|これらの値はすべての属性で使用できます。また、クライアント アプリケーション用の属性の分類にのみ使用できます。|  
 |[勘定科目ディメンションの属性の種類](#account_dimension_attribute_types)|これらの値によって、勘定科目ディメンションに属している属性を識別します。 勘定科目ディメンションの詳細については、「 [親子型ディメンションの財務アカウントの作成](database-dimensions-finance-account-of-parent-child-type.md)」を参照してください。|  

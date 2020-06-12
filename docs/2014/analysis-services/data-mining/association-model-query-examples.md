@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a31052c0d239010407941141997fca8fc343f9cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a19eb2302639c7f13d48a8778969bbeca4fee18d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086122"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525429"
 ---
 # <a name="association-model-query-examples"></a>結合モデルのクエリ例
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析の間に検出されたルールやアイテムセットの詳細情報を取得できます。予測クエリでは、データ内で検出されたアソシエーションを使用して予測を行うことができます。 アソシエーション モデルの場合、予測はルールに基づいて行われるのが一般的で、提案を行うために使用できます。一方、コンテンツ クエリではアイテムセット間の関係を調べるのが一般的です。 モデルに関するメタデータを取得することもできます。  
   
  ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムに基づくモデルに対してこれらの種類のクエリを作成する方法について説明します。  
   
- **コンテンツクエリ**  
+ **コンテンツ クエリ**  
   
  [DMX を使用してモデル メタデータ データを取得する](#bkmk_Query1)  
   
@@ -67,7 +66,7 @@ WHERE NODE_TYPE = 1
 |||  
 |-|-|  
 |MODEL_CATALOG|Association Test|  
-|MODEL_NAME|アソシエーション|  
+|MODEL_NAME|関連付け|  
 |NODE_CAPTION|Association Rules Model|  
 |NODE_SUPPORT|14879|  
 |CHILDREN_CARDINALITY|942|  
@@ -92,10 +91,10 @@ WHERE MODEL_NAME = 'Association'
 |||  
 |-|-|  
 |MODEL_CATALOG|Adventure Works DW Multidimensional 2012|  
-|MODEL_NAME|アソシエーション|  
+|MODEL_NAME|関連付け|  
 |SERVICE_NAME|Association Rules Model|  
 |PREDICTION_ENTITY|v Assoc Seq Line Items|  
-|MINING_STRUCTURE|アソシエーション|  
+|MINING_STRUCTURE|関連付け|  
 |LAST_PROCESSED|9/29/2007 10:21:24 PM|  
   
  [トップに戻る](#bkmk_top2)  
@@ -224,7 +223,7 @@ ORDER BY NODE_SUPPORT DESC
   
 |||  
 |-|-|  
-|予測関数|使用方法|  
+|予測関数|使用法|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|あるノードがニューラル ネットワーク グラフ内の別のノードの子であるかどうかを示します。|  
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|重み付け確率を返します。|  

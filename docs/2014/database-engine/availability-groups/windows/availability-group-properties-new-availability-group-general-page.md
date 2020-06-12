@@ -12,12 +12,12 @@ ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31976f23109e7e8e64684618b88dfcc4177e2860
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815655"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858926"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>[可用性グループのプロパティ] と [新しい可用性グループ] ([全般] ページ)
    このトピックは、**[新しい可用性グループ]** ダイアログ ボックスと **[可用性グループのプロパティ]** ダイアログ ボックスの **[全般]** タブに該当します。  **[新しい可用性グループ]** ダイアログ ボックスでは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を使用せずに新しい可用性グループを作成できます。 **[可用性グループのプロパティ]** ダイアログ ボックスでは、既存の可用性グループの構成を表示、変更できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "62815655"
   
 -   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **可用性グループ名**  
  可用性グループの名前。 これはユーザー指定の名前であり、Windows Server フェールオーバー クラスター (WSFC) 内で一意であることが必要です。  
   
@@ -36,18 +36,18 @@ ms.locfileid: "62815655"
  **データベース名**  
  可用性グループに追加されたデータベースの名前。  
   
- **追加**  
+ **[追加]**  
  クリックすると、データベースが可用性グループに追加されます。  
   
- **Remove**  
+ **削除**  
  クリックすると、選択したデータベースが可用性グループから削除されます。  
   
 ## <a name="availability-replicas"></a>可用性レプリカ  
  **サーバーインスタンス**  
  このレプリカをホストし、既定ではないインスタンスの場合はレプリカのインスタンス名もホストしている、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスのサーバー名。  
   
- **Role**  
- **1 次式**  
+ **ロール**  
+ **プライマリ**  
  現在、プライマリ レプリカです。  
   
  **セカンダリ**  
@@ -59,7 +59,7 @@ ms.locfileid: "62815655"
  **可用性モード**  
  レプリカの可用性モード。次のいずれかです。  
   
- **[非同期コミット]**  
+ **非同期コミット**  
  プライマリ レプリカは、セカンダリがログをディスクに書き込むのを待機することなくトランザクションをコミットできます。  
   
  **同期コミット**  
@@ -83,7 +83,7 @@ ms.locfileid: "62815655"
  プライマリ レプリカのデータベースに対するすべての接続が許可されます。 これが既定の設定です。  
   
  **[読み取り/書き込みの接続を許可]**  
- アプリケーションの目的の接続プロパティが**ReadOnly**に設定されている接続は許可されません。 "アプリケーションの目的" プロパティが**ReadWrite**に設定されている場合、または "アプリケーションの目的" 接続プロパティが設定されていない場合は、接続が許可されます。 "アプリケーションの目的" 接続プロパティの詳細については、「 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
+ Application Intent 接続プロパティが **ReadOnly** に設定されている接続は許可されません。 Application Intent プロパティが **ReadWrite** に設定されている場合、または Application Intent 接続プロパティが設定されていない場合は、接続が許可されます。 "アプリケーションの目的" 接続プロパティの詳細については、「 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
  **読み取り可能なセカンダリ**  
  セカンダリ ロールを実行している (つまりセカンダリ レプリカとして機能している) 可用性レプリカがクライアントからの接続を受け入れることができるかどうか。以下のいずれかです。  
@@ -103,10 +103,10 @@ ms.locfileid: "62815655"
  **エンドポイント URL**  
  エンドポイントの URL です。 詳細については、「[可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)」を参照してください。  
   
- **追加**  
+ **[追加]**  
  クリックすると、セカンダリ レプリカが可用性グループに追加されます。  
   
- **Remove**  
+ **削除**  
  クリックすると、セカンダリ レプリカが可用性グループから削除されます。  
   
 ## <a name="see-also"></a>参照  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7cd6ea975462a7967c7938de8900d5b1877ff524
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3888642f73fc0898c12ed471c7bc09d678303989
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217063"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544024"
 ---
 # <a name="connection-string-properties-analysis-services"></a>接続文字列プロパティ (Analysis Services)
   このトピックでは、接続文字列プロパティについて説明します。接続文字列プロパティは、いずれかのデザイナー ツールまたは管理ツールで設定できます。また、Analysis Services データに接続および照会するクライアント アプリケーションによって作成された接続文字に表示されることもあります。 そのため、使用できるプロパティのサブセットについてのみ説明します。 完全な一覧には、多くのサーバー プロパティおよびデータベース プロパティが含まれます。それらを使用すると、サーバーでインスタンスまたはデータベースを構成している方法に関係なく、特定のアプリケーションの接続をカスタマイズできます。  
@@ -52,7 +51,7 @@ ms.locfileid: "79217063"
 |--------------|-----------------|-------------|  
 |`Data Source` または `DataSource`|サーバー インスタンスを指定します。 このプロパティは、すべての接続に必要です。 有効な値には、サーバーのネットワーク名または IP アドレス、ローカル接続の local または localhost、URL (サーバーが HTTP または HTTPS アクセス用に構成されている場合)、またはローカル キューブ (.cub) ファイルの名前があります。|`Data source=AW-SRV01` : 既定のインスタンスとポート (TCP 2383) の場合。<br /><br /> `Data source=AW-SRV01$Finance:8081` : 名前付きインスタンス ($Finance) と固定ポートの場合。<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` : 完全修飾ドメイン名の場合。既定のインスタンスとポートを想定しています。<br /><br /> `Data source=172.16.254.1` : サーバーの IP アドレスの場合。DNS サーバーの参照をバイパスします。接続の問題をトラブルシューティングする場合に便利です。|  
 |`Initial Catalog` または `Catalog`|接続先の Analysis Services データベースの名前を指定します。 データベースが Analysis Services に配置されており、データベースに接続するための権限を持っている必要があります。 このプロパティは、AMO 接続では省略できますが、ADOMD.NET では必須です。|`Initial catalog=AdventureWorks2012`|  
-|`Provider`|有効な値は、MSOLAP または MSOLAP です。\<バージョン>。 \<version> は3、4、5のいずれかになります。 ファイル システム上では、データ プロバイダーの名前は、msolap110.dll (Server 2012 バージョン)、msolap100.dll (SQL Server SQL Server 2008 および 2008 R2)、および msolap90.dll (SQL Server 2005) です。<br /><br /> 現在のバージョンは、MSOLAP.5 です。 このプロパティは省略可能です。 既定では、クライアント ライブラリは、レジストリから現在のバージョンの OLE DB プロバイダーを読み取ります。 SQL Server 2008 インスタンスに接続するなど、特定のバージョンのデータ プロバイダーが必要な場合のみ、このプロパティを設定する必要があります。<br /><br /> データ プロバイダーは、SQL Server のバージョンに対応しています。 現在と以前のバージョンの Analysis Services を使用している場合は、通常、手動で作成した接続文字列で使用するプロバイダーを指定する必要があります。 また、必要なバージョンがインストールされていないコンピューターでは、特定のバージョンのデータ プロバイダーをダウンロードしてインストールすることが必要になる場合もあります。 OLE DB プロバイダーは、ダウンロード センターの SQL Server Feature Pack のページからダウンロードできます。 SQL Server 2012 用の Analysis Services OLE DB プロバイダーをダウンロードするには、「 [Microsoft SQL Server 2012 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=296473) 」にアクセスしてください。<br /><br /> MSOLAP.4 は、SQL Server 2008 と SQL Server 2008 R2 の両方でリリースされました。 2008 R2 バージョンは、PowerPivot ブックをサポートしており、SharePoint サーバーに手動でインストールすることが必要な場合があります。 これらのバージョンを区別するには、プロバイダーのファイル プロパティでビルド番号を確認する必要があります。それには、Program files\Microsoft Analysis Services\AS OLEDB\10 に移動します。 msolap110.dll を右クリックし、 **[プロパティ]** をクリックします。 [**詳細**] をクリックします。 ファイルのバージョン情報が表示されます。 バージョンには10.50 が含まれている必要があります。\<SQL Server 2008 R2 の>。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 」および「 [Analysis Services 接続に使用するデータ プロバイダー](data-providers-used-for-analysis-services-connections.md)」を参照してください。<br /><br /> MSOLAP. 3 は SQL Server 2005 でリリースされました。<br /><br /> SQL Server 2008 で MSOLAP. 4 がリリースされ、SQL Server 2008 R2<br /><br /> MSOLAP. 5 は SQL Server 2012 でリリースされました|`Provider=MSOLAP.3` は、SQL Server 2005 バージョンの OLE DB Provider for Analysis Services を必要とする接続に使用します。|  
+|`Provider`|有効な値は MSOLAP または MSOLAP です。 \<version> ここで、 \<version> は3、4、または5です。 ファイル システム上では、データ プロバイダーの名前は、msolap110.dll (Server 2012 バージョン)、msolap100.dll (SQL Server SQL Server 2008 および 2008 R2)、および msolap90.dll (SQL Server 2005) です。<br /><br /> 現在のバージョンは、MSOLAP.5 です。 このプロパティは省略可能です。 既定では、クライアント ライブラリは、レジストリから現在のバージョンの OLE DB プロバイダーを読み取ります。 SQL Server 2008 インスタンスに接続するなど、特定のバージョンのデータ プロバイダーが必要な場合のみ、このプロパティを設定する必要があります。<br /><br /> データ プロバイダーは、SQL Server のバージョンに対応しています。 現在と以前のバージョンの Analysis Services を使用している場合は、通常、手動で作成した接続文字列で使用するプロバイダーを指定する必要があります。 また、必要なバージョンがインストールされていないコンピューターでは、特定のバージョンのデータ プロバイダーをダウンロードしてインストールすることが必要になる場合もあります。 OLE DB プロバイダーは、ダウンロード センターの SQL Server Feature Pack のページからダウンロードできます。 SQL Server 2012 用の Analysis Services OLE DB プロバイダーをダウンロードするには、「 [Microsoft SQL Server 2012 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=296473) 」にアクセスしてください。<br /><br /> MSOLAP.4 は、SQL Server 2008 と SQL Server 2008 R2 の両方でリリースされました。 2008 R2 バージョンは、PowerPivot ブックをサポートしており、SharePoint サーバーに手動でインストールすることが必要な場合があります。 これらのバージョンを区別するには、プロバイダーのファイル プロパティでビルド番号を確認する必要があります。それには、Program files\Microsoft Analysis Services\AS OLEDB\10 に移動します。 msolap110.dll を右クリックし、 **[プロパティ]** をクリックします。 [**詳細**] をクリックします。 ファイルのバージョン情報が表示されます。 バージョンには10.50 が含まれている必要があります。\<buildnumber> SQL Server 2008 R2 の場合。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 」および「 [Analysis Services 接続に使用するデータ プロバイダー](data-providers-used-for-analysis-services-connections.md)」を参照してください。<br /><br /> MSOLAP. 3 は SQL Server 2005 でリリースされました。<br /><br /> SQL Server 2008 で MSOLAP. 4 がリリースされ、SQL Server 2008 R2<br /><br /> MSOLAP. 5 は SQL Server 2012 でリリースされました|`Provider=MSOLAP.3` は、SQL Server 2005 バージョンの OLE DB Provider for Analysis Services を必要とする接続に使用します。|  
 |`Cube`|キューブ名またはパースペクティブ名。 データベースには、複数のキューブおよびパースペクティブを含めることができます。 複数の対象が考えられる場合は、接続文字列にキューブ名またはパースペクティブ名を含めます。|`Cube=SalesPerspective` は、Cube 接続文字列プロパティを使用して、キューブの名前またはパースペクティブの名前を指定できることを示しています。|  
   
 ##  <a name="authentication-and-security"></a><a name="bkmk_auth"></a>認証とセキュリティ  
@@ -166,11 +165,11 @@ ms.locfileid: "79217063"
   
  **PowerPivot ブック (.xlsx、.xlsb、または .xlsm ファイル) への Http(s) 接続**  
   
- `Data Source=<URL>`。URL には、SharePoint ライブラリにパブリッシュされた PowerPivot ブックへの SharePoint パスを指定します。 たとえば、"Data Source =<http://localhost/Shared> Documents/Sales. .xlsx" のようになります。  
+ `Data Source=<URL>`。URL には、SharePoint ライブラリにパブリッシュされた PowerPivot ブックへの SharePoint パスを指定します。 たとえば、"Data Source = <http://localhost/Shared> Documents/Sales.xlsx" のようになります。  
   
  **BI Semantic Model 接続ファイルへの Http(s) 接続**  
   
- `Data Source=<URL>` 。URL には、.bism ファイルへの SharePoint パスを指定します。 たとえば、"Data Source =<http://localhost/Shared> Documents/Sales. bism" のようになります。  
+ `Data Source=<URL>` 。URL には、.bism ファイルへの SharePoint パスを指定します。 たとえば、"Data Source = <http://localhost/Shared> Documents/Sales. bism" のようになります。  
   
  **埋め込み PowerPivot 接続**  
   

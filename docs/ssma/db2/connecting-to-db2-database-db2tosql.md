@@ -1,5 +1,6 @@
 ---
 title: DB2 データベースへの接続 (DB2ToSQL) |Microsoft Docs
+description: Db2 データベースを移行するために DB2 データベースのターゲットインスタンスに接続する方法について説明します。 SSMA は、すべての DB2 スキーマに関するメタデータを取得します。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: b49e5f53e1efbff6febe37a6f3d02fbb3e9cfc05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d31a20aa0aa4b00feaf7d0af5aeb13b5b73c381d
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141070"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292945"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>DB2 データベースへの接続 (DB2ToSQL)
-DB2 データベースをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行するには、移行する db2 データベースに接続する必要があります。 接続すると、SSMA はすべての DB2 スキーマに関するメタデータを取得し、DB2 メタデータエクスプローラーウィンドウに表示します。 SSMA は、データベースサーバーに関する情報を格納しますが、パスワードは保存しません。  
+DB2 データベースをに移行するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、移行する db2 データベースに接続する必要があります。 接続すると、SSMA はすべての DB2 スキーマに関するメタデータを取得し、DB2 メタデータエクスプローラーウィンドウに表示します。 SSMA は、データベースサーバーに関する情報を格納しますが、パスワードは保存しません。  
   
 データベースへの接続は、プロジェクトを閉じるまでアクティブなままになります。 プロジェクトを再度開いたときに、データベースへのアクティブな接続が必要な場合は、再接続する必要があります。  
   
@@ -31,7 +32,7 @@ DB2 データベースに関するメタデータは自動的に更新されま�
 -   データ移行のためのデータアクセスにはデータアクセスが必要  
   
 ## <a name="establishing-a-connection-to-db2"></a>DB2 への接続の確立  
-データベースに接続すると、SSMA によってデータベースのメタデータが読み取られ、このメタデータがプロジェクトファイルに追加されます。 このメタデータは、SSMA がオブジェクトを構文に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換するとき、およびにデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行するときに使用されます。 このメタデータは、DB2 の [メタデータエクスプローラー] ペインで参照して、個々のデータベースオブジェクトのプロパティを確認できます。  
+データベースに接続すると、SSMA によってデータベースのメタデータが読み取られ、このメタデータがプロジェクトファイルに追加されます。 このメタデータは、SSMA がオブジェクトを構文に変換するとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] およびにデータを移行するときに使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このメタデータは、DB2 の [メタデータエクスプローラー] ペインで参照して、個々のデータベースオブジェクトのプロパティを確認できます。  
   
 > [!IMPORTANT]  
 > 接続を試行する前に、データベースサーバーが実行されていて、接続を受け入れることができることを確認してください。  
@@ -77,7 +78,7 @@ DB2 データベースに関するメタデータは自動的に更新されま�
     詳細については、「 [Connect To Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)」を参照してください。  
   
 ## <a name="reconnecting-to-db2"></a>DB2 への再接続  
-データベースサーバーへの接続は、プロジェクトを閉じるまでアクティブなままになります。 プロジェクトを再度開いたときに、データベースへのアクティブな接続が必要な場合は、再接続する必要があります。 メタデータを更新したり、データベースオブジェクトをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込んだり、データを移行したりするまで、オフラインで作業することができます。  
+データベースサーバーへの接続は、プロジェクトを閉じるまでアクティブなままになります。 プロジェクトを再度開いたときに、データベースへのアクティブな接続が必要な場合は、再接続する必要があります。 メタデータを更新したり、データベースオブジェクトをに読み込んだり、データを移行したりするまで、オフラインで作業することができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="refreshing-db2-metadata"></a>DB2 メタデータの更新  
 DB2 データベースに関するメタデータは自動的には更新されません。 DB2 メタデータエクスプローラーのメタデータは、最初に接続したとき、またはメタデータを手動で更新したときにメタデータのスナップショットになります。 すべてのスキーマ、単一のスキーマ、または個々のデータベースオブジェクトのメタデータを手動で更新できます。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9458f2c1fb3d170bf1b4a2887acae94b55ed877e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a08f7fbccf1192f946043ebe932020d0fe5d3409
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175807"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537614"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>マイニング モデル ビューアー (データ マイニング モデル デザイナー)
   **[マイニング モデル ビューアー]** タブでは、マイニング構造に含まれているマイニング モデルを調べることができます。
@@ -31,7 +30,7 @@ ms.locfileid: "78175807"
 
  **マイニングモデル**現在のマイニング構造に含まれている、表示するマイニングモデルを選択します。 まず、関連付けられているカスタム ビューアーが開き、マイニング モデルが表示されます。
 
- **[ビューアー]** 選択したマイニング モデルを調べるために使用するビューアーを選択します。 この一覧には、各[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]マイニングモデル、 [!INCLUDE[msCoName](../includes/msconame-md.md)]マイニングコンテンツビューアー、およびすべてのプラグインビューアーに用意されているビューアーが含まれています。
+ **[ビューアー]** 選択したマイニング モデルを調べるために使用するビューアーを選択します。 この一覧には、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 各マイニングモデル、 [!INCLUDE[msCoName](../includes/msconame-md.md)] マイニングコンテンツビューアー、およびすべてのプラグインビューアーに用意されているビューアーが含まれています。
 
  次の図は、同じモデルに対するカスタム ビューアーと汎用ビューアーを示しています。
 

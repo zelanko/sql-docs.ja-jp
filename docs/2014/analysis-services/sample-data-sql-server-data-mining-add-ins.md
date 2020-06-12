@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 35907ae6-887f-4cb3-a750-cff3d7683d90
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a69b2286abbc1ba4289fd482b1bbf5a2dfb3e7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb8c0f9424c9e817ee482f426b3045e878a9c9c9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070036"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539064"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>サンプル データ (SQL Server データ マイニング アドイン)
   ![[データ マイニング] リボンの、データのパーティション分割ウィザード](media/dmc-partition.gif "[データ マイニング] リボンの、データのパーティション分割ウィザード")  
@@ -70,12 +69,12 @@ ms.locfileid: "66070036"
 ## <a name="related-options"></a>関連オプション  
  ウィザードに従って処理するときは、次のオプションがあります。  
   
-|オプション|備考|  
+|オプション|コメント|  
 |-------------|--------------|  
 |[ソース データの選択] ダイアログ ボックス (Excel 用のデータ マイニング クライアント)|データが保存されている Excel 範囲またはテーブルを選択します。 外部データを使用する場合、リレーショナル データも使用できますが、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のデータ ソースに含まれている必要があります。 T|  
 |[サンプリングの種類の選択] ページ (Excel 用のデータ マイニング クライアント)|外部データソースを使用する場合、ランダムサンプリングオプションの使用に制限されます。 また、[**行数**] オプションを使用して、最終的なデータセットに作成する行の数を指定する必要があります。 ソース データの割合を指定することはできません。|  
 |[ランダム サンプリング] ページ (Excel 用のデータ マイニング クライアント)|割合または数を指定して、ソースから行をコピーできます。|  
-|[オーバーサンプリング] ページ (Excel 用のデータ マイニング クライアント)|**ターゲットの状態**<br /><br /> 元のデータ セットでの出現率が低い値を一覧から選択します。 オーバーサンプリングによって、この状態を含むデータ行の割合が高くなります。<br /><br /> **サンプルサイズ**<br /><br /> 抽出する行数の合計を選択します。 この値は、最終的なデータ セットのサイズを表します。|  
+|[オーバーサンプリング] ページ (Excel 用のデータ マイニング クライアント)|**ターゲットの状態**<br /><br /> 元のデータ セットでの出現率が低い値を一覧から選択します。 オーバーサンプリングによって、この状態を含むデータ行の割合が高くなります。<br /><br /> **サンプル サイズ**<br /><br /> 抽出する行数の合計を選択します。 この値は、最終的なデータ セットのサイズを表します。|  
   
 ## <a name="other-sampling-options"></a>その他のサンプリング オプション  
  このウィザードのサンプリング オプションが目的に合わない場合は、SQL Server Integration Services (SSIS) のサンプリング変換を使用して、複数のデータ ソースから行をサンプリングできます。  

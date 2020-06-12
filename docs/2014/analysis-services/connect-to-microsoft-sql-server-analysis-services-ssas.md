@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f3244ee-b690-471c-893d-68e361c2d416
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 558f9936b7a8e78b3ef75f3bb525185ae497959c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087027"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526968"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>[Microsoft SQL Server Analysis Service への接続] (SSAS)
   **テーブルのインポートウィザード**のこのページを使用すると、SharePoint でホストされている Microsoft SQL Server Analysis Services キューブまたは PowerPivot ブックからデータをインポートするための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
@@ -27,7 +26,7 @@ ms.locfileid: "66087027"
 > [!NOTE]  
 >  このページでデータベースを選択する際には、現在のユーザーの資格情報が使用されます。 ただし、[権限借用情報] ページで指定されたユーザーに、選択したデータベースの読み取り権限がないと、インポートは成功しません。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[接続の表示名]**  
  このデータ ソース接続の一意の名前を入力します。 これは必須フィールドです。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66087027"
   
 -   SharePoint にパブリッシュする PowerPivot ブックの URL を入力します。  
   
- **Windows 認証を使用する**  
+ **[Windows 認証を使用する]**  
  SQL Server Analysis Services サーバーへの接続に Windows 認証を使用するかどうかを指定します。  
   
  Windows 認証モードを使用すると、ユーザーは Windows ユーザー アカウントを使用して接続できます。 可能であれば、Windows 認証を使用します。  

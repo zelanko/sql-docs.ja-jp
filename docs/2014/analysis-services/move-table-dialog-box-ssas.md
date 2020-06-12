@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 6466e075-3345-4d6b-9e20-1ffb4c8f30c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6c680dd48f3588b92a2c87d9fa8d3c3a04dde39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7befaa35fb520bda23cfe8cd216df521090cce58
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077608"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537339"
 ---
 # <a name="move-table-dialog-box-ssas"></a>[テーブルの移動] ダイアログ ボックス (SSAS)
   **[テーブルの移動]** ダイアログ ボックスを使用すると、モデル デザイナー内のテーブルの表示順序を変更できます。 このダイアログ ボックスにアクセスするには、移動するテーブルの下にあるタブを右クリックし、 **[移動]** を選択します。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[選択したテーブルをこのテーブルの前に移動します]**  
  移動するテーブルは、この一覧から選択したテーブルの前の位置に移動します。 テーブルを一連のテーブルの最後に移動する場合は、 **[(末尾に移動)]** を選択します。  
   

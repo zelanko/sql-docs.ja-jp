@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6c55141db6491fe1532dfcdc37a6d7a688c7274
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493938"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543364"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Analysis Services チュートリアル プロジェクトの修正バージョンの使用
   このチュートリアルの残りのレッスンでは、最初の 3 つのレッスンで作成した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの修正版を使用します。 まず、新しいテーブルと名前付き計算が **Adventure Works DW 2012** データ ソース ビューに追加されています。次に、新しいディメンションがプロジェクトおよび [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加されています。 そして、2 つ目のメジャー グループが追加されています。このメジャー グループには、2 番目のファクト テーブルのメジャーが含まれています。 修正されたこのプロジェクトを使用すれば、これまでに習得したスキルを繰り返し使用せずに、ビジネス インテリジェンス アプリケーションに機能を追加する方法を学習していくことができます。  
@@ -40,7 +39,7 @@ ms.locfileid: "69493938"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>修正したプロジェクトの読み込みと処理  
   
-1.  で[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]、[**ファイル**] メニューの [**ソリューションを閉じる**] をクリックして、使用しないファイルを閉じます。  
+1.  で、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] [**ファイル**] メニューの [**ソリューションを閉じる**] をクリックして、使用しないファイルを閉じます。  
   
 2.  **[ファイル]** メニューの **[開く]** をポイントし、 **[プロジェクト/ソリューション]** をクリックします。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "69493938"
 ### <a name="data-source-view"></a>[データ ソース ビュー]  
  修正したプロジェクトのデータ ソース ビューには、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベースから取得された 1 つのファクト テーブルと 4 つのディメンション テーブルが追加されています。  
   
- データソースビューにテーブルが10個ある場合は、 \<ダイアグラム> ダイアグラムがすべていっぱいになっていることに注意してください。 このため、テーブル間のリレーションシップがわかりにくく、簡単には特定のテーブルを探すことができません。 この問題を解決するために、テーブルを 2 つの論理ダイアグラムに整理します。2 つのダイアグラムとは、 **Internet Sales** ダイアグラムと **Reseller Sales** ダイアグラムです。 1 つのファクト テーブルに対し、これらのダイアグラムを 1 つずつ構成します。 1 つのダイアグラムにテーブルやそのリレーションシップをすべて表示しなくとも、論理ダイアグラムを作成することにより、複数のテーブルから特定のサブセットのみをデータ ソース ビューに表示し、操作できます。  
+ このデータ ソース ビューには 10 個のテーブルがあり、 \<All Tables> ダイアグラムの情報が整理されていません。 このため、テーブル間のリレーションシップがわかりにくく、簡単には特定のテーブルを探すことができません。 この問題を解決するために、テーブルを 2 つの論理ダイアグラムに整理します。2 つのダイアグラムとは、 **Internet Sales** ダイアグラムと **Reseller Sales** ダイアグラムです。 1 つのファクト テーブルに対し、これらのダイアグラムを 1 つずつ構成します。 1 つのダイアグラムにテーブルやそのリレーションシップをすべて表示しなくとも、論理ダイアグラムを作成することにより、複数のテーブルから特定のサブセットのみをデータ ソース ビューに表示し、操作できます。  
   
 #### <a name="internet-sales-diagram"></a>Internet Sales ダイアグラム  
  **Internet Sales** ダイアグラムには、インターネット経由で直接顧客に販売された、 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 製品の売上に関連するテーブルが含まれています。 このダイアグラムには、レッスン 1 で **Adventure Works DW 2012** データ ソース ビューに追加した、4 つのディメンション テーブルと 1 つのファクト テーブルがあります。 これらのテーブルを以下に示します。  
@@ -65,9 +64,9 @@ ms.locfileid: "69493938"
   
 -   **顧客**  
   
--   **Date**  
+-   **日付**  
   
--   **梱包**  
+-   **製品**  
   
 -   **InternetSales**  
   
@@ -82,11 +81,11 @@ ms.locfileid: "69493938"
   
 -   **地理的な場所**  
   
--   **Date**  
+-   **日付**  
   
--   **梱包**  
+-   **製品**  
   
--   **従業員**  
+-   **Employee**  
   
 -   **ResellerSales**  
   

@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a4f41e548746d443ff9cbed5eca17e557127240
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064666"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527748"
 ---
 # <a name="browsing-a-decision-trees-model"></a>デシジョン ツリー モデルの参照
-  [**参照**] を使用して分類モデルを開くと、の[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]デシジョンツリービューアーと同様に、モデルが対話型のデシジョンツリービューアーに表示されます。 ビューアーは、あるデータ グループを別のデータ グループから区別する条件を強調するグラフとして分類結果を表示します。 ツリーの個々のサブセットにドリルダウンして、基になるデータを取得することもできます。  
+  [**参照**] を使用して分類モデルを開くと、のデシジョンツリービューアーと同様に、モデルが対話型のデシジョンツリービューアーに表示され [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 ビューアーは、あるデータ グループを別のデータ グループから区別する条件を強調するグラフとして分類結果を表示します。 ツリーの個々のサブセットにドリルダウンして、基になるデータを取得することもできます。  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>モデルの調査  
  デシジョン ツリー アルゴリズムに基づくモデルは、興味深い情報を多数持っています。 [**参照**] ウィンドウには、次のタブとペインがあり、グラフを使用してパターンを学習し、結果を予測するのに役立ちます。  
@@ -87,13 +86,13 @@ ms.locfileid: "66064666"
   
      網掛けの濃さを見るだけで、いくつかのグループに注目して、その詳細データを比較することができます。 たとえば、次のようなグループは自転車を購入する確率がかなり高くなっています。  
   
-    -   Age >= 32、 \< 53、および年収 >= 26000、子 = 0  
+    -   Age >= 32、 \< 53 and Yearly Income > = 26000、および Children = 0  
   
          ケースの合計: 1150  
   
          自転車購入者の確率: 18%  
   
-    -   Age >= 32、 \< 53、および年収 >= 26000 および子 not = 0 および配偶の状態 = ' Single '  
+    -   Age >= 32、 \< 53 and Yearly Income > = 26000、子 not = 0 および配偶の状態 = ' Single '  
   
          ケースの合計: 402  
   

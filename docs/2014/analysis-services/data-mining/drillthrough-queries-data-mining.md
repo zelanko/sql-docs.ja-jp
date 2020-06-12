@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca74fe9ec36262130e01a58280f9d966c35c3485
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21e8c6f7cb6938e629be9d252c208c61c04d17d8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084551"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522510"
 ---
 # <a name="drillthrough-queries-data-mining"></a>ドリルスルー クエリ (データ マイニング)
   *ドリルスルー クエリ* を使用すると、マイニング モデルにクエリを送信して、基になるケースまたは構造データから詳細を取得できます。 ドリルスルーは、モデルのトレーニングに使用されたケースとテストに使用されたケースを比較する際や、ケース データの詳細を確認する際に役立ちます。  
@@ -69,7 +68,7 @@ ms.locfileid: "66084551"
 -   ドリルスルーがマイニング構造で許可されておらず、マイニング モデルでは許可されている場合、マイニング構造の情報は表示できず、モデル ケースの情報のみを表示できます。  
   
 ###  <a name="security-issues-for-drillthrough"></a><a name="bkmk_Security"></a> ドリルスルーのセキュリティに関する問題  
- モデルから構造ケースにドリルスルーする場合は、マイニング構造とマイニングモデルの両方で[Allowdrillthrough スルー](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl)プロパティがに`True`設定されていることを確認する必要があります。 さらに、構造とモデルの両方に対するドリルスルー権限を持つロールのメンバーである必要があります。 ロールを作成する方法については、「[ロール デザイナー (Analysis Services - 多次元データ)](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx)」を参照してください。 参照してください。  
+ モデルから構造ケースにドリルスルーする場合は、マイニング構造とマイニングモデルの両方で[Allowdrillthrough スルー](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl)プロパティがに設定されていることを確認する必要があり `True` ます。 さらに、構造とモデルの両方に対するドリルスルー権限を持つロールのメンバーである必要があります。 ロールを作成する方法については、「[ロール デザイナー (Analysis Services - 多次元データ)](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx)」を参照してください。 参照してください。  
   
  ドリルスルー権限は、構造およびモデルで個別に設定されます。 構造で権限が与えられていない場合でも、モデル権限があればモデルからドリルスルーを行うことができます。 構造のドリルスルー権限がある場合は、[StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 関数を使用して、構造列をモデルからドリルスルー クエリに含めることもできます。  
   

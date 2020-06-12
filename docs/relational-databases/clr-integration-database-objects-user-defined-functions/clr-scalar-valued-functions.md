@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a44187fc41409d149501c4cda7e99817be034a12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c9f5fe3a3fa9a58b8c1a103bcb2cf359d842190
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488432"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83806766"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR スカラー値関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  SVF (スカラー値関数) は、文字列値、整数値、ビット値などの単一値を返します。 スカラー値のユーザー定義関数は、任意の .NET Framework プログラミング言語を使用してマネージコードで作成できます。 これらの関数からは、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードや他のマネージド コードにアクセスできます。 CLR 統合の利点とマネージコードと[!INCLUDE[tsql](../../includes/tsql-md.md)]の使い分けの詳細については、「 [Clr 統合の概要](../../relational-databases/clr-integration/clr-integration-overview.md)」を参照してください。  
+  SVF (スカラー値関数) は、文字列値、整数値、ビット値などの単一値を返します。 スカラー値のユーザー定義関数は、任意の .NET Framework プログラミング言語を使用してマネージコードで作成できます。 これらの関数からは、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードや他のマネージド コードにアクセスできます。 CLR 統合の利点とマネージコードとの使い分けの詳細については [!INCLUDE[tsql](../../includes/tsql-md.md)] 、「 [clr 統合の概要](../../relational-databases/clr-integration/clr-integration-overview.md)」を参照してください。  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR スカラー値関数の要件  
- .NET Framework SVF は、.NET Framework アセンブリのクラスのメソッドとして実装されます。 入力パラメーターと SVF から返される型は、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サポートされている任意のスカラーデータ型にすることができます。ただし、 **varchar**、 **char**、 **rowversion**、 **text**、 **ntext**、 **image**、 **timestamp**、 **table**、 **cursor**は除きます。 SVF では、実装メソッドの戻り値のデータ型が上記のいずれかの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型になるようにする必要があります。 型変換の詳細については、「 [CLR パラメーターデータのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」を参照してください。  
+ .NET Framework SVF は、.NET Framework アセンブリのクラスのメソッドとして実装されます。 入力パラメーターと SVF から返される型は、でサポートされている任意のスカラーデータ型にすることができます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。ただし、 **varchar**、 **char**、 **rowversion**、 **text**、 **ntext**、 **image**、 **timestamp**、 **table**、 **cursor**は除きます。 SVF では、実装メソッドの戻り値のデータ型が上記のいずれかの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型になるようにする必要があります。 型変換の詳細については、「 [CLR パラメーターデータのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」を参照してください。  
   
  .NET Framework の言語で .NET Framework を実装する場合、 **sqlfunction**カスタム属性を指定して、関数に関する追加情報を含めることができます。 **Sqlfunction**属性は、関数がデータにアクセスしたり、変更したりするかどうか、決定的であるかどうか、および関数が浮動小数点演算を必要とするかどうかを示します。  
   
@@ -81,17 +81,17 @@ Public Class T
 End Class  
 ```  
   
- コードの1行目では、ADO.NET 名前空間にアクセスするために、**属性と system.string**にアクセスするために**Microsoft. SqlServer. サーバー**を参照しています。 (この名前空間には、 **SqlClient**、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の .NET Framework Data Provider が含まれています)。  
+ コードの1行目では、ADO.NET 名前空間にアクセスするために、**属性と system.string**にアクセスするために**Microsoft. SqlServer. サーバー**を参照しています。 (この名前空間には、 **SqlClient**、の .NET Framework Data Provider が含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます)。  
   
  次に、関数は**sqlfunction**カスタム属性を受け取ります。これは、 **Microsoft の SqlServer**名前空間にあります。 このカスタム属性は、UDF (ユーザー定義関数) がサーバーのデータを読み取るときにインプロセス プロバイダーを使用するかどうかを示します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、UDF によるデータの更新、挿入、または削除を許可していません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、インプロセス プロバイダーを使用しない UDF の実行を最適化できます。 これは、 **dataaccesskind**を**dataaccesskind**に設定することによって示されます。 その次の行で、対象のメソッドは public static (Visual Basic .NET では shared) になっています。  
   
- **SqlServer**名前空間にある**sqlcontext**クラスは、既に設定されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスへの接続を使用して**SqlCommand**オブジェクトにアクセスできます。 ここでは使用しませんが、現在のトランザクションコンテキストは **、system.string アプリケーションプログラミング**インターフェイス (API) を介して使用することもできます。  
+ **SqlServer**名前空間にある**sqlcontext**クラスは、 **SqlCommand** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 既に設定されているインスタンスへの接続を使用して SqlCommand オブジェクトにアクセスできます。 ここでは使用しませんが、現在のトランザクションコンテキストは **、system.string アプリケーションプログラミング**インターフェイス (API) を介して使用することもできます。  
   
  関数本体のコードのほとんどの行は、 **system.string 名前空間**にある型を使用するクライアントアプリケーションを記述した開発者を対象としています。  
   
  [C#]  
   
-```  
+```csharp
 using(SqlConnection conn = new SqlConnection("context connection=true"))   
 {  
    conn.Open();  
@@ -103,7 +103,7 @@ using(SqlConnection conn = new SqlConnection("context connection=true"))
   
  [Visual Basic]  
   
-```  
+```vb
 Using conn As New SqlConnection("context connection=true")  
    conn.Open()  
    Dim cmd As New SqlCommand( _  
@@ -132,11 +132,11 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 >  `/t:library`は、実行可能ファイルではなくライブラリを生成することを示しています。 実行可能ファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には登録できません。  
   
 > [!NOTE]  
->  **/Clr: pure**でコンパイルされた Visual C++ データベースオブジェクトは、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の実行がサポートされていません。 このようなデータベース オブジェクトには、スカラー値関数などがあります。  
+>  **/Clr: pure**でコンパイルされた Visual C++ データベースオブジェクトは、での実行がサポートされていません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 このようなデータベース オブジェクトには、スカラー値関数などがあります。  
   
  アセンブリと UDF を登録する [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリと呼び出しの例を次に示します。  
   
-```  
+```sql
 CREATE ASSEMBLY FirstUdf FROM 'FirstUdf.dll';  
 GO  
   

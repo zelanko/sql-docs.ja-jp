@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 622f575541d1a111e5cda6a28617ad400a977292
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59e4a78c9432c5ba8f75eb7bfaa6ab46a0b052cf
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892804"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670276"
 ---
 # <a name="export-dmx"></a>エクスポート (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +34,13 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  *オブジェクト名*  
  任意。 エクスポートするオブジェクトの名前。  
   
- */db*  
+ *ファイル名*  
  文字列としてエクスポートするファイルの名前と場所です。  
   
 ## <a name="remarks"></a>Remarks  
  ステートメントがマイニング モデルを指定する場合、結果ファイルは関連するマイニング構造も含みます。 ステートメントで**依存関係が**指定されている場合は、オブジェクトを処理するために必要なすべてのオブジェクト (たとえば、データソースとデータソースビュー) が abf ファイルに含まれます。  
   
- データベースから[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]オブジェクトをエクスポートまたはインポートするには、データベースまたはサーバーの管理者である必要があります。  
+ データベースからオブジェクトをエクスポートまたはインポートするには、データベースまたはサーバーの管理者である必要があり [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。  
   
 ## <a name="export-mining-structure-example"></a>マイニング構造のエクスポートの例  
  次の例は、Targeted Mailing と Forecasting マイニング構造、および Association マイニング モデルを、指定したファイルの場所にエクスポートします。 Association モデルは Market Basket マイニング構造の一部であるため、例では Market Basket 構造もエクスポートします。 マーケットバスケットマイニング構造の一部として存在する可能性があるその他のマイニングモデルは、マイニング**構造**ではなく、**マイニングモデル**を使用してエクスポートされたため、エクスポートされません。  

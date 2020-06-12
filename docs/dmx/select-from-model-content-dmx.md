@@ -1,21 +1,21 @@
 ---
-title: '[モデル&lt;&gt;から] を選択します。コンテンツ (DMX) |Microsoft Docs'
+title: '[モデルから] を選択し &lt; &gt; ます。コンテンツ (DMX) |Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0fe7de8ce6ee6f40d0d50ce76a148dc3d000a808
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892831"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669591"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>[モデル&lt;&gt;から] を選択します。コンテンツ (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>[モデルから] を選択し &lt; &gt; ます。コンテンツ (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   指定されたデータマイニングモデルのマイニングモデルスキーマ行セットを返します。  
@@ -46,7 +46,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  任意。 スカラー値を返す式。  
   
 ## <a name="remarks"></a>Remarks  
- **SELECT FROM** _ \<model>_ **。CONTENT**ステートメントでは、各アルゴリズムに固有のコンテンツが返されます。 たとえば、カスタムアプリケーションでのアソシエーションルールモデルのすべてのルールの説明を使用することができます。 **[モデルから\<選択]> を使用できます。** モデルの NODE_RULE 列の値を返すコンテンツステートメント。  
+ **SELECT FROM** _ \< model>_ **。CONTENT**ステートメントでは、各アルゴリズムに固有のコンテンツが返されます。 たとえば、カスタムアプリケーションでのアソシエーションルールモデルのすべてのルールの説明を使用することができます。 **[モデルから選択]> を使用でき \< ます。** モデルの NODE_RULE 列の値を返すコンテンツステートメント。  
   
  次の表に、マイニングモデルコンテンツに含まれる列を示します。  
   
@@ -74,7 +74,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |NODE_DISTRIBUTION|ノード内の値の分布を表す統計を含むテーブル。|  
 |NODE_SUPPORT|このノードがサポートされているケースの数。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のコードは、対象メーリングマイニング構造に追加されたデシジョンツリーモデルの親ノードの ID を返します。  
   
 ```  

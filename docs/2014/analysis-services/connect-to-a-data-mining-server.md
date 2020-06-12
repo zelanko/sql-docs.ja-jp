@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e7fca367c72aaff5f02280829740942a36915ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087347"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527238"
 ---
 # <a name="connect-to-a-data-mining-server"></a>データ マイニング サーバーへの接続
   ![[接続] ボタン](media/misc-connection.gif "[接続] ボタン")  
   
- [**接続**] ボタンをクリックして既存の接続を選択するか、のインスタンスへの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]新しい接続を作成します。  
+ [**接続**] ボタンをクリックして既存の接続を選択するか、のインスタンスへの新しい接続を作成し [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。  
   
  **サーバーへの接続が必要な理由**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66087347"
   
  **"接続が見つかりませんでした" というメッセージが表示できます。**  
   
- ボタンの下部のテキストが [**接続なし**] と表示されている場合は、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベースへの接続が作成されていないか、接続に失敗したことを意味します。 Access など他のソースからの Excel 内のデータの作業は継続できますが、データ マイニング モデルの作成や予測クエリの実行のためにはアクティブな接続が必要です。  
+ ボタンの下部のテキストが [**接続なし**] と表示されている場合は、データベースへの接続が作成されていないか、接続に失敗したことを意味 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] します。 Access など他のソースからの Excel 内のデータの作業は継続できますが、データ マイニング モデルの作成や予測クエリの実行のためにはアクティブな接続が必要です。  
   
  **サーバーを使用するためのアクセス許可がないとします。**  
   

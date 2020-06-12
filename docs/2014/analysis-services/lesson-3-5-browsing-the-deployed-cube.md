@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9035079fc94e0e39344fa89d9e7cf1b6e77fb8de
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493986"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543404"
 ---
 # <a name="browsing-the-deployed-cube"></a>配置したキューブの表示
   この実習では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブを表示します。 分析で複数のディメンションにわたってメジャーを比較するため、データの参照には Excel のピボットテーブルを使用します。 ピボットテーブルを使用すると、顧客、日付、および製品情報を異なる軸に配置して、特定の期間、顧客の人口統計、および製品ラインにわたって見たときに、Internet Sales がどのように変化するかを確認できます。  
   
 ### <a name="to-browse-the-deployed-cube"></a>配置したキューブを表示するには  
   
-1.  のキューブデザイナー [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]に切り替えるには、ソリューションエクスプローラーの [**キューブ**] フォルダーにある [ ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]チュートリアル**] キューブをダブルクリックします。  
+1.  のキューブデザイナーに切り替えるには、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] ソリューションエクスプローラーの [**キューブ**] フォルダーにある [ ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] チュートリアル**] キューブをダブルクリックします。  
   
 2.  **[ブラウザー]** タブを開き、キューブ デザイナーのツール バーにある **[再接続]** ボタンをクリックします。  
   

@@ -1,5 +1,6 @@
 ---
 title: SqlXmlCommand オブジェクト (SQLXML)
+description: SqlXmlCommand オブジェクトのメソッドとプロパティについて説明します。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -31,12 +32,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb307599c48c72697f696e78eb7ed988dc03ca37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afebd1c659015e3daf4a357b12871687207b607e
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252653"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306161"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML マネージド クラス - SqlXmlCommand オブジェクト
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "75252653"
 public SqlXmlCommand(string cnString)  
 ```  
   
- ここ`cnString`で、は、サーバー、データベース、およびログイン情報を識別する ADO または OLEDB の接続文字列です`Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`(例:)。  
+ ここで、 `cnString` は、サーバー、データベース、およびログイン情報を識別する ADO または OLEDB の接続文字列です (例:) `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` 。  
   
  接続文字列では、`Provider` に SQLOLEDB を指定する必要があります。プロバイダーの文字列に `Data Provider` は使用できません。  
   
@@ -65,7 +66,7 @@ public SqlXmlCommand(string cnString)
  クエリ結果を既存のストリームに書き込みます。 このメソッドは、結果を追加する必要があるストリームがある場合に便利です (たとえば、クエリ結果が Httpresponse.cache に書き込まれるようにする場合など)。 実際のサンプルについては、「 [SQL クエリの実行 &#40;SQLXML マネージクラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)」を参照してください。  
   
  XmlReader ExecuteXmlReader ()  
- XmlReader オブジェクトを返します。 このメソッドを使用すると、XmlReader オブジェクトのデータを直接操作したり、System.xml の chainable アーキテクチャにプラグインしたりすることができます。 詳細については、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework のドキュメントを参照してください。 実際のサンプルについては、「 [ExecuteXMLReader メソッドを使用した SQL クエリの実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)」を参照してください。  
+ XmlReader オブジェクトを返します。 このメソッドを使用すると、XmlReader オブジェクトのデータを直接操作したり、System.Xml の chainable アーキテクチャにプラグインしたりすることができます。 詳細については、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework のドキュメントを参照してください。 実際のサンプルについては、「 [ExecuteXMLReader メソッドを使用した SQL クエリの実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)」を参照してください。  
   
  また、次の追加メソッドもサポートしています。  
   
@@ -75,7 +76,7 @@ public SqlXmlCommand(string cnString)
  void ClearParameters ()  
  指定したコマンド オブジェクトに作成されたパラメーターを消去します。 このメソッドは、同一のコマンド オブジェクトで複数のクエリを実行する場合に便利です。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  SqlXmlCommand オブジェクトは、次のプロパティもサポートしています。  
   
  ClientSideXml  

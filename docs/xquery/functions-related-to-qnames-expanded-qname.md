@@ -1,5 +1,6 @@
 ---
 title: ems-QName (XQuery) |Microsoft Docs
+description: 展開された QName () 関数を使用して、QName の名前空間 URI とローカル名の部分を返す方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 295427f0b5b7dc9fe42ad363bb95ebab0a1be1eb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004585"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689335"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>QNames に関係する関数 - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,12 +46,12 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   指定された *$paramLocal*値が Xs: NCName 型の正しい構文形式でない場合、空のシーケンスが返され、動的なエラーを表します。  
   
--   で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、Xs: QName 型から他の型への変換はサポートされていません。 このため、**拡張 QName ()** 関数は XML の構築では使用できません。 たとえば、`<e> expanded-QName(...) </e>` など、ノードを構築する場合、型指定なしの値を使用する必要があります。 これは、`expanded-QName()` で返される xs:QName の値を xdt:untypedAtomic に変換する必要性を意味します。 ただし、これはサポートされていません。 ソリューションは、このトピックで後述する例で提供されています。  
+-   では、xs: QName 型から他の型への変換はサポートされていません [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 このため、**拡張 QName ()** 関数は XML の構築では使用できません。 たとえば、`<e> expanded-QName(...) </e>` など、ノードを構築する場合、型指定なしの値を使用する必要があります。 これは、`expanded-QName()` で返される xs:QName の値を xdt:untypedAtomic に変換する必要性を意味します。 ただし、これはサポートされていません。 ソリューションは、このトピックで後述する例で提供されています。  
   
--   既存の QName 型の値を変更または比較することができます。 たとえば、は`/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` 、要素の値 <`e`> を、展開された**qname ()** 関数によって返された qname と比較します。  
+-   既存の QName 型の値を変更または比較することができます。 たとえば、は、 `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` 要素の値 <`e`> を、展開された**qname ()** 関数によって返された qname と比較します。  
   
-## <a name="examples"></a>使用例  
- このトピックでは、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
+## <a name="examples"></a>例  
+ このトピックでは、データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>A. QName 型ノードの値を置換する  
  この例では、QName 型の要素ノードの値を変更する方法を示しています。 この例では、次の処理を実行します。  
@@ -98,7 +99,7 @@ go
 </Root>   
 ```  
   
- 次のクエリでは、次`ElemQN`に示すように、xml データ型の**modify ()** メソッドおよび xml DML の replace 値を使用して、<> 要素の値が置き換えられます。  
+ 次のクエリでは、次に `ElemQN` 示すように、xml データ型の**modify ()** メソッドおよび xml DML の replace 値を使用して、<> 要素の値が置き換えられます。  
   
 ```  
 -- the value.  
@@ -113,7 +114,7 @@ SELECT * from T
 go  
 ```  
   
- 結果は次のとおりです。 QName 型の> <`ElemQN`要素に新しい値が追加されていることに注意してください。  
+ 結果は次のとおりです。 `ElemQN`QName 型の> <要素に新しい値が追加されていることに注意してください。  
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
@@ -132,7 +133,7 @@ go
 ```  
   
 ### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. 拡張 QName () 関数を使用する場合の制限事項に対処する  
- **拡張 QName**関数は、XML の構築では使用できません。 次の例を使って説明します。 この制限を回避するために、この例では最初にノードを挿入してから、そのノードを変更しています。  
+ **拡張 QName**関数は、XML の構築では使用できません。 次に例を示します。 この制限を回避するために、この例では最初にノードを挿入してから、そのノードを変更しています。  
   
 ```  
 -- if exists drop the table T  
@@ -157,7 +158,7 @@ SELECT *
 FROM T  
 ```  
   
- 次の試行では、 `root`別の <> 要素が追加されますが、これは失敗します。これは、拡張 QName () 関数が XML 構築でサポートされていないためです。  
+ 次の試行では、別の <`root`> 要素が追加されますが、これは失敗します。これは、拡張 QName () 関数が XML 構築でサポートされていないためです。  
   
 ```  
 update T SET xmlCol.modify('  
@@ -165,7 +166,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- これを解決するには、まず <`root`> 要素の値を持つインスタンスを挿入し、それを変更します。 この例では、<`root`> 要素が挿入されるときに nil 初期値が使用されます。 この例の XML スキーマコレクションでは、<`root`> 要素の nil 値が許可されています。  
+ これを解決するには、まず <> 要素の値を持つインスタンスを挿入 `root` し、それを変更します。 この例では、<> 要素が挿入されるときに nil 初期値が使用され `root` ます。 この例の XML スキーマコレクションでは、<> 要素の nil 値が許可されて `root` います。  
   
 ```  
 update T SET xmlCol.modify('  
@@ -186,7 +187,7 @@ go
   
  `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
- 次のクエリに示すように、QName 値を比較できます。 このクエリは、値が`root` **ems ()** 関数によって返された qname 型の値と一致する <> 要素だけを返します。  
+ 次のクエリに示すように、QName 値を比較できます。 このクエリは、値が `root` **ems ()** 関数によって返された qname 型の値と一致する <> 要素だけを返します。  
   
 ```  
 SELECT xmlCol.query('  

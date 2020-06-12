@@ -12,12 +12,12 @@ ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c1455e4330ef4d9c8c0c6e3e07e285cf548c7b4
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791906"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858917"
 ---
 # <a name="availability-replica-properties-general-page"></a>可用性レプリカのプロパティ ([全般] ページ)
   このダイアログ ボックスには、可用性レプリカのプロパティが表示されます。  
@@ -29,15 +29,15 @@ ms.locfileid: "62791906"
   
 -   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **可用性グループ名**  
  可用性グループの名前。 これはユーザー指定の名前であり、Windows Server フェールオーバー クラスター (WSFC) 内で一意であることが必要です。  
   
  **サーバーインスタンス**  
  このレプリカをホストし、既定ではないインスタンスの場合はレプリカのインスタンス名もホストしている、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスのサーバー名。  
   
- **Role**  
- **1 次式**  
+ **ロール**  
+ **プライマリ**  
  現在、プライマリ レプリカです。  
   
  **セカンダリ**  
@@ -46,10 +46,10 @@ ms.locfileid: "62791906"
  **[解決中]**  
  現在、レプリカのロールは、プライマリ ロールとセカンダリ ロールのどちらかに解決中です。  
   
- **[可用性モード]**  
+ **可用性モード**  
  レプリカの可用性モード。次のいずれかです。  
   
- **[非同期コミット]**  
+ **非同期コミット**  
  プライマリ レプリカは、セカンダリがログをディスクに書き込むのを待機することなくトランザクションをコミットできます。  
   
  **同期コミット**  
@@ -73,7 +73,7 @@ ms.locfileid: "62791906"
  プライマリ レプリカのデータベースに対するすべての接続が許可されます。 これが既定の設定です。  
   
  **[読み取り/書き込みの接続を許可]**  
- アプリケーションの目的の接続プロパティが**ReadOnly**に設定されている接続は許可されません。 "アプリケーションの目的" プロパティが**ReadWrite**に設定されている場合、または "アプリケーションの目的" 接続プロパティが設定されていない場合は、接続が許可されます。  
+ Application Intent 接続プロパティが **ReadOnly** に設定されている接続は許可されません。 "アプリケーションの目的" プロパティが**ReadWrite**に設定されている場合、または "アプリケーションの目的" 接続プロパティが設定されていない場合は、接続が許可されます。  
   
  **読み取り可能なセカンダリ**  
  セカンダリ ロールを実行している (つまりセカンダリ レプリカとして機能している) 可用性レプリカがクライアントからの接続を受け入れることができるかどうか。以下のいずれかです。  

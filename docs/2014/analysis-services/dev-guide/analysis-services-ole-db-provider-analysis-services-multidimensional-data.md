@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: cdeecd50-1d91-4162-a4a2-01c7799b02a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0af68d7aa25d00f257399ade415e0287dd275fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0348a23a6def4c3cdbd083354083947ce1390b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62732188"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528666"
 ---
 # <a name="analysis-services-ole-db-provider-analysis-services---multidimensional-data"></a>Analysis Services OLE DB Provider (Analysis Services - 多次元データ)
-  Analysis Services OLE DB Provider は、と[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]対話するアプリケーションのインターフェイスです。 これを使用して、多次元データを扱うクライアント アプリケーションを構築します。 このプロバイダーは、多次元データとリレーショナル データのオンラインやオフラインでのデータ マイニング分析用のメソッドを提供しており、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に含まれています。 サードパーティのクライアント アプリケーションにより、再配布できます。  
+  Analysis Services OLE DB Provider は、と対話するアプリケーションのインターフェイスです [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 これを使用して、多次元データを扱うクライアント アプリケーションを構築します。 このプロバイダーは、多次元データとリレーショナル データのオンラインやオフラインでのデータ マイニング分析用のメソッドを提供しており、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に含まれています。 サードパーティのクライアント アプリケーションにより、再配布できます。  
   
  キューブやデータ マイニング モデルへの接続、キューブやデータ マイニング モデルへのクエリ、スキーマ情報の取得などのタスクを実行するために [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] と相互作用する場合、基本的には Analysis Services OLE DB Provider が使用されます。  
   

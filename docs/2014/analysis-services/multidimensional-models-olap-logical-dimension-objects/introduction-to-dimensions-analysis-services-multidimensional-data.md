@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e1a78735cd5aee5ebc87adaac6fab48bb4e183d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8df85723676df5f9fb1475465c8f7585384013ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387902"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545124"
 ---
 # <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>ディメンションの概要 (Analysis Services - 多次元データ)
-  すべての[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Microsoft ディメンションは、データソースビュー内のテーブルまたはビューの列に基づいた属性のグループです。 ディメンションには、キューブとは無関係に存在するもの、複数のキューブ内で使用できるもの、および 1 つのキューブ内で複数回使用できるものがあり、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス間でリンクできます。 キューブとは無関係に存在するディメンションをデータベース ディメンションといい、キューブ内のデータベース ディメンションとデータベース ディメンションのインスタンスをキューブ ディメンションといいます。  
+  すべての Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ディメンションは、データソースビュー内のテーブルまたはビューの列に基づいた属性のグループです。 ディメンションには、キューブとは無関係に存在するもの、複数のキューブ内で使用できるもの、および 1 つのキューブ内で複数回使用できるものがあり、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス間でリンクできます。 キューブとは無関係に存在するディメンションをデータベース ディメンションといい、キューブ内のデータベース ディメンションとデータベース ディメンションのインスタンスをキューブ ディメンションといいます。  
   
 ## <a name="dimension-based-on-a-star-schema-design"></a>スター スキーマ デザインに基づくディメンション  
  ディメンションの構造は、主に、基になるディメンション テーブルの構造によって決まります。 最も単純な構造をスター スキーマといいます。このスキーマでは、各ディメンションが、主キーと外部キーのリレーションシップによってファクト テーブルに直接リンクされている 1 つのディメンション テーブルに基づいています。  
   
- 次の[!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)]図は、サンプルデータベースのサブセクションを示しています。このサブセクションでは、 **FactResellerSales**ファクトテーブルが**DimReseller**と**DimPromotion**の2つのディメンションテーブルに関連付けられています。 **FactResellerSales**ファクトテーブルの**ResellerKey**列は、 **DimReseller**ディメンションテーブルの**ResellerKey**主キー列に対する外部キーリレーションシップを定義します。 同様に、 **FactResellerSales**ファクトテーブルの**PromotionKey**列は、 **DimPromotion**ディメンションテーブルの**PromotionKey**主キー列に対する外部キーリレーションシップを定義します。  
+ 次の図は、サンプルデータベースのサブセクションを示しています。このサブセクション [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] では、 **FactResellerSales**ファクトテーブルが**DimReseller**と**DimPromotion**の2つのディメンションテーブルに関連付けられています。 **FactResellerSales**ファクトテーブルの**ResellerKey**列は、 **DimReseller**ディメンションテーブルの**ResellerKey**主キー列に対する外部キーリレーションシップを定義します。 同様に、 **FactResellerSales**ファクトテーブルの**PromotionKey**列は、 **DimPromotion**ディメンションテーブルの**PromotionKey**主キー列に対する外部キーリレーションシップを定義します。  
   
  ![ファクト ディメンションのリレーションシップの論理スキーマ](../../analysis-services/dev-guide/media/dimfactrelationship.gif "ファクト ディメンションのリレーションシップの論理スキーマ")  
   

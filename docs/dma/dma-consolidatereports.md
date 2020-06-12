@@ -14,18 +14,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 456d71e2abccdddb4b14c06dc2ad9b2e4ce9a032
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: e7a3c58612761e046b71cddf35c87680bb6e9528
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886169"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868381"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>DMA で企業を評価し評価レポートを統合する
 
 次のステップバイステップの手順では、Data Migration Assistant を使用して、オンプレミスの SQL Server または Azure Vm で実行されている SQL Server のアップグレード、または Azure SQL Database への移行について、適切なスケール評価を実行する方法について説明します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - DMA を開始するネットワーク上のツールコンピューターを指定します。 このコンピューターが SQL Server ターゲットに接続されていることを確認します。
 - 次をダウンロードし、インストールします。
@@ -33,7 +33,7 @@ ms.locfileid: "82886169"
   - [PowerShell](https://aka.ms/wmf5download) v1.0 以降。
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) version 4.5 以降。
   - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 以降。
-  - [Power BI デスクトップ](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。
+  - [Power BI デスクトップ](/power-bi/fundamentals/desktop-get-the-desktop)。
   - [Azure PowerShell モジュール](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - ダウンロードと抽出:
   - [DMA は Power BI テンプレートを報告](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip)します。
@@ -263,7 +263,7 @@ Power BI レポートに表示される詳細については、次のセクシ�
 
 - InstanceDatabase
 - ChangeCategory
-- Title
+- タイトル
 - ObjectType
 - ImpactedObjectName
 

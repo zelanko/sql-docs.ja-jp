@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 668878e93d72c9c0b276b95ad090c8570f3fc936
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b84140770b15d6b7b3640cdc0c845c1c1d8554b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725196"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546037"
 ---
 # <a name="multidimensional-model-programming"></a>多次元モデルのプログラミング
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、Analysis Services インスタンスおよびそれによって提供される多次元データベースに対してプログラミングを行うために使用できる複数の API が提供されています。 ここでは、Analysis Services 多次元ソリューションを使用してカスタム アプリケーションを作成する際に使用できる方法について説明します。 この情報を使って、特定のプロジェクトの要件に最も適したプログラミング インターフェイスを選ぶことができます。 Analysis Services 開発プロジェクトは、Windows プラットフォームまたは HTTP アクセスをサポートする他のプラットフォーム上で実行されるマネージド コードまたは非マネージド コードをベースにすることができます。  
@@ -37,6 +36,6 @@ ms.locfileid: "62725196"
   
 ## <a name="see-also"></a>参照  
  [テーブルモデルのプログラミング](../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [データ マイニングのプログラミング](../dev-guide/data-mining-programming.md)  
+ [データマイニングのプログラミング](../dev-guide/data-mining-programming.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 554ea10e-b0b0-4987-add8-19113d824787
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6618a7c5023f140fdaee0b512c797c01586c62ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3739728631ae0273150c010600f099623bb98c2a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082339"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528890"
 ---
 # <a name="define-a-new-attribute-manually"></a>新しい属性の手動による定義
   この手順では、ディメンションデザイナーの [**属性**] ペインを使用して、ディメンションに新しい属性を作成する方法について説明します。  
@@ -31,7 +30,7 @@ ms.locfileid: "66082339"
   
      [**属性**] ペインを右クリックし、[**属性の表示**] をポイントして、[**グリッド**] をクリックします。  
   
-3.  グリッドの最後の行までスクロールし、[ ** \<新しい属性>**] をクリックします。  
+3.  グリッドの最後の行までスクロールし、をクリックし **\<new attribute>** ます。  
   
 4.  属性の名前を入力して `Name` プロパティを設定し、&lt;localizedText&gt;Enter&lt;/localizedText&gt; キーを押します。  
   

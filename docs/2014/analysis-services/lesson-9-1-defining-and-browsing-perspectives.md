@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e55e6833b1fdeb600ddecdbf70f615565a38bb05
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493770"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542264"
 ---
 # <a name="defining-and-browsing-perspectives"></a>パースペクティブの定義と表示
   パースペクティブを使用すれば、特定の目的に従ってキューブの表示を単純化できます。 既定では、ユーザーはアクセスする権限のあるキューブ内のすべての要素を表示できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブ全体の表示時に表示されるものが、キューブの既定のパースペクティブです。 キューブ全体を表示すると、操作が非常に複雑になる可能性があります。特に、ビジネス インテリジェンスやレポートの要件に応じてキューブのごく一部分しか操作する必要のないユーザーにとっては複雑すぎます。  
@@ -41,7 +40,7 @@ ms.locfileid: "69493770"
   
      ![[パースペクティブ名] 列の新しいパースペクティブ](../../2014/tutorials/media/l9-perspectives-2.gif "[パースペクティブ名] 列の新しいパースペクティブ")  
   
-3.  パースペクティブ名をに`Internet Sales`変更します。  
+3.  パースペクティブ名をに変更 `Internet Sales` します。  
   
 4.  次の行で、DefaultMeasure を **[Internet Sales-Sales Amount]** に設定します。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "69493770"
   
 1.  **[パースペクティブ]** タブのツール バーの **[新しいパースペクティブ]** ボタンをクリックします。  
   
-2.  新しいパースペクティブの名前をに`Reseller Sales`変更します。  
+2.  新しいパースペクティブの名前をに変更し `Reseller Sales` ます。  
   
 3.  既定のメジャーとして **[Reseller Sales-Sales Amount]** を設定します。  
   
@@ -131,7 +130,7 @@ ms.locfileid: "69493770"
   
 1.  **[パースペクティブ]** タブのツール バーの **[新しいパースペクティブ]** ボタンをクリックします。  
   
-2.  新しいパースペクティブの名前をに`Sales Summary`変更します。  
+2.  新しいパースペクティブの名前をに変更し `Sales Summary` ます。  
   
     > [!NOTE]  
     >  計算されるメジャーを既定のメジャーとして指定することはできません。  
@@ -182,7 +181,7 @@ ms.locfileid: "69493770"
   
 7.  メタデータ ペインで、 **[Measures]** を展開します。  
   
-     メジャーグループのみが表示され、**インターネット GPM**と、計算される**すべての製品の internet Sales 比率**が計算されるメンバーになります。 `Internet Sales`  
+     `Internet Sales`メジャーグループのみが表示され、**インターネット GPM**と、計算される**すべての製品の internet Sales 比率**が計算されるメンバーになります。  
   
 8.  モデルで再度 Excel を選択します。 [`Sales Summary`] を選択します。  
   

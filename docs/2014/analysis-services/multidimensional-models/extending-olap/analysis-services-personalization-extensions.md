@@ -11,51 +11,50 @@ helpviewer_keywords:
 ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cddb6b604e0fc397e6640637db7320898d2beb5c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62726118"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546754"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services のパーソナル化拡張機能
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能は、プラグインアーキテクチャを実装するという概念の基盤です。 プラグイン アーキテクチャでは、新しいキューブ オブジェクトや機能を動的に開発し、他の開発者と簡単に共有することができます。 そのため、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能により、次のことを実現できる機能が提供されます。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能は、プラグインアーキテクチャを実装するという概念の基盤です。 プラグイン アーキテクチャでは、新しいキューブ オブジェクトや機能を動的に開発し、他の開発者と簡単に共有することができます。 そのため、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] パーソナル化拡張機能により、次のことを実現できる機能が提供されます。  
   
--   **動的な設計と配置**パーソナル化拡張機能を設計[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]して展開するとすぐに、ユーザーは次のユーザーセッションの開始時にオブジェクトと機能にアクセスできます。  
+-   **動的な設計と配置**パーソナル化拡張機能を設計して展開するとすぐに [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、ユーザーは次のユーザーセッションの開始時にオブジェクトと機能にアクセスできます。  
   
--   **インターフェイスの独立**パーソナル化拡張機能の[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]作成に使用するインターフェイスに関係なく、ユーザーは任意のインターフェイスを使用してオブジェクトや機能にアクセスできます。  
+-   **インターフェイスの独立**パーソナル化拡張機能の作成に使用するインターフェイスに関係なく [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、ユーザーは任意のインターフェイスを使用してオブジェクトや機能にアクセスできます。  
   
--   **セッションコンテキスト** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]のパーソナル化拡張機能は、既存のインフラストラクチャ内の永続的なオブジェクトではなく、キューブを再処理する必要がありません。 この機能は、ユーザーがデータベースに接続したときにそのユーザー用に公開および作成され、そのユーザー セッションの間だけ使用できます。  
+-   **セッションコンテキスト** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能は、既存のインフラストラクチャ内のパーマネントオブジェクトではなく、キューブを再処理する必要はありません。 この機能は、ユーザーがデータベースに接続したときにそのユーザー用に公開および作成され、そのユーザー セッションの間だけ使用できます。  
   
--   **迅速な配布**この[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]拡張機能を検索する場所や方法を詳細に説明する必要なく、パーソナル化拡張機能を他のソフトウェア開発者と共有します。  
+-   **迅速な配布**[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]この拡張機能を検索する場所や方法を詳細に説明する必要なく、パーソナル化拡張機能を他のソフトウェア開発者と共有します。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のパーソナル化拡張機能の用途はさまざまです。 たとえば、会社の売上にさまざまな通貨が使用されているとします。 この場合、キューブにアクセスしている人物の現地通貨で連結売上を返す計算されるメンバーを作成します。 このメンバーをパーソナル化拡張機能として作成します。 その後、この計算されるメンバーをユーザー グループと共有します。 共有すると、ユーザーはサーバーに接続するとすぐに計算されるメンバーにアクセスできるようになります。 ユーザーは、計算されるメンバーの作成に使用されたインターフェイスと同じインターフェイスを使用していなくてもアクセスできます。  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能は、既存のマネージアセンブリアーキテクチャに対する単純で洗練された[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer>変更であり、オブジェクトモデル、多次元式 (MDX) 構文、およびスキーマ行セット全体で公開されます。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能は、既存のマネージアセンブリアーキテクチャに対する単純で洗練された変更であり、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> オブジェクトモデル、多次元式 (MDX) 構文、およびスキーマ行セット全体で公開されます。  
   
 ## <a name="logical-architecture"></a>論理アーキテクチャ  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のパーソナル化拡張機能のアーキテクチャは、マネージド アセンブリ アーキテクチャと次の 4 つの基本要素に基づいています。  
   
  [PlugInAttribute] カスタム属性  
- サービスを開始すると[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、は必要なアセンブリを読み込み、 <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>カスタム属性を持つクラスを特定します。  
+ サービスを開始すると、は [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 必要なアセンブリを読み込み、カスタム属性を持つクラスを特定し <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> ます。  
   
 > [!NOTE]  
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、カスタム属性は、コードを記述して実行時の動作を指定する方法と定義されています。 詳細については、MSDN の[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]開発者ガイドの「属性の[概要](https://go.microsoft.com/fwlink/?LinkId=82929)」を参照してください。  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、カスタム属性は、コードを記述して実行時の動作を指定する方法と定義されています。 詳細については、MSDN の開発者ガイドの「属性の[概要](https://go.microsoft.com/fwlink/?LinkId=82929)」を参照してください [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 。  
   
- <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>カスタム属性を持つすべてのクラスに[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ついて、は既定のコンストラクターを呼び出します。 起動時にすべてのコンストラクターを呼び出すと、新しいオブジェクトの作成元となる、ユーザー操作に依存しない共通の場所が提供されます。  
+ カスタム属性を持つすべてのクラスについて <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> 、は [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 既定のコンストラクターを呼び出します。 起動時にすべてのコンストラクターを呼び出すと、新しいオブジェクトの作成元となる、ユーザー操作に依存しない共通の場所が提供されます。  
   
  クラス コンストラクターでは、通常、パーソナル化拡張機能の作成および管理に関する情報の少量のキャッシュの構築に加え、<xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened> および <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing> イベントのサブスクライブが実行されます。 これらのイベントをサブスクライブしないと、共通言語ランタイム (CLR) のガベージ コレクターによって、誤ってクラスにクリーンアップのマークが付けられる可能性があります。  
   
  セッション コンテキスト  
- パーソナル化拡張機能に基づくオブジェクトの場合、クライアント セッション中に [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] によって実行環境が作成され、この環境でほとんどのオブジェクトが動的に作成されます。 他の CLR アセンブリと同様に、この実行環境からも他の関数やストアド プロシージャにアクセスできます。 ユーザーセッションが終了すると[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、は動的に作成されたオブジェクトを削除し、実行環境を閉じます。  
+ パーソナル化拡張機能に基づくオブジェクトの場合、クライアント セッション中に [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] によって実行環境が作成され、この環境でほとんどのオブジェクトが動的に作成されます。 他の CLR アセンブリと同様に、この実行環境からも他の関数やストアド プロシージャにアクセスできます。 ユーザーセッションが終了すると、は [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 動的に作成されたオブジェクトを削除し、実行環境を閉じます。  
   
  イベント  
  オブジェクトの作成は、セッション イベント `On-Cube-OpenedCubeOpened` および `On-Cube-ClosingCubeClosing` によってトリガーされます。  
   
  クライアントとサーバー間の通信は、特定のイベントを介して行われます。 このイベントによって、クライアントのオブジェクトが作成される状況がクライアントで認識されるようになります。 クライアントの環境は、セッション イベントとキューブ イベントという 2 つのイベント セットを使用して動的に作成されます。  
   
- セッション イベントは、サーバー オブジェクトに関連付けられます。 クライアントがサーバーにログオンすると、は[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]セッションを作成し、 <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened>イベントをトリガーします。 クライアントがサーバー上でセッションを終了すると[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、に<xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing>よってイベントがトリガーされます。  
+ セッション イベントは、サーバー オブジェクトに関連付けられます。 クライアントがサーバーにログオンすると、は [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] セッションを作成し、イベントをトリガーし <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened> ます。 クライアントがサーバー上でセッションを終了すると、に [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] よってイベントがトリガーされ <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing> ます。  
   
  キューブ イベントは、接続オブジェクトに関連付けられます。 キューブに接続すると、<xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeOpened> イベントがトリガーされます。 キューブを閉じるか別のキューブに変更することによってキューブへの接続を終了すると、<xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeClosing> イベントがトリガーされます。  
   

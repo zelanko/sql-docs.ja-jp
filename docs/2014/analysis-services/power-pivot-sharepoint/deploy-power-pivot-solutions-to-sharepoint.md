@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c91225761c76a58b81d8895698ca059014969f0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7345ae056c97bb0d84433e9cf15b8ca3d8cffd5e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782828"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540314"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>SharePoint への PowerPivot ソリューションの配置
   SharePoint Server 2010 環境に PowerPivot 機能を追加する 2 つのソリューション パッケージを手動で配置するには、次の手順に従います。 ソリューションの配置は、SharePoint 2010 サーバー上で PowerPivot for SharePoint を構成するために必要な手順です。 必要な手順の完全な一覧については、「[サーバーの全体管理での PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)」を参照してください。  
@@ -24,7 +23,7 @@ ms.locfileid: "72782828"
   
  ソリューションを配置する前に、まず、SQL Server 2012 インストール メディアを使用して、PowerPivot for SharePoint をインストールする必要があります。 SQL Server セットアップでは、配置しようとしているソリューション パッケージがインストールされます。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
  [前提条件: Web アプリケーションでクラシックモード認証が使用されていることを確認する](#bkmk_classic)  
   
@@ -39,7 +38,7 @@ ms.locfileid: "72782828"
  [PowerPivot ソリューションについて](#intro)  
   
 ##  <a name="prerequisite-verify-the-web-application-uses-classic-mode-authentication"></a><a name="bkmk_classic"></a> 前提条件: Web アプリケーションでクラシック モード認証が使用されていることを確認する  
- PowerPivot for SharePoint は、Windows クラシック モード認証を使用する Web アプリケーションでのみサポートされます。 アプリケーションでクラシックモードが使用されているかどうかを確認するには、 **sharepoint 2010 管理シェル**から次の PowerShell コマンドレットを実行します。の部分は、実際の sharepoint サイトの名前に置き換え`http://<top-level site name>`てください。  
+ PowerPivot for SharePoint は、Windows クラシック モード認証を使用する Web アプリケーションでのみサポートされます。 アプリケーションでクラシックモードが使用されているかどうかを確認するには、 **sharepoint 2010 管理シェル**から次の PowerShell コマンドレットを実行し `http://<top-level site name>` ます。の部分は、実際の sharepoint サイトの名前に置き換えてください。  
   
 ```powershell
 Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthentication  

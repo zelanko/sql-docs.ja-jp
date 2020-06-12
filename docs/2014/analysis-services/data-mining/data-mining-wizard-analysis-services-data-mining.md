@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0fb91b5343bd6f45eaadb93f71a73b85cb7f3a1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084739"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522829"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>データ マイニング ウィザード (Analysis Services - データ マイニング)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データマイニングウィザードは、新しいマイニング構造をデータマイニングプロジェクトに追加するたびに開始されます。 このウィザードでは、データ ソースを選択し、分析に使用されるデータを定義するデータ ソース ビューをセットアップできます。さらに、初期モデルを作成できます。  
+  のデータマイニングウィザードは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 新しいマイニング構造をデータマイニングプロジェクトに追加するたびに開始されます。 このウィザードでは、データ ソースを選択し、分析に使用されるデータを定義するデータ ソース ビューをセットアップできます。さらに、初期モデルを作成できます。  
   
  ウィザードの最後のフェーズでは、オプションでデータをトレーニング セットとテスト セットに分けることができ、ドリルスルーなどの機能を有効にすることができます。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66084739"
   
 -   どの列または属性を予測に使用するか。 どの列または属性を分析の入力として使用するのが適しているか。  
   
--   どのアルゴリズムを使用するのがよいか。 すべてのアルゴリズムに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、異なる特性があり、異なる結果が生成されます。 データの各セット用のモデルは 1 つに限られていないので、さまざまなモデルを追加して試してみることができます。  
+-   どのアルゴリズムを使用するのがよいか。 すべてのアルゴリズムには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 異なる特性があり、異なる結果が生成されます。 データの各セット用のモデルは 1 つに限られていないので、さまざまなモデルを追加して試してみることができます。  
   
 -   統合されたデータ セットでモデルをテストできる必要があるか。 その場合は、テストのためにデータを確保しておくオプションの使用を検討してください。 割合を選択して、必要であれば、指定した行数で上限を設定できます。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66084739"
  [Create a Relational Mining Structure](create-a-relational-mining-structure.md)  
  リレーショナル データ マイニング モデルを作成する場合の判断について説明します。  
   
- [OLAP マイニング構造の作成](create-an-olap-mining-structure.md)  
+ [Create an OLAP Mining Structure](create-an-olap-mining-structure.md)  
  OLAP キューブのデータを使用する場合の追加のオプションと選択について説明します。  
   
 > [!NOTE]  

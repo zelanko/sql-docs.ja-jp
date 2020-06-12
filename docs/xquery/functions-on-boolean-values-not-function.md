@@ -1,5 +1,6 @@
 ---
 title: not 関数 (XQuery) |Microsoft Docs
+description: XQuery の not () 関数をブール値と共に使用する方法について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24235099ec742d4c6d62e3d97ee1f551af24f7d4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038912"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524414"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>ブール値に対する関数 - 機能しない 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +41,11 @@ fn:not($arg as item()*) as xs:boolean
  *$arg*  
  有効なブール値が指定されているアイテムのシーケンス。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Not () XQuery 関数を使用して、カタログの説明に\<仕様> 要素が含まれていない製品モデルを検索します。  
- 次のクエリでは、カタログの説明に <`Specifications`> 要素が含まれていない製品モデルの製品モデル id を含む XML を構築します。  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Not () XQuery 関数を使用して、カタログの説明に要素が含まれていない製品モデルを検索し \<Specifications> ます。  
+ 次のクエリでは、カタログの説明に <> 要素が含まれていない製品モデルの製品モデル Id を含む XML を構築し `Specifications` ます。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -63,16 +64,16 @@ WHERE CatalogDescription.exist('
   
 -   ドキュメントでは名前空間を使用するため、このサンプルでは WITH NAMESPACE ステートメントを使用します。 別の方法として、 [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)で**declare namespace**キーワードを使用してプレフィックスを定義することもできます。  
   
--   次に、クエリは、<`Product`> 要素とその**productmodelid**属性を含む XML を構築します。  
+-   次に、クエリは、<`Product`> 要素とその**Productmodelid**属性を含む XML を構築します。  
   
--   WHERE 句では、 [exist () メソッド (XML データ型)](../t-sql/xml/exist-method-xml-data-type.md)を使用して行をフィルター処理します。 **Exist ()** メソッドは、子要素> \< \<指定されていない要素> Productdescription が存在する場合に True を返します。 **Not ()** 関数の使用に注意してください。  
+-   WHERE 句では、 [exist () メソッド (XML データ型)](../t-sql/xml/exist-method-xml-data-type.md)を使用して行をフィルター処理します。 **Exist ()** メソッドは、子要素を持たない要素がある場合に True を返し \<ProductDescription> \<Specification> ます。 **Not ()** 関数の使用に注意してください。  
   
- 各製品モデルカタログの説明には> 要素の\<仕様が含まれているので、この結果セットは空です。  
+ 各製品モデルカタログの説明には要素が含まれているので、この結果セットは空です \<Specifications> 。  
   
 ### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B. not() XQuery 関数を使用して、MachineHours 属性を持たないワーク センターの場所を取得する  
  次のクエリは、命令列に対して指定されています。 この列には、製品モデルの製造手順が格納されています。  
   
- 特定の製品モデルでは、MachineHours を指定していないワークセンターの場所を取得します。 つまり、 \<Location> 要素には**machinehours**属性が指定されていません。  
+ 特定の製品モデルでは、MachineHours を指定していないワークセンターの場所を取得します。 つまり、属性**Machinehours**は要素に対して指定されていません \<Location> 。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -91,7 +92,7 @@ WHERE ProductModelID=7
   
 -   [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)の**Declarenamespace**は、Adventure works の製造手順の名前空間プレフィックスを定義します。 この定義は、製造手順ドキュメントで使用されているのと同じ名前空間を表しています。  
   
--   クエリでは、 **machinehours**属性がない場合、 **not (@MachineHours)** 述語は True を返します。  
+-   クエリでは、 **Machinehours**属性がない場合、 **not ( @MachineHours )** 述語は True を返します。  
   
  結果を次に示します。  
   

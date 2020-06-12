@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fa17a4fb673ad6508fbfc70d5bab39e398d6c3aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 610e9f5d575134d3d6948528622637662b65c9f3
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928454"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669651"
 ---
 # <a name="reserved-keywords-dmx"></a>予約されているキーワード (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] は排他的に使用する特定のキーワードが予約されています。 これらのキーワードは、DMX 言語リファレンスで定義されている[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]位置を除き、データマイニング拡張機能 (dmx) ステートメントのどこでも使用できません。 これらの制限された DMX キーワードには、次のメンバーが含まれます。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] は排他的に使用する特定のキーワードが予約されています。 これらのキーワードは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dmx 言語リファレンスで定義されている位置を除き、データマイニング拡張機能 (dmx) ステートメントのどこでも使用できません。 これらの制限された DMX キーワードには、次のメンバーが含まれます。  
   
 -   トピック「 [DMX データ定義ステートメント](../dmx/dmx-statements-data-definition.md)」に記載されているすべてのデータ定義ステートメント。  
   

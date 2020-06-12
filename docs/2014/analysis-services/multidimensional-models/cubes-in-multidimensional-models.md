@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0f7acf3-4b07-41fc-a5fc-ac30b4a56c54
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab1051981ddcac948a447e814c278fab4fb61496
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076105"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547202"
 ---
 # <a name="cubes-in-multidimensional-models"></a>多次元モデルのキューブ
   キューブは、分析目的の情報を含む多次元構造です。キューブの主な構成要素はディメンションとメジャーです。 ディメンションでは、スライスおよびダイス化に使用するキューブの構造が定義され、メジャーによってエンド ユーザーが必要とする集計された数値が用意されます。 論理構造としてキューブを使用すると、クライアント アプリケーションでは、キューブ内のセルに含まれているかのようにメジャーの値を取得できます。セルは、考えられるすべての集約値に対して定義されます。 キューブのセルは、ディメンションのメンバーの交差領域によって定義され、その交差領域のメジャーの集計値を含みます。  
@@ -38,9 +37,9 @@ ms.locfileid: "66076105"
 |メジャー グループ|[多次元モデル内のパーティション](partitions-in-multidimensional-models.md)|  
 |パースペクティブ|[多次元モデルのパースペクティブ](perspectives-in-multidimensional-models.md)|  
 |階層|[ユーザー定義階層の作成](user-defined-hierarchies-create.md)|  
-|Actions|[多次元モデルのアクション](actions-in-multidimensional-models.md)|  
+|アクション|[多次元モデルのアクション](actions-in-multidimensional-models.md)|  
 |主要業績評価指標 (KPI)|[多次元モデルの主要業績評価指標 &#40;KPI&#41;](key-performance-indicators-kpis-in-multidimensional-models.md)|  
-|[新しい名前付きセット]|[多次元モデルの計算](calculations-in-multidimensional-models.md)|  
+|計算|[多次元モデルの計算](calculations-in-multidimensional-models.md)|  
 |翻訳|[多次元モデルの翻訳](translations-in-multidimensional-models-analysis-services.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  

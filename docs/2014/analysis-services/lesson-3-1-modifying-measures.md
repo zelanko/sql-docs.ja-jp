@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ce255a2dfe9e959ed0d68da62266e3a8acc353e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078901"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543434"
 ---
 # <a name="modifying-measures"></a>メジャーの変更
   **FormatString** プロパティを使用して書式設定を定義することによって、メジャーの表示方法を調整できます。 この実習では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブの通貨メジャーと比率メジャーの書式プロパティを指定します。  
@@ -56,13 +55,13 @@ ms.locfileid: "66078901"
   
 7.  [プロパティ] ウィンドウの一番上 (タイトル バーのすぐ下) にあるドロップダウン リストで、 **[Unit Price Discount Pct]** メジャーを選択します。次に、 **FormatString** プロパティのセルをクリックして **[Percent]** を選択します。  
   
-8.  プロパティウィンドウで、 **Unit Price 割引率**メジャーの`Unit Price Discount Percentage` **Name**プロパティをに変更します。  
+8.  プロパティウィンドウで、 **Unit Price 割引率**メジャーの**Name**プロパティをに変更し `Unit Price Discount Percentage` ます。  
   
-9. [**メジャー** ] ペインで [ **Tax Amt** ] をクリックし、このメジャーの`Tax Amount`名前をに変更します。  
+9. [**メジャー** ] ペインで [ **Tax Amt** ] をクリックし、このメジャーの名前をに変更し `Tax Amount` ます。  
   
 10. [プロパティ] ウィンドウの **[自動的に隠す]** アイコンをクリックし、[プロパティ] ウィンドウを非表示にします。次に、 **[キューブ構造]** タブのツール バーで、 **[メジャー ツリーの表示]** をクリックします。  
   
-11. [**ファイル**] メニューの [**すべてを保存**] をクリックします。  
+11. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [Customer ディメンションの変更](lesson-3-2-modifying-the-customer-dimension.md)  

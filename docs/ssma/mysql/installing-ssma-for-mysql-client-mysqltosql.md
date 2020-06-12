@@ -1,5 +1,6 @@
 ---
 title: SSMA for MySQL クライアントのインストール (MySQLToSQL) |Microsoft Docs
+description: SQL Server Migration Assistant (SSMA) for MySQL クライアントのインストールの前提条件と、のインストール方法について説明します。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,25 +12,25 @@ helpviewer_keywords:
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 9dcdeaff1c4782453a9fd57cc709e17ad3200d28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf1a3c8c5a01bb2553f773d5b650805667c116a3
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68086823"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293899"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>SSMA for MySQL クライアントのインストール (MySQLToSQL)
 SSMA for MySQL クライアントは、次のタスクを実行するプログラムファイルで構成されています。  
   
 -   MySQL データベースに接続します。  
   
--   の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスまたは SQL Azure に接続します。  
+-   のインスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure に接続します。  
   
--   MySQL データベースオブジェクトを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure オブジェクトに変換します。  
+-   MySQL データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure オブジェクトに変換します。  
   
--   オブジェクトをまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure に読み込みます。  
+-   オブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure に読み込みます。  
   
--   または SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータを移行します。  
+-   または SQL Azure にデータを移行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
 このトピックでは、SSMA for MySQL クライアントをインストールするための前提条件と手順について説明します。  
   
@@ -42,7 +43,7 @@ SSMA をインストールする前に、コンピューターが次の要件を
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows インストーラー3.1 以降のバージョン。  
   
--   バージョン[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 4.0 以降のバージョン。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]バージョン4.0 は、SQL Server 製品メディアにあります。 また、 [.NET Framework デベロッパーセンター](https://go.microsoft.com/fwlink/?LinkId=48882)から入手することもできます。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] バージョン4.0 以降のバージョン。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]バージョン4.0 は、SQL Server 製品メディアにあります。 また、 [.NET Framework デベロッパーセンター](https://go.microsoft.com/fwlink/?LinkId=48882)から入手することもできます。  
   
 -   MySQL ODBC 5.1 ドライバーと、移行する MySQL データベースへの接続。 Mysql は、MySQL Web サイトからインストールできます。 接続の詳細については、「 [MySQL への接続 &#40;MySQLToSQL](../../ssma/mysql/connecting-to-mysql-mysqltosql.md) 」を参照してください&#41;  
   
@@ -59,7 +60,7 @@ SSMA は Web からダウンロードできます。 最新バージョンをダ
   
 **SSMA クライアントをインストールするには**  
   
-1.  SSMA for MySQL *n*をダブルクリックします。Setup.exe をインストールします。ここで、 *n*はビルド番号です。  
+1.  SSMA for MySQL *n*.Install.exe をダブルクリックします。ここで、 *n*はビルド番号です。  
   
 2.  [ようこそ] ページで **[次へ]** をクリックします。  
   

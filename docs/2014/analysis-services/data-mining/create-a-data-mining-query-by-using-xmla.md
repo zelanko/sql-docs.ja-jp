@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77b65e8361287ba09fa7f28cd74dd5f88d188f97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085546"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523968"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>XMLA を使用したデータ マイニング クエリの作成
   AMO、DMX、または XML/A を使用すると、データ マイニング オブジェクトに対するさまざまなクエリを作成できます。  
@@ -44,9 +43,9 @@ ms.locfileid: "66085546"
   
      **[結果]** ペインに返されるスキーマ行セットの一覧には、現在のインスタンスで入手できるすべての行セットの行セット名と行セット列が含まれます。  
   
-2.  **クエリ**ペインで、 ** \<制限リスト**の後にカーソルを>、enter キーを押して新しい行を追加します。  
+2.  **クエリ**ペインで、の後にカーソルを置き、enter **\<Restriction List>** キーを押して新しい行を追加します。  
   
-3.  空白行にカーソルを置き、「 ** \<SchemaName>DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName」と入力し>**  
+3.  空白行にカーソルを置き、「」と入力し** \<SchemaName> DMSCHEMA_MINING_MODEL_CONTENT \</SchemaName> **  
   
      制限のセクション全体は次のようになります。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66085546"
   
      置き換えると、次のようになります。  
   
-     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</requesttype>**  
+     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</RequestType>**  
   
 2.  制限リストに新しい条件を追加することで、名前でマイニング モデルを指定するように制限リストを変更します。  
   

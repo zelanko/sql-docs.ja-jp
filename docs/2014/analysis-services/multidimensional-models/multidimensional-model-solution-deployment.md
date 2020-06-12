@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9ec674c1eb64f2e5191df600864fa38aa3da0749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21bbf20dfdc15470adc6277149679d2e5b403d9e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073550"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546026"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>多次元モデルのソリューションの配置
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの開発を完了したら、Analysis Services サーバーにデータベースを配置できます。 Analysis Services には、テスト サーバーまたは実稼働サーバーにデータベースを移動するために使用できる 6 つの配置方法が用意されています。 ここでは、それらの方法を効果の大きいものから、AMO オートメーション、XMLA、配置ウィザード、配置ユーティリティ、同期ウィザード、バックアップおよび復元の順に説明します。  
@@ -28,11 +27,11 @@ ms.locfileid: "66073550"
   
  [配置方法](#bkmk_meth)  
   
- [展開に関する考慮事項](#bkmk_considerations)  
+ [デプロイに関する考慮事項](#bkmk_considerations)  
   
  [関連タスク](#bkmk_rel)  
   
-##  <a name="deployment-methods"></a><a name="bkmk_meth"></a> 配置方法  
+##  <a name="deployment-methods"></a><a name="bkmk_meth"></a>配置方法  
   
 |Method|説明|Link|  
 |------------|-----------------|----------|  

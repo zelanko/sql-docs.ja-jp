@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3dcc6eedc97b3d476d79420b4e067883e17f03d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2390c0b921368e7e06f0e5563a7eb59769d99c17
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702299"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545031"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>オブジェクトの作成と変更 (XMLA)
   主要なオブジェクトは、個別に作成、変更、削除することができます。 主要なオブジェクトには以下のオブジェクトが含まれます。  
@@ -50,10 +49,10 @@ ms.locfileid: "62702299"
   
 -   データ ソース  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) [!INCLUDE[msCoName](../../includes/msconame-md.md)]インスタンスに主要なオブジェクトを作成するには create コマンドを使用し、インスタンスの既存の主要なオブジェクトを変更するには[alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla)コマンドを使用します。 どちらのコマンドも、 [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)メソッドを使用して実行されます。  
+ のインスタンスに主要なオブジェクトを作成するには[create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)コマンドを使用し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの既存の主要なオブジェクトを変更するには[alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla)コマンドを使用します。 どちらのコマンドも、 [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)メソッドを使用して実行されます。  
   
 ## <a name="creating-objects"></a>オブジェクトの作成  
- `Create` メソッドを使用してオブジェクトを作成する場合は、まず、作成する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを含む親オブジェクトを識別する必要があります。 親オブジェクトを特定するには、 `Create`コマンドの[ParentObject](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)プロパティにオブジェクト参照を指定します。 それぞれのオブジェクト参照には、`Create` コマンドの対象の親オブジェクトを一意に識別するのに必要なオブジェクト識別子が含まれます。 オブジェクト参照の詳細については、「 [XMLA&#41;&#40;オブジェクトの定義と識別](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)」を参照してください。  
+ `Create` メソッドを使用してオブジェクトを作成する場合は、まず、作成する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを含む親オブジェクトを識別する必要があります。 親オブジェクトを特定するには、コマンドの[ParentObject](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)プロパティにオブジェクト参照を指定し `Create` ます。 それぞれのオブジェクト参照には、`Create` コマンドの対象の親オブジェクトを一意に識別するのに必要なオブジェクト識別子が含まれます。 オブジェクト参照の詳細については、「 [XMLA&#41;&#40;オブジェクトの定義と識別](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)」を参照してください。  
   
  たとえば、キューブに新しいメジャー グループを作成するには、キューブへのオブジェクト参照を指定する必要があります。 `ParentObject` プロパティでのキューブへのオブジェクト参照には、データベース識別子とキューブ識別子の両方が含まれます。別のデータベースでも同じキューブ識別子が使用されている可能性があるためです。  
   
@@ -61,16 +60,16 @@ ms.locfileid: "62702299"
   
  `AllowOverwrite` コマンドの `Create` 属性を true に設定すると、指定された識別子を持つ既存の主要なオブジェクトを上書きできます。 そうしない場合、親オブジェクト内に指定された識別子を持つ主要なオブジェクトが既に存在するときに、エラーが発生します。  
   
- コマンドの`Create`詳細については、「 [CREATE Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)」を参照してください。  
+ コマンドの詳細につい `Create` ては、「 [Create ELEMENT &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)」を参照してください。  
   
 ### <a name="creating-session-objects"></a>セッション オブジェクトの作成  
- セッション オブジェクトは一時オブジェクトであり、クライアント アプリケーションで使用される明示的または暗黙的なセッションでのみ使用でき、セッションの終了時には削除されます。 セッションオブジェクトを作成するには、 `Scope` `Create`コマンドの属性を*session*に設定します。  
+ セッション オブジェクトは一時オブジェクトであり、クライアント アプリケーションで使用される明示的または暗黙的なセッションでのみ使用でき、セッションの終了時には削除されます。 セッションオブジェクトを作成するには、 `Scope` コマンドの属性 `Create` を*session*に設定します。  
   
 > [!NOTE]  
->  *セッション*設定を使用する場合、 `ObjectDefinition`要素には[Dimension](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl)、 [Cube](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)、または[MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) assl の要素のみを含めることができます。  
+>  *セッション*設定を使用する場合、 `ObjectDefinition` 要素には[Dimension](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl)、 [Cube](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)、または[MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) assl の要素のみを含めることができます。  
   
 ## <a name="altering-objects"></a>オブジェクトの変更  
- メソッドを使用してオブジェクトを変更する場合は、まず、 `Alter`コマンドの[object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)プロパティにオブジェクト参照を指定することによって、変更するオブジェクトを特定する必要があります。 `Alter` それぞれのオブジェクト参照には、`Alter` コマンドの対象のオブジェクトを一意に識別するのに必要なオブジェクト識別子が含まれます。 オブジェクト参照の詳細については、「 [XMLA&#41;&#40;オブジェクトの定義と識別](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)」を参照してください。  
+ メソッドを使用してオブジェクトを変更する場合は、 `Alter` まず、コマンドの[object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)プロパティにオブジェクト参照を指定することによって、変更するオブジェクトを特定する必要があり `Alter` ます。 それぞれのオブジェクト参照には、`Alter` コマンドの対象のオブジェクトを一意に識別するのに必要なオブジェクト識別子が含まれます。 オブジェクト参照の詳細については、「 [XMLA&#41;&#40;オブジェクトの定義と識別](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)」を参照してください。  
   
  たとえば、キューブの構造を変更するためには、キューブへのオブジェクト参照を指定する必要があります。 `Object` プロパティでのキューブへのオブジェクト参照には、データベース識別子とキューブ識別子の両方が含まれます。別のデータベースでも同じキューブ識別子が使用されている可能性があるためです。  
   
@@ -79,23 +78,23 @@ ms.locfileid: "62702299"
  `AllowCreate` コマンドの `Alter` 属性を true に設定すると、指定された主要なオブジェクトが存在しない場合に、それを作成することができます。 そうしない場合、指定された主要なオブジェクトが存在していないときに、エラーが発生します。  
   
 ### <a name="using-the-objectexpansion-attribute"></a>ObjectExpansion 属性の使用  
- 主要なオブジェクトのプロパティのみを変更し、主要なオブジェクトに含まれているマイナーオブジェクトを再定義しない場合は、 `ObjectExpansion` `Alter`コマンドの属性を*objectproperties*に設定できます。 `ObjectDefinition` プロパティには、主要なオブジェクトのプロパティに対応する要素だけを含めればよく、その場合 `Alter` コマンドは主要なオブジェクトに関連付けられている副次オブジェクトに変更を加えません。  
+ 主要なオブジェクトのプロパティのみを変更し、主要なオブジェクトに含まれているマイナーオブジェクトを再定義しない場合は、 `ObjectExpansion` コマンドの属性 `Alter` を*objectproperties*に設定できます。 `ObjectDefinition` プロパティには、主要なオブジェクトのプロパティに対応する要素だけを含めればよく、その場合 `Alter` コマンドは主要なオブジェクトに関連付けられている副次オブジェクトに変更を加えません。  
   
- 主要なオブジェクトの副オブジェクトを再定義するには、 `ObjectExpansion`属性を*expandfull*に設定し、オブジェクト定義に、主要なオブジェクトに含まれるすべてのマイナーオブジェクトを含める必要があります。 `ObjectDefinition` コマンドの `Alter` プロパティに、主要なオブジェクトに格納される副次オブジェクトが明示的に含められていない場合、含まれない副次オブジェクトは削除されます。  
+ 主要なオブジェクトの副オブジェクトを再定義するには、 `ObjectExpansion` 属性を*expandfull*に設定し、オブジェクト定義に、主要なオブジェクトに含まれるすべてのマイナーオブジェクトを含める必要があります。 `ObjectDefinition` コマンドの `Alter` プロパティに、主要なオブジェクトに格納される副次オブジェクトが明示的に含められていない場合、含まれない副次オブジェクトは削除されます。  
   
 ### <a name="altering-session-objects"></a>セッション オブジェクトの変更  
- `Create`コマンドによって作成されたセッションオブジェクトを`Scope`変更するに`Alter`は、コマンドの属性を*session*に設定します。  
+ コマンドによって作成されたセッションオブジェクトを変更するには、 `Create` `Scope` コマンドの属性 `Alter` を*session*に設定します。  
   
 > [!NOTE]  
->  *セッション*設定を使用する場合、 `ObjectDefinition`要素には[Dimension](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl)、 [Cube](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)、または[MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) assl の要素のみを含めることができます。  
+>  *セッション*設定を使用する場合、 `ObjectDefinition` 要素には[Dimension](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl)、 [Cube](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)、または[MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) assl の要素のみを含めることができます。  
   
 ## <a name="creating-or-altering-subordinate-objects"></a>下位オブジェクトの作成または変更  
  `Create` または `Alter` コマンドで作成または変更できるのは最上位の主要なオブジェクトだけですが、作成中または変更中の主要なオブジェクトには、囲んでいる `ObjectDefinition` プロパティの中に、従属する他の主要なオブジェクトや副次オブジェクトの定義を含めることができます。 たとえば、キューブを定義する場合、`ParentObject` で親データベースを指定します。`ObjectDefinition` でのキューブ定義にはキューブのメジャー グループを定義でき、さらにメジャー グループ内ではそれぞれのメジャー グループのパーティションを定義できます。 副次オブジェクトは、それを格納する主要なオブジェクトの中でのみ定義できます。 メジャーおよびマイナーオブジェクトの詳細については、「[データベースオブジェクト &#40;Analysis Services-多次元データ&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="description"></a>説明  
- 次の例では、 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]サンプル[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを参照するリレーショナルデータソースを作成します。  
+ 次の例では、サンプルデータベースを参照するリレーショナルデータソースを作成し [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ### <a name="code"></a>コード  
   
@@ -142,8 +141,8 @@ ms.locfileid: "62702299"
 </Alter>  
 ```  
   
-### <a name="comments"></a>備考  
- `Alter`コマンド`ObjectExpansion`の属性が*objectproperties*に設定されました。 この設定により、 [ImpersonationInfo](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)要素 (マイナーオブジェクト) を、で`ObjectDefinition`定義されているデータソースから除外できます。 そのため、そのデータ ソースに関する権限借用情報は、最初の例で指定したとおりにサービス アカウントに対して設定されたままになります。  
+### <a name="comments"></a>コメント  
+ `ObjectExpansion`コマンドの属性 `Alter` が*objectproperties*に設定されました。 この設定により、 [ImpersonationInfo](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)要素 (マイナーオブジェクト) を、で定義されているデータソースから除外でき `ObjectDefinition` ます。 そのため、そのデータ ソースに関する権限借用情報は、最初の例で指定したとおりにサービス アカウントに対して設定されたままになります。  
   
 ## <a name="see-also"></a>参照  
  [XMLA&#41;&#40;メソッドの実行](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)   

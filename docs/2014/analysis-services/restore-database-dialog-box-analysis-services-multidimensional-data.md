@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3990d47-55e2-424e-8eac-87edc937e806
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5007728a9af2032f83b71a7ea5b2aea19d0cf20
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070258"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539144"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>[データベースの復元] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [データベースの復元] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] バックアップ ファイル (.abf) 形式を使用するバックアップ ファイルから [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースを復元できます。  
@@ -34,7 +33,7 @@ ms.locfileid: "66070258"
   
  **[データベースの復元]** ダイアログ ボックスには、次のページがあります。  
   
-## <a name="pages"></a>ページ  
+## <a name="pages"></a>Pages  
  **全般**  
  このページを使用して、復元するデータベース、データベースの復元元となるバックアップ ファイル、およびデータベースの復元時に使用する全般オプションとパスワードを選択します。 このページの詳細については、「[[全般] &#40;[データベースの復元] ダイアログ ボックス&#41; &#40;Analysis Services - 多次元データ&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  
   

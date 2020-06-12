@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a4a4a6362d76afc39234acccc6366c7169244663
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b968046a09214c4b5d7922302c911ca4d1f2b875
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077682"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537447"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>[マッピングの変更] ダイアログ ボックス (マイニング精度チャート)
-  **[マッピングの変更]** ダイアログ ボックスを使用すると、入力列をマイニング モデルの列と結合する方法を変更できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、列名とデータ型に基づいて列が自動的にマップされますが、このダイアログボックスを使用して列マッピングを変更できます。 列マッピングを変更する場合は、外部データ ソースにある列のデータ型とコンテンツの種類が、テスト対象のマイニング モデルにある列のデータ型とコンテンツの種類と一致していることを確認する必要があります。  
+  **[マッピングの変更]** ダイアログ ボックスを使用すると、入力列をマイニング モデルの列と結合する方法を変更できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]では、列 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 名とデータ型に基づいて列が自動的にマップされますが、このダイアログボックスを使用して列マッピングを変更できます。 列マッピングを変更する場合は、外部データ ソースにある列のデータ型とコンテンツの種類が、テスト対象のマイニング モデルにある列のデータ型とコンテンツの種類と一致していることを確認する必要があります。  
   
 ## <a name="options"></a>オプション  
  **[マイニング構造列]**  

@@ -12,17 +12,17 @@ ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2aea2292ada0256e5ae7b988a8e65649dbc50c0d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: f5cdfc761b3b8c19e07b1818c2732414b03258cc
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000752"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856618"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>[オプション] ([クエリ結果]-[SQL Server]-[結果をテキストで表示] ページ)
   このページを使用すると、クエリ結果セットをテキスト形式で表示するオプションを指定できます。 このオプションに加えた変更は、新規の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、[**クエリ**] メニューの [**クエリオプション**] をクリックするか、クエリウィンドウを右クリックし [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] て [**クエリオプション**] を選択します。 **[クエリ オプション]** ダイアログ ボックスの **[結果]** で、**[テキスト]** をクリックします。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **出力形式**  
  既定では、スペースを埋め込んで作成された結果が列に表示されます。 他のオプションは、コンマ、タブ、またはスペースを使用して列を区切るオプションです。 このドロップダウン リストから **[独自の区切り記号]** を選択し、**[独自の区切り記号]** テキスト ボックスで別の区切り記号を指定します。  
   

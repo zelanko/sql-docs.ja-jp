@@ -1,5 +1,6 @@
 ---
 title: パス式のステップで軸を指定する |Microsoft Docs
+description: XQuery パス式で軸ステップを指定する方法について説明します。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f8e753f4961d33251120151bff6db1f8cd5e14c
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946481"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215756"
 ---
 # <a name="path-expressions---specifying-axis"></a>パス式 - 軸の指定
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,20 +48,20 @@ ms.locfileid: "67946481"
 |----------|-----------------|  
 |**child**|コンテキストノードの子を返します。|  
 |**descendant**|コンテキスト ノードのすべての子孫を返します。|  
-|**parent**|コンテキスト ノードの親を返します。|  
-|**属性**|コンテキストノードの属性を返します。|  
+|**所属**|コンテキスト ノードの親を返します。|  
+|**attribute**|コンテキストノードの属性を返します。|  
 |**自身**|コンテキスト ノード自身を返します。|  
 |**descendant-or-self**|コンテキスト ノード自身とその子孫をすべて返します。|  
   
- これらのすべての軸 (**親**軸を除く) は、前方軸です。 **親**軸は、ドキュメント階層内を後方に検索するので、逆軸です。 たとえば、相対パス式 `child::ProductDescription/child::Summary` には 2 つのステップがあり、各ステップが `child` 軸を指定します。 最初のステップでは\<、productdescription> コンテキストノードの子要素を取得します。 2番\<目のステップでは、productdescription> 要素ノード\<ごとに、子の概要> 要素ノードを取得します。  
+ これらのすべての軸 (**親**軸を除く) は、前方軸です。 **親**軸は、ドキュメント階層内を後方に検索するので、逆軸です。 たとえば、相対パス式 `child::ProductDescription/child::Summary` には 2 つのステップがあり、各ステップが `child` 軸を指定します。 最初のステップでは、 \<ProductDescription> コンテキストノードの子要素を取得します。 2番目のステップでは、要素ノードごとに \<ProductDescription> \<Summary> 子要素ノードを取得します。  
   
- 相対パス式`child::root/child::Location/attribute::LocationID`では、3つのステップがあります。 最初の2つの手順で`child`は、それぞれ軸を指定し、 `attribute` 3 番目の手順で軸を指定します。 製品版の**ProductModel**テーブルにある製造手順の XML ドキュメントに対して実行した場合`LocationID` 、式は\<、 \<ルート> 要素の> 要素ノードの子である場所の属性を返します。  
+ 相対パス式では、 `child::root/child::Location/attribute::LocationID` 3 つのステップがあります。 最初の2つの手順では、それぞれ軸を指定し、3番目の手順で軸を指定し `child` `attribute` ます。 製品版の**ProductModel**テーブル内の製造手順の XML ドキュメントに対して実行した場合、式は `LocationID` \<Location> 要素の子要素ノードの属性を返し \<root> ます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このトピックのクエリ例は、 **AdventureWorks**データベースの**xml**型の列に対して指定されています。  
   
 ### <a name="a-specifying-a-child-axis"></a>A. 子軸の指定  
- 次のクエリでは、特定の製品モデルに\<ついて、 `Production.ProductModel`テーブルに格納さ\<れている製品カタログの説明から productdescription> 要素ノードの機能> 要素ノードの子を取得します。  
+ 次のクエリでは、特定の製品モデルについて、 \<Features> \<ProductDescription> テーブルに格納されている製品カタログの説明から要素ノードの子要素ノードを取得し `Production.ProductModel` ます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -72,7 +73,7 @@ WHERE ProductModelID=19
   
  上のクエリに関して、次の点に注意してください。  
   
--   Xml `query()`データ型の**xml**メソッドでは、パス式を指定します。  
+-   `query()` **Xml**データ型のメソッドでは、パス式を指定します。  
   
 -   パス式の両方のステップが、`child` 軸およびノード名 (`ProductDescription`、`Features`) をノード テストとして指定しています。 ノードテストの詳細については、「[パス式のステップでのノードテストの指定](../xquery/path-expressions-specifying-node-test.md)」を参照してください。  
   
@@ -108,11 +109,11 @@ select @y
   
  この式では、パス式の子孫軸を指定すると、  
   
- `/child::a/child::b/descendant::*`では、<`b`> 要素ノードのすべての子孫を求めています。  
+ `/child::a/child::b/descendant::*`では、<> 要素ノードのすべての子孫を求めてい `b` ます。  
   
  ノードテストのアスタリスク (*) は、ノード名をノードテストとして表します。 したがって、子孫軸の主ノード型である element ノードは、返されるノードの種類を決定します。 つまり、式からすべての要素ノードが返されます。 テキストノードは返されません。 プライマリノードの種類とノードテストとの関係の詳細については、「[パス式のステップでノードテストを指定する](../xquery/path-expressions-specifying-node-test.md)」を参照してください。  
   
- 次の結果に`c`示すように`d` 、要素ノード <> と <> が返されます。  
+ 次の結果に示すように、要素ノード <`c`> と <`d`> が返されます。  
   
 ```  
 <c>text2  
@@ -121,7 +122,7 @@ select @y
 <d>text3</d>  
 ```  
   
- 子孫軸ではなく、子孫または自己の軸を指定すると`/child::a/child::b/descendant-or-self::*` 、はコンテキストノード、要素 <`b`>、およびその子孫を返します。  
+ 子孫軸ではなく、子孫または自己の軸を指定すると、は `/child::a/child::b/descendant-or-self::*` コンテキストノード、要素 <`b`>、およびその子孫を返します。  
   
  結果を次に示します。  
   
@@ -139,7 +140,7 @@ select @y
 <d>text3</d>   
 ```  
   
- **AdventureWorks**データベースに対する次のサンプルクエリでは、<`Features` `ProductDescription`> 要素の <> 要素の子要素ノードがすべて取得されます。  
+ **AdventureWorks**データベースに対する次のサンプルクエリでは、 `Features` <> 要素の <> 要素の子要素ノードがすべて取得され `ProductDescription` ます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -151,9 +152,9 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="c-specifying-a-parent-axis"></a>C. parent 軸の指定  
- 次のクエリでは、 `Summary` `Production.ProductModel`テーブルに格納されて`ProductDescription`いる製品カタログ XML ドキュメント内の <> 要素の <> 子要素が返されます。  
+ 次のクエリでは、 `Summary` `ProductDescription` テーブルに格納されている製品カタログ XML ドキュメント内の <> 要素の <> 子要素が返され `Production.ProductModel` ます。  
   
- この例では、parent 軸を使用して <`Feature`> 要素の親に戻り、<`Summary` `ProductDescription`> 要素の <> 要素の子を取得します。  
+ この例では、parent 軸を使用して <> 要素の親に戻り、 `Feature` `Summary` <> 要素の <> 要素の子を取得し `ProductDescription` ます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -174,7 +175,7 @@ WHERE  ProductModelID=19
   
  次の例では、parent 軸の便利な例を示しています。  
   
- **Productmodel**テーブルの**catalogdescription**列に格納されている各製品モデルカタログの`<ProductDescription>`説明には、 `ProductModelID`次のフラグメントに示すように、属性と`<Features>`子要素を持つ要素があります。  
+ **Productmodel**テーブルの**catalogdescription**列に格納されている各製品モデルカタログの説明には、 `<ProductDescription>` 次の `ProductModelID` フラグメントに示すように、属性と子要素を持つ要素があり `<Features>` ます。  
   
 ```  
 <ProductDescription ProductModelID="..." >  
@@ -186,14 +187,14 @@ WHERE  ProductModelID=19
 </ProductDescription>  
 ```  
   
- このクエリでは、 `$f` `<Features>`要素の子要素を返すために、FLWOR ステートメントで反復子変数を設定します。 詳細については、「 [FLWOR Statement And Iteration &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)」を参照してください。 各機能について`return` 、句は次の形式で XML を構築します。  
+ このクエリでは、 `$f` 要素の子要素を返すために、FLWOR ステートメントで反復子変数を設定し `<Features>` ます。 詳細については、「 [FLWOR Statement And Iteration &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)」を参照してください。 各機能について、 `return` 句は次の形式で XML を構築します。  
   
 ```  
 <Feature ProductModelID="...">...</Feature>  
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- 各`ProductModelID` `<Feature`> 要素のを追加するには`parent` 、軸を指定します。  
+ `ProductModelID`各> 要素のを追加するには、軸を指定し `<Feature` `parent` ます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -236,6 +237,6 @@ WHERE ProductModelID=19
 </Feature>  
 ```  
   
- シングルトン値が返さ`[1]`れるように、パス式の述語が追加されていることに注意してください。  
+ `[1]`シングルトン値が返されるように、パス式の述語が追加されていることに注意してください。  
   
   

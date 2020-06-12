@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bde0035ae3c855d2add02003ca9ea84357146f90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea26856075d37d815d819fa0eada61d677f77819
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809856"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523638"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>相互検証 (Analysis Services - データ マイニング)
   *クロス検証*は analytics の標準ツールであり、データマイニングモデルの開発と微調整に役立つ重要な機能です。 マイニング構造および関連マイニング モデルを作成した後に、相互検証を使用してモデルの有効性を確認します。  相互検証には次の用途があります。  
@@ -82,7 +81,7 @@ ms.locfileid: "68809856"
 ### <a name="choosing-models-and-columns-to-validate"></a>検証するモデルおよび列の選択  
  データ マイニング デザイナーの **[クロス検証]** タブを使用する場合、最初に一覧から予測可能列を選択する必要があります。 通常、1 つのマイニング構造で複数のマイニング モデルをサポートできますが、すべてのマイニング モデルで同じ予測可能列が使用されるわけではありません。 クロス検証を実行した場合、レポートに含めることができるのは、同じ予測可能列を使用するモデルのみです。  
   
- 予測可能な属性を選択するには、 **[対象の属性]** をクリックし、一覧から列を選択します。 対象の属性が入れ子になった列、または入れ子になったテーブルの列である場合は、入れ子になったテーブル\<名> (キー) の形式を使用して、入れ子になった列の名前を入力する必要があります。\<入れ子になった列の>。 入れ子になったテーブルから使用される唯一の列がキー列の場合\<は、入れ子になったテーブル名> (キー) を使用できます。  
+ 予測可能な属性を選択するには、 **[対象の属性]** をクリックし、一覧から列を選択します。 対象の属性が入れ子になった列、または入れ子になったテーブルの列である場合は、の形式 \<Nested Table Name> (キー) を使用して、入れ子になった列の名前を入力する必要が \<Nested Column> あります。 入れ子になったテーブルから使用される唯一の列がキー列の場合は、 \<Nested Table Name> (キー) を使用できます。  
   
  予測可能な属性を選択すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] により、同じ予測可能な属性を使用しているすべてのモデルが自動的にテストされます。 対象の属性に不連続値が含まれているときに特定の値を予測する場合は、予測可能列を選択した後で、必要に応じて対象の状態を入力することができます。  
   

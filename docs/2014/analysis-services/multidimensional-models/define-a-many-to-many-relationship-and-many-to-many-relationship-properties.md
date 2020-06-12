@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e60456afe700d3bfb793d214331871445190eb10
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075776"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547084"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>多対多のリレーションシップと多対多のリレーションシップのプロパティの定義
   このトピックでは、多対多ディメンションを使用する状況と作成方法を含め、Analysis Services 内の多対多ディメンションについて説明します。  
@@ -142,7 +141,7 @@ ms.locfileid: "66075776"
   
 1.  プロジェクトを配置し、キューブを参照して、集計が有効であることを確認します。  
   
-2.  Excel で、**Analysis Services**の [**その他のソース** | の**データ** | ] をクリックします。 サーバーの名前を入力し、データベースとキューブを選択します。  
+2.  Excel で、Analysis Services の [ **Data**  |  **その他のソース**のデータ] をクリックし  |  **From Analysis Services**ます。 サーバーの名前を入力し、データベースとキューブを選択します。  
   
 3.  次のものを使用するピボットテーブルを作成します。  
   

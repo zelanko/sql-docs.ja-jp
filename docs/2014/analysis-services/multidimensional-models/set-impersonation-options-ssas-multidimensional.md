@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 730ba13c22c8dcecf503398baae683f5d9c2b667
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072959"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545634"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>権限借用オプションの設定 (SSAS - 多次元)
   Analysis Services モデルで`data source` オブジェクトを作成するときに構成する必要がある設定の 1 つに、権限借用オプションがあります。 このオプションでは、接続関連のローカルの操作 (OLE DB データ プロバイダーの読み込みや、移動プロファイルをサポートする環境でのユーザー プロファイル情報の解決など) を実行するときに、Analysis Services で特定の Windows ユーザー アカウントの ID を使用するかどうかを指定します。  
@@ -49,7 +48,7 @@ ms.locfileid: "66072959"
  ダイアログ ボックスのすべてのオプションを使用できますが、すべてのオプションが各シナリオに適しているわけではありません。 以下の情報を参考にして、シナリオに最適なオプションを判断してください。  
   
  **[特定のユーザー名とパスワードを使用する]**  
- このオプションを選択すると[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、オブジェクトは、 * \<ドメイン名>***\\*** \<ユーザーアカウント名>* の形式で指定された Windows ユーザーアカウントのセキュリティ資格情報を使用します。  
+ このオプションを選択すると、オブジェクトは、と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] いう形式で指定された Windows ユーザーアカウントのセキュリティ資格情報を使用します *\<Domain name>***\\***\<User account name>* 。  
   
  データ アクセスのために特別に作成した専用の最小特権 Windows ユーザー ID を使用する場合に、このオプションを選択します。 たとえば、レポートで使用されるデータを取得するための汎用アカウントを定期的に作成している場合は、ここでそのアカウントを指定できます。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "66072959"
  DMX OPENQUERY ステートメントの場合、このオプションは無視され、指定したユーザーのアカウントではなく現在のユーザーの資格情報が使用されます。  
   
  **[サービス アカウントを使用する]**  
- このオプションを選択すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを管理する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスに関連付けられているセキュリティ資格情報が使用されます。 これは既定のオプションです 以前のリリースでは、これが、使用できる唯一のオプションでした。 個々のユーザー アカウントではなく、サービス レベルでデータ アクセスを監視する場合は、このオプションを選択することをお勧めします。  
+ このオプションを選択すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを管理する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスに関連付けられているセキュリティ資格情報が使用されます。 既定のオプションです。 以前のリリースでは、これが、使用できる唯一のオプションでした。 個々のユーザー アカウントではなく、サービス レベルでデータ アクセスを監視する場合は、このオプションを選択することをお勧めします。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、使用しているオペレーティング システムに応じて、サービス アカウントとして NetworkService または特定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス用に作成された組み込み仮想アカウントが使用されます。 Windows 認証を使用する接続にサービス アカウントを使用する場合は、処理時にデータの取得に使用されるため、このアカウント用のデータベース ログインを忘れずに作成して読み取り権限を付与してください。 サービス アカウントの詳細については、「 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」をご覧ください。  
   

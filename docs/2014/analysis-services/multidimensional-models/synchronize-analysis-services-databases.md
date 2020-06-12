@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e3f47b6cfe97806f093ee4ac1c9c8574056042d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072850"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547354"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services データベースの同期
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に付属しているデータベースの同期機能は、同期元サーバー上のデータベースから同期先サーバー上のデータベースにデータおよびメタデータをコピーすることによって、2 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを同一にします。 データベースの同期機能は、次のタスクを達成するために使用します。  
@@ -129,13 +128,13 @@ ms.locfileid: "66072850"
   
      **[場所]** オプションでは、同期元データベースのリモート パーティションが格納されている場所について、同期元と同期先の情報、各場所で使用される記憶領域サイズなど、選択したデータベースから得られる詳細情報がグリッドに一覧表示されます。 このグリッドには次の列が含まれています。  
   
-     **同期**  
+     **[同期]**  
      リモート パーティションが格納されている場所を同期中に含める場合は、オンにします。  
   
     > [!NOTE]  
     >  このオプションをオフにした場所では、その場所に格納されているリモート パーティションは同期されません。  
   
-     **[同期元サーバー]**  
+     **ソース サーバー**  
      リモート パーティションが含まれている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前が表示されます。  
   
      **[同期元フォルダー]**  

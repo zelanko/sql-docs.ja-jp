@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: bdc81de9-b390-4654-b62a-cd6c0c9ca10d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b57155285b4758e37af43b0fb4f079d660b97fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8454d2cbe9153c6a547ae2813c85bf1e45f269ad
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387922"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537390"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET サーバー オブジェクト アーキテクチャ
-  ADOMD.NET サーバーオブジェクトは、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ユーザー定義関数 (udf) またはストアドプロシージャを作成するために使用できるヘルパーオブジェクトです。  
+  ADOMD.NET サーバーオブジェクトは、でユーザー定義関数 (Udf) またはストアドプロシージャを作成するために使用できるヘルパーオブジェクトです [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
   
 > [!NOTE]  
 >  `Microsoft.AnalysisServices.AdomdServer` 名前空間 (およびこれらのオブジェクト) を使用するには、UDF プロジェクトやストアド プロシージャに msmgdsrv.dll への参照を追加する必要があります。  
