@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 11991c4658514ecf7b596a039bf5c4668a302cd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9b2613c4ca9c706e549aca9ed577a6defacd0e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174514"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521858"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを変形したものです。このアルゴリズムでは、 *HIDDEN_NODE_RATIO* パラメーターは 0 に設定されています。 この設定により、非表示の層を含んでいない、ロジスティック回帰に相当するニューラル ネットワーク モデルが作成されます。
@@ -84,7 +83,7 @@ WHERE NODE_TYPE = 23
 
  このクエリは、出力値ごとに、係数と、関連の入力ノードを指す ID を返します。 また、出力と切片の値を含む行も返します。 各入力 X には独自の係数 (Ci) がありますが、入れ子になったテーブルには、次の式に従って計算される "free" 係数 (Co) も含まれています。
 
- F (X) = X1 * C1 + X2\*C2 +... + Xn\*Cn + X0
+ F (X) = X1 * C1 + X2 \* C2 +... + Xn \* Cn + X0
 
  アクティブ化: exp(F(X)) / (1 + exp(F(X)) )
 
@@ -129,7 +128,7 @@ WHERE NODE_TYPE = 23
 
  マイニング構造列に適用されます。
 
- MODEL_EXISTENCE_ONLY は、列が`Missing` 、および`Existing`の2つの可能な状態を持つ列として扱われることを意味します。 NULL は Missing 値になります。
+ MODEL_EXISTENCE_ONLY は、列が、およびの2つの可能な状態を持つ列として扱われることを意味し `Missing` `Existing` ます。 NULL は Missing 値になります。
 
  マイニング モデル列に適用されます。
 
@@ -139,7 +138,7 @@ WHERE NODE_TYPE = 23
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列
  次の表のように、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムでは、特定の入力列のコンテンツの種類、予測可能列のコンテンツの種類、およびモデリング フラグがサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)」を参照してください。
 
-|列|コンテンツの種類|
+|Column|コンテンツの種類|
 |------------|-------------------|
 |入力属性|Continuous、Discrete、Discretized、Key、Table|
 |予測可能な属性|Continuous、Discrete、Discretized|

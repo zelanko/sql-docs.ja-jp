@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6ebfe029-dbba-4f0d-a556-328e79ef629f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cc3530c7bc316c0dbdc3271d456d4f7adf05038a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c291dbc9903fddfa714f9b1665d7ba9d4265a0f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087214"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527178"
 ---
 # <a name="connect-to-a-microsoft-sql-server-database-ssas"></a>[Microsoft SQL Server データベースへの接続] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、Microsoft SQL Server データベースに接続するための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
@@ -27,7 +26,7 @@ ms.locfileid: "66087214"
 > [!NOTE]  
 >  このページでデータベースを選択する際には、現在のユーザーの資格情報が使用されます。 ただし、[権限借用情報] ページで指定されたユーザーに、選択したデータベースの読み取り権限がないと、インポートは成功しません。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[接続の表示名]**  
  このデータ ソース接続の一意の名前を入力します。 これは必須フィールドです。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66087214"
   
  ピリオド (.)、(local)、または localhost を使用すると、ローカル サーバーを指定できます。  
   
- **Windows 認証を使用する**  
+ **[Windows 認証を使用する]**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスへの接続に Windows 認証を使用するかどうかを指定します。  
   
  Windows 認証モードを使用すると、ユーザーは Windows ユーザー アカウントを使用して接続できます。 可能であれば、Windows 認証を使用します。  

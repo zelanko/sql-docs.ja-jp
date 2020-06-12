@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70ff168f2be759c7c5bb405868d7e569362f8430
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081779"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528612"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>ディメンション デザイナー (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーを使用すると、ディメンションに含まれるデータを参照したり、既存のディメンションの属性、階層、レベル、属性リレーションシップ、および翻訳などの各種プロパティを変更したりできます。  
@@ -32,7 +31,7 @@ ms.locfileid: "66081779"
   
     -   ディメンションをダブルクリックします。  
   
-## <a name="pages"></a>ページ  
+## <a name="pages"></a>Pages  
  ディメンション デザイナーには、次のページがあります。  
   
  [[ディメンション構造]](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  

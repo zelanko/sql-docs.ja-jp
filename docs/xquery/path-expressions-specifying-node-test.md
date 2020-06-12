@@ -1,5 +1,6 @@
 ---
 title: パス式のステップでノードテストを指定する |Microsoft Docs
+description: XQuery パス式の軸ステップでノードテストを指定する方法について説明します。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dba7904f4e28b6bea50c802fd83b9c24c147defb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946431"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524524"
 ---
 # <a name="path-expressions---specifying-node-test"></a>パス式 - ノード テストの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,11 +68,11 @@ child::ProductDescription
   
  この 1 ステップの式では、`child` 軸とそのノード名 `ProductDescription` をノード テストとして指定しています。 この式は、子軸の主ノード種別である要素ノードだけを返し、ProductDescription を名前として持つノードのみを返します。  
   
- パス式に`/child::PD:ProductDescription/child::PD:Features/descendant::*,`は3つのステップがあります。 これらのステップでは、child 軸と descendant 軸を指定しています。 各ステップでは、ノード名がノードテストとして指定されています。 3番目の`*`ステップのワイルドカード文字 () は、子孫軸の主要ノード種別のすべてのノードを示します。 軸の主ノード種別によって選択されるノードの種類が決まり、ノード名によって選択されたノードのフィルターが決まります。  
+ パス式に `/child::PD:ProductDescription/child::PD:Features/descendant::*,` は3つのステップがあります。 これらのステップでは、child 軸と descendant 軸を指定しています。 各ステップでは、ノード名がノードテストとして指定されています。 3番目のステップのワイルドカード文字 () は、 `*` 子孫軸の主要ノード種別のすべてのノードを示します。 軸の主ノード種別によって選択されるノードの種類が決まり、ノード名によって選択されたノードのフィルターが決まります。  
   
- その結果、 **Productmodel**テーブル内の製品カタログ XML ドキュメントに対してこの式を実行すると、 \< \<productmodel> 要素の子要素ノードの子要素ノード> すべての子要素ノードが取得されます。  
+ 結果として、この式を**Productmodel**テーブルの製品カタログ XML ドキュメントに対して実行すると、その要素の子である要素ノードの子要素ノードがすべて取得され \<Features> \<ProductDescription> ます。  
   
- パス式`/child::PD:ProductDescription/attribute::ProductModelID`は、次の2つの手順で構成されます。 どちらのステップでも、ノード名をノード テストとして指定しています。 また、2番目の手順では、属性軸を使用します。 したがって、各ステップでは、ノードテストとして指定された名前を持つ、その軸の主ノード種別のノードが選択されます。 したがって、この式は、 \<productdescription> 要素ノードの**productmodelid**属性ノードを返します。  
+ パス式は、次 `/child::PD:ProductDescription/attribute::ProductModelID` の2つの手順で構成されます。 どちらのステップでも、ノード名をノード テストとして指定しています。 また、2番目の手順では、属性軸を使用します。 したがって、各ステップでは、ノードテストとして指定された名前を持つ、その軸の主ノード種別のノードが選択されます。 このため、式は要素ノードの**Productmodelid**属性ノードを返し \<ProductDescription> ます。  
   
  ノードテストにノード名を指定する場合は、次の例に示すように、ワイルドカード文字 (*) を使用してノードのローカル名または名前空間プレフィックスを指定することもできます。  
   
@@ -105,9 +106,9 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 child::comment()  
 ```  
   
- 同様に`/child::ProductDescription/child::Features/child::comment()` 、 \<productdescription> 要素ノード\<の子要素ノード> フィーチャーの子コメントノードを取得します。  
+ 同様に、は、 `/child::ProductDescription/child::Features/child::comment()` \<Features> 要素ノードの子要素ノードの子のコメントノードを取得し \<ProductDescription> ます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ノード名とノードの種類を比較します。  
   
 ### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. ノード名とノード型をノードテストとしてパス式に指定した結果  
@@ -130,7 +131,7 @@ select @x.query('
   
  この式では、`<b>` 要素ノードの子孫にあたる要素ノードが要求されます。  
   
- ノード テストのアスタリスク (`*`) は、ノード名のワイルドカード文字を示しています。 descendant 軸の主ノード種別は要素ノードです。 このため、式は要素ノード`<b>`のすべての子孫要素ノードを返します。 つまり、次の結果に示すように、要素ノード `<c>` と `<d>` が返されます。  
+ ノード テストのアスタリスク (`*`) は、ノード名のワイルドカード文字を示しています。 descendant 軸の主ノード種別は要素ノードです。 このため、式は要素ノードのすべての子孫要素ノードを返し `<b>` ます。 つまり、次の結果に示すように、要素ノード `<c>` と `<d>` が返されます。  
   
 ```  
 <c>text2  
@@ -169,7 +170,7 @@ select @x.query('
 /child::a/child::b/descendant::node()  
 ```  
   
- は`node()`ノード型であるため、子孫軸のすべてのノードを受け取ります。 結果を次に示します。  
+ はノード型であるため、 `node()` 子孫軸のすべてのノードを受け取ります。 結果を次に示します。  
   
 ```  
 text1  
@@ -201,7 +202,7 @@ text3
 ### <a name="b-specifying-a-node-name-in-the-node-test"></a>B. ノードテストでのノード名の指定  
  次の例では、すべてのパス式でノード名をノード テストとして指定します。 結果として、すべての式により、ノード テストに指定したノード名を持つ、軸の主ノード種別に属するノードが返されます。  
   
- 次のクエリ式は、 `Warranty` `Production.ProductModel`テーブルに格納されている製品カタログ XML ドキュメントから <> 要素を返します。  
+ 次のクエリ式は、 `Warranty` テーブルに格納されている製品カタログ XML ドキュメントから <> 要素を返し `Production.ProductModel` ます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -221,7 +222,7 @@ WHERE ProductModelID=19
   
 -   軸ステップの省略可能なステップ修飾子の部分は、式のどのステップでも指定されていません。  
   
- このクエリでは、 `Warranty` <`Features` `ProductDescription`> 要素の <> 要素の子の <> 子要素が返されます。  
+ このクエリでは、 `Warranty` `Features` <> 要素の <> 要素の子の <> 子要素が返され `ProductDescription` ます。  
   
  結果を次に示します。  
   
@@ -232,7 +233,7 @@ WHERE ProductModelID=19
 </wm:Warranty>     
 ```  
   
- 次のクエリでは、パス式によって、ノード`*`テストでワイルドカード文字 () が指定されています。  
+ 次のクエリでは、パス式によって、ノードテストでワイルドカード文字 () が指定されて `*` います。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -244,9 +245,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- ノード名にはワイルドカード文字が指定されています。 このクエリでは、<`Features` `ProductDescription`> 要素ノードの子である <> 要素ノードの子要素ノードがすべて返されます。  
+ ノード名にはワイルドカード文字が指定されています。 このクエリでは、 `Features` <> 要素ノードの子である <> 要素ノードの子要素ノードがすべて返され `ProductDescription` ます。  
   
- 次のクエリは、ワイルドカード文字と共に名前空間が指定されている点を除けば、前のクエリと同じです。 結果として、その名前空間に含まれるすべての子要素ノードが返されます。 <`Features`> 要素には、異なる名前空間の要素を含めることができることに注意してください。  
+ 次のクエリは、ワイルドカード文字と共に名前空間が指定されている点を除けば、前のクエリと同じです。 結果として、その名前空間に含まれるすべての子要素ノードが返されます。 <> 要素には、 `Features` 異なる名前空間の要素を含めることができることに注意してください。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -270,7 +271,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- このクエリは、製品`Maintenance`カタログの XML ドキュメントのすべての名前空間にある、<> 要素ノードの子を返します。  
+ このクエリは、 `Maintenance` 製品カタログの XML ドキュメントのすべての名前空間にある、<> 要素ノードの子を返します。  
   
 ### <a name="c-specifying-node-kind-in-the-node-test"></a>C. ノードテストでのノードの種類の指定  
  次の例では、すべてのパス式でノードの種類をノード テストとして指定します。 結果として、すべての式がノード テストに指定した種類のノードを返します。  
@@ -295,7 +296,7 @@ WHERE ProductModelID=19
   
 -   最初の2つの手順ではノード名をノードテストとして指定し、3番目のステップではノードの種類をノードテストとして指定します。  
   
--   式は、<`Features` `ProductDescription`> 要素ノードの <> 要素の子であるテキストノードを返します。  
+-   式は、 `Features` <> 要素ノードの <> 要素の子であるテキストノードを返し `ProductDescription` ます。  
   
  1つのテキストノードのみが返されます。 結果を次に示します。  
   
@@ -303,7 +304,7 @@ WHERE ProductModelID=19
 These are the product highlights.   
 ```  
   
- 次のクエリでは、<`ProductDescription`> 要素の子のコメントノードが返されます。  
+ 次のクエリでは、<> 要素の子のコメントノードが返され `ProductDescription` ます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -319,7 +320,7 @@ WHERE ProductModelID=19
   
 -   2番目のステップでは、ノードの種類をノードテストとして指定します。  
   
--   その結果、式は、<`ProductDescription`> 要素ノードの子のコメントノードを返します。  
+-   その結果、式は、<> 要素ノードの子のコメントノードを返し `ProductDescription` ます。  
   
  結果を次に示します。  
   
@@ -346,7 +347,7 @@ WHERE ProductModelID=19
 <?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>   
 ```  
   
- `processing-instruction()`ノードテストには、文字列リテラルパラメーターを渡すことができます。 この場合、クエリは、引数に指定された文字列リテラルを name 属性値として持つ処理命令を返します。  
+ ノードテストには、文字列リテラルパラメーターを渡すことができ `processing-instruction()` ます。 この場合、クエリは、引数に指定された文字列リテラルを name 属性値として持つ処理命令を返します。  
   
 ```  
 SELECT CatalogDescription.query('  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eeef3697-a4fd-4263-ba7e-f86afa1f46cc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 50818393a81cf3c6db1b54a0752e6fa098277709
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03c98f3ab44a4a9f3aac91be36f3d704a3f796ab
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087381"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527218"
 ---
 # <a name="connect-to-a-db2-database-ssas"></a>[DB2 データベースへの接続] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、DB2 データベースに接続するための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
@@ -27,7 +26,7 @@ ms.locfileid: "66087381"
 > [!NOTE]  
 >  このページでデータベースを選択する際には、指定されたユーザーの資格情報が使用されます。 ただし、[権限借用情報] ページで指定されたユーザーに、選択したデータベースの読み取り権限がないと、インポートは成功しません。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[接続の表示名]**  
  このデータ ソース接続の一意の名前を入力します。 これは必須フィールドです。  
   

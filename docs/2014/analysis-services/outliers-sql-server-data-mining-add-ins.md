@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6fa7c62-4005-4792-9211-3b699377a517
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3043c8f63433396f059f5c456512ad4ba2bffd93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecc7cba81a394664b2bdb6a60b6c5f8110760f44
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072137"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547279"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>外れ値 (SQL Server データ マイニング アドイン)
   ![[データ マイニング] リボンの外れ値ウィザード](media/dmc-outliers.gif "[データ マイニング] リボンの外れ値ウィザード")  

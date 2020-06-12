@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f8a95c5819d88013a0e4f0e0be0aa21c11c1949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6044c22f84abdc17adf7015804627266ccff09b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175251"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542434"
 ---
 # <a name="defining-and-browsing-kpis"></a>KPI の定義と表示
   主要業績評価指標 (KPI) を定義するには、まず、KPI の名前と、KPI に関連するメジャー グループを定義します。 すべてのメジャー グループ、または単一のメジャー グループを KPI に関連付けることができます。 その後、KPI の次のような要素を定義します。
@@ -67,7 +66,7 @@ ms.locfileid: "78175251"
 
      ![表示ペインの空白の KPI テンプレート](../../2014/tutorials/media/l7-kpi-2.gif "表示ペインの空白の KPI テンプレート")
 
-3.  [**名前**] ボックスに「 `Reseller Revenue`」と入力し、[**関連付けられているメジャーグループ**] ボックスの一覧で [**再販業者の売上**] を選択します。
+3.  [**名前**] ボックスに「 `Reseller Revenue` 」と入力し、[**関連付けられているメジャーグループ**] ボックスの一覧で [**再販業者の売上**] を選択します。
 
 4.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]**、 **[Reseller Sales]** の順に展開します。次に、 **Reseller Sales-Sales Amount** メジャーを **[値式]** ボックスにドラッグします。
 
@@ -152,7 +151,7 @@ ms.locfileid: "78175251"
 
 1.  **[KPI]** タブのツール バーの **[フォーム ビュー]** ボタンをクリックして、 **[新しい KPI]** ボタンをクリックします。
 
-2.  [**名前**] ボックスに「 `Product Gross Profit Margin`」と入力し、[ ** \<すべての>** が**関連付けら**れているメジャーグループ] ボックスに表示されていることを確認します。
+2.  [**名前**] ボックスに「 `Product Gross Profit Margin` 」と入力し、[関連付けられている **\<All>** **メジャーグループ**] ボックスの一覧にが表示されていることを確認します。
 
 3.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **Total GPM** メジャーを **[値式]** ボックスにドラッグします。
 
@@ -261,7 +260,7 @@ ms.locfileid: "78175251"
 
 2.  配置が正常に完了したら、 **[KPI]** タブのツール バーの **[再接続]** をクリックして、 **[ブラウザー ビュー]** をクリックします。
 
-     Kpi が表示され、 **Q3 CY 2007**と北米販売区域の kpi 値が表示されます。 **North America** `Product Gross Profit Margin`
+     `Product Gross Profit Margin`Kpi が表示され、 **Q3 CY 2007**と**北米**販売区域の kpi 値が表示されます。
 
 3.  **[フィルター]** ペインで、 **[ディメンション]** ボックスの一覧の **[Product]** をクリックし、 **[階層]** ボックスの一覧の **[Category]** をクリックし、 **[演算子]** ボックスの一覧の **[等しい]** をクリックします。次に、 **[フィルター式]** ボックスの一覧で **[Bikes]** チェック ボックスをオンにし、 **[OK]** をクリックします。
 

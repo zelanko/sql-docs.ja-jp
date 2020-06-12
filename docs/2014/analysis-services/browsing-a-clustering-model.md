@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3682d65ac06d970fed2d5346e9d39684485c5dfe
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064679"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527758"
 ---
 # <a name="browsing-a-clustering-model"></a>クラスター モデルの参照
-  **参照**を使用してクラスターモデルを開くと、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]クラスタービューアーに似た対話型ビューアーにモデルが表示されます。 ビューアーは、作成されたクラスターを調査して、クラスターの特性を把握するのに役立ちます。 また、個々のセグメントを他のセグメントや母集団と比較対照することもできます。  
+  **参照**を使用してクラスターモデルを開くと、のクラスタービューアーに似た対話型ビューアーにモデルが表示され [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 ビューアーは、作成されたクラスターを調査して、クラスターの特性を把握するのに役立ちます。 また、個々のセグメントを他のセグメントや母集団と比較対照することもできます。  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>モデルの調査  
  [**参照**] ウィンドウには、クラスターモデルを理解し、基になるデータグループの属性を調べるのに役立つ次のツールが用意されています。  
@@ -65,7 +64,7 @@ ms.locfileid: "66064679"
   
 5.  次に、[**シェーディング変数**] ボックスの一覧をクリックし、 **Age**変数を選択します。 これを行うと、[**状態**] ボックスに値の一覧が表示されます。  
   
-     このモデルへの入力として使用される Age 列には、連続する数値が含まれていますが、クラスタリングのために、アルゴリズムによって常に数値が分離されます。 ここでは、"非常に低い (\<= 27)" と "非常に高い (>= 63)" など、アルゴリズムによって作成されたビンまたはグループを確認できます。  
+     このモデルへの入力として使用される Age 列には、連続する数値が含まれていますが、クラスタリングのために、アルゴリズムによって常に数値が分離されます。 ここでは、"非常に低い (= 63)" など、アルゴリズムによって作成されたビンまたはグループを確認でき \<=27)" and "Very High (> ます。  
   
 6.  [**状態**] ドロップダウンリストから [**非常に高い**] を選択し、ダイアグラムがどのように変化するかを確認します。  
   

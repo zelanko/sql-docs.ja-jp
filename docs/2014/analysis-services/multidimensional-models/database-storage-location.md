@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2dd3659aed11e4e1cee791fcb5e541471320c82a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e904333dc25e7ae58d8eae29ba00279d7e599033
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075899"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547104"
 ---
 # <a name="database-storage-location"></a>データベースの格納場所
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) が特定のデータベースをサーバー データ フォルダー以外の場所に配置することは少なくありません。 こうした状況は、パフォーマンスの向上やストレージの拡張などのビジネス上のニーズによって頻繁に発生します。 このような場合は、`DbStorageLocation` データベース プロパティを使用すると、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の DBA はローカル ディスクまたはネットワーク デバイス内にデータベースの格納場所を指定できます。  
@@ -36,10 +35,10 @@ ms.locfileid: "66075899"
  `DbStorageLocation` は、すべてのデータベースのデータ ファイルとメタデータ ファイルが存在するフォルダーを指定します。一方、`StorageLocation` は、キューブのパーティションが存在するフォルダーを指定します。 `StorageLocation` は、`DbStorageLocation` とは別に設定できます。 これは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の DBA が予想した結果に基づいて決定します。また、どちらか一方のプロパティが何度も重複して使用されます。  
   
 ## <a name="dbstoragelocation-usage"></a>DbStorageLocation の使用方法  
- `DbStorageLocation`データベースプロパティは、データベースコマンド`Create`シーケンス内`Detach` / `Attach`のデータベースコマンドシーケンス`Backup` / `Restore` 、データベースコマンドシーケンス、または`Synchronize`データベースコマンドの一部として使用されます。 `DbStorageLocation` データベース プロパティの変更は、データベース オブジェクトの構造の変更と見なされます。 つまり、すべてのメタデータを再作成し、データを再処理する必要があります。  
+ データベースプロパティは、データベースコマンドシーケンス内のデータベースコマンド `DbStorageLocation` `Create` シーケンス、 `Detach` / `Attach` `Backup` / `Restore` データベースコマンドシーケンス、または `Synchronize` データベースコマンドの一部として使用されます。 `DbStorageLocation` データベース プロパティの変更は、データベース オブジェクトの構造の変更と見なされます。 つまり、すべてのメタデータを再作成し、データを再処理する必要があります。  
   
 > [!IMPORTANT]  
->  `Alter` コマンドを使用して、データベースの格納場所を変更しないでください。 代わりに、一連の`Detach` / `Attach`データベースコマンドを使用することをお勧めします (「 [Analysis Services データベースの移動](move-an-analysis-services-database.md)」、「 [Analysis Services データベースのアタッチとデタッチ](attach-and-detach-analysis-services-databases.md)」を参照してください)。  
+>  `Alter` コマンドを使用して、データベースの格納場所を変更しないでください。 代わりに、一連のデータベースコマンドを使用することをお勧めし `Detach` / `Attach` ます (「 [Analysis Services データベースの移動](move-an-analysis-services-database.md)」、「 [Analysis Services データベースのアタッチとデタッチ](attach-and-detach-analysis-services-databases.md)」を参照してください)。  
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   

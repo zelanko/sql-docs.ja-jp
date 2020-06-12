@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 10015ac40948c95f8c912ba6fdb71147e50bb880
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94b9935f5ab13431033accf7431c1a9b6394569a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082889"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520512"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Office 用 SQL Server データ マイニング アドイン
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office 用データ マイニング アドインは、予測、推奨設定、または検索の分析モデルを構築するために Excel のデータを使用できるようにする軽量な一連の予測分析用ツールです。  
@@ -46,7 +45,7 @@ ms.locfileid: "66082889"
   
 -   **調査と視覚化。** データマイニングは、完全に自動化できるアクティビティではありません。結果を調査して理解し、意味のあるアクションを実行する必要があります。 アドインは、Excel の対話的ビューアー、モデル ダイアグラムをカスタマイズできる Visio テンプレート、追加のフィルタリングまたは修正のためにグラフとテーブルを Excel にエクスポートする機能を備えており、調査に役立ちます。  
   
--   **配置と統合。** 有用なモデルを作成したら、モデルを運用環境に配置します。そのためには、管理ツールを使用して、実験用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]サーバーからの別のインスタンスにモデルをエクスポートします。  
+-   **配置と統合。** 有用なモデルを作成したら、モデルを運用環境に配置します。そのためには、管理ツールを使用して、実験用サーバーからの別のインスタンスにモデルをエクスポートし [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。  
   
      また、作成時のサーバー上にモデルを残したまま、トレーニング データを更新し、Integration Services または DMX スクリプトを使用して予測を実行することもできます。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66082889"
   
  データ マイニング アドインを使用する場合は、以下のいずれかのエディションの SQL Server Analysis Services に接続する必要があります。  
   
--   Enterprise  
+-   エンタープライズ  
   
 -   ビジネス インテリジェンス  
   

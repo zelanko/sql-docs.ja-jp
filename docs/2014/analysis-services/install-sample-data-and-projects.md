@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6185d3d9aeb3221b1ae194790b89265787e4621
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530821"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544118"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール
   このトピックに示す手順とリンクを使用して、Analysis Services チュートリアルで使用するすべてのデータとプロジェクト ファイルをインストールします。  
@@ -98,7 +97,7 @@ ms.locfileid: "69530821"
   
      2012 のチュートリアルは [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] リリースで有効です。  
   
-     "Analysis Services チュートリアル SQL Server 2012 .zip" ファイルは、コンピューターのダウンロードフォルダーに保存されます。  
+     "Analysis Services チュートリアル SQL Server 2012.zip" ファイルは、コンピューターのダウンロードフォルダーに保存されます。  
   
 2.  .zip ファイルをルート ドライブ直下のフォルダー (たとえば、C:\Tutorial) に移動します。 この手順では、ダウンロードフォルダー内のファイルを解凍しようとした場合に発生することがある "パスが長すぎる" というエラーが軽減されます。  
   
@@ -150,6 +149,6 @@ ms.locfileid: "69530821"
 ## <a name="see-also"></a>参照  
  [インストールウィザード &#40;セットアップから SQL Server 2014 をインストール&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Analysis Services アクセスを許可するように Windows ファイアウォールを構成する](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
+ [SQL Server アクセスを許可するように Windows ファイアウォールを構成する](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

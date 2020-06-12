@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4457a5fa434be3865edf770f7ca69a676c051893
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702693"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545344"
 ---
-# <a name="calculations"></a>[新しい名前付きセット]
-  計算は、の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]キューブで計算されるメンバー、名前付きセット、またはスコープ割り当てを定義するために使用される多次元式 (MDX) 式またはスクリプトです。 計算により、キューブのデータによって定義されるオブジェクトではなく、キューブの他の部分、他のキューブ、さらには [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの外部にある情報を参照できる式によって定義されるオブジェクトを追加できます。 計算により、キューブの機能を拡張し、ビジネス インテリジェンス アプリケーションの柔軟性と能力を向上させることができます。 スクリプト計算の詳細については、「 [Microsoft SQL Server 2005 での MDX スクリプトの概要](https://go.microsoft.com/fwlink/?LinkId=81892)」を参照してください。 MDX クエリおよび計算に関連するパフォーマンスの問題の詳細については、「 [SQL Server 2005 Analysis Services パフォーマンスガイド](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)」を参照してください。  
+# <a name="calculations"></a>計算
+  計算は、のキューブで計算されるメンバー、名前付きセット、またはスコープ割り当てを定義するために使用される多次元式 (MDX) 式またはスクリプトです [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 計算により、キューブのデータによって定義されるオブジェクトではなく、キューブの他の部分、他のキューブ、さらには [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの外部にある情報を参照できる式によって定義されるオブジェクトを追加できます。 計算により、キューブの機能を拡張し、ビジネス インテリジェンス アプリケーションの柔軟性と能力を向上させることができます。 スクリプト計算の詳細については、「 [Microsoft SQL Server 2005 での MDX スクリプトの概要](https://go.microsoft.com/fwlink/?LinkId=81892)」を参照してください。 MDX クエリおよび計算に関連するパフォーマンスの問題の詳細については、「 [SQL Server 2005 Analysis Services パフォーマンスガイド](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)」を参照してください。  
   
 ## <a name="calculated-members"></a>計算されるメンバー  
  計算されるメンバーとは、値が実行時に計算されるメンバーのことです。その計算には、計算されるメンバーの定義時に指定した多次元式 (MDX) が使用されます。 計算されるメンバーは、ビジネス インテリジェンス アプリケーションで他のメンバーと同様に使用できます。 キューブに保存されるのは定義のみであるため、計算されるメンバーによってキューブのサイズが大きくなることはありません。値はクエリへの応答時にメモリ内で計算されます。  
@@ -45,10 +44,10 @@ ms.locfileid: "62702693"
  計算されるメンバーを作成するには、キューブデザイナーの [**計算**] タブを使用します。 詳細については、「[計算されるメンバーの作成](../multidimensional-models/create-calculated-members.md)」を参照してください。  
   
 ## <a name="named-sets"></a>名前付きセット  
- 名前付きセットとは、セットを返す CREATE SET MDX ステートメント式であり、 MDX 式は、のキューブ[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の定義の一部として保存されます。 名前付きセットは、多次元式 (MDX) クエリで再使用するために作成されます。 名前付きセットを使用すると、ビジネス ユーザーは、クエリを簡素化し、複雑で頻繁に使用されるセット式にセット式ではなくセット名を使用できます。 **関連トピック:** [名前付きセットの作成](../multidimensional-models/create-named-sets.md)  
+ 名前付きセットとは、セットを返す CREATE SET MDX ステートメント式であり、 MDX 式は、のキューブの定義の一部として保存され [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。 名前付きセットは、多次元式 (MDX) クエリで再使用するために作成されます。 名前付きセットを使用すると、ビジネス ユーザーは、クエリを簡素化し、複雑で頻繁に使用されるセット式にセット式ではなくセット名を使用できます。 **関連トピック:** [名前付きセットの作成](../multidimensional-models/create-named-sets.md)  
   
 ## <a name="script-commands"></a>スクリプト コマンド  
- スクリプト コマンドは、キューブの定義の一部として含まれる MDX スクリプトです。 スクリプト コマンドを使用すると、キューブの一部のみに対する計算のスコープ割り当てなど、MDX でサポートされるほとんどすべてのアクションをキューブで実行できます。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、MDX スクリプトをキューブ全体に適用することも、スクリプトの実行を通じて特定の時点でキューブの特定のセクションに適用することもできます。 既定のスクリプト コマンドである CALCULATE ステートメントを実行すると、既定の範囲に基づいて、キューブのセルに集計データが設定されます。  
+ スクリプト コマンドは、キューブの定義の一部として含まれる MDX スクリプトです。 スクリプト コマンドを使用すると、キューブの一部のみに対する計算のスコープ割り当てなど、MDX でサポートされるほとんどすべてのアクションをキューブで実行できます。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、MDX スクリプトをキューブ全体に適用することも、スクリプトの実行を通じて特定の時点でキューブの特定のセクションに適用することもできます。 既定のスクリプト コマンドである CALCULATE ステートメントを実行すると、既定の範囲に基づいて、キューブのセルに集計データが設定されます。  
   
  既定の範囲はキューブ全体ですが、サブキューブと呼ばれる制限された範囲を定義して、特定のキューブ領域にのみ MDX スクリプトを適用することもできます。 SCOPE ステートメントは、範囲が終了するか、再定義されるまで、計算スクリプト内の後続の MDX 式およびステートメントのすべての範囲を定義します。 THIS ステートメントを使用すると、MDX 式を現在の範囲に適用できます。 BACK_COLOR ステートメントを使用すると、現在の範囲内のセルの背景色を指定して、デバッグに役立てることができます。  
   

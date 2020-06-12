@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5d8d0591c99e52071270689941adc45af7a835
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083669"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521599"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。 Microsoft デシジョン ツリー アルゴリズムは、まったく機能の異なる多様なモデルを作成できる複合アルゴリズムであることに注意してください。デシジョン ツリーでは、アソシエーションやルールのほか、線形回帰も表すことができます。 ツリーの構造は本質的には同じですが、モデルを作成した目的によって情報を解釈する方法が異なります。  
@@ -189,7 +188,7 @@ ms.locfileid: "66083669"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|親ノードを基準に特定のノードを区別する属性が表示されます。 ノードのキャプションでは、分割条件の基になる設定のサブセグメントが定義されます。 たとえば、分割が [Age] で、3方向の分割であった場合、3つの子ノードのノードキャプションは "[Age] < 40"、"40 <= [Age] \< 50"、"[Age] >= 50" になります。|  
+|**NODE_CAPTION**|親ノードを基準に特定のノードを区別する属性が表示されます。 ノードのキャプションでは、分割条件の基になる設定のサブセグメントが定義されます。 たとえば、分割が [Age] であり、3方向の分割であった場合、3つの子ノードのノードキャプションは "[Age] < 40", "40 <= [Age] \< 50", "[Age] > = 50" になります。|  
 |**NODE_DESCRIPTION**|ノードを他のノードと区別するすべての属性を示す、モデルの親ノードから始まる一覧が含まれます。 たとえば、Product name = Apple かつ Color = Red のようになります。|  
   
 ###  <a name="node-rule-and-marginal-rule"></a><a name="NodeRule"></a>ノードルールとルールの規則  
@@ -198,7 +197,7 @@ ms.locfileid: "66083669"
  XML フラグメントで表現される属性は、単純な属性または複雑な属性のいずれかになります。 単純な属性には、モデル列の名前、および属性の値が含まれます。 モデル列に入れ子になったテーブルが含まれる場合は、入れ子になったテーブルの属性は、テーブル名、キー値、および属性を連結して表現されます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、バージョン2.0 の pmml 標準がサポートされ、入れ子になったテーブルの使用をサポートする拡張機能がサポートされています。 入れ子になったテーブルがデータに含まれている場合に PMML バージョンのモデルを生成すると、述語を含むモデル内のすべての要素に拡張機能であることを示すマークが付けられます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、バージョン2.0 の PMML 標準がサポートされ、入れ子になったテーブルの使用をサポートする拡張機能がサポートされています。 入れ子になったテーブルがデータに含まれている場合に PMML バージョンのモデルを生成すると、述語を含むモデル内のすべての要素に拡張機能であることを示すマークが付けられます。  
   
 ###  <a name="node-distribution-for-discrete-attributes"></a><a name="bkmk_NodeDist_Discrete"></a>不連続属性のノード分布  
  デシジョン ツリー モデルの NODE_DISTRIBUTION テーブルには、役立つ統計が含まれています。 ただし、統計の種類は、ツリーで連続属性と不連続属性のどちらを予測するかによって異なります。 ここでは、不連続属性のノード分布統計の意味について説明します。  
@@ -225,7 +224,7 @@ ms.locfileid: "66083669"
 |Age < 30|40|Age < 30 かつ Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 かつ Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- すべてのモデルで、考えられる不足値を計算に含めるためにわずかな調整が行われます。 連続属性の場合、各値または値の範囲は状態 (たとえば、Age \<30、age = 30、age >30) として表され、確率は次のように計算されます。状態が存在する (値 = 1)、他の状態が`Missing`存在する (値 = 0)、状態はです。 不足値を反映するように確率を調整する方法の詳細については、「[Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md)」 (不足値 (Analysis Services - データ マイニング)) を参照してください。  
+ すべてのモデルで、考えられる不足値を計算に含めるためにわずかな調整が行われます。 連続属性の場合、各値または値の範囲は状態 (たとえば、Age 30) として表され、 \<30, Age = 30, and Age > 確率は次のように計算されます。状態が存在する (値 = 1)、他の状態が存在する (値 = 0)、状態は `Missing` です。 不足値を反映するように確率を調整する方法の詳細については、「[Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md)」 (不足値 (Analysis Services - データ マイニング)) を参照してください。  
   
  各ノードの確率は、次のように分布からほぼ直接的に計算されます。  
   
@@ -240,12 +239,12 @@ ms.locfileid: "66083669"
   
  連続値での分散の計算方法の詳細については、「[線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)」を参照してください。  
   
-#### <a name="value-type"></a>値の型  
+#### <a name="value-type"></a>値型  
  値の型の列には、NODE_DISTRIBUTION テーブル内の他の列で指定された数値の意味に関する情報が示されます。 クエリで値の型を使用すると、入れ子になったテーブルから特定の行を取得できます。 例については、「 [デシジョン ツリー モデルのクエリ例](decision-trees-model-query-examples.md)」を参照してください。  
   
  <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> 列挙に含まれる型のうち、分類ツリーでは以下の型が使用されます。  
   
-|値の種類|説明|  
+|値の型|説明|  
 |----------------|-----------------|  
 |1 (Missing: 不足)|不足値に関連する数、確率、またはその他の統計を示します。|  
 |4 (Discrete: 不連続)|不連続値または分離された値に関連する数、確率、またはその他の統計を示します。|  
@@ -275,7 +274,7 @@ ms.locfileid: "66083669"
   
 |分割条件|ノードの結果|  
 |---------------------|--------------------|  
-|n \< 5 の場合|リレーションシップを式 1 で表現可能|  
+|n 5 の場合 \<|リレーションシップを式 1 で表現可能|  
 |n が 5 ～ 10 の場合|式なし|  
 |n > 10 の場合|リレーションシップを式 2 で表現可能|  
   

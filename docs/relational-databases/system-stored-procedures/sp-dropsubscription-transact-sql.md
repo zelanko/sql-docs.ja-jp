@@ -1,5 +1,6 @@
 ---
 title: sp_dropsubscription (Transact-sql) |Microsoft Docs
+description: パブリッシャーのアーティクル、パブリケーション、またはサブスクリプションに対するサブスクリプションを削除します。 このストアドプロシージャは、パブリッシャー側のパブリケーションデータベースで実行されます。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f800ef185145e63a17db3855989bebde91b48bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 483fc481e78c1a879f2858addf6925e987066010
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831166"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807966"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_dropsubscription**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  即時同期パブリケーションのアーティクルに対してサブスクリプションを削除した場合、パブリケーションのすべてのアーティクルに対してサブスクリプションを削除して一度に追加しない限り、サブスクリプションを追加し直すことはできません。  

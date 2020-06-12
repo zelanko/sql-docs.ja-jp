@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dfb5b7a0-7543-4e5e-8a30-4b734606e157
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bfc0de04be668ea3d1ab5633049e6f81d971b4cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 754b2b61fc3b55cda694bcdad7cb492abe490188
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072157"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540994"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>[パーティションのプロパティ] (SSMS)
   SQL Server Management Studio の **[パーティションのプロパティ]** ダイアログ ボックスを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのキューブに対してパーティションのプロパティを設定できます。  
@@ -26,7 +25,7 @@ ms.locfileid: "66072157"
   
  **[パーティションのプロパティ]** ダイアログ ボックスには、次のページがあります。  
   
-## <a name="pages"></a>ページ  
+## <a name="pages"></a>Pages  
   
 |ページ|説明|  
 |----------|-----------------|  

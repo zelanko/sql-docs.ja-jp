@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f3bd5278-3a83-4fd9-9903-e81bdd4b6892
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f4720d361fdd9a7d93d91f5e8fe873473816c2ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a96e3e434e8f4ff3d8df4b4837bffb0d96649741
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070679"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540004"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>[処理の進行状況] ダイアログ ボックス (Analysis Services - 多次元データ)
   **と** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [処理の進行状況] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]で処理を監視できます。 **[処理の進行状況]** ダイアログ ボックスは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクト上で処理が開始される場合に表示されます。  

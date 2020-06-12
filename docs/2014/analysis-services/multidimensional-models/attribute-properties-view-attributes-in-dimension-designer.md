@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 855bef07-b72d-4ce3-bf02-de77abeee71a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1eb12bd6499796ff7f2cfb09ccd4c176914c8117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22e837aa038cb30947632194d829a383afcf4a82
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175811"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544728"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>ディメンション デザイナーでの属性の表示
-  属性はディメンション オブジェクトで作成されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ディメンションデザイナーを使用して、属性を表示および構成できます。 ディメンション デザイナーの **[ディメンション構造]** タブの **[属性]** ペインには、ディメンションの属性が一覧表示されます。 このペインを使用して、属性の追加、削除、または構成を行います。 また、新しい階層でレベルとして使用する属性や、既存の階層にレベルとして追加する属性を選択できます。
+  属性はディメンション オブジェクトで作成されます。 のディメンションデザイナーを使用して、属性を表示および構成でき [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。 ディメンション デザイナーの **[ディメンション構造]** タブの **[属性]** ペインには、ディメンションの属性が一覧表示されます。 このペインを使用して、属性の追加、削除、または構成を行います。 また、新しい階層でレベルとして使用する属性や、既存の階層にレベルとして追加する属性を選択できます。
 
- ディメンションの属性を表示するには、そのディメンションのディメンション デザイナーを開きます。 ディメンション デザイナーの **[ディメンション構造]** タブの **[属性]**  ペインに、ディメンションの属性が表示されます。 の[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [**ディメンション**] メニューの [**属性の表示]** をポイントし、次の表に示すコマンドのいずれかをクリックして、リスト、ツリー、またはグリッドビューを切り替えることができます。
+ ディメンションの属性を表示するには、そのディメンションのディメンション デザイナーを開きます。 ディメンション デザイナーの **[ディメンション構造]** タブの **[属性]**  ペインに、ディメンションの属性が表示されます。 の [**ディメンション**] メニューの [**属性の表示]** をポイントし、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 次の表に示すコマンドのいずれかをクリックして、リスト、ツリー、またはグリッドビューを切り替えることができます。
 
 |属性を表示|説明|
 |------------------------|-----------------|
@@ -37,7 +36,7 @@ ms.locfileid: "78175811"
 |アイコン|属性の使用法|
 |----------|---------------------|
 |![属性アイコン](../media/as-icon-attribute.gif "属性アイコン")|Regular または AccountType|
-|![キー属性アイコン](../media/as-icon-key-attribute.gif "キー属性アイコン")|Key|
+|![キー属性アイコン](../media/as-icon-key-attribute.gif "キー属性アイコン")|キー|
 |![親属性アイコン](../media/as-icon-parent-attribute.gif "親属性アイコン")|Parent|
 
 ## <a name="see-also"></a>参照

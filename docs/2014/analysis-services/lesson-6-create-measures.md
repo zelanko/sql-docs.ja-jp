@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef487927098e63c7fc870aa65e55f57faa26767d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078431"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542564"
 ---
 # <a name="lesson-7-create-measures"></a>レッスン 7: メジャーを作成する
   このレッスンでは、モデルに含められるメジャーを作成します。 前のレッスンで作成した計算列と同様、メジャーは、基本的には、DAX 数式を使用して作成される計算です。 ただし、計算列とは違い、メジャーはユーザーが選択した " *フィルター*" に基づいて評価されます (たとえば、PivotTable 内の行ラベル フィールドに追加された特定の列やスライサーなど)。   フィルター内の各セルの値は､適用されたメジャーによって求められます｡ メジャーは強力で柔軟な計算なので、ほとんどすべてのテーブル モデルに含めて、数値データに対する動的な計算を実行できます。 詳細については、「[メジャー (SSAS テーブル)](tabular-models/measures-ssas-tabular.md)」を参照してください。  
@@ -49,7 +48,7 @@ ms.locfileid: "66078431"
   
      左上のセルにメジャー名 ( **measure 1**) が含まれ、その後に結果**30**が表示されていることに注意してください。 メジャー名は、数式バーの数式の前にも表示されます。  
   
-5.  メジャーの名前を変更するには、数式バーで名前 ( **measure 1**) を強調`Days Current Quarter to Date`表示し、「」と入力して、enter キーを押します。  
+5.  メジャーの名前を変更するには、数式バーで名前 ( **measure 1**) を強調表示し、「」と入力して `Days Current Quarter to Date` 、enter キーを押します。  
   
     > [!TIP]  
     >  数式バーで数式を入力する際には、最初にメジャー名を入力し、続けてコロン (:)、スペース、数式の順に入力することもできます。 この方法を使用すれば、メジャー名を変更する必要はありません。  
@@ -88,7 +87,7 @@ ms.locfileid: "66078431"
   
 1.  AutoSum 機能を使用して次のメジャーを作成し､名前を指定します｡  
   
-    |[メジャー名]|列|オート SUM (∑)|[数式]|  
+    |[メジャー名]|Column|オート SUM (∑)|Formula|  
     |------------------|------------|-------------------|-------------|  
     |Internet Order Lines Count|Sales Order Line Number|Count|=COUNT([Sales Order Line Number])|  
     |Internet Total Units|Order Quantity|SUM|=SUM([Order Quantity])|  
@@ -104,7 +103,7 @@ ms.locfileid: "66078431"
     > [!IMPORTANT]  
     >  メジャーは次の順序のとおりに作成する必要があります (先行するメジャーは後続のメジャー内の数式から参照されるため)。  
   
-    |[メジャー名]|[数式]|  
+    |[メジャー名]|Formula|  
     |------------------|-------------|  
     |Internet Previous Quarter Margin|=CALCULATE([Internet Total Margin],PREVIOUSQUARTER('Date'[Date]))|  
     |Internet Current Quarter Margin|=TOTALQTD([Internet Total Margin],'Date'[Date])|  

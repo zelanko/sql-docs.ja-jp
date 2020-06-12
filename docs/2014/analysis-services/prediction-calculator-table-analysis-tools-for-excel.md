@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa763516511f3d2fd68ca5275cdeb6fe0af7d57b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070860"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547674"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>予測計算 (Excel 用のテーブル分析ツール)
   ![予測計算ツール](media/tat-predcal.gif "予測計算ツール")  
@@ -73,7 +72,7 @@ ms.locfileid: "66070860"
 -   ここでは、各レポートに含まれる情報と、さまざまなレポート オプションの使用方法について説明します。  
   
 ### <a name="prediction-report-with-graphs"></a>グラフを含む予測レポート  
- 最初の予測レポートには、**ターゲット属性>\<の\<ターゲット状態> の予測計算レポート**というタイトルが付いています。 このレポートには、分析から得られた要因のテーブルと、特定の分析の財務的影響を評価するためのツールが含まれています。  
+ 最初の予測レポートのタイトルは **、 \<target state> の \<target attribute> の予測計算レポート**です。 このレポートには、分析から得られた要因のテーブルと、特定の分析の財務的影響を評価するためのツールが含まれています。  
   
 #### <a name="table-for-specifying-costs-and-profits"></a>コストと利益を指定するためのテーブル  
  このレポートの左上にある最初のツールは、値の正確な予測や不正確な予測に関連するコストと利益を指定できるテーブルです。  これらのコストと利益は、計算の最適なスコアしきい値を算出するために必要です。  
@@ -120,7 +119,7 @@ ms.locfileid: "66070860"
  たとえば最初のグラフでは、モデルによって予測された上位 500 の顧客を対象にすることが利益を最大化する方法として示されていますが、この 2 つ目のグラフから、間違った顧客を対象にした場合のコストが大きすぎると判断し、最初の 400 の顧客まででマーケティング キャンペーンを打ち切ることを決断する場合も考えられます。  
   
 ### <a name="interactive-prediction-calculator"></a>対話型の予測計算  
- 予測計算ツールによって作成された2番目のワークシートには、ターゲット**属性>の\< \<ターゲット状態> の予測計算**というタイトルが付いています。 これは、個々のスコアを計算するために使用できる対話型ワークシートです。 このワークシートでは、モデルに格納されているパターンと統計が使用されるため、さまざまな値がスコアの予測にどのように影響するのかを試してみることができます。 またこのレポートには、対話型と参照用の 2 つのセクションが用意されています。  
+ 予測計算ツールによって作成された2番目のワークシートには **、 \<target state> \<target attribute> のの予測計算**というタイトルが付いています。 これは、個々のスコアを計算するために使用できる対話型ワークシートです。 このワークシートでは、モデルに格納されているパターンと統計が使用されるため、さまざまな値がスコアの予測にどのように影響するのかを試してみることができます。 またこのレポートには、対話型と参照用の 2 つのセクションが用意されています。  
   
 #### <a name="first-table"></a>最初のテーブル  
  テーブルの [**値**] 列で新しい値を選択または入力すると、値の変更によってスコアにどのような影響があるかを確認できます。  
@@ -133,7 +132,7 @@ ms.locfileid: "66070860"
 |性別|Male|0|  
 |Income|39050 ~ 71062|117|  
 |Children|0|157|  
-|教育|Bachelors|22|  
+|Education|Bachelors|22|  
 |Occupation|Skilled Manual|33|  
 |Home Owner|はい|8|  
 |Cars|2|50|  
@@ -141,7 +140,7 @@ ms.locfileid: "66070860"
 |リージョン|北米|0|  
 |Age|37 ~ 46|5|  
 |合計||491|  
-|Prediction for 'Yes'||FALSE|  
+|Prediction for 'Yes'||false|  
   
  新しい値を入力すると、セルに表示されるスコア、[はい] の予測、TRUE に変更され、さまざまな属性の**相対的な影響**スコアも更新されます。  
   
@@ -152,11 +151,11 @@ ms.locfileid: "66070860"
  このテーブルには、入力列の各状態の個々のスコアと、そのスコアが結果に与える相対的影響が示されています。 これは、参照専用の静的なテーブルです。  
   
 ### <a name="printable-prediction-calculator"></a>印刷可能な予測計算  
- 予測計算ツールによって作成された3番目のワークシートは、**ターゲット\<属性>\<のターゲット状態> について、printableprediction 電卓**というタイトルが付いています。 このスコアカードは、コンピューターを使用できない場所でスコアを手動で計算できるように印刷するためのものです。  
+ 予測計算ツールによって作成された3番目のワークシートは **、 \<target state> の \<target attribute> に対して "Printableprediction 電卓**" というタイトルが付いています。 このスコアカードは、コンピューターを使用できない場所でスコアを手動で計算できるように印刷するためのものです。  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>予測計算によって生成されるスコアリング レポートを印刷して使用するには  
   
-1.  **属性>の\<[印刷可能予測計算**というタイトルのタブをクリックします。  
+1.  [**印刷可能予測計算 \<attribute> **] というタイトルのタブをクリックします。  
   
 2.  Excel の [ファイル] メニューの [**印刷プレビュー**] をクリックします。  
   
@@ -175,7 +174,7 @@ ms.locfileid: "66070860"
 8.  シートの**合計**行の直後に印刷された条件を使用して、スコアを予測結果に変換します。  
   
 ## <a name="related-tools"></a>関連ツール  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、この種類の分析に使用できる Microsoft ロジスティック回帰アルゴリズムが用意されています。 ロジスティック回帰について既によく理解している場合は、Excel 用のデータマイニングクライアントの **[詳細設定**] オプションを使用して、ロジスティック回帰モデルを簡単に作成できます。 詳細については、「 [Excel&#41;用の高度なモデリング &#40;データマイニングアドイン](advanced-modeling-data-mining-add-ins-for-excel.md)」を参照してください。 ロジスティック回帰モデルのオプションとパラメーターの詳細については、オンラインブックの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 「Microsoft ロジスティック回帰アルゴリズム」を参照してください。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、この種類の分析に使用できる Microsoft ロジスティック回帰アルゴリズムが用意されています。 ロジスティック回帰について既によく理解している場合は、Excel 用のデータマイニングクライアントの **[詳細設定**] オプションを使用して、ロジスティック回帰モデルを簡単に作成できます。 詳細については、「 [Excel&#41;用の高度なモデリング &#40;データマイニングアドイン](advanced-modeling-data-mining-add-ins-for-excel.md)」を参照してください。 ロジスティック回帰モデルのオプションとパラメーターの詳細については、オンラインブックの「Microsoft ロジスティック回帰アルゴリズム」を参照してください [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>参照  
  [Excel 用テーブル分析ツール](table-analysis-tools-for-excel.md)  

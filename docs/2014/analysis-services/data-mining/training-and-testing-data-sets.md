@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e050a59da542041b9ce825f573625bdb6afc289
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082734"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520348"
 ---
 # <a name="training-and-testing-data-sets"></a>トレーニング データ セットとテスト データ セット
   トレーニング セットとテスト セットにデータを分割することは、データ マイニング モデルの評価における重要な部分です。 通常、データセットをトレーニング セットとテスト セットに分割すると、ほとんどのデータはトレーニングに使用され、テストに使用されるデータは少量になります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ではデータのサンプルがランダムに抽出されるため、テスト セットとトレーニング セットが同様になるように分割されます。 トレーニングとテストに類似データを使用すると、データの差異による影響を最小限に抑えることができ、モデルの特性をよりよく理解できます。  
@@ -103,7 +102,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |------------|-----------|  
 |モデルに対するフィルターとトレーニング データセットおよびテスト データセットとの間の対話方法について説明します。|[マイニング モデルのフィルター &#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)|  
 |トレーニング データとテスト データの使用が相互検証に与える影響について説明します。|[相互検証 &#40;Analysis Services - データ マイニング&#41;](cross-validation-analysis-services-data-mining.md)|  
-|マイニング構造でのトレーニング セットとテスト セットの操作のためのプログラム インターフェイスに関する情報を提供します。|[AMO の概念とオブジェクト モデル](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [MiningStructure 要素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|マイニング構造でのトレーニング セットとテスト セットの操作のためのプログラム インターフェイスに関する情報を提供します。|[AMO の概念とオブジェクトモデル](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [MiningStructure 要素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
 |提示セットを作成するための DMX 構文について説明します。|[CREATE MINING STRUCTURE (DMX)](/sql/dmx/create-mining-structure-dmx)|  
 |トレーニング セットとテスト セットのケースに関する情報を取得します。|[データ マイニング スキーマ行セット](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [データマイニングスキーマ行セットのクエリ &#40;Analysis Services-データマイニング&#41;](data-mining-schema-rowsets-ssas.md)|  
   

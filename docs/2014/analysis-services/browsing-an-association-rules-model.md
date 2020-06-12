@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69002d17205a5631d555e1022b8adeb9e51d3db2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088467"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527738"
 ---
 # <a name="browsing-an-association-rules-model"></a>アソシエーション ルール モデルの参照
-  **参照**を使用してアソシエーションモデルを開くと、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]アソシエーションルールビューアーに似た対話型ビューアーにモデルが表示されます。  このビューアーを使用すると、相互に関連付けられたアイテムをひとめで確認できます。また、このビューアーには、予測または提案を行うために使用できるルールが表示されます。  
+  **参照**を使用してアソシエーションモデルを開くと、のアソシエーションルールビューアーに似た対話型ビューアーにモデルが表示され [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。  このビューアーを使用すると、相互に関連付けられたアイテムをひとめで確認できます。また、このビューアーには、予測または提案を行うために使用できるルールが表示されます。  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>モデルの調査  
- [!INCLUDE[msCoName](../includes/msconame-md.md)]アソシエーションルールアルゴリズムを使用して作成されたマイニングモデルを開くと、[**参照**] ウィンドウに次のビューが表示されます。各ビューは、モデルのさまざまな側面を調べることができるように設計されています。  
+ アソシエーションルールアルゴリズムを使用して作成されたマイニングモデルを開くと、[ [!INCLUDE[msCoName](../includes/msconame-md.md)] **参照**] ウィンドウに次のビューが表示されます。各ビューは、モデルのさまざまな側面を調べることができるように設計されています。  
   
 -   [アイテムセット](#BKMK_Itemsets)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66088467"
   
  [**最小のサポート**] と [**最大行数**] の値を変更することで、タブに表示されるアイテムセットの数をフィルター処理できます。 [**最小サポート**] の値を大きくすると、一覧に表示されるアイテムセットの数は少なくなりますが、アイテムセットは入力データ内のより一般的なものになります。 共通の問題が重要であるかどうかはもう1つの質問で、[**ルール**] タブを使用して調べることができます。  
   
- [**アイテムセット**] タブのサポート値またはその他のコントロールを変更しても、表示される項目のみが変更され、基になるモデルには影響しないことに注意してください。 生成するアイテムセットの数を減らすか、サイズを制限する場合は、[**アルゴリズムパラメーター** ] ダイアログ`MINIMUM_SUPPORT`ボックス`MAXIMUM_SUPPORT`で使用できるパラメーターとを使用する必要があります。  
+ [**アイテムセット**] タブのサポート値またはその他のコントロールを変更しても、表示される項目のみが変更され、基になるモデルには影響しないことに注意してください。 生成するアイテムセットの数を減らすか、サイズを制限する場合は、[ `MINIMUM_SUPPORT` `MAXIMUM_SUPPORT` **アルゴリズムパラメーター** ] ダイアログボックスで使用できるパラメーターとを使用する必要があります。  
   
 ##### <a name="explore-the-itemsets-list"></a>アイテムセットの一覧の調査  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66088467"
   
 2.  目的の特定のアイテムセットに注目するには、[アイテムセットの**フィルター** ] ボックスにテキストを入力します。  
   
-     ここでは`Gloves`、「」と入力しました。 フィルターを適用すると、一覧が更新され、グローブを含むアイテムセットのみが表示されます。 これにより、顧客がグローブとその他のアイテムを購入したトランザクションに注目することができます。  
+     ここでは、「」と入力しました `Gloves` 。 フィルターを適用すると、一覧が更新され、グローブを含むアイテムセットのみが表示されます。 これにより、顧客がグローブとその他のアイテムを購入したトランザクションに注目することができます。  
   
      **[アイテムセットのフィルター]** オプションでは、以前に使用したフィルターの一覧も表示されます。  
   
@@ -142,7 +141,7 @@ ms.locfileid: "66088467"
  [ページのトップへ](#BKMK_ViewerTabs)  
   
 ## <a name="more-about-association-models"></a>アソシエーションモデルの詳細  
- **参照**機能を使用して、Microsoft アソシエーションルールアルゴリズムを使用して作成された任意のモデルを開いて探索することができます。 これには、[買い物かご分析 &#40;Table AnalysisTools For Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)ツール、**テーブル分析ツール**リボン、またはで[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]作成されたモデルが含まれます。  
+ **参照**機能を使用して、Microsoft アソシエーションルールアルゴリズムを使用して作成された任意のモデルを開いて探索することができます。 これには、[買い物かご分析 &#40;Table AnalysisTools For Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)ツール、**テーブル分析ツール**リボン、またはで作成されたモデルが含まれ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。  
   
  買い物かご分析ツールを使用してアソシエーション ルール モデルを作成した場合、詳細設定オプションの多くは自動的に構成されます。  
   
@@ -150,7 +149,7 @@ ms.locfileid: "66088467"
   
 -   **アイテムセット:** モデルを作成するときに、MINIMUM_PROBABILITY パラメーターに値を割り当てることによって生成されるアイテムセットの数を制御することもできます。 このパラメーターは、[アルゴリズム パラメーター] ダイアログ ボックスで設定できます。  
   
--   **ルール:** アソシエーション[!INCLUDE[msCoName](../includes/msconame-md.md)]ルールアルゴリズムでは、確率値を使用して、生成されるルールの数を制限します。 ルールの数を制御するには、`MINIMUM_PROBABILITY` パラメーターまたは `MINIMUM _IMPORTANCE` パラメーターを設定します。  
+-   **ルール:**[!INCLUDE[msCoName](../includes/msconame-md.md)]アソシエーションルールアルゴリズムでは、確率値を使用して、生成されるルールの数を制限します。 ルールの数を制御するには、`MINIMUM_PROBABILITY` パラメーターまたは `MINIMUM _IMPORTANCE` パラメーターを設定します。  
   
  詳細なパラメーターの構成の詳細については、「データマイニング[アルゴリズム &#40;SQL Server データマイニングアドイン&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)」を参照してください。  
   

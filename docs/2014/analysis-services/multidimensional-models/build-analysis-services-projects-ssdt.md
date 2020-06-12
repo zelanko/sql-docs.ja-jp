@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97e32b80d19675b3763101d1c226529a48e23e68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e239176c970a73b5a110c47bca77d8963017487e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076773"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537354"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Analysis Services プロジェクトのビルド (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成方法は、Visual Studio を使用したプログラミング プロジェクトの作成方法とほとんど同じです。 プロジェクトを作成する場合、出力ディレクトリ内に XML ファイルのセットが作成されます。 この XML ファイルは、Analysis Services Scripting Language (ASSL) を使用したファイルです。ASSL は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] や [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] などのクライアント アプリケーションが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスと接続して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの作成や変更に使用する XML 言語仕様です。 この XML ファイルを使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト内の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト定義が、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置されます。  
@@ -47,13 +46,13 @@ ms.locfileid: "66076773"
 |*Projectname*.configsettings|配置の際に使用された構成設定値 (データ ソースの接続文字列など) が格納されます。この設定値は、直接変更したり、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の配置ウィザードを使用して変更したりできます。|  
 |*Projectname*.deploymenttargets|配置の際に使用された配置先の設定 (サーバーおよびデータベース名) が格納されます。この設定は、直接変更したり、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の配置ウィザードを使用して変更したりできます。|  
 |*Projectname*.deploymentoptions|配置の際に使用されたさまざまなオプション設定 (ストレージ場所など) が格納されます。この設定は、直接変更したり、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の配置ウィザードを使用したりして変更できます。|  
-|*Assemblyname*/*dllname。* dll|参照されたアセンブリ別の個別のフォルダー。各フォルダーには、アセンブリの DLL、すべての参照されたアセンブリ、出力デバッグ情報が記録された関連 .pdb ファイルが格納されます。|  
+|*Assemblyname* /*dllname。* dll|参照されたアセンブリ別の個別のフォルダー。各フォルダーには、アセンブリの DLL、すべての参照されたアセンブリ、出力デバッグ情報が記録された関連 .pdb ファイルが格納されます。|  
   
 |ファイル (obj フォルダー内)|説明|  
 |-----------------------------|-----------------|  
-|\<構成名> \LastBuilt.xml|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの最終作成時刻を表すタイム スタンプおよびハッシュ コードが含まれています。|  
+|\<Configuration Name>\LastBuilt.xml|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの最終作成時刻を表すタイム スタンプおよびハッシュ コードが含まれています。|  
   
- これらの XML ファイルには\<、デプロイ時\<に構築される Create> タグと Alter> タグは含まれていません。  
+ これらの XML ファイルには \<Create> 、 \<Alter> デプロイ時に構築されるタグとタグは含まれません。  
   
  参照されたアセンブリ (標準システムと [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] アセンブリを除く) も出力ディレクトリにコピーされます。 参照がソリューションの別のプロジェクト (複数) に対して行われる場合はまず、該当するプロジェクト構成を使用してそれらのプロジェクトが作成され、プロジェクト参照により確立された依存オブジェクトが作成され、その後、プロジェクトの出力フォルダーにコピーされます。  
   

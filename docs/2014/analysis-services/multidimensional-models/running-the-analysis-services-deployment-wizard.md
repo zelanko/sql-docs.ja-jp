@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03e142f00192e04d5b17bc2041563cea06199c8b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073038"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545721"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Analysis Services 配置ウィザードの実行
-  配置ウィザードを使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]して[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトを配置する場合は、次の方法でウィザードを実行できます。  
+  配置ウィザードを使用してプロジェクトを配置する場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 次の方法でウィザードを実行できます。  
   
 -   **対話的に実行**[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードを対話的に実行すると、ユーザーの入力によって対話的に変更された入力ファイルに基づいて、XML 配置スクリプトが生成されます。 ユーザーによる変更は、配置スクリプトのみに適用されます。 入力ファイルが変更されることはありません。 入力ファイルの詳細については、「 [配置スクリプトを作成するための入力ファイルについて](deployment-script-files-input-used-to-create-deployment-script.md)」を参照してください。  
   
--   **コマンドプロンプトから**コマンドプロンプトで実行すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]配置ウィザードによって、ウィザードの実行に使用するスイッチに基づいて XML FOR ANALYSIS (XMLA) 配置スクリプトが生成されます。 ウィザードでは、ユーザーの入力を求めてその入力に基づいて入力ファイルを変更するか、入力ファイルをそのまま使用して自動的に配置を実行するか、後で使用可能な配置スクリプトを作成します。  
+-   **コマンドプロンプトから**コマンドプロンプトで実行すると、配置ウィザードによって、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ウィザードの実行に使用するスイッチに基づいて XML for Analysis (XMLA) 配置スクリプトが生成されます。 ウィザードでは、ユーザーの入力を求めてその入力に基づいて入力ファイルを変更するか、入力ファイルをそのまま使用して自動的に配置を実行するか、後で使用可能な配置スクリプトを作成します。  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>Analysis Services 配置ウィザードの対話的な実行  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードを対話的に実行すると、入力ファイルから値が読み取られ、その情報が提示されます。 これらの入力値 (配置先、構成設定、配置オプション、接続文字列パスワードなど) を変更するか、そのままにしておきます。 入力値を変更した場合、ウィザードではこれらの変更値を使用して XMLA 配置スクリプトを生成します。 ただし、入力ファイルの値は変更されません。  
@@ -40,10 +39,10 @@ ms.locfileid: "66073038"
   
      \- または -  
   
--   プロジェクトの**Projects**フォルダーで、 * \<プロジェクト名>*. asdatabase ファイルをダブルクリックします。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
+-   プロジェクトの**Projects**フォルダーで、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] *\<project name>* . asdatabase ファイルをダブルクリックします。  
   
     > [!NOTE]  
-    >  * \<プロジェクト名>* asdatabase ファイルが見つからない場合は、Search を使用して *. asdatabase を指定します。  
+    >  Asdatabase ファイルが見つからない場合は *\<project name>* 、Search を使用して *. asdatabase を指定します。  
   
 ## <a name="running-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>コマンド プロンプトでの Analysis Services 配置ウィザードの実行  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードは、コマンド プロンプトで実行することもできます。 コマンド プロンプトを使用する場合は、.asdatabase ファイルへの完全パスを指定し、次のいずれかのモードでウィザードを実行します。  

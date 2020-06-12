@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23f7debc1d2253938f235461279f39bb085c2b2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081651"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528548"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery の配置シナリオ (SSAS テーブル)
   このトピックでは、DirectQuery モデルのデザインと展開プロセスを紹介します。 DirectQuery をリレーショナル データのみ使用するように構成するか (DirectQuery のみ)、キャッシュ データのみの使用とリレーショナル データのみの使用を切り替えるようにモデルを構成できます (ハイブリッド モード)。 ここでは、両方のモードの実装プロセスについて説明し、モードとセキュリティ構成に応じたクエリ結果の差異について説明します。  
@@ -39,7 +38,7 @@ ms.locfileid: "66081651"
   
  既定では、DirectQuery は無効になっています。 したがって、デザイン環境が DirectQuery モードをサポートするように構成する必要があります。  
   
- ソリューションエクスプローラーの [**モデルの bim** ] ノードを右クリックし、[ **DirectQuery モード**] プロパティを`On`に設定します。  
+ ソリューションエクスプローラーの [**モデルの bim** ] ノードを右クリックし、[ **DirectQuery モード**] プロパティをに設定し `On` ます。  
   
  いつでも DirectQuery をオンにすることができます。ただし、DirectQuery モードと互換性のない列や数式を作成しないようにするために、最初から DirectQuery モードを有効にすることをお勧めします。  
   
@@ -111,8 +110,8 @@ ms.locfileid: "66081651"
   
 |||  
 |-|-|  
-|**キャッシュなしの DirectQuery**|キャッシュにデータは読み込まれません。 モデルは処理できません。<br /><br /> モデルは、DAX クエリをサポートするクライアントを使用してクエリのみ行うことができます。 クエリ結果は、常に元のデータ ソースから返されます。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode** = **DirectQuery**|  
-|**キャッシュにのみクエリを実行する DirectQuery**|配置が失敗します。 この構成はサポートされていません。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode** = **インメモリ**|  
+|**キャッシュなしの DirectQuery**|キャッシュにデータは読み込まれません。 モデルは処理できません。<br /><br /> モデルは、DAX クエリをサポートするクライアントを使用してクエリのみ行うことができます。 クエリ結果は、常に元のデータ ソースから返されます。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode**  = **DirectQuery**|  
+|**キャッシュにのみクエリを実行する DirectQuery**|配置が失敗します。 この構成はサポートされていません。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode**  = **インメモリ**|  
   
  **ハイブリッド モード**  
  モデルをハイブリッド モードで配置すると多くの利点があります。必要に応じて SQL Server データ ソースから最新データを取得できますが、キャッシュを保持すると、レポートのデザインまたはモデルのテスト時にメモリ内のデータをより高いパフォーマンスで操作できます。  
@@ -123,8 +122,8 @@ ms.locfileid: "66081651"
   
 |||  
 |-|-|  
-|**キャッシュ優先のハイブリッド モード**|モデルを処理することができ、データをキャッシュに読み込むことができます。 クエリでは、既定でキャッシュが使用されます。  クライアントで DirectQuery ソースを使用する場合は、接続文字列にパラメーターを挿入する必要があります。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **DirectQuery を使用した querymode インメモリ**|  
-|**DirectQuery 優先のハイブリッド モード**|モデルは処理され、データをキャッシュに読み込むことができます。 ただし、既定ではクエリで DirectQuery が使用されます。 クライアントでキャッシュ データを使用する場合は、接続文字列にパラメーターを挿入する必要があります。 モデル内のテーブルがパーティション分割されている場合は、キャッシュのプリンシパル パーティションも **[In-Memory (DirectQuery あり)]** に設定されます。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **インメモリを使用した**querymode DirectQuery|  
+|**キャッシュ優先のハイブリッド モード**|モデルを処理することができ、データをキャッシュに読み込むことができます。 クエリでは、既定でキャッシュが使用されます。  クライアントで DirectQuery ソースを使用する場合は、接続文字列にパラメーターを挿入する必要があります。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode**  = **DirectQuery を使用したインメモリ**|  
+|**DirectQuery 優先のハイブリッド モード**|モデルは処理され、データをキャッシュに読み込むことができます。 ただし、既定ではクエリで DirectQuery が使用されます。 クライアントでキャッシュ データを使用する場合は、接続文字列にパラメーターを挿入する必要があります。 モデル内のテーブルがパーティション分割されている場合は、キャッシュのプリンシパル パーティションも **[In-Memory (DirectQuery あり)]** に設定されます。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode**  = **メモリ内の DirectQuery**|  
   
 ## <a name="see-also"></a>参照  
  [SSAS テーブル &#40;の DirectQuery モード&#41;](tabular-models/directquery-mode-ssas-tabular.md)   

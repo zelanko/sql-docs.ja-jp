@@ -1,5 +1,6 @@
 ---
 title: min 関数 (XQuery) |Microsoft Docs
+description: XQuery min () 関数について説明します。この関数は、シーケンス内の1つの項目を返します。これは、他のすべての項目の値よりも小さくなります。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b209f6d46c47de5a604eee3c14c681a333bcdec8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985752"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529976"
 ---
 # <a name="aggregate-functions---min"></a>集計関数 - min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  **Min ()** 関数は、入力シーケンス内の他の値より小さいシーケンス内の1つの値を返します。 Xs: string 値の場合、既定の Unicode コードポイント照合順序が使用されます。 Xdt: untypedAtomic 値を xs: double にキャストできない場合、入力シーケンスの値は無視されます ( *$arg*)。 入力が動的に計算された空のシーケンスである場合は、空のシーケンスが返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>A. min() XQuery 関数を使用した、労働時間が最も短いワーク センター拠点の検索  
@@ -70,7 +71,7 @@ WHERE ProductModelID=7
   
 -   XQuery プロローグの**namespace**キーワードは、名前空間プレフィックスを定義します。 このプレフィックスは、XQuery の本文で使用されます。  
   
- XQuery 本文は、WCID 属性と\< **LaborHrs**属性を持つ Location> 要素を持つ XML を構築します。  
+ XQuery 本文は、 \<Location> WCID 属性と**LaborHrs**属性を持つ要素を持つ XML を構築します。  
   
 -   このクエリでは、ProductModelID と名前の値も取得します。  
   

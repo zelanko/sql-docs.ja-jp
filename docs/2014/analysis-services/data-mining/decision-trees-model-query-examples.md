@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 009e8d203d9262ee14702b99ad7d0e31d8a16dbb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a6b158a42c9ca90bf2cfd2e9b981a1e2a735ccc
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084756"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522718"
 ---
 # <a name="decision-trees-model-query-examples"></a>デシジョン ツリー モデルのクエリ例
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、デシジョン ツリー モデルでコンテンツ クエリを使用すると、ツリーの各レベルのケースの数に関する統計や、ケースを区別するルールを取得できます。 一方、予測クエリを使用すると、モデルを新しいデータにマップして、提案や分類などを生成することができます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
   
  ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムに基づくモデルに対するクエリの作成方法について説明します。  
   
- **コンテンツクエリ**  
+ **コンテンツ クエリ**  
   
  [データ マイニング スキーマ行セットからモデル パラメーターを取得する](#bkmk_Query1)  
   
@@ -79,7 +78,7 @@ WHERE NODE_TYPE = 2
   
 |MODEL_NAME|NODE_NAME|NODE_CAPTION|NODE_SUPPORT|CHILDREN_CARDINALITY|  
 |-----------------|----------------|-------------------|-------------------|---------------------------|  
-|TM_DecisionTree|000000001|All|12939|5|  
+|TM_DecisionTree|000000001|すべて|12939|5|  
   
  この結果からわかることは何でしょうか。 デシジョン ツリー モデルの特定のノードのカーディナリティは、そのノードの直接の子の数を表します。 このノードのカーディナリティは 5 なので、このモデルでは、対象になる母集団 (自転車を購入する可能性がある顧客) が 5 つのサブグループに分割されていることがわかります。  
   
@@ -107,7 +106,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|1|473|  
   
- これらの結果から、自転車を購入した顧客 (`[Bike Buyer]` = 1)、1067のお客様が車を0台、473のお客様が3車を持っていることがわかります。  
+ これらの結果から、自転車を購入した顧客 ( `[Bike Buyer]` = 1)、1067のお客様が車を0台、473のお客様が3車を持っていることがわかります。  
   
 ###  <a name="sample-query-3-retrieving-subtrees-from-the-model"></a><a name="bkmk_Query3"></a> サンプル クエリ 3: モデルからサブツリーを取得する  
  実際に自転車を購入した顧客についてさらに調査する場合は、 次の例のようにクエリで [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) 関数を使用すると、任意のサブツリーについて追加の詳細を表示することができます。 次のクエリは、42 歳以上の顧客を含むツリーのリーフ ノード (NODE_TYPE = 4) を取得して、自転車を購入した顧客の数を返します。 このクエリでは、入れ子になったテーブルの行が Bike Buyer = 1 の行のみに制限されています。  
@@ -257,7 +256,7 @@ WHERE NODE_TYPE = 25
   
 |||  
 |-|-|  
-|予測関数|使用方法|  
+|予測関数|使用法|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|重み付け確率を返します。|  

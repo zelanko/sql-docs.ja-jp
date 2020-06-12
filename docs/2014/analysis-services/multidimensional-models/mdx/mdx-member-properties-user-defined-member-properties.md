@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75e5df5a0677ee205b5517f4c7ca89a390426971
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074260"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546294"
 ---
 # <a name="user-defined-member-properties-mdx"></a>ユーザー定義メンバー プロパティ (MDX)
   属性リレーションシップとして、ディメンション内の指定されたレベルにユーザー定義メンバー プロパティを追加できます。 ユーザー定義メンバー プロパティは、階層の `(All)` レベル、または階層そのものには追加できません。  
@@ -30,7 +29,7 @@ ms.locfileid: "66074260"
 -   プログラムによってユーザー定義メンバー プロパティを追加するには、アプリケーションで Analysis Manager Objects (AMO) を使用するか、XML for Analysis (XMLA) と Analysis Services Scripting Language (ASSL) を組み合わせて使用できます。 詳細については、「 [属性リレーションシップ](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」を参照してください。  
   
 ## <a name="retrieving-user-defined-member-properties"></a>ユーザー定義メンバー プロパティの取得  
- ユーザー定義メンバープロパティを取得するには、 `PROPERTIES`キーワードまたは[properties](/sql/mdx/properties-mdx)関数を使用します。  
+ ユーザー定義メンバープロパティを取得するには、 `PROPERTIES` キーワードまたは[properties](/sql/mdx/properties-mdx)関数を使用します。  
   
 ### <a name="using-the-properties-keyword-to-retrieve-user-defined-member-properties"></a>PROPERTIES キーワードを使用したユーザー定義メンバー プロパティの取得  
  次に示すように、ユーザー定義メンバー プロパティを取得する構文は、固有レベル メンバー プロパティを取得する構文と同様です。  

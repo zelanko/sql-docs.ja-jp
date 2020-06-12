@@ -1,5 +1,6 @@
 ---
 title: 有効なブール値 (XQuery) |Microsoft Docs
+description: XQuery での有効なブール値について説明します。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 282f88f92d8ed5e0bb811783363e05b456bc37c8
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929958"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305851"
 ---
 # <a name="effective-boolean-value-xquery"></a>有効なブール値 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "67929958"
   
 -   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
- 次に、有効なブール値の例を示します。 **If**式が処理されると、条件の有効なブール値が決定されます。 は`/a[1]`空のシーケンスを返すので、有効なブール値は false です。 結果は、1つのテキストノード (false) を含む XML として返されます。  
+ 次に、有効なブール値の例を示します。 **If**式が処理されると、条件の有効なブール値が決定されます。 は `/a[1]` 空のシーケンスを返すので、有効なブール値は false です。 結果は、1つのテキストノード (false) を含む XML として返されます。  
   
 ```  
 value is false  
@@ -66,13 +67,13 @@ go
   
  型指定された**xml**列または変数に対してクエリを実行する場合は、ブール型のノードを持つことができます。 この場合の**データ ()** は、ブール値を返します。 クエリ式がブール値 true を返す場合、次の例で示すように、有効なブール値は true になります。 この例では、次のことも示しています。  
   
--   XML スキーマコレクションが作成されます。 コレクション内\<の要素 b> はブール型です。  
+-   XML スキーマコレクションが作成されます。 \<b>コレクション内の要素はブール型です。  
   
 -   型指定された**xml**変数が作成され、クエリが作成されます。  
   
--   式`data(/b[1])`はブール型の true 値を返します。 したがって、この場合の有効なブール値は true です。  
+-   式は `data(/b[1])` ブール型の true 値を返します。 したがって、この場合の有効なブール値は true です。  
   
--   式`data(/b[2])`は、ブール値の false 値を返します。 したがって、この場合の有効なブール値は false になります。  
+-   式は、 `data(/b[2])` ブール値の false 値を返します。 したがって、この場合の有効なブール値は false になります。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  

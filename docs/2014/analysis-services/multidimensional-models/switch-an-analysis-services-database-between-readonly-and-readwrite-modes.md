@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d028c4ca47567a1f0f6b7d4b874ad78c98ea2d1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072884"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547344"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え
-  多くの場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース管理者 (dba) がテーブルまたは多次元データベースの読み取り/書き込みモードを変更する必要があります。 こうした状況は、ユーザーが操作しやすくなるように一連の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー間でデータベースを共有するなどのビジネス上のニーズによって頻繁に発生します。  
+  多くの場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース管理者 (dba) がテーブルまたは多次元データベースの読み取り/書き込みモードを変更する必要があります。 こうした状況は、ユーザーが操作しやすくなるように一連の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー間でデータベースを共有するなどのビジネス上のニーズによって頻繁に発生します。  
   
  データベースモードは、さまざまな方法で切り替えることができます。 このドキュメントでは、次の一般的なシナリオについて説明します。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "66072884"
   
 -   XMLA を使用したスクリプト  
   
-## <a name="procedures"></a>プロシージャ  
+## <a name="procedures"></a>手順  
   
 #### <a name="to-switch-the-readwrite-mode-of-a-database-interactively-using-management-studio"></a>Management Studio を使用してデータベースの読み取り/書き込みモードを対話的に切り替えるには  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66072884"
   
 4.  デタッチするデータベースにパスワードを割り当て、 **[OK]** をクリックしてデタッチ コマンドを実行します。  
   
-5.  の[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]左側または右側のペインで、[**データベース**] フォルダーを探します。  
+5.  の左側または右側のペインで、[**データベース**] フォルダーを探し [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ます。  
   
 6.  [**データベース**] フォルダーを右クリックし、[**アタッチ**] を選択します。  
   

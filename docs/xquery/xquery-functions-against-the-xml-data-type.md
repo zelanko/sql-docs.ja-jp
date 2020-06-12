@@ -1,5 +1,6 @@
 ---
 title: Xml データ型に対する XQuery 関数 |Microsoft Docs
+description: Xml データ型に対して使用できる XQuery 関数について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e885b537fbc86f3b70a8142c5513dbf16cb1c158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d35db27e171c8cc31a463ad9ae91613d1c0708c
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67945993"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305711"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>xml データ型に対する XQuery 関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  このトピックとサブトピックでは、 **xml**データ型に対して XQuery を指定するときに使用できる関数について説明します。 W3C 仕様については[http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873)、「」を参照してください。  
+  このトピックとサブトピックでは、 **xml**データ型に対して XQuery を指定するときに使用できる関数について説明します。 W3C 仕様については、「」を参照してください [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873) 。  
   
- XQuery 関数はhttp://www.w3.org/2004/07/xpath-functions名前空間に属します。 W3C 仕様では、これらの関数を表すために "fn:" という名前空間プレフィックスを使用しています。 この関数を使用するときに、"fn:" 名前空間プレフィックスを明示的に指定する必要はありません。 このため、読みやすくするために、このドキュメントでは、名前空間プレフィックスが一般に使用されていません。  
+ XQuery 関数は名前空間に属し http://www.w3.org/2004/07/xpath-functions ます。 W3C 仕様では、これらの関数を表すために "fn:" という名前空間プレフィックスを使用しています。 この関数を使用するときに、"fn:" 名前空間プレフィックスを明示的に指定する必要はありません。 このため、読みやすくするために、このドキュメントでは、名前空間プレフィックスが一般に使用されていません。  
   
  次の表に、 **xml**データ型に対してサポートされている XQuery 関数を示します。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "67945993"
 ||[ローカル名関数 (XQuery)](../xquery/functions-on-nodes-local-name.md)|  
 ||[名前空間 uri 関数 (XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
 |[コンテキスト関数](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[last](../xquery/context-functions-last-xquery.md)|  
-||[移動](../xquery/context-functions-position-xquery.md)|  
+||[position](../xquery/context-functions-position-xquery.md)|  
 |[シーケンスの関数](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[empty](../xquery/functions-on-sequences-empty.md)|  
 ||[distinct-values](../xquery/functions-on-sequences-distinct-values.md)|  
 ||[id 関数 (XQuery)](../xquery/functions-on-sequences-id.md)|  
@@ -56,7 +57,7 @@ ms.locfileid: "67945993"
 ||[avg](../xquery/aggregate-functions-avg.md)|  
 ||[min](../xquery/aggregate-functions-min.md)|  
 ||[max](../xquery/aggregate-functions-max.md)|  
-||[求め](../xquery/aggregate-functions-sum.md)|  
+||[sum](../xquery/aggregate-functions-sum.md)|  
 |[コンストラクター関数 &#40;XQuery&#41;](../xquery/constructor-functions-xquery.md)|[コンストラクター関数](../xquery/constructor-functions-xquery.md)|  
 |[データ アクセサー関数](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
 ||[データ](../xquery/data-accessor-functions-data-xquery.md)|  
@@ -69,7 +70,7 @@ ms.locfileid: "67945993"
 ||[sql:variable() 関数 (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)|  
   
 ## <a name="see-also"></a>参照  
- [xml データ型のメソッド](../t-sql/xml/xml-data-type-methods.md)   
+ [xml データ型メソッド](../t-sql/xml/xml-data-type-methods.md)   
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   

@@ -18,12 +18,12 @@ ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e28564c44dc226054f0b08e8ba75fe36509cf064
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5d2bab967400244e35ac33bf96a1be72ae21e375
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808953"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83806848"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="remarks"></a>Remarks  
  **sp_updatestats**は、 `UPDATE STATISTICS` キーワードを指定することによって、 `ALL` データベース内のすべてのユーザー定義テーブルと内部テーブルに対して実行します。 sp_updatestats の進行状況を示すメッセージが表示されます。 更新が完了すると、すべてのテーブルの統計が更新されたことが報告されます。  
   
-無効な非クラスター化インデックスの統計を更新し、無効になっているクラスター化インデックスの統計を更新しません。 sp_updatestats。  
+無効な非クラスター化インデックスの統計を更新し、無効になっているクラスター化インデックスの統計を更新しません。 **sp_updatestats** 。  
   
 ディスクベーステーブルの場合、 **sp_updatestats**は、 **dm_db_stats_properties**カタログビューの**modification_counter**情報に基づいて統計を更新し、少なくとも1つの行が変更されている統計を更新します。 メモリ最適化テーブルの統計は、 **sp_updatestats**の実行時に常に更新されます。 そのため、 **sp_updatestats**は必要以上に実行しないでください。  
   
@@ -58,9 +58,10 @@ sp_updatestats [ [ @resample = ] 'resample']
 互換性レベルが90未満のデータベースの場合、 **sp_updatestats**を実行しても、特定の統計の最新の NORECOMPUTE 設定は保持されません。 互換性レベルが90以上のデータベースの場合、sp_updatestats は特定の統計の最新の NORECOMPUTE オプションを保持します。 統計の更新の無効化および再有効化について詳しくは、「[統計](../../relational-databases/statistics/statistics.md)」をご覧ください。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールのメンバーシップ、またはデータベースの所有権 (**dbo**) が必要です。  
 
-## <a name="examples"></a>使用例  
+**Sp_updatestats**を実行するには、ユーザーがデータベースの所有者 ( `dbo` ロールのメンバーではない) である `db_owner` か、sysadmin 固定サーバーロールのメンバーである必要があります。
+
+## <a name="examples"></a>例  
 次の例では、データベース内のテーブルの統計を更新し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```sql  

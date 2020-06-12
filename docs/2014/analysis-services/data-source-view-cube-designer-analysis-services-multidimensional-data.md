@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a922f23cf667068ff51c315563b8fc3b35fceefe
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082527"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528995"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>[データ ソース ビュー] (キューブ デザイナーの [キューブ構造] タブ) (Analysis Services - 多次元データ)
   **[データ ソース ビュー]** ペインを使用すると、選択されたキューブに関連付けられているデータ ソース ビューのテーブルおよび列を表示できます。 このペインを使用すると、 **[データ ソース ビュー]** ペインから **[メジャー]** ペインに列をドラッグすることで、メジャー グループおよびメジャーを作成できます。  
@@ -44,7 +43,7 @@ ms.locfileid: "66082527"
  **フレンドリ名の表示**  
  選択すると、オブジェクトの表示名がペインに表示されます。  
   
- **すべて選択**  
+ **[すべて選択]**  
  ペイン内のすべてのオブジェクトが選択されます。  
   
  **[テーブルの検索]**  
@@ -82,7 +81,7 @@ ms.locfileid: "66082527"
  **[ダイアグラムのコピー元]**  
  **[データ ソース ビュー]** ペインに表示する、キューブに関連付けられたデータ ソース ビューに含まれているいずれかのダイアグラムを選択します。  
   
- **Zoom**  
+ **[ズーム]**  
  利用可能なズーム オプションを選択します。  
   
  **プロパティ**  

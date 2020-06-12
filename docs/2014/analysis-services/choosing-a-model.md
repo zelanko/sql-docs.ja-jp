@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f3b1e504b7e027e888458b8cc2eaee169ca272f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088090"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527538"
 ---
 # <a name="choosing-a-model"></a>モデルの選択
   **マイニングアルゴリズム:** データマイニング*アルゴリズム*は、データからパターンを作成するメカニズムです。 このアルゴリズムでは、データのカウント方法、リレーションシップの派生方法、およびパターンの格納方法が定義されます。 アルゴリズムの選択は、分析するデータの種類によっても異なります。 たとえば、アルゴリズムによっては、連続する数値のみを操作できるものもあれば、個々の値の数が制限されている場合に最も効果を発揮するものもあります。  
@@ -75,7 +74,7 @@ ms.locfileid: "66088090"
   
      ユーザーが Web サイトをナビゲートする際にたどる経路など、データ内の頻度の高いシーケンスまたはエピソードを要約します。  
   
- Office 用 SQL Server データ マイニング アドインで使用されるアルゴリズムは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で提供されるアルゴリズムに基づいています。 接続しているのインスタンスがサードパーティのアルゴリズムを許可するように構成されている場合[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]は、データマイニング仕様の OLE DB に準拠するサードパーティのアルゴリズムを使用することもできます。  
+ Office 用 SQL Server データ マイニング アドインで使用されるアルゴリズムは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で提供されるアルゴリズムに基づいています。 接続しているのインスタンスが [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サードパーティのアルゴリズムを許可するように構成されている場合は、データマイニング仕様の OLE DB に準拠するサードパーティのアルゴリズムを使用することもできます。  
   
 ## <a name="requirements"></a>要件  
  アルゴリズムが操作できるデータの種類は、アルゴリズムによって異なります。  

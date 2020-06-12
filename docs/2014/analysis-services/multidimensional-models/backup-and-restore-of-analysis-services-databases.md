@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 322b755357da597d3bdcb41e4a83685075f4d991
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077027"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544642"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services データベースのバックアップと復元
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、特定の時点からデータベースとそのオブジェクトを復旧できるように、バックアップと復元機能が用意されています。 また、バックアップと復元は、アップグレードされたサーバーへのデータベースの移行、サーバー間でのデータベースの移動、実稼働サーバーへのデータベースの配置を行うための有効な方法でもあります。 バックアップ計画をまだ確立しておらず、重要なデータを保持している場合は、データ復旧のために、できるだけ早く計画を作成して実行してください。  
@@ -81,7 +80,7 @@ ms.locfileid: "66077027"
 |------------------|-----------------------------|  
 |多次元 MOLAP パーティションおよびディメンション|メタデータ、ソース データ、および集計|  
 |多次元 HOLAP パーティションおよびディメンション|メタデータおよび集計|  
-|多次元 ROLAP パーティションおよびディメンション|メタデータ|  
+|多次元 ROLAP パーティションおよびディメンション|Metadata|  
 |テーブル インメモリ モデル|メタデータとソース データ|  
 |テーブル DirectQuery モデル|メタデータのみ|  
   

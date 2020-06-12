@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69f68beecc8f4ce7f8f4da3e36f2f9f400575c9d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072401"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541264"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>[名前の一致] (データ ソース ビュー ウィザード) (Analysis Services)
   **[名前の一致]** ページを使用すると、データ ソース ビューに対して選択したテーブルと、スキーマ内の他のテーブルとの間で可能なリレーションシップを検出するための基準を選択できます。 これらのテーブルの間に物理的な外部キー リレーションシップが存在しない場合は、この条件は、関連テーブルを識別してデータ ソース ビューに追加するときに役に立ちます。 また、名前の一致によって識別される論理リレーションシップもデータ ソース ビューに追加されます。  
@@ -32,7 +31,7 @@ ms.locfileid: "66072401"
  **[外部キーの一致]**  
  データ ソース内のテーブルおよびビューの間に論理リレーションシップを作成するために使用する条件を選択します。 文字列の照合において、英数字以外の文字は無視されます。 たとえば、"Customer ID"、"Customer_ID"、"CustomerID" はすべて一致します。 次の表に示すいずれかのオプションを選択すると、特定の条件下でリレーションシップを作成できます。  
   
-|Select|作成されるリレーションシップ|  
+|選択|作成されるリレーションシップ|  
 |------------|---------------|  
 |**[主キーと同一の名前]**|選択されたテーブルの主キー列の名前に一致する列名を持つ、任意のテーブルへの論理リレーションシップ。|  
 |**[対象のテーブル名と同一の名前]**|選択されたテーブルの名前に一致する列名を持つ、任意のテーブルへの論理リレーションシップ。|  

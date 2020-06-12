@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32ac73a2d6fde38d15d1f45a8439293695749ea4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081850"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528698"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>[デザイン] ペイン ([マイニング モデル予測] ビュー)
   **デザイン** ペインには、データ マイニング予測クエリ ビルダーがあり、これを利用してデータ マイニング予測クエリを作成できます。 データ ソース ビューから入力データのテーブルを使用する予測クエリを設計して一括予測を生成することも、個々の値を取得する単一予測クエリを作成することもできます。  
@@ -68,7 +67,7 @@ ms.locfileid: "66081850"
  **[単一クエリ入力]**  
  **[単一クエリ]** ボタンをクリックすると有効になります。 次の列が含まれています。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[マイニング モデル列]**|**[マイニング モデル]** テーブルで選択されているマイニング モデル内のマイニング モデル列が一覧表示されます。|  
 |**Value**|選択したマイニング モデル列で可能な各状態を示した一覧から、値を選択します。<br /><br /> 列が入れ子になったテーブルの列である場合、値のセルをクリックすると **[入れ子になったテーブルの入力]** ダイアログ ボックスが開きます。|  

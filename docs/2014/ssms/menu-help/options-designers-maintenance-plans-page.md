@@ -12,17 +12,17 @@ ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e995fcdb128f7b9f67bb75ae41222c7d6d022d3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283177"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859840"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>[オプション] ([デザイナー]-[メンテナンスプラン] ページ)
   **[オプション]** ダイアログ ボックスを使用すると、デザイン画面に新しい図形を追加したときのデザイナーの既定の動作を指定できます。 **[ツール]** メニューの **[オプション]** をクリックします。次に **[デザイナー]** を展開し、 **[メンテナンス プラン]** を選択します。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[選択した図形に新しい図形を既定で接続する]**  
  このチェック ボックスがオンの場合、デザイン画面に新しい図形を追加したときに自動的に他の図形に接続されます。 このチェック ボックスがオフの場合、新しい図形は追加しても接続されません。 このチェック ボックスをオンにすると、次のボックスが有効になります。  
   

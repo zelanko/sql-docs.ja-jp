@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3ea13dc58815e82d82a3f3b5ffdd3c5d666d7e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217116"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543717"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>動的管理ビュー (DMV) を使用した Analysis Services の監視
   Analysis Services 動的管理ビュー (DMV) は、ローカル サーバーの操作やサーバーの正常性に関する情報を公開するクエリ構造です。 クエリ構造は、Analysis Services インスタンスのメタデータと監視情報を返すためのスキーマ行セットへのインターフェイスです。  
@@ -98,7 +97,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  特定の行セットに対して DMV が使用できない場合、サーバーは " \<schemarowset> 要求の種類がサーバーで認識されませんでした" というエラーを返します。 他のすべてのエラーは、構文の問題を示します。  
+>  特定の行セットに対して DMV が使用できない場合、サーバーは " \<schemarowset> 要求の種類がサーバーによって認識されませんでした" というエラーを返します。 他のすべてのエラーは、構文の問題を示します。  
   
 |[行セット]|説明|  
 |------------|-----------------|  

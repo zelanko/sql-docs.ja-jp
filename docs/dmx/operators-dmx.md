@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2f03c3152e3144b137c079cbdfddeff5b9cd5156
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fd3bd36169f377b3f507609d94b5b209a9fb3bc
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008167"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669731"
 ---
 # <a name="operators-dmx"></a>演算子 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  データマイニング拡張機能 (DMX) 演算子を使用すると、の[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]クエリで算術、比較、連結、および論理演算を実行できます。  
+  データマイニング拡張機能 (DMX) 演算子を使用すると、のクエリで算術、比較、連結、および論理演算を実行でき [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、次の操作を実行するために演算子が使用されます。  
   
@@ -35,9 +35,9 @@ ms.locfileid: "68008167"
 |[DMX&#41;&#40;論理演算子](../dmx/operators-logical.md)|AND、OR、NOT などの条件の真偽をテストします。|  
 |[単項演算子 &#40;DMX&#41;](../dmx/operators-unary.md)|1つのオペランドに対して操作を実行します。|  
   
- 演算子を使用すると、DMX 内の小さな式を結合して、より複雑な式にすることができます。 複合式では、演算子は演算子の優先順位の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]定義に基づいて順番に評価されます。 優先順位の高い演算子は、優先順位の低い演算子より先に実行されます。 式の詳細については、「 [DMX&#41;&#40;式](../dmx/expressions-dmx.md)」を参照してください。  
+ 演算子を使用すると、DMX 内の小さな式を結合して、より複雑な式にすることができます。 複合式では、演算子は [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 演算子の優先順位の定義に基づいて順番に評価されます。 優先順位の高い演算子は、優先順位の低い演算子より先に実行されます。 式の詳細については、「 [DMX&#41;&#40;式](../dmx/expressions-dmx.md)」を参照してください。  
   
- 単純な式を結合して複雑な式を作成する場合、結果として得られる式のデータ型は、演算子のルールとデータ型の優先順位のルールを組み合わせることによって決定されます。 結果が文字または Unicode 値の場合、は[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、演算子のルールと照合順序の優先順位のルールを組み合わせることによって、結果の照合順序を決定します。 また、単純式の有効桁数、小数点以下桁数、および長さに基づいて、結果の有効桁数、小数点以下桁数、および長さを決定するルールもあります。  
+ 単純な式を結合して複雑な式を作成する場合、結果として得られる式のデータ型は、演算子のルールとデータ型の優先順位のルールを組み合わせることによって決定されます。 結果が文字または Unicode 値の場合、は、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 演算子のルールと照合順序の優先順位のルールを組み合わせることによって、結果の照合順序を決定します。 また、単純式の有効桁数、小数点以下桁数、および長さに基づいて、結果の有効桁数、小数点以下桁数、および長さを決定するルールもあります。  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-reference.md)   

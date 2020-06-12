@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bfce63f3686f06c0289c818daac82f336fb2b17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab6725ddd86d18132de9c408125fa9084161a187
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084969"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523112"
 ---
 # <a name="data-mining-queries"></a>データ マイニング クエリ
-  データ マイニング クエリは多くの目的で役立ちます。 次の操作を行います。  
+  データ マイニング クエリは多くの目的で役立ちます。 次のようにすることができます。  
   
 -   モデルを新しいデータに適用し、1 つまたは複数の予測を作成する。 入力値をパラメーターとして、またはバッチで提供する。  
   
@@ -109,9 +108,9 @@ ms.locfileid: "66084969"
     |||  
     |-|-|  
     |[結合モデルのクエリ例](association-model-query-examples.md)|[Microsoft Naive Bayes アルゴリズム](microsoft-naive-bayes-algorithm.md)|  
-    |[クラスタリング モデルのクエリ例](clustering-model-query-examples.md)|[ニューラル ネットワーク モデルのクエリ例](neural-network-model-query-examples.md)|  
+    |[クラスタリング モデルのクエリ例](clustering-model-query-examples.md)|[Neural Network Model Query Examples](neural-network-model-query-examples.md)|  
     |[デシジョン ツリー モデルのクエリ例](decision-trees-model-query-examples.md)|[Sequence Clustering Model Query Examples](sequence-clustering-model-query-examples.md)|  
-    |[線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)|[タイム シリーズ モデルのクエリ例](time-series-model-query-examples.md)|  
+    |[線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)|[Time Series Model Query Examples](time-series-model-query-examples.md)|  
     |[ロジスティック回帰モデルのクエリ例](logistic-regression-model-query-examples.md)||  
   
      また、VBA 関数を呼び出したり、独自の関数を作成したりすることもできます。 詳細については、「[関数 &#40;DMX&#41;](/sql/dmx/functions-dmx)」を参照してください。  
@@ -130,7 +129,7 @@ ms.locfileid: "66084969"
   
      モデル コンテンツでは、返されるテーブルの各行またはノードの意味は、モデルのビルドに使用されたアルゴリズムの種類と列のデータ型によって異なります。 詳細については、「 [コンテンツ クエリ &#40;データ マイニング&#41;](content-queries-data-mining.md)」を参照してください。  
   
-##  <a name="requirements"></a><a name="bkmk_Reqs"></a> 必要条件  
+##  <a name="requirements"></a><a name="bkmk_Reqs"></a> 要件  
  モデルに対するクエリを作成する前に、データ マイニング モデルを処理する必要があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの処理には特別な権限が必要です。 マイニング モデルの処理の詳細については、「[処理の要件および注意事項 &#40;データ マイニング&#41;](processing-requirements-and-considerations-data-mining.md)」を参照してください。  
   
  データ マイニング モデルに対するクエリを実行するには、実行するクエリの種類により、異なるレベルの権限が必要になります。 たとえば、通常、ケースや構造データのドリルスルーでは、マイニング構造オブジェクトまたはマイニング モデル オブジェクトに対して設定された別の権限が必要になります。  

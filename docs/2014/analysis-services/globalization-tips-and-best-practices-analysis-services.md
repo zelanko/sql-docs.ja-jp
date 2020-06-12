@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2018c557b8fd7dffdceb14c0a872595a3ce21da
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874415"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544346"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>グローバリゼーションのヒントとベスト プラクティス (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** 多次元のみ  
@@ -102,7 +101,7 @@ ms.locfileid: "70874415"
   
 -   接続文字列に `Locale Identifier=1036` を追加します。 ファイルを保存して閉じます。  
   
--   Excel を開く |**データ** | の**既存の接続**。 リストをフィルター処理し、対象のコンピューター上の接続ファイルのみにします。 Adventure Works 用の接続を検索します (名前を注意深く探します。複数ある場合もあります)。 接続を開きます。  
+-   Excel を開く |**データ**  | **既存の接続**。 リストをフィルター処理し、対象のコンピューター上の接続ファイルのみにします。 Adventure Works 用の接続を検索します (名前を注意深く探します。複数ある場合もあります)。 接続を開きます。  
   
      Adventure Works サンプル データベースのフランス語翻訳が表示されるはずです。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "70874415"
   
  Management Studio で、サーバー接続のロケール ID を指定できます。  
   
--   オブジェクトエクスプローラー |**Connect** | **Analysis Services**Analysis Services | **オプション**を接続し、[**追加の接続パラメーター** ] タブをクリックします。  
+-   オブジェクトエクスプローラー |**接続**  | **Analysis Services**  | **オプション**で、[**追加の接続パラメーター** ] タブをクリックします。  
   
 -   `Local Identifier=1036` と入力し、[ **接続**] をクリックします。  
   

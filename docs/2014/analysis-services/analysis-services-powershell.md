@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f75298a4701f15a1fc0f3f471bf7628f4a7030c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a6bbeab13d3a29c9dd7cf769dd28d776d3ae229
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782652"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528028"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]には、Analysis Services PowerShell (SQLAS) プロバイダーとコマンドレットが含まれています。これにより、Windows PowerShell を使用して Analysis Services オブジェクトの移動、管理、およびクエリを実行できるようになります。  
@@ -28,7 +27,7 @@ ms.locfileid: "72782652"
   
 -   処理、ロール管理、パーティション管理、バックアップと復元などの日常的な操作に使用するタスク固有のコマンドレット。  
   
-## <a name="in-this-article"></a>この記事では、次の項目が扱われます。  
+## <a name="in-this-article"></a>この記事の内容  
  [前提条件](#bkmk_prereq)  
   
  [サポートされている Analysis Services のバージョンとモード](#bkmk_vers)  
@@ -46,7 +45,7 @@ ms.locfileid: "72782652"
   
  SQL Server PowerShell (SQLPS) モジュールとクライアント ライブラリを含んだ SQL Server 機能をインストールする必要があります。 その最も簡単な方法は、SQL Server Management Studio をインストールすることです。SQL Server Management Studio をインストールすると、PowerShell の機能とクライアント ライブラリも自動的にインストールされます。 SQL Server PowerShell (SQLPS) モジュールには、Analysis Services オブジェクト階層の移動に使用する SQLASCmdlets モジュールと SQLAS プロバイダーなど、すべての SQL Server 機能用の PowerShell プロバイダーとコマンドレットが含まれています。  
   
- プロバイダーとコマンドレットを使用するには、Sqlps モジュールをインポートする必要があります。 **SQLPS** `SQLAS` SQLAS プロバイダーは、 `SQLServer`プロバイダーの拡張機能です。 SQLPS モジュールをインポートするには、いくつかの方法があります。 詳細については、「 [SQLPS モジュールのインポート](../../2014/database-engine/import-the-sqlps-module.md)」を参照してください。  
+ プロバイダーとコマンドレットを使用するには、 **Sqlps**モジュールをインポートする必要があり `SQLAS` ます。 SQLAS プロバイダーは、プロバイダーの拡張機能です `SQLServer` 。 SQLPS モジュールをインポートするには、いくつかの方法があります。 詳細については、「 [SQLPS モジュールのインポート](../../2014/database-engine/import-the-sqlps-module.md)」を参照してください。  
   
  Analysis Services インスタンスにリモート アクセスするには、リモート管理とファイル共有を有効にしておく必要があります。 詳細については、このトピックの「[リモート管理の有効化](#bkmk_remote)」を参照してください。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "72782652"
 |表形式のインスタンスとデータベース|ローカルおよびリモート管理でサポートされます。<br /><br /> 詳細については、「 [PowerShell を使用したテーブルモデルの管理](https://go.microsoft.com/fwlink/?linkID=227685)」の2011年8月のブログを参照してください。|  
 |PowerPivot for SharePoint のインスタンスとデータベース|制限付きサポート。 HTTP 接続と SQLAS プロバイダーを使用して、インスタンスとデータベースの情報を表示できます。<br /><br /> ただし、コマンドレットの使用はサポートされていません。 インメモリ PowerPivot データベースのバックアップと復元に Analysis Services PowerShell は使用しないでください。また、ロールの追加や削除、データの処理、任意の XMLA スクリプトの実行にも使用しないでください。<br /><br /> PowerPivot for SharePoint には、構成のために個別に提供される組み込みの PowerShell サポートがあります。 詳細については、「 [PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)」を参照してください。|  
 |ローカル キューブへのネイティブ接続<br /><br /> "Data Source = c:\backup\test.cub"|サポートされていません。|  
-|SharePoint 内の BI セマンティック モデル (.bism) 接続ファイルへの HTTP 接続<br /><br /> "Data Source =http://server/shared_docs/name.bism"|サポートされていません。|  
+|SharePoint 内の BI セマンティック モデル (.bism) 接続ファイルへの HTTP 接続<br /><br /> "Data Source = http://server/shared_docs/name.bism "|サポートされていません。|  
 |PowerPivot データベースへの埋め込み接続<br /><br /> "Data Source = $Embedded $"|サポートされていません。|  
 |Analysis Services ストアド プロシージャ内のローカル サーバーのコンテキスト<br /><br /> "Data Source = *"|サポートされていません。|  
   
@@ -82,7 +81,7 @@ ms.locfileid: "72782652"
   
 3.  資格情報オブジェクトによって指定されたユーザー名とパスワードが、Windows ユーザー ID へと解決される。 Analysis Services は、この ID を現在のユーザーとして使用します。 Windows ユーザーでない場合、または要求された操作を実行するための十分な権限がそのユーザーにない場合、要求は失敗します。  
   
- 資格情報オブジェクトを作成するには、Get-Credential コマンドレットを使用して、対象のオペレーターの資格情報を収集します。 この資格情報オブジェクトを Analysis Services への接続コマンドに使用できます。 次の例は、1つの方法を示しています。 この例では、HTTP アクセス用に構成され`SQLSERVER:\SQLAS\HTTP_DS`たローカルインスタンス () への接続です。  
+ 資格情報オブジェクトを作成するには、Get-Credential コマンドレットを使用して、対象のオペレーターの資格情報を収集します。 この資格情報オブジェクトを Analysis Services への接続コマンドに使用できます。 次の例は、1つの方法を示しています。 この例では、 `SQLSERVER:\SQLAS\HTTP_DS` HTTP アクセス用に構成されたローカルインスタンス () への接続です。  
   
 ```powershell
 $cred = Get-Credential adventureworks\dbadmin  
@@ -201,7 +200,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  Http 接続は、このトピックの手順を使用して http アクセス用にサーバーを構成した場合に役立ちます。[インターネットインフォメーションサービス &#40;IIS&#41; 8.0 の Analysis Services への Http アクセスの構成](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- サーバーの URL がのhttp://localhost/olap/msmdpump.dll場合、接続は次のようになります。  
+ サーバーの URL がの場合 http://localhost/olap/msmdpump.dll 、接続は次のようになります。  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  

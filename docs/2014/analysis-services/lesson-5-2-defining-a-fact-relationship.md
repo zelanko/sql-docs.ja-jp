@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8b43e36072e7151570c0b0fa610c3b7e4709616a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2473157bed334345f6c18177f97ac0415612232
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175281"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542784"
 ---
 # <a name="defining-a-fact-relationship"></a>ファクト リレーションシップの定義
   ディメンション メジャーをファクト テーブルのデータ アイテムに関連付けなければならない場合があります。また、特定の販売ファクター (請求番号や受注番号) など、関連している特定の補足情報について、ファクト テーブルから情報を抽出しなければならない場合があります。 このように、ファクト テーブル アイテムに基づいて定義されたディメンションを、 *ファクト ディメンション*と呼びます。 ファクト ディメンションは、逆ディメンションとも呼ばれます。 特定の請求番号に関連するすべての行をグループ化する場合などのように、関連するテーブルの行をまとめてグループ化するには、ファクト ディメンションを使用すると便利です。 この情報は、リレーショナル データベースの個々のディメンション テーブルに格納することができます。しかし、情報ごとに異なるディメンション テーブルを作成してもメリットはありません。ファクト テーブルのサイズに比例してディメンション テーブルが大きくなり、データを複製することによって不要な複雑さを招くことになるからです。
@@ -61,7 +60,7 @@ ms.locfileid: "78175281"
 
 12. **[ウィザードの完了]** ページで、名前を **Internet Sales Order Details** に変更します。 **[完了]** をクリックしてウィザードを終了します。
 
-13. [**ファイル**] メニューの [**すべてを保存**] をクリックします。
+13. **[ファイル]** メニューの **[すべてを保存]** をクリックします。
 
 14. **Internet Sales Order Details**ディメンションのディメンションデザイナーの [**属性**] ペインで、[ **Sales order Number**] を選択し、プロパティウィンドウの**Name**プロパティをに変更します。`Item Description.`
 
@@ -69,9 +68,9 @@ ms.locfileid: "78175281"
 
 16. **[データ ソース ビュー]** ペインで、 **InternetSales** テーブルの **SalesOrderNumber** 列をクリックし、 **[属性]** ペインにドラッグします。これにより、 **Sales Order Number** 属性がディメンションに追加されます。
 
-17. 新しい**Sales Order Number**属性`Order Number`の**Name**プロパティをに変更し、 **OrderBy**プロパティを**Key**に変更します。
+17. 新しい**Sales Order Number**属性の**Name**プロパティをに変更 `Order Number` し、 **OrderBy**プロパティを**Key**に変更します。
 
-18. [**階層**] ペインで、および**項目の説明**の`Order Number`レベルを含む**Internet Sales Orders**ユーザー階層をこの順序で作成します。
+18. [**階層**] ペインで、および項目の説明のレベルを含む**Internet Sales Orders**ユーザー階層をこの `Order Number` 順序で作成し**Item Description**ます。
 
 19. **[属性]** ペインで **Internet Sales Order Details**をクリックします。次に、[プロパティ] ウィンドウで、 **StorageMode** プロパティの値を確認します。
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0dea40f9c4e4c0672db78ca7e841cb7cedca857e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 755b38d1f42432818f87d92b0d2bf097d58795f0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174351"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543952"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>チェック リスト: PowerShell を使用して PowerPivot for SharePoint を確認する
   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] のインストール操作や復旧操作を完了するには、信頼性の高い検証テストに合格する必要があります。このテストでは、サービスとデータが操作可能であるかどうかが確認されます。 この記事では、Windows PowerShell を使用してこのテストの手順を実行する方法について説明します。 各手順は個別のセクションで説明されています。これにより、特定のタスクを直接参照することもできます。 たとえば、メンテナンスやバックアップでサービス アプリケーションとコンテンツ データベースの名前の確認をスケジュールする必要がある場合は、このトピックの「 [データベース](#bkmk_databases) 」セクションのスクリプトを実行し、これらの名前を確認することができます。
@@ -69,7 +68,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
 |データ更新が実行されていない|「 [Timer Jobs](#bkmk_timer_jobs) 」のセクションを参照して、 **"Online PowerPivot Data Refresh Timer Job"** がオンラインになっていることを確認します。|
 |管理ダッシュボードのデータが古くなっている|「 [タイマー ジョブ](#bkmk_timer_jobs) 」のセクションを参照して、 **"Management Dashboard Processing Timer Job"** がオンラインになっていることを確認します。|
 |管理ダッシュボードの一部の機能に関する問題|(Excel Services または PowerPivot for SharePoint のない) サーバーの全体管理のトポロジを持つファームに PowerPivot for SharePoint をインストールする場合に、PowerPivot 管理ダッシュボードの組み込みレポートへのフル アクセスが必要なときは、Microsoft ADOMD.NET クライアント ライブラリをダウンロードしてインストールする必要があります。 ダッシュボードの一部のレポートでは、ADOMD.NET を使用して、ファームの PowerPivot クエリ処理およびサーバーの状態に関するレポート データを提供する内部データにアクセスします。 セクション「 [ADOMD.Net クライアント ライブラリ](#bkmk_adomd) 」およびトピック「 [サーバーの全体管理を実行している Web フロントエンド サーバーに ADOMD.NET をインストールする方法](../../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)」を参照してください。|
-|\<今後のコンテンツ>||
+|\<future content>||
 
 ##  <a name="analysis-services-windows-service"></a><a name="bkmk_windows_service"></a> Analysis Services の Windows サービス
  このセクションのスクリプトでは、SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスを検証します。 サービスが **実行されている**ことを確認します。
@@ -153,7 +152,7 @@ Status      : Online
 > [!NOTE]
 >  次のコード サンプルでは、最初に既定の [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] サービス アプリケーションの applicationpool プロパティを返します。 文字列から名前が解析され、その名前を使用して、アプリケーション プール オブジェクトの状態が取得されます。
 > 
->  状態が**オンライン**であることを確認します。 状態がオンラインでない場合、またはサイトを[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]参照するときに "http エラー" が表示される場合は、IIS アプリケーションプールの id 資格情報が正しいことを確認してください。 IIS のプール名は、Get-SPServiceApplicationPool コマンドによって返された ID プロパティの値になります。
+>  状態が**オンライン**であることを確認します。 状態がオンラインでない場合、またはサイトを参照するときに "http エラー" が表示される場合は、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] IIS アプリケーションプールの id 資格情報が正しいことを確認してください。 IIS のプール名は、Get-SPServiceApplicationPool コマンドによって返された ID プロパティの値になります。
 
 ```powershell
 $poolname = [string](Get-PowerPivotServiceApplication | Select -Property applicationpool)
@@ -319,7 +318,7 @@ Message     : EXCEPTION: System.TimeoutException: The request channel timed out 
 ```
 
 ##  <a name="msolap-provider"></a><a name="bkmk_msolap"></a> MSOLAP プロバイダー
- プロバイダーが MSOLAP プロバイダーであることを確認します。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]および[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]には MSOLAP. 5 が必要です。
+ プロバイダーが MSOLAP プロバイダーであることを確認します。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]およびには [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] MSOLAP. 5 が必要です。
 
 ```powershell
 $excelApp = Get-SPExcelServiceApplication

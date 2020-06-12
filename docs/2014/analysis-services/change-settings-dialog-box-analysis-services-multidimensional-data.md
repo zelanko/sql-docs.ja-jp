@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 717eabb3db136f048f7a39f2fc40f61ee60c253c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088248"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527639"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>[設定の変更] ダイアログ ボックス (Analysis Services - 多次元データ)
   **および** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [設定の変更] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 **[処理]** ダイアログ ボックスに示されているオブジェクトの処理を制御する設定を変更できます。 **[設定の変更]** ダイアログ ボックスを表示するには、 **[処理]** ダイアログ ボックスの **[設定の変更]** をクリックします。  
@@ -29,7 +28,7 @@ ms.locfileid: "66088248"
  **処理オプション**  
  このタブを使用して、処理中の操作の処理順序、書き戻しテーブル、および影響を受けたオブジェクトに関連する設定を修正します。 このタブには次のオプションがあります。  
   
- **対応**  
+ **Parallel**  
  オブジェクトを並列に処理します。  
   
  **[最大並列タスク]**  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 95b2b805-b142-4064-9c80-4b1b3fe2fe63
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 800e14fb360feef3f03804f5d57ed36c57142744
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079558"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543694"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>[アイテムセット] タブ (マイニング モデル ビューアー)
   **[アイテムセット]** ペインを使用すると、アソシエーション ルール マイニング モデルに含まれる、よく使用されるアイテムセットを表示できます。 アソシエーション モデルには多数のアイテムセットが含まれる可能性があるので、ビューアーには、ビューアーに表示するアイテムセットを絞り込むためのコントロールが用意されています。  
@@ -31,7 +30,7 @@ ms.locfileid: "66079558"
  **[マイニング モデル]**  
  現在のマイニング構造に含まれているマイニング モデルから、表示するモデルを選択します。 関連付けられているビューアーが開き、マイニング モデルが表示されます。  
   
- **[ビューアー]**  
+ **Viewer**  
  選択したマイニング モデルを表示するために使用するビューアーを選択します。 アソシエーション モデル用のカスタム ビューアーまたは [!INCLUDE[msCoName](../includes/msconame-md.md)] Microsoft 汎用コンテンツ ツリー ビューアーを使用できます。 利用可能な場合プラグイン ビューアーを使用することもできます。  
   
  **[最小のサポート]**  
