@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7136c984315714ba6726633522c8702b4c3a84f8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082344"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528918"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>[データ ソース ビュー] ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **[データ ソース ビュー]** ペインを使用すると、選択したディメンションに関連付けられているデータ ソース ビューからテーブルと列を表示できます。 **[データ ソース ビュー]** ペインでは、このペインから **[属性]** ペインまたは **[階層とレベル]** ペインに列をドラッグすることにより、属性、メンバー プロパティ、階層、およびレベルを作成します。  
@@ -44,7 +43,7 @@ ms.locfileid: "66082344"
  **フレンドリ名の表示**  
  ペイン内のオブジェクトの表示名を表示します。  
   
- **すべて選択**  
+ **[すべて選択]**  
  ペイン内のすべてのオブジェクトが選択されます。  
   
  **[テーブルの検索]**  
@@ -82,7 +81,7 @@ ms.locfileid: "66082344"
  **[ダイアグラムのコピー元]**  
  ディメンションに関連付けられたデータ ソース ビューに含まれるダイアグラムのいずれかを選択して、 **[データ ソース ビュー]** ペインに表示します。  
   
- **Zoom**  
+ **[ズーム]**  
  利用可能なズーム オプションを選択します。  
   
  **プロパティ**  

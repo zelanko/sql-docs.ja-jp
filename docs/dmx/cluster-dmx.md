@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fa7df2782b8102e386c70d5e874a25f7868dbb1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c14bc8189bdea705ab37c66863d74bcef66e23c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68071077"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669824"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,12 +33,12 @@ Cluster()
 ## <a name="return-type"></a>戻り値の型  
  **クラスター**関数では、パラメーターは必要ありません。  
   
- **クラスター**関数は、クラスター名のスカラー値を返します。 ただし、この関数を別の関数の引数として使用する場合は、> \<クラスター列参照として考慮する必要があります。  
+ **クラスター**関数は、クラスター名のスカラー値を返します。 ただし、この関数を別の関数の引数として使用する場合は、> クラスター列参照として考慮する必要があり \< ます。  
   
 ## <a name="remarks"></a>Remarks  
- **クラスター**は、PredictHistogram 関数の`<`クラスター列参照`>`として**PredictHistogram**使用することもできます。  
+ **クラスター**は `<` `>` 、 **PredictHistogram**関数のクラスター列参照として使用することもできます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)およびクラスター関数と共に単一クエリを使用して、TM クラスターマイニングモデルの各クラスターから個々のケースの距離と、各クラスターに個別のケースが存在する確率を返します。  
   
 ```  

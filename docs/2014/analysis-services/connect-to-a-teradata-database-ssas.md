@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 875ad4a3-a2b3-4b68-8c1c-6507e9f25b4d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc6712598452b1957857509e6b3ff6f659a16c4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77f4c62ddb54062db39220785d8d2c20ddb99f21
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087186"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527038"
 ---
 # <a name="connect-to-a-teradata-database-ssas"></a>[Teradata データベースへの接続] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、Teradata データベースに接続するための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
@@ -27,7 +26,7 @@ ms.locfileid: "66087186"
 > [!NOTE]  
 >  このページでデータベースを選択する際には、現在のユーザーの資格情報が使用されます。 ただし、[権限借用情報] ページで指定されたユーザーに、選択したデータベースの読み取り権限がないと、インポートは成功しません。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[接続の表示名]**  
  このデータ ソース接続の一意の名前を入力します。 これは必須フィールドです。  
   

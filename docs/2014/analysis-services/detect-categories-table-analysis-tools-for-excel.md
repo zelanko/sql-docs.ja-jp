@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c54c6f369d519812bb79cacf51bd1ad00a1dfb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a507e0d77cd81165b0220e3d09ec10227d32d853
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175231"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528708"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>カテゴリの検出 (Excel 用のテーブル分析ツール)
   ![リボンの [カテゴリの検出] ボタン](media/tat-detectcat.gif "リボンの [カテゴリの検出] ボタン")
@@ -78,13 +77,13 @@ ms.locfileid: "78175231"
 >  [**カテゴリの検出**] ツールを使用すると、元のデータテーブルに新しい列 Category が作成されます。 データ テーブルにこの列を残したままデータ マイニング処理を実行すると、この列が結果に影響することがあります。 他の処理に影響を及ぼさないようにするために、他のデータ マイニング ツールを使用する前に "カテゴリ" 列を含まないデータ テーブルのコピーを作成しておく必要があります。
 
 ## <a name="related-tools"></a>関連ツール
- カテゴリの**検出**ツールによってデータが分析されると、 [!INCLUDE[msCoName](../includes/msconame-md.md)]クラスタリングアルゴリズムを使用してデータマイニング構造とデータマイニングモデルが作成されます。
+ カテゴリの**検出**ツールによってデータが分析されると、クラスタリングアルゴリズムを使用してデータマイニング構造とデータマイニングモデルが作成さ [!INCLUDE[msCoName](../includes/msconame-md.md)] れます。
 
  **主要な影響**元の分析ツールを使用してデータマイニングモデルを作成した後は、Excel 用のデータマイニングクライアントを使用して、モデルを参照し、リレーションシップを詳細に調べることができます。 Excel 用のデータ マイニング クライアントは、より詳細なデータ マイニング機能を備えた独立したアドインです。 詳細については、「 [Excel でのモデルの参照 &#40;SQL Server データマイニングアドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)」を参照してください。
 
  Excel 用のデータマイニングクライアントのデータモデリング機能の使用方法の詳細については、「[データマイニングモデルの作成](creating-a-data-mining-model.md)」を参照してください。
 
- **カテゴリの検出**ツールによって使用されるアルゴリズムの詳細については、オンラインブックの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 「Microsoft クラスタリングアルゴリズム」を参照してください。
+ **カテゴリの検出**ツールによって使用されるアルゴリズムの詳細については、オンラインブックの「Microsoft クラスタリングアルゴリズム」を参照してください [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。
 
 ## <a name="see-also"></a>参照
  [Excel 用テーブル分析ツール](table-analysis-tools-for-excel.md)

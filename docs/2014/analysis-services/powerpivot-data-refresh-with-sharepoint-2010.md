@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9f042a937b1ce2a51bc6d8dbb50b8fc39c4fb78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18c879aaaa5bc63b4312f0461404e830dcbc2029
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175631"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547694"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>SharePoint 2010 での PowerPivot データ更新
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] のデータ更新は、外部データ ソースにクエリを実行して、コンテンツ ライブラリに保存されている Excel 2010 ブック内の埋め込み [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] データを更新する、スケジュールされたサーバー側の操作です。
@@ -75,7 +74,7 @@ ms.locfileid: "78175631"
 
 5.  [**データベース**] で、このサービスアプリケーションのデータベースをホストする SQL Server インスタンスを指定します。 既定値は、ファーム構成データベースをホストする SQL Server データベース エンジン インスタンスです。
 
-6.  [**データベース名**] に、サービスアプリケーションデータベースの名前を入力します。 既定値は Secure_Store_Service_DB_\<guid> です。 既定の名前は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。
+6.  [**データベース名**] に、サービスアプリケーションデータベースの名前を入力します。 既定値は Secure_Store_Service_DB_ \<guid> です。 既定の名前は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。
 
 7.  **[データベース認証]** の既定値は、"Windows 認証" です。 "SQL 認証" を選択する場合は、SharePoint 管理者ガイドを参照して、ファームでその認証の種類を使用する方法を確認してください。
 
@@ -116,7 +115,7 @@ ms.locfileid: "78175631"
 
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")
 
- この資格情報オプションは、既定で有効になります。 この資格情報オプションが有効になっている場合、PowerPivot System サービスでは Secure Store Service に対象アプリケーションが生成され、スケジュール所有者が入力したユーザー名とパスワードが保存されます。 生成された対象アプリケーションは、PowerPivotDataRefresh_\<guid> という名前付け規則を使用して作成されます。 Windows 資格情報のセットごとに 1 つの対象アプリケーションが作成されます。 PowerPivot System サービスによって所有されている対象アプリケーションが既に存在し、スケジュールを定義するユーザーが入力したユーザー名とパスワードを保存する場合、PowerPivot System サービスでは新しい対象アプリケーションを作成する代わりにその対象アプリケーションが使用されます。
+ この資格情報オプションは、既定で有効になります。 この資格情報オプションが有効になっている場合、PowerPivot System サービスでは Secure Store Service に対象アプリケーションが生成され、スケジュール所有者が入力したユーザー名とパスワードが保存されます。 生成された対象アプリケーションは、PowerPivotDataRefresh_ という名前付け規則を使用して作成され \<guid> ます。 Windows 資格情報のセットごとに 1 つの対象アプリケーションが作成されます。 PowerPivot System サービスによって所有されている対象アプリケーションが既に存在し、スケジュールを定義するユーザーが入力したユーザー名とパスワードを保存する場合、PowerPivot System サービスでは新しい対象アプリケーションを作成する代わりにその対象アプリケーションが使用されます。
 
  この資格情報オプションを使用する主な利点は、使いやすく簡単であることです。 対象アプリケーションが自動的に作成されるため、高度な作業は最小限です。 また、スケジュール所有者 (多くの場合、ブックを作成したユーザー) の資格情報で更新を実行すると、下流の権限要件が簡略化されます。 ほとんどの場合、このユーザーは対象データベースに対する権限を既に持っています。 データ更新がこのユーザーの Windows ユーザー id で実行されると、"現在のユーザー" を指定しているすべてのデータ接続が自動的に動作します。
 
@@ -204,7 +203,7 @@ ms.locfileid: "78175631"
 
  接続文字列に**Integrated Security = SSPI**が表示されている場合は、接続文字列の資格情報を上書きすることはできません。 接続では常に現在のユーザーが使用されます。 指定した資格情報は無視されます。
 
- **Persist\*\*\*\*\*\*\*\*Security Info =\*False、Password =\*、UserID =\<userlogin>が表示された場合は、資格情報の上書きを受け入れる接続文字列があります。\* ** 接続文字列に表示される資格情報 (UserID や Password など) は、Windows 資格情報ではなく、対象のデータ ソースに対して有効なデータベース ログインまたはその他のサインイン アカウントです。
+ **Persist Security Info = False、Password = \* \* \* \* \* \* \* \* \* \* \* 、UserID = \<userlogin> **の場合は、資格情報の上書きを受け入れる接続文字列があります。 接続文字列に表示される資格情報 (UserID や Password など) は、Windows 資格情報ではなく、対象のデータ ソースに対して有効なデータベース ログインまたはその他のサインイン アカウントです。
 
  **接続文字列の資格情報をオーバーライドする方法**
 

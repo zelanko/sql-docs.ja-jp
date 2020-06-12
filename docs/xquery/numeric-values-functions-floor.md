@@ -1,5 +1,6 @@
 ---
 title: floor 関数 (XQuery) |Microsoft Docs
+description: 引数の値を超える小数部を含まない、最大の数値を返す XQuery の floor () 関数について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c27e432dc258b4d2b9d21bfe0ab28df8ee5b510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15bdca46fc62832ecd97932b1b71f999f1f80324
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946532"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524490"
 ---
 # <a name="numeric-values-functions---floor"></a>数値関数 - floor
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ fn:floor ($arg as numeric?) as numeric?
   
  Fn: floor、fn: シーリング、または fn: round 関数への入力が**xdt: untypedAtomic**で、型指定されていないデータの場合、 **xs: double**に暗黙的にキャストされます。 その他の型のデータが入力されると、静的エラーが生成されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このトピックでは、AdventureWorks サンプルデータベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
  **Floor ()** xquery 関数には、[天井関数 (xquery)](../xquery/numeric-values-functions-ceiling.md)のワーキングサンプルを使用できます。 クエリの**天井 ()** 関数を**floor ()** 関数に置き換えるだけで済みます。  

@@ -1,5 +1,6 @@
 ---
 title: コンストラクター関数 (XQuery) |Microsoft Docs
+description: XSD の組み込みまたはユーザー定義のアトミック型のインスタンスを作成できるようにする XQuery のコンストラクター関数について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 105ba6fb68e8d8031858fcf54dddc56b655ddcea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038993"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529208"
 ---
 # <a name="constructor-functions-xquery"></a>コンストラクター関数 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -134,11 +135,11 @@ TYP($atomicvalue as xdt:anyAtomicType?
   
 -   引数が別の型のリテラルである場合、式はコンパイル時に評価されます。 値が型制約を満たしていない場合は、空のシーケンスが返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. dateTime() XQuery 関数を使用して、製品の説明の古いバージョンを取得する  
- この例では、最初にサンプル XML ドキュメントが**xml**型の変数に割り当てられます。 このドキュメントには、3 `ProductDescription`つのサンプル <> 要素が含まれて`DateCreated`おり、それぞれに <> 子要素が含まれています。  
+ この例では、最初にサンプル XML ドキュメントが**xml**型の変数に割り当てられます。 このドキュメントには、3つのサンプル <> 要素が含まれており `ProductDescription` 、それぞれに <> 子要素が含まれてい `DateCreated` ます。  
   
  次に、その変数がクエリされ、指定された日時より前に作成された製品の説明だけを取得します。 比較のために、クエリでは、 **xs: dateTime ()** コンストラクター関数を使用して日付を入力します。  
   
@@ -173,7 +174,7 @@ select @x.query('
   
  上のクエリに関して、次の点に注意してください。  
   
--   ...Where loop 構造体は、WHERE 句\<で指定された条件を満たす productdescription> 要素を取得するために使用されます。  
+-   ...Where loop 構造体は、 \<ProductDescription> where 句で指定された条件を満たす要素を取得するために使用されます。  
   
 -   **Datetime ()** コンストラクター関数は、 **datetime**型の値を作成して適切に比較できるようにするために使用されます。  
   

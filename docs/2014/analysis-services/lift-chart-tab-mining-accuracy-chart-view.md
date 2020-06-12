@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d083611d7a72164cf2ad7cf63663cfadb0d77a51
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078101"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541894"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>[リフト チャート] タブ ([マイニング精度チャート] ビュー)
   **[リフト チャート]** ペインを使用すると、選択されたマイニング構造に含まれている、選択されたすべてのマイニング モデルを比較するグラフを表示できます。  
@@ -31,7 +30,7 @@ ms.locfileid: "66078101"
  マイニング モデルの精度の測定方法に関する一般的な情報については、「[リフト チャート &#40;Analysis Services - データ マイニング&#41;](data-mining/lift-chart-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **グラフの種類**  
+ **[グラフの種類]**  
  ビューアーに表示するグラフの種類を設定します。 **[リフト チャート]** または **[利益チャート]** のいずれかを選択できます。  
   
  **設定**  

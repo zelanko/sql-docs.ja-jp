@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 489076bed7238f9367eeb8a353da358239673edb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072111"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540754"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>[パーティション] ([データベースの復元] ダイアログ ボックス) (Analysis Services - 多次元データ)
   **の** [データベースの復元] **ダイアログ ボックスの** [パーティション] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ページを使用すると、ローカル パーティションを復元する場所の指定、リモート パーティションを復元するかどうかの指定、リモート パーティションを復元する際に使用するリモート バックアップ ファイルの指定ができます。  
@@ -33,7 +32,7 @@ ms.locfileid: "66072111"
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の **オブジェクト エクスプローラー** で、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスの **[データベース]** フォルダー、またはデータベースを右クリックし、 **[データベースの復元]** をクリックします。次に、 **[ページの選択]** で **[パーティション]** をクリックします。  
   
 ## <a name="options"></a>オプション  
- **[スクリプト]**  
+ **スクリプト**  
  ダイアログ ボックスで選択したオプションに基づいた復元スクリプトを作成します。 復元用スクリプトは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] スクリプト言語 (ASSL) で記述されています。  
   
  **[スクリプト]** アイコンをクリックすると、既定では、新しいクエリ ウィンドウに復元スクリプトが送信されます。  
@@ -59,7 +58,7 @@ ms.locfileid: "66072111"
   
  このオプションを選択した場合、次のグリッドが有効になります。これを使用して、各ローカル パーティションの復元フォルダーを指定します。  
   
-|列|説明|  
+|Column|説明|  
 |------------|-----------------|  
 |**Cube**|ローカル パーティションが含まれているキューブの名前が表示されます。|  
 |**MeasureGroup**|ローカル パーティションが含まれているメジャー グループの名前が表示されます。|  
@@ -76,7 +75,7 @@ ms.locfileid: "66072111"
   
  このオプションを選択した場合、次のグリッドが有効になります。これを使用して、各ローカル パーティションの復元フォルダーを指定します。  
   
-|列|説明|  
+|Column|説明|  
 |------------|-----------------|  
 |**[サーバー]**|リモート パーティションを管理する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスの名前が表示されます。|  
 |**データ ソース**|バックアップ ファイル内のデータ ソースの名前が表示されます。これは、リモート パーティションを含むデータベースを表します。|  

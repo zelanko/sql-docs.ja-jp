@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 626211f974b41ce44655d0b79cf82eb9cb8373ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074954"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546664"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>ディメンションに対する権限の付与 (Analysis Services)
   ディメンション セキュリティは、ディメンション データではなくディメンション オブジェクトに対する権限を設定するために使用します。 通常、ディメンションに対する権限を設定する場合は、処理操作へのアクセスを許可または拒否することが主な目的です。  
@@ -45,7 +44,7 @@ ms.locfileid: "66074954"
 ## <a name="set-permissions-on-a-database-dimension"></a>データベース ディメンションに対する権限の設定  
  データベース ディメンションはデータベース内のスタンドアロン オブジェクトであり、同じモデル内でディメンションを再利用できます。 あるモデルで Order Date、Ship Date、Due Date の各キューブ ディメンションとして複数回使用される DATE データベース ディメンションがあるとします。 キューブおよびデータベース ディメンションはデータベースのピア オブジェクトであるため、各オブジェクトに個別に処理権限を設定できます。  
   
-1.  で[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、の[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスに接続し、オブジェクトエクスプローラーで適切なデータベースの [**ロール**] を展開します。次に、データベースロールをクリックするか、新しいデータベースロールを作成します。  
+1.  で、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のインスタンスに接続し [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、オブジェクトエクスプローラーで適切なデータベースの [**ロール**] を展開します。次に、データベースロールをクリックするか、新しいデータベースロールを作成します。  
   
 2.  **[ディメンション]** ペインで、ディメンション セットは **[すべてのデータベース ディメンション]** に設定されているはずです。  
   
@@ -58,9 +57,9 @@ ms.locfileid: "66074954"
 ## <a name="set-permissions-on-a-cube-dimension"></a>キューブ ディメンションに対する権限の設定  
  キューブ ディメンションは、キューブに追加されたデータベース ディメンションです。 したがって、キューブ ディメンションの構造は関連付けられたメジャー グループに依存します。 これらのオブジェクトはアトミックに処理できますが、承認の観点から、キューブおよびキューブ ディメンションは単一のエンティティとして扱うのが適切です。  
   
-1.  で[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、の[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスに接続し、オブジェクトエクスプローラーで適切なデータベースの [**ロール**] を展開します。次に、データベースロールをクリックするか、新しいデータベースロールを作成します。  
+1.  で、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のインスタンスに接続し [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、オブジェクトエクスプローラーで適切なデータベースの [**ロール**] を展開します。次に、データベースロールをクリックするか、新しいデータベースロールを作成します。  
   
-2.  [**ディメンション**] ペインで、ディメンションセットを [ \<キューブ名>**キューブディメンション**] に変更します。  
+2.  [**ディメンション**] ペインで、ディメンションセットを [ \<cube-name> **キューブディメンション**] に変更します。  
   
      既定では、権限は対応するデータベース ディメンションから継承されます。 **[継承]** チェック ボックスをオフにして、権限を **[読み取り]** から **[読み取り/書き込み]** に変更します。 **[読み取り/書き込み]** を使用する前に、前のセクションの注意事項を必ずお読みください。  
   

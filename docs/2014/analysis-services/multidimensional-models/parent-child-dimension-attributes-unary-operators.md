@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25c1acf7a1fadbc79b7781488143ce57881c81fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 330a9011956b90e1259c221610e98093843c0bd9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073445"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545904"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>親子ディメンションの単項演算子
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]親子のリレーションシップを含むディメンションでは、親属性のすべての計算されないメンバーのカスタムロールアップを決定する単項 (またはカスタムロールアップ) 演算子列を指定します。 単項演算子は、親メンバーの値が評価されるたびにメンバーに適用されます。 親属性 ( **Usage** =Parent) の**UnaryOperatorColumn**は、単項演算子を含んでいるテーブル列をデータ ソース ビューで指定します。 この列に格納されるカスタム ロールアップ演算子の値は、属性の各メンバーに適用されます。  
+  で親子のリレーションシップを含むディメンションでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 親属性のすべての計算されないメンバーのカスタムロールアップを決定する単項 (またはカスタムロールアップ) 演算子列を指定します。 単項演算子は、親メンバーの値が評価されるたびにメンバーに適用されます。 親属性 ( **Usage** =Parent) の**UnaryOperatorColumn**は、単項演算子を含んでいるテーブル列をデータ ソース ビューで指定します。 この列に格納されるカスタム ロールアップ演算子の値は、属性の各メンバーに適用されます。  
   
  データ ソース ビューでは、ディメンション テーブルの名前付き計算を作成し、単項演算子列として指定できます。 "+" などの単純な式は、すべてのメンバーに関して同じ演算子を返します。 ただし、すべてのメンバーに関して 1 つの演算子を返す式に限り、使用できます。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "66073445"
   
 |単項演算子|説明|  
 |--------------------|-----------------|  
-|+ (正符号)|メンバーの値は、そのメンバーの前に出現した兄弟メンバーの集計値に加算されます。 これは、単項演算子列が属性に対して定義されていない場合の既定の演算子です。|  
+|+ (プラス記号)|メンバーの値は、そのメンバーの前に出現した兄弟メンバーの集計値に加算されます。 これは、単項演算子列が属性に対して定義されていない場合の既定の演算子です。|  
 |-(負符号)|メンバーの値は、そのメンバーの前に出現した兄弟メンバーの集計値から減算されます。|  
 |* (アスタリスク)|メンバーの値は、そのメンバーの前に出現した兄弟メンバーの集計値で乗算されます。|  
 |/ (スラッシュ)|メンバーの値は、そのメンバーの前に出現した兄弟メンバーの集計値で除算されます。|  

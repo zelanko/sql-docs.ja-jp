@@ -1,5 +1,6 @@
 ---
 title: その他の注釈 (SQLXML)
+description: SQLXML 注釈の一覧を、XML 一括読み込みによってどのように解釈されるかについての説明と共に表示します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7eb01a084ec968adbd9fe8ff86623bcca5f9eb26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30e59d3fc049d56e8142f241dc5c75c054db837c
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246832"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306261"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>注釈の解釈 - 他の注釈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c21c1153289eddf99220279ed8b71b1377088ac
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083955"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521788"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft ロジスティック回帰アルゴリズム
   ロジスティック回帰は、バイナリ結果のモデリングに使用される代表的な統計手法です。  

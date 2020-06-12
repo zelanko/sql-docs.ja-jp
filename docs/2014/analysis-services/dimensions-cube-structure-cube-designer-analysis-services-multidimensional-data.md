@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb68b07a4e14e16a8df5acde7bea986733564253
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081694"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528558"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>[ディメンション] (キューブ デザイナーの [キューブ構造] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[キューブ構造]** タブの **[ディメンション]** ペインを使用すると、階層と属性を含むキューブ ディメンションを表示したり、編集したりできます。  
@@ -26,12 +25,12 @@ ms.locfileid: "66081694"
  **Hierarchies (階層)**  
  クリックすると、使用できるキューブ ディメンションと、それに関連付けられているキューブの階層が表示されます。  
   
- キューブディメンションを展開し、 **[ \<ディメンション>の編集**] を選択して、ディメンションデザイナーを表示し、キューブディメンションの基になるデータベースディメンションを編集します。 ディメンション デザイナーの詳細については、「[ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)」を参照してください。  
+ キューブディメンションを展開し、 **[ \<dimension> 編集**] をクリックしてディメンションデザイナーを表示し、キューブディメンションの基になるデータベースディメンションを編集します。 ディメンション デザイナーの詳細については、「[ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)」を参照してください。  
   
  **属性**  
  クリックすると、使用できるキューブ ディメンションと、それに関連付けられているキューブの属性が表示されます。  
   
- キューブディメンションを展開し、 **[ \<ディメンション>の編集**] を選択して、ディメンションデザイナーを表示し、キューブディメンションの基になるデータベースディメンションを編集します。 ディメンション デザイナーの詳細については、「[ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)」を参照してください。  
+ キューブディメンションを展開し、 **[ \<dimension> 編集**] をクリックしてディメンションデザイナーを表示し、キューブディメンションの基になるデータベースディメンションを編集します。 ディメンション デザイナーの詳細については、「[ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)」を参照してください。  
   
 ## <a name="context-menu"></a>コンテキスト メニュー  
  次に、 **[ディメンション]** ペインを右クリックして表示されるショートカット メニューで、使用可能なオプションを示します。  

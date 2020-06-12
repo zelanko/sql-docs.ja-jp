@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c5e1d6b92dce1a1be42ae1bc30ae3a3d5e48d59
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064400"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527852"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>[属性] ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   このペインを使用すると、選択したディメンションに関連付けられている属性を管理できます。 属性をこのペインから **[階層]** ペインにドラッグすると、階層およびレベルを作成できます。 詳細については、「[階層 &#40;[ディメンション構造] タブ」、「ディメンションデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)」を参照してください。  
@@ -55,10 +54,10 @@ ms.locfileid: "66064400"
  **使用方法**  
  選択した属性の使用法を設定します。 下向きの矢印をクリックして、次のいずれかを選択します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|通常|標準属性を表します。|  
-|Key|ディメンションのキー属性を表します。 これは、ディメンションのリーフ メンバーに対応しています。 キー属性は 1 つのディメンションにつき 1 つのみ存在します。 変更するには、**[プロパティ]** ペインで **[KeyColumns]** プロパティの横にある **[...]** ボタンをクリックします。|  
+|標準|標準属性を表します。|  
+|キー|ディメンションのキー属性を表します。 これは、ディメンションのリーフ メンバーに対応しています。 キー属性は 1 つのディメンションにつき 1 つのみ存在します。 変更するには、**[プロパティ]** ペインで **[KeyColumns]** プロパティの横にある **[...]** ボタンをクリックします。|  
 |Parent|親子リレーションシップにおける親属性を表します。 このリレーションシップの子属性は、常にキー属性である必要があります。|  
 |AccountType|勘定科目の種類の属性を表します。 これは、メジャーの集計関数が "ByAccount" に設定されているときに、サーバーまたはエンジンにより使用されます。|  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2de6fad32057abdbebab86b880c4edb23b1440e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083585"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521408"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   このトピックでは、Microsoft ニューラル ネットワーク アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -68,13 +67,13 @@ ms.locfileid: "66083585"
   
 |Node|コンテンツ|  
 |----------|-------------|  
-|モデル ルート|空白|  
-|マージナル統計|空白|  
-|入力層|空白|  
+|モデル ルート|新規|  
+|マージナル統計|新規|  
+|入力層|新規|  
 |入力ノード|入力属性名|  
-|hidden layer|空白|  
-|隠しノード|空白|  
-|出力層|空白|  
+|hidden layer|新規|  
+|隠しノード|新規|  
+|出力層|新規|  
 |出力ノード|出力属性名|  
   
  NODE_NAME  
@@ -127,13 +126,13 @@ ms.locfileid: "66083585"
   
 |Node|コンテンツ|  
 |----------|-------------|  
-|モデル ルート|空白|  
-|マージナル統計|空白|  
-|入力層|空白|  
+|モデル ルート|新規|  
+|マージナル統計|新規|  
+|入力層|新規|  
 |入力ノード|入力属性名|  
-|hidden layer|空白|  
+|hidden layer|新規|  
 |隠しノード|隠しノードの一覧における隠しノードのシーケンスを示す整数。|  
-|出力層|空白|  
+|出力層|新規|  
 |出力ノード|出力属性が連続属性の場合は、出力属性名が含まれます。<br /><br /> 出力属性が不連続属性または分離された属性の場合は、出力属性名と値が含まれます。|  
   
  NODE_RULE  
@@ -141,13 +140,13 @@ ms.locfileid: "66083585"
   
 |Node|コンテンツ|  
 |----------|-------------|  
-|モデル ルート|空白|  
-|マージナル統計|空白|  
-|入力層|空白|  
+|モデル ルート|新規|  
+|マージナル統計|新規|  
+|入力層|新規|  
 |入力ノード|NODE_DESCRIPTION 列と同じ情報が含まれている XML フラグメント。|  
-|hidden layer|空白|  
+|hidden layer|新規|  
 |隠しノード|隠しノードの一覧における隠しノードのシーケンスを示す整数。|  
-|出力層|空白|  
+|出力層|新規|  
 |出力ノード|NODE_DESCRIPTION 列と同じ情報が含まれている XML フラグメント。|  
   
  MARGINAL_RULE  
@@ -173,13 +172,13 @@ ms.locfileid: "66083585"
  MSOLAP_MODEL_COLUMN  
  |Node|コンテンツ|  
 |----------|-------------|  
-|モデル ルート|空白|  
-|マージナル統計|空白|  
-|入力層|空白|  
+|モデル ルート|新規|  
+|マージナル統計|新規|  
+|入力層|新規|  
 |入力ノード|入力属性名。|  
-|hidden layer|空白|  
-|隠しノード|空白|  
-|出力層|空白|  
+|hidden layer|新規|  
+|隠しノード|新規|  
+|出力層|新規|  
 |出力ノード|入力属性名。|  
   
  MSOLAP_NODE_SCORE  
@@ -239,6 +238,6 @@ ms.locfileid: "66083585"
 ## <a name="see-also"></a>参照  
  [Microsoft ニューラルネットワークアルゴリズム](microsoft-neural-network-algorithm.md)   
  [Microsoft ニューラルネットワークアルゴリズムテクニカルリファレンス](microsoft-neural-network-algorithm-technical-reference.md)   
- [ニューラル ネットワーク モデルのクエリ例](neural-network-model-query-examples.md)  
+ [Neural Network Model Query Examples](neural-network-model-query-examples.md)  
   
   

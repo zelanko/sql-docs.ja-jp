@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d3ea17d614a9c5cff48c35ae1864f1672bf8bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3bd6b89713edad4429dc0a93aa96cf041a9562a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251212"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539684"
 ---
 # <a name="relational-query-designer-ssas"></a>リレーショナル クエリ デザイナー (SSAS)
-  リレーショナルクエリデザイナーを使用する[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]と、および[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]リレーショナルデータベースおよび[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]から取得するデータを指定するクエリを作成できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。  グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
+  リレーショナルクエリデザイナーを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] リレーショナルデータベースおよびから [!INCLUDE[msCoName](../includes/msconame-md.md)] 取得するデータを指定するクエリを作成でき [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] ます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。  グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
   
  必要であれば、テキスト ベースのエディターを使用して、SQL 言語でクエリを作成することができます。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]** をクリックします。 テキスト ベースのクエリ デザイナーでクエリを編集すると、グラフィカル クエリ デザイナーは使用できなくなります。  
   
@@ -50,14 +49,14 @@ ms.locfileid: "72251212"
   
  次の表に各ペインの機能を示します。  
   
-|ペイン|関数|  
+|ウィンドウ|関数|  
 |----------|--------------|  
 |[データベース ビュー (Database view)](#DatabaseView)|データベース スキーマ別に編成された、テーブル、ビュー、ストアド プロシージャ、およびテーブル値関数の階層ビューを表示します。|  
 |[選択されたフィールド](#SelectedFields)|データベース ビュー ペインで選択したアイテムのデータベース フィールド名の一覧を表示します。 これらのフィールドがデータセットのフィールド コレクションになります。|  
 |[関数のパラメーター](#FunctionParameters)|データベース ビュー ペインのストアド プロシージャまたはテーブル値関数に対する入力パラメーターの一覧を表示します。|  
 |[リレーションシップ](#Relationships)|データベース ビュー ペインで選択したテーブルまたはビューのフィールドから推測されるリレーションシップ、あるいは手動で作成したリレーションシップの一覧を表示します。|  
 |[適用されたフィルター](#AppliedFilters)|データベース ビューのテーブルまたはビューのフィールドおよびフィルター条件の一覧を表示します。|  
-|[クエリ結果](#QueryResults)|自動的に生成されたクエリの結果セットのサンプル データを表示します。|  
+|[Query results](#QueryResults)|自動的に生成されたクエリの結果セットのサンプル データを表示します。|  
   
 ###  <a name="database-view-pane"></a><a name="DatabaseView"></a>データベースビューペイン  
  データベース ビュー ペインには、表示する権限のあるデータベース オブジェクトのメタデータが表示されます。表示されるメタデータは、データ ソース接続と資格情報によって決まります。 階層ビューに、データベース スキーマ別に編成されたデータベース オブジェクトが表示されます。 各スキーマのノードを展開すると、テーブル、ビュー、ストアド プロシージャ、およびテーブル値関数が表示されます。 テーブルまたはビューを展開すると列が表示されます。  
@@ -80,7 +79,7 @@ ms.locfileid: "72251212"
   
  集計ではデータの要約が返されます。データは、要約データを提供する集計をサポートするためにグループ化されます。 クエリで集計を使用すると、そのクエリによって返される他のフィールドは自動的にグループ化され、クエリには SQL の GROUP BY 句が含まれます。 **[グループ化と集計]** ボックスの一覧では、 **[グループ化]** オプションだけを使用することによって、集計を追加せずにデータを要約できます。 多くの集計には、DISTINCT キーワードを使用するバージョンが含まれています。 DISTINCT を含めることで値の重複を排除できます。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を[!INCLUDE[tsql](../includes/tsql-md.md)]使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]し[!INCLUDE[DWsql](../includes/dwsql-md.md)]、を使用します。 いずれの SQL 言語構文でも、クエリ デザイナーに用意されている句、キーワード、および集計がサポートされます。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] を使用し、を [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 使用 [!INCLUDE[DWsql](../includes/dwsql-md.md)] します。 いずれの SQL 言語構文でも、クエリ デザイナーに用意されている句、キーワード、および集計がサポートされます。  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?LinkId=141687)にある「[Transact-SQL リファレンス (データベース エンジン)](/sql/t-sql/language-reference)」を参照してください。  
   
@@ -212,7 +211,7 @@ ms.locfileid: "72251212"
   
  次の表に各ペインの機能を示します。  
   
-|ペイン|関数|  
+|ウィンドウ|関数|  
 |----------|--------------|  
 |クエリ|SQL クエリ テキストを表示します。 SQL クエリを記述または編集する際に、このペインを使用します。|  
 |結果|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]** をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|  
@@ -235,7 +234,7 @@ SELECT Name FROM ContactType
   
  次の表に各ペインの機能を示します。  
   
-|ペイン|関数|  
+|ウィンドウ|関数|  
 |----------|--------------|  
 |クエリ|ストアド プロシージャの名前と入力パラメーターを表示します。|  
 |結果|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]** をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|  
@@ -247,7 +246,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- **[実行]** (**!**) ボタンをクリックします。 次の表に、[ `uspGetWhereUsedProductID` **クエリパラメーターの定義**] ダイアログボックスで値を指定するパラメーターの例を示します。  
+ **[実行]** (**!**) ボタンをクリックします。 次の表に、 `uspGetWhereUsedProductID` [**クエリパラメーターの定義**] ダイアログボックスで値を指定するパラメーターの例を示します。  
   
 |||  
 |-|-|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55812c7df95b49fecbdbf8ed1a17c7403c04fbcb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071643"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547484"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>PowerPivot ブックへの BI セマンティック モデル接続の作成
   このトピックでは、同一ファーム内の PowerPivot ブックにリダイレクトする BI セマンティック モデル接続を設定する方法について説明します。  
@@ -39,7 +38,7 @@ ms.locfileid: "66071643"
   
  BI セマンティック モデル接続のコンテンツ タイプをサポートしているライブラリが必要です。 詳細については、「 [BI セマンティックモデル接続のコンテンツタイプをライブラリ &#40;PowerPivot for SharePoint&#41;に追加](add-bi-semantic-model-connection-content-type-to-library.md)する」を参照してください。  
   
- BI セマンティックモデル接続を設定する PowerPivot ブックの URL (documents/myworkbook などhttp://adventure-works/shared ) を把握している必要があります。 ブックは、同一ファーム内にある必要があります。  
+ BI セマンティックモデル接続を設定する PowerPivot ブックの URL (documents/myworkbook.xlsx など) を把握している必要があり http://adventure-works/shared ます。 ブックは、同一ファーム内にある必要があります。  
   
  接続シーケンスに参加しているすべてのコンピューターとユーザーは、同じドメインまたは信頼されたドメイン (双方向の信頼関係) に属している必要があります。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "66071643"
   
      ![SharePoint ライブラリの [新しいドキュメント] サブメニュー](../media/ssas-bismconnection-new.gif "SharePoint ライブラリの [新しいドキュメント] サブメニュー")  
   
-2.  **サーバー**プロパティを PowerPivot ブックの SharePoint URL ( ** http://mysharepoint/shared documents/myworkbook. .xlsx**など) に設定します。 PowerPivot for SharePoint の配置では、ファーム内の任意のサーバーにデータを読み込むことができます。 このため、PowerPivot データへのデータ ソース接続では、ブックへのパスだけを指定します。 PowerPivot System サービスによって、データを読み込むサーバーが決定されます。  
+2.  **サーバー**プロパティを PowerPivot ブックの SharePoint URL ( ** http://mysharepoint/shared documents/myWorkbook.xlsx**など) に設定します。 PowerPivot for SharePoint の配置では、ファーム内の任意のサーバーにデータを読み込むことができます。 このため、PowerPivot データへのデータ ソース接続では、ブックへのパスだけを指定します。 PowerPivot System サービスによって、データを読み込むサーバーが決定されます。  
   
      **データベース**プロパティは使用しないでください。PowerPivot ブックの場所を指定するときには使用されません。  
   

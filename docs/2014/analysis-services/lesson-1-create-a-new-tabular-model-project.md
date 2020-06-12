@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb9ca011cdbbe32ebd6c71cb9ca64967cfbccb9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f21d1805eda75bfa0008214e2f46f54b67ab48f5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079305"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543601"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>レッスン 1:新しいテーブル モデル プロジェクトの作成
   このレッスンでは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]に新しい空のテーブル モデル プロジェクトを作成します。 新しいプロジェクトが作成されたら、テーブルのインポート ウィザードを使用して、データの追加を開始できます。 新規プロジェクトの作成に加え、このレッスンでは、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]のテーブル モデル作成環境についても概説します。  
@@ -35,20 +34,20 @@ ms.locfileid: "66079305"
   
 2.  [**新しいプロジェクト**] ダイアログボックスの [**インストールされているテンプレート**] で [**ビジネスインテリジェンス**] をクリックし、[ **Analysis Services**] をクリックして、[**テーブルプロジェクトの Analysis Services**] をクリックします。  
   
-3.  [**名前**] に`AW Internet Sales Tabular Model`「」と入力し、プロジェクトファイルの場所を指定します。  
+3.  [**名前**] に「」と入力 `AW Internet Sales Tabular Model` し、プロジェクトファイルの場所を指定します。  
   
      既定では､ **Solution Name** はプロジェクト名と同じですが､別のソリューション名を指定することができます｡  
   
 4.  **[OK]** をクリックします。  
   
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>SQL Server データ ツールのテーブル モデル作成環境について  
- 新しいテーブルモデルプロジェクトを作成したので、(Visual Studio 2010 以降) の[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]テーブルモデル作成環境について説明します。  
+ 新しいテーブルモデルプロジェクトを作成したので、(Visual Studio 2010 以降) のテーブルモデル作成環境について説明し [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] ます。  
   
- プロジェクトを作成すると、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]が開きます。 モデル デザイナーに空のモデルが表示され、 **[ソリューション エクスプローラー]** ウィンドウで **Model.bim** ファイルが選択されます。 データを追加すると、デザイナーにテーブルと列が表示されます。 デザイナー (空のウィンドウと [モデルの bim] タブ) が表示されない場合**Solution Explorer**は、ソリューションエクスプローラー `AW Internet Sales Tabular Model`の [] の下にある [] をクリックして、**モデルの bim**ファイルをダブルクリックします。  
+ プロジェクトを作成すると、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]が開きます。 モデル デザイナーに空のモデルが表示され、 **[ソリューション エクスプローラー]** ウィンドウで **Model.bim** ファイルが選択されます。 データを追加すると、デザイナーにテーブルと列が表示されます。 デザイナー (空のウィンドウと [モデルの bim] タブ) が表示されない場合は、**ソリューションエクスプローラー**の [] の下にある [] をクリックして、 `AW Internet Sales Tabular Model` モデルの**bim**ファイルをダブルクリックします。  
   
- プロジェクトの基本プロパティは、 **[プロパティ]** ウィンドウで確認できます。 **ソリューションエクスプローラー**で、[ `AW Internet Sales Tabular Model`] をクリックします。 **[プロパティ]** ウィンドウの **[プロジェクト ファイル]** に、 **AW Internet Sales Tabular Model.smproj**と表示されます。 これがプロジェクト ファイル名で、 **[プロジェクト フォルダー]** には、プロジェクト ファイルの場所が表示されます。  
+ プロジェクトの基本プロパティは、 **[プロパティ]** ウィンドウで確認できます。 **ソリューションエクスプローラー**で、[] をクリックし `AW Internet Sales Tabular Model` ます。 **[プロパティ]** ウィンドウの **[プロジェクト ファイル]** に、 **AW Internet Sales Tabular Model.smproj**と表示されます。 これがプロジェクト ファイル名で、 **[プロジェクト フォルダー]** には、プロジェクト ファイルの場所が表示されます。  
   
- **ソリューションエクスプローラー**で、 `AW Internet Sales Tabular Model`プロジェクトを右クリックし、[**プロパティ**] をクリックします。 **[AW Internet Sales Tabular Model プロパティ ページ]** ダイアログ ボックスが表示されます。 これらは詳細なプロジェクト プロパティです｡ 後で、モデルを配置する準備ができたら、これらのプロパティの一部を設定します。  
+ **ソリューションエクスプローラー**で、プロジェクトを右クリック `AW Internet Sales Tabular Model` し、[**プロパティ**] をクリックします。 **[AW Internet Sales Tabular Model プロパティ ページ]** ダイアログ ボックスが表示されます。 これらは詳細なプロジェクト プロパティです｡ 後で、モデルを配置する準備ができたら、これらのプロパティの一部を設定します。  
   
  では、モデルのプロパティを見てみましょう。 **[ソリューション エクスプローラー]** で、 **[Model.bim]** をクリックします。 **[プロパティ]** ウィンドウにモデルのプロパティが表示されます。特に重要なのは、 **DirectQuery Mode** プロパティです。 このプロパティは､モデルを In-Memory (Off) または DirectQuery (On) のどちらのモードでデプロイするかを指定します｡ このチュートリアルでは、インメモリ モードでモデルを作成し、展開します。  
   

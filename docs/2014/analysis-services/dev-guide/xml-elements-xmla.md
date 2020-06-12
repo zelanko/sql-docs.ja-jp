@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 40ab2360-efb6-4ba6-bf23-e84964e51008
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c86975f273b2efa5d1384df676519ee622a1677
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c1e5b046bfa57302baefc43a4da989be9c70e08
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62731987"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528655"
 ---
 # <a name="xml-elements-xmla"></a>XML 要素 (XMLA)
-  次のトピックでは、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]サポートされるさまざまな XML for Analysis (XMLA) 要素のカテゴリについて説明します。  
+  次のトピックでは、でサポートされるさまざまな XML for Analysis (XMLA) 要素のカテゴリについて説明し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

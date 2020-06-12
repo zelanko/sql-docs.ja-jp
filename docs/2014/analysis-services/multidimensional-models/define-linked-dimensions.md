@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c120afe4f4cd873c91ae67bad73b2baab2d18fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075577"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547011"
 ---
 # <a name="define-linked-dimensions"></a>リンク ディメンションの定義
   リンク ディメンションは、バージョンと互換性レベルが同じである別の Analysis Services データベース内で作成および保存されたディメンションに基づいています。 リンク ディメンションを使用すると、1 つのデータベースでディメンションを作成、保存、保守することができ、さらにそのディメンションを複数のデータベースで使用可能にすることができます。 ユーザーに対しては、リンク ディメンションは他のディメンションと同様に表示されます。  
@@ -62,7 +61,7 @@ ms.locfileid: "66075577"
   
 2.  接続マネージャーで、プロバイダーが **[ネイティブ OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0]** に設定されていることを確認します。  
   
-3.  サーバーの名前 (名前付きインスタンスの場合は*servername*\\*instancename*を<sup>使用) を</sup>入力するか、 **localhost**と入力して、同じコンピューター上で実行されている Analysis Services サーバーに接続します。  
+3.  サーバーの名前 ( *servername* \\ 名前付きインスタンスの場合は servername*instancename*を使用)<sup>1</sup>を入力するか、 **localhost**と入力して、同じコンピューター上で実行されている Analysis Services サーバーに接続します。  
   
 4.  接続には Windows 認証を使用します。  
   

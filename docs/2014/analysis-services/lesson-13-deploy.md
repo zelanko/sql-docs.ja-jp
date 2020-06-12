@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 96ffa6445d46f1e68efa907330d0945a499bf3b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b930734fa70578d10e107bc3d1e8d865f9e7e2d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079136"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543534"
 ---
 # <a name="lesson-14-deploy"></a>レッスン 14:配置
   このレッスンでは、配置プロパティを構成します。具体的には、テーブル モードで実行されている Analysis Services の配置サーバー インスタンスと、配置するモデルの名前を指定します。 その後、そのインスタンスにモデルを配置します。 配置が完了すると、ユーザーはレポート クライアント アプリケーションを使用してモデルに接続できるようになります。 詳細については、[「テーブル モデル ソリューションの配置 (SSAS テーブル)」](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)を参照してください。  
@@ -41,9 +40,9 @@ ms.locfileid: "66079136"
     > [!NOTE]  
     >  このチュートリアルを使用して作成されたモデルは、DirectQuery モードではサポートされません。  
   
-4.  [**データベース**] プロパティで、 `Adventure Works Internet Sales Model`「」と入力します。  
+4.  [**データベース**] プロパティで、「」と入力 `Adventure Works Internet Sales Model` します。  
   
-5.  [**キューブ**名] プロパティに「 `Adventure Works Internet Sales Model`」と入力します。  
+5.  [**キューブ**名] プロパティに「」と入力 `Adventure Works Internet Sales Model` します。  
   
 6.  選択内容を確認し､**[OK]** をクリックします｡  
   
@@ -54,9 +53,9 @@ ms.locfileid: "66079136"
      [配置] ダイアログ ボックスが表示され、メタデータの配置状況と、モデルに含まれる各テーブルが表示されます。  
   
 ## <a name="conclusion"></a>まとめ  
- おめでとうございます! 最初の Analysis Services テーブル モデルの作成と配置が完了しました。 このチュートリアルでは､表形式モデルの作成で一般的な作業の手順をご案内しました｡ Adventure Works Internet Sales Model が配置されたので、SQL Server Management Studio を使用してモデルを管理したり、プロセス スクリプトやバックアップ計画を作成できるようになりました。 ユーザーは、Microsoft Excel や [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]などのレポート クライアント アプリケーションを使用して、モデルに接続できます。  
+ お疲れさまでした。 最初の Analysis Services テーブル モデルの作成と配置が完了しました。 このチュートリアルでは､表形式モデルの作成で一般的な作業の手順をご案内しました｡ Adventure Works Internet Sales Model が配置されたので、SQL Server Management Studio を使用してモデルを管理したり、プロセス スクリプトやバックアップ計画を作成できるようになりました。 ユーザーは、Microsoft Excel や [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]などのレポート クライアント アプリケーションを使用して、モデルに接続できます。  
   
-## <a name="additional-resources"></a>その他の情報  
+## <a name="additional-resources"></a>その他のリソース  
  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] レポートをサポートするテーブル モデル プロパティの詳細については、[「Power View レポート プロパティ (SSAS テーブル)」](tabular-models/properties-ssas-tabular.md) を参照してください。  
   
 ## <a name="see-also"></a>参照  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65f7c51f3bba2431ce78f6a9287aedeef0fff7b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073649"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546084"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Analysis Services でのパーティションのマージ (SSAS - 多次元)
   既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のパーティションをマージして、同じメジャー グループの複数のパーティションからファクト データを統合することができます。  
@@ -42,7 +41,7 @@ ms.locfileid: "66073649"
   
  このシナリオが示すように、パーティションのマージは、定期的に実行される日常的なタスクとなり、履歴データを統合および整理するための革新的な方法を提供します。  
   
-##  <a name="requirements"></a><a name="bkmk_prereq"></a> 必要条件  
+##  <a name="requirements"></a><a name="bkmk_prereq"></a> 要件  
  パーティションをマージできるのは、次の条件をすべて満たしている場合に限ります。  
   
 -   同じメジャー グループであること  
@@ -117,7 +116,7 @@ ms.locfileid: "66073649"
   
 1.  オブジェクト エクスプローラーで、マージするパーティションが含まれているキューブの **[メジャー グループ]** ノードを展開し、 **[パーティション]** を展開して、マージ操作の対象となるパーティションを右クリックします。 たとえば、年間のファクト データを格納するパーティションに四半期のファクト データを移動する場合は、年間のファクト データが含まれているパーティションを選択します。  
   
-2.  [パーティションの**マージ**] をクリックして、[**パーティション\<パーティション名のマージ>** ] ダイアログボックスを開きます。  
+2.  [パーティションの**マージ**] をクリックして、[**パーティション \<partition name> のマージ**] ダイアログボックスを開きます。  
   
 3.  **[基になるパーティション]** で、対象パーティションとマージする、基になる各パーティションの横のチェック ボックスをオンにし、 **[OK]** をクリックします。  
   
@@ -126,7 +125,7 @@ ms.locfileid: "66073649"
   
 4.  蓄積したデータが含まれるパーティションを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  `Source`プロパティを開き、マージしたパーティションデータが含まれるように where 句を変更します。 `Source`プロパティが自動的に更新されないことを思い出してください。 を最初に`Source`更新せずに再処理した場合、予想されるデータの一部が取得されない可能性があります。  
+5.  プロパティを開き、 `Source` マージしたパーティションデータが含まれるように where 句を変更します。 `Source`プロパティが自動的に更新されないことを思い出してください。 を最初に更新せずに再処理した場合 `Source` 、予想されるデータの一部が取得されない可能性があります。  
   
 ##  <a name="how-to-merge-partitions-using-xmla"></a><a name="bkmk_partitionsXMLA"></a> XMLA を使用してパーティションをマージする方法  
  詳細については、「[パーティションのマージ &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)」を参照してください。  

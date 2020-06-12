@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e750e286d7a58bee8c6979515fe163119175d529
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072857"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547338"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>サポートされるデータソース (SSAS 多次元)
   このトピックでは、多次元モデルで使用できるデータ ソースの種類について説明します。  
@@ -34,10 +33,10 @@ ms.locfileid: "66072857"
   
 |||||  
 |-|-|-|-|  
-|ソース|バージョン|ファイルの種類|プロバイダー <sup>1</sup>|  
+|source|バージョン|ファイルの種類|プロバイダー <sup>1</sup>|  
 |Access データベース|Microsoft Access 2007、2010、2013|.accdb または .mdb|Microsoft Jet 4.0 OLE DB Provider|  
 |リレーショナルデータベースの SQL Server <sup>5</sup>|Microsoft SQL Server 2005、2008、2008 R2、2012、2014 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] <sup>2</sup>、SQL Server 並列データウェアハウス (PDW) <sup>3</sup>|(該当なし)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB プロバイダー<br /><br /> SQL Server Native 11.0 Client OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for SQL Client|  
-|Oracle リレーショナル データベース|Oracle 9i、10g、11g|(該当なし)|Oracle OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> SQL Server 用の .NET Framework データ プロバイダー<br /><br /> MSDAORA OLE DB provider <sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  
+|Oracle リレーショナル データベース|Oracle 9i、10g、11g|(該当なし)|Oracle OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework SQL Server 用データ プロバイダー<br /><br /> MSDAORA OLE DB provider <sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata リレーショナル データベース|Teradata V2R6、V12|(該当なし)|TDOLEDB OLE DB プロバイダー<br /><br /> .Net Data Provider for Teradata|  
 |Informix リレーショナル データベース|V11.10|(該当なし)|Informix OLE DB プロバイダー|  
 |IBM DB2 リレーショナル データベース|8.1|(該当なし)|DB2OLEDB|  
@@ -46,9 +45,9 @@ ms.locfileid: "66072857"
   
  <sup>1</sup> ODBC データソースは、多次元ソリューションではサポートされていません。 Analysis Services 自体が接続を処理しますが、MSDASQL ドライバーを使用している場合でも、ソリューションの作成に使用される [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] のデザイナーは ODBC データ ソースには接続できません。 ビジネス要件に ODBC データ ソースが含まれている場合は、代わりに表形式のソリューションを作成することを検討してください。  
   
- <sup>2</sup>詳細については[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 [azure.microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856)の「」を参照してください。  
+ <sup>2</sup>詳細については、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [azure.microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856)の「」を参照してください。  
   
- <sup>3</sup> [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW の詳細については、「[並列データウェアハウスの SQL Server](https://go.microsoft.com/fwlink/?LinkId=150895)」を参照してください。  
+ <sup>3</sup> PDW の詳細について [!INCLUDE[ssSDS](../../includes/sssds-md.md)] は、「[並列データウェアハウスの SQL Server](https://go.microsoft.com/fwlink/?LinkId=150895)」を参照してください。  
   
  <sup>4</sup>場合によっては、MSDAORA OLE DB プロバイダーを使用すると、特に新しいバージョンの Oracle で接続エラーが発生する可能性があります。 エラーが生じる場合は、Oracle 用に記載されている他のプロバイダーを使用することをお勧めします。  
   

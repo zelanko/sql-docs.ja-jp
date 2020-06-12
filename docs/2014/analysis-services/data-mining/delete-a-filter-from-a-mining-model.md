@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12dec570bb4ef4a499c5f141d62b15467212d2ae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084731"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522598"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>マイニング モデルからのフィルターの削除
   マイニング モデルに対するフィルターを作成する場合は、データ ソース ビュー内のデータのサブセットに対するモデルを作成できます。 フィルターは、元のデータのサブセットでモデルの精度をテストするためにも役立ちます。  
@@ -54,7 +53,7 @@ ms.locfileid: "66084731"
   
 1.  ソリューション エクスプローラーで、フィルターが含まれているマイニング モデルをクリックします。  
   
-2.  [**プロパティ**] ウィンドウで、 `Filter`プロパティのフィルターテキストを右クリックし、[**すべて選択]** をクリックします。  
+2.  [**プロパティ**] ウィンドウで、プロパティのフィルターテキストを右クリック `Filter` し、[**すべて選択]** をクリックします。  
   
 3.  BackSpace キーまたは Del キーを押します。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 620eb875dfb4b3e7594000777feb23993d9e129e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493849"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528308"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>ユーザー定義階層の属性間での属性リレーションシップの指定
   このチュートリアルで既に学習したように、ユーザー階層に属性階層を配置し、キューブ内を移動するためのパスを作ることができます。 ユーザー階層は、市区町村、州、国などの一般階層を表せるほか、従業員名、役職、部署名のように操作パスのみを表すこともできます。 階層内を移動するユーザーにとっては、どちらのユーザー階層も変わりません。  
@@ -42,7 +41,7 @@ ms.locfileid: "69493849"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     リレーションシップが重複しているため、ダイアグラムに警告アイコンが表示されます。 リレーションシップの**完全名** -> **Geography**-> **郵便**番号は既に存在しています。また、リレーションシップの**完全な名前** -> の**郵便**番号を作成しました。 リレーションシップの**地理**-> **郵便**番号は重複しているので、削除します。  
+     リレーションシップが重複しているため、ダイアグラムに警告アイコンが表示されます。 リレーションシップの**完全名**  ->  **Geography** ->  **郵便**番号は既に存在しています。また、リレーションシップの**完全な名前**の  ->  **郵便**番号を作成しました。 リレーションシップの**地理**郵便番号は重複しているので、 ->  **Postal Code**削除します。  
   
 6.  **[属性リレーションシップ]** ペインで、 **[Geography**-> **Postal Code]** を右クリックし、 **[削除]** をクリックします。  
   
@@ -54,9 +53,9 @@ ms.locfileid: "69493849"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     リレーションシップ**Geography**-> **City**が冗長になり、削除されるようになりました。  
+     リレーションシップ**Geography** ->  **City**が冗長になり、削除されるようになりました。  
   
-11. [属性リレーションシップ] ペインで、[ **Geography**-> **City** ] を右クリックし、[**削除**] をクリックします。  
+11. [属性リレーションシップ] ペインで、[ **Geography**City] を右クリックし、 ->  **City** [**削除**] をクリックします。  
   
 12. **[オブジェクトの削除]** ダイアログ ボックスが表示されたら、 **[OK]** をクリックします。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "69493849"
   
 20. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-21. [属性リレーションシップ] ペインで、[ **Geography**-> **Country-Region** ] を右クリックし、[**削除**] をクリックします。  
+21. [属性リレーションシップ] ペインで、[ **Geography** ->  **Country-Region** ] を右クリックし、[**削除**] をクリックします。  
   
 22. **[オブジェクトの削除]** ダイアログ ボックスが表示されたら、 **[OK]** をクリックします。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "69493849"
   
      **Geography** と他の属性との最後の属性リレーションシップを削除すると、その **Geography** 自体が削除されます。 その後は属性が使用されなくなるためです。  
   
-24. [ファイル] メニューの [ **すべてを保存**] をクリックします。  
+24. [ファイル] メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-sales-territory-hierarchy"></a>Sales Territory 階層の属性に対する属性リレーションシップの定義  
   
@@ -176,7 +175,7 @@ ms.locfileid: "69493849"
   
 12. **AttributeHierarchyOptimizedState** プロパティを **NotOptimized**に設定し、 **AttributeHierarchyOrdered** プロパティを **False**に設定し、 **AttributeHierarchyVisible** プロパティを **False**に設定します。  
   
-13. [**ファイル**] メニューの [**すべてを保存**] をクリックします。  
+13. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
 14. **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   

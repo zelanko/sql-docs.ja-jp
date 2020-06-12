@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf9483b3-4099-41c4-bbc5-da7005e07bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65a6c852200c72fb9040cf5e93efbac02bb065b3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086650"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526339"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>クロス検証 (SQL Server データ マイニング アドイン)
   ![[データ マイニング] リボンの [クロス検証] ボタン](media/dmc-xvalid.gif "[データ マイニング] リボンの [クロス検証] ボタン")  
@@ -75,7 +74,7 @@ ms.locfileid: "66086650"
  クラスター モデルとその他の種類のモデルの両方をサポートする構造を選択した場合、クラスター モデルはテストされません。  
   
 ## <a name="understanding-cross-validation-results"></a>クロス検証の結果について  
- クロス検証の結果は、[**属性名>の\<クロス検証レポート**] というタイトルの新しいワークシートに表示されます。 新しいワークシートは複数のセクションで構成されます。最初のセクションには、どのモデルまたは構造に対する結果なのかがわかるように、テストされたモデルに関する重要なメタデータを示す概要が表示されます。  
+ クロス検証の結果は、**の \<attribute name> クロス検証レポート**というタイトルの新しいワークシートに表示されます。 新しいワークシートは複数のセクションで構成されます。最初のセクションには、どのモデルまたは構造に対する結果なのかがわかるように、テストされたモデルに関する重要なメタデータを示す概要が表示されます。  
   
  レポートの 2 番目のセクションには、元のモデルがどの程度適切かを示す統計的な概要が表示されます。 この概要では、各フォールドに対して作成されたモデル間の相違点を分析し、3つの主要なメジャー (*平方根平均二乗誤差*、*平均絶対誤差*、*ログスコア*) を分析します。 これらは、データ マイニングだけでなく各種の統計分析で一般的に使用される標準的な統計的尺度です。  
   

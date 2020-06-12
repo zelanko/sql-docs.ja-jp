@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9d83baaecbfdba3612acbdcf7a80c9093aac519
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67384dc44710cc71ae30b8a558746410171dcbb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073290"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545824"
 ---
 # <a name="processing-analysis-services-objects"></a>Analysis Services オブジェクトの処理
-  処理[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、オブジェクトの種類 ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース、キューブ、ディメンション、メジャーグループ、パーティション、データマイニング構造およびデータマイニングモデル) に影響します。 オブジェクトごとに、オブジェクトの処理レベルを指定するか、または [既定の処理] オプションを指定して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が自動的に最適な処理レベルを選択するようにできます。 各オブジェクトに適用できる異なるレベルの処理の詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)」を参照してください。  
+  処理は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの種類 ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース、キューブ、ディメンション、メジャーグループ、パーティション、データマイニング構造およびデータマイニングモデル) に影響します。 オブジェクトごとに、オブジェクトの処理レベルを指定するか、または [既定の処理] オプションを指定して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が自動的に最適な処理レベルを選択するようにできます。 各オブジェクトに適用できる異なるレベルの処理の詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)」を参照してください。  
   
  処理によって悪影響が発生しないようにするために、処理動作の結果を確認する必要があります。 たとえば、ディメンションを完全に処理すると、そのディメンションに依存するすべてのパーティションが自動的に未処理の状態に設定されます。 これにより、影響を受けるキューブは、依存するパーティションが処理されるまで、クエリに使用できなくなります。  
   
@@ -54,11 +53,11 @@ ms.locfileid: "66073290"
 ##  <a name="processing-a-dimension"></a><a name="bkmk_procdim"></a>ディメンションの処理  
  ディメンションを処理すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって、ディメンション テーブルに対するクエリが作成および実行され、処理に必要な情報が返されます。  
   
-|Country|販売地域|State|  
+|国|販売地域|状態|  
 |-------------|------------------|-----------|  
-|United States|West|カリフォルニア|  
-|United States|West|オレゴン|  
-|United States|West|ワシントン|  
+|アメリカ合衆国|West|カリフォルニア|  
+|アメリカ合衆国|West|オレゴン|  
+|アメリカ合衆国|West|ワシントン|  
   
  処理自体は、表形式のデータを、使用可能な階層に変換します。 これらの階層は、メンバー名をすべて連結したもので、内部的には一意の数値パスによって表されます。 次の例は、階層のテキスト表現です。  
   

@@ -19,12 +19,12 @@ ms.assetid: fc0b3608-a7e8-4532-8215-32235d6670f1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9364cbf0a305ed50c992e360d6b951cd6d7c8693
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d6fdb0c5be9b509c2f801ad5728d40467cd349c2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078387"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670336"
 ---
 # <a name="view_column_usage-transact-sql"></a>VIEW_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "68078387"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**VIEW_CATALOG**|**nvarchar (** 128 **)**|ビュー修飾子。|  
-|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|ビューを含むスキーマの名前です。<br /><br /> **&#42;&#42; の重要な &#42;&#42;** オブジェクトのスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|ビューを含むスキーマの名前です。<br /><br /> **&#42;&#42; 重要な**のは、オブジェクトのスキーマを検索する信頼できる方法は、 &#42;&#42;カタログビューに対してクエリを実行することだけです。|  
 |**VIEW_NAME**|**sysname**|ビューの名前。|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|テーブル修飾子。|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|テーブルを含むスキーマの名前。<br /><br /> **&#42;&#42; の重要な &#42;&#42;** オブジェクトのスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|テーブルを含むスキーマの名前。<br /><br /> **&#42;&#42; 重要な**のは、オブジェクトのスキーマを検索する信頼できる方法は、 &#42;&#42;カタログビューに対してクエリを実行することだけです。|  
 |**TABLE_NAME**|**sysname**|ベーステーブル。|  
 |**COLUMN_NAME**|**sysname**|列名。|  
   

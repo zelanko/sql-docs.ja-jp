@@ -1,5 +1,6 @@
 ---
 title: データ型と XML 一括読み込みの動作 (SQLXML)
+description: SQLXML 4.0 でのデータ型と XML 一括読み込みの動作について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33619d0d3e1ec5d6684e3dc300317b1cc3666e79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e77e4ca789a2abf5bb664221adb8911dd5a1bae5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246727"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529749"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>データ型と XML 一括読み込みの動作 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,15 +29,15 @@ ms.locfileid: "75246727"
   
  XSD では、次の場合に注意してください。  
   
--   型が**dateTime**または**time**の場合は、データを Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に送信する前に XML 一括読み込みでデータ変換が実行されるため、 **sql: datatype**を指定する必要があります。  
+-   型が**dateTime**または**time**の場合は、データを Microsoft に送信する前に XML 一括読み込みでデータ変換が実行されるため、 **sql: datatype**を指定する必要があり [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
--   で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **uniqueidentifier**型の列に一括読み込みを行うときに、XSD 値が中かっこ ({および}) を含む GUID である場合、 **sql: datatype = "uniqueidentifier"** を指定して、列に値を挿入する前に中かっこを削除する必要があります。 **Sql: datatype**が指定されていない場合、値は中かっこで送信され、挿入は失敗します。  
+-   で**uniqueidentifier**型の列に一括読み込みを行うときに、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XSD 値が中かっこ ({および}) を含む GUID である場合、 **sql: datatype = "uniqueidentifier"** を指定して、列に値を挿入する前に中かっこを削除する必要があります。 **Sql: datatype**が指定されていない場合、値は中かっこで送信され、挿入は失敗します。  
   
  **Sql: datatype**の詳細については、「[データ型の強制型変換」および「Sql: DATATYPE 注釈 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)」を参照してください。  
   
  XDR では、次の場合に注意してください。  
   
--   **Dt: type**が**datetime**、 **time**、 **dateTime.tz**、または**time.tz**の場合、XML 一括読み込みでは、データがに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]送信される前にデータ変換が実行されるため、 **dt: type**と**sql: datatype**の両方のデータ型を指定する必要があります。  
+-   **Dt: type**が**datetime**、 **time**、 **dateTime.tz**、または**time.tz**の場合、XML 一括読み込みでは、データがに送信される前にデータ変換が実行されるため、 **dt: type**と**sql: datatype**の両方のデータ型を指定する必要があり [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
 -   XML データの種類が**uuid**の場合は、 **sql: datatype**を指定する必要があります。データが文字列データの場合を除き、 **dt: type = "uuid"** も必要です。 **Dt: uuid**を指定しない場合、XML 一括読み込みでは、中かっこで囲まれた文字列が受け入れられます (必要な場合は削除されます)。  
   

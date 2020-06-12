@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d432d38794e65e8b8bea69608479e330649ee395
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084227"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522228"
 ---
 # <a name="logistic-regression-model-query-examples"></a>ロジスティック回帰モデルのクエリ例
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータによる予測を行うことができます。  
   
  ここでは、Microsoft ロジスティック回帰アルゴリズムに基づいたモデルに対するクエリの作成方法について説明します。  
   
- **コンテンツクエリ**  
+ **コンテンツ クエリ**  
   
  [データ マイニング スキーマ行セットを使用してモデル パラメーターを取得する](#bkmk_Query1)  
   
@@ -145,7 +144,7 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>Call Center のマイニング構造およびモデルの分離バージョンを作成するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のソリューションエクスプローラーで、[**マイニング構造**] を展開します。  
+1.  の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ソリューションエクスプローラーで、[**マイニング構造**] を展開します。  
   
 2.  Call Center.dmm を右クリックして、 **[コピー]** を選択します。  
   
@@ -157,7 +156,7 @@ NATURAL PREDICTION JOIN
   
 6.  **[マイニング構造]** タブで、Service Grade の列を右クリックし、 **[プロパティ]** をクリックします。  
   
-7.  プロパティを**Continuous**から分離に変更します。 **Discretized** `Content` `DiscretizationMethod`プロパティを**クラスター**に変更します。 Discretization BucketCount に「 **3**」と入力します。  
+7.  プロパティを `Content` **Continuous**から**分離**に変更します。 プロパティを `DiscretizationMethod` **クラスター**に変更します。 Discretization BucketCount に「 **3**」と入力します。  
   
     > [!NOTE]  
     >  これらのパラメーターは、プロセスを説明するために使用されており、有効なモデルを生成するとは限りません。  
@@ -193,7 +192,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|予測関数|使用方法|  
+|予測関数|使用法|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|指定された状態の調整済みの確率を返します。|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|指定された列に対して、予測された値、または値のセットを返します。|  

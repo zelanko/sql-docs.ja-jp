@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e30096bcd23f517e640903b0c9036633ad5427d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078999"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543504"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>キューブとディメンションのプロパティの確認
   キューブを定義した後は、その結果をキューブ デザイナーで確認できます。 この実習では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトのキューブの構造を確認します。  
@@ -52,7 +51,7 @@ ms.locfileid: "66078999"
   
 9. ソリューション エクスプローラーで、 **[キューブ]** ノード内にある **[Analysis Services Tutorial]** を右クリックし、 **[コードの表示]** をクリックします。 場合によっては、しばらく待つ必要があります。  
   
-     チュートリアルキューブの XML コードは、[ ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube [XML]** ] タブに表示されます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]これは、配置中にの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスにキューブを作成するために使用される実際のコードです。 詳細については、「[Analysis Services のプロジェクトでの XML の表示 (SSDT)](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md)」を参照してください。  
+     チュートリアルキューブの XML コード [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、[ ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube [XML]** ] タブに表示されます。これは、配置中にのインスタンスにキューブを作成するために使用される実際のコードです [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 詳細については、「[Analysis Services のプロジェクトでの XML の表示 (SSDT)](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md)」を参照してください。  
   
 10. XML コードのタブを閉じます。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 892198c217918fd2b2a374261c6eac5e31d0a428
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b310c3fd762274a038198f7d88456b85d156ba3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074081"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546244"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>クエリ軸の内容の指定 (MDX)
   クエリ軸は、多次元式 (MDX) の SELECT ステートメントから返されるセル セットの範囲を指定します。 セル セットの範囲を指定することで、返されるデータのうち、クライアントで表示するデータを限定できます。  
@@ -48,7 +47,7 @@ ms.locfileid: "66074081"
   
  上記のクエリ軸の構文では、 `Set_Expression` の値によって、クエリ軸の内容を定義するセットを指定します。 セットの詳細については、「[メンバー、組、およびセットの操作 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の単純な SELECT ステートメントは、COLUMNS 軸で Internet Sales Amount メジャーを返し、MDX の MEMBERS 関数を使って、ROWS 軸で Date ディメンションの Calendar 階層のすべてのメンバーを返します。  
   
 ```  

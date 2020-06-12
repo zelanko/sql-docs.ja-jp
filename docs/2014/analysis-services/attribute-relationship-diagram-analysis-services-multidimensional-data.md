@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 320989ad-bd95-43f4-a2e7-b262d66dbda7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8fbd67f8a6fcc88a3821583d1e06ec3e8a75ab91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f0e03c8d06d018390a3537ec15c4ab06c927bf4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063096"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527898"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>属性リレーションシップ ダイアグラム ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **[属性リレーションシップ]** タブのツール バーのすぐ下にあるペインを使用すると、属性リレーションシップ ダイアグラムを表示したり、属性リレーションシップを作成、変更、および削除したりできます。  
@@ -60,7 +59,7 @@ ms.locfileid: "66063096"
 > [!NOTE]  
 >  このオプションをクリックすると、ディメンション デザイナーでは、属性リレーションシップ ダイアグラムの図形が、デザイナーで使用される既定の配置に戻ります。  
   
- **Zoom**  
+ **[ズーム]**  
  使用できるズーム オプションの一覧を表示します。  
   
 ### <a name="attribute-shortcut-menu"></a>属性のショートカット メニュー  

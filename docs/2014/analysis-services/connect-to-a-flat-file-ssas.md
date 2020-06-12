@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a365991e-eded-4cd8-89c0-0daf6d658d15
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 970a55b709e164da573fbd224c13cc641a3ba06a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087358"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527198"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>[フラット ファイルへの接続] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、フラット ファイル (.txt)、タブ区切りファイル (.tab)、またはコンマ区切りファイル (.csv) に接続できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
@@ -27,7 +26,7 @@ ms.locfileid: "66087358"
 > [!NOTE]  
 >  このページでファイルを選択する際には、現在のユーザーの資格情報が使用されます。 ただし、[権限借用情報] ページで指定されたユーザーに、選択したファイルの読み取り権限がないと、インポートは成功しません。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[接続の表示名]**  
  このデータ ソース接続の一意の名前を入力します。 これは必須フィールドです。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66087358"
  **列区切り記号**  
  使用できる列区切り記号の一覧から、列区切り記号を選択します。 テキストに出現しないと思われる区切り記号を選択してください。  
   
-|[値]|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |タブ (t)|列はタブ文字で区切られます。|  
 |コンマ (,)|列はコンマ (,) で区切られます。|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29d27d38a72954b1471db21c199c0372cac4036
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087459"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527258"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>PowerPivot データ更新用の保存された資格情報の構成 (PowerPivot for SharePoint)
   使用する資格情報を保存するために、対象アプリケーションを Secure Store Service で作成してあれば、PowerPivot データ更新ジョブは任意の Windows ユーザー アカウントで実行できます。 同様に、PowerPivot for Excel のデータを最初にインポートするときに使用するものとは異なるデータベース ログインを提供する場合は、その資格情報を Secure Store Service の対象アプリケーションにマップし、データ更新スケジュールでその対象アプリケーションを指定できます。  
@@ -28,7 +27,7 @@ ms.locfileid: "66087459"
   
  このトピックでは、SharePoint 2010 ファーム内の PowerPivot データの更新操作に使用するユーザー名とパスワードの設定方法について説明します。 この手順を使用するには、あらかじめ、Secure Store Service を有効にし、マスター キーを生成しておく必要があります。 詳細については、「 [SharePoint 2010 での PowerPivot データ更新](powerpivot-data-refresh-with-sharepoint-2010.md)」を参照してください。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
  [データ更新用の Windows アカウントの構成](#configAny)  
   

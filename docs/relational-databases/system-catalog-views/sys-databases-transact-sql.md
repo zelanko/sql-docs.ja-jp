@@ -1,7 +1,7 @@
 ---
 title: sys. databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2020
+ms.date: 06/08/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0cc6509f3bdd5a7ca64dc739bf4db24dc96c709
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05901a97ea85deb6f45b5ee440d0eefaac1c8fd6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828182"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529378"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -93,8 +93,8 @@ ms.locfileid: "82828182"
 |**log_reuse_wait_desc**|**nvarchar(60)**|前回のチェックポイントの時点で現在待機中の、トランザクション ログ領域の再利用の理由の説明です。|  
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION は ON です。<br /> 0 = DATE_CORRELATION_OPTIMIZATION は OFF です。|  
 |**is_cdc_enabled**|**bit**|1 = データベースで変更データ キャプチャが有効になっています。 詳細については、「 [sys. sp_cdc_enable_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)」を参照してください。|  
-|**is_encrypted**|**bit**|データベースが暗号化されているかどうかを示します (は、句を使用して最後に設定された状態を反映し `ALTER DATABASE SET ENCRYPTION` ます)。 値は、次のいずれかです。<br /> 1 = 暗号化<br /> 0 = 暗号化されていない<br /> データベース暗号化の詳細については、「[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。<br /> データベースの暗号化が解除されている場合、には `is_encrypted` 値0が表示されます。 [Dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)動的管理ビューを使用すると、暗号化プロセスの状態を確認できます。|  
-|**is_honor_broker_priority_on**|**bit**|データベースがメッセージ交換の優先度を優先するかどうかを示します (句を使用して最後に設定された状態を反映し `ALTER DATABASE SET HONOR_BROKER_PRIORITY` ます)。 値は、次のいずれかです。<br /> 1 = HONOR_BROKER_PRIORITY は ON です。<br /> 0 = HONOR_BROKER_PRIORITY は OFF です。<br /> 既定では、復元またはアタッチされたデータベースの broker の優先度はオフになっています。|  
+|**is_encrypted**|**bit**|データベースが暗号化されているかどうかを示します (は、句を使用して最後に設定された状態を反映し `ALTER DATABASE SET ENCRYPTION` ます)。 次の値のいずれかです。<br /> 1 = 暗号化<br /> 0 = 暗号化されていない<br /> データベース暗号化の詳細については、「[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。<br /> データベースの暗号化が解除されている場合、には `is_encrypted` 値0が表示されます。 [Dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)動的管理ビューを使用すると、暗号化プロセスの状態を確認できます。|  
+|**is_honor_broker_priority_on**|**bit**|データベースがメッセージ交換の優先度を優先するかどうかを示します (句を使用して最後に設定された状態を反映し `ALTER DATABASE SET HONOR_BROKER_PRIORITY` ます)。 次の値のいずれかです。<br /> 1 = HONOR_BROKER_PRIORITY は ON です。<br /> 0 = HONOR_BROKER_PRIORITY は OFF です。<br /> 既定では、復元またはアタッチされたデータベースの broker の優先度はオフになっています。|  
 |**replica_id**|**uniqueidentifier**|データベースが参加している可用性グループ (存在する場合) のローカル [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性レプリカの一意の識別子です。<br /> NULL = データベースは可用性グループの可用性レプリカの一部ではありません。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|データベースが参加している Always On 可用性グループ (存在する場合) 内のデータベースの一意識別子。 **group_database_id**は、プライマリレプリカのこのデータベースと、データベースが可用性グループに参加しているすべてのセカンダリレプリカで同じです。<br /> NULL = データベースは、どの可用性グループの可用性レプリカの一部でもありません。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|このデータベースにマップされているリソースプールの id。 このリソースプールは、このデータベース内のメモリ最適化テーブルで使用できるメモリの合計を制御します。<br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降|  
@@ -102,9 +102,9 @@ ms.locfileid: "82828182"
 |**default_language_name**|**nvarchar(128)**|包含データベースの既定の言語を示します。<br /> 非包含データベースの場合、この値は**null**です。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**default_fulltext_language_lcid**|**int**|包含データベースの既定のフルテキスト言語のロケール id (lcid) を示します。<br /> **注:** 既定の[フルテキスト言語サーバー構成オプション](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)の既定の構成として機能 `sp_configure` します。 非包含データベースの場合、この値は**null**です。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**default_fulltext_language_name**|**nvarchar(128)**|包含データベースの既定のフルテキスト言語を示します。<br /> 非包含データベースの場合、この値は**null**です。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**is_nested_triggers_on**|**bit**|包含データベースで入れ子になったトリガーが許可されるかどうかを示します。<br /> 0 = 入れ子になったトリガーは許可されません。<br /> 1 = 入れ子になったトリガーは許可されます。<br /> **注:** の関数は、の[nested Triggers サーバー構成オプションを構成](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)し `sp_configure` ます。 非包含データベースの場合、この値は**null**です。 詳細については[、「transact-sql&#41;&#40;の構成](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)」を参照してください。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**is_transform_noise_words_on**|**bit**|包含データベースでノイズ ワードを変換する必要があるかどうかを示します。<br /> 0 = ノイズ ワードは変換する必要がありません。<br /> 1 = ノイズ ワードは変換する必要があります。<br /> **注:** の[変換ノイズワードのサーバー構成オプション](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)として機能し `sp_configure` ます。 非包含データベースの場合、この値は**null**です。 詳細については[、「transact-sql&#41;&#40;の構成](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)」を参照してください。<br /> **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降|  
-|**two_digit_year_cutoff**|**smallint**|2 桁の数字を 4 桁の西暦として解釈する場合の区切りの年を表す 1753 ～ 9999 の範囲の数値を示します。<br /> **注:** の[2 桁表記の年の切り捨てサーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)として機能し `sp_configure` ます。 非包含データベースの場合、この値は**null**です。 詳細については[、「transact-sql&#41;&#40;の構成](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)」を参照してください。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**is_nested_triggers_on**|**bit**|包含データベースで入れ子になったトリガーが許可されるかどうかを示します。<br /> 0 = 入れ子になったトリガーは許可されません。<br /> 1 = 入れ子になったトリガーは許可されます。<br /> **注:** の関数は、の[nested Triggers サーバー構成オプションを構成](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)し `sp_configure` ます。 非包含データベースの場合、この値は**null**です。 詳細については、「 [transact-sql&#41;&#40;sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)を参照してください。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**is_transform_noise_words_on**|**bit**|包含データベースでノイズ ワードを変換する必要があるかどうかを示します。<br /> 0 = ノイズ ワードは変換する必要がありません。<br /> 1 = ノイズ ワードは変換する必要があります。<br /> **注:** の[変換ノイズワードのサーバー構成オプション](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)として機能し `sp_configure` ます。 非包含データベースの場合、この値は**null**です。 詳細については、「 [transact-sql&#41;&#40;sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)を参照してください。<br /> **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降|  
+|**two_digit_year_cutoff**|**smallint**|2 桁の数字を 4 桁の西暦として解釈する場合の区切りの年を表す 1753 ～ 9999 の範囲の数値を示します。<br /> **注:** の[2 桁表記の年の切り捨てサーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)として機能し `sp_configure` ます。 非包含データベースの場合、この値は**null**です。 詳細については、「 [transact-sql&#41;&#40;sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)を参照してください。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**封じ込める**|**tinyint not null**|データベースの包含状態を示します。<br />  0 = データベースの包含がオフです。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 1 = データベースは部分的な含有に**適用さ**れます: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降|  
 |**containment_desc**|**nvarchar (60) not null**|データベースの包含状態を示します。<br /> NONE = 従来のデータベース (包含なし)<br /> PARTIAL = 部分的包含データベース<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**target_recovery_time_in_seconds**|**int**|データベースの推定復旧時間 (秒) です。 NULL 値は許可されます。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
@@ -117,8 +117,9 @@ ms.locfileid: "82828182"
 |**is_temporal_retention_enabled**|**bit**|テンポラル保持ポリシーのクリーンアップタスクが有効かどうかを示します。<br /> **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|カタログの照合順序の設定:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|カタログの照合順序の設定:<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**physical_database_name**|**nvarchar(128)**|SQL Server には、データベースの物理名を指定します。 Azure SQL Database の場合、サーバー上のデータベースの一般的な id です。 <br />**適用対象**: SQL Server 2019 (15 .x) 以降、および Azure SQL Database|
 |**is_result_set_caching_on**|**bit**|1 = is_result_set_caching_on は on です。</br>0 = is_result_set_caching_on はオフです。</br>**適用対象**: Azure SQL Data Warehouse Gen2。 この機能はすべてのリージョンにロールアウトされていますが、ご使用のインスタンスにデプロイされているバージョンと、利用可能な機能に関する最新の[AZURE SQL DW リリースノート](/azure/sql-data-warehouse/release-notes-10-0-10106-0)を確認してください。|
-|**is_memory_optimized_enabled**|**bit**|[ハイブリッドバッファープール](../../database-engine/configure-windows/hybrid-buffer-pool.md)などの特定のインメモリ機能がデータベースに対して有効かどうかを示します。 [インメモリ OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)の可用性または構成の状態は反映されません。 <br />**適用対象**: SQL Server 2019 (15 .x)|
+|**is_memory_optimized_enabled**|**bit**|[ハイブリッドバッファープール](../../database-engine/configure-windows/hybrid-buffer-pool.md)などの特定のインメモリ機能がデータベースに対して有効かどうかを示します。 [インメモリ OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)の可用性または構成の状態は反映されません。 <br />**適用対象**: SQL Server 2019 (15 .x) 以降、および Azure SQL Database|
   
 ## <a name="permissions"></a>アクセス許可
 
@@ -170,7 +171,7 @@ SELECT a.name, a.is_temporal_history_retention_enabled
 FROM sys.databases AS a;
 ```  
   
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 - [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)
 - [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)

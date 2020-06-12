@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b4ec4bc871723b829d9ce9ec805d4b52b1c649e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 534b27d024feb521be133329c7fe0aef06d9814a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085389"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523878"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>新しいリレーショナル マイニング構造の作成
-  データマイニングウィザードを使用して、リレーショナルデータベースまたは他のソースのデータを使用して新しいマイニング構造を作成し、その構造と関連モデル[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]をデータベースに保存します。  
+  データマイニングウィザードを使用して、リレーショナルデータベースまたは他のソースのデータを使用して新しいマイニング構造を作成し、その構造と関連モデルをデータベースに保存し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。  
   
 ### <a name="to-create-a-relational-mining-structure"></a>リレーショナル マイニング構造を作成するには  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41e5e3d1-cc45-4bb0-ac09-4639d2ffc0ea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dbc1f6daf1039d24830bc91140f82e061b88ae65
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4529ed3a9c7bb2e4110435dfc9d6b9078e825a4e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069944"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538795"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>スキーマ生成ウィザードの F1 ヘルプ (Analysis Services - 多次元データ)
   スキーマ生成ウィザードを使用すると、既存のキューブとディメンションに基づくサブジェクト領域データベースのリレーショナル スキーマが自動的に生成されます。 さらに、ウィザードで生成されたテーブルに時間ディメンションを入力したり、サブジェクト領域データベースの名前付け規則やオプションを管理したりできます。  

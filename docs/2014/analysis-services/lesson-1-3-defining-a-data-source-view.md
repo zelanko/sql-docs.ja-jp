@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b1810eb23a8d0d0541606cb69197b8030463748
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079282"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543655"
 ---
 # <a name="defining-a-data-source-view"></a>データ ソース ビューの定義
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトで使用するデータ ソースを定義した後は、一般に、プロジェクトのデータ ソース ビューを定義します。 データ ソース ビューは、指定したテーブルのメタデータと、プロジェクトのデータ ソースによって定義されているビューを 1 つに統合したものです。 データ ソース ビューにメタデータを格納すると、基になるデータ ソースへの接続を開かなくても、開発時にメタデータを操作することができます。 詳細については、 [「多次元モデルのデータ ソース ビュー」](multidimensional-models/data-source-views-in-multidimensional-models.md)を参照してください。  
@@ -50,7 +49,7 @@ ms.locfileid: "66079282"
   
     -   **FactInternetSales (dbo)**  
   
-5.  クリック**>** すると、選択したテーブルが [**含まれているオブジェクト**] の一覧に追加されます。  
+5.  クリック **>** すると、選択したテーブルが [**含まれているオブジェクト**] の一覧に追加されます。  
   
 6.  [**次へ] をクリックします。**  
   
