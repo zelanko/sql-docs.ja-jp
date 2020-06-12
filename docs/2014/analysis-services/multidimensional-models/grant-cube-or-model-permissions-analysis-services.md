@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 491a863031af677a719db97503ce8aac57686fb6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075027"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546714"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>キューブ権限またはモデル権限の付与 (Analysis Services)
   キューブまたは表形式モデルは、Analysis Services データ モデルの主要なクエリ オブジェクトです。 アドホック データ探索のために Excel から多次元データまたは表形式データに接続する場合、ユーザーは、通常、最初に、ピボット レポート オブジェクトの基礎となるデータ構造として、特定のキューブまたは表形式モデルを選択します。 このトピックでは、キューブまたは表形式データへのアクセスに必要な権限を付与する方法について説明します。  
@@ -58,7 +57,7 @@ ms.locfileid: "66075027"
   
 #### <a name="step-3-set-cube-permissions"></a>手順 3: キューブ権限の設定  
   
-1.  [**キューブ**] ペインで、キューブを選択し、[ `Read`または**読み取り/書き込み**アクセス] をクリックします。  
+1.  [**キューブ**] ペインで、キューブを選択し、[ `Read` または**読み取り/書き込み**アクセス] をクリックします。  
   
      `Read`ほとんどの操作にはアクセスが十分です。 **[読み取り/書き込み]** は、処理ではなく書き戻しにのみ使用します。 この機能の詳細については、「 [パーティションの書き戻しの設定](set-partition-writeback.md) 」をご覧ください。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "66075027"
   
 2.  SSMS で、 **[ロール]** フォルダーに移動し、既存のロールを右クリックします。  
   
-3.   | **CREATE TO****file****として** | [スクリプトロール] を選択します。  
+3.  CREATE TO file**として [スクリプトロール**] を選択し  |  **CREATE TO**  |  **file**ます。  
   
 4.  拡張子を .xmla にしてファイルを保存します。 スクリプトをテストするには、現在のロールを削除し、SSMS でファイルを開き、F5 キーを押してスクリプトを実行します。  
   

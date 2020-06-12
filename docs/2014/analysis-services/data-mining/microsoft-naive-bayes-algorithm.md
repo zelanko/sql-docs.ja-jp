@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a65630dc42e74aef762913775688ce5221f79fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c0fc3ae439f3502458e71fca1700302d745788a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174461"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521778"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes アルゴリズム
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、Bayes ' 定理に基づく分類アルゴリズムであり、予測モデリング[!INCLUDE[msCoName](../../includes/msconame-md.md)]で使用するためにによっ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]て提供されます。 Naive Bayes (単純ベイズ) という名前の単純 (Naive) という部分は、このアルゴリズムで Bayes の技法が使用されているものの、存在する可能性のある依存関係が考慮されないことに由来しています。
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Naive Bayes アルゴリズムは、Bayes ' 定理に基づく分類アルゴリズムで [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] あり、予測モデリングで使用するためにによって提供されます。 Naive Bayes (単純ベイズ) という名前の単純 (Naive) という部分は、このアルゴリズムで Bayes の技法が使用されているものの、存在する可能性のある依存関係が考慮されないことに由来しています。
 
  このアルゴリズムは、他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムよりも計算量が少ないので、入力列と予測可能列のリレーションシップを見つけるためのマイニング モデルを短時間で生成できます。 このアルゴリズムを使用してデータの初期調査を行った後、この結果を適用して、計算量が多く精度が高い他のアルゴリズムを使用して追加のマイニング モデルを作成できます。
 

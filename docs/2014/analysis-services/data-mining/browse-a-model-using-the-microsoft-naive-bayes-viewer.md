@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 668ca4cfae7b660ff9e44de06c8523d8f9324cc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83ba32e732a590881803d87c73d9853ee6c20abf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086030"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525451"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Microsoft Naive Bayes ビューアーを使用したモデルの参照
-  の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Naive Bayes ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用して作成されたマイニングモデルが表示され[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、予測モデリング タスクに非常に適した分類アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft Naive Bayes アルゴリズム](microsoft-naive-bayes-algorithm.md)」を参照してください。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]の Naive Bayes ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Naive Bayes アルゴリズムを使用して作成されたマイニングモデルが表示され [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、予測モデリング タスクに非常に適した分類アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft Naive Bayes アルゴリズム](microsoft-naive-bayes-algorithm.md)」を参照してください。  
   
  Naive Bayes モデルの主な目的の 1 つはデータセット内のデータを短時間で調査できるようにすることなので、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ビューアーには、予測可能属性および入力属性の相互関係を表示するための手段がいくつか用意されています。  
   
@@ -80,10 +79,10 @@ ms.locfileid: "66086030"
  **値**  
  **[属性]** 列の属性の値が表示されます。  
   
- **値\<1>を優先する**  
+ **ライター\<value 1>**  
  **[値 1]** の予測可能な属性値が優先される度合いを示す、色分けされたバーが表示されます。  
   
- **値\<2 を優先>**  
+ **ライター\<value 2>**  
  **[値 2]** の予測可能な属性値が優先される度合いを示す、色分けされたバーが表示されます。  
   
  [ページのトップへ](#BKMK_ViewerTabs)  

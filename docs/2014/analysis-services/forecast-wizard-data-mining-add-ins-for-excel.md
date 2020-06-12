@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c4d728f810da7abf96d1addc6ef91156a3d5ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081031"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544424"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>予測ウィザード (Excel 用データ マイニング アドイン)
   ![[データ マイニング] リボンの関連付けウィザード](media/dmc-forecast.gif "[データ マイニング] リボンの関連付けウィザード")  
@@ -41,7 +40,7 @@ ms.locfileid: "66081031"
   
 3.  [**予測**] ページの [**タイムスタンプ**] で、ケースシリーズとして使用できる一意の数値 (日付と時刻の値を含む) を含む列を選択します。 データ ソースは、この列の昇順で並べ替えられている必要があります。  
   
-     データにこのような列がない場合は、[タイムスタンプなし\<] オプションを使用でき> ます。 ウィザードによって、入力データ用に一意の順序列が追加されます。そのため、ウィザードを実行してこのオプションを選択する前に、データが希望どおりに並べ替えられることを確認する必要があります。  
+     データにこのような列がない場合は、オプションを使用でき \<no time stamp> ます。 ウィザードによって、入力データ用に一意の順序列が追加されます。そのため、ウィザードを実行してこのオプションを選択する前に、データが希望どおりに並べ替えられることを確認する必要があります。  
   
 4.  必要に応じて、[**パラメーター** ] をクリックして、マイニングモデルの動作をカスタマイズすることもできます。  
   

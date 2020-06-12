@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0c52d2598c2fff79d9d7dd6cb99468871f12639
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e206bcbddb1f6db8c58ecba8c5550809f79457a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086606"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526208"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>キューブ デザイナー (Analysis Services - 多次元データ)
   **の** キューブ デザイナー [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用すると、キューブに含まれているメジャー グループやメジャー、キューブ ディメンションやディメンション リレーションシップ、計算、主要業績評価指標 (KPI)、アクション、パーティション、パースペクティブ、および翻訳を含む、既存のキューブのさまざまなプロパティを編集したり、キューブに含まれているデータを参照したりできます。 **キューブ デザイナー** ダイアログ ボックスを表示するには、次の手順に従います。  
@@ -34,7 +33,7 @@ ms.locfileid: "66086606"
 |---------|----------------|  
 |**[キューブ構造]**|メジャー グループやメジャーの追加と変更、キューブ ディメンションの追加、およびキューブに含まれているオブジェクトの関連するデータ ソース ビューからの表示を行います。 このタブの詳細については、「[Cube Structure &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)」([キューブ構造] &#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;) を参照してください。|  
 |**[ディメンションの使用法]**|キューブに含まれるキューブ ディメンションとメジャー グループの間のリレーションシップの作成と変更を行います。 このタブの詳細については、「[Dimension Usage &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)」([ディメンションの使用方法] &#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;) を参照してください。|  
-|**[新しい名前付きセット]**|キューブに含まれる、計算されるメンバー、名前付きセット、および多次元式 (MDX) スクリプトを含む計算の作成と変更を行います。 このタブの詳細については、「[Calculations &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)」([計算] &#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;) を参照してください。|  
+|**計算**|キューブに含まれる、計算されるメンバー、名前付きセット、および多次元式 (MDX) スクリプトを含む計算の作成と変更を行います。 このタブの詳細については、「[Calculations &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)」([計算] &#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;) を参照してください。|  
 |**KPI**|キューブに含まれる KPI の作成と変更を行います。 このタブの詳細については、「[KPIs &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)」([KPI] &#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;) を参照してください。|  
 |**アクション**|キューブに含まれるドリルスルー アクションおよびレポート アクションを含むアクションの作成と変更を行います。 このタブの詳細については、「[Actions &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)」([アクション] &#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;) を参照してください。|  
 |**パーティション**|キューブに含まれる、メジャー グループおよびパーティションのプロアクティブ キャッシュの設定を含むパーティションの作成と変更を行います。 このタブの詳細については、「[Partitions &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)」([パーティション] &#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;) を参照してください。|  

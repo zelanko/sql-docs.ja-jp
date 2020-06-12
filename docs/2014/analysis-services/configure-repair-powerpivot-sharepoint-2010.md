@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d89de37de81311b1f4a884eeaf434e8247da633
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b5ace027c052090e2f0ce5bca77e02df9516da4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174471"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527268"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>PowerPivot for SharePoint 2010 の構成または修復 (PowerPivot 構成ツール)
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 のインストールを構成または修復するには、PowerPivot 構成ツールを使用します。 構成ツールはまずシステムをスキャンし、インストールを完了または修復するために必要なアクションの一覧を返します。 セットアップ[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]ウィザードでは、sharepoint 2010 用の Powerpivot 構成ツールと、sharepoint 2013 用 Powerpivot 構成ツールがインストールされます。 このトピックでは、SharePoint 2010 用 PowerPivot 構成ツールについて説明します。 SharePoint 2010 の詳細については、「 [PowerPivot 構成ツール&#41;&#40;PowerPivot for SharePoint 2013 の構成または修復](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)」を参照してください。
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 のインストールを構成または修復するには、PowerPivot 構成ツールを使用します。 構成ツールはまずシステムをスキャンし、インストールを完了または修復するために必要なアクションの一覧を返します。 セットアップウィザードでは、sharepoint [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 2010 用の Powerpivot 構成ツールと、sharepoint 2013 用 Powerpivot 構成ツールがインストールされます。 このトピックでは、SharePoint 2010 用 PowerPivot 構成ツールについて説明します。 SharePoint 2010 の詳細については、「 [PowerPivot 構成ツール&#41;&#40;PowerPivot for SharePoint 2013 の構成または修復](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)」を参照してください。
 
  **[!INCLUDE[applies](../includes/applies-md.md)]** SharePoint 2010
 
@@ -52,7 +51,7 @@ ms.locfileid: "78174471"
 ##  <a name="configuration-steps"></a><a name="bkmk_steps"></a>構成手順
  構成ツールへのリンクは、ローカルサーバーに PowerPivot for SharePoint 2010 がインストールされている場合にのみ表示されます。
 
-1.  [**スタート**] ボタンをクリックし、[**すべて**の[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]プログラム] をポイントします。次に、[]、[**構成ツール**]、[ **PowerPivot 構成ツール**] の順にクリックします。
+1.  [**スタート**] ボタンをクリックし、[**すべてのプログラム**] をポイントします。次に、[]、[構成ツール]、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **PowerPivot 構成ツール**] の順にクリックします。 **Configuration Tools**
 
 2.  **[PowerPivot for SharePoint の構成または修復]** をクリックします。
 
@@ -180,8 +179,8 @@ ms.locfileid: "78174471"
 ### <a name="add-servers-or-applications"></a>サーバーまたはアプリケーションの追加
  後でデータ ストレージや処理能力を追加する必要が生じた場合は、ファームに 2 つ目の PowerPivot for SharePoint サーバー インスタンスを追加することができます。 手順については、「[配置のチェックリスト: SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)」を参照してください。
 
-## <a name="additional-resources"></a>その他の情報
- ![SharePoint の設定](media/as-sharepoint2013-settings-gear.gif "SharePoint の設定")では Microsoft SQL Server Connect (https://connect.microsoft.com/SQLServer/Feedback))[を使用してフィードバックと連絡先情報を送信し](https://connect.microsoft.com/SQLServer/Feedback)ます。
+## <a name="additional-resources"></a>その他のリソース
+ ![SharePoint の設定](media/as-sharepoint2013-settings-gear.gif "SharePoint の設定")[では Microsoft SQL Server Connect () を使用してフィードバックと連絡先情報を送信し](https://connect.microsoft.com/SQLServer/Feedback) https://connect.microsoft.com/SQLServer/Feedback) ます。
 
 ## <a name="see-also"></a>参照
  [Powerpivot 構成ツール](power-pivot-sharepoint/power-pivot-configuration-tools.md)サーバー[の全体管理での Powerpivot サーバーの管理と構成](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)

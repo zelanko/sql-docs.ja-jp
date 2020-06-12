@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 237f4dfaa615718f7fa4301b8d64cab0c45600b0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071046"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547764"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>PowerPivot for SharePoint サーバーの開始または停止
-  PowerPivot System サービスとインスタンス[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]は、同じローカルアプリケーションサーバー上で連携して動作し、SharePoint ファームでの調整された要求とデータ処理をサポートします。  
+  PowerPivot System サービスとインスタンスは、 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 同じローカルアプリケーションサーバー上で連携して動作し、SharePoint ファームでの調整された要求とデータ処理をサポートします。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
  [サービスの依存関係](#dependencies)  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cceead32ca14d2a5261c0ef35cb4444be2effcf5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088478"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527718"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Naive Bayes モデルの参照
   **参照**を使用して単純な Bayes モデルを開くと、4つの異なるペインを含む対話型ビューアーにモデルが表示されます。 ビューアーを使用して、相関関係を調査し、モデルと基になるデータに関する情報を取得します。  

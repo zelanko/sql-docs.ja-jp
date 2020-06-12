@@ -9,24 +9,23 @@ ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06b93090918a0fffc9c98e1560b338177eff3d84
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725386"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545930"
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services で使用するデータ型
-  すべて<xref:Microsoft.AnalysisServices.DataItem>のオブジェクトに[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ついて、は次`System.Data.OleDb.OleDbType`ののサブセットをサポートします。 データ型を設定または読み取るには、 [DataItem データ型 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)を使用します。  
+  すべてのオブジェクトについて <xref:Microsoft.AnalysisServices.DataItem> 、は [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 次ののサブセットをサポート `System.Data.OleDb.OleDbType` します。 データ型を設定または読み取るには、 [DataItem データ型 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)を使用します。  
   
-## <a name="supported-data-types"></a>サポートされるデータ型  
+## <a name="supported-data-types"></a>サポートされているデータ型  
   
 |||  
 |-|-|  
 |BigInt|64 ビットの符号付き整数です。 *BigInt*値型は、負の9223372036854775808から正の9223372036854775807までの範囲の値を持つ整数を表します。|  
-|Binary|**バイト**型のバイナリデータのストリーム。 **Byte**は、0 ~ 255 の範囲の符号なし整数を表す値型です。|  
-|ブール型|この型のインスタンスの値は、`true` または `false` のいずれかになります。|  
+|2 項|**バイト**型のバイナリデータのストリーム。 **Byte**は、0 ~ 255 の範囲の符号なし整数を表す値型です。|  
+|Boolean|この型のインスタンスの値は、`true` または `false` のいずれかになります。|  
 |通貨|-922337203685477.5808 から + 922337203685477.5807 までの範囲で、精度が通貨単位の10,000 分の 1 (小数点以下4桁) の*通貨*値。|  
 |日付|日付と時刻データで、double として格納されます。 整数部分は 1899 年 12 月 30 日から起算した日数、小数部分は日の一部分 (時刻) を表します。|  
 |Double|-1.79769313486232E +308 から 1.79769313486232E +308 までの範囲の浮動小数点数です。 Double 値は、最大有効桁数が 15 の 10 進数の数値情報を格納します。|  
@@ -43,7 +42,7 @@ ms.locfileid: "62725386"
 ## <a name="amo-validations-on-data-types"></a>データ型に対する AMO の検証  
  次の表は、特定のバインドに対して分析管理オブジェクト (AMO) が行う追加の検証を示しています。  
   
-|オブジェクト|バインド|許可されるデータ型|  
+|Object|バインド|許可されるデータ型|  
 |------------|-------------|------------------------|  
 |DimensionAttribute|[KeyColumns]|Binary 以外のすべて|  
 ||NameColumn|WChar のみ|  
@@ -51,12 +50,12 @@ ms.locfileid: "62725386"
 ||CustomRollupColumn|WChar のみ|  
 ||CustomRollupPropertiesColumn|WChar のみ|  
 ||UnaryOperatorColumn|WChar のみ|  
-||ValueColumn|All|  
+||ValueColumn|すべて|  
 |AttributeTranslation|CaptionColumn|WChar のみ|  
 |ScalarMiningStructureColumn|[KeyColumns]|Binary 以外のすべて|  
 ||NameColumn|WChar のみ|  
 |TableMiningStructureColumn|ForeignKeyColumns|Binary 以外のすべて|  
 |MeasureGroupAttribute|[KeyColumns]|Binary 以外のすべて|  
-|個別のカウント メジャー|ソース|BigInt、Currency、Double、Integer、Single、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
+|個別のカウント メジャー|source|BigInt、Currency、Double、Integer、Single、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
   
   

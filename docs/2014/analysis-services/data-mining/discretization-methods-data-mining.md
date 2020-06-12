@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5e984fe2ea57ab175e3224d099f5392f96287c74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: feca59697c1c78a08e629b62856053f2d2ce6d6d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084634"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522558"
 ---
 # <a name="discretization-methods-data-mining"></a>分離メソッド (データ マイニング)
-  で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データマイニングモデルを作成するために使用される一部のアルゴリズムでは、正しく機能するために特定のコンテンツの種類が必要です。 たとえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、連続列を入力として使用したり、連続する値を予測したりすることはできません。 また、一部の列に含まれている値が多すぎるため、データ マイニング モデルの作成元となるデータ内の対象パターンをアルゴリズムで容易に識別できない場合があります。  
+  でデータマイニングモデルを作成するために使用される一部のアルゴリズムでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 正しく機能するために特定のコンテンツの種類が必要です。 たとえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、連続列を入力として使用したり、連続する値を予測したりすることはできません。 また、一部の列に含まれている値が多すぎるため、データ マイニング モデルの作成元となるデータ内の対象パターンをアルゴリズムで容易に識別できない場合があります。  
   
  このような場合、アルゴリズムを使用してマイニング モデルを生成できるように、列内のデータを分離できます。 *分離* とは、値をバケットに分割して、限定された数の可能な状態を生成するプロセスです。 バケット自体は、順序付きの不連続の値として処理されます。 数値と文字列の両方の列を分離できます。  
   

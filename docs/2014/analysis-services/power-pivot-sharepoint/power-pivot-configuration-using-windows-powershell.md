@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9282fce8e0004495ae8c10b0b3f75fec205d6b34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 83b42da3e676a291bb021c02ee52e9a810207397
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782806"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535104"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>Windows PowerShell を使用した PowerPivot の構成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]のインストールを構成するために使用できる Windows PowerShell コマンドレットが含まれています。 PowerShell によりインストールを完全に構成するには、SharePoint コマンドレットと PowerPivot for SharePoint コマンドレットの両方を使用する必要があります。 構成の大部分は [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ツールのいずれかを使用して実行することができます。 ツールの詳細については、「 [PowerPivot 構成ツール](power-pivot-configuration-tools.md)」を参照してください。  
@@ -27,7 +26,7 @@ ms.locfileid: "72782806"
  Windows  PowerShell スクリプト (.ps1) ファイルを作成して構成タスクを自動化できます。 この方法は、任意のサーバーで実行できるスクリプト化されたインストール手順および構成手順が必要な場合に推奨されます。 このようなスクリプトは、ハードウェア障害が発生したときにサーバーを再構築するディザスター リカバリー計画の一環として必要になる場合があります。  
   
 ## <a name="view-a-list-of-the-powerpivot-cmdlets-on-a-server"></a>サーバーで PowerPivot コマンドレットの一覧を表示する  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]コマンドレットの内容と例については、「 [PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)」を参照してください。  
+ コマンドレットの内容と例については [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 、「 [PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)」を参照してください。  
   
  PowerShell を使用して PowerPivot コマンドレットの一覧を表示するには  
   
@@ -45,7 +44,7 @@ ms.locfileid: "72782806"
   
     -   SharePoint モードで構成された SQL Server 2012 Analysis Services サーバーおよび SharePoint 2010 では、17 個のコマンドレットを使用できます。  
   
-     一覧にコマンドが返されない場合、または "`get-help could not find *powerpivot* in a help file in this session.`" のようなエラーメッセージが表示される場合は、このトピックの次のセクションを参照して、サーバーで PowerPivot コマンドレットを有効にする方法を確認してください。  
+     一覧にコマンドが返されない場合、または "" のようなエラーメッセージが表示される場合は `get-help could not find *powerpivot* in a help file in this session.` 、このトピックの次のセクションを参照して、サーバーで PowerPivot コマンドレットを有効にする方法を確認してください。  
   
      すべてのコマンドレットに、オンライン ヘルプが用意されています。 `New-PowerPivotServiceApplication` コマンドレットのオンライン ヘルプを表示する方法を次の例に示します。  
   

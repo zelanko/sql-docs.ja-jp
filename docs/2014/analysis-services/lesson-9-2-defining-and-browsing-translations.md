@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9fb624116ca42f32ab20615d1c34fcb786d150a1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493787"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542244"
 ---
 # <a name="defining-and-browsing-translations"></a>翻訳の定義と表示
   翻訳とは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のオブジェクトの名前を特定の言語で表現することです。 オブジェクトには、メジャー グループ、メジャー、ディメンション、属性、階層、KPI、アクション、計算されるメンバーなどがあります。 翻訳によって、複数言語を使用するクライアント アプリケーションをサーバーがサポートできるようになります。 この場合、クライアントは、ロケール識別子 (LCID) を [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスに渡します。 のインスタンスはこの LCID に基づいて、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトにメタデータを提供する際に使用する翻訳セットを判別します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトにその言語の翻訳が含まれていない場合、または特定のオブジェクトの翻訳が含まれていない場合は、オブジェクトのメタデータがクライアントに送り返される際に既定の言語が使用されます。 たとえば、フランスのビジネス ユーザーが、フランス語にロケール設定されたワークステーションからキューブにアクセスした場合、該当する項目がフランス語に翻訳されているのであれば、メンバー キャプションとメンバー プロパティ値がフランス語で表示されます。 一方、ドイツのビジネス ユーザーが、ドイツ語にロケール設定されたワークステーションから同じキューブにアクセスすると、メンバー キャプションとメンバー プロパティ値はドイツ語で表示されます。 詳細については、「[ディメンションの翻訳](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)」、「[キューブの翻訳](multidimensional-models-olap-logical-cube-objects/cube-translations.md)」、「[翻訳 &#40;Analysis Services&#41;](translations-analysis-services.md)」を参照してください。  
@@ -40,9 +39,9 @@ ms.locfileid: "69493787"
   
      新しい言語列が表示されるので、フランス語の翻訳をその列で定義します。  
   
-5.  **Date**ディメンションの`Fecha` **キャプション**オブジェクトの行で、[**スペイン語 (スペイン)** ] 翻訳列と [**フランス語 (フランス)** ] 翻訳列に「」と`Temps`入力します。  
+5.  **Date**ディメンションの**キャプション**オブジェクトの行で、[ `Fecha` **スペイン語 (スペイン)** ] 翻訳列と [ `Temps` **フランス語 (フランス)** ] 翻訳列に「」と入力します。  
   
-6.  **Month Name**属性の`Mes del Año` **Caption**オブジェクトの行で、**スペイン語 (スペイン)** 翻訳列を入力し、[**フランス語 (フランス)** ] 翻訳列に「」と`Mois d'Année`入力します。  
+6.  **Month Name**属性の**Caption**オブジェクトの行で、 `Mes del Año` **スペイン語 (スペイン)** 翻訳列を入力し、[ `Mois d'Année` **フランス語 (フランス)** ] 翻訳列に「」と入力します。  
   
      これらの翻訳を入力すると、省略記号 (**..**.) が表示されます。 この参照ボタンをクリックすると、属性階層の各メンバーの翻訳を入力する基になるテーブルの列を指定できます。  
   
@@ -80,11 +79,11 @@ ms.locfileid: "69493787"
   
      新しい言語列が表示されるので、フランス語の翻訳をその列で定義します。  
   
-5.  **Date**ディメンションの`Fecha` **キャプション**オブジェクトの行で、[**スペイン語 (スペイン)** ] 翻訳列と [**フランス語 (フランス)** ] 翻訳列に「」と`Temps`入力します。  
+5.  **Date**ディメンションの**キャプション**オブジェクトの行で、[ `Fecha` **スペイン語 (スペイン)** ] 翻訳列と [ `Temps` **フランス語 (フランス)** ] 翻訳列に「」と入力します。  
   
-6.  **Internet Sales**メジャーグループの**キャプション**オブジェクトの行で、[**スペイン語 (スペイン)** ] 翻訳列と [ `Ventes D'Internet` **フランス語 (フランス)** ] 翻訳列に「」と入力`Ventas del lnternet`します。  
+6.  **Internet Sales**メジャーグループの**キャプション**オブジェクトの行で、[ `Ventas del lnternet` **スペイン語 (スペイン)** ] 翻訳列と [ `Ventes D'Internet` **フランス語 (フランス)** ] 翻訳列に「」と入力します。  
   
-7.  Internet Sales sales Amount メジャーの**キャプション**オブジェクトの行で、[**スペイン語 (スペイン)** ] 翻訳列と [ `Quantité de Ventes d'Internet` **フランス語 (フランス)** ] 翻訳列に「」と入力`Cantidad de las Ventas del Internet`します。  
+7.  Internet Sales sales Amount メジャーの**キャプション**オブジェクトの行で、[ `Cantidad de las Ventas del Internet` **スペイン語 (スペイン)** ] 翻訳列と [ `Quantité de Ventes d'Internet` **フランス語 (フランス)** ] 翻訳列に「」と入力します。  
   
      この手順は、キューブ オブジェクトのメタデータ翻訳を定義するプロセスを示しています。  
   
@@ -102,13 +101,13 @@ ms.locfileid: "69493787"
   
 5.  ツール バーの **[言語]** ボックスの一覧で **[スペイン語 (スペイン)]** をクリックします。  
   
-     メタデータ ペインのアイテムが再設定されます。 メタデータ ペインのアイテムが再設定されると、Internet Sales-Sales Amount メジャーが [Internet Sales] 表示フォルダーに表示されなくなります。 代わりに、次の図に示すように、スペイン語`Ventas del lnternet`ではという名前の新しい表示フォルダーに表示されます。  
+     メタデータ ペインのアイテムが再設定されます。 メタデータ ペインのアイテムが再設定されると、Internet Sales-Sales Amount メジャーが [Internet Sales] 表示フォルダーに表示されなくなります。 代わりに、 `Ventas del lnternet` 次の図に示すように、スペイン語ではという名前の新しい表示フォルダーに表示されます。  
   
      ![再読み込みメタデータペイン](../../2014/tutorials/media/l9-translations-6.gif "再読み込みメタデータペイン")  
   
-6.  メタデータペインでを右クリック`Cantidad de las Ventas del Internet`し、[**クエリに追加**] を選択します。  
+6.  メタデータペインでを右クリックし、[ `Cantidad de las Ventas del Internet` **クエリに追加**] を選択します。  
   
-7.  [メタデータ] ペインで`Fecha`、[] を展開し、[] を展開**します。 [カレンダーの日付**] を**右クリックし**、[**フィルターに追加**] を選択します。  
+7.  [メタデータ] ペインで、[] を展開し、[ `Fecha` ] を展開**します。** **[** カレンダーの日付] を右クリックし、[**フィルターに追加**] を選択します。  
   
 8.  **フィルター** ペインで、フィルター式として **[CY 2007]** を選択します。  
   

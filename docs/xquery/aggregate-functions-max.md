@@ -1,5 +1,6 @@
 ---
 title: max 関数 (XQuery) |Microsoft Docs
+description: 値が他のすべての項目よりも大きいシーケンス内の1つの項目を返す XQuery max () 関数について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e47539a350a2918ef24c47e3c1eca270d4aeb72e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b2a7449da7c255d0ddbbed71fef3561f77e294d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985955"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529986"
 ---
 # <a name="aggregate-functions---max"></a>集計関数 - max
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +46,8 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  **Max ()** 関数は、入力シーケンス内の他の値よりも大きいシーケンス内の1つの値を返します。 Xs: string 値の場合、既定の Unicode コードポイント照合順序が使用されます。 Xdt: untypedAtomic 値を xs: double にキャストできない場合、入力シーケンスの値は無視されます ( *$arg*)。 入力が動的に計算された空のシーケンスである場合は、空のシーケンスが返されます。  
   
-## <a name="examples"></a>使用例  
- このトピックでは、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
+## <a name="examples"></a>例  
+ このトピックでは、データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
 ### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. Max () XQuery 関数を使用して、製造プロセス内で最も労働時間があるワークセンターの場所を検索する  
  [Min 関数 (XQuery)](../xquery/aggregate-functions-min.md)で指定されたクエリは、 **max ()** 関数を使用するように書き直すことができます。  

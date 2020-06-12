@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bbcb718005b1a0b3c657aef339b97bd60010b62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 476e1e231d3bb33eec37fdd21fa81571831fb7ef
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81219341"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528008"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Analysis Services チュートリアル (SSAS)
   このセクションには、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services のチュートリアルが含まれます。  
@@ -27,7 +26,7 @@ ms.locfileid: "81219341"
  このチュートリアルでは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]での多次元モデリングに必要な、基本的なスキルと概念について学習します。 完了すると、Adventure Works データに基づくキューブ データベースが作成されます。このデータベースには、Excel、Reporting Services、または Analysis Services に接続するその他のクライアント アプリケーションからアクセスできます。  
   
  [GitHub の AdventureWorks サンプルデータベース](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)  
- このリンクを使用すると、の[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]AdventureWorks サンプルデータベースが含まれている GitHub ダウンロードページに移動します。  
+ このリンクを使用すると、の AdventureWorks サンプルデータベースが含まれている GitHub ダウンロードページに移動し [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ます。  
   
  [SQL Server 2008 R2 チュートリアル](https://go.microsoft.com/fwlink/?linkID=220944)  
  SQL Server 2008 R2 チュートリアルの多くは、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] サーバー上で機能します。 データ マイニングを初めて使用する場合は、このリンクを使用して SQL Server 2008 R2 のデータ マイニング チュートリアル (Analysis Services の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] インスタンスでも使用可能) にアクセスしてください。  

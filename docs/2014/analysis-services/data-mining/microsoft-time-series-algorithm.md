@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d840d581fe4dba1ce9d65dfef6878a1e5a697864
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083769"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521639"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]タイムシリーズアルゴリズムでは、製品売上などの連続値を予測するために最適化された回帰アルゴリズムが、時間の経過と共に提供されます。 デシジョン ツリーなどの他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、傾向を予測するために新しい情報を含む列を追加する必要がありますが、タイム シリーズ モデルでは必要ありません。 タイム シリーズ モデルでは、モデルの作成に使用された元のデータセットのみを使用して傾向を予測できます。 予測を実行するときに新しいデータをモデルに追加することで、新しいデータを自動的に傾向分析に組み込むこともできます。  
@@ -47,11 +46,11 @@ ms.locfileid: "66083769"
  この会社では、四半期ごとに最新の売上データを使ってモデルを更新し、予測を更新して、最新の傾向をモデル化することを計画しています。 売上データを正確に更新していない、または一貫して更新していない販売店のデータを修正するために、汎用予測モデルを作成し、それを使用して全地域の予測を作成します。  
   
 ## <a name="how-the-algorithm-works"></a>アルゴリズムの動作  
- で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)]タイムシリーズアルゴリズムでは、artxp という1つのアルゴリズムが使用されていました。 ARTXP アルゴリズムは短期的な予測に適しているため、シリーズ内で最も近い値を予測するために使用されました。 以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[msCoName](../../includes/msconame-md.md)]タイムシリーズアルゴリズムでは、artxp アルゴリズムと2番目のアルゴリズム ARIMA の両方が使用されています。 ARIMA アルゴリズムは、長期的な予測に適しています。 ARTXP アルゴリズムと ARIMA アルゴリズムの実装の詳細については、「 [Microsoft Time Series アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
+ では、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイムシリーズアルゴリズムでは、artxp という1つのアルゴリズムが使用されていました。 ARTXP アルゴリズムは短期的な予測に適しているため、シリーズ内で最も近い値を予測するために使用されました。 以降 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイムシリーズアルゴリズムでは、artxp アルゴリズムと2番目のアルゴリズム ARIMA の両方が使用されています。 ARIMA アルゴリズムは、長期的な予測に適しています。 ARTXP アルゴリズムと ARIMA アルゴリズムの実装の詳細については、「 [Microsoft Time Series アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
   
  既定では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムはアルゴリズムを組み合わせて使用し、パターンの分析と予測を実行します。 このアルゴリズムでは、同じデータに対して2つの異なるモデルをトレーニングします。一方のモデルでは ARTXP アルゴリズムを使用し、もう1つのモデルでは ARIMA アルゴリズムを使用します。 この 2 つのモデルの結果を統合して、さまざまな数のタイム スライスに対して最適な予測を出力します。 ARTXP アルゴリズムは短期的な予測に適しているため、予測シリーズの初めのうちに高い割合で使用されます。 一方、さらに将来のタイム スライスを予測対象とするにつれて、ARIMA が使用される割合が高くなります。  
   
- また、アルゴリズムの組み合わせを調整して、時系列内で短期と長期のどちらの予測を重視するかを指定できます。 Standard 以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]では、タイムシリーズアルゴリズムで[!INCLUDE[msCoName](../../includes/msconame-md.md)]次の設定のいずれかを使用するように指定できます。  
+ また、アルゴリズムの組み合わせを調整して、時系列内で短期と長期のどちらの予測を重視するかを指定できます。 Standard 以降では、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイムシリーズアルゴリズムで次の設定のいずれかを使用するように指定できます。  
   
 -   ARTXP のみを使用し、短期的な予測を行う。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66083769"
   
 -   2 つのアルゴリズムを組み合わせて使用する (既定)。  
   
- 以降で[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]は、タイムシリーズアルゴリズムに[!INCLUDE[msCoName](../../includes/msconame-md.md)]よって予測のモデルがどのようにブレンドされるかをカスタマイズできます。 2 つのアルゴリズムを混用するモデルを使用する場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは次の方法で 2 つのアルゴリズムを組み合わせます。  
+ 以降では [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイムシリーズアルゴリズムによって予測のモデルがどのようにブレンドされるかをカスタマイズできます。 2 つのアルゴリズムを混用するモデルを使用する場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは次の方法で 2 つのアルゴリズムを組み合わせます。  
   
 -   最初のいくつかの予測は、常に ARTXP のみを使用して作成されます。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66083769"
 ### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>例 1: 列値として表されるシリーズを含むタイム シリーズ データ セット  
  この例では、次の入力ケースのテーブルを使用します。  
   
-|TimeID|Product|売上|ボリューム|  
+|TimeID|製品|Sales|ボリューム|  
 |------------|-------------|-----------|------------|  
 |1/2001|A|1000|600|  
 |2/2001|A|1100|500|  

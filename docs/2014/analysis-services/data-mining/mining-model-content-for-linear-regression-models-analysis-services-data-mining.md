@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4ee781a5c15e38676ca11c4385f271988ba615
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083638"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521588"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>線形回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。  
@@ -174,13 +173,13 @@ ms.locfileid: "66083638"
 #### <a name="score-gain"></a>スコア ゲイン  
  各リグレッサーのスコア ゲイン (VALUETYPE = 8) は、属性の興味深さのスコアを表します。 この値を使用すると、複数のリグレッサーの有用性を評価できます。  
   
-#### <a name="statistics"></a>統計  
+#### <a name="statistics"></a>統計情報  
  リグレッサー統計 (VALUETYPE = 9) は、値があるケースの属性の平均値です。 平均値自体は ATTRIBUTE_VALUE 列に表示されますが、平均値からの偏差の合計は VARIANCE 列に表示されます。  
   
 #### <a name="intercept"></a>Intercept  
  通常、回帰式の *切片* (VALUETYPE = 11) または *残余* は、入力属性が 0 の位置にあるときの予測可能な属性の値を示します。 入力属性が 0 になることは通常はありません。0 になった場合、直観に反する結果が生じることがあります。  
   
- たとえば、年齢に基づいて収入を予測するモデルでは、年齢が 0 のときの収入がわかっても役には立ちません。 実際には、平均値に対する線の挙動を知る方が通常は役立ちます。 したがって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、は平均値とのリレーションシップで各リグレッサーを表すようにインターセプトを変更します。  
+ たとえば、年齢に基づいて収入を予測するモデルでは、年齢が 0 のときの収入がわかっても役には立ちません。 実際には、平均値に対する線の挙動を知る方が通常は役立ちます。 したがって、は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 平均値とのリレーションシップで各リグレッサーを表すようにインターセプトを変更します。  
   
  この変更は、マイニング モデル コンテンツで確認するのは困難ですが、 **Microsoft ツリー ビューアー** の **[マイニング凡例]** で完全な回帰式を表示するとすぐにわかります。 回帰式が 0 を表す位置から平均値を表す位置へとシフトしています。 これにより、現在のデータがより直感的にわかりやすい形で表示されます。  
   

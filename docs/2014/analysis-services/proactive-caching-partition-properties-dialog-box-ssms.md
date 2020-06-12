@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ecba72a3-703f-4ede-9d85-9a3318a749e5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cb486ec383ab6fa1684bd9d0e9b8f6bc67631eee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8fae25590d8da3f54ed94bc9d106b44a0aa4d85
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070712"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540214"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>[プロアクティブ キャッシュ] ([パーティションのプロパティ] ダイアログ ボックス) (SSMS)
   SQL Server Management Studio の **[パーティションのプロパティ]** ダイアログ ボックスの **[プロアクティブ キャッシュ]** ページでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのキューブに対してメジャー グループのパーティションのストレージおよびプロアクティブ キャッシュのプロパティを設定できます。  

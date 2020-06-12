@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e075e2de-11cc-4f71-9603-0b161bca8a24
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f41ffd3091ccf38498f1484d9a1bf5a908e50e39
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086428"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525940"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Excel 用のデータ マイニング クライアント (SQL Server データ マイニング アドイン)
   Excel 用データ マイニング クライアントは、データ クレンジング、モデル構築、予測クエリなど共通のデータ マイニング タスクを実行できる一連のツールです。 Excel テーブルまたは範囲のデータを使用することも、外部データ ソースにアクセスすることもできます。  
@@ -140,15 +139,15 @@ ms.locfileid: "66086428"
  必要な権限を持っている場合は、Excel を離れることなく、変更、名前の変更、既存のマイニングモデルおよび構造の処理を削除できます。  
   
  [Excel 用のデータマイニングクライアントのトレース &#40;&#41;](trace-data-mining-client-for-excel.md)  
- [**トレース**] をクリックすると、Excel クライアントと[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サーバー間の相互作用の継続的なキャプチャが表示されます。 アクティビティはすべて DMX または XMLA ステートメントとして格納されるため、データ マイニング セッションのトラブルシューティングを行ったり、後で使用するために情報を保存したりできます。  
+ [**トレース**] をクリックすると、Excel クライアントとサーバー間の相互作用の継続的なキャプチャが表示され [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。 アクティビティはすべて DMX または XMLA ステートメントとして格納されるため、データ マイニング セッションのトラブルシューティングを行ったり、後で使用するために情報を保存したりできます。  
   
  [データ マイニング サーバーへの接続](connect-to-a-data-mining-server.md)  
  データ マイニングのクライアントとして Excel を使用するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスへの接続を確立する必要があります。 この接続を確立すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] エンジンにアクセスできます。 また、適切な権限を持っている場合は、この接続により、発見したパターンの格納や、既存のデータ マイニング オブジェクトの変更を行うこともできます。  
   
- [**接続**] ツールバーには、のインスタンスへの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]接続を管理するためのウィザードが用意されています。 データ マイニング ツールおよびアルゴリズムを使用するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスへの接続を定義する必要があります。 アドインをインストールするときに接続を作成できます。後で接続を追加することもできます。  
+ [**接続**] ツールバーには、のインスタンスへの接続を管理するためのウィザードが用意されて [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] います。 データ マイニング ツールおよびアルゴリズムを使用するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスへの接続を定義する必要があります。 アドインをインストールするときに接続を作成できます。後で接続を追加することもできます。  
   
  **作業の開始**  
- [**はじめに**] ボタンをクリックして構成ウィザードを起動します。このウィザードでは、のインスタンスへ[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の接続を作成し、データマイニングに必要な権限を取得します。  
+ [**はじめに**] ボタンをクリックして構成ウィザードを起動します。このウィザードでは、のインスタンスへの接続を作成 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] し、データマイニングに必要な権限を取得します。  
   
  **ヘルプ**  
  [**ヘルプ**] ドロップダウンメニューには、セットアップを完了してデータマイニングを開始するのに役立つオンラインヘルプ、Web サイト、および構成ウィザードへのリンクが用意されています。  

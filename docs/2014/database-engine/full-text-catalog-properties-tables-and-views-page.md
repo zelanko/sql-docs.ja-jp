@@ -12,17 +12,17 @@ ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2cab8e460b2091f9b4be90f32b7e08b15b4cf60b
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 205ee5d7c316c9a81e82edc0b2b6d132ed5c0ae1
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000952"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858683"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>[フルテキスト カタログのプロパティ] ([テーブルとビュー] ページ)
   このダイアログ ページを使用すると、フルテキスト カタログに割り当てられたテーブルおよびビューを表示したり、変更したりできます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[このデータベース内で対象になるすべてのテーブル/ビュー オブジェクト]**  
  一意のインデックスが定義されていて、まだフルテキスト カタログに割り当てられていないテーブルおよびビューを一覧表示します。 テーブルまたはビューを選択してカタログに割り当てるには、リストボックス内の項目を選択し、[->] ボタンを押します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "83000952"
 |||  
 |-|-|  
 |**自動**|基になるテーブル内のデータが変更、追加、または削除されると、フルテキスト インデックスは自動的に更新されます。|  
-|**[手動]**|インデックス付きデータのデータが変更、追加、または削除されると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は変更を追跡します。 **[手動]** による変更の追跡が選択されている場合、インデックスはこれらの変更によって自動的に更新されません。 代わりに、管理者は [ALTER FULLTEXT INDEX ... START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ステートメントを使用して変更を手動で適用できます。|  
+|**手動**|インデックス付きデータのデータが変更、追加、または削除されると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は変更を追跡します。 **[手動]** による変更の追跡が選択されている場合、インデックスはこれらの変更によって自動的に更新されません。 代わりに、管理者は [ALTER FULLTEXT INDEX ... START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ステートメントを使用して変更を手動で適用できます。|  
 |**[変更を追跡しない]**|このオプションが有効になっていると、カタログ内のインデックス付きデータへの変更は記録されません。 管理者は、FULL POPULATION または INCREMENTAL POPULATION のいずれかで ALTER FULLTEXT INDEX を使用してインデックスを構築する必要があります。|  
   
 ## <a name="see-also"></a>参照  

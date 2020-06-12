@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 082241af377c8817c3adbc394a46f1ebc7d6a4e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d86ba50c76c167e0f6d17cd0dee7e00e6ac938
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085143"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523379"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>データ マイニング アルゴリズム (Analysis Services - データ マイニング)
   *データマイニングアルゴリズム*は、データからデータマイニングモデルを作成する一連のヒューリスティックと計算です。 モデルを作成するために、データ マイニング アルゴリズムは、まず提供されたデータを分析し、特定の種類のパターンまたは傾向を探します。 この分析の結果は、マイニング モデルを作成するための最適化されたパラメーターを定義するために使用されます。 これらのパラメーターはデータセット全体に適用され、実用的なパターンおよび詳細な統計情報が抽出されます。  
@@ -41,7 +40,7 @@ ms.locfileid: "66085143"
   
 -   複数の製品を 1 つのトランザクションにグループ化する方法、およびそれらの製品がまとめて購入される確率を示すルールのセット  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、データマイニングソリューションで使用する複数のアルゴリズムが用意されてい[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ます。 これらのアルゴリズムは、データ マイニングで使用される最も人気のある方法論のうちのいくつかを実装したものです。 どの Microsoft データ マイニング アルゴリズムも、カスタマイズ可能であり、用意されている API または SQL Server Integration Services のデータ マイニング コンポーネントを使用して十分にプログラムできます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、データマイニングソリューションで使用する複数のアルゴリズムが用意されています。 これらのアルゴリズムは、データ マイニングで使用される最も人気のある方法論のうちのいくつかを実装したものです。 どの Microsoft データ マイニング アルゴリズムも、カスタマイズ可能であり、用意されている API または SQL Server Integration Services のデータ マイニング コンポーネントを使用して十分にプログラムできます。  
   
  また、OLE DB for Data Mining 仕様に準拠するサードパーティ製アルゴリズムを使用することも、またはサービスとして登録してから SQL Server データ マイニング フレームワーク内で使用できるカスタム アルゴリズムを開発することもできます。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66085143"
 |**モデル コンテンツ**|各種類のデータ マイニング モデル内で情報がどのように構造化されるのか、および各ノードに格納された情報を解釈する方法について説明します。|  
 ||[アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [デシジョン ツリー モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [ロジスティック回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-logistic-regression-models.md)<br /><br /> [Naive Bayes モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-sequence-clustering-models.md)<br /><br /> [タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
 |**データ マイニング クエリ**|各モデルの種類で使用できる複数のクエリを紹介します。 たとえば、モデル内のパターンをさらに理解できるようにするコンテンツ クエリや、それらのパターンに基づいて予測できるよう支援する予測クエリなどがあります。|  
-||[結合モデルのクエリ例](association-model-query-examples.md)<br /><br /> [クラスタリング モデルのクエリ例](clustering-model-query-examples.md)<br /><br /> [デシジョン ツリー モデルのクエリ例](decision-trees-model-query-examples.md)<br /><br /> [線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)<br /><br /> [ロジスティック回帰モデルのクエリ例](logistic-regression-model-query-examples.md)<br /><br /> [Naive Bayes モデルのクエリ例](naive-bayes-model-query-examples.md)<br /><br /> [ニューラル ネットワーク モデルのクエリ例](neural-network-model-query-examples.md)<br /><br /> [Sequence Clustering Model Query Examples](sequence-clustering-model-query-examples.md)<br /><br /> [タイム シリーズ モデルのクエリ例](time-series-model-query-examples.md)|  
+||[結合モデルのクエリ例](association-model-query-examples.md)<br /><br /> [クラスタリング モデルのクエリ例](clustering-model-query-examples.md)<br /><br /> [デシジョン ツリー モデルのクエリ例](decision-trees-model-query-examples.md)<br /><br /> [線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)<br /><br /> [ロジスティック回帰モデルのクエリ例](logistic-regression-model-query-examples.md)<br /><br /> [Naive Bayes モデルのクエリ例](naive-bayes-model-query-examples.md)<br /><br /> [Neural Network Model Query Examples](neural-network-model-query-examples.md)<br /><br /> [Sequence Clustering Model Query Examples](sequence-clustering-model-query-examples.md)<br /><br /> [Time Series Model Query Examples](time-series-model-query-examples.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

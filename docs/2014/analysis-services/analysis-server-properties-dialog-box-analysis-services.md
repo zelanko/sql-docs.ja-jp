@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a876a11f51731fdd7ff6de679f80cdb8d62fff94
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062620"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528103"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>[分析サーバーのプロパティ] ダイアログ ボックス (Analysis Services)
   **の** [分析サーバーのプロパティ] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスの全般的な設定、言語と照合順序の設定、およびセキュリティ設定を行うことができます。 **オブジェクト エクスプローラー** の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスを右クリックし、ショートカット メニューの **[プロパティ]** を選択することによって、 **[分析サーバーのプロパティ]** ダイアログ ボックスを表示できます。 **[分析サーバーのプロパティ]** ダイアログ ボックスには、次のプロパティが含まれます。  
@@ -43,13 +42,13 @@ ms.locfileid: "66062620"
   
 -   [全般プロパティ](server-properties/general-properties.md)  
   
--   [データ マイニング プロパティ](server-properties/data-mining-properties.md)  
+-   [データマイニングプロパティ](server-properties/data-mining-properties.md)  
   
--   [機能プロパティ](server-properties/feature-properties.md)  
+-   [Feature プロパティ](server-properties/feature-properties.md)  
   
--   [FileStore プロパティ](server-properties/filestore-properties.md)  
+-   [Filestore のプロパティ](server-properties/filestore-properties.md)  
   
--   [ロック マネージャーのプロパティ](server-properties/lock-manager-properties.md)  
+-   [ロックマネージャーのプロパティ](server-properties/lock-manager-properties.md)  
   
 -   [ログのプロパティ](server-properties/log-properties.md)  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66062620"
   
 -   [セキュリティのプロパティ](server-properties/security-properties.md)  
   
--   [スレッド プール プロパティ](server-properties/thread-pool-properties.md)  
+-   [スレッドプールのプロパティ](server-properties/thread-pool-properties.md)  
   
 ## <a name="language-collation-properties"></a>言語/照合順序プロパティ  
  このページを使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の既定の言語および照合順序のオプションを設定します。 次に、各オプションの簡単な説明を示します。 詳細については、「 [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) 」を参照してください。  

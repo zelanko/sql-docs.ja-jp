@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9a054e59a830895d43d861e6d6533ad5bb876c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b3de498bcd5643bb8f83d00c9536f57560d30b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174531"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523210"
 ---
 # <a name="data-mining-concepts"></a>データ マイニングの概念
   データ マイニングとは、大規模なデータ セットから実用的な情報を検出するプロセスです。 データ マイニングでは、数学的分析を使用して、データに内在するパターンおよび傾向を抽出します。 通常、これらのパターンは、従来のデータ探索では検出できません。これは、リレーションシップが非常に複雑であるか、またはデータ量が多すぎるためです。
@@ -60,7 +59,7 @@ ms.locfileid: "78174531"
 
 6.  [モデルの配置と更新](#DeployingandUpdatingModels)
 
- 次の図は、プロセスの各ステップ間の関係と、各手順を[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]完了するために使用できるのテクノロジを示しています。
+ 次の図は、プロセスの各ステップ間の関係と、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各手順を完了するために使用できるのテクノロジを示しています。
 
  ![データ マイニング処理の主な手順](../media/data-mining-process.gif "データ マイニング処理の主な手順")
 

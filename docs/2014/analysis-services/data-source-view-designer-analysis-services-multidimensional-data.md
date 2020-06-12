@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f40a074-761f-440b-a999-09b755bd86ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd19f3a7f4978d2f8bcbd8e62cdf542e05437519
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2dcde9e445538866159f66639159aa1fc6cef87d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175169"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529000"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>データ ソース ビュー デザイナー (Analysis Services - 多次元データ)
   データ ソース ビュー (DSV) は、多次元モデル内でキューブやディメンションを作成するために使用される外部リレーショナル データ ソースの論理ビューです。

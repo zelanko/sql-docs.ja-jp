@@ -1,7 +1,7 @@
 ---
 title: 動的 SQL |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56419723540114f122be2582f0de7c7e7d0c54f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fa4ac69602761f7c2a8d28e56db76bbfc39fc753
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306690"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423256"
 ---
 # <a name="dynamic-sql"></a>動的 SQL
 静的 SQL は多くの状況で適切に動作しますが、データアクセスを事前に特定できないアプリケーションのクラスもあります。 たとえば、スプレッドシートによってユーザーがクエリを入力できるようにした場合、スプレッドシートからデータを取得するために DBMS に送信されるとします。 このクエリの内容は、スプレッドシートプログラムが記述されている場合、プログラマにとってはわかりません。  
@@ -39,4 +39,4 @@ ms.locfileid: "81306690"
   
 3.  プログラムでは、EXECUTE ステートメントを繰り返し使用して、動的ステートメントを実行するたびに異なるパラメーター値を指定できます。  
   
- 準備された実行は、静的 SQL と同じではありません。 静的 SQL では、コンパイル時に SQL ステートメントを処理する最初の4つの手順が実行されます。 準備実行では、これらの手順は実行時に実行されますが、1回だけ実行されます。プランの実行は、EXECUTE が呼び出された場合にのみ行われます。 これにより、動的 SQL のアーキテクチャに特有のパフォーマンス上の欠点がいくつか排除されます。 次の図は、静的 SQL、動的 SQL と即時実行、および準備された実行の動的 SQL の違いを示しています。
+ 準備された実行は、静的 SQL と同じではありません。 静的 SQL では、コンパイル時に SQL ステートメントを処理する最初の4つの手順が実行されます。 準備実行では、これらの手順は実行時に実行されますが、1回だけ実行されます。プランの実行は、EXECUTE が呼び出された場合にのみ行われます。 これにより、動的 SQL のアーキテクチャに特有のパフォーマンス上の欠点がいくつか排除されます。

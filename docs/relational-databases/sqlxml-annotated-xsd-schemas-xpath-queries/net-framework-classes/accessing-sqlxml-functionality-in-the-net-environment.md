@@ -1,5 +1,6 @@
 ---
 title: .NET 環境での SQLXML 機能へのアクセス
+description: SQLXML マネージクラスを使用して .NET Framework 環境にアクセスする方法について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a5edd3555c2d57cf9d615b7158d034571987cb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 378bc455a2723bca43f1ec8252ade0a5d34c53e1
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251517"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306194"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>.NET 環境での SQLXML 機能へのアクセス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   この例では、次のことについて説明します。  
   
--   SQLXML マネージクラス[!INCLUDE[msCoName](../../../includes/msconame-md.md)] (Microsoft. Data. sqlxml) を使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 環境で microsoft にアクセスする方法。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML マネージクラス (microsoft. Data. sqlxml) を使用し [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] て、.NET Framework 環境で microsoft にアクセスする方法 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
   
 -   .NET Framework 環境で生成された DiffGram を使って [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルにデータ更新を適用する方法  
   

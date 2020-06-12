@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c843a74b831315c98deda9a9d6fb0c3a463bc5c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f23403b4e58b17441f3e828c9a9e536dcb652359
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083413"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521172"
 ---
 # <a name="mining-structure-columns"></a>マイニング構造列
   マイニング構造を作成するときは、外部データの列を選択し、データをどのようにモデリングに使用するかを指定して、マイニング構造の列を定義します。 したがって、マイニング構造列は、単なるデータ ソースのデータのコピーではなく、マイニング モデルでソースのデータがどのように使用するかを定義するものです。 データの分離方法を決定するプロパティ (データ値の分布を記述するプロパティ) を割り当てることができます。  

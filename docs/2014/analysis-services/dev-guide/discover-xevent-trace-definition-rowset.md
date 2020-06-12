@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e1ce2d2d-f994-4318-801a-ee0385aecd84
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bedd6ec66a188738ac9a522b4802b3b431e82f36
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62731914"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528628"
 ---
 # <a name="discover_xevent_trace_definition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 行セット
   サーバー上で現在アクティブになっている XEvent トレースに関する情報を提供します。  
@@ -23,7 +22,7 @@ ms.locfileid: "62731914"
  **適用対象:** テーブルモデル、多次元モデル  
   
 ## <a name="rowset-columns"></a>行セットの列  
- 行`DISCOVER_XEVENT_TRACE_DEFINITION`セットには、次の列が含まれています。  
+ `DISCOVER_XEVENT_TRACE_DEFINITION`行セットには、次の列が含まれています。  
   
 |列名|型を表すインジケーター|長さ|説明|  
 |-----------------|--------------------|------------|-----------------|  
@@ -36,7 +35,7 @@ ms.locfileid: "62731914"
   
  次の表に、この行セットを識別する GUID と文字列の値を示します。  
   
-|引数|[値]|  
+|引数|値|  
 |--------------|-----------|  
 |GUID|a07ccd1c-8148-11d0-87bb-00c04fc33942|  
 |String|DISCOVER_XEVENT_TRACE_DEFINITION|  

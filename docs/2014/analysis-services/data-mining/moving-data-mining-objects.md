@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ed12525e1b27bd45aa1d6313ad6538a7856f17ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b10be3a79487376b173eab87059404b7f7a618e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083299"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521050"
 ---
 # <a name="moving-data-mining-objects"></a>データ マイニング オブジェクトの移動
   データ マイニング オブジェクトを移動する最も一般的なシナリオは、テスト環境または分析環境から運用環境にモデルを配置する方法、または他のユーザーとモデルを共有する方法です。  
@@ -46,7 +45,7 @@ ms.locfileid: "66083299"
   
  Analysis Services ソリューションの配置の詳細については、「[Analysis Services プロジェクトの配置 &#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)」を参照してください。  
   
-### <a name="scripting"></a>スクリプトの作成  
+### <a name="scripting"></a>スクリプト  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、オブジェクトのスクリプト作成に使用できる言語がいくつか用意されています。  
   
 -   **XMLA:**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクトを右クリックして、XMLA を使用してオブジェクトのスクリプトを作成することができます。 作成したスクリプトを実行するには、ターゲット サーバーの **XMLA クエリ** ウィンドウでスクリプトを開きます。  

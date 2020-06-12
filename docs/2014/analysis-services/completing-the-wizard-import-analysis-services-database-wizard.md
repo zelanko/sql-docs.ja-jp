@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1c88608a-5408-4ac0-aea8-5abb977f32ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 99624a05ba543e59e6c85ea616c200c246371488
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c49ee5abd1269bc0c40954b4fb17400044bcb6c9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087564"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527328"
 ---
 # <a name="completing-the-wizard-import-analysis-services-database-wizard"></a>[ウィザードの完了] (Analysis Services データベースのインポート ウィザード)
   **[ウィザードの完了]** ページを使用すると、選択した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースから取得したデータおよびメタデータを、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトにインポートするウィザードの進行状況を表示できます。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 219ff4143b0f673b36ca6092d5ef8d5bf39f06ee
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088175"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527570"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>[グラフ] タブ (マイニング モデル ビューアー)
   タイム シリーズ モデルのトレーニングで使用する履歴データを、予測される値と共に表示するには、 **[グラフ]** ペインを使用します。 グラフの縦軸はタイム シリーズの値を表し、横軸は時間を表します。 将来の予測は、点線によって表します。  
@@ -31,7 +30,7 @@ ms.locfileid: "66088175"
  **[マイニング モデル]**  
  現在のマイニング構造に含まれているマイニング モデルから選択します。 関連付けられているビューアーが開き、マイニング モデルが表示されます。  
   
- **[ビューアー]**  
+ **Viewer**  
  選択したマイニング モデルを調べるために使用するビューアーを選択します。 タイム シリーズ モデル用のカスタム ビューアー、または [!INCLUDE[msCoName](../includes/msconame-md.md)] マイニング コンテンツ ビューアーを使用できます。 利用可能な場合プラグイン ビューアーを使用することもできます。  
   
  **拡大**  

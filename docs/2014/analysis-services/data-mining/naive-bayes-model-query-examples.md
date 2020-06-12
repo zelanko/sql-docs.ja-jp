@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b713d9918dabcbaabba2085710dfaa5ed5d3a33b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9694826bf2f74daef7b6d024e51e31d4ee448671
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083277"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520955"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Naive Bayes モデルのクエリ例
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 データ マイニング スキーマ行セットに対するクエリによって、モデルに関するメタデータを取得することもできます。 ここでは、Microsoft Naive Bayes アルゴリズムに基づくモデルに対するクエリの作成方法について説明します。  
   
- **コンテンツクエリ**  
+ **コンテンツ クエリ**  
   
  [DMX を使用したモデルメタデータの取得](#bkmk_Query1)  
   
@@ -243,7 +242,7 @@ AS t
   
 |||  
 |-|-|  
-|予測関数|使用方法|  
+|予測関数|使用法|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
 |[Predict &#40;DMX&#41;](/sql/dmx/predict-dmx)|指定された列に対して、予測された値、または値のセットを返します。|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|重み付け確率を返します。|  

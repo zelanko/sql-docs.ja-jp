@@ -1,5 +1,6 @@
 ---
 title: シーリング関数 (XQuery) |Microsoft Docs
+description: XQuery の天井 () 関数を使用して、関数の引数の値より小さくない小数部を含まない最小値を返す方法について説明します。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946578"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689764"
 ---
 # <a name="numeric-values-functions---ceiling"></a>数値関数 - ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
   
  その他の型のデータが入力されると、静的エラーが生成されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-ceiling-xquery-function"></a>A. ceiling() XQuery 関数の使用  
@@ -75,11 +76,11 @@ WHERE ProductModelID=7
   
 -   **命令**は**xml**型の列です。 したがって、 [query () メソッド (XML データ型)](../t-sql/xml/query-method-xml-data-type.md)を使用して XQuery を指定します。 XQuery ステートメントは、クエリメソッドの引数として指定されます。  
   
--   **...return**はループ構造です。 クエリでは、 **for**ループは> 要素の場所\<の一覧を識別します。 各ワークセンターの場所では、 **for**ループの**return**ステートメントによって、生成される XML が記述されます。  
+-   **...return**はループ構造です。 クエリでは、 **for**ループは> 要素の場所の一覧を識別し \< ます。 各ワークセンターの場所では、 **for**ループの**return**ステートメントによって、生成される XML が記述されます。  
   
-    -   LocationID 属性と LaborHrs 属性を持つ要素> \<位置。 中かっこ ({}) 内の対応する式は、ドキュメントから必要な値を取得します。  
+    -   \<LocationID 属性と LaborHrs 属性を持つ要素> 位置。 中かっこ ({}) 内の対応する式は、ドキュメントから必要な値を取得します。  
   
-    -   {$i/@LotSize } 式は、ドキュメントから LotSize 属性を取得します (存在する場合)。  
+    -   {$ i/@LotSize } 式は、ドキュメントから LotSize 属性を取得します (存在する場合)。  
   
     -   結果を次に示します。  
   

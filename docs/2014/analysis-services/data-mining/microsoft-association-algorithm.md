@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44fd6a97cd355ab9bcdd5481fe4ebaa5d13d17c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 237618a07f7a6f541257ed0ad18fc2967723b93c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174751"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522123"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft アソシエーション アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で提供されているアソシエーション アルゴリズムであり、推奨エンジンで使用できます。 推奨エンジンでは、顧客が既に購入した製品または興味を示した製品に基づいて、顧客に製品が推奨されます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、マーケット バスケット分析にも使用できます。 マーケットバスケット分析の例については、「[レッスン 3: マーケットバスケットシナリオの構築」 &#40;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) 「データマイニングチュートリアル」の&#41;「中級者向けデータマイニングチュートリアル」を参照してください。
@@ -77,8 +76,8 @@ ms.locfileid: "78174751"
 
  データ マイニング モデルに対するクエリの作成方法については、「 [データ マイニング クエリ](data-mining-queries.md)」を参照してください。
 
-## <a name="performance"></a>パフォーマンス
- アイテムセットを作成して相関関係をカウントするというプロセスには時間がかかる場合があります。 アソシエーションルール[!INCLUDE[msCoName](../../includes/msconame-md.md)]アルゴリズムでは、領域の節約と処理の高速化のための最適化手法が使用されていますが、次のような状況ではパフォーマンスの問題が発生する可能性があります。
+## <a name="performance"></a>[パフォーマンス]
+ アイテムセットを作成して相関関係をカウントするというプロセスには時間がかかる場合があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]アソシエーションルールアルゴリズムでは、領域の節約と処理の高速化のための最適化手法が使用されていますが、次のような状況ではパフォーマンスの問題が発生する可能性があります。
 
 -   多数のアイテムを含む大きなデータセットを使用する場合。
 

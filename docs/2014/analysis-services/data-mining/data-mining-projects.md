@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5979ed2e4733609a504d852b5a0bcc8d7660b87
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112155"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523180"
 ---
 # <a name="data-mining-projects"></a>データ マイニング プロジェクト
   データ マイニング プロジェクトは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションの一部です。 デザイン プロセス時に、このプロジェクトで作成したオブジェクトをワークスペース データベースの一部としてテストおよびクエリに使用できます。 ユーザーがプロジェクト内のオブジェクトをクエリまたは参照できるようにするには、多次元モードで実行している [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにプロジェクトを配置する必要があります。  
@@ -86,7 +85,7 @@ ms.locfileid: "79112155"
   
 
   
-###  <a name="data-source-views"></a><a name="bkmk_DSV"></a> Data Source Views  
+###  <a name="data-source-views"></a><a name="bkmk_DSV"></a>データソースビュー  
  データ ソースへの接続を定義した後、モデルに関連する特定のデータを確認するビューを作成します。  
   
  データ ソース ビューでは、データ ソース内のデータをマイニング モデルに入力する方法をカスタマイズすることもできます。 プロジェクトとの関連性をより高めるためにデータの構造を変更したり、特定の種類のデータのみを選択したりできます。  

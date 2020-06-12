@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33fad74c354d4560a00718292616d842b4ffc7e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70151828"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527158"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>[レポートまたはデータ フィードへの接続] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、データ フィードに接続できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
@@ -55,7 +54,7 @@ ms.locfileid: "70151828"
  **アカウント キー**  
  Azure Marketplace データセットサブスクリプションへのアクセスに使用するアカウントキーを指定します。  
   
- **探す**  
+ **Find**  
  Windows Live アカウントに関連付けられたアカウント キーを検索します。  
   
  **[アカウント キーを保存する]**  

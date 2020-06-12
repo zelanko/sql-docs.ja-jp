@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76af68a7f9668b46a55a3bf28f9cf07dd64766aa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063065"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527928"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>[属性データの翻訳] ダイアログ ボックス (Analysis Services - 多次元データ)
   **[属性データの翻訳]** ダイアログ ボックスを使用すると、翻訳キャプション データを含んでいる列を設定でき、翻訳済みデータと共に使用する照合順序と並べ替え順も設定できます。 **[属性データの翻訳]** ダイアログ ボックスを表示するには、次の手順に従います。  
@@ -32,7 +31,7 @@ ms.locfileid: "66063065"
  **属性**  
  選択した属性を表示します。  
   
- **Language**  
+ **言語**  
  選択した言語を表示します。  
   
  **[キャプションの翻訳]**  

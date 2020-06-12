@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b890514422a6b9b16cdfe2eb5b07d796a46bd60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a85819955e167c2356be51c5f3abcc2897bb42b9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174446"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523364"
 ---
 # <a name="customize-mining-models-and-structure"></a>マイニング モデルとマイニング構造のカスタマイズ
   現在のビジネス ニーズに合ったアルゴリズムを選択した後、マイニング モデルを次の方法でカスタマイズできます。モデルをカスタマイズすると、より良い結果を得られる場合があります。
@@ -61,7 +60,7 @@ ms.locfileid: "78174446"
 ### <a name="creating-aliases-for-model-columns"></a>モデル列の別名の作成
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でマイニング モデルを作成すると、マイニング構造内の列と同じ名前が使用されます。 マイニング モデルのすべての列に、別名を追加できます。 こうすると、列の内容や使用法がわかりやすくなったり、名前が短くなるためクエリを作成しやすくなったりします。 別名は、列のコピーを作成し、わかりやすい名前を付ける場合にも便利です。
 
- 別名を作成するには、マイニング モデル列の `Name` プロパティを編集します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は引き続き元の名前を列の ID として使用し、に`Name`入力した新しい値が列の別名になり、列の使用法の横にかっこで囲まれたグリッドに表示されます。
+ 別名を作成するには、マイニング モデル列の `Name` プロパティを編集します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は引き続き元の名前を列の ID として使用し、に入力した新しい値が `Name` 列の別名になり、列の使用法の横にかっこで囲まれたグリッドに表示されます。
 
  ![マイニング モデル列の別名](../media/modelcolumnalias-income.gif "マイニング モデル列の別名")
 

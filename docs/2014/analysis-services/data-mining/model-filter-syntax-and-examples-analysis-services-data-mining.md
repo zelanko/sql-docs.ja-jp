@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e52fae59d05447ef28eac7b9be408279ffcefb96
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083364"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521075"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>モデル フィルターの構文と例 (Analysis Services - データ マイニング)
   ここでは、モデル フィルターの構文について詳しく説明し、サンプル式を示します。  
@@ -238,9 +237,9 @@ FILTER (EXISTS (Products))
 
   
 ###  <a name="example-7-complex-filter-combinations"></a><a name="bkmk_Ex7"></a> 例 7: フィルターの複雑な組み合わせ  
- 次のモデルのシナリオは例 4 と似ていますが、はるかに複雑です。 入れ子になったテーブルの "製品**Onsale**" に`(OnSale)`は、[ **ProductName**] に表示され`true`ている製品に対して [ **onsale** ] の値を指定する必要があることを示すフィルター条件があります。 この **[OnSale]** は構造列です。  
+ 次のモデルのシナリオは例 4 と似ていますが、はるかに複雑です。 入れ子になったテーブルの "製品**Onsale**" には、[ `(OnSale)` ProductName] に表示されている製品に対して [ **onsale** ] の値を指定する必要があることを示すフィルター条件があり `true` ます。 **ProductName** この **[OnSale]** は構造列です。  
   
- フィルターの2番目の部分 (製品**Notonsale**) は、この構文を繰り返しますが、 **onsale**の値が`not true``(!OnSale)`である製品に対してフィルター処理を行います。  
+ フィルターの2番目の部分 (製品**Notonsale**) は、この構文を繰り返しますが、 **onsale**の値がである製品に対してフィルター処理を `not true``(!OnSale)` 行います。  
   
  最後にこれらの条件を組み合わせ、ケース テーブルに対する制限をさらに 1 つ追加します。 その結果、25 歳以上のすべての顧客を対象として、 **[ProductsOnSale]** の一覧内のケースに基づき、 **[ProductsNotOnSale]** の一覧内の製品の購入が予測されます。  
   

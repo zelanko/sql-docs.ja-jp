@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1628eff6e5c440071126ce3508b977f9f7508ba5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c9ad60ad7602222572bd1649d2ac503e0535205
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086055"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525298"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Microsoft ニューラル ネットワーク ビューアーを使用したモデルの参照
-  の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ニューラルネットワークビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)]ニューラルネットワークアルゴリズムを使用して作成されたマイニングモデルが表示され[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムでは、複数の入力と出力を分析できる分類および回帰マイニング モデルを作成します。このアルゴリズムは、制限のない分析と探索に非常に役立ちます。 このアルゴリズムの詳細については、「 [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)」を参照してください。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]のニューラルネットワークビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ニューラルネットワークアルゴリズムを使用して作成されたマイニングモデルが表示され [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムでは、複数の入力と出力を分析できる分類および回帰マイニング モデルを作成します。このアルゴリズムは、制限のない分析と探索に非常に役立ちます。 このアルゴリズムの詳細については、「 [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)」を参照してください。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク ビューアーを使用してモデルを調べる場合、通常は対象の属性と状態を選択してから、ビューアーを使用して入力属性が結果に与える影響を確認します。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66086055"
 ##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>ビューアーのタブ  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でマイニング モデルを参照すると、そのモデルに適したビューアーを使用してデータ マイニング デザイナーの **[マイニング モデル ビューアー]** タブにモデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク ビューアーには、ニューラル ネットワーク マイニング モデルを調べるための次のタブがあります。  
   
--   [Inputaccel](#BKMK_Inputs)  
+-   [入力](#BKMK_Inputs)  
   
 -   [出力](#BKMK_Outputs)  
   

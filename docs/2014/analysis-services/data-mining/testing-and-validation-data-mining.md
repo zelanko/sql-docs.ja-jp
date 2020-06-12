@@ -27,18 +27,17 @@ helpviewer_keywords:
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b34fc9d18866572056126b1df408d91c3934e85
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082798"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520420"
 ---
 # <a name="testing-and-validation-data-mining"></a>テストおよび検証 (データ マイニング)
   検証とは、実際のデータに対するマイニング モデルの性能を評価するプロセスです。 運用環境に配置する前に品質や特性を理解してマイニング モデルを検証しておくことが重要です。  
   
- このセクションでは、モデルの品質に関するいくつかの基本的な概念を紹介し、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供されるモデル検証の方法について説明します。 大規模なデータ マイニング プロセス内でモデルの検証がどのように位置付けられているかの概要については、「 [データ マイニング ソリューション](data-mining-solutions.md)」を参照してください。  
+ このセクションでは、モデルの品質に関するいくつかの基本的な概念を紹介し、で提供されるモデル検証の方法について説明し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。 大規模なデータ マイニング プロセス内でモデルの検証がどのように位置付けられているかの概要については、「 [データ マイニング ソリューション](data-mining-solutions.md)」を参照してください。  
   
 ## <a name="methods-for-testing-and-validation-of-data-mining-models"></a>データ マイニング モデルのテストと検証の方法  
  データ マイニング モデルの品質や特性を評価する方法は多数あります。  

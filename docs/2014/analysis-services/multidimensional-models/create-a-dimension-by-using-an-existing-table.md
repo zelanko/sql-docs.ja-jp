@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef89ce093e9cf97926ceae3cc75e17941594e7ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076420"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536664"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>既存のテーブルを使用したディメンションの作成
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、の[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ディメンションウィザードを使用して、既存のテーブルからディメンションを作成できます。 この操作を行うには、ウィザードの **[作成方法の選択]** ページで **[既存のテーブルの使用]** を選択します。 このオプションを選択すると、ディメンション構造は、ディメンション テーブル、その列、および既存のデータ ソース ビュー内の列間のリレーションシップに基づいて作成されます。 ウィザードでは、ソース テーブルと関連テーブル内のデータが抽出されます。 その後、このデータを使用して、ディメンション テーブル内の列に基づいて属性列を定義したり、属性階層 ( *ユーザー定義* 階層) を定義したりします。 ディメンション ウィザードを使用してディメンションを作成した後、ディメンション デザイナーを使用して、ディメンションの属性と階層を追加、削除、および構成できます。  
+  では [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、のディメンションウィザードを使用して、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 既存のテーブルからディメンションを作成できます。 この操作を行うには、ウィザードの **[作成方法の選択]** ページで **[既存のテーブルの使用]** を選択します。 このオプションを選択すると、ディメンション構造は、ディメンション テーブル、その列、および既存のデータ ソース ビュー内の列間のリレーションシップに基づいて作成されます。 ウィザードでは、ソース テーブルと関連テーブル内のデータが抽出されます。 その後、このデータを使用して、ディメンション テーブル内の列に基づいて属性列を定義したり、属性階層 ( *ユーザー定義* 階層) を定義したりします。 ディメンション ウィザードを使用してディメンションを作成した後、ディメンション デザイナーを使用して、ディメンションの属性と階層を追加、削除、および構成できます。  
   
  既存のテーブルを使用してディメンションを作成する場合、ディメンション ウィザードでは次の手順が示されます。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66076420"
 ## <a name="selecting-dimension-attributes"></a>ディメンション属性の選択  
  ディメンション テーブルを選択したら、 **[ディメンション属性の選択]** ページを使用して、ディメンションに含める属性をこれらのテーブルから選択します。 これらすべてのテーブルの基になるすべての列は、ディメンションの属性として使用できる可能性があります。 ディメンション キー属性を選択して、参照を有効にする必要があります。  
   
- 既定では、ウィザードによって属性の型が `Regular` に設定されます。 ただし、特定の属性を、データをより適切に表す別の属性型にマップする場合があります。 たとえば、 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW サンプル データベースの dbo.DimAccount テーブルには、勘定科目番号を示す AccountCodeAlternateKey 列があります。 この属性の型をに`Regular`設定する代わりに、この属性を`Account Number`型にマップすることもできます。  
+ 既定では、ウィザードによって属性の型が `Regular` に設定されます。 ただし、特定の属性を、データをより適切に表す別の属性型にマップする場合があります。 たとえば、 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW サンプル データベースの dbo.DimAccount テーブルには、勘定科目番号を示す AccountCodeAlternateKey 列があります。 この属性の型をに設定する代わり `Regular` に、この属性を型にマップすることもでき `Account Number` ます。  
   
 > [!NOTE]  
 >  ディメンションの作成時にディメンションの種類と標準的な属性の型が設定されていない場合は、ディメンションの作成後に、ビジネス インテリジェンス ウィザードを使用して、これらの値を設定します。 詳しくは、「 [ディメンションへのディメンション インテリジェンスの追加](bi-wizard-add-dimension-intelligence-to-a-dimension.md) 」または (種類が勘定科目ディメンションの場合は)「 [ディメンションへの勘定科目インテリジェンスの追加](bi-wizard-add-account-intelligence-to-a-dimension.md)」をご覧ください。  

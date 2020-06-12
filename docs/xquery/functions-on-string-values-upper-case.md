@@ -1,5 +1,6 @@
 ---
 title: upper case 関数 (XQuery) |Microsoft Docs
+description: XQuery 関数の大文字 () を使用して、文字を大文字に変換する方法について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c757e46f861d6652b3c8c151c3e002dba13e84ef
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004609"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689491"
 ---
 # <a name="functions-on-string-values---upper-case"></a>文字列値に使用する関数 - upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ fn:upper-case($arg as xs:string?) as xs:string
 ## <a name="examples"></a>例  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 文字列を大文字に変更する  
- 次の例では、入力文字列 ' abcDEF! を変更します。@4' を大文字にします。  
+ 次の例では、入力文字列 ' abcDEF! ' を変更します。 @4大文字にします。  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

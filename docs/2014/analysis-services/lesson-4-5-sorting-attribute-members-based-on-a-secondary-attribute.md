@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfd8e0dcb72850dccb2cc6840f3e68baf37528b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493907"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543091"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>2 次属性に基づく属性メンバーの並べ替え
   レッスン 3 では、名前とキー値に基づいて属性メンバーを並べ替える方法を学習しました。 また、属性メンバーと並べ替え順序に影響する複合メンバー キーの使用方法も学習しました。 詳細については、「 [Date ディメンションの変更](lesson-3-4-modifying-the-date-dimension.md)」を参照してください。 ただし、属性の名前とキーのどちらを使用しても目的の順序での並べ替えを実現できない場合は、2 次属性を使用して目的の順序で並べ替えるようにすることもできます。 属性間にリレーションシップを定義すると、2 次属性を使用して、1 次属性のメンバーを並べ替えることができます。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f385577-a2e5-4527-ab88-b27e73112591
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 129e1df9463064baafa38fb860f415b9c01ab38b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0995ac659de7ffd4c36c584b5a16b46f79fe8d5d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080909"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544374"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>[名前付きクエリの生成] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [名前付きクエリの生成] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、 **[データの探索]** ダイアログ ボックスの **[ピボット グラフ]** タブに表示されているグラフから選択したグラフの系列、グラフの系列の値、またはグラフ フィルターに基づいて名前付きクエリを作成できます。 **[名前付きクエリの生成]** ダイアログ ボックスを表示するには、 **[データの探索]** ダイアログ ボックスで **[名前付きクエリを生成します]** をクリックします。  

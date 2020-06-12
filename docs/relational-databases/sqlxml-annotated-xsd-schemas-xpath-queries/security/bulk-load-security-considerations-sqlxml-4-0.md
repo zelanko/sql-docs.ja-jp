@@ -1,5 +1,6 @@
 ---
 title: 一括読み込みのセキュリティに関する考慮事項 (SQLXML)
+description: SQLXML 4.0 で XML 一括読み込みを使用する場合のセキュリティガイドラインについて説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 817c8c4d0ff2a140033e99879c0720a63f81e5f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd641fe3d3843fe853a16db4833d40bdcbec4e1a
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252524"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305941"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>一括読み込みのセキュリティに関する注意点 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

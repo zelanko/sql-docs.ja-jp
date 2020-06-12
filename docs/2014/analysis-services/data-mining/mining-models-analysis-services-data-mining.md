@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57f62b125872e6b851235c1517925c6ee10058d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b23f250a5589d47ac6e26baf48a40b0979a1895
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174451"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521264"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>マイニング モデル (Analysis Services - データ マイニング)
   *マイニング モデル* は、データにアルゴリズムを適用することによって作成されますが、単なるアルゴリズムまたはメタデータ コンテナーではなく、予測を生成し、リレーションシップを推定するために新しいデータに適用されるデータ、統計情報、およびパターンのセットです。
@@ -33,7 +32,7 @@ ms.locfileid: "78174451"
 
  [データ マイニング モデルの定義](#bkmk_mdlDefine)
 
- [マイニングモデルのプロパティ](#bkmk_mdlProps)
+ [マイニング モデルのプロパティ](#bkmk_mdlProps)
 
  [マイニング モデル列](#bkmk_mdlCols)
 
@@ -83,14 +82,14 @@ ms.locfileid: "78174451"
 
  [マイニングモデルのアーキテクチャ](#bkmk_mdlArch)
 
-##  <a name="mining-model-properties"></a><a name="bkmk_mdlProps"></a> マイニング モデルのプロパティ
+##  <a name="mining-model-properties"></a><a name="bkmk_mdlProps"></a>マイニングモデルのプロパティ
  それぞれのマイニング モデルには、モデルとそのメタデータを定義するプロパティがあります。 プロパティには、名前、説明、モデルが最後に処理された日付、モデルに対する権限、トレーニングに使用されるデータに対するフィルターなどが含まれます。
 
  各マイニング モデルには、マイニング構造から派生するプロパティや、モデルに使用するデータ列を記述するプロパティもあります。 入れ子になったテーブルの列をモデルで使用する場合は、その列に適用される別個のフィルターが存在することもあります。
 
  さらに、それぞれのマイニング モデルには、 <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> と <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>という 2 つの特殊なプロパティが含まれます。
 
--   **Algorithm プロパティ** モデルの作成に使用するアルゴリズムを指定します。 使用できるアルゴリズムは、使用しているプロバイダーによって異なります。 に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]含まれているアルゴリズムの一覧については、「データマイニング[アルゴリズム &#40;Analysis Services データマイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)」を参照してください。 `Algorithm` プロパティはマイニング モデルに適用し、各モデルに対して 1 回だけ設定できます。 後でアルゴリズムを変更できますが、選択したアルゴリズムによってサポートされていないために、マイニング モデルの列が無効になる場合があります。 このプロパティを変更した後は、モデルを再処理する必要があります。
+-   **Algorithm プロパティ** モデルの作成に使用するアルゴリズムを指定します。 使用できるアルゴリズムは、使用しているプロバイダーによって異なります。 に含まれているアルゴリズムの一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ては、「データマイニング[アルゴリズム &#40;Analysis Services データマイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)」を参照してください。 `Algorithm` プロパティはマイニング モデルに適用し、各モデルに対して 1 回だけ設定できます。 後でアルゴリズムを変更できますが、選択したアルゴリズムによってサポートされていないために、マイニング モデルの列が無効になる場合があります。 このプロパティを変更した後は、モデルを再処理する必要があります。
 
 -   **Usage プロパティ** モデルによる各列の使用方法を定義します。 列の使用法は、`Input`、`Predict`、`Predict Only`、`Key` のいずれかに定義できます。 `Usage` プロパティは、マイニング モデルの個別の列に適用し、モデルに含まれるすべての列に個別に設定する必要があります。 モデルで使用しない列が構造に含まれる場合は、使用法を `Ignore` に設定します。 顧客名や電子メール アドレスなどは、マイニング構造に含まれていても分析には使用されないデータの例です。 このように、後でクエリを実行する場合、分析フェーズで列を含める必要はありません。
 
@@ -127,7 +126,7 @@ ms.locfileid: "78174451"
 |------------|-----------|
 |複数のマイニング モデルをサポートするマイニング構造の構築方法について説明します。 モデルにおける列の使用法についても説明します。|[マイニング構造列](mining-structure-columns.md)<br /><br /> [マイニング モデル列](mining-model-columns.md)<br /><br /> [コンテンツの種類 (データ マイニング)](content-types-data-mining.md)|
 |さまざまなアルゴリズム、およびアルゴリズムの選択がモデル コンテンツに与える影響について説明します。|[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)|
-|モデルのコンポジションと動作に影響を与えるプロパティの設定方法について説明します。|[マイニングモデルのプロパティ](mining-model-properties.md)<br /><br /> [モデリング フラグ (データ マイニング)](modeling-flags-data-mining.md)|
+|モデルのコンポジションと動作に影響を与えるプロパティの設定方法について説明します。|[マイニング モデルのプロパティ](mining-model-properties.md)<br /><br /> [モデリング フラグ (データ マイニング)](modeling-flags-data-mining.md)|
 |データ マイニングのプログラミング可能なインターフェイスについて説明します。|[分析管理オブジェクト &#40;AMO&#41; による開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)|
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でのカスタム データ マイニング ビューアーの使用方法について説明します。|[データ マイニング モデル ビューアー](data-mining-model-viewers.md)|
 |データ マイニング モデルに対して使用できるさまざまな種類のクエリの例について説明します。|[データマイニングクエリ](data-mining-queries.md)|

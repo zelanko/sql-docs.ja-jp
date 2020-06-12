@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b45441ef-f909-4736-98b9-cc80d0acac99
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1e3b6dc676c11444c8dd45d1874f77942316a462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d6101c8704579894590994d88e0286197148b694
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075499"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546914"
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>ソリューション エクスプローラーでのデータ ソースの削除 (SSAS 多次元)
   データ ソース オブジェクトを削除して、Analysis Services 多次元モデル プロジェクトから完全に消去することができます。  

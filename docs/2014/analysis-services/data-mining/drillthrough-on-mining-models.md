@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cb5e932e2121efb9bd19375dfd2ff329c001812
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084595"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522526"
 ---
 # <a name="drillthrough-on-mining-models"></a>マイニング モデルでのドリルスルー
   *ドリルスルー* とは、マイニング モデルまたはマイニング構造に対してクエリを実行し、モデルで公開されていない詳細データを取得する機能です。  
@@ -48,7 +47,7 @@ ms.locfileid: "66084595"
 |Microsoft Naïve Bayes アルゴリズム|サポートされていません。<br /><br /> これらのアルゴリズムでは、コンテンツ内の特定のノードにケースが割り当てられません。|  
 |Microsoft ニューラル ネットワーク アルゴリズム|サポートされていません。<br /><br /> これらのアルゴリズムでは、コンテンツ内の特定のノードにケースが割り当てられません。|  
 |Microsoft ロジスティック回帰アルゴリズム|サポートされていません。<br /><br /> これらのアルゴリズムでは、コンテンツ内の特定のノードにケースが割り当てられません。|  
-|Microsoft 線形回帰アルゴリズム|サポートされています。<br /><br /> ただし、モデルでは1つのノード`All`が作成されるため、ドリルスルーはモデルのすべてのトレーニングケースを返します。 トレーニング セットが大きいと、結果の読み込みに非常に時間がかかることがあります。|  
+|Microsoft 線形回帰アルゴリズム|サポートされています。<br /><br /> ただし、モデルでは1つのノードが作成されるため、 `All` ドリルスルーはモデルのすべてのトレーニングケースを返します。 トレーニング セットが大きいと、結果の読み込みに非常に時間がかかることがあります。|  
 |Microsoft Time Series アルゴリズム|サポートされています。<br /><br /> ただし、構造やケース データのドリルスルーに、データ マイニング デザイナーの **[マイニング モデル ビューアー]** を使用することはできません。 代わりに、DMX クエリを作成する必要があります。<br /><br /> また、タイム シリーズ モデルでは、特定のノードをドリルスルーしたり、特定のノード内のケースを取得する DMX クエリを記述したりすることができません。 日付や属性値などの他の条件を使用して、モデルや構造からケース データを取得することは可能です。<br /><br /> Microsoft Time Series アルゴリズムで作成された ARTXP ノードおよび ARIMA ノードの詳細を表示する場合は、[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](../microsoft-generic-content-tree-viewer-data-mining.md) を使用する方が簡単です。|  
   
 ## <a name="related-tasks"></a>Related Tasks  

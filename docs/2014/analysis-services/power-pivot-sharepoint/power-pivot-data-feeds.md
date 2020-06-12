@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6b1337c5-50a0-4fc2-b079-377dc241d2cc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b3080996eca3395e8be3cab5e17eaea7305dbfa2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3dd788c51867924882eba80fb9cbed280143fd6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071269"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535131"
 ---
 # <a name="powerpivot-data-feeds"></a>PowerPivot データ フィード
-  データ フィードは、オンライン データ ソースからクライアント アプリケーションに要求時にデータのストリームを提供します。 で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、データフィードを使用して、Atom 対応の Web サービスまたはアプリケーションから Excel ブックの PowerPivot データソースにデータを追加できます。  
+  データ フィードは、オンライン データ ソースからクライアント アプリケーションに要求時にデータのストリームを提供します。 では [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、データフィードを使用して、Atom 対応の Web サービスまたはアプリケーションから Excel ブックの PowerPivot データソースにデータを追加できます。  
   
  ここでは、企業またはワークグループの既存のデータを PowerPivot ブックに取り込むためにデータ フィードを最大限に使用するための役立つ情報を示します。 また、組織内の他のユーザーとデータ フィードを共有する方法、および問題が発生してトラブルシューティングが必要な場合にデータ フィードがどのようにして構築されて使用されるかについても説明します。  
   

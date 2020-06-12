@@ -1,5 +1,6 @@
 ---
 title: SQLXML 4.0 での、アップデートグラムを使用したデータ変更
+description: アップデートグラムとその使用方法に関する情報と例を表示し、SQLXML 4.0 でデータを変更します。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -25,16 +26,16 @@ ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56a1d4b0243645c1d54b47145740f84fda29e841
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85df62ad3d31bdddbb37540c0c386ad2bcd260e5
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247113"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215262"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>SQLXML 4.0 での、アップデートグラムを使用したデータ変更
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  アップデートグラムまたは OPENXML [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)]関数を使用して、既存の XML ドキュメントからデータベースを変更 (挿入、更新、または削除) することができます。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アップデートグラムまたは OPENXML 関数を使用して、既存の XML ドキュメントからデータベースを変更 (挿入、更新、または削除) することができ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ます。  
   
  ここでは、アップデートグラムについての情報と、その使用例を示します。  
   

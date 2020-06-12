@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e7b0d6e4d99c08556cefb31c33deb5238f33c636
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d06ba5f85dadeeaf53616f54b6502754a66852fd
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75225385"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544334"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 多次元のグローバル化のシナリオ
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、多言語のデータおよびメタデータを、表形式モデルと多次元データ モデルのどちらにも格納して操作できます。 データは Unicode (UTF-16) で格納され、Unicode エンコードの文字セットを使用します。 データ モデルに ANSI データを読み込むと、文字は Unicode の等価なコード ポイントを使用して格納されます。  

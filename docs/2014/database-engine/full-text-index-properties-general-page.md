@@ -12,19 +12,19 @@ ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 187366d9f289804942ba6e7d331a47bfaae68232
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 1701479fe7469769d75f4b8ad3d8e65dcc75af91
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000942"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858681"
 ---
 # <a name="full-text-index-properties-general-page"></a>[フルテキスト インデックスのプロパティ] ([全般] ページ)
   **フルテキスト インデックスの変更可能なプロパティを表示または変更するには**  
   
 -   [フルテキスト インデックスの管理](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **フルテキストカタログ**  
  フルテキスト インデックスが関連付けられているフルテキスト カタログの名前を表示します。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "83000942"
 |||  
 |-|-|  
 |**オフ**|基になるデータに対する変更は、フルテキスト インデックスに反映されません。|  
-|**[手動]**|フルテキスト インデックスは、基になるデータが変更されたときに自動的に更新されません。 ただし、基になるデータに対する変更は保持されるため、SQL Server エージェントを使用して 定期的にフルテキスト インデックスに反映させたり、手動でフルテキスト インデックスに反映させたりできます。|  
+|**手動**|フルテキスト インデックスは、基になるデータが変更されたときに自動的に更新されません。 ただし、基になるデータに対する変更は保持されるため、SQL Server エージェントを使用して 定期的にフルテキスト インデックスに反映させたり、手動でフルテキスト インデックスに反映させたりできます。|  
 |**自動**|フルテキスト インデックスは、ベース テーブルの基になるデータが変更されたときに自動的に更新されます。|  
   
  **[インデックスを再作成する]**  

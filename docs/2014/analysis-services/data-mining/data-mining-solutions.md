@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5a5126048928e66fd8351bc00226cadb2de54d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 226b8c52fde4c9c4190c9c6c0c1e91c578643f53
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084888"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522733"
 ---
 # <a name="data-mining-solutions"></a>データ マイニング ソリューション
   データ マイニング ソリューションとは、データ マイニング プロジェクトを少なくとも 1 つ含んだ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションです。  
   
- このセクションのトピックでは、を使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]して、統合データマイニングソリューションを設計および実装する方法について説明します。 データ マイニング デザイン プロセスおよび関連ツールの概要については、「 [データ マイニングの概念](data-mining-concepts.md)」を参照してください。  
+ このセクションのトピックでは、を使用して、統合データマイニングソリューションを設計および実装する方法について説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。 データ マイニング デザイン プロセスおよび関連ツールの概要については、「 [データ マイニングの概念](data-mining-concepts.md)」を参照してください。  
   
  データ マイニングに利用できるその他のプロジェクト タイプの詳細については、「 [データ マイニング ソリューションの関連プロジェクト](data-mining-solutions.md)」を参照してください。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66084888"
  [Create a Relational Mining Structure](create-a-relational-mining-structure.md)  
  マイニング構造は、リレーショナル データやテキスト ファイルのほか、データ ソース ビューに組み込むことのできる各種のソースから作成できます。  
   
- [OLAP マイニング構造の作成](create-an-olap-mining-structure.md)  
+ [Create an OLAP Mining Structure](create-an-olap-mining-structure.md)  
  OLAP キューブのデータを基にマイニング構造を作成します。 OLAP データから作成したモデルは、データ マイニング ディメンションとして保存できるほか、データ セットやモデルを新しいキューブとして保存することもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

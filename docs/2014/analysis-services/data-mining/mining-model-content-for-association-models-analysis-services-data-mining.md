@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a1e525d7b42d058343e41ea154f0687fb969839
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1836cb414e8ea7f6e0bedbf0b4fb75cf0bfa264e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083686"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521589"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>アソシエーション モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に適用されるマイニング モデル コンテンツに関連する一般用語と統計用語の説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -63,7 +62,7 @@ ms.locfileid: "66083686"
 |ノードの種類の ID|種類|  
 |------------------|----------|  
 |1 (モデル)|ルート ノード (親ノード)。|  
-|7 (アイテムセット)|アイテムセット (属性と値のペアのコレクション)。 次に例を示します。<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> または<br /><br /> `Gender = Male`.|  
+|7 (アイテムセット)|アイテムセット (属性と値のペアのコレクション)。 例 :<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> or<br /><br /> `Gender = Male`.|  
 |8 (ルール)|アイテムが互いにどのように関連付けられるかを定義するルール。<br /><br /> 例:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
   
  NODE_CAPTION  
@@ -118,7 +117,7 @@ ms.locfileid: "66083686"
   
  **ルール ノード** ルール ノードには、矢印で区切られたルールの左辺と右辺が含まれています。  
   
- 例 : `Touring Tire = Existing, Water Bottle = Existing -> Cycling cap = Existing`  
+ 例: `Touring Tire = Existing, Water Bottle = Existing -> Cycling cap = Existing`  
   
  これは、Touring Tire と Water Bottle を購入した顧客は Cycling Cap も購入する傾向があることを表しています。  
   

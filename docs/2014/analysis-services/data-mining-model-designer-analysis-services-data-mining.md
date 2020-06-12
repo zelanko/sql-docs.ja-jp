@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7ad4cef-4567-4b84-8b70-0bd81e7b2e1e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4af526dd7ced7a5116e6727ffd2b5ebd3b998bcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e7ad0b89687e24e5220e091cc39737aabf4c89e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086409"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525864"
 ---
 # <a name="data-mining-model-designer-analysis-services---data-mining"></a>データ マイニング モデル デザイナー (Analysis Services - データ マイニング)
   ここでは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のデータ マイニング モデル デザイナーの F1 ヘルプ トピックについて紹介します。 このデザイン領域を使用して、データ マイニング モデルを作成、管理、および操作します。  
@@ -32,7 +31,7 @@ ms.locfileid: "66086409"
   
 -   [データ マイニング ウィザード (Analysis Services - データ マイニング)](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
--   [データ マイニングの概念](data-mining/data-mining-concepts.md)  
+-   [データマイニングの概念](data-mining/data-mining-concepts.md)  
   
 ## <a name="see-also"></a>参照  
  [マイニング構造ビュー &#40;データマイニングモデルデザイナー&#41;](mining-structure-view-data-mining-model-designer.md)   

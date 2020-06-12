@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acf5d2f16271cf525194c1df48ac02c4c4241467
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088489"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527708"
 ---
 # <a name="browsing-a-forecasting-model"></a>予測モデルの参照
-  [**参照**] を使用して予測モデルを開くと、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]タイムシリーズモデルビューアーに似た対話型ビューアーにモデルが表示されます。 ビューアーは、傾向の調査、系列の比較、予測の作成、およびモデルと基になるデータに関する情報の取得に役立ちます。  
+  [**参照**] を使用して予測モデルを開くと、のタイムシリーズモデルビューアーに似た対話型ビューアーにモデルが表示され [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 ビューアーは、傾向の調査、系列の比較、予測の作成、およびモデルと基になるデータに関する情報の取得に役立ちます。  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>モデルの調査  
  予測モデルの**参照**ビューアーには、時間の経過に伴う傾向を示すグラフビューが用意されています。また、予測を作成できます。また、時系列をデシジョンツリーまたは回帰ツリーとして表すモデルビューが表示されます。  

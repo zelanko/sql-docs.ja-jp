@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 17dc6903-c239-46aa-a3b0-6e3156accacc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 482d3b072eaa4db2c3aee84986590dd9d505b347
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fba1d5801f325400b228920fffa06512f4db8de2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088139"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527548"
 ---
 # <a name="choose-how-to-import-the-data-ssas"></a>[データのインポート方法の選択] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、選択したデータ ソースからデータをインポートする方法を選択できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[インポートするデータをテーブルとビューの一覧から選択する]**  
  データを一覧から選択してインポートする場合に、このオプションを選択します。  
   

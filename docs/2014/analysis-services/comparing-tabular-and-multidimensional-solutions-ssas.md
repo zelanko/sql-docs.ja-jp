@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cb21b733fd1663f0e26c765f519544597aa9063
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087769"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527428"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparing Tabular and Multidimensional Solutions (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、多次元と表形式の 2 つの方法でデータ モデリングを行えます。 それらの間にはかなり重複している部分がありますが、前進する方法について決定を通知するうえで重要な相違点もあります。 このトピックでは、機能比較を提供し、それぞれのアプローチで一般的なプロジェクト要件にどのように対処しているかを説明します。 たとえば、特定のデータ ソースのサポートが最も重要な考慮事項である場合、データ ソースに関するセクションが、使用するモデリング アプローチを決定するうえで役立ちます。  
@@ -97,17 +96,17 @@ ms.locfileid: "66087769"
 ||||  
 |-|-|-|  
 ||**マルチ**|**よら**|  
-|Actions|[はい](multidimensional-models/actions-in-multidimensional-models.md)|いいえ|  
+|アクション|[はい](multidimensional-models/actions-in-multidimensional-models.md)|いいえ|  
 |集約オブジェクト|[はい](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|いいえ|  
 |計算されるメジャー|[はい](multidimensional-models/create-calculated-members.md)|はい|  
 |カスタム アセンブリ|[はい](multidimensional-models/multidimensional-model-assemblies-management.md)|いいえ|  
-|カスタム ロールアップ|はい|いいえ|  
+|カスタム ロールアップ|はい|×|  
 |Distinct Count|[はい](multidimensional-models/use-aggregate-functions.md)|可 (DAX 経由) *|  
 |ドリルスルー|[はい](multidimensional-models/actions-in-multidimensional-models.md)|はい|  
 |階層|[はい](multidimensional-models/user-defined-hierarchies-create.md)|はい|  
 |KPI|[はい](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|はい|  
 |リンク メジャー グループ|[はい](multidimensional-models/linked-measure-groups.md)|いいえ|  
-|多対多リレーションシップ|[はい](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|いいえ|  
+|多対多のリレーションシップ|[はい](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|いいえ|  
 |親子階層|[はい](multidimensional-models/parent-child-dimension.md)|○ (DAX 経由)|  
 |メジャー グループ|[はい](tabular-models/partitions-ssas-tabular.md)|  
 |パースペクティブ|[はい](multidimensional-models/perspectives-in-multidimensional-models.md)|[はい](tabular-models/partitions-ssas-tabular.md)|  
@@ -161,7 +160,7 @@ ms.locfileid: "66087769"
 ##  <a name="client-and-reporting-applications"></a><a name="bkmk_client"></a>クライアントおよびレポートアプリケーション  
  以前のリリースでは、モデルの種類の選択は、どのクライアント アプリケーションを使用できるかに影響していましたが、時間の経過と共にそれらは区別されなくなりました。 テーブルおよび多次元のモデルは、Analysis Services データに接続するクライアント アプリケーションに関してほとんどの場合、同等のサポートを提供します。 次の表は、Analysis Services データ モデルを使用できる Microsoft クライアント アプリケーションの一覧を示します。  
   
-|**アプリケーション**|**説明**|  
+|**Application**|**説明**|  
 |---------------------|---------------------|  
 |Excel PivotTable レポート|Excel 機能はテーブルと多次元の両方のモデルで同様ですが、書き戻し (Excel が実装する Analysis Services 機能) は多次元のみでサポートされています。|  
 |Reporting Services RDL レポート|レポート ビルダーまたはレポート デザイナーのいずれかで作成した RDL レポートは、Analysis Services モデルだけでなく、PowerPivot for SharePoint 上でホストされる Excel データ モデルも使用できます。|  

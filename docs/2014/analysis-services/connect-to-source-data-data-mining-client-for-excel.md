@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 548672ce-e403-4aca-b67a-c2c797f053dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c90031f3c1191e99ff6274f6198d513225f0927
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087098"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527028"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>ソース データへの接続 (Excel 用データ マイニング クライアント)
   このトピックでは、データ マイニング モデルの保存、および、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] に保存されている外部データへのアクセスに使用する接続の作成方法と使用方法について説明します。  
@@ -34,7 +33,7 @@ ms.locfileid: "66087098"
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに接続するには、データベース サーバーにアクセスする権限が必要です。 また、データ マイニング セッションが有効にされていて、サーバーに格納されているデータベース オブジェクトに対する読み取り権限または読み取り/書き込み権限を有している必要があります。  
   
 ##  <a name="creating-data-mining-server-connections"></a><a name="bkmk_connect"></a>データマイニングサーバー接続の作成  
- Excel 用のデータマイニングクライアントおよび Excel 用のテーブル分析ツールの [**接続**] グループには、のインスタンスへの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]接続を管理するためのツールが用意されています。  
+ Excel 用のデータマイニングクライアントおよび Excel 用のテーブル分析ツールの [**接続**] グループには、のインスタンスへの接続を管理するためのツールが用意されて [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] います。  
   
 -   アドインをインストールするときに接続を作成できます。後で接続を追加することもできます。  
   
@@ -45,14 +44,14 @@ ms.locfileid: "66087098"
 -   有効にできるのは一度に 1 つの接続のみです。  
   
 ### <a name="connections-in-the-excel-add-ins"></a>Excel アドインでの接続  
- Excel 用のデータマイニングクライアントおよび Excel 用のテーブル分析ツールの [**接続**] グループでは、のインスタンスへの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]接続を管理します。  
+ Excel 用のデータマイニングクライアントおよび Excel 用のテーブル分析ツールの [**接続**] グループでは、のインスタンスへの接続を管理し [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。  
   
 ##### <a name="create-a-new-server-connection-in-the-excel-add-ins"></a>Excel アドインで新しいサーバー接続を作成する  
   
 1.  [**分析**] または [**データマイニング**] リボンの [**接続**] ボタンをクリックします。  
   
     > [!NOTE]  
-    >  ボタンに表示されるテキストは、接続が存在するかどうかによって異なります。 ワークシートで接続が確立されていない場合、ボタンには\<"no connection>" というテキストが表示されます。 ブックで既に接続が作成されている場合は、その接続の名前がボタンに表示されます。  
+    >  ボタンに表示されるテキストは、接続が存在するかどうかによって異なります。 ワークシートで接続が確立されていない場合、ボタンには "." というテキストが表示され \<No connection> ます。ブックで以前に接続が作成されていた場合は、その接続の名前がボタンに表示されます。  
   
 2.  [ **Analysis Services 接続**] ダイアログボックスで、[**新規**] をクリックします。  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66087098"
 8.  **[OK]** をクリックし、**[閉じる]** をクリックします。  
   
 ### <a name="connections-using-a-web-service"></a>Web サービスを使用した接続  
- 仮想化アーキテクチャを使用してキューブとデータの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]参照を有効にする場合は、Web サービスを使用して[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]サーバーへの接続を構成することもできます。 Web ベース クライアントの定義方法については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックを参照してください。  
+ 仮想化アーキテクチャを使用してキューブとデータの参照を有効にする場合は [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Web サービスを使用してサーバーへの接続を構成することもできます。 Web ベース クライアントの定義方法については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックを参照してください。  
   
  Web サービス用に構成されたサーバーにアクセスする場合、最初に接続を作成するときに接続の種類を指定できます。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "66087098"
   
 2.  接続文字列を変更してクエリ タイムアウトの値を増やしたり、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに特有のその他のパラメーターを追加する必要がある場合は、接続文字列が格納されている .dmc ファイルを編集するという方法もあります。  
   
-     \<ドライブ: > \ ユーザー\\<myusername\>\AppData\Local\Microsoft\Data マイニングアドイン  
+     \<drive:>\ ユーザー \\<myusername \> \AppData\Local\Microsoft\Data マイニングアドイン  
   
 ##  <a name="connecting-to-external-data-sources"></a><a name="bkmk_extconnections"></a>外部データソースへの接続  
  [**分析**] リボンのツールは Excel のデータと排他的に機能しますが、[**データマイニング**] リボンのツールを使用すると、外部データソースに直接接続して、モデルの入力またはサンプリングとして使用することができます。  

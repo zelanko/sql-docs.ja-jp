@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89e87d8c1f15dfd0f70ebaca92a81603b06ff0ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074793"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546544"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>サブセレクトとサブキューブで計算されるメンバー
   以前のリリースでは、計算されるメンバーは、サブセレクトまたはサブキューブで許可されませんでした。 しかし、SQL Server 2008 以降では、接続プロパティによって許可され有効になりました。 さらに、サブセレクトおよびサブキューブにおける計算されるメンバーの新しい動作が、SQL Server 2008 R2 で導入されました。  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>サブセレクトとサブキューブで計算されるメンバー  
- XMLA `SubQueries`&#41;では、 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>の接続`DBPROPMSMDSUBQUERIES`文字列プロパティまたは[サポートされる xmla プロパティ &#40;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)のプロパティで、計算されるメンバーまたはサブキューブの計算されるメンバーまたは計算されるセットの動作または許容値を定義します。 このドキュメントのコンテキストでは、特に明記しない限り、サブセレクトはサブセレクトとサブキューブを示します。  
+ `SubQueries`Xmla&#41;では、の接続文字列プロパティ <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> または `DBPROPMSMDSUBQUERIES` [サポートされる xmla プロパティ &#40;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)のプロパティで、計算されるメンバーまたはサブキューブの計算されるメンバーまたは計算されるセットの動作または許容値を定義します。 このドキュメントのコンテキストでは、特に明記しない限り、サブセレクトはサブセレクトとサブキューブを示します。  
   
  SubQueries プロパティでは次の値を指定できます。  
   
 |||  
 |-|-|  
-|[値]|説明|  
+|値|説明|  
 |0|計算されるメンバーは、サブセレクトまたはサブキューブで許可されません。<br /><br /> 計算されるメンバーが参照されている場合にサブセレクトまたはサブキューブを評価すると、エラーが発生します。|  
 |1|計算されるメンバーはサブセレクトまたはサブキューブで許可されますが、返されるサブ空間に先祖メンバーは含まれません。|  
 |2|計算されるメンバーはサブセレクトまたはサブキューブで許可され、返されるサブ空間に先祖メンバーが含まれます。 また、混合粒度は、計算されるメンバーの選択で許可されます。|  
@@ -81,7 +80,7 @@ Where [Measures].[Reseller Sales Amount]
 |-|-|-|-|-|-|  
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|(null)|(null)|(null)|(null)|(null)|  
-|United States|(null)|(null)|(null)|(null)|(null)|  
+|アメリカ合衆国|(null)|(null)|(null)|(null)|(null)|  
 |ワシントン|(null)|(null)|(null)|(null)|(null)|  
 |Seattle Metro Agg|$2,383,545.69|$291,248.93|$763,557.02|$915,832.36|$412,907.37|  
   
@@ -107,7 +106,7 @@ Where [Measures].[Reseller Sales Amount]
 |-|-|-|-|-|-|  
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
-|United States|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
+|アメリカ合衆国|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
 |オレゴン|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |Portland|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |97205|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  

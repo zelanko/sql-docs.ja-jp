@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3d046e63-bcb1-4ab1-9c37-652463fa68c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5fe43b53878744586c3d0d8ec5719d6241b0a302
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bdc4a0245ffa98dd89840a8746e828fd1660706
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087446"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527318"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>[ディメンションの属性の構成] (ビジネス インテリジェンス ウィザード)
   **[ディメンションの属性の構成]** ページでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で勘定科目ディメンションの属性の識別に使用される属性の種類に、ディメンションの属性をマップできます。  
@@ -27,7 +26,7 @@ ms.locfileid: "66087446"
  選択したディメンションの種類が表示されます。  
   
 > [!NOTE]  
->  勘定科目ディメンションの*勘定科目*以外`Type`の値にディメンションのプロパティを変更することはできないため、このオプションは使用できません。  
+>  `Type`勘定科目ディメンションの*勘定科目*以外の値にディメンションのプロパティを変更することはできないため、このオプションは使用できません。  
   
  **[ディメンションの属性]**  
  ディメンションに含まれる既存のディメンションの属性にマップできる、有効な属性の型が表示されます。  

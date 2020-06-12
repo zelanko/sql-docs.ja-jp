@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: abba4d24-3619-44c1-8279-88f27ad627d3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9abaf092d00a8acaf6c0b3ef963c940199068ce9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5fada79acb9a4dcac8ce3707ede13cfac96cc2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082708"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520307"
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>予測クエリの結果の表示および保存
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、予測クエリビルダーを使用してクエリを定義した後、クエリを実行して結果を表示するには、クエリ結果ビューに切り替えます。  
+  で、予測クエリビルダーを使用してクエリを定義した後、クエリを実行して結果を表示するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] クエリ結果ビューに切り替えます。  
   
- 予測クエリの結果は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトで定義されている任意のデータソース内のテーブルに保存できます。 新しいテーブルを作成するか、または既存のテーブルにクエリ結果を保存できます。 既存のテーブルに結果を保存する場合は、テーブルに現在保存されているデータを上書きするように選択できます。上書きしない場合、クエリ結果は、テーブルの既存のデータに追加されます。  
+ 予測クエリの結果は、プロジェクトで定義されている任意のデータソース内のテーブルに保存でき [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。 新しいテーブルを作成するか、または既存のテーブルにクエリ結果を保存できます。 既存のテーブルに結果を保存する場合は、テーブルに現在保存されているデータを上書きするように選択できます。上書きしない場合、クエリ結果は、テーブルの既存のデータに追加されます。  
   
 ### <a name="run-a-query-and-view-the-results"></a>クエリを実行し、結果を表示する  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66082708"
   
 4.  データ ソース ビューにテーブルを追加する場合は、 **[DSV に追加]** からデータ ソース ビューを選択します。  
   
-5.  **[Save]** (保存) をクリックします。  
+5.  **[保存]** をクリックします。  
   
     > [!WARNING]  
     >  保存先で階層的な行セットがサポートされていない場合は、結果に FALTTENED キーワードを追加して、フラット テーブルとして保存できます。  

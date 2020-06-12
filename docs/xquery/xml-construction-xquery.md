@@ -1,5 +1,6 @@
 ---
 title: XML の構築 (XQuery) |Microsoft Docs
+description: 直接および計算されたコンストラクターを使用して XQuery で XML 構造を構築する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51c1898ddaee1ecf878944a3b43c3d8adbb38590
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e285c82ce8c8b451fb673b6864391bd0e394ad8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946177"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520018"
 ---
 # <a name="xml-construction-xquery"></a>XML の構築 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +41,15 @@ ms.locfileid: "67946177"
  直接コンストラクターを使用する場合は、xml を構築するときに XML に似た構文を指定します。 次の例では、直接コンストラクターを使用した XML 構築を示しています。  
   
 ### <a name="constructing-elements"></a>要素の構築  
- XML の表記法を使用して要素を構築できます。 次の例では、直接要素コンストラクター式を使用\<して、productmodel> 要素を作成します。 構築される要素には、次の 3 つの子要素があります。  
+ XML の表記法を使用して要素を構築できます。 次の例では、直接要素コンストラクター式を使用して、要素を作成し \<ProductModel> ます。 構築される要素には、次の 3 つの子要素があります。  
   
 -   テキストノード。  
   
--   2つの要素\<ノード、概要\<> と機能>。  
+-   とという2つの要素ノード \<Summary> \<Features> 。  
   
-    -   Summary \<> 要素には、値が "Some description" である1つのテキストノード子があります。  
+    -   要素には、 \<Summary> 値が "Some description" である1つのテキストノード子があります。  
   
-    -   Features \<> 要素には、子、 \<色>、 \<重み>、および保証> \<という3つの要素ノードがあります。 これらの各ノードには、それぞれ1つのテキストノードがあり、赤、25、2年の部分、および労務の値が設定されています。  
+    -   要素には、、、 \<Features> およびという3つの要素ノードがあり \<Color> \<Weight> \<Warranty> ます。 これらの各ノードには、それぞれ1つのテキストノードがあり、赤、25、2年の部分、および労務の値が設定されています。  
   
 ```sql
 declare @x xml;  
@@ -78,7 +79,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- この例で示しているように、定数式から要素を構築すると便利ですが、XQuery 言語機能の真の威力は、データベースから動的にデータを抽出する XML を構築できる点にあります。 中かっこを使用してクエリ式を指定できます。 結果の XML では、式はその値に置き換えられます。 たとえば、次のクエリでは、1 `NewRoot`つの子要素 (<`e`>) を持つ <> 要素が構築されます。 要素 <`e`> の値は、中かっこ ("{...}") 内にパス式を指定することによって計算されます。  
+ この例で示しているように、定数式から要素を構築すると便利ですが、XQuery 言語機能の真の威力は、データベースから動的にデータを抽出する XML を構築できる点にあります。 中かっこを使用してクエリ式を指定できます。 結果の XML では、式はその値に置き換えられます。 たとえば、次のクエリでは、 `NewRoot` 1 つの子要素 (<>) を持つ <> 要素が構築され `e` ます。 要素 <> の値は、中 `e` かっこ ("{...}") 内にパス式を指定することによって計算されます。  
   
 ```sql
 DECLARE @x xml;  
@@ -86,7 +87,7 @@ SET @x='<root>5</root>';
 SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');  
 ```  
   
- 中かっこはコンテキスト切り替えトークンとして機能し、クエリを XML 構築からクエリ評価に切り替えます。 この場合、中かっこ`/root`内の XQuery パス式が評価され、その結果が代わりに使用されます。  
+ 中かっこはコンテキスト切り替えトークンとして機能し、クエリを XML 構築からクエリ評価に切り替えます。 この場合、中かっこ内の XQuery パス式 `/root` が評価され、その結果が代わりに使用されます。  
   
  結果を次に示します。  
   
@@ -98,7 +99,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- 次に示すクエリは先ほどのクエリと似ています。 ただし、中かっこ内の式では、 **data ()** 関数を指定して <`root`> 要素のアトミック値を取得し、構築された要素`e` <> に代入します。  
+ 次に示すクエリは先ほどのクエリと似ています。 ただし、中かっこ内の式では、 **data ()** 関数を指定して <> 要素のアトミック値を取得 `root` し、構築された要素 <> に代入し `e` ます。  
   
 ```sql
 DECLARE @x xml;  
@@ -136,7 +137,7 @@ SELECT @y;
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
- 次のクエリは、直接要素コンストラクターを使用して要素を構築するもう1つの例です。 また、<`FirstLocation`> 要素の値は、中かっこ内の式を実行することによって取得されます。 クエリ式は、最初のワークセンターの場所にある製造手順を、Production モデルテーブルの [命令」列から返します。  
+ 次のクエリは、直接要素コンストラクターを使用して要素を構築するもう1つの例です。 また、<> 要素の値 `FirstLocation` は、中かっこ内の式を実行することによって取得されます。 クエリ式は、最初のワークセンターの場所にある製造手順を、Production モデルテーブルの [命令」列から返します。  
   
 ```sql
 SELECT Instructions.query('  
@@ -234,7 +235,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- 構築された`ProductModel`要素 <> には、ProductModelID 属性とこれらの子ノードがあります。  
+ 構築された要素 <`ProductModel`> には、ProductModelID 属性とこれらの子ノードがあります。  
   
 -   テキストノード`This is product model catalog description.`  
   
@@ -286,7 +287,7 @@ where ProductModelID=7;
 #### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項は次のとおりです。  
   
--   複数のまたは mixed (string および XQuery 式) 属性式はサポートされていません。 たとえば、次のクエリに示すように、が定数で、 `Item`クエリ式を評価すること`5`によって値が取得される XML を構築します。  
+-   複数のまたは mixed (string および XQuery 式) 属性式はサポートされていません。 たとえば、次のクエリに示すように、が定数で、 `Item` `5` クエリ式を評価することによって値が取得される XML を構築します。  
   
     ```xml
     <a attr="Item 5" />  
@@ -344,7 +345,7 @@ where ProductModelID=7;
     select @x.query( '<a attr="{''Item'', /x }" />')  
     ```  
   
-     **Data ()** 関数を適用すると、クエリは、文字列と連結された式`/x`のアトミック値を取得するため、機能します。 アトミック値のシーケンスを次に示します。  
+     **Data ()** 関数を適用すると、クエリは、 `/x` 文字列と連結された式のアトミック値を取得するため、機能します。 アトミック値のシーケンスを次に示します。  
   
     ```sql
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
@@ -381,7 +382,7 @@ where ProductModelID=7;
 -   XQuery プロローグで。  
   
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>名前空間宣言属性を使用した名前空間の追加  
- 次の例では、要素 <`a`> の構築で名前空間宣言属性を使用して、既定の名前空間を宣言しています。 親要素で宣言された`b`既定の名前空間の宣言を元に戻すために、子要素 <> を構築しています。  
+ 次の例では、要素 <> の構築で名前空間宣言属性を使用して、 `a` 既定の名前空間を宣言しています。 `b`親要素で宣言された既定の名前空間の宣言を元に戻すために、子要素 <> を構築しています。  
   
 ```sql
 declare @x xml  
@@ -400,7 +401,7 @@ select @x.query( '
 </a>  
 ```  
   
- 名前空間にプレフィックスを割り当てることができます。 プレフィックスは、要素 <`a`> の構築で指定されます。  
+ 名前空間にプレフィックスを割り当てることができます。 プレフィックスは、要素 <> の構築で指定され `a` ます。  
   
 ```sql
 declare @x xml  
@@ -419,7 +420,7 @@ select @x.query( '
 </x:a>  
 ```  
   
- XML の構築では、既定の名前空間を宣言解除できますが、名前空間プレフィックスを宣言解除することはできません。 次のクエリはエラーを返します。これは、要素 <`b`> の構築で指定されているプレフィックスを宣言解除できないためです。  
+ XML の構築では、既定の名前空間を宣言解除できますが、名前空間プレフィックスを宣言解除することはできません。 次のクエリはエラーを返します。これは、要素 <> の構築で指定されているプレフィックスを宣言解除できないため `b` です。  
   
 ```sql
 declare @x xml  
@@ -430,7 +431,7 @@ select @x.query( '
   </x:a>' )  
 ```  
   
- 新しく構築される名前空間は、クエリ内部で使用できます。 たとえば、次のクエリでは、要素を構築する際に名前`FirstLocation`空間を宣言し、> <して、Locationid と setuphrs の属性値の式でプレフィックスを指定しています。  
+ 新しく構築される名前空間は、クエリ内部で使用できます。 たとえば、次のクエリでは、要素を構築する際に名前空間を宣言し、 `FirstLocation`> <して、LocationID と SetupHrs の属性値の式でプレフィックスを指定しています。  
   
 ```sql
 SELECT Instructions.query('  
@@ -444,7 +445,7 @@ FROM  Production.ProductModel
 where ProductModelID=7  
 ```  
   
- この方法で新しい名前空間プレフィックスを作成すると、このプレフィックスの既存の名前空間宣言がオーバーライドされることに注意してください。 たとえば、クエリプロローグ内の名前`AWMI="https://someURI"`空間宣言は、<`FirstLocation`> 要素の名前空間宣言によってオーバーライドされます。  
+ この方法で新しい名前空間プレフィックスを作成すると、このプレフィックスの既存の名前空間宣言がオーバーライドされることに注意してください。 たとえば、クエリプロローグ内の名前空間宣言は、 `AWMI="https://someURI"` <> 要素の名前空間宣言によってオーバーライドされ `FirstLocation` ます。  
   
 ```sql
 SELECT Instructions.query('  
@@ -470,7 +471,7 @@ select @x.query( '
             <a><b xmlns=""/></a>' )  
 ```  
   
- 要素 <`b`> の構築では、名前空間宣言属性が、値として空の文字列で指定されていることに注意してください。 これにより、親要素で宣言されている既定の名前空間の宣言が解除されます。  
+ 要素 <> の構築では `b` 、名前空間宣言属性が、値として空の文字列で指定されていることに注意してください。 これにより、親要素で宣言されている既定の名前空間の宣言が解除されます。  
   
 
 結果を次に示します。  
@@ -548,7 +549,7 @@ test
   
  **メモ**明示的なテキストノードコンストラクターの使用例については、「 [insert &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)」の特定の例を参照してください。  
   
- 次のクエリでは、構築された XML に要素、2つの属性、コメント、および処理命令が含まれています。 シーケンスが構築されているため、 `FirstLocation` <> の前にコンマが使用されていることに注意してください。  
+ 次のクエリでは、構築された XML に要素、2つの属性、コメント、および処理命令が含まれています。 `FirstLocation`シーケンスが構築されているため、<> の前にコンマが使用されていることに注意してください。  
   
 ```sql
 SELECT Instructions.query('  
@@ -662,7 +663,7 @@ where ProductModelID=7
 ```  
   
 ## <a name="additional-implementation-limitations"></a>実装のその他の制限事項  
- 属性計算コンストラクターを使用して新しい名前空間を宣言することはできません。 また、次の計算されるコンストラクターはで[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]はサポートされていません。  
+ 属性計算コンストラクターを使用して新しい名前空間を宣言することはできません。 また、次の計算されるコンストラクターはではサポートされていません [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 -   計算されたドキュメントノードコンストラクター  
   

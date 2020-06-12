@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b01d537c-1c04-4d7d-9146-051c249b08e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 88849f85a5f2614961cb67db070f508c2c0718d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88060ca495eda8d06d57c3942a7e44325cfe6d0e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087158"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527008"
 ---
 # <a name="connect-to-an-informix-database-ssas"></a>[Informix データベースへの接続] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、Informix データベースに接続するための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
@@ -27,7 +26,7 @@ ms.locfileid: "66087158"
 > [!NOTE]  
 >  このページでデータベースを選択する際には、現在のユーザーの資格情報が使用されます。 ただし、[権限借用情報] ページで指定されたユーザーに、選択したデータベースの読み取り権限がないと、インポートは成功しません。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[接続の表示名]**  
  このデータ ソース接続の一意の名前を入力します。 これは必須フィールドです。  
   

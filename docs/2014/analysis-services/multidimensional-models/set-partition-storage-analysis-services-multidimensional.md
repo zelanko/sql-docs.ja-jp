@@ -24,16 +24,15 @@ helpviewer_keywords:
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f921fc106adb88bcf2f9b9e863165153981f904
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072990"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545648"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>パーティション ストレージの設定 (Analysis Services - 多次元)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、ストレージモードおよびキャッシュオプションの標準ストレージ構成がいくつか提供されてい[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ます。 これにより、更新通知、待機時間、およびデータの再構築に一般的に使用される構成が提供されます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、ストレージモードおよびキャッシュオプションの標準ストレージ構成がいくつか提供されています。 これにより、更新通知、待機時間、およびデータの再構築に一般的に使用される構成が提供されます。  
   
  パーティションのストレージは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]のキューブの [パーティション] タブ、または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のパーティション プロパティ ページで指定できます。  
   

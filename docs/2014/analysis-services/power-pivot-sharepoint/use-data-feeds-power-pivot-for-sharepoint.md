@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49ec8adeaf5d8726220ed03f29c1be3088f9ccb2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070906"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547704"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>データ フィードの使用 (PowerPivot for SharePoint)
   データ フィードは、オンライン データ ソースから生成され、宛先のドキュメントやアプリケーションに送信される 1 つ以上のデータ ストリームです。 PowerPivot for Excel を使用している場合、データ フィードを利用して、任意のデータ ソースにある既存の企業データやビジネス データを Excel 2010 ブック内の PowerPivot ウィンドウに取り込むことができます。 ブックにデータ フィードをインポートすると、SharePoint サーバーでスケジュールしたデータ更新操作でデータ フィードを参照できます。  
@@ -24,7 +23,7 @@ ms.locfileid: "66070906"
   
  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]および Microsoft SharePoint 2010 では、PowerPivot ブックで使用できるデータフィードを提供しています。 このトピックでは、既存のレポートとリストのデータ フィードにアクセスする方法について説明します。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
  [前提条件](#prereq)  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66070906"
 ##  <a name="prerequisites"></a><a name="prereq"></a> 前提条件  
  データ フィードを Excel 2010 にインポートするには、PowerPivot for Excel が必要です。  
   
- Atom 1.0 形式のデータを提供する Web サービスまたはデータ サービスが必要です。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]と SharePoint 2010 では、この形式でデータを提供でき[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ます。  
+ Atom 1.0 形式のデータを提供する Web サービスまたはデータ サービスが必要です。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と SharePoint 2010 では、この形式でデータを提供できます。  
   
  SharePoint リストをデータ フィードとしてエクスポートする前に、ADO.NET Data Services を SharePoint サーバーにインストールする必要があります。 詳細については、「 [SharePoint リストのデータ フィードのエクスポートをサポートする ADO.NET Data Services のインストール方法](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)」を参照してください。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66070906"
   
     1.  **[ベース URL]** は省略可能です。 データ サービス ドキュメントが複数のフィードを提供する場合はベース URL を指定してください。 ベース URL には、すべてのフィードに共通する URL の部分 (サーバー名とサイトなど) を指定します。 Reporting Services レポートにデータ サービス ドキュメントを作成している場合、ベース URL はレポート サーバーの URL とレポートになります。  
   
-    2.  **[Web サービス URL]** は必須です。 ベース URL を指定しない場合、この値のアドレスには http:// または https:// を含める必要があります。 ベース URL を指定した場合、Web サービス URL はベース URL の後に続く部分になります。 たとえば、完全な URL がhttp://adventure-works/inventory/today.aspxの場合、ベース url はhttp://adventure-works/inventoryになり、Web サービスの url は/today.aspx なりになります。  
+    2.  **[Web サービス URL]** は必須です。 ベース URL を指定しない場合、この値のアドレスには http:// または https:// を含める必要があります。 ベース URL を指定した場合、Web サービス URL はベース URL の後に続く部分になります。 たとえば、完全な URL がの場合、 http://adventure-works/inventory/today.aspx ベース url はになり、 http://adventure-works/inventory Web サービスの url は/today.aspx なりになります。  
   
          Web サービス URL には、データのサブセットを除外または選択するパラメーターを含めることができます。 フィードを提供するアプリケーションまたはサービスは、URL に指定するパラメーターをサポートしている必要があります。  
   

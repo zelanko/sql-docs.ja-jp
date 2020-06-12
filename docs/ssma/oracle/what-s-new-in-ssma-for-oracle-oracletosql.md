@@ -1,24 +1,32 @@
 ---
 title: SSMA for Oracle の新機能 (OracleToSQL) |Microsoft Docs
+description: 各リリースの SQL Server Migration Assistant (SSMA) for Oracle (OracleToSQL) の変更点を確認します。
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 07dd930a853926be98dba5f2ca91bd7080b9a808
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 39da9754b75ebf1ce7dd5adb3df55d4d07718b32
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220687"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294069"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle の新機能 (OracleToSQL)
 
 この記事では、各リリースでの Oracle の変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+SSMA for Oracle の v1.0 リリースには、次のような変更に加えて、わずかなパフォーマンスの向上と、以下の変更が含まれています。
+
+* インデックスが構成されたテーブルに関するテスト担当者の問題の修正
+* 拡張機能パックの拡張ストアドプロシージャの名前の修正
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8f61e0e04c5ca96da69098b58c38b1ef73eba206
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ac7db8cdf02b2d38004aadfe67d0e154fc5d450
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530840"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542504"
 ---
 # <a name="lesson-6-defining-calculations"></a>レッスン 6: 計算の定義
   このレッスンでは、多次元式 (MDX) の式またはスクリプトである計算を定義する方法について学習します。 計算を使用すると、計算されるメンバーや名前付きセットを定義できます。また、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブの機能を拡張するさまざまなスクリプト コマンドを実行できます。 たとえば、サブキューブを定義し、計算をサブキューブ内のセルに割り当てるスクリプト コマンドを実行できます。  

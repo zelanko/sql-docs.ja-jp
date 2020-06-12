@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 669fa1fcd9e4802a4d4102120a373dd615741017
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6de68fe97c61d90372f77f0fa318221f8f6e3ba7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062736"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528242"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>高度なモデリング (Excel 用データ マイニング アドイン)
   **高度な**データモデリングオプションを使用すると、ウィザードによって作成されたものとは異なるパラメーターを使用して、カスタムデータマイニング構造およびモデルを作成できます。 このセクションで説明する 2 つのウィザードでは、まったく新しいデータ マイニング構造を作成したり、既存のデータ マイニング構造に適用する新しいマイニング モデルを作成したりできます。  
@@ -48,7 +47,7 @@ ms.locfileid: "66062736"
   
 -   入れ子になったデータ セットのアソシエーション分析  
   
- 使用できるマイニング構造の種類を確認するには、[**モデルの管理**] または[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [**参照**] をクリックして、に格納されているモデルと構造を参照できます。  
+ 使用できるマイニング構造の種類を確認するには、[ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **モデルの管理**] または [**参照**] をクリックして、に格納されているモデルと構造を参照できます。  
   
  使用できるのは、現在のセッション中に作成されたデータ マイニング構造、または、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに保存されたマイニング構造に限定されています。  
   

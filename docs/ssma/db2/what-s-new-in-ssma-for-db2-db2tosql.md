@@ -1,24 +1,29 @@
 ---
 title: SSMA for DB2 の新機能 (DB2ToSQL) |Microsoft Docs
+description: 各リリースの SQL Server Migration Assistant (SSMA) for DB2 (DB2ToSQL) の変更点を確認します。
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 3b3fca46fb5e30cfa446e0ca9de8dc0324d2f7f8
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 73a0afb17e8c44aea6cdb25d590cedeecdc274cf
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220089"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293979"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 の新機能 (DB2ToSQL)
 
 この記事では、各リリースでの DB2 変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+SSMA for DB2 の v1.0 リリースでは、外部キー検出の回帰が解決され、パフォーマンスが若干向上しています。
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 
@@ -52,7 +57,7 @@ SSMA for DB2 のバージョン8.7 リリースには、新しい DB2 構文パ�
 * MQ テーブルでの関数の変換が改善されました `COUNT` 。
 * ステートメントの変換 `SAVEPOINT` 。
 * 句の値の DB2's 動作をエミュレートするための変換 `NULL` `ORDER BY` です。
-* 関連する結果セットのステートメントを解析するためのサポート。
+* ステートメントの解析サポート `ASSOCIATE RESULT SET` 。
 
 > [!IMPORTANT]
 > SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。

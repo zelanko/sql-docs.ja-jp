@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7154ce0ad66346634225734fe829c36e7bf3ad58
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083291"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520901"
 ---
 # <a name="neural-network-model-query-examples"></a>Neural Network Model Query Examples
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、ニューラル ネットワーク モデルのコンテンツ クエリでは、非表示層の数などのモデル メタデータを取得できます。 また、予測クエリでは、入力に基づいて分類を提示し、必要に応じて各分類の確率を提供することもできます。  
   
  ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムに基づくモデルに対するクエリの作成方法について説明します。  
   
- **コンテンツ クエリ**  
+ **コンテンツクエリ**  
   
  [DMX を使用してモデル メタデータを取得する](#bkmk_Query1)  
   
@@ -181,7 +180,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="sample-query-5-creating-a-singleton-prediction"></a><a name="bkmk_Query5"></a>サンプルクエリ 5: 単一予測を作成する  
  ニューラル ネットワーク モデルに対する予測クエリを作成する最も簡単な方法は、予測クエリ ビルダーを使用することです。このビルダーは、 **および** のデータ マイニング デザイナーの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [マイニング予測] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブで使用できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク ビューアーでモデルを参照し、関心のある属性をフィルター選択して傾向を表示します。その後、 **[マイニング予測]** タブに切り替えて、クエリを作成し、それらの傾向について新しい値を予測できます。  
   
- たとえば、コール センター モデルを参照して、注文数とその他の属性の相関関係を表示できます。 これを行うには、ビューアーでモデルを開き、[**入力**] で [ ** \<すべての>**] を選択します。  次に、 **[出力]** で **[注文数]** を選択します。 **[値 1]** で最も注文が多い範囲を選択し、 **[値 2]** で最も注文が少ない範囲を選択します。 これにより、モデルで注文数と相関関係があるすべての属性がひとめでわかります。  
+ たとえば、コール センター モデルを参照して、注文数とその他の属性の相関関係を表示できます。 これを行うには、ビューアーでモデルを開き、[**入力**] でを選択し **\<All>** ます。  次に、 **[出力]** で **[注文数]** を選択します。 **[値 1]** で最も注文が多い範囲を選択し、 **[値 2]** で最も注文が少ない範囲を選択します。 これにより、モデルで注文数と相関関係があるすべての属性がひとめでわかります。  
   
  ビューアーで結果を参照すると、特定の曜日に注文数が少ないこと、およびオペレーターの増員と売上の向上に相関関係がありそうなことがわかります。 この場合、モデルに対する予測クエリを使用して "what if" 仮説を試し、注文数が少ない曜日にレベル 2 のオペレーターを増員すると注文が増加するかどうかを確認できます。 これを行うには、次のようなクエリを作成します。  
   
@@ -210,7 +209,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|予測関数|使用方法|  
+|予測関数|使用法|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|あるノードがニューラル ネットワーク グラフ内の別のノードの子であるかどうかを示します。|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|重み付け確率を返します。|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|現在の予測値に関連する値のテーブルを返します。|  

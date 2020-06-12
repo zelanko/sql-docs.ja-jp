@@ -12,17 +12,17 @@ ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a96b77c3f1243bc3d95cf38242463724348134b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b215ff16f5e4a42a6d43f0a6e5f9758f158a682
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68188503"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859851"
 ---
 # <a name="options-environment-general-page"></a>[オプション] ([環境]-[全般] ページ)
   **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スタートアップ アクション、全般的なウィンドウ管理オプション、およびその他の全般設定を構成できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して **[全般]** をクリックします。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[スタートアップ時]**  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の起動時に実行されるアクションを選択します。 オプションは次のとおりです。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68188503"
  このチェック ボックスがオンになっている場合は、ドッキングしたセット内のすべてのツール ウィンドウではなく、現在フォーカスのあるツール ウィンドウのみを閉じることを指定します。 既定では、このチェック ボックスはオンになっています。  
   
  **[[自動的に隠す] ボタンを、アクティブになっているタブに対してのみ実行する]**  
- このチェック ボックスがオンになっている場合は、ドッキングしたセット内のすべてのツール ウィンドウではなく、現在フォーカスのあるツール ウィンドウのみが自動的に非表示になることを指定します。 既定では、このチェック ボックスはオフに設定されます。  
+ このチェック ボックスがオンになっている場合は、ドッキングしたセット内のすべてのツール ウィンドウではなく、現在フォーカスのあるツール ウィンドウのみが自動的に非表示になることを指定します。 既定では、このチェック ボックスはオフです。  
   
 ## <a name="display"></a>ディスプレイ  
  **[最近使用したファイルの一覧: n ファイルまで表示する]**  

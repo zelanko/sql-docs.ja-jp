@@ -1,5 +1,6 @@
 ---
 title: OLE DB を使用したアップデートグラムの実行 (SQLXML)
+description: SQLXML 4.0 の OLE DB を使用してアップデートグラムを実行する方法について説明します。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 754db698b7c82a64f66cbb7a4df43bd4127413d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9267699ff8edbaf0d615dbdb45a915e24e842b11
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241278"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215254"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>OLE DB を使用した、アップデートグラムの実行 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "75241278"
 </Schema>  
 ```  
   
- このクエリでは、従業員のすべての要素が返されます。 既定のマッピングでは、 ** \<person. contact>** 要素は、AdventureWorks データベースの person テーブルにマップされます。  
+ このクエリでは、従業員のすべての要素が返されます。 既定のマッピングでは、 **\<Person.Contact>** 要素は AdventureWorks データベースの Person. Contact テーブルにマップされます。  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>XML をコマンドとして設定し、結果を XML ドキュメントとして取得するには  
   
@@ -515,7 +516,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- このテンプレートには SQL クエリが含まれており、 クエリでは、パラメーター (@Title) の値が必要です。 パラメーター値が渡されない場合は、既定値 ("Mr.") が使用されます。  
+ このテンプレートには SQL クエリが含まれており、 クエリでは、パラメーター () の値が必要です @Title 。 パラメーター値が渡されない場合は、既定値 ("Mr.") が使用されます。  
   
  テンプレートにパラメーター値を渡すときには、パラメーターの名前と値の両方を指定する必要があります。  
   

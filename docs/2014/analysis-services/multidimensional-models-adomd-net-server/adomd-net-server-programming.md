@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f7ff5be-3826-43a5-b94d-ddeec5ddb2eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 843d3037d2acb2876a21ae25d1bf15e52686e327
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 522478af0b19f1745d80f167e40345d4751136b7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217155"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545450"
 ---
 # <a name="adomdnet-server-programming"></a>ADOMD.NET サーバー プログラミング
-  ADOMD.NET の ADOMD.NET サーバー コンポーネントは、(msmgdsrv.dll 内の) `Microsoft.AnalysisServices.AdomdServer` 名前空間内に存在します。 これらのサーバーコンポーネントを使用して、の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスで実行されるカスタム多次元式 (MDX) 関数およびストアドプロシージャを作成します。 サーバー オブジェクトによって、キューブとマイニング モデルをクエリする機能、および指定されたコンテキストで式を評価する機能が提供されます。 カスタム関数とストアド プロシージャを作成する利点としては、実行の高速化、配置の集中管理、メンテナンスのしやすさの向上などがあります。  
+  ADOMD.NET の ADOMD.NET サーバー コンポーネントは、(msmgdsrv.dll 内の) `Microsoft.AnalysisServices.AdomdServer` 名前空間内に存在します。 これらのサーバーコンポーネントを使用して、のインスタンスで実行されるカスタム多次元式 (MDX) 関数およびストアドプロシージャを作成し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。 サーバー オブジェクトによって、キューブとマイニング モデルをクエリする機能、および指定されたコンテキストで式を評価する機能が提供されます。 カスタム関数とストアド プロシージャを作成する利点としては、実行の高速化、配置の集中管理、メンテナンスのしやすさの向上などがあります。  
   
  次の表に、ADOMD.NET サーバー アプリケーションの開発に役立つトピックを示します。  
   

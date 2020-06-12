@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c72a3c52da21ca7af10103010500bb43fd46a10a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b942210e653bc3e0a7309a98a4e75e84c5f82168
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062608"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528138"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>[アルゴリズム パラメーター] ダイアログ ボックス ([マイニング モデル] ビュー)
   **[アルゴリズム パラメーター]** ダイアログ ボックスを使用すると、選択したモデルに固有のアルゴリズム パラメーターを調整できます。 アルゴリズム パラメーターを変更する場合、通常マイニング モデルの結果を変更します。 各パラメーターが結果にどのような影響を与えるかは、使用しているアルゴリズムおよびデータによって異なります。 詳細については、「 [マイニング モデルとマイニング構造のカスタマイズ](data-mining/customize-mining-models-and-structure.md)」をご覧ください。  
   
 ## <a name="options"></a>オプション  
- **Parameters**  
+ **パラメーター**  
  選択されたマイニング モデルに使用できるパラメーターを一覧表示します。  
   
  次の表に、使用可能な列を説明します。  
   
-|列|説明|  
+|Column|説明|  
 |------------|-----------------|  
 |**パラメーター**|パラメーターの名前の一覧を取得します。|  
 |**Value**|パラメーターの既定値を変更する場合にのみ値を入力します。|  
@@ -40,10 +39,10 @@ ms.locfileid: "66062608"
  **説明**  
  **[パラメーター]** の一覧で選択されたパラメーターを説明します。  
   
- **追加**  
+ **[追加]**  
  このボタンをクリックして、アルゴリズム固有のその他のパラメーターを一覧に追加します。 パラメーターを追加した後で、正しい名前を **[パラメーター]** 列に入力し、 **[値]** 列に値を入力します。  
   
- **Remove**  
+ **削除**  
  このボタンをクリックして、カスタム パラメーターを一覧から削除します。  
   
  標準の Analysis Services アルゴリズム パラメーターのいずれかを一覧から削除しても、パラメーターはモデルでそのまま使用されますが、そのパラメーターの既定値が使用されます。 パラメーターは完全に削除されず、次にダイアログ ボックスを開いたときに表示されます。  

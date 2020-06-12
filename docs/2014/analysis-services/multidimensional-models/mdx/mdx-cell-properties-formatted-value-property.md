@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbc390b046eed3e0caa0394d9e463625e054192e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074398"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546424"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>FORMATED_VALUE の LANGUAGE と FORMAT_STRING
   FORMATTED_VALUE プロパティは、セルの VALUE、FORMAT_STRING、および LANGUAGE の各プロパティの相互作用に基づいて構築されます。 このトピックではそのしくみについて説明します。  
@@ -23,7 +22,7 @@ ms.locfileid: "66074398"
 ## <a name="value-format_string-language-properties"></a>VALUE プロパティ、FORMAT_STRING プロパティ、LANGUAGE プロパティ  
  これらのプロパティを組み合わせて使用するための準備として、次の表に各プロパティの概要を示します。  
   
- 値  
+ VALUE  
  書式設定されていないセルの値。  
   
  FORMAT_STRING  
@@ -37,7 +36,7 @@ ms.locfileid: "66074398"
   
  FORMAT_STRING のテンプレートと LANGUAGE の指定が競合している場合は、FORMAT_STRING のテンプレートが LANGUAGE の指定をオーバーライドします。 たとえば、FORMAT_STRING="$ #0"、LANGUAGE=1034 (スペイン)、VALUE=123.456 の場合、書式設定テンプレートの値が言語の指定よりもオーバーライドされるため、FORMATTED_VALUE="€ 123" (予想される書式) ではなく FORMATTED_VALUE="$ 123" になります。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  以下の例は、LANGUAGE と FORMAT_STRING を組み合わせて使用した場合に得られる出力を示しています。  
   
  1 つ目の例は数値の書式設定の例で、2 つ目の例は日付と時刻の値の書式設定の例です。  

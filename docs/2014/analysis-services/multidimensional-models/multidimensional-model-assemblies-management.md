@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c7a09c9a1c411b639ac1b91027e42899dec158f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073526"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546074"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多次元モデルのアセンブリの管理
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、多次元式 (MDX) 言語およびデータマイニング拡張機能 (DMX) 言語で使用するための多数の組み込み関数が用意されています。これは、標準の統計計算から階層内のメンバーを走査するためのすべての機能を実現するためのもの[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 ただし、他のすべての複雑で強力な製品がそうであるように、この製品も常に機能の拡張を求められています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、多次元式 (MDX) 言語およびデータマイニング拡張機能 (DMX) 言語で使用するための多数の組み込み関数が用意されています。これは、標準の統計計算から階層内のメンバーを走査するためのすべての機能を実現するためのものです。 ただし、他のすべての複雑で強力な製品がそうであるように、この製品も常に機能の拡張を求められています。  
   
  このため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスまたはデータベースにアセンブリを追加するための機能が用意されています。 アセンブリを使用すると、Microsoft Visual Basic .NET や Microsoft Visual C# など、任意の共通言語ランタイム (CLR) 言語を使用する外部ユーザー定義関数を作成できます。 Microsoft Visual Basic や Microsoft Visual C++ など、コンポーネント オブジェクト モデル (COM) オートメーション言語を使用することもできます。  
   
@@ -79,7 +78,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  *AssemblyName*!*InterfaceID*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  アセンブリのセキュリティは、コード アクセス セキュリティ モデルである、.NET Framework セキュリティ モデルに基づいています。 .NET Framework は、ランタイムが完全に信頼されるコードと部分的に信頼されるコードの両方をホストできると仮定する、コード アクセス セキュリティ メカニズムをサポートしています。 .NET Framework コード アクセス セキュリティによって保護されるリソースは、通常、リソースへのアクセスを許可する前に対応する権限を要求する、マネージド コードによってラップされます。 権限の要求は、(アセンブリ レベルで) 呼び出し履歴内のすべての呼び出し側が、対応するリソース権限を持つ場合にのみ満たされます。  
   
  アセンブリでは、実行権限は `PermissionSet` オブジェクトの `Assembly` プロパティを使用して渡されます。 マネージド コードが取得する権限は、有効なセキュリティ ポリシーによって決定されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以外によるホスト環境では、エンタープライズ、コンピューター、およびユーザーの 3 つの有効なポリシー レベルがあります。 コードが取得する権限の有効なリストは、これら 3 つのレベルによって取得される権限の共通部分によって決定されます。  
@@ -105,7 +104,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 -   元の呼び出し側のコンテキストを変更した中間の EXECUTE AS が存在する場合、外部リソースへのアクセスは失敗します。  
   
- `ImpersonationMode` プロパティは、`ImpersonateCurrentUser` または `ImpersonateAnonymous` に設定できます。 既定の設定、`ImpersonateCurrentUser` は、現在のユーザーのネットワーク ログイン アカウントでアセンブリを実行します。 この`ImpersonateAnonymous`設定を使用する場合、実行コンテキストは、サーバー上の Windows ログインユーザーアカウント IUSER_*servername*に対応します。 これは、制限されたサーバー権限を持つ、インターネット ゲスト アカウントです。 このコンテキストで実行するアセンブリは、ローカル サーバーの制限されたリソースにのみアクセスできます。  
+ `ImpersonationMode` プロパティは、`ImpersonateCurrentUser` または `ImpersonateAnonymous` に設定できます。 既定の設定、`ImpersonateCurrentUser` は、現在のユーザーのネットワーク ログイン アカウントでアセンブリを実行します。 この設定を使用する場合、 `ImpersonateAnonymous` 実行コンテキストは、サーバー上の Windows ログインユーザーアカウント IUSER_*servername*に対応します。 これは、制限されたサーバー権限を持つ、インターネット ゲスト アカウントです。 このコンテキストで実行するアセンブリは、ローカル サーバーの制限されたリソースにのみアクセスできます。  
   
 ### <a name="application-domains"></a>アプリケーション ドメイン  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はアプリケーション ドメインを直接公開しません。 各アプリケーション ドメインは、同じアプリケーション ドメイン内で実行される一連のアセンブリにより、.NET Framework の `System.Reflection` 名前空間または他の方法を使用して実行時に互いを検出し、遅延バインドで互いの呼び出しを行うことができます。 このような呼び出しは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 認証ベース セキュリティによって使用される権限のチェック対象になります。  

@@ -14,17 +14,17 @@ ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8912b0e3cac7ccde8f89c1818fd9737c29ebc0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6e1326a00a940b488487f9d602595e6528cb048
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211248"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856535"
 ---
 # <a name="delete-objects"></a>[オブジェクトの削除]
   このダイアログ ボックスを使用すると、データベースまたはデータベース オブジェクトを削除できます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[削除されるオブジェクト]**  
  削除するオブジェクトの名前、種類、所有者、および状態を、実行中のエラーに関するメッセージと一緒に表示します。  
   

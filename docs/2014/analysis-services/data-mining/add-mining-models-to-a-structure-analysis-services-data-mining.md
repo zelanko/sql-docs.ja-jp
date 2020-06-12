@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd25682f12ce0a3ddad5e8f135d82aaf08115762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1284d160ca828f75ec39112d614640fcb3ab1cb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086249"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525699"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>マイニング モデルを構造に追加する (Analysis Services - データ マイニング)
   1 つのマイニング構造で複数のマイニング モデルをサポートできるようになっています。 そのため、ウィザードの完了後、構造を開いて新しいマイニング モデルを追加できます。 作成した各モデルで、別のアルゴリズムの使用、パラメーターの変更、または別のデータのサブセットを使用するためのフィルターの適用が可能です。  

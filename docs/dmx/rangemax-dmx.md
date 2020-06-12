@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 61552cd8e38f77d12d7f4da10e2bbe9281e6073d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cbed9b946a873c9b1d4884aa119b25250a722d3
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041679"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666848"
 ---
 # <a name="rangemax-dmx"></a>RangeMax (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ RangeMax(<scalar column reference>)
   
  [DMX&#41;&#40;の SELECT FROM &#60;モデル&#62; 予測結合](../dmx/select-from-model-prediction-join-dmx.md)で使用する場合、 **RangeMin**、 **Rangemid**、および**RangeMax**関数は、指定されたバケットの実際の境界値を返します。 たとえば、離散化列で予測を実行する場合、クエリは予測されたバケット数を離散化列に返します。 **RangeMin**、 **rangemid**、および**RangeMax**関数は、予測によって指定されるバケットを記述します。 **RangeMax**関数を予測結合ステートメントと共に使用する場合、スカラー列参照には不連続の予測可能列のみを含めることができます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、デシジョンツリーマイニングモデルの年収連続列の最小値、最大値、および平均値を返します。  
   
 ```  

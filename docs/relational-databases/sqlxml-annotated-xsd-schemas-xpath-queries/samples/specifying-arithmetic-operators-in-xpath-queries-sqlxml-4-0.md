@@ -1,5 +1,6 @@
 ---
 title: XPath クエリで算術演算子を使用する (SQLXML)
+description: SQLXML 4.0 の XPath クエリで算術演算子を指定する方法について説明します。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44b03e86ae2667b669d85533b04a2d973cef1833
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64b13492b7359fa6baad7cee21dfb291f655cdea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252631"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529890"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での算術演算子の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "75252631"
 ## <a name="examples"></a>例  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. * 算術演算子を指定する  
- この XPath クエリは、指定された述語を満たす** \<orderdetail>** 要素を返します。  
+ この XPath クエリ **\<OrderDetail>** は、指定された述語を満たす要素を返します。  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- このクエリでは`child` 、は軸で`OrderDetail` 、はノードテストです ( **orderdetail**が>の** \<要素ノード**である場合は TRUE になります。これは、 ** \<要素>** ノードが**子**軸のプライマリノードであるためです)。 すべての** \<orderdetail>** 要素ノードでは、述語内のテストが適用され、条件を満たすノードだけが返されます。  
+ このクエリでは、は軸で、は `child` `OrderDetail` ノードテストです。これ**OrderDetail**は、 **\<element node>** **\<element>** ノードが**子**軸のプライマリノードであるため、orderdetail がの場合は TRUE です。 すべての要素ノードについて、 **\<OrderDetail>** 述語内のテストが適用され、条件を満たすノードだけが返されます。  
   
 > [!NOTE]  
 >  XPath の数値は倍精度浮動小数点数であり、例のように浮動小数点数を比較する場合は丸めが実行されます。  

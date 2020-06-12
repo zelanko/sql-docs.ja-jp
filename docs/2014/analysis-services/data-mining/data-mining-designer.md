@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b0a54a0ae2bab2c8019b706a51b94f0338dcb3cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98176d54f6cdf29be5c06563ec1dbd7fd6275724
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085110"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523170"
 ---
 # <a name="data-mining-designer"></a>Data Mining Designer
-  データマイニングデザイナーは、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]マイニングモデルを操作するための主要な環境です。 データ マイニング デザイナーにアクセスするには、既存のマイニング構造を選択するか、またはデータ マイニング ウィザードを使用して新しいマイニング構造とマイニング モデルを作成します。 データ マイニング デザイナーを使用すると、次の作業を実行できます。  
+  データマイニングデザイナーは、でマイニングモデルを操作するための主要な環境です [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 データ マイニング デザイナーにアクセスするには、既存のマイニング構造を選択するか、またはデータ マイニング ウィザードを使用して新しいマイニング構造とマイニング モデルを作成します。 データ マイニング デザイナーを使用すると、次の作業を実行できます。  
   
 -   最初にデータ マイニング ウィザードで作成したマイニング構造とマイニング モデルを変更する。  
   

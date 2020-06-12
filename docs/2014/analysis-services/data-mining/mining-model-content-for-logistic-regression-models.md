@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3232e4344b94e0b812df72ddebdc9a8d389d9f05
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083621"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521368"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、Microsoft ロジスティック回帰アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -53,12 +52,12 @@ ms.locfileid: "66083621"
   
 |Node|コンテンツ|  
 |----------|-------------|  
-|モデル ルート|空白|  
-|マージナル統計|空白|  
-|入力層|空白|  
+|モデル ルート|新規|  
+|マージナル統計|新規|  
+|入力層|新規|  
 |入力ノード|入力属性名|  
-|hidden layer|空白|  
-|出力層|空白|  
+|hidden layer|新規|  
+|出力層|新規|  
 |出力ノード|出力属性名|  
   
  NODE_NAME  
@@ -109,12 +108,12 @@ ms.locfileid: "66083621"
   
 |Node|コンテンツ|  
 |----------|-------------|  
-|モデル ルート|空白|  
-|マージナル統計|空白|  
-|入力層|空白|  
+|モデル ルート|新規|  
+|マージナル統計|新規|  
+|入力層|新規|  
 |入力ノード|入力属性名|  
-|hidden layer|空白|  
-|出力層|空白|  
+|hidden layer|新規|  
+|出力層|新規|  
 |出力ノード|出力属性が連続属性の場合は、出力属性名が含まれます。<br /><br /> 出力属性が不連続属性または分離された属性の場合は、出力属性名と値が含まれます。|  
   
  NODE_RULE  
@@ -122,12 +121,12 @@ ms.locfileid: "66083621"
   
 |Node|コンテンツ|  
 |----------|-------------|  
-|モデル ルート|空白|  
-|マージナル統計|空白|  
-|入力層|空白|  
+|モデル ルート|新規|  
+|マージナル統計|新規|  
+|入力層|新規|  
 |入力ノード|NODE_DESCRIPTION 列と同じ情報が含まれている XML フラグメント。|  
-|hidden layer|空白|  
-|出力層|空白|  
+|hidden layer|新規|  
+|出力層|新規|  
 |出力ノード|NODE_DESCRIPTION 列と同じ情報が含まれている XML フラグメント。|  
   
  MARGINAL_RULE  
@@ -153,12 +152,12 @@ ms.locfileid: "66083621"
  MSOLAP_MODEL_COLUMN  
  |Node|コンテンツ|  
 |----------|-------------|  
-|モデル ルート|空白|  
-|マージナル統計|空白|  
-|入力層|空白|  
+|モデル ルート|新規|  
+|マージナル統計|新規|  
+|入力層|新規|  
 |入力ノード|入力属性名。|  
-|hidden layer|空白|  
-|出力層|空白|  
+|hidden layer|新規|  
+|出力層|新規|  
 |出力ノード|入力属性名。|  
   
  MSOLAP_NODE_SCORE  

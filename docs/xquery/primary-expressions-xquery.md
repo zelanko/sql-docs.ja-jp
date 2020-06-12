@@ -1,5 +1,6 @@
 ---
 title: プライマリ式 (XQuery) |Microsoft Docs
+description: リテラル、変数参照、コンテキスト項目式、コンストラクター、および関数呼び出しを含む XQuery のプライマリ式について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efa06923eeceff312def44ff13ab12b8371439c7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74200511"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529784"
 ---
 # <a name="primary-expressions-xquery"></a>原始式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "74200511"
 ## <a name="literals"></a>リテラル  
  XQuery リテラルには、数値または文字列リテラルを指定できます。 文字列リテラルには、定義済みのエンティティ参照を含めることができます。エンティティ参照は文字のシーケンスです。 シーケンスは、構文上意味を持つことも考えられる 1 文字を表すアンパサンドで始まります。 次に、XQuery の定義済みエンティティ参照を示します。  
   
-|エンティティ参照|表す内容|  
+|エンティティ参照|表現|  
 |----------------------|----------------|  
 |`&lt;`|\<|  
 |`&gt;`|>|  
@@ -42,12 +43,12 @@ ms.locfileid: "74200511"
 |`&quot;`|"|  
 |`&apos;`|'|  
   
- 文字列リテラルには、10進数または16進数のコードポイントによって識別される、Unicode 文字への XML スタイルの参照である文字参照を含めることもできます。 たとえば、"&\#8364;" という文字参照では、ユーロ記号を表すことができます。  
+ 文字列リテラルには、10進数または16進数のコードポイントによって識別される、Unicode 文字への XML スタイルの参照である文字参照を含めることもできます。 たとえば、"&8364;" という文字参照では、ユーロ記号を表すことができ \# ます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、XML Version 1.0 が解析の基準として使用されます。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  次の例では、リテラルと、エンティティと文字の参照の使用方法を示します。  
   
  '`<'` 文字、および `'>`' 文字には特別な意味があるため、このコードはエラーを返します。  
@@ -156,7 +157,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
 ## <a name="context-item-expressions"></a>コンテキスト項目の式  
  コンテキスト項目は、パス式のコンテキストで現在処理されている項目です。 これは、ドキュメントノードを持つ NULL でない XML データ型のインスタンスで初期化されます。 また、XPath 式または [] 述語のコンテキストで nodes () メソッドを使用して変更することもできます。  
   
- コンテキスト アイテムはドット (.) を含む式によって返されます。 たとえば、次のクエリでは、属性`a` `attr`の存在について> <各要素を評価します。 属性が存在する場合は、要素が返されます。 述語の条件では、コンテキストノードが1つのピリオドで指定されることを指定します。  
+ コンテキスト アイテムはドット (.) を含む式によって返されます。 たとえば、次のクエリでは、 `a` 属性の存在について> <各要素を評価し `attr` ます。 属性が存在する場合は、要素が返されます。 述語の条件では、コンテキストノードが1つのピリオドで指定されることを指定します。  
   
 ```  
 DECLARE @var XML  

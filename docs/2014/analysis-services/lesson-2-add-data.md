@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e18298e152089f361faa839228415909133663f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078972"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543454"
 ---
 # <a name="lesson-2-add-data"></a>レッスン 2: データを追加する
   このレッスンでは、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] のテーブルのインポート ウィザードを使用して、AdventureWorksDW SQL データベースに接続し、データを選択し、プレビューして、データをフィルター処理した後、それらのデータをモデル ワークスペース内にインポートします。  
@@ -39,7 +38,7 @@ ms.locfileid: "66078972"
   
 2.  **テーブルのインポート ウィザード**の **[リレーショナル データベース]** で **[Microsoft SQL Server]** をクリックし、 **[次へ]** をクリックします。  
   
-3.  [ **Microsoft SQL Server データベースへの接続**] ページで、[**接続**の表示名`Adventure Works DB from SQL`] に「」と入力します。  
+3.  [ **Microsoft SQL Server データベースへの接続**] ページで、[接続の表示**名**] に「」と入力 `Adventure Works DB from SQL` します。  
   
 4.  **[サーバー名]** に、AdventureWorksDW データベースをインストールしたサーバーの名前を入力します。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66078972"
     |-----------------|-------------------|  
     |DimDate|日付|  
     |DimGeography|[地理的な場所]|  
-    |DimProduct|Product|  
+    |DimProduct|製品|  
     |DimProductCategory|製品カテゴリ|  
     |DimProductSubcategory|Product Subcategory|  
     |FactInternetSales|Internet Sales|  
@@ -109,7 +108,7 @@ ms.locfileid: "66078972"
     |**FrenchCountryRegionName**|  
     |**IpAddressLocator**|  
   
-    |Product|  
+    |製品|  
     |-------------|  
     |**SpanishProductName**|  
     |**FrenchProductName**|  

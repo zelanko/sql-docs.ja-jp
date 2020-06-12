@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f86ba3b79638c73c403b208158ceb72500eaf5bf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079446"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543671"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI フォーム エディター (キューブ デザイナーの [KPI] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[KPI]** タブの **KPI フォーム エディター** ペインを使用すると、選択した主要業績評価指標 (KPI) を変更したり作成したりできます。  

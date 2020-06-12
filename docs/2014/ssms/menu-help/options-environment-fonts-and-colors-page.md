@@ -10,19 +10,19 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21c4f3a480b039b4853c112831341b6448a7d6a7
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211254"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859384"
 ---
 # <a name="options-environment-fonts-and-colors-page"></a>[オプション] ([環境]:[フォントおよび色] ページ)
   **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のさまざまなユーザー インターフェイス要素にカスタム フォントや配色を設定できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して、 **[フォントおよび色]** を選択します。  
   
  配色を変更するセッション中は、変更は適用されません。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の別のインスタンスを開き、変更が適用されると思われる条件を作ることで、色の変更を確認できます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[設定の表示]**  
  フォントと配色を変更できるユーザー インターフェイス要素がすべて一覧表示されます。 この一覧で項目を選択した後、選択した項目の色設定を **[表示項目]** でカスタマイズします。  
   

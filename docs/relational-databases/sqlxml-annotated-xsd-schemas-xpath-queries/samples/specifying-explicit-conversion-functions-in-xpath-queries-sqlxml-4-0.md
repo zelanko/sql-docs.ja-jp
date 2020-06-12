@@ -1,5 +1,6 @@
 ---
 title: XPath クエリで変換関数を使用する (SQLXML)
+description: SQLXML 4.0 XPath クエリで、明示的な変換関数 string () および number () を指定する方法について説明します。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58611edabcfeaeb9a97de3da6c7305fb169c14ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f38cb1b18b096fe73f9d6b587162e7fcbe6f69a8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252562"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529900"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>XPath クエリでの明示変換関数の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "75252562"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. number() 明示変換関数を使用する  
  **Number ()** 関数は、引数を数値に変換します。  
   
- **ContactID**の値が数値以外の場合、次のクエリは**ContactID**を数値に変換し、値4と比較します。 次に、クエリは、コンテキストノードのすべて** \<の Employee>** 子要素を返します。この属性には、数値4を持つ**ContactID**属性があります。  
+ **ContactID**の値が数値以外の場合、次のクエリは**ContactID**を数値に変換し、値4と比較します。 次に、クエリは **\<Employee>** コンテキストノードのすべての子要素を返します。 **ContactID**属性の数値は4です。  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -81,7 +82,7 @@ ms.locfileid: "75252562"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. string() 明示変換関数を使用する  
  **String ()** 関数は、引数を文字列に変換します。  
   
- 次のクエリでは、 **ContactID**を文字列に変換し、文字列値 "4" と比較します。 このクエリでは、コンテキストノードのすべて** \<の Employee>** 要素の子が、文字列値 "4" の**ContactID**が返されます。  
+ 次のクエリでは、 **ContactID**を文字列に変換し、文字列値 "4" と比較します。 このクエリは、 **\<Employee>** コンテキストノードのすべての子要素を返します。文字列値が "4" の**ContactID**が返されます。  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

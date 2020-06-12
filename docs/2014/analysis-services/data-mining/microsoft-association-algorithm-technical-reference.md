@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ca9eab174a146ebd4dcd38d682fd52ee9e820ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084129"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522121"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft アソシエーション アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムは、よく知られている Apriori アルゴリズムの直接的な実装です。  
@@ -73,7 +72,7 @@ ms.locfileid: "66084129"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与えるいくつかのパラメーターがサポートされています。  
   
 ### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定  
- マイニング モデルのパラメーターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーを使用していつでも変更できます。 AMO の<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>コレクションを使用するか、XMLA の[MiningModels 要素 &#40;assl&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl)を使用することによって、プログラムでパラメーターを変更することもできます。 次の表では、各パラメーターについて説明します。  
+ マイニング モデルのパラメーターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーを使用していつでも変更できます。 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>AMO のコレクションを使用するか、XMLA の[MiningModels 要素 &#40;assl&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl)を使用することによって、プログラムでパラメーターを変更することもできます。 次の表では、各パラメーターについて説明します。  
   
 > [!NOTE]  
 >  DMX ステートメントを使用して、既存のモデルのパラメーターを変更することはできません。DMX CREATE MODEL または ALTER STRUCTURE でパラメーターを指定する必要があります...モデルを作成するときにモデルを追加します。  
@@ -153,7 +152,7 @@ ms.locfileid: "66084129"
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 (データ マイニング)](content-types-data-mining.md)」を参照してください。  
   
-|列|コンテンツの種類|  
+|Column|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Cyclical、Discrete、Discretized、Key、Table、Ordered|  
 |予測可能な属性|Cyclical、Discrete、Discretized、Table、Ordered|  

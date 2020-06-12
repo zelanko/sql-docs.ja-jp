@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73967427b97a00d88b3d6c372a0228aa28c2024c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b55e940f75319a965fb1441520a7e16ce7ab2f6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387912"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545310"
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>キューブ セル (Analysis Services - 多次元データ)
   キューブはメジャー グループとディメンションで編成されたセルで構成されています。 セルは、キューブ内の各ディメンションの 1 メンバーのキューブ内の論理的な一意の交差部分を表します。 たとえば、次のダイアグラムで示すキューブには、Source、Route、Time という 3 つのディメンションで編成された 2 つのメジャーを持つメジャー グループが 1 つ含まれています。  
@@ -76,7 +75,7 @@ ms.locfileid: "81387912"
   
  ![空のセルを示すキューブ図](../../analysis-services/dev-guide/media/as-cubeintro7.gif "空のセルを示すキューブ図")  
   
- で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、空のセルは特殊な品質を持つセルです。 空のセルは、相互結合、カウントなどの結果を非対称にできるため、多くの MDX 関数は、計算のために空のセルを無視する機能を提供しています。 詳細については、「 [mdx&#41; 参照 &#40;の多次元式](/sql/mdx/multidimensional-expressions-mdx-reference)」および「 [mdx &#40;Analysis Services&#41;の主要概念](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)」を参照してください。  
+ では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、空のセルは特殊な品質を持つセルです。 空のセルは、相互結合、カウントなどの結果を非対称にできるため、多くの MDX 関数は、計算のために空のセルを無視する機能を提供しています。 詳細については、「 [mdx&#41; 参照 &#40;の多次元式](/sql/mdx/multidimensional-expressions-mdx-reference)」および「 [mdx &#40;Analysis Services&#41;の主要概念](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)」を参照してください。  
   
 ## <a name="security"></a>セキュリティ  
  セル データへのアクセスは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のロール レベルで管理され、MDX 式を使用して細かく制御できます。 詳細については、「[ディメンションデータへのカスタムアクセス権の付与 &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)」および「[セルデータへのカスタムアクセス権の付与 &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)」を参照してください。  

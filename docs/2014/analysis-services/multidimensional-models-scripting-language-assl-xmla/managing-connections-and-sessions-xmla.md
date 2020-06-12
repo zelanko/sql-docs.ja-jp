@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bfe876f6874193fd0885f16d91caa9f6fe8b172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62701994"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544944"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>接続およびセッションの管理 (XMLA)
   *状態保持*は、サーバーがメソッド呼び出し間でクライアントの id とコンテキストを保持する条件です。 *状態*は、メソッドの呼び出しが完了した後に、サーバーがクライアントの id とコンテキストを記憶しない条件です。  
@@ -45,7 +44,7 @@ ms.locfileid: "62701994"
 |-----------------|-----------------|  
 |BeginSession|プロバイダーに新しいセッションの作成を要求します。 プロバイダーは、新しいセッションを作成し、SOAP 応答の Session ヘッダーの一部としてセッション ID を返すことによって応答します。|  
 |SessionId|値域には、セッションの残りの部分での各メソッド呼び出しで使用する必要のあるセッション ID が含まれます。 プロバイダーは SOAP 応答の中でこのタグを送信します。クライアントも、Session ヘッダー要素ごとに、この属性を送信する必要があります。|  
-|Session|このヘッダーは、セッションで生じるメソッド呼び出しごとに使用する必要があります。値域にはセッション ID が含まれている必要があります。|  
+|セッション|このヘッダーは、セッションで生じるメソッド呼び出しごとに使用する必要があります。値域にはセッション ID が含まれている必要があります。|  
 |EndSession|セッションを終了するには、このヘッダーを使用します。 セッション ID がこの値域に含まれている必要があります。|  
   
 > [!NOTE]  
@@ -72,7 +71,7 @@ ms.locfileid: "62701994"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  プロバイダーからの SOAP 応答メッセージには、XMLA ヘッダータグ\<SessionId> を使用して、返されるヘッダー領域にセッション ID が含まれています。  
+2.  プロバイダーからの SOAP 応答メッセージには、XMLA ヘッダータグを使用して、リターンヘッダー領域にセッション ID が含まれてい \<SessionId> ます。  
   
     ```  
     <SOAP-ENV:Header>  
@@ -93,7 +92,7 @@ ms.locfileid: "62701994"
     </SOAP-ENV:Header>  
     ```  
   
-4.  セッションが完了すると、関連\<するセッション ID 値を含む endsession> タグが使用されます。  
+4.  セッションが完了すると、 \<EndSession> 関連するセッション ID 値を含むタグが使用されます。  
   
     ```  
     <SOAP-ENV:Header>  

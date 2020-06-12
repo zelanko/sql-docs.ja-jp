@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 776de6d17b1e17197b331f9578da018b740f0138
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084218"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522188"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>マイニング モデルのコピーの作成
   マイニング モデルのコピーの作成は、同じデータに基づいて複数のマイニング モデルをすばやく作成する場合に便利です。 モデルをコピーした後で、パラメーターを変更したり、フィルターを追加したりすることで、新しいコピーを編集できます。  
@@ -53,7 +52,7 @@ ms.locfileid: "66084218"
   
      フィルター エディターのダイアログ ボックスの使用方法の詳細については、「 [マイニング モデルへのフィルターの適用](apply-a-filter-to-a-mining-model.md)」を参照してください。  
   
-4.  [**プロパティ**] ウィンドウの`AlgorithmParameters`テキストボックスで、[ **setalgorithm パラメーター**] をクリックし、必要に応じてアルゴリズムパラメーターを変更します。  
+4.  [**プロパティ**] ウィンドウの `AlgorithmParameters` テキストボックスで、[ **setalgorithm パラメーター**] をクリックし、必要に応じてアルゴリズムパラメーターを変更します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

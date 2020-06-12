@@ -1,5 +1,6 @@
 ---
 title: 'Sql: limit-field および sql: limit-value (SQLXML) を使用したフィルター処理'
+description: 'SQLXML 4.0 で sql: limit-field および sql: limit-value 注釈を使用して、制限値に基づいてクエリによって返されるデータをフィルター処理する方法について説明します。'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0304b2113e6112f5c2777478ae03436d9f24cfb1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8bc7636fb13674b51290417ee9eb639a6633bd3
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257409"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689405"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field および sql:limit-value を使用した、値のフィルター選択 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "75257409"
 > [!NOTE]  
 >  マップされた SQL 列が**real**型である**sql: limit フィールド**を使用すると、SQLXML 4.0 は XML スキーマで指定されている**sql: limit-値**に対して、 **nvarchar**指定値として変換を実行します。 ここで、10 進数の制限値を完全な科学的表記法で指定する必要があります。 詳細については、後の例 B を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例を使用して実際のサンプルを作成するには、次がインストールされている必要があります。  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  

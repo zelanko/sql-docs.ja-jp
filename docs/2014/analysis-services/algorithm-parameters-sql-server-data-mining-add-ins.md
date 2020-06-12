@@ -46,20 +46,19 @@ helpviewer_keywords:
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d89f8e1724875268e27a29c2df9053704f0883d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062596"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528128"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>アルゴリズム パラメーター (SQL Server データ マイニング アドイン)
   Excel 用のテーブル分析ツールを使用してデータ マイニングを実行する場合は、データ マイニングのアルゴリズムまたはパラメーターを構成する必要はありません。各ツールによってデータが分析され、最適なパラメーターが自動的に選択されます。 ただし、モデルを修正する場合や、マイニング モデルを最初から作成する場合に備えて、Excel 用のデータ マイニング クライアントにはカスタマイズのためのオプションがいくつか用意されています。  
   
 -   [**詳細設定**] をクリックし、[**構造へのモデルの追加**] をクリックして、データマイニングモデルを手動で作成します。  
   
--   データマイニングクライアントのいずれかのモデリングウィザードを使用し、[**パラメーター** ] をクリックして[!INCLUDE[msCoName](../includes/msconame-md.md)]データマイニングアルゴリズムの動作を制御します。  
+-   データマイニングクライアントのいずれかのモデリングウィザードを使用し、[**パラメーター** ] をクリックしてデータマイニングアルゴリズムの動作を制御し [!INCLUDE[msCoName](../includes/msconame-md.md)] ます。  
   
 -   [**クエリ**] をクリックしてクエリモデルウィザードを開き、[**詳細設定**] をクリックして、**データマイニング詳細クエリエディター**を開きます。 このエディターでは、DMX テンプレートを使用してモデルを作成できます。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "66062596"
 |SPLIT_METHOD|Microsoft デシジョン ツリー アルゴリズム|ノードを分割するために使用する方法を決定します。 指定可能なオプションは、バイナリ (1)、完全 (2)、または両方 (3) です。<br /><br /> 既定値は 3 です。|  
 |STOPPING_TOLERANCE|Microsoft クラスタリング アルゴリズム テクニカル リファレンス|収束に到達し、アルゴリズムによるモデルの作成が完了する時点を決定するための値を指定します。 収束に到達するのは、クラスターの確率の全体的な変化が、モデルのサイズで除算された STOPPING_TOLERANCE パラメーターの比率に満たないときです。<br /><br /> 既定値は 10 です。|  
   
-### <a name="comments"></a>備考  
+### <a name="comments"></a>コメント  
  アルゴリズムの詳細については、SQL Server オンライン ブックを参照してください。  
   
 ## <a name="see-also"></a>参照  

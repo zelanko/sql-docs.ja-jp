@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 589a1f64a3bed5455f8004e51f6cddf84e83fec5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088033"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527588"
 ---
 # <a name="choosing-data-for-data-mining"></a>データ マイニングで使用するデータの選択
   データマイニングを開始するときに、「必要なデータ量」とたずねられる場合があります。 または、データのクリーニングや書式設定を行うときに、特別な要件はありますか。  
@@ -160,7 +159,7 @@ ms.locfileid: "66088033"
   
 -   [[Excel 用 &#40;データマイニングアドイン&#41;](advanced-modeling-data-mining-add-ins-for-excel.md) ] オプションを使用して Naive Bayes モデルを作成した場合、数値列はモデルから削除されます。 これを回避するには、[[データマイニングアドインのラベル付け &#40;SQL Server]&#41;](relabel-sql-server-data-mining-add-ins.md)ツールを使用して、ビン分割された値を持つ新しい列を作成します。  
   
- **クラスターモデル**  
+ **クラスター モデル**  
   
 -   クラスター化ツール ([クラスターウィザード &#40;excel 用のデータマイニングアドイン&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)および[検出カテゴリ &#40;&#41;Excel 用のテーブル分析ツール](detect-categories-table-analysis-tools-for-excel.md)) では、連続する数値を使用することはできませんが、これらのツールはどちらも数値列を自動的にビン分割します。  
   
@@ -177,7 +176,7 @@ ms.locfileid: "66088033"
 ### <a name="using-content-types-to-make-better-models"></a>より適切なモデルを作成するコンテンツの種類の使用  
  *コンテンツタイプ*は、列に適用するプロパティであり、モデルでの列データの使用方法を指定します。 アルゴリズムは、分析を実行するときに、コンテンツの種類を説明またはヒントとして使用することができます。  
   
- たとえば、ある曜日を示すために特定の間隔で繰り返される数値が列に含まれている場合は、その列のコンテンツの種類を`Cyclical`として指定できます。  
+ たとえば、ある曜日を示すために特定の間隔で繰り返される数値が列に含まれている場合は、その列のコンテンツの種類をとして指定でき `Cyclical` ます。  
   
  このアドインに用意されているウィザードやツールを使用する場合、コンテンツの種類について心配する必要はありません。ただし、[[構造にモデルを追加 &#40;、Excel 用データマイニングアドイン]&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md)モデリングオプションを使用して新しいモデルを既存のデータに追加すると、コンテンツの種類に関連するエラーが表示されることがあります。  
   
@@ -193,7 +192,7 @@ ms.locfileid: "66088033"
  `Continuous`  
  この列には、小数点以下桁数で中間値を示すことができる数値データの値が格納されます。 連続列は無限の小数部が含まれる可能性のある計測可能な測定値を表します。 連続した属性列の例としては気温の列があります。  
   
- コンテンツ`Continuous`の種類は`Date`、 `Double`、、および`Long`の各データ型で使用できます。  
+ `Continuous`コンテンツの種類は、、 `Date` 、およびの各データ型で使用できます `Double` `Long` 。  
   
  `Discretized`  
  列には、連続列から派生した値のグループを表す値が格納されます。 バケットは、**順序付き**の不連続値として扱われます。  
@@ -205,7 +204,7 @@ ms.locfileid: "66088033"
   
  一般的に、key 列には、分析には使用できない、レコードを追跡するためだけに使用される数値またはテキストの識別子が格納されます。 タイム シリーズ キーとシーケンス キーは例外です。  
   
- **入れ子になったテーブルキー**は、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データソースビューとして定義されている外部データソースからデータを取得する場合にのみ使用されます。 入れ子になったテーブルの詳細に[https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx)ついては、以下を参照してください。  
+ **入れ子になったテーブルキー**は、データソースビューとして定義されている外部データソースからデータを取得する場合にのみ使用され [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 入れ子になったテーブルの詳細については、以下を参照してください [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx) 。  
   
  このコンテンツの種類は、`Date`、`Double`、`Long`、および `Text` データ型で使用できます。  
   

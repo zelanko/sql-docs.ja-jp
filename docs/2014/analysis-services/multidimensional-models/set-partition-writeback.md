@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d6056fcd26a8fdef16d17178cd12e8d5f27e97c6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072902"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547384"
 ---
 # <a name="set-partition-writeback"></a>パーティションの書き戻しの設定
   メジャー グループを書き込み許可にすると、エンド ユーザーはキューブを参照しているときにキューブ データを変更できます。この場合、変更内容は、キューブ データやソース データではなく、書き戻しテーブルという別個のテーブルに保存されます。 書き込み許可パーティションを参照しているエンド ユーザーは、そのパーティションの書き戻しテーブルを見れば、すべての変更の最終結果を確認できます。  

@@ -1,5 +1,6 @@
 ---
 title: sp_droppublication (Transact-sql) |Microsoft Docs
+description: パブリケーションおよびこれと関連するスナップショット エージェントを削除します。 このストアドプロシージャは、パブリッシャー側のパブリケーションデータベースで実行されます。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ef56f46696a2cb145804105d4d5f22fded6fe1f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 46faa94ed9a85433b9212856ea5d95f43fb01972
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830014"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807793"
 ---
 # <a name="sp_droppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ sp_droppublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_droppublication**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  **sp_droppublication**は、パブリケーションに関連付けられているすべてのアーティクルを再帰的に削除してから、パブリケーション自体を削除します。 パブリケーションに1つ以上のサブスクリプションがある場合は、パブリケーションを削除できません。 サブスクリプションを削除する方法の詳細については、「 [delete a Push subscription](../../relational-databases/replication/delete-a-push-subscription.md) 」および「 [Delete a Pull subscription](../../relational-databases/replication/delete-a-pull-subscription.md)」を参照してください。  

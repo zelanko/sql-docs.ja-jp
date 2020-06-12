@@ -1,5 +1,6 @@
 ---
 title: アクセスのための SQL Server Migration Assistant のインストール (アクセス可能な SQL) |Microsoft Docs
+description: SQL Server Migration Assistant (SSMA) にアクセスするためのインストールの前提条件と、インストール、ライセンス、アップグレード、およびアンインストールの方法について説明します。
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -22,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ca42e406bb7483617afe6364027014650e838f2
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79111906"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293759"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>アクセスのための SQL Server Migration Assistant のインストール (アクセス可能な SQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access の Migration Assistant (ssma) は、Windows インストーラーベースのウィザードを使用してインストールされます。 このトピックでは、インストールの前提条件、SSMA の最新バージョンへのリンク、SSMA のインストール、ライセンス、アンインストール、およびアップグレードの手順について説明します。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Access の Migration Assistant (SSMA) は、Windows インストーラーベースのウィザードを使用してインストールされます。 このトピックでは、インストールの前提条件、SSMA の最新バージョンへのリンク、SSMA のインストール、ライセンス、アンインストール、およびアップグレードの手順について説明します。  
   
 ## <a name="prerequisites"></a>前提条件  
 SSMA をインストールする前に、システムが次の要件を満たしていることを確認してください。  
@@ -39,9 +40,9 @@ SSMA をインストールする前に、システムが次の要件を満たし
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows インストーラー3.1 以降のバージョン。  
   
--   .NET Framework [!INCLUDE[msCoName](../../includes/msconame_md.md)]バージョン4.0 以降のバージョン。 .NET Framework バージョン4.0 は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]製品ディスクと、 [Microsoft .NET ガイド](https://docs.microsoft.com/dotnet/framework/)の情報を使用して入手できます。
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)].NET Framework バージョン4.0 以降のバージョン。 .NET Framework バージョン4.0 は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品ディスクと、 [Microsoft .NET ガイド](https://docs.microsoft.com/dotnet/framework/)の情報を使用して入手できます。
   
--   にアクセスし、データベースオブジェクトとデータの移行先となる、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure DB のターゲットインスタンスをホストするコンピューターに対する十分なアクセス許可を付与します。  
+-   にアクセスし、データベースオブジェクトとデータの移行先となる、SQL Azure DB のターゲットインスタンスをホストするコンピューターに対する十分なアクセス許可を付与し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 -   Microsoft Data Access Object (DAO) プロバイダーバージョン12.0 または14.0。 Microsoft Office 2010/2007 製品から DAO プロバイダーをインストールするか、Microsoft web サイトからダウンロードすることができます。  
   
