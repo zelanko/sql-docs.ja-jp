@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57fe740bdd02c96eb21994f5996c734620793616
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da4e685a1ebc05e27070873b12de99e8cc480a31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079838"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543874"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>ブックのアップグレードと定期データ更新 (SharePoint 2013)
   このトピックでは、以前の PowerPivot 環境で作成されたブックのユーザー エクスペリエンスについて、およびこのリリースで導入された新機能を利用できるよう、PowerPivot ブックをアップグレードする方法について説明します。 新機能の詳細については、「 [PowerPivot の新](https://go.microsoft.com/fwlink/?LinkID=203917)機能」を参照してください。  
@@ -23,7 +22,7 @@ ms.locfileid: "66079838"
 > [!WARNING]  
 >  サーバーで自動的にアップグレードされるブックのアップグレードをロールバックすることはできません。 ブックのアップグレードが完了すると、アップグレードされた状態のままになります。 以前のバージョンを使用するには、以前のブックを SharePoint に再パブリッシュするか、以前のバージョンを復元するか、ブックを再利用します。 SharePoint でのドキュメントの復元または再利用の詳細については、「 [ごみ箱とバージョン管理を使用したコンテンツ保護を計画する](https://go.microsoft.com/fwlink/?LinkId=238669)」を参照してください。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
 -   [ブックのアップグレードの概要](#bkmk_overview)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66079838"
 |----------------|--------|--------------------------|--------|  
 ||**SQL Server 2008 R2 の PowerPivot for SharePoint 2010**|**SQL Server 2012 の PowerPivot for SharePoint 2010**|**SQL Server 2012 SP1 の PowerPivot for SharePoint 2013**|  
 |**2008 R2 PowerPivot for Excel 2010**|すべての機能|**エクスペリエンス:** ユーザーはブラウザーでブックを操作し、他のソリューションのデータ ソースとして使用できます。<br /><br /> **アップグレード:** SharePoint ファームの PowerPivot System サービスで自動アップグレードが有効になっている場合、ドキュメント ライブラリのブックが自動アップグレードされます。<br /><br /> **定期データ更新:** サポートされていません。 ブックをアップグレードする必要があります。|**エクスペリエンス:** ユーザーはブックを操作し、他のソリューションのデータ ソースとして使用できます。<br /><br /> **アップグレード:** 自動アップグレードは使用できません。 SQL Server 2008 R2 ブックを、2012 バージョンまたは Office 2013 バージョンに手動でアップグレードする必要があります。<br /><br /> **定期データ更新:** サポートされていません。 ブックをアップグレードする必要があります。|  
-|**2012 PowerPivot for Excel**|サポートされていません。|すべての機能|**エクスペリエンス:** ユーザーはブラウザーでブックを操作し、他のソリューションのデータ ソースとして使用できます。 定期データ更新を使用できます。<br /><br /> **アップグレード:** 自動アップグレードはサポートされていません。 手動でブックを Office 2013 バージョンにアップグレードできます。<br /><br /> **定期データ更新:** サポートされています。|  
+|**2012 PowerPivot for Excel**|サポートされていません|すべての機能|**エクスペリエンス:** ユーザーはブラウザーでブックを操作し、他のソリューションのデータ ソースとして使用できます。 定期データ更新を使用できます。<br /><br /> **アップグレード:** 自動アップグレードはサポートされていません。 手動でブックを Office 2013 バージョンにアップグレードできます。<br /><br /> **定期データ更新:** サポートされています。|  
 |**Excel 2013**|サポートされていません|サポートされていません|すべての機能|  
   
 ##  <a name="upgrade-to-sql-server-2012-service-pack-1-sp1-workbooks-from-2008-r2-workbooks"></a><a name="bkmk_to_2012sp1_from_2008r2"></a> SQL Server 2008 R2 ブックから SQL Server 2012 Service Pack 1 (SP1) ブックへのアップグレード  

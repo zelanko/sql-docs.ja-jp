@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 019f0c2853006be8213d0f6766f9d462492b7105
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c8daa38dd1bda5c23d60478394cd1f6450d41ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175225"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543744"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio での Analysis Services テンプレートの使用
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、XMLA スクリプト、DMX クエリ、または MDX クエリの迅速な作成、キューブまたはテーブル モデルの KPI の作成、バックアップ操作および復元操作のスクリプト作成、および他の多数のタスクを実行するためのテンプレートのセットを提供します。 テンプレートは、 **の** テンプレート エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]にあります。
@@ -69,13 +68,13 @@ ms.locfileid: "78175225"
 
 3.  **メタデータ エクスプローラー**を使用して、次のフィールドとメジャーをクエリ テンプレートにドラッグします。
 
-    1.  Row_axis \<、mdx_set> を **[製品カテゴリ] に置換します。 [製品カテゴリ名]**。
+    1.  \<row_axis, mdx_set> **[Product Category]. [製品カテゴリ名]**。
 
-    2.  Column_axis \<、mdx_set> を **[Date]. [に置換します。Calendar Year]。[Calendar Year]**。
+    2.  \<column_axis, mdx_set> **[Date]. [Calendar Year]。[Calendar Year]**。
 
-    3.  From_clause \<、mdx_name> を **[Internet Sales]** に置き換えます。
+    3.  \<from_clause, mdx_name> **[Internet Sales]** で置き換えます。
 
-    4.  \<Where_clause、mdx_set> を **[Measures]. [Internet Total Sales]**。
+    4.  \<where_clause, mdx_set> **[Measures]. [Internet Total Sales]**。
 
 4.  クエリはそのまま実行できますが、特定のメンバーを返す関数を追加するなど、変更を加えることもできます。 たとえば、 `.members` **[Product Category]. [の後に「」と入力します。製品カテゴリ名]**。 詳細については、「 [メンバー式の使用](/sql/mdx/using-member-expressions)」をご覧ください。
 
@@ -99,13 +98,13 @@ ms.locfileid: "78175225"
     > [!WARNING]
     >  制限リストを変更することで、または接続ダイアログでデータベースを指定することで、XMLA クエリのコンテキストを設定することはできません。 クエリを行うデータベースから XMLA クエリ ウィンドウを開く必要があります。
 
-2.  テンプレートを`Backup`空のクエリウィンドウにドラッグします。
+2.  テンプレートを `Backup` 空のクエリウィンドウにドラッグします。
 
-3.  \<DatabaseID> 要素内のテキストをダブルクリックします。
+3.  要素内のテキストをダブルクリックし \<DatabaseID> ます。
 
 4.  オブジェクト エクスプローラーで、バックアップするデータベースを選択し、DatabaseID 要素の角かっこの間にデータベースをドラッグ アンド ドロップします。
 
-5.  \<ファイル> 要素内のテキストをダブルクリックします。 ファイル拡張子として .abf を使用し、バックアップ ファイル名を入力します。 既定のバックアップの場所を使用しない場合は、ファイルの完全パスを指定します。 詳細については、「[データベースのバックアップ、復元、および同期 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)」をご覧ください。
+5.  要素内のテキストをダブルクリックし \<File> ます。 ファイル拡張子として .abf を使用し、バックアップ ファイル名を入力します。 既定のバックアップの場所を使用しない場合は、ファイルの完全パスを指定します。 詳細については、「[データベースのバックアップ、復元、および同期 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)」をご覧ください。
 
 ##  <a name="generate-a-schema-rowset-query-using-an-xmla-template"></a><a name="bkmk_schemarowset"></a>XMLA テンプレートを使用してスキーマ行セットクエリを生成する
  **テンプレート エクスプローラー** には、スキーマ行セット クエリのテンプレートが 1 つだけ含まれています。 このテンプレートを使用するには、必要な要素、制限として使用できる列など、使用する個々のスキーマ行セットの要件を把握している必要があります。 詳細については、「 [Analysis Services のスキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)」をご覧ください。
@@ -167,12 +166,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 
 |カテゴリ|項目テンプレート|説明|
 |--------------|-------------------|-----------------|
-|DMX\モデル コンテンツ|コンテンツ クエリ|DMX SELECT FROM * \<model>* を使用する方法を示します。指定されたマイニングモデルのマイニングモデルスキーマ行セットの内容を取得するためのコンテンツステートメント。|
-||連続列値|Dmx SELECT DISTINCT FROM * \<model>* ステートメントを dmx `RangeMin`関数および`RangeMax`関数と共に使用して、指定されたマイニングモデルの連続列から指定された範囲の値のセットを取得する方法を示します。|
-||不連続列値|DMX SELECT DISTINCT from * \<model>* ステートメントを使用して、指定されたマイニングモデルの不連続列から値の完全なセットを取得する方法を示します。|
+|DMX\モデル コンテンツ|コンテンツ クエリ|DMX SELECT FROM を使用する方法を示し *\<model>* ます。指定されたマイニングモデルのマイニングモデルスキーマ行セットの内容を取得するためのコンテンツステートメント。|
+||連続列値|Dmx SELECT DISTINCT FROM ステートメントを DMX 関数および関数と共に使用して、指定された *\<model>* `RangeMin` `RangeMax` マイニングモデルの連続列から指定された範囲の値のセットを取得する方法を示します。|
+||不連続列値|DMX SELECT DISTINCT FROM ステートメントを使用して、 *\<model>* 指定されたマイニングモデルの不連続列から値の完全なセットを取得する方法を示します。|
 ||ドリルスルー クエリ|DMX SELECT * FROM Model.CASES ステートメントを DMX IsInNode 関数と共に使用してドリルスルー クエリを実行する方法を示します。|
 ||モデル属性|DMX System.GetModelAttributes 関数を使用して、モデルで使用される属性の一覧を返す方法を示します。|
-||PMML コンテンツ|DMX SELECT \* FROM * \<model>* を使用する方法を示します。この機能をサポートするアルゴリズムについて、予測モデルマークアップ言語 (PMML) のマイニングモデル表現を取得する PMML ステートメント。|
+||PMML コンテンツ|DMX SELECT FROM を使用する方法を示し \* *\<model>* ます。この機能をサポートするアルゴリズムについて、予測モデルマークアップ言語 (PMML) のマイニングモデル表現を取得する PMML ステートメント。|
 |DMX\モデル管理|モデルの追加|DMX ALTER MINING MODEL STRUCTURE ステートメントを使用してマイニング モデルを追加する方法を示します。|
 ||モデルの削除|DMX DELETE * FROM MINING MODEL ステートメントを使用して、指定されたマイニング モデルのコンテンツを削除する方法を示します。|
 ||構造ケースの削除|DMX DELETE FROM MINING STRUCTURE ステートメントを使用して、マイニング モデル構造ケースを削除する方法を示します。|
@@ -184,16 +183,16 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||構造の削除|DMX DROP MINING STRUCTURE ステートメントを使用して、既存のマイニング構造を削除する方法を示します。|
 ||モデルのエクスポート|DMX EXPORT MINING MODEL ステートメントで WITH DEPENDENCIES および PASSWORD 句を使用し、マイニング モデルが依存しているデータ ソースおよびデータ ソース ビューを含むマイニング モデルをファイルにエクスポートする方法を示します。|
 ||構造のエクスポート|DMX EXPORT MINING STRUCTURE ステートメントで WITH DEPENDENCIES 句を使用し、マイニング構造に含まれるすべてのマイニング モデルや、マイニング構造が依存しているデータ ソースおよびデータ ソース ビューなどのマイニング構造をファイルにエクスポートする方法を示します。|
-||[インポート]|DMX IMPORT FROM ステートメントで WITH PASSWORD 句を使用して、インポートを実行する方法を示します。|
+||インポート|DMX IMPORT FROM ステートメントで WITH PASSWORD 句を使用して、インポートを実行する方法を示します。|
 ||モデルの名前変更|DMX RENAME MINING MODEL ステートメントを使用して、既存のマイニング モデルの名前を変更する方法を示します。|
 ||構造名の変更|DMX RENAME MINING STRUCTURE ステートメントを使用して、既存のマイニング構造の名前を変更する方法を示します。|
 ||モデルのトレーニング|DMX INSERT INTO MINING MODEL ステートメントを使用して、以前にトレーニングした構造の内部のマイニング モデルをトレーニングする方法を示します。|
 ||入れ子になった構造のトレーニング|DMX INSERT INTO MINING STRUCTURE ステートメントを SHAPE ソース データ クエリと組み合わせ、クエリを使用して既存のデータ ソースから取得した、入れ子になったテーブルを含んでいるデータで、入れ子になった列を含んでいるマイニング モデルをトレーニングする方法を示します。|
 ||構造のトレーニング|DMX INSERT INTO MINING STRUCTURE 構造と OPENQUERY ソース データ クエリを組み合わせ、マイニング構造をトレーニングする方法を示します。|
-|DMX\予測クエリ|基本予測|DMX SELECT FROM * \<model>* 予測結合ステートメントを OPENQUERY ソースデータクエリと組み合わせ、既存のデータソースからクエリを使用して取得したデータを使用して、マイニングモデルに対して予測クエリを実行する方法を示します。|
-||入れ子になった予測|DMX SELECT FROM * \<model>* 予測結合ステートメントを SHAPE および OPENQUERY ソースデータクエリと組み合わせ、既存のデータソースからクエリを使用して取得した入れ子になったテーブルを含むデータを使用して、マイニングモデルに対して予測クエリを実行する方法を示します。|
-||入れ子になった単一予測|DMX SELECT FROM * \<model>* の自然予測結合句を使用して、予測クエリで明示的に指定された1つの値を使用して、マイニングモデル内の列と名前が一致する列、およびその名前がマイニングモデル内の入れ子になった列にも一致する、UNION ステートメントを使用して作成された入れ子になったテーブルの|
-||単一予測|DMX SELECT FROM \<model> の自然予測結合ステートメントを使用して、予測クエリで明示的に指定された単一の値を使用してマイニングモデルに対して予測クエリを実行する方法を示します。この列の名前は、マイニングモデルの列と一致します。|
+|DMX\予測クエリ|基本予測|DMX SELECT FROM *\<model>* 予測結合ステートメントを OPENQUERY ソースデータクエリと組み合わせ、既存のデータソースからクエリを使用して取得したデータを使用して、マイニングモデルに対して予測クエリを実行する方法を示します。|
+||入れ子になった予測|DMX SELECT FROM *\<model>* 予測結合ステートメントを SHAPE および OPENQUERY ソースデータクエリと組み合わせ、既存のデータソースからクエリを使用して取得した入れ子になったテーブルを含むデータを使用して、マイニングモデルに対して予測クエリを実行する方法を示します。|
+||入れ子になった単一予測|DMX SELECT FROM *\<model>* ナチュラル予測結合句を使用して、予測クエリで明示的に指定された単一の値を使用してマイニングモデルに対して予測クエリを実行する方法を示します。この列には、マイニングモデル内の列と名前が一致し、UNION ステートメントを使用して作成された、入れ子になったテーブル内の値の|
+||単一予測|DMX SELECT FROM \<model> ナチュラル予測結合ステートメントを使用して、予測クエリで明示的に指定された単一の値を使用してマイニングモデルに対して予測クエリを実行する方法を示します。この列の名前は、マイニングモデル内の列と一致します。|
 ||ストアド プロシージャ コール|DMX CALL ステートメントを使用してストアド プロシージャを呼び出す方法を示します。|
 |MDX\式|移動平均 - 固定|MDX `ParallelPeriod` 関数および `CurrentMember` 関数を自然な順序のセットと共に使用して、時間ディメンションの階層の一定期間においてメジャーの移動平均を提供する、計算メジャーの作成方法を示します。|
 ||移動平均 - 可変|`CASE` 関数内の MDX `Avg` ステートメントを使用して、時間ディメンションの階層の可変期間においてメジャーの移動平均を提供する、計算メジャーの作成方法を示します。|
@@ -205,8 +204,8 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||副選択クエリ|別の SELECT ステートメントによって定義されたサブキューブから情報を取得する MDX SELECT ステートメントを作成する方法を示します。|
 ||計算されるメンバーあり|SELECT ステートメントで MDX WITH 句を使用して、MDX クエリの計算メンバーを定義する方法を示します。|
 ||名前付きセットあり|SELECT ステートメントで MDX WITH 句を使用して、MDX クエリの名前付きセットを定義する方法を示します。|
-|XMLA\管理|バックアップ|XMLA `Backup` コマンドを使用して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをファイルにバックアップする方法を示します。|
-||Cancel|XMLA `Cancel` コマンドを使用して、現在のセッション、データベース、またはインスタンス上で実行しているすべての操作を取り消す方法を示します。現在のセッションは管理者またはサーバーの管理者以外のユーザー、データベースは管理者、インスタンスはサーバー管理者がキャンセルできます。|
+|XMLA\管理|Backup|XMLA `Backup` コマンドを使用して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをファイルにバックアップする方法を示します。|
+||キャンセル|XMLA `Cancel` コマンドを使用して、現在のセッション、データベース、またはインスタンス上で実行しているすべての操作を取り消す方法を示します。現在のセッションは管理者またはサーバーの管理者以外のユーザー、データベースは管理者、インスタンスはサーバー管理者がキャンセルできます。|
 ||リモート パーティション データベースの作成|XMLA `Create` コマンドを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] スクリプト言語 (ASSL) データベース要素と共に使用して、リモート パーティションを保存する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースおよびデータ ソースを作成する方法を示します。|
 ||削除|XMLA `Delete` コマンドを使用して、既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを削除する方法を示します。|
 ||ディメンションの処理|XMLA `Batch` コマンドを `Parallel` 要素および `Process` コマンドと組み合わせ、並列バッチ操作を使用してディメンションの属性を更新する方法を示します。|

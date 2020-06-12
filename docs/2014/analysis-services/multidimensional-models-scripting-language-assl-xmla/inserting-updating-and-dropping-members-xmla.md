@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98da3e0f7a9b61b178372d9b24b8b595ab6b6626
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aef124abc8398f1b314a391291b52340a90689ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727166"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544976"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>メンバーの挿入、更新、および削除 (XMLA)
   XML for Analysis (XMLA) の[insert](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)、 [Update](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)、および[Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)コマンドを使用して、書き込み許可ディメンションのメンバーをそれぞれ挿入、更新、または削除することができます。 書き込み許可ディメンションの詳細については、「[書き込み許可ディメンション](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)」を参照してください。  
@@ -75,13 +74,13 @@ ms.locfileid: "62727166"
     > [!NOTE]  
     >  `Attribute` 要素には、すべてのプロパティを含める必要があります。 そうでない場合、エラーが発生する可能性があります。  
   
--   [Where](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla)プロパティ。メンバーを更新する属性を`Attribute`制限する1つ以上の要素が含まれています。 プロパティ`Where`は、 `Update`コマンドをメンバーの特定のインスタンスに制限するために重要です。 `Where`プロパティが指定されていない場合は、特定のメンバーのすべてのインスタンスが更新されます。 たとえば、3 人の顧客について、都市名を Redmond から Bellevue に変更したいとします。 都市名を変更するには、変更する City 属性のメンバーに対して、Customer 属性の 3 つのメンバーを識別する `Where` プロパティを指定する必要があります。 この `Where` プロパティを指定せずに `Update` コマンドを実行すると、都市名が現在 Redmond であるすべての顧客について、都市名が Bellevue に変更されます。  
+-   [Where](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla)プロパティ `Attribute` 。メンバーを更新する属性を制限する1つ以上の要素が含まれています。 プロパティは、 `Where` `Update` コマンドをメンバーの特定のインスタンスに制限するために重要です。 `Where`プロパティが指定されていない場合は、特定のメンバーのすべてのインスタンスが更新されます。 たとえば、3 人の顧客について、都市名を Redmond から Bellevue に変更したいとします。 都市名を変更するには、変更する City 属性のメンバーに対して、Customer 属性の 3 つのメンバーを識別する `Where` プロパティを指定する必要があります。 この `Where` プロパティを指定せずに `Update` コマンドを実行すると、都市名が現在 Redmond であるすべての顧客について、都市名が Bellevue に変更されます。  
   
     > [!NOTE]  
-    >  新しいメンバーを除き、この`Update`コマンドでは、 `Where`句に含まれていない属性の属性キー値のみを更新できます。 たとえば、ある顧客が更新されている場合には都市名を更新できません。それ以外の場合には、すべての顧客に関して都市名が変更されます。  
+    >  新しいメンバーを除き、このコマンドでは、 `Update` 句に含まれていない属性の属性キー値のみを更新でき `Where` ます。 たとえば、ある顧客が更新されている場合には都市名を更新できません。それ以外の場合には、すべての顧客に関して都市名が変更されます。  
   
 ### <a name="updating-members-in-parent-attributes"></a>親階層のメンバーの更新  
- 親属性をサポートするため`Update`に、コマンドは、オプションの[movewithdescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)MovewithDescedants プロパティを指定します。 `MoveWithDescendants` プロパティを true に設定すると、親メンバーの識別子が変更された場合に、その親メンバーの子孫も親メンバーと一緒に移動します。 この値が false に設定されている場合は、親メンバーを移動すると、その親メンバーの直接の子孫が親メンバーのあったレベルに昇格します。  
+ 親属性をサポートするために、コマンドは、 `Update` オプションの[Movewithdescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)MovewithDescedants プロパティを指定します。 `MoveWithDescendants` プロパティを true に設定すると、親メンバーの識別子が変更された場合に、その親メンバーの子孫も親メンバーと一緒に移動します。 この値が false に設定されている場合は、親メンバーを移動すると、その親メンバーの直接の子孫が親メンバーのあったレベルに昇格します。  
   
  親属性のメンバーを更新する場合、`Update` コマンドで他の属性のメンバーを更新することはできません。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "62727166"
 -   `Where` プロパティ。メンバーを削除するディメンションを制限するための 1 つ以上の `Attribute` 要素が含まれます。 `Where` プロパティは、`Drop` コマンドをメンバーの特定のインスタンスに制限する場合に不可欠です。 `Where` プロパティが指定されない場合、特定のメンバーのすべてのインスタンスが削除されます。 たとえば、Redmond から 3 人の顧客を削除したいとします。 これらの顧客を削除するには、Customer 属性で削除対象の 3 つのメンバーと、3 人の顧客を削除する City 属性の Redmond メンバーの両方を識別する `Where` プロパティを指定する必要があります。 `Where` プロパティで City 属性の Redmond メンバーだけが指定されている場合、Redmond に関連付けられているすべての顧客が `Drop` コマンドによって削除されます。 `Where` プロパティで Customer 属性の 3 つのメンバーだけが指定されている場合、3 人の顧客に関して、`Drop` コマンドによって全体が削除されます。  
   
     > [!NOTE]  
-    >  コマンドに含まれる要素に`Attribute`は、プロパティ`AttributeName`と`Keys`プロパティのみが含まれている必要があります。 `Drop` そうでない場合、エラーが発生する可能性があります。  
+    >  `Attribute`コマンドに含まれる要素には、 `Drop` プロパティとプロパティのみが含まれている必要があり `AttributeName` `Keys` ます。 そうでない場合、エラーが発生する可能性があります。  
   
 ### <a name="dropping-members-in-parent-attributes"></a>親階層のメンバーの削除  
  [Deletewithdescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/deletewithdescendants-element-xmla)プロパティを設定すると、親メンバーの子孫も親メンバーと共に削除されることが示されます。 この値が false に設定されている場合は、その親メンバーの直接の子孫が、親メンバーのあったレベルに昇格します。  

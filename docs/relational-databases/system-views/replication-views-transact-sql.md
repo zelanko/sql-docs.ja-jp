@@ -1,5 +1,6 @@
 ---
 title: レプリケーションビュー (Transact-sql) |Microsoft Docs
+description: レプリケーションビューには SQL Server のレプリケーションで使用される情報が含まれます。 これらのビューでは、レプリケーション システム テーブルのデータに、容易にアクセスできます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 51cc9434805fbd14204d74edae1594ae01c06bb2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae0c1245bdf9ff7fe1d1eb712745cbc15d2479af
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129565"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807937"
 ---
 # <a name="replication-views-transact-sql"></a>レプリケーションビュー (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  これらのビューには、の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レプリケーションで使用される情報が含まれています。 ビューを使用すると、[レプリケーションシステムテーブル](../../relational-databases/system-tables/replication-tables-transact-sql.md)のデータに簡単にアクセスできます。 ビューは、データベースがパブリケーションまたはサブスクリプションデータベースとして有効になっている場合に、ユーザーデータベースに作成されます。 データベースがレプリケーショントポロジから削除されると、すべてのレプリケーションオブジェクトがユーザーデータベースから削除されます。 レプリケーションメタデータにアクセスするには、[レプリケーションストアドプロシージャ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)を使用することをお勧めします。  
+  これらのビューには、のレプリケーションで使用される情報が含まれて [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] います。 ビューを使用すると、[レプリケーションシステムテーブル](../../relational-databases/system-tables/replication-tables-transact-sql.md)のデータに簡単にアクセスできます。 ビューは、データベースがパブリケーションまたはサブスクリプションデータベースとして有効になっている場合に、ユーザーデータベースに作成されます。 データベースがレプリケーショントポロジから削除されると、すべてのレプリケーションオブジェクトがユーザーデータベースから削除されます。 レプリケーションメタデータにアクセスするには、[レプリケーションストアドプロシージャ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)を使用することをお勧めします。  
   
 > [!IMPORTANT]  
 >  システムビューは、ユーザーが直接変更することはできません。  

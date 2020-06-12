@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 585f27f2-d5eb-4516-b29a-2084010b7d51
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0758c814a7edce134be01ebf766a12832e942a61
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079473"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543705"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>[キー列] ダイアログ ボックス (Analysis Services - 多次元データ)
   属性の **KeyColumns** プロパティを変更するには、 **[キー列]** ダイアログ ボックスを使用します。 詳細については、「 [属性の KeyColumn プロパティの変更](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)」を参照してください。  
@@ -42,13 +41,13 @@ ms.locfileid: "66079473"
   
  **[キー列]** の一覧から列を削除するには、列を選択し、**[\<]** ボタンをクリックします。  
   
- **上へ**  
+ **［上へ］**  
  **[キー列]** で選択した列を 1 つ上の位置に移動する場合にクリックします。  
   
 > [!NOTE]  
 >  このオプションは、一覧に複数の列が含まれ、列が選択されている場合のみ有効です。  
   
- **[下へ]**  
+ **［下へ］**  
  **[キー列]** で選択した列を 1 つ下の位置に移動する場合にクリックします。  
   
 > [!NOTE]  

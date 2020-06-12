@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c34380e901590062b679129ad66838bbdfff897a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075938"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547144"
 ---
 # <a name="create-a-date-type-dimension"></a>日付型ディメンションの作成
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、時間ディメンションは、年、半期、四半期、月、日などの時間間隔を表す属性を持つディメンションの種類です。 時間ディメンションの期間は、分析やレポートの粒度を時間ベースで指定します。 時間ディメンションの属性は階層化され、粒度は履歴データのビジネス要件とレポート要件によって主に決定されます。 たとえば、ビジネス インテリジェンス アプリケーションの財務データと販売データでは、ほとんどの場合、月または四半期の粒度が使用されます。  
+  で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、時間ディメンションは、年、半期、四半期、月、日などの時間間隔を表す属性を持つディメンションの種類です。 時間ディメンションの期間は、分析やレポートの粒度を時間ベースで指定します。 時間ディメンションの属性は階層化され、粒度は履歴データのビジネス要件とレポート要件によって主に決定されます。 たとえば、ビジネス インテリジェンス アプリケーションの財務データと販売データでは、ほとんどの場合、月または四半期の粒度が使用されます。  
   
  通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のキューブには、さまざまな形式の時間ディメンションが組み込まれています。 データの粒度とレポート要件によっては、各キューブに、複数の時間ディメンションまたは同じ時間ディメンションの複数の階層が含まれている場合があります。 ただし、すべてのキューブに時間ディメンションを組み込む必要があるわけではありません。 利用状況に基づくディメンションでは、時間ではなく利用状況に基づいてコストが設定されるので、利用状況に基づいてコストを設定する場合など、一部の OLAP アプリケーションでは時間ディメンションを使用する必要がありません。  
   

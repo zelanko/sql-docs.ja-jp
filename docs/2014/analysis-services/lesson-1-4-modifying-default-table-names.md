@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44e7142da8c639f63b198983b1fda829c9099d38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079231"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543614"
 ---
 # <a name="modifying-default-table-names"></a>既定のテーブル名の変更
   データ ソース ビューのオブジェクトの **FriendlyName** プロパティ値を変更することで、オブジェクトをわかりやすく、また使いやすくすることができます。  
@@ -33,11 +32,11 @@ ms.locfileid: "66079231"
   
      データ ソース ビューの各テーブルのプロパティを変更するときは、[プロパティ] ウィンドウを開いたままにしておくと便利です。 **[自動的に隠す]** ボタンをクリックしてウィンドウを開いたまま固定しておかないと、 **ダイアグラム** ペイン内の別のオブジェクトをクリックしたときに [プロパティ] ウィンドウが閉じてしまいます。  
   
-3.  **FactInternetSales**オブジェクトの*`InternetSales`* **FriendlyName**プロパティをに変更します。  
+3.  **FactInternetSales**オブジェクトの**FriendlyName**プロパティをに変更 *`InternetSales`* します。  
   
      **FriendlyName** 以外のセルをクリックすると、変更が適用されます。 次のレッスンでは、このファクト テーブルを基にしてメジャー グループを定義します。 このレッスンで表示名を変更したので、次に作成するファクト テーブルの名前も FactInternetSales ではなく InternetSales になります。  
   
-4.  **[テーブル]** ペインで **[DimProduct]** をクリックします。 プロパティウィンドウで、 **FriendlyName**プロパティをに*`Product`* 変更します。  
+4.  **[テーブル]** ペインで **[DimProduct]** をクリックします。 プロパティウィンドウで、 **FriendlyName**プロパティをに変更し *`Product`* ます。  
   
 5.  データ ソース ビューの他のテーブルについても、同じ方法で **FriendlyName** プロパティを変更します。つまり、**Dim**プレフィックスを削除します。  
   

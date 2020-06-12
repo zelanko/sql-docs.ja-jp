@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e58ce1b7-20d6-42cb-ade5-916da8471e09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 819a69ad9c1b1415726d816e2cbc1faa92bd6cd1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dde94a8d08bba3ea529c9edf3fde12ee0260a3f0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081941"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528738"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>[依存関係ネットワーク] タブ (マイニング モデル ビューアー)
   **[依存関係ネットワーク]** タブでは、マイニング モデルに含まれるすべての属性のグラフィカル ビューが表示され、属性がどのように関連しているかが示されます。  
@@ -37,7 +36,7 @@ ms.locfileid: "66081941"
  **[マイニング モデル]**  
  現在のマイニング構造に含まれているマイニング モデルから、表示するものを選択します。 マイニング モデルがカスタム ビューに表示されます。 各モデルで使用されるカスタム ビューアーの種類は、モデルの作成時に使用したアルゴリズムによって決まります。  
   
- **[ビューアー]**  
+ **Viewer**  
  選択したマイニング モデルを調べるために使用するビューアーを選択します。 モデルごとに、各マイニング モデル用に用意されているカスタム ビューアー、または [!INCLUDE[msCoName](../includes/msconame-md.md)] マイニング コンテンツ ビューアーを使用できます。 利用可能な場合プラグイン ビューアーを使用することもできます。 Microsoft コンテンツ ツリー ビューアーはすべてのモデルで使用でき、モデルの内容を HTML テーブルで表現します。  
   
  **拡大**  

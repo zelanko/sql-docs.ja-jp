@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe493927d269c092e775970b3089550203271f0e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 6327f7e825906635864777e9c993ae16790e6116
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000512"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528392"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server インデックス デザイン ガイド
 
@@ -29,19 +28,19 @@ ms.locfileid: "83000512"
 
  [インデックスのデザインの基礎](#Basics)  
   
- [インデックスの設計の全般的なガイドライン](#General_Design)  
+ [インデックスのデザインに関する一般的なガイドライン](#General_Design)  
   
  [クラスター化インデックスのデザインガイドライン](#Clustered)  
   
- [非クラスター化インデックスのデザイン ガイドライン](#Nonclustered)  
+ [非クラスター化インデックスのデザインガイドライン](#Nonclustered)  
   
- [一意インデックスのデザイン ガイドライン](#Unique)  
+ [一意インデックスのデザインガイドライン](#Unique)  
   
- [フィルター選択されたインデックスのデザイン ガイドライン](#Filtered)  
+ [フィルター選択されたインデックスのデザインガイドライン](#Filtered)  
   
  [その他の参考資料](#Additional_Reading)  
   
-##  <a name="index-design-basics"></a><a name="Basics"></a>インデックスのデザインの基礎  
+##  <a name="index-design-basics"></a><a name="Basics"></a> インデックスのデザインの基礎  
 
  インデックスとは、テーブルまたはビューに関連付けられたディスク上の構造で、テーブルやビューからの行の取得を高速化します。 インデックスには、テーブル内またはビュー内の 1 つ以上の列から構築されたキーが含まれています。 これらのキーは 1 つの構造 (B-Tree) 内に格納されます。SQL Server はこの構造を使用して、キー値に関連した 1 つ以上の行を効率よく迅速に検出できます。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "83000512"
   
      また、クラスター化インデックスと非クラスター化インデックスでは、複数のファイル グループにまたがってパーティション構成を使用できます。 大きなテーブルやインデックスをパーティション分割すると、コレクション全体の整合性を維持しながら、データのサブセットに対するアクセスや管理を迅速かつ効率的に行うことができるので、大きなテーブルやインデックスを管理しやすくなります。 詳細については、「 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。 パーティション分割を検討するときは、インデックスを固定するかどうかを決定します。つまり、基本的にテーブルと同じ方法でパーティション分割するか、または別の方法でパーティション分割するかを決定するということです。  
   
-##  <a name="general-index-design-guidelines"></a><a name="General_Design"></a>インデックスのデザインに関する一般的なガイドライン  
+##  <a name="general-index-design-guidelines"></a><a name="General_Design"></a> インデックスのデザインの全般的なガイドライン  
 
  経験豊富なデータベース管理者であれば適切なインデックス セットをデザインできますが、それほど複雑でないデータベースとワークロードであっても、この作業はきわめて複雑で、時間がかかり、間違いを犯しやすいものです。 使用するデータベース、クエリ、データ列の特性を理解することが、最適なインデックスをデザインする際に役に立ちます。  
   
@@ -137,7 +136,7 @@ ms.locfileid: "83000512"
   
  インデックスを最初に保存したときの特性をカスタマイズし、FILLFACTOR などのオプションを設定してパフォーマンスやメンテナンスを最適化できます。 また、パフォーマンスを最適化するために、ファイル グループやパーティション構成を使用してインデックスの保存場所を決定することもできます。  
   
-###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a>ファイルグループまたはパーティション構成のインデックス配置  
+###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a> ファイル グループまたはパーティション構成に対するインデックス配置  
 
  インデックスの設計について考えるときは、データベースに関連付けられたファイル グループ上にインデックスを配置することを検討する必要があります。 ファイル グループまたはパーティション構成を慎重に選択することで、クエリのパフォーマンスを向上できる場合があります。  
   
@@ -165,7 +164,7 @@ ms.locfileid: "83000512"
   
  詳細については、「 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
-###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a>インデックスの並べ替え順のデザインガイドライン  
+###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a> インデックス並べ替え順のデザイン ガイドライン  
 
  インデックスを定義する場合、インデックス キー列のデータを昇順と降順のどちらで格納する必要があるかを考慮する必要があります。 昇順は既定の並べ替え順で、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]との互換性が維持されます。 CREATE INDEX、CREATE TABLE、および ALTER TABLE の各ステートメントの構文では、インデックスと制約の個別の列にキーワード ASC (昇順) と DESC (降順) を使用できます。  
   
@@ -200,7 +199,7 @@ ON Purchasing.PurchaseOrderDetail
   
  [このガイドの [](#Top) ![トップに戻る] リンクで使用される矢印アイコン](media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")  
   
-##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a>クラスター化インデックスのデザインガイドライン  
+##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a> クラスター化インデックスのデザイン ガイドライン  
 
  クラスター化インデックスは、データ行をそのキー値に基づいて並べ替え、テーブル内に格納します。 データ行自体は 1 つの順序でしか並べ替えられないため、1 つのテーブルに設定できるクラスター化インデックスは 1 つだけです。 ほとんどの場合、各テーブルには、次の条件を満たす単一または複数の列に基づいて定義されたクラスター化インデックスを作成することをお勧めします。  
   
@@ -275,7 +274,7 @@ ON Purchasing.PurchaseOrderDetail
   
  [このガイドの [](#Top) ![トップに戻る] リンクで使用される矢印アイコン](media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")  
   
-##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a>非クラスター化インデックスのデザインガイドライン  
+##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a> 非クラスター化インデックスのデザイン ガイドライン  
 
  非クラスター化インデックスには、インデックス キー値、およびテーブル データの格納場所を指す行ロケーターが含まれています。 1 つのテーブルまたはインデックス付きビューに複数の非クラスター化インデックスを作成できます。 一般に、非クラスター化インデックスは、頻繁に使用するクエリで、クラスター化インデックスで対応されないクエリのパフォーマンスを向上するようにデザインします。  
   
@@ -343,7 +342,7 @@ ON Purchasing.PurchaseOrderDetail
   
      1 と 0 のみなど異なる値が少数しかない場合、テーブル スキャンを行う方が通常は効率的なので、ほとんどのクエリではインデックスが使用されません。 このようなデータの場合は、少数の行のみに含まれる異なる値に対してフィルター選択されたインデックスを作成することを検討してください。 たとえば、ほとんどの値が 0 の場合は、クエリ オプティマイザーで 1 を含むデータ行に対してフィルター選択されたインデックスを使用できます。  
   
-####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a>付加列を使用して非クラスター化インデックスを拡張する  
+####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a> 付加列の使用による非クラスター化インデックスの拡張  
 
  非クラスター化インデックスのリーフ レベルに非キー列を追加することにより、非クラスター化インデックスの機能を拡張できます。 非キー列を含めることにより、より多くのクエリをカバーする非クラスター化インデックスを作成できます。 これは、非キー列には次の利点があるためです。  
   
@@ -455,7 +454,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  [このガイドの [](#Top) ![トップに戻る] リンクで使用される矢印アイコン](media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")  
   
-##  <a name="unique-index-design-guidelines"></a><a name="Unique"></a>一意インデックスのデザインガイドライン  
+##  <a name="unique-index-design-guidelines"></a><a name="Unique"></a> 一意インデックスのデザイン ガイドライン  
 
  一意インデックスを使用すると、インデックス キーの値が重複することがないので、テーブルのすべての行を一意にすることができます。 一意であることがデータ自体の特性である場合にだけ、一意インデックスを指定します。 たとえば、主キーが `NationalIDNumber` で、 `HumanResources.Employee` テーブルの `EmployeeID`列の値が必ず一意になるようにする場合は、 `NationalIDNumber` 列で UNIQUE 制約を作成します。 ユーザーが複数の従業員に対してその列に同じ値を入力しようとすると、エラー メッセージが表示され、重複する値は入力されません。  
   
@@ -481,7 +480,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  [このガイドの [](#Top) ![トップに戻る] リンクで使用される矢印アイコン](media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")  
   
-##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a>フィルター選択されたインデックスのデザインガイドライン  
+##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> フィルター選択されたインデックスのデザイン ガイドライン  
 
  フィルター選択されたインデックスは、最適化された非クラスター化インデックスであり、適切に定義されたデータのサブセットから選択するクエリに対応する際に特に適しています。 フィルター選択されたインデックスは、フィルター述語を使用して、テーブル内の一部の行にインデックスを作成します。 フィルター選択されたインデックスを適切にデザインすると、クエリのパフォーマンスが向上し、インデックスのメンテナンス コストを削減して、テーブル全体のインデックスと比較してインデックスのストレージ コストを削減することができます。  
   

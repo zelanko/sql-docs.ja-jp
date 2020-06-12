@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 561cbbb64734c117b295ca6d97420b6980fa5428
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0495ed563585a5b7427655428a257174673fc02
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725496"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545919"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>最大容量仕様 (Analysis Services)
   次の各表に、さまざまなサーバー配置モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] コンポーネントで定義される各種オブジェクトの最大サイズと最大数を示します。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
  [多次元およびデータ マイニング (DeploymentMode=0)](#bkmk_OLAP)  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62725496"
 ##  <a name="multidimensional-and-data-mining-deploymentmode0"></a><a name="bkmk_OLAP"></a>多次元およびデータマイニング (DeploymentMode = 0)  
  データとメタデータの両方を格納する MOLAP ストレージ モードは、ファイル サイズに物理的な制限があります。 文字列ストア ファイルの既定の最大サイズは 4 GB です。 文字列を格納するためにより大きなファイルが必要な場合は、別の文字列ストレージ アーキテクチャを指定できます。 詳細については、「[ディメンションおよびパーティションの文字列ストレージの構成](../configure-string-storage-for-dimensions-and-partitions.md)」を参照してください。  
   
-|オブジェクト|最大サイズと最大数|  
+|Object|最大サイズと最大数|  
 |------------|----------------------------|  
 |インスタンス内のデータベース|2^31-1 = 2,147,483,647|  
 |データベースのディメンション|2^31-1 = 2,147,483,647|  
@@ -63,7 +62,7 @@ ms.locfileid: "62725496"
   
 ##  <a name="sharepoint-deploymentmode1"></a><a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
   
-|オブジェクト|最大サイズと最大数|  
+|Object|最大サイズと最大数|  
 |------------|----------------------------|  
 |インスタンス内のデータベース|2^31-1 = 2,147,483,647|  
 |データベース内のテーブル|2^31-1 = 2,147,483,647|  
@@ -81,7 +80,7 @@ ms.locfileid: "62725496"
   
 ##  <a name="tabular-deploymentmode2"></a><a name="bkmk_vertipaq"></a>表形式 (DeploymentMode = 2)  
   
-|オブジェクト|最大サイズと最大数|  
+|Object|最大サイズと最大数|  
 |------------|----------------------------|  
 |インスタンス内のデータベース|2^31-1 = 2,147,483,647|  
 |データベース内のテーブル|2^31-1 = 2,147,483,647|  

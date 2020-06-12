@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e3631310e55089647559191dbefed67778d0241
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076078"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547194"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>データ ソースとバインド (SSAS 多次元)
   キューブ、ディメンション、その他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトはデータ ソースにバインドできます。 データ ソースとは次のいずれかのオブジェクトです。  
@@ -168,7 +167,7 @@ ms.locfileid: "66076078"
   
  不一致バインドは、処理コマンドと共にオプションの `Bindings` コレクション オブジェクトを含めることで指定します。 オプションの `Bindings` コレクションには次の要素が含まれています。  
   
-|プロパティ|Cardinality|種類|説明|  
+|プロパティ|カーディナリティ|種類|説明|  
 |--------------|-----------------|----------|-----------------|  
 |`Binding`|0-n|`Binding`|新しいバインドのコレクションを提供します。|  
 |`DataSource`|0-1|`DataSource`|サーバーの使用された `DataSource` を置き換えます。|  
@@ -177,9 +176,9 @@ ms.locfileid: "66076078"
  不一致バインドに関連する要素はすべてオプションです。 指定されていない要素については、ASSL では持続オブジェクトの DDL に含まれている指定が使用されます。 `DataSource` コマンドの `DataSourceView` または `Process` の指定はオプションです。 `DataSource` または `DataSourceView` が指定されている場合は、インスタンス化されず、`Process` コマンドの完了後は持続しません。  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>不一致バインド型の定義  
- ASSL では、不一致 `Bindings` コレクション内で、複数のオブジェクトのバインドのコレクションである、各 `Binding` を使用できます。 各 `Binding` には拡張オブジェクト参照があります。これはオブジェクト参照に似ていますが、マイナー オブジェクト (たとえばディメンション属性やメジャー グループ属性) の参照も可能です。 このオブジェクト`Object`は、コマンド内`Process`の要素の標準の形式をとります。 \<ただし、 *object*>\<*/object*> タグは存在しません。  
+ ASSL では、不一致 `Bindings` コレクション内で、複数のオブジェクトのバインドのコレクションである、各 `Binding` を使用できます。 各 `Binding` には拡張オブジェクト参照があります。これはオブジェクト参照に似ていますが、マイナー オブジェクト (たとえばディメンション属性やメジャー グループ属性) の参照も可能です。 このオブジェクトは、コマンド内の要素の標準の形式をとり `Object` `Process` \<*Object*> \<*/Object*> ます。ただし、タグが存在しない点が異なります。  
   
- バインドが指定されている各オブジェクトは、フォーム\<*オブジェクト*>ID (など`DimensionID`) の XML 要素によって識別されます。 \<*オブジェクト>ID*の形式でできるだけ具体的にオブジェクトを特定したら、バインドを指定する要素を指定します。これは通常`Source`です。 一般に、属性の列バインドの場合のように、`Source` は `DataItem` のプロパティです。 この場合は、`DataItem` タグを指定しないで、バインドする列に直接存在するかのように `Source` プロパティを指定するだけです。  
+ バインドが指定されている各オブジェクトは、フォーム ID の XML 要素 (たとえば、) によって識別され \<*object*> `DimensionID` ます。 フォーム ID でできるだけ具体的にオブジェクトを識別したら、 \<*object*> バインドを指定する要素を指定します。これは通常 `Source` です。 一般に、属性の列バインドの場合のように、`Source` は `DataItem` のプロパティです。 この場合は、`DataItem` タグを指定しないで、バインドする列に直接存在するかのように `Source` プロパティを指定するだけです。  
   
  `KeyColumns` は、`KeyColumns` コレクション内の順序によって識別されます。 たとえば、属性の最初と 3 番目のキー列のみを指定することはできません。2 番目のキー列がスキップされることを示す方法がないからです。 不一致バインドでは、ディメンション属性のキー列のすべてが存在する必要があります。  
   

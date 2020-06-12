@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 94c36ba87310c5dc86b7a1f70efab5a3ef97bf61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf7db49fd2b6a86e9b113dbede785379f910b978
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083858"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521768"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワークでは、最大 3 層のニューロンまたは *パーセプトロン* で構成される *多層パーセプトロン*ネットワーク ( *バックプロパゲーション デルタ ルール ネットワーク*とも呼ばれる) を使用します。 これらの層は、入力層、オプションの非表示層、および出力層です。  
@@ -86,7 +85,7 @@ ms.locfileid: "66083858"
   
  すべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング アルゴリズムでは、分析の向上と処理負荷の削減のため、機能の選択が自動的に使用されます。 ニューラル ネットワーク モデルの機能の選択に使用される方法は、属性のデータ型に応じて異なります。 参考に、ニューラル ネットワーク モデルで使用される機能の選択の方法と、ニューラル ネットワーク アルゴリズムに基づくロジスティック回帰アルゴリズムで使用される機能の選択の方法を次の表に示します。  
   
-|アルゴリズム|分析の方法|備考|  
+|アルゴリズム|分析の方法|コメント|  
 |---------------|------------------------|--------------|  
 |ニューラル ネットワーク|興味深さのスコア<br /><br /> Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|ニューラル ネットワーク アルゴリズムでは、データに連続列が含まれている限り、エントロピに基づくスコアリング方法とベイズ スコアリング方法の両方を使用できます。<br /><br /> 既定値。|  
 |ロジスティック回帰|興味深さのスコア<br /><br /> Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|このアルゴリズムでは、機能の選択の動作を制御するパラメーターを渡すことができないため、既定値が使用されます。 したがって、すべての属性が不連続属性または分離された属性の場合は、既定値は BDEU です。|  
@@ -177,7 +176,7 @@ ms.locfileid: "66083858"
 ### <a name="distribution-flags"></a>ディストリビューション フラグ  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムでは、次のディストリビューション フラグを使用できます。 ディストリビューション フラグは、モデルのみへのヒントとして使用されます。アルゴリズムでは、異なる分布が検出された場合、ヒントで指定された分布ではなく、検出された分布が使用されます。  
   
- Normal  
+ 標準  
  列内の値を、正規分布またはガウス分布を表す値として処理する必要があることを示します。  
   
  Uniform  
@@ -192,7 +191,7 @@ ms.locfileid: "66083858"
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。  
   
-|列|コンテンツの種類|  
+|Column|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Cyclical、Discrete、Discretized、Key、Table、Ordered|  
 |予測可能な属性|Continuous、Cyclical、Discrete、Discretized、Ordered|  
@@ -203,6 +202,6 @@ ms.locfileid: "66083858"
 ## <a name="see-also"></a>参照  
  [Microsoft ニューラルネットワークアルゴリズム](microsoft-neural-network-algorithm.md)   
  [ニューラルネットワークモデルのマイニングモデルコンテンツ &#40;Analysis Services データマイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [ニューラル ネットワーク モデルのクエリ例](neural-network-model-query-examples.md)  
+ [Neural Network Model Query Examples](neural-network-model-query-examples.md)  
   
   

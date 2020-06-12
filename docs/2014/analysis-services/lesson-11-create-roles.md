@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69d44846f37960ebebf4bce03924270163dabe8e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079266"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543564"
 ---
 # <a name="lesson-12-create-roles"></a>レッスン 12:ロールの作成
   このレッスンでは、ロールを作成します。 ロールを使用すると、ロール メンバーである Windows ユーザーのみにアクセスを制限することで、モデル データベース オブジェクトとデータにセキュリティを提供できます。 各ロールには､1 つの許可 (なし､読み取り､読み取りと処理､処理､管理者のいずれか) のみ定義します｡ モデルのロールは、モデルの作成時に [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]の [ロール マネージャー] ダイアログ ボックスを使用して定義できます。 モデルを配置した後は、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用してロールを管理できます。 詳細については、「[ロール (SSAS テーブル)](tabular-models/roles-ssas-tabular.md)」 を参照してください。  
@@ -48,7 +47,7 @@ ms.locfileid: "66079266"
   
      "なし" 権限を設定された新しいロールがリストに追加されます。  
   
-3.  新しいロールをクリックし、[**名前**] 列でロールの名前をに`Internet Sales Manager`変更します。  
+3.  新しいロールをクリックし、[**名前**] 列でロールの名前をに変更し `Internet Sales Manager` ます。  
   
 4.  **[権限]** 列で、ドロップダウン リストをクリックし、**[読み取り]** 権限を選択します。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66079266"
   
      "なし" 権限を設定された新しいロールがリストに追加されます。  
   
-3.  新しいロールをクリックし、[**名前**] 列でロールの名前をに`Internet Sales US`変更します。  
+3.  新しいロールをクリックし、[**名前**] 列でロールの名前をに変更し `Internet Sales US` ます。  
   
 4.  **[権限]** 列で、ドロップダウン リストをクリックし、**[読み取り]** 権限を選択します。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66079266"
   
 1.  **[ロール マネージャー]** ダイアログ ボックスで **[新規]** をクリックします。  
   
-2.  新しいロールをクリックし、[**名前**] 列でロールの名前をに`Internet Sales Administrator`変更します。  
+2.  新しいロールをクリックし、[**名前**] 列でロールの名前をに変更し `Internet Sales Administrator` ます。  
   
 3.  **[権限]** 列で、ドロップダウン リストをクリックし、 **[管理者]** 権限を選択します。  
   

@@ -5,17 +5,17 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b85fcb83b9268701f0b717faf41f07552073e37
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728094"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732470"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>マスター データ サービスの高可用性とディザスター リカバリー
 
@@ -72,7 +72,7 @@ ms.locfileid: "73728094"
 
 ![Always On 可用性グループの一般的な構成](media/Fig1_TypicalConfig.png)
 
-図 1.  一般的な Always On 可用性グループの構成
+図 1. 一般的な Always On 可用性グループの構成
 
 ディザスター リカバリーを考慮する必要がない場合、セカンダリ データ センターにレプリカを置く必要がありません。 HA を改善する必要がある場合、同じプライマリ データ センターの同期レプリカを増やすことができます。
 
@@ -308,7 +308,7 @@ AG は既存のデータベースにのみ作成できます。 そのため、1
 
 8. **[レプリカの指定]** ページで、**[リスナー]** タブをクリックし、次の操作を行います。 図 18 を参照してください。
 
-   a。 **[可用性グループ リスナーの作成]** をクリックし、MDS データベース接続の可用性グループ リスナーを設定します。
+   a. **[可用性グループ リスナーの作成]** をクリックし、MDS データベース接続の可用性グループ リスナーを設定します。
 
    b. **[リスナーの DNS 名]** を入力します。たとえば、「MDSSQLServer」にします。
 

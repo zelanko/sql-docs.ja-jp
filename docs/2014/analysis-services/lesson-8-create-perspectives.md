@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd395e605bfde9d34ed0dc4f16060812464efb56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20601a1ece7707e8f798907f21ee5ee7110fe2fe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078250"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542224"
 ---
 # <a name="lesson-9-create-perspectives"></a>レッスン 9: パースペクティブを作成する
   このレッスンでは、Internet Sales パースペクティブを作成します。 パースペクティブでは、表示可能なモデルのサブセットを定義して、集中的、ビジネス固有またはアプリケーション固有のビューポイントを作成できます。 パースペクティブを使用してモデルに接続すると、そのパースペクティブ内に定義されたモデル オブジェクト (テーブル、列、メジャー、階層、および KPI) のみがフィールドとして表示されます。  
@@ -39,9 +38,9 @@ ms.locfileid: "66078250"
   
 2.  **[パースペクティブ]** ダイアログ ボックスで、 **[新しいパースペクティブ]** をクリックします。  
   
-3.  パースペクティブの名前を変更するには、[**新しいパースペクティブ 1** ] 列見出しをダブル`Internet Sales`クリックし、「」と入力します。  
+3.  パースペクティブの名前を変更するには、[**新しいパースペクティブ 1** ] 列見出しをダブルクリックし、「」と入力し `Internet Sales` ます。  
   
-4.  [**フィールド**] で、 **Date**、 **Geography**、 **Product**、 **product Category**、 **product サブカテゴリ**、および`Internet Sales`の各テーブルを選択します。  
+4.  [**フィールド**] で、 **Date**、 **Geography**、 **Product**、 **product Category**、 **product サブカテゴリ**、およびの各テーブルを選択し `Internet Sales` ます。  
   
      Customer テーブルおよびそのすべての列をこのパースペクティブから除外したことに注意してください。 後ほど、レッスン 12 で、"Excel で分析" 機能を使用してこのパースペクティブをテストします。 Excel ピボットテーブルのフィールドの一覧には、Customer テーブルを除く各テーブルが含まれます。  
   

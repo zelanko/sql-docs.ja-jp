@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f535aa831824b2ab283b2b596d0de49ef0e72515
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080736"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544364"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>ゴール シーク シナリオ (Excel 用のテーブル分析ツール)
   ![[テーブル分析ツール] の [ゴール シーク] ボタン](media/tat-goalseek.gif "[テーブル分析ツール] の [ゴール シーク] ボタン")  
@@ -99,7 +98,7 @@ ms.locfileid: "66080736"
 ## <a name="related-tools"></a>関連ツール  
  より高度なデータ マイニング機能を備えた別のアドインとして、Excel 用のデータ マイニング クライアントがあります。Excel 用のデータ マイニング クライアントには、行動を予測するデータ マイニング モデルを作成するためのウィザードが備わっています。 詳細については、「[データマイニングモデルの作成](creating-a-data-mining-model.md)」を参照してください。  
   
- **ゴールシーク**シナリオツールで使用されるアルゴリズムの詳細については、オンラインブックの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 「Microsoft ロジスティック回帰アルゴリズム」を参照してください。  
+ **ゴールシーク**シナリオツールで使用されるアルゴリズムの詳細については、オンラインブックの「Microsoft ロジスティック回帰アルゴリズム」を参照してください [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>参照  
  [Excel 用テーブル分析ツール](table-analysis-tools-for-excel.md)  

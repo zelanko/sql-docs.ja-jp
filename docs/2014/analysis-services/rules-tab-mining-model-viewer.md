@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 705d5492-b58f-45d9-94d7-ed57b7025823
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07617e2a49d784352911088f7c5e09bc727ab7d0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070098"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539014"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>[ルール] タブ (マイニング モデル ビューアー)
   アルゴリズムによってデータから抽出されたルールを表示するには、関連モデルの **[ルール]** ペインを使用します。 ルールは、アイテムが互いにどのように関連しているのかを記述し、推奨を作成するために使用できます。  
@@ -36,7 +35,7 @@ ms.locfileid: "66070098"
  **[マイニング モデル]**  
  現在のマイニング構造に含まれているマイニング モデルから、表示するモデルを選択します。 関連付けられているビューアーが開き、マイニング モデルが表示されます。  
   
- **[ビューアー]**  
+ **Viewer**  
  選択したマイニング モデルを表示するために使用するビューアーを選択します。 各マイニング モデル用のカスタム ビューアーまたは **Microsoft 汎用コンテンツ ツリー ビューアー**を使用できます。 利用可能な場合プラグイン ビューアーを使用することもできます。  
   
  **[最小の確率]**  
@@ -76,7 +75,7 @@ ms.locfileid: "66070098"
   
  列見出しをクリックすることで、確率順に並べ替えることができます。  
   
- **重視**  
+ **重要度**  
  グラフのこの列には、各ルールの重要度が表示されます。  
   
  列見出しをクリックすることで、重要度順に並べ替えることができます。  

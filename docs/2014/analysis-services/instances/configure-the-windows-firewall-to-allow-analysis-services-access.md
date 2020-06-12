@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b74c767c50e8a62c2d65ad089e386a94b9c8a5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6703d1129f419b212dffd25485f2b32c984b1e1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70151857"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544044"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Analysis Services のアクセスを許可するための Windows ファイアウォールの構成
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] や [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をネットワーク上で利用できるようにするための重要な最初の手順は、ファイアウォールのポートのブロックを解除する必要があるかどうかを判断することです。 ほとんどのインストールでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]への接続を許可する受信ファイアウォール ルールを少なくとも 1 つ作成する必要があります。  
@@ -34,13 +33,13 @@ ms.locfileid: "70151857"
   
 -   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 の場合は、Windows ファイアウォールでポートを開けないでください。 このサービスは SharePoint アドインとして、SharePoint を対象として構成されたポートを使用し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへのローカル接続のみを作成します。このインスタンスは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルの読み込みとそのモデルに対するクエリを実行します。  
   
--   Azure [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Virtual Machines で実行されているインスタンスの場合は、サーバーアクセスを構成するための代替手順を使用します。 「 [Azure Virtual Machines でのビジネスインテリジェンスの SQL Server」を](https://msdn.microsoft.com/library/windowsazure/jj992719.aspx)参照してください。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Azure Virtual Machines で実行されているインスタンスの場合は、サーバーアクセスを構成するための代替手順を使用します。 「 [Azure Virtual Machines でのビジネスインテリジェンスの SQL Server」を](https://msdn.microsoft.com/library/windowsazure/jj992719.aspx)参照してください。  
   
- の既定の[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスは TCP ポート2383でリッスンしますが、別の固定ポートでリッスンするようにサーバーを構成し、サーバー \<名>:\<ポート番号> の形式でサーバーに接続することができます。  
+ の既定のインスタンスは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] TCP ポート2383でリッスンしますが、別の固定ポートでリッスンするようにサーバーを構成し、次の形式でサーバーに接続することができます。 \<servername> \<portnumber>  
   
  1 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスで使用できるのは、1 つの TCP ポートのみです。 複数のネットワーク カードまたは複数の IP アドレスを使用しているコンピューターでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、そのコンピューターに割り当てられているすべての IP アドレス、または別名を付けられているすべての IP アドレスに対応する 1 つの TCP ポートをリッスンします。 特定のマルチポート要件がある場合は、HTTP アクセス用に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を構成することを検討してください。 そうすれば、どのポートを選択しても、複数の HTTP エンドポイントを設定できます。 「[インターネット インフォメーション サービス (IIS) 8.0 上の Analysis Services への HTTP アクセスの構成](configure-http-access-to-analysis-services-on-iis-8-0.md)」を参照してください。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
 -   [Analysis Services で使用されるポートとファイアウォールの設定](#bkmk_checkport)  
   
@@ -63,11 +62,11 @@ ms.locfileid: "70151857"
   
  動的なポート割り当ては、名前付きインスタンスでのみ使用されます。 `MSOLAP$InstanceName` サービスによって、使用されるポートが起動時に決定されます。 名前付きインスタンスによって使用されている実際のポート番号は、次の方法で調べることができます。  
   
--   タスクマネージャーを起動し、[**サービス**] をクリックして`MSOLAP$InstanceName`の PID を取得します。  
+-   タスクマネージャーを起動し、[**サービス**] をクリックしての PID を取得し `MSOLAP$InstanceName` ます。  
   
 -   コマンド ラインから「`netstat -ao -p TCP`」を実行し、その PID に対応する TCP ポート情報を表示します。  
   
--   SQL Server Management Studio を使用してポートを確認し、 \<IPAddress>:\<ポート番号> の形式で Analysis Services サーバーに接続します。  
+-   SQL Server Management Studio を使用してポートを確認し、次の形式で Analysis Services サーバーに接続し \<IPAddress> ます。 \<portnumber>  
   
  アプリケーションが特定のポートをリッスンしていても、ファイアウォールによってアクセスがブロックされていれば、接続は失敗します。 Analysis Services の名前付きインスタンスに接続するには、msmdsrv.exe へのアクセスのブロックを解除するか、ファイアウォール内でリッスンしている固定ポートへのアクセスのブロックを解除する必要があります。 以降のセクションで、その手順について説明します。  
   
@@ -91,15 +90,15 @@ ms.locfileid: "70151857"
   
 2.  **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックします。  
   
-3.  [ルールの種類] `Port`で、[] をクリックし、[**次へ**] をクリックします。  
+3.  [ルールの種類] で、[] をクリックし、[ `Port` **次へ**] をクリックします。  
   
-4.  [プロトコルおよびポート] で、[ **TCP** ] `2383`を選択し、[**特定のローカルポート**] を入力します。  
+4.  [プロトコルおよびポート] で、[ **TCP** ] を選択し、[ `2383` **特定のローカルポート**] を入力します。  
   
 5.  [操作] で、 **[接続を許可する]** をクリックし、 **[次へ]** をクリックします。  
   
 6.  [プロファイル] で、規則を適用しないネットワークの場所のチェック ボックスをオフにした後、 **[次へ]** をクリックします。  
   
-7.  [名前] に、この規則のわかりやすい名前 (など`SQL Server Analysis Services (tcp-in) 2383`) を入力し、[**完了**] をクリックします。  
+7.  [名前] に、この規則のわかりやすい名前 (など) を入力 `SQL Server Analysis Services (tcp-in) 2383` し、[**完了**] をクリックします。  
   
 8.  リモート接続が有効になっているかどうかを検証するには、SQL Server Management Studio または Excel を異なるコンピューター上で開き、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [サーバー名] **に表示されているサーバーのネットワーク名を指定して**に接続します。  
   
@@ -121,9 +120,9 @@ ms.locfileid: "70151857"
   
  次のアプローチのいずれかを使用して、Analysis Services の名前付きインスタンスへのリモート アクセスを有効にします。  
   
--   動的なポート割り当ておよび SQL Server Browser サービスを使用します。 SQL Server Browser サービスが使用するポートのブロックを Windows ファイアウォールで解除します。 サーバーに接続するには\<、servername>\\<instancename\>の形式を指定します。  
+-   動的なポート割り当ておよび SQL Server Browser サービスを使用します。 SQL Server Browser サービスが使用するポートのブロックを Windows ファイアウォールで解除します。 <instancename という形式でサーバーに接続し \<servername> \\ \> ます。  
   
--   固定ポートおよび SQL Server Browser サービスの両方を連携して使用します。 この方法では、servername>\< \\<instancename\>の形式を使用して接続できます。ただし、動的なポートの割り当て方法と同じですが、この場合、サーバーは固定ポートでリッスンします。 このシナリオでは、SQL Server Browser Service は、固定ポートでリッスンしている Analysis Services のインスタンスに名前解決を提供します。 このアプローチを使用するには、サーバーを固定ポートでリッスンするように構成し、そのポートへのアクセスのブロックを解除して、SQL Server Browser サービスが使用するポートへのアクセスのブロックを解除します。  
+-   固定ポートおよび SQL Server Browser サービスの両方を連携して使用します。 この方法では、<instancename という形式を使用して接続できます。 \<servername> \\ \> ただし、動的なポート割り当て方法と同じですが、この場合、サーバーは固定ポートでリッスンします。 このシナリオでは、SQL Server Browser Service は、固定ポートでリッスンしている Analysis Services のインスタンスに名前解決を提供します。 このアプローチを使用するには、サーバーを固定ポートでリッスンするように構成し、そのポートへのアクセスのブロックを解除して、SQL Server Browser サービスが使用するポートへのアクセスのブロックを解除します。  
   
  SQL Server Browser サービスは、名前付きインスタンスでのみ使用されます。既定のインスタンスで使用されることはありません。 サービスは、SQL Server の任意の機能が名前付きインスタンスとしてインストールされるときに、自動的にインストールされ有効になります。 SQL Server Browser サービスが必要なアプローチを選択する場合、サービスが使用するサーバーで有効になっていることと起動されていることを確認してください。  
   
@@ -144,17 +143,17 @@ ms.locfileid: "70151857"
   
 2.  SQL Server Browser サービスへのアクセスのブロックを解除するには、 **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックします。  
   
-3.  [ルールの種類] `Port`で、[] をクリックし、[**次へ**] をクリックします。  
+3.  [ルールの種類] で、[] をクリックし、[ `Port` **次へ**] をクリックします。  
   
-4.  [プロトコルおよびポート] で、[ **TCP** ] `2382`を選択し、[**特定のローカルポート**] を入力します。  
+4.  [プロトコルおよびポート] で、[ **TCP** ] を選択し、[ `2382` **特定のローカルポート**] を入力します。  
   
 5.  [操作] で、 **[接続を許可する]** をクリックし、 **[次へ]** をクリックします。  
   
 6.  [プロファイル] で、規則を適用しないネットワークの場所のチェック ボックスをオフにした後、 **[次へ]** をクリックします。  
   
-7.  [名前] に、この規則のわかりやすい名前 (など`SQL Server Browser Service (tcp-in) 2382`) を入力し、[**完了**] をクリックします。  
+7.  [名前] に、この規則のわかりやすい名前 (など) を入力 `SQL Server Browser Service (tcp-in) 2382` し、[**完了**] をクリックします。  
   
-8.  リモート接続が有効になっていることを確認するには、別のコンピューターで SQL Server Management Studio または Excel を開き、サーバーのネットワーク名とインスタンス名を servername>\< \\<instancename\>という形式で指定して、Analysis Services に接続します。 たとえば、名前付きインスタンス **Finance** のある **AW-SRV01**という名前の付けられたサーバーでは、サーバー名は **AW-SRV01\Finance**となります。  
+8.  リモート接続が有効になっていることを確認するには、別のコンピューターで SQL Server Management Studio または Excel を開き、サーバーのネットワーク名とインスタンス名を<instancename という形式で指定して、Analysis Services に接続します \<servername> \\ \> 。 たとえば、名前付きインスタンス **Finance** のある **AW-SRV01**という名前の付けられたサーバーでは、サーバー名は **AW-SRV01\Finance**となります。  
   
  **オプション 2: 名前付きインスタンスに固定ポートを使用する**  
   
@@ -168,7 +167,7 @@ ms.locfileid: "70151857"
   
 2.  Analysis Services へのアクセスのブロックを解除するには、 **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックします。  
   
-3.  [ルールの種類] `Port`で、[] をクリックし、[**次へ**] をクリックします。  
+3.  [ルールの種類] で、[] をクリックし、[ `Port` **次へ**] をクリックします。  
   
 4.  [プロトコルおよびポート] で、 **[TCP]** をクリックし、 **[特定のローカル ポート]** に固定ポートの番号を入力します。  
   
@@ -176,9 +175,9 @@ ms.locfileid: "70151857"
   
 6.  [プロファイル] で、規則を適用しないネットワークの場所のチェック ボックスをオフにした後、 **[次へ]** をクリックします。  
   
-7.  [名前] に、この規則のわかりやすい名前 (など`SQL Server Analysis Services on port 54321`) を入力し、[**完了**] をクリックします。  
+7.  [名前] に、この規則のわかりやすい名前 (など) を入力 `SQL Server Analysis Services on port 54321` し、[**完了**] をクリックします。  
   
-8.  リモート接続が有効になっていることを確認するには、別のコンピューターで SQL Server Management Studio または Excel を開き、サーバーのネットワーク名とポート番号を\<servername>:\<ポート番号> の形式で指定して、Analysis Services に接続します。  
+8.  リモート接続が有効になっていることを確認するには、別のコンピューターで SQL Server Management Studio または Excel を開き、サーバーのネットワーク名とポート番号を次の形式で指定して、Analysis Services に接続し \<servername> ます。 \<portnumber>  
   
 #### <a name="netsh-advfirewall-syntax"></a>Netsh AdvFirewall 構文  
   
@@ -199,7 +198,7 @@ ms.locfileid: "70151857"
   
  固定ポートを使用すると、サーバー名にポート番号を付加する必要があるため、既定のインスタンス用の接続構文が変わることに注意してください。 たとえば、SQL Server Management Studio で、ポート 54321 をリッスンしている Analysis Services のローカルな既定のインスタンスに接続するには、Management Studio の [サーバーへの接続] ダイアログ ボックスにサーバー名として「localhost:54321」と入力する必要があります。  
   
- 名前付きインスタンスを使用している場合は、固定ポートを割り当てて、サーバー名の指定方法を変更することはできません\<(具体的には、servername\instancename> を使用して、固定ポートでリッスンする名前付きインスタンスに接続できます)。 このアプローチは、SQL Server Browser サービスが実行されており、サービスがリッスンしているポートのブロックが解除されている場合のみに使用できます。 SQL Server Browser サービスは、servername\instancename> に基づいて\<固定ポートへのリダイレクトを提供します。 SQL Server Browser サービスと、固定ポートをリッスンする Analysis Services の名前付きインスタンスの両方に対してポートを開いている限り、SQL Server Browser サービスによって名前付きインスタンスへの接続が解決されます。  
+ 名前付きインスタンスを使用している場合は、固定ポートを割り当てて、サーバー名の指定方法を変更することはできません (具体的には、を使用して、 \<servername\instancename> 固定ポートでリッスンしている名前付きインスタンスに接続できます)。 このアプローチは、SQL Server Browser サービスが実行されており、サービスがリッスンしているポートのブロックが解除されている場合のみに使用できます。 SQL Server Browser サービスは、に基づいて固定ポートへのリダイレクトを提供 \<servername\instancename> します。 SQL Server Browser サービスと、固定ポートをリッスンする Analysis Services の名前付きインスタンスの両方に対してポートを開いている限り、SQL Server Browser サービスによって名前付きインスタンスへの接続が解決されます。  
   
 1.  使用可能な TCP/IP ポートから、使用するポートを決定します。  
   
@@ -211,7 +210,7 @@ ms.locfileid: "70151857"
   
 4.  Windows ファイアウォールを構成して、指定した TCP ポートのブロックを解除します。 名前付きインスタンスに固定ポートを使用する場合は、そのインスタンスに指定した TCP ポートと、SQL Server Browser サービスで使用される TCP ポート 2382 の両方のブロックを解除します。  
   
-5.  接続を検証します。それには、Management Studio を使用してローカルで接続した後、別のコンピューターのクライアント アプリケーションからリモートで接続します。 Management Studio を使用するには、 \<servername>:\<ポート番号> の形式でサーバー名を指定して、Analysis Services の既定のインスタンスに接続します。 名前付きインスタンスの場合は、サーバー名を\<servername>\\<instancename\>として指定します。  
+5.  接続を検証します。それには、Management Studio を使用してローカルで接続した後、別のコンピューターのクライアント アプリケーションからリモートで接続します。 Management Studio を使用するには、という形式でサーバー名を指定して、Analysis Services の既定のインスタンスに \<servername> 接続します \<portnumber> 。 名前付きインスタンスの場合は、サーバー名を<instancename として指定し \<servername> \\ \> ます。  
   
 ##  <a name="port-configuration-for-an-analysis-services-cluster"></a><a name="bkmk_cluster"></a>Analysis Services クラスターのポート構成  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] フェールオーバー クラスターは、既定のインスタンスまたは名前付きインスタンスとしてインストールされているかどうかにかかわらず、常に TCP ポート 2383 でリッスンします。 動的なポート割り当ては、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では使用されません (Windows フェールオーバー クラスターにインストールされている場合)。 クラスターで [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を実行しているすべてノードの TCP 2383 を開く必要があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のクラスター化の詳細については、「 [SQL Server Analysis Services をクラスター化する方法](https://go.microsoft.com/fwlink/p/?LinkId=396548)」を参照してください。  

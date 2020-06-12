@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1702ad82c65b5a7370a62c4bc31a08007f374c9f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084978"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523161"
 ---
 # <a name="data-mining-query-interfaces"></a>データ マイニング クエリ インターフェイス
   データ マイニング クエリは、データ マイニング拡張機能 (DMX) の言語に基づいています。 DMX は、分類、リスク分析、推奨設定の生成、線形回帰などのすべての予測およびモデリングのタスクに使用できます。 またモデル処理時に生成されたパターンおよび統計を取得することもできます。  
@@ -61,7 +60,7 @@ ms.locfileid: "66084978"
  クエリ ビルダーでは、グラフィカルなツールを使用して、マイニング モデルの選択、新しいケース データの追加、予測関数の追加などの操作を実行できます。 予測クエリビルダーには、クエリを手動で変更するために使用できるテキストエディターと、クエリの結果を表示するための単純な**結果**ペインが含まれています。  
   
 ###  <a name="query-editor"></a><a name="bkmk_QueryEditor"></a> クエリ エディター  
- の[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]クエリエディターには、DMX クエリの作成と実行に使用できるツールが用意されています。 SQL Server Analysis Services のインスタンスに接続して、データベース、マイニング構造列、およびマイニング モデルを選択できます。 **メタデータ エクスプ ローラー** には、参照できる予測関数の一覧が含まれています。  
+ のクエリエディターに [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、DMX クエリの作成と実行に使用できるツールが用意されています。 SQL Server Analysis Services のインスタンスに接続して、データベース、マイニング構造列、およびマイニング モデルを選択できます。 **メタデータ エクスプ ローラー** には、参照できる予測関数の一覧が含まれています。  
   
 ###  <a name="dmx-templates"></a><a name="bkmk_Templates"></a>DMX テンプレート  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、DMX クエリの作成に使用できる対話型の DMX クエリ テンプレートが提供されます。 テンプレートの一覧を表示するには、ツール バーの **[表示]** をクリックし、 **[テンプレート エクスプローラー]** を選択します。 DMX、MDX、および XMLA のテンプレートを含むすべての Analysis Services テンプレートを表示するには、キューブ アイコンをクリックします。  
@@ -74,7 +73,7 @@ ms.locfileid: "66084978"
 >  Microsoft Office Excel データ マイニング アドインにも多くのクエリ テンプレートが含まれ、複雑な DMX ステートメントを作成するための対話形式のクエリ ビルダーも提供されます。 テンプレートを使用するには、データ マイニング クライアントで **[クエリ]** と **[詳細設定]** を順にクリックします。  
   
 ###  <a name="integration-services-data-mining-components"></a><a name="bkmk_SSIS"></a>データマイニングコンポーネントの Integration Services  
- また、予測クエリを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージの一部として含めることもできます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の次のタスクおよび変換では、DMX 予測クエリと DMX ステートメントの作成と実行がサポートされます。  
+ また、予測クエリをパッケージの一部として含めることもでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の次のタスクおよび変換では、DMX 予測クエリと DMX ステートメントの作成と実行がサポートされます。  
   
 |コンポーネント|説明|  
 |---------------|-----------------|  

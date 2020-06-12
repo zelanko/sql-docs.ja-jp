@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebb910af4a9c01784fb74195ad6eed0f7f96db71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdcc08060fc260d892ca7b90b13a0924d3fae491
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082837"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520243"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>モデル ビューアーからのドリルスルーの使用
   モデルの種類に応じて、データ マイニング デザイナーの **[マイニング モデル ビューアー]** タブにある参照ビューアーのドリルスルーを使用して、マイニング モデルで使用されているケースを調べたり、マイニング構造の追加列を参照したりできます。 モデルのパターンは特定のケースに直接リンクできないため、多くのモデルの種類ではドリルスルーがサポートされませんが、次のモデルの種類ではドリルスルーがサポートされます。  

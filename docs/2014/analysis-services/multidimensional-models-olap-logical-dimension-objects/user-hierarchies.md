@@ -24,24 +24,23 @@ helpviewer_keywords:
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 533b244a8a5b6ec5e2866b068cfbf5eb6f31a7a3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72811602"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545114"
 ---
 # <a name="user-hierarchies"></a>ユーザー階層
-  ユーザー定義階層は、ディメンションのメンバーを階層構造に整理し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]キューブ内にナビゲーションパスを提供するためにで使用される属性のユーザー定義階層です。 たとえば、次のテーブルでは、時間ディメンションにディメンション テーブルを定義します。 ディメンション テーブルは、年、四半期、月という 3 つの属性をサポートしています。  
+  ユーザー定義階層は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ディメンションのメンバーを階層構造に整理し、キューブ内にナビゲーションパスを提供するためにで使用される属性のユーザー定義階層です。 たとえば、次のテーブルでは、時間ディメンションにディメンション テーブルを定義します。 ディメンション テーブルは、年、四半期、月という 3 つの属性をサポートしています。  
   
-|Year|Quarter|月|  
+|年|Quarter|Month|  
 |----------|-------------|-----------|  
 |1999|第1四半期|1 月|  
 |1999|第1四半期|2 月|  
 |1999|第1四半期|3 月|  
 |1999|第2四半期|4 月|  
-|1999|第2四半期|5 月|  
+|1999|第2四半期|May|  
 |1999|第2四半期|6 月|  
 |1999|第3四半期|7 月|  
 |1999|第3四半期|8 月|  
@@ -80,7 +79,7 @@ ms.locfileid: "72811602"
  Province レベルに、CountryRegion レベルの他のメンバーに関連付けられているメンバーが生成され、City レベルのメンバーが Province レベルの対応するメンバーに関連付けられます。 ただし、CountryRegion レベルの Vatican City メンバーは Province レベルのメンバーに関連付けられていないため、メンバーは City レベルから CountryRegion レベルの Vatican City メンバーに直接関連付ける必要があります。 この変更により、このディメンションの階層は不規則になります。 市 Vatican City の親は国/地域である Vatican City で、これは City レベルの Vatican City メンバーの真上にはありません。 詳細については、「 [不規則階層](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)」を参照してください。  
   
 ### <a name="parent-child-hierarchies"></a>親子階層  
- ディメンションの親子階層は、親子属性という特殊な属性を使用して定義され、これによってメンバー間の相互関係が決まります。 親属性は、ディメンション メイン テーブル内の *自己参照型リレーションシップ*または *自己結合*を記述します。 親子階層は 1 つの親属性から構築されます。 親子階層に存在するレベルは、親属性に関連付けられているメンバー間の親子リレーションシップに基づいているので、1 つの親子階層に割り当てられるレベルは 1 つのみです。 親子階層のディメンション スキーマは、ディメンション メイン テーブルに存在する自己参照型リレーションシップに依存します。 たとえば、次の図は、 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]サンプルデータベースの**DimOrganization**ディメンションメインテーブルを示しています。  
+ ディメンションの親子階層は、親子属性という特殊な属性を使用して定義され、これによってメンバー間の相互関係が決まります。 親属性は、ディメンション メイン テーブル内の *自己参照型リレーションシップ*または *自己結合*を記述します。 親子階層は 1 つの親属性から構築されます。 親子階層に存在するレベルは、親属性に関連付けられているメンバー間の親子リレーションシップに基づいているので、1 つの親子階層に割り当てられるレベルは 1 つのみです。 親子階層のディメンション スキーマは、ディメンション メイン テーブルに存在する自己参照型リレーションシップに依存します。 たとえば、次の図は、サンプルデータベースの**DimOrganization**ディメンションメインテーブルを示してい [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。  
   
  ![DimOrganization テーブルの自己参照による結合](../dev-guide/media/dimorganization.gif "DimOrganization テーブルの自己参照による結合")  
   

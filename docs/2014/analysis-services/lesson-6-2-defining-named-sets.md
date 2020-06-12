@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 450a42a4564d3a59b5b609f2ca8faf6c1f99a128
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e02f4624dc0ec25ee0c3d8950c83550ca3d9ed57
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175271"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542734"
 ---
 # <a name="defining-named-sets"></a>名前付きセットの定義
   名前付きセットとは、ディメンション メンバーのセットを返す多次元式 (MDX) です。 名前付きセットを定義し、キューブ定義の一部として保存できます。さらに、名前付きセットをクライアント アプリケーションで作成することもできます。 名前付きセットは、キューブ データ、算術演算子、数値、関数を組み合わせることによって作成します。 名前付きセットは、クライアント アプリケーションの MDX クエリの中で使用できます。また、サブキューブのセットを定義するときも使用できます。 サブキューブは、クロス結合によるセットのコレクションであり、後続のステートメントに対して、キューブ空間を定義されたサブスペースに制限します。 制限されたキューブ領域の定義は MDX スクリプティングの基本概念です。
@@ -32,11 +31,11 @@ ms.locfileid: "78175271"
 
      **[計算]** タブで新しい計算を定義する場合、計算は **[スクリプト オーガナイザー]** ペインに表示されている順序で解決されることに注意してください。 新しい計算を作成するときにペイン内でフォーカスが置かれている位置によって、計算の実行順序が決まります。新しい計算は、フォーカスが置かれている計算の直後に定義されます。
 
-3.  [**名前**] ボックスで、新しい名前付きセットの名前をに`[Core Products]`変更します。
+3.  [**名前**] ボックスで、新しい名前付きセットの名前をに変更し `[Core Products]` ます。
 
      **[スクリプト オーガナイザー]** ペインには、スクリプト コマンドまたは計算されるメンバーとは異なる、名前付きセットの固有のアイコンが表示されます。
 
-4.  [**計算ツール**] ペインの [**メタデータ**] タブで、[ **Product**]、 `Members`[ **Category**]、[]、[ **All Products**] の順に展開します。
+4.  [**計算ツール**] ペインの [**メタデータ**] タブで、[ **Product**]、[ **Category**]、 `Members` []、[ **All Products**] の順に展開します。
 
     > [!NOTE]
     >  **[計算ツール]** ペインにメタデータが表示されない場合、ツール バーの **[再接続]** をクリックします。 それでも表示されない場合は、キューブを処理するか、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスを開始する必要があります。
@@ -49,9 +48,9 @@ ms.locfileid: "78175271"
 
 1.  [ `[Core Products]` **スクリプトオーガナイザー** ] ペイン内を右クリックし、[**新しい名前付きセット**] をクリックします。
 
-2.  [**名前**] ボックスで、この名前付きセットの名前を`[Large Resellers]`に変更します。
+2.  [**名前**] ボックスで、この名前付きセットの名前をに変更し `[Large Resellers]` ます。
 
-3.  [**式**] ボックスに「 `Exists()`」と入力します。
+3.  [**式**] ボックスに「」と入力 `Exists()` します。
 
      Exists 関数を使用して、Number of Employees 属性階層内の従業員数が多数であるメンバーのセットと交差する、Reseller Name 属性階層のメンバーのセットを返すようにします。
 
@@ -69,29 +68,29 @@ ms.locfileid: "78175271"
 
      これで、Exists セット式の最初のセットが定義されたので、2番目のセット (最も多くの従業員を含む再販業者ディメンションのメンバーのセット) を追加する準備が整いました。
 
-7.  [**計算ツール**] ペインの [**メタデータ**] タブで、[リセラー] ディメンションの [ **Number of Employees** ] を展開し、[ `Members`]、[ **All リセラー**] の順に展開します。
+7.  [**計算ツール**] ペインの [**メタデータ**] タブで、[リセラー] ディメンションの [ **Number of Employees** ] を展開し、 `Members` []、[ **All リセラー**] の順に展開します。
 
      この属性階層のメンバーはグループ化されていません。
 
 8.  **Reseller** ディメンションのディメンション デザイナーを開いて、 **[属性]** ペインの **[Number of Employees]** をクリックします。
 
-9. プロパティウィンドウで、 `DiscretizationMethod`プロパティを**Automatic**に変更し、 `DiscretizationBucketCount`プロパティをに`5`変更します。 詳細については、[「属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。
+9. プロパティウィンドウで、 `DiscretizationMethod` プロパティを**Automatic**に変更し、プロパティをに変更し `DiscretizationBucketCount` `5` ます。 詳細については、[「属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。
 
 10. **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。
 
 11. 配置が正常に完了したら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーに切り替え、 **[計算]** タブのツール バーで **[再接続]** をクリックします。
 
-12. [**計算ツール**] ペインの [**メタデータ**] タブで、[**リセラー** ] `Members`ディメンションの [ **Number of Employees** ] を展開し、[]、[ **All リセラー**] の順に展開します。
+12. [**計算ツール**] ペインの [**メタデータ**] タブで、[**リセラー** ] ディメンションの [ **Number of Employees** ] を展開し、 `Members` []、[ **All リセラー**] の順に展開します。
 
      この属性階層のメンバーには、0 から 4 までの番号が付いた 5 つのグループが含まれるようになりました。 グループの番号は、グループ上にポインターを合わせると表示されるヒントで確認できます。 `2 -17`の範囲では、ヒントに `[Reseller].[Number of Employees].&[0]`が含まれている必要があります。
 
-     この属性階層のメンバーは、DiscretizationBucketCount プロパティがに`5`設定され、DiscretizationMethod プロパティが**Automatic**に設定されているため、グループ化されます。
+     この属性階層のメンバーは、DiscretizationBucketCount プロパティがに設定され、 `5` DiscretizationMethod プロパティが**Automatic**に設定されているため、グループ化されます。
 
 13. **[式]** ボックスで、Exists セット式内の Members 関数の後ろ、右かっこの直前にコンマを追加します。次に、 **[メタデータ]** ペインから **[83 - 100]** をドラッグしてコンマの後に置きます。
 
      これで、Exists セット式は完成です。この式は、Large Resellers 名前付きセットが軸に設定された場合に、これらの指定された 2 つのセット、つまり全再販業者のセットと 83 から 100 人の従業員を持つ再販業者のセットで交差するメンバーのセットを返します。
 
-     次の図は、 `[Large Resellers]`名前付きセットの**計算式**ペインを示しています。
+     次の図は、名前付きセットの**計算式**ペインを示して `[Large Resellers]` います。
 
      ![[Large Resellers] の計算式ペイン](../../2014/tutorials/media/l6-named-set-02.gif "[Large Resellers] の計算式ペイン")
 

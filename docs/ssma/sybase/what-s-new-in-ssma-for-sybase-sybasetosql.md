@@ -1,24 +1,29 @@
 ---
 title: SSMA for SAP ASE の新機能 (SybaseToSQL) |Microsoft Docs
+description: 各リリースの Sybase (SybaseToSQL) の SQL Server Migration Assistant (SSMA) に加えられた変更について説明します。
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 258ddb758824c1d823cc1a7a306b05bf491d087b
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 1124349e961de7b4dc384b2db67d503d82e305fe
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220677"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293700"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE の新機能 (SybaseToSQL)
 
 この記事では、各リリースでの SAP ASE (旧称 SSMA for Sybase) の変更 (SSMA) の SQL Server Migration Assistant を示します。
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+SSMA for SAP ASE の v1.0 リリースには、わずかなパフォーマンス向上とバグ修正が含まれています。
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 

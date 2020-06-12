@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: c11380f0-7c24-4668-9cdf-9c53e4aff665
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d5f0619e7291cc08b1750c0b35f9639cb7a9872
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f37939fea1188c18079fc7e619cee6a336876e24
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078035"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541854"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>モデルの管理 (SQL Server データ マイニング アドイン)
   ![[データ マイニング] リボンの [モデルの管理] ボタン](media/dmc-manage.gif "[データ マイニング] リボンの [モデルの管理] ボタン")  
   
- [**モデルの管理**] ダイアログボックスを使用すると、現在接続している[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]サーバーに格納されている既存のマイニングモデルとマイニング構造を操作できます。 さらに、現在のセッション中に作成された一時的な構造およびモデルを表示および管理できます。 セッション モデルおよびサーバー上に格納されているモデルをこれまでに使用している場合、ダイアログ ボックスにこれらのモデルが表示されます。  
+ [**モデルの管理**] ダイアログボックスを使用すると、現在接続しているサーバーに格納されている既存のマイニングモデルとマイニング構造を操作でき [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 さらに、現在のセッション中に作成された一時的な構造およびモデルを表示および管理できます。 セッション モデルおよびサーバー上に格納されているモデルをこれまでに使用している場合、ダイアログ ボックスにこれらのモデルが表示されます。  
   
 ## <a name="using-the-manage-models-wizard"></a>モデルの管理ウィザードの使用  
  [モデルの**管理**] をクリックすると、[**マイニング構造とマイニングモデルの管理**] ダイアログボックスが開き、既存のデータマイニングモデルおよび構造を管理するための次の機能にアクセスできます。  

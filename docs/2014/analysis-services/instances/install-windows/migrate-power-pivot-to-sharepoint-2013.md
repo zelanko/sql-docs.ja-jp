@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd90dd467d0e09f96901847b6a167477f35eeab8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63a3d08a4458ce9347f4e26238d8a28c2b49a22a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175241"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543895"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>SharePoint 2013 への PowerPivot の移行
 
@@ -52,7 +51,7 @@ ms.locfileid: "78175241"
 
 2.  新しい SharePoint Server 2013 ファームをインストールします。
 
-3.  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]サーバーの[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]インスタンスを SharePoint モードでインストールします。 詳しくは、「 [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)」をご覧ください。
+3.  サーバーのインスタンスを [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint モードでインストールします。 詳しくは、「 [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)」をご覧ください。
 
 4.  SharePoint ファーム内の各サーバーで [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 のインストール パッケージ **spPowerPivot.msi** を実行します。 詳細については、「 [SharePoint 2013&#41;&#40;PowerPivot for SharePoint アドインをインストールまたはアンインストールする](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)」を参照してください。
 
@@ -72,7 +71,7 @@ ms.locfileid: "78175241"
 5.  **データベースを読み取り/書き込み用に設定する** : **[読み取り専用データベース]** を **[False]** に設定します。
 
 ##  <a name="3-prepare-web-applications-and-mount-content-databases"></a><a name="bkmk_prepare_mount_databases"></a>3) Web アプリケーションを準備し、コンテンツデータベースをマウントする
- 次の手順の詳細については、「 [sharepoint 2010 から sharepoint 2013 にデータベースをアップグレードする](https://go.microsoft.com/fwlink/p/?LinkId=256690)」 (https://go.microsoft.com/fwlink/p/?LinkId=256690)を参照してください。
+ 次の手順の詳細については、「 [sharepoint 2010 から sharepoint 2013 にデータベースをアップグレードする](https://go.microsoft.com/fwlink/p/?LinkId=256690)」 (を参照してください https://go.microsoft.com/fwlink/p/?LinkId=256690) 。
 
 1.  **データベースをオフラインにする**
 
@@ -96,7 +95,7 @@ ms.locfileid: "78175241"
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]
     ```
 
-     詳細については、「[コンテンツデータベースを接続またはデタッチする (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) 」 (https://technet.microsoft.com/library/ff628582.aspx)「」を参照してください。
+     詳細については、「[コンテンツデータベースを接続またはデタッチする (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) 」 (「」を参照してください https://technet.microsoft.com/library/ff628582.aspx) 。
 
      **手順の完了後の状態**  : マウント操作が完了すると、前のコンテンツ データベースに格納されていたファイルが表示されます。 そのため、ユーザーはドキュメント ライブラリのブックを表示して開くことができます。
 
@@ -129,7 +128,7 @@ ms.locfileid: "78175241"
 
 -   **スケジュールを移行するオプション 1: SharePoint ファームの管理者**
 
-    1.  SharePoint 2013 管理で、 `Set-PowerPivotServiceApplication` `-StartMigratingRefreshSchedules`スイッチを使用してコマンドレットを実行し、オンデマンドでの自動移行![PowerShell 関連コンテンツ](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")を有効にします。 次の Windows PowerShell スクリプトは、PowerPivot サービス アプリケーションが 1 つだけであることを前提としています。
+    1.  SharePoint 2013 管理で、スイッチを使用してコマンドレットを実行し、 `Set-PowerPivotServiceApplication` `-StartMigratingRefreshSchedules` オンデマンドでの自動移行![PowerShell 関連コンテンツ](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")を有効にします。 次の Windows PowerShell スクリプトは、PowerPivot サービス アプリケーションが 1 つだけであることを前提としています。
 
         ```powershell
         $app = Get-PowerPivotServiceApplication
@@ -170,8 +169,8 @@ ms.locfileid: "78175241"
 
 -   [ブックのアップグレードと定期データ更新 &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013)
 
--   [SharePoint 2013 へのアップグレードプロセスの概要](https://go.microsoft.com/fwlink/p/?LinkId=256688)(https://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [SharePoint 2013 へのアップグレードプロセスの概要](https://go.microsoft.com/fwlink/p/?LinkId=256688)( https://go.microsoft.com/fwlink/p/?LinkId=256688) .
 
--   https://go.microsoft.com/fwlink/p/?LinkId=256689) [SharePoint 2013 (にアップグレードする前に準備を整える](https://go.microsoft.com/fwlink/p/?LinkId=256689)。
+-   [SharePoint 2013 (にアップグレードする前に準備を整える](https://go.microsoft.com/fwlink/p/?LinkId=256689) https://go.microsoft.com/fwlink/p/?LinkId=256689) 。
 
--   https://go.microsoft.com/fwlink/p/?LinkId=256690) [SharePoint 2010 から sharepoint 2013 (にデータベースをアップグレード](https://go.microsoft.com/fwlink/p/?LinkId=256690)します。
+-   [Sharepoint 2010 から sharepoint 2013 (にデータベースをアップグレード](https://go.microsoft.com/fwlink/p/?LinkId=256690) https://go.microsoft.com/fwlink/p/?LinkId=256690) します。

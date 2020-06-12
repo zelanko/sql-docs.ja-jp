@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d775b8fbfb7d50b5db245073fdc52fc274638eb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 723eb7c1c0e8547ee411fc54ecd4aca613011b38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075870"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547114"
 ---
 # <a name="database-readwritemodes"></a>データベースの ReadWriteMode
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) がデータベースを、読み書き可能から読み取り専用に変更したり、読み取り専用から読み書き可能に変更したりすることは少なくありません。 こうした状況は、ソリューションのスケールアウトやパフォーマンスの向上のために 1 つのデータベース フォルダーを複数のサーバー間で共有するなど、ビジネス上のニーズによって頻繁に発生します。 このような場合は、`ReadWriteMode` データベース プロパティを使用すると、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA はデータベースの動作モードを容易に変更できます。  
@@ -38,7 +37,7 @@ ms.locfileid: "66075870"
 ## <a name="readwritemode-usage"></a>ReadWriteMode の使用方法  
  `ReadWriteMode` データベース プロパティは、`Attach` データベース コマンドの一部として使用されます。 `Attach` コマンドを使うと、データベース プロパティに `ReadWrite` または `ReadOnly` を設定できます。 `ReadWriteMode` データベース プロパティの値は、読み取り専用として定義されているため、直接更新することはできません。 データベースは、`ReadWriteMode` プロパティが `ReadWrite` に設定された状態で作成されます。 データベースを読み取り専用モードで作成することはできません。  
   
- と`ReadOnly`の間`ReadWriteMode`で`ReadWrite`データベースプロパティを切り替えるには、一連の`Detach/Attach`コマンドを実行する必要があります。  
+ `ReadWriteMode`との間でデータベースプロパティを切り替えるには `ReadWrite` `ReadOnly` 、一連のコマンドを実行する必要があり `Detach/Attach` ます。  
   
  `Attach` を除き、すべてのデータベース操作では、`ReadWriteMode` データベース プロパティが現在の状態で維持されます。 たとえば、`Alter`、`Backup`、`Restore` および `Synchronize` などの操作では、`ReadWriteMode` 値が保持されます。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e47f887425c2294785bd6e6624961727bf65eb17
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174232"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527731"
 ---
 # <a name="browsing-a-neural-network-model"></a>ニューラル ネットワーク モデルの参照
   **[参照]** を使用してニューラル ネットワークまたはロジスティック回帰モデルを開くと、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のニューラル ネットワーク モデル ビューアーに似た対話型ビューアーにモデルが表示されます。 ビューアーは、相関関係の調査、およびモデルと基になるデータのパターンに関する情報の取得に役立ちます。
@@ -31,7 +30,7 @@ ms.locfileid: "78174232"
 
 -   [変数](#BKMK_Variables)
 
--   [Inputaccel](#BKMK_Inputs)
+-   [入力](#BKMK_Inputs)
 
 -   [出力](#BKMK_Outputs)
 
@@ -89,7 +88,7 @@ ms.locfileid: "78174232"
 
 1.  特定のグループを対象として、そのグループで購入に最も大きく影響する要因を確認するとします。
 
-     **入力**ペインで、[**属性**] の下にある [ ** \<All>** ] セルをクリックし、[ **Age**] を選択します。
+     **入力**ペインで、[属性] の下のセルをクリックし、[ **\<All>** **年齢**] **Attribute**を選択します。
 
      **[値]** で、最も若い年齢のカテゴリを選択します。
 

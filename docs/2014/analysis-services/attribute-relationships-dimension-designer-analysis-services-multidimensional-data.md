@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 228d1d91-7524-4773-9c83-39b04e8534d3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5113ec1a554f2ae74c3f024fd6cbe8f6398d8bf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063189"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527878"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>[属性リレーションシップ] (ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[属性リレーションシップ]** タブを使用すると、選択したディメンションの属性リレーションシップを作成、変更、または削除できます。  
@@ -25,7 +24,7 @@ ms.locfileid: "66063189"
 ## <a name="panes"></a>ペイン  
  **[属性リレーションシップ]** ページには、次のペインがあります。  
   
- [Toolbar](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
+ [ツール バー](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
  ディメンション デザイナーの **[属性リレーションシップ]** タブで操作を行う場合に使用します。  
   
  [属性リレーションシップ ダイアグラム](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  

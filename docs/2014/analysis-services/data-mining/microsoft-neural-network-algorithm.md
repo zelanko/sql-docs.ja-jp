@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c8462d5965685986bbb68565ccb24de0f18c645
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083868"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521758"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)]ニューラルネットワークアルゴリズムは、入力属性の考えられる各状態と予測可能な属性の各状態を組み合わせ、トレーニングデータを使用して確率を計算します。 これらの確率は、分類や回帰で使用することも、入力属性に基づいて予測属性の結果を予測するために使用することもできます。  
+  では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラルネットワークアルゴリズムは、入力属性の考えられる各状態と予測可能な属性の各状態を組み合わせ、トレーニングデータを使用して確率を計算します。 これらの確率は、分類や回帰で使用することも、入力属性に基づいて予測属性の結果を予測するために使用することもできます。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムで作成されたマイニング モデルには、入力と予測の両方に使用する列の数または予測のみに使用する列の数に応じて、複数のネットワークを含めることができます。 1 つのマイニング モデルに含まれるネットワークの数は、マイニング モデルで使用される入力列および予測可能列に含まれる状態の数によって異なります。  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c9c44aa6060a9b626b3de0cde5a3c82e1e55b1dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf009e45e97586a50c01f6e949120c09e3625ebc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070684"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539874"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>[利益チャートの設定] ダイアログ ボックス ([マイニング精度チャート] ビュー)
   **[利益チャートの設定]** ダイアログ ボックスを使用すると、利益チャートの生成に関する設定を構成できます。 利益チャートの詳細については、「[リフト チャート &#40;Analysis Services - データ マイニング&#41;](data-mining/lift-chart-analysis-services-data-mining.md)」をご覧ください。  

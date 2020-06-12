@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83cdc571019cffd8ae99e00f119541736c6f503b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072715"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541284"
 ---
 # <a name="use-aggregate-functions"></a>集計関数の使用
   メジャーをスライスするためにディメンションを使用する場合、メジャーはそのディメンションに含まれる階層に沿って集約されます。 この集約動作は、メジャーに指定される集計関数に依存します。 数値データが含まれているほとんどのメジャーでは、集計関数は `Sum` になります。 メジャーの値は、どの階層のレベルがアクティブかに応じて異なる量の合計になります。  
   
- Analysis Services において作成するすべてのメジャーは、対応する集計関数によりその動作が決まります。 定義済みの集計`Sum`の`Min`種類`Max`に`Count`は、、、、、 **Distinct Count**など、いくつかの特殊な関数が含まれます。 または、複雑な数式やカスタムの数式に基づいて集計を必要とする場合は、構築済みの集計関数を代わりに使用して、MDX の計算を作成できます。 たとえば、割合の値のためのメジャーを定義する場合、計算されるメジャーを使用して MDX でそれを実行します。 「[CREATE MEMBER ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)」を参照してください。  
+ Analysis Services において作成するすべてのメジャーは、対応する集計関数によりその動作が決まります。 定義済みの集計 `Sum` の種類には、、、 `Min` `Max` 、 `Count` 、 **Distinct Count**など、いくつかの特殊な関数が含まれます。 または、複雑な数式やカスタムの数式に基づいて集計を必要とする場合は、構築済みの集計関数を代わりに使用して、MDX の計算を作成できます。 たとえば、割合の値のためのメジャーを定義する場合、計算されるメジャーを使用して MDX でそれを実行します。 「[CREATE MEMBER ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)」を参照してください。  
   
  キューブ ウィザードを使用して作成されるメジャーは、メジャーの定義の一部として、集計の種類に割り当てられます。 ソース列に数値データが含まれることを前提として、集計の種類は常に `Sum` になります。 `Sum` は、ソース列のデータ型に関係なく割り当てられます。 たとえば、キューブ ウィザードを使用してメジャーを作成し、ファクト テーブルからすべての列を抜粋した場合、ソースが日付と時間の列であっても、結果として得られるメジャーのすべてに `Sum` の集計があることが分かります。 集計関数が適切であることを確認するウィザードを介して作成されたメジャーの場合は、事前に割り当てられている集計メソッドを常に確認します。  
   

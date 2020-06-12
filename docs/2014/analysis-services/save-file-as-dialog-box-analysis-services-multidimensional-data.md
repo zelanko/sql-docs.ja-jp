@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8e2099ba-c5b0-4940-8e48-7d696485fa4c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 007e37c7e093828cb3ea452a2bea5972f9ee5b9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 247f5153189cdfa5943e42b2d922ed0cc40d5dd7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070049"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538904"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>[ファイル名を付けて保存] ダイアログ ボックス (Analysis Services - 多次元データ)
   **[ファイル名を付けて保存]** ダイアログ ボックスには、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに定義されているログおよびデータ フォルダー内の使用可能なファイルの一覧が表示されます。 一覧表示されたファイルを選択することも、必要に応じて異なるフォルダーとファイルを指定することもできます。 **[ファイル名を付けて保存]** は、次の方法で表示します。  

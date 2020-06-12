@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d78f2523e539d72f506d074d102507fca1d0a986
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e7f387bb62f15acff8e3443e7e9fdc8888896e8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175916"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536734"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>データ ソースの作成 (SSAS 多次元)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の多次元モデルでは、データ ソース オブジェクトが、処理 (またはインポート) するデータを持つデータ ソースへの接続を表します。 多次元モデルには少なくとも 1 つのデータ ソース オブジェクトが含まれている必要がありますが、複数のデータ ウェアハウスのデータを結合するために、データ ソース オブジェクトをさらに追加することもできます。 このトピックで説明する手順に従って、モデルのデータ ソース オブジェクトを作成します。 このオブジェクトのプロパティの設定の詳細については、「[データ ソースのプロパティの設定 &#40;SSAS 多次元&#41;](set-data-source-properties-ssas-multidimensional.md)」を参照してください。  
@@ -82,11 +81,11 @@ ms.locfileid: "70175916"
   
      新しい接続の既定のプロバイダーは、ネイティブ OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client プロバイダーです。 このプロバイダーは、OLE DB を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのインスタンスに接続するために使用します。 SQL Server リレーショナル データベースに接続する場合、通常は、Native OLE DB\SQL Server Native Client 11.0 を使用する方が、代替プロバイダーを使用するより高速です。  
   
-     他のデータ ソースにアクセスするために、別のプロバイダーを選択できます。 によっ[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]てサポートされるプロバイダーとリレーショナルデータベースの一覧については、「 [SSAS 多次元&#41;&#40;サポートされるデータソース](supported-data-sources-ssas-multidimensional.md)」を参照してください。  
+     他のデータ ソースにアクセスするために、別のプロバイダーを選択できます。 によってサポートされるプロバイダーとリレーショナルデータベースの一覧につい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ては、「 [SSAS 多次元&#41;&#40;サポートされるデータソース](supported-data-sources-ssas-multidimensional.md)」を参照してください。  
   
 5.  選択したプロバイダーから要求される情報を入力して、基になるデータ ソースに接続します。 **[ネイティブ OLE DB\SQL Server Native Client]** プロバイダーを選択した場合は、次の情報を入力します。  
   
-    1.  **[サーバー名]** は、データベース エンジン インスタンスのネットワーク名です。 IP アドレス、コンピューターの NETBIOS 名、または完全修飾ドメイン名として指定できます。 サーバーが名前付きインスタンスとしてインストールされている場合は、インスタンス名 (たとえば\<、computername \\><\>instancename) を含める必要があります。  
+    1.  **[サーバー名]** は、データベース エンジン インスタンスのネットワーク名です。 IP アドレス、コンピューターの NETBIOS 名、または完全修飾ドメイン名として指定できます。 サーバーが名前付きインスタンスとしてインストールされている場合は、インスタンス名 (たとえば、 \<computername><instancename) を含める必要があり \\ \> ます。  
   
     2.  **[サーバー ログオン]** は、接続の認証方法を指定します。 **[Windows 認証を使用する]** では、Windows 認証が使用されます。 **SQL Server 認証を使用**する Azure SQL データベースまたは混合モード認証をサポートする SQL Server インスタンスのデータベースユーザーログインを指定します。  
   
@@ -151,7 +150,7 @@ ms.locfileid: "70175916"
  追加のデータ ソースへの接続をサポートするために、複数のデータ ソース オブジェクトを作成できます。 各データ ソースには、リレーションシップを作成するために使用できる列が必要です。  
   
 > [!NOTE]  
->  複数のデータソースが定義されており、1つのクエリで複数のソースからデータを照会する場合 (たとえば、(スノーフレークディメンションの場合)、を使用し`OpenRowset`てリモートクエリをサポートするデータソースを定義する必要があります。 通常、これは Microsoft SQL Server データ ソースになります。  
+>  複数のデータソースが定義されており、1つのクエリで複数のソースからデータを照会する場合 (たとえば、(スノーフレークディメンションの場合)、を使用してリモートクエリをサポートするデータソースを定義する必要があり `OpenRowset` ます。 通常、これは Microsoft SQL Server データ ソースになります。  
   
  複数のデータ ソースを使用するための要件には、次のようなものがあります。  
   

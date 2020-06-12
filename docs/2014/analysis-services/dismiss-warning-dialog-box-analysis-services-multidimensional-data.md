@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 66d853e0-1b57-4b17-a7d1-a25899411684
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3450713f3b621e960e443062323c3074b2698b07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c75289571216568a440fdfb863a1a1633ecb86ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081642"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528528"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>[警告の消去] ダイアログ ボックス (Analysis Services - 多次元データ)
   **[警告の消去]** ダイアログ ボックスを使用すると、警告の特定のインスタンスを消去できます。  

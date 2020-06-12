@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c665c894a4e0bb3691c483a8d8bab084ac2fa276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0ebb99e8368254e085cc9a4f4b0dc9a040b24c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075430"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546959"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>ビジネス インテリジェンス ウィザードを使用したタイム インテリジェンス計算の定義
   タイム インテリジェンス拡張機能は、選択した階層に時間計算 (または時間ビュー) を追加するキューブ拡張機能です。 この拡張機能では、次の計算のカテゴリがサポートされています。  
@@ -43,7 +42,7 @@ ms.locfileid: "66075430"
   
  時間ディメンションを持つキューブにタイム インテリジェンスを適用します (時間ディメンションは、`Type` プロパティが `Time` に設定されているディメンションです)。 また、そのディメンションの時間属性には、`Type` プロパティの適切な設定 (Years や Months など) も指定する必要があります。 ディメンション ウィザードを使用して時間ディメンションを作成すると、ディメンションとその属性の両方の `Type` プロパティが正しく設定されます。  
   
- タイム インテリジェンスをキューブに追加するには、ビジネス インテリジェンス ウィザードを使用して、 **[拡張機能の選択]** ページの **[タイム インテリジェンスの定義]** オプションを選択します。 このウィザードでは、タイム インテリジェンスの追加先となる階層を選択し、その階層内でタイム インテリジェンスを適用するメンバーを指定する手順が示されます。 ウィザードの最後のページでは、選択したタイムインテリジェンスを追加するために、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベースに対して行われる変更を確認できます。  
+ タイム インテリジェンスをキューブに追加するには、ビジネス インテリジェンス ウィザードを使用して、 **[拡張機能の選択]** ページの **[タイム インテリジェンスの定義]** オプションを選択します。 このウィザードでは、タイム インテリジェンスの追加先となる階層を選択し、その階層内でタイム インテリジェンスを適用するメンバーを指定する手順が示されます。 ウィザードの最後のページでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 選択したタイムインテリジェンスを追加するために、データベースに対して行われる変更を確認できます。  
   
 ## <a name="selecting-a-time-hierarchy"></a>時間階層の選択  
  **[対象となる階層と計算の選択]** ページで、タイム インテリジェンス拡張機能の適用先となる時間階層を選択します。 タイム インテリジェンス拡張機能は、ビジネス インテリジェンス ウィザードを実行するたびに 1 つの時間階層にのみ適用できます。 複数の時間階層に拡張機能を適用する場合は、ウィザードをもう一度実行します。  
@@ -66,7 +65,7 @@ ms.locfileid: "66075430"
 ## <a name="viewing-the-time-intelligence-enhancement"></a>タイム インテリジェンス拡張機能の表示  
  ビジネス インテリジェンス ウィザードの最後のページで、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに対して行われる変更内容を表示できます。 タイム インテリジェンス拡張機能では、次の表で説明されているように、選択した時間ディメンション、関連付けられているデータ ソース ビュー、および関連付けられているキューブがウィザードによって変更されます。  
   
-|オブジェクト|変更|  
+|Object|変更|  
 |------------|------------|  
 |時間ディメンション|計算 (またはビュー) ごとに属性を追加します。|  
 |データ ソース ビュー|時間ディメンションの新しい属性ごとに、計算される列を時間テーブルに追加します。|  

@@ -1,5 +1,5 @@
 ---
-title: sysjobsteps (Transact-sql) |Microsoft Docs
+title: dbo.sysjobsteps (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d98b1ccc4dc8da3ba9d494a78bfea3727102da07
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4bf7ed1c52aedb63ffe1e2e257022e004b327787
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827322"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423391"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "82827322"
 |**step_id**|**int**|ジョブ ステップの ID。|  
 |**step_name**|**sysname**|ジョブステップの名前。|  
 |**サブ**|**nvarchar(40)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがジョブ ステップを実行するために使用するサブシステムの名前。|  
-|**メニュー**|**nvarchar(max)**|**サブシステム**によって実行されるコマンドです。|  
+|**command**|**nvarchar(max)**|**サブシステム**によって実行されるコマンドです。|  
 |**flags**|**int**|予約済み。|  
 |**additional_parameters**|**ntext**|予約済み。|  
 |**cmdexec_success_code**|**int**|**CmdExec**サブシステムのステップによって返された、成功を示すエラーレベルの値。|  
-|**on_success_action**|**tinyint**|ステップが正常に実行されたときに実行されるアクション。|  
+|**on_success_action**|**tinyint**|ステップが正常に実行されたときに実行されるアクション。<br /><br /> **1** = (既定値) 正常に終了します。<br /><br /> **2** = 失敗で終了<br /><br /> **3** = 次の手順に進む<br /><br /> **4** = ステップに進む_on_success_step_id_|
 |**on_success_step_id**|**int**|ステップが正常に実行されたときに実行する次のステップの ID。|  
-|**on_fail_action**|**tinyint**|ステップが正常に実行されなかった場合に実行されるアクション。|  
+|**on_fail_action**|**tinyint**|ステップが正常に実行されなかった場合に実行されるアクション。<br /><br /> **1** = 正常に終了します。<br /><br /> **2** = (既定) エラーで終了します。<br /><br /> **3** = 次の手順に進む<br /><br /> **4** = ステップに進む_on_fail_step_id_|
 |**on_fail_step_id**|**int**|ステップが正常に実行されないときに実行する次のステップの ID。|  
 |**server**|**sysname**|予約済み。|  
 |**database_name**|**sysname**|**サブシステム**が TSQL の場合に**コマンド**が実行されるデータベースの名前。|  
