@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cfceb6b2314f9e57d6d383312d9f9373f7df1621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4decea0d257119852eabd383d35cc1d99885b61
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67832921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544094"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos の制約付き委任のための Analysis Services の構成
   Kerberos 認証用に Analysis Services を構成する際は、通常、データを照会するときに Analysis Services でユーザー ID の権限を借用すること、Analysis Services でユーザー ID を下位レベル サービスに委任すること、またはその両方を実現することが重要になります。 これらのシナリオで求められる構成要件はそれぞれ異なります。 どちらのシナリオでも、構成が正しく行われたことを確認するための検証が必要になります。  
   
 > [!TIP]  
->  の kerberos Configuration Manager は、での kerberos に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]関連する接続**の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]問題のトラブルシューティングに役立つ診断ツールです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ** Kerberos 認証の詳細については、「 [Microsoft® Kerberos Configuration Manager for SQL Server®](https://www.microsoft.com/download/details.aspx?id=39046)」をご覧ください。  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と Kerberos に関する接続性の問題のトラブルシューティングに役立つ診断ツールです。 Kerberos 認証の詳細については、「 [Microsoft® Kerberos Configuration Manager for SQL Server®](https://www.microsoft.com/download/details.aspx?id=39046)」をご覧ください。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
 -   [Analysis Services によるユーザー ID の権限の借用](#bkmk_impersonate)  
   
@@ -43,7 +42,7 @@ ms.locfileid: "67832921"
   
 |タスク|説明|  
 |----------|-----------------|  
-|手順 1: アカウントが委任に適していることを確認する|サービスの実行に使用されるアカウントの適切なプロパティが Active Directory にあることを確認します。 Active Directory のサービス アカウントは、機微なアカウントとしてマークされていてはならず、委任シナリオから明確に除外されている必要があります。 詳細については、「 [ユーザー アカウントとは](https://go.microsoft.com/fwlink/?LinkId=235818)」をご覧ください。<br /><br /> ** \*重要\* \* **一般に、すべてのアカウントとサーバーは、同じ Active Directory ドメインまたは同じフォレスト内の信頼されたドメインに属している必要があります。 ただし、Windows Server 2012 はドメインの境界を越えた委任をサポートしているので、ドメインの機能レベルが Windows Server 2012 である場合、ドメインの境界を越えた Kerberos の制約付き委任を構成できます。 また、Analysis Services を HTTP アクセス用に構成し、クライアント接続で IIS の認証方法を使用することもできます。 詳細については、「 [インターネット インフォメーション サービス &#40;IIS&#41; 8.0 上の Analysis Services への HTTP アクセスの構成](configure-http-access-to-analysis-services-on-iis-8-0.md)」をご覧ください。|  
+|手順 1: アカウントが委任に適していることを確認する|サービスの実行に使用されるアカウントの適切なプロパティが Active Directory にあることを確認します。 Active Directory のサービス アカウントは、機微なアカウントとしてマークされていてはならず、委任シナリオから明確に除外されている必要があります。 詳細については、「 [ユーザー アカウントとは](https://go.microsoft.com/fwlink/?LinkId=235818)」をご覧ください。<br /><br /> 重要一般に、すべてのアカウントとサーバーは、同じ Active Directory ドメインまたは同じフォレスト内の信頼されたドメインに属している必要があります。 ** \* \* \* \* ** ただし、Windows Server 2012 はドメインの境界を越えた委任をサポートしているので、ドメインの機能レベルが Windows Server 2012 である場合、ドメインの境界を越えた Kerberos の制約付き委任を構成できます。 また、Analysis Services を HTTP アクセス用に構成し、クライアント接続で IIS の認証方法を使用することもできます。 詳細については、「 [インターネット インフォメーション サービス &#40;IIS&#41; 8.0 上の Analysis Services への HTTP アクセスの構成](configure-http-access-to-analysis-services-on-iis-8-0.md)」をご覧ください。|  
 |手順 2: SPN を登録する|制約付き委任をセットアップする前に、Analysis Services インスタンス用に SPN (Service Principle Name) を登録する必要があります。 中間層サービスの Kerberos の制約付き委任を構成するときに Analysis Services SPN が必要となります。 手順については、「 [SPN registration for an Analysis Services instance](spn-registration-for-an-analysis-services-instance.md) 」をご覧ください。<br /><br /> SPN (Service Principle Name) は、Kerberos 認証用に構成されたドメイン内のサービスの一意の ID を指定します。 通常、統合セキュリティを使用するクライアント接続は、SSPI 認証の一部として SPN を要求します。 この要求は、Active Directory ドメイン コントローラー (DC) に転送されます。その際、クライアントによって示された SPN に対応する SPN が Active Directory 内に登録されている場合は、KDC によりチケットが提供されます。|  
 |手順 3: 制約付き委任を構成する|まず、使用するアカウントを検証し、そのアカウントの SPN を登録します。次に、上位レベル サービス (IIS、Reporting Services、SharePoint Web サービスなど) を制約付き委任用に構成し、委任が許可される特定のサービスとして Analysis Services SPN を指定します。<br /><br /> SharePoint で実行されるサービス (たとえば、Excel Services、SharePoint モードの Reporting Services) は、通常、Analysis Services の多次元データまたはテーブル データを使用するブックやレポートをホストします。 これらのサービスに対して制約付き委任を構成することは一般的な構成タスクであり、Excel Services からのデータの更新をサポートするために必要です。 SharePoint サービスに加え、Analysis Services データに対するダウンストリーム データ接続要求を表す可能性のあるその他のサービスの手順については、次のリンクをご覧ください。<br /><br /> [Excel services の id 委任 (Sharepoint server 2010)](https://go.microsoft.com/fwlink/?LinkId=299826) 、または[Kerberos 認証用に sharepoint Server 2010 の excel services を構成する方法](https://support.microsoft.com/kb/2466519)<br /><br /> [PerformancePoint Services の ID 委任 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=299827)<br /><br /> [SQL Server Reporting Services の場合の ID 委任 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=299828)<br /><br /> IIS 7.0 の詳細については、「 [Windows 認証を設定する (IIS 7.0)](https://technet.microsoft.com/library/cc754628\(v=ws.10\).aspx) 」または「 [Kerberos 認証を使用するように SQL Server 2008 Analysis Services および SQL Server 2005 Analysis Services を構成する方法](https://support.microsoft.com/kb/917409)」を参照してください。|  
 |手順 4: 接続をテストする|テスト中、異なる ID でリモート コンピューターから接続し、ビジネス ユーザーと同じアプリケーションを使用して Analysis Services をクエリします。 SQL Server Profiler を使用すると接続を監視できます。 要求にあるユーザー ID を確認する必要があります。 詳細については、このセクションの「 [権限が借用された ID または委任された ID のテスト](#bkmk_test) 」をご覧ください。|  
@@ -58,7 +57,7 @@ ms.locfileid: "67832921"
   
  このセクションでは、信頼された委任用に Analysis Services を設定する方法について説明します。 このタスクを完了すると、Analysis Services で委任された資格情報を SQL Server に渡すことができます。これは、テーブル ソリューションで使用される DirectQuery モードをサポートします。  
   
- 開始する前に次の操作を実行してください。  
+ 始める前に  
   
 -   Analysis Services が開始されていることを確認します。  
   

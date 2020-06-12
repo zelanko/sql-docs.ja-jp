@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b34883d3dfa5a3d38f26a7ed905b5f00e7bcf8e6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493822"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542314"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>ドリルスルー アクションの定義と使用
   ファクト ディメンションによってファクト データを多次元化する場合、必要なデータのみが返されるようにフィルターを設定しないとクエリのパフォーマンスが低下する可能性があります。 これを回避するために、返される合計行数を制限するドリルスルー アクションを定義できます。 これにより、クエリのパフォーマンスが大幅に向上します。  
@@ -38,7 +37,7 @@ ms.locfileid: "69493822"
   
      ![表示ペインの空白のアクション テンプレート](../../2014/tutorials/media/l8-action2.gif "表示ペインの空白のアクション テンプレート")  
   
-3.  [**名前**] ボックスで、このアクションの名前をに`Internet Sales Details Drillthrough Action`変更します。  
+3.  [**名前**] ボックスで、このアクションの名前をに変更 `Internet Sales Details Drillthrough Action` します。  
   
 4.  **[メジャー グループのメンバー]** リストで **[Internet Sales]** をクリックします。  
   
@@ -52,9 +51,9 @@ ms.locfileid: "69493822"
   
      ![[追加のプロパティ] ボックス](../../2014/tutorials/media/l8-action4.gif "[追加のプロパティ] ボックス")  
   
-8.  [**最大行数**] ボックスに「 `10`」と入力します。  
+8.  [**最大行数**] ボックスに「」と入力 `10` します。  
   
-9. [**キャプション**] ボックスに「 `Drillthrough to Order Details...`」と入力します。  
+9. [**キャプション**] ボックスに「」と入力 `Drillthrough to Order Details...` します。  
   
      これらの設定は、返される行数を制限し、クライアント アプリケーションのメニューに表示されるキャプションを指定します。 次の図は、 **[追加のプロパティ]** ボックスでの設定を示しています。  
   
@@ -104,11 +103,11 @@ ms.locfileid: "69493822"
   
     -   ShipDateKey  
   
-6.  **Order Date Key**属性の`Order Date` **name**プロパティをに変更し、 **name column**プロパティの参照ボタンをクリックします。次に、[**名前列**] ダイアログボックスで、基になるテーブルとして [**日付**] を選択し、基になる列として [simpledate] を選択します。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  **Order Date Key**属性の**name**プロパティをに変更し `Order Date` 、 **name column**プロパティの参照ボタンをクリックします。次に、[**名前列**] ダイアログボックスで、基になるテーブルとして [**日付**] を選択し、基になる列として [simpledate] を選択します。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  [**期限切れ**日] 属性の [**名前**] プロパティ`Due Date`をに変更し、 **Order Date key**属性と同じ方法を使用して、この属性の**Name Column**プロパティを**date. simpledate (WChar)** に変更します。  
+7.  [**期限切れ**日] 属性の [**名前**] プロパティをに変更 `Due Date` し、 **Order Date key**属性と同じ方法を使用して、この属性の**name Column**プロパティを**date. simpledate (WChar)** に変更します。  
   
-8.  **Ship Date Key**属性の`Ship Date` **name**プロパティをに変更し、この属性の**Name Column**プロパティを**date. simpledate (WChar)** に変更します。  
+8.  **Ship Date Key**属性の**name**プロパティをに変更 `Ship Date` し、この属性の**Name Column**プロパティを**date. simpledate (WChar)** に変更します。  
   
 9. **Tutorial キューブのキューブ デザイナーを開き、** [アクション] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブに切り替えます。  
   

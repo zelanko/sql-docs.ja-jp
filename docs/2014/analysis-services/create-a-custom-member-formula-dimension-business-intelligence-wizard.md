@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0bea4831-982e-4848-86cd-e6219c860138
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3976d9bd4c6f76e9bb970bce280c1e2da0d6fe22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9eed4e239fcf0e7987528d08e31fc0c1e00a3e92
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086951"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526758"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>[カスタム メンバー式の作成] ([ディメンション]) (ビジネス インテリジェンス ウィザード)
   [**カスタムメンバー式の作成**] ページを使用すると、ビジネスインテリジェンスウィザードで属性をカスタムメンバー式の列に関連付けるディメンションを選択できます。この列には、その属性のメンバー値を定義する多次元式 (MDX) ステートメントが含まれています。  

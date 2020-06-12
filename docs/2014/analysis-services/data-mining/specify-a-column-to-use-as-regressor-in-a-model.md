@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cf035895142ae48cb59f6256e7249710d9709b92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3ce5a339275c834673afedcbbec50078407acdd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082909"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520410"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>モデルでリグレッサーとして使用する列の指定
   線形回帰モデルでは、予測可能な属性の値が、データをできる限り推定回帰直線に近づけるように入力を組み合わせる式の結果として表されます。 このアルゴリズムでは、入力として使用できるのは数値だけであり、最適な入力が自動的に検出されます。  

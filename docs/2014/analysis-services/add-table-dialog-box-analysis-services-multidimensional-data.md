@@ -13,27 +13,26 @@ helpviewer_keywords:
 ms.assetid: b93f841f-0164-4e37-bd08-085aa179ea1f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b429f115eff1692495e1ded58fb6afadc6e5ee8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c038e13706c44891bae021aaf35d04a10b715a97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062810"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528248"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>[テーブルの追加] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [テーブルの追加] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、クエリの作成中に **[名前付きクエリの作成]** ダイアログ ボックス、 **[ポーリング クエリの作成]** ダイアログ ボックス、または **[処理クエリの作成]** ダイアログ ボックスにテーブルを追加できます。 **[名前付きクエリの作成]** ダイアログ ボックス、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [ポーリング クエリの作成] **ダイアログ ボックス、** [処理クエリの作成] **ダイアログ ボックスの** ツール バー **ペインから** [テーブルの追加] **をクリックすることによって、** に **[テーブルの追加]** ダイアログ ボックスを表示できます。  
   
 ## <a name="options"></a>オプション  
   
-|用語|定義|  
+|期間|定義|  
 |----------|----------------|  
 |**テーブル**|**[テーブル]** タブを使用して、追加するテーブルの表示と選択を行います。|  
 |**ビュー**|**[ビュー]** タブを使用して、追加するビューの表示と選択を行います。|  
 |**関数**|**[関数]** タブを使用して、追加する関数またはストアド プロシージャの表示と選択を行います。|  
 |**シノニム**|**[シノニム]** タブを使用して、追加するシノニムの表示と選択を行います。|  
-|**更新**|ダイアログ ボックスのすべてのタブの再読み込みを行います。|  
-|**追加**|現在選択されている項目を追加します。 **注:** このオプションは、項目が選択されている場合にのみ有効です。|  
+|**Refresh\(更新\)**|ダイアログ ボックスのすべてのタブの再読み込みを行います。|  
+|**[追加]**|現在選択されている項目を追加します。 **注:** このオプションは、項目が選択されている場合にのみ有効です。|  
   
 ## <a name="see-also"></a>参照  
  [多次元データ &#40;Analysis Services のデザイナーとダイアログボックス&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

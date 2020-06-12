@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eb939c45d298117fa81b05d6188aa3a4c5cd7c4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a21336db54ab6fadaa219a3ef3d743dcf860087
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008163"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669273"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  テーブル値列の予測に INCLUDE_STATISTICS を渡すと、列 **$Probability**と **$Support**が結果のテーブルに追加されます。 これらの列は、入れ子になった入れ子になったテーブルレコードに存在する確率を示します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、Predict 関数を使用して、一緒に販売される可能性が最も高い Adventure Works データベースの4つの製品を返します。 関数は、アソシエーションルールマイニングモデルに対して予測を行うため、前に説明したように**PredictAssociation**関数を自動的に使用します。  
   
 ```  
@@ -77,7 +77,7 @@ FROM     [Association]
   
  サンプルの結果 :  
   
- このクエリは、1つの列`Expression`を含む1行のデータを返しますが、その列には次の入れ子になったテーブルが含まれています。  
+ このクエリは、1つの列を含む1行のデータを返し `Expression` ますが、その列には次の入れ子になったテーブルが含まれています。  
   
 |モデル|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91bc709d61c786c165711cfdb31ff696456997ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083355"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521218"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>不足値 (Analysis Services - データ マイニング)
   *不足値* の適切な処理は効果的なモデル化の重要な部分です。 このセクションでは、不足値を定義すると共に、データ マイニング構造およびマイニング モデルの作成時に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が提供する不足値の処理機能について説明します。  
@@ -48,13 +47,13 @@ ms.locfileid: "66083355"
   
  たとえば次の表は、Bike Buyer チュートリアルのために作成されたデシジョン ツリー モデルの (すべて) ノードの値の分布を示しています。 この例のシナリオでは、[Bike Buyer] 列は予測可能な属性です。1 は "Yes" を表し、0 は "No" を表します。  
   
-|[値]|ケース|  
+|値|ケース|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
 |Missing|0|  
   
- この分布からは、自転車を購入した顧客と購入しなかった顧客の数がほぼ半々であることがわかります。 このデータセットは完璧であるため、すべてのケースが [Bike Buyer] 列の値を持ち、`Missing` 値の数は 0 になっています。 ただし、いずれかのケースで [自転車購入者] フィールドに null が[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]含まれている場合、では、 `Missing`その行が値を持つケースとしてカウントされます。  
+ この分布からは、自転車を購入した顧客と購入しなかった顧客の数がほぼ半々であることがわかります。 このデータセットは完璧であるため、すべてのケースが [Bike Buyer] 列の値を持ち、`Missing` 値の数は 0 になっています。 ただし、いずれかのケースで [自転車購入者] フィールドに null が含まれている場合、では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] その行が値を持つケースとしてカウントさ `Missing` れます。  
   
  入力が連続列の場合には、この属性に対して `Existing` と `Missing` の 2 つの可能な状態が適用されます。 つまり、その列に何らかの数値データ型の値が含まれているか、値が何も含まれていないかのいずれかになります。 値があるケースの場合は、平均、標準偏差、およびその他の意味のある統計がモデルで計算されます。 値がないケースの場合は、`Missing` 値の数がカウントされ、それに基づいて予測が調整されます。 予測を調整する方法はアルゴリズムによって異なります。詳細については次のセクションを参照してください。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66083355"
 ## <a name="adjusting-probability-for-missing-states"></a>不足状態のための確率の調整  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、値がカウントされるだけでなく、データセット全体での値の確率も計算されます。 これは、`Missing` 値にも当てはまります。 たとえば次の表は、前の例のケースの確率を示しています。  
   
-|[値]|ケース|確率|  
+|値|ケース|確率|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
 |1|9098|49.42%|  

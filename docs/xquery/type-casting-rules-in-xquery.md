@@ -1,5 +1,6 @@
 ---
 title: XQuery | の型キャスト規則Microsoft Docs
+description: XQuery で、あるデータ型から別のデータ型への明示的または暗黙的なキャストを行うときに適用される規則について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9dcae8facc642d43620bde77ab7f01467a8a54d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946216"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520129"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery での型キャストの規則
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "67946216"
   
  このトピックでは、次のいずれかの方法を使用して、ある型から別の型にキャストするときに適用される型キャストの規則について説明します。  
   
--   **Cast をとしてキャスト**するか、型コンストラクター関数 (など`xs:integer("5")`) を使用して明示的にキャストします。  
+-   **Cast をとしてキャスト**するか、型コンストラクター関数 (など) を使用して明示的にキャストし `xs:integer("5")` ます。  
   
 -   型の上位変換中に行われる暗黙のキャスト  
   
@@ -95,7 +96,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- 次のクエリでは、ドキュメントインスタンス内の最上位レベルの <`root`> 要素の数がわからないため、静的なエラーが返されます。  
+ 次のクエリでは、ドキュメントインスタンス内の最上位レベルの <> 要素の数がわからないため、静的なエラーが返され `root` ます。  
   
 ```  
 declare @x xml(myCollection)  
@@ -105,7 +106,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- 式にシングルトン <`root`> 要素を指定すると、クエリは成功します。 このクエリは、xs: string として型指定された単純型の値のシーケンスを返します。  
+ 式にシングルトン <> 要素を指定すると、 `root` クエリは成功します。 このクエリは、xs: string として型指定された単純型の値のシーケンスを返します。  
   
 ```  
 declare @x xml(myCollection)  
@@ -115,7 +116,7 @@ select @x.query('/root[1]/A cast as xs:string?')
 go  
 ```  
   
- 次の例では、xml 型の変数に、XML スキーマコレクションを指定する document キーワードが含まれています。 これは、XML インスタンスが1つのトップレベル要素を持つドキュメントである必要があることを示します。 XML インスタンスに2つ`root`の <> 要素を作成すると、エラーが返されます。  
+ 次の例では、xml 型の変数に、XML スキーマコレクションを指定する document キーワードが含まれています。 これは、XML インスタンスが1つのトップレベル要素を持つドキュメントである必要があることを示します。 XML インスタンスに2つの <> 要素を作成すると `root` 、エラーが返されます。  
   
 ```  
 declare @x xml(document myCollection)  
@@ -167,11 +168,11 @@ min(xs:integer("1"), xs:double("1.1"))
  文字列型または untypedAtomic 型から xs: base64Binary や xs: hexBinary などのバイナリ型にキャストする場合、入力値はそれぞれ base64 または16進エンコードである必要があります。  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>文字列型または untypedAtomic 型への値のキャスト  
- String 型または untypedAtomic 型にキャストすると、値は XQuery 正規構文表現に変換されます。 これは、入力時に特定のパターンや他の制約に従っていた値が、制約どおりに表記されない可能性があることを意味します。  これについてユーザーに[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]通知するために、型の制約がスキーマコレクションに読み込まれたときに警告を提供することによって、型の制約が問題になる可能性のあるフラグ型です。  
+ String 型または untypedAtomic 型にキャストすると、値は XQuery 正規構文表現に変換されます。 これは、入力時に特定のパターンや他の制約に従っていた値が、制約どおりに表記されない可能性があることを意味します。  これについてユーザーに通知するために、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 型の制約がスキーマコレクションに読み込まれたときに警告を提供することによって、型の制約が問題になる可能性のあるフラグ型です。  
   
  xs:float 型、xs:double 型、またはこれらのサブタイプの値を string 型または untypedAtomic 型にキャストする場合、値は科学的表記法で表現されます。 これは、値の絶対値が 1.0E-6 未満であるか、1.0E6 以上である場合にのみ行われます。 つまり、0 は科学的表記法で 0.0E0 にシリアル化されます。  
   
- たとえば、 `xs:string(1.11e1)`は文字列値`"11.1"`を返し、 `xs:string(-0.00000000002e0)`は文字列値を`"-2.0E-11"`返します。  
+ たとえば、 `xs:string(1.11e1)` は文字列値を返し、 `"11.1"` `xs:string(-0.00000000002e0)` は文字列値を返し `"-2.0E-11"` ます。  
   
  xs:base64Binary や xs:hexBinary などバイナリ型から string 型または untypedAtomic 型にキャストする場合、バイナリ値はそれぞれ base64 または hex エンコード形式で表現されます。  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3fb4771c7345eb270e91a377d2755a25606f9a93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4331773f9c80fee37de1c145beeafd37cee2466d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080421"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544154"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>[入力の選択] タブ ([マイニング精度チャート] ビュー)
   **[マイニング精度チャート]** デザイナーの **[入力の選択]** タブを使用すると、モデルのテストや精度チャートの作成に使用するデータのソースを指定できます。  
@@ -33,7 +32,7 @@ ms.locfileid: "66080421"
  **[リフト チャートに表示する予測可能なマイニング モデル列の選択]**  
  リフト チャートに含めるモデルの決定と、リフト チャートでの使用方法を制御するための列を含むグリッドです。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**表示**|グラフに表示するマイニング モデル内の各予測可能列の名前の横にあるボックスをオンにします。<br /><br /> グラフが複雑で見づらい場合は、1 つまたは複数の列の横にあるボックスをオフにすると、見やすくなります。<br /><br /> 注: 1 つ以上の列が選択されていないと精度チャートを作成できません。|  
 |**[マイニング モデル]**|マイニング構造に含まれるマイニング モデルを一覧表示します。|  
@@ -43,7 +42,7 @@ ms.locfileid: "66080421"
  **[精度チャートに使用するデータセットの選択]**  
  精度テスト データを指定するための 3 つのオプションを含むオプション グループです。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[マイニング モデルのテスト ケースを使用する]**|マイニング構造をパーティション分割したときに作成されたテスト セットを使用し、モデルに定義されているフィルターを適用します。 モデル フィルターについて詳しくは、「 [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
 |**[マイニング構造のテスト ケースを使用する]**|マイニング構造をパーティション分割したときに作成されたテスト セットを使用します。|  

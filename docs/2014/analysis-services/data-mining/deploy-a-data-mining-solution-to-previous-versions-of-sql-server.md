@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29bd841ea0dd2d4676e087c9886f678eedc9a8f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084683"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522683"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>SQL Server の以前のバージョンへのデータ マイニング ソリューションの配置
   ここでは、 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] のインスタンスで作成されたデータ マイニング モデルまたはデータ マイニング構造を、SQL Server 2005 Analysis Services を使用するデータベースに配置しようとする際、または SQL Server 2005 で作成されたモデルを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンスに配置する際に発生する可能性のある、互換性に関する既知の問題について説明します。  
@@ -60,7 +59,7 @@ ms.locfileid: "66084683"
   
  SQL Server 2005 Analysis Services でマイニング構造を開くと、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でエラーが発生し、提示されたパーティションを削除するためにそのマイニング構造が再生成されます。  
   
- 構造が再構築されると、提示されたパーティションのサイズがプロパティウィンドウで使用できなくなります。ただし、値\<Ddl100_100: HoldoutMaxPercent>30\</ddl100_100: HoldoutMaxPercent>) が assl スクリプトファイルに存在していてもかまいません。  
+ 構造が再構築されると、提示されたパーティションのサイズがプロパティウィンドウで使用できなくなります。ただし、値 \<ddl100_100:HoldoutMaxPercent> 30 \</ddl100_100:HoldoutMaxPercent> ) が assl スクリプトファイルに存在していてもかまいません。  
   
 ##  <a name="deploying-models-with-filters"></a><a name="bkmk_Filter"></a> フィルターを使用するモデルの配置  
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] で、マイニング モデルにフィルターを適用する場合、モデルを SQL Server 2005 インスタンスに配置できますが、フィルターは適用されません。  

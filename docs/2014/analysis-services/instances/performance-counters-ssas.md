@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2909ec00d184dc06eaa5ee05108752b47ac7186b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079710"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543834"
 ---
 # <a name="performance-counters-ssas"></a>パフォーマンス カウンター (SSAS)
   パフォーマンス モニターを使用すると、Microsoft SQL Server Analysis Services (SSAS) インスタンスのパフォーマンスをパフォーマンス カウンターで監視できます。  
@@ -32,24 +31,24 @@ ms.locfileid: "66079710"
   
 |グループ|説明|  
 |-----------|-----------------|  
-|[Cache](#bkmk_Cache)|Analysis Services の集計キャッシュに関連する統計。|  
+|[キャッシュ](#bkmk_Cache)|Analysis Services の集計キャッシュに関連する統計。|  
 |[接続](#bkmk_Connection)|Microsoft Analysis Services の接続に関連する統計。|  
 |[データマイニング予測](#bkmk_DataMiningPrediction)|データ マイニング モデルの処理に関連する統計。|  
 |[データ マイニング モデル処理](#bkmk_DataMiningModelProcessing)|データ マイニング モデルからの予測の作成に関連する統計。|  
 |[Locks](#bkmk_Locks)|Microsoft Analysis Services の内部サーバー ロックに関連する統計。|  
 |[MDX (MDX)](#bkmk_MDX)|Microsoft Analysis Services の MDX 計算に関連する統計。|  
-|[[メモリ]](#bkmk_Memory)|Microsoft Analysis Services の内部サーバー メモリに関連する統計。|  
+|[メモリ](#bkmk_Memory)|Microsoft Analysis Services の内部サーバー メモリに関連する統計。|  
 |[プロアクティブキャッシュ](#bkmk_ProactiveCaching)|Microsoft Analysis Services のプロアクティブ キャッシュに関連する統計。|  
 |[集計の処理](#bkmk_ProcAggregations)|MOLAP データ ファイルでの集計処理に関連する統計。|  
 |[インデックスの処理](#bkmk_ProcIndexes)|MOLAP データ ファイルのインデックス処理に関連する統計。|  
 |[処理中](#bkmk_Processing)|データ処理に関連する統計。|  
 |[ストレージエンジンクエリ](#bkmk_StorageEngineQuery)|Microsoft Analysis Services のストレージ エンジン クエリに関連する統計。|  
-|[Threads](#bkmk_Threads)|Microsoft Analysis Services のスレッドに関連する統計。|  
+|[スレッド](#bkmk_Threads)|Microsoft Analysis Services のスレッドに関連する統計。|  
   
 ###  <a name="cache"></a><a name="bkmk_Cache"></a>Cache  
  Microsoft Analysis Services の集計キャッシュに関連する統計。  
   
-|カウンタ|説明|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |現在の KB|集計キャッシュが使用している現在のメモリ (KB 単位)。|  
 |追加 KB/秒|キャッシュに追加されたメモリの比率 (KB/秒)。|  
@@ -71,7 +70,7 @@ ms.locfileid: "66079710"
 ###  <a name="connection"></a><a name="bkmk_Connection"></a>接続  
  Microsoft Analysis Services の接続に関連する統計。  
   
-|カウンタ|説明|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |現在の接続数|現在確立されているクライアント接続の数。|  
 |要求/秒|接続要求の比率。  これらは到着した接続要求です。|  
@@ -85,7 +84,7 @@ ms.locfileid: "66079710"
 ###  <a name="data-mining-model-processing"></a><a name="bkmk_DataMiningModelProcessing"></a>データマイニングモデルの処理  
  Microsoft Analysis Services のデータ マイニング モデルの処理に関連する統計。  
   
-|カウンタ|説明|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |ケース数/秒|ケースの処理率。|  
 |現在の処理モデル数|現在処理されているモデルの数。|  
@@ -93,7 +92,7 @@ ms.locfileid: "66079710"
 ###  <a name="data-mining-prediction"></a><a name="bkmk_DataMiningPrediction"></a> データ マイニング予測  
  Microsoft Analysis Services のデータ マイニングの予測に関連する統計。  
   
-|カウンタ|説明|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |同時実行 DM クエリ数|現在アクティブに実行中のデータ マイニング クエリの数。|  
 |予測数/秒|データ マイニング クエリで生成された予測の数。|  
@@ -106,7 +105,7 @@ ms.locfileid: "66079710"
 ###  <a name="locks"></a><a name="bkmk_Locks"></a>固定  
  Microsoft Analysis Services の内部サーバー ロックに関連する統計。  
   
-|カウンタ|説明|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |現在のラッチ待機数|現在ラッチを待機しているスレッドの数。  これは、すぐに許可が与えられず、待機状態にあるラッチ要求の数です。|  
 |ラッチ待機数/秒|すぐに許可されず、許可を待機する必要のあるラッチ要求の比率。|  
@@ -122,7 +121,7 @@ ms.locfileid: "66079710"
 ###  <a name="mdx"></a><a name="bkmk_MDX"></a>MDX  
  Microsoft Analysis Services の MDX 計算に関連する統計。  
   
-|カウンタ|説明|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |計算数|アクティブなプランおよびキャッシュ済みプランを含む MDX 実行プランにより作成された評価ノードの総数。|  
 |現在の評価ノード数|アクティブなプランおよびキャッシュ済みプランを含む MDX 実行プランにより作成された評価ノードの現在の概算数。|  
@@ -155,7 +154,7 @@ ms.locfileid: "66079710"
 ###  <a name="memory"></a><a name="bkmk_Memory"></a>量  
  Microsoft Analysis Services の内部サーバー メモリに関連する統計。  
   
-|カウンタ|説明|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |ページ プール割り当て 64 KB|システムから借用するメモリの量 (KB) です。  このメモリはサーバーの他の部分で使用されます。|  
 |ページ プール ルック アサイド 64 KB|64KB ルック アサイド リストの現在のメモリ量 (KB 単位)  (使用の準備ができているメモリ ページ)。|  
@@ -222,7 +221,7 @@ ms.locfileid: "66079710"
 |他のインメモリ ファイル KB|現在の他のインメモリ ファイルのサイズ (KB 単位)。|  
 |他のインメモリ ファイル KB/秒|他のインメモリ ファイルへの書き込み比率 (KB 単位)。|  
 |可能な他のインメモリ ファイル KB|可能な他のインメモリ ファイルのサイズ (KB 単位)。|  
-|他のファイル数|他のファイルの数。|  
+|その他のファイル|他のファイルの数。|  
 |VertiPaq ページ KB|インメモリ データ用に使用されているページ メモリの量 (KB)。|  
 |VertiPaq 非ページ KB|メモリ内エンジン用にワーキング セットでロックされているメモリの量 (KB)。|  
 |VertiPaq メモリ マップ KB|インメモリ データ用に使用されているページング可能なメモリの量 (KB)。|  
@@ -232,7 +231,7 @@ ms.locfileid: "66079710"
 ###  <a name="proactive-caching"></a><a name="bkmk_ProactiveCaching"></a>プロアクティブキャッシュ  
  Microsoft Analysis Services のプロアクティブ キャッシュに関連する統計。  
   
-|カウンタ|説明|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |通知数/秒|リレーショナル データベースからの通知の割合。|  
 |取り消し処理数/秒|通知によって取り消された処理の比率。|  
@@ -242,7 +241,7 @@ ms.locfileid: "66079710"
 ###  <a name="processing-aggregations"></a><a name="bkmk_ProcAggregations"></a> 集計処理  
  Microsoft Analysis Services の MOLAP データ ファイルでの集計処理に関連する統計。  
   
-|カウンタ|説明|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |現在のパーティション数|現在処理されているパーティションの数。|  
 |合計パーティション数|処理されたパーティションの合計数 (正常終了した数とそれ以外の数)。|  
@@ -256,7 +255,7 @@ ms.locfileid: "66079710"
 ###  <a name="processing-indexes"></a><a name="bkmk_ProcIndexes"></a> インデックス処理  
  Microsoft Analysis Services の MOLAP データ ファイルのインデックス処理に関連する統計。  
   
-|カウンタ|説明|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |現在のパーティション数|現在処理されているパーティションの数。|  
 |合計パーティション数|処理されたパーティションの合計数 (正常終了した数とそれ以外の数)。|  
@@ -266,7 +265,7 @@ ms.locfileid: "66079710"
 ###  <a name="processing"></a><a name="bkmk_Processing"></a>プロセス  
  Microsoft Analysis Services のデータ処理に関連する統計。  
   
-|カウンタ|説明|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |読み取り行数/秒|すべてのリレーショナル データベースから読み取った行の比率。|  
 |合計読み取り行数|すべてのリレーショナル データベースから読み取られた行の数。|  
@@ -278,7 +277,7 @@ ms.locfileid: "66079710"
 ###  <a name="storage-engine-query"></a><a name="bkmk_StorageEngineQuery"></a> ストレージ エンジン クエリ  
  Microsoft Analysis Services のストレージ エンジン クエリに関連する統計。  
   
-|カウンタ|説明|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |現在のメジャー グループ クエリ数|現在アクティブに実行中のメジャー グループ クエリ数。|  
 |メジャー グループ クエリ数/秒|メジャー グループ クエリの比率|  
@@ -318,10 +317,10 @@ ms.locfileid: "66079710"
 |集計参照数/秒|集計参照率。|  
 |集計ヒット数/秒|集計ヒット率。|  
   
-###  <a name="threads"></a><a name="bkmk_Threads"></a>レッド  
+###  <a name="threads"></a><a name="bkmk_Threads"></a>スレッド  
  Microsoft Analysis Services のスレッドに関連する統計。  
   
-|カウンタ|説明|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |短時間解析を行っているアイドル状態のスレッド|短時間解析を行っているスレッド プール内にあるアイドル状態のスレッドの数。|  
 |短時間解析を行っているビジー状態のスレッド|短時間解析を行っているスレッド プール内にあるビジー状態のスレッドの数。|  

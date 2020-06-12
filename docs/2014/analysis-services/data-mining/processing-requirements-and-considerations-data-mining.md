@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f0a1dcf4793244a17bb52b38894bba2cb06d219
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083129"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520881"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>処理の要件および注意事項 (データ マイニング)
   このトピックでは、データ マイニング オブジェクトを処理するときに注意するいくつかの技術的な考慮事項について説明します。 処理について、および処理がデータ マイニングに適用される方法に関する一般情報については、「 [データ マイニング オブジェクトの処理](processing-data-mining-objects.md)」を参照してください。  
@@ -39,7 +38,7 @@ ms.locfileid: "66083129"
   
  モデルの処理時に、モデルは、データ ソースからデータを再度読み取るのではなく、マイニング構造からデータの概要を取得します。 サーバーは、作成されたキューブと、キャッシュされたインデックス データとケース データを使用して、モデルのトレーニングを行うための独立したスレッドを作成します。  
   
- 並列モデル処理をサポートするの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エディションの詳細については、「 [SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」 (https://go.microsoft.com/fwlink/?linkid=232473)を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並列モデル処理をサポートするのエディションの詳細については、「 [SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」 (を参照してください https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ##  <a name="processing-mining-structures"></a><a name="bkmk_ProcessStructures"></a> マイニング構造の処理  
  マイニング構造は、すべての依存モデルと一緒に処理することも、個別に処理することもできます。 処理に時間がかかると予想されるモデルがあり、その操作を保留する場合、モデルとは別にマイニング構造を処理すると便利です。  

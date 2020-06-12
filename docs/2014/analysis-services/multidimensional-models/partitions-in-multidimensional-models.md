@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00d17af3ce46ee5b20a730e536321140bb69f4ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a36489037607ad046689e55825f5958cb9ee611
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073328"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545840"
 ---
 # <a name="partitions-in-multidimensional-models"></a>多次元モデル内のパーティション
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、 *パーティション* は、メジャー グループに読み込まれるファクト データの物理ストレージを提供します。 各メジャー グループに対して 1 つのパーティションが自動的に作成されますが、さらにデータを分割する追加のパーティションを作成するのが一般的です。そうすることで、処理効率が上がり、クエリ パフォーマンスが向上します。  

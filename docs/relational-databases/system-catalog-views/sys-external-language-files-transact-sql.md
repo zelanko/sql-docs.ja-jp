@@ -3,7 +3,6 @@ title: external_language_files (Transact-sql)-SQL Server |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
-ms.reviewer: dphansen
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,14 +16,15 @@ helpviewer_keywords:
 - sys.external_languages catalog view
 author: nelgson
 ms.author: negust
+ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0d1325311ef0b708f5a3abd5f4494e099863efc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a991761e26f8f63ae6431d7d242fb2625135d3ac
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65995090"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627476"
 ---
 # <a name="sysexternal_language_files-transact-sql"></a>external_language_files (Transact-sql)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -39,7 +39,7 @@ File_spec から外部言語が作成されると、拡張機能自体とその�
 
 |列名 |データ型 | 説明|
 |------|------|------|
-|external_language_id |int | 外部言語の ID|
+|external_language_id |INT | 外部言語の ID|
 |コンテンツ|varbinary(max) |外部言語拡張ファイルの内容|
 |file_name|nvarchar (266)|言語拡張ファイルの名前|
 |platform|tinyint|SQL Server がインストールされているホストプラットフォームの ID|

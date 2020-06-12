@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bca58767285718b733dd820970cc48a99d0ea14
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083376"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521244"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>マイニング構造 (Analysis Services - データ マイニング)
   マイニング構造には、マイニング モデルの作成元となる、データ ソース ビュー、列の数と型、トレーニング セットとテスト セットに分ける省略可能なパーティションなどのデータを定義します。 1 つのマイニング構造は、同じドメインを共有する複数のマイニング モデルをサポートできます。 次の図は、データ マイニング構造とデータ ソースの関係、およびデータ マイニング構造とそれを構成するデータ マイニング モデルの関係を示しています。  

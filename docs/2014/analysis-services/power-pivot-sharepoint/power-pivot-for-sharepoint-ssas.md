@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34a4cc6b16e22a20e0e8be3ded12b0465ba46eab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683588"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535130"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
   PowerPivot for SharePoint は、SharePoint モードで実行される [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーです。 PowerPivot for SharePoint は、SharePoint ファーム内の PowerPivot データのサーバー ホスティングを実現します。 PowerPivot データは、次のいずれかを使用して構築する分析データモデルです。  
@@ -24,12 +23,12 @@ ms.locfileid: "74683588"
   
 -   Excel 2013  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013 |[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013 |[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2010  
   
  そのデータをサーバーでホストするには、SharePoint、Excel Services、および PowerPivot for SharePoint のインストールが必要です。 PowerPivot for SharePoint インスタンスにデータが読み込まれます。このデータは、PowerPivot データ更新機能を使用してスケジュール設定された間隔で更新できます。Excel 2010 ブックの場合はこの更新機能がサーバーで実行され、Excel 2013 ブックの場合は SharePoint 2013 Excel Services で実行されます。  
   
 ## <a name="powerpivot-for-sharepoint-2013"></a>PowerPivot for SharePoint 2013  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]で[!INCLUDE[msCoName](../../includes/msconame-md.md)]は、データモデルと Power View レポートを含む excel ブックの[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 2013 excel Services の使用がサポートされています。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]サポート [!INCLUDE[msCoName](../../includes/msconame-md.md)]SharePoint 2013 の Excel Services では、データモデルと Power View レポートを含む Excel ブックが使用さ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] れます。  
   
  SharePoint 2013 の Excel Services には、ブラウザー上で PowerPivot ブックを操作できるようにするためのデータ モデル機能が含まれます。 ファームに PowerPivot for SharePoint 2013 アドインを配置する必要はありません。 必要な操作は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーを SharePoint モードでインストールし、Excel Services の **[データ モデルの設定]** でサーバーを登録するだけです。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "74683588"
   
  SharePoint 統合モードの Analysis Service サーバー インスタンスで、配置が完了します。 データの読み込み、クエリ、アンロードを行います。 ブックに PowerPivot データ更新が構成されている場合、データの処理も行います。  各インスタンスは、同じインストールに含まれるローカルの PowerPivot System サービスと緊密に連携します。  
   
-##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a>このセクションの説明  
+##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a> トピックの内容  
  [サーバーの全体管理での PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Windows PowerShell を使用した PowerPivot の構成](power-pivot-configuration-using-windows-powershell.md)  

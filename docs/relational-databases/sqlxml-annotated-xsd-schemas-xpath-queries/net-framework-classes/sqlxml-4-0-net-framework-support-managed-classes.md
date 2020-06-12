@@ -1,5 +1,6 @@
 ---
 title: SQLXML マネージド クラス
+description: Microsoft .NET Framework 内部で SQLXML 4.0 の機能を公開する Microsoft SQLXML マネージクラスについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7511dc12bea8a83544ddb39ff427b6400128294e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b73fff4ba541e0f9b25c1b8dc84419dd5db1b2b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246917"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529946"
 ---
 # <a name="sqlxml-40-net-framework-support---managed-classes"></a>SQLXML 4.0 の .NET Framework サポート - マネージド クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,12 +42,12 @@ ms.locfileid: "75246917"
 > [!NOTE]  
 >  .NET Framework には [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET データ プロバイダーが含まれています。 このプロバイダーは .NET 環境から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] へのアクセスに使用できますが、扱えるのは従来の SQL クエリ (FOR XML クエリ以外のリレーショナル データベース クエリ) だけです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で XML テンプレートやサーバー側の XPath クエリを実行することはできません。  
 
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET Framework 内のデータへのアクセスと変更、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]および diffgram を使用したテーブルの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データの更新の詳細については、「 [.net 環境での SQLXML 機能へのアクセス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)」を参照してください。  
+ .NET Framework 内のデータへのアクセスと変更 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 、および diffgram を使用したテーブルのデータの更新の詳細については [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、「 [.NET 環境での SQLXML 機能へのアクセス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)」を参照してください。  
   
 > [!NOTE]  
 >  XML 一括読み込みを使用して XML ドキュメントの一括読み込みを行う [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio アプリケーションを作成することもできます。 詳細については、「 [XML データの一括読み込みの実行 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)」を参照してください。 作成するアプリケーションには、XML 一括読み込みの DLL (Xblkld4.dll) への参照を追加する必要があります。 これは COM DLL で、Visual Studio .NET ではこのラッパー ライブラリが自動的に作成されます。  
   
-  このセクションでは、SQLXML マネージクラスの[!INCLUDE[msCoName](../../../includes/msconame-md.md)]使用方法を示すサンプルアプリケーションについて説明します。  
+  このセクションでは、SQLXML マネージクラスの使用方法を示すサンプルアプリケーションについて説明し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ます。  
  [SQLXML マネージクラス &#40;の SQL クエリの実行&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)  
   [ExecuteXMLReader メソッドを使用した、SQL クエリの実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)  
   [クライアント側での XML の処理 &#40;SQLXML マネージクラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md)  
