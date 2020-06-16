@@ -1,5 +1,6 @@
 ---
 title: インストールと構成
+description: Windows Server 2012 R2 コンピューターにマスターデータサービスをインストールする方法、MDS データベースと web サイトを構成する方法、およびサンプルモデルとデータを配置する方法について説明します。
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9a0a43bb913437e4818c46fc81c0794019639c7
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289780"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796283"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>マスター データ サービスのイントールと構成
 
@@ -34,7 +35,7 @@ ms.locfileid: "79289780"
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]を学習するためのビデオと他のトレーニング リソースへのリンクについては、「 [マスター データ サービスについて学習する](../master-data-services/learn-sql-server-master-data-services.md)」をご覧ください。 
   
 > **ダウンロード**  
-> -   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]をダウンロードするには、  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** にアクセスしてください。  
+> -   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** に移動してください。  
 > -   Azure アカウントをすでにお持ちですか?  **[こちら](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** にアクセスして、SQL Server がインストール済みの仮想マシンをすぐにご利用いただけます。  
 > 
 > **MDS Web サイトを作成できませんか?**
@@ -46,7 +47,7 @@ ms.locfileid: "79289780"
 - Web アプリケーションで作業するには、Silverlight 5 をクライアント コンピューターにインストールする必要があります。 Silverlight の必要なバージョンがない場合、Web アプリケーションで Silverlight を使用する部分に移動したときに、Silverlight をインストールするよう要求されます。 Silverlight 5 は **[ここ](https://www.microsoft.com/silverlight/)** からインストールできます。
 
 ## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>Azure 仮想マシン上の [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
-既定では、が[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]既にインストールされている Azure 仮想マシン[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]を起動すると、もインストールされます。 
+既定では、が既にインストールされている Azure 仮想マシンを起動すると [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 、 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] もインストールされます。 
 
 次の手順として、インターネット インフォメーション サービス (IIS) をインストールします。 「[IIS のインストールと構成](#InstallIIS)」を参照してください。 
 
@@ -129,7 +130,7 @@ ms.locfileid: "79289780"
   
 3.  [**データベースサーバー** ] ページで、SQL Server インスタンスを指定します。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]SQL Server Managed Instance のサポートを追加します。 **SQL Server インスタンス**の値を、Azure SQL Database マネージインスタンスのホストに設定します。 たとえば、「 `xxxxxx.xxxxxx.database.windows.net` 」のように入力します。
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]SQL Server Managed Instance のサポートを追加します。 **SQL Server インスタンス**の値を、Azure SQL Database マネージインスタンスのホストに設定します。 たとえば、`xxxxxx.xxxxxx.database.windows.net` のようにします。
 
 4. 認証の**種類**を選択し、[**接続のテスト**] をクリックして、選択した認証の種類の資格情報を使用してデータベースに接続できることを確認します。 **[次へ]** をクリックします。
 
@@ -138,7 +139,7 @@ ms.locfileid: "79289780"
     >- Azure Active Directory 統合認証:**現在のユーザー– Active Directory 統合**
     >- SQL Server 認証: **SQL Server アカウント**。
     >
-    >Azure SQL Database マネージインスタンスでは、ユーザーは`sysadmin`固定サーバーロールのメンバーである必要があります。
+    >Azure SQL Database マネージインスタンスでは、ユーザーは固定サーバーロールのメンバーである必要があり `sysadmin` ます。
 
     > [!NOTE]  
     >  認証の種類として [**現在のユーザー-統合セキュリティ**] を選択すると、[**ユーザー名**] ボックスは読み取り専用になり、コンピューターにログオンしている Windows ユーザーアカウントの名前が表示されます。 Azure 仮想マシン (VM) 上で [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] が実行されている場合、**[ユーザー名]** ボックスに、VM の名前と、VM 上のローカル管理者アカウントのユーザー名が表示されます。 
@@ -161,7 +162,7 @@ ms.locfileid: "79289780"
   
      **データベースの作成ウィザード**の設定の詳細については、「[データベースの作成ウィザード (マスター データ サービス構成マネージャー)](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)」を参照してください。  
   
-7.  の [**データベースの構成**] ページ[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]で、[**データベースの選択**] をクリックします。  
+7.  の [**データベースの構成**] ページで、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] [データベースの**選択**] をクリックします。  
   
 8.  **[接続]** をクリックして、手順 7 で作成した [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを選択し、**[OK]** をクリックします。 
 
@@ -203,7 +204,7 @@ ms.locfileid: "79289780"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. **[適用]** をクリックします。 **[構成の完了]** メッセージ ボックスが表示されます。 メッセージ ボックスで **[OK]** をクリックして、Web アプリケーションを起動します。 Web サイトのアドレスは、https://*server name*/*web application*/です。 
+15. **[Apply]** をクリックします。 **[構成の完了]** メッセージ ボックスが表示されます。 メッセージ ボックスで **[OK]** をクリックして、Web アプリケーションを起動します。 Web サイトのアドレスは、https://*server name* / *web application*/です。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -281,7 +282,7 @@ ms.locfileid: "79289780"
   
     1.  設定する [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web サイトに移動します。 「 [データベースと Web サイトを設定する](#SetUpWeb) 」セクションを参照してください。  
   
-         Web サイトのアドレスは、https://*server name*/*web application*/です。  
+         Web サイトのアドレスは、https://*server name* / *web application*/です。  
   
     2.  **[モデル]** リスト ボックスからモデルを選択して、 **[エクスプローラー]** をクリックします。  
   

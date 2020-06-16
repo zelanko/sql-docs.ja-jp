@@ -1,5 +1,6 @@
 ---
 title: エンティティの同期関係
+description: エンティティの同期は、エンティティのバージョン間で反復可能な一方向の同期であり、マスターデータサービスモデル間でエンティティデータを共有できます。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fde11c6b106a9e559d74504b77d975d096c1f3d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8072ca35b1676a5bace4fe60f70e7cfdbc0778b
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729270"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796315"
 ---
 # <a name="entity-sync-relationship-master-data-services"></a>エンティティの同期関係 [マスター データ サービス]
 

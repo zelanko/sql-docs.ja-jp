@@ -1,5 +1,6 @@
 ---
 title: ステージング ストアド プロシージャ
+description: 次の3つのストアドプロシージャのいずれかを使用して、マスターデータサービスの SQL Server Management Studio からステージング処理を開始します。
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 103c43f012f6cf7025139fd29656a42d00fc233f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82b068612f0699cdba3788e4931fb6bdfe8c7e69
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727883"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796503"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>ステージング ストアド プロシージャ (マスター データ サービス)
 
@@ -23,11 +24,11 @@ ms.locfileid: "73727883"
 
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]からステージング処理を開始する場合、次の 3 つのストアド プロシージャのいずれかを使用します。  
   
--   stg.udp_\<name>_Leaf  
+-   stg. udp_ \<name> _Leaf  
   
--   stg.udp_\<name>_Consolidated  
+-   stg. udp_ \<name> _Consolidated  
   
--   stg.udp_\<name>_Relationship  
+-   stg. udp_ \<name> _Relationship  
   
  name は、エンティティの作成時に指定されたステージング テーブルの名前です。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "73727883"
 |パラメーター|説明|  
 |---------------|-----------------|  
 |**VersionName**<br /><br /> 必須|バージョンの名前。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コレクションの設定に応じて、このパラメーターは大文字と小文字が区別される場合とされない場合があります。|  
-|**LogFlag**<br /><br /> 必須|ステージング処理中にトランザクションをログに記録するかどうかを決定します。 設定可能な値は、次のとおりです。<br /><br /> **0**: トランザクションをログに記録しない。<br /><br /> **1**: トランザクションをログに記録する。<br /><br /> <br /><br /> 詳細については、「[トランザクション (マスター データ サービス)](../master-data-services/transactions-master-data-services.md)」を参照してください。|  
+|**LogFlag**<br /><br /> 必須|ステージング処理中にトランザクションをログに記録するかどうかを決定します。 次のいずれかの値になります。<br /><br /> **0**: トランザクションをログに記録しない。<br /><br /> **1**: トランザクションをログに記録する。<br /><br /> <br /><br /> 詳細については、「[トランザクション (マスター データ サービス)](../master-data-services/transactions-master-data-services.md)」を参照してください。|  
 |**BatchTag**<br /><br /> Web サービス以外は必須|ステージング テーブルに指定した **BatchTag** の値。|  
 |**Batch_ID**<br /><br /> Web サービスでのみ必須|ステージング テーブルに指定した **Batch_ID** の値。|  
 |**ユーザー名**|省略可能なパラメーター|  

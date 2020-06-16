@@ -1,5 +1,6 @@
 ---
 title: モデルの作成
+description: モデルオブジェクトを格納するためにマスターデータサービスでモデルを作成する方法について説明します。 [システム管理] 領域のアクセス許可が必要です。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55a0ff697fd9f20f34c2ddc878016ba75f5fa673
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728484"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796426"
 ---
 # <a name="create-a-model-master-data-services"></a>モデルを作成する (マスター データ サービス)
 
@@ -55,7 +56,7 @@ ms.locfileid: "73728484"
   
  作成されたモデルごとに、8 列の行がグリッドに追加されます。 8 つの列は次のとおりです。  
   
--   **[状態]**: モデルの状態。 [**モデルの保存**] ボタンをクリックすると、![更新](../master-data-services/media/mds-model-status-updating.png "更新中")中のイメージが表示されます。これは、モデルが更新中であることを示します。 モデルの作成時または編集時にエラーが発生した場合は、![エラー](../master-data-services/media/mds-model-status-error.png "Error")イメージが表示されます。 それ以外の場合、状態は [OK] になり、 ![[Ok]](../master-data-services/media/mds-model-status-ok.png "[OK]")のイメージが表示されます。  
+-   **[状態]**: モデルの状態。 [**モデルの保存**] ボタンをクリックすると、![更新](../master-data-services/media/mds-model-status-updating.png "更新中")中のイメージが表示されます。これは、モデルが更新中であることを示します。 モデルの作成時または編集時にエラーが発生した場合は、![エラー](../master-data-services/media/mds-model-status-error.png "エラー")イメージが表示されます。 それ以外の場合、状態は [OK] になり、 ![[Ok]](../master-data-services/media/mds-model-status-ok.png "OK")のイメージが表示されます。  
   
 -   **[名前]**: モデル名。  
   
@@ -71,7 +72,7 @@ ms.locfileid: "73728484"
   
 -   **[Updated Date and Time]**(更新日時): モデルが最後に更新された日時。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
   
 -   [エンティティを作成する (マスター データ サービス)](../master-data-services/create-an-entity-master-data-services.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: ビジネス ルールを作成しパブリッシュする
+description: マスターデータサービスでビジネスルールを作成して、マスターデータの精度を確保する方法について説明します。 ルールを作成したら、それを発行してルールを適用します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e8deee97bd80404df5851f0845aa02b51bfe0cfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2dfc03bc292d7c39024116eca9cf49a5179a5b7c
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729445"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796399"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>ビジネス ルールを作成しパブリッシュする (マスター データ サービス)
 
@@ -79,7 +80,7 @@ ms.locfileid: "73729445"
   
 19. すべての必須フィールドに入力します。  
   
-20. **[Save]** (保存) をクリックします。 新しい行が **Then** グリッドに追加されます。  
+20. **[保存]** をクリックします。 新しい行が **Then** グリッドに追加されます。  
   
 21. 必要に応じて **Else** アクションを追加するには、次の手順を実行します。  
   
@@ -91,9 +92,9 @@ ms.locfileid: "73729445"
   
     4.  すべての必須フィールドに入力します。  
   
-    5.  **[Save]** (保存) をクリックします。 新しい行が **Else** グリッドに追加されます。  
+    5.  **[保存]** をクリックします。 新しい行が **Else** グリッドに追加されます。  
   
-22. **[Save]** (保存) をクリックします。 新しい行がビジネス ルール グリッドに追加されます。  
+22. **[保存]** をクリックします。 新しい行がビジネス ルール グリッドに追加されます。  
   
 23. **[すべてパブリッシュ]** をクリックします。  
   
@@ -104,14 +105,14 @@ ms.locfileid: "73729445"
   
 |名前|説明|  
 |----------|-----------------|  
-|状態|**[保存]** をクリックすると、ビジネス ルールが更新中であることを示す次のイメージが表示されます。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> ビジネス ルールの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
+|Status|**[保存]** をクリックすると、ビジネス ルールが更新中であることを示す次のイメージが表示されます。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> ビジネス ルールの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
 |名前|ビジネス ルール名。|  
 |説明|ビジネス ルールの説明。|  
 |[ビジネス ルールの状態]|次のビジネス ルールの状態のいずれか: ルール未定義、アクティブ、除外、保留中の変更、保留中の実行、保留中の削除。|  
 |除外|ビジネス ルールを除外するかどうかを指定します。|  
-|Notification|電子メール通知を送信するユーザーまたはグループを指定します。|  
+|通知|電子メール通知を送信するユーザーまたはグループを指定します。|  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
   
 -   以下のいずれかの手順でビジネス ルールをデータに適用します。  
   

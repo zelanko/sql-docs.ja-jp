@@ -1,5 +1,6 @@
 ---
 title: データベース ログイン、ユーザー、およびロール
+description: マスターデータサービスには、マスターデータサービスデータベースをホストする SQL Server データベースエンジンインスタンスにインストールされているログイン、ユーザー、およびロールが含まれています。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7200d919975a644321e596f66349a2a8aae26f99
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54d0d7db0f76407836b266c3534198d0e177c679
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729484"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796383"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>データベース ログイン、ユーザー、およびロール (マスター データ サービス)
 
@@ -39,14 +40,14 @@ ms.locfileid: "73729484"
   
 ## <a name="msdb-users"></a>msdb ユーザー  
   
-|ユーザー|説明|  
+|User|説明|  
 |----------|-----------------|  
 |**mds_clr_user**|使用されていません。 mds_dlp_login にマップされます。|  
 |**mds_email_user**|通知に使用します。<br /><br /> - mds_email_login にマップされます。<br /><br /> - DatabaseMailUserRole ロールのメンバーです。|  
   
 ## <a name="master-data-services-database-users"></a>マスター データ サービス データベース ユーザー  
   
-|ユーザー|説明|  
+|User|説明|  
 |----------|-----------------|  
 |**mds_email_user**|通知に使用します。<br /><br /> - mdm スキーマに対する SELECT 権限があります。<br /><br /> - mdm.MemberGetCriteria ユーザー定義テーブル型に対する EXECUTE 権限があります。<br /><br /> - mdm.udpNotificationQueueActivate ストアド プロシージャに対する EXECUTE 権限があります。|  
 |**mds_schema_user**|mdm スキーマと mdq スキーマを所有します。 既定のスキーマは mdm です。<br /><br /> ログインはマップされません。|  

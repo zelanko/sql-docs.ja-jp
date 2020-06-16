@@ -1,5 +1,6 @@
 ---
 title: エンティティを作成する
+description: メンバーとその属性を含むエンティティをマスターデータサービスに作成する方法について説明します。 [システム管理] 領域のアクセス許可が必要です。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b06d77f562864a1b18e492d1db70563b62d4647
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a43ffa259fd30d7aeaf4e2336780a2b92b2ef289
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728462"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796400"
 ---
 # <a name="create-an-entity-master-data-services"></a>エンティティを作成する (マスター データ サービス)
 
@@ -64,14 +65,14 @@ ms.locfileid: "73728462"
   
 9. 任意。 **[データ圧縮を有効にする]** チェック ボックスをオンします。 既定では、行の圧縮は有効になっています。 詳細については、「 [Data Compression](../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
-10. **[Save]** (保存) をクリックします。  
+10. **[保存]** をクリックします。  
   
 ## <a name="grid-columns"></a>グリッド列  
  作成されたエンティティごとに、13 列の行がグリッドに追加されます。 その列を次に示します。  
   
 |名前|説明|  
 |----------|-----------------|  
-|状態|エンティティの状態。 **[保存]** をクリックすると、エンティティが更新中であることを示す次のイメージが表示されます。<br /><br /> ![状態を更新するためのアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン")<br /><br /> エンティティの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![OK 状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")|  
+|Status|エンティティの状態。 **[保存]** をクリックすると、エンティティが更新中であることを示す次のイメージが表示されます。<br /><br /> ![状態を更新するためのアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン")<br /><br /> エンティティの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![OK 状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")|  
 |名前|エンティティ名。|  
 |説明|エンティティの説明。|  
 |ステージング テーブル|データを格納するために使用されるテーブルのプレフィックス名。|  
@@ -85,7 +86,7 @@ ms.locfileid: "73728462"
 |更新者|エンティティを最後に更新したユーザーの名前。|  
 |更新日|エンティティが最後に更新された日時。|  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
   
 -   [テキスト属性を作成する (マスター データ サービス)](../master-data-services/create-a-text-attribute-master-data-services.md)  
   

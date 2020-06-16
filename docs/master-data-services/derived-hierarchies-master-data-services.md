@@ -1,5 +1,6 @@
 ---
 title: 派生階層
+description: 派生階層を作成して、マスターデータサービスモデル内の既存のドメインベースの属性リレーションシップを強調表示する方法について説明します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b7440834e5f12cd18081687aa584a8dcfe3ce2e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd61751b4ade5a97caa025f44786d952e98f5dd0
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728277"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796353"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>派生階層 (Master Data Services)
 

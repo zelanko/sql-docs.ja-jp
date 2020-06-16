@@ -1,5 +1,6 @@
 ---
 title: モデルの配置
+description: モデルパッケージを配置して、モデルのコピーを1つのマスターデータサービス環境から別の環境に移動したり、環境に新しいモデルを作成したりします。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1fa740ec21867c07b2e39b9743234dd3c8121551
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef909fd817da4835e9f3d0903a4e8a7f8f1a4658
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728290"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796373"
 ---
 # <a name="deploying-models-master-data-services"></a>モデルの配置 (マスター データ サービス)
 
@@ -27,7 +28,7 @@ ms.locfileid: "73728290"
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]におけるパッケージは、配置可能なモデル構造と (必要に応じて) モデル データを含んだ XML ファイルです。 モデル パッケージを使用して、モデルのコピーを MDS 環境間で移動したり、既存の MDS 環境に新しいモデルを作成したりすることができます。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**Mdsmodeldeploy ツール**は、以降で[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]作成されたパッケージと下位互換性があります。  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**Mdsmodeldeploy ツール**は、以降で作成されたパッケージと下位互換性があり [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ます。  
   
 ## <a name="tools-for-deploying-models"></a>モデルを展開するためのツール  
  モデル パッケージを使用するには、3 つのツールをニーズに応じて使い分けることができます。  

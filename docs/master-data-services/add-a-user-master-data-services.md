@@ -1,5 +1,6 @@
 ---
 title: ユーザーを追加する
+description: マスターデータマネージャーのユーザー一覧にユーザーを追加する方法について説明します。 Web アプリケーションにアクセス許可を割り当てるプロセスを開始するには、ユーザーを追加する必要があります。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6fe6ec485c1d0e4bc6b30b1fa40f1be03f8b7f67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c17a3356949375ab6836db94a31910f5e54ca2a
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729821"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796598"
 ---
 # <a name="add-a-user-master-data-services"></a>ユーザーを追加する (マスター データ サービス)
 
@@ -37,13 +38,13 @@ ms.locfileid: "73729821"
   
 2.  **[ユーザー]** ページで **[ユーザーの追加]** をクリックします。  
   
-3.  *ドメイン*\\*user_name*または*コンピューター \ user_name*のように、Active Directory のドメイン名またはサーバーコンピューターの名前を指定して、ユーザー名を入力します。  
+3.  *ドメイン* \\ *user_name*または*コンピューター \ user_name*のように、Active Directory のドメイン名またはサーバーコンピューターの名前を指定して、ユーザー名を入力します。  
   
 4.  必要に応じて、 **[名前の確認]** をクリックします。  
   
 5.  **[OK]** をクリックします。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
   
 -   [機能領域の権限を割り当てる (マスター データ サービス)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   

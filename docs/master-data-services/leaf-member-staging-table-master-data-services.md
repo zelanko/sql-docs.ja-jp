@@ -1,5 +1,6 @@
 ---
 title: リーフ メンバー ステージング テーブル
+description: リーフメンバーを作成、更新、非アクティブ化、および削除するには、マスターデータサービスデータベースのリーフメンバーステージングテーブルを使用します。
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 626452bb0247b355cff7e8f1e9584e2fdc0c32c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a23e37608597b1f746b53d15deca99ff49031bc
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729064"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796614"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>リーフ メンバー ステージング テーブル (マスター データ サービス)
 
@@ -38,9 +39,9 @@ ms.locfileid: "73729064"
 |**BatchTag**<br /><br /> Web サービス以外は必須|バッチの一意名 (最大 50 文字)。||  
 |**ErrorCode**|エラー コードを表示します。 **ImportStatus_ID** が **2** のすべてのレコードについては、「[ステージング処理のエラー (マスター データ サービス)](../master-data-services/staging-process-errors-master-data-services.md)」を参照してください。||  
 |**コード**<br /><br /> 必須。**ImportType1** や **2** でコードが自動的に生成される場合は除きます。詳しくは、「[コードの自動作成 (マスター データ サービス)](../master-data-services/automatic-code-creation-master-data-services.md)」を参照してください。|メンバーの一意コード。||  
-|**名前**<br /><br /> Optional|メンバーの名前。||  
+|**名前**<br /><br /> オプション|メンバーの名前。||  
 |**NewCode**|メンバー コードを変更する場合にのみ使用します。||  
-|\<属性名>|エンティティ内の属性ごとに列が存在します。 **ImportType** が **0** または **2**の場合に、これを使用します。 自由形式属性の場合、属性の新しいテキストまたは文字列値を指定します。 ドメイン ベース属性の場合は、属性となるメンバーのコードを指定します。 リンク属性の場合、URL は **https://** で始まる必要があります。<br /><br /> 注: ファイル属性をステージングすることはできません。||  
+|\<Attribute name>|エンティティ内の属性ごとに列が存在します。 **ImportType** が **0** または **2**の場合に、これを使用します。 自由形式属性の場合、属性の新しいテキストまたは文字列値を指定します。 ドメイン ベース属性の場合は、属性となるメンバーのコードを指定します。 リンク属性の場合、URL は **https://** で始まる必要があります。<br /><br /> 注: ファイル属性をステージングすることはできません。||  
   
 ## <a name="see-also"></a>参照  
  [概要: テーブルからのデータのインポート &#40;マスターデータサービス&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

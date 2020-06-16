@@ -1,5 +1,6 @@
 ---
 title: ビジネス ルールの例
+description: マスターデータサービスのビジネスルールの例を確認します。 これらの例は、マスターデータサービスのインストールに含まれるサンプルモデルに含まれています。
 ms.custom: ''
 ms.date: 01/05/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 79cf6243b275ba6090eb76400a8dbf7f8dd01f0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 774dd01985a5a5f2a952c1002a804481a2f5497d
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728697"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796550"
 ---
 # <a name="business-rule-examples-master-data-services"></a>ビジネス ルールの例 (マスター データ サービス)
 
@@ -60,7 +61,7 @@ Else
   
 サンプル モデル  |エンティティ  |ビジネス ルール名| 説明    
 ---------|---------|---------|-----------  
-Product     |  Product       | DaysToManufacture |社内の製造に対して製造日数の範囲を指定します。          
+製品     |  製品       | DaysToManufacture |社内の製造に対して製造日数の範囲を指定します。          
 次のビジネス ルールで、InHouseManufacture 属性値が `is equal` [ルール条件](../master-data-services/business-rule-conditions-master-data-services.md)に一致する場合は、 `must be between` [ルール アクション](../master-data-services/business-rule-actions-master-data-services.md) が DaysToManufacture 属性に適用されます。 それ以外の場合は、アクションが行われません。  
 ```  
 If  
@@ -76,7 +77,7 @@ Else
   
 サンプル モデル  |エンティティ  |ビジネス ルール名|説明    
 ---------|---------|---------|-------------  
-Product     |Product         |必須フィールド| 製品エンティティ メンバーの必須の属性を指定します。           
+製品     |製品         |必須フィールド| 製品エンティティ メンバーの必須の属性を指定します。           
 次のビジネス ルールで、すべての条件下で `is required` [検証アクション](../master-data-services/business-rule-actions-master-data-services.md) が指定された属性に対して行われます。 属性値は、Null または空白にすることはできません。  
 ```  
 If  
@@ -101,7 +102,7 @@ Else
   
 サンプル モデル  |エンティティ  |ビジネス ルール名|説明    
 ---------|---------|---------|-----------  
-Product     | Product        |  Std Cost| 標準的なコストは 0 より大きくする必要があります。        
+製品     | 製品        |  Std Cost| 標準的なコストは 0 より大きくする必要があります。        
 次のビジネス ルールで、すべての条件下で `must be greater than` [ルール アクション](../master-data-services/business-rule-actions-master-data-services.md) は製品の StandardCost 属性に適用されます。  
 ```  
 If  
@@ -117,7 +118,7 @@ Else
   
 サンプル モデル  |エンティティ  |ビジネス ルール名|説明    
 ---------|---------|---------|------------  
-Product     | Product        | FG MSRP Cost|製品が完成品である場合は、MSRP (メーカー希望小売価格) と販売店コストは 0 より大きくする必要があることを指定します。           
+製品     | 製品        | FG MSRP Cost|製品が完成品である場合は、MSRP (メーカー希望小売価格) と販売店コストは 0 より大きくする必要があることを指定します。           
   
 次のビジネス ルールで、FinishedGoodIndicator 属性値が `is equal` [ルール条件](../master-data-services/business-rule-conditions-master-data-services.md)に一致する場合は、 `must be greater than` [ルール アクション](../master-data-services/business-rule-actions-master-data-services.md) が MSRP and DealerCost 属性に適用されます。  
 ```  
@@ -135,7 +136,7 @@ Else
   
 サンプル モデル  |エンティティ  |ビジネス ルール名|説明    
 ---------|---------|---------|------------  
-Product     | Product        |  Default Name| Color 属性と Class 属性の値に基づいて既定の製品名を指定します。 Color 属性値が YLO ではなく、Class 属性が NA ではない場合は、既定の名前は Yellow NA になります。         
+製品     | 製品        |  Default Name| Color 属性と Class 属性の値に基づいて既定の製品名を指定します。 Color 属性値が YLO ではなく、Class 属性が NA ではない場合は、既定の名前は Yellow NA になります。         
 次のビジネス ルールで、Color 属性と Class 属性が `is equal` ルール条件に一致しない場合は、 `defaults to` [ルール アクション](../master-data-services/business-rule-actions-master-data-services.md) が Name 属性に適用されます。  
 ```  
 If  

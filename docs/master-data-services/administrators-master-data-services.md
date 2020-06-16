@@ -1,5 +1,6 @@
 ---
 title: 管理者
+description: マスターデータサービスの管理者の種類 (モデル管理者、エンティティ管理者、およびスーパーユーザー) について説明します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1a4393881b05c21a690c06bfa39fd2114da0b18
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729793"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796599"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
 
@@ -28,7 +29,7 @@ ms.locfileid: "73729793"
   この記事では、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の管理者の種類 (モデル管理者、エンティティ管理者、およびスーパー ユーザー) について説明します。  
   
 ## <a name="model-administrators"></a>モデル管理者  
- で[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]は、モデル管理者は、[**モデルオブジェクト**] タブの最上位のモデルオブジェクトに割り当てられた**管理**者権限を持つユーザーです。ユーザーが特定のモデルに対する管理者権限を持っている場合、モデルの子オブジェクト (モデルオブジェクトとメンバーの両方の権限) に対する他の権限は、モデルの**管理者**権限によってより前者され、実質的に無視されます。  
+ で [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は、モデル管理者は、[**モデルオブジェクト**] タブの最上位のモデルオブジェクトに割り当てられた**管理**者権限を持つユーザーです。ユーザーが特定のモデルに対する管理者権限を持っている場合、モデルの子オブジェクト (モデルオブジェクトとメンバーの両方の権限) に対する他の権限は、モデルの**管理者**権限によってより前者され、実質的に無視されます。  
   
 -   ユーザーに **[エクスプローラー]** 機能領域へのアクセス権がある場合、ユーザーはこのデータ領域のすべてのマスター データを追加、削除、および更新できます。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "73729793"
  ユーザーをモデル管理者として構成するには、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] を使用するかプログラムで構成します。 詳細については、「 [モデル管理者を作成する (マスター データ サービス)](../master-data-services/create-a-model-administrator-master-data-services.md)」を参照してください。  
   
 ## <a name="entity-administrators"></a>エンティティ管理者  
- で[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]は、エンティティ管理者は、[モデルオブジェクト] タブのエンティティオブジェクトに割り当てられた管理者権限を持つユーザーです。ユーザーがエンティティに対する管理者権限を持っている場合、そのエンティティの子オブジェクトに対する他の権限 (モデルオブジェクトとメンバーの両方の権限) は、管理者権限によって置き換えられ、無視されます。  
+ で [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は、エンティティ管理者は、[モデルオブジェクト] タブのエンティティオブジェクトに割り当てられた管理者権限を持つユーザーです。ユーザーがエンティティに対する管理者権限を持っている場合、そのエンティティの子オブジェクトに対する他の権限 (モデルオブジェクトとメンバーの両方の権限) は、管理者権限によって置き換えられ、無視されます。  
   
 -   ユーザーに **[エクスプローラー]** 機能領域へのアクセス権がある場合、ユーザーはこのデータ領域のすべてのマスター データを追加、削除、および更新できます。  
   

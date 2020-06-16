@@ -12,20 +12,20 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4f4ebcbf84da7d899b4d4cbd861cfb2ae3f75863
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 982096893cdce9c4b604df9c3fb0258cefaaf93d
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82087562"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796523"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>dm_pdw_exec_requests (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  現在または最近アクティブになっているすべて[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]の要求に関する情報を保持します。 要求/クエリごとに1行が一覧表示されます。  
+  現在または最近アクティブになっているすべての要求に関する情報を保持 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] します。 要求/クエリごとに1行が一覧表示されます。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|このビューのキー。 要求に関連付けられている一意の数値 ID。|システム内のすべての要求間で一意です。|  
 |session_id|**nvarchar(32)**|このクエリが実行されたセッションに関連付けられている一意の数値 ID。 「 [Sys. dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)」を参照してください。||  
@@ -38,13 +38,13 @@ ms.locfileid: "82087562"
 |label|**nvarchar(255)**|いくつかの SELECT クエリステートメントに関連付けられているオプションのラベル文字列。|' A-z '、' A-z '、' 0-9 '、' _ ' を含む任意の文字列。|  
 |error_id|**nvarchar (36)**|要求に関連付けられているエラーの一意の ID (存在する場合)。|「 [Sys. dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)」を参照してください。エラーが発生しなかった場合は、NULL に設定します。|  
 |database_id|**int**|明示的なコンテキストによって使用されるデータベースの識別子 (たとえば、DB_X を使用します)。|「 [Transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)の ID」を参照してください。|  
-|command|**nvarchar (4000)**|ユーザーによって送信された要求の完全なテキストを保持します。|任意の有効なクエリまたは要求テキスト。 4000バイトを超えるクエリは切り捨てられます。|  
+|コマンドを使用します|**nvarchar (4000)**|ユーザーによって送信された要求の完全なテキストを保持します。|任意の有効なクエリまたは要求テキスト。 4000バイトを超えるクエリは切り捨てられます。|  
 |resource_class|**nvarchar (20)**|この要求に使用するワークロードグループ。 |静的リソース クラス</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>動的リソース クラス</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |importance|**nvarchar(128)**|要求を実行するときの重要度を設定します。  これは、このワークロードグループでの要求の相対的な重要度であり、共有リソースの複数のワークロードグループにまたがっています。  分類子で指定された重要度は、ワークロードグループの重要度の設定よりも優先されます。</br>適用対象: Azure SQL Data Warehouse|NULL</br>low</br>below_normal</br>標準 (既定値)</br>above_normal</br>high|
 |group_name|**sysname** |リソースを利用する要求の場合、group_name は、要求が実行されているワークロードグループの名前です。  要求でリソースが使用されない場合、group_name は null になります。</br>適用対象: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|リソースを利用する要求の場合、リソースの割り当てに使用される分類子の名前と重要度。||
 |resource_allocation_percentage|**decimal (5, 2)**|要求に割り当てられたリソースの割合。</br>適用対象: Azure SQL Data Warehouse|
-|result_cache_hit|**表現**|完了したクエリで結果セットキャッシュが使用されたかどうかを詳細に表示します。  </br>適用対象: Azure SQL Data Warehouse| 1 = 結果セットのキャッシュヒット </br> 0 = 結果セットのキャッシュミス </br> 負の値 = 結果セットのキャッシュが使用されなかった理由。  詳細については、「解説」を参照してください。|
+|result_cache_hit|**decimal**|完了したクエリで結果セットキャッシュが使用されたかどうかを詳細に表示します。  </br>適用対象: Azure SQL Data Warehouse| 1 = 結果セットのキャッシュヒット </br> 0 = 結果セットのキャッシュミス </br> 負の値 = 結果セットのキャッシュが使用されなかった理由。  詳細については、「解説」を参照してください。|
 ||||
   
 ## <a name="remarks"></a>Remarks 
@@ -69,7 +69,7 @@ ms.locfileid: "82087562"
 
  VIEW SERVER STATE 権限が必要です。  
   
-## <a name="security"></a>セキュリティ
+## <a name="security"></a>Security
 
  dm_pdw_exec_requests は、データベース固有のアクセス許可に従ってクエリ結果をフィルター処理しません。 VIEW SERVER STATE 権限を持つログインは、すべてのデータベースの結果のクエリ結果を取得できます。  
   

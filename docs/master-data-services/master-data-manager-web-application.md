@@ -1,5 +1,6 @@
 ---
 title: マスター データ マネージャー Web アプリケーション
+description: マスターデータマネージャー web アプリケーションを使用してマスターデータサービスの管理タスクを実行する方法について説明します。
 ms.custom: ''
 ms.date: 12/20/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc881f7d3b232e8d2ae31041fd990e833acac901
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ce1a7470b6304b924f3fcc7ae0fcec70b08b634
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729089"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796587"
 ---
 # <a name="master-data-manager-web-application"></a>マスター データ マネージャー Web アプリケーション
 

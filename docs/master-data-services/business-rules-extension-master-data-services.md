@@ -1,5 +1,6 @@
 ---
 title: Business Rules Extension
+description: ユーザー定義の SQL スクリプトは、マスターデータサービスで定義済みのビジネスルールの条件とアクションの拡張機能として適用できます。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a8a5215438a7cbed7796c5b9afaae5f8d59db9a
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728677"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796533"
 ---
 # <a name="business-rules-extension-master-data-services"></a>ビジネス ルールの拡張機能 (マスター データ サービス)
 
@@ -65,7 +66,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 |||  
 |-|-|  
-|**Schema**|**アクセス許可**|  
+|**[スキーマ]**|**アクセス許可**|  
 |mdm|SELECT|  
 |stg|SELECT、UPDATE、DELETE、EXECUTE、INSERT|  
 |ユーザー|FULL|  
@@ -103,7 +104,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     4.  各パラメーターに値を割り当てます。  
   
-    5.  **[Save]** (保存) をクリックします。  
+    5.  **[保存]** をクリックします。  
   
 8.  ユーザー定義のスクリプトをアクションとして作成するには、次の操作を行います。  
   
@@ -111,7 +112,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     2.  **[演算子]** ドロップダウン リストで、 **[ユーザー定義スクリプト]** の下にある目的のユーザー定義関数を選択します。  
   
-    3.  **[Save]** (保存) をクリックします。  
+    3.  **[保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [ビジネスルール &#40;マスターデータサービス&#41;](../master-data-services/business-rules-master-data-services.md)   

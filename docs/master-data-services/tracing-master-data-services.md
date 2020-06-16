@@ -1,5 +1,6 @@
 ---
 title: トレース
+description: Web.config ファイルには、SQL Server 2016 マスターデータサービスの新機能であるトレースセクションが含まれています。 既定のトレース動作について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: fe2c0096aecd1296f7f10ce90a1acae706f3f3af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0af3075f66eefff2de2199d18710de0bf7e62e71
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727847"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796479"
 ---
 # <a name="tracing-master-data-services"></a>トレース (マスター データ サービス)
 
@@ -64,7 +65,7 @@ ms.locfileid: "73727847"
     |-------------|-----------------|  
     |Time|トレースのエントリが発生した時刻。|  
     |CorrelationID|要求ごとに 1 つの関連付け ID が割り当てられます。 この要求によってトリガーされるすべてのトレースは、同じ関連付け ID を共有します。<br /><br /> UI でエラーが発生すると、エラー メッセージに関連付け ID が表示されます。|  
-    |Operation|要求操作の名前。 要求が Web UI 要求の場合、URL が操作名になります。 要求が API 要求の場合、サービス名が操作名になります。|  
+    |操作|要求操作の名前。 要求が Web UI 要求の場合、URL が操作名になります。 要求が API 要求の場合、サービス名が操作名になります。|  
     |Level|このトレース エントリのレベル。|  
     |Message|トレースのメッセージ本文。|  
   

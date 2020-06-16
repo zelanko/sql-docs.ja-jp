@@ -1,5 +1,6 @@
 ---
 title: サブスクリプション ビューを作成してデータをエクスポートする
+description: サブスクリプションビューを作成して、データのビューを作成するサブスクライブシステムにマスターデータサービスデータをエクスポートする方法について説明します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e46961fa67492667a697c34f727ae068744e5e63
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728469"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796424"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)
 
@@ -60,21 +61,21 @@ ms.locfileid: "73728469"
   
 10. **[形式]** ボックスの一覧から **[明示的レベル]** または **[派生レベル]** を選択した場合、ビューに含める階層内のレベル数を入力します。  
   
-11. **[Save]** (保存) をクリックします。  
+11. **[保存]** をクリックします。  
   
 ## <a name="view-information"></a>ビュー情報  
  作成されたビューごとに、10 列の行がグリッドに追加されます。 次の表で各列について説明します。  
   
 |列|説明|  
 |------------|-----------------|  
-|状態|ビューの状態。<br /><br /> [**保存**] をクリックすると、ビューが更新中であることを示す![更新状態の画像のアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン")が表示されます。<br /><br /> ビューの作成時または編集時にエラーが発生した場合は、![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] 状態の画像のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")が表示されます。|  
+|Status|ビューの状態。<br /><br /> [**保存**] をクリックすると、ビューが更新中であることを示す![更新状態の画像のアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン")が表示されます。<br /><br /> ビューの作成時または編集時にエラーが発生した場合は、![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] 状態の画像のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")が表示されます。|  
 |名前|サブスクリプション ビュー名。|  
 |モデル|モデル名。|  
 |バージョン|バージョン名。|  
 |[バージョン]|バージョン フラグ名。|  
 |[エンティティ]|派生階層名。|  
 |エンティティ|エンティティ名。|  
-|フォーマット|ビュー内のデータの型を指定します。|  
+|形式|ビュー内のデータの型を指定します。|  
 |Level|ビュー内のレベルの数を指定します。明示的レベルまたは派生レベルのビュー形式にのみ使用されます。|  
 |Include delete members (削除済みメンバーを含める)|論理削除済みメンバーをビューに含めるかどうかを示します。|  
   
