@@ -1,7 +1,7 @@
 ---
 title: Oracle への接続 (OracleToSQL) |Microsoft Docs
 description: SSMA for Oracle を使用して Oracle データベースに接続し、移行を開始する方法について説明します。 [Oracle への接続] ダイアログボックスを使用します。
-authors: nahk-ivanov
+author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 ms.author: alexiva
-ms.openlocfilehash: 1c69ace09cccd3d87017fef5bae86e3c03a60ad8
-ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
+ms.openlocfilehash: 497c3df711c2cfacbb2774edf791e4c36837bb87
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454525"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779044"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Oracle への接続 (OracleToSQL)
 

@@ -20,12 +20,12 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eece83b3c1fcde0d33a515c85eeb2cdac0a72cf4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61cc363e15a200ed23de4ac94aba64680e1bc4a6
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827880"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716779"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>dm_os_memory_objects (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,22 +38,22 @@ ms.locfileid: "82827880"
 |**parent_address**|**varbinary (8)**|親メモリ オブジェクトのアドレス。 NULL 値が許可されます。|  
 |**pages_allocated_count**|**int**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /><br /> メモリ オブジェクトによって割り当てられているページ数。 NULL 値は許可されません。|  
 |**pages_in_bytes**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> メモリオブジェクトのこのインスタンスによって割り当てられたメモリの量 (バイト単位)。 NULL 値は許可されません。|  
-|**creation_options**|**int**|内部使用のみ。 NULL 値が許可されます。|  
-|**bytes_used**|**bigint**|内部使用のみ。 NULL 値が許可されます。|  
+|**creation_options**|**int**|内部使用のみです。 NULL 値が許可されます。|  
+|**bytes_used**|**bigint**|内部使用のみです。 NULL 値が許可されます。|  
 |**type**|**nvarchar(60)**|メモリ オブジェクトの種類。<br /><br /> これは、このメモリオブジェクトが属するコンポーネント、またはメモリオブジェクトの関数を示します。 NULL 値が許可されます。|  
-|**name**|**varchar(128)**|内部使用のみ。 NULL 値は許可されます。|  
+|**name**|**varchar(128)**|内部使用のみです。 NULL 値は許可されます。|  
 |**memory_node_id**|**smallint**|メモリ オブジェクトが使用しているメモリ ノードの ID。 NULL 値は許可されません。|  
-|**creation_time**|**datetime**|内部使用のみ。 NULL 値が許可されます。|  
+|**creation_time**|**datetime**|内部使用のみです。 NULL 値が許可されます。|  
 |**max_pages_allocated_count**|**int**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /><br /> このメモリオブジェクトによって割り当てられたページの最大数。 NULL 値は許可されません。|  
 |**page_size_in_bytes**|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> メモリ オブジェクトによって割り当てられているのページのサイズ (バイト単位)。 NULL 値は許可されません。|  
 |**max_pages_in_bytes**|**bigint**|このメモリオブジェクトによって使用されるメモリの最大量。 NULL 値は許可されません。|  
 |**page_allocator_address**|**varbinary (8)**|ページアロケーターのメモリアドレス。 NULL 値は許可されません。 詳細については、「 [sys. dm_os_memory_clerks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)」を参照してください。|  
-|**creation_stack_address**|**varbinary (8)**|内部使用のみ。 NULL 値が許可されます。|  
-|**sequence_num**|**int**|内部使用のみ。 NULL 値が許可されます。|  
-|**partition_type**|**int**|パーティションの種類。<br /><br /> 0-パーティション分割が不可能なメモリオブジェクト<br /><br /> 1-分割できないメモリオブジェクト (現在パーティション分割されていません)<br /><br /> 2-分割されたメモリオブジェクト。 NUMA ノードによってパーティション分割されます。 1つの NUMA ノードを持つ環境では、これは1に相当します。<br /><br /> 3-CPU でパーティション分割された、パーティション分割されたメモリオブジェクト。|  
-|**contention_factor**|**real**|このメモリオブジェクトの競合を指定する値。0は競合しないことを意味します。 値は、指定された数のメモリ割り当てがその期間中に競合を反映したときに更新されます。 スレッドセーフなメモリオブジェクトにのみ適用されます。|  
-|**waiting_tasks_count**|**bigint**|このメモリオブジェクトで待機している回数。 このカウンターは、メモリオブジェクトからメモリが割り当てられるたびにインクリメントされます。 インクリメントは、このメモリオブジェクトへのアクセスを現在待機しているタスクの数です。 スレッドセーフなメモリオブジェクトにのみ適用されます。 これは、正確性を保証せずに、ベストエフォートの値です。|  
-|**exclusive_access_count**|**bigint**|このメモリオブジェクトに排他的にアクセスする頻度を指定します。 スレッドセーフなメモリオブジェクトにのみ適用されます。  これは、正確性を保証せずに、ベストエフォートの値です。|  
+|**creation_stack_address**|**varbinary (8)**|内部使用のみです。 NULL 値が許可されます。|  
+|**sequence_num**|**int**|内部使用のみです。 NULL 値が許可されます。|  
+|**partition_type**|**int**|**適用対象**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 以降。<br /><br /> パーティションの種類。<br /><br /> 0-パーティション分割が不可能なメモリオブジェクト<br /><br /> 1-分割できないメモリオブジェクト (現在パーティション分割されていません)<br /><br /> 2-分割されたメモリオブジェクト。 NUMA ノードによってパーティション分割されます。 1つの NUMA ノードを持つ環境では、これは1に相当します。<br /><br /> 3-CPU でパーティション分割された、パーティション分割されたメモリオブジェクト。|  
+|**contention_factor**|**real**|**適用対象**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 以降。<br /><br /> このメモリオブジェクトの競合を指定する値。0は競合しないことを意味します。 値は、指定された数のメモリ割り当てがその期間中に競合を反映したときに更新されます。 スレッドセーフなメモリオブジェクトにのみ適用されます。|  
+|**waiting_tasks_count**|**bigint**|**適用対象**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 以降。<br /><br /> このメモリオブジェクトで待機している回数。 このカウンターは、メモリオブジェクトからメモリが割り当てられるたびにインクリメントされます。 インクリメントは、このメモリオブジェクトへのアクセスを現在待機しているタスクの数です。 スレッドセーフなメモリオブジェクトにのみ適用されます。 これは、正確性を保証せずに、ベストエフォートの値です。|  
+|**exclusive_access_count**|**bigint**|**適用対象**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 以降。<br /><br /> このメモリオブジェクトに排他的にアクセスする頻度を指定します。 スレッドセーフなメモリオブジェクトにのみ適用されます。  これは、正確性を保証せずに、ベストエフォートの値です。|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
  **partition_type**、 **contention_factor**、 **waiting_tasks_count**、および**exclusive_access_count**は、にまだ実装されていません [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 。  

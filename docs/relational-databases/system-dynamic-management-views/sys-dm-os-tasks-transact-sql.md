@@ -20,12 +20,12 @@ ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bea6efbfe3f3703df80325a08ccbcf617aea54f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5a81eff384622a31df5bba8bb0c1fbc51932f95d
+ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829301"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84748733"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>dm_os_tasks (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,12 +59,12 @@ ms.locfileid: "82829301"
 ## <a name="examples"></a>例  
   
 ### <a name="a-monitoring-parallel-requests"></a>A. 並列要求の監視  
- 並列で実行される要求の場合は、同じ組み合わせ ( \< **session_id**>、 \< **request_id**>) に対して複数の行が表示されます。 次のクエリを使用して、すべてのアクティブな要求に対する[並列処理の最大限度を構成するサーバー構成オプション](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)を検索します。  
+ 並列で実行される要求の場合は、(,) の同じ組み合わせに対して複数の行が表示され \<**session_id**> \<**request_id**> ます。 次のクエリを使用して、すべてのアクティブな要求に対する[並列処理の最大限度を構成するサーバー構成オプション](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)を検索します。  
   
 > [!NOTE]  
 >  **Request_id**は、セッション内で一意です。  
   
-```  
+```sql  
 SELECT  
     task_address,  
     task_state,  
@@ -85,7 +85,7 @@ SELECT
 ### <a name="b-associating-session-ids-with-windows-threads"></a>B. セッション ID を Windows のスレッドに関連付ける  
  次のクエリを使用して、セッション ID の値を Windows スレッド ID に関連付けることができます。 これにより、Windows パフォーマンス モニターでスレッドのパフォーマンスを監視できます。 次のクエリでは、スリープ状態のセッションに関する情報は返されません。  
   
-```  
+```sql  
 SELECT STasks.session_id, SThreads.os_thread_id  
   FROM sys.dm_os_tasks AS STasks  
   INNER JOIN sys.dm_os_threads AS SThreads  
@@ -94,7 +94,7 @@ SELECT STasks.session_id, SThreads.os_thread_id
   ORDER BY STasks.session_id;  
 GO  
 ```  
-  
+
 ## <a name="see-also"></a>参照  
 [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
 [スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)     

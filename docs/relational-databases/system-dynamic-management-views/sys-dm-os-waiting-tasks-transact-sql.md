@@ -20,12 +20,12 @@ ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0efa4a5b5c8144807c27014a96b3fa90ed77971
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ab32f364725d11a606ac698fdefb7f9f95a312d
+ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811758"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84748255"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "82811758"
   あるリソースで待機しているタスクの待機キューに関する情報を返します。 タスクの詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
    
 > [!NOTE]  
->  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_os_waiting_tasks**という名前を使用します。  
+> またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_os_waiting_tasks**という名前を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -54,11 +54,11 @@ ms.locfileid: "82811758"
   
  **スレッドプールリソース所有者:**  
   
--   threadpool id = scheduler \< hex-address>  
+-   threadpool id = scheduler\<hex-address>  
   
  **並列クエリリソース所有者:**  
   
--   exchangeEvent id = {Port |パイプ} \< 16 進数アドレス> WaitType = \< exchange-Wait> nodeId = \< exchange-node-id>  
+-   exchangeEvent id = {Port |パイプ} \<hex-address> WaitType = \<exchange-wait-type> nodeId =\<exchange-node-id>  
   
  **Exchange-待機の種類:**  
   
@@ -78,43 +78,43 @@ ms.locfileid: "82811758"
   
  **ロック リソース所有者:**  
   
--   \<種類固有-説明> id = ロック \< のロック-16 進数アドレス> mode = \< Mode> associatedObjectId = \< 関連付けられている obj-id>  
+-   \<type-specific-description>id = ロック \<lock-hex-address> モード = \<mode> associatedObjectId =\<associated-obj-id>  
   
-     **\<型固有の説明> 次のように指定できます。**  
+     **\<type-specific-description>次のように指定できます。**  
   
-    -   データベースの場合: databaselock subresource = \< databaselock-subresource> dbid = \< db id>  
+    -   データベースの場合: databaselock subresource = \<databaselock-subresource> dbid =\<db-id>  
   
-    -   ファイルの場合: filelock fileid = \< ファイル id> subresource = \< filelock-subresource> dbid = \< db id>  
+    -   ファイルの場合: filelock fileid = \<file-id> subresource = \<filelock-subresource> dbid =\<db-id>  
   
-    -   オブジェクトの場合: objectlock lockPartition = \< ロックパーティション id> objid = \< obj-id> subresource = \< objectlock-subresource> dbid = \< db-id>  
+    -   オブジェクトの場合: objectlock lockPartition = \<lock-partition-id> objid = \<obj-id> subresource = \<objectlock-subresource> dbid =\<db-id>  
   
-    -   PAGE の場合: pagelock fileid = \< ファイル id> ページ id = \< ページ id> dbid = \< db-id> subresource = \< pagelock-subresource>  
+    -   PAGE の場合: pagelock fileid = \<file-id> ページ id = \<page-id> dbid = \<db-id> subresource =\<pagelock-subresource>  
   
-    -   キーの場合: キーロック hobtid = \< hobt> dbid = \< db id>  
+    -   キーの場合: キーロック hobtid = \<hobt-id> dbid =\<db-id>  
   
-    -   エクステントの場合: extentlock fileid = \< ファイル id> ページ id = \< ページ id> dbid = \< db-id>  
+    -   エクステントの場合: extentlock fileid = \<file-id> ページ id = \<page-id> dbid =\<db-id>  
   
-    -   RID の場合: ridlock fileid = \< ファイル id> ページ id = \< ページ id> dbid = \< db-id>  
+    -   RID の場合: ridlock fileid = \<file-id> ページ id = \<page-id> dbid =\<db-id>  
   
-    -   アプリケーションの場合: applicationlock hash = \< hash> databasePrincipalId = \< role-id> dbid = \< db-id>  
+    -   アプリケーションの場合: applicationlock hash = \<hash> databasePrincipalId = \<role-id> dbid =\<db-id>  
   
-    -   メタデータの場合: metadatalock subresource = \< metadata-subresource> classid = \< metadatalock> dbid = \< db-id>  
+    -   メタデータの場合: metadatalock subresource = \<metadata-subresource> classid = \<metadatalock-description> dbid =\<db-id>  
   
-    -   HOBT の場合: hobtlock hobtid = \< HOBT> subresource = \< HOBT-subresource> dbid = \< db-id>  
+    -   HOBT の場合: hobtlock hobtid = \<hobt-id> subresource = \<hobt-subresource> dbid =\<db-id>  
   
-    -   ALLOCATION_UNIT の場合: allocunitlock hobtid = \< hobt> subresource = \< alloc-UNIT-subresource> dbid = \< db id>  
+    -   ALLOCATION_UNIT の場合: allocunitlock hobtid = \<hobt-id> subresource = \<alloc-unit-subresource> dbid =\<db-id>  
   
-     **\<モード> は次のようになります。**  
+     **\<mode>次のように指定できます。**  
   
      Sch-m-S、Sch-m、S、U、X、IS、IU、IX、SIU、6、UIX、BU、範囲-S、範囲-U、RangeI-N、RangeI-S、RangeI-U、RangeI-X、RangeX-、RangeX-U、RangeX-X  
   
  **外部リソース所有者:**  
   
--   外部 ExternalResource = \< 待機型>  
+-   外部 ExternalResource =\<wait-type>  
   
  **汎用リソース所有者:**  
   
--   TransactionMutex Transactionmutex Workspace = \< workspace-id>  
+-   TransactionMutex Transactionmutex ワークスペース =\<workspace-id>  
   
 -   Mutex  
   
@@ -128,11 +128,11 @@ ms.locfileid: "82811758"
   
  **ラッチリソース所有者:**  
   
--   \<db id>: \< ファイル id>: \< ファイルの>  
+-   \<db-id>:\<file-id>:\<page-in-file>  
   
 -   \<GUID>  
   
--   \<ラッチクラス> ( \< ラッチアドレス>)  
+-   \<latch-class> (\<latch-address>)  
   
 ## <a name="permissions"></a>アクセス許可
 
@@ -140,12 +140,44 @@ ms.locfileid: "82811758"
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
  
 ## <a name="example"></a>例
-この例では、ブロックされているセッションを識別します。 [!INCLUDE[tsql](../../includes/tsql-md.md)]でクエリを実行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。
+### <a name="a-identify-tasks-from-blocked-sessions"></a>A. ブロックされたセッションからタスクを識別します。 
 
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 
-``` 
+```   
+
+### <a name="b-view-waiting-tasks-per-connection"></a>B. 接続ごとの待機中のタスクの表示
+
+```sql
+SELECT st.text AS [SQL Text], c.connection_id, w.session_id, 
+  w.wait_duration_ms, w.wait_type, w.resource_address, 
+  w.blocking_session_id, w.resource_description, c.client_net_address, c.connect_time
+FROM sys.dm_os_waiting_tasks AS w
+INNER JOIN sys.dm_exec_connections AS c ON w.session_id = c.session_id 
+CROSS APPLY (SELECT * FROM sys.dm_exec_sql_text(c.most_recent_sql_handle)) AS st 
+              WHERE w.session_id > 50 AND w.wait_duration_ms > 0
+ORDER BY c.connection_id, w.session_id
+GO
+```
+
+### <a name="c-view-waiting-tasks-for-all-user-processes-with-additional-information"></a>C. すべてのユーザープロセスの待機中のタスクを追加情報で表示する
+
+```sql
+SELECT 'Waiting_tasks' AS [Information], owt.session_id,
+    owt.wait_duration_ms, owt.wait_type, owt.blocking_session_id,
+    owt.resource_description, es.program_name, est.text,
+    est.dbid, eqp.query_plan, er.database_id, es.cpu_time,
+    es.memory_usage*8 AS memory_usage_KB
+FROM sys.dm_os_waiting_tasks owt
+INNER JOIN sys.dm_exec_sessions es ON owt.session_id = es.session_id
+INNER JOIN sys.dm_exec_requests er ON es.session_id = er.session_id
+OUTER APPLY sys.dm_exec_sql_text (er.sql_handle) est
+OUTER APPLY sys.dm_exec_query_plan (er.plan_handle) eqp
+WHERE es.is_user_process = 1
+ORDER BY owt.session_id;
+GO
+```
   
 ## <a name="see-also"></a>参照  
 [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      

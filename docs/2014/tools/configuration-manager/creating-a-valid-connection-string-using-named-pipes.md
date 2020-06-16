@@ -1,5 +1,6 @@
 ---
 title: 名前付きパイプを使用した有効な接続文字列の作成 |Microsoft Docs
+description: 名前付きパイププロトコルを使用して SQL Server のインスタンスに接続するときに、有効な接続文字列を作成する方法について説明します。 有効なパイプ名の例を表示します。
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +17,12 @@ ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 65fcebc3bbe12061e699106fb23eed15a5498414
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001032"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716709"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>名前付きパイプを使用した有効な接続文字列の作成
   ユーザーが変更しない限り、の既定のインスタンスは [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名前付きパイププロトコルをリッスンするときに、を `\\.\pipe\sql\query` パイプ名として使用します。 ここで、ピリオドはコンピューターがローカル コンピューターであることを示し、`pipe` は接続が名前付きパイプであることを示します。`sql\query` はパイプの名前を示します。 既定のパイプに接続するには、別名でもパイプ名に `\\<computer_name>\pipe\sql\query` を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が別のパイプで受信を待機する構成になっている場合は、パイプ名としてそのパイプを使用する必要があります。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がパイプとして `\\.\pipe\unit\app` を使用している場合、別名ではパイプ名として `\\<computer_name>\pipe\unit\app` を使用しなければなりません。  
@@ -54,7 +55,7 @@ WHERE session_id = @@SPID;
   
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  既定のパイプに対するサーバー名による接続:  
   
 ```  
@@ -116,7 +117,7 @@ Server             .
 ```  
   
 > [!NOTE]  
->  ネットワークプロトコルを**sqlcmd**パラメーターとして指定する方法については、オンラインブックの「Sqlcmd を使用してデータベースエンジンに接続する方法」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  ネットワークプロトコルを**sqlcmd**パラメーターとして指定する方法については、オンラインブックの「sqlcmd.exe を使用してデータベースエンジンに接続する方法」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>参照  
  [共有メモリプロトコルを使用した有効な接続文字列の作成](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

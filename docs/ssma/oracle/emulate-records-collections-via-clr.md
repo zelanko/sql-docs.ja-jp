@@ -1,18 +1,19 @@
 ---
 title: CLR UDT を使用したレコードとコレクションのエミュレーション
 description: SQL Server Migration Assistant (SSMA) for Oracle が SQL Server 共通言語ランタイム (CLR) のユーザー定義データ型 (UDT) を使用して Oracle のレコードとコレクションをエミュレートする方法について説明します。
-authors: nahk-ivanov
-ms.service: ssma
+author: nahk-ivanov
+ms.prod: sql
+ms.technology: ssma
 ms.devlang: sql
 ms.topic: article
 ms.date: 1/22/2020
 ms.author: alexiva
-ms.openlocfilehash: 39a7e8d59425db7ce2d7e81083012321caac35ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73991999cf0a6e7bd2c8cd541ec58a37d1f18f09
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76762816"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779382"
 ---
 # <a name="emulating-records-and-collections-via-clr-udt"></a>CLR UDT を使用したレコードとコレクションのエミュレーション
 
@@ -26,7 +27,7 @@ SSMA は、次の3つの CLR ベースの Udt を作成します。
 * `CollectionIndexString`
 * `Record`
 
-この`CollectionIndexInt` `VARRAY`型は、、入れ子になったテーブル、整数キーベースの連想配列など、整数によってインデックス付けされたコレクションをエミュレートするためのものです。 この`CollectionIndexString`型は、文字キーによってインデックス付けされた連想配列に使用されます。 Oracle レコード機能は、 `Record`型によってエミュレートされます。
+`CollectionIndexInt`この型は、 `VARRAY` 、入れ子になったテーブル、整数キーベースの連想配列など、整数によってインデックス付けされたコレクションをエミュレートするためのものです。 この `CollectionIndexString` 型は、文字キーによってインデックス付けされた連想配列に使用されます。 Oracle レコード機能は、型によってエミュレートされ `Record` ます。
 
 レコードまたはコレクション型のすべての宣言は、次の Transact-sql 宣言に変換されます。
 
@@ -34,7 +35,7 @@ SSMA は、次の3つの CLR ベースの Udt を作成します。
 declare @Collection$TYPE varchar(max) = '<type definition>'
 ```
 
-ソース`<type definition>`の PL/SQL 型を一意に識別する説明テキストを次に示します。
+`<type definition>`ソースの PL/SQL 型を一意に識別する説明テキストを次に示します。
 
 次に例を示します。
 
@@ -101,7 +102,7 @@ BEGIN
 END
 ```
 
-ここでは、 `Manager`テーブルは数値インデックス (`INDEX BY PLS_INTEGER`) に関連付けられているため、使用される対応する`@CollectionIndexInt$TYPE`t-sql 宣言の型はです。 テーブルが文字セットインデックス (など`VARCHAR2`) に関連付けられている場合、対応する t-sql 宣言の型`@CollectionIndexString$TYPE`は次のようになります。
+ここでは、 `Manager` テーブルは数値インデックス () に関連付けられているため、 `INDEX BY PLS_INTEGER` 使用される対応する t-sql 宣言の型は `@CollectionIndexInt$TYPE` です。 テーブルが文字セットインデックス (など) に関連付けられている場合、 `VARCHAR2` 対応する t-sql 宣言の型は次のようになり `@CollectionIndexString$TYPE` ます。
 
 ```sql
 -- Oracle
@@ -112,13 +113,13 @@ TYPE Manager_table is TABLE OF Manager INDEX BY VARCHAR2(40);
     ' TABLE INDEX BY STRING OF ( RECORD ( MGRID INT , MGRNAME STRING , HIREDATE DATETIME ) )'
 ```
 
-Oracle レコード機能は、 `Record`型によってのみエミュレートされます。
+Oracle レコード機能は、型によってのみエミュレートされ `Record` ます。
 
-`CollectionIndexInt`、、 `CollectionIndexString`、 `Record`の各型には、空のインスタンスを`[Null]`返す静的プロパティがあります。 `SetType`メソッドは、(上の例に示すように) 特定の型の空のオブジェクトを受け取るために呼び出されます。
+、、、の各型に `CollectionIndexInt` `CollectionIndexString` は、空のインスタンスを `Record` 返す静的プロパティがあり `[Null]` ます。 `SetType`メソッドは、(上の例に示すように) 特定の型の空のオブジェクトを受け取るために呼び出されます。
 
 ## <a name="constructor-call-conversions"></a>コンストラクター呼び出しの変換
 
-コンストラクターの表記は、入れ子になったテーブル`VARRAY`およびに対してのみ使用できます。したがって、 `CollectionIndexInt`明示的なコンストラクター呼び出しはすべて、型を使用して変換されます。 空のコンストラクター呼び出しは、 `SetType`の null インスタンスで呼び出され`CollectionIndexInt`た呼び出しを介して変換されます。 プロパティ`[Null]`は、null インスタンスを返します。 コンストラクターに要素のリストが含まれている場合は、コレクションに値を追加するために、特別なメソッド呼び出しが順番に適用されます。
+コンストラクターの表記は、入れ子になったテーブルおよびに対してのみ使用でき `VARRAY` ます。したがって、明示的なコンストラクター呼び出しはすべて、型を使用して変換され `CollectionIndexInt` ます。 空のコンストラクター呼び出しは、 `SetType` の null インスタンスで呼び出された呼び出しを介して変換され `CollectionIndexInt` ます。 プロパティは、 `[Null]` null インスタンスを返します。 コンストラクターに要素のリストが含まれている場合は、コレクションに値を追加するために、特別なメソッド呼び出しが順番に適用されます。
 
 次に例を示します。
 
@@ -166,7 +167,7 @@ END
 
 ## <a name="referencing-and-assigning-record-and-collection-elements"></a>レコード要素とコレクション要素の参照と割り当て
 
-各 Udt には、さまざまなデータ型の要素を操作する一連のメソッドがあります。 たとえば、メソッドは`SetDouble` 、レコードまた`float(53)`はコレクションに値を割り当て、 `GetDouble`この値を読み取ることができます。 メソッドの完全な一覧を次に示します。
+各 Udt には、さまざまなデータ型の要素を操作する一連のメソッドがあります。 たとえば、メソッドは、 `SetDouble` `float(53)` レコードまたはコレクションに値を割り当て、 `GetDouble` この値を読み取ることができます。 メソッドの完全な一覧を次に示します。
 
 ```sql
 GetCollectionIndexInt(@key <KeyType>) returns CollectionIndexInt;
@@ -235,7 +236,7 @@ SET @c = @c.SetRecord(1, @c.GetOrCreateRecord(1).SetInt(N'ID', 1))
 
 SSMA では、次の UDT メソッドを使用して、PL/SQL コレクションの組み込みメソッドをエミュレートします。
 
-Oracle の収集方法 | `CollectionIndexInt`および`CollectionIndexString`同等のもの
+Oracle の収集方法 | `CollectionIndexInt`および `CollectionIndexString` 同等のもの
 --- | ---
 [COUNT] | `Count returns int`
 DELETE | `RemoveAll() returns <UDT_type>`
@@ -247,7 +248,7 @@ EXISTS | `ContainsElement(@index int) returns bit`
 拡張 (n, i) | `ExtendDefault(@count int, @def int) returns <UDT_type>`
 FIRST | `First() returns int`
 LAST | `Last() returns int`
-LIMIT | なし
+LIMIT | N/A
 PRIOR | `Prior(@current int) returns int`
 NEXT | `Next(@current int) returns int`
 TRIM | `Trim() returns <UDT_type>`
@@ -255,16 +256,16 @@ TRIM (n) | `TrimN(@count int) returns <UDT_type>`
 
 ## <a name="bulk-collect-operation"></a>一括収集操作
 
-SSMA は`BULK COLLECT INTO` 、ステートメントを`SELECT ... FOR XML PATH` SQL Server ステートメントに変換します。その結果は、次のいずれかの関数にラップされます。
+SSMA `BULK COLLECT INTO` は、ステートメントを SQL Server ステートメントに変換 `SELECT ... FOR XML PATH` します。その結果は、次のいずれかの関数にラップされます。
 
 * `ssma_oracle.fn_bulk_collect2CollectionSimple`
 * `ssma_oracle.fn_bulk_collect2CollectionComplex`
 
-選択は、ターゲットオブジェクトの種類によって異なります。 これらの関数は、、 `CollectionIndexInt` `CollectionIndexString`および`Record`型で解析できる XML 値を返します。 特別な`AssignData`関数は、XML ベースのコレクションを UDT に割り当てます。
+選択は、ターゲットオブジェクトの種類によって異なります。 これらの関数は、、および型で解析できる XML 値を返し `CollectionIndexInt` `CollectionIndexString` `Record` ます。 特別な `AssignData` 関数は、XML ベースのコレクションを UDT に割り当てます。
 
-SSMA は、3種類`BULK COLLECT INTO`のステートメントを認識します。
+SSMA は、3種類のステートメントを認識 `BULK COLLECT INTO` します。
 
-### <a name="the-collection-contains-elements-with-scalar-types-and-the-select-list-contains-one-column"></a>コレクションにはスカラー型の要素が含まれ`SELECT` 、リストには1つの列が含まれます。
+### <a name="the-collection-contains-elements-with-scalar-types-and-the-select-list-contains-one-column"></a>コレクションにはスカラー型の要素が含まれ、リストには `SELECT` 1 つの列が含まれます。
 
 ```sql
 -- Oracle
@@ -279,7 +280,7 @@ SET @<collection_name_1> =
             (SELECT column_name_1 FROM <data_source> FOR XML PATH)))
 ```
 
-### <a name="the-collection-contains-elements-with-record-types-and-the-select-list-contains-one-column"></a>コレクションにはレコード型の要素が含まれ`SELECT` 、リストには1つの列が含まれます。
+### <a name="the-collection-contains-elements-with-record-types-and-the-select-list-contains-one-column"></a>コレクションにはレコード型の要素が含まれ、リストには `SELECT` 1 つの列が含まれます。
 
 ```sql
 -- Oracle
@@ -301,7 +302,7 @@ SET @<collection_name_1> =
             FOR XML PATH)))
 ```
 
-### <a name="the-collection-contains-elements-with-scalar-type-and-the-select-list-contains-multiple-columns"></a>コレクションにスカラー型の要素が含まれて`SELECT`いますが、リストに複数の列が含まれています。
+### <a name="the-collection-contains-elements-with-scalar-type-and-the-select-list-contains-multiple-columns"></a>コレクションにスカラー型の要素が含まれていますが、 `SELECT` リストに複数の列が含まれています。
 
 ```sql
 -- Oracle
@@ -340,4 +341,4 @@ SELECT
 
 ## <a name="select-into-record"></a>SELECT INTO レコード
 
-Oracle クエリの結果が PL/SQL レコード変数に保存されている場合は、ssma の [レコードを分離された**変数の一覧として変換**する ([**ツール**] メニューの [**プロジェクトの設定**]、[**一般的な** -> **変換**] の順に選択できます) に応じて、2つのオプションがあります。 この設定の値が **[はい]** (既定値) の場合、ssma ではレコードの種類のインスタンスは作成されません。 代わりに、レコードフィールドごとに個別の Transact-sql 変数を作成することにより、レコードを編成フィールドに分割します。 設定が [**いいえ**] の場合、レコードはインスタンス化され、メソッドを使用`Set`して各フィールドに値が割り当てられます。
+Oracle クエリの結果が PL/SQL レコード変数に保存されている場合は、ssma の [レコードを分離された**変数の一覧として変換**する ([**ツール**] メニューの [**プロジェクトの設定**]、[**一般的な**変換] の順に選択できます) に応じて、2つのオプションがあり  ->  **Conversion**ます。 この設定の値が **[はい]** (既定値) の場合、ssma ではレコードの種類のインスタンスは作成されません。 代わりに、レコードフィールドごとに個別の Transact-sql 変数を作成することにより、レコードを編成フィールドに分割します。 設定が [**いいえ**] の場合、レコードはインスタンス化され、メソッドを使用して各フィールドに値が割り当てられ `Set` ます。
