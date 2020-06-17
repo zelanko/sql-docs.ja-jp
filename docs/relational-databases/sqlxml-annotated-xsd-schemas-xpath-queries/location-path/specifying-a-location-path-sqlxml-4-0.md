@@ -1,5 +1,6 @@
 ---
 title: ロケーションパスの指定 (SQLXML)
+description: SQLXML 4.0 XPath クエリでロケーションパスを指定して、コンテキストノードに対して相対的なノードのセットを選択し、ノードセットを生成する方法について説明します。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e2668da10e41e997cc4d37760d79e4b66dae215
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e0af5fb77538a0942a913c8f0e441affb84af93
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245591"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882254"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>ロケーション パスの指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "75245591"
   
 -   **相対ロケーション パス**  
   
-     相対ロケーション パスは、ドキュメントのコンテキスト ノードから開始します。 構成要素は連続する 1 つ以上のロケーション ステップで、区切りにはスラッシュ記号 (/) を使用します。 各ステップで、コンテキスト ノードに対して相対的なノードのセットが選択されます。 最初のステップでは、コンテキスト ノードに対して相対的なノードのセットが選択され、 そのセットの各ノードが次のステップのコンテキスト ノードとして使用されます。 そのステップで指定されたノードのセットは結合されます。 たとえば、 **child:: order/child:: orderdetail**は、コンテキストノードの子要素** \<>order** ** \<detail>** 子要素を選択します。  
+     相対ロケーション パスは、ドキュメントのコンテキスト ノードから開始します。 構成要素は連続する 1 つ以上のロケーション ステップで、区切りにはスラッシュ記号 (/) を使用します。 各ステップで、コンテキスト ノードに対して相対的なノードのセットが選択されます。 最初のステップでは、コンテキスト ノードに対して相対的なノードのセットが選択され、 そのセットの各ノードが次のステップのコンテキスト ノードとして使用されます。 そのステップで指定されたノードのセットは結合されます。 たとえば、 **child:: Order/child:: OrderDetail**は、 **\<OrderDetail>** **\<Order>** コンテキストノードの子要素の子要素を選択します。  
   
     > [!NOTE]  
     >  SQLXML 4.0 における XPath の実装では、XPath が明示的に絶対として指定されていない場合でも、各 XPath クエリはルート コンテキストから開始します。 たとえば、"Customer" で開始する XPath クエリは "/Customer" として扱われます。 XPath クエリの**customer [Order]** では、顧客はルートコンテキストから開始しますが、注文は顧客のコンテキストで開始されます。 詳細については、「 [XPath クエリの使用の概要 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)」を参照してください。  
@@ -51,15 +52,15 @@ ms.locfileid: "75245591"
   
 -   **ノードテスト**  
   
-     ノード テストによって、ロケーション ステップで選択されるノードの型が決まります。 すべての軸 (**子**、**親**、**属性**、および**self**) には、主ノード型があります。 **属性**軸の場合、プリンシパルノード型は** \<属性>** です。 **親**、**子**、および**自己**軸の場合、主ノード型は** \<要素>** になります。  
+     ノード テストによって、ロケーション ステップで選択されるノードの型が決まります。 すべての軸 (**子**、**親**、**属性**、および**self**) には、主ノード型があります。 **属性**軸の場合、主ノード型は **\<attribute>** です。 **親**、**子**、および**自己**軸の場合、主ノード型は **\<element>** です。  
   
-     たとえば、ロケーションパスで**child:: customer**を指定すると、コンテキストノードの** \<customer>** 要素が選択されます。 **子**軸には主ノード型として** \<>要素**があるため、customer が** \<要素>** ノードの場合、ノードテスト customer は TRUE になります。  
+     たとえば、ロケーションパスで**child:: Customer**を指定すると、 **\<Customer>** コンテキストノードの子要素が選択されます。 **子**軸は **\<element>** 主ノード型であるため、customer がノードの場合、ノードテスト customer は TRUE になり **\<element>** ます。  
   
 -   **選択述語 (0 以上)**  
   
      述語では、軸に関してノード セットをフィルター選択します。 XPath 式内に選択述語を指定するときには、SELECT ステートメント内に WHERE 句を指定するときのように、 述語はかっこで囲みます。 選択述語に指定したテストを適用すると、そのノード テストによって返されたノードがフィルター選択されます。 フィルター選択されたノード セットの各ノードに対し、ノードをコンテキスト ノード、ノード セット内のノード数をコンテキストのサイズとして、述語式が評価されます。 述語式が TRUE と評価された場合、そのノードは結果のノード セットに含められます。  
   
-     ロケーション ステップの構文では、軸名とノード テストを 2 つのコロン (::) で区切り、その後に式をそれぞれ角かっこで囲んで指定します。式は指定しなくてもかまいません。 たとえば、XPath 式 (ロケーションパス) に**child:: customer@CustomerID[= ' ALFKI ']** を指定すると、コンテキストノードのすべての** \<Customer>** 子要素が選択されます。 次に、述語内のテストがノードセットに適用されます。これにより、 **CustomerID**属性の属性値が ' ALFKI ' の** \<顧客>** 要素ノードのみが返されます。  
+     ロケーション ステップの構文では、軸名とノード テストを 2 つのコロン (::) で区切り、その後に式をそれぞれ角かっこで囲んで指定します。式は指定しなくてもかまいません。 たとえば、XPath 式 (ロケーションパス) に**child:: Customer [ @CustomerID = ' ALFKI ']** と指定すると、 **\<Customer>** コンテキストノードの子要素がすべて選択されます。 次に、述語内のテストがノードセットに適用されます。これに **\<Customer>** より、 **CustomerID**属性の属性値が ' ALFKI ' の要素ノードのみが返されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [&#40;SQLXML 4.0&#41;の軸の指定](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  

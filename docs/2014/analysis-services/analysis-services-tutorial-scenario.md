@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 71e2d7f2bce555cca469a46a95a1fc3e000eea76
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7609ecdf63f1bec0a344c9c6c8456a009ca3bbfa
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528038"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880664"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services のチュートリアル シナリオ
   このチュートリアルには、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]という架空の会社が登場します。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、特殊合金自転車を北米、ヨーロッパ、およびアジアの市場に供給する大規模な多国籍製造会社です。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] はワシントン州のボセルに本社を置き、500 名の従業員を抱えています。 さらに、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の各市場には、その地域を担当する販売チームがいます。  
@@ -26,7 +26,7 @@ ms.locfileid: "84528038"
 ## <a name="current-analysis-environment"></a>現在の分析環境  
  Adventure Works Cycles では、販売チーム、マーケティング チーム、および上級管理職のデータ分析ニーズに対応するため、トランザクション データ (取引データ) は [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] データベースから取り出し、販売量などの非トランザクション データはスプレッドシートから取り出して、これらの情報を **AdventureWorksDW2012** と呼ばれるリレーショナル データ ウェアハウスに統合しています。 しかし、リレーショナル データ ウェアハウスには次の問題があります。  
   
--   レポートが静的である。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel のピボット テーブルなどと違い、データをインタラクティブに操作してレポートを生成できないので、詳細情報を取得できません。 既存の定義済みレポートで十分な情報を得られるユーザーも多いのですが、インタラクティブなクエリと専門的なレポートを使用する上級ユーザーは、データベースに直接クエリを送信する必要があります。 しかし、 **AdventureWorksDW2012** データベースは複雑であるため、効果的なクエリの作成方法を習得するにはかなりの時間がかかります。  
+-   レポートが静的である。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel のピボット テーブルなどと違い、データをインタラクティブに操作してレポートを生成できないので、詳細情報を取得できません。 既存の定義済みレポートで十分な情報を得られるユーザーも多いのですが、インタラクティブなクエリと専門的なレポートを使用する上級ユーザーは、データベースに直接クエリを送信する必要があります。 ただし、 **AdventureWorksDW2012**データベースが複雑になるため、効果的なクエリの作成方法を習得するのに時間がかかります。  
   
 -   クエリ パフォーマンスの落差が大きい。 たとえば、クエリによって、結果が数秒で返される場合と、数分かかる場合があります。  
   

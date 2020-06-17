@@ -1,5 +1,6 @@
 ---
 title: XPath クエリのサンプル (SQLXML)
+description: 軸、述語、演算子、関数、変数などを指定する方法を示す、SQLXML 4.0 の XPath クエリの例を示します。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a741c0b2bfe3cc64efd850c4d9a6201e9f9ff501
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1485221af02834e741d32dde5fd6ad45aaacdfe
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252608"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84884014"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>XPath クエリの例 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

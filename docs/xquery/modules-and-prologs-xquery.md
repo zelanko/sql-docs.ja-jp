@@ -1,5 +1,6 @@
 ---
 title: モジュールと Prologs (XQuery) |Microsoft Docs
+description: XQuery プロローグで名前空間を宣言するときにサポートされない仕様について説明します。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f17b4a4-6234-41d4-a996-6db4e27bff7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7a2df8ea534622c4ff4c1695c7e44a7aea7611d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 078cd9e29c917ce8842edd2269896debee074a91
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946587"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881648"
 ---
 # <a name="modules-and-prologs-xquery"></a>モジュールとプロローグ (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +31,15 @@ ms.locfileid: "67946587"
 ## <a name="implementation-limitations"></a>実装の制限事項  
  次の XQuery 仕様は、この実装ではサポートされていません。  
   
--   モジュール宣言 (`version`)  
+-   モジュール宣言 ( `version` )  
   
--   モジュール宣言 (`module namespace`)  
+-   モジュール宣言 ( `module namespace` )  
   
--   Xmpspacedeclaration (`xmlspace`)  
+-   Xmpspacedeclaration ( `xmlspace` )  
   
 -   既定の照合順序の宣言 (`declare default collation`)  
   
--   ベース URI 宣言 (`declare base-uri`)  
+-   ベース URI 宣言 ( `declare base-uri` )  
   
 -   構築宣言 (`declare construction`)  
   
@@ -46,7 +47,7 @@ ms.locfileid: "67946587"
   
 -   スキーマのインポート (`import schema namespace`)  
   
--   モジュールのインポート`import module`()  
+-   モジュールのインポート ( `import module` )  
   
 -   プロローグでの変数宣言 (`declare variable`)  
   

@@ -1,5 +1,6 @@
 ---
 title: 小文字関数 (XQuery) |Microsoft Docs
+description: 指定された文字列内の各文字を等価の小文字に変換する XQuery 関数の小文字 () について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9202f357ebf09bef666edfe9a9e18d6dc685545
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68077669"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886595"
 ---
 # <a name="functions-on-string-values---lower-case"></a>文字列値に使用する関数 - lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ fn:lower-case($arg as xs:string?) as xs:string
 ## <a name="examples"></a>例  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 文字列を大文字に変更する  
- 次の例では、入力文字列 ' abcDEF! を変更します。@4小文字にします。  
+ 次の例では、入力文字列 ' abcDEF! ' を変更します。 @4小文字にします。  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

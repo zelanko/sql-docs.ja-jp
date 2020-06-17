@@ -1,5 +1,6 @@
 ---
 title: Order に関連する XQueries |Microsoft Docs
+description: ノードがドキュメントに表示される順序に基づいた XQueries の例を示します。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36c7e512c1e691d0341cb802a61e57d46d4b076a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946114"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880509"
 ---
 # <a name="xqueries-involving-order"></a>順序に関係する XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  リレーショナル データベースにはシーケンスの概念はありません。 たとえば、"データベースから最初の顧客を取得する" などの要求を行うことはできません。 ただし、XML ドキュメントに対してクエリを実行し、 \<最初の顧客> 要素を取得することはできます。 その後、常に同じ顧客を取得します。  
+  リレーショナル データベースにはシーケンスの概念はありません。 たとえば、"データベースから最初の顧客を取得する" などの要求を行うことはできません。 ただし、XML ドキュメントに対してクエリを実行し、最初の要素を取得することはでき \<Customer> ます。 その後、常に同じ顧客を取得します。  
   
  このトピックでは、ドキュメントにノードが表示される順序に基づくクエリについて説明します。  
   
@@ -63,7 +64,7 @@ WHERE ProductModelID=7
   
 -   **@\*** 2番目のワークセンターの場所のすべての属性を取得します。  
   
--   FLWOR の反復 (...RETURN) は、2番`step`目のワークセンターの場所のすべての <> 子要素を取得します。  
+-   FLWOR の反復 (...RETURN) は、 `step` 2 番目のワークセンターの場所のすべての <> 子要素を取得します。  
   
 -   [Sql: column () 関数 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)には、構築される XML にリレーショナル値が含まれています。  
   
@@ -81,7 +82,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- 上記のクエリでは、テキストノードのみが取得されます。 代わりに <`step`> 要素全体を返す場合は、クエリから**string ()** 関数を削除します。  
+ 上記のクエリでは、テキストノードのみが取得されます。 代わりに <> 要素全体を返す場合は、 `step` クエリから**string ()** 関数を削除します。  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. 製品の製造における2番目のワークセンターの場所で使用されているすべての素材とツールを検索する  
  次のクエリでは、特定の製品モデルに対して、製造プロセス内にあるワーク センターの場所の順序で 2 番目のワーク センターの場所で使用されるツールと材料が取得されます。  
@@ -115,7 +116,7 @@ where ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   このクエリは、`tion`> 要素 <を構築し、その属性値をデータベースから取得します。  
+-   このクエリは、> 要素 <を構築 `tion` し、その属性値をデータベースから取得します。  
   
 -   2つの FLWOR を使用しています (...return) イテレーション: ツールを取得し、使用された素材を取得するためのものです。  
   
@@ -137,7 +138,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. 製品カタログから最初の2つの製品機能の説明を取得する  
- 特定の製品モデルの場合、クエリは、製品モデルカタログの <`Features`> 要素から最初の2つの機能の説明を取得します。  
+ 特定の製品モデルの場合、クエリは、製品モデルカタログの <> 要素から最初の2つの機能の説明を取得し `Features` ます。  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -157,7 +158,7 @@ where ProductModelID=19
   
  上のクエリに関して、次の点に注意してください。  
   
- クエリ本文は、ProductModelID 属性と`ProductModel` ProductModelName 属性を持つ <> 要素を含む XML を構築します。  
+ クエリ本文は、 `ProductModel` ProductModelID 属性と ProductModelName 属性を持つ <> 要素を含む XML を構築します。  
   
 -   このクエリでは、FOR...製品モデルの特徴の説明を取得するためのループを返します。 **Position ()** 関数は、最初の2つの機能を取得するために使用されます。  
   

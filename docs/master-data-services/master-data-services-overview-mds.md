@@ -1,5 +1,6 @@
 ---
 title: 概要
+description: マスターデータサービスの主要なデータ編成と管理機能について説明します。 マスターデータサービスを使用すると、データのマスターセットを管理できます。
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 44723e33929c71b51cdf61d675644a4bf9f6068d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb6d1967173c4379b54ca8596b34eadbd8ab46e9
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729055"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84800519"
 ---
 # <a name="master-data-services-overview-mds"></a>マスター データ サービスの概要 (MDS)
 
@@ -30,7 +31,7 @@ ms.locfileid: "73729055"
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]を使用すると、組織のデータのマスター セットを管理できます。 データをモデルに整理して、データを更新するためのルールを作成し、データを更新するユーザーを制御します。 Excel では、組織内の他のユーザーとマスター データ セットを共有できます。 
   
- >  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] アーキテクチャの説明については、simple-talk.com の記事「 [Master Data Services -- The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) 」 (マスター データ サービス -- 基本) を参照してください。 の[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]新機能の詳細については、「[マスターデータサービス &#40;MDS](../master-data-services/what-s-new-in-master-data-services-mds.md)の新機能」を参照してください&#41;  
+ >  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] アーキテクチャの説明については、simple-talk.com の記事「 [Master Data Services -- The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) 」 (マスター データ サービス -- 基本) を参照してください。 の新機能の詳細については [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 、「[マスターデータサービス &#40;MDS](../master-data-services/what-s-new-in-master-data-services-mds.md)の新機能」を参照してください&#41;  
    **[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のインストール、データベースと Web サイトのセットアップ、サンプル モデルの展開の手順については、「** [マスター データ サービスのイントールと構成](../master-data-services/master-data-services-installation-and-configuration.md)」を参照してください。  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデルはマスター データ構造の最上位のコンテナーです。 モデルを作成すると、類似したデータのグループを管理できます。たとえば、オンラインの製品データを管理するなどです。 モデルには 1 つ以上のエンティティが含まれています。エンティティにはメンバーが含まれており、これはデータ レコードです。 エンティティはテーブルに似ています。  

@@ -1,5 +1,6 @@
 ---
 title: SQLXML のセキュリティに関する主な注意点
+description: データアクセスに SQLXML を使用する場合の主要なセキュリティガイドラインについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d897d81f0f2079e06c481d62f069e4626126da1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eafd432d96ad17a3ec0187c6c0e58103a7c9c6b1
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252518"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84883583"
 ---
 # <a name="core-sqlxml-security-considerations"></a>SQLXML のセキュリティに関する主な注意点
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "75252518"
   
 -   SQLXML では、ユーザーはデータベースに対して任意の SQL クエリを実行できます。 この場合、ユーザーの設定なしで SQL データベースを公開することになるため、保護または制御されていないソースに対してこの機能は提供しないでください。  
   
--   アップデートグラムを実行すると、SQLXML によって**updg: sync**ブロックが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに対する DELETE、UPDATE、および INSERT コマンドに変換されます。 これらのコマンドは、既存のデータにのみ影響します。 SQLXML により生成されるコマンドでは、データベースは変更されません。 データベースの構造を変更するには、ユーザーは明示的なコマンドを発行する必要があります。 たとえば、テンプレートの**sql: query**ブロックに含めることができます。  
+-   アップデートグラムを実行すると、SQLXML によって**updg: sync**ブロックがインスタンスに対する DELETE、UPDATE、および INSERT コマンドに変換され [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 これらのコマンドは、既存のデータにのみ影響します。 SQLXML により生成されるコマンドでは、データベースは変更されません。 データベースの構造を変更するには、ユーザーは明示的なコマンドを発行する必要があります。 たとえば、テンプレートの**sql: query**ブロックに含めることができます。  
   
 -   DiffGrams を実行すると、SQLXML では DiffGram が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに対する DELETE、UPDATE、および INSERT コマンドに変換されます。 これらのコマンドは、既存のデータにのみ影響します。 SQLXML により生成されるコマンドでは、データベースは変更されません。 データベースの構造を変更するには、ユーザーは明示的なコマンドを発行する必要があります。 たとえば、テンプレートの**sql: query**ブロックに含めることができます。  
   

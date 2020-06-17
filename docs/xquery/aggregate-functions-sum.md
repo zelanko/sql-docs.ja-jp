@@ -1,5 +1,6 @@
 ---
 title: sum 関数 (XQuery) |Microsoft Docs
+description: 数値のシーケンスの合計を返す XQuery 関数 sum () について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b6efd2cc3d5793d4524c4ab3d058a6375d23892
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886928"
 ---
 # <a name="aggregate-functions---sum"></a>集計関数 - sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +48,8 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
   
  オーバーフローまたは範囲外の例外が発生したとき、関数は実行時エラーを返します。  
   
-## <a name="examples"></a>使用例  
- このトピックでは、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
+## <a name="examples"></a>例  
+ このトピックでは、データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
 ### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. sum() XQuery 関数を使用した、製造プロセス内のすべてのワーク センターの場所での合計労働時間の計算  
  次のクエリでは、製造手順が格納されているすべての製品モデルの製造プロセスにおける、すべてのワーク センターの場所での合計労働時間を計算します。  

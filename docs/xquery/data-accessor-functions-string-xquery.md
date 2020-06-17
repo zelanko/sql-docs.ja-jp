@@ -1,5 +1,6 @@
 ---
 title: string 関数 (XQuery) |Microsoft Docs
+description: 文字列として表現された引数の値を返す XQuery 関数文字列 () について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59c90ce7e0bdbe46fa1ca577e2b16e6576650751
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038939"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881892"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>データ アクセサー関数 - string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,11 +52,11 @@ fn:string($arg as item()?) as xs:string
   
 -   この実装では、引数のない**fn: string ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([]) 内でのみ使用できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-string-function"></a>A. String 関数の使用  
- 次のクエリでは、 `Features` <`ProductDescription`> 要素の <> 子要素ノードが取得されます。  
+ 次のクエリでは、 `Features` <> 要素の <> 子要素ノードが取得され `ProductDescription` ます。  
   
 ```  
 SELECT CatalogDescription.query('  

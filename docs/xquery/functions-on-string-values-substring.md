@@ -1,5 +1,6 @@
 ---
 title: substring 関数 (XQuery) |Microsoft Docs
+description: ソース文字列の指定部分を返す XQuery 関数 substring () について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 694fb912675a15055688956a18714185e25995c4
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004643"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881923"
 ---
 # <a name="functions-on-string-values---substring"></a>文字列値に使用する関数 - substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,11 +69,11 @@ fn:substring($sourceString as xs:string?,
   
  SQL Server を使用すると、 *$startingLoc*と *$length*を空のシーケンスにすることができます。これは、空のシーケンスが () にマップされる動的エラーの結果として有効な値であるためです。  
   
-## <a name="examples"></a>使用例  
- このトピックでは、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース内のさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
+## <a name="examples"></a>例  
+ このトピックでは、データベース内のさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Substring () XQuery 関数を使用した部分的な概要の製品モデルの説明の取得  
- このクエリでは、製品モデルを説明するテキストの最初の50文字、ドキュメント`Summary`内の <> 要素が取得されます。  
+ このクエリでは、製品モデルを説明するテキストの最初の50文字、ドキュメント内の <> 要素が取得され `Summary` ます。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -85,7 +86,7 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  上のクエリに関して、次の点に注意してください。  
   
--   **String ()** 関数は、<`Summary`> 要素の文字列値を返します。 この関数は、<`Summary`の> 要素にテキストとサブ要素 (html 書式設定要素) の両方が含まれており、これらの要素をスキップしてすべてのテキストを取得するため、使用されます。  
+-   **String ()** 関数は、<> 要素の文字列値を返し `Summary` ます。 この関数は、<の `Summary`> 要素にテキストとサブ要素 (html 書式設定要素) の両方が含まれており、これらの要素をスキップしてすべてのテキストを取得するため、使用されます。  
   
 -   **Substring ()** 関数は、**文字列 ()** によって取得された文字列値から最初の50文字を取得します。  
   

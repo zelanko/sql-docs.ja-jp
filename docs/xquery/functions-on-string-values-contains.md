@@ -1,5 +1,6 @@
 ---
 title: contains 関数 (XQuery) |Microsoft Docs
+description: XQuery の contains 関数を使用して、指定した文字列値に指定した部分文字列値が含まれているかどうかを確認する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d65e533f8bc808a7f3828cad797f22441905cea8
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881863"
 ---
 # <a name="functions-on-string-values---contains"></a>文字列値に使用する関数 - contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +56,11 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
  XQuery 関数のサロゲートペアの動作は、データベースの互換性レベルと、場合によっては、関数の既定の名前空間 URI に依存します。 詳細については、「 [SQL Server 2016 のデータベースエンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」の「XQuery 関数はサロゲート対応」を参照してください。 「 [ALTER DATABASE Compatibility Level &#40;transact-sql&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 」と「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」も参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このトピックでは、AdventureWorks データベースのさまざまな xml 型の列に格納されている XML インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. contains() XQuery 関数を使用した特定の文字列の検索  
- 次のクエリでは、概要説明に Aerodynamic という単語が含まれている製品を検索します。 このクエリでは、ProductID と、 `Summary`そのような製品の <> 要素が返されます。  
+ 次のクエリでは、概要説明に Aerodynamic という単語が含まれている製品を検索します。 このクエリでは、ProductID と、その `Summary` ような製品の <> 要素が返されます。  
   
 ```  
 --The product model description document uses  

@@ -1,5 +1,6 @@
 ---
 title: true 関数 (XQuery) |Microsoft Docs
+description: ブール値 True を返す XQuery 関数 true () について説明します。
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb3625b1377d11907ca118faee8d81c06b8d6af6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886568"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>ブール値コンストラクター関数 - true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +48,9 @@ go
 -- result = 1  
 ```  
   
- 次の例では、型指定された**xml**列に対してクエリが指定されています。 式`if`は、<`ROOT`> 要素の型指定されたブール値をチェックし、それに従って構築された XML を返します。 この例では、次の処理を実行します。  
+ 次の例では、型指定された**xml**列に対してクエリが指定されています。 式は、 `if` <> 要素の型指定されたブール値をチェック `ROOT` し、それに従って構築された XML を返します。 この例では、次の処理を実行します。  
   
--   Xs: boolean 型の <`ROOT`> 要素を定義する XML スキーマコレクションを作成します。  
+-   Xs: boolean 型の <> 要素を定義する XML スキーマコレクションを作成し `ROOT` ます。  
   
 -   XML スキーマコレクションを使用して、型指定された**xml**列を含むテーブルを作成します。  
   

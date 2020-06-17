@@ -1,5 +1,6 @@
 ---
 title: XSL キャッシュ (SQLXML)
+description: SQLXML 4.0 のクエリパフォーマンスを向上させるために、XSL スタイルシートをキャッシュし、XSL キャッシュサイズを設定する方法について説明します。
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 265ce1db6f57f378dfaa7c0818914edd121b7d30
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a394befb57ae27f1f4a57a3928e5bd6a28fe237e
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257331"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882485"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>XSL のキャッシュ (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

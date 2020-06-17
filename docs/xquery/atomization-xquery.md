@@ -1,5 +1,6 @@
 ---
 title: アトミック化 (XQuery) |Microsoft Docs
+description: 項目の型指定された値を抽出する XQuery のアトミック化プロセスについて説明します。
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e034e6464e395c1516eed874ed1c0cff2c32238f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70d623d8583535aae7ddcc23f26ab7c5e4e36fc7
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886881"
 ---
 # <a name="atomization-xquery"></a>アトミック化 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +46,11 @@ SELECT @x.query('sum(/ROOT/Location/@LaborHours)')
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- 暗黙のアトミック化のもう1つの例は、算術演算子を使用する場合です。 演算子**+** にはアトミック値が必要です。また、LaborHours 属性のアトミック値を取得するために、**データ ()** が暗黙的に適用されます。 このクエリは、ProductModel テーブルの**xml**型の命令列に対して指定されています。 次のクエリでは、LaborHours 属性が3回返されます。 クエリでは、次の点に注意してください。  
+ 暗黙のアトミック化のもう1つの例は、算術演算子を使用する場合です。 演算子には **+** アトミック値が必要です。また、LaborHours 属性のアトミック値を取得するために、**データ ()** が暗黙的に適用されます。 このクエリは、ProductModel テーブルの**xml**型の命令列に対して指定されています。 次のクエリでは、LaborHours 属性が3回返されます。 クエリでは、次の点に注意してください。  
   
 -   OrignialLaborHours 属性の構築では、(`$WC/@LaborHours`) によって返される単一シーケンスにアトミック化が暗黙的に適用されます。 LaborHours 属性の型指定された値は、OrignialLaborHours に割り当てられます。  
   
--   UpdatedLaborHoursV1 属性の構築では、算術演算子がアトミック値を必要とします。 そのため、(`$WC/@LaborHours`) によって返される LaborHours 属性には、**データ ()** が暗黙的に適用されます。 次に、atomic 値1が追加されます。 属性 UpdatedLaborHoursV2 の構築には、明示的な**データ ()** の適用が示されていますが、必須ではありません。  
+-   UpdatedLaborHoursV1 属性の構築では、算術演算子がアトミック値を必要とします。 そのため、() によって返される LaborHours 属性には、**データ ()** が暗黙的に適用され `$WC/@LaborHours` ます。 次に、atomic 値1が追加されます。 属性 UpdatedLaborHoursV2 の構築には、明示的な**データ ()** の適用が示されていますが、必須ではありません。  
   
 ```  
 SELECT Instructions.query('  

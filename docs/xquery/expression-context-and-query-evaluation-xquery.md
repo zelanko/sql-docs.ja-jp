@@ -1,5 +1,6 @@
 ---
 title: 式のコンテキストとクエリの評価 (XQuery) |Microsoft Docs
+description: XQuery 式の静的コンテキストと動的コンテキストからの情報を分析および評価するために使用する方法について説明します。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cadfc71bdbb137650d897dc8374ed1caa8d193ab
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038917"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881901"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>式コンテキストとクエリの評価 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "68038917"
   
     -   WITH XMLNAMESPACES を使用して定義されたすべての名前空間。 詳細については、「 [WITH XMLNAMESPACES を使用したクエリへの名前空間の追加](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)」を参照してください。  
   
-    -   クエリのプロローグに定義されているすべての名前空間。 プロローグ内の名前空間宣言により、WITH XMLNAMESPACES で名前空間宣言がオーバーライドされる場合があることに注意してください。 たとえば、次のクエリでは、WITH XMLNAMESPACES で名前空間 (`https://someURI`) にバインドするプレフィックス (pd) が宣言されています。 ただし、WHERE 句では、バインドよりもクエリのプロローグがオーバーライドされます。  
+    -   クエリのプロローグに定義されているすべての名前空間。 プロローグ内の名前空間宣言により、WITH XMLNAMESPACES で名前空間宣言がオーバーライドされる場合があることに注意してください。 たとえば、次のクエリでは、WITH XMLNAMESPACES で名前空間 () にバインドするプレフィックス (pd) が宣言されて `https://someURI` います。 ただし、WHERE 句では、バインドよりもクエリのプロローグがオーバーライドされます。  
   
         ```  
         WITH XMLNAMESPACES ('https://someURI' AS pd)  
@@ -79,7 +80,7 @@ ms.locfileid: "68038917"
   
 -   型指定された**xml**列または変数に対してクエリを実行する場合は、列または変数に関連付けられている xml スキーマコレクションのコンポーネントが静的コンテキストにインポートされます。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
--   インポートされたスキーマのすべてのアトミック型についても、キャスト関数が静的コンテキストで使用可能になります。 この例を次に示します。 この例では、型指定された**xml**変数に対してクエリを指定しています。 この変数に関連付けられている XML スキーマ コレクションでは、アトミック型である myType が定義されています。 この型に対応する、キャスト関数**myType ()** は、スタティック分析中に使用できます。 クエリ式 (`ns:myType(0)`) は、myType の値を返します。  
+-   インポートされたスキーマのすべてのアトミック型についても、キャスト関数が静的コンテキストで使用可能になります。 このことを次の例で説明します。 この例では、型指定された**xml**変数に対してクエリを指定しています。 この変数に関連付けられている XML スキーマ コレクションでは、アトミック型である myType が定義されています。 この型に対応する、キャスト関数**myType ()** は、スタティック分析中に使用できます。 クエリ式 () は、 `ns:myType(0)` myType の値を返します。  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
@@ -119,7 +120,7 @@ ms.locfileid: "68038917"
   
 2.  式で指定された関数と型名を解決します。  
   
-3.  クエリの静的な型指定。 これにより、クエリがタイプ セーフであることを確認できます。 たとえば、次のクエリは静的エラーを返します。演算子**+** には数値のプリミティブ型引数が必要であるためです。  
+3.  クエリの静的な型指定。 これにより、クエリがタイプ セーフであることを確認できます。 たとえば、次のクエリは静的エラーを返し **+** ます。演算子には数値のプリミティブ型引数が必要であるためです。  
   
     ```  
     declare @x xml  
@@ -127,7 +128,7 @@ ms.locfileid: "68038917"
     SELECT @x.query('"x" + 4')  
     ```  
   
-     次の例では、 **value ()** 演算子にシングルトンが必要です。 XML スキーマで指定されているように、 \<複数の Elem> 要素を持つことができます。 式の静的な分析によって、型が安全でないと判断され、静的エラーが返されます。 エラーを解決するには、単一の結果になることを明示的に指定するように (`data(/x:Elem)[1]`)、式を書き直す必要があります。  
+     次の例では、 **value ()** 演算子にシングルトンが必要です。 XML スキーマで指定されているように、複数の要素が存在する場合があり \<Elem> ます。 式の静的な分析によって、型が安全でないと判断され、静的エラーが返されます。 エラーを解決するには、単一の結果になることを明示的に指定するように (`data(/x:Elem)[1]`)、式を書き直す必要があります。  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  

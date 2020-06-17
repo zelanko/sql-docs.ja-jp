@@ -1,5 +1,6 @@
 ---
 title: position 関数 (XQuery) |Microsoft Docs
+description: 項目のシーケンス内のコンテキスト項目の位置を示す整数値を返す XQuery 関数の位置 () について説明します。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45dffc809f223f9b18cd1dae1c5b951d5a8f1463
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038982"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881934"
 ---
 # <a name="context-functions---position-xquery"></a>コンテキスト関数 - position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +36,13 @@ fn:position() as xs:integer
 ```  
   
 ## <a name="remarks"></a>Remarks  
- で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、 **fn: position ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([]) 内でのみ使用できます。この関数と比較しても、静的な型の推論時にカーディナリティが減少することはありません。  
+ では [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、 **fn: position ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([]) 内でのみ使用できます。この関数と比較しても、静的な型の推論時にカーディナリティが減少することはありません。  
   
-## <a name="examples"></a>使用例  
- このトピックでは、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
+## <a name="examples"></a>例  
+ このトピックでは、データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Position () XQuery 関数を使用した最初の2つの製品機能の取得  
- 次のクエリでは、製品モデルカタログの説明から、最初の2つ`Features`の機能、<> 要素の最初の2つの子要素を取得します。 その他の機能がある場合は、<`there-is-more/`> 要素を結果に追加します。  
+ 次のクエリでは、製品モデルカタログの説明から、最初の2つの機能、<> 要素の最初の2つの子要素を取得し `Features` ます。 その他の機能がある場合は、<`there-is-more/`> 要素を結果に追加します。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -69,11 +70,11 @@ WHERE CatalogDescription is not null
   
 -   [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)内の**namespace**キーワードは、クエリ本文で使用される名前空間プレフィックスを定義します。  
   
--   クエリ本文は、 **Productmodelid**属性\<と**ProductModelName**属性を持つ product> 要素を持つ XML を構築し、子要素として返される製品機能を持ちます。  
+-   クエリ本文は、 \<Product> **Productmodelid**属性と**ProductModelName**属性を持つ要素を持ち、子要素として返される製品機能を持つ XML を構築します。  
   
--   **Position ()** 関数は、コンテキストでの\<機能> 子要素の位置を決定するために、述語で使用されます。 最初または2番目の機能の場合は、それが返されます。  
+-   **Position ()** 関数は、コンテキスト内での子要素の位置を決定するために、述語で使用され \<Features> ます。 最初または2番目の機能の場合は、それが返されます。  
   
--   製品カタログに3つ\<以上の機能がある場合、if ステートメントによって、その結果には、more/> 要素が追加されます。  
+-   IF ステートメントは、 \<there-is-more/> 製品カタログに3つ以上の機能がある場合に、結果に要素を追加します。  
   
 -   カタログの記述がテーブルに保持されていない製品モデルもあるので、WHERE 句を使用して CatalogDescriptions が NULL の行を破棄しています。  
   

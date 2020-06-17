@@ -1,5 +1,6 @@
 ---
 title: 順序指定された式と順序指定されていない式 (XQuery) |Microsoft Docs
+description: XQuery の順序付けされた式と順序なしの式について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4538b78cb64a5017230f0a879f5bf20a02df0341
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 995e2072be85128ab58b85213c255ee35c042d5b
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946512"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886857"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>順序付けられた式と順序付けられていない式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  既定では、の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]すべての操作の順序付けモードは**順序付け**されています。 したがって、パス式および FLWOR 式によって返されるノードシーケンスは、 **order by**句を使用せずにドキュメント順になります。  
+  既定では、のすべての操作の順序付けモード [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は**順序付け**されています。 したがって、パス式および FLWOR 式によって返されるノードシーケンスは、 **order by**句を使用せずにドキュメント順になります。  
   
  XQuery 仕様で説明されている追加の**順序付き**構文と**順序**付けられていない構文はサポートされていません。  
   

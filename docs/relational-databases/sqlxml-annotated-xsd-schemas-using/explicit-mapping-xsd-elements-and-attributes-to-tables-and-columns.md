@@ -1,5 +1,6 @@
 ---
 title: テーブルまたは列へのカスタム XSD マッピング (SQLXML)
+description: XSD スキーマの要素と属性、およびリレーショナルデータベースのテーブルと列の間で、SQLXML XPath クエリにカスタムマッピングを作成する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -29,12 +30,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fafcd918dda0001c316fd68cae3b19e6cd805a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e4d7e4c58234ff5db68cdf51265100b88df5cef
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257429"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885605"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>テーブルまたは列へのカスタム XSD マッピング (SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "75257429"
   
  要素に**sql: relation**が指定されている場合、この注釈のスコープは、その要素の複合型定義に記述されているすべての属性と子要素に適用されるため、注釈を記述するショートカットが提供されます。  
   
- **Sql: relation**注釈は、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有効な識別子が XML で有効でない場合にも役立ちます。 たとえば、"Order Details" は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では有効なテーブル名ですが、XML では無効です。 このような場合、 **sql: relation**注釈を使用してマッピングを指定できます。次に例を示します。  
+ **Sql: relation**注釈は、で有効な識別子 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が XML で有効でない場合にも役立ちます。 たとえば、"Order Details" は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では有効なテーブル名ですが、XML では無効です。 このような場合、 **sql: relation**注釈を使用してマッピングを指定できます。次に例を示します。  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -56,13 +57,13 @@ ms.locfileid: "75257429"
 ## <a name="sql-field"></a>sql-field  
  **Sql フィールド**の注釈は、要素または属性をデータベース列にマップします。 スキーマ内の XML ノードをデータベース列にマップするために、 **sql: field**注釈が追加されました。 空のコンテンツ要素に**sql: field**を指定することはできません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. sql:relation 注釈と sql:field 注釈を指定する  
- この例では、XSD スキーマは、 ** \<FName>** と** \<LName>** 子要素および**ContactID**属性を持つ複合型の** \<Contact>** 要素で構成されています。  
+ この例では、XSD スキーマは、 **\<Contact>** および子要素と ContactID 属性を持つ複合型の要素で構成されて **\<FName>** **\<LName>** います。 **ContactID**  
   
- **Sql: relation**注釈によっ** \<て、contact>** 要素が AdventureWorks データベースの Person. contact テーブルにマップされます。 **Sql: field**注釈は、 ** \<FName>** 要素を FirstName 列に、 ** \<LName>** 要素を LastName 列にマップします。  
+ **Sql: relation**注釈によって、 **\<Contact>** 要素が AdventureWorks データベースの Person. Contact テーブルにマップされます。 **Sql: field**注釈は、 **\<FName>** 要素を FirstName 列に、要素を **\<LName>** LastName 列にマップします。  
   
  **ContactID**属性に注釈が指定されていません。 このため、既定のマッピングが使用され、属性が同じ名前の列にマップされます。  
   

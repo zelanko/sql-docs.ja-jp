@@ -1,5 +1,6 @@
 ---
 title: data 関数 (XQuery) |Microsoft Docs
+description: XQuery 関数の data () を使用して、指定した項目のシーケンス内の各項目に対して型指定された値を返す方法について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac340466d1d816139249e4b007c7b2bc733dd390
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038971"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881876"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>データ アクセサー関数 - data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +76,7 @@ set @x = ''
 select @x.query('data(<SomeNode>value</SomeNode>)')  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. data() XQuery 関数によるノードの型指定された値の抽出  
@@ -125,7 +126,7 @@ WHERE ProductModelID = 19
   
  次の例は、 **data ()** 関数が必要なインスタンスを示しています。  
   
- 次のクエリでは、 **$pd/p1: 仕様/マテリアル**が <`Material`> 要素を返します。 また、**データ ($pd/p1: 仕様/マテリアル)** は、xdt: untypedAtomic として型指定さ`Material`れた文字データを返します。これは、<> が型指定されていないためです。 入力が型指定されていない場合、 **data ()** の結果は**Xdt: untypedAtomic**として型指定されます。  
+ 次のクエリでは、 **$pd/p1: 仕様/マテリアル**が <`Material`> 要素を返します。 また、**データ ($pd/p1: 仕様/マテリアル)** は、xdt: untypedAtomic として型指定された文字データを返し `Material` ます。これは、<> が型指定されていないためです。 入力が型指定されていない場合、 **data ()** の結果は**Xdt: untypedAtomic**として型指定されます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -149,7 +150,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- 次のクエリでは、**データ ($pd/p1: Features/wm: 保証)** は静的なエラーを`Warranty`返します。これは <> が複合型の要素であるためです。  
+ 次のクエリでは、**データ ($pd/p1: Features/wm: 保証)** は静的なエラーを返し `Warranty` ます。これは <> が複合型の要素であるためです。  
   
 ```  
 WITH XMLNAMESPACES (  

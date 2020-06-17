@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: db55e226-601a-4026-8651-573195555a59
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 634ad200cc8c46282eeb6146a8a590811e6d69a3
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 6709c8fb5a4e0eda8b973582ae51fe9458f6377a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84537374"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880294"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>多次元モデリング (Adventure Works チュートリアル)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のチュートリアルへようこそ。 このチュートリアルでは、架空の会社 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] の例を使用しながら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] プロジェクトの開発と配置を行う方法を説明します。  
@@ -61,7 +61,7 @@ ms.locfileid: "84537374"
 |[レッスン 10: 管理ロールの定義](lesson-10-defining-administrative-roles.md)|約 15 分|  
   
 > [!NOTE]  
->  このチュートリアルで作成するキューブ データベースは、CodePlex サイトでダウンロードできる Adventure Works サンプル データベースの一部である [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多次元モデル プロジェクトの簡易バージョンです。 Adventure Works 多次元データベースのチュートリアル バージョンは、すぐに習得することが望まれる特定のスキルを中心にして簡易化されています。 チュートリアルの終了後は、自分で多次元モデル プロジェクトを用意してさまざまな操作を行うと、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多次元モデリングの理解が深まります。  
+>  このチュートリアルで作成するキューブ データベースは、CodePlex サイトでダウンロードできる Adventure Works サンプル データベースの一部である [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多次元モデル プロジェクトの簡易バージョンです。 Adventure Works 多次元データベースのチュートリアルバージョンは、すぐに改善する必要がある特定のスキルを重視するために簡略化されています。 チュートリアルの終了後は、自分で多次元モデル プロジェクトを用意してさまざまな操作を行うと、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多次元モデリングの理解が深まります。  
   
 ## <a name="next-step"></a>次の手順  
  チュートリアルを開始するには、最初のレッスン「 [レッスン 1: Analysis Services プロジェクト内でのデータ ソース ビューの定義](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)」に進んでください。  

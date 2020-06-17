@@ -20,12 +20,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7b9cb03b97660bedc9c8e86cc72ae2bf9ebdd56d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4b141520b21902c4dadb26a3ac013b1ee334928
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832732"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818217"
 ---
 # <a name="sysservers-transact-sql"></a>sys. servers (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -59,6 +59,7 @@ ms.locfileid: "82832732"
 |**is_nonsql_subscriber**|**bit**|サーバーは SQL Server 以外のレプリケーション サブスクライバーです。|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|1の場合、リモートストアドプロシージャを呼び出すと分散トランザクションが開始され、トランザクションは MS DTC に参加します。 詳細については、「 [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)からデータにアクセスする方法について説明します。|  
 |**modify_date**|**datetime**|サーバー情報が前回変更された日付です。|  
+|**is_rda_server**|**bit**|サーバーはリモートデータアーカイブの有効化 (stretch 対応) です。 詳細については、「 [Enable Stretch Database on the server](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer)」を参照してください。 SQL Server 2016 以降に適用されます。|
   
 ## <a name="permissions"></a>アクセス許可  
  **Provider_string**の値は、呼び出し元が ALTER ANY LINKED SERVER 権限を持っていない限り、常に NULL になります。  

@@ -1,5 +1,6 @@
 ---
 title: XPath クエリでの関係演算子の使用 (SQLXML)
+description: SQLXML 4.0 の XPath クエリで関係演算子を使用する方法について説明します。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1961cc90c303e789c4bfbb847cea5e0eb80049ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1d3f5b7832d15121cde56dd27e7cf9bf9e26704
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252550"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84883667"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での関係演算子の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "75252550"
 ## <a name="examples"></a>例  
   
 ### <a name="a-specify-relational-operator"></a>A. 関係演算子を指定する  
- この XPath クエリを実行すると、 ** \<Customer>** 要素の子要素が返されます。ここで、 **CustomerID**属性値が "1" で、すべての子** \<の Order>** 要素に** \<orderdetail>** 子と値が3より大きい**OrderQty**属性が含まれています。  
+ この XPath クエリで **\<Customer>** は、 **CustomerID**属性値が "1" で、 **\<Order>** 値が **\<OrderDetail>** 3 より大きい**OrderQty**属性を持つ子要素を含む要素の子要素が返されます。  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 角かっこで指定された述語は、 ** \<顧客>** 要素をフィルター処理します。 OrderQty 属性値が3を超える** \<orderdetail>** 孫が少なくとも1つある** \<顧客>** の要素のみが返されます。  
+ 角かっこで指定された述語は、要素をフィルター処理し **\<Customer>** ます。 **\<Customer>** OrderQty 属性値が3を超える孫を1つ以上含む要素のみ **\<OrderDetail>** が返されます。  
   
  **子**軸が既定値です。 そのため、クエリは次のように指定できます。  
   
@@ -81,7 +82,7 @@ ms.locfileid: "75252550"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. XPath クエリに関係演算子を指定し、論理関数を使用して結果を比較する  
- このクエリでは**SalesPersonID** 、 ** \<** SalesPersonID 属性値が270未満であるコンテキストノードのすべての注文>子要素が返されます。  
+ このクエリ **\<Order>** は、 **SalesPersonID**属性値が270未満であるコンテキストノードのすべての子要素を返します。  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -94,7 +95,7 @@ ms.locfileid: "75252550"
 ```  
   
 > [!NOTE]  
->  このクエリがテンプレートで指定されている場合、< 文字は XML ドキュメント内で特別な意味を持つため、< 文字はエンティティエンコードされている必要があります。 テンプレートで、を使用`<`して < 文字を指定します。  
+>  このクエリがテンプレートで指定されている場合、< 文字は XML ドキュメント内で特別な意味を持つため、< 文字はエンティティエンコードされている必要があります。 テンプレートで、を使用し `<` て < 文字を指定します。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   

@@ -1,5 +1,6 @@
 ---
 title: round 関数 (XQuery) |Microsoft Docs
+description: 指定された引数に最も近い小数部分を持たない数値を返す XQuery 関数 round () について説明します。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1927d6e483683699196cfc7e87928f27bf23446a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53686410ff6dc36af5cc50a0210e33e9a1fb6ad1
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946545"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881483"
 ---
 # <a name="numeric-values-functions---round"></a>数値関数 - round
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ fn:round ( $arg as numeric?) as numeric?
   
  その他の型のデータが入力されると、静的エラーが生成されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
  **Round ()** xquery 関数には、[天井関数 (xquery)](../xquery/numeric-values-functions-ceiling.md)の working サンプルを使用できます。 クエリの**切り上げ ()** 関数を**round ()** 関数に置き換えるだけで済みます。  

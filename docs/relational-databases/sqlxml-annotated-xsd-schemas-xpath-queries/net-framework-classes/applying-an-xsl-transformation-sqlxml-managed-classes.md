@@ -1,5 +1,6 @@
 ---
 title: XSL 変換の適用 (SQLXML)
+description: SQLXML マネージクラスの SqlXmlCommand オブジェクトの XslPath プロパティを使用して、XSL 変換を適用する SQL クエリの例を表示します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48a42ec1b450d5a093cc5af0719e26358ef5e8d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 83195bfb2e06efe5e5c0b1c4fb6105091283e23e
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251507"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84884940"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>XSL 変換の適用 (SQLXML マネージド クラス)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

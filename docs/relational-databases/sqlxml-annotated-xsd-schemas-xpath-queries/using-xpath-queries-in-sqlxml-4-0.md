@@ -1,5 +1,6 @@
 ---
 title: SQLXML 4.0 での XPath クエリの使用
+description: SQLXML 4.0 で XPath クエリを使用して、注釈付き XSD スキーマによって作成された XML ビューに対してクエリを実行する方法について説明します。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,19 +17,19 @@ ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fcfafc014fe9a9b494c79c879caa7d272fbc7903
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4aee9624b2ca23e6a50839b49dd3825d06785003
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247100"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882153"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>SQLXML 4.0 での XPath クエリの使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では注釈付き XSD スキーマがサポートされており、データベースに格納されているリレーショナル データの XML ビューを作成できます。 XPath 言語のサブセットを使用すると、注釈付き XSD スキーマで作成された XML ビューに対してクエリを実行できます。  
   
 > [!NOTE]  
->  SQLXML 4.0 の XPath クエリを理解するには、XML ビューと、それに関連するテンプレートやマッピング スキーマなどの概念について理解している必要があります。 詳細については、「[注釈付き XSD スキーマの概要 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)」を参照してください。 XPath の詳細については、「」の World Wide Web コンソーシアム (W3C) で定義さhttp://www.w3.org/TR/xpathれている xpath 標準を参照してください。  
+>  SQLXML 4.0 の XPath クエリを理解するには、XML ビューと、それに関連するテンプレートやマッピング スキーマなどの概念について理解している必要があります。 詳細については、「[注釈付き XSD スキーマの概要 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)」を参照してください。 XPath の詳細については、「」の World Wide Web コンソーシアム (W3C) で定義されている XPath 標準を参照してください http://www.w3.org/TR/xpath 。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [XPath クエリの使用の概要 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)  

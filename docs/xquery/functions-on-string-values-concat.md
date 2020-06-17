@@ -1,5 +1,6 @@
 ---
 title: concat 関数 (XQuery) |Microsoft Docs
+description: 引数として指定された0個以上の文字列を連結することによって作成された文字列を返す XQuery 関数 concat () について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d3762f419789732406564606ad7a3b990e30fd
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099830"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881816"
 ---
 # <a name="functions-on-string-values---concat"></a>文字列値に使用する関数 - concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +47,11 @@ fn:concat ($string as xs:string?
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
  XQuery 関数のサロゲートペアの動作は、データベースの互換性レベルと、場合によっては、関数の既定の名前空間 URI に依存します。 詳細については、「 [SQL Server 2016 のデータベースエンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」の「XQuery 関数はサロゲート対応」を参照してください。 「 [ALTER DATABASE Compatibility Level &#40;transact-sql&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 」と「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」も参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このトピックでは、AdventureWorks サンプルデータベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. concat() XQuery 関数を使用した文字列の連結  
- このクエリは、特定の製品モデルについて、保証期間と保証の説明を連結して作成された文字列を返します。 カタログの説明ドキュメントでは、<`Warranty`> 要素は <`WarrantyPeriod`> で構成され、 `Description` <子要素も> ます。  
+ このクエリは、特定の製品モデルについて、保証期間と保証の説明を連結して作成された文字列を返します。 カタログの説明ドキュメントでは、<`Warranty`> 要素は <> で構成され、<`WarrantyPeriod` `Description` 子要素も> ます。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -83,7 +84,7 @@ WHERE  PD.ProductModelID=28
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
 ```  
   
- 前のクエリでは、特定の製品の情報を取得します。 次のクエリは、XML のカタログの説明が保存されているすべての製品について同じ情報を取得します。 **Xml**データ型の`ProductDescription` **exist ()** メソッドは、行の xml ドキュメントに <> 要素がある場合に True を返します。  
+ 前のクエリでは、特定の製品の情報を取得します。 次のクエリは、XML のカタログの説明が保存されているすべての製品について同じ情報を取得します。 **Xml**データ型の**exist ()** メソッドは、行の xml ドキュメントに <> 要素がある場合に True を返し `ProductDescription` ます。  
   
 ```  
 WITH XMLNAMESPACES (  

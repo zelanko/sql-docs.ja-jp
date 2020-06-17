@@ -1,5 +1,6 @@
 ---
 title: クライアント側とサーバー側の XML 書式設定 (SQLXML)
+description: SQLXML 4.0 でのクライアント側とサーバー側の XML 書式設定の一般的な違いについて説明します。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 421c48590098f9dbf4ce075c213fcd1cda720649
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34eb3a31a9b2affc473338cb730dddeee2f87904
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247010"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882897"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>クライアント側とサーバー側の XML 書式設定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   ここでは、SQLXML における、クライアント側とサーバー側の XML 書式設定の一般的な違いについて説明します。  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>クライアント側の書式設定では複数の行セット クエリがサポートされない  
- 複数の行セットを生成するクエリは、クライアント側の XML 書式設定を使用するときにはサポートされません。 たとえば、クライアント側の書式設定が指定されている仮想ディレクトリがあるとし、 このサンプルテンプレートを考えてみましょう。このテンプレートには、 ** \<sql: query>** block に2つの SELECT ステートメントがあります。  
+ 複数の行セットを生成するクエリは、クライアント側の XML 書式設定を使用するときにはサポートされません。 たとえば、クライアント側の書式設定が指定されている仮想ディレクトリがあるとし、 次のサンプルテンプレートを考えてみましょう。このテンプレートには、ブロックに2つの SELECT ステートメントがあり **\<sql:query>** ます。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -42,12 +43,12 @@ ms.locfileid: "75247010"
 </ROOT>  
 ```  
   
- このテンプレートはアプリケーション コードで実行できます。実行すると、クライアント側の XML 書式設定では複数の行セットの書式設定がサポートされていないため、エラーが返されます。 2つの個別** \<の sql: query>** ブロックでクエリを指定した場合は、目的の結果が得られます。  
+ このテンプレートはアプリケーション コードで実行できます。実行すると、クライアント側の XML 書式設定では複数の行セットの書式設定がサポートされていないため、エラーが返されます。 2つの個別のブロックでクエリを指定した場合は、 **\<sql:query>** 目的の結果が得られます。  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>クライアント側とサーバー側の XML 書式設定では timestamp 型のマッピングが異なる  
  サーバー側の XML 書式設定では、 **timestamp**型のデータベース列は i8 XDR 型にマップされます (XMLDATA オプションがクエリで指定されている場合)。  
   
- クライアント側の XML 書式設定では、 **timestamp**型のデータベース列は**uri**または**bin. base64** XDR 型にマップされます (クエリで binary base64 オプションが指定されているかどうかによって異なります)。 この型は[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **timestamp**型に変換されるため、アップデートグラムと bulkload 機能を使用する場合は、 **.bin** XDR 型が役立ちます。 この方法で、挿入、更新、または削除操作が成功します。  
+ クライアント側の XML 書式設定では、 **timestamp**型のデータベース列は**uri**または**bin. base64** XDR 型にマップされます (クエリで binary base64 オプションが指定されているかどうかによって異なります)。 この型は timestamp 型に変換されるため、アップデートグラムと bulkload 機能を使用する場合は、 **.Bin** XDR 型が役立ち [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **timestamp**ます。 この方法で、挿入、更新、または削除操作が成功します。  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>サーバー側の書式設定ではサブタイプの VARIANT 型も使用される  
  サーバー側の XML 書式設定では、サブタイプの VARIANT 型も使用されます。 クライアント側の XML 書式設定を使用する場合、variant は Unicode 文字列に変換され、サブタイプの VARIANT は使用されません。  

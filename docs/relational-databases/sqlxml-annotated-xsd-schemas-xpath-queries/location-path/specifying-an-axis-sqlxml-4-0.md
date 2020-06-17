@@ -1,5 +1,6 @@
 ---
 title: 軸の指定 (SQLXML)
+description: SQLXML 4.0 XPath クエリで軸を指定する方法について説明します。これにより、location ステップで選択したノードとコンテキストノードの間のツリーリレーションシップが指定されます。
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43daf972eacd67dcd7e75eabd1aca87bb3f67932
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253063"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882185"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>軸の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "75253063"
   
      コンテキスト ノードの子を含みます。  
   
-     次の XPath 式 (ロケーションパス) は、現在のコンテキストノードからすべての** \<顧客>** 子を選択します。  
+     次の XPath 式 (ロケーションパス) では、現在のコンテキストノードからすべての子が選択され **\<Customer>** ます。  
   
     ```  
     child::Customer  
@@ -43,11 +44,11 @@ ms.locfileid: "75253063"
   
      この XPath クエリでは、`child` は軸で、 `Customer` はノード テストです。  
   
--   **parent**  
+-   **所属**  
   
      コンテキスト ノードの親を含みます。  
   
-     次の XPath 式では、すべての** \<顧客>** 子** \<>順序**の親を選択します。  
+     次の XPath 式は、子のすべての親を選択し **\<Customer>** **\<Order>** ます。  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -55,7 +56,7 @@ ms.locfileid: "75253063"
   
      これは、`child::Customer` を指定した場合と同じです。 この XPath クエリでは、`child` と `parent` は軸で、 `Customer` と `Order` はノード テストです。  
   
--   **属性**  
+-   **attribute**  
   
      コンテキスト ノードの属性を含みます。  
   
@@ -69,7 +70,7 @@ ms.locfileid: "75253063"
   
      コンテキスト ノードそのものを含みます。  
   
-     次の XPath 式は、現在のノードが** \<Order>** ノードである場合、そのノードを選択します。  
+     次の XPath 式は、ノードの場合、現在のノードを選択し **\<Order>** ます。  
   
     ```  
     self::Order  

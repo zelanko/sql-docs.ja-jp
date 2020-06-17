@@ -1,5 +1,6 @@
 ---
 title: number 関数 (XQuery) |Microsoft Docs
+description: 指定された引数の数値を返す XQuery 関数の数値 () について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19e94b01667d666a714db22d85d866b0df2ec3fc
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930115"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881846"
 ---
 # <a name="functions-on-nodes---number"></a>ノードの関数 - number
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ select @x.query('/ROOT[number()=111]')
   
  ノードの値が、 **XML スキーマパート 2: データ型、W3C 勧告**で定義されているように、数値単純型の有効な字句表現でない場合、関数は空のシーケンスを返します。 NaN はサポートされません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>A. Number () XQuery 関数を使用して属性の数値を取得する  

@@ -1,5 +1,6 @@
 ---
 title: SequenceType 式 (XQuery) |Microsoft Docs
+description: の XQuery SequenceType 式のインスタンスについて説明し、としてキャストします。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 78cc79444a37216014e2eb99852c1cbeee7f4a93
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946283"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886074"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery では、値は常にシーケンスです。 値の型は、シーケンス型と呼ばれます。 このシーケンス型は、XQuery 式**のインスタンス**で使用できます。 XQuery 式で型を参照する必要があるときは、XQuery 仕様に記載されている SequenceType 構文を使用します。  
   
- アトミック型の名前は、 **cast としてキャスト式として**使用することもできます。 で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、**のインスタンス**と、sequencetypes の XQuery 式**としてのキャスト**は部分的にサポートされています。  
+ アトミック型の名前は、 **cast としてキャスト式として**使用することもできます。 では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **のインスタンス**と、sequencetypes の XQuery 式**としてのキャスト**は部分的にサポートされています。  
   
 ## <a name="instance-of-operator"></a>演算子のインスタンス  
  **のインスタンス**演算子を使用すると、指定された式の値の動的な型または実行時の型を判断できます。 次に例を示します。  
@@ -39,16 +40,16 @@ ms.locfileid: "67946283"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- `instance of`演算子、は`Occurrence indicator`、結果として得られるシーケンス内のカーディナリティ、項目数を指定することに注意してください。 このが指定されていない場合、カーディナリティは1と見なされます。 で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、疑問符 (**?)** オカレンスインジケーターのみがサポートされています。 **?** 出現インジケーターは、 `Expression`が0または1個の項目を返すことを示します。 **?** オカレンスインジケーターが指定さ`instance of`れている場合`Expression` 、がシングルトンまた`SequenceType`は空のシーケンス`Expression`を返すかどうかにかかわらず、型が指定されたと一致する場合は True を返します。  
+ 演算子、は、結果として `instance of` `Occurrence indicator` 得られるシーケンス内のカーディナリティ、項目数を指定することに注意してください。 このが指定されていない場合、カーディナリティは1と見なされます。 で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、疑問符 (**?)** オカレンスインジケーターのみがサポートされています。 **?** 出現インジケーターは、が `Expression` 0 または1個の項目を返すことを示します。 **?** オカレンスインジケーターが指定されている場合、が `instance of` `Expression` `SequenceType` シングルトンまたは空のシーケンスを返すかどうかにかかわらず、型が指定されたと一致する場合は True を返し `Expression` ます。  
   
- **?** オカレンスインジケーターが指定され`sequence of`ていません。 `Expression`型が`Type`指定され`Expression`たと一致する場合にのみ True を返し、シングルトンを返します。  
+ **?** オカレンスインジケーターが指定されていません `sequence of` 。型が指定されたと一致する場合にのみ True を返し、 `Expression` `Type` `Expression` シングルトンを返します。  
   
- **メモ**プラス記号 (**+**) とアスタリスク (**&#42;**) の出現インジケーターは、で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]はサポートされていません。  
+ **メモ**プラス記号 ( **+** ) とアスタリスク (**&#42;**) の出現インジケーターは、ではサポートされていません [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  次の例は、XQuery 演算子**のインスタンス**の使用方法を示しています。  
   
 ### <a name="example-a"></a>例 A  
- 次の例では、 **xml**型の変数を作成し、その変数に対してクエリを指定します。 クエリ式では、 `instance of`最初のオペランドによって返される値の動的な型が2番目のオペランドで指定された型と一致するかどうかを判断する演算子を指定します。  
+ 次の例では、 **xml**型の変数を作成し、その変数に対してクエリを指定します。 クエリ式では、 `instance of` 最初のオペランドによって返される値の動的な型が2番目のオペランドで指定された型と一致するかどうかを判断する演算子を指定します。  
   
  次のクエリは True を返します。125値は指定された型のインスタンス**xs: integer**です。  
   
@@ -77,7 +78,7 @@ select @x.query('/a[1]/@attr1 instance of attribute()')
 go  
 ```  
   
- 次の例では、式`data(/a[1]`は、xdt: untypedAtomic として型指定されたアトミック値を返します。 したがって、 `instance of`は True を返します。  
+ 次の例では、式は、 `data(/a[1]` xdt: untypedAtomic として型指定されたアトミック値を返します。 したがって、は `instance of` True を返します。  
   
 ```  
 declare @x xml  
@@ -86,7 +87,7 @@ select @x.query('data(/a[1]) instance of xdt:untypedAtomic')
 go  
 ```  
   
- 次のクエリでは、式`data(/a[1]/@attrA`は、型指定されていないアトミック値を返します。 したがって、 `instance of`は True を返します。  
+ 次のクエリでは、式は、型指定されて `data(/a[1]/@attrA` いないアトミック値を返します。 したがって、は `instance of` True を返します。  
   
 ```  
 declare @x xml  
@@ -98,7 +99,7 @@ go
 ### <a name="example-b"></a>例 B  
  この例では、AdventureWorks サンプルデータベース内の型指定された XML 列に対してクエリを実行します。 クエリ対象の列に関連付けられている XML スキーマコレクションでは、入力情報が提供されます。  
   
- 式では、 **data ()** は、列に関連付けられているスキーマに従って、型が xs: string である ProductModelID 属性の型指定された値を返します。 したがって、 `instance of`は True を返します。  
+ 式では、 **data ()** は、列に関連付けられているスキーマに従って、型が xs: string である ProductModelID 属性の型指定された値を返します。 したがって、は `instance of` True を返します。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -111,7 +112,7 @@ WHERE ProductModelID = 19
   
  詳細については、「 [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
- 次のクエリでは、 `instance of`ブール式を使うことで、locationid 属性が xs: integer 型であるかどうかを判断します。  
+ 次のクエリでは、ブール式を使うことで `instance of` 、LocationID 属性が xs: integer 型であるかどうかを判断します。  
   
 ```  
 SELECT Instructions.query('  
@@ -124,7 +125,7 @@ WHERE ProductModelID=7
   
  次のクエリは、CatalogDescription 型指定された XML 列に対して指定されています。 この列に関連付けられた XML スキーマ コレクションにより、型指定情報が提供されます。  
   
- このクエリでは`element(ElementName, ElementType?)` 、 `instance of`式のテストを使用して`/PD:ProductDescription[1]` 、が特定の名前と型の要素ノードを返すことを確認します。  
+ このクエリでは `element(ElementName, ElementType?)` 、式のテストを使用し `instance of` て、が `/PD:ProductDescription[1]` 特定の名前と型の要素ノードを返すことを確認します。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -163,7 +164,7 @@ CREATE XML SCHEMA COLLECTION MyTestSchema AS '
 Go  
 ```  
   
- 次のクエリでは、`instance of` 式に指定している SequenceType が、指定した式の実際の型の最上位の親ではないので  False が返されます。 つまり、<`TestElement`> の値は整数型です。 最上位の親は xs: decimal です。 しかし、この型が `instance of` 演算子の 2 つ目のオペランドとして指定されていません。  
+ 次のクエリでは、`instance of` 式に指定している SequenceType が、指定した式の実際の型の最上位の親ではないので  False が返されます。 つまり、<> の値 `TestElement` は整数型です。 最上位の親は xs: decimal です。 しかし、この型が `instance of` 演算子の 2 つ目のオペランドとして指定されていません。  
   
 ```  
 SET QUOTED_IDENTIFIER ON  
@@ -188,9 +189,9 @@ go
 ```  
   
 ### <a name="example-d"></a>例 D  
- この例では、まず XML スキーマコレクションを作成し、それを使用して**xml**変数を入力します。 次に、型指定された**xml**変数`instance of`を照会して、機能を説明します。  
+ この例では、まず XML スキーマコレクションを作成し、それを使用して**xml**変数を入力します。 次に、型指定された**xml**変数を照会して、機能を説明し `instance of` ます。  
   
- 次の XML スキーマコレクションは、単純型、myType、および myType 型の要素`root` <> を定義します。  
+ 次の XML スキーマコレクションは、単純型、myType、および `root` myType 型の要素 <> を定義します。  
   
 ```  
 drop xml schema collection SC  
@@ -220,7 +221,7 @@ declare namespace ns="myNS";
 go  
 ```  
   
- MyType 型は、sqltypes スキーマで定義されている varchar 型からの制限に`instance of`よって派生するため、も True を返します。  
+ MyType 型は、sqltypes スキーマで定義されている varchar 型からの制限によって派生するため、 `instance of` も True を返します。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -238,7 +239,7 @@ go
   
 -   型指定された**xml**変数を作成し、その変数にサンプル xml インスタンスを割り当てます。  
   
--   変数に対してクエリを指定します。 クエリ式は、最初の <`Customer`> の orderlist IDRERS 型属性から最初の注文 ID 値を取得します。 取得される値は IDREF 型です。 したがって`instance of` 、は True を返します。  
+-   変数に対してクエリを指定します。 クエリ式は、最初の <> の OrderList IDRERS 型属性から最初の注文 ID 値を取得し `Customer` ます。 取得される値は IDREF 型です。 したがって、は `instance of` True を返します。  
   
 ```  
 create xml schema collection SC as  
@@ -308,19 +309,19 @@ select @x.query(' declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項は次のとおりです。  
   
--   **スキーマ要素 ()** および**スキーマ属性 ()** のシーケンス型は、 `instance of`演算子との比較ではサポートされていません。  
+-   **スキーマ要素 ()** および**スキーマ属性 ()** のシーケンス型は、演算子との比較ではサポートされていません `instance of` 。  
   
--   たとえば`(1,2) instance of xs:integer*`、完全なシーケンスはサポートされていません。  
+-   たとえば、完全なシーケンス `(1,2) instance of xs:integer*` はサポートされていません。  
   
--   などの型名`element(ElementName, TypeName)`を指定する**要素 ()** シーケンス型の形式を使用する場合、型は疑問符 (?) で修飾する必要があります。 たとえば、`element(Title, xs:string?)` は要素が NULL であることを示します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]では、を使用`instance of`した**xsi: nil**プロパティの実行時検出はサポートされていません。  
+-   などの型名を指定する**要素 ()** シーケンス型の形式を使用する場合、 `element(ElementName, TypeName)` 型は疑問符 (?) で修飾する必要があります。 たとえば、`element(Title, xs:string?)` は要素が NULL であることを示します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]では、を使用した**xsi: nil**プロパティの実行時検出はサポートされていません `instance of` 。  
   
--   `Expression` の値が共用体型として型指定された要素または属性の値である場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、派生された型ではなく、値の型の派生元のプリミティブ型しか識別できません。 たとえば、静的な`e1`型 (xs: integer | xs: string) を持つように <> が定義されている場合、次のコードは False を返します。  
+-   `Expression` の値が共用体型として型指定された要素または属性の値である場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、派生された型ではなく、値の型の派生元のプリミティブ型しか識別できません。 たとえば、 `e1` 静的な型 (xs: integer | xs: string) を持つように <> が定義されている場合、次のコードは False を返します。  
   
     ```  
     data(<e1>123</e1>) instance of xs:integer  
     ```  
   
-     ただし、 `data(<e1>123</e1>) instance of xs:decimal`は True を返します。  
+     ただし、 `data(<e1>123</e1>) instance of xs:decimal` は True を返します。  
   
 -   **処理命令 ()** と**ドキュメントノード ()** のシーケンス型では、引数のないフォームのみが許可されます。 たとえば、`processing-instruction()` は使用できますが、`processing-instruction('abc')` は使用できません。  
   
@@ -332,7 +333,7 @@ select @x.query(' declare namespace CustOrders="Customers";
 Expression cast as  AtomicType?  
 ```  
   
- で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、の`AtomicType`後に疑問符 (?) が必要です。 たとえば、次のクエリに示すように、 `"2" cast as xs:integer?`は文字列値を整数に変換します。  
+ では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の後に疑問符 (?) が必要です `AtomicType` 。 たとえば、次のクエリに示すように、は `"2" cast as xs:integer?` 文字列値を整数に変換します。  
   
 ```  
 declare @x xml  
@@ -340,7 +341,7 @@ set @x=''
 select @x.query('"2" cast as xs:integer?')  
 ```  
   
- 次のクエリでは、 **data ()** は、ProductModelID 属性の型指定された値 (文字列型) を返します。 演算子`cast as`は、値を xs: integer に変換します。  
+ 次のクエリでは、 **data ()** は、ProductModelID 属性の型指定された値 (文字列型) を返します。 `cast as`演算子は、値を xs: integer に変換します。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -351,10 +352,10 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- このクエリでは、**データ ()** を明示的に使用する必要はありません。 式`cast as`は、入力式に対して暗黙的なアトミック化を実行します。  
+ このクエリでは、**データ ()** を明示的に使用する必要はありません。 `cast as`式は、入力式に対して暗黙的なアトミック化を実行します。  
   
 ### <a name="constructor-functions"></a>コンストラクター関数  
- Atomic 型コンストラクター関数を使用できます。 たとえば、 `cast as`演算子`"2" cast as xs:integer?`を使用する代わりに、次の例に示すように、 **xs: integer ()** コンストラクター関数を使用できます。  
+ Atomic 型コンストラクター関数を使用できます。 たとえば、演算子を使用する代わりに、 `cast as` `"2" cast as xs:integer?` 次の例に示すように、 **xs: integer ()** コンストラクター関数を使用できます。  
   
 ```  
 declare @x xml  

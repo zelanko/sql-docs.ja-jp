@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dcaf10a680540a533e539783a1fc9ed289998a40
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c12d6650023fcb3473a834d8145437d8a013df5e
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151979"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818134"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,6 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
     [ , [ @owner_login_name = ] 'owner_login_name' ]  
     [ , [ @schedule_uid = ] schedule_uid OUTPUT ]  
     [ , [ @schedule_id = ] schedule_id OUTPUT ]
-    [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
     [ , [ @originating_server = ] server_name ] /* internal */  
 ```  
   
@@ -61,12 +60,12 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_type = ] freq_type`ジョブがいつ実行されるかを示す値です。 *freq_type*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**4**|毎日|  
 |**8**|週次|  
-|**まで**|月 1 回|  
+|**16**|月単位|  
 |**32**|毎月 ( *freq_interval*を基準)|  
 |**64**|SQL エージェントサービスの開始時に実行する|  
 |**128**|コンピューターがアイドル状態のときに実行する ( [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)ではサポートされていません) |  
@@ -85,7 +84,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_subday_type = ] freq_subday_type`*Freq_subday_interval*の単位を指定します。 *freq_subday_type*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。  
   
-|[値]|説明 (単位)|  
+|値|説明 (単位)|  
 |-----------|--------------------------|  
 |**0x1**|指定された時間|  
 |**0x2**|Seconds|  
@@ -96,13 +95,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_relative_interval = ] freq_relative_interval`*Freq_interval*が 32 (月単位) の場合、各月における*freq_interval*のジョブの発生回数。 *freq_relative_interval*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。 *freq_type*が32と等しくない場合、 *freq_relative_interval*は無視されます。  
   
-|[値]|説明 (単位)|  
+|値|説明 (単位)|  
 |-----------|--------------------------|  
 |**1**|First|  
 |**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|末尾|  
+|**16**|末尾|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`ジョブのスケジュールされた実行の間隔を週または月単位で指定します。 *freq_recurrence_factor*は*freq_type*が**8**、 **16**、または**32**の場合にのみ使用されます。 *freq_recurrence_factor*は**int**,、既定値は**0**です。  
   

@@ -1,5 +1,6 @@
 ---
 title: ADO を使用した、SQLXML 4.0 クエリの実行
+description: SQLXML extensions for ActiveX データオブジェクト (ADO) を使用して、COM ベースのアプリケーションで SQLXML 4.0 クエリを実行する方法について説明します。
 ms.custom: ''
 ms.date: 12/15/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 436ec564e4cf5de21647eb5cd667741ce246e99d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e0a26c534aeb25bd445deb087bef06a2137bfa3
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75254141"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882104"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO を使用した、SQLXML 4.0 クエリの実行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,9 +122,9 @@ ms.locfileid: "75254141"
     3.  現在インストールされているプログラムの一覧で、[ **Microsoft SQL Server Native Client** ] が一覧に表示されていることを確認します。  
   
         > [!NOTE]  
-        >  Native Client をインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する必要がある場合は、「SQL Server Native Client の[インストール](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)」を参照してください。  
+        >  Native Client をインストールする必要がある場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「 [SQL Server Native Client のインストール](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)」を参照してください。  
   
-2.  クライアント コンピューターにインストールされている MDAC のバージョンが 2.6 以降であることを確認します。 MDAC のバージョン情報を確認する必要がある場合は、MDAC コンポーネントチェッカーツールを使用できます。このツールは、Microsoft Web サイトから[http://www.microsoft.com](https://www.microsoft.com)無料でダウンロードできます。 詳細については、Microsoft の Web サイトで "MDAC Component Checker" を検索してください。  
+2.  クライアント コンピューターにインストールされている MDAC のバージョンが 2.6 以降であることを確認します。 MDAC のバージョン情報を確認する必要がある場合は、MDAC コンポーネントチェッカーツールを使用できます。このツールは、Microsoft Web サイトから無料でダウンロードでき [http://www.microsoft.com](https://www.microsoft.com) ます。 詳細については、Microsoft の Web サイトで "MDAC Component Checker" を検索してください。  
   
 3.  スクリプトを実行します。  
   

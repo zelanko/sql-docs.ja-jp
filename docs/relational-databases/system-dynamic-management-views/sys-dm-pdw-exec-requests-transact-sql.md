@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 982096893cdce9c4b604df9c3fb0258cefaaf93d
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: a3ee27ca4f92efb950c35ab0d8174676246c14b3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796523"
+ms.locfileid: "84818050"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>dm_pdw_exec_requests (Transact-sql)
 
@@ -34,7 +34,7 @@ ms.locfileid: "84796523"
 |start_time|**datetime**|要求の実行が開始された時刻。|キューに置かれた要求の場合は NULL です。それ以外の場合は、有効な**datetime**が現在の時刻以下であることを指定します。|  
 |end_compile_time|**datetime**|エンジンが要求のコンパイルを完了した時刻。|まだコンパイルされていない要求の場合は NULL です。それ以外の場合は、有効な**datetime**が start_time 未満で現在の時刻以下であることを指定します。|
 |end_time|**datetime**|要求の実行が完了、失敗、または取り消された時刻。|キューに置かれた要求またはアクティブな要求の場合は Null です。それ以外の場合は、有効な**datetime**が現在の時刻以下であることを指定します。|  
-|total_elapsed_time|**int**|要求が開始されてから経過した時間 (ミリ秒単位)。|0 ~ start_time と end_time の差。</br></br> Total_elapsed_time が整数の最大値を超えた場合、total_elapsed_time は引き続き最大値になります。 この条件により、"最大値を超えました。" という警告が生成されます。</br></br> ミリ秒単位の最大値は、24.8 日と同じです。|  
+|total_elapsed_time|**int**|要求が開始されてから経過した時間 (ミリ秒単位)。|0 ~ submit_time と end_time の差。</br></br> Total_elapsed_time が整数の最大値を超えた場合、total_elapsed_time は引き続き最大値になります。 この条件により、"最大値を超えました。" という警告が生成されます。</br></br> ミリ秒単位の最大値は、24.8 日と同じです。|  
 |label|**nvarchar(255)**|いくつかの SELECT クエリステートメントに関連付けられているオプションのラベル文字列。|' A-z '、' A-z '、' 0-9 '、' _ ' を含む任意の文字列。|  
 |error_id|**nvarchar (36)**|要求に関連付けられているエラーの一意の ID (存在する場合)。|「 [Sys. dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)」を参照してください。エラーが発生しなかった場合は、NULL に設定します。|  
 |database_id|**int**|明示的なコンテキストによって使用されるデータベースの識別子 (たとえば、DB_X を使用します)。|「 [Transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)の ID」を参照してください。|  
