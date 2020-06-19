@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0f5b96d22881f3ee42d0cba2fb79a911d77842c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85562f345a115d4c12a1ba1819ae189bab493afd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176372"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968922"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>非同期出力型のカスタム変換コンポーネントの開発
   非同期出力型変換コンポーネントは、変換が入力行をすべて受け取るまで行を出力できないようにする場合や、変換が入力として受信した各行に対して必ずしも 1 つずつ出力行を生成しない場合に使用します。 たとえば、集計変換では、行をすべて読み込むまではすべての行の合計を計算できません。 これに対し、同期出力型コンポーネントは、データが渡されるたびに各データ行を変更する場合に使用します。 各行のデータを順に変更したり、1 つまたは複数の列を新規作成して、各列にすべての入力行ごとの値を設定したりできます。 同期コンポーネントと非同期コンポーネントの相違点の詳細については、「[同期変換と非同期変換について](../understanding-synchronous-and-asynchronous-transformations.md)」を参照してください。

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a08d1354-cc91-4ab7-a73f-3ad815af3d5a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 617ceb4a94af69877ad2c79dd01f23ccd2dab799
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753954"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933793"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>SQL Server 2014 の非推奨の管理ツール機能
   このトピックでは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] でまだ使用できるものの、非推奨の管理ツール機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  

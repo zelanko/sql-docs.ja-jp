@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7362df13956e44b73d6984691e882bec2f39a1e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798222"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062225"
 ---
 # <a name="manage-job-steps"></a>ジョブ ステップの管理
   ジョブ ステップは、ジョブがデータベースまたはサーバーで行う処理です。 すべてのジョブには、最低 1 つのジョブ ステップを含める必要があります。 ジョブ ステップには次のような種類があります。  
@@ -101,7 +100,7 @@ ms.locfileid: "72798222"
   
 -   開く対象の既存の PowerShell スクリプト ファイル。  
   
- エージェント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の powershell サブシステムが powershell セッションを開き、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] powershell スナップインを読み込みます。ジョブステップコマンドとして使用される PowerShell スクリプトで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、powershell プロバイダーおよびコマンドレットを参照できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell スナップインを使用した PowerShell スクリプトの作成の詳細については、「 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントの powershell サブシステムが powershell セッションを開き、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] powershell スナップインを読み込みます。ジョブステップコマンドとして使用される PowerShell スクリプトでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] powershell プロバイダーおよびコマンドレットを参照できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell スナップインを使用した PowerShell スクリプトの作成の詳細については、「 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)」を参照してください。  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX スクリプティング ジョブ ステップ  
   
@@ -210,6 +209,6 @@ Set oServer = nothing
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップのログを削除する方法について説明します。|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>参照  
- [dbo. sysjobstepslogs &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [dbo.sysjobstepslogs &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [ジョブの作成](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

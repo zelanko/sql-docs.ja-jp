@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 27964211-ea30-4390-b791-dcf225fb9ae7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 414b26cf860ab32bb11beaa1ccbef3316c68f557
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba48ed2bd80961a4949dc13f04fed0637ecc27ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093369"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054675"
 ---
 # <a name="read-only-databases-cannot-be-upgraded"></a>読み取り専用データベースをアップグレードできない
   アップグレード アドバイザーによって、この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにある一部のデータベースをアップグレードできないことが判定されました。  
@@ -29,7 +28,7 @@ ms.locfileid: "66093369"
  読み取り専用データベースが検出されました。 データベースをアップグレードするには、セットアップ時にそのデータベースへの書き込みが可能である必要があります。  
   
 ## <a name="corrective-action"></a>修正措置  
- データベースを使用しているデータベースがない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、Enterprise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Manager、、または ALTER database ステートメントを使用して、データベースを読み取り/書き込み可能に変更します。 次のステートメントを使用すると、データベースが読み取り/書き込み可能に変更されます。  
+ データベースを使用しているデータベースがない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Manager、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 、または ALTER database ステートメントを使用して、データベースを読み取り/書き込み可能に変更します。 次のステートメントを使用すると、データベースが読み取り/書き込み可能に変更されます。  
   
 ```  
 USE master;  

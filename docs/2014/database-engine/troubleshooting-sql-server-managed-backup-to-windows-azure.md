@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: db55c753317f945a8156b671fa9cbcd72ce4c641
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: 9c7ed5dd25ed2b02445bfae5eb78ac03b2270552
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849600"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927953"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>Azure への SQL Server マネージド バックアップのトラブルシューティング
   このトピックでは、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の操作中に発生する可能性があるエラーのトラブルシューティングに使用できるツールとタスクについて説明します。  
@@ -102,7 +101,7 @@ ms.locfileid: "82849600"
 ### <a name="troubleshooting-system-issues"></a>システムに関する問題のトラブルシューティング  
  システム (SQL Server、SQL Server エージェント) で問題が発生した場合のシナリオと、その場合に [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]が受ける影響を次に示します。  
   
--   ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] が実行されている場合、sqlservr.exe は応答しなくなるか、動作しなく**なります。 SQL Server が動作を停止した場合、sql エージェントが正常にシャットダウンされ、 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] イベントが sql エージェントの出力ファイルに記録されます。  
+-   ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] が実行**されている場合、Sqlservr.exe は応答しなくなるか、動作を停止します。 SQL Server が動作を停止した場合、sql エージェントは正常にシャットダウンされます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] また、イベントが sql エージェントの出力ファイルに記録されます。  
   
      SQL Server が応答を停止した場合は、イベント ログが管理チャネルに記録されます。  イベント ログの例を次に示します。  
   

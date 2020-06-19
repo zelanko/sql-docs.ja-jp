@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: be0ea2ac-4a35-429c-9c9e-4001ea9035a4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a595df602a6506f96d9f645dadecb14c5d5f4b2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773498"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927385"
 ---
 # <a name="view-project-history"></a>プロジェクト履歴の表示
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe (VSS) プロジェクトの履歴には、ファイルの作成、追加、削除、復元など、各プロジェクト ファイルに対して実行したすべてのアクションの一覧が記録されています。  
@@ -36,7 +35,7 @@ ms.locfileid: "62773498"
   
 2.  [**ファイル**] メニューの [**ソース管理**] をポイントし、[**履歴の表示**] をクリックします。  
   
-3.  [プロジェクト>**の** \<履歴] ダイアログボックスで、次のいずれかの操作を実行します。  
+3.  [**履歴** \<Project> ] ダイアログボックスで、次のいずれかの操作を実行します。  
   
     -   選択したファイルの、ソース管理システムのコピーを表示します。  
   

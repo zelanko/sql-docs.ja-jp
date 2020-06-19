@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2b749a88a0783e6981cf9fd643412f0ca614e6a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c1618bb188a893ffb43eaae36f22ea17a615659
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969032"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (SSIS 式)
   指定された位置で始まり、かつ指定された長さを持つ文字式の一部を返します。 *position* パラメーターと *length* パラメーターは整数に評価される必要があります。  

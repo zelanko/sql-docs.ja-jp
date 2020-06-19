@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c953060e082ade1e325589cc712f723dabb4909d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8806486631ca65f67fb197dceef9149d66f655df
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175413"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928122"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクション
   ディスク ベース テーブルでの行のバージョン管理 (SNAPSHOT 分離または READ_COMMITTED_SNAPSHOT を使用) では、オプティミスティック コンカレンシーの形式を使用します。 リーダーとライターは相互にブロックしません。 メモリ最適化テーブルでは、ライターはライターをブロックしません。 ディスク ベース テーブルの行のバージョン管理では、あるトランザクションが行をロックすると、この行を更新しようとする同時実行トランザクションがブロックされます。 メモリ最適化テーブルの場合は、ロックは生じません。 その代わり、2 つのトランザクションで同じ行を更新しようとすると、書き込みと書き込みの競合 (エラー 41302) が発生することになります。
@@ -60,7 +59,7 @@ ms.locfileid: "78175413"
 
 ### <a name="error-conditions-for-transactions-accessing-memory-optimized-tables"></a>メモリ最適化テーブルにアクセスするトランザクションのエラー状態。
 
-|Error|シナリオ|
+|エラー|シナリオ|
 |-----------|--------------|
 |書き込みの競合。 トランザクションの開始以降に更新されたレコードを更新しようとしています。|同時実行トランザクションによって更新または削除された行を更新または削除します。|
 |REPEATABLE READ の検証の失敗。|トランザクションで読み取った行が、トランザクションの開始以降に変更 (更新または削除) されています。 REPEATABLE READ および SERIALIZABLE トランザクション分離レベルを使用する際には通常、REPEATABLE READ の検証が行われます。|

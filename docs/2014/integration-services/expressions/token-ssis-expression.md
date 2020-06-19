@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af82c187fce638ddd1f28ab98a5109898f7cad25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43381593b6a43f9e912088a67d5e10401ef3fc6c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768708"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969002"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS 式)
   文字列内のトークンを区切る指定された区切り記号、および返されるトークンを表すトークン数に基づいて、文字列からトークン (サブストリング) を返します。  
@@ -40,13 +39,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
  DT_WSTR  
   
 ## <a name="remarks"></a>解説  
- この関数は、<character_expression> 文字列を <delimiter_string> で指定された区切り記号で区切ったトークンのセットに分割した後、N 番目のトークンを返します。N は\<occurrence> パラメーターで指定されたトークンの発生回数です。 この関数のサンプルについては、「使用例」のセクションを参照してください。  
+ この関数は、<character_expression> 文字列を <の delimiter_string で指定された区切り記号で区切ったトークンのセットに分割してから n 番目のトークンを返します。 N は、パラメーターで指定されたトークンの発生回数 \<occurrence> です。 この関数のサンプルについては、「使用例」のセクションを参照してください。  
   
  TOKEN 関数には次の解説が適用されます。  
   
 -   区切り記号には 1 つ以上の区切り文字を含めることができます。  
   
--   \<occurrence> パラメーターの値が文字列内のトークンの合計数より大きい場合、この関数は NULL を返します。  
+-   パラメーターの値 \<occurrence> が文字列内のトークンの合計数よりも大きい場合、関数は NULL を返します。  
   
 -   先頭の区切り記号はスキップされます。  
   

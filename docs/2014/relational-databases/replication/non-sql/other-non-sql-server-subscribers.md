@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e6a01bfc16041db89ea6160c36af1a7536290ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021945"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068551"
 ---
 # <a name="other-non-sql-server-subscribers"></a>その他の SQL Server 以外のサブスクライバー
-  で[!INCLUDE[msCoName](../../../includes/msconame-md.md)]サポートされている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以外のサブスクライバーの一覧については、「 [SQL Server 以外のサブスクライバー](non-sql-server-subscribers.md)」を参照してください。 ここでは、ODBC ドライバーと OLE DB プロバイダーの要件について説明します。  
+  でサポートされている以外のサブスクライバーの一覧につい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ては、「 [SQL Server 以外のサブスクライバー](non-sql-server-subscribers.md)」を参照してください。 ここでは、ODBC ドライバーと OLE DB プロバイダーの要件について説明します。  
   
 ## <a name="odbc-driver-requirements"></a>ODBC ドライバーの要件  
  ODBC ドライバーは、以下の要件を満たす必要があります。  
@@ -89,7 +88,7 @@ ms.locfileid: "63021945"
   
 -   **ICommandWithParameters**  
   
- **IAccessor** は、パラメーター アクセサーを作成するために必要です。 プロバイダーが**IColumnRowset**をサポートし[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ている場合、はそのインターフェイスを使用して、列が id 列であるかどうかを判断します。  
+ **IAccessor** は、パラメーター アクセサーを作成するために必要です。 プロバイダーが**IColumnRowset**をサポートしている場合、は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] そのインターフェイスを使用して、列が id 列であるかどうかを判断します。  
   
 ### <a name="rowset-object-interfaces"></a>Rowset オブジェクト インターフェイス  
  以下のインターフェイスが必要です。  

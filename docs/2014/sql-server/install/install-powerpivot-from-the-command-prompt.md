@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c69caf370d454c708484a61576716c213663f3d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798331"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054699"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>コマンド プロンプトからの PowerPivot のインストール
   コマンド ラインからセットアップを実行して、SQL Server PowerPivot for SharePoint をインストールすることができます。 コマンドには `/ROLE` パラメーターを含め、`/FEATURES` パラメーターを除外する必要があります。  
@@ -41,7 +40,7 @@ ms.locfileid: "72798331"
  以前のリリースとは異なり、すべてのサーバー構成タスクはインストール後のタスクとして実行されます。 インストールと構成の手順を自動化している場合は、PowerShell を使用してサーバーを構成できます。 詳細については、「 [Windows PowerShell を使用した PowerPivot の構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)」を参照してください。  
   
 ## <a name="example-commands"></a>コマンドの例  
- 次の例では、各オプションの使用方法を示します。 例1は`SPI_AS_ExistingFarm`を示しています。  
+ 次の例では、各オプションの使用方法を示します。 例1は `SPI_AS_ExistingFarm` を示しています。  
   
 ```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -80,9 +79,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     /PID=<product key for an Enterprise installation>  
     ```  
   
-3.  Domain\username> と\<StrongPassword \<>のプレースホルダーを、有効なユーザーアカウントとパスワードに置き換えます。  
+3.  とのプレースホルダーを \<domain\username> 、 \<StrongPassword> 有効なユーザーアカウントとパスワードに置き換えます。  
   
-     `/assvaccount`および **/assvcpassword**パラメーターは、アプリケーションサーバーで[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]インスタンスを構成するために使用されます。 これらのプレースホルダーを有効なアカウント情報に置き換えます。  
+     `/assvaccount`および **/assvcpassword**パラメーターは、アプリケーションサーバーでインスタンスを構成するために使用され [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] ます。 これらのプレースホルダーを有効なアカウント情報に置き換えます。  
   
      **/Assysadminaccounts**パラメーターは、SQL Server セットアップを実行しているユーザーの id に設定する必要があります。 システム管理者を少なくとも 1 人指定する必要があります。 SQL Server セットアップでは、あらかじめ登録された Administrators グループのメンバーに対して sysadmin 権限が自動的に付与されなくなったことに注意してください。  
   

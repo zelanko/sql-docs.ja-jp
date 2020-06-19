@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15cea1ab511324cad52ed197f9f612bbedb2b162
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897466"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969172"
 ---
 # <a name="literals-ssis"></a>リテラル (SSIS)
   式には、数値、文字列、およびブール値のリテラルを含めることができます。 式エバリュエーターでは、整数、10 進数、浮動小数点定数など、さまざまな数値リテラルがサポートされます。 さらに、式エバリュエーターが値を処理する方法を指定する long 型および float 型サフィックスと、数値リテラルの科学的表記法がサポートされます。  
@@ -101,7 +100,7 @@ ms.locfileid: "62897466"
 |---------------------|-----------------|  
 |\a|アラート:|  
 |\b|バックスペース|  
-|\f|改ページ|  
+|\f|フォーム フィード|  
 |\n|改行|  
 |\r|キャリッジ リターン|  
 |\t|水平タブ|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a67ab14cbf756784f9e89112afb2893a157d6abd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f34e133e7aa7699f49660684cafce6c3a9e2fde
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176502"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917942"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   XML タスクの `ValidationDetails` プロパティを有効にして、XML ドキュメントを検証し、詳細なエラー出力を取得します。
@@ -27,12 +26,12 @@ ms.locfileid: "78176502"
 
  ![XML タスク エディターの XML タスク プロパティ](../media/xmltaskproperties.jpg "XML タスク エディターの XML タスク プロパティ")
 
- `ValidationDetails` プロパティが利用できるようになる前は、XML タスクによる XML 検証では、true や false のみの結果が返され、エラーやその場所に関する情報は返されませんでした。 これで、を true `ValidationDetails`に設定すると、出力ファイルには、行番号と位置を含むすべてのエラーに関する詳細情報が含まれるようになりました。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。
+ `ValidationDetails` プロパティが利用できるようになる前は、XML タスクによる XML 検証では、true や false のみの結果が返され、エラーやその場所に関する情報は返されませんでした。 これで、を true に設定すると、 `ValidationDetails` 出力ファイルには、行番号と位置を含むすべてのエラーに関する詳細情報が含まれるようになりました。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。
 
  この XML 検証機能は、大きなサイズの XML ドキュメントや大量のエラーにも、簡単に規模を変更して対応できます。 出力ファイル自体が XML 形式なので、出力に対するクエリの実行と分析が可能です。 たとえば、出力に大量のエラーが含まれている場合、このトピックで説明する方法で [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用して、エラーをグループ化することができます。
 
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) では`ValidationDetails` 、Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Pack 2 でプロパティが導入されました。 プロパティは[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 、および SQL Server 2016 でも使用できます。
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]( [!INCLUDE[ssIS](../../includes/ssis-md.md)] ) では、 `ValidationDetails` [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2 でプロパティが導入されました。 プロパティは [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 、および SQL Server 2016 でも使用できます。
 
 ## <a name="sample-output-for-xml-thats-valid"></a>有効な XML のサンプル出力
  有効な XML ファイルの検証結果が記載されたサンプル出力ファイルを次に示します。
@@ -54,7 +53,7 @@ ms.locfileid: "78176502"
 ```
 
 ## <a name="sample-output-for-xml-thats-not-valid"></a>無効な XML のサンプル出力
- 少数のエラーのある XML ファイルの検証結果が記載されたサンプル出力ファイルを次に示します。 \<error> 要素のテキストは、読みやすくするために折り返されています。
+ 少数のエラーのある XML ファイルの検証結果が記載されたサンプル出力ファイルを次に示します。 要素のテキストは、 \<error> 読みやすくするためにラップされています。
 
 ```xml
 

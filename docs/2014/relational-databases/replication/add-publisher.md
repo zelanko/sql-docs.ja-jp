@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f0401c06d79e7664ad4a06a2a92adcb52edfccb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068788"
 ---
 # <a name="sql-server-replication-add-publisher-dialog-box"></a>[パブリッシャーの追加] ダイアログボックス SQL Server レプリケーション 
   **[パブリッシャーの追加]** ダイアログ ボックスを使用すると、レプリケーション モニターの左ペインに 1 つまたは複数のパブリッシャーを追加できます。 パブリッシャーを追加した後、左ペインでパブリッシャーを選択すると、そのパブリッシャーに関する情報が右ペインに表示されます。  

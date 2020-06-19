@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e60fdb986e24c2fa682caaf56ad7209ca555c966
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67131793"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927643"
 ---
 # <a name="view-event-session-data"></a>イベント セッション データの表示
   このトピックでは、表示のユーザー インターフェイスを使用して、拡張イベント データを表示および分析する方法について説明します。  
@@ -44,9 +43,9 @@ ms.locfileid: "67131793"
   
 -   event_file ターゲットの場合、ファイル ターゲット データ (.XEL ファイル) を表示するには、次のいずれかの方法を使用します。  
   
-    -   ファイル > を使用して[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で開きます。
+    -   ファイル > を使用してで開き [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ます。
     
-    -   ファイルをに[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ドラッグアンドドロップします。 
+    -   ファイルをにドラッグアンドドロップし [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ます。 
     
     -   .XEL ファイルをダブルクリックする。  
     
@@ -147,7 +146,7 @@ ms.locfileid: "67131793"
   
 -   Sum  
   
--   min  
+-   分  
   
 -   max  
   
