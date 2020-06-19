@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa1858469ec8756f05e186ca1cb50c966ee47268
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054517"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972462"
 ---
 # <a name="web-service-task-editor-input-page"></a>[Web サービス タスク エディター] ([入力] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[入力]** ページを使用すると、Web サービス、Web メソッド、および Web メソッドの入力値を指定できます。 値を指定するには、[値] 列に直接文字列を入力するか、[値] 列から変数を選択します。  
@@ -45,7 +44,7 @@ ms.locfileid: "66054517"
 > [!NOTE]  
 >  Web サービス タスクがサポートするパラメーターのデータ型は、整数や文字列などのプリミティブ型、プリミティブ型の配列とシーケンス、および列挙型のみです。  
   
- **変数**  
+ **Variable**  
  変数を使って入力値を指定する場合は、チェック ボックスをオンにします。  
   
  **Value**  

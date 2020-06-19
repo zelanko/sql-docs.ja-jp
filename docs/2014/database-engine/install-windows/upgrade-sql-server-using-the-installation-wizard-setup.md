@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fac51c7916e6fda90d4f04d5e6f3603709e48dd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775408"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931833"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>インストール ウィザードを使用した SQL Server 2014 へのアップグレード (セットアップ)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでは、1 つの機能ツリーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをアップグレードできます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を以前のバージョンと並列でインストールすることもできます。または、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から既存データベース設定と構成の設定を移行し、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスに適用することもできます。  
@@ -41,7 +40,7 @@ ms.locfileid: "62775408"
 ## <a name="prerequisites"></a>前提条件  
  セットアップは管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、リモート共有に対する読み取り権限と実行権限を持つ、ローカル管理者のドメイン アカウントを使用する必要があります。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]をアップグレードする前に、次のトピックを確認してください。  
+ をアップグレードする前に [!INCLUDE[ssDE](../../includes/ssde-md.md)] 、次のトピックを確認してください。  
   
 -   [SQL Server 2014 へのアップグレード](upgrade-sql-server.md)  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62775408"
 -   [SQL Server データベース エンジンの旧バージョンとの互換性](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
->  アップグレードする機能は変更できず、アップグレード操作中に機能を追加することもできないことに注意してください。 アップグレード操作の完了後に、アップグレード済みの[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インスタンスに機能を追加する方法の詳細については、「 [SQL Server 2014 のインスタンスへの機能の追加」 &#40;「セットアップ&#41;](add-features-to-an-instance-of-sql-server-setup.md)」を参照してください。  
+>  アップグレードする機能は変更できず、アップグレード操作中に機能を追加することもできないことに注意してください。 アップグレード操作の完了後に、アップグレード済みのインスタンスに機能を追加する方法の詳細について [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、「 [SQL Server 2014 のインスタンスへの機能の追加」 &#40;「セットアップ&#41;](add-features-to-an-instance-of-sql-server-setup.md)」を参照してください。  
   
 ## <a name="procedure"></a>手順  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62775408"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール メディアを挿入し、ルート フォルダーの Setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   
-2.  インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが開始されます。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既存のインスタンスをアップグレードするには、左側のナビゲーション領域の [**インストール**] をクリックし、[、、 ** [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]またはからのアップグレード**] をクリックします。  
+2.  インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが開始されます。 の既存のインスタンスをアップグレードするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 左側のナビゲーション領域の [**インストール**] をクリックし、[、、 ** [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] またはからのアップグレード**] をクリックします。  
   
 3.  [プロダクト キー] ページで、オプションをクリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の無償のエディションにアップグレードするかどうか、または SQL Server の製品版の PID キーを持っているかどうかを指定します。 詳細については、「 [SQL Server 2014 のエディションとコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)」および「[サポートされるバージョンとエディションのアップグレード](supported-version-and-edition-upgrades.md)」を参照してください。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62775408"
      選択した機能の必須コンポーネントが、右側のペインに表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、この手順の後半で説明するインストール手順の間に、まだインストールされていない必須コンポーネントをインストールします。  
   
     > [!NOTE]  
-    >  **[インスタンスの選択**] ページで [ ** \<共有機能>のみをアップグレード**する] を選択して共有機能をアップグレードすることを選択した場合は、[機能の選択] ページですべての共有機能があらかじめ選択されています。 すべての共有機能は同時にアップグレードされます。  
+    >  [インスタンスの選択] ページで共有機能をアップグレードすることを選択した場合は、[ **\<Upgrade shared features only>** 機能の選択] ページですべての共有機能があらかじめ選択されています。 **Select Instance** すべての共有機能は同時にアップグレードされます。  
   
 12. [インスタンスの構成] ページで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのインスタンス ID を指定します。  
   
@@ -126,7 +125,7 @@ ms.locfileid: "62775408"
   
 -   **統計の更新**: クエリ パフォーマンスを最適化するため、アップグレードに続いてすべてのデータベース上で統計を更新することをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのユーザー定義テーブル内の統計を更新するには、`sp_updatestats` ストアド プロシージャを使用します。  
   
--   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新しいインストールを構成**する-システムのセキュリティ向上な領域を削減するため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に、主要なサービスと機能を選択的にインストールして有効にします。 外部からのアクセスの設定の詳細については、このリリースの Readme ファイルを参照してください。  
+-   **新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールを構成**する-システムのセキュリティ向上な領域を削減するために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主要なサービスと機能を選択的にインストールして有効にします。 外部からのアクセスの設定の詳細については、このリリースの Readme ファイルを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 へのアップグレード](upgrade-sql-server.md)   

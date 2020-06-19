@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: d7ad026c-5355-4308-9560-0dc843940d4f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7cdc7e6c036a38ac40eb8c7bb2495b1ed5a3e6e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8254ac96a269b6fb433759e5a649bf9df1b7feac
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922035"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958147"
 ---
-# <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>一部のファイル グループのみを復元する段階的な部分復元 (単純復旧モデル) の例
+# <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>例:一部のファイル グループのみを復元する段階的な部分復元 (単純復旧モデル)
   このトピックは、読み取り専用のファイル グループを含む、単純復旧モデルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連しています。  
   
  段階的な部分復元シーケンスでは、プライマリ ファイル グループからすべての読み取り/書き込みセカンダリ ファイル グループの順に、ファイル グループレベルで段階的にデータベースが復元および復旧されます。  

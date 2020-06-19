@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00d0311f-8b71-4ad6-824d-0e89119347a3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 10165ed57c12b06fc1317bb440dd1635849582f6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3c6e0323a38fb6af9d242cca9c4aa9135ee99f37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047964"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
   **IBCPSession** インターフェイスでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のファイルベースの一括コピー操作のサポートが公開されます。 **Ibcpsession**インターフェイスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネイティブクライアント OLE DB プロバイダーのセッションと同じレベルで公開されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーでは、データソースオブジェクトはセッションオブジェクトのファクトリであり、SSPROP_ENABLEBULKCOPY の接続プロパティには一括コピー操作が指定されています。 また、SSPROP_ENABLEFASTLOAD プロパティは true に設定する必要があります。  

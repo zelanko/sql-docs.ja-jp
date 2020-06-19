@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95c4a27a6ef20ac52521c707ae4a83329a81716d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054737"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972662"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>[パッケージをアップグレードしています] (SSIS パッケージ アップグレード ウィザード)
   **[パッケージをアップグレードしています]** ページでは、パッケージのアップグレードの進行状況を表示したり、アップグレード プロセスを中断したりできます。 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ アップグレード ウィザードでは、選択したパッケージが 1 つずつアップグレードされます。  
@@ -34,7 +33,7 @@ ms.locfileid: "66054737"
  **[メッセージ] ペイン**  
  アップグレード プロセス中に、進行状況メッセージと概要情報が表示されます。  
   
- **操作**  
+ **動作**  
  アップグレード処理で実行されるアクションを表示します。  
   
  **状態**  
@@ -46,7 +45,7 @@ ms.locfileid: "66054737"
  **Stop**  
  パッケージのアップグレードを停止します。  
   
- **レポート**  
+ **Report**  
  パッケージのアップグレード結果を含むレポートの処理を選択します。  
   
 -   レポートをオンラインで表示します。  

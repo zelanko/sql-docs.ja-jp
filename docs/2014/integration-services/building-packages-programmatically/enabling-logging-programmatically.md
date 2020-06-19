@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bff8df8004c4553d5fa07ebb5ca46863a998bd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4eb09433e2b2db77e6a2f40c1acf204513585a9f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176562"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924926"
 ---
 # <a name="enabling-logging-programmatically"></a>プログラムによるログ記録の有効化
   ランタイム エンジンでは、パッケージの検証中および実行中にイベント固有の情報のキャプチャを有効にするための <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> オブジェクトのコレクションが提供されます。 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> オブジェクトは、<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer> オブジェクト群、つまり <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>、<xref:Microsoft.SqlServer.Dts.Runtime.Package>、<xref:Microsoft.SqlServer.Dts.Runtime.ForLoop>、<xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> などの各オブジェクトで使用できます。 ログ記録は、個別のコンテナーでも、パッケージ全体でも有効にすることができます。
@@ -46,7 +45,7 @@ ms.locfileid: "78176562"
 |プロバイダー|説明|ConfigString プロパティ|
 |--------------|-----------------|---------------------------|
 |SQL Server プロファイラー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler でキャプチャおよび表示される SQL トレースを生成します。 このプロバイダーで使用されるファイル名の既定の拡張子は、.trc です。|構成は必要ありません。|
-|SQL Server|イベント ログ エントリを **データベースの**sysssislog[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに書き込みます。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロバイダーの場合は、データベースへの接続と対象データベースの名前を指定する必要があります。|
+|SQL Server|イベント ログ エントリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの **sysssislog** テーブルに書き込みます。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロバイダーの場合は、データベースへの接続と対象データベースの名前を指定する必要があります。|
 |テキスト ファイル|イベント ログ エントリをコンマ区切り (CSV) 形式で ASCII テキスト ファイルに書き込みます。 このプロバイダーで使用されるファイル名の既定の拡張子は、.log です。|ファイル接続マネージャーの名前。|
 |Windows イベント ログ|ローカル コンピューター上のアプリケーション ログの標準 Windows イベント ログにログを記録します。|構成は必要ありません。|
 |XML ファイル|イベント ログ エントリを XML 形式ファイルに書き込みます。 このプロバイダーの既定のファイル名拡張子は .xml です。|ファイル接続マネージャーの名前。|

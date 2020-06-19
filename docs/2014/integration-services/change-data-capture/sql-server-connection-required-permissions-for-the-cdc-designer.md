@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80334de2-17c1-43c9-951e-21a9f864e9cb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 567ee5d4c6f57d4b4eb08cbd4ecac7aef999aa55
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cad7720304d4be0a52d782595e466128aa0ae630
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835418"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922403"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-designer"></a>CDC デザイナーで使用する SQL Server 接続に必要な権限
   CDC デザイナー コンソールのタスクを実行するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続情報が必要です。 このトピックでは、 **との接続を設定するために** [SQL Server への接続] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ダイアログ ボックスで指定できる情報について説明します。  

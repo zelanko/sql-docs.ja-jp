@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c338abe8-9e30-4853-a7c6-b1a6c00095e1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f18437b807c9cc45b54841255d2b7bb4ba98b45c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 262641572cad4c765533e1c44dc882155f329386
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695750"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048045"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内の列にバインドされるフィールド数を設定します。  
@@ -34,7 +33,7 @@ HRESULT BCPColumns(
 DBCOUNTITEMnColumns);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このメソッドは、内部的に [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) を呼び出して、フィールド データの既定値を設定します。 これらの既定値は、[IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) を使用してテーブル名を指定するときに、プロバイダーが内部的に取得する SQL Server の列情報を基に設定されます。  
   
 > [!NOTE]  

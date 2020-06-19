@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 208ff6722a9c18fd4dd0d061575f0d496af27810
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473203"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995740"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>ジョブ カテゴリへのジョブの割り当て
-  このトピックでは、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、、または SQL Server 管理オブジェクトを使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]して[!INCLUDE[tsql](../../includes/tsql-md.md)] 、エージェントジョブをジョブカテゴリに割り当てる方法について説明します。  
+  このトピック [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、で、、または SQL Server 管理オブジェクトを使用して、エージェントジョブをジョブカテゴリに割り当てる方法について説明し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
   
  ジョブ カテゴリを使用してジョブを管理すると、フィルター操作やグループ化を簡単に行うことができます。 たとえば、データベース バックアップに関するすべてのジョブを [データベースのメンテナンス] カテゴリとしてまとめます。 ジョブは、ビルトイン ジョブ カテゴリに割り当てたり、ユーザー定義ジョブ カテゴリを作成し、そこに割り当てたりすることができます。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "62473203"
 ##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  **ジョブ カテゴリにジョブを割り当てるには**  
   
- Visual Basic、 `JobCategory` Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。  
+ `JobCategory`Visual Basic、Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。  
   
   
   

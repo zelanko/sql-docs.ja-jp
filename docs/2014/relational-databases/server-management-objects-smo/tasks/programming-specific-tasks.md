@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e600048088dbc9e5c459f976720f1e626dcf5e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158711"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063093"
 ---
 # <a name="programming-specific-tasks"></a>プログラミング特有のタスク
   SMO オブジェクトを使用したプログラミングに特有のタスクには、バックアップ、統計の監視、レプリケーション、インスタンス オブジェクトの管理、および構成オプションの設定など、特定の関数を使用したプログラムにのみ必要となる場合がある複雑な処理が含まれています。  

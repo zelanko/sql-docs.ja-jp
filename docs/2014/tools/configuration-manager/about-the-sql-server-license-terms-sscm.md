@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6553d743fe3cb0ba4e4ab6229baa65cc9d94eec8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b75762a1cb2cebc3834852f258c4b23b88435fbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001079"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008356"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>SQL Server のライセンス条項について (SSCM)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]ソフトウェアライセンス条項は、のインストール時にローカルコンピューターにコピーされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 同じエディションと言語の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。 ファイルは、%ProgramFiles%\Microsoft SQL server のライセンス条項 \ または% ProgramFiles (x86)% \ Microsoft SQL server \ 110\ ライセンス条項に書き込まれます \\ 。  

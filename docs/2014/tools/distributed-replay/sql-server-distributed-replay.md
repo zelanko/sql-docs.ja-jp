@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 021e37ee7efb8d525cdbc16d2f7b1111045ea7a6
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 1991b9a960d0314b00d2a5cd45997e0502890698
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925046"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048517"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散再生機能を使用すると、将来の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のアップグレードによる影響を評価できます。 また、ハードウェアとオペレーティング システムのアップグレード、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のチューニングの影響を評価する場合にも使用できます。
@@ -49,11 +48,11 @@ ms.locfileid: "82925046"
 
 -   **分散再生管理ツール**: `DReplay.exe` 分散再生コントローラーとの通信に使用されるコンソールアプリケーション。 Distributed Replay を制御するには管理ツールを使用します。
 
--   **Distributed Replay Controller**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Controller という名前の Windows サービスを実行するコンピューター。 分散再生コントローラーは、分散再生クライアントのアクションを統制します。 各分散再生環境には、コントローラーのインスタンスを 1 つだけ置くことができます。
+-   **分散再生コントローラー**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散再生コントローラーという名前の Windows サービスを実行するコンピューター。 分散再生コントローラーは、分散再生クライアントのアクションを統制します。 各分散再生環境には、コントローラーのインスタンスを 1 つだけ置くことができます。
 
--   **Distributed Replay Client**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Client という名前の Windows サービスを実行する 1 つまたは複数の (物理または仮想) コンピューター。 分散再生クライアントは連携して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスに対するワークロードをシミュレートします。 各分散再生環境には、1 つまたは複数のクライアントを置くことができます。
+-   **分散再生クライアント**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散再生クライアントという名前の Windows サービスを実行する 1 つまたは複数の (物理または仮想) コンピューター。 分散再生クライアントは連携して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスに対するワークロードをシミュレートします。 各分散再生環境には、1 つまたは複数のクライアントを置くことができます。
 
--   **ターゲット サーバー**: トレース データを再生する際に Distributed Replay Client が使用できる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス。 ターゲット サーバーはテスト環境に配置することをお勧めします。
+-   **対象サーバー**:トレース データを再生する際に分散再生クライアントが使用できる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス。 ターゲット サーバーはテスト環境に配置することをお勧めします。
 
  Distributed Replay の管理ツール、コントローラー、およびクライアントは、異なるコンピューターにインストールすることも、同じコンピューターにインストールすることもできます。 同じコンピューターで実行できる Distributed Replay Controller サービスまたは Distributed Replay Client サービスのインスタンスは 1 つだけです。
 

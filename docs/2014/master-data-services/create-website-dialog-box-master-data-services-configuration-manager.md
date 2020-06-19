@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3f5354ff3b4e461196a9f84e6efc2ff755cf40c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 63e18bfd9c907e5604f82d0e5462b80d07279556
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971672"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>[Web サイトの作成] ダイアログ ボックス (マスター データ サービス構成マネージャー)
   **[Web サイトの作成]** ダイアログ ボックスを使用すると、ローカル コンピューター上に新しい Web サイトを作成できます。 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]で Web サイトを作成すると、作成したサイトは、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとして構成されるルート アプリケーションを伴って、ローカル コンピューター上のインターネット インフォメーション サービス (IIS) に追加されます。 また、新しいアプリケーション プールが作成され、Web アプリケーションがそのアプリケーション プールに追加されます。  
@@ -39,7 +38,7 @@ ms.locfileid: "80380743"
 |**名前**|新しいアプリケーション プールの一意な表示名を入力するか、表示されている既定の名前を使用します。 この Web サイトのルート Web アプリケーションは、このアプリケーション プールで実行されます。<br /><br /> アプリケーション プールには、あるアプリケーション プール内のアプリケーションが別のアプリケーション プール内のアプリケーションに影響しないように境界が設けられています。|  
 |**ユーザー名**|Active Directory のドメインおよびユーザー名を入力します。 このアカウントは、Web アプリケーションを実行するアプリケーション プールの ID です。<br /><br /> このアカウントは、データベースにアクセスするために [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの mds_exec データベース ロールに追加されます。 詳細については、「[データベース ログイン、ユーザー、およびロール &#40;マスター データ サービス&#41;](database-logins-users-and-roles-master-data-services.md)」を参照してください。 また、このアカウントは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Windows グループ **MDS_ServiceAccounts**にも追加されます。このグループには、ファイル システムの一時コンパイル ディレクトリ **MDSTempDir**に対する権限が与えられています。 詳細については、「[フォルダーとファイルの権限 &#40;マスター データ サービス&#41;](../../2014/master-data-services/folder-and-file-permissions-master-data-services.md)」を参照してください。|  
 |**パスワード**|指定したユーザー アカウントのパスワードを入力します。|  
-|**パスワードの確認入力**|指定したユーザー アカウントのパスワードを再入力します。 **[パスワード]** フィールドと **[パスワードの確認入力]** フィールドには、同じパスワードを入力する必要があります。|  
+|**[パスワードの確認入力]**|指定したユーザー アカウントのパスワードを再入力します。 **[パスワード]** フィールドと **[パスワードの確認入力]** フィールドには、同じパスワードを入力する必要があります。|  
   
 ## <a name="see-also"></a>参照  
  [[Web 構成] ページ &#40;マスターデータサービス構成マネージャー&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   

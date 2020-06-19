@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 86441b7ec5750ca4b7fce07fb7e0b5025e8a6eef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890719"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939123"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>[データ マイニング クエリ タスク エディター] ([クエリ] タブ)
   **[データ マイニング クエリ タスク]** ダイアログ ボックスの **[クエリ]** タブを使用すると、マイニング モデルに基づいて予測クエリを作成できます。 このダイアログ ボックスでは、パラメーターおよび結果セットを変数にバインドすることもできます。  
   
  パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
   
-## <a name="general-options"></a>[全般] のオプション  
+## <a name="general-options"></a>一般オプション  
  **名前**  
  データ マイニング クエリ タスクに固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "68890719"
  **追加**  
  一覧にパラメーターを追加します。  
   
- **Remove**  
+ **削除**  
  パラメーターを選択してから、 **[削除]** をクリックします。  
   
 ## <a name="result-set-tab-options"></a>[結果セット] タブのオプション  
@@ -75,7 +74,7 @@ ms.locfileid: "68890719"
  **追加**  
  一覧に結果セットを追加します。  
   
- **Remove**  
+ **削除**  
  結果を選択してから、 **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  

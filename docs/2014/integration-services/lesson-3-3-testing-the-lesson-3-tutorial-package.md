@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6b446d566e7c9aa18e635799e81120d1ac73470
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891590"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965176"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>手順 3:レッスン 3 のチュートリアル パッケージのテスト
   この実習では、Lesson 3.dtsx パッケージを実行します。 パッケージを実行すると、[ログ イベント] ウィンドウに、ログ ファイルに書き込まれているログ エントリの一覧が表示されます。 パッケージの実行が完了したら、ログ プロバイダーによって生成されたログ ファイルの内容を確認します。  
@@ -43,7 +42,7 @@ ms.locfileid: "62891590"
   
 -   メモ帳などのテキスト エディターを使用し、TutorialLog.log ファイルを開きます。  
   
--   イベント`PipelineExecutionPlan`および`PipelineExecutionTrees`イベントに対して生成される情報のセマンティクスについては、このチュートリアルでは説明しませんが、最初の行には、[ **SSIS ログの構成**] ダイアログボックスの [**詳細**] タブで指定された情報フィールドが一覧表示されていることがわかります。 また、Foreach ループが繰り返されるたびに、選択した 2 つのイベント、PipelineExecutionPlan および PipelineExecutionTrees が記録されていることも確認できます。  
+-   イベントおよびイベントに対して生成される情報のセマンティクスについて `PipelineExecutionPlan` `PipelineExecutionTrees` は、このチュートリアルでは説明しませんが、最初の行には、[ **SSIS ログの構成**] ダイアログボックスの [**詳細**] タブで指定された情報フィールドが一覧表示されていることがわかります。 また、Foreach ループが繰り返されるたびに、選択した 2 つのイベント、PipelineExecutionPlan および PipelineExecutionTrees が記録されていることも確認できます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
  [レッスン 4:エラー フロー リダイレクトの追加](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  

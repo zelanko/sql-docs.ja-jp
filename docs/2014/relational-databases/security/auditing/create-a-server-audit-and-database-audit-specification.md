@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cad01eae45d534f0f74911ce8f57827858cc920
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211984"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063229"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>サーバー監査の仕様およびデータベース監査の仕様を作成する方法
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]でサーバー監査とデータベース監査の仕様を作成する方法について説明します。  
@@ -33,7 +32,7 @@ ms.locfileid: "68211984"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **サーバー監査とデータベース監査の仕様を作成する方法:**  
   
@@ -62,7 +61,7 @@ ms.locfileid: "68211984"
   
 #### <a name="to-create-a-server-audit"></a>サーバー監査を作成するには  
   
-1.  オブジェクトエクスプローラーで、[**セキュリティ**] フォルダーを展開します。  
+1.  オブジェクト エクスプローラーで、 **[セキュリティ]** フォルダーを展開します。  
   
 2.  [**監査**] フォルダーを右クリックし、[**新しい監査**] を選択します。詳細については、「[サーバー監査およびサーバー監査の仕様を作成する](create-a-server-audit-and-server-audit-specification.md)」を参照してください。  
   
@@ -72,7 +71,7 @@ ms.locfileid: "68211984"
   
 1.  オブジェクト エクスプローラーで、監査仕様を作成するデータベースを展開します。  
   
-2.  [**セキュリティ**] フォルダーを展開します。  
+2.  **[セキュリティ]** フォルダーを展開します。  
   
 3.  [**データベース監査の仕様**] フォルダーを右クリックし、[**新しいデータベース監査の仕様**] を選択します。  
   
@@ -90,13 +89,13 @@ ms.locfileid: "68211984"
      **[オブジェクト スキーマ]**  
      指定した **[オブジェクト名]** のスキーマを表示します。  
   
-     **オブジェクト名**  
+     **[オブジェクト名]**  
      監査するオブジェクトの名前。 これは監査アクションにのみ使用できます。監査グループには適用されません。  
   
      **省略記号 (...)**  
      指定した **[監査アクションの種類]** に基づいて、使用可能なオブジェクトを参照して選択するための **[オブジェクトの選択]** ダイアログ ボックスを開きます。  
   
-     **プリンシパル名**  
+     **[プリンシパル名]**  
      監査対象のオブジェクトで監査をフィルター選択するためのアカウント。  
   
      **省略記号 (...)**  

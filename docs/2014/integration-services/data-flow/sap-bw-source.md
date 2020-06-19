@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 169c35d89075646aa3f4964d0e9d6eda92bc13a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18dfb8c120facf60bdd60d3c88103fcf3402452a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901072"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914252"
 ---
 # <a name="sap-bw-source"></a>SAP BW 転送元
   SAP BW 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の変換元コンポーネントです。 そのため、SAP BW 変換元により SAP Netweaver BW Version 7 システムからデータが抽出され、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにこのデータが使用できるようになります。  

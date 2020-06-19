@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1690e2772de50258a69a4a33b048f16f7da2caca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067300"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939721"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>SQL Server データ ツールからの配置 (SSAS テーブル)
   このトピックのタスクは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の Deploy コマンドを使用してテーブル モデル ソリューションを配置するために使用します。  
@@ -37,7 +36,7 @@ ms.locfileid: "66067300"
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の **ソリューション エクスプローラー**で、プロジェクト名を右クリックして、 **[プロパティ]** をクリックします。  
   
-2.  [ ** \<プロジェクト名> のプロパティ**] ダイアログボックスの [**配置オプション**] で、既定の設定と異なる場合はプロパティ設定を指定します。  
+2.  [ ** \<project name> プロパティ**] ダイアログボックスの [**配置オプション**] で、既定の設定と異なる場合はプロパティ設定を指定します。  
   
     > [!NOTE]  
     >  キャッシュ モードのモデルの場合、 **[クエリ モード]** は常に **[In-Memory]** です。  
@@ -54,7 +53,7 @@ ms.locfileid: "66067300"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>テーブル モデル ソリューションを配置するには  
   
--   で[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]、[**ビルド**] メニューの [**プロジェクト\<名の配置>**] をクリックします。  
+-   で、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] [**ビルド**] メニューの [**配置 \<project name> **] をクリックします。  
   
      **[配置]** ダイアログ ボックスが表示され、メタデータの配置の状態とモデルに含まれる各テーブルの処理が示されます ([処理オプション] プロパティが [処理しない] に設定されている場合を除きます)。 配置プロセスが完了したら、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、Analysis Services インスタンスに接続し、新しい model データベース オブジェクトが作成されていることを確認するか、クライアント レポート アプリケーションを使用して配置済みモデルと接続します。  
   

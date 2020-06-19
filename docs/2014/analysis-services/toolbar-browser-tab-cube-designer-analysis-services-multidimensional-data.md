@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d1135be55065ab62e649d84c00cec4eebf60b58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba90d60a9ec3b3651c4889be423a5c1311fc9c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175581"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938484"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>ツール バー (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **ツール バー** にある機能は、キューブやそのオブジェクトをデザインまたは参照しているときと、MDX クエリを作成しているときに使用する共通の操作を実行するときに使用します。 デザイン時とクエリ ビューの両方に共通する操作としては、ユーザー コンテキストの設定、オブジェクトの処理、既定の言語の設定などがあります。
@@ -53,12 +52,12 @@ ms.locfileid: "78175581"
 
 ## <a name="options"></a>オプション
 
-|オプション|説明|
+|オプション|[説明]|
 |------------|-----------------|
-|**プロセス**|クリックすると、 **[処理]** ダイアログ ボックスを表示して、キューブを処理できます。 **[処理]** ダイアログ ボックスの詳細については、「[[処理] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](process-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|
+|**処理**|クリックすると、 **[処理]** ダイアログ ボックスを表示して、キューブを処理できます。 **[処理]** ダイアログ ボックスの詳細については、「[[処理] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](process-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|
 |**ユーザーの変更**|クリックすると、[**セキュリティコンテキスト**] ダイアログボックスが表示され、[**ブラウザー** ] タブで使用するユーザーとロールを変更できます。[**セキュリティコンテキスト**] ダイアログボックスの詳細については、「[[セキュリティコンテキスト] ダイアログボックス &#40;Analysis Services-多次元データ&#41;](security-context-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|
 |**[再接続]**|接続が失われたりタイムアウトしたりしたために **[ブラウザー]** タブに対するセッションが切断された場合に、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [計算] **タブを** インスタンスおよびキューブを含むデータベースに再接続します。|
-|**更新**|**[メタデータ]** ペインおよび **[レポート]** ペインの表示を最新の情報に更新します。|
+|**Refresh\(更新\)**|**[メタデータ]** ペインおよび **[レポート]** ペインの表示を最新の情報に更新します。|
 |**昇順で並べ替え**|**[レポート]** ペイン内の選択行の兄弟を、**[言語]** で指定された言語に対して昇順で並べ替えます。<br /><br /> **注** このオプションは、**[レポート]** ペイン内のセルが選択されている場合にのみ有効です。|
 |**降順で並べ替え**|**[レポート]** ペイン内の選択行の兄弟を、 **[言語]** で指定された言語に対して降順で並べ替えます。<br /><br /> 注: このオプションは、[**レポート**] ペイン内のセルが選択されている場合にのみ有効です。|
 |**[自動フィルター]**|**[結果]** ペイン内の結果を自動的にフィルター処理します。|

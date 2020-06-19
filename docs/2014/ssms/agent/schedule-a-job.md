@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5037448a3ec3cb3590e6fd649d83878bb573f48c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1077766d6853ed7c029b8eefa76515c89ad861fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783178"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995024"
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのスケジュールを設定する方法について説明します。  
   
 -   **作業を開始する準備:** 、  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ジョブのスケジュールを設定する方法:**  
   
@@ -112,4 +111,4 @@ ms.locfileid: "72783178"
  詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql) 」と「 [transact-sql &#40;の sp_attach_schedule ](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)」を参照してください。  
   
 ##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
- Visual Basic、 `JobSchedule` Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。 詳細については、「[SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
+ `JobSchedule`Visual Basic、Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。 詳細については、「[SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

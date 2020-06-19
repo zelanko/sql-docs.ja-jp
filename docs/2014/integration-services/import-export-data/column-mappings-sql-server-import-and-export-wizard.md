@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f3266bbbc100af3eac03bc18805c82b753d7aa7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965635"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>[列マッピング]\(SQL Server インポートおよびエクスポート ウィザード)
   [**列マッピング**] ダイアログボックスを使用すると、変換パラメーターを編集できます。  
   
 > [!NOTE]  
->  テーブルをコピーするオプションを選択する際に、テーブル内のすべての列をコピーする必要はありません。 スキップする列については、このダイアログボックスの [**変換先**] 列で [ ** \<>を無視**する] を選択します。  
+>  テーブルをコピーするオプションを選択する際に、テーブル内のすべての列をコピーする必要はありません。 **\<ignore>** スキップする列については、このダイアログボックスの [**変換先**] 列でを選択します。  
   
  このウィザードの詳細については、「 [SQL Server インポートおよびエクスポートウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。 ウィザードを起動するためのオプション、およびウィザードを正常に実行するために必要な権限の詳細については、「 [run the SQL Server Import And Export wizard](start-the-sql-server-import-and-export-wizard.md)」を参照してください。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "62893043"
  **ソース**  
  選択した変換元のテーブル、ビュー、またはクエリを識別します。  
   
- **Destination (宛先)**  
+ **宛先**  
  選択した変換先のテーブル、ビュー、またはクエリを識別します。  
   
  **[変換先テーブルを作成する]**  
@@ -62,8 +61,8 @@ ms.locfileid: "62893043"
  **ソース**  
  変換パラメーターを設定する各変換元列を表示します。  
   
- **Destination (宛先)**  
- コピー操作中に列を無視するかどうかを指定します。 スキップする列については、この列の [ ** \<>を無視**する] を選択すると、列のサブセットのみをコピーできます。 列をマップする前に、マップされないすべての列を無視する必要があります。  
+ **宛先**  
+ コピー操作中に列を無視するかどうかを指定します。 スキップする列に対してこの列を選択すると、列のサブセットのみをコピーでき **\<ignore>** ます。 列をマップする前に、マップされないすべての列を無視する必要があります。  
   
  **Type**  
  列のデータ型を選択します。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d85fc4c21f200bcdc5a489cfcee6b50bc9f4b98e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50cf10a9a745b3a111deb5db6be356d10d204d4a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479911"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971722"
 ---
 # <a name="create-an-entity-master-data-services"></a>エンティティを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でエンティティを作成して、メンバーおよびその属性を含めます。  
@@ -53,7 +52,7 @@ ms.locfileid: "65479911"
   
 8.  [**明示的階層とコレクションを有効にする**] の一覧で、次のいずれかのオプションを選択します。  
   
-    -   **いいえ**。 明示的階層およびコレクションに対してエンティティを有効にする必要がない場合、このオプションを選択します。 これは、必要に応じて後で変更できます。  
+    -   **[いいえ]** 。 明示的階層およびコレクションに対してエンティティを有効にする必要がない場合、このオプションを選択します。 これは、必要に応じて後で変更できます。  
   
     -   **はい**。 明示的階層およびコレクションに対してエンティティを有効にする場合、このオプションを選択します。 [**明示的階層名**] ボックスに、名前を入力します。 必要に応じて、[必須階層] を選択します (明示的階層を必須階層にするに**は、すべてのリーフメンバーが含ま**れます)。  
   

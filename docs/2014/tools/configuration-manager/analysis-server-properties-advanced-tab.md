@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92485676ba8340163c9fc1251be45f89336acf93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75f7ac8b8bfcb561376d7bb58eb7938712e79690
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761027"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008237"
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>[SQL Server Analysis Services のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
   このサービスは、Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 カスタム プロパティが定義されていれば、そのプロパティと値がこのタブに表示されます。  

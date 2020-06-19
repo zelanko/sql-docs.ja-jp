@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed13712678ab599e55b539d6226142b686106fe5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774980"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931973"
 ---
 # <a name="upgrade-database-engine"></a>データベース エンジンのアップグレード
   ここでは、アップグレード プロセスの準備および理解に必要な情報を提供します。内容は以下のとおりです。  
@@ -102,7 +101,7 @@ ms.locfileid: "62774980"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] をアップグレードするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを使用します。  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>アップグレード後のデータベース互換性レベル  
- `tempdb`、 `model`、 `msdb`および**リソース**データベースの互換性レベルは、アップグレード後に120に設定されます。 `master` システム データベースの互換性レベルは、アップグレード前と同じです。  
+ `tempdb`、 `model` 、 `msdb` および**リソース**データベースの互換性レベルは、アップグレード後に120に設定されます。 `master` システム データベースの互換性レベルは、アップグレード前と同じです。  
   
  アップグレード前のユーザー データベースの互換性レベルが 100 以上の場合は、アップグレード後も互換性レベルは変わりません。 アップグレード前の互換性レベルが 90 の場合、アップグレードされたデータベースの互換性レベルは 100 に設定されます。これは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でサポートされている下限の互換性レベルです。  
   

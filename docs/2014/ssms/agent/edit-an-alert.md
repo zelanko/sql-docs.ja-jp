@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: f518e528-cc8f-446a-b37d-98505b86e430
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f035f9173477a3954a949f9ed27bc6f4f66be741
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1eae606b3c2ca4c18d088e650e774986d4e31387
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211402"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064488"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
-  このトピックでは、または[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用し[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]て、でエージェントの警告を編集する方法について説明します。  
+  このトピック [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、またはを使用して、でエージェントの警告を編集する方法について説明し [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **警告定義を編集する方法:**  
   

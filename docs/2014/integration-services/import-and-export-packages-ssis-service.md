@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce04befcb4c8558216cecded6cb1892c3106295f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058151"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965680"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>パッケージをインポートおよびエクスポートする (SSIS サービス)
     
@@ -50,7 +49,7 @@ ms.locfileid: "66058151"
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージは、次の場所からインポートしたり、次の場所にエクスポートしたりできます。  
   
--   の[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンス、ファイルシステム、または[!INCLUDE[ssIS](../includes/ssis-md.md)]パッケージストアに格納されているパッケージをインポートできます。 インポートしたパッケージは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、または [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア内のフォルダーに保存されます。  
+-   のインスタンス [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、ファイルシステム、またはパッケージストアに格納されているパッケージをインポートでき [!INCLUDE[ssIS](../includes/ssis-md.md)] ます。 インポートしたパッケージは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、または [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア内のフォルダーに保存されます。  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージを異なるストレージ形式および場所にエクスポートできます。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66058151"
   
     -   **[サーバーの種類]** ボックスの一覧の **[Integration Services]** をクリックします。  
   
-    -   [**サーバー名**] ボックスで、サーバー名を入力するか、[ ** \<参照**] をクリックして >を選択し、使用するサーバーを指定します。  
+    -   [**サーバー名**] ボックスにサーバー名を入力するか、をクリックして、 **\<Browse for more...>** 使用するサーバーを指定します。  
   
 3.  オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "66058151"
   
     -   **[サーバーの種類]** ボックスの一覧の **[Integration Services]** をクリックします。  
   
-    -   [**サーバー名**] ボックスで、サーバー名を入力するか、[ ** \<参照**] をクリックして >を選択し、使用するサーバーを指定します。  
+    -   [**サーバー名**] ボックスにサーバー名を入力するか、をクリックして、 **\<Browse for more...>** 使用するサーバーを指定します。  
   
 3.  オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
   

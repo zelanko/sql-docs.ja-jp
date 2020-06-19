@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 403210fd8a60cdfb7e92b18f9bb66ccb0a6f1f4c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061081"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924623"
 ---
 # <a name="cache-connection-manager-editor"></a>[キャッシュ接続マネージャー エディター]
   キャッシュ接続マネージャーでは、キャッシュ変換またはキャッシュ ファイル (.caw) から参照データセットを読み取り、そのデータをキャッシュ ファイルに保存できます。 データは常にメモリに格納されます。  

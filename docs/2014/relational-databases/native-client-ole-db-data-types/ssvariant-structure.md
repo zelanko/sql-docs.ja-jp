@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3877e7b8c6ccd0d5364b3aea291facb1799bff7d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5b2859c9d124382892949b32cb6efb65821663c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705105"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048079"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 構造体
   sqlncli.h で定義されている `SSVARIANT` 構造体は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLEDB プロバイダーの DBTYPE_SQLVARIANT 値に対応します。  
   
  `SSVARIANT` は、識別共用体です。 vt メンバーの値に応じて、コンシューマーは読み取るメンバーを決めることができます。 vt 値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に対応します。 したがって、`SSVARIANT` 構造体には、任意の SQL Server 型を格納できます。 標準の OLE DB 型のデータ構造体の詳細については、「[型インジケーター](https://go.microsoft.com/fwlink/?LinkId=122171)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  DataTypeCompat==80 の場合、いくつかの `SSVARIANT` サブタイプが文字列になります。 たとえば、次の vt 値は `SSVARIANT` では VT_SS_WVARSTRING として表されます。  
   
 -   VT_SS_DATETIMEOFFSET  

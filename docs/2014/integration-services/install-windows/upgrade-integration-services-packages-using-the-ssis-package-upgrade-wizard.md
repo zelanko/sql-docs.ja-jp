@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0f31c514b8fbb68be7a326f3fd94ac67f0805ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767891"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965492"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード
   以前のバージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で作成したパッケージは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用される [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 形式にアップグレードできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、このプロセスを容易に行うための [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードが用意されています。 このウィザードは元のパッケージをバックアップするように構成できるため、アップグレードが難しい場合は、元のパッケージを引き続き使用できます。  
@@ -50,7 +49,7 @@ ms.locfileid: "62767891"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>コマンド プロンプトでウィザードを実行するには  
   
--   コマンドプロンプトで、 **C:\Program SUPSQL Server\120\DTS\Binn**フォルダーから SSISUpgrade の .exe ファイルを実行します。  
+-   コマンドプロンプトで、 **C:\Program Server\120\DTS\Binn**フォルダーから SSISUpgrade.exe ファイルを実行します。  
   
 ## <a name="backing-up-the-original-packages"></a>元のパッケージのバックアップ  
  元のパッケージをバックアップするには、元のパッケージとアップグレードされたパッケージの両方をファイル システム内の同一フォルダーに格納する必要があります。 この格納場所は、ウィザードの実行方法に応じて、自動的に選択される場合があります。  
@@ -86,7 +85,7 @@ ms.locfileid: "62767891"
 2.  ウィザードの **[パッケージ管理オプションの選択]** ページで、 **[元のパッケージをバックアップする]** チェック ボックスをオンにします。  
   
     > [!WARNING]  
-    >  [**元のパッケージのバックアップ**] オプションは、で[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]またはプロジェクトを開いたときには表示されません。このオプションを指定すると、ウィザードが自動的に起動します。  
+    >  [**元のパッケージのバックアップ**] オプションは、でまたはプロジェクトを開いたときには表示されません。このオプションを指定すると、 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ウィザードが [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 自動的に起動します。  
   
 3.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードを実行します。  
   

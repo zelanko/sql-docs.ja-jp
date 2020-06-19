@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0e53d710c6c3310641a30144a42ea5f614dffd6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054675"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972582"
 ---
 # <a name="variable-grid-options"></a>可変グリッドのオプション
   **[可変グリッドのオプション]** ダイアログ ボックスを使用して、 **[変数]** ウィンドウに表示される列を選択したり、変数の一覧に適用するフィルターを選択したりします。 対応する変数のプロパティの詳細については、「 [Integration Services (SSIS) の変数](integration-services-ssis-variables.md)」を参照してください。  
@@ -38,19 +37,19 @@ ms.locfileid: "66054675"
 ## <a name="options-for-columns"></a>列のオプション  
  **[変数]** ウィンドウに表示する列を選択します。  
   
--   **Scope**  
+-   **スコープ**  
   
 -   **データの種類**  
   
 -   **Value**  
   
--   **Namespace**  
+-   **名前空間**  
   
 -   **[変数値の変化時にイベントを発生]**  
   
 -   **説明**  
   
--   **正規表現**  
+-   **条件**  
   
 ## <a name="see-also"></a>参照  
  [変数ウィンドウ](../../2014/integration-services/variables-window.md)   

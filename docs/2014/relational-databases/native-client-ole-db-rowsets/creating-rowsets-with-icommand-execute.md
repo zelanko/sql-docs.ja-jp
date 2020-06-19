@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b530b7d-8165-49d4-a978-5ced17c6705e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 50981c958e65dcb26f78980d91efae672ff6d39f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f4403ba79fada44d9eca47b533a718fe7167689d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055995"
 ---
 # <a name="creating-rowsets-with-icommandexecute"></a>ICommand::Execute を使用した行セットの作成
   **ICommand::Execute** メソッドを使用して作成された行セットの場合、結果の行セットに設定するプロパティで、コマンドのテキストを制約できます。 これは、動的コマンド テキストをサポートするコンシューマーにとって特に重要です。  

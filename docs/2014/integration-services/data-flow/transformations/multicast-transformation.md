@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a05605ca5c2b35b0a5e35c8228a2a144f20d7905
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1cfee8c4e569ca504fd5dbd5693dfe76be059bd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900192"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939413"
 ---
 # <a name="multicast-transformation"></a>マルチキャスト変換
   マルチキャスト変換は、入力を 1 つ以上の出力に配信します。 この変換は条件分割変換と似ています。 いずれの変換も、1 つの入力を複数の出力に送信します。 この 2 つの変換の違いは、マルチキャスト変換は各行を各出力に送信するのに対し、条件分割変換は 1 行を単一の出力に送信する点です。 詳細については、「 [Conditional Split Transformation](conditional-split-transformation.md)」を参照してください。  

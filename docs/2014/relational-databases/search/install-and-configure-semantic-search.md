@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d95e0bb2adf3bacf7057b881ab2e85afd50feef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637918"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063239"
 ---
 # <a name="install-and-configure-semantic-search"></a>セマンティック検索のインストールと構成
   統計的セマンティック検索の前提条件と、これらをインストールまたは確認する方法について説明します。  
@@ -61,9 +60,9 @@ GO
   
     -   **のインストール メディアで** SemanticLanguageDatabase.msi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] という名前の Windows インストーラー パッケージを見つけます。 対象のシステムに応じて、32 ビットまたは 64 ビット バージョンのインストーラー パッケージを探してください。 32 ビット バージョンのファイルか 64 ビット バージョンのファイルかは、それが格納されているフォルダーの名前で判断できます。ファイル名そのものは、どちらのバージョンも同じです。  
   
-    -   Microsoft からインストーラーパッケージをダウンロードしますか? [SQL Server。。2014セマンティック言語統計](https://go.microsoft.com/fwlink/?LinkID=296743) [!INCLUDE[msCoName](../../../includes/msconame-md.md)]ダウンロードセンターのページ。  
+    -   Microsoft からインストーラーパッケージをダウンロードしますか? [SQL Server。。2014セマンティック言語統計](https://go.microsoft.com/fwlink/?LinkID=296743) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ダウンロードセンターのページ。  
   
-2.  **Semanticlanguagedatabase.msi** Windows インストーラーパッケージを実行して、データベースとログファイルを抽出します。  
+2.  **SemanticLanguageDatabase.msi** Windows インストーラーパッケージを実行して、データベースとログファイルを抽出します。  
   
      抽出先のディレクトリは必要に応じて変更できます。 既定では、インストーラーは、32ビットまたは64ビットの Program Files フォルダー内の**Microsoft Semantic Language Database**という名前のフォルダーにファイルを抽出します。 MSI ファイルには、圧縮データベース ファイルおよびログ ファイルが格納されます。  
   

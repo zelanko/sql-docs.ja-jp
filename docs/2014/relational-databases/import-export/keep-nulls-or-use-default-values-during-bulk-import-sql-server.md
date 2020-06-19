@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 856aa12f6ad5e5094324e0df65941bc63d611451
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011902"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026691"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>一括インポート中の NULL の保持または既定値の使用 (SQL Server)
   既定では、データをテーブルにインポートするとき、 **bcp** コマンドと BULK INSERT ステートメントによって、テーブルの列に対して定義されているすべての既定値が監視されます。 たとえば、データ ファイルに NULL フィールドがある場合は、NULL 値の代わりにその列の既定値が読み込まれます。 **bcp** コマンドと BULK INSERT ステートメントの両方で、NULL 値を保持することを指定することもできます。  
@@ -89,7 +88,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
   
  詳細については、「[bcp ユーティリティ](../../tools/bcp-utility.md)」と「[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」を参照してください。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  以下の例では、 **bcp** または BULK INSERT を使用して一括インポートを行い、NULL 値を保持します。  
   
  2 番目のテーブル列 **Col2**には、既定値があります。 データ ファイルの対応するフィールドには、空の文字列が含まれています。 既定では、 **bcp** または BULK INSERT を使用して、このデータ ファイルから **MyTestDefaultCol2** テーブルにデータをインポートすると、 **Col2** の既定値が挿入され、以下の結果が生成されます。  
@@ -99,7 +98,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- "" で`NULL`はなく`Default value of Col2`"" を挿入するには、次`-k`の**bcp**と BULK INSERT の例に示すように、switch または keepnull オプションを使用する必要があります。  
+ "" ではなく "" を挿入するに `NULL` `Default value of Col2` は、次の `-k` **bcp**と BULK INSERT の例に示すように、switch または keepnull オプションを使用する必要があります。  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>bcp の使用および NULL 値の保持  
  次の例では、 **bcp** コマンドで NULL 値を保持する方法について説明します。 **Bcp**コマンドには、次のスイッチが含まれています。  
@@ -144,7 +143,7 @@ GO
 > [!NOTE]  
 >  詳細については、「transact-sql [&#41;の &#40;挿入](/sql/t-sql/statements/insert-transact-sql)」、「 [SELECT &#40;transact-sql&#41;](/sql/t-sql/queries/select-transact-sql)」、「 [OPENROWSET &#40;transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)」、および「[テーブルヒント &#40;transact-sql](/sql/t-sql/queries/hints-transact-sql-table)&#41;」を参照してください。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  次の INSERT ... SELECT * FROM OPENROWSET(BULK...) の例では、データを一括インポートし、既定値を保持します。  
   
  この例を実行するには、 **MyTestDefaultCol2** サンプル テーブルと `MyTestEmptyField2-c.Dat` データ ファイルを作成し、 `MyTestDefaultCol2-f-c.Fmt`というフォーマット ファイルを使用する必要があります。 これらのサンプルの作成については、このトピックの前半の「サンプル テーブルとデータ ファイル」を参照してください。  

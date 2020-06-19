@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: d03ce811c860b976d891dd096ec8e0a7d5507d3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 040bb8a2558cc57b1b99a3ce984bec3c8925bc0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176632"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062986"
 ---
 # <a name="polygon"></a>多角形
-  は`Polygon` 、外部境界リングと0個以上の内部リングを定義する一連の点として格納される2次元サーフェイスです。
+  は、 `Polygon` 外部境界リングと0個以上の内部リングを定義する一連の点として格納される2次元サーフェイスです。
 
 ## <a name="polygon-instances"></a>Polygon インスタンス
  `Polygon` インスタンスは、3 つ以上の異なる点を持つリングで形成され、 `Polygon` インスタンスは空にすることもできます。

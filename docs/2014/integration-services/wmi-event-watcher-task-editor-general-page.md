@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5813279b-52ca-4232-8826-38001467d9bd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bf462fc9084468b3a76b7c6bd61f07a16ae4f466
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a6ae5036e64f4d9dd103d8d3cd78d70a2b98b40
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054348"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972392"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>[WMI イベント監視タスク エディター] ([全般] ページ)
   **[WMI イベント監視タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、WMI イベント監視タスクに名前を付けて説明を記述することができます。  

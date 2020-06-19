@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e80d5790f78c83a8a1ff3059e12e0946e206c060
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a6503caec3f153878e360ee29ce09a5c099ade5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064529"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブの作成
-  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]また[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、でマスターエージェントジョブを作成する方法について説明します。  
+  このトピック [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、またはを使用して、でマスターエージェントジョブを作成する方法について説明し [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
   
  
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
@@ -35,7 +34,7 @@ ms.locfileid: "68211455"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  プロキシに関連付けられているステップがある分散ジョブは、ターゲット サーバーのプロキシ アカウントのコンテキストで実行されます。 次の条件を満たしていることを確認してください。満たしていないと、プロキシに関連付けられているジョブ ステップがマスター サーバーから対象サーバーにダウンロードされません。  
   
--   レジストリサブキー **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<*instance_name*> \ SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) が 1 (true) に設定されています。 既定では、この値は 0 (false) に設定されます。  
+-   レジストリサブキー **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\ < *instance_name*> \ SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) が 1 (true) に設定されています。 既定では、この値は 0 (false) に設定されます。  
   
 -   ジョブ ステップを実行するマスター サーバー プロキシ アカウントと同じ名前を持つターゲット サーバーにプロキシ アカウントが存在すること。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "68211455"
     GO  
     ```  
   
- 詳細については次を参照してください:  
+ 詳細については、次を参照してください。  
   
 -   [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   

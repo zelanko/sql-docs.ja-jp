@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 729cf43a76ea9874e2fc04a8425866d8969e90ff
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c421a21210dda44f48512ecc2475b8d84fa8fdfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703878"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063444"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>ブロックの挿入 Transact-SQL スニペットの挿入
   ブロックの挿入スニペットは、BEGIN、IF、または WHILE ブロックで一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを囲むときに出発点として使用できるテンプレートです。  
