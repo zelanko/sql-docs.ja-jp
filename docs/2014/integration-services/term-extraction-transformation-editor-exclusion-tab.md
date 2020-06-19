@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b1032a0fc11ab07069309b7053e756d28329b77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5539544afba4e2752baaefb2324b33d3ac897b0a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055231"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962242"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>[用語抽出変換エディター] ([除外] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[除外]** タブを使用すると、除外テーブルへの接続を設定し、除外用語が含まれている列を指定できます。  
@@ -33,7 +32,7 @@ ms.locfileid: "66055231"
  **OLE DB 接続マネージャー**  
  既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
- **新しい**  
+ **[新規作成]**  
  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、データベースへの新しい接続を作成します。  
   
  **テーブルまたはビュー**  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96eea051fbf4a34257d61ff8eaf4f796debf49a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786737"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936013"
 ---
 # <a name="collations-and-code-pages"></a>照合順序とコード ページ
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] には、メモリ最適化テーブルの (var)char 型の列のサポートされているコード ページと、インデックスおよびネイティブ コンパイル ストアド プロシージャで使用されるサポートされている照合順序に関して制限事項があります。  
@@ -82,7 +81,7 @@ GO
   
 -   ネイティブ コンパイル ストアド プロシージャ内のすべての式および並べ替え操作で BIN2 照合順序を使用する必要があります。 これは、すべての比較および並べ替え操作が文字の Unicode コード ポイント (バイナリ表現) に基づいていることを表します。 たとえば、すべての並べ替えで大文字と小文字が区別されます ("Z" が "a" より前に来ます)。 必要に応じて、解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] を使用して、大文字と小文字が区別されない並べ替えと比較を行います。  
   
--   ネイティブ コンパイル ストアド プロシージャ内では、UTF-16 データの切り捨てはサポートされません。 つまり *、照合*順序に _SC プロパティがある場合 *、n (* < var) char (*n*) 値を型 n (var) char (*i*) に変換することはできません。 たとえば、次の操作はサポートされません。  
+-   ネイティブ コンパイル ストアド プロシージャ内では、UTF-16 データの切り捨てはサポートされません。 つまり、照合順序に _SC プロパティがある場合 *、n (* var) char (*n*) 値を型 n (var) char (*i*) に変換することはできません  <  *n*。 たとえば、次の操作はサポートされません。  
   
     ```sql  
     -- column definition using an _SC collation  

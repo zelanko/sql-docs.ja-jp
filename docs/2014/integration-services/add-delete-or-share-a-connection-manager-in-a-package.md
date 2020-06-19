@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b7d92800a2f5d55cf85ace3e7746d934b7474b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c132bc1715292a1dbd88d84813cefb3ca8616a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926223"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>パッケージの接続マネージャーを追加、削除、または共有する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、リレーショナル データベース、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース、CSV 形式のファイル、XML 形式のファイルなど、さまざまなデータ ソースに接続するための各種接続マネージャーがあります。 接続マネージャーは、パッケージ レベルまたはプロジェクト レベルで作成できます。 プロジェクト レベルで作成した接続マネージャーは、プロジェクト内のすべてのパッケージで使用できます。 一方、パッケージ レベルで作成した接続マネージャーは、特定のパッケージでのみ使用できます。  
@@ -62,7 +61,7 @@ ms.locfileid: "66062008"
   
     -   パッケージに追加する接続マネージャーの種類をクリックします。  
   
-         \- または -  
+         または  
   
     -   追加する種類が一覧にない場合は、 **[新しい接続]** をクリックして **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開き、接続マネージャーの種類を選択してから **[OK]** をクリックします。  
   
@@ -129,7 +128,7 @@ ms.locfileid: "66062008"
 4.  必要に応じて、 **[ソリューション マネージャー]** ウィンドウの **[接続マネージャー]** ノードまたは **[SSIS デザイナー]** ウィンドウの **[接続マネージャー]** タブで接続マネージャーを右クリックし、 **[名前の変更]** をクリックして、接続マネージャーの既定の名前を変更します。  
   
     > [!NOTE]  
-    >  [ **SSIS デザイナー** ] ウィンドウの [**接続マネージャー** ] タブでは、接続マネージャーの名前から **(プロジェクト)** プレフィックスを上書きすることはできません。 これは仕様です。  
+    >  [ **SSIS デザイナー** ] ウィンドウの [**接続マネージャー** ] タブでは、接続マネージャーの名前から **(プロジェクト)** プレフィックスを上書きすることはできません。 これは仕様に基づく制限事項です。  
   
 ##  <a name="to-create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a>接続マネージャープロパティのパラメーターを作成するには  
   

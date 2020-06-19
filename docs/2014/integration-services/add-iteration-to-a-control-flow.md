@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b96f5f900e8c1a3adf136c7bdaf1b89f297e4921
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 671073193853d35f1d66f815b5952ab69e978bf9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061979"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926063"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>制御フローに繰り返しを追加する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には For ループ コンテナーが含まれています。For ループ コンテナーとは制御フローの要素で、これを使用すると、条件に応じてパッケージ内の制御フローを繰り返すループを、簡単に含めることができます。 詳細については、「 [For ループ コンテナー](control-flow/for-loop-container.md)に評価されるまでそのワークフローを繰り返します。  
@@ -38,7 +37,7 @@ ms.locfileid: "66061979"
   
  式には変数を含めることができます。 変数を使用する利点は実行時に更新できるので、パッケージの管理がより柔軟かつ容易になることです。 式の最大長は 4,000 文字です。  
   
- 式の内部で変数を指定する場合、変数名をアット マーク (@) で始める必要があります。 たとえば、という名前`Counter`の変数につい@Counterては、for ループコンテナーが使用する式にを入力します。 変数の名前空間のプロパティを含める場合は、変数と名前空間を角かっこで囲む必要があります。 たとえば、 `Counter` `MyNamespace`名前空間の変数の場合は、「[@MyNamespace::Counter]」と入力します。  
+ 式の内部で変数を指定する場合、変数名をアット マーク (@) で始める必要があります。 たとえば、という名前の変数については、 `Counter` @Counter for ループコンテナーが使用する式にを入力します。 変数の名前空間のプロパティを含める場合は、変数と名前空間を角かっこで囲む必要があります。 たとえば、名前空間の変数の場合は `Counter` `MyNamespace` 、「[]」と入力 @MyNamespace::Counter します。  
   
  For ループ コンテナーが使用する変数は、For ループ コンテナーのスコープ、またはパッケージ コンテナー階層において上位層にある任意のコンテナーのスコープ内で定義する必要があります。 たとえば、For ループ コンテナーは、それ自体のスコープ内で定義された変数と、パッケージ スコープ内で定義された変数を使用できます。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)」をご覧ください。  
   

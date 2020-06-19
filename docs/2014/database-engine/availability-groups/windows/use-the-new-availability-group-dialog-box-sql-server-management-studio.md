@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee729f9f2bdd0044f2897a06e93f00b7b37ca785
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d94a1eff298dd200275fec49519a51c4aeb96997
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783137"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936253"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>[新しい可用性グループ] ダイアログ ボックスの使用 (SQL Server Management Studio)
   このトピックでは、 **の** [新しい可用性グループ] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用して、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] が有効な [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
@@ -32,7 +31,7 @@ ms.locfileid: "72783137"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  可用性グループを初めて作成する場合は、あらかじめこのセクションに目を通しておくことを強くお勧めします。  
   
-###  <a name="prerequisites"></a><a name="PrerequisitesRestrictions"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="PrerequisitesRestrictions"></a> 必要条件  
   
 -   可用性グループを作成する前に、可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスが同じ Windows Server フェールオーバー クラスタリング (WSFC) フェールオーバー クラスター内の別の WSFC ノードに存在していることを確認します。 さらに、各サーバー インスタンスで [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] が有効であり、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に関するその他の前提条件がすべて満たされていることを確認します。 詳細については、「[AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)」をお読みいただくことを強くお勧めします。  
   
@@ -160,5 +159,5 @@ ms.locfileid: "72783137"
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [データベースミラーリングエンドポイント &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [可用性グループリスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [AlwaysOn 可用性グループ &#40;SQL Server の前提条件、制限事項、推奨事項&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  

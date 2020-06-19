@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9dcca4d-f1a0-45ec-b078-f4d372589baf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 910de9d388e60ae3664153e2f6cb3bb5203b289c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b81223d0ecfc27ce249e80bfde350336cae2f1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055781"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963252"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>プロジェクトを配置した後にパラメーターの値を設定する
   配置ウィザードを使用すると、プロジェクトをカタログに配置するときにサーバーの既定のパラメーター値を設定できます。 プロジェクトをカタログに配置した後、SQL Server Management Studio (SSMS) オブジェクト エクスプローラーまたは Transact-SQL を使用して、サーバーの既定値を設定できます。  

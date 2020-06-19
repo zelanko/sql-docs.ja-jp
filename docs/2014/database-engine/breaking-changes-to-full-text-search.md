@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9a223060768c35b2daf00837153e59218ff1c50e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 260b1a303685ad9247154504400ef1519ecaa219
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001022"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936123"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>フルテキスト検索の重大な変更
   このトピックでは、フルテキスト検索の重要な変更について説明します。 これらの変更によって、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に基づくアプリケーション、スクリプト、または機能が使用できなくなる場合があります。 この問題は、アップグレードするときに発生することがあります。 詳細については、「 [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)」を参照してください。  
@@ -36,7 +35,7 @@ ms.locfileid: "83001022"
 ## <a name="breaking-changes-in-full-text-search-in-sql-server-2008"></a>SQL Server 2008 におけるフルテキスト検索の重大な変更  
  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] と [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 以降のバージョン間のフルテキスト検索に、次の重大な変更が適用されています。  
   
-|特徴|シナリオ|SQL Server 2005|SQL Server 2008 以降のバージョン|  
+|機能|シナリオ|SQL Server 2005|SQL Server 2008 以降のバージョン|  
 |-------------|--------------|---------------------|----------------------------------------|  
 |ユーザー定義型 (Udt) を使用した[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|フルテキスト キーが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーザー定義型である (たとえば、`MyType = char(1)`)。|ユーザー定義型に割り当てられた型のキーが返されます。<br /><br /> この例では、 **char (1)** です。|ユーザー定義型のキーが返されます。 この例では、 **MyType**になります。|  
 |*top_n_by_rank*パラメーター (CONTAINSTABLE ステートメントと[FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント)|パラメーターとして0を使用してクエリを*top_n_by_rank*します。|ゼロより大きな値を使用するよう通知するエラー メッセージが表示されて処理が失敗します。|処理が成功し、ゼロ行を返します。|  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3d9d2270603c3f38189478ccaaf48510085907f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d6dc089acb1d15491817d8876dee82951e4495d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061688"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925893"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>[ADO NET 変換元エディター] ([接続マネージャー] ページ)
   **[ADO NET 変換元エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換元の [!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
@@ -36,7 +35,7 @@ ms.locfileid: "66061688"
  **ADO.NET 接続マネージャー**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
- **新しい**  
+ **[新規作成]**  
  **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
   
  **データアクセスモード**  
@@ -47,11 +46,11 @@ ms.locfileid: "66061688"
 |[テーブルまたはビュー]|[!INCLUDE[vstecado](../includes/vstecado-md.md)] データ ソースのテーブルまたはビューからデータを取得します。|  
 |[SQL コマンド]|SQL クエリを使用して、 [!INCLUDE[vstecado](../includes/vstecado-md.md)] データ ソースからデータを取得します。|  
   
- **［プレビュー］**  
+ **プレビュー**  
  **[データ ビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 **プレビュー** では、最大で 200 行を表示できます。  
   
 > [!NOTE]  
->  データをプレビューするときに、CLR ユーザー定義型を含む列にはデータが表示されません。 その代わりに、\<値が大きすぎて表示できません> または System.Byte[] が値として表示されます。 前者は、 [!INCLUDE[vstecado](../includes/vstecado-md.md)] プロバイダーを使用してデータ ソースにアクセスする場合に表示されます。後者は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client プロバイダーを使用している場合に表示されます。  
+>  データをプレビューするときに、CLR ユーザー定義型を含む列にはデータが表示されません。 代わりに、値 \<value too big to display> または system.string [] が表示されます。 前者は、 [!INCLUDE[vstecado](../includes/vstecado-md.md)] プロバイダーを使用してデータ ソースにアクセスする場合に表示されます。後者は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client プロバイダーを使用している場合に表示されます。  
   
 ## <a name="data-access-mode-dynamic-options"></a>データ アクセス モードの動的オプション  
   

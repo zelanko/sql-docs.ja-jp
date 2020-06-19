@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70227f556ae268144549616dab0895e70ff39de8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c88bc60b4aeab12b3c55d23d1fe7b2b033a962f0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228739"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936293"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>可用性グループ ウィザードの使用 (SQL Server Management Studio)
   このトピックでは、"新しい可用性グループ" ウィザード ( [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) を使用して、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]で AlwaysOn 可用性グループを作成および構成する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
@@ -116,13 +115,13 @@ ms.locfileid: "75228739"
     |タブ|簡単な説明|  
     |---------|-----------------------|  
     |**レプリカ**|このタブを使用して、セカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスを指定します。 現在接続しているサーバー インスタンスでプライマリ レプリカをホストする必要があることに注意してください。|  
-    |**エンドポイント**|このタブを使用して、既存の任意のデータベース ミラーリング エンドポイントを検証します。また、サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合は、エンドポイントを自動的に作成します。 **注:** ドメイン以外のユーザーアカウントで実行されているサーバーインスタンスがある場合は、ウィザードを続行する前に、サーバーインスタンスに手動で変更を加える必要があります。 詳細については、このトピックの「 [前提条件](#PrerequisitesRestrictions)」をご覧ください。|  
+    |**EndPoints**|このタブを使用して、既存の任意のデータベース ミラーリング エンドポイントを検証します。また、サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合は、エンドポイントを自動的に作成します。 **注:** ドメイン以外のユーザーアカウントで実行されているサーバーインスタンスがある場合は、ウィザードを続行する前に、サーバーインスタンスに手動で変更を加える必要があります。 詳細については、このトピックの「 [前提条件](#PrerequisitesRestrictions)」をご覧ください。|  
     |**バックアップの設定**|このタブを使用して、可用性グループ全体についてバックアップの設定を指定し、各可用性レプリカのバックアップ優先順位を指定します。|  
     |**リスナー**|このタブを使用して、可用性グループ リスナーを作成します。 既定では、ウィザードによってリスナーは作成されません。|  
   
 8.  **[最初のデータの同期を選択]** ページで、新しいセカンダリ データベースを作成して可用性グループに参加させる方法を選択します。 次のいずれかのオプションを選択します。  
   
-    -   **[完全]**  
+    -   **完全**  
   
          使用している環境が、初期データの同期を自動的に開始するための要件を満たす場合は、このオプションを選択します (詳細については、このトピックの「 [前提条件、制限事項、および推奨事項](#PrerequisitesRestrictions)」をご覧ください)。  
   
@@ -202,7 +201,7 @@ ms.locfileid: "75228739"
   
      [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
--   **ビデオ**  
+-   **ビデオ:**  
   
      [Microsoft SQL Server コード ネーム "Denali" AlwaysOn シリーズ パート 1: 次世代の高可用性ソリューションの概要](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

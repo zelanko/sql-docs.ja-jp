@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5723ba6fcbcd8e5b2280fc977aa5f405d461b805
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061600"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925563"
 ---
 # <a name="analysis-of-data-flow"></a>データ フローの分析
-  [Execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB`データベースビューを使用すると、パッケージのデータフローを分析できます。 このビューは、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行表示します。 この情報を使用して、各コンポーネントに送信される行をより詳しく理解できます。  
+  [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` データベースビューを使用すると、パッケージのデータフローを分析できます。 このビューは、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行表示します。 この情報を使用して、各コンポーネントに送信される行をより詳しく理解できます。  
   
 > [!NOTE]  
 >  catalog.execution_data_statistics ビューに関する情報を取得するために、ログ レベルは **詳細** に設定する必要があります。  

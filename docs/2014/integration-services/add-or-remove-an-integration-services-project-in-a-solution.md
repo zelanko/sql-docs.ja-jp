@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9986384801788f907f42588ee298ba531fd13f95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d338cac89b7b6c8f2588817cfd6718d4f415589
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061836"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925967"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>ソリューション内の Integration Services プロジェクトを追加または削除する
   ソリューション内の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを追加または削除する手順を次に示します。  
   
- プロジェクトを既存のソリューションに追加したり、既存のソリューションから削除したりできるのは、そのソリューションが [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で表示されている場合のみです。 [!INCLUDE[msCoName](../includes/msconame-md.md)]で[!INCLUDE[vsprvs](../includes/vsprvs-md.md)][**常にソリューションを表示**] オプションを選択[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]した場合、ソリューションに含まれるプロジェクトが1つしかない場合でも、によってソリューションが表示されます。 このオプションを選択していない場合は、ソリューションに 2 つ以上のプロジェクトが含まれているときに限り、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] でソリューションが表示されます。 その他のプロジェクトは、[!INCLUDE[ssIS](../includes/ssis-md.md)] プロジェクトでも他の種類のプロジェクトでもかまいません。  
+ プロジェクトを既存のソリューションに追加したり、既存のソリューションから削除したりできるのは、そのソリューションが [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で表示されている場合のみです。 で [**常にソリューションを表示**] オプションを選択した場合 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ソリューションに含まれるプロジェクトが1つしかない場合でも、によってソリューションが表示されます。 このオプションを選択していない場合は、ソリューションに 2 つ以上のプロジェクトが含まれているときに限り、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] でソリューションが表示されます。 その他のプロジェクトは、[!INCLUDE[ssIS](../includes/ssis-md.md)] プロジェクトでも他の種類のプロジェクトでもかまいません。  
   
 ## <a name="adding-an-integration-services-project"></a>Integration Services プロジェクトの追加  
  プロジェクトを追加する場合は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で新しい空のプロジェクトを作成することも、別のソリューション用に既に作成したプロジェクトを追加することもできます。 プロジェクトを既存のソリューションに追加できるのは、そのソリューションが [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で表示されている場合のみです。  

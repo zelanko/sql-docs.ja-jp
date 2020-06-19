@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d0606e2a3f5480b27e27a4a585562f4b289b640
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813680"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935974"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask サーバー構成オプション
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 と Windows Server 2003 では、マルチタスク処理を実行するために、プロセス スレッドを異なるプロセッサ間で移動させることがあります。 オペレーティング システムにとっては効率的であっても、このアクティビティで各プロセッサのキャッシュに繰り返しデータが再読み込みされるため、システムの負荷が高くなり、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが低下する場合があります。 このような状況では、特定のスレッドにプロセッサを割り当てることで、プロセッサの再読み込みを回避してパフォーマンスを向上できます。このようなスレッドとプロセッサ間の関連付けを "プロセッサ関係 (processor affinity)" と言います。  
@@ -58,7 +57,7 @@ ms.locfileid: "62813680"
   
 -   **affinity I/O mask** オプションで 0、 **affinity mask** オプションで 1。  
   
- **affinity I/O mask** オプションは拡張オプションです。 `sp_configure`システムストアドプロシージャを使用して設定を変更する場合は、 **show advanced options**が1に設定されている場合にのみ、 **affinity i/o mask**を変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**affinity I/O mask** オプションを再構成した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを再起動する必要があります。  
+ **affinity I/O mask** オプションは拡張オプションです。 システムストアドプロシージャを使用して設定を変更する場合は `sp_configure` 、 **show advanced options**が1に設定されている場合にのみ、 **affinity i/o mask**を変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**affinity I/O mask[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オプションを再構成した場合、** のインスタンスを再起動する必要があります。  
   
 > [!CAUTION]  
 >  Windows オペレーティング システムでの CPU 関係の構成と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]での関係マスクの構成は、同時に行わないようにしてください。 この 2 つの設定は、同じ効果をねらったものであり、これらの構成間に一貫性がない場合は、予期しない結果を招く可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 関係を構成する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の `sp_configure` オプションを使用する方法が最適です。  

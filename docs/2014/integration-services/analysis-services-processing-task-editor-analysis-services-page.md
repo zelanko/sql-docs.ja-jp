@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ae832263c3a025f53989761541e3278f5ea6a60
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890367"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925583"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>[Analysis Services 処理タスク エディター] ([Analysis Services] ページ)
   **[Analysis Services 処理タスク エディター]** ダイアログ ボックスの **[Analysis Services]** ページを使用すると、Analysis Services 接続マネージャーの指定、処理する分析オブジェクトの選択、処理およびエラー処理オプションの設定を行うことができます。  
@@ -40,7 +39,7 @@ ms.locfileid: "68890367"
  **Analysis Services 接続マネージャー**  
  既存の Analysis Services 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   
- **新しい**  
+ **[新規作成]**  
  新しい Analysis Services 接続マネージャーを作成します。  
   
  **関連トピック:** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md)、 [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
@@ -56,7 +55,7 @@ ms.locfileid: "68890367"
  **追加**  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトを一覧に追加します。  
   
- **Remove**  
+ **削除**  
  オブジェクトを選択し、 **[削除]** をクリックします。  
   
  **[影響分析]**  

@@ -16,26 +16,25 @@ helpviewer_keywords:
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b67e2308c95db109c89bd2c3ff61f311e83fb898
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62878284"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962617"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS チュートリアル:簡単な ETL パッケージの作成
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SSIS) は、データウェアハウスの抽出、変換、読み込み (ETL) パッケージを含む、高パフォーマンスのデータ統合ソリューションを構築するためのプラットフォーム[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]です。 SSIS には、パッケージを作成およびデバッグするためのグラフィカルなツールやウィザード、FTP 操作などのワークフロー機能の実行、SQL ステートメントの実行、および電子メール メッセージの送信を実行するためのタスク、データの抽出や読み込みに使用するデータの変換元と変換先、データのクリーニング、集計、マージ、コピーを行う変換、パッケージの実行と保存を管理するための [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービス、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクト モデルをプログラミングするための API (アプリケーション プログラミング インターフェイス) が用意されています。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) は、データウェアハウスの抽出、変換、読み込み (ETL) パッケージを含む、高パフォーマンスのデータ統合ソリューションを構築するためのプラットフォームです。 SSIS には、パッケージを作成およびデバッグするためのグラフィカルなツールやウィザード、FTP 操作などのワークフロー機能の実行、SQL ステートメントの実行、および電子メール メッセージの送信を実行するためのタスク、データの抽出や読み込みに使用するデータの変換元と変換先、データのクリーニング、集計、マージ、コピーを行う変換、パッケージの実行と保存を管理するための [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービス、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクト モデルをプログラミングするための API (アプリケーション プログラミング インターフェイス) が用意されています。  
   
- このチュートリアルでは、デザイナーを[!INCLUDE[ssIS](../includes/ssis-md.md)]使用して簡単な[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージを作成する方法について説明します。 作成するパッケージは、フラット ファイルからデータを取得し、そのデータを変換した後で、ファクト テーブルに挿入します。 以降のレッスンでは、このパッケージを拡張して、ループ、パッケージ構成、ログ記録、およびエラー フローについて学習します。  
+ このチュートリアルでは、デザイナーを使用して [!INCLUDE[ssIS](../includes/ssis-md.md)] 簡単なパッケージを作成する方法について説明し [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ます。 作成するパッケージは、フラット ファイルからデータを取得し、そのデータを変換した後で、ファクト テーブルに挿入します。 以降のレッスンでは、このパッケージを拡張して、ループ、パッケージ構成、ログ記録、およびエラー フローについて学習します。  
   
  チュートリアルで使用するサンプル データをインストールすると、チュートリアルの各レッスンで作成するパッケージの完了した状態のバージョンもインストールされます。 完了した状態のパッケージを使用すれば、手順をとばし、後のレッスンからチュートリアルを開始することができます。 パッケージまたは新しい開発環境を初めて使用する場合は、レッスン 1 から開始することをお勧めします。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]使用できる新しいツール、コントロール、および機能について理解を深めるには、それらを使用することをお勧めします。 このチュートリアルでは、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用して、ループ、構成、エラー フロー ロジック、およびログの記録を含む簡単な ETL パッケージを作成します。  
+ で使用できる新しいツール、コントロール、および機能について理解を深めるには、それらを使用することをお勧めし [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ます。 このチュートリアルでは、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用して、ループ、構成、エラー フロー ロジック、およびログの記録を含む簡単な ETL パッケージを作成します。  
   
 ## <a name="requirements"></a>要件  
- このチュートリアルは、データベースの基本的な操作に慣れているユーザーを対象としていますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]で利用できる新機能にはあまり影響を与えません。  
+ このチュートリアルは、データベースの基本的な操作に慣れているユーザーを対象としていますが、で利用できる新機能にはあまり影響を与えません [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。  
   
  このチュートリアルを使用するには、システムに次のコンポーネントがインストールされている必要があります。  
   

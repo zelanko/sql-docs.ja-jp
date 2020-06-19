@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 3a8ad546-0f58-4b31-ab56-58d6313b1098
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c40ec2d7da7dc8f46644632d29b6fb8d1101ff9b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29e57da658b97d4ed3d9867dfee51644f0af9ddc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055636"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963162"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>Integration Services サービスのプロパティを設定する
     
 > [!IMPORTANT]  
 >  このトピックでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスについて説明します。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] では、以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]との互換性を維持するために、このサービスをサポートしています。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以降では、Integration Services サーバー上のパッケージなどのオブジェクトを管理できます。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]でパッケージを管理および監視します。 を最初にインストール[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]すると[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 、サービスが開始され、サービスのスタートアップの種類が [自動] に設定されます。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]でパッケージを管理および監視します。 を最初にインストールすると [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが開始され、サービスのスタートアップの種類が [自動] に設定されます。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスをインストールしたら、SQL Server 構成マネージャーまたはサービス MMC スナップインを使用してサービスのプロパティを設定できます。  
   

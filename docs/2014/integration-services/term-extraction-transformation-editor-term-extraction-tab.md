@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c305b7d-a231-4d03-a09f-8e2d6564fa76
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 37d09aa75c3f6c5dd61b257056127ca76b410487
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ba82ed1dac3cf992ca181e5795b33721eca4d86
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055134"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962222"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>[用語抽出変換エディター] ([用語抽出] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[用語抽出]** タブを使用すると、抽出するテキストを含むテキスト列を指定できます。  
@@ -33,7 +32,7 @@ ms.locfileid: "66055134"
  **用語**  
  抽出された用語を格納する出力列の名前を指定します。  
   
- **スコア**  
+ **Score**  
  抽出されたそれぞれの用語のスコアを格納する出力列の名前を指定します。  
   
  **[エラー出力の構成]**  

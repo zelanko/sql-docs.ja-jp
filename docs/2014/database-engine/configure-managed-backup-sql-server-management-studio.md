@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8e7e02f844df026c597e93e43ebee7f8e786a72
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: e952ef1102ac67bd0ed9f72d0c201d54b320b5ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849440"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935993"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>マネージド バックアップの構成 (SQL Server Management Studio)
   [**マネージバックアップ**] ダイアログボックスでは、 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] インスタンスの既定値を構成できます。 このトピックでは、インスタンスに使用する [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] の既定の設定をこのダイアログで構成する方法とその際に考慮する必要のあるオプションについて説明します。 インスタンスに対して [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を構成すると、それ以降に作成された新しいデータベースにその設定が適用されます。  
@@ -69,7 +68,7 @@ ms.locfileid: "82849440"
   
  Azure ストレージアカウントの**ストレージ URL** 、ストレージアカウントの認証情報を格納する SQL 資格情報、およびバックアップファイルの保有期間を指定します。  
   
- ストレージ URL の形式は次のとおりです: https:// \< storageaccount>. blob.core.windows.net/  
+ ストレージ URL の形式は次のとおりです: https:// \<StorageAccount> . blob.core.windows.net/  
   
  インスタンスレベルで暗号化設定を設定するには、[**バックアップの暗号化**] オプションをオンにし、暗号化に使用するアルゴリズムと証明書または非対称キーを指定します。  この設定がインスタンス レベルで設定され、この構成の適用後、新しく作成されたすべてのデータベースに使用されます。  
   

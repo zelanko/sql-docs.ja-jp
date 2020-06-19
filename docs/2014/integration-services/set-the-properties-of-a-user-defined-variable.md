@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aadfb7b53d22a00bf14699f611f20ce508a7ab5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53eeb46b5ce23a8976c9de1aaace7959bc708a84
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055652"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963083"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>ユーザー定義変数のプロパティを設定する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]でユーザー定義変数のプロパティを設定するには、次の機能のいずれかを使用します。  
@@ -34,21 +33,21 @@ ms.locfileid: "66055652"
   
  **[プロパティ]** ウィンドウを使用してユーザー定義変数に式を設定する場合:  
   
--   変数の値は、Value プロパティまたは Expression プロパティによって設定できます。 既定では、EvaluateAsExpression プロパティはに`False`設定され、変数の値は value プロパティによって設定されます。 式を使用して値を設定するには、最初に EvaluateAsExpression `True`をに設定してから、[式] プロパティに式を指定する必要があります。 Value プロパティには、自動的に式の評価結果が設定されます。  
+-   変数の値は、Value プロパティまたは Expression プロパティによって設定できます。 既定では、EvaluateAsExpression プロパティはに設定され、 `False` 変数の値は value プロパティによって設定されます。 式を使用して値を設定するには、最初に EvaluateAsExpression をに設定し `True` てから、[式] プロパティに式を指定する必要があります。 Value プロパティには、自動的に式の評価結果が設定されます。  
   
--   ValueType プロパティには、Value プロパティの値のデータ型が含まれます。 Value が式によって設定される場合、ValueType は、式の評価結果と互換性があるデータ型に自動的に更新されます。 たとえば、値に0が含まれ、ValueType プロパティに**Int32**が含まれている場合、EXPRESSION を GETDATE () に設定すると、value には現在`DateTime`の日付と時刻が含まれ、ValueType はに設定されます。  
+-   ValueType プロパティには、Value プロパティの値のデータ型が含まれます。 Value が式によって設定される場合、ValueType は、式の評価結果と互換性があるデータ型に自動的に更新されます。 たとえば、値に0が含まれ、ValueType プロパティに**Int32**が含まれている場合、EXPRESSION を GETDATE () に設定すると、value には現在の日付と時刻が含まれ、ValueType はに設定され `DateTime` ます。  
   
 -   変数の **[プロパティ]** ウィンドウからは **[式ビルダー]** ダイアログ ボックスを開くことができます。 このツールを使用すると、式の作成、検証、および評価を行うことができます。 詳しくは、「[式ビルダー](expressions/expression-builder.md)」と「[Integration Services &#40;SSIS&#41; の式](expressions/integration-services-ssis-expressions.md)」をご覧ください。  
   
  **[変数]** ウィンドウを使用してユーザー定義変数に式を設定する場合:  
   
--   式を使用して変数の値を設定するには、まず、変数のデータ型が式の評価結果と互換性があることを確認し`Expression`てから、[**変数**] ウィンドウの列に式を指定します。 [**プロパティ**] ウィンドウの EvaluateAsExpression プロパティが自動的にに`True`設定されます。  
+-   式を使用して変数の値を設定するには、まず、変数のデータ型が式の評価結果と互換性があることを確認してから `Expression` 、[**変数**] ウィンドウの列に式を指定します。 [**プロパティ**] ウィンドウの EvaluateAsExpression プロパティが自動的にに設定され `True` ます。  
   
 -   変数に式を割り当てると、変数の横に特別なアイコン マーカーが表示されます。 この特別なアイコン マーカーは、式が設定されている接続マネージャーおよびタスクの横にも表示されます。  
   
 -   変数の **[変数]** ウィンドウからは **[式ビルダー]** ダイアログ ボックスを開くことができます。 このツールを使用すると、式の作成、検証、および評価を行うことができます。 詳しくは、「[式ビルダー](expressions/expression-builder.md)」と「[Integration Services &#40;SSIS&#41; の式](expressions/integration-services-ssis-expressions.md)」をご覧ください。  
   
- [**変数**] ウィンドウと [**プロパティ**] ウィンドウの両方で、変数に式を割り当て`EvaluateAsExpression` 、がに`True`設定されている場合は、変数のデータ型を変更することはできません。  
+ [**変数**] ウィンドウと [**プロパティ**] ウィンドウの両方で、変数に式を割り当て、がに設定されている場合は、 `EvaluateAsExpression` 変数の `True` データ型を変更することはできません。  
   
  **Namespace プロパティと Name プロパティの設定**  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66055652"
   
 4.  必要に応じて、 **[変数]** ウィンドウで **[グリッドのオプション]** をクリックして、 **[変数]** ウィンドウに表示する列を選択したり、変数の一覧に適用するフィルターを選択したりします。  
   
-5.  一覧で変数を選択し、、、**データ型**、 `Value` `Namespace`、 `Name`、 **Raise Change イベント**、 **Description、** および`Expression` columns の値を更新します。  
+5.  一覧で変数を選択し、、、 `Name` **データ型**、 `Value` 、、 `Namespace` **Raise Change イベント**、 **Description、** および columns の値を更新し `Expression` ます。  
   
 6.  一覧で変数を選択し、 **[変数の移動]** をクリックしてスコープを変更します。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4ce0072bcd6642dcb4f3ac63e04c98786bd550e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788729"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936281"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>AlwaysOn ダッシュボードの使用 (SQL Server Management Studio)
   データベース管理者は AlwaysOn ダッシュボードを使用して、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースの正常性をひとめで確認できるビューを取得します。 AlwaysOn ダッシュボードの一般的な用途を次に示します。  
@@ -88,7 +87,7 @@ ms.locfileid: "62788729"
  **フェールオーバー モード**  
  レプリカの構成で指定されているフェールオーバー モードを表示します。 フェールオーバー モードとして有効な値は、次のとおりです。  
   
--   **自動**。 1 つまたは複数のレプリカが自動フェールオーバー モードであることを示します。  
+-   **[自動]** 。 1 つまたは複数のレプリカが自動フェールオーバー モードであることを示します。  
   
 -   **手動**。 自動フェールオーバー モードのレプリカがないことを示します。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "62788729"
  **フェールオーバーモード**  
  レプリカの構成で指定されているフェールオーバー モードを表示します。 フェールオーバー モードとして有効な値は、次のとおりです。  
   
--   **自動**。 1 つまたは複数のレプリカが自動フェールオーバー モードであることを示します。  
+-   **[自動]** 。 1 つまたは複数のレプリカが自動フェールオーバー モードであることを示します。  
   
 -   **手動**。 自動フェールオーバー モードのレプリカがないことを示します。  
   
@@ -123,13 +122,13 @@ ms.locfileid: "62788729"
  **名前**  
  可用性レプリカをホストするサーバー インスタンスの名前。 この列は既定で表示されます。  
   
- **Role**  
+ **ロール**  
  可用性レプリカの現在のロール ( **[プライマリ]** または **[セカンダリ]**) を示します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のロールについては、「[AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)」を参照してください。 この列は既定で表示されます。  
   
  **フェールオーバー モード**  
  レプリカの構成で指定されているフェールオーバー モードを表示します。 フェールオーバー モードとして有効な値は、次のとおりです。  
   
--   **自動**。 1 つまたは複数のレプリカが自動フェールオーバー モードであることを示します。  
+-   **[自動]** 。 1 つまたは複数のレプリカが自動フェールオーバー モードであることを示します。  
   
 -   **手動**。 自動フェールオーバー モードのレプリカがないことを示します。  
   
