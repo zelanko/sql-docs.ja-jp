@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd7d4696015110fc2df11bea87f045580424c361
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962952"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO 接続マネージャー エディター
   **[SMO 接続マネージャー エディター]** を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトを転送するさまざまなタスクで使用される [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 接続を構成します。  
@@ -30,10 +29,10 @@ ms.locfileid: "66055594"
  **サーバー名**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの名前を入力するか、サーバーを一覧から選択します。  
   
- **更新**  
+ **Refresh\(更新\)**  
  ネットワークで検出できる利用可能な [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの一覧を更新します。  
   
- **Windows 認証を使用する**  
+ **[Windows 認証を使用する]**  
  Windows 認証を使用して、選択されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに接続します。  
   
  **SQL Server 認証を使用する**  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0657a387-8411-4406-bef9-d262a5bfa269
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 052859e4605162daa87789b5c61d2ef9d33d4177
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812586"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936043"
 ---
 # <a name="check-in-files"></a>ファイルのチェックイン
   ファイルのソース管理を行っている場合、修正後のファイルを他のユーザーも利用できるようにするには、そのファイルをソース管理にチェックインする必要があります。 ファイルをチェックインすると、チェックインしたバージョンがソース管理プロバイダーに書き込まれ、そのファイルの最新バージョンになります。  
@@ -50,13 +49,13 @@ ms.locfileid: "62812586"
      **名前**  
      チェックインする項目の名前を表示します。 選択した項目の横にチェックボックスが表示されます。 特定の項目をチェックインしない場合は、そのチェック ボックスをオフにします。  
   
-     **[オプション]**  
+     **Options**  
      ボタンの右側の矢印をクリックすると、ソース管理のプラグインに固有のチェックイン オプションが表示されます。  
   
-     **基づく**  
+     **並べ替え**  
      表示列の順序を並べ替えます。  
   
-     **[ツリー表示]**  
+     **ツリー ビュー**  
      チェックインする項目のフォルダーおよびファイル階層を表示します。  
   
  チェックインしたファイルが共有チェックアウトの一部でない場合、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境ではそのファイルが直ちにチェックインされます。 あるいは、直ちにはチェックインされずに、他のユーザーが作成したバージョンとのマージを要求するダイアログが表示されることもあります。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 103dd8eef782dfa7a4d13929b0b832dba9bc46e0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789821"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936723"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>可用性グループの監視 (Transact-SQL)
   [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して可用性グループ、可用性レプリカ、および関連付けられているデータベースを監視できるように、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] には、一連のカタログ ビュー、動的管理ビュー、およびサーバー プロパティが用意されています。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT ステートメントを使用すると、これらのビューで、可用性グループや、そのレプリカおよびデータベースを監視できます。 特定の可用性グループに対して返される情報は、接続している [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスにプライマリ レプリカとセカンダリ レプリカのどちらがホストされているかによって変わります。  
@@ -80,7 +79,7 @@ ms.locfileid: "62789821"
 > [!NOTE]  
 >  このトピックの「[可用性レプリカの監視](#AvReplicas)」セクションの **sys.dm_hadr_availability_replica_cluster_nodes** と **sys.dm_hadr_availability_replica_cluster_states** 、および「[可用性データベースの監視](#AvDbs)」セクションの **sys.availability_databases_cluster** と **sys.dm_hadr_database_replica_cluster_states** も参照してください。  
   
- WSFC クラスターと[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の詳細については、「 [Windows Server フェールオーバークラスタリング &#40;wsfc&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)および[フェールオーバークラスタリング」および「AlwaysOn 可用性グループ &#40;](failover-clustering-and-always-on-availability-groups-sql-server.md)SQL Server&#41;」を参照してください。  
+ WSFC クラスターとの詳細について [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、「 [Windows Server フェールオーバークラスタリング &#40;wsfc&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)および[フェールオーバークラスタリング」および「AlwaysOn 可用性グループ &#40;](failover-clustering-and-always-on-availability-groups-sql-server.md)SQL Server&#41;」を参照してください。  
   
 ##  <a name="monitoring-availability-groups"></a><a name="AvGroups"></a>可用性グループの監視  
  サーバー インスタンスが可用性レプリカをホストしている可用性グループを監視するには、次のビューを使用します。  
@@ -148,7 +147,7 @@ ms.locfileid: "62789821"
  [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスに、データベースごとに 1 行のデータを保持します。 データベースが可用性レプリカに属している場合は、そのデータベースの行に、レプリカの GUID と、その可用性グループ内のデータベースの一意識別子が表示されます。  
   
- 列名: replica_id、group_database_id ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] **  
+ ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 列名:** replica_id、group_database_id  
   
  [sys.dm_hadr_auto_page_repair](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
  サーバー インスタンスで任意の可用性グループに対してホストされている可用性レプリカの可用性データベースに対するページの自動修復の試行ごとに 1 行のデータを返します。 このビューには、特定のプライマリまたはセカンダリ データベースに対して最近試行されたページの自動修復に対応する行が含まれます (データベースあたり最大 100 行)。 データベースあたりの最大行数に達すると、その後に試行されたページの自動修復の行によって、既存のエントリが置き換えられます。  

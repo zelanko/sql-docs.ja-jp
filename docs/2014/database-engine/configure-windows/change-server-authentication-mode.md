@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bda31ca7d0c5949173a9a3e5ea656c1757c04f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812301"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935863"
 ---
 # <a name="change-server-authentication-mode"></a>サーバーの認証モードの変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、サーバーの認証モードを変更する方法について説明します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] はインストール中に、 **[Windows 認証モード]** または **[SQL Server 認証モードと Windows 認証モード]** のいずれかに設定されます。 インストール後は、認証モードをいつでも変更できます。  
@@ -31,7 +30,7 @@ ms.locfileid: "62812301"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **サーバーの認証モードを変更する方法:**  
   
@@ -58,7 +57,7 @@ ms.locfileid: "62812301"
   
 #### <a name="to-enable-the-sa-login"></a>sa ログインを有効にするには  
   
-1.  オブジェクトエクスプローラーで、[**セキュリティ**]、[ログイン] の順`sa`に展開し、を右クリックして、[**プロパティ**] をクリックします。  
+1.  オブジェクトエクスプローラーで、[**セキュリティ**]、[ログイン] の順に展開し、を右クリックし `sa` て、[**プロパティ**] をクリックします。  
   
 2.  **[全般]** ページで、ログインのパスワード作成と確認が必要になる場合があります。  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d15db702cb196842a5ddba25dbc3fa9cc18df5f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 017a8b10376279af6a8c89dda08452b0f61a9d73
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917148"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970102"
 ---
 # <a name="database-snapshots-sql-server"></a>データベース スナップショット (SQL Server)
   データベース スナップショットは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース ( *ソース データベース*) の読み取り専用の静的ビューです。 データベース スナップショットには、そのスナップショットを作成した時点でのソース データベースに対するトランザクションが反映されています。 データベース スナップショットは、常にそのソース データベースと同じサーバー インスタンス上に存在します。 ソース データベースが更新されると、データベース スナップショットが更新されます。 したがって、データベース スナップショットが長期間にわたって存在するほど、使用可能なディスク領域が使い尽くされる可能性が高くなります。  
@@ -192,7 +191,7 @@ ms.locfileid: "62917148"
     > [!NOTE]  
     >  データベース スナップショットで実行する SELECT ステートメントには、FILESTREAM 列を指定しないようにする必要があります。FILESTREAM 列が含まれていると、次のようなエラー メッセージが返されます。 `Could not continue scan with NOLOCK due to data movement.`  
   
--   読み取り専用スナップショットに関する統計が欠落しているか、古くなっている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、tempdb に一時的な統計を作成して維持します。 詳細については、「[統計](../statistics/statistics.md)」を参照してください。  
+-   読み取り専用スナップショットに関する統計が欠落しているか、古くなっている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、tempdb に一時的な統計を作成して維持します。 詳細については、[統計](../statistics/statistics.md)に関する記事を参照してください。  
   
 ###  <a name="disk-space-requirements"></a><a name="DiskSpace"></a>必要なディスク領域  
  データベース スナップショットはディスク領域を消費します。 データベース スナップショットによってディスク領域が足りなくなった場合、そのデータベース スナップショットは問題ありに設定されるので、削除する必要があります (ただし、ソース データベースは影響を受けず、操作は正常に続行されます)。しかし、データベースの完全なコピーと比較すると、スナップショットでは領域が非常に効率的に使用されます。 スナップショットにとって必要なのは、有効期間中に変化するページを格納する領域だけです。 通常はスナップショットが保持されている時間は限られているので、サイズはそれほど大きな問題ではありません。  

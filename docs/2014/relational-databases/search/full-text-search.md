@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 61faaa7854aa362e7d269cf3f00911470126f42c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49751128273fd052dd0ecd9423238f6c71a15925
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176842"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063319"
 ---
 # <a name="full-text-search"></a>フルテキスト検索
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のフルテキスト検索は、ユーザーおよびアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの文字ベースのデータに対してフルテキスト クエリを実行できるようにします。 フルテキスト クエリをテーブルに対して実行するには、まずデータベース管理者がテーブル上にフルテキスト インデックスを作成する必要があります。 フルテキスト インデックスには、テーブルの 1 つ以上の文字ベースの列が含まれます。 この列のデータ型は、`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary(max)`、FILESTREAM のいずれかになります。 各フルテキスト インデックスによってテーブルの 1 つ以上の列にインデックスが設定され、列ごとに特定の言語を使用できます。
@@ -134,7 +133,7 @@ ms.locfileid: "78176842"
 ###  <a name="full-text-indexing-process"></a><a name="indexing"></a>フルテキストインデックス作成プロセス
  フルテキスト作成 (クロールとも呼ばれます) を開始すると、Full-Text Engine は大きなデータをバッチでメモリにプッシュして、フィルター デーモン ホストに通知します。 フィルター デーモン ホストは、データをフィルター処理してから分解し、逆単語リストに変換します。 次にフルテキスト検索が、変換されたデータを単語リストからプルし、データを処理してストップワードを削除し、バッチ用の単語リストを 1 つ以上の逆インデックスに保持します。
 
- または`image`列に格納されているデータのインデックスを作成する場合、 **IFilter**インターフェイスを実装するフィルターは、そのデータに対して指定され[!INCLUDE[msCoName](../../includes/msconame-md.md)]たファイル形式に基づいてテキストを抽出します (Word など)。 `varbinary(max)` 場合によっては、フィルターコンポーネントで`varbinary(max)`は、 `image`メモリにプッシュされるのではなく、filterdata フォルダーにデータを書き出す必要があります。
+ または列に格納されているデータのインデックスを作成する場合、 `varbinary(max)` `image` **IFilter**インターフェイスを実装するフィルターは、そのデータに対して指定されたファイル形式に基づいてテキストを抽出し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます (Word など)。 場合によっては、フィルターコンポーネントで `varbinary(max)` は、 `image` メモリにプッシュされるのではなく、filterdata フォルダーにデータを書き出す必要があります。
 
  一連の処理の中で、生成されたテキスト データがワード ブレーカーに渡され、そこで個々のトークンまたはキーワードに分解されます。 トークン化に使用する言語は列レベルで指定するか、`varbinary(max)` 型、`image` 型、または `xml` 型データのいずれかからフィルター コンポーネントによって識別されます。
 

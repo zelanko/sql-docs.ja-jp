@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea3da64ce6da8cbcb32b5854f14e8d24349c0c25
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154583"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970083"
 ---
 # <a name="databases"></a>データベース
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースは、特定の構造化データを格納するテーブルの集合です。 テーブルは一連の行 (レコードまたはタプル) と列 (属性) から構成されます。 テーブル内の各列は、特定の種類の情報 (日付、名前、金額、数字など) を格納するようにデザインされています。  
@@ -51,7 +50,7 @@ ms.locfileid: "70154583"
 |[データベースのデタッチとアタッチ &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)|[SQL Server インスタンス上のデータベースの一覧表示](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
 |[データベースに対するデータ ファイルまたはログ ファイルの追加](add-data-or-log-files-to-a-database.md)|[データベースの互換性レベルの表示または変更](view-or-change-the-compatibility-level-of-a-database.md)|  
 |[データベースの構成設定の変更](change-the-configuration-settings-for-a-database.md)|[メンテナンス プラン ウィザードの使用](../maintenance-plans/use-the-maintenance-plan-wizard.md)|  
-|[データベースの作成](create-a-database.md)|[ユーザー定義データ型の別名の作成](create-a-user-defined-data-type-alias.md)|  
+|[データベースを作成する](create-a-database.md)|[ユーザー定義データ型の別名の作成](create-a-user-defined-data-type-alias.md)|  
 |[データベースの削除](delete-a-database.md)|[Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  

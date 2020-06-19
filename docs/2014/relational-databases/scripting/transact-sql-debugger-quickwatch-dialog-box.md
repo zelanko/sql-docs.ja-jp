@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0b25d06e69b24cf31d3bc84d69ccdcbc8a034588
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 48e4bda558b75bec0c81815c90feff9d6500a803
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718319"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063281"
 ---
 # <a name="quickwatch-dialog-box"></a>[クイック ウォッチ] ダイアログ ボックス
   **コードのデバッグ時に** [クイック ウォッチ] [!INCLUDE[tsql](../../includes/tsql-md.md)] ダイアログ ボックスを使用すると、変数やパラメーターなど、1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] 式のデータ型や値をすばやく表示できます。 複数の式を確認するために、 **[ウォッチ]** ウィンドウに式を追加することもできます。  

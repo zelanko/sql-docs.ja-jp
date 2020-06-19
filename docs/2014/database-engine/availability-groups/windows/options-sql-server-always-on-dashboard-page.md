@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8672a9ea9eab9cda291576cf2336f8f3e7ba6f2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9261f692dfed61174181fce1ff6b9aeb72ab69cc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789248"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936684"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>オプション (SQLServer AlwaysOn、ダッシュ ボード ページ)
-  [ [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**オプション**] ダイアログボックスの [ **SQL Server alwayson ダッシュボード**] ページを使用して、alwayson ダッシュボードを構成します。  
+  [オプション] ダイアログボックスの [ **SQL Server Alwayson ダッシュボード**] ページを使用して、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] **Options** alwayson ダッシュボードを構成します。  
   
  **このページにアクセスするには:**  
   

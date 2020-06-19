@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d73724cd1aebd1d06048f634da3a1ad32ff8e49c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175977"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970252"
 ---
 # <a name="export-a-data-tier-application"></a>データ層アプリケーションのエクスポート
   配置されているデータ層アプリケーション (DAC) またはデータベースをエクスポートすると、エクスポート ファイルが作成されます。このファイルには、データベース内のオブジェクトの定義に加え、テーブルに格納されているすべてのデータが含まれています。 さらに、このエクスポート ファイルを [!INCLUDE[ssDE](../../includes/ssde-md.md)]の別のインスタンスまたは [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]にインポートすることもできます。 エクスポートとインポートという操作を組み合わせることで、DAC をインスタンス間で移行したり論理バックアップを作成したりすることが可能です。または、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] に配置されているデータベースの社内用コピーを作成することもできます。  
@@ -80,7 +79,7 @@ ms.locfileid: "70175977"
 ##  <a name="introduction-page"></a><a name="Introduction"></a> [説明] ページ  
  このページには、データ層アプリケーションのエクスポート ウィザードの手順が表示されます。  
   
- **[オプション]**  
+ **Options**  
   
  **[次回からこのページを表示しない]** : 今後 [説明] ページを表示しないようにするには、このチェック ボックスをオンにします。  
   
@@ -100,12 +99,12 @@ ms.locfileid: "70175977"
 ##  <a name="validation-page"></a><a name="Validation"></a>[検証] ページ  
  [検証] ページを使用して、操作の妨げとなる問題を確認します。 続行するには、妨げとなる問題を解決し、 **[検証の再実行]** をクリックして、検証が成功したことを確認します。  
   
- 続行するには、[**次へ**] をクリックします。  
+ 続行するには、 **[次へ]** をクリックします。  
   
 ##  <a name="summary-page"></a><a name="Summary"></a> [概要] ページ  
  このページを使用すると、操作の指定ソースとターゲットの設定を確認できます。 指定した設定でエクスポート操作を実行するには、 **[完了]** をクリックします。 エクスポート操作をキャンセルしてウィザードを終了するには、 **[キャンセル]** をクリックします。  
   
-##  <a name="progress-page"></a><a name="Progress"></a>[進行状況] ページ  
+##  <a name="progress-page"></a><a name="Progress"></a> [進行状況] ページ  
  このページには、操作の進行状況を示す進行状況バーが表示されます。 詳細な状態を表示するには、 **[詳細表示]** をクリックします。  
   
 ##  <a name="results-page"></a><a name="Results"></a>[結果] ページ  
