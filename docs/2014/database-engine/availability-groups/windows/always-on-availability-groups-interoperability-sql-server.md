@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55e19c050d0dd5d0a07c12f88076c423ade3281a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815751"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937218"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性グループの相互運用性 (SQL Server)
   このトピックでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能との間の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の相互運用性について説明します。  
@@ -31,7 +30,7 @@ ms.locfileid: "62815751"
 |機能|詳細情報|  
 |-------------|----------------------|  
 |変更データ キャプチャ|[レプリケーション、Change Tracking、変更データキャプチャ、AlwaysOn 可用性グループ &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
-|変更の追跡|[レプリケーション、Change Tracking、変更データキャプチャ、AlwaysOn 可用性グループ &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
+|Change tracking|[レプリケーション、Change Tracking、変更データキャプチャ、AlwaysOn 可用性グループ &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
 |包含データベース|[包含データベースと AlwaysOn 可用性グループ (SQL Server)](always-on-availability-groups-sql-server.md)|  
 |データベース暗号化|[AlwaysOn 可用性グループ &#40;SQL Server を持つ暗号化されたデータベース&#41;](encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
 |データベース スナップショット|[AlwaysOn 可用性グループ &#40;SQL Server を持つデータベーススナップショット&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  

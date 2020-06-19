@@ -1,5 +1,6 @@
 ---
 title: 分散トランザクションを作成する |Microsoft Docs
+description: アプリケーションでは、MSDTC を使用して、SQL Server の複数のインスタンスにわたってトランザクションを拡張または分散できます。 .NET クラスは、トランザクションを配布することもできます。
 ms.custom: ''
 ms.date: 05/13/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f21ea9b7146b2907a09688f5189d6d9ae4f3f26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f7a98b35483103059600086c37294c5acb56ad0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303706"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950451"
 ---
 # <a name="create-a-distributed-transaction"></a>分散トランザクションの作成
 
@@ -38,7 +39,7 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 
 ## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>ODBC ドライバーは SQL Server オンプレミスの MSDTC を呼び出します。
 
-Microsoft 分散トランザクションコーディネーター (MSDTC) を使用すると、アプリケーション_distribute_はの2つ以上の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに対してトランザクションを拡張または配信できます。 分散トランザクションは、2つのインスタンスが別々のコンピューターでホストされている場合でも機能します。
+Microsoft 分散トランザクションコーディネーター (MSDTC) を使用すると、アプリケーションはの2つ以上のインスタンスに対してトランザクションを拡張または_配信_でき [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 分散トランザクションは、2つのインスタンスが別々のコンピューターでホストされている場合でも機能します。
 
 MSDTC はオンプレミス Microsoft SQL Server 用にインストールされていますが、Microsoft の Azure SQL Database クラウドサービスでは使用できません。
 
@@ -57,7 +58,7 @@ _(1)_ ODBC を使用せずに MSDTC を呼び出すことができます。 こ�
 
 ### <a name="only-one-distributed-transaction"></a>1つの分散トランザクションのみ
 
-C++ Native Client ODBC アプリケーションが分散トランザクションに参加しているとします。 次に、アプリケーションが2番目の分散トランザクションに参加します。 この場合、Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC ドライバーは元の分散トランザクションを残し、新しい分散トランザクションに参加します。
+C++ Native Client ODBC アプリケーションが分散トランザクションに参加しているとします。 次に、アプリケーションが2番目の分散トランザクションに参加します。 この場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーは元の分散トランザクションを残し、新しい分散トランザクションに参加します。
 
 詳細については、「 [DTC プログラマーズリファレンス](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\))」を参照してください。
 

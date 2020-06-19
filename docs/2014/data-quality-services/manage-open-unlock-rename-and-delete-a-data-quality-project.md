@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d5e3ec1fc7c3c811b588aaf4145aa286d9aa078e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 062a02688a81235686635db4315754e16dc38d08
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484154"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937503"
 ---
 # <a name="manage-open-unlock-rename-and-delete-a-data-quality-project"></a>データ品質プロジェクトの管理 (開く、ロック解除、名前の変更、および削除)
   このトピックでは、データ品質プロジェクトを開く、ロック解除、名前の変更、削除などの、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] を使用したデータ品質プロジェクトの管理方法について説明します。  
@@ -39,7 +38,7 @@ ms.locfileid: "65484154"
   
 -   自分が作成したデータ品質プロジェクトのみロックを解除することができます。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要条件  
  管理対象のデータ品質プロジェクトが少なくとも 1 つ必要です。  
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  

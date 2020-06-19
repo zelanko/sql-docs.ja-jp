@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88ad528bfe581639dfa7e5dde35a7b53278b44b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059720"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951836"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Data Profile Viewer の F1 ヘルプ
   Data Profile Viewer を使用すると、データ プロファイル タスクの出力を表示できます。  
@@ -28,7 +27,7 @@ ms.locfileid: "66059720"
  Data Profile Viewer の使用方法の詳細については、「 [Data Profile Viewer](control-flow/data-profile-viewer.md)」を参照してください。 データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](control-flow/data-profiling-task.md)」を参照してください。データ プロファイル タスクを使用すると、Data Profile Viewer で分析するプロファイル出力を作成できます。  
   
 ## <a name="static-options"></a>静的オプション  
- **開く**  
+ **[ファイル]**  
  データ プロファイル タスクの出力を含む保存済みファイルを参照する場合にクリックします。  
   
  **[プロファイル]** ペイン  
@@ -46,11 +45,11 @@ ms.locfileid: "66059720"
   
 ### <a name="profile-type--column-length-distribution-profile"></a>プロファイルの種類 = 列長分布プロファイル  
   
-#### <a name="column-length-distribution-profile---column-pane"></a>列長分布プロファイル - \<列> ペイン  
+#### <a name="column-length-distribution-profile---column-pane"></a>列長分布プロファイル- \<column> ウィンドウ  
  **[最小の長さ]**  
  この列の最小の長さが表示されます。  
   
- **[最大の長さ]**  
+ **最大の長さ**  
  この列の最大の長さが表示されます。  
   
  **[先頭のスペースを無視する]**  
@@ -74,7 +73,7 @@ ms.locfileid: "66059720"
   
 ### <a name="profile-type--column-null-ratio-profile"></a>プロファイルの種類 = 列の NULL 比プロファイル  
   
-#### <a name="column-null-ratio-profile---column-pane"></a>列の NULL 比プロファイル - \<例> ペイン  
+#### <a name="column-null-ratio-profile---column-pane"></a>列の Null 比プロファイル- \<column> ウィンドウ  
  **[NULL カウント]**  
  プロファイルされた列が NULL 値である行の数が表示されます。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66059720"
   
 ### <a name="profile-type--column-pattern-profile"></a>プロファイルの種類 = 列パターン プロファイル  
   
-#### <a name="column-pattern-profile---column-pane"></a>列パターン プロファイル - \<列> ペイン  
+#### <a name="column-pattern-profile---column-pane"></a>列パターンプロファイル- \<column> ウィンドウ  
  **行数**  
  テーブルまたはビューの行数が表示されます。  
   
@@ -99,11 +98,11 @@ ms.locfileid: "66059720"
   
 ### <a name="profile-type--column-statistics-profile"></a>プロファイルの種類 = 列統計プロファイル  
   
-#### <a name="column-statistics-profile---column-pane"></a>列統計プロファイル - \<列> ペイン  
- **以降**  
+#### <a name="column-statistics-profile---column-pane"></a>列統計プロファイル- \<column> ウィンドウ  
+ **最小**  
  プロファイルされた列の最小値が表示されます。  
   
- **最大値**  
+ **[最大]**  
  プロファイルされた列の最大値が表示されます。  
   
  **平均**  
@@ -114,7 +113,7 @@ ms.locfileid: "66059720"
   
 ### <a name="profile-type--column-value-distribution-profile"></a>プロファイルの種類 = 列の値分布プロファイル  
   
-#### <a name="column-value-distribution-profile---column-pane"></a>列の値分布プロファイル - \<列> ペイン  
+#### <a name="column-value-distribution-profile---column-pane"></a>列の値分布プロファイル- \<column> ウィンドウ  
  **[個別の値数]**  
  プロファイルされた列の個別の値数が表示されます。  
   
@@ -133,7 +132,7 @@ ms.locfileid: "66059720"
   
 ### <a name="profile-type--candidate-key-profile"></a>プロファイルの種類 = 候補キー プロファイル  
   
-#### <a name="candidate-key-profile---table-pane"></a>候補キー プロファイル - \<テーブル> ペイン  
+#### <a name="candidate-key-profile---table-pane"></a>候補キープロファイル- \<table> ウィンドウ  
  **[キー列]**  
  プロファイル対象の候補キーとして選択した列が表示されます。  
   
@@ -141,7 +140,7 @@ ms.locfileid: "66059720"
  候補キーの列または列の組み合わせの強さがパーセンテージで表示されます。 キーの強さが 100% 未満である場合は、重複する値が存在することを示します。  
   
 #### <a name="key-violations-pane"></a>[キー違反] ペイン  
- **\<column1>、 \<column2> などです。**  
+ **\<column1>、 \<column2> 、など。**  
  プロファイルされた列で見つかった重複する値が表示されます。  
   
  **Count**  
@@ -164,17 +163,17 @@ ms.locfileid: "66059720"
 > [!NOTE]  
 >  データに含まれるエラー値の割合が高いと、機能依存プロファイルの結果が予期しない結果になることがあります。 たとえば、"98052" という郵便番号の値に対応する州の値として "WI" という値が 90% の行に含まれている場合、 機能依存プロファイルにより、正しい州の値である "WA" という値の行が違反として報告されます。  
   
- **\<決定列の名前>**  
+ **\<determinant column name>**  
  違反が検出された機能依存の決定列または列の組み合わせの値が表示されます。  
   
- **\<依存列名の>**  
+ **\<dependent column name>**  
  違反が検出された機能依存の依存列の値が表示されます。  
   
  **サポート数 (Support Count)**  
  決定列の値によって依存列が決定される行の数が表示されます。  
   
  **[違反カウント]**  
- 決定列の値によって依存列が決定されない行の数が表示されます (依存する値が [ ** \<依存列の名前>** ] 列に表示されている値である行)。  
+ 決定列の値によって依存列が決定されない行の数が表示されます (これらは、依存値が列に表示されている値である行 **\<dependent column name>** です)。  
   
  **サポート比率 (Support Percentage)**  
  決定列によって依存列が決定される行の割合が表示されます。  
@@ -192,7 +191,7 @@ ms.locfileid: "66059720"
  列間の重複の強さがパーセンテージで表示されます。 キーの強さが 100% 未満である場合は、サブセットの値がスーパーセットの値の中に含まれていないケースがあることを示します。  
   
 #### <a name="inclusion-violations-pane"></a>[包含違反] ペイン  
- **\<column1>、 \<column2> などです。**  
+ **\<column1>、 \<column2> 、など。**  
  スーパーセット列に含まれていないサブセット列の値が表示されます。  
   
  **Count**  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d85f5704a3a091f2f4b652812a66977eb11c93f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483406"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971842"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>リーフ メンバーを作成する (マスター データ サービス)
-  で[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]、マスターデータをシステムに追加し、ステージングテーブルまた[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]はを使用してデータをインポートしない場合は、リーフメンバーを作成します。  
+  で [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 、マスターデータをシステムに追加し、ステージングテーブルまたはを使用してデータをインポートしない場合は、リーフメンバーを作成し [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] ます。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  

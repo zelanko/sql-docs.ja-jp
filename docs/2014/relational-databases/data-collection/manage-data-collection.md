@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a7d88923bc41939541bedeed2d40908e454e9c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970452"
 ---
 # <a name="manage-data-collection"></a>データ コレクションの管理
-  または[!INCLUDE[tsql](../../includes/tsql-md.md)]の[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ストアドプロシージャと関数を使用すると、データコレクションの有効化または無効化、コレクションセットの構成の変更、管理データウェアハウスのデータの表示など、データコレクションのさまざまな側面を管理できます。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]またはの [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアドプロシージャと関数を使用すると、データコレクションの有効化または無効化、コレクションセットの構成の変更、管理データウェアハウスのデータの表示など、データコレクションのさまざまな側面を管理できます。  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用したデータ コレクションの管理  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーを使用することで、次のデータ コレクター関連のタスクを実行できます。  

@@ -31,13 +31,12 @@ helpviewer_keywords:
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7044fdc4c29110870e20cd2f9fe4f2140659e551
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61f4d13550fa1812e6de3fdc98a8e4e4113fe5bd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874436"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970721"
 ---
 # <a name="clr-user-defined-types"></a>CLR ユーザー定義型
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、.NET Framework CLR (共通言語ランタイム) で作成されているアセンブリでプログラミングしたデータベース オブジェクトを作成できます。 CLR で用意された豊富なプログラミング モデルを使用できるデータベース オブジェクトには、トリガー、ストアド プロシージャ、関数、集計関数、型などがあります。  
@@ -45,7 +44,7 @@ ms.locfileid: "62874436"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CLR コードを実行する機能が既定で無効になっています。 CLR を有効にするには、 **sp_configure**システムストアドプロシージャを使用します。  
   
- 以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]は、ユーザー定義型 (udt) を使用してサーバーのスカラー型システムを拡張し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース内の CLR オブジェクトのストレージを有効にすることができます。 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型で構成される従来の別名データ型とは異なり、UDT には複数の要素や複数の動作を含めることができます。  
+ 以降では [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、ユーザー定義型 (udt) を使用してサーバーのスカラー型システムを拡張し、データベース内の CLR オブジェクトのストレージを有効にすることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型で構成される従来の別名データ型とは異なり、UDT には複数の要素や複数の動作を含めることができます。  
   
  UDT はシステム全体からアクセスされるので、UDT を複合データ型に使用すると、パフォーマンスに悪影響を与えることがあります。 通常、複合データは従来の行やテーブルを使用する場合に最適になるようにモデル化されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の UDT は、次のような場合に適しています。  
   
@@ -64,9 +63,9 @@ ms.locfileid: "62874436"
 3.  **SQL Server で UDT を作成します。** アセンブリがホスト データベースに読み込まれた後、[!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TYPE ステートメントを使用して UDT を作成し、UDT のメンバーとしてクラスまたは構造体のメンバーを公開します。 UDT は 1 つのデータベースのコンテキストにのみ存在します。UDT はいったん登録されると、作成時のベースとなっていた外部ファイルに対する依存関係がなくなります。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のバージョンでは、.NET Framework アセンブリから作成された UDT がサポートされていませんでした。 ただし、sp_addtype を使用し[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]て別名データ型を**sp_addtype**使用することもできます。 CREATE TYPE 構文を使用すると、ネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー定義データ型と UDT の両方を作成できます。  
+    >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のバージョンでは、.NET Framework アセンブリから作成された UDT がサポートされていませんでした。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sp_addtype**を使用して別名データ型を使用することもできます。 CREATE TYPE 構文を使用すると、ネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー定義データ型と UDT の両方を作成できます。  
   
-4.  **UDT を使用してテーブル、変数、またはパラメーターを作成する**以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]は、ユーザー定義型は、テーブルの列定義、 [!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ内の変数、または[!INCLUDE[tsql](../../includes/tsql-md.md)]関数やストアドプロシージャの引数として使用できます。  
+4.  **UDT を使用してテーブル、変数、またはパラメーターを作成する**以降では [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、ユーザー定義型は、テーブルの列定義、バッチ内の変数、 [!INCLUDE[tsql](../../includes/tsql-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数やストアドプロシージャの引数として使用できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ユーザー定義型を作成する](creating-user-defined-types.md)  

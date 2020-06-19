@@ -31,13 +31,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3d75dee637a5579ca3f189e14333fbf9356623d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91e22e536a91878609feedf2977ffa7d78a54d61
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917279"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970202"
 ---
 # <a name="database-files-and-filegroups"></a>データベース ファイルとファイル グループ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各データベースには、データ ファイルとログ ファイルという少なくとも 2 つのオペレーティング システム ファイルがあります。 データ ファイルには、テーブル、インデックス、ストアド プロシージャ、およびビューなどのデータおよびオブジェクトが含まれます。 ログ ファイルには、データベース内のすべてのトランザクションを復旧するために必要な情報が含まれます。 データ ファイルは、割り当てと管理の目的でファイル グループにまとめることができます。  
@@ -62,9 +61,9 @@ ms.locfileid: "62917279"
   
  すべてのデータ ファイルは、次の表に一覧表示されているファイル グループに格納されます。  
   
-|[ファイル グループ]|説明|  
+|[ファイル グループ]|Description|  
 |---------------|-----------------|  
-|1 次式|プライマリ ファイルが含まれているファイル グループ。 すべてのシステム テーブルがプライマリ ファイル グループに割り当てられます。|  
+|プライマリ|プライマリ ファイルが含まれているファイル グループ。 すべてのシステム テーブルがプライマリ ファイル グループに割り当てられます。|  
 |ユーザー定義|ユーザーがデータベースを最初に作成したとき、または後で変更したときに、ユーザーが特別に作成したファイル グループ。|  
   
 ### <a name="default-filegroup"></a>既定のファイル グループ  

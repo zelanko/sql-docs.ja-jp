@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 691196697b7131cfaaf5ed5e41aea33f76ddc698
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057794"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951202"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>クエリ パラメーターを SQL 実行タスクの変数にマップする方法
 
@@ -58,7 +57,7 @@ ms.locfileid: "66057794"
     |接続の種類|パラメーター マーカー|  
     |---------------------|----------------------|  
     |ADO (ADO)|?|  
-    |ADO.NET および SQLMOBILE|@\<パラメーター名>|  
+    |ADO.NET および SQLMOBILE|@\<parameter name>|  
     |ODBC|?|  
     |EXCEL および OLE DB|?|  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66057794"
     |接続の種類|パラメーター名|  
     |---------------------|--------------------|  
     |ADO (ADO)|Param1、Param2、...|  
-    |ADO.NET および SQLMOBILE|@\<パラメーター名>|  
+    |ADO.NET および SQLMOBILE|@\<parameter name>|  
     |ODBC|1、2、3、...|  
     |EXCEL および OLE DB|0、1、2、3、…|  
   

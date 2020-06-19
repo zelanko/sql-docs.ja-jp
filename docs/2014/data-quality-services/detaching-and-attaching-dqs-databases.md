@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aca595e33a831e472f06a349e12920aced6dd71f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87af29b64e7185148ead0f089d539bc0519911a5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937773"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>DQS データベースのデタッチとアタッチ
   ここでは、DQS データベースをデタッチおよびアタッチする方法について説明します。  
@@ -25,7 +24,7 @@ ms.locfileid: "65480692"
 ###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> 制限事項と制約事項  
  制限事項と制約事項の一覧については、「 [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)のデータベースをデタッチする方法について説明します。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要条件  
   
 -   DQS で実行中のアクティビティまたはプロセスがないことを確認します。 これは **[アクティビティ監視]** 画面を使用して確認できます。 この画面の操作の詳細については、「 [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)」を参照してください。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "65480692"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  **[データベースの詳細]** (下部) ペインには、アタッチするファイルの名前が表示されます。 ファイルのパス名を確認または変更するには、**参照**ボタン ([...]) をクリックします。  
+5.  **[データベースの詳細]** (下部) ペインには、アタッチするファイルの名前が表示されます。 ファイルのパス名を確認または変更するには、**参照**ボタン ( [...] ) をクリックしてください。  
   
 6.  DQS_MAIN データベースをアタッチするには、 **[OK]** をクリックします。  
   

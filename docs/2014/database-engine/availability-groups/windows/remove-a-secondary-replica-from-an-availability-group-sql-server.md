@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b927483f5e57272460f1c2f0f1c4b1bca56a3abe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3f2b35ec9cf27f2f7b23714a41665f2709837a5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782941"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936587"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>可用性グループからのセカンダリ レプリカの削除 (SQL Server)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからセカンダリ レプリカを削除する方法について説明します。  
@@ -29,7 +28,7 @@ ms.locfileid: "72782941"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [必要条件](#Prerequisites)  
+     [前提条件](#Prerequisites)  
   
      [Security](#Security)  
   
@@ -51,7 +50,7 @@ ms.locfileid: "72782941"
   
 -   セカンダリ レプリカのみを可用性グループから削除できます。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要条件  
   
 -   可用性グループのプライマリ レプリカをホストするサーバー インスタンスに接続している。  
   

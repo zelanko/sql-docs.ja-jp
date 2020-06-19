@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 68bd85258bd3fd259386f020394ffb5bc70a9781
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c06569a6e7363b05139281a9699b72ba37d779c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791916"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937206"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>[IP アドレスの追加] ダイアログ ボックス (SQL Server Management Studio)
   この F1 ヘルプ トピックでは、 **[IP アドレスの追加]** ダイアログ ボックスのオプションについて説明します。 このダイアログ ボックスには、 **[新しい可用性グループ リスナー]** ダイアログ ボックスと **[リスナー]** タブ ( **の** または [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] [レプリカの指定] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ページ上) からアクセスできます。  
@@ -34,16 +33,16 @@ ms.locfileid: "62791916"
  **アドレス**  
  このフィールドを使用して、選択したサブネット アドレスの静的 IP アドレスを入力します。 この IP アドレスは、ネットワーク管理者に問い合わせてください。 選択したサブネット アドレスの有効なアドレスを入力したことを確認します。アドレスが無効な場合、リスナーの作成に失敗します。  
   
- **[IPv4 アドレス]**  
+ **IPv4 アドレス**  
  サブネットの IPv4 サブネット アドレスを選択した場合は、有効な IPv4 静的アドレスをここに入力します。  
   
  **[サブネット マスク]**  
  IPv4 アドレスの場合は、この読み取り専用フィールドに、選択したサブネットのサブネット マスクが表示されます。  
   
- **[IPv6 アドレス]**  
+ **IPv6 アドレス**  
  サブネットの IPv6 サブネット アドレスを選択した場合は、有効な IPv6 静的アドレスをここに入力します。  
   
- **OK**  
+ **[OK]**  
  クリックすると、選択したアドレスのサブネットと指定した静的 IP アドレスが追加されます。 これらの値が含まれる行は、 **[新しい可用性グループ リスナー]** または **[レプリカの指定]** ダイアログ ボックスのサブネット グリッドに追加されます。  
   
 > [!IMPORTANT]  
@@ -64,7 +63,7 @@ ms.locfileid: "62791916"
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性グループリスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [AlwaysOn クライアント接続 (SQL Server)](always-on-client-connectivity-sql-server.md)  
   
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 74554e305dbbeb736eba3d8379c7f6569e56d333
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e32fdb46f7607d40c79d327d7bdb92654b271892
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154513"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938073"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>参照データにドメインまたは複合ドメインをアタッチする
   このトピックでは、データ品質ナレッジベースのドメインまたは複合ドメインを Azure Marketplace の参照データサービスにアタッチして、高品質の参照データに対するナレッジを構築する方法について説明します。 各参照データ サービスには、スキーマ (データ列) が含まれています。 ドメインまたは複合ドメインを参照データ サービスにアタッチしたら、アタッチしたドメインまたはアタッチした複合ドメイン内の個々のドメインを参照データ サービス スキーマの適切な列にマップする必要があります。 複合ドメインを参照データ サービスにアタッチすると、参照データ サービスに 1 つだけドメインをアタッチして、複合ドメイン内の個々のドメインを参照データ サービス スキーマの適切な列にマップできます。  
@@ -32,7 +31,7 @@ ms.locfileid: "70154513"
   
 ## <a name="before-you-begin"></a>はじめに  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要条件  
  参照データ サービスを使用するように [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) を構成しておく必要があります。 「[参照データを使用する DQS の構成](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)」をご覧ください。  
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
@@ -86,6 +85,6 @@ ms.locfileid: "70154513"
   
 ## <a name="see-also"></a>参照  
  [DQS での Data Services の参照](../../2014/data-quality-services/reference-data-services-in-dqs.md)   
- [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)  
+ [データクレンジング](../../2014/data-quality-services/data-cleansing.md)  
   
   

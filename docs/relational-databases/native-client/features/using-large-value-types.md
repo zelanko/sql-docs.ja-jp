@@ -1,5 +1,6 @@
 ---
 title: 大きな値の型の使用 | Microsoft Docs
+description: 以前は特別な処理を必要としていた大きな値のデータ型を処理 SQL Server Native Client 方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa7dc9aa82ac11f727ce8e19a0e8930bcab61175
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70a4d9e7b429d7f77ffbf1439bf5bb6027345e3a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303209"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950529"
 ---
 # <a name="using-large-value-types"></a>大きな値をとるデータ型の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンでは、大きな値をとるデータ型を使用して作業する場合に特別な処理が必要でした。 大きな値のデータ型とは、最大行サイズの 8 KB を超えるデータ型のことです。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]では、 **varchar**、 **nvarchar** 、および**varbinary**データ型の**max**指定子が導入され、2 ^ 31-1 バイトの大きさの値を格納できるようになりました。 テーブルの列[!INCLUDE[tsql](../../../includes/tsql-md.md)]と変数では、 **varchar (max)**、 **nvarchar (max)** 、または**varbinary (max)** データ型を指定できます。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンでは、大きな値をとるデータ型を使用して作業する場合に特別な処理が必要でした。 大きな値のデータ型とは、最大行サイズの 8 KB を超えるデータ型のことです。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]では、 **varchar**、 **nvarchar** 、および**varbinary**データ型の**max**指定子が導入され、2 ^ 31-1 バイトの大きさの値を格納できるようになりました。 テーブルの列と変数では [!INCLUDE[tsql](../../../includes/tsql-md.md)] 、 **varchar (max)**、 **nvarchar (max)** 、または**varbinary (max)** データ型を指定できます。  
   
 > [!NOTE]  
 >  大きな値をとるデータ型は、最大サイズを 1 ～ 8 KB に制限できます。また、サイズを無制限にすることもできます。  
@@ -41,7 +42,7 @@ ms.locfileid: "81303209"
 >  データをレプリケートする場合は、 [max text repl size サーバー構成オプション](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)を-1 に構成する必要があります。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、 **varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** 型をそれぞれ DBTYPE_STR、DBTYPE_BYTES、および DBTYPE_WSTR として公開します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、 **varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** 型をそれぞれ DBTYPE_STR、DBTYPE_BYTES、および DBTYPE_WSTR として公開します。  
   
  **max** のサイズが無制限に設定されている列の **varchar(max)** データ型、**varbinary(max)** データ型、**nvarchar(max)** データ型は、列のデータ型を返す主要な OLE DB スキーマ行セットやインターフェイスでは ISLONG で表されます。  
   
@@ -51,7 +52,7 @@ ms.locfileid: "81303209"
   
  ストリーミングをサポートするために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、可変長パラメーターに順番にアクセスする必要があります。 つまり、**varchar(max)** 列、**nvarchchar(max)** 列、**varbinary(max)** 列や出力パラメーターを DBTYPE_IUNKNOWN. にバインドするときは必ず、DBPROP_ACCESSORDER を DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS または DBPROPVAL_AO_SEQUENTIAL のいずれかに設定する必要があります。 このアクセス順序の制限に従わないと、**IRowset::GetData** への呼び出しは DBSTATUS_E_UNAVAILABLE で失敗します。 DBTYPE_IUNKNOWN を使用する出力バインドがない場合は、この制限は適用されません。  
   
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーでは、大きな値のデータ型の DBTYPE_IUNKNOWN として出力パラメーターをバインドすることもできます。これにより、ストアドプロシージャがクライアントに DBTYPE_IUNKNOWN として公開される戻り値として大きな値の型を返すシナリオが容易になります。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーでは、大きな値のデータ型の DBTYPE_IUNKNOWN として出力パラメーターをバインドすることもできます。これにより、ストアドプロシージャがクライアントに DBTYPE_IUNKNOWN として公開される戻り値として大きな値の型を返すシナリオが容易になります。  
   
  このようなデータ型を使用して作業するために、アプリケーションでは次のような操作を行えます。  
   
@@ -689,10 +690,10 @@ _ExitProcessResultSet:
 }  
 ```  
   
- Native Client OLE DB プロバイダーが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]大きな値のデータ型を公開する方法の詳細については、「 [Blob と OLE オブジェクト](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーが大きな値のデータ型を公開する方法の詳細については、「 [BLOB と OLE オブジェクト](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)」を参照してください。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client odbc ドライバーでは、odbc SQL データ型を受け取ったり返したりする odbc API 関数で、 **varchar (max)**、 **varbinary (max)** 、および**nvarchar (max)** 型を SQL_VARCHAR、SQL_VARBINARY、および SQL_WVARCHAR として公開しています。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT odbc ドライバーでは、ODBC SQL データ型を受け取ったり返したりする ODBC API 関数で、 **varchar (max)**、 **varbinary (max)** 、および**nvarchar (max)** 型を SQL_VARCHAR、SQL_VARBINARY、および SQL_WVARCHAR として公開しています。  
   
  ドライバーでは、列の最大サイズを報告するときに次のいずれかを報告します。  
   

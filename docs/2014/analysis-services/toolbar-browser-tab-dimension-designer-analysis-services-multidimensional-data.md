@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: d0abb2a7-e981-4b0a-a442-80c819aca2ae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f37c34b1b4857ca561b656a773c2cfa71ffb19c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d7f48728921b997fc408ce224bd7bf8c9959b34
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066156"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938443"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>ツール バー ([ブラウザー] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **ツール バー** ペインを使用すると、 **ディメンション デザイナー** の **[ブラウザー]** タブで一般的な操作を実行できます。  
   
 ## <a name="options"></a>オプション  
- **プロセス**  
+ **処理**  
  **[処理]** ダイアログ ボックスを表示し、選択されたディメンションを処理します。  
   
  **[再接続]**  
  接続が失われたりタイムアウトしたりしたために **[ブラウザー]** タブに対するセッションが切断された場合に、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [ブラウザー] **タブを** インスタンスおよびディメンションを含むデータベースに再接続します。  
   
- **更新**  
+ **Refresh\(更新\)**  
  ディメンションに対するデータおよびメタデータを持つ **[ブラウザー]** タブの再読み込みを行います。  
   
  **[メンバーのプロパティ]**  

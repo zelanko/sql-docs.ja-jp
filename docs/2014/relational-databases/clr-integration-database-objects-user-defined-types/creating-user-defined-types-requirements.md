@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cf45c7c108f522f894f97c25ed51bd4dd3c4fbf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919660"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970718"
 ---
 # <a name="user-defined-type-requirements"></a>ユーザー定義型の要件
-  にインストールするユーザー定義型 (UDT) を作成する際には、いくつかの重要な[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設計上の決定を行う必要があります。 ほとんどの場合は、UDT を構造体として作成することをお勧めしますが、クラスとして作成することもできます。 UDT の定義は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録する UDT を作成するための仕様に準拠している必要があります。  
+  にインストールするユーザー定義型 (UDT) を作成する際には、いくつかの重要な設計上の決定を行う必要があり [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ほとんどの場合は、UDT を構造体として作成することをお勧めしますが、クラスとして作成することもできます。 UDT の定義は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録する UDT を作成するための仕様に準拠している必要があります。  
   
 ## <a name="requirements-for-implementing-udts"></a>UDT の実装要件  
  UDT を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行するには、UDT の定義に次の要件を実装する必要があります。  
@@ -51,7 +50,7 @@ ms.locfileid: "62919660"
   
 -   UDT では、データ要素をパブリック フィールドまたはプロパティ プロシージャとして公開する必要があります。  
   
--   パブリック名は、128文字より長くすることはできません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。また、[データベース識別子](../databases/database-identifiers.md)で定義されている識別子の名前付け規則に従っている必要があります。  
+-   パブリック名は、128文字より長くすることはできません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。また、[データベース識別子](../databases/database-identifiers.md)で定義されている識別子の名前付け規則に従っている必要があります。  
   
 -   `sql_variant` 列には UDT のインスタンスを含めることはできません。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62919660"
   
  **bool**、 **byte**、 **sbyte**、 **short**、 **ushort**、 **int**、 **uint**、 **long**、 **ulong**、 **float**、 **double**、 **sqlbyte**、 **SqlInt16**、 **SqlInt32**、 **SqlInt64**、 **sqlbyte**、 **sqlbyte**、 **sqlbyte**、 **sqlbyte**、 **sqlbyte**  
   
- 上記の型のフィールドで構成される値型は、Visual C# `Native`のなど`structs`の形式に適しています。 `Structures`または、Visual Basic で認識されている場合はです。 たとえば、シリアル化形式に `Native` を指定した UDT には、`Native` 形式を指定した別の UDT のフィールドを含めることができます。 作成する UDT の定義が複雑で、上記の一覧にないデータ型が含まれている場合は、`UserDefined` シリアル化形式を指定する必要があります。  
+ 上記の型のフィールドで構成される値型は、Visual C# のなどの形式に適してい `Native` `structs` ます。または、 `Structures` Visual Basic で認識されている場合はです。 たとえば、シリアル化形式に `Native` を指定した UDT には、`Native` 形式を指定した別の UDT のフィールドを含めることができます。 作成する UDT の定義が複雑で、上記の一覧にないデータ型が含まれている場合は、`UserDefined` シリアル化形式を指定する必要があります。  
   
  `Native` 形式の要件を次に示します。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "62919660"
   
 -   UDT を構造体ではなくクラスで定義する場合は、`System.Runtime.InteropServices.StructLayoutAttribute` を `StructLayout.LayoutKindSequential` に指定しなければなりません。 この属性は、データ フィールドの物理レイアウトを制御し、メンバーを出現順にレイアウトするために使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この属性を使用して複数の値を持つ UDT のフィールド順序を決定します。  
   
- シリアル化で`Native`定義された udt の例については、「[ユーザー定義型のコーディング](creating-user-defined-types-coding.md)における udt」を参照してください。  
+ シリアル化で定義された UDT の例につい `Native` ては、「[ユーザー定義型のコーディング](creating-user-defined-types-coding.md)における udt」を参照してください。  
   
 ## <a name="userdefined-serialization"></a>ユーザー定義シリアル化  
  `UserDefined` に `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 形式を指定すると、開発者はバイナリ形式のフル コントロールを得ることができます。 `Format` 属性プロパティに `UserDefined` を指定するときは、コード内で次の設定を行う必要があります。  
@@ -92,7 +91,7 @@ ms.locfileid: "62919660"
   
 -   `Read` インターフェイスを実装することによって、UDT に `Write` メソッドと `System.Data.Sql.IBinarySerialize` メソッドを実装するコードを記述します。  
   
- シリアル化で`UserDefined`定義された udt の例については、「[ユーザー定義型のコーディング](creating-user-defined-types-coding.md)における通貨 udt」を参照してください。  
+ シリアル化で定義された UDT の例につい `UserDefined` ては、「[ユーザー定義型のコーディング](creating-user-defined-types-coding.md)における通貨 udt」を参照してください。  
   
 > [!NOTE]  
 >  UDT フィールドをインデックス化するには、ネイティブ シリアル化を使用するか、UDT フィールドを保存する必要があります。  
@@ -148,7 +147,7 @@ ms.locfileid: "62919660"
  アセンブリの属性を正しく指定することに加えて、クラスで NULL 値の許容属性をサポートする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込まれる UDT では NULL 値が許容されますが、その UDT に NULL 値を認識させるには、クラスに `INullable` インターフェイスを実装する必要があります。 UDT に null 値の許容属性を実装する方法の詳細と例については、「[ユーザー定義型のコーディング](creating-user-defined-types-coding.md)」を参照してください。  
   
 ### <a name="string-conversions"></a>文字列の変換  
- UDT と文字列の間の変換をサポートするには、クラスに `Parse` メソッドと `ToString` メソッドを用意する必要があります。 `Parse` メソッドでは、文字列を UDT に変換できます。 このメソッドは `static` (Visual Basic では `Shared`) メソッドとして宣言され、`System.Data.SqlTypes.SqlString` 型のパラメーターを受け取る必要があります。 メソッドとメソッドを実装`Parse`する方法の詳細と例については、「[ユーザー定義型のコーディング](creating-user-defined-types-coding.md)」を参照してください。 `ToString`  
+ UDT と文字列の間の変換をサポートするには、クラスに `Parse` メソッドと `ToString` メソッドを用意する必要があります。 `Parse` メソッドでは、文字列を UDT に変換できます。 このメソッドは `static` (Visual Basic では `Shared`) メソッドとして宣言され、`System.Data.SqlTypes.SqlString` 型のパラメーターを受け取る必要があります。 メソッドとメソッドを実装する方法の詳細と例については `Parse` `ToString` 、「[ユーザー定義型のコーディング](creating-user-defined-types-coding.md)」を参照してください。  
   
 ## <a name="xml-serialization"></a>XML シリアル化  
  UDT では、XML シリアル化のコントラクトに従って `xml` データ型との間の変換をサポートする必要があります。 `System.Xml.Serialization` 名前空間には、オブジェクトを XML 形式のドキュメントまたはストリームにシリアル化するためのクラスが含まれています。 `xml` インターフェイスを使用すると、`IXmlSerializable` シリアル化を実装できます。このインターフェイスにより、XML シリアル化と XML シリアル化解除用のカスタム形式が提供されます。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb904cd0f0649c43553b5d6c8b031c5f284901f4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814521"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936813"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>フェールオーバーとフェールオーバー モード (AlwaysOn 可用性グループ)
   一般的に、可用性グループのコンテキスト内で、可用性レプリカのプライマリ ロールとセカンダリ ロールが *フェールオーバー*と呼ばれるプロセスで交換されることがあります。 フェールオーバーには、自動フェールオーバー (データ損失なし)、計画的な手動フェールオーバー (データ損失なし)、および " *強制フェールオーバー*" と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) の 3 つの形式があります。 自動フェールオーバーと計画的な手動フェールオーバーでは、すべてのデータが保持されます。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 つまり、可用性グループはセカンダリ レプリカのいずれか (現在の " *フェールオーバー ターゲット*") にフェールオーバーされます。  
@@ -78,11 +77,11 @@ ms.locfileid: "62814521"
 ### <a name="failover-sets"></a>フェールオーバー セット  
  特定の可用性グループで可能なフェールオーバーの形式は、フェールオーバー セットの観点から理解できます。 フェールオーバー セットは、次のようにフェールオーバーの特定の形式をサポートするプライマリ レプリカとセカンダリ レプリカで構成されています。  
   
--   **(省略可能): [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] ** 指定された可用性グループ内で、自動フェールオーバーを伴う同期コミットモード (存在する場合) が構成されている (現在のプライマリレプリカを含む) 可用性レプリカのペア。 自動フェールオーバー セットは、セカンダリ レプリカがプライマリ レプリカとの間で現在 SYNCHRONIZED 状態にある場合のみ有効です。  
+-   ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (省略可能):** 指定された可用性グループ内で、自動フェールオーバーを伴う同期コミットモード (存在する場合) が構成されている可用性レプリカのペア (現在のプライマリレプリカを含む)。 自動フェールオーバー セットは、セカンダリ レプリカがプライマリ レプリカとの間で現在 SYNCHRONIZED 状態にある場合のみ有効です。  
   
--   **(省略可能): [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] ** 指定された可用性グループ内で、同期コミットモードが構成されている場合は、(現在のプライマリレプリカを含む) 2 つまたは3つの可用性レプリカのセット。 同期コミット フェールオーバー セットは、セカンダリ レプリカに手動フェールオーバー モードが構成され、1 つ以上のセカンダリ レプリカとプライマリ レプリカが現在 SYNCHRONIZED 状態にある場合のみ有効です。  
+-   ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (省略可能):** 指定された可用性グループ内で、同期コミットモード (存在する場合) が構成されている (現在のプライマリレプリカを含む) 2 つまたは3つの可用性レプリカのセット。 同期コミット フェールオーバー セットは、セカンダリ レプリカに手動フェールオーバー モードが構成され、1 つ以上のセカンダリ レプリカとプライマリ レプリカが現在 SYNCHRONIZED 状態にある場合のみ有効です。  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :** 特定の可用性グループ内で、可用性モードとフェールオーバーモードに関係なく、操作状態が現在オンラインになっているすべての可用性レプリカのセット。 全フェールオーバー セットは、現在プライマリ レプリカと SYNCHRONIZED 状態になっているセカンダリ レプリカがない場合に有効です。  
+-   ** [!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :** 特定の可用性グループ内で、可用性モードとフェールオーバーモードに関係なく、操作状態が現在オンラインになっているすべての可用性レプリカのセット。 全フェールオーバー セットは、現在プライマリ レプリカと SYNCHRONIZED 状態になっているセカンダリ レプリカがない場合に有効です。  
   
  可用性レプリカに、自動フェールオーバーが指定された同期コミット モードを構成した場合、可用性レプリカは [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]の一部になります。 ただし、セットが有効になるかどうかは、現在のプライマリに依存します。 指定された時刻に実際に可能なフェールオーバーの形式は、現在有効なフェールオーバー セットによって決まります。  
   
@@ -235,7 +234,7 @@ ms.locfileid: "62814521"
   
 1.  プライマリ レプリカに接続します。  
   
-2.  [Sys. dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)動的管理ビューの (最後にコミット`last_commit_time`されたトランザクションの LSN) 列と (最後のコミット時の) 列に対して`last_commit_lsn`クエリを実行します。  
+2.  `last_commit_lsn` `last_commit_time` [Sys. dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)動的管理ビューの (最後にコミットされたトランザクションの LSN) 列と (最後のコミット時の) 列に対してクエリを実行します。  
   
 3.  各プライマリ データベースとその各セカンダリ データベースに返された値を比較します。 最後にコミットした LSN の差異は、遅延の程度を示します。  
   

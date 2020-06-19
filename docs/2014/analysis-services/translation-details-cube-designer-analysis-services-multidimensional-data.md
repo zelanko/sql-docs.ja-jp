@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d90d246cb54b54dea0ed4f84f1b96142a5f56803
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065858"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938305"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>翻訳の詳細 (キューブ デザイナーの [翻訳] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[翻訳]** タブの **[翻訳の詳細]** ペインを使用すると、現在選択されているキューブを翻訳したり定義したりできます。  
@@ -61,13 +60,13 @@ ms.locfileid: "66065858"
   
      `Caption` プロパティ  
   
- **\<言語>**  
+ **\<Language>**  
  選択した言語でキューブ オブジェクトのプロパティの値を入力します。  
   
 ## <a name="context-menu"></a>コンテキスト メニュー  
  **[翻訳の詳細]** ペインで翻訳を右クリックして表示されるショートカット メニューでは、次のオプションを使用できます。  
   
-|用語|定義|  
+|期間|定義|  
 |----------|----------------|  
 |**[新しい翻訳]**|**[言語の選択]** ダイアログ ボックスを表示して、新しい翻訳を作成します。 翻訳は、 **翻訳の詳細** グリッド内に新しい列として表示されます。|  
 |**[翻訳の削除]**|選択された翻訳を削除します。|  

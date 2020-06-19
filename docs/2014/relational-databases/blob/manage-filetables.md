@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a15a914c243f1fafd3b913d98113e984bf533086
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009993"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970875"
 ---
 # <a name="manage-filetables"></a>FileTable の管理
   FileTable を管理するための一般的な管理タスクについて説明します。  
@@ -62,7 +61,7 @@ GO
   
      ALTER DATABASE コマンドが取り消されるかまたはタイムアウトによって終了した場合、トランザクション アクセスのレベルは変更されません。  
   
--   WITH \<termination> 句 (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT) を指定して ALTER DATABASE ステートメントを呼び出した場合、開いているすべての非トランザクション ファイル ハンドルが終了します。  
+-   WITH 句を使用して ALTER DATABASE ステートメントを呼び出した場合 \<termination> (ROLLBACK AFTER integer [SECONDS] |イミディエイトをロールバック |NO_WAIT)、開いているすべての非トランザクションファイルハンドルが終了します。  
   
 > [!WARNING]  
 >  開いているファイル ハンドルを終了すると、保存されていないデータをユーザーが失う可能性があります。 この動作は、ファイル システム自体の動作と一致しています。  
@@ -192,7 +191,7 @@ GO
  FileTable によって取得されるほとんどのロックは、アプリケーションによって開かれたファイルに対応します。  
   
  **開いているファイルおよび関連付けられているロックを識別するには**  
- 動的管理ビュー **sys.dm_tran_locks &#40;Transact-SQL&#41;** の [request_owner_id](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) フィールドを **sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;** の [fcb_id](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql) フィールドと結合します。 場合によっては、ロックが単一の開いているファイル ハンドルと対応しないこともあります。  
+ 動的管理ビュー [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) の **request_owner_id** フィールドを [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql) の **fcb_id** フィールドと結合します。 場合によっては、ロックが単一の開いているファイル ハンドルと対応しないこともあります。  
   
 ```sql  
 SELECT opened_file_name  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc978cd0280c9885fe7d4d4b499d01adc8f540cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789844"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937273"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>可用性レプリカに対するクライアント接続アクセスについて (SQL Server)
   AlwaysOn 可用性グループでは、1 つまたは複数の可用性レプリカを構成して、セカンダリ ロールで実行しているとき (つまり、セカンダリ レプリカとして実行しているとき) に読み取り専用接続を許可することができます。 各可用性レプリカをプライマリ ロールで実行しているとき (つまり、プライマリ レプリカとして実行しているとき) に、読み取り専用接続を許可または除外するように構成することもできます。  
@@ -53,11 +52,11 @@ ms.locfileid: "62789844"
  ユーザーの接続は許可されません。 セカンダリ データベースは読み取りアクセスでは利用できません。 これは、セカンダリ ロールの既定の動作です。  
   
  読み取りを目的とした接続のみ  
- セカンダリデータベースは、 `Application Intent`接続プロパティがに`ReadOnly`設定されている接続に対してのみ使用できます (*読み取りを目的*とした接続)。  
+ セカンダリデータベースは、接続プロパティがに設定されている接続に対してのみ使用でき `Application Intent` `ReadOnly` ます (*読み取りを目的*とした接続)。  
   
  この接続プロパティの詳細については、「 [SQL Server Native Client の HADR サポート](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。  
   
- 読み取り専用接続の許可  
+ 読み取り専用接続を許可  
  セカンダリ データベースは、すべて読み取りアクセス接続に利用できます。 このオプションでは、下位バージョンのクライアントを接続できます。  
   
  詳細については、「[可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)」を参照してください。  
@@ -69,7 +68,7 @@ ms.locfileid: "62789844"
  プライマリ データベースに対する読み取り/書き込み接続と読み取り専用接続の両方が許可されます。 これは、プライマリ ロールの既定の動作です。  
   
  読み取り/書き込接続のみを許可する  
- `Application Intent`接続プロパティが**ReadWrite**に設定されているか、またはが設定されていない場合、接続は許可されます。 `Application Intent`接続文字列キーワードがに`ReadOnly`設定されている接続は許可されていません。 読み取り/書き込み接続のみを許可することにより、読み取りを目的としたワークロードが誤ってプライマリ レプリカに接続されるのを防ぐことができます。  
+ `Application Intent`接続プロパティが**ReadWrite**に設定されているか、またはが設定されていない場合、接続は許可されます。 `Application Intent`接続文字列キーワードがに設定されている接続は許可されて `ReadOnly` いません。 読み取り/書き込み接続のみを許可することにより、読み取りを目的としたワークロードが誤ってプライマリ レプリカに接続されるのを防ぐことができます。  
   
  この接続プロパティの詳細については、「 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
@@ -80,13 +79,13 @@ ms.locfileid: "62789844"
   
 |レプリカのロール|レプリカでサポートされる接続アクセス|接続の目的|接続の試行の結果|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|セカンダリ|All|読み取り目的、読み取り/書き込み、または接続目的の指定なし|成功|  
+|セカンダリ|すべて|読み取り目的、読み取り/書き込み、または接続目的の指定なし|Success|  
 |セカンダリ|なし (これは、セカンダリの既定の動作です)。|読み取り目的、読み取り/書き込み、または接続目的の指定なし|障害|  
-|セカンダリ|[読み取り目的のみ]|読み取り目的|成功|  
+|セカンダリ|[読み取り目的のみ]|読み取り目的|Success|  
 |セカンダリ|[読み取り目的のみ]|読み取り/書き込み、または接続目的の指定なし|障害|  
-|1 次式|すべて (これはプライマリの既定の動作です)|読み取りのみ、読み取り/書き込み、または接続目的の指定なし|成功|  
-|1 次式|読み取り/書き込み|[読み取り目的のみ]|障害|  
-|1 次式|読み取り/書き込み|読み取り/書き込み、または接続目的の指定なし|成功|  
+|プライマリ|すべて (これはプライマリの既定の動作です)|読み取りのみ、読み取り/書き込み、または接続目的の指定なし|Success|  
+|プライマリ|読み取り/書き込み|[読み取り目的のみ]|障害|  
+|プライマリ|読み取り/書き込み|読み取り/書き込み、または接続目的の指定なし|Success|  
   
  クライアント接続要求を処理する可用性グループ リスナーの詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)」をご参照ください。  
   
@@ -97,7 +96,7 @@ ms.locfileid: "62789844"
   
 |[レプリカ]|コミット モード|[初期ロール]|セカンダリ ロールの接続アクセス|プライマリ ロールの接続アクセス|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|同期|1 次式|なし|読み取り/書き込み|  
+|Replica1|同期|プライマリ|なし|読み取り/書き込み|  
 |Replica2|同期|セカンダリ|None|読み取り/書き込み|  
 |Replica3|非同期|セカンダリ|読み取り目的のみ|読み取り/書き込み|  
 |Replica4|非同期|セカンダリ|[読み取り目的のみ]|読み取り/書き込み|  
@@ -124,7 +123,7 @@ ms.locfileid: "62789844"
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性グループリスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [統計](../../../relational-databases/statistics/statistics.md)  
   
   

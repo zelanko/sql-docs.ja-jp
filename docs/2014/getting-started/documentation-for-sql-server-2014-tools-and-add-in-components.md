@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91c34cb4-dc14-4a2b-86a1-9c950642fb23
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ddc24d5204a6b047540fdeff4a5ddff92acc00f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 184473773e520f2ea0cd0c9d01a9c3738d1d5c78
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706942"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926955"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>SQL Server 2014 ツールとアドイン コンポーネントのドキュメント
     
@@ -33,7 +32,7 @@ ms.locfileid: "82706942"
 |[Microsoft Connector 1.1 for SAP BW](https://go.microsoft.com/fwlink/?LinkId=299181)|Microsoft Connector 1.1 for SAP BW は、SAP NetWeaver BW Version 7 システムからデータを抽出したり、このシステムにデータを読み込んだりするための 3 つのコンポーネントのセットで構成されます。|  
 |[アップグレード アシスタントの再生キャプチャ](https://go.microsoft.com/fwlink/?LinkId=299182)|アップグレード アシスタントの再生キャプチャのワークフローは、後で再生に使用するワークロード トレースのキャプチャ プロセスを自動化します。|  
 |[Windows の Microsoft ODBC Driver 11 for SQL Server](https://go.microsoft.com/fwlink/?LinkId=299183)|Windows 用 Microsoft ODBC Driver 11 は、Microsoft Windows に標準の ODBC インターフェイスを実装するためのアプリケーション プログラミング インターフェイス (API) を提供するスタンドアロン ドライバーです。|  
-|[Power Pivot for SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|Power Pivot for SharePoint は、SharePoint モードで実行される Analysis Services サーバーです。|  
+|[SharePoint の Power Pivot](https://go.microsoft.com/fwlink/?LinkId=299184)|Power Pivot for SharePoint は、SharePoint モードで実行される Analysis Services サーバーです。|  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 のドキュメント](../2014-toc/index.yml)  

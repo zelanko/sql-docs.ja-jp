@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70a7b7c959283f934ed94f654293d1de2ef8cd9d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175985"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970504"
 ---
 # <a name="data-collection"></a>データ収集
   データ コレクターは、さまざまなデータのセットを収集する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のコンポーネントです。 データ コレクションは、継続的に実行されるかユーザー定義のスケジュールに基づいて実行されます。 データ コレクターは、収集したデータを管理データ ウェアハウスというリレーショナル データベースに格納します。
@@ -59,7 +58,7 @@ ms.locfileid: "78175985"
  詳細については、「[Integration Services &#40;SSIS&#41; Packages](../../integration-services/integration-services-ssis-packages.md)」を参照してください。
 
 ## <a name="data-collector-terminology"></a>データ コレクターの用語
- データコレクションをサポートする[!INCLUDE[ssDE](../../includes/ssde-md.md)]の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エディションで、のインスタンスをターゲットにします。 サポートされるエディションの詳細については、 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」の「管理容易性」セクションを参照してください。
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]データコレクションをサポートするのエディションで、のインスタンスをターゲットにし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 サポートされるエディションの詳細については、 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」の「管理容易性」セクションを参照してください。
 
  *対象ルート* では、対象となる階層内のサブツリーを定義します。 *対象セット* は、対象ルートで定義されたサブツリーにフィルターを適用した結果の対象のグループです。 対象ルートはデータベース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス) またはコンピューター インスタンスです。
 
@@ -67,7 +66,7 @@ ms.locfileid: "78175985"
 
  データプロバイダー対象の型に固有の既知のデータソース。コレクター型にデータを提供します。
 
- コレクター型データを収集して[!INCLUDE[ssIS](../../includes/ssis-md.md)]管理データウェアハウスにアップロードするための実際のメカニズムを提供する、パッケージの論理ラッパー。
+ コレクター型 [!INCLUDE[ssIS](../../includes/ssis-md.md)] データを収集して管理データウェアハウスにアップロードするための実際のメカニズムを提供する、パッケージの論理ラッパー。
 
  コレクションアイテムコレクター型のインスタンス。 コレクション アイテムは、入力プロパティ セットと収集頻度に基づいて作成されます。
 

@@ -22,19 +22,18 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5f0642644632c40f7f95e731c61e0a968cd83b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919643"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970752"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>データ アダプターによる UDT 列の更新
   UDT (ユーザー定義型) は、データの取得や変更を行う `System.Data.DataSet` と `System.Data.SqlClient.SqlDataAdapter` を使用することでサポートされます。  
   
 ## <a name="populating-a-dataset"></a>データセットの設定  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントを使用して UDT 列の値を選択すれば、データ アダプターを使用してデータセットにデータを設定できます。 次の例では、次の構造といくつかのサンプルデータを使用して、 **Points**テーブルが定義されていることを前提としています。 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントでは、 **Points**テーブルを作成し、いくつかの行を挿入します。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントを使用して UDT 列の値を選択すれば、データ アダプターを使用してデータセットにデータを設定できます。 次の例では、次の構造といくつかのサンプルデータを使用して、 **Points**テーブルが定義されていることを前提としています。 次のステートメントでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **Points**テーブルを作成し、いくつかの行を挿入します。  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -46,7 +45,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- 次の ADO.NET コード片では、有効な接続文字列を取得`SqlDataAdapter`し、新しいを`System.Data.DataTable`作成し、 **Points**テーブルのデータ行をに設定します。  
+ 次の ADO.NET コード片では、有効な接続文字列を取得し、新しいを作成 `SqlDataAdapter` し、 `System.Data.DataTable` **Points**テーブルのデータ行をに設定します。  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -85,9 +84,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  次の ADO.NET の例には 2 つのメソッドが含まれています。  
   
--   `UserProvidedCommands`、、、 `InsertCommand`および`UpdateCommand` `DeleteCommand`の各オブジェクトを指定して、 **Points**テーブル (列を`timestamp`含まない) の`Point` UDT を更新する方法を示します。  
+-   `UserProvidedCommands`、、、およびの各オブジェクトを指定し `InsertCommand` `UpdateCommand` て、 `DeleteCommand` `Point` **Points**テーブル (列を含まない) の UDT を更新する方法を示し `timestamp` ます。  
   
--   `CommandBuilder`。この`timestamp`列を含む**Points_ts**テーブル`SqlCommandBuilder`でを使用する方法を示します。  
+-   `CommandBuilder``SqlCommandBuilder`。この列を含む**Points_ts**テーブルでを使用する方法を示し `timestamp` ます。  
   
 ```vb  
 Imports System  

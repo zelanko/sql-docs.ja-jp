@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9b8f6bf20fa02981e3275299849d1cb04036dfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77903909"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939043"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "77903909"
 |**rank_desc**|**sysname**|ランクのテキスト表現:  <br><br>なし、低、中、高、重大|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
 
 - このビューでは、データベースの分類状態を表示できます。 データベースの分類を管理したり、レポートを生成したりするために使用できます。
 - 現在、データベース列の分類のみがサポートされています。
@@ -58,7 +58,7 @@ ms.locfileid: "77903909"
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. 分類されたすべての列とそれに対応する分類の一覧表示
 
-次の例では、データベース内の分類された各列のテーブル名、列名、ラベル、ラベル ID、情報の種類、情報の種類の ID を一覧表示しています。
+次の例では、データベース内の分類された各列について、テーブル名、列名、ラベル、ラベル ID、情報の種類、情報の種類の ID、順位、およびランクの説明を一覧表示するテーブルを返します。
 
 > [!NOTE]
 > Label は Azure SQL Data Warehouse のキーワードです。

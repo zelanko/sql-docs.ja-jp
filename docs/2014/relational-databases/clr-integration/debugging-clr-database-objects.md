@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 70b092f81030c7905fe1d771844369f2d59317b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e9455615dc4a2c121135b2ce68d9ae0aab1df28
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919016"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970602"
 ---
 # <a name="debugging-clr-database-objects"></a>CLR データベース オブジェクトのデバッグ
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、データベース内の [!INCLUDE[tsql](../../../includes/tsql-md.md)] オブジェクトと CLR (共通言語ランタイム) オブジェクトのデバッグがサポートされます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でのデバッグの重要な特徴は、セットアップと使用が容易になったことと、SQL Server デバッガーと Microsoft Visual Studio デバッガーが統合されたことです。 さらに、複数の言語にまたがったデバッグを実行できます。 ユーザーは [!INCLUDE[tsql](../../../includes/tsql-md.md)] から CLR オブジェクト (またはその逆) にシームレスにステップインできます。 SQL Server Management Studio の Transact-SQL デバッガーを使用してマネージド データベース オブジェクトをデバッグすることはできませんが、Visual Studio のデバッガーを使用すると、このオブジェクトをデバッグすることができます。 Visual Studio でのマネージド データベース オブジェクトのデバッグでは、サーバーで実行するルーチン内の "step into" ステートメントや "step over" ステートメントなど、一般的なデバッグ機能すべてがサポートされます。 デバッグ中は、ブレークポイントの設定、呼び出し履歴の調査、変数の調査、変数値の変更を行うことができます。 Visual Studio .NET 2003 は、CLR 統合プログラミングまたはデバッグには使用できない点に注意してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には .NET Framework がプレインストールされていますが、Visual Studio .NET 2003 では .NET Framework 2.0 アセンブリを使用できません。  
@@ -29,7 +28,7 @@ ms.locfileid: "62919016"
  Visual Studio を使用したマネージコードのデバッグの詳細については、Visual Studio ドキュメントの「[マネージコードのデバッグ](https://go.microsoft.com/fwlink/?LinkId=120377)」を参照してください。  
   
 ## <a name="debugging-permissions-and-restrictions"></a>デバッグに関する権限と制限事項  
- デバッグは高度な権限を持つ操作であるため、で**sysadmin** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は sysadmin 固定サーバーロールのメンバーだけがこの操作を実行できます。  
+ デバッグは高度な権限を持つ操作であるため、では**sysadmin**固定サーバーロールのメンバーだけがこの操作を実行でき [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
  デバッグ中には、次の制限事項が適用されます。  
   
