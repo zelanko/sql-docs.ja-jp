@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00a5db60a0bccdd3deec1d1ac845e926b6af5fb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e73e11c582a2a8fc310423551e6e618718e375a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637754"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933701"
 ---
 # <a name="clr-transactions-sample"></a>CLR Transactions サンプル
   このサンプルでは、`System.Transactions` 名前空間にあるマネージド API を使用してトランザクションを制御する例を示します。 このサンプルで `System.Transactions.TransactionScope` クラスは、要求に応じるのに十分な在庫が存在する場合を除き、ある場所から別の場所への移動をアトミック レベルで行える程度の在庫が存在する場合に、在庫数が調整されないように、トランザクション境界を確立するために使用されています。 分散トランザクションにおける自動登録の例を、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに格納された監査データベースに在庫の変更を記録するという動作で示しています。  
@@ -48,11 +47,11 @@ ms.locfileid: "73637754"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にするには`ALTER SETTINGS` 、サーバーレベルの権限が必要です。この権限は`sysadmin` 、 `serveradmin`固定サーバーロールおよびのメンバーによって暗黙的に保持されています。  
+    >  CLR を有効にするには、 `ALTER SETTINGS` サーバーレベルの権限が必要です。この権限は、 `sysadmin` 固定サーバーロールおよびのメンバーによって暗黙的に保持されてい `serveradmin` ます。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
--   使用している[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの管理者ではない場合、インストールを完了するには、 **createassembly**アクセス許可を管理者に付与する必要があります。  
+-   使用しているインスタンスの管理者ではない場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、インストールを完了するには、 **createassembly**アクセス許可を管理者に付与する必要があります。  
   
 ## <a name="building-the-sample"></a>サンプルのビルド  
   
@@ -78,7 +77,7 @@ ms.locfileid: "73637754"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  [!INCLUDE[tsql](../../includes/tsql-md.md)]データベースのインストールコードをファイルにコピーし、とし`installDB.sql`てサンプルディレクトリに保存します。  
+7.  [!INCLUDE[tsql](../../includes/tsql-md.md)]データベースのインストールコードをファイルにコピーし、として `installDB.sql` サンプルディレクトリに保存します。  
   
 8.  次のコマンドを実行して、監査データベースをインストールします。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "73637754"
   
      このコマンドを実行するときには、インスタンスとサーバーの適切な値を指定します。  
   
-9. テスト[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドスクリプトをファイルにコピーし、とし`test.sql`てサンプルディレクトリに保存します。  
+9. [!INCLUDE[tsql](../../includes/tsql-md.md)]テストコマンドスクリプトをファイルにコピーし、として `test.sql` サンプルディレクトリに保存します。  
   
 10. 次のコマンドを使用してテスト スクリプトを実行します。  
   

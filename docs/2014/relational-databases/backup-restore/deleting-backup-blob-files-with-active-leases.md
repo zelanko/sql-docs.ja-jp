@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 663bab775aff9a04a4a9d93f2bcbd0e193b18f37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8301c1f88eb8cf928066a3c12b14452ddbd98cda
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783062"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958512"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>アクティブなリースを保持しているバックアップ BLOB ファイルの削除
   Azure storage との間でバックアップまたは復元を行う場合、SQL Server は blob への排他アクセスをロックするために無限リースを取得します。 バックアップまたは復元プロセスが正常に完了すると、リースは解放されます。 バックアップまたは復元に失敗すると、バックアップ プロセスは無効な BLOB のクリーンアップを試みます。 ただし、バックアップの失敗の原因が長期的または持続的なネットワーク接続エラーの場合は、バックアップ プロセスは BLOB にアクセスできず、BLOB は孤立したままになる可能性があります。 つまり、リースが解放されるまで、BLOB を書き込むことも削除することもできません。 このトピックでは、リースを解放する方法と BLOB の削除について説明します。  
@@ -38,8 +37,8 @@ ms.locfileid: "72783062"
   
 3.  **BLOB の削除:** アクティブなリースを保持している BLOB を削除するには、最初にリースを終了する必要があります。  
   
-###  <a name="powershell-script-example"></a><a name="Code_Example"></a> PowerShell スクリプトの例  
- ** \*重要\* \* **PowerShell 2.0 を実行している場合は、Microsoft Windowsazure.servicebus アセンブリの読み込みで問題が発生する可能性があります。 この問題を解決するには、PowerShell 3.0 にアップグレードすることをお勧めします。 また、PowerShell 2.0 では次の回避策を使用することもできます。  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a>PowerShell スクリプトの例  
+ ** \* \* 重要 \* : \* ** PowerShell 2.0 を実行している場合は、Microsoft WindowsAzure.Storage.dll アセンブリの読み込みで問題が発生する可能性があります。 この問題を解決するには、PowerShell 3.0 にアップグレードすることをお勧めします。 また、PowerShell 2.0 では次の回避策を使用することもできます。  
   
 -   次のスクリプトを使用して実行時に .NET 2.0 アセンブリと .NET 4.0 アセンブリを読み込むように powershell.exe.config ファイルを作成または変更する:  
   
@@ -79,9 +78,9 @@ ms.locfileid: "72783062"
   
      **リースを終了しています**  
   
-     **Blob> の\<リースのリースは復元リースです。このメッセージは、まだアクティブな復元リースを持つ Blob がある場合にのみ表示されます。**  
+     **リースは \<URL of the Blob> 復元リースです。このメッセージは、まだアクティブになっている復元リースを持つ blob がある場合にのみ表示されます。**  
   
-     **Blob> の\<リースは、Bob> の url で\<の復元リースリースではありません。**  
+     **のリース \<URL of the Blob> は、の復元リースリースではありません \<URL of the Bob> 。**  
   
 ```powershell
 param(  

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3dadc054a3f9927c09e9e236044dd5ddee7f3a9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f5d571d1a3f88f20600947d3093bf1e37feeee2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068680"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940523"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>買い物かご分析 (Excel 用のテーブル分析ツール)
   ![買い物かごツール](media/tat-shopbskt.gif "買い物かごツール")  
   
- **買い物かご分析**ツールを使用すると`associations` 、データを簡単に見つけることができます。 アソシエーションにより、同時に購入される頻度が高いアイテムがわかります。 データマイニングでは、この手法は*マーケットバスケット分析*と呼ばれるよく知られた方法で、非常に大規模なデータセットで顧客の購入行動を分析するために使用されます。 マーケティング担当者は、この情報を使用して顧客に関連製品を提案したり、関連製品を Web ページ、カタログ、または棚の近接箇所に配置して宣伝したりすることができます。  
+ **買い物かご分析**ツールを使用すると、データを簡単に見つけることができ `associations` ます。 アソシエーションにより、同時に購入される頻度が高いアイテムがわかります。 データマイニングでは、この手法は*マーケットバスケット分析*と呼ばれるよく知られた方法で、非常に大規模なデータセットで顧客の購入行動を分析するために使用されます。 マーケティング担当者は、この情報を使用して顧客に関連製品を提案したり、関連製品を Web ページ、カタログ、または棚の近接箇所に配置して宣伝したりすることができます。  
   
  買い物かご分析を使用するには、分析するアイテムがトランザクション ID で関連付けられている必要があります。 たとえば、Web サイトを通じて受け取ったすべての注文を分析する場合は、各注文に対して、1 つ以上の購入アイテムに関連付けられた注文 ID またはトランザクション ID が割り当てられます。  
   

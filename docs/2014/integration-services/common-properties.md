@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77bb61af021bb7499f6656d2fd604f4bdc06bfeb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060962"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922113"
 ---
 # <a name="common-properties"></a>共通プロパティ
-  オブジェクトモデルのデータフローオブジェクト[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]には、コンポーネント、入力および出力、入力列、および出力列の各レベルで共通のプロパティとカスタムプロパティがあります。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 多くのプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
+  オブジェクトモデルのデータフローオブジェクトには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンポーネント、入力および出力、入力列、および出力列の各レベルで共通のプロパティとカスタムプロパティがあります。 多くのプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
  ここでは、データ フロー オブジェクトの共通プロパティを一覧で示し、それぞれについて説明します。  
   
@@ -89,14 +88,14 @@ ms.locfileid: "66060962"
 |ComponentClassID|String|コンポーネントの CLSID。|  
 |ContactInfo|String|コンポーネント開発者の連絡先情報。|  
 |説明|String|データ フロー コンポーネントの説明。 このプロパティの既定値は、データ フロー コンポーネントの名前です。|  
-|ID|Integer|コンポーネントのこのインスタンスを一意に識別する値。|  
+|id|Integer|コンポーネントのこのインスタンスを一意に識別する値。|  
 |[IdentificationString]|String|コンポーネントを識別します。|  
-|IsDefaultLocale|ブール型|コンポーネントが、それ自体が属するデータ フロー タスクのロケールを使用するかどうかを示します。|  
+|IsDefaultLocale|Boolean|コンポーネントが、それ自体が属するデータ フロー タスクのロケールを使用するかどうかを示します。|  
 |LocaleID|Integer|パッケージを実行する際、データ フロー コンポーネントが使用するロケール。 データ フロー コンポーネントでは、すべての Windows ロケールが使用できます。|  
 |名前|String|データ フロー コンポーネントの名前。|  
 |PipelineVersion|Integer|コンポーネントを実行するように設計されたデータ フロー タスクのバージョン。|  
-|UsesDispositions|ブール型|コンポーネントにエラー出力があるかどうかを示します。|  
-|[ValidateExternalMetadata]|ブール型|外部列のメタデータを検証するかどうかを示します。 このプロパティの既定値は `True` です。|  
+|UsesDispositions|Boolean|コンポーネントにエラー出力があるかどうかを示します。|  
+|[ValidateExternalMetadata]|Boolean|外部列のメタデータを検証するかどうかを示します。 このプロパティの既定値は `True` です。|  
 |バージョン|Integer|コンポーネントのバージョン。|  
   
 ##  <a name="input-properties"></a><a name="inputs"></a>入力プロパティ  
@@ -109,10 +108,10 @@ ms.locfileid: "66060962"
 |説明|String|入力の説明。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は、`Fail component`、`Ignore failure`、および `Redirect row` です。|  
-|HasSideEffects|ブール型|コンポーネントが下流コンポーネントにアタッチされていない場合、およびがの`RunInOptimizedMode` `true`場合に、データフローの実行プランからコンポーネントを削除できるかどうかを示します。|  
-|ID|Integer|入力を一意に識別する値。|  
+|HasSideEffects|Boolean|コンポーネントが下流コンポーネントにアタッチされていない場合、およびがの場合に、データフローの実行プランからコンポーネントを削除できるかどうかを示し `RunInOptimizedMode` `true` ます。|  
+|id|Integer|入力を一意に識別する値。|  
 |[IdentificationString]|String|入力を識別する文字列。|  
-|IsSorted|ブール型|入力のデータを並べ替えるかどうかを示します。|  
+|IsSorted|Boolean|入力のデータを並べ替えるかどうかを示します。|  
 |名前|String|入力の名前。|  
 |SourceLocale|Integer|入力データのロケール ID (LCID)。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 . 値は、`Fail component`、`Ignore failure`、および `Redirect row` です。|  
@@ -131,7 +130,7 @@ ms.locfileid: "66060962"
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は、`Fail component`、`Ignore failure`、および `Redirect row` です。|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|出力列に割り当てられた外部メタデータ列の ID。|  
-|ID|Integer|入力列を一意に識別する値。|  
+|id|Integer|入力列を一意に識別する値。|  
 |[IdentificationString]|String|入力列を識別する文字列。|  
 |LineageID|Integer|上流列の ID。|  
 |名前|String|入力列の名前。|  
@@ -149,16 +148,16 @@ ms.locfileid: "66060962"
   
 |プロパティ|データ型|説明|  
 |--------------|---------------|-----------------|  
-|DeleteOutputOnPathDetached|ブール型|出力がパスに接続されていない場合に、データ フロー エンジンが出力を削除するかどうかを指定する値。|  
+|DeleteOutputOnPathDetached|Boolean|出力がパスに接続されていない場合に、データ フロー エンジンが出力を削除するかどうかを指定する値。|  
 |説明|String|出力を説明します。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は、`Fail component`、`Ignore failure`、および `Redirect row` です。|  
 |ExclusionGroup|Integer|相互排他的な出力のグループを識別する値。|  
-|HasSideEffects|ブール型|コンポーネントが上流コンポーネントにアタッチされていない場合や、`RunInOptimizedMode` が `true` の場合に、データ フローの実行プランからコンポーネントを削除できるかどうかを示します。|  
-|ID|Integer|出力を一意に識別する値。|  
+|HasSideEffects|Boolean|コンポーネントが上流コンポーネントにアタッチされていない場合や、`RunInOptimizedMode` が `true` の場合に、データ フローの実行プランからコンポーネントを削除できるかどうかを示します。|  
+|id|Integer|出力を一意に識別する値。|  
 |[IdentificationString]|String|出力を識別する文字列。|  
-|IsErrorOut|ブール型|出力がエラー出力かどうかを示します。|  
-|IsSorted|ブール型|出力を並べ替えるかどうかを示します。 既定値は `False` です。<br /><br /> ** \*重要\* \* **`IsSorted`プロパティの値をに設定し`True`ても、データは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。 詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。|  
+|IsErrorOut|Boolean|出力がエラー出力かどうかを示します。|  
+|IsSorted|Boolean|出力を並べ替えるかどうかを示します。 既定値は `False` です。<br /><br /> 重要プロパティの値をに設定して** \* も、データは並べ替えられません。 \* \* \* ** `IsSorted` `True` このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。 詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。|  
 |名前|String|出力の名前。|  
 |SynchronousInputID|Integer|出力に同期する入力の ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は、`Fail component`、`Ignore failure`、および `Redirect row` です。|  
@@ -175,7 +174,7 @@ ms.locfileid: "66060962"
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は、`Fail component`、`Ignore failure`、および `Redirect row` です。 既定値は `Fail component` です。|  
 |ExternalMetadataColumnID|Integer|出力列に割り当てられた外部メタデータ列の ID。|  
-|ID|Integer|出力列を一意に識別する値。|  
+|id|Integer|出力列を一意に識別する値。|  
 |[IdentificationString]|String|出力列を識別する文字列。|  
 |LineageID|Integer|出力列の ID。 下流コンポーネントは、この値を使用して列を参照します。|  
 |名前|String|出力列の名前。|  
@@ -193,7 +192,7 @@ ms.locfileid: "66060962"
 |プロパティ|データ型|説明|  
 |--------------|---------------|-----------------|  
 |説明|String|外部列を説明します。|  
-|ID|Integer|列を一意に識別する値。|  
+|id|Integer|列を一意に識別する値。|  
 |[IdentificationString]|String|列を識別する文字列。|  
 |名前|String|外部列の名前。|  
   
@@ -209,7 +208,7 @@ ms.locfileid: "66060962"
 |CodePage|Integer|Unicode でない文字列データのコード ページを指定します。|  
 |DataType|Integer (列挙)|列の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] データ型。 詳細については、「 [Integration Services データ型](data-flow/integration-services-data-types.md)」を参照してください。|  
 |長さ|Integer|列の長さ (文字数単位)。|  
-|Precision|Integer|数値列の有効桁数。|  
+|有効桁数|Integer|数値列の有効桁数。|  
 |スケール|Integer|数値列の小数点以下桁数。|  
   
 ## <a name="see-also"></a>参照  

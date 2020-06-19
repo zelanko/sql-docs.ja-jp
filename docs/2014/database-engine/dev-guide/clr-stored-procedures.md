@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4998058d55cd49c0eecfdecce2edc609a4d62c1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77213967"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933724"
 ---
 # <a name="clr-stored-procedures"></a>CLR ストアド プロシージャ
-  ストアド プロシージャはスカラー式では使用できないルーチンです。 ストアド プロシージャはスカラー関数とは異なり、表形式の結果やメッセージをクライアントに返す操作、DDL (データ定義言語) ステートメントや DML (データ操作言語) ステートメントを呼び出す操作、出力パラメーターを返す操作が行えます。 CLR 統合の利点とマネージコードと[!INCLUDE[tsql](../../includes/tsql-md.md)]の使い分けの詳細については、「 [Clr 統合の概要](../../relational-databases/clr-integration/clr-integration-overview.md)」を参照してください。  
+  ストアド プロシージャは、スカラー式では使用できないルーチンです。 ストアド プロシージャはスカラー関数とは異なり、表形式の結果やメッセージをクライアントに返す操作、DDL (データ定義言語) ステートメントや DML (データ操作言語) ステートメントを呼び出す操作、出力パラメーターを返す操作が行えます。 CLR 統合の利点とマネージコードとの使い分けの詳細については [!INCLUDE[tsql](../../includes/tsql-md.md)] 、「 [clr 統合の概要](../../relational-databases/clr-integration/clr-integration-overview.md)」を参照してください。  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>CLR ストアド プロシージャの要件  
- 共通言語ランタイム (CLR) では、ストアドプロシージャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]アセンブリ内のクラスのパブリック静的メソッドとして実装されます。 この静的メソッドは、void として宣言することも、整数値を返すようにすることもできます。 整数値を返す場合は、その整数値はストアド プロシージャからのリターン コードとして扱われます。 次に例を示します。  
+ 共通言語ランタイム (CLR) では、ストアドプロシージャは、アセンブリ内のクラスのパブリック静的メソッドとして実装され [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ます。 この静的メソッドは、void として宣言することも、整数値を返すようにすることもできます。 整数値を返す場合は、その整数値はストアド プロシージャからのリターン コードとして扱われます。 次に例を示します。  
   
  `EXECUTE @return_status = procedure_name`  
   
@@ -48,7 +47,7 @@ ms.locfileid: "77213967"
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ストアド プロシージャからの情報はいくつかの形式で返すことができます。 出力パラメーター、表形式の結果、およびメッセージの形式を使用できます。  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>OUTPUT パラメーターと CLR ストアド プロシージャ  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャと同様に、OUTPUT パラメーターを使用して [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ストアド プロシージャから情報を返すことができます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャの作成に使用する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 構文は、[!INCLUDE[tsql](../../includes/tsql-md.md)] で記述されたストアド プロシージャの作成に使用する構文と同じです。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスの実装コードの対応するパラメーターは、引数として参照渡しのパラメーターを使用する必要があります。 Visual Basic では、C# と同じように出力パラメーターがサポートされないことに注意してください。 次に示すように、パラメーターを参照渡し\<で指定し、出力パラメーターを表す Out () > 属性を適用する必要があります。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャと同様に、OUTPUT パラメーターを使用して [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ストアド プロシージャから情報を返すことができます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャの作成に使用する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 構文は、[!INCLUDE[tsql](../../includes/tsql-md.md)] で記述されたストアド プロシージャの作成に使用する構文と同じです。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスの実装コードの対応するパラメーターは、引数として参照渡しのパラメーターを使用する必要があります。 Visual Basic では、C# と同じように出力パラメーターがサポートされないことに注意してください。 次に示すように、パラメーターを参照によって指定し、属性を適用し \<Out()> て出力パラメーターを表す必要があります。  
   
 ```vb
 Imports System.Runtime.InteropServices  
@@ -122,7 +121,7 @@ Partial Public Class StoredProcedures
 End Class  
 ```  
   
- 上記の CLR ストアドプロシージャを含むアセンブリがサーバー上に構築され、作成されたら[!INCLUDE[tsql](../../includes/tsql-md.md)] 、次のように使用してデータベースでプロシージャを作成し、 *sum*を OUTPUT パラメーターとして指定します。  
+ 上記の CLR ストアドプロシージャを含むアセンブリがサーバー上に構築され、作成されたら、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ように使用してデータベースでプロシージャを作成し、 *SUM*を OUTPUT パラメーターとして指定します。  
   
 ```sql
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
@@ -132,7 +131,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 -- AS EXTERNAL NAME TestStoredProc.[MyNS.StoredProcedures].PriceSum  
 ```  
   
- *Sum*が`int` SQL Server データ型として宣言され、clr ストアドプロシージャで定義されている*値*パラメーターが`SqlInt32` clr データ型として指定されていることに注意してください。 呼び出し元のプログラムが clr ストアドプロシージャを実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]すると、 `SqlInt32`によって自動的に`int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clr データ型がデータ型に変換されます。  変換できる CLR データ型と変換できない CLR データ型の詳細については、「 [Clr パラメーターデータのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」を参照してください。  
+ *Sum*が SQL Server データ型として宣言され、 `int` clr ストアドプロシージャで定義されている*値*パラメーターが clr データ型として指定されていることに注意して `SqlInt32` ください。 呼び出し元のプログラムが CLR ストアドプロシージャを実行すると、に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] よって自動的に `SqlInt32` clr データ型がデータ型に変換され `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  変換できる CLR データ型と変換できない CLR データ型の詳細については、「 [Clr パラメーターデータのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」を参照してください。  
   
 ### <a name="returning-tabular-results-and-messages"></a>表形式の結果とメッセージを返す  
  表形式の結果とメッセージは、`SqlPipe` クラスの `Pipe` プロパティを使用して取得した `SqlContext` オブジェクトを使用してクライアントに返されます。 `SqlPipe` オブジェクトには `Send` メソッドがあります。 `Send` メソッドを呼び出すことにより、パイプ経由で呼び出し側のアプリケーションにデータを送信できます。  
@@ -366,7 +365,7 @@ END;
 ```  
   
 > [!NOTE]  
->  メッセージと結果セットはクライアント アプリケーションで個別に取得されます。 たとえば、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]結果セットは [**結果**] ビューに表示され、メッセージは [**メッセージ**] ウィンドウに表示されます。  
+>  メッセージと結果セットはクライアント アプリケーションで個別に取得されます。 たとえば、結果 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] セットは [**結果**] ビューに表示され、メッセージは [**メッセージ**] ウィンドウに表示されます。  
   
  上の Visual C# コードをファイル MyFirstUdp.cs に保存した場合、次のようにコンパイルします。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0579a98e3302b6944f68ca449d3e7cda0ecc01d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754244"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933783"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>ハッシュ インデックスの適切なバケット数の決定
   メモリ最適化テーブルを作成するときに `BUCKET_COUNT` パラメーターの値を指定する必要があります。 このトピックでは、`BUCKET_COUNT` パラメーターの適切な値を判断する際の推奨事項を示します。 適切なバケット数を決定できない場合は、代わりに非クラスター化インデックスを使用してください。  `BUCKET_COUNT` の値が不適切な場合 (特に小さすぎる場合)、ワークロードのパフォーマンス、およびデータベースの復旧時間に大きな影響を与えることがあります。 バケット数は大きめに設定することをお勧めします。  
@@ -24,7 +23,7 @@ ms.locfileid: "62754244"
   
  非クラスター化ハッシュ インデックスの詳細については、「 [Hash Indexes](hash-indexes.md) 」と「 [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)」を参照してください。  
   
- メモリ最適化テーブルの各ハッシュ インデックスに対して 1 個のハッシュ テーブルが割り当てられます。 インデックスに割り当てられるハッシュテーブルのサイズは、 `BUCKET_COUNT` [CREATE TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)のパラメーター、または[transact-sql&#41;&#40;CREATE TYPE](/sql/t-sql/statements/create-type-transact-sql)によって指定されます。 バケット数は内部的に、最も近い 2 のべき乗に切り上げられます。 たとえば、バケット数に 300,000 を指定すると、実際のバケット数は 524,288 になります。  
+ メモリ最適化テーブルの各ハッシュ インデックスに対して 1 個のハッシュ テーブルが割り当てられます。 インデックスに割り当てられるハッシュテーブルのサイズは、 `BUCKET_COUNT` [CREATE TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)のパラメーター、または[TRANSACT-SQL&#41;&#40;CREATE TYPE](/sql/t-sql/statements/create-type-transact-sql)によって指定されます。 バケット数は内部的に、最も近い 2 のべき乗に切り上げられます。 たとえば、バケット数に 300,000 を指定すると、実際のバケット数は 524,288 になります。  
   
  バケット数に関する記事とビデオへのリンクについては、「 [ハッシュ インデックス (インメモリ OLTP) に正しいバケット数を指定する方法](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/)」を参照してください。  
   
@@ -177,7 +176,7 @@ GO
 -   パフォーマンス クリティカルな操作がフル インデックス スキャンである場合は、実際のインデックス キー値の数に近いバケット数を使用します。  
   
 ### <a name="big-tables"></a>大きいテーブル  
- 大きいテーブルの場合は、メモリ使用量が問題になることがあります。 たとえば、2億5000万行のテーブルに4つのハッシュインデックスがあり、それぞれのバケット数が10億である場合、ハッシュテーブルのオーバーヘッドは4インデックス * 10億\*バケット8バイト = 32 gb のメモリ使用率になります。 インデックスごとのバケット数に 2 億 5 千万個を選択すると、ハッシュ テーブルの合計オーバーヘッドは 8 GB です。 これは、各インデックスが個々の行に追加するメモリ使用量の8バイトに加えて、このシナリオでは 8 gb です (4 \*インデックス 8 \*バイト2億5000万行)。  
+ 大きいテーブルの場合は、メモリ使用量が問題になることがあります。 たとえば、2億5000万行のテーブルに4つのハッシュインデックスがあり、それぞれのバケット数が10億である場合、ハッシュテーブルのオーバーヘッドは4インデックス * 10億バケット \* 8 バイト = 32 gb のメモリ使用率になります。 インデックスごとのバケット数に 2 億 5 千万個を選択すると、ハッシュ テーブルの合計オーバーヘッドは 8 GB です。 これは、各インデックスが個々の行に追加するメモリ使用量の8バイトに加えて、このシナリオでは 8 gb です (4 インデックス \* 8 バイト \* 2億5000万行)。  
   
  OLTP ワークロードのパフォーマンス クリティカル パスでは、フル テーブル スキャンは一般的ではありません。 そのため、メモリ使用量とポイント参照および挿入操作のパフォーマンスの間での選択になります。  
   

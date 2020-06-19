@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c355c95c5e6c686a063c4c32081aa0740f8e2fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901189"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915212"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>実行時の OData ソース クエリの変更
   データ フロー タスクの **[OData ソース].[クエリ]** プロパティに式を追加すると、OData ソースのクエリを実行時に変更できます。  
@@ -29,7 +28,7 @@ ms.locfileid: "62901189"
   
 1.  **[データ フロー タスク]** を右クリックし、 **[パラメーター化]** オプションを選択します。  
   
-2.  **[パラメーター化]** ダイアログで、 **[プロパティ]\< に対して** [**OData ソース コンポーネント名>].[クエリ]** を選択します。  
+2.  [**パラメーター**化] ダイアログで [] を選択し** \<Name of the OData Source Component> ます。 [Query]** **プロパティ**を使用します。  
   
 3.  **[新しいパラメーターの作成]** または **[既存のパラメーターを使用する]** のどちらかを選択します。  
   

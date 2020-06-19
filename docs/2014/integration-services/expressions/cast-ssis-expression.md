@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19b2e960aa2383568d3977d19368576f4178949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d94df6a59043bee136b0dc42ad8fb013c6c77456
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176442"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967482"
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 式)
   式のあるデータ型を別のデータ型に明示的に変換します。 キャスト演算子は、切り捨て演算子としても機能できます。
@@ -35,14 +34,14 @@ ms.locfileid: "78176442"
 ```
 
 ## <a name="arguments"></a>引数
- *type_spec*有効な[!INCLUDE[ssIS](../../includes/ssis-md.md)]データ型です。
+ *type_spec*有効な [!INCLUDE[ssIS](../../includes/ssis-md.md)] データ型です。
 
  *式*有効な式です。
 
 ## <a name="result-types"></a>戻り値の型
  *type_spec*のデータ型です。 詳細については、「 [Integration Services データ型](../data-flow/integration-services-data-types.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
  次の図は、有効なキャスト演算を示しています。
 
  ![データ型間の有効および無効なキャスト](../media/data-conversion.gif "データ型間の有効および無効なキャスト")

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64a693738df444e91fa4c9277b8a7dbc3eaca1a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637656"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933569"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready サンプル
   Hello World Ready サンプルでは、国際化対応の、CLR (共通言語ランタイム) 統合ベースの単純なストアド プロシージャの作成、配置、およびテストにかかわる基本的な操作を示しています。 国際化対応コンポーネントは、コンポーネントのソース コードを変更することなく、世界中の市場に向けて、異なる言語へのローカライズを簡単に行うことができます。 また、このサンプルでは、ストアド プロシージャによって動的に構築されてクライアントに返されるレコードおよび出力パラメーターを使用してデータを返す方法についても示します。このサンプルは、Hello World サンプルとほぼ同じですが、このアプリケーションのローカライズをより簡単かつ安全に行うことができます。 ローカライズ済みテキストを変更するには、次の作業を実行する必要があります。  
@@ -60,7 +59,7 @@ ms.locfileid: "73637656"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にするには`ALTER SETTINGS` 、サーバーレベルの権限が必要です。この権限は`sysadmin` 、 `serveradmin`固定サーバーロールおよびのメンバーによって暗黙的に保持されています。  
+    >  CLR を有効にするには、 `ALTER SETTINGS` サーバーレベルの権限が必要です。この権限は、 `sysadmin` 固定サーバーロールおよびのメンバーによって暗黙的に保持されてい `serveradmin` ます。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -76,9 +75,9 @@ ms.locfileid: "73637656"
   
 3.  c:\MySample で、`HelloWorld.vb` (Visual Basic サンプル) または `HelloWorld.cs` (C# サンプル) を作成し、適切な Visual Basic または C# のサンプル コード (下記) をこのファイルにコピーします。  
   
-4.  C:\MySample で、ファイル`messages.resx`を作成し、サンプルコードをファイルにコピーします。  
+4.  C:\MySample で、ファイルを作成 `messages.resx` し、サンプルコードをファイルにコピーします。  
   
-5.  C:\MySample で、行を変更`messages.de.resx` `messages.de.resx`した後に`messages.resx`ファイルを保存してファイルを作成します。  
+5.  C:\MySample で、 `messages.de.resx` `messages.resx` `messages.de.resx` 行を変更した後にファイルを保存してファイルを作成します。  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -86,7 +85,7 @@ ms.locfileid: "73637656"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  C:\MySample で、行を変更`messages.es.resx` `messages.es.resx`した後に`messages.resx`ファイルを保存してファイルを作成します。  
+6.  C:\MySample で、 `messages.es.resx` `messages.resx` `messages.es.resx` 行を変更した後にファイルを保存してファイルを作成します。  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -94,7 +93,7 @@ ms.locfileid: "73637656"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  C:\MySample で、行を変更`messages.fr.resx` `messages.fr.resx`した後に`messages.resx`ファイルを保存してファイルを作成します。  
+7.  C:\MySample で、 `messages.fr.resx` `messages.resx` `messages.fr.resx` 行を変更した後にファイルを保存してファイルを作成します。  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -102,7 +101,7 @@ ms.locfileid: "73637656"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  C:\MySample で、行を変更`messages.fr-FR.resx` `messages.fr-FR.resx`した後に`messages.resx`ファイルを保存してファイルを作成します。  
+8.  C:\MySample で、 `messages.fr-FR.resx` `messages.resx` `messages.fr-FR.resx` 行を変更した後にファイルを保存してファイルを作成します。  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -110,7 +109,7 @@ ms.locfileid: "73637656"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. C:\MySample で、行を変更`messages.it.resx` `messages.it.resx`した後に`messages.resx`ファイルを保存してファイルを作成します。  
+9. C:\MySample で、 `messages.it.resx` `messages.resx` `messages.it.resx` 行を変更した後にファイルを保存してファイルを作成します。  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -118,7 +117,7 @@ ms.locfileid: "73637656"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. C:\MySample で、行を変更`messages.ja.resx` `messages.ja.resx`した後に`messages.resx`ファイルを保存してファイルを作成します。  
+10. C:\MySample で、 `messages.ja.resx` `messages.resx` `messages.ja.resx` 行を変更した後にファイルを保存してファイルを作成します。  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -142,7 +141,7 @@ ms.locfileid: "73637656"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-16. テスト[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドスクリプトをファイルにコピーし、とし`test.sql`てサンプルディレクトリに保存します。  
+16. [!INCLUDE[tsql](../../includes/tsql-md.md)]テストコマンドスクリプトをファイルにコピーし、として `test.sql` サンプルディレクトリに保存します。  
   
 17. 次のコマンドを使用してテスト スクリプトを実行します。  
   

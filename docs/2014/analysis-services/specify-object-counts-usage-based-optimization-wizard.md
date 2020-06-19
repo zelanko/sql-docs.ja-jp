@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 306c7c25-ae24-4852-ab8c-c82f68a4bc1f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e0503192c3c948110f8301c8eb375e1c8203e42f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 862be19f12308def815a280dba04f42f0cbe6878
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068242"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940313"
 ---
 # <a name="specify-object-counts-usage-based-optimization-wizard"></a>[オブジェクト カウントの指定] (使用法に基づく最適化ウィザード)
   **[オブジェクト カウントの指定]** ページを使用すると、キューブ内のオブジェクト数を自動的に計算したり、推定カウントを手動で入力したりできます。 使用法に基づく最適化ウィザードでは、オブジェクト カウントを使用してストレージ要件を推定します。  
   
 ## <a name="options"></a>オプション  
  **[キューブ オブジェクト]**  
- キューブ内のディメンションおよび属性を表示します。 ウィザードの [**集計使用法**の確認`AggregationUsage` ] ページでプロパティが [なし] に設定されていない属性のみが表示されます。カウントを指定する必要がある属性はこれらの属性だけであるためです。  
+ キューブ内のディメンションおよび属性を表示します。 `AggregationUsage`ウィザードの [**集計使用法の確認**] ページでプロパティが [なし] に設定されていない属性のみが表示されます。カウントを指定する必要がある属性はこれらの属性だけであるためです。  
   
  **[推定カウント]**  
  メジャー グループ内の推定行数およびデータベース ディメンション内の属性の推定メンバー数を表示します。 推定カウントとして使用する値を入力することも、推定カウントの値を計算することもできます。 カウントの値を計算するには、フィールドに「 0 」を入力して **[カウント]** をクリックします。 既にカウントが表示されているフィールドは更新されません。  

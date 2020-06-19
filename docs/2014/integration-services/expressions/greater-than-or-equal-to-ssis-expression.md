@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e4db32776e59c6100594933fd8706129e8652790
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbf78e3ccc56268304440ebacb0b8dfd2bc953b3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967372"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (以上) (SSIS 式)
   最初の式が 2 番目の式以上かどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。  

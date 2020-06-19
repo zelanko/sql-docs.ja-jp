@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd7aea63ae85a16e23ff532c7e18ace3c376a707
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921958"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957942"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]テーブルを管理する方法について説明します。 **suspect_pages** テーブルは、問題があると考えられるページに関する情報を保持するためのテーブルであり、復元が必要かどうかを判断する際に使用します。 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) テーブルは、 [msdb データベース](../databases/msdb-database.md)にあります。  
   
  [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] がデータ ページの読み取りを試みたときに次のエラーのいずれかを検出すると、ページは "問題あり" と見なされます。  
   
--   [823 エラー](../errors-events/mssqlserver-823-database-engine-error.md) : ディスク エラー (特定のハードウェア エラー) など、オペレーティング システムで実行された巡回冗長検査 (CRC) によって発生したエラーです。  
+-   ディスクエラー (特定のハードウェアエラー) など、オペレーティングシステムによって発行された巡回冗長検査 (CRC) によって発生した[823 エラー](../errors-events/mssqlserver-823-database-engine-error.md)  
   
--   [824 エラー](../errors-events/mssqlserver-824-database-engine-error.md): 正しくないページ (すべての論理エラー) などです。  
+-   [824 エラー](../errors-events/mssqlserver-824-database-engine-error.md)(破損ページ (すべての論理エラー) など)  
   
  問題があると考えられるすべてのページのページ ID が **suspect_pages** テーブルに記録されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、次のような通常の処理中に検出された問題のあるページを記録します。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62921958"
   
      [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **suspect_pages テーブルを管理する方法:**  
   

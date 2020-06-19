@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fbae9e97e99223665e6d89d9e8c1a2bce3e48a26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26be406c26c362f1bd7fc5880e7c889fbd450ad6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901201"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915186"
 ---
 # <a name="odata-source-properties"></a>OData ソースのプロパティ
   データ フローで **[OData ソース]** を右クリックし、 **[プロパティ]** をクリックすると、 **[プロパティ]** ウィンドウに **[OData ソース]** コンポーネントに対応するプロパティが表示されます。  

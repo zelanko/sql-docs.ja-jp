@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b69439226b55965e37f24f2131c77340ae833590
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: abd183f1e7857a811194179f14f20b9fa599fa57
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154720"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958372"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure"></a>Azure への SQL Server マネージド バックアップの設定
   このトピックには、次の 2 つのチュートリアルが含まれています。  
@@ -24,22 +23,22 @@ ms.locfileid: "70154720"
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]をインスタンス レベルで設定し、電子メール通知を有効にして、バックアップ処理を監視します。  
   
- 可用性グループ[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の設定に関するチュートリアルについては、「[可用性グループの Microsoft Azure するための SQL Server マネージバックアップの設定](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)」を参照してください。  
+ 可用性グループの設定に関するチュートリアルについ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ては、「[可用性グループの Microsoft Azure するための SQL Server マネージバックアップの設定](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)」を参照してください。  
   
 ## <a name="setting-up-ss_smartbackup"></a>[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の設定  
   
 ### <a name="enable-and-configure-ss_smartbackup-for-a-database"></a>データベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にして構成する  
  このチュートリアルでは、データベース (TestDB) に対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にして構成するために必要な手順の後、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の正常性状態の監視を有効にする手順について説明します。  
   
- **許可**  
+ **アクセス許可:**  
   
--   **Db_backupoperator**データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL**権限、および`EXECUTE` **sp_delete_backuphistory**ストアドプロシージャに対する権限が必要です。  
+-   **Db_backupoperator**データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL**権限、および `EXECUTE` **sp_delete_backuphistory**ストアドプロシージャに対する権限が必要です。  
   
 -   **Smart_admin fn_get_current_xevent_settings**関数に対する**SELECT**権限が必要です。  
   
 -   `EXECUTE` **Smart_admin sp_get_backup_diagnostics**ストアドプロシージャに対する権限が必要です。 さらに、`VIEW SERVER STATE` 権限も必要です (この権限を必要とする他のシステム オブジェクトを内部的に呼び出すため)。  
   
--   ストアド`EXECUTE`プロシージャ`smart_admin.sp_set_instance_backup`および`smart_admin.sp_backup_master_switch`ストアドプロシージャに対する権限が必要です。  
+-   `EXECUTE` `smart_admin.sp_set_instance_backup` ストアドプロシージャおよびストアドプロシージャに対する権限が必要です `smart_admin.sp_backup_master_switch` 。  
 
 
 1.  **Microsoft Azure ストレージアカウントを作成します。** バックアップは Microsoft Azure ストレージサービスに格納されます。 まだアカウントを持っていない場合は、まず Microsoft Azure ストレージアカウントを作成する必要があります。
@@ -52,7 +51,7 @@ ms.locfileid: "70154720"
   
 4.  **保有期間を決定する:** バックアップ ファイルに必要な保有期間を決定します。 保有期間は日数で指定し、その範囲は 1 ～ 30 になります。  
   
-5.  **を有効に[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]して構成する:** SQL Server Management Studio を起動し、データベースがインストールされているインスタンスに接続します。 要件に合わせて、データベース名、SQL 資格情報、保有期間、および暗号化オプションの値を変更した後、クエリ ウィンドウから次のステートメントを実行します。  
+5.  **を有効にして構成する [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** SQL Server Management Studio を開始し、データベースがインストールされているインスタンスに接続します。 要件に合わせて、データベース名、SQL 資格情報、保有期間、および暗号化オプションの値を変更した後、クエリ ウィンドウから次のステートメントを実行します。  
   
      暗号化用の証明書の作成の詳細については、「[暗号化されたバックアップを作成](create-an-encrypted-backup.md)する」の「**バックアップ証明書**の作成」を参照してください。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "70154720"
   
     1.  データベース メールがインスタンス上でまだ有効になっていない場合は設定します。 詳細については、「 [Configure Database Mail](../database-mail/configure-database-mail.md)」を参照してください。  
   
-    2.  データベース メールを使用するように SQL Server エージェント通知を構成します。 詳細については、「[データベースメールを使用するように SQL Server エージェントメールを構成する](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)」を参照してください。  
+    2.  データベース メールを使用するように SQL Server エージェント通知を構成します。 詳細については、「 [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)」を参照してください。  
   
     3.  **電子メール通知を有効にして、バックアップ エラーおよび警告を受け取る:** クエリ ウィンドウから、次の Transact-SQL ステートメントを実行します。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "70154720"
   
 8.  **Microsoft Azure ストレージ アカウントでバックアップ ファイルを表示する:** SQL Server Management Studio または Azure 管理ポータルから、ストレージ アカウントに接続します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を使用するように構成したデータベースをホストする SQL Server インスタンスのコンテナーが表示されます。 また、データベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にしてから 15 分以内のデータベースとログ バックアップも表示される場合があります。  
   
-9. **正常性状態を監視する:**  前の手順で構成した電子メール通知から監視するか、ログに記録されているイベントをアクティブに監視することができます。 イベントを表示するための Transact-SQL ステートメントのいくつかの例を示します。  
+9. **正常性状態を監視する:** 前の手順で構成した電子メール通知から監視するか、ログに記録されているイベントをアクティブに監視することができます。 イベントを表示するための Transact-SQL ステートメントのいくつかの例を示します。  
   
     ```  
     --  view all admin events  
@@ -150,11 +149,11 @@ ms.locfileid: "70154720"
  このセクションで説明した手順は、データベースで初めて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を構成するための特別な手順です。 同じシステムストアドプロシージャ**smart_admin sp_set_db_backup**を使用して既存の構成を変更し、新しい値を指定することができます。 詳細については、「SQL Server 管理されている[バックアップから Microsoft Azure-保有期間とストレージの設定](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)」を参照してください。  
   
 ### <a name="enable-ss_smartbackup-for-the-instance-with-default-settings"></a>既定の設定を使用してインスタンスの [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にする  
- このチュートリアルでは、インスタンス ' MyInstance [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ' に対してを有効にして\\構成する手順について説明します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の正常性状態の監視を有効にするための手順も含まれています。  
+ このチュートリアルでは、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] インスタンス ' MyInstance ' に対してを有効にして構成する手順について説明し \\ ます。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の正常性状態の監視を有効にするための手順も含まれています。  
   
- **許可**  
+ **アクセス許可:**  
   
--   **Db_backupoperator**データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL**権限、および`EXECUTE` **sp_delete_backuphistory**ストアドプロシージャに対する権限が必要です。  
+-   **Db_backupoperator**データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL**権限、および `EXECUTE` **sp_delete_backuphistory**ストアドプロシージャに対する権限が必要です。  
   
 -   **Smart_admin fn_get_current_xevent_settings**関数に対する**SELECT**権限が必要です。  
   
@@ -171,7 +170,7 @@ ms.locfileid: "70154720"
   
 4.  **保有期間を決定する:** バックアップ ファイルに必要な保有期間を決定します。 保有期間は日数で指定し、その範囲は 1 ～ 30 になります。 インスタンス レベルで既定値を使用して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にすると、その後作成されたすべての新しいデータベースに、設定が継承されます。 完全または一括ログ復旧モデルに設定されているデータベースのみがサポートされており、自動的に構成されます。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を構成する必要がなければ、特定のデータベースの [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]をいつでも無効にすることができます。 また、データベース レベルで [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を構成することで、特定のデータベースの構成を変更することもできます。  
   
-5.  **を有効に[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]して構成する:** SQL Server Management Studio を起動し、SQL Server のインスタンスに接続します。 要件に応じて、データベース名、SQL 資格情報、保有期間、および暗号化オプションの値を変更した後、クエリウィンドウから次のステートメントを実行します。  
+5.  **を有効にして構成する [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** SQL Server Management Studio を開始し、SQL Server のインスタンスに接続します。 要件に応じて、データベース名、SQL 資格情報、保有期間、および暗号化オプションの値を変更した後、クエリウィンドウから次のステートメントを実行します。  
   
      暗号化用の証明書の作成の詳細については、「[暗号化されたバックアップを作成](create-an-encrypted-backup.md)する」の「**バックアップ証明書**の作成」を参照してください。  
   
@@ -214,7 +213,7 @@ ms.locfileid: "70154720"
   
     1.  データベース メールがインスタンス上でまだ有効になっていない場合は設定します。 詳細については、「 [Configure Database Mail](../database-mail/configure-database-mail.md)」を参照してください。  
   
-    2.  データベース メールを使用するように SQL Server エージェント通知を構成します。 詳細については、「[データベースメールを使用するように SQL Server エージェントメールを構成する](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)」を参照してください。  
+    2.  データベース メールを使用するように SQL Server エージェント通知を構成します。 詳細については、「 [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)」を参照してください。  
   
     3.  **電子メール通知を有効にして、バックアップ エラーおよび警告を受け取る:** クエリ ウィンドウから、次の Transact-SQL ステートメントを実行します。  
   
@@ -229,7 +228,7 @@ ms.locfileid: "70154720"
   
 9. **Microsoft Azure ストレージ アカウントでバックアップ ファイルを表示する:** SQL Server Management Studio または Azure 管理ポータルから、ストレージ アカウントに接続します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を使用するように構成したデータベースをホストする SQL Server インスタンスのコンテナーが表示されます。 また、新しいデータベースを作成してから 15 分以内のデータベースとログ バックアップも表示される場合があります。  
   
-10. **正常性状態を監視する:**  前の手順で構成した電子メール通知から監視するか、ログに記録されているイベントをアクティブに監視することができます。 イベントを表示するための Transact-SQL ステートメントのいくつかの例を示します。  
+10. **正常性状態を監視する:** 前の手順で構成した電子メール通知から監視するか、ログに記録されているイベントをアクティブに監視することができます。 イベントを表示するための Transact-SQL ステートメントのいくつかの例を示します。  
   
     ```  
     --  view all admin events  

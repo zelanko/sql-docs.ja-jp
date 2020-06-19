@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d22511424ff9a7b72edba8c8e3987a8a3185217
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 853451ea5a7c43cd073fdf75703b3c4651b442d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175975"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958072"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>メディア セット、メディア ファミリ、およびバックアップ セット (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を初めて使用するユーザーを対象とし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバックアップと復元で使用する基本的なバックアップ メディア用語を紹介します。 ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でバックアップ メディアに使用する形式、バックアップ メディアとバックアップ デバイス間の対応付け、バックアップ メディアでのバックアップの構成、メディア セットとメディア ファミリに関するいくつかの注意点について説明します。 古いメディア セットを新しいメディア セットと交換する前に行うバックアップ メディアの初期化およびフォーマット処理の手順、メディア セット内の古いバックアップ セットを上書きする方法、新しいバックアップ セットをメディア セットに追加する方法についても説明します。
@@ -86,7 +85,7 @@ ms.locfileid: "78175975"
 -   メディアの説明に MTF メディア ラベルまたはメディアの説明が含まれているかどうか。
 
     > [!NOTE]
-    >  バックアップまたは復元操作に使用されるすべてのメディアは、という[!INCLUDE[msCoName](../../includes/ssnoversion-md.md)]標準バックアップ形式を使用します。これは、別のアプリケーションによって書き込まれた mtf メディアラベルを保持しますが、mtf メディアラベルを作成しません。
+    >  バックアップまたは復元操作に使用されるすべてのメディアは、という標準バックアップ形式を使用し [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] ます。これは、別のアプリケーションによって書き込まれた mtf メディアラベルを保持しますが、mtf メディアラベルを作成しません。
 
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format メディア ラベルまたはメディアの説明 (自由な形式のテキスト)。
 
@@ -137,7 +136,7 @@ WITH
 
  ![2 つ目のバックアップ セットを 3 つのメディア セット テープにまたがって記録](../../database-engine/media/bnr-mediaset-appendedto.gif "2 つ目のバックアップ セットを 3 つのメディア セット テープにまたがって記録")
 
- バックアップを復元するとき、使用するバックアップを FILE オプションで指定できます。 次の例では、 **=** _backup_set_file_number_ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースの完全バックアップを復元した後、同じメディアセットにデータベースの差分バックアップを復元するときに、FILE backup_set_file_number 句を使用する方法を示します。 メディア セットでは 3 つのバックアップ テープが使用されます。テープが装着されているテープ ドライブは `\\.\tape0`、 `tape1`、および `tape2`です。
+ バックアップを復元するとき、使用するバックアップを FILE オプションで指定できます。 次の例は、 **=** _データベースの完全バックアップを復元した後、同じメディア セットで差分バックアップを行う場合の FILE_ backup_set_file_number [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 句の使用法を示しています。 メディア セットでは 3 つのバックアップ テープが使用されます。テープが装着されているテープ ドライブは `\\.\tape0`、 `tape1`、および `tape2`です。
 
 ```
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'
@@ -258,7 +257,7 @@ GO
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク
  **新しいメディア セットを作成するには**
 
--   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) (**[新しいメディア セットにバックアップし、すべての既存のバックアップ セットを消去する]** オプション)
+-   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) ( **[新しいメディア セットにバックアップし、すべての既存のバックアップ セットを消去する]** オプション)
 
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (FORMAT オプション)
 
@@ -266,13 +265,13 @@ GO
 
  **新しいバックアップを既存のメディアに追加するには**
 
--   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) (**[既存のバックアップ セットに追加する]** オプション)
+-   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) ( **[既存のバックアップ セットに追加する]** オプション)
 
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (NOINIT オプション)
 
  **既存のバックアップ セットを上書きするには**
 
--   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) (**[既存のすべてのバックアップ セットを上書きする]** オプション)
+-   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) ( **[既存のすべてのバックアップ セットを上書きする]** オプション)
 
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (INIT オプション)
 

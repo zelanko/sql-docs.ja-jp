@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 68e9e2d2-173f-4363-a515-fc60bfee3af0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4416a51ea32500d56c209d745065da20bf8010c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 625a3f2870590b77db84b3266ebf90f5081152d1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068419"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940411"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>[列マッピングの指定] ダイアログ ボックス (マイニング精度チャート)
   **[列マッピングの指定]** タブを使用して、外部データ ソースからテーブルを選択し、列をデータ マイニング モデルにマッピングします。 次に外部データを使用してマイニング モデルの精度をテストして、その結果を精度チャートに表示します。  

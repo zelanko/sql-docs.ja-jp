@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 793d07bfd7500318a5fe822683e8353b07e541ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1ca3b07a4b913770a44d29c82a1421e5f29845b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176432"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967362"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>式における Integration Services データ型
   式エバリュエーターは、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型を使用します。 データが [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージのデータ フローに入力されると、データ フロー エンジンはすべての列データを [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型に変換します。このため、式が列データを使用するときには、既に [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型になっています。 条件分割変換および派生列変換で使用される式は、列データが含まれるデータ フローの一部であるため、列を参照できます。
@@ -32,7 +31,7 @@ ms.locfileid: "78176432"
  式には、文字列、ブール、および数値リテラルも含めることができます。 数値リテラルの [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数値データ型への変換の詳細については、「[ &#40;SSIS&#41;](numeric-string-and-boolean-literals.md)」を参照してください。
 
 ## <a name="implicit-data-conversion"></a>暗黙的なデータ変換
- データ型の暗黙的な変換は、式エバリュエーターがあるデータ型を別のデータ型に自動的に変換するときに行われます。 たとえば、 `smallint`がと比較`int`される場合、は、 `smallint`比較が実行さ`int`れる前に、暗黙的にに変換されます。
+ データ型の暗黙的な変換は、式エバリュエーターがあるデータ型を別のデータ型に自動的に変換するときに行われます。 たとえば、がと比較される場合、は `smallint` `int` 、 `smallint` 比較が実行される前に、暗黙的にに変換され `int` ます。
 
  引数やオペランドに互換性のないデータ型がある場合は、式エバリュエーターは暗黙的なデータ変換を実行できません。 また、式エバリュエーターは、どのような値もブール値に暗黙的に変換することはできません。 代わりに、キャスト演算子を使用して引数とオペランドを明示的に変換する必要があります。 詳細については、「[Cast &#40;SSIS 式&#41;](cast-ssis-expression.md)」をご覧ください。
 
@@ -51,7 +50,7 @@ ms.locfileid: "78176432"
 > 
 >  エラーや予期しない結果が発生しないように、`True` および `False` については、特定の数値を参照するようなコードは記述しないでください。 可能な限り、ブール型の変数には、仕様で定められている論理値以外の値を使用しないようにしてください。
 
- 詳細については、以下のトピックを参照してください。
+ 詳細については、次のトピックを参照してください。
 
 -   [== &#40;等しい&#41; &#40;SSIS 式&#41;](equal-ssis-expression.md)
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 854336885617ac9f3bea98880433a7ce870c4844
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9500c3a3a25db2584f23c7ce77527c50c18e09ba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62834578"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922163"
 ---
 # <a name="use-the-new-instance-wizard"></a>新しいインスタンス ウィザードの使用
   新しいインスタンス ウィザードを使用すると、CDC サービスに新しいインスタンスを作成できます。 Oracle CDC インスタンスの作成ウィザードは、CDC デザイナー コンソールから開きます。 新しいインスタンス ウィザードでは、次の操作を実行できます。  

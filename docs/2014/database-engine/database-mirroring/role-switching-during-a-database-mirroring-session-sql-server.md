@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e16adbad2106d623279edf9d443eae3755c7be5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754497"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934023"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッション中の役割の交代 (SQL Server)
   データベース ミラーリング セッションでは、 *役割の交代*という処理により、一般的にプリンシパルとミラーの役割を相互交換できます。 役割の交代では、ミラー サーバーはプリンシパル サーバーに対する *フェールオーバー パートナー* として機能します。プリンシパルの役割を引き継ぎ、サーバー内のデータベースのコピーを復旧し、それを新しいプリンシパル データベースとしてオンラインにします。 以前のプリンシパル サーバーは利用可能であればミラーの役割を担い、サーバー内のデータベースを新しいミラー データベースにします。 場合によっては、複数のエラーに対する対応として、または管理目的のために、役割を何度も交代できます。  
@@ -292,7 +291,7 @@ ms.locfileid: "62754497"
  [データベースミラーリング中に発生する可能性のあるエラー](possible-failures-during-database-mirroring.md)   
  [クライアントをデータベースミラーリングセッションに接続する &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [データベースミラーリング監視サーバー](database-mirroring-witness.md)   
- [完全復旧モデル &#40;データベースの完全復元&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
+ [データベースの全体復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [データベースミラーリングの動作モード](database-mirroring-operating-modes.md)   
  [ミラーリング状態 &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

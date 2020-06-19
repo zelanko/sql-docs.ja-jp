@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e76005b6314f074d4f54f64d42a03b4b79dcef3a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754200"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933773"
 ---
 # <a name="allowing-partially-trusted-callers"></a>部分的に信頼される呼び出し元の許容
   コード ライブラリの共有は、共通言語ランタイム (CLR) 統合に関する共通のシナリオです。この場合、ユーザー定義型、ストアド プロシージャ、ユーザー定義関数、ユーザー定義集計、トリガー、またはユーティリティ クラスを含んだアセンブリは、しばしば別のアセンブリまたはアプリケーションによってアクセスされます。 複数のアプリケーションで共有されるコード ライブラリは、厳密な名前で署名する必要があります。  
@@ -60,7 +59,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  また、このサンプルでは、AllowPartiallyTrustedCallers 属性を使用して、ResultSet アセンブリが他のアセンブリから安全に呼び出されるライブラリであることを指定する方法を示します。 この方法はやや複雑ですが、UNSAFE 権限を使用して呼び出し側のアセンブリを登録する方法よりはるかに安全性に優れています。 呼び出し側のアセンブリを safe として登録することで、そのアセンブリがサーバー外部のリソースに与える影響が制限されるため、サーバーの整合性が維持されます。  
   
- このサンプルのビルド手順では、ソース コード ファイルが c:\samples というディレクトリにあると仮定しています。  別のディレクトリを使用する場合は、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを修正する必要があります。 スクリプト[!INCLUDE[tsql](../../includes/tsql-md.md)]では、AdventureWorks データベースも必要です。 AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます。  
+ このサンプルのビルド手順では、ソース コード ファイルが c:\samples というディレクトリにあると仮定しています。  別のディレクトリを使用する場合は、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを修正する必要があります。 スクリプトでは [!INCLUDE[tsql](../../includes/tsql-md.md)] 、AdventureWorks データベースも必要です。 AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます。  
   
  サンプルをビルドして実行するには、1 つ目のコード リストを ResultSet.cs という名前のファイルに貼り付け、csc /target:library ResultSet.cs を指定してコンパイルします。  
   

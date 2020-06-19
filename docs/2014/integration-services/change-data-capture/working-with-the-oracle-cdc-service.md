@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb8b61bf8cfa9a2b26646df19810a94705a30d14
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771182"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922153"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service の使用
   ここでは、Oracle CDC Service のいくつかの重要な概念について説明します。 このセクションで説明する概念は次のとおりです。  
@@ -70,7 +69,7 @@ ms.locfileid: "62771182"
   
  **dbo.xdbcdc_trace** テーブルに含まれるアイテムを以下に示します。  
   
-|アイテム|説明|  
+|Item|説明|  
 |----------|-----------------|  
 |timestamp|トレース レコードが書き込まれたときの正確な UTC タイムスタンプ。|  
 |type|次のいずれかの値が格納されます。<br /><br /> ERROR<br /><br /> INFO<br /><br /> TRACE|  
@@ -89,26 +88,26 @@ ms.locfileid: "62771182"
   
  **dbo.xdbcdc_databases** テーブルに含まれるアイテムを次の表に示します。  
   
-|アイテム|説明|  
+|Item|説明|  
 |----------|-----------------|  
 |name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれる Oracle データベースの名前。|  
 |config_version|対応する CDC データベースの **xdbcdc_config** テーブルで行われた最後の変更のタイムスタンプ (UTC)、またはこのテーブルの現在の行のタイムスタンプ (UTC)。<br /><br /> UPDATE トリガーでは、このアイテムの GETUTCDATE() の値が適用されます。 CDC サービスでは**config_version** を使用して、構成の変更や有効化/無効化について確認する必要がある CDC インスタンスを識別できます。|  
 |cdc_service_name|選択された Oracle データベースを処理する Oracle CDC Service を示します。|  
-|enabled|Oracle CDC インスタンスがアクティブ (1) か無効 (0) かを示します。 Oracle CDC Service の起動時には、有効 (1) とマークされたインスタンスだけが開始されます。<br /><br /> **注**: Oracle CDC インスタンスは、再試行できないエラーが原因で無効になることがあります。 この場合は、エラーを解決してからインスタンスを手動で再起動する必要があります。|  
+|enabled|Oracle CDC インスタンスがアクティブ (1) か無効 (0) かを示します。 Oracle CDC Service の起動時には、有効 (1) とマークされたインスタンスだけが開始されます。<br /><br /> **注**:Oracle CDC インスタンスは、再試行できないエラーが原因で無効になることがあります。 この場合は、エラーを解決してからインスタンスを手動で再起動する必要があります。|  
   
 ###  <a name="dboxdbcdc_services"></a><a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  このテーブルには、ホスト [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関連付けられている CDC サービスが表示されます。 このテーブルは、ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス用に構成された CDC サービスを特定するために CDC デザイナー コンソールで使用されます。 また、特定の Oracle CDC Service を処理している実行中の Windows サービスが 1 つだけであることを確認するために CDC サービスで使用されます。  
   
  **dbo.xdbcdc_databases** テーブルに含まれるキャプチャ状態アイテムを以下に示します。  
   
-|アイテム|説明|  
+|Item|説明|  
 |----------|-----------------|  
 |cdc_service_name|Oracle CDC Service の名前 (Windows サービス名)。|  
 |cdc_service_sql_login|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続するために Oracle CDC Service で使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前。 cdc_service という名前の新しい SQL ユーザーが作成されてこのログイン名に関連付けられ、サービスで処理される各 CDC データベースの db_ddladmin、db_datareader、および db_datawriter 固定データベース ロールのメンバーとして追加されます。|  
 |ref_count|同じ Oracle CDC Service がインストールされているコンピューターの数を示します。 同じ名前の Oracle CDC Service が追加されるたびに値が増加し、それらのサービスが削除されると減少します。 この行はカウンターが 0 に達すると削除されます。|  
 |active_service_node|CDC サービスを現在処理している Windows ノードの名前。 この列は、サービスが適切に停止されると null に設定され、アクティブなサービスがなくなったことが示されます。|  
 |active_service_heartbeat|現在の CDC サービスがまだアクティブであるかどうかを示します。<br /><br /> このアイテムは、アクティブな CDC サービスに対する現在のデータベースの UTC タイムスタンプに基づいて一定の間隔で更新されます。 既定の間隔は 30 秒ですが、この間隔は構成することも可能です。<br /><br /> 構成された間隔が経過してもハートビートが更新されていないことが保留中の CDC サービスで検出されると、その保留中のサービスで、アクティブな CDC サービスの役割の引き継ぎが試行されます。|  
-|options|トレースやチューニングなどの二次的なオプションを指定します。 **name[=value][; ]** の形式で記述されます。 options の文字列では、ODBC 接続文字列と同じセマンティクスを使用します。 オプションがブール値 (value が yes または no) の場合は、name だけでもかまいません。<br /><br /> トレースには、次の有効な値があります。<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> オフ<br /><br /> \<クラス名>[,クラス名>]<br /><br /> 既定値は **false** です。<br /><br /> <br /><br /> **service_heartbeat_interval** は、active_service_heartbeat 列を更新する間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **service_config_polling_interval** は、構成の変更を確認するポーリング間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **sql_command_timeout** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対するコマンドのタイムアウトです。 既定値は **1**です。 最大値は **3600**です。|  
+|options|トレースやチューニングなどの二次的なオプションを指定します。 **name[=value][; ]** の形式で記述されます。 options の文字列では、ODBC 接続文字列と同じセマンティクスを使用します。 オプションがブール値 (value が yes または no) の場合は、name だけでもかまいません。<br /><br /> トレースには、次の有効な値があります。<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> オフ<br /><br /> \<class name>[, クラス名>]<br /><br /> 既定値は **false** です。<br /><br /> <br /><br /> **service_heartbeat_interval** は、active_service_heartbeat 列を更新する間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **service_config_polling_interval** は、構成の変更を確認するポーリング間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **sql_command_timeout** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対するコマンドのタイムアウトです。 既定値は **1**です。 最大値は **3600**です。|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>MSXDBCDC データベースのストアド プロシージャ  
@@ -157,7 +156,7 @@ ms.locfileid: "62771182"
 ###  <a name="dboxcbcdc_add_servicesvcnamesqlusr"></a><a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  **dbo.xcbcdc_add_service** プロシージャでは、 **MSXDBCDC.xdbcdc_services** テーブルにエントリを追加し、 **MSXDBCDC.xdbcdc_services** テーブル内の該当するサービスの ref_count 列の値を 1 増やします。 また、**ref_count** が 0 になると、その行を削除します。  
   
- **dbo.xcbcdc_add_service\<service name, username>** プロシージャを使用するには、対象の CDC インスタンス データベースの **db_owner** データベース ロールのメンバーであるか、**sysadmin** または **serveradmin** 固定サーバー ロールのメンバーである必要があります。  
+ **Xcbcdc_add_service \<service name, username> **プロシージャを使用するには、ユーザーは、名前が指定されている CDC インスタンスデータベースの**db_owner**データベースロールのメンバーであるか、 **sysadmin**または**serveradmin**固定サーバーロールのメンバーである必要があります。  
   
 ###  <a name="dboxdbcdc_startdbname"></a><a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  **dbo.xdbcdc_start** プロシージャでは、変更の処理を開始するために、選択した CDC インスタンスを処理する CDC サービスに開始要求を送信します。  
@@ -217,7 +216,7 @@ ms.locfileid: "62771182"
   
  **sql-username**と **sql-password** には、更新する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証資格情報を指定します。 sqlacct のユーザー名とパスワードをどちらも指定しなかった場合は、Windows 認証を使用して Oracle CDC Service から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続されます。  
   
- **注**: スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"** と入力します)。  
+ **注**:スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"** と入力します)。  
   
 ###  <a name="create"></a><a name="BKMK_create"></a> 作成  
  `Create` は、Oracle CDC Service をスクリプトで作成する場合に使用します。 このコマンドを実行できるのはコンピューターの管理者だけです。 `Create` コマンドの例を次に示します。  
@@ -243,7 +242,7 @@ ms.locfileid: "62771182"
   
  **sql-username**と **sql-password** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続に使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアカウント名とパスワードを指定します。 これらのどちらのパラメーターも指定しなかった場合は、Windows 認証を使用して CDC Service for Oracle から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続されます。  
   
- **注**: スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"** と入力します)。  
+ **注**:スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"** と入力します)。  
   
 ###  <a name="delete"></a><a name="BKMK_delete"></a> Del  
  `Delete` は、Oracle CDC Service をスクリプトで完全に削除する場合に使用します。 このコマンドを実行できるのはコンピューターの管理者だけです。 `Delete` コマンドの例を次に示します。  
@@ -258,7 +257,7 @@ ms.locfileid: "62771182"
   
  **cdc-service-name** には、削除する CDC サービスの名前を指定します。  
   
- **注**: スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"** と入力します)。  
+ **注**:スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"** と入力します)。  
   
 ## <a name="see-also"></a>参照  
  [CDC Service のコマンド ライン インターフェイスを使用する方法](how-to-use-the-cdc-service-command-line-interface.md)   

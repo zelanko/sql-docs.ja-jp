@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96041fa9b632be0162259d72cd4001e9d7defdd5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fb6ccc97c2f0f5a3a69d2caa61ca67327015415
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768458"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967282"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>スクリプト コンポーネントでのデータ ソースへの接続
   接続マネージャーは、便宜上、特定の種類のデータ ソースに接続するために必要な情報をカプセル化して格納するユニットです。 詳細については、「[Integration Services (SSIS) の接続](../../connection-manager/integration-services-ssis-connections.md)」を参照してください。  
@@ -50,7 +49,7 @@ ms.locfileid: "62768458"
 > [!IMPORTANT]  
 >  スクリプト コンポーネントでマネージド コードを記述する場合、OLE DB 接続マネージャーや Excel 接続マネージャーなど、アンマネージド オブジェクトを返す接続マネージャーの AcquireConnection メソッドを呼び出すことはできません。 ただし、これらの接続マネージャーの ConnectionString プロパティを読み取り、**System.Data.OleDb** 名前空間の OLEDB **接続**の接続文字列を使用することにより、コード内でデータ ソースに直接接続することができます。  
 >   
->  アンマネージ オブジェクトを返す接続マネージャーの AcquireConnection メソッドを呼び出す必要がある場合は、ADO.NET 接続マネージャーを使用してください。 OLE DB プロバイダーを使用するように ADO.NET 接続マネージャーを設定すると、接続には .NET Framework Data Provider for OLE DB が使用されます。 この場合、AcquireConnection メソッドは、アンマネージ`System.Data.OleDb.OleDbConnection`オブジェクトではなくを返します。 ADO.NET 接続マネージャーで Excel データ ソースを使用するように設定するには、Microsoft OLE DB Provider for Jet を選択して Excel ワークブックを指定し、`Excel 8.0`[接続マネージャー]**ダイアログ ボックスの**[すべて]**ページにある**[拡張プロパティ] **の値に「** 」(Excel 97 以降の場合) と入力します。  
+>  アンマネージ オブジェクトを返す接続マネージャーの AcquireConnection メソッドを呼び出す必要がある場合は、ADO.NET 接続マネージャーを使用してください。 OLE DB プロバイダーを使用するように ADO.NET 接続マネージャーを設定すると、接続には .NET Framework Data Provider for OLE DB が使用されます。 この場合、AcquireConnection メソッドは、 `System.Data.OleDb.OleDbConnection` アンマネージオブジェクトではなくを返します。 ADO.NET 接続マネージャーで Excel データ ソースを使用するように設定するには、Microsoft OLE DB Provider for Jet を選択して Excel ワークブックを指定し、 **[接続マネージャー]** ダイアログ ボックスの **[すべて]** ページにある **[拡張プロパティ]** の値に「`Excel 8.0`」(Excel 97 以降の場合) と入力します。  
   
  スクリプト コンポーネントを使用して接続マネージャーを使用する方法の詳細については、「[スクリプト コンポーネントによる変換元の作成](../../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)」および「[スクリプト コンポーネントによる変換先の作成](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)」を参照してください。  
   
