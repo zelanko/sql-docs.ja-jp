@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c2518404830577839bce3e84c4eac9b76c850cd3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0db38e8bf21d56a0fcd35208920b9ee24b583062
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873770"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953476"
 ---
 # <a name="supported-net-framework-libraries"></a>サポートされている .NET Framework ライブラリ
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にホストされている共通言語ランタイム (CLR) を使用すると、ストアド プロシージャ、トリガー、ユーザー定義関数、ユーザー定義型、およびユーザー定義集計をマネージド コードで作成できます。 .NET Framework クラス ライブラリに用意されている機能を使用すると、文字列操作、高度な算術演算、ファイル アクセス、暗号化などの機能を提供する組み込みのクラスにアクセスできます。 これらのクラスは、任意のマネージド ストアド プロシージャ、ユーザー定義型、トリガー、ユーザー定義関数、またはユーザー定義集計からアクセスできます。  
   
 > [!NOTE]  
->  グローバルアセンブリキャッシュ (GAC) でサポートされていないアセンブリをサービスまた[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]はアップグレードする場合は、を使用します。 アセンブリが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 統合内に存在する場合は。 GAC で、データベースにも登録されているアセンブリ (サポートされていない .NET Framework アセンブリを含む) を提供またはアップグレードする場合は、`ALTER ASSEMBLY` ステートメントを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース内でもアセンブリのコピーを提供またはアップグレードしてください。 詳細については、[サポート技術情報の記事 949080](https://support.microsoft.com/kb/949080)を参照してください。  
+>  グローバルアセンブリキャッシュ (GAC) でサポートされていないアセンブリをサービスまたはアップグレードする場合は、を使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] します。 アセンブリが CLR 統合内に存在する場合は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 GAC で、データベースにも登録されているアセンブリ (サポートされていない .NET Framework アセンブリを含む) を提供またはアップグレードする場合は、`ALTER ASSEMBLY` ステートメントを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース内でもアセンブリのコピーを提供またはアップグレードしてください。 詳細については、[サポート技術情報の記事 949080](https://support.microsoft.com/kb/949080)を参照してください。  
   
 ## <a name="supported-libraries"></a>サポートされているライブラリ  
- 以降で[!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]は、サポートされる .NET Framework ライブラリの一覧が用意されています。これらのライブラリは、を使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]して、グローバルアセンブリキャッシュ (GAC) から直接読み込みます。  
+ 以降で [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] は、サポートされる .NET Framework ライブラリの一覧が用意されています。これらのライブラリは、を使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グローバルアセンブリキャッシュ (GAC) から直接読み込みます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合でサポートされるライブラリおよび名前空間を次に示します。  
   

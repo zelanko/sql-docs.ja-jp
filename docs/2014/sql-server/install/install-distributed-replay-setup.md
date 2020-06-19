@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e91b1b3af5c8531800f60478a4cb31d31ac3fbc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094626"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054746"
 ---
 # <a name="install-distributed-replay-setup"></a>分散再生のインストール (セットアップ)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードでインストールします。 機能をインストールする場所を計画する際には、以下について検討してください。  
@@ -35,7 +34,7 @@ ms.locfileid: "66094626"
 > [!NOTE]  
 >  分散再生の機能を削除または変更するには、 **コントロール パネル** で Windows の **[プログラムと機能]** ウィンドウを使用します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [プログラムのアンインストールまたは変更] **ウィンドウで** を選択し、 **[削除]** をクリックして [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードを開きます。 **[機能の選択]** ページで、削除する分散再生機能を選択します。  
   
- **応募**  
+ **前提条件:**  
   
 -   使用するコンピューターが、「 [分散再生の要件](../../tools/sql-server-profiler/replay-requirements.md)」に記載されている前提条件を満たしていることを確認します。  
   
@@ -54,15 +53,15 @@ ms.locfileid: "66094626"
   
      \- または -  
   
-     \<共有機能ディレクトリ>\Tools\\(ユーザーが指定した代替の共有機能ディレクトリ)  
+     \<Share Feature Directory>\ ツール \\ (ユーザーが指定した代替の共有機能ディレクトリ)  
   
 -   64 ビット システムの場合:  
   
-     C:\Program files\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86) \ 120 \ ツール  
+     C:\Program files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86) \ 120 \ ツール  
   
      \- または -  
   
-     \<共有機能ディレクトリ (x86)>\Tools\\(ユーザーが指定した代替の共有機能 (x86) ディレクトリ)  
+     \<Share Feature Directory (x86)>\ ツール \\ (ユーザーが指定した代替の共有機能 (x86) ディレクトリ)  
   
 ### <a name="to-install-distributed-replay-features"></a>分散再生機能をインストールするには  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66094626"
   
 5.  **[セットアップ サポート ファイル]** ページで **[インストール]** をクリックして、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のセットアップ サポート ファイルをインストールまたは更新します。  
   
-6.  [**セットアップロール**] ページで、[ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能のインストール**] を選択し、[**次**へ] をクリックして [**機能の選択**] ページに進みます。  
+6.  **[セットアップ ロール]** ページで、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能のインストール**をクリックし、 **[次へ]** をクリックして **[機能の選択]** ページに進みます。  
   
 7.  **[機能の選択]** ページで、どの機能をインストールするかを設定します。  
   
@@ -86,13 +85,13 @@ ms.locfileid: "66094626"
   
     -   クライアント サービスをインストールするには、 **[分散再生クライアント]** を選択します。  
   
-     **重要**: 分散再生コントローラーを構成するときに、分散再生クライアントサービスの実行に使用する1つ以上のユーザーアカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
+     **重要**:分散再生コントローラーを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
   
     -   ドメイン ユーザー アカウント  
   
     -   ユーザーによって作成されたローカル ユーザー アカウント  
   
-    -   Administrator  
+    -   管理者  
   
     -   仮想アカウントおよび管理されたサービス アカウント (MSA)  
   
@@ -102,11 +101,11 @@ ms.locfileid: "66094626"
   
 8.  必要に応じて、省略記号 (...) ボタンをクリックし、共有機能のディレクトリのパスを変更します。  
   
-    1.  32ビットコンピューターの場合、既定のインストールパスは**C:\Program files\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **です。  
+    1.  32 ビットのコンピューターの場合、既定のインストール パスは **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  64ビットコンピューターでは、既定のインストールパスは**C:\Program files (x86)\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。**  
+    2.  64 ビットのコンピューターの場合、既定のインストール パスは **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\** です。  
   
-9. 終了したら、**[次へ]** をクリックします。  
+9. 構成し終わったら、 **[次へ]** をクリックします。  
   
 10. **[インストール ルール]** ページで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップはコンピューターの構成を検証します。 検証プロセスが完了したら、 **[次へ]** をクリックします。  
   
@@ -123,7 +122,7 @@ ms.locfileid: "66094626"
   
  以下の追加のトピックでは、分散再生をインストールする他の方法が記載されています。  
   
--   [コマンドプロンプトから分散再生をインストールする](../../tools/distributed-replay/install-distributed-replay-overview.md)  
+-   [コマンド プロンプトからの分散再生のインストール](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
 -   [構成ファイルを使用した分散再生のインストール](../../../2014/sql-server/install/install-distributed-replay-using-a-configuration-file.md)  
   
@@ -132,9 +131,9 @@ ms.locfileid: "66094626"
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 の各エディションがサポートする機能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [SQL Server 分散再生](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [分散再生の要件](../../tools/sql-server-profiler/replay-requirements.md)   
- [管理ツールのコマンドラインオプション &#40;分散再生ユーティリティ&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)   
+ [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [分散再生の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

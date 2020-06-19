@@ -52,13 +52,12 @@ helpviewer_keywords:
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81653d9b93a7dc8ec71a88e70cee8b2d68f33a8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af365a21443f3feeb54ce2f76c729ba40909b9df
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068916"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940654"
 ---
 # <a name="log-properties"></a>ログのプロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すログ サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
@@ -76,7 +75,7 @@ ms.locfileid: "66068916"
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
 ## <a name="error-log"></a>エラー ログ  
- 次のプロパティをサーバー インスタンス レベルで設定し、他のツールとデザイナーに表示されるエラーの構成の既定値を変更できます。 詳細については、「 [SSAS-多次元&#41;の &#40;キューブ、パーティション、およびディメンションの処理のエラー構成](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)」を<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>参照してください。  
+ 次のプロパティをサーバー インスタンス レベルで設定し、他のツールとデザイナーに表示されるエラーの構成の既定値を変更できます。 詳細については、「 [SSAS-多次元&#41;の &#40;キューブ、パーティション、およびディメンションの処理のエラー構成](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)」を参照してください <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> 。  
   
  **ErrorLog\ErrorLogFileName**  
  サーバーによる処理操作の実行時に既定値として使用されるプロパティです。  

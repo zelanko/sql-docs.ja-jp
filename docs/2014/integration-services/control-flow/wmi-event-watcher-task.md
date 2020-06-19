@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee713086be138a204ca5b79f3ec172f8e376ea86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829505"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917672"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI イベント監視タスク
   WMI イベント監視タスクは、Windows Management Instrumentation Query Language (WQL) イベント クエリを使用して対象のイベントを指定することにより、Windows Management Instrumentation (WMI) イベントを監視します。 WMI イベント監視タスクは、次の目的で使用できます。  
@@ -75,7 +74,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   イベントに対するタスクの応答方法を定義します。 タスクは、イベントに応じて、成功または失敗するように構成できます。または、単にイベントを再度監視するように構成することもできます。  
   
--   WMI クエリがタイムアウトしたときにタスクが実行するアクションを指定します。タイムアウトとタイムアウト後の状態をログに記録したり、カスタム[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]イベントを発生させて、WMI イベントがタイムアウトし、タイムアウトとタイムアウトの状態をログに記録したりすることができます。  
+-   WMI クエリがタイムアウトしたときにタスクが実行するアクションを指定します。タイムアウトとタイムアウト後の状態をログに記録したり、カスタムイベントを発生させて、WMI イベントがタイムアウトし、タイムアウトとタイムアウトの状態をログに記録したりすることができ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ます。  
   
 -   タスクがタイムアウトにどのように応答するかを定義します。タスクは成功または失敗するように構成できます。また、タスクはイベントを再度監視することもできます。  
   

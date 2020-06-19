@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 956a73f76e113eb0a50f628150e47ed33791cc97
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdb702c890097965b8058258f78c8572ad911a72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176241"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968512"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>スクリプト タスクによるインストールされたプリンターの検索
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで変換されたデータは、最後の変換先で印刷レポートになることがよくあります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]の`System.Drawing.Printing` [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]名前空間は、プリンターを操作するためのクラスを提供します。
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで変換されたデータは、最後の変換先で印刷レポートになることがよくあります。 `System.Drawing.Printing`の名前空間は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] プリンターを操作するためのクラスを提供します。
 
 > [!NOTE]
 >  複数のパッケージでより簡単に再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。
@@ -45,7 +44,7 @@ ms.locfileid: "78176241"
 
 3.  このスクリプト プロジェクトでは、参照を **System.Drawing** 名前空間に追加します。
 
-4.  コードでは、ステートメント`Imports`を使用して、**システムコレクション**と`System.Drawing.Printing`名前空間をインポートします。
+4.  コードでは、ステートメントを使用して、 `Imports` **システムコレクション**と名前空間をインポートし `System.Drawing.Printing` ます。
 
 ### <a name="code"></a>コード
 

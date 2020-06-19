@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b1f285243e2b925cca9d263a53c9b70087ea5d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022247"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068591"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
   以下の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、プッシュ サブスクリプションを使用することで、スナップショット パブリケーションおよびトランザクション パブリケーションにサブスクライブできます。 以下に示す 2 つのデータベースの最新バージョンでは、OLE DB プロバイダーを使用したサブスクリプションがサポートされています。  
@@ -49,7 +48,7 @@ ms.locfileid: "63022247"
   
 -   レプリケーションでは、テーブルとインデックス付きビューをテーブルとして[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーにパブリッシュする処理をサポートしています (インデックス付きビューは、インデックス付きビューとしてレプリケートすることはできません)。  
   
--   パブリケーションの新規作成ウィザードでパブリケーションを作成した後、[パブリケーションのプロパティ] ダイアログボックスを使用して SQL Server 以外のサブスクライバーに対してパブリケーションを有効にすると、サブスクリプションデータベース[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]内のすべての[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクトの所有者は、以外のサブスクライバーに対して指定されません  
+-   パブリケーションの新規作成ウィザードでパブリケーションを作成した後、[パブリケーションのプロパティ] ダイアログボックスを使用して SQL Server 以外のサブスクライバーに対してパブリケーションを有効にすると、サブスクリプションデータベース内のすべてのオブジェクトの所有者は、以外のサブスクライバーに対して指定されません [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 -   パブリケーションに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーと[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーが含まれる場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーのサブスクリプションを作成する前に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対してパブリケーションを有効化する必要があります。  
   

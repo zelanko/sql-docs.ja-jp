@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 02aaab5056d5e2b095d9440f696edcc77475323e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba400e1030bb18b3370a023f88d069711a44c7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172561"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054841"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>SharePoint 2010 ファームで SQL Server BI 機能を使用するためのガイド
   このトピックでは、使用しているソフトウェアの各バージョンやエディションで利用可能な機能の概要を説明します。 また、特定の SQL Server 機能を使用するために必要な SharePoint 2010 インストールについても説明します。 SharePoint 2013 に関連する情報については、「 [sharepoint の SQL SERVER BI 機能の配置トポロジ](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)」を参照してください。
@@ -45,7 +44,7 @@ ms.locfileid: "78172561"
 
 |サポートされている機能|SharePoint 製品|
 |------------------------|------------------------|
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]Enterprise [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Edition 用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]のアドインの機能です。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ警告<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]Enterprise Edition。|
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Enterprise Edition 用のアドインの機能 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] です。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ警告<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]Enterprise Edition。|
 |一般的な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートの表示と SharePoint との機能統合|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard Edition と Enterprise Edition<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|
 
  詳細については、「 [SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」を参照してください。
@@ -57,7 +56,7 @@ ms.locfileid: "78172561"
 
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] および [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを使用します。
 
- で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]実行される SharePoint のインストールに SP1 が必要な主な理由の1つは、以前のリリースで非推奨とされたデータベースエンジン[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]の機能**sp_dboption**がリリースで廃止されたことです。 詳細については、「 [SQL Server 2014 で廃止されたデータベースエンジンの機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)」を参照してください。
+ で実行される SharePoint のインストールに SP1 が必要な主な理由の1つ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] は、以前のリリースで非推奨とされたデータベースエンジンの機能**sp_dboption**がリリースで廃止されたことです [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。 詳細については、「 [SQL Server 2014 で廃止されたデータベースエンジンの機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)」を参照してください。
 
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>SharePoint 2010 SP1 インストール ガイド
  [SharePoint Server 2010 SP1 をダウンロード](https://go.microsoft.com/fwlink/?LinkID=219697)し、ファーム内のすべてのサーバーに適用します。
@@ -67,7 +66,7 @@ ms.locfileid: "78172561"
 
 -   **SharePoint 製品構成ウィザード:** ウィザードを実行して、SP1 のアップグレードと構成を完了します。
 
--   **Psconfig.exe を使用したアップグレードを完了します。** コマンド`psconfig -upgrade`を実行して、SP1 のアップグレードを完了します。
+-   **Psconfig.exe を使用したアップグレードを完了します。** コマンドを実行して `psconfig -upgrade` 、SP1 のアップグレードを完了します。
 
  詳細については、「 [(Sharepoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) 」および「 [Resource center: sharepoint 2010 製品用の更新プログラム](https://technet.microsoft.com/sharepoint/ff800847.aspx)」の「アップグレード」セクションを参照してください。
 

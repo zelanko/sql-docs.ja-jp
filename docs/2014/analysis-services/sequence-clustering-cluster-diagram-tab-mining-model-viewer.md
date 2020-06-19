@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3e27ccc67858edd8e1f95bb910300a93a3e0db8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069110"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940753"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>シーケンス クラスターの [クラスター ダイアグラム] タブ (マイニング モデル ビューアー)
   **Microsoft シーケンス クラスター ビューアー** の **[クラスター ダイアグラム]** タブには、シーケンス クラスター モデルに含まれるすべてのクラスターのグラフィカル ビューが表示されます。  
@@ -33,7 +32,7 @@ ms.locfileid: "66069110"
  **[マイニング モデル]**  
  現在のマイニング構造に含まれているマイニング モデルから、表示するモデルを選択します。 関連付けられているビューアーが開き、マイニング モデルが表示されます。  
   
- **[ビューアー]**  
+ **Viewer**  
  選択したマイニング モデルを調べるために使用するビューアーを選択します。 カスタム ビューアーまたは **Microsoft 汎用コンテンツ ツリー ビューアー**を使用できます。 利用可能な場合プラグイン ビューアーを使用することもできます。  
   
  **拡大**  
@@ -59,7 +58,7 @@ ms.locfileid: "66069110"
  **[レイアウトの改善]**  
  ダイアグラム内のクラスターを並べ替えて、レイアウトを改善します。  
   
- **淡**  
+ **密度**  
  密度バー グラフとグラフ内の値の表示は、 **[シェーディング変数]** で選択した属性に依存します。  
   
 -   シェーディング変数として属性の状態を選択していない場合は、既定により、各クラスターに適用される密度のシェーディングがそのクラスターのサポートを表し、ケースの母集団全体と比較されます。  

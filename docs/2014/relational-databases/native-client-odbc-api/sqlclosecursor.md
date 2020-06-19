@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e7134d65-5c1c-4ae2-b119-d9b4b9a42483
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3e076c7e81a1ccf61813bf5dc629fb3ce59f5070
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 770a67432868516e5023d1cf0ff819501b4c130e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706359"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022880"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
   **SqlcloSQLFreeStmt**は、 [SQLFreeStmt](sqlfreestmt.md) *オプション*の値を SQL_CLOSE に置き換えます。 Native Client ODBC ドライバーでは、 **Sqlcloの**受信時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留中の結果セットの行が破棄されます。 ステートメントの列とパラメーターのバインド (存在する場合) は、 **Sqlcloに**よって変更されないことに注意してください。  

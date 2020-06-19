@@ -13,27 +13,26 @@ helpviewer_keywords:
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fceed0b4bcfb8d5c41046cd4faf555ca2847899c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 72c119ab3188321be97b2c51ddc0a77f8a585aee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706376"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023025"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect**は、3つのレベルの接続情報に分類できるキーワードを使用します。 次の表では、キーワードごとに、有効な値の一覧が返されるかどうか、およびそのキーワードが省略可能であるかどうかを示します。  
   
 ## <a name="level-1"></a>[レベル 1]  
   
-|Keyword|一覧が返されるかどうか|省略できるかどうか|説明|  
+|キーワード|一覧が返されるかどうか|省略できるかどうか|説明|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN (DSN)|該当なし|いいえ|**Sqldatasources**ソースによって返されるデータソースの名前。 DSN キーワードは、DRIVER キーワードと同時に使用できません。|  
 |DRIVER|該当なし|いいえ|Microsoft? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバー名は { [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client 11} です。 DRIVER キーワードは、DSN キーワードと同時に使用できません。|  
   
 ## <a name="level-2"></a>[レベル 2]  
   
-|Keyword|一覧が返されるかどうか|省略できるかどうか|説明|  
+|キーワード|一覧が返されるかどうか|省略できるかどうか|説明|  
 |-------------|--------------------|---------------|-----------------|  
 |SERVER|はい|×|データ ソースがあるネットワーク上のサーバー名。 サーバー名には「(local)」と入力することもできます。これは、ネットワークに接続されていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル コピーも使用できることを意味します。|  
 |UID|いいえ|はい|ユーザー ログイン ID。|  
@@ -43,7 +42,7 @@ ms.locfileid: "82706376"
   
 ## <a name="level-3"></a>レベル 3  
   
-|Keyword|一覧が返されるかどうか|省略できるかどうか|説明|  
+|キーワード|一覧が返されるかどうか|省略できるかどうか|説明|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|はい|はい|データベースの名前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |LANGUAGE|はい|はい|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される言語。|  

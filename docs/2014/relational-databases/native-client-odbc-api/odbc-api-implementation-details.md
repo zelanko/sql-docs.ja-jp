@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dae96ba17ee792b703e96ceff2200d1f8f629a01
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b8b27d39327a68a150fe42a0d6f152bd34c0dd4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706404"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022925"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 実装の詳細
   ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーで使用した場合に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の動作になる ODBC 関数について説明します。 ただし、ここではすべての ODBC 関数を記載しているわけではありません。 各トピックでは、ODBC 関数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の問題点についてのみ説明します。 したがって、トピックは ODBC 関数の完全なリファレンスではありません。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9a6bf22c7649646506b65628f556b52fead23375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3624aed38a7a5bf75e0c0807aa8d3657156264f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022298"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068597"
 ---
 # <a name="manage-oracle-tablespaces"></a>Oracle テーブルスペースの管理
   テーブルスペースは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のファイル グループにほぼ等しいデータベース領域の単位です。 テーブルスペースでは、個々のグループ内でデータベース オブジェクトの格納および管理が可能です。 詳細については Oracle のマニュアルを参照してください。  
@@ -31,15 +30,15 @@ ms.locfileid: "63022298"
   
 -   [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) を使用します。 **sp_changearticle**を使用するには、以下を指定します。  
   
-    -   パラメーター **@publisher**に対して Oracle パブリッシャーの名前を指定します。  
+    -   パラメーターに対して Oracle パブリッシャーの名前を指定 **@publisher** します。  
   
-    -   パラメーター **@publication**に対して Oracle パブリケーションの名前を指定します。  
+    -   パラメーターに対して Oracle パブリケーションの名前を指定し **@publication** ます。  
   
-    -   パラメーター **@article**のアーティクルの名前です。  
+    -   パラメーターのアーティクルの名前 **@article** です。  
   
-    -   パラメーター **@property**の値 ' テーブルスペース '。  
+    -   パラメーターの値 ' テーブルスペース ' **@property** 。  
   
-    -   パラメーター **@value**のテーブルスペースの名前。  
+    -   パラメーターのテーブルスペースの名前 **@value** 。  
   
 ## <a name="see-also"></a>参照  
  [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](configure-an-oracle-publisher.md)   
