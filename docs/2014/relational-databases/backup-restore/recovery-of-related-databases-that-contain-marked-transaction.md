@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b968322f92c7a135adb5fd0733b5774e7562bc39
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875719"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957582"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>マークされたトランザクションを含む関連データベースの復旧
   このトピックは、マークされたトランザクションが含まれており、完全復旧モデルまたは一括ログ復旧モデルを使用するデータベースのみに関連しています。  
@@ -61,11 +60,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>特定のマークの時点へ復旧するための Transact-SQL 構文  
  マークされたトランザクションを[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql)ステートメントで指定する場合、次のいずれかの句を使用して、マークに到達した時点またはマークの直前まで復旧できます。  
   
--   WITH stopatmark = **'*`<mark_name>`*'** 句を使用して、マークされたトランザクションが復旧ポイントであることを指定します。  
+-   WITH stopatmark = **' *`<mark_name>`* '** 句を使用して、マークされたトランザクションが復旧ポイントであることを指定します。  
   
      STOPATMARK では、マークまでロールフォワードされます。ロールフォワードには、マークされたトランザクションも含まれます。  
   
--   WITH STOPBEFOREMARK = **'*`<mark_name>`*'** 句を使用して、マークの直前にあるログレコードが復旧ポイントであることを指定します。  
+-   WITH STOPBEFOREMARK = **' *`<mark_name>`* '** 句を使用して、マークの直前にあるログレコードが復旧ポイントであることを指定します。  
   
      STOPBEFOREMARK では、マークまでロールフォワードされますが、マークされたトランザクションは含まれません。  
   

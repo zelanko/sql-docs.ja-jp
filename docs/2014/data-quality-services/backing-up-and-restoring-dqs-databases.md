@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 327217aee7f3e7abf8e09de30542b488a2be5108
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481152"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938053"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS データベースのバックアップと復元
   このトピックでは、DQS データベースのバックアップと復元を行う方法について説明します。  
@@ -60,7 +59,7 @@ ms.locfileid: "65481152"
   
 10. オブジェクト エクスプローラーでサーバーを右クリックし、 **[新しいクエリ]** をクリックします。  
   
-11. クエリエディターウィンドウで、次の SQL ステートメントをコピーし、 * \<パスワード>* を、DQS のインストール時にデータベースマスターキーのインストール時に指定したパスワードに置き換えます。  
+11. クエリエディターウィンドウで、次の SQL ステートメントをコピーし、を *\<PASSWORD>* DQS のインストール時にデータベースマスターキーに対して指定したパスワードに置き換えます。  
   
     ```  
     USE [DQS_MAIN]  

@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d72c84a7ed84503e0c88d2a46c808196903900b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011971"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026741"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)
     
-##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>XML ドキュメントは、データベースに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一括インポートすることも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースから一括エクスポートすることもできます。 このトピックではその両方の例を示します。  
+##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>XML ドキュメントは、データベースに一括インポートすることも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースから一括エクスポートすることもでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このトピックではその両方の例を示します。  
   
  データ ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはパーティション分割されていないビューにデータを一括インポートする場合、次の機能を使用できます。  
   

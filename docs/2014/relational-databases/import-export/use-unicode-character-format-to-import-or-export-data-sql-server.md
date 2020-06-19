@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 34e8f4a5b49c9e023c224e62c23326864ef26f65
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 520ce1b4eed8dc11d6d3fe038969257aea1e90fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011650"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026358"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Unicode 文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
   拡張文字や DBCS 文字を含むデータ ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送する場合は、Unicode 文字形式を使用することをお勧めします。 Unicode 文字データ形式を使用すると、操作を実行するクライアントで使用しているコード ページとは異なるコード ページを使用して、サーバーからデータをエクスポートできます。 このような場合、Unicode 文字形式を使用すると、次の利点があります。  
@@ -41,7 +40,7 @@ ms.locfileid: "66011650"
   
  Unicode 文字形式は、次のコマンド ライン オプションでサポートされています。  
   
-|command|オプション|説明|  
+|command|オプション|[説明]|  
 |-------------|------------|-----------------|  
 |**bcp**|**-w**|Unicode 文字形式を使用します。|  
 |BULK INSERT|DATAFILETYPE **= '** widechar **'**|データの一括インポート時に Unicode 文字形式を使用します。|  
@@ -51,7 +50,7 @@ ms.locfileid: "66011650"
 > [!NOTE]  
 >  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「 [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、 **bcp** を使用して Unicode 文字データを一括エクスポートする方法と、BULK INSERT を使用して Unicode 文字データを一括インポートする方法を示しています。  
   
 ### <a name="sample-table"></a>サンプル テーブル  

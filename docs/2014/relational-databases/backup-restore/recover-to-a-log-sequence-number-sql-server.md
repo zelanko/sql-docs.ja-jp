@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4df55c3468fc009d86cffd58a837d6935f5ce14b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875765"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957507"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>ログ シーケンス番号への復旧 (SQL Server)
   このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用するデータベースのみに関連しています。  
@@ -38,7 +37,7 @@ ms.locfileid: "62875765"
   
  トランザクション ログのすべてのレコードは、ログ シーケンス番号 (LSN) によって一意に識別されます。 LSN の順序は、LSN2 が LSN1 より大きい場合、LSN2 によって参照されるログ レコードで示される変更が、ログ レコード LSN1 で示される変更の後に行われたようになっています。  
   
- 重要なイベントが発生した時点のログ レコードの LSN を、正しい復元シーケンスの構築に役立てることができます。 Lsn は順序付けられているため、等しいかどうかを比較できます**\<**( **>** つまり**=** ** \< **、、 **>=**、、、)。 このような比較は、復元シーケンスを構築するときに役立ちます。  
+ 重要なイベントが発生した時点のログ レコードの LSN を、正しい復元シーケンスの構築に役立てることができます。 Lsn は順序付けられているため、等しいかどうかを比較できます (つまり、、、 **\<**, **>** **=** **\<=**, **>=** )。 このような比較は、復元シーケンスを構築するときに役立ちます。  
   
 > [!NOTE]  
 >  LSN は、データ型 `numeric`(25,0) の値です。 算術演算 (加算や減算など) は、意味が無いので LSN では行わないでください。  
@@ -64,17 +63,17 @@ ms.locfileid: "62875765"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>LSN に復元するための Transact-SQL 構文  
  [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) ステートメントを使用して、次のように LSN または LSN の直前まで復元できます。  
   
--   WITH stopatmark **= '** lsn:_<lsn_number>_ **'** 句を使用します。ここで、lsn:*\<lsnnumber>* は、指定された lsn を含むログレコードが復旧ポイントであることを指定する文字列です。  
+-   WITH stopatmark **= '** lsn:_<lsn_number>_ **'** 句を使用します。ここで、lsn: *\<lsnNumber>* は、指定された lsn を含むログレコードが復旧ポイントであることを指定する文字列です。  
   
      STOPATMARK によって LSN までロールフォワードされ、そのログ レコードがロールフォワードに含められます。  
   
--   WITH STOPBEFOREMARK **= '** lsn:_<lsn_number>_ **'** 句を使用します。ここで、lsn:*\<lsnnumber>* は、指定された lsn 番号が含まれるログレコードの直前のログレコードが復旧ポイントであることを指定する文字列です。  
+-   WITH STOPBEFOREMARK **= '** lsn:_<lsn_number>_ **'** 句を使用します。ここで、lsn: *\<lsnNumber>* は、指定された lsn 番号が含まれるログレコードの直前のログレコードが復旧ポイントであることを指定する文字列です。  
   
      STOPBEFOREMARK では、LSN までロールフォワードされますが、指定されたログ レコードはロールフォワードから除外されます。  
   
  通常は、包含または除外する特定のトランザクションを選択します。 実際には必要ありませんが、指定するログ レコードはトランザクション コミット レコードです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、完全復旧モデルを使用するように `AdventureWorks` データベースが変更されていることを想定しています。  
   
 ```  
@@ -98,7 +97,7 @@ GO
 -   [SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 ## <a name="see-also"></a>参照  
- [トランザクションログバックアップの適用 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [トランザクション ログ &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 972357372fe6d0281aedb57d49dd8d50682085b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82853123767237314edac1e301723724628439d9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057200"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965042"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>ODBC 変換先エディター ([エラー出力] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択できます。  
@@ -42,7 +41,7 @@ ms.locfileid: "66057200"
 ### <a name="column"></a>列  
  使用されていません。  
   
-### <a name="error"></a>Error  
+### <a name="error"></a>エラー  
  ODBC 入力先でフローのエラーを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
 ### <a name="truncation"></a>切り捨て  

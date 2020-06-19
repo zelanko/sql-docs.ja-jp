@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7104cc5f-f3c9-468c-8567-d78c7d84e60b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c7d879ffb8f02b41c4cc6c070946c737f9aea2c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2c9cab378f66a5d5b0603144ca3dafb5f544ce4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065726"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938273"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>[翻訳] (ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[翻訳]** タブを使用すると、ディメンションの階層や属性と同様に、ディメンションの翻訳について定義したり管理したりできます。  

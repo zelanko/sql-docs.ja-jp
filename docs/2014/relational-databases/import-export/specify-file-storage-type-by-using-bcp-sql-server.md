@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1f3ad2a94ffe3e0f1db19a8e66f85497e7143dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026491"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp を使用したファイル ストレージ型の指定 (SQL Server)
   *ファイル ストレージ型* は、データ ファイルへのデータの格納方法を記述します。 データ ファイルには、データベース テーブルの型 (ネイティブ形式)、文字表現 (文字形式)、または暗黙的な型変換がサポートされているデータ型のいずれかでデータをエクスポートできます。暗黙的な型変換では、たとえば、`smallint` は `int` としてコピーされます。 ユーザー定義のデータ型は、基本データ型としてエクスポートされます。  
@@ -41,15 +40,15 @@ ms.locfileid: "66011820"
   
     |ファイル ストレージ型|コマンド プロンプトで入力する文字|  
     |-----------------------|-----------------------------|  
-    |`char`<sup>1</sup>|`c`[`har`]|  
+    |`char` <sup>1</sup>|`c`[`har`]|  
     |`varchar`|`c[har]`|  
     |`nchar`|`w`|  
     |`nvarchar`|`w`|  
-    |`text`<sup>2</sup>|`T`[`ext`]|  
+    |`text` <sup>2</sup>|`T`[`ext`]|  
     |`ntext2`|`W`|  
     |`binary`|`x`|  
     |`varbinary`|`x`|  
-    |`image`<sup>2</sup>|`I`[`mage`]|  
+    |`image` <sup>2</sup>|`I`[`mage`]|  
     |`datetime`|**d[ate]**|  
     |`smalldatetime`|`D`|  
     |`time`|`te`|  
@@ -73,24 +72,24 @@ ms.locfileid: "66011820"
     |`UDT` (ユーザー定義データ型)|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup>フィールド長、プレフィックス長、およびターミネータの相互作用によって、 `char`ファイルストレージ型としてエクスポートされた非文字データのデータファイルに割り当てられる記憶域の容量が決まります。  
+     <sup>1</sup>フィールド長、プレフィックス長、およびターミネータの相互作用によって、ファイルストレージ型としてエクスポートされた非文字データのデータファイルに割り当てられる記憶域の容量が決まり `char` ます。  
   
-     <sup>2</sup> `ntext`、 `text`、および`image`の各データ型は、の将来の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンで削除される予定です。 新しい開発作業ではこれらのデータ型の使用を避け、現在このデータ型を使用しているアプリケーションは変更を検討してください。 代わりに `nvarchar(max)`、`varchar(max)`、および `varbinary(max)` 型を使用してください。  
+     <sup>2</sup> `ntext` 、 `text` 、および `image` の各データ型は、の将来のバージョンで削除される予定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。 新しい開発作業ではこれらのデータ型の使用を避け、現在このデータ型を使用しているアプリケーションは変更を検討してください。 代わりに `nvarchar(max)`、`varchar(max)`、および `varbinary(max)` 型を使用してください。  
   
 ## <a name="native-file-storage-types"></a>ネイティブのファイル ストレージ型  
  各ネイティブのファイル ストレージ型は、対応するホスト ファイル データ型として、フォーマット ファイルに記録されます。  
   
 |ファイル ストレージ型|ホスト ファイル データ型|  
 |-----------------------|-------------------------|  
-|`char`<sup>1</sup>|SQLCHAR|  
+|`char` <sup>1</sup>|SQLCHAR|  
 |`varchar`|SQLCHAR|  
 |`nchar`|SQLNCHAR|  
 |`nvarchar`|SQLNCHAR|  
-|`text`<sup>2</sup>|SQLCHAR|  
-|`ntext`<sup>2</sup>|SQLNCHAR|  
+|`text` <sup>2</sup>|SQLCHAR|  
+|`ntext` <sup>2</sup>|SQLNCHAR|  
 |`binary`|SQLBINARY|  
 |`varbinary`|SQLBINARY|  
-|`image`<sup>2</sup>|SQLBINARY|  
+|`image` <sup>2</sup>|SQLBINARY|  
 |`datetime`|SQLDATETIME|  
 |`smalldatetime`|SQLDATETIM4|  
 |`decimal`|SQLDECIMAL|  
@@ -109,16 +108,16 @@ ms.locfileid: "66011820"
 |`timestamp`|SQLBINARY|  
 |UDT (ユーザー定義データ型)|SQLUDT|  
   
- <sup>1</sup>文字形式で格納された1つ`char`のデータファイルは、ファイルストレージ型として使用されます。 したがって、文字データ ファイルの場合、フォーマット ファイルに表示されるデータ型は SQLCHAR のみです。  
+ 1文字形式で格納された<sup>1 つ</sup>のデータファイルは `char` 、ファイルストレージ型として使用されます。 したがって、文字データ ファイルの場合、フォーマット ファイルに表示されるデータ型は SQLCHAR のみです。  
   
- <sup>2</sup>既定値が設定され`text`て`ntext`いる、 `image` 、およびの各列にデータを一括インポートすることはできません。  
+ <sup>2</sup> `text` `ntext` `image` 既定値が設定されている、、およびの各列にデータを一括インポートすることはできません。  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>ファイル ストレージ型のその他の考慮事項  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからデータ ファイルにデータを一括エクスポートするときは、次のことを考慮してください。  
   
 -   `char` 型は、常にファイル ストレージ型として指定できます。  
   
--   無効な暗黙的な変換を表すファイルストレージ型を入力すると、 **bcp**は失敗します。たとえば`int` 、データに`smallint`を指定することはできますが、 `smallint`データ`int`にを指定すると、オーバーフローエラーが発生します。  
+-   無効な暗黙的な変換を表すファイルストレージ型を入力すると、 **bcp**は失敗します。たとえば、データにを指定することはできますが、 `int` `smallint` データにを指定すると `smallint` `int` 、オーバーフローエラーが発生します。  
   
 -   `float`、`money`、`datetime`、または `int` などの非文字データ型をそれぞれのデータベース型として格納すると、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブ形式でデータ ファイルに書き込まれます。  
   

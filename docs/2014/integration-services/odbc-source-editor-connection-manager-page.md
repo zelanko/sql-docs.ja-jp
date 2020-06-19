@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bea70ca9d5d511660ff19a84165a7fc7921b6de1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9c4049681e671993f48594eb7ac18bad403e3e2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057218"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965012"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>[ODBC ソース エディター] ([接続マネージャー] ページ)
   **[ODBC 入力元エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、入力元の ODBC 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
@@ -52,7 +51,7 @@ ms.locfileid: "66057218"
 ||**[参照]** をクリックして、テキスト ファイルから SQL クエリを読み込みます。|  
 ||**[クエリの解析]** をクリックして、クエリ テキストの構文を検証します。|  
   
-### <a name="preview"></a>［プレビュー］  
+### <a name="preview"></a>プレビュー  
  **[プレビュー]** をクリックすると、選択したテーブルまたはビューから抽出されたデータを先頭から最大で 200 行表示できます。  
   
 ## <a name="see-also"></a>参照  

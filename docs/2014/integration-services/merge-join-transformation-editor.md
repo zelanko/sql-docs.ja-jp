@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 222e21e83ef0b722ea33c45ff5413dd77b88fe12
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951082"
 ---
 # <a name="merge-join-transformation-editor"></a>マージ結合変換エディター
   **[マージ結合変換エディター]** ダイアログ ボックスを使用すると、結合の種類、結合列、および結合によって組み合わされた 2 つの入力をマージするための出力列を指定できます。  
@@ -30,7 +29,7 @@ ms.locfileid: "66057707"
  マージ結合変換の詳細については、「 [Merge Join Transformation](data-flow/transformations/merge-join-transformation.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **[結合の種類]**  
+ **結合の種類**  
  内部結合、左外部結合、または完全結合を使用するかどうかを指定します。  
   
  **[入力の入れ替え]**  

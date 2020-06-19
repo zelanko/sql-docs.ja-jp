@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 436b758abdde0c05539bc17aabd2c11b240642df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b19c61cf736ad888cdcb2ecb1f36060eebf30812
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057134"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964992"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>[OLE DB 変換先エディター] ([接続マネージャー] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換先の OLE DB 接続を選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
   
 > [!NOTE]  
->  OLE DB `CommandTimeout`変換先のプロパティは、 **OLE DB 変換先エディター**では使用できませんが、**詳細エディター**を使用して設定できます。 また、特定の高速読み込みオプションは、**詳細エディター**でのみ使用できます。 これらのプロパティの詳細については、「 [OLE DB カスタム プロパティ](data-flow/ole-db-custom-properties.md)」の OLE DB 変換先に関するセクションを参照してください。  
+>  `CommandTimeout`OLE DB 変換先のプロパティは、 **OLE DB 変換先エディター**では使用できませんが、**詳細エディター**を使用して設定できます。 また、特定の高速読み込みオプションは、**詳細エディター**でのみ使用できます。 これらのプロパティの詳細については、「 [OLE DB カスタム プロパティ](data-flow/ole-db-custom-properties.md)」の OLE DB 変換先に関するセクションを参照してください。  
   
  OLE DB 変換先の詳細については、「 [OLE DB Destination](data-flow/ole-db-destination.md)」を参照してください。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "66057134"
  **OLE DB 接続マネージャー**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
- **新しい**  
+ **[新規作成]**  
  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
   
  **データアクセスモード**  
@@ -47,7 +46,7 @@ ms.locfileid: "66057134"
 |[テーブル名またはビュー名の変数 - 高速読み込み]|高速読み込みオプションを使用し、テーブル名またはビュー名を変数で指定します。 一括挿入用に最適化された高速読み込みデータ アクセス モードの詳細については、「 [OLE DB 変換先](data-flow/ole-db-destination.md)」を参照してください。|  
 |[SQL コマンド]|SQL クエリを使用し、データを OLE DB 変換先に読み込みます。|  
   
- **［プレビュー］**  
+ **プレビュー**  
  **[クエリ結果のプレビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 プレビューでは、最大で 200 行を表示できます。  
   
 ## <a name="data-access-mode-dynamic-options"></a>データ アクセス モードの動的オプション  
@@ -57,21 +56,21 @@ ms.locfileid: "66057134"
  **[テーブル名またはビュー名]**  
  データ ソースで使用できるテーブルまたはビューの一覧から、テーブルまたはビューの名前を選択します。  
   
- **新しい**  
+ **[新規作成]**  
  **[テーブルの作成]** ダイアログ ボックスを使用して新しいテーブルを作成します。  
   
 > [!NOTE]  
->  [**新規**] をクリック[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]すると、接続されたデータソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、 **[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
+>  [**新規**] をクリックすると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 接続されたデータソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、 **[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
   
 ### <a name="data-access-mode--table-or-view---fast-load"></a>[データ アクセス モード] = [テーブルまたはビュー - 高速読み込み]  
  **[テーブル名またはビュー名]**  
  この一覧を使用してデータベースからテーブルまたはビューを選択するか、 **[新規作成]** をクリックして新しいテーブルを作成します。  
   
- **新しい**  
+ **[新規作成]**  
  **[テーブルの作成]** ダイアログ ボックスを使用して新しいテーブルを作成します。  
   
 > [!NOTE]  
->  [**新規**] をクリック[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]すると、接続されたデータソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、 **[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
+>  [**新規**] をクリックすると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 接続されたデータソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、 **[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
   
  **[ID を保持する]**  
  データが読み込まれるときに ID 値をコピーするかどうかを指定します。 このプロパティは、高速読み取りオプションを指定した場合にのみ使用できます。 このプロパティの既定値は `false` です。  
@@ -103,18 +102,18 @@ ms.locfileid: "66057134"
 >  変換先で制約が失敗すると、 **[挿入コミット サイズの最大値]** で定義された行数のバッチ全体が失敗します。  
   
 ### <a name="data-access-mode--table-name-or-view-name-variable"></a>[データ アクセス モード] = [テーブル名またはビュー名の変数]  
- **変数名**  
+ **[変数名]**  
  テーブル名またはビュー名を含む変数を選択します。  
   
 ### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>[データ アクセス モード] = [テーブル名またはビュー名の変数 - 高速読み込み]  
- **変数名**  
+ **[変数名]**  
  テーブル名またはビュー名を含む変数を選択します。  
   
- **新しい**  
+ **[新規作成]**  
  **[テーブルの作成]** ダイアログ ボックスを使用して新しいテーブルを作成します。  
   
 > [!NOTE]  
->  [**新規**] をクリック[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]すると、接続されたデータソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、 **[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
+>  [**新規**] をクリックすると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 接続されたデータソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、 **[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
   
  **[ID を保持する]**  
  データが読み込まれるときに ID 値をコピーするかどうかを指定します。 このプロパティは、高速読み取りオプションを指定した場合にのみ使用できます。 このプロパティの既定値は `false` です。  

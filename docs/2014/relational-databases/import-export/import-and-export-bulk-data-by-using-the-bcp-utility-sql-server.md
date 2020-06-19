@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
-ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d1892b26f3c638a696d8ed15e739f56ac2e682f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71708209"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026793"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>bcp ユーティリティを使用した一括データのインポートとエクスポート (SQL Server)
 
@@ -74,11 +73,11 @@ ms.locfileid: "71708209"
 
 ## <a name="see-also"></a>参照
 
-[INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql) 
-Transact-sql&#41;
- [bcp ユーティリティ](../../tools/bcp-utility.md)&#40;の transact-sql&#41;[SELECT 句](/sql/t-sql/queries/select-clause-transact-sql)の挿入 &#40;   
-[データの一括インポートの準備 SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 
- [BULK INSERT &#40;](/sql/t-sql/statements/bulk-insert-transact-sql) 
- 
-[データの一括インポートとエクスポート](bulk-import-and-export-of-data-sql-server.md)&#41;&#40;SQL Server [OPENROWSET&#41;transact-sql &#40;](/sql/t-sql/functions/openrowset-transact-sql) 
-&#41;&#40;SQL Server[を作成](create-a-format-file-sql-server.md)&#41;&#40;
+[Transact-sql&#41;](/sql/t-sql/statements/insert-transact-sql) 
+ の挿入 &#40;[SELECT 句 &#40;transact-sql&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
+[Bcp ユーティリティ](../../tools/bcp-utility.md)   
+[データ &#40;SQL Server の一括インポートの準備&#41;](prepare-to-bulk-import-data-sql-server.md) 
+[BULK INSERT &#40;transact-sql&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 
+[データ &#40;SQL Server&#41;の一括インポートと一括エクスポート](bulk-import-and-export-of-data-sql-server.md) 
+[OPENROWSET &#40;transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
+[フォーマットファイル &#40;SQL Server を作成し&#41;](create-a-format-file-sql-server.md)
