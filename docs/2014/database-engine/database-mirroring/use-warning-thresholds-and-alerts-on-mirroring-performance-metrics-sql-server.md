@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 908b234143bc7e2140fe1c98d85ba150ea69b28d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754035"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933853"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>ミラーリング パフォーマンス基準の警告しきい値および警告の使用 (SQL Server)
   このトピックでは、データベース ミラーリング用に警告しきい値を構成および管理できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントについて説明します。 データベース ミラーリング モニター、または **sp_dbmmonitorchangealert**、 **sp_dbmmonitorhelpalert**、および **sp_dbmmonitordropalert** の各ストアド プロシージャを使用できます。 また、データベース ミラーリング イベントの警告の構成についても説明します。  
@@ -73,7 +72,7 @@ ms.locfileid: "62754035"
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|指定したパフォーマンス基準に対する警告を削除します。|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Windows イベント ログに送信されるパフォーマンスしきい値イベント  
- パフォーマンス基準に警告しきい値を定義する場合、状態テーブルを更新すると、最新の値がそのしきい値に対して評価されます。 しきい値に達している場合は、更新手順**sp_dbmmonitorupdate**によって、メトリックに関する情報イベント (*パフォーマンスしきい値イベント*) が生成され、イベント[!INCLUDE[msCoName](../../includes/msconame-md.md)]が Windows イベントログに書き込まれます。 次の表は、パフォーマンスしきい値イベントのイベント ID を示しています。  
+ パフォーマンス基準に警告しきい値を定義する場合、状態テーブルを更新すると、最新の値がそのしきい値に対して評価されます。 しきい値に達している場合は、更新手順**sp_dbmmonitorupdate**によって、メトリックに関する情報イベント (*パフォーマンスしきい値イベント*) が生成され、イベントが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベントログに書き込まれます。 次の表は、パフォーマンスしきい値イベントのイベント ID を示しています。  
   
 |パフォーマンス基準|イベント ID|  
 |------------------------|--------------|  

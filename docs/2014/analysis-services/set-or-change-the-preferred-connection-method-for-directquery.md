@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f10d5678-d678-4251-8cce-4e30cfe15751
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0513b300939b935dbf138d2bd8484e86740f31c9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068698"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940533"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>DirectQuery の優先接続方法の設定または変更
   DirectQuery モードで使用するモデルを作成する場合は、まず、DirectQuery の使用をサポートするようにデザイン環境を構成する必要があります。 これを行うには、「 [SSAS 表形式&#41;&#40;DirectQuery デザインモードを有効に](tabular-models/enable-directquery-mode-in-ssdt.md)する」を参照してください。  

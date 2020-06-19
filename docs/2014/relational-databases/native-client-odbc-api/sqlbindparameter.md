@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4673a38b275e180a51eedddfdee2c8233616fbd3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a43d803913faed9f7a63397b0b5784ca15e7ff54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706387"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022911"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter`を使用すると、Native Client ODBC ドライバーにデータを提供するときに、データ変換の負担をなくすことができます。これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションのクライアントコンポーネントとサーバーコンポーネントの両方でパフォーマンスを大幅に向上させることができます。 その他に、概数データ型を挿入または更新するときに有効桁数を失うことが少なくなるという利点もあります。  

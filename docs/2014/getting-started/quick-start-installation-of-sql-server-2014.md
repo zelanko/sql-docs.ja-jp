@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b9007ce0c5f0c05638f88fcb1ac27658b9f91c7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b77cc00c6b6faef7e22fc636a0b33703864d34d7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706886"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926783"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 のクイック スタート インストール
     
@@ -97,7 +96,7 @@ ms.locfileid: "82706886"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |ハードウェアとソフトウェアの要件、オペレーティング システムのサポート、ネットワークとインターネットに関する考慮事項、および必要なハード ディスク領域について確認します。|[インストールの前提条件](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
-|インストールのセキュリティに関する考慮事項を確認し [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。|[セキュリティの考慮事項](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
+|インストールのセキュリティに関する考慮事項を確認し [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。|[セキュリティに関する考慮事項](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
 |[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のさまざまなエディションでサポートされる機能の詳細を確認します。|[機能とエディション](features-supported-by-the-editions-of-sql-server-2014.md)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の最適なエディションおよびコンポーネントを決定します。|[SQL Server 2014 のエディションとコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)|  
 |ハードウェア構成を確認し、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストールの準備について学習します。|[フェールオーバー クラスタリングをインストールする前に](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  

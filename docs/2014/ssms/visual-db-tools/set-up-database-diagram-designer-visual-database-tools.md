@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d71ea2d6a10755ef52e0cac37ddcd2385d82d9cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d59fa2ed197a410de6b68e388e76d2bf21c334d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067621"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994660"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>データベース ダイアグラム デザイナーの設定 (Visual Database Tools)
   データベース ダイアグラム デザイナーを使用するには、 **db_owner** ロールのメンバーによって、ダイアグラムへのアクセスを制御するようにあらかじめ設定しておく必要があります。  

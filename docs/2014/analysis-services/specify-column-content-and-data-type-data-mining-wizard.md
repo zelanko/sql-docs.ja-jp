@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f23bc2e0f21f15c0af1a26d64e528c65632d75a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068466"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940423"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>[列のコンテンツおよびデータ型の指定] (データ マイニング ウィザード)
   **[列のコンテンツおよびデータ型の指定]** ページを使用すると、ウィザードの前のページで選択した各列に対し、使用法とデータ型を指定できます。 列を無視するには、 **[戻る]** をクリックして **[トレーニング データの指定]** ページに戻り、すべてのチェック ボックスをオフにします。  
@@ -33,7 +32,7 @@ ms.locfileid: "66068466"
  **[列]**  
  列を一覧表示します。  
   
- **コンテンツ タイプ**  
+ **コンテンツの種類**  
  列のコンテンツの種類を指定します。 ウィザードの前のページで列をキーとして指定した場合、使用できる値は以下のとおりです。  
   
 |オプション|説明|  

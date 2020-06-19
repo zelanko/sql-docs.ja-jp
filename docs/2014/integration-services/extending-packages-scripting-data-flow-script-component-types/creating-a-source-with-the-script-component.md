@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b82b7776bf9a56e5c72b5ffabdf6d8398b5d183
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176272"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968579"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>スクリプト コンポーネントによる変換元の作成
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フロー内で変換元コンポーネントを使用すると、データ ソースからデータを読み込み、下流にある変換や変換先に渡すことができます。 通常、データ ソースへの接続には、既存の接続マネージャーを使用します。
@@ -60,7 +59,7 @@ ms.locfileid: "78176272"
 -   予期しない値を含む行に対するシミュレートされたエラー出力など、1 つ以上の出力を追加して作成できます。 **[出力の追加]** および **[出力の削除]** ボタンを使用して、変換元コンポーネントの出力を管理します。 すべての入力行は使用可能なすべての出力に送られます。ただし、出力の `ExclusionGroup` プロパティに 0 でない同じ値を指定すると、各行を、同じ `ExclusionGroup` の値を共有する出力のうちいずれか 1 つにのみ送ることもできます。 `ExclusionGroup` に指定するために選択した整数値に、特別な意味はありません。
 
     > [!NOTE]
-    >  すべての行を出力しない場合は、0 以外の `ExclusionGroup` プロパティ値を単一の出力で使用することもできます。 ただし、この場合は、出力に送信する各行について、**DirectRowTo\<outputbuffer>** メソッドを明示的に呼び出す必要があります。
+    >  すべての行を出力しない場合は、0 以外の `ExclusionGroup` プロパティ値を単一の出力で使用することもできます。 ただし、この場合は、出力に送信する行ごとに、 **Directrowto メソッド \<outputbuffer> を**明示的に呼び出す必要があります。
 
 -   出力にはわかりやすい名前を付けておくことができます。 後で出力を参照する際には、スクリプト内での名前、および自動生成されたコードによって作成された、型指定されたアクセサー プロパティを使用します。
 
@@ -69,9 +68,9 @@ ms.locfileid: "78176272"
  **[スクリプト変換エディター]** の **[入力および出力]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力および出力] ページ&#41;](../script-transformation-editor-inputs-and-outputs-page.md)」を参照してください。
 
 ### <a name="adding-variables"></a>変数の追加
- スクリプトで値を使用する既存の変数がある場合`ReadOnlyVariables`は、[**スクリプト変換エディター**] の [**スクリプト**] ページで、プロパティおよび`ReadWriteVariables`プロパティフィールドに追加できます。
+ スクリプトで値を使用する既存の変数がある場合は、 `ReadOnlyVariables` [ `ReadWriteVariables` **スクリプト変換エディター**] の [**スクリプト**] ページで、プロパティおよびプロパティフィールドに追加できます。
 
- プロパティ フィールドに複数の変数を入力する場合は、変数名をコンマで区切ります。 また、プロパティフィールドの`ReadOnlyVariables`横にある省略記号 ([.**..**]) ボタンをクリック`ReadWriteVariables`し、 **[変数の選択**] ダイアログボックスで変数を選択することで、複数の変数を入力することもできます。
+ プロパティ フィールドに複数の変数を入力する場合は、変数名をコンマで区切ります。 また、プロパティフィールドの横にある省略記号 ([.**..**]) ボタンを `ReadOnlyVariables` クリック `ReadWriteVariables` し、 **[変数の選択**] ダイアログボックスで変数を選択することで、複数の変数を入力することもできます。
 
  スクリプト コンポーネントで変数を使用する方法に関する一般情報については、「[スクリプト コンポーネントでの変数の使用](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)」を参照してください。
 
@@ -87,7 +86,7 @@ ms.locfileid: "78176272"
 
  `ScriptMain` クラスには、`CreateNewOutputRows` メソッドのスタブが含まれています。 `CreateNewOutputRows` は、変換元コンポーネントの最重要メソッドです。
 
- VSTA で [**プロジェクトエクスプローラー** ] ウィンドウを開くと、スクリプトコンポーネントによって読み取り専用`BufferWrapper`および`ComponentWrapper`プロジェクト項目も生成されたことがわかります。 `ScriptMain` クラスは、`UserComponent` プロジェクト アイテム内の `ComponentWrapper` クラスを継承します。
+ VSTA で [**プロジェクトエクスプローラー** ] ウィンドウを開くと、スクリプトコンポーネントによって読み取り専用およびプロジェクト項目も生成されたことがわかり `BufferWrapper` `ComponentWrapper` ます。 `ScriptMain` クラスは、`UserComponent` プロジェクト アイテム内の `ComponentWrapper` クラスを継承します。
 
  実行時には、データ フロー エンジンが `PrimeOutput` クラスの `UserComponent` メソッドを呼び出します。これは親クラスである <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドをオーバーライドします。 次に、`PrimeOutput` メソッドは次のメソッドを呼び出します。
 
@@ -114,7 +113,7 @@ ms.locfileid: "78176272"
  次の例では、変換元コンポーネントを作成するために、`ScriptMain` クラスで必要なカスタム コードを示します。
 
 > [!NOTE]
->  これらの例で**Person.Address**は、 `AdventureWorks`サンプルデータベースの Person テーブルを使用して、その第1列と第4列、つまり**intaddressid**列と**nvarchar (30) City**列をデータフローに渡します。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。
+>  これらの例では、サンプルデータベースの**Person**テーブルを使用して、 `AdventureWorks` その第1列と第4列、つまり**intaddressid**列と**nvarchar (30) City**列をデータフローに渡します。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。
 
 ### <a name="adonet-source-example"></a>ADO.NET ソースの例
  この例では、既存の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルからデータを読み込み、データ フローに送る変換元コンポーネントを示します。
@@ -134,7 +133,7 @@ ms.locfileid: "78176272"
 
 5.  **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックし、続きのスクリプトを入力します。 その後、スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。
 
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変換先、または「[スクリプト コンポーネントによる変換先の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)」で説明されている変換先コンポーネントの例など、**AddressID** および **City** 列が予期される変換先コンポーネントを作成して構成します。 変換元のコンポーネントを変換先に接続します (変換を行わずに変換元を直接変換先に接続できます)。`AdventureWorks`データベースで次[!INCLUDE[tsql](../../includes/tsql-md.md)]のコマンドを実行して、変換先テーブルを作成できます。
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変換先、または「[スクリプト コンポーネントによる変換先の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)」で説明されている変換先コンポーネントの例など、**AddressID** および **City** 列が予期される変換先コンポーネントを作成して構成します。 変換元のコンポーネントを変換先に接続します (変換を行わずに変換元を直接変換先に接続できます)。データベースで次のコマンドを実行して、変換先テーブルを作成でき [!INCLUDE[tsql](../../includes/tsql-md.md)] `AdventureWorks` ます。
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,
@@ -255,7 +254,7 @@ ms.locfileid: "78176272"
 
  このサンプル コードを実行する場合は、パッケージやコンポーネントを次のように構成する必要があります。
 
-1.  インポートおよびエクスポートウィザードを使用して、 `AdventureWorks`サンプルデータベースの Person テーブルをコンマ区切りフラットファイルにエクスポートします。 **Person.Address** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この例では、ファイル名を ExportedAddresses.txt とします。
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポートウィザードを使用して、サンプルデータベースの**Person**テーブルを `AdventureWorks` コンマ区切りフラットファイルにエクスポートします。 この例では、ファイル名を ExportedAddresses.txt とします。
 
 2.  エクスポートされたデータ ファイルに接続するフラット ファイル接続マネージャーを作成します。
 
@@ -267,7 +266,7 @@ ms.locfileid: "78176272"
 
 6.  **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックし、続きのスクリプトを入力します。 その後、スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。
 
-7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変換先、または「[スクリプト コンポーネントによる変換先の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)」で説明されている変換先コンポーネントの例など、変換先コンポーネントを作成して構成します。 変換元のコンポーネントを変換先に接続します (変換を行わずに変換元を直接変換先に接続できます)。`AdventureWorks`データベースで次[!INCLUDE[tsql](../../includes/tsql-md.md)]のコマンドを実行して、変換先テーブルを作成できます。
+7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変換先、または「[スクリプト コンポーネントによる変換先の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)」で説明されている変換先コンポーネントの例など、変換先コンポーネントを作成して構成します。 変換元のコンポーネントを変換先に接続します (変換を行わずに変換元を直接変換先に接続できます)。データベースで次のコマンドを実行して、変換先テーブルを作成でき [!INCLUDE[tsql](../../includes/tsql-md.md)] `AdventureWorks` ます。
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,

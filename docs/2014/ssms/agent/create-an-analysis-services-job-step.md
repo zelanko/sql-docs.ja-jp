@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 193805128ec3e557d219561bc29a93e9540fd5b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed0e63c22d4cad270bcb544b03decba269e4f43a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798252"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054658"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Analysis Services のコマンドとクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] エージェント ジョブ ステップの作成と定義方法について説明します。  

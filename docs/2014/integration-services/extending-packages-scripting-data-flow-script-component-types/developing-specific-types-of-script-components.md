@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0a811b88537d784c9e1db892003391914d50f5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d17cba78488e1149d491402c6bc63c54fedd9ea6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895182"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968532"
 ---
 # <a name="developing-specific-types-of-script-components"></a>特定の種類のスクリプト コンポーネントの開発
   スクリプト コンポーネントは構成可能なツールです。パッケージのデータ フローで使用すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に備わっている変換元、変換、および変換先では満たせないほとんどすべての要件に対応できます。 ここで紹介するスクリプト コンポーネントのコード例では、スクリプト コンポーネントの 4 つの構成方法を説明します。  

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af647a446366ea03063ea0deb84603a3f8f90dd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 566f7ab8bc23eee58b133acb2e740cab1647b0ec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896130"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968620"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>カスタム タスクでのイベントの発生と定義
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイム エンジンには、タスクを検証および実行する際の進行状況の状態を示す、イベントのコレクションが用意されています。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> インターフェイスはこれらのイベントを定義し、<xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> および <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> メソッドに対するパラメーターとして、タスクに渡されます。  
@@ -43,7 +42,7 @@ ms.locfileid: "62896130"
   
  次のコード例では、カスタム タスクの `InitializeTask` メソッドを示します。ここでは、2 つのカスタム イベントが作成され、そのプロパティが設定されます。 次に、新しいイベントが <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> コレクションに追加されます。  
   
- 最初のカスタム イベントの *eventName* は "**OnBeforeIncrement**" で、*description* は "**Fires after the initial value is updated**" です。 次のパラメーターの値は `true` であり、イベントを処理するために、イベント ハンドラーのコンテナーの作成を許可する必要があることを示します。 このイベント ハンドラーは、Package、Sequence、ForLoop、ForEachLoop などの他のコンテナーと同様、パッケージの構造およびサービスをタスクに提供するコンテナーです。 *AllowEventHandlers*パラメーターが`true`の場合、 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>イベント用にオブジェクトが作成されます。 これで、イベント用に定義された任意のパラメーターが、<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> の変数コレクション内の <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> で使用できます。  
+ 最初のカスタム イベントの *eventName* は "**OnBeforeIncrement**" で、*description* は "**Fires after the initial value is updated**" です。 次のパラメーターの値は `true` であり、イベントを処理するために、イベント ハンドラーのコンテナーの作成を許可する必要があることを示します。 このイベント ハンドラーは、Package、Sequence、ForLoop、ForEachLoop などの他のコンテナーと同様、パッケージの構造およびサービスをタスクに提供するコンテナーです。 *AllowEventHandlers*パラメーターがの場合 `true` 、 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> イベント用にオブジェクトが作成されます。 これで、イベント用に定義された任意のパラメーターが、<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> の変数コレクション内の <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> で使用できます。  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  

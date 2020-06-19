@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40139962f6c5fd77611ccd486785cd6afadeff69
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769018"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968604"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>スクリプト コンポーネントを使用した標準以外のテキスト ファイル形式の解析
   ソース データが標準以外の形式の場合、複数の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変換を連結するより、すべての解析ロジックを単一のスクリプトに統合する方がより便利で、同じ結果が得られる場合があります。  
@@ -94,7 +93,7 @@ ms.locfileid: "62769018"
   
 11. **[スクリプト変換エディター]** の **[入力列]** ページで、単一の使用可能な入力列を選択します。  
   
-12. [**スクリプト変換エディター**] の [**入力および出力**] ページで、[出力 0] `SynchronousInputID`を選択し、を [なし] に設定します。 次の 5 つの出力列を、すべて文字列型 [DT_STR]、長さ 32 で作成します。  
+12. [**スクリプト変換エディター**] の [**入力および出力**] ページで、[出力 0] を選択し、を [なし] に設定し `SynchronousInputID` ます。 次の 5 つの出力列を、すべて文字列型 [DT_STR]、長さ 32 で作成します。  
   
     -   FirstName  
   
@@ -106,7 +105,7 @@ ms.locfileid: "62769018"
   
     -   StateProvince  
   
-13. [**スクリプト変換エディター**] の [**スクリプト**] ページで、[**スクリプトの編集**] をクリックし`ScriptMain` 、例のクラスに示されているコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
+13. [**スクリプト変換エディター**] の [**スクリプト**] ページで、[**スクリプトの編集**] をクリックし、例のクラスに示されているコードを入力し `ScriptMain` ます。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
   
 14. SQL Server 変換先をデータ フローに追加します。 OLE DB 接続マネージャーと RowDelimitedData テーブルを使用するように構成します。 スクリプト コンポーネントの出力をこの変換先に接続します。  
   
@@ -253,7 +252,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. **[スクリプト変換エディター]** の **[入力列]** ページで、単一の使用可能な入力列を選択します。  
   
-12. [**スクリプト変換エディター**] の [**入力および出力**] ページで、出力0を選択し、parentrecords に名前を`SynchronousInputID`変更して、を None に設定します。 次の 2 つの出力列を作成します。  
+12. [**スクリプト変換エディター**] の [**入力および出力**] ページで、出力0を選択し、parentrecords に名前を変更して、 `SynchronousInputID` を None に設定します。 次の 2 つの出力列を作成します。  
   
     -   ParentID (主キー)、4 バイト符号付き整数型 [DT_I4]  
   

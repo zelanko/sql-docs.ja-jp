@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 277b5ff1e575f223b78f958e26801e7b209d05d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c864e95a075477b80bdbbe06912be37bba33fadf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478931"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961145"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>読み込み前のデータのフィルター処理 (Excel 用 MDS アドイン)
-  で[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]、Excel に読み込むデータのサイズまたは範囲を制限する場合は、データをフィルター処理します。  
+  で [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 、Excel に読み込むデータのサイズまたは範囲を制限する場合は、データをフィルター処理します。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  

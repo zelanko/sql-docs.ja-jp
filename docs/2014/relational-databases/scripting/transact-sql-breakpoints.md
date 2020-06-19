@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 84ff925f2aa68ee81268eaca2faa3920f3ec407b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1b5d363e7f68ba735168ef17eeff8e9605c54b2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718536"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068445"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL ブレークポイント
   ブレークポイントは、特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーの実行の一時停止を指定し、その時点のコード要素の状態を確認できます。  

@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e4bbc4f0c371c927988e6b91fdbf47307ad9d3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289450"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068378"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure Key Vault を使用する拡張キー管理 (SQL Server)
-  Azure Key Vault [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用の[!INCLUDE[msCoName](../../../includes/msconame-md.md)]コネクタを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用すると、暗号化キーを保護するための[拡張キー管理 &#40;EKM&#41;](extensible-key-management-ekm.md)プロバイダーとして Azure Key Vault サービスを利用できます。
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Azure Key Vault 用のコネクタを [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] すると、暗号化キーを保護するための[拡張キー管理 &#40;EKM&#41;](extensible-key-management-ekm.md)プロバイダーとして Azure Key Vault サービスを利用できます。
 
  このトピックの内容:
 
@@ -79,7 +78,7 @@ ms.locfileid: "79289450"
 
     -   **** の暗号化で使用するラップ解除キーを取得するために [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] が資格情報コンテナーにアクセスするときに、もう 1 つのサービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が必要になります。
 
-     アプリケーションを登録してサービス プリンシパルを生成する方法の詳細については、「 **Azure Key Vault の使用を開始する** 」の「 [アプリケーションを Azure Active Directory に登録する](https://go.microsoft.com/fwlink/?LinkId=521402)」セクションをご覧ください。 この登録プロセスからは、Azure Active Directory の **サービス プリンシパル** ごとに、 **アプリケーション ID**( **クライアント ID** とも呼ばれる) および **認証キー**( **シークレット**とも呼ばれる) が返されます。 `CREATE CREDENTIAL`ステートメントで使用する場合は、**クライアント ID**からハイフンを削除する必要があります。 以下のスクリプトで使用するために、これらの情報を記録しておきます。
+     アプリケーションを登録してサービス プリンシパルを生成する方法の詳細については、「 **Azure Key Vault の使用を開始する** 」の「 [アプリケーションを Azure Active Directory に登録する](https://go.microsoft.com/fwlink/?LinkId=521402)」セクションをご覧ください。 この登録プロセスからは、Azure Active Directory の **サービス プリンシパル** ごとに、 **アプリケーション ID**( **クライアント ID** とも呼ばれる) および **認証キー**( **シークレット**とも呼ばれる) が返されます。 ステートメントで使用する場合は、 `CREATE CREDENTIAL` **クライアント ID**からハイフンを削除する必要があります。 以下のスクリプトで使用するために、これらの情報を記録しておきます。
 
     -   **sysadmin** のログイン用の **サービス プリンシパル** : **CLIENTID_sysadmin_login** および **SECRET_sysadmin_login**
 
@@ -159,9 +158,9 @@ ms.locfileid: "79289450"
 2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理者ログインのための [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資格情報をセットアップします。これは、資格情報コンテナーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化のシナリオをセットアップして管理するために使用します。
 
     > [!IMPORTANT]
-    >  `CREATE CREDENTIAL`の**IDENTITY**引数には、key vault 名が必要です。 `CREATE CREDENTIAL`の**secret**引数では、 * \<クライアント ID>* (ハイフンなし) と* \<シークレット>* をスペースなしで一緒に渡す必要があります。
+    >  の**IDENTITY**引数には `CREATE CREDENTIAL` 、key vault 名が必要です。 の**SECRET**引数で `CREATE CREDENTIAL` は、 *\<Client ID>* (ハイフンなし) と *\<Secret>* を一緒に使用する必要があります。
 
-     次の例では、**クライアント ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) はハイフンを削除し、文字列`EF5C8E094D2A4A769998D93440D8115D`として入力し、**シークレット**は*SECRET_sysadmin_login*文字列で表されます。
+     次の例では、**クライアント ID** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) はハイフンを削除し、文字列として入力 `EF5C8E094D2A4A769998D93440D8115D` し、**シークレット**は*SECRET_sysadmin_login*文字列で表されます。
 
     ```sql
     USE master;
@@ -175,7 +174,7 @@ ms.locfileid: "79289450"
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```
 
-     `CREATE CREDENTIAL`引数に変数を使用し、プログラムでクライアント ID からハイフンを削除する例については、「 [CREATE CREDENTIAL &#40;transact-sql&#41;](/sql/t-sql/statements/create-credential-transact-sql)」を参照してください。
+     引数に変数を使用 `CREATE CREDENTIAL` し、プログラムでクライアント ID からハイフンを削除する例については、「 [CREATE CREDENTIAL &#40;transact-sql&#41;](/sql/t-sql/statements/create-credential-transact-sql)」を参照してください。
 
 3.  以前に手順 1 のセクション 3 で説明したように非対称キーをインポートした場合は、次の例のようにキー名を提供して、キーを開きます。
 
@@ -212,7 +211,7 @@ ms.locfileid: "79289450"
 
 -   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ###  <a name="example-a-transparent-data-encryption-by-using-an-asymmetric-key-from-the-key-vault"></a><a name="ExampleA"></a>例 A: Key Vault からの非対称キーを使用して Transparent Data Encryption する
  上記の手順を完了した後、資格情報とログインを作成し、資格情報コンテナー内の非対称キーで保護されたデータベース暗号化キーを作成します。 データベース暗号化キーは、データベースを TDE で暗号化するために使用します。
@@ -224,9 +223,9 @@ ms.locfileid: "79289450"
 1.  データベースの読み込み中に資格情報コンテナー EKM にアクセスするために [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が使用する [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 資格情報を作成します。
 
     > [!IMPORTANT]
-    >  `CREATE CREDENTIAL`の**IDENTITY**引数には、key vault 名が必要です。 `CREATE CREDENTIAL`の**secret**引数では、 * \<クライアント ID>* (ハイフンなし) と* \<シークレット>* をスペースなしで一緒に渡す必要があります。
+    >  の**IDENTITY**引数には `CREATE CREDENTIAL` 、key vault 名が必要です。 の**SECRET**引数で `CREATE CREDENTIAL` は、 *\<Client ID>* (ハイフンなし) と *\<Secret>* を一緒に使用する必要があります。
 
-     次の例では、**クライアント ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) はハイフンを削除し、文字列`EF5C8E094D2A4A769998D93440D8115D`として入力し、**シークレット**は*SECRET_DBEngine*文字列で表されます。
+     次の例では、**クライアント ID** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) はハイフンを削除し、文字列として入力 `EF5C8E094D2A4A769998D93440D8115D` し、**シークレット**は*SECRET_DBEngine*文字列で表されます。
 
     ```sql
     USE master;

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53faaae001e177f1d48d394e06961e89c563d124
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb4a2b48343c6424007a590f7a54e40290c6a345
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637643"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933654"
 ---
 # <a name="currency-type-and-conversion-function"></a>通貨型と変換関数
   この例では、C# を使用して Currency ユーザー定義データ型を定義します。 このユーザー定義データ型は、価格とカルチャをカプセル化し、そのカルチャの通貨の値で正しい価格を表示する方法を決定するために役立ちます。 この例ではさらに、Currency ユーザー定義データ型のインスタンスを返す通貨換算関数を提供します。 U.S. ドル (USD) を指定のカルチャに関連付けられている通貨に換算するための換算レートが AdventureWorks データベースに含まれている場合、通貨換算関数は、換算済みレートを格納した Currency ユーザー定義データ型と、要求されたカルチャに一致するカルチャを返します。 換算レートがデータベースに含まれていない場合は、USD で表される元の価格を格納した Currency ユーザー定義データ型と、`en-us` カルチャを返します。 この例は、Transact-SQL を使用した共通言語ランタイム (CLR) メソッドとアセンブリの登録解除と登録の方法も示しています。  
@@ -51,11 +50,11 @@ ms.locfileid: "73637643"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にするには`ALTER SETTINGS` 、サーバーレベルの権限が必要です。この権限は`sysadmin` 、 `serveradmin`固定サーバーロールおよびのメンバーによって暗黙的に保持されています。  
+    >  CLR を有効にするには、 `ALTER SETTINGS` サーバーレベルの権限が必要です。この権限は、 `sysadmin` 固定サーバーロールおよびのメンバーによって暗黙的に保持されてい `serveradmin` ます。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
--   使用している[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの管理者ではない場合、インストールを完了するには、 **createassembly**アクセス許可を管理者に付与する必要があります。  
+-   使用しているインスタンスの管理者ではない場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、インストールを完了するには、 **createassembly**アクセス許可を管理者に付与する必要があります。  
   
 ## <a name="building-the-sample"></a>サンプルのビルド  
   
@@ -79,7 +78,7 @@ ms.locfileid: "73637643"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-8.  テスト[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドスクリプトをファイルにコピーし、とし`test.sql`てサンプルディレクトリに保存します。  
+8.  [!INCLUDE[tsql](../../includes/tsql-md.md)]テストコマンドスクリプトをファイルにコピーし、として `test.sql` サンプルディレクトリに保存します。  
   
 9. 次のコマンドを使用してテスト スクリプトを実行します。  
   

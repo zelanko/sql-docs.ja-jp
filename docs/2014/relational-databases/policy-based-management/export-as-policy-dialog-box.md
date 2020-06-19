@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: df28974c9fc6fdf3c9ef974ea5dd868f775af134
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99026cd6d26376c4aa4c8ef92c1de542e90b7c59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705200"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061705"
 ---
 # <a name="export-as-policy-dialog-box"></a>[ポリシーとしてエクスポート] ダイアログ ボックス
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ファセットのプロパティ セットをポリシーとしてエクスポートできます。 ポリシーは、XML ファイルで保存することも、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の現在のインスタンスに直接保存することもできます。  

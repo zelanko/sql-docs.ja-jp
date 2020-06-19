@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ede861a696ba7782f7cdce962578dc077f799b33
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec5479d3b1e4ee1e828ba1c43cd86ce5e42b6497
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707437"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043885"
 ---
 # <a name="data-source-objects-ole-db"></a>データ ソース オブジェクト (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client では、などのデータストアへのリンクを確立するために使用される一連の OLE DB インターフェイスに対して、データソースという用語を使用し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 プロバイダーのデータソースオブジェクトのインスタンスを作成することは、ネイティブクライアントコンシューマーの最初のタスクです [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

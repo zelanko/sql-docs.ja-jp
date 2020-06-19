@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f0067b0e13e724948e53a2eb291c9a1da6315011
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5401bea3c42674a1e85cd823570e2abfb30491b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012752"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068399"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>米国英語と英国英語に使用されるワード ブレーカーを変更する方法
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、英語用のワード ブレーカーおよびステマーの新しいバージョン (バージョン 14.0.4999.1038) がインストールされて、前のバージョン (バージョン 12.0.6828.0) が置き換えられます。 新しいコンポーネントで変更された動作の詳細については、「 [フルテキスト検索の動作の変更](full-text-search.md)」を参照してください。 このトピックでは、これらのコンポーネントの新しいバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。 クラスターのインストールでは、これらの変更を、すべてのプライマリ ノードとパッシブ ノードで行う必要があります。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50f7a685a57bf07b812aefc2bd5406210b86054c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781071"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933513"
 ---
 # <a name="links-in-clr-integration-security"></a>CLR 統合のセキュリティのリンク
   ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはいずれかのマネージド言語で、[!INCLUDE[tsql](../../includes/tsql-md.md)] 内のユーザー コードが相互に呼び出すしくみを説明します。 このようなオブジェクト間のリレーションシップをリンクと呼びます。  

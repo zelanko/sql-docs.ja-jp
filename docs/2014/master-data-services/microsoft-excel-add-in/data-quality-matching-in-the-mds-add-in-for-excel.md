@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 660c3975310d690867f72fd723d89d706b7b61bf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478901"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961272"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Excel 用 MDS アドインでのデータ品質照合
   後で、MDS リポジトリにさらにデータを追加する場合があります。 データを追加する前に、新しいデータと既に MDS で管理されているデータを比較することは、重複するデータや不正確なデータの追加を避けるために役立ちます。  

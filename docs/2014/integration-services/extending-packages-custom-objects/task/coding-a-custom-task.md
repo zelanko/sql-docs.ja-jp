@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0cc4026c8eae44ab8dacff62a72cfa66470c07fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ac0429b744f9ba14798ca1f402261f16aae34a8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176282"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968682"
 ---
 # <a name="coding-a-custom-task"></a>カスタム タスクのコーディング
   <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基本クラスを継承するクラスを作成し、<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性をそのクラスに適用したら、基本クラスのプロパティとメソッドの実装をオーバーライドして、カスタム機能を提供する必要があります。
@@ -57,7 +56,7 @@ ms.locfileid: "78176282"
 #### <a name="user-interface-considerations-during-validation"></a>検証時のユーザー インターフェイスについての検討事項
  <xref:Microsoft.SqlServer.Dts.Runtime.Task> には、`Validate` メソッドのパラメーターとして、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> インターフェイスが含まれています。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> インターフェイスには、イベントをランタイム エンジンに送るためにタスクが呼び出すメソッドが含まれています。 検証中に警告またはエラー条件が発生すると、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> および <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> メソッドが呼び出されます。 どちらの警告メソッドにも、エラー コード、ソース コンポーネント、説明、ヘルプ ファイル、ヘルプ コンテキスト情報などの同じパラメーターが必要です。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはこの情報に基づいて、エラーの発生をデザイン画面上で視覚的に通知します。 デザイナーによって提供される視覚的な通知には、デザイン画面上のタスクの横に表示される感嘆符のアイコンがあります。 この視覚的通知は、実行を続けるにはタスクの構成を追加する必要があることを示します。
 
- 感嘆符のアイコンによって、エラー メッセージを含むツールヒントも表示されます。 エラー メッセージは、タスクによってイベントの説明パラメーターに提供されます。 エラー メッセージは、**の**[タスク一覧][!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] ペインにも表示されます。このペインは、すべての検証エラーを表示するための集中管理場所となります。
+ 感嘆符のアイコンによって、エラー メッセージを含むツールヒントも表示されます。 エラー メッセージは、タスクによってイベントの説明パラメーターに提供されます。 エラー メッセージは、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] の **[タスク一覧]** ペインにも表示されます。このペインは、すべての検証エラーを表示するための集中管理場所となります。
 
 #### <a name="validation-example"></a>検証例
  次のコード例は、`UserName` プロパティを使用したタスクを示しています。 このプロパティは、検証に必要なものとして指定されています。 このプロパティが設定されていない場合、タスクはエラーを通知し、<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure> 列挙から <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> を返します。 例外が発生すると、`Validate` メソッドは try/catch ブロックにラップされ、検証は失敗します。

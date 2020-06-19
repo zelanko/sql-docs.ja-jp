@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8f4a04d7851a79ab461711cfc173d40a0a83ef6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 72d0ca1b0fbad144117e409019d8d2247bbf918f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706399"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022951"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
   一般的な規則として、 **SQLBindCol**を使用してデータ変換を行う場合の影響について検討します。 バインドによる変換はクライアント側のプロセスなので、たとえば文字型の列にバインドされた浮動小数点値を取得すると、ドライバーは行をフェッチするときにローカルで浮動小数点型から文字型への変換を行います。 [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT 関数を使用すると、データ変換の負荷をサーバーに移すことができます。  

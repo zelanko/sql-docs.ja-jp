@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48725f54-a7b6-4b79-948e-965c1fe4eef1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bcb2454d9f6b4a6df465c33ca218c4a960f8099b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0658c567cca7acc2f045c2246118e52b4e7ac004
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68187817"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994700"
 ---
 # <a name="connecting-with-query-editor"></a>クエリ エディターとの接続
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、サーバーから切断されていてもコードの記述と編集を行うことができます。 この機能は、サーバーを利用できない場合、またはサーバーやネットワークの限られたリソースを節約したい場合に有効です。 さらに、新しいクエリ エディター ウィンドウを開いたり、コードを再入力したりしなくても、クエリ エディターの接続を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスに変更することもできます。  

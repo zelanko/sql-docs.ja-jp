@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 364d155ce61dd452e63112b6182b6ff9653ef261
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 380dcccbea9c108f77f9f054e82fd002f85bee59
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637687"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933674"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>CLR と XML を使用した連絡先の作成
   SQL Server の Contact サンプルは、基礎となる AdventureWorks2012 サンプル データベースに新しい機能の層を追加する便利なユーティリティをいくつか提供します。 1 つ目のユーティリティは、AdventureWorks2012 データベースに関係した、さまざまな人々の連絡先のレコードを作成します。 連絡先の情報は XML を使用して指定され、XML を作成してデータベースの適切なテーブルに配置するための C# ベースのストアド プロシージャまたは VB ストアド プロシージャに渡されます。  
@@ -78,7 +77,7 @@ ms.locfileid: "73637687"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-10. テスト[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドスクリプトをファイルにコピーし、とし`test.sql`てサンプルディレクトリに保存します。  
+10. [!INCLUDE[tsql](../../includes/tsql-md.md)]テストコマンドスクリプトをファイルにコピーし、として `test.sql` サンプルディレクトリに保存します。  
   
 11. 次のコマンドを使用してテスト スクリプトを実行します。  
   

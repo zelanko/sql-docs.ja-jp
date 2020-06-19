@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3193adc2-af9f-4234-a4cc-dea0c280a724
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba9e131a8986b01a6bb897e35b2e45b2bb70ccd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940346"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>[クエリ条件の指定] (使用法に基づく最適化ウィザード)
   **[クエリ条件の指定]** ページを使用すると、最適化するクエリを特定するために 1 つ以上のフィルター オプションを選択できます。  
@@ -29,7 +28,7 @@ ms.locfileid: "66068221"
  **[クエリ ログの統計]**  
  選択されたパーティションのクエリ ログに格納された、クエリに関する情報を表示します。 以下の項目が表示されます。  
   
-|用語|定義|  
+|期間|定義|  
 |----------|----------------|  
 |**[クエリの合計数]**|選択されたパーティションのクエリ ログに格納された、クエリの合計数を表示します。|  
 |**個別のクエリ**|選択されたパーティションのクエリ ログに格納された、異なるクエリの数を表示します。|  

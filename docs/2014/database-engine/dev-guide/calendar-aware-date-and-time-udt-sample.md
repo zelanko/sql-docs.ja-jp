@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c2636d417bb9956ac56885686b3512cc3c119cd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a8d632b538104e490fb70542cdd0f8bd73b87f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929501"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933736"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>カレンダー対応の日付と時刻の UDT サンプル
   使用されているカレンダー システムを把握していないと日付は意味を持たないため、日付を文字列として格納すると混乱が生じる可能性があります。`CADatetime` サンプルでは、日付と時刻のカレンダー対応処理を行う `CADatetime` と `CADate` という 2 つのユーザー定義データ型を定義しています。  
@@ -48,7 +47,7 @@ ms.locfileid: "76929501"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にするには`ALTER SETTINGS` 、サーバーレベルの権限が必要です。この権限は`sysadmin` 、 `serveradmin`固定サーバーロールおよびのメンバーによって暗黙的に保持されています。  
+    >  CLR を有効にするには、 `ALTER SETTINGS` サーバーレベルの権限が必要です。この権限は、 `sysadmin` 固定サーバーロールおよびのメンバーによって暗黙的に保持されてい `serveradmin` ます。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "76929501"
   
 3.  c:\MySample で、`CalendarAware.cs` を作成し、C# サンプル コード (下記) をこのファイルにコピーします。  
   
-4.  C:\MySample で、ファイル`calendars.txt`を作成し、サンプルコードをファイルにコピーします。  
+4.  C:\MySample で、ファイルを作成 `calendars.txt` し、サンプルコードをファイルにコピーします。  
   
 5.  c:\MySample で、ファイル `calendars.ar-SA.txt` を作成し、以下のコードをこのファイルにコピーします。  
   
@@ -116,7 +115,7 @@ ms.locfileid: "76929501"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-14. テスト[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドスクリプトをファイルにコピーし、とし`test.sql`てサンプルディレクトリに保存します。  
+14. [!INCLUDE[tsql](../../includes/tsql-md.md)]テストコマンドスクリプトをファイルにコピーし、として `test.sql` サンプルディレクトリに保存します。  
   
 15. 次のコマンドを使用してテスト スクリプトを実行します。  
   

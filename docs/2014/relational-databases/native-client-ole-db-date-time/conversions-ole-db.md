@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d920fef68adaa63059970a49c9473d75eeabfd30
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 140be806cfb79996c68b7c413c7998fcc0c20ebe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705061"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043884"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>バインドと変換 (OLE DB)
   ここでは、`datetime` 値と `datetimeoffset` 値との間で変換を行う方法について説明します。 ここで説明する変換は、OLE DB によって既に提供されているか、OLE DB の一貫性がある拡張機能です。  

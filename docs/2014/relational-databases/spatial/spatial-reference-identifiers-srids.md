@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: c1e96d37ae3d140eb2efddd6d3df5c656cc3afd7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15db59b43731b9a39ff4bef78e3a6cb6929e9b47
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014002"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068359"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>SRID (Spatial Reference Identifier)
   各空間インスタンスには SRID (spatial reference identifier) があります。 SRID は、平面地球マッピングまたは球体地球マッピングに使用される特定の楕円体に基づく空間参照系に対応します。  

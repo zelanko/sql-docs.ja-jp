@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 15fe0d424ac1f5a83fb842a2b9ab2f9416fedd55
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 324f221742152ebfc0850a609b04f2f6bf956fea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706890"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926723"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>SQL Server 2014 に関するフィードバックの送信
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 製品やドキュメントの改善にご協力いただき、ありがとうございます。 製品の機能やユーザー インターフェイスに関するご意見や不具合の報告を送信したり、ドキュメントに関するフィードバックを送信できます。また、エラー レポートや機能の使用状況のデータを分析できるように、[!INCLUDE[msCoName](../includes/msconame-md.md)] に自動的に送信することもできます。 このトピックでは、次の 3 つのフィードバック オプションについて説明します。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5da49fee774b7f70a0ab6108ee302d0ee28cec1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933939"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>サーバー ネットワーク アドレスの指定 (データベース ミラーリング)
   データベース ミラーリング セッションを設定するには、サーバー インスタンスごとにサーバー ネットワーク アドレスが必要です。 サーバー インスタンスのサーバー ネットワーク アドレスは、システム アドレス、およびインスタンスがリッスンしているポート番号を指定することにより、明確にインスタンスを識別する必要があります。  
@@ -32,11 +31,11 @@ ms.locfileid: "62755058"
 ##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> サーバー ネットワーク アドレスの構文  
  サーバー ネットワーク アドレスの構文は、次のような形式になります。  
   
- TCP:<strong>//</strong>*\<システムアドレス>* <strong>:<strong>*\<ポート>* 
+ TCP:<strong>//</strong> *\<system-address>* <strong> :<strong>*\<port>* 
   
  where  
   
--   システムアドレス>は、対象のコンピューターシステムを明確に識別する文字列です。 * \<* 通常、サーバー アドレスは、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレスになります。  
+-   *\<system-address>* は、対象のコンピューターシステムを明確に識別する文字列です。 通常、サーバー アドレスは、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレスになります。  
   
     -   システムが同じドメイン内にある場合、 `SYSTEM46`などのコンピューター システムの名前を使用できます。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62755058"
         > [!NOTE]  
         >  完全修飾ドメイン名の検索方法の詳細については、このトピックの「完全修飾ドメイン名の検索」を参照してください。  
   
--   ポート>は、パートナーサーバーインスタンスのミラーリングエンドポイントで使用されるポート番号です。 * \<* エンドポイントの指定の詳細については、「 [Windows 認証でのデータベース ミラーリング エンドポイントを作成する &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)」を参照してください。  
+-   *\<port>* パートナーサーバーインスタンスのミラーリングエンドポイントが使用するポート番号を指定します。 エンドポイントの指定の詳細については、「 [Windows 認証でのデータベース ミラーリング エンドポイントを作成する &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)」を参照してください。  
   
      データベース ミラーリング エンドポイントは、コンピューター システム上の使用可能な任意のポートを使用できます。 コンピューター システム上の各ポート番号は 1 つのエンドポイントだけに関連付けられている必要があります。また、各エンドポイントは 1 つのサーバー インスタンスに関連付けられています。そのため、1 台のサーバー上に複数のサーバー インスタンスがある場合、各サーバー インスタンスは、ポートが異なる別のエンドポイントでリッスンします。 したがって、データベース ミラーリング セッションを設定するときにサーバー ネットワーク アドレスで指定するポートにより、必ず、エンドポイントがそのポートに関連付けられているサーバー インスタンスにセッションがリダイレクトされます。  
   

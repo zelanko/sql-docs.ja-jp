@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 398a808ab90ab3ea8b97304d4e22865b40cc0ac4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3cc4c44e00e4c16a6211086b16861f3e9233357
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62661854"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061906"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio のツール ウィンドウ
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、開発と管理のあらゆる段階で使用できる強力なツール ウィンドウが数多く用意されています。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のあらゆるコンポーネントで使用できるツールもあれば、特定のコンポーネントだけで使用できるツールもあります。 次の表に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのコンポーネントで使用できるツールを示します。  

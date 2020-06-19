@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4058a059f1f8690f636e00ac1c68957b68c85f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4151c889e83555e81352f606bd1876961a933fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176296"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968578"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>スクリプト コンポーネントによる変換先の作成
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フロー内では、変換先コンポーネントを使用して、上流の変換元や変換から受け取ったデータをデータ ソースに保存します。 通常、変換先コンポーネントをデータ ソースに接続するには、既存の接続マネージャーを使用します。
@@ -66,9 +65,9 @@ ms.locfileid: "78176296"
  **[スクリプト変換エディター]** の **[入力および出力]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力および出力] ページ&#41;](../script-transformation-editor-inputs-and-outputs-page.md)」を参照してください。
 
 ### <a name="adding-variables"></a>変数の追加
- スクリプトで既存の変数を使用する場合`ReadOnlyVariables`は、[**スクリプト変換エディター**] の [ `ReadWriteVariables` **スクリプト**] ページで、プロパティおよびプロパティフィールドに追加できます。
+ スクリプトで既存の変数を使用する場合は、 `ReadOnlyVariables` [ `ReadWriteVariables` **スクリプト変換エディター**] の [**スクリプト**] ページで、プロパティおよびプロパティフィールドに追加できます。
 
- プロパティ フィールドに複数の変数を追加する場合は、各変数名をコンマで区切ります。 `ReadOnlyVariables`また、 `ReadWriteVariables`プロパティフィールドの横にある省略記号 ([.**..**]) ボタンをクリックし、[**変数の選択**] ダイアログボックスで変数を選択することで、複数の変数を選択することもできます。
+ プロパティ フィールドに複数の変数を追加する場合は、各変数名をコンマで区切ります。 また、プロパティフィールドの横にある省略記号 ([.**..**]) ボタンをクリックし、[ `ReadOnlyVariables` `ReadWriteVariables` **変数の選択**] ダイアログボックスで変数を選択することで、複数の変数を選択することもできます。
 
  スクリプト コンポーネントで変数を使用する方法に関する一般情報については、「[スクリプト コンポーネントでの変数の使用](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)」を参照してください。
 
@@ -82,7 +81,7 @@ ms.locfileid: "78176296"
 ### <a name="understanding-the-auto-generated-code"></a>自動生成されたコードについて
  変換先コンポーネントを作成、構成した後で VSTA IDE を開くと、コード エディターには `ScriptMain` クラスが編集可能な状態で表示されます。また、`ProcessInputRow` メソッドがスタブとして表示されます。 カスタム コードは `ScriptMain` クラスに記述します。また、`ProcessInputRow` は変換先コンポーネントの最重要メソッドです。
 
- VSTA で [**プロジェクトエクスプローラー** ] ウィンドウを開くと、スクリプトコンポーネントによって読み取り専用`BufferWrapper`および`ComponentWrapper`プロジェクト項目も生成されたことがわかります。 `ScriptMain` クラスは、`UserComponent` プロジェクト アイテム内の `ComponentWrapper` クラスを継承します。
+ VSTA で [**プロジェクトエクスプローラー** ] ウィンドウを開くと、スクリプトコンポーネントによって読み取り専用およびプロジェクト項目も生成されたことがわかり `BufferWrapper` `ComponentWrapper` ます。 `ScriptMain` クラスは、`UserComponent` プロジェクト アイテム内の `ComponentWrapper` クラスを継承します。
 
  実行時には、データ フロー エンジンが `ProcessInput` クラスの `UserComponent` メソッドを呼び出します。これは親クラスである <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドをオーバーライドします。 `ProcessInput` メソッドは、入力バッファーに格納された行を順にループし、各行で 1 回ずつ `ProcessInputRow` メソッドを呼び出します。
 
@@ -101,7 +100,7 @@ ms.locfileid: "78176296"
  次の例では、変換先コンポーネントを作成するために `ScriptMain` クラスで必要なコードを示します。
 
 > [!NOTE]
->  これらの例で**Person.Address**は、 `AdventureWorks`サンプルデータベースの Person テーブルを使用して、その第1列と第4列、つまり**int * addressid*** および**nvarchar (30) City**列をデータフローに渡します。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。
+>  これらの例では、サンプルデータベースの**Person**テーブルを使用して、 `AdventureWorks` その第1列と第4列、つまり**int * addressid*** および**nvarchar (30) City**列をデータフローに渡します。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。
 
 ### <a name="adonet-destination-example"></a>ADO.NET 変換先の例
  この例では、既存の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用して、データ フローのデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存する変換先コンポーネントを示します。
@@ -119,7 +118,7 @@ ms.locfileid: "78176296"
 
 3.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換先として構成します。
 
-4.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します (変換を行わずに変換元を直接変換先に接続できます)。この出力では、少なくとも**Addressid**列と**City**列を含む`AdventureWorks`サンプルデータベースの**Person**テーブルからデータを提供する必要があります。
+4.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します (変換を行わずに変換元を直接変換先に接続できます)。この出力では、 **Person.Address** `AdventureWorks` 少なくとも**Addressid**列と**City**列を含むサンプルデータベースの Person テーブルからデータを提供する必要があります。
 
 5.  **[スクリプト変換エディター]** を開きます。 **[入力列]** ページで、**AddressID** 入力列と **City** 入力列を選択します。
 
@@ -236,7 +235,7 @@ public class ScriptMain:
 
 2.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換先として構成します。
 
-3.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します (変換を行わずに変換元を直接変換先に接続できます)。この`AdventureWorks`出力では、サンプルデータベースの**Person**テーブルからデータを提供する必要があります。また、少なくとも**addressid**列と**City**列が含まれている必要があります。
+3.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します (変換を行わずに変換元を直接変換先に接続できます)。この出力では、サンプルデータベースの**Person**テーブルからデータを提供する必要があり `AdventureWorks` ます。また、少なくとも**Addressid**列と**City**列が含まれている必要があります。
 
 4.  **[スクリプト変換エディター]** を開きます。 **[入力列]** ページで、**AddressID** 列と **City** 列を選択します。
 

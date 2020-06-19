@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a0f7e10a39896efffa5159911ebd753b1d649e45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d055769a8f854b58e455eec873c1c94a7f740393
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768585"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968732"
 ---
 # <a name="coding-a-custom-log-provider"></a>カスタム ログ プロバイダーのコーディング
   <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> 基本クラスを継承するクラスを作成し、<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性をそのクラスに適用したら、基本クラスのプロパティとメソッドの実装をオーバーライドして、カスタム機能を提供する必要があります。  
@@ -132,7 +131,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>ログ エントリの記述  
- パッケージ内のオブジェクトがいずれかのイベント インターフェイスで Fire<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>event> メソッドを呼び出してイベントを発生させるたびに、\< メソッドが呼び出されます。 各イベントを発生させるときは、イベントのコンテキスト情報に加えて、通常は説明のメッセージが使用されます。 ただし、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> メソッドのすべての呼び出しに、すべてのメソッド パラメーターの情報が含まれているわけではありません。 たとえば、名前が説明になっている一部の標準イベントは MessageText を提供しません。また DataCode と DataBytes は、省略可能な補足情報のためのものです。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>メソッドは、いずれかのイベントインターフェイスで Fire メソッドを呼び出すことによって、パッケージ内のオブジェクトがイベントを発生させるたびに呼び出され \<event> ます。 各イベントを発生させるときは、イベントのコンテキスト情報に加えて、通常は説明のメッセージが使用されます。 ただし、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> メソッドのすべての呼び出しに、すべてのメソッド パラメーターの情報が含まれているわけではありません。 たとえば、名前が説明になっている一部の標準イベントは MessageText を提供しません。また DataCode と DataBytes は、省略可能な補足情報のためのものです。  
   
  次のコード例では、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> メソッドを実装し、前のセクションで開かれたストリームにイベントを書き込みます。  
   

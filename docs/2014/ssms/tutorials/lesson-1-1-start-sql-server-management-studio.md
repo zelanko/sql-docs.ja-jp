@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8c74a4c427e4fc89d32c0dcf961bf5f4b839fff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78288982"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061968"
 ---
 # <a name="start-sql-server-management-studio"></a>SQL Server Management Studio の起動
   このチュートリアルを開始する前に、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開いてみましょう。  
@@ -24,12 +23,12 @@ ms.locfileid: "78288982"
   
 #### <a name="to-open-sql-server-management-studio"></a>SQL Server Management Studio を開くには  
   
-1.  [**スタート**] ボタンをクリックし、[**すべて**のプログラム[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、[] の順にポイントして、[ **SQL Server Management Studio**] をクリックします。  
+1.  [**スタート**] ボタンをクリックし、[**すべてのプログラム**]、[] の順にポイントして、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] [ **SQL Server Management Studio**] をクリックします。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、既定ではインストールされません。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を利用できない場合は、セットアップを実行してインストールしてください。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] では使用できません。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express は、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=14630)から無料でダウンロードできますが、このチュートリアルで説明しているものとは異なるユーザーインターフェイスを備えています。  
   
-2.  **[サーバーへの接続]** ダイアログ ボックスで既定の設定を確認し、 **[接続]** をクリックします。 接続するに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、[**サーバー名**] ボックスに、がインストールされているコンピューターの名前が含まれている必要があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]が名前付きインスタンスの場合、[**サーバー名**] ボックスには\< *computer_name*>\\<*instance_name*> の形式でインスタンス名も含まれている必要があります。  
+2.  **[サーバーへの接続]** ダイアログ ボックスで既定の設定を確認し、 **[接続]** をクリックします。 接続するには、[**サーバー名**] ボックスに、がインストールされているコンピューターの名前が含まれている必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]が名前付きインスタンスの場合、[**サーバー名**] ボックスには instance_name> の形式でインスタンス名も含まれている必要があり \<*computer_name*> \\ < *instance_name*ます。  
   
 ## <a name="management-studio-components"></a>Management Studio のコンポーネント  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、情報は種類ごとに専用のウィンドウに表示されます。 データベース情報はオブジェクト エクスプローラーとドキュメント ウィンドウに表示されます。  

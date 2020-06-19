@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: a8323b5c-686a-4235-a8d2-bda43617b3a1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d15b7ca5ed84f2cc828696c6a7fe8b8771e8a374
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 222349bcaa88058dea1d9c5302883667c22d4092
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781048"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933529"
 ---
 # <a name="isqlservererrorinfo-ole-db"></a>ISQLServerErrorInfo (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、 **ISQLServerErrorInfo** エラー インターフェイスを定義します。 このインターフェイスは、重大度や状態など、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの詳細情報を返します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|Method|説明|  
+|メソッド|説明|  
 |------------|-----------------|  
 |[ISQLServerErrorInfo:: GetErrorInfo &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの詳細情報を保持している、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの SSERRORINFO 構造体へのポインターを返します。|  
   
