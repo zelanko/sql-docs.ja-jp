@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 35f7bcf1c8e5ebcb225a9198944cf4144321bad3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1c2a07ae5d4248b4c37ab5fa8124582c99a1e6f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703694"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063420"
 ---
 # <a name="use-the-sqlcmd-utility"></a>sqlcmd ユーティリティの使用
   `sqlcmd` ユーティリティは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびスクリプトを対話形式でアドホック実行したり、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト タスクを自動化したりするためのコマンドライン ユーティリティです。 `sqlcmd` を対話形式で使用したり、`sqlcmd` を使用して実行できるスクリプト ファイルを作成したりするには、ユーザーが [!INCLUDE[tsql](../../includes/tsql-md.md)] を理解している必要があります。 `sqlcmd` ユーティリティは一般的に次のように使用されます。  
@@ -562,9 +561,9 @@ SQLCMD -E -N -C
   
 ## <a name="see-also"></a>参照  
  [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)   
- [Sqlcmd をスクリプト変数と共に使用する](sqlcmd-use-with-scripting-variables.md)   
- [クエリエディターを使用して SQLCMD スクリプトを編集する](edit-sqlcmd-scripts-with-query-editor.md)   
- [ジョブステップの管理](../../ssms/agent/manage-job-steps.md)   
+ [sqlcmd でのスクリプト変数の使用](sqlcmd-use-with-scripting-variables.md)   
+ [クエリ エディターによる SQLCMD スクリプトの編集](edit-sqlcmd-scripts-with-query-editor.md)   
+ [ジョブ ステップの管理](../../ssms/agent/manage-job-steps.md)   
  [CmdExec ジョブ ステップの作成](../../ssms/agent/create-a-cmdexec-job-step.md)  
   
   

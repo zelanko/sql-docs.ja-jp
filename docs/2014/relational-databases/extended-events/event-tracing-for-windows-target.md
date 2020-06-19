@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34c367d6ea7663a262c7ccead1e85702af9cf499
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 55f247af30b5278f614b6505a94266cc07ec6c54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706837"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027588"
 ---
 # <a name="event-tracing-for-windows-target"></a>Event Tracing for Windows ターゲット
   Event Tracing for Windows (ETW) をターゲットとして使用する前に、ETW を活用するための知識を身に付けておくことをお勧めします。 ETW トレースは、拡張イベントと組み合わせて使用されるか、拡張イベントのイベント コンシューマーとして使用されます。 ETW の背景情報については、次の外部リンクを参照してください。  
@@ -75,7 +74,7 @@ ms.locfileid: "82706837"
     > [!IMPORTANT]  
     >  最初のセッションの開始後にファイル パスを変更することはできません。  
   
--   管理オブジェクトフォーマット (MOF) ファイルは* \< 、インストールパス>* \Microsoft SQL server sharedにあります。 詳細については、MSDN の「[マネージド オブジェクト フォーマット](https://go.microsoft.com/fwlink/?LinkId=92851)」を参照してください。  
+-   管理オブジェクトフォーマット (MOF) ファイルは *\<your install path>* \Microsoft SQL server sharedにあります。 詳細については、MSDN の「[マネージド オブジェクト フォーマット](https://go.microsoft.com/fwlink/?LinkId=92851)」を参照してください。  
   
 ## <a name="adding-the-target-to-a-session"></a>セッションへのターゲットの追加  
  ETW ターゲットを拡張イベント セッションに追加するには、イベント セッションの作成時または変更時に次のステートメントを含める必要があります。  

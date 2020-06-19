@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5d4aae8a264bd77d51c3365183ee510043ae814b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4881cefee350d34d93b539c56be6f43866d3ddfe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935657"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads サーバー構成オプションの構成
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max worker threads [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **max worker threads** オプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスで利用できるワーカー スレッド数を構成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、オペレーティング システムのネイティブ スレッド サービスを使用しているため、1 つ以上のスレッドが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で同時にサポートされている各ネットワークをサポートし、他のスレッドがデータベース チェックポイントを処理し、スレッド プールがすべてのユーザーを処理します。 **max worker threads** の既定値は 0 です。 この場合、ワーカー スレッドの数が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって起動時に自動で構成されます。 既定の設定は、ほとんどのシステムで最適な設定です。 ただし、システム構成によっては、 **max worker threads** を特定の値に設定するとパフォーマンスが向上することがあります。  
@@ -45,7 +44,7 @@ ms.locfileid: "62787594"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
--   実際のクエリ要求数が **max worker threads**に設定した値を下回る場合、1 つのスレッドで 1 つのクエリ要求が処理されます。 ただし、実際のクエリ要求数が**max worker threads**で設定されている量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を超えた場合、はワーカースレッドをプールして、次に使用可能なワーカースレッドが要求を処理できるようにします。  
+-   実際のクエリ要求数が **max worker threads**に設定した値を下回る場合、1 つのスレッドで 1 つのクエリ要求が処理されます。 ただし、実際のクエリ要求数が**max worker threads**で設定されている量を超えた場合、はワーカースレッドをプールして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次に使用可能なワーカースレッドが要求を処理できるようにします。  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   

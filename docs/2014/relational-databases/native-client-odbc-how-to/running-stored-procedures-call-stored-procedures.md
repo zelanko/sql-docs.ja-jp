@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7db8c722eb7afcb9db47478a1f42dd7830935ad7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 18f9e8742fb01ef0bf3b635d0bdc3fda4e428296
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712531"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048156"
 ---
 # <a name="call-stored-procedures-odbc"></a>ストアド プロシージャの呼び出し (ODBC)
   SQL ステートメントで ODBC CALL エスケープ句を使用してストアドプロシージャを呼び出すと、Microsoft SQL Server ドライバーは、リモートストアドプロシージャコール (RPC) メカニズムを使用して SQL Server にプロシージャを送信します。 RPC 要求は、SQL Server でのステートメント解析やパラメーター処理の多くを省略するため、Transact-SQL の EXECUTE ステートメントを使用するよりも高速です。  

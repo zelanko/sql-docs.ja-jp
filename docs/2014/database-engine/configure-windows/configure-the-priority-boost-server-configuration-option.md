@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d75f292ea86b4b619fec81ea7a6f7aafc83fdc15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f42d7d2022e07dcac3039557295dc70e4500583d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812274"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935623"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>priority boost サーバー構成オプションの構成
   このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] priority boost [!INCLUDE[tsql](../../includes/tsql-md.md)]構成オプションを構成する方法について説明します。 **priority boost** オプションは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 または Windows 2008 R2 のスケジューリングでの優先度を同じコンピューター上の他のプロセスよりも高くして、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行する必要があるかどうかを指定するために使用します。 このオプションを 1 に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Windows 2008 または Windows Server 2008 R2 のスケジューラで優先度ベース 13 で実行されます。 既定値は 0 (優先度ベース 7) です。  

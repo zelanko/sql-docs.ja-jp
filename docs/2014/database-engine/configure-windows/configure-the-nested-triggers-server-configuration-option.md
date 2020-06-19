@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 09dfdb2bfaaadc29a3a70c949380a5e3cd1a0512
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b27e185b0833f2e51be16393ff4d59a81046970
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935605"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>nested triggers サーバー構成オプションの構成
   このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nested triggers [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **nested triggers** オプションは、AFTER トリガーを連鎖できるかどうかを制御します。 つまり、1 つの操作が別のトリガーを開始し、開始されたトリガーからさらに別のトリガーを開始するなどの動作ができるかどうかを制御します。 **nested triggers** を 0 に設定すると、AFTER トリガーは連鎖できません。 **nested triggers** を 1 (既定値) に設定すると、AFTER トリガーは 32 レベルまで連鎖できます。 INSTEAD OF トリガーは、このオプションの設定に関係なく入れ子にできます。  

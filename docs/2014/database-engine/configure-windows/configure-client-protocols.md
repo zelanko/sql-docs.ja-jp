@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 331e062c86a65ce2be8fca4d07620156bab0a5e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ac07771f2b47a8bab11ab4b02ff7780c89e1733
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813634"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935783"
 ---
 # <a name="configure-client-protocols"></a>クライアント プロトコルの構成
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 構成マネージャーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でクライアント アプリケーションによって使用されるクライアント プロトコルを構成する方法について説明します。 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、TCP/IP ネットワーク プロトコルおよび名前付きパイプ プロトコルを介したクライアント通信をサポートしています。 クライアントが、同じコンピューター上で[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続している場合は、共有メモリ プロトコルも使用できます。 プロトコルの選択には、3 つの一般的な方法があります。  
@@ -50,7 +49,7 @@ ms.locfileid: "62813634"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで、 **[SQL Server Native Client の構成]** を展開し、 **[クライアント プロトコル]** を右クリックして、 **[プロパティ]** をクリックします。  
   
-2.  **に接続するときに試行されるプロトコルの順序を変更するには、** [有効なプロトコル] **ボックスで、** 上へ移動**ボタンまたは**下へ移動[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ボタンをクリックします。 **[有効なプロトコル]** ボックスの最上部に表示されているプロトコルが既定のプロトコルです。  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するときに試行されるプロトコルの順序を変更するには、**[有効なプロトコル]** ボックスで、**上へ移動**ボタンまたは**下へ移動**ボタンをクリックします。 **[有効なプロトコル]** ボックスの最上部に表示されているプロトコルが既定のプロトコルです。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーにより、サーバーの別名の構成や既定のクライアント ネットワーク ライブラリのレジストリ エントリが作成されます。 ただし、このアプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント ネットワーク ライブラリもネットワーク プロトコルもインストールされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント ネットワーク ライブラリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ中にインストールされます。また、ネットワーク プロトコルは、Microsoft Windows セットアップの一部として (または**コントロール パネル**の **[ネットワーク接続]** を使用して) インストールされます。 特定のネットワーク プロトコルは、Windows のセットアップ時にインストールされないことがあります。 そのようなネットワーク プロトコルのインストールの詳細については、製造元のマニュアルを参照してください。  

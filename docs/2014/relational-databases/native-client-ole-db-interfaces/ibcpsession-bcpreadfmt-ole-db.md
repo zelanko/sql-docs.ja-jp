@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 54cfcdb87e8292f4588360e5a6b8c77f410a1fc9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: be8d8ef1148cf77491099bc40224fe5cd4009af8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047999"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
   フォーマット ファイルから列ごとにフォーマット情報を読み取ります。  
@@ -34,7 +33,7 @@ HRESULT BCPReadFmt(
 const wchar_t *pwszFormatFile);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **BCPReadFmt** メソッドは、データ ファイルのデータ形式を指定するフォーマット ファイルからデータを読み取る場合に使用されます。 このメソッドでは、適切なバージョンのフォーマット ファイルを検出することができます。 また、フォーマット ファイルが xml 形式か、または古いスタイルのテキスト形式かを自動的に検出し、フォーマット ファイルに適した動作をします。 Native Client OLE DB プロバイダー BCP でサポートされているフォーマットファイルのバージョン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、6.0 以降です。  
   
  **BCPReadFmt** メソッドは形式の値を読み取ると、適宜、[IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) メソッドと [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) メソッドを呼び出します。 ユーザーがフォーマット ファイルを解析し、これらのメソッドを呼び出す必要はありません。  

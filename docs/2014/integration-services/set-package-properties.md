@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea7f5f06816b6dd4ddf840f63119bebb0ebf80e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 917c5af173fa1e7087d47789b17b0845ab426dad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889215"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963372"
 ---
 # <a name="set-package-properties"></a>パッケージのプロパティを設定する
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のグラフィカル インターフェイスを使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のパッケージを作成する場合、パッケージ オブジェクトのプロパティは [プロパティ] ウィンドウで設定します。  
@@ -82,7 +81,7 @@ ms.locfileid: "62889215"
 |プロパティ|説明|  
 |--------------|-----------------|  
 |`DelayValidation`|パッケージの実行時までパッケージの検証を遅らせるかどうかを示します。 このプロパティの既定値は、`False` です。|  
-|**[無効]**|パッケージを無効にするかどうかを示します。 このプロパティの既定値は `False` です。|  
+|**Disable**|パッケージを無効にするかどうかを示します。 このプロパティの既定値は `False` です。|  
 |`DisableEventHandlers`|パッケージのイベント ハンドラーを実行するかどうかを示します。 このプロパティの既定値は `False` です。|  
 |`FailPackageOnFailure`|パッケージ コンポーネント内でエラーが発生した場合、パッケージが失敗するかどうかを示します。 このプロパティの有効な値は、`False` だけです。|  
 |`FailParentOnError`|子コンテナーでエラーが発生した場合、親コンテナーが失敗するかどうかを示します。 このプロパティの既定値は `False` です。|  
@@ -95,7 +94,7 @@ ms.locfileid: "62889215"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|`ForcedExecutionValue`|ForceExecutionValue がに`True`設定されている場合、パッケージが返すオプションの実行値を示す値です。 このプロパティの既定値は **0** です。|  
+|`ForcedExecutionValue`|ForceExecutionValue がに設定されている場合 `True` 、パッケージが返すオプションの実行値を示す値です。 このプロパティの既定値は **0** です。|  
 |`ForcedExecutionValueType`|ForcedExecutionValue のデータ型。 このプロパティの既定値は `Int32` です。|  
 |`ForceExecutionValue`|コンテナーのオプションの実行値に特定の値を適用する必要があるかどうかを示すブール値です。 このプロパティの既定値は `False` です。|  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62889215"
 |`CreatorComputerName`|パッケージが作成されたコンピューターの名前です。|  
 |`CreatorName`|パッケージの作成者の名前です。|  
 |`Description`|パッケージ機能の説明です。|  
-|`ID`|パッケージ GUID です。パッケージが作成されるときに割り当てられます。 このプロパティは読み取り専用です。 プロパティの新しいランダムな値を生成するには、ドロップダウンリストで [ ** \<新しい ID>を生成**する] を選択します。 `ID`|  
+|`ID`|パッケージ GUID です。パッケージが作成されるときに割り当てられます。 このプロパティは読み取り専用です。 プロパティの新しい乱数値を生成するには `ID` 、 **\<Generate New ID>** ドロップダウンリストでを選択します。|  
 |`Name`|パッケージの名前です。|  
 |`PackageType`|パッケージの種類です。 値は、`Default`、`DTSDesigner`、`DTSDesigner100`、`DTSWizard`、`SQLDBMaint`、および `SQLReplication` です。 このプロパティの既定値は `Default` です。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>」を参照してください。|  
   
@@ -131,8 +130,8 @@ ms.locfileid: "62889215"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|`PackagePassword`|パスワードを必要とするパッケージ保護`EncryptSensitiveWithPassword`レベル`EncryptAllWithPassword`(および) のパスワード。|  
-|`ProtectionLevel`|パッケージの保護レベルです。 `DontSaveSensitive`値は`EncryptSensitiveWithUserKey`、 `EncryptSensitiveWithPassword`、、、 `EncryptAllWithPassword`、および**serverstorage**です。 このプロパティの既定値は `EncryptSensitiveWithUserKey` です。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>」を参照してください。|  
+|`PackagePassword`|パスワードを必要とするパッケージ保護レベル ( `EncryptSensitiveWithPassword` および) のパスワード `EncryptAllWithPassword` 。|  
+|`ProtectionLevel`|パッケージの保護レベルです。 値は、、、、 `DontSaveSensitive` `EncryptSensitiveWithUserKey` `EncryptSensitiveWithPassword` `EncryptAllWithPassword` 、および**serverstorage**です。 このプロパティの既定値は `EncryptSensitiveWithUserKey` です。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>」を参照してください。|  
   
 ###  <a name="transactions"></a><a name="Transactions"></a>トランザクション  
  このカテゴリのプロパティは、パッケージの分離レベルとトランザクション オプションを構成します。 詳細については、「 [Integration Services のトランザクション](integration-services-transactions.md)」をご覧ください。  
@@ -140,7 +139,7 @@ ms.locfileid: "62889215"
 |プロパティ|説明|  
 |--------------|-----------------|  
 |`IsolationLevel`|パッケージ トランザクションの分離レベルです。  このプロパティの既定値は `Serializable` です。 有効な値は、 <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`.<br /><br /> `IsolationLevel` プロパティは、`TransactionOption` プロパティの値が `Required` の場合にのみ、パッケージ トランザクションに適用されます。<br /><br /> 子コンテナーによって要求された `IsolationLevel` プロパティの値は、以下の場合には無視されます。<br /><br /> 子コンテナーの `TransactionOption` プロパティの値が `Supported` である場合。<br />子コンテナーが親コンテナーのトランザクションに参加する場合。<br /><br /> コンテナーによって要求された `IsolationLevel` プロパティの値は、コンテナーが新しいトランザクションを開始する場合にのみ利用されます。 コンテナーは、次の場合に新しいトランザクションを開始します。<br /><br /> コンテナーの `TransactionOption` プロパティの値が `Required` である場合。<br />親がまだトランザクションを開始していない場合。<br /><br /> <br /><br /> 注: `IsolationLevel` プロパティの値 `Snapshot` は、パッケージ トランザクションと互換性がありません。 したがって、`IsolationLevel` プロパティを使用して、パッケージ トランザクションの分離レベルを `Shapshot` に設定することはできません。 SQL クエリを使用して、パッケージ トランザクションを `Snapshot` に設定してください。 詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)」を参照してください。<br /><br /> `IsolationLevel` プロパティの詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>」を参照してください。|  
-|`TransactionOption`|パッケージに対するトランザクションの関与を示します。 値は`NotSupported`、 `Supported`、、 `Required`です。 このプロパティの既定値は `Supported` です。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>」を参照してください。|  
+|`TransactionOption`|パッケージに対するトランザクションの関与を示します。 値は `NotSupported` 、、 `Supported` 、 `Required` です。 このプロパティの既定値は `Supported` です。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>」を参照してください。|  
   
 ###  <a name="version"></a><a name="Version"></a>バージョン  
  このカテゴリのプロパティは、パッケージ オブジェクトのバージョンに関する情報を提供します。  

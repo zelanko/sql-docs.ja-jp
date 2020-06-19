@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 112d0297243ebdd778f21db69037b5a3cbd67d10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73194c7da553bf27acb78d8c4e7d71bc93f457d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916265"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969832"
 ---
 # <a name="mssqlserver_10509"></a>MSSQLSERVER_10509
     
@@ -39,7 +38,7 @@ ms.locfileid: "62916265"
  有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを 1 つだけ指定するか、またはバッチ内のステートメントの有効な開始位置を指定します。 有効な開始位置を取得するには、動的管理関数 sys.dm_exec_query_stats の statement_start_offset 列のクエリを実行します。  
   
 ## <a name="see-also"></a>参照  
- [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [プランガイド](../performance/plan-guides.md)   
  [dm_exec_query_stats &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  

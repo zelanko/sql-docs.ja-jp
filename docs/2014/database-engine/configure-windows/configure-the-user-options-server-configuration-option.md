@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b0588bbc8c21c9946ac72a2db92c593e48973dfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7ee40d0f6de532b93ce9d8075b609c80f09df7e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787074"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935488"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>user options サーバー構成オプションの構成
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user options [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **user options** オプションは、すべてのユーザーに対するグローバルな既定値を指定します。 ユーザーの作業セッション中に、一連の既定のクエリ処理オプションが設定されます。 **user options** オプションを使用すると、SET オプションの既定値を変更できます (サーバーの既定の設定が適切でない場合)。  

@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ad86f5989fe9ff90132637d062b708423f23eef1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 881c332e2f9c7d2958e001c04b1b6281adc23999
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131488"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027527"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 関数
   指定した名前の SQL Server Express LocalDB インスタンスを起動します。  
@@ -104,10 +103,10 @@ HRESULT LocalDBStartInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="details"></a>詳細情報  
+## <a name="details"></a>詳細  
  接続バッファー引数 (*wszSqlConnection*) と接続バッファーサイズ引数 (*lpcchSqlConnection*) はどちらも省略可能です。 次の表は、これらの引数を使用するためのオプションとその結果を示しています。  
   
-|バッファー|バッファーサイズ|理論的根拠|アクション|  
+|バッファー|バッファーサイズ|理由|アクション|  
 |------------|-----------------|---------------|------------|  
 |NULL|NULL|ユーザーはインスタンスを起動しようとしますが、パイプ名は必要ありません。|インスタンスを起動します (パイプの戻り値と必要なバッファー サイズの戻り値なし)。|  
 |NULL|存在|ユーザーが出力バッファー サイズを要求します  (次の呼び出しで、ユーザーはおそらく実際の起動を要求します)。|必要なバッファー サイズを返します (起動とパイプの戻り値なし)。 結果は S_OK です。|  

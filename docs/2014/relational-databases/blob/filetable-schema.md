@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7341919e54a4f669c5251d578ae929f1f4f3e22f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d624f5cbfd72a68541890e39674bc5bcad50716
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010119"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955182"
 ---
 # <a name="filetable-schema"></a>FileTable スキーマ
   FileTable の定義済みスキーマおよび固定スキーマについて説明します。  
@@ -25,8 +24,8 @@ ms.locfileid: "66010119"
 |ファイル属性の名前|type|Size|Default|説明|ファイル システムのアクセシビリティ|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|`hierarchyid`|可変|このアイテムの位置を識別する `hierarchyid`|階層 FileNamespace 内でのこのノードの位置。<br /><br /> テーブルの主キーです。|Windows パス値を設定することによって作成および変更できます。|  
-|**stream_id**|**[一意の ID] rowguidcol**||`NEWID()` 関数によって返される値|FILESTREAM データの一意の ID。|適用されません。|  
-|**file_stream**|`varbinary(max)`<br /><br /> `filestream`|可変|NULL|FILESTREAM データが含まれています。|適用されません。|  
+|**stream_id**|**[一意の ID] rowguidcol**||`NEWID()` 関数によって返される値|FILESTREAM データの一意の ID。|適用不可。|  
+|**file_stream**|`varbinary(max)`<br /><br /> `filestream`|可変|NULL|FILESTREAM データが含まれています。|適用不可。|  
 |**file_type**|`nvarchar(255)`|可変|NULL。<br /><br /> ファイル システムの作成操作または名前変更操作によって、名前から取得されたファイル拡張子の値が格納されます。|ファイルの種類を表します。<br /><br /> この列は、フルテキスト インデックスの作成時に `TYPE COLUMN` として使用できます。<br /><br /> **file_type** は、保存される計算列です。|自動的に計算されます。 設定することはできません。|  
 |**名前**|`nvarchar(255)`|可変|GUID 値。|ファイルまたはディレクトリの名前。|Windows API を使用して作成または変更できます。|  
 |**parent_path_locator**|`hierarchyid`|可変|このアイテムが格納されているディレクトリを識別する `hierarchyid`|格納されているディレクトリの `hierarchyid`。<br /><br /> **parent_path_locator** は、保存される計算列です。|自動的に計算されます。 設定することはできません。|  

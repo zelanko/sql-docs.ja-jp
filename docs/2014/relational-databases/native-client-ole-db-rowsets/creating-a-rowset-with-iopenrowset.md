@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3d8865f6a6e38e9764b7aa2c67d069eeb6a4ec84
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf74466a698d39f74b9531adaa54c79c75e50ef2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704682"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055988"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>IOpenRowset を使用した行セットの作成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーでは、 **IOpenRowset:: OpenRowset**メソッドがサポートされていますが、次の制限があります。  

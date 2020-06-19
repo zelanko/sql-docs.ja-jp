@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d9e936c25db4522a949fb97257e136ba6799697f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 092e0a2b5cfc30fd2d2362645fc1242bf4a1651e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811346"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935663"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>media retention サーバー構成オプションの構成
   このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] media retention [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **media retention** オプションは、各バックアップ セットを保持する期間を指定します。 このオプションを利用して、指定した日数が経過するまでバックアップが上書きされないように保護できます。 **media retention** オプションを構成すると、バックアップするたびにシステム バックアップを保持する期間を指定する必要はありません。 既定値は 0 日であり、最大値は 365 日です。  

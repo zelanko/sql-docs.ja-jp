@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab803bcaa5ab6b6187c1a994abef02f81ae105c6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811546"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935726"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>複数の TCP ポートでリッスンするデータベース エンジンの構成
   このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で SQL Server 構成マネージャーを使用して、複数の TCP ポートをリッスンするように [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を構成する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で TCP/IP を有効にしている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、IP アドレスと TCP ポート番号で構成される接続ポイントで着信接続をリッスンします。次の手順では、表形式のデータ ストリーム (TDS) エンドポイントを作成し、追加の TCP ポートを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするように設定します。  
@@ -74,22 +73,22 @@ ms.locfileid: "62811546"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>追加の TCP ポートでリッスンするように SQL Server データベース エンジンを構成するには  
   
-1.  SQL Server 構成マネージャーで **[SQL Server ネットワークの構成]** を展開し、 **[<instance_name>** _のプロトコル_] をクリックします。  
+1.  SQL Server 構成マネージャーで **[SQL Server ネットワークの構成]** を展開し、 _[<instance_name>_ **のプロトコル**] をクリックします。  
   
-2.  **[** <instance_name> _のプロトコル]_ を展開し、 **[TCP/IP]** をクリックします。  
+2.  **[ _<instance_name>_ のプロトコル]** を展開し、 **[TCP/IP]** をクリックします。  
   
 3.  右ペインで、無効になっている IP アドレスのうち、有効にする IP アドレスをそれぞれ右クリックし、 **[有効化]** をクリックします。  
   
 4.  **[IPAll]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[TCP ポート]** ボックスで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がリッスンするポートを入力します。複数のポートを指定する場合はコンマで区切ります。 この例では、既定のポート1433が一覧表示さ`,1500`れている場合`1433,1500`は、ボックスに「」と入力し、[ **OK]** をクリックします。  
+5.  **[TCP ポート]** ボックスで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がリッスンするポートを入力します。複数のポートを指定する場合はコンマで区切ります。 この例では、既定のポート1433が一覧表示されている場合は、ボックスに「 `,1500` `1433,1500` 」と入力し、[ **OK]** をクリックします。  
   
     > [!NOTE]  
     >  一部の IP アドレスのポートだけを有効にする場合、[プロパティ] ダイアログ ボックスで、必要なアドレスに対してのみ追加のポートを構成します。 次に、コンソール ペインで、 **[TCP/IP]** を右クリックし、 **[プロパティ]** をクリックします。 **[すべて受信待ち]** ボックスで、 **[いいえ]** を選択します。  
   
 6.  左ペインで、 **[SQL Server のサービス]** をクリックします。  
   
-7.  右ペインで、 **[SQL Server**<instance_name> _]_ を右クリックし、 **[再起動]** をクリックします。  
+7.  右ペインで、 **[SQL Server _<instance_name>_ ]** を右クリックし、 **[再起動]** をクリックします。  
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)]が再起動すると、エラー ログには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンしているポートが記録されています。  
   

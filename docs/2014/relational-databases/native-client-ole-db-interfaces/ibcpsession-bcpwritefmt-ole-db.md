@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a547548f84af88ea3790658618570aeed8ce8112
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec126f82b3bae86701f2723bb8b93180916dc6b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695141"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047949"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
   フォーマット ファイルに列ごとのフォーマット情報を書き込みます。  
@@ -34,7 +33,7 @@ HRESULT BCPWriteFmt(
 const wchar_t *pwszFormatFile);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  フォーマット ファイルでは、一括コピーで作成されるデータ ファイルのデータの形式を指定します。 [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) メソッドと [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) メソッドの呼び出しでは、データ ファイルの形式を定義します。 **BCPWriteFmt** メソッドでは、この定義を pwszFormatFile 引数で参照されるファイルに保存します。  
   
  **BCPWriteFmt** メソッドでは、XML 形式またはテキスト形式のいずれかの形式でフォーマット ファイルを保存できます。 そのためには、BCP_OPTION_XML 制御オプションを指定して [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md) メソッドを使用する必要があります。  

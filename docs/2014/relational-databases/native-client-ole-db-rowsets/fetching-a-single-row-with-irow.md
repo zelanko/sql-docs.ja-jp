@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d47e668a2c31e9fb00a8f3582a3538fa9127ef65
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b5573fe1fef39f29329e373323f5f8aaf15f2c58
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694661"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055956"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>IRow による 1 行のフェッチ
   Native Client OLE DB プロバイダーでの**IRow**インターフェイスの実装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、パフォーマンスを向上させるために簡略化されています。 **IRow** では、1 つの行オブジェクトの列に直接アクセスできます。 コマンドの実行結果が正確に 1 行になることが事前にわかっている場合、**IRow** でその行の列を取得できます。 結果セットが複数の行で構成される場合は、**IRow** では先頭の行だけが公開されます。  

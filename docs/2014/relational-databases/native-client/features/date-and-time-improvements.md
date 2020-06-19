@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07788d27d71dc320ef72bc68ba90e8022705380b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 66f417b943f5f7c2472120076f5fd45d09f94427
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707303"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047982"
 ---
 # <a name="date-and-time-improvements"></a>日付と時刻の強化機能
   このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に追加された日付と時刻のデータ型の [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client サポートについて説明します。  
@@ -24,7 +23,7 @@ ms.locfileid: "82707303"
   
  この機能を説明するサンプル アプリケーションについては、「[SQL Server データ プログラミング サンプル](https://msftdpprodsamples.codeplex.com/)」を参照してください。  
   
-## <a name="usage"></a>使用  
+## <a name="usage"></a>使用方法  
  ここでは、新しい日付型と時刻型のさまざまな使用方法について説明します。  
   
 ### <a name="use-date-as-a-distinct-data-type"></a>個別のデータ型として日付を使用する  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5e00455f165bb11514bbcf3345c77248716e007f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c90e9214830060e37e8d3427a2e4f8797a943003
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695635"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048016"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信される残りの行をコミットします。  
@@ -33,7 +32,7 @@ ms.locfileid: "82695635"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **BCPDone** メソッドを呼び出すと、それ以後は [IBCPSession](ibcpsession-ole-db.md) インターフェイスの他の操作を呼び出すことはできません。 ただし、一括コピー操作を新しく開始する [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) メソッドだけは呼び出すことができます。 これは [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) メソッドを呼び出した後の状態と同様です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

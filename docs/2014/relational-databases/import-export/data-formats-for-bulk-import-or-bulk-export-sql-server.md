@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 73fe6741-9437-4b26-b030-28b863e74399
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c43cb42cffba31f20b0e9717204f5475b5bb156d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b92ac8c038362ff18a1459a8bf3c55b6b596a17
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012081"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026839"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>一括インポートまたは一括エクスポートのデータ形式 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データを文字データ形式でもネイティブ バイナリ データ形式でも受け取ることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と別のアプリケーション ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel など) または別のデータベース サーバー (Oracle や [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]など) との間でデータを移動するときは、文字形式を使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス間でデータを転送する場合にのみ、ネイティブ形式を使用できます。  
@@ -34,7 +33,7 @@ ms.locfileid: "66012081"
   
 |Operation|ネイティブ|Unicode ネイティブ|文字|Unicode 文字|  
 |---------------|------------|--------------------|---------------|-----------------------|  
-|拡張文字や 2 バイト文字セット (DBCS) の文字を含まないデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送します。 フォーマット ファイルを使用する場合を除いて、これらのテーブルは同じように定義されている必要があります。|○<sup>1</sup>|-|-|-|  
+|拡張文字や 2 バイト文字セット (DBCS) の文字を含まないデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送します。 フォーマット ファイルを使用する場合を除いて、これらのテーブルは同じように定義されている必要があります。|可<sup>1</sup>|-|-|-|  
 |文字形式や Unicode 形式とは異なり、ネイティブ データ形式では各 `sql_variant` 値のメタデータが保持されるので、`sql_variant` 列ではネイティブ データ形式を使用することが最も適しています。|はい|-|-|-|  
 |拡張文字や DBCS 文字を含むデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送します。|-|はい|-|-|  
 |別のプログラムで生成されたテキスト ファイルからデータを一括インポートします。|-|-|はい|-|  

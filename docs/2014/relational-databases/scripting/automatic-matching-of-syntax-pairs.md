@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e4359a546c350c666190331ab6a8484ca9a99a83
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b80f07393b9c66a5e2c7ec72840fc58fd096a022
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704090"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063491"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>構文ペアの自動照合
   構文ペアの自動照合では、ペアでコーディングする必要がある構文要素が正しくペアになっているかどうかをすぐに検出します。 この機能は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターでは区切り記号の照合、Analysis Services の XMLA クエリ エディターでは中かっこの照合、MDX エディターと DMX エディターではかっこの照合として知られています。  
@@ -56,7 +55,7 @@ ms.locfileid: "82704090"
   
 -   照合の開始タグと終了タグ。  
   
--   不等号 "\<" と ">" のすべてのペア。  
+-   "" 山かっこの任意のペア \<" and "> 。  
   
 -   コメントの開始と終了。  
   

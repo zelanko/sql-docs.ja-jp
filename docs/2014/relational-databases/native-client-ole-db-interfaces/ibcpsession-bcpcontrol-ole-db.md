@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 594bdc64ac926388a327c4ec57bf47330d820565
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 879836ec6628f70ace9a0168e9db77910e7a32f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048031"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
   一括コピー操作のオプションを設定します。  
@@ -35,7 +34,7 @@ inteOption,
 void *iValue);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **BCPControl** メソッドでは、一括コピー操作のさまざまな制御パラメーターを設定します。たとえば、一括コピーが取り消されるまでに発生してもかまわないエラーの数、データ ファイルから最初にコピーする行番号や最後にコピーする行番号、バッチ サイズなどを設定します。  
   
  また、このメソッドを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータを一括コピーするときに使用される SELECT ステートメントを指定することもできます。 `eOption`引数を BCP_OPTION_HINTS および引数に設定して、 `iValue` SELECT ステートメントを含むワイド文字列へのポインターを持つことができます。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 158d442f-2225-4173-8545-fb1cf611b4d0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0a6c6da76bd89b4686791087e558ae1f329f57a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20ec4981a7a4c7f2d09315416deddc5e0e195fda
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088796"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928359"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>[トレース ファイルのプロパティ] ([イベントの選択] タブ)
   **[トレース ファイルのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブを使用すると、トレースの列プロパティを表示したり、トレースからデータ列を削除したりできます。  
@@ -53,6 +52,6 @@ ms.locfileid: "66088796"
  [フィルター情報の表示 &#40;SQL Server プロファイラー&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [フィルター &#40;SQL Server プロファイラーの変更&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
  [SQL Server プロファイラー](../tools/sql-server-profiler/sql-server-profiler.md)   
- [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
+ [SQL Server プロファイラーのテンプレートとアクセス許可](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

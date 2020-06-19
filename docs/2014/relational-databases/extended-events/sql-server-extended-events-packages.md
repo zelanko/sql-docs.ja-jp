@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 93691dccde430e7f636f956229b5305b211449f8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 45c452300c008d486bd1f4ab4c92b5f76b96ecd8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719177"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027378"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 拡張イベント パッケージ
   パッケージは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 拡張イベント オブジェクトのコンテナーです。 拡張イベント パッケージには、次の 3 種類があります。  
@@ -81,7 +80,7 @@ ms.locfileid: "82719177"
 |分析|非常に多くの分析イベントが公開されています。 プログラムの動作を説明するもので、主にパフォーマンス調査に用いられます。|  
 |デバッグ|デバッグ イベントは、開発者がデバッグ時に問題を診断する目的でのみ使用されます。<br /><br /> 注: デバッグチャネルのイベントは、実装固有の内部状態データを返します。 スキーマ、およびこのイベントによって返されるデータは、SQL Server の将来のバージョンで変更または無効化される可能性があります。 そのため、デバッグ チャネルのイベントは、SQL Server の将来のバージョンで予告なしに変更または削除されることがあります。|  
   
- **Keyword**  
+ **キーワード**  
   
  キーワードはアプリケーション固有の情報です。キーワードを使用すると、関連するイベントをより詳細に分類でき、セッションで使用するイベントの指定や取得を簡単に行うことができます。 次のクエリを使用すると、キーワード情報を取得できます。  
   
@@ -137,7 +136,7 @@ where name = 'keyword_map'
 ### <a name="types"></a>種類  
  データは一連のバイトの集合であるため、そのバイト集合の長さと特性がわからなければ、データを解釈することはできません。 この情報は、Type オブジェクトにカプセル化されています。 パッケージ オブジェクトには、次の型が用意されています。  
   
--   event  
+-   イベント  
   
 -   action  
   

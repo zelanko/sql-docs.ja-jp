@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ec615911233227c15f43e55125adfd6166cb51e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a439b9d5076114d57d5b3bfd317e95911d52fcc3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783369"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001619"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
-  このトピックでは、、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、また[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は SQL Server 管理オブジェクトを使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でジョブの状態を Windows アプリケーションのイベントログに書き込むようにエージェントを構成する方法について説明します。  
+  このトピック [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、、、または SQL Server 管理オブジェクトを使用して、でジョブの状態を Windows アプリケーションのイベントログに書き込むようにエージェントを構成する方法について説明し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
   
  ジョブ応答により、データベース管理者はジョブの完了日時や実行頻度を確認できます。 以下に、一般的なジョブ応答を示します。  
   

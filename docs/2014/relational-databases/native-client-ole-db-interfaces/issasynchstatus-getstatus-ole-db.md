@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f0df2930d17d8d99fd52aef3fcca7e9e92ca6638
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 57f7c2af512821c89dabf45e60e0754a6373c62c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704839"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056105"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
   非同期に実行されている操作の状態を返します。  
@@ -106,7 +105,7 @@ HRESULT GetStatus(
  E_FAIL  
  プロバイダー固有のエラーが発生しました。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **ISSAsynchStatus::GetStatus** メソッドの動作は、**IDBAsynchStatus::GetStatus** メソッドとまったく同じです。ただし、データ ソース オブジェクトの初期化が中止された場合は、DB_E_CANCELED ではなく E_UNEXPECTED が返されます ([ISSAsynchStatus::WaitForAsynchCompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) の場合は DB_E_CANCELED が返されます)。 これは、初期化の中止後、追加の初期化操作が試行される場合に備えて、データ ソース オブジェクトの状態が通常のゾンビ状態のままにならないためです。  
   
  行セットを初期化またはデータ設定する非同期操作では、このメソッドをサポートする必要があります。  

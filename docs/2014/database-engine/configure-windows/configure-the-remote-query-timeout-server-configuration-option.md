@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bf74ad2591fd7ed745648b29a60674431310ba0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74f82d621d7f0375a6a3ca604abba00f83fc6024
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787095"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935523"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>remote query timeout サーバー構成オプションの構成
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]を利用して[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の **remote query timeout** サーバー構成オプションを構成する方法について説明します。 **remote query timeout** オプションは、リモート操作を実行してから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がタイムアウトになるまでの時間 (秒単位) を指定します。このオプションの既定値は 600 で、10 分間の待機時間が見込まれています。 この値は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によってリモート クエリとして開始された発信接続に適用されます。 この値は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が受信したクエリには影響を与えません。 タイムアウトを無効にするには、値を 0 に設定します。 クエリは完了するまで待機します。  

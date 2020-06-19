@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dd7a2d2b-6327-4d77-ac5a-580d36073ad4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd9f9a5b786c5e1a928655276641e841cb3f43c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c011103c4434f87dba5ba61d6f4419278583f50b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928539"
 ---
 # <a name="sqlcmd-how-to-topics"></a>sqlcmd 操作方法のトピック
   [sqlcmd ユーティリティ](../tools/sqlcmd-utility.md)を使用すると、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルを、コマンド プロンプト、SQLCMD モードのクエリ エディター、Windows スクリプト ファイル、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブのオペレーティング システム (Cmd.exe) ジョブ ステップで入力できます。  

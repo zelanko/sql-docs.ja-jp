@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72d392837da4abd28aaf48ed460113c561bd688d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704875"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063593"
 ---
 # <a name="resource-governor"></a>[リソース ガバナー]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソース ガバナーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のワークロードとシステム リソースの消費を管理するために使用できる機能です。 Resource Governor を使用すると、着信アプリケーション要求で使用できる CPU、物理 IO、およびメモリの量に対して制限を指定できます。  

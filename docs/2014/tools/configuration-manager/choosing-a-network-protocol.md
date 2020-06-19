@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0b1212117f5428da0a2b1a8e01232a2b97e5cc12
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 20156e41bffcdca51ac8d1e16bcbff8d61079c73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008197"
 ---
 # <a name="choosing-a-network-protocol"></a>ネットワーク プロトコルの選択
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に接続するには、ネットワーク プロトコルを有効にする必要があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、複数のプロトコルに対して同時に要求を処理できます。 クライアントは、1 つのプロトコルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がどのプロトコルでリッスンしているかをクライアント プログラムによって判別できない場合は、複数のプロトコルを順に試みるようにクライアントを構成してください。 ネットワーク プロトコルを有効化、無効化、または構成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用します。  

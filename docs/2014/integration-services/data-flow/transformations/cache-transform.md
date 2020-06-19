@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 301a6b6970c03b620783af7ca176de34846557d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a3c73fddf9c47938086c57f1b6d8b63f9bf07f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900806"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84913722"
 ---
 # <a name="cache-transform"></a>キャッシュ変換
   キャッシュ変換は、データ フロー内の接続されているデータ ソースのデータをキャッシュ接続マネージャーに書き込んで、参照変換用の参照データセットを生成します。 参照変換は、接続されているデータ ソースの入力列のデータを参照データベースの列と結合することにより参照を実行します。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c013a531fe5e432da690bf10c6c1463d375af1ee
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62902451"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915502"
 ---
 # <a name="flat-file-source"></a>フラット ファイル ソース
   フラット ファイル ソースは、テキスト ファイルからデータを読み取ります。 テキスト ファイルには、Delimited 形式、FixedWidth 形式、または Mixed 形式を使用できます。  
@@ -44,7 +43,7 @@ ms.locfileid: "62902451"
   
  フラット ファイル ソースの出力にある出力列には、FastParse プロパティが含まれています。 FastParse は、列が、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されているロケール非依存型の高速な解析ルーチンを使用するか、ロケール依存型の標準的な解析ルーチンを使用するかを示します。 詳細については、「 [Fast Parse](../fast-parse.md) 」および「 [Standard Parse](../standard-parse.md)」を参照してください。  
   
- 出力列には、UseBinaryFormat プロパティも含まれます。 このプロパティを使用して、パック 10 進形式を使用するデータなど、バイナリ データのサポートをファイルに実装します。 既定では、UseBinaryFormat は`false`に設定されています。 バイナリ形式を使用する場合は、UseBinaryFormat をに`true`設定し、出力列のデータ型をに`DT_BYTES`設定します。 この設定を行った場合、フラット ファイル ソースはデータ変換をスキップし、データを出力列にそのまま渡します。 この場合は、派生列変換またはデータ変換などの変換を使用して `DT_BYTES` データを別のデータ型にキャストするか、スクリプト変換でカスタム スクリプトを記述してデータを解釈できます。 また、カスタム データ フロー コンポーネントを記述してデータを解釈することもできます。 キャスト`DT_BYTES`できるデータ型の詳細については、「 [Cast &#40;SSIS 式&#41;](../expressions/cast-ssis-expression.md)」を参照してください。  
+ 出力列には、UseBinaryFormat プロパティも含まれます。 このプロパティを使用して、パック 10 進形式を使用するデータなど、バイナリ データのサポートをファイルに実装します。 既定では、UseBinaryFormat はに設定されて `false` います。 バイナリ形式を使用する場合は、UseBinaryFormat をに設定 `true` し、出力列のデータ型をに設定し `DT_BYTES` ます。 この設定を行った場合、フラット ファイル ソースはデータ変換をスキップし、データを出力列にそのまま渡します。 この場合は、派生列変換またはデータ変換などの変換を使用して `DT_BYTES` データを別のデータ型にキャストするか、スクリプト変換でカスタム スクリプトを記述してデータを解釈できます。 また、カスタム データ フロー コンポーネントを記述してデータを解釈することもできます。 キャストできるデータ型の詳細については `DT_BYTES` 、「 [CAST &#40;SSIS 式&#41;](../expressions/cast-ssis-expression.md)」を参照してください。  
   
  フラット ファイル ソースは、フラット ファイル接続マネージャーを使用してテキスト ファイルにアクセスします。 フラット ファイル接続マネージャーでプロパティを設定することにより、ファイルおよびファイルの各列に関する情報を提供して、フラット ファイル ソースで、テキスト ファイルのデータをどのように処理するかを指定できます。 たとえば、ファイルの列と行を区切る文字や、各列のデータ型や長さを指定できます。 詳しくは、「 [フラット ファイル接続マネージャー](../connection-manager/file-connection-manager.md)」をご覧ください。  
   

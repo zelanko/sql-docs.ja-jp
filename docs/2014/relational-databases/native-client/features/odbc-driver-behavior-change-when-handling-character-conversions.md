@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7c2bd460346f94d7b0779774ebd426ac138f6cb9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5f4ec8a9538cead097402c046e2f9f91c95faa01
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704350"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047932"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>文字変換処理での ODBC ドライバーの動作の変更
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Native CLIENT ODBC ドライバー (SQLNCLI11) では、SQL_WCHAR * (NCHAR/nvarchar/nvarchar (max)) と SQL_CHAR \* (CHAR/VARCHAR/NARCHAR (max)) 変換の動作が変更されました。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC ドライバーを使用する場合、SQLGetData、SQLBindCol、SQLBindParameter などの ODBC 関数では長さまたはインジケーターのパラメーターとして (-4) SQL_NO_TOTAL が返されます。 以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは長さの値が返されましたが、これは誤りである可能性があります。  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Native CLIENT ODBC ドライバー (SQLNCLI11.dll) では、SQL_WCHAR * (NCHAR/nvarchar/nvarchar (max)) と SQL_CHAR \* (CHAR/VARCHAR/NARCHAR (max)) 変換の動作が変更されました。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC ドライバーを使用する場合、SQLGetData、SQLBindCol、SQLBindParameter などの ODBC 関数では長さまたはインジケーターのパラメーターとして (-4) SQL_NO_TOTAL が返されます。 以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは長さの値が返されましたが、これは誤りである可能性があります。  
   
 ## <a name="sqlgetdata-behavior"></a>SQLGetData の動作  
  多くの Windows 関数ではバッファー サイズに 0 を指定できます。返される長さは、返されるデータのサイズです。 以下は、Windows プログラミングで一般的なパターンです。  

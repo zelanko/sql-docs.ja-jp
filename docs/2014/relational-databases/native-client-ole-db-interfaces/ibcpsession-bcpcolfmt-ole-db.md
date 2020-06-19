@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 68cb7c9d0a4fdc96f181281d78f7011231752375
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4f8cbd2789fbf4f941642439545f7c8fa349cf66
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048041"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
   プログラム変数と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列のバインドを作成します。  
@@ -40,7 +39,7 @@ intcbUserDataTerm,
 DBORDINALidxServerCol);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **BCPColFmt** メソッドは、BCP データ ファイルのフィールドと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列のバインドを作成するために使用します。 このメソッドは、列の長さ、型、ターミネータ、およびプレフィックス長をパラメーターとして受け取り、個々のフィールドの対応するプロパティに設定します。  
   
  ユーザーが対話モードを選択すると、このメソッドが 2 回呼び出されます。1 回は既定値 (サーバーの列の型によって異なります) に応じて列形式を設定するために呼び出され、もう 1 回はクライアントが対話モードで選択した列の型に応じて各列の形式を設定するために呼び出されます。  

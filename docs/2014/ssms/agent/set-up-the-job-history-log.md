@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48b0c0b72b7b27ca944e78603d2c574a8f4d27dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001772"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
-  このトピックでは、エージェントの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ジョブ履歴ログをセットアップする方法について説明します。  
+  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] エージェントのジョブ履歴ログをセットアップする方法について説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 -   **作業を開始する準備:**  [セキュリティ](#Security)  
   
@@ -43,7 +42,7 @@ ms.locfileid: "63033581"
   
 3.  **[SQL Server エージェントのプロパティ]** ダイアログ ボックスで **[履歴]** ページをクリックします。  
   
-4.  次のオプションから選択します。  
+4.  次のオプションを選択します。  
   
     1.  **[ジョブ履歴ログのサイズを制限する]** チェック ボックスをオンにして、ジョブ履歴ログの最大行数と、ジョブあたりの最大行数を入力します。  
   

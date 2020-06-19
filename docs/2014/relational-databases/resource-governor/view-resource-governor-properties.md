@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cd7af8f4f8eb3cd0531bc907011846f73f94f6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209682"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063522"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [リソース ガバナーのプロパティ] ページを使用して、リソース プールやワークロード グループなどのリソース ガバナー エンティティを作成または構成できます。  
@@ -35,9 +34,9 @@ ms.locfileid: "63209682"
   
 -   [リソース ガバナーの無効化](disable-resource-governor.md)  
   
--   [リソースプールを作成する](create-a-resource-pool.md)  
+-   [リソース プールの作成](create-a-resource-pool.md)  
   
--   [ワークロードグループを作成する](create-a-workload-group.md)  
+-   [ワークロード グループの作成](create-a-workload-group.md)  
   
 -   [リソース プールの設定の変更](change-resource-pool-settings.md)  
   
@@ -98,7 +97,7 @@ ms.locfileid: "63209682"
  **名前**  
  ワークロード グループの名前を指定します。  
   
- **重視**  
+ **重要度**  
  ワークロード グループでの要求の相対的な重要度を指定します。 使用可能な設定は [低]、[中]、および [高] です。  
   
  **[最大要求数]**  
@@ -113,7 +112,7 @@ ms.locfileid: "63209682"
  **[許可のタイムアウト (秒)]**  
  クエリが失敗する前に、リソースが使用可能になるのをそのクエリが待機できる最大時間を指定します。 0 または正の整数を指定する必要があります。  
   
- **並列化の次数**  
+ **並列処理の次数**  
  並列要求の最大 DOP (並列処理の次数) を指定します。 範囲は 0 ～ 64 です。  
   
  詳細については、「[CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)」を参照してください。  
@@ -126,10 +125,10 @@ ms.locfileid: "63209682"
 2.  リソース ガバナー エンティティの現在の構成を表示するには、「[リソース ガバナー関連の動的管理ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql)」を使用します。  
   
 ## <a name="see-also"></a>参照  
- [Resource Governor](resource-governor.md)   
- [Resource Governor を有効にする](enable-resource-governor.md)   
- [リソースプールの Resource Governor](resource-governor-resource-pool.md)   
- [ワークロードグループの Resource Governor](resource-governor-workload-group.md)   
+ [リソース ガバナー](resource-governor.md)   
+ [リソース ガバナーの有効化](enable-resource-governor.md)   
+ [リソース ガバナー リソース プール](resource-governor-resource-pool.md)   
+ [リソース ガバナー ワークロード グループ](resource-governor-workload-group.md)   
  [リソース ガバナーの分類子関数](resource-governor-classifier-function.md)  
   
   

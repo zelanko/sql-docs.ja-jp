@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c4d9ba6fb3a28bd54e51c4e87946919f0dae286
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9ed8a3011efa95df0ceed438341de9015d252d9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704753"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056025"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>データ ソースへの接続の確立
   コンシューマーは、Native Client OLE DB プロバイダーにアクセスするために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] まず**CoCreateInstance**メソッドを呼び出すことによって、データソースオブジェクトのインスタンスを作成する必要があります。 一意のクラス ID (CLSID) で、各 OLE DB プロバイダーが識別されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーの場合、クラス識別子は CLSID_SQLNCLI10 です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]参照する SQLNCLI に使用されている Native Client OLE DB プロバイダーに解決されるシンボル SQLNCLI_CLSID を使用することもできます。  

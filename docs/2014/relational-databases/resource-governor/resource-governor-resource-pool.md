@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6d724d5dc6a9859674f8ae64c9e08486b3ea7cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209876"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063566"
 ---
 # <a name="resource-governor-resource-pool"></a>リソース ガバナー リソース プール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーのリソース プールは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスの物理リソースのサブセットを表します。 リソース ガバナーを使用すると、受信するアプリケーション要求がリソース プール内で使用できる CPU、物理 IO、およびメモリの量に制限を指定できます。 各リソース プールは、1 つまたは複数のワークロード グループを含めることができます。 セッションの起動時に、リソース ガバナーの分類子によって、セッションは指定されたワークロード グループに割り当てられます。セッションの実行にはワークロード グループに割り当てられたリソースを使用する必要があります。  
@@ -112,15 +111,15 @@ ms.locfileid: "63209876"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|リソース プールを作成する方法について説明します。|[リソースプールを作成する](create-a-resource-pool.md)|  
+|リソース プールを作成する方法について説明します。|[リソース プールの作成](create-a-resource-pool.md)|  
 |リソース プールの設定を変更する方法について説明します。|[リソース プールの設定の変更](change-resource-pool-settings.md)|  
 |リソース プールを削除する方法について説明します。|[リソース プールの削除](delete-a-resource-pool.md)|  
   
 ## <a name="see-also"></a>参照  
- [Resource Governor](resource-governor.md)   
- [ワークロードグループの Resource Governor](resource-governor-workload-group.md)   
+ [リソース ガバナー](resource-governor.md)   
+ [リソース ガバナー ワークロード グループ](resource-governor-workload-group.md)   
  [Resource Governor 分類子関数](resource-governor-classifier-function.md)   
- [テンプレートを使用して Resource Governor を構成する](configure-resource-governor-using-a-template.md)   
- [View Resource Governor Properties](view-resource-governor-properties.md)  
+ [テンプレートを使用してリソース ガバナーを構成する](configure-resource-governor-using-a-template.md)   
+ [リソース ガバナー プロパティの表示](view-resource-governor-properties.md)  
   
   

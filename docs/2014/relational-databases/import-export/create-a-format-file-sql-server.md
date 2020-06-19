@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa0d34f100af614a1e2187c265bf01a24f3be7ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66265151"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026892"
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括インポートする場合、またはテーブルからデータを一括エクスポートする場合、フォーマット ファイルを使用して、他のデータ形式に準拠するため、または他のソフトウェアからデータ ファイルを読み取るための編集をほとんど (あるいはまったく) 必要としないデータ ファイルを柔軟なシステムに出力できます。  
@@ -27,7 +26,7 @@ ms.locfileid: "66265151"
  通常は、XML フォーマット ファイルと XML 以外のフォーマット ファイルの間には互換性があります。 ただし、XML フォーマット ファイルの方が XML 以外のフォーマット ファイルよりも優れた点がいくつかあるので、新しいフォーマット ファイルには XML 構文を使用することをお勧めします。  
   
 > [!NOTE]  
->  フォーマット ファイルの読み取りに使用される **bcp** ユーティリティ (Bcp.exe) のバージョンは、フォーマット ファイルの作成に使用されたバージョン、またはそれ以降のバージョンである必要があります。 たとえば[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **、bcp**では、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**によって生成されるバージョン10.0 のフォーマットファイルを[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]読み取ることができますが、bcp では[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **、bcp に**よって生成されるバージョン11.0 のフォーマットファイルを読み取ることが**できません**。  
+>  フォーマット ファイルの読み取りに使用される **bcp** ユーティリティ (Bcp.exe) のバージョンは、フォーマット ファイルの作成に使用されたバージョン、またはそれ以降のバージョンである必要があります。 たとえば、bcp で [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**は、bcp によって生成されるバージョン10.0 のフォーマットファイルを読み取ることができますが、bcp [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**では、bcp [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**によって生成されるバージョン11.0 のフォーマットファイルを読み取ることができません [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**。  
   
  このトピックでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用して、特定のテーブルのフォーマット ファイルを作成する方法について説明します。 フォーマット ファイルは、指定されたデータ型のオプション ( **-n**、 **-c**、 **-w**、または **-N**)、およびテーブルやビューの区切り記号から構成されます。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66265151"
   
  XML 以外のフォーマット ファイルの構造およびフィールドについては、「 [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)でサポートされる従来のフォーマットです。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  ここでは、 **bcp** コマンドを使用して XML 以外のフォーマット ファイルを作成する方法を示す次の例について説明します。  
   
 -   A. ネイティブ データ用の XML 以外のフォーマット ファイルの作成  

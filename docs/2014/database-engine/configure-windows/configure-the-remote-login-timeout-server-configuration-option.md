@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3f2a3a0515674e5a6a5a9e4cb4788ddcf4a37da8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58b3405f9b0e51bd43edcaa31e84c8ebbcc48547
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786968"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935543"
 ---
 # <a name="configure-the-remote-login-timeout-server-configuration-option"></a>remote login timeout サーバー構成オプションの構成
   このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote login timeout [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **remote login timeout** オプションでは、リモート ログインを要求した後の最大待機時間を秒数で指定します。リモート ログインを要求した後の最大待機時間を秒数で指定します。 たとえば、リモート サーバーにログインを試みたときに、そのサーバーがダウンしている場合、 **remote login timeout** を設定してあれば、コンピューターによってログイン試行が中止されるまで無制限に待つ必要がなくなります。 このオプションの既定値は 10 秒です。 0 に設定すると、待ち時間は無制限になります。  

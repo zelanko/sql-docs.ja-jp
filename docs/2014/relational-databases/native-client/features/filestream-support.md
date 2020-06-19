@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ab8ca7912db7607acbca716f733184ed57dc681e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 18e9a002bfb205e2c0807234550998fe48120d20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707294"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047986"
 ---
 # <a name="filestream-support"></a>FILESTREAM のサポート
   FILESTREAM を使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を経由するか、Windows ファイル システムに直接アクセスすることで、大きなバイナリ値の格納やアクセスが可能になります。 大きなバイナリ値とは、2 ギガバイト (GB) よりも大きい値です。 強化された FILESTREAM のサポートの詳細については、「[FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)」を参照してください。  

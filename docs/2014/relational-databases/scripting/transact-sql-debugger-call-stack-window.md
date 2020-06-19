@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34b01bc737e35705a7ec4f49ea07a47faaf2b11d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 720a42b2b3ddf46318ac5412181d70a79b142026
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718434"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063363"
 ---
 # <a name="call-stack-window"></a>[呼び出し履歴] ウィンドウ
   **[呼び出し履歴]** ウィンドウには、呼び出し履歴上のモジュール、およびモジュールに渡されるパラメーターのデータ型と値が表示されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュール (ストアド プロシージャ、関数、およびトリガーを含む) 呼び出し履歴を表示するには、デバッグ モードである必要があります。  
