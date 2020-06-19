@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c58abd60ecc6236e52e302f6e11daaaa244ff21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487161"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063182"
 ---
 # <a name="permissions-database-engine"></a>権限 (データベース エンジン)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ保護可能なリソースにはすべて、プリンシパルに許可できる権限が関連付けられています。 このトピックでは次の情報について説明します。  
@@ -32,7 +31,7 @@ ms.locfileid: "81487161"
   
 -   [特定のセキュリティ保護可能リソースに関連する権限](#_securables)  
   
--   [SQL Server のアクセス許可](#_permissions)  
+-   [SQL Server 権限](#_permissions)  
   
 -   [権限チェック アルゴリズム](#_algorithm)  
   
@@ -49,11 +48,11 @@ ms.locfileid: "81487161"
   
      セキュリティ保護可能な特定のリソースのプロパティを変更できるようにします。ただし、所有権は変更できません。 スコープに対して許可された場合、ALTER では、そのスコープに含まれているセキュリティ保護可能なすべてのリソースの変更、作成、または削除も行えるようになります。 たとえば、スキーマに対する ALTER 権限には、スキーマのオブジェクトを作成、変更、および削除する権限が含まれています。  
   
--   サーバーの\<セキュリティ保護可能な任意*の> を*変更します。サーバーの*セキュリティ*保護可能なサーバーは任意のセキュリティ保護可能なサーバーです。  
+-   ALTER ANY \<*Server Securable*> 。ここで、 *Server セキュリティ保護*可能なサーバーには任意のセキュリティ保護可能なサーバーを指定できます。  
   
      *Server Securable*の個々のインスタンスを作成、変更、削除できるようにします。 たとえば、ALTER ANY LOGIN では、インスタンス内の任意のログインを作成、変更、または削除できます。  
   
--   データベースの\<セキュリティ保護可能な*データベース*を変更> ます。データベースの*セキュリティ保護*可能なリソースには、データベースレベルのセキュリティ保護可能なリソースを指定できます。  
+-   ALTER ANY \<*Database Securable*> 。*データベースセキュリティ保護*可能なリソースには、データベースレベルでセキュリティ保護可能なリソースを指定できます。  
   
      *Database Securable*の個々のインスタンスを CREATE、ALTER、DROP できるようにします。 たとえば、ALTER ANY SCHEMA では、データベース内の任意のスキーマを作成、変更、または削除できます。  
   
@@ -61,23 +60,23 @@ ms.locfileid: "81487161"
   
      権限を与えられたユーザーが、許可されたセキュリティ保護可能なリソースの所有権を使用できるようにします。  
   
--   \<*ログイン*の権限の借用>  
+-   装う\<*Login*>  
   
      権限を与えられたユーザーが、Login の権限を借用できるようにします。  
   
--   \<*ユーザー*の権限の借用>  
+-   装う\<*User*>  
   
      権限を与えられたユーザーが、User の権限を借用できるようにします。  
   
--   \<*サーバーのセキュリティ保護*可能なサーバーの作成>  
+-   生成\<*Server Securable*>  
   
      権限を与えられたユーザーが *Server Securable*を作成できるようにします。  
   
--   データベース\<の作成 (*セキュリティ保護*可能)>  
+-   生成\<*Database Securable*>  
   
      権限を与えられたユーザーが *Database Securable*を作成できるようにします。  
   
--   \<*スキーマに含まれるセキュリティ保護可能なリソースの*作成>  
+-   生成\<*Schema-contained Securable*>  
   
      スキーマに含まれているセキュリティ保護可能なリソースを作成できるようにします。 ただし、特定のスキーマ内でセキュリティ保護可能なリソースを作成するには、そのスキーマに対する ALTER 権限が必要です。  
   
@@ -92,25 +91,25 @@ ms.locfileid: "81487161"
      オブジェクトを参照する `WITH SCHEMABINDING` 句を含む関数またはビューを作成するには、そのオブジェクトに対する REFERENCES 権限が必要です。  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 権限の一覧表  
- Pdf 形式のすべて[!INCLUDE[ssDE](../../includes/ssde-md.md)]のアクセス許可のポスターサイズのグラフに[https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)ついては、「」を参照してください。  
+ Pdf 形式のすべてのアクセス許可のポスターサイズのグラフについ [!INCLUDE[ssDE](../../includes/ssde-md.md)] ては、「」を参照してください [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) 。  
   
 ##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>特定の Securables に適用できる権限  
  次の表に、主な権限のクラスおよび各権限を適用できるセキュリティ保護可能なリソースの種類を示します。  
   
-|アクセス許可|適用対象|  
+|権限|適用対象|  
 |----------------|----------------|  
 |SELECT|シノニム<br /><br /> テーブル、列<br /><br /> テーブル値関数、 [!INCLUDE[tsql](../../includes/tsql-md.md)] と共通言語ランタイム (CLR)、列<br /><br /> ビュー、列|  
 |VIEW CHANGE TRACKING|テーブル<br /><br /> スキーマ|  
 |UPDATE|シノニム<br /><br /> テーブル、列<br /><br /> ビュー、列<br /><br /> シーケンス オブジェクト|  
-|REFERENCES|スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> テーブル、列<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)、列<br /><br /> 型<br /><br /> ビュー、列<br /><br /> シーケンス オブジェクト|  
+|REFERENCES|スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> テーブル、列<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)、列<br /><br /> 種類<br /><br /> ビュー、列<br /><br /> シーケンス オブジェクト|  
 |INSERT|シノニム<br /><br /> テーブル、列<br /><br /> ビュー、列|  
 |DELETE|シノニム<br /><br /> テーブル、列<br /><br /> ビュー、列|  
 |EXECUTE|プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> シノニム<br /><br /> CLR 型|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー|  
-|VIEW DEFINITION|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> Views<br /><br /> シーケンス オブジェクト|  
-|ALTER|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> シーケンス オブジェクト<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> Views|  
-|TAKE OWNERSHIP|可用性グループ<br /><br /> ロール<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> サーバーの役割<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> Views<br /><br /> シーケンス オブジェクト|  
-|CONTROL|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> Views<br /><br /> シーケンス オブジェクト|  
+|VIEW DEFINITION|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> Synonyms<br /><br /> [テーブル]<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
+|ALTER|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> シーケンス オブジェクト<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー|  
+|TAKE OWNERSHIP|可用性グループ<br /><br /> ロール<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> サーバーの役割<br /><br /> Synonyms<br /><br /> [テーブル]<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
+|CONTROL|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> Synonyms<br /><br /> [テーブル]<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
 |IMPERSONATE|ログインとユーザー|  
   
 > [!CAUTION]  
@@ -157,7 +156,7 @@ ms.locfileid: "81487161"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注: に[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のみ適用されます。|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注: にのみ適用さ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] れます。|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +164,7 @@ ms.locfileid: "81487161"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|すべてのセキュリティ ポリシーを変更します。|ALSP<br /><br /> 注: に[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のみ適用されます。|SERVER|CONTROL SERVER|  
+|DATABASE|すべてのセキュリティ ポリシーを変更します。|ALSP<br /><br /> 注: にのみ適用さ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] れます。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +203,7 @@ ms.locfileid: "81487161"
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注: に[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のみ適用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で ALTER ANY CONNECTION を使用する。|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注: にのみ適用さ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] れます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で ALTER ANY CONNECTION を使用する。|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -396,7 +395,7 @@ ms.locfileid: "81487161"
   
 7.  **権限領域** 内のすべてのオブジェクトについて、 **必要な権限** が、 **セキュリティ コンテキスト** のいずれの ID に対しても直接または暗黙的に拒否されておらず、 **必要な権限**に GRANT 権限または GRANT WITH GRANT 権限が含まれている場合は、権限チェックが合格となります。  
   
-##  <a name="examples"></a><a name="_examples"></a> 例  
+##  <a name="examples"></a><a name="_examples"></a> 使用例  
  このセクションでは、権限に関する情報を取得する例を示します。  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. 許可できる権限の完全な一覧を返す  

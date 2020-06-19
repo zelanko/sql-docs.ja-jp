@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 89449cbc31e1ec36fa37a5bb36b1f505cdd2e14d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 560d514ba8dd1503b59b3b59ecf404d876e24cd2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787137"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935573"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>recovery interval サーバー構成オプションの構成
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] recovery interval [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **recovery interval** オプションは、データベースの復旧に必要な時間の上限を定義します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、 [自動チェックポイント](../../relational-databases/logs/database-checkpoints-sql-server.md) が特定のデータベースに対して発行されるおおよその頻度を、このオプションに指定された値を使用して決定します。  

@@ -49,18 +49,17 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f74d26366e0c7c586f466b8fd227cd78ba8ab598
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 8a2fc385e7235e1857931e187086911b52ef14b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269411"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935536"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows サービス アカウントと権限の構成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各サービスは、Windows で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作の認証を管理するための、1 つのプロセスまたはプロセス セットを表しています。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのリリースにおける既定のサービス構成、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時およびインストール後に設定できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの構成オプションについて説明します。  
   
-##  <a name="contents"></a><a name="Top"></a>内容  
+##  <a name="contents"></a><a name="Top"></a> 目次  
  このトピックには次のセクションがあります。  
   
 -   [SQL Server によってインストールされるサービス](#Service_Details)  
@@ -134,15 +133,15 @@ ms.locfileid: "83269411"
 ##  <a name="services-installed-by-ssnoversion"></a><a name="Service_Details"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でインストールされるサービス  
  インストールするコンポーネントに応じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって次のサービスがインストールされます。  
   
--   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース サービス** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル [!INCLUDE[ssDE](../../includes/ssde-md.md)]のサービスです。 実行可能ファイルのパスは \<MSSQLPATH>\MSSQL\Binn\sqlservr.exe です。  
+-   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース サービス** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル [!INCLUDE[ssDE](../../includes/ssde-md.md)]のサービスです。 実行可能ファイルが \<MSSQLPATH>\MSSQL\Binn\sqlservr.exe。  
   
--   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント** - ジョブの実行、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の監視、および警告の発行を行い、一部の管理タスクを自動化できるようにします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは存在しますが、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のインスタンスでは無効になっています。 実行可能ファイルのパスは \<MSSQLPATH>\MSSQL\Binn\sqlagent.exe です。  
+-   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント** - ジョブの実行、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の監視、および警告の発行を行い、一部の管理タスクを自動化できるようにします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは存在しますが、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のインスタンスでは無効になっています。 実行可能ファイルが \<MSSQLPATH>\MSSQL\Binn\sqlagent.exe。  
   
--   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**-ビジネスインテリジェンスアプリケーション用のオンライン分析処理 (OLAP) およびデータマイニング機能を提供します。 実行可能ファイルのパスは \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe です。  
+-   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**-ビジネスインテリジェンスアプリケーション用のオンライン分析処理 (OLAP) およびデータマイニング機能を提供します。 実行可能ファイルが \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe。  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**-レポートの管理、実行、作成、スケジュール、および配信を行います。 実行可能ファイルのパスは \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe です。  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**-レポートの管理、実行、作成、スケジュール、および配信を行います。 実行可能ファイルは、 \<MSSQLPATH> レポート Services\ReportServer\Bin\ReportingServicesService.exe です。  
   
--   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**-パッケージの保存と実行に対する管理サポートを提供し [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ます。 実行可能ファイルのパスは、 \< MSSQLPATH>-120/です。  
+-   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**-パッケージの保存と実行に対する管理サポートを提供し [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ます。 実行可能ファイルのパスが \<MSSQLPATH>\120\DTS\Binn\MsDtsSrvr.exe  
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser** - クライアント コンピューター用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続情報を提供する名前解決サービスです。 実行可能ファイルは c:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe です。  
   
@@ -230,7 +229,7 @@ ms.locfileid: "83269411"
   
 -   <a name="VA_Desc"></a>**仮想アカウント**  
   
-     Windows Server 2008 R2 および Windows 7 で追加された仮想アカウントは*管理されたローカル アカウント*であり、サービスの管理を簡単にする次の機能を使用できます。 仮想アカウントは自動的に管理され、ドメイン環境でネットワークにアクセスすることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップでサービス アカウントに既定値を使用した場合、**NT SERVICE\\** _\<サービス名>_ の形式でインスタンス名をサービス名として用いる仮想アカウントが使用されます。 仮想アカウントとして実行されるサービスは、 _<ドメイン名>_ **\\** _<コンピューター名>_ **$** の形式で、コンピューター アカウントの資格情報を使用してネットワーク リソースにアクセスします。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動するために仮想アカウントを指定する場合は、パスワードを空白のままにします。 仮想アカウントのサービス プリンシパル名 (SPN) を登録していない場合は、SPN を手動で登録します。 SPN の手動登録の詳細については、 [SPN の手動登録](register-a-service-principal-name-for-kerberos-connections.md#Manual)に関するページを参照してください。  
+     Windows Server 2008 R2 および Windows 7 で追加された仮想アカウントは*管理されたローカル アカウント*であり、サービスの管理を簡単にする次の機能を使用できます。 仮想アカウントは自動的に管理され、ドメイン環境でネットワークにアクセスすることができます。 セットアップ中にサービスアカウントに既定値が使用されている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **NT \\ サービス**の形式でインスタンス名をサービス名として使用する仮想アカウントが使用され _\<SERVICENAME>_ ます。 仮想アカウントとして実行されるサービスは、 _<ドメイン名>_ **\\** _<コンピューター名>_ **$** の形式で、コンピューター アカウントの資格情報を使用してネットワーク リソースにアクセスします。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動するために仮想アカウントを指定する場合は、パスワードを空白のままにします。 仮想アカウントのサービス プリンシパル名 (SPN) を登録していない場合は、SPN を手動で登録します。 SPN の手動登録の詳細については、 [SPN の手動登録](register-a-service-principal-name-for-kerberos-connections.md#Manual)に関するページを参照してください。  
   
     > [!NOTE]  
     >  仮想アカウントは、クラスターの各ノードで同じ SID を使用することができないので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスでは使用できません。  
@@ -301,7 +300,7 @@ ms.locfileid: "83269411"
 -   [名前付きパイプ](#Pipes)  
   
 ###  <a name="service-configuration-and-access-control"></a><a name="Serv_SID"></a> サービスの構成とアクセス制御  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の場合、各サービスに対してサービスごとの SID を使用することができます。これによって、サービスを分離し、多層防御を実現できます。 サービスごとの SID は、サービス名から取得されるので、そのサービスに固有です。 たとえば、[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスのサービス SID 名は、**NT Service\MSSQL$** _\<InstanceName>_ となります。 サービスを分離すると、高い特権のアカウントを使用したり、オブジェクトのセキュリティ保護を弱めたりすることなく、特定のオブジェクトにアクセスできます。 サービス SID を含むアクセス制御エントリを使用することにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスはそのリソースへのアクセスを制限することができます。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の場合、各サービスに対してサービスごとの SID を使用することができます。これによって、サービスを分離し、多層防御を実現できます。 サービスごとの SID は、サービス名から取得されるので、そのサービスに固有です。 たとえば、サービスのサービス SID 名は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] **NT Service\ MSSQL $** のようになり _\<InstanceName>_ ます。 サービスを分離すると、高い特権のアカウントを使用したり、オブジェクトのセキュリティ保護を弱めたりすることなく、特定のオブジェクトにアクセスできます。 サービス SID を含むアクセス制御エントリを使用することにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスはそのリソースへのアクセスを制限することができます。  
   
 > [!NOTE]  
 >  Windows 7 と [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 以降では、サービスごとの SID は、サービスによって使用される仮想アカウントである場合があります。  
@@ -352,7 +351,7 @@ ms.locfileid: "83269411"
 ||Instid\MSSQL\Log|フル コントロール|  
 ||Instid\MSSQL\Repldata|フル コントロール|  
 ||120\shared|読み取り、実行|  
-||Instid\MSSQL\Template Data ([!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のみ)|読み取り|  
+||Instid\MSSQL\Template Data ([!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のみ)|Read|  
 |SQLServerAgent<sup>1</sup>|Instid\MSSQL\binn|フル コントロール|  
 ||Instid\MSSQL\binn|フル コントロール|  
 ||Instid\MSSQL\Log|読み取り、書き込み、削除、実行|  
@@ -381,38 +380,38 @@ ms.locfileid: "83269411"
 ||Instid\Reporting Services\RSTempfiles|読み取り、書き込み、実行、削除|  
 ||120\shared|読み取り、実行|  
 ||120\shared\Errordumps|読み取り、書き込み|  
-|MSDTSServer100|120\dts\binn\MsDtsSrvr.ini.xml|読み取り|  
+|MSDTSServer100|120\dts\binn\MsDtsSrvr.ini.xml|Read|  
 ||120\dts\binn|読み取り、実行|  
 ||120\shared|読み取り、実行|  
 ||120\shared\Errordumps|読み取り、書き込み|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ブラウザー|120\shared\ASConfig|読み取り|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ブラウザー|120\shared\ASConfig|Read|  
 ||120\shared|読み取り、実行|  
 ||120\shared\Errordumps|読み取り、書き込み|  
 |SQLWriter|N/A (ローカル システムとして実行)||  
 |User|Instid\MSSQL\binn|読み取り、実行|  
 ||Instid\Reporting Services\ReportServer|読み取り、実行、フォルダー内容の一覧表示|  
-||Instid\Reporting Services\ReportServer\global.asax|読み取り|  
+||Instid\Reporting Services\ReportServer\global.asax|Read|  
 ||Instid\Reporting Services\reportManager|読み取り、実行|  
-||Instid\Reporting Services\ReportManager\pages|読み取り|  
+||Instid\Reporting Services\ReportManager\pages|Read|  
 ||Instid\Reporting Services\ReportManager\Styles|Read|  
 ||120\dts|読み取り、実行|  
 ||120\tools|読み取り、実行|  
 ||100\tools|読み取り、実行|  
 ||90\tools|読み取り、実行|  
 ||80\tools|読み取り、実行|  
-||120\sdk|読み取り|  
+||120\sdk|Read|  
 ||Microsoft SQL Server\120\Setup Bootstrap|読み取り、実行|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー|\<ToolsDir>\DReplayController\Log\ (空のディレクトリ)|読み取り、実行、フォルダー内容の一覧表示|  
 ||\<ToolsDir>\DReplayController\DReplayController.exe|読み取り、実行、フォルダー内容の一覧表示|  
-||\<ToolsDir>\DReplayController\resources\|読み取り、実行、フォルダー内容の一覧表示|  
-||\<ToolsDir>\DReplayController\\{空のディレクトリ}|読み取り、実行、フォルダー内容の一覧表示|  
+||\<ToolsDir>\DReplayController\resources \| 読み取り、実行、フォルダーの内容の一覧表示|  
+||\<ToolsDir>\ Dreplaycontroller \\ {すべての dll}|読み取り、実行、フォルダー内容の一覧表示|  
 ||\<ToolsDir>\DReplayController\DReplayController.config|読み取り、実行、フォルダー内容の一覧表示|  
 ||\<ToolsDir>\DReplayController\IRTemplate.tdf|読み取り、実行、フォルダー内容の一覧表示|  
 ||\<ToolsDir>\DReplayController\IRDefinition.xml|読み取り、実行、フォルダー内容の一覧表示|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生クライアント|\<ToolsDir>\DReplayClient\Log\|読み取り、実行、フォルダー内容の一覧表示|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生クライアント|\<ToolsDir>\DReplayClient\Log \| 読み取り、実行、フォルダーの内容の一覧表示|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.exe|読み取り、実行、フォルダー内容の一覧表示|  
-||\<ToolsDir>\DReplayClient\resources\|読み取り、実行、フォルダー内容の一覧表示|  
-||\<ToolsDir>\DReplayClient\ (すべての dll)|読み取り、実行、フォルダー内容の一覧表示|  
+||\<ToolsDir>\DReplayClient\resources \| 読み取り、実行、フォルダーの内容の一覧表示|  
+||\<ToolsDir>\ Dreplayclient\ (すべての dll)|読み取り、実行、フォルダー内容の一覧表示|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.config|読み取り、実行、フォルダー内容の一覧表示|  
 ||\<ToolsDir>\DReplayClient\IRTemplate.tdf|読み取り、実行、フォルダー内容の一覧表示|  
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|読み取り、実行、フォルダー内容の一覧表示|  
@@ -432,12 +431,12 @@ ms.locfileid: "83269411"
 ||管理者のみ|\\\\.\root\Microsoft\SqlServer\ServerEvents \\<sql_instance_name><sup>1</sup>|フル コントロール|  
 ||管理者、システム|\tools\binn\schemas\sqlserver\2004\07\showplan|フル コントロール|  
 ||ユーザー|\tools\binn\schemas\sqlserver\2004\07\showplan|読み取り、実行|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|レポート サーバー Windows サービス アカウント|*\<install>* \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||レポートサーバー Windows サービスアカウント、Everyone|* \<>* \ reporting Services\ReportManager をインストールし、 * \<>*/reporting Services\ReportManager\Pages をインストールし>ます。 services\reportmanager\styles. をインストールします \\ \* \* * \< * \\ \* 。 \* * \<>* は、services\reportmanager\ webctrl_client \ 1_0 \\ * をインストールします。\*|読み取り、実行|  
-||レポート サーバー Windows サービス アカウント|*\<install>* \Reporting Services\ReportServer|Read|  
-||レポート サーバー Windows サービス アカウント|*\<install>* \Reporting Services\ReportServer\global.asax|[完全]|  
-||Everyone|*\<install>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
-||レポートサーバーの Windows サービスアカウント|*\<install>* \Reporting Services\ReportServer\rsreportserver.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|レポート サーバー Windows サービス アカウント|*\<install>* \ レポート Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||レポートサーバー Windows サービスアカウント、Everyone|*\<install>* \ Reporting Services\ReportManager、\ reporting Services\ReportManager\Pages、\ reporting *\<install>* \\ \* \* *\<install>* services\reportmanager\styles. \\ \* .、\ reporting \* *\<install>* services\reportmanager\ webctrl_client \ 1_0 \\ *。\*|読み取り、実行|  
+||レポート サーバー Windows サービス アカウント|*\<install>* \ レポート Services\ReportServer|Read|  
+||レポート サーバー Windows サービス アカウント|*\<install>* \ レポート Services\ReportServer\global.asax|[完全]|  
+||Everyone|*\<install>* \ レポート Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
+||レポートサーバーの Windows サービスアカウント|*\<install>* \ レポート Services\ReportServer\rsreportserver.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Everyone|レポート サーバー キー (Instid ハイブ)|値のクエリ<br /><br /> サブキーの列挙<br /><br /> 通知<br /><br /> 読み取り制御|  
 ||ターミナル サービス ユーザー|レポート サーバー キー (Instid ハイブ)|値のクエリ<br /><br /> 値の設定<br /><br /> サブキーの作成<br /><br /> サブキーの列挙<br /><br /> 通知<br /><br /> 削除<br /><br /> 読み取り制御|  
 ||パワー ユーザー|レポート サーバー キー (Instid ハイブ)|値のクエリ<br /><br /> 値の設定<br /><br /> サブキーの作成<br /><br /> サブキーの列挙<br /><br /> 通知<br /><br /> 削除<br /><br /> 読み取り制御|  

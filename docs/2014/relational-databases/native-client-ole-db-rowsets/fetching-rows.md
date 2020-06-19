@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2a68c66eaaccfa3ea32a4fb940eba71026d49361
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d9abcaf4ad4256fb600e57567ed7e7bf0d54e61e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694420"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055931"
 ---
 # <a name="fetching-rows"></a>行のフェッチ
   **IRowset** インターフェイスは、行セットの基本インターフェイスです。 **IRowset** インターフェイスには、行を順番にフェッチするメソッド、フェッチした行からデータを取得するメソッド、行を管理するメソッドが用意されています。 コンシューマーは、すべての基本的な行セット操作に **IRowset** のメソッドを使用します。 基本的な操作には、行のフェッチと解放、列値の取得などがあります。  

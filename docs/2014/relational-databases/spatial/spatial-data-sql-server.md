@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 7bd529f67f9184f86d4a9ec704e9cf7af972f3f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dccec5ca3c42f605145853b2e864e861b17535fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014056"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063029"
 ---
 # <a name="spatial-data-sql-server"></a>空間データ (SQL Server)
   空間データは、幾何学的オブジェクトの物理的な場所と形状に関する情報を表します。 これらのオブジェクトは、ポイントの場所や、国、道路、湖などのより複雑なオブジェクトである可能性があります。  
@@ -55,7 +54,7 @@ ms.locfileid: "66014056"
  [空間データ型の概要](spatial-data-types-overview.md)  
  空間データ型について説明します。  
   
--   [ポイント](point.md)  
+-   [Point](point.md)  
   
 -   [LineString](linestring.md)  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66014056"
   
 -   [CompoundCurve](compoundcurve.md)  
   
--   [多角形](polygon.md)  
+-   [Polygon](polygon.md)  
   
 -   [CurvePolygon](curvepolygon.md)  
   

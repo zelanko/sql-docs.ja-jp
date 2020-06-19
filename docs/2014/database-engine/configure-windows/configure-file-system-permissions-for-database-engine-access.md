@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7115a4f8953ade5fc91e4be3197772f4bc3784c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811326"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935753"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>データベース エンジン アクセスのファイル システム権限の構成
   このトピックでは [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]にデータベース ファイルの格納場所へのファイル システム アクセス権を付与する方法について説明します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスには、データベース ファイルが格納されているファイル フォルダーにアクセスするための Windows ファイル システム権限が必要です。 既定の場所への権限は、セットアップ中に構成されます。 別の場所にデータベース ファイルを配置した場合は、次の手順に従って、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] にその場所へのフル コントロール権限を付与する必要がある場合があります。  
@@ -34,7 +33,7 @@ ms.locfileid: "62811326"
   
 3.  **[ユーザー、コンピューター、サービス アカウント、またはグループの選択]** ダイアログ ボックスで、場所の一覧の上部にある **[場所]** をクリックし、コンピューター名を選択して、 **[OK]** をクリックします。  
   
-4.  **[選択するオブジェクト名を入力**してください] ボックスに、オンラインブックのトピック「 **Windows サービスアカウントと権限の構成**」に記載されているサービスごとの SID の名前を入力します。 (サービス[!INCLUDE[ssDE](../../includes/ssde-md.md)]ごとの SID については、既定のインスタンスの場合は**nt servicemssqlserver** 、名前付きインスタンスの場合は**Nt service\ MSSQL $ InstanceName**を使用します。)  
+4.  **[選択するオブジェクト名を入力**してください] ボックスに、オンラインブックのトピック「 **Windows サービスアカウントと権限の構成**」に記載されているサービスごとの SID の名前を入力します。 (サービスごとの SID について [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、既定のインスタンスの場合は**nt servicemssqlserver** 、名前付きインスタンスの場合は**nt Service\ MSSQL $ InstanceName**を使用します。)  
   
 5.  **[名前の確認]** をクリックして、このエントリを検証します。 検証は多くの場合に失敗し、名前が見つからないことが示される場合があります。 **[OK]** をクリックすると、 **[複数の名前が見つかりました]** ダイアログ ボックスが表示されます。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "62811326"
   
 7.  もう一度 [ **OK** ] をクリックして、[**アクセス許可**] ダイアログボックスに戻ります。  
   
-8.  [**グループ名またはユーザー**名] ボックスで、サービスごとの SID を選択し、[>**の** \<アクセス許可] ボックスで、[**フルコントロール**] の [**許可**] チェックボックスをオンにします。  
+8.  [**グループ名またはユーザー**名] ボックスで、サービスごとの SID を選択し、[**のアクセス許可** \<name> ] ボックスで [**フルコントロール**] の [**許可する**] チェックボックスをオンにします。  
   
 9. **[適用]** をクリックし、 **[OK]** を 2 回クリックして終了します。  
   

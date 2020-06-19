@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 182a0f4b7e74490f9600b7ef43cd2baa511080f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f18fd2485c9b2e62586d9f3e81f76f6cf680dbfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176642"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063010"
 ---
 # <a name="multipolygon"></a>MultiPolygon
   `MultiPolygon` インスタンスは、0 個以上の `Polygon` インスタンスのコレクションです。
@@ -38,9 +37,9 @@ ms.locfileid: "78176642"
 
 -   空の `MultiPolygon` インスタンスである。
 
--   `MultiPolygon` インスタンスを構成するすべてのインスタンスが、許容される `Polygon` インスタンスである。 許容`Polygon`されるインスタンスの詳細については、「 [Polygon](../spatial/polygon.md)」を参照してください。
+-   `MultiPolygon` インスタンスを構成するすべてのインスタンスが、許容される `Polygon` インスタンスである。 許容されるインスタンスの詳細につい `Polygon` ては、「 [Polygon](../spatial/polygon.md)」を参照してください。
 
- 次の例は、 `MultiPolygon`許容されるインスタンスを示しています。
+ 次の例は、許容されるインスタンスを示して `MultiPolygon` います。
 
 ```
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';
@@ -59,7 +58,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>有効なインスタンス
  `MultiPolygon` インスタンスは、空の `MultiPolygon` インスタンスであるか、次の条件を満たす場合に有効です。
 
-1.  `MultiPolygon`インスタンスを構成するすべてのインスタンスが有効`Polygon`なインスタンスです。 有効な`Polygon`インスタンスについては、「 [Polygon](../spatial/polygon.md)」を参照してください。
+1.  インスタンスを構成するすべてのインスタンス `MultiPolygon` が有効な `Polygon` インスタンスです。 有効な `Polygon` インスタンスについては、「 [Polygon](../spatial/polygon.md)」を参照してください。
 
 2.  `Polygon` インスタンスを構成する `MultiPolygon` インスタンスが重なっていない。
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 88ee6090-b2f5-4dc5-997a-1d45fa7e3e84
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 802d39742b932b3721941e3d3c314b209b4e823c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70849b85b391f46fd22e659b1b6b367c63b8f7ac
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088924"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928743"
 ---
 # <a name="sql-server-profiler---destination-table"></a>SQL Server Profiler - [挿入先テーブル]
   **[挿入先テーブル]** ダイアログ ボックスを使用すると、トレースを格納するテーブルを指定できます。  
@@ -38,8 +37,8 @@ ms.locfileid: "66088924"
  トレースを格納するテーブルの名前を指定します。  
   
 ## <a name="see-also"></a>参照  
- [トレース結果をテーブル &#40;SQL Server プロファイラー&#41;に保存する](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
- [SQL Server プロファイラーテンプレートとアクセス許可](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [SQL Server プロファイラー](../tools/sql-server-profiler/sql-server-profiler.md)  
+ [トレース結果のテーブルへの保存 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

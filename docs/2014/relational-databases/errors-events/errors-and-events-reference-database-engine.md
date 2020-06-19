@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e991accfd0e6fdd4fa25746499308455eff85ce3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62870904"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969922"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>エラーおよびイベント リファレンス (データベース エンジン)
 
 ここでは、詳細な説明が必要なデータベースエンジンのエラーメッセージについて説明します。
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [データベースエンジンイベントとエラー](database-engine-events-and-errors.md)エラーメッセージの[!INCLUDE[ssDE](../../includes/ssde-md.md)]形式と、エラーメッセージを表示してアプリケーションにエラーメッセージを返す方法について説明します。  
+ [データベースエンジンイベントとエラー](database-engine-events-and-errors.md)エラーメッセージの形式と、エラーメッセージを表示してアプリケーションにエラーメッセージを返す方法について説明し [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のエラー メッセージとその原因、および問題を解決するための対策について説明します。  
   

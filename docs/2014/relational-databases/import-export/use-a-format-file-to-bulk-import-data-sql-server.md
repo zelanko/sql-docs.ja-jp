@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6d9779209b3ffb317658243c168d74740f6731b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011766"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026452"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>データの一括インポートでのフォーマット ファイルの使用 (SQL Server)
-  このトピックでは、一括インポート操作でのフォーマット ファイルの使用方法について説明します。 フォーマット ファイルでは、データ ファイルのフィールドがテーブルの列にマップされます。  XML 以外のフォーマットファイルまたは XML フォーマットファイルを使用してデータを一括インポートするには、 **bcp**コマンド、または BULK INSERT または INSERT...SELECT * FROM OPENROWSET (BULK...)[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドを実行します。  
+  このトピックでは、一括インポート操作でのフォーマット ファイルの使用方法について説明します。 フォーマット ファイルでは、データ ファイルのフィールドがテーブルの列にマップされます。  XML 以外のフォーマットファイルまたは XML フォーマットファイルを使用してデータを一括インポートするには、 **bcp**コマンド、または BULK INSERT または INSERT...SELECT * FROM OPENROWSET (BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)]メニュー.  
   
 > [!IMPORTANT]  
 >  Unicode 文字データ ファイルを操作するフォーマット ファイルの場合、すべての入力フィールドが Unicode テキスト文字列 (つまり、固定サイズの Unicode 文字列または終端文字が指定された Unicode 文字列) でなければなりません。  
@@ -43,7 +42,7 @@ ms.locfileid: "66011766"
 > [!NOTE]  
 >  SQLXML データを一括エクスポートまたは一括インポートするには、フォーマット ファイルで次のいずれかのデータ型を使用します。SQLCHAR または SQLVARYCHAR (データはクライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます)、SQLNCHAR または SQLNVARCHAR (データは Unicode として送られます)、SQLBINARY または SQLVARYBIN (データは変換なしで送られます)。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このセクションの例では、 **bcp**コマンドと BULK INSERT を使用して、フォーマットファイルを使用してデータを一括インポートする方法について説明します。SELECT * FROM OPENROWSET (BULK...) ステートメント。 一括インポートの例を実行する前に、サンプル テーブル、データ ファイル、およびフォーマット ファイルを作成する必要があります。  
   
 ### <a name="sample-table"></a>サンプル テーブル  
