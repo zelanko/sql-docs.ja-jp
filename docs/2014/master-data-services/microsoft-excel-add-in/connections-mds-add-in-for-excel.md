@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f2b2f9d-7744-460e-83cd-56d34ea70ff0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a7d336e777f4f6bf00310cbadfed75987ba45252
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1704cf87bfebf0cab80630f3dcb66517b0f5420a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478923"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961422"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>接続 (Excel 用 MDS アドイン)
   データを [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]にダウンロードするには、まず接続を作成する必要があります。 接続とは、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サービスがどの MDS データベースに接続するかを認識する方法です。  
@@ -35,7 +34,7 @@ ms.locfileid: "65478923"
  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] には、MDS リポジトリにパブリッシュする前にデータを照合するための Data Quality Services 機能が用意されています。 接続時に、DQS データベースが MDS データベースと同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにインストールされている場合は、リボンに DQS ボタンが表示されます。 DQS_Main データベースがインスタンスに存在しない場合、DQS ボタンは表示されず、データ品質機能を使用することはできません。  
   
 ## <a name="troubleshooting-connections"></a>接続のトラブルシューティング  
- MDS に接続するときに問題が発生した場合[https://social.technet.microsoft.com/wiki/contents/articles/4520.aspx](https://social.technet.microsoft.com/wiki/contents/articles/4520.aspx)は、「トラブルシューティングのヒント」を参照してください。  
+ MDS に接続するときに問題が発生した場合は、「 [https://social.technet.microsoft.com/wiki/contents/articles/4520.aspx](https://social.technet.microsoft.com/wiki/contents/articles/4520.aspx) トラブルシューティングのヒント」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

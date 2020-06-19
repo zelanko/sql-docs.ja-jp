@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2ec44d192f688e25f2c9a12452de141eca7ca22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044457"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068369"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 構成マネージャー
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に関連付けられているサービスの管理、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]が使用するネットワーク プロトコルの設定、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クライアント コンピューターからのネットワーク接続の設定を行うためのツールです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、[スタート] メニューから利用できる [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール スナップインであり、他の [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール画面に追加することも可能です。 [!INCLUDE[msCoName](../includes/msconame-md.md)]管理コンソール (mmc.exe) は、Windows System32 フォルダー内の「Sqlservermanager10.msc」ファイルを使用して Configuration Manager を[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]開きます。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に関連付けられているサービスの管理、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]が使用するネットワーク プロトコルの設定、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クライアント コンピューターからのネットワーク接続の設定を行うためのツールです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、[スタート] メニューから利用できる [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール スナップインであり、他の [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール画面に追加することも可能です。 [!INCLUDE[msCoName](../includes/msconame-md.md)]管理コンソール (mmc.exe) では、Windows System32 フォルダー内の「Sqlservermanager10.msc」ファイルを使用して Configuration Manager を開き [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーと SQL Server Management Studio では、一部のサーバー設定を表示および変更するために、Windows Management Instrumentation (WMI) を使用します。 WMI には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各種ツールによって要求されるレジストリ操作を管理する API 呼び出しに対する統一的なインターフェイスが用意されており、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャー スナップイン コンポーネントの選択された SQL サービスを制御し、操作するための機能も充実しています。 WMI に関連した権限を構成する方法については、「[SQL Server ツールでサーバーの状態を表示できるようにする WMI の構成](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)」を参照してください。  
   
@@ -37,9 +36,9 @@ ms.locfileid: "63044457"
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではないため、新しいバージョンの Windows では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーはアプリケーションとして表示されません。  
 > 
 >  -   **Windows 10**:  
->          Configuration Manager を[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]開くには、**スタートページ**で「「sqlservermanager12.msc」 (の場合[!INCLUDE[ssSQL14](../includes/sssql14-md.md)])」と入力します。 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の場合は、12 をより小さい数値に置き換えます。 SQLServerManager12.msc をクリックすると、構成マネージャーが開きます。 Configuration Manager をスタートページまたはタスクバーにピン留めするには、「Sqlservermanager12.msc」を右クリックし、[**ファイルの場所を開く**] をクリックします。 Windows エクスプローラーで「Sqlservermanager12.msc」を右クリックし、[**スタート画面にピン留めする**] または [**タスクバーにピン留め**する] をクリックします。  
+>          Configuration Manager を開くには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **スタートページ**で「「sqlservermanager12.msc」 (の場合)」と入力 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] します。 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の場合は、12 をより小さい数値に置き換えます。 SQLServerManager12.msc をクリックすると、構成マネージャーが開きます。 Configuration Manager をスタートページまたはタスクバーにピン留めするには、「Sqlservermanager12.msc」を右クリックし、[**ファイルの場所を開く**] をクリックします。 Windows エクスプローラーで「Sqlservermanager12.msc」を右クリックし、[**スタート画面にピン留めする**] または [**タスクバーにピン留め**する] をクリックします。  
 > -   **Windows 8**:  
->          Configuration Manager を[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]開くには、**検索**チャームで、[**アプリ**] の下に「 **SQLServerManager\<version> .msc** 」 (など) **Enter** `SQLServerManager12.msc`と入力し、enter キーを押します。  
+>          Configuration Manager を開くには [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、**検索**チャームで、[**アプリ**] の下に「 **SQLServerManager \<version> ** 」と入力し、 `SQLServerManager12.msc` **enter**キーを押します。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーを使用して、他のコンピューター上のサービスの開始、停止、一時停止、再開、構成を行う方法については、「[別のコンピューターへの接続 &#40;SQL Server 構成マネージャー&#41;](../database-engine/configure-windows/scm-services-connect-to-another-computer.md)」を参照してください。  
   

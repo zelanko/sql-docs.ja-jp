@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0dafd98f721bfc2d2d0dd64a9f97689466529407
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754210"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933879"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>データベース ミラーリング構成のトラブルシューティング (SQL Server)
   ここでは、データベース ミラーリング セッションの設定時に発生する問題のトラブルシューティングに役立つ情報を提供します。  

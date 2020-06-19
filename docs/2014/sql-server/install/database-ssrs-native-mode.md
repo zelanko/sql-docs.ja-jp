@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7dff59c26c057caec1df1f5850be41dcc6f85711
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fc3fdb873a567bef9326232e5435cea5649b041
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952309"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054875"
 ---
 # <a name="database-ssrs-native-mode"></a>データベース (SSRS ネイティブ モード)
   [データベース] ページを使用すると、1 つまたは複数のレポート サーバー インスタンスに対して内部記憶域を提供するレポート サーバー データベースの作成や構成を行うことができます。 リモートのレポート サーバー データベースが使用されるようにレポート サーバーを構成する場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用してデータベースを作成する必要があります。  
@@ -43,11 +42,11 @@ ms.locfileid: "71952309"
  **データベースの変更**  
  レポート サーバー データベースの作成または選択に必要なすべての手順を示すウィザードを起動します。  
   
- **[資格情報の種類]**  
+ **資格情報の種類**  
  レポート サーバーがレポート サーバー データベースへの接続に使用する資格情報を指定します。 指定できる資格情報の種類には、サービス アカウント、Windows ドメイン ユーザー、Windows ローカル ユーザー、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインがあります。 資格情報の選択の詳細については、「 [SSRS Configuration Manager&#41;&#40;レポートサーバーデータベース接続の構成](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   
  **ユーザー名**  
- Windows 資格情報を使用している場合はドメイン ユーザー アカウントを指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を使用している場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 Windows 資格情報を使用している場合は、 * \<ドメイン>\\<アカウント\>* の形式で指定します。  
+ Windows 資格情報を使用している場合はドメイン ユーザー アカウントを指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を使用している場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 Windows 資格情報を使用している場合は、 * \<domain> \\<アカウント \> *の形式で指定します。  
   
  **パスワード**  
  アカウントのパスワードを指定します。  

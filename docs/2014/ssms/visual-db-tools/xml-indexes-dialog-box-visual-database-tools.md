@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dff22b94cd4be464783a3b9dfcb07cae890a2307
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000548"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>[XML インデックス] ダイアログ ボックス (Visual Database Tools)
   **[XML インデックス]** ダイアログ ボックスを使用すると、 **[インデックス/キー]** ダイアログ ボックスではできない、データ型が XML の列に対するインデックスの作成を行うことができます。 各 XML 列に複数の XML インデックスを作成できますが、最初に作成したインデックス (プライマリ インデックス) が他のインデックス (セカンダリ インデックス) の基になります。 プライマリ XML インデックスを削除すると、セカンダリ インデックスも削除されます。  

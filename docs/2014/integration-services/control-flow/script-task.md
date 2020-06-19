@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c44017e7f3746861209b62bcb8c7b8999712076
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830563"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918376"
 ---
 # <a name="script-task"></a>スクリプト タスク
   スクリプト タスクでは、組み込みのタスクで利用できない関数を実行するコード、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で用意されている変換を実行するコードが用意されています。 また、スクリプト タスクを使用すると、複数のタスクおよび変換を使用しなくても、関数を 1 つのスクリプトに結合できます。 スクリプト タスクは、データ行ごとに 1 回ではなく、1 つのパッケージ内で 1 回 (または列挙されたオブジェクトごとに 1 回) 行う作業に使用します。  
@@ -64,7 +63,7 @@ ms.locfileid: "62830563"
  これらのプロパティは [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから設定するか、またはプログラムによって設定します。  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>デザイナーでのスクリプト タスクの構成  
- 次の表では、スクリプト タスクでログに記録できる `ScriptTaskLogEntry` イベントについて説明します。 イベントは、[ **SSIS ログの構成**] ダイアログボックスの [詳細] タブで、ログ記録の対象として選択されます。 **Details** `ScriptTaskLogEntry` 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。  
+ 次の表では、スクリプト タスクでログに記録できる `ScriptTaskLogEntry` イベントについて説明します。 `ScriptTaskLogEntry`イベントは、[ **SSIS ログの構成**] ダイアログボックスの [**詳細**] タブで、ログ記録の対象として選択されます。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。  
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  

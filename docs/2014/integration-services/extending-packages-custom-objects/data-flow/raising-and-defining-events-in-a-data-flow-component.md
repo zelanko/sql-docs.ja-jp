@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 774cb9a56fbe4e81df6a440c754c417ae90c16e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f66e613a66f722d84074e6369666edd85b448808
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176338"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968862"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>データ フロー コンポーネントのイベントの発生と定義
   コンポーネント開発者は、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> プロパティで公開されているメソッドを呼び出して、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> インターフェイスで定義されているイベントのサブセットを発生させることができます。 また、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A> コレクションを使用してカスタム イベントを定義し、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> メソッドを使用して、実行時にこのイベントを発生させることもできます。 このセクションでは、イベントを作成、発生させる方法について説明し、デザイン時にイベントを発生させるタイミングに関するガイドラインを示します。
 
 ## <a name="raising-events"></a>イベントの発生
- コンポーネントは、 **インターフェイスの \<Fire**X><xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> メソッドを使用して、イベントを発生させます。 イベントは、コンポーネントのデザイン時および実行時のどちらでも発生させることができます。 通常、コンポーネントのデザイン時には、検証中に <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> メソッドや <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> メソッドが呼び出されます。 これらのイベントは、コンポーネントが正しく構成されていない場合、**の**[エラー一覧][!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] ペインにメッセージを表示し、ユーザーにフィードバックを返します。
+ コンポーネントは、インターフェイスの** \<X> Fire**メソッドを使用してイベントを発生させ <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> ます。 イベントは、コンポーネントのデザイン時および実行時のどちらでも発生させることができます。 通常、コンポーネントのデザイン時には、検証中に <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> メソッドや <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> メソッドが呼び出されます。 これらのイベントは、コンポーネントが正しく構成されていない場合、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] の **[エラー一覧]** ペインにメッセージを表示し、ユーザーにフィードバックを返します。
 
  コンポーネントは、実行時の任意のタイミングでもイベントを発生させることができます。 イベントを使用すると、コンポーネント開発者はユーザーに対して、コンポーネントの実行に伴うフィードバックを返すことができます。 実行時に <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> メソッドが呼び出された場合、パッケージが失敗したと考えられます。
 
@@ -42,10 +41,10 @@ ms.locfileid: "78176338"
 
  コンポーネントのカスタム イベントは、パッケージ XML には保存されません。 したがって、コンポーネントのデザイン時および実行時の両方で <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A> メソッドが呼び出され、発生するイベントが定義されます。
 
- *メソッドのパラメーター*allowEventHandlers<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> は、コンポーネントがイベント用に <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> オブジェクトを作成するかどうかを指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> は同期型であることに注意してください。 このため、カスタム イベントにアタッチされた <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> の実行が終了するまで、コンポーネントは実行を再開しません。 *AllowEventHandlers*パラメーター `true`がの場合、イベントの各パラメーターは<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]ランタイムによって自動的に作成および設定された変数を通じて、任意のオブジェクトに対して自動的に使用できるようになります。
+ <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> メソッドのパラメーター *allowEventHandlers* は、コンポーネントがイベント用に <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> オブジェクトを作成するかどうかを指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> は同期型であることに注意してください。 このため、カスタム イベントにアタッチされた <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> の実行が終了するまで、コンポーネントは実行を再開しません。 *AllowEventHandlers*パラメーターがの場合 `true` 、イベントの各パラメーターは、 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> ランタイムによって自動的に作成および設定された変数を通じて、任意のオブジェクトに対して自動的に使用できるようになり [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ます。
 
 ### <a name="raising-a-custom-event"></a>カスタム イベントの発生
- コンポーネントは、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> メソッドを呼び出し、イベントの名前、テキスト、パラメーターを渡して、カスタム イベントを発生させます。 *AllowEventHandlers*パラメーターが`true`の場合、カスタム<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers>イベント用に作成されたは、 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]ランタイムエンジンによって実行されます。
+ コンポーネントは、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> メソッドを呼び出し、イベントの名前、テキスト、パラメーターを渡して、カスタム イベントを発生させます。 *AllowEventHandlers*パラメーターがの場合 `true` 、 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> カスタムイベント用に作成されたは、ランタイムエンジンによって実行され [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ます。
 
 ### <a name="custom-event-sample"></a>カスタム イベントのサンプル
  次のコード例では、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A> メソッドの実行中にカスタム イベントを定義し、実行時に <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> メソッドを呼び出してこのイベントを発生させるコンポーネントを示します。

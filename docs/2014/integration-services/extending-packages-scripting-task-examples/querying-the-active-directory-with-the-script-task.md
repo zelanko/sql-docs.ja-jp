@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bbcea29ad75eb84b9c8099e5998e307ecbd7943c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 142cef139d315d3db492651716c2ec8fb9b6e03c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895031"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968492"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>スクリプト タスクによる Active Directory へのクエリの実行
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージなどの企業データ処理アプリケーションでは、Active Directory に格納されている従業員の階級、役職、またはその他の特性に基づいて、個別にデータを処理する必要性が頻繁に生じます。 Active Directory は [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ディレクトリ サービスで、ユーザーに関するメタデータだけでなく、コンピューターやプリンターなどの他の組織資産に関するメタデータも集中して格納します。 Microsoft .NET Framework の `System.DirectoryServices` 名前空間では、Active Directory を使用して作業するためのクラスが用意されており、これを使用すると Active Directory が格納している情報に基づくデータ処理のワークフローを送信できます。  
@@ -37,7 +36,7 @@ ms.locfileid: "62895031"
   
 1.  `email`、`name`、および `title` という 3 つの文字列変数を作成します。 `email` 変数の値に企業の有効な電子メール アドレスを入力します。  
   
-2.  [**スクリプトタスクエディター**] の [**スクリプト**] ページで、 `email` `ReadOnlyVariables`プロパティに変数を追加します。  
+2.  [**スクリプトタスクエディター**] の [**スクリプト**] ページで、 `email` プロパティに変数を追加し `ReadOnlyVariables` ます。  
   
 3.  `name` および `title` 変数は、`ReadWriteVariables` プロパティに追加します。  
   

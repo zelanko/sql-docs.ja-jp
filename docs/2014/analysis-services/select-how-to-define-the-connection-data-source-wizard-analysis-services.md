@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 425b2172-93a1-4f93-8945-cdeaa3e8bd67
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30e727a207c0aeec93f945cc6f550b0e8f1f56f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b249b3603b23884e218e893ae6e7a7bc0c93be1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069498"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940993"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>[接続の定義方法を選択します] (データ ソース ウィザード) (Analysis Services)
   **[接続の定義方法を選択します]** ページを使用すると、データ ソースのデータ接続を作成したり選択したりできます。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e107660073716019f48def8578a424ead92abf32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 656acd0802eb08e7b32c2d6b4dbee2129682d298
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768638"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968842"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>データ フロー コンポーネントの実行時のメソッド
   実行時に、データ フロー タスクは、コンポーネントの順序の確認、実行プランの準備、および作業プランを実行するワーカー スレッドのプールの管理を行います。 タスクは、データの行を変換元から読み込み、変換を使用して処理し、変換先に保存します。  

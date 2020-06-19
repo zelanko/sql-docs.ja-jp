@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a76d1d1c3621700028107fab87e40929332b14ee
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754413"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934016"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)
    データベース ミラーリング セッションにミラーリング監視サーバーが設定されている場合は必ず、"*クォーラム*" が必要になります。 クォーラムとは、データベース ミラーリング セッションで複数のサーバー インスタンスが相互接続されているときに存在するリレーションシップです。 通常、クォーラムには 3 つの相互接続されたサーバー インスタンスが関係します。 ミラーリング監視サーバーが設定されている場合、データベースを使用可能にするために、クォーラムが必要になります。 クォーラムは、自動フェールオーバーを伴う高い安全性モードのために設計されています。クォーラムを使用することで、データベースを所有するパートナーが一度に 1 つのみになるように制限できます。  

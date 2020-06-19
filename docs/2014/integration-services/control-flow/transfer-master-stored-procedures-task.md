@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b7cef1e64ab9c499c52ac3bbc0364a05bfcc812
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98986cf1e3f81d11355fa10ffcaa3304fe0702be
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829483"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917885"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Master ストアド プロシージャ転送タスク
   Master ストアド プロシージャ転送タスクは、 **のインスタンス上の** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース間で、1 つ以上のユーザー定義ストアド プロシージャを転送します。 **master** データベースからストアド プロシージャを転送するには、プロシージャの所有者が dbo である必要があります。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b7e2324fcfce6c560000bfef798aa966102d674b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17f6ed6fd86bb7440f795268e63aa7b9ba418afb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895511"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968545"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>スクリプト コンポーネントに対するエラー出力のシミュレート
   エラー行の自動処理のスクリプト コンポーネントでエラー出力として出力を直接構成することはできませんが、別の出力を作成するか、可能な場合はスクリプトで条件ロジックを使用してこの出力に行を送信することによって、組み込みエラー出力の機能を再現することができます。 2 つの出力列を追加してエラー番号、およびエラーが発生した列の ID を受け取ることにより、組み込みエラー出力の動作を模倣することもできます。  
@@ -46,7 +45,7 @@ ms.locfileid: "62895511"
   
 7.  **[入力列]** ページで、スクリプト変換で処理する列を選択します。 この例では CountryRegionName 列のみを使用します。 選択しなかった使用可能な入力列は、データ フロー内で変更されず、そのまま渡されます。  
   
-8.  [**入力および出力**] ページで、新しい2番目の出力を追加し`SynchronousInputID` 、その値を入力の ID に設定します。これは、 `SynchronousInputID`既定の出力のプロパティの値でもあります。 両方の出力の `ExclusionGroup` プロパティを 0 以外の同じ値 (たとえば 1) に設定し、各行が 2 つの出力のうち一方のみに送られるようにします。 新しいエラー出力に、"MyErrorOutput" などのわかりやすい名前を付けます。  
+8.  [**入力および出力**] ページで、新しい2番目の出力を追加し、その `SynchronousInputID` 値を入力の ID に設定します。これは、 `SynchronousInputID` 既定の出力のプロパティの値でもあります。 両方の出力の `ExclusionGroup` プロパティを 0 以外の同じ値 (たとえば 1) に設定し、各行が 2 つの出力のうち一方のみに送られるようにします。 新しいエラー出力に、"MyErrorOutput" などのわかりやすい名前を付けます。  
   
 9. 必要なエラー情報を取得するため、追加の出力列を新しいエラー出力に追加します。エラー コード、エラーが発生した列の ID、エラーの説明などを含めることができます。 この例では、新しい列 ErrorColumn および ErrorMessage を作成しています。 事前定義された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラーを独自の実装で検出する場合、エラー番号用の ErrorCode 列を必ず追加してください。  
   

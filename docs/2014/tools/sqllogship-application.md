@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc9695e711379247590a849651bc6573bd2f04fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007016"
 ---
 # <a name="sqllogship-application"></a>sqllogship アプリケーション
   **sqllogship** アプリケーションは、ログ配布構成のバックアップ、コピー、復元操作、および関連するクリーンアップ作業を行います。 操作は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特定のインスタンスで特定のデータベースに対して行われます。  
@@ -74,7 +73,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  **sqllogship** で作成されるログ配布の履歴には、ログ配布のバックアップ、コピー、および復元ジョブで作成される履歴も含まれます。 **sqllogship** を繰り返し使用してログ配布構成のバックアップ、コピー、および復元操作を行う場合、対応するログ配布ジョブを無効にすることを検討してください。 詳細については、「 [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md)」をご覧ください。  
   
- **Sqllogship**アプリケーション sqllogship .exe は、X:\PROGRAM の SQL Server\120\Tools\Binn ディレクトリにインストールされます。  
+ **Sqllogship**アプリケーション SqlLogShip.exe は、X:\PROGRAM の SQL Server\120\Tools\Binn ディレクトリにインストールされます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sqllogship** では Windows 認証を使用します。 コマンドを実行する Windows 認証アカウントには、Windows のディレクトリ アクセスおよび [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の権限が必要です。 要件は、 **sqllogship** コマンドで **-backup**、 **-copy**、 **-restore** のいずれのオプションを指定するかで変わります。  
