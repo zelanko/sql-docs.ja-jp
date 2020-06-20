@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ed0cd8bad3a99c7f1f59b5121aafb06ccdee63b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20d32f3a050e79aef90eb8df302bd7a590cead3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952240"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045146"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>配置のチェック リスト: PowerPivot for SharePoint 2010 のマルチサーバー インストール
-  このチェックリストでは、最初から構築[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]した3層の sharepoint 2010 ファームに for SharePoint を追加する手順について説明します。 3 層ファームには、データベース層、アプリケーション層、および Web 層が含まれています。 この[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]トポロジに追加するには SQL Server セットアップを実行し[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]てアプリケーション層にインストールする必要があります。 PowerPivot プログラムファイルは web 層に追加されますが、web アプリケーションソリューションを配置する場合は、インストール後のタスクとしてのみ追加されます。 配置手順は必要ですが、Web 層またはデータ層のいずれかで実行する必要のある個別のインストール手順はありません。 実行する必要があるインストール手順は、アプリケーションサーバー [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]にをインストールすることだけです。  
+  このチェックリストでは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 最初から構築した3層の sharepoint 2010 ファームに For SharePoint を追加する手順について説明します。 3 層ファームには、データベース層、アプリケーション層、および Web 層が含まれています。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]このトポロジに追加するには SQL Server セットアップを実行してアプリケーション層にインストールする必要があり [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ます。 PowerPivot プログラムファイルは web 層に追加されますが、web アプリケーションソリューションを配置する場合は、インストール後のタスクとしてのみ追加されます。 配置手順は必要ですが、Web 層またはデータ層のいずれかで実行する必要のある個別のインストール手順はありません。 実行する必要があるインストール手順は、アプリケーションサーバーにをインストールすることだけです [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 。  
   
 ||  
 |-|  
@@ -189,7 +188,7 @@ ms.locfileid: "71952240"
   
  PowerPivot の SharePoint サイトとの統合を確認するには、次の操作を行います。  
   
-1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、URL\<アドレスに> コンピューター名を指定できます。  
+1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、URL アドレスに http://を指定でき \<your computer name> ます。  
   
 2.  PowerPivot データ アクセス機能と PowerPivot データ処理機能がアプリケーションで使用可能になっていることを確認します。 そのためには、PowerPivot によって提供されるライブラリ テンプレートがあるかどうかを確認します。  
   
@@ -209,9 +208,9 @@ ms.locfileid: "71952240"
   
 5.  [スタート] メニューの Microsoft SQL Server 2008 R2 プログラム グループから SQL Server Management Studio を起動します。 このツールがサーバーにインストールされていない場合は、最後の手順にスキップして、キャッシュされたファイルが存在することを確認できます。  
   
-6.  [サーバーの種類] で **[Analysis Services]** を選択します。  
+6.  [サーバーの種類] で、[ **Analysis Services**] を選択します。  
   
-7.  [サーバー名] に、「 ** \<サーバー名>** を入力します。ここ** \<** で、サーバー名>は PowerPivot for SharePoint インストールされているコンピューターの名前です。  
+7.  [サーバー名] に「 ** \<server-name> \ powerpivot**」と入力します。ここで、 **\<server-name>** は PowerPivot for SharePoint インストールされているコンピューターの名前です。  
   
 8.  **[Connect]** をクリックします。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a2575c8-06fc-4ef4-9f24-c19e52b1bbcf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f1eb0f6892192e5ed328386e6730ec3b1c41f05b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b61c6c1fce58210950e1ccb3d76ea69cb4c8c6ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952551"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044897"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>配置のチェック リスト: Reporting Services、Power View、および PowerPivot for SharePoint
   PowerPivot for SharePoint、レポート ビルダー、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] の各 BI 機能を同じ SharePoint ファームにインストールするときは、次のチェック リストを使用してください。 このチェック リストでは特定のインストール順序が推奨されていますが、実際には、ほぼどのような順序でもこれらの機能をインストールできます。 このチェック リストでは、次の製品または機能のインストールが想定されています。  
@@ -66,10 +65,10 @@ ms.locfileid: "71952551"
 |手順|Link|  
 |----------|----------|  
 |SharePoint 2010 製品準備ツールを実行します。|SharePoint 2010 のインストール メディアが必要です。 準備ツールはインストール メディアの PrerequisiteInstaller.exe です。|  
-|SharePoint Server 2010 Enterprise Edition または Enterprise Evaluation Edition をインストールします。|SharePoint をインストールするときは、セットアップが終了した後で SharePoint 2010 製品構成ウィザードを実行しないでおき、ファームの構成を後で行うこともできます。 ファームの構成を待機すると、後の手順[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]でインストールしたデータベースエンジンインスタンスをファームのデータベースサーバーとして使用できるようになります。 ファームを構成するには、PowerPivot 構成ツールを使用します。 このツールには、ファームがまだ構成されていない場合にファームを準備する処理が含まれます。|  
-|SharePoint Server 2010 SP1 をインストールします。|SP1 をから[https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697)ダウンロードします。|  
+|SharePoint Server 2010 Enterprise Edition または Enterprise Evaluation Edition をインストールします。|SharePoint をインストールするときは、セットアップが終了した後で SharePoint 2010 製品構成ウィザードを実行しないでおき、ファームの構成を後で行うこともできます。 ファームの構成を待機すると、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 後の手順でインストールしたデータベースエンジンインスタンスをファームのデータベースサーバーとして使用できるようになります。 ファームを構成するには、PowerPivot 構成ツールを使用します。 このツールには、ファームがまだ構成されていない場合にファームを準備する処理が含まれます。|  
+|SharePoint Server 2010 SP1 をインストールします。|SP1 をからダウンロード [https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697) します。|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] セットアップを実行して、データベース エンジンと PowerPivot for SharePoint をインストールします。|[PowerPivot for SharePoint 2010 をインストールする](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)<br /><br /> 手順 1 では、PowerPivot for SharePoint のインストール方法を説明します。 この手順では、ロールにデータベース エンジンを追加する [セットアップ ロール] ページのチェック ボックスをオンにします。 これにより、データベースエンジンがインストールに追加され、次の手順でファームを構成するときにファームのデータベースサーバーとして使用できるようになります。 ただし、既にファームが構成されている場合は、この手順をスキップできます。<br /><br /> 手順 2. では、サーバーを構成します。 ここでは、PowerPivot 構成ツールを選択します。 複数の方法を利用できますが、スタンドアロン インストールの場合は構成ツールを使用するのが最も効率的な方法です。<br /><br /> SharePoint 2010 がインストールされていて、構成されていない場合、ツールでは、ファーム、既定の Web アプリケーション、およびルート サイト コレクションを作成する処理があらかじめ選択されます。 これらのオプションを選択したままにして、ファームが作成されるようにする必要があります。 ファームを既に構成してある場合、ツールではこれらの処理は省略されて、PowerPivot for SharePoint の構成に必要な処理だけが提供されます。<br /><br /> 手順 3. では、Analysis Services OLE DB プロバイダーの SQL Server 2008 R2 バージョンをインストールします。 この手順は、2008 R2 バージョンの PowerPivot for Excel で作成されたブックのバージョンをサポートするために重要です。|  
-|ファームが動作することを確認します。|最初に、サーバーの全体管理を起動して、使用できることを確認します。 次に、「」と入力http://localhostして、チームサイトを開きます。  SharePoint チーム サイトが表示されます。|  
+|ファームが動作することを確認します。|最初に、サーバーの全体管理を起動して、使用できることを確認します。 次に、「」と入力して、チームサイトを開き http://localhost ます。  SharePoint チーム サイトが表示されます。|  
 |PowerPivot for SharePoint が動作することを確認します。|[PowerPivot for SharePoint インストールの確認](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation)<br /><br /> このタスクでは、アップロードするサンプルのブックを使用して、PowerPivot データのアクセスを確認します。|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] セットアップを実行し、Reporting Services および Reporting Services アドインをインストールして構成します。|[SharePoint 2010 用 Reporting Services SharePoint モードのインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)<br /><br /> 表形式のデータをホストするために第 2 のリソースが必要な場合は、Reporting Services をインストールするときに、必要に応じて、追加の Analysis Services インスタンスをセットアップの機能ツリーに追加できます。 追加の Analysis Services インスタンスは、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成する表形式のモデル データベースをホストするために使用されます。 表形式のデータベースは、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートに有効なデータ ソースです。<br /><br /> [表形式モードでの Analysis Services のインストール](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)|  
 |Reporting Services が動作することを確認します。|[Reporting Services のインストール状態の検証](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  

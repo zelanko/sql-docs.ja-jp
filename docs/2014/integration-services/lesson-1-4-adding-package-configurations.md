@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 719b0b357767fcc4412663449a6a7bd929b34cd3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767644"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965293"
 ---
 # <a name="step-4-adding-package-configurations"></a>手順 4:パッケージ構成の追加
   ここでは、各パッケージに構成を追加します。 パッケージ プロパティとパッケージ オブジェクトの値は、構成によって実行時に更新されます。  
@@ -42,7 +41,7 @@ ms.locfileid: "62767644"
   
 5.  パッケージ構成ウィザードの [ようこそ] ページで、[**次へ**] をクリックします。  
   
-6.  [構成の種類の選択] ページで、[構成の**種類**] ボックスの一覧から [ **XML 構成ファイル**] を選択し、[構成の`DataTransfer,`場所を**環境変数に格納**する] オプションを選択して、一覧で**DataTransfer**環境変数を入力または選択します。  
+6.  [構成の種類の選択] ページで、[構成の**種類**] ボックスの一覧から [ **XML 構成ファイル**] を選択し、[**構成の場所を環境変数に格納**する] オプションを選択して、 `DataTransfer,` 一覧で**DataTransfer**環境変数を入力または選択します。  
   
     > [!NOTE]  
     >  環境変数を一覧で選択できるようにするには、変数を追加した後でコンピューターを再起動する必要があります。 コンピューターの再起動を避けたい場合は、環境変数の名前を入力してください。  
@@ -93,7 +92,7 @@ ms.locfileid: "62767644"
   
 5.  パッケージ構成ウィザードの [ようこそ] ページで、[**次へ**] をクリックします。  
   
-6.  [構成の種類の選択] ページで、[構成の**種類**] ボックスの一覧の [ **XML 構成ファイル**] を選択し、[**構成の場所を環境変数に格納**する] オプションを選択して、一覧にある`LoadXMLData` `LoadXMLData`環境変数を入力または選択します。  
+6.  [構成の種類の選択] ページで、[構成の**種類**] ボックスの一覧の [ **XML 構成ファイル**] を選択し、[**構成の場所を環境変数に格納**する] オプションを選択して、 `LoadXMLData` `LoadXMLData` 一覧にある環境変数を入力または選択します。  
   
     > [!NOTE]  
     >  環境変数を一覧で選択できるようにするには、変数を追加した後でコンピューターを再起動する必要があります。  

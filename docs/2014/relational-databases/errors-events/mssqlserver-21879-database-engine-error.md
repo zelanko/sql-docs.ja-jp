@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bda15bcb4d96cc126aa87a986fa667a56730637
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869189"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054229"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
     
@@ -52,10 +51,10 @@ ms.locfileid: "62869189"
   
  ディストリビューター以外のノードで実行されているレプリケーション エージェント (サブスクライバーで実行されているマージ エージェントなど) によって開始された `sp_get_redirected_publisher` に対する呼び出しからエラー 21879 が返される場合、特別な注意事項があります。 リダイレクトされたパブリッシャーへの接続に Windows 認証が使用される場合、接続を正常に確立するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に Kerberos 認証を構成する必要があります。 Windows 認証が使用され、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に Kerberos 認証が構成されていない場合、サブスクライバーで実行されているマージ エージェントは、'NT AUTHORITY\ANONYMOUS LOGON' ログインが失敗したことを示すエラー 18456 を受け取ります。 この問題を解決するには、以下の 3 種類の方法があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に Kerberos 認証を構成します。 **オンライン ブックの「** Kerberos 認証と SQL Server[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]」を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に Kerberos 認証を構成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「**Kerberos 認証と SQL Server**」を参照してください。  
   
--   を`sp_changedistpublisher`使用して、MSdistpublishers の元のパブリッシャーに関連付けられているセキュリティモードを変更すると共に、接続に使用するログインとパスワードを指定します。  
+-   を使用して、 `sp_changedistpublisher` MSdistpublishers の元のパブリッシャーに関連付けられているセキュリティモードを変更すると共に、接続に使用するログインとパスワードを指定します。  
   
--   マージエージェントコマンドラインでコマンドラインパラメーター *BypassPublisherValidation*を指定すると、ディストリビューターで`sp_get_redirected_publisher`が呼び出されたときに検証がバイパスされます。  
+-   マージエージェントコマンドラインでコマンドラインパラメーター *BypassPublisherValidation*を指定すると、 `sp_get_redirected_publisher` ディストリビューターでが呼び出されたときに検証がバイパスされます。  
   
   

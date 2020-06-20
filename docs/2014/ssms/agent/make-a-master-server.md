@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce8e7428aaf8ba459bcf6831988c61da3f192bac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189133"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008755"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してマスター サーバー [!INCLUDE[tsql](../../includes/tsql-md.md)]を作成する方法について説明します。  
@@ -35,7 +34,7 @@ ms.locfileid: "68189133"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **マスター サーバーを作成するために使用するもの:**  
   
@@ -48,7 +47,7 @@ ms.locfileid: "68189133"
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
  プロキシに関連付けられているステップがある分散ジョブは、ターゲット サーバーのプロキシ アカウントのコンテキストで実行されます。 次の条件を満たしていることを確認してください。満たしていないと、プロキシに関連付けられているジョブ ステップがマスター サーバーから対象サーバーにダウンロードされません。  
   
--   マスターサーバーレジストリサブキー **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<*instance_name*> \ SQL server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) が 1 (true) に設定されています。 既定では、この値は 0 (false) に設定されます。  
+-   マスターサーバーレジストリサブキー **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\ < *instance_name*> \ SQL server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) が 1 (true) に設定されています。 既定では、この値は 0 (false) に設定されます。  
   
 -   ジョブ ステップを実行するマスター サーバー プロキシ アカウントと同じ名前を持つターゲット サーバーにプロキシ アカウントが存在すること。  
   

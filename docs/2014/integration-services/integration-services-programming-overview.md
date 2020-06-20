@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4bf90de7f1ebcadbc65b6f2ee7eaaacb6d52e0e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21459ff6295fce745a380dfb25650d9bbd971de8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683623"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965452"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services プログラミングの概要
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のアーキテクチャでは、データの移動と変換がパッケージの制御フローと管理から分離されています。 このアーキテクチャを定義し、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のプログラムでの自動化および拡張を可能にする、次の 2 種類のエンジンがあります。 1 つはランタイム エンジンで、制御フローとパッケージ管理のインフラストラクチャを実装します。開発者は、このインフラストラクチャによって、実行フローを制御し、ログ記録、イベント ハンドラー、および変数用のオプションを設定できます。 もう 1 つはデータ フロー エンジンで、特殊でパフォーマンスの高いエンジンであり、データの抽出、変換、および読み込みを専門に行います。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のプログラムの際には、これら 2 つのエンジンに対してプログラムを実行します。  
@@ -58,9 +57,9 @@ ms.locfileid: "74683623"
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] アプリケーション プログラミング インターフェイスは、VBScript などの COM ベースのスクリプト言語と互換性がありません。  
   
 ## <a name="locating-assemblies"></a>アセンブリの場所  
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] アセンブリが .NET 4 にアップグレードされました。 *\<ドライブ*>:\Windows\Microsoft.NET\assembly に、.NET 4 用の別のグローバル アセンブリ キャッシュが用意されています。 すべての [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] アセンブリは、通常、このパスの GAC_MSIL フォルダーにあります。  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] アセンブリが .NET 4 にアップグレードされました。 .NET 4 用の個別のグローバルアセンブリキャッシュがあります。これは、\Windows\ microsoft.net \assembly にあり *\<drive>* ます。 すべての [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] アセンブリは、通常、このパスの GAC_MSIL フォルダーにあります。  
   
- 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] と同様に、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のコア機能拡張 .dll ファイルは *\<ドライブ>* :\Program Files\Microsoft SQL Server\100\SDK\Assemblies にあります。  
+ 以前のバージョンのと同様に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、コア [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 機能拡張 .dll ファイルは次の場所にもあります *\<drive>* : server\100\sdk\assemblies  
   
 ## <a name="commonly-used-assemblies"></a>通常使用されるアセンブリ  
  次の表は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] を使用する [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] をプログラムするときに頻繁に使用されるアセンブリの一覧です。  

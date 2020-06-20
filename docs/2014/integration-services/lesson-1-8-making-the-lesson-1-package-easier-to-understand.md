@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffd151332fe5aa0c152ba66c159472dc9745f2d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966122"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>手順 8:レッスン 1 のパッケージをわかりやすくする作業
   ここまでの作業で、レッスン 1 のパッケージの構成が完了しました。次は、パッケージのレイアウトを整理することをお勧めします。 制御フローやデータ フローのレイアウトの図形サイズがまちまちであったり、図形の整列やグループ化が行われていないと、パッケージの機能がわかりにくくなることがあります。  

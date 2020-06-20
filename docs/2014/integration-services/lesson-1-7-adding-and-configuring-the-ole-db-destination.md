@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b71e4254312c0dc07d6d8869a2e8b28eb02c36fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767561"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966132"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>手順 7:OLE DB 変換先の追加と構成
   前回までの実習で、フラット ファイル ソースからデータを抽出し、変換先との互換性のある形式にデータを変換できるパッケージを作成しました。 次は、変換したデータを実際に変換先に読み込みます。 データを読み込むには、データ フローに OLE DB 変換先を追加する必要があります。 OLE DB 変換先では、データベース テーブル、ビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなデータベースにデータを読み込むことができます。  
@@ -50,7 +49,7 @@ ms.locfileid: "62767561"
   
 13. **[Sample OLE DB Destination]** 変換先を右クリックし、 **[プロパティ]** をクリックします。  
   
-14. プロパティウィンドウで、 `LocaleID`プロパティが**英語 (米国)** に設定され、`DefaultCodePage`プロパティが**1252**に設定されていることを確認します。  
+14. プロパティウィンドウで、 `LocaleID` プロパティが**英語 (米国)** に設定され、 `DefaultCodePage` プロパティが**1252**に設定されていることを確認します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 8:レッスン 1 のパッケージをわかりやすくする作業](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

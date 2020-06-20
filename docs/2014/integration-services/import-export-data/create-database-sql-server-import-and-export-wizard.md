@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a80526b0f4a1b9f122ff79bbbb5a5a8ac08a2d07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a2776d0288ef66214c9bdfd4218b924cb83c02b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893108"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965602"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>[データベースの作成] (SQL Server インポートおよびエクスポート ウィザード)
   [**データベースの作成**] ページを使用すると、変換先ファイルの新しいデータベースを定義できます。  
   
- このページでは、新しいデータベースの作成に利用できるオプションのサブセットが提供されます。 すべてのオプションを表示するに[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]は、を使用します。  
+ このページでは、新しいデータベースの作成に利用できるオプションのサブセットが提供されます。 すべてのオプションを表示するには、を使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。  
   
  このウィザードの詳細については、「 [SQL Server インポートおよびエクスポートウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。 ウィザードを起動するためのオプション、およびウィザードを正常に実行するために必要な権限については、「 [run the SQL Server Import And Export wizard](start-the-sql-server-import-and-export-wizard.md)」を参照してください。  
   

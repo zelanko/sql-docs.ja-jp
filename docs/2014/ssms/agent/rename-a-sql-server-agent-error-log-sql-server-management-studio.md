@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: dee2b199-48af-44cb-9177-d029a5edb169
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b3405f69ce36b4b46cdb519d281ab910d7220887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f27db2bef0286d4e6d46d94c405599c8ca0e83f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62649925"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062152"
 ---
 # <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>Rename a SQL Server Agent Error Log (SQL Server Management Studio)
-  この[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トピックで[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は、を使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]して、エージェントエラーが書き込まれるファイルの名前を変更する方法について説明します。  
+  このトピックでは、を使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントエラーが書き込まれるファイルの名前を変更する方法について説明し [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。  
   
  **このトピックの内容**  
   
@@ -31,7 +30,7 @@ ms.locfileid: "62649925"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   [SQL Server Management Studio を使用して SQL Server エージェントのエラー ログの名前を変更する方法](#SSMSProcedure)  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62649925"
   
 -   プロセスに対してメモリ クォータを調整する (SeIncreaseQuotaPrivilege)  
   
- エージェントサービスアカウントに必要な Windows アクセス許可の詳細については、「 [SQL Server エージェントサービスのアカウントの選択](select-an-account-for-the-sql-server-agent-service.md)」および「 [windows サービスアカウントとアクセス許可の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ エージェントサービスアカウントに必要な Windows アクセス許可の詳細については [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「 [SQL Server エージェントサービスのアカウントの選択](select-an-account-for-the-sql-server-agent-service.md)」および「 [Windows サービスアカウントとアクセス許可の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   

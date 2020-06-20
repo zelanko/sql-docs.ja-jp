@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a12a46c1a250ce3d93c9ec2091dc5048ceebd61e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d543045fc5aac67b266ceb94c569a226bfd36f53
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483733"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972222"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>階層メンバーの権限を割り当てる (マスター データ サービス)
   階層メンバーに権限を割り当てて、 **の** [エクスプローラー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域にあるデータを表示するためのアクセス権をユーザーまたはグループに付与します。  
@@ -54,7 +53,7 @@ ms.locfileid: "65483733"
   
 10. メニューから、[**読み取り**専用]、[**更新**]、または [**拒否**] を選択します。  
   
-11. **[Save]** (保存) をクリックします。  
+11. **[保存]** をクリックします。  
   
     > [!NOTE]  
     >  階層メンバーの権限は、すぐには有効になりません。 詳細については、「[メンバー権限を直ちに適用する (マスター データ サービス)](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md)」を参照してください。  

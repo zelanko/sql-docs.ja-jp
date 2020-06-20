@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 254680ce380b88aca01184bb744a7dde1b8e5611
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054538"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972480"
 ---
 # <a name="web-service-task-editor-general-page"></a>[Web サービス タスク エディター] ([全般] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、HTTP 接続マネージャーの指定、Web サービス タスクで使用する WSDL (Web サービス記述言語) ファイルの場所の指定、Web サービス タスクの記述、WSDL ファイルのダウンロードなどの操作を実行できます。  
@@ -27,8 +26,8 @@ ms.locfileid: "66054538"
  このタスクの詳細については、「 [Web サービス タスク](control-flow/web-service-task.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **[HTTPConnection]**  
- 接続マネージャーを一覧から選択するか、[ \<**新しい接続...**> をクリックして新しい接続マネージャーを作成します。  
+ **HTTPConnection**  
+ 接続マネージャーを一覧から選択するか、をクリックして \<**New connection...**> 新しい接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  HTTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
@@ -44,7 +43,7 @@ ms.locfileid: "66054538"
   
 -   **[WSDLFile]** オプションで、この空のファイルを選択します。  
   
--   **[Overwritewsdlfile]** の値をに`True`設定して、空のファイルが実際の WSDL ファイルで上書きされるようにします。  
+-   **[Overwritewsdlfile]** の値をに設定して、 `True` 空のファイルが実際の WSDL ファイルで上書きされるようにします。  
   
 -   **[WSDL のダウンロード]** をクリックして実際の WSDL ファイルをダウンロードし、空のファイルを上書きします。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66054538"
  **[OverwriteWSDLFile]**  
  Web サービス タスクの WSDL ファイルを上書きできるかどうかを示します。  
   
- [ **Wsdl のダウンロード**] ボタンを使用して wsdl ファイルをダウンロードする場合は、この`True`値をに設定します。  
+ [ **Wsdl のダウンロード**] ボタンを使用して wsdl ファイルをダウンロードする場合は、この値をに設定 `True` します。  
   
  **名前**  
  Web サービス タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c71ff6e75cbbf27042c1eac70b1f97076290865
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921053"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957212"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server データベースを特定の時点に復元する方法 (完全復旧モデル)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベースを特定の時点まで復元する方法について説明します。 このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにのみ関連しています。  
@@ -132,7 +131,7 @@ ms.locfileid: "62921053"
   
  **[!INCLUDE[tsql](../../includes/tsql-md.md)] の基本構文**  
   
- **STOPAT =、 *`time`*** RECOVERY... を使用して <backup_device> からログ*database_name*を復元します...  
+ STOPAT ** = *`time`* 、** RECOVERY... を使用して <backup_device> からログ*database_name*を復元します...  
   
  復旧ポイントは、 `datetime` *time*によって指定された値以前に発生した最新のトランザクションコミットです。  
   
@@ -152,7 +151,7 @@ ms.locfileid: "62921053"
   
 3.  差分バックアップが存在する場合、データベースを復旧せずに最新のデータベースの差分バックアップを復元します (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  各トランザクションログバックアップを作成時と同じ順序で適用し、ログの復元を停止する時点を指定します (<backup_device> から STOPAT**=*`time`*、** RECOVERY を使用してデータベース*database_name*を復元します)。  
+4.  各トランザクションログバックアップを作成時と同じ順序で適用し、ログの復元を停止する時点を指定します (<backup_device> から STOPAT** = *`time`* 、** RECOVERY を使用してデータベース*database_name*を復元します)。  
   
     > [!NOTE]  
     >  RECOVERY オプションと STOPAT オプション。 トランザクション ログ バックアップに、要求した時点の情報が格納されていない場合、たとえば、指定した日時がトランザクション ログに記録されている時点より後の場合などに、警告が生成されます。この場合、データベースは復旧されません。  
@@ -193,7 +192,7 @@ GO
 -   [ログ シーケンス番号への復旧 &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [backupset &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
+ [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   

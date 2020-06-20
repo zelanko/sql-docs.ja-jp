@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 246036bfea6dc8431f878165330f7f0571949897
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917009"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965742"
 ---
 # <a name="shrink-a-database"></a>データベースの圧縮
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] から [!INCLUDE[tsql](../../includes/tsql-md.md)]のオブジェクトを使用して、データベースを圧縮する方法について説明します。  
@@ -65,7 +64,7 @@ ms.locfileid: "62917009"
   
 #### <a name="to-shrink-a-database"></a>データベースを圧縮するには  
   
-1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]インスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクトエクスプローラー**で、のインスタンスに接続し、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] そのインスタンスを展開します。  
   
 2.  **[データベース]** を展開し、圧縮するデータベースを右クリックします。  
   
@@ -107,7 +106,7 @@ ms.locfileid: "62917009"
  [ファイルの圧縮](shrink-a-file.md)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [database_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [DBCC &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
+ [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [DBCC SHRINKFILE &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
  [データベース ファイルとファイル グループ](database-files-and-filegroups.md)  
   

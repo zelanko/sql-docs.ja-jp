@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 340e250fde61f8c246099eadafc148278288dee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0548d974e83bfe2b1e103d4458b17078fba8014
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176652"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996474"
 ---
 # <a name="spatial-data-types-overview"></a>空間データ型の概要
   空間データには 2 つの型があります。 `geometry` データ型は平面 (ユークリッド (平面地球)) データをサポートしています。 `geometry` データ型 (平面) は、Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0 および SQL MM (ISO 標準) の両方に準拠しています。
@@ -30,19 +29,19 @@ ms.locfileid: "78176652"
 >  空間データ型の機能強化を含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]に導入された空間機能の詳細な説明とサンプルについては、ホワイト ペーパー「 [SQL Server コードネーム "Denali" の新しい空間機能](https://go.microsoft.com/fwlink/?LinkId=226407)」をダウンロードして参照してください。
 
 ##  <a name="spatial-data-objects"></a><a name="objects"></a> 空間データ オブジェクト
- `geometry` データ型と `geography` データ型は、16 の空間データ オブジェクト (インスタンス型) をサポートしています。 ただし、 *インスタンス化可能*なインスタンス型、つまりデータベース内でインスタンスを作成して使用することができる (インスタンス化できる) インスタンス型は、そのうちの 11 種類のみです。 `Points`これらのインスタンスは、親データ型から、 **linestrings、circularstring**、 `CompoundCurves`、 `Polygons`、、 `CurvePolygons`またはの複数`geometry`の`geography`インスタンスとして区別さ`GeometryCollection`れる特定のプロパティを派生します。 `Geography` 型には、`FullGlobe` という追加のインスタンス型があります。
+ `geometry` データ型と `geography` データ型は、16 の空間データ オブジェクト (インスタンス型) をサポートしています。 ただし、 *インスタンス化可能*なインスタンス型、つまりデータベース内でインスタンスを作成して使用することができる (インスタンス化できる) インスタンス型は、そのうちの 11 種類のみです。 これらのインスタンスは、親データ型から `Points` 、 **linestrings、circularstring**、、 `CompoundCurves` `Polygons` 、、またはの複数のインスタンスとして区別される特定のプロパティを派生 `CurvePolygons` `geometry` `geography` `GeometryCollection` します。 `Geography` 型には、`FullGlobe` という追加のインスタンス型があります。
 
- 次の図は、`geometry` の階層を表しています。`geometry` データ型と `geography` データ型はこの階層に基づいています。 と`geometry` `geography`のインスタンス化可能な型は、blue で示されています。
+ 次の図は、`geometry` の階層を表しています。`geometry` データ型と `geography` データ型はこの階層に基づいています。 とのインスタンス化 `geometry` 可能 `geography` な型は、blue で示されています。
 
  ![geometry 型の階層](../../database-engine/media/geom-hierarchy.gif "geometry 型の階層")
 
- 図が示す`geometry`ように、および`geography`データ型のインスタンス化可能な`Point`型は`MultiPoint`、 `LineString` `CircularString` `MultiLineString` `CompoundCurve` `Polygon` `CurvePolygon` `MultiPolygon`、、、、、、、、 `GeometryCollection`およびです。 geography データ型には、もう 1 つ `FullGlobe` というインスタンス化可能な型があります。 型`geometry`および`geography`型は、インスタンスが明示的に定義されていない場合でも、適切な形式のインスタンスである限り、特定のインスタンスを認識できます。 たとえば、STPointFromText () メソッドを`Point`使用してインスタンスを明示的に定義`geometry`し`geography` 、メソッドの入力が`Point`適切な形式である限り、インスタンスをとして認識します。 `STGeomFromText()` メソッドを使用して同じインスタンスを定義した場合は、`geometry` データ型と `geography` データ型の両方で `Point` として認識されます。
+ 図が示すように、およびデータ型のインスタンス化可能な型は、、、、、、、、、 `geometry` `geography` `Point` `MultiPoint` `LineString` `CircularString` `MultiLineString` `CompoundCurve` `Polygon` `CurvePolygon` `MultiPolygon` および `GeometryCollection` です。 geography データ型には、もう 1 つ `FullGlobe` というインスタンス化可能な型があります。 `geometry`型および `geography` 型は、インスタンスが明示的に定義されていない場合でも、適切な形式のインスタンスである限り、特定のインスタンスを認識できます。 たとえば、 `Point` STPointFromText () メソッドを使用してインスタンスを明示的に定義し、 `geometry` `geography` メソッドの入力が適切な形式である限り、インスタンスをとして認識し `Point` ます。 `STGeomFromText()` メソッドを使用して同じインスタンスを定義した場合は、`geometry` データ型と `geography` データ型の両方で `Point` として認識されます。
 
  geometry 型および geography 型のサブタイプには、単純型とコレクション型があります。  `STNumCurves()` などのメソッドは、単純型でのみ機能します。
 
  単純型は、次のとおりです。
 
--   [ポイント](../spatial/point.md)
+-   [Point](../spatial/point.md)
 
 -   [LineString](../spatial/linestring.md)
 
@@ -50,7 +49,7 @@ ms.locfileid: "78176652"
 
 -   [CompoundCurve](../spatial/compoundcurve.md)
 
--   [多角形](../spatial/polygon.md)
+-   [Polygon](../spatial/polygon.md)
 
 -   [CurvePolygon](../spatial/curvepolygon.md)
 
@@ -84,24 +83,24 @@ ms.locfileid: "78176652"
 
  楕円体座標系では、ポリゴンは方向がないと意味がなくなります (あいまいになります)。 たとえば、赤道の周りのリングが北半球を表すのか南半球を表すのかがわからなくなります。 `geography` データ型を使用して空間インスタンスを格納する場合は、リングの方向を指定し、インスタンスの位置を正確に示す必要があります。 楕円体座標系の多角形の内部は、左辺ルールによって定義されます。
 
- 互換性レベルが 100 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]以下の場合、 `geography`データ型には次の制限があります。
+ 互換性レベルが100以下の場合、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] `geography` データ型には次の制限があります。
 
 -   各 `geography` インスタンスが 1 つの半球に収まる必要があります。 半球よりも大きい空間オブジェクトを格納することはできません。
 
 -   Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現または Well-Known Binary (WKB) 表現の `geography` インスタンスでは、半球より大きいオブジェクトが生成される場合に `ArgumentException` がスローされます。
 
--   2 `geography`つ`geography`のインスタンスの入力を必要とするデータ型メソッド (Stintersection ()、Stintersection ()、Stintersection ()、stsym減法 () など) は、メソッドの結果が1つの格納範囲内に収まっていない場合に null を返します。 STBuffer() でも、出力が 1 つの半球に収まらない場合に null が返されます。
+-   `geography`2 つのインスタンスの入力を必要とするデータ型メソッド ( `geography` stintersection ()、stintersection ()、stintersection ()、Stsym減法 () など) は、メソッドの結果が1つの格納範囲内に収まっていない場合に null を返します。 STBuffer() でも、出力が 1 つの半球に収まらない場合に null が返されます。
 
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の `FullGlobe` は、球全体を覆う特殊な多角形です。 `FullGlobe` には領域がありますが、境界や頂点はありません。
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>geography データ型では外部リングと内部リングは重要ではない
- OGC Simple Features for SQL Specification では、外部リングと内部リングについて説明しています[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography`が、この違いはデータ型にはあまり意味がありません。多角形のリングは、外側のリングとして取得できます。
+ OGC Simple Features for SQL Specification では外部リングと内部リングについて説明していますが、この区別はデータ型にとってはあまり意味がありませ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` ん。ポリゴンのリングを外部リングとして使用できます。
 
  OGC の仕様の詳細については、以下を参照してください。
 
 -   [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=93627)
 
--   [OGC の仕様、簡易機能アクセス Part 2-SQL オプション](https://go.microsoft.com/fwlink/?LinkId=93628)
+-   [OGC の仕様、簡易機能アクセス Part 2 - SQL オプション](https://go.microsoft.com/fwlink/?LinkId=93628)
 
 
 ##  <a name="circular-arc-segments"></a><a name="circular"></a> 円弧セグメント
@@ -111,7 +110,7 @@ ms.locfileid: "78176652"
 
  図 C および図 D は、直線セグメントを円弧セグメントとして定義できる方法を示しています。  2 つの点のみによって定義できる通常の直線セグメントとは異なり、円弧セグメントを定義するには 3 つの点が必要であることに注意してください。
 
- 円弧型を操作するメソッドは、直線セグメントを使用して円弧を近似します。弧の概数値は、円弧の長さと曲率によって異なります。Z 値は、それぞれの円弧のセグメントの種類に対して格納できます。ただし、メソッドでは、計算に Z 値は使用されません。
+ 円弧型を操作するメソッドは、直線セグメントを使用して大まかな円弧を作成します。大まかな円を作成するために使用される直線セグメントの数は、円弧の長さと曲率によって異なります。Z 値はそれぞれの円弧型で格納できますが、メソッドは計算に Z 値を使用しません。
 
 > [!NOTE]
 >  Z 値が円弧セグメントに指定されている場合、円弧セグメントが入力として許容されるようにするには、円弧セグメント内のすべての点で Z 値が同じである必要があります。 たとえば、 `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` は許容されますが、 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` は許容されません。
@@ -152,7 +151,7 @@ LS LengthCS Length
 5.65685...6.28318...
 ```
 
- 次の図は、各型がどのように格納さ`LineString``@g1`れているか`CircularString``@g2`を示しています (赤い線の表示、青い線の表示)。
+ 次の図は、各型がどのように格納されているかを示しています (赤い線 `LineString``@g1` の表示、青い線の表示 `CircularString``@g2` )。
 
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")
 

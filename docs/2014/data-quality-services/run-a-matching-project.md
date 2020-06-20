@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7c17f478c8c7735aca0100a2fd99d6315d923bad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eec6f812fdab7f4fe29d0c5a5689e5cfc0489d47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937430"
 ---
 # <a name="run-a-matching-project"></a>照合プロジェクトの実行
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でデータ照合を実行する方法について説明します。 照合プロセスでは、照合ポリシーの照合ルールに基づいて一致レコードのクラスターを特定し、サバイバーシップ ルールに基づいて各クラスターで保持するレコードを 1 つ特定し、結果をエクスポートします。 照合プロセス (重複除去とも呼ばれます) はコンピューター支援型のプロセスで実行されますが、照合ルールを対話形式で作成し、いくつかの選択肢の中からサバイバーシップ ルールを選択することで、照合プロセスを制御します。  

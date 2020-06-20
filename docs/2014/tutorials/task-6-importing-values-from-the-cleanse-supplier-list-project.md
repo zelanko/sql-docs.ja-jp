@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb3e7a85254cac96b8b8541de57b494e96b8928f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489095"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061068"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>タスク 6: Cleanse Supplier List プロジェクトから値をインポートする
   ここでは、クレンジング プロセスで収集したデータ品質ナレッジをインポートします。 詳細について[は、「ドメインへのクレンジングプロジェクトの値のインポート](https://msdn.microsoft.com/library/hh479581.aspx)」を参照してください。 また、更新された**サプライヤー**ナレッジベースを公開する前に、ナレッジベースを DQS ファイルにエクスポートします。  
@@ -32,14 +31,14 @@ ms.locfileid: "65489095"
   
 5.  すべての電子メールが、インタラクティブなクレンジングで行った 2 つの修正と共にインポートされることに注意してください。 スクロールして 2 つの修正を確認します。  
   
-    |[値]|次に修正|  
+    |値|次に修正|  
     |-----------|----------------|  
     |bobby0@adventure-work.com|bobby0@adventure-works.com|  
     |tad0@adventure-work.com|tad0@adventure-works.com|  
   
 6.  **Country**ドメインのプロジェクト値をインポートする前の手順を繰り返し、**米国**を修正するために新しいエントリが追加されていることを確認します (を使用して**米国**)。  
   
-    |[値]|次に修正|  
+    |値|次に修正|  
     |-----------|----------------|  
     |United State|United States|  
   

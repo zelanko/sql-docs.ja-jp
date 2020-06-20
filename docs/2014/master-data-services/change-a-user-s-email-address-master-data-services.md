@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1d540c414b1190a045fdb18b4b971e73f348459f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6438291ca0d84bfd88c80f490022ebd4dd96ede9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483582"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972082"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>ユーザーの電子メール アドレスを変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、通知の送信先の電子メール アドレスおよび通知電子メールの既定の形式を変更できます。  
@@ -39,7 +38,7 @@ ms.locfileid: "65483582"
   
 5.  電子メール アドレスまたは電子メールの形式を更新します。  
   
-6.  **[Save]** (保存) をクリックします。  
+6.  **[保存]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
   

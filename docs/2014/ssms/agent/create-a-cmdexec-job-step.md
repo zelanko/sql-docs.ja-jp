@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ba283ef2ff426521c881f733bc29465eebc0c76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48c557b8ea4228d27b73d361c50aac62232d1e00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798161"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062325"
 ---
 # <a name="create-a-cmdexec-job-step"></a>CmdExec ジョブ ステップの作成
-  このトピックでは、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、、または SQL Server 管理オブジェクトを使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]実行可能なプログラムまたはオペレーティングシステムコマンドを使用するエージェントジョブステップを作成および定義する方法について説明します。  
+  このトピック [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、で、、または SQL Server 管理オブジェクトを使用して、実行可能なプログラムまたはオペレーティングシステムコマンドを使用するエージェントジョブステップを作成および定義する方法について説明し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
   
  **このトピックの内容**  
   
@@ -96,4 +95,4 @@ ms.locfileid: "72798161"
 
 ### <a name="to-create-a-cmdexec-job-step"></a>CmdExec ジョブ ステップを作成するには
   
- Visual Basic、 `JobStep` Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。  
+ `JobStep`Visual Basic、Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。  

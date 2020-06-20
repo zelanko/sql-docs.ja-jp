@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: aa2b5830ab0579fe0429357fea3275d4e14d1c47
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 61da7fafe60ef31246a436e21a5110c121d094e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703627"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996411"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>データ型の強制型変換と sql:datatype 注釈 (SQLXML 4.0)
   XSD スキーマでは、`xsd:type` 属性を使用して、要素または属性の XSD データ型を指定できます。 XSD スキーマを使用したデータベースからのデータの抽出では、指定されているデータ型を使用して、データが書式設定されます。  
@@ -40,12 +39,12 @@ ms.locfileid: "82703627"
   
 |XSD データ型|SQL Server の変換|  
 |-------------------|---------------------------|  
-|ブール型|CONVERT(bit, COLUMN)|  
+|Boolean|CONVERT(bit, COLUMN)|  
 |Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|時間|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |その他すべて|追加の変換はありません。|  
   
 > [!NOTE]  
@@ -94,7 +93,7 @@ ms.locfileid: "82703627"
   
  一般に、スキーマでは `sql:datatype` を指定することをお勧めします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-xsdtype"></a>A. xsd:type を指定する  

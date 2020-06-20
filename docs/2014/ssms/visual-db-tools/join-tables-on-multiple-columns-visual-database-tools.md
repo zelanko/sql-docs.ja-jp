@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56a158bc-a42a-4b78-baad-4721d2d22cd3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e26030a201087f8e99126760296659a3e7f04fe8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c64fd2ae64c95f2ca6f0d975c74f9585efd20995
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63306076"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044414"
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>複数の列でテーブルを結合する (Visual Database Tools)
   テーブルの結合は、複数の列を使用して行うこともできます。 つまり、2 つのテーブルの行が複数の条件を満たす場合だけこれらのテーブルの行を対応させるクエリを作成できます。 データベースのリレーションシップによって、複数存在する外部キー列を他方のテーブルの複数列にわたる主キーと一致させる場合、このリレーションシップを使用して複数列結合を作成できます。 詳しくは、「[テーブルの自動結合 (Visual Database Tools)](visual-database-tools.md)」をご覧ください。  

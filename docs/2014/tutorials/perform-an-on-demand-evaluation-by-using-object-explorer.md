@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee6d3b79-18bc-49d3-8a1d-0c0905b990f0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da56673e05c092c965554b76572ac3b0486d2110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210943"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044162"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用した要求時評価の実行
   ここでは、オブジェクト エクスプローラーを使用して、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の単一インスタンス上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に対して、ベスト プラクティス ポリシーの要求時評価を実行します。  
@@ -27,11 +26,11 @@ ms.locfileid: "68210943"
  このレッスンでは、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のバージョンを使用します。  
   
 > [!NOTE]  
->  を実行[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]しているインスタンスに対してベストプラクティスポリシーの要求時評価を実行するには、「[登録済みサーバーを使用して要求時評価を実行](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md)する」の手順を実行する必要があります。  
+>  を実行しているインスタンスに対してベストプラクティスポリシーの要求時評価を実行するには、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 「[登録済みサーバーを使用して要求時評価を実行](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md)する」の手順を実行する必要があります。  
   
 ### <a name="to-perform-an-on-demand-evaluation-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用して要求時評価を実行するには  
   
-1.  を[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]起動し、に接続し[!INCLUDE[ssDE](../includes/ssde-md.md)]ます。  
+1.  を起動 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] し、に接続し [!INCLUDE[ssDE](../includes/ssde-md.md)] ます。  
   
 2.  オブジェクトエクスプローラーで、[**管理**]、[**ポリシー管理**] の順に展開し、[**ポリシー**] を右クリックして、[**評価**] をクリックします。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "68210943"
   
 3.  [**ポリシーの評価**] ダイアログボックスの [**ソース**] ボックスの横にある省略記号ボタン ([**...**]) をクリックします。  
   
-4.  [**ソースの選択**] ダイアログボックスで、評価するポリシーファイルのソースとして [**ファイル**] または [**サーバー** ] を選択できます。 [**サーバー**] をクリックすると、以前にローカルサーバーまたはリモートサーバー上のポリシーベースの管理にインポートされたベストプラクティスポリシーの要求時評価を実行できます。 このチュートリアルでは、[**ファイル**] をクリックし、評価する個々のポリシーファイルを選択します。 これを行うには、次の手順に従います。  
+4.  [**ソースの選択**] ダイアログボックスで、評価するポリシーファイルのソースとして [**ファイル**] または [**サーバー** ] を選択できます。 [**サーバー**] をクリックすると、以前にローカルサーバーまたはリモートサーバー上のポリシーベースの管理にインポートされたベストプラクティスポリシーの要求時評価を実行できます。 このチュートリアルでは、[**ファイル**] をクリックし、評価する個々のポリシーファイルを選択します。 そのためには、次の手順に従います。  
   
     1.  [**ファイル**] をクリックします。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "68210943"
 6.  一部のポリシー エラーでは、ポリシー ベースの管理機能によってポリシーへの準拠を対象に直ちに適用できます。 このようなエラーの場合、エラーが発生したポリシーの横にチェック ボックスが表示されます。 チェックボックスをオンにすると、[**適用**] ボタンが使用できるようになります。 [**適用**] をクリックすると、準拠していない設定がターゲットインスタンスで自動的に更新されます。  
   
     > [!CAUTION]  
-    >  ポリシー設定を十分に理解してから、対象インスタンスを自動更新してください。 1つ以上のチェックボックスをオンにした後、[**スクリプト**] をクリックし、出力場所を選択して、変更[!INCLUDE[tsql](../includes/tsql-md.md)]を適用する前に基になるコードを確認できるようにすることをお勧めします。  
+    >  ポリシー設定を十分に理解してから、対象インスタンスを自動更新してください。 1つ以上のチェックボックスをオンにした後、[**スクリプト**] をクリックし、出力場所を選択して、変更を適用する前に基になるコードを確認できるようにすることをお勧めし [!INCLUDE[tsql](../includes/tsql-md.md)] ます。  
   
 7.  ポリシーの詳細な結果を表示するには、[**結果**] テーブルでポリシーをクリックします。  
   

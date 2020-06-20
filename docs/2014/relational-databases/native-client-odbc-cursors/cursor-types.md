@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a5b073ee58c0e29b1d7e6d02d079141838cef237
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6937dbb9ce42cd5631201e0c97be42b211742ada
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705674"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020957"
 ---
 # <a name="cursor-types"></a>カーソルの種類
   ODBC では、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と Native CLIENT ODBC ドライバーでサポートされる4種類のカーソルを定義して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] います。 これらのカーソルは、結果セットへの変更や、 **tempdb**のメモリや領域など、使用するリソースに対する変更を検出する機能によって異なります。 カーソルが行への変更を検出できるのは、変更が加えられた行の再フェッチを試みたときだけです。現在フェッチしている行への変更を、データ ソースからカーソルに通知する方法はありません。 カーソルを使用して行われなかった変更を検出する機能は、トランザクション分離レベルによって異なる場合があります。  

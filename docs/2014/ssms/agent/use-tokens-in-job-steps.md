@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2036dd0624e8c2c6479c8ba039aa5646f374902d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef8f72c282c540d695b799f0c4a884734db2c491
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211313"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062114"
 ---
 # <a name="use-tokens-in-job-steps"></a>ジョブ ステップでのトークンの使用
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップ スクリプトでトークンを使用できます。 ジョブ ステップを記述するときにトークンを使用すると、ソフトウェア プログラムを記述するときの変数と同じような柔軟性が得られます。 ジョブ ステップ スクリプトにトークンを挿入した後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブシステムでジョブ ステップが実行される前に、 [!INCLUDE[tsql](../../includes/tsql-md.md)] エージェントにより実行時にトークンが置き換えられます。  
@@ -34,7 +33,7 @@ ms.locfileid: "68211313"
 ## <a name="understanding-using-tokens"></a>トークンの使用について  
   
 > [!IMPORTANT]  
->  Windows イベント ログに対して書き込みのアクセス許可を持っている Windows ユーザーであればだれでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告または WMI 警告によってアクティブ化されるジョブ ステップにアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント トークンは、既定で無効になっています。 これらのトークンは次のとおりです。- **DBN**、 **-SVR**、 **-ERR**、**重大度**、 **a-MSG**、および**WMI (*`property`*)**。 このリリースでは、トークンの使用はすべての警告に拡張されていることに注意してください。  
+>  Windows イベント ログに対して書き込みのアクセス許可を持っている Windows ユーザーであればだれでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告または WMI 警告によってアクティブ化されるジョブ ステップにアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント トークンは、既定で無効になっています。 これらのトークンは次のとおりです。- **DBN**、 **-SVR**、 **-ERR**、**重大度**、 **a-MSG**、および**WMI ( *`property`* )**。 このリリースでは、トークンの使用はすべての警告に拡張されていることに注意してください。  
 >   
 >  これらのトークンを使用する必要がある場合は、まず、Administrators グループなどの信頼されている Windows セキュリティ グループのメンバーのみが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が存在するコンピューターのイベント ログに対して書き込みのアクセス許可を持っていることを確認してください。 確認したら、[オブジェクト エクスプローラー] で **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** をクリックします。次に、 **[警告システム]** ページで、 **[警告に応答するすべてのジョブのトークンを置き換える]** チェック ボックスをオンにして、これらのトークンを有効にします。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "68211313"
   
 |トークンの構文|警告トークンの置換が有効な場合|警告トークンの置換が無効な場合|  
 |------------------|--------------------------------|---------------------------------|  
-|ESCAPE マクロを使用する|ジョブ内のすべてのトークンが正常に置き換えられます。|警告によってアクティブ化されるトークンは置き換えられません。 これらのトークン**は、-DBN**、 **-SVR**、- **ERR**、**重大度**、 **-MSG**、および**WMI*`property`*()** です。 他の静的なトークンは正常に置き換えられます。|  
+|ESCAPE マクロを使用する|ジョブ内のすべてのトークンが正常に置き換えられます。|警告によってアクティブ化されるトークンは置き換えられません。 これらのトークン**は、-DBN**、 **-SVR**、- **ERR**、**重大度**、 **-MSG**、および**WMI ( *`property`* )** です。 他の静的なトークンは正常に置き換えられます。|  
 |ESCAPE マクロを使用しない|トークンを含んでいるすべてのジョブが失敗します。|トークンを含んでいるすべてのジョブが失敗します。|  
   
 ## <a name="token-syntax-update-examples"></a>トークンの構文の更新例  

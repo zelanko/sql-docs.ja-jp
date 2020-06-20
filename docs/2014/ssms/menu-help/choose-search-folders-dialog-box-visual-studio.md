@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf3647decf31b37a12d6f9a338907c9fc93182d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678934"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067414"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>[検索フォルダーの選択] ダイアログ ボックス (Visual Studio)
   固有の名前の付いた検索フォルダーのセットのアセンブリ、保存、および変更や、検索の順序の指定ができます。 このダイアログ ボックスを表示するには、[フォルダーを指定して検索]、[フォルダーを指定して置換]、または [検索と置換] のいずれかのウィンドウで、 **[検索対象]** ドロップダウン リストの横の **[...]** をクリックします。  

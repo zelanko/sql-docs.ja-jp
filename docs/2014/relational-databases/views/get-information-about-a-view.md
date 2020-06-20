@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4277aad4c1de0140606575c7ba437408518b3c8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061497"
 ---
 # <a name="get-information-about-a-view"></a>ビューに関する情報の取得
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のビューの定義またはプロパティに関する情報は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して取得できます。 ビューのデータが元のテーブルからどのように抽出されているのかを理解したり、ビューで定義されているデータを確認するために、ビューの定義を調べたい場合があります。  

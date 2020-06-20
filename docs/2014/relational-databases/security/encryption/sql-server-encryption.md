@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: f2aa6c25f8e8741308ff8f8b5df93cb2af67ad91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fc68e6f3280a8e23d6a1bf4f364aadfffd69f85
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957097"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060225"
 ---
 # <a name="sql-server-encryption"></a>SQL Server の暗号化
   暗号化は、キーまたはパスワードを使用してデータを難読化するプロセスです。 暗号化によって、データは対応する暗号化解除キーまたはパスワードがないと使用できなくなります。 暗号化では、アクセス コントロールの問題は解決されません。 ただし、暗号化を使用すると、アクセス コントロールがバイパスされる場合でもデータ損失のリスクが限定されるので、セキュリティが強化されます。 たとえば、データベース ホスト コンピューターの構成が適切でない場合に、機密データをハッカーが入手したとしても、その情報が暗号化されていれば、ハッカーはその情報を使用できません。  

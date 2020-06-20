@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cfddd4d-f605-4913-9648-66e8e41417e1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6afcec22eb14686c0bd7e65cdf10be0075f31577
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057091"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964962"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>[OLE DB 変換先エディター] ([マッピング] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
@@ -34,7 +33,7 @@ ms.locfileid: "66057091"
  使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる変換先列を入力列にマップします。  
   
  **入力列**  
- 選択した入力列を表示します。 [ ** \<>無視**] を選択して、出力から列を除外することで、マッピングを削除できます。  
+ 選択した入力列を表示します。 **\<ignore>** 出力から列を除外するように選択することで、マッピングを削除できます。  
   
  **変換先列**  
  マップするかどうかにかかわらず、使用できる変換先列を表示します。  

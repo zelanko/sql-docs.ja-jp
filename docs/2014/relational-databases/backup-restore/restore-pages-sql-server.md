@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fb008314b9cb156f1cc575bda71b6364eca6e3a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921037"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956762"
 ---
 # <a name="restore-pages-sql-server"></a>ページ復元 (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してページを復元する方法について説明します。 ページ復元の目的は、データベース全体を復元することなく 1 つ以上の損傷したページを復元することです。 通常、復元候補のページは、そのページにアクセスする際に発生したエラーによって、"問題あり" に設定されています。 問題ありに設定されているページは、 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) データベースの **suspect_pages** テーブルで特定できます。  
@@ -39,7 +38,7 @@ ms.locfileid: "62921037"
   
      [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ページを復元する方法:**  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62921037"
   
     -   [トランザクション ログ]  
   
-    -   アロケーション ページ。これには、グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページなどが含まれます。  
+    -   アロケーション ページ:グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページ。  
   
     -   すべてのデータ ファイルのページ 0 (ファイルのブート ページ)  
   
@@ -132,9 +131,9 @@ ms.locfileid: "62921037"
   
     |ヘッダー|値|  
     |------------|------------|  
-    |**Name**|バックアップ セットの名前です。|  
-    |**コンポーネント**|バックアップされるコンポーネント。 **[データベース]** 、 **[ファイル]** 、または **[\<空白>]** \(トランザクション ログ用) のいずれかを指定します。|  
-    |**Type**|実行するバックアップの種類です。 **[完全]** 、 **[差分]** 、または **[トランザクション ログ]** のいずれかを指定します。|  
+    |**名前**|バックアップ セットの名前です。|  
+    |**コンポーネント**|バックアップされるコンポーネント。 [**データベース**]、[**ファイル**]、または **\<blank>** (トランザクションログ用) のいずれかを使用します。|  
+    |**Type**|実行するバックアップの種類: **[完全]** 、 **[差分]** 、 **[トランザクション ログ]** 。|  
     |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前。|  
     |**[データベース]**|バックアップ操作に呼び出されるデータベース名です。|  
     |**Position**|ボリューム内でのバックアップ セットの位置。|  

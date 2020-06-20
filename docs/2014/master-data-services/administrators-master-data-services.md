@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeedc1f735fd296169f704b794d1bb0e69adab22
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480016"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972272"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] には、モデル管理者と [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システム管理者の 2 種類の管理者があります。  
   
 ## <a name="model-administrators"></a>モデル管理者  
- で[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]は、モデル管理者は、[**モデルオブジェクト**] タブの最上位のモデルオブジェクトに割り当てられた**更新**権限を持ち、その他の割り当てられた権限がないユーザーです。  
+ で [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は、モデル管理者は、[**モデルオブジェクト**] タブの最上位のモデルオブジェクトに割り当てられた**更新**権限を持ち、その他の割り当てられた権限がないユーザーです。  
   
 -   ユーザーに **[エクスプローラー]** 機能領域へのアクセス権がある場合、ユーザーはこのデータ領域のすべてのマスター データを追加、削除、および更新できます。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "65480016"
  ユーザーをモデル管理者として構成するには、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] を使用するかプログラムで構成します。 詳細については、「 [モデル管理者を作成する (マスター データ サービス)](create-a-model-administrator-master-data-services.md)」を参照してください。  
   
 ## <a name="master-data-services-system-administrator"></a>Master Data Services システム管理者  
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システム管理者は 1 人だけです。 システム管理者は、データベースの[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]作成時に**管理者アカウント**に対して指定されたユーザーです。  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システム管理者は 1 人だけです。 システム管理者は、データベースの作成時に**管理者アカウント**に対して指定されたユーザーです [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システム管理者:  
   

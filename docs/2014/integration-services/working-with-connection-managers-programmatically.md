@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6053418c624c2ab107a35a02c382576dcb41a534
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877703"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972442"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>プログラムによる接続マネージャーの操作
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、関連付けられた接続マネージャー クラスの AcquireConnection メソッドは、マネージド コードで接続マネージャーを操作する場合に呼び出すことの多いメソッドです。 マネージド コードを記述する場合、接続マネージャーの機能を使用するには AcquireConnection メソッドを呼び出す必要があります。 このメソッドは、マネージド コードを記述する場所がスクリプト タスク、スクリプト コンポーネント、カスタム オブジェクト、またはカスタム アプリケーションのいずれであっても、呼び出す必要があります。  
@@ -55,13 +54,13 @@ ms.locfileid: "62877703"
 |接続マネージャーの種類|接続マネージャー名|戻り値の型|追加情報|  
 |-----------------------------|-----------------------------|--------------------------|----------------------------|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|[!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャー|`System.Data.SqlClient.SqlConnection`||  
-|FILE|ファイル接続マネージャー|`System.String`|ファイルへのパス。|  
+|ファイル|ファイル接続マネージャー|`System.String`|ファイルへのパス。|  
 |FLATFILE|フラット ファイル接続マネージャー|`System.String`|ファイルへのパス。|  
 |MSMQ|MSMQ 接続マネージャー|`System.Messaging.MessageQueue`||  
 |MULTIFILE|複数ファイル接続マネージャー|`System.String`|いずれかのファイルへのパス。|  
 |MULTIFLATFILE|複数フラット ファイル接続マネージャー|`System.String`|いずれかのファイルへのパス。|  
 |SMOServer|SMO 接続マネージャー|`Microsoft.SqlServer.Management.Smo.Server`||  
-|SMTP|SMTP 接続マネージャー|`System.String`|たとえば次のようになります。`SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|SMTP|SMTP 接続マネージャー|`System.String`|例: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|WMI 接続マネージャー|`System.Management.ManagementScope`||  
 |SQLMOBILE|SQL Server Compact 接続マネージャー|`System.Data.SqlServerCe.SqlCeConnection`||  
   

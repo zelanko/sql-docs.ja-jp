@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e29d088b8ea61c0d7fc58b45097f703a67bd1df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62886462"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972712"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>パッケージ開発のトラブルシューティング ツール
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを開発する際にトラブルシューティングを実行できる機能とツールが用意されています。  
@@ -41,7 +40,7 @@ ms.locfileid: "62886462"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、検証エラーを回避するための以下の追加機能が備わっています。  
   
--   **データ ソースが使用できないときは、オフラインで動作するようにすべてのパッケージとすべての接続を設定します**。 **[SSIS]** メニューの **[オフライン作業]** を有効にできます。 `DelayValidation`プロパティとは異なり、[**オフライン作業**] オプションはパッケージを開く前でも使用できます。 また、 **[オフライン作業]** を有効にしてデザイナーでの操作を高速化し、パッケージを検証するときだけこのオプションを無効にすることもできます。  
+-   **データ ソースが使用できないときは、オフラインで動作するようにすべてのパッケージとすべての接続を設定します**。 **[SSIS]** メニューの **[オフライン作業]** を有効にできます。 プロパティとは異なり、[ `DelayValidation` **オフライン作業**] オプションはパッケージを開く前でも使用できます。 また、 **[オフライン作業]** を有効にしてデザイナーでの操作を高速化し、パッケージを検証するときだけこのオプションを無効にすることもできます。  
   
 -   **実行時まで無効なパッケージ要素の DelayValidation プロパティを構成する**。 デザイン時には構成が有効でないパッケージ要素の `DelayValidation` を `True` に設定すると、検証エラーが発生するのを防ぐことができます。 たとえば、SQL 実行タスクが実行時に作成するまで存在しないテーブルを、データ フロー タスクで使用する場合があります。 `DelayValidation` プロパティはパッケージ ベル、またはパッケージに含まれている個別のタスクやコンテナーのレベルで有効にできます。 実行時に同じ検証エラーが発生するのを防ぐため、パッケーを配置するときは、同一パッケージ内の要素についてこのプロパティを `True` に設定しておく必要があります。  
   

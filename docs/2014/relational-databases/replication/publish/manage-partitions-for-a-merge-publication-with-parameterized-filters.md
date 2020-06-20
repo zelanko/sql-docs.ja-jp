@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a71ac4d6bcc887257ea5bfbc1523e327fc03b16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 983b02865c0564919259f896bf09d8bdb0cd969f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74479312"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060505"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>パラメーター化されたフィルターによるマージ パブリケーションのパーティションの管理
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パラメーター化されたフィルターを利用し、マージ パブリケーションのパーティションを管理する方法ついて説明します。 パラメーター化された行フィルターを使用して、重複しないパーティションを生成できます。 パーティションを制限することで、特定のパーティションを 1 つのサブスクリプションだけが受け取るようにできます。 このような場合、サブスクリプションの数が多いと多数のパーティションが生成されるため、それと同数のパーティション スナップショットが必要になります。 詳しくは、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
@@ -47,11 +46,11 @@ ms.locfileid: "74479312"
 -   パブリケーションが、重複しないパーティションを含むサブスクリプションを返すパラメーター化されたフィルターを持つ場合に、特定のサブスクリプションが失われて再作成が必要になったときは、サブスクライブされたパーティションを削除し、サブスクリプションを再作成してから、パーティションを再作成する必要があります。 詳しくは、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。 パブリケーション作成スクリプトが生成されると、レプリケーションによって既存のサブスクライバー パーティション用の作成スクリプトが生成されます。 詳細については、「[レプリケーションのスクリプト作成](../scripting-replication.md)」を参照してください。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[データ パーティション]** ページでパーティションを管理します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](view-and-modify-publication-properties.md)」を参照してください。 このページでは、パーティションを作成および削除する、サブスクライバーがスナップショットの生成および配信を開始できるようにする、1 つ以上のパーティションのスナップショットを生成する、スナップショットをクリーンアップするなどの操作を行うことができます。  
+ [**パブリケーションのプロパティ \<Publication> -** ] ダイアログボックスの [**データパーティション**] ページでパーティションを管理します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](view-and-modify-publication-properties.md)」を参照してください。 このページでは、パーティションを作成および削除する、サブスクライバーがスナップショットの生成および配信を開始できるようにする、1 つ以上のパーティションのスナップショットを生成する、スナップショットをクリーンアップするなどの操作を行うことができます。  
   
 #### <a name="to-create-a-partition"></a>パーティションを作成するには  
   
-1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[データ パーティション]** ページで **[追加]** をクリックします。  
+1.  [**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスの [**データパーティション**] ページで、[**追加**] をクリックします。  
   
 2.  **[データ パーティションの追加]** ダイアログ ボックスで、作成するパーティションに関連する **HOST_NAME()** 値または **SUSER_SNAME()** 値、あるいはその両方を入力します。  
   
@@ -100,25 +99,25 @@ ms.locfileid: "74479312"
   
 #### <a name="to-view-information-on-existing-partitions"></a>既存のパーティションに関する情報を表示するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql) を実行します。 パブリケーションのパブリケーションの名前を指定します。 ** \@** Optional1つのフィルター条件に基づいて情報のみを返すには、 ** \@suser_sname**または** \@host_name**を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql) を実行します。 ** \@ パブリケーション**のパブリケーションの名前を指定します。 Optional1つのフィルター条件に基づいて情報のみを返すには、 ** \@ suser_sname**または** \@ host_name**を指定します。  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>新しいパーティションを定義して、新しいパーティション スナップショットを生成するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql) を実行します。 パブリケーションの名前と、次のいずれかのパーティションを定義するパラメーター化された値を指定します。 ** \@**  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql) を実行します。 ** \@ パブリケーション**の名前と、次のいずれかのパーティションを定義するパラメーター化された値を指定します。  
   
-    -   suser_sname-パラメーター化されたフィルターが SUSER_SNAME によって返される値によって定義されている場合[&#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)。 ** \@**  
+    -   ** \@ suser_sname** -パラメーター化されたフィルターが SUSER_SNAME によって返される値によって定義されている場合[&#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)。  
   
-    -   host_name-パラメーター化されたフィルターが HOST_NAME によって返される値によって定義されている場合[&#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)。 ** \@**  
+    -   ** \@ host_name** -パラメーター化されたフィルターが HOST_NAME によって返される値によって定義されている場合[&#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)。  
   
 2.  この新しいパーティションのパラメーター化スナップショットを作成し、初期化します。 詳しくは、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   
 #### <a name="to-delete-a-partition"></a>パーティションを削除するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql) を実行します。 パブリケーションのパブリケーションの名前と、次のいずれかのパーティションを定義するパラメーター化された値を指定します。 ** \@**  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql) を実行します。 ** \@ パブリケーション**のパブリケーションの名前と、次のいずれかのパーティションを定義するパラメーター化された値を指定します。  
   
-    -   suser_sname-パラメーター化されたフィルターが SUSER_SNAME によって返される値によって定義されている場合[&#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)。 ** \@**  
+    -   ** \@ suser_sname** -パラメーター化されたフィルターが SUSER_SNAME によって返される値によって定義されている場合[&#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)。  
   
-    -   host_name-パラメーター化されたフィルターが HOST_NAME によって返される値によって定義されている場合[&#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)。 ** \@**  
+    -   ** \@ host_name** -パラメーター化されたフィルターが HOST_NAME によって返される値によって定義されている場合[&#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)。  
   
      これにより、そのパーティションのスナップショット ジョブおよびすべてのスナップショット ファイルも削除されます。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65af4c1bce3e09f33771b2729c01c02b9512688b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bbd9f3693fa8f84015efb061dda5e1a9267af960
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718056"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996386"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText プロパティを使用した、テンプレート ファイルの実行
   この例では、SQL または XPath クエリで構成されるテンプレートファイルを CommandTextproperty を使用して指定する方法を示します。 CommandText の値として SQL または XPath クエリを指定する代わりに、ファイル名を値として指定できます。 次の例では、CommandType プロパティが SqlXmlCommandType として指定されています。  

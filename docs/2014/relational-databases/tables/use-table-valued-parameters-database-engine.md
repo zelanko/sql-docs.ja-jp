@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa7013fddc6b2ce12ad9ad0f9fcb511d93915e05
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211762"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002856"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>テーブル値パラメーターの使用 (データベース エンジン)
   テーブル値パラメーターは、ユーザー定義テーブル型を使用して宣言されます。 テーブル値パラメーターを使用すると、一時テーブルまたは多数のパラメーターを作成せずに、ストアド プロシージャや関数などの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはルーチンに複数行のデータを送信できます。  
@@ -79,7 +78,7 @@ ms.locfileid: "68211762"
   
  テーブル値パラメーターは、同等のパラメーター配列の実装と同様またはそれ以上のパフォーマンスを実現します。  
   
-##  <a name="example"></a><a name="Example"></a>よう  
+##  <a name="example"></a><a name="Example"></a> 例  
  次の例では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、テーブル値パラメーターの型を作成してその型を参照する変数を宣言し、パラメーター一覧を入力して値をストアド プロシージャに渡す方法を示します。  
   
 ```  

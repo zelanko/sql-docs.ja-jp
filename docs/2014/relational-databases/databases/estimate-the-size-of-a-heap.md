@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 814175fa78176d14167355bfe188179552c545c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916746"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965982"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>ヒープ サイズの見積もり
   ヒープにデータを格納するために必要な領域は、次の手順で見積もることができます。  
@@ -57,13 +56,13 @@ ms.locfileid: "62916746"
      ***Max_Var_Size*** に追加されたバイトは、それぞれの可変長列を追跡するためのものです。 この式は、すべての可変長列がいっぱいになることを前提としています。 可変長列の格納領域の使用率が 100% 以下になることが予想される場合、その使用率に基づいて ***Max_Var_Size*** の値を調整し、テーブルの全体サイズをより正確に見積もることができます。  
   
     > [!NOTE]  
-    >  定義済みのテーブルの合計サイズが 8,060 バイトを超える `varchar`、`nvarchar`、`varbinary`、または `sql_variant` 列の連結が可能です。 これらの各列の長さは`varchar`、、 `nvarchar,``varbinary`、または`sql_variant`列の8000バイトの制限内に収まる必要があります。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。  
+    >  定義済みのテーブルの合計サイズが 8,060 バイトを超える `varchar`、`nvarchar`、`varbinary`、または `sql_variant` 列の連結が可能です。 これらの各列の長さは `varchar` 、、、または列の8000バイトの制限内に収まる必要があり `nvarchar,``varbinary` `sql_variant` ます。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。  
   
      可変長列が存在しない場合は、 ***Variable_Data_Size*** に 0 を設定します。  
   
 5.  次の式で行サイズの合計を計算します。  
   
-     ***Row_Size***  = ***Fixed_Data_Size***Fixed_Data_Size + ***Variable_Data_Size***Variable_Data_Size + ***Null_Bitmap*** + 4  
+     ***Row_Size***   = ***Fixed_Data_Size***  + ***Variable_Data_Size***  + ***Null_Bitmap*** + 4  
   
      上記の式の 4 という値は、データ行の行ヘッダー オーバーヘッドです。  
   
@@ -95,7 +94,7 @@ ms.locfileid: "62916746"
   
 -   ラージ オブジェクト (LOB) の値  
   
-     LOB データ型`varchar(max)` `varbinary(max)` `nvarchar(max)`、、 `text`、、 **ntextxml**、および`image`値の格納に使用される領域を正確に特定するためのアルゴリズムは複雑です。 LOB データ型の値で使用される領域の計算は、予想される LOB 値の平均サイズを合計し、ヒープの合計サイズに加算するだけで十分です。  
+     LOB データ型、、、 `varchar(max)` `varbinary(max)` `nvarchar(max)` `text` 、 **ntextxml**、および値の格納に使用される領域を正確に特定するためのアルゴリズム `image` は複雑です。 LOB データ型の値で使用される領域の計算は、予想される LOB 値の平均サイズを合計し、ヒープの合計サイズに加算するだけで十分です。  
   
 -   圧縮  
   

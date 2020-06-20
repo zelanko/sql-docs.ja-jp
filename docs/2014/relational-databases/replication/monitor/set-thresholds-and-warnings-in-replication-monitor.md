@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ff3e97a3a784bc61a20de9c65a4381c81078480
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667185"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060813"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>レプリケーション モニターのしきい値と警告の設定
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]レプリケーションモニターには、パブリケーションとサブスクリプションの状態情報が表示されます。 既定で表示される警告は、初期化されていないサブスクリプションに対する警告だけですが、その他の条件に対する警告を有効にすることもできます。 トポロジに対する警告を有効にすることをお勧めします。この警告を有効にすると、状態やパフォーマンスに関する情報をタイムリーに受け取ることができます。  
