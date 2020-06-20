@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d0b42a2d64b991089a7bec51a88704834e941432
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 074641e6f3ab9900e3842787e56746ad66a33fbe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703770"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009551"
 ---
 # <a name="print-code-and-results"></a>コードと結果の印刷
   クエリまたはファイルの印刷時には、プリンターがカラー印刷をサポートしており、プリンターの設定でカラー印刷が有効になっている場合、色分けされた要素はカラーで印刷されます。  

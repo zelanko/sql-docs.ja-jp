@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 06ae01a097b164abb1b55267853ee99f7e5bf445
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b8aa5b83756df36b133a339ba99b13406251947
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483832"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971462"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>フォルダーとファイルの権限 (マスター データ サービス)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のインストール時に、ファイル システムで指定のインストール パスにフォルダーとファイルが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共有機能用にインストールされます。 共有機能に[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]既定のインストールパスを使用する場合、のインストールパス[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]は*drive*://SQL server の Data Services です。 共有機能のインストール パスは変更できますが、親フォルダーから継承される権限と [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]に対して明示的に設定されている権限に注意する必要があります。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のインストール時に、ファイル システムで指定のインストール パスにフォルダーとファイルが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共有機能用にインストールされます。 共有機能に既定のインストールパスを使用する場合 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、のインストールパス [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は*drive*://SQL server の Data Services です。 共有機能のインストール パスは変更できますが、親フォルダーから継承される権限と [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]に対して明示的に設定されている権限に注意する必要があります。  
   
 ## <a name="inherited-permissions"></a>継承された権限  
  **Microsoft SQL Server** フォルダー、 **Master Data Services** フォルダー、および大半のサブフォルダーとファイルは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のセットアップで指定した親フォルダーから権限を継承します。 既定のインストール場所を使用している場合、権限の継承元の親フォルダーは *drive*:\Program Files です。 次の表では、 **Program Files**に対する既定の権限について説明します。  
@@ -37,7 +36,7 @@ ms.locfileid: "65483832"
 |---------------------------|-----------------|  
 |CREATOR OWNER|特別な権限|  
 |SYSTEM|特別な権限|  
-|Administrators|特別な権限|  
+|管理者|特別な権限|  
 |ユーザー|読み取りと実行、フォルダー内容の一覧表示、読み取り|  
 |TrustedInstaller|フォルダー内容の一覧表示、特別な権限|  
   
@@ -49,7 +48,7 @@ ms.locfileid: "65483832"
 |グループ名またはアカウント名|アクセス許可|  
 |---------------------------|-----------------|  
 |SYSTEM|変更、読み取りと実行、フォルダー内容の一覧表示、読み取り、書き込み|  
-|Administrators|変更、読み取りと実行、フォルダー内容の一覧表示、読み取り、書き込み|  
+|管理者|変更、読み取りと実行、フォルダー内容の一覧表示、読み取り、書き込み|  
 |MDS_ServiceAccounts|変更、読み取りと実行、フォルダー内容の一覧表示、読み取り、書き込み|  
   
 ###### <a name="webconfig-permissions"></a>Web.config 権限  
@@ -57,7 +56,7 @@ ms.locfileid: "65483832"
 |グループ名またはアカウント名|アクセス許可|  
 |---------------------------|-----------------|  
 |SYSTEM|フル コントロール、変更、読み取りと実行、読み取り、書き込み|  
-|Administrators|フル コントロール、変更、読み取りと実行、読み取り、書き込み|  
+|管理者|フル コントロール、変更、読み取りと実行、読み取り、書き込み|  
 |MDS_ServiceAccounts|読み取りと実行、読み取り|  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config ファイルのコンテンツの詳細については、「[Web 設定リファレンス (マスター データ サービス)](web-configuration-reference-master-data-services.md)」を参照してください。  

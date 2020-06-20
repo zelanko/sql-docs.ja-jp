@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7a8d5f04808582bd56c106adce0df2c1f66aa77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f2794fd33ee2210b99aead0f79fd3a3ab470c00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62913726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046085"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>SQL Server フェールオーバー クラスターのアップグレード
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、すべてのフェールオーバー クラスター ノードで個別に、[!INCLUDE[ssDE](../../../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]、および [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] のフェールオーバー クラスターから[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]および [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] をアップグレードすることがサポートされています。  
@@ -28,7 +27,7 @@ ms.locfileid: "62913726"
   
 -   ユーザー インターフェイスを使用したアップグレードとコマンド プロンプトからのアップグレードの両方がサポートされています。 詳細については、「[SQL Server フェールオーバー クラスター インスタンスのアップグレード &#40;セットアップ&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)」および「[コマンド プロンプトからの SQL Server 2014 のインストール](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)」を参照してください。  
   
--   から[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]アップグレードする場合は、各フェールオーバークラスターノードでコマンドプロンプトからアップグレードを実行するか、セットアップ UI を使用して各クラスターノードをアップグレードすることができます。 アップグレードするインスタンスにフルテキスト検索機能およびレプリケーション機能が存在しない場合、これらの機能は、自動的にインストールされ、省略できません。  
+-   からアップグレードする [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 場合は、各フェールオーバークラスターノードでコマンドプロンプトからアップグレードを実行するか、セットアップ UI を使用して各クラスターノードをアップグレードすることができます。 アップグレードするインスタンスにフルテキスト検索機能およびレプリケーション機能が存在しない場合、これらの機能は、自動的にインストールされ、省略できません。  
   
 -   Service Pack のインストールについては、すべてのノードの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターに [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] の Service Pack と修正プログラムを個別に適用する必要があります。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "62913726"
 -   詳細については、「[Always On フェールオーバー クラスター インスタンス (SQL Server)](always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
 ## <a name="upgrading-a-ssnoversion-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターのアップグレード  
- マルチサブネット[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバークラスターを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]マルチサブネットフェールオーバークラスターに直接アップグレードすることはできません。 詳細については、「[SQL Server フェールオーバー クラスター インスタンスのアップグレード &#40;セットアップ&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)」を参照してください。  
+ マルチサブネット [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバークラスターを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネットフェールオーバークラスターに直接アップグレードすることはできません。 詳細については、「[SQL Server フェールオーバー クラスター インスタンスのアップグレード &#40;セットアップ&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [サポートされているバージョンとエディションのアップグレード](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   

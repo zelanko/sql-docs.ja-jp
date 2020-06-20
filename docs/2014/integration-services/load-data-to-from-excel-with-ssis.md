@@ -10,13 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1611f35e4004383c4da9949d4162051caf7b61e5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767314"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951252"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して、Excel からデータをインポートする、または Excel にデータをエクスポートする
 
@@ -81,7 +80,7 @@ SSIS で、Excel ソースまたは変換先ファイルに接続するための
 
 -   ローカル コンピューター上のファイルの場合、**C:\\TestData.xlsx** です。
 
--   ネットワーク共有上のファイルの場合、 ** \\ \\Sales\\Data\\TestData**。
+-   ネットワーク共有上のファイルの場合、 ** \\ \\ 売上 \\ データ \\TestData.xlsx**ます。
 
 または、**[参照]** をクリックして、**[ファイルを開く]** ダイアログ ボックスを使用してワークシートを検索します。  
   
@@ -157,7 +156,7 @@ SSIS で、**Excel ソース エディター**または **Excel 変換先エデ�
 
 ## <a name="issues-with-data-types"></a><a name="issues-types"></a>データ型に関する問題
 
-### <a name="data-types"></a>データの種類
+### <a name="data-types"></a>データ型
 
 Excel ドライバーでは、データ型の限定されたセットのみを認識します。 たとえば、すべての数値列は倍精度浮動小数点型 (DT_R8) として解釈され、すべての文字列の列 (メモ列以外) は 255 文字の Unicode 文字列 (DT_WSTR) として解釈されます。 SSIS では、Excel データ型を次のようにマップします。
 
@@ -242,7 +241,7 @@ Excel の列にテキスト データが含まているとドライバーが判�
 
 -   新しい変換先のテーブルがパッケージの設計時または実行時に作成される場合、またはインポートおよびエクスポート ウィザードによって作成される場合は、`CREATE TABLE` ステートメントで LONGTEXT (またはそのいずれかのシノニム) を変換先のメモ列のデータ型として使用する必要があります。 ウィザードで、**[列マッピング]** ページの **[変換先テーブルの作成]** オプションの横にある **[SQL の編集]** をクリックし、`CREATE TABLE` ステートメントを調べて、必要であれば修正します。
 
-## <a name="related-content"></a>関連するコンテンツ
+## <a name="related-content"></a>関連コンテンツ
 
 この記事で説明した手順とコンポーネントに関する詳細は、次の記事を参照してください。
 

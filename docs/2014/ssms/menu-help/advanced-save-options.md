@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48790cae2251bdad7d958f1adee38235edb20abb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678996"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067462"
 ---
 # <a name="advanced-save-options"></a>[保存オプションの詳細設定]
-  このダイアログ ボックスを使用すると、言語エンコード方式を選択したり、各行の末尾に挿入する文字を指定したりできます。 [**保存オプションの詳細設定**] ダイアログボックスにアクセスするには、[**ファイル**] メニューの [クエリ**名>に****保存** \<] をクリックして [名前を付け**て保存**] ダイアログボックスを開き、[**保存**] ボタンの下矢印をクリックして、[**エンコード付きで保存**] をクリックします。  
+  このダイアログ ボックスを使用すると、言語エンコード方式を選択したり、各行の末尾に挿入する文字を指定したりできます。 **[保存オプションの詳細設定]** ダイアログ ボックスを表示するには、 **[ファイル]** メニューの **[名前を付けて** \<query name> **.sql を保存]** をクリックします。 **[名前を付けてファイルを保存]** ダイアログ ボックスが開くので、 **[保存]** ボタンにある下矢印をクリックして、 **[エンコード付きで保存]** をクリックします。  
   
 ## <a name="options"></a>オプション  
  **[エンコード]**  

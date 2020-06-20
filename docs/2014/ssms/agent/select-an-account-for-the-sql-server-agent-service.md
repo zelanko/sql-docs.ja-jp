@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c54dd8b57dc0b1e13b622110d3f4cf9f796610a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811083"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067630"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server エージェント サービスのアカウントの選択
   サービス開始アカウントにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] エージェントを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows アカウントとそのネットワーク権限が定義されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、指定されたユーザー アカウントで実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスのアカウントを選択します。構成マネージャーでは、次のオプションから選択できます。  
@@ -79,7 +78,7 @@ ms.locfileid: "68811083"
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ドメイン アカウント (Windows Administrators グループのメンバー)|サポートされています|サポートされています|サポートされています|  
 |Windows ドメイン アカウント (管理者以外)|サポート<sup>1</sup>|サポート<sup>1</sup>|サポート<sup>1</sup>|  
 |ネットワーク サービス アカウント (NT AUTHORITY\NetworkService)|サポートされている<sup>1、3、4</sup>|サポートされていません|サポートされていません|  
-|ローカル ユーザー アカウント (管理者以外)|サポート<sup>1</sup>|サポートされていません|適用なし|  
+|ローカル ユーザー アカウント (管理者以外)|サポート<sup>1</sup>|サポートされていません|利用不可|  
 |ローカル システム アカウント (NT AUTHORITY\System)|サポートされている<sup>2</sup>|サポートされていません|サポートされている<sup>2</sup>|  
 |ローカル サービス アカウント (NT AUTHORITY\LocalService)|サポートされていません|サポートされていません|サポートされていません|  
   

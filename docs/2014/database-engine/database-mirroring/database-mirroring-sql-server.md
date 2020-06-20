@@ -22,20 +22,19 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe1221b1ff86b96490fb09a5785978dcc16ac40b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807926"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934293"
 ---
 # <a name="database-mirroring-sql-server"></a>データベース ミラーリング (SQL Server)
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用します。  
   
- *データベースミラーリング*は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースの可用性を高めるためのソリューションです。 ミラーリングはデータベースごとに実装され、完全復旧モデルを使用するデータベースでのみ機能します。  
+ *データベースミラーリング*は、データベースの可用性を高めるためのソリューションです [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 ミラーリングはデータベースごとに実装され、完全復旧モデルを使用するデータベースでのみ機能します。  
   
 > [!IMPORTANT]  
 >   データベース ミラーリングのサポート、制限事項、推奨事項、パートナー サーバーの構成に関する前提条件については、「 [Prerequisites, Restrictions, and Recommendations for Database Mirroring](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)」を参照してください。  
@@ -194,9 +193,9 @@ ms.locfileid: "62807926"
   
 |サーバー インスタンス|データベース A のセッション|データベース B のセッション|データベース C のセッション|データベース D のセッション|  
 |---------------------|----------------------------|----------------------------|----------------------------|----------------------------|  
-|`SSInstance_1`|ミラーリング監視サーバー|パートナー|パートナー|パートナー|  
-|`SSInstance_2`|パートナー|ミラーリング監視サーバー|パートナー|パートナー|  
-|`SSInstance_3`|パートナー|パートナー|ミラーリング監視サーバー|ミラーリング監視サーバー|  
+|`SSInstance_1`|ミラーリング監視サーバー|Partner|Partner|Partner|  
+|`SSInstance_2`|Partner|ミラーリング監視サーバー|Partner|Partner|  
+|`SSInstance_3`|Partner|Partner|ミラーリング監視サーバー|ミラーリング監視サーバー|  
   
  次の図に、2 つのミラーリング セッションに共にパートナーとして参加している 2 つのサーバー インスタンスを示します。 一方のセッションは **Db_1**というデータベース用で、もう一方のセッションは **Db_2**というデータベース用です。  
   
@@ -211,7 +210,7 @@ ms.locfileid: "62807926"
 > [!NOTE]  
 >  ミラー化したデータベースは互いに独立しているので、データベースをグループとしてフェールオーバーすることはできません。  
   
-###  <a name="client-connections"></a><a name="ClientConnections"></a>クライアント接続  
+###  <a name="client-connections"></a><a name="ClientConnections"></a> クライアント接続  
  データベース ミラーリング セッションのクライアント接続サポートは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって提供されます。 詳細については、このトピックの「 [データベース ミラーリング セッションへのクライアントの接続 &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)」を参照してください。  
   
 ###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a>プリンシパルトランザクションログでセッションを一時停止した場合の影響  
@@ -233,7 +232,7 @@ ms.locfileid: "62807926"
   
 -   [レプリケーション](database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="in-this-section"></a><a name="InThisSection"></a>このセクションの説明  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> トピックの内容  
  [データベース ミラーリングの前提条件、制限事項、推奨事項](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  データベース ミラーリングを設定するための前提条件と推奨事項について説明します。  
   
@@ -270,13 +269,13 @@ ms.locfileid: "62807926"
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 ### <a name="configuration-tasks"></a>構成のタスク  
- **SQL Server Management Studio の使用**  
+ **SQL Server Management Studio を使用する**  
   
 -   [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
 -   [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
- **Transact-sql の使用**  
+ **Transact-SQL の使用**  
   
 -   [Windows 認証を使用してデータベース ミラーリング エンドポイントへのネットワーク アクセスを許可する &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)  
   

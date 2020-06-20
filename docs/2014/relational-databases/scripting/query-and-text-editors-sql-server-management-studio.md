@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c3e064358b58844726daa6499dc6c2ed0eeedd1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b6d7e62118f4fe3a01bca158d9dce13d9e7bfb52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703793"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009658"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>クエリおよびテキスト エディター (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のいずれかのエディターを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、または XML/A スクリプトを対話的に編集し、テストできます。XML またはプレーンテキスト ファイルを編集することもできます。 各エディターでは、キーワードを色分け表示したり、言語固有の構文や使用方法のエラーをチェックするサービスがサポートされています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードの問題を解決するのに役立つ [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーが用意されています。  
@@ -76,7 +75,7 @@ ms.locfileid: "82703793"
  **テンプレート**  
  テンプレートは、データベース内にオブジェクトを作成するのに必要なステートメントの基本構造が含まれたファイルです。 スクリプトの作成を迅速化するのに使用できます。  
   
- **メッセージ**  
+ **Messages (メッセージ)**  
  スクリプトの実行時にサーバーから返されるエラー、警告、および情報メッセージが表示されます。 メッセージの一覧は、スクリプトが再び実行されるまで変更されません。  
   
  **ステータス バー**  
@@ -97,7 +96,7 @@ ms.locfileid: "82703793"
  **クライアント統計**  
  クエリの実行に関する情報がカテゴリに分けて表示されます。 **[クエリ]** メニューの **[クライアント統計を含める]** をクリックすると、 **[クライアント統計]** ウィンドウがクエリ実行中に表示されます。 複数のクエリを連続して実行した場合、統計には平均値も表示されます。 **[クエリ]** メニューの **[クライアント統計のリセット]** をクリックすると、平均がリセットされます。  
   
- **コードスニペット**  
+ **コード スニペット**  
  データベース エンジン クエリ エディターでステートメントを追加する際のひな形として使用します。 SQL Server に付属の定義済みのスニペットを挿入できるほか、独自のスニペットを追加することもできます。  
   
  **SQLCMD モード**  
@@ -125,7 +124,7 @@ ms.locfileid: "82703793"
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターで sqlcmd の機能を使用する方法について説明します。|[クエリ エディターによる SQLCMD スクリプトの編集](edit-sqlcmd-scripts-with-query-editor.md)|  
 |オブジェクト名の入力時にオート コンプリート機能を利用したり、有効な位置へと確実にブレークポイントを設定したりできるなど、IntelliSense が備えている機能の使用方法について説明します。|[IntelliSense &#40;SQL Server Management Studio&#41;](intellisense-sql-server-management-studio.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでのコード スニペットの使用方法について説明します。 スニペットは、使用頻度の高いステートメントまたはブロックのテンプレートです。特定用途のスニペットを追加して拡張したりカスタマイズしたりすることができます。|[Transact-SQL コード スニペット](transact-sql-code-snippets.md)|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを使用してコードをステップ実行したり、デバッグ情報 (変数やパラメーターの値など) を表示したりする方法について説明します。|[Transact-sql デバッガー](transact-sql-debugger.md)|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを使用してコードをステップ実行したり、デバッグ情報 (変数やパラメーターの値など) を表示したりする方法について説明します。|[Transact-SQL デバッガー](transact-sql-debugger.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]の各インスタンスに対して独自の色を設定したり、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターのウィンドウのステータス バーの背景としてそれらの色を設定する方法について説明します。|[ステータス バー &#40;データベース エンジン クエリ エディター&#41;](status-bar-database-engine-query-editor.md)|  
   
 ## <a name="see-also"></a>参照  

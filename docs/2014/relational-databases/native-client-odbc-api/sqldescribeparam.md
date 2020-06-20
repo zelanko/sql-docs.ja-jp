@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6aa5dcb3ff23c5a9a57124e59b50b70969fddd68
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 05e14ccb0fadb4f1cf05f965c79cf8c05c71f93a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706285"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022821"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
   SQL ステートメントのパラメーターを記述するために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT odbc ドライバーは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 準備された odbc ステートメントハンドルで SQLDescribeParam が呼び出されたときに、SELECT ステートメントを構築して実行します。 この結果セットのメタデータにより、準備されたステートメント内のパラメーターの特性が決まります。 SQLDescribeParam は、SQLExecute または SQLExecDirect が返す可能性のあるエラーコードを返すことができます。  
@@ -78,7 +77,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 |DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  
-|time|SQL_SS_TIME2|8、10..16|0..7|  
+|時間|SQL_SS_TIME2|8、10..16|0..7|  
 |datetime2|SQL_TYPE_TIMESTAMP|19、21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26、28..34|0..7|  
   

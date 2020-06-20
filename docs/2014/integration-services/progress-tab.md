@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a59cc952-fb73-4bd3-b5d2-f8397701e5d2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3e1c4e5ac4bf399a2c839c7e8cc71b2d378e268a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27da51dc89038493d24447c402e2d4e2b79c4679
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056626"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964662"
 ---
 # <a name="progress-tab"></a>[進行状況] タブ
   **デザイナーの** [進行状況] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]パッケージを実行するときに、その進行状況を表示できます。 **[進行状況]** タブには、1) パッケージおよび実行可能ファイルの検証と実行の開始時刻、終了時刻、および経過時間、2) パッケージの情報または警告、3) 進行状況通知、4) パッケージの成功または失敗、5) パッケージの実行中に生成されたエラー メッセージなどが表示されます。  

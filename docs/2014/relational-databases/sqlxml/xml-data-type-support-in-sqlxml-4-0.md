@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75667beed815ef93cd071935ce7e5a24cf5b7166
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7c7338500b68c157d5b555e29cf3a88bea3513c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702811"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009294"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0 での xml データ型のサポート
   以降 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を使用した XML 型のデータがサポートされてい `xml` ます。 ここでは、SQLXML 4.0 で `xml` データ型のインスタンスがどのように認識されるかと、それらがどのようにサポートされるかについて情報を提供します。  
@@ -34,7 +33,7 @@ ms.locfileid: "82702811"
   
 ## <a name="guidelines-and-limitations"></a>ガイドラインと制限  
   
--   ** \< xsd: 任意の>** を、データ型を含む列にマップすることはできません `xml` 。 この場合、SQLXML では `sql:overflow-field` 注釈を使用して対処できます。 または、`xml` データ型のフィールドに `xsd:anyType` の要素としてマップすることもできます。 この方法は、上の表の例 "XML 要素を XML データ型の列にマップする" に示されています。  
+-   **\<xsd:any>** データ型を含む列にマップすることはできません `xml` 。 この場合、SQLXML では `sql:overflow-field` 注釈を使用して対処できます。 または、`xml` データ型のフィールドに `xsd:anyType` の要素としてマップすることもできます。 この方法は、上の表の例 "XML 要素を XML データ型の列にマップする" に示されています。  
   
 -   `xml` データ型の列のコンテンツに XPath クエリを実行することはできません。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a25a9c376b7443bb23520c26be545c027da0bde6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63277428"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067354"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>オブジェクト エクスプローラーからインスタンスへの接続
   オブジェクト エクスプローラーを使用してオブジェクトを管理するには、まず、オブジェクトを含むインスタンスにオブジェクト エクスプローラーを接続する必要があります。 オブジェクト エクスプローラーは複数のインスタンスに同時に接続できます。  
@@ -38,7 +37,7 @@ ms.locfileid: "63277428"
   
     |設定|説明|  
     |-------------|-----------------|  
-    |**[データベースへの接続]**|サーバー上の使用可能なデータベースのいずれかを選択します。 一覧には、表示権限のあるデータベースだけが表示されます。|  
+    |**データベースへの接続**|サーバー上の使用可能なデータベースのいずれかを選択します。 一覧には、表示権限のあるデータベースだけが表示されます。|  
     |**ネットワーク プロトコル**|共有メモリ、TCP/IP、名前付きパイプのいずれかを選択します。|  
     |**ネットワークパケットサイズ**|バイト単位で設定します。 既定の設定は 4096 バイトです。|  
     |**接続のタイムアウト**|秒単位で設定します。 既定の設定は 15 秒です。|  

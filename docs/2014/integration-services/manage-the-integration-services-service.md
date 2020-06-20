@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc3b1eb4e73b3d77b49cc9f485e0a6fc456a8875
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: baa716eec75925c97f987656d11e39ba947918d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057789"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951372"
 ---
 # <a name="manage-the-integration-services-service"></a>Integration Services サービスを管理する
     
@@ -28,7 +27,7 @@ ms.locfileid: "66057789"
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コンポーネントのインストール時に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスもインストールされます。 既定では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが起動され、スタートアップの種類が自動に設定されます。 ただし、サービスを使用して [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の格納されたパッケージおよび実行中のパッケージを管理するには、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] をインストールする必要があります。  
   
 > [!NOTE]  
->  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]バージョンの[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]から[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]サービスのインスタンスに接続することはできません。 つまり、[**サーバーへの接続**] ダイアログボックスで、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]サービスのバージョンのみが実行されているサーバーの名前を入力することはできません。 ただし、サービスの構成ファイルを編集することで、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] バージョンの [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] から、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のインスタンスに格納されているパッケージを管理できます。 詳細については、「 [Integration Services サービスの構成 (SSIS サービス)](service/integration-services-service-ssis-service.md)との互換性を維持するために、このサービスをサポートしています。  
+>  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] バージョンのからサービスのインスタンスに接続することはできません [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 。 つまり、[**サーバーへの接続**] ダイアログボックスで、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] サービスのバージョンのみ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が実行されているサーバーの名前を入力することはできません。 ただし、サービスの構成ファイルを編集することで、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] バージョンの [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] から、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のインスタンスに格納されているパッケージを管理できます。 詳細については、「 [Integration Services サービスの構成 (SSIS サービス)](service/integration-services-service-ssis-service.md)との互換性を維持するために、このサービスをサポートしています。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスのインスタンスは 1 台のコンピューターに 1 つだけインストールできます。 このサービスは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]の特定のインスタンスに固有ではありません。 サービスに接続するには、サービスが実行されているコンピューターの名前を使用します。  
   

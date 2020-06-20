@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d41879b84d98f72e570b00a61341a53d2e6187a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096834"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046453"
 ---
 # <a name="accept-license-terms"></a>使用許諾条件への同意
   **インストール ウィザードの** [使用許諾条件への同意] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用して、このリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の使用許諾条件に同意します。  
@@ -46,13 +45,13 @@ ms.locfileid: "66096834"
   
  機能の使用に関する情報は [!INCLUDE[msCoName](../../includes/msconame-md.md)]に送信され、アクセスが制限された場所に格納されます。  
   
- セットアップの完了後に CEIP レポートを無効にするには、[**構成ツール**] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メニューの [ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーと使用状況レポート**] ツールを使用します。  
+ セットアップの完了後に CEIP レポートを無効にするには、[構成ツール] メニューの [ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーと使用状況レポート**] ツールを使用し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Configuration Tools**ます。  
   
  インストール、アップグレード、修復などのセットアップ操作では、セットアップ プログラムの実行時にのみ情報が収集されアップロードされます。  
   
  他のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントでは、情報はすべての有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスで 1 日 1 回収集されます。 既定の収集時刻は、サーバーにかかる負荷を最小限に抑えるため、午前 0 時に設定されています。 収集時刻を変更する場合は、収集時刻を制御するレジストリ キーを手動で編集します。 各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスには、次のような専用のレジストリ キーがあります。  
   
- \\[!INCLUDE[msCoName](../../includes/msconame-md.md)]、Hklm\software\\\MSSQL12.[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\<INSTANCEID> \cpe\timeofreporting  
+ 、Hklm\software \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSSQL12. \<INSTANCEID>\CPE\TimeofReporting  
   
  このレジストリ キーの値には、収集を実行する時刻が 00:00 (午前 0 時) から何分後であるかが示されています。 たとえば、値が 60 の場合は収集が午前 1 時に実行され、1200 の場合は午後 8 時に実行されます。  
   
@@ -99,7 +98,7 @@ ms.locfileid: "66096834"
   
  エラー レポートを有効にしている場合に重大なエラーが発生すると、そのエラーに関する [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報の記事を示す [!INCLUDE[msCoName](../../includes/msconame-md.md)] からの応答が Windows イベント ログに表示されることがあります。  
   
- セットアップが完了した後で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とそのコンポーネントのすべてのインスタンスについて、エラー レポートと機能の使用状況レポートを無効にするには、 **[エラーと使用状況レポートの設定]** ダイアログ ボックスで、 **機能の使用状況レポート**のチェック ボックスをオフにします。 の複数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]コンポーネント ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、、および共有コンポーネント) に対して**エラー報告**が有効になっている場合は、個々のコンポーネントのインスタンスごとにエラー報告を無効にしたり、共有コンポーネントを**他**のコンポーネントとして一覧表示することができます。  
+ セットアップが完了した後で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とそのコンポーネントのすべてのインスタンスについて、エラー レポートと機能の使用状況レポートを無効にするには、 **[エラーと使用状況レポートの設定]** ダイアログ ボックスで、 **機能の使用状況レポート**のチェック ボックスをオフにします。 の複数のコンポーネント (、、、および共有コンポーネント) に対して**エラー報告**が有効になっている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 個々の [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントのインスタンスごとにエラー報告を無効にしたり、共有コンポーネントを**他**のコンポーネントとして一覧表示することができます。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server の使用許諾条件について](../../../2014/getting-started/about-the-sql-server-license-terms.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96f7f6ca45483fcfeb4e403659399972d81cda54
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890758"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951442"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>手順 1:レッスン 5 のパッケージのコピー
   ここでは、レッスン 5 で作成した Lesson 5.dtsx パッケージのコピーを作成します。 または、チュートリアルに含まれている、レッスン 5 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 6 の実習では、このパッケージの新しいコピーを使用します。  
@@ -38,7 +37,7 @@ ms.locfileid: "62890758"
   
 7.  [プロパティ] ウィンドウで、[Name] プロパティを「Lesson 6」に変更します。  
   
-8.  [ID] プロパティのボックスをクリックし、ドロップダウン矢印をクリックして\<、[新しい id の生成>] をクリックします。  
+8.  [ID] プロパティのボックスをクリックし、ドロップダウン矢印をクリックし、 \<Generate New ID>をクリックします。  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>レッスン 5 を完了した状態のパッケージを追加するには  
   

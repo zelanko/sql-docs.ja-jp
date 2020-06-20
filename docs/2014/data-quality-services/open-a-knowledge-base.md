@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0f55065d3c62d87b51af83a411e2ba302fcf0528
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac4f773ac783515a0eaea1684d70866f159e1372
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481291"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937463"
 ---
 # <a name="open-a-knowledge-base"></a>ナレッジ ベースを開く
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で既存のナレッジ ベースを開き、ドメイン管理、ナレッジ検出、または照合ポリシーの追加の準備を行う方法について説明します。  
@@ -77,7 +76,7 @@ ms.locfileid: "65481291"
 ##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>ナレッジベースの状態  
  [状態] フィールドは、ナレッジ ベースがアクティビティのどのステージにあるのかを示します。 ナレッジ ベースを開くと、そのステージで開かれます。  
   
--   空の>: ナレッジベースが発行されている場合は、[ドメイン管理] アクティビティの [**発行**] をクリックし、 **[はい-ナレッジベースを発行して終了]** をクリックすると、ナレッジベースの [状態] フィールドは空になります。 ** \< **  
+-   **\<Empty>**: ナレッジベースが発行されている場合は、ナレッジベースの [状態] フィールドが空になります。これには、ドメイン管理アクティビティの [**発行**] をクリックし、[**はい-ナレッジベースを発行して終了]** をクリックします。  
   
 -   **作業中**: ナレッジベースの作業は、ドメイン管理アクティビティの [**発行**] をクリックし、[**いいえ-作業内容をナレッジベースに保存**して終了] をクリックして保存されています。  
   

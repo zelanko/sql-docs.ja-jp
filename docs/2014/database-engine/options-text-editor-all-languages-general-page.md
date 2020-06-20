@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 55e89850c3b3f19c30a4943f5d787407da7e3c88
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 721ebe6d235e1a8001403d4fb9bb993dba86dd13
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000740"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929968"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>[オプション] ([テキスト エディター]/[すべての言語]/[全般] ページ)
   このダイアログ ボックスを使用すると、全部で 5 つある [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のすべてのエディターの全般的な編集オプションを設定できます。 これらのオプションを表示するには、**[ツール]** メニューの **[オプション]** をクリックします。 **[テキスト エディター]** フォルダーを選択し、**[すべての言語]** フォルダーを展開して、**[全般]** をクリックします。  
