@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3f7ebe0c0c5d23210a5111e8b4daaa69f8c73bb0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c3b94bef3cf3549720321a0bcd47f7314ff1ff8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836389"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924941"
 ---
 # <a name="creating-a-package-programmatically"></a>プログラムを使用したパッケージ作成
   <xref:Microsoft.SqlServer.Dts.Runtime.Package> オブジェクトは、[!INCLUDE[ssIS](../../includes/ssis-md.md)] プロジェクトによるソリューションで、他のすべてのオブジェクトの上位に位置するコンテナーです。 パッケージは、トップレベルのコンテナーとして、最初に作成されるオブジェクトです。それ以降のオブジェクトはパッケージに追加され、パッケージのコンテキスト内で実行されます。 パッケージ自体は、データの移動または変換を行いません。 パッケージは、格納しているタスクに依存して作業を実行します。 タスクは、パッケージが実行する作業のほとんどを実行し、パッケージの機能を定義します。 パッケージを作成して実行するには、わずか 3 行のコードを必要とするだけですが、さまざまなタスクおよび <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトをパッケージに追加して、機能を追加できます。 このセクションでは、プログラムによってパッケージを作成する方法について説明します。 タスクまたは <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> の作成方法についての説明は行いません。 これらについては、後のセクションで説明します。  
@@ -63,13 +62,13 @@ Module Module1
 End Module  
 ```  
   
- サンプルをコンパイルして実行するには、Visual Studio で F5 キーを押します。 C# コンパイラ **csc.exe** を使用してコードを作成し、コマンド プロンプトからコンパイルするには、次のコマンドおよびファイル参照を使用します。 *\<filename>* は .cs または .vb ファイルの名前に置き換えて、任意の *\<outputfilename>* を付けます。  
+ サンプルをコンパイルして実行するには、Visual Studio で F5 キーを押します。 C# **csc.exe**コンパイラを使用してコードをビルドするには、コマンドプロンプトでをコンパイルするために、次のコマンドとファイル参照を使用して、を *\<filename>* .cs または .vb ファイルの名前に置き換え、 *\<outputfilename>* 任意のを指定します。  
   
- **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
+ **csc/target: library/out: \<outputfilename> .dll \<filename> . cs/R: Microsoft. SqlServer. Managed DTS.dll "/r:System.dll**  
   
  Visual Basic .NET コンパイラ **vbc.exe** を使用してコードを作成し、コマンド プロンプトからコンパイルするには、次のコマンドおよびファイル参照を使用します。  
   
- **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
+ **vbc.exe/target: library/out: \<outputfilename> .dll \<filename> . vb/r: DTS.dll "/r:System.dll**  
   
  また、ディスク上、ファイル システム、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に保存されている既存のパッケージを読み込むことにより、パッケージを作成することもできます。 その場合、<xref:Microsoft.SqlServer.Dts.Runtime.Application> オブジェクトが最初に作成され、そのパッケージ オブジェクトが、オーバーロードされた次のアプリケーションのメソッドのいずれかによって設定される点が異なります。そのメソッドとは、フラット ファイル用の `LoadPackage`、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に保存されているパッケージ用の `LoadFromSQLServer`、またはファイル システムに保存されているパッケージ用の <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> です。 次の例では、ディスクから既存のパッケージを読み込み、パッケージの複数のプロパティを表示します。  
   

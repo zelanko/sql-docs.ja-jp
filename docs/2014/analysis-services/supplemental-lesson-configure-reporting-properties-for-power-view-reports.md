@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03afd5bdafe30a8684165fef5febae49f210f042
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067957"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940213"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Power View レポートのレポート プロパティの構成
   この補足のレッスンでは、Adventure Works Internet Sales Model プロジェクトのレポートのプロパティを設定します。 レポートのプロパティを使用すると、Power View 内のモデル データの選択や表示をエンド ユーザーが簡単にできるようになります。 また、プロパティを設定して、特定の列やテーブルの非表示や、グラフで使う新しいデータの作成を行います。  
@@ -26,7 +25,7 @@ ms.locfileid: "66067957"
   
  このレッスンの推定所要時間: **30 分**  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この補足のレッスンは表形式モデルの作成チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 この補足のレッスンの作業を実行する前に、前のレッスンをすべて完了している必要があります。  
   
  この補足のレッスンを完了するには、次の準備も必要です。  
@@ -70,7 +69,7 @@ ms.locfileid: "66067957"
   
 2.  数式バーで次の式を使用して、2 つの新しい計算列を追加します。  
   
-    |列名|[数式]|  
+    |列名|Formula|  
     |-----------------|-------------|  
     |Year Quarter|=[Calendar Year] & " Q" & [Calendar Quarter]|  
     |年月|=[Calendar Year] & FORMAT([Month],"#00")|  
@@ -94,9 +93,9 @@ ms.locfileid: "66067957"
   
      **Customer Alternate Id**  
   
-     **名**  
+     **[First Name]**  
   
-     **姓**  
+     **[Last Name]**  
   
      **Birth Date**  
   
@@ -157,7 +156,7 @@ ms.locfileid: "66067957"
     |[Geography Id]|[非表示]|True|  
     |[Birth Date]|データ形式|短い日付|  
   
-     **Date**  
+     **日付**  
   
     > [!NOTE]  
     >  Date テーブルは「レッスン 7: 日付テーブルとしてマーク」で、[日付テーブルとしてマーク] 設定を使ってモデル日付テーブルとして選択されています。また、Date テーブルの Date 列は一意の識別子として使われる列です。そのため、Date 列の [行識別子 (ROWID)] プロパティは自動的に True に設定され、変更することができません。 DAX 式でタイム インテリジェンス関数を使用するときは、日付テーブルを指定する必要があります。 このモデルでは、タイム インテリジェンス関数を使用していくつかのメジャーを作成して、さまざまな期間 (前四半期と現四半期など) の売上データを計算しました。これは KPI にも使用できます。 日付テーブルの指定の詳細については、SQL Server オンライン ブックの「[タイム インテリジェンスで使用する [日付テーブルとしてマーク] の指定 (SSAS テーブル)](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)」を参照してください。  
@@ -184,7 +183,7 @@ ms.locfileid: "66067957"
     |[Geography Id]|[非表示]|True|  
     |Sales Territory Id|[非表示]|True|  
   
-     **梱包**  
+     **製品**  
   
     |列|プロパティ|値|  
     |------------|--------------|-----------|  
@@ -204,10 +203,10 @@ ms.locfileid: "66067957"
     |Promotion Id|[非表示]|True|  
     |Currency Id|[非表示]|True|  
     |Sales Territory Id|[非表示]|True|  
-    |Order Quantity|データ型<br /><br /> データ形式<br /><br /> 小数点以下の桁数|10 進数<br /><br /> 10 進数<br /><br /> 0|  
-    |Order Date|データ型|短い日付|  
-    |Due Date|データ型|短い日付|  
-    |Ship Date|データ型|短い日付|  
+    |Order Quantity|データの種類<br /><br /> データ形式<br /><br /> 小数点以下の桁数|10 進数<br /><br /> 10 進数<br /><br /> 0|  
+    |Order Date|データの種類|短い日付|  
+    |Due Date|データの種類|短い日付|  
+    |Ship Date|データの種類|短い日付|  
   
 ## <a name="redeploy-the-adventure-works-internet-sales-tabular-model"></a>Adventure Works Internet Sales 表形式モデルの再配置  
  モデルを変更したので、再配置する必要があります。 基本的には、「 [レッスン 14: 配置](lesson-13-deploy.md)」で実行したタスクを繰り返します。  

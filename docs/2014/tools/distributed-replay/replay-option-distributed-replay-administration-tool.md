@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5f25a42b54e0ae310c7033a81f75cad75582416
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: a3114d7c2a2a7908e4e010fbf5d80c7d332d264c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925066"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011622"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>replay オプション (Distributed Replay 管理ツール)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散再生管理ツールは、 `DReplay.exe` 分散再生コントローラーとの通信に使用できるコマンドラインツールです。 このトピックでは、 **replay** コマンド ライン オプションとそれに対応する構文について説明します。
@@ -52,7 +51,7 @@ ms.locfileid: "82925066"
 
  **-o**クライアントの再生アクティビティをキャプチャし、クライアント構成ファイルの要素によって指定されたパスの結果トレースファイルに保存し `<ResultDirectory>` `DReplayClient.xml` ます。
 
- **-O**パラメーターが指定されていない場合、結果トレースファイルは生成されません。 コンソール出力は再生の最後に概要情報を返しますが、他の再生統計情報は提供されません。
+ **-o** パラメーターが指定されていない場合は、結果トレース ファイルは生成されません。 コンソール出力は再生の最後に概要情報を返しますが、他の再生統計情報は提供されません。
 
  **-s** *target_server* [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散ワークロードの再生に使用するの対象インスタンスを指定します。 このパラメーターは、 **server_name[\instance name]** の形式で指定します。
 
@@ -75,14 +74,14 @@ ms.locfileid: "82925066"
 
  **-f** を指定しない場合は、既定の間隔は 30 秒です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
  この例の分散再生では、変更された再生構成ファイル `DReplay.exe.replay.config`から多くの動作が派生しています。
 
 -   **-m** パラメーターは、 `controller1` というコンピューターがコントローラーとして動作するように指定しています。 コントローラー サービスが別のコンピューターで実行されている場合は、コンピューター名を指定する必要があります。
 
 -   **-d** パラメーターは、コントローラーの中間ファイルの場所として `c:\WorkingDir`を指定しています。
 
--   **-o** パラメーターは、指定された各クライアントが再生アクティビティをキャプチャし、それを結果トレース ファイルに保存するように指定しています。 注 : 構成ファイル内の `<ResultTrace>` 要素は、行数と結果セットが記録される場合に使用できます。
+-   **-o** パラメーターは、指定された各クライアントが再生アクティビティをキャプチャし、それを結果トレース ファイルに保存するように指定しています。 注:構成ファイル内の `<ResultTrace>` 要素は、行数と結果セットが記録される場合に使用できます。
 
 -   **-w** パラメーターは、 `client1` から `client4` までのコンピューターがクライアントとして分散再生に参加するように指定しています。
 

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9d06a2ec19b4a84dcd0d69fb70389d68974813be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 897c0f48c27f8836e4ccb0f84b43069bfcac9233
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894981"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968482"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>スクリプト タスクによる ForEach ループの一覧の収集
   Foreach from Variable 列挙子は、変数で渡された一覧の項目を列挙し、各項目に対して同じタスクを実行します。 スクリプト タスクでカスタム コードを使用して、このための一覧を設定することができます。 この列挙子の詳細については、「[Foreach ループ コンテナー](../control-flow/foreach-loop-container.md)」を参照してください。  
@@ -44,7 +43,7 @@ ms.locfileid: "62894981"
   
 3.  `FileAge` 変数をスクリプト タスクの `ReadOnlyVariables` プロパティに追加し、`FileList` 変数を `ReadWriteVariables` プロパティに追加します。  
   
-4.  コードで、 `System.Collections`との`System.IO`名前空間をインポートします。  
+4.  コードで、 `System.Collections` との名前空間をインポートし `System.IO` ます。  
   
 ### <a name="code"></a>コード  
   

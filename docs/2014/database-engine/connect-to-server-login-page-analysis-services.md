@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: fb012bc8-5105-438a-afcc-74264ebae035
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3209028d8d30d9a7bae991ecb01462a5a203f7f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dc5d248339fb84ee8db079615fa910ccd8cbc4f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808763"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934633"
 ---
 # <a name="connect-to-server-login-page-analysis-services"></a>[サーバーへの接続] ([ログイン] ページ) (Analysis Services)
-  このタブを使用すると、に[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]接続するときに、次のオプションを表示または指定できます。  
+  このタブを使用すると、に接続するときに、次のオプションを表示または指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] できます。  
   
 ## <a name="options"></a>Options  
  **サーバーの種類**  
@@ -35,10 +34,10 @@ ms.locfileid: "62808763"
  **Windows 認証モード ([Windows 認証])**  
  Windows 認証モードを使用すると、ユーザーは Windows ユーザー アカウントを使用して接続できます。  
   
- **のインスタンスに接続するときには、**  
+ **接続する**  
  上で選択したサーバーに接続します。  
   
- **[オプション]**  
+ **Options**  
  クリックすると、ダイアログが切り替わり、パスワードの保存などの追加のサーバー接続オプションが非表示になります。  
   
   

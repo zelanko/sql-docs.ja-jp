@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9c346ae8-87fa-44e5-b88a-47e804fedf20
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b3c44976781f12b4a3bbc62d58b45ba59bc14ac0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef1ecca2beb0513fd8f691de9af459ebb8ef6ae1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059048"
 ---
 # <a name="repair-powerpivot-for-sharepoint"></a>PowerPivot for SharePoint の修復
   PowerPivot 構成ツールを使用して、PowerPivot for SharePoint の既存のインストールを修復できます。 このツールを実行すると、ローカルの PowerPivot for SharePoint インスタンスの構成設定が読み取られ、PowerPivot for SharePoint インストールと矛盾する設定を再構成するための操作が提示されます。 たとえば、サービスを停止するか、またはソリューションを取り消すと、サービスを開始してソリューションを配置する操作が提示されます。  

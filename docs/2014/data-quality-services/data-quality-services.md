@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 09d57d0b1b0ac00cbad6f4d8dab1e2afad790d37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2a505187a4610a18ed90707d1ff58499c3f5a90
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175521"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937813"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) は、ナレッジ ドリブンのデータ品質製品です。 DQS を使用すると、ナレッジ ベースを構築し、それを使用して、データの修正、強化、標準化、重複除去などの多くの重要なデータ品質タスクを実行できます。 DQS では、参照データ プロバイダーによって提供されるクラウド ベースの参照データ サービスを使用して、データのクレンジングを実行できます。 また、DQS はデータ品質タスクに統合されたプロファイリング機能を備えており、データの整合性を分析できます。

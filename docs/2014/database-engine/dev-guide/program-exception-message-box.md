@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52fc203075b06485c89fe4d2d3149472c57719f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780699"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933408"
 ---
 # <a name="program-exception-message-box"></a>例外メッセージ ボックスのプログラミング
   例外メッセージ ボックスをアプリケーションで使用すると、<xref:System.Windows.Forms.MessageBox> クラスを使用した場合よりも高い柔軟性で、メッセージ エクスペリエンスを制御することができます。 詳細については、「[例外メッセージボックスのプログラミング](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)」を参照してください。 例外メッセージ ボックス .dll を取得および展開する方法の詳細については、「 [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)」をご覧ください。  
@@ -29,11 +28,11 @@ ms.locfileid: "62780699"
   
 1.  Microsoft.ExceptionMessageBox.dll アセンブリへの参照をマネージド コード プロジェクトに追加します。  
   
-2.  Optional(C# `using` ) または`Imports` ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net) ディレクティブを追加して<xref:Microsoft.SqlServer.MessageBox> 、名前空間を使用します。  
+2.  Optional`using`(C#) または `Imports` ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net) ディレクティブを追加して、名前空間を使用し <xref:Microsoft.SqlServer.MessageBox> ます。  
   
 3.  予想される例外を処理する try-catch ブロックを作成します。  
   
-4.  `catch` ブロック内に、<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> クラスのインスタンスを作成します。 ブロックに<xref:System.Exception>よって`try` -処理されるオブジェクトを渡します。 `catch`  
+4.  `catch` ブロック内に、<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> クラスのインスタンスを作成します。 <xref:System.Exception>ブロックによって処理されるオブジェクトを渡し `try` - `catch` ます。  
   
 5.  (省略可) <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> に次のプロパティを 1 つ以上設定します。  
   
@@ -47,13 +46,13 @@ ms.locfileid: "62780699"
   
 6.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> メソッドを呼び出します。 例外メッセージ ボックスが属する親ウィンドウを渡します。  
   
-7.  Optionalユーザーがクリックした<xref:System.Windows.Forms.DialogResult>ボタンを判断する必要がある場合は、返された列挙体の値を確認します。  
+7.  Optional<xref:System.Windows.Forms.DialogResult>ユーザーがクリックしたボタンを判断する必要がある場合は、返された列挙体の値を確認します。  
   
 #### <a name="to-display-the-exception-message-box-without-an-exception"></a>例外なしで例外メッセージ ボックスを表示するには  
   
 1.  Microsoft.ExceptionMessageBox.dll アセンブリへの参照をマネージド コード プロジェクトに追加します。  
   
-2.  Optional(C# `using` ) または`Imports` (Visual Basic .net) ディレクティブを追加して<xref:Microsoft.SqlServer.MessageBox> 、名前空間を使用します。  
+2.  Optional`using`(C#) または `Imports` (Visual Basic .net) ディレクティブを追加して、名前空間を使用し <xref:Microsoft.SqlServer.MessageBox> ます。  
   
 3.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> クラスのインスタンスを作成します。 <xref:System.String> 値としてメッセージ テキストを渡します。  
   
@@ -77,11 +76,11 @@ ms.locfileid: "62780699"
   
 1.  Microsoft.ExceptionMessageBox.dll アセンブリへの参照をマネージド コード プロジェクトに追加します。  
   
-2.  Optional(C# `using` ) または`Imports` (Visual Basic .net) ディレクティブを追加して<xref:Microsoft.SqlServer.MessageBox> 、名前空間を使用します。  
+2.  Optional`using`(C#) または `Imports` (Visual Basic .net) ディレクティブを追加して、名前空間を使用し <xref:Microsoft.SqlServer.MessageBox> ます。  
   
 3.  次の 2 つのうち、いずれかの方法で <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> クラスのインスタンスを作成します。  
   
-    -   ブロックに<xref:System.Exception>よって`try` -処理されるオブジェクトを渡します。 `catch`  
+    -   <xref:System.Exception>ブロックによって処理されるオブジェクトを渡し `try` - `catch` ます。  
   
     -   <xref:System.String> 値としてメッセージ テキストを渡します。  
   
@@ -111,15 +110,15 @@ ms.locfileid: "62780699"
   
 1.  Microsoft.ExceptionMessageBox.dll アセンブリへの参照をマネージド コード プロジェクトに追加します。  
   
-2.  Optional(C# `using` ) または`Imports` (Visual Basic .net) ディレクティブを追加して<xref:Microsoft.SqlServer.MessageBox> 、名前空間を使用します。  
+2.  Optional`using`(C#) または `Imports` (Visual Basic .net) ディレクティブを追加して、名前空間を使用し <xref:Microsoft.SqlServer.MessageBox> ます。  
   
 3.  次の 2 つのうち、いずれかの方法で <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> クラスのインスタンスを作成します。  
   
-    -   ブロックに<xref:System.Exception>よって`try` -処理されるオブジェクトを渡します。 `catch`  
+    -   <xref:System.Exception>ブロックによって処理されるオブジェクトを渡し `try` - `catch` ます。  
   
     -   <xref:System.String> 値としてメッセージ テキストを渡します。  
   
-4.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> プロパティを `true` に設定します。  
+4.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> プロパティを `true`に設定します。  
   
 5.  (省略可) 表示された例外メッセージ ボックスを再度表示するかどうかを確認するテキストを <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxText%2A> に指定します。 既定のテキストは、"今後、このメッセージを表示しない" です。  
   

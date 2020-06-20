@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60d6ba6ab84615e43e872c4e8d4238a263a0b767
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62714869"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065837"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Microsoft レプリケーション競合表示モジュール (トランザクション レプリケーション)
   レプリケーション競合表示モジュールを使用すると、ピア ツー ピア トランザクション レプリケーション、およびキュー更新サブスクリプションを使用するトランザクション レプリケーションの同期中に発生した競合を表示できます。 詳細については、「[トランザクション パブリケーションのデータの競合の表示 &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)」を参照してください。  
@@ -45,13 +44,13 @@ ms.locfileid: "62714869"
  **[フィルターの適用または削除]**  
  **[フィルターの定義]** ダイアログ ボックスで定義されたフィルターを適用または削除します。  
   
- **すべて選択**  
+ **[すべて選択]**  
  グリッドに一覧表示されたすべての競合を選択します。  
   
- **[すべて選択解除]**  
+ **[なし] を選択**  
  グリッドに一覧表示されたすべての競合の選択を解除します。  
   
- **Remove**  
+ **[削除]**  
  選択された競合をビューアーから削除し、関連するメタデータをレプリケーション システム テーブルから削除します。  
   
  **[すべての列を表示]**  

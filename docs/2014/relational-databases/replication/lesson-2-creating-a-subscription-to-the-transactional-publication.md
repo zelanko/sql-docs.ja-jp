@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9dc9824efb3f962d97f786835fa2367be18b55f7
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ce4035bd0f953058a1e868709275e2f5d0b025a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000416"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065914"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>レッスン 2 : トランザクション パブリケーションへのサブスクリプションの作成
   このレッスンでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してサブスクリプションを作成します。 このレッスンを薦めるには、前のレッスンである「 [レッスン 1: トランザクション レプリケーションを使用したデータのパブリッシュ](lesson-1-publishing-data-using-transactional-replication.md)」を完了している必要があります。  
@@ -36,11 +35,11 @@ ms.locfileid: "83000416"
   
 5.  [サブスクライバー] ページにサブスクライバー インスタンスの名前が表示されない場合は、 **[サブスクライバーの追加]**、 **[SQL Server サブスクライバーの追加]** の順にクリックし、 **[サーバーの接続]** ダイアログ ボックスにサブスクライバー インスタンス名を入力して、 **[接続]** をクリックします。  
   
-6.  [サブスクライバー] ページで、サブスクライバーサーバーのインスタンス名を選択し、[**サブスクリプションデータベース**] の [ ** \< 新しいデータベース>** ] を選択します。  
+6.  [サブスクライバー] ページで、サブスクライバーサーバーのインスタンス名を選択し、 **\<New Database>** [**サブスクリプションデータベース**] で [] を選択します。  
   
 7.  **[新しいデータベース]** ダイアログ ボックスで、 **[データベース名]** ボックスに「 **ProductReplica** 」と入力し、 **[OK]** をクリックして **[次へ]** をクリックします。  
   
-8.  [**セキュリティのディストリビューションエージェント**] ダイアログボックスで、省略記号ボタン ([**..**.]) をクリックし、[ \< **プロセスアカウント**] ボックスに「 _Machine_Name>_ **\ repl_distribution** 」と入力します。このアカウントのパスワードを入力し、[ **OK**] をクリックして、[**次へ**] をクリックします。  
+8.  [**ディストリビューションエージェントセキュリティ**] ダイアログボックスで、省略記号ボタン ([**..**.]) をクリックし、[ \<_Machine_Name> **プロセスアカウント**] ボックスに「_**\ repl_distribution** 」と入力します。このアカウントのパスワードを入力し、[ **OK**] をクリックして、[**次へ**] をクリックします。  
   
 9. 以降のページでは既定値をそのまま採用し、 **[完了]** をクリックしてウィザードを終了します。  
   

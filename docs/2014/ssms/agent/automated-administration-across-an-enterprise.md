@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8df3e34c2c70c81f9710ade0d6855446b930fb50
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011796"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>エンタープライズ全体の管理の自動化
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の複数のインスタンスにわたって管理を自動化することを *マルチサーバー管理*といいます。 次の場合に、マルチサーバー管理を行います。  
@@ -35,7 +34,7 @@ ms.locfileid: "62473150"
 -   データ ウェアハウジングのために、企業サーバーの情報フローをスケジュールする場合  
   
 > [!NOTE]  
->  総保有コスト[!INCLUDE[msCoName](../../includes/msconame-md.md)]を削減するための継続的な取り組みの一環[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]として、では、ポリシーベースの管理と呼ばれるサーバーを管理する方法と、構成サーバーとサーバーグループを使用するマルチサーバークエリの2つの機能が導入されました。 この 2 つの機能は、ここで説明する機能の一部と組み合わせたり、それらの代わりとして使用したりすることができます。 詳細については、「[ポリシーベースの管理を使用](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)してサーバーを管理する」および「[中央管理サーバーを使用して複数のサーバーを管理する](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)」を参照してください。  
+>  総保有コストを削減するための継続的な取り組みの一環として [!INCLUDE[msCoName](../../includes/msconame-md.md)] 、で [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] は、ポリシーベースの管理と呼ばれるサーバーを管理する方法と、構成サーバーとサーバーグループを使用するマルチサーバークエリの2つの機能が導入されました。 この 2 つの機能は、ここで説明する機能の一部と組み合わせたり、それらの代わりとして使用したりすることができます。 詳細については、「[ポリシーベースの管理を使用](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)してサーバーを管理する」および「[中央管理サーバーを使用して複数のサーバーを管理する](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)」を参照してください。  
   
  マルチサーバー管理機能を活用するには、1 台以上のマスター サーバーと 1 台以上のターゲット サーバーが必要です。 マスター サーバーは、ターゲット サーバーに対してジョブを分散し、ターゲット サーバーからイベントを受け取ります。 また、マスター サーバーは、ターゲット サーバーで実行されるジョブについて、ジョブ定義の中央コピーも保存します。 ターゲット サーバーは、定期的にマスター サーバーに接続して、ジョブのスケジュールを更新します。 マスター サーバー上に新しいジョブがあれば、ターゲット サーバーはそのジョブをダウンロードします。 ターゲット サーバーは、ジョブを完了した後、マスター サーバーに再接続してジョブのステータスをレポートします。  
   
@@ -92,8 +91,8 @@ ms.locfileid: "62473150"
  [sp_help_targetservergroup &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
  [sp_resync_targetserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
  [sp_update_targetservergroup &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
- [&#40;Transact-sql&#41;の dbo. sysjobservers](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
- [sys &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
- [systargetservers &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
+ [dbo.sysjobservers &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
+ [Transact-sql&#41;&#40;のログインのsys.sys](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
+ [dbo.systargetservers &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e455dd25c2b5d4ffa28bd2bdc28ff679861f1f1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316007"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011408"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>レッスン 2 : Web 参照の追加
   Web サービスの探索とは、クライアントが Web サービスを検索し、そのサービス記述を取得する処理です。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の Web サービス探索処理では、事前に定義されたアルゴリズムに従って、Web サイトの問い合わせが行われます。 この処理の目的はサービス記述を見つけることです。サービス記述とは、WSDL (Web サービス記述言語) を使用する XML ドキュメントです。  
@@ -32,7 +31,7 @@ ms.locfileid: "63316007"
   
 3.  [**サービス参照の設定**] ダイアログボックスで、[ **Web 参照の追加**] をクリックします。  
   
-4.  [ **Web 参照の追加**] ダイアログボックスの [ **url** ] ボックスに、レポートサーバー Web サービスのサービスの説明を取得するための url http://localhost/reportserver/reportservice2010.asmxを入力します (など)。 次に、[実行] ボタンをクリックし**て、Web**サービスに関する情報を取得します。  
+4.  [ **Web 参照の追加**] ダイアログボックスの [ **url** ] ボックスに、レポートサーバー Web サービスのサービスの説明を取得するための url を入力します (など) http://localhost/reportserver/reportservice2010.asmx 。 次に、[実行] ボタンをクリックし**て、Web**サービスに関する情報を取得します。  
   
      \- または  
   

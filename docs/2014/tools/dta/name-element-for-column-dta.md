@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3d95ce69743caaa6b587195ba107774d8cd8454
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48bb1911e0606941229035e14df1da8a2720dfc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63297522"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011533"
 ---
 # <a name="name-element-for-column-dta"></a>Column の Name 要素 (DTA)
   ユーザー指定の構成におけるインデックス列の名前を指定します。  

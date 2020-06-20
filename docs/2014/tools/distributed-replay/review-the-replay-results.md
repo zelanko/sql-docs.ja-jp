@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 384234072c312fca2c91da8ab4e6ac09eb0f79fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149702"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011587"
 ---
 # <a name="review-the-replay-results"></a>再生結果の確認
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散再生機能による分散再生の完了後、各クライアントの再生アクティビティをキャプチャし、クライアントごとに結果トレース ファイルに保存できます。 このアクティビティをキャプチャするには、 **replay** オプションを使って管理ツールを実行するときに **-o** パラメーターを使用する必要があります。 replay オプションの詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](replay-option-distributed-replay-administration-tool.md)」を参照してください。  
@@ -51,7 +50,7 @@ ms.locfileid: "63149702"
 ## <a name="event-class-column-mapping"></a>イベント クラス列マッピング  
  次の図は、再生中にキャプチャされるイベント クラスのそれぞれの種類に対して使用できる結果トレースの列を示しています。  
   
- ![イベント クラス列マッピング](../../database-engine/media/eventclassmappings.gif "イベントクラス列マッピング")  
+ ![イベント クラス列マッピング](../../database-engine/media/eventclassmappings.gif "イベント クラス列マッピング")  
   
 ## <a name="column-descriptions-for-result-trace"></a>結果トレースの列の説明  
  次の表では、結果トレース データの列について説明します。  
@@ -71,15 +70,15 @@ ms.locfileid: "63149702"
 |ConnectionID|`int`|イベントのキャプチャ接続の ID。|11|  
 |ReplaySPID|`int`|イベントの再生セッションの ID。|12|  
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|13|  
-|LoginName|`nvarchar`|ユーザーのログイン名。 *Domain_name* [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \\*user_name*の形式で、セキュリティログインまたは Microsoft Windows ログイン資格情報のいずれかを指定できます。|14|  
+|LoginName|`nvarchar`|ユーザーのログイン名。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティ ログイン、または *domain_name*\\*user_name*の形式で表された Microsoft Windows ログイン資格情報です。|14|  
 |CaptureHostName|`nvarchar`|キャプチャ中にクライアント サービスが実行されているコンピューターの名前。|15|  
 |ReplayHostName|`nvarchar`|再生中にクライアントが実行されているコンピューターの名前。|16|  
 |ApplicationName|`nvarchar`|キャプチャ中に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 接続を作成したクライアント アプリケーションの名前。|17|  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 分散再生](sql-server-distributed-replay.md)   
- [分散再生の要件](distributed-replay-requirements.md)   
- [管理ツールのコマンドラインオプション &#40;分散再生ユーティリティ&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [分散再生の構成](configure-distributed-replay.md)  
   
   

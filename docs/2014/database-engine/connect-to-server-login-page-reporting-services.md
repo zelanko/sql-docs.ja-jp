@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: d312c740-19d7-4931-84a2-88b805ec8439
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a87b6a0ebd2293ad219ce43108c4f42487a8e0f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808727"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934607"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>[サーバーへの接続] ([ログイン] ページ) (Reporting Services)
-  このタブを使用すると、に[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]接続するときに、次のオプションを表示または指定できます。  
+  このタブを使用すると、に接続するときに、次のオプションを表示または指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] できます。  
   
 ## <a name="options"></a>Options  
  **サーバーの種類**  
@@ -31,7 +30,7 @@ ms.locfileid: "62808727"
  **サーバー名**  
  接続するレポート サーバー インスタンスのサーバー モードによって、入力する必要がある値が決まります。  
   
- ネイティブ モードで実行されているレポート サーバーの場合、接続するレポート サーバー インスタンスを指定します。 既定のインスタンスを使用する場合、サーバー名はコンピューターの名前であるのが一般的です。 名前付きインスタンスをインストールした場合は、 \<servername>\\<InstanceName\>の形式でサーバー名にインスタンス名を追加します。 Reporting Services では、円記号を使用してインスタンス名を区切ります。  
+ ネイティブ モードで実行されているレポート サーバーの場合、接続するレポート サーバー インスタンスを指定します。 既定のインスタンスを使用する場合、サーバー名はコンピューターの名前であるのが一般的です。 名前付きインスタンスをインストールした場合は、<InstanceName という形式でサーバー名にインスタンス名を追加し \<servername> \\ \> ます。 Reporting Services では、円記号を使用してインスタンス名を区切ります。  
   
  SharePoint 統合モードで実行されているレポート サーバーの場合、SharePoint サイトを指定する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]と統合されているサイト コレクション内の任意のサイトを指定できます。 指定する URL には、HTTP プレフィックスまたは HTTPS プレフィックスを含める必要があります。 Management Studio で SharePoint サイトに接続するには、SharePoint サイトにアクセスする権限が必要です。 割り当てられている権限レベルによって、表示および管理できるアイテムが決まります。 詳細については、「[Management Studio でレポート サーバーに接続する](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)」を参照してください。  
   
@@ -56,10 +55,10 @@ ms.locfileid: "62808727"
  **パスワードを保存する**  
  入力したパスワードを保存します。 このオプションは、 **[オプション]** をクリックした場合にのみ表示され、 **[基本認証]** または **[フォーム認証]** を使用して接続することにした場合にのみ編集できます。  
   
- **のインスタンスに接続するときには、**  
+ **接続する**  
  選択されているサーバーに接続します。  
   
- **[オプション]**  
+ **Options**  
  パスワードの保存など、追加のサーバー接続オプションが表示されます。  
   
 ## <a name="see-also"></a>参照  
