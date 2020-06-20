@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58890cc7b9e34a3e8ff9262af1f6b1a67b47841e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec495e7620e6860658c826afdafeaa460f08d35c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782359"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003604"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>ストアド プロシージャの作成、変更、および削除
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) では、ストアド プロシージャは <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> オブジェクトで表現されます。  
   
- SMO で <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> オブジェクトを作成する場合は、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> プロパティに、ストアド プロシージャを定義する [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを設定する必要があります。 パラメーターには\@プレフィックスが必要であり、オブジェクトを<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>使用して<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>オブジェクトの<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>コレクションに追加することで、個別に作成する必要があります。  
+ SMO で <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> オブジェクトを作成する場合は、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> プロパティに、ストアド プロシージャを定義する [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを設定する必要があります。 パラメーターにはプレフィックスが必要で \@ あり、オブジェクトを使用 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> してオブジェクトのコレクションに追加することで、個別に作成する必要があり <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> ます。  
   
 ## <a name="example"></a>例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net で VISUAL BASIC SMO プロジェクトを作成する](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [Studio .Net で VISUAL C&#35; Smo プロジェクトを作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)する」を参照してください。  

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: e61297fc-a418-4553-b85e-40a3062606f1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6de0fbb9f2e6a5ee621c24c4832a13b900919048
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23d8bf75004a488dac1ec1263ef2693af7dc1791
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094225"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065299"
 ---
 # <a name="instance-selection-uninstall"></a>インスタンスの選択 (アンインストール)
-  [インスタンスの選択-アンインストール] ページで、ドロップダウンボックスを使用して、アンインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するインスタンスを指定します。  
+  [インスタンスの選択-アンインストール] ページで、ドロップダウンボックスを使用して、アンインストールするインスタンスを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="options"></a>オプション  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス全体を指定することも、共有機能と管理ツールのみがアンインストールされるように指定することもできます。  

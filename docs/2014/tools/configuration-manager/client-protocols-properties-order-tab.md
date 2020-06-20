@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb3055780186c34f6ead494f702874fbc6329f5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4a2a7e56dc0f5b0b2c71361a4b47fb58c64c782
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044181"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011684"
 ---
 # <a name="client-protocols-properties-order-tab"></a>[クライアント プロトコルのプロパティ] ダイアログ ボックス ([順序] タブ)
   **[クライアント プロトコルのプロパティ]** ダイアログ ボックスの **[順序]** ページでは、クライアント プロトコルの表示や有効化を行います。  
@@ -34,7 +33,7 @@ ms.locfileid: "63044181"
  インストールされているものの現在使用されていないプロトコルが一覧表示されます。  
   
  **[有効なプロトコル]**  
- このコンピューターのクライアントで使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]できるプロトコルの一覧を表示します。  
+ このコンピューターのクライアントで使用できるプロトコルの一覧を表示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
  **>**  
  **[無効なプロトコル]** ボックス内で現在強調表示されているプロトコルを有効にし、 **[有効なプロトコル]** ボックスに移動します。  

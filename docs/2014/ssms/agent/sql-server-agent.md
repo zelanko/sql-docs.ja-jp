@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ccfca5d9c46bbd63f0d9a8084881c51896b4fe7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289630"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058699"
 ---
 # <a name="sql-server-agent"></a>SQL Server エージェント
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、の[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]*ジョブ*と呼ばれる、スケジュールされた管理タスクを実行する Microsoft Windows サービスです。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、の*ジョブ*と呼ばれる、スケジュールされた管理タスクを実行する Microsoft Windows サービスです [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。  
   
  **このトピックの内容**  
   
@@ -61,7 +60,7 @@ ms.locfileid: "79289630"
  各ジョブ ステップは、特定のセキュリティ コンテキストで実行されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用するジョブ ステップでは、EXECUTE AS ステートメントを使用して、ジョブ ステップにセキュリティ コンテキストを設定します。 その他のジョブ ステップでは、プロキシ アカウントを使用して、ジョブ ステップにセキュリティ コンテキストを設定します。  
   
 ### <a name="schedules"></a>スケジュール  
- *スケジュール* では、ジョブを実行する時期を指定します。 同じスケジュールで複数のジョブを実行できるほか、同じジョブに複数のスケジュールを適用することもできます。 ジョブが実行されるタイミングに関して、次の条件をスケジュールで定義できます。  
+ *スケジュール*では、ジョブをいつ実行するかを指定します。 同じスケジュールで複数のジョブを実行できるほか、同じジョブに複数のスケジュールを適用することもできます。 ジョブが実行されるタイミングに関して、次の条件をスケジュールで定義できます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが開始されるたびに、ジョブを実行する。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "79289630"
   
  詳細については、「 [警告](alerts.md)」を参照してください。  
   
-### <a name="operators"></a>オペレーター  
+### <a name="operators"></a>演算子  
  *オペレーター* は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 1 つの以上のインスタンスについて、そのメンテナンスを担当する管理責任者の連絡先情報を定義します。 一部の企業では、オペレーターの責任は 1 人に割り当てられます。 サーバーを複数台使用している企業では、多数の担当者がオペレーターの責任を共有します。 オペレーターは、セキュリティ情報を持たず、セキュリティ プリンシパルも定義しません。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からオペレーターに警告を通知できます。  
@@ -111,13 +110,13 @@ ms.locfileid: "79289630"
   
  電子メールまたはポケットベルを使用してオペレーターに通知を送信するには、データベース メールを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成する必要があります。 詳細については、「[データベース メール](../../relational-databases/database-mail/database-mail.md)」を参照してください。  
   
- オペレーターは、個人のグループを表す別名として定義できます。 その場合、その別名のすべてのメンバーが同時に通知を受け取ることになります。 詳細については、「 [オペレーター](operators.md)」を参照してください。  
+ オペレーターは、個人のグループを表す別名として定義できます。 その場合、その別名のすべてのメンバーが同時に通知を受け取ることになります。 詳細については、「[演算子](operators.md)」を参照してください。  
   
 ##  <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>SQL Server エージェント管理のセキュリティ  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、 **msdb**データベースの**SQLAgentUserRole**、 **SQLAgentReaderRole**、および**sqlagentoperatorrole**固定データベースロールを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sysadmin`固定サーバーロールのメンバーではないユーザーのエージェントへのアクセスを制御します。 これらの固定データベース ロールに加え、サブシステムとプロキシを使用することで、タスクの実行に最低限必要な権限で各ジョブ ステップを実行できるようになります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、 **msdb**データベースの**SQLAgentUserRole**、 **SQLAgentReaderRole**、および**sqlagentoperatorrole**固定データベースロールを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定サーバーロールのメンバーではないユーザーのエージェントへのアクセスを制御し `sysadmin` ます。 これらの固定データベース ロールに加え、サブシステムとプロキシを使用することで、タスクの実行に最低限必要な権限で各ジョブ ステップを実行できるようになります。  
   
 ### <a name="roles"></a>ロール  
- **Msdb** `sysadmin`の**SQLAgentUserRole**、 **SQLAgentReaderRole**、および**sqlagentoperatorrole**固定データベースロールのメンバーと、固定サーバーロールのメンバーは、エージェントに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセスできます。 どのロールのメンバーでもないユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されるロールの詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」を参照してください。  
+ **Msdb**の**SQLAgentUserRole**、 **SQLAgentReaderRole**、および**sqlagentoperatorrole**固定データベースロールのメンバーと、 `sysadmin` 固定サーバーロールのメンバーは、エージェントにアクセス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。 どのロールのメンバーでもないユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されるロールの詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」を参照してください。  
   
 ### <a name="subsystems"></a>サブシステム  
  サブシステムは事前に定義されたオブジェクトで、任意のジョブ ステップで使用できる機能を表します。 各プロキシは 1 つ以上のサブシステムにアクセスできます。 サブシステムはプロキシで使用できる機能へのアクセスを制限することによりセキュリティを提供します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップ以外の各ジョブ ステップは、プロキシのコンテキストで実行されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップでは、EXECUTE AS コマンドを使用してセキュリティ コンテキストが設定されます。  
@@ -126,7 +125,7 @@ ms.locfileid: "79289630"
   
 |サブシステム名|説明|  
 |--------------------|-----------------|  
-|Microsoft ActiveX スクリプト|ActiveX スクリプティング ジョブ ステップを実行します。<br /><br /> ** \*重要\* \* **ActiveX スクリプティングサブシステムは、の将来[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンでエージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
+|Microsoft ActiveX スクリプト|ActiveX スクリプティング ジョブ ステップを実行します。<br /><br /> 重要 ActiveX スクリプティングサブシステムは、の将来のバージョンでエージェントから削除される予定** \* \* です。 \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
 |オペレーティングシステム (**CmdExec**)|実行可能なプログラムを実行します。|  
 |PowerShell|PowerShell スクリプティング ジョブ ステップを実行します。|  
 |レプリケーション ディストリビューター|レプリケーション ディストリビューション エージェントをアクティブにするジョブ ステップを実行します。|  
@@ -135,7 +134,7 @@ ms.locfileid: "79289630"
 |レプリケーション スナップショット|レプリケーション スナップショット エージェントをアクティブにするジョブ ステップを実行します。|  
 |レプリケーション トランザクション ログ リーダー|レプリケーション ログ リーダー エージェントをアクティブにするジョブ ステップを実行します。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] コマンド|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] コマンドを実行します。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Query|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] クエリを実行します。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] クエリ|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] クエリを実行します。|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージを実行します。|  
   
 > [!NOTE]  
@@ -144,9 +143,9 @@ ms.locfileid: "79289630"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサブシステム制約が強制的に適用されます。 たとえば、sysadmin 固定サーバー ロールのメンバーであるユーザーのプロキシが [!INCLUDE[ssIS](../../includes/ssis-md.md)] サブシステムにアクセスできなければ、そのユーザーが [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージを実行できる場合でも、そのプロキシは [!INCLUDE[ssIS](../../includes/ssis-md.md)] ジョブ ステップを実行できません。  
   
 ### <a name="proxies"></a>プロキシ  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、プロキシを使用してセキュリティ コンテキストを管理します。 プロキシは、複数のジョブ ステップで使用できます。 固定サーバーロール`sysadmin`のメンバーは、プロキシを作成できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、プロキシを使用してセキュリティ コンテキストを管理します。 プロキシは、複数のジョブ ステップで使用できます。 `sysadmin`固定サーバーロールのメンバーは、プロキシを作成できます。  
   
- 各プロキシには対応するセキュリティ資格情報が 1 つあります。 各プロキシは、一連のサブシステムや一連のログインに関連付けることができます。 プロキシは、そのプロキシに関連付けられているサブシステムを使用するジョブ ステップにのみ使用できます。 特定のプロキシを使用するジョブ ステップを作成するには、ジョブの所有者がそのプロキシに関連付けられているログインを使用しているか、プロキシへ制限なしにアクセスできるロールのメンバーである必要があります。 固定サーバーロール`sysadmin`のメンバーは、プロキシに無制限にアクセスできます。 **SQLAgentUserRole**、 **SQLAgentReaderRole**、または **SQLAgentOperatorRole** のメンバーは、特定のアクセスが許可されているプロキシしか使用できません。 これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの固定データベース ロールのメンバーであるユーザーが特定のプロキシを使用するジョブ ステップを作成するには、ユーザーごとにこれらの特定のプロキシへのアクセスが許可されている必要があります。  
+ 各プロキシには対応するセキュリティ資格情報が 1 つあります。 各プロキシは、一連のサブシステムや一連のログインに関連付けることができます。 プロキシは、そのプロキシに関連付けられているサブシステムを使用するジョブ ステップにのみ使用できます。 特定のプロキシを使用するジョブ ステップを作成するには、ジョブの所有者がそのプロキシに関連付けられているログインを使用しているか、プロキシへ制限なしにアクセスできるロールのメンバーである必要があります。 `sysadmin`固定サーバーロールのメンバーは、プロキシに無制限にアクセスできます。 **SQLAgentUserRole**、 **SQLAgentReaderRole**、または **SQLAgentOperatorRole** のメンバーは、特定のアクセスが許可されているプロキシしか使用できません。 これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの固定データベース ロールのメンバーであるユーザーが特定のプロキシを使用するジョブ ステップを作成するには、ユーザーごとにこれらの特定のプロキシへのアクセスが許可されている必要があります。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理を自動化するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成するには、次の手順に従ってください。  

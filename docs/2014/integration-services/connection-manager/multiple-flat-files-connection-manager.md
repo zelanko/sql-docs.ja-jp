@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7235f5f333ac7bb4520a6244e103baafba343ea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dcad5e767f16054385f30e95e15bd8a598d9fdd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833703"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920641"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>複数フラット ファイル接続マネージャー
   複数フラット ファイル接続マネージャーを使用すると、パッケージで複数のフラット ファイルのデータにアクセスできます。 たとえば、データ フロー タスクが For ループ コンテナーなどのループ コンテナーの内部にある場合は、フラット ファイル ソースで複数フラット ファイル接続マネージャーを使用できます。 コンテナーの各ループで、フラット ファイル ソースは、複数フラット ファイル接続マネージャーが提供する次のファイル名からデータを読み込みます。  
   
- 複数フラットファイル接続マネージャーをパッケージに追加すると、は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 、実行時に複数のフラットファイル接続を解決する接続マネージャーを作成し、複数フラットファイル接続マネージャーのプロパティを設定して、複数フラットファイル接続マネージャーをパッケージの`Connections`コレクションに追加します。  
+ 複数フラットファイル接続マネージャーをパッケージに追加すると、は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 実行時に複数のフラットファイル接続を解決する接続マネージャーを作成し、複数フラットファイル接続マネージャーのプロパティを設定して、複数フラットファイル接続マネージャーを `Connections` パッケージのコレクションに追加します。  
   
  接続マネージャーの `ConnectionManagerType` プロパティは、`MULTIFLATFILE` に設定されます。  
   
@@ -47,9 +46,9 @@ ms.locfileid: "62833703"
   
  複数フラット ファイル接続マネージャーが複数のファイルを参照する場合、ファイルのパスをパイプ (|) 文字で区切ります。 この接続マネージャーの `ConnectionString` プロパティの形式は、次のとおりです。  
   
- \<*パス*>|\<*パス*>  
+ \<*path*>|\<*path*>  
   
- 複数のファイルを指定する場合、ワイルドカード文字を使用することもできます。 たとえば、C ドライブ上のすべてのテキストファイルを参照するには、 `ConnectionString`プロパティの値を c:\\* .txt に設定します。  
+ 複数のファイルを指定する場合、ワイルドカード文字を使用することもできます。 たとえば、C ドライブ上のすべてのテキストファイルを参照するには、プロパティの値を `ConnectionString` c: * .txt に設定します \\ 。  
   
  複数フラット ファイル接続マネージャーが複数のファイルを参照する場合、ファイルの形式はすべて同じである必要があります。  
   

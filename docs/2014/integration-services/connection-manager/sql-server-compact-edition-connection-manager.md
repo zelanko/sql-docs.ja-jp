@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 752c825cb34fbf2afe5d2306afbd562a49f74b7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a61dedbbdbcdcd08651407ac1be4a2a35df883b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833147"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920323"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 接続マネージャー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 接続マネージャーを使用すると、パッケージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースに接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に含まれる [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Compact 変換先では、この接続マネージャーの使用により、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベース内のテーブルに読み込まれます。  
@@ -28,7 +27,7 @@ ms.locfileid: "62833147"
 >  64 ビット コンピューターでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データ ソースに接続するパッケージを 32 ビット モードで実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Compact データ ソースへの接続に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Provider は、32 ビット版でのみ使用できます。  
   
 ## <a name="configuration-the-sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 接続マネージャーの構成  
- Compact 接続マネージャーを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パッケージに追加すると、は[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 、実行時にコンパクトな[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーを`Connections`パッケージのコレクションに追加します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact 接続マネージャーをパッケージに追加すると、は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 実行時にコンパクトな接続を解決する接続マネージャーを作成し、接続マネージャーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロパティを設定して、接続マネージャーをパッケージのコレクションに追加し `Connections` ます。  
   
  接続マネージャーの `ConnectionManagerType` プロパティは、`SQLMOBILE` に設定されます。  
   

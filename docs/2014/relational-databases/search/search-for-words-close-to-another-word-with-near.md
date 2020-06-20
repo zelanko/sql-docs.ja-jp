@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c2d187ea3ed951ac6f17eb4babc5f4f77451d4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003998"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR による他の単語の近くにある単語の検索
-  [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 述語または [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 関数で近接語句 (NEAR) を使用すると、互いに似た単語や語句を検索できます。 最初の検索語句と最後の検索語句を分離する非検索用語の最大数を指定することもできます。 さらに、任意の順序で語や句を検索したり、指定した順序で語や句を検索したりすることができます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、以前の[汎用近接語句](#Generic_NEAR)(現在は非推奨) と[カスタム近接語句](#Custom_NEAR)(の[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]新機能) の両方がサポートされています。  
+  [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 述語または [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 関数で近接語句 (NEAR) を使用すると、互いに似た単語や語句を検索できます。 最初の検索語句と最後の検索語句を分離する非検索用語の最大数を指定することもできます。 さらに、任意の順序で語や句を検索したり、指定した順序で語や句を検索したりすることができます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、以前の[汎用近接語句](#Generic_NEAR)(現在は非推奨) と[カスタム近接語句](#Custom_NEAR)(の新機能) の両方がサポートされてい [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ます。  
   
 ##  <a name="the-custom-proximity-term"></a><a name="Custom_NEAR"></a>カスタム近接語句  
  カスタム近接語句では、次のような新しい機能を使用できます。  
@@ -101,7 +100,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
   
 -   CONTAINS('NEAR((*term1*,*term2*),5) OR NEAR((*term3*,*term4*),2, TRUE)')  
   
- たとえば、  
+ たとえば、次のように入力します。  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
@@ -184,7 +183,7 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- 汎用近接語句とカスタム近接`NEAR((term1,term2),5)`語句 (重み付け語句 (isabout...)、または世代の用語 (フォーム...)) を組み合わせることはできません。  
+ 汎用近接語句とカスタム近接語句 ( `NEAR((term1,term2),5)` 重み付け語句 (ISABOUT...)、または世代の用語 (フォーム...)) を組み合わせることはできません。  
   
 ### <a name="example-using-the-generic-proximity-term"></a>例 : 汎用近接語句の使用  
  次の例では、汎用近接語句を使用して、"reflector" という語と "bracket" という語を同一のドキュメント内で検索します。  

@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5e87f5a13c8f156cd7d2788bb9004ec20fcd3eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245752"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058732"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server エージェントのプロパティ ([警告システム] ページ)
-  このページを使用すると、エージェントの警告によって[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]送信されるメッセージの設定を表示および変更できます。  
+  このページを使用すると、エージェントの警告によって送信されるメッセージの設定を表示および変更でき [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="options"></a>オプション  
  **[メール セッション]**  
@@ -36,7 +35,7 @@ ms.locfileid: "63245752"
 >  電子メール システムを変更したら、変更内容を有効にするために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを再起動する必要があります。  
   
  **[メール プロファイル]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するプロファイルを設定します。 [ ** \<新しいデータベースメールプロファイル... >** を選択して新しいプロファイルを作成することもできます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するプロファイルを設定します。 **\<new Database Mail profile...>** 新しいプロファイルを作成するように選択することもできます。  
   
  **[ポケットベル メール]**  
  このセクションのオプションを使用すると、ポケットベル アドレスに送信される電子メール メッセージをポケットベル システムに対応させることができます。  
@@ -47,7 +46,7 @@ ms.locfileid: "63245752"
  **[[宛先] 行]**  
  メッセージの **[宛先]** 行のオプションを指定します。  
   
- **Prefix**  
+ **プレフィックス**  
  ポケットベルに送信されるメッセージの **[宛先]** 行の先頭に、システムから要求される固定テキストを入力します。  
   
  **ポケット**  
@@ -59,7 +58,7 @@ ms.locfileid: "63245752"
  **[[CC] 行]**  
  メッセージの **[CC]** 行のオプションを指定します。  
   
- **Prefix**  
+ **プレフィックス**  
  ポケットベルに送信されるメッセージの **[CC]** 行の先頭に、システムから要求される固定テキストを入力します。  
   
  **ポケット**  
@@ -71,7 +70,7 @@ ms.locfileid: "63245752"
  **件名**  
  メッセージの件名のオプションを指定します。  
   
- **Prefix**  
+ **プレフィックス**  
  ポケットベルに送信されるメッセージの **[件名]** 行の先頭に、ポケットベル システムから要求される固定テキストを入力します。  
   
  **サフィックス**  
@@ -86,7 +85,7 @@ ms.locfileid: "63245752"
  **[緊急時のオペレーターを有効にする]**  
  緊急時のオペレーターを指定します。  
   
- **演算子**  
+ **Operator**  
  緊急時の通知を受け取るオペレーターを指定します。  
   
  **[通知方法]**  

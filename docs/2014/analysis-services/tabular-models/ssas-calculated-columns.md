@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c1e0a9435fd974044b71ac64c1e7762fc709ca9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284889"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938613"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>計算列 (SSAS テーブル)
   テーブル モデルの計算列では、モデルに新しいデータを追加することができます。 列に値を貼り付けるかインポートする代わりに、列の行レベル値を定義する DAX 数式を作成します。 すると、計算列を他のデータ列と同じように、レポート、ピボットテーブル、またはピボットグラフで使用できるようになります。  
@@ -33,7 +32,7 @@ ms.locfileid: "67284889"
   
 -   [関連タスク](#bkmk_rel_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>効果  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> 利点  
  計算列の数式は、Excel での数式と非常によく似ています。 ただし、Excel とは異なり、テーブル内の異なる行に異なる数式を作成することはできません。代わりに列全体に自動的に DAX 数式が適用されます。  
   
  列に数式が含まれている場合は、各行について値が計算されます。 有効な数式を入力すると、その列に対する結果が計算されます。 基になるデータが更新された場合など、列の値は必要に応じて再計算されます。  

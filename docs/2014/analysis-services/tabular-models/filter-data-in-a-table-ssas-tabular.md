@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4382d00093187cc4dd3f71a2db0c4488c27aa629
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067129"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938903"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>テーブル内のデータのフィルター処理 (SSAS テーブル)
   テーブルに読み込む行を制御するには、データをインポートする際にフィルターを適用します。 データをインポートした後、行を個別に削除することはできません。 ただし、カスタム フィルターを適用して行の表示方法を制御することは可能です。 フィルター条件を満たしていない行は非表示になります。 1 行以上の列を基準にしてフィルター処理を行うことができます。 フィルター処理は追加型です。つまり、新しいフィルターによる処理は、前のフィルター処理の結果に対して行われます。したがって、フィルターを適用するごとにデータのサブセットは減っていきます。  
@@ -43,7 +42,7 @@ ms.locfileid: "66067129"
   
 1.  フィルターをクリアする列の見出しの矢印をクリックします。  
   
-2.  [**列名の\<>からフィルターをクリア] を**クリックします。  
+2.  [**フィルターをクリア \<Column Name> ] を**クリックします。  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>テーブルのすべてのフィルターをクリアするには  
   

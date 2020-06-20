@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 74be4b3e924d02f6992b927af35c7774c3ea0ae4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e949e203bfcca00f91552ca04900028b53c8924
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484313"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937643"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>値を Excel ファイルからドメインへインポートする
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で Excel ファイルからドメインにデータをインポートする方法について説明します。 Excel ファイルを使用して [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションにドメイン値をインポートすることで、ナレッジの生成処理を簡略化し、時間と労力を節約します。 この処理では、有効なデータ値の一覧が保存された Excel ファイルまたはテキスト ファイルを使用して、それらの値をドメインにインポートすることができます。 Excel ファイルからドメインにドメイン値をインポートしたり、ナレッジ ベースにドメインをインポートしたりできます (ナレッジベースへのドメインのインポートの詳細については、「[ナレッジ検出で Excel ファイルからドメインをインポートする](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)」を参照してください)。Excel ファイルへのエクスポートはサポートされていません。  

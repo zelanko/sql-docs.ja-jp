@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5555e49a85d50b6b5a48002a176055605ee06913
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3b5e8cec1cac3eb1ce4357480c0f994a33d4c40
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484224"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937723"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>DQS のプロファイル通知の有効化または無効化
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のプロファイル通知を有効または無効にする方法について説明します。 既定では、DQS のプロファイル通知は有効です。 プロファイル通知によって、データ ソースについての重要な情報と、データに対して行われている現在のアクティビティの有効性が伝えられます。 詳細については、「 [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)」をご参照ください。  

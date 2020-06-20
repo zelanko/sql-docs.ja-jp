@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d948a9edfafdbf39bd8ee5c512fb77814cb7adf7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec4d14e3823cda0f33f5348e0a644387b83f2888
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62837262"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923193"
 ---
 # <a name="high-availability-support"></a>高可用性のサポート
   CDC Service for Oracle は高可用性向けに設計されています。 次の機能は、高可用性のサポートの一部を形成します。  
@@ -24,7 +23,7 @@ ms.locfileid: "62837262"
   
 -   CDC Service for Oracle では、クラスター化された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用できます。そのため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが別のクラスター ノードにフェールオーバーした後の復元が可能です。 Oracle CDC Service のコンピューターの管理者は、Oracle CDC サービスを作成するときに、クラスター化された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続情報のみを指定する必要があります。  
   
--   CDC Service for Oracle では [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**AlwaysOn** データベース ミラーリング機能を使用できます。 このサポートを利用するには、MSXDBCDC データベースとすべての CDC データベースが同じ可用性グループ内に存在している必要があります。 また、Oracle CDC Service のコンピューター管理者は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可用性グループに対する適切な`Failover_Partner and Network=dbmssocn` **AlwaysOn**接続情報 (接続プロパティなど) を指定する必要があります。 これにより、フェールオーバー後のデータベースのセカンダリ レプリケーションで CDC サービスが処理を自動的に再開することが可能になります。  
+-   CDC Service for Oracle では [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**AlwaysOn** データベース ミラーリング機能を使用できます。 このサポートを利用するには、MSXDBCDC データベースとすべての CDC データベースが同じ可用性グループ内に存在している必要があります。 また、Oracle CDC Service のコンピューター管理者は、可用性グループに対する適切な**AlwaysOn**接続情報 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (接続プロパティなど) を指定する必要があり `Failover_Partner and Network=dbmssocn` ます。 これにより、フェールオーバー後のデータベースのセカンダリ レプリケーションで CDC サービスが処理を自動的に再開することが可能になります。  
   
 -   CDC Service for Oracle は、( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と共に、または独立して) Windows フェールオーバー クラスター上の汎用サービス リソースとして構成し、クラスターでの CDC 処理のフェールオーバーとフォールバックを簡素化することができます。 CDC Service for Oracle をフェールオーバー クラスターのリソースとして構成するには、システム管理者が CDC Service for Oracle をフェールオーバー クラスターの各ノードで汎用サービス リソースとして設定する必要があります。  
   

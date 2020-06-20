@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c049ced5-55df-47dd-b855-b2da4b7ce17d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bf5f9fae501c019a7db3c9d78d578729cf1df42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40bf92b2a7ca45e7f4033ec6d6aa44c5d99e852a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066001"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938353"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>ツール バー ([翻訳] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   ツール バーのボタンを使用すると、 **ディメンション デザイナー** の **[翻訳]** タブで一般的な操作を実行できます。  
@@ -24,7 +23,7 @@ ms.locfileid: "66066001"
  **[ビジネス インテリジェンスの追加]**  
  **ビジネス インテリジェンス ウィザード** を表示して、ビジネス インテリジェンス機能を追加します。  
   
- **プロセス**  
+ **処理**  
  **[処理]** ダイアログ ボックスを表示して、オブジェクトを処理します。  
   
  **新しい翻訳**  

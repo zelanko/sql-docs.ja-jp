@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc318c3278f7f86aa4946380daffa0652882c0fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060814"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921916"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>データ フロー コンポーネントでエラー出力を構成する
   多くのデータ フロー コンポーネントがエラー出力をサポートしており、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでエラー出力を構成する方法は、コンポーネントに応じて異なります。 エラー出力の構成以外に、エラー出力の列を構成することもできます。 これには、コンポーネントによって追加される **[ErrorCode]** 列や **[ErrorColumn]** 列の構成が含まれます。  
@@ -82,14 +81,14 @@ ms.locfileid: "66060814"
   
 4.  構成するエラー出力列が含まれているコンポーネントを右クリックし、 **[詳細エディターの表示]** をクリックします。  
   
-5.  [**入力プロパティと出力プロパティ**] タブをクリックし、[ ** \<コンポーネント名> エラー出力**]、[**出力列**] の順に展開します。  
+5.  [**入力プロパティと出力プロパティ**] タブをクリックし、[ ** \<component name> エラー出力**]、[**出力列**] の順に展開します。  
   
 6.  列をクリックして、プロパティを更新します。  
   
     > [!NOTE]  
     >  列の一覧には、コンポーネントの入力列、前のエラー出力で追加された **[ErrorCode]** 列と **[ErrorColumn]** 列、このコンポーネントによって追加された **[ErrorCode]** 列と **[ErrorColumn]** 列が表示されます。  
   
-7.  [ **OK] をクリックします。**  
+7.  **[OK]** をクリックします。  
   
 8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   

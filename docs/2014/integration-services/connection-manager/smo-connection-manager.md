@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 32710f704e3d51d143e071178d690413735319f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c38b1037e3e6e2e36dbe288682867d6b9f030545
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833114"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920473"
 ---
 # <a name="smo-connection-manager"></a>SMO 接続マネージャー
   SMO 接続マネージャーを使用すると、パッケージは、SQL 管理オブジェクト (SMO) サーバーに接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる転送タスクでは、SMO 接続マネージャーが使用されます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを転送するログイン転送タスクでは、SMO 接続マネージャーを使用します。  

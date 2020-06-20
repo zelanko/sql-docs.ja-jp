@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 293e60f3-15e3-4258-b73a-8baabe15c760
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a868aafff6d9bd389671544b5f1898e82707d933
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774294"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930921"
 ---
 # <a name="manage-checkins"></a>チェックインの管理
   ソース管理の対象ファイルに加えた変更を他のユーザーが利用できるようにするには、そのファイルをチェックインする必要があります。 ファイルをチェックインすると、作成したバージョンがソース管理プロバイダーにコピーされ、それがファイルの最新バージョンになり、適切な権限を持ったユーザーからの利用が可能になります。  
   
- を[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]使用してファイルをチェックインします。 ソース管理ストアを定期的に更新する必要があり、しかも一連のファイルに対する管理を継続しなければならない場合は、チェックインしたファイルをチェックアウト状態のままにするように設定することができます。  
+ を使用して [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ファイルをチェックインします。 ソース管理ストアを定期的に更新する必要があり、しかも一連のファイルに対する管理を継続しなければならない場合は、チェックインしたファイルをチェックアウト状態のままにするように設定することができます。  
   
  このトピックでは、次の内容について紹介します。  
   

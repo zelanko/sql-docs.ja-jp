@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41f01eed-e50f-44c8-a8e0-97e01bd66bd3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1770b9ab0284d203f7a5954dd369c5391984c12b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066048"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938413"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>ツール バー ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **ディメンション デザイナー** の **[ディメンション構造]** ページのツール バーを使用すると、一般的な操作を実行できます。  
@@ -24,7 +23,7 @@ ms.locfileid: "66066048"
  **[ビジネス インテリジェンスの追加]**  
  **ビジネス インテリジェンス ウィザード** を表示して、ビジネス インテリジェンス機能を追加します。  
   
- **プロセス**  
+ **処理**  
  **[処理]** ダイアログ ボックスを表示して、オブジェクトを処理します。  
   
  **[属性を ... として表示します]**  
@@ -32,7 +31,7 @@ ms.locfileid: "66066048"
   
 -   List  
   
-     現在のディメンションの属性を一覧表示します。 これは既定です。  
+     現在のディメンションの属性を一覧表示します。 既定値です。  
   
 -   ツリー  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66066048"
  **[テーブルの検索]**  
  **[テーブルの検索]** ダイアログ ボックスを表示し、 **[データ ソース ビュー]** ペインのテーブルを検索します。  
   
- **Zoom**  
+ **[ズーム]**  
  クリックしてズームの比率を切り替えるか、ズームのオプションを選択します。  
   
  **表示**  
@@ -69,7 +68,7 @@ ms.locfileid: "66066048"
   
      現在のディメンションに関連付けられたテーブルと列のダイアグラムを表示します。  
   
--   [ツリー表示]  
+-   ツリー ビュー  
   
      現在のディメンションに関連付けられたテーブルと列を含むツリー ビューを表示します。  
   

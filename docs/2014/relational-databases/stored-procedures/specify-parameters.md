@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93a04281839c4db26cbab16ac166af3cdb7c9a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736365"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065663"
 ---
 # <a name="specify-parameters"></a>パラメーターの指定
   プロシージャのパラメーターを指定することで、呼び出し元のプログラムからプロシージャの本体に値を渡すことができます。 これらの値は、プロシージャの実行中にさまざまな目的で使用できます。 プロシージャ パラメーターも、パラメーターが OUTPUT パラメーターとしてマークされている場合は、呼び出し元のプログラムに値を返すことができます。  
@@ -126,7 +125,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- 既定値が指定されているパラメーターは省略できますが、パラメーターの一覧を切り捨てることしかできません。 たとえば、プロシージャに 5 つのパラメーターがある場合は、4 番目と 5 番目のパラメーターを両方とも省略できます。 ただし、パラメーターが** \@parameter =**_value_の形式で指定されていない限り、4番目のパラメーターは、5番目のパラメーターが含まれている限りスキップできません。  
+ 既定値が指定されているパラメーターは省略できますが、パラメーターの一覧を切り捨てることしかできません。 たとえば、プロシージャに 5 つのパラメーターがある場合は、4 番目と 5 番目のパラメーターを両方とも省略できます。 ただし、パラメーターが** \@ parameter =**_value_の形式で指定されていない限り、4番目のパラメーターは、5番目のパラメーターが含まれている限りスキップできません。  
   
 ## <a name="specifying-parameter-direction"></a>パラメーターの方向の指定  
  パラメーターの方向は、入力または出力です。入力の場合は、値がプロシージャの本体に渡されます。出力の場合は、プロシージャが呼び出し元のプログラムに値を返します。 既定値は入力パラメーターです。  
@@ -164,10 +163,10 @@ GO
   
 ```  
   
- `usp_GetList` を実行し、原価が $700 未満である [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 製品 (自転車) の一覧を返します。 出力パラメーター ** \@cost**と** \@compareprices**は、フロー制御言語と共に使用して、[**メッセージ**] ウィンドウにメッセージを返します。  
+ `usp_GetList` を実行し、原価が $700 未満である [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 製品 (自転車) の一覧を返します。 出力パラメーター ** \@ cost と** ** \@ compareprices**は、フロー制御言語と共に使用して、[**メッセージ**] ウィンドウにメッセージを返します。  
   
 > [!NOTE]  
->  プロシージャの作成中にも変数の使用中にも、OUTPUT 変数を定義する必要があります。 パラメーター名と変数名が一致する必要はありません。 ただし、データ型とパラメーターの位置は一致している必要があります ( ** \@listprice =** _variable_が使用されている場合を除く)。  
+>  プロシージャの作成中にも変数の使用中にも、OUTPUT 変数を定義する必要があります。 パラメーター名と変数名が一致する必要はありません。 ただし、データ型とパラメーターの位置は一致している必要があります ( ** \@ listprice =** _variable_が使用されている場合を除く)。  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

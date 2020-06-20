@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 326f675a-bead-48d3-9088-539e9f9c3fc9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c5594aab7f7d21f10b3b20d42c61558984e71193
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e152fc2950ab6f3cf605bec3b7e595d5e105d00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094408"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065344"
 ---
 # <a name="installation-progress"></a>Installation Progress
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ状況を監視するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの **[インストールの進行状況]** ページを使用します。  

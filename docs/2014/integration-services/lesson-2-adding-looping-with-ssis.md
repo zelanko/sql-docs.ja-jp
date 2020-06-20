@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed2089257af4f82b0bbb863731a17d396dc8795c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767554"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968262"
 ---
 # <a name="lesson-2-adding-looping"></a>レッスン 2: ループの追加
   「[レッスン 1: プロジェクトと基本パッケージの作成](lesson-1-create-a-project-and-basic-package-with-ssis.md)」では、単一のフラットファイルソースからデータを抽出し、参照変換を使用してデータを変換した後、最後にデータを**AdventureWorksDW2012**サンプルデータベースの**FactCurrency**ファクトテーブルに読み込むパッケージを作成しました。  
   
- しかし、抽出、変換、読み込み (ETL) プロセスでフラット ファイルを 1 つだけ使用することはほとんどありません。 通常の ETL プロセスでは、複数のフラット ファイル ソースからデータを抽出します。 複数のソースからデータを抽出するには、反復型の制御フローが必要となります。 の[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]最も期待される機能の1つは、繰り返しまたはループをパッケージに簡単に追加できることです。  
+ しかし、抽出、変換、読み込み (ETL) プロセスでフラット ファイルを 1 つだけ使用することはほとんどありません。 通常の ETL プロセスでは、複数のフラット ファイル ソースからデータを抽出します。 複数のソースからデータを抽出するには、反復型の制御フローが必要となります。 の最も期待される機能の1つ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、繰り返しまたはループをパッケージに簡単に追加できることです。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージ全体をループさせる 2 種類のコンテナーがあります。1 つは Foreach ループ コンテナー、もう 1 つは For ループ コンテナーです。 Foreach ループ コンテナーが列挙子を使用してループを実行するのに対し、For ループ コンテナーは、通常、変数式を使用します。 このレッスンでは Foreach ループ コンテナーを使用します。  
   

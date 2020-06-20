@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69e7c14ae42586b801b2956c224cc8350ac611c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999937"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058595"
 ---
 # <a name="object-explorer-details-pane"></a>[オブジェクト エクスプローラーの詳細] ペイン
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のコンポーネントである [オブジェクト エクスプローラーの詳細] は、サーバーのすべてのオブジェクトを表形式で表示し、それらのオブジェクトを管理するためのユーザー インターフェイスを提供します。 オブジェクト エクスプローラーの機能は、サーバーの種類によって多少異なりますが、データベースの開発機能と管理機能は、基本的にサーバーの種類にかかわりなく用意されています。  

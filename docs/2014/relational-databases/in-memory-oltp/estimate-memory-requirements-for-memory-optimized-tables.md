@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12fdb1a41ec764a0fee0817940f95a3d303777e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811010"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050200"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>メモリ最適化テーブルのメモリ必要量の推定
-  新しい[!INCLUDE[hek_2](../../includes/hek-2-md.md)]メモリ最適化テーブルを作成するか、既存のディスクベーステーブルをメモリ最適化テーブルに移行するかにかかわらず、十分なメモリを使用してサーバーをプロビジョニングできるように、各テーブルのメモリニーズの妥当な推定値を確保することが重要です。 ここでは、メモリ最適化テーブルのデータを保持するために必要とされるメモリの量を推定する方法について説明します。  
+  新しいメモリ最適化テーブルを作成するか、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 既存のディスクベーステーブルをメモリ最適化テーブルに移行するかにかかわらず、十分なメモリを使用してサーバーをプロビジョニングできるように、各テーブルのメモリニーズの妥当な推定値を確保することが重要です。 ここでは、メモリ最適化テーブルのデータを保持するために必要とされるメモリの量を推定する方法について説明します。  
   
  ディスク ベース テーブルをメモリ最適化テーブルに移行することを検討している場合は、このトピックを読み進める前に、どのテーブルを移行するのが最善であるかを示す「 [テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 」というトピックを参照してください。 「 [インメモリ OLTP への移行](migrating-to-in-memory-oltp.md) 」に掲載されているすべてのトピックには、ディスク ベース テーブルからメモリ最適化テーブルへの移行に関するガイダンスが掲載されています。  
   
@@ -119,7 +118,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  **ハッシュ インデックスの配列サイズの設定**  
   
- ハッシュ配列のサイズはによっ`(bucket_count= <value>)`て\<設定されます。> の値は0より大きい整数値です。 > \<値が2の累乗でない場合、実際の bucket_count は、次に最も近い2の累乗に切り上げられます。  この例のテーブル (bucket_count = 500万) では、500万は2のべき乗ではないため、実際のバケット数は 8388608 (2<sup>23</sup>) に切り上げられます。  ハッシュ配列が必要とするメモリを計算するときは、5,000,000 ではなく、この数値を使用する必要があります。  
+ ハッシュの配列サイズは `(bucket_count= <value>)` によって設定されます。ここで、 \<value> は、0 より大きい整数値です。 \<value> が 2 のべき乗でない場合は、実際の bucket_count は、最も近い 2 のべき乗になるように切り上げられます。  この例のテーブル (bucket_count = 500万) では、500万は2のべき乗ではないため、実際のバケット数は 8388608 (2<sup>23</sup>) に切り上げられます。  ハッシュ配列が必要とするメモリを計算するときは、5,000,000 ではなく、この数値を使用する必要があります。  
   
  したがって、この例の各ハッシュ配列で必要とされるメモリは次のようになります。  
   

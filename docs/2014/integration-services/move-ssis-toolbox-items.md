@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3e3ef600-9331-453b-80ad-b2d18e6082be
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7bcb7001f9be0812d369a0c1c8db6689d736be1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d938c9d46a6fff531863f0ed6de7294a58091441
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057559"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967052"
 ---
 # <a name="move-ssis-toolbox-items"></a>SSIS ツールボックス アイテムを移動する
   新しい SSIS ツールボックスには、新しいカテゴリ、およびユーザーの設定に応じてアイテムを整理する機能が用意されています。 ツールボックスの下部にある情報ウィンドウに、選択したツールボックス アイテムの説明と、オンライン ブックのトピックへのリンクが表示されます。  

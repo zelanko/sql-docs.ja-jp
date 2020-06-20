@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a48b400196a77a9c59219bc28cdff496229ae7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13da2ecc244c1596789a1d816bac81a13bcd4c62
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175561"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938333"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services で使用するツールとアプリケーション
   Analysis Services モデルの構築および Analysis Services インスタンス上で関連付けられているデータベースの管理に必要なツールやアプリケーションを検索します。
@@ -42,7 +41,7 @@ ms.locfileid: "78175561"
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio
  Management Studio は、Analysis Services を含むすべての SQL Server 機能用の主要な管理ツールです。 SQL Server Management Studio はオプションのコンポーネントです。 SQL Server Management Studio が他の SQL Server アプリケーションと一緒に Windows Server 2012 のアプリ ページに表示されない場合は、SQL Server セットアップを実行してインストールに追加します。
 
-### <a name="sql-server-profiler"></a>SQL Server プロファイラー
+### <a name="sql-server-profiler"></a>SQL Server Profiler
  正式に非推奨とされていても、SQL Server Profiler は接続、MDX クエリの実行、および他のサーバー操作を簡単に監視する機能を提供します。 SQL Server Profiler は既定でインストールされます。 SQL Server アプリケーションと一緒に Windows Server 2012 のアプリ ページにあります。
 
 ### <a name="powershell"></a>PowerShell

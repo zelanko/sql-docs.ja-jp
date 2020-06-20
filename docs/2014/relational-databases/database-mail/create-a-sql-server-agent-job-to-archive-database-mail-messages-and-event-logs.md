@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffbfaa1bda561240d64c7548752f0ae18ddddf3c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952602"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>データベース メール メッセージやイベント ログをアーカイブする SQL Server エージェント ジョブの作成
   データベース メール メッセージと添付ファイルのコピーは、データベース メール イベント ログに記録されると同時に、 **msdb** のテーブルに保持されます。 このテーブルのサイズを縮小するためには、不要になったメッセージやイベントを定期的にアーカイブする必要があります。 次の手順では、この処理を自動化する SQL Server エージェント ジョブを作成します。  
@@ -208,7 +207,7 @@ ms.locfileid: "62917594"
   
 5.  **[頻度]** 領域で、たとえば毎月 1 回など、定期的にジョブを実行するオプションを選択します。  
   
-6.  **[一日のうちの頻度]** 領域で、**[Occurs once at <time\<]** (<時刻> に 1 度実行) を選びます。  
+6.  [**日単位の頻度**] 領域で、[ ** \<time> 1 回**] を選択します。  
   
 7.  その他のオプションが目的どおりに構成されていることを確認し、 **[OK]** をクリックしてスケジュールを保存します。  
   

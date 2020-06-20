@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4dcab58a876881cc9ca76e9159d5bcc68ffd5fdb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58c5529d919861709f382f8cc594608e8c9981b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066509"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938590"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>テーブルと列 (SSAS テーブル)
   テーブルのインポート ウィザードを使用してモデルにテーブルとデータを追加したら、新しいデータ列の追加、テーブル間のリレーションシップの作成、データを拡張する計算の定義、テーブルを見やすくするためのデータのフィルター処理と並べ替えなどを行ってテーブルを操作できます。  
@@ -28,7 +27,7 @@ ms.locfileid: "66066509"
   
 -   [関連タスク](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>効果  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 利点  
  テーブル モデルのテーブルのフレームワークを使用して、列および他のメタデータを定義できます。 テーブルは次の要素で構成されます。  
   
  **テーブル定義**  

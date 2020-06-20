@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54eeeec995e390b71ce8871b680c26138fc88783
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762421"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951952"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>データベースのデタッチとアタッチ (SQL Server)
   データベースのデータ ファイルおよびトランザクション ログ ファイルは、デタッチして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の同一または別のインスタンスに再度アタッチすることができます。 同一コンピューターの別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにデータベースを変更したり、データベースを移動したりする場合、データベースをデタッチしてアタッチする操作が便利です。  
@@ -85,14 +84,14 @@ ms.locfileid: "62762421"
 3.  データベースをデタッチし直します。  
   
 ##  <a name="attaching-a-database"></a><a name="AttachDb"></a> データベースのインポート  
- コピーまたはデタッチした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースはアタッチできます。 サーバーインスタンスを[!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)]アタッチすると、カタログファイルは、の場合と同じように、他のデータベースファイルと一緒に以前の[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]場所からアタッチされます。 詳細については、「 [フルテキスト検索のアップグレード](../search/upgrade-full-text-search.md)」を参照してください。  
+ コピーまたはデタッチした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースはアタッチできます。 サーバーインスタンスをアタッチすると [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] 、カタログファイルは、の場合と同じように、他のデータベースファイルと一緒に以前の場所からアタッチされ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。 詳細については、「 [フルテキスト検索のアップグレード](../search/upgrade-full-text-search.md)」を参照してください。  
   
  データベースをアタッチするときは、すべてのデータ ファイル (MDF ファイルおよび NDF ファイル) を利用できる状態にする必要があります。 データベースを最初に作成したときか最後にアタッチしたときとデータ ファイルのパスが異なる場合、ファイルの現在のパスを指定する必要があります。  
   
 > [!NOTE]  
 >  アタッチ中のプライマリ データ ファイルが読み取り専用の場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ではデータベースが読み取り専用であると想定されます。  
   
- 暗号化されたデータベースがの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに最初にアタッチされている場合、データベース所有者は、OPEN MASTER KEY 解読 by PASSWORD = **'*`password`*'** というステートメントを実行して、データベースのマスターキーを開く必要があります。 ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY ステートメントを実行してマスター キーの自動暗号化解除を有効にすることをお勧めします。 詳細については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)」を参照してください。  
+ 暗号化されたデータベースがのインスタンスに最初にアタッチされている場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データベース所有者は、OPEN MASTER KEY 解読 BY PASSWORD = **' *`password`* '** というステートメントを実行して、データベースのマスターキーを開く必要があります。 ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY ステートメントを実行してマスター キーの自動暗号化解除を有効にすることをお勧めします。 詳細については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)」を参照してください。  
   
  次に示すように、ログ ファイルをアタッチするための要件の一部は、データベースが読み書き可能か読み取り専用かによって異なります。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62762421"
   
      読み書き可能なデータベースのログ ファイルが 1 つで、そのファイルの新しい場所を指定しない場合、アタッチ操作ではファイルの古い場所が検索されます。 古いログ ファイルが見つかった場合、データベースがクリーンにシャットダウンされたかどうかにかかわらず、そのファイルが使用されます。 しかし、古いログ ファイルが見つからなかった場合、およびデータベースがクリーンにシャットダウンされたもののアクティブなログ チェーンがない場合、アタッチ操作によってそのデータベースの新しいログ ファイルが作成されます。  
   
--   アタッチされているプライマリデータファイルが読み取り専用の場合[!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] 、はプライマリファイルに格納されているログの場所を更新できません。  
+-   アタッチされているプライマリデータファイルが読み取り専用の場合、は [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] プライマリファイルに格納されているログの場所を更新できません。  
   
   
   
@@ -117,7 +116,7 @@ ms.locfileid: "62762421"
 > [!IMPORTANT]  
 >  新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成したデータベースは、それ以前のバージョンでアタッチすることはできません。  
   
- データベースを別のサーバー インスタンスにアタッチするときは、ユーザーおよびアプリケーションに一貫した使用環境を提供するために、アタッチ先のサーバー インスタンスで、ログインやジョブなどのデータベースのメタデータの一部またはすべてを作成し直す必要が生じる場合があります。 詳細については、「[データベースを別のサーバーインスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
+ データベースを別のサーバー インスタンスにアタッチするときは、ユーザーおよびアプリケーションに一貫した使用環境を提供するために、アタッチ先のサーバー インスタンスで、ログインやジョブなどのデータベースのメタデータの一部またはすべてを作成し直す必要が生じる場合があります。 詳細については、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **データベースをデタッチするには**  

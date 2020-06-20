@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7f6e8bda35964b03bf171ac62db7ff3119aa6e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066697"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938693"
 ---
 # <a name="relationships-ssas-tabular"></a>リレーションシップ (SSAS テーブル)
   テーブル モデルでは、リレーションシップは 2 つのデータ テーブル間の接続を表します。 これにより、2 つのテーブルのデータの関連付けの方法が決まります。 たとえば、Customers テーブルと Orders テーブルを関連付けると、各注文に関連付けられた顧客名を表示できます。  
@@ -43,10 +42,10 @@ ms.locfileid: "66066697"
   
 -   [関連タスク](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="what"></a>効果  
+##  <a name="benefits"></a><a name="what"></a> 利点  
  リレーションシップは、各テーブル内の 1 つ以上の列に基づく、2 つのデータ テーブル間の接続を表します。 リレーションシップが有用である理由を理解するために、業務において顧客注文のデータを追跡する場合を考えます。 すべてのデータは、次のような構造を持つ単一のテーブルで追跡できます。  
   
-|CustomerID|名前|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|名前|EMail|DiscountRate|OrderID|OrderDate|製品|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -56,7 +55,7 @@ ms.locfileid: "66066697"
   
 ### <a name="customers"></a>顧客  
   
-|CustomerID|名前|電子メール|  
+|CustomerID|名前|Email|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -70,7 +69,7 @@ ms.locfileid: "66066697"
   
 ### <a name="orders"></a>Orders  
   
-|CustomerID|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|OrderID|OrderDate|製品|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|2010-01-07|Compact Digital|11|  
 |1|255|2010-01-03|SLR Camera|15|  
@@ -98,7 +97,7 @@ ms.locfileid: "66066697"
   
  次の表は、3 つのテーブル間のリレーションシップを示しています。  
   
-|リレーションシップ|種類|参照列|列|  
+|リレーションシップ|型|参照列|列|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|一対一|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|一対多|Customers.CustomerID|Orders.CustomerID|  
@@ -112,7 +111,7 @@ ms.locfileid: "66066697"
 ### <a name="single-active-relationship-between-tables"></a>テーブル間に 1 つのアクティブなリレーションシップ  
  複数のリレーションシップを作成すると、テーブル間の依存関係があいまいになる可能性があります。 正確な計算を作成するには、テーブル間のパスを 1 つにする必要があります。 そのため、テーブルの各ペアの間に作成できるアクティブなリレーションシップは 1 つだけです。 たとえば、AdventureWorks DW 2012 の DimDate テーブルには、FactInternetSales テーブルの 3 つの異なる列 (OrderDate、DueDate、および ShipDate) に関連付けられた DateKey 列が含まれています。 これらのテーブルをインポートしようとした場合、最初のリレーションシップは正常に作成されますが、同じ列を使用する後続のリレーションシップに関して次のエラーが出力されます。  
   
- \*リレーションシップ: テーブル [列 1]-> テーブル [列 2]-状態: エラー-理由: テーブル\<テーブル 1> と\<テーブル 2> の間にリレーションシップを作成することはできません。 2 つのテーブル間に作成できる直接的または間接的なリレーションシップは 1 つだけです。  
+ \*リレーションシップ: テーブル [列 1]-> テーブル [列 2]-状態: エラー-理由: テーブルとの間にリレーションシップを作成することはできません。 \<table 1> \<table 2> 2 つのテーブル間に作成できる直接的または間接的なリレーションシップは 1 つだけです。  
   
  2 つのテーブルの間に複数のリレーションシップが存在している場合は、参照列を含むテーブルのコピーを複数インポートし、テーブルの各ペアの間にリレーションシップを 1 つ作成します。  
   
@@ -137,7 +136,7 @@ ms.locfileid: "66066697"
   
  モデル デザイナーで 2 つのテーブル間のリレーションシップを作成する必要がある場合に、主キーと外部キーを定義する列が複数あるときは、リレーションシップを作成する前に、値を組み合わせて 1 つのキー列を作成しておく必要があります。 これはデータをインポートする前に行うことができます。また、モデル デザイナーで計算列を作成することによっても行うことができます。  
   
-###  <a name="many-to-many-relationships"></a><a name="bkmk_many_to_many"></a> 多対多リレーションシップ  
+###  <a name="many-to-many-relationships"></a><a name="bkmk_many_to_many"></a>多対多リレーションシップ  
  テーブル モデルは多対多リレーションシップをサポートしていないため、モデル デザイナー内に *交差テーブル* を追加することはできません。 ただし、DAX 関数を使用して、多対多リレーションシップをモデル化することができます。  
   
 ### <a name="self-joins-and-loops"></a>自己結合とループ  
@@ -177,7 +176,7 @@ ms.locfileid: "66066697"
 ##  <a name="duplicate-values-and-other-errors"></a><a name="bkmk_dupl_errors"></a>重複した値とその他のエラー  
  リレーションシップで使用できない列を選択すると、その列の横に赤い X が表示されます。 エラー アイコンの上にカーソルを置くと、問題の詳細を示すメッセージが表示されます。 選択した列間のリレーションシップを作成できない原因となる問題には、次のものがあります。  
   
-|問題またはメッセージ|解決方法|  
+|問題またはメッセージ|解決策|  
 |------------------------|----------------|  
 |選択した両方の列に重複する値が含まれるため、リレーションシップを作成できない。|有効なリレーションシップを作成するには、選択したペアの少なくとも一方の列には一意の値のみが含まれている必要があります。<br /><br /> 列を編集して重複値を削除するか、一意の値を含む列が **[関連する参照列]** として使用されるように、列の順序を逆にすることができます。|  
 |列に NULL 値または空の値が含まれている。|データ列を NULL 値で相互に結合することはできません。 すべての行で、リレーションシップに使用されている両方の列に値が含まれている必要があります。|  

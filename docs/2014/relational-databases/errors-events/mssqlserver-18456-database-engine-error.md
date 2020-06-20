@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14b233839901167ca92a1d2aed5a8c1441fefe0e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869597"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034966"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
@@ -85,13 +84,13 @@ ms.locfileid: "62869597"
   
  この問題を解決するには、接続文字列に `TRUSTED_CONNECTION = TRUE` を含めます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、認証エラー状態は 8 です。 これは、パスワードが正しくないことを示します。  
   
-|日付|ソース|Message|  
+|Date|source|メッセージ|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|ログオン|エラー: 18456、重大度: 14、状態: 8。|  
-|2007-12-05 20:12:56.34|ログオン|ユーザー '<user_name>' はログインできませんでした。 [クライアント: \<ip アドレス>]|  
+|2007-12-05 20:12:56.34|ログオン|ユーザー '<user_name>' はログインできませんでした。 [CLIENT: \<ip address>]|  
   
 > [!NOTE]  
 >  Windows 認証モードを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールし、後で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モードに変更すると、**sa** ログインは最初は無効になります。 これにより、"ユーザー ' sa ' のログインに失敗しました。" という状態が発生します。**Sa**ログインを有効にするには、「[サーバーの認証モードの変更](../../database-engine/configure-windows/change-server-authentication-mode.md)」を参照してください。  

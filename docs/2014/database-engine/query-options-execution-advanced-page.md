@@ -8,16 +8,15 @@ f1_keywords:
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b6ab8cc3c788e27946ddb68a3c926e8f926ebd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199326"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034920"
 ---
 # <a name="query-options-execution-advanced-page"></a>[クエリ オプション] の [実行] ([詳細設定] ページ)
 
@@ -29,9 +28,9 @@ ms.locfileid: "71199326"
 
 **SET PARSEONLY**各クエリの構文をチェックしますが、クエリは実行しません。 既定では、このオプションはオフになっています。  
 
-**CONCAT_NULL_YIELDS_NULL の設定**このチェックボックスをオンにすると、既存の値`NULL`とを連結するクエリは、 `NULL`常にを結果として返します。 このチェック ボックスがオフの場合、既存の値と `NULL` を連結するクエリは、既存の値を返します。 既定では、このオプションはオンです。
+**CONCAT_NULL_YIELDS_NULL の設定**このチェックボックスをオンにすると、既存の値とを連結するクエリは、 `NULL` 常にを `NULL` 結果として返します。 このチェック ボックスがオフの場合、既存の値と `NULL` を連結するクエリは、既存の値を返します。 既定では、このオプションはオンです。
 
-**ARITHABORT の設定**このチェックボックスがオンの場合、式`INSERT`の`DELETE`評価`UPDATE`中に、、またはステートメントで算術エラー (オーバーフロー、0による除算、またはドメインエラー) が発生すると、クエリまたはバッチは終了します。 このチェック ボックスがオフの場合、可能であればその値に対して  `NULL` が与えられ、クエリが続行されます。さらに、結果にメッセージが含められます。 この動作の詳細については、オンライン ブックを参照してください。 既定では、このオプションはオンです。
+**ARITHABORT の設定**このチェックボックスがオンの場合、 `INSERT` 式の `DELETE` 評価中に、、または `UPDATE` ステートメントで算術エラー (オーバーフロー、0による除算、またはドメインエラー) が発生すると、クエリまたはバッチは終了します。 このチェック ボックスがオフの場合、可能であればその値に対して  `NULL` が与えられ、クエリが続行されます。さらに、結果にメッセージが含められます。 この動作の詳細については、オンライン ブックを参照してください。 既定では、このオプションはオンです。
   
 **SHOWPLAN_TEXT の設定**このチェックボックスをオンにすると、クエリごとにクエリプランがテキスト形式で返されます。 既定では、このオプションはオフになっています。
   

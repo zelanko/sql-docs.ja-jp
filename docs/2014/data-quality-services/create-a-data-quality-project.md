@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f341d13995cd7a13a06e0ad7b9b380ebd0184f7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4cbab99b4f3fd7ba8a98be902dd4471e76fbaa81
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480951"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937933"
 ---
 # <a name="create-a-data-quality-project"></a>データ品質プロジェクトの作成
   このトピックでは、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]を使用してデータ品質プロジェクトを作成する方法について説明します。 データ品質プロジェクトは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でクレンジングおよび照合アクティビティの実行に使用されます。  

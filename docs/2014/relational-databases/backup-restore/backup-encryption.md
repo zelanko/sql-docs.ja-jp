@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 177eef6f6280e236106f9ec67684e4a15ef479a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a78ae4969982fbfe5295ee4219855f48ac60793
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783082"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959272"
 ---
 # <a name="backup-encryption"></a>バックアップの暗号化
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの暗号化オプションについて概説します。 バックアップ時の暗号化の使用、利点、および推奨される操作の詳細が含まれています。  
@@ -26,9 +25,9 @@ ms.locfileid: "72783082"
   
  バックアップ時に暗号化を行うには、暗号化アルゴリズムを指定し、暗号化キーを保護するための暗号化機能を指定する必要があります。 サポートされている暗号化オプションは次のとおりです。  
   
--   **暗号化アルゴリズム:** サポートされている暗号化アルゴリズムは、AES 128、AES 192、AES 256、および Triple DES です。  
+-   **暗号化アルゴリズム:** サポートされている暗号化アルゴリズムは、AES 128、AES 192、AES 256、および Triple DES です  
   
--   **暗号化機能:** 証明書または非対称キー。  
+-   **暗号化機能:** 証明書キーまたは非対称キー  
   
 > [!CAUTION]  
 >  証明書または非対称キーをバックアップすることが非常に重要であり、これらを使用して暗号化したバックアップ ファイルとは別の場所に保存することをお勧めします。 証明書または非対称キーがないと、バックアップ ファイルが使用不可能になり、バックアップを復元することができません。  
@@ -53,7 +52,7 @@ ms.locfileid: "72783082"
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  バックアップを暗号化するための前提条件は次のとおりです。  
   
-1.  **master データベースのデータベース マスター キーの作成:** データベース マスター キーは対称キーであり、証明書の秘密キーやデータベース内にある非対称キーを保護するときに使用されます。 詳細については、「[SQL Server とデータベースの暗号化キー &#40;データベース エンジン&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md)」を参照してください。  
+1.  **master データベースのデータベース マスター キーの作成:** データベース マスター キーは対称キーで、証明書の秘密キーやデータベース内にある非対称キーを保護するときに使用されます。 詳細については、「[SQL Server とデータベースの暗号化キー &#40;データベース エンジン&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md)」を参照してください。  
   
 2.  バックアップの暗号化に使用する証明書または非対称キーを作成します。 証明書の作成の詳細については、「[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)」を参照してください。 証明書の作成の詳細については、「[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)」を参照してください。  
   
@@ -80,13 +79,13 @@ ms.locfileid: "72783082"
 > [!NOTE]  
 >  TDE で保護されたデータベースをバックアップまたは復元する場合、TDE 証明書へのアクセスは必要ありません。  
   
-##  <a name="backup-encryption-methods"></a><a name="Methods"></a>バックアップの暗号化方法  
+##  <a name="backup-encryption-methods"></a><a name="Methods"></a> バックアップの暗号化方法  
  以下のセクションでは、バックアップ時にデータを暗号化する手順の概要を説明します。 Transact-SQL を使用して既存のバックアップを暗号化するためのさまざまな手順を示した完全なチュートリアルについては、「 [暗号化されたバックアップの作成](create-an-encrypted-backup.md)」を参照してください。  
   
 ### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio を使用する  
  次のいずれかのダイアログ ボックスを使用して、データベース バックアップの作成時にバックアップを暗号化することができます。  
   
-1.  [データベースのバックアップ &#40;[バックアップ オプション] ページ&#41;](back-up-database-backup-options-page.md): **[バックアップ オプション]** ページで、**[暗号化]** を選択し、暗号化に使用する暗号化アルゴリズムと証明書または非対称キーを指定します。  
+1.  [データベースのバックアップ &#40;[バックアップ オプション] ページ&#41;](back-up-database-backup-options-page.md): **[バックアップ オプション]** ページで、 **[暗号化]** を選択し、暗号化に使用する暗号化アルゴリズムと証明書または非対称キーを指定します。  
   
 2.  [メンテナンス プラン ウィザードの使用](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) : **[データベースのバックアップ () タスクの定義]** ページの **[オプション]** タブでバックアップ タスクを選択する場合は、 **[バックアップの暗号化]** を選択し、暗号化に使用する暗号化アルゴリズムと証明書またはキーを指定することができます。  
   
@@ -117,7 +116,7 @@ $encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorTy
 Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyTestDB.bak" -CompressionOption On -EncryptionOption $encryptionOption  
 ```  
   
-##  <a name="recommended-practices"></a><a name="RecommendedPractices"></a>推奨される運用方法  
+##  <a name="recommended-practices"></a><a name="RecommendedPractices"></a> 推奨される操作  
  インスタンスがインストールされているローカル コンピューター以外の場所に暗号化証明書とキーのバックアップを作成します。 ディザスター リカバリー シナリオに対応するには、証明書またはキーのバックアップをオフサイトに保管することを検討します。 バックアップの暗号化に使用された証明書がないと、暗号化されたバックアップを復元することはできません。  
   
  暗号化されたバックアップを復元するには、復元先のインスタンスで、バックアップの作成時に使用された元の証明書および対応する拇印を使用できるようにしておく必要があります。 このため証明書には、有効期限切れによる更新またはその他の変更を行わないでください。 更新すると証明書が更新され拇印の変更が発生するため、バックアップ ファイルに対して証明書が無効になることがあります。 復元を実行するアカウントには、バックアップ時に暗号化に使用される証明書または非対称キーに対する VIEW DEFINITION 権限が必要です。  

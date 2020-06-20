@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 18898388-5158-407b-9774-639af99e8f07
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 619cd537b5ecb45afe2dce3467caa64fc1e9a499
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95e77fe1743406d7206b05470b4559fcfb0a6d59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092746"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011849"
 ---
 # <a name="replication-upgrade-issues"></a>レプリケーションのアップグレードに関する問題
   次のトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレードに影響する可能性があるレプリケーションに関する問題について説明します。 これらのトピックでは、これらの変更が環境に与える影響を軽減するために実行できる操作について説明します。  

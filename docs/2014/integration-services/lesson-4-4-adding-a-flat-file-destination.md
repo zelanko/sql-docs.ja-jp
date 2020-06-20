@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66533fb63a76bc92bcb45e7cb8feb058467e6583
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767374"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968188"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>手順 4:フラット ファイル変換先の追加
   Lookup Currency Key 変換のエラー出力では、参照操作に失敗したデータ行がスクリプト変換にリダイレクトされます。 スクリプト変換ではスクリプトが実行され、発生したエラーに関するさらに詳しい情報を記述したエラーの説明が取得されます。  
@@ -36,11 +35,11 @@ ms.locfileid: "62767374"
   
 6.  **[フラット ファイル形式]** ダイアログ ボックスで、 **[区切り記号]** が選択されていることを確認し、 **[OK]** をクリックします。  
   
-7.  [**フラットファイル接続マネージャーエディター**] の [**接続マネージャー名**] ボックスに`Error Data`、「」と入力します。  
+7.  [**フラットファイル接続マネージャーエディター**] の [**接続マネージャー名**] ボックスに、「」と入力 `Error Data` します。  
   
 8.  **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスで、 **[参照]** をクリックし、ファイルの保存先のフォルダーに移動します。  
   
-9. [**開く**] ダイアログボックスの [**ファイル名**] に`ErrorOutput.txt`「」と入力し、[**開く**] をクリックします。  
+9. [**開く**] ダイアログボックスの [**ファイル名**] に「」と入力し、 `ErrorOutput.txt` [**開く**] をクリックします。  
   
 10. **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスで、 **[ロケール]** ボックスに [英語 (米国)]、 **[コード ページ]** に [1252 (ANSI - ラテン I)] が表示されていることを確認します。  
   
