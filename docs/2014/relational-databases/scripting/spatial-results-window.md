@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 27865055bec4312b9e969da096829af6c8ba60db
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d4a438cdaf0025397faec463f99e91a4c349d1b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048995"
 ---
 # <a name="spatial-results-window"></a>[空間結果] ウィンドウ
   **[空間結果]** ウィンドウには、空間データを表示するための視覚的なマッピング ツールが用意されています。 空間結果を表示するには、geometry 型または geography 型のデータを含む空間列がクエリ結果に含まれている必要があります。  

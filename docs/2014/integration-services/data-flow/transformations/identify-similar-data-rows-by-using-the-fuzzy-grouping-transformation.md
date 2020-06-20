@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 828d299e47ecf582918ce5524e3b6c2bc2925d90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 991940b819e3d72fcb7b94eb031b0e40b7102667
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770718"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939541"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>あいまいグループ化変換を使用して類似のデータ行を識別する
   あいまいグループ化変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  

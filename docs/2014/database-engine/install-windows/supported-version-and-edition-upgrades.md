@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53fbe7568050927e8ddd43085181125214e7f86a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775224"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932233"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>サポートされるバージョンとエディションのアップグレード
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、および [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]からアップグレードできます。 このトピックでは、これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンからのサポートされているアップグレード パスと、サポートされている [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]へのエディションのアップグレードを示します。  
@@ -73,7 +72,7 @@ ms.locfileid: "62775224"
   
  次の表に示すのは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]への、サポートされるアップグレード シナリオです。  
   
-|アップグレード元|サポートされているアップグレード パス|  
+|アップグレード前のバージョン|サポートされているアップグレード パス|  
 |------------------|----------------------------|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
@@ -121,7 +120,7 @@ ms.locfileid: "62775224"
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]2014 を使用して [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] に接続します。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます  (で[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]は、データベース互換性レベルの有効な値は100、110、および120です)。[ALTER Database Compatibility level &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)では、互換性レベルの変更がアプリケーションに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与える影響について説明します。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます  (では [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 、データベース互換性レベルの有効な値は100、110、および120です)。[ALTER Database Compatibility level &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)では、互換性レベルの変更がアプリケーションに与える影響について説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  上記の一覧で説明されていないどのシナリオもサポートされていませんが、以下のシナリオに限定されるものではありません。  
   
@@ -167,9 +166,9 @@ ms.locfileid: "62775224"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (Server + CAL ライセンス) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Core ライセンス)|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Core ライセンス)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Server+CAL ライセンス)|  
   
- <sup>1</sup> Express with Tools [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]および[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] express with Advanced Services にも適用されます。  
+ <sup>1</sup> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] express with Tools および [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] express with Advanced Services にも適用されます。  
   
- <sup>2</sup> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]フェールオーバークラスターのエディションの変更は制限されています。 次のシナリオは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] フェールオーバー クラスターではサポートされていません。  
+ <sup>2</sup>フェールオーバークラスターのエディションの変更 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は制限されています。 次のシナリオは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] フェールオーバー クラスターではサポートされていません。  
   
 -   SQL Server 2014 Enterprise から SQL Server 2014 Developer、Standard、または Enterprise Evaluation へ。  
   

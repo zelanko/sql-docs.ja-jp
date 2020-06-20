@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5e94818245ba1e87d90f87539ae07e9531e5450
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea3aedff3f7bfa931b900bdeab59495a35853ae1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065568"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938243"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>使用法に基づく最適化ウィザードの F1 ヘルプ
-  使用法に基づく最適化ウィザードを使用するとパーティションの集計をデザインすることができ、その出力は集計のデザイン ウィザードに似ています。 ただし、使用法に基づく最適化ウィザードでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスのクエリ ログに記録されているクエリの特定の使用パターンに基づいて集計をデザインします。 集計を使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]クエリごとに基になるデータソースのデータを再計算するのではなく、キューブストレージから事前計算済みの合計を直接取得できるため、パフォーマンスが向上します。  
+  使用法に基づく最適化ウィザードを使用するとパーティションの集計をデザインすることができ、その出力は集計のデザイン ウィザードに似ています。 ただし、使用法に基づく最適化ウィザードでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスのクエリ ログに記録されているクエリの特定の使用パターンに基づいて集計をデザインします。 集計を使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] クエリごとに基になるデータソースのデータを再計算するのではなく、キューブストレージから事前計算済みの合計を直接取得できるため、パフォーマンスが向上します。  
   
- 内[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]から使用法に基づく最適化ウィザードを開くには、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクトのキューブデザイナーを開き、[**集計**] タブをクリックします。ツールバーの [**使用法に基づく最適化**] ボタンをクリックします。  
+ 内から使用法に基づく最適化ウィザードを開くには、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] プロジェクトのキューブデザイナーを開き、[ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **集計**] タブをクリックします。ツールバーの [**使用法に基づく最適化**] ボタンをクリックします。  
   
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]内から使用法に基づく最適化ウィザードを開くには、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに接続し、 **[キューブ]** フォルダーを開きます。 キューブを選択して **[メジャー グループ]** フォルダーを開き、変更するメジャー グループを展開します。 **[パーティション]** フォルダーを右クリックし、 **[使用法に基づく最適化]** をクリックします。  
   

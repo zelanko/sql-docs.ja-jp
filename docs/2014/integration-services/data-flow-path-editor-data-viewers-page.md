@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38b5f077-9083-406a-a9a4-8bc39972dda2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 39d263d85b8956da4366134393d48405ebe104ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33d0d6ec4e462b38079c43bbb47e30feb4d34ed8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060082"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917062"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>[データ フロー パス エディター] ([データ ビューアー] ページ)
   **[データ フロー パス エディター]** ダイアログ ボックスの **[データ ビューアー]** ページを使用すると、パスにアタッチされているデータ ビューアーを管理できます。  
@@ -37,7 +36,7 @@ ms.locfileid: "66060082"
  **削除**  
  クリックすると、選択したデータ ビューアーが削除されます。  
   
- **構成**  
+ **ステータス メッセージを**  
  クリックすると、選択したデータ ビューアーを **[データ ビューアーの構成]** ダイアログ ボックスを使用して構成できます。  
   
 ## <a name="see-also"></a>参照  

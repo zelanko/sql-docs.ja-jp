@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b99676a9f51bf76dc9db294365a5a628dd25fa2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3186cbac127244131f45e2cbe7e3131b2e6d4895
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65488472"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063977"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>レッスン 2: Suppliers ナレッジ ベースを使用して仕入先データをクレンジングする
   このレッスンでは、最初のレッスンで作成した**サプライヤー**ナレッジベースを使用して、Excel ファイルの仕入先データをクレンジングします。 DQS でのデータクレンジングには、ナレッジベースのナレッジにデータがどのように準拠しているかを分析する**コンピューター支援型**のプロセスと、コンピューター支援型のプロセスの結果を確認および変更できる**対話型プロセス**が含まれています。 データ クレンジング機能は、データ ソース内の不適切なデータを識別し、不適切なデータを修正するか、修正を提案します。 また、ドメイン値、シノニムの先頭の値、ドメイン ルール、用語ベースのリレーション、および参照データを使用して、顧客データを標準化および拡充します。 対話形式で、コンピューター支援型プロセスによって提案された変更を承認または拒否できます。 詳細については、「[データクレンジング](https://msdn.microsoft.com/library/gg524800.aspx)」を参照してください。  

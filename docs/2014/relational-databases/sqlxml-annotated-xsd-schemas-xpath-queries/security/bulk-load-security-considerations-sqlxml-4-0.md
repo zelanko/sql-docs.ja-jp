@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b87b81acef728129c38debe56f24859671117d1f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e19b845d5a4ebddb7b859afced7d93c75d4b56d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717722"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048979"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>一括読み込みのセキュリティに関する注意点 (SQLXML 4.0)
   次に、XML 一括読み込みを使用する場合のセキュリティに関するガイドラインを示します。  

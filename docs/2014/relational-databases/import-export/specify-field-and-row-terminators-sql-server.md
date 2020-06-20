@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 548beeae68f5585c5cf2ba56b67027532ab43b71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011857"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026590"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>フィールド ターミネータと行ターミネータの指定 (SQL Server)
   文字列データ フィールドでは、省略可能なターミネータ文字を使用して、データ ファイルの各フィールドの末尾 ( *フィールド ターミネータ* を使用) と各行の末尾 ( *行ターミネータ*を使用) を示すことができます。 ターミネータ文字は、フィールドや行の終了位置と次のフィールドや行の開始位置を、データ ファイルを読み取るプログラムに示す方法の 1 つです。  
@@ -56,7 +55,7 @@ ms.locfileid: "66011857"
 >  **bcp** を対話的に使用し、\n (改行) を行ターミネータとして指定すると、 **bcp** によって自動的に \r (キャリッジ リターン) 文字が前に付加され、結果的には行ターミネータが \r\n になります。  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>一括エクスポートのターミネータの指定  
- または`nchar`データを`char`一括エクスポートするときに、既定以外のターミネータを使用する場合は、 **bcp**コマンドに対してターミネータを指定する必要があります。 次のいずれかの方法で、ターミネータを指定できます。  
+ またはデータを一括エクスポートするときに、既定以外のターミネータを使用する場合は、 `char` `nchar` **bcp**コマンドに対してターミネータを指定する必要があります。 次のいずれかの方法で、ターミネータを指定できます。  
   
 -   フォーマット ファイルで、フィールドごとにターミネータを指定します。  
   
@@ -127,8 +126,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualifier|説明|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **= '*`field_terminator`*'**|文字データ ファイルや Unicode 文字データ ファイルに使用されるフィールド ターミネータを指定します。<br /><br /> 既定値は \t (タブ文字) です。|  
-    |ROWTERMINATOR **= '*`row_terminator`*'**|文字データ ファイルや Unicode 文字データ ファイルに使用される行ターミネータを指定します。<br /><br /> 既定値は \n (改行記号) です。|  
+    |FIELDTERMINATOR **= ' *`field_terminator`* '**|文字データ ファイルや Unicode 文字データ ファイルに使用されるフィールド ターミネータを指定します。<br /><br /> 既定値は \t (タブ文字) です。|  
+    |ROWTERMINATOR **= ' *`row_terminator`* '**|文字データ ファイルや Unicode 文字データ ファイルに使用される行ターミネータを指定します。<br /><br /> 既定値は \n (改行記号) です。|  
   
      詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」を参照してください。  
   
@@ -169,7 +168,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
 |オプション|属性|  
 |------------|---------------|  
-|DATAFILETYPE **= '`char`'**|データ フィールドが文字データとして読み込まれることを指定します。|  
+|DATAFILETYPE **= ' `char` '**|データ フィールドが文字データとして読み込まれることを指定します。|  
 |FIELDTERMINATOR **='** `,` **'**|コンマ (`,`) をフィールド ターミネータとして指定します。|  
 |ROWTERMINATOR **='** `\n` **'**|改行文字を行ターミネータとして指定します。|  
   

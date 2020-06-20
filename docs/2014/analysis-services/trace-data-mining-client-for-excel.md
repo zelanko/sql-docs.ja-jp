@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4aea3e17-cd0f-48dd-8f22-b54a6c716426
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 19a30107af159c1cd87324290844172371f02752
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f394e54252c382bb2f70dccc531f306f7264d87f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175571"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938363"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>トレース (Excel 用のデータ マイニング クライアント)
   ![[トレース] ボタン](media/misc-trace.gif "[トレース] ボタン")
 
- [**トレーサー** ] ダイアログボックスは、データマイニングに使用しているの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスに送信されるステートメントを監視するのに役立ちます。 のインスタンスへの接続を作成すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]クライアントとサーバー間のすべての対話が [**トレーサー** ] ペインに記録されます。これには、構造を作成したり、マイニングモデルを追加したり、予測を行ったり、サーバーから返されるメッセージを含めます。
+ [**トレーサー** ] ダイアログボックスは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データマイニングに使用しているのインスタンスに送信されるステートメントを監視するのに役立ちます。 のインスタンスへの接続を作成すると [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、クライアントとサーバー間のすべての対話が [**トレーサー** ] ペインに記録されます。これには、構造を作成したり、マイニングモデルを追加したり、予測を行ったり、サーバーから返されるメッセージを含めます。
 
  要求されるアクションに応じて、ステートメントは、データ マイニング拡張機能 (DMX) のデータ定義クエリやデータ操作クエリ、Analysis Services スクリプト言語 (ASSL) パケット、または Analysis Services ストアド プロシージャの呼び出しになります。 ただし、実際の数値で表される結果やデータ値は表示されません。
 
@@ -69,6 +68,6 @@ ms.locfileid: "78175571"
 
  DMX 構文、および XMLA のコマンドや要素の詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックを参照してください。
 
- サーバーに送信される一部のステートメントには、Analysis Services システム ストアド プロシージャを呼び出すクエリが含まれる場合があります。 詳しくは、SQL Server オンライン ブックをご覧ください。
+ サーバーに送信される一部のステートメントには、Analysis Services システム ストアド プロシージャを呼び出すクエリが含まれる場合があります。 詳細については、SQL Server オンライン ブックを参照してください。
 
 

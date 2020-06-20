@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 812ba207d699cbbdb2156a4c5f3799cbfa8a74db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a59a1ecfc740cc7c3a07d8a41acfa51fb1623716
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023440"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030730"
 ---
 # <a name="bitmap-warning-event-class"></a>Bitmap Warning イベント クラス
   **Bitmap Warning** イベント クラスは、クエリにおけるビットマップ フィルターの使用状況を監視するときに使用できます。 イベント サブクラスを使用すると、クエリ内でビットマップ フィルターが無効化されたタイミングをレポートできます。  
@@ -37,7 +36,7 @@ ms.locfileid: "63023440"
 |**EventSubClass**|`int`|イベント サブクラスの種類。 0 = ビットマップ フィルターは無効になっています。|21|はい|  
 |**HostName**|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |**IsSystem**|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
-|**ログイン**|`nvarchar`|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セキュリティログインまたは*DOMAIN\username*という形式の Windows ログイン資格情報)。|11|はい|  
+|**ログイン**|`nvarchar`|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティログインまたは*DOMAIN\username*という形式の Windows ログイン資格情報)。|11|はい|  
 |**LoginSid**|`image`|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|`nvarchar`|Windows のユーザー名。|6|はい|  

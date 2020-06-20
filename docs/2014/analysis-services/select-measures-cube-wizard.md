@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 4f94de4e-b222-4bf9-95af-7aefd3f8dcee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c8ea7af0102e9525eac15420a960ec357f9062e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10c216f07d092f98b861eaedaa62dd58a69f920a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069447"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940973"
 ---
 # <a name="select-measures-cube-wizard"></a>[メジャーの選択] (キューブ ウィザード)
   **[メジャーの選択]** ページを使用すると、作成するメジャー グループおよびメジャーを選択できます。  
   
 ## <a name="options"></a>オプション  
- **メジャー**  
+ **直径**  
  使用できるメジャー グループとそのグループに属するメジャーが表示されます。  
   
  メジャー グループまたはメジャーを作成するには、該当するチェック ボックスをオンにします。 既定では、すべてのメジャー グループとメジャーが選択されています。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc5013c1-692c-4cc4-820c-1c09482c6886
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 792fd974d4f6d326265d06ef51f5a5fdaaf61399
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c867ae0052706910de980bad1eaebd2134de47ce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473061"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056578"
 ---
 # <a name="alerts-node-sql-server-agent-f1-help"></a>[警告] ノード (SQL Server エージェント F1 ヘルプ)
    ここでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーの **[警告]** ノードの F1 ヘルプについて紹介します。  

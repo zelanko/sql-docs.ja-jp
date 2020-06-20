@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 113f644d9f1da48790e7c8d59d34e6b143a1175a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065427"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938123"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>[警告] (データベース デザイナー) (Analysis Services - 多次元データ)
   **[警告]** タブを使用すると、ルールをグローバルに表示および消去したり、消去された警告の特定のインスタンスを表示して再度有効にしたりできます。 **[警告]** タブには、 **[デザイン警告ルール]** および **[消去された警告]** という 2 つのグリッドが表示されます。  
@@ -36,7 +35,7 @@ ms.locfileid: "66065427"
  **説明**  
  ルールの名前が表示されます。 ルールはカテゴリ別にグループ化されています。  
   
- **重視**  
+ **重要度**  
  ルールに割り当てられている重要度が表示されます。  
   
  **コメント**  
@@ -47,7 +46,7 @@ ms.locfileid: "66065427"
   
  **[消去された警告]** グリッドには、次の列があります。  
   
- **素材**  
+ **オブジェクト**  
  オブジェクトの種類とオブジェクト名を表すアイコンが表示されます。  
   
  **Type**  
@@ -56,7 +55,7 @@ ms.locfileid: "66065427"
  **説明**  
  ルールの名前が表示されます。  
   
- **重視**  
+ **重要度**  
  ルールに割り当てられている重要度が表示されます。  
   
  **コメント**  

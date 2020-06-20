@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec85083e634123497c707f3028285ec1300ff2d4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e815007bc48260f95a573f9459ede09d3e585927
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707091"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055875"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM のサポート (ODBC)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の ODBC では、強化された FILESTREAM 機能がサポートされています。 この機能の詳細については、「 [FILESTREAM のサポート](../features/filestream-support.md)」を参照してください。 FILESTREAM の ODBC サポートを示すサンプルについては、「 [filestream &#40;ODBC&#41;を使用した増分データの送受信](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)」を参照してください。  
@@ -43,7 +42,7 @@ author varchar(64),
 document VARBINARY(MAX) FILESTREAM NULL)  
 ```  
   
-### <a name="read"></a>読み取り  
+### <a name="read"></a>Read  
   
 ```  
 void selectFilestream (LPCWSTR dstFilePath) {  

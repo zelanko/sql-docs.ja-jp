@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 18cb81205a6e7036f34c7bb6f73f822bf0a6e173
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9071c6821e6edeb577b639223e42899d2927bced
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707120"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055903"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>非同期モードと SQLCancel
   ODBC 関数には、同期して動作する関数と非同期に動作する関数があります。 アプリケーションでは、ステートメント ハンドルまたは接続ハンドルのいずれかに対して非同期動作を有効にすることができます。 オプションが接続ハンドル用に設定されている場合、接続ハンドルのすべてのステートメント ハンドルに影響します。 アプリケーションで次のステートメントを使用すると、非同期動作を有効または無効にすることができます。  

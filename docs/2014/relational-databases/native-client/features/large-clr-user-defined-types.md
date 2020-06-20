@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 62835f917283d5d244f3347149d8572205c01d2e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 27f0c13caea8c4aca63d78238509c6d05f1bf7bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707277"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047920"
 ---
 # <a name="large-clr-user-defined-types"></a>大きな CLR ユーザー定義型
   SQL Server 2005 では、共通言語ランタイム (CLR) のユーザー定義型 (UDT) のサイズは 8,000 バイトに制限されていました。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降では、この制限が解除されます。 CLR UDT はラージ オブジェクト (LOB) 型と同様に扱われるようになりました。 つまり、8,000 バイト以下の UDT は SQL Server 2005 の場合と同じように動作しますが、8,000 バイトを超える UDT もサポートされるようになり、そのサイズは "無制限" として報告されます。  
   
  詳細については、「 [&#40;&#41;OLE DB の大きな Clr ユーザー定義型](../ole-db/large-clr-user-defined-types-ole-db.md)」を参照してください。また、 [&#40;ODBC&#41;の大きな Clr ユーザー定義型](../odbc/large-clr-user-defined-types-odbc.md)については、「」を参照してください。  
   
-## <a name="use-cases"></a>例  
+## <a name="use-cases"></a>ユース ケース  
  ODBC の場合、大きな UDT のサポートには、UDT 値を実行時データ パラメーターとして個別に送信する機能が含まれています。 これを行うには、SQLPutData を使用します。  
   
  OLE DB の場合、大きな UDT のサポートには、ISequentialStream バインドを使用したサーバーとの間の UDT 値のストリームの送受信機能が含まれています。  

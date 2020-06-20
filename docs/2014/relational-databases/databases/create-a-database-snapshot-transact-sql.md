@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bae68c2d507e1dd3809e76a9d842b765d72234e9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762340"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952124"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>データベース スナップショットの作成 (Transact-SQL)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース スナップショットを作成する唯一の方法は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用することです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、データベース スナップショットの作成はサポートされません。  
@@ -26,7 +25,7 @@ ms.locfileid: "62762340"
   
      [前提条件](#Prerequisites)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
      [ベストプラクティス: データベーススナップショットの名前付け](#Naming)  
   
@@ -37,7 +36,7 @@ ms.locfileid: "62762340"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  任意の復旧モデルを使用できるソース データベースは、次の前提条件を満たす必要があります。  
   
--   サーバー インスタンスで、データベース スナップショットをサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションが実行されている必要があります。 で[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のデータベーススナップショットのサポートの詳細については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
+-   サーバー インスタンスで、データベース スナップショットをサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションが実行されている必要があります。 でのデータベーススナップショットのサポートの詳細につい [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
 -   ソース データベースは、データベース ミラーリング セッション内のミラー データベースである場合を除き、オンラインである必要があります。  
   
@@ -127,7 +126,7 @@ AdventureWorks_snapshot_evening
     > [!NOTE]  
     >  データベース スナップショットを作成する場合、ログ ファイル、オフラインのファイル、復元中のファイル、および機能していないファイルを CREATE DATABASE ステートメントで使用することはできません。  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>例 (Transact-sql)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
   
 > [!NOTE]  
 >  この例で使用している拡張子 `.ss` は任意です。  
