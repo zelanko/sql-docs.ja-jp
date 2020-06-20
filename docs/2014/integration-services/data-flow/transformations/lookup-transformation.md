@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69ed33b3967b3c807b21df0ab8a3a4a1cd07bebc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900256"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939493"
 ---
 # <a name="lookup-transformation"></a>参照変換
   参照変換は、入力列のデータを参照データセットの列と結合することにより参照を実行します。 参照を使用すると、共通の列の値に基づいている関連テーブル内の追加情報にアクセスできます。  
@@ -74,7 +73,7 @@ ms.locfileid: "62900256"
 -   不一致出力。 不一致出力は、参照データセット内の 1 つ以上のエントリと一致しない入力内の行を処理します。 一致エントリがない行をエラーとして扱うように参照変換を構成している場合、これらの行はエラー出力にリダイレクトされます。 それ以外の場合、これらの行は不一致出力にリダイレクトされます。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] の参照変換の出力は 1 つだけでした。 で[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]作成された参照変換を実行する方法の詳細については、「参照[変換のアップグレード](../../../sql-server/install/upgrade-lookup-transformations.md)」を参照してください。  
+    >  [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] の参照変換の出力は 1 つだけでした。 で作成された参照変換を実行する方法の詳細について [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] は、「参照[変換のアップグレード](../../../sql-server/install/upgrade-lookup-transformations.md)」を参照してください。  
   
 -   エラー出力。  
   

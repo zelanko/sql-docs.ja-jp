@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57adcc55cf7b699e5092671fc61eb83278858cb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7f168d45b03473d958e202bd75116f4519d2fc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177342"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064121"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>前処理オプション (Distributed Replay 管理ツール)
-  分散再生管理ツール`DReplay.exe`は、分散再生コントローラーとの通信に使用できるコマンドラインツールです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] このトピックでは、 **preprocess** コマンド ライン オプションとそれに対応する構文について説明します。
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生管理ツールは、 `DReplay.exe` 分散再生コントローラーとの通信に使用できるコマンドラインツールです。 このトピックでは、 **preprocess** コマンド ライン オプションとそれに対応する構文について説明します。
 
  **preprocess** オプションは、前処理段階を開始します。 この段階では、ターゲット サーバーに対して、コントローラーが入力トレース データの再生の準備を行います。
 
@@ -37,7 +36,7 @@ ms.locfileid: "78177342"
 
  **-m** パラメーターが指定されていない場合、ローカル コンピューターが使用されます。
 
- **-i** *input_trace_file* 、など、コントローラー上の入力トレースファイルの完全なパスを指定`D:\Mytrace.trc`します。 **-i** パラメーターは必須です。
+ **-i** *input_trace_file* 、など、コントローラー上の入力トレースファイルの完全なパスを指定し `D:\Mytrace.trc` ます。 **-i** パラメーターは必須です。
 
  同じディレクトリにロールオーバー ファイルがある場合は、自動的に読み込まれて使用されます。 ファイルは、ファイル ロールオーバー名前付け規則に準拠する必要があります (例: `Mytrace.trc`、`Mytrace_1.trc`、`Mytrace_2.trc`、`Mytrace_3.trc`、... `Mytrace_n.trc`)。
 
@@ -66,7 +65,7 @@ ms.locfileid: "78177342"
 
  **-f** を指定しない場合は、既定の間隔は 30 秒です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
  この例では、すべての既定の設定で前処理段階が開始されます。 値 `localhost` は、コントローラー サービスが管理ツールと同じコンピューターで実行されていることを示します。 *input_trace_file* パラメーターは、入力トレース データ `c:\mytrace.trc`の場所を指定します。 トレース ファイルのフィルターがないため、 **-c** パラメーターを指定する必要はありません。
 
 ```

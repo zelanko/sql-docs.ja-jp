@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b9edfe0286492602025a2b63b116e35084626fab
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b2effcc9a70057be72ab576b929c3bb3c311aeba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698111"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056452"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>テーブル値パラメーターに影響を与えるステートメント属性
   次の表では、記述子フィールド内の属性について説明します。  

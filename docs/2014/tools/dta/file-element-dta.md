@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73dce835-9a80-4aef-8e0f-9dcf07dd5b80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5279500939d0499c8ef7bd247b92e052b522970b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b53cd76a342a4b449359149080f5d549f024fdd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735945"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048418"
 ---
 # <a name="file-element-dta"></a>File 要素 (DTA)
   ワークロード ファイルを指定します。 ワークロードとは、チューニングするデータベースに対して実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのセットです。 ワークロード ファイルには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト (.sql) またはトレース ファイル (.trc) を指定できます。 詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。  

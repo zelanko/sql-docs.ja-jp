@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22722605b266f28981457ce0c6839ad14279a434
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62828568"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916782"
 ---
 # <a name="cdc-flow-components"></a>CDC フロー コンポーネント
   SSIS 開発者は、Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 用 Attunity 変更データ キャプチャ (CDC) コンポーネントを使用すると、CDC を操作し、CDC パッケージの複雑さを軽減できます。  
@@ -135,7 +134,7 @@ ms.locfileid: "62828568"
   
  CDC 状態変数の値は、永続的なストレージで保持する必要があります。また、この値は、CDC 処理の開始前に読み取り、処理の完了後に最新の状態を反映したうえで保存する必要があります。 SSIS 開発者は CDC 状態の読み込みと保存のタスクを処理できますが、CDC 制御コンポーネントでこのタスクを自動化することもできます。それには、CDC 状態の値をデータベース テーブルで保持する必要があります。  
   
-## <a name="security-considerations"></a>セキュリティに関する考慮事項  
+## <a name="security-considerations"></a>セキュリティの考慮事項  
  このセクションでは、SSIS での CDC コンポーネントの使用に関連するセキュリティ上の注意点について説明します。  
   
 ### <a name="access-authorization-to-change-data"></a>変更データへのアクセスの承認  

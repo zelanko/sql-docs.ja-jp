@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 840379944950b83fe301929ba20c35678564b02f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3604263def059d671d3c6c04352bbb2e7493b8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736015"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056749"
 ---
 # <a name="numberofflags-property-serversettings-class"></a>NumberOfFlags プロパティ (ServerSettings クラス)
-  の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに関連付けられた一般的なフラグの数を取得します。  
+  のインスタンスに関連付けられた一般的なフラグの数を取得し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +35,7 @@ object
 .NumberOfFlags [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  [のインスタンス上のサーバー設定を表す](serversettings-class.md) ServerSettings クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクト。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 823d35b71fca52b2f1892d6e7dbfc940688f0ae6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067080"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938873"
 ---
 # <a name="hierarchies-ssas-tabular"></a>階層 (SSAS テーブル)
   表形式モデルにおける階層は、1 つのテーブルの 2 つ以上の列間の関係を定義するメタデータです。 階層は、あるレポート クライアント フィールドの一覧の他の列とは分けて表示できるため、クライアントのユーザーは簡単に移動し、レポートに含めることができます。  
@@ -28,7 +27,7 @@ ms.locfileid: "66067080"
   
 -   [関連タスク](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>効果  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 利点  
  テーブルには明確な規則性のない特殊な列名を持つ数十または数百の列が含まれる場合があります。 そのため、レポート クライアント フィールドの一覧での表示が無秩序になり、ユーザーがレポート内のデータを見つけたりレポートにデータを含めたりするのが難しくなることがあります。 階層では、複雑なデータ構造を単純で直感的な形式で表示できます。  
   
  たとえば、日付テーブルにカレンダー階層を作成できます。 カレンダーの年が最上位の親レベルとして使用され、子レベルとして月、週、日が含まれます (カレンダーの年 -> 月 -> 週 -> 日)。 この階層により、カレンダーの年から日までの論理関係が示されます。 クライアント ユーザーはフィールドの一覧からカレンダー年度を選択して、ピボットテーブルにレベルをすべて含めたり、階層を展開してピボットテーブルに含める特定のレベルだけを選択したりできます。  

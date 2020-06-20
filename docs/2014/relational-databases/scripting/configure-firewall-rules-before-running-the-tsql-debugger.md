@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a5710ab5a74adc34601790c134a4553b8b01604
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 28e5515f5132f5e8b7859da1a11b5466b90c5579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704046"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056916"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Transact-SQL デバッガーの構成
   [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターとは別のコンピューター上で動作する [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに接続するときに [!INCLUDE[ssDE](../../includes/ssde-md.md)] デバッグを有効にするように Windows ファイアウォール規則を構成する必要があります。  
@@ -56,7 +55,7 @@ ms.locfileid: "82704046"
   
     2.  **[規則の種類]** ダイアログで、 **[プログラム]** をクリックし、 **[次へ]** をクリックします。  
   
-    3.  **[プログラム]** ダイアログで、 **[このプログラムのパス:]** をクリックし、このインスタンスの sqlservr.exe の完全なパスを入力します。 既定では、sqlservr.exe は C:\Program ・ SQL Server\MSSQL12. にインストールされます。*Instancename*\MSSQL\Binn。 *instancename*は既定のインスタンスの場合は MSSQLSERVER、名前付きインスタンスの場合はインスタンス名です。  
+    3.  **[プログラム]** ダイアログで、 **[このプログラムのパス:]** をクリックし、このインスタンスの sqlservr.exe の完全なパスを入力します。 既定では、sqlservr.exe は C:\Program の SQL Server\MSSQL12. にインストールされます。*Instancename*\MSSQL\Binn。 *instancename*は既定のインスタンスの場合は MSSQLSERVER、名前付きインスタンスの場合はインスタンス名です。  
   
     4.  **[操作]** ダイアログで、 **[接続を許可する]** をクリックし、 **[次へ]** をクリックします。  
   

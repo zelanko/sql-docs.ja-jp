@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 318f4404467814c95e778d19aa793107a3ad0945
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24e264ad0f30a8cf3ec454405f5d40a301ce2f49
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176176"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967232"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>スクリプト タスクのコーディングおよびデバッグ
   **[スクリプト タスク エディター]** でスクリプト タスクを構成したら、スクリプト タスク開発環境でカスタム コードを記述します。
@@ -51,7 +50,7 @@ ms.locfileid: "78176176"
 
 -   スクリプト タスクが [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] プログラミング言語用に構成されている場合は、`ScriptMain` クラスにパブリック サブルーチン `Main` が含まれます。 `ScriptMain.Main` サブルーチンは、ユーザーのスクリプト タスクを実行するときにランタイムが呼び出すメソッドです。
 
-     既定では、新しいスクリプトの `Main` サブルーチン内にあるコードは、行 `Dts.TaskResult = ScriptResults.Success` のみです。 この行は、タスクの処理が正常に実行されたことをランタイムに通知します。 プロパティ`Dts.TaskResult`は、「[スクリプトタスクから結果を返す](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)」で説明されています。
+     既定では、新しいスクリプトの `Main` サブルーチン内にあるコードは、行 `Dts.TaskResult = ScriptResults.Success` のみです。 この行は、タスクの処理が正常に実行されたことをランタイムに通知します。 `Dts.TaskResult`プロパティは、「[スクリプトタスクから結果を返す](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)」で説明されています。
 
 -   スクリプト タスクが Visual C# プログラミング言語用に構成されている場合は、`ScriptMain` クラスにパブリック メソッド `Main` が含まれます。 このメソッドは、スクリプト タスク実行時に呼び出されます。
 

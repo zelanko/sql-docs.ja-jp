@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7fe7d714d93915814b6658409a9f892c28e03b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67316663"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917152"
 ---
 # <a name="custom-messages-for-logging"></a>ログ記録用のカスタム メッセージ
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージや多くのタスクのログ エントリを書き込むための豊富なカスタム イベントが用意されています。 記録したエントリを使用すれば、定義済みのイベントやユーザー定義メッセージを後の分析用に記録しておくことで、実行の進行状況、結果、および問題点に関する詳細を保管できます。 たとえば、一括挿入の開始時刻と終了時刻を記録しておけば、パッケージ実行時のパフォーマンスの問題を特定できます。  
@@ -35,7 +34,7 @@ ms.locfileid: "67316663"
   
  [一括挿入タスク](#BulkInsert)  
   
- [[データ フロー タスク]](#DataFlow)  
+ [データ フロー タスク](#DataFlow)  
   
  [DTS 2000 タスクの実行](#ExecuteDTS200)  
   
@@ -47,7 +46,7 @@ ms.locfileid: "67316663"
   
  [FTP タスク](#FTP)  
   
- [Message Queue Task](#MessageQueue)  
+ [メッセージ キュー タスク](#MessageQueue)  
   
  [スクリプト タスク](#Script)  
   
@@ -101,7 +100,7 @@ ms.locfileid: "67316663"
 |`BufferSizeTuning`|データ フロー タスクでバッファーのサイズが変更されたことを示します。 このログ エントリはサイズ変更の理由を説明し、一時的な新しいバッファー サイズを表示します。|  
 |`OnPipelinePostEndOfRowset`|`ProcessInput` メソッドの最終呼び出しで設定される、行セットの終了シグナルがコンポーネントに通知されたことを示します。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
 |`OnPipelinePostPrimeOutput`|コンポーネントが `PrimeOutput` メソッドの最終呼び出しを完了したことを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。 コンポーネントがソースの場合、コンポーネントが行の処理を完了したことを意味します。|  
-|`OnPipelinePreEndOfRowset`|コンポーネントが最後に`ProcessInput`メソッドを呼び出したときに設定された行セットの最後のシグナルを受信しようとしていることを示します。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
+|`OnPipelinePreEndOfRowset`|コンポーネントが最後にメソッドを呼び出したときに設定された行セットの最後のシグナルを受信しようとしていることを示し `ProcessInput` ます。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
 |`OnPipelinePrePrimeOutput`|コンポーネントに、`PrimeOutput` メソッドからの呼び出しが通知されたことを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。|  
 |`OnPipelineRowsSent`|`ProcessInput` メソッドの呼び出しによってコンポーネント入力に指定された行数を報告します。 ログ エントリにはコンポーネント名が含まれます。|  
 |`PipelineBufferLeak`|バッファー マネージャーの終了後もバッファーを保持しているコンポーネントに関する情報を提供します。 つまり、バッファー リソースが解放されていないため、メモリ リークの原因になる可能性があります。 このログ エントリは、コンポーネントの名前とバッファーの ID を含みます。|  

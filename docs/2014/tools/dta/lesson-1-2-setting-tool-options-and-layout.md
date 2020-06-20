@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: de7918c382187fe4af361146bd182eecd7e30b80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36139b916442b2c0f616d52d2b06efdbda2cfe03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110199"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048341"
 ---
 # <a name="setting-tool-options-and-layout"></a>ツール オプションとレイアウトの設定
   起動時に表示するグラフィカル ユーザー インターフェイス (GUI)、使用するフォント、および他のツールの機能を構成するオプションを設定し、データベース エンジン チューニング アドバイザーの使用方法を最適化することができます。 このページの演習では、ユーザーが設定できるオプションとその設定方法について学習します。  
@@ -43,6 +42,6 @@ ms.locfileid: "66110199"
     -   データベース エンジン チューニング アドバイザーによるワークロードの分析が完了する前に、間違ってチューニング セッションを停止しないように、既定では **[セッションの分析を停止する前に確認する]** がオンになっています。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2: データベース エンジン チューニング アドバイザーの使用](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [レッスン 2:データベース エンジン チューニング アドバイザーの使用](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

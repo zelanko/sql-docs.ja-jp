@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: f16db803-d8dc-45a5-8050-e8f4f41c04a8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 650e4a8efac5ce39e3fdfb476099ea648ca8ae62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 565e42d1b3ba6391aaf61c3c44f60a9a05867902
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736951"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995881"
 ---
 # <a name="instancename-property-serversettings-class"></a>InstanceName プロパティ (ServerSettings クラス)
-  サーバー設定が適用されるの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスの名前を取得します。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]サーバー設定が適用されるのインスタンスの名前を取得し [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +35,7 @@ object
 .InstanceName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  [のインスタンス上のサーバー設定を表す](serversettings-class.md) ServerSettings クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクト。  
   

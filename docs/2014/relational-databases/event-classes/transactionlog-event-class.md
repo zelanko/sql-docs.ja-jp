@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6b6fa07c2cb2f4880420885fefc30d0fd419c38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fa3f29b6174342f0ec298df5bc49b30f7c0cbf1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011993"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027962"
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog イベント クラス
   TransactionLog イベント クラスは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスのトランザクション ログの利用状況を監視するために使用します。  

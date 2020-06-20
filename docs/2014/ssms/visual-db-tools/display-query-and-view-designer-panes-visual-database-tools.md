@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b5ce13bc7456f337b1910779e0c7caa575de483
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204978"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056528"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>クエリおよびビュー デザイナーのペインの表示 (Visual Database Tools)
   クエリおよびビュー デザイナーは、ダイアグラム ペイン、検索条件ペイン、SQL ペイン、および結果ペインの 4 つのペインで構成されます。 通常、ビューを開くか、新しいクエリを作成するときには、4 つのウィンドウがすべて開きますが、この 4 つのウィンドウのいずれかを開く必要がある場合は、クエリおよびビュー デザイナーが開いていれば開くことができます。  

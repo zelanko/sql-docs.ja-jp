@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 76ccd8b784902f8542f06f3823e5f8dcb78e9201
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057181"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスの作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、パーティション テーブルまたはパーティション インデックスを作成できます。 パーティション テーブルとパーティション インデックスのデータは、データベース内の複数のファイル グループに分散できるように、行方向に複数の単位に分割されています。 パーティション分割により、大規模なテーブルとインデックスの管理の可能性と拡張性が向上します。  
@@ -115,7 +114,7 @@ ms.locfileid: "79289380"
   
 3.  **[パーティション分割列の選択]** ページの **[使用可能なパーティション分割列]** グリッドで、テーブルのパーティション分割に使用する列を選択します。 **[使用可能なパーティション分割列]** グリッドには、データのパーティション分割に使用できるデータ型の列だけが表示されます。 計算列をパーティション分割列として選択する場合は、列を PERSISTED として指定する必要があります。  
   
-     パーティション分割列とその値の範囲の選択肢は、主に、データをどの程度論理的にグループ化できるかによって決まります。 たとえば、月や四半期に基づいてデータを論理グループに分割することができます。 この論理グループがテーブル パーティションの管理に適しているかどうかは、データに対してどのようなクエリを実行する予定かによって決まります。 すべてのデータ型は、、、、、、、 `text`、 `ntext`、 `image`別名`xml`データ`timestamp`型`varchar(max)`、 `nvarchar(max)`また`varbinary(max)`は CLR ユーザー定義データ型を除く、パーティション分割列として使用できます。  
+     パーティション分割列とその値の範囲の選択肢は、主に、データをどの程度論理的にグループ化できるかによって決まります。 たとえば、月や四半期に基づいてデータを論理グループに分割することができます。 この論理グループがテーブル パーティションの管理に適しているかどうかは、データに対してどのようなクエリを実行する予定かによって決まります。 すべてのデータ型は、、、、、、、、、 `text` `ntext` `image` `xml` `timestamp` `varchar(max)` `nvarchar(max)` `varbinary(max)` 別名データ型、または CLR ユーザー定義データ型を除く、パーティション分割列として使用できます。  
   
      このページで使用できる他のオプションを次に示します。  
   
@@ -142,7 +141,7 @@ ms.locfileid: "79289380"
      このページで使用できる他のオプションを次に示します。  
   
      **[境界の設定]**  
-     **[境界値の設定]** ダイアログ ボックスを開き、パーティションの境界値と日付範囲を選択します。 このオプションは`date`、、 `datetime`、 `smalldatetime`、 `datetime2`、または`datetimeoffset`のいずれかのデータ型を含むパーティション分割列を選択した場合にのみ使用できます。  
+     **[境界値の設定]** ダイアログ ボックスを開き、パーティションの境界値と日付範囲を選択します。 このオプションは `date` 、、、 `datetime` `smalldatetime` 、 `datetime2` 、または `datetimeoffset` のいずれかのデータ型を含むパーティション分割列を選択した場合にのみ使用できます。  
   
      **[ストレージの推定]**  
      パーティションに指定された各ファイル グループのストレージの行数、必要な領域、および使用できる領域を推定します。 これらの値は、読み取り専用の値としてグリッドに表示されます。  

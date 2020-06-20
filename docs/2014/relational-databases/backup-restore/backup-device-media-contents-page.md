@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58665371fc8315452d674cf72bb9609cf1612c36
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876694"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959339"
 ---
 # <a name="backup-device-media-contents-page"></a>[バックアップ デバイス] ([メディアの内容] ページ)
   **[バックアップ デバイス]** ダイアログ ボックスを使用すると、バックアップの情報が表示されます。 ここでは、デバイス、メディア、メディア セット、バックアップ セットの情報が得られます。  
@@ -28,7 +27,7 @@ ms.locfileid: "62876694"
   
 -   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  個々のメディア、メディア セット、バックアップ セットに関する情報を表示します。  
   
  **メディア**  
@@ -43,7 +42,7 @@ ms.locfileid: "62876694"
  **[メディア セット]**  
  メディア セットとは、一定の数のバックアップ デバイスを使用し、1 回以上のバックアップ操作で書き込まれたバックアップ メディアを番号順に並べた集合体です。  
   
- **Name**  
+ **名前**  
  メディア セットの名前を表示します (メディア セットが存在する場合)。  
   
  **説明**  
@@ -57,9 +56,9 @@ ms.locfileid: "62876694"
   
 |ヘッダー|値|  
 |------------|------------|  
-|**Name**|バックアップ セットの名前です。|  
-|**Type**|バックアップされるオブジェクト。[データベース]、[ファイル]、 *[\<空白>]* (トランザクション ログ用) のいずれかを指定します。|  
-|**コンポーネント**|実行されたバックアップの種類。[完全]、[差分]、[トランザクション ログ] のいずれかになります。|  
+|**名前**|バックアップ セットの名前です。|  
+|**Type**|バックアップされたオブジェクト: データベース、ファイル、または *\<blank>* (トランザクションログ用)。|  
+|**コンポーネント**|実行するバックアップの種類: [完全]、[差分]、[トランザクション ログ]。|  
 |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前。|  
 |**[データベース]**|バックアップされたデータベースの名前。|  
 |**Position**|ボリューム内でのバックアップ セットの位置。|  

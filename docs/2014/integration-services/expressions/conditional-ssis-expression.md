@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: baf066638eb8c42dbf4ba7f488c9b0c1ca9acdb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b19c8464e894723aae0f7a32ce8c423205da2338
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769399"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967428"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (条件) (SSIS 式)
   ブール式の評価に基づいて 2 つの式のうちのいずれかの式を返します。 ブール式が TRUE に評価された場合、最初の式が評価対象となり、その結果が式の結果になります。 ブール式が FALSE に評価された場合、2 番目の式が評価対象となり、その結果が式の結果になります。  

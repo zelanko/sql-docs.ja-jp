@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89215c16f958848942c64d2427d7201bc13cb282
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775285"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932391"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>構成ファイルを使用した SQL Server 2014 のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには、システムの既定値および実行時入力に基づいて構成ファイルを生成する機能が用意されています。 構成ファイルを使用すると、同じ構成の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を企業全体に配置できます。 また、Setup.exe を起動するバッチ ファイルを作成して、企業全体で手動によるインストールを標準化することもできます。  
@@ -56,7 +55,7 @@ FEATURES=SQL,Tools
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  ウィザードに従って **[インストールの準備完了]** ページまで進みます。 構成ファイルのパスは、 **[インストールの準備完了]** ページの [構成ファイルのパス] セクションで指定します。 のインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]方法の詳細については、「インストール[ウィザードから SQL Server 2014 をインストールする」 &#40;セットアップ&#41;](install-sql-server-from-the-installation-wizard-setup.md)を参照してください。  
+2.  ウィザードに従って **[インストールの準備完了]** ページまで進みます。 構成ファイルのパスは、 **[インストールの準備完了]** ページの [構成ファイルのパス] セクションで指定します。 のインストール方法の詳細については [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「インストール[ウィザードから SQL Server 2014 をインストールする」 &#40;セットアップ&#41;](install-sql-server-from-the-installation-wizard-setup.md)を参照してください。  
   
 3.  INI ファイルを生成するには、インストールを実際に完了しなくてもセットアップを取り消します。  
   
@@ -71,7 +70,7 @@ FEATURES=SQL,Tools
   
 #### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>構成ファイルを使用してスタンドアロンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをインストールする方法  
   
--   コマンドプロンプトを使用してインストールを実行*し、セットアップのパラメーターを*使用して、セットアップを指定します。  
+-   コマンドプロンプトを使用してインストールを実行*し、ConfigurationFile.ini*を指定します。  
   
 #### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>構成ファイルを使用してスタンドアロン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのイメージの準備と完了を行う方法 (SysPrep)  
   

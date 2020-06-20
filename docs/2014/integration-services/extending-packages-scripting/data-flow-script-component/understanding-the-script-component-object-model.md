@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89e2e5d774abf2a6bee712ec7a1479107d3d1c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80d61a4b4742163d999aa2f5d70e70336e680e27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176201"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967249"
 ---
 # <a name="understanding-the-script-component-object-model"></a>スクリプト コンポーネントのオブジェクト モデルについて
   「スクリプトコンポーネントのコーディングおよびデバッグ」 (../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md、スクリプトコンポーネントプロジェクトには、次の3つのプロジェクト項目が含まれています。
@@ -115,27 +114,27 @@ public override void PreExecute()
 
 -   選択された各入力列の、型指定された名前付きのアクセサー プロパティ。 これらのプロパティが読み取り専用か読み取り/書き込み可能かどうかは、 **[スクリプト変換エディター]** の **[入力列]** ページで、列に対して指定され **[使用法の種類]** によって決まります。
 
--   選択された各入力列の **\<column>_IsNull** プロパティ。 このプロパティが読み取り専用か読み取り/書き込み可能かどうかも、列に対して指定された **[使用法の種類]** によって決まります。
+-   選択された各入力列の** \<column> _IsNull**プロパティです。 このプロパティが読み取り専用か読み取り/書き込み可能かどうかも、列に対して指定された **[使用法の種類]** によって決まります。
 
--   設定された各出力の **DirectRowTo\<outputbuffer>** メソッド。 行をフィルター選択して、同じ `ExclusionGroup` 内の複数の出力のいずれかに行を出力する場合、このメソッドを使用します。
+-   構成された各出力の**Directrowto \<outputbuffer> **メソッド。 行をフィルター選択して、同じ `ExclusionGroup` 内の複数の出力のいずれかに行を出力する場合、このメソッドを使用します。
 
 -   次の入力行を取得するための `NextRow` 関数、およびデータの最後のバッファーが処理されたかどうかを確認するための `EndOfRowset` 関数。 通常、基本クラス `UserComponent` に実装された入力処理メソッドを使用する場合、この関数は必要はありません。 次のセクションでは、基本クラス `UserComponent` について詳細に説明します。
 
 #### <a name="what-the-componentwrapper-project-item-provides"></a>プロジェクト アイテム ComponentWrapper が提供する機能
  プロジェクト アイテム ComponentWrapper には、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> から派生する `UserComponent` という名前のクラスがあります。 また、カスタム コードを記述する `ScriptMain` クラスは、`UserComponent` から派生します。 `UserComponent` クラスには次のメソッドが含まれています。
 
--   `ProcessInput` メソッドをオーバーライドして実装したメソッド。 これは、データ フロー エンジンが実行時に `PreExecute` メソッドの次に呼び出すメソッドで、繰り返し呼び出される場合があります。 `ProcessInput`inputbuffer>_ProcessInput メソッドに処理を渡します。 ** \<** 次に `ProcessInput` メソッドは入力バッファーが末尾に達しているかどうかを確認し、達している場合は、オーバーライド可能な `FinishOutputs` メソッドと private メソッド `MarkOutputsAsFinished` を呼び出します。 `MarkOutputsAsFinished` メソッドは、次に最後の出力バッファーの `SetEndOfRowset` を呼び出します。
+-   `ProcessInput` メソッドをオーバーライドして実装したメソッド。 これは、データ フロー エンジンが実行時に `PreExecute` メソッドの次に呼び出すメソッドで、繰り返し呼び出される場合があります。 `ProcessInput`** \<inputbuffer> _ProcessInput**メソッドに処理を渡します。 次に `ProcessInput` メソッドは入力バッファーが末尾に達しているかどうかを確認し、達している場合は、オーバーライド可能な `FinishOutputs` メソッドと private メソッド `MarkOutputsAsFinished` を呼び出します。 `MarkOutputsAsFinished` メソッドは、次に最後の出力バッファーの `SetEndOfRowset` を呼び出します。
 
--   **\<inputbuffer>_ProcessInput** メソッドのオーバーライド可能な実装。 この既定の実装では、単に各入力行の間をループし、 **\<inputbuffer>_ProcessInputRow** を呼び出します。
+-   ** \<inputbuffer> _ProcessInput**メソッドのオーバーライド可能な実装。 この既定の実装では、各入力行をループし、 ** \<inputbuffer> _ProcessInputRow**を呼び出します。
 
--   **\<inputbuffer>_ProcessInputRow** メソッドのオーバーライド可能な実装。 既定の実装では、空のままです。 このメソッドは、カスタム データ処理コードを記述するために、通常はオーバーライドして使用します。
+-   ** \<inputbuffer> _ProcessInputRow**メソッドのオーバーライド可能な実装。 既定の実装では、空のままです。 このメソッドは、カスタム データ処理コードを記述するために、通常はオーバーライドして使用します。
 
 #### <a name="what-your-custom-code-should-do"></a>カスタム コードとして組み込むべき機能
  `ScriptMain` クラスの入力を処理するには、次のメソッドを使用できます。
 
--   入力行が渡されるたびにそのデータを処理するには、 **\<inputbuffer>_ProcessInputRow** をオーバーライドします。
+-   ** \<inputbuffer> _ProcessInputRow**をオーバーライドして、各入力行が通過するたびにデータを処理します。
 
--   入力行をループするときに追加の処理を行う必要がある場合にのみ、 **\<inputbuffer>_ProcessInput** をオーバーライドします (たとえば、すべての行が処理さ`EndOfRowset`れた後に、他のアクションを実行するためにをテストする必要があります)。** \<Inputbuffer>_ProcessInputRow**を呼び出して、行処理を実行します。
+-   入力行をループ処理するときに追加の操作を行う必要がある場合にのみ、 ** \<inputbuffer> _ProcessInput**をオーバーライドします。 (たとえば、 `EndOfRowset` すべての行が処理された後に、他のアクションを実行するためにをテストする必要があります)。行の処理を実行するには、 ** \<inputbuffer> _ProcessInputRow**を呼び出します。
 
 -   出力を閉じる前に、出力に対して何らかの処理を行う場合は、`FinishOutputs` をオーバーライドします。
 
@@ -149,7 +148,7 @@ public override void PreExecute()
 
 -   各出力列の、名前付きで型指定された、書き込み専用のアクセサー プロパティ。
 
--   列の値をに`null`設定するために使用できる、選択した各出力列の書き込み専用** \<の列>_IsNull**プロパティです。
+-   列の値をに設定するために使用できる、選択した各出力列の書き込み専用の** \<column> _IsNull**プロパティ `null` です。
 
 -   空の新しい行を出力バッファーに追加するための `AddRow` メソッド。
 
@@ -175,7 +174,7 @@ public override void PreExecute()
  データの行を処理した後に 1 回だけ実行する必要のある処理がある場合は、基本クラス <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドをオーバーライドします。 たとえば、変換元でデータをデータ フローに読み込むために使用した `System.Data.SqlClient.SqlDataReader` を閉じることができます。
 
 > [!IMPORTANT]
->  `ReadWriteVariables` のコレクションは、`PostExecute` メソッド内でのみ使用できます。 したがって、データ行を処理するたびにパッケージ変数の値を直接増やすことはできません。 代わりに、ローカル変数の値をインクリメントし、すべてのデータが処理された後に、パッケージ変数の値を`PostExecute`メソッドのローカル変数の値に設定します。
+>  `ReadWriteVariables` のコレクションは、`PostExecute` メソッド内でのみ使用できます。 したがって、データ行を処理するたびにパッケージ変数の値を直接増やすことはできません。 代わりに、ローカル変数の値をインクリメントし、 `PostExecute` すべてのデータが処理された後に、パッケージ変数の値をメソッドのローカル変数の値に設定します。
 
 ## <a name="releaseconnections-method"></a>ReleaseConnections メソッド
  通常、変換元および変換先は外部データ ソースに接続する必要があります。 基本クラス <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドをオーバーライドして、以前に <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A> メソッドで開いた接続を閉じ、解放します。

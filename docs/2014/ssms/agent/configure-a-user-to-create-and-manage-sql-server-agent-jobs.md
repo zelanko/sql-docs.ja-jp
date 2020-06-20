@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a62f6c2e1ef86a6fcd5e532b2ef413d8142698e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83313389b3b872004fb23b0babdad19cfb5b8e7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253559"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995492"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
-  このトピックでは、エージェントジョブを作成または実行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するユーザーを構成する方法について説明します。  
+  このトピックでは、エージェントジョブを作成または実行するユーザーを構成する方法について説明し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 -   **作業を開始する準備:**  [セキュリティ](#Security)  
   
@@ -32,7 +31,7 @@ ms.locfileid: "63253559"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
- エージェントジョブを作成または実行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するユーザーを構成するには、msdb データベースの SQLAgentUserRole、SQLAgentReaderRole、または sqlagentoperatorrole のいずれかの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント固定データベースロールに、既存の SQL Server ログインまたは msdb ロールを追加する必要があります。  
+ エージェントジョブを作成または実行するユーザーを構成するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Msdb データベースの SQLAgentUserRole、SQLAgentReaderRole、または SQLAgentOperatorRole のいずれかのエージェント固定データベースロールに、既存の SQL Server ログインまたは msdb ロールを追加する必要があります。  
   
  既定では、これらのデータベース ロールのメンバーは、メンバー自身が実行する独自のジョブ ステップを作成できます。 このような管理者権限のないユーザーが他の種類のジョブ ステップ ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージなど) を実行するには、プロキシ アカウントへのアクセスが必要です。 sysadmin 固定サーバー ロールのすべてのメンバーには、プロキシ アカウントを作成、変更、および削除する権限があります。 これら [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定のデータベース ロールに関連付けられている権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "63253559"
   
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールに追加するログインを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  [**ログインのプロパティ**] ダイアログボックスの [**ユーザーマッピング**] ページで、を`msdb`含む行を選択します。  
+4.  [**ログインのプロパティ**] ダイアログボックスの [**ユーザーマッピング**] ページで、を含む行を選択し `msdb` ます。  
   
 5.  **[データベース ロールのメンバーシップ: msdb]** で、該当する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールのチェック ボックスをオンにします。  
   

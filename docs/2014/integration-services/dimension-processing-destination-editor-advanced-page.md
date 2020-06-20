@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07a04fe26bbd47463d0564f7799698ab282a9979
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bef21b424c401d77b9d8f3477de4061c3ff0f3d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059486"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966961"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>[ディメンション処理変換先エディター] ([詳細設定] ページ)
   **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、エラー処理を構成できます。  
@@ -28,12 +27,12 @@ ms.locfileid: "66059486"
   
 ## <a name="options"></a>オプション  
  **[既定のエラー構成を使用する]**  
- 既定の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] エラー処理を使用するかどうかを指定します。 この値の既定値は `True` です。  
+ 既定の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] エラー処理を使用するかどうかを指定します。 既定では、この値は `True` です。  
   
  **[キー エラー アクション]**  
  許容されないキー値を持つレコードを処理する方法を指定します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|許容できないキー値を `UnknownMember` 値に変換します。|  
 |**DiscardRecord**|レコードを破棄します。|  
@@ -50,7 +49,7 @@ ms.locfileid: "66059486"
  **[エラー時のアクション]**  
  **[エラー時に停止する]** を選択した場合は、エラーのしきい値に達した場合に実行する操作を指定します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**StopProcessing**|処理を停止します。|  
 |**StopLogging**|ログ記録エラーを停止します。|  
@@ -58,7 +57,7 @@ ms.locfileid: "66059486"
  **[見つからないキー]**  
  見つからないキーのエラーに対する操作を指定します。 既定では、この値は **[ReportAndContinue]** です。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
@@ -67,7 +66,7 @@ ms.locfileid: "66059486"
  **重複するキー**  
  重複キーのエラーに対する操作を指定します。 既定では、この値は **IgnoreError**です。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
@@ -76,7 +75,7 @@ ms.locfileid: "66059486"
  **Null キーが不明な値に変換されました**  
  NULL キーが `UnknownMember` 値に変換された場合に実行する操作を指定します。 既定では、この値は **IgnoreError**です。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
@@ -85,7 +84,7 @@ ms.locfileid: "66059486"
  **Null キーは使用できません**  
  NULL キーが許可されていない場合に NULL キーが検出されたときに実行する操作を指定します。 既定では、この値は **[ReportAndContinue]** です。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  

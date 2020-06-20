@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b48bf3c0f0984c3f13acde23515c931aed5f467
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185971"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057626"
 ---
 # <a name="tablediff-utility"></a>tablediff ユーティリティ
   **tablediff** ユーティリティは、2 つのテーブル内のデータを比較して非収束の発生を調べる場合に使用されます。これは、レプリケーション トポロジ内の非収束に対するトラブルシューティングを行うときに特に便利です。 このユーティリティは、コマンド プロンプトから、またはバッチ ファイル内で使用して、次のタスクを実行することができます。  
@@ -76,8 +75,8 @@ ms.locfileid: "68185971"
  [ **-?** ]  
  サポートされているパラメーターのリストを返します。  
   
- **-sourceserver** *source_server_name*[**\\**_instance_name_]  
- ソース サーバー名を指定します。 の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]既定のインスタンスの_\_ソース\_サーバー名_を指定します。 の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]名前付きインスタンスの_ソース\_サーバー\_名_**\\**の_インスタンス\_名_を指定します。  
+ **-sourceserver** *source_server_name*[ **\\** _instance_name_]  
+ ソース サーバー名を指定します。 の既定のインスタンスの_ソース \_ サーバー \_ 名_を指定し [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。 の名前付きインスタンスの_ソース \_ サーバー \_ 名_の **\\** _インスタンス \_ 名_を指定し [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。  
   
  **-sourcedatabase** *source_database*  
  ソース データベース名を指定します。  
@@ -100,8 +99,8 @@ ms.locfileid: "68185971"
  **-sourcelocked**  
  比較中は、TABLOCK および HOLDLOCK テーブル ヒントを使用して、ソース テーブルがロックされます。  
   
- **-destinationserver** *destination_server_name*[**\\**_インスタンス\_名_]  
- 対象サーバー名を指定します。 *の既定のインスタンスの場合は、* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]名前付きインスタンスの_宛先\_サーバー\_名_**\\**の_インスタンス\_名_を指定します。  
+ **-destinationserver** *destination_server_name*[ **\\** _インスタンス \_ 名_]  
+ 対象サーバー名を指定します。 *の既定のインスタンスの場合は、* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 の名前付きインスタンスの_宛先 \_ サーバー \_ 名_の **\\** _インスタンス \_ 名_を指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] します。  
   
  **-destinationdatabase** *subscription_database*  
  対象データベース名を指定します。  
@@ -169,7 +168,7 @@ ms.locfileid: "68185971"
 |**2**|テーブルの差分|  
   
 ## <a name="remarks"></a>解説  
- **Tablediff**ユーティリティは、以外の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サーバーでは使用できません。  
+ **Tablediff**ユーティリティは、以外のサーバーでは使用できません [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  `sql_variant` データ型列を含むテーブルはサポートされていません。  
   
