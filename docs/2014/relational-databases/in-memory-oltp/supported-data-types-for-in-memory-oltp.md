@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b7ba8c40979873cc2c3f2358b57dc0e491a1795e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a7dda500486c39a66f871d5934f957028fc51e9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718839"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025740"
 ---
-# <a name="supported-data-types"></a>サポートされるデータ型
+# <a name="supported-data-types"></a>サポートされているデータ型
   メモリ最適化テーブルとネイティブコンパイルストアドプロシージャでは、次のデータ型がサポートされ**て**います。  
   
  **数値のデータ型**  
   
-|データ型|詳細情報|  
+|データの種類|詳細情報|  
 |---------------|--------------------------|  
 |INT|[int、bigint、smallint、tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
 |bigint|[int、bigint、smallint、tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
@@ -37,7 +36,7 @@ ms.locfileid: "82718839"
   
  **文字列データ型**  
   
-|データ型|詳細情報|  
+|データの種類|詳細情報|  
 |---------------|--------------------------|  
 |char(n)|[char および varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
 |varchar (n) <sup>1</sup>|[char および varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
@@ -51,17 +50,17 @@ ms.locfileid: "82718839"
   
  **日付および時刻のデータ型**  
   
-|データ型|詳細情報|  
+|データの種類|詳細情報|  
 |---------------|--------------------------|  
 |date|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
-|time|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
+|時間|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
 |DATETIME|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
 |datetime2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
 |smalldatetime|[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
   
  **バイナリ データ型**  
   
-|データ型|詳細情報|  
+|データの種類|詳細情報|  
 |---------------|--------------------------|  
 |bit|[bit &#40;Transact-SQL&#41;](/sql/t-sql/data-types/bit-transact-sql)|  
 |binary(n)|[binary と varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
@@ -71,9 +70,9 @@ ms.locfileid: "82718839"
   
  **その他のデータ型**  
   
-|データ型|詳細情報|  
+|データの種類|詳細情報|  
 |---------------|--------------------------|  
-|UNIQUEIDENTIFIER|[一意識別子 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/uniqueidentifier-transact-sql)|  
+|uniqueidentifier|[一意識別子 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/uniqueidentifier-transact-sql)|  
   
  **サポートされていないデータ型**  
   
