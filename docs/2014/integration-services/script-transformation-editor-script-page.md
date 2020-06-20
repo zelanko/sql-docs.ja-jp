@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1628acc984433b1def07c63387b1630c902885aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f172aa778cbaa959671da870521641147186f571
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056070"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964052"
 ---
 # <a name="script-transformation-editor-script-page"></a>[スクリプト変換エディター] ([スクリプト] ページ)
   **[スクリプト変換エディター]** ダイアログ ボックスの **[スクリプト]** タブを使用すると、スクリプトおよび関連プロパティを指定できます。  
@@ -30,7 +29,7 @@ ms.locfileid: "66056070"
  **プロパティ**  
  スクリプト変換のプロパティを表示および変更します。 表示されるプロパティの多くは読み取り専用です。 以下のプロパティを変更できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**説明**|スクリプト変換の目的を記述します。|  
 |**ロケール**|ロケールを指定して、順序付けおよび日時の変換に関する地域固有の情報を提供します。|  
@@ -42,7 +41,7 @@ ms.locfileid: "66056070"
 |**[UserComponentTypeName]**|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インフラストラクチャをサポートする <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> クラスおよび `Microsoft.SqlServer.TxScript` アセンブリを指定します。|  
   
  **[スクリプトの編集]**  
- Tools [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] for Applications (VSTA) を使用して、スクリプトを作成または変更します。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for APPLICATIONS (VSTA) を使用して、スクリプトを作成または変更します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   

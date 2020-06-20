@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29ed5816a3a5fc0af6c5a4ac144557933e3e1a5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 479a5c26ae8ed6322c030459c2432c49834b3683
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487721"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006701"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>SSIS、MDS、DQS の組み合わせを使用した Enterprise Information Management [チュートリアル]
   企業の情報管理には、一般に、企業の枠を超えたデータ統合、データのクレンジング、データ照合による重複項目の削除、データの標準化、データの拡充、法的およびコンプライアンス条件に対するデータの準拠、および必要なすべてのセキュリティ設定によるデータの集中管理などの作業が含まれます。  
@@ -54,7 +53,7 @@ ms.locfileid: "81487721"
   
 2.  [マスター データ サービス構成マネージャーを使用した MDS の設定](https://msdn.microsoft.com/library/ee633884.aspx)  
   
-     マスター データ サービス データベースの作成と構成には、構成マネージャーを使用します。 MDS データベースを作成した後、web サイトに MDS 用の web アプリケーションを作成し (例`http://localhost/MDS`:)、mds データベースを mds web アプリケーションに関連付けます。 MDS Web アプリケーションを作成するには、コンピューターに IIS がインストールされている必要があります。 MDS データベースと web アプリケーションを構成するための前提条件の詳細については、「 [Web アプリケーションの要件」 (マスターデータサービス)](https://msdn.microsoft.com/library/ee633744.aspx)および「[データベースの要件」 (マスターデータサービス)](https://msdn.microsoft.com/library/ee633767.aspx)を参照してください。  
+     マスター データ サービス データベースの作成と構成には、構成マネージャーを使用します。 MDS データベースを作成した後、web サイトに MDS 用の web アプリケーションを作成し (例:)、mds `http://localhost/MDS` データベースを mds web アプリケーションに関連付けます。 MDS Web アプリケーションを作成するには、コンピューターに IIS がインストールされている必要があります。 MDS データベースと web アプリケーションを構成するための前提条件の詳細については、「 [Web アプリケーションの要件」 (マスターデータサービス)](https://msdn.microsoft.com/library/ee633744.aspx)および「[データベースの要件」 (マスターデータサービス)](https://msdn.microsoft.com/library/ee633767.aspx)を参照してください。  
   
 3.  [Data Quality Server インストーラーを使用して DQS をインストールして構成](https://msdn.microsoft.com/library/hh231682.aspx)します。 [**スタート**]、 **[すべてのプログラム**]、[ **Microsoft SQL Server 2014**]、[ **Data Quality Services**]、[ **data quality Server Installer**] の順にクリックします。  
   
@@ -64,11 +63,11 @@ ms.locfileid: "81487721"
   
 6.  Optional[Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/)でアカウントを作成します。 このチュートリアルのタスクの1つでは、 **Azure Marketplace** (もともとは**データマーケット**) アカウントが必要です。 次のタスクに進む場合は、このタスクをスキップできます。  
   
-7.  [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=50426)から、仕入先 .xls ファイルをダウンロードします。  
+7.  [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=50426)から Suppliers.xls ファイルをダウンロードします。  
   
 8.  **64 ビットバージョンの excel**を使用している場合、DQS では、クレンジングまたは照合結果を excel ファイルにエクスポートすることはできません。 これは既知の問題です。 この問題を回避するには、次の手順を実行します。  
   
-    1.  **Dqlinstaller-upgrade**を実行します。 SQL Server の既定のインスタンスをインストールした場合、DQSinstaller.exe ファイルは C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn に格納されます。 DQSInstaller.exe ファイルをダブルクリックします。  
+    1.  **DQLInstaller.exe のアップグレードを**実行します。 SQL Server の既定のインスタンスをインストールした場合、DQSinstaller.exe ファイルは C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn に格納されます。 DQSInstaller.exe ファイルをダブルクリックします。  
   
     2.  **マスターデータサービス構成マネージャー**で、[**データベースの選択**] をクリックし、[既存の**MDS**データベース] を選択して、[**アップグレード**] をクリックします。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "81487721"
 |[レッスン 4: MDS に仕入先データを格納する](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)|このレッスンでは、 **Excel 用 MDS アドイン**を使用して、クレンジングおよび一致した仕入先データをマスターデータサービス (MDS) にアップロードします。|45|  
 |[レッスン 5: SSIS を使用してクレンジングと照合を自動化する](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|このレッスンでは、DQS を使用して入力データをクレンジングし、重複項目を削除するためにクレンジングしたデータを照合して、クレンジングおよび照合済みのデータを MDS に自動的に保存する SSIS ソリューションを作成します。|75|  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
  チュートリアルを開始するには、最初のレッスン「[レッスン 1: サプライヤー DQS ナレッジベースの作成」](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)に進んでください。  
   
   

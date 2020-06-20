@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9278a388fa6beb52dc747d310bea4a2ce32c600e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c45e87fdd8e00e9456718c4c9c8160c22bac03a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705309"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019379"
 ---
 # <a name="bcp_sendrow"></a>bcp_sendrow
   プログラム変数から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータ行を送信します。  
@@ -46,7 +45,7 @@ hdbc
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Bcp_sendrow**関数は、プログラム変数から行を作成し、に送信し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  **Bcp_sendrow**を呼び出す前に、行データを含むプログラム変数を指定するために[bcp_bind](bcp-bind.md)の呼び出しを行う必要があります。  

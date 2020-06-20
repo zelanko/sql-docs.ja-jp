@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a2c6cdeb27dfd1768c9a494497f5b2b1e0b7350a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab395a55e0734fcdf33bdf736dc2920584a8dab1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788499"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936483"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>[データベースの選択] ページ (新しい可用性グループウィザード-データベース追加ウィザード)
    このヘルプ トピックでは、**[データベースの指定]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] の [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] と [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。  
@@ -37,7 +36,7 @@ ms.locfileid: "62788499"
   
  前提条件を満たすためにデータベースを操作したままで、 **[データベースの選択]** ページでウィザードを終了できます。 **[データベースの選択]** ページに戻ったら、 **[最新の情報に更新]** をクリックしてグリッドを更新します。  
   
- **更新**  
+ **Refresh\(更新\)**  
  クリックしてグリッドを最新の情報に更新します。 前提条件を満たすためにデータベースを操作した後で役立ちます。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  

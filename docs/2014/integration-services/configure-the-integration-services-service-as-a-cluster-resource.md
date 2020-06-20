@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a9597686f4c9ca5a90a8344b425b6808cd96477a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a7d54586a8a2d0b60a65288b4a90947862692d5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060568"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921703"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>クラスター リソースとして Integration Services サービスを構成する
   このセクションでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスをクラスター リソースとして構成する利点が欠点を上回ると判断したユーザー向けに、必要な構成手順を説明します。 ただし、 [!INCLUDE[msCoName](../includes/msconame-md.md)] では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスをクラスター リソースとして構成することをお勧めしません。  
@@ -78,7 +77,7 @@ ms.locfileid: "66060568"
   
 4.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[リソース]** をクリックします。  
   
-5.  リソース ウィザードの **[新しいリソース]** ページで、名前を入力し、**[サービスの種類]** として **[汎用サービス]** を選択します。 **[グループ]** の値は変更せずに、 **[次へ]** をクリックします。  
+5.  リソース ウィザードの **[新しいリソース]** ページで、名前を入力し、 **[サービスの種類]** として **[汎用サービス]** を選択します。 **[グループ]** の値は変更せずに、 **[次へ]** をクリックします。  
   
 6.  **[実行可能な所有者]** ページで、リソースの実行可能な所有者として、クラスターのノードを追加または削除し、 **[次へ]** をクリックします。  
   
@@ -102,7 +101,7 @@ ms.locfileid: "66060568"
   
 3.  共有ディスク上で、テキスト エディターまたは XML エディターを使用して構成ファイルを開き、 `ServerName` 要素の値を、同じリソース グループ内の仮想 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前に変更します。  
   
-4.  `StorePath`要素の値を、前の手順で共有ディスク上に作成された**Packages**フォルダーの完全修飾パスに変更します。  
+4.  要素の値を、 `StorePath` 前の手順で共有ディスク上に作成された**Packages**フォルダーの完全修飾パスに変更します。  
   
 5.  レジストリ内の **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** の値を共有ディスク上のサービス構成ファイルの完全修飾パスとファイル名に更新します。  
   

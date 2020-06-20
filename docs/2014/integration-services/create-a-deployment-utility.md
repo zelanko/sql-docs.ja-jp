@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25effc199b1f8e525ceec78216e935e13afe2be2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060228"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917362"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   パッケージ配置の最初の手順は、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの配置ユーティリティを作成することです。 配置ユーティリティは、別のサーバーに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトのパッケージを配置する際に必要となるファイルを格納したフォルダーです。 配置ユーティリティは [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトが格納されているコンピューター上に作成されます。  
@@ -35,7 +34,7 @@ ms.locfileid: "66060228"
 |CreateDeploymentUtility|プロジェクトのビルド時にパッケージ配置ユーティリティを作成するかどうかを指定する値。 配置ユーティリティを作成するには、このプロパティが `True` である必要があります。|  
 |DeploymentOutputPath|配置ユーティリティの場所。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトから見た相対的な位置。|  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトをビルドすると、\<プロジェクト名>.SSISDeploymentManifest.xml というマニフェスト ファイルが作成され、プロジェクトのパッケージのコピーおよびパッケージの依存関係と共に、プロジェクトの bin\Deployment フォルダーまたは DeploymentOutputPath プロパティで指定された場所に格納されます。 マニフェスト ファイルには、プロジェクトに含まれるパッケージ、パッケージの構成、およびその他のファイルの一覧が記述されます。  
+ プロジェクトをビルドすると [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 、マニフェストファイル.SSISDeploymentManifest.xml が作成され、プロジェクト \<project name> パッケージとパッケージの依存関係のコピーと共に、プロジェクトの bin\Deployment フォルダーまたは DeploymentOutputPath プロパティで指定された場所に追加されます。 マニフェスト ファイルには、プロジェクトに含まれるパッケージ、パッケージの構成、およびその他のファイルの一覧が記述されます。  
   
  配置フォルダーの内容は、プロジェクトをビルドするたびに更新されます。 つまり、このフォルダーに保存されているフォルダーのうち、ビルド プロセスで再度このフォルダーにコピーされなかったファイルはすべて、削除されます。 たとえば、配置フォルダーに保存されたパッケージ構成ファイルは削除されます。  
   
@@ -45,9 +44,9 @@ ms.locfileid: "66060228"
   
 2.  プロジェクトを右クリックして、 **[プロパティ]** をクリックします。  
   
-3.  [ ** \<プロジェクト名> プロパティページ**] ダイアログボックスで、[**配置ユーティリティ**] をクリックします。  
+3.  [ ** \<project name> プロパティページ**] ダイアログボックスで、[**配置ユーティリティ**] をクリックします。  
   
-4.  パッケージの配置時にパッケージの構成を更新するには、 `True` **allowconfigurationchanges**をに設定します。  
+4.  パッケージの配置時にパッケージの構成を更新するには、 **Allowconfigurationchanges**をに設定 `True` します。  
   
 5.  `CreateDeploymentUtility` を `True` に設定します。  
   

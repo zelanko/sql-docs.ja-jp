@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0341d9ba11cd66fdbfb72a05521028098c56c400
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701943"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019439"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   指定された BCP 型トークンの SQL 型名を返します。  
@@ -52,7 +51,7 @@ fIsMaxType
 ## <a name="returns"></a>戻り値  
  BCP 型に対応する SQL 型名を含む文字列を返します。 無効な BCP 型が指定されると、空文字列を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  BCP 型トークンは、sqlncli.h ヘッダー ファイルと sqlncli11.lib ライブラリで定義されています。  
   
  次の表では、指定できる BCP 型、それらの BCP 型が max 型かどうか、および予想される出力を示しています。  
@@ -78,7 +77,7 @@ fIsMaxType
 |`SQLBINARY`|いいえ|**Binary**|  
 |`SQLBIGVARBINARY`|いいえ|**可変長**|  
 |`SQLVARBINARY`|いいえ|**可変長**|  
-|`SQLIMAGE`|接続前/接続後|**Image**|  
+|`SQLIMAGE`|接続前/接続後|**イメージ**|  
 |`SQLINTN`|接続前/接続後|**int-null**|  
 |`SQLDATETIMN`|接続前/接続後|**datetime-null**|  
 |`SQLMONEYN`|接続前/接続後|**money-null**|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5552d40cf2f899ca6b95658ac2aa50d5cc25f62f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060165"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917348"
 ---
 # <a name="create-package-configurations"></a>パッケージ構成を作成する
   パッケージの構成は、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスまたはパッケージ構成ウィザードを使用して作成します。 これらのツールにアクセスするには、 **で** [SSIS] **メニューの** [パッケージ構成] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]をクリックします。  
@@ -76,10 +75,10 @@ ms.locfileid: "66060165"
 |列|説明|  
 |------------|-----------------|  
 |**構成名**|構成の名前です。|  
-|**[構成の種類]**|構成の種類です。|  
+|**構成の種類**|構成の種類です。|  
 |**構成文字列**|構成の場所です。 場所は、パス、環境変数、レジストリ キー、親パッケージの変数名、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースのテーブルの場合があります。|  
 |**[対象になるオブジェクト]**|構成を持つプロパティを設定するオブジェクトの名前です。 構成が XML 構成ファイルの場合、構成で複数のオブジェクトを更新できるため、この列は空白になります。|  
-|**[対象になるプロパティ]**|プロパティの名前。 構成が XML 構成ファイルまたは SQL Server テーブルに書き込まれる場合は、構成で複数のオブジェクトを更新できるため、この列は空白になります。|  
+|**Target プロパティ**|プロパティの名前。 構成が XML 構成ファイルまたは SQL Server テーブルに書き込まれる場合は、構成で複数のオブジェクトを更新できるため、この列は空白になります。|  
   
 ### <a name="to-create-a-package-configuration"></a>パッケージの構成を作成するには  
   

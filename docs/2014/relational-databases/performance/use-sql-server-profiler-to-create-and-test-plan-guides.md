@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 543905343d74c9fbabe5f671d9021657ea5f76b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150489"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066754"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler を使用したプラン ガイドの作成とテスト
    プラン ガイドを作成するとき、**sp_create_plan_guide** ストアド プロシージャの *statement_text* 引数に使用するために、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して正確なクエリ テキストをキャプチャできます。 これにより、コンパイル時にプラン ガイドをクエリに一致させることができます。 プラン ガイドを作成した後、プラン ガイドが実際にクエリに一致することをテストするためにも [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用できます。 通常、クエリがプラン ガイドに一致することを確認するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してプラン ガイドをテストする必要があります。  
@@ -66,7 +65,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  メモ帳でバッチ テキスト ファイルを開き、テキストをクリップボードにコピーします。  
   
-8.  プラン ガイドを作成し、**@stmt**引数に指定する引用符 ( **@stmt** ') 内にコピーしたテキストを貼り付けます。 **@stmt**引数内の単一引用符をエスケープするには、その前に別の単一引用符を使用する必要があります。 単一引用符を挿入する際は、別の文字を追加したり削除したりしないように注意してください。 たとえば、日付リテラル **'** 20000101 **'** は、 **''** 20000101 **''** として区切る必要があります。  
+8.  プラン ガイドを作成し、**@stmt**引数に指定する引用符 ( **@stmt** ') 内にコピーしたテキストを貼り付けます。 引数内の単一引用符をエスケープするには、その **@stmt** 前に別の単一引用符を使用する必要があります。 単一引用符を挿入する際は、別の文字を追加したり削除したりしないように注意してください。 たとえば、日付リテラル **'** 20000101 **'** は、 **''** 20000101 **''** として区切る必要があります。  
   
  次に、このプラン ガイドを示します。  
   
@@ -94,7 +93,7 @@ EXEC sp_create_plan_guide
     > [!NOTE]  
     >  **Showplan XML for Query Compile** イベントは使用できません。 **PlanGuideDB** はそのイベントに存在しません。  
   
-5.  プラン ガイドが OBJECT 型または SQL 型の場合は、 **Showplan XML** イベントに、クエリと一致させるプラン ガイドの **PlanGuideDB** 属性と **PlanGuideName** 属性が含まれていることを確認します。 または、TEMPLATE プラン ガイドの場合は、 **Showplan XML** イベントに、クエリと一致させるプラン ガイドの **TemplatePlanGuideDB** 属性と **TemplatePlanGuideName** 属性が含まれていることを確認します。 これにより、プラン ガイドが機能していることを確認できます。 これらの属性は、プランの** \<StmtSimple>** 要素に含まれています。  
+5.  プラン ガイドが OBJECT 型または SQL 型の場合は、 **Showplan XML** イベントに、クエリと一致させるプラン ガイドの **PlanGuideDB** 属性と **PlanGuideName** 属性が含まれていることを確認します。 または、TEMPLATE プラン ガイドの場合は、 **Showplan XML** イベントに、クエリと一致させるプラン ガイドの **TemplatePlanGuideDB** 属性と **TemplatePlanGuideName** 属性が含まれていることを確認します。 これにより、プラン ガイドが機能していることを確認できます。 これらの属性は、プランの要素の下に含まれ **\<StmtSimple>** ます。  
   
 ## <a name="see-also"></a>参照  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)  

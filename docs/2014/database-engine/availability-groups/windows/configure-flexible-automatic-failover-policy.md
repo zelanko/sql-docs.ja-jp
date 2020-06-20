@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 452d3ac4dae2164fa0fa172528ae398ea91fed31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c938624a3ed39fe2d41f21a21af5231aa76a8c17
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797753"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936983"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>自動フェールオーバーの条件を制御する柔軟なフェールオーバー ポリシーの構成 (AlwaysOn 可用性グループ)
   このトピックでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] で [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]または PowerShell を使用して AlwaysOn 可用性グループの柔軟なフェールオーバー ポリシーを構成する方法について説明します。 柔軟なフェールオーバー ポリシーを使用すると、可用性グループの自動フェールオーバーを実行する条件をきめ細かく制御できます。 自動フェールオーバーを実行するエラー条件および正常性チェックの頻度を変更することで、自動フェールオーバーの確率値を増減して高可用性の SLA をサポートできます。  
@@ -37,7 +36,7 @@ ms.locfileid: "72797753"
   
 -   WSFC クラスターでは、可用性グループが WSFC のエラーしきい値を超えると、自動フェールオーバーはその可用性グループに対して実行されません。 また、クラスター管理者が失敗したリソース グループを手動でオンラインにするか、データベース管理者が可用性グループの手動フェールオーバーを実行するまで、可用性グループの WSFC リソース グループはエラー状態のままになります。 *WSFC のエラーしきい値* は、特定の期間に可用性グループに対して許容されるエラーの最大数として定義されています。 既定の期間は 6 時間であり、この期間のエラーの最大数の既定値は *n*-1 です ( *n* は WSFC ノードの数です)。 特定の可用性グループのエラーしきい値を変更するには、WSFC フェールオーバー マネージャー コンソールを使用します。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要条件  
   
 -   プライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "72797753"
   
 1.  プライマリ レプリカをホストするサーバー インスタンスに接続します。  
   
-2.  新しい可用性グループの場合は、 [CREATE availability group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントを使用します。 既存の可用性グループを変更する場合は、 [ALTER availability group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントを使用します。  
+2.  新しい可用性グループの場合は、 [CREATE AVAILABILITY group](/sql/t-sql/statements/create-availability-group-transact-sql)ステートメントを使用し [!INCLUDE[tsql](../../../includes/tsql-md.md)] ます。 既存の可用性グループを変更する場合は、 [ALTER AVAILABILITY group](/sql/t-sql/statements/alter-availability-group-transact-sql)ステートメントを使用し [!INCLUDE[tsql](../../../includes/tsql-md.md)] ます。  
   
     -   フェールオーバーの条件レベルを設定するには、FAILURE_CONDITION_LEVEL = *n* オプションを使用します。ここで、 *n* は 1 ～ 5 の整数です。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "72797753"
   
 2.  可用性グループに可用性レプリカを追加する場合は、`New-SqlAvailabilityGroup` コマンドレットを使用します。 既存の可用性レプリカを変更する場合は、`Set-SqlAvailabilityGroup` コマンドレットを使用します。  
   
-    -   フェールオーバーの条件レベルを設定するに`FailureConditionLevel`は、 *level*パラメーターを使用します。ここで、 *level*は次の値のいずれかになります。  
+    -   フェールオーバーの条件レベルを設定するには、 `FailureConditionLevel` *level*パラメーターを使用します。ここで、 *level*は次の値のいずれかになります。  
   
         |値|Level|自動フェールオーバーが開始される条件|  
         |-----------|-----------|-------------------------------------------|  
@@ -113,7 +112,7 @@ ms.locfileid: "72797753"
          -FailureConditionLevel OnServerDown  
         ```  
   
-    -   正常性チェックのタイムアウトしきい値を設定する`HealthCheckTimeout`には、 *n*パラメーターを使用します。ここで、 *n*は15000ミリ秒 (15 秒) ~ 4294967295 ミリ秒の整数です。 既定値は 30000 ミリ秒 (30 秒) です。  
+    -   正常性チェックのタイムアウトしきい値を設定するには、 `HealthCheckTimeout` *n*パラメーターを使用します。ここで、 *n*は15000ミリ秒 (15 秒) ~ 4294967295 ミリ秒の整数です。 既定値は 30000 ミリ秒 (30 秒) です。  
   
          たとえば、次のコマンドでは、既存の可用性グループ `AG1`の正常性チェックのタイムアウトしきい値が 120,000 ミリ秒 (2 分) に変更されます。  
   

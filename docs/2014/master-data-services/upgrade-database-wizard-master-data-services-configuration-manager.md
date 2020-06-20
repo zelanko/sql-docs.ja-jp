@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 977c96b625ecb62f9f02d19e71df57cd17d8660f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69ce04217f2913214bbdd9de631c1ac339a39ce7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478494"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971015"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>データベースのアップグレード ウィザード (Master Data Services 構成マネージャー)
   **データベースのアップグレード ウィザード** を使用すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースをアップグレードすることができます。  
@@ -28,7 +27,7 @@ ms.locfileid: "65478494"
   
 |コントロール名|説明|  
 |------------------|-----------------|  
-|**SQL Server インスタンス**|現在選択されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスの名前です。|  
+|**SQL Server インスタンス (SQL Server instance)**|現在選択されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスの名前です。|  
 |**マスターデータサービスデータベース**|現在選択されている [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの名前です。|  
   
 ## <a name="progress-and-finish"></a>[続行して完了する]  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb0e6219d06b83de9311099189dd1cbab31dd2f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cd2785f571af3afb7dfb835bd83125ceef713f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63010749"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040450"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>レッスン 1:データベース エンジン チューニング アドバイザーでの基本操作
   データベース エンジン チューニング アドバイザーでは、グラフィカル ユーザー インターフェイス (GUI) を使用して、チューニング セッションやチューニング推奨設定レポートを表示できます。 このレッスンでは、このツールの起動方法および操作画面の構成方法を説明します。 このレッスンを終了すると、ツールの起動と画面の構成を複数の方法で行い、日常的に実行するチューニング タスクに活用できるようになります。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46777707354b1379d50b6379e21aabd02ffb5097
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812944"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936319"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>ダウンタイムとデータ損失を最小限に抑えた可用性グループ サーバーのアップグレードおよび更新
   SQL Server 2012 のサーバー インスタンスをサービス パックで更新するとき、または新しいバージョンにアップグレードするときに、順次更新または順次アップグレードを実行することにより、可用性グループのダウンタイムを手動フェールオーバー 1 回分のみに抑えることができます。 SQL Server のバージョンをアップグレードする場合、この操作をローリング アップグレードと呼びます。現在のバージョンの SQL Server に修正プログラムまたはサービス パックを適用して更新する場合、この操作をローリング アップデートと呼びます。  
@@ -115,9 +114,9 @@ ms.locfileid: "62812944"
   
 |可用性グループ|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1|1 次式|||  
-|AG2||1 次式||  
-|AG3|||1 次式|  
+|AG1|プライマリ|||  
+|AG2||プライマリ||  
+|AG3|||プライマリ|  
   
  この状況では、次の順序で負荷分散ローリング アップグレードまたはローリング アップデートを実行することが適切であると考えられます。  
   
@@ -139,9 +138,9 @@ ms.locfileid: "62812944"
   
 |可用性グループ|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1||1 次式||  
-|AG2|1 次式|||  
-|AG3|||1 次式|  
+|AG1||プライマリ||  
+|AG2|プライマリ|||  
+|AG3|||プライマリ|  
   
  実際の実装方法に応じて、アップグレードまたは更新の手順が変わる可能性があります。また、クライアント アプリケーションで発生するダウンタイムも変わります。  
   

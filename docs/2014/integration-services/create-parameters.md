@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f43c6f25d7360b558a8bbfb9887b6bd2d6362106
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060142"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917220"
 ---
 # <a name="create-parameters"></a>パラメーターを作成する
   プロジェクト パラメーターおよびパッケージ パラメーターを作成するには、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用します。 以下の手順では、パッケージ/プロジェクト パラメーターを作成する方法を詳細に説明します。  
@@ -40,7 +39,7 @@ ms.locfileid: "66060142"
     |プロパティ|説明|  
     |--------------|-----------------|  
     |名前|パラメーターの名前。|  
-    |データ型|パラメーターのデータ型です。|  
+    |データの種類|パラメーターのデータ型です。|  
     |既定値|設計時に割り当てられたパラメーターの既定値。 これは設計時の既定値とも呼ばれます。|  
     |重要|機密性の高いパラメーター値はカタログ内で暗号化され、Transact-SQL または SQL Server Management Studio で表示する際は NULL 値として表示されます。|  
     |必須|パッケージを実行する前に、設計上の既定値以外の値を指定する必要があります。|  
@@ -74,7 +73,7 @@ ms.locfileid: "66060142"
     |プロパティ|説明|  
     |--------------|-----------------|  
     |名前|パラメーターの名前。|  
-    |データ型|パラメーターのデータ型です。|  
+    |データの種類|パラメーターのデータ型です。|  
     |既定値|設計時に割り当てられたパラメーターの既定値。 これは設計時の既定値とも呼ばれます。|  
     |重要|機密性の高いパラメーター値はカタログ内で暗号化され、Transact-SQL または SQL Server Management Studio で表示する際は NULL 値として表示されます。|  
     |必須|パッケージを実行する前に、設計上の既定値以外の値を指定する必要があります。|  

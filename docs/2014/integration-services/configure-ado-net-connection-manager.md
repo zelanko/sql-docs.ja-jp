@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 51d115aaeebcedd102709b0e1f3fab81e439a521
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 978f50d5b12088271d5cf89ba4513b95f175fdc2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060835"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921823"
 ---
 # <a name="configure-adonet-connection-manager"></a>[ADO.NET の接続マネージャーの構成]
   **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスでは、SqlClient プロバイダーなど、.NET Framework データ プロバイダーを使用してアクセスできるデータ ソースへの接続を追加できます。 接続マネージャーでは、既存の接続を使用することも、新しく接続を作成することもできます。  
@@ -33,7 +32,7 @@ ms.locfileid: "66060835"
  **[データ接続のプロパティ]**  
  選択した ADO.NET データ接続のプロパティとその値を表示します。  
   
- **新しい**  
+ **[新規作成]**  
  **[接続マネージャー]** ダイアログ ボックスを使用して、ADO.NET データ接続を作成します。  
   
  **削除**  

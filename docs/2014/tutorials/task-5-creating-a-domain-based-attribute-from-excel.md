@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f7287091ddd64ef9df1c63706a2f562feed4a5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489107"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999669"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>タスク 5: Excel からドメイン ベースの属性を作成する
   このタスクでは、 **Supplier**エンティティの**State**属性を**ドメインベースの属性**として変換します。 State 属性をドメインベースの属性に構成し、MDS にパブリッシュすると、列のすべての値を使用して**state**という名前の新しいエンティティが mds サーバーに作成され、 **Supplier**エンティティの**state**属性に**state**エンティティの値が設定されます。 現在、サプライヤー**モデルに**は、 **supplier**と**state**という2つのエンティティがあります **。 Supplier エンティティの** **state**属性は、 **state**エンティティに依存するドメインベースの属性です。  
   
-1.  クレンジングされた**仕入先 .xlsx**が開かれている**Excel**ウィンドウに切り替えます。  
+1.  クレンジングされ **、一致**した Suppliers.xlsx開いた**Excel**ウィンドウに切り替えます。  
   
 2.  リボンの [**更新**] ボタンをクリックして、MDS から最新の更新プログラムを取得します。 オプションの**タスク 4**を実行した場合は、さらに2つのレコードが表示されます。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9be9e7ef7d1cffb5c70836cf7594b39e2a1fe754
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68186111"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040051"
 ---
 # <a name="start-sql-server-profiler"></a>SQL Server Profiler の起動
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、さまざまなシナリオでのトレース出力の収集をサポートするために、いくつかの異なる方法で起動することができます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、 **[スタート]** メニューや **チューニング アドバイザーの** [ツール] [!INCLUDE[ssDE](../../includes/ssde-md.md)] メニューから起動できるほか、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から起動することもできます。  
@@ -41,7 +40,7 @@ ms.locfileid: "68186111"
   
 #### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>[ツール] メニューから SQL Server Profiler を起動するには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **チューニング アドバイザーの** メニューの **[SQL Server Profiler]** から起動することもできます。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ツール]** メニューで、 **[SQL Server Profiler]** をクリックします。  
   
 #### <a name="to-start-sql-server-profiler-from-the-query-editor"></a>クエリ エディターから SQL Server Profiler を起動するには  
   
