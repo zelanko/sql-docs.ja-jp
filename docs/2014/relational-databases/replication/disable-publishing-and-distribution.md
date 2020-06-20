@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8843dac310d1e023fe7ce63eded02c9e1bed3731
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882371"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010883"
 ---
 # <a name="disable-publishing-and-distribution"></a>パブリッシングおよびディストリビューションの無効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリッシングとディストリビューションを無効にする方法について説明します。  
@@ -87,7 +86,7 @@ ms.locfileid: "73882371"
 7.  ディストリビューターで [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) を実行して、サーバーからディストリビューターの指定を削除します。  
   
     > [!NOTE]  
-    >  [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) および [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)の実行前にレプリケーションのパブリッシング オブジェクトおよびディストリビューション オブジェクトがすべて削除されていなかった場合は、これらのプロシージャからエラーが返されます。 パブリッシャーまたはディストリビューターの削除時に、レプリケーション関連のオブジェクトをすべて削除するには、 ** \@no_checks**パラメーターを**1**に設定する必要があります。 パブリッシャーまたはディストリビューターがオフラインであるか、またはディストリビューターにアクセスできない場合は、 ** \@ignore_distributor**パラメーターを**1**に設定して削除することができます。ただし、パブリッシュおよび配布オブジェクトが残されている場合は、手動で削除する必要があります。  
+    >  [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) および [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)の実行前にレプリケーションのパブリッシング オブジェクトおよびディストリビューション オブジェクトがすべて削除されていなかった場合は、これらのプロシージャからエラーが返されます。 パブリッシャーまたはディストリビューターの削除時に、レプリケーション関連のオブジェクトをすべて削除するには、 ** \@ no_checks**パラメーターを**1**に設定する必要があります。 パブリッシャーまたはディストリビューターがオフラインであるか、またはディストリビューターにアクセスできない場合は、 ** \@ ignore_distributor**パラメーターを**1**に設定して削除することができます。ただし、パブリッシュおよび配布オブジェクトを残さないようにするには、手動で削除する必要があります。  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例は、サブスクリプション データベースからレプリケーション オブジェクトを削除するスクリプトです。  
@@ -112,11 +111,11 @@ ms.locfileid: "73882371"
   
 5.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得し、パブリッシャーが存在することを確認します。 このメソッドが `false` を返した場合、手順 4. で設定したパブリッシャーの名前が誤っていたか、このディストリビューターではこのパブリッシャーが使用されていません。  
   
-6.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> メソッドを呼び出します。 パブリッシャーとディストリビューターが`true`別々のサーバーにあり、パブリッシャーにパブリケーションが存在しないことを最初に確認せずにディストリビューターでパブリッシャーをアンインストールする必要がある場合は、 *force*に値を渡します。  
+6.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> メソッドを呼び出します。 `true`パブリッシャーとディストリビューターが別々のサーバーにあり、パブリッシャーにパブリケーションが存在しないことを最初に確認せずにディストリビューターでパブリッシャーをアンインストールする必要がある場合は、 *force*に値を渡します。  
   
 7.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> クラスのインスタンスを作成します。 手順 3 の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを渡します。  
   
-8.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> メソッドを呼び出します。 Force の値を`true`渡し*force*て、すべてのローカルパブリケーションデータベースが無効になっていること、およびディストリビューションデータベースがアンインストールされていることを最初に確認せずに、ディストリビューターのすべてのレプリケーションオブジェクトを削除します。  
+8.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> メソッドを呼び出します。 Force の値を渡して、 `true` すべてのローカルパブリケーションデータベースが無効になっていること、およびディストリビューションデータベースがアンインストールされていることを最初に確認せずに、ディストリビューターのすべてのレプリケーションオブジェクトを削除します。 *force*  
   
 ###  <a name="examples-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  次の例では、ディストリビューターのパブリッシャーの登録を削除し、ディストリビューション データベースを削除して、ディストリビューターをアンインストールします。  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7330e1e9f588ba2eb06e419289278a7636fb7184
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63000343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049472"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>マージ レプリケーションの競合検出および解決の詳細
   パブリッシャーとサブスクライバーが接続され、同期が発生すると、マージ エージェントによって競合の検出が行われます。 競合が検出された場合、マージ エージェントは競合回避モジュール (アーティクルをパブリケーションに追加するときに指定) を使用して、他のサイトに反映する許容データを決定します。  
@@ -59,7 +58,7 @@ ms.locfileid: "63000343"
   
  アーティクルに対して競合の追跡と競合解決のレベルを指定するには、「 [マージ アーティクルの競合追跡と解決のレベルを指定](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution)」を参照してください。  
   
-## <a name="conflict-resolution"></a>競合解決  
+## <a name="conflict-resolution"></a>競合の解決  
  競合が検出されると、選択した競合回避モジュールがマージ エージェントによって起動され、この競合回避モジュールを使用して、競合で優先するデータを決定します。 競合で優先された行がパブリッシャーおよびサブスクライバーで適用され、優先されなかった行のデータは競合テーブルに書き込まれます。 対話型操作による競合解決を選択しなかった場合、競合はモジュールの実行直後に解決されます。  
   
 ### <a name="resolver-types"></a>競合回避モジュールの種類  
@@ -81,11 +80,11 @@ ms.locfileid: "63000343"
   
 -   COM ベースのカスタム競合回避モジュール  
   
-     マージレプリケーションには、や[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]などの言語で、リゾルバーを COM オブジェクトとして書き込むための API が用意されています。 詳細については、「 [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md)」を参照してください。  
+     マージレプリケーションには、やなどの言語で、リゾルバーを COM オブジェクトとして書き込むための API が用意されて [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] います。 詳細については、「 [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md)」を参照してください。  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]には、COM ベースの競合回避モジュールが多数含まれています。 詳細については、「 [Microsoft COM ベースの競合回避モジュール](advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)]には [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、COM ベースの競合回避モジュールが多数含まれています。 詳細については、「 [Microsoft COM ベースの競合回避モジュール](advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。  
   
  適切な競合回避モジュールの種類の選択方法は、「[競合回避モジュールの選択](advanced-merge-replication-conflict-choose-a-resolver.md)」を参照してください。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "63000343"
   
  競合表示モジュールには、次に示す 3 つのシステム テーブルの情報が表示されます。  
   
--   レプリケーションは、マージ アーティクルの各テーブルに対して競合テーブルを作成し、そのテーブルに **MSmerge_conflict_\<PublicationName>_\<ArticleName>** という形式の名前を付けます。  
+-   レプリケーションでは、マージアーティクル内のテーブルごとに競合テーブルが作成されます。 **MSmerge_conflict_ \<PublicationName> _ \<ArticleName> **の形式で名前が付けられます。  
   
      競合テーブルには、基になるテーブルと同じ構造があります。 これらのテーブルの行は競合で優先されなかった行で構成されています (競合で優先された行は実際のユーザー テーブルにあります)。  
   

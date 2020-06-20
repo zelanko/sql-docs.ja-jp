@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f5ed0e086f5743f6759ed8b317750eefcb377180
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d9ed0db394f63594937ad923734b07fed8050955
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782786"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064992"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でジョブ カテゴリのメンバーシップを変更する方法について説明します。  
@@ -89,4 +88,4 @@ ms.locfileid: "72782786"
 ##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  **ジョブ カテゴリのメンバーシップを変更するには**  
   
- Visual Basic、 `JobCategory` Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。  
+ `JobCategory`Visual Basic、Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。  

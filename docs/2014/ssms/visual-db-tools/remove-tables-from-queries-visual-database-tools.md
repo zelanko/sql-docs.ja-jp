@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bda582c7b9171e89a43b6870b3b6c2df139b7b11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fab5380e13742f3cd289ce17f26ad2e5fb9089ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670465"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064870"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>クエリからのテーブルの削除 (Visual Database Tools)
   クエリからテーブルまたはテーブル値オブジェクトを削除できます。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f14850b-b85c-41e2-8116-6f5b3f5e0856
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 37356c3a73a120a44adc67aad9439d313d562f61
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: af434713946f5c568ee71644a7403f9496a8c16f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709582"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049710"
 ---
 # <a name="cross-version-compatibility"></a>複数バージョン間の互換性
   バージョン間の競合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のクライアント インスタンスまたはサーバー インスタンスでテーブル値パラメーターを処理する必要がある場合に発生することがあります。  

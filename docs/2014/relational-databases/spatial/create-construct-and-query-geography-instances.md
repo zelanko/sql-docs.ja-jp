@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d744457cc517a6172cca96b27eae1f456deca24e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014294"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016068"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography インスタンスの作成、構築、およびクエリ
-  地理空間データ型の `geography` は、球体地球座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では .NET 共通言語ランタイム (CLR) のデータ型として実装されています。 データ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography`型には、GPS の緯度や経度の座標などの楕円体 (地球) データが格納されます。  
+  地理空間データ型の `geography` は、球体地球座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では .NET 共通言語ランタイム (CLR) のデータ型として実装されています。 データ型には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` GPS の緯度や経度の座標などの楕円体 (地球) データが格納されます。  
   
  `geography` 型は、各データベースで使用できるように事前に定義されています。 `geography` 型のテーブル列を作成し、システムが提供する他のデータ型を使用するときと同じように `geography` データを操作できます。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66014294"
  [STGeomCollFromWKB &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type)STGeomCollFromWKB (geography データ型)  
   
 ###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> GML Text 入力からの geography インスタンスの構築  
- データ`geography`型には、GML ( `geography` `geography`インスタンスの XML 表現) からインスタンスを生成するメソッドが用意されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、GML のサブセットをサポートします。  
+ データ型には、 `geography` `geography` GML (インスタンスの XML 表現) からインスタンスを生成するメソッドが用意されて `geography` います。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、GML のサブセットをサポートします。  
   
  Geography Markup Language の詳細については、OGC の仕様の「 [OGC の仕様、Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)」を参照してください。  
   
@@ -128,10 +127,10 @@ ms.locfileid: "66014294"
  [AsGml &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
   
 ##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> geography インスタンスのプロパティと動作のクエリ  
- すべて`geography`のインスタンスには、が提供する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メソッドを使用して取得できるいくつかのプロパティがあります。 以下のトピックでは、geography 型のプロパティおよび動作と、geography 型に対するクエリを実行するためのメソッドについて説明します。  
+ すべて `geography` のインスタンスには、が提供するメソッドを使用して取得できるいくつかのプロパティがあり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 以下のトピックでは、geography 型のプロパティおよび動作と、geography 型に対するクエリを実行するためのメソッドについて説明します。  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> 有効性、インスタンスの型、および GeometryCollection 情報  
- `geography`インスタンスが構築された後、次のメソッドを使用してインスタンスの型を返すことができ`GeometryCollection`ます。インスタンスの場合`geography`は、特定のインスタンスを返します。  
+ インスタンス `geography` が構築された後、次のメソッドを使用してインスタンスの型を返すことができます。インスタンスの場合は、 `GeometryCollection` 特定のインスタンスを返し `geography` ます。  
   
  **geography インスタンスの型を取得するには**  
  [STGeometryType &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stgeometrytype-geography-data-type)  
@@ -146,7 +145,7 @@ ms.locfileid: "66014294"
  [STGeometryN &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stgeometryn-geography-data-type)STGeometryN (geography データ型)  
   
 ###  <a name="number-of-points"></a><a name="number"></a> 点の数  
- 空`geography`でないすべてのインスタンスは、*ポイント*で構成されます。 これらの点は、`geography` インスタンスが描画される地球の緯度経度座標を表します。 `geography` データ型には、インスタンスの点に対するクエリを実行するための組み込みメソッドが数多く用意されています。  
+ 空でないすべて `geography` のインスタンスは、*ポイント*で構成されます。 これらの点は、`geography` インスタンスが描画される地球の緯度経度座標を表します。 `geography` データ型には、インスタンスの点に対するクエリを実行するための組み込みメソッドが数多く用意されています。  
   
  **インスタンスを構成する点の数を取得するには**  
  [STNumPoints &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stnumpoints-geography-data-type)  
@@ -161,7 +160,7 @@ ms.locfileid: "66014294"
  [STEndpoint &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> [ディメンション]  
- 空でない `geography` インスタンスの次元は、0 次元、1 次元、2 次元のいずれかになります。 0次元`geography`のインスタンス ( `Point`や`MultiPoint`など) には、長さや面積はありません。 1 次元のオブジェクト (`LineString, CircularString`、`CompoundCurve`、`MultiLineString` など) には長さがあります。 2 次元のインスタンス (`Polygon, CurvePolygon`、`MultiPolygon` など) には面積と長さがあります。 空のインスタンスの次元は -1 としてレポートされます。`GeometryCollection` ではその内容の最も大きな次元がレポートされます。  
+ 空でない `geography` インスタンスの次元は、0 次元、1 次元、2 次元のいずれかになります。 0次元の `geography` インスタンス (やなど `Point` ) `MultiPoint` には、長さや面積はありません。 1 次元のオブジェクト (`LineString, CircularString`、`CompoundCurve`、`MultiLineString` など) には長さがあります。 2 次元のインスタンス (`Polygon, CurvePolygon`、`MultiPolygon` など) には面積と長さがあります。 空のインスタンスの次元は -1 としてレポートされます。`GeometryCollection` ではその内容の最も大きな次元がレポートされます。  
   
  **インスタンスの次元を取得するには**  
  [STDimension &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  
@@ -173,13 +172,13 @@ ms.locfileid: "66014294"
  [STArea &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/starea-geography-data-type)  
   
 ###  <a name="empty"></a><a name="empty"></a> 空  
- *空*`geography`のインスタンスには点はありません。 空の `LineString, CircularString`、`CompoundCurve`、および `MultiLineString` インスタンスの長さは 0 です。 空の `Polygon, CurvePolygon`、および `MultiPolygon` インスタンスの面積は 0 です。  
+ *空* `geography` のインスタンスには点はありません。 空の `LineString, CircularString`、`CompoundCurve`、および `MultiLineString` インスタンスの長さは 0 です。 空の `Polygon, CurvePolygon`、および `MultiPolygon` インスタンスの面積は 0 です。  
   
  **インスタンスが空かどうかを調べるには**  
  [STIsEmpty &#40;geography データ型&#41;](/sql/t-sql/spatial-geography/stisempty-geography-data-type)  
   
 ###  <a name="closure"></a><a name="closure"></a> 閉鎖性  
- *閉じ*`geography`たインスタンスは、始点と終点が同じである図形です。 `Polygon` インスタンスは閉じていると見なされます。 `Point` インスタンスは閉じていないと見なされます。  
+ *閉じ*た `geography` インスタンスは、始点と終点が同じである図形です。 `Polygon` インスタンスは閉じていると見なされます。 `Point` インスタンスは閉じていないと見なされます。  
   
  リングは、単純な閉じている `LineString` インスタンスです。  
   

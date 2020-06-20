@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9931ad6cca3e47f3de324fc1fe7f8f0a5ed67cbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e58034cf65ba42b420c810d7d8f11d448820f8e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191099"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062719"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>ProtocolName プロパティ (ClientNetLibInfo クラス)
   クライアント ネットワーク ライブラリに関連付けられたプロトコルの名前を取得します。  
@@ -36,7 +35,7 @@ object
 .ProtocolName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  クライアント ネットワーク ライブラリに関する情報を表す [ClientNetLibInfo クラス](clientnetlibinfo-class.md) オブジェクト。  
   

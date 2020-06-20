@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a9bc0e1d4baecb7f4c66b83b57081ed3131123d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721037"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062775"
 ---
 # <a name="recompile-a-stored-procedure"></a>ストアド プロシージャの再コンパイル
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを再コンパイルする方法について説明します。 この操作を行うには、プロシージャ`WITH RECOMPILE`の定義でオプションを使用するか、プロシージャを呼び出すとき`RECOMPILE`に、個々のステートメントに対してクエリヒント`sp_recompile`を使用するか、またはシステムストアドプロシージャを使用します。 このトピックでは、プロシージャ定義の作成時および既存のプロシージャの実行時に WITH RECOMPILE オプションを使用する方法について説明します。 さらに、sp_recompile システム ストアド プロシージャを使用して既存のプロシージャを再コンパイルする方法についても説明します。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを再コンパイルする方法について説明します。 この操作を行うには、 `WITH RECOMPILE` プロシージャの定義でオプションを使用するか、プロシージャを呼び出すときに、 `RECOMPILE` 個々のステートメントに対してクエリヒントを使用するか、または `sp_recompile` システムストアドプロシージャを使用します。 このトピックでは、プロシージャ定義の作成時および既存のプロシージャの実行時に WITH RECOMPILE オプションを使用する方法について説明します。 さらに、sp_recompile システム ストアド プロシージャを使用して既存のプロシージャを再コンパイルする方法についても説明します。  
   
  **このトピックの内容**  
   

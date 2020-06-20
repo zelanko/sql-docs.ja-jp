@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3196b985b7bb788744f48b1fb64f64b5f6fe099b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6189b4115a9e04a58d155bbff3558e0ce2e64970
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716901"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048750"
 ---
 # <a name="example-querying-xmltype-columns"></a>例 : XML 型の列のクエリ
   次のクエリには、`xml` 型の列が含まれています。 クエリでは、`xml` 型の `Instructions` 列から、製品モデル ID、名前、および最初の場所での製造手順を取得しています。  

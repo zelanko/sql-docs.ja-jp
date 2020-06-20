@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 170a6a85c0d4b3e969bd87356b562e4b96ded47f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048730"
 ---
 # <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] ([新しいファイル])
   1 つ以上のエディターでドキュメントを開くには、 **[ファイル]** メニューの **[開く]** をクリックし、次に **[ファイル]** をクリックします。 **[ファイルを開く]** ダイアログ ボックスでファイルを選択し、 **[開く]** の横の矢印をクリックし、次に **[ファイルを開くアプリケーションの選択]** をクリックします。 **[ファイルを開くアプリケーションの選択]** ダイアログ ボックスの **[このファイルを開くのに使用するプログラムを選択してください]** の一覧で、目的のプログラムをクリックし、次に **[開く]** をクリックします。  

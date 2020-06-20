@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aef800c41b0c1b44e285f959d1b9e12c58ea937
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655472"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997497"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含データベース ユーザー - データベースの可搬性を確保する
   包含データベース ユーザーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のデータベース レベルでの接続が認証されます。 包含データベースは、他のデータベース、およびデータベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (および master データベース) のインスタンスから分離されたデータベースです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方で包含データベース  ユーザーがサポートされます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]を使用して、包含データベース ユーザーとデータベース レベルのファイアウォール規則を結合します。 このトピックでは、従来のログイン/ユーザー モデルおよび Windows またはサーバー レベルのファイアウォール規則と比較して、包含データベース モデルの相違点とこれを使用する利点について説明します。 特定のシナリオ、管理の容易性、アプリケーションのビジネス ロジックでは、従来のログイン / ユーザー モデルとサーバー レベルのファイアウォール規則を引き続き使用する必要があります。  

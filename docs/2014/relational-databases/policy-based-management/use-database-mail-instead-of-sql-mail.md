@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b08df7be-d8be-4184-a661-38ec0ac85cd1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cfce3fb95ddae03525b7f63f09d109c6dc80b47c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6a957b65975645bdeb9f55faee4e650b53718b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676968"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047752"
 ---
 # <a name="use-database-mail-instead-of-sql-mail"></a>SQL Mail ではなくデータベース メールを使用する
   このルールでは、sys.configurations カタログ ビューを確認して、サーバー全体に適用される構成オプションである SQL Mail XPs が ON に設定されているかどうかを調べます。  

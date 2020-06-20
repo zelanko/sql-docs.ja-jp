@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6379ddae6d14424d8705441e5a174fc7cb513b28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151443"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064128"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>[TCP-IP のプロパティ] ([IP アドレス] タブ)
   **[TCP/IP のプロパティ]** ダイアログ ボックス ([IP アドレス] タブ) では、TCP/IP プロトコルの特定の IP アドレスに関するオプションを構成します。 **[TCP 動的ポート]** と **[TCP ポート]** だけは、 **[IP All]** を選択することですべてのアドレスを一度に構成できます。  
   
- 変更は、の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]再起動時に有効になります。 SQL Server Browser サービスの開始と停止の詳細については、オンライン ブックの「SQL Server Browser サービスを開始および停止する方法」を参照してください。  
+ 変更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、の再起動時に有効になります。 SQL Server Browser サービスの開始と停止の詳細については、オンライン ブックの「SQL Server Browser サービスを開始および停止する方法」を参照してください。  
   
 ## <a name="static-vs-dynamic-ports"></a>静的ポートと動的ポート  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスは、着信接続をポート 1433 でリッスンします。 このポートは、セキュリティ上の理由またはクライアント アプリケーションの要件に応じて変更することができます。 既定では、名前付きインスタンス (SQL Server Express を含む) は動的ポートでリッスンするように構成されています。 静的ポートを構成するには、 **[TCP 動的ポート]** を空白にし、 **[TCP ポート]** に使用可能なポート番号を指定します。 ファイアウォールでポートを開く方法の詳細については、オンライン ブックの「SQL Server のアクセスを許可するための Windows ファイアウォールの構成」を参照してください。  
@@ -59,6 +58,6 @@ ms.locfileid: "63151443"
 ## <a name="see-also"></a>参照  
  [ネットワークプロトコルの選択](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [TCP IP を使用した有効な接続文字列の作成](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [SQL Server Browser サービス](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
+ [SQL Server Browser Service](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
   
   

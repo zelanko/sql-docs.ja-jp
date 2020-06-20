@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7508324be0bef23ba0590bb181135512d75701e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93881c4e9b91e7ace4c250fbf90b8913484f2ce2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059040"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966762"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>[SQL 実行タスク エディター] ([パラメーター マッピング] ページ)
   **[SQL 実行タスク エディター]** ダイアログ ボックスの **[パラメーター マッピング]** ページを使用すると、SQL ステートメント内のパラメーターに変数をマップできます。  
@@ -28,7 +27,7 @@ ms.locfileid: "66059040"
   
 ## <a name="options"></a>オプション  
  **変数名**  
- **[追加]** をクリックしてパラメーター マッピングを追加した後で、システム変数またはユーザー定義変数を一覧から選択するか、[\<**新しい変数...**>] をクリックして **[変数の追加]** ダイアログ ボックスで新しい変数を追加します。  
+ [**追加**] をクリックしてパラメーターマッピングを追加した後、システム変数またはユーザー定義変数を一覧から選択するか、[ \<**New variable...**> 変数の**追加**] ダイアログボックスを使用して新しい変数を追加します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66059040"
  **追加**  
  クリックすると、パラメーター マッピングが追加されます。  
   
- **Remove**  
+ **削除**  
  一覧からパラメーター マッピングを選択してから **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  

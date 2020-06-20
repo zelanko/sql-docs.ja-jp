@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b32491262bf843cd1ab7fb4d6fd3a0c9c39e4da8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c81f2f4e0cfda66ad67d05b8fe5ce62052c85f23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694294"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011217"
 ---
 # <a name="rowsets"></a>行セット
   行セットとは、データの列を含む行の集まりです。 行セットは、すべての OLE DB データ プロバイダーが表形式で結果セット データを公開できるようにするための重要な機能を持つオブジェクトです。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5041261f-0c32-4d4a-8bee-59a6c16200dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1fa9a2700bd2f6a9ce2b074b1633182fc30c9aa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42fe7cbeed1e2ff3f93b1afef52b165a7d660ddd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211416"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064511"
 ---
 # <a name="disable-or-enable-a-job"></a>Disable or Enable a Job
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)]エージェント ジョブを無効にする方法について説明します。 ジョブを無効にしても、ジョブは削除されるわけではなく、必要に応じて再び有効にすることができます。  
@@ -29,7 +28,7 @@ ms.locfileid: "68211416"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ジョブを無効または有効にする方法:**  
   
@@ -46,7 +45,7 @@ ms.locfileid: "68211416"
   
 #### <a name="to-disable-or-enable-a-job"></a>ジョブを無効または有効にするには  
   
-1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]インスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクトエクスプローラー**で、のインスタンスに接続し、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] そのインスタンスを展開します。  
   
 2.  **[SQL Server エージェント]** を展開します。  
   

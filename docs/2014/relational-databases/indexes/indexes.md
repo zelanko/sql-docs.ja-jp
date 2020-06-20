@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58d4d71189598a6fd101e6db0a40b8c8b0a3b903
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be474ea547222c30321d893ee8a1ce6f0af0be39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161865"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049880"
 ---
 # <a name="indexes"></a>インデックス
   次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できるインデックスの種類および追加情報へのリンクを示します。  
   
-|インデックスの種類|説明|追加情報|  
+|インデックスの種類|説明|関連情報|  
 |----------------|-----------------|----------------------------|  
 |ハッシュ インデックス|ハッシュ インデックスの場合は、インメモリ ハッシュ テーブルを通じてデータにアクセスします。 ハッシュ インデックスは、バケット数の関数である固定量のメモリを消費します。|[メモリ最適化テーブルでのインデックス使用のガイドライン](../in-memory-oltp/memory-optimized-tables.md)|  
 |メモリ最適化された非クラスター化インデックス|メモリ最適化された非クラスター化インデックスの場合、メモリ消費量はインデックス キー列の行数とサイズによって決まります。|[メモリ最適化テーブルでのインデックス使用のガイドライン](../in-memory-oltp/memory-optimized-tables.md)|  

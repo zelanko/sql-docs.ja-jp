@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 501c7931d651498fea49749be38af374c02424ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721396"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010775"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>SQL Server レプリケーションディストリビューターのプロパティ
 このトピックでは、[**ディストリビューターのプロパティ**] ウィンドウの **[全般**] ページ、[**パブリッシャー**] ページ、および [**ディストリビューションデータベース**] ページにあるプロパティについて説明します。 
@@ -53,7 +52,7 @@ ms.locfileid: "62721396"
  **配布**  
  このディストリビューターの使用を許可するサーバーを選択します。 追加のプロパティを表示および設定するには、パブリッシャーの横にあるプロパティボタン ([. **..])** をクリックします。  
   
- **追加**  
+ **[追加]**  
  許可するサーバーが一覧に表示されていない場合には、**[追加]** をクリックして、使用できるパブリッシャーの一覧に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーまたは Oracle パブリッシャーを追加します。 追加したサーバーが、最初にこのディストリビューターをリモート ディストリビューターとして使用するサーバーである場合、管理用リンク パスワードを入力するように求められます。  
   
  **[管理用リンク パスワード]**  
@@ -90,7 +89,7 @@ ms.locfileid: "62721396"
 -   **[パブリッシャーのプロパティ]** ダイアログ ボックス。エージェントは、このダイアログ ボックスで指定された資格情報を使用してパブリッシャーに接続します。このダイアログ ボックスは、 **[ディストリビューターのプロパティ]** ダイアログ ボックスの **[パブリッシャー]** ページから開きます。    
 -   サブスクリプションの新規作成ウィザードの [ディストリビューション エージェント]。エージェントは、ここで指定された資格情報を使用してサブスクライバーに接続します。  
   
- 詳細については\\、「[レプリケーションエージェントのセキュリティモデル](security/replication-agent-security-model.md)」を参照してください。 
+ 詳細については、「 \\ [レプリケーションエージェントのセキュリティモデル](security/replication-agent-security-model.md)」を参照してください。 
 
   
 ## <a name="see-also"></a>参照  

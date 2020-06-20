@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 025ef22e6dee1fcfaa1225a4709fa01b6c326b12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049749"
 ---
 # <a name="the-transaction-log-sql-server"></a>トランザクション ログ (SQL Server)
   すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにはトランザクション ログがあり、データベース内のすべてのトランザクションとそれらのトランザクションによって加えられた変更が記録されます。 トランザクション ログは、いっぱいにならないように、定期的に切り捨てる必要があります。 ただし、いくつかの要因によってログの切り捨てが遅れる可能性があるため、ログのサイズを監視することは重要です。 一部の操作は、トランザクション ログのサイズへの影響を軽減するためにログへの記録を最小限に抑えることができます。  
@@ -118,7 +117,7 @@ ms.locfileid: "79289410"
   
 -   新規データの挿入時または追加時の、 [UPDATE](/sql/t-sql/queries/update-transact-sql) ステートメントの .WRITE 句を使用した、大きな値のデータ型の部分更新。 既存の値を更新する場合は、最小ログ記録は使用されません。 大きな値のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)」を参照してください。  
   
--   `text`、 `ntext`、および`image`の各データ型の列に新しいデータを挿入または追加するときの[WRITETEXT](/sql/t-sql/queries/writetext-transact-sql)ステートメントおよび[UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql)ステートメント。 既存の値を更新する場合は、最小ログ記録は使用されません。  
+-   [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) 、、およびの各[UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) `text` `ntext` データ型の列に新しいデータを挿入または追加するときの WRITETEXT ステートメントおよび UPDATETEXT ステートメント `image` 。 既存の値を更新する場合は、最小ログ記録は使用されません。  
   
     > [!NOTE]  
     >  WRITETEXT ステートメントおよび UPDATETEXT ステートメントは非推奨とされます。新しいアプリケーションでは、これらを使用しないようにしてください。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 115f1072dae34075929622b8b3b57a16a43728a2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4a4bb9cca85fd3f7a7ab076b2f8be7707827aced
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711077"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018544"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>カーソル用の SQL ステートメントの作成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc ドライバーでは、odbc 仕様で定義されているカーソル機能を実装するために、サーバーカーソルを使用します。 ODBC アプリケーションでは、 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)を使用して異なるステートメント属性を設定することによって、カーソル動作を制御します。 次に、属性とその既定値を示します。  
@@ -55,7 +54,7 @@ ms.locfileid: "82711077"
   
      複数の SELECT ステートメントを含むストアド プロシージャを実行する SQL ステートメント。 パラメーターまたは変数を設定する SELECT ステートメントも該当します。  
   
--   キーワード  
+-   Keywords  
   
      キーワード FOR BROWSE または INTO を伴う SELECT ステートメント。  
   
