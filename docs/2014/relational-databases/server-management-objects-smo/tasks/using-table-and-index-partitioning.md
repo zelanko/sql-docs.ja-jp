@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 936f037852f39f24690e1cb9af3f63a2cfa2a613
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92af079a25e1ec6797f4fa49b4ce73b643e7806d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781831"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996699"
 ---
 # <a name="using-table-and-index-partitioning"></a>テーブルおよびインデックスのパーティション分割の使用
   データは、 [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)によって提供される格納アルゴリズムを使用して格納することができます。 パーティション分割により、大規模なテーブルとインデックスの管理の可能性と拡張性が向上します。  
@@ -135,4 +134,4 @@ $ps.Create()
 ```  
   
 ## <a name="see-also"></a>参照  
- [パーティションテーブルとパーティションインデックス](../../partitions/partitioned-tables-and-indexes.md)  
+ [パーティション テーブルとパーティション インデックス](../../partitions/partitioned-tables-and-indexes.md)  

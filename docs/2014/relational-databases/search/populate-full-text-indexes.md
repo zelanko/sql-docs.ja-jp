@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ab93a3514fa260c8c3836da85c767da3c3051a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011178"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004064"
 ---
 # <a name="populate-full-text-indexes"></a>フルテキスト インデックスの作成
   フルテキスト インデックスの作成と保持では、 *作成* (または *クロール*) と呼ばれるプロセスを使用してインデックスが作成されます。  
@@ -211,7 +210,7 @@ GO
 ##  <a name="troubleshooting-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>フルテキスト作成 (クロール) で発生したエラーのトラブルシューティング  
  クロール時にエラーが発生すると、フルテキスト検索クロール ログ記録機能によってクロール ログが作成および保持されます。このログはプレーンテキスト ファイルです。 各クロール ログは特定のフルテキスト カタログに対応します。 既定では、特定のインスタンス (この場合は最初のインスタンス) のクロール ログは %ProgramFiles%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG フォルダーにあります。 クロール ログは次のような規則に従って命名されます。  
   
- SQLFT\<DatabaseID>\<FullTextCatalogID>。ログ [\<n>]  
+ SQLFT \<DatabaseID> \<FullTextCatalogID> 。ログ [ \<n> ]  
   
  <`DatabaseID`>  
  データベースの ID です。 <`dbid`> は、0で始まる5桁の数字です。  

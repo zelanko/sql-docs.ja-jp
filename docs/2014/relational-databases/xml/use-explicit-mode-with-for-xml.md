@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0592a7635b0208624ab511af4ef68382548090c8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e3db80333c74166301fcff7bb25edea4aca38a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702411"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059402"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML での EXPLICIT モードの使用
   トピック「 [FOR XML を使用した XML の構築](../xml/for-xml-sql-server.md)」で説明されているように、RAW モードと AUTO モードでは、クエリ結果から生成される XML の構造を厳密に制御することはできません。 一方、EXPLICIT モードを使用すると、クエリ結果から生成される XML の構造を柔軟に制御することができます。  
@@ -111,7 +110,7 @@ ElementName!TagNumber!AttributeName!Directive
  各部分の説明は、次のとおりです。  
   
  *ElementName*  
- 結果の要素の汎用識別子。 たとえば、**ElementName** として *Customers* が指定されている場合、\<Customers> 要素が生成されます。  
+ 結果の要素の汎用識別子。 たとえば、 *ElementName*として**Customers**が指定されている場合、 \<Customers> 要素が生成されます。  
   
  *TagNumber*  
  要素に割り当てられる一意なタグの値。 この値と **Tag** および **Parent**の 2 つのメタデータ列の組み合わせにより、生成される XML 内の要素の入れ子構造が決定されます。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 521129056d4513af2f86fb7b70b26621cb881b80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d06735590d23da6e91151202dd421639ea433b97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092289"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036587"
 ---
 # <a name="server-configuration---collation"></a>サーバーの構成 - 照合順序
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの [サーバーの構成 - 照合順序] ページでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で並べ替えに使用される照合順序の設定を変更できます。 インストールされている別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、または別のコンピューターと照合順序設定を一致させるにはこのオプションを選択します。  
@@ -36,7 +35,7 @@ ms.locfileid: "66092289"
   
  詳細については、「 [セットアップでの照合順序の設定](https://go.microsoft.com/fwlink/?LinkId=190977)」を参照してください。  
   
-## <a name="best-practices"></a>推奨する運用方法  
+## <a name="best-practices"></a>ベスト プラクティス  
  Windows システム ロケールと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで使用される既定の照合順序との対応表については、「 [セットアップでの照合順序の設定](https://go.microsoft.com/fwlink/?LinkId=190977)」を参照してください。  
   
  可能であれば、組織で単一の照合順序を使用してください。 そうすれば、データベース、列、式、または識別子ごとに照合順序を明示的に指定する必要はなくなります。 複数の照合順序とコード ページ設定を操作する必要がある場合は、照合順序の優先順位の規則を考慮してクエリを作成します。 詳細については、オンライン ブックの「[照合順序の優先順位 &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)」を参照してください。  

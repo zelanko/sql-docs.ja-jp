@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f754d038-637a-4d8e-85b0-b242e6499d26
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ca5d6ed8f1e8a92d22bd32e39c8afe946a0fcfee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27eb69dfd2c41710a47861e0992486267f692a3a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095975"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036932"
 ---
 # <a name="connection-parameters"></a>接続パラメーター
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]など、特定の種類のサーバーを分析するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンスを選択する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスは自動的に選択されます。 この選択は変更できますが、アップグレード アドバイザーによる分析用に選択できるのは一度に 1 つのインスタンスだけです。 認証が必要なサーバーを選択した場合は、認証モードと資格情報を入力する必要があります。  

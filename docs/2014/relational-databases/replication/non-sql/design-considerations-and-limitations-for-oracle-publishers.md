@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2776452e0da93cb1f170b6ee3356d95158df6b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022515"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005376"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle パブリッシャーの設計上の注意点および制限
-  Oracle データベースからのパブリッシュは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベースからのパブリッシュとほぼ同じように機能するように設計されています。 ただし、以下の制限および問題に注意してください。  
+  Oracle データベースからのパブリッシュは、データベースからのパブリッシュとほぼ同じように機能するように設計されてい [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 ただし、以下の制限および問題に注意してください。  
   
 -   [Oracle (ゲートウェイ)] を選択すると、[Oracle (完全)] より高いパフォーマンスが得られますが、このオプションは、複数のトランザクション パブリケーションで同じテーブルをパブリッシュする場合は使用できません。 テーブルを表示できるのは、最大で 1 つのトランザクション パブリケーションと、任意の数のスナップショット パブリケーションになります。 複数のトランザクション パブリケーションで同じテーブルをパブリッシュする必要がある場合は、[Oracle (完全)] を選択します。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "63022515"
   
 -   関数ベースのインデックス  
   
--   デフォルト  
+-   [既定値]  
   
 -   CHECK 制約  
   
@@ -67,7 +66,7 @@ ms.locfileid: "63022515"
   
 -   シーケンス  
   
--   シノニム  
+-   Synonyms  
   
  サポートされるデータ型の詳細については、「[Oracle パブリッシャーのデータ型マッピング](data-type-mapping-for-oracle-publishers.md)」を参照してください。  
   
@@ -119,7 +118,7 @@ ms.locfileid: "63022515"
   
 -   標準的なトランザクション パブリケーションは、最大 1000 列のテーブルをサポートします。 Oracle のトランザクション パブリケーションがサポートするのは 995 列です (レプリケーションにより、パブリッシュされた各テーブルに 5 列が追加されます)。  
   
--   COLLATE 句は、CREATE TABLE ステートメントに追加され、大文字と小文字を区別する比較を有効にします。この比較は、主キーおよび一意の制約にとって重要です。 この動作は、スキーマオプション0x1000 で制御されます。このオプション**@schema_option**は、 [sp_addarticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)のパラメーターと共に指定します。  
+-   COLLATE 句は、CREATE TABLE ステートメントに追加され、大文字と小文字を区別する比較を有効にします。この比較は、主キーおよび一意の制約にとって重要です。 この動作は、スキーマオプション0x1000 で制御されます。このオプションは、 **@schema_option** [Sp_addarticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)のパラメーターと共に指定します。  
   
 -   ストアド プロシージャを使用して Oracle パブリッシャーを構成またはメンテナンスする場合、プロシージャを明示的なトランザクションに入れないでください。 これは Oracle パブリッシャーへの接続に使用するリンク サーバーではサポートされていません。  
   
@@ -149,7 +148,7 @@ ms.locfileid: "63022515"
   
 -   スナップショット エージェントおよびログ リーダー エージェントがディストリビューターからパブリッシャーへの接続に使用するアカウントは、次のいずれかの方法で指定されます。  
   
-    -   [Sp_adddistpublisher &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)のパラメーター (Oracle 認証が使用されている**@login**場合**@password**は、との値も指定します**@security_mode** )  
+    -   **@security_mode** [Sp_adddistpublisher &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)のパラメーター ( **@login** **@password** Oracle 認証が使用されている場合は、との値も指定します)  
   
     -   SQL Server Management Studio の **[サーバーへの接続]** ダイアログ ボックス。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle パブリッシャーを構成するときに、これを使用します。  
   
@@ -157,11 +156,11 @@ ms.locfileid: "63022515"
   
 -   スナップショット エージェントおよびログ リーダー エージェントが接続に使用するアカウントは、[sp_changedistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) またはプロパティ シートで変更することはできませんが、パスワードは変更できます。  
   
--   Sp_adddistpublisher の**@security_mode**パラメーターに 1 (Windows 統合認証) を指定した場合[&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql):  
+-   Sp_adddistpublisher のパラメーターに 1 (Windows 統合認証) を指定した場合 **@security_mode** [&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql):  
   
-    -   スナップショットエージェントとログリーダーエージェントの両方に使用されるプロセスアカウントとパスワード ( **@job_login** transact-sql **@job_password**&#41;[&#40;sp_addpublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)のパラメーターと sp_addlogreader_agent [&#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)) の両方に、Oracle パブリッシャーへの接続に使用するアカウントとパスワードと同じである必要があります。  
+    -   スナップショットエージェントとログリーダーエージェントの両方に使用されるプロセスアカウントとパスワード ( **@job_login** **@job_password** [transact-sql&#41;&#40;sp_addpublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)のパラメーターと sp_addlogreader_agent [&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)) の両方に、Oracle パブリッシャーへの接続に使用するアカウントとパスワードと同じである必要があります。  
   
-    -   パラメーターを変更するには、 [sp_changepublication_snapshot &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql)を使用するか、 [transact-sql &#40;を sp_changelogreader_agent](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql)しますが、パスワードは変更することができます。 **@job_login**  
+    -   パラメーターを変更するには、 **@job_login** [Sp_changepublication_snapshot &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql)を使用するか、 [transact-sql &#40;を sp_changelogreader_agent](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql)しますが、パスワードは変更することができます。  
   
  レプリケーションのセキュリティの詳細については、「 [SQL Server レプリケーションのセキュリティ](../security/view-and-modify-replication-security-settings.md)」を参照してください。  
   

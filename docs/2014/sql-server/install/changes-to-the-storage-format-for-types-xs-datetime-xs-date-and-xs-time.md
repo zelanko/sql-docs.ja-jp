@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aacaaf8fc69f4b18154e5a4df9a3662fb9ae0650
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096604"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037163"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>xs:dateTime 型、xs:date 型、および xs:time 型のストレージ形式の変更
   XMLDATETIME ルールでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード後に無効になる型指定された XML データがデータベースに含まれているかどうかが確認されます。  
@@ -29,7 +28,7 @@ ms.locfileid: "66096604"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>説明  
- Xs: dateTime、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] xs: date、および xs: time 型ののストレージ形式が変更され、タイムゾーン情報の有無にかかわらず、タイムゾーンを保持できるようになりました。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Xs: dateTime、xs: date、および xs: time 型ののストレージ形式が変更され、タイムゾーン情報の有無にかかわらず、タイムゾーンを保持できるようになりました。  
   
  XML スキーマ コレクションがこのいずれかの型を参照している場合は、コレクションに関連付けられているすべての列の XML インデックスが、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード後に無効になります。 これらの型に対しては、SELECT または XQUERIES (またはその両方) を使用してクエリを実行できますが、XML インデックスは使用されません。 負の年の値が検出された場合は、実行時エラーが発生します。  
   

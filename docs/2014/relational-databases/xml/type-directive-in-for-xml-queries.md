@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ecb9f384634d1c2f3991ad0c07a9b98217314499
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cddce90718ef5edfcf161ddc6cc52b617825a2e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702445"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059438"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML クエリの TYPE ディレクティブ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)のサポートにより、必要に応じて、type ディレクティブを指定することにより、for xml クエリの結果をデータ型として返すように要求でき `xml` ます。 これにより、サーバーで FOR XML クエリの結果を処理できるようになります。 たとえば、XQuery を指定したり、その結果を `xml` 型の変数に割り当てたり、[入れ子になった FOR XML クエリ](use-nested-for-xml-queries.md)を記述したりできます。  
