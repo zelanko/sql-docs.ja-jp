@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b514820ad64cbf17df209cbda552e4c5182b75fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012732"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997783"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>フルテキスト インデックス作成時の言語の選択
   フルテキスト インデックスを作成する際には、列レベルの言語をインデックス列に対して指定する必要があります。 指定した言語の [ワード ブレーカーとステマー](configure-and-manage-word-breakers-and-stemmers-for-search.md) が、列のフルテキスト クエリで使用されます。 フルテキスト インデックスの作成時に列の言語を選択する際には、注意点が 2 つあります。 これらの注意点は、テキストをトークン化する方法と、Full-Text Engine によるインデックス作成の方法にかかわるものです。  
@@ -36,7 +35,7 @@ ms.locfileid: "66012732"
  ここでは、ワード ブレーカーとステミング機能の概要を示し、列レベルの言語の LCID がフルテキスト検索で使用されるしくみについて説明します。  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>ワード ブレーカーとステミング機能の概要  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降のバージョンには、で以前に[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用したものよりも大幅に優れた、新しいワードブレーカーとステミング機能のファミリが含まれています。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降のバージョンには、で以前に使用したものよりも大幅に優れた、新しいワードブレーカーとステミング機能のファミリが含ま [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] れています。  
   
 > [!NOTE]  
 >  これらの新しい言語コンポーネントは、Microsoft Natural Language Group (MS NLG) によって実装およびサポートされています。  
@@ -49,7 +48,7 @@ ms.locfileid: "66012732"
   
 -   Security  
   
-     言語コンポーネントのセキュリティが強化された[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ため、新しいワードブレーカーは既定で有効になっています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の全体的なセキュリティと堅牢性を強化するためには、ワード ブレーカーやフィルターなどの外部コンポーネントに署名することを強くお勧めします。 次のようにフルテキストを構成すると、これらのコンポーネントが署名されていることを確認できます。  
+     言語コンポーネントのセキュリティが強化されたため、新しいワードブレーカーは既定で有効になってい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の全体的なセキュリティと堅牢性を強化するためには、ワード ブレーカーやフィルターなどの外部コンポーネントに署名することを強くお勧めします。 次のようにフルテキストを構成すると、これらのコンポーネントが署名されていることを確認できます。  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -59,9 +58,9 @@ ms.locfileid: "66012732"
   
      ワード ブレーカーの設計が変更されました。新しいワード ブレーカーのセマンティクスの品質が以前よりも向上したことが、テストによって明らかにされています。 このため、再呼び出しの精度が向上します。  
   
--   多くの言語では、ワードブレーカーは[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]既定で有効になっており、既定で有効になっています。  
+-   多くの言語では、ワードブレーカーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 既定で有効になっており、既定で有効になっています。  
   
- ワードブレーカーとステミング機能を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]含む言語の一覧については、「 [fulltext_languages &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)」を参照してください。  
+ ワードブレーカーとステミング機能を含む言語の一覧につい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ては、「 [Fulltext_languages &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)」を参照してください。  
   
 
   
@@ -108,7 +107,7 @@ ms.locfileid: "66012732"
 ##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> 列の型がフルテキスト検索に及ぼす影響  
  言語を選択する際のもう 1 つの注意点は、データの表記方法に関連するものです。 `varbinary(max)` 列に格納されていないデータについては、特別なフィルター処理は実行されません。 テキストはそのままの形で単語を分解するコンポーネント (ワード ブレーカー) に渡されます。  
   
- また、ワード ブレーカーは主に記述されたテキストを処理することを目的として設計されています。 したがって、HTML などのなんらかのマークアップがテキストに含まれている場合には、言語面での精度が高いインデックス作成と検索は期待できません。 この場合、2つの選択肢があります。推奨される方法は、テキストデータを`varbinary(max)`列に格納し、そのドキュメントの種類を指定してフィルター処理できるようにすることです。 この方法を選択できない場合は、ニュートラル ワード ブレーカーの使用を検討してください。また、可能であれば、ノイズ ワードの一覧にマークアップ データ (HTML の「br」など) を追加します。  
+ また、ワード ブレーカーは主に記述されたテキストを処理することを目的として設計されています。 したがって、HTML などのなんらかのマークアップがテキストに含まれている場合には、言語面での精度が高いインデックス作成と検索は期待できません。 この場合、2つの選択肢があります。推奨される方法は、テキストデータを `varbinary(max)` 列に格納し、そのドキュメントの種類を指定してフィルター処理できるようにすることです。 この方法を選択できない場合は、ニュートラル ワード ブレーカーの使用を検討してください。また、可能であれば、ノイズ ワードの一覧にマークアップ データ (HTML の「br」など) を追加します。  
   
 > [!NOTE]  
 >  ニュートラル言語を指定した場合、言語ベースのステミングは使用できません。  

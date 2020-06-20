@@ -9,30 +9,29 @@ ms.topic: conceptual
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 795285a6aaceb3e74e80f5cad71d54c72c756ae2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891540"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966152"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>手順 5:フラット ファイル ソースの追加と構成
   ここでは、フラット ファイル ソースをパッケージに追加し、構成します。 フラット ファイル ソースとは、フラット ファイル接続マネージャーにより定義されるメタデータを使用するデータ フロー コンポーネントです。フラット ファイル接続マネージャーは、変換処理によってフラット ファイルから取得されるデータの形式や構造を指定します。 フラット ファイル接続マネージャーに定義されているファイル形式を使用し、1 つのフラット ファイルからデータを取得するよう、フラット ファイル ソースを定義できます。  
   
- このチュートリアルでは、前に作成した`Sample Flat File Source Data`接続マネージャーを使用するようにフラットファイルソースを構成します。  
+ このチュートリアルでは、前に作成した接続マネージャーを使用するようにフラットファイルソースを構成し `Sample Flat File Source Data` ます。  
   
 ### <a name="to-add-a-flat-file-source-component"></a>フラット ファイル ソース コンポーネントを追加するには  
   
-1.  **データフローデザイナーを**開きます。そのためには、 `Extract Sample Currency Data`データフロータスクをダブルクリックするか、[**データフロー] タブ**をクリックします。  
+1.  **データフローデザイナーを**開きます。そのためには、データフロータスクをダブルクリックするか、[ `Extract Sample Currency Data` **データフロー] タブ**をクリックします。  
   
 2.  **[SSIS ツールボックス]** で **[その他の変換元]** を展開し、 **[フラット ファイル ソース]** を **[データ フロー]** タブのデザイン画面にドラッグします。  
   
-3.  [**データフロー** ] デザイン画面で、新しく追加した**フラットファイルソース**を右クリックし **、[名前の変更**] `Extract Sample Currency Data`をクリックして、名前をに変更します。  
+3.  [**データフロー** ] デザイン画面で、新しく追加した**フラットファイルソース**を右クリックし **、[名前の変更]** をクリックして、名前をに変更し `Extract Sample Currency Data` ます。  
   
 4.  このフラット ファイル ソースをダブルクリックして、[フラット ファイル ソース エディター] ダイアログ ボックスを開きます。  
   
-5.  [**フラットファイル接続マネージャー** ] ボックスで、 `Sample Flat File Source Data`を選択します。  
+5.  [**フラットファイル接続マネージャー** ] ボックスで、を選択し `Sample Flat File Source Data` ます。  
   
 6.  **[列]** をクリックし、列名が正しいことを確認します。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62891540"
   
 8.  [フラット ファイル ソース] を右クリックし、 **[プロパティ]** をクリックします。  
   
-9. [プロパティウィンドウで、 `LocaleID`プロパティが**英語 (米国)** に設定されていることを確認します。  
+9. [プロパティウィンドウで、 `LocaleID` プロパティが**英語 (米国)** に設定されていることを確認します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 6:参照変換の追加と構成](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  

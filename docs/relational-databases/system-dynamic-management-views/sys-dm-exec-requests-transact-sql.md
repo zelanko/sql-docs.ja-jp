@@ -20,29 +20,29 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8e1cf6bdf4270759a94761e67b94009576ef6ad
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77429023"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84941083"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>dm_exec_requests (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行されている各要求に関する情報を返します。 要求の詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
+で実行されている各要求に関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 要求の詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
    
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|この要求が関連付けられているセッションの ID。 NULL 値は許可されません。|  
 |request_id|**int**|要求の ID。 セッションのコンテキスト内で一意です。 NULL 値は許可されません。|  
 |start_time|**datetime**|要求が到着したときのタイムスタンプ。 NULL 値は許可されません。|  
-|status|**nvarchar(30)**|要求の状態。 これは次のいずれかです。<br /><br /> 背景<br />実行中<br />実行可能<br />休止中<br />Suspended<br /><br /> NULL 値は許可されません。|  
-|command|**nvarchar(32)**|現在処理中のコマンドの種類。 一般的なコマンドの種類には次のものがあります。<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 要求のテキストを取得するには、対応する sql_handle と共に、要求に対して sys.dm_exec_sql_text を使用します。 内部システムプロセスは、実行するタスクの種類に基づいて、コマンドを設定します。 タスクには次のものが含まれます。<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> NULL 値は許可されません。|  
+|status|**nvarchar(30)**|要求の状態。 DLL は、次のいずれかの場所に置くことができます。<br /><br /> 背景<br />実行中<br />実行可能<br />休止中<br />Suspended<br /><br /> NULL 値は許可されません。|  
+|コマンドを使用します|**nvarchar(32)**|現在処理中のコマンドの種類。 一般的なコマンドの種類には次のものがあります。<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 要求のテキストを取得するには、対応する sql_handle と共に、要求に対して sys.dm_exec_sql_text を使用します。 内部システムプロセスは、実行するタスクの種類に基づいて、コマンドを設定します。 タスクには次のものが含まれます。<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> NULL 値は許可されません。|  
 |sql_handle|**varbinary(64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 NULL 値が許可されます。| 
-|statement_start_offset|**int**|現在実行中のバッチまたは保存されたオブジェクトに対して現在実行中のステートメントの開始位置を、0で始まるバイト単位で示します。 、、および`sql_handle` `statement_end_offset` `sys.dm_exec_sql_text`動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。 NULL 値が許可されます。|  
-|statement_end_offset|**int**|現在実行中のバッチまたは保存されたオブジェクトに対して現在実行中のステートメントの終了位置を、0から始まるバイト単位で示します。 、、および`sql_handle` `statement_start_offset` `sys.dm_exec_sql_text`動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。 NULL 値が許可されます。|  
+|statement_start_offset|**int**|現在実行中のバッチまたは保存されたオブジェクトに対して現在実行中のステートメントの開始位置を、0で始まるバイト単位で示します。 、、および動的管理関数と共に使用して、 `sql_handle` `statement_end_offset` `sys.dm_exec_sql_text` 要求に対して現在実行中のステートメントを取得できます。 NULL 値が許可されます。|  
+|statement_end_offset|**int**|現在実行中のバッチまたは保存されたオブジェクトに対して現在実行中のステートメントの終了位置を、0から始まるバイト単位で示します。 、、および動的管理関数と共に使用して、 `sql_handle` `statement_start_offset` `sys.dm_exec_sql_text` 要求に対して現在実行中のステートメントを取得できます。 NULL 値が許可されます。|  
 |plan_handle|**varbinary(64)**|現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 NULL 値が許可されます。|  
 |database_id|**smallint**|要求の実行対象データベースの ID。 NULL 値は許可されません。|  
 |user_id|**int**|要求を送信したユーザーの ID。 NULL 値は許可されません。|  
@@ -94,17 +94,20 @@ ms.locfileid: "77429023"
 |parallel_worker_count |**int** |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。<br /><br /> 並列クエリの場合は、予約済みの並列ワーカーの数。  |  
 |external_script_request_id |**uniqueidentifier** |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。<br /><br /> 現在の要求に関連付けられている外部スクリプト要求 ID。 |  
 |is_resumable |**bit** |**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降。<br /><br /> 要求が再開可能なインデックス操作であるかどうかを示します。 |  
-|page_resource |**binary (8)** |**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 列に`wait_resource`ページが含まれている場合は、ページリソースの8バイトの16進数表現。 詳細については、「 [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)」を参照してください。 |  
+|page_resource |**binary (8)** |**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> `wait_resource`列にページが含まれている場合は、ページリソースの8バイトの16進数表現。 詳細については、「 [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)」を参照してください。 |  
 |page_server_reads|**bigint**|**適用対象**: Azure SQL Database ハイパースケール<br /><br /> この要求によって実行されたページサーバーの読み取り回数。 NULL 値は許可されません。|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Remarks 
+## <a name="remarks"></a>注釈 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。 この動的管理ビューによって返される時刻値には、プリエンプティブモードで費やされた時間は含まれません。
 
-[行モード](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)で並列要求を実行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合、は、割り当てられたタスクを完了するワーカースレッドを調整するワーカースレッドを割り当てます。 この DMV では、コーディネーターのスレッドのみが要求に対して表示されます。 列の**読み取り**、**書き込み**、 **logical_reads**、 **row_count**は、コーディネータースレッドに対して更新され**ません**。 列**wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**、および**granted_query_memory**は、コーディネータースレッドに対して**のみ更新**されます。 詳細については、「[スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
+[行モード](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)で並列要求を実行する場合、は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 割り当てられたタスクを完了するワーカースレッドを調整するワーカースレッドを割り当てます。 この DMV では、コーディネーターのスレッドのみが要求に対して表示されます。 列の**読み取り**、**書き込み**、 **logical_reads**、 **row_count**は、コーディネータースレッドに対して更新され**ません**。 列**wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**、および**granted_query_memory**は、コーディネータースレッドに対して**のみ更新**されます。 詳細については、「[スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
-ユーザーがサーバーに`VIEW SERVER STATE`対する権限を持っている場合、ユーザーにはのインスタンスで実行中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのセッションが表示されます。それ以外の場合、ユーザーには現在のセッションのみが表示されます。 `VIEW SERVER STATE`Azure SQL Database で許可することは`sys.dm_exec_requests`できません。したがって、は常に現在の接続に限定されます。
+ユーザーが `VIEW SERVER STATE` サーバーに対する権限を持っている場合、ユーザーにはのインスタンスで実行中のすべてのセッションが表示されます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。それ以外の場合、ユーザーには現在のセッションのみが表示されます。 `VIEW SERVER STATE`Azure SQL Database で許可することはできません `sys.dm_exec_requests` 。したがって、は常に現在の接続に限定されます。
+
+Always On シナリオでは、セカンダリレプリカが**読み取り目的のみ**に設定されている場合、セカンダリへの接続では、を追加することによって、接続文字列パラメーターでアプリケーションの目的を指定する必要があり `applicationintent=readonly` ます。 そうしないと、 `sys.dm_exec_requests` 権限が存在する場合でも、可用性グループ内のデータベースに対するのアクセス確認は成功しません `VIEW SERVER STATE` 。
+
   
 ## <a name="examples"></a>例  
   
@@ -117,7 +120,7 @@ SELECT * FROM sys.dm_exec_requests;
 GO  
 ```  
 
-次に、ステートメントテキストを取得するために、 `sql_handle`コピーした`sys.dm_exec_sql_text(sql_handle)`をシステム関数と共に使用します。  
+次に、ステートメントテキストを取得するために、コピーしたを `sql_handle` システム関数と共に使用し `sys.dm_exec_sql_text(sql_handle)` ます。  
 
 ```sql
 SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);  
@@ -126,14 +129,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. 実行中のバッチが保持しているすべてのロックを検索する
 
-次の例では、 **dm_exec_requests**を照会して、興味深いバッチ`transaction_id`を見つけて、出力からコピーします。
+次の例では、 **dm_exec_requests**を照会して、興味深いバッチを見つけて、出力からコピーします `transaction_id` 。
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-次に、ロック情報を検索するには`transaction_id` 、システム関数**sys. dm_tran_locks**と共にコピーされたを使用します。  
+次に、ロック情報を検索するには、 `transaction_id` システム関数**sys. dm_tran_locks**と共にコピーされたを使用します。  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks
@@ -192,5 +195,5 @@ GO
 [dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
 [SQL Server、SQL Statistics オブジェクト](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
-[クエリ処理のアーキテクチャガイド](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md#DOP)       
 [スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)    

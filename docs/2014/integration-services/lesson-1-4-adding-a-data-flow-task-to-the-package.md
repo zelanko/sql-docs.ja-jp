@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 542b7e3ffcc4a1db5b2053c840b785f775384fe1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37275d31837a700f5e69c433630839529c2ac0ae
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891803"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965282"
 ---
 # <a name="step-4-adding-a-data-flow-task-to-the-package"></a>手順 4:パッケージへのデータ フロー タスクの追加
   前の実習では、データ ソースおよび変換先データに接続するための接続マネージャーを作成しました。次の実習では、パッケージにデータ フロー タスクを追加します。 データ フロー タスクには、変換元と変換先の間でデータを移動させるデータ フロー エンジンがカプセル化されており、データを移動する際に、変換、クリーン、修正を行うことができます。 抽出、変換、読み込み (ETL) プロセスのほとんどが、このデータ フロー タスクで実行されます。  
@@ -32,16 +31,16 @@ ms.locfileid: "62891803"
     > [!NOTE]  
     >  SSIS ツールボックスが表示されていない場合は、メイン メニューの [SSIS]、[SSIS ツールボックス] の順に選択し、SSIS ツールボックスを表示します。  
   
-3.  [**制御フロー** ] デザイン画面で、新しく追加した [**データフロータスク**] を右クリックし、[**名前**の`Extract Sample Currency Data`変更] をクリックして、名前をに変更します。  
+3.  [**制御フロー** ] デザイン画面で、新しく追加した [**データフロータスク**] を右クリックし、[**名前の変更**] をクリックして、名前をに変更し `Extract Sample Currency Data` ます。  
   
      デザイン画面に追加するすべてのコンポーネントに一意な名前を付けるようにしましょう。 使いやすさと管理しやすさを考慮し、各コンポーネントの機能がわかるような名前を付けます。 このような方法で名前を付けておけば、自己文書化された [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを作成できます。 パッケージを文書化するには、注釈を使用する方法もあります。 注釈の詳細については、「[パッケージで注釈を使用する](use-annotations-in-packages.md)」を参照してください。  
   
-4.  データフロータスクを右クリックし、[**プロパティ**] をクリックします。プロパティウィンドウで、 `LocaleID`プロパティが**英語 (米国)** に設定されていることを確認します。  
+4.  データフロータスクを右クリックし、[**プロパティ**] をクリックします。プロパティウィンドウで、 `LocaleID` プロパティが**英語 (米国)** に設定されていることを確認します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 5:フラット ファイル ソースの追加と構成](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
 ## <a name="see-also"></a>参照  
- [[データ フロー タスク]](control-flow/data-flow-task.md)  
+ [データ フロー タスク](control-flow/data-flow-task.md)  
   
   

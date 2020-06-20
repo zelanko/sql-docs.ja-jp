@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 415d4e2d1aaa3166ae4df2dea53b34e064544e06
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783126"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934750"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>サーバー プロパティの表示または変更 (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または SQL Server 構成マネージャーを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)]のインスタンスのプロパティを表示または変更する方法について説明します。  
@@ -59,7 +58,7 @@ ms.locfileid: "72783126"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  詳細については、「 [サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。  
   
- 既定では`sp_configure` 、パラメーターを指定しない、または最初のパラメーターだけを指定して、の実行権限をすべてのユーザーに付与します。 両方の`sp_configure`パラメーターを使用してを実行し、構成オプションを変更するか、または再構成ステートメントを実行するには、ALTER SETTINGS サーバーレベルのアクセス許可がユーザーに付与されている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
+ `sp_configure`既定では、パラメーターを指定しない、または最初のパラメーターだけを指定して、の実行権限をすべてのユーザーに付与します。 両方のパラメーターを使用してを実行し、 `sp_configure` 構成オプションを変更するか、または再構成ステートメントを実行するには、ALTER SETTINGS サーバーレベルのアクセス許可がユーザーに付与されている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -148,9 +147,9 @@ GO
   
 2.  **SQL Server 構成マネージャー**で **[SQL Server のサービス]** をクリックします。  
   
-3.  詳細ウィンドウで、[ **SQL Server (\<***instancename***>)**] を右クリックし、[**プロパティ**] をクリックします。  
+3.  詳細ウィンドウで、[ **SQL Server ( \<***instancename***> )**] を右クリックし、[**プロパティ**] をクリックします。  
   
-4.  [ **SQL Server (\<***instancename***>) のプロパティ**] ダイアログボックスの [**サービス**] タブまたは [**詳細設定**] タブで、サーバーのプロパティを変更し、[ **OK**] をクリックします。  
+4.  [ **SQL Server ( \<***instancename***> ) のプロパティ**] ダイアログボックスの [**サービス**] タブまたは [**詳細設定**] タブで、サーバーのプロパティを変更し、[ **OK**] をクリックします。  
   
 ##  <a name="follow-up-after-you-change-server-properties"></a><a name="FollowUp"></a>補足情報: サーバーのプロパティを変更した後  
  いくつかのプロパティでは、変更を有効にするためにサーバーを再起動する必要があります。  

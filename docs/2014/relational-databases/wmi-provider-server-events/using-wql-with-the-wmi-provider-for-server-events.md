@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 18c4b6448438ebb8c95f999569d51edfecf04206
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df2bbf5c6031781494695f95116441fde34bf4f5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211583"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013666"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>WMI Provider for Server Events と WQL の使用
   管理アプリケーションは WQL (WMI Query Language) ステートメントを実行することにより、WMI Provider for Server Events を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントにアクセスすることができます。 WQL は、WMI 特有の拡張機能を複数持つ、構造化照会言語 (SQL) の単純化されたサブセットです。 WQL を使用した場合、アプリケーションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンス、データベース、またはデータベース オブジェクト (現在サポートされているオブジェクトはキューのみ) に対してイベントの種類を取得します。 WMI Provider for Server Events は、データベーススコープまたはオブジェクトスコープのイベント通知の対象データベースで作成されたイベント通知、またはサーバースコープのイベント通知の**master**データベースにクエリを変換します。  
@@ -72,7 +71,7 @@ WHERE where_condition
  イベントに関連付けられたすべてのプロパティを照会することを指定します。  
   
  *event_type*  
- イベント通知を作成できるイベント。 使用できるイベントの一覧については、「 [WMI Provider For Server events のクラスとプロパティ](https://technet.microsoft.com/library/ms186449.aspx)」を参照してください。 イベントの*種類*名は、create event notification を使用して手動でイベント通知を作成するときに指定できるのと同じ*event_type* | *event_group*に対応していることに注意してください。 イベントの*種類*の例としては、CREATE_TABLE、LOCK_DEADLOCK、DDL_USER_EVENTS、TRC_DATABASE などがあります。  
+ イベント通知を作成できるイベント。 使用できるイベントの一覧については、「 [WMI Provider For Server events のクラスとプロパティ](https://technet.microsoft.com/library/ms186449.aspx)」を参照してください。 イベントの*種類*名は、 *event_type*  |  create event notification を使用して手動でイベント通知を作成するときに指定できるのと同じ event_type*event_group*に対応していることに注意してください。 イベントの*種類*の例としては、CREATE_TABLE、LOCK_DEADLOCK、DDL_USER_EVENTS、TRC_DATABASE などがあります。  
   
 > [!NOTE]  
 >  DDL に似た操作を実行する一部のシステム ストアド プロシージャもイベント通知を起動することができます。 イベント通知はテストして、実行されているシステム ストアド プロシージャに応答するかどうか、確認してください。 たとえば、CREATE TYPE ステートメントと**sp_addtype**ストアドプロシージャはどちらも、CREATE_TYPE イベントで作成されたイベント通知を起動します。 ただし、 **sp_rename**ストアドプロシージャでは、イベント通知は発生しません。 詳細については、「[DDL イベント](../triggers/ddl-events.md)」を参照してください。  
@@ -91,7 +90,7 @@ WHERE where_condition
   
  WMI Provider for Server Events は、bottom-up および first-fit アルゴリズムを使用して、基になる EVENT NOTIFICATION に対してできるだけ小さなスコープを生成します。 アルゴリズムにより、サーバーの内部的な利用状況、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスと WMI ホスト プロセス間のネットワーク トラフィックが最小になるように試行されます。 プロバイダーは、FROM 句で指定された*event_type*と WHERE 句の条件を調べ、基になるイベント通知を最も狭いスコープで登録しようとします。 プロバイダーが最も狭いスコープで登録できない場合は、登録が正常に終了するまで、順次より高いスコープでの登録が試行されます。 最も高いスコープ (サーバーレベル) に到達して失敗した場合、エラーがコンシューマーに返されます。  
   
- たとえば、WHERE 句で DatabaseName =**'** AdventureWorks **'** が指定されている場合、プロバイダーは[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースにイベント通知を登録しようとします。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースが存在し、呼び出し側クライアントが、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] のイベント通知を作成するために必要な権限を持っている場合、登録は正常に完了します。 それ以外の場合は、イベント通知をサーバー レベルで登録しようとします。 WMI クライアントが必要な権限を持っている場合、登録は正常に終了します。 ただし、このシナリオでは、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースが作成されるまで、イベントはクライアントに返されません。  
+ たとえば、WHERE 句で DatabaseName =**'** AdventureWorks **'** が指定されている場合、プロバイダーはデータベースにイベント通知を登録しようとし [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースが存在し、呼び出し側クライアントが、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] のイベント通知を作成するために必要な権限を持っている場合、登録は正常に完了します。 それ以外の場合は、イベント通知をサーバー レベルで登録しようとします。 WMI クライアントが必要な権限を持っている場合、登録は正常に終了します。 ただし、このシナリオでは、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースが作成されるまで、イベントはクライアントに返されません。  
   
  また、 *where_condition*をフィルターとして使用して、特定のデータベース、スキーマ、またはオブジェクトに対してクエリをさらに制限することもできます。 たとえば、次の WQL クエリについて考えてみます。  
   
@@ -105,7 +104,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  `DatabaseName='AW1'` OR `DatabaseName='AW2'` などの複合式が指定された場合、2 つの異なるイベント通知ではなく、サーバー スコープで 1 つのイベント通知の登録が試行されます。 呼び出し側クライアントが権限を持っている場合、登録は正常に終了します。  
   
- 句でが指定されている場合`SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'`は、スキーマ`Z` `X`のオブジェクトに直接イベント通知を登録しようとします。 `WHERE` クライアントが権限を持っている場合、登録は正常に終了します。 現時点では、オブジェクトレベルのイベントはキューでのみサポートされており、QUEUE_ACTIVATION *event_type*に対してのみサポートされていることに注意してください。  
+ `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'`句でが指定されている場合は `WHERE` 、スキーマのオブジェクトに直接イベント通知を登録しようとし `Z` `X` ます。 クライアントが権限を持っている場合、登録は正常に終了します。 現時点では、オブジェクトレベルのイベントはキューでのみサポートされており、QUEUE_ACTIVATION *event_type*に対してのみサポートされていることに注意してください。  
   
  ある特定のスコープでは、すべてのイベントを照会できるわけではないことに注意してください。 たとえば、Lock_Deadlock など、トレース イベント上の WQL クエリ、または TRC_LOCKS などのトレース イベント グループは、サーバー レベルでのみ登録できます。 同様に、CREATE_ENDPOINT イベントおよび DDL_ENDPOINT_EVENTS イベント グループも、サーバー レベルでのみ登録できます。 イベントを登録するための適切なスコープの詳細については、「[イベント通知のデザイン](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx)」を参照してください。 *Event_type*をサーバーレベルでしか登録できない WQL クエリを登録しようとすると、常にサーバーレベルで作成されます。 WMI クライアントが権限を持っている場合、登録は正常に終了します。 それ以外の場合は、クライアントにエラーが返されます。 ただし、WHERE 句は、イベントに対応するプロパティに基づいたサーバー レベル イベントに対するフィルターとして使用できる場合もあります。 たとえば、多くのトレース イベントに含まれている `DatabaseName` プロパティは、WHERE 句でフィルターとして使用できます。  
   

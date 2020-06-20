@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4770c05b28f4a45ad6cdad0af5a8f0207c1357ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650203"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067655"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>[プロキシ アカウントのプロパティ] および [新しいプロキシ アカウント] ([全般] ページ)
-  このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントプロキシアカウントのプロパティを表示または変更できます。  
+  このページを使用すると、エージェントプロキシアカウントのプロパティを表示または変更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。  
   
 ## <a name="options"></a>オプション  
  **[プロキシ名]**  
  プロキシの名前を入力します。  
   
- **Credential name (資格情報名)**  
+ **[資格情報名]**  
  プロキシの資格情報の名前を入力します。  
   
 > [!NOTE]  

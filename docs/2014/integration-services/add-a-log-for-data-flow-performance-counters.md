@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c397a5e4361c1aca4edfc32807045e3da9cbed0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062055"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926397"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>データ フロー パフォーマンス カウンターのログを追加する
   この手順では、データ フロー エンジンによって提供されるパフォーマンス カウンターのログを追加する方法について説明します。  

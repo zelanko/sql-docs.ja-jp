@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 266687488dbd12b504b079314cc9d07b801b4f28
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4ff27a1258d5164e3e93d34b6ff757993d6f6363
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000862"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932943"
 ---
 # <a name="full-text-stoplist-properties"></a>[フルテキスト ストップリストのプロパティ]
   このダイアログ ボックスを使用すると、個々のストップワードの追加や削除、特定の言語のすべてのストップワードの削除、および現在のストップリストのクリアを実行できます。 ストップワードは、ストップリストで一般的に使用される単語です。 ストップリスト内のストップワードは、ストップリストを使用するテーブルのフルテキスト インデックスから省略されます。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../relational-databases/search/full-text-search.md)」を参照してください。  
@@ -28,7 +27,7 @@ ms.locfileid: "83000862"
 -   [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../relational-databases/search/full-text-search.md)  
   
 ## <a name="options"></a>オプション  
- **操作**  
+ **動作**  
  実行するアクションを指定します。  
   
  **[ストップワードの追加]**  

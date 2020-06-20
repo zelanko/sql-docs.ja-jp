@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fde3029cb170a45852e08b8073f9a66bb6179658
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809570"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935005"
 ---
 # <a name="server-configuration-options-sql-server"></a>サーバー構成オプション (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースの管理および最適化を行うには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または sp_configure システム ストアド プロシージャを使用して、構成オプションを設定します。 最も一般的に使用されるサーバー構成オプションは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から使用できます。また、sp_configure を使用するとすべての構成オプションにアクセスできます。 システムへの影響を慎重に検討したうえで、これらのオプションを設定してください。 詳細については、「[サーバー プロパティの表示または変更 &#40;SQL Server&#41;](view-or-change-server-properties-sql-server.md)」を参照してください。  
@@ -45,7 +44,7 @@ ms.locfileid: "62809570"
   
 -   オプションを設定し、RECONFIGURE ステートメントまたは場合によっては RECONFIGURE WITH OVERRIDE ステートメントを実行した直後。  
   
-     \- または -  
+     または  
   
 -   上の操作を行い、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを再起動した後。  
   
@@ -105,7 +104,7 @@ ms.locfileid: "62809570"
     |[max full-text crawl range](max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](server-memory-server-configuration-options.md) (A、SC)|16|2147483647|2147483647|  
     |[max text repl size](configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 1024 が、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 2048 が推奨されます)|0<br /><br /> 0を指定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と、プロセッサ数に応じて最大ワーカースレッド数が自動的に構成されます。32ビットの場合は 256 + (*\<プロセッサ>* -4) * 8)、64ビット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合は2倍になります。|  
+    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 1024 が、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 2048 が推奨されます)|0<br /><br /> 0を指定すると、プロセッサ数に応じて最大ワーカースレッド数が自動的に構成されます。32ビットの場合は 256 + ( *\<processors>* -4) * 8、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 ビットの場合は2倍の数に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] なります。|  
     |[media retention](configure-the-media-retention-server-configuration-option.md) (A、RR)|0|365|0|  
     |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](server-memory-server-configuration-options.md) (A、SC)|0|2147483647|0|  

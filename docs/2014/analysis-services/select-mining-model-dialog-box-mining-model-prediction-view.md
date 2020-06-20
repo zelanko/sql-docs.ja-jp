@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a9d5c5b0-1beb-49bf-8df5-c659c8e7b390
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6e79a86b4438eeacf5c1184b73a5edf0e9ea9d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4075309defb5282f04212a0c200af340f1b4240
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069404"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940953"
 ---
 # <a name="select-mining-model-dialog-box-mining-model-prediction-view"></a>[マイニング モデルの選択] ダイアログ ボックス ([マイニング モデル予測] ビュー)
   **[マイニング モデルの選択]** ダイアログ ボックスを使用すると、予測の土台として使用するマイニング モデルを選択できます。  

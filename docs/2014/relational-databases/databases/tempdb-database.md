@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7150ca05e536214d43d4992ed1e7f79138ac2be9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916892"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965693"
 ---
 # <a name="tempdb-database"></a>tempdb データベース
   **tempdb** システム データベースは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続しているすべてのユーザーが使用できるグローバル リソースであり、以下のものを保持するために使用されます。  
@@ -33,7 +32,7 @@ ms.locfileid: "62916892"
   
 -   オンライン インデックス操作、複数のアクティブな結果セット (MARS)、AFTER トリガーなどの機能に対してデータ変更トランザクションによって生成される行バージョン。  
   
- **tempdb** 内の操作は、最低限必要な情報だけがログに記録されます。 これにより、トランザクションをロールバックできます。 が起動されるたびに tempdb が再作成されるので、システムは常にデータベースのクリーンコピーで開始されます。 **tempdb** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一時テーブルと一時ストアド プロシージャは、切断時に自動的に削除され、システムのシャットダウン時にアクティブな接続はありません。 そのため、 **tempdb**には、のあるセッションから別の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セッションに保存されるものはありません。 **Tempdb**では、バックアップ操作と復元操作は許可されていません。  
+ **tempdb** 内の操作は、最低限必要な情報だけがログに記録されます。 これにより、トランザクションをロールバックできます。 が起動されるたびに**tempdb**が再作成されるので [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、システムは常にデータベースのクリーンコピーで開始されます。 一時テーブルと一時ストアド プロシージャは、切断時に自動的に削除され、システムのシャットダウン時にアクティブな接続はありません。 そのため、 **tempdb**には、のあるセッションから別のセッションに保存されるものはありません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **Tempdb**では、バックアップ操作と復元操作は許可されていません。  
   
 ## <a name="physical-properties-of-tempdb"></a>tempdb の物理プロパティ  
  次の表は、 **tempdb** のデータ ファイルとログ ファイルの初期構成値の一覧です。 これらのファイルのサイズは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによって多少異なる場合があります。  
@@ -43,7 +42,7 @@ ms.locfileid: "62916892"
 |プライマリ データ|tempdev|tempdb.mdf|ディスクがいっぱいになるまで10% ずつ自動拡張|  
 |ログ|templog|templog.ldf|最大 2 tb まで10% ずつ自動拡張|  
   
- **Tempdb**のサイズは、システムのパフォーマンスに影響を与える可能性があります。 たとえば、 **tempdb**のサイズが小さすぎると、開始[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するたびにワークロードの要件をサポートするために、データベースの自動拡張によるシステム処理が過剰に使用される可能性があります。 **Tempdb**のサイズを増やすことで、このオーバーヘッドを回避できます。  
+ **Tempdb**のサイズは、システムのパフォーマンスに影響を与える可能性があります。 たとえば、 **tempdb**のサイズが小さすぎると、開始するたびにワークロードの要件をサポートするために、データベースの自動拡張によるシステム処理が過剰に使用される可能性があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **Tempdb**のサイズを増やすことで、このオーバーヘッドを回避できます。  
   
 ## <a name="performance-improvements-in-tempdb"></a>tempdb でのパフォーマンスの強化  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 **tempdb** のパフォーマンスは以下の方法で強化されています。  
@@ -64,23 +63,23 @@ ms.locfileid: "62916892"
   
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|はい|  
-|ANSI_NULL_DEFAULT|OFF|はい|  
-|ANSI_NULLS|OFF|はい|  
-|ANSI_PADDING|OFF|はい|  
-|ANSI_WARNINGS|OFF|はい|  
-|ARITHABORT|OFF|はい|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|Yes|  
+|ANSI_NULL_DEFAULT|OFF|Yes|  
+|ANSI_NULLS|OFF|Yes|  
+|ANSI_PADDING|OFF|Yes|  
+|ANSI_WARNINGS|OFF|Yes|  
+|ARITHABORT|OFF|Yes|  
 |AUTO_CLOSE|OFF|いいえ|  
 |AUTO_CREATE_STATISTICS|ON|はい|  
 |AUTO_SHRINK|OFF|いいえ|  
 |AUTO_UPDATE_STATISTICS|ON|はい|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
 |CHANGE_TRACKING|OFF|いいえ|  
-|CONCAT_NULL_YIELDS_NULL|OFF|はい|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
 |CURSOR_DEFAULT|GLOBAL|はい|  
-|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> いいえ<br /><br /> いいえ|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
+|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> No<br /><br /> No|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
 |DB_CHAINING|ON|いいえ|  
 |ENCRYPTION|OFF|いいえ|  
 |NUMERIC_ROUNDABORT|OFF|はい|  
@@ -95,7 +94,7 @@ ms.locfileid: "62916892"
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)」を参照してください。  
   
-## <a name="restrictions"></a>制限  
+## <a name="restrictions"></a>制約  
  **Tempdb**データベースでは、次の操作を実行できません。  
   
 -   ファイル グループの追加。  
@@ -134,7 +133,7 @@ ms.locfileid: "62916892"
 ## <a name="related-content"></a>関連コンテンツ  
  [インデックスの SORT_IN_TEMPDB オプション](../indexes/indexes.md)  
   
- [システム データベース](system-databases.md)  
+ [システムデータベース](system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

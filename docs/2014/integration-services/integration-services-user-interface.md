@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 55b09057927fa9c5102b8d816c42e1741bc0883a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2c9dfab3a728bc3d5c2a5179a9bb63fb9845b5c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767674"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965377"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services のユーザー インターフェイス
   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーのタブ上にあるデザイン画面以外にも、パッケージに機能を追加したり、パッケージ オブジェクトのプロパティを構成するための、次に示すようなウィンドウやダイアログ ボックスが用意されています。  
@@ -47,7 +46,7 @@ ms.locfileid: "62767674"
 |**[デジタル署名]**|パッケージに署名したり、またはパッケージから署名を削除します。|**[SSIS]** メニューの **[デジタル署名]** をクリックします。<br /><br /> または<br /><br /> **[制御フロー]** タブのデザイン画面で任意の場所を右クリックし、 **[デジタル署名]** をクリックします。|  
 |**ブレークポイントを設定する**|タスク上のブレークポイントを有効にし、ブレークポイントのプロパティを設定します。|**[制御フロー]** タブのデザイン画面でタスクまたはコンテナーを右クリックし、 **[ブレークポイントの設定]** をクリックします。 パッケージ上のブレークポイントを設定するには、 **[制御フロー]** タブのデザイン画面で任意の場所を右クリックし、 **[ブレークポイントの設定]** をクリックします。|  
   
- **[作業の開始]** ウィンドウには、サンプル、チュートリアル、およびビデオへのリンクが表示されます。 その他のコンテンツへのリンクを追加するには、現在のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に付属する SamplesSites.xml ファイルを変更します。 RSS フィードの URL を指定する \<GettingStartedSamples> 要素値は変更しないでください。 このファイルは、 *\<ドライブ*>:\Program Files\Microsoft SQL Server\110\DTS\Binn フォルダーにあります。 64 ビット コンピューターでは、このファイルは、 *\<ドライブ*>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn フォルダーにあります。  
+ **[作業の開始]** ウィンドウには、サンプル、チュートリアル、およびビデオへのリンクが表示されます。 その他のコンテンツへのリンクを追加するには、現在のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に付属する SamplesSites.xml ファイルを変更します。 \<GettingStartedSamples>RSS フィードの URL を指定する要素の値は変更しないことをお勧めします。 このファイルは、 *\<drive>* : Server\110\DTS\Binn フォルダーにあります。 64ビットのコンピューターでは、ファイルは *\<drive>* : Server\110\DTS\Binn files (x86) \MICROSOFT SQL フォルダーにあります。  
   
  SamplesSites.xml ファイルが破損した場合は、ファイルの XML を次の既定の XML で置き換えてください。  
   

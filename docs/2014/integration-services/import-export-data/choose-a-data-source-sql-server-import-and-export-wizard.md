@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4298cfec7478560c2cef01e7d3c6df577a2a8f16
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966269"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>[データ ソースの選択] (SQL Server インポートおよびエクスポート ウィザード)
   [**データソースの選択**] ページを使用すると、コピーするデータのソースを指定できます。  
@@ -28,7 +27,7 @@ ms.locfileid: "62893597"
   
 ## <a name="options"></a>オプション  
  **データ ソース**  
- ソースのデータ保存形式に対応したデータ プロバイダーを選択します。 データ ソースに使用できるプロバイダーが複数存在する可能性があります。 たとえば、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、SQL Server の .NET Framework Data Provider、または SQL Server 用の Microsoft OLE DB プロバイダーを使用できます。  
+ ソースのデータ保存形式に対応したデータ プロバイダーを選択します。 データ ソースに使用できるプロバイダーが複数存在する可能性があります。 たとえば、では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、SQL Server の .NET Framework Data Provider、または SQL Server 用の Microsoft OLE DB プロバイダーを使用できます。  
   
  **データソース**プロパティには、コンピューターにインストールされているプロバイダーに応じて、さまざまなオプションがあります。 次の表に、使用頻度の高いプロバイダーのオプションを一覧表示します。 他のプロバイダーについては、プロバイダー固有のマニュアルを参照してください。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62893597"
  **サーバー名**  
  データが格納されているサーバーの名前を入力するか、一覧からサーバーを選択します。  
   
- **Windows 認証を使用する**  
+ **[Windows 認証を使用する]**  
  データベースへのログインに、パッケージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証を使用するかどうかを指定します。 より高いセキュリティのためには Windows 認証をお勧めします。  
   
  **SQL Server 認証を使用する**  
@@ -54,7 +53,7 @@ ms.locfileid: "62893597"
  **[データベース]**  
  指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータベースの一覧から選択します。  
   
- **更新**  
+ **Refresh\(更新\)**  
  **[更新]** をクリックして、利用可能なデータベースの一覧を復元します。  
   
 ### <a name="data-source--net-framework-data-provider-for-sql-server"></a>[データ ソース] = [.Net Framework Data Provider for SQL Server]  
@@ -80,10 +79,10 @@ ms.locfileid: "62893597"
 ### <a name="data-source--microsoft-excel"></a>[データ ソース] = [Microsoft Excel]  
   
 > [!NOTE]  
->  Excel 2003 以前を使用しているデータソースに接続する場合にのみ、[ **Microsoft Excel** ] を選択します。 Excel 2007 を使用するデータソースに接続するには、[ **Microsoft Office 12.0 Access データベースエンジン OLE DB プロバイダー**] を選択し、[**プロパティ**] をクリックします。次に、[ `Excel 12.0` **データリンクプロパティ**] ダイアログボックスの [**すべて**] タブで、**拡張プロパティ**の値として「」と入力します。  
+>  Excel 2003 以前を使用しているデータソースに接続する場合にのみ、[ **Microsoft Excel** ] を選択します。 Excel 2007 を使用するデータソースに接続するには、[ **Microsoft Office 12.0 Access データベースエンジン OLE DB プロバイダー**] を選択し、[**プロパティ**] をクリックします。次に、[**データリンクプロパティ**] ダイアログボックスの [**すべて**] タブで、 `Excel 12.0` **拡張プロパティ**の値として「」と入力します。  
   
  **[Excel ファイル パス]**  
- データをインポートするスプレッドシートのパスとファイル名を指定します。 たとえば、 **C:\MyData.xls、 \\\Sales\Database\Northwind.xls**のようになります。 または、**[参照]** をクリックします。  
+ データをインポートするスプレッドシートのパスとファイル名を指定します。 たとえば、 **C:\MyData.xls、 \\\Sales\Database\Northwind.xls**です。 または、**[参照]** をクリックします。  
   
  **参照**  
  **[ファイルを開く]** ダイアログ ボックスを使用して、ワークシートを検索します。  

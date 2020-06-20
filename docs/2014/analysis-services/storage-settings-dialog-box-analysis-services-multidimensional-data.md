@@ -12,18 +12,17 @@ f1_keywords:
 ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc3e6d627bf7e3072d8b6ff40a644773474ba4cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068029"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940230"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>[ストレージ設定] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [ストレージ設定] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、ディメンション、キューブ、メジャー グループ、およびパーティションのプロアクティブ キャッシュ、ストレージ、および通知設定を指定できます。 **で** [ストレージ設定] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを表示するには、次の手順に従います。  
   
--   の[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)][**プロパティ**] ウィンドウで、ディメンション、キューブ、 `ProactiveCaching`メジャーグループ、またはパーティションのプロパティ値の省略記号ボタン ([.**..**]) をクリックします。  
+-   **...** `ProactiveCaching` の [**プロパティ**] ウィンドウで、ディメンション、キューブ、メジャーグループ、またはパーティションのプロパティ値の省略記号ボタン ([...]) をクリックし [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ます。  
   
 -   **キューブ デザイナー** の **[パーティション]** タブでメジャー グループを展開し、 **[ストレージ設定]** をクリックします。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "66068029"
   
 ## <a name="options"></a>オプション  
   
-|用語|定義|値|  
+|期間|定義|値|  
 |----------|----------------|------------|  
 |**[標準設定]**|**標準設定のスライダー** を有効にして、ストレージ モードとプロアクティブ キャッシュ機能で、定義済みの設定を使用します。||  
 |**標準設定のスライダー**|次の定義済み設定のいずれかに設定します。<br /><br /> **[リアルタイム ROLAP]**<br /><br /> 次のストレージとプロアクティブ キャッシュ設定を使用します。|ROLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> 古くなったキャッシュを待機時間 0 秒で削除します。<br /><br /> オブジェクトを直ちにオンラインにします。|  
@@ -44,7 +43,7 @@ ms.locfileid: "66068029"
 ||**[定期 MOLAP]**<br /><br /> 次のストレージとプロアクティブ キャッシュ設定を使用します。|MOLAP ストレージ モードに設定します。<br /><br /> プロアクティブ キャッシュを有効にします。<br /><br /> キャッシュを定期的に更新します。再構築間隔は 1 日です。|  
 ||**[MOLAP]**<br /><br /> 次のストレージとプロアクティブ キャッシュ設定を使用します。|MOLAP ストレージ モードに設定します。|  
 |**[カスタム設定]**|ストレージ モード、プロアクティブ キャッシュ、通知の各オプションを明示的に設定します。||  
-|**[オプション]**|**[ストレージのオプション]** ダイアログ ボックスを表示し、ストレージ モード、プロアクティブ キャッシュ、通知の各オプションを明示的に設定します。 **[ストレージ設定]** ダイアログ ボックスの詳細については、「[[ストレージ設定] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。||  
+|**Options**|**[ストレージのオプション]** ダイアログ ボックスを表示し、ストレージ モード、プロアクティブ キャッシュ、通知の各オプションを明示的に設定します。 **[ストレージ設定]** ダイアログ ボックスの詳細については、「[[ストレージ設定] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。||  
   
 ## <a name="see-also"></a>参照  
  [多次元データ &#40;Analysis Services のデザイナーとダイアログボックス&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

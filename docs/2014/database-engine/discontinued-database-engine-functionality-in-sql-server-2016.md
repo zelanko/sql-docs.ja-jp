@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14924dedee04345c593683752baff4161c8d270d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67463465"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933153"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 で廃止されたデータベース エンジンの機能
   このトピックでは、 [!INCLUDE[ssDE](../includes/ssde-md.md)] で使用できなくなった [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の機能について説明します。  
@@ -64,18 +63,18 @@ ms.locfileid: "67463465"
 |データベース オプション|`sp_dboption`|`ALTER DATABASE`|  
 |Mail|SQL Mail|データベース メールを使用してください。 詳細については、「 [SQL Mail の代わりにデータベースメール](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md)を[データベースメール](../relational-databases/database-mail/database-mail.md)して使用する」を参照してください。|  
 |メモリ管理|32 ビットの AWE (Address Windowing Extensions) と 32 ビットのホット アド メモリ サポート。|64 ビットのオペレーティング システムを使用します。|  
-|メタデータ|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
+|Metadata|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |プログラミング|SQL Server 分散管理オブジェクト (SQL-DMO)。|SQL Server 管理オブジェクト (SMO)|  
-|クエリヒント|`FASTFIRSTROW` ヒント|`OPTION (FAST`*n* `)`。|  
+|クエリヒント|`FASTFIRSTROW` ヒント|`OPTION (FAST`*n* `)` 。|  
 |リモート サーバー|`sp_addserver` を使用して新しいリモート サーバーを作成する機能は廃止されました。 'local' オプションを設定した `sp_addserver` は引き続き使用できます。 アップグレード中に保持されたリモート サーバーまたはレプリケーションによって作成されたリモート サーバーは使用可能です。|リンク サーバーを使用してリモート サーバーを置き換えてください。|  
-|Security|`sp_dropalias`|別名をユーザー アカウントとデータベース ロールの組み合わせで置き換えてください。 アップグレードされたデータベースで別名を削除するには、`sp_dropalias` を使用します。|  
-|Security|2000より[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]前のログインの値を表す**pwdcompare**のバージョンパラメーターは廃止されました。|None|  
+|セキュリティ|`sp_dropalias`|別名をユーザー アカウントとデータベース ロールの組み合わせで置き換えてください。 アップグレードされたデータベースで別名を削除するには、`sp_dropalias` を使用します。|  
+|セキュリティ|2000より前のログインの値を表す**Pwdcompare**のバージョンパラメーター [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は廃止されました。|None|  
 |SMO での Service Broker のプログラミング|**IObjectPermission**インターフェイスは、**このクラスに**よって実装されなくなりました。このクラスを実装すると、||  
-|SET オプション|`SET DISABLE_DEF_CNST_CHK`|なし。|  
+|SET オプション|`SET DISABLE_DEF_CNST_CHK`|[なし] :|  
 |システム テーブル|sys.database_principal_aliases|別名の代わりにロールを使用してください。|  
 |Transact-SQL|`RAISERROR` という形式の `RAISERROR integer 'string'` は廃止されました。|現在の**RAISERROR (...)** 構文を使用してステートメントを書き直してください。|  
 |Transact-SQL 構文|`COMPUTE / COMPUTE BY`|`ROLLUP` を使用します|  
-|Transact-SQL 構文|および** \* ** **=&#42;** の使用|ANSI 結合構文を使用してください。 詳細については、「 [FROM (transact-sql)](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx) 」を参照してください。|  
+|Transact-SQL 構文|**\*=** および **=&#42;** の使用|ANSI 結合構文を使用してください。 詳細については、「 [FROM (transact-sql)](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx) 」を参照してください。|  
 |XEvent|databases_data_file_size_changed、databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|次の各イベントに置き換えられました: database_file_size_change、database_file_size_change<br /><br /> database_file_size_change<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **XEvent の追加変更**  

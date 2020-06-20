@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a596eeaf-68b2-4560-b77d-d2f72ddba926
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4489dd45616c1f2f8240f53e6a3bb0c59f459580
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e928c72fa3bf372646ecac79bbc6ad33d4a0f2c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057276"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965062"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>ODBC 接続マネージャーの UI リファレンス
   **[ODBC の接続マネージャーの構成]** ダイアログ ボックスを使用すると、接続を ODBC データ ソースに追加できます。  
@@ -33,7 +32,7 @@ ms.locfileid: "66057276"
  **[データ接続のプロパティ]**  
  選択されている ODBC 接続マネージャーのプロパティと値を表示します。  
   
- **新しい**  
+ **[新規作成]**  
  **[接続マネージャー]** ダイアログ ボックスを使用して ODBC 接続マネージャーを作成します。 このダイアログ ボックスでは、必要に応じて新しい ODBC データ ソースを作成することもできます。  
   
  **削除**  

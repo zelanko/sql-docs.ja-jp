@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6fe7d2bf1ef6b8932704242e94c377a2b11c0619
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c4529d7a7d52687c5ea648a5e401cc309ea1f0c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137242"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061391"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags プロパティ (SInstance クラス)
-  の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスのフラグの数を取得します。  
+  のインスタンスのフラグの数を取得し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +35,7 @@ object
 .NumberOfFlags [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  サーバーインスタンスを表す[Sinstance クラス](sinstance-class.md)オブジェクト。  
   

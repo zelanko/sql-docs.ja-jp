@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5dcbf0aae9c96e788fdbf9544114d226fa8f0bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1a0bc32040fc90e5f73faa708f314722bc8f3b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637854"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037000"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールがオンになっているが、正しく構成されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続の試行がブロックされる可能性があります。  
@@ -91,7 +90,7 @@ ms.locfileid: "73637854"
   
     -   一部のスコープの制限を設定する  
   
-     コントロール パネルの **[Windows ファイアウォール]** は、ファイアウォールの構成に慣れていないユーザーや、モバイル デバイスでないコンピューターに基本的なファイアウォール オプションを構成するユーザーに最適です。 次の手順に従って、 `run`コマンドからコントロールパネルの [ **Windows ファイアウォール**] を開くこともできます。  
+     コントロール パネルの **[Windows ファイアウォール]** は、ファイアウォールの構成に慣れていないユーザーや、モバイル デバイスでないコンピューターに基本的なファイアウォール オプションを構成するユーザーに最適です。 次の手順に従って、コマンドからコントロールパネルの [ **Windows ファイアウォール**] を開くこともでき `run` ます。  
   
     #### <a name="to-open-the-windows-firewall-item"></a>[Windows ファイアウォール] を開くには  
   
@@ -159,7 +158,7 @@ ms.locfileid: "73637854"
   
 1.  コントロール パネルの **[Windows ファイアウォール]** の **[例外]** タブをクリックし、 **[プログラムの追加]** をクリックします。  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイアウォール経由で許可するのインスタンスの場所を参照します。たとえば、 **C:\Program Server\MSSQL12. SQL <instance_name> \mssql\binn**で、 **sqlservr.exe**を選択し、[**開く**] をクリックします。  
+2.  ファイアウォール経由で許可するのインスタンスの場所を参照します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] たとえば、 **C:\PROGRAM Server\MSSQL12. SQL <instance_name> \mssql\binn**、[ **sqlservr.exe**] の順に選択し、[**開く**] をクリックします。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -323,4 +322,4 @@ ms.locfileid: "73637854"
 -   **PortQry** ユーティリティを使用して、TCP/IP ポートのステータスを LISTENING、NOT LISTENING、FILTERED としてレポートできます。 (FILTERED ステータスは、ポートが、LISTENING、NOT LISTENING のどちらか不明で、ユーティリティがポートからの応答を受信していないことを示します)。**PortQry** ユーティリティは、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=17148)からダウンロードできます。  
   
 ## <a name="see-also"></a>参照  
- [Windows サーバー システムのサービス概要とネットワーク ポート要件](https://support.microsoft.com/kb/832017)  
+ [Windows サーバー システムのサービス概要およびネットワーク ポート要件](https://support.microsoft.com/kb/832017)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26f68375161f0e7ea0078540c4b8950adb61542
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892247"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965392"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services (SSIS) パラメーター
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) パラメーターを使用すると、パッケージの実行時にパッケージ内のプロパティに値を割り当てることができます。 " *プロジェクト パラメーター* " はプロジェクト レベル、" *パッケージ パラメーター* " はパッケージ レベルで作成できます。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。  
@@ -97,7 +96,7 @@ ms.locfileid: "62892247"
  特定のパッケージ実行インスタンスの準備中には、 **pkgOptions** パラメーターに値 5 が割り当てられます。 この値は実行値と呼ばれます。これは、その特定の実行インスタンスのパラメーターにのみ適用されるためです。 実行が開始されると、 **pkgOptions** パラメーターに対応するパッケージ プロパティに値 5 が割り当てられます。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [パラメーターを作成する](create-parameters.md)  
+ [パラメーターの作成](create-parameters.md)  
   
  [プロジェクトを配置した後にパラメーターの値を設定する](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59e6a79d868e4bfa0ec0af7190d54a8bc13bf395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7795dfdadb8fb3bbaa1b55dcd5c962d24a7ba29
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136462"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068311"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>トレース ファイルとテーブル サイズの制限
   SQL トレースの結果のサイズは、トレースに含まれているイベント クラスと [!INCLUDE[ssDE](../../includes/ssde-md.md)] の使用方法によって異なります。 頻繁に発生するイベント クラスをトレースする場合、最大ファイル サイズまたは最大行数を設定することにより、トレースで収集されるデータの量を最小限に抑えることができます。 最大ファイル サイズまたは最大行数を指定することにより、トレース ファイルまたはテーブルが指定された上限を超えて大きくならないようにすることができます。  
