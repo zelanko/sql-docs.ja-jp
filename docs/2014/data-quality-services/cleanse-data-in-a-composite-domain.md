@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7fb9e3cc9d500184e637284c4cfb8c65c48b43c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df41f9ae623053a61691076f9c96247f7a41564f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481146"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938013"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>複合ドメインでのデータのクレンジング
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) での複合ドメインのクレンジングについて説明します。 複合ドメインは 2 つ以上の単一ドメインで構成され、複数の関連用語で構成されるデータ フィールドにマップされます。 複合ドメイン内の個々のドメインには、ナレッジの共通領域が必要です。 複合ドメインの詳細については、「 [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md)」を参照してください。  
@@ -42,7 +41,7 @@ ms.locfileid: "65481146"
   
  このクロス ドメイン ルールを実行すると、クレンジング アクティビティの後にソース データ (ProductName) が次のように修正されます。  
   
- **ソース データ**  
+ **ソースデータ**  
   
 |ProductName|CompanyName|ProductVersion|  
 |-----------------|-----------------|--------------------|  
@@ -54,7 +53,7 @@ ms.locfileid: "65481146"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 明確な *Then* クロス ドメイン ルール **"値が次の値と等しい"** をテストするときは、 **[複合ドメイン ルールのテスト]** ダイアログ ボックスに、正しいデータを示す新しい列 **[次に修正]** が含まれます。 クレンジング データ品質プロジェクトでは、この明確なクロス ドメイン ルールでデータが 100% の信頼度で変更され、**Reason** 列には、"ルール '\<*クロス ドメイン ルール名*>' によって修正" というメッセージが表示されます。 クロス ドメイン ルールの詳細については、「 [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md)」を参照してください。  
+ 明確な *Then* クロス ドメイン ルール **"値が次の値と等しい"** をテストするときは、 **[複合ドメイン ルールのテスト]** ダイアログ ボックスに、正しいデータを示す新しい列 **[次に修正]** が含まれます。 クレンジングデータ品質プロジェクトでは、この明確なクロスドメインルールによってデータが100% の信頼度で変更され、[**理由**] 列に "ルール ' ' によって修正されました" というメッセージが表示されます *\<Cross-Domain Rule Name>* 。 クロス ドメイン ルールの詳細については、「 [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md)」を参照してください。  
   
 > [!NOTE]  
 >  明確なクロス ドメイン ルールは、参照データ サービスにアタッチされている複合ドメインでは動作しません。  

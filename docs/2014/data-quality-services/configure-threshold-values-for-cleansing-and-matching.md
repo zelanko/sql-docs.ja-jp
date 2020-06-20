@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c236eabd3fa3766849a239d1f40d3c4fed93addf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eca69d431275229d1fb06c85c842f0257f7ef0e3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480980"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937963"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>クレンジングと照合のしきい値の構成
   このトピックでは、コンピューター支援型のクレンジングおよび照合アクティビティの最中に [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で使用されるしきい値を構成する方法について説明します。  

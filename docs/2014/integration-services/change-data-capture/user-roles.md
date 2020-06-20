@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e11eea40558a8e44232eed22f08d9a60bcd7742b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df6ab109451fbe7cf8df1b7c615f68a6cbad02f0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771088"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922233"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Change Data Capture Service for Oracle by Attunity のユーザー ロール
   ここでは、Change Data Capture Service for Oracle by Attunity のユーザー ロールについて説明します。 ここで説明するロールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロール、Windows ロール、または Oracle データベース ロールです。  
@@ -139,7 +138,7 @@ ms.locfileid: "62771088"
   
  ログ マイニング ユーザーに付与されている必要がある特権を以下に示します。  
   
--   \<any-captured-table> に対する SELECT  
+-   [オン]\<any-captured-table>  
   
 -   SELECT ANY TRANSACTION  
   

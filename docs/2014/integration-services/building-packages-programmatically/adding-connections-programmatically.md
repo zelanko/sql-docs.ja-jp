@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b1258797d76df49a2622335ee798120632706c78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4db1a3f76c6ebbef22d0bbe01e19dd6aca56e3c7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62772227"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925240"
 ---
 # <a name="adding-connections-programmatically"></a>プログラムによる接続の追加
   <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> クラスは、外部データ ソースへの物理接続を表します。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> クラスは、ランタイムから接続の実装詳細を分離します。 これにより、ランタイムは、一貫した予測可能な方法でそれぞれの接続マネージャーとやり取りを行うことができます。 接続マネージャーには、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A>、および <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> など、すべての接続に共通のストック プロパティのセットが含まれています。 ただし、接続マネージャーを構成するために必要なプロパティは、通常 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> および <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> プロパティのみです。 接続クラスが `Open` や `Connect` などのメソッドを公開して物理的にデータ ソースへの接続を確立する他のプログラミング パラダイムと異なり、ランタイム エンジンは、パッケージの実行中に、そのパッケージのすべての接続を管理します。  

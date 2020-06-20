@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5453bb0f67f670d20f239957ebc1e7bc799d0170
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 8e258ac763d8c5e057f8dcdb6f740aacb4fef1c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859579"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042637"
 ---
 # <a name="feature-review"></a>[機能の確認]
   [機能の確認] ページは、準備された機能の読み取り専用の一覧です。これらの機能は、イメージの完了ステップの最後に構成されて完了となります。 機能一覧はイメージの準備ステップ時に選択されます。イメージの完了ステップで変更することはできません。 表示されている機能に加え、準備済みインスタンスには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client も含まれます。  

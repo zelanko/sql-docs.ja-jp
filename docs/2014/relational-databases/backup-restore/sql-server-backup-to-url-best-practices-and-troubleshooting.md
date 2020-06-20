@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ac34c95e7ee4dc6f57ef7d8806a7db1bb981a944
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d46820f3542e562f43fc4ae4c4d4ee1f91fcdf3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175967"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956468"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
   このトピックでは、Azure Blob service との間の SQL Server のバックアップと復元に関するベスト プラクティスとトラブルシューティングのヒントを示します。  
@@ -77,7 +76,7 @@ ms.locfileid: "70175967"
   
     -   トレース フラグ 3051 を設定して、次の形式の特定のエラー ログへの記録を有効にします。  
   
-         BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log。ここで、\<action> には次のいずれかを指定します。  
+         BackupToUrl- \<instname> - \<dbname> -action- \<PID> .log \<action> は次のいずれかになります。  
   
         -   `DB`  
   
@@ -94,11 +93,11 @@ ms.locfileid: "70175967"
 -   圧縮されたバックアップから復元するときに、次のエラーが表示される場合があります。  
   
     -   **SqlException 3284 が発生しました。重大度:16、状態: 5**  
-        **デバイス 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' のメッセージマークは、アラインされていません。Backupset の作成に使用したのと同じブロックサイズを使用して Restore ステートメントを再実行してください: ' 65536 ' は、可能な値のように見えます。**  
+        **デバイス ' ' のメッセージマーク https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak は、アラインされていません。Backupset の作成に使用したのと同じブロックサイズを使用して Restore ステートメントを再実行してください: ' 65536 ' は、可能な値のように見えます。**  
   
          このエラーを解決するには、`BACKUP` を指定した `BLOCKSIZE = 65536` ステートメントを再実行してください。  
   
--   アクティブなリースを保持している BLOB が原因でバックアップ中に発生するエラー: バックアップ処理に失敗すると、アクティブなリースを保持する BLOB が生成されます。  
+-   アクティブなリースを保持している BLOB が原因でバックアップ中に発生するエラー:バックアップ処理に失敗すると、アクティブなリースを保持する BLOB が生成されます。  
   
      BACKUP ステートメントが再実行されると、バックアップ操作が次のようなエラーで失敗することがあります。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "70175967"
   
  プロキシ サーバーで、1 分あたりの接続数を制限する設定が使用されている場合があります。 Backup to URL プロセスはマルチスレッド プロセスであるため、この制限を超える可能性があります。 制限を超えた場合、プロキシ サーバーは接続を切断します。 この問題を解決するには、プロキシ設定を変更し、SQL Server がプロキシを使用しないようにします。   エラー ログに表示される可能性のある種類またはエラー メッセージの例を次に示します。  
   
--   "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" への書き込みに失敗しました: BACKUP to URL がリモートエンドポイントから例外を受け取りました。 例外メッセージ: 転送接続からデータを読み取ることができません: 接続は閉じられました。  
+-   "" への書き込みに http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 失敗しました: Backup TO URL がリモートエンドポイントから例外を受け取りました。 例外メッセージ: 転送接続からデータを読み取ることができません: 接続は閉じられました。  
   
 -   ファイル "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" で回復できない I/O エラーが発生しました。リモート エンドポイントからエラーを収集できませんでした。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "70175967"
   
      バックアップ データベースが異常終了しています。  
   
--   BackupIoRequest:: ReportIoError: バックアップデバイス 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak' で書き込みエラーが発生しています。 Backup to URL がリモート エンドポイントから例外を受け取ったオペレーティング システム エラーです。 例外メッセージ: 転送接続からデータを読み取ることができません: 接続は閉じられました。  
+-   BackupIoRequest:: ReportIoError: バックアップデバイス ' ' で書き込みエラーが発生 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak しています。 Backup to URL がリモート エンドポイントから例外を受け取ったオペレーティング システム エラーです。 例外メッセージ: 転送接続からデータを読み取ることができません: 接続は閉じられました。  
   
  トレース フラグ 3051 を使用して詳細ログを有効にすると、ログに次のメッセージが表示される場合もあります。  
   
@@ -133,7 +132,7 @@ ms.locfileid: "70175967"
   
  **選択されていない既定のプロキシ設定:**  
   
- 既定の設定が選択されていないことが原因で、次に示すようなプロキシ認証エラーが発生することがあります。 "*http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" というファイルで回復不可能な i/o エラーが発生しました。 Backup to URL がリモートエンドポイントから例外を受け取りました。例外メッセージ: リモートサーバーからエラーが返されました: (407)* **プロキシ認証が必要**です。  
+ 既定の設定が選択されていないことが原因で、次に示すようなプロキシ認証エラーが発生することがあります。 "" という*ファイルで回復不可能な i/o エラーが発生しました。 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: BACKUP to URL がリモートエンドポイントから例外を受け取りました。例外メッセージ: リモートサーバーからエラーが返されました: (407)* **プロキシ認証が必要**です。  
   
  この問題を解決するには、次の手順に従って、Backup to URL プロセスで既定のプロキシ設定を使用できるようにするための構成ファイルを作成します。  
   
@@ -151,9 +150,9 @@ ms.locfileid: "70175967"
   
     ```  
   
-2.  SQL Server インスタンスの Binn フォルダーに構成ファイルを配置します。 たとえば、SQL Server がコンピューターの C ドライブにインストールされている場合は、構成ファイルを*C:\Program SERVER\MSSQL12.\< SQL に配置します。InstanceName> \MSSQL\Binn*。  
+2.  SQL Server インスタンスの Binn フォルダーに構成ファイルを配置します。 たとえば、SQL Server がコンピューターの C ドライブにインストールされている場合は、構成ファイルを*C:\Program SERVER\MSSQL12. \<InstanceName> SQL に配置します。\MSSQL\Binn*。  
   
-## <a name="troubleshooting-sql-server-managed-backup-to-azure"></a>Azure への管理されたバックアップ SQL Server のトラブルシューティング  
+## <a name="troubleshooting-sql-server-managed-backup-to-azure"></a>Azure への SQL Server マネージド バックアップのトラブルシューティング  
  SQL Server マネージド バックアップは Backup to URL の上に構築されるので、前のセクションで説明したトラブルシューティングのヒントは、SQL Server マネージド バックアップを使用するデータベースまたはインスタンスに適用されます。  Azure への管理されたバックアップ SQL Server のトラブルシューティングの詳細については、「 [azure へのマネージバックアップのトラブルシューティング SQL Server](sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

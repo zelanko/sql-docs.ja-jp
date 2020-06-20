@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0cf98fadc2f194390f87bca14afcac545ac51df1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 73b901a60a6dd634857b72a67f7f2a2490483cff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705528"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020442"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>機能強化された日付型と時刻型向けの一括コピーの変更 (OLE DB および ODBC)
   このトピックでは、一括コピー機能をサポートするための日付と時刻の機能強化について説明します。 このトピックの情報は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の OLE DB と ODBC の両方に当てはまります。  
@@ -26,12 +25,12 @@ ms.locfileid: "82705528"
 ## <a name="format-files"></a>フォーマット ファイル  
  フォーマット ファイルを対話形式で作成する場合に、日付型と時刻型の指定に使用する入力、および対応するホスト ファイル データ型名を次の表に示します。  
   
-|ファイル ストレージ型|ホスト ファイル データ型|"フィールド <field_name> [\<default>] のファイル ストレージ型を入力してください" というプロンプトへの応答|  
+|ファイル ストレージ型|ホスト ファイル データ型|プロンプトに対する応答: "フィールドのファイルストレージ型を入力 <field_name> [ \<default> ]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
 |Date|SQLDATE|de|  
-|Time|SQLTIME|te|  
+|時間|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -72,7 +71,7 @@ ms.locfileid: "82705528"
 |DATETIME|8|  
 |smalldatetime|4|  
 |date|3|  
-|time|6|  
+|時間|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
   
@@ -90,12 +89,12 @@ ms.locfileid: "82705528"
 ## <a name="bcp-types-in-sqlnclih"></a>sqlncli.h 内の BCP 型  
  sqlncli.h では、ODBC の BCP API 拡張機能で使用する次の型が定義されています。 これらの型は OLE DB で IBCPSession::BCPColFmt の *eUserDataType* パラメーターと共に渡されます。  
   
-|ファイル ストレージ型|ホスト ファイル データ型|IBCPSession:: BCPColFmt と共に使用するには、sqlncli に「」と入力します。|[値]|  
+|ファイル ストレージ型|ホスト ファイル データ型|IBCPSession:: BCPColFmt と共に使用するには、sqlncli に「」と入力します。|値|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
 |Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|時間|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
@@ -107,7 +106,7 @@ ms.locfileid: "82705528"
 |To --><br /><br /> From|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Date|1|-|1、6|1、6|1、6|1、5、6|1、3|1、3|  
-|Time|N/A|1、10|1、7、10|1、7、10|1、7、10|1、5、7、10|1、3|1、3|  
+|時間|N/A|1、10|1、7、10|1、7、10|1、7、10|1、5、7、10|1、3|1、3|  
 |Smalldatetime|1、2|1、4、10|1|1|1、10|1、5、10|1、11|1、11|  
 |Datetime|1、2|1、4、10|1、12|1|1、10|1、5、10|1、11|1、11|  
 |Datetime2|1、2|1、4、10|1、10 (ODBC) 1、12 (OLE DB)|1、10|1、10|1、5、10|1、3|1、3|  

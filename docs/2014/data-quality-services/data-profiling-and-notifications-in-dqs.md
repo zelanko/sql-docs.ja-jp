@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 53fbe246db44b8aaa1dfda1e79d543f063919ede
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6c6a8643f3e0a09abba424498c258ae4bb91d37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480801"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937843"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS のデータ プロファイルと通知
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のデータ プロファイルは、既存のデータ ソースのデータを分析し、DQS のアクティビティでデータに関する統計情報を表示するプロセスです。 このプロセスでは、データ品質が自動的に測定されます。 DQS のプロファイルは、DQS のナレッジ マネージメントおよびデータ品質プロジェクトに統合されており、 動的に調整が可能です。 プロファイルの主な目的は、一連のデータ品質プロセスを通じて意思決定を支援すること、およびプロセスの有効性を評価することの 2 つです。 DQS のプロファイル プロセスには次の利点があります。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4782a640d38c4f7a282f37fecb4765ce7677f93e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8a2e93ee36eb4bfadf18c5b78f552380d1c94266
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707214"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043545"
 ---
 # <a name="using-large-value-types"></a>大きな値をとるデータ型の使用
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンでは、大きな値をとるデータ型を使用して作業する場合に特別な処理が必要でした。 大きな値のデータ型とは、最大行サイズの 8 KB を超えるデータ型のことです。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]では、 **varchar**、 **nvarchar** 、および**varbinary**データ型の**max**指定子が導入され、2 ^ 31-1 バイトの大きさの値を格納できるようになりました。 テーブルの列と変数では [!INCLUDE[tsql](../../../includes/tsql-md.md)] 、 **varchar (max)**、 **nvarchar (max)** 、または**varbinary (max)** データ型を指定できます。  

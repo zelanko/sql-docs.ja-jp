@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c4a2f747192b1cddefeac256d4470a2b345305de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de6ee4b3ba52dec87d71bb97707a8cd8f748d854
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479950"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971772"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>サブスクリプション ビューを作成する (マスター データ サービス)
-  サブスクライブシステムで使用するために[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベースにデータのビューを作成する場合は、サブスクリプションビューを作成します。  
+  サブスクライブシステムで使用するためにデータベースにデータのビューを作成する場合は、サブスクリプションビューを作成し [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ます。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
@@ -53,7 +52,7 @@ ms.locfileid: "65479950"
   
 9. **[形式]** ボックスの一覧から **[明示的レベル]** または **[派生レベル]** を選択した場合、ビューに含める階層内のレベル数を入力します。  
   
-10. **[Save]** (保存) をクリックします。  
+10. **[保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [データのエクスポート &#40;マスターデータサービス&#41;](overview-exporting-data-master-data-services.md)   

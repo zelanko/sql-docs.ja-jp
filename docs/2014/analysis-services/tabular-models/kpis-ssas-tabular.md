@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdfbc4825908f409392f7dcca67749cbe08a407c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067000"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938835"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI (SSAS テーブル)
   *KPI* (主要業績評価指標) は、表形式モデルで、 *対象* の値に対する *ベース* メジャーによって定義される、また、メジャーまたは絶対値によって定義される値のパフォーマンスの測定に使用されます。 このトピックは、テーブル モデル作成者が表形式モデルの KPI の基本を理解できることを目的としています。  
@@ -30,7 +29,7 @@ ms.locfileid: "66067000"
   
 -   [関連タスク](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>効果  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 利点  
  ビジネス用語では、主要業績評価指標 (KPI) とは、ビジネス目標を判断するための測定値のことです。 KPI は一定期間中頻繁に評価されます。 たとえば、組織の営業部門では KPI を使用して予測総利益に対する月間売上総利益を測定できます。 経理部門では、月間の収入に対する支出を測定してコストを評価し、人事部門では、四半期単位の従業員離職率を測定することができます。 これらはそれぞれ KPI の一例です。 企業のプロフェッショナルは、グループにまとめて事業のスコアカードに記録した KPI を頻繁に使用し、事業の成功度の履歴要約をすばやく正確に取得したり、傾向を把握したりします。  
   
  表形式モデルの KPI には次のものが含まれます。  
@@ -44,7 +43,7 @@ ms.locfileid: "66067000"
  **状態のしきい値**  
  状態のしきい値は、低いしきい値と高いしきい値との間の範囲によって、または固定値によって定義されます。 状態のしきい値は、対象の値と比べたベース値の状態を簡単に判別できるようにグラフィックで表示されます。  
   
-##  <a name="example"></a><a name="bkmk_example"></a>よう  
+##  <a name="example"></a><a name="bkmk_example"></a> 例  
  Adventure Works の販売責任者は、販売担当者の一定期間 (年) の販売ノルマの達成状況がひとめでわかるようなピボットテーブルを作成しようとしています。 各営業担当者に対して、ピボットテーブルに実際の販売量をドル単位で表示し、販売ノルマの金額をドル単位で表示し、各販売員が販売ノルマを下回っているか、上回るか、または上回っているかを示す簡単なグラフィックを表示したいと考えています。 データは年単位でスライスできるようにしたいと考えています。  
   
  これを行うために、営業課長は、組織の BI ソリューション開発者に対して、AdventureWorks テーブルモデルに Sales KPI を追加するための支援を参加させます。 次に、 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] を使用してデータ ソースの Adventure Works 表形式モデルに接続し、ピボットテーブルを作成してフィールド (メジャーと KPI) およびスライサーを設定し、販売担当者がノルマを達成したかどうかを分析します。  

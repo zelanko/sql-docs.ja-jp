@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: deb9ddbc59e8ff76c8c459022d73cca7e7de81d3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eba957ad1b5b9648bdc6676cd33a33afedc8c158
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706345"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022891"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   を使用すると、 `SQLColAttribute` 準備済みまたは実行済みの ODBC ステートメントの結果セット列の属性を取得できます。 `SQLColAttribute`準備されたステートメントでを呼び出すと、との間にラウンドトリップが発生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、ステートメントの実行の一部として結果セットの列データを受け取ります。そのため、 `SQLColAttribute` **Sqlexecute**または**SQLExecDirect**の完了後にを呼び出すと、サーバーのやり取りは行われません。  

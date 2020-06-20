@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ea97a56ad10fd0545e9a550defcf673f05542c8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964782"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>チェックポイントを使用してパッケージを再開する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、失敗したパッケージ全体を再実行する代わりに、失敗した時点から再開することができます。 パッケージがチェックポイントを使用するように設定されている場合、パッケージの実行に関する情報がチェックポイント ファイルに書き込まれます。 失敗したパッケージを再実行する場合、チェックポイント ファイルを使用して、失敗した時点からパッケージを再開します。 パッケージの実行が成功するとチェックポイント ファイルは削除され、次にパッケージが実行されるときに再度作成されます。  
@@ -59,7 +58,7 @@ ms.locfileid: "62767034"
 |CheckpointUsage|チェックポイントを使用するかどうかを指定します。|  
 |SaveCheckpoints|パッケージでチェックポイントを保存するかどうかを示します。 失敗した時点からパッケージを再開するには、このプロパティを True に設定する必要があります。|  
   
- また、再起動ポイントとして識別`true`するパッケージ内のすべてのコンテナーに対して、FailPackageOnFailure プロパティをに設定する必要があります。  
+ また、 `true` 再起動ポイントとして識別するパッケージ内のすべてのコンテナーに対して、FailPackageOnFailure プロパティをに設定する必要があります。  
   
  ForceExecutionResult プロパティを使用して、パッケージのチェックポイントの使用をテストできます。 タスクまたはコンテナーの ForceExecutionResult を Failure に設定すると、実行時の障害を擬似的に実現できます。 パッケージを再実行すると、失敗したタスクとコンテナーが再実行されます。  
   
@@ -73,7 +72,7 @@ ms.locfileid: "62767034"
 |`IfExists`|チェックポイント ファイルが存在する場合、チェックポイント ファイルを使用することを指定します。 チェックポイント ファイルが存在する場合、パッケージは前の実行で失敗した時点から再開されます。存在しない場合、パッケージのワークフローの最初から実行されます。|  
   
 > [!NOTE]  
->  Dtexec のチェック**ポイント**オプションは、パッケージの`SaveCheckpoints`プロパティをに`True`、 `CheckpointUsage`プロパティを常にに設定することと同じです。 詳細については、「[dtexec ユーティリティ](dtexec-utility.md)」を参照してください。  
+>  Dtexec のチェック**ポイント**オプションは、 `SaveCheckpoints` パッケージのプロパティをに `True` 、プロパティを常にに設定することと同じです `CheckpointUsage` 。 詳細については、「[dtexec ユーティリティ](dtexec-utility.md)」を参照してください。  
   
 ## <a name="securing-checkpoint-files"></a>チェックポイント ファイルのセキュリティ保護  
  パッケージ レベルの保護にはチェックポイント ファイルの保護が含まれないため、チェックポイント ファイルは個別にセキュリティ保護する必要があります。 チェックポイントのデータはファイル システムにしか格納できないので、オペレーティング システムのアクセス制御リスト (ACL) を使用して、ファイルの格納先またはフォルダーのセキュリティを保護する必要があります。 チェックポイント ファイルには、現在の変数値などパッケージの状態に関する情報が含まれているため、セキュリティで保護することが重要です。 たとえば変数には、電話番号などの個人データを含む多数の行で構成されるレコードセットが格納されている場合があります。 詳細については、「 [パッケージで使用されるファイルへのアクセス](../access-to-files-used-by-packages.md)」を参照してください。  

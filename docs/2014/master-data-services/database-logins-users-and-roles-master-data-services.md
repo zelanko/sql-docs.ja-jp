@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e9352910554e5f946f21eae3b51a7d87ff1106bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 416ae500d940eb31eee3294edd07c289b124b6c4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479754"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971652"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>データベース ログイン、ユーザー、およびロール (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] には、 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] データベースをホストする [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンスに自動的にインストールされるログイン、ユーザー、およびロールがあります。 これらのログイン、ユーザー、およびロールは変更しないでください。  
@@ -36,14 +35,14 @@ ms.locfileid: "65479754"
   
 ## <a name="msdb-users"></a>msdb ユーザー  
   
-|ユーザー|説明|  
+|User|説明|  
 |----------|-----------------|  
 |`mds_clr_user`|使用されていません。<br /><br /> mds_dlp_login にマップされます。|  
 |`mds_email_user`|通知に使用します。<br /><br /> mds_email_login にマップされます。<br /><br /> DatabaseMailUserRole ロールのメンバーです。|  
   
 ## <a name="master-data-services-database-users"></a>マスター データ サービス データベース ユーザー  
   
-|ユーザー|説明|  
+|User|説明|  
 |----------|-----------------|  
 |`mds_email_user`|通知に使用します。<br /><br /> mdm スキーマに対する SELECT 権限があります。<br /><br /> mdm.MemberGetCriteria ユーザー定義テーブル型に対する EXECUTE 権限があります。<br /><br /> mdm.udpNotificationQueueActivate ストアド プロシージャに対する EXECUTE 権限があります。|  
 |**mds_schema_user**|mdm スキーマと mdq スキーマを所有します。 既定のスキーマは mdm です。<br /><br /> ログインはマップされません。|  

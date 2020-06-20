@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6834a2a4cd75e70de253419cc42ec5904ce0793
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061220"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924643"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>[一括挿入タスク エディター] ([接続] ページ)
   **[一括挿入タスク エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、一括挿入操作の挿入元と挿入先、および使用するフォーマットを指定できます。  
@@ -28,23 +27,23 @@ ms.locfileid: "66061220"
   
 ## <a name="options"></a>オプション  
  **接続**  
- OLE DB 接続マネージャーを一覧から選択するか、[ \<**新しい接続...**> をクリックして新しい接続を作成します。  
+ OLE DB 接続マネージャーを一覧から選択するか、をクリックして \<**New connection...**> 新しい接続を作成します。  
   
  **関連トピック:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、 [OLE DB 接続マネージャーの構成](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **[DestinationTable]**  
  挿入先のテーブルまたはビューの名前を入力するか、テーブルまたはビューを一覧から選択します。  
   
- **形式**  
+ **Format**  
  一括挿入のフォーマットの挿入元を選択します。 このプロパティのオプションを次の表に示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[ファイルを使用]**|フォーマット指定が格納されているファイルを選択します。 このオプションを選択すると、動的オプションの **[FormatFile]** が表示されます。|  
-|**[指定]**|フォーマットを指定します。 このオプションを`RowDelimiter`選択すると、動的オプション`ColumnDelimiter`とが表示されます。|  
+|**[指定]**|フォーマットを指定します。 このオプションを選択すると、動的オプションとが表示され `RowDelimiter` `ColumnDelimiter` ます。|  
   
  **[最近使ったファイル]**  
- ファイルまたはフラットファイル接続マネージャーを一覧から選択するか、 \<[**新しい接続...**> をクリックして新しい接続を作成します。  
+ ファイルまたはフラットファイル接続マネージャーを一覧から選択するか、をクリックして \<**New connection...**> 新しい接続を作成します。  
   
  このファイルの場所は、このタスクの接続マネージャーに指定されている SQL Server データベース エンジンを基準とする相対パスです。 SQL Server データベース エンジンは、サーバーのローカル ハード ドライブ、共有、または SQL Server にマップされたドライブでこのテキスト ファイルにアクセスできる必要があります。 SSIS ランタイムはこのファイルにアクセスしません。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "66061220"
 ## <a name="format-dynamic-options"></a>[Format] の動的オプション  
   
 ### <a name="format--use-file"></a>[Format] = [ファイルを使用]  
- **[FormatFile]**  
+ **FormatFile**  
  フォーマットファイルのパスを入力するか、参照ボタン ([. **..])** をクリックしてフォーマットファイルを指定します。  
   
 ### <a name="format--specify"></a>[Format] = [指定]  

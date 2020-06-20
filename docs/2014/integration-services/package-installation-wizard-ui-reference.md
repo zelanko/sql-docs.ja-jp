@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b51049f0a55a10ae83af9e0f253c1c717f6d4962
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056826"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964862"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>パッケージ インストール ウィザードの UI リファレンス
   **パッケージ インストール ウィザード** を使用すると、プロジェクトに含まれるパッケージおよびその他のファイル、パッケージの従属ファイルを含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを配置できます。  
@@ -133,7 +132,7 @@ ms.locfileid: "66056826"
  **サーバー名**  
  パッケージの配置先となるサーバーの名前を指定します。  
   
- **Windows 認証を使用する**  
+ **[Windows 認証を使用する]**  
  サーバーのログオンに Windows 認証を使用するかどうかを指定します。 より高いセキュリティのためには Windows 認証をお勧めします。  
   
  **SQL Server 認証を使用する**  

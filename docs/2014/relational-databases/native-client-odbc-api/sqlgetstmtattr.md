@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11c5048cd197643823bb6b0fc8e8247983666d8c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b7bd7f5e1e04254a5fb6f2a228191b3ff7845af4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705983"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022060"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、ドライバー固有のステートメント属性を公開するために、SQLGetStmtAttr を拡張します。  
@@ -32,7 +31,7 @@ ms.locfileid: "82705983"
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  SQL_SOPT_SS_NOCOUNT_STATUS 属性は、NOCOUNT オプションの現在の設定を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。これは、 [SQLRowCount](sqlrowcount.md)が呼び出されたときに、がステートメントの影響を受ける行の数をレポートするかどうかを制御します。 *Valueptr*値の型は SQLLEN です。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT を OFF にします。 SQLRowCount は、影響を受けた行数を返します。|  
 |SQL_NC_ON|NOCOUNT を ON にします。 影響を受ける行の数は SQLRowCount によって返されず、戻り値は0です。|  

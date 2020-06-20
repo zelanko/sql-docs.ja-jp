@@ -1,5 +1,6 @@
 ---
 title: 行セット | Microsoft Docs
+description: すべてのデータプロバイダーが結果セットのデータを表形式で公開できるようにします。 OLE DB では、データ列を含む行のセットである行セット機能を使用します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,19 +18,19 @@ ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da51990e310b7903ce90d0369e30ff098103e141
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18ebbe69102fae5042204c5e5d44024a4ff9f01d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300254"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950117"
 ---
 # <a name="rowsets"></a>行セット
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   行セットとは、データの列を含む行の集まりです。 行セットは、すべての OLE DB データ プロバイダーが表形式で結果セット データを公開できるようにするための重要な機能を持つオブジェクトです。  
   
- コンシューマーでは **IDBCreateSession::CreateSession** メソッドを使用してセッションを作成した後、そのセッションで **IOpenRowset** インターフェイスまたは **IDBCreateCommand** インターフェイスのいずれかを使用して行セットを作成できます。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、これらのインターフェイスの両方をサポートしています。 ここでは、これら両方のメソッドについて説明します。  
+ コンシューマーでは **IDBCreateSession::CreateSession** メソッドを使用してセッションを作成した後、そのセッションで **IOpenRowset** インターフェイスまたは **IDBCreateCommand** インターフェイスのいずれかを使用して行セットを作成できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、これらのインターフェイスの両方をサポートしています。 ここでは、これら両方のメソッドについて説明します。  
   
 -   **IOpenRowset::OpenRowset** メソッドを呼び出して行セットを作成します。  
   

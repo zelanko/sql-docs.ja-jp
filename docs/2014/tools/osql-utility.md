@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95782afe0de8567781316e3478d04a090f968ed5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63017186"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007553"
 ---
 # <a name="osql-utility"></a>osql ユーティリティ
   **osql** ユーティリティを使用すると、 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルを入力できます。 また、このユーティリティは ODBC を使用してサーバーと通信します。  
@@ -93,8 +92,8 @@ C:\>osql
  **-E**  
  パスワードを要求せずに、セキュリティ接続を使用します。  
   
- **-S** _server_name_[ **\\**_instance_name_]  
- 接続先となる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを指定します。 サーバー上の *の既定のインスタンスに接続するには、* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を指定します。 サーバー上のの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]名前付きインスタンスに接続するには、 _server_name_**\\**_instance_name_を指定します。 サーバーを指定しない場合、 **osql** は、ローカル コンピューター上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続します。 ネットワーク上のリモート コンピューターから **osql** を実行するときは、このオプションが必要です。  
+ **-S** _server_name_[ **\\** _instance_name_]  
+ 接続先となる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを指定します。 サーバー上の *の既定のインスタンスに接続するには、* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を指定します。 _server_name_ **\\** サーバー上のの名前付きインスタンスに接続するには、server_name_instance_name_を指定し [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。 サーバーを指定しない場合、 **osql** は、ローカル コンピューター上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続します。 ネットワーク上のリモート コンピューターから **osql** を実行するときは、このオプションが必要です。  
   
  **-H** _wksta_name_  
  ワークステーション名を指定します。 ワークステーション名は **sysprocesses.hostname** に格納され、 **sp_who**により表示されます。 このオプションが指定されていない場合は、現在のコンピューター名であると見なされます。  
@@ -112,7 +111,7 @@ C:\>osql
  列ヘッダーの間に出力する行数を指定します。 既定では、各クエリの結果に対して、ヘッダーは 1 つだけ表示されます。 ヘッダーを出力しない場合は、-1 を指定します。 -1 を使用する場合、パラメーターと設定値の間には空白を入れないでください ( **-h -1** ではなく **-h-1**)。  
   
  **-s** _col_separator_  
- 列の区切り文字を指定します。既定値は空白文字です。 オペレーティングシステムに特別な意味を持つ文字を使用するには (たとえば、| \< ; & >)、その文字を二重引用符 (") で囲みます。  
+ 列の区切り文字を指定します。既定値は空白文字です。 オペレーティングシステムに特別な意味を持つ文字 (たとえば、|; &) を使用するには、 \< > 文字を二重引用符 (") で囲みます。  
   
  **-w** _column_width_  
  出力用の画面幅を設定できます。 既定値は 80 文字です。 出力行が画面幅の最大値を超えると、複数の行に分けて出力されます。  
@@ -194,7 +193,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>解説  
  **osql** ユーティリティは、ここに記載された、大文字と小文字では異なる機能を持つオプションを使用して、オペレーティング システムから直接起動されます。 起動されると、 **osql**は SQL ステートメントを受け取り、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に対話的に送ります。 結果はフォーマットされ、画面に表示されます (**stdout**)。 **osql**を終了するには、QUIT または EXIT を使用します。  
   
- **Osql**を開始するときにユーザー名を指定しなかった[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]場合は、によって環境変数が確認され、 **osqluser =*`user`*()** や**osqlserver =*`server`*()** などのように使用されます。 環境変数が設定されていない場合は、ワークステーションのユーザー名が使用されます。 サーバーを指定していない場合は、ワークステーション名が使用されます。  
+ **Osql**を開始するときにユーザー名を指定しなかった場合は、に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] よって環境変数が確認され、 **osqluser = ( *`user`* )** や**osqlserver = ( *`server`* )** などのように使用されます。 環境変数が設定されていない場合は、ワークステーションのユーザー名が使用されます。 サーバーを指定していない場合は、ワークステーション名が使用されます。  
   
  **-U** と **-P** のどちらのオプションも使用しない場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では接続時に [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 認証モードが使用されます。 認証は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **を実行しているユーザーの**Windows アカウントに基づいて行われます。  
   
@@ -206,7 +205,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL コマンド  
  [!INCLUDE[tsql](../includes/tsql-md.md)] osql **では、** ステートメントの他に次のコマンドも使用できます。  
   
-|command|説明|  
+|コマンド|説明|  
 |-------------|-----------------|  
 |GO|最後の GO の後に入力したすべてのステートメントを実行します。|  
 |RESET|入力したステートメントをすべて消去します。|  
@@ -294,7 +293,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  バッチを実行してから終了し、値を返しません。  
   
--   EXIT **(*`query`*)**  
+-   EXIT **( *`query`* )**  
   
 > [!NOTE]  
 >  クエリを含むバッチを実行し、クエリの結果を返して終了します。  
@@ -325,7 +324,7 @@ RAISERROR(50001, 10, 127)
      戻り値を選択するときに、変換エラーが発生した。  
   
 ## <a name="displaying-money-and-smallmoney-data-types"></a>money (金額) と smallmoney (短精度金額) のデータ型の表示  
- **osql**では`money` 、 `smallmoney`データ型とデータ型が小[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数点以下2桁で表示されますが、では内部的に小数点以下4桁の値が格納されます。 次の例の結果を参照してください。  
+ **osql**では、データ型とデータ型が小数点以下2桁で表示されますが、では `money` `smallmoney` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内部的に小数点以下4桁の値が格納されます。 次の例の結果を参照してください。  
   
 ```  
 SELECT CAST(CAST(10.3496 AS money) AS decimal(6, 4))  

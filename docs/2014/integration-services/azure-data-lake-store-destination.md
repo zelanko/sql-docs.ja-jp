@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d0e86032-2a6b-48b2-898f-e94328474fde
 author: yualan
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ebf686807169bb850e5a3ae8fac8cfb0b8ca7791
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d8e506f95200ecd2f9813ae37e4ac6ffb26afb3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061459"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925403"
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store Destination
   **Azure Data Lake Store Destination** コンポーネントは、SSIS パッケージが Azure Data Lake Store にデータを書き込めるようにします。 サポートされるファイル形式は、テキスト、Avro、および ORC です。 

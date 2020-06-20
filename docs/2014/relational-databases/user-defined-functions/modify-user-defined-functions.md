@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 77fbdc3bf2f579d585a802d5ed137cfe2a149c2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cf25fef91834e237f5cbaac26350220840830bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196451"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009135"
 ---
 # <a name="modify-user-defined-functions"></a>ユーザー定義関数の変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してユーザー定義関数を変更できます。 以下に示す方法でユーザー定義関数を変更しても、関数の権限は変更されません。また、従属する関数、ストアド プロシージャ、またはトリガーにも影響はありません。  

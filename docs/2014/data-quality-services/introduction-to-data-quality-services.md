@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fc6f41f4c9970ff0777d1624a5b18e136b06cb97
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 67702646a9b2781551c90e71f0dab75410dc0cbe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175493"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937573"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services の概要
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で提供されているデータ品質ソリューションを使用すると、データ スチュワードまたは IT プロフェッショナルは、データの品質を維持し、データをビジネス使用に適したものにすることができます。 DQS は、データ ソースの整合性と品質を管理する、コンピューター支援型のインタラクティブなナレッジ ドリブン ソリューションです。 DQS を利用すると、データについてのナレッジを発見し、構築して、管理できます。 その後、そのナレッジを使用して、データのクレンジング、マッチング、プロファイリングを実行できます。 また、DQS データ品質プロジェクトに含まれる参照データ プロバイダーのクラウド ベースのサービスを利用することもできます。

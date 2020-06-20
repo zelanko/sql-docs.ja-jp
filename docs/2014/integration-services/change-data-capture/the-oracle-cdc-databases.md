@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f99e6a65a699bae09df61f1de8a1a7c1ee88c52
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289270"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922325"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC データベース
   Oracle CDC インスタンスは、ターゲット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの同名の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連付けられます。 このデータベースは、Oracle CDC データベース (または CDC データベース) と呼ばれます。  
@@ -45,7 +44,7 @@ ms.locfileid: "79289270"
  CDC データベースが作成され、CDC ソース Oracle テーブルが設定されたら、CDC データベースの所有者は、ミラー テーブルの SELECT 権限を付与したり、SQL Server CDC ゲーティング ロールを定義したりして、変更データにアクセスできるユーザーを制御できます。  
   
 ## <a name="mirror-tables"></a>ミラー テーブル  
- Oracle ソース データベースの各キャプチャ対象テーブル (\<schema-name>.\<table-name>) に対して、同じスキーマ名とテーブル名を持つ同様の空のテーブルが CDC データベースに作成されます。 スキーマ名が `cdc` (大文字と小文字は区別されません) の Oracle ソース テーブルはキャプチャできません。 `cdc` の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スキーマは SQL Server CDC のために予約されているためです。  
+ Oracle ソースデータベースでは、キャプチャされたテーブルごとに、 \<schema-name> \<table-name> 同じスキーマ名とテーブル名を使用して、同じような空のテーブルが CDC データベースに作成されます。 スキーマ名が `cdc` (大文字と小文字は区別されません) の Oracle ソース テーブルはキャプチャできません。 `cdc` の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スキーマは SQL Server CDC のために予約されているためです。  
   
  ミラー テーブルは空です。データは格納されていません。 ミラー テーブルは、Oracle CDC インスタンスによって使用される標準の SQL Server CDC インフラストラクチャを有効にするために使用されます。 ミラー テーブルに対してデータの挿入や更新が行われないようにするために、UPDATE、DELETE、および INSERT のすべての操作が PUBLIC に対して拒否されます。 これにより、ミラー テーブルを変更できないことが保証されます。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "79289270"
 ###  <a name="change-tables-_ct"></a><a name="bkmk_change_tables_ct"></a> 変更テーブル (_CT)  
  変更テーブルは、ミラー テーブルから作成されます。 変更テーブルには、Oracle データベースからキャプチャされた変更データが含まれます。 テーブルは、次の規則に従って命名されます。  
   
- **[cdc].[\<capture-instance>_CT]**  
+ **[cdc]。[ \<capture-instance> _CT]**  
   
  テーブル `<schema-name>.<table-name>`に対して最初にキャプチャを有効にしたときの既定のキャプチャ インスタンス名は、 `<schema-name>_<table-name>`です。 たとえば、Oracle HR.EMPLOYEES テーブルの既定のキャプチャ インスタンス名は HR_EMPLOYEES で、関連付けられる変更テーブルは [cdc]. [HR_EMPLOYEES_CT] です。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "79289270"
   
 |Name|Default|Min|Max|静的|説明|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|trace|False|-|-|False|使用可能な値:<br /><br /> **本来**<br /><br /> **False**<br /><br /> **on**<br /><br /> **オート**|  
+|trace|False|-|-|False|使用可能な値:<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **オート**|  
 |cdc_update_state_interval|10|1|120|False|トランザクションに割り当てられるメモリのチャンクのサイズ (KB) です (トランザクションは複数のチャンクを割り当てることができます)。 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) テーブルの memory_limit 列を参照してください。|  
 |target_max_batched_transactions|100|1|1000|True|SQL Server の CT テーブルの更新で 1 つのトランザクションとして処理できる Oracle トランザクションの最大数です。|  
 |target_idle_lsn_update_interval|10|0|1|False|キャプチャ対象テーブルで操作が行われていない場合に **lsn_time_mapping** テーブルを更新する間隔 (秒) です。|  

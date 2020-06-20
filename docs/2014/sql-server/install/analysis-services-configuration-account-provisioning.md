@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 169b1af2-6fe2-467f-8ca4-919f24c620ce
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: 033c1ec1b0ad478e525f3ea9e8f172c5e5e31eef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 109b5d9ddddf2b78c0bb8947cfa876d233f804ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096796"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042710"
 ---
 # <a name="analysis-services-configuration---account-provisioning"></a>Analysis Services の構成 - アカウントの準備
   このページを使用すると、サーバー モードを設定し、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] への無制限アクセスを必要とするユーザーまたはサービスに管理権限を付与することができます。 セットアップでは、ローカル Windows グループ BUILTIN\Administrators が、インストールするインスタンスの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー管理者ロールに自動的に追加されません。 サーバー管理者ロールにローカルの Administrators グループを追加する場合は、そのグループを明示的に指定する必要があります。  

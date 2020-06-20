@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bf00ecd74b64b3910ba19365920baf914f86939c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 67a932996ccbf52f5ab21fd6aa62381184ebc510
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705889"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021810"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   テーブルには、一意の行識別子として使用できる1つ以上の列が含まれる場合があります。また、PRIMARY KEY 制約なしで作成されたテーブルは、SQLPrimaryKeys に空の結果セットを返します。 ODBC 関数[sqlの列](sqlspecialcolumns.md)は、主キーのないテーブルの行識別子の候補を報告します。  
