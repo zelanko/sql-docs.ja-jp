@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d3462266279ed80e94871db4831918ad70b444be
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 19e9ba9013d592d752189adadfb761f1741fd91a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922146"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055460"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server 監査レコード
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査機能を使用すると、サーバー レベルおよびデータベース レベルのイベントのグループおよびイベントを監査することができます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](sql-server-audit-database-engine.md)」を参照してください。 [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])  
@@ -50,13 +49,13 @@ ms.locfileid: "82922146"
 |**database_name**|アクションが発生したデータベース コンテキスト。|`sysname`|いいえ|  
 |**schema_name**|アクションが発生したスキーマ コンテキスト。|`sysname`|いいえ|  
 |**object_name**|監査が発生したエンティティの名前。 これには次のものが含まれます<br /><br /> サーバー オブジェクト<br /><br /> databases<br /><br /> データベース オブジェクト<br /><br /> スキーマ オブジェクト<br /><br /> TSQL ステートメント (あれば)|`sysname`|いいえ|  
-|**諸表**|TSQL ステートメント (あれば)|`nvarchar(4000)`|いいえ|  
+|**statement**|TSQL ステートメント (あれば)|`nvarchar(4000)`|いいえ|  
 |**additional_information**|XML として格納されるイベントに関する追加情報。|`nvarchar(4000)`|いいえ|  
   
 ## <a name="remarks"></a>解説  
  アクションに該当しないために列の値が設定されない場合もあります。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査は、監査レコードの文字フィールドに 4,000 文字のデータを格納します。 監査可能なアクションから返される **additional_information** と **statement** の値が 4,000 文字を超えていた場合は、そのデータを記録するために、 **sequence_no** 列を使用して 1 つの監査アクションの監査レポートに複数のレコードが書き込まれます。 このプロセスは次のとおりです。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査は、監査レコードの文字フィールドに 4,000 文字のデータを格納します。 監査可能なアクションから返される **additional_information** と **statement** の値が 4,000 文字を超えていた場合は、そのデータを記録するために、 **sequence_no** 列を使用して 1 つの監査アクションの監査レポートに複数のレコードが書き込まれます。 プロセスは、次のとおりです。  
   
 -   **statement** 列が 4,000 文字に分割されます。  
   

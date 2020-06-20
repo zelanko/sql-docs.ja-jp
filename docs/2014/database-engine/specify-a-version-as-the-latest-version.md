@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 407dffb1-3ecf-461e-835d-124781f26ee7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d598ec6f828fc7d8d59b3f998b775a752b94c4a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773478"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928873"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>特定のバージョンを最新バージョンとして指定する
   ソース管理にファイルをチェックインすると、そのバージョンが最新バージョンになります。つまり、その最新バージョンをチェックアウト (取得) するユーザーは、その最新項目のローカル コピーを受け取ることになります。  
@@ -34,19 +33,19 @@ ms.locfileid: "62773478"
   
 ### <a name="to-pin-a-version"></a>バージョンにピンを設定するには  
   
-1.  で[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]、ソリューションを開きます。  
+1.  で、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ソリューションを開きます。  
   
 2.  ソリューション エクスプローラーで、最新バージョンとして指定するファイルを選択します。  
   
 3.  [**ファイル**] メニューの [**ソース管理**] をポイントし、[**参照] をクリックし**ます。  
   
-4.  [ファイル>**の** \<履歴] ダイアログボックスで、最新バージョンとして指定するバージョンを選択し、[**ピン留め**] をクリックします。  
+4.  [**履歴** \<file> ] ダイアログボックスで、最新バージョンとして指定するバージョンを選択し、[**ピン留め**] をクリックします。  
   
      選択したバージョンの横に、それがファイルの最新バージョンであることを示すピンの記号が表示されます。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] に別のバージョンが読み込まれている場合は、ファイルの再読み込みのための画面が表示されます。  
   
 ### <a name="to-roll-back-to-a-version"></a>特定のバージョンにロールバックするには  
   
-1.  で[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]、ソリューションを開きます。  
+1.  で、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ソリューションを開きます。  
   
 2.  ソリューション エクスプローラーで、最新バージョンとして指定する項目を選択します。  
   

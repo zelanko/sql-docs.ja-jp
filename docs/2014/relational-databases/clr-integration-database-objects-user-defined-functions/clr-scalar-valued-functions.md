@@ -16,19 +16,18 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cd2a71e6acd52ba92f44c26f184bbd3141de6f4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919588"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954704"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR スカラー値関数
-  スカラー値関数 (SVF) は、文字列値、整数値、ビット値などの単一値を返します。任意の .NET Framework プログラミング言語を使用し、マネージド コードでユーザー定義スカラー値関数を作成できます。 これらの関数からは、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードや他のマネージド コードにアクセスできます。 CLR 統合の利点とマネージコードと[!INCLUDE[tsql](../../includes/tsql-md.md)]の使い分けの詳細については、「 [Clr 統合の概要](../clr-integration/clr-integration-overview.md)」を参照してください。  
+  スカラー値関数 (SVF) は、文字列値、整数値、ビット値などの単一値を返します。任意の .NET Framework プログラミング言語を使用し、マネージド コードでユーザー定義スカラー値関数を作成できます。 これらの関数からは、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードや他のマネージド コードにアクセスできます。 CLR 統合の利点とマネージコードとの使い分けの詳細については [!INCLUDE[tsql](../../includes/tsql-md.md)] 、「 [clr 統合の概要](../clr-integration/clr-integration-overview.md)」を参照してください。  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR スカラー値関数の要件  
- .NET Framework SVF は、.NET Framework アセンブリのクラスのメソッドとして実装されます。 SVF から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返される入力パラメーターと型は、でサポートされる任意のスカラーデータ型にすること`varchar`が`char`でき`rowversion`ます。ただし、、、、、、、、、また`text`はは`ntext` `image` `timestamp` `table` `cursor`除きます。 SVF では、実装メソッドの戻り値のデータ型が上記のいずれかの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型になるようにする必要があります。 型変換の詳細については、「 [CLR パラメーターデータのマッピング](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」を参照してください。  
+ .NET Framework SVF は、.NET Framework アセンブリのクラスのメソッドとして実装されます。 SVF から返される入力パラメーターと型は、でサポートされる任意のスカラーデータ型にすることができます。ただし、、、、、、、、、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `varchar` `char` `rowversion` `text` `ntext` `image` `timestamp` `table` またはは除き `cursor` ます。 SVF では、実装メソッドの戻り値のデータ型が上記のいずれかの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型になるようにする必要があります。 型変換の詳細については、「 [CLR パラメーターデータのマッピング](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」を参照してください。  
   
  .NET Framework 言語で .NET Framework SVF を実装する場合、`SqlFunction` カスタム属性を指定し、その関数に関する詳細情報を含めることができます。 `SqlFunction` 属性は、その関数がデータへのアクセスや変更を行うかどうか、決定的関数かどうか、浮動小数点演算を必要とするかどうかなどを示します。  
   

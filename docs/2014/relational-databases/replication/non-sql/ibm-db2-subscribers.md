@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54263e75c0f4c7da7c6d9c24ea499c202372aa64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022197"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068619"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 サブスクライバー
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server に含まれている OLE DB プロバイダーを経由した IBM DB2/AS 400、DB2/MVS、および DB2/Universal Database へのプッシュ サブスクリプションをサポートします。  
@@ -130,7 +129,7 @@ ms.locfileid: "63022197"
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|なし|  
+|`sql_variant`|N/A|  
 |`sysname`|VARCHAR(128)|  
 |`text`|VARCHAR (0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
@@ -148,11 +147,11 @@ ms.locfileid: "63022197"
 ### <a name="data-type-mapping-considerations"></a>データ型マッピングに関する注意点  
  DB2 サブスクライバーにレプリケートするときは、次に示すデータ型のマッピングに関する問題点について考慮してください。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`、 `varchar`、 `binary`および`varbinary`を db2 CHAR、varchar、CHAR for bit data、および varchar for bit data にマップする場合、レプリケーションでは、db2 データ型の長さが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]型の長さと同じになるように設定されます。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` 、 `varchar` 、 `binary` および `varbinary` を db2 CHAR、varchar、CHAR for bit data、および varchar for bit data にマップする場合、レプリケーションでは、db2 データ型の長さが型の長さと同じになるように設定され [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
      これによって、DB2 ページ サイズ制約が行の最大サイズに対応するために十分な大きさである限り、生成されるテーブルはサブスクライバーで正常に作成できます。 DB2 データベースにアクセスするために使用されるログインに、DB2 にレプリケートされているテーブルに対して十分なサイズを持つテーブル スペースにアクセスするための権限があることを確認します。  
   
--   DB2 は、32 KB の VARCHAR 列をサポートできます。このため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB 列の一部は問題なく DB2 VARCHAR 列にマップできる可能性があります。 ただし、レプリケーションが DB2 に対して使用する OLE DB プロバイダーでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB を DB2 の LOB にマップする処理はサポートしていません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`この`varchar(max)`ため、、、 `ntext`、および`nvarchar(max)`の各列は、生成された create スクリプトでは VARCHAR (0) にマップされます。 長さの値が 0 の場合は、サブスクライバーにスクリプトを適用する前に、適切な値に変更する必要があります。 データ型の長さが変更されない場合、DB2 サブスクライバーでテーブルの作成を試みると、DB2 でエラー 604 が発生します (エラー 604 は、データ型の有効桁数または長さの属性が有効でないことを示します)。  
+-   DB2 は、32 KB の VARCHAR 列をサポートできます。このため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB 列の一部は問題なく DB2 VARCHAR 列にマップできる可能性があります。 ただし、レプリケーションが DB2 に対して使用する OLE DB プロバイダーでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB を DB2 の LOB にマップする処理はサポートしていません。 このため、、、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text` `varchar(max)` 、およびの各 `ntext` `nvarchar(max)` 列は、生成された create スクリプトでは VARCHAR (0) にマップされます。 長さの値が 0 の場合は、サブスクライバーにスクリプトを適用する前に、適切な値に変更する必要があります。 データ型の長さが変更されない場合、DB2 サブスクライバーでテーブルの作成を試みると、DB2 でエラー 604 が発生します (エラー 604 は、データ型の有効桁数または長さの属性が有効でないことを示します)。  
   
      レプリケートするソース テーブルの情報に基づいて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB を可変長の DB2 項目にマップすることが適切であるかどうかを判断し、カスタム作成スクリプトで適切な最大長を指定してください。 カスタム作成スクリプトの指定の詳細については、このトピックの「IBM DB2 サブスクライバーの構成」の手順 5. を参照してください。  
   
@@ -161,9 +160,9 @@ ms.locfileid: "63022197"
   
      LOB 列が適切にマップされていない場合は、アーティクルに列フィルターを使用して、列がレプリケートされないようにすることを検討してください。 詳細については、「[パブリッシュされたデータのフィルター選択](../publish/filter-published-data.md)」を参照してください。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar`と`nvarchar`を db2 CHAR および VARCHAR にレプリケートする場合、レプリケーションでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]型と同じ長さ指定子が db2 型に対して使用されます。 ただし、データ型の長さが、生成された DB2 テーブルには小さくなりすぎる可能性があります。  
+-   とを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` `nvarchar` DB2 CHAR および VARCHAR にレプリケートする場合、レプリケーションでは、型と同じ長さ指定子が db2 型に対して使用され [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 ただし、データ型の長さが、生成された DB2 テーブルには小さくなりすぎる可能性があります。  
   
-     DB2 環境によっては[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` 、データ項目が1バイト文字に制限されないことがあります。CHAR または VARCHAR 項目の長さは、この値を考慮する必要があります。 また、必要に応じて、 *シフト イン* 文字と *シフト アウト* 文字についても考慮する必要があります。 `nvarchar`列と列を含む`nchar`テーブルをレプリケートする場合は、カスタム作成スクリプトでデータ型の最大長を指定する必要があります。 カスタム作成スクリプトの指定の詳細については、このトピックの「IBM DB2 サブスクライバーの構成」の手順 5. を参照してください。  
+     DB2 環境によっ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` ては、データ項目が1バイト文字に限定されない場合があります。 CHAR または VARCHAR 項目の長さは、これを考慮する必要があります。 また、必要に応じて、 *シフト イン* 文字と *シフト アウト* 文字についても考慮する必要があります。 列と列を含むテーブルをレプリケートする場合は `nchar` `nvarchar` 、カスタム作成スクリプトでデータ型の最大長を指定する必要があります。 カスタム作成スクリプトの指定の詳細については、このトピックの「IBM DB2 サブスクライバーの構成」の手順 5. を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   

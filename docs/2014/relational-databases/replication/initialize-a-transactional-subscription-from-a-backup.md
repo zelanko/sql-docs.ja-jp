@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e7fb32de254729c4173fab260e5797db5f2cc2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1563d58f2d54f77680781e22a162112ade1658e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67793299"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057108"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>トランザクション サブスクリプションのバックアップからの初期化 (レプリケーション Transact-SQL プログラミング)
   トランザクション パブリケーションのサブスクリプションは通常、スナップショットを使用して初期化されますが、レプリケーション ストアド プロシージャを使用して、バックアップからサブスクリプションを初期化することもできます。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
@@ -34,9 +33,9 @@ ms.locfileid: "67793299"
   
     -   この値が **1**の場合、パブリケーションはこの機能をサポートしています。  
   
-    -   この値が **0** の場合、パブリッシャー側のパブリケーション データベースに対して [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を実行します。 値には、 ** \@プロパティ**に**allow_initialize_from_backup**を指定し、 `true`値に** \@はを指定します。**  
+    -   この値が **0** の場合、パブリッシャー側のパブリケーション データベースに対して [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を実行します。 値には、 ** \@ プロパティ**に**allow_initialize_from_backup**を指定し、値にはを指定し `true` ます** \@ **。  
   
-2.  新しいパブリケーションの場合、パブリッシャー側のパブリケーション データベースに対して [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を実行します。 Allow_initialize_from_backup には、 `true`の**allow_initialize_from_backup**値を指定します。 詳細については、「 [Create a Publication](publish/create-a-publication.md)」を参照してください。  
+2.  新しいパブリケーションの場合、パブリッシャー側のパブリケーション データベースに対して [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を実行します。 Allow_initialize_from_backup には、の値を指定し `true` ます。 **allow_initialize_from_backup** 詳細については、「 [Create a Publication](publish/create-a-publication.md)」を参照してください。  
   
     > [!WARNING]  
     >  サブスクライバー データの欠落を回避するために、 **sp_addpublication** で `@allow_initialize_from_backup = N'true'`を使用する場合は、常に `@immediate_sync = N'true'`を使用します。  
@@ -47,23 +46,23 @@ ms.locfileid: "67793299"
   
 5.  パブリッシャー側のパブリケーション データベースに対して、ストアド プロシージャ [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) を実行します。 次のパラメーターを指定します。  
   
-    -   sync_type- **backup を使用した初期化**の値。 ** \@**  
+    -   ** \@ sync_type** - **backup を使用した初期化**の値。  
   
-    -   backupdevicetype-バックアップデバイスの種類 (**論理**(既定)、**ディスク**、または**テープ**)。 ** \@**  
+    -   ** \@ backupdevicetype** -バックアップデバイスの種類 (**論理**(既定)、**ディスク**、または**テープ**)。  
   
-    -   backupdevicename-復元に使用する論理バックアップデバイスまたは物理バックアップデバイス。 ** \@**  
+    -   ** \@ backupdevicename** -復元に使用する論理バックアップデバイスまたは物理バックアップデバイス。  
   
          論理デバイスの場合は、 **sp_addumpdevice** を使ってデバイスを作成する際に指定したバックアップ デバイスの名前を指定します。  
   
          物理デバイスの場合は、「 `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\BACKUP\Mybackup.dat'` 」または「 `TAPE = '\\.\TAPE0'`」のように、完全なパスとファイル名を指定します。  
   
-    -   Optionalパスワード-バックアップセットの作成時に指定されたパスワード。 ** \@**  
+    -   Optional** \@ パスワード**-バックアップセットの作成時に指定されたパスワード。  
   
-    -   Optionalmediapassword-メディアセットのフォーマット時に指定されたパスワード。 ** \@**  
+    -   Optional** \@ mediapassword** -メディアセットのフォーマット時に指定されたパスワード。  
   
-    -   Optionalfileidhint-復元するバックアップセットの識別子。 ** \@** たとえば、 **1** はバックアップ メディアの 1 番目のバックアップ セットを示し、 **2** は 2 番目のバックアップ セットを示します。  
+    -   Optional** \@ fileidhint** -復元するバックアップセットの識別子。 たとえば、 **1** はバックアップ メディアの 1 番目のバックアップ セットを示し、 **2** は 2 番目のバックアップ セットを示します。  
   
-    -   (テープデバイスの場合は省略可能)unload-復元が完了した後にテープをドライブからアンロードする場合は**1** (既定値) を、アンロードしない場合は**0**を指定します。 ** \@**  
+    -   (テープデバイスの場合は省略可能)** \@ unload** -復元が完了した後にテープをドライブからアンロードする場合は**1** (既定値) を、アンロードしない場合は**0**を指定します。  
   
 6.  (省略可能) プル サブスクリプションの場合は、サブスクライバーのサブスクリプション データベースで [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql) と [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) を実行します。 詳細については、「 [プル サブスクリプションの作成](create-a-pull-subscription.md)」をご覧ください。  
   

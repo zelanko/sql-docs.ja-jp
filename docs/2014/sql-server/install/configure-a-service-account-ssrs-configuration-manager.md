@@ -14,25 +14,24 @@ helpviewer_keywords:
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da8ada61df6a95a83f59bfb3791329728f2856c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952585"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036945"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>サービス アカウントの構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がインストールされた環境では、レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理アプリケーションが 1 つのサービス内で実行されます。 サービスの実行に使用するアカウントは、セットアップ時に [サービス ID] ページでアカウントを指定するときに定義されますが、使用するアカウントの変更やパスワードの更新を行う場合は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用できます。  
   
- Sharepoint 統合モードを使用するように構成されているレポートサーバーがあり、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]構成ツールを使用してサービスアカウントを変更する場合は、sharepoint サーバーの全体[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]管理を開き、[**データベースアクセスの許可**] ページを使用してレポートサーバーとインスタンスの設定を再適用する必要もあります。 この手順により、新しいサービスアカウントには、または[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]との統合に必要な SharePoint データベースへのアクセス権が付与されます。  
+ SharePoint 統合モードを使用するように構成されているレポートサーバーがあり、構成ツールを使用してサービスアカウントを変更する場合は、SharePoint サーバーの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 全体管理を開き、[ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **データベースアクセスの許可**] ページを使用してレポートサーバーとインスタンスの設定を再適用する必要もあります。 この手順により、新しいサービスアカウントには、またはとの統合に必要な SharePoint データベースへのアクセス権が付与され [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ます。  
   
  サービス アカウントを更新する際には、そのサービス ID に依存する他の設定も同時に更新できるように、必ず [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用してください。  
   
 > [!NOTE]  
 >  ドメイン コントローラーになっているコンピューターでは、ビルトイン Windows サービス アカウント (Local Service または Network Service) をレポート サーバーのサービス アカウントとして使用することはできません。  
   
- プロシージャ  
+ 手順  
   
 ### <a name="to-configure-the-report-server-service-account"></a>レポート サーバー サービス アカウントを構成するには  
   
@@ -44,7 +43,7 @@ ms.locfileid: "71952585"
   
      レポート サーバーが Kerberos 認証をサポートするネットワークに配置されている場合、指定したドメイン ユーザー アカウントでレポート サーバーのサービス プリンシパル名 (SPN) を登録する必要があります。 詳細については、「[レポート サーバーのサービス プリンシパル名 &#40;SPN&#41; の登録](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)」を参照してください。  
   
-4.  **[適用]** をクリックします。  
+4.  **[Apply]** をクリックします。  
   
 5.  対称キーをバックアップするかどうかを確認するメッセージが表示されたら、対称キーのバックアップ用のファイル名と場所を入力し、ファイルをロックおよびロック解除するためのパスワードを入力して **[OK]** をクリックします。  
   

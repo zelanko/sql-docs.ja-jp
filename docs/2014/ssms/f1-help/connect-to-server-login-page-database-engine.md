@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2fe246a1f8baf1ab9f60ab1fa73e21e81c052aa1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b66a623ca2db3881409604c768ad2873eebf289
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70153700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064364"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>[サーバーへの接続] ([ログイン] ページ) (データベース エンジン)
   このタブを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] に接続するときのオプションを表示または指定できます。  
@@ -64,10 +63,10 @@ ms.locfileid: "70153700"
  **パスワードを保存する**  
  入力したパスワードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に記憶させるには、このチェック ボックスをオンにします。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用した接続を選択した場合だけ表示されます。  
   
- **のインスタンスに接続するときには、**  
+ **接続する**  
  クリックすると、上記で選択したサーバーに接続します。  
   
- **[オプション]**  
+ **Options**  
  クリックすると、ダイアログ ボックスが切り替わり、パスワードの保存などの追加のサーバー接続オプションが非表示になります。  
   
   

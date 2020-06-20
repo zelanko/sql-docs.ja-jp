@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2788847a52d47596c38a9f63161d122543fe8099
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a2721e3fc4d46d2cfbf5284986d343d5baca5862
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706004"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022145"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   この表は、 **SQLGetInfo**によって返される値を示しています。 返される値は、接続先サーバーのバージョン番号によって異なる場合があります。  
   
- Native Client の**sqlgetinfo**は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ODBC ドライバー (Sqlsrv32.dll) の**sqlgetinfo**とは異なり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。DLL) SQL_KEYWORDS と0のバッファー長を使用して**SQLGetInfo**が呼び出された場合。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーは SQL_SUCCESS を返しますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーは SQL_SUCCESS_WITH_INFO を返します。  ただし、出力キーワード文字列よりも小さい0以外のバッファー長を指定して呼び出された場合、Native Client の**SQLGetInfo**は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO と SQLState 01004 を返します。  
+ **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネイティブクライアントの Sqlgetinfo は、 **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sqlgetinfo**が SQL_KEYWORDS でバッファー長が0の場合に、ODBC ドライバー (SQLSRV32.DLL) の sqlgetinfo とは異なります。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーは SQL_SUCCESS を返しますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーは SQL_SUCCESS_WITH_INFO を返します。  ただし、出力キーワード文字列よりも小さい0以外のバッファー長を指定して呼び出された場合、Native Client の**SQLGetInfo**は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO と SQLState 01004 を返します。  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -117,7 +116,7 @@ ms.locfileid: "82706004"
 |SQL_IDENTIFIER_QUOTE_CHAR|" (二重引用符)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC、SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|この要求はドライバーではサポートされません。|  
-|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー固有の属性。 接続で使用中のネットワーク ライブラリの名前。<br /><br /> 既定では、DBNETLIB が返されます。  この場合、DBNETLIB はネットワークライブラリを参照し、DBNETLIB には関連付けられていません。|  
+|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー固有の属性。 接続で使用中のネットワーク ライブラリの名前。<br /><br /> 既定では、DBNETLIB が返されます。  この場合、DBNETLIB はネットワークライブラリを参照し、dbnetlib.dll には関連付けられていません。|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE、SQL_CA1_BOOKMARK、SQL_CA1_BULK_ADD、SQL_CA1_BULK_DELETE_BY_BOOKMARK、SQL_CA1_BULK_FETCH_BY_BOOKMARK、SQL_CA1_BULK_UPDATE_BY_BOOKMARK、SQL_CA1_LOCK_NO_CHANGE、SQL_CA1_NEXT、SQL_CA1_POS_DELETE、SQL_CA1_POS_POSITION、SQL_CA1_POS_REFRESH、SQL_CA1_POS_UPDATE、SQL_CA1_POSITIONED_DELETE、SQL_CA1_POSITIONED_UPDATE、SQL_CA1_RELATIVE、SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT、SQL_CA2_LOCK_CONCURRENCY、SQL_CA2_MAX_ROWS_CATALOG、SQL_CA2_MAX_ROWS_DELETE、SQL_CA2_MAX_ROWS_INSERT、SQL_CA2_MAX_ROWS_SELECT、SQL_CA2_MAX_ROWS_UPDATE、SQL_CA2_OPT_ROWVER_CONCURRENCY、SQL_CA2_OPT_VALUES_CONCURRENCY、SQL_CA2_READ_ONLY_CONCURRENCY、SQL_CA2_SENSITIVITY_ADDITIONS、SQL_CA2_SENSITIVITY_UPDATES、SQL_CA2_SIMULATE_UNIQUE|  

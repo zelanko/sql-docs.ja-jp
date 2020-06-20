@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 527c8f647c963c2c1c03171eeb154a790ab1994a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca3da66a23292212df7464c8d5966e5c3603e13e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055560"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962942"
 ---
 # <a name="smtp-connection-manager-editor"></a>SMTP 接続マネージャー エディター
   **[SMTP 接続マネージャー エディター]** ダイアログ ボックスを使用すると、SMTP (Simple Mail Transfer Protocol) サーバーを指定できます。  
@@ -33,17 +32,17 @@ ms.locfileid: "66055560"
  **説明**  
  接続マネージャーの説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続マネージャーの目的について記述することをお勧めします。  
   
- **SMTP サーバー**  
+ **[SMTP サーバー]**  
  SMTP サーバーの名前を指定します。  
   
- **Windows 認証を使用する**  
+ **[Windows 認証を使用する]**  
  選択すると、Windows 認証を使用してサーバーへのアクセスを認証する SMTP サーバーで、メールが送信されます。  
   
 > [!IMPORTANT]  
 >  SMTP 接続マネージャーでは、匿名認証と Windows 認証のみがサポートされています。 基本認証はサポートされていません。  
   
 > [!NOTE]  
->  Microsoft Exchange を SMTP サーバーとして使用する場合は、[ **Windows 認証**を使用`True`する] をに設定することが必要になる場合があります。 未認証の SMTP 接続を許可しないように Exchange サーバーを構成することもできます。  
+>  Microsoft Exchange を SMTP サーバーとして使用する場合は、[ **Windows 認証を使用**する] をに設定することが必要になる場合があり `True` ます。 未認証の SMTP 接続を許可しないように Exchange サーバーを構成することもできます。  
   
  **[SSL (Secure Sockets Layer) を有効にする]**  
  選択すると、電子メール メッセージの送信時に SSL (Secure Sockets Layer) を使用して通信が暗号化されます。  

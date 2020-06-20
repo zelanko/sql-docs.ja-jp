@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab42ba3eb6468aac3da2fa780d371818c8776690
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011657"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026300"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)
   ネイティブ形式は、拡張文字や 2 バイト文字セット (DBCS) の文字を含まないデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送する場合に推奨します。  
@@ -34,7 +33,7 @@ ms.locfileid: "66011657"
   
  同一のテーブル間でネイティブ形式を使用すると、文字形式との間でデータ型の不必要な変換を防ぐことができ、時間と領域を節約できます。 ただし、最適な転送速度を実現するために、データの形式設定に関するチェックはほとんど行われません。 読み込まれたデータに関する問題を回避するには、次の制限事項の一覧を参照してください。  
   
-## <a name="restrictions"></a>制限  
+## <a name="restrictions"></a>制約  
  データをネイティブ形式で正常にインポートするには、次の条件を満たすようにします。  
   
 -   データ ファイルがネイティブ形式です。  
@@ -57,10 +56,10 @@ ms.locfileid: "66011657"
   
 -   `char` データまたは `varchar` データ  
   
-     `char`または`varchar`フィールドの先頭に、 **bcp**によってプレフィックス長が追加されます。  
+     `char`またはフィールドの先頭に `varchar` 、 **bcp**によってプレフィックス長が追加されます。  
   
     > [!IMPORTANT]  
-    >  ネイティブモードを使用すると、 **bcp**ユーティリティは、既定では文字[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をデータファイルにコピーする前に、文字を OEM 文字に変換します。 **Bcp**ユーティリティは、データファイルの文字を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルに一括インポートする前に、その文字を ANSI 文字に変換します。 このような変換が行われている間、拡張文字のデータが失われる場合があります。 拡張文字については、Unicode ネイティブ形式を使用するか、コード ページを指定します。  
+    >  ネイティブモードを使用すると、 **bcp**ユーティリティは、既定では文字を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データファイルにコピーする前に、文字を OEM 文字に変換します。 **Bcp**ユーティリティは、データファイルの文字をテーブルに一括インポートする前に、その文字を ANSI 文字に変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このような変換が行われている間、拡張文字のデータが失われる場合があります。 拡張文字については、Unicode ネイティブ形式を使用するか、コード ページを指定します。  
   
 -   `sql_variant` データ  
   
@@ -75,19 +74,19 @@ ms.locfileid: "66011657"
   
  ネイティブ形式は、次のコマンド ライン オプションでサポートされています。  
   
-|command|オプション|説明|  
+|command|オプション|[説明]|  
 |-------------|------------|-----------------|  
 |**bcp**|**-n**|**Bcp**ユーティリティによって、データのネイティブデータ型が使用されます。<sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **= '** native **'**|ネイティブ データ型またはワイド ネイティブ データ型のデータが使用されます。 フォーマット ファイルでデータ型を指定している場合、DATAFILETYPE は必要ありません。|  
   
- <sup>1</sup>ネイティブ (**-n**) データを以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントと互換性のある形式に読み込むには、 **-V**スイッチを使用します。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
+ <sup>1</sup>ネイティブ (**-n**) データを以前のバージョンのクライアントと互換性のある形式に読み込むに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **-V**スイッチを使用します。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
   
  詳細については、「[bcp ユーティリティ](../../tools/bcp-utility.md)」、「[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」、または「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
   
 > [!NOTE]  
 >  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「 [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、**bcp** を使用してネイティブ データを一括エクスポートする方法と、BULK INSERT を使用して同じデータを一括インポートする方法を説明します。  
   
 ### <a name="sample-table"></a>サンプル テーブル  

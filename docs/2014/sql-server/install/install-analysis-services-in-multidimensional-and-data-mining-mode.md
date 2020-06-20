@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afb5c9d4d6272608249e095c694e0a9c48b37feb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78280859"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054778"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>多次元モードおよびデータ マイニング モードでの Analysis Services のインストール
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、ビジネス インテリジェンス アプリケーション用のオンライン分析処理 (OLAP) 機能とデータ マイニング機能が用意されています。 このリリースでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] *多次元モード*でをインストールするときに、OLAP データベースとデータマイニングモデルのサポートを利用できます。 多次元モードは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が実行される 3 つのサーバー モードのうちの 1 つです。 これは既定のモードです。 既定値を使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] をインストールすると、多次元データベースとデータ マイニング モデルを実行するインスタンスがインストールされます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は複数インスタンスに対応します。つまり、1 台のコンピューターに複数の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスをインストールすることも、新しいバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを古いバージョンと共存して実行することもできます。 サーバー モードはインスタンスに固有です。 他のモードを使用するには、サーバーの追加インスタンスをインストールする必要があります。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、単体でインストールすることも、他のコンポーネントと共にインストールすることもできます。 だけ[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]をインストールする場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールウィザードの [機能の選択] ページで [ **Analysis Services** ] を選択すると、次の機能がインストールされます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、単体でインストールすることも、他のコンポーネントと共にインストールすることもできます。 だけをインストールする場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インストールウィザードの [機能の選択] ページで [ **Analysis Services** ] を選択すると、次の機能がインストールされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースとデータ マイニング モデルを実行するための [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー  
   

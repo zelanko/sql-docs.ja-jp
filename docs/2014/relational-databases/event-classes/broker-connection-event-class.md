@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3e505f2-0a43-486f-aa92-9c8e49b2dfea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22cb73877dcea8fb880d4c565b809990e5ce7123
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0527fb6da8219176fccd9053b13d5f112f68d8ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664378"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030626"
 ---
 # <a name="brokerconnection-event-class"></a>Broker:Connection イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **Broker:Connection** イベントを生成し、Service Broker によって管理されているトランスポート接続のステータスを報告します。  

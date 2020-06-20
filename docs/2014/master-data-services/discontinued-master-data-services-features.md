@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba09ba6110f5da2082f13d8277a00bfb9d590d2e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479441"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961922"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014 で提供が中止されたマスター データ サービス機能
   このトピックでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で使用できなくなった [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の機能について説明します。  
@@ -25,7 +24,7 @@ ms.locfileid: "65479441"
   
 ## <a name="sssql11-discontinued-features"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 提供が中止された機能  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>セキュリティ  
  セキュリティの割り当てを簡単にするために、モデル オブジェクト権限を派生階層、明示的階層、および属性グループの各オブジェクトに割り当てることができなくなりました。  
   
 -   派生階層権限は、モデルに基づくようになりました。 たとえば、派生階層に対する権限をユーザーに付与するには、モデルオブジェクトに**更新**を割り当てる必要があります。 その後、ユーザーにアクセスを許可しないエンティティに対して、**拒否**アクセス権を割り当てることができます。  
@@ -58,9 +57,9 @@ ms.locfileid: "65479441"
  この種類のルールが格納された [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] モデルの配置パッケージを持っている場合は、データベースを [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] にアップグレードすると、ビジネス ルールが除外されます。  
   
 ### <a name="bulk-updates-and-exporting"></a>一括更新と一括エクスポート  
- [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで、複数のメンバーの属性値を一括更新することができなくなりました。 一括更新を行うには、ステージング処理また[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]はを使用します。  
+ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで、複数のメンバーの属性値を一括更新することができなくなりました。 一括更新を行うには、ステージング処理またはを使用し [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] ます。  
   
- [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで、メンバーを Excel にエクスポートできなくなりました。 Excel でメンバーを操作するには[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]、を使用します。  
+ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで、メンバーを Excel にエクスポートできなくなりました。 Excel でメンバーを操作するには、を使用し [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] ます。  
   
 ### <a name="transactions"></a>トランザクション  
  [**エクスプローラー** ] 機能領域では、ユーザーは自分のトランザクションを元に戻すことができなくなります。 以前は、ユーザーは**エクスプローラー**でデータに対して行った変更を元に戻すことができました。 管理者は、[**バージョン管理**] 機能領域のすべてのユーザーのトランザクションを元に戻すこともできます。  

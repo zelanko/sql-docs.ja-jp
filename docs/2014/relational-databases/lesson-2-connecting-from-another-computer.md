@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3fb5e3fa319259df5ba0da1d6234fedee9cb604
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144799"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025186"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2: 別のコンピューターからの接続
   セキュリティを強化するため、 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer、Express、および Evaluation Editions の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、最初にインストールした状態では別のコンピューターからアクセスできないようになっています。 このレッスンでは、別のコンピューターから接続するために、プロトコルの有効化、ポートの構成、Windows ファイアウォールの構成を行う方法について学習します。  
@@ -44,7 +43,7 @@ ms.locfileid: "63144799"
     > [!NOTE]  
     >  32 ビットと 64 ビットの両方のオプションが利用できる場合もあります。  
   
-2.  **SQL Server 構成マネージャー**で、[ **SQL Server ネットワークの構成**] を展開し、[ _ \<InstanceName>_**のプロトコル**] をクリックします。  
+2.  **SQL Server 構成マネージャー**で **[SQL Server ネットワークの構成]** を展開し、**[** _\<InstanceName>_ のプロトコル] をクリックします。  
   
      既定のインスタンス (名前のないインスタンス) は、 **MSSQLSERVER**として一覧表示されます。 名前付きインスタンスをインストールした場合は、指定した名前が表示されます。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] は **SQLEXPRESS**としてしてインストールされます (セットアップ中に名前を変更した場合を除く)。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63144799"
  セキュリティ強化のために、Windows Server 2008、 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]、および Windows 7 では Windows ファイアウォールが有効になっています。 別のコンピューターからこのインスタンスに接続する場合は、ファイアウォールで通信ポートを開放する必要があります。 [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスはポート 1433 でリッスンするので、固定ポートを構成する必要はありません。 ただし、 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] の名前付きインスタンスは、動的ポートでリッスンします。 ファイアウォールでポートを開く前に、まず [!INCLUDE[ssDE](../includes/ssde-md.md)] が固定ポートまたは静的ポートと呼ばれる特定のポートでリッスンするように構成する必要があります。このように構成しないと、 [!INCLUDE[ssDE](../includes/ssde-md.md)] は起動のたびに異なるポートでリッスンする可能性があります。 ファイアウォール、Windows ファイアウォールの既定の設定の詳細と、データベース エンジン、Analysis Services、Reporting Services、および Integration Services に影響する TCP ポートの説明については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  
   
 > [!NOTE]  
->  ポート番号の割り当ては、インターネット割り当て番号機関によって管理さ[http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844)れ、に記載されています。ポート番号には、49152 ~ 65535 の数値を割り当てる必要があります。  
+>  ポート番号の割り当ては、インターネット割り当て番号機関によって管理され、に記載されてい [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844) ます。ポート番号には、49152 ~ 65535 の数値を割り当てる必要があります。  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>SQL Server が特定のポートでリッスンするよう構成するには  
   
@@ -67,13 +66,13 @@ ms.locfileid: "63144799"
   
 3.  **[TCP/IP のプロパティ]** ダイアログ ボックスの **[IP アドレス]** タブをクリックします。  
   
-4.  **[IPAll]** セクションの **[TCP ポート]** ボックスで、使用可能なポート番号を入力します。 このチュートリアルでは、を使用`49172`します。  
+4.  **[IPAll]** セクションの **[TCP ポート]** ボックスで、使用可能なポート番号を入力します。 このチュートリアルでは、を使用 `49172` します。  
   
 5.  **[OK]** をクリックしてダイアログ ボックスを閉じ、サービスを再起動する必要があるという警告が表示されたら **[OK]** をクリックします。  
   
 6.  左ペインで、 **[SQL Server のサービス]** をクリックします。  
   
-7.  右ペインで、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスを右クリックし、 **[再起動]** をクリックします。 が[!INCLUDE[ssDE](../includes/ssde-md.md)]再起動されると、ポート`49172`でリッスンします。  
+7.  右ペインで、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスを右クリックし、 **[再起動]** をクリックします。 が [!INCLUDE[ssDE](../includes/ssde-md.md)] 再起動されると、ポートでリッスンし `49172` ます。  
   
 ##  <a name="opening-ports-in-the-firewall"></a><a name="firewall"></a>ファイアウォールでポートを開く  
  ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールが有効になっている場合、別のコンピューターから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続するには、ファイアウォールでポートを開く必要があります。  
@@ -91,7 +90,7 @@ ms.locfileid: "63144799"
   
 3.  **[規則の種類]** ダイアログ ボックスで、**[ポート]** をクリックし、**[次へ]** をクリックします。  
   
-4.  **[プロトコルおよびポート]** ダイアログ ボックスで、**[TCP]** をクリックします。 **[特定のローカル ポート]** を選択し、 [!INCLUDE[ssDE](../includes/ssde-md.md)]のインスタンスのポート番号を入力します。 既定のインスタンスの場合は「1433」と入力してください。 名前`49172`付きインスタンスを構成し、前のタスクで固定ポートを構成する場合は、「」と入力します。 **[次へ]** をクリックします。  
+4.  **[プロトコルおよびポート]** ダイアログ ボックスで、**[TCP]** をクリックします。 **[特定のローカル ポート]** を選択し、 [!INCLUDE[ssDE](../includes/ssde-md.md)]のインスタンスのポート番号を入力します。 既定のインスタンスの場合は「1433」と入力してください。 `49172`名前付きインスタンスを構成し、前のタスクで固定ポートを構成する場合は、「」と入力します。 **[次へ]** をクリックします。  
   
 5.  **[アクション]** ダイアログ ボックスで、**[接続を許可する]** をクリックし、**[次へ]** をクリックします。  
   
