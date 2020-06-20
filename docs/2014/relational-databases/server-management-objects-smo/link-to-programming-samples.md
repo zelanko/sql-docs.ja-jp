@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 79b262bc97cf674c98361d72b0ceedcaef90bb91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54b382d3e5623c6fdc43f0b8f4825fc5535b5606
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244517"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055259"
 ---
 # <a name="link-to-programming-samples"></a>プログラミング サンプルへのリンク
-  次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO ディレクトリにある、[!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理オブジェクト (SMO) のプログラミング サンプルを示します。 これらのサンプルは、と[!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .net の両方で使用できます。  
+  次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO ディレクトリにある、[!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理オブジェクト (SMO) のプログラミング サンプルを示します。 これらのサンプルは、と .Net の両方で使用でき [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ます。  
   
  サンプルをインストールする方法の詳細については、「 [AdventureWorks for SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330)」を参照してください。  
   
-|タイトル|説明|  
+|Title|説明|  
 |-----------|-----------------|  
 |BackRest|データベースのバックアップと復元の方法を示します。|  
 |ChangeTableOwner|dbo ではないすべてのテーブルの所有者を dbo に変更する方法を説明します。|  
@@ -34,7 +33,7 @@ ms.locfileid: "75244517"
 |DatabaseSearch|データベース内のすべてのオブジェクトを表示します。|  
 |DependencyExplorer|依存関係ツリーとプロパティ表示ウィンドウを実装します。|  
 |IndexSizes|選択されたデータベースのインデックス名およびサイズを表示します。|  
-|LoadRegAssembly |[!INCLUDE[msCoName](../../includes/msconame-md.md)] .Net アセンブリをに[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込んで登録する方法について説明します。 UtilityConversion アセンブリを使用します。|  
+|LoadRegAssembly |.Net アセンブリをに読み込んで登録する方法について説明し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 UtilityConversion アセンブリを使用します。|  
 |ManageDatabases|データベースの作成、変更、および削除を行う方法を示します。 新しいファイル グループとログ ファイルの追加を含みます。|  
 |ManageDatabaseUsers|ユーザーの追加、変更、および削除を行う方法を示します。|  
 |ManageTables|テーブルの作成、変更、および削除を行う方法を示します。|  
@@ -42,7 +41,7 @@ ms.locfileid: "75244517"
 |ScriptTable|テーブルの削除、または作成をスクリプトで行う方法を示します。|  
 |ServerConnect |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムへの接続方法を示します。|  
 |ServerInfo |選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのサーバーと接続のプロパティのリストを表示します。|  
-|SMOPing |選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへ接続し、選択したプロパティをダンプするコンソール アプリケーションです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続を確認するために使用できます。|  
+|SMOPing |選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへ接続し、選択したプロパティをダンプするコンソール アプリケーションです。 接続を確認するために使用でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |SQLServerList|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用可能なインスタンスの一覧を列挙します。|  
 |SQLService |開始、停止、一時停止、および再開が可能な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービスを表示します。|  
 |Tracer|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからトレース情報の読み込みと表示を行います。|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 70d9b3f9d243531e13d3d5a46693c80288815881
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2f0b748ee8c639c6e64a2f530bfe1f05418dada
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806920"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934233"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>Windows 認証を使用してデータベース ミラーリング セッションを確立する (SQL Server Management Studio)
     
@@ -29,7 +28,7 @@ ms.locfileid: "62806920"
 -   プリンシパル サーバー インスタンスおよびミラー サーバー インスタンスでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の同じエディション (Standard または Enterprise) を実行している必要があります。 また、ワークロードの処理能力が同程度のシステム上で運用することを強くお勧めします。  
   
     > [!NOTE]  
-    >  ミラーリング監視サーバー インスタンスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
+    >  ミラーリング監視サーバー インスタンスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 の各エディションでサポートされる機能の一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
 -   ミラー データベースが存在し、最新状態である必要があります。  
   
@@ -60,8 +59,8 @@ ms.locfileid: "62806920"
     |オプション|ミラーリング監視サーバー|説明|  
     |------------|--------------|-----------------|  
     |**[高パフォーマンス (非同期)]**|Null (存在しても使用されませんが、セッションにクォーラムが必要になります)|最適なパフォーマンスを提供するために、ミラー データベースが常にプリンシパル データベースから多少遅延されます。完全に時間差がなくなることはありません。 ただし、データベース間の時間差は、通常はわずかです。 パートナーの損失による影響は次のとおりです。<br /><br /> ミラー サーバー インスタンスが使用できなくなった場合は、引き続きプリンシパル サーバー インスタンスが使用されます。<br /><br /> プリンシパル サーバー インスタンスが使用できなくなると、ミラー サーバー インスタンスは停止しますが、セッションにミラーリング監視サーバーがない場合 (推奨) やミラーリング監視サーバーがミラー サーバーに接続されている場合、ミラー サーバーはウォーム スタンバイとしてアクセスできます。つまり、データベース所有者は、ミラー サーバー インスタンスにサービスを強制できます (データ損失の可能性があります)。<br /><br /> <br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)をダウンロードしてください。|  
-    |**[自動フェールオーバーを伴わない高い安全性 (同期)]**|いいえ|コミットされているすべてのトランザクションは、ミラー サーバー上のディスクに書き込まれることが保証されています。<br /><br /> パートナーが相互に接続され、データベースが同期されると、手動フェールオーバーを開始できます。 パートナーの損失による影響は次のとおりです。<br /><br /> ミラー サーバー インスタンスが使用できなくなった場合は、引き続きプリンシパル サーバー インスタンスが使用されます。<br /><br /> プリンシパル サーバー インスタンスが使用できなくなると、ミラー サーバー インスタンスは停止しますが、ウォーム スタンバイとしてアクセスできます。データベース所有者は、ミラー サーバー インスタンスにサービスを強制できます (データ損失の可能性があります)。<br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)をダウンロードしてください。|  
-    |**[自動フェールオーバーを伴う高い安全性 (同期)]**|指定あり (必須)|コミットされているすべてのトランザクションは、ミラー サーバー上のディスクに書き込まれることが保証されています。 自動フェールオーバーをサポートするミラーリング監視サーバー インスタンスを含めることによって、可用性は最大限に高まります。 **[自動フェールオーバーを伴う高い安全性 (同期)]** オプションを選択できるのは、最初にミラーリング監視サーバーのアドレスを指定した場合のみです。 パートナーが相互に接続され、データベースが同期されると、手動フェールオーバーを開始できます。<br /><br /> ミラーリング監視サーバーが存在する場合、パートナーの損失による影響は次のとおりです。<br /><br /> -プリンシパルサーバーインスタンスが使用できなくなった場合は、自動フェールオーバーが発生します。 ミラー サーバー インスタンスはプリンシパル サーバー インスタンスの役割に切り替わり、ミラー データベースがプリンシパル データベースとして提供されます。<br /><br /> -ミラーサーバーインスタンスが使用できなくなった場合、プリンシパルは続行されます。<br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)をダウンロードしてください。<br /><br /> ** \*重要\* \* **ミラーリング監視サーバーが切断された場合、データベースを使用できるようにするには、パートナーが相互に接続されている必要があります。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。|  
+    |**[自動フェールオーバーを伴わない高い安全性 (同期)]**|No|コミットされているすべてのトランザクションは、ミラー サーバー上のディスクに書き込まれることが保証されています。<br /><br /> パートナーが相互に接続され、データベースが同期されると、手動フェールオーバーを開始できます。 パートナーの損失による影響は次のとおりです。<br /><br /> ミラー サーバー インスタンスが使用できなくなった場合は、引き続きプリンシパル サーバー インスタンスが使用されます。<br /><br /> プリンシパル サーバー インスタンスが使用できなくなると、ミラー サーバー インスタンスは停止しますが、ウォーム スタンバイとしてアクセスできます。データベース所有者は、ミラー サーバー インスタンスにサービスを強制できます (データ損失の可能性があります)。<br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)をダウンロードしてください。|  
+    |**[自動フェールオーバーを伴う高い安全性 (同期)]**|指定あり (必須)|コミットされているすべてのトランザクションは、ミラー サーバー上のディスクに書き込まれることが保証されています。 自動フェールオーバーをサポートするミラーリング監視サーバー インスタンスを含めることによって、可用性は最大限に高まります。 **[自動フェールオーバーを伴う高い安全性 (同期)]** オプションを選択できるのは、最初にミラーリング監視サーバーのアドレスを指定した場合のみです。 パートナーが相互に接続され、データベースが同期されると、手動フェールオーバーを開始できます。<br /><br /> ミラーリング監視サーバーが存在する場合、パートナーの損失による影響は次のとおりです。<br /><br /> -プリンシパルサーバーインスタンスが使用できなくなった場合は、自動フェールオーバーが発生します。 ミラー サーバー インスタンスはプリンシパル サーバー インスタンスの役割に切り替わり、ミラー データベースがプリンシパル データベースとして提供されます。<br /><br /> -ミラーサーバーインスタンスが使用できなくなった場合、プリンシパルは続行されます。<br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)をダウンロードしてください。<br /><br /> 重要ミラーリング監視サーバーが切断された場合、データベースを使用できるようにするには、パートナーが相互に接続されている必要があります。 ** \* \* \* \* ** 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。|  
   
 7.  次のすべての条件に当てはまる場合は、 **[ミラーリングの開始]** をクリックしてミラーリングを開始します。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "62806920"
  [データベースミラーリング &#40;SQL Server の削除&#41;](database-mirroring-sql-server.md)   
  [役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [データベースミラーリングの設定 &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [データベースを別のサーバーインスタンスで使用できるようにするときにメタデータを管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [データベース ミラーリング監視サーバーを追加または置き換える方法 &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   

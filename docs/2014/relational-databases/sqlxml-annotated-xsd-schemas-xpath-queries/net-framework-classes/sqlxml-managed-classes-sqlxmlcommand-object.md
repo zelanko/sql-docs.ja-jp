@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e7ee45c8d725e233541f4db34796e89327bc11e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8d33448c7e17897fd1b5fb7f3aa22c302cdcfdc7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717946"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015140"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand オブジェクト (SQLXML マネージド クラス)
   SqlXmlCommand オブジェクトのコンストラクターを次に示します。  
@@ -63,7 +62,7 @@ public SqlXmlCommand(string cnString)
  クエリ結果を既存のストリームに書き込みます。 このメソッドは、結果を追加する必要があるストリームがある場合に便利です (たとえば、クエリ結果が Httpresponse.cache に書き込まれるようにする場合など)。 実際のサンプルについては、「 [SQL クエリの実行 &#40;SQLXML マネージクラス&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)」を参照してください。  
   
  XmlReader ExecuteXmlReader ()  
- XmlReader オブジェクトを返します。 このメソッドを使用すると、XmlReader オブジェクトのデータを直接操作したり、System.xml の chainable アーキテクチャにプラグインしたりすることができます。 詳細については、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework のドキュメントを参照してください。 実際のサンプルについては、「 [ExecuteXMLReader メソッドを使用した SQL クエリの実行](executing-sql-queries-by-using-the-executexmlreader-method.md)」を参照してください。  
+ XmlReader オブジェクトを返します。 このメソッドを使用すると、XmlReader オブジェクトのデータを直接操作したり、System.Xml の chainable アーキテクチャにプラグインしたりすることができます。 詳細については、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework のドキュメントを参照してください。 実際のサンプルについては、「 [ExecuteXMLReader メソッドを使用した SQL クエリの実行](executing-sql-queries-by-using-the-executexmlreader-method.md)」を参照してください。  
   
  また、次の追加メソッドもサポートしています。  
   
@@ -106,7 +105,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  コマンドの種類を指定します。 このプロパティは、実行するコマンドの種類を指定するときに使用します。 コマンドの種類の値を、次の表に示します。 実際のサンプルについては、「 [.Net 環境での SQLXML 機能へのアクセス](accessing-sqlxml-functionality-in-the-net-environment.md)」を参照してください。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |SqlXmlCommandType .Sql|SQL コマンド (`SELECT * FROM Employees FOR XML AUTO` など) を実行します。|  
 |SqlXmlCommandType. XPath|XPath コマンド (`Employees[@EmployeeID=1]` など) を実行します。|  

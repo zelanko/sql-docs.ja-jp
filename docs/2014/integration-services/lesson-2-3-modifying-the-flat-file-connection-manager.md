@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a237fac7322ed1529a8962b096c6b918ffee33b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767434"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968212"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>手順 3:フラット ファイル接続マネージャーの変更
   この実習では、レッスン 1 で作成、構成したフラット ファイル接続マネージャーを変更します。 フラット ファイル接続マネージャーを作成した当初は、1 つのファイルを静的に読み込むように構成しました。 フラット ファイル接続マネージャーで繰り返しファイルを読み込むには、接続マネージャーの ConnectionString プロパティを修正し、ユーザー定義変数 `User:varFileName`を使用できるようにする必要があります。この変数に、実行時に読み込むファイルのパスを定義します。  
@@ -28,7 +27,7 @@ ms.locfileid: "62767434"
   
 2.  プロパティウィンドウの [**式**] で、空のセルをクリックし、省略記号ボタン ([. **..])** をクリックします。  
   
-3.  [**プロパティ式エディター** ] ダイアログボックスの [**プロパティ**] 列で、「」 `ConnectionString`と入力するか、を選択します。  
+3.  [**プロパティ式エディター** ] ダイアログボックスの [**プロパティ**] 列で、「」と入力するか、を選択し `ConnectionString` ます。  
   
 4.  [**式**] 列で、省略記号ボタン **([..** .]) をクリックして [**式ビルダー** ] ダイアログボックスを開きます。  
   

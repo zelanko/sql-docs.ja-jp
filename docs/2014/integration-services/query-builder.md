@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1880ceffb03389bc87ee8f25d1817a5e4f593566
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a393352f7ec0f9384ed2d30b2909c9d9f2c1dc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056642"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964622"
 ---
 # <a name="query-builder"></a>[クエリ ビルダー]
   **[クエリ ビルダー]** ダイアログ ボックスを使用すると、SQL 実行タスク、OLE DB 変換元と OLE DB 変換先、および参照変換で使用するクエリを作成できます。  
@@ -46,13 +45,13 @@ ms.locfileid: "66056642"
  **Toolbar**  
  ツール バーは、データセットの管理、表示するペインの選択、クエリ機能の制御に使用します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[ダイアグラム ペインの表示/非表示]**|**[ダイアグラム]** ペインの表示と非表示を切り替えます。|  
 |**[グリッド ペインの表示/非表示]**|**[グリッド]** ペインの表示と非表示を切り替えます。|  
 |**[SQL ペインの表示/非表示]**|**SQL**ペインの表示と非表示を切り替えます。|  
 |**[結果ペインの表示/非表示]**|**[結果]** ペインの表示と非表示を切り替えます。|  
-|**Run**|クエリを実行します。 結果は結果ペインに表示されます。|  
+|**[実行]**|クエリを実行します。 結果は結果ペインに表示されます。|  
 |**[SQL の確認]**|SQL ステートメントが有効であることを確認します。|  
 |**昇順で並べ替え**|[グリッド] ペインで選択した列の出力行を昇順で並べ替えます。|  
 |**降順で並べ替え**|[グリッド] ペインで選択した列の出力行を降順で並べ替えます。|  
@@ -63,7 +62,7 @@ ms.locfileid: "66056642"
  **クエリ定義**  
  クエリ定義は、クエリの定義およびテストを行うツール バーおよびペインを提供します。  
   
-|ペイン|説明|  
+|ウィンドウ|説明|  
 |----------|-----------------|  
 |**ダイアグラム**ペイン|クエリをダイアグラムに表示します。 このダイアグラムには、クエリに含まれるテーブルと、その結合状態が表示されます。 テーブルの列の横にあるチェック ボックスをオンにすると、クエリの出力にその列が追加されます。オフにすると、削除されます。<br /><br /> テーブルをクエリに追加すると、クエリ ビルダーにより、テーブルのキーに応じてテーブル間の結合が行われます。 結合を追加するには、あるテーブルのフィールドを別のテーブルのフィールドにドラッグします。 結合を管理するには、結合を右クリックしてからメニュー オプションを選択します。<br /><br /> **ダイアグラム**ペインを右クリックすると、テーブルの追加や削除、すべてのテーブルの選択、ペインの表示と非表示の切り替えを行うことができます。|  
 |**グリッド**ペイン|クエリをグリッドに表示します。 このペインを使用して、クエリの列の追加や削除を行うことができます。また、各列の設定も変更できます。|  
@@ -76,6 +75,6 @@ ms.locfileid: "66056642"
  [OLE DB の宛先](data-flow/ole-db-destination.md)   
  [参照変換](data-flow/transformations/lookup-transformation.md)   
  [SSIS&#41; クエリ &#40;Integration Services](integration-services-ssis-queries.md)   
- [MERGE in Integration Services Packages](control-flow/merge-in-integration-services-packages.md)  
+ [Integration Services パッケージで MERGE を実行する](control-flow/merge-in-integration-services-packages.md)  
   
   

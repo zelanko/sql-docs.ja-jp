@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a97732878a8cf0f5113f22eec0289af20184e19d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807460"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934433"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>データベース ミラーリング監視サーバーを追加または置き換える方法 (SQL Server Management Studio)
   データベース ミラーリング エンドポイントで Windows 認証を使用している場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してミラーリング監視サーバーを追加または置き換えることができます。 また、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でミラーリング監視サーバーを追加すると、動作モードが自動フェールオーバーを伴う高い安全性モードに変更されます。  
@@ -56,7 +55,7 @@ ms.locfileid: "62807460"
   
     -   ミラーリング監視サーバー インスタンスで、どちらかのパートナーと異なるサービス アカウントを使用する場合は、 **[プリンシパル]**、 **[ミラー]**、および **[ミラーリング監視]** の各フィールドに、次のようにしてアカウント名を指定します。  
   
-         *DOMAINNAME* **\\** *username*  
+         *DOMAINNAME* **\\***ユーザー名*  
   
          ドメイン名は大文字にする必要があります。  
   

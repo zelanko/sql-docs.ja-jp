@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bdd8754ac3d4a63e038218c054d064f20485344b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4725d05e41ae6335ceae19c46c2c36af14dbcf8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056265"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964400"
 ---
 # <a name="save-a-copy-of-a-package"></a>パッケージのコピーを保存する
   この手順では、パッケージのコピーをファイル システム、パッケージ ストア、または [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の **msdb** データベースに保存する方法について説明します。 パッケージのコピーを保存する場所を指定するとき、パッケージの名前を更新することもできます。  
@@ -37,7 +36,7 @@ ms.locfileid: "66056265"
   
 1.  ソリューション エクスプローラーで、コピーを保存するパッケージをダブルクリックします。  
   
-2.  **[ファイル]** メニューの **[\<パッケージ ファイル> のコピーに名前を付けて保存]** をクリックします。  
+2.  [**ファイル**] メニューの [**名前を付け \<package file> てコピー**] をクリックします。  
   
 3.  **[パッケージのコピーの保存]** ダイアログ ボックスで、**[パッケージの場所]** 一覧からパッケージの保存場所を選択します。  
   

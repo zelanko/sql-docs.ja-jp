@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 365a20848416e73e96731722abecfd6d94ebbfc5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: afcf38e662b152a5039043017624a46b214e263f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703950"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065757"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>クエリ エディターによる SQLCMD スクリプトの編集
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用すると、クエリを SQLCMD スクリプトとして作成したり、編集したりできます。 Windows システムのコマンドと [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを同じスクリプトで処理する必要がある場合は、SQLCMD スクリプトを使用します。  
@@ -76,7 +75,7 @@ ms.locfileid: "82703950"
   
     -   (6 件処理されました)  
   
-    -   \< ディレクトリ情報 >  
+    -   \<The directory information>  
   
     -   (4 行処理されました)  
   
@@ -86,7 +85,7 @@ ms.locfileid: "82703950"
  SQLCMD の実行方法の詳細については、「 [sqlcmd Utility](../../tools/sqlcmd-utility.md)」または SQLCMD のチュートリアルを参照してください。  
   
 ## <a name="enable-sqlcmd-scripting-by-default"></a>SQLCMD スクリプト操作を既定で有効にする方法  
- SQLCMD スクリプト操作を既定でオンにするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[クエリ実行]** 、 **[SQL Server]** の順に展開します。次に、 **[全般]** ページをクリックし、 **[既定で、新しいクエリを SQLCMD モードで開始する]** チェック ボックスをオンにします。  
+ SQLCMD スクリプト操作を既定でオンにするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[クエリ実行]**、 **[SQL Server]** の順に展開します。次に、 **[全般]** ページをクリックし、 **[既定で、新しいクエリを SQLCMD モードで開始する]** チェック ボックスをオンにします。  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>SQLCMD スクリプトの作成と編集  
  スクリプト モードを有効にしたら、SQLCMD コマンドと [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを作成できます。 次の規則が適用されます。  
@@ -138,7 +137,7 @@ ms.locfileid: "82703950"
 > [!NOTE]  
 >  `:error` と `:out`の場合、 `stderr` と `stdout` のどちらを指定しても、出力は [メッセージ] タブに送信されます。  
   
- クエリ エディターでは、上記以外の SQLCMD コマンドをサポートしていません。 サポートされていない SQLCMD キーワードが実行されると、サポートされていないキーワードごとに、"Ignoring command *\<ignored command*>" (<無視されたコマンド> コマンドを無視しています) メッセージがクエリ エディターから宛先に送信されます。 スクリプトは正常に実行されますが、サポートされていないコマンドは無視されます。  
+ クエリ エディターでは、上記以外の SQLCMD コマンドをサポートしていません。 サポートされていない SQLCMD キーワードを含むスクリプトが実行されると、クエリエディターは、サポートされていない各キーワードの送信先に "コマンド * を無視します" というメッセージを送信し \<ignored command*> ます。 スクリプトは正常に実行されますが、サポートされていないコマンドは無視されます。  
   
 > [!CAUTION]  
 >  コマンド ラインから SQLCMD を実行する場合とは異なり、クエリ エディターの SQLCMD モードにはいくつかの制限事項があります。 まず、変数などのコマンド ライン パラメーターを受け渡すことができません。また、クエリ エディターはオペレーティング システムのプロンプトに応答できないため、対話型のステートメントを実行しないように注意してください。  

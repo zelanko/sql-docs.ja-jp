@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cd7773177f6ec9d02df9d3d669abf561919ffe0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a9d3a934e7b08e863c4ca5241c6bfc20600a539
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250608"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047882"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server:Locks オブジェクト
-  Microsoft **の**SQLServer:Locks[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトでは、各リソースの種類の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロックに関する情報を提供します。 ロックは、複数のトランザクションで同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースが同時に使用されるのを防ぐために、トランザクション中に読み取られたり変更されたりする行などにかけられます。 たとえば、あるトランザクションによってテーブルの行に排他 (X) ロックがかけられると、他のトランザクションはロックが解除されるまでその行を変更できません。 ロックを最小限にとどめるとコンカレンシーが向上し、パフォーマンスが向上します。 異なる種類のリソースのロックを表す複数の **Locks** オブジェクトのインスタンスを同時に監視することができます。  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **SQLServer:Locks** オブジェクトでは、各リソースの種類の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロックに関する情報を提供します。 ロックは、複数のトランザクションで同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースが同時に使用されるのを防ぐために、トランザクション中に読み取られたり変更されたりする行などにかけられます。 たとえば、あるトランザクションによってテーブルの行に排他 (X) ロックがかけられると、他のトランザクションはロックが解除されるまでその行を変更できません。 ロックを最小限にとどめるとコンカレンシーが向上し、パフォーマンスが向上します。 異なる種類のリソースのロックを表す複数の **Locks** オブジェクトのインスタンスを同時に監視することができます。  
   
  次の表では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** カウンターについて説明します。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "63250608"
 |**Lock Timeouts/sec**|NOWAIT ロックの要求を含めた、1 秒あたりにタイムアウトしたロック要求の数。|  
 |**Lock Wait Time (ms)**|最後の 1 秒間のロックの総待機時間 (ミリ秒)。|  
 |**ロック待機数/秒**|呼び出し元が待つ必要のあった 1 秒あたりのロック要求の数。|  
-|**Number of Deadlocks/sec**|デッドロックが発生した 1 秒あたりのロック要求の数。|  
+|**デッドロック数/秒**|デッドロックが発生した 1 秒あたりのロック要求の数。|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、以下のリソースをロックできます。  
   
@@ -41,15 +40,15 @@ ms.locfileid: "63250608"
 |----------|-----------------|  
 |**_Total**|すべてのロックに関する情報。|  
 |**AllocUnit**|アロケーション ユニットのロック。|  
-|**アプリケーション**|アプリケーションで指定されているリソースのロック。|  
+|**アプリケーション**。|アプリケーションで指定されているリソースのロック。|  
 |**[データベース]**|データベース内のすべてのオブジェクトを含むデータベースのロック。|  
 |**エクステント**|連続した 8 ページのグループのロック。|  
 |**[最近使ったファイル]**|データベース ファイルのロック。|  
 |**Heap/BTree**|ヒープまたは BTree (HOBT)。 データ ページのヒープまたはインデックスの BTree 構造のロック。|  
 |**キー**|インデックスの行のロック。|  
 |**Metadata**|カタログ情報 (メタデータ) のロック。|  
-|**素材**|すべてのデータとインデックスを含む、テーブル、ストアド プロシージャ、ビューなどのロック。 このオブジェクトには、 **sys.all_objects**内のエントリを持つ任意のアイテムが含まれます。|  
-|**改**|データベース内の 8 KB のページのロック。|  
+|**オブジェクト**|すべてのデータとインデックスを含む、テーブル、ストアド プロシージャ、ビューなどのロック。 このオブジェクトには、 **sys.all_objects**内のエントリを持つ任意のアイテムが含まれます。|  
+|**ページ**|データベース内の 8 KB のページのロック。|  
 |**RID**|行 ID。 ヒープ内の単一行のロック。|  
   
 ## <a name="see-also"></a>参照  

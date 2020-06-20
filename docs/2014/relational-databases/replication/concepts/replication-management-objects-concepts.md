@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: edb36bbf0f1a637551a7316748f58f9ed1c7f912
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721794"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047734"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   レプリケーション管理オブジェクト (RMO) は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーション機能をカプセル化するマネージド コード アセンブリです。 RMO は <xref:Microsoft.SqlServer.Replication> 名前空間により実装されます。  
@@ -140,7 +139,7 @@ ms.locfileid: "62721794"
     ```  
   
 ## <a name="connecting-to-a-replication-server"></a>レプリケーション サーバーへの接続  
- RMO プログラミング オブジェクトでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クラスのインスタンスを使用して <xref:Microsoft.SqlServer.Management.Common.ServerConnection> インスタンスへの接続を作成する必要があります。 サーバーへの接続は、RMO プログラミング オブジェクトとは別に作成されます。 接続はインスタンスの作成中に RMO オブジェクトに渡されるか、オブジェクトの <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに割り当てることで渡されます。 この方法では、RMO プログラミング オブジェクトおよび接続オブジェクト インスタンスを別々に作成および管理することが可能となり、単一の接続オブジェクトを複数の RMO プログラミング オブジェクトと共に再利用することができます。 レプリケーション サーバーへの接続には、次の規則が適用されます。  
+ RMO プログラミング オブジェクトでは、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスのインスタンスを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を作成する必要があります。 サーバーへの接続は、RMO プログラミング オブジェクトとは別に作成されます。 接続はインスタンスの作成中に RMO オブジェクトに渡されるか、オブジェクトの <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに割り当てることで渡されます。 この方法では、RMO プログラミング オブジェクトおよび接続オブジェクト インスタンスを別々に作成および管理することが可能となり、単一の接続オブジェクトを複数の RMO プログラミング オブジェクトと共に再利用することができます。 レプリケーション サーバーへの接続には、次の規則が適用されます。  
   
 -   指定された <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトに、すべての接続プロパティを定義します。  
   
@@ -150,7 +149,7 @@ ms.locfileid: "62721794"
   
 -   <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> メソッドにより、サーバーへの接続が開かれます。 接続を使用してサーバー上の RMO プログラミング オブジェクトにアクセスするメソッドを呼び出す前に、このメソッドを呼び出しておく必要があります。  
   
--   RMO でも SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト) でも、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> への接続には [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クラスを使用するため、RMO オブジェクトと SMO オブジェクトの両方で同じ接続を使用できます。 詳細については、「[SQL Server のインスタンスへの接続](../../server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)」を参照してください。  
+-   RMO でも SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト) でも、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への接続には <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用するため、RMO オブジェクトと SMO オブジェクトの両方で同じ接続を使用できます。 詳細については、「[SQL Server のインスタンスへの接続](../../server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)」を参照してください。  
   
 -   接続を作成し、サーバーに正常にログオンするための認証情報はすべて <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトで指定されます。  
   

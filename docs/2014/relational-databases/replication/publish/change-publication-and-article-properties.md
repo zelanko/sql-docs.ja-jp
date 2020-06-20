@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 185e5d0beb9df2ec8a3dcf263632c1d260a3bcd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882347"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038064"
 ---
 # <a name="change-publication-and-article-properties"></a>パブリケーションおよびアーティクルのプロパティの変更
   パブリケーションが作成された後は、ほとんどのパブリケーションおよびアーティクルのプロパティを変更できますが、スナップショットの再生成およびサブスクリプションの再初期化、またはそのいずれかが必要になる場合もあります。 このトピックでは、変更された場合に、これらの操作のいずれかまたは両方を必要とするすべてのプロパティについて説明します。  
@@ -56,11 +55,11 @@ ms.locfileid: "73882347"
 |INSERT、UPDATE、または DELETE コマンドを変更します。|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |対象となるテーブルの名前を変更します。|**sp_changearticle**|**dest_table**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |対象となるテーブルの所有者 (スキーマ) を変更します。|**sp_changearticle**|**destination_owner**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
-|データ型マッピングを変更します (Oracle パブリッシングにのみ適用されます)。|**sp_changearticlecolumndatatype**|**\@type**<br /><br /> **\@数**<br /><br /> **\@有効桁数 (precision)**<br /><br /> **\@段階**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
+|データ型マッピングを変更します (Oracle パブリッシングにのみ適用されます)。|**sp_changearticlecolumndatatype**|**\@各種**<br /><br /> **\@数**<br /><br /> **\@精度**<br /><br /> **\@段階**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
   
 ## <a name="publication-properties-for-merge-replication"></a>マージ レプリケーションのパブリケーションのプロパティ  
   
-|説明|ストアド プロシージャ|Properties|要件|  
+|説明|ストアド プロシージャ|プロパティ|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |スナップショットの形式を変更します。|**sp_changemergepublication**|**sync_mode**|新しいスナップショット。|  
 |スナップショットの場所を変更します。|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新しいスナップショット。|  
@@ -73,13 +72,13 @@ ms.locfileid: "73882347"
 |結合フィルターまたは論理レコードを変更します。|**sp_changemergefilter**|**\@"**<br /><br /> **\@数値**|新しいスナップショット<br /><br /> サブスクリプションを再初期化します。|  
 |パラメーター化されたフィルターの使用を無効にします (パラメーター化されたフィルターを有効にする場合は、特別な操作は不要です)。|**sp_changemergepublication**|**false** の値を **false**に設定。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |事前計算済みパーティションの使用を有効または無効にします。|**sp_changemergepublication**|**use_partition_groups**|新しいスナップショット。|  
-|パーティションの最適化[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]を有効または無効にします。|**sp_changemergepublication**|**keep_partition_changes**|サブスクリプションを再初期化します。|  
+|パーティションの最適化を有効または無効に [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] します。|**sp_changemergepublication**|**keep_partition_changes**|サブスクリプションを再初期化します。|  
 |サブスクライバーのパーティションの検証を有効または無効にします。|**sp_changemergepublication**|**validate_subscriber_info**|サブスクリプションを再初期化します。|  
 |パブリケーションの互換性レベルを 80sp3 以下に変更します。|**sp_changemergepublication**|**publication_compatibility_level**|新しいスナップショット。|  
   
 ## <a name="article-properties-for-merge-replication"></a>マージ レプリケーションのアーティクルのプロパティ  
   
-|説明|ストアド プロシージャ|Properties|要件|  
+|説明|ストアド プロシージャ|プロパティ|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |アーティクルがパブリケーション内に最新のパラメーター化されたフィルターを持つ場合に、そのアーティクルを削除します。|**sp_dropmergearticle**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |アーティクルが結合フィルターまたは論理レコード内で親である場合に、そのアーティクルを削除します (この操作の副作用として、結合が削除されます)。|**sp_dropmergearticle**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  

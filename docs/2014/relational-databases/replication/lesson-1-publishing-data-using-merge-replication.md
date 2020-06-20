@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63df76a4e136a7d0a581d613829482b7eb430ea6
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 30d7c1e04c305a74f99d5d2818b344bfd8f83bd1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000482"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065989"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>レッスン 1 : マージ レプリケーションを使用したデータのパブリッシュ
    このレッスンでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してマージ パブリケーションを作成し、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースの **Employee** テーブル、**SalesOrderHeader** テーブル、および **SalesOrderDetail** テーブルのサブセットをパブリッシュします。 ここでは、パラメーター化された行フィルターを使ってこれらのテーブルをフィルター処理し、サブスクリプションごとに一意のデータ部分が含まれるようにします。 また、マージ エージェントにより使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインをパブリケーション アクセス リスト (PAL) に追加します。 このチュートリアルを学習するには、前のチュートリアル「 [レプリケーションに備えたサーバーの準備](tutorial-preparing-the-server-for-replication.md)」を完了している必要があります。  
@@ -83,7 +82,7 @@ ms.locfileid: "83000482"
   
 21. **[スナップショットをすぐに作成する]** を選択し、 **[以下のスケジュールでスナップショット エージェントを実行する]** をオフにして、 **[次へ]** をクリックします。  
   
-22. [エージェント セキュリティ] ページで、**[セキュリティの設定]** をクリックして、**[プロセス アカウント]** ボックスに「\<_コンピューター名>_**\repl_snapshot**」と入力します。さらに、このアカウントのパスワードを入力して、**[OK]** をクリックします。 **[完了]** をクリックします。  
+22. [エージェントセキュリティ] ページで、[**セキュリティ設定**] をクリックし、[ \<_Machine_Name> **プロセスアカウント**] ボックスに「_**\ repl_snapshot** 」と入力して、このアカウントのパスワードを入力し、[ **OK]** をクリックします。 **[完了]** をクリックします。  
   
 23. [ウィザードの完了] ページで、 **[パブリケーション名]** ボックスに「 **AdvWorksSalesOrdersMerge** 」と入力し、 **[完了]** をクリックします。  
   

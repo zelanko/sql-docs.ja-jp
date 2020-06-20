@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bc74731e0ecb5487d3f52db1af3a7f20c85bd0f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054478"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972432"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI 接続マネージャー エディター
   **[WMI 接続マネージャー]** ダイアログ ボックスを使用すると、サーバーに対する Microsoft Windows Management Instrumentation (WMI) 接続を指定できます。  
@@ -36,7 +35,7 @@ ms.locfileid: "66054478"
  **サーバー名**  
  WMI 接続の対象となるサーバーの名前を指定します。  
   
- **Namespace**  
+ **名前空間**  
  WMI 名前空間を指定します。  
   
  **Windows 認証を使用する**  

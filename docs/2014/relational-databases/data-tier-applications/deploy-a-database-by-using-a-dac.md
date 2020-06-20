@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0da23febcc1f2e97b1dfaff29a5df5ced16c7e4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873053"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970279"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC を使用したデータベースの配置
   **のインスタンスと** サーバー間、または 2 つの [!INCLUDE[ssDE](../../includes/ssde-md.md)] サーバー間でデータベースを配置するには、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] SQL Azure へのデータベースの配置ウィザード [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]を使用します。  
@@ -81,7 +80,7 @@ ms.locfileid: "62873053"
 ##  <a name="introduction-page"></a><a name="Introduction"></a> [説明] ページ  
  このページには、 **データベース配置** ウィザードの手順が示されています。  
   
- **[オプション]**  
+ **Options**  
   
 -   **[次回からこのページを表示しない]** : 今後 [説明] ページを表示しないようにするには、このチェック ボックスをオンにします。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62873053"
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベースの設定:**  
   
--   [エディション]-ドロップダウン[!INCLUDE[ssSDS](../../includes/sssds-md.md)]メニューからエディションを選択します。 ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
+-   [ ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] エディション**]- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ドロップダウンメニューからエディションを選択します。  
   
 -   [**データベースの最大サイズ**]-ドロップダウンメニューからデータベースの最大サイズを選択します。  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62873053"
 ##  <a name="summary-page"></a><a name="Summary"></a> [概要] ページ  
  このページを使用すると、操作の指定ソースとターゲットの設定を確認できます。 指定した設定で配置操作を実行するには、 **[完了]** をクリックします。 配置操作をキャンセルしてウィザードを終了するには、[**キャンセル**] をクリックします。  
   
-##  <a name="progress-page"></a><a name="Progress"></a>[進行状況] ページ  
+##  <a name="progress-page"></a><a name="Progress"></a> [進行状況] ページ  
  このページには、操作の進行状況を示す進行状況バーが表示されます。 詳細な状態を表示するには、 **[詳細表示]** をクリックします。  
   
 ##  <a name="results-page"></a><a name="Results"></a>[結果] ページ  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87fcd7656ff1e86522e4ea398fc49d91acde9a34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acafd5ba49bec92fd4c6b93c4163affaa42ab7f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62672072"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037364"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>変更データ キャプチャとその他の SQL Server 機能
   このトピックでは、次の機能と変更データ キャプチャとの連携について説明します。  
@@ -33,7 +32,7 @@ ms.locfileid: "62672072"
 ##  <a name="change-tracking"></a><a name="ChangeTracking"></a>Change Tracking  
  変更データ キャプチャと [変更の追跡](about-change-tracking-sql-server.md) は、同じデータベースで有効にすることができます。 特に注意が必要な点はありません。 詳細については、「[変更の追跡のしくみ &#40;SQL Server&#41;](work-with-change-tracking-sql-server.md)」を参照してください。  
   
-##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a>データベースミラーリング  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a> データベース ミラーリング  
  変更データ キャプチャが有効になっているデータベースをミラー化できます。 フェールオーバー後にキャプチャとクリーンアップが自動的に行われるようにするには、次の手順を実行します。  
   
 1.  新しいプリンシパル サーバー インスタンスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されていることを確認します。  
@@ -47,7 +46,7 @@ ms.locfileid: "62672072"
  データベース ミラーリングの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
 ##  <a name="transactional-replication"></a><a name="TransReplication"></a>トランザクションレプリケーション  
- 変更データ キャプチャとトランザクション レプリケーションは、同じデータベースで共存できます。ただし、両方の機能が有効になっている場合、変更テーブルが異なる方法で作成されます。 変更データ キャプチャとトランザクション レプリケーションでは、トランザクション ログから変更を読み取る際に、常に同じプロシージャ ( [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)) が使用されます。 変更データキャプチャがそれ自体で有効になって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]いる場合、 `sp_replcmds`エージェントジョブはを呼び出します。 同じデータベースで両方の機能が有効になっている場合`sp_replcmds`、ログリーダーエージェントはを呼び出します。 このエージェントは、変更テーブルとディストリビューション データベース テーブルの両方を作成します。 詳細については、「 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)」を参照してください。  
+ 変更データ キャプチャとトランザクション レプリケーションは、同じデータベースで共存できます。ただし、両方の機能が有効になっている場合、変更テーブルが異なる方法で作成されます。 変更データ キャプチャとトランザクション レプリケーションでは、トランザクション ログから変更を読み取る際に、常に同じプロシージャ ( [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)) が使用されます。 変更データキャプチャがそれ自体で有効になっている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントジョブはを呼び出し `sp_replcmds` ます。 同じデータベースで両方の機能が有効になっている場合、ログリーダーエージェントはを呼び出し `sp_replcmds` ます。 このエージェントは、変更テーブルとディストリビューション データベース テーブルの両方を作成します。 詳細については、「 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)」を参照してください。  
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで変更データ キャプチャが有効になっており、2 つのテーブルでキャプチャが有効になっているシナリオについて考えてみます。 変更テーブルを作成するために、キャプチャ ジョブによって `sp_replcmds` が呼び出されます。 データベースでトランザクション レプリケーションが有効になり、パブリケーションが作成されます。 次に、ログ リーダー エージェントがデータベースに対して作成され、キャプチャ ジョブが削除されます。 ログ リーダー エージェントは、変更テーブルにコミットされた最後のログ シーケンス番号からログのスキャンを続行します。 これにより、変更テーブル内のデータの一貫性が確保されます。 このデータベースでトランザクション レプリケーションが無効になっている場合、ログ リーダー エージェントが削除され、キャプチャ ジョブが再作成されます。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "62672072"
   
 -   データベースをデタッチしてから、同じサーバーまたは別のサーバーにアタッチした場合、変更データ キャプチャは有効のままです。  
   
--   Enterprise 以外のエディションに対してオプションを`KEEP_CDC`使用してデータベースがアタッチまたは復元された場合、この操作は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ブロックされます。これは、変更データキャプチャが enterprise を必要とするためです。 エラー メッセージ 934 が表示されます。  
+-   Enterprise 以外のエディションに対してオプションを使用してデータベースがアタッチまたは復元された場合 `KEEP_CDC` 、この操作はブロックされます。これは、変更データキャプチャが enterprise を必要とするためです [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 エラー メッセージ 934 が表示されます。  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   

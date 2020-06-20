@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 20cb0018-56dd-497e-b019-8f7cc3610cba
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 279302423cfe6c1fb9ecf28128b48c153e694e72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09b1750081198a258d1b49231324dd296084f6cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069204"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940793"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>[定義方法の選択] (データ マイニング ウィザード)
   **[定義方法の選択]** ページを使用すると、新しいマイニング モデルの作成に使用するソースを選択できます。 キューブに基づくマイニング構造は、リレーショナル データ ソースに基づくマイニング構造とは異なる手順で構築されるため、ウィザードでは選択に応じて手順が変化します。  

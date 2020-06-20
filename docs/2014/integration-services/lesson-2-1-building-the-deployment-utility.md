@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8c0cc7df39c8b5bac3ff216aa3d61975c707207
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767584"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966092"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>手順 1:配置ユーティリティの構築
   ここでは、Deployment Tutorial プロジェクト用の配置ユーティリティを構成し、構築します。  
@@ -34,7 +33,7 @@ ms.locfileid: "62767584"
   
 4.  **[Deployment Tutorial プロパティ ページ]** ダイアログ ボックスで、[構成プロパティ] を展開し、[配置ユーティリティ] をクリックします。  
   
-5.  [**配置チュートリアルプロパティページ**] ダイアログ`AllowConfigurationChanges`ボックスの右ペインで、がに`true`設定されている`CreateDeploymentUtility`こと`true`を確認し、をに設定し`DeploymentOutputPath`、必要に応じての既定値を更新します。  
+5.  [**配置チュートリアルプロパティページ**] ダイアログボックスの右ペインで、 `AllowConfigurationChanges` がに設定されていることを確認し、 `true` `CreateDeploymentUtility` をに設定し、 `true` 必要に応じての既定値を更新し `DeploymentOutputPath` ます。  
   
 6.  **[OK]** をクリックします。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96eb26c3e273832aead4aa0421304df17dc5b8ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918340"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970442"
 ---
 # <a name="management-data-warehouse"></a>管理データ ウェアハウス (management data warehouse)
   管理データ ウェアハウスは、データ コレクションの対象であるサーバーから収集されたデータを格納するリレーショナル データベースです。 このデータは、システム データ コレクション セットのレポートを生成するために使用され、カスタム レポートを作成する際にも使用できます。  
@@ -109,7 +108,7 @@ ms.locfileid: "62918340"
   
  データベース テーブルの列のデータ型とコンテンツの詳細情報については、各テーブルに適したデータ コレクターのストアド プロシージャに関するマニュアルの記述を参照してください。  
   
-### <a name="best-practices"></a>推奨する運用方法  
+### <a name="best-practices"></a>ベスト プラクティス  
  管理データ ウェアハウスの操作に関して推奨するベスト プラクティスを次に示します。  
   
 -   新しいコレクター型を追加する場合を除き、管理データ ウェアハウスのテーブルのメタデータは変更しないでください。  

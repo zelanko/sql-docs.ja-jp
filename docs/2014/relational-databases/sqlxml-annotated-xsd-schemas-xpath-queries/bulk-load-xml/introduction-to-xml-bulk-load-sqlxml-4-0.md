@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 782b352402e9469fbdb0ce06153d2d80eb9dc84e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4f3e0e78edd967e5fcb7377312c1811d34cb1ef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703372"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068174"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 一括読み込みの概要 (SQLXML 4.0)
   XML 一括読み込みは、半構造化 XML データを Microsoft テーブルに読み込むことができるスタンドアロンの COM オブジェクトです [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
@@ -45,7 +44,7 @@ ms.locfileid: "82703372"
 ## <a name="streaming-of-xml-data"></a>XML データのストリーミング  
  ソースの XML ドキュメントは大きい可能性があるため、一括読み込み処理では、メモリにドキュメント全体は読み込まれません。 代わりに、XML 一括読み込みでは XML データがストリームとして解釈され読み取られます。 データが読み取られるとき、このユーティリティではデータベース テーブルが特定され、XML データ ソースを基に適切なレコードが生成された後、そのレコードが挿入のため [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信されます。  
   
- たとえば、次のソース XML ドキュメントは、 ** \< Customer>** の要素と** \< 順序>** 子要素で構成されています。  
+ たとえば、次のソース XML ドキュメントは、 **\<Customer>** 要素と子要素で構成されてい **\<Order>** ます。  
   
 ```  
 <Customer ...>  
@@ -56,7 +55,7 @@ ms.locfileid: "82703372"
 ...  
 ```  
   
- XML 一括読み込みでは、 ** \< Customer>** 要素が読み取られ、ユーザーテーブルのレコードが生成されます。 ** \< /Customer>** 終了タグを読み取ると、XML 一括読み込みでは、そのレコードがのテーブルに挿入さ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] れます。 同様に、 ** \< Order>** 要素を読み取ると、XML 一括読み込みでは ordertable のレコードが生成されます。その後、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ** \< /order>** 終了タグの読み取り時に、そのレコードがテーブルに挿入されます。  
+ XML 一括読み込みで要素が読み取られると、 **\<Customer>** 顧客テーブルのレコードが生成されます。 **\</Customer>** XML 一括読み込みで終了タグを読み取ると、そのレコードがのテーブルに挿入さ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] れます。 同様に、要素を読み取るときに **\<Order>** 、XML 一括読み込みでは Ordertable のレコードが生成され、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 終了タグの読み取り時にそのレコードがテーブルに挿入され **\</Order>** ます。  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>トランザクション モードとトランザクション以外のモードでの XML 一括読み込みの操作  
  XML 一括読み込みは、トランザクション モードまたはトランザクション以外のモードで操作できます。 トランザクション以外のモードで一括読み込みを行う場合は、通常、次のいずれかの条件に該当する場合に、パフォーマンスが最適です。  
