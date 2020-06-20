@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ee0de3311eb6abffcdb71ab725d0650fe96b04c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761614"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009190"
 ---
 # <a name="create-foreign-key-relationships"></a>外部キーのリレーションシップの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で外部キーのリレーションシップを作成する方法について説明します。 あるテーブルの行と他のテーブルの行を関連付ける場合は、2 つのテーブル間にリレーションシップを作成します。  
@@ -28,7 +27,7 @@ ms.locfileid: "62761614"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用して外部キー リレーションシップを作成するには:**  
   
@@ -79,7 +78,7 @@ ms.locfileid: "62761614"
   
 3.  **[外部キーのリレーションシップ]** ダイアログ ボックスで、 **[追加]** をクリックします。  
   
-     リレーションシップが **[選択されたリレーションシップ]** ボックスに表示されます。このリレーションシップには、FK_\<*tablename*>_\<*tablename*> (*tablename* は外部キー テーブルの名前) という形式の名前が自動的に割り当てられます。  
+     リレーションシップが [**選択されたリレーションシップ**] ボックスの一覧に表示され、FK_ _ の形式でシステム指定の名前が付けられ \<*tablename*> \<*tablename*> ます。 *tablename*は外部キーテーブルの名前です。  
   
 4.  **[選択されたリレーションシップ]** ボックスの一覧で、リレーションシップをクリックします。  
   

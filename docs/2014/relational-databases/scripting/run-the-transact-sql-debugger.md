@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9dd0dc621b0d799398098cea6fb614d5021e6016
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7665894e3e7ce7a152631b584c35fcacbc8de707
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703750"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009564"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Transact-SQL デバッガーの実行
   [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウを開いた後に起動できます。 次に、デバッガーを停止するまで、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードをデバッグ モードで実行できます。 オプションを設定して、デバッガーの実行方法をカスタマイズできます。  

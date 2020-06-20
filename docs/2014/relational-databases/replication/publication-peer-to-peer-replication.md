@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 09aea8e66b76103c27bdc44ade4df48a1e505e7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68edbeac50e02e827418c2a213b706162f623b0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021625"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064589"
 ---
 # <a name="publication-peer-to-peer-replication"></a>[パブリケーション] (ピア ツー ピア レプリケーション)
   **[パブリケーション]** ページでは、ピア ツー ピア レプリケーションに対して有効になっているトランザクション パブリケーションを表示します。 パブリケーションは、 **[パブリケーションのプロパティ]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで有効になっています。  

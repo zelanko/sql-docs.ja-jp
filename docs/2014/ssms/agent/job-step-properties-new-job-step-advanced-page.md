@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22b5877fb70a66fd9864e52223b30eca4b01b6db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62937199"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064474"
 ---
 # <a name="job-step-properties-new-job-step-advanced-page"></a>[ジョブ ステップのプロパティ]:[新しいジョブ ステップ] ([詳細] ページ)
-  このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントジョブステップのプロパティを表示したり、変更したりできます。  
+  このページを使用すると、エージェントジョブステップのプロパティを表示したり、変更したり [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。  
   
 ## <a name="options"></a>オプション  
  **[成功した場合のアクション]**  
@@ -43,7 +42,7 @@ ms.locfileid: "62937199"
  ジョブ ステップからの出力に使用するファイルを参照します。  
   
  **表示**  
- で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
+ で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
   
  **[既存のファイルに出力を追加する]**  
  ファイルの既存の内容に出力を追加します。 このオプションを指定しなければ、ジョブ ステップが実行されるたびに前のファイルの内容が上書きされます。  
@@ -71,7 +70,7 @@ ms.locfileid: "62937199"
  ジョブ ステップからの出力に使用するファイルを参照します。  
   
  **表示**  
- で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
+ で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
   
  **[既存のファイルに出力を追加する]**  
  ジョブ ステップを実行するたびに、その出力を前のファイルの内容に追加します。  
@@ -96,7 +95,7 @@ ms.locfileid: "62937199"
  ジョブ ステップからの出力に使用するファイルを参照します。  
   
  **表示**  
- で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
+ で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
   
  **[既存のファイルに出力を追加する]**  
  ジョブ ステップを実行するたびに、その出力を前のファイルの内容に追加します。  

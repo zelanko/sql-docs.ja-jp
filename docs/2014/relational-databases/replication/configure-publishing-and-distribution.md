@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 905b1ceed2df8afc854ad38ee07d2b21596530f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afd1544b5412c6ce2d83a9a1e9a50ddf662b3056
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882254"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011046"
 ---
 # <a name="configure-publishing-and-distribution"></a>パブリッシングおよびディストリビューションの構成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリッシングとディストリビューションを構成する方法について説明します。  
@@ -31,7 +30,7 @@ ms.locfileid: "73882254"
  詳細については、「[レプリケーションの配置のセキュリティ保護](security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- パブリケーションの新規作成ウィザードまたはディストリビューションの構成ウィザードを使用して、ディストリビューションを構成します。 ディストリビューターを構成したら、 **[ディストリビューターのプロパティ - \<ディストリビューター>]** ダイアログ ボックスでプロパティを表示および変更します。 **db_owner** 固定データベース ロールのメンバーがパブリケーションを作成できるようにディストリビューターを構成する場合、またはパブリッシャーではないリモート ディストリビューターを構成する必要がある場合は、ディストリビューションの構成ウィザードを使用します。  
+ パブリケーションの新規作成ウィザードまたはディストリビューションの構成ウィザードを使用して、ディストリビューションを構成します。 ディストリビューターを構成した後、[**ディストリビューターのプロパティ- \<Distributor> ** ] ダイアログボックスでプロパティを表示および変更します。 **db_owner** 固定データベース ロールのメンバーがパブリケーションを作成できるようにディストリビューターを構成する場合、またはパブリッシャーではないリモート ディストリビューターを構成する必要がある場合は、ディストリビューションの構成ウィザードを使用します。  
   
 #### <a name="to-configure-distribution"></a>ディストリビューションを構成するには  
   
@@ -41,7 +40,7 @@ ms.locfileid: "73882254"
   
 3.  ディストリビューションの構成ウィザードに従って、次の操作を実行します。  
   
-    -   ディストリビューターを選択します。 ローカルディストリビューターを使用するに**は、\<[' ServerName> ' を独自のディストリビューターとして動作させる] を選択します。SQL Server によって、ディストリビューションデータベースとログが作成され**ます。 リモート ディストリビューターを使用するには、 **[以下のサーバーをディストリビューターとして使用する]** を選択し、サーバーを選択します。 このサーバーは既にディストリビューターとして構成されている必要があり、パブリッシャーではこのディストリビューターを使用できるようになっている必要があります。 詳細については、「[ディストリビューターでのリモート パブリッシャーの有効化 &#40;SQL Server Management Studio&#41;](enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)」を参照してください。  
+    -   ディストリビューターを選択します。 ローカルディストリビューターを使用するには、[' ** \<ServerName> ' を独自のディストリビューターとして動作させる] を選択します。SQL Server によって、ディストリビューションデータベースとログが作成され**ます。 リモート ディストリビューターを使用するには、 **[以下のサーバーをディストリビューターとして使用する]** を選択し、サーバーを選択します。 このサーバーは既にディストリビューターとして構成されている必要があり、パブリッシャーではこのディストリビューターを使用できるようになっている必要があります。 詳細については、「[ディストリビューターでのリモート パブリッシャーの有効化 &#40;SQL Server Management Studio&#41;](enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)」を参照してください。  
   
          リモート ディストリビューターを選択した場合、パブリッシャーからディストリビューターへの接続に対して、 **[管理パスワード]** ページでパスワードを入力する必要があります。 このパスワードは、リモート ディストリビューターでパブリッシャーを有効にしたときに指定したパスワードと一致する必要があります。  
   
@@ -62,27 +61,27 @@ ms.locfileid: "73882254"
   
     -   結果セットの **installed** の値が **0** の場合は、ディストリビューターの master データベースで [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) を実行します。  
   
-    -   結果セットの **distribution db installed** の値が **0** の場合は、ディストリビューターの master データベースで [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) を実行します。 データベースのディストリビューションデータベースの名前を指定します。 ** \@** 必要に応じて、 ** \@max_distretention**のトランザクションの最大保有期間と** \@history_retention**の履歴の保有期間を指定できます。 新しいデータベースを作成する場合は、必要なデータベース プロパティのパラメーターを指定します。  
+    -   結果セットの **distribution db installed** の値が **0** の場合は、ディストリビューターの master データベースで [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) を実行します。 ** \@ データベース**のディストリビューションデータベースの名前を指定します。 必要に応じて、 ** \@ max_distretention**のトランザクションの最大保有期間と** \@ history_retention**の履歴の保有期間を指定できます。 新しいデータベースを作成する場合は、必要なデータベース プロパティのパラメーターを指定します。  
   
-2.  パブリッシャーでもあるディストリビューターで、 ** \@working_directory**の既定のスナップショットフォルダーとして使用される UNC 共有を指定して[sp_adddistpublisher &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)を実行します。  
+2.  パブリッシャーでもあるディストリビューターで、 ** \@ working_directory**の既定のスナップショットフォルダーとして使用される UNC 共有を指定して[sp_adddistpublisher &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)を実行します。  
   
-3.  パブリッシャーで、[sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) を実行します。 ** \@Dbname**用にパブリッシュされるデータベース、 ** \@optname**のレプリケーションの種類、 ** \@value** `true`に値を指定します。  
+3.  パブリッシャーで、[sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) を実行します。 ** \@ Dbname**用にパブリッシュされるデータベース、 ** \@ optname**のレプリケーションの種類、 `true` ** \@ value**に値を指定します。  
   
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>リモート ディストリビューターを使用してパブリッシングを構成するには  
   
 1.  [sp_get_distributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql) を実行して、サーバーが既にディストリビューターとして構成されているかどうかを調べます。  
   
-    -   結果セットの **installed** の値が **0** の場合は、ディストリビューターの master データベースで [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) を実行します。 ** \@パスワード**に強力なパスワードを指定してください。 この **distributor_admin** アカウントのパスワードは、パブリッシャーがディストリビューターに接続する際に使用されます。  
+    -   結果セットの **installed** の値が **0** の場合は、ディストリビューターの master データベースで [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) を実行します。 ** \@ パスワード**に強力なパスワードを指定してください。 この **distributor_admin** アカウントのパスワードは、パブリッシャーがディストリビューターに接続する際に使用されます。  
   
-    -   結果セットの **distribution db installed** の値が **0** の場合は、ディストリビューターの master データベースで [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) を実行します。 データベースのディストリビューションデータベースの名前を指定します。 ** \@** 必要に応じて、 ** \@max_distretention**のトランザクションの最大保有期間と** \@history_retention**の履歴の保有期間を指定できます。 新しいデータベースを作成する場合は、必要なデータベース プロパティのパラメーターを指定します。  
+    -   結果セットの **distribution db installed** の値が **0** の場合は、ディストリビューターの master データベースで [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) を実行します。 ** \@ データベース**のディストリビューションデータベースの名前を指定します。 必要に応じて、 ** \@ max_distretention**のトランザクションの最大保有期間と** \@ history_retention**の履歴の保有期間を指定できます。 新しいデータベースを作成する場合は、必要なデータベース プロパティのパラメーターを指定します。  
   
-2.  ディストリビューターで、 ** \@working_directory**の既定のスナップショットフォルダーとして使用される UNC 共有を指定して、 [sp_adddistpublisher &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)を実行します。 ディストリビューターがパブリッシャーに接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するときに認証を使用する場合は、 ** \@security_mode** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に値**0**を指定し、 ** \@ログイン**と** \@パスワード**のログイン情報も指定する必要があります。  
+2.  ディストリビューターで、 ** \@ working_directory**の既定のスナップショットフォルダーとして使用される UNC 共有を指定して、 [sp_adddistpublisher &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)を実行します。 ディストリビューターが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーに接続するときに認証を使用する場合は、 ** \@ security_mode**に値**0**を指定し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** \@ ログイン**と** \@ パスワード**のログイン情報も指定する必要があります。  
   
-3.  パブリッシャーの master データベースで [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) を実行します。 ** \@パスワード**については、手順 1. で使用した強力なパスワードを指定します。 このパスワードは、パブリッシャーがディストリビューターに接続する際に使用されます。  
+3.  パブリッシャーの master データベースで [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) を実行します。 ** \@ パスワード**については、手順 1. で使用した強力なパスワードを指定します。 このパスワードは、パブリッシャーがディストリビューターに接続する際に使用されます。  
   
-4.  パブリッシャーで、[sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) を実行します。 ** \@Dbname**用にパブリッシュするデータベース、 ** \@optname**のレプリケーションの種類、 ** \@値**に true を指定します。  
+4.  パブリッシャーで、[sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) を実行します。 ** \@ Dbname**用にパブリッシュするデータベース、 ** \@ optname**のレプリケーションの種類、 ** \@ 値**に true を指定します。  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>例 (Transact-sql)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例に、パブリッシングおよびディストリビューションをプログラムから構成する方法を示します。 この例では、パブリッシャーおよびローカル ディストリビューターとして構成するサーバーの名前をスクリプト変数を使って指定しています。 レプリケーションのパブリッシングおよびディストリビューションは、レプリケーションのストアド プロシージャを使用してプログラムから構成できます。  
   
  [!code-sql[HowTo#AddDistPub](../../snippets/tsql/SQL15/replication/howto/tsql/adddistpub.sql#adddistpub)]  
@@ -130,7 +129,7 @@ ms.locfileid: "73882254"
 5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> メソッドを呼び出してディストリビューターをインストールします。 安全なパスワード (パブリッシャーがリモート ディストリビューターへの接続時に使用) および手順 3. の <xref:Microsoft.SqlServer.Replication.DistributionDatabase> オブジェクトを指定します。 詳細については、「[ディストリビューターのセキュリティ保護](security/secure-the-distributor.md)」を参照してください。  
   
     > [!IMPORTANT]  
-    >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework によって提供される[暗号化サービス](https://go.microsoft.com/fwlink/?LinkId=34733)を使用します。  
+    >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、Windows .NET Framework によって提供される[暗号化サービス](https://go.microsoft.com/fwlink/?LinkId=34733)を使用し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   
 6.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher> クラスのインスタンスを作成します。  
   

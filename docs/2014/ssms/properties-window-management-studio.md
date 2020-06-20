@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98b337c235363035d5cc5324257f51862f3f9a64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33a48ef65a29823abb2e9757575ed006c309969b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62823789"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058473"
 ---
 # <a name="properties-window-management-studio"></a>[プロパティ] ウィンドウ (Management Studio)
   このウィンドウを使用して、選択した要素のプロパティを表示します。 また、[プロパティ] ウィンドウでは、ファイル、プロジェクト、およびソリューションのプロパティを表示することもできます。 [プロパティ] ウィンドウは、 **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックすると表示されます。  

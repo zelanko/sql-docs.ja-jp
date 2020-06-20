@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 018ca302bf4d5fe8271369008ffbfec7d228cfbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc7281dab01d97df3608825a4e51c256f1b5296c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245741"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064441"
 ---
 # <a name="connect-to-server-database-engine"></a>[サーバーへの接続] (データベース エンジン)
   このダイアログを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] に接続するときのオプションを表示または指定できます。 ほとんどの場合、 **[サーバー名]** ボックスにデータベース サーバーのコンピューター名を入力し、 **[接続]** をクリックすることで接続できます。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]に接続している場合、コンピューター名の後に **\sqlexpress**を付けて使用します。  
@@ -40,7 +39,7 @@ ms.locfileid: "63245741"
 >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のアクティブなユーザー インスタンスに接続するには、パイプ名を指定した名前付きパイプ プロトコル (np:\\\\.\pipe\3C3DF6B1-2262-47\tsql\query など) を使用して接続します。詳細については、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のドキュメントを参照してください。  
   
  **認証**  
- のインスタンスに接続するときに、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]2 つの認証モードを使用できます。  
+ のインスタンスに接続するときに、2つの認証モードを使用でき [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。  
   
  **Windows 認証モード ([Windows 認証])**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証モードを使用すると、ユーザーは Windows ユーザー アカウントを使用して接続できます。  
@@ -60,10 +59,10 @@ ms.locfileid: "63245741"
  **パスワード**  
  ログインのパスワードを入力します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用した接続を選択した場合のみ編集できます。  
   
- **のインスタンスに接続するときには、**  
+ **接続する**  
  クリックすると、上記で選択したサーバーに接続します。  
   
- **[オプション]**  
+ **Options**  
  クリックすると、サーバーの登録やパスワードの保存など、追加のサーバー接続オプションが表示されます。  
   
   
