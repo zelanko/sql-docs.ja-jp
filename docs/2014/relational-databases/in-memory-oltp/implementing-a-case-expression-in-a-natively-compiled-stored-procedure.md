@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c76aef87e8d9ed968552b7a46e496472dfaf32a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b8bcd68c0a1b3b754319cc73988790c6d63edb9a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706508"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050171"
 ---
 # <a name="implementing-a-case-statement"></a>CASE ステートメントの実装
   case ステートメントは、ネイティブ コンパイル ストアド プロシージャではサポートされていません。 次のサンプルは、ネイティブ コンパイル ストアド プロシージャに case ステートメントの機能を実装する方法を示しています。  
@@ -75,6 +74,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [ネイティブコンパイルストアドプロシージャの移行に関する問題](migration-issues-for-natively-compiled-stored-procedures.md)   
- [インメモリ OLTP でサポートされていない Transact-SQL の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+ [インメモリ OLTP でサポートされていない transact-sql の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

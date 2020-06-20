@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 663de184c811291c4b583ddbaf2fb6862097c54f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc0ecb449af64b88cf3ded032c78c2e399dd4234
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882175"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060364"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>サブスクリプションの有効期限の設定
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、サブスクリプションの有効期限を設定する方法について説明します。 サブスクリプションの期限が切れて削除されるまでの時間は、サブスクリプションの有効期限によって決定されます。 詳細については、「 [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)」を参照してください。  
@@ -50,11 +49,11 @@ ms.locfileid: "73882175"
     -   サブスクリプションの期限が切れないように指定することは可能ですが、メタデータをクリーンアップできなくなるため、この値は使用しないことを強くお勧めします。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[全般]** ページで、サブスクリプションの有効期限を設定します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](view-and-modify-publication-properties.md)」を参照してください。  
+ [**パブリケーションのプロパティ \<Publication> -** ] ダイアログボックスの **[全般**] ページで、サブスクリプションの有効期限を設定します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](view-and-modify-publication-properties.md)」を参照してください。  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>サブスクリプションの有効期限を設定するには  
   
-1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[全般]** ページで、 **[サブスクリプションの有効期限]** セクションに、サブスクリプションに有効期限を設定するかどうかを指定します。  
+1.  [**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスの **[全般**] ページにある [**サブスクリプションの有効期限**] セクションで、サブスクリプションを期限切れにするかどうかを指定します。  
   
 2.  有効期限を設定する場合、有効期限の期間を指定します。  
   

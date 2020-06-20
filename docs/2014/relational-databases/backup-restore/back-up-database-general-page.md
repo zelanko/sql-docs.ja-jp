@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c315c827e1c8b206b2098009510bf6468bd7d74
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155077"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959636"
 ---
 # <a name="back-up-database-general-page"></a>[データベースのバックアップ] \([全般] ページ)
   **[データベースのバックアップ]** ダイアログ ボックスの **[全般]** ページでは、データベースのバックアップ操作の設定を表示または変更できます。  
@@ -25,7 +24,7 @@ ms.locfileid: "70155077"
  バックアップの基本的な概念については、「[バックアップの概要 &#40;SQL Server&#41;](backup-overview-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してバックアップ タスクを指定する場合、**[スクリプト]** ボタンをクリックしてスクリプトの保存先を選択することにより、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] の [BACKUP](/sql/t-sql/statements/backup-transact-sql) スクリプトを生成できます。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してバックアップ タスクを指定する場合、 [!INCLUDE[tsql](../../includes/tsql-md.md)][[スクリプト]](/sql/t-sql/statements/backup-transact-sql) ボタンをクリックしてスクリプトの保存先を選択することにより、対応する **BACKUP** スクリプトを生成できます。  
   
  **SQL Server Management Studio を使用してバックアップを作成するには**  
   
@@ -40,7 +39,7 @@ ms.locfileid: "70155077"
   
 -   部分バックアップを作成するには、[!INCLUDE[tsql](../../includes/tsql-md.md)] の [BACKUP](/sql/t-sql/statements/backup-transact-sql) ステートメントで PARTIAL オプションを使用する必要があります。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
   
 ### <a name="source"></a>source  
  **[ソース]** パネルのオプションでは、データベースを特定し、バックアップ操作のバックアップの種類とコンポーネントを指定します。  
@@ -87,9 +86,9 @@ ms.locfileid: "70155077"
   
 |||  
 |-|-|  
-|**[ディスク]**|ディスクにバックアップします。 データベース用に作成されたシステム ファイルやディスク ベースの論理バックアップ デバイスを指定する場合もあります。 現在選択されているディスクが、 **[バックアップ先]** 一覧に表示されます。 バックアップ操作には最大 64 台のディスク デバイスを選択できます。|  
-|**[テープ]**|テープにバックアップします。 データベース用に作成されたローカル テープ ドライブやテープ ベースの論理バックアップ デバイスを指定する場合もあります。 現在選択されているテープが、 **[バックアップ先]** リストに表示されます。 最大数は 64 です。 サーバーにテープ デバイスが接続されていない場合、このオプションは無効になります。 選択したテープが **[バックアップ先]** 一覧に表示されます。<br /><br /> 注: テープ バックアップ デバイスは、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
-|**[URL]**|Azure Blob storage にバックアップします。|  
+|**ディスク**|ディスクにバックアップします。 データベース用に作成されたシステム ファイルやディスク ベースの論理バックアップ デバイスを指定する場合もあります。 現在選択されているディスクが、 **[バックアップ先]** 一覧に表示されます。 バックアップ操作には最大 64 台のディスク デバイスを選択できます。|  
+|**[テープ]**|テープにバックアップします。 データベース用に作成されたローカル テープ ドライブやテープ ベースの論理バックアップ デバイスを指定する場合もあります。 現在選択されているテープが、 **[バックアップ先]** リストに表示されます。 最大数は 64 です。 サーバーにテープ デバイスが接続されていない場合、このオプションは無効になります。 選択したテープが **[バックアップ先]** 一覧に表示されます。<br /><br /> 注:テープ バックアップ デバイスは、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
+|**URL**|Azure Blob storage にバックアップします。|  
   
  次に示すオプションの表示は、選択したバックアップ先の種類によって異なります。 [ディスク] または [テープ] を選択すると、次のオプションが表示されます。  
   
@@ -117,13 +116,13 @@ ms.locfileid: "70155077"
  Azure ストレージ コンテナーの名前を指定します  
   
  **[URL プレフィックス]**  
- これは、SQL 資格情報に格納されているストレージ アカウント情報と、指定した Azure ストレージ コンテナー名に基づいて自動的に生成されます。 ** \<ストレージアカウント>** 以外の形式を使用するドメインを使用している場合を除き、このフィールドの情報は編集しないことをお勧めします。 blob.core.windows.net です。  
+ これは、SQL 資格情報に格納されているストレージ アカウント情報と、指定した Azure ストレージ コンテナー名に基づいて自動的に生成されます。 ** \<storage account> Blob.core.windows.net**以外の形式を使用するドメインを使用している場合を除き、このフィールドの情報は編集しないことをお勧めします。  
   
 ## <a name="see-also"></a>参照  
- [トランザクションログ &#40;SQL Server のバックアップ&#41;](back-up-a-transaction-log-sql-server.md)   
- [ファイルとファイルグループのバックアップ &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
- [ディスクファイル &#40;SQL Server の論理バックアップデバイスを定義&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [テープドライブ &#40;SQL Server の論理バックアップデバイスを定義&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [ファイルおよびファイル グループのバックアップ &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
+ [ディスク ファイルの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [テープ ドライブの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [復旧モデル &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   
   

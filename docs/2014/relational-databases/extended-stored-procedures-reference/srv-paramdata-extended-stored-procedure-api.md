@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36246adc49870e9418765e37511e6d94cafe5c67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050758"
 ---
 # <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata (拡張ストアド プロシージャ API)
     
@@ -58,7 +57,7 @@ n
 ## <a name="returns"></a>戻り値  
  パラメーター値を指すポインターを返します。 *n* 番目のパラメーターが NULL である場合、*n* 番目のパラメーターがない場合、またはリモート ストアド プロシージャがない場合には、NULL を返します。 パラメーター値が文字列である場合、NULL 終端ではないこともあります。 文字列の長さを判断するには、**srv_paramlen** を使用します。  
   
- パラメーターが[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型の1つである場合、この関数は次の値を返します。 ポインター データには、データ型に対する有効なポインター (VP) か、NULL か、該当なし (N/A) かを示す情報と、ポインターが指すデータの内容が含まれます。  
+ パラメーターがデータ型の1つである場合、この関数は次の値を返し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ポインター データには、データ型に対する有効なポインター (VP) か、NULL か、該当なし (N/A) かを示す情報と、ポインターが指すデータの内容が含まれます。  
   
 |新しいデータ型|入力データ長|  
 |--------------------|-----------------------|  
@@ -69,7 +68,7 @@ n
 |BIGVARBINARY|**NULL:** NULL、N/A<br /><br /> **ZERO:** VP、0x00<br /><br /> **>=255:** VP、255 バイト<br /><br /> **<255:** VP、実際のデータ|  
 |NCHAR|**NULL:** NULL、N/A<br /><br /> **ZERO:** VP、255 個のスペース<br /><br /> **>=255:** VP、255 文字<br /><br /> **<255:** VP、実際のデータ + パディング (最大 255 文字)|  
 |NVARCHAR|**NULL:** NULL、N/A<br /><br /> **ZERO:** VP、NULL<br /><br /> **>=255:** VP、255 文字<br /><br /> **<255:** VP、実際のデータ|  
-|NTEXT|**NULL:** N/A<br /><br /> **ZERO:** N/A<br /><br /> **>= 255:** 該当なし<br /><br /> ** \<255:** 該当なし|  
+|NTEXT|**NULL:** N/A<br /><br /> **ZERO:** N/A<br /><br /> **>= 255:** 該当なし<br /><br /> ** \< 255:** 該当なし|  
   
  \*   データが NULL 終端ではないため、255 文字を超えるデータが切り捨てられても警告は発生しません。  
   

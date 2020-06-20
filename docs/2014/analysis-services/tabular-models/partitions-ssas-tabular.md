@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c40ce510c86ab72ab0c35d60c8080dcf2f250f91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066901"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938813"
 ---
 # <a name="partitions-ssas-tabular"></a>パーティション (SSAS テーブル)
   パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 モデル作成時に [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の [パーティション] ダイアログ ボックスを使用して作成されたパーティションは、モデル ワークスペース データベースに適用されます。 モデルが配置されたときに、モデル ワークスペース データベースに定義されたパーティションが配置済み model データベースで複製されます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [パーティション] ダイアログ ボックスを使用して、配置済みモデル データベースのパーティションをさらに作成し管理できます。  このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [パーティション マネージャー] ダイアログ ボックスを使用してモデルを作成するときに作成されたパーティションについて説明します。 配置済みモデルのパーティションの作成と管理の詳細については、「[テーブル モデル パーティションの作成および管理 (SSAS テーブル)](create-and-manage-tabular-model-partitions-ssas-tabular.md)」を参照してください。  
@@ -26,7 +25,7 @@ ms.locfileid: "66066901"
   
 -   [関連タスク](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>効果  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 利点  
  テーブル モデルでは、パーティションがテーブルを論理パーティション オブジェクトに分割します。 各パーティションは、他のパーティションとは個別に処理できます。 たとえば、あるテーブルにはめったに変更されないデータを含む所定の行セットが含まれている場合がありますが、他の行セットには頻繁に変更されるデータがあるとします。 このような場合は、データの一部を処理するときにデータ全体を処理する必要はありません。 パーティションを使用すると、めったに処理されないデータから頻繁に処理する必要のあるデータ部分を分割できます。  
   
  効率的なモデル設計によるパーティションの活用によって、不必要な処理とその後の Analysis Services サーバーでのプロセッサ負荷が排除されます。同時に、データ ソースの大部分の最新のデータを反映できる頻度でデータが処理され更新されるようになります。 モデル作成時にパーティションをどのように実装し利用するかは、配置済みモデルでパーティションがどのように実装され利用されているかによって大幅に異なる場合があります。 モデル作成段階では、最終的に配置済みモデルに入るデータのサブセットのみを操作している可能性があるということに注意してください。  

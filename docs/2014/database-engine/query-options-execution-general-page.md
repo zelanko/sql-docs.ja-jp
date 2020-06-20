@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: defc499412d059542262ec978d47f4c93c8bac23
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: a7d317e3fd4b225236064d02157aff37f3529f83
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858614"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929613"
 ---
 # <a name="query-options-execution-general-page"></a>[クエリ オプション] の [実行] ([全般] ページ)
   このページを使用して、クエリを実行するためのオプションを指定し [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。 このダイアログ ボックスにアクセスするには、クエリ エディター ウィンドウ内で右クリックし、 **[クエリ オプション]** をクリックします。  

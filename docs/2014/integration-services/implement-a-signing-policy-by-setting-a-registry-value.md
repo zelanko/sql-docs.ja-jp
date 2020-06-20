@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 776a8319750721f3b489df1a3a4466c7dc36f15e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058214"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968322"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>レジストリ値を設定して署名ポリシーを実装する
   オプションのレジストリ値を使用して、署名付きパッケージまたは署名がないパッケージを読み込む際の組織のポリシーを管理できます。 このレジストリ キーを使用する場合、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が実行されるコンピューターおよびポリシーを適用するコンピューターごとにこのレジストリ値を作成する必要があります。 レジストリ値が設定されると、パッケージを読み込む前に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] によって署名が確認されます。  
@@ -34,7 +33,7 @@ ms.locfileid: "66058214"
   
  次の表に、DWORD データの有効な値、およびそれらに関連付けられたポリシーを示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0|管理制限はありません。|  
 |1|署名が無効なパッケージをブロックします。<br /><br /> この設定では、署名がないパッケージはブロックしません。|  
@@ -48,7 +47,7 @@ ms.locfileid: "66058214"
   
 1.  [**スタート**] メニューの [**ファイル名を指定して実行**] をクリックします。  
   
-2.  [実行] ダイアログボックスで、 `Regedit`「」と入力し、[ **OK**] をクリックします。  
+2.  [実行] ダイアログボックスで、「」と入力し、 `Regedit` [ **OK**] をクリックします。  
   
 3.  レジストリ キー HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS を探します。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66058214"
   
 5.  新しい値の名前を「`BlockedSignatureStates`」に更新します。  
   
-6.  右クリック`BlockedSignatureStates`して、[**変更**] をクリックします。  
+6.  右クリック `BlockedSignatureStates` して、[**変更**] をクリックします。  
   
 7.  **[DWORD 値の編集]** ダイアログ ボックスで、「0」、「1」、「2」、または「3」のいずれかの値を入力します。  
   

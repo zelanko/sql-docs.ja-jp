@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31430674d88d8aa5b820823a16dc18d110b9dd9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13b494e4c2d8d822eb6d25d53d3b50962a65ef49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782312"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037659"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>トリガーの作成、変更、および削除
-  SMO では、<xref:Microsoft.SqlServer.Management.Smo.Trigger> オブジェクトを使用してトリガーが表現されます。 トリガー [!INCLUDE[tsql](../../../includes/tsql-md.md)]が起動されたときに実行されるコードは、 <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A>トリガーオブジェクトのプロパティによって設定されます。 トリガーの型は、<xref:Microsoft.SqlServer.Management.Smo.Trigger> プロパティなど、<xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> オブジェクトのその他のプロパティを使用することで設定します。 これは、親テーブル上のレコードの `UPDATE` によってトリガーが起動されるかどうかを指定する、ブール型のプロパティです。  
+  SMO では、<xref:Microsoft.SqlServer.Management.Smo.Trigger> オブジェクトを使用してトリガーが表現されます。 トリガーが [!INCLUDE[tsql](../../../includes/tsql-md.md)] 起動されたときに実行されるコードは、 <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> トリガーオブジェクトのプロパティによって設定されます。 トリガーの型は、<xref:Microsoft.SqlServer.Management.Smo.Trigger> プロパティなど、<xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> オブジェクトのその他のプロパティを使用することで設定します。 これは、親テーブル上のレコードの `UPDATE` によってトリガーが起動されるかどうかを指定する、ブール型のプロパティです。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Trigger> オブジェクトは、従来のデータ操作言語 (DML) トリガーを表します。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降のバージョンでは、データ定義言語 (DDL) トリガーもサポートされます。 DDL トリガーは、<xref:Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.ServerDdlTrigger> オブジェクトで表現します。  
   

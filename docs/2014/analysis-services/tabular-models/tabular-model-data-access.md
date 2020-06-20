@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49ae9c1a0e9eac4c5fd8a47106a2d72dc880a856
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525473"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938583"
 ---
 # <a name="tabular-model-data-access"></a>テーブル モデル データ アクセス
   Analysis Services のテーブル モデル データベースは、多次元モデルからデータまたはメタデータを取得するときとほぼ同じクライアント、インターフェイス、および言語でアクセスできます。 詳細については、「[Multidimensional Model Data Access (Analysis Services - Multidimensional Data)](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)」(多次元モデルのデータ アクセス (Analysis Services - 多次元データ)) を参照してください。  
@@ -38,7 +37,7 @@ ms.locfileid: "79525473"
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] クライアントからモデルへと送信されるクエリは DAX ステートメントとして発行され、モデルにトレースを設定することによって監視できます。  クライアントは、概念スキーマ定義言語 (CSDL) に従って提示される初期スキーマ定義をサーバーに要求しますが、その際にも、サーバーに要求を送信します。 詳細については、「 [ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、テーブル モデルをホストするインスタンスの管理や、テーブル モデル内のメタデータおよびデータに対するクエリを行うことができます。 モデルやモデル内のオブジェクトの処理、パーティションの作成と管理、さらには、データ アクセスを管理するためのセキュリティの設定を行うこともできます。 詳細については、以下のトピックを参照してください。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、テーブル モデルをホストするインスタンスの管理や、テーブル モデル内のメタデータおよびデータに対するクエリを行うことができます。 モデルやモデル内のオブジェクトの処理、パーティションの作成と管理、さらには、データ アクセスを管理するためのセキュリティの設定を行うこともできます。 詳細については、次のトピックを参照してください。  
   
 -   [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

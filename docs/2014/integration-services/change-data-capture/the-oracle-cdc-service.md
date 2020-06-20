@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50ee8e81623fb4358cc9768d79a1f8b559a24685
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771078"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922264"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
   Oracle CDC Service は、プログラム xdbcdcsvc.exe を実行する Windows サービスです。 それぞれ異なる Windows サービス名を持つ複数の Windows サービスを、同じコンピューターで実行するように構成できます。 1 つのコンピューターで複数の Oracle CDC Windows サービスを作成する場合としては、サービス間の分離を強化したい場合や、各サービスでそれぞれ異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用する必要がある場合などが一般的です。  
   
- Oracle CDC Service は、Oracle CDC Service 構成コンソールを使用して作成されるか、xdbcdcsvc.exe プログラムに組み込まれているコマンド ライン インターフェイスを使用して定義されます。 どちらの場合も、作成される各 Oracle CDC Service は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 1 つのインスタンス ( **AlwaysOn**セットアップでクラスター化またはミラー化される場合があります) に関連付けられ、接続情報 (接続文字列とアクセス資格情報) はサービス構成に含まれます。  
+ Oracle CDC Service は、Oracle CDC Service 構成コンソールを使用して作成されるか、xdbcdcsvc.exe プログラムに組み込まれているコマンド ライン インターフェイスを使用して定義されます。 どちらの場合も、作成される各 Oracle CDC Service は、1つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス ( **AlwaysOn**セットアップでクラスター化またはミラー化される場合があります) に関連付けられ、接続情報 (接続文字列とアクセス資格情報) はサービス構成に含まれます。  
   
  Oracle CDC Service が開始されると、関連付けられている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続が試行され、処理する必要がある Oracle CDC インスタンスの一覧が取得されて、環境の最初の検証が実行されます。 サービス開始時のエラーと、開始/停止の情報は、常に Windows アプリケーション イベント ログに書き込まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続が確立されると、すべてのエラーと情報メッセージが、 **インスタンスの MSXDBCDC データベースの** dbo.xdbcdc_trace [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに書き込まれます。 サービス開始時の検証では、たとえば、同じ名前の Oracle CDC Service が現在実行されていないかどうかが確認されます。 同じ名前のサービスが別のコンピューターから現在接続している場合は、Oracle CDC Service が wait ループに入り、そのサービスが切断されるのを待ってから処理が開始されます。  
   

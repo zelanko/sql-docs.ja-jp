@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0145f973a2290d6fbe0c93139d42cd2298fa3cbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151198"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066904"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] データベース エンジン チューニング アドバイザー (DTA) は、データベースを分析し、クエリ パフォーマンスを最適化する手助けをします。 データベース エンジン チューニング アドバイザーを使用すると、データベースの構造や [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の内部構造に関する専門的な知識がなくても、インデックス、インデックス付きビュー、テーブル パーティション分割の最適な組み合わせを選択して作成することができます。 DTA を使用して、次の作業を実行できます。  
@@ -63,7 +62,7 @@ ms.locfileid: "63151198"
  データベース エンジン チューニング アドバイザーのグラフィカル ユーザー インターフェイス  
  ワークロードを指定したり各種チューニング オプションを選択したりできる使いやすいインターフェイス。  
   
- **dta** ユーティリティ  
+ **dta**ユーティリティ  
  データベース エンジン チューニング アドバイザーのコマンド プロンプト版。 **dta** ユーティリティは、データベース エンジン チューニング アドバイザーの機能をアプリケーションとスクリプトで使用するために作成されました。  
   
  ワークロード  

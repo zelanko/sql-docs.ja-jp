@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b29be9c59a35120949966e840420b415dc3157c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 26fe0058a93e05d1533ed5332eeaa5054727f9bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702309"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012909"
 ---
 # <a name="use-xml-in-computed-columns"></a>計算列での XML の使用
   XML インスタンスは、計算列のソースとして、または計算列の一種として使用できます。 このトピックでは、計算列で XML を使用する方法を示す例を紹介します。  

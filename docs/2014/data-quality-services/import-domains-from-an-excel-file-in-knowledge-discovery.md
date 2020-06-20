@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0ca7391a025cf0fe4477cc9008c51c0a06a59f00
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5045b5312dbcb19820de7ed6f4aa88f521a558db
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480542"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937653"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>ナレッジ検出でドメインを Excel ファイルからインポートする
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ナレッジ検出アクティビティで Excel ファイルから 1 つまたは複数のドメインをインポートする方法について説明します。 インポート処理は、ナレッジの生成処理を簡略化し、時間と労力を節約します。 インポートにより、Excel ファイルまたはテキスト ファイルでデータを所有しているユーザーは、そのデータを使用してナレッジ ベースを作成できます。 (既存のナレッジベースのドメインに値をインポートする方法の詳細については、「 [Excel ファイルからドメインへの値のインポート](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)」を参照してください)。Excel ファイルへのエクスポートはサポートされていません。  

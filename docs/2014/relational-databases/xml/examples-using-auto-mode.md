@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7d2b40ae9c5eda9288f86527c2cbf973a4106e09
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bb6567924747d9325610c23d1f11de8ced1bc017
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716697"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059491"
 ---
 # <a name="examples-using-auto-mode"></a>例 : AUTO モードの使用
   次の例では、AUTO モードの使用方法を示します。 クエリの多くは、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースの ProductModel テーブルの Instructions 列に格納されている、自転車の製造手順の XML ドキュメントに対して指定されています。  
@@ -265,7 +264,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   クエリ結果で、返された要素名と属性名に特殊な XML 文字や URL 文字が含まれている場合、それらの文字は対応する Unicode 文字の 16 進数値を使用してエンコードされます。 上記の結果では、要素名 <`Special Chars`> が <`Special_x0020_Chars`> として返されています。 属性名 <`Col#&2`> は <`Col_x0023__x0026_2`> として返されています。 XML と URL の両方の特殊文字がエンコードされます。  
   
--   要素や属性の値に 5 つの標準 XML 文字エンティティ ('、""、\<、>、および &) のいずれかが含まれている場合、これらの特殊な XML 文字は必ず XML 文字エンコードを使用してエンコードされます。 上記の結果では、属性 <`&`> の値の `Col1` という値は `&` とエンコードされています。 ただし、# 文字は特殊な XML 文字ではなく有効な XML 文字なので、# のままです。  
+-   要素または属性の値に5つの標準 XML 文字エンティティ ('、""、、および &) のいずれかが含まれている場合 \<, > 、これらの特殊な xml 文字は常に xml 文字エンコーディングを使用してエンコードされます。 上記の結果では、属性 <`&`> の値の `Col1` という値は `&` とエンコードされています。 ただし、# 文字は特殊な XML 文字ではなく有効な XML 文字なので、# のままです。  
   
 -   要素や属性の値に URL で特別な意味を持つ任意の特殊な URL 文字が含まれている場合、それらの文字は、DBOBJECT URL 値であるとき、および特殊文字がテーブル名や列名の一部であるときにのみエンコードされます。 この結果、テーブル名 `#` の一部である文字 `Col#&2` は、 `_x0023_ in the DBOJBECT URL`としてエンコードされます。  
   

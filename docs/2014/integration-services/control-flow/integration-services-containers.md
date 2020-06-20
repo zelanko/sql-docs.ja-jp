@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0afb0e4307b4bc2205e92700f6fc0ca580caa801
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831351"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918722"
 ---
 # <a name="integration-services-containers"></a>Integration Services コンテナー
   コンテナーとは、パッケージに構造を提供し、タスクにサービスを提供する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクトのことです。 コンテナーは、パッケージ内の制御フローの反復をサポートし、タスクおよびコンテナーを意味のある作業単位にグループ化します。 コンテナーには、タスクの他に別のコンテナーを含めることができます。  
@@ -58,7 +57,7 @@ ms.locfileid: "62831351"
 |`FailPackageOnFailure`|コンテナーでエラーが発生した場合、パッケージが失敗するかどうかを示すブール値です。 このプロパティの既定値は、`False` です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>」を参照してください。|  
 |`FailParentOnFailure`|コンテナーでエラーが発生した場合、親コンテナーが失敗するかどうかを示すブール値です。 このプロパティの既定値は、`False` です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>」を参照してください。|  
 |`ForcedExecutionValue`|`ForceExecutionValue` が `True` に設定されている場合は、コンテナーのオプションの実行値を含むオブジェクトです。 このプロパティの既定値は **0** です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>」を参照してください。|  
-|`ForcedExecutionValueType`|`ForcedExecutionValue` のデータ型です。 このプロパティの既定値は `Int32` です。|  
+|`ForcedExecutionValueType`|`ForcedExecutionValue`のデータ型。 このプロパティの既定値は `Int32` です。|  
 |`ForceExecutionResult`|パッケージまたはコンテナーの強制実行結果を示す値です。 有効値は、`None`、`Success`、`Failure`、および `Completion` です。 このプロパティの既定値は、`None` です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>」を参照してください。|  
 |`ForceExecutionValue`|コンテナーのオプションの実行値に特定の値を適用する必要があるかどうかを示すブール値です。 このプロパティの既定値は `False` です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>」を参照してください。|  
 |`ID`|コンテナー GUID です。パッケージの作成時に割り当てられます。 このプロパティは読み取り専用です。<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
@@ -67,7 +66,7 @@ ms.locfileid: "62831351"
 |`LoggingMode`|コンテナーのログ記録の動作を指定する値です。 値は、`Disabled`、`Enabled`、および `UseParentSetting` です。 このプロパティの既定値は `UseParentSetting` です。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>」を参照してください。|  
 |`MaximumErrorCount`|コンテナーが実行を停止するまでに発生が許可される、最大エラー数を示します。 このプロパティの既定値は**1**です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>」を参照してください。|  
 |`Name`|コンテナーの名前。<br /><br /> 詳細については、<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A> を参照してください。|  
-|`TransactionOption`|コンテナーに対するトランザクションの関与を示します。 値は`NotSupported`、 `Supported`、、 `Required`です。 このプロパティの既定値は `Supported` です。 詳細については、<xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption> を参照してください。|  
+|`TransactionOption`|コンテナーに対するトランザクションの関与を示します。 値は `NotSupported` 、、 `Supported` 、 `Required` です。 このプロパティの既定値は `Supported` です。 詳細については、<xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption> を参照してください。|  
   
  Foreach ループ、For ループ、シーケンス、およびタスク ホストの各コンテナーをプログラムで構成する際に使用できるすべてのプロパティの詳細については、以下の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API のトピックを参照してください。  
   

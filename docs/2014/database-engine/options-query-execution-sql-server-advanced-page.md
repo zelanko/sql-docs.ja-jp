@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6fcb8be3b7803402d6e20510d95f293107b66540
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 3efc3dc8b42fc08969cc1afb85d4e629f6759e10
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000822"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930283"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>[オプション] ([クエリ実行]: [SQL Server]: [詳細設定] ページ)
   SET コマンドを使用する場合は、いくつかのオプションを使用できます。 このページを使用すると、SQL Server クエリ エディターで [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリを実行するための **set** オプションを指定できます。 他のコード エディターには影響しません。 これらのオプションに加えられた変更は、新しい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリだけに適用されます。 現在のクエリのオプションを変更するには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ ウィンドウの **[クエリ]** メニューまたはショートカット メニューの **[クエリ オプション]** をクリックします。 **[実行]** の **[詳細設定]** をクリックします。 各オプションの詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックを参照してください。  

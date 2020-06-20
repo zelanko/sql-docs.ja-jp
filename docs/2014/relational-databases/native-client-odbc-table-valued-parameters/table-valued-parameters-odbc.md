@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e22b65aab9b9775889a3a03fe3ba90a84aafc9f0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d98e8d4ab44709947d8786bce2829954703c77e5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705164"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039416"
 ---
 # <a name="table-valued-parameters-odbc"></a>テーブル値パラメーター (ODBC)
   ODBC のテーブル値パラメーターのサポートにより、クライアント アプリケーションは、1 回の呼び出しで複数の行をサーバーに送信することで、パラメーター化されたデータをサーバーに効率的に送信できます。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a7664fb91c6e60789cd59aeef1d25c33409477a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5b71480ef7396e935e80f9d94633a5278446700
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831469"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918802"
 ---
 # <a name="history-cleanup-task"></a>履歴クリーンアップ タスク
   履歴クリーンアップ タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb データベースの、次の履歴テーブル内のエントリを削除します。  

@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ed991d65858d40b96013659caa2d83c479ca1d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e647ed8d563bb922ee083d7a10a57429148e954a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782721"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953092"
 ---
 # <a name="register-a-database-as-a-dac"></a>データベースを DAC として登録する方法
-  **データ層アプリケーションの登録ウィザード**または Windows PowerShell スクリプトを使用して、既存のデータベース内のオブジェクトを表すデータ層アプリケーション (dac) 定義を作成し、その dac 定義を`msdb`システムデータベース (の**master** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]マスター) に登録します。  
+  **データ層アプリケーションの登録ウィザード**または Windows PowerShell スクリプトを使用して、既存のデータベース内のオブジェクトを表すデータ層アプリケーション (dac) 定義を作成し、その dac 定義を `msdb` システムデータベース (の**マスター** ) に登録し [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ます。  
   
 -   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
@@ -78,11 +77,11 @@ ms.locfileid: "72782721"
   
  **アプリケーション名。** : DAC 定義を識別するための名前。このフィールドには、選択したデータベースの名前が自動的に入力されます。  
   
- **バージョン。** : DAC のバージョンを表す数値。 DAC のバージョンは、開発者が操作している DAC のバージョンを特定するために Visual Studio で使用します。 DAC を配置すると、バージョンが`msdb`データベースに格納され、後での [**データ層アプリケーション**] ノードの下[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に表示されるようになります。  
+ **バージョン。** : DAC のバージョンを表す数値。 DAC のバージョンは、開発者が操作している DAC のバージョンを特定するために Visual Studio で使用します。 DAC を配置すると、バージョンがデータベースに格納され、 `msdb` 後での [**データ層アプリケーション**] ノードの下に表示されるようになり [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。  
   
- **記述.** : 省略可。 この DAC の目的についての説明。 DAC を配置すると、説明は`msdb`データベースに格納され、後での [**データ層アプリケーション**] ノードの下[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]に表示できます。  
+ **記述.** : 省略可。 この DAC の目的についての説明。 DAC を配置すると、説明はデータベースに格納され、 `msdb` 後での [**データ層アプリケーション**] ノードの下に表示でき [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ます。  
   
- [戻る]-[**概要**] ページに戻ります。 ** \< **  
+ [ ** \< 戻る**]-[**概要**] ページに戻ります。  
   
  **[次へ >]** : データベースのオブジェクトから DAC を作成できるかどうかを検証し、その結果を **[検証と概要]** ページに表示します。  
   
@@ -94,7 +93,7 @@ ms.locfileid: "72782721"
 ### <a name="retrieving-objects"></a>オブジェクトの取得  
  **[データベース オブジェクトとサーバー オブジェクトを取得しています。]** : データベースおよびデータベース エンジンのインスタンスから必要なすべてのオブジェクトを取得する間、進行状況バーが表示されます。  
   
- [戻る]: [**プロパティの設定**] ページに戻り、エントリを変更します。 ** \< **  
+ [ ** \< 戻る**]: [**プロパティの設定**] ページに戻り、エントリを変更します。  
   
  **[次へ >]** : DAC が登録され、**[DAC の登録]** ページが表示されます。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "72782721"
 ### <a name="validating-objects"></a>オブジェクトの検証  
  **Checking**  _SchemaName_ **.** _ObjectName_ **。** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 _SchemaName_**。**_ObjectName_現在検証されているオブジェクトを識別します。  
   
- [戻る]: [**プロパティの設定**] ページに戻り、エントリを変更します。 ** \< **  
+ [ ** \< 戻る**]: [**プロパティの設定**] ページに戻り、エントリを変更します。  
   
  **[次へ >]** : DAC が登録され、**[DAC の登録]** ページが表示されます。  
   
@@ -114,7 +113,7 @@ ms.locfileid: "72782721"
   
  **[レポートの保存]** : 検証レポートのコピーを HTML ファイルに保存します。 既定のフォルダーは、Windows アカウントの Documents フォルダーにある **SQL Server Management Studio\DAC Packages** フォルダーです。  
   
- [戻る]: [**プロパティの設定**] ページに戻り、エントリを変更します。 ** \< **  
+ [ ** \< 戻る**]: [**プロパティの設定**] ページに戻り、エントリを変更します。  
   
  **[次へ >]** : DAC が登録され、**[DAC の登録]** ページが表示されます。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "72782721"
   
  **[DAC の登録]** : DAC を登録するために行った各アクションの成功または失敗が表示されます。 内容を確認して、各アクションの成功または失敗を判断します。 エラーが発生したアクションには、 **[結果]** 列にリンクが表示されます。 そのアクションのエラーのレポートを表示するには、リンクをクリックします。  
   
- **[レポートの保存]** : 登録レポートを HTML ファイルに保存します。 ファイルには、アクションで発生したすべてのエラーを含む、各アクションのステータスが報告されます。 既定のフォルダーは、Windows アカウントの Documents フォルダーにある **SQL Server Management Studio\DAC Packages** フォルダーです。 ファイル名は DACPackageName>_RegisterDACReport_yyyymmdd という\<形式になっています\<。ここで、 *DACPackageName*> はデプロイされるパッケージの名前、 *yyyy*は現在の年、 *mm*は現在の月、 *dd*は現在の日付です。  
+ **[レポートの保存]** : 登録レポートを HTML ファイルに保存します。 ファイルには、アクションで発生したすべてのエラーを含む、各アクションのステータスが報告されます。 既定のフォルダーは、Windows アカウントの Documents フォルダーにある **SQL Server Management Studio\DAC Packages** フォルダーです。 ファイル名は_RegisterDACReport_yyyymmdd.html の形式になります。ここで、 \<DACPackageName> \<*DACPackageName*> はデプロイされるパッケージの名前、 *yyyy*は現在の年、 *mm*は現在の月、 *dd*は現在の日付を示します。  
   
  **[完了]** : ウィザードを終了します。  
   

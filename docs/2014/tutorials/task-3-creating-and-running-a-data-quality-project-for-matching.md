@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8de716da5a7f845f68bd50fa09b04594bf883ad6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035412"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>タスク 3: 照合するデータ品質プロジェクトを作成および実行する
   ここでは、照合アクティビティ用のデータ品質プロジェクトを作成し、クレンジングされた仕入先データで照合プロセスを実行して、データ内の重複部分を削除します。
@@ -34,7 +33,7 @@ ms.locfileid: "78171771"
 
 6.  **[マップ]** ページの **[データ ソース]** で **[Excel ファイル]** を選択します。
 
-7.  [**参照**] をクリックして、クレンジングアクティビティの出力ファイルである [クレンジングされた**Supplier List .xls**] を選択します。
+7.  [**参照**] をクリックし、クレンジングアクティビティの出力ファイルである [クレンジングされた**Supplier List.xls**] を選択します。
 
 8.  [**仕入先** **ID** ] ドメイン、[ **supplier name** ] 列を [supplier **Name** domain] にマップし、 **ContactEmailAddress**列を [ **Contact Email** domain] にマップします。
 

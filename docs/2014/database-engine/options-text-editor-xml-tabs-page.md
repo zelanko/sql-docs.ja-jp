@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 01721e60e2f70462d606586225ab98329dad7daa
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 43f97832e4afc7565c472d3da58127ea679d85c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000608"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929607"
 ---
 # <a name="options-text-editorxmltabs-page"></a>[オプション] ([テキスト エディター]: [XML]: [タブ] ページ)
   このダイアログ ボックスを使用すると、XML ドキュメントの編集に使用される XML エディターのタブの動作を変更できます。 この設定を表示するには、[ **ツール** ] メニューの [ **オプション** ] をクリックして、[ **テキスト エディター** ] フォルダーを展開し、さらに [ **XML** ] サブフォルダーを展開して、[ **タブ**] をクリックします。  
@@ -26,7 +25,7 @@ ms.locfileid: "83000608"
  XML エディターのオプションは、[すべての言語] の [全般] **** ダイアログで設定することもできます。 ただし、DMX エディターや MDX エディターなど、他の **エディターに対し、** [すべての言語] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のダイアログを使用して異なるオプションを設定する場合は、ここで紹介したダイアログを使用して XML エディターのオプションを設定し直す必要があります。  
   
 ## <a name="indenting"></a>インデント  
- **None**  
+ **なし**  
  このオプションが選択されている場合、Enter キーを押したときに作成される新しい行は、インデントされません。 カーソルは、新しい行の 1 列目に置かれます。  
   
  **ブロック**  

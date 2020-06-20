@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a5bf48818e6e1d0b5d92fbd04602d09a72276593
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b3d34fc79dd7817e64b34b61083415477860ce97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718236"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997931"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense でサポートされている Transact-SQL 構文
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の IntelliSense でサポートされる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ステートメントと構文要素について説明します。  
@@ -93,7 +92,7 @@ ms.locfileid: "82718236"
   
  前に示した要素が他の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内で使用されている場合、IntelliSense は提供されません。 たとえば、SELECT ステートメント内で使用されている列名に対しては IntelliSense のサポートがありますが、CREATE FUNCTION ステートメント内で使用されている列に対してはサポートがありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] のスクリプトまたはバッチ内では、このトピックに記載されているステートメントと構文のみが [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense によってサポートされています。 IntelliSense でサポートされるステートメントと構文要素を次の [!INCLUDE[tsql](../../includes/tsql-md.md)] のコード例に示します。 たとえば、次のバッチにおいて、 `SELECT` ステートメントが単独で記述されているときは IntelliSense を利用できますが、 `SELECT` が `CREATE FUNCTION` ステートメントに含まれているときは IntelliSense を利用できません。  
   
 ```  

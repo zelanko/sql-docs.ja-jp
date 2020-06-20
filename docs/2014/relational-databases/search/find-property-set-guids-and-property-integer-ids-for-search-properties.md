@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7a18a44a0f71254342f8fc29c38f0993fc05bfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53c08d3a2f86c7e412fbdb1caa6d55d7d23bf407
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637893"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004325"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得
   このトピックでは、プロパティを検索プロパティ リストに追加してフルテキスト検索で検索できるようにするために事前に必要な値を取得する方法について説明します。 これらの値には、ドキュメント プロパティのプロパティ セット GUID およびプロパティ整数識別子が含まれます。  
   
- バイナリデータから IFilters によって抽出され`varbinary`たドキュメントプロパティ`varbinary(max)` (、(を含む`FILESTREAM`)、または`image`データ型の列に格納されているデータ) は、フルテキスト検索に使用できます。 抽出されたプロパティを検索できるようにするには、検索プロパティ リストにプロパティを手動で追加する必要があります。 さらに、検索プロパティ リストを 1 つ以上のフルテキスト インデックスに関連付ける必要があります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](search-document-properties-with-search-property-lists.md)」を参照してください。  
+ バイナリデータから IFilters によって抽出されたドキュメントプロパティ `varbinary` `varbinary(max)` (、(を含む)、またはデータ型の列に格納されているデータ) は、 `FILESTREAM` `image` フルテキスト検索に使用できます。 抽出されたプロパティを検索できるようにするには、検索プロパティ リストにプロパティを手動で追加する必要があります。 さらに、検索プロパティ リストを 1 つ以上のフルテキスト インデックスに関連付ける必要があります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](search-document-properties-with-search-property-lists.md)」を参照してください。  
   
  使用可能なプロパティをプロパティ リストに追加する前に、プロパティに関する以下の 2 つの情報を入手する必要があります。  
   
@@ -42,8 +41,8 @@ ms.locfileid: "73637893"
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|特定のアイテムの作成者。|  
 |Tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|アイテムに割り当てられる一連のキーワード (タグとも呼ばれます)。|  
-|Type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|正規の種類に基づいて認識されるファイルの種類。|  
-|タイトル|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|アイテムのタイトル。 たとえば、ドキュメントのタイトル、メッセージの件名、写真のキャプション、または音楽トラックの名前。|  
+|種類|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|正規の種類に基づいて認識されるファイルの種類。|  
+|Title|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|アイテムのタイトル。 たとえば、ドキュメントのタイトル、メッセージの件名、写真のキャプション、または音楽トラックの名前。|  
   
  ファイル形式間で一貫性を保持するため、マイクロソフトでは、頻繁に使用される、優先度の高いドキュメントのプロパティのサブセットを、いくつかのドキュメントのカテゴリとして特定しています。 これらには、通信、連絡先、ドキュメント、音楽ファイル、画像、およびビデオがあります。 各カテゴリの上位のプロパティの詳細については、Windows サーチに関するドキュメントの「 [カスタム ファイル形式のシステム定義プロパティ](https://go.microsoft.com/fwlink/?LinkId=144336) 」を参照してください。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "73637893"
   
 -   ソフトウェア ベンダーによって定義された、アプリケーション固有のカスタム プロパティ  
   
-##  <a name="finding-information-about-available-properties-by-using-filtdumpexe"></a><a name="filtdump"></a>FILTDUMP を使用して、使用可能なプロパティに関する情報を検索します。EXCEL.EXE  
+##  <a name="finding-information-about-available-properties-by-using-filtdumpexe"></a><a name="filtdump"></a>FILTDUMP.EXE を使用して使用可能なプロパティに関する情報を検索する  
  インストールされた IFilter で検出および抽出されるプロパティを調べるには、 **Windows SDK に含まれている** filtdump.exe [!INCLUDE[msCoName](../../includes/msconame-md.md)] ユーティリティをインストールして実行してください。  
   
  **filtdump.exe** はコマンド プロンプトから実行し、1 つの引数を指定します。 この引数は、インストールした IFilter が対象とする種類のファイルの個別の名前です。 このユーティリティは、IFilter で検出された、ドキュメント内のすべてのプロパティと、そのプロパティ セット GUID、整数 ID、および追加情報の一覧を表示します。  

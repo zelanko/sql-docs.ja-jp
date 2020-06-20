@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 078c7bfeef2ff8636243f4853c03de252c7b9289
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782669"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953001"
 ---
 # <a name="validate-a-dac-package"></a>DAC パッケージの検証
   DAC パッケージを運用環境に配置する前にパッケージの内容を確認し、既存の DAC をアップグレードする前にアップグレード処理を検証するようにしてください。 これは、特に、外部で開発されたパッケージを配置する場合に当てはまります。  

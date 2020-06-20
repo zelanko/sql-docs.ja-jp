@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 9d54673d-ea9d-4ac6-825a-f216ad8b0e34
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a58c8eca585bbbe2c935c524840bc465992d45c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82984440f96416189eb18f900764ee7bdaf05a01
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62511847"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050861"
 ---
 # <a name="sending-result-sets-to-the-server-extended-stored-procedure-api"></a>結果セットのサーバーへの送信 (拡張ストアド プロシージャ API)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 代わりに CLR Integration を使用してください。  
   
- 結果セットをに送信する[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合、拡張ストアドプロシージャは次のように適切な API を呼び出す必要があります。  
+ 結果セットをに送信する場合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、拡張ストアドプロシージャは次のように適切な API を呼び出す必要があります。  
   
 -   **Srv_sendmsg**関数は、すべての行 (存在する場合) が**srv_sendrow**と共に送信される前または後に、任意の順序で呼び出すことができます。 完了ステータスが**srv_senddone**と共に送信される前に、すべてのメッセージをクライアントに送信する必要があります。  
   

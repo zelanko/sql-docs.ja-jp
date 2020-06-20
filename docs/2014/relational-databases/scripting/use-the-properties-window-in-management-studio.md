@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9c5b4f6b7c54b7bde76d61dc55b1b10f805dd87
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 208aadd4f082e92987a5f7dfce4668a7b1cf51c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718184"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997812"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Management Studio の [プロパティ] ウィンドウの使用
   [プロパティ] ウィンドウには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]内の項目 (接続、プラン表示操作など) の状態や、データベース オブジェクト (テーブル、ビュー、デザイナーなど) の情報が表示されます。  

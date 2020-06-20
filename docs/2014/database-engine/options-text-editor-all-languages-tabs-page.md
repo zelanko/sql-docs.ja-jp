@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 56dee0d04c713163f74c391fe5a482092c6c30e7
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: e383b5a33cc27b1f2e8a6cf7ec02938a7c5f8902
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000737"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929971"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>[オプション] ([テキスト エディター]/[すべての言語] - [タブ] ページ)
   このダイアログ ボックスを使用すると、全部で 5 つある [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のすべてのエディターのタブの動作を設定できます。 これらのオプションを表示するには、**[ツール]** メニューの **[オプション]** をクリックします。 **[テキスト エディター]** フォルダーを選択し、**[すべての言語]** フォルダーを展開して、**[タブ]** をクリックします。  
@@ -29,7 +28,7 @@ ms.locfileid: "83000737"
  特定のエディターに対して異なる設定が選択された場合、"個々のテキスト形式のインデントの設定が競合しています" または "個々のテキスト形式のタブの設定が競合しています" というメッセージが表示されます。 たとえば、**[テキスト形式]** では **[ブロック]** オプションが選択されているが、**[XML]** では **[なし]** が選択されている場合、このメッセージが表示されます。  
   
 ## <a name="indenting"></a>インデント  
- **None**  
+ **なし**  
  このオプションが選択されている場合、Enter キーを押したときに作成される新しい行は、インデントされません。 カーソルは、新しい行の 1 列目に置かれます。  
   
  **ブロック**  

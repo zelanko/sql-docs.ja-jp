@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa63a9f16507df8f0966d19323b2e110b7c84fcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060893"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921993"
 ---
 # <a name="conditional-split-transformation-editor"></a>条件分割変換エディター
   **[条件分割変換エディター]** を使用すると、式の作成、式が評価される順序の設定、条件分割の出力の名前付けを行うことができます。 このダイアログ ボックスには、式の作成に使用する、数学関数、文字列関数、日付/時刻関数や演算子が含まれています。 True として評価される最初の条件は、行が送信される出力を決定します。  
@@ -33,7 +32,7 @@ ms.locfileid: "66060893"
  **注文**  
  行を選択し、右側の矢印キーを使用して、式を評価する順序を変更します。  
   
- **出力名**  
+ **出力の名前**  
  出力名を指定します。 既定は数字の付いた場合の一覧ですが、一意のわかりやすい名前を選択することもできます。  
   
  **Condition**  

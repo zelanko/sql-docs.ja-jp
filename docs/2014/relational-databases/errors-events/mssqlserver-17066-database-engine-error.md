@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7d650bbf-c583-4af8-9e22-993ee2880d95
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b8600d83f09504d43778ad0b349ae71b653374e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c2bc421fb969e4f24e49871ff97047be9040ae0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915397"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967912"
 ---
 # <a name="mssqlserver_17066"></a>MSSQLSERVER_17066
     
@@ -30,7 +29,7 @@ ms.locfileid: "62915397"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|SQLASSERT_ONLY|  
-|メッセージ テキスト|SQL Server アサーション: ファイル: \<%s>、行 = %d 失敗したアサーション = '%s'。 このエラーはタイミングに関係している可能性があります。 ステートメントの再実行後もエラーが解決しない場合は、DBCC CHECKDB を使用してデータベースの構造上の整合性を確認するか、またはサーバーを再起動してインメモリ データ構造体が壊れていないことを確認してください。|  
+|メッセージ テキスト|SQL Server アサーション: ファイル: \<%s> 、行 =% d 失敗したアサーション = '% s '。 このエラーはタイミングに関係している可能性があります。 ステートメントの再実行後もエラーが解決しない場合は、DBCC CHECKDB を使用してデータベースの構造上の整合性を確認するか、またはサーバーを再起動してインメモリ データ構造体が壊れていないことを確認してください。|  
   
 ## <a name="explanation"></a>説明  
  このエラーは、一時的なタイミングに関係する問題や、メモリ内またはディスク上のデータの破損によって発生する可能性があります。  

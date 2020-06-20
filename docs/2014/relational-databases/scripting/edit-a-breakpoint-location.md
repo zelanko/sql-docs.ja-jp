@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d3aae50f173f306c47aae606ebad3ecf4f19e6a7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b4672bd51bb73bcd1af017e8ecd4ad8b6581302c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703958"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037947"
 ---
 # <a name="edit-a-breakpoint-location"></a>ブレークポイントの位置の編集
   ブレークポイントの位置では、ブレークポイントを設定する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイル内の行や文字を指定します。 ブレークポイントの位置を編集して、ブレークポイントを別の位置や別のスクリプトに移動できます。  

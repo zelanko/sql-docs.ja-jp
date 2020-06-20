@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2c858d0fa8579aff288efd7026ab4b65035bad8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c081ee21b3471656e368bfd31058c95e6aa7428b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127196"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050721"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen (拡張ストアド プロシージャ API)
     
@@ -58,7 +57,7 @@ n
 ## <a name="returns"></a>戻り値  
  パラメーター データの実際の長さをバイト数で返します。 *n* 番目のパラメーターがない場合、またはリモート ストアド プロシージャがない場合は、-1 を返します。 *n* 番目のパラメーターが NULL である場合は 0 を返します。  
   
- パラメーターが次[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のシステムデータ型のいずれかである場合、この関数は次の値を返します。  
+ パラメーターが次のシステムデータ型のいずれかである場合、この関数は次の値を返し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。  
   
 |新しいデータ型|入力データ長|  
 |--------------------|-----------------------|  

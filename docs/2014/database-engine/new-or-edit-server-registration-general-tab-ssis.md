@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b586b736-344b-4e42-83ee-96f66ad433a5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 72de91ffa2dc7f52a1cce5192d4aab0ff258cbc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ddb7ae175cb7a95e777806e9fdd3d469a55f4fa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774168"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930472"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>[新規サーバーの登録] または [サーバー登録プロパティの編集] ([全般] タブ) (SSIS)
   このタブを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]を登録するときのオプションを指定できます。  
@@ -52,7 +51,7 @@ ms.locfileid: "62774168"
  **テスト**  
  クリックすると、 **[サーバー名]** で選択されたサーバーへの接続をテストします。  
   
- **および**  
+ **保存**  
  クリックすると、[登録済みサーバー] の設定を保存します。  
   
   

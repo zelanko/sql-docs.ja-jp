@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dc815c0f53db54371d24078f13089246976e63ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 168bc25871ee61b545498be940ec91198d956e7f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480642"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937763"
 ---
 # <a name="domain-management-domain-list"></a>ドメイン管理:ドメイン リスト
   このトピックでは、 **(DQS) の** [ドメイン管理] [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ページの [ドメイン] リスト内のコントロールについて説明します。 このペインを使用して管理操作を実行するドメインを選択します。 これと同じペインが、 **[ドメイン管理]** ページのすべてのタブ ページで使用されています。  
@@ -25,7 +24,7 @@ ms.locfileid: "65480642"
 ## <a name="options"></a>オプション  
   
 ### <a name="domains-list"></a>[ドメイン] リスト  
- **[ドメイン]**  
+ **ドメイン**  
  この一覧にはナレッジ ベースのすべてのドメインが表示されます。 右側のペインのタブ ページで実行する操作は、この一覧で選択されているドメインに対して実行されます。 詳細については、「  
   
  **複合ドメインの作成**  

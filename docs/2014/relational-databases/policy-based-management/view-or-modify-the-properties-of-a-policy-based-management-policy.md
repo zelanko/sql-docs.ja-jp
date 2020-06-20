@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6d5b5b5ee05f467c0881b38108d126da523ea2e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da2226d3049a84098eb8e561635161f73b71ab10
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676931"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038476"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>ポリシー ベースの管理ポリシーのプロパティの表示または変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でポリシー ベースの管理ポリシーのプロパティを表示または変更する方法について説明します。  
@@ -27,7 +26,7 @@ ms.locfileid: "62676931"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してポリシーのプロパティを表示または変更するには:**  
   

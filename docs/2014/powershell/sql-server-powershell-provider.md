@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04d332e2c71e69b9a3e7d1d1b0c60eb9aabaf2e5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762844"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960152"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
   Windows PowerShell 用の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、ファイル システム パスと同様のパスで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの階層を公開します。 このパスを使用してオブジェクトの場所を指定し、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) モデルのメソッドを使用してオブジェクトの操作を実行できます。  
@@ -35,7 +34,7 @@ ms.locfileid: "62762844"
   
  それぞれの Windows PowerShell プロバイダーは 1 つ以上のドライブを実装します。 各ドライブは、関連するオブジェクトの階層のルート ノードです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、SQLSERVER: ドライブを実装します。 プロバイダーは、SQLSERVER: ドライブの主要フォルダーのセットも定義します。 各フォルダーおよびそのサブフォルダーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト モデルを使用してアクセスできるオブジェクトのセットを表します。 これらのいずれかの主要フォルダーで始まるパスでサブフォルダーにフォーカスを設定すると、関連付けられたオブジェクト モデルのメソッドを使用して、このノードによって表されるオブジェクトの操作を実行できます。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] プロバイダーが実装する Windows PowerShell フォルダーを次の表に示します。  
   
-|Folder|SQL Server オブジェクト モデルの名前空間|オブジェクト|  
+|フォルダー|SQL Server オブジェクト モデルの名前空間|Objects|  
 |------------|---------------------------------------|-------------|  
 |SQLSERVER:\SQL|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|データベース オブジェクト (テーブル、ビュー、ストアド プロシージャなど)|  
 |SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|ポリシー ベースの管理オブジェクト (ポリシーやファセットなど)|  
@@ -46,7 +45,7 @@ ms.locfileid: "62762844"
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト、パッケージ、環境などのオブジェクト。|  
 |SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブ、集計、ディメンションなどのオブジェクト。|  
   
- たとえば、SQLSERVER:\SQL フォルダーを使用して、SMO オブジェクト モデルでサポートされる任意のオブジェクトを表すパスを開始することができます。 Sqlserver: \ sql パスの先頭部分は sqlserver: \ sql\\*ComputerName*\\*InstanceName*です。 インスタンス名の後のノードは、オブジェクト コレクション ( *Databases* 、 *Views*など) とオブジェクト名 (AdventureWorks2012 など) で切り替わります。 スキーマはオブジェクト クラスとしては表されません。 スキーマ内の最上位レベルのオブジェクト (テーブルやビューなど) のノードを指定する場合、オブジェクト名を *SchemaName.ObjectName*の形式で指定する必要があります。  
+ たとえば、SQLSERVER:\SQL フォルダーを使用して、SMO オブジェクト モデルでサポートされる任意のオブジェクトを表すパスを開始することができます。 Sqlserver: \ sql パスの先頭部分は sqlserver: \ sql \\ *ComputerName* \\ *InstanceName*です。 インスタンス名の後のノードは、オブジェクト コレクション ( *Databases* 、 *Views*など) とオブジェクト名 (AdventureWorks2012 など) で切り替わります。 スキーマはオブジェクト クラスとしては表されません。 スキーマ内の最上位レベルのオブジェクト (テーブルやビューなど) のノードを指定する場合、オブジェクト名を *SchemaName.ObjectName*の形式で指定する必要があります。  
   
  ローカル コンピューター上の [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスにある AdventureWorks2012 データベースの Purchasing スキーマ内の Vendor テーブルのパスは次のようになります。  
   

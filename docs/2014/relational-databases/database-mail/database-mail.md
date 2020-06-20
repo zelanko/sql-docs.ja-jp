@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97a5a459fafd80956a2b8d31c27b86169c6fa850
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917969"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952480"
 ---
 # <a name="database-mail"></a>データベース メール
   データベース メールは、[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]から電子メールを送信するためのエンタープライズ ソリューションです。 データベース メールを使用すると、データベース アプリケーションからユーザーに電子メールを送信できます。 メッセージにはクエリ結果を含めることができ、ネットワーク上にあるリソースのファイルも含めることができます。  
@@ -49,7 +48,7 @@ ms.locfileid: "62917969"
   
 -   64 ビット互換性: データベース メールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 64 ビット インストールで完全にサポートされています。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>セキュリティ  
   
 -   既定でオフ: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の外部からのアクセスを縮小するために、データベース メールのストアド プロシージャは既定で無効になっています。  
   

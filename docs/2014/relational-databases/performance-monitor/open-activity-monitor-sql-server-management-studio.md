@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdff4dcefb1fb6113869fa01e41f3c8690cfaf2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032006"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998230"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>利用状況モニターを開く方法 (SQL Server Management Studio)
   このトピックでは、利用状況モニターを開いて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスおよびこれらのプロセスが現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに与える影響に関する情報を取得する方法について説明します。 また、利用状況モニターの更新間隔の設定方法についても説明します。  
@@ -29,7 +28,7 @@ ms.locfileid: "63032006"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **利用状況モニターを開くための方法:**  
   

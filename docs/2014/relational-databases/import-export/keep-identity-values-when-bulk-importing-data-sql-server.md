@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07f6714f27f60afda91134034509ff439d92f071
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011907"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050484"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>データの一括インポート時の ID 値の保持 (SQL Server)
-  Id 値を含むデータファイルは、の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに一括インポートできます。 既定では、インポートされたデータ ファイルの ID 列の値は無視され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって固有の値が自動的に割り当てられます。 固有の値は、テーブル作成時に指定されたシード値と増分値に基づいています。  
+  Id 値を含むデータファイルは、のインスタンスに一括インポートでき [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 既定では、インポートされたデータ ファイルの ID 列の値は無視され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって固有の値が自動的に割り当てられます。 固有の値は、テーブル作成時に指定されたシード値と増分値に基づいています。  
   
  データ ファイルにテーブルの ID 列の値が含まれていない場合は、フォーマット ファイルを使用してデータをインポートするときにテーブルの ID 列をスキップするように指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は固有の値をこの列に自動的に割り当てます。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66011907"
 > [!NOTE]  
 >  複数のテーブルで使用できる自動的に増分する番号、またはテーブルを参照せずにアプリケーションから呼び出すことができる自動的に増分する番号を作成するには、「[シーケンス番号](../sequence-numbers/sequence-numbers.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このトピックの例では、INSERT ... SELECT * FROM OPENROWSET(BULK...) を使用し、既定値を維持して、データを一括インポートします。  
   
 ### <a name="sample-table"></a>サンプル テーブル  
@@ -79,7 +78,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
 |修飾子|説明|  
 |----------------|-----------------|  
 |**-E**|データ ファイルの ID 値を ID 列に使用するように指定します。|  
-|**-T**|ユーティリティが`bcp`信頼関係接続を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用してに接続するように指定します。|  
+|**-T**|`bcp`ユーティリティが信頼関係接続を使用してに接続するように指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
   
  Windows のコマンド プロンプトで、次のように入力します。  
   

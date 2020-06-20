@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: eaa80c71dcc58cbd780a664d2466a3bf3cec2a4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22cb7371a0215989d2759ddfb2c84f51ba5c3c31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011540"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997579"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>検索用のワード ブレーカーとステミング機能の構成と管理
   ワード ブレーカーとステミング機能は、すべてのフルテキスト インデックス データに対して言語分析を実行します。 言語分析には、単語の境界 (単語の区切り) の検索と動詞の活用 (ステミング) が含まれます。 ワード ブレーカーとステミング機能は言語に固有のものであり、言語分析の規則は言語によって異なります。 特定の言語において、 *ワード ブレーカー* によって、言語の語彙の規則に基づいて単語の境界を検出し、個々の単語を識別します。 各単語 ( *トークン*ともいいます) は、サイズを縮小するために圧縮された表現でフルテキスト インデックスに挿入されます。 *ステミング機能* はその言語の規則に基づいて特定の語の変化形を生成します (たとえば、"running"、"ran"、"runner" は、"run" という語の変化形です)。  
@@ -40,7 +39,7 @@ ms.locfileid: "66011540"
  ワード ブレーカーを追加、削除、または変更すると、フルテキスト インデックスおよびフルテキスト クエリでサポートされている Microsoft Windows のロケール識別子 (LCID) の一覧を更新する必要があります。 詳細については、「 [登録済みのフィルターおよびワード ブレーカーの表示または変更](view-or-change-registered-filters-and-word-breakers.md)」を参照してください。  
   
 ##  <a name="setting-the-default-full-text-language-option"></a><a name="default"></a>[既定のフルテキスト言語] オプションの設定  
- の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカライズ版では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]適切な一致`default full-text language`が存在する場合、セットアップによってオプションがサーバーの言語に設定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカライズされていないバージョンでは、`default full-text language` オプションは英語になります。  
+ のローカライズ版では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 適切な一致が存在する場合、セットアップによって `default full-text language` オプションがサーバーの言語に設定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカライズされていないバージョンでは、`default full-text language` オプションは英語になります。  
   
  フルテキスト インデックスを作成または変更する際には、フルテキスト インデックス列ごとに言語を指定できます。 列に言語が指定されていない場合、既定では構成オプション `default full-text language` の値になります。  
   

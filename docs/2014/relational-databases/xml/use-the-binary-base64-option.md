@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c0ae127bb1be69e2b584e370687a969ecaecfae5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f3c6488a7a0c22fe2dfc91ac3d5760e8032e5b5f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702346"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067732"
 ---
 # <a name="use-the-binary-base64-option"></a>BINARY BASE64 オプションの使用
   クエリに BINARY BASE64 オプションを指定すると、バイナリ データが base64 エンコード形式で返されます。 AUTO モードでは、BINARY BASE64 オプションを指定しないと、既定でバイナリ データの URL エンコードがサポートされます。 つまり、バイナリ データではなく、クエリが実行されたデータベースの仮想ルートからの相対 URL への参照が返されます。 この参照は、それ以降の操作で SQLXML ISAPI dbobject クエリを使用して実際のバイナリ データにアクセスするときに使用できます。 クエリで画像を識別するには、主キー列など、十分な情報を提供する必要があります。  

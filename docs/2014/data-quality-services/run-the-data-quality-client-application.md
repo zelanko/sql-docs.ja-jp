@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bbb790fc5067d1544cd4b3d9d6e90b34be8e2b77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18054a5e6a2393a2a16baf81caa44a72489e7fc5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484139"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937423"
 ---
 # <a name="run-the-data-quality-client-application"></a>Data Quality Client アプリケーションの実行
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] を実行し、[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] にログオンして、[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (DQS) を使用できます。  
@@ -40,7 +39,7 @@ ms.locfileid: "65484139"
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、次の操作を実行します。  
   
-    1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを接続するサーバーを指定します。 **[(ローカル)]** を選択し、ローカル コンピューター上の [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] に接続します。 また、下矢印をクリックし、[ ** \<その他の>サーバーのネットワークを参照**] を選択して、別のサーバーに接続する (またはローカルサーバーに名前で接続する) こともできます。 **[サーバーの参照]** ダイアログ ボックスが表示されます。 **[ローカル サーバー]** タブまたは **[ネットワーク サーバー]** タブでサーバーを選択できます。  
+    1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを接続するサーバーを指定します。 **[(ローカル)]** を選択し、ローカル コンピューター上の [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] に接続します。 下矢印をクリックして、 **\<Browse network for more servers>** 別のサーバーに接続する (またはローカルサーバーに名前で接続する) こともできます。 **[サーバーの参照]** ダイアログ ボックスが表示されます。 **[ローカル サーバー]** タブまたは **[ネットワーク サーバー]** タブでサーバーを選択できます。  
   
     2.  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] と [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] の間のデータ転送を暗号化する場合は、**[オプション]** をクリックし、**[暗号化接続]** チェック ボックスをオンにします。  
   

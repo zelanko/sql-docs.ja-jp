@@ -24,19 +24,18 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2d48e3c9a2c25dda9dae893cc8e61ff30be4314
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874122"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970618"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 統合の概要
-  このトピックでは、.NET Framework 共通言語ランタイム (CLR) との[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]統合を使用してデータベースオブジェクトをコンパイルするために必要な名前空間とライブラリの概要について説明します。 また、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# を使用した簡単な CLR ストアド プロシージャを記述、コンパイル、および実行する方法についても説明します。  
+  このトピックでは、 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] .NET Framework 共通言語ランタイム (CLR) との統合を使用してデータベースオブジェクトをコンパイルするために必要な名前空間とライブラリの概要について説明します。 また、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# を使用した簡単な CLR ストアド プロシージャを記述、コンパイル、および実行する方法についても説明します。  
   
 ## <a name="required-namespaces"></a>必要な名前空間  
- 以降[!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]。 CLR 統合機能は、.NET Framework の一部である system.data.dll というアセンブリで公開されます。 このアセンブリは、.NET Framework ディレクトリ内だけでなく、GAC (グローバル アセンブリ キャッシュ) 内にもあります。 通常、このアセンブリへの参照は、コマンド ライン ツールと [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio の両方で自動的に追加されるので、手動で追加する必要はありません。  
+ 以降 [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] 。 CLR 統合機能は、.NET Framework の一部である system.data.dll というアセンブリで公開されます。 このアセンブリは、.NET Framework ディレクトリ内だけでなく、GAC (グローバル アセンブリ キャッシュ) 内にもあります。 通常、このアセンブリへの参照は、コマンド ライン ツールと [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio の両方で自動的に追加されるので、手動で追加する必要はありません。  
   
  system.data.dll アセンブリには、CLR データベース オブジェクトのコンパイルに必要な次の名前空間が含まれています。  
   
@@ -85,7 +84,7 @@ End Class
   
 ```  
   
- この簡単なプログラムには、パブリック クラスの静的メソッドが 1 つ含まれています。 このメソッドでは、`SqlContext` と `SqlPipe` という 2 つの新しいクラスを使用して、簡単なテキスト メッセージを出力するマネージド データベース オブジェクトを作成します。 また、このメソッドは文字列 "Hello world!" を out パラメーターの値として指定します。 このメソッドは、ストアドプロシージャで[!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)]ストアドプロシージャとして宣言できます。  
+ この簡単なプログラムには、パブリック クラスの静的メソッドが 1 つ含まれています。 このメソッドでは、`SqlContext` と `SqlPipe` という 2 つの新しいクラスを使用して、簡単なテキスト メッセージを出力するマネージド データベース オブジェクトを作成します。 また、このメソッドは文字列 "Hello world!" を out パラメーターの値として指定します。 このメソッドは、ストアドプロシージャでストアドプロシージャとして宣言でき [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] ます。  
   
  ここでは、このプログラムをライブラリとしてコンパイルし、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に読み込んで、ストアド プロシージャとして実行します。  
   
@@ -119,7 +118,7 @@ vbc /target:library helloworld.vb
  これらのコマンドでは、/target オプションを使用してライブラリ DLL をビルドすることを指定し、Visual C# コンパイラまたは Visual Basic コンパイラを起動します。  
   
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>"Hello World" ストアド プロシージャの SQL Server への読み込みと実行  
- サンプルプロシージャが正常にコンパイルされたら、それをテスト[!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)]し、適切なテストデータベース (AdventureWorks サンプルデータベースなど) に接続して、新しいクエリを作成できます。  
+ サンプルプロシージャが正常にコンパイルされたら、それをテスト [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] し、適切なテストデータベース (AdventureWorks サンプルデータベースなど) に接続して、新しいクエリを作成できます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 CLR コードを有効にするには、 **sp_configure**システムストアドプロシージャを使用します。 詳細については、「 [CLR 統合の有効化](../clr-integration-enabling.md)」を参照してください。  
   
@@ -142,7 +141,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- 作成したプロシージャは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] で記述された通常のストアド プロシージャと同様に実行できます。 たとえば、次のコマンドを実行します。  
+ 作成したプロシージャは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] で記述された通常のストアド プロシージャと同様に実行できます。 次のコマンドを実行します。  
   
 ```  
 DECLARE @J nchar(25)  

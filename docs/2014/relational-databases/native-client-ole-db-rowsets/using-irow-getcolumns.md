@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1f5d2e03-e6fe-4ea1-b71d-55d02b5d59ae
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 80647fc0091d2d2c632b164737abe89d7203b4b3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f323dda790946565bc0dbd63c9e1f9d17ac7494b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704659"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039089"
 ---
 # <a name="using-irowgetcolumns"></a>IRow::GetColumns の使用
   **IRow** の実装では、列に対して順方向専用の順次アクセスを実行できます。 **IRow::GetColumns** を 1 回だけ呼び出して、行内のすべての列にアクセスすることができます。また、行内の複数の列にアクセスするたびに、毎回 **IRow::GetColumns** を呼び出すこともできます。  

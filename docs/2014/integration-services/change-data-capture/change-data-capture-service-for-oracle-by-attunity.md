@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a01524acf4fc72cb50732650f1f2e6f58b4ff74d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d15836fb551f5c7c0b04712dbcb0b783cc317a9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771528"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923603"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity の Change Data Capture Service for Oracle
   CDC Service for Oracle は、Oracle トランザクション ログをスキャンして目的の Oracle テーブルに対する変更を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変更テーブルにキャプチャする Windows サービスです。 Oracle からキャプチャされた変更が格納される SQL 変更テーブルは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブの変更データ キャプチャ機能で使用される変更テーブルと同じ種類のテーブルです。 そのため、このような変更も、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに対して行われた変更を使用する場合と同様に簡単に使用できます。  
@@ -25,7 +24,7 @@ ms.locfileid: "62771528"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC Service for Oracle をインストールすると、サービス構成 UI とサービス プログラムが選択した場所に配置されます。 CDC Service for Oracle は、Oracle CDC Service 構成コンソールを使用して個別に構成します。 Oracle CDC Service の構成の詳細については、「 [Change Data Capture Service for Oracle by Attunity の F1 ヘルプ](change-data-capture-service-for-oracle-by-attunity-f1-help.md)」を参照してください。  
   
- CDC Service for Oracle をインストールするには、SQL Server インストールメディアから手動で**attunityoraclecdcservice.msi**を実行します。 X86 および x64 用のインストールパッケージは、SQL Server インストールメディアの **.\Tools\AttunityCDCOracle\\ **にあります。  
+ CDC Service for Oracle をインストールするには、SQL Server のインストールメディアから手動で**AttunityOracleCdcService.msi**を実行します。 X86 および x64 用のインストールパッケージは、SQL Server インストールメディアの **.\Tools\AttunityCDCOracle \\ **にあります。  
   
  CDC Service for Oracle は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client がインストールされたサポートされているすべての Windows コンピューターにインストールできます。対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされている同じコンピューターにインストールする必要はありません。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62771528"
 -   Oracle Database 10x、すべてのバージョン  
   
 ### <a name="target-sql-server-database"></a>対象の SQL Server データベース  
- の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
+ の各エディションでサポートされる機能の一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
 ## <a name="running-the-installation-program"></a>インストール プログラムの実行  
  CDC Service for Oracle をインストールするには、使用している Windows プラットフォーム (32/64 ビット) 用のインストール ウィザードを開き、画面の指示に従います。  

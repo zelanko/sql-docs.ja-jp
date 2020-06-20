@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 59cca562-e3f5-4257-b868-adcbcc0142cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e8b5a8765523c91c00aae362ae311deff3179eb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c962d22b600eadc665fca31d274b423a25ea274b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718165"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997696"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>オブジェクト エクスプローラーでの空間データの表示
   クエリ エディターの **[空間結果]** ウィンドウには、 **[結果]** ウィンドウにグリッド形式で表示されるデータに加えて、空間データ結果を表示するための視覚的なマッピング ツールが用意されています。 **[空間結果]** ウィンドウに空間データを表示するには、geometry 型または geography 型のデータを含む空間データ列が少なくとも 1 つクエリ結果に含まれている必要があります。  

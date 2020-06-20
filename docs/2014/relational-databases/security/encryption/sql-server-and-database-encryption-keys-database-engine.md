@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: e9ddec585f530cf57481c56477d5be4aeaedb44a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f846e74e0afd89c6bb10a4aa9a23a6420b6a613a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060234"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server とデータベースの暗号化キー (データベース エンジン)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、暗号化キーを使用して、サーバー データベースに格納されているデータ、資格情報、および接続情報のセキュリティを保護します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、 *対称* と *非対称*の 2 種類のキーがあります。 対称キーでは、データの暗号化と暗号化解除に同じパスワードが使用されます。 非対称キーでは、データを暗号化するパスワード ( *公開* キー) とデータの暗号化を解除するパスワード ( *秘密* キー) が使い分けられます。  

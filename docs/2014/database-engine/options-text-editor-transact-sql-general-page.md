@@ -13,13 +13,12 @@ dev_langs:
 ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0552e7cd3212d8fb65100c6bd8efbaca91af43c4
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 513fe574fa19d743a69b7c92943d04e44d7f3334
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000679"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929784"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>[オプション] ([テキストエディター]/[Transact-sql]/[全般] ページ)
   [オプション] の **[全般]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssDE](../includes/ssde-md.md)] スクリプトの編集に使用される [!INCLUDE[tsql](../includes/tsql-md.md)] クエリ エディターの全般的な編集の動作を変更できます。 これらの設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックし、**[Transact-SQL]** サブフォルダーを展開して、**[全般]** をクリックします。  

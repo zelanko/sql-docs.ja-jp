@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1e4cafd4d9f9ec1579eacc2eca2f1381cec13ae6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: efa6c05db03bdfe17d5b1a68b04403e5649ccee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716868"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013364"
 ---
 # <a name="example-retrieving-employee-information"></a>例 : 従業員情報の取得
   この例では、各従業員の従業員 ID と名前を取得します。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの場合、employeeID は Employee テーブルの BusinessEntityID 列から取得できます。 従業員名は、Person テーブルから取得できます。 これらのテーブルを結合する際には、BusinessEntityID 列を使用します。  

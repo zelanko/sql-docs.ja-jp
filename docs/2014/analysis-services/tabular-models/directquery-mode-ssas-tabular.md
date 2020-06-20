@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ceb58c211b52c1fbd184aafe316e5ea77d364529
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284871"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938933"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery モード (SSAS テーブル)
   Analysis Services を使用すると、 *DirectQuery モード*を使用してリレーショナルデータベースシステムからデータを直接取得し、集計することによって、テーブルモデルからデータを取得し、レポートを作成できます。 ここでは、メモリにのみ存在する標準テーブル モデルと、リレーショナル データ ソースにクエリを実行できるテーブル モデルの違いを紹介し、DirectQuery モードで使用するモデルを作成および配置する方法について説明します。  
@@ -82,7 +81,7 @@ ms.locfileid: "67284871"
   
 -   **クライアントの制限:** モデルが DirectQuery モードの場合は、DAX を使用してのみクエリを実行できます。 MDX を使用してクエリを作成することはできません。 つまり、Excel では MDX を使用するため Excel PivotClient を使用できません。  
   
-     ただし、では、DAX テーブルクエリを XMLA Execute [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ステートメントの一部として使用する場合に、DirectQuery モデルに対するクエリを作成できます。詳細については、[Dax クエリ構文リファレンス] (/dax/dax-syntax-reference を参照してください。
+     ただし、では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dax テーブルクエリを XMLA Execute ステートメントの一部として使用する場合に、DirectQuery モデルに対するクエリを作成できます。詳細については、[Dax クエリ構文リファレンス] (/dax/dax-syntax-reference を参照してください。
   
  デザインの問題をすべて解決し、モデルをテストすると、配置の準備ができます。 この時点で、モデルに対するクエリへの応答に優先する方法を設定できます。 ユーザーがキャッシュにアクセスできるようにしますか。または常にリレーショナル データ ソースのみ使用するようにしますか。  
   
@@ -144,7 +143,7 @@ ms.locfileid: "67284871"
   
  DirectQuery のみのモデルでも、DirectQuery を使用してクエリに応答するハイブリッド モデルでも、権限借用設定プロパティによって、DirectQuery を使用してモデルに接続するときに使用される資格情報が指定されます。 プロパティの値は次のとおりです。  
   
- **[Default]**  
+ **default**  
  インポート ウィザードで指定した資格情報を使用して、データ ソースに接続します。 これには、特定の Windows ユーザーまたはサービス アカウントを指定できます。  
   
  `ImpersonateCurrentUser`  
