@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: cb46be347590d3fb61d05476616e6c0a52e1ed41
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849531"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929093"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>可用性グループに対する Azure への SQL Server マネージド バックアップの設定
   このトピックは、AlwaysOn 可用性グループに参加しているデータベースの [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の構成に関するチュートリアルです。  
@@ -29,7 +28,7 @@ ms.locfileid: "82849531"
 -   ネットワーク帯域幅: これは、ハイブリッドクラウドなどの異なる物理的な場所にあるレプリカが配置されている場合、またはクラウドのみの構成の異なる Azure リージョンにある場合に適用されます。 ネットワーク帯域幅は、セカンダリの待機時間に影響する可能性があります。セカンダリが同期レプリケーションに設定されている場合は、プライマリ ログの増加が引き起こされる可能性があります。 セカンダリ レプリカが同期レプリケーションに設定されている場合は、ネットワーク待機時間が原因でセカンダリは同期を維持できない可能性があり、その結果、セカンダリ レプリカへのフェールオーバー イベントが発生したときにデータが失われる可能性があります。  
   
 ### <a name="configuring-ss_smartbackup-for-availability-databases"></a>可用性データベースに対する [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の構成  
- **許可**  
+ **アクセス許可:**  
   
 -   **Db_backupoperator**データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL**権限、および `EXECUTE` **sp_delete_backuphistory**ストアドプロシージャに対する権限が必要です。  
   

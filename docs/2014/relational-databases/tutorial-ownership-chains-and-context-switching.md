@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 37b267c22458442e3c1c1572c2740b6595918fca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e9072a68dd3179e5900fda06d4fea58b484a37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487731"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002602"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   このチュートリアルでは、1 つのシナリオを使用して、所有権の継承とユーザー コンテキストの切り替えに関係する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のセキュリティ概念について説明します。  
@@ -48,7 +47,7 @@ ms.locfileid: "81487731"
  以下で、この例の各コード ブロックについて説明します。 完全なサンプル コードをコピーするには、このチュートリアルの最後の「 [完全なサンプル コード](#CompleteExample) 」を参照してください。  
   
 ## <a name="1-configure-the-environment"></a>1.環境を構成する  
- と[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]次のコードを使用して`AdventureWorks2012`データベースを開き、 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)]ステートメントを使用して、dbo ユーザーがコンテキストとして表示されていることを確認します。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]と次のコードを使用して `AdventureWorks2012` データベースを開き、ステートメントを使用し `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] て、dbo ユーザーがコンテキストとして表示されていることを確認します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -95,7 +94,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- GRANT ステートメントの詳細については、「[GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)」を参照してください。 ストアド プロシージャの詳細については、「[ストアド プロシージャ (データベース エンジン)](stored-procedures/stored-procedures-database-engine.md)」を参照してください。 すべて[!INCLUDE[ssDE](../includes/ssde-md.md)]のアクセス許可のポスターについ[https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)ては、「」を参照してください。  
+ GRANT ステートメントの詳細については、「[GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)」を参照してください。 ストアド プロシージャの詳細については、「[ストアド プロシージャ (データベース エンジン)](stored-procedures/stored-procedures-database-engine.md)」を参照してください。 すべてのアクセス許可のポスターについ [!INCLUDE[ssDE](../includes/ssde-md.md)] ては、「」を参照してください [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) 。  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2.データにアクセスするストアド プロシージャを作成する  
  データベース内でコンテキストを切り替えるには、EXECUTE AS ステートメントを使用します。 EXECUTE AS を使用するには IMPERSONATE 権限が必要です。  
@@ -200,7 +199,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-##  <a name="complete-example"></a><a name="CompleteExample"></a>完全な例  
+##  <a name="complete-example"></a><a name="CompleteExample"></a>コード例全体  
  次に、完全なサンプル コードを示します。  
   
 > [!NOTE]  
