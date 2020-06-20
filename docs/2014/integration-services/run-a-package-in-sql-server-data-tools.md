@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 318e6beb-5540-4101-82a5-18c9d47f0570
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae5924e5fc1cad91b5e1511c61556ece70138dcb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056421"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964549"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>SQL Server Data Tools でのパッケージの実行
   一般に、パッケージの開発、デバッグ、およびテストの段階では、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] でパッケージを実行します。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーからパッケージを実行すると、パッケージは常に即座に実行されます。  
   
- パッケージの実行中は、 [!INCLUDE[ssIS](../includes/ssis-md.md)]デザイナーによって [**進行状況**] タブにパッケージの実行の進行状況が表示されます。パッケージとそのタスクおよびコンテナーの開始時刻と終了時刻、および失敗したパッケージ内のすべてのタスクまたはコンテナーに関する情報を表示できます。 パッケージの実行が完了すると、[実行**結果**] タブに実行時情報が表示されたままになります。詳細については、「[制御フローのデバッグ](control-flow/control-flow.md)」の「進行状況レポート」を参照してください。  
+ パッケージの実行中は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーによって [**進行状況**] タブにパッケージの実行の進行状況が表示されます。パッケージとそのタスクおよびコンテナーの開始時刻と終了時刻、および失敗したパッケージ内のすべてのタスクまたはコンテナーに関する情報を表示できます。 パッケージの実行が完了すると、[実行**結果**] タブに実行時情報が表示されたままになります。詳細については、「[制御フローのデバッグ](control-flow/control-flow.md)」の「進行状況レポート」を参照してください。  
   
  **デザイン時配置**。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]でパッケージを実行すると、そのパッケージが構築されフォルダーに配置されます。 パッケージを実行する前に、パッケージを配置するフォルダーを指定できます。 フォルダーを指定しない場合、既定で **bin** フォルダーが使用されます。 こうした配置方法は、デザイン時配置と呼ばれます。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66056421"
   
 1.  ソリューション エクスプローラーで、実行するパッケージが含まれる [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト フォルダーを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  [ ** \<プロジェクト名> プロパティページ**] ダイアログボックスで、[**ビルド**] をクリックします。  
+2.  [ ** \<project name> プロパティページ**] ダイアログボックスで、[**ビルド**] をクリックします。  
   
 3.  OutputPath プロパティの値を更新して、デザイン時配置用に使用するフォルダーを指定し、 **[OK]** をクリックします。  
   

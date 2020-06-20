@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2421ceaff8b2f54c1371f44e80b4a1774b64f829
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150637"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066800"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。 データベースをチューニングした後で結果を表示および操作する方法については、「 [データベース エンジン チューニング アドバイザーからの出力の表示および操作](database-engine-tuning-advisor.md)」を参照してください。  
@@ -110,7 +109,7 @@ ms.locfileid: "63150637"
   
  独自のテンプレートを使用する場合、次のトレース イベントがキャプチャされるようにしてください。  
   
--   **RPC:Completed**  
+-   **RPC: 完了**  
   
 -   **SQL:BatchCompleted**  
   
@@ -175,7 +174,7 @@ ms.locfileid: "63150637"
   
 2.  ワークロードを作成します。 詳細については、このトピックの「 [ワークロードを作成する](#Create) 」を参照してください。  
   
-3.  データベースエンジンチューニングアドバイザーを起動し、の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスにログインします。 詳細については、このトピックの「 [データベース エンジン チューニング アドバイザーを起動する](#Start) 」を参照してください。  
+3.  データベースエンジンチューニングアドバイザーを起動し、のインスタンスにログインし [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、このトピックの「 [データベース エンジン チューニング アドバイザーを起動する](#Start) 」を参照してください。  
   
 4.  **[全般]** タブで **[セッション名]** ボックスに名前を入力して、新しいチューニング セッションを作成します。  
   
@@ -298,7 +297,7 @@ ms.locfileid: "63150637"
 ##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a>XML 入力ファイルを作成する  
  経験豊かな XML 開発者の場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーで使用できる XML 形式のファイルを作成して、ワークロードをチューニングできます。 このような XML ファイルを作成するには、使い慣れた XML ツールを使用してサンプル ファイルを編集するか、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマからインスタンスを生成します。  
   
- チューニング[!INCLUDE[ssDE](../../includes/ssde-md.md)]アドバイザーの XML スキーマは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールの次の場所にあります。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]チューニングアドバイザーの XML スキーマは、インストールの次の場所にあり [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -436,7 +435,7 @@ database_name.owner_name.table_name
  **[停止時刻]**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーを停止する日時を指定します。  
   
- **[インデックスおよびインデックス付きビュー]**  
+ **インデックスとインデックス付きビュー**  
  このオプションをオンにすると、クラスター化インデックス、非クラスター化インデックス、およびインデックス付きビューを追加するための推奨設定が含まれます。  
   
  **インデックス付きビュー**  
@@ -454,7 +453,7 @@ database_name.owner_name.table_name
  **[既存の PDS のみ使用を評価する]**  
  現在のインデックスの効果を評価しますが、追加のインデックスまたはインデックス付きビューは推奨されません。  
   
- **パーティション分割しない。**  
+ **パーティション分割なし**  
  パーティション分割を推奨しません。  
   
  **完全パーティション分割**  
@@ -506,7 +505,7 @@ database_name.owner_name.table_name
  このチューニング セッションに関する情報が表示されます。 このログを印刷するには、ログを右クリックして **[印刷]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [データベースエンジンチューニングアドバイザーからの出力を表示して操作する](database-engine-tuning-advisor.md)   
+ [データベース エンジン チューニング アドバイザーからの出力の表示および操作](database-engine-tuning-advisor.md)   
  [dta ユーティリティ](../../tools/dta/dta-utility.md)  
   
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7bdbcfa8140ecbc8c40086af41e64ba96920fe78
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 558eb7a55f2838200e1ed13062cb1e0345de4fcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000700"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929803"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>[オプション] ([テキスト エディター]/[テキスト形式]/[タブ] ページ)
   特定の開発言語に関連付けられていないドキュメントを編集するときには、テキスト エディターが使用されます。このダイアログ ボックスを使用すると、テキスト エディターのタブの動作を変更できます。 この設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックして、**[テキスト エディター]** フォルダーを展開し、さらに **[テキスト形式]** を展開して、**[タブ]** をクリックします。  
@@ -26,7 +25,7 @@ ms.locfileid: "83000700"
  テキスト形式エディターのオプションは、[すべての言語] の [全般] **** ダイアログで設定することもできます。 ただし、DMX エディターや MDX エディターなど、他の **エディターに対し、** [すべての言語] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のダイアログを使用して異なるオプションを設定する場合は、ここで紹介したダイアログを使用してテキスト形式エディターのオプションを設定し直す必要があります。  
   
 ## <a name="indenting"></a>インデント  
- **None**  
+ **なし**  
  Enter キーを押したときに作成される新しい行はインデントされません。 カーソルは、新しい行の 1 列目に置かれます。  
   
  **ブロック**  

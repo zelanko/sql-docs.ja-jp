@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: deaa7ca2225d6de503ceb3d5d901a5a51d11aa68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dffc314c99345c9e8db632fbcebc1f2e3653d2f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479363"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971362"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>属性値の変更に基づいてアクションを開始する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、属性値に対する変更に基づいてアクションを開始するビジネス ルールを作成します。 たとえば、特定の属性値が変更されたときに、値の変更、通知の送信、または外部ワークフローの開始を行うことができます。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 94ad81913071a3bbd4aad33515c27c68b9e268e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 754920cac0a832ac5ae1ff8959e710815d68fd70
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482673"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971192"
 ---
 # <a name="model-object-permissions-master-data-services"></a>モデル オブジェクト権限 (Master Data Services)
   モデル オブジェクト権限は必須です。 これにより、UI の **[エクスプローラー]** 機能領域でユーザーがアクセスできる属性が決まります。  
@@ -29,7 +28,7 @@ ms.locfileid: "65482673"
   
  [**エクスプローラー**] 以外の機能領域へのアクセスをユーザーに付与するには、ユーザーがモデル管理者である必要があります。これには、モデルオブジェクト権限の割り当ても含まれます。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
- モデルオブジェクト権限は、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]ユーザーインターフェイス (UI) の [**ユーザー/グループの権限**] 機能領域の [**モデル**] タブで割り当てられます。このタブでは、モデルがツリー構造として表されます。 ツリー内のオブジェクトに権限を割り当てると、下位にあるすべてのオブジェクトがその権限を継承します。 継承をオーバーライドするには、個々のオブジェクトに権限を割り当てます。  
+ モデルオブジェクト権限は、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ユーザーインターフェイス (UI) の [**ユーザー/グループの権限**] 機能領域の [**モデル**] タブで割り当てられます。このタブでは、モデルがツリー構造として表されます。 ツリー内のオブジェクトに権限を割り当てると、下位にあるすべてのオブジェクトがその権限を継承します。 継承をオーバーライドするには、個々のオブジェクトに権限を割り当てます。  
   
  モデルオブジェクトには、**読み取り専用**、**更新**、または**拒否**の権限を割り当てることができます。 **[モデル]** タブで権限を割り当てない場合、ユーザーは [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]でモデルおよびデータを表示できません。  
   

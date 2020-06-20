@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c6b848163d01d49d4151fa628ab81e867cb69c18
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f1016a9602a664455e0904b6957b8f8e5acdf15d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705387"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019972"
 ---
 # <a name="processing-statements-that-generate-messages"></a>メッセージを生成するステートメントの処理
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SET ステートメントのオプション STATISTICS TIME と STATISTICS IO は、実行時間の長いクエリの診断に利用できる情報を取得する場合に使用します。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、クエリ プランを分析するための SHOWPLAN オプションもサポートされています。 ODBC アプリケーションでは、次のステートメントを実行してこれらのオプションを設定できます。  

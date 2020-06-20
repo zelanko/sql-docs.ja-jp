@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42a6051305f1c8999e7cba5e4cb51a7945f1f5c7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889837"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964682"
 ---
 # <a name="performance-counters"></a>パフォーマンス カウンター
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、データ フロー エンジンのパフォーマンスを監視するために使用できるパフォーマンス カウンターのセットがインストールされます。 たとえば、"Buffers spooled" カウンターを調べると、パッケージの実行中にデータ バッファーがディスクに一時的に書き込まれているかどうかを判断できます。 このスワップは、パフォーマンスを低下させると共に、コンピューターのメモリが不足していることを示しています。  

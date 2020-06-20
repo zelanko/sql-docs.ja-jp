@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e9e9aef856276508ef557d465c20210e16f3073
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056188"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964202"
 ---
 # <a name="script-task-editor-script-page"></a>[スクリプト タスク エディター] \([スクリプト] ページ)
   **[スクリプト タスク エディター]** ダイアログ ボックスの **[スクリプト]** ページを使用すると、スクリプト プロパティを設定し、スクリプトによってアクセスできる変数を指定できます。  
@@ -37,8 +36,8 @@ ms.locfileid: "66056188"
   
  スクリプト タスクの既定のスクリプト言語を設定するには、 **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「 [General Page](general-page-of-integration-services-designers-options.md)」を参照してください。  
   
- **エントリー**  
- スクリプト タスクのコードのエントリ ポイントとして [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ランタイムが呼び出すメソッドを指定します。 指定されたメソッドは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) プロジェクトの scriptmain クラスに存在する必要があります。 scriptmain クラスは、スクリプトテンプレートによって生成される既定のクラスです。  
+ **EntryPoint**  
+ スクリプト タスクのコードのエントリ ポイントとして [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ランタイムが呼び出すメソッドを指定します。 指定されたメソッドは、Tools for Applications (VSTA) プロジェクトの ScriptMain クラスに存在する必要があります [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。 scriptmain クラスは、スクリプトテンプレートによって生成される既定のクラスです。  
   
  VSTA プロジェクトでメソッドの名前を変更する場合は、 **EntryPoint** プロパティの値を変更する必要があります。  
   

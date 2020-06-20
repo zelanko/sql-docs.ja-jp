@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3a1d8542ba5cc689cef60fc81641c37c96ea790
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e677162d88fd1f724b53e0d1838eefd16d1a87af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917392"
 ---
 # <a name="create-a-new-integration-services-project"></a>新しい Integration Services プロジェクトを作成する
   この手順では、新しいプロジェクトと新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ソリューションを作成します。  
   
 ### <a name="to-create-a-new-integration-services-project"></a>新しい Integration Services プロジェクトを作成するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を開きます。  
   
 2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66060221"
   
      ソリューション名は、プロジェクト名と一致するように自動的に更新されます。  
   
-5.  ソリューション ファイル用に別のフォルダーを作成するには、**[ソリューションのディレクトリを作成]** を選択します。 これは既定のオプションです  
+5.  ソリューション ファイル用に別のフォルダーを作成するには、**[ソリューションのディレクトリを作成]** を選択します。 既定のオプションです。  
   
 6.  ソース管理ソフトウェアがコンピューターにインストールされている場合、プロジェクトをソース管理に関連付けるには、**[ソース管理に追加]** を選択します。  
   

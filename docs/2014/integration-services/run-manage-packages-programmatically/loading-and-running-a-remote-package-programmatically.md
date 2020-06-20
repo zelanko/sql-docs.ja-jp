@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0b0340c33f5a53ba75cb42fa16e08b8b45f92da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889636"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964506"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>プログラムによるリモート パッケージの読み込みと実行
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がインストールされていないローカル コンピューターからリモート パッケージを実行するには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がインストールされているリモート コンピューター上でパッケージが実行されるように、パッケージを起動します。 この操作を行うには、ローカル コンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント、Web サービス、またはリモート コンポーネントを使用して、リモート コンピューターでパッケージを起動します。 ローカル コンピューターから直接リモート パッケージを起動しようとすると、パッケージがローカル コンピューターに読み込まれ、ローカル コンピューターから実行されます。 ローカル コンピューターに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がインストールされていない場合、パッケージは実行されません。  
@@ -36,7 +35,7 @@ ms.locfileid: "62889636"
   
 -   [Web サービスまたはリモート コンポーネントを使用して、プログラムでリモート パッケージを実行する](#service)  
   
- このトピックでパッケージを読み込み、保存するために使用するほとんどすべてのメソッドには、`Microsoft.SqlServer.ManagedDTS` アセンブリへの参照が必要です。 例外は、このトピックで説明する ADO.NET アプローチであり、 **sp_start_job**へ`System.Data`の参照のみを必要とする sp_start_job ストアドプロシージャを実行する場合に使用します。 `Microsoft.SqlServer.ManagedDTS` アセンブリへの参照を新しいプロジェクトに追加した後、`using` ステートメントまたは `Imports` ステートメントを使用して <xref:Microsoft.SqlServer.Dts.Runtime> 名前空間をインポートします。  
+ このトピックでパッケージを読み込み、保存するために使用するほとんどすべてのメソッドには、`Microsoft.SqlServer.ManagedDTS` アセンブリへの参照が必要です。 例外は、このトピックで説明する ADO.NET アプローチであり、への参照のみを必要とする**sp_start_job**ストアドプロシージャを実行する場合に使用し `System.Data` ます。 `Microsoft.SqlServer.ManagedDTS` アセンブリへの参照を新しいプロジェクトに追加した後、`using` ステートメントまたは `Imports` ステートメントを使用して <xref:Microsoft.SqlServer.Dts.Runtime> 名前空間をインポートします。  
   
 ###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> SQL Server エージェントを使用した、サーバー上でのプログラムによるリモート パッケージの実行  
  次のコード例では、プログラムで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して、サーバー上のリモート パッケージを実行する方法を示します。 このコード例では、**sp_start_job** システム ストアド プロシージャを呼び出し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを開始します。 プロシージャによって開始されるジョブの名前は `RunSSISPackage` で、このジョブはリモート コンピューターに保存されています。 その後、`RunSSISPackage` ジョブにより、リモート コンピューターでパッケージが実行されます。  
@@ -158,13 +157,13 @@ namespace LaunchSSISPackageAgent_CS
  次のコード例では、Web サービスを作成およびテストする方法を示します。  
   
 #### <a name="creating-the-web-service"></a>Web サービスの作成  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、ファイルや SQL Server から直接読み込んだり、SSIS パッケージ ストアから読み込んだりすることができます。SSIS パッケージ ストアは、SQL Server および特別なファイル システム フォルダー内のパッケージ ストレージを管理します。 このサンプルは、`Select Case` コンストラクトまたは `switch` コンストラクトを使用してパッケージを起動するための適切な構文を選択し、入力引数を適切に連結することで、すべての使用可能なオプションをサポートしています。 LaunchPackage Web サービス メソッドは、クライアント コンピューターで <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> アセンブリへの参照が不要になるように、パッケージの実行結果を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 値ではなく、整数として返します。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、ファイルや SQL Server から直接読み込んだり、SSIS パッケージ ストアから読み込んだりすることができます。SSIS パッケージ ストアは、SQL Server および特別なファイル システム フォルダー内のパッケージ ストレージを管理します。 このサンプルは、`Select Case` コンストラクトまたは `switch` コンストラクトを使用してパッケージを起動するための適切な構文を選択し、入力引数を適切に連結することで、すべての使用可能なオプションをサポートしています。 LaunchPackage Web サービス メソッドは、クライアント コンピューターで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリへの参照が不要になるように、パッケージの実行結果を <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 値ではなく、整数として返します。  
   
 ###### <a name="to-create-a-web-service-to-run-packages-on-the-server-programmatically"></a>プログラムによってサーバー上でパッケージを実行するための Web サービスを作成するには  
   
 1.  Visual Studio を開き、任意のプログラミング言語で Web サービス プロジェクトを作成します。 サンプル コードでは、プロジェクトに LaunchSSISPackageService という名前を使用します。  
   
-2.  へ`Microsoft.SqlServer.ManagedDTS`の参照を追加し、 `Imports`ステートメント`using`またはステートメントを、Microsoft の**SqlServer**名前空間のコードファイルに追加します。  
+2.  への参照を追加 `Microsoft.SqlServer.ManagedDTS` し、 `Imports` ステートメントまたは `using` ステートメントを、Microsoft の**SqlServer**名前空間のコードファイルに追加します。  
   
 3.  LaunchPackage Web サービス メソッドのサンプル コードをクラスに貼り付けます (このサンプルはコード ウィンドウの内容全体を表しています)。  
   
@@ -331,7 +330,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
 ```  
   
 #### <a name="testing-the-web-service"></a>Web サービスのテスト  
- 次のサンプル コンソール アプリケーションでは、Web サービスを使用してパッケージを実行します。 Web サービスの LaunchPackage メソッドは、クライアント コンピューターで <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> アセンブリへの参照が不要になるように、パッケージの実行結果を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 値ではなく、整数として返します。 このサンプルでは、実行結果を報告するために、<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 値を反映する値を持つプライベート列挙を作成します。  
+ 次のサンプル コンソール アプリケーションでは、Web サービスを使用してパッケージを実行します。 Web サービスの LaunchPackage メソッドは、クライアント コンピューターで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリへの参照が不要になるように、パッケージの実行結果を <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 値ではなく、整数として返します。 このサンプルでは、実行結果を報告するために、<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 値を反映する値を持つプライベート列挙を作成します。  
   
 ###### <a name="to-create-a-console-application-to-test-the-web-service"></a>Web サービスをテストするためのコンソール アプリケーションを作成するには  
   

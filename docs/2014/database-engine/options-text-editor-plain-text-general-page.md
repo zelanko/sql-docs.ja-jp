@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4253bf2395fc33ecf315a1f092e0203513de90e5
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8a3a172a29949db0ab83bce0d771c98afa6ef64c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000694"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929833"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>[オプション] ([テキスト エディター]/[テキスト形式]/[全般] ページ)
   特定の開発言語に関連付けられていないドキュメントを編集するときには、テキスト エディターが使用されます。このダイアログ ボックスを使用すると、テキスト エディターの全般的な編集の動作を変更できます。 この設定を表示するには、 **[ツール]** メニューの **[オプション]** をクリックして、 **[テキスト エディター]** フォルダーを展開し、さらに **[テキスト形式]** を展開して、 **[全般]** をクリックします。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0ad01826b563a53713ed0bec69092115ab5cd53
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482546"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971212"
 ---
 # <a name="models-master-data-services"></a>モデル (Master Data Services)
   モデルは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の最上位レベルのデータ編成単位です。 モデルは、マスター データ管理ソリューションでのデータの構造を定義します。 モデルには次のオブジェクトが含まれています。  

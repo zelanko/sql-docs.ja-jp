@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6375229899c1bfe8f175771e55fdd821fc232166
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4232cdfa584fdcc2e13786ecc9bd00f0c6fe7066
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798303"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041396"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で PowerShell スクリプトを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]エージェント ジョブ ステップを作成して定義する方法について説明します。  
@@ -93,4 +92,4 @@ ms.locfileid: "72798303"
 ##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  **PowerShell スクリプト ジョブ ステップを作成するには**  
   
- Visual Basic、 `JobStep` Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。  
+ `JobStep`Visual Basic、Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。  

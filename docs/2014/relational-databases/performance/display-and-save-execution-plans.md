@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 869c74a0a739ce95ccb91861d031da1d5d0c6510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e236ed2a298bc8fc9a829948a864f6f5c27a2ba2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151052"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066869"
 ---
 # <a name="display-and-save-execution-plans"></a>実行プランの表示と保存
   ここでは、実行プランを表示する方法、および Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して実行プランを XML 形式でファイルに保存する方法について説明します。  

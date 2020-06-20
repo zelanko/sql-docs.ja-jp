@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bdb65c464e63f8e7ab248c49f6dca729add3004
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827564"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915992"
 ---
 # <a name="define-a-state-variable"></a>状態変数の定義
   この手順では、CDC 状態が格納されるパッケージ変数を定義する方法について説明します。  
@@ -37,7 +36,7 @@ ms.locfileid: "62827564"
 |`<ir-start>`|初期読み込みが開始した直前の変更の LSN です。|  
 |`<ir-end>`|初期読み込みが終了した直後の変更の LSN です。|  
 |`TS`|CDC 状態の最後の更新のタイムスタンプを示します。|  
-|**\<タイムスタンプ>**|64 ビットの System.DateTime.UtcNow プロパティの 10 進数表記です。|  
+|**\<timestamp>**|64 ビットの System.DateTime.UtcNow プロパティの 10 進数表記です。|  
 |`ER`|直前の操作が失敗した場合に表示され、エラーの原因の簡単な説明が含まれます。 この要素が存在する場合は、常に最後に表示されます。|  
 |`<short-error-text>`|エラーの簡単な説明です。|  
   

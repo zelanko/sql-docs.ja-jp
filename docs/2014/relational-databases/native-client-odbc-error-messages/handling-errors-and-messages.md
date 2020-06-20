@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 31216e5a6670ff29c0d7e7ab4f1ee31cc5af0564
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9c4cc389a0c2421a996e8d9a3498552e0119e401
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705383"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020096"
 ---
 # <a name="handling-errors-and-messages"></a>エラーとメッセージの処理
   アプリケーションで ODBC 関数を呼び出すときは、ドライバーが関数を実行して診断情報を 2 とおりの方法で返します。つまり、リターン コードで ODBC 関数が成功したか失敗したかを示し、診断レコードで関数の詳細な情報を伝えます。 診断レコードは、ヘッダー レコードと状態レコードから構成されます。 関数が成功した場合でも、少なくとも 1 つの診断レコード、つまりヘッダー レコードが返されます。  
@@ -51,7 +50,7 @@ ms.locfileid: "82705383"
   
 -   [SQLSTATE &#40;ODBC エラーコード&#41;](sqlstate-odbc-error-codes.md)  
   
--   [エラーメッセージ](error-messages.md)  
+-   [エラー メッセージ](error-messages.md)  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  

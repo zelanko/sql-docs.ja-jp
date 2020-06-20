@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 793543cce582bd4e17cbf8d06f096056a2ecb89b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 294241eb586a70f4e0a826b1dce5d35879b3ee3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701972"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019511"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
   列形式のプロパティ値を確認するために使用します。  
@@ -75,7 +74,7 @@ pcbLen
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  列形式のプロパティ値については、 [bcp_setcolfmt](bcp-setcolfmt.md)のトピックを参照してください。 列形式のプロパティ値は**bcp_setcolfmt**関数を呼び出すことによって設定され、 **bcp_getcolfmt**関数は列形式のプロパティ値を検索するために使用されます。  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以前のバージョンと比較して、(またはそれ以降の) サーバーコンピューターに接続するときに、動作の変更が検出される場合があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「[メタデータの検出](../native-client/features/metadata-discovery.md)」を参照してください。  

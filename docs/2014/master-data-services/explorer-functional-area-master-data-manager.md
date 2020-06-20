@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0cf56e718b2d17b2b2a1f44088b05226ef86388d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4461d22e62ebebd71b02fb7132b8ffed081d6d82
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971482"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>[エクスプローラー] 機能領域 (マスター データ マネージャー)
   [エクスプローラー] 機能領域では、データを更新し、階層とコレクションを操作できます。  

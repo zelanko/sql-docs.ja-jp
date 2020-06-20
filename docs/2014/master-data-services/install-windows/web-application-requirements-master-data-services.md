@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 15b394c836cb24229944f4e0775dfccad847a32b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 407074c7387e30b38d435090ee11216d04acc0b3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482884"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971342"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web アプリケーションの要件 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、インターネット インフォメーション サービス (IIS) によってホストされる Web アプリケーションです。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は Internet Explorer (IE) 7 以降でのみ動作します。 IE 7 以前のバージョン、Microsoft Edge、Chrome はサポートされていません。  
@@ -34,7 +33,7 @@ ms.locfileid: "65482884"
 |-------------------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 Professional、Enterprise、Ultimate<br /><br /> Windows 8.0 Professional、Enterprise、および Ultimate|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
   
- の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エディションでサポートされている Windows オペレーティングシステムの完全な一覧については、「 [SQL Server 2014 をインストールするためのハードウェアおよびソフトウェアの要件](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。  
+ のエディションでサポートされている Windows オペレーティングシステムの完全な一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 をインストールするためのハードウェアおよびソフトウェアの要件](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。  
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションで作業するには、Silverlight 5 をクライアント コンピューターにインストールする必要があります。 Silverlight の必要なバージョンがない場合、Web アプリケーションで Silverlight を使用する部分に移動したときに、Silverlight をインストールするよう要求されます。 Silverlight 5 は [ここ](https://go.microsoft.com/fwlink/?LinkId=243096)からインストールできます。  
@@ -47,7 +46,7 @@ ms.locfileid: "65482884"
   
 ||  
 |-|  
-|Web サーバー<br /><br /> HTTP 基本機能<br /><br /> 静的なコンテンツ<br /><br /> 既定のドキュメント<br /><br /> ディレクトリの参照<br /><br /> HTTP エラー<br /><br /> アプリケーション開発<br /><br /> ASP.NET<br /><br /> .NET 拡張機能<br /><br /> ISAPI 拡張<br /><br /> ISAPI フィルター<br /><br /> 状態と診断<br /><br /> HTTP ログ<br /><br /> 要求の監視<br /><br /> Security<br /><br /> Windows 認証<br /><br /> 要求フィルター<br /><br /> パフォーマンス<br /><br /> 静的なコンテンツの圧縮<br /><br /> 管理ツール<br /><br /> IIS 管理コンソール|  
+|Web サーバー<br /><br /> HTTP 基本機能<br /><br /> 静的なコンテンツ<br /><br /> 既定のドキュメント<br /><br /> ディレクトリの参照<br /><br /> HTTP エラー<br /><br /> アプリケーション開発<br /><br /> ASP.NET<br /><br /> .NET 拡張機能<br /><br /> ISAPI 拡張<br /><br /> ISAPI フィルター<br /><br /> 状態と診断<br /><br /> HTTP ログ<br /><br /> 要求の監視<br /><br /> セキュリティ<br /><br /> Windows 認証<br /><br /> 要求フィルター<br /><br /> パフォーマンス<br /><br /> 静的なコンテンツの圧縮<br /><br /> 管理ツール<br /><br /> IIS 管理コンソール|  
   
 ### <a name="role-and-role-services-windows-server-2012-or-windows-8-operating-systems"></a>ロールとロール サービス (Windows Server 2012 または Windows 8 オペレーティング システム)  
  Windows Server 2012 では、Microsoft 管理コンソール (MMC) にある **サーバー マネージャー**を使用して、 **Web サーバー (IIS)** ロールと、次に示す必要なロール サービスをインストールできます。  
@@ -57,7 +56,7 @@ ms.locfileid: "65482884"
   
 ||  
 |-|  
-|インターネット インフォメーション サービス<br /><br /> Web 管理ツール<br /><br /> IIS 管理コンソール<br /><br /> World Wide Web サービス<br /><br /> アプリケーション開発<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 拡張<br /><br /> ISAPI フィルター<br /><br /> HTTP 基本機能<br /><br /> 既定のドキュメント<br /><br /> ディレクトリの参照<br /><br /> HTTP エラー<br /><br /> 静的なコンテンツ<br /><br /> [注: WebDAV 発行はインストールしないでください]<br /><br /> 状態と診断<br /><br /> HTTP ログ<br /><br /> 要求の監視<br /><br /> パフォーマンス<br /><br /> 静的なコンテンツの圧縮<br /><br /> Security<br /><br /> 要求フィルター<br /><br /> Windows 認証|  
+|インターネット インフォメーション サービス<br /><br /> Web 管理ツール<br /><br /> IIS 管理コンソール<br /><br /> World Wide Web サービス<br /><br /> アプリケーション開発<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 拡張<br /><br /> ISAPI フィルター<br /><br /> HTTP 基本機能<br /><br /> 既定のドキュメント<br /><br /> ディレクトリの参照<br /><br /> HTTP エラー<br /><br /> 静的なコンテンツ<br /><br /> [注: WebDAV 発行はインストールしないでください]<br /><br /> 状態と診断<br /><br /> HTTP ログ<br /><br /> 要求の監視<br /><br /> パフォーマンス<br /><br /> 静的なコンテンツの圧縮<br /><br /> セキュリティ<br /><br /> 要求フィルター<br /><br /> Windows 認証|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>機能 (Windows Server 2008 または Windows Server 2008 R2、Windows 7 オペレーティング システム)  
  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] または Windows Server 2008 R2 では、 **サーバー マネージャー** を使用して、次に示す必要な機能をインストールできます。  
@@ -81,7 +80,7 @@ ms.locfileid: "65482884"
   
 ### <a name="accounts-and-permissions"></a>アカウントと権限  
   
-|種類|説明|  
+|型|説明|  
 |----------|-----------------|  
 |Windows アカウント|Windows のロール、ロール サービス、および機能を構成し、ローカル コンピューター上の IIS にあるアプリケーション プール、Web サイト、および Web アプリケーションを作成して管理する権限がある Windows アカウントを使用して Web サーバー コンピューターにログオンする必要があります。|  
 |サービス アカウント|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] で [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]Web アプリケーションを作成するときは、アプリケーションが実行されるアプリケーション プールの ID を指定する必要があります。 このアカウントは、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースの作成時に指定したサービス アカウントと異なっていてもかまいません。<br /><br /> この ID はドメイン ユーザー アカウントである必要があり、データベースにアクセスするために [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースの mds_exec データベース ロールに追加されます。 詳細については、「[データベース ログイン、ユーザー、およびロール &#40;マスター データ サービス&#41;](../database-logins-users-and-roles-master-data-services.md)」を参照してください。 また、このアカウントは、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Windows グループ **MDS_ServiceAccounts**にも追加されます。このグループには、ファイル システムの一時コンパイル ディレクトリ **MDSTempDir**に対する権限が与えられています。 詳細については、「[フォルダーとファイルの権限 &#40;マスター データ サービス&#41;](../folder-and-file-permissions-master-data-services.md)」を参照してください。<br /><br /> サーバーのエラーを回避するには、アプリケーション プール アカウントに VIEW SERVER STATE 権限が必要です。 たとえば、MDS Validate Version コマンドはサーバー エラーで失敗します。 詳細については、「 [SQL Server 2012 および SQL Server 2014 で MDS Validate Version コマンドがサーバー エラーで失敗する](https://go.microsoft.com/fwlink/p/?LinkId=526304)」を参照してください。|  

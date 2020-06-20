@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 85e2c4a1fda84a8575509a863de6e5f2e6fd5dce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c83528f45c6c4174f7714a5f22d8757de4e4fda2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176051"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971492"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明示的階層 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の明示的階層は、1 つのエンティティからのメンバーを指定した任意の方法で整理します。 構造は不規則にすることができます。派生階層とは異なり、明示的階層はドメイン ベースの属性のリレーションシップに基づいていません。

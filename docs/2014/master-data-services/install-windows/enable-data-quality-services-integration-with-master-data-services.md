@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab32938d-a80e-4106-80d4-94b2de3d67dc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5cf9a81134af8d6e90a1b869f8cc011a17a4b93a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b268b6d9a5bd784cc5fcb0a20029df2e544e92f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482923"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971318"
 ---
 # <a name="enable-data-quality-services-integration-with-master-data-services"></a>マスター データ サービスを使用した Data Quality Services 統合の有効化
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、Data Quality Services (DQS) によって照合機能が提供されます。 この機能を使用するには、機能を有効にする必要があります。  
@@ -28,7 +27,7 @@ ms.locfileid: "65482923"
   
 ### <a name="to-enable-data-quality-services-integration"></a>Data Quality Services 統合を有効にするには  
   
-1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
+1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を開きます。  
   
 2.  左ペインで **[Web の構成]** をクリックします。  
   

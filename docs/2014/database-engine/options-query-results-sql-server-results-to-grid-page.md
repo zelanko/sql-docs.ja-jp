@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9bde39c64fdf2fbabaec85772d4bfa44d86fd1da
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 5678c146dfffc4cf907e0050b2017208a0c7f141
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856654"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930053"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>[オプション] ([クエリ結果]-[SQL Server-グリッドへの結果] ページ)
   このページを使用すると、クエリ結果セットをグリッド形式で表示するためのオプションを指定できます。 このオプションに加えた変更は、新規の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、[**クエリ**] メニューの [**クエリオプション**] をクリックするか、クエリウィンドウを右クリック [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] して [**クエリオプション**] を選択します。 **[クエリ オプション]** ダイアログ ボックスの左ペインで、**[結果]** の **[グリッド]** をクリックします。  

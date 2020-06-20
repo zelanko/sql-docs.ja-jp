@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 822cb494b7dce35ea965a2a53cab36785a38bc75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06b58b9b6bb8a5c13e0b220ba9eeea5818682abf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250629"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066958"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server: Memory Manager オブジェクト
-  Microsoft **の**Memory Manager[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトには、全体的なサーバー メモリの使用状況を監視するためのカウンターが用意されています。 全体的なサーバー メモリの使用状況を監視して、ユーザーの利用状況やリソースの使用状況を計測すると、パフォーマンスのボトルネックを突き止めるのに役立つ可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで使用されるメモリを監視すると、次のことを判断する際に役立ちます。  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Memory Manager** オブジェクトには、全体的なサーバー メモリの使用状況を監視するためのカウンターが用意されています。 全体的なサーバー メモリの使用状況を監視して、ユーザーの利用状況やリソースの使用状況を計測すると、パフォーマンスのボトルネックを突き止めるのに役立つ可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで使用されるメモリを監視すると、次のことを判断する際に役立ちます。  
   
 -   ボトルネックの発生原因が、頻繁にアクセスされるデータをキャッシュに格納するための物理メモリ不足によるものかどうか。 メモリが不足している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではディスクからデータを取得する必要があります。  
   

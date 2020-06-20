@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 535ab473d8fe6cf9a89fafa1fc0c9f45b0096f7e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056427"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964572"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>SQL 実行タスクにおける結果セット
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージでは、タスクが使用する SQL コマンドの種類によって、SQL 実行タスクに結果セットが返されるかどうかが決まります。 たとえば、通常、SELECT ステートメントは結果セットを返しますが、INSERT ステートメントは返しません。  
@@ -51,24 +50,24 @@ ms.locfileid: "66056427"
   
  結果セットの種類が " **単一行**" の場合、列名を結果セットの名前として使用し、返される結果の列を変数にバインドしたり、列一覧の列の序数を結果セットの名前として使用できます。 たとえば、クエリ `SELECT Color FROM Production.Product WHERE ProductID = ?` の結果セットの名前は **Color** または **0**となります。 クエリが複数の列を返す場合に、すべての列の値にアクセスするには、各列を異なる変数にバインドする必要があります。 数字を結果セットの名前として使用し、列を変数にマップする場合、その数字はクエリの列一覧に列が表示される順序を示します。 たとえば、クエリ `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`では、 **Color** 列に 0 を、 **ListPrice** 列に 1 を使用します。 列名を結果セットの名前として使用できるかどうかは、タスクの構成で指定されているプロバイダーによって異なります。 すべてのプロバイダーで列名が使用できるわけではありません。  
   
- 単一の値を返す一部のクエリには、列名が含まれないことがあります。 たとえば、ステートメント `SELECT COUNT (*) FROM Production.Product` からは列名が返されません。 返される結果にアクセスするには、結果名として序数位置 0 を使用します。 列名で返される結果にアクセスするには、列名を指定する AS \<エイリアス名> 句をクエリに含める必要があります。 ステートメント `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`では、 **CountOfProduct** 列を指定します。 その後、 **CountOfProduct** 列名または序数位置 0 を使用して、返された結果列にアクセスできます。  
+ 単一の値を返す一部のクエリには、列名が含まれないことがあります。 たとえば、ステートメント `SELECT COUNT (*) FROM Production.Product` からは列名が返されません。 返される結果にアクセスするには、結果名として序数位置 0 を使用します。 列名で返される結果にアクセスするには、列名を指定する AS 句をクエリに含める必要があり \<alias name> ます。 ステートメント `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`では、 **CountOfProduct** 列を指定します。 その後、 **CountOfProduct** 列名または序数位置 0 を使用して、返された結果列にアクセスできます。  
   
  結果セットの種類が " **完全な結果セット** " または " **XML**" の場合、結果セット名には 0 を使用する必要があります。  
   
- 結果セットの種類が " **単一行** " の結果セットに変数をマップする場合、変数のデータ型と結果セットに含まれる列のデータ型は互換性がある必要があります。 たとえば、`String` データ型の列を含む結果セットを、数値データ型の変数にマップすることはできません。 **TypeConversionMode**プロパティをに`Allowed`設定すると、SQL 実行タスクは、出力パラメーターとクエリ結果を、結果が割り当てられている変数のデータ型に変換しようとします。  
+ 結果セットの種類が " **単一行** " の結果セットに変数をマップする場合、変数のデータ型と結果セットに含まれる列のデータ型は互換性がある必要があります。 たとえば、`String` データ型の列を含む結果セットを、数値データ型の変数にマップすることはできません。 **TypeConversionMode**プロパティをに設定すると、 `Allowed` SQL 実行タスクは、出力パラメーターとクエリ結果を、結果が割り当てられている変数のデータ型に変換しようとします。  
   
  XML 結果セットをマップできるのは、`String` または `Object` データ型の変数のみです。 変数が `String` データ型の場合、SQL 実行タスクは文字列を返し、XML ソースは XML データを使用できます。 変数が `Object` データ型の場合、SQL 実行タスクはドキュメント オブジェクト モデル (DOM) オブジェクトを返します。  
   
- **完全な結果セット**は、 `Object`データ型の変数にマップする必要があります。 結果は、行セット オブジェクトとして返されます。 Foreach ループ コンテナーを使用して、Object 変数に格納されたテーブル行の値をパッケージ変数に抽出し、その後、スクリプト タスクを使用して、パッケージ変数に格納されたデータをファイルに書き出すことができます。 Foreach ループ コンテナーとスクリプト タスクを使用したこの処理方法のデモについては、msftisprodsamples.codeplex.com の CodePlex サンプル「 [Execute SQL Parameters and Result Sets (SQL 実行パラメーターと結果セット)](https://go.microsoft.com/fwlink/?LinkId=157863)」を参照してください。  
+ **完全な結果セット**は、データ型の変数にマップする必要があり `Object` ます。 結果は、行セット オブジェクトとして返されます。 Foreach ループ コンテナーを使用して、Object 変数に格納されたテーブル行の値をパッケージ変数に抽出し、その後、スクリプト タスクを使用して、パッケージ変数に格納されたデータをファイルに書き出すことができます。 Foreach ループ コンテナーとスクリプト タスクを使用したこの処理方法のデモについては、msftisprodsamples.codeplex.com の CodePlex サンプル「 [Execute SQL Parameters and Result Sets (SQL 実行パラメーターと結果セット)](https://go.microsoft.com/fwlink/?LinkId=157863)」を参照してください。  
   
  次の表は、結果セットにマップできる変数のデータ型をまとめたものです。  
   
 |結果セットの種類|変数のデータ型|オブジェクトの種類|  
 |---------------------|---------------------------|--------------------|  
-|単一行|結果セット内の型列と互換性のあるすべての型|適用なし|  
+|単一行|結果セット内の型列と互換性のあるすべての型|利用不可|  
 |完全な結果セット|`Object`|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含むネイティブ接続マネージャー使用する場合、返されるオブジェクトは ADO `Recordset` です。<br /><br /> タスクで [!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーなどのマネージド接続マネージャーを使用する場合、返されるオブジェクトは `System.Data.DataSet` です。<br /><br /> 次の例に示すように、スクリプト タスクを使用して、`System.Data.DataSet` オブジェクトにアクセスできます。<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含むネイティブ接続マネージャー使用する場合、返されるオブジェクトは `MSXML6.IXMLDOMDocument` です。<br /><br /> タスクで[!INCLUDE[vstecado](../includes/vstecado-md.md)]接続マネージャーなどのマネージ接続マネージャーを使用する場合、返されるオブジェクトは`System.Xml.XmlDocument`です。|  
+|XML|`Object`|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含むネイティブ接続マネージャー使用する場合、返されるオブジェクトは `MSXML6.IXMLDOMDocument` です。<br /><br /> タスクで接続マネージャーなどのマネージ接続マネージャーを使用する場合、 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 返されるオブジェクトは `System.Xml.XmlDocument` です。|  
   
  変数は、SQL 実行タスクまたはパッケージのスコープ内で定義できます。 変数にパッケージ スコープがある場合、結果セットはパッケージ内の他のタスクやコンテナーで利用できます。また、パッケージ実行タスクや DTS 2000 パッケージ実行タスクが実行する任意のパッケージでも利用できます。  
   

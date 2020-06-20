@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dd8665ee828395e277482b7775131167fcc182eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce118e9755eef36b89fe3e2b6d8fd105410c0e70
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889353"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964442"
 ---
 # <a name="understanding-the-differences-between-local-and-remote-execution"></a>ローカル実行とリモート実行の相違点について
   パッケージの開発者および管理者は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行場所に関連する制限があることを知っておく必要があります。  

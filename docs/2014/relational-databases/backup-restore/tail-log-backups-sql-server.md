@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6da8f9de22f1b3191d6fba1918e8c05a64d062f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd7c505701a4edb1f66ca516d06179b2eb1a222d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920677"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956252"
 ---
 # <a name="tail-log-backups-sql-server"></a>ログ末尾のバックアップ (SQL Server)
   このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのバックアップと復元のみに関連しています。  
@@ -37,7 +36,7 @@ ms.locfileid: "62920677"
 ##  <a name="scenarios-that-require-a-tail-log-backup"></a><a name="TailLogScenarios"></a> ログ末尾のバックアップが必要となるシナリオ  
  以下に示すシナリオでは、ログ末尾のバックアップをお勧めします。  
   
--   データベースがオンライン状態であり、データベースに対して復元操作を実行する予定がある場合に、ログ末尾のバックアップを最初に行う。 オンラインデータベースでエラーが発生しないようにするには、...[BACKUP](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントの with NORECOVERY オプション。  
+-   データベースがオンライン状態であり、データベースに対して復元操作を実行する予定がある場合に、ログ末尾のバックアップを最初に行う。 オンラインデータベースでエラーが発生しないようにするには、...[BACKUP](/sql/t-sql/statements/backup-transact-sql)ステートメントの with NORECOVERY オプション [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
 -   データベースがオフラインで起動できず、データベースを復元する必要がある場合に、まずログの末尾をバックアップする。 このとき、トランザクションは発生しないので、WITH NORECOVERY の指定は省略できます。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62920677"
   
 |BACKUP LOG オプション|説明|  
 |-----------------------|--------------|  
-|NORECOVERY|データベースの復元操作を続行する場合は、必ず NORECOVERY を使用します。 NORECOVERY を指定すると、データベースは復元中の状態になります。 これにより、ログ末尾のバックアップの後にデータベースが変化しないことが保障されます。  NO_TRUNCATE オプションまたは COPY_ONLY オプションも指定されていない限り、ログは切り捨てられます。<br /><br /> ** \*重要\* \* **データベースが破損している場合を除き、NO_TRUNCATE を使用しないことをお勧めします。|  
+|NORECOVERY|データベースの復元操作を続行する場合は、必ず NORECOVERY を使用します。 NORECOVERY を指定すると、データベースは復元中の状態になります。 これにより、ログ末尾のバックアップの後にデータベースが変化しないことが保障されます。  NO_TRUNCATE オプションまたは COPY_ONLY オプションも指定されていない限り、ログは切り捨てられます。<br /><br /> 重要データベースが破損している場合を除き、NO_TRUNCATE を使用しないことをお勧めします。 ** \* \* \* \* **|  
 |CONTINUE_AFTER_ERROR|破損したデータベースの末尾をバックアップする場合に限り、CONTINUE_AFTER_ERROR を使用します。<br /><br /> 注: 破損したデータベースでログの末尾のバックアップを使用すると、通常はログバックアップでキャプチャされたメタデータの一部が使用できなくなる場合があります。 詳細については、後の「[不完全なバックアップ メタデータが含まれたログ末尾のバックアップ](#IncompleteMetadata)」を参照してください。|  
   
 ##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a>不完全なバックアップメタデータが含まれるログ末尾のバックアップ  
@@ -79,7 +78,7 @@ ms.locfileid: "62920677"
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [SQL Server データベースのバックアップと復元](back-up-and-restore-of-sql-server-databases.md)   
  [コピーのみのバックアップ &#40;SQL Server&#41;](copy-only-backups-sql-server.md)   
- [トランザクションログのバックアップ &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [トランザクション ログのバックアップ &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)  
   
   

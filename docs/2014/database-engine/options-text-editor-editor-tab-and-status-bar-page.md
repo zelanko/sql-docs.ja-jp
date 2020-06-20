@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7a64d8fe198b5660715488b6e1b15d5e4831a99
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b1b79ada7ce4b2f2b256cfc7e7d20b0e7d5f9bc5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000722"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929883"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>オプション ([テキスト エディター]: [エディターのタブとステータス バー] ページ)
   **[エディターのタブとステータス バー]** ページでは、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] クエリ エディターによって表示される情報をカスタマイズできます。 クエリ エディター ウィンドウのタブおよびステータス バーに表示される情報のレベル、およびステータス バーをエディター ウィンドウの上部と下部のどちらに表示するかを指定することができます。  
@@ -34,10 +33,10 @@ ms.locfileid: "83000722"
  **[実行時間を表示する]**  
  スクリプトの実行時間を含めます。 設定は次のとおりです。  
   
- **None**  
+ **なし**  
  ステータス バーには時間の情報が表示されません。  
   
- **終わり**  
+ **End**  
  スクリプトの実行中はステータス バーに現在の時刻が表示されます。 スクリプトが完了すると、スクリプトが完了した時刻が表示されます。  
   
  **切れる**  
