@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecdcafb1cb2d2b78a63dbd15ecec148e5eb1b2a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204611"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057948"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>テーブルにあるすべての行の値の要約または集計 (Visual Database Tools)
   集計関数を使用すると、テーブルのすべての値の要約を作成できます。 たとえば、 `titles` テーブルの本の総額を表示するには、次のようなクエリを作成できます。  

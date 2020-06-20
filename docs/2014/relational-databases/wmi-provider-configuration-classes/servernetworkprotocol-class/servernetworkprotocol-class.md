@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b40f40cea8e4f9c36b74ea87b22c5c2a6633e077
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d88904b45a54073d60c6d3247d1479bae597bd3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659944"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059851"
 ---
 # <a name="servernetworkprotocol-class"></a>ServerNetworkProtocol クラス
-  [Servernetworkprotocol クラス] servernetworkprotocol-class.md) は、ネットワーク経由でクライアントと通信できる[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ようにするのインスタンスにインストールされているネットワークプロトコルを表します。  
+  [ServerNetworkProtocol クラス] servernetworkprotocol-class.md) は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ネットワーク経由でクライアントと通信できるようにするのインスタンスにインストールされているネットワークプロトコルを表します。  
   
  [ServerNetworkProtocol Class] servernetworkprotocol-class.md) を使用すると、次のことができます。  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 30b704d26d2b6ac080f32034bb78fddcee446bdb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b68c9be215354ed96646baa4a997b675d8c9b74
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736128"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995870"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>GetCurrentCertificate メソッド (ServerSettings クラス)
   現在のセキュリティ証明書を取得します。  
@@ -39,7 +38,7 @@ SHA
   
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス上のサーバー設定を表す `ServerSettings` オブジェクト。  
   

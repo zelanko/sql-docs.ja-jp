@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22ec72bdbfe74d05277e4b6ff73f92c08d88039d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659934"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067999"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>レッスン 2: 階層テーブルでのデータの作成と管理
   レッスン 1 では、既存のテーブルを変更して `hierarchyid` データ型を使用し、`hierarchyid` 列に既存のデータ表現でデータを設定しました。 このレッスンでは、まず新しいテーブルを作成し、次に階層的な手法を使用してデータを挿入します。 その後、階層的な手法を使用して、データのクエリおよび操作を実行します。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35970f3a78cad4a17fcfdcfb2d7b9aa91c9dd6e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990186"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062429"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server の既存のインスタンスのアンインストール (セットアップ)
   ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のスタンドアロン インスタンスをアンインストールする方法について説明します。 また、このトピックの手順を実行してシステムを準備し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再インストールできるようにします。  
@@ -42,7 +41,7 @@ ms.locfileid: "62990186"
   
 ### <a name="before-you-uninstall"></a>アンインストールする前に  
   
-1.  **データをバックアップします。** これは必須の手順ではありませんが、現在の状態で保存しておく必要のあるデータベースが存在する場合に行います。 また、システム データベースに対して行った変更の保存が必要になることもあります。 どのような状況でも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアンインストールする前にデータを必ずバックアップしてください。 あるいは、MSSQL フォルダー以外のフォルダー内にあるすべてのデータとログ ファイルのコピーを保存してください。 MSSQL フォルダーはアンインストール中に削除されます。  
+1.  **データをバックアップする。** これは必須の手順ではありませんが、現在の状態で保存しておく必要のあるデータベースが存在する場合に行います。 また、システム データベースに対して行った変更の保存が必要になることもあります。 どのような状況でも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアンインストールする前にデータを必ずバックアップしてください。 あるいは、MSSQL フォルダー以外のフォルダー内にあるすべてのデータとログ ファイルのコピーを保存してください。 MSSQL フォルダーはアンインストール中に削除されます。  
   
      保存する必要のあるファイルには、次のデータベース ファイルがあります。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "62990186"
   
     -   Templog.ldf  
   
-    -   `ReportServer[$InstanceName]`(既定の[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]データベース)。  
+    -   `ReportServer[$InstanceName]`(既定の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データベース)。  
   
     -   ReportServer[$InstanceName]TempDB (これは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の既定の一時データベースです)  
   
@@ -80,11 +79,11 @@ ms.locfileid: "62990186"
   
 1.  アンインストール プロセスを開始するには、 **コントロール パネル** で **[プログラムと機能]** をクリックします。  
   
-2.  右クリック** [!INCLUDE[msCoName](../../includes/msconame-md.md)] **して [**アンインストール**] を選択します。 次に、 **[削除]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードが起動します。  
+2.  右クリック **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** して [**アンインストール**] を選択します。 次に、 **[削除]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードが起動します。  
   
-     セットアップ サポート ルールが実行され、コンピューターの構成が確認されます。 続行するには、[**次へ**] をクリックします。  
+     セットアップ サポート ルールが実行され、コンピューターの構成が確認されます。 続行するには、 **[次へ]** をクリックします。  
   
-3.  [インスタンスの選択] ページのドロップダウン ボックスを使用して、削除する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定するか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の共有機能と管理ツールだけを削除するオプションを指定します。 続行するには、[**次へ**] をクリックします。  
+3.  [インスタンスの選択] ページのドロップダウン ボックスを使用して、削除する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定するか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の共有機能と管理ツールだけを削除するオプションを指定します。 続行するには、 **[次へ]** をクリックします。  
   
 4.  [機能の選択] ページで、指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスから削除する機能を指定します。  
   

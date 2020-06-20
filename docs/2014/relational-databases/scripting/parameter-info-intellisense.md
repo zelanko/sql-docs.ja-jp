@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b50c09f27b458fcb2d940a639bee9cb76c1c0044
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b44033b0af52372e6da8efc68a8916164c2f862e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703780"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009625"
 ---
 # <a name="parameter-info-intellisense"></a>パラメーター ヒント (IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense の **[パラメーター ヒント]** オプションを使用すると、パラメーター リストが表示され、関数またはストアド プロシージャで必要とされるパラメーターの数、名前、およびデータ型について確認できます。 太字で表示されるパラメーターは、入力中の関数やストアド プロシージャで次に必要なパラメーターを示しています。  

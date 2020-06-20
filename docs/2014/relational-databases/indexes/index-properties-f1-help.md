@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 390a63d21dc72e052017f2d30b061d71de863bc1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161906"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049898"
 ---
 # <a name="index-properties-f1-help"></a>[インデックスのプロパティ] の F1 ヘルプ
   このトピックのセクションでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のダイアログを使用して取得できる各種のインデックス プロパティを参照しています。  
@@ -93,7 +92,7 @@ ms.locfileid: "63161906"
  NULL 値をテーブルまたはビュー列に格納することがインデックス キーを構成する列で許容されるかどうかを表示します。  
   
  **追加**  
- 列をインデックス キーに追加します。 **[追加]** をクリックすると表示される [ *\<テーブル名>* **から列を選択**] ダイアログ ボックスからテーブル列を選択します。 空間インデックスの場合は、1 つの列を選択した後、このボタンが淡色表示になります。  
+ 列をインデックス キーに追加します。 [追加] をクリックしたときに表示される [**から列を選択** *\<table name>* ] ダイアログボックスで、テーブルの列を選択します。 **Add** 空間インデックスの場合は、1 つの列を選択した後、このボタンが淡色表示になります。  
   
  **Remove**  
  選択されている列をインデックス キーから削除します。  
@@ -134,7 +133,7 @@ ms.locfileid: "63161906"
 ##  <a name="storage-page-options"></a><a name="Storage"></a>[ストレージ] ページのオプション  
  このページを使用すると、選択したインデックスのファイル グループ プロパティやパーティション構成プロパティを表示または変更できます。 インデックスの種類に関連するオプションだけが表示されます。  
   
- **グループ**  
+ **[ファイル グループ]**  
  指定したファイル グループのインデックスを格納します。 一覧には、標準 (ROW) ファイル グループのみが表示されます。 既定で選択されているのは、データベースのプライマリ ファイル グループです。 詳細については、「 [Database Files and Filegroups](../databases/database-files-and-filegroups.md)」を参照してください。  
   
  **[Filestream ファイル グループ]**  
@@ -180,7 +179,7 @@ ms.locfileid: "63161906"
 ### <a name="bounding-box"></a>[境界ボックス]  
  *境界ボックス* は、幾何平面の最上位レベルのグリッドの境界です。 境界ボックスのパラメーターは、ジオメトリ グリッド テセレーションにのみ存在します。 **[テセレーション スキーム]** が **[地理グリッド]** である場合、これらのパラメーターは使用できません。  
   
- パネルには、境界ボックスの座標***`X-min`*(,*`Y-min`*)** と **(*`X-max`*,*`Y-max`*)** が表示されます。 座標の既定値はありません。 そのため、`geometry` 型の列に新しい空間インデックスを作成する場合は、座標の値を指定する必要があります。  
+ パネルには、境界ボックスの座標 **( *`X-min`* , *`Y-min`* )** と **( *`X-max`* , *`Y-max`* )** が表示されます。 座標の既定値はありません。 そのため、`geometry` 型の列に新しい空間インデックスを作成する場合は、座標の値を指定する必要があります。  
   
  `X-min`  
  境界ボックスの左下隅の X 座標。  
@@ -235,7 +234,7 @@ ms.locfileid: "63161906"
 ##  <a name="filter-page"></a><a name="Filter"></a>[フィルター] ページ  
  このページを使用して、フィルター選択されたインデックスのフィルター述語を入力します。 詳細については、「 [Create Filtered Indexes](create-filtered-indexes.md)」を参照してください。  
   
- **[フィルター式]**  
+ **フィルター式**  
  フィルター処理されたインデックスにどのデータ行を含めるかを定義します。 たとえば、 `StartDate > '20000101' AND EndDate IS NOT NULL'.` と記述します。  
   
 ## <a name="see-also"></a>参照  

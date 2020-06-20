@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 105c5da23d5d827271c5c94c70b293acf051d1aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 389c4b76a3b52895a796a5fddef90e37f617fcdb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028039"
 ---
 # <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed イベント クラス
   TM: Rollback Tran Completed イベント クラスは、ROLLBACK TRANSACTION 要求が完了したことを示します。 要求は、トランザクション管理のインターフェイスを使用してクライアントから送信されます。 EventSubClass 列は、現在のトランザクションがロールバックされた後に新しいトランザクションが開始されるかどうかを示します。  
@@ -32,7 +31,7 @@ ms.locfileid: "63061338"
 |ClientProcessID|`int`|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  
 |DatabaseID|`int`|USE *database*ステートメントで指定されたデータベースの ID、または特定のインスタンスに対して use *database*ステートメントが発行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
-|Error|`int`|特定のイベントのエラー番号。 多くの場合、sys.messages テーブルに保存されているエラー番号です。|31|はい|  
+|エラー|`int`|特定のイベントのエラー番号。 多くの場合、sys.messages テーブルに保存されているエラー番号です。|31|はい|  
 |EventClass|`int`|イベントの種類 = 188。|27|いいえ|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 1 = ロールバック<br /><br /> 2 = ロールバックして開始|21|はい|  
@@ -48,7 +47,7 @@ ms.locfileid: "63061338"
 |SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|成功|`int`|1 = 成功。 0 = 失敗 (たとえば、1 は権限チェックの成功を示し、0 は失敗を示します)。|23|はい|  
+|Success|`int`|1 = 成功。 0 = 失敗 (たとえば、1 は権限チェックの成功を示し、0 は失敗を示します)。|23|はい|  
 |TextData|`ntext`|トレースでキャプチャされたイベント クラスに依存するテキスト値。|1|はい|  
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  

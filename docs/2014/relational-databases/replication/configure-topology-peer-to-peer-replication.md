@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5c41bc845e7b02959f25aa8282452db64f819558
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2dfc09f5ae7f488afd46f29c301d11b7687e0a4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176572"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010975"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>[トポロジの構成] (ピア ツー ピア レプリケーション)
   **[トポロジの構成]** ページを使用すると、新しいノードの追加、ノードの削除、既存のノード間の新しい接続の追加など、一般的な構成タスクを実行できます。 このウィザードの **[パブリケーション]** ページで選択したノードがデザイン画面に表示されます。 構成オプションを指定するには、ノード、接続、またはデザイン画面を右クリックします。
@@ -43,7 +42,7 @@ ms.locfileid: "78176572"
 
  ウィザードによってトポロジ情報が要求された場合、すべてのノードが要求に応答する前にウィザードを閉じて再度開くと、このページにトポロジのノードが一部表示されない場合があります。
 
- **新しいピアノードの追加**の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスをピアツーピアトポロジに追加します。 インスタンスをノードとして追加すると、ウィザードの完了後にそのインスタンスでパブリケーションが作成されます。 ノードの追加後に、そのノードを右クリックして新しいノードと既存のノード間の接続を追加します。
+ **新しいピアノードの追加**のインスタンスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ピアツーピアトポロジに追加します。 インスタンスをノードとして追加すると、ウィザードの完了後にそのインスタンスでパブリケーションが作成されます。 ノードの追加後に、そのノードを右クリックして新しいノードと既存のノード間の接続を追加します。
 
  ピア ツー ピア トポロジに参加するためには、インスタンスが次の要件を満たしている必要があります。
 

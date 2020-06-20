@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 809705e50e9337a63bf33c2883a1e5d43197be09
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811090"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036280"
 ---
 # <a name="sql-server-components"></a>SQL Server のコンポーネント
-  アップグレードアドバイザー分析[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ウィザードは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、またはがインストールされているローカルコンピューターまた[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]はリモートコンピューターに対して実行できます。 アップグレード前の分析における最初の手順は、分析対象のコンピューターとコンポーネントを特定することです。  
+  アップグレードアドバイザー分析ウィザードは、、、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 、またはがインストールされているローカルコンピューターまたはリモートコンピューターに対して実行でき [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ます。 アップグレード前の分析における最初の手順は、分析対象のコンピューターとコンポーネントを特定することです。  
   
 ## <a name="options"></a>オプション  
  **コンピューター名**  

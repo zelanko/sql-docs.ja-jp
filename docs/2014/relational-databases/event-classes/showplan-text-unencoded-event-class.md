@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd9f8c6ca62fdd9f9a856a19f3d27c2144073b52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8e4f57faccd3d0306ed65de987df123a33b73c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62650376"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052369"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded) イベント クラス
   Showplan Text (Unencoded) イベント クラスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントが実行されたときに発生します。 このイベント クラスは、Showplan Text イベント クラスと同じです。ただし、イベント情報がバイナリ データとしてではなく、文字列としてフォーマットされます。  

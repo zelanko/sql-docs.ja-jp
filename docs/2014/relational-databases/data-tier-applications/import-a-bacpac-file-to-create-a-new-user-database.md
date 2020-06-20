@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59ab03f1c869f37ea92b3be1fe0fc30d86284a03
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232227"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953211"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC ファイルのインポートによる新しいユーザー データベースの作成
   データ層アプリケーション (DAC) ファイル (.bacpac ファイル) をインポートすると、データを含んだ元のデータベースのコピーを、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の新しいインスタンス上または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に作成することができます。 エクスポートとインポートという操作を組み合わせることで、DAC またはデータベースをインスタンス間で移行したり論理バックアップを作成したりすることが可能です。たとえば、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に配置されているデータベースの社内用コピーを作成することもできます。  
@@ -124,24 +123,24 @@ ms.locfileid: "75232227"
   
 -   [**新しいデータベース名**-インポートされたデータベースの名前を指定します。  
   
--   エディション-Business また[!INCLUDE[ssSDS](../../includes/sssds-md.md)]は[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web を指定します。 ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)]のエディションの詳細については、Web サイト「 [SQL データベース](https://www.windowsazure.com/home/tour/database/) 」を参照してください。  
+-   **の [!INCLUDE[ssSDS](../../includes/sssds-md.md)] エディション**- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business または Web を指定し [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]のエディションの詳細については、Web サイト「 [SQL データベース](https://www.windowsazure.com/home/tour/database/) 」を参照してください。  
   
 -   [**データベースの最大サイズ (GB)** ]: ドロップダウンメニューを使用して、データベースの最大サイズを指定します。  
   
- 続行するには、[**次へ**] をクリックします。  
+ 続行するには、 **[次へ]** をクリックします。  
   
 ### <a name="validation-page"></a>[検証] ページ  
  このページを使用して、操作の妨げとなる問題を確認します。 続行するには、妨げとなる問題を解決し、 **[検証の再実行]** をクリックして、検証が成功したことを確認します。  
   
- 続行するには、[**次へ**] をクリックします。  
+ 続行するには、 **[次へ]** をクリックします。  
   
 ###  <a name="summary-page"></a><a name="Summary"></a> [概要] ページ  
  このページを使用すると、操作の指定ソースとターゲットの設定を確認できます。 指定した設定でインポート操作を実行するには、 **[完了]** をクリックします。 インポート操作をキャンセルしてウィザードを終了するには、 **[キャンセル]** をクリックします。  
   
-###  <a name="progress-page"></a><a name="Progress"></a>[進行状況] ページ  
+###  <a name="progress-page"></a><a name="Progress"></a> [進行状況] ページ  
  このページには、操作の進行状況を示す進行状況バーが表示されます。 詳細な状態を表示するには、 **[詳細表示]** をクリックします。  
   
- 続行するには、[**次へ**] をクリックします。  
+ 続行するには、 **[次へ]** をクリックします。  
   
 ###  <a name="results-page"></a><a name="Results"></a>[結果] ページ  
  このページでは、データベースのインポートや作成操作の成功と失敗が報告され、各アクションの成功または失敗が示されます。 エラーが発生したアクションには、 **[結果]** 列にリンクが表示されます。 そのアクションのエラーのレポートを表示するには、リンクをクリックします。  

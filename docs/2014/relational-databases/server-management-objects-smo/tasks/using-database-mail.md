@@ -13,21 +13,20 @@ helpviewer_keywords:
 ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2db385919c30037612f00e53b2b990c1a7df0429
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 77fe80016cb67e15d8eca6efb3a313d269550533
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781855"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003566"
 ---
 # <a name="using-database-mail"></a>データベース メールの使用
   SMO では、<xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> プロパティによって参照される <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> オブジェクトで、データベース メール サブシステムを表現します。 SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> オブジェクトを使用すると、データベース メール サブシステムを構成して、プロファイルおよびメール アカウントを管理することができます。 SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> オブジェクトは `Server` オブジェクトに属しています。これは、メール アカウントのスコープがサーバー レベルであることを意味しています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net で VISUAL BASIC SMO プロジェクトを作成する](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [Studio .Net で VISUAL C&#35; Smo プロジェクトを作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)する」を参照してください。  
   
- データベースメールを使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]するプログラムでは、メール名前`Imports`空間を修飾するステートメントを含める必要があります。 アプリケーションの宣言の前、かつ他の `Imports` ステートメントの後に、次のようにステートメントを挿入します。  
+ データベースメールを使用するプログラムでは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、 `Imports` メール名前空間を修飾するステートメントを含める必要があります。 アプリケーションの宣言の前、かつ他の `Imports` ステートメントの後に、次のようにステートメントを挿入します。  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f9d894eb3f38248e1f7af2b1f693f87bdfebefa9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12a8be61673183adf6556bd093ffe92d3d65e699
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050918"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051880"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile イベント クラス
   SP:Recompile イベント クラスは、ストアド プロシージャ、トリガー、またはユーザー定義関数が再コンパイルされたことを示します。 このイベント クラスから報告される再コンパイルは、ステートメント レベルで発生します。  
@@ -30,7 +29,7 @@ ms.locfileid: "63050918"
   
 |データ列名|`Data type`|説明|列 ID|フィルターの適用|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|のインスタンスへの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続を作成したクライアントアプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
+|ApplicationName|`nvarchar`|のインスタンスへの接続を作成したクライアントアプリケーションの名前 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |ClientProcessID|`int`|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりプロセス ID が指定されている場合は、このデータ列に値が格納されます。|9|はい|  
 |DatabaseID|`int`|ストアド プロシージャが実行されているデータベースの ID。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |DatabaseName|`nvarchar`|ストアド プロシージャが実行されているデータベースの名前。|35|はい|  

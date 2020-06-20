@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a476770e120cd620f01096cc20f9eab7f9f4404
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058366"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966312"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>[あいまいグループ化変換エディター] ([詳細設定] タブ)
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、入力列と出力列の指定、類似性のしきい値の設定、区切り記号の定義ができます。  
   
 > [!NOTE]  
->  あいまい`Exhaustive`グループ化`MaxMemoryUsage`変換のおよびプロパティは、[**あいまいグループ化変換エディター**] では使用できませんが、**詳細エディター**を使用して設定できます。 これらのプロパティの詳細については、「 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)」の「あいまいグループ化変換」を参照してください。  
+>  `Exhaustive` `MaxMemoryUsage` あいまいグループ化変換のおよびプロパティは、[**あいまいグループ化変換エディター**] では使用できませんが、**詳細エディター**を使用して設定できます。 これらのプロパティの詳細については、「 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)」の「あいまいグループ化変換」を参照してください。  
   
  あいまいグループ化変換の詳細については、「 [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)」を参照してください。  
   

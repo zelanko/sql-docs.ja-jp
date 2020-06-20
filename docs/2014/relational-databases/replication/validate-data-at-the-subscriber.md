@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c0975dee640230880dfe05a7d86359172cfa157
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d09750c0cb81d64f5921ae2064b2e75edb6ca96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882235"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047576"
 ---
 # <a name="validate-replicated-data"></a>レプリケートされたデータの検証
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、サブスクライバーでデータを検証する方法について説明します。  
@@ -65,7 +64,7 @@ ms.locfileid: "73882235"
 -   チェックサムおよびバイナリ チェックサムを使用した検証を大規模なデータセットに対して行う場合には、大量のプロセッサ リソースが必要になるので、レプリケーションで使用するサーバーの利用状況が最小のときに検証を行うようにスケジュールする必要があります。    
 -   レプリケーションはテーブルのみを検証します。スキーマのみのアーティクル (ストアド プロシージャなど) がパブリッシャーとサブスクライバーで同じであるかどうかは検証しません。    
 -   バイナリ チェックサムは、パブリッシュされたどのテーブルでも使用できます。 チェックサムは、列フィルターの設定されたテーブル、または列オフセットが異なる論理テーブル構造 (列を削除または追加する ALTER TABLE ステートメントの結果) は検証できません。    
--   レプリケーションの検証で`checksum`は、関数と**binary_checksum**関数を使用します。 各関数の動作については、「[CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql)」と「[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql)」を参照してください。  
+-   レプリケーションの検証では、 `checksum` 関数と**binary_checksum**関数を使用します。 各関数の動作については、「[CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql)」と「[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql)」を参照してください。  
   
 -   バイナリ チェックサムまたはチェックサムを使用した検証では、データ型がサブスクライバー側とパブリッシャー側とで異なる場合には、誤ってエラーを報告することがあります。 これは、次のいずれかの場合に発生する可能性があります。    
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の以前のバージョンのデータ型をマップするスキーマ オプションを明示的に設定している場合。    
@@ -112,7 +111,7 @@ ms.locfileid: "73882235"
 
 #### <a name="all-articles"></a>すべてのアーティクル
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql) を実行します。 [ ** \@パブリケーション**] を指定し、 ** \@rowcount_only**に次のいずれかの値を指定します。    
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql) を実行します。 [ ** \@ パブリケーション**] を指定し、 ** \@ rowcount_only**に次のいずれかの値を指定します。    
     -   **1** - 行数チェックのみ (既定値)    
     -   **2** - 行数とバイナリ チェックサム  
   
@@ -124,7 +123,7 @@ ms.locfileid: "73882235"
   
 #### <a name="single-article"></a>単一のアーティクル 
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) を実行します。 [ ** \@パブリケーション**] を指定し** \@、アーティクルの**アーティクルの名前を指定して、 ** \@rowcount_only**に次のいずれかの値を指定します。    
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) を実行します。 [ ** \@ パブリケーション**] を指定し、アーティクルのアーティクルの名前を指定して、 ** \@ rowcount_only**に次のいずれかの値を指定します。 ** \@ **    
     -   **1** - 行数チェックのみ (既定値)    
     -   **2** -行数とバイナリチェックサム。  
   
@@ -137,9 +136,9 @@ ms.locfileid: "73882235"
 #### <a name="single-subscriber"></a>単一のサブスクライバー
   
 1.  パブリッシャーのパブリケーション データベースで、[BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql) を使用して明示的なトランザクションを開始します。    
-2.  パブリッシャー側のパブリケーション データベースに対して、[sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql) を実行します。 ** \@パブリケーションのパブリケーション、** ** \@サブスクライバー**のサブスクライバーの名前、および** \@destination_db**に使用するサブスクリプションデータベースの名前を指定します。    
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql) を実行します。 **パブリケーションのパブリケーション、 \@ ** ** \@ サブスクライバー**のサブスクライバーの名前、および** \@ destination_db**に使用するサブスクリプションデータベースの名前を指定します。    
 3.  (省略可) 検証の対象となる各サブスクリプションについて、手順 2. を繰り返します。    
-4.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) を実行します。 [ ** \@パブリケーション**] を指定し** \@、アーティクルの**アーティクルの名前を指定して、 ** \@rowcount_only**に次のいずれかの値を指定します。    
+4.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) を実行します。 [ ** \@ パブリケーション**] を指定し、アーティクルのアーティクルの名前を指定して、 ** \@ rowcount_only**に次のいずれかの値を指定します。 ** \@ **    
     -   **1** - 行数チェックのみ (既定値)    
     -   **2** -行数とバイナリチェックサム。  
   
@@ -187,7 +186,7 @@ ms.locfileid: "73882235"
 
 ### <a name="using-transact-sql-t-sql"></a>Transact-SQL (T-SQL) の使用
 
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql) を実行します。 ** \@パブリケーション** ** \@、サブスクライバーの**サブスクライバー名、 ** \@subscriber_db**に使用するサブスクリプションデータベースの名前、 ** \@level**に次のいずれかの値を指定します。   
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql) を実行します。 ** \@ パブリケーション** ** \@ 、サブスクライバーの**サブスクライバー名、 ** \@ subscriber_db**に使用するサブスクリプションデータベースの名前、 ** \@ level**に次のいずれかの値を指定します。   
     -   **1** - 行数の検証のみ    
     -   **3** - 行数とバイナリ チェックサムの検証  
   
@@ -218,7 +217,7 @@ ms.locfileid: "73882235"
 
 ### <a name="using-transact-sql-t-sql"></a>Transact-SQL (T-SQL) の使用
 
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql) を実行します。 [ ** \@パブリケーション**] を指定し、[ ** \@レベル**] に次のいずれかの値を指定します。    
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql) を実行します。 [ ** \@ パブリケーション**] を指定し、[ ** \@ レベル**] に次のいずれかの値を指定します。    
     -   **1** - 行数の検証のみ    
     -   **3** - 行数とバイナリ チェックサムの検証  
   

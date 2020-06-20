@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 70d6cc06b0e53754c22e6a8233f529b03c8e4371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b241bbc850ffe5fc201cfc6711ae3ee380c0fea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63224650"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058203"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>[列の選択] ダイアログ ボックス (Visual Database Tools)
   データベース ダイアグラムのテーブルのカスタム ビューを変更するときに使用します。 カスタム ビューには、ユーザーによって指定された列プロパティだけが表示されます。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 77e303ff-febd-4103-ae5d-6e5b85bc8009
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 598a317bdecb2ed3808a7b5af35316d95d3b87c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac234a757510af5ebfac261ea6d3e7e57d2f426f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092010"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036237"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>SQL Server エージェントのアップグレードに関する問題
   アップグレードに影響する可能性がある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントに関する問題については、以下のトピックを参照してください。 これらのトピックでは、これらの変更が各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境にもたらす影響を軽減するための措置についても説明します。  

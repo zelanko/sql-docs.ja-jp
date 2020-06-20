@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 909db99964faaf2fc3aec8196db929bf61fc7c09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96a6f55c5006eb050eed1c7cf296e3a96747348b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023495"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052931"
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel イベント クラス
   **Lock:Cancel** イベント クラスは、クエリの取り消しなどにより、リソースのロックの取得が取り消されたことを示します。  
@@ -33,7 +32,7 @@ ms.locfileid: "63023495"
 |**ClientProcessID**|`int`|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  
 |**DatabaseID**|`int`|ロックが取得されたデータベースの ID です。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |**DatabaseName**|`nvarchar`|ロックの取得が試みられたデータベースの名前。|35|はい|  
-|**Duration**|`bigint`|ロック要求が発行されてからロックが取り消されたときまでの時間 (マイクロ秒)。|13|はい|  
+|**期間**|`bigint`|ロック要求が発行されてからロックが取り消されたときまでの時間 (マイクロ秒)。|13|はい|  
 |**EndTime**|`datetime`|イベントの終了時刻。|15|はい|  
 |**EventClass**|`int`|イベントの種類 = 26。|27|いいえ|  
 |**EventSequence**|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  

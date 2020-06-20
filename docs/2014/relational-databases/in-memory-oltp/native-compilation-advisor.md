@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1aeb6b4cb356cbb2d965ce449e36b2c5cd484ccc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 175e79f017b795a60088bdaab7939ca51eee9608
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706464"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025982"
 ---
 # <a name="native-compilation-advisor"></a>ネイティブ コンパイル アドバイザー
   トランザクションパフォーマンスレポートツール (「[テーブルまたはストアドプロシージャをインメモリ OLTP に移植する必要](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)があるかどうかを判断する」を参照) は、ネイティブコンパイルを使用するように移植した場合にメリットが得られる、データベース内の解釈されたストアドプロシージャについて通知します。 ネイティブ コンパイルを使用するように移植するストアド プロシージャを特定した後に、ネイティブ コンパイル アドバイザーを使用すると、解釈されたストアド プロシージャをネイティブ コンパイルに移行する際に役立ちます。 ネイティブ コンパイル ストアド プロシージャの詳細については、「 [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)」をご覧ください。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50c9419911f83c98fba5baf0f995ffbeafb916ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768027"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965652"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>[変換先の選択] (SQL Server インポートおよびエクスポート ウィザード)
   [**変換先の選択**] ページを使用すると、コピーするデータの保存先を指定できます。  
@@ -28,7 +27,7 @@ ms.locfileid: "62768027"
   
 ## <a name="static-options"></a>静的オプション  
  **宛先**  
- 変換先の保存形式に対応したデータ プロバイダーを選択します。 データ ソースに使用できるプロバイダーが複数存在する可能性があります。 たとえば、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、SQL Server の .NET Framework Data Provider、または SQL Server 用の Microsoft OLE DB プロバイダーを使用できます。  
+ 変換先の保存形式に対応したデータ プロバイダーを選択します。 データ ソースに使用できるプロバイダーが複数存在する可能性があります。 たとえば、では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、SQL Server の .NET Framework Data Provider、または SQL Server 用の Microsoft OLE DB プロバイダーを使用できます。  
   
 > [!NOTE]  
 >  データを ODBC 変換先に保存するには、.NET Framework Data Provider for ODBC を選択します。  
@@ -42,7 +41,7 @@ ms.locfileid: "62768027"
  **サーバー名**  
  データを受け取るサーバーの名前を入力するか、一覧からサーバーを選択します。  
   
- **Windows 認証を使用する**  
+ **[Windows 認証を使用する]**  
  パッケージで Microsoft Windows 認証を使用してデータベースにログインするかどうかを指定します。 より高いセキュリティのためには Windows 認証をお勧めします。  
   
  **SQL Server 認証を使用する**  
@@ -55,12 +54,12 @@ ms.locfileid: "62768027"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合に、データベース接続用のパスワードを指定します。  
   
  **[データベース]**  
- 指定したインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上のデータベースの一覧から選択するか、[**新規**作成] をクリックして新しいデータベースを作成します。  
+ 指定したインスタンス上のデータベースの一覧から選択するか、[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **新規**作成] をクリックして新しいデータベースを作成します。  
   
- **更新**  
+ **Refresh\(更新\)**  
  **[更新]** をクリックして、利用可能なデータベースの一覧を復元します。  
   
- **新しい**  
+ **[新規作成]**  
  [**データベースの作成**] ダイアログボックスを使用して、新しい変換先データベースを作成します。  
   
 ### <a name="destination--flat-file-destination"></a>[変換先] = [フラット ファイル変換先]  
@@ -79,10 +78,10 @@ ms.locfileid: "62768027"
  **コード ページ**  
  使用する言語のコード ページを指定します。  
   
- **形式**  
+ **Format**  
  区切り形式、固定幅形式、または幅合わせしない形式を使用するかどうかを示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |区切り記号|列は、 **[列]** ページで指定した区切り記号で区切られます。|  
 |固定幅ファイル|列は固定幅を持ちます。|  
@@ -97,7 +96,7 @@ ms.locfileid: "62768027"
 ### <a name="destination--microsoft-excel"></a>[変換先] = [Microsoft Excel]  
   
 > [!NOTE]  
->  Excel 2003 以前を使用しているデータソースに接続する場合にのみ、[ **Microsoft Excel** ] を選択します。 Excel 2007 を使用するデータソースに接続するには、[ **Microsoft Office 12.0 Access データベースエンジン OLE DB プロバイダー**] を選択し、[**プロパティ**] をクリックします。次に、[**データリンクプロパティ**] `Excel 12.0`ダイアログボックスの [**すべて**] タブで、[**拡張プロパティ**] に「」と入力します。  
+>  Excel 2003 以前を使用しているデータソースに接続する場合にのみ、[ **Microsoft Excel** ] を選択します。 Excel 2007 を使用するデータソースに接続するには、[ **Microsoft Office 12.0 Access データベースエンジン OLE DB プロバイダー**] を選択し、[**プロパティ**] をクリックします。次に、[**データリンクプロパティ**] ダイアログボックスの [**すべて**] タブで、[**拡張プロパティ**] に「」と入力し `Excel 12.0` ます。  
   
  **[Excel ファイル パス]**  
  データを格納するブックのパスとファイル名を指定します (たとえば、C:\MyData.xls、 \\\Sales\Database\Northwind.xls)。 または、 **[参照]** をクリックしてブックを探します。  
@@ -117,7 +116,7 @@ ms.locfileid: "62768027"
 >  Access 2003 以前を使用しているデータベースに接続する場合にのみ、[ **Microsoft access** ] を選択します。 Access 2007 を使用するデータベースに接続するには、[ **Microsoft Office 12.0 access データベースエンジン OLE DB プロバイダー**] を選択します。  
   
  **[ファイル名]**  
- データを格納するデータベースファイルのパスとファイル名を指定します (たとえば、C:\MyData.mdb、 \\\Sales\Database\Northwind.mdb)。 または、 **[参照]** をクリックしてデータベース ファイルを探します。  
+ データを格納するデータベースファイルのパスとファイル名を指定します (たとえば、C:\MyData.mdb、 \\ \Sales\Database\Northwind.mdb)。 または、 **[参照]** をクリックしてデータベース ファイルを探します。  
   
  **参照**  
  [**開く**] ダイアログボックスを使用して、データベースファイルを参照します。  

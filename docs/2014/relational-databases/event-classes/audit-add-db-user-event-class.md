@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 36d9be6a759e2684602a20ed0c493818d5fe4cc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0acefc1ade48833cf790a8849a937a09b6a904d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761647"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031097"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User イベント クラス
   **Audit Add DB User** イベント クラスは、データベースにデータベース ユーザーとしてログインが追加または削除されるたびに発生します。 このイベント クラスは、 **sp_grantdbaccess**、 **sp_revokedbaccess**、 **sp_adduser**、および **sp_dropuser** プロシージャに対して使用します。  

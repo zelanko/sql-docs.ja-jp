@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e7eb4324d56c3ab45486063cb8097603ac3a416b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702226"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050005"
 ---
 # <a name="supported-sql-server-features"></a>サポートされる SQL Server の機能
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の、メモリ最適化オブジェクトの使用に関してサポートされる機能またはサポートされない機能について説明します。  
@@ -33,7 +32,7 @@ ms.locfileid: "82702226"
   
 -   複数バージョン管理とオプティミスティック コンカレンシー。 詳細については、「 [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md)」をご覧ください。  
   
--   メモリ最適化データ ファイル グループを含むデータベースのバックアップと復元。 詳しくは、「[SQL Server データベースのバックアップと復元](../backup-restore/back-up-and-restore-of-sql-server-databases.md)」をご覧ください。  
+-   メモリ最適化データ ファイル グループを含むデータベースのバックアップと復元。 詳細については、「 [SQL Server データベースのバックアップと復元](../backup-restore/back-up-and-restore-of-sql-server-databases.md)」を参照してください。  
   
 -   サポートを実現するためのカタログ ビュー、動的管理ビュー、および拡張イベント。 詳細については、[インメモリ OLTP 向けのシステム ビュー、ストアド プロシージャ、DMV、待機の種類](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)に関するページを参照してください。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "82702226"
 |リンク サーバー|詳しくは、「 [リンク サーバー &#40;データベース エンジン&#41;](../linked-servers/linked-servers-database-engine.md)」を参照してください。|  
 |一括ログ記録|データベースの復旧モデルにかかわらず、持続性のあるメモリ最適化テーブル上のすべての操作は、常に完全にログに記録されます。|  
 |最小ログ記録|最小ログ記録は、メモリ最適化テーブルではサポートされていません。 最小ログ記録の詳細については、「[トランザクション ログ &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)」および「[一括インポートで最小ログ記録を行うための前提条件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。|  
-|変更の追跡|変更の追跡は、インメモリ OLTP オブジェクトを含むデータベースで有効にすることができます。 ただし、メモリ最適化テーブルの変更は追跡されません。|  
+|Change tracking|変更の追跡は、インメモリ OLTP オブジェクトを含むデータベースで有効にすることができます。 ただし、メモリ最適化テーブルの変更は追跡されません。|  
 |DDL トリガー|インメモリ OLTP テーブルおよびネイティブ コンパイル ストアド プロシージャでは、データベース レベルおよびサーバー レベルの DDL トリガーはどちらもサポートされません。|  
 |変更データ キャプチャ (CDC)|DROP などの特定の操作が妨げられるため、インメモリ OLTP オブジェクトが存在するデータベースでは CDC を有効にしないでください。|  
 |データベースの包含|データベースの包含は、ネイティブ コンパイル ストアド プロシージャおよびメモリ最適化テーブルを含むデータベースではサポートされません。 詳細については、「 [Contained Databases](../databases/contained-databases.md)」をご覧ください。|  

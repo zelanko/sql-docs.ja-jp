@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e187c1-cbd9-463c-b417-8a734574f102
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 892dd145ea19c40bada704387a4b2408e84d9522
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7b16491b9a3729ad4df71c7ddceaee6db21777ff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718940"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049949"
 ---
 # <a name="simulating-an-exists-clause-in-a-natively-compiled-stored-procedure"></a>ネイティブ コンパイル ストアド プロシージャ内の EXISTS 句のシミュレーション
   ネイティブ コンパイル ストアド プロシージャでは `EXISTS` 句はサポートされませんが、対応策があります。  
@@ -28,6 +27,6 @@ IF @exists = 1
   
 ## <a name="see-also"></a>参照  
  [ネイティブコンパイルストアドプロシージャの移行に関する問題](migration-issues-for-natively-compiled-stored-procedures.md)   
- [インメモリ OLTP でサポートされていない Transact-SQL の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+ [インメモリ OLTP でサポートされていない transact-sql の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

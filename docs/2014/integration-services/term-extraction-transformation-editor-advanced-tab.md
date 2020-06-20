@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bc333bae08cd9ec658b6e8050b869d1232dbe629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c783a06d5d5518639e6368f5c1eb572e60206b5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055269"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962262"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>[用語抽出変換エディター] ([詳細設定] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、頻度、長さ、語または句の抽出の有無など、抽出に関するプロパティを指定できます。  

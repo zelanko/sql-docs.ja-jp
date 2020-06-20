@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 087f32510b65d7ea505bc4bf816a5ca9edcfe82d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7a3cdc57f48c61894a51386c5671c98e00ba711
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055458"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962713"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>[SQL 変換先エディター] ([詳細設定] ページ)
   **[SQL 変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、詳細な一括挿入オプションを指定できます。  

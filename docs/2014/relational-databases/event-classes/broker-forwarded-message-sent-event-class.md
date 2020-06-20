@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 51784663fdfec66f851bed479184ae21170a3681
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3996850833efdc8737febec4691353d1c0a835f5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664008"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030488"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Service Broker がメッセージを転送するときに、Broker:Forwarded Message Sent イベントを生成します。  
@@ -51,7 +50,7 @@ ms.locfileid: "62664008"
 |ServerName|`nvarchar`|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |SPID|`int`|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|成功|`int`|転送処理にかかった時間。|23|いいえ|  
+|Success|`int`|転送処理にかかった時間。|23|いいえ|  
 |TargetLoginName|`nvarchar`|このインスタンスがメッセージを送信したネットワーク アドレス。 このネットワーク アドレスはメッセージの最終送信先とは異なる場合があるので注意してください。|42|いいえ|  
 |TargetUserName|`nvarchar`|メッセージを発信したサービスの名前。|39|いいえ|  
 |TransactionID|`bigint`|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
