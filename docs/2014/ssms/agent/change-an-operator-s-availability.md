@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fb369ea6a2d1edf1ed8f4377b627fb1ba7339a03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63017103"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064999"
 ---
 # <a name="change-an-operator39s-availability"></a>オペレーターの可用性の変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、オペレーターの警告通知受信スケジュールを変更する方法について説明します。  
@@ -36,7 +35,7 @@ ms.locfileid: "63017103"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **オペレーターが通知を受信できるかどうかを設定する方法:**  
   

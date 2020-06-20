@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c231793-3878-4a5e-a425-1fa0d787ba84
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2b6e08a384e20d64a7002171059db0d35dfd94a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 031fedc4af4b058704cef1da8df846397b235305
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091472"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065136"
 ---
 # <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>マスター サーバーをアップグレードする前にすべてのターゲット サーバーをアップグレードする
   マスター サーバーをアップグレードする前に、ターゲット サーバーとして構成され、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているすべてのコンピューターをアップグレードしてください。  

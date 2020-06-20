@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b385e6b02807ed79e2becb127a16e76d04329764
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 946bfd0c05e7739af4bfebf799980a0dc27de245
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473133"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065019"
 ---
 # <a name="alerts"></a>警告
   イベントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成され、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログに記録されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、アプリケーション ログを読み取り、そこに書き込まれているイベントを、定義済みの警告と比較します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって一致が検出されると、イベントに対する自動応答である警告を発します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントの監視だけでなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントはパフォーマンス状態および Windows Management Instrumentation (WMI) イベントも監視します。  
@@ -76,7 +75,7 @@ ms.locfileid: "62473133"
 ## <a name="selecting-a-performance-condition"></a>パフォーマンス状態の選択  
  特定のパフォーマンス状態に応答する警告を指定できます。 この場合、監視するパフォーマンス カウンター、警告を発生するしきい値、および警告発生時にカウンターが示す動作を指定します。 パフォーマンス状態を設定するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **[新しい警告]** または **[警告のプロパティ]** ダイアログ ボックスを開き、 **[全般]** ページで次の項目を定義する必要があります。  
   
--   **素材**  
+-   **オブジェクト**  
   
      オブジェクトは、監視されるパフォーマンスの領域です。  
   
@@ -100,11 +99,11 @@ ms.locfileid: "62473133"
 ## <a name="selecting-a-wmi-event"></a>WMI イベントの選択  
  特定の WMI イベントに応答して警告が発生するように指定できます。 WMI イベントを選択するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **[新しい警告]** または **[警告のプロパティ]** ダイアログ ボックスを開き、 **[全般]** ページで次の項目を定義する必要があります。  
   
--   **Namespace**  
+-   **名前空間**  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを WMI クライアントとして、イベントをクエリするために用意された WMI 名前空間に登録します。  
   
--   **クエリ**  
+-   **Query**  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、Windows Management Instrumentation Query Language (WQL) ステートメントを使用して、特定のイベントを識別します。  
   

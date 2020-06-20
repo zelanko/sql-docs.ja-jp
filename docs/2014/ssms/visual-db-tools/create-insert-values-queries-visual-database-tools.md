@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 019c2fe96be00c6e86e0c94286770d30e7a54a9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b16937a6502d227b077a1db67179b778be9cbfa6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058156"
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>値の挿入クエリの作成 (Visual Database Tools)
   値の挿入クエリを使用すると、現在のテーブルに新しい行を作成できます。 値の挿入クエリを作成するときは、次の項目を指定します。  

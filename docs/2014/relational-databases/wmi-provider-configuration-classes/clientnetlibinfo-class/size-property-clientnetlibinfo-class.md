@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0cf2c598b358c5c43e9dc9717b012bc5c5f873d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b10914d8d2fa22c57bc9b762647b3978ab839b52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191125"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062709"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Size プロパティ (ClientNetLibInfo クラス)
   クライアント ネットワーク ライブラリのサイズ (KB 単位) を取得します。  
@@ -36,7 +35,7 @@ object
 .Size [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  クライアント ネットワーク ライブラリに関する情報を表す [ClientNetLibInfo クラス](clientnetlibinfo-class.md) オブジェクト。  
   

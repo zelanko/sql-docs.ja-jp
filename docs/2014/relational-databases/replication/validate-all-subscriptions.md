@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b33cfe47cebba4c24c90ad41ce1b218192d128f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27a7a4f5e5c3c303d5a1cbe257c0a0e9b531e824
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255324"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047567"
 ---
 # <a name="validate-all-subscriptions"></a>[すべてのサブスクリプションの検証]
   **[すべてのサブスクリプションの検証]** ダイアログ ボックスを使用すると、各サブスクリプションのマージ エージェントを次に実行するときに、マージ パブリケーションへのサブスクリプションをすべて検証するように指定できます。 検証の結果はレプリケーション モニターに表示されます。 詳しくは、「 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)」をご覧ください。  

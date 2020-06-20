@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 13afe8de4806b76328288c0d910a244e293109c5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3b8d1de2ad5e95ea83d323c6e5e772f31f59c549
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704392"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049640"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>SQL Server Native Client での接続文字列キーワードの使用
   一部の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client API では、接続文字列を使用して接続属性を指定します。 接続文字列はキーワードとそれに関連する値のリストです。各キーワードによって特定の接続属性を識別します。  
@@ -48,13 +47,13 @@ ms.locfileid: "82704392"
   
  次の表に、ODBC 接続文字列と共に使用できるキーワードを示します。  
   
-|Keyword|説明|  
+|キーワード|説明|  
 |-------------|-----------------|  
 |`Addr`|"Address" のシノニム。|  
 |`Address`|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスを実行しているサーバーのネットワーク アドレス。 `Address` には通常、サーバーのネットワーク名を使用しますが、パイプ、IP アドレス、または TCP/IP ポートとソケット アドレスなど他の名前を指定してもかまいません。<br /><br /> IP アドレスを指定する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで TCP/IP または名前付きパイプ プロトコルが有効になっていることを確認します。<br /><br /> `Address` の値は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の使用時に ODBC 接続文字列で `Server` に渡される値よりも優先されます。 `Address=;` の場合は、`Server` キーワードで指定されているサーバーに接続されますが、`Address= ;, Address=.;`、`Address=localhost;`、および `Address=(local);` の場合はすべて、ローカル サーバーに接続されます。<br /><br /> `Address` キーワードの完全な構文は次のとおりです。<br /><br /> [*protocol* `:` ]*Address*[ `,` *port &#124;\pipe\pipename*]<br /><br /> *プロトコル*には、 `tcp` (tcp/ip)、 `lpc` (共有メモリ)、または `np` (名前付きパイプ) を指定できます。 プロトコルの詳細については、「[クライアント プロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)」を参照してください。<br /><br /> *Protocol*もキーワードも指定されていない場合 `Network` 、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では Configuration Manager で指定されたプロトコル順が使用され [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。<br /><br /> *port* は、指定したサーバー上の接続先のポートです。 既定では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はポート 1433 を使用します。|  
 |`AnsiNPW`|"yes" の場合、ANSI で定められた動作に従って NULL の比較、文字データの埋め込み、警告、および NULL 連結が処理されます。 "no" の場合、ANSI で定められた動作が公開されません。 ANSI NPW の動作の詳細については、「 [ISO オプションの効果](../../native-client-odbc-queries/executing-statements/effects-of-iso-options.md)」を参照してください。|  
-|`APP`|[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)を呼び出すアプリケーションの名前 (省略可能)。 この値が指定されている場合、この値は**program_name** **マスター**列に格納され、 [sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)と[APP_NAME](/sql/t-sql/functions/app-name-transact-sql)関数によって返されます。|  
-|`ApplicationIntent`|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 設定可能な値は `ReadOnly` および `ReadWrite` です。 例: ApplicationIntent = ReadOnly<br /><br /> 既定値は `ReadWrite` です。 Native Client によるのサポートの詳細については [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。|  
+|`APP`|[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)を呼び出すアプリケーションの名前 (省略可能)。 この値を指定した場合、この値は**master.dbo.sysprocesses**列**program_name**に格納され、 [sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)と[APP_NAME](/sql/t-sql/functions/app-name-transact-sql)関数によって返されます。|  
+|`ApplicationIntent`|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 設定可能な値は `ReadOnly` および `ReadWrite` です。 例: ApplicationIntent = ReadOnly<br /><br /> 既定値は、`ReadWrite` です。 Native Client によるのサポートの詳細については [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。|  
 |`AttachDBFileName`|アタッチできるデータベースのプライマリ ファイルの名前。 この名前には完全なパス名を指定します。また C 文字列変数を使用する場合は、\ 文字をエスケープしてください。<br /><br /> `AttachDBFileName=c:\\MyFolder\\MyDB.mdf`<br /><br /> このデータベースがアタッチされ、接続の既定のデータベースとして使用されます。 を使用するには、 `AttachDBFileName` [SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)データベースパラメーターまたは SQL_COPT_CURRENT_CATALOG 接続属性でもデータベース名を指定する必要があります。 データベースが以前にアタッチされていた場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] により再アタッチされることはありません (アタッチされたデータベースがその接続の既定のデータベースとして使用されます)。|  
 |`AutoTranslate`|"yes" の場合、クライアントとサーバーの間で送受信される ANSI 文字列は、いったん Unicode に変換されます。これは、クライアントとサーバーのコード ページ間で拡張文字を照合するときに発生する問題を最小限に抑えるためです。<br /><br /> クライアント SQL_C_CHAR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **CHAR**、 **varchar**、または**text**変数、パラメーター、または列に送信されるデータは、クライアントの ANSI コードページ (acp) を使用して文字から unicode に変換され、その後、サーバーの acp を使用して unicode から文字に変換されます。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント SQL_C_CHAR 変数に送信される**char**、 **varchar**、または**text**データは、サーバーの acp を使用して文字から unicode に変換され、その後、クライアントの acp を使用して unicode から文字に変換されます。<br /><br /> この変換は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーによってクライアントで行われます。 また、サーバーで使用しているものと同じ ACP (ANSI コード ページ) がクライアントでも使用可能になっている必要があります。<br /><br /> 次の設定は、送受信時の変換に影響しません。<br /><br /> -Unicode SQL_C_WCHAR サーバー上の**char**、 **varchar**、または**text**に送信されるクライアントデータ。<br />-   クライアント上の Unicode SQL_C_WCHAR 変数に送信される**char**、 **varchar**、または**text** server データ。<br />-ANSI SQL_C_CHAR、サーバー上の Unicode **nchar**、 **nvarchar**、または**ntext**に送信されるクライアントデータです。<br />-クライアント上の ANSI SQL_C_CHAR 変数に送信される Unicode **nchar**、 **nvarchar**、または**ntext**サーバーのデータ。<br /><br /> "no" の場合、文字の変換は行われません。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、サーバー上の**CHAR**、 **varchar**、または**text**変数、パラメーター、または列に送信される、クライアントの ANSI 文字 SQL_C_CHAR データを変換しません。 サーバーからクライアントの SQL_C_CHAR 変数に送信される**char**、 **varchar**、または**text**型のデータに対しては、変換は実行されません。<br /><br /> クライアントと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で使用する ACP が異なる場合、拡張文字の解釈が正しく行われない場合があります。|  
 |`Database`|接続に使用する既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースの名前。 `Database` を指定していない場合は、ログインに定義されている既定のデータベースが使用されます。 ODBC データ ソースの既定のデータベースは、ログインに定義されている既定のデータベースをオーバーライドします。 `AttachDBFileName` を指定する場合を除き、既存のデータベースを使用する必要があります。 `AttachDBFileName` も指定した場合は、このキーワードが参照するプライマリ ファイルがアタッチされ、`Database` で指定したデータベース名が付けられます。|  
@@ -67,7 +66,7 @@ ms.locfileid: "82704392"
 |`FileDSN`|既存の ODBC ファイル データ ソースの名前。|  
 |`Language`|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 言語の名前 (省略可)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、複数の言語のメッセージを**sysmessages**に格納できます。 複数の言語が設定された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続する場合、その接続でどのメッセージのセットを使用するかを `Language` で指定します。|  
 |`MARS_Connection`|その接続で MARS (複数のアクティブな結果セット) を有効または無効にします。 認識できる値は "yes" と "no" です。 既定値は "no" です。|  
-|`MultiSubnetFailover`|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性グループまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず `multiSubnetFailover=Yes` を指定してください。 `multiSubnetFailover=Yes` によって、(現在) アクティブなサーバーを迅速に検出し、接続するように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client が構成されます。 設定可能な値は `Yes` および `No` です。 次に例を示します。<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> 既定値は `No` です。 Native Client によるのサポートの詳細については [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。|  
+|`MultiSubnetFailover`|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性グループまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず `multiSubnetFailover=Yes` を指定してください。 `multiSubnetFailover=Yes` によって、(現在) アクティブなサーバーを迅速に検出し、接続するように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client が構成されます。 設定可能な値は `Yes` および `No` です。 次に例を示します。<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> 既定値は、`No` です。 Native Client によるのサポートの詳細については [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。|  
 |`Net`|"Network" のシノニム。|  
 |`Network`|有効な値は、 **dbnmpntw** (名前付きパイプ) と**dbmssocn** (tcp/ip) です。<br /><br /> `Network` キーワードの値と `Server` キーワードのプロトコル プレフィックスの両方を指定すると、エラーになります。|  
 |`PWD`|UID パラメーターで指定されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン アカウントのパスワード。 ログインのパスワードが NULL の場合、または Windows 認証 (`Trusted_Connection = yes`) を使用している場合は、`PWD` を指定する必要はありません。|  
@@ -85,7 +84,7 @@ ms.locfileid: "82704392"
 |`TrustServerCertificate`|`Encrypt` と共に使用すると、自己署名入りのサーバー証明書による暗号化が有効になります。|  
 |`UID`|有効な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン アカウント。 Windows 認証を使用する場合は UID を指定する必要はありません。|  
 |`UseProcForPrepare`|このキーワードは非推奨とされており、その設定は Native Client ODBC ドライバーによって無視され [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。|  
-|`WSID`|ワークステーション ID。 通常は、アプリケーションが実装されているコンピューターのネットワーク名です (省略可)。 この値が指定さ**れている**場合、この値は、 [sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)と[HOST_NAME](/sql/t-sql/functions/host-name-transact-sql)関数によって返され**ます。**|  
+|`WSID`|ワークステーション ID。 通常は、アプリケーションが実装されているコンピューターのネットワーク名です (省略可)。 この値が指定されている場合、この値は**master.dbo.sysプロセス**の列**hostname**に格納され、 [sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)と[HOST_NAME](/sql/t-sql/functions/host-name-transact-sql)関数によって返されます。|  
   
  **地域への変換の設定は、通貨、数値、日付、および時刻のデータ型に適用されます。変換の設定は出力変換にのみ適用され、通貨、数値、日付、または時刻の値が文字列に変換される場合にのみ表示さ**れます。  
   

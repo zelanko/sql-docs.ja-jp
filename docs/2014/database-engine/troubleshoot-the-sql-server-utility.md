@@ -9,23 +9,22 @@ ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4837ae389dc1b02921ae12ca081b096e63336ab
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797780"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928063"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>SQL Server ユーティリティのトラブルシューティング
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのトラブルシューティングの項目としては、UCP を使用した SQL Server インスタンスの登録処理の失敗の解決、データ収集の失敗 (UCP のマネージド インスタンスのリスト ビューで灰色のアイコンが表示される) に対するトラブルシューティング、パフォーマンス ボトルネックの緩和、リソースの正常性に関する問題の解決などがあります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP によって識別されるリソース正常性の問題を軽減する方法の詳細については、「[トラブルシューティング SQL Server Resource Health &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)」を参照してください。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのトラブルシューティングの項目としては、UCP を使用した SQL Server インスタンスの登録処理の失敗の解決、データ収集の失敗 (UCP のマネージド インスタンスのリスト ビューで灰色のアイコンが表示される) に対するトラブルシューティング、パフォーマンス ボトルネックの緩和、リソースの正常性に関する問題の解決などがあります。 UCP によって識別されるリソース正常性の問題を軽減する方法の詳細につい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ては、「[トラブルシューティング SQL Server Resource Health &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)」を参照してください。  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>SQL Server インスタンスを SQL Server ユーティリティに登録する処理の失敗  
  登録する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用して接続し、UCP があるドメインとは異なる Active Directory ドメインに属するプロキシ アカウントを指定した場合、インスタンスの検証には成功しますが、次のエラー メッセージが表示されて登録処理に失敗します。  
   
  Transact-SQL ステートメントまたはバッチの実行中に例外が発生しました。 (Microsoft.SqlServer.ConnectionInfo)  
   
- 追加情報: Windows NT グループまたはユーザー '\<ドメイン名\アカウント名>' に関する情報を取得できませんでした。エラー コード 0x5。 (Microsoft SQL Server、エラー: 15404)  
+ 追加情報: Windows NT グループ/ユーザー ' ' に関する情報を取得できませんでした \<DomainName\AccountName> 。エラーコード0x5。 (Microsoft SQL Server、エラー: 15404)  
   
  この問題は、次のようなシナリオで発生します。  
   
@@ -35,11 +34,11 @@ ms.locfileid: "72797780"
   
 3.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティに登録する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスは、"Domain_1" のメンバーでもあります。  
   
-4.  登録操作中に、"sa" を使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]して登録するのインスタンスに接続します。 "Domain_2" からのプロキシ アカウントを指定します。  
+4.  登録操作中に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "sa" を使用して登録するのインスタンスに接続します。 "Domain_2" からのプロキシ アカウントを指定します。  
   
 5.  検証に成功しますが、登録に失敗します。  
   
- 上記の例を使用して、この問題の回避策として、の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスに接続し[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]て "sa" を使用してユーティリティに登録し、"Domain_1" からプロキシアカウントを指定します。  
+ 上記の例を使用して、この問題の回避策として、のインスタンスに接続して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "sa" を使用してユーティリティに登録し、"Domain_1" からプロキシアカウントを指定します。  
   
 ## <a name="failed-wmi-validation"></a>WMI 検証の失敗  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスで WMI が正しく構成されていない場合は、UCP の作成操作とマネージド インスタンスの登録操作で警告が表示されますが、操作はブロックされません。 また、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントが目的の WMI クラスに対する権限を持たないように [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント アカウントの構成を変更した場合、影響を受ける [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスでデータ収集を行うと UCP へのアップロードに失敗します。 この結果、UCP に灰色のアイコンが表示されます。  
@@ -50,7 +49,7 @@ ms.locfileid: "72797780"
   
  シェル変数 "ErrorActionPreference" が Stop に設定されているため、コマンドの実行が停止しました: アクセスが拒否されました。  
   
- エラー: \<日付/時刻 (MM/DD/YYYY HH: MM: SS) >: cpu プロパティの収集中に例外がキャッチされました。  WMI クエリに失敗した可能性があります。  警告。  
+ エラー: \<Date-time (MM/DD/YYYY HH:MM:SS)> : cpu プロパティの収集中に例外がキャッチされました。  WMI クエリに失敗した可能性があります。  警告。  
   
  この問題を解決するには、次の構成設定を確認します。  
   
@@ -114,9 +113,9 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  SSMS の **オブジェクト エクスプローラー**で、 **[セキュリティ]** ノードを展開し、 **[資格情報]** ノードを展開します。  
   
-    2.  **UtilityAgentProxyCredential_\<GUID>** を右クリックし、[**プロパティ**] を選択します。  
+    2.  **UtilityAgentProxyCredential_ \<GUID> **を右クリックし、[**プロパティ**] を選択します。  
   
-    3.  [資格情報のプロパティ] ダイアログボックスで、 **\<UtilityAgentProxyCredential_ GUID>** の資格情報に必要な資格情報を更新します。  
+    3.  [資格情報のプロパティ] ダイアログボックスで、 **UtilityAgentProxyCredential_ \<GUID> **資格情報に必要な資格情報を更新します。  
   
     4.  **[OK]** をクリックして変更を確定します。  
   
@@ -124,7 +123,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   UCP の SQL Server Browser サービスを開始して、自動的に開始するように構成する必要があります。 組織の方針で SQL Server Browser サービスを使用できない場合は、次の手順を実行して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスから UCP に接続できるようにします。  
   
-    1.  の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]マネージインスタンス上の Windows タスクバーで、[**スタート**] をクリックし、[**実行**] をクリックします。  
+    1.  のマネージインスタンス上の Windows タスクバーで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、[**スタート**] をクリックし、[**実行**] をクリックします。  
   
     2.  該当するボックスに「cliconfg.exe」と入力し、 **[OK]** をクリックします。  
   

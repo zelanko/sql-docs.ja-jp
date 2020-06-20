@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e51f45e06939971ada6166fb977c787ad0354926
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626154"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047670"
 ---
 # <a name="sql-server-replication"></a>SQL Server のレプリケーション
   レプリケーションとは、あるデータベースから別のデータベースにデータやデータベース オブジェクトをコピーおよび配布し、それらのデータベースを同期させて一貫性を保つための一連のテクノロジです。 レプリケーションを使用すると、ローカル エリア ネットワーク、ワイド エリア ネットワーク、ダイヤルアップ接続、ワイヤレス接続、インターネットなどを経由して、別の場所や、リモート ユーザーまたはモバイル ユーザーにデータを配布することができます。  

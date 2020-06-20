@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 05891576872818e0d15d7bcae728dd3f19cdc252
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 651b7899e104fe5a7dbc6d584ceba6e5cf8de570
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703091"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055115"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>軸の指定 (SQLXML 4.0)
     
@@ -33,7 +32,7 @@ ms.locfileid: "82703091"
   
      コンテキスト ノードの子を含みます。  
   
-     次の XPath 式 (ロケーションパス) は、現在のコンテキストノードからすべての** \< 顧客>** 子を選択します。  
+     次の XPath 式 (ロケーションパス) では、現在のコンテキストノードからすべての子が選択され **\<Customer>** ます。  
   
     ```  
     child::Customer  
@@ -45,7 +44,7 @@ ms.locfileid: "82703091"
   
      コンテキスト ノードの親を含みます。  
   
-     次の XPath 式では、すべての** \< 顧客>** 子** \<>順序**の親を選択します。  
+     次の XPath 式は、子のすべての親を選択し **\<Customer>** **\<Order>** ます。  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -67,7 +66,7 @@ ms.locfileid: "82703091"
   
      コンテキスト ノードそのものを含みます。  
   
-     次の XPath 式は、現在のノードが** \< Order>** ノードである場合、そのノードを選択します。  
+     次の XPath 式は、ノードの場合、現在のノードを選択し **\<Order>** ます。  
   
     ```  
     self::Order  

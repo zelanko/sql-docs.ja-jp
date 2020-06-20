@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d4190f096efaf80989d397f26a314454fe2171b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d617095f190c89131ec81326279c16ec1a927125
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175863"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049454"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>論理レコードの競合の検出および解決
   ここでは、論理レコードの使用時に利用できる、競合検出および競合解決方法のさまざまな組み合わせを紹介します。 マージ レプリケーションでの競合は、複数のノードが同じデータを変更したとき、またはマージ レプリケーションが変更をレプリケートするときに制約違反などの特定の種類のエラーに遭遇したときに発生します。 競合の検出および解決の詳細については、「 [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。
@@ -34,7 +33,7 @@ ms.locfileid: "78175863"
 
  **Customers**、 **Orders**、または **OrderItems** テーブルの Customer2 論理レコードに対して 2 人のユーザーが値を変更した場合に競合が検出されます。 この例では、UPDATE ステートメントにより変更が行われていますが、INSERT または DELETE ステートメントによる変更でも競合が検出されることがあります。
 
-## <a name="conflict-resolution"></a>競合解決
+## <a name="conflict-resolution"></a>競合の解決
  既定では、マージ レプリケーションは優先度に基づくロジックを使用して競合を解決します。 2 つのサブスクライバー データベースで競合する変更が行われた場合、サブスクリプションの優先度が高いサブスクライバー側の変更が優先されます。優先度が同じである場合は、パブリッシャーに先に到達した変更が優先されます。 行レベルおよび列レベルの検出では、優先度の低い行は常に優先される行全体で上書きされます。
 
  **logical_record_level_conflict_resolution** アーティクル プロパティは TRUE または FALSE のどちらかに設定できます。 この値はトップ レベルの親アーティクルに対してのみ設定してください。子アーティクルでは無視されます。 この値が TRUE の場合、優先される論理レコード全体が優先度の低い論理レコードを上書きします。 FALSE の場合、優先される個々の行は、別のサブスクライバーまたはパブリッシャーからのものである可能性があります。 たとえば、 **Orders** テーブルの行についてはサブスクライバー A が優先され、 **OrderItems** テーブルの関連する行についてはサブスクライバー B が優先される、という場合があります。 この結果、論理レコードの **Orders** 行はサブスクライバー A のものになり、 **OrderItems** 行はサブスクライバー B のものとなります。

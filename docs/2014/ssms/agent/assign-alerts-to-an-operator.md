@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cc238b952c03595035856f377b6fdbb9eaf5e2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048800"
 ---
 # <a name="assign-alerts-to-an-operator"></a>オペレーターへの警告の割り当て
-  このトピックでは、また[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、エージェントの警告をオペレーターに割り当てて、でジョブに関する通知を受信できるようにする方法について説明します。  
+  このトピック [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、またはを使用して、エージェントの警告をオペレーターに割り当てて、でジョブに関する通知を受信できるようにする方法について説明し [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
   
  **このトピックの内容**  
   
@@ -33,7 +32,7 @@ ms.locfileid: "62473213"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **オペレーターに警告を割り当てる方法:**  
   
@@ -47,7 +46,7 @@ ms.locfileid: "62473213"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、警告システム全体を簡単に管理できるグラフィカルなツールです。 警告システムを構成するときには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用することをお勧めします。  
   
--   警告に対応して通知を送るには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがメールを送れるようにあらかじめ構成しておく必要があります。 詳細については、「[データベースメールを使用するように SQL Server エージェントメールを構成する](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)」を参照してください。  
+-   警告に対応して通知を送るには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがメールを送れるようにあらかじめ構成しておく必要があります。 詳細については、「 [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)」を参照してください。  
   
 -   電子メールのメッセージやポケットベルによる通知に失敗した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス エラー ログに失敗がレポートされます。  
   

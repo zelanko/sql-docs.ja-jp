@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 219ba0605d60bab0b13675f7f9f7ff01cace5755
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144333"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049740"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>トランザクション ログ ファイルのサイズの管理
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのトランザクション ログは、必要に応じて、その物理ログ ファイルを物理的に圧縮または展開することができます。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のトランザクション ログ サイズの監視、トランザクション ログの圧縮、トランザクション ログ ファイルの追加と拡大、 **tempdb** トランザクション ログ増加率の最適化、トランザクション ログ ファイルのサイズ拡大の管理の方法について説明します。  
@@ -55,7 +54,7 @@ ms.locfileid: "63144333"
 -   [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (ログ ファイルまたはファイルの **size**、**max_size**、**growth** 列を参照してください。)  
   
 > [!NOTE]  
->  データベースおよびログ ファイルの圧縮は、自動的に行われるように設定できます。 ただし、自動圧縮は推奨されず、`autoshrink` データベース プロパティは既定で FALSE に設定されています。 `autoshrink` を TRUE に設定すると、ファイル領域の 25% を超える領域が未使用の場合にのみ、自動圧縮によってファイルのサイズが縮小されます。 ファイルは、ファイル領域の 25% のみが未使用領域になるサイズ、またはファイルの元のサイズの、どちらか大きい方のサイズまで圧縮されます。 `autoshrink`プロパティの設定を変更する方法の詳細については、「[データベースのプロパティを表示または変更](../databases/view-or-change-the-properties-of-a-database.md)する」を参照してください。または、[**オプション**] ページで**自動圧縮**プロパティを使用するか、 [transact-sql&#41;&#40;ALTER Database SET オプション](/sql/t-sql/statements/alter-database-transact-sql-set-options)を使用して AUTO_SHRINK オプションを使用してください。  
+>  データベースおよびログ ファイルの圧縮は、自動的に行われるように設定できます。 ただし、自動圧縮は推奨されず、`autoshrink` データベース プロパティは既定で FALSE に設定されています。 `autoshrink` を TRUE に設定すると、ファイル領域の 25% を超える領域が未使用の場合にのみ、自動圧縮によってファイルのサイズが縮小されます。 ファイルは、ファイル領域の 25% のみが未使用領域になるサイズ、またはファイルの元のサイズの、どちらか大きい方のサイズまで圧縮されます。 プロパティの設定を変更する方法の詳細については `autoshrink` 、「[データベースのプロパティを表示または変更](../databases/view-or-change-the-properties-of-a-database.md)する」を参照してください。または、[**オプション**] ページで**自動圧縮**プロパティを使用するか、 [transact-sql&#41;&#40;ALTER Database SET オプション](/sql/t-sql/statements/alter-database-transact-sql-set-options)を使用して AUTO_SHRINK オプションを使用してください。  
   
   
 ##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a>ログファイルを追加または拡大する  

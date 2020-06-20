@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4c789ea6cececcfacbc428fda393c1c13684765
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e1f29d8e9edcccf093ac85cc134b5b92b9c2173
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704852"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061669"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>[ファセットのプロパティ] ダイアログ ボックスの [全般] ページ
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ファセットのプロパティを表示できます。 各ファセットは、1 種類以上の対象 (サーバー、データベース、テーブルなど) に適用できます。 このページでは、このファセットに関連付けられている対象の種類を表示できます。 ファセットのプロパティは、ファセットの作成時に定義され、このページでは変更できません。  

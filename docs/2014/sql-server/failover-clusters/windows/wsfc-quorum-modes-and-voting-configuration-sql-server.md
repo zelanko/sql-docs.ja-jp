@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b1d5ad992c59f252f485f2d65451a72f150bef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711437"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046241"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC クォーラム モードと投票の構成 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と AlwaysOn フェールオーバー クラスター インスタンス (FCI) のどちらも、Windows Server フェールオーバー クラスタリング (WSFC) をプラットフォーム テクノロジとして使用します。  WSFC は、クォーラム ベースのアプローチを使用してクラスターの全体的な正常性を監視し、ノード レベルのフォールト トレランスを最大限に高めます。 WSFC クォーラム モードおよびノード投票構成の基本について理解することは、AlwaysOn 高可用性およびディザスター リカバリー ソリューションの設計、運用、トラブルシューティングのために非常に重要です。  
@@ -87,7 +86,7 @@ ms.locfileid: "62711437"
 > [!IMPORTANT]  
 >  NodeWeight 設定を使用するには、次の修正プログラムが WSFC クラスターのすべてのサーバーに適用されている必要があります。  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]とでクォーラム投票のないクラスターノードを構成するための修正プログラムが用意されています。[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): とでクォーラム投票のないクラスターノードを構成するための修正プログラムが用意されています。 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)][!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="recommended-adjustments-to-quorum-voting"></a><a name="RecommendedAdjustmentstoQuorumVoting"></a>クォーラム投票に推奨される調整  
  特定の WSFC ノードの投票を有効または無効にする場合は、次のガイドラインに従ってください。  

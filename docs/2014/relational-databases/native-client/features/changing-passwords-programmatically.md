@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: edee56c6d162f92234e235f9369a0ab91457639e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8ced6d387dd6ba14ab997aefbe7f2b43426c868e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707320"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049587"
 ---
 # <a name="changing-passwords-programmatically"></a>プログラムによるパスワードの変更
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のリリースでは、ユーザーのパスワードの有効期限が切れたとき、そのパスワードをリセットできるのは管理者だけでした。 以降で [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] は、Native client は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB プロバイダーと NATIVE client ODBC ドライバーの両方を介してプログラムによってパスワードの有効期限を処理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **SQL Server のログイン**ダイアログボックスに変更を加えることができます。  

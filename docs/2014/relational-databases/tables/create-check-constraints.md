@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7795ee6eca85a22bdd4e84c90ce49a9449ddff28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736202"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047141"
 ---
 # <a name="create-check-constraints"></a>CHECK 制約の作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブルで CHECK 制約を作成して、1 つ以上の列に入力できるデータ値を指定します。  

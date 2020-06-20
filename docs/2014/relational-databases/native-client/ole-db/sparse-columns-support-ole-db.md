@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60d7224a764cd0ab506d03cb154cb06456a8c408
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 825482d26d8b1fb071e802534a3166e61a4e20b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704212"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005970"
 ---
 # <a name="sparse-columns-support-ole-db"></a>スパース列のサポート (OLE DB)
   このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB でのスパース列のサポートについて説明します。 スパース列の詳細については、「 [SQL Server Native Client でのスパース列のサポート](../features/sparse-columns-support-in-sql-server-native-client.md)」を参照してください。 サンプルについては、「[スパース列に対する列およびカタログ メタデータの表示 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)」を参照してください。  

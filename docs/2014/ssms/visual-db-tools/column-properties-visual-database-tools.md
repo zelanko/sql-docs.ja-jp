@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aeb4d01cae7c09c27cafa8284638bf0a7de9691
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990204"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058220"
 ---
 # <a name="column-properties-visual-database-tools"></a>[列のプロパティ] \(Visual Database Tools)
   列のプロパティのセットには、テーブル デザイナーの **[列のプロパティ]** タブに表示される完全なセット ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースでのみ使用可能) と、サーバー エクスプローラーでプロパティ ウィンドウに表示されるサブセットの 2 種類があります。  
@@ -179,12 +178,12 @@ ms.locfileid: "62990204"
  この列を別の場所にレプリケートされるかどうかを示します。  
   
  **[RowGuid]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこの列が ROWGUID として使用されるかどうかが示されます。 この値は、データ型がの`uniqueidentifier`列に対してのみ **[はい]** に設定できます。 このプロパティを編集するには、値をクリックしてドロップダウン リストを展開し、別の値を選択します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこの列が ROWGUID として使用されるかどうかが示されます。 この値は、データ型がの列に対してのみ **[はい]** に設定でき `uniqueidentifier` ます。 このプロパティを編集するには、値をクリックしてドロップダウン リストを展開し、別の値を選択します。  
   
  **[サイズ]**  
  列のデータ型で許容されるサイズがバイト単位で表示されます。 たとえば、`nchar` データ型の長さが 10 (文字数) でも、Unicode 文字セットの場合のサイズは 20 になります。  
   
 > [!NOTE]  
->  `varchar(max)` データ型の長さは行ごとに異なります sp_help は、列の`varchar(max)`長さとして (-1) を返します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、列のサイズとして -1 が表示されます。  
+>  `varchar(max)` データ型の長さは行ごとに異なります sp_help は、列の長さとして (-1) を返し `varchar(max)` ます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、列のサイズとして -1 が表示されます。  
   
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7289c18fac421bbdb5ccc0e00a3bea60b7a22d9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29f18956ef1cdaa85b186e610c1c915d45602126
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150615"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047854"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>サーバーのパフォーマンスと利用状況の監視
   データベースを監視する目的は、サーバーのパフォーマンスを評価することです。 適切な監視には、現在のパフォーマンスのスナップショットを定期的にキャプチャして問題の原因となっているプロセスを特定したり、長期にわたって継続的にデータを採取してパフォーマンスの傾向を追跡する作業が必要です。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムでは、データベースの現在の状態を参照したり、状態の変化に伴うパフォーマンスを追跡するためのユーティリティが用意されています。  
@@ -45,7 +44,7 @@ ms.locfileid: "63150615"
   
  **SQL Server Management Studio で監視タスクを実行するには**  
   
--   [SQL Server のエラーログ &#40;SQL Server Management Studio を表示&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [SQL Server エラー ログの表示 &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
 -   [利用状況モニターを開く方法 &#40;SQL Server Management Studio&#41;](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)  
   

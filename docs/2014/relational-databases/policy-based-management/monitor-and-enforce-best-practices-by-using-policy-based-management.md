@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68e02c4933f559bff62b8e352016a911990049a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626049"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049567"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したベスト プラクティスの監視と実行
-  ポリシーベースの管理では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のベストプラクティスを監視できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、ベストプラクティスポリシーとしてインポートできる一連のポリシーファイルを提供し、インスタンス、インスタンスオブジェクト、データベース、またはデータベースオブジェクトを含む対象セットに対してポリシーを評価します。 ポリシーを手動で評価したり、スケジュールまたはイベントに従って対象セットを評価するようにポリシーを設定したりできます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)」を参照してください。  
+  ポリシーベースの管理では、のベストプラクティスを監視でき [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、ベストプラクティスポリシーとしてインポートできる一連のポリシーファイルを提供し、インスタンス、インスタンスオブジェクト、データベース、またはデータベースオブジェクトを含む対象セットに対してポリシーを評価します。 ポリシーを手動で評価したり、スケジュールまたはイベントに従って対象セットを評価するようにポリシーを設定したりできます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)」を参照してください。  
   
 ## <a name="policy-and-rules-for-database-engine"></a>データベース エンジンのポリシーとルール  
- 次の表に、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールに含まれているポリシーと、各ポリシーで評価されるベストプラクティス規則に関する情報を示します。 ポリシーは XML ファイルとして格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートする必要があります。 ポリシーのインポート方法については、「 [ポリシー ベースの管理ポリシーのインポート](import-a-policy-based-management-policy.md)」を参照してください。  
+ 次の表に、のインストールに含まれているポリシー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と、各ポリシーで評価されるベストプラクティス規則に関する情報を示します。 ポリシーは XML ファイルとして格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートする必要があります。 ポリシーのインポート方法については、「 [ポリシー ベースの管理ポリシーのインポート](import-a-policy-based-management-policy.md)」を参照してください。  
   
 |ポリシー名|ベスト プラクティス ルール|  
 |-----------------|------------------------|  

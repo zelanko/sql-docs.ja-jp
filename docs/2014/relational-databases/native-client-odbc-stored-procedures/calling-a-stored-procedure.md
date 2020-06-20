@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7e6b6c48860495603ca73842e5617986d5829966
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c6fa704e45e4e85b479ae8a40a3e567bea1ec5e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709606"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049722"
 ---
 # <a name="calling-a-stored-procedure"></a>ストアド プロシージャの呼び出し
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc ドライバーでは、ストアドプロシージャを実行するための ODBC call エスケープシーケンスと EXECUTE ステートメントの両方がサポートされています [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) 。 odbc call エスケープシーケンスを使用する方法をお勧めします。 ODBC 構文を使用すると、アプリケーションでストアド プロシージャのリターン コードを取得できます。また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行するコンピューター間のリモート プロシージャ コール (RPC) の送信向けに開発されているプロトコルを使用するように最適化されます。 この RPC プロトコルでは、サーバー側で実行されるパラメーター処理やステートメントの解析作業の多くを排除することで、パフォーマンスを向上しています。  

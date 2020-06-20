@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 597d138832ab5234d0059c25e91fd4d830be255c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6370b5c7d70346ccd801d1800c8411f93d897e9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711088"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018619"
 ---
 # <a name="executing-queries-odbc"></a>クエリの実行 (ODBC)
   ODBC アプリケーションでは、接続ハンドルを初期化してデータ ソースに接続した後、その接続ハンドルに 1 つ以上のステートメント ハンドルを割り当てます。 その後、アプリケーションは [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントハンドルに対してステートメントを実行できます。 次に、SQL ステートメントを実行するときの一般的な手順を示します。  

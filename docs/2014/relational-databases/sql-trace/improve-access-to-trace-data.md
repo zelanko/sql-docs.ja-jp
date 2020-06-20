@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 540a0bd9430a182ef3eda43fd816b4a495dc36b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5870798e66f5145c43224e58958057a08e5c6c43
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714619"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068292"
 ---
 # <a name="improve-access-to-trace-data"></a>トレース データへのアクセスを向上させる
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、トレース データのアクセスを向上させるために、 **temp** ディレクトリの領域を使用します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] には、最低で 10 MB の空き領域が必要です。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]の使用中に空き容量が 10 MB より少なくなると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のすべての機能が停止します。  

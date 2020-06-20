@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dda7c4c0e2ae187f96883a32cac2528eceb90c74
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 04b19644e8f9c1a80cdb5f661e42c20d9849244a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706297"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022680"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   実行されるステートメントの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーでは、結果セットの列を説明するためにサーバーに対してクエリを実行する必要はありません。 この場合、 `SQLDescribeCol` はサーバーのラウンドトリップを発生させません。 [Sqlcolattribute](sqlnumresultcols.md)と同様、 `SQLDescribeCol` 準備済みで実行されていないステートメントを呼び出すと、サーバーのラウンドトリップが生成されます。  
@@ -40,7 +39,7 @@ ms.locfileid: "82706297"
 |DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  
-|time|SQL_SS_TIME2|8、10..16|0..7|  
+|時間|SQL_SS_TIME2|8、10..16|0..7|  
 |datetime2|SQL_TYPE_TIMESTAMP|19、21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26、28..34|0..7|  
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f34b06d90bfb8e028004beb03c3f4b9a87345c0d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58f04e83541f218a4cdcfbd99d6b3de12bf38b2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211379"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064974"
 ---
 # <a name="job-activity-monitor"></a>[ジョブの利用状況モニター]
   このページでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの現在の利用状況を参照できます。 **[フィルター]** をクリックすると、表示されるジョブが限定されます。 **[エージェント ジョブの利用状況]** グリッドは読み取り専用です。 列ヘッダーをクリックすると、グリッドが並べ替えられます。 ジョブを変更するには、ジョブをダブルクリックして **[ジョブのプロパティ]** ダイアログ ボックスを開きます。 グリッドでジョブを右クリックして表示されるメニューから、すべてのジョブ ステップの実行の開始、特定のジョブ ステップの実行、ジョブの無効化または有効化、ジョブの更新、ジョブの削除、ジョブの履歴の表示、ジョブのプロパティの表示ができます。 **[最新の情報に更新]** をクリックすると、グリッドが現在の情報で更新されます。  
@@ -27,7 +26,7 @@ ms.locfileid: "68211379"
  **名前**  
  ジョブの名前。  
   
- **Enabled**  
+ **有効**  
  ジョブが有効 (**[はい]**) か無効 (**[いいえ]**) かを示します。  
   
  **状態** <sup>1</sup>  
@@ -48,10 +47,10 @@ ms.locfileid: "68211379"
  **実行可能**  
  ジョブを実行できる場合は **[はい]** 、実行できない場合は **[いいえ]** になります。 ステップがないジョブおよびターゲット サーバーがないジョブは実行できません。  
   
- **スケジュール**  
+ **スケジュール済み**  
  ジョブがジョブ スケジュールに割り当てられている場合は **[はい]** 、ジョブにスケジュールがない場合は **[いいえ]** になります。  
   
- <sup>1</sup>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sysadmin 固定サーバーロールおよび server administrators グループのメンバーだけが、この列の値を表示できます。 SQLAgentOperatorRole ロールのメンバーはこの列の値を表示できません。  
+ <sup>1</sup>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Sysadmin 固定サーバーロールおよび server administrators グループのメンバーだけが、この列の値を表示できます。 SQLAgentOperatorRole ロールのメンバーはこの列の値を表示できません。  
   
 #### <a name="to-open-the-job-activity-monitor"></a>[ジョブの利用状況モニター] を開くには  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2513a698fc073c751613e8e387d41ddb3e0fe9e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c75a48868398b2a59673208fa55dbf4fc026221
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891763"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965342"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>手順 1:新しい Integration Services プロジェクトの作成
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] でパッケージを作成するには、まず [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成する必要があります。 このプロジェクトには、データ変換ソリューションで使用するオブジェクト (データ ソース、データ ソース ビュー、パッケージ) のテンプレートが用意されています。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10e1546b-9edb-400c-8676-2ea1192d6134
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 04b21c85454fc992aac7e2d18b580d440171e93c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 93491830c28a32c16aad6bef3456b864870a2e22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244631"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058444"
 ---
 # <a name="change-the-name-of-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>登録済みサーバーまたは登録済みサーバー グループの名前の変更 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、登録済みサーバーまたは登録済みサーバー グループの名前を変更する方法について説明します。 この名前はいつでも変更できます。 [登録済みサーバー] でサーバーの名前を変更すると、名前の表示のみが変更されます。 別のサーバーに接続するには、登録済みサーバーの接続プロパティを編集する必要があります。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 328d795f692597689628f6fa189d597f73fbb76a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80a1884206e4f8fb49bf6aadb57ab7dde8ffa829
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244621"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058401"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>登録済みサーバーからの切断 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で、任意の時点にサーバーからオブジェクト エクスプローラーを切断する方法について説明します。 オブジェクト エクスプローラーを切断しても、SQL エディターなどの他の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] コンポーネントは切断されません。  

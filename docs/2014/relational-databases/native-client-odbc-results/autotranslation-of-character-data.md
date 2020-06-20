@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 134c37bf2e509c44bfe459638e24ad24f4128aa0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cbced1bb62dcacb896a7ff30fdbd6b5aa28f20e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699678"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039590"
 ---
 # <a name="autotranslation-of-character-data"></a>文字データの自動変換
   SQL_C_CHAR で宣言された ANSI 文字変数や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CHAR**、 **varchar**、または**text**データ型を使用してに格納されているデータなどの文字データは、制限された文字数のみを表すことができます。 1 文字ごとに 1 バイトを使用して保存される文字データでは、256 文字しか表現できません。 SQL_C_CHAR 変数に格納される値は、クライアント コンピューターの ANSI コード ページ (ACP) を使用して解釈されます。 サーバーで**char**、 **varchar**、または**text**データ型を使用して格納されている値は、サーバーの ACP を使用して評価されます。  

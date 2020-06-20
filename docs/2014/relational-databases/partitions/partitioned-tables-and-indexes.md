@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5f96f82919b9f4a130ce8a533e6ffcf31e765f5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5321d2c96bbc0e8c55ba82b442c387dab8ee23ff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65092040"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011037"
 ---
 # <a name="partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックス
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブルおよびインデックスのパーティション分割をサポートします。 パーティション テーブルとパーティション インデックスのデータは、データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 行のグループが各パーティションにマップされるように、データは行方向にパーティション分割されます。 1 つのインデックスまたはテーブルのすべてのパーティションは、同じデータベース内に存在する必要があります。 データに対するクエリまたは更新の実行時は、テーブルやインデックスが 1 つの論理エンティティとして扱われます。 パーティション テーブルとパーティション インデックスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブルおよびインデックスのパーティション分割をサポートします。 パーティション テーブルとパーティション インデックスのデータは、データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 行のグループが各パーティションにマップされるように、データは行方向にパーティション分割されます。 1 つのインデックスまたはテーブルのすべてのパーティションは、同じデータベース内に存在する必要があります。 データに対するクエリまたは更新の実行時は、テーブルやインデックスが 1 つの論理エンティティとして扱われます。 パーティション テーブルとパーティション インデックスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 の各エディションでサポートされる機能の一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、既定で最大 15,000 個のパーティションをサポートします。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]より前のバージョンでは、パーティションの数は既定で 1,000 個に限られていました。x86 ベースのシステムでは、パーティション数が 1,000 個を超えるテーブルまたはインデックスを作成できますが、それはサポートされていません。  

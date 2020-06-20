@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02f12008b9ab8e9cd4c7d08ed81a902629b90827
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207070"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063834"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>レプリケーションの管理者に関してよく寄せられる質問
   ここでは、レプリケートされたデータベースの管理者が行うさまざまな作業についての指針となるような質問と回答を掲載します。  
@@ -103,7 +102,7 @@ ms.locfileid: "63207070"
   
 -   マージ レプリケーション用の Web 同期オプション。 詳細については、「 [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)」を参照してください。  
   
- すべての種類[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のレプリケーションでは、VPN 経由でデータをレプリケートできますが、マージレプリケーションを使用している場合は Web 同期を検討する必要があります。  
+ すべての種類の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションでは、VPN 経由でデータをレプリケートできますが、マージレプリケーションを使用している場合は Web 同期を検討する必要があります。  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>接続が切断された場合にレプリケーションは再開されますか。  
  はい。 接続が切断された場合には、中断した時点からレプリケーション処理が再開されます。 不安定なネットワーク経由でマージ レプリケーションを使用している場合は、論理レコードの利用を検討してください。これにより、関連する変更が 1 つの単位として処理されるようになります。 詳細については、「[Group Changes to Related Rows with Logical Records](../merge/group-changes-to-related-rows-with-logical-records.md)」 (論理レコードによる関連行への変更のグループ化) を参照してください。  
@@ -121,7 +120,7 @@ ms.locfileid: "63207070"
   
 -   CREATE TABLE ステートメントなどの、オブジェクトの定義。 既定では、レプリケートされるすべてのオブジェクトの定義がサブスクライバーにコピーされます。  
   
--   オブジェクトが作成される名前空間: \<Database>.\<Schema>.\<Object>. スキーマは、CREATE SCHEMA ステートメントで定義します。  
+-   オブジェクトが作成される名前空間:. \<Database> . \<Schema> \<Object> .スキーマは、CREATE SCHEMA ステートメントを使用して定義されます。  
   
 -   既定では、パブリケーションの新規作成ウィザードは、スキーマとオブジェクトの所有権に関して、以下のように動作します。  
   
@@ -133,7 +132,7 @@ ms.locfileid: "63207070"
   
 -   キャラクター モードのスナップショット ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のバージョンのサブスクライバーや [!INCLUDE[ssEW](../../../includes/ssew-md.md)] サブスクライバーで使用されます) を使用するパブリケーションのアーティクルの場合。既定では、所有者は空白のままになります。 既定の所有者は、サブスクライバーに接続しているディストリビューション エージェントまたはマージ エージェントで使用されるアカウントに関連付けられている所有者になります。  
   
- オブジェクトの所有者は、**[アーティクルのプロパティ - \<***Article***>]** ダイアログ ボックスと、ストアド プロシージャ**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** および **sp_changemergearticle** で変更できます。 詳細については、「[View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](../publish/define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](../publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
+ オブジェクトの所有者を変更するには、[**アーティクルのプロパティ \<***Article***> -** ] ダイアログボックスと、 **sp_addarticle**、 **sp_addmergearticle**、 **sp_changearticle**、および**sp_changemergearticle**の各ストアドプロシージャを使用します。 詳細については、「[View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](../publish/define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](../publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>サブスクリプション データベースの権限をパブリケーション データベースの権限に一致させるには、どのように構成すればよいですか。  
  既定では、レプリケーションではサブスクリプション データベース上で GRANT ステートメントは実行されません。 サブスクリプション データベース上の権限をパブリケーション データベース上の権限に一致させる場合は、次のいずれかの方法を使用します。  
@@ -151,9 +150,9 @@ ms.locfileid: "63207070"
   
 -   サブスクリプションを再初期化するときに、オブジェクトを削除しないように指定します。 再初期化の前に、次のいずれかを実行します。  
   
-    -   [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) または [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 パラメーターに ' pre_creation_cmd ' (**sp_changearticle**) または ' pre_creation_command ' (**sp_changemergearticle**) の値を指定**@property**し、パラメーター **@value**に値 ' none '、' delete '、または ' truncate ' を指定します。  
+    -   [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) または [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 パラメーターに ' pre_creation_cmd ' (**sp_changearticle**) または ' pre_creation_command ' (**sp_changemergearticle**) の値を指定 **@property** し、パラメーターに値 ' none '、' delete '、または ' truncate ' を指定し **@value** ます。  
   
-    -   [**アーティクルのプロパティ- \<アーティクルの>** ] ダイアログボックスの [**対象オブジェクト**] セクションで、[**既存のオブジェクトを変更せずに保持**する]、[データを削除する] の値を選択し**ます。アーティクルに行フィルターがある場合は、フィルターに一致するデータのみを削除します。** または **[既存のオブジェクト内にあるすべてのデータを切り捨てます]** を **[名前が使用中である場合のアクション]**」で選択します。 このダイアログ ボックスへのアクセスの詳細については、「[View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md)」 (パブリケーションのプロパティの表示および変更) を参照してください。  
+    -   [**アーティクルのプロパティ- \<Article> ** ] ダイアログボックスの [**対象オブジェクト**] セクションで、[**既存のオブジェクトを変更せずに保持**する]、[データを削除する] の値を選択し**ます。アーティクルに行フィルターがある場合は、フィルターに一致するデータのみを削除します。** または **[既存のオブジェクト内にあるすべてのデータを切り捨てます]** を **[名前が使用中である場合のアクション]**」で選択します。 このダイアログ ボックスへのアクセスの詳細については、「[View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md)」 (パブリケーションのプロパティの表示および変更) を参照してください。  
   
 ## <a name="database-maintenance"></a>データベースのメンテナンス  
   
@@ -181,7 +180,7 @@ ms.locfileid: "63207070"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]では、データベース ファイルの移動または名前の変更を行うには、データベースのデタッチと再アタッチが必要でした。 レプリケートされたデータベースはデタッチできないため、まずデータベースからレプリケーションを削除する必要がありました。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以降では、データベースのデタッチと再アタッチを行わなくてもファイルの移動や名前の変更が行え、レプリケーションに影響を与えることもありません。 ファイルの移動と名前の変更については、「[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)」を参照してください。  
   
 ### <a name="how-do-i-drop-a-table-that-is-being-replicated"></a>レプリケートされているテーブルを削除するにはどうすればよいですか。  
- まず [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)、[sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)、**[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスのいずれかを使用してパブリケーションからアーティクルを削除し、次に `DROP <Object>` を使用してデータベースからアーティクルを削除します。 サブスクリプションを追加した後で、スナップショット パブリケーションまたはトランザクション パブリケーションからアーティクルを削除することはできません。まずサブスクリプションを削除する必要があります。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
+ まず、 [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)、 [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)、または [**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスを使用してパブリケーションからアーティクルを削除し、次にを使用してデータベースからアーティクルを削除し `DROP <Object>` ます。 サブスクリプションを追加した後で、スナップショット パブリケーションまたはトランザクション パブリケーションからアーティクルを削除することはできません。まずサブスクリプションを削除する必要があります。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>パブリッシュされたテーブル上の列を追加または削除するにはどうすればよいですか。  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、列の追加や削除などの、パブリッシュされたオブジェクトに対するスキーマのさまざまな変更がサポートされています。 たとえば、ALTER TABLE...パブリッシャーで列を削除すると、ステートメントがサブスクライバーにレプリケートされてから、列を削除するために実行されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] が実行されているサブスクライバーでは、ストアド プロシージャ [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) および [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql)で列の追加と削除がサポートされています。 詳細については、「[パブリケーション データベースでのスキーマの変更](../publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
@@ -192,10 +191,10 @@ ms.locfileid: "63207070"
  検証機能を使用します。 検証では、指定したサブスクライバーがパブリッシャーと同期されているかどうかがレポートされます。 詳細については、「[レプリケートされたデータの検証](../validate-data-at-the-subscriber.md)」を参照してください。 正しく同期されていない行がある場合、検証を行っても、同期されていない行についての情報が表示されませんが、 [tablediff ユーティリティ](../../../tools/tablediff-utility.md) では表示されます。  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>既存のパブリケーションにテーブルを追加するにはどうすればよいですか。  
- テーブル (または他のオブジェクト) を追加するときに、パブリケーション データベースまたはサブスクリプション データベースに対する操作を停止する必要はありません。 パブリケーションにテーブルを追加するには、**[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスか、ストアド プロシージャ [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) および [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を使用します。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
+ テーブル (または他のオブジェクト) を追加するときに、パブリケーション データベースまたはサブスクリプション データベースに対する操作を停止する必要はありません。 [**パブリケーションのプロパティ \<Publication> -** ] ダイアログボックスまたはストアドプロシージャ[sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)および[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)を使用して、パブリケーションにテーブルを追加します。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
   
 ### <a name="how-do-i-remove-a-table-from-a-publication"></a>パブリケーションからテーブルを削除するにはどうすればよいですか。  
- パブリケーションからテーブルを削除するには、[sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)、[sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスを使用します。 サブスクリプションを追加した後で、スナップショット パブリケーションまたはトランザクション パブリケーションからアーティクルを削除することはできません。まずサブスクリプションを削除する必要があります。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
+ [Sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)、 [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)、または [**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスを使用して、パブリケーションからテーブルを削除します。 サブスクリプションを追加した後で、スナップショット パブリケーションまたはトランザクション パブリケーションからアーティクルを削除することはできません。まずサブスクリプションを削除する必要があります。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
   
 ### <a name="what-actions-require-subscriptions-to-be-reinitialized"></a>サブスクリプションの再初期化が必要となる操作にはどのようなものがありますか。  
  アーティクルやパブリケーションに対する変更の中には、サブスクリプションの再初期化が必要になるものがあります。 詳細については、「[Change Publication and Article Properties](../publish/change-publication-and-article-properties.md)」 (パブリケーションおよびアーティクルのプロパティの変更) を参照してください。  

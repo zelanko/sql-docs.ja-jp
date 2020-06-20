@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c8f8bc17b6a4c4792858c64144788aa12b858a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510956"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062245"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>[ジョブ ステップのプロパティ]:[新しいジョブ ステップ] ([全般] ページ)
-  このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントジョブステップのプロパティを表示および変更したり、新しいジョブステップを定義したりできます。  
+  このページを使用すると、エージェントジョブステップのプロパティを表示および変更し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] たり、新しいジョブステップを定義したりできます。  
   
  このページに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを展開します。次に **[ジョブ]** を右クリックし、 **[新しいジョブ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]** をクリックします。 または、オブジェクト エクスプローラーでジョブを右クリックし、 **[プロパティ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]**、 **[挿入]**、または **[編集]** をクリックします。  
   
@@ -41,10 +40,10 @@ ms.locfileid: "62510956"
  ジョブ ステップが実行するコマンドを設定します。  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Transact-SQL ジョブ ステップのオプション  
- **開く**  
+ **[ファイル]**  
  コマンドをファイルから読み込みます。  
   
- **すべて選択**  
+ **[すべて選択]**  
  コマンドのテキストを選択します。  
   
  **コピー**  
@@ -70,10 +69,10 @@ ms.locfileid: "62510956"
  **その他**  
  別のスクリプト言語で記述されたジョブ ステップの言語の名前を入力します。  
   
- **開く**  
+ **[ファイル]**  
  コマンドをファイルから読み込みます。  
   
- **すべて選択**  
+ **[すべて選択]**  
  コマンドのテキストを選択します。  
   
  **コピー**  
@@ -86,10 +85,10 @@ ms.locfileid: "62510956"
  **[コマンド成功時のプロセス終了コード]**  
  成功を示すためにコマンドが返す終了コードを入力します。  
   
- **開く**  
+ **[ファイル]**  
  コマンドをファイルから読み込みます。  
   
- **すべて選択**  
+ **[すべて選択]**  
  コマンドのテキストを選択します。  
   
  **コピー**  
@@ -99,10 +98,10 @@ ms.locfileid: "62510956"
  クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-powershell-job-steps"></a>PowerShell ジョブ ステップのオプション  
- **開く**  
+ **[ファイル]**  
  ファイルからスクリプトを読み込みます。  
   
- **すべて選択**  
+ **[すべて選択]**  
  スクリプトのテキストを選択します。  
   
  **コピー**  
@@ -112,7 +111,7 @@ ms.locfileid: "62510956"
  クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-replication-distributor-job-steps"></a>レプリケーション ディストリビューター ジョブ ステップのオプション  
- **すべて選択**  
+ **[すべて選択]**  
  コマンドのテキストを選択します。  
   
  **コピー**  
@@ -122,7 +121,7 @@ ms.locfileid: "62510956"
  クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-replication-merge-job-steps"></a>レプリケーション マージ ジョブ ステップのオプション  
- **すべて選択**  
+ **[すべて選択]**  
  コマンドのテキストを選択します。  
   
  **コピー**  
@@ -135,7 +134,7 @@ ms.locfileid: "62510956"
  **[データベース]**  
  ジョブ ステップに使用するデータベースです。  
   
- **すべて選択**  
+ **[すべて選択]**  
  コマンドのテキストを選択します。  
   
  **コピー**  
@@ -145,7 +144,7 @@ ms.locfileid: "62510956"
  クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-replication-snapshot-job-steps"></a>レプリケーション スナップショット ジョブ ステップのオプション  
- **すべて選択**  
+ **[すべて選択]**  
  コマンドのテキストを選択します。  
   
  **コピー**  
@@ -155,7 +154,7 @@ ms.locfileid: "62510956"
  クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-replication-transaction-log-reader-job-steps"></a>レプリケーション トランザクション ログ リーダー ジョブ ステップのオプション  
- **すべて選択**  
+ **[すべて選択]**  
  コマンドのテキストを選択します。  
   
  **コピー**  
@@ -168,10 +167,10 @@ ms.locfileid: "62510956"
  **[サーバー]**  
  ジョブ ステップを実行するサーバーを選択します。  
   
- **開く**  
+ **[ファイル]**  
  コマンドをファイルから読み込みます。  
   
- **すべて選択**  
+ **[すべて選択]**  
  コマンドのテキストを選択します。  
   
  **コピー**  
@@ -187,10 +186,10 @@ ms.locfileid: "62510956"
  **[データベース]**  
  ジョブ ステップに使用するデータベースです。  
   
- **開く**  
+ **[ファイル]**  
  コマンドをファイルから読み込みます。  
   
- **すべて選択**  
+ **[すべて選択]**  
  コマンドのテキストを選択します。  
   
  **コピー**  
@@ -216,7 +215,7 @@ ms.locfileid: "62510956"
  **[サーバー]**  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージが格納されているサーバーの名前を入力します。 このオプションは、 **[パッケージ ソース]** に **[SQL Server]** または **[SSIS パッケージ ストア]** が指定されている場合のみ使用できます。  
   
- **Windows 認証を使用する**  
+ **[Windows 認証を使用する]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのログインに [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証を使用します。  
   
  **SQL Server 認証を使用する**  
@@ -237,10 +236,10 @@ ms.locfileid: "62510956"
  **構成ファイル**  
  パッケージの構成ファイルを一覧表示します。  
   
- **追加**  
+ **[追加]**  
  パッケージの構成ファイルを追加します。  
   
- **Remove**  
+ **[削除]**  
  パッケージの構成ファイルを削除します。  
   
  **[上へ移動]**  
@@ -255,10 +254,10 @@ ms.locfileid: "62510956"
  **[コマンド ファイル]**  
  パッケージのコマンド ファイルを一覧表示します。  
   
- **追加**  
+ **[追加]**  
  コマンド ファイルを追加します。  
   
- **Remove**  
+ **[削除]**  
  選択されたコマンド ファイルを削除します。  
   
  **[上へ移動]**  
@@ -315,7 +314,7 @@ ms.locfileid: "62510956"
  **構成文字列**  
  ログ プロバイダーの構成文字列を入力します。  
   
- **Remove**  
+ **[削除]**  
  ログ プロバイダーを削除します。  
   
 ### <a name="set-values-tab"></a>[値の設定] タブ  
@@ -327,7 +326,7 @@ ms.locfileid: "62510956"
  **Value**  
  プロパティの値を表示または変更します。  
   
- **Remove**  
+ **[削除]**  
  プロパティを削除します。  
   
 ### <a name="verification-tab"></a>[検証] タブ  
@@ -351,7 +350,7 @@ ms.locfileid: "62510956"
  **[バージョン ID を確認する]**  
  特定のバージョン ID を持つパッケージのみ実行します。 このオプションがオンになっていると、パッケージのバージョン ID が指定の ID と異なる場合は、ジョブ ステップが失敗します。  
   
- **[バージョン ID]**  
+ **バージョン ID**  
  バージョン ID を入力します。  
   
 ### <a name="command-line-tab"></a>[コマンド ライン] タブ  
@@ -367,7 +366,7 @@ ms.locfileid: "62510956"
  このパッケージに使用するコマンド ライン オプションを入力します。  
   
 ## <a name="see-also"></a>参照  
- [ジョブステップの管理](manage-job-steps.md)   
+ [ジョブ ステップの管理](manage-job-steps.md)   
  [パッケージの SQL Server エージェントジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
  [レプリケーション エージェントの管理](../../relational-databases/replication/agents/replication-agent-administration.md)  
   

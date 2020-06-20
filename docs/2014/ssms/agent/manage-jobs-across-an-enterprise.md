@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f051b3de9ba88354f5fded8cd1f429e3b277747
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 385435302b2e987c86afb17eaebf90e91bc93e56
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188174"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062203"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>エンタープライズ全体におけるジョブの管理
-  以外[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でマルチサーバージョブ定義を変更した場合は、対象サーバーが更新されたジョブを再度ダウンロードできるように、その変更をダウンロードリストに投稿する必要があります。 ターゲット サーバーが最新のジョブ定義を確実に持つように、マルチサーバー ジョブを更新した後で INSERT 命令を次のように通知します。  
+  以外でマルチサーバージョブ定義を変更した場合は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、対象サーバーが更新されたジョブを再度ダウンロードできるように、その変更をダウンロードリストに投稿する必要があります。 ターゲット サーバーが最新のジョブ定義を確実に持つように、マルチサーバー ジョブを更新した後で INSERT 命令を次のように通知します。  
   
 ```  
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  

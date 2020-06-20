@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05b11804630de6bd57681a569225971864c15814
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952174"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036901"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>暗号化キー (SSRS ネイティブ モード)
   [暗号化キー] ページを使用すると、レポート サーバーでデータの暗号化と暗号化解除に使用される対称キーを管理できます。 暗号化キーの管理は、レポート サーバーの構成で重要な位置を占めています。 対称キーはレポート サーバー データベースを作成する際に自動的に作成されて適用されますが、 定期的なメンテナンス操作を実行できるように、対称キーのバックアップ コピーを作成しておく必要があります。 次に示すメンテナンス タスクを実行するには、対称キーの有効なコピーが必要です。  

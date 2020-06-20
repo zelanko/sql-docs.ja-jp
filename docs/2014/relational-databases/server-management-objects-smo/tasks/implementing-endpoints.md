@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 042bc1cfe2ccf09580d052b1a4bc045d03fc81ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47f655423e4eee6b239299ed7d78c83963eadeb4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796839"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037621"
 ---
 # <a name="implementing-endpoints"></a>エンドポイントの実装
   エンドポイントは、要求をネイティブにリッスンできるサービスです。 SMO は、<xref:Microsoft.SqlServer.Management.Smo.Endpoint> オブジェクトを使用することで、さまざまな種類のエンドポイントをサポートしています。 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> オブジェクトのインスタンスを作成し、そのプロパティを設定することで、特定のプロトコルを必要とする特定の種類のペイロードを処理するためのエンドポイント サービスを作成できます。  

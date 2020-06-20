@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2996a8ca8471ef59d4781e21239a72262daa759
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721204"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068700"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>マージ アーティクルのビジネス ロジック ハンドラーの実装
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でレプリケーション プログラミングまたはレプリケーション管理オブジェクト (RMO) を使用して、マージ アーティクルにビジネス ロジック ハンドラーを実装する方法について説明します。  
@@ -58,7 +57,7 @@ ms.locfileid: "62721204"
   
 2.  次の名前空間の参照をプロジェクトに追加します。  
   
-    |アセンブリ参照|インストール先|  
+    |アセンブリ参照|場所|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (既定インストール)|  
     |<xref:System.Data>|GAC (.NET Framework のコンポーネント)|  
@@ -99,10 +98,10 @@ ms.locfileid: "62721204"
   
 1.  パブリッシャーで、[sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) を実行して、アセンブリがまだビジネス ロジック ハンドラーとして登録されていないことを確認します。  
   
-2.  ディストリビューターで、の**@article_resolver**ビジネスロジックハンドラーのフレンドリ名を指定し、に値`true` **@is_dotnet_assembly**を、にアセンブリ**@dotnet_assembly_name**の名前を、にをオーバーライド<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>するクラスの完全修飾名を指定して、 [sp_registercustomresolver &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)を実行し**@dotnet_class_name**ます。  
+2.  ディストリビューターで、のビジネス[sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)ロジックハンドラーのフレンドリ名を指定し、に値を、にアセンブリの名前を、にを **@article_resolver** `true` **@is_dotnet_assembly** **@dotnet_assembly_name** オーバーライドするクラスの完全修飾名を <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 指定して、sp_registercustomresolver &#40;transact-sql&#41;を実行し **@dotnet_class_name** ます。  
   
     > [!NOTE]  
-    >  アセンブリがマージエージェント実行可能ファイルと同じディレクトリに配置されていない場合、マージエージェントを同期的に起動するアプリケーションと同じディレクトリ、またはグローバルアセンブリキャッシュ (GAC) 内に存在する場合は、の**@dotnet_assembly_name**アセンブリ名を使用して完全パスを指定する必要があります。 Web 同期を使用する場合は、Web サーバーでアセンブリの位置を指定する必要があります。  
+    >  アセンブリがマージエージェント実行可能ファイルと同じディレクトリに配置されていない場合、マージエージェントを同期的に起動するアプリケーションと同じディレクトリ、またはグローバルアセンブリキャッシュ (GAC) 内に存在する場合は、のアセンブリ名を使用して完全パスを指定する必要があり **@dotnet_assembly_name** ます。 Web 同期を使用する場合は、Web サーバーでアセンブリの位置を指定する必要があります。  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>新しいテーブル アーティクルでビジネス ロジック ハンドラーを使用するには  
   
@@ -110,7 +109,7 @@ ms.locfileid: "62721204"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>既存のテーブル アーティクルでビジネス ロジック ハンドラーを使用するには  
   
-1.  を指定して[&#41;&#40;sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行**@publication**し**@article**ます。これには、 **@property**、、の**@value** **article_resolver**の値、およびのビジネスロジックハンドラーの表示名を指定します。  
+1.  を指定して[&#41;&#40;sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。これには、、、 **@publication** **@article** の**article_resolver**の値、 **@property** およびのビジネスロジックハンドラーの表示名を指定し **@value** ます。  
   
 ###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a>例 (レプリケーションプログラミング)  
  次の例に、監査ログを作成するビジネス ロジック ハンドラーを示します。  
@@ -131,7 +130,7 @@ ms.locfileid: "62721204"
   
 2.  次の名前空間の参照をプロジェクトに追加します。  
   
-    |アセンブリ参照|インストール先|  
+    |アセンブリ参照|場所|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (既定インストール)|  
     |<xref:System.Data>|GAC (.NET Framework のコンポーネント)|  

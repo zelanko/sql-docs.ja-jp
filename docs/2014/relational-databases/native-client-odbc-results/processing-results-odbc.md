@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 761f74a56fd846361ca98dd8f2746a01b53106ec
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0888832e22e98d2478b5a9c9995b77db47e51647
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699315"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039521"
 ---
 # <a name="processing-results-odbc"></a>結果の処理 (ODBC)
   アプリケーションで SQL ステートメントが実行されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では結果として生成されるすべてのデータを 1 つ以上の結果セットとして返します。 結果セットとは、クエリの条件に一致する行と列の集まりです。 SELECT ステートメント、カタログ関数、および一部のストアド プロシージャでは、アプリケーションで使用できる結果セットが表形式で生成されます。 実行される SQL ステートメントがストアド プロシージャ、複数のコマンドを含むバッチ、またはキーワードを含む SELECT ステートメントの場合、処理対象の結果セットが複数生成されます。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e31789b1f2cf5b2206af400c7c7798f7761f1e6c
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 5ae5b92ace65f255aacff5b49fe789a31d3a69e0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049807"
 ---
 # <a name="lesson-7-move-your-data-files-to-azure-storage"></a>レッスン 7: Azure Storage にデータ ファイルを移動する
   このレッスンでは、(SQL Server インスタンスではなく) Azure Storage にデータファイルを移動する方法を学習します。 このレッスンを続行するには、レッスン 4、5、および 6 を実行する必要はありません。  

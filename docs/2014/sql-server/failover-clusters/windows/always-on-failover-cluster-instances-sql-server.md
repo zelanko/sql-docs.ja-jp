@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ff76632459f25981041e5585cd9cbb3dbcf906c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 71c5767bfc023cbe93e8026bb5e67e82fff8ee3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62520488"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062588"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Always On フェールオーバー クラスター インスタンス (SQL Server)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On オファリングの一部として、Always On フェールオーバークラスターインスタンスは、Windows Server フェールオーバークラスタリング (WSFC) の機能を利用して、サーバーインスタンスレベル (*フェールオーバークラスターインスタンス*(fci)) での冗長性によるローカル高可用性を実現します。 FCI は、Windows Server フェールオーバー クラスタリング (WSFC) ノード全体、場合によっては複数のサブネットにインストールされる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の単一インスタンスです。 FCI は、ネットワーク上では 1 台のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスのように見えますが、現在のノードが使用できなくなった場合には、1 つの WSFC ノードから別の WSFC ノードにフェールオーバーする機能を備えています。  
+  Always On オファリングの一部として [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、Always On フェールオーバークラスターインスタンスは、Windows Server フェールオーバークラスタリング (WSFC) の機能を利用して、サーバーインスタンスレベル (*フェールオーバークラスターインスタンス*(fci)) での冗長性によるローカル高可用性を実現します。 FCI は、Windows Server フェールオーバー クラスタリング (WSFC) ノード全体、場合によっては複数のサブネットにインストールされる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の単一インスタンスです。 FCI は、ネットワーク上では 1 台のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスのように見えますが、現在のノードが使用できなくなった場合には、1 つの WSFC ノードから別の WSFC ノードにフェールオーバーする機能を備えています。  
   
  FCI は、[AlwaysOn 可用性グループ](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)を活用して、データベース レベルでのリモートのディザスター リカバリーを実現します。 詳細については、「[フェールオーバー クラスタリングと AlwaysOn 可用性グループ (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」を参照してください。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "62520488"
   
 -   [SQL Server フェールオーバーの概念とタスク](#ConceptsAndTasks)  
   
--   [関連項目](#RelatedTopics)  
+-   [関連トピック](#RelatedTopics)  
   
 ##  <a name="benefits-of-a-failover-cluster-instance"></a><a name="Benefits"></a> フェールオーバー クラスター インスタンスの利点  
  サーバーのハードウェアまたはソフトウェアに障害が発生すると、そのサーバーに接続しているアプリケーションまたはクライアントで、ダウンタイムが発生します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが (スタンドアロン インスタンスではなく) FCI として構成されている場合、その [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの高可用性は、FCI の冗長ノードの存在によって保護されます。 一度に FCI 内のノードの 1 つだけが WSFC リソース グループを所有します。 障害 (ハードウェア、オペレーティング システム、アプリケーション、サービスなどの障害) が発生した場合や計画していたアップグレードが行われる場合は、リソース グループの所有権が別の WSFC ノードに移動します。 この処理は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続しているクライアントまたはアプリケーションに認識されることなく実行され、これによって障害発生中のアプリケーションおよびクライアントのダウンタイムを最小限に抑えることができます。 次の一覧は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの主な利点を示しています。  

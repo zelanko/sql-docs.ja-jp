@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9a41bde545463964d01e8f0b32a476ee08118eb7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 356a627105c6e6dabbf4b55a5d43f8b37d2712b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706025"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022296"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、に次の追加の診断フィールドが指定されて `SQLGetDiagField` います。 これらのフィールドでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに関する各種エラー報告がサポートされます。また、これらのフィールドは、接続されている ODBC 接続ハンドルや ODBC ステートメント ハンドルで生成されるすべての診断レコードで使用できます。 これらのフィールドは、sqlncli.h で定義されています。  
@@ -36,7 +35,7 @@ ms.locfileid: "82706025"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、次の補足の動的機能コードが報告されます。この動的機能コードでは、最後に試行された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントが特定されます。 動的機能コードは、診断レコード セットのヘッダー (レコード 0) に返されるので、各実行が成功しても失敗しても参照できます。  
   
-|動的機能コード|ソース|  
+|動的機能コード|source|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE ステートメント|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT ステートメント|  

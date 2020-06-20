@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d5a85d5ddf0478551838fb963a57ad26dd746656
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 61af3a1cdb64ce7e243d911475768eb2e969704b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704201"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998363"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>クライアント接続 (OLE DB) でのサービス プリンシパル名 (SPN)
   このトピックでは、クライアント アプリケーションでサービス プリンシパル名 (SPN) をサポートする OLE DB のプロパティとメンバー関数について説明します。 クライアント アプリケーションでの SPN の詳細については、「[クライアント接続でのサービス プリンシパル名 &#40;SPN&#41; のサポート](../features/service-principal-name-spn-support-in-client-connections.md)」を参照してください。 サンプルについては、「[統合 Kerberos 認証 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)」を参照してください。  
@@ -23,7 +22,7 @@ ms.locfileid: "82704201"
 ## <a name="provider-initialization-string-keywords"></a>プロバイダー初期化文字列のキーワード  
  次に示すプロバイダー初期化文字列のキーワードは、OLE DB アプリケーションで SPN をサポートします。 次の表の "キーワード" 列の値は、IDBInitialize::Initialize のプロバイダー文字列に使用されます。 "説明" 列の値は、ADO または IDataInitialize::GetDataSource を使用して接続するときに初期化文字列で使用されます。  
   
-|Keyword|説明|値|  
+|キーワード|説明|値|  
 |-------------|-----------------|-----------|  
 |ServerSPN|サーバー SPN|サーバーの SPN。 既定値は空の文字列です。この場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はプロバイダーが生成した SPN を既定値として使用します。|  
 |FailoverPartnerSPN|フェールオーバー パートナー SPN|フェールオーバー パートナーの SPN。 既定値は空の文字列です。この場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はプロバイダーが生成した SPN を既定値として使用します。|  
@@ -31,7 +30,7 @@ ms.locfileid: "82704201"
 ## <a name="data-source-initialization-properties"></a>データ ソース初期化プロパティ  
  `DBPROPSET_SQLSERVERDBINIT` プロパティ セット内の次のプロパティは、アプリケーションによる SPN の指定を可能にします。  
   
-|名前|種類|使用|  
+|名前|種類|使用方法|  
 |----------|----------|-----------|  
 |SSPROP_INIT_SERVERSPN|VT_BSTR、読み取り/書き込み|サーバーの SPN を指定します。 既定値は空の文字列です。この場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はプロバイダーが生成した SPN を既定値として使用します。|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR、読み取り/書き込み|フェールオーバー パートナーの SPN を指定します。 既定値は空の文字列です。この場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はプロバイダーが生成した SPN を既定値として使用します。|  
@@ -39,7 +38,7 @@ ms.locfileid: "82704201"
 ## <a name="data-source-properties"></a>データ ソースのプロパティ  
  `DBPROPSET_SQLSERVERDATASOURCEINFO` プロパティ セット内の次のプロパティは、アプリケーションによる認証方法の検出を可能にします。  
   
-|名前|種類|使用|  
+|名前|種類|使用方法|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR、読み取り専用|接続に使用された認証方法を返します。 アプリケーションに返される値は、Windows が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client に返す値です。 返される値は次のとおりです。<br /><br /> -"NTLM" は、NTLM 認証を使用して接続を開いたときに返されます。<br />-"Kerberos" は、Kerberos 認証を使用して接続が開かれたときに返されます。<br /><br /> 接続が開いていて認証方法を特定できない場合は、VT_EMPTY が返されます。<br /><br /> このプロパティは、データ ソースが初期化されている場合にのみ読み取ることができます。 データ ソースが初期化される前にこのプロパティを読み取ろうとすると、IDBProperties::GetProperies から DB_S_ERRORSOCCURRED または DB_E_ERRORSOCCURRED が返され、必要に応じて、このプロパティの DBPROPSET_PROPERTIESINERROR に DBPROPSTATUS_NOTSUPPORTED が設定されます。 この動作は、OLE DB のコア仕様に従っています。|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_BOOL、読み取り専用|接続されているサーバーが相互に認証されている場合は VARIANT_TRUE を返し、それ以外の場合は VARIANT_FALSE を返します。<br /><br /> このプロパティは、データ ソースが初期化されている場合にのみ読み取ることができます。 データ ソースが初期化される前にこのプロパティを読み取ろうとすると、IDBProperties::GetProperies から DB_S_ERRORSOCCURRED または DB_E_ERRORSOCCURRED が返され、必要に応じて、このプロパティの DBPROPSET_PROPERTIESINERROR に DBPROPSTATUS_NOTSUPPORTED が設定されます。 この動作は、OLE DB のコア仕様に従っています。<br /><br /> Windows 認証を使用していない接続に対してこの属性が照会されると、VARIANT_FALSE が返されます。|  

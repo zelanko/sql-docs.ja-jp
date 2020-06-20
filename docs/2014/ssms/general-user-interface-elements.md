@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47ce33e0d0a8cf76a90beb1fa3cc6ddfda27606f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02ace1911238a994785189d2d0911ac7d687dade
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316142"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064340"
 ---
 # <a name="general-user-interface-elements"></a>一般的なユーザー インターフェイス要素
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の基本的な要素には、**エディター**、 **[プロパティ]** ウィンドウ、**ツールボックス**などがあります。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87df538858c9294cb8986da3df0d2b3814411326
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62661834"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057758"
 ---
 # <a name="database-element-for-server-dta"></a>Server の Database 要素 (DTA)
   特定のサーバーにあるチューニング対象のデータベースを指定します。  
@@ -52,7 +51,7 @@ ms.locfileid: "62661834"
  この要素は、データベース エンジン チューニング アドバイザー XML スキーマの **DatabaseDetailsTypecomplexType** の名前です。 この `Database` 要素を、ルートの親要素が `Configuration` 要素である他の要素と混同しないでください。 詳細については、「[Configuration の Database 要素 &#40;DTA&#41;](database-element-for-configuration-dta.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- `Database`要素の使用例については、「 [SERVER element &#40;DTA&#41;](server-element-dta.md)」を参照してください。  
+ 要素の使用例につい `Database` ては、「 [Server ELEMENT &#40;DTA&#41;](server-element-dta.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

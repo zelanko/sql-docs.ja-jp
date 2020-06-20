@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b2cabbd38f05ffd45976eac6d18c8ea5f6615816
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 5eee59aae7ca1b448b448b4e8f69fca55c664772
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859824"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048676"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>[オプション] ([デザイナー]/[テーブルおよびデータベースデザイナー] ページ)
   このページを使用すると、デザイナーの既定の動作を設定できます。 この設定にアクセスするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[デザイナー]** フォルダーを展開して、 **[テーブル デザイナー]** をクリックします。  

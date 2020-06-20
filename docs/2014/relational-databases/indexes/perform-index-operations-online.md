@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b9eceaff8ea7fee16eac3afef8bdc560d7fb1642
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d09bd99a0eaec5fdb433bd8c33351d7622957a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63036216"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049872"
 ---
 # <a name="perform-index-operations-online"></a>オンラインでのインデックス操作の実行
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、インデックスをオンラインで作成、再構築、または削除する方法について説明します。 ONLINE オプションにより、このようなインデックス操作中に、基になるテーブルやクラスター化インデックス データ、および関連付けられた任意の非クラスター化インデックスへの同時ユーザー アクセスが可能になります。 たとえば、あるユーザーがクラスター化インデックスを再構築している最中に、そのユーザーと他のユーザーが基になるデータの更新やクエリを続行できます。 クラスター化インデックスの構築や再構築などのデータ定義言語 (DDL) 操作をオフラインで実行するときは、これらの操作により、基になるデータや関連付けられたインデックスに排他ロックがかけられます。 このため、インデックス操作が完了するまで、基になるデータの変更やクエリを実行できません。  

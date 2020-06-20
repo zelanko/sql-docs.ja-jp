@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3414cda74d75dbacf10ed98b6fc6d50da2feaa18
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064080"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>SQL Server Profiler を使用したデッドロックの分析
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、デッドロックの原因を特定します。 デッドロックは、SQL Server 内のリソースの集合に対して複数のスレッド間またはプロセス間で相互に依存関係があるときに発生します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用すると、分析用にデッドロック イベントを記録、再生、および表示するトレースを作成できます。  

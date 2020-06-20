@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 43347190c53331d0a30ba0f29d795cce981eec34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57d0de17c4d958a1b842748810ba24717e6866e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63245119"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049462"
 ---
 # <a name="interactive-conflict-resolution"></a>Interactive Conflict Resolution
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションには、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同期マネージャーでの要求時同期中に、手動で競合を解決できるインタラクティブ競合回避モジュールが用意されています。 インタラクティブ競合回避モジュールを実行時に有効化すると、グラフィカル インターフェイスに競合する各行のデータが表示されます。ここから、競合するデータを表示および編集し、個々の競合を解決できます。  

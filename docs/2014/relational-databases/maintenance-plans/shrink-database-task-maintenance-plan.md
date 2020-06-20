@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6f96e45cdf5f94e3e8b71514e1bb3e7ed4d99cfb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8ee6060a4ee6ca3272434cf3d9115638a675e62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806743"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023931"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>[データベースの圧縮タスク]\(メンテナンス プラン)
   **[データベースの圧縮タスク]** ダイアログを使用すると、選択されているデータベースのサイズを小さくするタスクを作成できます。 次に示すオプションを使用して、データベースを圧縮する際に残す未使用領域の割合をパーセント比率で指定します (指定値を大きくするほど、データベースは少ししか圧縮されなくなります)。 残される未使用領域の大きさは、データベースに格納されているデータの量に対する比率で決められます。 たとえば、60 MB のデータと 40 MB の空き領域を含む 100 MB のデータベースに対して 50% の値を指定した場合、そのデータベースは、60 MB のデータと (60 MB の 50% に当たる) 30 MB の空き領域から成る 90 MB のデータベースに圧縮されます。 削除されるのは、指定の割合を超える分の未使用領域だけです。 有効値は、0 ～ 100 です。  

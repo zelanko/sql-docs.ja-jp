@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 68b082d125650d150676d545cfdf6ab27bd25da2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d610ec814097be44e189a663db5afaa1345d29c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813525"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935793"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe-sql-server-configuration-manager"></a>代替パイプをリッスンするサーバーの構成 (SQL Server 構成マネージャー)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で SQL Server 構成マネージャーを使用して、代替パイプをリッスンするようにサーバーを構成する方法について説明します。 既定では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の既定のインスタンスは、名前付きパイプ \\\\.\pipe\sql\query をリッスンします。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [!INCLUDE[ssEW](../../includes/ssew-md.md)] の名前付きインスタンスは、他のパイプをリッスンします。  
@@ -37,7 +36,7 @@ ms.locfileid: "62813525"
   
 #### <a name="to-configure-the-named-pipe-used-by-the-sql-server-database-engine"></a>SQL Server データベース エンジンによって使用される名前付きパイプを構成するには  
   
-1.  SQL Server 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** を展開し、[ *\<インスタンス名>* **のプロトコル**] をクリックして展開します。  
+1.  SQL Server 構成マネージャーのコンソールウィンドウで、[ **SQL Server ネットワークの構成**] を展開し、[**のプロトコル**] を展開し *\<instance name>* ます。  
   
 2.  詳細ペインで **[名前付きパイプ]** を右クリックし、 **[プロパティ]** をクリックします。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62813525"
   
 4.  コンソール ペインで、 **[再起動]** をクリックします。  
   
-5.  詳細ペインで **[SQL Server (** \<インスタンス名> **)]** を右クリックします。次に、 **[再起動]** をクリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止し、再起動します。  
+5.  詳細ウィンドウで**SQL Server (**) を右クリックし、 \<instance name> **)** [**再起動**] をクリックしてを停止して再起動し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が代替パイプをリッスンしている場合、クライアント アプリケーションを使用して特定の名前付きパイプに接続するには次の 3 つの方法があります。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97ba04b8d41c3e5ca4927abb53cf27cfa3013fcd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211500"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036990"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>SQL Server アクセス用のマルチホーム コンピューターの構成
   サーバーが複数のネットワークまたはネットワーク サブネットへの接続を提供する必要がある場合、一般的なシナリオではマルチホーム コンピューターを使用します。 通常、このコンピューターは、境界ネットワーク (DMZ、非武装地帯、またはスクリーン サブネットとも呼ばれます) にあります。 このトピックでは、マルチホーム環境内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへのネットワーク接続用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とセキュリティが強化された Windows ファイアウォールを構成する方法について説明します。  
@@ -55,7 +54,7 @@ ms.locfileid: "68211500"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>コンピューターで使用可能な IP アドレスを特定するには  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされているコンピューターで、 **[スタート**] をクリックし`cmd` 、[ [!INCLUDE[clickOK](../../includes/clickok-md.md)]**実行**] をクリックして、「」と入力します。  
+1.  がインストールされているコンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[**スタート**] をクリックし、[**実行**] をクリックして、「」と入力し `cmd` [!INCLUDE[clickOK](../../includes/clickok-md.md)] ます。  
   
 2.  コマンド プロンプト ウィンドウで、「`ipconfig,`」と入力し、Enter キーを押してこのコンピューターで使用可能な IP アドレスを一覧表示します。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "68211500"
   
 1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー**をクリックします。  
   
-2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構成マネージャー**のコンソール ペインで、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][ネットワークの構成]** 、 **[\<instance name> のプロトコル]** を順に展開し、 **[TCP/IP]** をダブルクリックします。  
+2.  ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**のコンソールウィンドウで、[ネットワークの** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成**]、[ ** \<instance name> のプロトコル**] の順に展開し、[ **tcp/ip**] をダブルクリックします。  
   
 3.  **[TCP/IP のプロパティ]** ダイアログ ボックスの **[IP アドレス]** タブに、 **IP1**、 **IP2**という形式で **IPAll**まで IP アドレスが表示されます。 このうちいずれかが、ループバック アダプターの IP アドレス 127.0.0.1 です。 追加の IP アドレスがコンピューターで構成される各 IP アドレスとして表示されます。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "68211500"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているコンピューターで、管理者としてログオンします。  
   
-2.  [**スタート**]、[**実行**] `wf.msc`の順にクリックし、「」と入力して [ **OK]** をクリックします。  
+2.  [**スタート**]、[**実行**] の順にクリックし、「 `wf.msc` 」と入力して [ **OK]** をクリックします。  
   
 3.  **[ユーザー アカウント制御]** ダイアログ ボックスの **[続行]** をクリックし、管理者資格情報を使用して、セキュリティが強化された Windows ファイアウォールのスナップインを開きます。  
   
