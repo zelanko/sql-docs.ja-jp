@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: a9b75f36-d7f5-47f7-94d6-b4448c6a2191
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d2baa2a28fb0805f92c27b7f8a237996ce4583db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65711003f7a546660ac9faa3800be42a1dc0ff99
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74054841"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933203"
 ---
 # <a name="user-defined-type"></a>ユーザー定義型
   User Defined Data Type サンプルでは、`System.Data.SqlClient` を使用して、Transact-SQL とクライアント アプリケーションの両方から単純なユーザー定義データ型の作成と使用を行う方法を示します。  
@@ -48,7 +47,7 @@ ms.locfileid: "74054841"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にするには`ALTER SETTINGS` 、サーバーレベルの権限が必要です。この権限は`sysadmin` 、 `serveradmin`固定サーバーロールおよびのメンバーによって暗黙的に保持されています。  
+    >  CLR を有効にするには、 `ALTER SETTINGS` サーバーレベルの権限が必要です。この権限は、 `sysadmin` 固定サーバーロールおよびのメンバーによって暗黙的に保持されてい `serveradmin` ます。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "74054841"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-9. テスト[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドスクリプトをファイルにコピーし、とし`test.sql`てサンプルディレクトリに保存します。  
+9. [!INCLUDE[tsql](../../includes/tsql-md.md)]テストコマンドスクリプトをファイルにコピーし、として `test.sql` サンプルディレクトリに保存します。  
   
 10. 次のコマンドを使用してテスト スクリプトを実行します。  
   

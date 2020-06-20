@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8d12e45d2f2b7ee3d3f06cf8820495e40cf9fbd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: edb0a9e0384804b733441d7fe256d11a150469d7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154480"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937823"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client のホーム画面
   この画面を使用すると、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) の 3 つの主要なタスク グループ (ナレッジ ベース管理、データ品質プロジェクト、および管理) のそれぞれに対するユーザー インターフェイスにアクセスできます。  

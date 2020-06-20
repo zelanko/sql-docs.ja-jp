@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5b39d062f5ccc44492d4c2c0f224d0fa2c6b0993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7861e87ad0fd35fdedae444de74f5300edb3de0a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175591"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938783"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Power View レポートのテーブル動作プロパティの構成 (SSAS テーブル)
   テーブル モデルを [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]のデータ モデルとして使用している場合は、詳細行をより細かなレベルで公開するテーブル動作プロパティを設定できます。 テーブル動作プロパティの設定により、詳細行のグループ化動作を変更できます。また、タイル、カード、およびグラフのレイアウトを使用して、識別情報 (名前、写真 ID、ロゴ イメージなど) の適切な既定位置を設定できます。
@@ -133,7 +132,7 @@ ms.locfileid: "78175591"
 
  ![行 ID グループ化に基づくグラフ](../media/ssas-rptprop-chartrowid.gif "行 ID グループ化に基づくグラフ")
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
  モデルでテーブルを評価し、常に個別のアイテムとして表示する必要のある詳細行を含むテーブルにテーブル動作プロパティを設定した後で、追加のプロパティまたは設定によってモデルをさらに最適化できます。
 
 

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 8e0c7d87-d7f2-455a-bfb8-67066adc04f9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 836423f0a0ac609cd7e4c823afe0be2da1158239
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c73c8d05ddf40a4baacc6f29d055bbd7af84cb87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705953"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021876"
 ---
 # <a name="sqlnumparams"></a>SQLNumParams
   で始まるデータベースエンジンの機能強化により [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、SQLNumParams で、予期される結果についてより正確な説明を取得できるようになりました。 これらのより正確な結果は、以前のバージョンのの SQLNumParams によって返される値とは異なる場合があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  

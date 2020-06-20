@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04192a5990126d06c4b3f7b6a77cc218f3a631de
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889212"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937337"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>[テーブルの追加と削除] ダイアログボックス (Analysis Services-多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の **[テーブルの追加と削除]** ダイアログ ボックスを使用すると、データ ソース ビューに対してデータ ソース内のテーブルを追加または削除できます。 **[テーブルの追加と削除]** ダイアログ ボックスを表示するには、次の手順に従います。  
@@ -35,7 +34,7 @@ ms.locfileid: "68889212"
  **Available objects**  
  データ ソース ビューにまだ含まれていないデータ ソース内のオブジェクトとオブジェクトの種類を表示します。  
   
- クリック**>>** すると、 **>** [**使用できるオブジェクト**] に一覧表示されているすべてのオブジェクトを [**含まれる**オブジェクト] に転送**します**  
+ クリック **>>** すると、[**使用できるオブジェクト**] に一覧表示されているすべてのオブジェクトを [**含まれる**オブジェクト] に転送し **>** ます**Included objects**  
   
  **Assert**  
  **[使用できるオブジェクト]** に一覧表示されたオブジェクトの制限に使用するフィルターを入力し、ボタンをクリックして一覧表示されているオブジェクトをフィルターします。  
@@ -46,7 +45,7 @@ ms.locfileid: "68889212"
  **Included objects**  
  データ ソース ビューに既に追加されているオブジェクトとオブジェクトの種類を表示します。  
   
- クリック**<<** すると、 **<** [**含まれるオブジェクト**] に一覧表示されているすべてのオブジェクトを**使用可能なオブジェクト****に転送します**  
+ クリック **<<** すると、[**含まれるオブジェクト**] に一覧表示されているすべてのオブジェクトを**使用可能なオブジェクト**に転送し **<** ます**Available objects**  
   
  **Add related tables**  
  **[含まれているオブジェクト]** 内の選択したテーブルに関連するすべてのテーブルを追加します。  

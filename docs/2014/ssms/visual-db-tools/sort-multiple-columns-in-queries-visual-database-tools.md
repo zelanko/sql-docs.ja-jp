@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b91bff77f3df9e1416837dead0c0261bf6473e34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c577b06866db12ecd4ccc4b28fbf36e3314f76d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63070907"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000929"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>クエリ内の複数の列の並べ替え (Visual Database Tools)
   データを並べ替える列の使用順序指定には、 **[並べ替え順序]** 列を [抽出条件ペイン](visual-database-tools.md)上で使用します。  

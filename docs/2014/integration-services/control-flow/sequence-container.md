@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec92f58f4dcd44fc39bfc34968a7883cb9c4cb4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c380921202b1037c3bd066f4aef0610703a75a91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830122"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918202"
 ---
 # <a name="sequence-container"></a>シーケンス コンテナー
   シーケンス コンテナーは、パッケージ制御フローのサブセットである制御フローを定義します。 シーケンス コンテナーは、パッケージを複数の個別の制御フローにグループ化します。各制御フローには、パッケージ制御フロー全体の中で実行される、1 つ以上のタスクおよびコンテナーが含まれます。  

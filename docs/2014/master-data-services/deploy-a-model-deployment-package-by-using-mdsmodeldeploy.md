@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 81c87a7990c6c7125cbccbe99050cd5ee477e6d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e6229b3edebb8800de642272c9aa2adc0ea907f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483073"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971600"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy を使用したモデルの配置パッケージの配置
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、MDSModelDeploy ツールを使用して、次のどちらかを含むパッケージを配置します。  
@@ -46,7 +45,7 @@ ms.locfileid: "65483073"
   
 2.  コマンド プロンプトを開き、MDSModelDeploy.exe のある場所に移動します。  
   
-    -   MDS が既定の場所にインストールされている場合、このツールは*ドライブ*: Services\Configuration\MDSModelDeploy.exe にあります。  
+    -   MDS が既定の場所にインストールされている場合、このツールは*ドライブ*:、または、マスターデータ Services\Configuration\MDSModelDeploy.exe  
   
     -   MDS を既定の場所にインストールしなかった場合は、ローカル コンピューター内で MDSModelDeploy.exe を検索します。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "65483073"
      モデルを更新する場合、最初の 3 つの手順の実行中にプロセスが失敗すると、そのプロセスは続行されません。ただし、既に行われた変更はロールバックされません。 手順 4. でプロセスが失敗すると、更新可能なメンバーが更新されます。  
   
 ## <a name="next-steps"></a>次の手順  
- ユーザー定義メタデータ、ファイル属性、ユーザーおよびグループの権限はモデル配置パッケージに含まれていません。 モデルを配置した後、これらを手動で更新する必要があります。 詳細については次を参照してください:  
+ ユーザー定義メタデータ、ファイル属性、ユーザーおよびグループの権限はモデル配置パッケージに含まれていません。 モデルを配置した後、これらを手動で更新する必要があります。 詳細については、次を参照してください。  
   
 -   [メタデータの追加 &#40;マスターデータサービス&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   

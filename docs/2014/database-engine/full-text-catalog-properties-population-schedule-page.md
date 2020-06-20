@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1e8ac94f235e08f2217edb9504722ebac998cb28
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 62d69cdc42745fcbb5eb7d2cb05f90b710e5c70d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000934"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933003"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>[フルテキスト カタログのプロパティ] ([作成スケジュール] ページ)
   このダイアログ ボックスを使用すると、フルテキスト カタログをいつ作成または再作成するかを決定するスケジュールを追加または変更できます。  
@@ -31,13 +30,13 @@ ms.locfileid: "83000934"
  **[作成の種類]**  
  作成操作 (完全、増分、または最適化の操作) を表示または変更します。  
   
- **Enabled**  
+ **有効**  
  スケジュールされている操作を有効または無効にするには、このチェック ボックスをオンまたはオフにします。  
   
  **説明**  
  スケジュールされている操作の説明です。  
   
- **新規**  
+ **[新規作成]**  
  新しいインデックス作成スケジュールを作成するには、このボタンをクリックします。 このボタンをクリックすると、 **[新しいフルテキスト インデックス カタログのスケジュール]** ダイアログ ボックスが表示されます。  
   
  **[編集]**  

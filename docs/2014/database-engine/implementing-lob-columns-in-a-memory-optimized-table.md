@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ff0439ff6b418006f3da5f0356169574509ebb7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778923"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932833"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>メモリ最適化テーブルへの LOB 列の実装
   メモリ最適化テーブルには、行外またはラージオブジェクト (LOB) ストレージがありません (この制限は SQL Server 2016 以降では削除されています。「[インメモリ OLTP でサポートされるデータ型](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)」を参照)、行サイズの上限は8060バイトです。 大きなバイナリ値または文字列値を格納するには、次の 2 とおりの方法で行うことができます。  

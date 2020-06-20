@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dff5f6464a14b520a35493b96b47b4a1c5a82481
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cdd6219bf9fb807f1d347d3ee6ed7330b704103
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175511"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938003"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>参照データ (外部) のナレッジを使用したデータのクレンジング
   このトピックでは、参照データ プロバイダーから提供されるナレッジを使用してデータをクレンジングする方法について説明します。 クレンジング アクティビティを実行する手順は、参照データ プロバイダーから提供されるナレッジを使ってデータをクレンジングする場合も「[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)」で説明した手順とすべて同じですが、このトピックでは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) での参照データ サービスを使ったデータ クレンジングに固有の情報を示します。
@@ -41,7 +40,7 @@ ms.locfileid: "78175511"
 
 ## <a name="before-you-begin"></a>はじめに
 
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要条件
  DQS のナレッジ ベース内の必要なドメインを適切な参照データ サービスにマップしておく必要があります。 また、クレンジングするデータの種類に関するナレッジがナレッジ ベースに含まれている必要があります。 たとえば、米国の住所が格納されたソース データをクレンジングする場合は、米国の住所に関する高品質データを提供する参照データ サービス プロバイダーにドメインをマップする必要があります。 詳細については、「[参照データへのドメインまたは複合ドメインのアタッチ](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)」を参照してください。
 
 ###  <a name="security"></a><a name="Security"></a> セキュリティ
@@ -64,7 +63,7 @@ ms.locfileid: "78175511"
     > [!NOTE]
     >  **[最適化]** ページには、参照データ サービスにアタッチされているドメインに関する情報が次の 2 とおりの方法で表示されます。
     > 
-    >  -   [**開始**] ボタンの下に "Domains \<Domain1>, \<Domain2>" というメッセージが表示され,...\<Domainn> は、参照データサービスプロバイダーを使用してクレンジングされます。 " この例の場合、"ドメイン Address Verification を、参照データ サービス プロバイダーを使用してクレンジングします" というメッセージが表示されます。
+    >  -   [**開始**] ボタンの下に、"Domains \<Domain1> , \<Domain2> ,... \<DomainN> というメッセージが表示されます。参照データサービスプロバイダーを使用してクレンジングされます。 " この例の場合、"ドメイン Address Verification を、参照データ サービス プロバイダーを使用してクレンジングします" というメッセージが表示されます。
     > -   アイコン (![ドメインが RDS にアタッチ](../../2014/data-quality-services/media/dqs-rdsindicator.JPG "RDS にドメインがアタッチされている")されている) が、参照データサービスプロバイダーにアタッチされているドメインに対して**プロファイラー**領域に表示されます。 この例の場合、 **Address Verification** 複合ドメインに対してこのアイコンが表示されます。
 
 4.  **[結果の管理と表示]** ページで、ドメイン値を確認します。 参照データ サービスでは、値に対する提案が複数ある場合、参照データ サービスにドメインをマップするときに **[提案された候補]** ボックスで指定した提案の最大数に応じて表示できます。 たとえば、次の米国の住所に対しては 2 つの提案が表示されます。

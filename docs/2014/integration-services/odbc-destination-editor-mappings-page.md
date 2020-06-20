@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca1ac00668e6a4383b022ae5e1ed108da6ef603d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057226"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965022"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>[ODBC 変換先エディター]\([マッピング] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
@@ -33,7 +32,7 @@ ms.locfileid: "66057226"
  使用できる変換先列の一覧です。 使用できる入力列に変換先列をドラッグ アンド ドロップして、列をマップできます。  
   
 ### <a name="input-column"></a>入力列  
- 選択した入力列を表示します。 [ ** \<>無視**] を選択して、出力から列を除外することで、マッピングを削除できます。  
+ 選択した入力列を表示します。 **\<ignore>** 出力から列を除外するように選択することで、マッピングを削除できます。  
   
 ### <a name="destination-column"></a>変換先列  
  使用できるすべての変換先列を表示します (マップ済みの列とマップされていない列を両方とも含む)。  

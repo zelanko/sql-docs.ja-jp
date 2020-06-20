@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: ef4251e2-abe5-4c5b-9868-7549782d0244
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 882b5fc60020423e19f68fda40273b7c944bd4f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31f648e31c736d502f84df71d080551db2bc495f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068882"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940636"
 ---
 # <a name="network-properties"></a>ネットワーク プロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
@@ -55,7 +54,7 @@ ms.locfileid: "66068882"
  `IPV4Support`  
  IPv4 プロトコルのサポートを定義する、符号付き 32 ビット整数のプロパティです。 このプロパティは、次の表に示すいずれかの値になります。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |*0*|IPv4 は無効です。クライアントは接続できません。|  
 |*1*|(既定) IPv4 が必要です。IPv4 をリッスンできない場合、サーバーは起動しません。|  
@@ -64,7 +63,7 @@ ms.locfileid: "66068882"
  `IPV6Support`  
  IPv6 プロトコルのサポートを定義する、符号付き 32 ビット整数のプロパティです。 このプロパティは、次の表に示すいずれかの値になります。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |*0*|IPv6 は無効です。クライアントは接続できません。|  
 |*1*|(既定) IPv6 が必要です。IPv6 をリッスンできない場合、サーバーは起動しません。|  
@@ -89,7 +88,7 @@ ms.locfileid: "66068882"
  `EnableCompression`  
  要求の圧縮を有効にするかどうかを指定する、ブール型プロパティです。  
   
-## <a name="responses"></a>Responses  
+## <a name="responses"></a>応答  
  `CompressionLevel`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   

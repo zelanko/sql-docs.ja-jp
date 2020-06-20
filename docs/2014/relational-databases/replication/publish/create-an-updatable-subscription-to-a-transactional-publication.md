@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e784216116bdb9ab308dff5fa998740b0fa459b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691595"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060578"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>トランザクション パブリケーションに対して更新可能なサブスクリプションを作成する (Management Studio)
 
@@ -43,7 +42,7 @@ ms.locfileid: "62691595"
 
     更新モードの切り替えの詳細については、「[Switch Between Update Modes for an Updatable Transactional Subscription](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)」(更新可能なトランザクション サブスクリプションの更新モードを切り替える) を参照してください。
 
-7. 即時更新を使用するサブスクリプション、または **update_mode** を **queued failover** に設定したサブスクリプションに対して **[更新可能なサブスクリプション用のログイン]** ページが表示されます。 **[更新可能なサブスクリプション用のログイン]** ページで、即時更新サブスクリプション用にパブリッシャーへの接続を作成するリンク サーバーを指定します。 接続はサブスクライバーで起動されるトリガーによって使用され、サブスクライバーに変更を反映します。 以下のオプションの 1 つを選択します。
+7. 即時更新を使用するサブスクリプション、または **update_mode** を **queued failover** に設定したサブスクリプションに対して **[更新可能なサブスクリプション用のログイン]** ページが表示されます。 **[更新可能なサブスクリプション用のログイン]** ページで、即時更新サブスクリプション用にパブリッシャーへの接続を作成するリンク サーバーを指定します。 接続はサブスクライバーで起動されるトリガーによって使用され、サブスクライバーに変更を反映します。 次のいずれかのオプションを選択します。
 
     * **[SQL Server 認証を使用して接続するリンク サーバーを作成する]**。 サブスクライバーとパブリッシャーの間でリモート サーバーまたはリンク サーバーを定義していない場合は、このオプションを選択します。 レプリケーションによってリンク サーバーが作成されます。 指定するアカウントは、パブリッシャーに既に存在している必要があります。
     * **[定義済みのリンク サーバーまたはリモート サーバーを使用する]** [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql)、[sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)、SQL Server Management Studio、または他の方法を使用してサブスクライバ―とパブリッシャーの間にリモート サーバーまたはリンクされたサーバーを定義した場合は、このオプションを選択します。
@@ -70,7 +69,7 @@ ms.locfileid: "62691595"
 
     更新モードの切り替えの詳細については、「[Switch Between Update Modes for an Updatable Transactional Subscription](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)」(更新可能なトランザクション サブスクリプションの更新モードを切り替える) を参照してください。
 
-10. [**更新可能なサブスクリプション用のログイン**] ページは、即時更新を使用するサブスクリプション、またはキュー**フェールオーバー**に**update_mode**設定されているサブスクリプションに対して表示されます。 **[更新可能なサブスクリプション用のログイン]** ページで、即時更新サブスクリプション用にパブリッシャーへの接続を作成するリンク サーバーを指定します。 接続はサブスクライバーで起動されるトリガーによって使用され、サブスクライバーに変更を反映します。 以下のオプションの 1 つを選択します。
+10. [**更新可能なサブスクリプション用のログイン**] ページは、即時更新を使用するサブスクリプション、またはキュー**フェールオーバー**に**update_mode**設定されているサブスクリプションに対して表示されます。 **[更新可能なサブスクリプション用のログイン]** ページで、即時更新サブスクリプション用にパブリッシャーへの接続を作成するリンク サーバーを指定します。 接続はサブスクライバーで起動されるトリガーによって使用され、サブスクライバーに変更を反映します。 次のいずれかのオプションを選択します。
 
     * **[SQL Server 認証を使用して接続するリンク サーバーを作成する]**。 サブスクライバーとパブリッシャーの間でリモート サーバーまたはリンク サーバーを定義していない場合は、このオプションを選択します。 レプリケーションによってリンク サーバーが作成されます。 指定するアカウントは、パブリッシャーに既に存在している必要があります。
     * **[定義済みのリンク サーバーまたはリモート サーバーを使用する]** [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql)、[sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)、SQL Server Management Studio、または他の方法を使用してサブスクライバ―とパブリッシャーの間にリモート サーバーまたはリンクされたサーバーを定義した場合は、このオプションを選択します。
@@ -116,7 +115,7 @@ ms.locfileid: "62691595"
     * `1` - パブリッシャーへの接続時にサブスクライバーで変更するユーザーのセキュリティ コンテキストを使用します。 このセキュリティ モードに関連する制限の詳細については、 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) のトピックを参照してください。
     * `2` - [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)を使って作成された、既存のユーザー定義リンク サーバー ログインを使用します。
 
-6. パブリッシャーで、、 `@subscriber` `@destination_db`、 `@subscription_type`、の`@publication`pull の値、およびの`@update_mode`手順 3. で指定したものと同じ値を指定して[sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)を実行します。
+6. パブリッシャーで、、、 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) `@publication` `@subscriber` `@destination_db` 、の pull の値、 `@subscription_type` およびの手順 3. で指定したものと同じ値を指定して sp_addsubscription を実行し `@update_mode` ます。
 
 これにより、パブリッシャーでプル サブスクリプションが登録されます。 
 
@@ -190,7 +189,7 @@ ms.locfileid: "62691595"
     * (省略可能) ディストリビューターに接続するときに SQL Server 認証を使用する必要がある場合、 `0` には `@distributor_security_mode` 、 `@distributor_login` と `@distributor_password`には SQL Server ログイン情報の値。 
     * このサブスクリプションでのディストリビューション エージェント ジョブのスケジュール。
 
-5. パブリッシャーで[sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql)を実行してサブスクライバーをパブリッシャーに登録します。 `@publication`これ`@subscriber`に`@destination_db`は、、、、の`@subscription_type`pull の値、およびの`@update_mode`手順 3. で指定したものと同じ値を指定します。
+5. パブリッシャーで[sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql)を実行してサブスクライバーをパブリッシャーに登録します。これには、、、 `@publication` `@subscriber` `@destination_db` 、の pull の値、 `@subscription_type` およびの手順 3. で指定したものと同じ値を指定し `@update_mode` ます。
 
 これにより、パブリッシャーでプル サブスクリプションが登録されます。 
 
@@ -299,14 +298,14 @@ GO
 ```
 
 ## <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>キュー更新の競合解決オプションの設定 (SQL Server Management Studio)
-  **[パブリケーション プロパティ - \<Publication>]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで、キュー更新サブスクリプションをサポートするパブリケーションの競合解決オプションを設定します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](view-and-modify-publication-properties.md)」を参照してください。  
+  [**パブリケーションのプロパティ \<Publication> -** ] ダイアログボックスの [**サブスクリプションオプション**] ページで、キュー更新サブスクリプションをサポートするパブリケーションの競合解決オプションを設定します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](view-and-modify-publication-properties.md)」を参照してください。  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>キュー更新の競合解決オプションを設定するには  
   
-1.  **[パブリケーション プロパティ - \<Publication>]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで、**[競合の解決方法]** オプションに対して、次のいずれかの値を選択します。    
+1.  [**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスの [**サブスクリプションオプション**] ページで、[**競合の解決**方法] オプションに対して次のいずれかの値を選択します。    
     -   **[パブリッシャーの変更を保持します]**    
     -   **[サブスクライバーの変更を保持します]**    
-    -   **[サブスクリプションを再初期化します]**    
+    -   **サブスクリプションを再初期化する**    
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ## <a name="see-also"></a>参照 ##

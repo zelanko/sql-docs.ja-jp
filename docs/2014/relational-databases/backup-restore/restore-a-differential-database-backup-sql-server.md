@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a7aa0f0ba295d8e152877d11ceb39fb6eb4f3c87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8eab18d84efc1a990715e0d5488085252f93a7e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877249"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957306"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>データベースの差分バックアップの復元 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、データベースの差分バックアップを復元する方法について説明します。  
@@ -34,7 +33,7 @@ ms.locfileid: "62877249"
   
      [前提条件](#Prerequisites)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **データベースの差分バックアップを復元する方法:**  
   
@@ -90,7 +89,7 @@ ms.locfileid: "62877249"
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   
-         **[ソース: デバイス: データベース]** ボックスの一覧で、復元するデータベースの名前を選択します。  
+         **[ソース: デバイス:データベース]** リスト ボックスで、復元するデータベースの名前を選択します。  
   
          **メモ** この一覧は **[デバイス]** をクリックした場合にのみ使用できます。 選択されたデバイスにバックアップを持つデータベースのみが使用できるようになります。  
   
@@ -137,7 +136,7 @@ ms.locfileid: "62877249"
   
 #### <a name="to-restore-a-differential-database-backup"></a>データベースの差分バックアップを復元するには  
   
-1.  NORECOVERY 句を指定して RESTORE DATABASE ステートメントを実行し、データベースの差分バックアップの前に、データベースの完全バックアップを復元します。 詳細については、「 [完全バックアップを復元する方法 (Transact-SQL)](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)」を参照してください。  
+1.  NORECOVERY 句を指定して RESTORE DATABASE ステートメントを実行し、データベースの差分バックアップの前に、データベースの完全バックアップを復元します。 詳細については、「[完全バックアップの復元](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)に関するページを参照してください。  
   
 2.  RESTORE DATABASE ステートメントを実行して、データベースの差分バックアップを復元します。そのとき、以下を指定します。  
   

@@ -1,5 +1,6 @@
 ---
 title: Components
+description: sqlncli11.dll、sqlnclir11、sqlncli、sqlncli11 などの SQL Server Native Client のコンポーネントについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 65f932d5-daa1-4eff-b6df-ee633fcf2a7c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c824d145b6353f96a3756f28b7446799b303889
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f298c7e3c453da1a20826d91509ca61778ad65b0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388216"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965210"
 ---
 # <a name="components-of-sql-server-native-client"></a>SQL Server Native Client のコンポーネント
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "81388216"
 |sqlncli11.dll|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client のすべての機能を含む DLL (ダイナミック リンク ライブラリ) ファイル。 このファイルには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが含まれます。|  
 |sqlnclir11.rll|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ライブラリに付随するリソース ファイル。|   
 |sqlncli.h|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用する場合に必要となる、新しいすべての定義を含む [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイル。 このヘッダー ファイルは、odbcss.h ヘッダー ファイルと sqloledb.h ヘッダー ファイルの両方に置き換わるものです。<br /><br /> 注: sqlncli と odbcss.h を同じプログラムで参照することはできませんが、最初に sqloledb が定義されていれば、同じプログラムで sqlncli と sqloledb を参照できます。|  
-|sqlncli11.lib|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーの一部である**bcp**ユーティリティ関数を直接呼び出すために必要なライブラリファイル。<br /><br /> 注: プログラミングコードで sqlncli11 ファイルを参照する場合は、sqlncli11 ファイルがシステムパスと、アプリケーションを使用するユーザーのシステムパスに存在することを確認する必要がありますのでご注意ください。|  
+|sqlncli11.lib|Native Client ODBC ドライバーの一部である**bcp**ユーティリティ関数を直接呼び出すために必要なライブラリファイル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。<br /><br /> 注: プログラミングコードで sqlncli11 ファイルを参照する場合は、アプリケーションを使用するユーザーのシステムパスとシステムパスに sqlncli11.dll ファイルが含まれていることを確認する必要があります。|  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client を使用したアプリケーションのビルド](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f35b83fc8debfedec7be48d264a9267054735587
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211495"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042110"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server のインストール計画
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールするには、次の手順を実行します。  

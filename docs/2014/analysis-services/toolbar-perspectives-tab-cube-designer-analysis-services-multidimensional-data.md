@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 64744048-205f-4d4d-add8-ff0ca13943f3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8498f30b11a9b379d9cad0e98d7a5269fc60752a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ceb761072bee7d21262359c5298105327446514a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065989"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938373"
 ---
 # <a name="toolbar-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>ツール バー (キューブ デザイナーの [パースペクティブ] タブ) (Analysis Services - 多次元データ)
   **ツール バー** ペインを使用すると、キューブ デザイナーの **[パースペクティブ]** タブで一般的な操作を実行できます。  
@@ -25,7 +24,7 @@ ms.locfileid: "66065989"
 |オプション|説明|  
 |------------|-----------------|  
 |**[ビジネス インテリジェンスの追加]**|クリックすると、 **ビジネス インテリジェンス ウィザード** が表示され、ビジネス インテリジェンス機能をキューブに追加できます。|  
-|**プロセス**|クリックすると、 **[処理]** ダイアログ ボックスを表示して、選択したキューブを処理できます。|  
+|**処理**|クリックすると、 **[処理]** ダイアログ ボックスを表示して、選択したキューブを処理できます。|  
 |**[新しいパースペクティブ]**|選択したキューブに新しいパースペクティブを作成します。|  
 |**[パースペクティブの削除]**|クリックすると、 **[オブジェクトの削除]** ダイアログ ボックスが表示され、選択したパースペクティブが削除されます。<br /><br /> 注意: このオプションは、 **[パースペクティブの詳細]** ペインでパースペクティブが選択されている場合にのみ利用可能です。|  
   

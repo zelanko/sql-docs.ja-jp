@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fe1d4272f89c962784a8716da143180ae2b12aa1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f53df16a7849a8430f0431a4ee2654b0c9b59bcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480859"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937803"
 ---
 # <a name="data-quality-projects-dqs"></a>データ品質プロジェクト (DQS)
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のデータ品質プロジェクトは、ナレッジ ベースを使用してソース データの品質を改善する手段になります。 *データ クレンジング* アクティビティおよび *データ照合* アクティビティを実行して、その結果データを SQL Server データベースや .csv ファイルにエクスポートします。 データ品質プロジェクトをクレンジング プロジェクトまたは照合プロジェクトとして作成し、それぞれのアクティビティを実行できます。 データ クレンジングと照合のナレッジは同じナレッジ ベースに組み込むことができるため、クレンジング プロジェクトと照合プロジェクトは同じナレッジ ベースを使用して実行できます。  
@@ -38,7 +37,7 @@ ms.locfileid: "65480859"
  データ品質プロジェクトのクレンジング アクティビティの詳細については、「 [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)」を参照してください。  
   
 ##  <a name="data-quality-project-matching-activity"></a><a name="Matching"></a> データ品質プロジェクト: 照合アクティビティ  
- データ品質プロジェクトの照合では、ナレッジ ベース内の照合ポリシーに基づいて照合アクティビティを実行します。完全一致やあいまい一致を特定することによってデータの重複を防ぎ、重複データをユーザーが削除できます。 データをクレンジングしてから照合を実行することをお勧めします。 そのためには、次の操作を実行します。  
+ データ品質プロジェクトの照合では、ナレッジ ベース内の照合ポリシーに基づいて照合アクティビティを実行します。完全一致やあいまい一致を特定することによってデータの重複を防ぎ、重複データをユーザーが削除できます。 データをクレンジングしてから照合を実行することをお勧めします。 次の手順に従います。  
   
 1.  データ品質プロジェクトを作成し、 **[クレンジング]** アクティビティを選択してソース データのデータ クレンジング アクティビティを完了し、その後 SQL Server データベースのテーブルにエクスポートします。  
   

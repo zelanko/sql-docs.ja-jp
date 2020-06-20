@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 957ef8b180646427d60a42339434139857bdd3fb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 425325d619a6bd15a3617f8ce412af186df8041e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705025"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043614"
 ---
 # <a name="parameter-and-rowset-metadata"></a>パラメーターと行セットのメタデータ
   このトピックでは、OLE DB の日付および時刻の機能強化に関連する、次の型と型メンバーについて説明します。  
@@ -38,7 +37,7 @@ ms.locfileid: "82705025"
 |パラメーターの型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
 |date|DBTYPE_DBDATE|6|10|0|Clear|  
-|time|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
+|時間|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19、21.. 27|0..7|オン|  
@@ -56,7 +55,7 @@ ms.locfileid: "82705025"
 ||DBTYPE_DATE|6|無視|  
 |date|DBTYPE_DBDATE|6|無視|  
 ||DBTYPE_DBTIME|10|無視|  
-|time|DBTYPE_DBTIME2|10|0..7|  
+|時間|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|無視|  
 |DATETIME||16|無視|  
 |datetime2 または DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
@@ -83,7 +82,7 @@ ms.locfileid: "82705025"
 |列の型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
 |date|DBTYPE_DBDATE|6|10|0|Clear|  
-|time|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
+|時間|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|オン|  

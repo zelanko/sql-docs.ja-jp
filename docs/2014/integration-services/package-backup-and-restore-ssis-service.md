@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b5c775393f7815084e8a79aae4be7f0974886f3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16ffb226202bb4ed52fd01e5e6376accfe6b6558
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056929"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964920"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>パッケージのバックアップと復元 (SSIS サービス)
     
 > [!IMPORTANT]  
 >  このトピックでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスについて説明します。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] では、以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]との互換性を維持するために、このサービスをサポートしています。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以降では、Integration Services サーバー上のパッケージなどのオブジェクトを管理できます。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージは、ファイルシステムまたは msdb ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]システムデータベース) に保存できます。 msdb に保存されたパッケージは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップおよび復元機能を使用してバックアップおよび復元できます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージは、ファイルシステムまたは msdb (システムデータベース) に保存でき [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。 msdb に保存されたパッケージは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップおよび復元機能を使用してバックアップおよび復元できます。  
   
  msdb データベースのバックアップおよび復元の詳細については、次のトピックのいずれかを参照してください。  
   

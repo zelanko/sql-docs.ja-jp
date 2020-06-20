@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d248abc5fbfeb22b7ef399945b0116e9be2bda51
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0eee18c654e427253fd1bc4687c89e81c290625c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705092"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043772"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>サーバーからクライアントへの変換
   このトピックでは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降) と、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB で作成されたクライアント アプリケーションとの間で実行される日付または時刻の変換について説明します。  
@@ -28,7 +27,7 @@ ms.locfileid: "82705092"
 |To -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
 |Date|1、7|OK|-|-|1|1、3|1、7|-|[OK] \(VT_BSTR)|OK|[OK]|4|4|  
-|Time|5、6、7|-|9|OK|6|3、6|5、6|-|[OK] \(VT_BSTR)|OK|[OK]|4|4|  
+|時間|5、6、7|-|9|OK|6|3、6|5、6|-|[OK] \(VT_BSTR)|OK|[OK]|4|4|  
 |Smalldatetime|7|8|9、10|10|OK|3|7|-|7 (VT_DATE)|OK|[OK]|4|4|  
 |Datetime|5、7|8|9、10|10|OK|3|7|-|7 (VT_DATE)|OK|[OK]|4|4|  
 |Datetime2|5、7|8|9、10|10|7|3|5、7|-|[OK] \(VT_BSTR)|OK|[OK]|4|4|  
