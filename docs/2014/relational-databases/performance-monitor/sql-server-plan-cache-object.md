@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ff1acb1fb3af2708b14b31eeb82aa0989685630c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf5fbc6c3a01b39079c8f63a2998490025c85e8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210819"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066929"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server の Plan Cache オブジェクト
   **Plan Cache** オブジェクトには、ストアド プロシージャ、アドホックおよび準備済みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメント、トリガーなどのオブジェクトを保存するために、 [!INCLUDE[tsql](../../includes/tsql-md.md)] がどのようにメモリを使用しているかを監視するためのカウンターがあります。 **Plan Cache** オブジェクトの複数のインスタンスを同時に監視できます。各インスタンスは、監視される異なる種類のクエリ プランを表します。  
@@ -28,7 +27,7 @@ ms.locfileid: "68210819"
 |SQL Server Plan Cache のカウンター|説明|  
 |------------------------------------|-----------------|  
 |**Cache Hit Ratio**|キャッシュ ヒットとキャッシュ参照の比率。|  
-|**Cache Object Counts**|キャッシュ内にあるキャッシュ オブジェクトの数。|  
+|**キャッシュオブジェクト数**|キャッシュ内にあるキャッシュ オブジェクトの数。|  
 |**Cache Pages**|キャッシュ オブジェクトによって使用される 8 KB ページの数。|  
 |**Cache Objects in use**|使用中のキャッシュ オブジェクトの数。|  
   

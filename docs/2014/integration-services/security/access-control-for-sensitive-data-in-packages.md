@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2d59a42fa7b77e6800218f1eeca4986320c1dcef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b47690162b2418469dcb3f866a7c002981b80a75
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766781"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964102"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>パッケージ内の機微なデータへのアクセス制御
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内のデータを保護するために、保護レベルを設定できます。保護レベルを使用すると、パッケージ内の機微なデータのみを保護することも、すべてのデータを保護することもできます。 さらに、パスワードまたはユーザー キーでこのデータを暗号化したり、データベースを使用してデータを暗号化したりすることもできます。 また、パッケージに使用する保護レベルは静的である必要はなく、パッケージのライフ サイクルの各段階で変更できます。 多くの場合、開発中に保護レベルを 1 つ設定し、パッケージを配置した時点で別の保護レベルを設定します。  
@@ -64,7 +63,7 @@ ms.locfileid: "62766781"
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>保護レベルの設定と SSISDB カタログ  
  SSISDB カタログは、`ServerStorage` 保護レベルを使用します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置する場合、カタログは自動的にパッケージのデータと機微な値を暗号化します。 また、ユーザーがデータを取得するときには、自動的に暗号化を解除します。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーからファイル システムにプロジェクト (.ispac ファイル) をエクスポートすると、保護レベルが自動的に `EncryptSensitiveWithUserKey` に変更されます。 のプロジェクトの[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]**インポートウィザード Integration Services**を使用してプロジェクトをインポートすると、[**プロパティ**] ウィンドウの [ **ProtectionLevel** ] プロパティ`EncryptSensitiveWithUserKey`に値が表示されます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーからファイル システムにプロジェクト (.ispac ファイル) をエクスポートすると、保護レベルが自動的に `EncryptSensitiveWithUserKey` に変更されます。 の**プロジェクトのインポートウィザード Integration Services**を使用してプロジェクトをインポートすると、[ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **プロパティ**] ウィンドウの [ **ProtectionLevel** ] プロパティに値が表示され `EncryptSensitiveWithUserKey` ます。  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>パッケージのライフ サイクルに基づく保護レベルの設定  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で初めて [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] パッケージを開発するときは、パッケージの保護レベルを設定します。 パッケージの保護レベルは、後でパッケージを配置するとき、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]からインポートまたはエクスポートするとき、または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、またはファイル システムにコピーするときに、更新できます。 たとえば、作成したパッケージをユーザー キー保護レベル オプションの 1 つを指定してコンピューターに保存している場合、通常はそのパッケージを他のユーザーに渡すときに保護レベルを変更します。そのままでは、相手ユーザーがパッケージを開くことができません。  

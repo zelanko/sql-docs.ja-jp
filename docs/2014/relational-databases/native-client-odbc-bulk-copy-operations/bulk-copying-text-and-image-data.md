@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 03d77ce1a4526cee78431def0251329111433aac
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9240fd0eb8c32ed39613824ea5a07764e277160c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705824"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021263"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>テキスト データと画像データの一括コピー
   Large **text**、 **ntext**、 **image**の値は、 [bcp_moretext](../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)関数を使用して一括コピーされます。 **Text**型、 **ntext**型、または**image**型の列に対して[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)コードを作成し、データが**bcp_moretext**で提供されることを示す*pData*ポインターを NULL に設定します。 各一括コピーされた行の**text**、 **ntext**、または**image**列ごとに指定されるデータの正確な長さを指定することが重要です。 列のデータの長さが[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)で指定された列の長さと異なる場合は、 [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)を使用して長さを適切な値に設定します。 [Bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)は、すべての非**テキスト**、非**ntext**、および非**イメージ**データを送信します。次に、 **bcp_moretext**を呼び出して、 **text**、 **ntext**、または**image**型のデータを別々の単位で送信します。 一括コピー関数は、 **bcp_moretext**を通じて送信されるデータの長さの合計が、最新の**bcp_collen**または**bcp_bind**で指定された長さと等しい場合に、現在の**text**、 **ntext**、または**image**列に対してすべてのデータが送信されたことを確認します。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b29d0f45-0068-4c84-bd7e-5b8a9cd1b538
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8874d4c57e2fb7b94e4efac44c90e93865d2b40f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0437cceb328682f539ad86669b75e7e0ae1a170b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289620"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042631"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>SharePoint 2013 用 Reporting Services の SharePoint モードのインストール
   このトピックでは、SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のシングル サーバー インストールの手順について説明します。 手順には、SQL Server インストール ウィザードの実行と、SharePoint サーバーの全体管理を使用する構成タスクが含まれます。 また、既存のインストールの更新について個々の手順 ( [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの作成など) をこのトピックで確認することもできます。  
@@ -74,11 +73,11 @@ ms.locfileid: "79289620"
   
  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスのインストールと登録:**  
   
--   SharePoint モードでのインストール中の現在の[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アカウント (' セットアップ ' アカウントと呼ばれます) は、ローカルコンピューターの管理者権限を持っている必要があります。 SharePoint のインストール後[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]にをインストールし、' セットアップ ' アカウントが sharepoint ファーム管理者グループのメンバーでもある場合は[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 、インストールによっ[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]てサービスが登録されます。 SharePoint がインストール[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]される前にをインストールした場合、または ' セットアップ ' アカウントがファーム管理者グループのメンバーでない場合は、サービスを手動で登録します。 「 [手順 2。 Reporting Services SharePoint サービスの登録と開始](#bkmk_install_SSRS_sharedservice)。  
+-   SharePoint モードでのインストール中の現在のアカウント (' セットアップ ' アカウントと呼ばれます) は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ローカルコンピューターの管理者権限を持っている必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sharepoint のインストール後にをインストールし、' セットアップ ' アカウントが sharepoint ファーム管理者グループのメンバーでもある場合は、インストールによって [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスが登録され [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint がインストールされる前にをインストールした場合、または ' セットアップ ' アカウントがファーム管理者グループのメンバーでない場合は、サービスを手動で登録します。 「 [手順 2。 Reporting Services SharePoint サービスの登録と開始](#bkmk_install_SSRS_sharedservice)。  
   
  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの作成:**  
   
--   インストールと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの登録の後、1 つ以上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成します。 Reporting Services サービス アプリケーションを作成できるように、"SharePoint ファーム サービス アカウント" を一時的にローカルの Administrators グループのメンバーにする必要があります。 SharePoint 2013 アカウントのアクセス許可の詳細については、「 [sharepoint 2013 のアカウントのアクセス許可とセキュリティ設定](https://technet.microsoft.com/library/cc678863.aspx)」 (https://technet.microsoft.com/library/cc678863.aspx)を参照してください。  
+-   インストールと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの登録の後、1 つ以上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成します。 Reporting Services サービス アプリケーションを作成できるように、"SharePoint ファーム サービス アカウント" を一時的にローカルの Administrators グループのメンバーにする必要があります。 SharePoint 2013 アカウントのアクセス許可の詳細については、「 [sharepoint 2013 のアカウントのアクセス許可とセキュリティ設定](https://technet.microsoft.com/library/cc678863.aspx)」 (を参照してください https://technet.microsoft.com/library/cc678863.aspx) 。  
   
      セキュリティ上、SharePoint ファーム管理者アカウントがローカル オペレーティング システムの管理者アカウントを兼ねないことをお勧めします。 インストール プロセスの一環としてファーム管理者アカウントをローカルの Administrators グループに追加する場合は、インストールの完了後にローカルの Administrators グループからそのアカウントを削除することをお勧めします。  
   
@@ -121,7 +120,7 @@ ms.locfileid: "79289620"
   
     -   **SharePoint 製品用の Reporting Services アドイン**。  
   
-         ![メモ](../../../2014/reporting-services/media/rs-fyinote.png "注意")アドインをインストールするためのインストールウィザードオプションは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]リリースで新しく追加されました。  
+         ![メモ](../../../2014/reporting-services/media/rs-fyinote.png "注意")アドインをインストールするためのインストールウィザードオプションは、リリースで新しく追加されました [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。  
   
     -   SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスがまだインストールされていない場合は、 **[データベース エンジン サービス]** および **[管理ツール - 完全]** をクリックして完全な環境をインストールすることもできます。  
   
@@ -251,14 +250,14 @@ ms.locfileid: "79289620"
   
 11. サービス アプリケーションの作成処理には数分かかることがあります。 完了すると、確認メッセージと、 **[サブスクリプションと警告の準備]** ページへのリンクが表示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプション機能とデータ警告機能を使用する場合は、準備手順を行います。 詳細については、「[SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)」を参照してください。  
   
- ![PowerShell 関連コンテンツ](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")PowerShell を使用して[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サービスアプリケーションを作成する方法の詳細については、以下を参照してください。  
+ ![PowerShell 関連コンテンツ](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")PowerShell を使用してサービスアプリケーションを作成する方法の詳細については [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 、以下を参照してください。  
   
 -   後の「[手順 1 ～ 4 に対応する Windows PowerShell スクリプト](#bkmk_full_script)」セクションをご覧ください。  
   
 -   トピック「 [PowerShell を使用して Reporting Services サービス アプリケーションを作成するには](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp)」。  
   
 ##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a>手順 4: Power View サイトコレクション機能をアクティブにします。  
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]は、SharePoint 製品[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用[!INCLUDE[msCoName](../../includes/msconame-md.md)]のアドインの機能であり、サイトコレクション機能です。 この機能は、ルート サイト コレクションと、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインのインストール後に作成されたサイト コレクションで自動的にアクティブ化されます。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]を使用する場合は、この機能がアクティブ化されていることを確認してください。  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、SharePoint 製品用のアドインの機能で [!INCLUDE[msCoName](../../includes/msconame-md.md)] あり、サイトコレクション機能です。 この機能は、ルート サイト コレクションと、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインのインストール後に作成されたサイト コレクションで自動的にアクティブ化されます。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]を使用する場合は、この機能がアクティブ化されていることを確認してください。  
   
  SharePoint Server のインストール後に SharePoint 製品用の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインをインストールした場合、レポート サーバーの統合機能と Power View の統合機能はルート サイト コレクションでのみアクティブ化されます。 他のサイト コレクションについては、この機能を手動でアクティブ化します。  
   
@@ -266,7 +265,7 @@ ms.locfileid: "79289620"
   
 1.  次の手順は、SharePoint サイトが 2013 の **体験版**用に構成されていることを前提としています。  
   
-     ブラウザーで目的の SharePoint サイトを開きます。 たとえば、http://\<サーバー名>/sites/bi などです。  
+     ブラウザーで目的の SharePoint サイトを開きます。 例 http:// \<servername> /sites/bi  
   
 2.  [**設定**] [![SharePoint の設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定")] をクリックします。  
   
@@ -287,7 +286,7 @@ ms.locfileid: "79289620"
   
 -   "Reporting Services" という名前のサービス プロキシを作成します。  
   
--   "Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アプリケーション" という名前のサービスアプリケーションを作成します。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]"Reporting Services アプリケーション" という名前のサービスアプリケーションを作成します。  
   
 -   サイト コレクションに対応する [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 機能を有効にします。  
   
@@ -297,9 +296,9 @@ ms.locfileid: "79289620"
   
 -   サービスアプリケーションの **-databaseserver**パラメーターを更新します。 このパラメーターは、データベース エンジンのインスタンスを意味します  
   
--   機能を[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]有効にするサイトの **-url**パラメーターを更新します。  
+-   機能を有効にするサイトの **-url**パラメーターを更新 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] します。  
   
- **スクリプトを使用するには:**  
+ **このスクリプトを使用するには、次の手順に従います。**  
   
 1.  管理者特権で Windows PowerShell を開きます。  
   
@@ -400,7 +399,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
 ### <a name="activate-the-report-server-file-sync-feature"></a>レポート サーバー ファイル同期機能をアクティブにする  
  ユーザーがパブリッシュされたレポート アイテムを SharePoint ドキュメント ライブラリに頻繁に直接アップロードする場合は、サイト レベルの **レポート サーバー ファイル同期** 機能が役立ちます。 ファイル同期機能では、レポート サーバー カタログとドキュメント ライブラリのアイテムの同期が、より頻繁に行われます。 詳細については、「SharePoint サーバーの[全体管理でレポートサーバー File Sync 機能をアクティブにする](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)」を参照してください。  
   
-##  <a name="verify-the-installation"></a><a name="bkmk_verify_installation"></a> インストールの確認  
+##  <a name="verify-the-installation"></a><a name="bkmk_verify_installation"></a>インストールを確認する  
  次に、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SharePoint モードの配置を確認するための推奨手順と手続きについて説明します。  
   
 -   検証トピック「 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)」の「SharePoint」を参照してください。  

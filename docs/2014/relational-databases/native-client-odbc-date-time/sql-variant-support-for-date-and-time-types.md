@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4dcca38ab5b7b67ca92cf35b49852bcd88437328
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 73a8745f393b76dfadf574a1029b6687c406a748
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705419"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020059"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>sql_variant による日付型と時刻型のサポート
   このトピックでは、日付と時刻に関する `sql_variant` データ型の機能強化について説明します。  
@@ -48,13 +47,13 @@ ms.locfileid: "82705419"
 |SQL_C_BIT|bit|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_UTINYINT|tinyint|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE は設定されません。|  
-|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Scale が SQL_DESC_PRECISION (の*DecimalDigits*パラメーター) に設定されて `SQLBindParameter` います。|  
+|SQL_C_BINARY|時間|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Scale が SQL_DESC_PRECISION (の*DecimalDigits*パラメーター) に設定されて `SQLBindParameter` います。|  
 |SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Scale が SQL_DESC_PRECISION (の*DecimalDigits*パラメーター) に設定されて `SQLBindParameter` います。|  
 |SQL_C_TYPE_DATE|date|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_TYPE_TIMESTAMP|datetime2|Scale が SQL_DESC_PRECISION (の*DecimalDigits*パラメーター) に設定されて `SQLBindParameter` います。|  
 |SQL_C_NUMERIC|decimal|有効桁数が SQL_DESC_PRECISION (の*Columnsize*パラメーター) に設定されて `SQLBindParameter` います。<br /><br /> スケールセットを SQL_DESC_SCALE (SQLBindParameter の*DecimalDigits*パラメーター) に設定します。|  
-|SQL_C_SS_TIME2|time|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
+|SQL_C_SS_TIME2|時間|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
   
 ## <a name="see-also"></a>参照  

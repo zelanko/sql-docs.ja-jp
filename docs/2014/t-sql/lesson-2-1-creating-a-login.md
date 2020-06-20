@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 400a57693fbea10270a51f5735a19b9639112ce9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211205"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000739"
 ---
 # <a name="creating-a-login"></a>ログインの作成
   [!INCLUDE[ssDE](../includes/ssde-md.md)]にアクセスするには、ユーザーのログインが必要です。 ログインは、ユーザーの ID を Windows のアカウントまたは Windows グループのメンバーとして表すか、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のみに存在する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログインを使用することができます。 できるだけ Windows 認証を使用してください。  
@@ -26,7 +25,7 @@ ms.locfileid: "68211205"
   
 ### <a name="to-create-a-new-windows-account"></a>新しい Windows アカウントを作成するには  
   
-1.  [**スタート**] をクリックし、[**実行**] をクリック`%SystemRoot%\system32\compmgmt.msc /s`します。 [**名前**] ボックスに「」と入力し、[OK] をクリックして [コンピューターの管理 **]** プログラムを開きます。  
+1.  [**スタート**] をクリックし、[**実行**] をクリックします。 [**名前**] ボックスに「」と入力し、 `%SystemRoot%\system32\compmgmt.msc /s` [OK] をクリックして [コンピューターの管理 **]** プログラムを開きます。  
   
 2.  [ **システム ツール**] の [ **ローカル ユーザーとグループ**] を展開し、[ **ユーザー**] を右クリックして、[ **新しいユーザー**] をクリックします。  
   

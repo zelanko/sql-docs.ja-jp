@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 840011d1797c7ef9482af31ffc8b3ec3a6419b8a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060876"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921973"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Foreach ループ コンテナーを構成する
   この手順では、列挙子レベルおよびコンテナー レベルでのプロパティ式など、Foreach ループ コンテナーを構成する方法について説明します。  
@@ -72,7 +71,7 @@ ms.locfileid: "66060876"
   
 7.  必要に応じて、**[変数のマッピング]** をクリックし、オブジェクトのプロパティをコレクションの値にマップします。その後、次の操作を行います。  
   
-    1.  [**変数**] の一覧で変数を選択するか、[ ** \<新しい変数>** をクリックして新しい変数を作成します。  
+    1.  [**変数**] の一覧で変数を選択するか、をクリックして **\<New Variable>** 新しい変数を作成します。  
   
     2.  新しい変数を追加する場合、**[変数の追加]** ダイアログ ボックスで変数のプロパティを設定し、**[OK]** をクリックします。  
   

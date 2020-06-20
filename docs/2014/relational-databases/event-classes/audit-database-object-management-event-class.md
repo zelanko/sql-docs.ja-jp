@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc5c0be2-990b-4032-a5e6-41ce98661698
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 19cb23baa6df69de9a73595dd81f8c1a095d7224
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb9493acc0cbada458d05b3ab102237b2d1aa00e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62699001"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053326"
 ---
 # <a name="audit-database-object-management-event-class"></a>Audit Database Object Management イベント クラス
   **Audit Database Object Management** イベント クラスは、CREATE、ALTER、または DROP ステートメントがスキーマなどのデータベース オブジェクトで実行されるときに発生します。  

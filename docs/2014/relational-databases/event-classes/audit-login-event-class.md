@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad0bdb48-7f9f-4335-805d-7769d6df89b2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e76d95b99ed2578cdfc9ff5ab9a752b644d82067
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6dfbd32eb7ad3a78ce1d579f31e998532d3baf2d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63000634"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053243"
 ---
 # <a name="audit-login-event-class"></a>Audit Login イベント クラス
   **Audit Login** イベント クラスは、ユーザーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に正常にログインしたことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。  
