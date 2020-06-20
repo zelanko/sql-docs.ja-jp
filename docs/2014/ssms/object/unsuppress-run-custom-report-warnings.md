@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae7f4d08ac613113d715728a5cb78ae37bd6f99b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62824397"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058524"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>カスタム レポート実行時の警告の抑制を解除する方法
   カスタム レポートについて表示される警告ダイアログ ボックスは 2 種類あります。 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、これらのボックスの表示抑制を解除する方法について説明します。  
@@ -28,21 +27,21 @@ ms.locfileid: "62824397"
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>メインのカスタム レポート警告ダイアログ ボックスの抑制を解除するには  
   
-1.  \<*サーバー*>|*Share*\\ \>共有> ドライブに接続します。 \documents と Settings<UserProfile \Application Data\Microsoft\Microsoft SQL に接続します。*Drive* >\\<\<  
+1.  \<*Server*> \\ < *共有* >| \<*Drive*> \Documents と設定 \\<UserProfile \> \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml に接続します。  
   
-2.  を右クリック`reports.xml`し、[**編集**] をクリックします。  
+2.  を右クリック `reports.xml` し、[**編集**] をクリックします。  
   
-3.  **\<SuppressWarning\<>true/SuppressWarning> を SuppressWarning \<>false\</SuppressWarning>に**変更します。  
+3.  ** \<SuppressWarning> True \</SuppressWarning> を \<SuppressWarning> false \</SuppressWarning> に**変更します。  
   
 4.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を再起動します。  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>ドリルスルー カスタム レポート警告ダイアログ ボックスの抑制を解除するには  
   
-1.  \<*サーバー*>|*Share*\\ \>共有> ドライブに接続します。 \documents と Settings<UserProfile \Application Data\Microsoft\Microsoft SQL に接続します。*Drive* >\\<\<  
+1.  \<*Server*> \\ < *共有* >| \<*Drive*> \Documents と設定 \\<UserProfile \> \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml に接続します。  
   
-2.  を右クリック`reports.xml`し、[**編集**] をクリックします。  
+2.  を右クリック `reports.xml` し、[**編集**] をクリックします。  
   
-3.  ** \<SuppressDrillthroughWarning\<>true/SuppressDrillthroughWarning>を SuppressDrillthroughWarning \<>false\</SuppressDrillthroughWarning>に**変更します。  
+3.  ** \<SuppressDrillthroughWarning> True \</SuppressDrillthroughWarning> を \<SuppressDrillthroughWarning> false \</SuppressDrillthroughWarning> に**変更します。  
   
 4.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を再起動します。  
   

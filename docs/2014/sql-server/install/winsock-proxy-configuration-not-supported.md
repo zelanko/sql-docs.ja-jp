@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: abf71f7b-8bd7-49d2-92f7-9ddf72924d8c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7d5daa8042e53b9bf26ad507c4be1f361821909
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 359399852224923d0512372d13058535fdca3c7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090977"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065063"
 ---
 # <a name="winsock-proxy-configuration-not-supported"></a>WinSock プロキシ構成はサポートされていない
-  Winsock プロキシは、ツールを使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]して構成することはできません。  
+  Winsock プロキシは、ツールを使用して構成することはできません [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

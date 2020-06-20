@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 70e99073f07e7e285d1fcbfad51cf9a275dd9441
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a4aec2f63a5f811b8e61a5ac9c107394f3d53db
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896153"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968892"
 ---
 # <a name="implementing-external-metadata"></a>外部メタデータの実装
   コンポーネントがそのデータ ソースから切断されると、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100> インターフェイスを使用することによって、入力および出力列のコレクション内の列を、その外部データ ソースの列に対して検証できます。 このインターフェイスを使用すると、外部データ ソースの列のスナップショットを保持し、これらの列をコンポーネントの入力および出力列コレクションの列にマップできます。  
@@ -75,9 +74,9 @@ End Sub
  検証を行うには、外部メタデータ列のコレクションを保持するための手順をコンポーネントに追加する必要があります。追加された列のコレクションに対して検証を行う必要があるためです。 検証は、接続された状態での検証と切断された状態での検証に分けられます。  
   
 ### <a name="connected-validation"></a>接続された状態での検証  
- コンポーネントが外部データ ソースに接続されると、入力または出力コレクション内の列は、外部データ ソースに対して直接検証されます。 また、外部メタデータのコレクション内の列を検証する必要があります。 外部メタデータのコレクションは **の**[詳細エディター][!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] による変更が可能なうえに、それによってコレクションに行われた変更は検出できないため、この検証が必要となります。 したがって、接続された状態のコンポーネントでは、外部メタデータ列のコレクション内の列が外部データ ソースの列を継続して反映していることを確認する必要があります。  
+ コンポーネントが外部データ ソースに接続されると、入力または出力コレクション内の列は、外部データ ソースに対して直接検証されます。 また、外部メタデータのコレクション内の列を検証する必要があります。 外部メタデータのコレクションは [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] の **[詳細エディター]** による変更が可能なうえに、それによってコレクションに行われた変更は検出できないため、この検証が必要となります。 したがって、接続された状態のコンポーネントでは、外部メタデータ列のコレクション内の列が外部データ ソースの列を継続して反映していることを確認する必要があります。  
   
- コレクションの<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A>プロパティをに`false`設定することによって、**詳細エディター**内の外部メタデータコレクションを非表示にすることができます。 ただし、この設定を行うと、入力または出力コレクションの列を外部メタデータ列のコレクションの列にマップするために使用する、エディターの **[列マッピング]** タブも非表示になります。 このプロパティを `false` に設定すると、開発者のプログラムによるコレクションの変更を妨げることなく、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でのみ使用されるコンポーネントの、外部メタデータ列のコレクションをある程度保護できます。  
+ コレクションのプロパティをに設定することによって、**詳細エディター**内の外部メタデータコレクションを非表示にすることができ <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> `false` ます。 ただし、この設定を行うと、入力または出力コレクションの列を外部メタデータ列のコレクションの列にマップするために使用する、エディターの **[列マッピング]** タブも非表示になります。 このプロパティを `false` に設定すると、開発者のプログラムによるコレクションの変更を妨げることなく、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でのみ使用されるコンポーネントの、外部メタデータ列のコレクションをある程度保護できます。  
   
 ### <a name="disconnected-validation"></a>切断された状態での検証  
  コンポーネントが外部データ ソースから切断されている場合、検証は簡略化されます。これは、外部ソースに対してではなく、外部メタデータのコレクション内の列に対して、入力または出力コレクション内の列が直接検証されるためです。 コンポーネントの外部データ ソースへの接続が確立されていない場合、または <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティが `false` の場合は、コンポーネントは切断された状態での検証を行う必要があります。  

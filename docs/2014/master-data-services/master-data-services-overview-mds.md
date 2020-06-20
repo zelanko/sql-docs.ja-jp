@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7ac1acb47c6345bb2b746b2e3a3e1817b63a3e75
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 8ee1d9205eeff0fd407cb8c2766d8fbceed47bf9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886379"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961632"
 ---
 # <a name="master-data-services-overview"></a>マスター データ サービス概要
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデルはマスター データ構造の最上位のコンテナーです。 モデルを作成すると、類似したデータのグループを管理できます。たとえば、オンラインの製品データを管理するなどです。 モデルには 1 つ以上のエンティティが含まれています。エンティティにはメンバーが含まれており、これはデータ レコードです。
@@ -54,7 +53,7 @@ ms.locfileid: "82886379"
 |エンティティを作成する|メンバーを含めるためにエンティティを必要な数だけ作成します。|[エンティティ (マスター データ サービス)](../../2014/master-data-services/entities-master-data-services.md)<br /><br /> [エンティティを作成する (マスター データ サービス)](../../2014/master-data-services/create-an-entity-master-data-services.md)|
 |ドメイン ベースの属性として使用するエンティティを作成する|ドメイン ベースの属性を作成するには、まず属性値の一覧を設定するエンティティを作成します。|[ドメインベースの属性 (マスター データ サービス)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)<br /><br /> [ドメイン ベースの属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|
 |エンティティの属性を作成する|メンバーを表す属性を作成します。 各エンティティには Name 属性と Code 属性が自動的に含まれます。これらの属性は削除できません。 テキスト、日付、数値、またはファイルを含む他の自由形式の属性を作成できます。|[属性 (マスター データ サービス)](../../2014/master-data-services/attributes-master-data-services.md)<br /><br /> [テキスト属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)<br /><br /> [数値属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)<br /><br /> [日付属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-date-attribute-master-data-services.md)<br /><br /> [リンク属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)<br /><br /> [ファイル属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|
-|属性グループを作成する|エンティティに 4 つまたは 5 つ以上の属性がある場合は、属性グループを作成できます。 これらのグループは、 **[エクスプローラー]** のグリッド上に表示されるタブに対応します。各タブに属性をグループ化することにより、移動が容易になります。 \<画像の挿入>|[属性グループ (マスター データ サービス)](../../2014/master-data-services/attribute-groups-master-data-services.md)<br /><br /> [属性グループを作成する (マスター データ サービス)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|
+|属性グループを作成する|エンティティに 4 つまたは 5 つ以上の属性がある場合は、属性グループを作成できます。 これらのグループは、 **[エクスプローラー]** のグリッド上に表示されるタブに対応します。各タブに属性をグループ化することにより、移動が容易になります。 \<INSERT IMAGE>|[属性グループ (マスター データ サービス)](../../2014/master-data-services/attribute-groups-master-data-services.md)<br /><br /> [属性グループを作成する (マスター データ サービス)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|
 |サポート エンティティのデータ レコード (メンバー) をインポートします。|ステージング処理を使用して、サポート エンティティのデータをインポートします。<br /><br /> Product モデルの場合は、色やサイズをインポートすることを意味します。<br /><br /> 手動でメンバーを作成することもできます。<br /><br /> 注: ユーザーに最低でもエンティティのリーフ モデル オブジェクトに対する [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 更新 **権限があり、** [エクスプローラー] **機能領域にアクセスできる場合は、** でメンバーを作成できます。|[データのインポート &#40;マスターデータサービス&#41;](overview-importing-data-from-tables-master-data-services.md)<br /><br /> [ステージング処理を使用してマスター データ サービスにメンバーを読み込むか更新する](../../2014/master-data-services/add-update-and-delete-data-master-data-services.md)<br /><br /> [リーフ メンバーを作成する &#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|
 |データ品質を保証するビジネス ルールを作成する|データの精度を保証するためにビジネス ルールを作成してパブリッシュします。 ビジネス ルールを使用すると、次のことが可能になります。<br /><br /> 既定の属性値を設定する。<br /><br /> 属性値を変更する。<br /><br /> データがビジネス ルール検証に合格しなかったときに、電子メール通知を送信する。|[ビジネス ルール (マスター データ サービス)](../../2014/master-data-services/business-rules-master-data-services.md)<br /><br /> [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)<br /><br /> [通知 (マスター データ サービス)](../../2014/master-data-services/notifications-master-data-services.md)<br /><br /> [電子メール通知を構成する (マスター データ サービス)](../../2014/master-data-services/configure-email-notifications-master-data-services.md)<br /><br /> [通知を送信するようにビジネス ルールを構成する (マスター データ サービス)](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|
 |プライマリ エンティティのデータ レコード (メンバー) をインポートします。 ビジネス ルールの適用|ステージング処理を使用して、プライマリ エンティティのデータをインポートします。 終了後、バージョンを検証します。 これにより、モデル バージョンのすべてのメンバーにビジネス ルールが適用されます。<br /><br /> 次に、ビジネス ルール検証に問題があれば修正します。|[検証 (マスター データ サービス)](../../2014/master-data-services/validation-master-data-services.md)<br /><br /> [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)<br /><br /> [検証ストアド プロシージャ (マスター データ サービス)](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)|

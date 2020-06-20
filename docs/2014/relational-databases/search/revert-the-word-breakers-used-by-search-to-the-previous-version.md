@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3c3354fecd145f1df35d0c01252886de69bd37b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874725"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004070"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>検索で使用するワード ブレーカーを以前のバージョンに戻す
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、フルテキスト検索でサポートされているすべての言語 (韓国語を除く) 用のワード ブレーカーおよびステマーのバージョンがインストールされ、有効になります。 このトピックでは、これらのコンポーネントのこのバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。  
@@ -152,7 +151,7 @@ ms.locfileid: "70874725"
     > [!WARNING]  
     >  この変更は、現在と以前のバージョンの両方で NaturalLanguage6.dll を使用するすべての言語に影響します。  
   
-5.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot**。  
+5.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<\> InstanceRoot**。  
   
 6.  次の手順に従って、選択した言語の以前のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -181,7 +180,7 @@ ms.locfileid: "70874725"
     > [!WARNING]  
     >  この変更は、現在と以前のバージョンの両方で NaturalLanguage6.dll を使用するすべての言語に影響します。  
   
-3.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot**。  
+3.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<\> InstanceRoot**。  
   
 4.  次のキーが存在しない場合は、次の手順に従って、選択した言語の現在のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -273,7 +272,7 @@ ms.locfileid: "70874725"
   
 1.  現在のバージョンのコンポーネントのファイルを Binn フォルダーから削除しないでください。  
   
-2.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot**。  
+2.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<\> InstanceRoot**。  
   
 3.  次の手順に従って、選択した言語の以前のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -297,7 +296,7 @@ ms.locfileid: "70874725"
   
 1.  以前のバージョンのコンポーネントのファイルを Binn フォルダーから削除しないでください。  
   
-2.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot**。  
+2.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<\> InstanceRoot**。  
   
 3.  次のキーが存在しない場合は、次の手順に従って、選択した言語の現在のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   

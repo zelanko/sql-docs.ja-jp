@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d78707925303d5e19d93b170f257d76fb7d1747d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011109"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004047"
 ---
 # <a name="query-with-full-text-search"></a>フルテキスト検索でのクエリ
   フルテキスト検索を定義するため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト クエリでは、フルテキスト述語 (CONTAINS と FREETEXT) およびフルテキスト関数 (CONTAINSTABLE と FREETEXTTABLE) が使用されます。 この述語と関数は、さまざまな形式のクエリ用語に対応する豊富な [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文をサポートします。 フルテキスト クエリを記述するには、これらの述語と関数をいつどのように使用するかを理解する必要があります。  
@@ -130,7 +129,7 @@ GO
 ```  
   
 #### <a name="b-using-freetexttable"></a>B. FREETEXTTABLE を使用する  
- 次の例では、FREETEXTTABLE クエリを拡張して、順位の高いものから順に行を返し、各行の順位を選択リストに追加します。 クエリを指定するには、 **Productdescriptionid**が`ProductDescription`テーブルの一意のキー列であることを把握している必要があります。  
+ 次の例では、FREETEXTTABLE クエリを拡張して、順位の高いものから順に行を返し、各行の順位を選択リストに追加します。 クエリを指定するには、 **Productdescriptionid**がテーブルの一意のキー列であることを把握している必要があり `ProductDescription` ます。  
   
 ```  
 USE AdventureWorks2012  
@@ -232,7 +231,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 ### <a name="xml-data"></a>xml データ  
  `xml` データ型の列には、XML ドキュメントと XML フラグメントのみが格納されます。XML ドキュメントには XML フィルターのみが使用されるため、 型列は必要ありません。 `xml` 列では、フルテキスト インデックスによって XML 要素のコンテンツにインデックスが設定されますが、XML マークアップは無視されます。 属性値には、数値でない限り、フルテキスト インデックスが設定されます。 要素タグはトークンの境界として使用されます。 複数言語を含む整形式の XML または HTML ドキュメントやフラグメントはサポートされます。  
   
- `xml`列に対するクエリの詳細については、「 [XML 列でのフルテキスト検索の使用](../xml/use-full-text-search-with-xml-columns.md)」を参照してください。  
+ 列に対するクエリの詳細につい `xml` ては、「 [XML 列でのフルテキスト検索の使用](../xml/use-full-text-search-with-xml-columns.md)」を参照してください。  
   
  
   
@@ -254,7 +253,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 
   
 ###  <a name="searching-for-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a>特定の語または句 (単純語句) の検索  
- [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)、または [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) を使用すると、テーブルで特定の句を検索できます。 たとえば、 `ProductReview` [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]データベース内のテーブルを検索して、"learning curve" という語句の製品に関するすべてのコメントを検索する場合は、次のように CONTAINS 述語を使用できます。  
+ [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)、または [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) を使用すると、テーブルで特定の句を検索できます。 たとえば、データベース内のテーブルを検索して、 `ProductReview` [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] "learning curve" という語句の製品に関するすべてのコメントを検索する場合は、次のように CONTAINS 述語を使用できます。  
   
 ```  
 USE AdventureWorks2012  

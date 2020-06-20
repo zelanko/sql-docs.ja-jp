@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a343e6b9e93aa1910c82f436f3a50daf00d57bc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754282"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933884"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>サーバー インスタンスのアップグレード時に、ミラー化されたデータベースのダウンタイムを最小化する方法
-  サーバーインスタンスをに[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレードする場合は、*ローリングアップグレード*と呼ばれる順次アップグレードを実行することで、ミラー化された各データベースのダウンタイムを1回の手動フェールオーバーのみに減らすことができます。 ローリング アップグレードは複数の段階から成るプロセスです。最も単純な形式では、ミラーリング セッションで現在ミラー サーバーとして機能しているサーバー インスタンスをアップグレードした後、ミラー化されたデータベースを手動でフェールオーバーし、以前のプリンシパル サーバーをアップグレードして、ミラーリングを再開します。 実際に実行するプロセスは、動作モードと、アップグレードするサーバー インスタンスで実行しているミラーリング セッションの数やレイアウトによって異なります。  
+  サーバーインスタンスをにアップグレードする場合 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、*ローリングアップグレード*と呼ばれる順次アップグレードを実行することで、ミラー化された各データベースのダウンタイムを1回の手動フェールオーバーのみに減らすことができます。 ローリング アップグレードは複数の段階から成るプロセスです。最も単純な形式では、ミラーリング セッションで現在ミラー サーバーとして機能しているサーバー インスタンスをアップグレードした後、ミラー化されたデータベースを手動でフェールオーバーし、以前のプリンシパル サーバーをアップグレードして、ミラーリングを再開します。 実際に実行するプロセスは、動作モードと、アップグレードするサーバー インスタンスで実行しているミラーリング セッションの数やレイアウトによって異なります。  
   
 > [!NOTE]  
 >  ローリングアップグレードを実行して Service Pack または修正プログラムをインストールする方法については、「[ミラー化されたデータベースのダウンタイムを最小限に抑えてシステムに Service pack をインストール](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)する」を参照してください。  

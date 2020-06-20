@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6a6b2685c8cfda9217b554e161919c24344b34a2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: edcdea9d266cf0ef231b1e16be4da7009372dcd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706474"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050119"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>メモリ最適化テーブルの概要
   メモリ最適化テーブルは、[CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) を使用して作成されるテーブルです。  
@@ -52,7 +51,7 @@ ms.locfileid: "82706474"
   
  次の表に、さまざまなオブジェクトへのネイティブ アクセスおよび解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] アクセスを示します。  
   
-|特徴|ネイティブ コンパイル ストアド プロシージャを使用したアクセス|解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] アクセス|CLR アクセス|  
+|機能|ネイティブ コンパイル ストアド プロシージャを使用したアクセス|解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] アクセス|CLR アクセス|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |メモリ最適化テーブル|はい|はい|いいえ <sup>1</sup>|  
 |[メモリ最適化テーブル変数](../../database-engine/memory-optimized-table-variables.md)|はい|はい|いいえ|  
@@ -63,7 +62,7 @@ ms.locfileid: "82706474"
 ## <a name="performance-and-scalability"></a>パフォーマンスとスケーラビリティ  
  インメモリ OLTP を使用することで実現できるパフォーマンスの向上には、次の要素が影響します。  
   
- 通信  
+ Communication  
  短いストアド プロシージャに対する多数の呼び出しを実行するアプリケーションは、各ストアド プロシージャにより多くの機能が実装されて呼び出しが少なくて済むアプリケーションと比較した場合、パフォーマンス向上の点で劣る場合があります。  
   
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] の実行  

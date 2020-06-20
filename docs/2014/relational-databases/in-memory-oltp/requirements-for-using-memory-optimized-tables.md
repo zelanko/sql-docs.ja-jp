@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecb9d388fd0e1362bb8844e874cd89162912e93e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62467909"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050045"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>メモリ最適化テーブルを使用するための要件
   [SQL Server 2014 をインストールするためのハードウェアとソフトウェアの要件](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)に加えて、インメモリ OLTP を使用するための要件を次に示します。  
@@ -36,7 +35,7 @@ ms.locfileid: "62467909"
   
 -   インメモリ OLTP をインストールするには、 **のインストール時に** [データベース エンジン サービス] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を選択します。  
   
-     レポートの生成 ([テーブルまたはストアドプロシージャをインメモリ oltp に移植する必要が](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)あるかどうか[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]の判断) と (オブジェクトエクスプローラーを介し[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]てインメモリ oltp を管理する場合) をインストールするには、を[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]インストールするときに [**管理ツール-基本**] または [**管理ツール-詳細**] を選択します。  
+     レポートの生成 ([テーブルまたはストアドプロシージャをインメモリ oltp に移植する必要が](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)あるかどうかの判断) と [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (オブジェクトエクスプローラーを介してインメモリ oltp を管理する場合) をインストールするに [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] は、をインストールするときに [**管理ツール-基本**] または [**管理ツール-詳細**] を選択し [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ます。  
   
 ## <a name="important-notes-on-using-hek_2"></a>[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62467909"
 -   メモリ最適化テーブルが含まれるデータベースを 1 つ以上作成する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対してファイルの瞬時初期化を有効にする ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス開始アカウントに SE_MANAGE_VOLUME_NAME ユーザー権限を付与する) 必要があります。 ファイルの瞬時初期化を使用しない場合、メモリ最適化ストレージ ファイル (データ ファイルとデルタ ファイル) が作成時に初期化されるため、ワークロードのパフォーマンスが低下する場合があります。 ファイルの瞬時初期化に関する詳細については、「 [データベース ファイルの初期化](../databases/database-instant-file-initialization.md)」をご覧ください。 ファイルの瞬時初期化を有効にする方法については、「 [How and Why to Enable Instant File Initialization (ファイルの瞬時初期化を有効にする方法と理由)](https://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx)」をご覧ください。  
   
 ## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? お待ちしています  
- どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツを改善するためのフィードバックをお待ちしています。 にコメントを[sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page)送信してください。  
+ どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツを改善するためのフィードバックをお待ちしています。 にコメントを送信してください [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page) 。  
   
 ## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](in-memory-oltp-in-memory-optimization.md)  

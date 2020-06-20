@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 762248d4c2a268ac36b0dfa3ffeba20123017017
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940503"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Slice Source Cube (Data Mining Wizard)
   **[ソース キューブのスライス]** ダイアログ ボックスを使用すると、モデルのトレーニング用に使用するデータを制限できます。 通常、キューブには、すべての店舗、すべての地域、すべての製品など、多くの異なるディメンションと属性に関連するデータが含まれています。 属性の無限の組み合わせに対してモデルのトレーニングを実行することは実用的ではないため、このダイアログ ボックスを使用して、モデルのトレーニングで利用する特定のセットを選択します。  
@@ -48,15 +47,15 @@ ms.locfileid: "66068594"
   
  たとえば、地理階層を選択し、レベルとして国を選択する場合は、属性として市を使用するモデルを構築することはできません。 逆に、スライスする階層レベルとして市を選択すると、国に基づくマイニング モデルを作成することはできません。  
   
- **演算子**  
+ **Operator**  
  スライス式の作成に使用する演算子を選択します。  
   
  たとえば、階層として [Geography] を選択した場合は、演算子 = を選択し、フィルターとして「ヨーロッパ」と入力すると、ヨーロッパのキューブデータだけを取得できます。  
   
- **[フィルター式]**  
+ **フィルター式**  
  選択したディメンションでキューブをフィルター処理するときに条件として使用する式を入力します。  
   
- **Parameters**  
+ **パラメーター**  
  このオプションは、データ マイニング モデルでは使用されません。  
   
 ## <a name="see-also"></a>参照  

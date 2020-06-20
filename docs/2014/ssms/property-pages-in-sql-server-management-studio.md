@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0711b5ff618ec563b437a089765a30547377efaa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fae6a07fbaa2a259fcca5c3807094b31e0d52d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720142"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058488"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio のプロパティ ページ
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のプロパティ ページのダイアログ ボックスでは、カテゴリの展開や折りたたみができる共通の形式で情報が表示されます。 表示されるフィールドは、プロパティごとに異なります。 淡色で表示されているプロパティは変更できません。 [項目別] および [アルファベット順] ボタンはプロパティ ページの上部にあります。  
