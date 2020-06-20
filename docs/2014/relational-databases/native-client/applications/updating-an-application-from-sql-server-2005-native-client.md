@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3e73e200fb47c1ad54066f66396c887c1604a09c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2b8a70b014f0813bb8364509207922b3f2a84329
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704411"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017410"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>SQL Server 2005 Native Client からのアプリケーションの更新
   このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 以降の [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client における重大な変更について説明します。  

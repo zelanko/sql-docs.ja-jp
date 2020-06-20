@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2250847ee35210c63a4ac9ed5e1e41bab33a08ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a26781a34b75893dfb8aad54cea8e7f6d2c2e4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62956358"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052868"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call イベント クラス
   **OLEDB Call** イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から分散クエリやリモート ストアド プロシージャの OLE DB プロバイダーが呼び出されるときに発生します。  
@@ -36,7 +35,7 @@ ms.locfileid: "62956358"
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |Duration|`Bigint`|OLE DB Call イベントを完了する時間長。|13|いいえ|  
 |EndTime|`Datetime`|イベントが終了する時刻。|15|はい|  
-|Error|`int`|特定のイベントのエラー番号。 多くの場合、sys.messages カタログ ビューに保存されているエラー番号です。|31|はい|  
+|エラー|`int`|特定のイベントのエラー番号。 多くの場合、sys.messages カタログ ビューに保存されているエラー番号です。|31|はい|  
 |EventClass|`Int`|イベントの種類 = 119。|27|いいえ|  
 |EventSequence|`Int`|バッチ内の OLE DB イベント クラスのシーケンス。|51|いいえ|  
 |EventSubClass|`Int`|0 = 開始<br /><br /> 1 = 完了|21|いいえ|  

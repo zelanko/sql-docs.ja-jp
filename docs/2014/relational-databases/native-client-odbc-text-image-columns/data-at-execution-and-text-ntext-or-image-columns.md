@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 67ffb1a6-f38d-4712-ba64-96bdd41ec2b2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4368104ffcad31a59bfa1a3acffb38fcd015156e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 404fade34862fe4705ec440eef7f466a9073250b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718846"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039302"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>実行時データと text 型、ntext 型、または image 型の列
   ODBC 実行時データは、バインドされた列やパラメーターに対して、アプリケーションが大量のデータを操作できるようにする機能です。 非常に大きな**text**型、 **ntext**型、または**image**型の列を取得する場合、アプリケーションは単純に大きなバッファーを割り当てて、その列をバッファーにバインドし、行をフェッチすることができない可能性があります。 非常に大きな**text**型、 **ntext**型、または**image**型の列を更新する場合、アプリケーションは単純に大きなバッファーを割り当てて、それを SQL ステートメントのパラメーターマーカーにバインドした後、ステートメントを実行できない可能性があります。 このような場合、アプリケーションでは、実行時データオプションを使用して[SQLGetData](../native-client-odbc-api/sqlgetdata.md)または[sqlputdata](../native-client-odbc-api/sqlputdata.md)を使用する必要があります。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a7417a3f5792be0838d421ca0115935ae190f49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1795af295d8a7d77a71fbdfdfc9a433ed39b58f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176608"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972759"
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージの制御フローのトラブルシューティングに使用できる、機能とツールが含まれています。
@@ -50,7 +49,7 @@ ms.locfileid: "78176608"
 |タスクまたはコンテナーが `OnTaskFailed` イベントを受け取ったとき|タスク ホストが失敗したとき、タスク ホストによって呼び出されます。|
 |タスクまたはコンテナーが `OnProgress` イベントを受け取ったとき|タスクの実行の進行状況を更新するために呼び出されます。|
 |タスクまたはコンテナーが `OnQueryCancel` イベントを受け取ったとき|タスク処理の実行をキャンセルできる場合、任意のタイミングで呼び出されます。|
-|タスクまたはコンテナーが `OnVariableValueChanged` イベントを受け取ったとき|変数の値が変更されたとき、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムによって呼び出されます。 このイベントを発生させるには、 `true`変数の RaiseChangeEvent をに設定する必要があります。<br /><br /> **&#42;&#42; 警告 &#42;&#42;** このブレークポイントに関連付けられている変数は、**コンテナー** スコープで定義する必要があります。 この変数がパッケージ スコープで定義されると、ブレークポイントにヒットしません。|
+|タスクまたはコンテナーが `OnVariableValueChanged` イベントを受け取ったとき|変数の値が変更されたとき、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムによって呼び出されます。 このイベントを発生させるには、変数の RaiseChangeEvent をに設定する必要があり `true` ます。<br /><br /> **&#42;&#42; 警告 &#42;&#42;** このブレークポイントに関連付けられている変数は、**コンテナー** スコープで定義する必要があります。 この変数がパッケージ スコープで定義されると、ブレークポイントにヒットしません。|
 |タスクまたはコンテナーが `OnCustomEvent` イベントを受け取ったとき|タスクによって定義されたカスタム イベントを起動するため、タスクによって呼び出されます。|
 
  一部のタスクとコンテナーには、すべてのタスクとコンテナーで使用できるブレークの条件以外に、ブレークポイントを設定するための特殊なブレーク条件が含まれています。 たとえば、For ループ コンテナーでは、ループの各反復処理の開始点で実行を中断するブレークポイントを設定するための、ブレークの条件を有効にできます。

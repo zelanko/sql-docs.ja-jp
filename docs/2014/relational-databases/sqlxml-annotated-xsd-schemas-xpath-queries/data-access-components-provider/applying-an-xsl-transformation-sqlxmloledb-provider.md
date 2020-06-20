@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 016ea0dd6e5352a0b45147a5ea4cea3764abb305
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fd5686299751d6ae10b9407deee36b8aeea31468
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703273"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015770"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>XSL 変換の適用 (SQLXMLOLEDB プロバイダー)
   このサンプル ADO アプリケーションでは、SQL クエリが実行され、結果に XSL 変換が適用されます。 ClientSideXML プロパティを True に設定すると、クライアント側で行セットの処理が強制されます。 SQL クエリをテンプレートで指定する場合は、テンプレート実行時にコマンド言語を指定する必要があるため、コマンド言語 {5d531cb2-e6ed-11d2-b252-00c04f681b71} を設定します。 Xsl プロパティは、変換の適用に使用する XSL ファイルを指定します。 [基本パスプロパティの値は、XSL ファイルを検索するために使用されます。 Xsl プロパティの値にパスを指定した場合、パスは、[ベースパス] プロパティで指定したパスに対する相対パスになります。  

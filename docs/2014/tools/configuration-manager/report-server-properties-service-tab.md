@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06e8d38be6f1e8e1ef816f5fa38c66d74a69987a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62506774"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054504"
 ---
 # <a name="report-server-properties-service-tab"></a>[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([サービス] タブ)
   このサービスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のレポート サーバー サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  

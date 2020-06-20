@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 581e3ead-53db-44da-8718-f3fc4b5108f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b51f1d6b3e8a7a75574e78e24e27b5d9d75df42
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e09d5127f332c8b6cc948be3eeb74e600bb856f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704609"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018034"
 ---
 # <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters"></a>OLE DB テーブル値パラメーター向けに変更されたスキーマ行セット
   テーブル値パラメーターをサポートするために変更または追加されたスキーマ行セットは次のとおりです。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dfe835b1-ea52-4e18-a23a-5188c5b6f013
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9837eb1c58facb76eef5885012920b294674f7fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0244760e6fadc421854e13869ad1e973d7ed12f0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055286"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962352"
 ---
 # <a name="standard-parse"></a>標準解析
   標準解析は、ロケール依存型の解析ルーチンのセットであり、Oleaut32.dll と Ole2dsip.dll で使用できるオートメーション データ型変換の API が提供する、すべてのデータ型変換がサポートされています。 標準解析は、OLE DB 解析 API に相当します。  

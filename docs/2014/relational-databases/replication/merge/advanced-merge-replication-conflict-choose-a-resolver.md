@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 252c9748dff3ea1c2f8763b46f0fa818eea0003a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62931624"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005687"
 ---
 # <a name="choose-a-resolver"></a>競合回避モジュールの選択
   競合回避モジュールを選択するときには、アプリケーションでの競合解決の重要性、および既定の優先度ベースの競合回避モジュールを使用できるかどうか、アーティクル競合回避モジュールを使用する必要があるかどうかを考慮します。  

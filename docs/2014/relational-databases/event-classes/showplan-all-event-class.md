@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ee341319-c34a-43e3-ad33-6bfb1f85e314
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 487aaee17be13727f2c23de42b95afcc27b0b939
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07777c543534af1794b13a09090a47aee76e79a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662196"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052562"
 ---
 # <a name="showplan-all-event-class"></a>Showplan All イベント クラス
   Showplan All イベント クラスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントが実行されたときに発生します。 含まれる情報は、Showplan XML Statistics Profile または Showplan XML イベント クラスで利用できる情報のサブセットです。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22e4df8d67b61e50383ffd8e33f982990ff3f2ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055090"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>テーブルの計算列の指定
   計算列は、PERSISTED とマークされていない限り、テーブルに物理的に保存されない仮想列です。 計算列の式は、他の列のデータを使用して値を計算し、それを自身の列に格納します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 上では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して計算列に式を指定できます。  
@@ -84,7 +83,7 @@ ms.locfileid: "68211802"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーし、クエリウィンドウに貼り付けて、[**実行**] をクリックします。 この例では、 `QtyAvailable` 列の値と `UnitPrice` 列の値を乗算する計算列を含むテーブルを作成します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 `QtyAvailable` 列の値と `UnitPrice` 列の値を乗算する計算列を含むテーブルを作成します。  
   
     ```  
     CREATE TABLE dbo.Products   
@@ -111,7 +110,7 @@ ms.locfileid: "68211802"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーし、クエリウィンドウに貼り付けて、[**実行**] をクリックします。 次の例では、前の例で作成したテーブルに新しい列を追加します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、前の例で作成したテーブルに新しい列を追加します。  
   
     ```  
     ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.35);  
@@ -124,7 +123,7 @@ ms.locfileid: "68211802"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  既存の列を計算列に変更するには、計算列を削除してから再作成する必要があります。 次の例をコピーし、クエリウィンドウに貼り付けて、[**実行**] をクリックします。 次の例では、前の例で追加した列を変更します。  
+3.  既存の列を計算列に変更するには、計算列を削除してから再作成する必要があります。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、前の例で追加した列を変更します。  
   
     ```  
     ALTER TABLE dbo.Products DROP COLUMN RetailValue;  

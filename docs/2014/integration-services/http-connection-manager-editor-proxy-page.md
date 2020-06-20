@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f5fa616116b4a6842143b6950905de4b8db0063
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058257"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968342"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>[HTTP 接続マネージャー エディター] ([プロキシ] ページ)
   **[HTTP 接続マネージャー エディター]** の **[プロキシ]** タブを使用すると、HTTP 接続マネージャーがプロキシ サーバーを使用するように設定できます。 HTTP 接続により、パッケージが HTTP を使用してファイルを送受信することで、Web サーバーにアクセスできるようになります。  
@@ -45,7 +44,7 @@ ms.locfileid: "66058257"
  **パスワード**  
  HTTP 接続マネージャーで資格情報を使用する場合は、ユーザー名、パスワード、およびドメインを指定する必要があります。  
   
- **[ドメイン]**  
+ **ドメイン**  
  HTTP 接続マネージャーで資格情報を使用する場合は、ユーザー名、パスワード、およびドメインを指定する必要があります。  
   
  **[プロキシ バイパス一覧]**  
@@ -54,7 +53,7 @@ ms.locfileid: "66058257"
  **追加**  
  プロキシ サーバーを使用しないアドレスを入力します。  
   
- **Remove**  
+ **削除**  
  アドレスを選択した後、 **[削除]** をクリックするとアドレスが削除されます。  
   
 ## <a name="see-also"></a>参照  

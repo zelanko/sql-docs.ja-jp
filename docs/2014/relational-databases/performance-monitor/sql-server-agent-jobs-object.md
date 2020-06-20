@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5bd37ab434dbefbb01862f1004ca62e673df0453
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 927e5b199d983a1a850f069408dba2156f67a408
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63251029"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017100"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server エージェントの Jobs オブジェクト
   SQL Server エージェントの **Jobs** パフォーマンス オブジェクトには、SQL Server エージェントのジョブについての情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  

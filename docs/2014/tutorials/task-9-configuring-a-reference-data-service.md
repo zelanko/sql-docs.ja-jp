@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0535fce-2bf5-4f6d-b517-ffe6fa13738d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e4c756463c43ede8c6dae0cda0a184f0ec7f9956
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0389221e869d13b277502d60500ff2df1c00610c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154934"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006199"
 ---
 # <a name="task-9-configuring-a-reference-data-service"></a>タスク 9: 参照データ サービスを構成する
   このタスクでは、Azure Marketplace で参照データサービスを使用するように DQS を構成します。 次のタスクでは、このサービスを使用するように**アドレス検証**ドメインを構成します。 実行時に、クレンジングアクティビティ中に、DQS は、クレンジングのために**アドレス検証**ドメインのドメインの値をサービスに渡します。 詳細については、「[参照データを使用するように DQS を構成する」を](https://msdn.microsoft.com/library/hh213070.aspx)参照してください。  

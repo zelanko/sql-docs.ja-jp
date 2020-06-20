@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 82f3e362643df17d9105ad6987a851211bd22865
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8c02b4053906aa89e40e82857bda173049463cc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479498"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961772"
 ---
 # <a name="edit-a-model-deployment-package"></a>モデルの配置パッケージの編集
   このトピックでは、モデル全体ではなく、モデルの選択した部分を MDS に配置する方法について説明します。 これを行うには、モデル パッケージ エディターを使用して MDS モデル パッケージを編集します。  
@@ -43,7 +42,7 @@ ms.locfileid: "65479498"
   
 5.  配置する選択項目の一覧を確認します。 変更するには、 **[戻る]** をクリックして手順 4 を繰り返します。  
   
-6.  **[参照]** をクリックし、部分的なパッケージを保存するフォルダーに移動して、部分的なパッケージのファイル名を入力します (.pkg 拡張子を付けます)。 **[Save]** (保存) をクリックします。  
+6.  **[参照]** をクリックし、部分的なパッケージを保存するフォルダーに移動して、部分的なパッケージのファイル名を入力します (.pkg 拡張子を付けます)。 **[保存]** をクリックします。  
   
 7.  **[完了]** をクリックします。  
   

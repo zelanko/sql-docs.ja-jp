@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6373adb8-3d81-4945-a9fc-1d0d5799d29a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44843764b7eed26bfd424ee61f2534aae42b9a73
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843114"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928983"
 ---
 # <a name="solution-explorer-source-control"></a>ソリューション エクスプローラーのソース管理
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ソリューションエクスプローラーは、別のソース管理システムに統合できます。 ソリューションまたはプロジェクトをソース管理システムに統合すると、プロジェクト内のスクリプトとクエリを対象に、ファイル アクセスとバージョン管理を制御できるようになります。  

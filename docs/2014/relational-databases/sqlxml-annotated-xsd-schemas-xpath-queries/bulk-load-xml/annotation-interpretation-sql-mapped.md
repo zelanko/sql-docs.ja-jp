@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0b0fda8000105573a11c1ca6a460e47a100bc885
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bec8be3253811018dac345abdefda8f560e9dc2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703429"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068228"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
   XML 一括読み込みで `sql:mapped` は、XSD スキーマの注釈が想定どおりに処理されます。つまり、マッピングスキーマで `sql:mapped="false"` 任意の要素または属性にが指定されている場合、Xml 一括読み込みでは、関連付けられたデータは対応する列に格納されません。  

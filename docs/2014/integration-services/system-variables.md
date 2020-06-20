@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d13feb3a13cb96ec3cf0a3006b807740944434b8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62927231"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962382"
 ---
 # <a name="system-variables"></a>システム変数
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、実行中のパッケージとそのオブジェクトに関する情報を格納する、システム変数のセットが用意されています。 これらの変数は、式およびプロパティ式の内部で使用でき、パッケージ、コンテナー、タスク、およびイベント ハンドラーをカスタマイズできます。  
@@ -40,11 +39,11 @@ ms.locfileid: "62927231"
 |**CreatorName**|String|パッケージの構築者の名前です。|  
 |`ExecutionInstanceGUID`|String|実行中のパッケージのインスタンスの一意識別子です。|  
 |`FailedConfigurations`|String|失敗したパッケージ構成の名前。|  
-|`IgnoreConfigurationsOnLoad`|ブール型|パッケージを読み込むときにパッケージ構成を無視するかどうかを示します。|  
-|**InteractiveMode**|ブール型|パッケージが対話モードで実行されているかどうかを示します。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを実行中の場合、このプロパティは `True` に設定されます。 パッケージが**DTExec**コマンドプロンプトユーティリティを使用して実行されている場合、 `False`プロパティはに設定されます。|  
+|`IgnoreConfigurationsOnLoad`|Boolean|パッケージを読み込むときにパッケージ構成を無視するかどうかを示します。|  
+|**InteractiveMode**|Boolean|パッケージが対話モードで実行されているかどうかを示します。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを実行中の場合、このプロパティは `True` に設定されます。 パッケージが**DTExec**コマンドプロンプトユーティリティを使用して実行されている場合、プロパティはに設定され `False` ます。|  
 |`LocaleId`|Int32|パッケージで使用するロケールです。|  
 |**MachineName**|String|パッケージが実行されているコンピューターの名前です。|  
-|**OfflineMode**|ブール型|パッケージがオフライン モードかどうかを示します。 オフライン モードでは、データ ソースへの接続は取得されません。|  
+|**OfflineMode**|Boolean|パッケージがオフライン モードかどうかを示します。 オフライン モードでは、データ ソースへの接続は取得されません。|  
 |**PackageID**|String|パッケージの一意識別子です。|  
 |**PackageName**|String|パッケージの名前です。|  
 |**StartTime**|DateTime|パッケージの実行を開始した時刻です。|  
@@ -59,37 +58,37 @@ ms.locfileid: "62927231"
 ## <a name="system-variables-for-containers"></a>コンテナー用システム変数  
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が、For ループ コンテナー、Foreach ループ コンテナー、およびシーケンス コンテナー用に提供するシステム変数について説明します。  
   
-|システム変数|データ型|説明|コンテナー|  
+|システム変数|データの種類|説明|コンテナー|  
 |---------------------|---------------|-----------------|---------------|  
 |`LocaleId`|Int32|コンテナーが使用するロケールです。|For ループ コンテナー<br /><br /> Foreach ループ コンテナー<br /><br /> シーケンス コンテナー|  
   
 ## <a name="system-variables-for-tasks"></a>タスク用システム変数  
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] がタスク用に提供するシステム変数について説明します。  
   
-|システム変数|データ型|説明|  
+|システム変数|データの種類|説明|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|String|タスクの名前。|  
 |`LocaleId`|Int32|タスクが使用するロケールです。|  
 |**TaskID**|String|タスク インスタンスの一意識別子です。|  
-|**TaskName**|String|タスク インスタンスの名前です。|  
+|**/Tn**|String|タスク インスタンスの名前です。|  
 |`TaskTransactionOption`|Int32|タスクが使用するトランザクションのオプションです。|  
   
 ## <a name="system-variables-for-event-handlers"></a>イベント ハンドラー用システム変数  
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] がイベント ハンドラー用に提供するシステム変数について説明します。 すべての変数がすべてのイベント ハンドラーで使用できるわけではありません。  
   
-|システム変数|データ型|説明|イベント ハンドラー|  
+|システム変数|データの種類|説明|イベント ハンドラー|  
 |---------------------|---------------|-----------------|-------------------|  
-|**キャンセル**|ブール型|エラー、警告、またはクエリのキャンセルが発生したときに、イベント ハンドラーが実行を停止するかどうかを示します。|OnError イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー<br /><br /> OnQueryCancel イベント ハンドラー|  
+|**キャンセル**|Boolean|エラー、警告、またはクエリのキャンセルが発生したときに、イベント ハンドラーが実行を停止するかどうかを示します。|OnError イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー<br /><br /> OnQueryCancel イベント ハンドラー|  
 |**ErrorCode**|Int32|エラー識別子です。|OnError イベント ハンドラー<br /><br /> OnInformation イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー|  
 |**ErrorDescription**|String|エラーの説明。|OnError イベント ハンドラー<br /><br /> OnInformation イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー|  
-|**ExecutionStatus**|ブール型|現在の実行ステータスです。|OnExecStatusChanged イベント ハンドラー|  
+|**ExecutionStatus**|Boolean|現在の実行ステータスです。|OnExecStatusChanged イベント ハンドラー|  
 |`ExecutionValue`|DBNull|実行値です。|OnTaskFailed イベント ハンドラー|  
 |`LocaleId`|Int32|イベント ハンドラーが使用するロケールです。|すべてのイベント ハンドラー|  
 |**PercentComplete**|Int32|完了済みの作業の割合です。|OnProgress イベント ハンドラー|  
 |**ProgressCountHigh**|Int32|OnProgress イベントによって処理される操作の総数を示す、64 ビット値の上位部分です。|OnProgress イベント ハンドラー|  
 |`ProgressCountLow`|Int32|OnProgress イベントによって処理される操作の総数を示す、64 ビット値の下位部分です。|OnProgress イベント ハンドラー|  
 |**ProgressDescription**|String|進行状況の説明です。|OnProgress イベント ハンドラー|  
-|`Propagate`|ブール型|イベントが、上位レベルのイベント ハンドラーに反映されるかどうかを示します。<br /><br /> 注: 変数 `Propagate` の値は、パッケージの検証中は無視されます。<br /><br /> 子パッケージ内で `Propagate` を `False` に設定しても、イベントは親パッケージに反映されます。|すべてのイベント ハンドラー|  
+|`Propagate`|Boolean|イベントが、上位レベルのイベント ハンドラーに反映されるかどうかを示します。<br /><br /> 注: 変数 `Propagate` の値は、パッケージの検証中は無視されます。<br /><br /> 子パッケージ内で `Propagate` を `False` に設定しても、イベントは親パッケージに反映されます。|すべてのイベント ハンドラー|  
 |`SourceDescription`|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの説明です。|すべてのイベント ハンドラー|  
 |`SourceID`|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの一意識別子です。|すべてのイベント ハンドラー|  
 |**SourceName**|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの名前です。|すべてのイベント ハンドラー|  

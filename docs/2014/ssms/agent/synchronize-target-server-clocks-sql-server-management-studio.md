@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4fb80502-d271-4d06-bcbc-bfbbceb5f2a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 769b2b9caba541af3a1ea38e1969d8a6422950be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e7150cd42699503ab22cdd89fb6206194bd64e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68188764"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067498"
 ---
 # <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>ターゲット サーバーのクロックの同期 (SQL Server Management Studio)
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のターゲット サーバーのクロックとマスター サーバーのクロックを同期する方法について説明します。 これらのシステム クロックの同期をとると、ジョブのスケジュールを効果的に管理できます。  
@@ -30,7 +29,7 @@ ms.locfileid: "68188764"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ターゲット サーバーのクロックを同期する方法:**  
   

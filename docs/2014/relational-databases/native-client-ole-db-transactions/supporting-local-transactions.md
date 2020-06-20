@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2f16ebe4df94be0d3c9135de508f9743e0336799
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c20dc0af07c43dca1c2441a87e7c0ff427f236cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704483"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017707"
 ---
 # <a name="supporting-local-transactions"></a>ローカル トランザクションのサポート
   セッションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのローカルトランザクションのトランザクションスコープを区切ります。 コンシューマーの指示によっ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] て、Native client OLE DB プロバイダーがの接続されたインスタンスに要求を送信すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要求は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB プロバイダーの作業単位になります。 ローカルトランザクションでは、1つの Native Client OLE DB プロバイダーセッションで、1つまたは複数の作業単位が常にラップさ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] れます。  

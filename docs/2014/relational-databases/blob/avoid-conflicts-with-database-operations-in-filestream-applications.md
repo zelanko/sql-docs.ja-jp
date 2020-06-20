@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fa9321cffd3b6b5edb7ac90fac67867804637b6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010369"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955852"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>FILESTREAM アプリケーションでのデータベース操作との競合の回避
   SqlOpenFilestream() により Win32 ファイル ハンドルを開いて FILESTREAM BLOB データの読み取りまたは書き込みを行うアプリケーションでは、共通のトランザクションで管理される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで競合エラーが発生する場合があります。 この例として、完了までに時間がかかる [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリや MARS クエリなどがあります。 アプリケーションは、このような競合を回避できるように注意深く設計する必要があります。  
@@ -35,7 +34,7 @@ ms.locfileid: "66010369"
   
  \* トランザクションは取り消され、トランザクション コンテキストで開かれたハンドルは無効になります。 アプリケーションは、開いているハンドルをすべて閉じる必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例に、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと FILESTREAM Win32 アクセスで競合が発生する可能性がある場合を示します。  
   
 ### <a name="a-opening-a-filestream-blob-for-write-access"></a>A. 書き込みアクセス用に FILESTREAM BLOB を開く  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19f96adc9932b888f3304257fb9a23a22b06cc87
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054730"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972612"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>子パッケージでの変数およびパラメーターの値の使用
   この手順では、構成の種類として親変数を使用するパッケージ構成を作成する方法について説明します。 この構成の種類を使用すると、親パッケージから実行される子パッケージが親内の変数にアクセスできるようになります。  

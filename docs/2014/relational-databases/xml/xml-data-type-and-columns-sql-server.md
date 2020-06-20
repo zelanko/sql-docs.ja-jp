@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f96d90f620f563877e554c282d9443313bad1b14
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5596a8d4d4bad18c1adc03a5280e199d0fe91e0a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702243"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046329"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML データ型と列 (SQL Server)
   このトピックでは、のデータ型の利点と制限事項について説明 `xml` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。また、XML データの格納方法を選択する際にも役立ちます。  
@@ -114,7 +113,7 @@ ms.locfileid: "82702243"
  構造が多様な XML ドキュメントがある場合、またはリレーショナル構造へのマッピングが難しい複雑なスキーマや複数のスキーマに従った XML ドキュメントがある場合に、ネイティブ XML ストレージが役立ちます。  
   
 #### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>例 : xml データ型を使用した XML データ モデリング  
- トピックごとに章が設けられ、それぞれの章の中には複数の節がある構成の XML 形式の製品マニュアルを考えてみます。 節には項が含まれる場合があります。 したがって、\<section> は再帰要素になります。 製品マニュアルには、混合コンテンツ、図表、および技術データが大量に含まれているので、データは部分的に構造化された状態です。 ユーザーは、「インデックス設定」に関する章の「クラスター化インデックス」に関する節を検索するなど、関心のあるトピックをコンテキストにより検索したり、技術データにクエリを実行します。  
+ トピックごとに章が設けられ、それぞれの章の中には複数の節がある構成の XML 形式の製品マニュアルを考えてみます。 節には項が含まれる場合があります。 その結果、 \<section> は再帰要素になります。 製品マニュアルには、混合コンテンツ、図表、および技術データが大量に含まれているので、データは部分的に構造化された状態です。 ユーザーは、「インデックス設定」に関する章の「クラスター化インデックス」に関する節を検索するなど、関心のあるトピックをコンテキストにより検索したり、技術データにクエリを実行します。  
   
  この XML ドキュメントに適したストレージ モデルは `xml` データ型列です。 このモデルであれば、XML データの InfoSet コンテンツが保持されます。 XML 列にインデックスを設定して、クエリ パフォーマンスを向上できる利点もあります。  
   

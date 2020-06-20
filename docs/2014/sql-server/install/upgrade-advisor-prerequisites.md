@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d21a39e5-5f81-4096-a7dd-f244e4779992
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5875ad2268e14d6bbe276ea437c5ee201867105e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41c97cf585d1768c7aebeec2613ee8744cb220da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632779"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062362"
 ---
 # <a name="upgrade-advisor-prerequisites"></a>アップグレード アドバイザーの前提条件
   ここでは、アップグレード アドバイザーに関するソフトウェアの必要条件について説明します。  
@@ -36,11 +35,11 @@ ms.locfileid: "73632779"
   
 -   Windows インストーラー 4.5。 [Windows インストーラー Web サイト](https://www.microsoft.com/download/details.aspx?id=8483)から Windows インストーラーをインストールできます。  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (.NET Framework 4 以降)。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]製品メディア、SDK、[再頒布可能パッケージ、Service Pack ダウンロード Web サイト](https://go.microsoft.com/fwlink/?LinkId=48882)で入手できます。  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (.NET Framework 4 以降)。 は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 製品メディア、 [SDK、再頒布可能パッケージ、Service Pack ダウンロード Web サイト](https://go.microsoft.com/fwlink/?LinkId=48882)で入手できます。  
   
     -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] メディアから .NET Framework 4 をインストールするには、ディスク ドライブのルートに移動します。 次に、redist フォルダー、DotNetFrameworks フォルダーの順にダブルクリックし、dotNetFx40_Full_x86_x64.exe (32 ビットおよび 64 ビット オペレーティング システム用) を実行します。  
   
--   Scriptdom [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]はアップグレードアドバイザーをインストールするための前提条件であり、アップグレードアドバイザーのセットアップではインストールされません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] セットアップで[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack から scriptdom をダウンロードしてインストールする必要があります。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Scriptdom はアップグレードアドバイザーをインストールするための前提条件で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] あり、アップグレードアドバイザーのセットアップではインストールされません。 セットアップでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Feature Pack から scriptdom をダウンロードしてインストールする必要があり [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ます。  
   
 ## <a name="see-also"></a>参照  
  [アップグレード アドバイザーをインストールする方法](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)  

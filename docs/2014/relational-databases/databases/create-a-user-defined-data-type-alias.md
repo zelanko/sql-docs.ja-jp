@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35db332c23e2df5a8e67c3677cd2411768816765
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917446"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970242"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名の作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]にユーザー定義データ型の別名を新しく作成する方法について説明します。  
@@ -71,7 +70,7 @@ ms.locfileid: "62917446"
      長さは、`nvarchar(max)`、`varchar(max)`、`varbinary(max)` の各データ型に対しては表示されません。  
   
      **Name**  
-     ユーザー定義データ型の別名を新規に作成する場合、ユーザー定義データ型を表すためにデータベース全体で使用する一意の名前を入力します。 最大文字数は、システム`sysname`データ型と一致している必要があります。 既存のユーザー定義データ型の別名は編集できません。  
+     ユーザー定義データ型の別名を新規に作成する場合、ユーザー定義データ型を表すためにデータベース全体で使用する一意の名前を入力します。 最大文字数は、システムデータ型と一致している必要があり `sysname` ます。 既存のユーザー定義データ型の別名は編集できません。  
   
      **Rule**  
      必要に応じて、ユーザー定義データ型の別名にバインドするルールを選択します。  
@@ -92,7 +91,7 @@ ms.locfileid: "62917446"
     |20 - 28|13|  
     |29 - 38|17|  
   
-     および`nchar` `nvarchar`データ型の場合、ストレージ値は常に**長さ**の2倍の値になります。  
+     `nchar`およびデータ型の場合、 `nvarchar` ストレージ値は常に**長さ**の2倍の値になります。  
   
      ストレージは、`nvarchar(max)`、`varchar(max)`、`varbinary(max)` の各データ型に対しては表示されません。  
   

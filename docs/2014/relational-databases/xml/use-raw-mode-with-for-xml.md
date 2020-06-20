@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 06054f9a107e2aaf9fea83cb3879ef672a8520b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b2908a98336ec8a6e12029ad471f22a33d7a4dcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702353"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061184"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML での RAW モードの使用
-  RAW モードでは、クエリの結果セットの各行が XML 要素に変換されます。この XML 要素は、汎用識別子 \<row> を持つか、必要に応じて要素名が付けられます。 既定では、NULL 以外の行セットの各列の値が \<row> 要素の属性にマップされます。 FOR XML 句に ELEMENTS ディレクティブが追加されると、各列の値が \<row> 要素のサブ要素にマップされます。 必要に応じて ELEMENTS ディレクティブと共に XSINIL オプションを指定して、xsi:nil=`"`true`"`の属性を持つ要素に結果セットの NULL 列値をマップできます。  
+  RAW モードでは、クエリの結果セットの各行が、汎用識別子を持つ XML 要素、 \<row> または必要に応じて要素名を指定して変換されます。 既定では、NULL ではない行セットの各列の値は、要素の属性にマップされ \<row> ます。 FOR XML 句に ELEMENTS ディレクティブを追加すると、各列の値が要素のサブ要素にマップされ \<row> ます。 必要に応じて ELEMENTS ディレクティブと共に XSINIL オプションを指定して、xsi:nil=`"`true`"`の属性を持つ要素に結果セットの NULL 列値をマップできます。  
   
  結果として生成される XML のスキーマを要求できます。 XMLDATA オプションを指定すると、インライン XDR スキーマが返されます。 XMLSCHEMA オプションを指定すると、インライン XSD スキーマが返されます。 スキーマはデータの先頭に示されます。 その結果、トップレベルの要素ごとにスキーマの名前空間参照が繰り返されます。  
   

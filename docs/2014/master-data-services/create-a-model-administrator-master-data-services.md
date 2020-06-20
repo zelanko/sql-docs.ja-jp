@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d4a9e07006444cf85a6d453e6dc8e2956d55e78
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78964367"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971822"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>モデル管理者を作成する (マスター データ サービス)
-  で[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、1つまたは複数のモデルのすべてのオブジェクトに対する**更新**権限をグループまたはユーザーに付与する場合は、モデル管理者を作成します。  
+  で [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 、1つまたは複数のモデルのすべてのオブジェクトに対する**更新**権限をグループまたはユーザーに付与する場合は、モデル管理者を作成します。  
   
 > [!TIP]  
 >  管理を簡略化するには、Windows グループまたはローカルグループを作成し、モデル管理者として構成します。 また、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
@@ -52,9 +51,9 @@ ms.locfileid: "78964367"
   
 9. グループまたはユーザーを管理者にする各モデルについて、手順 7 と 8 を実行します。  
   
-10. **[Save]** (保存) をクリックします。  
+10. **[保存]** をクリックします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  モデル オブジェクトまたは階層メンバーに他の権限を割り当てないでください。 この場合、ユーザーは管理者ではなくなり、[**エクスプローラー**] 以外の機能領域でモデルを表示することはできません。  
   
  例外が1つあります。ユーザーが [**階層メンバー** ] タブで階層の**ルート**に割り当てられた**更新**権限を持っている場合、そのユーザーは引き続きモデル管理者と見なされます。  

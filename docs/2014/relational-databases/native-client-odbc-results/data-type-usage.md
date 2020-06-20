@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c95beaa10331e916f7eae54a9e8c78e796d77f59
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8333f45fd9e3b742b3765efaee5ae7a865161bc2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699538"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039575"
 ---
 # <a name="data-type-usage"></a>データ型の使用方法
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次のデータ型の使用が強制されます。  
   
-|データ型|制限事項|  
+|データの種類|制限事項|  
 |---------------|----------------|  
 |日付リテラル|日付リテラルは、SQL_TYPE_TIMESTAMP 列 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**または**smalldatetime**のデータ型) に格納されている場合、時刻の値は 12:00: 00.000 A.M. になります。|  
 |**money**と**smallmoney**|**Money**データ型と**smallmoney**データ型の整数部分のみが重要です。 データ型の変換中に SQL **money**データの小数部が切り捨てられた場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーはエラーではなく警告を返します。|  
