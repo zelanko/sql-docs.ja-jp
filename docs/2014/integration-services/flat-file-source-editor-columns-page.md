@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f8fda95b51f568098b0ac9fc13b8a204adb71c51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f882aae9062d97914c86644a7be0ea126ed9dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058612"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966442"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>[フラット ファイル ソース エディター]\ ([列] ページ)
   **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[列]** ノードを使用すると、出力列を各外部 (変換元) 列にマップできます。  
   
 > [!NOTE]  
->  フラット`FileNameColumnName`ファイルソースのプロパティおよびその出力列`FastParse`のプロパティは、[**フラットファイルソースエディター**] では使用できませんが、**詳細エディター**を使用して設定できます。 これらのプロパティの詳細については、「 [Flat File Custom Properties](data-flow/flat-file-custom-properties.md)」の「フラット ファイル ソース」を参照してください。  
+>  フラットファイル `FileNameColumnName` ソースのプロパティおよび `FastParse` その出力列のプロパティは、[**フラットファイルソースエディター**] では使用できませんが、**詳細エディター**を使用して設定できます。 これらのプロパティの詳細については、「 [Flat File Custom Properties](data-flow/flat-file-custom-properties.md)」の「フラット ファイル ソース」を参照してください。  
   
  フラット ファイル ソースの詳細については、「 [Flat File Source](data-flow/flat-file-source.md)」を参照してください。  
   

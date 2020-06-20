@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9e3d1c8-d492-4beb-93c7-f1bc40d4a910
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 697f70d4435213a991e55adecb51a98120d8df1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 692b06051872084ff5e1b16dfaf1f8198a649d62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091560"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062341"
 ---
 # <a name="upgrade-advisor-progress"></a>アップグレード アドバイザーの進行状況
   アップグレード アドバイザー分析では、選択した各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントの分析を実行する専用アナライザーから開始します。 コンポーネントが分析されると、**進行状況を示すダイアログボックス**が表示されます。  

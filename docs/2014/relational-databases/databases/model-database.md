@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 298723c5031299b1b105f686e188e1e27cfd758c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916948"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965879"
 ---
 # <a name="model-database"></a>model データベース
   **model** データベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに作成するすべてのデータベースのテンプレートとして使用されるデータベースです。 **tempdb** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動するたびに作成されるので、 **model** データベースが常に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムに存在する必要があります。 **model** データベースの内容全体 (データベース オプションを含む) が新しいデータベースにコピーされます。 **model** の設定の一部は、スタートアップ中に新しい **tempdb** を作成するためにも使用されます。このため、 **model** データベースは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムに常に存在する必要があります。  
@@ -49,40 +48,40 @@ ms.locfileid: "62916948"
   
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|はい|  
-|ANSI_NULL_DEFAULT|OFF|はい|  
-|ANSI_NULLS|OFF|はい|  
-|ANSI_PADDING|OFF|はい|  
-|ANSI_WARNINGS|OFF|はい|  
-|ARITHABORT|OFF|はい|  
-|AUTO_CLOSE|OFF|はい|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|Yes|  
+|ANSI_NULL_DEFAULT|OFF|Yes|  
+|ANSI_NULLS|OFF|Yes|  
+|ANSI_PADDING|OFF|Yes|  
+|ANSI_WARNINGS|OFF|Yes|  
+|ARITHABORT|OFF|Yes|  
+|AUTO_CLOSE|OFF|Yes|  
 |AUTO_CREATE_STATISTICS|ON|はい|  
-|AUTO_SHRINK|OFF|はい|  
+|AUTO_SHRINK|OFF|Yes|  
 |AUTO_UPDATE_STATISTICS|ON|はい|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
 |CHANGE_TRACKING|OFF|いいえ|  
-|CONCAT_NULL_YIELDS_NULL|OFF|はい|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
-|CURSOR_DEFAULT|GLOBAL|はい|  
-|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> はい<br /><br /> はい|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
+|CURSOR_DEFAULT|GLOBAL|Yes|  
+|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> [はい]<br /><br /> はい|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
 |DB_CHAINING|OFF|いいえ|  
 |ENCRYPTION|OFF|いいえ|  
-|NUMERIC_ROUNDABORT|OFF|はい|  
-|PAGE_VERIFY|CHECKSUM|はい|  
+|NUMERIC_ROUNDABORT|OFF|Yes|  
+|PAGE_VERIFY|CHECKSUM|Yes|  
 |PARAMETERIZATION|SIMPLE|はい|  
 |QUOTED_IDENTIFIER|OFF|はい|  
-|READ_COMMITTED_SNAPSHOT|OFF|はい|  
-|RECOVERY|エディション 1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に<sup>1</sup>依存|はい|  
+|READ_COMMITTED_SNAPSHOT|OFF|Yes|  
+|RECOVERY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エディション<sup>1</sup>に依存|Yes|  
 |RECURSIVE_TRIGGERS|OFF|はい|  
-|Service Broker のオプション|DISABLE_BROKER|いいえ|  
+|Service Broker のオプション|DISABLE_BROKER|No|  
 |TRUSTWORTHY|OFF|いいえ|  
   
  <sup>1</sup>データベースの現在の復旧モデルを確認するには、「[データベースの復旧モデルを表示または変更](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)する」を参照してください &#40;SQL Server&#41;または[&#41;&#40;transact-sql ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)。  
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)」を参照してください。  
   
-## <a name="restrictions"></a>制限  
+## <a name="restrictions"></a>制約  
  **model** データベースでは、次の操作を実行できません。  
   
 -   ファイルまたはファイル グループの追加。  
@@ -110,7 +109,7 @@ ms.locfileid: "62916948"
 -   WITH ENCRYPTION オプションを使用したプロシージャ、ビュー、またはトリガーの作成。 暗号化キーは、オブジェクトが作成されたデータベースに関連付けられています。 **model** データベースで作成された暗号化オブジェクトは、 **model**データベースのみで使用できます。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [システム データベース](system-databases.md)  
+ [システムデータベース](system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

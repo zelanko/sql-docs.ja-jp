@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1088aafc-14c5-4e7d-9930-606a24c3049b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e3654be0afe51be6566a09897a2656dd53c77696
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad5bc2dbecd153192d7a2a3115d83ecfa1cb765c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062234"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926526"
 ---
 # <a name="access-to-the-integration-services-service"></a>Integration Services サービスへのアクセス
   パッケージの保護レベルによって、パッケージを編集および実行できるユーザーを制限できます。 サーバーで現在実行中のパッケージの一覧を表示できるユーザー、および [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で現在実行中のパッケージを停止できるユーザーを制限するには、追加の保護が必要です。  

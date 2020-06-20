@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5e51cda61bb44d1f143cab50901276b927cca73a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae3b565f858c383775b4fcccfac236c316fcfa4e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176081"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927433"
 ---
 # <a name="what39s-new-database-engine"></a>新機能 (データベースエンジン)&#39;
   この最新リリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]には、データ ストレージ システムを設計、開発、および管理する設計者、開発者、および管理者の能力や生産性を向上させる、以下のような新機能や機能強化が導入されています。 [!INCLUDE[ssDE](../includes/ssde-md.md)]の機能が強化された分野は以下のとおりです。  
@@ -30,11 +29,11 @@ ms.locfileid: "70176081"
  
   
 ###  <a name="sql-server-data-files-in-azure"></a><a name="DataFiles"></a>Azure でのデータファイルの SQL Server  
- [Azure のデータファイルを SQL Server](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] azure blob として格納されているデータベースファイルのネイティブサポートが有効になります。 この機能を使用すると、オンプレ[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ミスまたは Azure の仮想マシンで実行されているデータベースを、Azure Blob Storage のデータ専用のストレージの場所として作成できます。  
+ [Azure のデータファイルを SQL Server](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] azure blob として格納されているデータベースファイルのネイティブサポートが有効になります。 この機能を使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンプレミスまたは Azure の仮想マシンで実行されているデータベースを、Azure Blob Storage のデータ専用のストレージの場所として作成できます。  
   
   
 ###  <a name="host-a-sql-server-database-in-an-azure-virtual-machine"></a><a name="AzureVM"></a>Azure の仮想マシンで SQL Server データベースをホストする  
- Azure 仮想マシン[への SQL Server データベースのデプロイ](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx)ウィザードを使用して、Azure 仮想マシン内の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスからデータベースをホストします。  
+ Azure 仮想マシン[への SQL Server データベースのデプロイ](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx)ウィザードを使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] azure 仮想マシン内ののインスタンスからデータベースをホストします。  
   
   
 ###  <a name="backup-and-restore-enhancements"></a><a name="Backup"></a>バックアップと復元の機能強化  
@@ -42,11 +41,11 @@ ms.locfileid: "70176081"
   
 -   **SQL Server Backup to URL**  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Backup to URL は [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 で導入され、[!INCLUDE[tsql](../includes/tsql-md.md)]、PowerShell、および SMO でのみサポートされています。 で[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]は、を[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]使用して、Azure Blob ストレージサービスに対してバックアップまたは復元を行うことができます。 バックアップ タスクとメンテナンス プランの両方で、この新しいオプションを使用できます。 詳細については、「 [SQL Server Management Studio でのバックアップタスクの使用](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS)」、「[メンテナンスプランウィザードを使用したバックアップ URL の SQL Server](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)」、および「 [SQL Server Management Studio を使用した Azure storage からの復元](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)」を参照してください。  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Backup to URL は [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 で導入され、[!INCLUDE[tsql](../includes/tsql-md.md)]、PowerShell、および SMO でのみサポートされています。 では、を使用して、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Azure Blob ストレージサービスに対してバックアップまたは復元を行うことができます。 バックアップ タスクとメンテナンス プランの両方で、この新しいオプションを使用できます。 詳細については、「 [SQL Server Management Studio でのバックアップタスクの使用](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS)」、「[メンテナンスプランウィザードを使用したバックアップ URL の SQL Server](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)」、および「 [SQL Server Management Studio を使用した Azure storage からの復元](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)」を参照してください。  
   
--   **Azure への SQL Server マネージド バックアップ**  
+-   **Azure へのマネージバックアップの SQL Server**  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Backup to URL を基盤とした [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] は、データベースとログのバックアップを管理およびスケジュール設定するために [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が提供するサービスです。 このリリースでは、Azure storage へのバックアップのみがサポートされています。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] をデータベースとインスタンス レベルの両方で構成して、データベース レベルの詳細な制御とインスタンス レベルの自動化の両方を達成することもできます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、オンプレ[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ミスで実行されて[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]いるインスタンスと、Azure 仮想マシン上で実行されているインスタンスで構成できます。 Azure 仮想マシンで[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]実行されているインスタンスでは、この方法をお勧めします。 詳細については、「 [Azure へのマネージバックアップの SQL Server](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Backup to URL を基盤とした [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] は、データベースとログのバックアップを管理およびスケジュール設定するために [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が提供するサービスです。 このリリースでは、Azure storage へのバックアップのみがサポートされています。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] をデータベースとインスタンス レベルの両方で構成して、データベース レベルの詳細な制御とインスタンス レベルの自動化の両方を達成することもできます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、オンプレミスで実行されているインスタンスと、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Azure 仮想マシン上で実行されているインスタンスで構成できます。 Azure 仮想マシンで実行されているインスタンスでは、この方法をお勧め [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] します。 詳細については、「 [Azure へのマネージバックアップの SQL Server](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
   
 -   **バックアップの暗号化**  
   
@@ -104,7 +103,7 @@ ms.locfileid: "70176081"
    
   
 ###  <a name="buffer-pool-extension"></a><a name="Buffer"></a>バッファープール拡張機能  
- [バッファープール拡張](configure-windows/buffer-pool-extension.md)は、ソリッドステートドライブ (SSD) を不揮発性ランダムアクセスメモリ (NvRAM) 拡張として[!INCLUDE[ssDE](../includes/ssde-md.md)]バッファープールにシームレスに統合することで、i/o スループットを大幅に向上させます。  
+ [バッファープール拡張](configure-windows/buffer-pool-extension.md)は、ソリッドステートドライブ (SSD) を不揮発性ランダムアクセスメモリ (NvRAM) 拡張としてバッファープールにシームレスに統合することで、 [!INCLUDE[ssDE](../includes/ssde-md.md)] i/o スループットを大幅に向上させます。  
    
   
 ###  <a name="incremental-statistics"></a><a name="Stats"></a>増分統計  
@@ -133,13 +132,13 @@ ms.locfileid: "70176081"
  `SELECT ... INTO` ステートメントは改善され、並行して実行できるようになりました。 データベース互換性レベルを 110 以上に設定する必要があります。  
   
 ### <a name="tsql-enhancements-for-in-memory-oltp"></a>[!INCLUDE[tsql](../includes/tsql-md.md)] でのインメモリ OLTP の強化  
- インメモリ OLTP を[!INCLUDE[tsql](../includes/tsql-md.md)]サポートするための変更点の詳細については、「 [Transact-sql によるインメモリ oltp のサポート](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)」を参照してください。  
+ インメモリ OLTP をサポートするための変更点の詳細については [!INCLUDE[tsql](../includes/tsql-md.md)] 、「 [Transact-sql によるインメモリ Oltp のサポート](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)」を参照してください。  
   
   
 ##  <a name="system-view-enhancements"></a><a name="SystemTable"></a>システムビューの機能強化  
   
 ### <a name="sysxml_indexes"></a>sys.xml_indexes  
- [xml_indexes &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql)には`xml_index_type`、、 `xml_index_type_description`、および`path_id`の3つの新しい列があります。  
+ [sys.xml_indexes &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql)には `xml_index_type` 、、、およびの3つの新しい列があり `xml_index_type_description` `path_id` ます。  
   
 ### <a name="sysdm_exec_query_profiles"></a>sys.dm_exec_query_profiles  
  [dm_exec_query_profiles &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql)は、クエリの実行中にリアルタイムのクエリの進行状況を監視します。  
@@ -148,7 +147,7 @@ ms.locfileid: "70176081"
  [column_store_row_groups &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql)では、クラスター化列ストアインデックス情報がセグメント単位で提供されるため、管理者はシステム管理を決定できます。  
   
 ### <a name="sysdatabases"></a>sys.databases  
- [transact-sql&#41;の &#40;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)には`is_auto_create_stats_incremental_on`、、 `is_query_store_on`、および`resource_pool_id`の3つの新しい列があります。  
+ [transact-sql&#41;の &#40;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)には `is_auto_create_stats_incremental_on` 、、 `is_query_store_on` 、およびの3つの新しい列 `resource_pool_id` があります。  
   
 ### <a name="system-view-enhancements-for-in-memory-oltp"></a>インメモリ OLTP に関連するシステム ビューの強化  
  インメモリ OLTP をサポートするシステムビューの機能強化の詳細については、「[インメモリ oltp のシステムビュー、ストアドプロシージャ、dmv、および待機の種類](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)」を参照してください。  
@@ -157,7 +156,7 @@ ms.locfileid: "70176081"
 ##  <a name="security-enhancements"></a><a name="Security"></a>セキュリティの強化  
   
 ### <a name="connect-any-database-permission"></a>CONNECT ANY DATABASE 権限  
- 新しいサーバー レベル権限です。 既存のあらゆるデータベースと今後作成されるすべての新規データベースに接続する必要のあるログインに、**CONNECT ANY DATABASE** を付与します。 接続以外の権限はどのデータベースにおいても一切付与されません。 **SELECT ALL USER SECURABLES**または`VIEW SERVER STATE`を組み合わせて、のインスタンス上のすべてのデータまたはすべての[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベースの状態を監査プロセスで表示できるようにします。  
+ 新しいサーバー レベル権限です。 既存のあらゆるデータベースと今後作成されるすべての新規データベースに接続する必要のあるログインに、**CONNECT ANY DATABASE** を付与します。 接続以外の権限はどのデータベースにおいても一切付与されません。 **SELECT ALL USER SECURABLES**またはを組み合わせて `VIEW SERVER STATE` 、のインスタンス上のすべてのデータまたはすべてのデータベースの状態を監査プロセスで表示できるようにし [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。  
   
 ### <a name="impersonate-any-login-permission"></a>IMPERSONATE ANY LOGIN 権限  
  新しいサーバー レベル権限です。 この権限が付与されていると、中間層プロセスがデータベースに接続するときに、そこに接続するクライアントのアカウントの権限を借用できます。 この権限が拒否されていると、高い特権を持つログインが他のログインの権限を借用するのをブロックできます。 たとえば、**CONTROL SERVER** 権限を持つログインが他のログインの権限を借用するのをブロックできます。  
@@ -168,7 +167,7 @@ ms.locfileid: "70176081"
   
 ##  <a name="deployment-enhancements"></a><a name="Deployment"></a>展開の機能強化  
 ### <a name="azure-vm"></a>Azure VM
-[SQL Server データベースを Microsoft Azure 仮想マシンにデプロイ](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Azure VM へのデータベースのデプロイが可能になります。  
+[SQL Server データベースを Microsoft Azure 仮想マシンにデプロイ](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)すると、Azure VM へのデータベースのデプロイが可能になり [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。  
 
 ### <a name="refs"></a>ReFS
 ReFS でのデータベースの配置がサポートされるようになりました。   

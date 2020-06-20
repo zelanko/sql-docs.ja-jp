@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6e45b1f49c348e6cce329fb918479e92edbe9ae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782316"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935341"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>データベース エンジンへの暗号化接続の有効化 (SQL Server 構成マネージャー)
   このトピックでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 構成マネージャーを使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] の証明書を指定することにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの暗号化接続を有効にする方法について説明します。 サーバー コンピューターには証明書を提供し、クライアント マシンは証明書のルート機関を信頼するように設定する必要があります。 提供は、証明書を Windows にインポートすることでインストールする処理です。  
@@ -37,7 +36,7 @@ ms.locfileid: "62782316"
  クライアントは、サーバーが使用する証明書の所有権を検証できる必要があります。 サーバー証明書に署名した証明機関の公開キー証明書をクライアントが持っている場合は、それ以上の構成は必要ありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows には、多くの証明機関の公開キー証明書が含まれています。 サーバー証明書に署名した公的または私的な証明機関に対する公開キー証明書をクライアントが持っていない場合は、サーバー証明書に署名した証明機関の公開キー証明書をインストールする必要があります。  
   
 > [!NOTE]  
->  フェールオーバー クラスターで暗号化を使用する場合、フェールオーバー クラスター内のすべてのノードに対して、仮想サーバーの完全修飾 DNS 名を使用してサーバー証明書をインストールする必要があります。 たとえば、2ノードのクラスターがあり、test1 という名前のノードがあるとします。会社>.com と test2 です。 * \< *会社>.com という名前の仮想サーバーがあり、仮想サーバーに仮想サーバーがある場合は、仮想サーバーの証明書をインストールする必要があります。 * \< *両方のノードで *、会社>.com です。 \< * **[ForceEncryption]** オプションの値を **[はい]** に設定できます。  
+>  フェールオーバー クラスターで暗号化を使用する場合、フェールオーバー クラスター内のすべてのノードに対して、仮想サーバーの完全修飾 DNS 名を使用してサーバー証明書をインストールする必要があります。 たとえば、"test1." という名前のノードを持つ2ノードクラスターがあると *\<your company>* します。com と *\<your company>* test2.また、仮想サーバーを仮想サーバーとして使用している場合は、仮想サーバーをインストールする必要があり *\<your company>* ます。両方のノードの com。 **[ForceEncryption]** オプションの値を **[はい]** に設定できます。  
   
  **このトピックの内容**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62782316"
   
 ###  <a name="to-provision-install-a-certificate-on-the-server"></a><a name="Provision"></a> サーバーに証明書を提供 (インストール) するには  
   
-1.  [**スタート**] メニューの [ファイルの**実行**] をクリックし、[ `MMC` **名前**] ボックスに「」と入力して、[ **OK**] をクリックします。  
+1.  [**スタート**] メニューの [ファイルの**実行**] をクリックし、[**名前**] ボックスに「」と入力して、 `MMC` [ **OK**] をクリックします。  
   
 2.  MMC コンソールで、[**ファイル**] メニューの [**スナップインの追加と削除**] をクリックします。  
   
@@ -83,9 +82,9 @@ ms.locfileid: "62782316"
   
 ###  <a name="to-configure-the-server-to-accept-encrypted-connections"></a><a name="ConfigureServerConnections"></a> 暗号化された接続を許可するサーバーを構成するには  
   
-1.  **SQL Server 構成マネージャー**で、[ **SQL Server ネットワークの構成**] を展開し、[ _ \<サーバーインスタンス_**のプロトコル**]>を右クリックして、[**プロパティ**] を選択します。  
+1.  **SQL Server 構成マネージャー**で、[**ネットワークの構成**] を SQL Server 展開し、[**のプロトコル**] を右クリックして、[ _\<server instance>_ **プロパティ**] を選択します。  
   
-2.  [_\<インスタンス名>_ **のプロトコル**の**プロパティ**] ダイアログボックスの [**証明書**] タブで、[**証明**書] ボックスのドロップダウンから目的の証明書を選択し、[ **OK**] をクリックします。  
+2.  [プロパティ**のプロトコル** _\<instance name>_ **Properties** ] ダイアログボックスの [**証明書**] タブで、[**証明**書] ボックスの一覧から目的の証明書を選択し、[ **OK]** をクリックします。  
   
 3.  **[フラグ]** タブの **[ForceEncryption]** ボックスの一覧の **[はい]** をクリックし、 **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   

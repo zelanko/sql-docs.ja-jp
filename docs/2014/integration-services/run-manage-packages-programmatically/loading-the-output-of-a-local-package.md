@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 843c5e8cbb857271d4cbd07288e24bfbd98019e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49c4814daf0463c99c7ccda6f16adb039fd58d64
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176622"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964498"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>ローカル パッケージの出力の読み込み
-  クライアント アプリケーションは、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先に出力が保存された場合、または **System.IO** 名前空間のクラスを使用してフラット ファイル変換先に出力が保存された場合に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの出力を読み取ることができます。 ただし、メモリから直接、パッケージの出力を読み取ることもできます。その際、データを保持するための中間手段を必要としません。 このソリューションの重要な鍵は`Microsoft.SqlServer.Dts.DtsClient` 、**ある****名前空間から**の`IDbConnection`、 `IDbCommand`、およびの各インターフェイスの特殊な実装を含む名前空間です。 既定では、アセンブリ Microsoft.SqlServer.Dts.DtsClient.dll は、 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** にインストールされています。
+  クライアント アプリケーションは、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先に出力が保存された場合、または **System.IO** 名前空間のクラスを使用してフラット ファイル変換先に出力が保存された場合に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの出力を読み取ることができます。 ただし、メモリから直接、パッケージの出力を読み取ることもできます。その際、データを保持するための中間手段を必要としません。 このソリューションの重要な鍵は、 `Microsoft.SqlServer.Dts.DtsClient` `IDbConnection` `IDbCommand` **ある**名前空間からの、、 **System.Data**およびの各インターフェイスの特殊な実装を含む名前空間です。 既定では、アセンブリ Microsoft.SqlServer.Dts.DtsClient.dll は、 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** にインストールされています。
 
 > [!NOTE]
 >  このトピックで説明されている手順では、データ フロー タスクおよび親オブジェクトの DelayValidation プロパティが既定値の **False** に設定されている必要があります。
@@ -36,16 +35,16 @@ ms.locfileid: "78176622"
 
 1.  パッケージで、クライアント アプリケーションに読み込む出力を受信するように DataReader 変換先を構成します。 DataReader 変換先にはわかりやすい名前を付けます。この名前は後からクライアント アプリケーションで使用します。 DataReader 変換先の名前はメモしておきます。
 
-2.  開発プロジェクトで、 `Microsoft.SqlServer.Dts.DtsClient`名前空間への参照を設定します。そのためには、アセンブリを検索します。 **Microsoft.SqlServer.Dts.DtsClient.dll** 既定では、このアセンブリは **C:\Program Files\Microsoft SQL Server\100\DTS\Binn** にインストールされます。 C# `Using`また[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports`はステートメントを使用して、コードに名前空間をインポートします。
+2.  開発プロジェクトで、アセンブリMicrosoft.SqlServer.Dts.DtsClient.dllを検索して、名前空間への参照を設定 `Microsoft.SqlServer.Dts.DtsClient` します。 ** ** 既定では、このアセンブリは **C:\Program Files\Microsoft SQL Server\100\DTS\Binn** にインストールされます。 C# またはステートメントを使用して、コードに名前空間をインポートし `Using` [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` ます。
 
-3.  コードでは、パッケージを実行するため`DtsClient.DtsConnection`に**dtexec**が必要とするコマンドラインパラメーターを含む接続文字列を使用して、型のオブジェクトを作成します。 詳細については、「[dtexec ユーティリティ](../packages/dtexec-utility.md)」を参照してください。 次に、この接続文字列を使用して接続を開きます。 **dtexecui** ユーティリティを使用して、必要な接続文字列を視覚的に作成することもできます。
+3.  コードで、 `DtsClient.DtsConnection` パッケージを実行する**dtexec.exe**に必要なコマンドラインパラメーターを含む接続文字列を使用して、型のオブジェクトを作成します。 詳細については、「[dtexec ユーティリティ](../packages/dtexec-utility.md)」を参照してください。 次に、この接続文字列を使用して接続を開きます。 **dtexecui** ユーティリティを使用して、必要な接続文字列を視覚的に作成することもできます。
 
     > [!NOTE]
     >  このサンプル コードは、`/FILE <path and filename>` 構文を使用してファイル システムからパッケージを読み込む方法を示していますが、 `/SQL <package name>` 構文を使用して MSDB データベースからパッケージを読み込んだり、`/DTS \<folder name>\<package name>` 構文を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ストアからパッケージを読み込むこともできます。
 
 4.  前に作成した `DtsClient.DtsCommand` を使用する `DtsConnection` という種類のオブジェクトを作成し、その `CommandText` プロパティに、パッケージ内の DataReader 変換先の名前を設定します。 次に、コマンド オブジェクトの `ExecuteReader` メソッドを呼び出して、パッケージの結果を新しい DataReader に読み込みます。
 
-5.  必要に応じて、`DtsDataParameter` オブジェクトで `DtsCommand` オブジェクトのコレクションを使用して、パッケージに定義された変数に値を渡すことによって、パッケージの出力を間接的にパラメーター化できます。 パッケージ内では、これらの変数をクエリ パラメーターとして、または式で使用して、DataReader 変換先に返される結果に影響を与えることができます。 クライアントアプリケーションから`DtsDataParameter`オブジェクトと共に使用するには、 **dtsclient**名前空間のパッケージでこれらの変数を定義する必要があります。 ([**変数**] ウィンドウの [**変数列の選択**] ツールバーボタンをクリックして、[**名前空間**] 列を表示する必要がある場合があります)。クライアントコードで、を`DtsDataParameter`の`Parameters` `DtsCommand`コレクションに追加する場合は、変数名から dtsclient 名前空間参照を省略します。 次に例を示します。
+5.  必要に応じて、`DtsDataParameter` オブジェクトで `DtsCommand` オブジェクトのコレクションを使用して、パッケージに定義された変数に値を渡すことによって、パッケージの出力を間接的にパラメーター化できます。 パッケージ内では、これらの変数をクエリ パラメーターとして、または式で使用して、DataReader 変換先に返される結果に影響を与えることができます。 クライアントアプリケーションからオブジェクトと共に使用するには、 **dtsclient**名前空間のパッケージでこれらの変数を定義する必要があり `DtsDataParameter` ます。 ([**変数**] ウィンドウの [**変数列の選択**] ツールバーボタンをクリックして、[**名前空間**] 列を表示する必要がある場合があります)。クライアントコードで、をのコレクションに追加する場合は、 `DtsDataParameter` `Parameters` `DtsCommand` 変数名から dtsclient 名前空間参照を省略します。 次に例を示します。
 
     ```
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));
@@ -63,7 +62,7 @@ ms.locfileid: "78176622"
 ## <a name="example"></a>例
  次の例では、1 つの集計値を計算してその値を DataReader 変換先に保存するパッケージを実行します。次に、この値を DataReader から読み取って、Windows フォーム上のテキスト ボックスに表示します。
 
- パッケージの出力をクライアント アプリケーションに読み込む場合は、パラメーターを使用する必要はありません。 パラメーターを使用しない場合は、 **Dtsclient**名前空間の変数の使用を省略し、その`DtsDataParameter`オブジェクトを使用するコードを省略できます。
+ パッケージの出力をクライアント アプリケーションに読み込む場合は、パラメーターを使用する必要はありません。 パラメーターを使用しない場合は、 **Dtsclient**名前空間の変数の使用を省略し、そのオブジェクトを使用するコードを省略でき `DtsDataParameter` ます。
 
 #### <a name="to-create-the-test-package"></a>テスト パッケージを作成するには
 
@@ -93,15 +92,15 @@ ms.locfileid: "78176622"
 
 1.  新しい Windows フォーム アプリケーションを作成します。
 
-2.  **%PROGRAMFILES%\MICROSOFT SQL Server\100\DTS\Binn**で同じ`Microsoft.SqlServer.Dts.DtsClient`名前のアセンブリを参照して、名前空間への参照を追加します。
+2.  `Microsoft.SqlServer.Dts.DtsClient` **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**で同じ名前のアセンブリを参照して、名前空間への参照を追加します。
 
 3.  次のサンプル コードをコピーし、フォームのコード モジュールに貼り付けます。
 
-4.  必要に応じて`dtexecArgs`変数の値を変更し、 **dtexec**がパッケージを実行するために必要なコマンドラインパラメーターが含まれるようにします。 サンプル コードは、ファイル システムからパッケージを読み込みます。
+4.  必要に応じて変数の値を変更して、 `dtexecArgs` パッケージを実行するために**dtexec.exe**に必要なコマンドラインパラメーターが含まれるようにします。 サンプル コードは、ファイル システムからパッケージを読み込みます。
 
-5.  必要に応じて`dataReaderName`変数の値を変更して、パッケージ内の DataReader 変換先の名前が含まれるようにします。
+5.  必要に応じて変数の値を変更して、 `dataReaderName` パッケージ内の DataReader 変換先の名前が含まれるようにします。
 
-6.  ボタンとテキスト ボックスをフォームに追加します。 このサンプルコードで`btnRun`は、ボタンの名前として`txtResults`を使用し、テキストボックスの名前としてを使用します。
+6.  ボタンとテキスト ボックスをフォームに追加します。 このサンプルコードでは、ボタンの名前としてを使用し、 `btnRun` テキストボックスの名前としてを使用し `txtResults` ます。
 
 7.  アプリケーションを実行し、ボタンをクリックします。 パッケージの実行中に一時停止したら、パッケージによって計算された集計値 (Canada の顧客数) が、フォーム上のテキスト ボックスに表示されます。
 

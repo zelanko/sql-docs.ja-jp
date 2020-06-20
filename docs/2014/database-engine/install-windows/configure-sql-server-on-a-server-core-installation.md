@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0c2a82aac84777c0601d234162135f9404184c39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80ef7f8bf0837fa89d94d7a5289d7203081bb58f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797909"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932793"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core インストールでの SQL Server の構成
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 の Server Core インストールで [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] を構成する方法について詳しく説明します。 
@@ -45,7 +44,7 @@ ms.locfileid: "72797909"
 -   [Server Core インストールの管理](https://go.microsoft.com/fwlink/?LinkId=245963)(https://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="install-updates"></a>の更新プログラムをインストールする  
- ここでは、Windows Server Core コンピューターに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の更新プログラムをインストールする方法について説明します。 常に最新のセキュリティ更新プログラムがインストールされた状態になるように、適切なタイミングで最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムを評価してインストールすることをお勧めします。 Windows Server Core コンピューターへ[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ののインストールの詳細については、「 [Install SQL Server 2014 on Server core](install-sql-server-on-server-core.md)」を参照してください。  
+ ここでは、Windows Server Core コンピューターに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の更新プログラムをインストールする方法について説明します。 常に最新のセキュリティ更新プログラムがインストールされた状態になるように、適切なタイミングで最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムを評価してインストールすることをお勧めします。 Windows Server Core コンピューターへののインストールの詳細について [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、「 [Install SQL Server 2014 On Server core](install-sql-server-on-server-core.md)」を参照してください。  
   
  製品の更新プログラムをインストールするための 2 つのシナリオを次に示します。  
   
@@ -122,7 +121,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 5.  [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー] をダブルクリックします。  
   
-6.  Configuration Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で、[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス] をクリックし[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、\<[(インスタンス名>) \<] を右クリックします。ここで、インスタンス名> は AlwaysOn 可用性グループを有効にするローカルサーバーインスタンスの名前です。 [プロパティ] をクリックします。  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager で、[サービス] をクリックし、[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ()] を右クリックし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<instance name> ます。ここで、 \<instance name> は AlwaysOn 可用性グループを有効にするローカルサーバーインスタンスの名前です。 [プロパティ] をクリックします。  
   
 7.  [AlwaysOn 高可用性] タブを選択します。  
   
@@ -210,7 +209,7 @@ $Tcp.Alter()
 $Tcp  
 ```  
   
-##  <a name="sql-server-profiler"></a>SQL Server プロファイラー  
+##  <a name="sql-server-profiler"></a>SQL Server Profiler  
  リモート コンピューターで、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を起動し、[ファイル] メニューの [新しいトレース] をクリックすると、[サーバーへの接続] ダイアログ ボックスが表示されます。このダイアログ ボックスでは、Server Core コンピューター上にある接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定できます。 詳細については、「 [SQL Server Profiler の起動](../../tools/sql-server-profiler/start-sql-server-profiler.md)」を参照してください。  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]の実行に必要な権限の詳細については、「 [SQL Server Profiler の実行に必要な権限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)」を参照してください。  
@@ -223,18 +222,18 @@ $Tcp
 ##  <a name="sql-servevr-command-prompt-utilities"></a>SQL server のコマンドプロンプトユーティリティ  
  次のコマンド プロンプト ユーティリティを使用すると、Server Core コンピューターでの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作のスクリプトを作成できます。 次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に付属する、Server Core 用のコマンド プロンプト ユーティリティの一覧です。  
   
-|**ユーティリティ**|**説明**|**インストール先**|  
+|**Utility**|**説明**|**インストール先**|  
 |-----------------|---------------------|----------------------|  
 |[bcp ユーティリティ](../../tools/bcp-utility.md)|ユーザー指定の形式で、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとデータ ファイルとの間でデータをコピーします。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを構成および実行します。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
-|[Encrypt](../../integration-services/dtutil-utility.md)|SSIS パッケージを管理します。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
+|[dtutil ユーティリティ](../../integration-services/dtutil-utility.md)|SSIS パッケージを管理します。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[osql ユーティリティ](../../tools/osql-utility.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルをコマンド プロンプトで入力できるようになります。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlagent90 アプリケーション](../../tools/sqlagent90-application.md)|コマンド プロンプトから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを開始します。|\<drive>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*instance_name*>\MSSQL\Binn|  
+|[sqlagent90 アプリケーション](../../tools/sqlagent90-application.md)|コマンド プロンプトから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを開始します。|\<drive>: \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ < \Mssql\binn>*instance_name*|  
 |[sqlcmd Utility](../../tools/sqlcmd-utility.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルをコマンド プロンプトで入力できるようになります。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[SQLdiag ユーティリティ](../../tools/sqldiag-utility.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス用の診断情報を収集します。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlmaint ユーティリティ](../../tools/sqlmaint-utility.md)|以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で作成されたデータベース メンテナンス プランを実行します。|\<ドライブ>:\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.MSSQLSERVER\MSSQL\Binn|  
+|[sqlmaint ユーティリティ](../../tools/sqlmaint-utility.md)|以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で作成されたデータベース メンテナンス プランを実行します。|\<drive>: \MSSQL12. ファイルの場合 \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MSSQLSERVER\MSSQL\Binn|  
 |[sqlps ユーティリティ](../../tools/sqlps-utility.md)|PowerShell コマンドおよびスクリプトを実行します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーおよびコマンドレットの読み込みと登録を行います。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlservr アプリケーション](../../tools/sqlservr-application.md)|トラブルシューティングを行うために、コマンド プロンプトから [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスを開始および停止します。|\<ドライブ>:\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.MSSQLSERVER\MSSQL\Binn|  
+|[sqlservr アプリケーション](../../tools/sqlservr-application.md)|トラブルシューティングを行うために、コマンド プロンプトから [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスを開始および停止します。|\<drive>: \MSSQL12. ファイルの場合 \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MSSQLSERVER\MSSQL\Binn|  
   
 ##  <a name="use-troubleshooting-tools"></a>トラブルシューティング ツールの使用  
  [SQLdiag ユーティリティ](../../tools/sqldiag-utility.md) を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] やその他の種類のサーバーからログ ファイルやデータ ファイルを収集したり、サーバーを一定期間にわたって監視したり、サーバーに関する特定の問題をトラブルシューティングしたりすることができます。 SQLdiag は、マイクロソフト カスタマー サポート サービスによる診断情報収集の高速化と簡素化を目的としたユーティリティです。  

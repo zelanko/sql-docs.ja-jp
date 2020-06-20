@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c65b4df915a85cf0ec7c7c0c8c0ff9f6607ad96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184409"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055308"
 ---
 # <a name="sequence-numbers"></a>シーケンス番号
   シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて繰り返されます。 ID 列とは異なり、シーケンスはテーブルには関連付けられていません。 アプリケーションは、シーケンス オブジェクトを参照して、次の値を受け取ります。 シーケンスとテーブルの関係は、アプリケーションによって制御されます。 ユーザー アプリケーションは、シーケンス オブジェクトを参照し、複数の行およびテーブルにわたって値キーを調整できます。  
@@ -56,7 +55,7 @@ ms.locfileid: "63184409"
   
  1 つの [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメント内で同じシーケンス ジェネレーターを指定する `NEXT VALUE FOR` 関数のインスタンスが複数ある場合、これらすべてのインスタンスは、その [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントによって処理される特定の行について同じ値を返します。 この動作は、ANSI 標準と一貫性があります。  
   
-## <a name="typical-use"></a>一般的な使用方法  
+## <a name="typical-use"></a>一般的な用途  
  -2,147,483,648 ～ 2,147,483,647 まで 1 ずつ増分される整数のシーケンス番号を作成するには、次のステートメントを使用します。  
   
 ```  
@@ -78,7 +77,7 @@ CREATE SEQUENCE Schema.SequenceName
 ## <a name="managing-sequences"></a>シーケンスの管理  
  シーケンスの詳細については、「 [sys.sequences](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  関連する例については、「[CREATE SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-sequence-transact-sql)」、「[NEXT VALUE FOR &#40;Transact-SQL&#41;](/sql/t-sql/functions/next-value-for-transact-sql)」、および「[sp_sequence_get_range](/sql/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql)」を参照してください。  
   
 ### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. 1 つのテーブルでシーケンス番号を使用する  

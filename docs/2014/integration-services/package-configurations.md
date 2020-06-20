@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84acc1541e8c66da15405330ca48b41f256811ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056892"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964882"
 ---
 # <a name="package-configurations"></a>[パッケージ構成]
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]には、実行時にプロパティの値を更新するために使用できるパッケージ構成が用意されています。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、実行時にプロパティの値を更新するために使用できるパッケージ構成が用意されています。  
   
 > [!NOTE]  
 >  パッケージ配置モデルの構成を使用できます。 パラメーターは、プロジェクト配置モデルの構成の代わりに使用します。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを配置できます。 配置モデルの詳細については、「 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
@@ -79,12 +78,12 @@ ms.locfileid: "66056892"
   
 -   **/ConfigFile** オプションを使用して、デザイン時に指定した構成を置き換える構成を読み込むことはできません。  
   
- これらのオプションの詳細と、と以前のバージョンで[!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]のこれらのオプションの動作の違いについては、「 [SQL Server 2014 の Integration Services 機能に対する動作の変更](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)」を参照してください。  
+ これらのオプションの詳細と、と以前のバージョンでのこれらのオプションの動作の違いについて [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] は、「 [SQL Server 2014 の Integration Services 機能に対する動作の変更](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)」を参照してください。  
   
 ## <a name="package-configuration-types"></a>パッケージの構成の種類  
  パッケージの構成の種類を次の表に示します。  
   
-|種類|説明|  
+|型|説明|  
 |----------|-----------------|  
 |XML 構成ファイル|XML ファイルに構成を格納します。 XML ファイルは、複数の構成を格納できます。|  
 |環境変数|環境変数に構成を格納します。|  
@@ -123,7 +122,7 @@ ms.locfileid: "66056892"
 ### <a name="registry-entry"></a>レジストリ エントリ  
  レジストリ エントリを使用して構成を格納する場合は、既存のキーを使用するか、HKEY_CURRENT_USER で新しいキーを作成できます。 使用するレジストリ キーには、`Value` という名前の値が必要です。 この値には、DWORD または文字列を指定できます。  
   
- 構成の種類として **[レジストリ エントリ]** を選択した場合は、[レジストリ エントリ] ボックスにレジストリ キーの名前を入力します。 形式は \<registry key> です。 HKEY_CURRENT_USER のルートにないレジストリ キーを使用する場合は、\<Registry key\registry key\\...> の形式を使用してキーを識別します。 たとえば、SSISPackages にある MyPackage キーを使用する場合は、「`SSISPackages\MyPackage`」と入力します。  
+ 構成の種類として **[レジストリ エントリ]** を選択した場合は、[レジストリ エントリ] ボックスにレジストリ キーの名前を入力します。 形式は \<registry key> です。 HKEY_CURRENT_USER のルートにないレジストリキーを使用する場合は、という形式を使用して \<Registry key\registry key\\...> キーを識別します。 たとえば、SSISPackages にある MyPackage キーを使用する場合は、「`SSISPackages\MyPackage`」と入力します。  
   
 ### <a name="sql-server"></a>SQL Server  
  構成の種類として **[SQL Server]** を選択した場合は、構成を格納する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースへの接続を指定します。 構成は、既存のテーブルに保存することも、指定したデータベース内に新しいテーブルを作成して保存することもできます。  

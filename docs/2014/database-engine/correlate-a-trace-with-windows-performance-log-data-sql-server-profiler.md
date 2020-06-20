@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d1b66cbbed716a4ce7b2d5cf9611e161141f162
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065048"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934583"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>トレースと Windows パフォーマンス ログ データの関連付け (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]では、Microsoft Windows システムモニターカウンター [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]またはイベントに関連付けることができます。 Windows システム モニターでは、指定されたカウンターのシステムの利用状況がパフォーマンス ログに記録されます。  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]では、Microsoft Windows システムモニターカウンターをまたはイベントに関連付けることができ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 Windows システム モニターでは、指定されたカウンターのシステムの利用状況がパフォーマンス ログに記録されます。  
   
 > [!NOTE]  
 >  異なるバージョンの Windows 間でログを共有する方法の詳細については、このトピックの最後に記載されている手順を参照してください。  
@@ -33,7 +32,7 @@ ms.locfileid: "66065048"
   
 3.  **[開く]** ダイアログ ボックスで、パフォーマンス ログが含まれているファイルを選択します。 パフォーマンス ログ データは、トレース データがキャプチャされたのと同じ期間にキャプチャされている必要があります。  
   
-4.  **[パフォーマンス カウンター制限]** ダイアログ ボックスで、トレースと一緒に表示するシステム モニター オブジェクトとカウンターに対応するチェック ボックスをオンにします。 [ **OK] をクリックします。**  
+4.  **[パフォーマンス カウンター制限]** ダイアログ ボックスで、トレースと一緒に表示するシステム モニター オブジェクトとカウンターに対応するチェック ボックスをオンにします。 **[OK]** をクリックします。  
   
 5.  トレース イベント ウィンドウでイベントを選択するか、トレース イベント ウィンドウ内のいくつかの隣接する行の間を、方向キーを使用して移動します。 **[システム モニター データ]** ウィンドウ内の赤い縦棒は、選択したトレース イベントと相互に関連しているパフォーマンス ログ データを示します。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66065048"
 11. **[OK]** をクリックし、パフォーマンス ログを作成します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server プロファイラーテンプレートとアクセス許可](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler の起動](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   

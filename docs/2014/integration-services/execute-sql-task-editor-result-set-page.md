@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d84f7fe551d83f609b2ffc3da92b51eb36b9a595
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43921efab592e6642fcc5adaef8caa869a1b524f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058964"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966752"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>[SQL 実行タスク エディター] ([結果セット] ページ)
   **[SQL 実行タスク エディター]** ダイアログ ボックスの **[結果セット]** ページを使用すると、SQL ステートメントの結果を新しい変数または既存の変数にマップできます。 このダイアログ ボックスのオプションは、[全般] ページの **[ResultSet]** が **[なし]** に設定されている場合は無効です。  
@@ -37,12 +36,12 @@ ms.locfileid: "66058964"
  **関連項目**: [SQL 実行タスクにおける結果セット](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
  **変数名**  
- 変数を選択して変数に結果セットをマップするか、[\<**新しい変数...**>] をクリックして **[変数の追加]** ダイアログ ボックスで新しい変数を追加します。  
+ 変数を選択して結果セットを変数にマップするか \<**New variable...**> 、[**変数の追加**] ダイアログボックスを使用して新しい変数を追加します。  
   
  **追加**  
  結果セットのマッピングを追加します。  
   
- **Remove**  
+ **削除**  
  一覧で結果セットのマッピングを選択して、 **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  

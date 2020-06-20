@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 868338d3-29c8-4a55-ab02-51a358d5b7ca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b35c578ca1edbaebb9871d1633627811536f42bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185747"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054318"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>レッスン 1:要求に基づくベスト プラクティスの評価
   要求に基づいた ("アドホック" の) ポリシー評価を使用すると、ベスト プラクティス ポリシーを迅速に評価して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスがベスト プラクティスのガイドラインと推奨事項に適合しているかどうかを判断できます。  
   
- このレッスンでは、 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]1 つ以上のインスタンスでのベストプラクティスポリシーの要求時評価を実行します。  
+ このレッスンでは、の1つ以上のインスタンスでのベストプラクティスポリシーの要求時評価を実行し [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。  
   
  このレッスンの内容は次のとおりです。  
   

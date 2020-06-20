@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c22c9ca183a5975b762fd166ee434f305422e6ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3aa628e0113adbbee48c0fa00d43b56e8773ad7c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891721"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965302"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>手順 3:OLE DB 接続マネージャーの追加と構成
   前の実習では、データ ソースに接続するためのフラット ファイル接続マネージャーを追加しました。次は、データの変換先に接続するための OLE DB 接続マネージャーを追加します。 パッケージに OLE DB 接続マネージャーを追加すれば、OLE DB 対応のデータ ソースからデータを抽出したり、OLE DB 対応のデータ ソースへデータを読み込んだりできるようになります。 OLE DB 接続マネージャーでは、接続に必要なサーバー、認証方法、既定のデータベースを指定できます。  
@@ -34,7 +33,7 @@ ms.locfileid: "62891721"
   
 4.  **[サーバーにログオンする]** で、 **[Windows 認証を使用する]** が選択されていることを確認します。  
   
-5.  [**データベースへの接続**] グループの **[データベース名の選択または入力**] ボックスに、「 `AdventureWorksDW2012`」と入力するか、またはを選択します。  
+5.  [**データベースへの接続**] グループの **[データベース名の選択または入力**] ボックスに、「」と入力するか、またはを選択し `AdventureWorksDW2012` ます。  
   
 6.  **[接続テスト]** をクリックし、指定した接続設定が有効であることを確認します。  
   

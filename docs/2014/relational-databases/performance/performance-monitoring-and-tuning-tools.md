@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 179944412ed72bc0055bf5c47b788a3a929e9844
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9a1f262493b54c06e2bb9eb3d4d6d44bf60d52f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150842"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063948"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>パフォーマンス監視およびチューニング ツール
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベントを監視したり、物理データベース デザインをチューニングしたりするための広範なツール セットが用意されています。 どのツールを選択するかは、実行する監視またはチューニングの種類や、監視するイベントによって異なります。  
@@ -41,23 +40,23 @@ ms.locfileid: "63150842"
 |エラー ログ|Windows アプリケーション イベント ログでは、Windows Server と Windows オペレーティング システム全体で発生しているイベントと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント、およびフルテキスト検索で発生しているイベントの全般的な概要が示されます。 他のツールでは提供されない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベントに関する情報が含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に関連する問題のトラブルシューティングでエラー ログの情報を使用できます。|  
 |[システム ストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)|次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム ストアド プロシージャでは、多くの監視タスクの強力な代替方法が提供されています。<br /><br /> [sp_who &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql): <br />                    このシステム ストアド プロシージャは、現在実行中のステートメントとそのステートメントがブロックされているかどうかなど、現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーおよびプロセスに関するスナップショット情報を報告します。<br /><br /> [sp_lock &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql): オブジェクト ID、インデックス ID、ロックの種類、ロックを適用する種類またはリソースなど、ロックに関するスナップショット情報を報告します。<br /><br /> [sp_spaceused &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql): テーブル (またはデータベース全体) によって使用されている現在のディスク領域の推定値が表示されます。<br /><br /> [sp_monitor &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-monitor-transact-sql): CPU 使用率、i/o 使用率、 **sp_monitor**最後に実行されてからのアイドル時間などの統計情報が表示されます。|  
 |[DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)|DBCC (データベース コンソール コマンド) ステートメントによって、パフォーマンス統計とデータベースの論理的および物理的一貫性を確認できます。|  
-|[組み込み関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions)|組み込み関数では、サーバーが起動してからの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況に関するスナップショット統計が表示されます。この統計は、あらかじめ定義された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターに格納されます。 たとえば、 **@@CPU_BUSY **には、CPU がコードを実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]していた時間が含まれます。**@@CONNECTIONS **には、接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または試行した接続の数が含まれます。および **@@PACKET_ERRORS **には、接続で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]発生しているネットワークパケットの数が含まれています。|  
+|[組み込み関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions)|組み込み関数では、サーバーが起動してからの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況に関するスナップショット統計が表示されます。この統計は、あらかじめ定義された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターに格納されます。 たとえば、 ** @CPU_BUSY @** には、CPU がコードを実行していた時間が含まれ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。**@@CONNECTIONS**接続の数または接続を試行した回数を格納し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **@ @PACKET_ERRORS **には、接続で発生したネットワークパケットの数が含まれ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |[トレース フラグ &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)|トレース フラグでは、サーバー内の特定の利用状況に関する情報が示されます。このトレース フラグを使用して、問題やデッドロック チェーンなどのパフォーマンスの問題を診断します。|  
 |[Database Engine Tuning Advisor](database-engine-tuning-advisor.md)|データベース エンジン チューニング アドバイザーでは、チューニングするデータベースに対して実行した [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントのパフォーマンス効果が分析されます。 データベース エンジン チューニング アドバイザーでは、インデックス、インデックス付きビュー、およびパーティションを追加、削除、または変更するための推奨設定が提供されます。|  
   
 ## <a name="choosing-a-monitoring-tool"></a>監視ツールの選択  
  どの監視ツールを使用するかは、監視対象のイベントまたは利用状況によって決まります。  
   
-|イベントまたは利用状況|SQL Server プロファイラー|Distributed Replay|システム モニター|利用状況モニター|Transact-SQL|エラー ログ|  
+|イベントまたは利用状況|SQL Server Profiler|Distributed Replay|システム モニター|利用状況モニター|Transact-SQL|エラー ログ|  
 |-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
 |傾向分析|はい||はい||||  
 |キャプチャしたイベントの再生|可 (1 台のコンピューターから)|可 (複数のコンピューターから)|||||  
 |アドホック監視|はい|||はい|はい|はい|  
 |警告の生成|||はい||||  
 |グラフィカル インターフェイス|はい||はい|はい||はい|  
-|カスタム アプリケーション内での使用|はい<sup>1</sup>||||はい||  
+|カスタム アプリケーション内での使用|はい <sup>1</sup>||||はい||  
   
- <sup>1</sup>システム[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]ストアドプロシージャを使用します。  
+ <sup>1</sup> [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] システムストアドプロシージャを使用します。  
   
 ## <a name="windows-monitoring-tools"></a>Windows 監視ツール  
  Windows オペレーティング システムおよび Windows Server 2003 では、次の監視ツールが提供されています。  

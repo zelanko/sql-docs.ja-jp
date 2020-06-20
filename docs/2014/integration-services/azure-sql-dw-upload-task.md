@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 112cf764-f85a-4c1a-b732-d299d717c0d4
 author: yualan
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c310ee1d60648ac4b1eb299a0fd291adb86aea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 249f29e40701658ddcc85f4a2a79fc8c0ac2cff5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061290"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925133"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW アップロード タスク
 **Azure SQL DW アップロード タスク** を利用すると、SSIS パッケージで、Azure SQL Data Warehouse (DW) のテーブルにローカル データをアップロードできます。 現在サポートされているソース データ ファイル形式は、UTF8 エンコーディングの区切り記号付きテキストです。 アップロードプロセスは、効率的な PolyBase アプローチに従います。 具体的には、データは最初に Azure Blob Storage にアップロードされ、それから Azure SQL DW にアップロードされます。 そのため、このタスクを利用するには Azure Blob Storage アカウントが必要になります。
@@ -42,7 +41,7 @@ RetainFiles|Azure Storage にアップロードしたファイルを保持する
 CompressionType|Azure Storage にファイルをアップロードするときに使用する圧縮形式を指定します。 ローカル ソースは影響を受けません。
 CompressionLevel|圧縮形式に使用する圧縮レベルを指定します。
 AzureDwConnection|Azure SQL DW の ADO.NET 接続マネージャーを指定します。
-TableName|アップロード先のテーブルの名前を指定します。 既存のテーブル名を選択するか、[ ** \<新しいテーブル**] をクリックして新しいテーブル名を作成し >します。
+TableName|アップロード先のテーブルの名前を指定します。 既存のテーブル名を選択するか、を選択して新しいテーブル名を作成し **\<New Table ...>** ます。
 TableDistribution|新しいテーブルの配布方法を指定します。 **TableName**に新しいテーブル名が指定されている場合に適用されます。
 HashColumnName|ハッシュ テーブル配分に使用される列を指定します。 **TableDistribution** に **HASH**が指定されている場合に適用されます。
 

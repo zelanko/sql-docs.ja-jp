@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 22b7c9ea4012655043cac7eb7f3d432ef1e2e854
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c86dfee37e9b206643069a2d442b27575324ed17
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057047"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964982"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>[OLE DB ソース エディター] ([接続マネージャー] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、ソースの OLE DB 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
@@ -30,7 +29,7 @@ ms.locfileid: "66057047"
 >  [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2003 以前のバージョンを使用するデータ ソースからデータを読み込むには、Excel ソースを使用します。 詳細については、「[[Excel ソース エディター] ([接続マネージャー] ページ)](../../2014/integration-services/excel-source-editor-connection-manager-page.md)」を参照してください。  
   
 > [!NOTE]  
->  OLE DB `CommandTimeout`ソースのプロパティは、 **OLE DB ソースエディター**では使用できませんが、**詳細エディター**を使用して設定できます。 このプロパティの詳細については、「 [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)」(OLE DB のカスタム プロパティ) の Excel ソースのセクションを参照してください。  
+>  `CommandTimeout`OLE DB ソースのプロパティは、 **OLE DB ソースエディター**では使用できませんが、**詳細エディター**を使用して設定できます。 このプロパティの詳細については、「 [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)」(OLE DB のカスタム プロパティ) の Excel ソースのセクションを参照してください。  
   
  OLE DB ソースの詳細については、「 [OLE DB Source](data-flow/ole-db-source.md)」を参照してください。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66057047"
  **OLE DB 接続マネージャー**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
- **新しい**  
+ **[新規作成]**  
  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
   
  **データアクセスモード**  
@@ -59,11 +58,11 @@ ms.locfileid: "66057047"
 |[SQL コマンド]|SQL クエリを使用して、OLE DB データ ソースからデータを取得します。|  
 |[変数からの SQL コマンド]|SQL クエリ テキストを変数で指定します。|  
   
- **［プレビュー］**  
+ **プレビュー**  
  **[データ ビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 **プレビュー** では、最大で 200 行を表示できます。  
   
 > [!NOTE]  
->  データをプレビューするときに、CLR ユーザー定義型を含む列にはデータが表示されません。 その代わりに、\<値が大きすぎて表示できません> または System.Byte[] が値として表示されます。 前者は、SQL OLE DB プロバイダーを使用してデータ ソースにアクセスする場合に表示されます。後者は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client プロバイダーを使用している場合に表示されます。  
+>  データをプレビューするときに、CLR ユーザー定義型を含む列にはデータが表示されません。 代わりに、値 \<value too big to display> または system.string [] が表示されます。 前者は、SQL OLE DB プロバイダーを使用してデータ ソースにアクセスする場合に表示されます。後者は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client プロバイダーを使用している場合に表示されます。  
   
 ## <a name="data-access-mode-dynamic-options"></a>データ アクセス モードの動的オプション  
   
@@ -72,14 +71,14 @@ ms.locfileid: "66057047"
  データ ソースで使用できるテーブルまたはビューの一覧から、テーブルまたはビューの名前を選択します。  
   
 ### <a name="data-access-mode--table-name-or-view-name-variable"></a>[データ アクセス モード] = [テーブル名またはビュー名の変数]  
- **変数名**  
+ **[変数名]**  
  テーブル名またはビュー名を含む変数を選択します。  
   
 ### <a name="data-access-mode--sql-command"></a>[データ アクセス モード] = [SQL コマンド]  
  **[SQL コマンド テキスト]**  
  SQL クエリのテキストを入力し、 **[クエリの作成]** をクリックしてクエリを作成するか、 **[参照]** をクリックしてクエリ テキストを含むファイルを指定します。  
   
- **Parameters**  
+ **パラメーター**  
  クエリ テキスト内でパラメーターのプレースホルダーとして "?" を使用することにより、 パラメーター化クエリを入力した場合は、 **[クエリ パラメーターの設定]** ダイアログ ボックスを使用して、クエリ入力パラメーターをパッケージ変数にマップします。  
   
  **[クエリの作成]**  
@@ -92,7 +91,7 @@ ms.locfileid: "66057047"
  クエリ テキストの構文を検査します。  
   
 ### <a name="data-access-mode--sql-command-from-variable"></a>データ アクセス モードが [変数からの SQL コマンド] の場合  
- **変数名**  
+ **[変数名]**  
  SQL クエリのテキストを含む変数を選択します。  
   
 ## <a name="see-also"></a>参照  

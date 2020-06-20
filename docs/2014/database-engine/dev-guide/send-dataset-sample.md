@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7b622de076f9040fdedaa487baa8f1ec0f759c88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b9d60675ef4c0bdaef1d45c6e8fe230ac70393c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637732"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933384"
 ---
 # <a name="send-dataset-sample"></a>Send DataSet サンプル
   Send `DataSet` サンプルでは、サーバー側の共通言語ランタイム (CLR) ベースのストアド プロシージャ内で、クライアントへの結果セットとして ADO.NET ベースの `DataSet` を返す方法を示します。 この方法は、このようなストアド プロシージャがクエリの結果を使用して `DataSet` にデータを格納し、その `DataSet` に含まれているデータを操作する場合などに役立ちます。 また、ストアド プロシージャによって `DataSet` を新しく作成してデータを設定する場合にも役立ちます。このサンプルは、`DataSetUtilities` および `TestSendDataSet` という 2 つのクラスで構成されています。 `SendDataSet` クラスの `DataSetUtilities` メソッドには、`DataSet` インスタンスのコンテンツをクライアントに送信するための汎用的な手段が実装されています。 `DoTest` クラスで定義されている `TestSendDataSet` メソッドは、`SendDataSet` を作成し、Transact-SQL ストアド プロシージャ `DataSet` から返されたデータを設定することによって、`uspGetTwoBOMTestData` メソッドの動作を検証します。 `uspGetTwoBOMTestData` は、Transact-SQL ストアド プロシージャ `uspGetBillOfMaterials` を 2 回実行し、`usp_GetTwoBOMTestData` ストアド プロシージャへのパラメーターとして指定された 2 つの製品の部品表に対して再帰的にクエリを行います。 データセットに設定されたデータは、`SendDataSet` 呼び出しにより結果セットとしてクライアントへ配信される前に、変更されるのが普通です。 わかりやすくするために、このサンプルではデータを変更せずに返します。  
@@ -48,7 +47,7 @@ ms.locfileid: "73637732"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にするには`ALTER SETTINGS` 、サーバーレベルの権限が必要です。この権限は`sysadmin` 、 `serveradmin`固定サーバーロールおよびのメンバーによって暗黙的に保持されています。  
+    >  CLR を有効にするには、 `ALTER SETTINGS` サーバーレベルの権限が必要です。この権限は、 `sysadmin` 固定サーバーロールおよびのメンバーによって暗黙的に保持されてい `serveradmin` ます。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   

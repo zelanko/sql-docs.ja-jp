@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a485cc23a399496a4c86cc2eab0e8d26b360066e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58ce18de91773a5bea31074ac81c726b0aed3fd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735886"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056720"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>SetCurrentCertificate メソッド (ServerSettings クラス)
   現在のセキュリティ証明書を設定します。  
@@ -39,9 +38,9 @@ SHA
   
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス上のサーバー設定を表す [serversettings Class] class.md) オブジェクトです。  
+ のインスタンス上のサーバー設定を表す [ServerSettings Class] class.md) オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] です。  
   
 #### <a name="parameters"></a>パラメーター  
   

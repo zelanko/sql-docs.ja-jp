@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd364a08781c00eaaf42eb0b1c15e7e5011ed432
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0de7821aa966ecf52eeb214cf5b7fb0fe6eabef2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62867999"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85033253"
 ---
 # <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
     
@@ -79,7 +78,7 @@ ms.locfileid: "62867999"
     SELECT a.c2 FROM a, b;   
     ```  
   
-     UDT `myudt2` が `c2` という名前のプロパティを持たないと仮定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、識別子 `a.c2` がテーブル `c2` の列 `a` を参照するのか、テーブル `a` の列 `c2` のプロパティ `b` を参照するのかを判断できません。  
+     UDT `myudt2` が `c2` という名前のプロパティを持たないと仮定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、識別子 `a.c2` がテーブル `a` の列 `c2` を参照するのか、テーブル `b` の列 `a` のプロパティ `c2` を参照するのかを判断できません。  
   
 ## <a name="user-action"></a>ユーザーの操作  
   

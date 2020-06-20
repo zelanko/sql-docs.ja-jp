@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7af5d166ec3bc059bc2628512564d92fd4cc6cad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fd6ab191e3838de7d461df0626168ff08ef9afa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149995"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064136"
 ---
 # <a name="prepare-the-input-trace-data"></a>入力トレース データの準備
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散再生機能を使用して分散再生を開始する前に、分散再生管理ツールから前処理段階を開始することで、入力トレース データを準備する必要があります。 前処理段階で、Distributed Replay Controller がトレース データを処理し、中間ファイルを生成します。  
@@ -29,7 +28,7 @@ ms.locfileid: "63149995"
   
 ### <a name="to-prepare-the-input-trace-data"></a>入力トレース データを準備するには  
   
-1.  **(省略可能) 前処理構成設定の変更**: 前処理構成設定 (システム セッションをフィルター処理するかどうか、最大アイドル時間を構成するかどうかなど) を変更する場合は、XML ベースの前処理構成ファイル `<PreprocessModifiers>` の `DReplay.exe.preprocess.config`要素を変更する必要があります。 前処理構成ファイルを変更する場合は、元のファイルではなく、コピーを変更することをお勧めします。 設定を変更するには、次の手順に従います。  
+1.  **(省略可能) 前処理構成設定の変更**:前処理構成設定 (システム セッションをフィルター処理するかどうか、最大アイドル時間を構成するかどうかなど) を変更する場合は、XML ベースの前処理構成ファイル `DReplay.exe.preprocess.config` の `<PreprocessModifiers>` 要素を変更する必要があります。 前処理構成ファイルを変更する場合は、元のファイルではなく、コピーを変更することをお勧めします。 設定を変更するには、次の手順に従います。  
   
     1.  既定の前処理構成ファイル `DReplay.exe.preprocess.config`のコピーを作成し、新しいファイルの名前を変更します。 既定の前処理構成ファイルは管理ツールのインストール フォルダーにあります。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "63149995"
   
      前処理構成ファイルの詳細については、「 [Distributed Replay の構成](configure-distributed-replay.md)」を参照してください。  
   
-2.  **前処理段階を開始する**: 入力トレース データを準備するには、 **前処理** オプションを使用して、管理ツールを実行する必要があります。 詳細については、「[前処理オプション &#40;Distributed Replay 管理ツール&#41;](preprocess-option-distributed-replay-administration-tool.md)」を参照してください。  
+2.  **前処理段階を開始する**:入力トレース データを準備するには、**preprocess** オプションを使用して、管理ツールを実行する必要があります。 詳細については、「[前処理オプション &#40;Distributed Replay 管理ツール&#41;](preprocess-option-distributed-replay-administration-tool.md)」を参照してください。  
   
     1.  Windows のコマンド プロンプト ユーティリティ (`CMD.exe`) を開き、Distributed Replay 管理ツール (`DReplay.exe`) のインストール場所に移動します。  
   

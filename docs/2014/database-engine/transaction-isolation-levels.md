@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ee0ba17dc999c9076ca4622d47db28b8200b851
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637782"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928173"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>メモリ最適化テーブルのトランザクション分離レベル
 
@@ -39,7 +38,7 @@ ms.locfileid: "73637782"
   
 -   メモリ最適化テーブルにアクセスするためにより高い分離レベルのヒントを明示的に指定する (WITH (SNAPSHOT) など)。  
   
--   `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 設定オプションを指定する。これにより、(各メモリ最適化テーブルに WITH(SNAPSHOT) ヒントを含めた場合のように) メモリ最適化テーブルの分離レベルが SNAPSHOT に設定されます。 の詳細につい`MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`ては、「 [ALTER database SET Options &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)」を参照してください。  
+-   `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 設定オプションを指定する。これにより、(各メモリ最適化テーブルに WITH(SNAPSHOT) ヒントを含めた場合のように) メモリ最適化テーブルの分離レベルが SNAPSHOT に設定されます。 の詳細について `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` は、「 [ALTER Database SET Options &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)」を参照してください。  
   
  または、セッションの分離レベルが READ COMMITTED である場合は、自動コミット トランザクションを使用できます。  
   

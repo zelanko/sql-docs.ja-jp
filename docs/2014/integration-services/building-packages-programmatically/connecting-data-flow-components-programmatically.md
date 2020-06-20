@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2d3b785785e9f3481b8dfb5f661b4b78f1923629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d079c83b8389c24c766e2ce7d385ad9c1e4a4785
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836341"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924939"
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>プログラムによるデータ フロー コンポーネントの接続
   データ フロー タスクにコンポーネントを追加したら、コンポーネントを接続して、変換元から変換を経由して変換先に至るデータ フローを表す実行ツリーを作成します。 データ フロー内のコンポーネントを接続するには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> オブジェクトを使用します。  
   
 ## <a name="creating-a-path"></a>パスの作成  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> プロパティの New メソッドを呼び出して、新しいパスを作成し、データ フロー タスク内のパスのコレクションに追加します。 このメソッドは、新しく作成され、切断されている <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> オブジェクトを返します。これを使用して 2 つのコンポーネントを接続します。  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> プロパティの New メソッドを呼び出して、新しいパスを作成し、データ フロー タスク内のパスのコレクションに追加します。 このメソッドは、新しく作成され、切断されている <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> オブジェクトを返します。これを使用して 2 つのコンポーネントを接続します。  
   
  パスを接続し、パスに含まれているコンポーネントが接続されたことを通知するには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100.AttachPathAndPropagateNotifications%2A> メソッドを呼び出します。 このメソッドは、上流コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> および下流コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> をパラメーターとして受け取ります。 既定では、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> メソッドを呼び出すと、入力を持つコンポーネントに 1 つの入力、および出力を持つコンポーネントに 1 つの出力が作成されます。 次の例では、この既定の変換元の出力および変換先の入力を使用します。  
   

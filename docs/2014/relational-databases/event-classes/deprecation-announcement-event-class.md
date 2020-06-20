@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16cb4a7d0ac1cec33f3f9907b1b49e5588f45247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c622d4d0c39d685b7808c6c4cf1bebbe7f455b12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663003"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053049"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement イベント クラス
   **Deprecation Announcement** イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の次回メジャー リリースでは削除されないが、将来のバージョンで削除される予定の機能を使用すると発生します。 アプリケーションを長期にわたって使用する場合は、 **Deprecation Announcement** イベント クラスまたは **Deprecation Final Support** イベント クラスの原因になる機能を使用しないでください。  
@@ -47,7 +46,7 @@ ms.locfileid: "62663003"
 |Offset|`int`|ストアド プロシージャ内またはバッチ内のステートメントの開始オフセット。|61|はい|  
 |RequestID|`int`|ステートメントが含まれている要求の ID。|49|はい|  
 |ServerName|`nvarchar`|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
-|SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続し、Login2 としてステートメント`SessionLoginName`を実行する`LoginName`と、によって Login1 と Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
+|SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 を使用してに接続し、Login2 としてステートメントを実行すると、によって `SessionLoginName` Login1 と `LoginName` Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |SqlHandle|`image`|SQL バッチまたはストアド プロシージャの識別に使用できるバイナリ ハンドル。|63|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  

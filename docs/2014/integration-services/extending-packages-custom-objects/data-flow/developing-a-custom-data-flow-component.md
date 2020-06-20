@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 061daaa3b44c151a1f77b075bef66ef90570af98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e1a6af8407813a2a712b0c43c0b06097477f00f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176352"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966519"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>カスタム データ フロー コンポーネントの開発
   データ フロー タスクは、さまざまなデータ ソースに接続し、そのデータを高速で変換およびルーティングするコンポーネントで構成されています。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、拡張可能なオブジェクト モデルが用意されており、開発者はそのオブジェクト モデルを使用して、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] や配置されたパッケージで使用できるカスタム変換元、カスタム変換、およびカスタム変換先を作成できます。 ここでは、カスタム データ フロー コンポーネントの開発に役立つトピックを紹介します。
@@ -37,7 +36,7 @@ ms.locfileid: "78176352"
 
  [実行プランとバッファー割り当て](execution-plan-and-buffer-allocation.md)データフロー実行プランとデータバッファーの割り当てについて説明します。
 
- [データフローでのデータ型の操作](working-with-data-types-in-the-data-flow.md)データフローがデータ型を[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .NET Framework マネージデータ型にマップする方法について説明します。
+ [データフローでのデータ型の操作](working-with-data-types-in-the-data-flow.md)データフローがデータ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 型を .NET Framework マネージデータ型にマップする方法について説明します。
 
  [データフローコンポーネントの検証](validating-a-data-flow-component.md)コンポーネントの構成を検証し、コンポーネントのメタデータを再構成するために使用する方法について説明します。
 
@@ -55,21 +54,21 @@ ms.locfileid: "78176352"
 
  [特定の種類のデータフローコンポーネントの開発](../../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)変換元、変換、および変換先という3種類のデータフローコンポーネントの開発について説明します。
 
-## <a name="reference"></a>リファレンス
+## <a name="reference"></a>関連項目
  <xref:Microsoft.SqlServer.Dts.Pipeline>カスタムデータフローコンポーネントの作成に使用されるクラスとインターフェイスが含まれています。
 
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>データフロータスクオブジェクトモデルを構成するクラスとインターフェイスが含まれています。これは、カスタムデータフローコンポーネントを作成したり、データフロータスクを作成したりするために使用されます。
 
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design>データフローコンポーネントのユーザーインターフェイスを作成するために使用されるクラスとインターフェイスが含まれています。
 
- [Integration Services のエラーとメッセージの参照](../../integration-services-error-and-message-reference.md)定義済み[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]のエラーコードとそのシンボル名と説明を一覧表示します。
+ [Integration Services のエラーとメッセージの参照](../../integration-services-error-and-message-reference.md)定義済みの [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] エラーコードとそのシンボル名と説明を一覧表示します。
 
 ## <a name="related-sections"></a>関連項目
 
 ### <a name="information-common-to-all-custom-objects"></a>すべてのカスタム オブジェクトに共通の情報
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なカスタム オブジェクトのすべての種類に共通の情報については、次のトピックを参照してください。
 
- [Integration Services 用のカスタムオブジェクトの開発](../../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)のすべての種類のカスタムオブジェクトを実装するため[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]の基本的な手順について説明します。
+ [Integration Services 用のカスタムオブジェクトの開発](../../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)のすべての種類のカスタムオブジェクトを実装するための基本的な手順について説明し [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ます。
 
  [カスタムオブジェクトの永続](../../extending-packages-custom-objects/persisting-custom-objects.md)化カスタムの永続性について説明し、必要な場合について説明します。
 

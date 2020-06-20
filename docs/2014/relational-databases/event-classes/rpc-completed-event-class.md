@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a16d34ca8865174d9d05dc08f01402a9d87187b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046767"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052593"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed イベント クラス
   RPC:Completed イベント クラスは、リモート プロシージャ コールが完了したことを示します。  
@@ -36,7 +35,7 @@ ms.locfileid: "63046767"
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |Duration|`bigint`|イベントによって使用された時間。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]からは、マイクロ秒単位。 それより前のバージョンではミリ秒単位。|13|はい|  
 |EndTime|`datetime`|リモート プロシージャ コールの終了時刻。|15|はい|  
-|Error|`int`|特定のイベントのエラー番号。<br /><br /> 0 = OK<br /><br /> 1 = エラー<br /><br /> 2 = 中止<br /><br /> 3 = スキップ|31|はい|  
+|エラー|`int`|特定のイベントのエラー番号。<br /><br /> 0 = OK<br /><br /> 1 = エラー<br /><br /> 2 = 中止<br /><br /> 3 = スキップ|31|はい|  
 |EventClass|`int`|イベントの種類 = 10。|27|いいえ|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  

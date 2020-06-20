@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80e858e75cec96b7e56e16fa7465a22048563726
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808400"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934613"
 ---
 # <a name="connection-properties-dialog-box"></a>[接続プロパティ] ダイアログ ボックス
   このダイアログ ボックスを使用すると、現在の接続プロパティを表示できます。 このダイアログ ボックスは、オブジェクト エクスプローラーの各種のダイアログ ボックスで **[接続のプロパティを表示します]** をクリックすると表示されます。 このページに表示されるプロパティは読み取り専用です。  
@@ -29,7 +28,7 @@ ms.locfileid: "62808400"
  SQL Azure のクエリ タイムアウト期間は 30 分であることに注意してください。  
   
 ## <a name="authentication"></a>認証  
- 現在の接続の認証プロパティを表示します。 認証プロパティとは、接続が確立されたときのログインと認証方法です。 認証プロパティを変更するには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]から切断してから、目的の接続オプションを使用してオブジェクトエクスプローラーサーバーにもう一度接続します。  
+ 現在の接続の認証プロパティを表示します。 認証プロパティとは、接続が確立されたときのログインと認証方法です。 認証プロパティを変更するには、から切断してから、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目的の接続オプションを使用してオブジェクトエクスプローラーサーバーにもう一度接続します。  
   
  **認証方法**  
  現在の接続に使用された認証方法。  

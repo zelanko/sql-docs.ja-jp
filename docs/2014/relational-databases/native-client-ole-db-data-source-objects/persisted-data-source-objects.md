@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3e4eaf05eb6334a9df316642adbeb4086be079ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 584032b958494e6b33b729a8d0657a4ee544a86e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707413"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056358"
 ---
 # <a name="persisted-data-source-objects"></a>保存されるデータ ソース オブジェクト
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、 **IPersistFile**インターフェイスを使用して、永続化されたデータソースオブジェクトをサポートします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **A. データ ソースの初期化の保存 :**  
   
  次の例では、サーバー、データベース、および接続用の Windows 認証モードを定義しているデータ ソースの初期化プロパティを保存する関数を示します。 サーバー名とデータベース名は、関数の *pLocation* パラメーターと *pDatasource* パラメーターで受け取ります。  

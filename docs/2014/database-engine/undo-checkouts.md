@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6596b20-3aa5-4dc4-a4c5-3649f1f5a20e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00662ef396ff114e4b77d70aa2f60863e8f94bd3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773398"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927845"
 ---
 # <a name="undo-checkouts"></a>チェックアウトの取り消し
   [**チェックアウトの取り消し**] コマンドを使用すると、既存のチェックアウトを取り消すことができます。 この機能は、ファイルを変更して保存した後に、その変更をロールバックする必要が生じた場合などに特に便利です。  
@@ -45,13 +44,13 @@ ms.locfileid: "62773398"
      **名前**  
      チェックアウトを取り消す項目の名前を表示します。 選択した項目の横にチェックボックスが表示されます。 項目のチェックアウトを取り消さない場合は、チェック ボックスをオフにします。  
   
-     **[オプション]**  
+     **Options**  
      ボタンの右側の矢印をクリックすると、ソース管理のプラグインに固有のチェックアウトの取り消しオプションが表示されます。  
   
-     **基づく**  
+     **並べ替え**  
      表示列の順序を並べ替えます。  
   
-     **[ツリー表示]**  
+     **ツリー ビュー**  
      チェックアウトを元に戻す項目のフォルダーおよび項目階層を表示します。  
   
      **[チェックアウトの取り消し]**  

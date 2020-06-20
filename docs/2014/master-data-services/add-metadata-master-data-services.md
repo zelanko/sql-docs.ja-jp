@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 74599a76-3fa4-4ac9-9d16-e0a03c15a762
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64093c4a0db4a4fc31f287fe908757de13a3462e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054287"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972299"
 ---
 # <a name="add-metadata-master-data-services"></a>メタデータの追加 (マスター データ サービス)
-  で[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、ユーザー定義のメタデータを**メタデータ**モデルに追加して、モデルオブジェクトを記述します。  
+  で [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 、ユーザー定義のメタデータを**メタデータ**モデルに追加して、モデルオブジェクトを記述します。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
@@ -34,7 +33,7 @@ ms.locfileid: "66054287"
   
 ### <a name="to-add-metadata"></a>メタデータを追加するには  
   
-1.  ホームページの [**モデル**] ボックスの一覧で、**メタデータ**モデルを選択します。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]ホームページの [**モデル**] ボックスの一覧で、**メタデータ**モデルを選択します。  
   
 2.  **[バージョン]** ボックスの一覧からバージョンを選択します。  
   

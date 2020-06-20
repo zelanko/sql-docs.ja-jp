@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42dd04f4edf2d1e9b9b31b11ab96fcd97f9d21d6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892281"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966182"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) の変数
   変数には、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージとそのコンテナー、タスク、およびイベント ハンドラーが実行時に使用できる値が格納されます。 スクリプト タスクおよびスクリプト コンポーネント内のスクリプトも、変数を使用できます。 タスクとコンテナーにワークフロー内での順位を付ける優先順位制約では、制約の定義に式を含める場合に変数を使用できます。  
@@ -86,7 +85,7 @@ ms.locfileid: "62892281"
  変数の説明を指定します。  
   
  EvaluateAsExpression  
- プロパティがに`True`設定されている場合は、指定された式を使用して変数の値が設定されます。  
+ プロパティがに設定されている場合は、指定された式を使用して `True` 変数の値が設定されます。  
   
  正規表現  
  変数に割り当てられる式を指定します。  
@@ -103,7 +102,7 @@ ms.locfileid: "62892281"
  ReadOnly  
  このプロパティを `False` に設定すると、変数は読み取り/書き込み用となります。  
   
- スコープ  
+ Scope  
  > [!NOTE]  
 >  **[変数]** ウィンドウの **[変数の移動]** をクリックすることによってしか、このプロパティの設定は変更できません。  
   
@@ -114,19 +113,19 @@ ms.locfileid: "62892281"
  [IncludeInDebugDump]  
  変数値がデバッグ ダンプ ファイルに含まれるかどうかを示します。  
   
- ユーザー定義変数およびシステム変数の場合、 **[inclueindebugdump]** オプションの既定値は`true`です。  
+ ユーザー定義変数およびシステム変数の場合、 **[inclueindebugdump]** オプションの既定値は `true` です。  
   
- ただし、ユーザー定義変数の場合、次の条件が**IncludeInDebugDump**満たされると`false` 、システムは [includeindebugdump] オプションをにリセットします。  
+ ただし、ユーザー定義変数の場合、次の**IncludeInDebugDump** `false` 条件が満たされると、システムは [includeindebugdump] オプションをにリセットします。  
   
--   **EvaluateAsExpression** variable プロパティがに`true`設定されている場合、システムは **[includeindebugdump]** オプション`false`をにリセットします。  
+-   **EvaluateAsExpression** variable プロパティがに設定されている場合、 `true` システムは **[includeindebugdump]** オプションをにリセットし `false` ます。  
   
-     式のテキストを変数値としてデバッグダンプファイルに含めるには、 **[includeindebugdump]** オプションをに`true`設定します。  
+     式のテキストを変数値としてデバッグダンプファイルに含めるには、 **[includeindebugdump]** オプションをに設定し `true` ます。  
   
--   変数のデータ型が文字列に変更されると、システムは **[includeindebugdump]** オプションをに`false`リセットします。  
+-   変数のデータ型が文字列に変更されると、システムは **[includeindebugdump]** オプションをにリセットし `false` ます。  
   
- システムによって **[includeindebugdump]** オプションがに`false`リセットされると、ユーザーが選択した値が上書きされる可能性があります。  
+ システムによって **[includeindebugdump]** オプションがにリセットされると `false` 、ユーザーが選択した値が上書きされる可能性があります。  
   
- [値]  
+ 値  
  ユーザー定義変数の値には、リテラルまたは式を設定できます。 変数には、変数値および変数のデータ型を設定するオプションが含まれています。 この 2 つのプロパティには互換性が必要です。たとえば、文字列の値を整数データ型に使用することはできません。  
   
  変数を式として評価するように構成した場合は、式を指定する必要があります。 式は実行時に評価され、変数は評価結果に設定されます。 たとえば、変数が式 `DATEPART("month", GETDATE())` を使用している場合、変数の値は、現在の日付の月と等しい数値になります。 式は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 式の構文文法を使用する、有効な式である必要があります。 変数に式を使用する場合、リテラルおよび式文法が提供する演算子と関数も使用できますが、パッケージ内のデータ フローの列は参照できません。 式の最大長は 4,000 文字です。 詳細については、「 [Integration Services (SSIS) 式](expressions/integration-services-ssis-expressions.md)に評価されるまでそのワークフローを繰り返します。  

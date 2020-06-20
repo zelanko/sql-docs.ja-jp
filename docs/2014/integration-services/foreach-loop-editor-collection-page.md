@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5b9396ab5a25bba979859ac685c4759b8b01c24d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77604faa4cb32fc7babf273717422621b39648aa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66428798"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966422"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>[Foreach ループ エディター] ([コレクション] ページ)
   **[Foreach ループ エディター]** ダイアログ ボックスの **[コレクション]** ページを使用すると、列挙子の型を指定して列挙子を構成できます。  
@@ -25,10 +24,10 @@ ms.locfileid: "66428798"
  Foreach ループ コンテナーとその構成方法については、「 [Foreach ループ コンテナー](control-flow/foreach-loop-container.md) 」と「 [Foreach ループ コンテナーを構成する](../../2014/integration-services/configure-a-foreach-loop-container.md)」を参照してください。  
   
 ## <a name="static-options"></a>静的オプション  
- **列挙子**  
+ **子**  
  列挙子の型を一覧から選択します。 このプロパティのオプションを次の表に示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[Foreach File 列挙子]**|ファイルを列挙します。 この値を選択すると、セクション **[Foreach File 列挙子]** に動的オプションが表示されます。|  
 |**[Foreach Item 列挙子]**|アイテム内の値を列挙します。 この値を選択すると、セクション **[Foreach Item 列挙子]** に動的オプションが表示されます。|  
@@ -103,7 +102,7 @@ ms.locfileid: "66428798"
  **列のデータ型**  
  アクティブな列のデータ型を一覧表示します。  
   
- **Remove**  
+ **削除**  
  アイテムを一覧から削除するには、そのアイテムを選択してから **[削除]** をクリックします。  
   
  **[列]**  
@@ -115,7 +114,7 @@ ms.locfileid: "66428798"
  Foreach ADO 列挙子は、変数に格納されている ADO オブジェクトまたは ADO.NET オブジェクト内の行またはテーブルを列挙するために使用します。 たとえば、変数にデータセットを書き込むスクリプト タスクが Foreach ループに含まれている場合、Foreach ADO 列挙子を使用して、データセット内の行を列挙できます。 変数に ADO.NET データセットが格納されている場合は、複数のテーブル内の行を列挙するか、テーブルを列挙するようにこの列挙子を構成できます。  
   
  **[ADO オブジェクト ソース変数]**  
- ユーザー定義変数を一覧から選択するか、[ \<**新しい変数...**> をクリックして新しい変数を作成します。  
+ ユーザー定義変数を一覧から選択するか、をクリックして \<**New variable...**> 新しい変数を作成します。  
   
 > [!NOTE]  
 >  変数は、Object データ型にする必要があります。それ以外の場合はエラーが発生します。  
@@ -135,14 +134,14 @@ ms.locfileid: "66428798"
  Foreach ADO.NET Schema Rowset 列挙子は、指定したデータ ソースのスキーマを列挙するために使用します。 たとえば、Foreach ループに SQL 実行タスクが含まれている場合、Foreach ADO.NET Schema Rowset 列挙子を使用して、 **AdventureWorks** データベース内の列や、スキーマ権限を取得するための SQL 実行タスクなど、スキーマを列挙できます。  
   
  **接続**  
- ADO.NET 接続マネージャーを一覧から選択するか、[ \<**新しい接続...**> をクリックして新しい ADO.NET 接続マネージャーを作成します。  
+ ADO.NET 接続マネージャーを一覧から選択するか、をクリックして \<**New connection...**> 新しい ADO.NET 接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  ADO.NET 接続マネージャーでは、OLE DB の .NET プロバイダーを使用する必要があります。 SQL Server に接続する場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client の使用をお勧めします。このプロバイダーは、 **[接続マネージャー]** ダイアログ ボックスの **[OleDb の .Net プロバイダー]** セクションに一覧表示されます。  
   
  **関連項目:** [ADO 接続マネージャー](connection-manager/ado-connection-manager.md)、 [ADO.NET の接続マネージャーの構成](configure-ado-net-connection-manager.md)  
   
- **スキーマ**  
+ **[スキーマ]**  
  列挙するスキーマを選択します。  
   
  **[制限の設定]**  
@@ -153,42 +152,42 @@ ms.locfileid: "66428798"
 ### <a name="enumerator--foreach-from-variable-enumerator"></a>[Enumerator] = [Foreach From Variable 列挙子]  
  Foreach From Variable 列挙子は、指定した変数に含まれる列挙可能なオブジェクトを列挙するために使用します。 たとえば、クエリを実行し、その結果を変数に格納する SQL 実行タスクが Foreach ループに含まれている場合、Foreach From Variable 列挙子を使用してクエリの結果を列挙できます。  
   
- **変数**  
- 変数を一覧から選択するか、[ \<**新しい変数...** ] をクリックして新しい変数を作成> ます。  
+ **Variable**  
+ 一覧から変数を選択するか、をクリックして \<**New variable...**> 新しい変数を作成します。  
   
  **関連トピック:** [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)[変数の追加](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>[Enumerator] = [Foreach NodeList 列挙子]  
  Foreach Nodelist 列挙子は、XPath 式を XML ファイルに適用した結果として生成された XML ノードのセットを列挙するために使用します。 たとえば、Foreach ループにスクリプト タスクが含まれている場合、Foreach NodeList 列挙子を使用して、XPath 式の条件を満たす値を XML ファイルからスクリプト タスクに渡すことができます。  
   
- XML ファイルに適用される XPath 式は、OuterXPathString プロパティに格納された外部 XPath 操作です。 XPath 列挙型がに`ElementCollection`設定されている場合、Foreach ノード列挙子は、innerxpath 文字列プロパティに格納されている内部 XPath 式を要素のコレクションに適用できます。  
+ XML ファイルに適用される XPath 式は、OuterXPathString プロパティに格納された外部 XPath 操作です。 XPath 列挙型がに設定されている場合 `ElementCollection` 、Foreach ノード列挙子は、Innerxpath 文字列プロパティに格納されている内部 XPath 式を要素のコレクションに適用できます。  
   
  XML ドキュメントとデータの操作の詳細については、MSDN ライブラリの「[.NET Framework における XML の使用](https://go.microsoft.com/fwlink/?LinkId=56214)」を参照してください。  
   
  **[DocumentSourceType]**  
  XML ドキュメントのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
-|**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
+|**Variable**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **[DocumentSource]**  
  **[Documentsourcetype]** が [**直接入力**] に設定されている場合は、xml コードを入力するか、省略記号ボタン ([...]) をクリックして [**ドキュメントソース**エディター] ダイアログボックスを使用して xml を指定します。  
   
- **[Documentsourcetype]** が [**ファイル接続**] に設定されている場合は、ファイル\<接続マネージャーを選択するか、[**新しい接続...**> をクリックして新しい接続マネージャーを作成します。  
+ **[Documentsourcetype]** が [**ファイル接続**] に設定されている場合は、ファイル接続マネージャーを選択するか、をクリックして \<**New connection...**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[Documentsourcetype]** が**variable**に設定されている場合は、既存の\<変数を選択するか、[新しい変数 **...**> をクリックして新しい変数を作成します。  
+ **[Documentsourcetype]** が**variable**に設定されている場合は、既存の変数を選択するか、をクリックして \<**New variable...**> 新しい変数を作成します。  
   
  **関連項目: ** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
  **[EnumerationType]**  
  一覧から列挙型を選択します。 このプロパティのオプションを次の表に示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[Navigator]**|XPathNavigator を使用して列挙します。|  
 |**Node**|XPath 操作によって返されたノードを列挙します。|  
@@ -198,43 +197,43 @@ ms.locfileid: "66428798"
  **[OuterXPathStringSourceType]**  
  XPath 文字列のソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
-|**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
+|**Variable**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  `OuterXPathString`  
  **[OuterXPathStringSourceType]** が **[直接入力]** に設定されている場合は、XPath 文字列を指定します。  
   
- **[Outerxpathstringsourcetype]** が [**ファイル接続**] に設定されている場合は、ファイル\<接続マネージャーを選択するか、[**新しい接続...**> をクリックして新しい接続マネージャーを作成します。  
+ **[Outerxpathstringsourcetype]** が [**ファイル接続**] に設定されている場合は、ファイル接続マネージャーを選択するか、をクリックして \<**New connection...**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[Outerxpathstringsourcetype]** が**variable**に設定されている場合は、既存の\<変数を選択するか、[新しい変数 **...**> をクリックして新しい変数を作成します。  
+ **[Outerxpathstringsourcetype]** が**variable**に設定されている場合は、既存の変数を選択するか、をクリックして \<**New variable...**> 新しい変数を作成します。  
   
  **関連項目: ** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
  **[InnerElementType]**  
- **EnumerationType**がに`ElementCollection`設定されている場合は、リスト内の内部要素の種類を選択します。  
+ **EnumerationType**がに設定されている場合は `ElementCollection` 、リスト内の内部要素の種類を選択します。  
   
  **[InnerXPathStringSourceType]**  
  内部 XPath 文字列のソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
-|**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
+|**Variable**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  `InnerXPathString`  
  **[InnerXPathStringSourceType]** が **[直接入力]** に設定されている場合は、XPath 文字列を指定します。  
   
- **[Innerxpathstringsourcetype]** が [**ファイル接続**] に設定されている場合は、ファイル\<接続マネージャーを選択するか、[**新しい接続...**> をクリックして新しい接続マネージャーを作成します。  
+ **[Innerxpathstringsourcetype]** が [**ファイル接続**] に設定されている場合は、ファイル接続マネージャーを選択するか、をクリックして \<**New connection...**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[Innerxpathstringsourcetype]** が**variable**に設定されている場合は、既存の\<変数を選択するか、[新しい変数 **...**> をクリックして新しい変数を作成します。  
+ **[Innerxpathstringsourcetype]** が**variable**に設定されている場合は、既存の変数を選択するか、をクリックして \<**New variable...**> 新しい変数を作成します。  
   
  **関連項目: ** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
@@ -242,7 +241,7 @@ ms.locfileid: "66428798"
  Foreach SMO 列挙子は、SQL Server 管理オブジェクト (SMO) のオブジェクトを列挙するために使用します。 たとえば、Foreach ループに SQL 実行タスクが含まれている場合、Foreach SMO 列挙子を使用して、 **AdventureWorks** データベース内のテーブルを列挙し、各テーブル内の行数をカウントするクエリを実行できます。  
   
  **接続**  
- 既存の ADO.NET 接続マネージャーを選択するか\<、[**新しい接続...**> をクリックして新しい接続マネージャーを作成します。  
+ 既存の ADO.NET 接続マネージャーを選択するか、をクリックして \<**New connection...**> 新しい接続マネージャーを作成します。  
   
  関連項目 : 「 [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)」  
   
@@ -274,7 +273,7 @@ ms.locfileid: "66428798"
  **BLOB 時間範囲フィルター**  
  時間範囲フィルターを指定します。 **TimeRangeFrom** の後から **TimeRangeTo** の前までに変更されたファイルが列挙されます。  
 ### <a name="enumerator--foreach-adls-file-enumerator"></a> [列挙子] = [Foreach ADLS File 列挙子]  
-**Adls ファイル列挙子**を使用すると、SSIS パッケージはフィルターを使用して adls 上のファイルを列挙できます。 列挙され`/`たファイルのスラッシュ () で始まる完全なパスは、変数に格納し、Foreach ループコンテナー内のタスクで使用できます。
+**Adls ファイル列挙子**を使用すると、SSIS パッケージはフィルターを使用して adls 上のファイルを列挙できます。 列挙された `/` ファイルのスラッシュ () で始まる完全なパスは、変数に格納し、Foreach ループコンテナー内のタスクで使用できます。
   
 **[AzureDataLakeConnection]**  
 Azure Data Lake 接続マネージャーを指定するか、ADLS アカウントを参照する新しい接続マネージャーを作成します。   
