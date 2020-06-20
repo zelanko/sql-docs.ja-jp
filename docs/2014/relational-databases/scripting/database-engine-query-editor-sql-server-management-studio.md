@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c7737cf46d3e82eb6aef0e915d1e572ae0fca94
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d6e70da414127936fa87ad5b410620f266a15a70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703989"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056839"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>データベース エンジン クエリ エディター (SQL Server Management Studio)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含んだスクリプトの作成と実行を行います。 **sqlcmd** コマンドを含んだスクリプトの実行もサポートされます。  
@@ -77,7 +76,7 @@ ms.locfileid: "82703989"
  **[クエリ実行のキャンセル]**  
  キャンセル要求をサーバーに送信します。 即座にキャンセルできないクエリもあります。そのようなクエリは、適切なキャンセル条件が整うまでキャンセルできません。 トランザクションが取り消されると、トランザクションがロールバックされる間に遅延が発生することがあります。  
   
- **分解**  
+ **Parse**  
  選択されているコードの構文をチェックします。 コードが選択されていない場合は、クエリ エディター ウィンドウ内のコード全体の構文をチェックします。  
   
  **[推定実行プランの表示]**  
@@ -124,7 +123,7 @@ ms.locfileid: "82703989"
 ## <a name="sql-editor-toolbar"></a>SQL エディター ツール バー  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いているときに、 **[表示]** メニューから **[ツール バー]**、 **[デバッグ]** の順に選択すると、[デバッグ] ツール バーが追加されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いていない状態で [デバッグ] ツール バーを追加した場合、ボタンは使用できません。  
   
- **続行**  
+ **Continue**  
  ブレークポイントに達するまで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウ内のコードを実行します。  
   
  **[すべて中断]**  
@@ -142,7 +141,7 @@ ms.locfileid: "82703989"
  **[ステップ オーバー]**  
  次のステートメントが実行されます。 ステートメントで Transact-SQL ストアド プロシージャ、関数、またはトリガーが呼び出される場合、モジュールは完了するまで実行され、その結果が呼び出し元のコードに返されます。 モジュールにエラーがないことがわかっている場合は、それをステップ オーバーできます。 実行は、モジュールへの呼び出しに続くステートメントで一時停止します。  
   
- **ステップ アウト**  
+ **[ステップ アウト]**  
  この次に高い呼び出しレベル (関数、ストアド プロシージャ、またはトリガー) に戻ります。 実行は、ストアド プロシージャ、関数、またはトリガーの呼び出しに続くステートメントで一時停止します。  
   
  **Windows**  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2d1c1e70e704c50b619a34b28a899ce10316d446
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 993cfb67d4e6b72eec7cc0537e9b47371e94af10
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704707"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011194"
 ---
 # <a name="updating-data-in-rowsets"></a>行セット内のデータの更新
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンシューマーがそのデータを含む変更可能な行セットを更新するときにデータを更新します。 コンシューマーが **IRowsetChange** インターフェイスまたは **IRowsetUpdate** インターフェイスのいずれかのサポートを要求すると、変更可能な行セットが作成されます。  

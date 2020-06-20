@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ce2cc85f936f49e6769bf3a855f903e5064b4be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a45b8618fd275a8aca20be35083257b8f8d0707
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78259488"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025939"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>メモリ最適化テーブルの復元と復旧
   メモリ最適化テーブルを含むデータベースを回復または復元する基本的なメカニズムは、ディスク ベース テーブルのみを含むデータベースのメカニズムに似ています。 ただし、ディスク ベース テーブルとは異なり、メモリ最適化テーブルは、データベースがユーザー アクセスに使用できるようになる前にメモリに読み込まれる必要があります。 データベース復旧の新しい手順が追加されます。 データベース復旧の手順は次のように変更されます:

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e35d37ed-dd9b-4a34-a76a-bc9251f06c4f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8b10069c6358849e3ed3dc6f1f8a8de43950520
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a0d3975bb60934af33414ee8028c6dd1322bfe6d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707406"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056211"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、IColumnsRowset::GetColumnRowset に DBCOLUMN_BASETABLEINSTANCE 列が追加されました。 この列は DBTYPE_I2 を返します。この列は、マイクロソフトが使用するために予約されています。 この列の情報は今後のリリースで変更されます。  

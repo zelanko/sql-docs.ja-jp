@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29bdc55bde4d5dfb11d669d9e7b4aad06482ce7e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056621"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>[警告のプロパティ]-[新しい警告] ([全般] ページ)
-  このページを使用すると、エージェントの警告の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全般プロパティを表示したり、変更したりできます。  
+  このページを使用すると、エージェントの警告の全般プロパティを表示したり、変更したり [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。  
   
 ## <a name="options"></a>Options  
  **名前**  
  警告の名前を変更します。  
   
- **有効化**  
+ **[有効化]**  
  警告を有効にします。 警告が有効でない場合、警告に指定されたアクションは発生しません。  
   
  **Type**  
@@ -55,7 +54,7 @@ ms.locfileid: "63062150"
  イベントをフィルター処理するために使用する文字列を指定します。  
   
 ## <a name="sql-server-performance-condition-alerts"></a>SQL Server パフォーマンス条件警告  
- **素材**  
+ **オブジェクト**  
  監視対象のパフォーマンス オブジェクトを指定します。  
   
  **カウンター**  
@@ -71,10 +70,10 @@ ms.locfileid: "63062150"
  カウンターの値を指定します。  
   
 ## <a name="wmi-event-alert-options"></a>WMI イベント警告のオプション  
- **Namespace**  
+ **名前空間**  
  WQL (WMI Query Language) ステートメントに使用する名前空間を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されているコンピューター上の名前空間だけがサポートされます。  
   
- **クエリ**  
+ **Query**  
  警告が応答するイベントを識別する WQL ステートメントを指定します。  
   
 ## <a name="see-also"></a>参照  

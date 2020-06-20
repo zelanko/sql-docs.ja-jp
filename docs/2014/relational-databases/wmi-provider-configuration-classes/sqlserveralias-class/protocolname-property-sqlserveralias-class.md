@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8166e1cdc6c6a5587e3c5ff3bd1e5e6fe22a0f8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1578063803f86fca1d530e984b803b4ab3a20e34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035907"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048895"
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>ProtocolName プロパティ (SqlServerAlias クラス)
   サーバー接続別名によって使用されるプロトコルの名前を取得します。  
@@ -36,7 +35,7 @@ object
 .ProtocolName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  [の別名を表す](sqlserveralias-class.md) SqlServerAlias クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
   
