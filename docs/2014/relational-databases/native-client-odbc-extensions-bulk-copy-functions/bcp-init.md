@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c77414aac2b6b25d8b0c2ca774cac07c269f328
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 72d48b2a07e425e0863084c700c4de93d2776739
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701954"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019561"
 ---
 # <a name="bcp_init"></a>bcp_init
   一括コピー操作を初期化します。  
@@ -74,7 +73,7 @@ eDirection
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  他の一括コピー関数を呼び出す前に**bcp_init**を呼び出します。 **bcp_init**は、ワークステーションとの間のデータの一括コピーに必要な初期化を実行し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  **Bcp_init**関数は、一括コピー関数で使用できるように ODBC 接続ハンドルが有効になっている必要があります。 ハンドルを有効にするには、SQL_COPT_SS_BCP が割り当てられていて、接続されていない接続ハンドルで SQL_BCP_ON に設定されている[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)を使用します。 接続済みのハンドルの属性を割り当てようとすると、エラーが発生します。  

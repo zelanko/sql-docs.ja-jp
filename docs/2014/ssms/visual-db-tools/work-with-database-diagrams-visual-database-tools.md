@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efbdd231bb7785eda6bca4771579916b7e3cc7a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc4aa8255549b2010951cc0a665c23ac2d3b02c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63313780"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040474"
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>データベース ダイアグラムの使用 (Visual Database Tools)
   データベース デザイナーでは、データベースのビジュアル ダイアグラムを作成できます。 次の各トピックでは、デザイナーを使用してデータベース ダイアグラムを操作する方法の基礎を説明しています。  

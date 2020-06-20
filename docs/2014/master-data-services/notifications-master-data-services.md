@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 54f8cdc55322144414be11dd837bd723b4ed3c10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6891bba64da82a1a83f5ea4a44bf3fa1f52ddd67
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478969"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971162"
 ---
 # <a name="notifications-master-data-services"></a>通知 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ビジネスルールの検証が失敗した場合、またはモデルのバージョンの状態が変更された場合に、電子メール通知を送信するようにを構成できます。  
   
 ## <a name="how-notifications-are-sent"></a>通知の送信方法  
- [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]の通知を構成します。 通知では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベースをホストするのインスタンスでデータベースメールを使用して電子メールメッセージを送信します。 データベース メールの詳細については、 [オンライン ブックの「](../relational-databases/database-mail/database-mail-configuration-objects.md) データベース メール構成オブジェクト [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 」を参照してください。  
+ [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]の通知を構成します。 通知では、データベースをホストするのインスタンスでデータベースメールを使用して電子メールメッセージを送信し [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ます。 データベース メールの詳細については、 [オンライン ブックの「](../relational-databases/database-mail/database-mail-configuration-objects.md) データベース メール構成オブジェクト [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 」を参照してください。  
   
 ## <a name="when-notifications-are-sent"></a>通知の送信タイミング  
  通知を構成すると、以降は次のインスタンスで自動の電子メール通知を送信できます。  

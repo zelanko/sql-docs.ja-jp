@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a514822a-91f1-4aca-9175-2b96cff29700
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 563cea2a47ce5b68defdf6018b2386f7643dc0fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fc9ec3079847c231e331063fda6d78bb0255983
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62654875"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059961"
 ---
 # <a name="enabled-property-servernetworkprotocol-class"></a>Enabled プロパティ (ServerNetworkProtocol クラス)
   サーバー ネットワーク プロトコルが有効かどうかを指定するブール型のプロパティを取得します。  
@@ -36,9 +35,9 @@ object
 .Enabled [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)]の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスによって使用されるネットワークプロトコルを表す[servernetworkprotocol クラス](servernetworkprotocol-class.md)オブジェクト。  
+ のインスタンスによって使用されるネットワークプロトコルを表す[Servernetworkprotocol クラス](servernetworkprotocol-class.md)オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サーバー ネットワーク プロトコルが有効かどうかを指定するブール値。サーバー ネットワーク プロトコルが有効な場合は `true`、サーバー ネットワーク プロトコルが無効な場合は `false` です。  

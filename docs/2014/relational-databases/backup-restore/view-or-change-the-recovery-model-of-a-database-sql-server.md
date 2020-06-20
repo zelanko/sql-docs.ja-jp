@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 889080301109938f0514bd6b81265c100237ab60
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875081"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956124"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>データベースの復旧モデルの表示または変更 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベースの復旧モデルを表示または変更する方法について説明します。 *復旧モデル* は、トランザクションをログに記録する方法、トランザクション ログのバックアップを必須 (および可能) にするかどうか、利用できる復元操作の種類などを制御するデータベース プロパティです。 復旧モデルの種類は、単純、完全、および一括ログの 3 種類です。 通常、データベースには完全復旧モデルまたは単純復旧モデルが使用されます。 データベースは、任意の時点で別の復旧モデルに切り替えることができます。 **model** データベースは、新しいデータベースの既定の復旧モデルを設定します。  
@@ -74,7 +73,7 @@ ms.locfileid: "62875081"
   
 1.  適切な [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスへの接続後、オブジェクト エクスプローラーでサーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  [**データベース] を展開し**、データベースに応じて、ユーザーデータベースを選択するか、[**システムデータベース**] を展開してシステムデータベースを選択します。  
+2.  **[データベース]** を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
   
 3.  データベースを右クリックし、 **[プロパティ]** をクリックすると、 **[データベースのプロパティ]** ダイアログ ボックスが開きます。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62875081"
   
 5.  **[復旧モデル]** ボックスの一覧に現在の復旧モデルが表示されています。  
   
-6.  復旧モデルを変更する必要がある場合は、別のモデルをこの一覧で選択します。 選択できるのは、 **[完全]**、 **[一括ログ]**、 **[単純]** のいずれかです。  
+6.  復旧モデルを変更する必要がある場合は、別のモデルをこの一覧で選択します。 選択できるのは、 **[完全]** 、 **[一括ログ]** 、 **[単純]** のいずれかです。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

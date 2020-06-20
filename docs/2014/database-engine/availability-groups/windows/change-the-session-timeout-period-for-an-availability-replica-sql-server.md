@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1408d970093fde0e2efea9662b56b9f099d6b0b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 302ba4a2b0b72a70b05e563eb4085913074469eb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937013"
 ---
 # <a name="change-the-session-timeout-period-for-an-availability-replica-sql-server"></a>可用性レプリカのセッション タイムアウト期間の変更 (SQL Server)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性レプリカのセッション タイムアウト期間を構成する方法について説明します。 セッション タイムアウト期間は、接続されたレプリカからの ping 応答を可用性レプリカが何秒待機するかを制御するレプリカ プロパティです。この期間を過ぎると、接続に失敗したと見なされます。 既定では、レプリカは ping 応答を 10 秒間待機します。 このレプリカ プロパティは、可用性グループ内の指定したセカンダリ レプリカとプライマリ レプリカ間の接続のみに適用されます。 セッション タイムアウト期間の詳細については、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
   
 -   **作業を開始する準備:**  
   
-     [必要条件](#Prerequisites)  
+     [前提条件](#Prerequisites)  
   
      [Recommendations (推奨事項)](#Recommendations)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b1ab796d9e48292dfa3426cd102faadecdabb2f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813558"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936373"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>AlwaysOn セカンダリ データベース上のデータ移動の開始 (SQLServer)
   このトピックでは、AlwaysOn 可用性グループにデータベースを追加した後、データの同期を開始する方法について説明します。 新しい各プライマリ レプリカに対して、セカンダリ レプリカをホストするサーバー インスタンス上でセカンダリ データベースを準備する必要があります。 その後、各セカンダリ データベースを手動で可用性グループに参加させる必要があります。  
@@ -31,7 +30,7 @@ ms.locfileid: "62813558"
   
     -   RESTORE WITH NORECOVERY を使用してプライマリ データベースの最新のデータベース バックアップを手動で復元し、その後、RESTORE WITH NORECOVERY を使用して後続のログ バックアップを復元する。 可用性グループのセカンダリ レプリカをホストする各サーバー インスタンスで、この復元シーケンスを実行します。  
   
-         **詳細情報:**  
+         **詳細:**  
   
          [可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62813558"
         > [!NOTE]  
         >  可用性グループのすべてのセカンダリ データベースを作成した後、セカンダリ レプリカにバックアップを実行する場合は、可用性グループの自動バックアップ設定を再構成する必要があります。  
   
-         **詳細情報:**  
+         **詳細:**  
   
          [ログ配布から AlwaysOn 可用性グループ &#40;SQL Server への移行の前提条件&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62813558"
   
 2.  新しく準備された各セカンダリ データベースを可用性グループにできるだけ早く参加させます。  
   
-     **詳細情報:**  
+     **詳細:**  
   
      [可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   

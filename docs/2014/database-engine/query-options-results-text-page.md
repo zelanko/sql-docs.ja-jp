@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c8b41a624335026c3c20bd0d7b1d037d1ec55d06
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: fc3737a8d992ab05fe96cf6c7d61dc1b01b3f2ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000572"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929463"
 ---
 # <a name="query-options-results-text-page"></a>[クエリ オプション] の [結果] ([テキスト] ページ)
   このページを使用すると、クエリ結果セットをテキスト形式で表示するオプションを指定できます。 このページの設定は、 **[結果をファイルに出力]** が選択されているときにも使用できます。  

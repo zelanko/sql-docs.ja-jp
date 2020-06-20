@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbc29fa2ebaaf2bbc9e577b5bd303e8a0dd0ec4c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815405"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937023"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>サーバー インスタンスの HADR クラスター コンテキストの変更 (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以降で [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] インスタンスの HADR クラスター コンテキストを切り替える方法について説明します。 *HADR クラスター コンテキスト* は、サーバー インスタンスによってホストされる可用性レプリカのメタデータを管理する Windows Server フェールオーバー クラスタリング (WSFC) クラスターを決定します。  
@@ -71,11 +70,11 @@ ms.locfileid: "62815405"
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
--   **SQL Server ログイン (SQL Server login)**  
+-   **ログインの SQL Server**  
   
      CONTROL SERVER 権限が必要です。  
   
--   **SQL Server サービスアカウント**  
+-   **SQL Server サービス アカウント**  
   
      サーバー インスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントは、以下を所有している必要があります。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62815405"
   
 2.  次に示すように、 [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) ステートメントの SET HADR CLUSTER CONTEXT 句を使用します。  
   
-     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'*`windows_cluster`*'** |LAN  
+     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **' *`windows_cluster`* '** |LAN  
   
      パラメーターの説明  
   
@@ -102,7 +101,7 @@ ms.locfileid: "62815405"
      LOCAL  
      ローカル WSFC クラスター。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  次の例では、HADR クラスター コンテキストを別のクラスターに変更します。 変更先の WSFC クラスターである `clus01`を識別するため、この例では、完全なクラスター オブジェクト名である `clus01.xyz.com`を指定します。  
   
 ```  

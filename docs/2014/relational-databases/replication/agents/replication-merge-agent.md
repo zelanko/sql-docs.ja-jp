@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b3d74dcc6be62ae8a01d911a8404c7bc32fd651
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63216001"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066623"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   レプリケーション マージ エージェントは、データベース テーブルに保持された初期スナップショットをサブスクライバーに適用するユーティリティ実行可能ファイルです。 さらに、初期スナップショットの作成後にパブリッシャーで発生したデータの増分変更をマージし、ユーザーが構成したルールに従って、またはユーザーが作成したカスタム競合回避モジュールを使用して、競合を調整します。  
@@ -317,7 +316,7 @@ ms.locfileid: "63216001"
  マージ エージェントが変更元から変更を列挙するために使用するソース スレッドの数を指定します。 変更元は、アップロード実行時はサブスクライバーであり、ダウンロード実行時はパブリッシャーです。 既定値は **3**です。  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 同時に実行されるマージプロセスの数が**@max_concurrent_merge** **sp_addmergepublication**のプロパティによって設定された上限に達したときに、マージエージェントが待機する最大秒数を指定します。 最長秒数に達したときにマージ エージェントが待機中である場合、マージ エージェントは終了します。 値 0 は、エージェントが無制限に待機することを示します。ただし、キャンセルできます。  
+ 同時に実行されるマージプロセスの数が sp_addmergepublication のプロパティによって設定された上限に達したときに、マージエージェントが待機する最大秒数を指定し **@max_concurrent_merge** ます。 **sp_addmergepublication** 最長秒数に達したときにマージ エージェントが待機中である場合、マージ エージェントは終了します。 値 0 は、エージェントが無制限に待機することを示します。ただし、キャンセルできます。  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  **SubscriberType** が **2** の場合、Jet データベース (.mdb) ファイルへのパスを指定します。この指定では、ODBC データ ソース名 (DSN) なしで Jet データベースに接続することができます。  

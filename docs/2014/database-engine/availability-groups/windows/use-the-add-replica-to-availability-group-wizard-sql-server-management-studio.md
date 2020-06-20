@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a9074c49b3e8c9d80666d3bb586ffeba225e88b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4d75372cd2388e88fcb3d3ce95975bdefa54c5c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813379"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936280"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>可用性グループへのレプリカ追加ウィザードの使用 (SQL Server Management Studio)
   可用性グループへのレプリカの追加ウィザードを使用して、既存の AlwaysOn 可用性グループに新しいセカンダリ レプリカを追加できます。  
@@ -87,7 +86,7 @@ ms.locfileid: "62813379"
   
 6.  **[最初のデータの同期を選択]** ページで、新しいセカンダリ データベースを作成して可用性グループに参加させる方法を選択します。 次のいずれかのオプションを選択します。  
   
-    -   **[完全]**  
+    -   **完全**  
   
          使用している環境が、初期データの同期を自動的に開始するための要件を満たす場合は、このオプションを選択します (詳細については、このトピックの「 [前提条件、制限事項、および推奨事項](#Prerequisites)」をご覧ください)。  
   

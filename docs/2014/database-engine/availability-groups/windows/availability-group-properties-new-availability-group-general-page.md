@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 31976f23109e7e8e64684618b88dfcc4177e2860
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 2159f5eaecd88425fa856e760af412f869186588
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858926"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937103"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>[可用性グループのプロパティ] と [新しい可用性グループ] ([全般] ページ)
    このトピックは、**[新しい可用性グループ]** ダイアログ ボックスと **[可用性グループのプロパティ]** ダイアログ ボックスの **[全般]** タブに該当します。  **[新しい可用性グループ]** ダイアログ ボックスでは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を使用せずに新しい可用性グループを作成できます。 **[可用性グループのプロパティ]** ダイアログ ボックスでは、既存の可用性グループの構成を表示、変更できます。  
@@ -36,7 +35,7 @@ ms.locfileid: "83858926"
  **データベース名**  
  可用性グループに追加されたデータベースの名前。  
   
- **[追加]**  
+ **追加**  
  クリックすると、データベースが可用性グループに追加されます。  
   
  **削除**  
@@ -103,7 +102,7 @@ ms.locfileid: "83858926"
  **エンドポイント URL**  
  エンドポイントの URL です。 詳細については、「[可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)」を参照してください。  
   
- **[追加]**  
+ **追加**  
  クリックすると、セカンダリ レプリカが可用性グループに追加されます。  
   
  **削除**  

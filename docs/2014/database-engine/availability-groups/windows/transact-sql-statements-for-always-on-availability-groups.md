@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f635faa05d7d77a50d31491b1bab9b16875e728c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff25fecf54cfdd1d9c03d1586f0272896542bfa7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813825"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936363"
 ---
 # <a name="overview-of-transact-sql-statements-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性グループの Transact-SQL ステートメントの概要 (SQL Server)
   このトピックでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] の配置のほか、可用性グループ、可用性レプリカ、および可用性データベースの作成と管理をサポートする [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ステートメントについて説明します。  

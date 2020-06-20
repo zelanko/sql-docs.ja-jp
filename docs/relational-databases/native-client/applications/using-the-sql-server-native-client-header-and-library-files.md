@@ -1,5 +1,6 @@
 ---
 title: ヘッダーファイルとライブラリファイル
+description: SQL Server Native Client ヘッダーファイルとライブラリファイルを使用してアプリケーションを開発する方法について説明します。 必要なファイルを開発環境にコピーします。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +23,17 @@ ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e4b7c27ed32beaa1139300fdb83c4fb79583df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56a17cf83d4d303f786907d9313f134664f12178
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388464"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949493"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>SQL Server Native Client ヘッダー ファイルとライブラリ ファイルの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイルとライブラリ ファイルは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と共にインストールされます。 アプリケーションを開発するときは、開発に必要なすべてのファイルを開発環境にコピーしてインストールすることが重要です。 Native Client のインストールと再配布[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の詳細については、「 [SQL Server Native Client のインストール](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)」を参照してください。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイルとライブラリ ファイルは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と共にインストールされます。 アプリケーションを開発するときは、開発に必要なすべてのファイルを開発環境にコピーしてインストールすることが重要です。 Native Client のインストールと再配布の詳細について [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、「 [SQL Server Native Client のインストール](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイルとライブラリ ファイルは、次の場所にインストールされます。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "81388464"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用する OLE DB アプリケーションは、sqlncli.h のみを参照する必要があります。 1 つのアプリケーションで MDAC (SQLOLEDB) と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの両方を使用する場合、sqloledb.h と sqlncli.h の両方を参照できますが、sqloledb.h を先に参照する必要があります。  
   
 ## <a name="using-the-sql-server-native-client-header-file"></a>SQL Server Native Client ヘッダー ファイルの使用  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ヘッダーファイルを使用するには、C/c + + プログラミングコード内で**include**ステートメントを使用する必要があります。 次のセクションでは、OLE DB と ODBC の両方のアプリケーションでこの操作を行う方法について説明します。  
+ Native Client ヘッダーファイルを使用するには [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、C/c + + プログラミングコード内で**include**ステートメントを使用する必要があります。 次のセクションでは、OLE DB と ODBC の両方のアプリケーションでこの操作を行う方法について説明します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイルとライブラリ ファイルは、Visual Studio C++ 2002 以降を使用しないとコンパイルできません。  

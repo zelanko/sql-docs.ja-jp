@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: adadafc3a7dcf23de9bceefaee6f5622e0f86705
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9006d6810d03cce7cb996b500449a7a4f864bb96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701999"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019713"
 ---
 # <a name="bcp_control"></a>bcp_control
   ファイルと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間の一括コピーに使用するさまざまな制御パラメーターの既定の設定を変更します。  
@@ -137,7 +136,7 @@ iValue
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数では、一括コピー操作のさまざまな制御パラメーターを設定します。たとえば、一括コピーが取り消されるまでに発生してもかまわないエラーの数、データ ファイルから最初にコピーする行番号や最後にコピーする行番号、バッチ サイズなどを設定します。  
   
  また、この関数は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から SELECT ステートメントの結果セットを一括コピーするときに、その SELECT ステートメントを指定するためにも使用します。 *EOption*を BCPHINTS に設定し、 *ivalue*を SET ステートメントを含む sqltchar 文字列へのポインターを持つように設定します。  

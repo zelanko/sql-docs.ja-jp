@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e027ece4576907b9543c7fc6eb9cbe161b3c4323
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b79e57afac4509401acc69892eb1665ec73bf84
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157695"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060036"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>GetCurrentCertificate メソッド (SecurityCertificate クラス)
   現在のセキュリティ証明書を取得します。  
@@ -39,7 +38,7 @@ SHA , SQLInstance
   
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  セキュリティ証明書を表す [SecurityCertificate クラス](securitycertificate-class.md) オブジェクト。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e4e9c8ea3300c35cb75d451206ab9869f932814
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de8ff0e5d263ce432c431bfc4d9751620355f0a8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889325"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964333"
 ---
 # <a name="save-packages"></a>パッケージを保存する
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用してパッケージを構築し、XML ファイル (.dtsx ファイル) としてファイル システムに保存します。 パッケージ XML ファイルのコピーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の msdb データベースまたはパッケージ ストアに保存することもできます。 パッケージ ストアとは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが管理するファイル システムの場所にあるフォルダーのことです。  

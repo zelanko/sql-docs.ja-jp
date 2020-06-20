@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c9858638287876d31733035d1a6bb6d95705708f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3202344a6507fbf23bc71511c598a42a8858ada2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228717"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936893"
 ---
 # <a name="creation-and-configuration-of-availability-groups-sql-server"></a>可用性グループの作成と構成 (SQL Server)
   このセクションの各トピックでは、単一の WSFC (Windows Server フェールオーバー クラスタリング) フェールオーバー クラスターを構成する各 WSFC ノード上の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のインスタンスに対し、 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] の実装を配置する方法について説明します。  
@@ -97,7 +96,7 @@ ms.locfileid: "75228717"
   
      [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
--   **ビデオ**  
+-   **ビデオ:**  
   
      [Microsoft SQL Server コード ネーム "Denali" AlwaysOn シリーズ パート 1: 次世代の高可用性ソリューションの概要](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

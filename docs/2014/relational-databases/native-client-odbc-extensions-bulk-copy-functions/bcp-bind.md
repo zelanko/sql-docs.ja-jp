@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07a7bb9026984ed830d0b146438d958739463109
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 87f06021e5a2f9e10f6b60836fe3889aab3e9f65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019812"
 ---
 # <a name="bcp_bind"></a>bcp_bind
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に一括コピーするために、プログラム変数からテーブル列にデータをバインドします。  
@@ -143,7 +142,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  プログラム変数からのテーブルにデータをコピーする高速で効率的な方法には、 **bcp_bind**を使用し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  このまたはその他の一括コピー関数を呼び出す前に[bcp_init](bcp-init.md)を呼び出してください。 **Bcp_init**を呼び出すと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一括コピーの対象テーブルが設定されます。 **Bcp_bind**と[bcp_sendrow](bcp-sendrow.md)で使用するために**bcp_init**を呼び出すと、データファイルを示す**BCP_INIT**の_szdatafile_ファイルパラメーターが NULL に設定されます。**bcp_init**_edirection_パラメーターが DB_IN に設定されています。  
@@ -168,7 +167,7 @@ bcp_bind(hdbc, szName, 0,
   
 -   0xFFFFFFFFFFFFFFFE は、データをチャンク単位でサーバーに効率的に送信するために使用する特別なプレフィックスの値として処理されます。 この特別なプレフィックス値を含むデータは、次のような形式になります。  
   
--   <SPECIAL_PREFIX> \< 0 個以上のデータチャンク> <ZERO_CHUNK> ます。  
+-   <SPECIAL_PREFIX> \<0 or more  DATA CHUNKS> <ZERO_CHUNK の場所:  
   
 -   SPECIAL_PREFIX には 0xFFFFFFFFFFFFFFFE を指定します。  
   

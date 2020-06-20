@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fd4616b2-a564-4a66-ac53-d1f5cba213c2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0936af9b97d08c6bcd5033e61d9fa1c9153272e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de32cbecdf132f1c881ab9fe5637af3a5c6cd400
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791792"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937363"
 ---
 # <a name="add-projects-to-source-control"></a>ソース管理へのプロジェクトの追加
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ソリューションには、複数のスクリプト プロジェクトを含めることができます。 ソース管理にプロジェクトを追加する方法は、そのプロジェクトが属しているソリューションがソース管理の下にあるかどうかによって異なります。 ソリューションがソース管理の対象である場合は、ソリューションをチェックインすると、ソース管理にプロジェクトが自動的に追加されます。 ソリューションをチェックインする方法の詳細については、「[ファイルをチェックイン](../../2014/database-engine/check-in-files.md)する」を参照してください。  

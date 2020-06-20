@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a109468616cb414fa2a4b3769af37626ff42ca85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d11fc83612e8a21a574b3639d912eb93b732042
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938951"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053274"
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR イベント クラス
   **Audit Database Scope GDR** イベント クラスは、データベースに対する権限の付与などのデータベースのみの操作時に、ステートメント権限に対して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザーが GRANT、REVOKE、または DENY を発行するたびに発生します。  

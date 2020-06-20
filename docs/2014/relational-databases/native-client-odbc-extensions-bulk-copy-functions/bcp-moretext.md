@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cfa6968d4bb4254b52efd3e09d7f04e3c7fa9268
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec121d057183bb1076a5c540976bd234bc46fecb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701926"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019548"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
   長い可変長データ型の値の一部を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信します。  
@@ -58,7 +57,7 @@ pData
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数を[bcp_bind](bcp-bind.md)および[bcp_sendrow](bcp-sendrow.md)と組み合わせて使用すると、長い可変長のデータ値を多数の小さなチャンクで SQL Server にコピーできます。 **bcp_moretext**は、、、、、、 `text` `ntext` `image` `varchar(max)` `nvarchar(max)` `varbinary(max)` 、ユーザー定義型 (UDT)、および XML の SQL Server 各データ型を持つ列で使用できます。 **bcp_moretext**は、データ変換をサポートしていません。指定されたデータは、ターゲット列のデータ型と一致している必要があります。  
   
  **Bcp_moretext**でサポートされているデータ型に対して null 以外の*pData*パラメーターを指定して**bcp_bind**を呼び出すと、は `bcp_sendrow` 長さに関係なく、データ値全体を送信します。 ただし、 **bcp_bind**がサポートされているデータ型に対して NULL の*pData*パラメーターを持っている場合、 **bcp_moretext**を使用して、 `bcp_sendrow` データが存在するバインド列が処理されたことを示すから正常に返された直後にデータをコピーできます。  

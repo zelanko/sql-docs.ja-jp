@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8085fa23357c5901ed350e81410ae4d38a3005dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be84fd9d747ac2b6699c2e1008836c49ead1b059
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228795"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936933"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>可用性グループの作成 (SQL Server PowerShell)
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の AlwaysOn 可用性グループを PowerShell コマンドレットで作成および構成する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
@@ -51,7 +50,7 @@ ms.locfileid: "75228795"
 |セカンダリ データベースを準備する|`Backup-SqlDatabase` および `Restore-SqlDatabase`|プライマリ レプリカをホストするサーバー インスタンスでバックアップを作成します。<br /><br /> セカンダリ レプリカをホストする各サーバー インスタンス上で、`NoRecovery` 復元パラメーターを使用してバックアップを復元します。 プライマリ レプリカをホストするコンピューターとターゲット セカンダリ レプリカをホストするコンピューターとでファイル パスが異なる場合は、`RelocateFile` 復元パラメーターも使用します。|  
 |各セカンダリ データベースを可用性グループに参加させてデータ同期を開始する|`Add-SqlAvailabilityDatabase`|セカンダリ レプリカをホストする各サーバー インスタンスで実行します。|  
   
- **<sup>*</sup>** 特定のタスクを実行するには、`cd`指定されたサーバーインスタンスにディレクトリ () を変更します。  
+ **<sup>*</sup>** 特定のタスクを実行するには、指定された `cd` サーバーインスタンスにディレクトリ () を変更します。  
   
 ###  <a name="to-set-up-and-use-the-sql-server-powershell-provider"></a><a name="PsProviderLinks"></a>SQL Server PowerShell プロバイダーを設定して使用するには  
   
@@ -64,7 +63,7 @@ ms.locfileid: "75228795"
 > [!NOTE]  
 >  特定のコマンドレットの構文や例を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
-1.  プライマリレプリカを`cd`ホストするサーバーインスタンスにディレクトリを変更 () します。  
+1.  `cd`プライマリレプリカをホストするサーバーインスタンスにディレクトリを変更 () します。  
   
 2.  プライマリ レプリカのインメモリの可用性レプリカ オブジェクトを作成します。  
   
@@ -225,7 +224,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
      [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
--   **ビデオ**  
+-   **ビデオ:**  
   
      [Microsoft SQL Server コード ネーム "Denali" AlwaysOn シリーズ パート 1: 次世代の高可用性ソリューションの概要](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

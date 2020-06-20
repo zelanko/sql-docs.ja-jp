@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 733827ecace64ef86b54831f63fd8c2889203919
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2846918b515bba16d12d48cd7058cf25863bf569
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478963"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971182"
 ---
 # <a name="model-permissions-master-data-services"></a>モデル権限 (Master Data Services)
   モデル権限は、モデル内に存在するすべてのエンティティ、派生階層、明示的階層、およびコレクションに適用されます。 モデルに割り当てられる権限は、個々のオブジェクトでオーバーライドすることができます。  

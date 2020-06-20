@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 83fde7d8d43086114b2aae4350ce374b713ff4ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bea67df36c5c522484a166927378b7746d62561f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204660"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040632"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>[評価に関する警告] ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスは、データベースに悪影響を及ぼす可能性のある変更を保存しようとした場合、またはデータベースのコミット動作が失敗する可能性がある場合に表示されます。 このダイアログ ボックスには、可能性のある具体的な悪影響またはコミット動作が失敗する理由が示されます。 このまま変更を保存するか取り消すかを選択できます。  

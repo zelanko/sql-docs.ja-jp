@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 16a0178c-ca03-4078-bbdd-f481385fa2f1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8c7c2f178391b93b1034d3e1bfb07ff9f7714ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67b585b58b6a90f3c75bb658216b8a76b0fe0eac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012572"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053202"
 ---
 # <a name="audit-logout-event-class"></a>Audit Logout イベント クラス
   **Audit Logout** イベント クラスは、ユーザーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からログアウト (ログオフ) したことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。  

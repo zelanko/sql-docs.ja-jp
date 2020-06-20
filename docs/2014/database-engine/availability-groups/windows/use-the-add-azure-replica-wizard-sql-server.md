@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 95cb279c939298256a623d67e3db8f979f65c40f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175994"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936265"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Azure のレプリカ追加ウィザードの使用 (SQL Server)
   Azure のレプリカ追加ウィザードを使用して、ハイブリッド IT で新しい Azure VM を作成し、新規または既存の AlwaysOn 可用性グループのセカンダリレプリカとして構成することができます。  
   
 -   **作業を開始する準備:**  
   
-     [必要条件](#Prerequisites)  
+     [前提条件](#Prerequisites)  
   
      [Security](#Security)  
   
@@ -33,7 +32,7 @@ ms.locfileid: "70175994"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  可用性グループに可用性レプリカを追加したことがない場合は、「サーバーインスタンス」と「可用性グループとレプリカ」のセクション「 [AlwaysOn 可用性グループ &#40;SQL Server&#41;の前提条件、制限事項、推奨事項](prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要条件  
   
 -   現在のプライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
@@ -90,13 +89,13 @@ ms.locfileid: "70175994"
      [仮想ネットワーク サブネット]  
      Azure VM を配置する仮想ネットワーク サブネット  
   
-     ドメイン  
+     Domain  
      Azure VM を参加させる Active Directory (AD) ドメイン  
   
      ドメイン ユーザー名  
      Azure VM をドメインに参加させるために使用される AD ユーザー名  
   
-     パスワード  
+     Password  
      Azure VM をドメインに参加させるために使用されるパスワード  
   
 5.  **[OK]** をクリックして設定をコミットし、Azure のレプリカ追加ウィザードを終了します。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8ea6257cb906177b9eb224d718eecf54fb94119
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936553"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、高可用性と追加のデータベース復旧機能を提供します。  
@@ -109,7 +108,7 @@ ms.locfileid: "62814058"
     ```  
   
     > [!NOTE]  
-    >  フェールオーバーの前にすべてのフェールオーバー ターゲット候補でジョブを作成し、ホストの可用性レプリカが新しいプライマリ レプリカになるまで無効としてマークしておく必要があります。 ローカル データベースがセカンダリ データベースになったときに、古いプライマリ データベースで実行されている CDC ジョブも無効にする必要があります。 ジョブを無効または有効にする*@enabled*には、sp_update_job のオプション[&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)を使用します。 CDC ジョブの作成の詳細については、「 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。  
+    >  フェールオーバーの前にすべてのフェールオーバー ターゲット候補でジョブを作成し、ホストの可用性レプリカが新しいプライマリ レプリカになるまで無効としてマークしておく必要があります。 ローカル データベースがセカンダリ データベースになったときに、古いプライマリ データベースで実行されている CDC ジョブも無効にする必要があります。 ジョブを無効または有効にするには、 *@enabled* sp_update_job のオプション[&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)を使用します。 CDC ジョブの作成の詳細については、「 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。  
   
 -   **AlwaysOn プライマリ データベース レプリカへの CDC ロールの追加**  
   
@@ -156,7 +155,7 @@ ms.locfileid: "62814058"
   
      可用性グループ リスナー名または明示的なノード名を使用してセカンダリ レプリカを検索できます。 可用性グループ リスナー名を使用すると、アクセスは適切なセカンダリ レプリカに送られます。  
   
-     を`sp_addlinkedserver`使用してセカンダリにアクセスするリンクサーバーを作成する場合*@datasrc* 、パラメーターは可用性グループリスナー名または明示的なサーバー名に使用さ*@provstr*れ、パラメーターは読み取り専用の目的を指定するために使用されます。  
+     を `sp_addlinkedserver` 使用してセカンダリにアクセスするリンクサーバーを作成する場合、 *@datasrc* パラメーターは可用性グループリスナー名または明示的なサーバー名に使用され、 *@provstr* パラメーターは読み取り専用の目的を指定するために使用されます。  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -199,22 +198,22 @@ ms.locfileid: "62814058"
   
 -   パブリッシャーのインスタンスは、AlwaysOn 可用性グループに参加するために必要なすべての前提条件を満たす必要があります。 詳細については[、「AlwaysOn 可用性グループ &#40;SQL Server&#41;の前提条件、制限事項、および推奨事項](prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
-### <a name="restrictions"></a>制限  
+### <a name="restrictions"></a>制約  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーションでサポートされている組み合わせは次のとおりです。  
   
 |||||  
 |-|-|-|-|  
 ||**発行元**|**ディストリビューター** <sup>3</sup>|**サブスクライバー**|  
-|**パブリケーション**|○<sup>1</sup>|いいえ|はい<sup>2</sup>|  
+|**トランザクション**|可<sup>1</sup>|いいえ|はい<sup>2</sup>|  
 |**P2P**|いいえ|いいえ|いいえ|  
-|**マージ**|はい|いいえ|はい<sup>2</sup>|  
+|**Merge**|はい|いいえ|はい<sup>2</sup>|  
 |**スナップショット**|はい|いいえ|はい<sup>2</sup>|  
   
  <sup>1</sup>双方向の相互トランザクションレプリケーションのサポートは含まれません。  
   
  <sup>2</sup>レプリカデータベースへのフェールオーバーは手動で行います。 自動フェールオーバーは提供されていません。  
   
- <sup>3</sup>ディストリビューターデータベースは、またはデータベースミラーリングで[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の使用がサポートされていません。  
+ <sup>3</sup>ディストリビューターデータベースは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] またはデータベースミラーリングでの使用がサポートされていません。  
   
 ### <a name="considerations"></a>考慮事項  
   
@@ -241,7 +240,7 @@ ms.locfileid: "62814058"
   
 -   [変更データの処理 &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
- **変更の追跡**  
+ **Change tracking**  
   
 -   [変更の追跡の有効化と無効化 &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)  
   

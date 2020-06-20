@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b9fa3f54b7b16b1fd397bfe80c95d08e39289eb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921373"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>リモートの Integration Services サーバーに接続する (SSIS サービス)
     
@@ -36,7 +35,7 @@ ms.locfileid: "66060422"
   
 #### <a name="to-connect-to-integration-services-on-a-remote-server"></a>リモート サーバー上の Integration Services に接続するには  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を開きます。  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開きます。  
   
 2.  **[ファイル]** メニューの **[オブジェクト エクスプローラーを接続]** をクリックして、 **[サーバーへの接続]** ダイアログ ボックスを表示します。  
   
@@ -99,7 +98,7 @@ ms.locfileid: "66060422"
  クライアント コンピューターのローカル Windows アカウントで作業している場合、リモート コンピューターの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスに接続できるのは、同じ名前、同じパスワード、および十分な権限が設定されたローカル アカウントがリモート コンピューター上に存在する場合だけです。  
   
 ## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>既定では SSIS サービスは委任をサポートしない  
-既定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]では、サービスは資格情報の委任をサポートしていません。また、ダブルホップと呼ばれることもあります。 たとえば、ユーザーがクライアント コンピューターで作業しており、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が別のコンピューターで実行されているとします。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はさらに別のコンピューターで実行されています。 まず、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] がクライアント コンピューターから [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが実行されている 2 番目のコンピューターに資格情報を渡します。 ただし、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは 2 番目のコンピューターから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が実行されている 3 番目のコンピューターに資格情報を委任できません。
+既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは資格情報の委任をサポートしていません。また、ダブルホップと呼ばれることもあります。 たとえば、ユーザーがクライアント コンピューターで作業しており、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が別のコンピューターで実行されているとします。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はさらに別のコンピューターで実行されています。 まず、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] がクライアント コンピューターから [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが実行されている 2 番目のコンピューターに資格情報を渡します。 ただし、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは 2 番目のコンピューターから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が実行されている 3 番目のコンピューターに資格情報を委任できません。
 
 資格情報の委任は、 **[任意のサービスへの委任でこのユーザーを信頼する (Kerberos のみ)]** の権限を SQL Server のサービス アカウントで有効にできます。これにより、子プロセスとして Integration Services サービス (ISServerExec.exe) が起動します。 この権限を付与する前に、組織のセキュリティ要件を満たしているかどうかを検討してください。
 

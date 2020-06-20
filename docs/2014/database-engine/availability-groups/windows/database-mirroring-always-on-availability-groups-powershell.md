@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5fb67c488da5f01ac572ec78a369790fc9014513
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56058ff8aa72d2471381dd87fb25a3b68356ed36
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782989"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936883"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>AlwaysOn 可用性グループのデータベース ミラーリング エンドポイントの作成 (SQLServer PowerShell)
   このトピックでは、PowerShell を使用して、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で使用するデータベース ミラーリング エンドポイントを作成する方法について説明します。  
@@ -48,7 +47,7 @@ ms.locfileid: "72782989"
 2.  `New-SqlHadrEndpoint` コマンドレットを使用してエンドポイントを作成し、その後 `Set-SqlHadrEndpoint` を使用してエンドポイントを開始します。  
   
 ###  <a name="example-powershell"></a><a name="PShellExample"></a> 例 (PowerShell)  
- 次の PowerShell コマンドでは、SQL Server (*マシン*\\*インスタンス*) のインスタンスにデータベースミラーリングエンドポイントを作成します。 このエンドポイントはポート 5022 を使用します。  
+ 次の PowerShell コマンドでは、SQL Server (*マシン*インスタンス) のインスタンスにデータベースミラーリングエンドポイントを作成し \\ *Instance*ます。 このエンドポイントはポート 5022 を使用します。  
   
 > [!IMPORTANT]  
 >  この例を使用できるのは、現在データベース ミラーリング エンドポイントが存在しないサーバー インスタンスのみです。  

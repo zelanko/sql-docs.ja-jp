@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95f1e2cec530ee65dce60ceea1679281a9d3ba5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 91a781d957eb2f5a81d323fc3c65c93e34945c12
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782996"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936993"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>可用性レプリカでのバックアップの構成 (SQLServer)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループのセカンダリ レプリカでバックアップを構成する方法について説明します。  
@@ -63,7 +62,7 @@ ms.locfileid: "72782996"
 5.  **[バックアップを実行する場所]** パネルで、可用性グループの自動バックアップ設定を選択します。次のいずれかを選択できます。  
   
      **[セカンダリを優先]**  
-     オンラインのレプリカがプライマリ レプリカのみである場合を除き、セカンダリ レプリカでバックアップを実行することを指定します。 オンラインのレプリカがプライマリ レプリカのみである場合は、プライマリ レプリカでバックアップを実行する必要があります。 これは既定のオプションです  
+     オンラインのレプリカがプライマリ レプリカのみである場合を除き、セカンダリ レプリカでバックアップを実行することを指定します。 オンラインのレプリカがプライマリ レプリカのみである場合は、プライマリ レプリカでバックアップを実行する必要があります。 既定のオプションです。  
   
      **[セカンダリのみ]**  
      バックアップをプライマリ レプリカでは実行しないことを指定します。 オンラインのレプリカがプライマリ レプリカだけの場合、バックアップは実行されません。  
@@ -181,9 +180,9 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 ##  <a name="to-obtain-information-about-backup-preference-settings"></a><a name="ForInfoAboutBuPref"></a>バックアップ設定の設定に関する情報を取得するには  
  次の表は、セカンダリでのバックアップに関連する情報を取得するのに役立ちます。  
   
-|表示|情報|関連する列|  
+|表示|Information|関連する列|  
 |----------|-----------------|----------------------|  
-|[sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)|現在のレプリカが優先されるバックアップ レプリカであるかどうか|適用されません。|  
+|[sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)|現在のレプリカが優先されるバックアップ レプリカであるかどうか|適用不可。|  
 |[sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)|自動バックアップ設定|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
 |[sys.availability_replicas](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)|指定された可用性レプリカのバックアップの優先順位|**backup_priority**|  
 |[sys.dm_hadr_availability_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)|レプリカがこのサーバー インスタンスにローカルであるかどうか<br /><br /> 現在のロール<br /><br /> 操作状態<br /><br /> 接続状態<br /><br /> 可用性レプリカの同期の正常性|**is_local**<br /><br /> **ロール**, 、 **role_desc**<br /><br /> **operational_state**、 **operational_state_desc**<br /><br /> **connected_state**、 **connected_state_desc**<br /><br /> **synchronization_health**、 **synchronization_health_desc**|  

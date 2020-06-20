@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec7c5f8db1d8d1f3c675b267adb8345d086d0b80
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 22904e2e0dd7ed025dcf6ad3871969e2be6b2dfb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705286"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019249"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
   現在の一括コピー データ ファイルの形式に関する記述を含むフォーマット ファイルを作成します。  
@@ -52,7 +51,7 @@ szFormatFile
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  フォーマット ファイルでは、一括コピーで作成されるデータ ファイルのデータの形式を指定します。 [Bcp_columns](bcp-columns.md)および[bcp_colfmt](bcp-colfmt.md)を呼び出して、データファイルの形式を定義します。 **bcp_writefmt**は、この定義を*szformatfile*によって参照されるファイルに保存します。 詳細については、「 [bcp_init](bcp-init.md)」を参照してください。  
   
  **Bcp**データフォーマットファイルの構造の詳細については、「 [bcp ユーティリティ &#40;SQL Server&#41;を使用した一括データのインポートとエクスポート](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)」を参照してください。  

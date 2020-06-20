@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1bea9948691adc57ab6498f88687946400cb6548
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035421"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007155"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag ユーティリティ
   **SQLdiag** ユーティリティは、コンソール アプリケーションまたはサービスとして実行できる汎用的な診断収集ユーティリティです。 **SQLdiag** を使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] やその他の種類のサーバーからログ ファイルやデータ ファイルを収集したり、サーバーを一定期間にわたって監視したり、サーバーに関する特定の問題をトラブルシューティングしたりすることができます。 **SQLdiag** は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] カスタマー サポート サービスによる診断情報収集の高速化と簡素化も目的としています。  
@@ -114,7 +113,7 @@ ms.locfileid: "63035421"
  **/M** _machine1_ [ *machine2 * ** の場合] |*@machinelistfile*  
  構成ファイルで指定されたコンピューターをオーバーライドします。 既定では、構成ファイルは SQLDiag.Xml です。または **/I** パラメーターで設定されます。 複数のコンピューターを指定する場合、それぞれのコンピューター名をスペースで区切ります。  
   
- を*@machinelistfile*使用すると、構成ファイルに格納されるコンピューターリストファイル名が指定されます。  
+ を使用 *@machinelistfile* すると、構成ファイルに格納されるコンピューターリストファイル名が指定されます。  
   
  **/C** _file_compression_type_  
  **SQLdiag** 出力フォルダー ファイルで使用されるファイル圧縮の種類を設定します。 使用できるオプションは  
@@ -358,9 +357,9 @@ SQLDIAG START /A Instance1
  コマンドラインで **/a**_SQLdiag_application_name_を指定して、同じコンピューター上で複数の**SQLdiag**インスタンスを実行します。 これは、同一の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスから別の診断セットを同時に収集する場合に便利です。 たとえば、簡単なデータ収集を連続して実行するように、 **SQLdiag** の名前付きインスタンスを構成できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で特定の問題が発生した場合は、既定の **SQLdiag** インスタンスを実行し、その問題に対する診断データを収集したり、 [!INCLUDE[msCoName](../includes/msconame-md.md)] カスタマー サポート サービスが収集を要望している問題に対する一連の診断データを収集したりできます。  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>クラスター化された SQL Server インスタンスからの診断データの収集  
- **SQLdiag** は、クラスター化された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスからの診断データの収集をサポートしています。 クラスター化された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスから診断データを収集するには、構成ファイル SQLDiag.Xml 内にある **\<Machine>** 要素の **name** 属性に **"."** が指定されていることを確認してください。コマンド ラインで **/G** 引数は指定しないでください。 既定では、構成ファイル内の **name** 属性に対して **"."** が指定されていて、 **/G** 引数はオフになっています。 通常、クラスター化された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスから収集する場合、構成ファイルの編集やコマンド ライン引数の変更は必要ありません。  
+ **SQLdiag** は、クラスター化された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスからの診断データの収集をサポートしています。 クラスター化されたインスタンスから診断を収集するに [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、構成ファイル SQLDiag.Xml の要素の**name**属性に **"."** が指定されていることを確認 **\<Machine>** します。また、コマンドラインで **/g**引数を指定しないでください。 既定では、構成ファイル内の **name** 属性に対して **"."** が指定されていて、 **/G** 引数はオフになっています。 通常、クラスター化された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスから収集する場合、構成ファイルの編集やコマンド ライン引数の変更は必要ありません。  
   
- **"."** がコンピューター名として指定されている場合、 **SQLdiag** はこのコンピューターがクラスター上で実行されていることを検出し、同時に、クラスター上にインストールされているすべての仮想 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から診断情報を取得します。 コンピューター上で実行されている 1 つの仮想 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のみから診断情報を収集する場合、SQLDiag.Xml 内の **\<Machine>** 要素の **name** 属性に対して仮想 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を指定します。  
+ **"."** がコンピューター名として指定されている場合、 **SQLdiag** はこのコンピューターがクラスター上で実行されていることを検出し、同時に、クラスター上にインストールされているすべての仮想 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から診断情報を取得します。 コンピューター上で実行されているの1つの仮想インスタンスからのみ診断情報を収集する場合は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SQLDiag.Xml の要素の**name**属性に対して仮想を指定し **\<Machine>** ます。  
   
 > [!NOTE]  
 >  クラスター化された [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] インスタンスから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] トレース情報を収集するには、管理共有 (ADMIN$) をクラスター上で有効にする必要があります。  

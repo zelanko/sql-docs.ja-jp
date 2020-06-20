@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f86c33fb96ddddcefd31227ac904157f3bd8c388
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8671ab15bc913917a558c9e1f90c15c0168e6cfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701962"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019516"
 ---
 # <a name="bcp_exec"></a>bcp_exec
   データベース テーブルとユーザー ファイル間でデータの完全な一括コピーを実行します。  
@@ -52,7 +51,7 @@ pnRowsProcessed
 ## <a name="returns"></a>戻り値  
  SUCCEED、SUCCEED_ASYNC、または FAIL のいずれかを返します。 すべての行がコピーされると、 **bcp_exec**関数は成功を返します。 非同期の一括コピー操作がまだ未解決である場合、 **bcp_exec**は SUCCEED_ASYNC を返します。 **bcp_exec**は、完全なエラーが発生した場合、またはエラーを生成した行数が[bcp_control](bcp-control.md)を使用して BCPMAXERRS に指定された値に達した場合に失敗します。 BCPMAXERRS の既定値は 10 です。 BCPMAXERRS オプションの影響を受けるのは、データ ファイルの行 (サーバーに送信される行以外) を読み取る間にプロバイダーで検出される構文エラーのみです。 ある行でエラーが検出されると、サーバーはバッチを中止します。 *PnRowsProcessed*パラメーターで、正常にコピーされた行の数を確認します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、 [bcp_init](bcp-init.md)の*edirection*パラメーターの値に応じて、ユーザーファイルからデータベーステーブルへ、またはその逆のデータをコピーします。  
   
  **Bcp_exec**を呼び出す前に、有効なユーザーファイル名を使用して**bcp_init**を呼び出します。 この操作を行わないと、エラーが発生します。  

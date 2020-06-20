@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dafa6037682610d7011cdfc9f378ead6f95774fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1636f3ea86e083e47276423b120dbc8d3744d387
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782889"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937063"
 ---
 # <a name="change-the-availability-mode-of-an-availability-replica-sql-server"></a>可用性レプリカの可用性モードの変更 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]の AlwaysOn 可用性グループでの可用性レプリカの可用性モードを変更する方法について説明します。 可用性モードは、レプリカによるコミットが非同期か同期かを制御するレプリカ プロパティです。 *非同期コミット モード* は、高可用性を犠牲にしてパフォーマンスを最大限に高めるものであり、 *強制フェールオーバー*と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) のみをサポートしています。 *同期コミット モード* は、パフォーマンスよりも高可用性を重視し、セカンダリ レプリカの同期後は手動でのフェールオーバーをサポートします (必要に応じて、自動フェールオーバーもサポートします)。  
