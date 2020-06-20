@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1b2e30534fb5e0232ff2046e30e2e14075dfb807
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b11493b5b04fa9308e3afbe56176251225248338
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011317"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004176"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>セマンティック検索による類似および関連したドキュメントの取得
   統計的セマンティック インデックス作成用に構成されている列での、類似性または関連性のあるドキュメントやテキスト値の検索方法と、どのように類似または関連しているかという情報の検索方法について説明します。  
@@ -37,7 +36,7 @@ ms.locfileid: "66011317"
 >  対象の列では、フルテキスト インデックスとセマンティック インデックスが有効になっている必要があります。  
   
 ###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a>例: 別のドキュメントに類似している上位のドキュメントを検索する  
- 次の例では、AdventureWorks2012 サンプルデータベースの Humanresources.employee テーブルから、によっ*@CandidateID*て指定された候補に類似する上位10の候補を取得します。  
+ 次の例では、 *@CandidateID* AdventureWorks2012 サンプルデータベースの humanresources.employee テーブルから、によって指定された候補に類似する上位10の候補を取得します。  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  

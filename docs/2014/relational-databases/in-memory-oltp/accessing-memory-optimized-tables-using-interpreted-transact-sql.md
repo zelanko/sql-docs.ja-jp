@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c5769a59a8deebfa99a00229f1b1227e427e051a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: af4b3ca7731e7ca13e697f43e76ac3cc3cacb4f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706570"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050399"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>解釈された Transact-SQL を使用したメモリ最適化テーブルへのアクセス
   いくつかの例外を除き、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリまたは DML 操作 (SELECT、INSERT、UPDATE、または DELETE)、アドホック バッチ、および SQL モジュール (ストアド プロシージャ、テーブル値関数、トリガー、ビューなど) を使用して、メモリ最適化テーブルにアクセスできます。  

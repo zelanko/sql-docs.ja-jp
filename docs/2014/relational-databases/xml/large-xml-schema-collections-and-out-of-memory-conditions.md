@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b5c82509505cb0497ffd67aa490e9b7d5f9b2a25
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8443207bbbdff5db7e54d61fcebabe70e34cc540
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702610"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013286"
 ---
 # <a name="large-xml-schema-collections-and-out-of-memory-conditions"></a>大きな XML スキーマ コレクションとメモリ不足状態
   大きな XML スキーマ コレクションで組み込み XML_SCHEMA_NAMESPACE() 関数を呼び出しているとき、または大きな XML スキーマ コレクションを削除するときに、メモリが不足することがあります。 次に示すのは、このような状態に対処する際に使用できる解決策です。  

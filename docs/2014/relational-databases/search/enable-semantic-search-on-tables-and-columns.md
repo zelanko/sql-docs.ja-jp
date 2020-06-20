@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2cd0ea9764007784fb6f999c3115e0a2997d8e2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f11ba654f7cc34f521990e8c420d41885d3c55b9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004426"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>テーブルおよび列に対するセマンティック検索の有効化
   ドキュメントまたはテキストが格納されている選択した列に対して統計的セマンティック インデックス作成を有効または無効にする方法について説明します。  
@@ -253,7 +252,7 @@ GO
   
  セマンティック インデックス作成でサポートされている言語は以下のとおりです。 この一覧は、LCID の順に並べ替えたカタログ ビュー [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql) の出力を表します。  
   
-|言語|LCID|  
+|Language|LCID|  
 |--------------|----------|  
 |ドイツ語|1031|  
 |英語 (米国)|1033|  

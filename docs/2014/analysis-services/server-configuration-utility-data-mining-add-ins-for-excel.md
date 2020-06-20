@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8a2006947cf4e4bffee0365ffbbf0b3b1c76bbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069070"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940733"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>サーバー構成ユーティリティ (Excel 用のデータ マイニング アドイン)
-  Excel 用データマイニングアドインをインストールすると、サーバー構成ユーティリティもインストールされ、アドインを初めて開いたときに実行されます。このトピックでは、ユーティリティを使用しての[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスに接続し、データマイニングモデルを操作するためのデータベースを設定する方法について説明します。  
+  Excel 用データマイニングアドインをインストールすると、サーバー構成ユーティリティもインストールされ、アドインを初めて開いたときに実行されます。このトピックでは、ユーティリティを使用してのインスタンスに接続 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] し、データマイニングモデルを操作するためのデータベースを設定する方法について説明します。  
   
 
   
@@ -86,7 +85,7 @@ ms.locfileid: "66069070"
  **追加**  
  ダイアログ ボックスを開いてユーザーまたはグループを追加する場合にクリックします。  
   
- **Remove**  
+ **削除**  
  選択したユーザーまたはグループを、管理権限を持つユーザーの一覧から削除する場合にクリックします。  
   
   

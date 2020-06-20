@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 66108d50898610949cb5cab7fb3bdd2dcc726801
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 14be41e48262bc7ebc8aeeaf55185f5e35d0c72e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706786"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050930"
 ---
 # <a name="alter-an-extended-events-session"></a>拡張イベント セッションの変更
   拡張イベント セッションを作成したら、 **SQL Server 拡張イベント ウィザード**を使用して、必要に応じて拡張イベント セッションを変更できます。  

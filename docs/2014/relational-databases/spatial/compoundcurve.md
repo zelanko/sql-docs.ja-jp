@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 22e63496f3b26ac2c56a72f23ec4489e8a9cdbfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a899bbe9a17a64083592e1078e8cac93365f02b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176682"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016000"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   `CompoundCurve` は、geometry 型または geography 型の 0 個以上の連続する `CircularString` インスタンスあるいは  `LineString` インスタンスのコレクションです。
 
 > [!IMPORTANT]
->  `CompoundCurve`サブタイプを含め、このリリースの新しい空間機能の詳細な説明と例については、ホワイトペーパー「 [SQL Server 2012 の新しい空間機能」](https://go.microsoft.com/fwlink/?LinkId=226407)をダウンロードしてください。
+>  サブタイプを含め、このリリースの新しい空間機能の詳細な説明と例については、 `CompoundCurve` ホワイトペーパー「 [SQL Server 2012 の新しい空間機能」](https://go.microsoft.com/fwlink/?LinkId=226407)をダウンロードしてください。
 
  空の `CompoundCurve` インスタンスをインスタンス化することはできますが、`CompoundCurve` を有効にするには、次の条件を満たす必要があります。
 
@@ -29,7 +28,7 @@ ms.locfileid: "78176682"
 
 2.  `CircularString` インスタンスまたは `LineString` インスタンスのシーケンスが連続している。
 
- に`CompoundCurve`複数`CircularString`のおよび`LineString`インスタンスのシーケンスが含まれている場合、最後のインスタンスを除くすべてのインスタンスの終了エンドポイントは、シーケンス内の次のインスタンスの開始エンドポイントである必要があります。 これは、シーケンス内の前のインスタンスの終点が (4 3 7 2) である場合は、シーケンス内の次のインスタンスの始点が (4 3 7 2) になる必要があることを意味します。 点の Z (標高) 値および M (メジャー) 値も同じである必要があることに注意してください。 これら 2 つの点が異なる場合は、 `System.FormatException` がスローされます。 `CircularString` の点は、Z 値または M 値を持つ必要はありません。 前のインスタンスの終点に対して Z 値または M 値が指定されていない場合、次のインスタンスの始点には Z 値または M 値を含めることはできません。 前のシーケンスの終点が (4 3) である場合、次のシーケンスの始点は (4 3) となり、(4 3 7 2) を設定することはできません。 `CompoundCurve` インスタンスのすべての点は、Z 値をまったく持たないか、または同じ Z 値を持つ必要があります。
+ に `CompoundCurve` 複数のおよびインスタンスのシーケンスが含まれている場合 `CircularString` `LineString` 、最後のインスタンスを除くすべてのインスタンスの終了エンドポイントは、シーケンス内の次のインスタンスの開始エンドポイントである必要があります。 これは、シーケンス内の前のインスタンスの終点が (4 3 7 2) である場合は、シーケンス内の次のインスタンスの始点が (4 3 7 2) になる必要があることを意味します。 点の Z (標高) 値および M (メジャー) 値も同じである必要があることに注意してください。 これら 2 つの点が異なる場合は、 `System.FormatException` がスローされます。 `CircularString` の点は、Z 値または M 値を持つ必要はありません。 前のインスタンスの終点に対して Z 値または M 値が指定されていない場合、次のインスタンスの始点には Z 値または M 値を含めることはできません。 前のシーケンスの終点が (4 3) である場合、次のシーケンスの始点は (4 3) となり、(4 3 7 2) を設定することはできません。 `CompoundCurve` インスタンスのすべての点は、Z 値をまったく持たないか、または同じ Z 値を持つ必要があります。
 
 ## <a name="compoundcurve-instances"></a>CompoundCurve インスタンス
  次の図は、有効な `CompoundCurve` 型を示しています。
@@ -79,7 +78,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 
 ```
 
- `@g3` は、`CircularString` インスタンスが有効であるため、有効です。 `CircularString`インスタンスの有効性の詳細については、「 [CircularString](circularstring.md)」を参照してください。
+ `@g3` は、`CircularString` インスタンスが有効であるため、有効です。 インスタンスの有効性の詳細につい `CircularString` ては、「 [CircularString](circularstring.md)」を参照してください。
 
  次の例は、無効な `CompoundCurve` インスタンスを示しています。
 
@@ -90,7 +89,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ```
 
- `@g1` 2 番目のインスタンスが有効な LineString インスタンスではないため、無効です。 `@g2` は、`LineString` インスタンスが有効ではないため、無効です。 `@g3` は、`CircularString` インスタンスが有効ではないため、無効です。 有効な`CircularString`および`LineString`インスタンスの詳細については、「 [CircularString](circularstring.md) and [LineString](linestring.md)」を参照してください。
+ `@g1` 2 番目のインスタンスが有効な LineString インスタンスではないため、無効です。 `@g2` は、`LineString` インスタンスが有効ではないため、無効です。 `@g3` は、`CircularString` インスタンスが有効ではないため、無効です。 有効なおよびインスタンスの詳細につい `CircularString` `LineString` ては、「 [CircularString](circularstring.md) and [LineString](linestring.md)」を参照してください。
 
 ## <a name="examples"></a>例
 

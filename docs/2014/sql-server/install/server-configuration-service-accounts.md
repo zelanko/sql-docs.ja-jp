@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 405e1f8509e67518711eb2330c5f58961a3be77b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a894475f9dbdc95396f27b32f25f56bc409f0348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76921135"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036715"
 ---
 # <a name="server-configuration---service-accounts"></a>サーバーの構成 - サービス アカウント
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの [サーバーの構成] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスにログイン アカウントを割り当てます。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。  
   
-を開始して実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するために使用する開始アカウントは、ドメインユーザーアカウント、ローカルユーザーアカウント、管理されたサービスアカウント、仮想アカウント、またはビルトインシステムアカウントのいずれでもかまいません。  
+を開始して実行するために使用する開始アカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ドメインユーザーアカウント、ローカルユーザーアカウント、管理されたサービスアカウント、仮想アカウント、またはビルトインシステムアカウントのいずれでもかまいません。  
   
 ## <a name="options"></a>オプション  
  すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに同じログイン アカウントを割り当てることも、各サービス アカウントを個々に構成することもできます。 サービスを自動的に開始するか、手動で開始するか、または無効にするかを指定することもできます。 ほとんどのインストールでは、既定のアカウントをお勧めします。  
@@ -31,7 +30,7 @@ ms.locfileid: "76921135"
   
  サービスを構成してドメイン アカウントを使用する場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、各サービスに最小の権限を与えるために、サービス アカウントを個別に構成することをお勧めします。サービス アカウントを個別に構成すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスには、サービスでのタスクの実行に必要な最小権限が付与されます。 アカウントの種類の説明などの詳細については、「 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
- **サービス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アカウントを個別に構成する (推奨)**  
+ **サービスアカウントを個別に構成する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (推奨)**  
  グリッドを使用して各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスにログオン ユーザー名とパスワードを提供し、サービスのスタートアップの種類を設定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスには、ビルトイン システム アカウント、ローカル アカウント、ローカル グループ アカウント、ドメイン グループ アカウント、またはドメイン ユーザー アカウントを使用できます。  
   
  以下のサービスのいずれかを選択し、設定をカスタマイズします。  

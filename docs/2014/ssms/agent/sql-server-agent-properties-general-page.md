@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: b51601e9-5454-43c6-bb5e-24eb2ff043c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 66a7b7cd9328f70e5b5ca374a04ad5e9dd6e079a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 667a07744acf4b6d8b0dfa1e83adca738add0b4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245781"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058704"
 ---
 # <a name="sql-server-agent-properties-general-page"></a>[SQL Server エージェントのプロパティ] ([全般] ページ)
-  このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービスの全般プロパティを表示および変更できます。  
+  このページを使用すると、エージェントサービスの全般プロパティを表示および変更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。  
   
 ## <a name="options"></a>オプション  
  **サービスの状態**  
@@ -32,7 +31,7 @@ ms.locfileid: "63245781"
  **[予期しない停止時に SQL Server エージェントを自動的に再起動する]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが予期せず停止した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを再起動します。  
   
- **ファイル名**  
+ **/Db**  
  エラー ログのファイル名を指定します。  
   
  **...**  

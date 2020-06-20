@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: acfab7fa03a2f811e161b1e1cd3f38c0708ef5ec
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4e54d543ca97612cff08013e26c8fb8088f10f28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703440"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068241"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field と sql:limit-value (SQLXML 4.0)
   XML 一括読み込みでは、`sql:limit-field` および `sql:limit-value` 注釈が定義に従って処理されます。 詳細については、「 [sql: limit-field および sql: limit-value &#40;SQLXML 4.0&#41;を使用した値のフィルター選択](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)」を参照してください。  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 58a542c8cbe72c420797f34280c2fb7422b82207
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63f8be6f47ef4a6abd20c42757648ca03a5701b3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479551"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962062"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>カスタム ワークフローの作成 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、ビジネス ルールを使用して基本的なワークフロー ソリューションを作成します (たとえば、指定した条件に基づいてデータを自動的に更新および検証し、電子メール通知を送信するなど)。 組み込みのワークフロー アクションよりも複雑な処理が必要な場合は、カスタム ワークフローを使用します。 カスタム ワークフローは、ユーザーが作成する .NET アセンブリです。 作成したワークフロー アセンブリが呼び出された際には、記述したコードを通じて、状況に応じた任意のアクションを実行できます。 たとえば、複数階層の承認や複雑な意思決定ツリーなど、複雑なイベント処理を必要とするワークフローの場合は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を構成することで、データを分析し、データの承認のための送信先を決定するカスタム ワークフローを開始できます。  
@@ -56,7 +55,7 @@ ms.locfileid: "65479551"
   
 1.  Visual Studio 2010 で、任意の言語を使用する新しい **[クラス ライブラリ]** プロジェクトを作成します。 C# クラス ライブラリを作成するには、**[Visual C#\Windows]** プロジェクト タイプを選択し、**[クラス ライブラリ]** テンプレートを選択します。 プロジェクトの名前 (**MDSWorkflowTest** など) を入力し、**[OK]** をクリックします。  
   
-2.  Microsoft.MasterDataServices.WorkflowTypeExtender.dll への参照を追加します。 このアセンブリは、\<インストール フォルダー>\Master Data Services\WebApplication\bin にあります。  
+2.  Microsoft.MasterDataServices.WorkflowTypeExtender.dll への参照を追加します。 このアセンブリは、 \<Your installation folder> マスターデータ services\webapplication\bin にあります。  
   
 3.  C# コード ファイルに、'using Microsoft.MasterDataServices.Core.Workflow;' を追加します。  
   
@@ -64,12 +63,12 @@ ms.locfileid: "65479551"
   
 5.  <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> インターフェイスを実装します。 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> メソッドは、ワークフローを開始するために SQL Server MDS Workflow Integration Service によって呼び出されます。  
   
-6.  \<インストール フォルダー>\Master Data Services\WebApplication\bin 内にある SQL Server MDS Workflow Integration Service 実行可能ファイル (Microsoft.MasterDataServices.Workflow.exe) の場所に、アセンブリをコピーします。  
+6.  アセンブリを SQL Server MDS Workflow Integration Service 実行可能ファイルの場所にコピーします。これは、Microsoft.MasterDataServices.Workflow.exe という名前で、 \<Your installation folder> \ Master Data services\webapplication\bin にあります。  
   
 ### <a name="configure-sql-server-mds-workflow-integration-service"></a>SQL Server MDS Workflow Integration Service の構成  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 構成ファイルを編集して、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベース用の接続情報を含め、ワークフロー ハンドラー アセンブリにタグを関連付けるには、次の手順を実行します。  
   
-1.  \<インストール フォルダー>\Master Data Services\WebApplication\bin にある Microsoft.MasterDataServices.Workflow.exe.config を見つけます。  
+1.  \ Master Data Services\webapplication\bin での Microsoft.MasterDataServices.Workflow.exe.config の検索 \<Your installation folder>  
   
 2.  "ConnectionString" 設定に、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベース接続情報を追加します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールで大文字と小文字を区別する照合順序が使用されている場合、データベースの名前は、データベース内と同様の大文字/小文字で入力する必要があります。 たとえば、設定タグの全体は次のようになります。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "65479551"
     </setting>  
     ```  
   
-     \<value> タグの内部テキストは、\<ワークフロー タグ>=\<アセンブリ修飾型のワークフロー タイプ名> という形式になります。 \<ワークフロー タグ> は、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 内でビジネス ルールを作成する際に、ワークフロー ハンドラー アセンブリを識別するために使用する名前です。 \<アセンブリ修飾型のワークフロー タイプ名> は、名前空間で修飾されたワークフロー クラス名と、その後のコンマ、さらにその後の、アセンブリの表示名で指定します。 アセンブリに厳密な名前が指定されている場合は、バージョン情報と PublicKeyToken も含める必要があります。 異なる種類のワークフローを使用するために複数のワークフロー ハンドラーを作成した場合は、複数の \<setting> タグを含めることができます。  
+     タグの内部テキスト \<value> は、の形式になってい \<Workflow tag> = \<assembly-qualified workflow type name> ます。 \<Workflow tag>は、でビジネスルールを作成するときに、ワークフローハンドラーアセンブリを識別するために使用する名前です [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 。 \<assembly-qualified workflow type name>は、ワークフロークラスの名前空間で修飾された名前で、その後にコンマが続き、その後にアセンブリの表示名が続きます。 アセンブリに厳密な名前が指定されている場合は、バージョン情報と PublicKeyToken も含める必要があります。 \<setting>さまざまな種類のワークフローに対して複数のワークフローハンドラーを作成した場合は、複数のタグを含めることができます。  
   
 > [!NOTE]  
 >  サーバーの構成によっては、Microsoft.MasterDataServices.Workflow.exe.config ファイルを保存する際に、"アクセスが拒否されました" というエラーが返されることがあります。 その場合は、サーバー上のユーザー アカウント制御 (UAC) を一時的に無効にしてください。 これを行うには、コントロール パネルを開き、**[システムとセキュリティ]** をクリックします。 **[アクション センター]** で、**[ユーザー アカウント制御設定の変更]** をクリックします。 **[ユーザー アカウント制御の設定]** ダイアログで、スライダー バーを一番下まで下げ、通知が返されないようにします。 コンピューターを再起動し、上記の手順を繰り返して、構成ファイルを編集します。 ファイルを保存したら、UAC 設定を既定のレベルにリセットしてください。  
@@ -101,7 +100,7 @@ ms.locfileid: "65479551"
   
 3.  mds_workflow_service ユーザーに、ワークフロー ハンドラー アセンブリを実行する権限を付与します。 これを行うには、ワークフロー ハンドラー アセンブリの **[プロパティ]** の **[セキュリティ]** タブに mds_workflow_service ユーザーを追加し、その mds_workflow_service ユーザーに、READ および EXECUTE アクセス許可を付与します。  
   
-4.  mds_workflow_service ユーザーに、SQL Server MDS Workflow Integration Service 実行可能ファイルを実行する権限を付与します。 これを行うには、Microsoft.MasterDataServices.Workflow.exe (\<インストール フォルダー>\Master Data Services\WebApplication\bin 内) の **[プロパティ]** の **[セキュリティ]** タブに mds_workflow_service ユーザーを追加し、その mds_workflow_service ユーザーに READ および EXECUTE アクセス許可を付与します。  
+4.  mds_workflow_service ユーザーに、SQL Server MDS Workflow Integration Service 実行可能ファイルを実行する権限を付与します。 これを行うには、mds_workflow_service ユーザーを Microsoft.MasterDataServices.Workflow.exe の [**プロパティ**] の [**セキュリティ**] タブの [マスターデータ services\webapplication\bin 内)] に追加 \<Your installation folder> し、MDS_WORKFLOW_SERVICE ユーザーに読み取りと実行のアクセス許可を付与します。  
   
 5.  .NET インストール ユーティリティ (InstallUtil.exe) を使用して、SQL Server MDS Workflow Integration Service をインストールします。 InstallUtil.exe は、.NET インストール フォルダー (C:\Windows\Microsoft.NET\Framework\v4.0.30319\\ など) にあります。 SQL Server MDS Workflow Integration Service は、管理者特権のコマンド プロンプトで次のコマンドを入力してインストールします。  
   

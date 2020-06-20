@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 103f461c29e2bd7534ad5cb96836f06c972a6c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 191ffcfe0fb5ac041956a42500da650f6d8cc453
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187264"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066030"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>定義済みのレプリケーションの警告の構成 (SQL Server Management Studio)
   レプリケーションには、以下の定義済みの警告が用意されています。これらは、レプリケーション イベントに応答するように構成できます。  
@@ -27,9 +26,9 @@ ms.locfileid: "63187264"
 -   **レプリケーション: エージェントが失敗しました**    
 -   **レプリケーション: エージェントを再試行します**    
 -   **レプリケーション: 有効期限の切れたサブスクリプションを削除しました**    
--   **レプリケーション: データ検証で問題が見つかった後、サブスクリプションが再初期化されました**    
--   **レプリケーション: サブスクライバーでデータ検証で問題が見つかりました**    
--   **レプリケーション: サブスクライバーでデータ検証を正常に終了しました**    
+-   **レプリケーション:データ検証で問題が見つかった後、サブスクリプションが再初期化されました**    
+-   **レプリケーション:サブスクライバーでデータ検証の問題が見つかりました**    
+-   **レプリケーション:サブスクライバーでデータ検証を正常に終了しました**    
 -   **レプリケーション: エージェントのカスタム シャットダウン**  
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[警告]** フォルダー、またはレプリケーション モニターの **[警告]** タブからこれらの警告を構成できます。 このタブへのアクセスの詳細については、「[レプリケーションモニターを使用して情報を表示し、タスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  

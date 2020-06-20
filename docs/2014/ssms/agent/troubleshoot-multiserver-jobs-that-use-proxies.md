@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: fc579bd3-010c-4f72-8b5c-d0cc18a1f280
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47e3c3991bd4732d542bf1ce79e83000e738ff77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19de975ef5e1f22c93cec72a5014a01da5b03dd8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245423"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067470"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>プロキシを使用するマルチサーバー ジョブのトラブルシューティング
   プロキシに関連付けられているステップがある分散ジョブは、ターゲット サーバーのプロキシ アカウントのコンテキストで実行されます。 プロキシ アカウントを使用するジョブ ステップをマスター サーバーからダウンロードする際、それらのジョブ ステップにエラーが発生した場合は、 **msdb** データベースの **sysdownloadlist** テーブルにある **error_message** 列に次のエラー メッセージが出力されていないか確認してください。  
   
 -   "ジョブ ステップではプロキシ アカウントが必要ですが、ターゲット サーバーで一致するプロキシが無効です。"  
   
-     このエラーを解決するには、 **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\MSSQL.** を設定します。>**\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** _ \<n_\SQLServerAgent\AllowDownloadedJobsToMatchProxyName レジストリサブキーを**1 (true)** にします。 既定では、このサブキーは**0** (`false`) に設定されています。 MSSQL の値 **。**\< *n*> はインスタンス名です。たとえば、 **mssql. 1**または**mssql. 3**のようになります。  
+     このエラーを解決するには、 **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\MSSQL.** を設定します。_ \<n_> **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName**レジストリサブキーを**1 (true)** にします。 既定では、このサブキーは**0** () に設定されて `false` います。 MSSQL の値 **。**\<*n*> インスタンス名を指定します。たとえば、 **mssql. 1**または**mssql. 3**のようになります。  
   
 -   "プロキシ アカウントが見つかりませんでした。"  
   

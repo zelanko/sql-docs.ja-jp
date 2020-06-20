@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f395000888cccb52356b4e89e1331e1c86ea7e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068207"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940333"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>[レポート用通貨の指定] (ビジネス インテリジェンス ウィザード)
   **[レポート用通貨の指定]** ページを使用すると、**[換算の種類の選択]** ページで指定した多対多または一対多の換算に対応できる通貨換算機能に、レポート用通貨を定義できます  (レポート用通貨とは、 **[メジャーの選択]** ページで選択されたメジャーの値の換算に使用される通貨です)。通貨ディメンションから選択したメンバーにより、ビジネス インテリジェンス ウィザードで生成される通貨換算のレポート用通貨ディメンションが定義されます。  

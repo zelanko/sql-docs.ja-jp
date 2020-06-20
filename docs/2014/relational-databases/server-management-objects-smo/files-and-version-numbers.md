@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0a1b0b28afbb83028af8d71644af08ca660a0b36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1a7286f15af28f97e488b8b40fd745a0d320108
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753414"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997137"
 ---
 # <a name="files-and-version-numbers"></a>ファイルとバージョン番号
-  必要な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]すべての管理オブジェクト (SMO) コンポーネントは、クライアントまたはサーバー [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの一部としてインストールされます。 SMO は複数のマネージド アセンブリに実装されます。 クライアント上またはサーバー上のいずれかで SMO アプリケーションを開発することができます。  
+  必要なすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) コンポーネントは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントまたはサーバーのインスタンスの一部としてインストールされます。 SMO は複数のマネージド アセンブリに実装されます。 クライアント上またはサーバー上のいずれかで SMO アプリケーションを開発することができます。  
   
 |ディレクトリ|ファイル|説明|  
 |---------------|----------|-----------------|  

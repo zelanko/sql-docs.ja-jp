@@ -1,5 +1,6 @@
 ---
 title: 複数のアクティブな結果セット (MARS) の使用 | Microsoft Docs
+description: SQL Server は、複数のアクティブな結果セットをサポートします。 アプリケーションには、接続ごとに複数の保留中の要求とアクティブな既定の結果セットを含めることができます。
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdf953bd5cb1835b2d2f6cc0e868a3687e53e852
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b83a79a92680c6499a4f2270ad3707082b324938
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303216"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950498"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>複数のアクティブな結果セット (MARS) の使用
 
@@ -50,7 +51,7 @@ ms.locfileid: "81303216"
 -   MARS では、複数のバッチが同時に実行されている間、セッション スコープの権限の借用が禁止されます。  
 
 > [!NOTE]
-> 既定では、MARS 機能はドライバーによって有効になっていません。 Native Client を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に接続するときに mars を使用するには、接続文字列内で mars を明示的に有効にする必要があります。 ただし、アプリケーションが MARS をサポートしていることをアプリケーションが検出した場合、既定では MARS が有効になることがあります。 これらのアプリケーションでは、必要に応じて接続文字列の MARS を無効にすることができます。 詳細については、この後の「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー」と「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー」を参照してください。
+> 既定では、MARS 機能はドライバーによって有効になっていません。 Native Client を使用してに接続するときに MARS を使用するには [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、接続文字列内で mars を明示的に有効にする必要があります。 ただし、アプリケーションが MARS をサポートしていることをアプリケーションが検出した場合、既定では MARS が有効になることがあります。 これらのアプリケーションでは、必要に応じて接続文字列の MARS を無効にすることができます。 詳細については、この後の「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー」と「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー」を参照してください。
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、接続でのアクティブなステートメントの数は制限されません。  
   
@@ -113,14 +114,14 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
  SQL Server (2016 以降) では、列ストア インデックスを持つ MARS がサポートされています。 SQL Server 2014 では、列ストア インデックスに読み取り専用で接続するために MARS が使用されます。    ただし、SQL Server 2014 では、列ストア インデックスを含むテーブルで DML (データ操作言語) を同時操作するとき、MARS を利用できません。 その場合、SQL Server は接続を強制終了し、トランザクションを中止します。   SQL Server 2012 には読み取り専用の列ストア インデックスがあり、それらには MARS は適用されません。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、DBPROPSET_SQLSERVERDBINIT プロパティセットに実装されている SSPROP_INIT_MARSCONNECTION データソース初期化プロパティを追加することによって、MARS をサポートしています。 また、新しい接続文字列のキーワードとして **MarsConn** が追加されました。 **true** または **false** を値として受け取ります。既定値は **false** です。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、DBPROPSET_SQLSERVERDBINIT プロパティセットに実装されている SSPROP_INIT_MARSCONNECTION データソース初期化プロパティを追加することによって、MARS をサポートしています。 また、新しい接続文字列のキーワードとして **MarsConn** が追加されました。 **true** または **false** を値として受け取ります。既定値は **false** です。  
   
- データ ソース プロパティ DBPROP_MULTIPLECONNECTIONS の既定値は VARIANT_TRUE です。 これは、複数の同時実行コマンドや行セット オブジェクトをサポートするために、プロバイダーが複数の接続を起動することを意味しています。 MARS が有効になっ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ている場合、Native Client は1つの接続で複数のコマンドと行セットオブジェクトをサポートできるため、MULTIPLE_CONNECTIONS は既定で VARIANT_FALSE に設定されます。  
+ データ ソース プロパティ DBPROP_MULTIPLECONNECTIONS の既定値は VARIANT_TRUE です。 これは、複数の同時実行コマンドや行セット オブジェクトをサポートするために、プロバイダーが複数の接続を起動することを意味しています。 MARS が有効になっている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は1つの接続で複数のコマンドと行セットオブジェクトをサポートできるため、MULTIPLE_CONNECTIONS は既定で VARIANT_FALSE に設定されます。  
   
  DBPROPSET_SQLSERVERDBINIT プロパティ セットに行われた機能強化の詳細については、「[初期化プロパティと承認プロパティ](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
   
 ### <a name="sql-server-native-client-ole-db-provider-example"></a>SQL Server Native Client OLE DB プロバイダーの例  
- この例では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ OLE DB プロバイダーを使用してデータソースオブジェクトを作成し、セッションオブジェクトを作成する前に、DBPROPSET_SQLSERVERDBINIT プロパティセットを使用して MARS を有効にします。  
+ この例では、ネイティブ OLE DB プロバイダーを使用してデータソースオブジェクトを作成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] し、セッションオブジェクトを作成する前に、DBPROPSET_SQLSERVERDBINIT プロパティセットを使用して MARS を有効にします。  
   
 ```cpp
 #include <sqlncli.h>  
@@ -206,7 +207,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)および[sqlgetconnectattr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)関数への追加によって MARS がサポートされています。 SQL_COPT_SS_MARS_ENABLED が追加され、SQL_MARS_ENABLED_YES または SQL_MARS_ENABLED_NO を受け取ります。既定値は SQL_MARS_ENABLED_NO です。 さらに、新しい接続文字列キーワード**Mars_Connection**が追加されました。 このキーワードは、"yes" と "no" を値として受け取ります。既定値は "no" です。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)および[sqlgetconnectattr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)関数への追加によって MARS がサポートされています。 SQL_COPT_SS_MARS_ENABLED が追加され、SQL_MARS_ENABLED_YES または SQL_MARS_ENABLED_NO を受け取ります。既定値は SQL_MARS_ENABLED_NO です。 さらに、新しい接続文字列キーワード**Mars_Connection**が追加されました。 このキーワードは、"yes" と "no" を値として受け取ります。既定値は "no" です。  
   
 ### <a name="sql-server-native-client-odbc-driver-example"></a>SQL Server Native Client ODBC ドライバーの例  
  この例では、 **SQLSetConnectAttr**関数を使用して、 **SQLDriverConnect**関数を呼び出してデータベースに接続する前に、MARS を有効にします。 接続が確立されると、2つの**SQLExecDirect**関数が呼び出され、同じ接続に2つの異なる結果セットが作成されます。  
@@ -234,7 +235,7 @@ SQLFetch(hstmt2);
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client 機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [SQL Server の既定の結果セットの使用](../../../relational-databases/native-client-odbc-cursors/implementation/using-sql-server-default-result-sets.md)  
   
   

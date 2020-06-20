@@ -1,7 +1,7 @@
 ---
 title: dm_resource_governor_workload_groups (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 04/24/2018
+ms.date: 06/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dcd93a0c74d8fc12af14809c8ca66bf59275dee
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 32858f6e508ef0a7de2b981dc17379d7be7fa4c7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821056"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84941035"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "82821056"
 |group_id|**int**|ワークロードグループの ID。 NULL 値は許可されません。|  
 |name|**sysname**|ワークロードグループの名前。 NULL 値は許可されません。|  
 |pool_id|**int**|リソースプールの ID。 NULL 値は許可されません。|  
-|external_pool_id|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。<br /><br /> 外部リソースプールの ID。 NULL 値は許可されません。|  
+|external_pool_id|**int**|**適用対象**: 以降 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br /> 外部リソースプールの ID。 NULL 値は許可されません。|  
 |statistics_start_time|**datetime**|ワークロードグループの統計コレクションがリセットされた時刻。 NULL 値は許可されません。|  
 |total_request_count|**bigint**|ワークロードグループ内の完了した要求の累積数。 NULL 値は許可されません。|  
 |total_queued_request_count|**bigint**|GROUP_MAX_REQUESTS の制限に達した後にキューに登録された要求の累積数。 NULL 値は許可されません。|  
@@ -62,16 +62,19 @@ ms.locfileid: "82821056"
 |request_max_cpu_time_sec|**int**|1 つの要求に対する最大 CPU 使用制限の現在の設定 (秒単位)。 NULL 値は許可されません。|  
 |request_memory_grant_timeout_sec|**int**|1つの要求に対するメモリ許可のタイムアウト (秒単位) の現在の設定。 NULL 値は許可されません。|  
 |group_max_requests|**int**|同時要求の最大数の現在の設定です。 NULL 値は許可されません。|  
-|max_dop|**int**|ワークロード グループの並列処理の最大限度。 既定値は0で、グローバル設定が使用されます。 NULL 値は許可されません。|  
+|max_dop|**int**|ワークロードグループの並列処理の最大限度を構成しました。 既定値は0で、グローバル設定が使用されます。 NULL 値は許可されません。| 
+|effective_max_dop|**int**|**適用対象**: 以降 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。<br /><br />ワークロードグループの並列処理の有効な最大限度。 NULL 値は許可されません。| 
+|total_cpu_usage_preemptive_ms|**bigint**|**適用対象**: 以降 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br />ワークロードグループのプリエンプティブモードのスケジュール設定で使用された合計 CPU 時間 (ミリ秒単位)。 NULL 値は許可されません。<br /><br />[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。| 
+|request_max_memory_grant_percent_numeric|**float**|**適用対象**: 以降 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 。<br /><br />1つの要求に対する最大メモリ許可の現在の設定 (パーセンテージ)。 NULL 値は許可されません。| 
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-## <a name="remarks"></a>解説  
- この動的管理ビューには、メモリ内の構成が表示されます。 格納されている構成メタデータを表示するには、sys.resource_governor_workload_groups カタログ ビューを使用します。  
+## <a name="remarks"></a>注釈  
+ この動的管理ビューには、メモリ内の構成が表示されます。 格納されている構成メタデータを表示するには、 [resource_governor_workload_groups &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)カタログビューを使用します。  
   
- ALTER RESOURCE GOVERNOR RESET STATISTICS が正常に実行されると、statistics_start_time、total_request_count、total_queued_request_count、total_cpu_limit_violation_count、total_cpu_usage_ms、max_request_cpu_time_ms、total_lock_wait_count、total_lock_wait_time_ms、total_query_optimization_count、total_suboptimal_plan_generation_count、total_reduced_memgrant_count、max_request_grant_memory_kb の各カウンターがリセットされます。 statistics_start_time が現在のシステム日付と時刻に設定されている場合、その他のカウンターはゼロ (0) に設定されます。  
+ が正常に実行されると、、、、、、、、、、、、 `ALTER RESOURCE GOVERNOR RESET STATISTICS` `statistics_start_time` `total_request_count` `total_queued_request_count` `total_cpu_limit_violation_count` `total_cpu_usage_ms` `max_request_cpu_time_ms` `total_lock_wait_count` `total_lock_wait_time_ms` `total_query_optimization_count` `total_suboptimal_plan_generation_count` `total_reduced_memgrant_count` および `max_request_grant_memory_kb` の各カウンターがリセットされます。 カウンター `statistics_start_time` は、現在のシステムの日付と時刻に設定され、その他のカウンターはゼロ (0) に設定されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- VIEW SERVER STATE 権限が必要です。  
+ `VIEW SERVER STATE` 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
@@ -79,7 +82,3 @@ ms.locfileid: "82821056"
  [resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
-  
-
-
-

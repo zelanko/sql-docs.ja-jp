@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d229d490a9f3a7bc6f613259ee0535218de47975
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874079"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970648"
 ---
 # <a name="data-access-from-clr-database-objects"></a>CLR データベース オブジェクトからのデータ アクセス
-  共通言語ランタイム (CLR) ルーチンは、リモートインスタンスに格納されている[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]データだけでなく、実行されるのインスタンスに格納されているデータにも簡単にアクセスできます。 ルーチンからどのデータにアクセスできるかは、コードが実行されているユーザー コンテキストによって決まります。 マネージクライアントおよび中間層アプリケーションからのデータに対して .NET Framework Data Provider [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を使用して、CLR データベースオブジェクト内からデータにアクセスします。 このため、クライアント アプリケーションや中間層アプリケーションでは、ADO.NET と `SqlClient` の知識を活用できます。  
+  共通言語ランタイム (CLR) ルーチンは、 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] リモートインスタンスに格納されているデータだけでなく、実行されるのインスタンスに格納されているデータにも簡単にアクセスできます。 ルーチンからどのデータにアクセスできるかは、コードが実行されているユーザー コンテキストによって決まります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]マネージクライアントおよび中間層アプリケーションからのデータに対して .NET Framework Data Provider を使用して、CLR データベースオブジェクト内からデータにアクセスします。 このため、クライアント アプリケーションや中間層アプリケーションでは、ADO.NET と `SqlClient` の知識を活用できます。  
   
 > [!NOTE]  
 >  ユーザー定義型メソッドとユーザー定義関数では、既定ではデータ アクセスの実行が許可されていません。 UDT (ユーザー定義型) メソッドやユーザー定義関数からの読み取り専用データ アクセスを可能にするには、`DataAccess` または `SqlMethodAttribute` の `SqlFunctionAttribute` プロパティを `DataAccessKind.Read` に設定する必要があります。 UDT またはユーザー定義関数によるデータ変更操作は許可されません。この操作を実行しようとすると、実行時に例外がスローされます。  
