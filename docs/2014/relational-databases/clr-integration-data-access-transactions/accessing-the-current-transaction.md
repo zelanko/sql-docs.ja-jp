@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f9b8ecedf6a1736fa287d082d8d446c5052078d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920019"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955069"
 ---
 # <a name="accessing-the-current-transaction"></a>現在のトランザクションへのアクセス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行されている CLR (共通言語ランタイム) コードに実行が移った時点でトランザクションがアクティブな場合、`System.Transactions.Transaction` クラスによりそのトランザクションが公開されます。 現在のトランザクションにアクセスするには、`Transaction.Current` プロパティを使用します。 ほとんどの場合、トランザクションに明示的にアクセスする必要はありません。 データベース接続の場合、`Transaction.Current` メソッドが呼び出されると、ADO.NET が `Connection.Open` を自動的にチェックし、ユーザーに意識させることなく接続をそのトランザクションに参加させます (接続文字列の `Enlist` キーワードを false に設定した場合は除く)。  
@@ -43,7 +42,7 @@ ms.locfileid: "62920019"
   
 -   マネージド プロシージャまたは関数は、出力パラメーターを使用して値を返すことができます。 呼び出し元の [!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャは、戻り値を確認して、必要に応じて `ROLLBACK TRANSACTION` を実行できます。  
   
--   マネージド プロシージャまたは関数は、カスタムの例外をスローできます。 呼び出し元[!INCLUDE[tsql](../../includes/tsql-md.md)]のプロシージャは、try/catch ブロックでマネージプロシージャまたは関数によってスローされ`ROLLBACK TRANSACTION`た例外をキャッチし、を実行できます。  
+-   マネージド プロシージャまたは関数は、カスタムの例外をスローできます。 呼び出し元のプロシージャは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] try/catch ブロックでマネージプロシージャまたは関数によってスローされた例外をキャッチし、を実行でき `ROLLBACK TRANSACTION` ます。  
   
 -   マネージド プロシージャまたは関数は、特定の条件が満たされた場合に `Transaction.Rollback` メソッドを呼び出して、現在のトランザクションをキャンセルできます。  
   

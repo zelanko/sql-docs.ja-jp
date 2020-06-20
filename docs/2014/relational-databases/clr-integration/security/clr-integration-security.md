@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeec8c832061756a818c9d2438df3046a29c1160
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918996"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970582"
 ---
-# <a name="clr-integration-security"></a>CLR 統合のセキュリティ
-  [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)]共通言語ランタイム (clr: common language runtime) のセキュリティモデルでは、ステートメント内[!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)]で実行されている、またはサーバーで実行されている別の clr オブジェクトの異なる種類の clr オブジェクトと clr 以外のオブジェクトの間のアクセスを管理および保護します。 オブジェクト間の呼び出しをリンクと呼びます。 このようなオブジェクトに対して実行されるセキュリティ チェックの種類は、関連するリンクの種類によって異なります。  
+# <a name="clr-integration-security"></a>CLR 統合セキュリティ
+  [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)]共通言語ランタイム (clr: common language runtime) のセキュリティモデルでは、ステートメント内で実行されている、 [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] またはサーバーで実行されている別の clr オブジェクトの異なる種類の clr オブジェクトと clr 以外のオブジェクトの間のアクセスを管理および保護します。 オブジェクト間の呼び出しをリンクと呼びます。 このようなオブジェクトに対して実行されるセキュリティ チェックの種類は、関連するリンクの種類によって異なります。  
   
  CLR 統合のセキュリティ モデルは、次のことを目標にしています。  
   
--   既定では、で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]マネージユーザーコードを実行します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の堅牢性を侵害する可能性のある操作の実行は、レベルの高い適切な権限によって保護されるようにする。  
+-   既定では、でマネージユーザーコードを実行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の堅牢性を侵害する可能性のある操作の実行は、レベルの高い適切な権限によって保護されるようにする。  
   
 -   マネージド ユーザー コードは、データベース内のユーザー データや他のユーザー コードに対して、未承認のアクセスを行わない。 ユーザー定義コードは、そのコードを呼び出したユーザー セッションのセキュリティ コンテキストで実行する。実行には、そのセキュリティ コンテキストにおける適切な特権を使用する。  
   

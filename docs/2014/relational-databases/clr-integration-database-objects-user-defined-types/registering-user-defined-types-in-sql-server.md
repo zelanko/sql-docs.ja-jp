@@ -32,16 +32,15 @@ helpviewer_keywords:
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d24f7948e093335eff708f3c4a8a7361cfc156f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919947"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954627"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>SQL Server でのユーザー定義型の登録
-  で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義型 (UDT) を使用するには、それを登録する必要があります。 UDT を登録するには、UDT を使用するデータベースにアセンブリを登録し、型を作成する必要があります。 UDT は、1 つのデータベースにスコープが設定されるので、同一のアセンブリと UDT を各データベースに登録しない限り、複数のデータベースでは使用できません。 UDT アセンブリを登録し、型を作成すると、[!INCLUDE[tsql](../../includes/tsql-md.md)] やクライアント コードでその UDT を使用できます。 詳細については、「 [CLR ユーザー定義型](clr-user-defined-types.md)」を参照してください。  
+  でユーザー定義型 (UDT) を使用するには [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、それを登録する必要があります。 UDT を登録するには、UDT を使用するデータベースにアセンブリを登録し、型を作成する必要があります。 UDT は、1 つのデータベースにスコープが設定されるので、同一のアセンブリと UDT を各データベースに登録しない限り、複数のデータベースでは使用できません。 UDT アセンブリを登録し、型を作成すると、[!INCLUDE[tsql](../../includes/tsql-md.md)] やクライアント コードでその UDT を使用できます。 詳細については、「 [CLR ユーザー定義型](clr-user-defined-types.md)」を参照してください。  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>Visual Studio を使用した UDT の配置  
  UDT を配置する最も簡単な方法は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio を使用することです。 ただし、より複雑な配置シナリオで最も優れた柔軟性を得るためには、このトピックで説明するように [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。  
@@ -69,7 +68,7 @@ ms.locfileid: "62919947"
  SAFE 権限セットまたは EXTERNAL_ACCESS 権限セットを指定して CREATE ASSEMBLY を実行すると、アセンブリが検証可能でタイプ セーフであることを確認するためのチェックが行われます。 権限セットを指定しないと、SAFE が指定されていると想定されます。 UNSAFE 権限セットを指定したコードはチェックされません。 アセンブリの権限セットの詳細については、「[アセンブリのデザイン](../../relational-databases/clr-integration/assemblies-designing.md)」をご覧ください。  
   
 #### <a name="example"></a>例  
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントは、 **AdventureWorks**データベースの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に POINT アセンブリを登録し、SAFE 権限セットを設定します。 WITH PERMISSION_SET 句を省略すると、SAFE 権限セットでアセンブリが登録されます。  
+ 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、AdventureWorks データベースのに Point アセンブリを登録し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SAFE 権限セットを設定します。 **AdventureWorks** WITH PERMISSION_SET 句を省略すると、SAFE 権限セットでアセンブリが登録されます。  
   
 ```  
 USE AdventureWorks;  
@@ -78,7 +77,7 @@ FROM '\\ShareName\Projects\Point\bin\Point.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントは、from 句で *<assembly_bits>* 引数を使用してアセンブリを登録します。 この `varbinary` 値は、ファイルをバイト ストリームで表しています。  
+ 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、from 句で *<assembly_bits>* 引数を使用してアセンブリを登録します。 この `varbinary` 値は、ファイルをバイト ストリームで表しています。  
   
 ```  
 USE AdventureWorks;  
@@ -123,7 +122,7 @@ DROP ASSEMBLY Point;
 ### <a name="finding-udt-dependencies"></a>UDT 依存関係の検出  
  UDT の列定義を含むテーブルなどの依存オブジェクトがある場合、DROP TYPE ステートメントは失敗します。 また、WITH SCHEMABINDING 句を使用してデータベースに作成した関数、ストアド プロシージャ、またはトリガーがあり、これらのルーチンでユーザー定義型の変数やパラメーターが使用される場合にも失敗します。 最初にすべての依存オブジェクトを削除してから、DROP TYPE ステートメントを実行する必要があります。  
   
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のクエリでは、 **ADVENTUREWORKS**データベースで UDT を使用するすべての列とパラメーターを検索します。  
+ 次のクエリでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **AdventureWorks**データベースで UDT を使用するすべての列とパラメーターを検索します。  
   
 ```  
 USE Adventureworks;  
@@ -159,7 +158,7 @@ FROM '\\Projects\Point\bin\Point.dll'
 ### <a name="using-alter-assembly-to-add-source-code"></a>ALTER ASSEMBLY を使用したソース コードの追加  
  ALTER ASSEMBLY 構文の ADD FILE 句は、CREATE ASSEMBLY 構文には存在しません。 ADD FILE 句を使用すると、アセンブリに関連付けられるソース コードやその他のファイルを追加できます。 ファイルは元の場所からコピーされ、データベース内のシステム テーブルに格納されます。 これにより、現在のバージョンの UDT を再作成またはドキュメント化する必要があれば、ソース コードや他のファイルをいつでも使用できます。  
   
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)]の ALTER ASSEMBLY ステートメントでは、 `Point` UDT の Point.cs クラスのソースコードを追加します。 Point.cs ファイルに含まれているテキストがコピーされ、"PointSource" という名前でデータベースに格納されます。  
+ 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY ステートメントでは、UDT の Point.cs クラスのソースコードを追加し `Point` ます。 Point.cs ファイルに含まれているテキストがコピーされ、"PointSource" という名前でデータベースに格納されます。  
   
 ```  
 ALTER ASSEMBLY Point  

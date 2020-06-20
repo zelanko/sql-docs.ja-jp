@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d44d8d8bdda5f8c15fffe8f3aaf0eaf2d099e81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62805573"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040891"
 ---
 # <a name="create-custom-templates"></a>カスタム テンプレートの作成
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 一般的な作業のためのテンプレートが多数用意されていますが、テンプレートの真価は、頻繁に作成する複雑なスクリプトに適したカスタム テンプレートを作成できる点にあります。 この演習では、2 ～ 3 のパラメーターを使用した簡単なスクリプトを作成しますが、規模が大きく、反復的なスクリプトを作成する場合にもテンプレートが役立ちます。  
@@ -67,7 +66,7 @@ ms.locfileid: "62805573"
   
 10. クエリ エディターに「 **EXECUTE dbo.WorkOrdersForBlade**」と入力し、F5 キーを押してクエリを実行します。 **結果**ペインに、ブレードに対する作業命令の一覧が返されていることを確認します。  
   
-11. テンプレートスクリプト (手順7で作成したスクリプト) を編集し、product name ブレードを、4つ`nvarchar(50)`の場所にあるパラメーター <strong> *<* product_name</strong>、<strong>名前*>*</strong>に置き換えます。  
+11. テンプレートスクリプト (手順7で作成したスクリプト) を編集し、product name ブレードを、 <strong> *<* </strong> `nvarchar(50)` 4 つの場所にあるパラメーター product_name、<strong>名前 *>* </strong>に置き換えます。  
   
     > [!NOTE]  
     >  パラメーターには、置き換えるパラメーターの名前、パラメーターのデータ型、パラメーターの既定値の 3 つの要素が必要です。  
@@ -103,7 +102,7 @@ ms.locfileid: "62805573"
   
 3.  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]** をクリックします。  
   
-4.  [**テンプレートパラメーターの置換**] ダイアログボックスで、 `product_name`値として「 **freewheel** 」と入力し (既定の内容を上書きします)、[ **OK** ] をクリックして [**テンプレートパラメーターの置換**] ダイアログボックスを閉じ、クエリエディターでスクリプトを変更します。  
+4.  [**テンプレートパラメーターの置換**] ダイアログボックスで、値として `product_name` 「 **freewheel** 」と入力し (既定の内容を上書きします)、[ **OK** ] をクリックして [**テンプレートパラメーターの置換**] ダイアログボックスを閉じ、クエリエディターでスクリプトを変更します。  
   
 5.  F5&lt;/localizedText&gt; キーを押してクエリを実行し、プロシージャを作成します。  
   

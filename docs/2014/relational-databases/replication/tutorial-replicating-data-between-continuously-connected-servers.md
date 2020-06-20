@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c63e48d4c5f5bfad6fe50155cd7fd7a088c2178
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655393"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047618"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>チュートリアル : 常時接続サーバー間でのデータのレプリケーション
   レプリケーションは、常時接続サーバー間でデータを移動する際の問題を解決する有効なソリューションです。 レプリケーション ウィザードを使用すると、レプリケーション トポロジを簡単に設定し、管理できます。 このチュートリアルでは、常時接続サーバー間にレプリケーション トポロジを設定する方法を学習します。  
@@ -27,7 +26,7 @@ ms.locfileid: "62655393"
 ## <a name="what-you-will-learn"></a>学習する内容  
  このチュートリアルでは、トランザクション レプリケーションによって 1 つのデータベースから別のデータベースにデータをパブリッシュする方法を学習します。 最初のレッスンでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使ってパブリケーションを作成する方法を学習し、 後のレッスンでは、サブスクリプションを作成および検証する方法と、待機時間を計測する方法を学習します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  このチュートリアルは、データベースの基本的な操作は理解しているが、レプリケーション機能についてはあまり詳しくないユーザーを対象としています。 このチュートリアルを学習するには、前のチュートリアル「 [レプリケーションに備えたサーバーの準備](tutorial-preparing-the-server-for-replication.md)」を完了している必要があります。  
   
  このチュートリアルを使用するには、システムに次のコンポーネント必要です。  
@@ -46,7 +45,7 @@ ms.locfileid: "62655393"
     >  既定では、レプリケーションは [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] にインストールされません。  
   
 > [!NOTE]  
->  で[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]は、 **sysadmin**固定サーバーロールのメンバーであるログインを使用して、パブリッシャーおよびサブスクライバーに接続する必要があります。  
+>  で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 **sysadmin**固定サーバーロールのメンバーであるログインを使用して、パブリッシャーおよびサブスクライバーに接続する必要があります。  
   
  **このチュートリアルの推定所要時間:30 分。**  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23ad4cd92d186f43fb1a9dd81e1dbb0727170367
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df9cfb95144bbc7db16ff0bb72f96ff3e4465f89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043221"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>スナップショットを使用したサブスクリプションの初期化
   パブリケーションを作成すると、通常は初期スナップショットが作成され、スナップショット フォルダーにコピーされます (この動作は、パブリケーションの新規作成ウィザードを使用して作成されたマージ パブリケーションに対して既定で実行されます)。 その後スナップショットは、サブスクリプションの最初の同期時に、ディストリビューション エージェント (トランザクション パブリケーションおよびスナップショット パブリケーションの場合) またはマージ エージェント (マージ パブリケーションの場合) によってサブスクライバーに適用されます。 スナップショット処理は、パブリケーションの種類によって変わります。  
@@ -37,7 +36,7 @@ ms.locfileid: "62721126"
  ある時点でスナップショットの転送が中断された場合、転送は自動的に再開され、既に転送が完了したファイルは再送されません。 スナップショット エージェントの配信単位は、各パブリケーション アーティクルに対する bcp ファイルであるため、部分的に配信されたファイルは再度全体を配信する必要があります。 しかし、スナップショットの再開機能を使うことで、転送されるデータ量が大幅に削減され、接続が不安定な場合でもタイムリーにスナップショットを配信できます。  
   
 ## <a name="snapshot-options"></a>スナップショット オプション  
- スナップショットを使用してサブスクリプションを初期化する際には、いくつかのオプションがあります。 次の操作を行います。  
+ スナップショットを使用してサブスクリプションを初期化する際には、いくつかのオプションがあります。 次のようにすることができます。  
   
 -   既定のスナップショット フォルダーを代替または追加する場所として、代替スナップショット フォルダーの場所を指定できます。 詳細については、「 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)」を参照してください。  
   

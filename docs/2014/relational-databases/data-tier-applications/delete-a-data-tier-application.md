@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efbd01499940490fd85dfaf1e0786d26b722749c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fd058eb14b45fe9f5aaaea4e9e37c8741c19d6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970284"
 ---
 # <a name="delete-a-data-tier-application"></a>データ層アプリケーションの削除
   データ層アプリケーションの削除ウィザードまたは Windows PowerShell スクリプトを使用して、データ層アプリケーションを削除できます。 関連付けられたデータベースの保持、デタッチ、または削除を指定することができます。  
@@ -101,7 +100,7 @@ ms.locfileid: "72782743"
   
  データベースのデータ ファイルとログ ファイルは、完全に削除されます。  
   
- Previous-[**概要**] ページに戻ります。 ** \< **  
+ ** \< Previous** -[**概要**] ページに戻ります。  
   
  **[次へ]** : **[概要]** ページに進みます。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "72782743"
   
  **[選択内容の概要の確認]** : ボックスに表示されている DAC、データベース、および削除方法を確認します。 情報が正しい場合は、 **[次へ]** または **[完了]** をクリックして DAC を削除します。 DAC とデータベースの情報が正しくない場合は、 **[キャンセル]** をクリックしてから正しい DAC を選択します。 削除方法が正しくない場合は、 **[戻る]** をクリックして **[方法の選択]** ページに戻り、別の方法を選択します。  
   
- Previous-別の削除方法を選択するには、 **[メソッドの選択**] ページに戻ります。 ** \< **  
+ ** \< Previous** -別の削除方法を選択するには、 **[メソッドの選択**] ページに戻ります。  
   
  **[次へ >]**: 前のページで選択した方法で DAC インスタンスを削除して、**[データ層アプリケーションの削除]** ページに進みます。  
   

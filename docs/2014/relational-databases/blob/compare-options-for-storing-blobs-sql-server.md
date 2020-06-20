@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f7930cd63150b385cd84f48e1bb1c4fdaa9ec0a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010344"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955742"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Blob (SQL Server) を保存するオプションの比較
   ファイルおよびドキュメントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納するために使用できるオプションを説明して比較します。  
@@ -40,10 +39,10 @@ ms.locfileid: "66010344"
 ##  <a name="filestream"></a><a name="Filestream"></a> FILESTREAM  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、ファイル システムでファイルとして格納される非構造化データの効率的な保管、管理、およびストリーミングを可能にする FILESTREAM 機能が既に装備されています。 ただし、FILESTREAM ソリューションはカスタム プログラミングを必要とし、上で説明した完全な Windows アプリケーションの互換性の要件を満たしていません。  
   
-##  <a name="filetables"></a><a name="FileTables"></a>Filetable  
+##  <a name="filetables"></a><a name="FileTables"></a> FileTables  
  FileTable 機能は、既存の FILESTREAM 機能をベースとして構築されています。企業は、FileTable 機能を使用することにより、非トランザクション アクセスやファイルベース データの Windows アプリケーションの互換性の要件を解決して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の非構造化ファイル データおよびディレクトリ階層を格納できるようになります。  
   
-##  <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a>FILESTREAM と FileTable の比較  
+##  <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a> FILESTREAM と FileTable の比較  
   
 |機能|ファイル サーバーとデータベース ソリューション|FILESTREAM ソリューション|FileTable ソリューション|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
@@ -55,10 +54,10 @@ ms.locfileid: "66010344"
 |**Windows アプリケーションの互換性**|はい|いいえ|**はい**|  
 |**ファイルの属性へのリレーショナル アクセス**|いいえ|いいえ|**はい**|  
   
-##  <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a>FILESTREAM とリモート BLOB ストア (RBS) の比較  
+##  <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a> FILESTREAM とリモート BLOB ストア (RBS) の比較  
  これらの 2 つの機能の比較については、RBS チームのブログ投稿「 [SQL Server リモート BLOB ストアと FILESTREAM 機能の比較](https://go.microsoft.com/fwlink/?LinkId=210317)」を参照してください。  
   
-##  <a name="more-information"></a><a name="more"></a> 詳細情報  
+##  <a name="more-information"></a><a name="more"></a> その他の情報  
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  
  [FileTables &#40;SQL Server&#41;](filetables-sql-server.md)  
  [リモート BLOB ストア &#40;RBS&#41; &#40;SQL Server&#41;](remote-blob-store-rbs-sql-server.md)  
