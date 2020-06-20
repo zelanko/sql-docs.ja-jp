@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 705512f54feae3bf60317c18b8c260ef484abebc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1d97a3b694eebb924f9e1ff228d4d38da4f45ec
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797877"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932923"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Windows PowerShell 用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーおよびコマンドレットの使用方法に関していくつかの情報源が用意されています。 これには、Windows PowerShell 環境で参照できるヘルプが含まれます。  
@@ -49,7 +48,7 @@ ms.locfileid: "72797877"
 -   XQuery ステートメント。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でサポートされる XQuery 言語の詳細については、「[XQuery 言語リファレンス &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)」を参照してください。  
   
 ## <a name="get-help-for-a-sql-server-cmdlet"></a>SQL Server コマンドレットのヘルプの参照  
- **コマンドレットのヘルプを表示するには**  
+ **コマンドレットのヘルプを取得するには**  
   
 -   コマンドレットの名前と返されるヘルプのレベルを指定して、Get-Help を実行します。  
   

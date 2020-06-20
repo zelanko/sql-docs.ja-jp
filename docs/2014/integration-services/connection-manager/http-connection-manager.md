@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f79a882e3a3e4520cb8cfcd4468f3c908b79abf5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89d33637317029c174b71597088d19531a58b31f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833758"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920773"
 ---
 # <a name="http-connection-manager"></a>HTTP 接続マネージャー
   HTTP 接続により、パッケージが HTTP を使用してファイルを送受信することで、Web サーバーにアクセスできるようになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる Web サービス タスクでは、この接続マネージャーが使用されます。  
   
  HTTP 接続マネージャーをパッケージに追加するときは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって、実行時に HTTP 接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーをパッケージの `Connections` コレクションに追加します。  
   
- 接続`ConnectionManagerType`マネージャーのプロパティがに設定されています。`HTTP.`  
+ `ConnectionManagerType`接続マネージャーのプロパティがに設定されています。`HTTP.`  
   
  HTTP 接続マネージャーは、次の方法で構成できます。  
   

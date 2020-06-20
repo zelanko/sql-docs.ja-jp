@@ -9,34 +9,33 @@ ms.topic: conceptual
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2212e7424f22ecca2619ef7215bf94b0dbb62875
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a12c6dd3b0691d62f5509a363311b1deb1584078
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054272"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972294"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>データの追加、更新、および削除 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のモデルに一括でデータの追加および変更を行えます。  
   
  **前提条件**  
   
--   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの stg.\<名前>_Leaf、 stg.\<名前>_Consolidated、stg.\<名前>_Relationship の各テーブルにデータを挿入するアクセス許可が必要です。  
+-   Stg にデータを挿入する権限が必要です。 \<name>_Leaf、stg。 \<name>_Consolidated、stg。 \<name>データベースのテーブルを _Relationship [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] します。  
   
--   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの stg.udp_\<名前>_Leaf、stg.udp\_\<名前>_Consolidated、または the stg.udp\_\<名前>_Relationship の各ストアド プロシージャのいずれかを実行するアクセス許可が必要です。  
+-   データベースで stg. udp_ \<name> _Leaf、stg udp \_ \<name> _Consolidated、または stg. udp \_ \<name> _Relationship ストアドプロシージャ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のいずれかを実行する権限が必要です。  
   
 -   モデルのステータスが **[コミット済み]** でないことが必須です。  
   
- **[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベースのデータを追加、更新、および削除するには**  
+ **データベースのデータを追加、更新、および削除するには [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
   
 1.  必須フィールドの値を指定するなど、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの適切なステージング テーブルにインポートするメンバーを準備します。 ステージングテーブルの概要については、「[データのインポート &#40;マスターデータサービス](overview-importing-data-from-tables-master-data-services.md)」を参照してください&#41;  
   
-    -   リーフ メンバーの場合、テーブルは stg.\<名前>_Leaf になります。ここで、\<名前> は対応するエンティティを指します。 必須フィールドの詳細については、「[リーフ メンバー ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)」を参照してください。  
+    -   リーフメンバーの場合、テーブルは stg です。 \<name>_Leaf。ここでは、 \<name> 対応するエンティティを参照します。 必須フィールドの詳細については、「[リーフ メンバー ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)」を参照してください。  
   
-    -   統合メンバーの場合、テーブルは stg.\<名前>_Consolidated になります。 必須フィールドの詳細については、「[統合メンバー ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)」を参照してください。  
+    -   統合メンバーの場合、テーブルは stg です。 \<name>_Consolidated。 必須フィールドの詳細については、「[統合メンバー ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)」を参照してください。  
   
-    -   明示的階層内のメンバーの位置を移動する場合、テーブルは stg.\<名前>_Relationship になります。 必須フィールドの詳細については、「[リレーションシップ ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/relationship-staging-table-master-data-services.md)」を参照してください。  
+    -   明示的階層内のメンバーの位置を移動する場合、テーブルは stg です。 \<name>_Relationship。 必須フィールドの詳細については、「[リレーションシップ ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/relationship-staging-table-master-data-services.md)」を参照してください。  
   
          明示的階層内のメンバーの移動の概要については、「[データのインポート &#40;マスターデータサービス&#41;](overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
   

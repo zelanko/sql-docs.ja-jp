@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6e829bc3bc7216532bd76f083335f126166347f4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5b86fb120d8263ae48bb9a4e874e4cf0d012bf7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706516"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050212"
 ---
 # <a name="cross-database-queries"></a>複数データベースにまたがるクエリ
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、メモリ最適化テーブルで複数データベースにまたがるトランザクションはサポートされません。 メモリ最適化テーブルにもアクセスする同じトランザクションまたは同じクエリから別のデータベースにアクセスすることはできません。 あるデータベースのテーブルから別のデータベースのメモリ最適化テーブルに、データを簡単にコピーすることはできません。  

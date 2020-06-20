@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51d9b0bd0a971f94c4eeba91dd4b009d57ccb47c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898860"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969358"
 ---
 # <a name="identifiers-ssis"></a>識別子 (SSIS)
   識別子とは、式の内部で演算に使用できる列および変数のことです。 式では、標準識別子と修飾された識別子を使用できます。  
@@ -112,9 +111,9 @@ ms.locfileid: "62898860"
 > [!IMPORTANT]  
 >  名前空間の組み合わせおよび修飾された変数名は、式エバリュエーターが変数を認識できるよう、角かっこで囲む必要があります。  
   
- **User**名前空間の**count**の値が10で、 **MyNamespace**の count の値が2の場合、式エバリュエーターが 2 `true`つの異なる変数を認識するため、式はに評価されます。 **Count**  
+ **User**名前空間の**count**の値が10で、 **MyNamespace**の**count**の値が2の場合、式 `true` エバリュエーターが2つの異なる変数を認識するため、式はに評価されます。  
   
- 変数名が一意でない場合でもエラーは発生せず、 式エバリュエーターは、変数のインスタンスを 1 つのみ使用して式を評価し、間違った結果を返します。 たとえば、次の式は、2つの個別の**カウント**変数の値 (10 と 2) を比較するためのもの`false`ですが、式エバリュエーターでは**count**変数の同じインスタンスが2回使用されるため、式はと評価されます。  
+ 変数名が一意でない場合でもエラーは発生せず、 式エバリュエーターは、変数のインスタンスを 1 つのみ使用して式を評価し、間違った結果を返します。 たとえば、次の式は、2つの個別の**カウント**変数の値 (10 と 2) を比較するためのものですが、式エバリュエーターでは `false` **count**変数の同じインスタンスが2回使用されるため、式はと評価されます。  
   
 ```  
 @Count > @Count  

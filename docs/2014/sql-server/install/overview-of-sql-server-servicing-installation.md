@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b8e9532c9d3ecbc32942e6a70d82f5837856a329
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56123fc1b254cc876339dde816648f2b1f79b90d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093591"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012081"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server サービスのインストールの概要
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サービス更新プログラムが適用された、インストール済みの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] コンポーネントに更新プログラムを適用できます。 既存の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] コンポーネントのバージョン レベルが更新のバージョン レベルより新しい場合、そのコンポーネントは、セットアップ プログラムによって自動的にアップデートから除外されます。 サービス更新プログラムの適用の詳細については、「 [Install SQL Server 2014 サービス更新プログラム](../../database-engine/install-windows/install-sql-server-servicing-updates.md)」を参照してください。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の更新プログラムをインストールする際は、次の点に注意してください。  
   
--   1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに属する機能はすべて同時にアップデートする必要があります。 たとえば、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]をアップデートする際に、同じ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの一部として [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされている場合は、それらのコンポーネントもアップデートする必要があります。 管理ツール、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]などの共有機能は、常に最新の更新プログラムに更新する必要があります。 機能ツリーで選択されていないコンポーネントまたはインスタンスは、更新されません。  
+-   1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに属する機能はすべて同時にアップデートする必要があります。 たとえば、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]をアップデートする際に、同じ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの一部として [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされている場合は、それらのコンポーネントもアップデートする必要があります。 管理ツール、、などの共有機能は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 常に最新の更新プログラムに更新する必要があります。 機能ツリーで選択されていないコンポーネントまたはインスタンスは、更新されません。  
   
--   既定では[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、更新ログファイルは%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Program files% \120\Setup Bootstrap\LOG\\に保存されます。  
+-   既定で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、更新ログファイルは% Program files% \120\Setup Bootstrap\LOG に保存され \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ ます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップでは、更新プログラムと元のメディアを統合して、元のメディアと更新プログラムを同時に実行できるようになりました。 詳細については、「 [SQL Server のインストールの新機能](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)」を参照してください。  
   
@@ -49,27 +48,27 @@ ms.locfileid: "66093591"
 ### <a name="prepare-for-a-sscurrent-update-installation"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新プログラムのインストールの準備  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新プログラムをインストールする前に、次のように対処することを強くお勧めします。  
   
--   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システムデータベースをバックアップ**する-更新プログラムを[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インストールする前に、 `master`、 `msdb`、および`model`の各データベースをバックアップします。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新プログラムをインストールするとこれらのデータベースは変更され、以前のバージョンの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と互換性がなくなります。 これらの更新プログラムが適用されていない [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を再インストールする場合には、これらのデータベースのバックアップ データが必要になります。  
+-   ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムデータベースをバックアップ**する-更新プログラムをインストールする前に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、、およびの各データベースをバックアップ `master` `msdb` `model` します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新プログラムをインストールするとこれらのデータベースは変更され、以前のバージョンの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と互換性がなくなります。 これらの更新プログラムが適用されていない [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を再インストールする場合には、これらのデータベースのバックアップ データが必要になります。  
   
      また、必要なユーザー データベースのバックアップも行ってください。  
   
     > [!IMPORTANT]  
     >  レプリケーション トポロジに含まれる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに更新プログラムを適用する場合は、適用前に、システム データベースに加えてレプリケートされたデータベースもバックアップする必要があります。  
   
--   **データベース[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、構成ファイル、リポジトリのバックアップ**-の[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスを更新する前に、次のバックアップを作成する必要があります。  
+-   ** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース、構成ファイル、リポジトリのバックアップ**-のインスタンスを更新する前に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 次のバックアップを作成する必要があります。  
   
-    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース。 既定では、これらは C:\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインストールされます。\<InstanceID> \olap\data\\。 WOW のインストールの場合、既定のパスは C:\ProgramFiles (x86 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) \ \ msas12です。\<InstanceID> \olap\data\\。  
+    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース。 既定では、これらは C:\Program files にインストールされ \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 \<InstanceID>\OLAP\Data \\ 。 WOW のインストールの場合、既定のパスは C:\ProgramFiles (x86) \ \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msas12です。 \<InstanceID>\OLAP\Data \\ 。  
   
-    -   msmdsrv.ini 構成ファイル内の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の構成設定。 既定では、これは C:\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ msas12にあります。\<InstanceID> \olap\config\ directory です。  
+    -   msmdsrv.ini 構成ファイル内の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の構成設定。 既定では、これは C:\Program files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \ msas12にあります。 \<InstanceID>\OLAP\Config\ ディレクトリ。  
   
     -   (省略可) [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] リポジトリが格納されているデータベース。 この手順が必要になるのは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が Decision Support オブジェクト (DSO) ライブラリを使用するように構成された場合のみです。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース、構成ファイル、およびリポジトリをバックアップしなかった場合、更新された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを以前のバージョンに戻すことはできなくなります。  
   
--   **システムデータベースに十分な空き領域が**あることを確認する- `master`およびシステムデータベースに自動拡張`msdb`オプションが選択されていない場合、これらのデータベースには少なくとも 500 KB の空き領域が必要です。 データベースに十分な空き領域があるかどうかを確認するには、`sp_spaceused` データベースと `master` データベースで `msdb` システム ストアド プロシージャを実行します。 いずれかのデータベースで未割り当て領域が 500 KB より少ない場合は、データベースのサイズを増やします。  
+-   **システムデータベースに十分な空き領域が**あることを確認する-およびシステムデータベースに自動拡張オプションが選択されていない場合 `master` 、これらのデータベースには `msdb` 少なくとも 500 KB の空き領域が必要です。 データベースに十分な空き領域があるかどうかを確認するには、`sp_spaceused` データベースと `master` データベースで `msdb` システム ストアド プロシージャを実行します。 いずれかのデータベースで未割り当て領域が 500 KB より少ない場合は、データベースのサイズを増やします。  
   
--   **サービスとアプリケーションを停止**する-システムの再起動を回避するには、更新プログラムをインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]する前に、アップグレードされるのインスタンスへの接続を行うすべてのアプリケーションとサービスを停止します。 これには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]も含まれます。 詳細については、「 [Start、Stop、Pause、Resume、データベースエンジン、SQL Server エージェント、または SQL Server Browser サービスの再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
+-   **サービスとアプリケーションを停止**する-システムの再起動を回避するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムをインストールする前に、アップグレードされるのインスタンスへの接続を行うすべてのアプリケーションとサービスを停止し [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ます。 これには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]も含まれます。 詳細については、「 [Start、Stop、Pause、Resume、データベースエンジン、SQL Server エージェント、または SQL Server Browser サービスの再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
     > [!NOTE]  
     >  フェールオーバー クラスター環境ではサービスを停止できません。 詳細については、後のフェールオーバー クラスターのインストールに関するセクションを参照してください。  
@@ -87,9 +86,9 @@ ms.locfileid: "66093591"
 #### <a name="starting-a-sscurrent-update"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新プログラムの開始  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新プログラムをインストールするには、自己解凍形式のパッケージ ファイルを実行します。  
   
- 累積更新プログラムパッケージ (CU) \<: SQLServer2014> kb*PPP*  
+ 累積更新プログラムパッケージ (CU): \<SQLServer2014> -kbxxxxxx-*PPP*.exe  
   
- Service pack パッケージ (PCU): \<SQLServer2014>\<SPx>-kbxxxxxx-ppp-lll.exe  
+ Service pack パッケージ (PCU): \<SQLServer2014> \<SPx> -KBxxxxxx-PPP-LLL.exe  
   
 -   x はサービス パックの番号を表します。  
   
@@ -99,7 +98,7 @@ ms.locfileid: "66093591"
   
  フェールオーバー クラスターに含まれる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] コンポーネントに更新プログラムを適用するには、フェールオーバー クラスターのインストールに関するセクションを参照してください。 更新プログラムのインストールを無人モードで実行する方法の詳細については、「 [Install SQL Server 2014 from The Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)」を参照してください。  
   
-####  <a name="product-updates-in-sscurrent-installation"></a><a name="Slipstream"></a>インストール中の[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]製品の更新プログラム  
+####  <a name="product-updates-in-sscurrent-installation"></a><a name="Slipstream"></a>インストール中の製品の更新プログラム [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  製品の更新プログラムは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップの機能です。 セットアップでは、メインの製品と使用可能な更新プログラムが同時にインストールされるように、最新の製品の更新プログラムとメインの製品のインストールを統合できます。 製品の更新プログラムは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update、Windows Server Update Services (WSUS)、ローカル フォルダー、またはネットワーク共有を検索して、適切な更新プログラムを探します。  セットアップで最新バージョンの適用可能な更新プログラムが検出されると、ダウンロードが実行されて、現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ プロセスと統合されます。 製品の更新プログラムは、累積更新プログラム、サービス パック、またはサービス パックと累積更新プログラムに取り込むことができます。 製品の更新プログラム機能は、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1 で提供されていたスリップストリーム機能を拡張したものです。  
   
 ## <a name="updating-a-prepared-image-of-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みイメージの更新  

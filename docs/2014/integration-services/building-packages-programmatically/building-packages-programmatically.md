@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4227560fbaf3e618a25e3dd214a214ac68a736e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d69416b36969e564b611d1b1274367b6ce5cb86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176557"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924973"
 ---
 # <a name="building-packages-programmatically"></a>プログラムによるパッケージの作成
   パッケージを動的に作成する必要がある場合、または開発環境以外で [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理および実行する必要がある場合は、プログラムでパッケージを操作できます。 この場合、次に示すような一連の方法があります。
@@ -63,7 +62,7 @@ ms.locfileid: "78176557"
  [プログラムによるパッケージの保存](../building-packages-programmatically/saving-a-package-programmatically.md)プログラムによってパッケージを保存する方法について説明します。
 
 ## <a name="reference"></a>リファレンス
- [Integration Services のエラーとメッセージの参照](../integration-services-error-and-message-reference.md)定義済み[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のエラーコードとそのシンボル名と説明を一覧表示します。
+ [Integration Services のエラーとメッセージの参照](../integration-services-error-and-message-reference.md)定義済みの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラーコードとそのシンボル名と説明を一覧表示します。
 
 ## <a name="related-sections"></a>関連項目
  [スクリプトを使用したパッケージの拡張](../extending-packages-scripting/extending-packages-with-scripting.md)スクリプトタスクを使用して制御フローを拡張する方法と、スクリプトコンポーネントを使用してデータフローを拡張する方法について説明します。

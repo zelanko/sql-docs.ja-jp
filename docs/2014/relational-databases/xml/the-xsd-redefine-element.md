@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59eafff14c6a0cc7752817a31648b64bd5edc907
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ce439e81cf87e97b4afe6e25a201e1ab0cb2a458
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702448"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059473"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 要素
-  W3C XSD の **redefine** 要素は、スキーマ コンポーネントの再定義をサポートします。 ただし、このディレクティブのサポートはパフォーマンスが低下する可能性があり、再定義された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` スキーマに関連付けられているデータ型のすべてのインスタンスを再検証する必要もあります。 このため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれらの要素をサポートしません。 **\<xsd:redefine>** 要素を含む XML スキーマはサーバーに拒否されます。  
+  W3C XSD の **redefine** 要素は、スキーマ コンポーネントの再定義をサポートします。 ただし、このディレクティブのサポートはパフォーマンスが低下する可能性があり、再定義された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` スキーマに関連付けられているデータ型のすべてのインスタンスを再検証する必要もあります。 このため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれらの要素をサポートしません。 要素を含む XML スキーマ **\<xsd:redefine>** はサーバーによって拒否されます。  
   
  スキーマまたはスキーマ コンポーネントを更新するには、代わりに次の方法を使用できます。  
   

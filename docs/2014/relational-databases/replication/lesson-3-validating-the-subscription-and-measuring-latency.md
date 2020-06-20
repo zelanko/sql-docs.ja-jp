@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 147f7b93-1804-4e0b-9e17-57a51d035b2a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1298f70bbc894c08585c5e5aa731f10ef45dfd15
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: eba65b6b19054414a13a46ebd2ccb92a28305dde
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000374"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065883"
 ---
 # <a name="lesson-3-validating-the-subscription-and-measuring-latency"></a>レッスン 3 : サブスクリプションの検証と待機時間の計測
   このレッスンでは、トレーサー トークンを使用して、変更がサブスクライバーにレプリケートされているかどうかを検証し、待機時間を計測します。待機時間とは、パブリッシャーで加えられた変更がサブスクライバーに反映されるまでの所用時間です。 このレッスンを始める前に、前のレッスンの [「レッスン 2: トランザクション パブリケーションへのサブスクリプションの作成」](lesson-2-creating-a-subscription-to-the-transactional-publication.md)を完了している必要があります。  

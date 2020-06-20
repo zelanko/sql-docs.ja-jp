@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 790fa1b969f933890e050311173fcde3f12c37ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211716"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066398"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>ユーザー定義関数の作成 (データベース エンジン)
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してユーザー定義関数を作成する方法について説明します。  
@@ -32,7 +31,7 @@ ms.locfileid: "68211716"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ユーザー定義関数を作成するには:**  
   
@@ -50,7 +49,7 @@ ms.locfileid: "68211716"
   
 -   ユーザー定義関数では複数の結果セットは返せません。 複数の結果セットを返す必要がある場合は、ストアド プロシージャを使用します。  
   
--   エラー処理は、ユーザー定義の関数では制限されます。 UDF は試行をサポートしていません...CATCH @ERRORまたは RAISERROR。  
+-   エラー処理は、ユーザー定義の関数では制限されます。 UDF は試行をサポートしていません...CATCH @ERROR または RAISERROR。  
   
 -   ユーザー定義関数はストアド プロシージャを呼び出すことができませんが、拡張ストアド プロシージャを呼び出すことはできます。  
   

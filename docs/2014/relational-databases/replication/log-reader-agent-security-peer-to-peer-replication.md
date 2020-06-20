@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6bcf7d78fd550404f81f9cc303414303ad82504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae5c8d56c1d51290c35a04c22474fcc04ddff61d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63000359"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065913"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>[ログ リーダー エージェントのセキュリティ] (ピア ツー ピア レプリケーション)
   **[ログ リーダー エージェントのセキュリティ]** ページを使用すると、各ピアでログ リーダー エージェントが実行され、接続するときに使用されるアカウントを指定できます。 エージェントで必要とされる権限と、レプリケーション セキュリティの推奨事項については、「[レプリケーション エージェントのセキュリティ モデル](security/replication-agent-security-model.md)」と「[レプリケーション セキュリティの推奨事項](security/replication-security-best-practices.md)」を参照してください。  
@@ -37,10 +36,10 @@ ms.locfileid: "63000359"
  各ピアでパブリケーション データベースおよびサブスクリプション データベースとして機能するデータベースです。  
   
  **[ディストリビューターへの接続]**  
- ディストリビューターに接続するコンテキストを作成します。 ディストリビューターへのローカル接続は常に、エージェントの実行に使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントのコンテキストを使用して作成されます。そのため、このフィールドには常に **['\<Domain>\\<Login\>' の権限を借用する]** または **['\<Computer>\\<Login\>' の権限を借用する]** と表示されます。  
+ ディストリビューターに接続するコンテキストを作成します。 ディストリビューターへのローカル接続は、常にエージェントを実行する Windows アカウントのコンテキストを使用して行われる [!INCLUDE[msCoName](../../includes/msconame-md.md)] ため、このフィールドには常に [権限**の借用] ' \<Domain> \\<ログイン \> '** または **' \<Computer> \\<ログイン \> **' が表示されます。  
   
  **[パブリッシャーへの接続]**  
- パブリッシャーへの接続が作成されるときのコンテキストです。 パブリッシャーへの接続は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインを使用するか、エージェントを実行する Windows アカウントのコンテキストを使用して行うことができます。 フィールドには、**[ログイン '\<Login>' を使用する]**、**['\<Domain>\\<Login\>' の権限を借用する]**、**['\<Computer>\\<Login\>' の権限を借用する]** のうちの 1 つが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、Windows アカウントのコンテキストを使用して、すべての接続を作成することをお勧めします。  
+ パブリッシャーへの接続が作成されるときのコンテキストです。 パブリッシャーへの接続は、ログインを使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] か、エージェントを実行する Windows アカウントのコンテキストを使用して行うことができます。 フィールドには次のいずれかが表示されます。 **Use login ' \<Login> '**、 **impersonate ' \<Domain> \\<login \> '** 、または**impersonate ' \<Computer> \\<login \> '**。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、Windows アカウントのコンテキストを使用して、すべての接続を作成することをお勧めします。  
   
 ## <a name="see-also"></a>参照  
  [ピアツーピアトポロジの管理 &#40;レプリケーション Transact-sql プログラミング&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

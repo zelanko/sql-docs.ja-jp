@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43e5a9a6adcca7504aa90825ecd10e53e669c7e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43ea31523da2dfa8b387f68ce4f7c7f07868dd6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010009"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970882"
 ---
 # <a name="load-files-into-filetables"></a>FileTable へのファイルの読み込み
   FileTable にファイルを読み込むまたは移行する方法について説明します。  
@@ -44,7 +43,7 @@ ms.locfileid: "66010009"
 ###  <a name="example-migrating-files-from-the-file-system-into-a-filetable"></a><a name="HowToMigrateFiles"></a> 例: ファイルをファイル システムから FileTable に移行する  
  このシナリオでは、ファイルはファイル システムに格納されていて、このファイルへのポインターを含むメタデータのテーブルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に配置されています。 ここでは、ファイルを FileTable に移動した後、メタデータ内の各ファイルの元の UNC パスを FileTable の UNC パスに置き換えます。 この操作を行うには、[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 関数を使用します。  
   
- この例では、写真に関するデータを含む`PhotoMetadata`、既存のデータベーステーブルがあるとします。 このテーブルには、.jpg ファイルへの実際の UNC パスを含む `varchar`(512) 型の `UNCPath` 列があります。  
+ この例では、 `PhotoMetadata` 写真に関するデータを含む、既存のデータベーステーブルがあるとします。 このテーブルには、.jpg ファイルへの実際の UNC パスを含む `varchar`(512) 型の `UNCPath` 列があります。  
   
  画像ファイルをファイル システムから FileTable に移行するには、次の操作を実行する必要があります。  
   
@@ -124,7 +123,7 @@ UPDATE PhotoMetadata
  システム定義の制約を一時的に無効化すると、制約の適用というオーバーヘッドなしで、FileTable へのファイルの一括読み込みを行うことができます。 詳細については、「 [FileTable の管理](manage-filetables.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql を使用した Filetable へのアクセス](access-filetables-with-transact-sql.md)   
+ [Transact SQL を使用した FileTable へのアクセス](access-filetables-with-transact-sql.md)   
  [ファイル I/O API を使用した FileTable へのアクセス](access-filetables-with-file-input-output-apis.md)  
   
   

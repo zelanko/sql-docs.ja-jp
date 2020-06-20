@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c08c423e7e5d3e59bfe75d388363f5d70dd885db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62937019"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035774"
 ---
 # <a name="job-categories-manage-job-categories"></a>[ジョブ カテゴリ]:ジョブ カテゴリの管理
   **[ジョブ カテゴリ]** ダイアログ ボックスを使用すると、ジョブ カテゴリを追加したり削除したりできます。 組み込みジョブ カテゴリは削除できません。  
@@ -34,13 +33,13 @@ ms.locfileid: "62937019"
  **[ジョブの表示]**  
  選択したカテゴリの **[プロパティ]** ダイアログ ボックスを開いて、そのカテゴリに対して現在定義されているジョブをすべて一覧表示します。  
   
- **追加**  
+ **[追加]**  
  **[新しいジョブ カテゴリ]** ダイアログ ボックスを開いて、新しいジョブ カテゴリを追加します。  
   
  **削除**  
  選択したジョブ カテゴリを削除します。 ユーザー定義ジョブ カテゴリの場合のみ有効です。  
   
- **更新**  
+ **Refresh\(更新\)**  
  現在の情報をサーバーでクエリします。  
   
 #### <a name="to-access-the-job-categories-dialog-box"></a>[ジョブ カテゴリ] ダイアログ ボックスにアクセスするには  

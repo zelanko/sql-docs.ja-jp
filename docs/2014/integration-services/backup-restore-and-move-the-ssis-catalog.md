@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 314dfaee23854524884edd0fe67fe1f45ec89b2e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670508"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925273"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>SSIS カタログのバックアップ、復元、および移動
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] には SSISDB データベースが用意されています。 **SSISDB** カタログに格納されているオブジェクト、設定、および業務データを検査するには、SSISDB データベースのビューに対してクエリを実行します。 このトピックでは、データベースのバックアップと復元の手順について説明します。  
@@ -48,7 +47,7 @@ ms.locfileid: "68670508"
   
 5.  SSISDB カタログが作成されていない [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに SSISDB データベースを復元する場合は、次の操作を行って、sp_ssis_startup の CREATE PROCEDURE スクリプトを生成します。 詳細については、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)」を参照してください。  
   
-    1.  オブジェクトエクスプローラーで、[**データベース**] ノードを展開し、 **[システムデータベース** > ] [**master** > ] [**プログラミング** > ] [**ストアドプロシージャ**] ノードの順に展開します。  
+    1.  オブジェクトエクスプローラーで、[**データベース**] ノードを展開し、[**システムデータベース**] [master] [プログラミング] [  >  **master**  >  **Programmability**  >  **ストアドプロシージャ**] ノードの順に展開します。  
   
     2.  **[dbo.sp_ssis_startup]** を右クリックし、 **[ストアド プロシージャをスクリプト化]** > **[CREATE]** > **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "68670508"
   
     1.  オブジェクト エクスプローラーで、 **[SQL Server エージェント]** ノードを展開し、 **[ジョブ]** ノードを展開します。  
   
-    2.  [SSIS サーバーメンテナンスジョブ] を右クリックし、[**ジョブをスクリプト** > 化] をクリックして**新しいクエリエディターウィンドウ****を** > 作成します。  
+    2.  [SSIS サーバーメンテナンスジョブ] を右クリックし、[ジョブをスクリプト化] をクリックし**て**  >  **CREATE To**  >  **新しいクエリエディターウィンドウ**を作成します。  
   
 ### <a name="to-restore-the-ssis-database"></a>SSIS データベースを復元するには  
   

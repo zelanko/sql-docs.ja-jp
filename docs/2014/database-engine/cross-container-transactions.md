@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28437f0903459616a574e713c0f138e8bb459870
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807426"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934483"
 ---
 # <a name="cross-container-transactions"></a>複数コンテナーにまたがるトランザクション
   複数コンテナーにまたがるトランザクションは、ネイティブ コンパイル ストアド プロシージャの呼び出しまたはメモリ最適化テーブルでの操作を含む、暗黙的または明示的なユーザー トランザクションです。  
@@ -65,7 +64,7 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>個別の操作の分離セマンティクス  
  シリアル化可能なトランザクション T は完全に分離して実行されます。 他のすべてのトランザクションは、T の開始前にコミット済みであるか、T のコミット後に開始されるかのように見えます。 トランザクション内の別の操作に別の分離レベルがある場合は、さらに複雑になります。  
   
- で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のトランザクション分離レベルの一般的なセマンティクスについては、「 [SET transaction 分離レベル &#40;transact-sql&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)」で説明されています。  
+ でのトランザクション分離レベルの一般的なセマンティクスについては、「 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [SET TRANSACTION 分離レベル &#40;transact-sql&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)」で説明されています。  
   
  異なる操作に異なる分離レベルがある複数コンテナーにまたがるトランザクションの場合は、個別の読み取り操作の分離のセマンティクスを理解しておく必要があります。 書き込み操作は常に分離されます。 それぞれ異なるトランザクションでの書き込みが互いに影響し合うことはできません。  
   
@@ -135,7 +134,7 @@ commit
   
  特定のトランザクション T のディスク ベース側は、次の条件のいずれかに一致する場合、特定の分離レベル X に達します。  
   
--   X で開始します。つまり、セッションの既定値は X で、実行`SET TRANSACTION ISOLATION LEVEL`したか、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]既定値です。  
+-   X で開始します。つまり、セッションの既定値は X で、実行したか、 `SET TRANSACTION ISOLATION LEVEL` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 既定値です。  
   
 -   トランザクションの実行中に、`SET TRANSACTION ISOLATION LEVEL` を使用して、既定の分離レベルが X に変更されます。  
   

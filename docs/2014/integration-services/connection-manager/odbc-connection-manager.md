@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c6c7ecd59bcf3a3ece0d61ecbb428bb39a80068f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f7642cd5f2245cbe5056ff09ec35477c0a6619c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833764"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920511"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 接続マネージャー
   ODBC 接続マネージャーを使用すると、パッケージは Open Database Connectivity (ODBC) の仕様を使用して、さまざまなデータベース管理システムに接続できます。  
   
- ODBC 接続をパッケージに追加し、接続マネージャーのプロパティを設定すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 、は接続マネージャーを作成し、接続マネージャーを`Connections`パッケージのコレクションに追加します。 接続マネージャーは、実行時に物理 ODBC 接続として解決されます。  
+ ODBC 接続をパッケージに追加し、接続マネージャーのプロパティを設定すると、は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 接続マネージャーを作成し、接続マネージャーを `Connections` パッケージのコレクションに追加します。 接続マネージャーは、実行時に物理 ODBC 接続として解決されます。  
   
  接続マネージャーの `ConnectionManagerType` プロパティは、`ODBC` に設定されます。  
   

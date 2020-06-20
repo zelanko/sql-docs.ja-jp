@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac8669fc161dfba1f7ed1f7c3b16e15619be2ff6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2d9bf67d1c71e9802ac7c90c79e69b1cea6af3a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706919"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926683"
 ---
 # <a name="legal-notice-for-documentation"></a>ドキュメントの免責事項
   このドキュメントは "現状のまま" 提供されます。 このドキュメントに記載されている情報および見解 (URL 等のインターネット Web サイトに関する情報を含む) は、将来予告なしに変更されることがあります。 お客様は、その使用に関するリスクを負うものとします。  

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ebf188db7213b26264d66bad7e2a4ca9f0a09af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919167"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970672"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>通常の接続とコンテキスト接続に関する制限事項
-  このトピックでは、コンテキストと通常の接続を[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]使用してプロセスで実行されるコードに関連する制限事項について説明します。  
+  このトピックでは、コンテキストと通常の接続を使用してプロセスで実行されるコードに関連する制限事項について説明し [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="restrictions-on-context-connections"></a>コンテキスト接続に関する制限事項  
  アプリケーションを開発するときは、コンテキスト接続に適用される次の制限事項を考慮してください。  
@@ -47,7 +46,7 @@ ms.locfileid: "62919167"
 ## <a name="restrictions-on-regular-connections"></a>通常の接続に関する制限事項  
  アプリケーションを開発するときは、通常の接続に適用される次の制限事項を考慮してください。  
   
--   内部サーバーに対する非同期コマンドの実行はサポートされません。 コマンドの接続文字列に "async=true" を含めてコマンドを実行すると、`System.NotSupportedException` がスローされます。 このメッセージが表示されます。 "プロセス内で実行中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の非同期処理はサポートされていません。"  
+-   内部サーバーに対する非同期コマンドの実行はサポートされません。 コマンドの接続文字列に "async=true" を含めてコマンドを実行すると、`System.NotSupportedException` がスローされます。 このメッセージが表示されます。 "プロセス内で実行中の非同期処理はサポートされていません [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。"  
   
 -   `SqlDependency` オブジェクトはサポートされません。  
   

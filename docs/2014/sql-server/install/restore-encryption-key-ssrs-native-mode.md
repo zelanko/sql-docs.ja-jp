@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 111e44275922149949cd7e252e112d95cef65076
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e26b3d124d01d2163eade48656de44ca03784bb1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952029"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058959"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>暗号化キーを復元する (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、暗号化キーを使用して、レポート サーバー データベースに格納されている機密データのセキュリティを保護します。 暗号化されたデータに継続してアクセスできるようにするには、サービス アカウントの変更のために後で暗号化キーを復元する必要がある場合に備えて、または計画的な移行の一環として、暗号化キーのバックアップを作成することが重要です。 このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用してキーを復元する方法の概要を示します。  
@@ -31,7 +30,7 @@ ms.locfileid: "71952029"
  データの暗号化に使用されたキーとは異なる無効なキーを復元すると、レポート サーバー データベースに現在格納されているデータの暗号化は解除できません。 無効なキーを復元した場合は、正しいキーのバックアップ コピーが使用可能であれば、このコピーをすぐに復元してください。 データの暗号化に使用されたキーのバックアップ コピーがない場合は、すべての暗号化されたデータを削除する必要があります。 削除するには、 **[暗号化キー]** ページの [[削除]](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) ボタンをクリックします。 暗号化されたコンテンツを削除したら、すべてのサブスクリプションを手動で更新し、レポートに定義されているすべての保存された資格情報とレポート サーバー上のデータ ドリブン サブスクリプションを再指定する必要があります。  
   
 ## <a name="restore-encryption-key-dialog"></a>[暗号化キーの復元] ダイアログ ボックス  
- Configuration Manager の[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]場所については、「 [Reporting Services Configuration Manager &#40;ネイティブモード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
+ Configuration Manager の場所については [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 、「 [Reporting Services Configuration Manager &#40;ネイティブモード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
  [暗号化キーの復元] ダイアログ ボックスを開くには、 **構成マネージャーのナビゲーション ウィンドウの** [暗号化キー] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をクリックし、 **[復元]** をクリックします。 このダイアログ ボックスは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーの [サービス アカウント] ページを使用してサービス アカウントを更新した場合にも表示されます。 詳細については、次のトピックを参照してください。  
   

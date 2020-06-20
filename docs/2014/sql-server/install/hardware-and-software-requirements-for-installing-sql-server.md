@@ -44,13 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 664422d0875ade408e48166920852ee66162a885
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1efdfe14fcb58789295029e56a6824894efee8be
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79433819"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059425"
 ---
 # <a name="sql-server-2014-hardware-and-software-requirements"></a>SQL Server 2014: ハードウェアとソフトウェアの要件
 
@@ -58,13 +57,13 @@ ms.locfileid: "79433819"
   
 ## <a name="considerations"></a>考慮事項 
   
--   NTFS ファイル形式[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のコンピューターでを実行することをお勧めします。 FAT32 ファイルシステムはサポートされていますが、NTFS ファイルシステムよりも安全性が低いため、推奨されません。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]NTFS ファイル形式のコンピューターでを実行することをお勧めします。 FAT32 ファイルシステムはサポートされていますが、NTFS ファイルシステムよりも安全性が低いため、推奨されません。  
   
 -   読み取り専用、マップ、または圧縮されたドライブにをインストールすることはできません。  
   
--   Visual Studio コンポーネントが正しくインストールされるように[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するには、で更新プログラムをインストールする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]この更新プログラムが存在するかどうかを確認するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールを続行する前に、更新プログラムをダウンロードしてインストールする必要があります。 セットアップ中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に中断されないようにするには、次に示すように、**セットアップを実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する前に**更新プログラムをダウンロードしてインストールします (または、Windows Update で利用可能な .net 3.5 SP1 のすべての更新プログラムをインストールします)。  
+-   Visual Studio コンポーネントが正しくインストールされるようにするには、で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムをインストールする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]この更新プログラムが存在するかどうかを確認するには、インストールを続行する前に、更新プログラムをダウンロードしてインストールする必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 セットアップ中に中断されないようにするには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、次に示すように、 ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行する前に**更新プログラムをダウンロードしてインストールします (または、Windows Update で利用可能な .net 3.5 SP1 のすべての更新プログラムをインストールします)。  
   
-    -   SP2 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]の場合は、[ここで](https://go.microsoft.com/fwlink/?LinkId=198093)必要な更新プログラムを入手してください。  
+    -   SP2 の場合は [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 、[ここで](https://go.microsoft.com/fwlink/?LinkId=198093)必要な更新プログラムを入手してください。  
   
     -   その他のサポートされているオペレーティングシステムでは、この更新プログラムは含まれています。  
   
@@ -76,9 +75,9 @@ ms.locfileid: "79433819"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ サポート ファイル  
   
--   または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[win8srv](../../includes/win8srv-md.md)] [!INCLUDE[win8](../../includes/win8-md.md)]にインストールするための最小バージョン要件については、「 [windows Server 2012 または windows 8 に SQL Server をインストール](https://support.microsoft.com/kb/2681562)する」 (https://support.microsoft.com/kb/2681562)を参照してください。  
+-   またはにインストールするための最小バージョン要件につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[win8srv](../../includes/win8srv-md.md)] ては [!INCLUDE[win8](../../includes/win8-md.md)] 、「 [windows Server 2012 または windows 8 に SQL Server をインストール](https://support.microsoft.com/kb/2681562)する」 (を参照してください https://support.microsoft.com/kb/2681562) 。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
 -   [ハードウェアとソフトウェアの要件](hardware-and-software-requirements-for-installing-sql-server.md#hwswr)  
   
@@ -104,16 +103,16 @@ ms.locfileid: "79433819"
   
 |コンポーネント|要件|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]、Replication、または [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]を選択した場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]には .NET 3.5 SP1 が必要です。このコンポーネントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではインストールされなくなりました。 <br />-セットアップを実行していて、.NET 3.5 SP1 が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールされていない場合、セットアップでは、インストールを続行する前に .net 3.5 sp1 をダウンロードしてインストールする必要があります。 ( [Microsoft .NET Framework 3.5 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=22)から .NET 3.5 SP1 をインストールします)。エラーメッセージには、ダウンロードセンターへのリンクが含まれています。または、Windows Update から .NET 3.5 SP1 をダウンロードすることもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが中断されないようにするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行する前に .NET 3.5 SP1 をダウンロードしてインストールします。<br />-Sp1 または[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] [!INCLUDE[win8](../../includes/win8-md.md)]がインストールされているコンピューターでセットアップを実行する場合は、をインストール[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]する前に .NET Framework 3.5 SP1 を有効にする必要があります。<br />-インターネットにアクセスできない場合は、セットアップを実行して前述のコンポーネントのいずれかをインストールする前に .NET Framework 3.5 SP1 をダウンロードしてインストールする必要があります。 [!INCLUDE[win8](../../includes/win8-md.md)]および[!INCLUDE[win8srv](../../includes/win8srv-md.md)]で .NET Framework 3.5 を取得して有効にする方法に関する推奨事項とガイダンスの詳細については、「https://msdn.microsoft.com/library/windows/hardware/hh975396) [Microsoft .NET Framework 3.5 の展開に関する考慮事項](https://msdn.microsoft.com/library/windows/hardware/hh975396)」 (を参照してください。<br /><br /> .NET 4.0 は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では必須です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、機能のインストール手順で .NET 4.0 がインストールされます。<br />-の[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]エディションをインストールする場合は、コンピューターでインターネット接続が使用可能であることを確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、.NET Framework 4 がダウンロードされインストールされます。これは、.NET Framework 4 が [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] メディアに含まれていないためです。<br />-[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]では、SP1 または[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] [!INCLUDE[win8srv](../../includes/win8srv-md.md)]の Server Core モードに .net 4.0 がインストールされません。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] SP1 または [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] の Server Core インストールに [!INCLUDE[win8srv](../../includes/win8srv-md.md)]をインストールする場合は、事前に .NET 4.0 をインストールしておく必要があります。|  
+|.NET Framework|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]、Replication、または [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]を選択した場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]には .NET 3.5 SP1 が必要です。このコンポーネントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではインストールされなくなりました。 <br />-セットアップを実行していて、.NET 3.5 SP1 がインストールされていない場合、セットアップでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールを続行する前に .net 3.5 sp1 をダウンロードしてインストールする必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ( [Microsoft .NET Framework 3.5 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=22)から .NET 3.5 SP1 をインストールします)。エラーメッセージには、ダウンロードセンターへのリンクが含まれています。または、Windows Update から .NET 3.5 SP1 をダウンロードすることもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが中断されないようにするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行する前に .NET 3.5 SP1 をダウンロードしてインストールします。<br />-Sp1 またはがインストールされているコンピューターでセットアップを実行する場合は [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] [!INCLUDE[win8](../../includes/win8-md.md)] 、をインストールする前に .NET FRAMEWORK 3.5 SP1 を有効にする必要があり [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ます。<br />-インターネットにアクセスできない場合は、セットアップを実行して前述のコンポーネントのいずれかをインストールする前に .NET Framework 3.5 SP1 をダウンロードしてインストールする必要があります。 およびで .NET Framework 3.5 を取得して有効にする方法に関する推奨事項とガイダンスの詳細については [!INCLUDE[win8](../../includes/win8-md.md)] [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 、「 [Microsoft .NET Framework 3.5 の展開に関する考慮事項](https://msdn.microsoft.com/library/windows/hardware/hh975396)」 (を参照してください https://msdn.microsoft.com/library/windows/hardware/hh975396) 。<br /><br /> .NET 4.0 は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では必須です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、機能のインストール手順で .NET 4.0 がインストールされます。<br />-のエディションをインストールする場合は [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 、コンピューターでインターネット接続が使用可能であることを確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、.NET Framework 4 がダウンロードされインストールされます。これは、.NET Framework 4 が [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] メディアに含まれていないためです。<br />-[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]では、SP1 またはの Server Core モードに .NET 4.0 がインストールされません [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] SP1 または [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] の Server Core インストールに [!INCLUDE[win8srv](../../includes/win8srv-md.md)]をインストールする場合は、事前に .NET 4.0 をインストールしておく必要があります。|  
 |Windows PowerShell|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では Windows PowerShell 2.0 のインストールおよび有効化は行われませんが、Windows PowerShell 2.0 は [!INCLUDE[ssDE](../../includes/ssde-md.md)] コンポーネントおよび [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の前提条件です。 セットアップ中に Windows PowerShell 2.0 がインストールされていないと報告された場合は、「 [Windows 管理フレームワーク](https://go.microsoft.com/fwlink/?LinkId=186214) 」ページの手順に従ってインストールまたは有効化することができます。|  
 |ネットワーク ソフトウェア|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でサポートされるオペレーティング システムにはネットワーク ソフトウェアが組み込まれています。 スタンドアロン インストールの名前付きインスタンスおよび既定のインスタンスは、次のネットワーク プロトコルをサポートします: 共有メモリ、名前付きパイプ、TCP/IP、および VIA。<br /><br /> 注: VIA プロトコルはフェールオーバー クラスターではサポートされません。 SQL Server インスタンスと同じフェールオーバー クラスターのノード上で実行されているクライアントまたはアプリケーションは、そのローカル パイプ アドレスを使用して SQL Server に接続するために、共有メモリ プロトコルを使用することができます。 ただし、この種の接続はクラスターに対応しないため、インスタンスのフェールオーバー後に失敗します。 したがって、これは非推奨であり、非常に限られたシナリオでのみ使用する必要があります。 VIA プロトコルは非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> ネットワーク プロトコルとネットワーク ライブラリの詳細については、「 [Network Protocols and Network Libraries](network-protocols-and-network-libraries.md)」を参照してください。|  
-|仮想化|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、以下の Hyper-V ロールで実行される仮想マシン環境でサポートされます。<br />-<br />                    [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard、Enterprise、および Datacenter Edition<br />-[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 Standard、Enterprise、Datacenter の各エディション。<br />-<br />                    [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter および Standard Edition。<br /><br /> 親パーティションに必要なリソースに加えて、各仮想マシン (子パーティション) には [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンス用に十分なプロセッサ リソース、メモリ、およびディスク リソースが必要です。 要件はこのトピックの後半に記載されています。\*<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 または [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 の Hyper-V ロール内では、最大 4 つの仮想プロセッサを、 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 の 32 ビットまたは 64 ビット エディション、または [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 の 64 ビット、または [!INCLUDE[win8srv](../../includes/win8srv-md.md)] の 64 ビット エディションを実行する仮想マシンに割り当てることができます。<br /><br /> Hyper-v ロール内[!INCLUDE[win8srv](../../includes/win8srv-md.md)]:<br />[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 32/64 ビットを実行する仮想マシンには、最大 8 個の仮想プロセッサを割り当てることができます。<br />[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 ビットまたは [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 ビット エディションを実行する仮想マシンには、最大 64 個の仮想プロセッサを割り当てることができます。<br /><br /> の各エディションの計算容量の制限と、ハイパー [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]スレッドプロセッサを使用した物理環境と仮想化環境での違いの詳細については、「 [SQL Server のエディション別の計算容量制限](../compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。 Hyper-V ロールの詳細については、 [Windows Server 2008 の Web サイト](https://go.microsoft.com/fwlink/?LinkId=182820)を参照してください。<br /><br /> ** \*重要\* \* **では、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ゲストフェールオーバークラスタリングがサポートされています。 ゲスト フェールオーバー クラスタリングをサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] およびオペレーティング システムのバージョンの詳細については、「 [ハードウェア仮想化環境で Microsoft SQL Server 製品を実行する場合のサポート ポリシー](https://go.microsoft.com/fwlink/?LinkId=151676)」を参照してください。|  
+|仮想化|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、以下の Hyper-V ロールで実行される仮想マシン環境でサポートされます。<br />-<br />                    [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard、Enterprise、および Datacenter Edition<br />-[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 Standard、Enterprise、Datacenter の各エディション。<br />-<br />                    [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter および Standard Edition。<br /><br /> 親パーティションに必要なリソースに加えて、各仮想マシン (子パーティション) には [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンス用に十分なプロセッサ リソース、メモリ、およびディスク リソースが必要です。 要件はこのトピックの後半に記載されています。\*<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 または [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 の Hyper-V ロール内では、最大 4 つの仮想プロセッサを、 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 の 32 ビットまたは 64 ビット エディション、または [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 の 64 ビット、または [!INCLUDE[win8srv](../../includes/win8srv-md.md)] の 64 ビット エディションを実行する仮想マシンに割り当てることができます。<br /><br /> Hyper-v ロール内 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] :<br />[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 32/64 ビットを実行する仮想マシンには、最大 8 個の仮想プロセッサを割り当てることができます。<br />[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 ビットまたは [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 ビット エディションを実行する仮想マシンには、最大 64 個の仮想プロセッサを割り当てることができます。<br /><br /> の各エディションの計算容量の制限 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] と、ハイパースレッドプロセッサを使用した物理環境と仮想化環境での違いの詳細については、「 [SQL Server のエディション別の計算容量制限](../compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。 Hyper-V ロールの詳細については、 [Windows Server 2008 の Web サイト](https://go.microsoft.com/fwlink/?LinkId=182820)を参照してください。<br /><br /> では、 ** \* \* 重要な \* \* **ゲストフェールオーバークラスタリングがサポートされてい [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ます。 ゲスト フェールオーバー クラスタリングをサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] およびオペレーティング システムのバージョンの詳細については、「 [ハードウェア仮想化環境で Microsoft SQL Server 製品を実行する場合のサポート ポリシー](https://go.microsoft.com/fwlink/?LinkId=151676)」を参照してください。|  
 |ハード ディスク|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では 6 GB 以上のハード ディスク空き容量が必要です。<br /><br /> 必要となるディスク空き容量は、インストールする [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のコンポーネントに応じて異なります。 詳細については、このトピックの「 [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) 」を参照してください。 データ ファイルでサポートされているストレージの種類の詳細については、「 [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)」を参照してください。|  
 |ドライブ|ディスクからインストールする場合は、DVD ドライブが必要です。|  
 |モニター|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では Super-VGA (800x600) 以上の解像度のモニターが必要です。|  
-|インターネット|インターネット機能にはインターネット アクセス (有料) が必要です。|  
+|Test1|インターネット機能にはインターネット アクセス (有料) が必要です。|  
   
- * 仮想[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]マシンで実行されるのは、仮想化のオーバーヘッドのためにネイティブで実行する場合よりも遅くなります。  
+ * [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 仮想マシンで実行されるのは、仮想化のオーバーヘッドのためにネイティブで実行する場合よりも遅くなります。  
   
 ##  <a name="processor-memory-and-operating-system-requirements"></a><a name="pmosr"></a>プロセッサ、メモリ、およびオペレーティングシステムの要件  
  次に示すメモリおよびプロセッサの要件は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のすべてのエディションに適用されます。  
@@ -124,7 +123,7 @@ ms.locfileid: "79433819"
 |プロセッサの速度|**以降**<br /><br /> x86 プロセッサ: 1.0 GHz<br /><br /> x64 プロセッサ: 1.4 GHz<br /><br /> **推奨:** 2.0 GHz 以上|  
 |プロセッサの種類|x64 Processor: AMD Opteron、AMD Athlon 64、Intel EM64T 対応の Intel Xeon、EM64T 対応の Intel Pentium IV<br /><br /> x86 プロセッサ: Pentium III 互換プロセッサ以上|  
   
- <sup>[1]</sup>(DQS) で[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]コンポーネントをインストールするために必要な最小メモリは 2 GB の RAM で、これは[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]最小メモリ要件とは異なります。 DQS のインストールの詳細については、「 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)」を参照してください。  
+ <sup>[1]</sup>(DQS) でコンポーネントをインストールするために必要な最小メモリ [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] は 2 GB の RAM で、これは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 最小メモリ要件とは異なります。 DQS のインストールの詳細については、「 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)」を参照してください。  
   
  **WOW64 のサポート:**  
   
@@ -150,7 +149,7 @@ ms.locfileid: "79433819"
 | Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
    | &nbsp; | &nbsp; |
   
- Server Core へのの[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インストールの詳細については、「 [Install SQL Server 2014 on server core](../../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。  
+ Server Core へののインストールの詳細につい [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ては、「 [Install SQL Server 2014 On server core](../../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。  
   
    >[!NOTE]
    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 ビット x64 Standard Edition でサポートされている [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] の各エディションは、[!INCLUDE[sbs_2](../../includes/sbs-2-md.md)] 64 ビット x64 でもサポートされています。  
@@ -206,9 +205,9 @@ ms.locfileid: "79433819"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64 ビット版は、WOW64 (Windows 32-bit on Windows 64-bit) という拡張システムをサポートしています。 WOW64 は 64 ビット版 Windows の機能であり、これによって 32 ビット アプリケーションをネイティブの 32 ビット モードで実行することが可能になります。 つまり、基盤となるオペレーティング システムが 64 ビットでも、アプリケーションは 32 ビット モードで動作します。  
   
 ##  <a name="hard-disk-space-requirements-32-bit-and-64-bit"></a><a name="HardDiskSpace"></a>ハードディスク領域の要件 (32 ビットおよび64ビット)  
- インストール中 Windows インストーラーは、システムドライブ上に一時ファイルを作成します。 セットアップを実行してインストールまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アップグレードする前に、これらのファイルについて、少なくとも**6.0 GB**の空きディスク領域がシステムドライブにあることを確認してください。 この要件は、既定以外のドライブにコンポーネントをインストールした場合でも適用されます。  
+ インストール中 Windows インストーラーは、システムドライブ上に一時ファイルを作成します。 セットアップを実行してインストールまたはアップグレードする前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、これらのファイルについて、少なくとも**6.0 GB**の空きディスク領域がシステムドライブにあることを確認してください。 この要件は、既定以外のドライブにコンポーネントをインストールした場合でも適用されます。  
   
- 実際に必要なハード ディスク空き容量は、システム構成と、インストールする機能によって異なります。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。 次の表は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の各コンポーネントに必要なディスク空き容量を示しています。  
+ 実際に必要なハード ディスク空き容量は、システム構成と、インストールする機能によって異なります。 の各エディションでサポートされる機能の一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。 次の表は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の各コンポーネントに必要なディスク空き容量を示しています。  
   
 |**機能**|**必要なディスク空き容量**|  
 |-----------------|--------------------------------|  
@@ -231,13 +230,13 @@ ms.locfileid: "79433819"
   
 -   SMB ファイル共有  
   
-    > **注:** SMB 記憶域は、スタンドアロン[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インストールまたはクラスター化インストールのデータファイルに対してはサポートされていません。 代わりに、直接アタッチされたストレージまたはストレージ エリア ネットワークを使用してください。  
+    > **注:** SMB 記憶域は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、スタンドアロンインストールまたはクラスター化インストールのデータファイルに対してはサポートされていません。 代わりに、直接アタッチされたストレージまたはストレージ エリア ネットワークを使用してください。  
   
     > **重要!!** SMB ストレージは、Windows ファイル サーバーまたはサード パーティ SMB ストレージ デバイスによってホストされます。 Windows ファイル サーバーが使用される場合、Windows ファイル サーバーのバージョンは 2008 以降である必要があります。 ストレージ オプションとして SMB ファイル共有をとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの詳細については、「 [SQL Server をストレージ オプションとして SMB ファイル共有にインストールする](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)のインストールおよび実行に必要な最低限のハードウェア要件とソフトウェア要件について説明します。  
   
     > **警告!!!!**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストールでは、tempdb ファイルをインストールする場合のみローカル ディスクがサポートされます。 Tempdb のデータファイルとログファイルに指定されたパスが、**すべて**のクラスターノードで有効であることを確認してください。 フェールオーバー中に、tempdb のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースはオンラインへの移行に失敗します。  
   
-##  <a name="installing-ssnoversion-on-a-domain-controller---limitations"></a><a name="DC_support"></a>ドメイン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コントローラーへののインストール-制限事項  
+##  <a name="installing-ssnoversion-on-a-domain-controller---limitations"></a><a name="DC_support"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ドメインコントローラーへののインストール-制限事項  
  セキュリティ上の理由から、ドメイン コントローラーには [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をインストールしないことをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にインストールが中止されることはありませんが、次の制限事項が適用されます。  
   
 -   ローカル サービス アカウントを使用して、ドメイン コントローラー上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行することはできません。  
