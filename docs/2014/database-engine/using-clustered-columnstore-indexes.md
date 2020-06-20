@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 04cb8ea2505340cb90221b328c04efc390296c19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7086db16eab9935624546965652834313a467db
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175361"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927877"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>クラスター化列ストア インデックスの使用
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクラスター化 columnstore インデックスを使用するタスクです。
@@ -68,7 +67,7 @@ GO
  パーティション分割されたデータの場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はまずパーティションに各行を割り当て、次にパーティション内のデータの columnstore 処理を実行します。 各パーティションには、独自の行グループと少なくとも 1 つのデルタストアがあります。
 
 ### <a name="deltastore-loading-scenarios"></a>デルタストアの読み込みのシナリオ
- デルタストアの行は、行グループに許容されている最大行数になるまで蓄積されます。 デルタストアに行グループあたりの最大行数が含まれている[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]場合は、行グループを "CLOSED" としてマークします。 "組ムーバー" と呼ばれるバックグラウンドプロセスは、閉じられた行グループを検索し、列ストアに移動します。ここでは、行グループが列セグメントに圧縮され、列セグメントが列ストアに格納されます。
+ デルタストアの行は、行グループに許容されている最大行数になるまで蓄積されます。 デルタストアに行グループあたりの最大行数が含まれている場合は、行グループを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "CLOSED" としてマークします。 "組ムーバー" と呼ばれるバックグラウンドプロセスは、閉じられた行グループを検索し、列ストアに移動します。ここでは、行グループが列セグメントに圧縮され、列セグメントが列ストアに格納されます。
 
  各クラスター化 columnstore インデックスに対して複数のデルタストアが許容されます。
 

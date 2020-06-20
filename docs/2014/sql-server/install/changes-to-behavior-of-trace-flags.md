@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d739df96-2659-4383-8e10-194657632526
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 447e6d4d35fa77f71f1a7a1b90a5a782e0ccebcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11d71e8401f6b870aaeb3f64f4145b509e3a3fe0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096620"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065393"
 ---
 # <a name="changes-to-behavior-of-trace-flags"></a>トレース フラグの動作が変更された
   あるセッションによって設定されたグローバル トレース フラグは他のセッションですぐに有効になります。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] には、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の一部のトレース フラグが存在しません。  
@@ -26,7 +25,7 @@ ms.locfileid: "66096620"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>説明  
- アップグレードする前に、すべてのトレース フラグを無効にすることをお勧めします。 データベースの可用性モードまたは復旧モードを変更するトレースフラグ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]により、がの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを正常にアップグレードできない場合があります。 トレース フラグが必要になり、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でも有効であることを確認した後、トレース フラグを有効にできます。 トレース フラグを再び有効にするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで追加テストを実行する必要があります。  
+ アップグレードする前に、すべてのトレース フラグを無効にすることをお勧めします。 データベースの可用性モードまたは復旧モードを変更するトレースフラグにより、が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスを正常にアップグレードできない場合があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 トレース フラグが必要になり、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でも有効であることを確認した後、トレース フラグを有効にできます。 トレース フラグを再び有効にするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで追加テストを実行する必要があります。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、グローバル トレース フラグとセッション レベルのトレース フラグをサポートしています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の場合、DBCC TRACEON コマンドに引数 (-1) を追加することによって、ローカル、グローバルのいずれでもトレース フラグを指定できます。 この引数を指定しない場合、既定値はローカルになります。  
   

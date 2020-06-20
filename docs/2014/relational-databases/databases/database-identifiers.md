@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a492aee19d6b09cb7d227b34648f1ea35d1d95d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 347b20c12a0ac5edd82172741377617aa0fe12c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762082"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970222"
 ---
 # <a name="database-identifiers"></a>データベース識別子
   データベース オブジェクトの名前は識別子と呼ばれます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、すべてのオブジェクトに識別子を設定できます。 サーバーやデータベース、またはテーブル、ビュー、列、インデックス、トリガー、プロシージャ、制約、規則などのデータベース オブジェクトに対して識別子を割り当てることができます。 ほとんどのオブジェクトには識別子が必要です。ただし、制約などの一部のオブジェクトについては、識別子は省略可能です。  

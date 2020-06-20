@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f70af740fb3fe8310a5306368c1bf48c6f357419
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e078becc9267c84fe139a151a15f9f67050161a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952000"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035846"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>PowerPivot for SharePoint インストールのトラブルシューティング
   予想したページや機能ではなくエラーが表示された場合は、次の操作を行います。  
   
 -   SharePoint と [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の両方のリリース ノートで、インストールの既知の問題を回避する方法を調べます。 リリース ノートは、インストール メディア、またはソフトウェアをダウンロードした Microsoft サイトで提供されています。  
   
-    -   [SQL Server 2014 リリース ノート](https://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx).  
+    -   [SQL Server 2014 リリースノート](https://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx)。  
   
 -   Technet wiki トピック「 [PowerPivot (およびその他のアドイン) のインストールのトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx)」を参照してください。  
   
@@ -39,6 +38,6 @@ ms.locfileid: "71952000"
   
 4.  **サイトコレクションの PowerPivot 機能の統合**が**アクティブ**であることを確認します。  
   
- この問題のその他の原因については、「 [PowerPivot ギャラリーのアイコン](https://support.microsoft.com/kb/2361559)(https://support.microsoft.com/kb/2361559))」を参照してください。  
+ この問題のその他の原因については、「 [PowerPivot ギャラリーのアイコン](https://support.microsoft.com/kb/2361559)()」を参照してください https://support.microsoft.com/kb/2361559) 。  
   
   

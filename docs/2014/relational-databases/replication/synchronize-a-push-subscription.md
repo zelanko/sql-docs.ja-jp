@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c3ee58ebc7cd579b04d317b44e823779ae987e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745882"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004548"
 ---
 # <a name="synchronize-a-push-subscription"></a>プッシュ サブスクリプションの同期
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [レプリケーション エージェント](agents/replication-agents-overview.md)、またはレプリケーション管理オブジェクト (RMO) を使用して、プッシュ サブスクリプションを同期する方法について説明します。  
@@ -40,7 +39,7 @@ ms.locfileid: "62745882"
   
 4.  同期するサブスクリプションを右クリックし、 **[同期の状態の表示]** をクリックします。  
   
-5.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、 **[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
+5.  [**同期の状態の表示 \<Subscriber> - \<SubscriptionDatabase> :** ] ダイアログボックスで、[**開始**] をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
   
 6.  **[閉じる]** をクリックします。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62745882"
   
 4.  ディストリビューターへの接続の確立に関するメッセージが表示されます。 **[OK]** をクリックします。  
   
-5.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、 **[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
+5.  [**同期の状態の表示 \<Subscriber> - \<SubscriptionDatabase> :** ] ダイアログボックスで、[**開始**] をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
   
 6.  **[閉じる]** をクリックします。  
   

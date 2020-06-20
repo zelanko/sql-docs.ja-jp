@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: acfa87245449566c1f91b447910f5194eda192b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92183382aa8832f3c381ce864df34c0744095da3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922586"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960101"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] は、Windows PowerShell をサポートしています。これは、管理者および開発者がサーバー管理やアプリケーション配置を自動化できる強力なスクリプティング シェルです。 Windows PowerShell 言語では [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトよりも複雑なロジックがサポートされ、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理者は堅牢な管理スクリプトを構築できます。 Windows PowerShell スクリプトは他の [!INCLUDE[msCoName](../includes/msconame-md.md)] サーバー製品の管理にも使用できます。 そのため、管理者はサーバー間で共通のスクリプト言語を使用できるようになります。  

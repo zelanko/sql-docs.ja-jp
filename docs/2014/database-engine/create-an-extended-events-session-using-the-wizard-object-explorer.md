@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1102657a4921fd5ab48bfe10c0a05ed67126df47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065059"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934507"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>ウィザードを使用した拡張イベント セッションの作成 (オブジェクト エクスプローラー)
   サーバー上の特定のイベントを選んでキャプチャできるように、拡張イベントには、一連の手順に従って拡張イベント セッションを作成できる新規セッション ウィザードが導入されました。 新しいセッション ウィザードでは、拡張イベントのほとんどの機能を使用できます。 [[新しいセッション] ダイアログ](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)では、データのキャプチャ、表示、および分析を行う拡張イベント セッションも定義できます。 [新しいセッション] ダイアログでは、拡張イベントのすべての機能を使用できます。  

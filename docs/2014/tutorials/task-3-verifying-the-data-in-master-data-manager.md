@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: d88953d2-2258-40ac-b3bf-2ef502f9b5fd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8e5d87a9d98e4804dd9f2687b5125e55882606c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aed5a76cff9d90b81f02f6af11b6fc437efee14e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487683"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035306"
 ---
 # <a name="task-3-verifying-the-data-in-master-data-manager"></a>タスク 3: マスター データ マネージャーのデータを確認する
   このタスクでは、**マスターデータマネージャー Web アプリケーション**を使用して、 **Supplier で Supplier**エンティティが作成さ**れている**ことを確認します。
 
-1.  **マスターデータマネージャー**が既に開いている場合は、上部にある**SQL Server 2012 マスターデータサービス**をクリックして、ホームページに移動します。 それ以外の場合`http://localhost/MDS`は、に移動して**マスターデータマネージャー**を起動します。
+1.  **マスターデータマネージャー**が既に開いている場合は、上部にある**SQL Server 2012 マスターデータサービス**をクリックして、ホームページに移動します。 それ以外の場合は、に移動して `http://localhost/MDS` **マスターデータマネージャー**を起動します。
 
 2.  [**モデル**] で [**仕入先**] を選択し、[**エクスプローラー**] をクリックします。
 

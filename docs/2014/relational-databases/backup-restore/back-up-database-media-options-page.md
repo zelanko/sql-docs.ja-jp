@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd09eb091a7f488f891bc2e69d19ad039b65e065
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154838"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959620"
 ---
 # <a name="back-up-database-media-options-page"></a>[データベースのバックアップ] ([メディア オプション] ページ)
   **[データベースのバックアップ]** ダイアログ ボックスの **[メディア オプション]** ページを使用すると、データベースのメディアのオプションを表示または変更できます。  
@@ -40,7 +39,7 @@ ms.locfileid: "70154838"
 ### <a name="overwrite-media"></a>[メディアに上書きします]  
  **[メディアに上書きします]** パネルのオプションでは、バックアップをメディアに書き込む方法を制御します。 [データベースのバックアップ] ダイアログ ボックスの [全般] ページでバックアップ先として [URL] (Azure Storage) を選択した場合、[メディアに上書きします] セクションのオプションは無効になります。 Transact-SQL の `BACKUP TO URL.. WITH FORMAT` ステートメントを使用してバックアップを上書きすることもできます。 詳細については、「 [SQL Server Backup to URL](sql-server-backup-to-url.md)」を参照してください。  
   
- 暗号化オプションとの併用がサポートされているのは、 **[新しいメディア セットにバックアップし、すべての既存のバックアップ セットを消去する]** オプションのみです。 **[既存のメディア セットにバックアップする]** セクションのオプションを選択すると、**[バックアップ オプション]** ページの暗号化オプションが無効になります。  
+ 暗号化オプションとの併用がサポートされているのは、 **[新しいメディア セットにバックアップし、すべての既存のバックアップ セットを消去する]** オプションのみです。 **[既存のメディア セットにバックアップする]** セクションのオプションを選択すると、 **[バックアップ オプション]** ページの暗号化オプションが無効になります。  
   
 > [!NOTE]  
 >  メディア セットの詳細については、「 [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
@@ -76,23 +75,23 @@ ms.locfileid: "70154838"
 ### <a name="reliability"></a>[信頼性]  
  **[トランザクション ログ]** パネルのオプションでは、バックアップ操作によるエラー管理を制御します。  
   
- **[完了時にバックアップを検証する]**  
+ **完了時にバックアップを検証する**  
  バックアップ セットが完全で、すべてのボリュームが読み取り可能であることを検証します。  
   
- **[メディアに書き込む前にチェックサムを行う]**  
+ **メディアに書き込む前にチェックサムを実行する**  
  バックアップ メディアに書き込む前にチェックサムを検証します。 このチェック ボックスをオンにすることは、 [!INCLUDE[tsql](../../includes/tsql-md.md)]の BACKUP ステートメントで CHECKSUM オプションを指定することと同じです。 このオプションをオンにするとワークロードが増加し、バックアップ操作のバックアップ スループットが低下する可能性があります。 バックアップ チェックサムの詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)」を参照してください。  
   
  **エラー時に続行する**  
  エラーが 1 回以上発生しても、バックアップ操作を続行します。  
   
 ### <a name="transaction-log"></a>[トランザクション ログ]  
- **[トランザクション ログ]** パネルのオプションでは、トランザクション ログ バックアップの動作を制御します。 これらのオプションは、完全復旧モデルと一括ログ復旧モデルにのみ適用されます。 これらのオプションは、**[データベースのバックアップ]** ダイアログ ボックスの [[全般]](../../integration-services/general-page-of-integration-services-designers-options.md) ページにある **[バックアップの種類]** フィールドで **[トランザクション ログ]** を選択した場合のみアクティブになります。  
+ **[トランザクション ログ]** パネルのオプションでは、トランザクション ログ バックアップの動作を制御します。 これらのオプションは、完全復旧モデルと一括ログ復旧モデルにのみ適用されます。 これらのオプションは、 **[データベースのバックアップ]** ダイアログ ボックスの [[全般]](../../integration-services/general-page-of-integration-services-designers-options.md) ページにある **[バックアップの種類]** フィールドで **[トランザクション ログ]** を選択した場合のみアクティブになります。  
   
 > [!NOTE]  
 >  トランザクション ログのバックアップの詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)」を参照してください。  
   
  **[トランザクション ログを切り捨てる]**  
- トランザクション ログをバックアップし、それを切り捨てることでログの領域を解放します。 データベースはオンラインを維持します。 これは既定のオプションです  
+ トランザクション ログをバックアップし、それを切り捨てることでログの領域を解放します。 データベースはオンラインを維持します。 既定のオプションです。  
   
  **[ログの末尾をバックアップし、データベースを復元中の状態にしておく]**  
  ログの末尾をバックアップし、データベースを復元中の状態にします。 このオプションでは、 *ログ末尾のバックアップ*を作成します。このバックアップでは、データベースの復元に備えて、通常、まだバックアップされていないログ (アクティブなログ) をバックアップします。 復元が完了するまで、ユーザーはデータベースを使用できなくなります。  
@@ -100,7 +99,7 @@ ms.locfileid: "70154838"
  このオプションを選択することは、[BACKUP](/sql/t-sql/statements/backup-transact-sql) ステートメント ([!INCLUDE[tsql](../../includes/tsql-md.md)]) で WITH NO_TRUNCATE および NORECOVERY を指定することと同じです。 詳細については、「[ログ末尾のバックアップ &#40;SQL Server&#41;](tail-log-backups-sql-server.md)」を参照してください。  
   
 ### <a name="tape-drive"></a>[テープ ドライブ]  
- **[テープ ドライブ]** パネルのオプションでは、バックアップ操作時のテープ管理を制御します。 これらのオプションは、**[データベースのバックアップ]** ダイアログ ボックスの [[全般]](../../integration-services/general-page-of-integration-services-designers-options.md) ページにある **[バックアップ先]** パネルで **[テープ]** を選択した場合のみアクティブになります。  
+ **[テープ ドライブ]** パネルのオプションでは、バックアップ操作時のテープ管理を制御します。 これらのオプションは、 **[データベースのバックアップ]** ダイアログ ボックスの [[全般]](../../integration-services/general-page-of-integration-services-designers-options.md) ページにある **[バックアップ先]** パネルで **[テープ]** を選択した場合のみアクティブになります。  
   
 > [!NOTE]  
 >  テープ デバイスの使用方法については、「[バックアップ デバイス &#40;SQL Server&#41;](backup-devices-sql-server.md)」を参照してください。  
@@ -113,8 +112,8 @@ ms.locfileid: "70154838"
   
 ## <a name="see-also"></a>参照  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [トランザクションログ &#40;SQL Server のバックアップ&#41;](back-up-a-transaction-log-sql-server.md)   
- [ファイルとファイルグループのバックアップ &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
+ [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [ファイルおよびファイル グループのバックアップ &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [データベースが破損したときのトランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
   

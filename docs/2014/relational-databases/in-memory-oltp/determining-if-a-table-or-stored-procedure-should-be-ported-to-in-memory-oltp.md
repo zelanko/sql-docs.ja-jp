@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8e517cff394bc0c813e34763469f75147a0a16c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706537"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050238"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認
   のトランザクションパフォーマンスコレクターは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] インメモリ OLTP によってデータベースアプリケーションのパフォーマンスが向上するかどうかを評価するのに役立ちます。 また、トランザクション パフォーマンス分析レポートによって、アプリケーションでインメモリ OLTP を有効にするために必要な作業量が示されます。 インメモリ OLTP に移植するディスク ベース テーブルを特定した後で [メモリ最適化アドバイザー](memory-optimization-advisor.md)を使用すると、テーブルを移行しやすくなります。 同様に、 [Native Compilation Advisor](native-compilation-advisor.md) は、ストアド プロシージャをネイティブ コンパイル ストアド プロシージャに移植するために役立ちます。  
@@ -93,7 +92,7 @@ ms.locfileid: "82706537"
   
 4.  [**新規**] をクリックして、プロファイルデータを保持する新しいデータベースを作成します。 データベースの作成が完了したら、ウィザードの [**次へ**] をクリックします。  
   
-5.  ウィザードの次の手順では、ユーザーとログインを追加します。 MDW インスタンスのロールのメンバーシップにログインをマップできます。 ローカル インスタンスからデータを収集する場合は、この手順は必要ありません。 ローカル インスタンスからデータを収集しない場合、プロファイルされるトランザクションを実行するアカウントにデータベース ロール メンバーシップ `mdw_admin` を許可できます。 完了したら、[**次へ**] をクリックします。  
+5.  ウィザードの次の手順では、ユーザーとログインを追加します。 MDW インスタンスのロールのメンバーシップにログインをマップできます。 ローカル インスタンスからデータを収集する場合は、この手順は必要ありません。 ローカル インスタンスからデータを収集しない場合、プロファイルされるトランザクションを実行するアカウントにデータベース ロール メンバーシップ `mdw_admin` を許可できます。 完了したら、 **[次へ]** をクリックします。  
   
 6.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントが実行されていることを確認します。  
   

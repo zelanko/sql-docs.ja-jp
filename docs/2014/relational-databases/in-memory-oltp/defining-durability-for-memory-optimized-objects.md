@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caae904bc1e25288e81d3baba21719be28c05d31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050229"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>メモリ最適化オブジェクトの持続性の定義
   インメモリ OLTP では、完全な原子性、一貫性、分離性、および完全な持続性 (ACID) の各プロパティが保証されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] およびメモリ最適化テーブルのコンテキストにおける持続性では、次の事項が保証されます。  

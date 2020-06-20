@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 907caaa37c429dd2f788d0123f7f8ee0bbf8a27a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ef85c2744475a2f55af2abc3514aa3167473ff7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059659"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951852"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグする
   この手順では、パッケージ、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーにブレークポイントを設定する方法について説明します。  
@@ -38,7 +37,7 @@ ms.locfileid: "66059659"
   
     -   イベント ハンドラーにブレークポイントを設定するには、 **[イベント ハンドラー]** タブをクリックし、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーを右クリックし、 **[ブレークポイントの編集]** をクリックします。  
   
-4.  **[ブレークポイントの設定 - \<コンテナー名>]** ダイアログ ボックスで、有効にするブレークポイントを選択します。  
+4.  [**ブレークポイント \<container name> の設定**] ダイアログボックスで、有効にするブレークポイントを選択します。  
   
 5.  必要に応じて、各ブレークポイントのヒット カウントの種類とヒット カウント数を変更します。  
   

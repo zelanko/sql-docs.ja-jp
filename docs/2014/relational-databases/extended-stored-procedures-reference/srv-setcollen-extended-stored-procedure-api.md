@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d4b3ab8f1e956ee68585ecdc3e12ae605d52ab38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9625d2865a21b66663ebe2c2ad066e9ce8c7bf25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745673"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050520"
 ---
 # <a name="srv_setcollen-extended-stored-procedure-api"></a>srv_setcollen (拡張ストアド プロシージャ API)
     
@@ -55,7 +54,7 @@ len
  *srvproc*  
  特定のクライアント接続のためのハンドルである SRV_PROC 構造体を指すポインターです。 この構造体には、アプリケーションとクライアントの間の通信やデータを管理するために、拡張ストアド プロシージャ API ライブラリで使用する情報が格納されます。  
   
- *項目*  
+ *column*  
  データ長を指定している列の番号を示します。 列には 1 から始まる番号が割り当てられます。  
   
  *len*  

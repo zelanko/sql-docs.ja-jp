@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5e906e23-6638-410d-920b-fdf35b0d3cc4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2d6265fd9d86b96c75fce63a265848f769253024
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d6040e86b29c7f3d79606ee47004b0bb9c38cb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092357"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058926"
 ---
 # <a name="select-features-upgrade"></a>機能の選択 (アップグレード)
   **インストール ウィザードの** [機能の選択] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ページを使用すると、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする機能を表示できます。  

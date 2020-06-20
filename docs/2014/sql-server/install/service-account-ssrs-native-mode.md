@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: db98f9806f48699af996a33675138150803e8812
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf46eaa4790bfc09e6f10ef1c43aa06aad12f436
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952394"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036389"
 ---
 # <a name="service-account-ssrs-native-mode"></a>サービス アカウント (SSRS ネイティブ モード)
   [サービス アカウント] ページを使用すると、レポート サーバー サービスを実行するアカウントを指定できます。 このアカウントは、最初はセットアップ中に構成されます。 アカウントまたはパスワードの変更が必要な場合は、変更を加えることができます。 レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理アプリケーションは、いずれもこのページで指定したサービス ID で実行されます。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード。  
   
- レポート サーバー サービス用に指定するアカウントには、レジストリ、レポート サーバー プログラム ファイル、およびレポート サーバー データベースにアクセスするための権限が必要です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用してアカウントを設定すると、アカウントに対してすべての権限が自動的に構成されます。 サービスアカウントを使用してレポートサーバーデータベースに接続する場合、Configuration Manager によってアカウントのデータベースログインが作成され、レポートサーバーデータベースをホストする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの RSExecRole にアカウントが割り当てられてデータベース権限が構成されます。 レポート サーバー データベースは、レポート サーバーが書き込みを行う唯一のデータ ストアです。 それ以外のデータ ストアに対する権限は、サービス アカウントには必要ありません。  
+ レポート サーバー サービス用に指定するアカウントには、レジストリ、レポート サーバー プログラム ファイル、およびレポート サーバー データベースにアクセスするための権限が必要です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用してアカウントを設定すると、アカウントに対してすべての権限が自動的に構成されます。 サービスアカウントを使用してレポートサーバーデータベースに接続する場合、Configuration Manager によってアカウントのデータベースログインが作成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レポートサーバーデータベースをホストするインスタンスの RSExecRole にアカウントが割り当てられてデータベース権限が構成されます。 レポート サーバー データベースは、レポート サーバーが書き込みを行う唯一のデータ ストアです。 それ以外のデータ ストアに対する権限は、サービス アカウントには必要ありません。  
   
  このページを開くには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動して、ナビゲーション ウィンドウでリンクを選択します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "71952394"
  一覧から **[ネットワーク サービス]**、 **[ローカル システム]**、または **[ローカル サービス]** を選択します。 推奨されるのは **[ネットワーク サービス]** だけですが、使用可能な任意のアカウントを使用するようにアカウントを構成できます。  
   
  **[他のアカウントを使用する]**  
- Windows ユーザー アカウントを指定する場合は、このオプションを選択します。 ローカル Windows ユーザー アカウントまたはドメイン ユーザー アカウントを入力できます。 ドメインアカウントは、 * \<ドメイン>\\<ユーザー\>* の形式で指定します。 ローカル Windows ユーザーアカウントを次の形式で指定してください: * \<コンピューター名>\\ \><ユーザー*。 このとき選択できるのは、既存のアカウントのみです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成で新しいアカウントを作成することはできません。  
+ Windows ユーザー アカウントを指定する場合は、このオプションを選択します。 ローカル Windows ユーザー アカウントまたはドメイン ユーザー アカウントを入力できます。 * \<domain> \\<ユーザー \> *の形式でドメインアカウントを指定します。 ローカル Windows ユーザーアカウントは、 * \<computer name> \\<user \> *の形式で指定します。 このとき選択できるのは、既存のアカウントのみです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成で新しいアカウントを作成することはできません。  
   
  アカウントの文字数の上限は 20 文字です。  
   

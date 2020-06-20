@@ -16,19 +16,18 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: af3e8d9184b12a726361643c563402242c6b04cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3291a858d8ef037e7cca92eb2e6abb19aec4da8e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876799"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959443"
 ---
 # <a name="backup-compression-sql-server"></a>バックアップの圧縮 (SQL Server)
   このトピックでは、バックアップの圧縮の制限、パフォーマンス面のトレードオフ、バックアップの圧縮の構成、圧縮比率など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの圧縮について説明します。  
   
 > [!NOTE]  
->  バックアップの圧縮をサポート[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]するのエディションについては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。 圧縮されたバックアップは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降の各エディションで復元できます。  
+>  バックアップの圧縮をサポートするのエディションについ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。 圧縮されたバックアップは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降の各エディションで復元できます。  
   
   
 ##  <a name="benefits"></a><a name="Benefits"></a> 利点  

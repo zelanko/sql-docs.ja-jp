@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 296ae4d4051e79e3c5d3bc158ef3e87c9164ecd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278215"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059084"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>固定サーバー ロール名と一致するログイン名を変更する
   アップグレード アドバイザーによって、固定サーバー ロール名と一致する 1 つ以上のユーザー定義ログイン名が検出されました。 固定サーバー ロール名は予約されています。 アップグレードする前に、ログイン名を変更してください。  
@@ -60,7 +59,7 @@ ms.locfileid: "72278215"
   
 2.  ログイン名を削除します。  
   
-3.  新しいログインを作成するには、 **sp_addlogin**システムプロシージャを使用します。 対応する各ログインの** \@sid**パラメーターに、手順 1. で返された sid を指定します。  
+3.  新しいログインを作成するには、 **sp_addlogin**システムプロシージャを使用します。 対応する各ログインの** \@ sid**パラメーターに、手順 1. で返された sid を指定します。  
   
 ## <a name="see-also"></a>参照  
  [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

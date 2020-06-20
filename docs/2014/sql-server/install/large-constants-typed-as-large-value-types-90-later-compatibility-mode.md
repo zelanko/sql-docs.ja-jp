@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e309fa0-5fb9-45a1-9739-f13fae525bfe
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c7aded5577e28d94f42e108e46bb8a9c3cd6020
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58acde8aaebdcac629463edcfb565eed13355ad4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094091"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036756"
 ---
 # <a name="large-constants-are-typed-as-large-value-types-in-90-or-later-compatibility-modes"></a>90 以上の互換性モードでは大きな定数が大きな値の型として指定される
   アップグレード アドバイザーは、大きな定数の存在を検出しました。 サイズが 8,000 バイトを超える文字列定数とバイナリ定数は、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ではラージ オブジェクト データ型として扱われます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは、大きなサイズの文字定数、Unicode 定数、およびバイナリ定数が大きな値の型として指定されます。  

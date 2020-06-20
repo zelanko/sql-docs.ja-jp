@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a73e945-daa6-4e5d-93da-10f000f1f3a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 17196f4e9a6deaadca09e77e94e2cf393f4af237
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2b7d37e20aae20b548da83fbd32858e8192d3ae
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922898"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960442"
 ---
 # <a name="escape-sql-server-identifiers"></a>SQL Server 識別子のエスケープ
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の区切れらた識別子には使用でき、Windows PowerShell パス名には使用できない文字をエスケープするためによく使用されるのが、Windows PowerShell のバック ティック エスケープ文字 (`) です。 ただし、エスケープできない文字もあります。 たとえば、Windows PowerShell ではコロン文字 (:) をエスケープできません。 この文字を含んだ識別子は、エンコードする必要があります。 エンコードは、すべての文字に有効であるため、エスケープよりも確実です。  
@@ -23,7 +22,7 @@ ms.locfileid: "62922898"
 ## <a name="before-you-begin"></a>はじめに  
  通常、バック ティック文字 (`) のキーは、キーボード左上の Esc キーの下にあります (英語キーボードの場合)。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次に示すのは、# 文字をエスケープする例です。  
   
 ```  

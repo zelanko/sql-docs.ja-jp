@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d28202148d6f85e0aafde6ee324b11fd8cd10b23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842987"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928936"
 ---
 # <a name="source-control-basics"></a>ソース管理の基礎
   ソース管理とは、サーバー ソフトウェアの主要部分がファイルのバージョンを格納および追跡し、ファイルへのアクセスを制御するシステムです。 標準的なソース管理システムは、1 つのソース管理プロバイダー、および 2 つ以上のソース管理クライアントで構成されます。  
@@ -51,7 +50,7 @@ ms.locfileid: "62842987"
   
 |||  
 |-|-|  
-|**タスク**|**トピック**|  
+|**Task**|**トピック**|  
 |ソース管理オプションの設定|[ソース管理のオプションの設定](../../2014/database-engine/set-source-control-options.md)|  
 |ソース管理接続の変更|[ソース管理接続の変更](../../2014/database-engine/change-source-control-connections.md)|  
 |ソース管理からファイルを除外する|[ソース管理からのファイルの除外](../../2014/database-engine/exclude-files-from-source-control.md)|  

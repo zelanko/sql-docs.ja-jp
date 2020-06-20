@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e5b716847c33623968077aca33932ad005953af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797813"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960292"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell パスの移動
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell プロバイダーは、ファイル パスと同様の構造で、SQL Server のインスタンス内のオブジェクトのセットを公開します。 Windows PowerShell コマンドレットを使用することで、プロバイダー パスを移動し、カスタム ドライブを作成して、入力するパスを短くすることができます。  
@@ -28,11 +27,11 @@ ms.locfileid: "72797813"
 |コマンドレット|標準の別名|コマンドの別名|UNIX シェルの別名|説明|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|現在のノードを取得します。|  
-|`Set-Location`|**法**|**cd、chdir**|**cd、chdir**|現在のノードを変更します。|  
-|**Get-childitem**|**gci**|**dir**|**avl**|現在のノードに格納されているオブジェクトの一覧を表示します。|  
+|`Set-Location`|**sl**|**cd、chdir**|**cd、chdir**|現在のノードを変更します。|  
+|**Get-ChildItem**|**gci**|**dir**|**avl**|現在のノードに格納されているオブジェクトの一覧を表示します。|  
 |**Get-Item**|**gi**|||現在のアイテムのプロパティを返します。|  
-|**名前の変更-項目**|**rni**|**rn**|**ren**|オブジェクトの名前を変更します。|  
-|**項目の削除**|**ri**|**del、rd**|**rm、rmdir**|オブジェクトを削除します。|  
+|**Rename-Item**|**rni**|**rn**|**ren**|オブジェクトの名前を変更します。|  
+|**Remove-Item**|**ri**|**del、rd**|**rm、rmdir**|オブジェクトを削除します。|  
   
 > [!IMPORTANT]  
 >  一部の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子 (オブジェクト名) には、Windows PowerShell のパス名ではサポートされない文字が含まれている場合があります。 それらの文字を含む名前の使用方法の詳細については、「 [PowerShell での SQL Server 識別子](sql-server-identifiers-in-powershell.md)」を参照してください。  
@@ -43,8 +42,8 @@ ms.locfileid: "72797813"
 |パスの場所|Get-ChildItem の結果|  
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|ローカル コンピューターの名前を返します。 SMO または WMI を使用して他のコンピューター上の [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスに接続している場合は、それらのコンピューターも一覧表示されます。|  
-|SQLSERVER: \ SQL\\*ComputerName*|コンピューター上の [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスの一覧。|  
-|SQLSERVER: \ SQL\\*ComputerName*\\*InstanceName*|インスタンス内の最上位レベルのオブジェクトの種類の一覧 (Endpoints、Certificates、Databases など)。|  
+|SQLSERVER: \ SQL \\ *ComputerName*|コンピューター上の [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスの一覧。|  
+|SQLSERVER: \ SQL \\ *ComputerName* \\ *InstanceName*|インスタンス内の最上位レベルのオブジェクトの種類の一覧 (Endpoints、Certificates、Databases など)。|  
 |オブジェクト クラスのノード (Databases など)|その種類のオブジェクトの一覧 (データベースの場合は master、model、AdventureWorks2008R2 など)。|  
 |オブジェクト名のノード (AdventureWorks2012 など)|オブジェクト内に格納されているオブジェクトの種類の一覧。 たとえば、データベースの場合はテーブルやビューなどのオブジェクトの種類が一覧表示されます。|  
   

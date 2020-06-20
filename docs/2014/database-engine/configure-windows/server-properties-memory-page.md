@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6950199a5da1f4aa773eaa12fee80edb98aba04f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ee690ddfc4cc02769db6d07d226cb154f3c4eae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809419"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934923"
 ---
 # <a name="server-properties-memory-page"></a>[サーバーのプロパティ] ([メモリ] ページ)
   このページを使用すると、サーバーのメモリ オプションを表示または変更できます。 **[最小サーバー メモリ]** を 0 に、 **[最大サーバー メモリ]** を 2,147,483,647 MB に設定しておくと、オペレーティング システムおよび他のアプリケーションによって現在どれだけの量のメモリが使用されているかに応じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常に最適な量のメモリを利用できます。 コンピューターと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の負荷が変化すると、割り当てメモリも変化します。 この動的メモリ割り当ては、次に示す最小値および最大値に制限できます。  

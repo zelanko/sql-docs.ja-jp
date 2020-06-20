@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52365cbe64a50b9622ded5587f0baf2ed46cce98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d90911932b5f9bfc91368e70e66d2b227a3964f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753159"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997131"
 ---
 # <a name="getting-started-in-smo"></a>SMO の概要
-  このトピックでは、管理オブジェクト ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO) の使用を開始する方法について説明します。 SMO セクションは開発者を対象としています。 次のリストは、SMO オブジェクト階層、SMO でプログラムを作成するための準備方法、異なるプログラミング言語で SMO プログラムを作成する方法、一般的および特定のプログラミング タスクについての情報の記載場所を知るために役立ちます。  
+  このトピックでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、管理オブジェクト (SMO) の使用を開始する方法について説明します。 SMO セクションは開発者を対象としています。 次のリストは、SMO オブジェクト階層、SMO でプログラムを作成するための準備方法、異なるプログラミング言語で SMO プログラムを作成する方法、一般的および特定のプログラミング タスクについての情報の記載場所を知るために役立ちます。  
   
 |||  
 |-|-|  

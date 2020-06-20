@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9a154455-c68f-4403-a3a7-b90f4d35eecb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 487ced9f103fd10a581841595111f01a5710bd15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2028e59e91d42bfdced2d18fa6ce129dfb108302
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952083"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059241"
 ---
 # <a name="ip-address-restriction-detected-upgrade-advisor"></a>IP アドレス制限が検出された (アップグレード アドバイザー)
   アップグレード アドバイザーによって、1 つ以上の IP アドレス制約が、レポート サーバー仮想ディレクトリまたはレポート マネージャー仮想ディレクトリをホストする IIS Web サイトで検出されました。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、IP アドレス制約のネイティブ サポートは提供されません。  

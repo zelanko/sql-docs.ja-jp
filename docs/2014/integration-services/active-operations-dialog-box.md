@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c6cd168a852eca294e85de696a611b460423c5a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926553"
 ---
 # <a name="active-operations-dialog-box"></a>[アクティブな操作] ダイアログ ボックス
   配置、検証、パッケージの実行など、** サーバー上で現在実行中の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 操作の状態を表示するには、**[アクティブな操作][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
   
  関連 [!INCLUDE[tsql](../includes/tsql-md.md)] ビューの詳細については、「[catalog.operations (SSISDB データベース)](/sql/integration-services/system-views/catalog-operations-ssisdb-database)」、「[catalog.validations (SSISDB データベース)](/sql/integration-services/system-views/catalog-validations-ssisdb-database)」、「[catalog.executions (SSISDB データベース)](/sql/integration-services/system-views/catalog-executions-ssisdb-database)」を参照してください。  
   
- **目的に合ったトピックをクリックしてください**  
+ **どうしたいんですか。**  
   
 1.  [[アクティブな操作] ダイアログ ボックスを開く](#open_dialog)  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66062221"
   
 ### <a name="options"></a>オプション  
  **Type**  
- 操作の種類を指定します。 次に、**型**フィールドに使用できる値と、transact-sql `catalog.operations`ビューの [operations_type] 列の対応する値を示します。  
+ 操作の種類を指定します。 次に、**型**フィールドに使用できる値と、transact-sql ビューの [operations_type] 列の対応する値を示し `catalog.operations` ます。  
   
 |||  
 |-|-|  

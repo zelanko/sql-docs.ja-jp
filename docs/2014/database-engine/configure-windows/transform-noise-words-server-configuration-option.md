@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49de4a381de3e998073a73c284e3e3e5960f4921
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808693"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934734"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words サーバー構成オプション
-  ノイズワード`transform noise words` ([ストップワード](../../relational-databases/search/full-text-search.md)) が原因でフルテキストクエリのブール演算がゼロ行を返す場合は、サーバー構成オプションを使用してエラーメッセージを非表示にします。 フルテキスト クエリに使用されている CONTAINS 述語に、ノイズ ワードを含んだブール演算または NEAR 演算が存在する場合、このオプションを使用すると便利です。 次の表に、このオプションで使用可能な値を示します。  
+  `transform noise words`ノイズワード ([ストップワード](../../relational-databases/search/full-text-search.md)) が原因でフルテキストクエリのブール演算がゼロ行を返す場合は、サーバー構成オプションを使用してエラーメッセージを非表示にします。 フルテキスト クエリに使用されている CONTAINS 述語に、ノイズ ワードを含んだブール演算または NEAR 演算が存在する場合、このオプションを使用すると便利です。 次の表に、このオプションで使用可能な値を示します。  
   
 |値|説明|  
 |-----------|-----------------|  

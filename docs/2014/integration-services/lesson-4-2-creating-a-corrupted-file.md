@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f793f2cadf46d4a5431c01f5a1b1966ffad6fd55
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767384"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968202"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>手順 2:破損ファイルの作成
   変換エラーの構成と処理を体験するために、コンポーネントの処理が失敗するサンプル フラット ファイルを作成します。  
@@ -34,18 +33,18 @@ ms.locfileid: "62767384"
   
     3.  SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip ファイルをクリックします。  
   
-2.  テキストエディターの検索と置換機能を使用して、のすべて`VEB`のインスタンスを検索`BAD`し、それらをに置き換えます。  
+2.  テキストエディターの検索と置換機能を使用して、のすべてのインスタンスを検索 `VEB` し、それらをに置き換え `BAD` ます。  
   
-3.  他のサンプルデータファイルと同じフォルダーで、変更したファイルをと`Currency_BAD.txt`して保存します。  
+3.  他のサンプルデータファイルと同じフォルダーで、変更したファイルをとして保存し `Currency_BAD.txt` ます。  
   
     > [!IMPORTANT]  
-    >  が他の`Currency_BAD.txt`サンプルデータファイルと同じフォルダーに保存されていることを確認します。  
+    >  `Currency_BAD.txt`が他のサンプルデータファイルと同じフォルダーに保存されていることを確認します。  
   
 4.  テキスト エディターを閉じます。  
   
 ### <a name="to-verify-that-an-error-will-occur-during-run-time"></a>実行時にエラーが発生することを確認するには  
   
-1.  [**デバッグ**] メニューの [**デバッグ開始**] をクリックします。  
+1.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
      データ フローの 3 つ目の反復処理で、Lookup Currency Key 変換が Currency_BAD.txt ファイルを処理しようとし、変換が失敗します。 この変換エラーにより、パッケージ全体が失敗します。  
   

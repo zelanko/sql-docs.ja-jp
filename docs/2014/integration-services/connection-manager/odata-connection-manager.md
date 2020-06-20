@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b0596e9ba13e617b6f4eef961966bcc07107314
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c20d069a419a4d9f95a31489449a4726e25c304
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833110"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920458"
 ---
 # <a name="odata-connection-manager"></a>OData 接続マネージャー
   OData 接続マネージャーを使用すると、パッケージは OData ソースに接続できます。 OData ソース コンポーネントは OData 接続マネージャーを使用して OData ソースに接続し、サービスから取得したデータを使用します。 これらのコンポーネントのインストール手順などの詳細については、「 [OData ソース](../data-flow/odata-source.md)」セクションを参照してください。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa9e1330-a217-491c-ad7c-2c1c4015d1bb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0dc08151d47bee9190f199e187db25a3b5dd6de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 393f30252d2689deb63d1bd540d6db3673f84f73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052416"
 ---
 # <a name="showplan-statistics-profile-event-class"></a>Showplan Statistics Profile イベント クラス
   Showplan Statistics Profile イベント クラスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントが実行されたときに発生します。 含まれる情報は、Showplan XML Statistics Profile イベント クラスで使用できる情報のサブセットです。  

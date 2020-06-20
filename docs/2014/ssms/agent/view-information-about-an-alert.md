@@ -15,22 +15,21 @@ helpviewer_keywords:
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee72512a507299e71f13fee689709a9403bb04e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211296"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058659"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
-  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]また[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、でエージェントの警告に関する情報を表示する方法について説明します。  
+  このトピック [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、またはを使用して、でエージェントの警告に関する情報を表示する方法について説明し [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **警告に関する情報を表示する方法:**  
   

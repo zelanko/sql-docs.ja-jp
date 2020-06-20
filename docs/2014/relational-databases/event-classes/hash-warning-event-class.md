@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc2b6d2ba25ee487053a7f9f711c499356a5ec59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c26b06e61a6f9fcad52dab0d042b299f993342e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662346"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052945"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning イベント クラス
   Hash Warning イベント クラスを使用して、ハッシュ演算中にハッシュの再帰、またはハッシュの中断 (ハッシュの保留) が発生する時点を監視できます。  
@@ -61,7 +60,7 @@ ms.locfileid: "62662346"
 |HostName|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IntegerData|`int`|再帰レベル (ハッシュの再帰のみ)。|25|はい|  
 |IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
-|LoginName|`nvarchar`|ユーザーのログイン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名 (セキュリティログインまたは* \<ドメイン>\\<username\>*) の形式の Windows ログイン資格情報。|11|はい|  
+|LoginName|`nvarchar`|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティログインまたは* \<DOMAIN> \\<\> username*の形式の Windows ログイン資格情報)。|11|はい|  
 |LoginSid|`image`|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|はい|  
 |NTUserName|`nvarchar`|Windows のユーザー名。|6|はい|  

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 752796caafa86ece1b471beb25a77ea381497409
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9f91ec957665975fd956e36a5af3c4261fb47af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774412"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929193"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
-  このトピックでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]を使用[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]してに接続するために使用するエージェントの別名を設定する方法について説明します。 既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サービスは、追加のクライアント構成を必要としない動的サーバー名を使用することによって、名前付きパイプを経由して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続します。 既定のネットワーク転送を使用しない場合、または、代替の名前付きパイプを使用して受信待ちする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続する場合は、サーバー接続の別名を設定する必要があります。  
+  このトピックで [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続するために使用するエージェントの別名を設定する方法について説明し [!INCLUDE[ssDE](../includes/ssde-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ます。 既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サービスは、追加のクライアント構成を必要としない動的サーバー名を使用することによって、名前付きパイプを経由して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続します。 既定のネットワーク転送を使用しない場合、または、代替の名前付きパイプを使用して受信待ちする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続する場合は、サーバー接続の別名を設定する必要があります。  
   
  **このトピックの内容**  
   
@@ -29,7 +28,7 @@ ms.locfileid: "62774412"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   [SQL Server Management Studio を使用して SQL Server エージェント サービスの SQL Server 別名を設定する方法](#SSMSProcedure)  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62774412"
   
 -   プロセスに対してメモリ クォータを調整する (SeIncreaseQuotaPrivilege)  
   
- エージェントサービスアカウントに必要な Windows アクセス許可の詳細については、「 [SQL Server エージェントサービスのアカウントの選択](../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)」および「 [windows サービスアカウントとアクセス許可の構成](configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ エージェントサービスアカウントに必要な Windows アクセス許可の詳細については [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、「 [SQL Server エージェントサービスのアカウントの選択](../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)」および「 [Windows サービスアカウントとアクセス許可の構成](configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   

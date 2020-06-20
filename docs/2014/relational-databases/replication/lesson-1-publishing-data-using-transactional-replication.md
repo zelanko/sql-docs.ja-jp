@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 18236ec3ca5a62cd45a2cf7cdd3d56b5cea79063
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ff715b51a7fa84a462d1439e78627d648e20472d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000458"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065955"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>レッスン 1 : トランザクション レプリケーションを使用したデータのパブリッシュ
    このレッスンでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してトランザクション パブリケーションを作成し、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースの **Product** テーブルからフィルター選択したサブセットをパブリッシュします。 また、ディストリビューション エージェントにより使用される SQL Server ログインをパブリケーション アクセス リスト (PAL) に追加します。 このチュートリアルを行うには、前のチュートリアル「 [レプリケーションに備えたサーバーの準備](tutorial-preparing-the-server-for-replication.md)」を完了している必要があります。  
@@ -50,7 +49,7 @@ ms.locfileid: "83000458"
   
 10. [エージェント セキュリティ] ページで、 **[スナップショット エージェントのセキュリティ設定を使用する]** チェック ボックスをオフにします。  
   
-11. スナップショット エージェントの **[セキュリティ設定]** をクリックして、**[プロセス アカウント]** ボックスに「\<_コンピューター名>_**\repl_snapshot**」と入力し、このアカウントのパスワードを入力して **[OK]** をクリックします。  
+11. スナップショットエージェントの [**セキュリティの設定**] をクリックし、[ \<_Machine_Name> **プロセスアカウント**] ボックスに「_**\ repl_snapshot** 」と入力して、このアカウントのパスワードを入力し、[ **OK]** をクリックします。  
   
 12. 同様に、ログ リーダー エージェントのプロセス アカウントとして repl_logreader を設定し、 **[完了]** をクリックします。  
   

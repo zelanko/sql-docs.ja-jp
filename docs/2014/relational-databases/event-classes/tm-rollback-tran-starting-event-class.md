@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a761d04ebb9bef40deacb19081d7dfdf6a329ea4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0492c7df719b9c6177c947d9848c95fc151ac093
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061263"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051351"
 ---
 # <a name="tm-rollback-tran-starting-event-class"></a>TM: Rollback Tran Starting イベント クラス
   TM: Rollback Tran Starting イベント クラスは、ROLLBACK TRANSACTION 要求が開始されていることを示します。 クライアントはトランザクション管理インターフェイスから要求を送信します。 EventSubClass 列は、現在のトランザクションがロールバックされた後に新しいトランザクションが開始されるかどうかを示します。  

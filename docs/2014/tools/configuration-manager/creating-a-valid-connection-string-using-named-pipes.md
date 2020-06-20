@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65fcebc3bbe12061e699106fb23eed15a5498414
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 784ef2ec305629756e0c43e1726b70c04c6194b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716709"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011647"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>名前付きパイプを使用した有効な接続文字列の作成
   ユーザーが変更しない限り、の既定のインスタンスは [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名前付きパイププロトコルをリッスンするときに、を `\\.\pipe\sql\query` パイプ名として使用します。 ここで、ピリオドはコンピューターがローカル コンピューターであることを示し、`pipe` は接続が名前付きパイプであることを示します。`sql\query` はパイプの名前を示します。 既定のパイプに接続するには、別名でもパイプ名に `\\<computer_name>\pipe\sql\query` を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が別のパイプで受信を待機する構成になっている場合は、パイプ名としてそのパイプを使用する必要があります。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がパイプとして `\\.\pipe\unit\app` を使用している場合、別名ではパイプ名として `\\<computer_name>\pipe\unit\app` を使用しなければなりません。  

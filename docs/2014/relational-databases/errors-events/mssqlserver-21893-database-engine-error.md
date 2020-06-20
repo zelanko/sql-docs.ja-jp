@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ab1195a-fe2a-4e06-b871-b177b6bea1fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6258f36990efccf83b43e8d8ac8bd4c2397477aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1de5347082ba632af7ef2685a46ed6418904183
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62914957"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034622"
 ---
 # <a name="mssqlserver_21893"></a>MSSQLSERVER_21893
     
@@ -30,7 +29,7 @@ ms.locfileid: "62914957"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|SQLErrorNum21893|  
-|メッセージ テキスト|元のパブリッシャー '%s' のサブスクライバー (%s) は、リダイレクトされたパブリッシャー '%s' でリモート サーバーとして表示されていません。 リダイレクト`sp_addlinkedserver`されたパブリッシャーでを実行して、これらのサブスクライバーをリモートサーバーとして追加します。|  
+|メッセージ テキスト|元のパブリッシャー '%s' のサブスクライバー (%s) は、リダイレクトされたパブリッシャー '%s' でリモート サーバーとして表示されていません。 `sp_addlinkedserver`リダイレクトされたパブリッシャーでを実行して、これらのサブスクライバーをリモートサーバーとして追加します。|  
   
 ## <a name="explanation"></a>説明  
  `sp_validate_redirected_publisher` は、リモート サーバーでパブリッシャー データベースのサブスクリプション メタデータ テーブルを使用して関連付けられているサブスクライバーを特定し、サブスクライバーの master.dbo.sysservers に関連付けられているエントリがあることを確認します。 このエラーは、特定されたサブスクライバーのいずれかが存在しない場合に発生します。  

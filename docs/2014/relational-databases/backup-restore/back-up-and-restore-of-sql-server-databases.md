@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a94ec756e86cb814d0e3b3f624b4a9b3eb180533
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec2104219d98ed3cb97bfbb8993a3c28d45841c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176027"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959772"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server データベースのバックアップと復元
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップする利点、バックアップと復元に関する基本的な用語、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元の方法を紹介します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元のセキュリティに関する考慮事項についても取り上げます。  
@@ -38,7 +37,7 @@ ms.locfileid: "70176027"
   
 
   
-##  <a name="benefits"></a><a name="Benefits"></a>効果  
+##  <a name="benefits"></a><a name="Benefits"></a> 利点  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップしたり、既存のバックアップの復元テストを実行したりできるほか、離れた安全な場所にバックアップのコピーを保管することによって、致命的な損失からデータを保護することができます。  
   
@@ -201,7 +200,7 @@ ms.locfileid: "70176027"
 > [!NOTE]  
 >  部分バックアップまたはコピーのみのバックアップでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) ステートメントにそれぞれ PARTIAL オプションまたは COPY_ONLY オプションを使う必要があります。  
   
- **SQL Server Management Studio の使用**  
+ **SQL Server Management Studio を使用する**  
   
 -   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
@@ -211,7 +210,7 @@ ms.locfileid: "70176027"
   
 -   [データベースの差分バックアップの作成 &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
- **Transact-sql の使用**  
+ **Transact-SQL の使用**  
   
 -   [リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
@@ -224,7 +223,7 @@ ms.locfileid: "70176027"
 
   
 ### <a name="restoring-data-backups"></a>データ バックアップの復元  
- **SQL Server Management Studio の使用**  
+ **SQL Server Management Studio を使用する**  
   
 -   [データベースバックアップを復元する &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
@@ -234,7 +233,7 @@ ms.locfileid: "70176027"
   
 -   [ファイルおよびファイル グループの復元 &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
- **Transact-sql の使用**  
+ **Transact-SQL の使用**  
   
 -   [単純復旧モデルでのデータベース バックアップの復元 &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
@@ -249,7 +248,7 @@ ms.locfileid: "70176027"
 
   
 ### <a name="restoring-transaction-logs-full-recovery-model"></a>トランザクション ログを復元する (完全復旧モデル)  
- **SQL Server Management Studio の使用**  
+ **SQL Server Management Studio を使用する**  
   
 -   [マークされたトランザクションへのデータベースの復元 &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
@@ -257,14 +256,14 @@ ms.locfileid: "70176027"
   
 -   [SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
- **Transact-sql の使用**  
+ **Transact-SQL の使用**  
   
 -   [SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 
   
 ### <a name="additional-restore-tasks"></a>その他の復元タスク  
- **Transact-sql の使用**  
+ **Transact-SQL の使用**  
   
 -   [中断された復元操作の再開 &#40;Transact-SQL&#41;](restart-an-interrupted-restore-operation-transact-sql.md)  
   
