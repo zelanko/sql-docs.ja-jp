@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a51393748d47159cfc4cf6bf8bd25e50307cfb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 16c6597171eef10da67ad497e4303b3716298e6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525443"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940133"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI の概念
   BI 注釈付き概念スキーマ定義言語 (CSDLBI) は、さまざまなデータセットにプログラムでアクセスしてクエリやエクスポートを実行できるように各種のデータを抽象的に表す、Entity Data Framework に基づく言語です。 CSDLBI はリッチ形式でデータ ドリブンのレポートとアプリケーションをサポートしているため、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用して作成されたデータ モデルを表すために CSDLBI が使用されます。  
@@ -123,7 +122,7 @@ ms.locfileid: "79525443"
 ## <a name="additions-to-support-multidimensional-models"></a>多次元モデルをサポートするための追加事項  
  CSDLBI 注釈の Version 1.0 ではテーブル モデルのみがサポートされていました。 Version 1.1 では、従来の BI 開発ツールを使用して作成された多次元モデル (OLAP キューブ) もサポートされます。 その結果、多次元モデルに XML 要求を実行して、レポートで使用するためのモデルの CSDLBI 定義を受信できます。  
   
- **キューブ:** SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表形式データベースには、1つのモードのみを含めることができます。 一方、多次元データベースには複数のキューブを含めることができ、各データベースは既定のキューブに関連付けられます。 したがって、XML 要求を多次元サーバーに対して実行する場合は、キューブを指定する必要があり、キューブを指定しないと、既定のキューブに対する XML が返されます。  
+ **キューブ:** SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表形式データベースには、1つのモードのみを含めることができます。 一方、多次元データベースには複数のキューブを含めることができ、各データベースは既定のキューブに関連付けられます。 したがって、XML 要求を多次元サーバーに対して実行する場合は、キューブを指定する必要があり、キューブを指定しないと、既定のキューブに対する XML が返されます。  
   
  その場合、キューブの表現はテーブル モデル データベースによく似ています。 キューブ名とキューブが、表形式のデータベース名とデータベース識別子に対応します。  
   

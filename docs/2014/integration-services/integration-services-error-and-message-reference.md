@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a809aa628b90d73bed6eecd2d23cdec4dff6aea
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892660"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968282"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services のエラーおよびメッセージのリファレンス
   次の表に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で事前定義されているエラー メッセージ、警告メッセージ、および情報メッセージの一覧を示します。この一覧では、数値コードおよびシンボル名と共に、メッセージをカテゴリごとに昇順の番号順に示します。 ここに示す各エラーは、 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスのフィールドとして定義されています。  
@@ -230,7 +229,7 @@ ms.locfileid: "62892660"
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|結果行セットがこのクエリの実行に関連付けられていません。 結果が正しく指定されていません。|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|デバッグ ダンプ ファイルを正しく生成できませんでした。 hresult は 0x%1!8.8X! です。|  
 |0xC0016001|-1073651711|DTS_E_INVALIDURL|指定された URL が無効です。 このエラーは、サーバーまたはプロキシの URL に NULL が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、 http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|指定された URL %1 が無効です。 このエラーは、http または https 以外の構成が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|指定された URL %1 が無効です。 このエラーは、http または https 以外の構成が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、 http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|サーバー %1 への接続を確立できません。 このエラーは、サーバーが存在しない場合、またはプロキシの設定が正しくない場合に発生する可能性があります。|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|サーバーとの接続がリセットされたか、終了しました。 後で再試行してください。|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|%1 のログインに失敗しました。 このエラーは、指定されたログイン資格情報が正しくない場合に発生します。 ログイン資格情報を確認してください。|  
@@ -375,7 +374,7 @@ ms.locfileid: "62892660"
 |0xC00220E4|-1073602332|DTS_E_TKEXECPACKAGE_UNABLETOLOAD|エラー 0x%1!8.8X! がパッケージの読み込みを準備中に発生しました。 %2。|  
 |0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|タスクの Validate メソッドが失敗し、エラー コード 0x%1!8.8X! (%2) が検出されました。 タスクの Validate メソッドが成功し、"out" パラメーターを使用して結果が示される必要があります。|  
 |0xC0024104|-1073594108|DTS_E_TASKEXECUTEFAILED|タスクの Execute メソッドが失敗し、エラー コード 0x%1!8.8X! (%2) が検出されました。 タスクの Execute メソッドは成功し、"out" パラメーターを使用して結果が示される必要があります。|  
-|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|タスク "%1" で依存関係を取得中にエラー 0x%2!8.8X! 発生しました。 エラーが発生したとき、ランタイムがタスクの依存関係のコレクションから依存関係を取得しようとしていました。 タスクにより、いずれかの依存関係のインターフェイスが正しく実装されなかった可能性があります。|  
+|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|タスク "%1" で依存関係を取得中にエラー 0x%2!8.8X!  発生しました。 エラーが発生したとき、ランタイムがタスクの依存関係のコレクションから依存関係を取得しようとしていました。 タスクにより、いずれかの依存関係のインターフェイスが正しく実装されなかった可能性があります。|  
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|タスクの検証中にエラーが発生しました。|  
 |0xC0024108|-1073594104|DTS_E_CONNECTIONSTRINGFORMAT|接続文字列の形式が無効です。 セミコロンで区切った X=Y という形式が 1 つ以上含まれている必要があります。 このエラーは、データベース接続マネージャーに、コンポーネントを持たない接続文字列が設定されている場合に発生します。|  
 |0xC0024109|-1073594103|DTS_E_UNQUOTEDSEMICOLON|接続文字列コンポーネントには、引用符で囲まれていないセミコロンを含めることはできません。 値にセミコロンを含める必要がある場合は、値全体を引用符で囲みます。 このエラーは、InitialCatalog プロパティなどの接続文字列の値に引用符で囲まれていないセミコロンが含まれている場合に発生します。|  
@@ -1239,11 +1238,11 @@ ms.locfileid: "62892660"
 |0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|SSIS エラー コード DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: 64 ビット バージョンの SSIS では OLE DB プロバイダーを使用できないため、Excel 接続マネージャーがサポートされません。|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|キャッシュ ファイルが破損しているか、ファイルがキャッシュ接続マネージャーを使用して作成されませんでした。  有効なキャッシュ ファイルを指定してください。|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|SQL コマンドが正しく設定されていません。 SQLCommand プロパティを確認してください。|  
-|0xC0202002|-1071636478|DTS_E_COMERROR|COM エラー オブジェクト情報があります。  ソース: "%1" エラー コード: 0x%2!8.8X!  説明: "%3"。|  
+|0xC0202002|-1071636478|DTS_E_COMERROR|COM エラー オブジェクト情報があります。  ソース: "%1" エラー コード: 0x%2!8.8X!   説明: "%3"。|  
 |0xC0202003|-1071636477|DTS_E_ACQUIREDCONNECTIONUNAVAILABLE|取得した接続にアクセスできません。|  
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|列数が正しくありません。|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|列 "%1" がデータ ソースに見つかりません。|  
-|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|OLE DB レコードを使用できます。  ソース: "%1"  Hresult: 0x%2!8.8X!  説明: "%3"。|  
+|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|OLE DB レコードを使用できます。  ソース: "%1"  Hresult: 0x%2!8.8X!   説明: "%3"。|  
 |0xC0202009|-1071636471|DTS_E_OLEDBERROR|SSIS エラー コード DTS_E_OLEDBERROR。  OLE DB エラーが発生しました。 エラー コード:0x%1!8.8X!。|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|コンポーネントの接続は完了しています。 コンポーネントに接続する前に、接続を切断する必要があります。|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|プロパティ "%1" の値が正しくありません。|  
@@ -1992,7 +1991,7 @@ ms.locfileid: "62892660"
 |0xC02092B6|-1071607114|DTS_E_USEBINARYFORMATREQUIRESANSIFILE|カスタム プロパティ "%1" (%2 上) は ANSI ファイルでのみ使用できます。|  
 |0xC02092B7|-1071607113|DTS_E_USEBINARYFORMATREQUIRESBYTES|カスタム プロパティ "%1" (%2 上) は DT_BYTES でのみ使用できます。|  
 |0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|SSIS エラー コード DTS_E_OLEDB_NOPROVIDER_ERROR。  要求された OLE DB プロバイダー %2 は登録されていません。 エラー コード:0x%1!8.8X!。|  
-|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|SSIS エラー コード DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR。  要求された OLE DB プロバイダー %2 は登録されていません。使用できる 64 ビット プロバイダーが存在しない可能性があります。  エラー コード: 0x%1!8.8X!。|  
+|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|SSIS エラー コード DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR。  要求された OLE DB プロバイダー %2 は登録されていません。使用できる 64 ビット プロバイダーが存在しない可能性があります。  エラー コード:0x%1!8.8X!。|  
 |0xC0209306|-1071607034|DTS_E_MULTICACHECOLMAPPINGS|キャッシュ列 "%1" が複数の列にマップされています。 重複する列マッピングを削除してください。|  
 |0xC0209307|-1071607033|DTS_E_COLNOTMAPPEDTOCACHECOL|%1 は有効なキャッシュ列にマップされていません。|  
 |0xC0209308|-1071607032|DTS_E_CACHECOLDATATYPEINCOMPAT|入力列 "%1" とキャッシュ列 "%2" は、データ型が一致しないため、マップすることができません。|  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cc2a5b9d56f5c4d07c4e998439bd3b38d3c06058
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1849029e6654fcd629499cceeff9957e5389370f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702570"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065545"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQLServer)
   [!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードの 1 つである OPENXML を使用すると、インメモリ XML ドキュメントに対してテーブルやビューと同様の行セットが提供されます。 OPENXML を使用することで、リレーショナル行セット同様に XML データにアクセスできるようになります。 これを実現するため、XML ドキュメントの内部表現の行セット ビューが用意されています。 行セット内のレコードは、データベース テーブルに格納できます。
@@ -38,7 +37,7 @@ ms.locfileid: "82702570"
  OPENXML を使用して XML ドキュメントに対するクエリを作成するには、まずを呼び出す必要があり `sp_xml_preparedocument` ます。 このプロシージャは XML ドキュメントを解析し、使用準備が整った解析後のドキュメントへのハンドルを返します。 解析後のドキュメントは、XML ドキュメント内のさまざまなノードを DOM (ドキュメント オブジェクト モデル) ツリーで表現したものです。 このドキュメント ハンドルは OPENXML に渡されます。 OPENXML では渡されたパラメーターを基にドキュメントの行セット ビューを用意します。
 
 > [!NOTE]
->  `sp_xml_preparedocument`では、SQL 更新バージョンの MSXML parser Msxmlsql.dll が使用されます。 このバージョンの MSXML パーサーは、MSXML Version 2.6 との後方互換性を維持したまま [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] もサポートするように設計されました。
+>  `sp_xml_preparedocument`では、SQL によって更新されたバージョンの MSXML パーサーである Msxmlsql.dll を使用します。 このバージョンの MSXML パーサーは、MSXML Version 2.6 との後方互換性を維持したまま [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] もサポートするように設計されました。
 
  XML ドキュメントの内部表現は、 **sp_xml_removedocument** システム ストアド プロシージャを呼び出してメモリを解放することによって、メモリから削除する必要があります。
 

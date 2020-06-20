@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9d5c965f4012244a3ccc2eb80470205e8d55e887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5a389a39320ef37e3dc2b2a5fcef015d664fce6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830085"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917968"
 ---
 # <a name="task-host-container"></a>タスク ホスト コンテナー
   タスク ホスト コンテナーは、1 つのタスクをカプセル化します。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、タスク ホストは個別には構成されず、カプセル化するタスクのプロパティを設定する際に構成されます。 タスク ホスト コンテナーがカプセル化するタスクの詳細については、「 [Integration Services タスク](integration-services-tasks.md)」を参照してください。  

@@ -1,5 +1,6 @@
 ---
 title: 非同期操作の実行 | Microsoft Docs
+description: アプリケーションが SQL Server Native Client OLD DB プロバイダーで非同期データベース操作を実行できるようにします。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1adc7b723e6986a9d713847f09cafcb41c3d5a49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef1b451b0f4893b8a394937bc5e40c8d4f682054
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303823"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949462"
 ---
 # <a name="performing-asynchronous-operations"></a>非同期操作の実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "81303823"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、アプリケーションは非同期のデータベース操作を実行できます。 非同期処理により、呼び出し側のスレッドをブロックしないで直ちに制御を返すことができるようになります。 これは、マルチスレッドの持つ能力と柔軟性を大きく引き出し、開発者が明示的にスレッドを作成したり、同期を処理する手間を省くことができる機能です。 アプリケーションは、データベース接続を初期化するときや、コマンドの実行結果を初期化するときに、非同期処理を要求します。  
   
 ## <a name="opening-and-closing-a-database-connection"></a>データベース接続の開閉  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用する場合、データソースオブジェクトを非同期に初期化するように設計されたアプリケーションでは、 **IDBInitialize:: initialize**を呼び出す前に DBPROP_INIT_ASYNCH プロパティで DBPROPVAL_ASYNCH_INITIALIZE ビットを設定できます。 このプロパティが設定されると、プロバイダーは **Initialize** の呼び出しからすぐに制御を戻し、操作が直ちに完了した場合は S_OK、初期化が非同期に続行される場合は DB_S_ASYNCHRONOUS を返します。 アプリケーションでは、データソースオブジェクトの**IdbasISSAsynchStatus chstatus**インターフェイスまたは[ISSAsynchStatus](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)インターフェイスを照会してから、 **Idbas/chstatus:: GetStatus**または[ISSAsynchStatus:: WaitForAsynchCompletion](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)を呼び出して初期化の状態を取得できます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーを使用する場合、データソースオブジェクトを非同期に初期化するように設計されたアプリケーションでは、 **IDBInitialize:: initialize**を呼び出す前に DBPROP_INIT_ASYNCH プロパティで DBPROPVAL_ASYNCH_INITIALIZE ビットを設定できます。 このプロパティが設定されると、プロバイダーは **Initialize** の呼び出しからすぐに制御を戻し、操作が直ちに完了した場合は S_OK、初期化が非同期に続行される場合は DB_S_ASYNCHRONOUS を返します。 アプリケーションでは、データソースオブジェクトの**IdbasISSAsynchStatus chstatus**インターフェイスまたは[ISSAsynchStatus](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)インターフェイスを照会してから、 **Idbas/chstatus:: GetStatus**または[ISSAsynchStatus:: WaitForAsynchCompletion](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)を呼び出して初期化の状態を取得できます。  
   
  また、DBPROPSET_SQLSERVERROWSET プロパティ セットに SSPROP_ISSAsynchStatus プロパティが追加されています。 **ISSAsynchStatus** インターフェイスをサポートするプロバイダーは、値 VARIANT_TRUE を指定してこのプロパティを実装する必要があります。  
   
@@ -43,14 +44,14 @@ ms.locfileid: "81303823"
 >   
 >  アプリケーションが明示的にカーソル エンジンの使用を設定している場合、**IOpenRowset::OpenRowset** と **IMultipleResults::GetResult** は非同期処理をサポートしません。  
 >   
->  また、リモート処理プロキシ/スタブ dll (MDAC 2.8) は、Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の**ISSAsynchStatus**インターフェイスを呼び出すことができません。 **ISSAsynchStatus** インターフェイスは、リモート処理経由では公開されません。  
+>  また、リモート処理プロキシ/スタブ dll (MDAC 2.8) は、Native Client の**ISSAsynchStatus**インターフェイスを呼び出すことができません [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 **ISSAsynchStatus** インターフェイスは、リモート処理経由では公開されません。  
 >   
 >  サービス コンポーネントは、**ISSAsynchStatus** をサポートしません。  
   
 ## <a name="execution-and-rowset-initialization"></a>実行と行セットの初期化  
  コマンドの実行結果を非同期に開くようデザインされているアプリケーションは、DBPROP_ROWSET_ASYNCH プロパティに DBPROPVAL_ASYNCH_INITIALIZE ビットを設定できます。 **IDBInitialize::Initialize**、**ICommand::Execute**、**IOpenRowset::OpenRowset** または **IMultipleResults::GetResult** を呼び出す前にこのビットを設定するときは、*riid* 引数を IID_IDBAsynchStatus、IID_ISSAsynchStatus、または IID_IUnknown に設定する必要があります。  
   
- メソッドはすぐに制御を戻し、行セットの初期化が直ちに完了した場合は S_OK、行セットの初期化が非同期に続行される場合は DB_S_ASYNCHRONOUS を返して、*ppRowset* を行セット上の要求されたインターフェイスに設定します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの場合、このインターフェイスには**IdbasISSAsynchStatus Chstatus**または**ISSAsynchStatus**のみを指定できます。 このインターフェイスは、行セットが完全に初期化されるまでは中断状態にあるかのように動作し、**IID_IDBAsynchStatus** または **IID_ISSAsynchStatus** 以外のインターフェイスに対して **QueryInterface** が呼び出された場合、E_NOINTERFACE を返すことがあります。 コンシューマーが明示的に非同期処理を要求しない限り、行セットは同期的に初期化されます。 **IDBAsynchStaus::GetStatus** または **ISSAsynchStatus::WaitForAsynchCompletion** が非同期操作が完了したことを示す値を返した場合、要求したすべてのインターフェイスを使用できます。 これは、必ずしも行セットに完全にデータが格納されたことを意味するものではありませんが、行セットは完成し、完全に機能します。  
+ メソッドはすぐに制御を戻し、行セットの初期化が直ちに完了した場合は S_OK、行セットの初期化が非同期に続行される場合は DB_S_ASYNCHRONOUS を返して、*ppRowset* を行セット上の要求されたインターフェイスに設定します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーの場合、このインターフェイスには**IdbasISSAsynchStatus chstatus**または**ISSAsynchStatus**のみを指定できます。 このインターフェイスは、行セットが完全に初期化されるまでは中断状態にあるかのように動作し、**IID_IDBAsynchStatus** または **IID_ISSAsynchStatus** 以外のインターフェイスに対して **QueryInterface** が呼び出された場合、E_NOINTERFACE を返すことがあります。 コンシューマーが明示的に非同期処理を要求しない限り、行セットは同期的に初期化されます。 **IDBAsynchStaus::GetStatus** または **ISSAsynchStatus::WaitForAsynchCompletion** が非同期操作が完了したことを示す値を返した場合、要求したすべてのインターフェイスを使用できます。 これは、必ずしも行セットに完全にデータが格納されたことを意味するものではありませんが、行セットは完成し、完全に機能します。  
   
  実行されたコマンドが行セットを返さない場合でも、このコマンドは、**IDBAsynchStatus** をサポートするオブジェクトを直ちに返します。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "81303823"
   
  コマンドの実行が完了すると、**IMultipleResults** を通常どおり使用できます。ただし、非同期処理の場合は 1 つだけ例外があり、DB_S_ASYNCHRONOUS が返される可能性があります。この場合、**IDBAsynchStatus** または **ISSAsynchStatus** を使用して、操作が完了しているかどうかを確認できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、アプリケーションが非ブロッキング メソッドを呼び出し、いくつか他の処理を実行し、制御を戻して結果を処理します。 **ISSAsynchStatus::WaitForAsynchCompletion** は、非同期実行操作が完了するか、*dwMilisecTimeOut* により指定された時間が経過するまで、内部イベント オブジェクト上で待機します。  
   
 ```  
@@ -187,7 +188,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client 機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [行セットのプロパティと動作](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fd223c0a66b533cb2b405dd0e766f7053b7a4e89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c2d7d92f389b595f149951de6af1dac7fddd6df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63275965"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057984"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL ペイン (Visual Database Tools)
   SQL ペインでは、任意の SQL ステートメントを作成できます。抽出条件ペインおよびダイアグラム ペインでも SQL ステートメントを作成できますが、どちらの場合も SQL ステートメントは SQL ペインに作成されます。 クエリを作成すると、SQL ペインは自動的に更新され、読みやすいように書式が変更されます。  

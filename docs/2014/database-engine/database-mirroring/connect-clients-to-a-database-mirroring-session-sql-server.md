@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bae6a0354fc7d24471aa7cb7877fe066421d8b5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755341"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934413"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションへのクライアントの接続 (SQL Server)
   データベース ミラーリング セッションに接続するには、クライアント側で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client または .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用できます。 これらのデータ アクセス プロバイダーは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース用に構成されると、両方ともデータベース ミラーリングを完全にサポートします。 ミラー化されたデータベースの使用に関するプログラミングの注意点については、「 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)」を参照してください。 さらに、現在のプリンシパル サーバー インスタンスは使用可能であり、クライアントのログインがサーバー インスタンス上に作成されている必要があります。 詳細については、「 [孤立ユーザーのトラブルシューティング &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)を実行します。 データベース ミラーリング セッションへのクライアント接続では、ミラーリング監視サーバー インスタンスが存在していても使用されません。  
@@ -85,7 +84,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 属性  
  接続文字列には、イニシャル パートナー名を指定する `Server` 属性を含める必要があります。この名前で現在のプリンシパル サーバー インスタンスを特定します。  
   
- サーバーインスタンスを識別する最も簡単な方法は、名前を指定することです。 *<server_name>*[**\\** _<SQL_Server_instance_name>_] を指定します。 次に例を示します。  
+ サーバーインスタンスを識別する最も簡単な方法は、名前を指定することです。 *<server_name>*[ **\\** _<SQL_Server_instance_name>_] を指定します。 次に例を示します。  
   
  `Server=Partner_A;`  
   
@@ -98,7 +97,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  接続文字列に名前付きインスタンス名を指定し、ポート名を指定しない場合は、SQL Server Browser クエリの実行が必要です。  
   
- IP アドレスとポートを指定するには`Server` 、属性に次の形式`Server=`を使用します。 *<ip_address>* `,` * \<ポート>* のようになります。  
+ IP アドレスとポートを指定するには、 `Server` 属性に次の形式を `Server=` 使用します。 *<ip_address>* の `,` *\<port>* ようになります。  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -118,7 +117,7 @@ Server=123.34.45.56,4724;
 >  この文字列では、認証情報が省略されています。  
   
 > [!IMPORTANT]  
->  プロトコルプレフィックスを`Server`属性 (`Server=tcp:`*\<servername>*) にバンドルすることは、 **Network**属性と互換性がありません。また、両方の場所にプロトコルを指定すると、エラーが発生する可能性があります。 このため、接続文字列でプロトコルを指定する際には**Network**属性を`Server`使用し、属性にはサーバー名だけ`"Network=dbmssocn; Server=`を指定することをお勧めします (*\<servername>* `"`)。  
+>  プロトコルプレフィックスを属性 () にバンドルすること `Server` `Server=tcp:` *\<servername>* は、 **Network**属性と互換性がありません。また、両方の場所にプロトコルを指定すると、エラーが発生する可能性があります。 このため、接続文字列でプロトコルを指定する際には**Network**属性を使用し、属性にはサーバー名だけを指定することをお勧めし `Server` `"Network=dbmssocn; Server=` *\<servername>* `"` ます ()。  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner 属性  
  クライアントは、イニシャル パートナー名以外に、現在のミラー サーバー インスタンスを特定するフェールオーバー パートナー名も指定できます。 フェールオーバー パートナーは、Failover Partner 属性を表すいずれかのキーワードで指定します。 この属性を表すキーワードは、使用する API によって異なります。 次の表は、これらのキーワードを示しています。  
@@ -129,7 +128,7 @@ Server=123.34.45.56,4724;
 |ODBC ドライバー|`Failover_Partner`|  
 |ActiveX Data Objects (ADO)|`Failover Partner`|  
   
- サーバーインスタンスを識別する最も簡単な方法は、システム名、 *<server_name>*[**\\** _<SQL_Server_instance_name>_] です。  
+ サーバーインスタンスを識別する最も簡単な方法は、システム名、 *<server_name>*[ **\\** _<SQL_Server_instance_name>_] です。  
   
  また、`Failover Partner` 属性に IP アドレスとポート番号を指定することもできます。 これにより、最初の接続試行がデータベースへの最初の接続に失敗した場合、DNS と SQL Server Browser に依存しないでフェールオーバー パートナーへの接続を試行できます。 接続が確立されると、指定したフェールオーバー パートナー名が接続時のフェールオーバー パートナー名に上書きされるので、次にフェールオーバーが発生した場合、リダイレクトされた接続では DNS と SQL Server Browser が必要になります。  
   
@@ -166,7 +165,7 @@ Server=123.34.45.56,4724;
   
  再試行時間は、次の式を使用して計算されます。  
   
- _Retrytime_ **=** の前の_retrytime_ **+ (** 0.08 **&#42;** _logintimeout_**)**  
+ _Retrytime_ **=** 前の_retrytime_ **+ (** 0.08 **&#42;** _logintimeout_**)**  
   
  ここでは、 *PreviousRetryTime* の初期値は 0 です。  
   

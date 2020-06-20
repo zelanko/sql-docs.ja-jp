@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 12340ae2ba13bf6219cf9940a56eeaa8b995f3e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00efb17903aa6827dafc48f007d6b63cd137c325
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829495"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917664"
 ---
 # <a name="wmi-data-reader-task"></a>WMI データ リーダー タスク
   WMI データ リーダー タスクは、WQL (Windows Management Instrumentation Query Language) を使用してクエリを実行し、コンピューター システムに関する WMI から情報を返します。 WMI データ リーダー タスクは、次の目的で使用できます。  

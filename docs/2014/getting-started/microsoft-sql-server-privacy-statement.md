@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 57769f4a-5689-49a1-8298-e3c0db5106f8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f156dc39150d9235ade6298f41a5a19c9d04db8b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3be4ed4ef53ecd3c9feba2938786a47b9c75dcad
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706901"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926673"
 ---
 # <a name="microsoft-sql-server-privacy-statement"></a>Microsoft SQL Server のプライバシーに関する声明
   のユーザーデータ収集コンポーネントの詳細については [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 、「 [SQL Server のプライバシー](https://go.microsoft.com/fwlink/?LinkID=282418)に関する声明」を参照してください。  

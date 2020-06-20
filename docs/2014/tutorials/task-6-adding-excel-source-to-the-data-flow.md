@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eff79fb144c2bbc4d31a21b2dc263c4ccb087104
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bbb134106fde9607bd51bc84bcd49969aec19ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177240"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064726"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>タスク 6: Excel ソースをデータ フローに追加する
   ここでは、Excel ソースをデータ フローに追加してソース Excel ファイルから仕入先データを読み取ります。 Excel ソースは、Microsoft Excel ブック内のワークシートまたは範囲からデータを抽出します。 詳細については、「 [Excel ソース](../integration-services/data-flow/excel-source.md)」を参照してください。
@@ -30,7 +29,7 @@ ms.locfileid: "78177240"
 
 5.  [ **Excel ソースエディター** ] ダイアログボックスで、[**新規**] をクリックして excel 接続を作成します。
 
-6.  [ **Excel 接続マネージャー** ] ダイアログボックスで、 **[参照**] をクリックし、 **EIM チュートリアル**フォルダーで [**仕入先 .xls** ] ファイルを選択します。 [ **Excel バージョン**] ボックスで [ **Microsoft excel 97-2003** ] が選択されていることを確認し、[ **OK**] をクリックします。
+6.  [ **Excel 接続マネージャー** ] ダイアログボックスで、 **[参照**] をクリックし、 **EIM チュートリアル**フォルダー内の**Suppliers.xls**ファイルを選択します。 [ **Excel バージョン**] ボックスで [ **Microsoft excel 97-2003** ] が選択されていることを確認し、[ **OK**] をクリックします。
 
      ![[Excel 接続マネージャー] ダイアログ ボックス](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "[Excel 接続マネージャー] ダイアログ ボックス")
 

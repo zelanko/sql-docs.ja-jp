@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6d4943bf3884933cd60e1c0ef51a54771ee00af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc1207f7b99089c70ca307177a6e984075c1654f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782772"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995795"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
-  このトピックでは、、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、でエージェントのジョブ履歴ログの内容を削除する方法について説明します。  
+  このトピック [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、、、または SQL Server 管理オブジェクトを使用して、でエージェントのジョブ履歴ログの内容を削除する方法について説明し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
   
  **このトピックの内容**  
   
@@ -86,6 +85,6 @@ ms.locfileid: "72782772"
 ##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  **ジョブ履歴ログを消去するには**  
   
- Visual Basic、 `PurgeJobHistory` Visual C#、 `JobServer` PowerShell など、選択したプログラミング言語を使用して、クラスのメソッドを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
+ `PurgeJobHistory` `JobServer` Visual Basic、Visual C#、PowerShell など、選択したプログラミング言語を使用して、クラスのメソッドを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
   
   

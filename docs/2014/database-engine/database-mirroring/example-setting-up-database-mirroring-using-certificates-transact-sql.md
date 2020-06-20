@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea87e2de984107c5a0fda6eb2629ee5cfd197841
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806753"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934188"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>証明書を使用したデータベース ミラーリングの設定の例 (Transact-SQL)
   この例では、証明書ベースの認証を使用してデータベース ミラーリング セッションを作成するために必要なすべての段階について説明します。 このトピックの例では、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。 ネットワークがセキュリティで保護されていることを保証できる場合を除いて、データベース ミラーリング接続に対して暗号化を使用することをお勧めします。  
   
  証明書を別のシステムにコピーする場合は、セキュリティで保護されたコピー方法を使用してください。 すべての証明書をセキュリティで保護された状態で保管するよう十分に注意してください。  
   
-##  <a name="example"></a><a name="ExampleH2"></a>よう  
+##  <a name="example"></a><a name="ExampleH2"></a> 例  
  以下の例は、HOST_A に存在するパートナーで実行する必要のある処理を示しています。 この例では、2 つのパートナーが、3 つのコンピューター システムの既定のサーバー インスタンスです。 2 つのサーバー インスタンスは、信頼されていない Windows ドメインで実行されているため、証明書ベースの認証が必要です。  
   
  初期プリンシパル ロールは HOST_A によって取得され、ミラー ロールは HOST_B によって取得されます。  
@@ -257,7 +256,7 @@ ms.locfileid: "62806753"
     ```  
   
     > [!NOTE]  
-    >  自動フェールオーバーを伴う高い安全性モードで実行する場合は、トランザクションの安全性を FULL (既定の設定) のままにして、2番目の set PARTNER **'*`partner_server`*'** ステートメントを実行した後、できるだけ早くミラーリング監視サーバーを追加します。 ただし、まずミラーリング監視サーバーが発信接続と着信接続用に構成されている必要があります。  
+    >  自動フェールオーバーを伴う高い安全性モードで実行する場合は、トランザクションの安全性を FULL (既定の設定) のままにして、2番目の set PARTNER **' *`partner_server`* '** ステートメントを実行した後、できるだけ早くミラーリング監視サーバーを追加します。 ただし、まずミラーリング監視サーバーが発信接続と着信接続用に構成されている必要があります。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   

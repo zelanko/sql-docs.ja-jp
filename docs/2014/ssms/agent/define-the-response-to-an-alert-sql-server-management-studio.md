@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6ac3e9ee443f0c10a39128fc1d6aab6813ec4f4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c14e5adf43602b57697483b9ce4c2cdf20ff8e10
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524072"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009021"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>Define the Response to an Alert (SQL Server Management Studio)
-  このトピックでは、でまた[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は[!INCLUDE[tsql](../../includes/tsql-md.md)]を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]して[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、でエージェントの警告に応答する方法を定義する方法について説明します。  
+  このトピック [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] またはを使用して、でエージェントの警告に応答する [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 方法を定義する方法について説明し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
   
  **このトピックの内容**  
   
@@ -30,7 +29,7 @@ ms.locfileid: "62524072"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **警告に対する応答を定義する方法:**  
   
@@ -42,7 +41,7 @@ ms.locfileid: "62524072"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
--   ポケットベルと**net send**のオプションは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将来の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンでエージェントから削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
+-   ポケットベルと**net send**のオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンでエージェントから削除される予定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
 -   SQL Server エージェントは、データベース メールを使用して、電子メールおよびポケットベルによる通知をオペレーターへ送信するように構成する必要があります。 詳細については、「 [オペレーターへの警告の割り当て](assign-alerts-to-an-operator.md)」を参照してください。  
   

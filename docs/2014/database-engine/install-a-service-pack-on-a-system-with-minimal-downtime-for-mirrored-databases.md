@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e878d31ec926f8b2cc460854f422b4d01d32d414
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779596"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932788"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>ミラー化されたデータベースのダウンタイムを最小限に抑えた Service Pack のシステムへのインストール
   このトピックでは、Service Pack および修正プログラムをインストールする際に、ミラー化されたデータベースのダウンタイムを最小限に抑える方法について説明します。 このプロセスには、データベース ミラーリングに参加している [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のインスタンスを順次アップグレードする処理が伴います。 この形式の更新プログラム (*ローリングアップデート*と呼ばれます) によって、ダウンタイムが1つのフェールオーバーのみに短縮されます。 ただし、ミラー サーバーとプリンシパル サーバーが地理的に離れている高パフォーマンス モードのセッションでは、ローリング アップデートは適しません。  
@@ -125,7 +124,7 @@ ms.locfileid: "62779596"
   
     -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページで、 [[動作モード]](../relational-databases/databases/database-properties-mirroring-page.md) オプションを **[高パフォーマンス (非同期)]** に変更します。  
   
-    -   : [!INCLUDE[tsql](../includes/tsql-md.md)] [ALTER database](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)を使用して、トランザクションの安全性を OFF に設定します。  
+    -   [!INCLUDE[tsql](../includes/tsql-md.md)]: [ALTER database](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)を使用して、トランザクションの安全性を OFF に設定します。  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>ミラーリング監視サーバーをミラーリングセッションに戻すには  
   

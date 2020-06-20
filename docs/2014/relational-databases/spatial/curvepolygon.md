@@ -8,21 +8,20 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b90fdbd9a0bc80dfc6a82416d0193b2951fe13ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014249"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996397"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
-  は`CurvePolygon` 、外部境界リングおよび0個以上の内部リングによって定義された位相的閉じサーフェイスです。  
+  は、 `CurvePolygon` 外部境界リングおよび0個以上の内部リングによって定義された位相的閉じサーフェイスです。  
   
 > [!IMPORTANT]  
->  サブタイプを含め、で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]導入された空間機能の詳細な説明と例については、ホワイトペーパー「 [SQL Server 2012 の新しい空間機能](https://go.microsoft.com/fwlink/?LinkId=226407)」をダウンロードしてください。 `CurvePolygon`  
+>  サブタイプを含め、で導入された空間機能の詳細な説明と例については、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] `CurvePolygon` ホワイトペーパー「 [SQL Server 2012 の新しい空間機能](https://go.microsoft.com/fwlink/?LinkId=226407)」をダウンロードしてください。  
   
- 次の条件では、 `CurvePolygon`インスタンスの属性を定義します。  
+ 次の条件では、インスタンスの属性を定義し `CurvePolygon` ます。  
   
 -   `CurvePolygon` インスタンスの境界は、外部リングとすべての内部リングによって定義されます。  
   

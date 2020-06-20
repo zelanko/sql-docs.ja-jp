@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c2d7be5fa95e92b97e76e28647f4406ee356c5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891404"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968252"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>手順 3:エラー フロー リダイレクトの追加
   前の実習で学んだように、Lookup Currency Key 変換で壊れているサンプル フラット ファイルを処理しようとするとエラーが発生し、変換を行うことができません。 この変換ではエラー出力に既定の設定を使用するため、エラーが発生すると変換は失敗します。 変換が失敗すると、それ以降のパッケージも失敗します。  
@@ -24,7 +23,7 @@ ms.locfileid: "62891404"
   
  ここでは、失敗した行をエラー出力にリダイレクトするよう Lookup Currency Key 変換を構成します。 データ フローのエラー分岐では、失敗した行はファイルに書き込まれます。  
   
- 既定では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]エラー出力の2つの追加列 ( **ErrorCode**と**errorcolumn**) には、エラー番号を表す数値コードと、エラーが発生した列の ID だけが含まれます。 これらの数値は、対応するエラー説明がないとあまり役に立ちません。  
+ 既定では、エラー出力の2つの追加列 ( [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] **ErrorCode**と**errorcolumn**) には、エラー番号を表す数値コードと、エラーが発生した列の ID だけが含まれます。 これらの数値は、対応するエラー説明がないとあまり役に立ちません。  
   
  エラー出力の有用性を高めるには、パッケージによって失敗行がファイルに書き込まれる前に、スクリプト コンポーネントを使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] API にアクセスし、エラーの説明を取得します。  
   
@@ -48,9 +47,9 @@ ms.locfileid: "62891404"
   
 8.  **[入力および出力]** ページで **[出力 0]** を展開し、 **[出力列]** をクリックして、 **[列の追加]** をクリックします。  
   
-9. プロパティに「ErrorDescription」と入力し、 `DataType`プロパティを**Unicode 文字列 [DT_WSTR]** に設定します。 **ErrorDescription** `Name`  
+9. プロパティに `Name` 「 **ErrorDescription** 」と入力し、 `DataType` プロパティを**Unicode 文字列 [DT_WSTR]** に設定します。  
   
-10. [**スクリプト**] ページで、 `LocaleID`プロパティが**英語 (米国**に設定されていることを確認します。  
+10. [**スクリプト**] ページで、 `LocaleID` プロパティが**英語 (米国**に設定されていることを確認します。  
   
 11. **[スクリプトの編集]** をクリックして、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) を開きます。 `Input0_ProcessInputRow` メソッドに、次のコードを入力するか貼り付けます。  
   

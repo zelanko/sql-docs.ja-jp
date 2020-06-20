@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2d6f29eba93e7841d2d64db57266d8f2ad859377
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f488f28f210826613b9fa3e8029121ab1f858e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664368"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030639"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **Service Broker** メッセージ交換の進行状況を報告するために、Broker:Conversation イベントが生成されます。  
@@ -48,7 +47,7 @@ ms.locfileid: "62664368"
 |**Severity**|`int`|(このイベントによってエラーが報告された場合) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの重大度。|29|いいえ|  
 |**SPID**|`int`|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
 |**StartTime**|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|**TextData**|`ntext`|メッセージ交換の現在の状態。 次のいずれか:<br /><br /> では **、** 送信開始状態。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこのメッセージ交換に対して BEGIN CONVERSATION が処理されましたが、メッセージはまだ送信されていません。<br /><br /> **SI**。 受信開始状態。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の別のインスタンスで現在のインスタンスとの新しいメッセージ交換が開始されましたが、現在のインスタンスが最初のメッセージの受信を完了していません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初のメッセージが分割されたものであるか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で順序どおりにメッセージが受け取られなかった場合は、この状態のメッセージ交換が作成されます。 ただし、メッセージ交換で受信された最初の転送データに最初のメッセージ全体が含まれている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で CO 状態のメッセージ交換が作成されることがあります。<br /><br /> **CO**。 メッセージ交換中状態。 メッセージ交換が確立され、メッセージ交換の両側からメッセージを送信できます。 通常のサービスに関する通信の大部分は、メッセージ交換がこの状態のときに行われます。<br /><br /> **DI**。 受信切断状態。 メッセージ交換のリモート側で END CONVERSATION が発行されました。 メッセージ交換のローカル側で END CONVERSATION が発行されるまで、メッセージ交換はこの状態になります。 アプリケーションは引き続きこのメッセージ交換のメッセージを受信できます。 メッセージ交換のリモート側ではメッセージ交換が終了しているので、このメッセージ交換でアプリケーションからメッセージを送信することはできません。 アプリケーションで END CONVERSATION を発行すると、メッセージ交換は終了 (CD) 状態に移行します。<br /><br /> **実行**します。 送信切断状態。 メッセージ交換のローカル側で END CONVERSATION が発行されました。 メッセージ交換のリモート側で END CONVERSATION が承認されるまで、メッセージ交換はこの状態になります。 アプリケーションはこのメッセージ交換でメッセージを送受信することはできません。 メッセージ交換のリモート側で END CONVERSATION が承認されると、メッセージの交換は終了 (CD) 状態に移行します。<br /><br /> **ER**。 エラーが発生します。 このエンドポイントでエラーが発生しました。 Error、Severity、State の各列に、発生した特定のエラーに関する情報が含まれています。<br /><br /> **CD**。 終了状態。 メッセージ交換のエンドポイントは解放されました。|1|はい|  
+|**TextData**|`ntext`|メッセージ交換の現在の状態。 次のいずれか:<br /><br /> では **、** 送信開始状態。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこのメッセージ交換に対して BEGIN CONVERSATION が処理されましたが、メッセージはまだ送信されていません。<br /><br /> **SI**。 受信開始状態。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の別のインスタンスで現在のインスタンスとの新しいメッセージ交換が開始されましたが、現在のインスタンスが最初のメッセージの受信を完了していません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初のメッセージが分割されたものであるか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で順序どおりにメッセージが受け取られなかった場合は、この状態のメッセージ交換が作成されます。 ただし、メッセージ交換で受信された最初の転送データに最初のメッセージ全体が含まれている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で CO 状態のメッセージ交換が作成されることがあります。<br /><br /> **CO**。 メッセージ交換中状態。 メッセージ交換が確立され、メッセージ交換の両側からメッセージを送信できます。 通常のサービスに関する通信の大部分は、メッセージ交換がこの状態のときに行われます。<br /><br /> **DI**。 受信切断状態。 メッセージ交換のリモート側で END CONVERSATION が発行されました。 メッセージ交換のローカル側で END CONVERSATION が発行されるまで、メッセージ交換はこの状態になります。 アプリケーションは引き続きこのメッセージ交換のメッセージを受信できます。 メッセージ交換のリモート側ではメッセージ交換が終了しているので、このメッセージ交換でアプリケーションからメッセージを送信することはできません。 アプリケーションで END CONVERSATION を発行すると、メッセージ交換は終了 (CD) 状態に移行します。<br /><br /> **実行**します。 送信切断状態。 メッセージ交換のローカル側で END CONVERSATION が発行されました。 メッセージ交換のリモート側で END CONVERSATION が承認されるまで、メッセージ交換はこの状態になります。 アプリケーションはこのメッセージ交換でメッセージを送受信することはできません。 メッセージ交換のリモート側で END CONVERSATION が承認されると、メッセージの交換は終了 (CD) 状態に移行します。<br /><br /> **ER**。 エラー。 このエンドポイントでエラーが発生しました。 Error、Severity、State の各列に、発生した特定のエラーに関する情報が含まれています。<br /><br /> **CD**。 終了状態。 メッセージ交換のエンドポイントは解放されました。|1|はい|  
 |**Transaction ID**|`bigint`|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
   
  次の表は、このイベント クラスのサブクラス値の一覧です。  
@@ -66,7 +65,7 @@ ms.locfileid: "62664368"
 |9|Received Broker Error Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **がメッセージ交換の相手側からブローカー定義エラー メッセージを受信すると、** Received Broker Error Message [!INCLUDE[ssSB](../../includes/sssb-md.md)] イベントが生成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] がアプリケーションで生成されたエラー メッセージを受信した場合は、このイベントは生成されません。<br /><br /> たとえば、現在のデータベースに転送先のデータベースへの既定のルートが含まれている場合、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ではサービス名が不明なメッセージをその転送先にルーティングします。 転送先のデータベースがメッセージをルーティングできない場合、そのデータベースのブローカーでエラー メッセージが作成され、現在のデータベースに返されます。 現在のデータベースが転送先のデータベースからブローカーが生成したエラーを受信すると、現在のデータベースで **Received Broker Error Message** イベントが生成されます。|  
 |10|Received END CONVERSATION Ack|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、メッセージ交換のこちら側から送信された End Dialog メッセージまたは Error メッセージの受信が相手側で確認されるときに、 **Received END CONVERSATION Ack** イベント クラスが生成されます。|  
 |11|BEGIN DIALOG|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベース エンジンで BEGIN DIALOG コマンドが実行されるときに、 **BEGIN DIALOG** イベントが生成されます。|  
-|12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によってダイアログのエンド[!INCLUDE[ssSB](../../includes/sssb-md.md)]ポイントが作成されるときに、dialog Created イベントが生成**され**ます。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、現在のデータベースがダイアログの開始側か相手側かにかかわらず、新しいダイアログが確立されるたびにエンドポイントを作成します。|  
+|12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によってダイアログのエンドポイントが作成されるときに、Dialog Created イベントが生成**され** [!INCLUDE[ssSB](../../includes/sssb-md.md)] ます。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、現在のデータベースがダイアログの開始側か相手側かにかかわらず、新しいダイアログが確立されるたびにエンドポイントを作成します。|  
 |13|END CONVERSATION WITH CLEANUP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で WITH CLEANUP 句を指定した END CONVERSATION ステートメントが実行されるときに、END CONVERSATION WITH CLEANUP イベントが生成されます。|  
   
 ## <a name="see-also"></a>参照  

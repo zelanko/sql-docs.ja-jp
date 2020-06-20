@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 27ac17469a96213bdd39cbf2bee5a343d117e6f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d914595c5c62016efca26dece908ee28b7010706
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487631"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940013"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>テーブル モデリング (Adventure Works チュートリアル)
   このチュートリアルでは、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] を使用して、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Analysis Services テーブル モデルを作成する方法を学習します。  
@@ -58,7 +57,7 @@ ms.locfileid: "81487631"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   AdventureWorksDW サンプル データベース このサンプル データベースには、このチュートリアルを完了するのに必要なデータが含まれています。 サンプルデータベースをダウンロードするには[https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)、「」を参照してください。  
+-   AdventureWorksDW サンプル データベース このサンプル データベースには、このチュートリアルを完了するのに必要なデータが含まれています。 サンプルデータベースをダウンロードするには、「」を参照してください [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) 。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 以降 (レッスン 11 で "Excel で分析" 機能を使用するため)  
   

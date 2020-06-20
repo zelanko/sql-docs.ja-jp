@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 537308a0486308ce3cb26227f415f487d69e6f54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61bd8ddad149198bb3b4111e716228718b3d6e4f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176217"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968462"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>スクリプト タスクによる HTML メール メッセージの送信
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の SendMail タスクでは、プレーン テキスト形式のメール メッセージのみがサポートされています。 ただし、.NET Framework のスクリプト タスクとメール機能を使用して、HTML メール メッセージを簡単に送信できます。
@@ -56,7 +55,7 @@ ms.locfileid: "78176217"
 
 #### <a name="to-configure-this-script-task-example-with-an-smtp-connection-manager"></a>このスクリプト タスクの例を SMTP 接続マネージャーを使用して構成するには
 
-1.  `HtmlEmailServer`ReadOnlyVariables**の一覧から** 変数を削除して、前に構成したスクリプト タスクを変更します。
+1.  **ReadOnlyVariables** の一覧から `HtmlEmailServer` 変数を削除して、前に構成したスクリプト タスクを変更します。
 
 2.  サーバー名を取得する次のコード行を置き換えます。
 

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 73a7bdc282a2e8797c1f157dbd1e9cc3c21ce485
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8fe20a8bafae1a9f8dd331d1db5ae16fba5c3ee1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176397"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968952"
 ---
 # <a name="developing-a-custom-source-component"></a>カスタム変換元コンポーネントの開発
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を使用することで、開発者は、データ フロー タスクでカスタム データ ソースに接続して、変換元のデータを他のコンポーネントに提供する変換元コンポーネントを記述できます。 カスタム変換元を作成できると、既存の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変換元のいずれかを使用してアクセスできないデータ ソースに接続する必要がある場合に便利です。

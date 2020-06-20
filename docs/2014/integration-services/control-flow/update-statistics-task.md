@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: be80af34bc2dc8b5d069406bc13a8f8f9b25c42c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5153ddd4363ce752933d425d3155c5733ec8fcef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829454"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917802"
 ---
 # <a name="update-statistics-task"></a>統計の更新タスク
   統計の更新タスクは、指定されたテーブルまたはインデックス付きビュー内の 1 つ以上の統計グループ (コレクション) についてキー値の分布に関する情報を更新します。 詳細については、[統計](../../relational-databases/statistics/statistics.md)に関する記事を参照してください。  

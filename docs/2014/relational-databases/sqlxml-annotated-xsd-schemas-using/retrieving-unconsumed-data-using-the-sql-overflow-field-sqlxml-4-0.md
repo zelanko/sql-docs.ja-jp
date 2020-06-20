@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d663cf6a4a2c7edfc7ae206f5a703b10db63106
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e87089d05ec00993900bc8a081ebe43ae3adf448
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703528"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003177"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>sql:overflow-field を使用した、未使用データの取得 (SQLXML 4.0)
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 関数を使用して XML ドキュメントからデータベースにレコードを挿入するときに、ソース XML ドキュメントのすべての未使用データを 1 つの列に格納することができます。 注釈付きスキーマを使用してデータベースからデータを取得するときには、`sql:overflow-field` 属性を指定して、オーバーフロー データを格納するテーブルの列を指定できます。 属性は、 `sql:overflow-field` ** \< 要素>** で指定できます。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 関数を使用して XML ドキュメントからデータベースにレコードを挿入するときに、ソース XML ドキュメントのすべての未使用データを 1 つの列に格納することができます。 注釈付きスキーマを使用してデータベースからデータを取得するときには、`sql:overflow-field` 属性を指定して、オーバーフロー データを格納するテーブルの列を指定できます。 `sql:overflow-field`属性はで指定でき **\<element>** ます。  
   
  データは次のように取得されます。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "82703528"
   
 -   データベースのオーバーフロー列に格納された子要素とその子孫が、スキーマで明示的に指定されたコンテンツの後に子要素として追加されます。 このとき、順序は維持されません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. 要素に sql:overflow-field を指定する  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73d0cf3a374a7f3dda7797238d2c1702360aa955
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4997ce60dcfbdae6145ae4ae442fabe7c79f924
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872331"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952842"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>データベース メールから送信された電子メール メッセージの状態の確認
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベース メール経由で送信された電子メール メッセージの状態を確認する方法について説明します。  
@@ -44,7 +43,7 @@ ms.locfileid: "62872331"
   
      データベース メール外部プログラムの既定では、正常に送信されたメッセージについての情報がログに記録されません。 すべてのメッセージをログに記録するには、 **データベース メール構成ウィザード** の **[システム パラメーターの構成]** ページを使用して、ログのレベルを詳細に設定します。  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>例 (Transact-sql)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、外部プログラムが正常に送信できなかった、 `danw` への電子メール メッセージに関する情報を表示します。 このステートメントは、件名、外部プログラムでメッセージの送信に失敗した日時、およびデータベース メール ログに記録されているエラー メッセージの一覧を表示します。  
   
 ```  

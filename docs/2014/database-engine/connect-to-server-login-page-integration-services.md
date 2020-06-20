@@ -12,16 +12,15 @@ f1_keywords:
 ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53a9793fc2a8770c8d926c945ba31a335bdfed3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f6ead7090e0ffc3efaa3fbf979d4012d2a43388
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808733"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934625"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>[サーバーへの接続] ([ログイン] ページ) (Integration Services)
-  このタブを使用すると、に[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]接続するときに、次のオプションを表示または指定できます。  
+  このタブを使用すると、に接続するときに、次のオプションを表示または指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] できます。  
   
 ## <a name="options"></a>Options  
  **サーバーの種類**  
@@ -31,7 +30,7 @@ ms.locfileid: "62808733"
  接続するサーバーを選択します。 既定では、最後に接続していたサーバー インスタンスが表示されます。  
   
 > [!NOTE]  
->  はコンピューター上の複数のインスタンスをサポート[!INCLUDE[ssIS](../includes/ssis-md.md)]していないため、 * \<servername>* \\ * \<instancename>* を使用しないでください。  
+>  *\<servername>* \\ *\<instancename>* [!INCLUDE[ssIS](../includes/ssis-md.md)] は、コンピューター上の複数のインスタンスをサポートしていないため、使用しないでください。  
   
  **認証**  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] では [!INCLUDE[ssIS](../includes/ssis-md.md)]Windows 認証だけを使用できます。 Windows 認証モードを使用すると、ユーザーは Windows ユーザー アカウントを使用して接続できます。  
@@ -45,10 +44,10 @@ ms.locfileid: "62808733"
  **パスワードを保存する**  
  [!INCLUDE[ssIS](../includes/ssis-md.md)]では Windows 認証しか使用できないため、このオプションは使用できません。  
   
- **のインスタンスに接続するときには、**  
+ **接続する**  
  上で選択したサーバーに接続します。  
   
- **[オプション]**  
+ **Options**  
  クリックすると、ダイアログが切り替わり、パスワードの保存などの追加のサーバー接続オプションが非表示になります。  
   
   

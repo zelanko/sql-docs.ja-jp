@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8f1b28766eab6ecd5035dd8a58e88abaccc97c5
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 966174c359675a06565b57fe4acb02b43ff39892
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921731"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933085"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>インメモリ OLTP を実証する AdventureWorks の拡張
     

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c8f3f5c10a4b9f78ed77d643b34297336581f43f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717506"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996224"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>OLE DB を使用した、アップデートグラムの実行 (SQLXML 4.0)
   このトピックでは、Ole DB を使用してアップデートグラムを実行する実際のサンプルについて説明します。  
@@ -58,7 +57,7 @@ ms.locfileid: "82717506"
 </Schema>  
 ```  
   
- このクエリでは、従業員のすべての要素が返されます。 既定のマッピングでは、 ** \< Person. contact>** 要素は、AdventureWorks データベースの person テーブルにマップされます。  
+ このクエリでは、従業員のすべての要素が返されます。 既定のマッピングでは、 **\<Person.Contact>** 要素は AdventureWorks データベースの Person. Contact テーブルにマップされます。  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>XML をコマンドとして設定し、結果を XML ドキュメントとして取得するには  
   

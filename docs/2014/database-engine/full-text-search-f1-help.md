@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f041821-6a12-4ab5-bb3a-a8345a9bc00b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe3384fe5e5dde96082b0e21805a0e8b915ccb6a
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 56de74cd483162216747aac806f98f7883ea4706
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000922"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932968"
 ---
 # <a name="full-text-search-f1-help"></a>フルテキスト検索の F1 ヘルプ
   ここでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]フルテキスト検索ダイアログ ボックスに関するトピックについて紹介します。 ユーザー インターフェイスに関するトピックにアクセスするには、ダイアログ ボックスが開いている状態で F1 キーを押すか **[ヘルプ]** をクリックします。  
