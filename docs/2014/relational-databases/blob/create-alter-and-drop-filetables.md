@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b810a3785c41356042639c4fdb79b4f6cf28d871
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a10e6333f6dd38a850a832b82a7cb7a0e0bf698
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76934798"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955582"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable の作成、変更、および削除
   新しい FileTable の作成や、既存の FileTable の変更または削除を行う方法について説明します。  
@@ -35,9 +34,9 @@ ms.locfileid: "76934798"
   
 -   自動的に作成される 3 つの主キーと一意の制約で使用する名前。  
   
-###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> 方法: FileTable を作成する  
+###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> 方法:FileTable を作成する  
  **Transact-SQL を使用して FileTable を作成する**  
- FileTable を作成するには、[AS FileTable](/sql/t-sql/statements/create-table-transact-sql) オプションを指定して **CREATE TABLE &#40;Transact-SQL&#41;** ステートメントを呼び出します。 FileTable には固定スキーマがあるため、列の一覧を指定する必要はありません。 新しい FileTable には次の設定を指定できます。  
+ FileTable を作成するには、**AS FileTable** オプションを指定して [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) ステートメントを呼び出します。 FileTable には固定スキーマがあるため、列の一覧を指定する必要はありません。 新しい FileTable には次の設定を指定できます。  
   
 1.  **FILETABLE_DIRECTORY**。 FileTable に格納されたすべてのファイルおよびディレクトリのルート ディレクトリとなるディレクトリを指定します。 この名前は、データベース内のすべての FileTable ディレクトリ名の中で一意である必要があります。 一意性の比較では、現在の照合順序の設定とは関係なく、大文字と小文字は区別されません。  
   
@@ -107,7 +106,7 @@ GO
   
  ALTER TABLE ステートメントを使用して FileTable 名前空間 (システム定義の制約を含む) を有効または無効にする方法の詳細については、「 [FileTable の管理](manage-filetables.md)」を参照してください。  
   
-###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> 方法: FileTable のディレクトリを変更する  
+###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> 方法:FileTable のディレクトリを変更する  
  **Transact-SQL を使用して FileTable のディレクトリを変更する**  
  ALTER TABLE ステートメントを呼び出し、有効な新しい値を **FILETABLE_DIRECTORY** SET オプションに指定します。  
   
@@ -175,11 +174,11 @@ GO
 |CHECK 制約|システム定義の CHECK 制約によって、次の要件が適用されます。<br /><br /> 有効なファイル名。<br /><br /> 有効なファイル属性。<br /><br /> 親オブジェクトをディレクトリにする。<br /><br /> 名前空間の階層は、ファイル操作中にロックされる。|  
   
  **システム定義の制約の名前付け規則**  
- 上で説明したシステム定義の制約は、 **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** という形式で名前が付けられます。  
+ 上記で説明したシステム定義の制約は、 ** \<constraintType> _ \<tablename> [ \_ \<columnname> ] \_ \<uniquifier> **の形式で名前が付けられます。  
   
 -   *<constraint_type>* は CK (CHECK 制約)、DF (DEFAULT 制約)、FK (外部キー)、PK (主キー)、または UQ (一意制約) です。  
   
--   *\<uniquifier>* は、名前を一意にする、システムによって生成された文字列です。 この文字列には、通常、FileTable の名前と一意の識別子が含まれています。  
+-   *\<uniquifier>* は、名前を一意にするための、システムによって生成される文字列です。 この文字列には、通常、FileTable の名前と一意の識別子が含まれています。  
   
 ## <a name="see-also"></a>参照  
  [FileTable の管理](manage-filetables.md)  

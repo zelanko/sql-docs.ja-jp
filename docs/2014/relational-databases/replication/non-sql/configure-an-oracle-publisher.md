@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4941a02deb770678f4efcf4d2dfc7b08243fff54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022593"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005400"
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle パブリッシャーの構成
   Oracle パブリッシャーからパブリケーションを作成する方法は、通常のスナップショットおよびトランザクション パブリケーションを作成する方法と同じですが、Oracle パブリッシャーからパブリケーションを作成する前に、次の手順を実行する必要があります (手順 1、3、および 4 については、このトピックで詳しく説明します)。  
@@ -41,7 +40,7 @@ ms.locfileid: "63022593"
 > [!NOTE]  
 >  **MSSQLSERVERDISTRIBUTOR** パブリック シノニムと、 **CASCADE** オプションで構成した Oracle レプリケーション ユーザーを削除すると、Oracle パブリッシャーからすべてのレプリケーション オブジェクトが削除されます。  
   
- Oracle レプリケーション ユーザー スキーマのセットアップに役立つサンプル スクリプトが提供されています。 このスクリプトは、のインストール後に次[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のディレクトリにあります:\\ * \<ドライブ>*:\\SQL Server*\<InstanceName>* \mssql\install\oracleadmin.sql このスクリプトについては、「 [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)」でも説明します。  
+ Oracle レプリケーション ユーザー スキーマのセットアップに役立つサンプル スクリプトが提供されています。 このスクリプトは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : *\<drive>* \\ SQL Server: \\ *\<InstanceName>* \mssql\install\oracleadmin.sql のインストール後、次のディレクトリにあります。 このスクリプトについては、「 [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)」でも説明します。  
   
  DBA 特権を持つアカウントを使用して Oracle データベースに接続し、スクリプトを実行します。 このスクリプトでは、レプリケーション管理ユーザー スキーマのユーザーとパスワード、およびオブジェクトを作成するときに使用する既定のテーブルスペースの入力が要求されます (このテーブルスペースは Oracle データベース内に存在していることが必要です)。 オブジェクトに他のテーブルスペースを指定する方法の詳細については、「[Manage Oracle Tablespaces (Oracle テーブルスペースの管理)](manage-oracle-tablespaces.md)」を参照してください。 ユーザー名と複雑なパスワードを選択しますが、後で Oracle データベースをパブリッシャーとして構成するときにこの情報の入力が要求されるため、どちらもメモしておいてください。 スキーマはレプリケーションに必要なオブジェクトでのみ使用し、このスキーマではパブリッシュするテーブルを作成しないでください。  
   
@@ -105,7 +104,7 @@ ms.locfileid: "63022593"
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     たとえば次のようになります。`sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     例: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
 4.  ネットワーク構成が正常に行われていれば、ログインは成功し、 `SQL` プロンプトが表示されます。  
   

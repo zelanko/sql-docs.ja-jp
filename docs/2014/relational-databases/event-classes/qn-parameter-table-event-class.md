@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 395df605926f0ff4ddc30970cdcebce0f1d0c8fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fad4d1cbeaa84b5c6be683d7a87997d1a3f89bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044447"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052637"
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table イベント クラス
   QN:Parameter table イベントでは、パラメーター情報を格納する内部テーブルの作成や削除、およびその内部テーブルに対する参照カウンターの管理に必要な操作に関する情報が報告されます。 また、このイベントでは、内部的な動作状況も報告されます。この情報はパラメーター テーブルの使用カウントをリセットするために使用されます。  
@@ -38,7 +37,7 @@ ms.locfileid: "63044447"
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 0 = ユーザー<br /><br /> 1 = システム|60|いいえ|  
-|LoginName|`nvarchar`|ユーザーのログイン名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (セキュリティログイン、または*ドメイン*\\*ユーザー名*の形式の Windows ログイン資格情報)。|11|いいえ|  
+|LoginName|`nvarchar`|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティログイン、または*ドメイン* \\ *ユーザー名*の形式の Windows ログイン資格情報)。|11|いいえ|  
 |LoginSID|`image`|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NTDomainName|`nvarchar`|ユーザーが属している Windows ドメイン。|7|はい|  
 |NTUserName|`nvarchar`|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  

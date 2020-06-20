@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a59ffcd6-4b69-4c5c-9740-699ccb2183fb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ffa52839c20a34574423e3b123da79f734fb69ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ba5e4e5dd6d9a6541a98e0cb30229d7335bac24
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786691"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936083"
 ---
 # <a name="browse-for-servers-network-servers"></a>[サーバーの参照] ([ネットワーク サーバー])
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントに接続する際に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの正確な名前がわからない場合は、**[サーバー名]** ボックスで **[参照]** をクリックして **[サーバーの参照]** ダイアログ ボックスを開きます。  
@@ -34,6 +33,6 @@ ms.locfileid: "62786691"
   
 ## <a name="options"></a>オプション  
  **[接続に使用する、ネットワーク内の SQL Server インスタンスを選択します]**  
- ツリーに表示された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスをクリックして、接続するサーバーを指定します。 **+** または**-** 記号でマークされたノードをクリックして、ツリービューの一部を表示または非表示にすることができます。  
+ ツリーに表示された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスをクリックして、接続するサーバーを指定します。 または記号でマークされたノードをクリックして、ツリービューの一部を表示または非表示にすることができ **+** **-** ます。  
   
   

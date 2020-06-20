@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3d4ffa4b8eed84bd6597552967b3e51b10459749
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7b3b95dbc3a228d2b7f54cea18cad1ba5636527c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717859"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014975"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での算術演算子の指定 (SQLXML 4.0)
   以下の例では、XPath クエリに算術演算子を指定する方法を示します。 この例の XPath クエリは、SampleSchema1.xml に格納されているマッピング スキーマに対して指定されます。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
@@ -28,13 +27,13 @@ ms.locfileid: "82717859"
 ## <a name="examples"></a>例  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. * 算術演算子を指定する  
- この XPath クエリは、指定された述語を満たす** \< orderdetail>** 要素を返します。  
+ この XPath クエリ **\<OrderDetail>** は、指定された述語を満たす要素を返します。  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- このクエリでは、は軸で、は `child` `OrderDetail` ノードテストです ( **orderdetail**が** \< 要素ノード>** の場合は TRUE になります。これは、 ** \< 要素>** ノードが軸のプライマリノードであるためです `child` )。 すべての** \< orderdetail>** 要素ノードでは、述語内のテストが適用され、条件を満たすノードだけが返されます。  
+ このクエリでは、は軸で、は `child` `OrderDetail` ノードテストです。これは、 **OrderDetail** **\<element node>** **\<element>** ノードが軸のプライマリノードであるため、ORDERDETAIL がの場合は TRUE です `child` 。 すべての要素ノードについて、 **\<OrderDetail>** 述語内のテストが適用され、条件を満たすノードだけが返されます。  
   
 > [!NOTE]  
 >  XPath の数値は倍精度浮動小数点数であり、例のように浮動小数点数を比較する場合は丸めが実行されます。  

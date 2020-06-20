@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 52e486dc6cb6c3da45d590d4ba2e557c87c1a556
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4641159e894b764cbee4d7f02085f3ceb8e6d87d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009880"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970832"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable 内のディレクトリとパスの操作
   FileTable 内でファイルが格納されるディレクトリ構造について説明します。  
   
-##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> 方法: FileTable 内のディレクトリとパスを操作する  
+##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> 方法:FileTable 内のディレクトリとパスの操作  
  次の 3 つの関数を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で FileTable ディレクトリを操作することができます。  
   
 |目的|使用する関数|  
@@ -31,7 +30,7 @@ ms.locfileid: "66009880"
 |FileTable 内のファイルまたはディレクトリの絶対 UNC パスまたは相対 UNC パスを取得する。|[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|  
 |パスを指定して、FileTable 内の指定されたファイルまたはディレクトリのパス ロケーター ID 値を取得する。|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
-##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> 方法: 相対パスを使用して移植可能なコードを実現する  
+##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> 方法:相対パスを使用して移植可能なコードを実現する  
  コードとアプリケーションが現在のコンピューターとデータベースから切り離された状態を維持するには、絶対ファイル パスに依存したコードを記述しないでください。 代わりに、以下の例に示すように [FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) 関数および [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)関数を併用して、実行時にファイルの完全なパスを取得します。 既定では、`GetFileNamespacePath` 関数はデータベースのルート パスにあるファイルの相対パスを返します。  
   
 ```sql  
@@ -60,7 +59,7 @@ GO
 > [!IMPORTANT]  
 >  NTFS ファイル システムは、Windows シェルおよび大部分の Windows API の上限である 260 文字よりも長いパス名をサポートします。 そのため、Transact-SQL を使用して、完全なパス名が 260 文字を超えているために Windows エクスプローラーや他の多くの Windows アプリケーションで表示したり開いたりできないファイルを、FileTable のファイル階層内に作成できます。 ただし、Transact-SQL を使用してこれらのファイルに引き続きアクセスできます。  
   
-##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a>FileTable に格納されているアイテムへの完全パスです。  
+##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a> FileTable に格納されているアイテムへの完全なパス  
  FileTable 内のファイルまたはディレクトリへの完全なパスには、次の要素が先頭に付きます。  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス レベルでの FILESTREAM ファイル I/O アクセスが有効になっている共有。  
@@ -77,7 +76,7 @@ GO
   
  インスタンス レベルの FILESTREAM 共有の下に作成されたディレクトリ階層は仮想ディレクトリ階層であることに注意してください。 階層は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納され、NTFS ファイル システム内には物理的に表示されません。 FILESTREAM 共有の下にあるファイルおよびディレクトリ、および FILESTREAM 共有に含まれる FileTables 内のファイルおよびディレクトリにアクセスするすべての操作は、ファイル システムに埋め込まれた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントによってインターセプトされ、処理されます。  
   
-##  <a name="the-semantics-of-the-root-directories-at-the-instance-database-and-filetable-levels"></a><a name="roots"></a>インスタンスレベル、データベースレベル、および FileTable レベルのルートディレクトリのセマンティクス  
+##  <a name="the-semantics-of-the-root-directories-at-the-instance-database-and-filetable-levels"></a><a name="roots"></a> インスタンス レベル、データベース レベル、および FileTable レベルのルート ディレクトリのセマンティクス  
  このディレクトリ階層は次のセマンティクスに従います。  
   
 -   インスタンス レベルの FILESTREAM 共有は管理者によって構成され、サーバーのプロパティとして格納されます。 この共有の名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して変更できます。 名前変更の操作は、サーバーを再起動するまで有効になりません。  
@@ -90,18 +89,18 @@ GO
   
 -   排他的なファイル ハンドルを使用してこれらのルート ディレクトリを開くことはできません。  
   
-##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a>FileTable スキーマの is_directory 列  
+##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a> FileTable スキーマの is_directory 列  
  次の表に、 **is_directory** 列と、FileTable の FILESTREAM データを格納する **file_stream** 列との間のやり取りを示します。  
   
 ||||  
 |-|-|-|  
 |*is_directory* **value**|*file_stream* **value**|**動作**|  
 |FALSE|NULL|これは、システム定義の制約によってキャッチされる無効な組み合わせです。|  
-|FALSE|\<値>|アイテムはファイルを表します。|  
+|FALSE|\<value>|アイテムはファイルを表します。|  
 |TRUE|NULL|アイテムはディレクトリを表します。|  
-|TRUE|\<値>|これは、システム定義の制約によってキャッチされる無効な組み合わせです。|  
+|TRUE|\<value>|これは、システム定義の制約によってキャッチされる無効な組み合わせです。|  
   
-##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a>AlwaysOn 可用性グループでの Virtual Network 名 (Vnn) の使用  
+##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a> AlwaysOn 可用性グループでの仮想ネットワーク名 (VNN) の使用  
  FILESTREAM データまたは FileTable データを格納するデータベースが AlwaysOn 可用性グループに属する場合、次の処理が行われます。  
   
 -   FILESTREAM および FileTable 関数は、コンピューター名ではなく仮想ネットワーク名 (VNN) のやり取りを行います。 関数の詳細については、「[Filestream および FileTable 関数 &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filestream-and-filetable-functions-transact-sql)」を参照してください。  
@@ -109,9 +108,9 @@ GO
 -   ファイル システム API を介した FILESTREAM または FileTable データへのすべてのアクセスでは、コンピューター名ではなく VNN を使用する必要があります。 詳細については、「[FILESTREAM および FileTable と AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [FileTable の前提条件を有効にする](enable-the-prerequisites-for-filetable.md)   
- [Filetable の作成、変更、および削除](create-alter-and-drop-filetables.md)   
- [Transact-sql を使用した Filetable へのアクセス](access-filetables-with-transact-sql.md)   
+ [FileTable の前提条件の有効化](enable-the-prerequisites-for-filetable.md)   
+ [FileTable の作成、変更、および削除](create-alter-and-drop-filetables.md)   
+ [Transact SQL を使用した FileTable へのアクセス](access-filetables-with-transact-sql.md)   
  [ファイル I/O API を使用した FileTable へのアクセス](access-filetables-with-file-input-output-apis.md)  
   
   

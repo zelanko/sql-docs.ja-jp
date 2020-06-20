@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8a26587f9dd426cdf53a3a53a36d0e81e95ebf77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e6b326e86e1a9e21a740c3bf1bd1fedb6919e98
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055469"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962737"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>[SQL Server Compact Edition 接続マネージャー エディター] ([すべて] ページ)
   **[SQL Server Compact Edition 接続マネージャー エディター]** ダイアログ ボックスでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact データベースに接続するためのプロパティを指定できます。  
@@ -45,7 +44,7 @@ ms.locfileid: "66055469"
  **[Max Buffer Size]**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact が、データをディスクにフラッシュするまでに使用する最大メモリ容量を KB 単位で指定します。  
   
- **[Max Database Size]**  
+ **最大データベースサイズ**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact データベースの最大サイズを MB 単位で指定します。  
   
  **モード**  
@@ -53,10 +52,10 @@ ms.locfileid: "66055469"
   
  [Mode] オプションには、次の表に示すように 4 つの値が用意されています。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**読み取り専用**|データベースに対する読み取り専用アクセスを指定します。|  
-|**[Read Write]**|データベースに対する読み取り/書き込み権限を指定します。|  
+|**読み取り/書き込み**|データベースに対する読み取り/書き込み権限を指定します。|  
 |**[Exclusive]**|データベースに対する排他アクセスを指定します。|  
 |**[Shared Read]**|他のユーザーがデータベースからの読み取りを同時に行うことができることを指定します。|  
   

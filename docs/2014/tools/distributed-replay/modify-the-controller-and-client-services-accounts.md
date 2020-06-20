@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5273340ce44cc360c332d926fd89b52988fa76b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62505992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054421"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Controller および Client のサービス アカウントの変更
   このトピックでは、分散再生コントローラーと分散再生クライアントのサービス アカウントを変更し、アクセス制御リスト (ACL) を再度適用する方法について説明します。  
@@ -24,7 +23,7 @@ ms.locfileid: "62505992"
   
 1.  分散再生サービスがインストールされているコンピューターで、コマンド プロンプトから、「`dcomcnfg`」と入力します。  
   
-2.  **[サービス]** をダブルクリックし、下へスクロールして、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生 \<サービス名>]** を右クリックします。次に、 **[開始]** または **[停止]** をクリックします。  
+2.  [**サービス**] をダブルクリックし、下へスクロールして [ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生 \<service name> **] を右クリックし、[**開始**] または [**停止**] をクリックします。  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>分散再生コントローラー サービスを変更するには  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62505992"
   
 3.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラーのプロパティ** ウィンドウの **[ログオン]** タブで、 **[このアカウント]** を選択して、新しいログオン アカウントを入力するか、 **[参照]** をクリックして新しいログオン アカウントを指定し、 **[OK]** をクリックします。  
   
-     **重要**: 分散再生コントローラーを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
+     **重要**:分散再生コントローラーを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
   
     -   ドメイン ユーザー アカウント  
   

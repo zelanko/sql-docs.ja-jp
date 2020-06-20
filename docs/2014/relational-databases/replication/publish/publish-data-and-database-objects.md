@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70e31ec60f8f47dfbc0a4761357c99a42623c6eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6d7fdce36d42591b0f2dda8ae6a08b6dbef4953
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74479317"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060489"
 ---
 # <a name="publish-data-and-database-objects"></a>データとデータベース オブジェクトのパブリッシュ
   パブリケーションの作成時には、パブリッシュするテーブルやその他のデータベース オブジェクトを選択します。 レプリケーションを使用すると、以下のデータベース オブジェクトをパブリッシュできます。  
@@ -130,7 +129,7 @@ ms.locfileid: "74479317"
 ## <a name="publishing-views"></a>ビューのパブリッシュ  
  すべての種類のレプリケーションで、ビューをレプリケートできます。 ビュー (インデックス付きビューの場合は付属するインデックスも含む) はサブスクライバーにコピーできますが、ベース テーブルもレプリケートする必要があります。  
   
- トランザクション レプリケーションでは、インデックス付きビューをビューではなくテーブルとしてレプリケートできます。この場合、ベース テーブルをレプリケートする必要はありません。 これを行うには、インデックス付きビューをテーブルとしてレプリケートするには、*sp_addarticle &#40;Transact-SQL&#41;\@ の* [type](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) パラメーターに "indexed view logbased" のいずれかのオプションを指定します。 **sp_addarticle** の使用方法の詳細については、「[アーティクルの定義](define-an-article.md)」を参照してください。  
+ トランザクション レプリケーションでは、インデックス付きビューをビューではなくテーブルとしてレプリケートできます。この場合、ベース テーブルをレプリケートする必要はありません。 これを行うには、インデックス付きビューをテーブルとしてレプリケートするには、[sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) の *\@type* パラメーターに "indexed view logbased" のいずれかのオプションを指定します。 **sp_addarticle** の使用方法の詳細については、「[アーティクルの定義](define-an-article.md)」を参照してください。  
   
 ## <a name="publishing-user-defined-functions"></a>ユーザー定義関数のパブリッシュ  
  CLR 関数および [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数の CREATE FUNCTION ステートメントが各サブスクライバーにコピーされます。 CLR 関数の場合は、関連するアセンブリもコピーされます。 関数の変更はサブスクライバーにレプリケートされますが、関連するアセンブリの変更はレプリケートされません。  
@@ -168,9 +167,9 @@ ms.locfileid: "74479317"
 -   1 つまたは複数の他のデータベース オブジェクトに依存するデータベース オブジェクトをパブリッシュする場合、参照されているオブジェクトをすべてパブリッシュする必要があります。 たとえば、テーブルに依存しているビューをパブリッシュする場合は、そのテーブルもパブリッシュする必要があります。  
   
     > [!NOTE]  
-    >  マージ パブリケーションにアーティクルを追加する際に、その新しいアーティクルに既存のアーティクルが依存している場合は、**sp_addmergearticle\@ および** sp_changemergearticle[ の ](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)[processing_order](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) パラメーターを使用して、両方のアーティクルの処理順序を指定する必要があります。 たとえば、テーブルをパブリッシュし、テーブルが参照している関数はパブリッシュしない場合を考えます。 この関数をパブリッシュしないと、サブスクライバー側でテーブルを作成できないとします。 この場合は、この関数をパブリケーションに追加するときに、**sp_addmergearticle** の **\@processing_order** パラメーターに値 **1** を指定し、**sp_changemergearticle** の **\@processing_order** パラメーターに値 **2** を指定します。パラメーター **\@article** にはテーブル名を指定します。 この処理順序により、サブスクライバー側で関数に依存するテーブルを作成する前に、関数の作成が求められるようになります。 各アーティクルに使用する値は、関数の値がテーブルの値より小さければ、別の値でもかまいません。  
+    >  マージ パブリケーションにアーティクルを追加する際に、その新しいアーティクルに既存のアーティクルが依存している場合は、[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) および [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) の **\@processing_order** パラメーターを使用して、両方のアーティクルの処理順序を指定する必要があります。 たとえば、テーブルをパブリッシュし、テーブルが参照している関数はパブリッシュしない場合を考えます。 この関数をパブリッシュしないと、サブスクライバー側でテーブルを作成できないとします。 この場合は、この関数をパブリケーションに追加するときに、**sp_addmergearticle** の **\@processing_order** パラメーターに値 **1** を指定し、**sp_changemergearticle** の **\@processing_order** パラメーターに値 **2** を指定します。パラメーター **\@article** にはテーブル名を指定します。 この処理順序により、サブスクライバー側で関数に依存するテーブルを作成する前に、関数の作成が求められるようになります。 各アーティクルに使用する値は、関数の値がテーブルの値より小さければ、別の値でもかまいません。  
   
--   パブリケーション名には、% * [ ] | : " ? を使用できません。 \/ \< >。  
+-   パブリケーション名には、% * [ ] | : " ? を使用できません。 \ / \< >.  
   
 ### <a name="limitations-on-publishing-objects"></a>オブジェクトのパブリッシュに関する制限事項  
   
@@ -184,7 +183,7 @@ ms.locfileid: "74479317"
   
 -   [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) で作成されたバインドされたデフォルトはレプリケートできません (バインドされたデフォルトは非推奨のため、ALTER TABLE または CREATE TABLE の DEFAULT オプションで作成されたデフォルトを使用してください)。  
   
--   ディストリビューション エージェントが配信を行う順序が原因で、インデックス付きビューに `NOEXPAND` ヒントを含む関数を、参照テーブルやインデックス付きビューと同じパブリケーション内でパブリッシュすることはできません。 この問題を回避するために、最初のパブリケーション内にテーブルとインデックス付きビューを配置し、インデックス付きビューに `NOEXPAND` ヒントを含む関数を、最初のパブリケーションが完了した後にパブリッシュする 2 番目のパブリケーションに追加します。 または、これらの関数のスクリプトを作成し、の`sp_addpublication` * \@post_snapshot_script*パラメーターを使用してスクリプトを配信します。  
+-   ディストリビューション エージェントが配信を行う順序が原因で、インデックス付きビューに `NOEXPAND` ヒントを含む関数を、参照テーブルやインデックス付きビューと同じパブリケーション内でパブリッシュすることはできません。 この問題を回避するために、最初のパブリケーション内にテーブルとインデックス付きビューを配置し、インデックス付きビューに `NOEXPAND` ヒントを含む関数を、最初のパブリケーションが完了した後にパブリッシュする 2 番目のパブリケーションに追加します。 または、これらの関数のスクリプトを作成し、の* \@ post_snapshot_script*パラメーターを使用してスクリプトを配信し `sp_addpublication` ます。  
   
 ### <a name="schemas-and-object-ownership"></a>スキーマおよびオブジェクトの所有権  
  既定では、パブリケーションの新規作成ウィザードは、スキーマとオブジェクトの所有権に関して、以下のように動作します。  
@@ -197,7 +196,7 @@ ms.locfileid: "74479317"
   
 -   キャラクター モードのスナップショット ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のバージョンのサブスクライバーや [!INCLUDE[ssEW](../../../includes/ssew-md.md)] サブスクライバーで使用されます) を使用するパブリケーションのアーティクルの場合。既定では、所有者は空白のままになります。 既定の所有者は、サブスクライバーに接続しているディストリビューション エージェントまたはマージ エージェントで使用されるアカウントに関連付けられている所有者になります。  
   
- オブジェクトの所有者は、**[アーティクルのプロパティ - \<***Article***>]** ダイアログ ボックスと、ストアド プロシージャ**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** および **sp_changemergearticle** で変更できます。 詳細については、「[View and Modify Publication Properties](view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
+ オブジェクトの所有者を変更するには、[**アーティクルのプロパティ \<***Article***> -** ] ダイアログボックスと、 **sp_addarticle**、 **sp_addmergearticle**、 **sp_changearticle**、および**sp_changemergearticle**の各ストアドプロシージャを使用します。 詳細については、「[View and Modify Publication Properties](view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>以前のバージョンの SQL Server を実行するサブスクライバーへのデータのパブリッシュ  
   

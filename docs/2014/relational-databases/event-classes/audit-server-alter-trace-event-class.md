@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 967586bf-d5f1-466c-82ab-8c461bfb6222
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10c3556edb5c58e281db2dcaf5c05e9a202a3091
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a75a4aca9ca78fbfd3bd5b4aaa43e49ff2a3bcca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012510"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053135"
 ---
 # <a name="audit-server-alter-trace-event-class"></a>Audit Server Alter Trace イベント クラス
   **Audit Server Alter Trace** イベント クラスは、ALTER TRACE 権限をチェックするすべてのステートメントで発生します。 ALTER TRACE をチェックするステートメントには、トレースの作成や構成、またはトレースへのフィルターの設定に使用するステートメントがあります。  

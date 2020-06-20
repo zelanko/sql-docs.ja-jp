@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7924570253bf2f805d91c4dfabc3d5facf44cccc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b8dbb9847f3591d0f26a2dc7ca6e31f1b22da83
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054468"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972452"
 ---
 # <a name="web-service-task-editor-output-page"></a>[Web サービス タスク エディター] ([出力] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[出力]** ページを使用すると、Web メソッドから返された結果を格納する場所を指定できます。  
@@ -30,22 +29,22 @@ ms.locfileid: "66054468"
  **OutputType**  
  結果を格納するときに使用するストレージ型を選択します。 このプロパティのオプションを次の表に示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**ファイル接続**|結果をファイルに格納します。 この値を選択すると、動的オプションの **[ファイル]** が表示されます。|  
-|**変数**|結果を変数に格納します。 この値を選択すると、動的オプションの **[変数]** が表示されます。|  
+|**Variable**|結果を変数に格納します。 この値を選択すると、動的オプションの **[変数]** が表示されます。|  
   
 ## <a name="outputtype-dynamic-options"></a>[OutputType] の動的オプション  
   
 ### <a name="outputtype--file-connection"></a>[OutputType] = [ファイル接続]  
  **[最近使ったファイル]**  
- ファイル接続マネージャーを一覧から選択するか、 \<[**新しい接続...**> をクリックして新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、をクリックして \<**New Connection...**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="outputtype--variable"></a>[OutputType] = [変数]  
- **変数**  
- 変数を一覧から選択するか、 \<[**新しい変数...**> をクリックして新しい変数を作成します。  
+ **Variable**  
+ 変数を一覧から選択するか、をクリックして \<**New Variable...**> 新しい変数を作成します。  
   
  **関連トピック:**[SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)[変数の追加](../../2014/integration-services/add-variable.md)    
   

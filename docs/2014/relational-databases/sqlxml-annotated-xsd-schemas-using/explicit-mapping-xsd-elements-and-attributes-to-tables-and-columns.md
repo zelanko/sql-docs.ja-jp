@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11144714addb50dc4c481512399228802390f2f3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 267f9044505126cbe7f865e6577da3cbe2f26bcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703612"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055148"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>テーブルおよび列への XSD 要素および属性の明示的なマッピング (SQLXML 4.0)
   XSD スキーマを使用してリレーショナル データベースの XML ビューを作成するときには、スキーマの要素と属性をデータベースのテーブルと列にマップする必要があります。 データベースのテーブルおよびビューの行は、XML ドキュメントの要素にマップされます。 データベースの列値は属性または要素にマップされます。  
@@ -54,13 +53,13 @@ ms.locfileid: "82703612"
 ## <a name="sql-field"></a>sql-field  
  `sql-field` 注釈では、要素または属性がデータベース列にマップされます。 スキーマ内の XML ノードをデータベース列にマップするには、`sql:field` 注釈を追加します。 空のコンテンツ要素に `sql:field` は指定できません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. sql:relation 注釈と sql:field 注釈を指定する  
- この例では、XSD スキーマは、 ** \< FName>** と** \< LName>** 子要素および**ContactID**属性を持つ複合型の** \< Contact>** 要素で構成されています。  
+ この例では、XSD スキーマは、 **\<Contact>** および子要素と ContactID 属性を持つ複合型の要素で構成されて **\<FName>** **\<LName>** います。 **ContactID**  
   
- この `sql:relation` 注釈によっ** \< て、contact>** 要素が AdventureWorks データベースの Person. contact テーブルにマップされます。 注釈は、 `sql:field` ** \< FName>** 要素を FirstName 列に、 ** \< LName>** 要素を LastName 列にマップします。  
+ この注釈によって、 `sql:relation` **\<Contact>** 要素が AdventureWorks データベースの Person テーブルにマップされます。 注釈によっ `sql:field` て、要素が FirstName 列にマップされ、 **\<FName>** **\<LName>** 要素が LastName 列にマップされます。  
   
  **ContactID**属性に注釈が指定されていません。 このため、既定のマッピングが使用され、属性が同じ名前の列にマップされます。  
   

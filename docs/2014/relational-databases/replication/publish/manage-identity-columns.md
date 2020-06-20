@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cbfad718850df4c66572999735fbee58fb530424
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b9a7b28c288ef80d24fb67479727d94c3c09fa5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882298"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060528"
 ---
 # <a name="manage-identity-columns"></a>ID 列の管理
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、ID 列を管理する方法について説明します。 サブスクライバー挿入がパブリッシャーにレプリケートされる場合、サブスクライバーとパブリッシャーに同じ ID 値が割り当てられないように、ID 列を管理する必要があります。 レプリケーションでは ID の範囲を自動的に管理することも、ID の範囲を手動で管理することもできます。  レプリケーションで使用できる ID 範囲管理オプションについては、「[ID 列のレプリケート](replicate-identity-columns.md)」を参照してください。  
@@ -36,13 +35,13 @@ ms.locfileid: "73882298"
 -   複数のテーブルで使用できる自動的に増分する番号、またはテーブルを参照せずにアプリケーションから呼び出すことができる自動的に増分する番号を作成するには、「[シーケンス番号](../../sequence-numbers/sequence-numbers.md)」を参照してください。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- パブリケーションの新規作成ウィザードの **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブで、ID 列の管理オプションを指定します。 このウィザードの使用の詳細については、「[パブリケーションの作成](create-a-publication.md)」を参照してください。 パブリケーションの新規作成ウィザードで選択した内容に応じて、次の操作を行います。  
+ パブリケーションの新規作成ウィザードの [**アーティクルのプロパティ- \<Article> ** ] ダイアログボックスの [**プロパティ**] タブで、id 列の管理オプションを指定します。 このウィザードの使用の詳細については、「[パブリケーションの作成](create-a-publication.md)」を参照してください。 パブリケーションの新規作成ウィザードで選択した内容に応じて、次の操作を行います。  
   
 -   **[パブリケーションの種類]** ページで **[マージ パブリケーション]** または **[更新可能なサブスクリプションを含むトランザクション パブリケーション]** を選択した場合は、ID 範囲の管理を自動または手動に設定します (自動 (既定値) に設定することを推奨します)。 このプロパティは、テーブルがパブリッシュされた後は変更できません。ただし、その他の関連プロパティは変更できます。  
   
 -   他のパブリケーションの種類を選択した場合は、ID 範囲の管理を手動に設定する必要があります。  
   
- **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブで、ID 範囲としきい値を変更します。このダイアログ ボックスは、**[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスから開くことができます。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](view-and-modify-publication-properties.md)」を参照してください。  
+ [**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスで使用できる [アーティクルの**プロパティ- \<Article> **] の [**プロパティ**] タブで、id 範囲としきい値を変更します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](view-and-modify-publication-properties.md)」を参照してください。  
   
 #### <a name="to-specify-an-identity-column-management-option"></a>ID 列の管理オプションを指定するには  
   
@@ -52,7 +51,7 @@ ms.locfileid: "73882298"
   
 3.  **[アーティクルのプロパティ]** をクリックしてから、 **[反転表示されたテーブル アーティクルのプロパティを設定]** をクリックします。  
   
-4.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ID 範囲の管理]** セクションで、**[ID 範囲を自動的に管理します]** プロパティを **[自動]** または **[手動]** (パブリッシャーが [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降を実行している場合)、あるいは **[True]** または **[False]** (パブリッシャーが [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] よりも前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している場合) に設定します。  
+4.  [**アーティクル \<Article> のプロパティ-** ] ダイアログボックスの [**プロパティ**] タブの [ **id 範囲の管理**] セクションで、[id 範囲を**自動的に管理**する] プロパティを [**自動**] または [**手動**] に設定します (以降を実行しているパブリッシャーの場合)。または、 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] **True**または**False** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンのを実行しているパブリッシャー) [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]  
   
 5.  手順 4. で **[自動]** または **[True]** を選択した場合は、次の表のオプションの値を入力します。 これらの設定の使用方法の詳細については、「[ID 列のレプリケート](replicate-identity-columns.md)」の「ID 範囲の割り当て」を参照してください。  
   
@@ -69,15 +68,15 @@ ms.locfileid: "73882298"
   
 #### <a name="to-modify-identity-ranges-and-thresholds-after-a-table-is-published"></a>テーブルがパブリッシュされた後に ID 範囲としきい値を変更するには  
   
-1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[アーティクル]** ページで、ID 列があるテーブルを選択します。  
+1.  [**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスの [**アーティクル**] ページで、id 列を含むテーブルを選択します。  
   
 2.  **[アーティクルのプロパティ]** をクリックしてから、 **[反転表示されたテーブル アーティクルのプロパティを設定]** をクリックします。  
   
-3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ID 範囲の管理]** セクションで、**[パブリッシャーの範囲サイズ]**、**[サブスクライバーの範囲サイズ]**、および **[範囲しきい値の割合]** プロパティの 1 つ以上の値を入力します。  
+3.  [**アーティクルの \<Article> プロパティ-** ] ダイアログボックスの [**プロパティ**] タブの [ **id 範囲の管理**] セクションで、[パブリッシャーの**範囲サイズ**]、[サブスクライバーの**範囲サイズ**]、および [**範囲のしきい値 (%)**] の1つ以上のプロパティの値を入力します。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、**[OK]** をクリックします。  
+5.  [**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスで [ **OK** ] をクリックします。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  レプリケーション ストアド プロシージャを使用して、アーティクルを作成するときの ID 範囲管理オプションを指定できます。  
@@ -104,7 +103,7 @@ ms.locfileid: "73882298"
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>マージ パブリケーションのアーティクルを定義する際に自動 ID 範囲管理を無効にするには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)を実行します。 ** \@Identityrangemanagementoption**に対して次のいずれかの値を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)を実行します。 ** \@ Identityrangemanagementoption**に対して次のいずれかの値を指定します。  
   
     -   **manual** - サブスクライバーを更新するには、手動で ID 範囲を割り当てる必要があります。  
   

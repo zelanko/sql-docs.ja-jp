@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32a3b5a0c32949239488b86dc1209183e95ac9ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055349"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962472"
 ---
 # <a name="ssis-package-format"></a>SSIS パッケージの形式
   最新のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]では、形式の読み取りとパッケージの比較を容易にするために、パッケージの形式 (.dtsx file) に大幅な変更が加えられました。 また、競合する変更やバイナリ形式での変更が含まれていないパッケージをより確実にマージすることもできます。  
   
- 現在の .dtsx パッケージファイル形式を表示するには、「 [ \[\].dtsx: データ変換サービスパッケージの XML ファイル形式の仕様](https://go.microsoft.com/fwlink/?LinkId=233251)」を参照してください。  
+ 現在の .DTSX パッケージファイル形式を表示するには、「 [ \[ .Dtsx \] : データ変換サービスパッケージの XML ファイル形式の仕様](https://go.microsoft.com/fwlink/?LinkId=233251)」を参照してください。  
   
  ファイル形式の変更の概要を次に示します。 これらの変更のコード例については、「 [SQL Server 2012 のパッケージ形式の変更](https://go.microsoft.com/fwlink/?LinkId=233255)」を参照してください。  
   

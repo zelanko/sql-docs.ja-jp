@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c781435bdf8458b7f2714141d659750b0f31055
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67793925"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998054"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   ピア ツー ピア レプリケーションは、データのコピーを複数のサーバー インスタンス ( *ノード*) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。 ピア ツー ピア レプリケーションはトランザクション レプリケーションを基礎としており、トランザクション的に一貫性のある変更がほぼリアルタイムで反映されます。 これにより、読み取り操作のスケールアウトを必要とするアプリケーションで、クライアントからの読み取りを複数のノードに分散することができます。 また、データがほぼリアルタイムで複数のノードに保持されるため、データの冗長性が実現され、データの可用性が向上します。  
@@ -137,24 +136,24 @@ ms.locfileid: "67793925"
   
 -   ディストリビューション エージェントのパラメーター **-SubscriptionStreams** とログ リーダー エージェントのパラメーター **-MaxCmdsInTran**  
   
--   アーティクルのプロパティ** \@destination_owner**および** \@destination_table**。  
+-   アーティクルのプロパティ** \@ destination_owner**および** \@ destination_table**。  
 
 -   ピア ツー ピア トランザクション レプリケーションでは、ピア ツー ピア パブリケーションの一方向トランザクション サブスクリプションを作成できません
   
  次のプロパティには特別な注意が必要です。  
   
--   パブリケーションプロパティ** \@allow_initialize_from_backup**には値が必要`true`です。  
+-   パブリケーションプロパティ** \@ allow_initialize_from_backup**には値が必要です `true` 。  
   
--   アーティクルのプロパティ** \@replicate_ddl**には、の`true`値が必要です。identityrangemanagementoption に`manual`は値が必要です。 ** \@** および** \@status**では、オプション**24**が設定されている必要があります。  
+-   アーティクルのプロパティ** \@ replicate_ddl**には、の値が必要です `true` 。** \@ identityrangemanagementoption**には値が必要です `manual` 。および** \@ status**では、オプション**24**が設定されている必要があります。  
   
--   アーティクルのプロパティ** \@ins_cmd**、 ** \@del_cmd**、および** \@upd_cmd**の値をに`SQL`設定することはできません。  
+-   アーティクルのプロパティ** \@ ins_cmd**、 ** \@ del_cmd**、および** \@ upd_cmd**の値をに設定することはできません `SQL` 。  
   
--   サブスクリプションプロパティ** \@sync_type**には、または`none` `automatic`の値が必要です。  
+-   サブスクリプションプロパティ** \@ sync_type**には、またはの値が必要です `none` `automatic` 。  
   
 ### <a name="maintenance-considerations"></a>メンテナンスの注意事項  
  次のアクションを実行する場合は、システムを停止する必要があります。 システムの停止を実行するには、すべてのノードのパブリッシュされたテーブルで処理を停止し、他のすべてのノードからのすべての変更を各ノードが受信しているかどうかを確認します。  
   
--   既存の[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]トポロジへのノードの追加  
+-   既存の [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] トポロジへのノードの追加  
   
 -   既存のパブリケーションへのアーティクルの追加  
   

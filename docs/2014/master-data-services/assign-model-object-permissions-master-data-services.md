@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a1477f934dfa8a23fa5498124b74c9a150b24a33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7924ef8effaa3c39802fd53216814b065ff81ef4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480072"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972212"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>モデル オブジェクト権限を割り当てる (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、 **の** [エクスプローラー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域内のデータにユーザーまたはグループがアクセスできるようにする必要があるとき、またはユーザーまたはグループを管理者にする必要があるときは、モデル オブジェクトに権限を割り当てます。  
@@ -51,7 +50,7 @@ ms.locfileid: "65480072"
   
 8.  メニューから、[**読み取り**専用]、[**更新**]、または [**拒否**] を選択します。  
   
-9. **[Save]** (保存) をクリックします。  
+9. **[保存]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
   

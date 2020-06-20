@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 672d9c363f64037f5f40f51fc7c6cb1c4c3bc674
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2fd5c1f75a0085767ade60f6010e446b70e60840
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054744"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972622"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>優先順位制約で式を使用する
   この手順では、 **[優先順位制約エディター]** ダイアログ ボックスを使用して、優先順位制約に式を追加する方法について説明します。 優先順位制約に式を追加する場合、タスクまたはコンテナーのいずれかである実行可能ファイルを 2 つ以上含め、それらが優先順位制約によって連結される必要があります。  

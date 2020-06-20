@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 192c38bc189928cf980ab0141e53ab12f37d805c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5d74b9c4def9c0314569a8d0bd87939cdcb11b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175871"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038712"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
   クエリのストアの機能により、クエリ プランの選択やパフォーマンスに関する洞察が DBA に提供されます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 この機能により、クエリ、プラン、ランタイム統計情報の履歴が自動的にキャプチャされ、レビュー用に保持されます。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。 クエリのストアは [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) オプションを使用して構成できます。
@@ -506,7 +505,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
  `sp_query_store_force_plan` を使用する場合は、クエリのストアによってそのクエリのプランとして記録されたプランのみを強制できます。 つまり、クエリで使用できるプランは、クエリのストアがアクティブであったときに Q1 を実行するために既に使用されているプランのみです。
 
- **クエリに対するプランの強制を削除します。** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クエリオプティマイザーを使用して最適なクエリプランを計算するには`sp_query_store_unforce_plan` 、を使用して、クエリに対して選択されたプランを強制的に適用しないようにします。
+ **クエリに対するプランの強制を削除します。** クエリオプティマイザーを使用して最適なクエリプランを計算するには、を使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クエリに対して選択されたプランを `sp_query_store_unforce_plan` 強制的に適用しないようにします。
 
 ```
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;

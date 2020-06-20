@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c3698a4c5f1279dae31d9c49ecba5c1ef9cc2330
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d7430b8e32353e40ede0baf42b6c5306461988f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718047"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015321"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>XPath クエリの実行 (SQLXML マネージド クラス)
   この例では、マッピング スキーマに対する XPath クエリの実行方法を示します。  
