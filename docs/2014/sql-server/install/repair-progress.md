@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd22d285-0816-43de-ae1d-b7c49147614e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 819725e342f6718ec8e84428331bf2ee0e7d5786
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1514c65eaf0e650cc3c69eb735f110ccba81cabd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092801"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011940"
 ---
 # <a name="repair-progress"></a>[修復の進行状況]
   **の修復状況を監視するには、** インストール ウィザードの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [修復の進行状況] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用します。  

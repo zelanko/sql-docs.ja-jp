@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 398e3f3d8496d26c2672ad6d11557c0058a594ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055108"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962092"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>[データベース転送タスク エディター] ([データベース] ページ)
   **[データベース転送タスク エディター]** ダイアログ ボックスの **[データベース]** ページを使用すると、データベース転送タスクに使用される転送元および転送先のデータベースのプロパティを指定できます。 データベース転送タスクは、2 つの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの間で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベースをコピーまたは移動します。 このタスクを使用して、同じサーバー内でデータベースをコピーすることもできます。 このタスクの詳細については、「 [データベース転送タスク](control-flow/transfer-database-task.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
  **[Sourceconnection]**  
- SMO 接続マネージャーを一覧から選択するか、[ ** \<新しい接続... >** をクリックして、移行元サーバーへの新しい接続を作成します。  
+ SMO 接続マネージャーを一覧から選択するか、をクリックし **\<New connection...>** て、移行元サーバーへの新しい接続を作成します。  
   
  **DestinationConnection**  
- SMO 接続マネージャーを一覧から選択するか、[ ** \<新しい接続... >** をクリックして、移行先サーバーへの新しい接続を作成します。  
+ SMO 接続マネージャーを一覧から選択するか、をクリックし **\<New connection...>** て、移行先サーバーへの新しい接続を作成します。  
   
  **[DestinationDatabaseName]**  
  転送先サーバーの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの名前を指定します。  
@@ -53,15 +52,15 @@ ms.locfileid: "66055108"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|**本来**|転送先サーバーのデータベースを上書きします。|  
+|**True**|転送先サーバーのデータベースを上書きします。|  
 |**False**|転送先サーバーのデータベースを上書きしません。|  
   
 > [!CAUTION]  
 >  **[DestinationOverwrite]** に **[True]** を指定した場合、転送先サーバーのデータベースのデータが上書きされます。これにより、データが失われる可能性があります。 データが失われないようにするには、データベース転送タスクを実行する前に、転送先サーバーのデータベースを別の場所にバックアップしておきます。  
   
- **操作**  
+ **動作**  
  タスクによってデータベースを転送先サーバーにコピー ( **[Copy]** ) するのか移動 ( **[Move]** ) するのかを指定します。  
   
  **方法**  
@@ -82,9 +81,9 @@ ms.locfileid: "66055108"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|**本来**|ソース データベースを再アタッチします。|  
+|**True**|ソース データベースを再アタッチします。|  
 |**False**|ソース データベースを再アタッチしません。|  
   
 ## <a name="see-also"></a>参照  

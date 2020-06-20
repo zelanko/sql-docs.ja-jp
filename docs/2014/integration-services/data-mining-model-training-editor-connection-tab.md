@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 64b31656796c1875d11c6ab1aa9524f4b149d7ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9109b4dc77dd55e3f0e0500324f0853c915c272
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059876"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939163"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>[データ マイニング モデル トレーニング エディター] ([接続] タブ)
   **[データ マイニング モデル トレーニング エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、トレーニング用のマイニング モデルを選択できます。  
@@ -30,13 +29,13 @@ ms.locfileid: "66059876"
  **接続マネージャー**  
  既存の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接続の一覧から選択するか、次に示す手順で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [新規作成] **ボタンを使用して新しい** 接続を作成します。  
   
- **新しい**  
+ **[新規作成]**  
  **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して、新しい接続を作成します。  
   
  **マイニング構造**  
  使用できるマイニング構造の一覧から選択するか、 **[新規作成]** をクリックして新しいマイニング構造を作成します。  
   
- **新しい**  
+ **[新規作成]**  
  **データ マイニング ウィザード**を使用して、新しいマイニング構造とマイニング モデルを作成します。  
   
  **[マイニング モデル]**  

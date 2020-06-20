@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 130228aee1ba21829651afb5dfd5665692a42315
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 13c588f975a219284ed4ec26b6ed2cfa73dd70a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702403"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059393"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>アプリケーション コードでの FOR XML の結果の使用
   SQL クエリで FOR XML 句を使用することにより、クエリの結果を XML データで取得したり、XML データにキャストすることができます。 この機能により、FOR XML のクエリの結果を XML アプリケーション コードで使用するときに、次のことが可能になります。  

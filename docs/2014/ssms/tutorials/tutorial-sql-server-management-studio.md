@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 005e71195fc294ef7c2590886208d7184ec00474
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753464"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066351"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>チュートリアル:SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のチュートリアルでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インフラストラクチャを管理するための統合環境について説明します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを構成、監視、および管理するためのグラフィカル インターフェイスを提供します。 さらに、データベースやデータ ウェアハウスなどの、アプリケーションで使用されるデータ層コンポーネントを配置、監視、およびアップグレードすることもできます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、スクリプトを編集およびデバッグするための [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、XML の各言語エディターも提供します。  
@@ -48,7 +47,7 @@ ms.locfileid: "62753464"
  [レッスン 3:テンプレート、ソリューション、およびスクリプト プロジェクトの操作](lesson-3-working-with-templates-solutions-and-script-projects.md)  
  このレッスンでは、テンプレートを使用して、スクリプトをソリューションやプロジェクトにまとめる方法を学習します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  このチュートリアルは、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]には慣れていないが、データベースの概念と [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語を理解している、熟練のデータベース管理者およびデータベース開発者を対象としています。  
   
  このチュートリアルを使用するには、システムに以下のコンポーネントがインストールされている必要があります。  

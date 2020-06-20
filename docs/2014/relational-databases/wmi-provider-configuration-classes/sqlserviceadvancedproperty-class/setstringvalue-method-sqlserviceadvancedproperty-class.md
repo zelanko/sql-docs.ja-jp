@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b0209f3d8e77cfe893a0e462fc9ccf3761da8dfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15570e88d688fb80be7a8889d77fc403ee5c2462
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911394"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059633"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>SetStringValue メソッド (SqlServiceAdvancedProperty クラス)
   プロパティの文字列値を設定します。  
@@ -39,7 +38,7 @@ StrValue
   
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  詳細プロパティを表す [SqlServiceAdvancedProperty クラス](sqlserviceadvancedproperty-class.md) オブジェクト。  
   
@@ -53,7 +52,7 @@ StrValue
  `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
 ## <a name="remarks"></a>Remarks  
- プロパティ値の型は、 `string`プロパティを文字列値に設定できるようにする必要があります。  
+ プロパティ値の型は、 `string` プロパティを文字列値に設定できるようにする必要があります。  
   
 ## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

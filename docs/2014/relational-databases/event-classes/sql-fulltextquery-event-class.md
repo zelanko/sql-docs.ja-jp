@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5452b53bf6171b7e516f246972aa0d9d56e321a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 699f06460d2cf78aa502fde925d9475035c979ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050752"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051659"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery イベント クラス
   SQL:FullTextQuery イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりフルテキスト クエリが実行されると発生します。 このイベント クラスは、フルテキスト カタログに関連する問題を監視するトレースに含めます。  
@@ -36,7 +35,7 @@ ms.locfileid: "63050752"
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |Duration|`bigint`|フルテキスト クエリが完了するまでの時間。|13|いいえ|  
 |EndTime|`datetime`|イベントが終了した時刻。|15|はい|  
-|Error|`int`|エラー メッセージ番号。|31|はい|  
+|エラー|`int`|エラー メッセージ番号。|31|はい|  
 |EventClass|`int`|記録されるイベントの種類 = 123。|27|いいえ|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16ab59a9fcdab29c927cb624dabcdfa71eaae1e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011077"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003950"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>検索プロパティ リストを使用したドキュメント プロパティの検索
   以前のバージョンでは、ドキュメント プロパティの内容はドキュメントの本文の内容と区別できませんでした。 この制限により、フルテキスト クエリは、ドキュメント全体に対する汎用検索に制限されていました。 しかし、現在のバージョンでは、`varbinary`、`varbinary(max)` (`FILESTREAM` を含む)、または `image` バイナリ データ列がサポートされているドキュメントの種類については、フルテキスト インデックスを構成することで、Author や Title などの特定のプロパティに対するプロパティ スコープの検索をサポートすることができます。 この形式の検索を、 *プロパティ検索*と呼びます。  
@@ -86,7 +85,7 @@ ms.locfileid: "66011077"
   
 6.  必要に応じて、他のユーザーをプロパティ リストの所有者として指定します。  
   
-7.  以下のオプションの 1 つを選択します。  
+7.  次のいずれかのオプションを選択します。  
   
     -   **[空の検索プロパティ リストを作成する]**  
   
@@ -211,7 +210,7 @@ GO
   
     1.  ドキュメント プロパティを削除するには、プロパティの左側にある行ヘッダーをクリックして、Del キーを押します。  
   
-    2.  ドキュメントプロパティを追加するには、一覧の一番下にある空の行をの右側**\*** にクリックし、新しいプロパティの値を入力します。  
+    2.  ドキュメントプロパティを追加するには、一覧の一番下にある空の行をの右側にクリックし、 **\*** 新しいプロパティの値を入力します。  
   
          これらの値の詳細については、「 [検索プロパティ リスト エディター](../../database-engine/search-property-list-editor.md)」を参照してください。 Microsoft によって定義されているプロパティのこれらの値を取得する方法については、「 [検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](find-property-set-guids-and-property-integer-ids-for-search-properties.md)」を参照してください。 独立系ソフトウェア ベンダー (ISV) によって定義されたプロパティの詳細については、そのベンダーのマニュアルを参照してください。  
   

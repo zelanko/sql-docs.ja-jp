@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: d9663f25-98d7-4508-ae3c-55a7277211bd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 75c3bda5d15e3930fcdeba9ca73d70128fd90336
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e2f39ea7b911f2ca83767dcfbfd82947acd4f52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952057"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059004"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Reporting Services のアップグレードに関するその他の問題 (アップグレード アドバイザー)
-  次のトピックでは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 、へ[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のアップグレードに影響する可能性がある問題について説明します。 これらのトピックでは、これらの変更が環境に与える影響を軽減するために実行できる操作について説明します。  
+  次のトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] へのアップグレードに影響する可能性がある問題について説明し [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ます。 これらのトピックでは、これらの変更が環境に与える影響を軽減するために実行できる操作について説明します。  
   
  アップグレード アドバイザーによって、現在インストールされているレポート サーバーが分析されます。 コンピューターにインストールされている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントがレポート デザイナーのみであるなど、クライアント コンポーネントのみがインストールされている場合は、問題は報告されません。  
   
  インストールの構成によっては、アップグレード アドバイザーでは報告されない問題が発生することがあります。 これらの問題によって [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をアップグレードできなくなることはありませんが、アップグレード完了後にレポートとアプリケーションの実行に影響する可能性があります。 これらの問題の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「Reporting Services の旧バージョンとの互換性」を参照してください。  
   
- セットアップを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をアップグレードできない場合は、新しい [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスをインストールし、既存の Reporting Services を新しいインスタンスに移行できます。 詳細については、オンライン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ブックの「Reporting Services のアップグレードと移行」、「[アップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください Reporting Services。  
+ セットアップを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をアップグレードできない場合は、新しい [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスをインストールし、既存の Reporting Services を新しいインスタンスに移行できます。 詳細については、オンラインブックの「Reporting Services のアップグレードと移行」 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「[アップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください Reporting Services。  
   
  次に示すトピックでは、アップグレード アドバイザーによって報告される既知の問題、および既存インストールを修正してアップグレードを可能にする方法について説明します。  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0f415ffbc10b93cee2037da78daef3b7ee5aba9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157105"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069028"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したサーバーの管理
   ポリシー ベースの管理とは、1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを管理するためのシステムのことです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ポリシー管理者は、ポリシー ベースの管理を使用する際、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してサーバー上のエンティティ ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス、データベース、その他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトなど) を管理するためのポリシーを作成します。  

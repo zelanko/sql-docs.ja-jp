@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 637d06160afba1fc1f93bea0da3aae0a09f954ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9da9bc9dbef30b1ad2743e9dbab4ae541538c689
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050938"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051997"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings イベント クラス
   Sort Warnings イベント クラスは、並べ替え操作をメモリ内で処理できないことを示します。 インデックスの作成に関連する並べ替え操作は対象になりません。SELECT ステートメントで使用される ORDER BY 句などのクエリ内の並べ替え操作のみが対象になります。  

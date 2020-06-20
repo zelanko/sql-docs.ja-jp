@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82ed0e5dd67738b705b4991b90669198495d497a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63286532"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060256"
 ---
 # <a name="sql-trace"></a>SQL トレース (SQL Trace)
   SQL トレースでは、トレース定義に一覧表示されているイベント クラスのインスタンスであるイベントが収集されます。 このようなイベントは、フィルターによってトレースから除外したり、対象のキューに登録したりすることができます。 イベントの対象には、ファイルまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を指定できます。SMO では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を管理するアプリケーションでトレース情報を使用できます。  
@@ -35,7 +34,7 @@ ms.locfileid: "63286532"
  次の用語は SQL トレースの主要な概念を示したものです。  
   
  **Event**  
- の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]インスタンス内でのアクションの発生。  
+ のインスタンス内でのアクションの発生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 。  
   
  **データ列**  
  イベントの属性。  
@@ -82,7 +81,7 @@ ms.locfileid: "63286532"
 |**データベース ID** <sup>1</sup>|3|USE *database_name* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database_name*ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|  
 |**DatabaseName**|35|ユーザーのステートメントが実行されているデータベースの名前。|  
 |**Dbusername** <sup>1</sup>|40|クライアントの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ユーザー名。|  
-|**Duration**|13|イベントの期間 (ミリ秒)。<br /><br /> サーバーはマイクロ秒 (100 万分の 1 (10<sup>-6</sup>) 秒) 単位でのイベント期間、およびイベントにより使用されるミリ秒 (10<sup>-3</sup>秒) 単位での CPU 時間をレポートします。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] のグラフィカル ユーザー インターフェイスに、既定ではミリ秒単位で **Duration** 列が表示されますが、トレースがファイルまたはデータベース テーブルに保存されると、 **Duration** 列の値はマイクロ秒単位で記述されます。|  
+|**期間**|13|イベントの期間 (ミリ秒)。<br /><br /> サーバーはマイクロ秒 (100 万分の 1 (10<sup>-6</sup>) 秒) 単位でのイベント期間、およびイベントにより使用されるミリ秒 (10<sup>-3</sup>秒) 単位での CPU 時間をレポートします。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] のグラフィカル ユーザー インターフェイスに、既定ではミリ秒単位で **Duration** 列が表示されますが、トレースがファイルまたはデータベース テーブルに保存されると、 **Duration** 列の値はマイクロ秒単位で記述されます。|  
 |**EndTime**|15|イベントが終了した時刻。 **SQL:BatchStarting** や **SP:Starting**などのイベントの開始を示すイベント クラスには、このデータ列は作成されません。|  
 |**Error**|31|特定のイベントのエラー番号。 これは多くの場合、 **sysmessages**に格納されたエラー番号です。|  
 |**EventClass** <sup>1</sup>|27|キャプチャされるイベント クラスの種類。|  
@@ -90,7 +89,7 @@ ms.locfileid: "63286532"
 |**Eventsubclass クラス** <sup>1</sup>|21|イベント サブクラスの種類。各イベント クラスに関するより詳細な情報を提供します。 たとえば、 **Execution Warning** イベント クラスのイベント サブクラス値は、以下のような実行の警告の種類を表します。<br /><br /> **1** = クエリの待機。 クエリを実行するには、メモリなど、そのためのリソースが確保されるまで待機しなければなりません。<br /><br /> **2** = クエリのタイムアウト。クエリは、必要なリソースの実行を待機している間にタイムアウトしました。 すべてのイベント クラスに対して、このデータ列が作成されるわけではありません。|  
 |**GUID**|54|トレースで指定されているイベント クラスに依存する GUID 値。|  
 |**FileName**|36|変更されるファイルの論理名。|  
-|**Handle**|33|サーバーとの間で実行を調整するときに ODBC、OLE DB、または DB-Library によって使用される整数。|  
+|**扱え**|33|サーバーとの間で実行を調整するときに ODBC、OLE DB、または DB-Library によって使用される整数。|  
 |**ホスト名** <sup>1</sup>|8|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|  
 |**IndexID**|24|イベントの影響を受けるオブジェクトに付けられたインデックス用の ID。 オブジェクトのインデックス ID を調べるには、 **sysindexes** システム テーブルの **indid** 列を使用します。|  
 |**IntegerData**|25|トレースにキャプチャされるイベント クラスに依存する整数値。|  
@@ -109,7 +108,7 @@ ms.locfileid: "63286532"
 |**ObjectID2**|56|関連するオブジェクトまたはエンティティの ID (使用可能な場合)。|  
 |**ObjectName**|34|参照されているオブジェクトの名前。|  
 |**ObjectType** <sup>2</sup>|28|イベントに関係するオブジェクトの種類を表す値。 この値は、 **sysobjects**の**type**列に対応しています。|  
-|**Offset**|61|ストアド プロシージャまたはバッチ内のステートメントの開始オフセット。|  
+|**影**|61|ストアド プロシージャまたはバッチ内のステートメントの開始オフセット。|  
 |**OwnerID**|58|ロック イベントの場合にのみ該当します。 ロックを所有するオブジェクトの種類。|  
 |**OwnerName**|37|オブジェクト所有者のデータベース ユーザー名。|  
 |**ParentName**|59|オブジェクトが存在するスキーマ名。|  
@@ -127,7 +126,7 @@ ms.locfileid: "63286532"
 |**SqlHandle**|63|64 ビット ハッシュ。アドホック クエリやデータベースのテキスト、および SQL オブジェクトのオブジェクト ID に基づいています。 この値は、 **dm_exec_sql_text ()** に渡すことによって、関連付けられている sql テキストを取得できます。|  
 |**StartTime** <sup>1</sup>|14|イベントの開始時刻 (取得できた場合)。|  
 |**状態**|30|エラー状態コード。|  
-|**成功**|23|イベントが正常に終了したかどうかを表します。 次の値が含まれます。<br /><br /> **1** = 成功。<br /><br /> **0** = 失敗<br /><br /> たとえば、 **1** は、権限チェックの成功を表し、 **0** は失敗を表します。|  
+|**Success**|23|イベントが正常に終了したかどうかを表します。 次の値が含まれます。<br /><br /> **1** = 成功。<br /><br /> **0** = 失敗<br /><br /> たとえば、 **1** は、権限チェックの成功を表し、 **0** は失敗を表します。|  
 |**TargetLoginName**|42|ログインを対象とする操作 (新規ログインの追加など) の場合の対象ログインの名前。|  
 |**TargetLoginSid**|43|ログインを対象とする操作 (新規ログインの追加など) の場合の対象ログインの SID。|  
 |**TargetUserName**|39|データベース ユーザーを対象とした操作 (ユーザーへの権限の許可など) を行う場合の対象となるユーザーの名前。|  
@@ -161,7 +160,7 @@ ms.locfileid: "63286532"
 |Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]でトレースのスケジュールを設定するための 2 つの方法について説明します。|[トレースのスケジュール設定](../sql-trace/schedule-traces.md)|  
   
 ## <a name="see-also"></a>参照  
- [SQL Server プロファイラーテンプレートとアクセス許可](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server プロファイラーのテンプレートと権限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 管理オブジェクト &#40;SMO&#41; プログラミング ガイド](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

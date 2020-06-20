@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e05d920b21a2e99f5daed06f00183ce8bed85754
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667420"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060822"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>レプリケーション モニターのパブリッシャーの追加および削除
   パブリッシャーになっているサーバーからレプリケーション モニターを起動すると、そのサーバーは自動的にモニターに追加されます。 その他のパブリッシャーを追加するには、 **[パブリッシャーの追加]** ダイアログ ボックスを使用します。 追加したパブリッシャーは、モニターの左ペインのグループの中に表示されます。 既定で **[マイ パブリッシャー]** グループが含まれていますが、新しいグループを作成して、1 つ以上のレプリケーション トポロジを管理できます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
@@ -92,7 +91,7 @@ ms.locfileid: "62667420"
   
 1.  左ペインでパブリッシャーを右クリックします。  
   
-2.  **[除去]** をクリックします。  
+2.  **[削除]** をクリックします。  
   
 ### <a name="to-add-a-publisher-group-to-replication-monitor"></a>レプリケーション モニターにパブリッシャー グループを追加するには  
   

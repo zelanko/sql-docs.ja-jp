@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87df27b5f087800928eb841b2903bdb6c4f4d9ce
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9c0edf8cd7a77e88836e0e3fb96d8fda22ee15bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702861"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065669"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>SQLXML のサンプル実行のための必要条件
   [SQLXML 4.0 のプログラミング](sqlxml-4-0-programming-concepts.md)セクションでは、多くの例を示します。 ここでは、これらの例の実際のサンプルを作成するための必要条件についてまとめます。  

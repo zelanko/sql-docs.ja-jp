@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9082377f1599b719f490222d3ddacba4a6622699
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015703"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067253"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>クエリへの列の追加 (Visual Database Tools)
   クエリで列を使用するには、クエリに列を追加する必要があります。 列の追加は、クエリ出力に列を追加する場合、列を並べ替える場合、列の内容を検索する場合、または列の内容を集計する場合に行います。 クエリで使用する列のうち、クエリを実行したときに結果ペインに含める列を指定できます。 詳細については、「 [クエリ結果からの列の削除 (Visual Database Tools)](visual-database-tools.md)」を参照してください。  
@@ -40,7 +39,7 @@ ms.locfileid: "63015703"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>1 つのテーブルまたはテーブル値オブジェクトの列をすべて追加するには  
   
--   **ダイアグラムペイン**で、[ ** \*(すべての列)**] の横にあるチェックボックスをオンにします。  
+-   **ダイアグラムペイン**で、[ ** \* (すべての列)**] の横にあるチェックボックスをオンにします。  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>すべてのテーブルおよびテーブル構造オブジェクトの列をすべて追加するには  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fa2fce50d7f62f134ef96175ed359c86ea84080
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632736"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058849"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>アップグレード アドバイザーを使用したアップグレードの準備
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アップグレード アドバイザーは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレードの準備に役立ちます。 アップグレード アドバイザーでは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でインストールされたコンポーネントが分析され、アップグレードの前または後に修正する必要がある問題を示すレポートが生成されます。  
@@ -66,15 +65,15 @@ ms.locfileid: "73632736"
   
 -   Windows インストーラー 4.5 以降のバージョン。 [Windows インストーラー Web サイト](https://www.microsoft.com/download/details.aspx?id=8483)から Windows インストーラーをインストールできます。  
   
--   Microsoft .NET Framework 4。 .NET Framework 4 は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]製品メディアおよび[.NET Framework 4 ダウンロードページ](https://go.microsoft.com/fwlink/?LinkId=209895)から入手できます。  
+-   Microsoft .NET Framework 4。 .NET Framework 4 は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 製品メディアおよび[.NET Framework 4 ダウンロードページ](https://go.microsoft.com/fwlink/?LinkId=209895)から入手できます。  
   
-    -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] メディアから .NET Framework 4 をインストールするには、ディスク ドライブのルートに移動します。 次に、[]、[redist] フォルダーの順にダブルクリックし、[DotNetFrameworks] フォルダーをダブルクリックして dotNetFx40_Full_x86_x64 (32 ビットオペレーティングシステムの場合は、64ビットオペレーティングシステムの場合) を実行します。  
+    -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] メディアから .NET Framework 4 をインストールするには、ディスク ドライブのルートに移動します。 次に、[]、[redist] フォルダーの順にダブルクリックし、[DotNetFrameworks] フォルダーをダブルクリックして dotNetFx40_Full_x86_x64.exe (32 ビットオペレーティングシステムの場合は、64ビットオペレーティングシステムの場合) を実行します。  
   
- アップグレード アドバイザーを Web からインストールするには、ダウンロード ページのダウンロード ボタンをクリックします。 その後すぐにインストールを実行するか、または SQLUA.msi ファイルを保存して後から実行できます。 製品ディスクからをインストールする場合は、製品ディスクから直接 SQLUA .msi を実行します。  
+ アップグレード アドバイザーを Web からインストールするには、ダウンロード ページのダウンロード ボタンをクリックします。 その後すぐにインストールを実行するか、または SQLUA.msi ファイルを保存して後から実行できます。 製品ディスクからをインストールする場合は、製品ディスクから直接 SQLUA.msi を実行します。  
   
  アップグレードアドバイザーをインストールすると、[**スタート**] メニューから開くことができます。  
   
--   [**スタート**] をクリックし、[**すべて**の[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]プログラム]、[] の順にポイントして、[ ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレードアドバイザー**] をクリックします。  
+-   [**スタート**] をクリックし、[**すべてのプログラム**]、[] の順にポイントして、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] アップグレードアドバイザー**] をクリックします。  
   
  詳細については、アップグレード アドバイザーのダウンロードおよび [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のリリース ノートに収録されているアップグレード アドバイザーのドキュメントを参照してください。  
   

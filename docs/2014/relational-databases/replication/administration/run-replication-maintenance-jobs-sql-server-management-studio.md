@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74c00479e5587c8662d81e554cae5add2e295183
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127061"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068758"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>レプリケーション メンテナンス ジョブの実行 (SQL Server Management Studio)
   レプリケーションでは以下のメンテナンス ジョブを使用します。  
@@ -25,11 +24,11 @@ ms.locfileid: "63127061"
 -   **データ検証で問題が見つかったサブスクリプションの再初期化**
 -   **エージェント履歴のクリーンアップ: ディストリビューション**
 -   **ディストリビューションのレプリケーション モニターの状態更新機能**
--   **レプリケーションエージェントの検査**
+-   **レプリケーション エージェントの検査**
 -   **ディストリビューションのクリーンアップ: ディストリビューション**
 -   **有効期限が切れたサブスクリプションのクリーンアップ**  
   
- 上記のジョブの開始および停止は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[ジョブ]** フォルダー、およびレプリケーション モニターの **[エージェント]** タブから行います。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。 各ジョブのプロパティの表示および変更は、同じフォルダーおよびタブからアクセスできる **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスで行います。  
+ 上記のジョブの開始および停止は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[ジョブ]** フォルダー、およびレプリケーション モニターの **[エージェント]** タブから行います。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。 各ジョブのプロパティを表示および変更するには、[**ジョブのプロパティ- \<Job> ** ] ダイアログボックスを使用します。このダイアログボックスは、同じフォルダーおよびタブから使用できます。  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-management-studio"></a>Management Studio でレプリケーション メンテナンス ジョブを開始または停止するには  
   
@@ -55,7 +54,7 @@ ms.locfileid: "63127061"
   
 3.  ジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスで、必要に応じてプロパティを変更し、**[OK]** をクリックします。  
+4.  [**ジョブのプロパティ- \<Job> ** ] ダイアログボックスで、必要に応じてプロパティを変更し、[ **OK**] をクリックします。  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-replication-monitor"></a>レプリケーション モニターでレプリケーション メンテナンス ジョブのプロパティを表示および変更するには  
   
@@ -65,7 +64,7 @@ ms.locfileid: "63127061"
   
 3.  グリッド内のジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスで、必要に応じてプロパティを変更し、**[OK]** をクリックします。  
+4.  [**ジョブのプロパティ- \<Job> ** ] ダイアログボックスで、必要に応じてプロパティを変更し、[ **OK**] をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションエージェント &#40;SQL Server Management Studio を開始および停止する&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   

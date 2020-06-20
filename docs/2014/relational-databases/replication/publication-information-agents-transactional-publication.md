@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a4542370eff5ad631701f0bf988929ad56e8799
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f753d4735994fc6ac5bd356edef59df1e133bb9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065720"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>パブリケーション情報、[エージェント] (トランザクション パブリケーション)
   **[エージェント]** タブには、選択したパブリケーションにおけるエージェントの要約情報が表示されます。 すべてのトランザクション パブリケーションのスナップショット エージェントとログ リーダー エージェントの情報が表示されます。 キュー更新サブスクリプション用に有効になっているトランザクション パブリケーションについては、キュー リーダー エージェントに関する情報が表示されます。  
@@ -38,7 +37,7 @@ ms.locfileid: "63021808"
  **状態**  
  パブリケーションに関連付けられている、各レプリケーション エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   Error  
+-   エラー  
   
 -   [失敗したコマンドの再試行]  
   
@@ -54,7 +53,7 @@ ms.locfileid: "63021808"
  **前回の開始時刻**  
  エージェントが最後に起動された時刻です。  
   
- **Duration**  
+ **期間**  
  エージェントが実行された時間の長さです。 この時間は、エージェントが現在実行中の場合は経過時間、エージェントが以前に実行されている場合は合計時間を表します。  
   
  **[最後のアクション]**  

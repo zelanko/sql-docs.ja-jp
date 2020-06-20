@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69de90bb43e35b559def569bfe1f60433d7c14de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4cdb785a5a053e0b839386c5fbb57e9393f5b9dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706599"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050920"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>拡張イベントへの PowerShell プロバイダーの使用
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントを管理できます。 XEvent サブフォルダーは、SQLSERVER ドライブで利用可能です。 このフォルダーには、次のいずれかの方法でアクセスできます。  
@@ -39,7 +38,7 @@ ms.locfileid: "82706599"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーは、拡張イベント セッションの作成、変更、および管理に使用できる強力なツールです。 次のセクションでは、拡張イベントに PowerShell スクリプトを使用する基本的な例をいくつか紹介します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  以下の例では、次の点に注意してください。  
   
 -   スクリプトは、PS SQLSERVER: \\> prompt (コマンドプロンプトで「」と入力すると使用できます) から実行する必要があり `sqlps` ます。  
@@ -106,7 +105,7 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  拡張イベント セッションを作成、変更、または削除するには、ALTER ANY EVENT SESSION 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

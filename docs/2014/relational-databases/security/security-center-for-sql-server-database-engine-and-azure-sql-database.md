@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: fc99b725f4c5895306d544df14bf2a9390189066
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3eeea022cff74d2ca8ddb636d9f83e4d369529bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244533"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004112"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター
   このページでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]および [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]でのセキュリティと保護に関して必要になる情報の検索に役立つリンクを示します。  
@@ -36,7 +35,7 @@ ms.locfileid: "75244533"
   
 ## <a name="links-to-specific-related-topics"></a>関連する特定のトピックへのリンク  
  ![小さいファイルフォルダーアイコン](../../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**認証: ユーザーはだれですか**。  
- **だれが認証するか(Windows また[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は)**  
+ **だれが認証するか(Windows または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )**  
   
 -   [認証モードの選択](choose-an-authentication-mode.md)  
   
@@ -108,7 +107,7 @@ ms.locfileid: "75244533"
   
 -   [行レベルのセキュリティ](https://msdn.microsoft.com/library/azure/dn765131.aspx)  
   
--   [動的なデータ マスキング](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+-   [動的データ マスク](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
   
 -   [署名済みオブジェクト](/sql/t-sql/statements/add-signature-transact-sql)  
   
