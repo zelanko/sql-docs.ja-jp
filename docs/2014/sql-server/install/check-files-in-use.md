@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e3610ad08d34942dd7dbc1af1371a6c5d86e7890
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 17c77a69804cd290ab1b7f5e21372b6c4a79975a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856611"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037180"
 ---
 # <a name="check-files-in-use"></a>使用中のファイルの確認
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのインストール後に Windows が再起動されないようにするには、[使用中のファイルの確認] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのセットアップ プログラムで必要とされるファイルをロックしているプロセスを特定します。  
@@ -46,7 +45,7 @@ ms.locfileid: "83856611"
   
 |名前|説明|  
 |----------|-----------------|  
-|Process|更新対象のファイルを使用しているプロセスの完全な名前を表示します。|  
+|プロセス|更新対象のファイルを使用しているプロセスの完全な名前を表示します。|  
 |種類|プロセスの種類を表示します。|  
 |Account|プロセスが実行されているアカウントを表示します。|  
 |プロセス ID|プロセス ID を表示します。|  

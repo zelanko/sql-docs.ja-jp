@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 808c8516b3ed9e95ea4c724736461cb00923a7fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011912"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016240"
 ---
 # <a name="principals-database-engine"></a>プリンシパル (データベース エンジン)
   *プリンシパル* は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースを要求できるエンティティです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の承認モデルの他のコンポーネントと同様に、プリンシパルは階層内に配置できます。 プリンシパルの効力のスコープは、プリンシパルの定義のスコープ (Windows、サーバー、データベース) と、プリンシパルが分割できないアイテムであるかコレクションであるかによって異なります。 分割できないプリンシパルの例には Windows ログインがあり、コレクションであるプリンシパルの例には Windows グループがあります。 各プリンシパルには、1 つのセキュリティ識別子 (SID) があります。  
@@ -44,7 +43,7 @@ ms.locfileid: "63011912"
   
 -   Windows ローカル ログイン  
   
- **SQL Server**-**レベル**の**プリンシパル**  
+ **SQL Server** -**レベル****プリンシパル**  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ログイン  
   
@@ -85,7 +84,7 @@ ms.locfileid: "63011912"
 -   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>guest ユーザー  
- 各データベースには、 **guest**が含まれます。 データベースにはアクセスできるが、データベース内のユーザー アカウントは持っていないユーザーは、 **guest** ユーザーに許可された権限を継承します。 **Guest**ユーザーを削除することはできませんが、 `CONNECT`アクセス許可を取り消すことによって無効にすることができます。 権限`CONNECT`は、master または tempdb `REVOKE CONNECT FROM GUEST`以外のデータベース内で実行することで取り消すことができます。  
+ 各データベースには、 **guest**が含まれます。 データベースにはアクセスできるが、データベース内のユーザー アカウントは持っていないユーザーは、 **guest** ユーザーに許可された権限を継承します。 **Guest**ユーザーを削除することはできませんが、アクセス許可を取り消すことによって無効にすることができ `CONNECT` ます。 権限は、 `CONNECT` `REVOKE CONNECT FROM GUEST` master または tempdb 以外のデータベース内で実行することで取り消すことができます。  
   
 ## <a name="client-and-database-server"></a>クライアントとデータベース サーバー  
  定義上、クライアントとデータベース サーバーはセキュリティ プリンシパルであり、セキュリティで保護できます。 これらのエンティティは、安全なネットワーク接続が確立される前に相互に認証できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、クライアントがネットワーク認証サービスと対話する方法を定義する[Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758)認証プロトコルがサポートされています。  
@@ -99,7 +98,7 @@ ms.locfileid: "63011912"
   
 -   [データベース レベルのロール](database-level-roles.md)  
   
--   [アプリケーションロール](application-roles.md)  
+-   [アプリケーション ロール](application-roles.md)  
   
 ## <a name="see-also"></a>参照  
  [SQL Server の保護](../securing-sql-server.md)   

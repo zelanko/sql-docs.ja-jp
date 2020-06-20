@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3cd2e8af1630fed8dd996a951e904bef0266b300
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07fe58cee4046b78bdca0a748ea4d0c6a82dfebf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702984"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014915"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath のデータ型 (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath、および XML スキーマ (XSD) のデータ型は大きく異なります。 たとえば、XPath に整数や日付のデータ型はありませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と XSD にはこれらのデータ型が多く用意されています。 また、XSD では時間値の精度はナノ秒ですが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の精度は最大でも 1/300 秒です。 このため、あるデータ型から別のデータ型へのマッピングが常に可能であるとは限りません。 データ型の XSD データ型へのマッピングの詳細につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「[データ型の強制変換」と「sql: datatype 注釈 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)」を参照してください。  
@@ -46,7 +45,7 @@ ms.locfileid: "82702984"
   
 -   論理演算子 (and、or)  
   
--   関係演算子 ( \< 、>、 \< =、>=)  
+-   関係演算子 ( \<, > 、 \<=, > =)  
   
 -   等価演算子 (=、!=)  
   
@@ -89,11 +88,11 @@ ms.locfileid: "82702984"
 |-------------------|------------------------------------|--------------------------------|  
 |Nonebin.base64bin.hex|N/A|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
-|number、int、float,i1、i2、i4、i8、r4、r8ui1、ui2、ui4、ui8|数値|CONVERT(float(53), EmployeeID)|  
+|number、int、float,i1、i2、i4、i8、r4、r8ui1、ui2、ui4、ui8|number|CONVERT(float(53), EmployeeID)|  
 |id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/A (XDR データ型 fixed14.4 に相当する XPath のデータ型はありません)|CONVERT(money, EmployeeID)|  
 |date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
-|time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
+|時間<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  日付と時刻の変換は、値がデータ型またはを使用してデータベースに格納されているかどうかにかかわらず機能するように設計されてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` `string` ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` データ型はを使用せず、 `timezone` XML データ型よりも精度が低いことに注意して `time` ください。 `timezone` 型または追加の有効桁数を含めるには、`string` 型を使って [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータを格納します。  
   
@@ -150,7 +149,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. XPath クエリ内で複数のデータ型変換を実行する  
  注釈付き XSD スキーマに対して指定される XPath クエリ `OrderDetail[@UnitPrice * @OrderQty > 98]` を考えてみます。  
   
- この XPath クエリは、述語を満たすすべての** \< orderdetail>** 要素を返し `@UnitPrice * @OrderQty > 98` ます。 注釈付きスキーマのデータ型で、 **UnitPrice**に注釈が付けられている場合 `fixed14.4` 、この述語は SQL 式に相当します。  
+ この XPath クエリは、述語を満たすすべての要素を返し **\<OrderDetail>** `@UnitPrice * @OrderQty > 98` ます。 注釈付きスキーマのデータ型で、 **UnitPrice**に注釈が付けられている場合 `fixed14.4` 、この述語は SQL 式に相当します。  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   

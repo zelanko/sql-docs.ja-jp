@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 076c76c9232dcba910c3810d2632f799b2960142
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767504"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966082"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>レッスン 1:プロジェクトと基本パッケージの作成
   このレッスンでは、簡単な ETL パッケージを作成します。このパッケージは、1 つのフラット ファイル ソースからデータを抽出し、2 つの参照変換コンポーネントを使用してそのデータを変換します。さらに、変換したデータを、 **AdventureWorksDW2012** の **FactCurrency**ファクト テーブルに書き込みます。 ここでは、新しいパッケージを作成する方法、データの変換元と変換先の接続を追加、構成する方法、新しい制御フロー コンポーネントとデータ フロー コンポーネントを操作する方法を学習します。  
@@ -60,21 +59,21 @@ ms.locfileid: "62767504"
 ### <a name="looking-at-the-destination"></a>変換先の確認  
  ソース データの最終的な変換先は、 **AdventureWorksDW** の **FactCurrency**ファクト テーブルです。 次の表に示すように、 **FactCurrency** ファクト テーブルには 4 つの列があり、さらに 2 つのディメンション テーブルへのリレーションシップがあります。  
   
-|列名|データ型|参照テーブル|参照列|  
+|列名|データの種類|参照テーブル|参照列|  
 |-----------------|---------------|------------------|-------------------|  
-|AverageRate|float|なし|なし|  
+|AverageRate|float|None|None|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|float|なし|なし|  
+|EndOfDayRate|float|None|None|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>ソース データと変換先データのマッピング  
  変換元と変換先のデータ形式を調べてみると、 **CurrencyKey** と **DateKey** の値については参照が必要であることがわかります。 これらの参照を実行する変換では、 **DimCurrency** ディメンション テーブルと **DimDate** ディメンション テーブルの代替キーを使用することにより、 **CurrencyKey** と **DateKey** の値を取得します。  
   
-|フラット ファイルの列|テーブル名|列名|データ型|  
+|フラット ファイルの列|テーブル名|列名|データの種類|  
 |----------------------|----------------|-----------------|---------------|  
 |0|AdventureWorksDW2012|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
-|2|DimDate|FullDateAlternateKey|日付|  
+|2|DimDate|FullDateAlternateKey|date|  
 |3|AdventureWorksDW2012|EndOfDayRate|float|  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  

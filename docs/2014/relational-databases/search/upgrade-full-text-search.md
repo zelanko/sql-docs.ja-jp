@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2bdf0bdee452101bbafb8108426faf6604e7626
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010958"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016514"
 ---
 # <a name="upgrade-full-text-search"></a>フルテキスト検索のアップグレード
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのフルテキスト検索のアップグレードは、セットアップ時のほか、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ファイルとフルテキスト カタログのアタッチ時、復元時、またはデータベース コピー ウィザードによるコピー時に行われます。  
@@ -60,7 +59,7 @@ ms.locfileid: "66010958"
 ##  <a name="full-text-upgrade-options"></a><a name="FT_Upgrade_Options"></a>フルテキストアップグレードオプション  
  サーバー インスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする場合、次のいずれかのフルテキスト アップグレード オプションをユーザー インターフェイスで選択できます。  
   
- [インポート]  
+ インポート  
  フルテキスト カタログがインポートされます。 通常、インポートの方が再構築よりもかなり高速に処理されます。 たとえば、CPU を 1 つだけ使用している場合、インポートは、再構築の約 10 倍の速さで実行されます。 ただし、インポートされたフルテキスト カタログでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の最新バージョンでインストールされる新しいワード ブレーカーが使用されません。 クエリ結果の一貫性を維持するためには、フルテキスト カタログを再作成する必要があります。  
   
 > [!NOTE]  
@@ -73,7 +72,7 @@ ms.locfileid: "66010958"
  [再構築]  
  フルテキスト カタログは、導入された新しい拡張機能であるワード ブレーカーを使用して再構築されます。 インデックスの再構築には時間がかかり、アップグレード後に膨大な量の CPU とメモリが必要になる可能性があります。  
   
- Reset  
+ リモート アクセスの  
  フルテキスト カタログがリセットされます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]からのアップグレード時には、フルテキスト カタログ ファイルは削除されますが、フルテキスト カタログのメタデータおよびフルテキスト インデックスは保持されます。 アップグレード後、すべてのフルテキスト インデックスで変更の追跡は無効化されており、クロールは自動的には開始されません。 アップグレードの完了後、手動で完全作成を実行するまで、カタログは空のままになります。  
   
 ##  <a name="considerations-for-choosing-a-full-text-upgrade-option"></a><a name="Choosing_Upgade_Option"></a>フルテキストアップグレードオプションの選択に関する注意点  
@@ -150,7 +149,7 @@ ms.locfileid: "66010958"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]フルテキスト カタログのバックアップと復元の詳細については、 オンライン ブックの「[フルテキスト カタログのバックアップと復元 ](https://go.microsoft.com/fwlink/?LinkId=121052)」および「[ファイルのバックアップと復元およびフルテキスト カタログ](https://go.microsoft.com/fwlink/?LinkId=121053)」[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] を参照してください。  
   
- データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に復元すると、フルテキスト カタログ用の新しいデータベース ファイルが作成されます。 このファイルの既定の名前は、ftrow_*catalog-name*.ndf です。 たとえば、 *catalog-name* が `cat1`の場合、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース ファイルの既定の名前は `ftrow_cat1.ndf`となります。 ただし、既定の名前が既にターゲットディレクトリで使用されている場合、新しいデータベースファイル`ftrow_`の名前は*catalog-name*`{`*GUID*`}.ndf`になります。 *guid*は、新しいファイルのグローバル一意識別子です。  
+ データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に復元すると、フルテキスト カタログ用の新しいデータベース ファイルが作成されます。 このファイルの既定の名前は、ftrow_*catalog-name*.ndf です。 たとえば、 *catalog-name* が `cat1`の場合、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース ファイルの既定の名前は `ftrow_cat1.ndf`となります。 ただし、既定の名前が既にターゲットディレクトリで使用されている場合、新しいデータベースファイルの名前は `ftrow_` *catalog-name* `{` *GUID* `}.ndf` になります。 *guid*は、新しいファイルのグローバル一意識別子です。  
   
  カタログのインポート後、 **sys.database_files** と **sys.master_files**が更新されてカタログ エントリが削除され、 **sys.fulltext_catalogs** の **path** 列が NULL に設定されます。  
   
@@ -171,7 +170,7 @@ ms.locfileid: "66010958"
   
 -   データベース ファイル `ftdb1.mdf`は `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL12.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`に移動されます。  
   
--   ログファイル`ftdb1_log.ldf`は、ログディスクドライブ上のログディレクトリに移動され、*log_directory*`\ftdb1_log.ldf` *log_drive*`:\`ます。  
+-   ログファイルは、 `ftdb1_log.ldf` ログディスクドライブ上のログディレクトリに移動され、log_directory *log_drive* `:\` *log_directory* `\ftdb1_log.ldf` ます。  
   
 -   `sysft_cat90` カタログに対応するカタログ ファイルは、 `C:\temp`に移動されます。 フルテキスト インデックスは、インポートされた後、データベース ファイル C:\ftrow_sysft_cat90.ndf 内に自動的に格納されます。C:\temp は削除されます。  
   

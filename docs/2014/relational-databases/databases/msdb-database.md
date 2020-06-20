@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1d552efa888b24e0a1c83464c7947343b132b1c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871713"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965856"
 ---
 # <a name="msdb-database"></a>msdb データベース
   **msdb** データベースは、警告やジョブのスケジュール設定のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されます。また、その他の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 、データベース メールなどの機能でも使用されます。  
@@ -78,7 +77,7 @@ ms.locfileid: "62871713"
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)」を参照してください。  
   
-## <a name="restrictions"></a>制限  
+## <a name="restrictions"></a>制約  
  **msdb** データベースでは、次の操作を実行できません。  
   
 -   照合順序の変更。 既定の照合順序はサーバーの照合順序です。  
@@ -100,7 +99,7 @@ ms.locfileid: "62871713"
 -   プライマリ ファイル グループの READ_ONLY への設定。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [システム データベース](system-databases.md)  
+ [システムデータベース](system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

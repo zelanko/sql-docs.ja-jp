@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 67a0dd1c4ab55b1417e30271a841aecb450c63db
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7b3d11a26c2f5d27f28a60effdb26978edd07409
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704550"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017980"
 ---
 # <a name="creating-sql-server-tables"></a>SQL Server テーブルの作成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、 **Itabledefinition:: CreateTable**関数を公開し、コンシューマーがテーブルを作成できるようにし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 コンシューマーは**CreateTable**を使用して、コンシューマーという名前のパーマネントテーブル、および Native Client OLE DB プロバイダーによって生成された一意の名前を持つパーマネントテーブルまたは一時テーブルを作成し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
