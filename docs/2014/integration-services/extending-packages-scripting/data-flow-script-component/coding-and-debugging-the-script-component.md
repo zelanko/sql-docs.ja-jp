@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d12dbcdf49fc34bdd37fca21635cbcd416efc36b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c200e69d0e80232a558c4fa030864fe864d237c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176229"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967352"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>スクリプト コンポーネントのコーディングおよびデバッグ
   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、スクリプト コンポーネントにメタデータ デザイン モードとコード デザイン モードの 2 つのモードがあります。 **[スクリプト変換エディター]** を開くと、スクリプト コンポーネントはメタデータ デザイン モードになります。このモードでは、メタデータを構成し、コンポーネントのプロパティを設定します。 メタデータ デザイン モードで、スクリプト コンポーネントのプロパティを設定して、入力と出力を構成したら、コード デザイン モードに切り替えてカスタム スクリプトを記述できます。 メタデータ デザイン モードとコード デザイン モードについて詳しくは、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](configuring-the-script-component-in-the-script-component-editor.md)」をご覧ください。
@@ -36,7 +35,7 @@ ms.locfileid: "78176229"
 ### <a name="script-component-development-environment"></a>スクリプト コンポーネント開発環境
  スクリプトを記述するには、 **[スクリプト変換エディター]** の **[スクリプト]** ページで **[スクリプトの編集]** をクリックし、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開きます。 VSTA IDE には、色分け表示が可能な [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] エディター、IntelliSense、オブジェクト ブラウザーなど、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 環境での標準機能がすべて含まれています。
 
- スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語を指定するには、 **[スクリプト変換エディター]** で **[ScriptLanguage]** プロパティを設定します。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト コンポーネント内のコードからその機能を呼び出すことができます。
+ スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語を指定するには、**[スクリプト変換エディター]** で **[ScriptLanguage]** プロパティを設定します。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト コンポーネント内のコードからその機能を呼び出すことができます。
 
  スクリプト コンポーネントで作成したスクリプトは、パッケージ定義に格納されます。 スクリプト ファイルが別途存在するわけではありません。 したがって、スクリプト コンポーネントを使用してもパッケージの配置には影響しません。
 
@@ -59,13 +58,13 @@ ms.locfileid: "78176229"
 
     -   `Connections` コレクション クラス。[スクリプト変換エディター] の [接続マネージャー] ページで選択された、接続への参照が含まれています。
 
-    -   [ `Variables` **スクリプト変換エディター**] の [**スクリプト**] ページにある`ReadOnlyVariable`プロパティ`ReadWriteVariables`およびプロパティに入力された変数への参照を含むコレクションクラス。
+    -   [ `Variables` `ReadOnlyVariable` `ReadWriteVariables` **スクリプト変換エディター**] の [**スクリプト**] ページにあるプロパティおよびプロパティに入力された変数への参照を含むコレクションクラス。
 
--   プロジェクト`BufferWrapper`アイテムには、[ <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> **スクリプト変換エディター**] の [**入力および出力**] ページで構成された各入力および出力に対して、から継承されるクラスが含まれています。 これらの各クラスには、構成された入力列と出力列、およびそれらの列が含まれるデータ フロー バッファーに対応する、型指定されたアクセサー プロパティが含まれています。
+-   プロジェクトアイテムには、[ `BufferWrapper` <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> **スクリプト変換エディター**] の [**入力および出力**] ページで構成された各入力および出力に対して、から継承されるクラスが含まれています。 これらの各クラスには、構成された入力列と出力列、およびそれらの列が含まれるデータ フロー バッファーに対応する、型指定されたアクセサー プロパティが含まれています。
 
  これらのオブジェクト、メソッド、およびプロパティの使用方法については、「[スクリプト コンポーネントのオブジェクト モデルについて](understanding-the-script-component-object-model.md)」をご覧ください。 特定の種類のスクリプト コンポーネントで、これらのクラスのメソッドおよびプロパティを使用する方法については、セクション「[その他のスクリプト コンポーネントの例](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)」をご覧ください。 サンプルについてのトピックでは、完全なコード例も示します。
 
- スクリプトコンポーネントを変換として構成すると、 `ScriptMain`プロジェクトアイテムには次の自動生成されたコードが含まれます。 コード テンプレートでも、スクリプト コンポーネントの概要、および、変数、イベント、接続など、SSIS オブジェクトを取得および操作する方法に関する追加情報を提供します。
+ スクリプトコンポーネントを変換として構成すると、 `ScriptMain` プロジェクトアイテムには次の自動生成されたコードが含まれます。 コード テンプレートでも、スクリプト コンポーネントの概要、および、変数、イベント、接続など、SSIS オブジェクトを取得および操作する方法に関する追加情報を提供します。
 
 ```vb
 ' Microsoft SQL Server Integration Services Script Component
@@ -170,7 +169,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|
 |変数:|`Variables` プロジェクト アイテムの `ComponentWrapper` コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは `Variables` クラスの `ScriptMain` プロパティを介して公開されています。<br /><br /> `PreExecute` メソッドでは、読み取り専用変数にのみアクセスできます。 `PostExecute` メソッドでは、読み取り専用変数および読み取り/書き込み変数の両方にアクセスできます。|
 |接続|`Connections` プロジェクト アイテムの `ComponentWrapper` コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは `Connections` クラスの `ScriptMain` プロパティを介して公開されています。|
-|events|クラスの<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>プロパティとインターフェイスの**\<Fire X>** メソッドを使用して、イベントを発生させます。 `ScriptMain`|
+|events|<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>クラスのプロパティ `ScriptMain` とインターフェイスの**Fire \<X> **メソッドを使用して、イベントを発生させ <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> ます。|
 |ログ記録|`ScriptMain` クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> メソッドを使用して、ログ記録を実行します。|
 
 ## <a name="debugging-the-script-component"></a>スクリプト コンポーネントのデバッグ
@@ -184,9 +183,9 @@ public class ScriptMain : UserComponent
 
  ただし、次の方法を使用することにより、スクリプト コンポーネントの実行を監視することもできます。
 
--   実行を中断**し、system.string 名前空間**の`MessageBox.Show`メソッドを使用してモーダルメッセージを表示します。 デバッグが完了したら、このコードは削除してください。
+-   実行を中断し、system.string 名前空間のメソッドを使用してモーダルメッセージを表示し `MessageBox.Show` ます**System.Windows.Forms** 。 デバッグが完了したら、このコードは削除してください。
 
--   情報メッセージ、警告、およびエラーを発生させます。 FireInformation、FireWarning、FireError の各メソッドでは、イベントの説明が Visual Studio の **[出力]** ウィンドウに表示されます。 ただし、FireProgress メソッド、Console.Write メソッド、および Console.WriteLine メソッドでは、 **[出力]** ウィンドウに情報は表示されません。 FireProgress イベントからのメッセージが **デザイナーの**[進行状況][!INCLUDE[ssIS](../../../includes/ssis-md.md)] タブに表示されます。 詳しくは、「[スクリプト コンポーネントでのイベントの発生](../../data-flow/transformations/script-component.md)」をご覧ください。
+-   情報メッセージ、警告、およびエラーを発生させます。 FireInformation、FireWarning、FireError の各メソッドでは、イベントの説明が Visual Studio の **[出力]** ウィンドウに表示されます。 ただし、FireProgress メソッド、Console.Write メソッド、および Console.WriteLine メソッドでは、 **[出力]** ウィンドウに情報は表示されません。 FireProgress イベントからのメッセージが [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの **[進行状況]** タブに表示されます。 詳しくは、「[スクリプト コンポーネントでのイベントの発生](../../data-flow/transformations/script-component.md)」をご覧ください。
 
 -   イベントまたはユーザー定義のメッセージを、有効なログ プロバイダーに記録します。 詳しくは、「[スクリプト コンポーネントでのログ記録](logging-in-the-script-component.md)」をご覧ください。
 
@@ -197,7 +196,7 @@ public class ScriptMain : UserComponent
 
  [スクリプトコンポーネントのオブジェクトモデルについて](understanding-the-script-component-object-model.md)スクリプトコンポーネントで使用できるオブジェクト、メソッド、およびプロパティの使用方法について説明します。
 
- [スクリプトソリューションでの他のアセンブリの参照](../referencing-other-assemblies-in-scripting-solutions.md)スクリプトコンポーネントの[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]クラスライブラリからオブジェクトを参照する方法について説明します。
+ [スクリプトソリューションでの他のアセンブリの参照](../referencing-other-assemblies-in-scripting-solutions.md)スクリプトコンポーネントのクラスライブラリからオブジェクトを参照する方法について説明 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] します。
 
  [スクリプトコンポーネントに対するエラー出力のシミュレート](../../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)スクリプトコンポーネントによる処理中にエラーが発生する行のエラー出力をシミュレートする方法について説明します。
 

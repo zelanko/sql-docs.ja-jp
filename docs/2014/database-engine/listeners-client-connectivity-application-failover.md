@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241087f5da3c7baa09a34fab8ab1886809ce0d36
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289310"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931453"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー (SQL Server)
   このトピックでは、 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] クライアント接続とアプリケーションのフェールオーバー機能に関する考慮事項について説明します。  
@@ -118,7 +117,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- この接続文字列の例では、クライアントはポート 1433 で `AGListener` という名前の可用性グループ リスナーへの接続を試みます (可用性グループ リスナーが 1433 でリッスンしている場合、このポートの指定を省略できます)。  接続文字列には、 `ApplicationIntent`プロパティがに`ReadOnly`設定されています。これにより、読み取りを目的とした*接続文字列*が作成されます。  この設定がない場合、サーバーは接続の読み取り専用へのルーティングを試行しません。  
+ この接続文字列の例では、クライアントはポート 1433 で `AGListener` という名前の可用性グループ リスナーへの接続を試みます (可用性グループ リスナーが 1433 でリッスンしている場合、このポートの指定を省略できます)。  接続文字列には、プロパティがに設定されてい `ApplicationIntent` `ReadOnly` ます。これにより、読み取りを目的とした*接続文字列*が作成されます。  この設定がない場合、サーバーは接続の読み取り専用へのルーティングを試行しません。  
   
  可用性グループのプライマリ データベースは、読み取り専用の受信ルーティング要求を処理し、プライマリ レプリカに参加していて読み取り専用ルーティング用に構成されているオンラインの読み取り専用レプリカを特定します。  クライアントは、プライマリ レプリカ サーバーから接続情報を受け取り、特定された読み取り専用レプリカに接続します。  
   

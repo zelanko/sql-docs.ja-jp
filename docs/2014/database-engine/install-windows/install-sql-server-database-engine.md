@@ -11,22 +11,21 @@ helpviewer_keywords:
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3cf4ca5d422e9d124c397bbcae8d8b48d12b95b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779363"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932733"
 ---
 # <a name="about-the-sql-server-database-engine"></a>SQL Server データベース エンジンについて
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントは、データの保存、処理、セキュリティ保護のためのコア サービスです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、企業において最もデータ処理量の多いアプリケーションの要求を満たすアクセス制御と高速トランザクション処理を提供します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、1 台のコンピューターで最大 50 個の [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスをサポートします。 一般的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]なインストールを作成するには、「インストール[ウィザードから SQL Server 2014 をインストールする」 &#40;セットアップ&#41;](install-sql-server-from-the-installation-wizard-setup.md)を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、1 台のコンピューターで最大 50 個の [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスをサポートします。 一般的なインストールを作成するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「インストール[ウィザードから SQL Server 2014 をインストールする」 &#40;セットアップ&#41;](install-sql-server-from-the-installation-wizard-setup.md)を参照してください。  
   
  **重要** ローカルでのインストールの場合、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限と実行権限を持つドメイン アカウントを使用する必要があります。  
   
- インストールウィザードの [インストールするコンポーネント] ページで [ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースエンジン**] を選択すると、次の機能がインストールされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ インストールウィザードの [インストールするコンポーネント] ページで [ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースエンジン**] を選択すると、次の機能がインストールされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   

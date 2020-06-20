@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b691367b8cfbe00c1e383fa3a2fd18e2d545be8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898900"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967432"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>プロパティ式における列挙定数
   プロパティ式に列挙子メンバー リストの値が含まれている場合、この式ではメンバーの表示名ではなく、列挙子メンバーの数値を使用する必要があります。 たとえば、式で `LoggingMode` プロパティを設定する場合、表示名 Disabled ではなく、数値 2 を使用する必要があります。  
   
  このトピックでは、プロパティ式でメンバーがよく使用される列挙子の表示名に対応した数値のみを示します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクト モデルには、パッケージをプログラムで構築したり、タスクやデータ フロー コンポーネントなどのカスタム パッケージ要素をコード化する際に使用する列挙子が多数追加されています。  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のプロパティ ウィンドウには、パッケージとパッケージ オブジェクトのカスタム プロパティに加えて、パッケージ、タスク、Foreach ループ コンテナー、For ループ コンテナー、およびシーケンス コンテナーで使用できる一連のプロパティが含まれています。 `ForceExecutionResult`列挙子`LoggingMode`からの値によって設定される共通プロパティ`IsolationLevel`である`Transaction Option`、、、、およびは、[共通プロパティ] セクションに一覧表示されます。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のプロパティ ウィンドウには、パッケージとパッケージ オブジェクトのカスタム プロパティに加えて、パッケージ、タスク、Foreach ループ コンテナー、For ループ コンテナー、およびシーケンス コンテナーで使用できる一連のプロパティが含まれています。 列挙子からの値によって設定される共通プロパティである、、 `ForceExecutionResult` `LoggingMode` `IsolationLevel` 、、およびは、[ `Transaction Option` 共通プロパティ] セクションに一覧表示されます。  
   
  次の各セクションでは、列挙定数について説明します。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62898900"
 ##  <a name="package"></a><a name="Package"></a> [パッケージ]  
  次の表は、列挙子からの値を使用して設定する、パッケージのプロパティの表示名とそれに対応する数値を示します。  
   
- `PackageType``DTSPackageType`列挙体の値を使用してプロパティを設定します。  
+ `PackageType`列挙体の値を使用してプロパティを設定し `DTSPackageType` ます。  
   
 |DTSPackageType の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -57,7 +56,7 @@ ms.locfileid: "62898900"
 |DTSDesigner100|5|  
 |SQLDBMaint|6|  
   
- `CheckpointUsage``DTSCheckpointUsage`列挙体の値を使用してプロパティを設定します。  
+ `CheckpointUsage`列挙体の値を使用してプロパティを設定し `DTSCheckpointUsage` ます。  
   
 |DTSCheckpointUsage の表示名|数値|  
 |-----------------------------------------|-------------------|  
@@ -65,7 +64,7 @@ ms.locfileid: "62898900"
 |IfExists|1|  
 |Always (常に)|2|  
   
- `PackagePriorityClass``DTSPriorityClass`列挙体の値を使用してプロパティを設定します。  
+ `PackagePriorityClass`列挙体の値を使用してプロパティを設定し `DTSPriorityClass` ます。  
   
 |DTSPriorityClass の表示名|数値|  
 |---------------------------------------|-------------------|  
@@ -75,7 +74,7 @@ ms.locfileid: "62898900"
 |BelowNormal|3|  
 |アイドル|4|  
   
- `ProtectionLevel``DTSProtectionLevel`列挙体の値を使用してプロパティを設定します。  
+ `ProtectionLevel`列挙体の値を使用してプロパティを設定し `DTSProtectionLevel` ます。  
   
 |DTSProtectionLevel の表示名|数値|  
 |-----------------------------------------|-------------------|  
@@ -87,7 +86,7 @@ ms.locfileid: "62898900"
 |ServerStorage|5|  
   
 ##  <a name="precedence-constraints"></a><a name="PrecedenceConstraints"></a> 優先順位制約  
- `EvalOp``DTSPrecedenceEvalOp`列挙体の値を使用してプロパティを設定します。  
+ `EvalOp`列挙体の値を使用してプロパティを設定し `DTSPrecedenceEvalOp` ます。  
   
 |DTSPrecedenceEvalOp の表示名|数値|  
 |------------------------------------------|-------------------|  
@@ -96,7 +95,7 @@ ms.locfileid: "62898900"
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
   
- `Value``DTSExecResult`列挙体の値を使用してプロパティを設定します。  
+ `Value`列挙体の値を使用してプロパティを設定し `DTSExecResult` ます。  
   
 |フレンドリ名|数値|  
 |-------------------|-------------------|  
@@ -109,7 +108,7 @@ ms.locfileid: "62898900"
  Foreach ループには、プロパティ式で設定できるプロパティを含む一連の列挙子があります。  
   
 ### <a name="foreach-ado-enumerator"></a>Foreach ADO 列挙子  
- `Type``ADOEnumerationType`列挙体の値を使用してプロパティを設定します。  
+ `Type`列挙体の値を使用してプロパティを設定し `ADOEnumerationType` ます。  
   
 |ADOEnumerationType の表示名|数値|  
 |-----------------------------------------|-------------------|  
@@ -118,7 +117,7 @@ ms.locfileid: "62898900"
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Foreach Nodelist 列挙子  
- `SourceDocumentType`、 `InnerXPathStringSourceType`、および **[outerxpathstringsourcetype]** の各プロパティ- `SourceType`列挙の値を使用して設定されます。  
+ `SourceDocumentType`、 `InnerXPathStringSourceType` 、および **[outerxpathstringsourcetype]** の各プロパティ-列挙の値を使用して設定さ `SourceType` れます。  
   
 |SourceType の表示名|数値|  
 |---------------------------------|-------------------|  
@@ -126,7 +125,7 @@ ms.locfileid: "62898900"
 |変数|1|  
 |DirectInput|2|  
   
- `EnumerationType``EnumerationType`列挙体の値を使用してプロパティを設定します。  
+ `EnumerationType`列挙体の値を使用してプロパティを設定し `EnumerationType` ます。  
   
 |EnumerationType の表示名|数値|  
 |--------------------------------------|-------------------|  
@@ -135,7 +134,7 @@ ms.locfileid: "62898900"
 |NodeText|2|  
 |ElementCollection|3|  
   
- `InnerElementType``InnerElementType`列挙体の値を使用してプロパティを設定します。  
+ `InnerElementType`列挙体の値を使用してプロパティを設定し `InnerElementType` ます。  
   
 |InnerElementType の表示名|数値|  
 |---------------------------------------|-------------------|  
@@ -147,7 +146,7 @@ ms.locfileid: "62898900"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、プロパティ式で設定できるプロパティを含む多くのタスクが含まれています。  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 実行タスク  
- `SourceType``DDLSourceType`列挙体の値を使用してプロパティを設定します。  
+ `SourceType`列挙体の値を使用してプロパティを設定し `DDLSourceType` ます。  
   
 |DDLSourceType の表示名|数値|  
 |------------------------------------|-------------------|  
@@ -156,7 +155,7 @@ ms.locfileid: "62898900"
 |変数|2|  
   
 ### <a name="bulk-insert-task"></a>一括挿入タスク  
- `DataFileType``DTSBulkInsert_DataFileType`列挙体の値を使用してプロパティを設定します。  
+ `DataFileType`列挙体の値を使用してプロパティを設定し `DTSBulkInsert_DataFileType` ます。  
   
 |DTSBulkInsert_DataFileType の表示名|数値|  
 |--------------------------------------------------|-------------------|  
@@ -166,7 +165,7 @@ ms.locfileid: "62898900"
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
 ### <a name="execute-sql-task"></a>SQL 実行タスク  
- `ResultSetType``ResultSetType`列挙体の値を使用してプロパティを設定します。  
+ `ResultSetType`列挙体の値を使用してプロパティを設定し `ResultSetType` ます。  
   
 |ResultSetType の表示名|数値|  
 |------------------------------------|-------------------|  
@@ -175,7 +174,7 @@ ms.locfileid: "62898900"
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
   
- `SqlStatementSourceType``SqlStatementSourceType`列挙体の値を使用してプロパティを設定します。  
+ `SqlStatementSourceType`列挙体の値を使用してプロパティを設定し `SqlStatementSourceType` ます。  
   
 |SqlStatementSourceType の表示名|数値|  
 |---------------------------------------------|-------------------|  
@@ -184,7 +183,7 @@ ms.locfileid: "62898900"
 |変数|3|  
   
 ### <a name="file-system-task"></a>ファイル システム タスク  
- `Operation``DTSFileSystemOperation`列挙体の値を使用してプロパティを設定します。  
+ `Operation`列挙体の値を使用してプロパティを設定し `DTSFileSystemOperation` ます。  
   
 |DTSFileSystemOperation の表示名|数値|  
 |---------------------------------------------|-------------------|  
@@ -199,7 +198,7 @@ ms.locfileid: "62898900"
 |DeleteDirectory|8|  
 |DeleteDirectoryContent|9|  
   
- `Attributes``DTSFileSystemAttributes`列挙体の値を使用してプロパティを設定します。  
+ `Attributes`列挙体の値を使用してプロパティを設定し `DTSFileSystemAttributes` ます。  
   
 |DTSFileSystemAttributes の表示名|数値|  
 |----------------------------------------------|-------------------|  
@@ -210,7 +209,7 @@ ms.locfileid: "62898900"
 |システム|8|  
   
 ### <a name="ftp-task"></a>FTP タスク  
- `Operation``DTSFTPOp`列挙体の値を使用してプロパティを設定します。  
+ `Operation`列挙体の値を使用してプロパティを設定し `DTSFTPOp` ます。  
   
 |DTSFTPOp の表示名|数値|  
 |-------------------------------|-------------------|  
@@ -224,7 +223,7 @@ ms.locfileid: "62898900"
 |RemoveDirRemote|7|  
   
 ### <a name="message-queue-task"></a>Message Queue Task  
- `MessageType``MQMessageType`列挙体の値を使用してプロパティを設定します。  
+ `MessageType`列挙体の値を使用してプロパティを設定し `MQMessageType` ます。  
   
 |MQMessageType の表示名|数値|  
 |------------------------------------|-------------------|  
@@ -233,7 +232,7 @@ ms.locfileid: "62898900"
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
- `StringCompareType``MQStringMessageCompare`列挙体の値を使用してプロパティを設定します。  
+ `StringCompareType`列挙体の値を使用してプロパティを設定し `MQStringMessageCompare` ます。  
   
 |MQStringMessageCompare の表示名|数値|  
 |---------------------------------------------|-------------------|  
@@ -242,7 +241,7 @@ ms.locfileid: "62898900"
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
- `TaskType``MQType`列挙体の値を使用してプロパティを設定します。  
+ `TaskType`列挙体の値を使用してプロパティを設定し `MQType` ます。  
   
 |MQType の表示名|数値|  
 |-----------------------------|-------------------|  
@@ -250,7 +249,7 @@ ms.locfileid: "62898900"
 |DTSMQType_Receiver|1|  
   
 ### <a name="send-mail-task"></a>メール送信タスク  
- `MessageSourceType``SendMailMessageSourceType`列挙体の値を使用してプロパティを設定します。  
+ `MessageSourceType`列挙体の値を使用してプロパティを設定し `SendMailMessageSourceType` ます。  
   
 |SendMailMessageSourceType の表示名|数値|  
 |------------------------------------------------|-------------------|  
@@ -258,7 +257,7 @@ ms.locfileid: "62898900"
 |[FileConnection]|1|  
 |変数|2|  
   
- `Priority``MailPriority`列挙体の値を使用してプロパティを設定します。  
+ `Priority`列挙体の値を使用してプロパティを設定し `MailPriority` ます。  
   
 |MailPriority の表示名|数値|  
 |-----------------------------------|-------------------|  
@@ -267,14 +266,14 @@ ms.locfileid: "62898900"
 |低|5|  
   
 ### <a name="transfer-database-task"></a>データベース転送タスク  
- `Action``TransferAction`列挙体の値を使用してプロパティを設定します。  
+ `Action`列挙体の値を使用してプロパティを設定し `TransferAction` ます。  
   
 |TransferAction の表示名|数値|  
 |-------------------------------------|-------------------|  
 |コピー|0|  
 |[詳細ビュー]|1|  
   
- `Method``TransferMethod`列挙体の値を使用してプロパティを設定します。  
+ `Method`列挙体の値を使用してプロパティを設定し `TransferMethod` ます。  
   
 |TransferMethod の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -282,7 +281,7 @@ ms.locfileid: "62898900"
 |DatabaseOnline|1|  
   
 ### <a name="transfer-error-messages-task"></a>エラー メッセージ転送タスク  
- `IfObjectExists``IfObjectExists`列挙体の値を使用してプロパティを設定します。  
+ `IfObjectExists`列挙体の値を使用してプロパティを設定し `IfObjectExists` ます。  
   
 |IfObjectExists の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -291,7 +290,7 @@ ms.locfileid: "62898900"
 |Skip|2|  
   
 ### <a name="transfer-jobs-task"></a>ジョブ転送タスク  
- `IfObjectExists``IfObjectExists`列挙体の値を使用してプロパティを設定します。  
+ `IfObjectExists`列挙体の値を使用してプロパティを設定し `IfObjectExists` ます。  
   
 |IfObjectExists の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -300,7 +299,7 @@ ms.locfileid: "62898900"
 |Skip|2|  
   
 ### <a name="transfer-logins-task"></a>ログイン転送タスク  
- `IfObjectExists``IfObjectExists`列挙体の値を使用してプロパティを設定します。  
+ `IfObjectExists`列挙体の値を使用してプロパティを設定し `IfObjectExists` ます。  
   
 |IfObjectExists の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -308,7 +307,7 @@ ms.locfileid: "62898900"
 |Overwrite|1|  
 |Skip|2|  
   
- `LoginsToTransfer``LoginsToTransfer`列挙体の値を使用してプロパティを設定します。  
+ `LoginsToTransfer`列挙体の値を使用してプロパティを設定し `LoginsToTransfer` ます。  
   
 |LoginsToTransfer の表示名|数値|  
 |---------------------------------------|-------------------|  
@@ -317,7 +316,7 @@ ms.locfileid: "62898900"
 |[AllLoginsFromSelectedDatabases]|2|  
   
 ### <a name="transfer-master-stored-procedures-task"></a>Master ストアド プロシージャ転送タスク  
- `IfObjectExists``IfObjectExists`列挙体の値を使用してプロパティを設定します。  
+ `IfObjectExists`列挙体の値を使用してプロパティを設定し `IfObjectExists` ます。  
   
 |IfObjectExists の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -326,7 +325,7 @@ ms.locfileid: "62898900"
 |Skip|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>SQL Server オブジェクトの転送タスク  
- `ExistingData``ExistingData`列挙体の値を使用してプロパティを設定します。  
+ `ExistingData`列挙体の値を使用してプロパティを設定し `ExistingData` ます。  
   
 |ExistingData の表示名|数値|  
 |-----------------------------------|-------------------|  
@@ -334,7 +333,7 @@ ms.locfileid: "62898900"
 |Append|1|  
   
 ### <a name="web-service-task"></a>Web サービス タスク  
- `OutputType``DTSOutputType`列挙体の値を使用してプロパティを設定します。  
+ `OutputType`列挙体の値を使用してプロパティを設定し `DTSOutputType` ます。  
   
 |DTSOutputType の表示名|数値|  
 |------------------------------------|-------------------|  
@@ -342,7 +341,7 @@ ms.locfileid: "62898900"
 |変数|1|  
   
 ### <a name="wmi-data-reader-task"></a>WMI データ リーダー タスク  
- `OverwriteDestination``OverwriteDestination`列挙体の値を使用してプロパティを設定します。  
+ `OverwriteDestination`列挙体の値を使用してプロパティを設定し `OverwriteDestination` ます。  
   
 |OverwriteDestination の表示名|数値|  
 |-------------------------------------------|-------------------|  
@@ -350,7 +349,7 @@ ms.locfileid: "62898900"
 |AppendToDestination|1|  
 |KeepOriginal|2|  
   
- `OutputType``OutputType`列挙体の値を使用してプロパティを設定します。  
+ `OutputType`列挙体の値を使用してプロパティを設定し `OutputType` ます。  
   
 |OutputType の表示名|数値|  
 |---------------------------------|-------------------|  
@@ -358,14 +357,14 @@ ms.locfileid: "62898900"
 |PropertyValue|1|  
 |PropertyNameAndValue|2|  
   
- `DestinationType``DestinationType`列挙体の値を使用してプロパティを設定します。  
+ `DestinationType`列挙体の値を使用してプロパティを設定し `DestinationType` ます。  
   
 |DestinationType の表示名|数値|  
 |--------------------------------------|-------------------|  
 |[FileConnection]|0|  
 |変数|1|  
   
- `WqlQuerySourceType``QuerySourceType`列挙体の値を使用してプロパティを設定します。  
+ `WqlQuerySourceType`列挙体の値を使用してプロパティを設定し `QuerySourceType` ます。  
   
 |QuerySourceType の表示名|数値|  
 |--------------------------------------|-------------------|  
@@ -373,21 +372,21 @@ ms.locfileid: "62898900"
 |DirectInput|1|  
 |変数|2|  
   
- WMI イベント監視`ActionAtEvent`のプロパティ-列挙の`ActionAtEvent`値を使用して設定されます。  
+ WMI イベント監視の `ActionAtEvent` プロパティ-列挙の値を使用して設定さ `ActionAtEvent` れます。  
   
 |ActionAtEvent の表示名|数値|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
 |LogTheEvent|1|  
   
- `ActionAtTimeout``ActionAtTimeout`列挙体の値を使用してプロパティを設定します。  
+ `ActionAtTimeout`列挙体の値を使用してプロパティを設定し `ActionAtTimeout` ます。  
   
 |ActionAtTimeout の表示名|数値|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
 |LogTimeout|1|  
   
- `AfterEvent``AfterEvent`列挙体の値を使用してプロパティを設定します。  
+ `AfterEvent`列挙体の値を使用してプロパティを設定し `AfterEvent` ます。  
   
 |AfterEvent の表示名|数値|  
 |---------------------------------|-------------------|  
@@ -395,7 +394,7 @@ ms.locfileid: "62898900"
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `AfterTimeout``AfterTimeout`列挙体の値を使用してプロパティを設定します。  
+ `AfterTimeout`列挙体の値を使用してプロパティを設定し `AfterTimeout` ます。  
   
 |AfterTimeout の表示名|数値|  
 |-----------------------------------|-------------------|  
@@ -403,7 +402,7 @@ ms.locfileid: "62898900"
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `WqlQuerySourceType``QuerySourceType`列挙体の値を使用してプロパティを設定します。  
+ `WqlQuerySourceType`列挙体の値を使用してプロパティを設定し `QuerySourceType` ます。  
   
 |QuerySourceType の表示名|数値|  
 |--------------------------------------|-------------------|  
@@ -412,7 +411,7 @@ ms.locfileid: "62898900"
 |変数|2|  
   
 ### <a name="xml-task"></a>XML タスク  
- `OperationType``DTSXMLOperation`列挙体の値を使用してプロパティを設定します。  
+ `OperationType`列挙体の値を使用してプロパティを設定し `DTSXMLOperation` ます。  
   
 |DTSXMLOperation の表示名|数値|  
 |--------------------------------------|-------------------|  
@@ -423,7 +422,7 @@ ms.locfileid: "62898900"
 |[Diff]|4|  
 |修正プログラム|5|  
   
- `SourceType`、 `SecondOperandType`、および`XPathSourceType`の各プロパティ-列挙の`DTSXMLSourceType`値を使用して設定されます。  
+ `SourceType`、 `SecondOperandType` 、およびの各 `XPathSourceType` プロパティ-列挙の値を使用して設定さ `DTSXMLSourceType` れます。  
   
 |DTSXMLSourceType の表示名|数値|  
 |---------------------------------------|-------------------|  
@@ -431,21 +430,21 @@ ms.locfileid: "62898900"
 |変数|1|  
 |DirectInput|2|  
   
- `DestinationType`および**DiffGramDestinationType**プロパティ-列挙の`DTSXMLSaveResultTo`値を使用して設定します。  
+ `DestinationType`および**DiffGramDestinationType**プロパティ-列挙の値を使用して設定し `DTSXMLSaveResultTo` ます。  
   
 |DTSXMLSaveResultTo の表示名|数値|  
 |-----------------------------------------|-------------------|  
 |[FileConnection]|0|  
 |変数|1|  
   
- `ValidationType``DTSXMLValidationType`列挙体の値を使用してプロパティを設定します。  
+ `ValidationType`列挙体の値を使用してプロパティを設定し `DTSXMLValidationType` ます。  
   
 |DTSXMLValidationType の表示名|数値|  
 |-------------------------------------------|-------------------|  
 |[DTD]|0|  
 |[XSD]|1|  
   
- `XPathOperation``DTSXMLXPathOperation`列挙体の値を使用してプロパティを設定します。  
+ `XPathOperation`列挙体の値を使用してプロパティを設定し `DTSXMLXPathOperation` ます。  
   
 |DTSXMLXPathOperation の表示名|数値|  
 |-------------------------------------------|-------------------|  
@@ -453,7 +452,7 @@ ms.locfileid: "62898900"
 |値|1|  
 |NodeList|2|  
   
- `DiffOptions``DTSXMLDiffOptions`列挙体の値を使用してプロパティを設定します。 この列挙子の各オプションは相互排他的ではなく、複数を同時に指定することができます。 複数のオプションを使用するには、適用するオプションをコンマ区切りのリストで指定します。  
+ `DiffOptions`列挙体の値を使用してプロパティを設定し `DTSXMLDiffOptions` ます。 この列挙子の各オプションは相互排他的ではなく、複数を同時に指定することができます。 複数のオプションを使用するには、適用するオプションをコンマ区切りのリストで指定します。  
   
 |DTSXMLDiffOptions の表示名|数値|  
 |----------------------------------------|-------------------|  
@@ -467,7 +466,7 @@ ms.locfileid: "62898900"
 |IgnoreXmlDecl|64|  
 |IgnoreDtd|128|  
   
- `DiffAlgorithm``DTSXMLDiffAlgorithm`列挙体の値を使用してプロパティを設定します。  
+ `DiffAlgorithm`列挙体の値を使用してプロパティを設定し `DTSXMLDiffAlgorithm` ます。  
   
 |DTSXMLDiffAlgorithm の表示名|数値|  
 |------------------------------------------|-------------------|  
@@ -483,7 +482,7 @@ ms.locfileid: "62898900"
 ### <a name="all-maintenance-tasks"></a>すべてのメンテナンス タスク  
  すべてのメンテナンス タスクでは、次の列挙子を使用して、指定したプロパティを設定します。  
   
- `DatabaseSelectionType``DatabaseSelection`列挙体の値を使用してプロパティを設定します。  
+ `DatabaseSelectionType`列挙体の値を使用してプロパティを設定し `DatabaseSelection` ます。  
   
 |DatabaseSelection の表示名|数値|  
 |----------------------------------------|-------------------|  
@@ -493,7 +492,7 @@ ms.locfileid: "62898900"
 |User|3|  
 |固有|4|  
   
- `TableSelectionType``TableSelection`列挙体の値を使用してプロパティを設定します。  
+ `TableSelectionType`列挙体の値を使用してプロパティを設定し `TableSelection` ます。  
   
 |TableSelection の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -501,7 +500,7 @@ ms.locfileid: "62898900"
 |All|1|  
 |固有|2|  
   
- `ObjectTypeSelection``ObjectType`列挙体の値を使用してプロパティを設定します。  
+ `ObjectTypeSelection`列挙体の値を使用してプロパティを設定し `ObjectType` ます。  
   
 |ObjectType の表示名|数値|  
 |---------------------------------|-------------------|  
@@ -510,21 +509,21 @@ ms.locfileid: "62898900"
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>データベースのバックアップ タスク  
- `DestinationCreationType``DestinationType`列挙体の値を使用してプロパティを設定します。  
+ `DestinationCreationType`列挙体の値を使用してプロパティを設定し `DestinationType` ます。  
   
 |DestinationType の表示名|数値|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
 |マニュアル|1|  
   
- `ExistingBackupsAction``ActionForExistingBackups`列挙体の値を使用してプロパティを設定します。  
+ `ExistingBackupsAction`列挙体の値を使用してプロパティを設定し `ActionForExistingBackups` ます。  
   
 |ActionForExistingBackups の表示名|数値|  
 |-----------------------------------------------|-------------------|  
 |Append|0|  
 |Overwrite|1|  
   
- `BackupAction``BackupTaskType`列挙体の値を使用してプロパティを設定します。 このプロパティは、タスクで実行されるバックアップの種類を定義する際に、`BackupIsIncremental` プロパティと合わせて使用します。  
+ `BackupAction`列挙体の値を使用してプロパティを設定し `BackupTaskType` ます。 このプロパティは、タスクで実行されるバックアップの種類を定義する際に、`BackupIsIncremental` プロパティと合わせて使用します。  
   
 |BackupTaskType の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -532,7 +531,7 @@ ms.locfileid: "62898900"
 |ファイル|1|  
 |ログ|2|  
   
- `BackupDevice`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) `DeviceType`列挙の値を使用してプロパティを設定します。  
+ `BackupDevice`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) 列挙の値を使用してプロパティを設定し `DeviceType` ます。  
   
 |DeviceType の表示名|数値|  
 |---------------------------------|-------------------|  
@@ -543,14 +542,14 @@ ms.locfileid: "62898900"
 |VirtualDevice|4|  
   
 ### <a name="maintenance-cleanup-task"></a>メンテナンス クリーンアップ タスク  
- `FileTypeSelected``FileType`列挙体の値を使用してプロパティを設定します。  
+ `FileTypeSelected`列挙体の値を使用してプロパティを設定し `FileType` ます。  
   
 |FileType の表示名|数値|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
 |FileReport|1|  
   
- `OlderThanTimeUnitType``TimeUnitType`列挙体の値を使用してプロパティを設定します。  
+ `OlderThanTimeUnitType`列挙体の値を使用してプロパティを設定し `TimeUnitType` ます。  
   
 |TimeUnitType の表示名|数値|  
 |-----------------------------------|-------------------|  
@@ -560,7 +559,7 @@ ms.locfileid: "62898900"
 |年|3|  
   
 ### <a name="update-statistics-task"></a>統計の更新タスク  
- `UpdateType`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) `StatisticsTarget`列挙の値を使用してプロパティを設定します。  
+ `UpdateType`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) 列挙の値を使用してプロパティを設定し `StatisticsTarget` ます。  
   
 |StatisticsTarget の表示名|数値|  
 |---------------------------------------|-------------------|  
@@ -571,7 +570,7 @@ ms.locfileid: "62898900"
 ##  <a name="common-properties"></a><a name="CommonProperties"></a> 共通プロパティ  
  パッケージ、タスク、Foreach ループ コンテナー、For ループ コンテナー、およびシーケンス コンテナーでは、次の列挙子を使用して、指定されたプロパティを設定できます。  
   
- `ForceExecutionResult``DTSForcedExecResult`列挙体の値を使用してプロパティを設定します。  
+ `ForceExecutionResult`列挙体の値を使用してプロパティを設定し `DTSForcedExecResult` ます。  
   
 |DTSForcedExecResult の表示名|数値|  
 |------------------------------------------|-------------------|  
@@ -580,9 +579,9 @@ ms.locfileid: "62898900"
 |障害|1|  
 |Completion|2|  
   
- `IsolationLevel`プロパティ-.NET Framework `IsolationLevel`列挙体によって設定されます。 詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink?LinkId=17313)の .NET Framework クラス ライブラリを参照してください。  
+ `IsolationLevel`プロパティ-.NET Framework 列挙体によって設定さ `IsolationLevel` れます。 詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink?LinkId=17313)の .NET Framework クラス ライブラリを参照してください。  
   
- `LoggingMode``DTSLoggingMode`列挙体の値を使用してプロパティを設定します。  
+ `LoggingMode`列挙体の値を使用してプロパティを設定し `DTSLoggingMode` ます。  
   
 |DTSLoggingMode の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -590,7 +589,7 @@ ms.locfileid: "62898900"
 |有効|1|  
 |無効|2|  
   
- `TransactionOption``DTSTransactionOption`列挙体の値を使用してプロパティを設定します。  
+ `TransactionOption`列挙体の値を使用してプロパティを設定し `DTSTransactionOption` ます。  
   
 |DTSTransactionOption の表示名|数値|  
 |-------------------------------------------|-------------------|  

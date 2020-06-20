@@ -1,5 +1,6 @@
 ---
 title: 一括コピーバッチサイズの管理 |Microsoft Docs
+description: 一括コピーのバッチサイズでトランザクションの範囲を定義する方法について説明します。これにより、SQL Server Native Client ODBC でのエラーの動作とロックのオーバーヘッドが発生します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8ad5561de57c88e052d09741444c1608ea77086
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac8a9ecfe978614b7f2b9121fcf285944bf92638
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785308"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967722"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>一括コピー バッチ サイズの管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "73785308"
   
  バッチ サイズを指定せずに一括コピーを実行し、エラーが発生した場合は、一括コピー全体がロールバックされます。 実行時間が長い一括コピーの復旧には時間がかかることがあります。 バッチ サイズを設定すると、各バッチが 1 つのトランザクションと見なされ、各バッチがコミットされます。 エラーが発生した場合は、最後の未解決のバッチだけがロールバックされます。  
   
- バッチ サイズは、ロックのオーバーヘッドにも影響を与えることがあります。 に対して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一括コピーを実行する場合は、 [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)を使用して TABLOCK ヒントを指定し、行ロックではなくテーブルロックを取得できます。 1 つのテーブル ロックを設定すると、一括コピー操作全体のオーバーヘッドを最小限に抑えることができます。 TABLOCK を指定しないと各行がロックされるので、一括コピーの実行中にすべてのロックを保持するオーバーヘッドにより、パフォーマンスが低下することがあります。 トランザクションの長さだけロックが保持されるので、バッチ サイズを指定すると、定期的にコミットが発生して、その時点で保持されているロックが解放されるため、この問題を解決できます。  
+ バッチ サイズは、ロックのオーバーヘッドにも影響を与えることがあります。 に対して一括コピーを実行する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)を使用して TABLOCK ヒントを指定し、行ロックではなくテーブルロックを取得できます。 1 つのテーブル ロックを設定すると、一括コピー操作全体のオーバーヘッドを最小限に抑えることができます。 TABLOCK を指定しないと各行がロックされるので、一括コピーの実行中にすべてのロックを保持するオーバーヘッドにより、パフォーマンスが低下することがあります。 トランザクションの長さだけロックが保持されるので、バッチ サイズを指定すると、定期的にコミットが発生して、その時点で保持されているロックが解放されるため、この問題を解決できます。  
   
  大量の行を一括コピーする場合、1 つのバッチを構成する行数がパフォーマンスに大きな影響を与えることがあります。 推奨バッチ サイズは、実行する一括コピーの種類によって異なります。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "73785308"
   
  バッチはトランザクションのサイズを指定するだけでなく、ネットワーク経由でサーバーに行を送信するときにも影響を与えます。 一括コピー関数は、通常、ネットワークパケットがいっぱいになるまで**bcp_sendrow**から行をキャッシュしてから、完全なパケットをサーバーに送信します。 ただし、アプリケーションが**bcp_batch**を呼び出すと、そのパケットがいっぱいになっているかどうかに関係なく、現在のパケットがサーバーに送信されます。 バッチ サイズを非常に小さくすると、いっぱいになっていないパケットが大量にサーバーに送信されるので、パフォーマンスが低下することがあります。 たとえば、すべての**bcp_sendrow**の後に**bcp_batch**を呼び出すと、各行が個別のパケットで送信され、行が非常に大きい場合を除き、各パケットの領域が無駄になります。 SQL Server のネットワークパケットの既定のサイズは 4 KB ですが、アプリケーションでは、SQL_ATTR_PACKET_SIZE 属性を指定して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出すことによってサイズを変更できます。  
   
- バッチのもう1つの副作用は、 **bcp_batch**で完了するまで、各バッチが未処理の結果セットと見なされることです。 バッチが未処理のときに接続ハンドルで他の操作が試行された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合、NATIVE Client ODBC ドライバーでは、SQLState = "HY000" およびエラーメッセージ文字列の次のエラーが発生します。  
+ バッチのもう1つの副作用は、 **bcp_batch**で完了するまで、各バッチが未処理の結果セットと見なされることです。 バッチが未処理のときに接続ハンドルで他の操作が試行された場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーでは、SQLState = "HY000" およびエラーメッセージ文字列の次のエラーが発生します。  
   
 ```  
 "[Microsoft][SQL Server Native Client] Connection is busy with  

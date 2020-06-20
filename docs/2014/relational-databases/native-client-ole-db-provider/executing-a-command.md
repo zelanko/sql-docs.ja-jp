@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 47307455468a20351c3a3cda2a619e6296fb29ad
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 41e8da036d5a4b6469a31213247ad7d4edb7dbfe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704732"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056011"
 ---
 # <a name="executing-a-command"></a>コマンドの実行
   データ ソースへの接続が確立されたら、コンシューマーは **IDBCreateSession::CreateSession** メソッドを呼び出してセッションを作成します。 セッションは、コマンド、行セット、またはトランザクションのファクトリとして動作します。  

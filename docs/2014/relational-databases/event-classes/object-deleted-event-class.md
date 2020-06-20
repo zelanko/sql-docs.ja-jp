@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3145385db6239df128ead6070ebede48bc96e64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90bcc20e16d775e6497958fc1adc58269fb24296
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63025828"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029377"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted イベント クラス
   Object:Deleted イベント クラスは、DROP INDEX ステートメントや DROP TABLE ステートメントなどによって、オブジェクトが削除されたことを示します。 たとえば、頻繁に一時ストアド プロシージャを作成する ODBC アプリケーションによって、オブジェクトが削除されているかどうかを判断するために使用できます。  

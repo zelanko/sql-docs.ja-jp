@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f435e79b3f03d2fecdf0d2f18d2fd5aad90bfa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110153"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048323"
 ---
 # <a name="viewing-tuning-reports"></a>チューニング レポートの表示
   このレッスンの前の実習では、MySession チューニング セッションの結果として生成されたデータベース エンジン チューニング アドバイザーの推奨設定内で、データベース オブジェクトを作成または削除する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを表示しました。 MySession チューニング セッションは「 [ワークロードのチューニング](lesson-1-1-tuning-a-workload.md)」で作成しました。  
@@ -36,7 +35,7 @@ ms.locfileid: "66110153"
   
 4.  **[チューニング レポート]** ペインで、 **[レポートの選択]** ボックスの一覧から **[ステートメント コスト レポート]** を選択します。 レポートを表示するためのスペースがさらに必要な場合は、 **[セッション モニター]** ペインの境界を左方向にドラッグします。 データベース内のテーブルに対して実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのパフォーマンス コストは、ステートメントによって異なります。 テーブル内で、アクセス頻度の高い列に有効なインデックスを作成することによって、このパフォーマンス コストを軽減できます。 このレポートは、ワークロードでの元のステートメント実行コストと、チューニング推奨設定の実装後のコストを比較し、予測向上率を示します。 このレポートに表示される情報量は、ワークロードの規模と複雑さに左右されます。  
   
-5.  グリッド領域で **ステートメント コスト レポート** を右クリックし、 **[ファイルへエクスポート]** をクリックします。 レポートをとし`MyReport`て保存します。 ファイル名には、拡張子 .xml が自動的に付加されます。 使い慣れた XML エディターまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で MyReport.xml を開き、レポートの内容を表示できます。  
+5.  グリッド領域で **ステートメント コスト レポート** を右クリックし、 **[ファイルへエクスポート]** をクリックします。 レポートをとして保存 `MyReport` します。 ファイル名には、拡張子 .xml が自動的に付加されます。 使い慣れた XML エディターまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で MyReport.xml を開き、レポートの内容を表示できます。  
   
 6.  データベース エンジン チューニング アドバイザーの **[レポート]** タブに戻り、再び **ステートメント コスト レポート** 右クリックします。 使用できるその他のオプションを確認してください。 表示しているレポートのフォントを変更することも可能です。 ここでフォントを変更すると、他のタブ付きページのフォントも変更されます。  
   
@@ -46,6 +45,6 @@ ms.locfileid: "66110153"
  データベース エンジン チューニング アドバイザー GUI の **[レポート]** タブを使用し、MySession チューニング セッションを検証しました。 同様の手順で、EvaluateMySession チューニング セッションで生成したレポートを調べることができます。 このレポートの内容を検証するには、 **[セッション モニター]** ペインの **[EvaluateMySession]** をダブルクリックします。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 3:DTA コマンド プロンプト ユーティリティの使用](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [レッスン 3:dta コマンド プロンプト ユーティリティの使用](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

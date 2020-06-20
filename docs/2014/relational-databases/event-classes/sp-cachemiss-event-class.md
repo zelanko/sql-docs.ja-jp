@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5f3d74cad3f462d9bd8d2d57cc3b6e37c4739598
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91df12e64c24bb3e21bb69e73f5ac1741f18ba0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050928"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028401"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss イベント クラス
   SP:CacheMiss イベント クラスは、プロシージャをキャッシュ内で検出できなかったことを示します。 SP:CacheMiss イベント クラスが頻繁に発生する場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できるメモリを増やす必要があることを示している可能性があります。それによって、プロシージャ キャッシュのサイズが増えます。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d503ffad6c8d723bb0d933120a37e9b680a37cd7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d141c1951066af14e25cb4dd36459f5e87051001
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704796"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056077"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
   序数順に各パラメーターのパラメーター プロパティを設定するか、SSPARAMPROPS 構造体の配列を指定して、一括でパラメーター プロパティを設定します。  
@@ -45,7 +44,7 @@ SSPARAMPROPS rgParamProperties[]);
 ## <a name="return-code-values"></a>リターン コードの値  
  この `ISSCommandWithParameters::SetParameterProperties` メソッドは、コア OLE DB **ICommandProperties:: SetProperties**メソッドと同じエラーコードを返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このメソッドを使用してパラメーターのプロパティを設定できるのは、序数によってパラメーターごとに指定するか、または `ISSCommandWithParameters::SetParameterProperties` SSPARC AMPROPS がプロパティ配列から構築された1回の呼び出しで許可されます。  
   
  メソッドを呼び出す前に**Setparameterinfo**メソッドを呼び出す必要があり `ISSCommandWithParameters::SetParameterProperties` ます。 `SetParameterProperties(0, NULL)` を呼び出すと、指定したパラメーター プロパティがすべて消去されます。また、`SetParameterInfo(0,NULL,NULL)` を呼び出すと、パラメーターに関連付けられているすべてのプロパティを含めて、パラメーターに関するすべての情報が消去されます。  

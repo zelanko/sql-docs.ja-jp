@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bb567bffe0c184907ca61bd583eb5666948a0f03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad036177e6265c31697a98c9e24fc4d1c11b310b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176184"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967248"
 ---
 # <a name="extending-packages-with-scripting"></a>スクリプトによるパッケージの拡張
   組み込みコンポーネントの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が要件を満たしていない場合は、独自の拡張機能をコーディングすることによって [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の機能を拡張できます。 パッケージを拡張するには 2 つの方法があります。1 つ目は、スクリプト タスクおよびスクリプト コンポーネントによって提供される強力なラッパー内でコードを記述する方法です。2 つ目は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクト モデルによって提供される基本クラスを基にカスタム [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 拡張機能を最初から作成する方法です。
@@ -39,13 +38,13 @@ ms.locfileid: "78176184"
 
  [スクリプトコンポーネントによるデータフローの拡張](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)スクリプトコンポーネントを使用して、カスタムデータフローの変換元、変換、および変換先を作成する方法について説明します。 通常は、処理するデータ行ごとにデータ フロー コンポーネントが 1 回呼び出されます。
 
-## <a name="reference"></a>リファレンス
- [Integration Services のエラーとメッセージの参照](../integration-services-error-and-message-reference.md)定義済み[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のエラーコードとそのシンボル名と説明を一覧表示します。
+## <a name="reference"></a>関連項目
+ [Integration Services のエラーとメッセージの参照](../integration-services-error-and-message-reference.md)定義済みの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラーコードとそのシンボル名と説明を一覧表示します。
 
 ## <a name="related-sections"></a>関連項目
  [カスタムオブジェクトを使用したパッケージの拡張](../extending-packages-custom-objects/extending-packages-with-custom-objects.md)複数のパッケージで使用するプログラムカスタムタスク、データフローコンポーネント、およびその他のパッケージオブジェクトを作成する方法について説明します。
 
- [プログラムによるパッケージの作成](../building-packages-programmatically/building-packages-programmatically.md)プログラムによってパッケージを作成、構成、実行、読み込み、保存[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 、および管理する方法について説明します。
+ [プログラムによるパッケージの作成](../building-packages-programmatically/building-packages-programmatically.md)プログラムによってパッケージを作成、構成、実行、読み込み、保存、および管理する方法について説明し [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ます。
 
 ![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] が提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 

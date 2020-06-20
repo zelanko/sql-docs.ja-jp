@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c36fbe634fbc2b17547f127290cfbaed6e745c7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775345"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932530"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>SQL Server 2014 サービス更新プログラムのインストール
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の更新プログラムのインストールについて説明します。 このセクションでは、次の項目について説明します。  
@@ -37,10 +36,10 @@ ms.locfileid: "62775345"
   
 -   ネットワーク共有  
   
- セットアップで最新バージョンの適用可能な更新プログラムが検出されると、ダウンロードが実行されて、現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ プロセスと統合されます。 製品の更新プログラムには、累積更新プログラム、サービス パック、またはサービス パックと累積更新プログラムが含まれる場合があります。 製品の更新プログラム機能は、PCU1 で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]提供されていた[スリップストリーム機能](https://go.microsoft.com/fwlink/?LinkId=219945)を拡張したものです。  
+ セットアップで最新バージョンの適用可能な更新プログラムが検出されると、ダウンロードが実行されて、現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ プロセスと統合されます。 製品の更新プログラムには、累積更新プログラム、サービス パック、またはサービス パックと累積更新プログラムが含まれる場合があります。 製品の更新プログラム機能は、PCU1 で提供されていた[スリップストリーム機能](https://go.microsoft.com/fwlink/?LinkId=219945)を拡張したものです [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。  
   
 ## <a name="installing-updates-for-sscurrent-after-it-has-already-been-installed"></a>既にインストールされている [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の更新プログラムをインストールする  
- のインストール済みインスタンスで[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は、利用可能なすべての更新プログラム (一般配布リリース (GDR-security/critical updates)、Service PACK (SP)、および使用可能な最新の累積的な更新プログラム (CU)) を適用することをお勧めします。  
+ のインストール済みインスタンスでは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、利用可能なすべての更新プログラム (一般配布リリース (GDR-security/critical updates)、Service pack (SP)、および使用可能な最新の累積的な更新プログラム (CU)) を適用することをお勧めします。  
   
  サービスリリースの種類に応じて、SQL Server の更新プログラムは、Microsoft Update (MU)、Microsoft ダウンロードセンター、またはカスタマーサポートサービス修正プログラムサーバーを通じて入手できます。 SQL Server のセキュリティ更新プログラムと重要な更新プログラムは、Microsoft Update によって自動的に提供されます (MU にオプトインするために必要なこれらの更新プログラムをコントロールパネルの Windows Update で確認できるようにするため)。 Service Pack は、MU のダウンロードセンターだけでなく、オプション/重要ダウンロードとしても利用できます。 累積更新プログラムは、CU サポート技術情報の記事に記載されている Microsoft 修正プログラムダウンロードサーバーから入手できます。  
   

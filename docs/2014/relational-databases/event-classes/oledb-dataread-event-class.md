@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d12bf6f0e002b1f06bc96ff97608f88bd305b34b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7911e64ca0e272b95f1c88b705ab9aca9ea75483
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62960809"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029172"
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead イベント クラス
   OLEDB DataRead イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から分散クエリやリモート ストアド プロシージャの OLE DB プロバイダーが呼び出されるときに発生します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が OLE DB プロバイダーにデータ要求呼び出しを行う時点を監視するトレースに、このイベント クラスを含めます。  
@@ -36,7 +35,7 @@ ms.locfileid: "62960809"
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |Duration|`bigint`|OLE DB Call イベントを完了する時間長。|13|いいえ|  
 |EndTime|`datetime`|イベントが終了した時刻。|15|はい|  
-|Error|`int`|特定のイベントのエラー番号。 多くの場合、sys.messages カタログ ビューに保存されているエラー番号です。|31|はい|  
+|エラー|`int`|特定のイベントのエラー番号。 多くの場合、sys.messages カタログ ビューに保存されているエラー番号です。|31|はい|  
 |EventClass|`int`|イベントの種類 = 121。|27|いいえ|  
 |EventSequence|`int`|バッチ内の OLE DB イベント クラスのシーケンス。|51|いいえ|  
 |EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 0 = 開始<br /><br /> 1 = 完了|21|いいえ|  

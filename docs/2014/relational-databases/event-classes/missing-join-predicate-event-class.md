@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb2cd178440a2d0ea0cd9842616a52058a63f7b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3c02ce70ace777c171aa981ae6e2f53d235aaa4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662186"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029464"
 ---
 # <a name="missing-join-predicate-event-class"></a>Missing Join Predicate イベント クラス
   Missing Join Predicate イベント クラスは、結合述語がないクエリが実行されていることを示します。 クエリの終了に時間がかかる可能性があります。 結合述語の詳細については、「[述語 &#40;Transact-SQL&#41;](/sql/t-sql/queries/predicates)」を参照してください。  
@@ -51,6 +50,6 @@ ms.locfileid: "62662186"
   
 ## <a name="see-also"></a>参照  
  [sp_trace_setevent &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [SQL Server プロファイラー](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

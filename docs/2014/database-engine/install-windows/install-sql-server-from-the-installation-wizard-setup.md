@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0e0af29d348ff55b415d22d44bc8e8e48a35d290
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0561ff95fc5fbcfb6a9dc552580e14ff2a5d14f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775752"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932725"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>インストール ウィザードからの SQL Server 2014 のインストール (セットアップ)
-  ここでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ インストール ウィザードを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをインストールする手順について詳しく説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでは、1 つの機能ツリーを使用してすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをインストールできるため、それらを個別にインストールする必要はありません。 インストールできるさまざまなコンポーネントの詳細については、「 [SQL Server 2014 用のインストール](installation-for-sql-server.md)」を参照してください。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネントを個別にインストールする方法の詳細については、「 [install SQL Server 2014](install-sql-server.md)」を参照してください。  
+  ここでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ インストール ウィザードを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをインストールする手順について詳しく説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでは、1 つの機能ツリーを使用してすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをインストールできるため、それらを個別にインストールする必要はありません。 インストールできるさまざまなコンポーネントの詳細については、「 [SQL Server 2014 用のインストール](installation-for-sql-server.md)」を参照してください。  コンポーネントを個別にインストールする方法の詳細については [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「 [install SQL Server 2014](install-sql-server.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールする他の方法については、次のトピックに記載されています。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62775752"
   
 3.  [プロダクト キー] ページで、オプションを選択して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の無償のエディション、または PID キーを持つ製品版のどちらをインストールするかを指定します。 詳細については、「 [SQL Server 2014 のエディションとコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
   
-     続行するには、[**次へ**] をクリックします。  
+     続行するには、 **[次へ]** をクリックします。  
   
 4.  [ライセンス条項] ページで使用許諾契約書を確認し、同意する場合は **[ライセンス条項に同意する]** チェック ボックスをオンにして、 **[次へ]** をクリックします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の機能向上に役立てるため、機能の使用状況オプションを有効にしてレポートを [!INCLUDE[msCoName](../../includes/msconame-md.md)]に送信することもできます。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62775752"
   
 8.  [セットアップ ファイルのインストール] ページのセットアップには、セットアップ ファイルのダウンロード、抽出、およびインストールの進行状況が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップの更新プログラムが検出され、含まれるように指定されている場合は、その更新プログラムもインストールされます。  
   
-9. [セットアップロール] ページで、[ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能のインストール**] を選択し、[**次**へ] をクリックして [機能の選択] ページに進みます。  
+9. [セットアップ ロール] ページで、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能のインストール**をクリックし、 **[次へ]** をクリックして [機能の選択] ページに進みます。  
   
 10. [機能の選択] ページで、インストールするコンポーネントを選択します。 機能名を選択すると、 **[機能の説明]** ペインに各コンポーネント グループの説明が表示されます。 チェック ボックスはいくつでもオンにできます。 詳細については、「 [SQL Server 2014 のエディションとコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)」および[SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "62775752"
   
      すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack とアップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各コンポーネントに適用されます。  
   
-     [**インストール済みのインスタンス**数: セットアップ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されているコンピューター上にあるのインスタンスがグリッドに表示されます。 既定のインスタンスが既にコンピューターにインストールされている場合、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の名前付きインスタンスをインストールする必要があります。  
+     [**インストール済みのインスタンス**数: セットアップが実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューター上にあるのインスタンスがグリッドに表示されます。 既定のインスタンスが既にコンピューターにインストールされている場合、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の名前付きインスタンスをインストールする必要があります。  
   
      インストールの残りの部分のワーク フローは、インストールするように指定した機能に応じて異なります。 選択した機能によっては、表示されないページもあります。  
   
@@ -142,21 +141,21 @@ ms.locfileid: "62775752"
   
      分散再生コントローラー サービスに対するアクセス許可を付与するユーザーを追加するには、 **[現在のユーザーの追加]** をクリックします。 分散再生コントローラー サービスのアクセス許可を追加するには、 **[追加]** をクリックします。 Distributed Replay Controller サービスからアクセス許可を削除するには、 **[削除]** をクリックします。  
   
-     続行するには、[**次へ**] をクリックします。  
+     続行するには、 **[次へ]** をクリックします。  
   
 18. [分散再生クライアントの構成] ページを使用して、分散再生クライアント サービスに対する管理権限を付与するユーザーを指定します。 管理権限を持つユーザーには、分散再生クライアント サービスへの無制限のアクセス許可が与えられます。  
   
-     **[コントローラー名]** は、省略可能なパラメーターで、既定値は \<*blank*> です。 分散再生クライアント サービスと通信するクライアント コンピューターであるコントローラーの名前を入力します。 次のことを考慮してください。  
+     **コントローラー名**は省略可能なパラメーターで、既定値は \<*blank*> です。 分散再生クライアント サービスと通信するクライアント コンピューターであるコントローラーの名前を入力します。 次のことを考慮してください。  
   
     -   コントローラーを既にセットアップしてある場合は、各クライアントを構成するときにコントローラーの名前を入力します。  
   
     -   コントローラーをまだセットアップしていない場合は、コントローラー名を空白にしておくことができます。 ただし、コントローラー名を **クライアント構成** ファイルに手動で入力する必要があります。  
   
-     分散再生クライアントサービスの**作業ディレクトリ**を指定します。 既定の作業ディレクトリは\< *、ドライブ文字*>:\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\dreplayclient\workingdir です\\です。  
+     分散再生クライアントサービスの**作業ディレクトリ**を指定します。 既定の作業ディレクトリは、 \<*drive letter*> \dreplayclient\workingdir ですファイルです \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ 。  
   
-     分散再生クライアントサービスの**結果ディレクトリ**を指定します。 既定の結果ディレクトリは\< *、ドライブ文字*>:\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\dreplayclient\resultdir です\\です。  
+     分散再生クライアントサービスの**結果ディレクトリ**を指定します。 既定の結果ディレクトリは、 \<*drive letter*> \dreplayclient\resultdir ですファイルです \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ 。  
   
-     続行するには、[**次へ**] をクリックします。  
+     続行するには、 **[次へ]** をクリックします。  
   
 19. [インストールの準備完了] ページには、セットアップで指定したインストール オプションのツリー ビューが表示されます。 このページで、セットアップは製品の更新プログラム機能が有効/無効であるか、および最終バージョンの更新プログラムであるかどうかを示します。  
   
