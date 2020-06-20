@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f2b6c03506139ded1fd4452bb19f23c931ea0c76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc5e8b1636d26349bb3938d4b3bcbdf0fbf43e1a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127105"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050635"
 ---
 # <a name="srv_paramtype-extended-stored-procedure-api"></a>srv_paramtype (拡張ストアド プロシージャ API)
     
@@ -58,7 +57,7 @@ n
 ## <a name="returns"></a>戻り値  
  パラメーターのデータ型のトークン値を返します。 データ型については、「[データ型 &#40;拡張ストアド プロシージャ API&#41;](data-types-extended-stored-procedure-api.md)」をご覧ください。 *n* 番目のパラメーターがない場合、またはリモート ストアド プロシージャがない場合は、- 1 を返します。  
   
- パラメーターが[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]データ型の1つである場合、この関数は次の値を返します。  
+ パラメーターがデータ型の1つである場合、この関数は次の値を返し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。  
   
 |新しいデータ型|戻り値|  
 |--------------------|------------------|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05b8211569b6ce83faaec043e5eb527a60f0ddab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918971"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970562"
 ---
 # <a name="set-or-change-the-column-collation"></a>列の照合順序の設定または変更
   `char` 型、`varchar` 型、`text` 型、`nchar` 型、`nvarchar` 型、および `ntext` 型のデータのデータベース照合順序は、テーブルの列ごとに異なる照合順序を指定し、次のいずれかを使用することでオーバーライドできます。  
@@ -38,7 +37,7 @@ ms.locfileid: "62918971"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 詳細については、「 [照合順序と Unicode のサポート](collation-and-unicode-support.md)」を参照してください。  
   
--   管理オブジェクト`Column.Collation` (SMO [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) でプロパティを使用します。  
+-   `Column.Collation` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) でプロパティを使用します。  
   
  次のいずれかから現在参照されている列は、照合順序を変更することはできません。  
   

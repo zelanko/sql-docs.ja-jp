@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00208b1c0f11faf8f392e47e275c7e239249d3d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2344ff0b95e82bd83e801df9ff6bd60328a2ae33
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783068"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970292"
 ---
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
   ウィザードまたは PowerShell スクリプトを使用して、データ層アプリケーション (DAC) パッケージから [!INCLUDE[ssDE](../../includes/ssde-md.md)] または [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の既存のインスタンスに DAC を配置できます。 配置プロセスでは、 **msdb** システム データベース (**では** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベース) に DAC 定義を格納することで DAC インスタンスを登録し、データベースを作成して、DAC で定義されたすべてのデータベース オブジェクトをそのデータベースに設定します。  
@@ -54,7 +53,7 @@ ms.locfileid: "72783068"
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  DAC を配置できるのは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 以降を実行している [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] インスタンスです。 新しいバージョンを使用して DAC を作成した場合、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではサポートされないオブジェクトが DAC に含まれている可能性があります。 このような DAC を [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスに配置することはできません。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要条件  
  ソースが不明または信頼されていない DAC パッケージは配置しないことをお勧めします。 こうしたパッケージには、意図しない Transact-SQL コードを実行したり、スキーマを変更してエラーを発生したりする、悪意のあるコードが含まれている可能性があります。 パッケージのソースが不明または信頼されていない場合は、使用する前に、DAC をアンパックして、ストアド プロシージャやその他のユーザー定義コードなどのコードもご確認ください。 これらのチェックの実行方法の詳細については、「 [Validate a DAC Package](validate-a-dac-package.md)」をご覧ください。  
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
@@ -107,7 +106,7 @@ ms.locfileid: "72783068"
   
  **[説明]** : DAC が作成されたとき、またはデータベースから抽出されたときに記述された説明が表示される読み取り専用のボックスです。  
   
- Previous-[**概要**] ページに戻ります。 ** \< **  
+ ** \< Previous** -[**概要**] ページに戻ります。  
   
  **[次へ]** : 選択したファイルが有効な DAC パッケージかどうかが確認され、進捗状況バーが表示されます。  
   
@@ -118,7 +117,7 @@ ms.locfileid: "72783068"
   
  **[DAC パッケージの内容を検証しています]** : 検証プロセスの現在の状態を示す進捗状況バーです。  
   
- **[戻る]: [パッケージの選択**] ページの初期状態に戻ります。 ** \< **  
+ [ ** \< 戻る** **]: [パッケージの選択**] ページの初期状態に戻ります。  
   
  **[次へ >]**: **[パッケージの選択]** ページの最終状態に進みます。  
   
@@ -133,7 +132,7 @@ ms.locfileid: "72783068"
   
  **[ポリシー違反を無視します]** : ポリシー条件が満たされていない場合に配置を続行するには、このチェック ボックスを使用します。 すべての条件が満たされていなくても DAC を正常に操作できるようにする場合のみ、このチェック ボックスをオンにしてください。  
   
- **[戻る]: [パッケージの選択**] ページに戻ります。 ** \< **  
+ [ ** \< 戻る** **]: [パッケージの選択**] ページに戻ります。  
   
  **[次へ >]**: **[構成の更新]** ページに進みます。  
   
@@ -158,7 +157,7 @@ ms.locfileid: "72783068"
   
  **[ログ ファイルのパスと名前]** : ログ ファイルの完全パスとファイル名を指定します。 このボックスには、既定のパスとファイル名が表示されます。 ボックス内の文字列を編集して既定値を変更するか、 **[参照]** をクリックしてログ ファイルを配置するフォルダーに移動してください。  
   
- **[戻る]: [DAC パッケージの選択**] ページに戻ります。 ** \< **  
+ [ ** \< 戻る** **]: [DAC パッケージの選択**] ページに戻ります。  
   
  **[次へ]** : **[概要]** ページに進みます。  
   
@@ -169,7 +168,7 @@ ms.locfileid: "72783068"
   
  **[次の設定を使用して DAC を配置します。]** : 表示された情報を確認し、実行されるアクションが正しいかどうかを確認します。 このウィンドウには、選択した DAC パッケージと、配置される DAC インスタンス用に選択した名前が表示されます。 また、DAC に関連付けられたデータベースを作成する際に使用される設定も表示されます。  
   
- [前へ]-[**構成の更新**] ページに戻り、選択内容を変更します。 ** \< **  
+ [ ** \< 前**へ]-[**構成の更新**] ページに戻り、選択内容を変更します。  
   
  **[次へ >]**: DAC を配置し、**[DAC の配置]** ページに結果を表示します。  
   
@@ -195,7 +194,7 @@ ms.locfileid: "72783068"
   
 4.  `add_DacActionStarted` および `add_DacActionFinished` を使用して、DAC 配置イベントをサブスクライブします。  
   
-5.  を`DatabaseDeploymentProperties`設定します。  
+5.  を設定 `DatabaseDeploymentProperties` します。  
   
 6.  `DacStore.Install` メソッドを使用して DAC を配置します。  
   

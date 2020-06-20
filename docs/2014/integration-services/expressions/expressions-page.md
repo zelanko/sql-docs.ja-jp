@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4cb37061fd90f8662ee6670bb558e99035c792e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1aeecb2bc6d4932c9b5fffcc36e29cb75a921bd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969332"
 ---
 # <a name="expressions-page"></a>[式] ページ
   **[式]** ページを使用すると、プロパティ式を編集でき、 **[プロパティ式エディター]** ダイアログ ボックスや **[式ビルダー]** ダイアログ ボックスにアクセスできます。  
@@ -32,11 +31,11 @@ ms.locfileid: "62898034"
  **式 (...)**  
  [...] をクリックすると、 **[プロパティ式エディター]** ダイアログ ボックスが表示されます。 詳細については、「 [プロパティ式エディター](property-expressions-editor.md)」を参照してください。  
   
- **\<プロパティ名>**  
+ **\<property name>**  
  [...] をクリックすると、 **[式ビルダー]** ダイアログ ボックスが表示されます。 詳細については、「 [式ビルダー](expression-builder.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)   
+ [SSIS&#41; 変数の Integration Services &#40;](../integration-services-ssis-variables.md)   
  [システム変数](../system-variables.md)   
  [Integration Services &#40;SSIS&#41; 式](integration-services-ssis-expressions.md)  
   
