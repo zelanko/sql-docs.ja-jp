@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9f6f6ee0d881f470f1251c99f17212f1648b85c4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f82a0fb71103e811b36280f9722c160791023e44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706085"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022366"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、ドライバー固有の接続属性が定義されます。 一部の属性はで使用でき `SQLGetConnectAttr` ます。関数は、現在の設定をレポートするために使用されます。 これらの属性について報告される値は、接続が確立されるか、または[SQLSetConnectAttr](sqlsetconnectattr.md)を使用して属性が設定されるまでは保証されません。  
@@ -32,7 +31,7 @@ ms.locfileid: "82706085"
 > [!NOTE]  
 >  標準の ODBC 接続属性 SQL_ATTR_CONNECTION_DEAD は、接続の最新の状態を返します。 これは現在の接続状態と異なる場合があります。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|サーバーへの接続が失われました。|  
 |SQL_CD_FALSE|接続が開かれており、ステートメントの処理に使用できます。|  
@@ -48,7 +47,7 @@ ms.locfileid: "82706085"
   
  詳細については、「[拡張イベントログの診断情報へのアクセス](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)」を参照してください。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |SQL_ERROR|接続に失敗しました。|  
 |SQL_SUCCESS|接続に成功しました。 クライアント接続 ID は出力バッファーで見つかります。|  
@@ -56,7 +55,7 @@ ms.locfileid: "82706085"
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
  SQL_COPT_SS_PERF_DATA 属性は、現在のドライバーのパフォーマンス統計情報を保持する SQLPERF 構造体へのポインターを返します。 `SQLGetConnectAttr`パフォーマンスログが有効になっていない場合、は NULL を返します。 SQLPERF 構造体内の統計情報がドライバーで動的に更新されることはありません。 `SQLGetConnectAttr`パフォーマンス統計を更新する必要があるたびに、を呼び出します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |NULL|パフォーマンスのログ記録が無効です。|  
 |その他の値|SQLPERF 構造体へのポインター。|  
@@ -67,7 +66,7 @@ ms.locfileid: "82706085"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 属性は、ユーザー データ ポインターを取得します。 ユーザー データはクライアントのメモリに格納され、接続ごとに記録されます。 ユーザー データ ポインターが設定されていない場合、SQL_UD_NOTSET という NULL ポインターが返されます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|ユーザー データ ポインターが設定されていません。|  
 |その他の値|ユーザー データへのポインターです。|  

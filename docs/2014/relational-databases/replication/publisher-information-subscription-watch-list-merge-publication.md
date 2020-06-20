@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2fcff4e55ca4a2935f90b360965a1bc5fefe5656
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd38540533e3e663fa23eee2c651f0beb9463546
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63261798"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005080"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication-sql-server-2005-and-later"></a>パブリッシャー情報、[サブスクリプション ウォッチ リスト] (マージ パブリケーション、SQL Server 2005 以降)
   **以降を実行しているディストリビューターでは、** [サブスクリプション ウォッチ リスト] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] タブを使用できます。このタブは、選択されているパブリッシャーで使用できるすべてのパブリケーションのサブスクリプションについて情報を表示するために用意されています。 サブスクリプションの一覧にフィルターをかけて、エラー、警告、および動作に問題があるサブスクリプションを確認できます。 このタブは、パブリッシャーにおけるすべてのレプリケーション動作を管理者が一元的に監視できる場所です。レプリケーション モニターは、選択されているレプリケーションの種類と **[表示]** ボックスで選択されたオプションに基づいて、注意が必要なすべてのサブスクリプションを表示します。 このタブに表示されるアイテムは現在の状態およびパフォーマンスに基づいているので、現時点での **[表示]** ボックスのオプションに一致する場合にのみ、このページにサブスクリプションが表示されます。  
@@ -46,7 +45,7 @@ ms.locfileid: "63261798"
   
  既定では、サブスクリプションの情報を表示するグリッドは **[状態]** 列の順序で並べられています (同じ状態のサブスクリプションは、 **[パフォーマンス]** 列の順序で並べられています)。 表示される状態の値と、その値の並べ替え順 (たとえば、エラーは常にグリッドの上部に表示されます) を次に示します。  
   
--   Error  
+-   エラー  
   
 -   [パフォーマンス クリティカル]  
   
@@ -72,7 +71,7 @@ ms.locfileid: "63261798"
  各サブスクリプションの名前です。*SubscriberName: SubscriptionDatabaseName*という形式になります。  
   
  **フレンドリ名**  
- 各サブスクリプションの説明です。 説明は、[サブスクリプションの**プロパティ**] ダイアログボックスで入力するか**@description** 、 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)または[sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)のパラメーターと共に指定します。 多くの場合、この説明は "表示名"、つまりサブスクリプションの通称として使用されます。  
+ 各サブスクリプションの説明です。 説明は、[サブスクリプションの**プロパティ**] ダイアログボックスで入力するか、 **@description** [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)または[sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)のパラメーターと共に指定します。 多くの場合、この説明は "表示名"、つまりサブスクリプションの通称として使用されます。  
   
  **パブリケーション**  
  サブスクリプションと同期するパブリケーションの名前です。 *PublicationDatabaseName: PublicationName*という形式になります。  
@@ -85,11 +84,11 @@ ms.locfileid: "63261798"
   
  パフォーマンス評価は、次のいずれかの値になります。  
   
--   [非常に良い]  
+-   非常に良い  
   
--   [良い]  
+-   良い  
   
--   [普通]  
+-   普通  
   
 -   悪い  
   
@@ -101,7 +100,7 @@ ms.locfileid: "63261798"
  **[最後の同期]**  
  マージ エージェントが最後に実行された時刻です。 この同期では変更が処理されていることも、処理されていないこともあります。 同期が進行中の場合、進行状況を示すパーセント値が表示されます。  
   
- **Duration**  
+ **期間**  
  最後の同期中におけるマージ エージェントの実行時間です。 マージ エージェントが現在同期中の場合、これは経過時間を表します。マージ エージェントが以前に同期された場合、これは合計時間を表します。  
   
  **接続**  

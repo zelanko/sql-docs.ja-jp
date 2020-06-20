@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f849394a4a77091f92ee66857b4d5263875fdea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e0748208c7378c02af382403061e4ba0770d7a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021685"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064601"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>パブリケーション情報、[警告] (マージ パブリケーション、SQL Server 2005 以降)
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降を実行しているディストリビューターでは、**[警告]** タブを使用できます。 **[警告]** タブでは、選択されているパブリケーションに対して次の操作を実行できます。  
@@ -52,7 +51,7 @@ ms.locfileid: "63021685"
  しきい値に到達した場合は、レプリケーション モニターに警告を表示でき、さらに通知を発行することができます。 通知を定義するには、 **[警告の構成]** をクリックし、 **[レプリケーションの警告の構成]** ダイアログ ボックスに情報を入力します。  
   
 ## <a name="options"></a>オプション  
- **Enabled**  
+ **有効**  
  警告を有効にする場合に選択します。その場合は、しきい値を指定します。  
   
  **Alert**  
@@ -61,7 +60,7 @@ ms.locfileid: "63021685"
  **警告**  
  しきい値に関連付けられている警告の説明です。  
   
- **Threshold**  
+ **しきい値**  
  しきい値の値を指定します。  
   
  **アラートの構成**  

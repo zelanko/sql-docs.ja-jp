@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b8d48b9a21d810f60b071c17dd89ad51c9e489a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62666967"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049394"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>レプリケーション モニターでのパブリケーションおよびサブスクリプションの状態の表示
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]レプリケーションモニターには、パブリケーションとサブスクリプションの状態情報が表示されます。  
@@ -59,12 +58,12 @@ ms.locfileid: "62666967"
 ## <a name="publication-status-values"></a>パブリケーションの状態の値  
  次の表は、パブリケーションの状態の値と対応するアイコンを優先度順に示しています。  
   
-|状態|アイコン|  
+|Status|アイコン|  
 |------------|----------|  
-|Error|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
+|エラー|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
 |[パフォーマンス クリティカル]|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[失敗したコマンドの再試行]|![UI アイコン: レプリケーション エージェントの再試行](../media/repl-icon-retry.gif "UI アイコン: レプリケーション エージェントの再試行")|  
-|[OK]|なし|  
+|OK|なし|  
   
 ## <a name="subscription-status-values"></a>サブスクリプションの状態値  
  次の表は、サブスクリプションの状態値と対応するアイコンを優先度順に示しています。 サブスクリプションは、" **まもなく期限切れ/期限切れ** " と " **失敗したコマンドの再試行**" など同時に 2 つの状態になることがあります。その場合、最も優先度の高い状態が表示されます。  
@@ -73,9 +72,9 @@ ms.locfileid: "62666967"
   
 ### <a name="transactional-subscriptions"></a>トランザクション サブスクリプション  
   
-|状態|アイコン|  
+|Status|アイコン|  
 |------------|----------|  
-|Error|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
+|エラー|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
 |[パフォーマンス クリティカル]|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |まもなく期限切れ/期限切れ|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[初期化されていないサブスクリプション]|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
@@ -85,9 +84,9 @@ ms.locfileid: "62666967"
   
 ### <a name="merge-subscriptions"></a>マージ サブスクリプション  
   
-|状態|アイコン|  
+|Status|アイコン|  
 |------------|----------|  
-|Error|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
+|エラー|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
 |[パフォーマンス クリティカル]|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[長期マージ]|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |まもなく期限切れ/期限切れ|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
@@ -98,9 +97,9 @@ ms.locfileid: "62666967"
   
 ### <a name="snapshot-subscriptions"></a>スナップショット サブスクリプション  
   
-|状態|アイコン|  
+|Status|アイコン|  
 |------------|----------|  
-|Error|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
+|エラー|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
 |まもなく期限切れ/期限切れ|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[初期化されていないサブスクリプション]|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[失敗したコマンドの再試行]|![UI アイコン: レプリケーション エージェントの再試行](../media/repl-icon-retry.gif "UI アイコン: レプリケーション エージェントの再試行")|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bcc2ddcb8c8fbf33c51fb82d1b1c2fd8308bd28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481313"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064840"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>タスク 1: 照合ポリシーを定義する
   ここでは、1 つのルールを持つ照合ポリシーを作成します。 このルールには、 **SUPPLIER id**という1つの前提条件があります。これは、ルール内の他のドメインを使用する前に、業者 id が一致する必要があることを意味します。 このルールでは、2つの他のドメインを使用します。 "**類似性**" の値が**70%** に設定されている**Supplier Name** 、および**類似性**の値が**30%** に設定されている**連絡先の電子メール**  
@@ -26,7 +25,7 @@ ms.locfileid: "65481313"
   
 2.  [**マップ**] ページで、[**データソース**用の**Excel ファイル**] を選択します。  
   
-3.  [**参照**] をクリックして、[フィルター] が [ **Excel ブック**] に設定されていることを確認し、クレンジングアクティビティを実行した後にエクスポートしたクレンジングされた**Supplier List .xls**ファイルを選択します。  
+3.  [**参照**] をクリックして、[フィルター] が [ **Excel ブック**] に設定されていることを確認し、クレンジングアクティビティの実行後にエクスポートした [クレンジングされた**Supplier List.xls**ファイル] を選択します。  
   
     > [!NOTE]  
     >  このアクティビティは照合ポリシーの定義を主な目的としています。このため、このアクティビティの最後に結果をエクスポートすることはできません。 次のレッスンでは、照合アクティビティ用のデータ品質プロジェクトを作成し、この照合ポリシーを使用して仕入先の一覧から重複を削除します。  

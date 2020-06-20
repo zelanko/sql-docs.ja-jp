@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 01e5393ae638ddcecd04211a0a7e01e8116346a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f72b7f40c6733c48bb2d7fa2867799d7ad99d4f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952359"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065080"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Web サービス URL (SSRS ネイティブ モード)
   [Web サービス URL] ページを使用すると、レポート サーバーへのアクセスに使用する URL を構成または変更できます。 *URL 予約* は、指定した URL に基づいて作成されます。 URL 予約は、その後のレポート サーバー Web サービスへのアクセスに使用できるすべての URL の構文と規則を定義し、 レポート サーバー Web サービスのプレフィックス、ホスト、ポート、および仮想ディレクトリを指定します。 ホストの指定方法によっては、1 つの予約で複数の URL を定義できます。 ホストの既定値では、強いワイルドカードが指定されます。 強いワイルドカードを使用すると、レポート サーバーをホストするコンピューターに解決できるあらゆるホスト名を URL に指定できます。 URL の構成と予約の詳細については、「 [ssrs Configuration Manager&#41;の url &#40;構成](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)する」および「 [ssrs Configuration Manager&#41;&#40;レポートサーバーの url を構成](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)する」を参照してください。  
@@ -47,7 +46,7 @@ ms.locfileid: "71952359"
   
 -   **[127.0.0.1]** は、localhost にアクセスする場合に使用します。 この値は、レポート サーバー コンピューターでのローカル管理をサポートします。 この値のみを選択すると、レポート サーバー コンピューターにローカルにログオンしているユーザーだけがアプリケーションにアクセスできるようになります。  
   
--   "*nnn.nnn.nnn.nnn* " は、コンピューターのネットワーク アダプター カードの IPv4 アドレスです。 ネットワークで IPv6 アドレス指定が使用されている場合、IP アドレスは、ヘッダー>:*nnnn: nnnn: nnnn:* nnnn の\<形式と同様の 8 4 バイトのフィールドの128ビット値になります。  
+-   "*nnn.nnn.nnn.nnn* " は、コンピューターのネットワーク アダプター カードの IPv4 アドレスです。 ネットワークで IPv6 アドレス指定を使用している場合、IP アドレスは、次の形式の 8 4 バイトフィールドの128ビット値になります: \<header> :*nnnn: nnnn: nnnn: nnnn*  
   
      複数のカードがある場合は、それぞれに IP アドレスが割り当てられます。 この値のみを選択すると、アプリケーション アクセスがその IP アドレス (およびドメイン ネーム サーバーによってそのアドレスにマップされるホスト名) に限定されます。 localhost を使用してレポート サーバーにアクセスすることはできません。また、レポート サーバー コンピューターにインストールされている他のネットワーク アダプター カードの IP アドレスは使用できません。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "71952359"
  レポート サーバーの仮想ディレクトリ名を含む URL に対する HTTP 要求をレポート サーバーが監視するポートを指定します。  
   
  **[SSL 証明書]**  
- 指定した IP アドレスに証明書をバインドします。 証明書をコンピューターにインストールして構成する必要があります。 Reporting Services には証明書の管理機能は用意されていません。 証明書は、IP アドレスに解決されるホスト名またはコンピューター名に対して発行されている必要があります。 たとえば、にhttp://salesreports対して発行された証明書を使用するには、指定した IP アドレスが "salesreports" という名前のサーバーに解決される必要があります。  
+ 指定した IP アドレスに証明書をバインドします。 証明書をコンピューターにインストールして構成する必要があります。 Reporting Services には証明書の管理機能は用意されていません。 証明書は、IP アドレスに解決されるホスト名またはコンピューター名に対して発行されている必要があります。 たとえば、に対して発行された証明書を使用するには、指定した http://salesreports IP アドレスが "salesreports" という名前のサーバーに解決される必要があります。  
   
  証明書を使用する場合は、RSReportServer.config ファイルの `UrlRoot` 構成設定を、証明書で登録されたコンピューターの完全修飾名を指すように変更する必要があります。 詳細については、 [オンライン ブックの「](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) ネイティブ モードのレポート サーバーでの SSL 接続の構成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   

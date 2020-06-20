@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9789ddf12272dd6c33c8cfbbb8677ecc3bb4b191
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 777aeb6dea50a3c49f8e68ee17907295f8d886fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696198"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049645"
 ---
 # <a name="set-large-data-ole-db"></a>大きなデータの設定 (OLE DB)
   このサンプルでは、BLOB データを設定し、テーブルを作成して、サンプル レコードを追加し、行セット内のそのレコードをフェッチして、BLOB フィールドの値を設定する方法を示します。 このサンプルは IA64 ではサポートされていません。  
@@ -29,7 +28,7 @@ ms.locfileid: "82696198"
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
-## <a name="procedures"></a>プロシージャ  
+## <a name="procedures"></a>手順  
   
 #### <a name="to-set-blob-data"></a>BLOB データを設定するには  
   
