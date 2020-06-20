@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a19c67f19c6b1b73947ef752a09516449eeec1a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb0cd83ca572a7cf2cb0993524c31808567c0f59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655355"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055195"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 構文表記規則
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) の表記規則は、Visual Studio .NET [!INCLUDE[msCoName](../../includes/msconame-md.md)]のリファレンス資料で使用されている表記規則に基づいています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) の表記規則は、Visual Studio .NET のリファレンス資料で使用されている表記規則に基づいてい [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   
 |表記|使用目的|  
 |----------------|--------------|  

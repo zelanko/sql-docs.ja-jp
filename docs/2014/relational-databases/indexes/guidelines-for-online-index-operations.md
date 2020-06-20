@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 907fe6a826607fe1cb403ad9b8debe6faf6771fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162486"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025419"
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
   インデックス操作をオンラインで実行するときは、次のガイドラインに従ってください。  
   
--   基になるテーブルに次の LOB (ラージオブジェクト) データ型 ( `image`、 **ntext**、および`text`) が含まれている場合は、クラスター化インデックスを作成、再構築、または削除する必要があります。  
+-   基になるテーブルに次の LOB (ラージオブジェクト) データ型 ( `image` 、 **ntext**、および) が含まれている場合は、クラスター化インデックスを作成、再構築、または削除する必要があり `text` ます。  
   
 -   ローカル一時テーブルのインデックスの作成、再構築、または削除は、オンラインでは実行できません。 この制限は、グローバル一時テーブルのインデックスには当てはまりません。  
   
 > [!NOTE]  
->  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
+>  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 の各エディションでサポートされる機能の一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
  次の表に、オンラインで実行可能なインデックス操作と、これらのオンライン操作対象から除外されるインデックスを示します。 また、その他の制限についても記載します。  
   

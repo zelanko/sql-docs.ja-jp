@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89d1e2fd7c4f0e414424ad678c7ea9f3936b02f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 044d4bcb17144b4fcb6e233b1aadec84e20f2876
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176382"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966622"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>カスタム オブジェクトのビルド、配置、およびデバッグ
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 用カスタム オブジェクトのコードを記述したら、アセンブリをビルドして配置し、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに統合してパッケージで使用できるようにし、テストとデバッグを行う必要があります。
@@ -70,7 +69,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ```
 
 ##  <a name="deploying-the-assembly"></a><a name="deploying"></a> アセンブリの配置
- デザイナー [!INCLUDE[ssIS](../../includes/ssis-md.md)]は、のインストール時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に作成された一連のフォルダー内のファイルを列挙することによって、パッケージで使用できるカスタムオブジェクトを検索します。 既定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインストール設定が使用されている場合、この一連のフォルダーは、 **C:\Program are SQL server**の [DTS] の下にあります。 ただし、カスタムオブジェクトのセットアッププログラムを作成する場合は、 **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath**レジストリキーの値を確認して、このフォルダーの場所を確認する必要があります。
+ デザイナーは、のインストール時に作成された [!INCLUDE[ssIS](../../includes/ssis-md.md)] 一連のフォルダー内のファイルを列挙することによって、パッケージで使用できるカスタムオブジェクトを検索し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ます。 既定のインストール設定が使用されている場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この一連のフォルダーは、 **C:\Program are SQL server**の [DTS] の下にあります。 ただし、カスタムオブジェクトのセットアッププログラムを作成する場合は、 **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath**レジストリキーの値を確認して、このフォルダーの場所を確認する必要があります。
 
  アセンブリをフォルダーに配置する方法は 2 つあります。
 
@@ -115,7 +114,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ##  <a name="testing-and-debugging-your-code"></a><a name="testing"></a> コードのテストとデバッグ
  カスタム オブジェクトの実行時のメソッドをデバッグするための最も簡単な方法は、カスタム オブジェクトのビルド後に [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] から **dtexec.exe** を起動し、コンポーネントを使用するパッケージを実行することです。
 
- `Validate`メソッドなど、コンポーネントのデザイン時メソッドをデバッグする場合は、コンポーネントを使用するパッケージをの2番目の[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]インスタンスで開き、 **devenv.exe**プロセスにアタッチします。
+ メソッドなど、コンポーネントのデザイン時メソッドをデバッグする場合は、コンポーネントを `Validate` 使用するパッケージをの2番目のインスタンスで開き、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **devenv.exe**プロセスにアタッチします。
 
  パッケージを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで開いて実行しているときに、コンポーネントの実行時のメソッドもデバッグする場合は、**DtsDebugHost.exe** プロセスにもアタッチできるようにパッケージの実行を一時停止する必要があります。
 
@@ -123,7 +122,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
 1.  デバッグ構成でプロジェクトへの署名とビルドを行い、プロジェクトを配置し、このトピックで説明したようにグローバル アセンブリ キャッシュにインストールします。
 
-2.  **プロジェクトのプロパティ**の [**デバッグ**] タブで、[**開始] アクション**として [**外部プログラムの開始**] を選択し、既定で C:\Program モジュールにインストールされている**dtexec**を探します。
+2.  **プロジェクトのプロパティ**の [**デバッグ**] タブで、[**開始] アクション**として [**外部プログラムの開始**] を選択し、既定で C:\Program モジュールにインストールされている**dtexec.exe**を検索します。
 
 3.  **[開始オプション]** の **[コマンド ライン オプション]** テキスト ボックスに、コンポーネントを使用するパッケージを実行するために必要なコマンド ライン引数を入力します。 多くの場合、コマンド ライン引数は /F[ILE] スイッチと、それに続く .dtsx ファイルのパスおよびファイル名で構成されます。 詳細については、「[dtexec ユーティリティ](../packages/dtexec-utility.md)」を参照してください。
 

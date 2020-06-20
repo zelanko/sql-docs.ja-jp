@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6b875808a5a9379f917b246cb871420a339519f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 65e6e794c5858a68c4b2a9b298513911b487cf52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718804"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025730"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ内でサポートされる構造
   このトピックには、ネイティブコンパイルストアドプロシージャでサポートされている機能の一覧が含まれています ([CREATE PROCEDURE &#40;transact-sql&#41;](/sql/t-sql/statements/create-procedure-transact-sql))。  
@@ -66,7 +65,7 @@ ms.locfileid: "82718804"
 ##  <a name="supported-operators"></a><a name="so"></a>サポートされる演算子  
  サポートされている演算子は次のとおりです。  
   
--   [Transact-sql&#41;&#40;の比較演算子](/sql/t-sql/language-elements/comparison-operators-transact-sql)(たとえば、>、 \< 、>=、および <=) は、条件 (IF、WHILE) でサポートされています。  
+-   [Transact-sql&#41;&#40;の比較演算子](/sql/t-sql/language-elements/comparison-operators-transact-sql)(たとえば、>、 \<, > =、および <=) は、条件 (IF、WHILE) でサポートされています。  
   
 -   単項演算子 (+、-)。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "82718804"
   
 -   フィルター述語 IS [NOT] NULL  
   
--   \<メモリ最適化テーブルから>  
+-   FROM \<memory optimized table>  
   
 -   [GROUP BY &#40;transact-sql&#41;](/sql/t-sql/queries/select-group-by-transact-sql)は、集計関数の AVG、COUNT、COUNT_BIG、MIN、MAX、および SUM と共にサポートされています。 MIN および MAX は、nvarchar、char、varchar、varchar、varbinary、および binary 型ではサポートされていません。 Order by[句 &#40;transact-sql&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)は group by &#40;でサポートされています。 order by リスト内の式が group by リストにそのまま表示される場合は、 [transact-sql&#41;](/sql/t-sql/queries/select-group-by-transact-sql)を使用します。 たとえば、GROUP BY a + b ORDER BY a + b はサポートされますが、GROUP BY a, b ORDER BY a + b はサポートされません。  
   
@@ -172,7 +171,7 @@ ms.locfileid: "82718804"
 ##  <a name="limitations-on-sorting"></a><a name="los"></a> 並べ替えに関する制限事項  
  [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) および [ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用するクエリでは、8,000 を超える行の並べ替えを行うことができます。 ただし、[ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用しない場合、[TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) で並べ替えができる行数は最大で 8,000 です (結合がある場合は、より少ない行数になります)。  
   
- クエリが [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 演算子および [ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用する場合、TOP 演算子には 8192 行まで指定できます。 8192 行を超える行を指定すると、"**メッセージ 41398、レベル 16、状態 1、プロシージャ *\<procedureName>*、行 *\<lineNumber>* TOP 演算子は、最大 8192 行を返すことができます。*\<number>* が要求されました**" というエラー メッセージが表示されます。  
+ クエリが [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 演算子および [ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用する場合、TOP 演算子には 8192 行まで指定できます。 8192行を超える行を指定した場合、次のエラーメッセージが表示されます: メッセージ**41398、レベル16、状態1、プロシージャ *\<procedureName>* 、行 *\<lineNumber>* TOP 演算子は、最大で8192行を返すことができます。は要求され *\<number>* ました。**  
   
  TOP 句がない場合は、ORDER BY で任意の数の行を並べ替えることができます。  
   

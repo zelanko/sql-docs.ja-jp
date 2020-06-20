@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21c4f3a480b039b4853c112831341b6448a7d6a7
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 56529e3f70bc8234a8676883db6ac28a040ca86a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859384"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062084"
 ---
 # <a name="options-environment-fonts-and-colors-page"></a>[オプション] ([環境]:[フォントおよび色] ページ)
   **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のさまざまなユーザー インターフェイス要素にカスタム フォントや配色を設定できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して、 **[フォントおよび色]** を選択します。  

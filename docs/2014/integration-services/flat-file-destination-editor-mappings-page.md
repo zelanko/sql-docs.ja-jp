@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f91b32a292975ec19b21dbd855f6c5c182738aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d26cda51087ff0bf0cbe648e74e09332724c1d10
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058678"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966452"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>[フラット ファイル変換先エディター] ([マッピング] ページ)
   **[フラット ファイル変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
@@ -34,7 +33,7 @@ ms.locfileid: "66058678"
  使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、使用できる変換先列を入力列にマップします。  
   
  **入力列**  
- このトピックの前の手順で選択した入力列を表示します。 **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。 出力から列を除外するには、[ ** \<>を無視**] を選択します。  
+ このトピックの前の手順で選択した入力列を表示します。 **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。 **\<ignore>** 出力から列を除外する場合に選択します。  
   
  **変換先列**  
  マップされているかどうかに関係なく、使用できる変換先列を表示します。  

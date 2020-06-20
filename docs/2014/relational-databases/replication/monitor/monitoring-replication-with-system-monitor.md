@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2b5d1a63937a11da4703ec4ef0338dee89a5c33f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 108954dd920c215a16385d7e07b4212102b50369
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667307"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005666"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>システム モニターによるレプリケーションの監視
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows のシステム モニターにより、グラフ、図およびレポートを使って、使用しているコンピューターの効率の評価、考えられる問題 (リソース使用の不均衡、ハードウェアの不足、プログラム設計の問題など) の識別とトラブルシューティング、およびハードウェアの追加計画の作成を行うことができます。 詳細については、「[リソースの利用状況の監視 &#40;システム モニター&#41;](../../performance-monitor/monitor-resource-usage-system-monitor.md)」を参照してください。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eec806bffba330ac3ab995c1b3bfd3504589ecfd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011288"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063288"
 ---
 # <a name="get-started-with-full-text-search"></a>フルテキスト検索の概要
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースでは、フルテキストが既定で有効になっています。 ただし、テーブルでフルテキスト インデックスを使用するには、Full-Text Engine を使用してアクセスするテーブルの列に対してフルテキスト インデックス作成機能をセットアップする必要があります。  
@@ -34,7 +33,7 @@ ms.locfileid: "66011288"
   
     1.  フルテキスト インデックスに含めるテキスト列を特定します。  
   
-    2.  バイナリデータ (`varbinary(max)`、または`image`データ) として格納されているドキュメントが特定の列に含まれている場合は、インデックスを作成する列の各ドキュメントの型を識別するテーブル列 (*型列*) を指定する必要があります。  
+    2.  バイナリデータ (、またはデータ) として格納されているドキュメントが特定の列に含まれている場合は、 `varbinary(max)` `image` インデックスを作成する列の各ドキュメントの型を識別するテーブル列 (*型列*) を指定する必要があります。  
   
     3.  列内のドキュメントに対してフルテキスト検索で使用される言語を指定します。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66011288"
   
  フルテキスト カタログにテーブルを割り当てる際には、次のガイドラインを考慮してください。  
   
--   常に、一意なフルテキスト キーに利用可能な最小の一意なインデックスを選択してください。 (4 バイトの整数ベースのインデックスが最適です)。これにより、ファイルシステム[!INCLUDE[msCoName](../../includes/msconame-md.md)]内の Search サービスで必要とされるリソースが大幅に減少します。 主キーが大きい場合 (100 バイト以上)、テーブル内の他の一意なインデックスを選択するか、または他の一意なインデックスを作成して、フルテキスト インデックス用のキーにすることを検討してください。 そうしないと、一意なフルテキスト キーのサイズが最大サイズ (900 バイト) を超えた場合、フルテキストの作成を続行できなくなります。  
+-   常に、一意なフルテキスト キーに利用可能な最小の一意なインデックスを選択してください。 (4 バイトの整数ベースのインデックスが最適です)。これにより、ファイルシステム内の Search サービスで必要とされるリソースが大幅に減少 [!INCLUDE[msCoName](../../includes/msconame-md.md)] します。 主キーが大きい場合 (100 バイト以上)、テーブル内の他の一意なインデックスを選択するか、または他の一意なインデックスを作成して、フルテキスト インデックス用のキーにすることを検討してください。 そうしないと、一意なフルテキスト キーのサイズが最大サイズ (900 バイト) を超えた場合、フルテキストの作成を続行できなくなります。  
   
 -   数百万の行を持つテーブルにインデックスを作成しようとしている場合、そのテーブル専用のフルテキスト カタログを割り当ててください。  
   
@@ -101,14 +100,14 @@ ms.locfileid: "66011288"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>ストップリストとフルテキスト インデックスの関連付け  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、ストップリストが導入されています。 *ストップリスト* は、ストップワード (ノイズ ワードとも呼ばれます) の一覧です。 ストップリストは各フルテキスト インデックスに関連付けられ、そのストップリスト内の単語がそのインデックスのフルテキスト クエリに適用されます。 既定では、システム ストップリストは、新しいフルテキスト インデックスに関連付けられます。 ただし、独自のストップリストを作成して使用することもできます。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)」を参照してください。  
   
- たとえば、次の[CREATE フルテキストストップリスト](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントでは、システムストップリストからコピーすることによって、myStoplist3 という名前の新しいフルテキストストップリストを作成します。  
+ たとえば、次の[CREATE フルテキストストップリスト](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)ステートメントでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] システムストップリストからコピーすることによって、myStoplist3 という名前の新しいフルテキストストップリストを作成します。  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- 次の[ALTER フルテキストストップリスト](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントでは、myStoplist という名前のストップリストを変更して、単語 ' en ' をスペイン語用に、次にフランス語用に追加します。  
+ 次の[ALTER フルテキストストップリスト](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)ステートメントでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] myStoplist という名前のストップリストを変更して、単語 ' En ' をスペイン語用に、次にフランス語用に追加します。  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  

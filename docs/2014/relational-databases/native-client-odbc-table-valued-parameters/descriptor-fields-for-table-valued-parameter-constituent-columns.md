@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ddbc29c1895ad57ad191604fec228109c8c7c55e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3e4c45cf608c78715abd7c5075d4cd7fb2e162a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698799"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018394"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>テーブル値パラメーターを構成する列の記述子フィールド
   このセクションで説明するテーブル値パラメーターの記述子フィールドは、実装パラメーター記述子 (IPD) のハンドルと共に[SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md)と[SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md)を使用して操作します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SQL_DESC_AUTO_UNIQUE_VALUE は、その他の機能と同様にテーブル値パラメーターで使用されます。  
   
 |属性名|種類|説明|  
@@ -41,7 +40,7 @@ ms.locfileid: "82698799"
   
  これらの属性は、テーブル値パラメーターの列に対してのみ有効です。 他のパラメーターでは無視されます。  
   
- テーブル値パラメーターの列に SQL_CA_SS_COL_HAS_DEFAULT_VALUE を設定する場合は、その列の SQL_DESC_DATA_PTR が NULL ポインターである必要があります。 それ以外の場合は、SQLExecute または SQLExecDirect は SQL_ERROR を返します。 SQLSTATE = 07S01 というメッセージで、"パラメーター p>、列 c> の既定のパラメーターが正しく使用されていません" というメッセージで診断レコードが生成されます \< \< 。ここで、 \< p> はパラメーターの序数、 \< c> は列の序数です。  
+ テーブル値パラメーターの列に SQL_CA_SS_COL_HAS_DEFAULT_VALUE を設定する場合は、その列の SQL_DESC_DATA_PTR が NULL ポインターである必要があります。 それ以外の場合は、SQLExecute または SQLExecDirect は SQL_ERROR を返します。 SQLSTATE = 07S01 というメッセージが表示され、"パラメーターの既定のパラメーターが正しく使用されていません" というメッセージが表示されます \<p> \<c> 。ここで、 \<p> はパラメーター序数で、 \<c> は列序数です。  
   
 ## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;ODBC&#41;](table-valued-parameters-odbc.md)  

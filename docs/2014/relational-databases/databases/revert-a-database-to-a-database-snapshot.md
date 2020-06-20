@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c78da3d7c559309c0563760e7062f01cf784648
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916710"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965772"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>データベースをデータベース スナップショットに戻す
   オンライン データベースのデータが破損した場合、特定のケースでは、データベースをバックアップから復元する代わりに、データベースをデータが破損した日付より前のデータベース スナップショットに復帰させる方が適切であることがあります。 たとえば、テーブルの削除など、最近の重大なユーザー エラーを元に戻すには、データベースの復帰が役立つ場合があります。 ただし、スナップショットの作成後に行った変更はすべて失われます。  

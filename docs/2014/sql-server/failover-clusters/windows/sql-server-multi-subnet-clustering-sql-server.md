@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ca6e081097cb26d4054e5b62fd62cefc0c6d96f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46350002f917d9d0f785ba1453d2930fb4113703
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172432"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062454"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server マルチサブネット クラスタリング (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターとは、各フェールオーバー クラスター ノードが異なるサブネットに接続されているか、異なるサブネットのセットに接続されている構成のことです。 これらのサブネットには、同じ場所や地理的に分散したサイトを指定できます。 地理的に分散したサイトのクラスタリングは、拡張クラスターと呼ばれることがあります。 すべてのノードがアクセスできる共有ストレージがないため、複数のサブネットのデータ ストレージ間でデータをレプリケートする必要があります。 データをレプリケートすることで、使用可能なデータのコピーが複数存在することになります。 そのため、マルチサブネット フェールオーバー クラスターによって、高可用性に加えてディザスター リカバリー ソリューションも実現します。

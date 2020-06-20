@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30c5c1a0593c6287cca48b4e241854b4145f4518
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 63dbb636c6512eb895f9f22a286b9ca855a1f5a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782316"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016005"
 ---
 # <a name="creating-altering-and-removing-rules"></a>ルールの作成、変更、および削除
   SMO では、<xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトでルールが表現されます。 ルールは、<xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> プロパティによって定義されます。このプロパティは、IN、LIKE、または BETWEEN などの演算子や述語を使用した条件式を格納したテキスト文字列です。 ルールでは、列や別のデータベース オブジェクトを参照することはできません。 データベース オブジェクトを参照しない組み込み関数は含めることができます。  
   
- <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> プロパティでの定義には、入力されたデータ値を参照する変数が含まれている必要があります。 ルールを作成するときに、任意の名前または記号を使用して値を表すことができ\@ますが、最初の文字は記号である必要があります。  
+ <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> プロパティでの定義には、入力されたデータ値を参照する変数が含まれている必要があります。 ルールを作成するときに、任意の名前または記号を使用して値を表すことができますが、最初の文字は記号である必要があり \@ ます。  
   
 ## <a name="example"></a>例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net で VISUAL BASIC SMO プロジェクトを作成する](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [Studio .Net で VISUAL C&#35; Smo プロジェクトを作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)する」を参照してください。  

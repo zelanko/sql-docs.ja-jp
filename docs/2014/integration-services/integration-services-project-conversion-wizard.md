@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82e5eb63122f6a965e3a001b8124445cbe91675
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057976"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965422"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services プロジェクト変換ウィザード
   **Integration Services プロジェクト変換ウィザード** で、プロジェクトをプロジェクト配置モデルに変換します。  
@@ -25,7 +24,7 @@ ms.locfileid: "66057976"
 > [!NOTE]  
 >  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有可能なデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [パッケージでの接続マネージャーの追加、削除、または共有](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)」 を参照してください。  
   
- **目的に合ったトピックをクリックしてください**  
+ **どうしたいんですか。**  
   
 -   [Integration Services プロジェクト変換ウィザードを開く](#open_dialog)  
   
@@ -112,7 +111,7 @@ ms.locfileid: "66057976"
  **[選択項目に適用]**  
  クリックすると、 **[パスワード]** ボックスのパスワードが選択したパッケージに適用されます。  
   
- **更新**  
+ **Refresh\(更新\)**  
  パッケージの一覧を更新します。  
   
 ##  <a name="set-options-on-the-select-destination-page"></a><a name="destination"></a>[変換先の選択] ページのオプションの設定  
@@ -121,7 +120,7 @@ ms.locfileid: "66057976"
 > [!NOTE]  
 >  **[配置先の選択]** ページは、ウィザードを [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]から実行した場合にのみ使用可能です。  
   
- **[出力パス]**  
+ **出力パス**  
  配置ファイルのパスを入力するか、 **[参照]** をクリックしてファイルに移動します。  
   
  **プロジェクト名**  
@@ -180,7 +179,7 @@ ms.locfileid: "66057976"
  **[構成の追加]**  
  他のプロジェクトに含まれているパッケージ構成を、パラメーターで置き換える (使用可能な) 構成の一覧に追加します。 ファイル システムまたは SQL Server に格納された構成を選択できます。  
   
- **更新**  
+ **Refresh\(更新\)**  
  構成の一覧を更新する場合にクリックします。  
   
  **[変換後にすべてのパッケージから構成を削除する]**  
@@ -197,14 +196,14 @@ ms.locfileid: "66057976"
  **パラメーター名**  
  パラメーター名を一覧表示します。  
   
- **Scope**  
+ **スコープ**  
  パラメーターのスコープ (パッケージまたはプロジェクト) を選択します。  
   
 ##  <a name="set-options-on-the-configure-parameters-page"></a><a name="configureParameters"></a>[パラメーターの構成] ページのオプションの設定  
  **名前**  
  パラメーター名を一覧表示します。  
   
- **Scope**  
+ **スコープ**  
  パラメーターのスコープを一覧表示します。  
   
  **Value**  
@@ -230,7 +229,7 @@ ms.locfileid: "66057976"
 ##  <a name="set-the-options-on-the-perform-conversion"></a><a name="conversion"></a>[変換の実行] のオプションの設定  
  [変換の実行] ページには、プロジェクトの変換の状態が表示されます。  
   
- **操作**  
+ **動作**  
  特定の変換手順を一覧表示します。  
   
  **結果**  

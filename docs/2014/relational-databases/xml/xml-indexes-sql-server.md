@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf9a33bc18790bf8821d778746a708f78bbb3d8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702284"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046362"
 ---
 # <a name="xml-indexes-sql-server"></a>XML インデックス (SQL Server)
   `xml` データ型の列には XML インデックスを作成できます。 列に保存されている XML インスタンスのすべてのタグ、値、およびパスにインデックスが設定されるので、クエリのパフォーマンスが向上します。 次のような場合、XML インデックスの効果が得られる可能性があります。  
@@ -132,7 +131,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   パス式を使用して個々の XML インスタンスから複数の値を取得する場合、PROPERTY インデックスで各 XML インスタンス内のパスをクラスター化すると効果が得られる可能性があります。 このシナリオは、主キーの値がわかっていてオブジェクトのプロパティをフェッチするプロパティ バッグ シナリオで主に発生します。  
   
--   XML インスタンスの値を、要素名または属性名がわからないままクエリで取得する場合、VALUE インデックスを作成できます。 //author[last-name="Howard"]\(\<author> 要素が階層のどのレベルにあってもよい) のように、descendant 軸を参照する場合がその典型です。 また、ワイルドカードを使用するクエリ (いずれかの属性に値 "novel" が指定された \<book> 要素をクエリで検索する /book [@* = "novel"] など) もこれに該当します。  
+-   XML インスタンスの値を、要素名または属性名がわからないままクエリで取得する場合、VALUE インデックスを作成できます。 これは通常、子孫の軸参照 (たとえば、author [last-name = "Howard"]) で発生します。この場合、 \<author> 要素は階層の任意のレベルで発生する可能性があります。 また、/book [@ * = "html"] などのワイルドカードクエリでも発生します。この場合、クエリでは、 \<book> 属性の値が "html" である要素が検索されます。  
   
 ### <a name="path-secondary-xml-index"></a>PATH セカンダリ XML インデックス  
  クエリで `xml` 型列のパス式をよく指定している場合、PATH セカンダリ インデックスにより検索速度を向上できる場合があります。 このトピックで既に説明したように、WHERE 句に **exist()** メソッドを指定するクエリを使用する場合には、プライマリ インデックスが役に立ちます。 PATH セカンダリ インデックスを追加することでも、そのようなクエリの検索パフォーマンスが向上する場合があります。  

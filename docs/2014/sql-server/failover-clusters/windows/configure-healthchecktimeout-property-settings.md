@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 435aa6a89b1b7aafd243efbc6de86bcb8f731346
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: a38cd6e9e4718a2f1c136e5412cde340e92f14c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062504"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout プロパティ設定の構成
   HealthCheckTimeout 設定は、SQL Server リソース DLL が[sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)ストアドプロシージャから返された情報を待機する時間 (ミリ秒単位) を指定するために使用されます。この時間を経過すると、AlwaysOn フェールオーバークラスターインスタンス (fci) は応答不能として報告されます。 タイムアウトの設定に加えられた変更は直ちに有効になり、SQL Server リソースを再起動する必要はありません。  

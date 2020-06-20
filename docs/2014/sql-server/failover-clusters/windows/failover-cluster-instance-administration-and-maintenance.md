@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e65863314943e07150aed8fc45494e7059fea21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049443"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062488"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>フェールオーバー クラスター インスタンスの管理とメンテナンス
   既存の AlwaysOn フェールオーバー クラスター インスタンス (FCI) に対するノードの追加または削除のようなメンテナンス タスクは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセットアップ プログラムを使用して行います。 IP アドレス リソースの変更や、特定の FCI シナリオからの復元が必要になった場合など、その他の管理タスクについては、Windows Server フェールオーバー クラスタリング (WSFC) サービスの管理スナップインであるフェールオーバー クラスター マネージャー スナップインを使用して行います。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8f5d7f8efe305be71a311b822c51ff1ede9afdf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdc3eecd9e151d7da32a5fd65a90552c0743b3d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691494"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062701"
 ---
 # <a name="getnextordervalue-method-clientnetworkprotocol-class"></a>GetNextOrderValue メソッド (ClientNetworkProtocol クラス)
   プロトコル リスト内で次の位置にあるプロトコルを選択します。  
@@ -37,9 +36,9 @@ object
   
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- クライアントによって[!INCLUDE[msCoName](../../../includes/msconame-md.md)]使用されるネットワークプロトコルを表す[clientnetworkprotocol クラス](clientnetworkprotocol-class.md)オブジェクト。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+ クライアントによって使用されるネットワークプロトコルを表す[Clientnetworkprotocol クラス](clientnetworkprotocol-class.md)オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 50455f67760c920881f9f8daaf42d7abe4037c45
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0397d7f5588be7543f71819c93827819bd8d073f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707279"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047936"
 ---
 # <a name="metadata-discovery"></a>メタデータの検出
   のメタデータ検出の [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 機能強化により、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ネイティブクライアントアプリケーションでは、クエリの実行によって返される列またはパラメーターのメタデータが、クエリを実行する前に指定したメタデータ形式と同じか、または互換性があるかを確認できます。 クエリの実行後に返されたメタデータにクエリの実行前に指定したメタデータ形式との互換性がない場合は、エラーが発生します。  

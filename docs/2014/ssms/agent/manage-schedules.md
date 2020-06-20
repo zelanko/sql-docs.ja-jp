@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f54f2a3520a0d34290cb81b411a5ce41a59d7c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255072"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062182"
 ---
 # <a name="manage-schedules"></a>[スケジュールの管理]
-  エージェントのジョブスケジュールの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロパティを表示および変更できます。  
+  エージェントのジョブスケジュールのプロパティを表示および変更でき [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="options"></a>オプション  
  **[利用可能なスケジュール]**  
@@ -29,7 +28,7 @@ ms.locfileid: "63255072"
  **名前**  
  スケジュールの名前を表示します。  
   
- **Enabled**  
+ **有効**  
  スケジュールを有効にするには、このオプションを選択します。  
   
  **説明**  
@@ -38,13 +37,13 @@ ms.locfileid: "63255072"
  **[スケジュール済みのジョブ]**  
  スケジュールにアタッチされているジョブの番号を表示します。 番号をクリックすると、ジョブのプロパティが表示されます。  
   
- **新しい**  
+ **[新規作成]**  
  新しいスケジュールを作成するには、このボタンをクリックします。  
   
  **削除**  
  選択されているスケジュールを削除するには、このボタンをクリックします。  
   
- **Properties**  
+ **プロパティ**  
  選択されているスケジュールのプロパティを変更するには、このボタンをクリックします。  
   
 ## <a name="see-also"></a>参照  

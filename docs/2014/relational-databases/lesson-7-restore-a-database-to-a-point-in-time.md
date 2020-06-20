@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b500c2c9a2e725577ac542b738f2ea6a536cfe34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024941"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>レッスン 8: Azure Storage にデータベースを復元する
   このレッスンでは、バックアップファイルをローカルに作成し、Azure Storage に復元する方法について説明します。 データベースは、オンプレミスまたは Azure の仮想マシンのいずれかにあることに注意してください。 このレッスンを続行するには、レッスン 4、5、6 および 7 を実行する必要はありません。  
@@ -85,7 +84,7 @@ ms.locfileid: "70175430"
   
 8.  [**データベースファイルの復元**] セクションの [**復元元**] フィールドに、次のように入力します。  
   
-     データファイルの場合は、 `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`「」と入力します。 ログファイルの場合は、 `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`「」と入力します。  
+     データファイルの場合は、「」と入力 `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf` します。 ログファイルの場合は、「」と入力 `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf` します。  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40f9de4108be4defeb2353a9e7835c289641a819
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025547"
 ---
 # <a name="disable-indexes-and-constraints"></a>インデックスと制約の無効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、インデックスまたは制約を無効にする方法について説明します。 インデックスを無効にすると、ユーザーはそのインデックスにアクセスできなくなります。クラスター化インデックスの場合は、基になるテーブルのデータにもアクセスできなくなります。 ただし、インデックス定義はメタデータに残り、インデックス統計は非クラスター化インデックス上に保持されます。 ビュー上で非クラスター化インデックスまたはクラスター化インデックスを無効にすると、インデックス データが物理的に削除されます。 テーブルのクラスター化インデックスを無効にすると、データにアクセスできなくなります。つまり、データはテーブルに残りますが、そのインデックスを削除するか再構築するまでは、データ操作言語 (DML) 操作で使用できなくなります。  

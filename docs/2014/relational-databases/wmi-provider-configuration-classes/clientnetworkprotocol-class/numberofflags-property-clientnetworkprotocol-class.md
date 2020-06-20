@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a656644-2154-419f-9787-99877f597770
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9a47f6e17a85fdf9cec169a611b9fe205ba02543
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7847a5424b81efca1fcaff6b7dab899023204a7b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192036"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062665"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>NumberOfFlags プロパティ (ClientNetworkProtocol クラス)
   [Setordervalue メソッド (ClientNetworkProtocol クラス)](clientnetworkprotocol-class.md)によって指定されたクライアントネットワークプロトコルに必要なフラグオプションの数を取得します。  
@@ -36,7 +35,7 @@ object
 .NumberofFlags [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  [クライアントによって使用されるネットワーク プロトコルを表す](clientnetworkprotocol-class.md) ClientNetworkProtocol クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
   

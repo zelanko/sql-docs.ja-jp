@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef55e579-080d-4650-a7fc-4dd03ed8e391
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eaa44fe3a5b6e7009057f351d06258b5ab809aa5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30fa3fc95a669f217a181f4a6e1f83b3e36288de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028360"
 ---
 # <a name="spstarting-event-class"></a>SP:Starting イベント クラス
   SP:Starting イベント クラスは、ストアド プロシージャの実行が開始されていることを示します。  
@@ -28,7 +27,7 @@ ms.locfileid: "63050874"
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|のインスタンスへの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続を作成したクライアントアプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
+|ApplicationName|`nvarchar`|のインスタンスへの接続を作成したクライアントアプリケーションの名前 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |ClientProcessID|`int`|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  
 |DatabaseID|`int`|ストアド プロシージャが実行されているデータベースの ID。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |DatabaseName|`nvarchar`|ストアド プロシージャが実行されているデータベースの名前。|35|はい|  

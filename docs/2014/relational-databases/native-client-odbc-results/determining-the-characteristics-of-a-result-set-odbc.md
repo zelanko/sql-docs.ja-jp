@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b93a0386c921a863e310e99164d654c7d84e357b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5957092cdddfbcbce904d9a6483914672565d337
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999112"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>結果セットの特性の決定 (ODBC)
   メタデータは、他のデータを説明するデータです。 たとえば、結果セットのメタデータは、結果セットに含まれる列数、これらの列のデータ型、名前、有効桁数、NULL 値の許容属性など、結果セットの特性を説明します。  

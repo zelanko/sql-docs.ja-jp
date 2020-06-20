@@ -13,18 +13,17 @@ f1_keywords:
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9e114802c6e69467ba9438ee4c525ef85e73024
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059056"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966842"
 ---
 # <a name="execute-package-task-editor"></a>パッケージ実行タスク エディター
   パッケージ実行タスクを構成するには、パッケージ実行タスク エディターを使用します。 パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
   
- **目的に合ったトピックをクリックしてください**  
+ **どうしたいんですか。**  
   
 -   [パッケージ実行タスク エディターを開く](#open)  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66059056"
  子パッケージがパスワードで保護されている場合は、子パッケージのパスワードを入力するか、参照ボタン [...] をクリックして子パッケージの新しいパスワードを作成します。  
   
  `ExecuteOutOfProcess`  
- 子パッケージが親パッケージのプロセス内で実行するか、または別のプロセスで実行するかを指定します。 既定では、パッケージ実行タスクの ExecuteOutOfProcess プロパティはに`False`設定され、子パッケージは親パッケージと同じプロセスで実行されます。 このプロパティを `true` に設定すると、子パッケージは別のプロセスで実行されます。 これにより、子パッケージの起動が遅くなる場合があります。 また、プロパティを `true` に設定した場合、ツールのみのインストールではパッケージをデバッグできません。[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 製品をインストールする必要があります。 詳細については、「 [Install Integration Services](install-windows/install-integration-services.md)」を参照してください。  
+ 子パッケージが親パッケージのプロセス内で実行するか、または別のプロセスで実行するかを指定します。 既定では、パッケージ実行タスクの ExecuteOutOfProcess プロパティはに設定され、 `False` 子パッケージは親パッケージと同じプロセスで実行されます。 このプロパティを `true` に設定すると、子パッケージは別のプロセスで実行されます。 これにより、子パッケージの起動が遅くなる場合があります。 また、プロパティを `true` に設定した場合、ツールのみのインストールではパッケージをデバッグできません。[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 製品をインストールする必要があります。 詳細については、「 [Install Integration Services](install-windows/install-integration-services.md)」を参照してください。  
   
 ### <a name="referencetype-dynamic-options"></a>[ReferenceType] の動的オプション  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66059056"
  **場所**  
  子パッケージの場所を選択します。 このプロパティのオプションを次の表に示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**SQL Server**|場所を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに設定します。|  
 |**ファイル システム**|場所をファイル システムに設定します。|  
@@ -88,7 +87,7 @@ ms.locfileid: "66059056"
   
 #### <a name="location--sql-server"></a>Location = SQL Server  
  **接続**  
- OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...>**] をクリックして新しい接続マネージャーを作成します。  
+ OLE DB 接続マネージャーを一覧から選択するか、をクリックして \<**New connection...**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、 [OLE DB 接続マネージャーの構成](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66059056"
   
 #### <a name="location--file-system"></a>Location = ファイル システム  
  **接続**  
- ファイル接続マネージャーを一覧から選択するか、[ \<**新しい接続...**> をクリックして新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、をクリックして \<**New connection...**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -118,7 +117,7 @@ ms.locfileid: "66059056"
  **追加**  
  パラメーターまたは変数を子パッケージのパラメーターにマップする場合にクリックします。  
   
- **Remove**  
+ **削除**  
  パラメーターまたは変数と子パッケージのパラメーターの間のマッピングを削除する場合にクリックします。  
   
   

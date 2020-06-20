@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: de71808c54264639aea82fe66cf23a7bfd6bd0ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a39bac2e0352f2adc7749e980d5cc91044f8ab2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162155"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025330"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>ヒープ (クラスター化インデックスなしのテーブル)
   ヒープとはクラスター化インデックスを使用しないテーブルのことです。 1 つまたは複数の非クラスター化インデックスを、ヒープとして格納されているテーブルに作成することができます。 ヒープには、順序を指定せずにデータが格納されます。 通常、最初にデータが格納される順序はテーブルに行が挿入された順序と同じですが、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では行を効率的に格納できるようにヒープ内でデータが移動される場合があるため、データの順序は予測できません。 ヒープから返される行の順序を保証するには、`ORDER BY` 句を使用する必要があります。 テーブルにクラスター化インデックスを作成し、テーブルがヒープにならないようにすることで、行が格納される順序を指定することができます。  

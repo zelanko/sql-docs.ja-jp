@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 03e62c5ca77a05ee8f8b1bbca13a57a71b37e2a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ee19526ffa4d88948d2efa2313be212ca094522
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893713"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062645"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>新しい SQL Server フェールオーバー クラスターの作成 (セットアップ)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールまたはアップグレードするには、フェールオーバー クラスターの各ノードでセットアップ プログラムを実行する必要があります。 既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに追加するノードで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行する必要があります。 他のノードを管理するアクティブなノードでは、セットアップを実行しないでください。  
@@ -250,7 +249,7 @@ ms.locfileid: "68893713"
   
 7.  ローカライズされたオペレーティング システムでのインストールで、インストール メディアに英語とそのオペレーティング システムに対応する言語の両方の言語パックが含まれている場合は、[言語の選択] ページで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの言語を指定できます。 言語間サポートとインストールに関する注意点の詳細については、「 [SQL Server のローカル言語版](../../install/local-language-versions-in-sql-server.md)」を参照してください。  
   
-     続行するには、[**次へ**] をクリックします。  
+     続行するには、 **[次へ]** をクリックします。  
   
 8.  [プロダクト キー] ページで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の無償のエディションをインストールするかどうか、または SQL Server の製品版の PID キーを持っているかどうかをクリックして指定します。 詳細については、「 [SQL Server 2014 のエディションとコンポーネント](../../editions-and-components-of-sql-server-2016.md)」を参照してください。  
   
@@ -278,9 +277,9 @@ ms.locfileid: "68893713"
     > [!IMPORTANT]  
     >  フェールオーバー クラスターに対して準備されるすべてのノードに対して同じインスタンス ID を使用してください。  
   
-     **インスタンスルートディレクトリ**-既定では、インスタンスルートディレクトリは C:\Program files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\です。 既定以外のルート ディレクトリを指定するには、表示されたフィールドを使用するか、参照ボタンをクリックしてインストール フォルダーを検索します。  
+     **インスタンスルートディレクトリ**-既定では、インスタンスルートディレクトリは C:\Program files です \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \\ 。 既定以外のルート ディレクトリを指定するには、表示されたフィールドを使用するか、参照ボタンをクリックしてインストール フォルダーを検索します。  
   
-     [**インストール済みのインスタンス**数: セットアップ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]が実行されているコンピューター上にあるのインスタンスがグリッドに表示されます。 既定のインスタンスが既にコンピューターにインストールされている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の名前付きインスタンスをインストールする必要があります。 **[次へ]** をクリックして次に進みます。  
+     [**インストール済みのインスタンス**数: セットアップが実行されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューター上にあるのインスタンスがグリッドに表示されます。 既定のインスタンスが既にコンピューターにインストールされている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の名前付きインスタンスをインストールする必要があります。 **[次へ]** をクリックして次に進みます。  
   
 12. [必要なディスク領域] ページでは、指定した機能に必要なディスク領域が計算され、セットアップを実行中のコンピューター上の空き領域と比較されます。  
   
@@ -304,7 +303,7 @@ ms.locfileid: "68893713"
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスのログイン情報を指定したら、 **[次へ]** をクリックします。  
   
-16. [**サーバーの構成-照合順序**] タブを使用すると[!INCLUDE[ssDE](../../../includes/ssde-md.md)] 、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]およびの既定以外の照合順序を指定できます。 詳細については、「 [サーバー構成 - 照会順序](../../install/server-configuration-collation.md)」を参照してください。  
+16. [**サーバーの構成-照合順序**] タブを使用すると、およびの既定以外の照合順序を指定でき [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ます。 詳細については、「 [サーバー構成 - 照会順序](../../install/server-configuration-collation.md)」を参照してください。  
   
 17. **[サーバーの構成 - FILESTREAM]** ページを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに対する FILESTREAM を有効にします。 詳細については、「 [データベース エンジンの構成 - Filestream](../../install/database-engine-configuration-filestream.md)」を参照してください。 **[次へ]** をクリックして、続行します。  
   
@@ -340,7 +339,7 @@ ms.locfileid: "68893713"
   
 5.  ローカライズされたオペレーティング システムでのインストールで、インストール メディアに英語とそのオペレーティング システムに対応する言語の両方の言語パックが含まれている場合は、[言語の選択] ページで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの言語を指定できます。 言語間サポートとインストールに関する注意点の詳細については、「 [SQL Server のローカル言語版](../../install/local-language-versions-in-sql-server.md)」を参照してください。  
   
-     続行するには、[**次へ**] をクリックします。  
+     続行するには、 **[次へ]** をクリックします。  
   
 6.  [クラスター ノードの構成] ページを使用して、クラスタリングに対して準備されたインスタンス名を選択し、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターのネットワーク名を指定します。 これは、ネットワーク上でフェールオーバー クラスターを識別するために使用される名前です。  
   
@@ -404,8 +403,8 @@ ms.locfileid: "68893713"
   
 19. インストールが終了すると、 **[完了]** ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール プロセスを完了するには、 **[閉じる]** をクリックします。 この手順により、同じフェールオーバー クラスターに対して準備されたすべてのノードが、完成した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの一部となります。  
   
-## <a name="next-steps"></a>次のステップ  
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]新しいインストールを構成**する-システムのセキュリティ向上な領域を削減するため[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に、主要なサービスと機能を選択的にインストールして有効にします。 詳細については、「 [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)」を参照してください。  
+## <a name="next-steps"></a>次の手順  
+ **新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストールを構成**する-システムのセキュリティ向上な領域を削減するために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主要なサービスと機能を選択的にインストールして有効にします。 詳細については、「 [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)」を参照してください。  
   
  ログ ファイルの場所の詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」をご覧ください。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a62d8fbafc353e2d71223506b7fb4516d184b494
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 08b79888eb47634deaccc910b2ea3c93800b7c78
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717100"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046812"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML データ型の変数と列の作成
   `xml`データ型は、の組み込みデータ型で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] やなどの他の組み込み型と似てい `int` `varchar` ます。 他の組み込み型と同様に、変数の型 `xml` 、パラメーターの型、関数の戻り値の型、または[CAST および CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)としてテーブルを作成するときに、列の型としてデータ型を使用できます。  

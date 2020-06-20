@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b28468db1024a9789364e5b6e5c115cba71fa9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62743499"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024974"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>リンク サーバーの作成 (SQL Server データベース エンジン)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してリンク サーバーを作成し、別の [!INCLUDE[tsql](../../includes/tsql-md.md)]からデータにアクセスする方法について説明します。 リンク サーバーを作成すると、複数のソースのデータを操作できます。 リンク サーバーは別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスである必要はありませんが、そのようにするのが一般的です。  
@@ -35,7 +34,7 @@ ms.locfileid: "62743499"
 ##  <a name="security"></a><a name="Security"></a> セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
- ステートメントを[!INCLUDE[tsql](../../includes/tsql-md.md)]使用する場合`ALTER ANY LINKED SERVER`は、サーバーに対する権限、または**setupadmin**固定サーバーロールのメンバーシップが必要です。 を使用[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]する`CONTROL SERVER`場合は、 **sysadmin**固定サーバーロールの権限またはメンバーシップが必要です。  
+ ステートメントを使用する場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] `ALTER ANY LINKED SERVER` は、サーバーに対する権限、または**setupadmin**固定サーバーロールのメンバーシップが必要です。 を使用する場合 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] `CONTROL SERVER` は、 **sysadmin**固定サーバーロールの権限またはメンバーシップが必要です。  
   
 ##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> リンク サーバーを作成する方法  
  次のいずれかを使用できます。  
@@ -99,10 +98,10 @@ ms.locfileid: "62743499"
      **[リモート パスワード]**  
      リモート ユーザーのパスワードを指定します。  
   
-     **追加**  
+     **[追加]**  
      新しいローカル ログインを追加します。  
   
-     **Remove**  
+     **[削除]**  
      既存のローカル ログインを削除します。  
   
      **[接続を許可しない]**  
@@ -152,7 +151,7 @@ ms.locfileid: "62743499"
   
      0 の場合は、 **sp_configure** の [remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) オプションの既定値が使用されます。  
   
-     **クエリタイムアウト**  
+     **クエリのタイムアウト**  
      リンク サーバーに対するクエリのタイムアウト値です (秒単位)。  
   
      0 の場合は、 **sp_configure** の [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) オプションの既定値が使用されます。  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;[&gt;別名のプロパティ] ([別名] タブ) |Microsoft Docs'
+title: '&lt;[別名の &gt; プロパティ] ([別名] タブ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2ee874caeaa8be9e7b050336f74bab9487f15884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 559cc01b1fb2de42c061e21762495019e1896670
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008354"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;[別名]&gt; プロパティ ([別名] タブ)
-  別名は、接続のために使用できる代替名です。 別名は、接続文字列の必須要素をカプセル化したものであり、ユーザーが選択した名前でそれらの要素を公開できます。 **[** **Alias\<> のプロパティ]** ダイアログ ボックスの **[別名]** ページでは、別名の接続文字列について各要素の表示や指定を行います。  
+  別名は、接続のために使用できる代替名です。 別名は、接続文字列の必須要素をカプセル化したものであり、ユーザーが選択した名前でそれらの要素を公開できます。 [ ** \<**Alias name**> プロパティ**] ダイアログボックスの [**別名**] ページを使用すると、別名の接続文字列の要素を表示または指定できます。  
   
 ## <a name="options"></a>オプション  
  **[別名]**  

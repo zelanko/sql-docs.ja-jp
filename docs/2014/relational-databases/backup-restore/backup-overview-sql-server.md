@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bf284ffce044e0efa1f855e0e504a1f92dc7e3da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60fbd0341c4e29c6f98cc4d5fe5a2cfabc9b703f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175986"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959066"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ コンポーネントについて説明します。 データを保護するためには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップすることが不可欠です。 ここでは、バックアップの種類およびバックアップの制限事項について説明します。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ デバイスとバックアップ メディアについても取り上げます。  
@@ -57,7 +56,7 @@ ms.locfileid: "70175986"
   
  **バックアップの種類**  
   
- [コピーのみのバックアップ](copy-only-backups-sql-server.md)  
+ [コピーのみのバックアップ (copy-only backup)](copy-only-backups-sql-server.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の通常のバックアップ シーケンスから独立した特殊な用途のバックアップ。  
   
  データ バックアップ (data backup)  
@@ -83,9 +82,9 @@ ms.locfileid: "70175986"
  [部分バックアップ (partial backup)](partial-backups-sql-server.md)  
  データベースの一部のファイル グループのデータのみを格納します。プライマリ ファイル グループ、すべての読み取り/書き込みファイル グループのほか、必要に応じて指定した読み取り専用ファイルが含まれます。  
   
- **バックアップ メディアの用語と定義**  
+ **バックアップメディアの用語と定義**  
   
- [バックアップデバイス](backup-devices-sql-server.md)  
+ [バックアップ デバイス (backup device)](backup-devices-sql-server.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの書き込みと復元に使用されるディスクまたはテープ デバイス。 SQL Server のバックアップは、Azure Blob Storage サービスに書き込むこともできます。バックアップ先とバックアップ ファイルの名前を指定するには **URL** 形式を使用します。 詳細については、「 [Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」をご覧ください。  
   
  [バックアップ メディア (backup media)](media-sets-media-families-and-backup-sets-sql-server.md)  
@@ -133,7 +132,7 @@ ms.locfileid: "70175986"
   
 -   バックアップ操作実行中にデータベース ファイルを作成または削除しようとすると、作成操作または削除操作は失敗します。  
   
- バックアップ操作がファイル管理操作または圧縮操作の実行と重複すると、競合が発生します。 競合する操作が最初に開始されたかどうかにかかわらず、2番目の操作は、最初の操作によって設定されたロックのタイムアウトを待機します。(タイムアウト期間はセッションタイムアウトの設定によって制御されます)。ロックがタイムアウト期間内に解放された場合、2番目の操作は続行されます。 ロックがタイムアウトになると、2 番目の操作は実行されません。  
+ バックアップ操作がファイル管理操作または圧縮操作の実行と重複すると、競合が発生します。 競合する操作のどちらが先に開始されたかにかかわらず、1 つ目の操作によって設定されたロックのタイムアウトを 2 つ目の操作が待機します(タイムアウト期間はセッション タイムアウトの設定によって制御されます)。ロックがタイムアウト期間内に解放されると、2 番目の操作が開始されます。 ロックがタイムアウトになると、2 番目の操作は実行されません。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **バックアップ デバイスとバックアップ メディアを操作するには**  
@@ -184,7 +183,7 @@ ms.locfileid: "70175986"
 ## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](back-up-and-restore-of-sql-server-databases.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
- [メンテナンスプラン](../maintenance-plans/maintenance-plans.md)   
+ [メンテナンス プラン](../maintenance-plans/maintenance-plans.md)   
  [トランザクション ログ &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [復旧モデル &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   

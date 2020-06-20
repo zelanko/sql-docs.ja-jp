@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c90839d02bd2cebcf9424e38d35f9595a23d210
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ad808aaab10cf3fa424f6131be0e3ec968f5ee0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718036"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062876"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>CommandStream プロパティを使用した、テンプレート ファイルの実行
   この例は、SqlXmlCommand オブジェクトの CommandStream プロパティを使用して、SQL クエリまたは XPath クエリで構成されるテンプレートファイルを指定する方法を示しています。 このアプリケーションでは、コマンドファイルの FileStreamobject が開かれ、実行される CommandStream としてファイルストリームが割り当てられます。  

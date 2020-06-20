@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e60ebbf-8f2d-4d77-a859-e47e0f605cb2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 50a054bbe83c7873d1da93909bc57331fcf4a635
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: daaad6f1c340d92f7bdc6f0b4faf46598cdae31c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055858"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963520"
 ---
 # <a name="send-mail-task-editor-general-page"></a>[メール送信タスク エディター] ([全般] ページ)
   **[メール送信タスク エディター]** の **[全般]** ページを使用すると、メール送信タスクに名前を付けて説明を記述できます。  

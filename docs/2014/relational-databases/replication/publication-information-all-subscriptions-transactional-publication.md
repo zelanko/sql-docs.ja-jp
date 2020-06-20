@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6cc3ae7c4c39517f40b49d2ddd98ccdc397ee345
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dee6716ad5e4a7aa1db24aa7ec67abf6a6028215
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021819"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016635"
 ---
 # <a name="publication-information-all-subscriptions-transactional-publication"></a>パブリケーション情報、[すべてのサブスクリプション]\(トランザクション パブリケーション)
   **[すべてのサブスクリプション]** タブには、選択したトランザクション パブリケーションに対するすべてのサブスクリプションの情報が表示されます。  
@@ -43,7 +42,7 @@ ms.locfileid: "63021819"
   
  既定では、サブスクリプションの情報を表示するグリッドは **[状態]** 列の順序で並べられています (同じ状態のサブスクリプションは、 **[パフォーマンス]** 列の順序で並べられています)。 表示される状態の値と、その値の並べ替え順 (たとえば、エラーは常にグリッドの上部に表示されます) を次に示します。  
   
--   Error  
+-   エラー  
   
 -   [パフォーマンス クリティカル]\([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ)  
   
@@ -69,19 +68,19 @@ ms.locfileid: "63021819"
  **パフォーマンス**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 各サブスクリプションのパフォーマンス評価は、レプリケーション モニターにより取得され、履歴パフォーマンスに反映されていない、最も新しい計測値に基づいています。 パフォーマンスは、パフォーマンスしきい値が定義されているパブリケーションへのサブスクリプションについてのみ計測されます。パブリケーションにパフォーマンスしきい値が定義されていない場合、この列には **[有効になっていません]** と表示されます。 パフォーマンス評価は、次のいずれかの値になります。  
   
--   [非常に良い]  
+-   非常に良い  
   
--   [良い]  
+-   良い  
   
--   [普通]  
+-   普通  
   
 -   悪い  
   
--   Critical  
+-   重要  
   
  パフォーマンスが [重大] の場合、 **[状態]** 列に **[パフォーマンス クリティカル]** と表示されます。 パフォーマンス評価の定義方法とパフォーマンスしきい値の設定方法については、「[Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)」 (レプリケーション モニターを使用したパフォーマンスの監視) を参照してください。  
   
- **Latency**  
+ **待機時間**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 トランザクションがパブリッシャー側でコミットされたときから、サブスクライバー側で対応するトランザクションがコミットされるまでに経過した時間の平均値です。 表示される待機時間は、レプリケーション モニターにより取得された最新の計測値に基づいています。 待機時間の計測の詳細については、「[トランザクション レプリケーションの待機時間の計測および接続の検証](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

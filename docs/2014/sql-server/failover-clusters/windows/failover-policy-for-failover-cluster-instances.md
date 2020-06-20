@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e9df2b0158504577630caa6830687a2665c91327
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8d441e5627280cb46168d9ff187d7f43da8b26a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050086"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062495"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) において、特定の時点で Windows Server フェールオーバー クラスター (WSFC) クラスター リソース グループを所有できるノードは 1 つだけです。 FCI のこのノードを通じて、クライアント要求が処理されます。 万一障害が発生した場合や再起動が失敗した場合、グループの所有権が、FCI 内の別の WSFC ノードに移ります。 この処理はフェールオーバーと呼ばれます。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] では、障害検出の信頼性が向上し、柔軟なフェールオーバー ポリシーが提供されます。  
@@ -104,7 +103,7 @@ ms.locfileid: "63050086"
  * 既定値  
   
 ####  <a name="responding-to-failures"></a><a name="respond"></a>エラーへの対応  
- 1 つまたは複数のエラー条件が検出された後で WSFC サービスがどのようにエラーに対応するかは、WSFC クォーラムの状態と、FCI リソース グループの再起動およびフェールオーバー設定に依存します。 FCI がその WSFC クォーラムを失った場合、FCI 全体がオフラインになり、FCI は高可用性を失います。 FCI が WSFC クォーラムを保持し続けた場合、WSFC サービスは、最初に障害が発生したノードの再起動を試み、再起動の試行が失敗した場合はフェールオーバーを実行することによって対応します。 再起動とフェールオーバーの設定は、フェールオーバー クラスター マネージャー スナップインで構成します。 これらの設定の詳細については、「 [ \<リソース> のプロパティ: [ポリシー] タブ](https://technet.microsoft.com/library/cc725685.aspx)」を参照してください。  
+ 1 つまたは複数のエラー条件が検出された後で WSFC サービスがどのようにエラーに対応するかは、WSFC クォーラムの状態と、FCI リソース グループの再起動およびフェールオーバー設定に依存します。 FCI がその WSFC クォーラムを失った場合、FCI 全体がオフラインになり、FCI は高可用性を失います。 FCI が WSFC クォーラムを保持し続けた場合、WSFC サービスは、最初に障害が発生したノードの再起動を試み、再起動の試行が失敗した場合はフェールオーバーを実行することによって対応します。 再起動とフェールオーバーの設定は、フェールオーバー クラスター マネージャー スナップインで構成します。 これらの設定の詳細については、「 [ \<Resource> プロパティ: [ポリシー] タブ](https://technet.microsoft.com/library/cc725685.aspx)」を参照してください。  
   
  クォーラムの正常性の維持については、「[WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)」をご覧ください。  
   

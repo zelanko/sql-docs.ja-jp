@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4026154204cf6de95711a3014b069c34a29d9922
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c7f6cbff4e68eaedd3e78a82cddd872ba5f8f19e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704511"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017820"
 ---
 # <a name="isolation-levels-ole-db"></a>分離レベル (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントは、接続のトランザクション分離レベルを制御できます。 トランザクション分離レベルを制御するために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーコンシューマーは次のものを使用します。  

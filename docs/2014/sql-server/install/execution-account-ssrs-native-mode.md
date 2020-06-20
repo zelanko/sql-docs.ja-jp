@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cb210be7856566c16f615d90cf879dcae5d6306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952543"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042716"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>実行アカウント (SSRS ネイティブ モード)
   このページを使用すると、自動処理に使用するアカウントを構成できます。 このアカウントは、他に使用できる資格情報のソースがないという特殊な状況で使用されます。  
@@ -44,12 +43,12 @@ ms.locfileid: "71952543"
  アカウントを指定します。  
   
  **アカウント**  
- Windows のドメイン ユーザー アカウントを入力します。 *ドメイン>\\<ユーザーアカウント\>の形式を使用し\<* ます。  
+ Windows のドメイン ユーザー アカウントを入力します。 * \<domain> \\<ユーザーアカウント \> *の形式を使用します。  
   
  **パスワード**  
  パスワードを入力します。  
   
- **パスワードの確認入力**  
+ **[パスワードの確認入力]**  
  パスワードを再入力します。  
   
 ## <a name="see-also"></a>参照  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 92cd4d2357d8908ac8944883772fd2639ee30b11
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1d8633a66b9c6d1896f95275380d73ab69cb873d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706050"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022261"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData**は、列の値をバインドせずに結果セットのデータを取得するために使用します。 **SQLGetData**を同じ列に対して連続して呼び出すと、 **text**、 **ntext**、または**image**データ型の列から大量のデータを取得できます。  

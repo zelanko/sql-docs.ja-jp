@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 127044042eed7f082b6f1f7ba7ae6918232ba9ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c035446034c5f9f8dfdeeed6a9b6b4be2ea77d72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891771"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966052"
 ---
 # <a name="step-2-verifying-the-deployment-bundle"></a>手順 2:配置バンドルの確認
   レッスン 1 では、Deployment Tutorial プロジェクトを作成し、パッケージと補助ファイルをプロジェクトに追加しました。前のタスクでプロジェクトの配置ユーティリティを構築しました。  
@@ -50,7 +49,7 @@ ms.locfileid: "62891771"
   
      `<?xml version="1.0"?><DTSDeploymentManifest GeneratedBy="Domain\UserName" GeneratedFromProjectName="Deployment Tutorial" GeneratedDate="2006-02-24T13:29:02.6537669-08:00" AllowConfigurationChanges="true"><Package>DataTransfer.dtsx</Package><Package>LoadXMLData.dtsx</Package><ConfigurationFile>datatransferconfig.dtsconfig</ConfigurationFile><ConfigurationFile>loadxmldataconfig.dtsconfig</ConfigurationFile><MiscellaneousFile>Readme.txt</MiscellaneousFile><MiscellaneousFile>orders.xml</MiscellaneousFile><MiscellaneousFile>NewCustomers.txt</MiscellaneousFile><MiscellaneousFile>orders.xsd</MiscellaneousFile></DTSDeploymentManifest>`  
   
-4.  `AllowConfigurationChanges`属性の値が**true**であり、xml に2つのパッケージ`Package`それぞれに対応する要素、 `MiscellaneousFile` 4 つの非パッケージファイルそれぞれに対応する要素、および`ConfigurationFile` 2 つの xml 構成ファイルそれぞれに対応する要素が含まれていることを確認します。  
+4.  属性の値 `AllowConfigurationChanges` が**true**であり、xml に2つのパッケージそれぞれに対応する要素、4つの `Package` `MiscellaneousFile` 非パッケージファイルそれぞれに対応する要素、および `ConfigurationFile` 2 つの xml 構成ファイルそれぞれに対応する要素が含まれていることを確認します。  
   
 5.  Internet Explorer またはテキスト エディターを終了します。  
   

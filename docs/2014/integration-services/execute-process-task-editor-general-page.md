@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 743f8d8930652deadf3698ea16440b3361ae1789
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f742ac646b51a7eed6d5a1cab2877fb4802be59
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059073"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966802"
 ---
 # <a name="execute-process-task-editor-general-page"></a>[プロセス実行タスク エディター]\([全般] ページ)
   **[プロセス実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、プロセス実行タスクの名前と説明を入力できます。  

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 64b1945ba990278241d38cebb029feab86d6d7bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ab35cd849d020a265fac097f2a0314a81c20dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965443"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services の機能とタスク
-  すべてのユーザー (デザイナー、開発者、アナリスト、または管理者) がパッケージを[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]作成および開発するために必要な情報を検索します。 開発中のアプリケーションや Web サイトにパッケージを組み込む方法についても解説されています。  
+  すべてのユーザー (デザイナー、開発者、アナリスト、または管理者) がパッケージを作成および開発するために必要な情報を検索し [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ます。 開発中のアプリケーションや Web サイトにパッケージを組み込む方法についても解説されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [SSIS&#41; 環境と Studio 環境 &#40;Integration Services](integration-services-ssis-development-and-management-tools.md)  

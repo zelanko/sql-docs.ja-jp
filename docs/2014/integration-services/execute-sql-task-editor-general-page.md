@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 294836625075a70b8e101afef2bb9221a177ca47
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058989"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966779"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>[SQL 実行タスク エディター] ([全般] タブ)
   **[SQL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、SQL 実行タスクを構成したり、タスクが実行する SQL ステートメントを指定したりできます。  
@@ -39,7 +38,7 @@ ms.locfileid: "66058989"
 > [!NOTE]  
 >  接続してトランザクションを完了するための時間を、 **[TimeOut]** で指定された秒数よりも長く指定することによってスリープ機能をエミュレートする場合、ストアド プロシージャはタイムアウトになりません。 ただし、クエリを実行するストアド プロシージャは、 **[TimeOut]** で指定された時間制限の影響を常に受けます。  
   
- **コードページ**  
+ **CodePage**  
  変数の Unicode 値を変換するときに使用するコード ページを指定します。 既定値は、ローカル コンピューターのコード ページです。  
   
 > [!NOTE]  
@@ -57,7 +56,7 @@ ms.locfileid: "66058989"
  **関連項目:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)」、「 [ODBC 接続マネージャー](connection-manager/odbc-connection-manager.md)」、「 [ADO 接続マネージャー](connection-manager/ado-connection-manager.md)」、「 [ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)」、「 [SQL Server Compact Edition 接続マネージャー](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **接続**  
- 定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには\<、[**新しい接続...**>] を選択します。  
+ 定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには、を選択し \<**New connection...**> ます。  
   
  **SQLSourceType**  
  タスクが実行する SQL ステートメントのソースの種類を選択します。  
@@ -68,11 +67,11 @@ ms.locfileid: "66058989"
   
  このプロパティのオプションを次の表に示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|Transact-SQL ステートメントをソースに設定します。 この値を選択すると、動的オプション **[SQLStatement]** が表示されます。|  
 |**[ファイル接続]**|Transact-SQL ステートメントを含んでいるファイルを選択します。 この値を設定すると、動的オプション **[ファイル接続]** が表示されます。|  
-|**変数**|Transact-SQL ステートメントを定義する変数をソースに設定します。 この値を選択すると、動的オプション **[SourceVariable]** が表示されます。|  
+|**Variable**|Transact-SQL ステートメントを定義する変数をソースに設定します。 この値を選択すると、動的オプション **[SourceVariable]** が表示されます。|  
   
  **[QueryIsStoredProcedure]**  
  実行が指定された SQL ステートメントがストアド プロシージャかどうかを示します。 このプロパティは、タスクが ADO 接続マネージャーを使用する場合のみ、読み取り/書き込みになります。 それ以外の場合、このプロパティは読み取り専用となり、その値は `false` となります。  
@@ -101,13 +100,13 @@ ms.locfileid: "66058989"
   
 ### <a name="sqlsourcetype--file-connection"></a>[SQLSourceType] = [ファイル接続]  
  **[FileConnection]**  
- 既存のファイル接続マネージャーを選択するか\<、[**新しい接続...**> をクリックして新しい接続マネージャーを作成します。  
+ 既存のファイル接続マネージャーを選択するか、をクリックして \<**New connection...**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>[SQLSourceType] = [変数]  
  **[SourceVariable]**  
- 既存の変数を選択するか\<、[**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 既存の変数を選択するか、をクリックして \<**New variable...**> 新しい変数を作成します。  
   
  **関連トピック:** [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)[変数の追加](../../2014/integration-services/add-variable.md)  
   

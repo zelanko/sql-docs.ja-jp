@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97fc758c754f5fc8803e988d55147670fc3ff45b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211965"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055435"
 ---
 # <a name="create-a-database-user"></a>データベース ユーザーの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、ログインにマップされるデータベース ユーザーを作成する方法について説明します。 データベース ユーザーは、ログインの ID として、データベースへの接続時に使用されます。 データベース ユーザーとログインには同じ名前を使用できますが、必ずしもその必要はありません。 このトピックは、既存のログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に存在することを前提としています。 ログインの作成方法の詳細については、「[ログインの作成](create-a-login.md)」を参照してください。  
@@ -37,7 +36,7 @@ ms.locfileid: "68211965"
   
 -   **作業を開始する準備:**  
   
-     [バックグラウンド](#Restrictions)  
+     [背景](#Restrictions)  
   
      [セキュリティ](#Security)  
   

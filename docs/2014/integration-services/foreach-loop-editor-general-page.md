@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0b2daa20-c189-4b5b-9b43-bc9c34b08450
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13994ac9a235a9259a1f436dc8bf0dd6435a51a3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058518"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966372"
 ---
 # <a name="foreach-loop-editor-general-page"></a>[Foreach ループ エディター] ([全般] ページ)
   **[Foreach ループ エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、Foreach ループ コンテナーの名前と説明を指定できます。これは、指定した列挙子を使用してコレクション内の各メンバーのワークフローを繰り返し処理するコンテナーです。  

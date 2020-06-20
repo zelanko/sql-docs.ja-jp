@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e8be13e95cbf47a0769be20d6b0e55b39e9b7a57
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 09fc6ad073b12df2f9fbd8ebc6a59149f6154ced
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702756"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054940"
 ---
 # <a name="examples-using-openxml"></a>例: OPENXML の使用
   このトピックの例では、OPENXML を使用して XML ドキュメントの行セット ビューを作成する方法を示します。 OPENXML の構文の詳細については、「 [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)」を参照してください。 ここに示す例では、OPENXML でのメタプロパティの指定を除く OPENXML のすべての側面を示します。 OPENXML のメタプロパティの指定方法の詳細については、「 [OPENXML 内でのメタプロパティの指定](specify-metaproperties-in-openxml.md)」を参照してください。  
@@ -476,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
 -   行セット内の**ProdID**列の *ColPattern* に指定された XPath パターン ( **.** ) により、コンテキスト ノード (現在のノード) が識別されます。 指定された *rowpattern* によって、これは、< **> 要素の** ProductID`OrderDetail` 属性となります。  
   
--   行セット内の *Qty* 列に指定された **ColPattern\@ である** ../**Quantity** により、コンテキスト ノード **ProductID> の親ノードである <** > の `OrderDetail`Quantity\< 属性が識別されます。  
+-   *ColPattern*、 **..また \@ **は、行セット内の**Qty**列に対して指定された quantity 属性によって、コンテキストノードの親ノード <> ノードの**quantity**属性が識別され `OrderDetail` \<ProductID> ます。  
   
 -   同様に、行セット内の *OID* 列に指定された **ColPattern\@ である** ../../**OrderID** により、コンテキスト ノードの親ノードの親である < **> の** OrderID`Order` 属性が識別されます。 親ノードは <`OrderDetail`> で、コンテキスト ノードは <`ProductID`> です。  
   
@@ -604,7 +603,7 @@ id  lname   xmlname                   OverFlow
 -   WITH 句の列が型指定された XML 列で、XML インスタンスがスキーマに準拠しない場合、エラーが返されます。  
   
 ### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>J. 複数の値の属性から個別の値の取得  
- XML ドキュメントには、複数の値を指定できる属性を含めることができます。 たとえば、 **IDREFS** 属性には複数の値を指定できます。 XML ドキュメントでは、複数の値の属性値を、各値をスペースで区切った文字列として指定します。 次の XML ドキュメントでは、**Student> 要素の** attends\< 属性と **Class> 要素の** attendedBy\< 属性に複数の値を指定できます。 複数の値を指定できる XML 属性から値を個別に取得し、各値をデータベース内の別々の行に格納するには、新たな作業が必要です。 この例ではその処理を示します。  
+ XML ドキュメントには、複数の値を指定できる属性を含めることができます。 たとえば、 **IDREFS** 属性には複数の値を指定できます。 XML ドキュメントでは、複数の値の属性値を、各値をスペースで区切った文字列として指定します。 次の XML ドキュメントでは、 **attends** \<Student> 要素の**attendedBy**属性との \<Class> 値は複数値です。 複数の値を指定できる XML 属性から値を個別に取得し、各値をデータベース内の別々の行に格納するには、新たな作業が必要です。 この例ではその処理を示します。  
   
  このサンプル XML ドキュメントは、次の要素で構成されます。  
   
@@ -616,13 +615,13 @@ id  lname   xmlname                   OverFlow
   
      **id** (クラス ID) 属性、 **name**属性、および **attendedBy** 属性。 **attendedBy** 属性には複数の値を指定できます。  
   
- **Student> の** attends\< 属性と **Class> の** attendedBy\< 属性は、Student テーブルと Class テーブル間の **m:n** リレーションシップを表します。 学生は多くのクラスを受講でき、クラスは多くの学生を受け入れることができます。  
+ の**attends** \<Student> **attendedBy**属性とは、 \<Class> Student テーブルと Class テーブル間の**m:n**関係を表します。 学生は多くのクラスを受講でき、クラスは多くの学生を受け入れることができます。  
   
  次に示すように、このドキュメントを細分化し、データベースに保存するとします。  
   
--   \<Student> データは Students テーブルに保存します。  
+-   データを \<Student> Students テーブルに保存します。  
   
--   \<Class> データは Courses テーブルに保存します。  
+-   [ \<Class> コーステーブルにデータを保存します。  
   
 -   Student と Class 間の **m:n** リレーションシップ データは、CourseAttendence テーブルに保存します。 値を抽出するには、新たな作業が必要です。 この情報を取得し、テーブルに格納するには、次のストアド プロシージャを使用します。  
   
@@ -632,9 +631,9 @@ id  lname   xmlname                   OverFlow
   
     -   **Extract_idrefs_values**  
   
-         各 \<Course> 要素から個別の学生 ID を抽出します。 エッジ テーブルを使用して、これらの値を取得します。  
+         各要素から個別の学生 Id を抽出し \<Course> ます。 エッジ テーブルを使用して、これらの値を取得します。  
   
- 次に手順を示します。  
+ 手順は次のとおりです。  
   
 ```  
 -- Create these tables:  
@@ -801,9 +800,9 @@ Col1        BinaryCol
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_xml_preparedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
- [sp_xml_removedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
- [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
+ [sp_xml_preparedocument &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
+ [sp_xml_removedocument &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
+ [OPENXML &#40;Transact-sql&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [OPENXML &#40;SQL Server&#41;](openxml-sql-server.md)  
   
   

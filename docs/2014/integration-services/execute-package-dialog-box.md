@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b4b920b17e960059e1212be7dd15c176c0b25a47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12a6666357bf4e8a6dc68f395a1e2e8e1fd8fcaf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059184"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966872"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   **[パッケージの実行]** ダイアログ ボックスでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに格納されているパッケージを実行できます。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージには、値が環境変数に格納されているパラメーターが含まれている場合があります。 こうしたパッケージを実行するには、環境変数の値の提供に使用する環境を事前に指定する必要があります。 プロジェクトには複数の環境を含めることができますが、実行時に環境変数の値をバインドするのに使用できる環境は 1 つだけです。 パッケージで環境変数が使用されない場合、環境は不要です。  
   
- 目的に合ったトピックをクリックしてください  
+ 実行する操作  
   
 -   [[パッケージの実行] ダイアログ ボックスを開く](#open_dialog)  
   

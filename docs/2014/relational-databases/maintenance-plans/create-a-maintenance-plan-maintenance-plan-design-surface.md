@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86380b0e6940a4b4cf9a5103d44860f68258ef59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024594"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>メンテナンス プランの作成 (メンテナンス プラン デザイン画面)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でメンテナンス プラン デザイン画面を使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 基本的なメンテナンス プランを作成する場合は、 **メンテナンス プラン ウィザード** が最適です。それに対して、デザイン画面を使用してプランを作成すると、高度なワークフローを利用できます。  
@@ -251,7 +250,7 @@ ms.locfileid: "63144343"
      ログ ファイル エントリの読み込みを停止します。 たとえば、最新のエントリのみを表示したい場合に、リモートまたはオフラインのログ ファイルの読み込みに長い時間がかかるときは、このオプションを使用することをお勧めします。  
   
      **[ログ ファイルの概要]**  
-     この情報パネルには、ログ ファイルのフィルター選択の概要が表示されます。 ファイルがフィルター選択されない場合、 **"フィルターが適用されていません"** と表示されます。 ログにフィルターが適用されている場合、"**ログ エントリのフィルター条件:** \<フィルター条件" と表示されます。  
+     この情報パネルには、ログ ファイルのフィルター選択の概要が表示されます。 ファイルがフィルター選択されない場合、 **"フィルターが適用されていません"** と表示されます。 ログにフィルターが適用されている場合、"**ログ エントリのフィルター条件:** \<filter criteria>" と表示されます。  
   
      **Date**  
      イベントの日付が表示されます。  

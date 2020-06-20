@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 86b67202537e650619f835e9c64d2c35a8e78fc2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 464c03bf597fe677579b2a2201db49ab810d2895
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796608"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063095"
 ---
 # <a name="managing-users-roles-and-logins"></a>ユーザー、ロール、およびログインの管理
   SMO では、<xref:Microsoft.SqlServer.Management.Smo.Login> オブジェクトでログインが表現されます。 ログオンが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に存在する場合、サーバー ロールに追加することができます。 サーバー ロールは、<xref:Microsoft.SqlServer.Management.Smo.ServerRole> オブジェクトで表現されます。 データベース ロールは <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> オブジェクトで表現され、アプリケーション ロールは <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> オブジェクトで表現されます。  

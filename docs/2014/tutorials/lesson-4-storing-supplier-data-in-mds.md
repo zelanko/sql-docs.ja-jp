@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15f15ff1fd48321ed4f13826fb239b6cede46242
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489718"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006667"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>レッスン 4: MDS に仕入先データを格納する
   マスター データ サービス (MDS) は、マスター データ管理用の SQL Server ソリューションです。 マスター データ管理 (MDM) とは、データの非トランザクション リストを探索および定義するために組織が必要とする作業を表します。  
@@ -34,7 +33,7 @@ ms.locfileid: "65489718"
   
 1.  **マスターデータマネージャー Web アプリケーション**を使用して、 **MDS**で**サプライヤー**モデルを作成します。  
   
-2.  クレンジングされ、一致した**Supplier Data .xls**を Excel で開き、 **Excel 用 MDS アドイン**を使用して**supplier**という名前のエンティティを作成し、データを MDS にアップロードします。  
+2.  **クレンジングおよび照合された仕入先 Data.xls**を Excel で開き、 **Excel 用 MDS アドイン**を使用して**supplier**という名前のエンティティを作成し、データを MDS にアップロードします。  
   
 3.  **マスターデータマネージャー**を使用して、データが MDS で作成されていることを確認します。  
   

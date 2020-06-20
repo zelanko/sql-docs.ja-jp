@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f4f291e5dc4aaa8a240757713cc65bd2a6a8230
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198421"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055488"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (データベース エンジン)
-  *のインスタンスや個々のデータベースの*監査[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] を行うためには、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]で発生するイベントの追跡およびログ記録が必要です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査では、サーバー レベルのイベントのためのサーバー監査仕様とデータベース レベルのイベントのためのデータベース監査仕様を含めることができる、サーバー監査を作成できます。 監査イベントは、イベント ログまたは監査ファイルへ書き込むことができます。  
+  [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] のインスタンスや個々のデータベースの *監査* を行うためには、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]で発生するイベントの追跡およびログ記録が必要です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査では、サーバー レベルのイベントのためのサーバー監査仕様とデータベース レベルのイベントのためのデータベース監査仕様を含めることができる、サーバー監査を作成できます。 監査イベントは、イベント ログまたは監査ファイルへ書き込むことができます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、個々のインストール環境についての政府や標準による要件に応じて、複数のレベルの監査を使用できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査には、サーバーおよびデータベースのさまざまなオブジェクトの監査を有効化、保存、および表示するためのツールとプロセスが用意されています。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "68198421"
 > [!IMPORTANT]  
 >  Windows アプリケーション イベント ログの読み取りおよび書き込みは、認証されているユーザーならば、だれでも行うことができます。 アプリケーション イベント ログでは、Windows セキュリティ イベント ログほど高いアクセス許可は要求されません。したがって、Windows セキュリティ イベント ログに比べてセキュリティが低くなります。  
   
- Windows セキュリティ ログへの書き込みを行うには、"セキュリティ監査の生成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**" ポリシーに** サービス アカウントを追加する必要があります。 既定では、ローカル システム、ローカル サービス、およびネットワーク サービスがこのポリシーに追加されています。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 さらに、 **オブジェクト アクセスの監査** セキュリティ ポリシーを、 **成功** と **失敗**の両方について有効にする必要があります。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 また[!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)]は Windows Server 2008 では、コマンドラインから監査ポリシープログラム (`AuditPol.exe)`を使用して、より詳細な**アプリケーション生成**ポリシーを設定できます。 Windows セキュリティ ログへの書き込みを有効にする手順の詳細については、「 [セキュリティ ログへの SQL サーバー監査イベントの書き込み](write-sql-server-audit-events-to-the-security-log.md)」を参照してください。 Auditpol.exe プログラムの詳細については、 [グループ ポリシーを使用して詳細なセキュリティの監査を構成する方法](https://support.microsoft.com/kb/921469/)に関するサポート技術情報の記事 921469 を参照してください。 Windows イベント ログは、すべての Windows オペレーティング システムで使用できます。 Windows イベント ログの詳細については、「 [イベント ビューアーの概要](https://go.microsoft.com/fwlink/?LinkId=101455)」を参照してください。 監査でより厳密なアクセス許可が必要な場合は、バイナリ ファイル ターゲットを使用します。  
+ Windows セキュリティ ログへの書き込みを行うには、"セキュリティ監査の生成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**" ポリシーに** サービス アカウントを追加する必要があります。 既定では、ローカル システム、ローカル サービス、およびネットワーク サービスがこのポリシーに追加されています。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 さらに、 **オブジェクト アクセスの監査** セキュリティ ポリシーを、 **成功** と **失敗**の両方について有効にする必要があります。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)]または Windows Server 2008 では、コマンドラインから監査ポリシープログラム (を使用して、より詳細な**アプリケーション生成**ポリシーを設定でき `AuditPol.exe)` ます。 Windows セキュリティ ログへの書き込みを有効にする手順の詳細については、「 [セキュリティ ログへの SQL サーバー監査イベントの書き込み](write-sql-server-audit-events-to-the-security-log.md)」を参照してください。 Auditpol.exe プログラムの詳細については、 [グループ ポリシーを使用して詳細なセキュリティの監査を構成する方法](https://support.microsoft.com/kb/921469/)に関するサポート技術情報の記事 921469 を参照してください。 Windows イベント ログは、すべての Windows オペレーティング システムで使用できます。 Windows イベント ログの詳細については、「 [イベント ビューアーの概要](https://go.microsoft.com/fwlink/?LinkId=101455)」を参照してください。 監査でより厳密なアクセス許可が必要な場合は、バイナリ ファイル ターゲットを使用します。  
   
  改ざんを防止するために監査情報をファイルに保存している場合、次の方法でそのファイルの場所へのアクセスを制限できます。  
   
@@ -107,7 +106,7 @@ ms.locfileid: "68198421"
 ## <a name="considerations"></a>考慮事項  
  監査の開始時にエラーが発生すると、サーバーが起動しなくなります。 この場合、コマンドラインで **-f**オプションを使用してサーバーを起動できます。  
   
- 監査に対して ON_FAILURE=SHUTDOWN が指定されているために監査エラーによってサーバーがシャットダウンしたり起動しなくなったりすると、MSG_AUDIT_FORCED_SHUTDOWN イベントがログに書き込まれます。 シャットダウンはこの設定が初めて検出されたときに生じるため、このイベントが書き込まれるのは 1 回だけです。 このイベントは、シャットダウンを引き起こした監査のエラー メッセージの後に書き込まれます。 管理者は、 **-m**フラグを使用し[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]てシングルユーザーモードで起動することにより、監査によるシャットダウンを回避できます。 シングル ユーザー モードで起動すると、ON_FAILURE=SHUTDOWN が指定されているすべての監査がダウングレードされて、そのセッションでは ON_FAILURE=CONTINUE として実行されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **-M**フラグを使用してを起動すると、MSG_AUDIT_SHUTDOWN_BYPASSED メッセージがエラーログに書き込まれます。  
+ 監査に対して ON_FAILURE=SHUTDOWN が指定されているために監査エラーによってサーバーがシャットダウンしたり起動しなくなったりすると、MSG_AUDIT_FORCED_SHUTDOWN イベントがログに書き込まれます。 シャットダウンはこの設定が初めて検出されたときに生じるため、このイベントが書き込まれるのは 1 回だけです。 このイベントは、シャットダウンを引き起こした監査のエラー メッセージの後に書き込まれます。 管理者は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **-m**フラグを使用してシングルユーザーモードで起動することにより、監査によるシャットダウンを回避できます。 シングル ユーザー モードで起動すると、ON_FAILURE=SHUTDOWN が指定されているすべての監査がダウングレードされて、そのセッションでは ON_FAILURE=CONTINUE として実行されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **-M**フラグを使用してを起動すると、MSG_AUDIT_SHUTDOWN_BYPASSED メッセージがエラーログに書き込まれます。  
   
  スタートアップ オプションの詳細については、「 [データベース エンジン サービスのスタートアップ オプション](../../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。  
   
@@ -119,7 +118,7 @@ ms.locfileid: "68198421"
 ### <a name="database-mirroring-and-sql-server-audit"></a>データベース ミラーリングと SQL Server 監査  
  データベース監査の仕様が定義されていて、データベース ミラーリングを使用するデータベースには、そのデータベース監査の仕様が含まれます。 ミラー化された SQL インスタンスでも正しく機能するようにするには、以下の項目を構成する必要があります。  
   
--   データベース監査の仕様が監査レコードを書き込めるようにするには、同じ GUID を持つ監査をミラー サーバーに作成する必要があります。 これを構成するには、コマンドを使用して`=`、*\<ソースサーバー監査> から guid guid*を持つ監査を作成します。  
+-   データベース監査の仕様が監査レコードを書き込めるようにするには、同じ GUID を持つ監査をミラー サーバーに作成する必要があります。 これは、CREATE AUDIT WITH GUID コマンドを使用して構成でき `=` * \<GUID from source Server Audit*> ます。  
   
 -   バイナリ ファイル ターゲットの場合は、監査記録が書き込まれる場所に対する適切なアクセス許可がミラー サーバーのサービス アカウントに必要です。  
   
@@ -137,10 +136,10 @@ ms.locfileid: "68198421"
 |||  
 |-|-|  
 |[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[CREATE SERVER AUDIT](/sql/t-sql/statements/create-server-audit-transact-sql)|  
-|[ALTER DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[サーバー監査の仕様の作成](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
+|[ALTER DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[CREATE SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
 |[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[DROP DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
 |[ALTER SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/alter-server-audit-transact-sql)|[DROP SERVER AUDIT](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
-|[データベース監査の仕様の作成](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[DROP SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
+|[CREATE DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[DROP SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
   
 ### <a name="dynamic-views-and-functions"></a>動的ビューと関数  
  次の表に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査に使用できる動的ビューと関数の一覧を示します。  
@@ -191,11 +190,11 @@ ms.locfileid: "68198421"
 ## <a name="related-tasks"></a>Related Tasks  
  [サーバー監査およびサーバー監査の仕様を作成する](create-a-server-audit-and-server-audit-specification.md)  
   
- [サーバー監査の仕様およびデータベース監査の仕様を作成する方法](create-a-server-audit-and-database-audit-specification.md)  
+ [サーバー監査およびデータベース監査の仕様を作成する](create-a-server-audit-and-database-audit-specification.md)  
   
- [SQL Server 監査ログの表示](view-a-sql-server-audit-log.md)  
+ [SQL Server 監査ログを表示する](view-a-sql-server-audit-log.md)  
   
- [セキュリティ ログへの SQL サーバー監査イベントの書き込み](write-sql-server-audit-events-to-the-security-log.md)  
+ [セキュリティ ログへの SQL Server 監査イベントの書き込み](write-sql-server-audit-events-to-the-security-log.md)  
   
 ## <a name="topics-closely-related-to-auditing"></a>監査と密接に関連したトピック  
  [[サーバーのプロパティ] &#40;[セキュリティ] ページ&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
