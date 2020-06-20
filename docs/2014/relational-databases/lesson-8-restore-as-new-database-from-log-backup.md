@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 464961600f69f14a2b66515a75906c0fd4af3f82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 37d8344323add8b9b6f520d59862cdd978823e4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175355"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049765"
 ---
 # <a name="lesson-9-restore-a-database-from-azure-storage"></a>レッスン 9: Azure Storage からデータベースを復元する
   このレッスンでは、データベースバックアップファイルを Azure Storage からデータベースに復元する方法について説明します。このデータベースは、オンプレミスまたは Azure の仮想マシンに存在します。 このレッスンを続行するには、レッスン 4、5、6、7 および 8 を実行する必要はありません。  
@@ -42,7 +41,7 @@ ms.locfileid: "70175355"
   
 3.  次の完全なスクリプトをコピーして、クエリ ウィンドウに貼り付けます。 必要に応じて、スクリプトを変更します。  
   
-     **注:**`RESTORE`ステートメントを実行して、Azure Storage 内のデータベースバックアップ (.bak) を別のコンピューターのデータベースインスタンスに復元します。  
+     **注:** ステートメントを実行して、 `RESTORE` Azure Storage 内のデータベースバックアップ (.bak) を別のコンピューターのデータベースインスタンスに復元します。  
   
     ```sql  
   

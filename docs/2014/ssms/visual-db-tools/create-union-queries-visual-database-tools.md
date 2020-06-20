@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34e06960274c7e16ef4f6efc31f1b7ca55a7d48c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c10f39c3e44844c4ec8a6a2328c41ea2de350d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270588"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058100"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>UNION クエリの作成 (Visual Database Tools)
   UNION キーワードを使用すると、2 つの SELECT ステートメントの結果を、1 つのテーブルに表示できます。 いずれかの SELECT ステートメントから返された行がすべて組み合わされて、UNION 式の結果として表示されます。 例については、「 [SELECT の例 &#40;transact-sql&#41;](/sql/t-sql/queries/select-examples-transact-sql)」を参照してください。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 205e4ae3d6f89f10a933bf357d1eeda458852584
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055024"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 制約と CHECK 制約
   UNIQUE 制約と CHECK 制約は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータに整合性を適用するために使用できる 2 種類の制約です。 これらは重要なデータベース オブジェクトです。  
@@ -51,7 +50,7 @@ ms.locfileid: "68196676"
 >  暗黙的または明示的なデータ型の変換が含まれる制約により、特定の操作が失敗することがあります。 たとえば、パーティションの切り替え元のテーブルに定義された制約により、ALTER TABLE...SWITCH 操作が失敗することがあります。 制約の定義ではデータ型を変換しないようにしてください。  
   
 ### <a name="limitations-of-check-constraints"></a>CHECK 制約の制限事項  
- CHECK 制約は、FALSE と評価された値を拒否します。 NULL 値は UNKNOWN と評価されるので、式に NULL 値が含まれていると制約がオーバーライドされる場合があります。 `int`たとえば、列**MyColumn**に制約を設定し、 **MyColumn**に値 10 (**MyColumn = 10**) のみを含めることを指定するとします。 **MyColumn**に値 NULL を挿入すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって NULL が追加され、エラーは返されません。  
+ CHECK 制約は、FALSE と評価された値を拒否します。 NULL 値は UNKNOWN と評価されるので、式に NULL 値が含まれていると制約がオーバーライドされる場合があります。 たとえば、列 MyColumn に制約を設定し、 `int` MyColumn **MyColumn**に値 10 **MyColumn** (**MyColumn = 10**) のみを含めることを指定するとします。 **MyColumn**に値 NULL を挿入すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって NULL が追加され、エラーは返されません。  
   
  CHECK 制約は、チェックしている条件がテーブルのすべての行に対して FALSE でない場合、TRUE を返します。 CHECK 制約は行レベルで機能します。 作成したばかりのテーブルに行が含まれていない場合、このテーブルに適用された CHECK 制約は有効であると見なされます。 この場合、次の例に示すような予期しない結果が生成されることがあります。  
   
@@ -82,7 +81,7 @@ GO
 DELETE CheckTbl WHERE col1 = 10;  
 ```  
   
- `DELETE` 制約では、テーブル `CHECK` に `CheckTbl` 行以上が格納されていなければならないことを指定していますが、`1` ステートメントは成功します。  
+ `CHECK` 制約では、テーブル `CheckTbl` に `1` 行以上が格納されていなければならないことを指定していますが、`DELETE` ステートメントは成功します。  
   
 ##  <a name="related-tasks"></a><a name="Tasks"></a> 関連タスク  
   

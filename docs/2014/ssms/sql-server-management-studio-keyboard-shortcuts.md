@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f960b871591785c81bcef84ce1b9cbacd4ba99f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127054"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062024"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio のキーボード ショートカット
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、2 つのキーボード スキームが用意されています。 既定のスキームは [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] スキームであり、そのキーボード ショートカットの基になっているのは [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 です。 また、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] では、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] の標準スキームに似たキーボード スキームも提供されています。 キーボード スキームの変更やキーボード ショートカットの追加を行うには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[環境]** の **[キーボード]** ページで目的のキーボード スキームを選択できます。  

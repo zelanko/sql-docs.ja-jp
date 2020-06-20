@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5451561e-0ce3-4bb5-844a-88cd15b0b371
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a1f957c417c5c63766dfbffa923edd6935d1eb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bbd82b4f4855c99076404d8b621edca11a7e1e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151481"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063740"
 ---
 # <a name="subscription-undistributed-commands-transactional-subscription-sql-server-2005-and-later"></a>サブスクリプション、[未配布のコマンド] (トランザクション サブスクリプション、SQL Server 2005 以降)
   **[未配布のコマンド]** タブには、ディストリビューション データベース内のコマンドで、選択したサブスクライバーにまだ配布されていないコマンドの数や、これらのコマンドを配布するのに要すると推定される時間についての情報が表示されます。 ディストリビューション データベース内のコマンドを表示する方法については、「[sp_replshowcmds &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql)」を参照してください。  

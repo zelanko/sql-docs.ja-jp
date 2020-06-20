@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30382bcb0c70fb985c88866602cb997988b88569
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 733066f73b7adab950defcb2552364eda2bde7e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70153752"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062109"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>[サーバーへの接続] ([接続プロパティ] ページ) (データベース エンジン)
   このタブを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続するとき、または [!INCLUDE[ssDE](../../includes/ssde-md.md)] を**登録済みサーバー**に登録するときのオプションを表示または指定できます。 **のインスタンスに接続するときには、** [接続] **および** [オプション] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみがこのダイアログ ボックスに表示されます。  
   
 ## <a name="options"></a>オプション  
- **[データベースへの接続]**  
- 接続するデータベースを一覧から選択します。 [既定の** \<>**] を選択した場合は、サーバーの既定のデータベースに接続されます。 [ ** \<サーバー>の参照**] を選択した場合は、接続先のデータベースのサーバーを参照できます。  
+ **データベースへの接続**  
+ 接続するデータベースを一覧から選択します。 を選択した場合は、 **\<default>** サーバーの既定のデータベースに接続されます。 を選択した場合は、接続先の **\<Browse server>** データベースのサーバーを参照できます。  
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] を通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのインスタンスに接続する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用し、 **[サーバーへの接続]** ダイアログ ボックスの **[接続プロパティ]** タブでデータベースを指定する必要があります。 **[暗号化接続]** チェック ボックスがオンになっていることを確認してください。  
   
@@ -57,16 +56,16 @@ ms.locfileid: "70153752"
  **[すべてリセット]**  
  手動で入力された接続プロパティ値をすべて既定値に置き換えます。  
   
- **のインスタンスに接続するときには、**  
+ **接続する**  
  一覧表示された値を使用して接続を試行します。  
   
- **[オプション]**  
+ **Options**  
  クリックすると、ダイアログ ボックスが切り替わり、パスワードの保存などの追加のサーバー接続オプションが非表示になります。  
   
  **テスト**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] を **登録済みサーバー**に登録するときに、クリックして接続をテストします。  
   
- **および**  
+ **保存**  
  **登録済みサーバー**に設定を保存します。  
   
 ## <a name="see-also"></a>参照  

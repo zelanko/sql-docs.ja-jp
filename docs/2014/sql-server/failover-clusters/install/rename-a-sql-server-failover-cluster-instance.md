@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96bd1cc82f73fd78bd16d0d3fe2f2015fabe4995
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63126020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062594"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server のフェールオーバー クラスター インスタンスの名前変更
   フェールオーバー クラスターに含まれる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの場合、仮想サーバーの名前を変更する手順は、スタンドアロン インスタンスでの手順とは異なります。 詳細については、 [SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)を参照してください。  
@@ -63,9 +62,9 @@ ms.locfileid: "63126020"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>名前変更操作後のその他の考慮事項  
  フェールオーバー クラスターのネットワーク名を変更した後は、以下の点を検証および実行して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントと [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]のすべてのシナリオを有効にする必要があります。  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Windows クラスターアドミニストレーターツールを使用して[!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)]フェールオーバークラスターインスタンスのネットワーク名を変更した後、今後のアップグレードまたはアンインストール操作が失敗する場合があります。 この問題を解決するには、[この](https://go.microsoft.com/fwlink/?LinkId=244002)記事の「解決方法」の手順に従っhttps://go.microsoft.com/fwlink/?LinkId=244002)て、 **ClusterName**レジストリエントリを更新します (「」を参照してください。  
+ ** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] :** [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] Windows クラスターアドミニストレーターツールを使用してフェールオーバークラスターインスタンスのネットワーク名を変更した後、今後のアップグレードまたはアンインストール操作が失敗する場合があります。 この問題を解決するには、[この](https://go.microsoft.com/fwlink/?LinkId=244002)記事の「解決方法」の手順に従って、 **ClusterName**レジストリエントリを更新します (「」を参照して https://go.microsoft.com/fwlink/?LinkId=244002) ください。  
   
- ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]エージェントサービス:** 次のエージェントサービスの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]追加アクションを確認して実行します。  
+ ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントサービス:** 次の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 追加アクションを確認して実行します。エージェントサービス:  
   
 -   SQL エージェントがイベントの転送用に構成されている場合は、レジストリ設定を修正します。 詳細については、[イベントの転送先サーバーの指定 &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md) を参照してください。  
   

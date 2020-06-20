@@ -1,5 +1,6 @@
 ---
 title: アプリケーションの構築
+description: SQL Server Native Client ライブラリを使用して、MDAC、ヘッダーファイル、ライブラリファイル、および接続文字列からのアップグレードを含むアプリケーションを構築する方法について説明します。
 ms.custom: ''
 ms.date: 12/16/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fffae7ea51d75f54cb87a17c433df935de3139b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c6d3c7a3020d20ec91560c6a87154ef97ac1f9a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388240"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965245"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>SQL Server Native Client を使用したアプリケーションのビルド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,6 +59,6 @@ ms.locfileid: "81388240"
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client プログラミング](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [ODBC の操作方法に関するトピック](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [OLE DB 方法に関するトピック](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB の使用法に関するトピック](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac0f613a023261c79b3a5ee11458ecdbda86998d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144598"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024737"
 ---
 # <a name="view-offline-log-files"></a>オフライン ログ ファイルの表示
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、対象となるインスタンスがオフラインの場合または開始できない場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカルまたはリモート インスタンスから表示できます。  
@@ -50,9 +49,9 @@ ms.locfileid: "63144598"
   
 -   **Root\Microsoft\SqlServer\ComputerManagement12** WMI 名前空間への読み取りアクセス。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。 詳細については、このセクションで後述する「WMI 権限を確認するには」を参照してください。  
   
--   エラー ログ ファイルを含むフォルダーへの読み取り権限。 既定では、エラー ログ ファイルは、次のパスにあります (\<*Drive>* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール先ドライブ、\<*InstanceName*> は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名です)。  
+-   エラー ログ ファイルを含むフォルダーへの読み取り権限。 既定では、エラーログファイルは次のパスにあり \<*Drive> ます (* は、がインストールされているドライブを表し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<*InstanceName*> はのインスタンスの名前です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )。  
   
-     **\<ドライブ>: Server\MSSQL12.\<InstanceName> \mssql\log**  
+     **\<Drive>: Server\MSSQL12. \<InstanceName> : SQL\MSSQL\Log**  
   
  WMI 名前空間のセキュリティ設定を確認するには、WMI コントロール スナップインを使用します。  
   
@@ -60,9 +59,9 @@ ms.locfileid: "63144598"
   
 1.  WMI コントロール スナップインを開きます。 これを行うには、次のいずれかの操作を実行します (オペレーティング システムによって異なります)。  
   
-    -   [**スタート**] ボタン`wmimgmt.msc`をクリックし、[**検索の開始**] ボックスに「」と入力して、enter キーを押します。  
+    -   [**スタート**] ボタンをクリックし、[ `wmimgmt.msc` **検索の開始**] ボックスに「」と入力して、enter キーを押します。  
   
-    -   [**スタート**] ボタン**Run**をクリックし`wmimgmt.msc`、[実行] をクリックして「」と入力し、enter キーを押します。  
+    -   [**スタート**] ボタンをクリックし、[**実行**] をクリックして「」と入力し、 `wmimgmt.msc` enter キーを押します。  
   
 2.  既定では、WMI コントロール スナップインはローカル コンピューターを管理します。  
   

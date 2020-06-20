@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 183bf1031740a8e8af283048013f1f548a29072e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afa2f8009a3cb6cb0b60a671e94fc80892f640aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484735"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064853"
 ---
 # <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>タスク 1: マスター データ マネージャーを使用して Suppliers モデルを作成する
   このタスクでは、**マスターデータマネージャー**を使用して、MDS で**仕入先**という名前のモデルを作成します。  
   
-1.  に`http://localhost/MDS`移動して**マスターデータマネージャー**を起動します。 別の名前または別の Web サイトで Web アプリケーションを構成した場合は、URL を置き換えてください。  
+1.  に移動して `http://localhost/MDS` **マスターデータマネージャー**を起動します。 別の名前または別の Web サイトで Web アプリケーションを構成した場合は、URL を置き換えてください。  
   
      ![マスター データ マネージャー - システム管理](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-01.jpg "マスター データ マネージャー - システム管理")  
   

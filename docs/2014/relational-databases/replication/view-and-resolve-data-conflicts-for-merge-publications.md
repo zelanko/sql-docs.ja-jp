@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8810377a7e676d4376fca3cc52e73d6c507dbd21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77aa9ece0073149c017f6eca35a756b22751a74b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255427"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063668"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>マージ パブリケーションでのデータの競合の表示および解決 (SQL Server Management Studio)
   マージ レプリケーションの競合は、各アーティクルに対して指定された競合回避モジュールに基づいて解決されます。 既定では、競合はユーザーの介入を必要とせずに解決されます。 ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] レプリケーション競合表示モジュールで競合を表示したり、解決の結果を変更したりすることができます。  
@@ -28,7 +27,7 @@ ms.locfileid: "63255427"
   
 -   **@conflict_retention** [Sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)のパラメーターの保有期間の値を指定します。  
   
--   パラメーターに**conflict_retention**の値を指定し、 [sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)の**@value**パラメーターに保有期間の値を指定します。 **@property**  
+-   パラメーターに**conflict_retention**の値を指定 **@property** し、 **@value** [sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)のパラメーターに保有期間の値を指定します。  
   
  競合情報の既定の保存先は次のとおりです。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "63255427"
   
 ### <a name="to-view-and-resolve-conflicts-for-merge-publications"></a>マージ パブリケーションで競合を表示および解決するには  
   
-1.  で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]パブリッシャー (または必要に応じてサブスクライバー) に接続し、サーバーノードを展開します。  
+1.  でパブリッシャー (または必要に応じてサブスクライバー) に接続 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] し、サーバーノードを展開します。  
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   

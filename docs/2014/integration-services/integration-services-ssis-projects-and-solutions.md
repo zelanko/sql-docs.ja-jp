@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b1040afed8e9cb63f22bf81a30c426a4bdc8ec22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e48dfbf5420c6032b8185cf59b2b132df2c82cf2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176187"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966242"
 ---
 # <a name="integration-services-ssis-projects"></a>Integration Services (SSIS) プロジェクト
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] パッケージを開発するための [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が用意されています。
 
- データベースまた[!INCLUDE[ssIS](../includes/ssis-md.md)]はパッケージストア[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に[!INCLUDE[msCoName](../includes/msconame-md.md)]パッケージを配置する場合は、サービスを使用してパッケージを管理します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]でのみ使用できます。 サービスの詳細については、「[Integration Services サービス (SSIS サービス)](service/integration-services-service-ssis-service.md)」を参照してください。 パッケージ配置の詳細については、「[パッケージの配置 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)」を参照してください。
+ データベースまたはパッケージストアにパッケージを配置する場合は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスを使用し [!INCLUDE[ssIS](../includes/ssis-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] てパッケージを管理します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]でのみ使用できます。 サービスの詳細については、「[Integration Services サービス (SSIS サービス)](service/integration-services-service-ssis-service.md)」を参照してください。 パッケージ配置の詳細については、「[パッケージの配置 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)」を参照してください。
 
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを配置する場合は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で Transact-SQL のビューおよびストアド プロシージャを使用してプロジェクトを管理します。 プロジェクト配置の詳細については、「 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーの詳細については、「[Integration Services (SSIS) Server](catalog/integration-services-ssis-server-and-catalog.md)」を参照してください。
 

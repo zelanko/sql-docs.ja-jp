@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d1dbd64c7ffc8f80dacd79f96db5a0025a5805e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189828"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056625"
 ---
 # <a name="alert-properties-history-page"></a>[警告のプロパティ] ([履歴] ページ)
-  このページを使用すると、エージェントの警告[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の履歴を表示したり、変更したりできます。  
+  このページを使用すると、エージェントの警告の履歴を表示したり、変更したり [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。  
   
 ## <a name="options"></a>オプション  
  **[最終警告日]**  
@@ -36,6 +35,6 @@ ms.locfileid: "68189828"
  このページの情報をリセットします。  
   
 ## <a name="see-also"></a>参照  
- [アラート](alerts.md)  
+ [警告](alerts.md)  
   
   

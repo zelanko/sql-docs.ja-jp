@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 56f075ff4a26af4913d792c20a8d7c1d6a58fcb0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2fcc7b1e333bb42a00675da5bb9fd559d1c34f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011680"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055389"
 ---
 # <a name="application-roles"></a>アプリケーション ロール
   アプリケーション ロールは、ユーザーのような独自の権限でアプリケーションを実行できるようにするデータベース プリンシパルです。 アプリケーション ロールを使用すると、特定のアプリケーションから接続しているユーザーに対してのみ、特定のデータへのアクセスを有効にできます。 アプリケーション ロールは、データベース ロールとは異なり、既定ではメンバーが含まれておらず、アクティブではありません。 アプリケーション ロールは、両方の認証モードで機能します。 アプリケーション ロールは **sp_setapprole**を使用して有効化され、これにはパスワードが必要です。 アプリケーション ロールはデータベース レベルのプリンシパルであるため、他のデータベースへのアクセスは、そのデータベースの **guest**に許可された権限を介してのみ可能になります。 したがって、 **guest** が無効になったデータベースには、他のデータベースのアプリケーション ロールからアクセスできなくなります。  

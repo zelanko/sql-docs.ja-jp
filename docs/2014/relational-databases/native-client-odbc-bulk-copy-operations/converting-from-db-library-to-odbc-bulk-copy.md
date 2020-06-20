@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75ac184717fbee6cf26c99924fdccb164592fdfa
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 29a8ee59db4cade8cc3ddf649b54d4c2c47e87ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702092"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021320"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library から ODBC への一括コピーの変換
   Native Client ODBC ドライバーでサポートされている一括コピー関数は DB-LIBRARY の一括コピー関数に似ているため、DB-LIBRARY 一括コピープログラムを ODBC に変換するのは簡単です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。ただし、次のような例外があります。  

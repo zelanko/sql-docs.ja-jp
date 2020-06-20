@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7686f6ee0a5cbce01fb69d36d645ff9787276ef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231804"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024930"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>レッスン 6: オンプレミスのソース コンピューターから Azure のターゲット コンピューターにデータベースを移行する
   このレッスンでは、別のオンプレミスコンピューターまたは Azure の仮想マシンに存在する可能性がある別の SQL Server が既にあることを前提としています。 Azure で SQL Server 仮想マシンを作成する方法の詳細については、「 [azure での SQL Server 仮想マシンのプロビジョニング](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)」を参照してください。 Azure に SQL Server 仮想マシンをプロビジョニングした後、別のコンピューターの SQL Server Management Studio を使用して、この仮想マシンの SQL Server のインスタンスに接続できることを確認してください。  
@@ -136,9 +135,9 @@ ms.locfileid: "75231804"
   
 5.  [**データベースのアタッチ**] ダイアログボックスで、アタッチするデータベースを指定するために、[**追加**] をクリックします。 [**データベースファイルの検索**] ダイアログウィンドウで次のようにします。  
   
-     [データベースデータファイルの場所] に`https://teststorageaccnt.blob.core.windows.net/testcontainer/`、「」と入力します。  
+     [データベースデータファイルの場所] に、「」と入力 `https://teststorageaccnt.blob.core.windows.net/testcontainer/` します。  
   
-     [ファイル名] に「 `TestDB1Data.mdf`」と入力します。  
+     [ファイル名] に「」と入力 `TestDB1Data.mdf` します。  
   
 6.  **[OK]** をクリックします。  
   

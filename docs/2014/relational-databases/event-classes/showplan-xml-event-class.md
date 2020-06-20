@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c025a899b426de714fb522218467e8d4cf805b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93f00d2bfdcee43d22f54544d1aecfb4ceb9e394
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62691870"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028560"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML イベント クラス
   Showplan XML イベント クラスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントが実行されたときに発生します。 プラン表示操作を特定する場合は、Showplan XML イベント クラスを含めます。 このイベント クラスには、各イベントが正しく定義された XML ドキュメントとして格納されます。  

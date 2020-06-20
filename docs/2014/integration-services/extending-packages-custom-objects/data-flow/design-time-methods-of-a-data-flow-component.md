@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d9a2f9cf4d404f4ef577e446d0c4284ef7024742
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db0946374c6e0e3960ab19bfdd109c2fdc1eb6ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176399"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966518"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>データ フロー コンポーネントのデザイン時のメソッド
   実行前のデータ フロー タスクは、増分的に変更が行われるため、デザイン時の状態にあると言えます。 追加される変更には、コンポーネントの追加または削除、コンポーネントを接続するパス オブジェクトの追加または削除、およびコンポーネントのメタデータに対する変更などが含まれます。 メタデータの変更が発生すると、コンポーネントはその変更を監視して対処できます。 たとえば、コンポーネントは特定の変更を禁止したり、ある変更に応じてさらに変更を加えることができます。 デザイン時に、設計者はデザイン時インターフェイス <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> を介して、コンポーネントとやり取りします。
@@ -80,7 +79,7 @@ Dim myCustomProperty As IDTSCustomProperty100
 myCustomProperty.ExpressionType = DTSCustomPropertyExpressionType.CPET_NOTIFY
 ```
 
- 次の例に示すように、 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A>プロパティを使用すると、ユーザーが列挙からカスタムプロパティ値を選択できるように制限できます。この例では、 `MyValidValues`という名前のパブリック列挙型が定義されていることを前提としています。
+ 次の例に示すように、プロパティを使用すると、ユーザーが列挙からカスタムプロパティ値を選択できるように制限できます。この例では、 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> という名前のパブリック列挙型が定義されていることを前提としてい `MyValidValues` ます。
 
 ```csharp
 IDTSCustomProperty100 customProperty = outputColumn.CustomPropertyCollection.New();

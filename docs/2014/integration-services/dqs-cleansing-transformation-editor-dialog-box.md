@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eaff1c5ac8ae5a804f546fc5e551dcb62e2fda7a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059421"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966908"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>[DQS クレンジング変換エディター] ダイアログ ボックス
   **[DQS クレンジング変換エディター]** ダイアログ ボックスを使用すると、Data Quality Services (DQS) を使用してデータを修正できます。 詳細については、「 [Data Quality Services の概念](../../2014/data-quality-services/data-quality-services-concepts.md)」を参照してください。  
   
  変換の詳細については、「 [DQS クレンジング変換](data-flow/transformations/dqs-cleansing-transformation.md)」を参照してください。  
   
- **目的に合ったトピックをクリックしてください**  
+ **どうしたいんですか。**  
   
 -   [DQS クレンジング変換エディターを開く](#open)  
   
@@ -47,14 +46,14 @@ ms.locfileid: "66059421"
  **[データ品質接続マネージャー]**  
  既存の DQS 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
- **新しい**  
+ **[新規作成]**  
  **[DQS クレンジング接続マネージャー]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。 「 [[DQS クレンジング接続マネージャー] ダイアログ ボックスのオプションの設定](#manager)」を参照してください。  
   
  **[データ品質ナレッジ ベース]**  
  接続されたデータ ソースの既存の DQS ナレッジ ベースを選択します。 DQS サポート技術情報の詳細については、「 [DQS のナレッジ ベースとドメイン](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)」を参照してください。  
   
  **暗号化接続**  
- DQS サーバーと[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の間のデータ転送を暗号化するために、接続を暗号化するかどうかを指定します。  
+ DQS サーバーとの間のデータ転送を暗号化するために、接続を暗号化するかどうかを指定し [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ます。  
   
  **[使用できるドメイン]**  
  選択されたナレッジ ベースで使用できるドメインを一覧表示します。 ドメインには、単一ドメインと、2 つ以上の単一ドメインが含まれた複合ドメインの 2 種類があります。  
@@ -68,7 +67,7 @@ ms.locfileid: "66059421"
   
  有効な値は次のとおりです。  
   
--   **[エラー コンポーネント]**: 変換に失敗したこと、およびデータが Data Quality Services データベースに挿入されていないことを示します。 これは、既定値です。  
+-   **[エラー コンポーネント]**: 変換に失敗したこと、およびデータが Data Quality Services データベースに挿入されていないことを示します。 これが既定値です。  
   
 -   **[行のリダイレクト]**: 入力データが Data Quality Services データベースに挿入されていないために、エラー出力にリダイレクトされることを示します。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "66059421"
  **入力列**  
  **[使用できる入力列]** 領域で選択した入力列を一覧表示します。  
   
- **[ドメイン]**  
+ **ドメイン**  
  入力列にマップするドメインを選択します。  
   
  **[ソースの別名]**  
@@ -104,7 +103,7 @@ ms.locfileid: "66059421"
  **Confidence**  
  修正されたデータの信頼レベルを含めるかどうかを示します。 信頼レベルは、DQS の修正または候補に対する確実性の度合いを示します。 信頼レベルの詳細については、「 [データ クレンジング](../../2014/data-quality-services/data-cleansing.md)」を参照してください。  
   
- **原因**  
+ **理由**  
  データ修正の理由を含めるかどうかを示します。  
   
  **[追加されたデータ]**  

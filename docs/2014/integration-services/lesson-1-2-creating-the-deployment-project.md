@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6f5b0cc2c86ef483a7e2b2c0f5dccba21383641f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8eeabf6f529d6439e814e2b6ef31e074315e53e0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891849"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965312"
 ---
 # <a name="step-2-creating-the-deployment-project"></a>手順 2:配置プロジェクトの作成
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]では、配置可能な単位は [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトになります。 パッケージを配置するには、まず新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、すべてのパッケージと、これらのパッケージと共に配置する補助ファイルをそのプロジェクトに追加する必要があります。  

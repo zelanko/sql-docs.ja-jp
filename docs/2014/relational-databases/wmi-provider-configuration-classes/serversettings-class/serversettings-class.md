@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cc1ee935e19c4f44dc1c350355edd08371ea6485
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb0e43d01057296b73547d6a8256bd4140c5a736
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137315"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056741"
 ---
 # <a name="serversettings-class"></a>ServerSettings クラス
-  [ServerSettings クラス] serversettings-class.md) は、の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス上のサーバー設定を表します。  
+  [ServerSettings クラス] serversettings-class.md) は、のインスタンス上のサーバー設定を表し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
  [ServerSettings クラス] serversettings-class.md) では、次のタスクを実行できます。  
   

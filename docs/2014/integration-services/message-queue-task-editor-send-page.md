@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ed0d210668b64ff6f6fcc8c94a713743e2f9bfa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057598"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951062"
 ---
 # <a name="message-queue-task-editor-send-page"></a>[メッセージ キュー タスク エディター] ([送信] ページ)
   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[送信]** ページを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージからメッセージを送信するメッセージ キュー タスクを構成できます。  
@@ -42,7 +41,7 @@ ms.locfileid: "66057598"
  **MessageType**  
  メッセージ型を指定します。 このプロパティのオプションを次の表に示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[データ ファイル メッセージ]**|メッセージはファイルに格納されます。 この値を選択すると、動的オプションの **[DataFileMessage]** が表示されます。|  
 |**[変数メッセージ]**|メッセージは変数に格納されます。 この値を選択すると、動的オプションの **[VariableMessage]** が表示されます。|  

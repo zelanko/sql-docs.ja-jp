@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 16cd12463e6e4a1b886134635cb5d988e9437b04
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 49189e6bacd9151cd21f8c7ebfed3df63b4eb92e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718084"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062884"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>ExecuteXMLReader メソッドを使用した、SQL クエリの実行
   ExecuteToStream メソッドを使用する代わりに、SqlXmlCommand オブジェクトの ExecuteXmlReader メソッドを使用してコマンドを実行できます。 このメソッドは、結果をさらに処理するために使用できる XmlReader オブジェクトを返します (この例では、要素名または属性名と値を出力します)。  

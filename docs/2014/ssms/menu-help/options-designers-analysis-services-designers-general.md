@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f976d2b-1a16-47f8-85e6-d7c2bf6a84b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3378dd7ada96b1885d802804a6e2e2e3dcbd0891
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10d373ce3bf3aa77947ad2e989d09b91117ace79
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283651"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064319"
 ---
 # <a name="options-designers-analysis-services-designers-general"></a>オプション (デザイナー-Analysis Services デザイナー-全般)
   **[デザイナー]** 、 **[メンテナンス プラン]** 、 **[Analysis Services]** 、 **[全般]** ページでは、Analysis Services デザイナーの既定の動作を決定します。  

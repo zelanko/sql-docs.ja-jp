@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67724c0816ceb77e61bc6e4a0cf8650a9228f39d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62999563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049377"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>マージ同期中のビジネス ロジックの実行
   ビジネス ロジック ハンドラー フレームワークを使用すると、マネージド コードのアセンブリを記述して、マージ同期処理中に呼び出すことができます。 このアセンブリには、データの変更、競合、およびエラーなど、同期中に発生するさまざまな状況に対処するためのビジネス ロジックを記述できます。 ビジネス ロジック ハンドラー フレームワークには単純なプログラミング モデルが用意されており、マージ処理によってアセンブリに提供されるデータは ADO.NET データセットの形式になっています。このため、専用インターフェイスについての知識ではなく ADO.NET についての知識を活用できます。 ビジネス ロジック ハンドラーのプログラミングの詳細については、以下のトピックを参照してください。  

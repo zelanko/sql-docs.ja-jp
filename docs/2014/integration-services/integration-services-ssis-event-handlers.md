@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 41a6ae9c6462beecaa244694bd8679df88aefc47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2aab5732a667dfe9e26a89048991900148077df3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176134"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965402"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) のイベント ハンドラー
   実行可能ファイル (パッケージ、Foreach ループ コンテナー、For ループ コンテナー、シーケンス コンテナー、およびタスク ホスト コンテナー) は実行時にイベントを発生させます。 たとえば、エラーが発生すると、OnError イベントが発生します。 これらのイベントに対してカスタム イベント ハンドラーを作成し、パッケージ機能を拡張すると、実行時のパッケージを容易に管理できます。 イベント ハンドラーは、次のタスクを実行できます。
@@ -71,7 +70,7 @@ ms.locfileid: "78176134"
 ## <a name="run-time-events"></a>実行時イベント
  次の表に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で用意されているイベント ハンドラーの一覧を示します。また、イベント ハンドラーによって実行される実行時イベントについて説明します。
 
-|イベント ハンドラー|event|
+|イベント ハンドラー|イベント|
 |-------------------|-----------|
 |`OnError`|`OnError` イベントのイベント ハンドラー。 このイベントは、エラー発生時に実行可能ファイルから発生します。|
 |**OnExecStatusChanged**|**OnExecStatusChanged** イベントのイベント ハンドラーです。 このイベントは、実行状態が変化したときに実行可能ファイルから発生します。|
@@ -83,7 +82,7 @@ ms.locfileid: "78176134"
 |**OnProgress**|**OnProgress** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルで重要な進行があったときに、実行可能ファイルから発生します。|
 |**OnQueryCancel**|**OnQueryCancel** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルの実行を停止するかどうかを決定するために、実行可能ファイルから発生します。|
 |**OnTaskFailed**|**OnTaskFailed** イベントのイベント ハンドラーです。 このイベントは、タスクが失敗したときにタスクから発生します。|
-|**OnVariableValueChanged**|**OnVariableValueChanged** イベントのイベント ハンドラーです。 このイベントは、変数の値が変化したときに実行可能ファイルから発生します。 イベントは、変数が定義されている実行可能ファイルで発生します。 変数の**RaiseChangeEvent**プロパティをに`False`設定すると、このイベントは発生しません。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)」を参照してください。|
+|**OnVariableValueChanged**|**OnVariableValueChanged** イベントのイベント ハンドラーです。 このイベントは、変数の値が変化したときに実行可能ファイルから発生します。 イベントは、変数が定義されている実行可能ファイルで発生します。 変数の**RaiseChangeEvent**プロパティをに設定すると、このイベントは発生しません `False` 。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)」を参照してください。|
 |**OnWarning**|**OnWarning** イベントのイベント ハンドラーです。 このイベントは、警告の発生時に実行可能ファイルから発生します。|
 
 ## <a name="configuration-of-an-event-handler"></a>イベント ハンドラーの構成

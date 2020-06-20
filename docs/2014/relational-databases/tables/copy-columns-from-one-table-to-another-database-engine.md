@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37b98bf0910cbbb4c2a1d7fe01f11d52703ec88c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736355"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047288"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>テーブル間での列のコピー (データベース エンジン)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で列の定義のみ、または定義とデータの両方をコピーすることで、あるテーブルから別のテーブルに列をコピーする方法について説明します。  

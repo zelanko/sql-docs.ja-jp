@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93ecd0b99ad355e38194afc338201790fba97684
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965582"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを実行する
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを使用すると、最も簡単な方法でデータ ソース間でデータをコピーしたり、基本パッケージを構築したりすることができます。 ウィザードの詳細については、「 [SQL Server インポートおよびエクスポートウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。  
@@ -31,19 +30,19 @@ ms.locfileid: "62768034"
   
 -   [**スタート**] ボタンをクリックし、[**すべてのプログラム**]、[**Microsoft SQL Server** ] の順にポイントして、[**データのインポートおよびエクスポート**] をクリックします。  
   
-     \- または -  
+     または  
   
-     で[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、[ **SSIS パッケージ**] フォルダーを右クリックし、[ **SSISImport and Export Wizard**] をクリックします。  
+     で、[ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **SSIS パッケージ**] フォルダーを右クリックし、[ **SSISImport and Export Wizard**] をクリックします。  
   
-     \- または -  
+     または  
   
-     で[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、[**プロジェクト**] メニューの [ **SSISImport and Export Wizard**] をクリックします。  
+     で、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [**プロジェクト**] メニューの [ **SSISImport and Export Wizard**] をクリックします。  
   
-     \- または -  
+     または  
   
-     で[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]サーバーの種類に接続し、[データベース] を展開します。データベースを右クリックして [**タスク**] をポイントし、[**データのインポート**] または [データの**エクスポート**] をクリックします。  
+     で、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーの種類に接続し、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [データベース] を展開します。データベースを右クリックして [**タスク**] をポイントし、[**データのインポート**] または [**データのエクスポート**] をクリックします。  
   
-     \- または -  
+     または  
   
      コマンド プロンプト ウィンドウで、C:\Program Files\Microsoft SQL Server\100\DTS\Binn にある DTSWizard.exe を実行します。  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62768034"
      ウィザードを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] プロジェクトから起動した場合、ウィザードからパッケージを実行することはできません。 代わりに、ウィザードを起動した [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトにパッケージが追加されます。 パッケージは、その後、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で実行できます。  
   
     > [!NOTE]  
-    >  で[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]は、ウィザードによって作成されたパッケージを保存するオプションは使用できません。  
+    >  では、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] ウィザードによって作成されたパッケージを保存するオプションは使用できません。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server インポートおよびエクスポートウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   

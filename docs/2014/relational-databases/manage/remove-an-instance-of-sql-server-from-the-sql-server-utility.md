@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: df13432a0b5f835690dd6371fd935198d7798b40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9541179125655bf173dd2080df57e2b5b0cde5ff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783290"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023292"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>SQL Server ユーティリティからの SQL Server のインスタンスの削除
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスを削除するには、次の手順を実行します。 この手順では、UCP リスト ビューから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが削除されるため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのデータ収集が停止します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはアンインストールされません。  
@@ -57,7 +56,7 @@ $ManagedInstance = $Utility.ManagedInstances[$ServerInstanceName];
 $ManagedInstance.Remove($InstanceConnection);  
 ```  
   
-インスタンス名は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]格納されているとおりに正確に参照することが重要です。 大文字と小文字を区別する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの場合、@@SERVERNAME によって返された文字種を正確に使用して、インスタンス名を指定する必要があります。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス名は、に格納されているとおりに正確に参照することが重要です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 大文字と小文字を区別する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの場合、@@SERVERNAME によって返された文字種を正確に使用して、インスタンス名を指定する必要があります。 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンスのインスタンス名を取得するには、マネージド インスタンスで次のクエリを実行します。  
   

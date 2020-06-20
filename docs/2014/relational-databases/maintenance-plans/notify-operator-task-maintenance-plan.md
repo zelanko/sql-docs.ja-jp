@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0ef94ed9e296c588b70789ace0bbbbe79bc8008f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4feb59622c2a42de67193c75d545a6b8a2a08863
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205967"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024116"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>[オペレーターへの通知タスク] (メンテナンス プラン)
   **[オペレーターへの通知タスク]** ダイアログ ボックスを使用すると、このメンテナンス プランに自動通知を追加できます。 このタスクを使用するには、[データベース メール] が有効になっていて、MSDB がメール ホスト データベースとして適切に構成され、有効な電子メール アドレスを持つ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのオペレーターが存在している必要があります。  

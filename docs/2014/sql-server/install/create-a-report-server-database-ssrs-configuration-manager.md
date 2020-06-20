@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 638f96285f4dab2bb109353d7d648b9de8b6bb67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d899d0585eda7c9cd2b12147732b23c01872128b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952303"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042817"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>レポート サーバー データベースの作成 (SSRS 構成マネージャー)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**ネイティブモード**では[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、2つのリレーショナルデータベースを使用して、レポートサーバーのメタデータとオブジェクトを格納します。 データベースの 1 つは主要な記憶域として使用され、もう 1 つは一時データの格納に使用されます。 この 2 つのデータベースは同時に作成され、データベース名によってバインドされます。 既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでは、データベースの名前は `reportserver` および `reportservertempdb` です。 2 つのデータベースを併せて、"レポート サーバー データベース" や "レポート サーバー カタログ" といいます。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**ネイティブモード**では、2つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナルデータベースを使用して、レポートサーバーのメタデータとオブジェクトを格納します。 データベースの 1 つは主要な記憶域として使用され、もう 1 つは一時データの格納に使用されます。 この 2 つのデータベースは同時に作成され、データベース名によってバインドされます。 既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでは、データベースの名前は `reportserver` および `reportservertempdb` です。 2 つのデータベースを併せて、"レポート サーバー データベース" や "レポート サーバー カタログ" といいます。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**SharePoint モード**には、データ警告メタデータに使用される3番目のデータベースが含まれています。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションごとに 3 つのデータベースが作成されます。既定では、サービス アプリケーションを表す GUID がデータベース名に含まれています。 SharePoint モードの 3 つのデータベースの名前の例を次に示します。  
   

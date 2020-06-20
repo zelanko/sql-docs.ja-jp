@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b41e33a-c1ca-4b2a-9464-312b0ed3ca89
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1cdf0cbca45fc12dc5e61e4dca913d2e16af5ab5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1067820e80f9c7a4e1af2c8a14c85bc9dbfdd6aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704473"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017606"
 ---
 # <a name="transactions"></a>トランザクション
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、ローカルトランザクションサポートを実装します。 コンシューマーは、MS DTC (Microsoft 分散トランザクション コーディネーター) を使用して、分散トランザクションまたはコーディネートされたトランザクションを使用できます。 複数のセッションにまたがるトランザクション制御を必要とするコンシューマーの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは MS DTC によって開始および管理されるトランザクションに参加できます。  

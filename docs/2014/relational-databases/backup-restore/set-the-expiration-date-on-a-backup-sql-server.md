@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 76e814df-6487-4893-9f09-7759f1863a5c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 30f5a68f51bf501f243bd129d11051d63a6efabd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9185222df93e0a1150256535526ba910c593cf6c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877303"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956681"
 ---
 # <a name="set-the-expiration-date-on-a-backup-sql-server"></a>バックアップの有効期限の設定 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、バックアップの有効期限を設定する方法について説明します。  
@@ -28,7 +27,7 @@ ms.locfileid: "62877303"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **バックアップの有効期限を設定する方法:**  
   

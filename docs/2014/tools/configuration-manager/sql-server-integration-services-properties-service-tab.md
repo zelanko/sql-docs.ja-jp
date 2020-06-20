@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d4cb1b821604d125bc81148a06fb613c8547a449
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0175f2a01ba53baa531901c9e1ba719f25c1b766
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68186715"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064181"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>[SQL Server Integration Services のプロパティ] ダイアログ ボックス ([サービス] タブ)
   [[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  **のプロパティ]** ダイアログ ボックスの **[サービス]** タブでは、以下のオプションの表示や指定を行います。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 44e116ece7460787f272f0b8cc6e99a4300fc728
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb2efbff93fb7cc831038a7e26fe4ada44d81325
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056713"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964752"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>[パーティション処理変換先エディター] ([接続マネージャー] ページ)
   **[パーティション処理変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスへの接続を指定できます。  
@@ -33,7 +32,7 @@ ms.locfileid: "66056713"
  **接続マネージャー**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
- **新しい**  
+ **[新規作成]**  
  **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して、新しい接続を作成します。  
   
  **利用可能なパーティションの一覧**  
@@ -42,7 +41,7 @@ ms.locfileid: "66056713"
  **[処理方法]**  
  処理方法を選択します。 このオプションの既定値は **[完全]** です。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |[追加 (増分)]|パーティションの増分処理を実行します。|  
 |[完全]|パーティションの完全処理を実行します。|  

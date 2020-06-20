@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ece0e6856f43e2296fb0feab4abe38ffbba568b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4d77bb77ab3cf0fecc2e254af53782f982923ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63028329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054590"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>[フルテキスト インデックスの列] ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスには、テーブル デザイナーで開いたテーブルのテキスト インデックスに含まれる列が一覧表示されます。 このダイアログ ボックスにアクセスするには、テーブル デザイナーのテーブルを右クリックして **[フルテキスト インデックス]** を選択すると表示される **[フルテキスト インデックス]** ダイアログ ボックスで、表示または編集する列のインデックスをクリックし、右のグリッドの **[列]** フィールドをクリックして、省略記号 ( **[...]** ) をクリックします。  

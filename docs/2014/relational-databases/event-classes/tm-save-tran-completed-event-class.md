@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b50f4026daa390000a1a46377446abc3cee709e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ed85038d9cfc6281d1f9dbd84d4c0b0afeb43b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061284"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027985"
 ---
 # <a name="tm-save-tran-completed-event-class"></a>TM: Save Tran Completed イベント クラス
   TM: Save Tran Completed イベント クラスは、SAVE TRANSACTION 要求が完了したことを示します。 要求は、トランザクション管理のインターフェイスを使用してクライアントから送信されます。  
@@ -32,7 +31,7 @@ ms.locfileid: "63061284"
 |ClientProcessID|`int`|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
 |DatabaseID|`int`|USE *database*ステートメントで指定されたデータベースの ID、または特定のインスタンスに対して use *database*ステートメントが発行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
-|Error|`int`|特定のイベントのエラー番号。 多くの場合、sys.messages カタログ ビューに保存されているエラー番号です。|31|はい|  
+|エラー|`int`|特定のイベントのエラー番号。 多くの場合、sys.messages カタログ ビューに保存されているエラー番号です。|31|はい|  
 |EventClass|`int`|イベントの種類 = 192。|27|いいえ|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
@@ -47,7 +46,7 @@ ms.locfileid: "63061284"
 |SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|成功|`int`|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|23|はい|  
+|Success|`int`|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|23|はい|  
 |TextData|`ntext`|トレースでキャプチャされたイベント クラスに依存するテキスト値。|1|はい|  
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  

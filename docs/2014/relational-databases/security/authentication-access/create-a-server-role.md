@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45c3d5bb9c9c7fdae9abe18ab3cb808cae4c1fa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055374"
 ---
 # <a name="create-a-server-role"></a>サーバー ロールの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]で新しいサーバー ロールを作成する方法について説明します。  

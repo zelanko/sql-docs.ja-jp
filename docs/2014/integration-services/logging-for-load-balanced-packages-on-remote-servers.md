@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fd571567-b625-4f9a-8b7e-42c5c588b11b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 64dec3a89b883d6b3234f65896bb89d3bfde5305
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f0adbcc17ad629f585cd04f43f757612a120ba4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057853"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951242"
 ---
 # <a name="logging-for-load-balanced-packages-on-remote-servers"></a>リモート サーバー上の負荷分散パッケージのログ記録
   すべての子パッケージで同じログ プロバイダーを使用し、これらの出力先を同じにすれば、さまざまなサーバーで実行されているすべての子パッケージに関するログの管理が容易になります。 すべての子パッケージに共通するログ ファイルを作成する方法の 1 つとして、イベントのログが SQL Server ログ プロバイダーに記録されるように子パッケージを構成することができます。 すべてのパッケージが、同じデータベース、同じサーバー、同じサーバー インスタンスを使用するように構成できます。  

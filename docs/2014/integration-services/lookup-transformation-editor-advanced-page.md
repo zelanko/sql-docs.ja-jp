@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f78c568d467601b2f23ae8952036764ea2b464d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f73f8e1e4dbbadc4b73a487d433fc8ab1913b5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057880"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951232"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>[参照変換エディター] ([詳細設定] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用して、部分キャッシュを構成し、参照変換用 SQL ステートメントを変更します。  
