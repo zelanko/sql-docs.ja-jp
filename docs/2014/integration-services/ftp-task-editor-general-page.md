@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02ffd6309ae31f538fecdf6af2cb8475608d6cf5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058429"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966339"
 ---
 # <a name="ftp-task-editor-general-page"></a>[FTP タスク エディター] ([全般] ページ)
   **[FTP タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクの通信先の FTP サーバーに接続する FTP 接続マネージャーを指定できます。 また、FTP タスクの名前と説明を入力することもできます。  
@@ -28,7 +27,7 @@ ms.locfileid: "66058429"
   
 ## <a name="options"></a>オプション  
  **[FtpConnection]**  
- 既存の FTP 接続マネージャーを選択するか\<、[**新しい接続...**> をクリックして接続マネージャーを作成します。  
+ 既存の FTP 接続マネージャーを選択するか、をクリックして \<**New connection...**> 接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  FTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  

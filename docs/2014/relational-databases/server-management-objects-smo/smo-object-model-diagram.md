@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c3de6c94-8ef5-4ac6-9529-8f8c11b72ebb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 716ade5265c2bb3325ad08005c98a1e67c474419
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d582db9f9e6604841ca77d948f54608a13abfc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055220"
 ---
 # <a name="smo-object-model-diagram"></a>SMO オブジェクト モデル ダイアグラム
   このダイアグラムでは、SMO オブジェクト階層およびオブジェクト型間のリレーションシップを示します。 <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトはトップ レベル オブジェクトです。  

@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7ad7eed88b831a74eaf4ae83d1949df25744159d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6c4c1402b37de750fae26cbc811235efa6b32ea3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703845"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009698"
 ---
 # <a name="manage-code-formatting"></a>コードの書式設定の管理
   エディターでは、コードに関して、インデント設定、テキストの非表示、URL などの書式設定を行えます。 スマート インジケーターを使用して、入力と同時にコードを自動的に書式設定することも可能です。  

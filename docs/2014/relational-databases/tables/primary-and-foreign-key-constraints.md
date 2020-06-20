@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fcda1522fdb8be83ec61df04898d19600ad04a3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6e7b88de880348fabb00cb46d3028716441bc2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176817"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055129"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主キー制約と外部キー制約
   主キーと外部キーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータに整合性を適用するために使用できる 2 種類の制約です。 これらは重要なデータベース オブジェクトです。
@@ -74,7 +73,7 @@ ms.locfileid: "78176817"
 #### <a name="cascading-referential-integrity"></a>連鎖参照整合性
  連鎖参照整合性制約を使用することで、既存の外部キーが参照しているキーをユーザーが削除または更新するときの [!INCLUDE[ssDE](../../includes/ssde-md.md)] の動作を定義できます。 以下の連鎖動作を定義できます。
 
- NO ACTION を[!INCLUDE[ssDE](../../includes/ssde-md.md)]実行すると、エラーが発生し、親テーブルの行に対する delete または update 操作がロールバックされます。
+ NO ACTION を実行する [!INCLUDE[ssDE](../../includes/ssde-md.md)] と、エラーが発生し、親テーブルの行に対する delete または update 操作がロールバックされます。
 
  親テーブルで行が更新または削除されると、参照元のテーブルでは、対応する行の連鎖が更新または削除されます。 CASCADE は、`timestamp` 型の列が外部キーまたは参照先キーの一部である場合は指定できません。 INSTEAD OF DELETE トリガーが設定されているテーブルには、ON DELETE CASCADE を指定できません。 INSTEAD OF UPDATE トリガーが設定されているテーブルには、ON UPDATE CASCADE を指定できません。
 

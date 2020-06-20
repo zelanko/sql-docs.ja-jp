@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 037e56649d3473e3fe09b9533bcc96b4729870d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196713"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055059"
 ---
 # <a name="table-properties"></a>テーブルのプロパティ
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [テーブルのプロパティ] ダイアログ ボックスに表示されるテーブルのプロパティについて説明します。 これらのプロパティの表示方法の詳細については、「 [テーブル定義の表示](view-the-table-definition.md)」を参照してください。  
@@ -128,7 +127,7 @@ ms.locfileid: "68196713"
  **[テキスト ファイル グループ]**  
  テーブルのテキスト データを含むファイル グループの名前です。  
   
- **グループ**  
+ **[ファイル グループ]**  
  このテーブルを含むファイル グループの名前。  
   
  **[パーティション分割されるテーブル]**  
@@ -141,7 +140,7 @@ ms.locfileid: "68196713"
   
 ### <a name="general"></a>全般  
  **[VarDecimal ストレージ形式が有効]**  
- の`True`場合、この読み取り専用の値は`decimal` 、 `numeric`およびデータ型が vardecimal ストレージ形式を使用して格納されていることを示します。 このオプションを変更するには`vardecimal storage format` 、 [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)のオプションを使用します。 Vardecimal ストレージ形式は非推奨とされます。 代わりに行の圧縮を使用してください。  
+ `True`の場合、この読み取り専用の値 `decimal` は、および `numeric` データ型が vardecimal ストレージ形式を使用して格納されていることを示します。 このオプションを変更するには、 `vardecimal storage format` [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)のオプションを使用します。 Vardecimal ストレージ形式は非推奨とされます。 代わりに行の圧縮を使用してください。  
   
  **[インデックス領域]**  
  インデックスがテーブル内で占有する領域の容量をメガバイト単位で表示します。 この値には、テーブルの XML インデックスの領域使用状況は含まれません。 テーブルに XML インデックスが含まれている場合は、代わりに [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) を使用してください。  

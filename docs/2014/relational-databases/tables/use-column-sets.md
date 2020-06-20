@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cb496137c3986b78a55862e434c153d354a42ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298628"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055022"
 ---
 # <a name="use-column-sets"></a>列セットの使用
   スパース列を使用するテーブルでは、テーブル内のすべてのスパース列を返すための列セットを指定できます。 列セットは、型指定されていない XML 表記であり、テーブルのすべてのスパース列を 1 つにまとめて構造化した出力です。 列セットは、テーブルに物理的に保存されないという点で計算列に似ています。 計算列と異なるのは、列セットが直接更新できる点です。  
@@ -136,7 +135,7 @@ GO
   
 -   スパース列または列セットに対して REVOKE ステートメントを実行すると、セキュリティは、既定でその親オブジェクトのセキュリティに設定されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ドキュメント テーブルに `DocID` 列と `Title`列のセットが共通で含まれています。 製造グループは、すべての製造ドキュメントに `ProductionSpecification` 列と `ProductionLocation` 列を必要とします。 マーケティング グループは、マーケティング ドキュメントに `MarketingSurveyGroup` 列を必要とします。  
   
 ### <a name="a-creating-a-table-that-has-a-column-set"></a>A. 列セットを含むテーブルを作成する  

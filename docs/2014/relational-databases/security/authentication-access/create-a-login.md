@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e476880103a69ae016c6720f36e26ef884db6f5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012029"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055399"
 ---
 # <a name="create-a-login"></a>ログインの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、ログインを作成する方法について説明します。 ログインとは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスに接続しようとしている人またはプロセスの ID を指します。  
@@ -36,7 +35,7 @@ ms.locfileid: "63012029"
   
 -   **作業を開始する準備:**  
   
-     [バックグラウンド](#Background)  
+     [背景](#Background)  
   
      [セキュリティ](#Security)  
   
@@ -154,7 +153,7 @@ ms.locfileid: "63012029"
  **[データベース]**  
  サーバーで利用できるデータベースを一覧表示します。  
   
- **ユーザー**  
+ **User**  
  ログインにマップするデータベース ユーザーを指定します。 既定では、データベース ユーザーの名前はログインと同じになります。  
   
  **[既定のスキーマ]**  
@@ -219,7 +218,7 @@ ms.locfileid: "63012029"
  **Deny**  
  この権限をログインに対して拒否する場合はオンにします。 この権限を取り消す場合はオフにします。  
   
-### <a name="status"></a>状態  
+### <a name="status"></a>Status  
  **[状態]** ページには、選択した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインに対して構成できる認証オプションと承認オプションの一部が表示されます。  
   
  このページで使用できるオプションを次に示します。  
@@ -237,7 +236,7 @@ ms.locfileid: "63012029"
  このオプションを選択して、このログインを有効または無効にします。 このオプションは、ENABLE オプションまたは DISABLE オプションを指定した ALTER LOGIN ステートメントを実行します。  
   
  **SQL Server 認証**  
- [ログインの**ロックアウト**] チェックボックスは、選択したログインが認証[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を使用して接続し、ログインがロックアウトされている場合にのみ使用できます。この設定は読み取り専用です。 ロックアウトされたログインのロックを解除するには、UNLOCK オプションを指定して ALTER LOGIN を実行します。  
+ [ログインの**ロックアウト**] チェックボックスは、選択したログインが認証を使用して接続し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインがロックアウトされている場合にのみ使用できます。この設定は読み取り専用です。 ロックアウトされたログインのロックを解除するには、UNLOCK オプションを指定して ALTER LOGIN を実行します。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
