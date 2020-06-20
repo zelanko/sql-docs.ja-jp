@@ -25,16 +25,15 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd2e8af6e1768ef1872f2888d2a74850edbde23c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811023"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069060"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーからの出力の表示および操作
-  データベース エンジン チューニング アドバイザーによってデータベースをチューニングすると、サマリー、推奨設定、レポート、およびチューニング ログが作成されます。 チューニング ログ出力を使用すると、データベース エンジン チューニング アドバイザーのチューニング セッションをトラブルシューティングできます。 概要、推奨事項、およびレポートを使用して、チューニングに関する推奨設定を実装するか、または[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールに必要なクエリパフォーマンスの向上を実現するまでチューニングを続行するかを決定できます。 データベース チューニング アドバイザーを使用してワークロードを作成およびデータベースをチューニングする方法については、「 [データベース エンジン チューニング アドバイザーの起動および使用](database-engine-tuning-advisor.md)」を参照してください。  
+  データベース エンジン チューニング アドバイザーによってデータベースをチューニングすると、サマリー、推奨設定、レポート、およびチューニング ログが作成されます。 チューニング ログ出力を使用すると、データベース エンジン チューニング アドバイザーのチューニング セッションをトラブルシューティングできます。 概要、推奨事項、およびレポートを使用して、チューニングに関する推奨設定を実装するか、またはインストールに必要なクエリパフォーマンスの向上を実現するまでチューニングを続行するかを決定でき [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 データベース チューニング アドバイザーを使用してワークロードを作成およびデータベースをチューニングする方法については、「 [データベース エンジン チューニング アドバイザーの起動および使用](database-engine-tuning-advisor.md)」を参照してください。  
   
 ##  <a name="view-tuning-output"></a><a name="View"></a> チューニング出力の表示  
  次の手順では、データベース エンジン チューニング アドバイザーの GUI を使用して、チューニングに関する推奨設定、サマリー、レポート、およびチューニング ログを表示する方法について説明します。 ユーザー インターフェイス オプションの詳細については、後の「 [ユーザー インターフェイスの説明](#UI) 」を参照してください。  
@@ -163,17 +162,17 @@ ms.locfileid: "68811023"
   
 2.  [ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) をコピーして、XML エディターまたはテキスト エディターに貼り付けます。 このサンプルを使用して、チューニング セッションの XML 入力ファイルを作成します。 このタスクの実行については、「 [データベース エンジン チューニング アドバイザーの起動および使用](database-engine-tuning-advisor.md)」の「XML 入力ファイルの作成」を参照してください。  
   
-3.  サンプルの XML 入力ファイルで、`TuningOptions` 要素と `Configuration` 要素を編集します。 `TuningOptions` 要素で、データベース エンジン チューニング アドバイザーでチューニング セッション中に考慮される物理デザイン構造を指定します。 `Configuration` 要素で、データベース エンジン チューニング アドバイザーで分析される、物理データベース デザイン構造の仮定の構成に一致する物理デザイン構造を指定します。 および親要素と共に使用できる属性と子要素の詳細については、「 [XML 入力ファイルのリファレンス &#40;データベースエンジンチューニングアドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)」を参照してください。 `Configuration` `TuningOptions`  
+3.  サンプルの XML 入力ファイルで、`TuningOptions` 要素と `Configuration` 要素を編集します。 `TuningOptions` 要素で、データベース エンジン チューニング アドバイザーでチューニング セッション中に考慮される物理デザイン構造を指定します。 `Configuration` 要素で、データベース エンジン チューニング アドバイザーで分析される、物理データベース デザイン構造の仮定の構成に一致する物理デザイン構造を指定します。 および親要素と共に使用できる属性と子要素の詳細については `TuningOptions` `Configuration` 、「 [XML 入力ファイルのリファレンス &#40;データベースエンジンチューニングアドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)」を参照してください。  
   
 4.  **.xml** 拡張子を付けて、入力ファイルを保存します。  
   
-5.  データベース エンジン チューニング アドバイザーの XML スキーマに対して、手順 4. で保存した XML 入力ファイルを検証します。 このスキーマは、のインストール[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時に次の場所にインストールされます。  
+5.  データベース エンジン チューニング アドバイザーの XML スキーマに対して、手順 4. で保存した XML 入力ファイルを検証します。 このスキーマは、のインストール時に次の場所にインストールされ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
     ```  
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     データベースエンジンチューニングアドバイザー XML スキーマは、で[https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta)もオンラインで利用できます。  
+     データベースエンジンチューニングアドバイザー XML スキーマは、でもオンラインで利用でき [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta) ます。  
   
 6.  ワークロードと XML 入力ファイルの作成後、分析用に **dta** コマンド ライン ユーティリティに入力ファイルを送信できます。 ユーティリティの **-ox** 引数には、XML 出力ファイル名を指定します。 これにより、`Configuration` 要素で指定した推奨構成で、XML 出力ファイルが作成されます。 データベース エンジン チューニング アドバイザーを再度実行して、出力に基づいた他の仮定の構成をチェックする場合は、出力ファイルから `Configuration` 要素コンテンツをコピーし、新しい XML 入力ファイルまたは元の XML 入力ファイルに貼り付けることができます。 **dta** ユーティリティでの XML 入力ファイルの使用の詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](database-engine-tuning-advisor.md)」の dta ユーティリティを使用してデータベースをチューニングする方法に関するセクションを参照してください。  
   
@@ -308,7 +307,7 @@ ms.locfileid: "68811023"
  **[後で実行する]**  
  推奨設定のためのスクリプトを生成し、アクションを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブとして保存します。  
   
- **Date**  
+ **日付**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを実行して推奨設定を適用する日付を指定します。  
   
  **Time**  
@@ -320,13 +319,13 @@ ms.locfileid: "68811023"
  **[チューニング サマリー]**  
  データベース エンジン チューニング アドバイザーによる推奨構成の要約が表示されます。  
   
- **Date**  
+ **日付**  
  データベース エンジン チューニング アドバイザーによってレポートが作成された日付です。  
   
  **Time**  
  データベース エンジン チューニング アドバイザーによってレポートが作成された時刻です。  
   
- **サーバー**  
+ **[サーバー]**  
  データベース エンジン チューニング アドバイザーのワークロードの対象となったサーバーです。  
   
  **[チューニングするデータベース]**  
@@ -387,7 +386,7 @@ ms.locfileid: "68811023"
  選択したレポートの詳細を表示します。 グリッドの列は各レポートで異なります。  
   
 ## <a name="see-also"></a>参照  
- [データベースエンジンチューニングアドバイザーを起動して使用する](database-engine-tuning-advisor.md)   
+ [データベース エンジン チューニング アドバイザーの起動および使用](database-engine-tuning-advisor.md)   
  [dta ユーティリティ](../../tools/dta/dta-utility.md)  
   
   

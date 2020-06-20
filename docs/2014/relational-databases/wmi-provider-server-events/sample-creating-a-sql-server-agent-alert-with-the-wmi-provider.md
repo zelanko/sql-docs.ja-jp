@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6a28d2991fcf3a49431e31083ae909f367f408e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68195833"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048850"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>サンプル:WMI Provider for Server Events の使用による SQL Server エージェント警告の作成
   WMI イベント プロバイダーの標準的な使い方の 1 つは、特定のイベントに応答する SQL Server エージェントを作成することです。 次のサンプルでは、後で分析するために、テーブルに XML デッドロック グラフ イベントを保存する簡単な警告を提供しています。 SQL Server エージェントは、WQL 要求の送信、WMI イベントの受信、およびイベントに応答したジョブの実行を行います。 通知メッセージの処理に関連する Service Broker オブジェクトはいくつかありますが、WMI イベント プロバイダーはこれらのオブジェクトの作成および管理の詳細を処理します。  
@@ -34,7 +33,7 @@ ms.locfileid: "68195833"
  警告は、デッドロック グラフ トレース イベントのログが記録されるたびに、ジョブを実行します。 WMI 警告の場合、SQL Server エージェントは、指定された名前空間および WQL ステートメントを使用して通知クエリを作成します。 この警告の場合、SQL Server エージェントは、ローカル コンピューター上の既定のインスタンスを監視します。 WQL ステートメントは、既定のインスタンス内の任意の `DEADLOCK_GRAPH` イベントを要求します。 警告が監視するインスタンスを変更するには、警告する `MSSQLSERVER` 内の `@wmi_namespace` のインスタンス名を置き換えます。  
   
 > [!NOTE]  
->  SQL Server エージェントが WMI イベントを受信する[!INCLUDE[ssSB](../../includes/sssb-md.md)]には、 **msdb**および[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]でを有効にする必要があります。  
+>  SQL Server エージェントが WMI イベントを受信するには、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] **msdb**およびでを有効にする必要があり [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
 USE AdventureWorks ;  
@@ -89,7 +88,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>サンプルのテスト  
- ジョブの実行を確認するには、デッドロックを発生させます。 で[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、2つの**SQL クエリ**タブを開き、両方のクエリを同じインスタンスに接続します。 次のスクリプトを 2 つのクエリ タブのうちの 1 つで実行します。 このスクリプトは、1 つの結果セットを作成して終了します。  
+ ジョブの実行を確認するには、デッドロックを発生させます。 で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、2つの**SQL クエリ**タブを開き、両方のクエリを同じインスタンスに接続します。 次のスクリプトを 2 つのクエリ タブのうちの 1 つで実行します。 このスクリプトは、1 つの結果セットを作成して終了します。  
   
 ```  
 USE AdventureWorks ;  
@@ -102,7 +101,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 2番目の [クエリ] タブで次のスクリプトを実行します。このスクリプトは、1つの`Production.Product`結果セットを生成してからブロックし、ロックの取得を待機します。  
+ 2番目の [クエリ] タブで次のスクリプトを実行します。このスクリプトは、1つの結果セットを生成してからブロックし、ロックの取得を待機 `Production.Product` します。  
   
 ```  
 USE AdventureWorks ;  
@@ -118,7 +117,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 最初の [クエリ] タブで、次のスクリプトを実行します。このスクリプトはブロックし、ロックの取得を`Production.Location`待機しています。 すぐにタイムアウトになった後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、このスクリプトとサンプル内のスクリプトのどちらかをデッドロックの対象として選択し、トランザクションを終了します。  
+ 最初の [クエリ] タブで、次のスクリプトを実行します。このスクリプトはブロックし、ロックの取得を待機 `Production.Location` しています。 すぐにタイムアウトになった後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、このスクリプトとサンプル内のスクリプトのどちらかをデッドロックの対象として選択し、トランザクションを終了します。  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

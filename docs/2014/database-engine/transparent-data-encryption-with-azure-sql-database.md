@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bf7e8ff-1416-4923-9c4c-49341e208c62
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 541d6d27dc5dbc31dad98840e7ed6654f48a8dfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6af7c52741b85a2733b93c2b1ed8c03a14dd6343
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175404"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928220"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Azure SQL Database での Transparent Data Encryption
   [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] の透過的なデータの暗号化 (プレビュー版) は、データベース、関連するバックアップ、および静止したトランザクション ログのリアルタイム暗号化および暗号化解除を実行して、悪意のあるアクティビティの脅威から保護するのに役立ちます。アプリケーションに変更を加える必要はありません。
@@ -50,7 +49,7 @@ ms.locfileid: "78175404"
 
 ##  <a name="sign-up-for-the-preview-of-tde-and-enable-tde-on-a-database"></a><a name="Preview"></a>TDE のプレビューにサインアップして、データベースで TDE を有効にする
 
-1.  Azure Portal にアクセス[https://portal.azure.com](https://portal.azure.com)し、Azure 管理者または共同作成者アカウントでサインインします。
+1.  Azure Portal にアクセス [https://portal.azure.com](https://portal.azure.com) し、Azure 管理者または共同作成者アカウントでサインインします。
 
 2.  左のバナーの [**参照**] をクリックしてから、[**SQL データベース**] をクリックします。
 
@@ -68,9 +67,9 @@ ms.locfileid: "78175404"
 
      ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")
 
-     また、 [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 権限を持つデータベース ユーザーとして、 **などのクエリ ツールを使用して** に接続することで、暗号化の進行状況を監視することもできます。 Dm_database_encryption_keys ビュー `encryption_state`の列に[sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)対してクエリを実行します。
+     また、 [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 権限を持つデータベース ユーザーとして、 **などのクエリ ツールを使用して** に接続することで、暗号化の進行状況を監視することもできます。 Dm_database_encryption_keys ビューの列に対してクエリを実行 `encryption_state` します。 [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)
 
-##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>Transact-sql を使用し[!INCLUDE[ssSDS](../includes/sssds-md.md)]てで tde を有効にする
+##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>Transact-sql を使用してで TDE を有効にする [!INCLUDE[ssSDS](../includes/sssds-md.md)]
  次の手順は、既にプレビュー版にサインアップしていることを前提としています。
 
 ###  <a name="TsqlProcedure"></a>
@@ -90,7 +89,7 @@ ms.locfileid: "78175404"
     GO
     ```
 
-3.  での暗号化の進行状況を[!INCLUDE[ssSDS](../includes/sssds-md.md)]監視するために、 **view database STATE**権限を持つデータベース`encryption_state`ユーザーは、 [dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)ビューの列に対してクエリを実行できます。
+3.  での暗号化の進行状況を監視するために [!INCLUDE[ssSDS](../includes/sssds-md.md)] 、 **VIEW database STATE**権限を持つデータベースユーザーは、 `encryption_state` [dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)ビューの列に対してクエリを実行できます。
 
 ## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>PowerShell を使用して SQL Database で TDE を有効にする
  Azure PowerShell を使用すると、次のコマンドを実行して TDE を有効または無効にすることができます。 コマンドを実行するには、事前にアカウントを PS ウィンドウに接続する必要があります。 次の手順は、既にプレビュー版にサインアップしていることを前提としています。 PowerShell の詳細については、「 [Azure PowerShell をインストールおよび構成する方法](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)」を参照してください。
@@ -116,7 +115,7 @@ ms.locfileid: "78175404"
 
 #### <a name="to-disable-tde-by-using-the-azure-portal"></a>Azure ポータルを使用して TDE を無効にするには
 
-1.  Azure Portal にアクセス[https://portal.azure.com](https://portal.azure.com)し、Azure 管理者または共同作成者アカウントでサインインします。
+1.  Azure Portal にアクセス [https://portal.azure.com](https://portal.azure.com) し、Azure 管理者または共同作成者アカウントでサインインします。
 
 2.  左のバナーの [**参照**] をクリックしてから、[**SQL データベース**] をクリックします。
 
@@ -128,7 +127,7 @@ ms.locfileid: "78175404"
 
 6.  **[透過的なデータの暗号化 (プレビュー版)]** ブレードで、 **[データの暗号化]** ボタンを **[オフ]** にしてから、(ページ上部の) **[保存]** をクリックして設定を適用します。 **[暗号化の状態]** には、透過的なデータの暗号化解除のおおよその進行状況が表示されます。
 
-     また、 [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 権限を持つデータベース ユーザーとして、 **などのクエリ ツールを使用して** に接続することで、暗号化解除の進行状況を監視することもできます。 Dm_database_encryption_keys ビュー `encryption_state`の列に[sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)対してクエリを実行します。
+     また、 [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 権限を持つデータベース ユーザーとして、 **などのクエリ ツールを使用して** に接続することで、暗号化解除の進行状況を監視することもできます。 Dm_database_encryption_keys ビューの列に対してクエリを実行 `encryption_state` します。 [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)
 
 #### <a name="to-disable-tde-by-using-transact-sql"></a>Transact SQL を使用して TDE を無効にするには
 
@@ -142,7 +141,7 @@ ms.locfileid: "78175404"
     GO
     ```
 
-3.  での暗号化の進行状況を[!INCLUDE[ssSDS](../includes/sssds-md.md)]監視するために、 **view database STATE**権限を持つデータベース`encryption_state`ユーザーは、 [dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)ビューの列に対してクエリを実行できます。
+3.  での暗号化の進行状況を監視するために [!INCLUDE[ssSDS](../includes/sssds-md.md)] 、 **VIEW database STATE**権限を持つデータベースユーザーは、 `encryption_state` [dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)ビューの列に対してクエリを実行できます。
 
 ##  <a name="working-with-tde-protected-databases-on-sssds"></a><a name="Working"></a>で TDE で保護されたデータベースを操作する[!INCLUDE[ssSDS](../includes/sssds-md.md)]
  Azure 内での操作用にデータベースの暗号化を解除する必要はありません。 ソース データベースまたはプライマリ データベースの TDE の設定は、ターゲットに透過的に継承されます。 これには次の操作が含まれます。

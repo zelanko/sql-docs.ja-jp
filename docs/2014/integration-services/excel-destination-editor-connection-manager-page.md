@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c55b9daba7e8e1823e1ced43fc9958d4fe5892ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a969ad04f8ba5bc86167beecfab5fec85e87caa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059237"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966882"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>[Excel 変換先エディター] ([接続マネージャー] ページ)
   **[Excel 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、データ ソース情報を指定したり、結果をプレビューしたりできます。 Excel 変換先では、 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] ブックのワークシートまたは名前付き範囲にデータが読み込まれます。  
   
 > [!NOTE]  
->  Excel `CommandTimeout`変換先のプロパティは、 **Excel 変換先エディター**では使用できませんが、**詳細エディター**を使用して設定できます。 また、一部の高速読み込みオプションは **[詳細エディター]** でしか使用できません。 これらのプロパティの詳細については、「 [Excel Custom Properties](data-flow/excel-custom-properties.md)」の「Excel 変換先」を参照してください。  
+>  Excel 変換 `CommandTimeout` 先のプロパティは、 **Excel 変換先エディター**では使用できませんが、**詳細エディター**を使用して設定できます。 また、一部の高速読み込みオプションは **[詳細エディター]** でしか使用できません。 これらのプロパティの詳細については、「 [Excel Custom Properties](data-flow/excel-custom-properties.md)」の「Excel 変換先」を参照してください。  
   
  Excel 変換先の詳細については、「 [Excel Destination](data-flow/excel-destination.md)」を参照してください。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "66059237"
  **Excel 接続マネージャー**  
  既存の Excel 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
- **新しい**  
+ **[新規作成]**  
  **[Excel 接続マネージャー]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
   
  **データアクセスモード**  
@@ -48,7 +47,7 @@ ms.locfileid: "66059237"
  **[Excel シートの名前]**  
  ドロップダウン リストから Excel 変換先を選択します。 一覧が空の場合は **[新規]** をクリックします。  
   
- **新しい**  
+ **[新規作成]**  
  **[新規]** をクリックすると、 **[テーブルの作成]** ダイアログ ボックスが表示されます。 **[OK]** をクリックすると、 **Excel 接続マネージャー** の参照先の Excel ファイルが作成されます。  
   
  **[既存のデータを表示]**  
@@ -64,7 +63,7 @@ ms.locfileid: "66059237"
  データ ソースで使用できるワークシートまたは名前付き範囲の名前を一覧から選択します。  
   
 ### <a name="data-access-mode--table-name-or-view-name-variable"></a>[データ アクセス モード] = [テーブル名またはビュー名の変数]  
- **変数名**  
+ **[変数名]**  
  ワークシートまたは名前付き範囲の名前が含まれている変数を選択します。  
   
 ### <a name="data-access-mode--sql-command"></a>[データ アクセス モード] = [SQL コマンド]  

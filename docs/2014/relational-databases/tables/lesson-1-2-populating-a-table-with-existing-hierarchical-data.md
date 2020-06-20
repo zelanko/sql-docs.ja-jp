@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 966548b11ad4697abc06de5c5c239a511f80b7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110164"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068091"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>既存の階層データを使用したテーブルの設定
    ここでは、新しいテーブルを作成して、そのテーブルに **EmployeeDemo** テーブルのデータを設定します。 この作業には、次の手順があります。  
@@ -113,7 +112,7 @@ ms.locfileid: "66110164"
   
      `10        4         2`  
   
-3.  **Neworg**テーブルを設定します。 GetRoot メソッドと ToString メソッドを使用して、 **Num**値を`hierarchyid`形式に連結し、次に、結果の階層値で**orgnode**列を更新します。  
+3.  **Neworg**テーブルを設定します。 GetRoot メソッドと ToString メソッドを使用して、 **Num**値を形式に連結し、次に、 `hierarchyid` 結果の階層値で**orgnode**列を更新します。  
   
     ```  
     WITH paths(path, EmployeeID)   
@@ -151,7 +150,7 @@ ms.locfileid: "66110164"
   
     ```  
   
-     **Logicalnode**列は、列`hierarchyid`を階層を表すより読みやすいテキスト形式に変換します。 残りの作業では、`ToString()` メソッドを使用して、`hierarchyid` 列の論理形式を表示します。  
+     **Logicalnode**列は、 `hierarchyid` 列を階層を表すより読みやすいテキスト形式に変換します。 残りの作業では、`ToString()` メソッドを使用して、`hierarchyid` 列の論理形式を表示します。  
   
 5.  不要になった一時テーブルを削除します。  
   
