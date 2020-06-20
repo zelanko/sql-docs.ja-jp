@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1b5a9bbc-beb8-44fd-ab03-4c14908c604c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 322c0e835403d3cebb9ca42b77d803a6573a220c
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 03bc7f1e5742e26ead92a5889f74fd73a0d3c7e8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000892"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932971"
 ---
 # <a name="full-text-search-backward-compatibility"></a>フルテキスト検索における旧バージョンとの互換性
   旧バージョンとの互換性のセクションの各トピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の以前のバージョンと [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]におけるフルテキスト検索の動作の違いについて説明します。  

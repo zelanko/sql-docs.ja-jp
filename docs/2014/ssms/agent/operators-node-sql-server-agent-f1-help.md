@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f3665edc-b030-4c83-9ce7-2dfd39c6b398
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 96416c673d3dae6497d56c114ff24df70a8e6872
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec7dff4ffe1fd793caa266efee6a253f41aa8d2e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63125985"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067704"
 ---
 # <a name="operators-node-sql-server-agent-f1-help"></a>[オペレーター] ノード (SQL Server エージェントの F1 ヘルプ)
   ここでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーの **[オペレーター]** ノードに関する F1 ヘルプについて紹介します。  

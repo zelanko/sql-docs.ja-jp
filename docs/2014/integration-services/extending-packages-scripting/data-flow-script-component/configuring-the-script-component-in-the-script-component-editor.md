@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 40f354f190093c0c689e708301bed9fcba8c87c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2544c0249567e05eb3a3e3d7a297ec45fdedc8d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176225"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967302"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成
   スクリプト コンポーネント内でカスタム コードを記述する前に、作成するデータ フロー コンポーネントの種類 (変換元、変換、または変換先) を選択し、 **[スクリプト変換エディター]** でスクリプト コンポーネントのメタデータおよびプロパティを構成する必要があります。
@@ -30,7 +29,7 @@ ms.locfileid: "78176225"
 ## <a name="selecting-the-type-of-component-to-create"></a>作成するコンポーネントの種類の選択
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの [データ フロー] ペインにスクリプト コンポーネントを追加すると、 **[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスが表示されます。 コンポーネントをあらかじめ、変換元、変換、または変換先として構成しておきます。 最初にこれを選択したら、引き続き **[スクリプト変換エディター]** でスクリプト コンポーネントを構成できます。
 
- スクリプト コンポーネントの既定のスクリプト言語を設定するには、 **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「 [General Page](../../general-page-of-integration-services-designers-options.md)」を参照してください。
+ スクリプト コンポーネントの既定のスクリプト言語を設定するには、**[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「 [General Page](../../general-page-of-integration-services-designers-options.md)」を参照してください。
 
 ## <a name="understanding-the-two-design-time-modes"></a>デザイン時の 2 つのモードについて
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、スクリプト コンポーネントにメタデータ デザイン モードとコード デザイン モードの 2 つのモードがあります。
@@ -47,9 +46,9 @@ ms.locfileid: "78176225"
  カスタム エディターで構成する必要のあるプロパティは、スクリプト コンポーネントの使用法に応じて異なります。 スクリプト コンポーネントは、変換元、変換、または変換先として構成できます。 コンポーネントの使用方法に応じて、入力または出力のどちらか、またはその両方がサポートされます。 記述するカスタム コードでは、入力および出力の行と列が処理されます。
 
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [入力列] ページ
- 変換および変換先では、 **[スクリプト変換エディター]** の **[入力列]** ページが表示されます。変換元では表示されません。 このページでは、使用できる入力列から、使用するカスタム スクリプトを選択し、その入力列に読み取り専用でアクセスするか、または読み取り/書き込みでアクセスするかを指定します。
+ 変換および変換先では、**[スクリプト変換エディター]** の **[入力列]** ページが表示されます。変換元では表示されません。 このページでは、使用できる入力列から、使用するカスタム スクリプトを選択し、その入力列に読み取り専用でアクセスするか、または読み取り/書き込みでアクセスするかを指定します。
 
- このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力のクラスが含まれます。このクラスには、選択した各入力列用の型指定されたアクセサー プロパティが含まれています。 `CustomerInput`たとえば、という名前の入力から整数の**CustomerID**列と**文字列の**customerid 列を選択した場合、bufferwrapper プロジェクトアイテムに`CustomerInput`は、 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>から派生したクラス`CustomerInput`が含まれます。このクラスでは、 **CustomerID**という整数プロパティと、CustomerID**という名前**の文字列プロパティが公開されます。 この規則により、次のような型チェック付きのコードが記述できます。
+ このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力のクラスが含まれます。このクラスには、選択した各入力列用の型指定されたアクセサー プロパティが含まれています。 たとえば、という名前の入力から整数の CustomerID**列と文字列の** **customerid**列を選択した場合、 `CustomerInput` bufferwrapper プロジェクトアイテムには、 `CustomerInput` から派生したクラスが含まれ <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> ます。このクラスでは、 `CustomerInput` CustomerID という**CustomerName**整数プロパティと、 **CustomerID**という名前の文字列プロパティが公開されます。 この規則により、次のような型チェック付きのコードが記述できます。
 
 ```vb
 Dim currentCustomerID as Integer = CustomerInput.CustomerID
@@ -59,7 +58,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  特定の種類のデータ フロー コンポーネントの入力列を構成する方法の詳細については、「[特定の種類のスクリプト コンポーネントの開発](../../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)」で、該当する例を参照してください。
 
 ### <a name="inputs-and-outputs-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [入力および出力] ページ
- 変換元、変換、および変換先では、 **[スクリプト変換エディター]** の **[入力および出力]** ページが表示されます。 このページでは、カスタム スクリプトで使用する入力、出力、および出力列を追加、削除、および構成します。ただし、次のような制限があります。
+ 変換元、変換、および変換先では、**[スクリプト変換エディター]** の **[入力および出力]** ページが表示されます。 このページでは、カスタム スクリプトで使用する入力、出力、および出力列を追加、削除、および構成します。ただし、次のような制限があります。
 
 -   スクリプト コンポーネントを変換元として使用する場合、入力はありませんが複数の出力がサポートされます。
 
@@ -67,7 +66,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 
 -   スクリプト コンポーネントを変換先として使用する場合、1 つの入力がサポートされますが出力はありません。
 
- このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力および出力のクラスが含まれます。 たとえば、 `CustomerOutput`という名前の出力を作成した場合、bufferwrapper プロジェクトアイテムに`CustomerOutput`は、から<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>派生したクラス`CustomerOutput`が含まれます。このクラスには、作成された各出力列の型指定されたアクセサープロパティが含まれます。
+ このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力および出力のクラスが含まれます。 たとえば、という名前の出力を作成した場合、 `CustomerOutput` BufferWrapper プロジェクトアイテムには、 `CustomerOutput` から派生したクラスが含まれ <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> ます。このクラスには、 `CustomerOutput` 作成された各出力列の型指定されたアクセサープロパティが含まれます。
 
  出力列は、 **[入力および出力]** ページでのみ構成できます。 変換および変換先の入力列は、 **[入力列]** ページで選択できます。 BufferWrapper プロジェクト アイテムで作成された、型指定されたアクセサー プロパティは、出力列の書き込み専用プロパティです。 入力列のアクセサー プロパティは、 **[入力列]** ページで各列に選択した使用法の種類に応じて、読み取り専用または読み取り/書き込みのプロパティになります。
 
@@ -82,11 +81,11 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  `SynchronousInputID` プロパティは、同期出力型の変換でのみ、0 以外の値になります。 このプロパティの値が 0 の場合、出力が非同期型であることを示します。 同期出力では、新しい行を追加せず、選択した出力に行が渡されます。このプロパティには、コンポーネントの入力の `ID` が含まれている必要があります。
 
 > [!NOTE]
->  [**スクリプト変換エディター** ] によって最初の出力が作成さ`SynchronousInputID`れると、エディターによっ`ID`て、出力のプロパティがコンポーネントの入力のに設定されます。 しかし、その後の出力時には、出力の `SynchronousInputID` プロパティが 0 に設定されます。
+>  [**スクリプト変換エディター** ] によって最初の出力が作成されると、エディターによって、 `SynchronousInputID` 出力のプロパティが `ID` コンポーネントの入力のに設定されます。 しかし、その後の出力時には、出力の `SynchronousInputID` プロパティが 0 に設定されます。
 > 
->  同期出力型`SynchronousInputID` `ID`のコンポーネントを作成する場合は、各出力のプロパティがコンポーネントの入力のに設定されている必要があります。 このため、最初の出力後は、エディターで出力を作成するたびに、`SynchronousInputID` 値を 0 からコンポーネントの入力の `ID` に変更する必要があります。
+>  同期出力型のコンポーネントを作成する場合は、各出力 `SynchronousInputID` のプロパティがコンポーネントの入力のに設定されている必要があり `ID` ます。 このため、最初の出力後は、エディターで出力を作成するたびに、`SynchronousInputID` 値を 0 からコンポーネントの入力の `ID` に変更する必要があります。
 > 
->  非同期出力型コンポーネントを作成する場合、各出力の `SynchronousInputID` プロパティを 0 に設定する必要があります。 したがって、最初の出力の`SynchronousInputID`値は、 `ID`コンポーネントの入力のから0に変更する必要があります。
+>  非同期出力型コンポーネントを作成する場合、各出力の `SynchronousInputID` プロパティを 0 に設定する必要があります。 したがって、最初の出力の `SynchronousInputID` 値は、 `ID` コンポーネントの入力のから0に変更する必要があります。
 
  スクリプト コンポーネントで 2 つの同期出力のうちのいずれかに行を送信する例については、「[スクリプト コンポーネントによる同期変換の作成](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)」を参照してください。
 
@@ -117,7 +116,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [接続マネージャー] ページ
  **[スクリプト変換エディター]** の **[接続マネージャー]** ページでは、カスタム スクリプトで使用する接続マネージャーを追加および削除します。 通常、変換元または変換先コンポーネントを作成する場合は、接続マネージャーを参照する必要があります。
 
- このメタデータに基づいて生成されるコード プロジェクトの `ComponentWrapper` プロジェクト アイテムには、選択した各接続マネージャー用の型指定されたアクセサー プロパティを格納する `Connections` コレクション クラスが含まれます。 型指定された各アクセサー プロパティの名前は、接続マネージャー自体の名前と同じであり、<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> のインスタンスとして、接続マネージャーへの参照を返します。 たとえば、エディターの `MyADONETConnection`[接続マネージャー]**ページに** という名前の接続マネージャーを追加した場合、次のコードを使用して、スクリプト内のその接続マネージャーへの参照を取得できます。
+ このメタデータに基づいて生成されるコード プロジェクトの `ComponentWrapper` プロジェクト アイテムには、選択した各接続マネージャー用の型指定されたアクセサー プロパティを格納する `Connections` コレクション クラスが含まれます。 型指定された各アクセサー プロパティの名前は、接続マネージャー自体の名前と同じであり、<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> のインスタンスとして、接続マネージャーへの参照を返します。 たとえば、エディターの **[接続マネージャー]** ページに `MyADONETConnection` という名前の接続マネージャーを追加した場合、次のコードを使用して、スクリプト内のその接続マネージャーへの参照を取得できます。
 
 ```vb
 Dim myADONETConnectionManager As IDTSConnectionManager100 = _

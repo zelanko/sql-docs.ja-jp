@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6aa18a6b40f073dbccd28d82477d0b1c5e2b69fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e52ef61a8d0e9954556d182630ad5afa874ae584
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753634"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996990"
 ---
 # <a name="installing-smo"></a>SMO のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を使用するアプリケーションを開発する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールするときにクライアント ツール SDKを選択する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールせずにクライアント ツール SDK をインストールするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能パックから共有管理オブジェクトをインストールする必要があります。 アプリケーションを実行するコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクトがインストールされていることを確認する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能パックの共有管理オブジェクト .msi を使用できます。  

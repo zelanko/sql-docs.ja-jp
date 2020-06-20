@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11eae15e50c26c4abde212ef273d6ede63ffe30d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922566"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953912"
 ---
 # <a name="clr-hosted-environment"></a>CLR ホスト環境
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework CLR (共通言語ランタイム) は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++ など、多くの最新のプログラミング言語を実行する環境です。 CLR の特色には、ガベージ コレクションが行われるメモリ、プリエンプティブなスレッド処理、メタデータ サービス (型リフレクション)、コードの検証可能性、コード アクセス セキュリティなどがあります。 CLR では、クラスの検索と読み込み、メモリ内でのインスタンスのレイアウト、メソッド呼び出しの解決、ネイティブ コードの生成、セキュリティの設定、およびランタイム コンテキスト境界の設定にメタデータが使用されます。  
@@ -62,7 +61,7 @@ ms.locfileid: "62922566"
   
  このようにスレッド処理、スケジュール設定、およびメモリ管理のモデルが異なるため、数千の同時実行ユーザー セッションをサポートするまで規模が拡大された RDBMS (リレーショナル データベース管理システム) では統合が課題になります。 アーキテクチャでは、スレッド処理、メモリ、および同期プリミティブの API (アプリケーション プログラミング インターフェイス) を直接呼び出すユーザー コードによってシステムのスケーラビリティが損なわれないことを保証する必要があります。  
   
-###### <a name="security"></a>Security  
+###### <a name="security"></a>セキュリティ  
  データベースで実行されるユーザー コードがテーブルや列などのデータベース オブジェクトにアクセスする際には、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の認証規則と承認規則に従う必要があります。 また、データベース管理者は、データベースで実行しているユーザー コードからファイルやネットワーク アクセスなどのオペレーティング システム リソースへのアクセスを制御できる必要があります。 (Transact-SQL などの非マネージド言語とは異なり) このようなリソースにアクセスする API が用意されているマネージド プログラミング言語ではこのことが重要になります。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] プロセス外のコンピューター リソースにアクセスするユーザー コードには、システムによりセキュリティで保護された方法が提供される必要があります。 詳細については、「 [CLR 統合のセキュリティ](security/clr-integration-security.md)」を参照してください。  
   
 ###### <a name="performance"></a>パフォーマンス  
@@ -77,7 +76,7 @@ ms.locfileid: "62922566"
 ###### <a name="application-domains"></a>アプリケーション ドメイン  
  CLR では、マネージド コード アセンブリを読み込み、実行できるホスト プロセス内の実行領域として、アプリケーション ドメインの概念がサポートされます。 アプリケーション ドメインの境界でアセンブリどうしが分離されます。 アセンブリは、静的変数やデータ メンバーの可視性、およびコードを動的に呼び出す機能に関して分離されます。 また、アプリケーション ドメインはコードのロードとアンロード用のメカニズムでもあります。 アプリケーション ドメインをアンロードしないと、コードをメモリからアンロードできません。 詳細については、「[アプリケーションドメインと CLR 統合のセキュリティ](../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)」を参照してください。  
   
-###### <a name="code-access-security-cas"></a>CAS (コード アクセス セキュリティ)  
+###### <a name="code-access-security-cas"></a>コード アクセス セキュリティ (CAS)  
  CLR セキュリティ システムには、マネージド コードに権限を割り当てて、そのコードで実行できる操作の種類を制御する方法が用意されています。 コード アクセス権限は、コード ID (アセンブリの署名やコードの作成元など) に基づいて割り当てられます。  
   
  CLR では、コンピューター管理者が設定できるコンピューター全体のポリシーが規定されます。 このポリシーでは、コンピューターで実行される任意のマネージド コードに許可される権限が定義されます。 さらに、マネージド コードに新たな制限を指定するために [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] などのホストで使用できるホストレベルのセキュリティ ポリシーがあります。  
@@ -122,8 +121,8 @@ ms.locfileid: "62922566"
 |||||  
 |-|-|-|-|  
 |権限セット|SAFE|EXTERNAL_ACCESS|UNSAFE|  
-|コード アクセス セキュリティ|実行のみ|実行および外部リソースへのアクセス|制限なし|  
-|プログラミング モデルの制限事項|はい|はい|無制限|  
+|コード アクセス セキュリティ|実行のみ|実行および外部リソースへのアクセス|無制限|  
+|プログラミング モデルの制限事項|はい|はい|制限事項なし|  
 |検証可能性の要件|はい|はい|いいえ|  
 |ネイティブ コードを呼び出す機能|いいえ|いいえ|はい|  
   

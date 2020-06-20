@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd78e5f1e85510ec7a14548280a616a9b32aec55
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922437"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959482"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>バックアップと復元: 相互運用性と共存 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のいくつかの機能のバックアップと復元に関する考慮事項について説明します。 このような機能には、ファイル復元とデータベースの起動、オンライン復元と無効化されたインデックス、データベース ミラーリング、段階的な部分復元、およびフルテキスト インデックスが含まれます。  
@@ -48,7 +47,7 @@ ms.locfileid: "62922437"
   
  データベースの起動中に問題が発生した場合、復旧は失敗し、データベースは SUSPECT に設定されます。 問題のファイルを特定できる場合、データベース管理者は、それらのファイルをオフラインにし、データベースの再起動を試行できます。 ファイルをオフラインにするには、次の [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) ステートメントを使用します。  
   
- ALTER database *database_name* MODIFY FILE (name **= '*`filename`*'**、OFFLINE)  
+ ALTER database *database_name* MODIFY FILE (name **= ' *`filename`* '**、OFFLINE)  
   
  起動に成功した場合、オフライン ファイルが含まれるファイル グループはすべてオフライン状態で維持されます。  
   

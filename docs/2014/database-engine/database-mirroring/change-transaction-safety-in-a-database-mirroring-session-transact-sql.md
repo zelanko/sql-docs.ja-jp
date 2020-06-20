@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a79010a4fa59eaebfc743543799a1e83cc5e687d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8bc9d0fb639770d33507c29a6ec67f60bd0434a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754926"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934396"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>データベース ミラーリング セッションでのトランザクションの安全性の変更 (Transact-SQL)
   トランザクションの安全性は、セッションの動作モードを制御する属性です。 ただし、データベース所有者は、いつでもトランザクションの安全性を変更できます。 既定では、トランザクションの安全性レベルは FULL (同期動作モード) に設定されています。  
@@ -34,7 +33,7 @@ ms.locfileid: "62754926"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     ここで、 * \<database>* はミラー化されたデータベースの名前です。  
+     ここ *\<database>* で、はミラー化されたデータベースの名前です。  
   
 ### <a name="to-turn-off-transaction-safety"></a>トランザクションの安全性を無効にするには  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62754926"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     ここで、 * \<データベース>* はミラー化されたデータベースです。  
+     ここ *\<database>* で、はミラー化されたデータベースです。  
   
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE データベースミラーリング &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   

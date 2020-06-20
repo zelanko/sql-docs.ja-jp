@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c17dd78c42427027ebbac181b4f42edff082439e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068065"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940263"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>[トレーニング データの指定] (データ マイニング ウィザード)
   **[トレーニング データの指定]** ページを使用すると、マイニング構造に含める列を指定できます。 構造に含める列をすべてのモデルで使用するとは限らない場合でも、それらの列を選択できます。 たとえば、マイニング モデルから列にドリルスルーする場合は、それらの列をモデルには含めずに構造に含めることができます。  
@@ -33,7 +32,7 @@ ms.locfileid: "66068065"
  **テーブルまたは列**  
  ウィザードの前のページで選択したテーブルおよび列が表示されます。  
   
- **\<チェックボックス>**  
+ **\<check box>**  
  マイニング構造に含める列を選択します。  
   
  データ ソースに入れ子になったテーブルまたは複数のビューが含まれている場合は、列の一覧を展開して入れ子になったテーブルを表示します。  

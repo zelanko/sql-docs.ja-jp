@@ -1,5 +1,6 @@
 ---
 title: ストアドプロシージャの呼び出し (ODBC) |Microsoft Docs
+description: Odbc アプリケーションを SQL Server 2005 以降で使用する前に、ODBC 管理者、プログラム、またはファイルを使用してデータソースを追加する方法について説明します。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baa8ad51341311014d841c0e31251b0780828389
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43f9c78ac618b21097d412b6676abf84b95e9667
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282009"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967587"
 ---
 # <a name="running-stored-procedures---call-stored-procedures"></a>ストアド プロシージャの実行 - ストアド プロシージャの呼び出し
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,6 +49,6 @@ ms.locfileid: "81282009"
   [ストアドプロシージャ呼び出しのバッチ処理](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [ストアドプロシージャの実行](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [ストアドプロシージャの呼び出し](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
- [プロシージャ](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
+ [手順](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
   
   

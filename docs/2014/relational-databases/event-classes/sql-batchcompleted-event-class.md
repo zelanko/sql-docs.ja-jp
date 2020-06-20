@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94127112d214ba976e3b517bdf91a7d6b26b2d1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9d4e156f090501a79f2a2d8cef7822e8dc6a81b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051622"
 ---
 # <a name="sqlbatchcompleted-event-class"></a>SQL:BatchCompleted イベント クラス
   SQL:BatchCompleted イベント クラスは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチが完了したことを示します。  
@@ -35,7 +34,7 @@ ms.locfileid: "63050692"
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |Duration|`bigint`|イベントにかかった時間 (マイクロ秒)。|13|はい|  
 |EndTime|`datetime`|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。|15|はい|  
-|Error|`int`|イベントのエラー番号。<br /><br /> 0 = OK<br /><br /> 1 = エラー<br /><br /> 2 = 中止|31|はい|  
+|エラー|`int`|イベントのエラー番号。<br /><br /> 0 = OK<br /><br /> 1 = エラー<br /><br /> 2 = 中止|31|はい|  
 |EventClass|`int`|イベントの種類 = 12。|27|いいえ|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  

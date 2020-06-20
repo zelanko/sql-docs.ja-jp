@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f0cc47-52f9-413d-8c7a-b4298dd874ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1bfe78e7ac5cb497a39ab0b0679bcb2bd9a43a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a5fa76e11cf7d04c5fa2068cf8ea8ea40939f0e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068057"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940253"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>標準ビュー ([集計] タブ、キューブ デザイナー)
   集計デザイナーの **標準ビュー** を使用すると、集計を表示できます。 このビューでは、 **集計のデザイン ウィザード** または **使用法に基づく最適化ウィザード**を使用して、集計デザインを作成および変更することもできます。  

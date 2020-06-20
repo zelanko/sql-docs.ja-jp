@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d0e4798caf545c84f97cd05075d455980083bf4d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d2c4a0cd87d42db9e17097932b6530936a2b83eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717073"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059475"
 ---
 # <a name="create-views-over-xml-columns"></a>XML 列でのビューの作成
   `xml` 型の列を使用して、ビューを作成することもできます。 次の例では、`xml` データ型の `value()` メソッドを使用して `xml` 型の列の値を取得するビューを作成します。  

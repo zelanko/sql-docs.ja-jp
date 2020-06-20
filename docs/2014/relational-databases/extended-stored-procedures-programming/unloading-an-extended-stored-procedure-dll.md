@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 4c75ab14-af54-4965-b376-8d75d385c941
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2772c8d6470f9ad6eb5e8b7cadb6dedd136bd48b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bd4855390e95d949ab769d6567d6f106959dcde
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137583"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050836"
 ---
 # <a name="unloading-an-extended-stored-procedure-dll"></a>拡張ストアド プロシージャ DLL のアンロード
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 代わりに CLR Integration を使用してください。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dll のいずれかの関数が呼び出されるとすぐに、拡張ストアドプロシージャ DLL を読み込みます。 DLL がロードされた状態は、サーバーがシャットダウンするか、DBCC ステートメントを使用してシステム管理者によってアンロードされるまで、維持されます。 たとえば、次のコマンドは、xp_hello をアンロードし**ます。** これにより、システム管理者は、サーバーをシャットダウンすることなく、このファイルの新しいバージョンをディレクトリにコピーできます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dll のいずれかの関数が呼び出されるとすぐに、拡張ストアドプロシージャ DLL を読み込みます。 DLL がロードされた状態は、サーバーがシャットダウンするか、DBCC ステートメントを使用してシステム管理者によってアンロードされるまで、維持されます。 たとえば、次のコマンドは、 **xp_hello.dll**をアンロードします。これにより、システム管理者は、サーバーをシャットダウンすることなく、このファイルの新しいバージョンをディレクトリにコピーできます。  
   
 ```  
 DBCC xp_hello(FREE)  
