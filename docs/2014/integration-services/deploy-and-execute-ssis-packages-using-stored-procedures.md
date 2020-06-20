@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af4efe24c58d22738e0e7b38ca68f37ce29603f2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251315"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951794"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>ストアド プロシージャを使用した SSIS パッケージの配置と実行
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを、プロジェクト配置モデルを使用するように構成すると、 [!INCLUDE[ssIS](../includes/ssis-md.md)] カタログのストアド プロシージャを使用して、プロジェクトの配置とパッケージの実行を行うことができます。 プロジェクト配置モデルの詳細については、「 [プロジェクトとパッケージの展開](packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
@@ -36,9 +35,9 @@ ms.locfileid: "72251315"
   
 1.  [catalog.deploy_project (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) を呼び出して、パッケージを含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置します。  
   
-     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]プロジェクト配置ファイルのバイナリコンテンツを取得するには、 * \@project_stream*パラメーターとして、OPENROWSET 関数と一括行セットプロバイダーで SELECT ステートメントを使用します。 BULK 行セット プロバイダーを使用すると、ファイルからデータを読み取ることができます。 BULK 行セット プロバイダーの SINGLE_BLOB 引数は、データ ファイルの内容を、varbinary(max) 型の単一行、単一列の行セットとして返します。 詳細については、「[OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
+     プロジェクト配置ファイルのバイナリコンテンツを取得するには [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 、 * \@ project_stream*パラメーターとして、OPENROWSET 関数と一括行セットプロバイダーで SELECT ステートメントを使用します。 BULK 行セット プロバイダーを使用すると、ファイルからデータを読み取ることができます。 BULK 行セット プロバイダーの SINGLE_BLOB 引数は、データ ファイルの内容を、varbinary(max) 型の単一行、単一列の行セットとして返します。 詳細については、「[OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
   
-     次の例では、SSISPackages_ProjectDeployment プロジェクトを、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーの SSIS パッケージ フォルダーに配置します。 バイナリデータは、プロジェクトファイル (SSISPackage_ProjectDeployment ispac) から読み取られ、varbinary (max) 型の* \@projectbinary*パラメーターに格納されます。 Projectbinary パラメーター値は* \@project_stream*パラメーターに割り当てられます。 * \@*  
+     次の例では、SSISPackages_ProjectDeployment プロジェクトを、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーの SSIS パッケージ フォルダーに配置します。 バイナリデータは、プロジェクトファイル (SSISPackage_ProjectDeployment ispac) から読み取られ、varbinary (max) 型の* \@ projectbinary*パラメーターに格納されます。 * \@ Projectbinary*パラメーター値は* \@ project_stream*パラメーターに割り当てられます。  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  

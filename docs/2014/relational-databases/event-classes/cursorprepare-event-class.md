@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 990e50fb-b3ee-4366-8613-2c40d4a456f7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ee6325c134070f60fa578709d2247c85dc3d5173
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95752a97c95db61765c634ecbf2b26aeb0e26125
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663386"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030041"
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare イベント クラス
   **CursorPrepare** イベント クラスでは、アプリケーション プログラミング インターフェイス (API) のカーソルで発生する、カーソル準備イベントを記述しています。 カーソル準備イベントは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって、カーソルに関連付けられた SELECT ステートメントが実行プランにコンパイルされ、カーソルの作成は行われなかったときに発生します。  

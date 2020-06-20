@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9c0415a8-b780-40dd-a6dd-6ee0e30a24cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff0c172301b1c11a500258e67f4e8f5c69bd3ae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066224"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938463"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>ツール バー ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[属性リレーションシップ]** タブのツール バーを使用すると、次の手順を実行できます。  
@@ -38,13 +37,13 @@ ms.locfileid: "66066224"
  **[ビジネス インテリジェンスの追加]**  
  **ビジネス インテリジェンス ウィザード** を開いて、ビジネス インテリジェンス機能を追加します。 詳細については、「 [ビジネス インテリジェンス ウィザードを使用したディメンションの拡張](use-the-business-intelligence-wizard-to-enhance-dimensions.md)」を参照してください。  
   
- **プロセス**  
+ **処理**  
  オブジェクトを処理します。  
   
  **[新しい属性リレーションシップ]**  
  新しい属性リレーションシップを定義できる、 **[属性リレーションシップの作成]** ダイアログ ボックスを開きます。  
   
- **Zoom**  
+ **[ズーム]**  
  ズームの倍率を切り替えたり、使用可能なズーム オプションの一覧を表示したりします。  
   
  **[すべての図形の展開]**  

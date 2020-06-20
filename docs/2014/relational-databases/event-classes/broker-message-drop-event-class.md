@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d1aadd84d42f797026323023b0cf5be27d01d693
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9030b4f538e997fff3f90c95dee12fca506f523c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663970"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030461"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Broker:Message Undeliverable イベント クラス
   このインスタンスのサービスに配信する必要のある受信メッセージを、Service Broker が保持できないときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、**Broker:Message Undeliverable** イベントを生成します。 転送されたメッセージの場合は、「 [Broker:Forwarded Message Dropped イベント クラス](broker-forwarded-message-dropped-event-class.md)」を参照してください。  

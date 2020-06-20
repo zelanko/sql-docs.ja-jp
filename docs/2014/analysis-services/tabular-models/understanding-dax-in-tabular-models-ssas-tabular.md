@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a218855202eec9109718d5090acf16e80da42b6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c65fe8a302afd15bc406e0785407865c928797fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284920"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938523"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>テーブル モデルでの DAX について (SSAS テーブル)
   Data Analysis Expressions (DAX) は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel のブックおよび [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のテーブル モデル プロジェクトでカスタムの計算を作成するための数式言語です。 DAX の数式は、テーブル内や列内のデータに対して高度な計算を実行するための関数、演算子、値などで構成されます。  
@@ -24,7 +23,7 @@ ms.locfileid: "67284920"
   
  このトピックのセクション:  
   
--   [テーブル モデルにおける DAX](#bkmk_DAXintm)  
+-   [テーブルモデルでの DAX](#bkmk_DAXintm)  
   
 -   [計算列、メジャー、および行フィルターにおける DAX の数式](#bkmk_DAX)  
   
@@ -103,9 +102,9 @@ ms.locfileid: "67284920"
 |10 進数|64 ビット (8 バイト) の実数 <sup>1、2</sup>|小数点以下を含む数値。 実数では次のような幅広い値が有効です。<br /><br /> 負の値 (-1.79E +308 ～ -2.23E -308 の範囲)<br /><br /> ゼロ<br /><br /> 正の値 (2.23E -308 ～ 1.79E + 308 の範囲)<br /><br /> ただし、有効桁数は小数点以下が 17 桁に制限されます。|  
 |Boolean|Boolean|True または False の値。|  
 |テキスト|String|Unicode 文字データ文字列。 文字列、数字、またはテキスト形式で表現される日付を使用できます。|  
-|日付|Date/time|許容された日付時刻表現による日付および時刻。<br /><br /> 1900 年 3 月 1 日より後のすべての日付が有効です。|  
+|Date|日付/時刻|許容された日付時刻表現による日付および時刻。<br /><br /> 1900 年 3 月 1 日より後のすべての日付が有効です。|  
 |通貨|通貨|通貨データ型では、-922,337,203,685,477.5808 ～ 922,337,203,685,477.5807 の範囲の値 (小数点以下が 4 桁で有効桁数が固定長) が有効です。|  
-|なし|空白|空白は、DAX では SQL の NULL に相当するデータ型です。 空白を作成するには BLANK 関数を使用し、空白かどうかをテストするには論理関数の ISBLANK を使用します。|  
+|該当なし|新規|空白は、DAX では SQL の NULL に相当するデータ型です。 空白を作成するには BLANK 関数を使用し、空白かどうかをテストするには論理関数の ISBLANK を使用します。|  
   
  テーブル モデルには、多くの DAX 関数の入力または出力として使用される Table データ型が含まれています。 たとえば、FILTER 関数は、入力としてテーブルを受け取り、フィルター条件を満たした行のみを含んだ別のテーブルを出力します。 テーブル関数と集計関数を組み合わせることにより、動的に定義されるデータセットに対して複雑な計算を実行することができます。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "67284920"
   
  テーブル モデルのデータ型とその明示的な変換および暗黙的な変換の詳細については、「[サポートされているデータ型 &#40;SSAS テーブル&#41;](data-types-supported-ssas-tabular.md)」を参照してください。  
   
-##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a> DAX の演算子  
+##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a>DAX 演算子  
  DAX 言語では、次の 4 種類の計算演算子が数式に使用されます。  
   
 -   比較演算子: 値を比較して論理 TRUE/FALSE 値を返します。  
@@ -136,7 +135,7 @@ ms.locfileid: "67284920"
   
 |||  
 |-|-|  
-|[数式]|説明|  
+|Formula|説明|  
 |`=TODAY()`|今日の日付をすべての行の列に挿入します。|  
 |`=3`|値 3 を列のすべての行に挿入します。|  
 |`=[Column1] + [Column2]`|同じ行の [Column1] と [Column2] の値を加算して、同じ行の計算列に結果を格納します。|  
@@ -227,7 +226,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  情報関数は、引数として渡されたセルまたは行を参照し、値が必要な型と一致するかどうかを通知します。 たとえば、ISERROR 関数は、参照する値にエラーが含まれている場合に TRUE を返します。 詳細については、「[情報関数 &#40;DAX&#41;](/dax/information-functions-dax)」を参照してください。  
   
 ### <a name="logical-functions"></a>論理関数  
- 論理関数は、式に対して操作を実行し、その式の値に関する情報を返します。 たとえば、TRUE 関数を使用すると、評価対象の式が TRUE 値を返すかどうかがわかります。 詳細については、「 [DAX&#41;&#40;の論理関数](/dax/logical-functions-dax)」を参照してください。  
+ 論理関数は、式に対して操作を実行し、その式の値に関する情報を返します。 たとえば、TRUE 関数を使用すると、評価している式から TRUE 値が返されるかどうかを確認できます。 詳細については、「 [DAX&#41;&#40;の論理関数](/dax/logical-functions-dax)」を参照してください。  
   
 ### <a name="mathematical-and-trigonometric-functions"></a>数学関数と三角関数  
  DAX の数学関数は、Excel の数学関数や三角関数と非常によく似ています。 ただし DAX 関数で使用する数値データ型には、小さな違いがいくつかあります。 詳細については、「[三角 Functions &#40;DAX&#41;](/dax/math-and-trig-functions-dax)」を参照してください。  
@@ -239,7 +238,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  DAX の文字列関数は、Excel の文字列関数と非常によく似ています。 文字列の一部を返したり、文字列内のテキストを検索したり、文字列値を連結したりすることができます。 さらに、DAX には日付、時刻、数値の形式を制御する関数も用意されています。 詳細については、「[テキスト関数 &#40;DAX&#41;](/dax/text-functions-dax)」を参照してください。  
   
 ### <a name="time-intelligence-functions"></a>タイム インテリジェンス関数  
- DAX に含まれるタイム インテリジェント関数を使用すると、カレンダーおよび日付に関して組み込まれた知識を使用する計算を作成できます。 時刻と日付の範囲を集計や計算と一緒に使用することで、比較可能な複数期間の売上、在庫などに関する有意な比較を構築できます。 詳細については、「[タイムインテリジェンス関数 &#40;DAX&#41;](/dax/time-intelligence-functions-dax)」を参照してください。  
+ DAX に含まれるタイム インテリジェント関数を使用すると、カレンダーおよび日付に関して組み込まれた知識を使用する計算を作成できます。 時刻と日付の範囲を集計や計算と組み合わせて使用することで、売上、在庫などの比較可能な期間に対して意味のある比較を作成できます。 詳細については、「[タイムインテリジェンス関数 &#40;DAX&#41;](/dax/time-intelligence-functions-dax)」を参照してください。  
   
 ###  <a name="table-valued-functions"></a><a name="bkmk_TableFunc"></a>テーブル値関数  
  DAX 関数には、テーブルを出力する関数、入力としてテーブルを受け取る関数、またはその両方を行う関数が存在します。 テーブルに含めることができるのは 1 列であるため、テーブル値関数も入力として 1 列を受け取ります。 DAX の数式を最大限に活用するには、このようなテーブル値関数の使い方を理解することが大切です。 DAX には、次の種類のテーブル値関数があります。  
@@ -416,7 +415,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="additional-resources"></a><a name="bkmk_addional_resources"></a> その他のリソース  
  「[テーブル モデリング &#40;Adventure Works チュートリアル&#41;](../tabular-modeling-adventure-works-tutorial.md)」では、計算列、メジャー、および行フィルターに多数の計算を含んだテーブル モデルの作成手順について説明します。 ほとんどの数式について、それぞれの目的が説明されています。  
   
- [Analysis Services と Powerpivot チームのブログ](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409)では、と powerpivot に関する[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]情報、ヒント、ニュース、およびお知らせが提供されています。  
+ [Analysis Services と Powerpivot チームのブログ](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409)では、と powerpivot に関する情報、ヒント、ニュース、およびお知らせが提供されて [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] います。  
   
  「 [DAX リソース センター](https://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 」には、マイクロソフト内外の DAX 情報が掲載されています。中には、ビジネス インテリジェンスの第一線で活躍する専門家による DAX に関する豊富なソリューションも紹介されています。  
   

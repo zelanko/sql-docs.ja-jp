@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7ad456034902c2d3793100e93e370453348a1451
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e6b2080053231f9a5326f35d47ab598c2c5f35d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176532"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923643"
 ---
 # <a name="change-data-capture-ssis"></a>変更データ キャプチャ (SSIS)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、変更データ キャプチャによって、ソース テーブルからデータ マートおよびデータ ウェアハウスへの増分読み込みを効率的に実行するための効果的なソリューションが実現します。
@@ -29,7 +28,7 @@ ms.locfileid: "78176532"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] の変更データ キャプチャ機能は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のテーブルに対して適用された挿入、更新、削除の各アクティビティをキャプチャし、変更の詳細を、利用しやすいリレーショナル形式で格納します。 変更データ キャプチャで使用される変更テーブルには、追跡されたソース テーブルの列構造をミラー化する列が、行われた変更を行ごとに理解するために必要なメタデータと共に含まれています。
 
 > [!NOTE]
->  変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。
+>  変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 の各エディションでサポートされる機能の一覧につい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。
 
 ## <a name="how-change-data-capture-works-in-integration-services"></a>Integration Services における変更データ キャプチャのしくみ
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース内の変更データを簡単に取得でき、データ ウェアハウスへの増分読み込みを効率的に実行できます。 ただし、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] を使用して変更データを読み込む前に、管理者は、変更をキャプチャするデータベースおよびテーブルで変更データ キャプチャを有効にする必要があります。 データベースで変更データ キャプチャを構成する方法の詳細については、「[変更データ キャプチャの有効化と無効化 &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)」を参照してください。
@@ -90,7 +89,7 @@ ms.locfileid: "78176532"
  上の図と手順で説明したプロセスでは、1 つのテーブルから増分読み込みを実行しています。 複数のテーブルから増分読み込みを実行する必要がある場合も、全体的に同じプロセスになります。 ただし、複数のテーブルの処理に対応できるようにパッケージのデザインを変更する必要があります。 複数のテーブルから増分読み込みを実行するパッケージの作成方法の詳細については、「 [複数のテーブルの増分読み込みを実行する](perform-an-incremental-load-of-multiple-tables.md)」を参照してください。
 
 ## <a name="samples-of-change-data-capture-packages"></a>変更データ キャプチャ パッケージのサンプル
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、パッケージで変更データ キャプチャを使用する方法を紹介したサンプルが 2 つ用意されています。 詳細については、以下のトピックを参照してください。
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、パッケージで変更データ キャプチャを使用する方法を紹介したサンプルが 2 つ用意されています。 詳細については、次のトピックを参照してください。
 
 -   [Change Data Capture for Specified Interval パッケージ サンプルの Readme](https://go.microsoft.com/fwlink/?LinkId=133507)
 

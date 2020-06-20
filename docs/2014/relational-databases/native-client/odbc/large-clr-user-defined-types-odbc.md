@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df59c3a49715791e2f525e4bc5a69ff8991cac44
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 62acbe2e9acbf6ba39f982ad43de7a55453f7e3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704282"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055840"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大きな CLR ユーザー定義型 (ODBC)
   このトピックでは、大きな共通言語ランタイム (CLR) ユーザー定義型 (UDT) をサポートするための、SQL Server Native Client の ODBC に対する変更について説明します。  
@@ -34,7 +33,7 @@ ms.locfileid: "82704282"
   
  次の表に、パラメーターおよび結果セットでのデータ型のマッピングを示します。  
   
-|SQL Server のデータ型|SQL データ型|[値]|  
+|SQL Server のデータ型|SQL データ型|値|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -130,7 +129,7 @@ ms.locfileid: "82704282"
 |変換対象|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|さ|  
-|SQL_C_BINARY|サポート|  
+|SQL_C_BINARY|サポートされています|  
 |SQL_C_CHAR|さ|  
   
  \*バイナリデータは16進数の文字列に変換されます。  
@@ -140,7 +139,7 @@ ms.locfileid: "82704282"
 |変換対象|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|さ|  
-|SQL_C_BINARY|サポート|  
+|SQL_C_BINARY|サポートされています|  
 |SQL_C_CHAR|さ|  
   
  \*16進文字列からバイナリデータへの変換が行われます。  

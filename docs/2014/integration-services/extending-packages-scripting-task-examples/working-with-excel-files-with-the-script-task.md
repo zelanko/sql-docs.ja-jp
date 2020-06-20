@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a0f52b9bd12a91d546e33787853dd8883d77b48
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894786"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968452"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>スクリプト タスクを使用した Excel ファイルの操作
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には Excel 接続マネージャー、Excel ソース、Excel 変換先が用意されており、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ファイル形式のスプレッドシートに保存されているデータを操作できます。 このトピックで説明する方法では、スクリプト タスクを使用して、使用可能な Excel のデータベース (ワークブック ファイル) およびテーブル (ワークシートおよび名前付き範囲) に関する情報を取得します。 これらのサンプルに簡単な変更を加えて、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB プロバイダーによってサポートされる他のすべてのファイルベース データ ソースを操作することができます。  
@@ -79,23 +78,23 @@ ms.locfileid: "62894786"
   
 #### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
   
-1.  パッケージに新しいスクリプトタスクを追加し、名前をに`ExcelFileExists`変更します。  
+1.  パッケージに新しいスクリプトタスクを追加し、名前をに変更し `ExcelFileExists` ます。  
   
 2.  **[スクリプト タスク エディター]** の **[スクリプト]** タブで **[ReadOnlyVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
-    -   「 `ExcelFile`」と入力し、  
+    -   「`ExcelFile`.  
   
-         \- または -  
+         または  
   
-    -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数**の`ExcelFile`選択] ダイアログボックスで変数を選択します。  
+    -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで変数を選択し `ExcelFile` ます。  
   
 3.  **[ReadWriteVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
-    -   「 `ExcelFileExists`」と入力し、  
+    -   「`ExcelFileExists`.  
   
-         \- または -  
+         または  
   
-    -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数**の`ExcelFileExists`選択] ダイアログボックスで変数を選択します。  
+    -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで変数を選択し `ExcelFileExists` ます。  
   
 4.  **[スクリプトの編集]** をクリックして、スクリプト エディターを開きます。  
   
@@ -149,23 +148,23 @@ public class ScriptMain
   
 #### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
   
-1.  パッケージに新しいスクリプトタスクを追加し、名前をに`ExcelTableExists`変更します。  
+1.  パッケージに新しいスクリプトタスクを追加し、名前をに変更し `ExcelTableExists` ます。  
   
 2.  **[スクリプト タスク エディター]** の **[スクリプト]** タブで **[ReadOnlyVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
-    -   型`ExcelTable`を`ExcelFile`コンマで区切って入力します。`.`  
+    -   型 `ExcelTable` を `ExcelFile` コンマで区切って入力します。`.`  
   
-         \- または -  
+         または  
   
-    -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数**の`ExcelTable`選択] ダイアログ`ExcelFile`ボックスで、変数と変数を選択します。  
+    -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで、 `ExcelTable` 変数と変数を選択し `ExcelFile` ます。  
   
 3.  **[ReadWriteVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
-    -   「 `ExcelTableExists`」と入力し、  
+    -   「`ExcelTableExists`.  
   
-         \- または -  
+         または  
   
-    -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数**の`ExcelTableExists`選択] ダイアログボックスで変数を選択します。  
+    -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで変数を選択し `ExcelTableExists` ます。  
   
 4.  **[スクリプトの編集]** をクリックして、スクリプト エディターを開きます。  
   
@@ -260,17 +259,17 @@ public class ScriptMain
   
 2.  **[スクリプト タスク エディター]** を開き、**[スクリプト]** タブで **[ReadOnlyVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
-    -   「`ExcelFolder`」と入力します  
+    -   「`ExcelFolder`」と入力します。  
   
-         \- または -  
+         または  
   
     -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで [excelfolder] 変数を選択します。  
   
 3.  **[ReadWriteVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
-    -   「 `ExcelFiles`」と入力し、  
+    -   「`ExcelFiles`.  
   
-         \- または -  
+         または  
   
     -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで [excelfiles] 変数を選択します。  
   
@@ -335,23 +334,23 @@ public class ScriptMain
   
 2.  **[スクリプト タスク エディター]** を開き、**[スクリプト]** タブで **[ReadOnlyVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
-    -   「 `ExcelFile`」と入力し、  
+    -   「`ExcelFile`.  
   
-         \- または -  
+         または  
   
     -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで [excelfile] 変数を選択します。  
   
 3.  **[ReadWriteVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
-    -   「 `ExcelTables`」と入力し、  
+    -   「`ExcelTables`.  
   
-         \- または -  
+         または  
   
     -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで [excelitems] 変数を選択します。  
   
 4.  **[スクリプトの編集]** をクリックして、スクリプト エディターを開きます。  
   
-5.  スクリプトプロジェクト内の`System.Xml`名前空間への参照を追加します。  
+5.  スクリプトプロジェクト内の名前空間への参照を追加 `System.Xml` します。  
   
 6.  スクリプト ファイルの先頭に、`Imports` 名前空間の `System.Data.OleDb` ステートメントを追加します。  
   
@@ -450,7 +449,7 @@ public class ScriptMain
   
     -   各変数の名前をコンマで区切って入力します。  
   
-         \- または -  
+         または  
   
     -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで変数を選択します。  
   

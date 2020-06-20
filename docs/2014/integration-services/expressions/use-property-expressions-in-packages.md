@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a926405f2c35ff62b3589003ebe015fe920b743
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 157f45cd6d6fd7f201998cb3798440573654be58
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968992"
 ---
 # <a name="use-property-expressions-in-packages"></a>パッケージでプロパティ式を使用する
   プロパティ式とは、実行時にプロパティの動的更新を可能にするためにプロパティに割り当てられた式のことです。 たとえば、プロパティ式を使用して、変数に格納された電子メール アドレスを挿入して、メール送信タスクで使用される [宛先] 行を更新できます。
@@ -92,7 +91,7 @@ ms.locfileid: "78176422"
  プロパティ式は、パッケージ構成が読み込まれた後に読み込まれます。 たとえば変数は、対応する構成でまず更新されてから、その変数を使用するプロパティ式が評価され読み込まれます。 つまり、プロパティ式が使用する変数の値は常に、構成によって設定された値です。
 
 > [!NOTE]
->  Dtexec ユーティリティのオプション`Set`を使用し**dtexec**てプロパティ式を設定することはできません。
+>  `Set` **Dtexec**ユーティリティのオプションを使用してプロパティ式を設定することはできません。
 
  次の表に、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のプロパティ式が評価され読み込まれるタイミングをまとめます。
 
@@ -114,7 +113,7 @@ ms.locfileid: "78176422"
  プロパティ式でのシステム変数、演算子、関数、および文字列リテラルの使い方を次のサンプル式に示します。
 
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>パッケージの LoggingMode プロパティ用のプロパティ式
- 次のプロパティ式を使用すると、パッケージの LoggingMode プロパティを設定できます。 この式では、DAY 関数と GETDATE 関数を使用して、ある日付の日要素を表す整数を取得します。 日要素が 1 日または 15 日の場合、ログ記録が有効です。それ以外の場合は、ログ記録が無効です。 値1は、"ログインモード" 列挙子のメンバー `Enabled`に相当する整数で、値2はメンバー `Disabled`に相当する整数です。 式では、列挙子のメンバー名ではなく、数値を使用する必要があります。
+ 次のプロパティ式を使用すると、パッケージの LoggingMode プロパティを設定できます。 この式では、DAY 関数と GETDATE 関数を使用して、ある日付の日要素を表す整数を取得します。 日要素が 1 日または 15 日の場合、ログ記録が有効です。それ以外の場合は、ログ記録が無効です。 値1は、"ログインモード" 列挙子のメンバーに相当する整数で、 `Enabled` 値2はメンバーに相当する整数です `Disabled` 。 式では、列挙子のメンバー名ではなく、数値を使用する必要があります。
 
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`
 

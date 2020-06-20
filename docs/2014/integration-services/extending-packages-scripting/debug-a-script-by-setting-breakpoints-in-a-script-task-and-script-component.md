@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97c41b4ca75336f70b049239112132c89b05fba5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a05344f1fc20e575566d0a0fa527ac64b32363f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768488"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968406"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>スクリプト タスクとスクリプト コンポーネントにブレークポイントを設定してスクリプトをデバッグする
   この手順では、スクリプト タスクとスクリプト コンポーネントで使用するスクリプトに、ブレークポイントを設定する方法について説明します。  
   
- スクリプトにブレークポイントを設定すると、 **[ブレークポイントの設定 - \<オブジェクト名>]** ダイアログ ボックスに、組み込みブレークポイントと共に、設定したブレークポイントの一覧が表示されるようになります。  
+ スクリプトにブレークポイントを設定すると、[**ブレークポイント \<object name> の設定**] ダイアログボックスに、ブレークポイントと組み込みのブレークポイントが表示されます。  
   
 > [!IMPORTANT]  
 >  状況によっては、スクリプト タスクおよびスクリプト コンポーネント内のブレークポイントは無視されます。 詳細については、「スクリプト[タスクのコーディングおよびデバッグ](../control-flow/script-task.md)」の「**スクリプトタスクのデバッグ**」および「スクリプトコンポーネントのコーディングと**デバッグ」 (** ../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6ce753ceaa0cc0ee16b395918390a4402cf5f39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb950f7cb35e6986396da4d80ee10f03e090ae76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827386"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029029"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Plan Guide Unsuccessful イベント クラス
   Plan Guide Unsuccessful イベント クラスは、プラン ガイドを含むクエリまたはバッチに対する実行プランを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が生成できなかったことを示します。 この場合、プラン ガイドは使用されずにプランがコンパイルされています。 このイベントは、次の条件に該当する場合に発生します。  
@@ -46,7 +45,7 @@ ms.locfileid: "62827386"
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |HostName|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IsSystem|`int`|イベントがシステム プロセスで発生したか、ユーザー プロセスで発生したかを示します。1 = システム、0 = ユーザーです。|60|はい|  
-|LoginName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーのログイン名 (セキュリティログインまたはドメイン[!INCLUDE[msCoName](../../includes/msconame-md.md)] \\*ユーザー名*の形式の Windows ログイン資格情報)。|11|はい|  
+|LoginName|`nvarchar`|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティログインまたは [!INCLUDE[msCoName](../../includes/msconame-md.md)] ドメインユーザー名の形式の Windows ログイン資格情報 \\ *username*)。|11|はい|  
 |LoginSid|`image`|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) カタログ ビューまたは [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|はい|  
 |NTUserName|`nvarchar`|Windows のユーザー名。|6|はい|  
@@ -65,7 +64,7 @@ ms.locfileid: "62827386"
  [拡張イベント](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [fn_validate_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)   
- [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   
