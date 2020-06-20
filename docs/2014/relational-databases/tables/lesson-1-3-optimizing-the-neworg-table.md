@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39c09a3a73051e7a61f3a62a125232d83d1570c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068078"
 ---
 # <a name="optimizing-the-neworg-table"></a>NewOrg テーブルの最適化
-  「[既存の階層データを使用したテーブルの](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)設定」タスクで作成した**neword**テーブルには、すべての従業員情報が含まれ`hierarchyid`ており、データ型を使用して階層構造を表しています。 ここでは、`hierarchyid` 列の検索をサポートする新しいインデックスを追加します。  
+  「[既存の階層データを使用したテーブルの](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)設定」タスクで作成した**neword**テーブルには、すべての従業員情報が含まれており、データ型を使用して階層構造を表してい `hierarchyid` ます。 ここでは、`hierarchyid` 列の検索をサポートする新しいインデックスを追加します。  
   
 ## <a name="clustered-index"></a>クラスター化インデックス  
  `hierarchyid`列 (**orgnode**) は、 **neworg**テーブルの主キーです。 **OrgNode** 列に一意性を持たせるため、このテーブルには作成時に **PK_NewOrg_OrgNode** という名前のクラスター化インデックスが格納されています。 このクラスター化インデックスは、テーブルの深さ優先検索もサポートしています。  

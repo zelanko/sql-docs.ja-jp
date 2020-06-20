@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 13deb9b423ce20fd77e0853cba9d0f205905ca44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a32aedee115fc828d1109f2a8620ca7a81eb704d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770408"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939488"
 ---
 # <a name="import-column-transformation"></a>列インポート変換
   列インポート変換は、ファイルのデータを読み取り、そのデータをデータ フローの列に追加します。 この変換を使用すると、パッケージは、別々のファイルに格納されているテキストや画像を 1 つのデータ フローに追加できます。 たとえば、製品情報を保存するテーブルにデータを読み込むデータ フローに列インポート変換を含めると、各製品に対する顧客評価をファイルからインポートし、データ フローに追加できます。  

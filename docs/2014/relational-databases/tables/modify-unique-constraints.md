@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8bb3daf170e25abc9b346aeaedb4b835cae2dfdd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6dbe235d5d4c2b4b9523319622710cc20d1c3b76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809918"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067928"
 ---
 # <a name="modify-unique-constraints"></a>UNIQUE 制約の変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して UNIQUE 制約を変更できます。  
@@ -63,7 +62,7 @@ ms.locfileid: "68809918"
     |クラスター化オプションを設定する。|**[テーブル デザイナー]** の下のグリッドで、 **[CLUSTERED として作成]** をクリックします。クラスター化インデックスを作成するには、ドロップダウン メニューの [はい] をクリックし、非クラスター化インデックスを作成する場合は [いいえ] をクリックします。 1 つのテーブルには、クラスター化インデックスを 1 つだけ作成できます。 このテーブルにクラスター化インデックスが既に存在する場合は、元のインデックスに対してこの設定をオフにする必要があります。|  
     |FILL FACTOR を定義する。|**[テーブル デザイナー]** の下のグリッドで、 **[FILL の指定]** カテゴリを展開し、 **[FILL FACTOR]** ボックスに 0 ～ 100 の整数を入力します。|  
   
-5.  **[ファイル]** メニューの **[<** テーブル名 _> を保存]_ をクリックします。  
+5.  **[ファイル]** メニューの **[ _<テーブル名>_ を保存]** をクリックします。  
   
 ##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **UNIQUE 制約を変更するには**  
   

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 709707caa9087ceadaa11cfd4b415eadd6c3702c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773901"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927933"
 ---
 # <a name="use-sql-server-management-studio"></a>SQL Server Management Studio の使用 [SQL Server]
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) は、のすべての[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コンポーネントにアクセスし、それらを構成、管理、および開発するための統合環境です。 SSMS では、さまざまなグラフィック ツールと、機能の豊富な多くのスクリプト エディターが用意されており、これらを使用して、あらゆるスキル レベルの開発者や管理者が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にアクセスできます。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) は、のすべてのコンポーネントにアクセスし、それらを構成、管理、および開発するための統合環境です [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 SSMS では、さまざまなグラフィック ツールと、機能の豊富な多くのスクリプト エディターが用意されており、これらを使用して、あらゆるスキル レベルの開発者や管理者が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にアクセスできます。  
   
  SSMS では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の以前のリリースに含まれていた Enterprise Manager、クエリ アナライザー、分析マネージャーの機能が 1 つの環境に統合されています。 さらに、SSMS は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のあらゆるコンポーネント ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]など) ともスムーズに連携できます。 この環境を使用して、開発者は使い慣れた操作で作業ができ、データベース管理者も、使いやすいグラフィック ツールと豊富なスクリプト機能を統合した 1 つの総合ユーティリティで作業できます。  
   

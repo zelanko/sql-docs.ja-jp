@@ -31,13 +31,12 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45dd4bfc8cdb382f9ad093e92c5939986a9db8e0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872437"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952617"
 ---
 # <a name="database-mail-configuration-objects"></a>データベース メール構成オブジェクト
   データベース メールには、2 つの構成オブジェクトがあります。データベース アプリケーションまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent から電子メールを送信する際、データベース メールによって使用される設定は、データベース構成オブジェクトを通じて構成することができます。  

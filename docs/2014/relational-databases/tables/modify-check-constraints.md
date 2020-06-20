@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b8a43f06a0c100725607dfc903bfd045a0d387b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211841"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067990"
 ---
 # <a name="modify-check-constraints"></a>CHECK 制約の変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、制約式を変更するとき、または特定の条件の制約を有効または無効にするオプションを変更するときは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して CHECK 制約を変更できます。  
@@ -69,7 +68,7 @@ ms.locfileid: "68211841"
   
 5.  **[閉じる]** をクリックします。  
   
-6.  **[ファイル]** メニューの **[<** テーブル名 _> を保存]_ をクリックします。  
+6.  **[ファイル]** メニューの **[ _<テーブル名>_ を保存]** をクリックします。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **CHECK 制約を変更するには**  

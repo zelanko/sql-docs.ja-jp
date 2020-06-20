@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb1a9825b2079e4836f654605097667d8edb05a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714719"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068317"
 ---
 # <a name="filter-a-trace"></a>トレースへのフィルターの適用
   フィルターを使用すると、トレースに出力するイベントを制限することができます。 フィルターが設定されていない場合は、選択したイベント クラスのすべてのイベントがトレースに出力されます。 たとえば、トレースに出力する Windows ユーザーとして特定のユーザー名を指定すると、それらのユーザーのデータのみが出力されます。  
@@ -137,7 +136,7 @@ ms.locfileid: "62714719"
 |**Writes**|=、<>、>=、<=|  
 |**XactSequence**|=、<>、>=、<=|  
   
- <sup>1</sup> **osql**ユーティリティまたは**sqlcmd**ユーティリティからイベントをトレースする場合は、 **%** 常に**TextData**データ列のフィルターにを追加します。  
+ <sup>1</sup> **osql**ユーティリティまたは**sqlcmd**ユーティリティからイベントをトレースする場合は、常に **%** **TextData**データ列のフィルターにを追加します。  
   
  セキュリティ対策として、SQL トレースは、パスワードに影響を与えるセキュリティ関連ストアド プロシージャの情報をトレースの対象から自動的に除外します。 このセキュリティ メカニズムは変更不可能で、常に有効な状態になっています。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上でのすべての動作状況をトレースする権限を持たないユーザーがパスワードを取得するのを防ぎます。  
   

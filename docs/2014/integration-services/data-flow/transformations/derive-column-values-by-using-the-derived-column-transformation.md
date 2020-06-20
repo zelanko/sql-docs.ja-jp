@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 39b8e065b6b3cbd013089700de07376edc9a656c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d36026ea8543beaed20577bf87f5eb7b0b04f1cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770696"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939613"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>派生列変換を使用して列の値を取得する
   派生列変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -44,7 +43,7 @@ ms.locfileid: "62770696"
     > [!NOTE]  
     >  式が有効でない場合、式のテキストは強調表示され、列のツールヒントにエラーの説明が表示されます。  
   
-7.  **[派生列]** 一覧で、 **[\<新しい列として追加>]** を選択して式の評価結果を新しい列に書き込みます。または、既存の列を選択し、評価結果で更新します。  
+7.  [**派生列**] ボックスの一覧で、 **\<add as new column>** 式の評価結果を新しい列に書き込む場合はを選択し、評価結果を更新するには既存の列を選択します。  
   
      新しい列を使用することを選択した場合は、 **[派生列変換エディター]** ダイアログ ボックスによって式が評価され、データ型、長さ、有効桁数、小数点以下桁数、およびコード ページに応じて列にデータ型が割り当てられます。  
   

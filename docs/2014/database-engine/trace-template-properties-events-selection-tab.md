@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b202457-ab42-4902-8012-7f3f40aa09f5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8d86515646236916a9c651c7fa02923b88b995cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f70460e68d1161fa8aa718a5e5264a8e6f0782df
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089547"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928168"
 ---
 # <a name="trace-template-properties-events-selection-tab"></a>[トレース テンプレートのプロパティ] ([イベントの選択] タブ)
   **[トレース テンプレートのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブを使用すると、 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] トレース テンプレートに含めるイベント クラスとデータ列の表示、編集、指定ができます。  
@@ -53,7 +52,7 @@ ms.locfileid: "66089547"
  [トレース &#40;SQL Server プロファイラーのイベントをフィルター処理し&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [フィルター情報の表示 &#40;SQL Server プロファイラー&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [フィルター &#40;SQL Server プロファイラーの変更&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
- [SQL Server プロファイラーテンプレートとアクセス許可](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [SQL Server プロファイラー](../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

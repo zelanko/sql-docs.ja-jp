@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a51364838173f70c4d5daac794176caa6ea01221
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aefe926d487a78c3ab73ac08483932e2d0a44410
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796539"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037498"
 ---
 # <a name="transferring-data"></a>データの転送
   <xref:Microsoft.SqlServer.Management.Smo.Transfer> クラスは、オブジェクトおよびデータを転送するツールを提供するユーティリティ クラスです。  
   
  データベース スキーマ内のオブジェクトは、生成されたスクリプトをターゲット サーバー上で実行することで転送されます。 <xref:Microsoft.SqlServer.Management.Smo.Table> データは、動的に作成された DTS パッケージによって転送されます。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Transfer> オブジェクトには、DMO の <xref:Microsoft.SqlServer.Management.Smo.Transfer> オブジェクトのすべての機能、および追加の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能が含まれています。 ただし、の[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]SMO では、 <xref:Microsoft.SqlServer.Management.Smo.Transfer>オブジェクトは[SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API を使用してデータを転送します。 また、データ転送を実行するために使用されるメソッドおよびプロパティは、<xref:Microsoft.SqlServer.Management.Smo.Transfer> オブジェクトではなく <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトに存在します。 インスタンス クラスからユーティリティ クラスに機能を移動することは、タスクのコードが必要時にのみ読み込まれることを意味するので、軽量化されたオブジェクト モデルに適合する概念です。  
+ <xref:Microsoft.SqlServer.Management.Smo.Transfer> オブジェクトには、DMO の <xref:Microsoft.SqlServer.Management.Smo.Transfer> オブジェクトのすべての機能、および追加の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能が含まれています。 ただし、の SMO では、 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] <xref:Microsoft.SqlServer.Management.Smo.Transfer> オブジェクトは[SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API を使用してデータを転送します。 また、データ転送を実行するために使用されるメソッドおよびプロパティは、<xref:Microsoft.SqlServer.Management.Smo.Transfer> オブジェクトではなく <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトに存在します。 インスタンス クラスからユーティリティ クラスに機能を移動することは、タスクのコードが必要時にのみ読み込まれることを意味するので、軽量化されたオブジェクト モデルに適合する概念です。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Transfer> オブジェクトは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのバージョンより前の <xref:Microsoft.SqlServer.Management.Smo.Database.CompatibilityLevel%2A> を持つ対象データベースへのデータ転送はサポートしていません。  
   

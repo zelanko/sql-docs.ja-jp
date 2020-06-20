@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9dda41e229e36c0c4b86c5bdb00782c3b5871bfa
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 97ba002eafc02f445f3f7104811b2c347668e300
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858647"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932953"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>[フルテキスト インデックスのプロパティ] ([スケジュール] ページ)
   このページでは、フルテキスト インデックスのベース テーブルに対する更新の増分作成を開始する SQL Server エージェント ジョブの実行スケジュールを表示および作成できます。 ベース テーブルまたはビューに `timestamp` データ型の列が含まれていない場合は、完全作成が実行されます。  

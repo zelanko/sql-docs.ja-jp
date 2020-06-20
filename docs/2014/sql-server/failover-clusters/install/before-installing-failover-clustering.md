@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b74de0c0ac044f3bdcadf3381976dcecc777e36c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037194"
 ---
 # <a name="before-installing-failover-clustering"></a>フェールオーバー クラスタリングをインストールする前に
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールする前に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行するハードウェアとオペレーティング システムを選択する必要があります。 また、Windows Server フェールオーバー クラスタリング (WSFC) を構成し、ネットワーク、セキュリティ、およびフェールオーバー クラスターで実行するその他のソフトウェアに関する考慮事項を見直す必要があります。  
@@ -43,11 +42,11 @@ ms.locfileid: "63190340"
   
 -   前提条件となるソフトウェアをインストールします。 セットアップで [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のインストールまたはアップグレードを行う前に、以下に示す前提条件となるソフトウェアをインストールすると、インストール時間を短縮できます。 各フェールオーバー クラスター ノードでの前提条件となるソフトウェアのインストール、およびその後のノードの再起動は、セットアップを実行する前に 1 回だけ行います。  
   
-    -   Windows PowerShell は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりました。 コンポーネントおよびを[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]インストールするには、Windows PowerShell 2.0 が必要です。 Windows PowerShell 2.0 がコンピューターで表示されない場合は、「[Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214)」の手順に従って有効にすることができます。  
+    -   Windows PowerShell は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりました。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] コンポーネントおよびをインストールするには、Windows PowerShell 2.0 が必要です [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 。 Windows PowerShell 2.0 がコンピューターで表示されない場合は、「[Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214)」の手順に従って有効にすることができます。  
   
-    -   .NET Framework 3.5 SP1 は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりましたが、古い Windows オペレーティング システムに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールする際に必要になる場合があります。 詳細については[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、「[リリースノート](https://go.microsoft.com/fwlink/?LinkId=296445)」を参照してください。  
+    -   .NET Framework 3.5 SP1 は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりましたが、古い Windows オペレーティング システムに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールする際に必要になる場合があります。 詳細については、「 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [リリースノート](https://go.microsoft.com/fwlink/?LinkId=296445)」を参照してください。  
   
-    -   更新プログラムパッケージ: ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] **セットアップ[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中に .NET Framework 4 のインストールによってコンピューターが再起動さ[!INCLUDE[msCoName](../../../includes/msconame-md.md)]れないようにするには、コンピューターに更新プログラムをインストールする必要があります。  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] を Windows 7 SP1 または [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 にインストールする場合、この更新プログラムは含まれています。 それより前の Windows オペレーティング システムにインストールする場合は、 [Windows Vista および Windows Server 2008 の .NET Framework 4.0 用 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)からダウンロードしてください。  
+    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新プログラムパッケージ:** セットアップ中に .NET Framework 4 のインストールによってコンピューターが再起動されないようにするには、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] コンピューターに更新プログラムをインストールする必要があります。  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] を Windows 7 SP1 または [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 にインストールする場合、この更新プログラムは含まれています。 それより前の Windows オペレーティング システムにインストールする場合は、 [Windows Vista および Windows Server 2008 の .NET Framework 4.0 用 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)からダウンロードしてください。  
   
     -   .NET Framework 4: セットアップでは、クラスター化されたオペレーティング システムに対して .NET Framework 4 がインストールされます。 インストール時間を短縮するには、セットアップを実行する前に .NET Framework 4 をインストールすることを検討してください。  
   
@@ -192,14 +191,14 @@ ms.locfileid: "63190340"
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Enterprise (64 ビット) x64<sup>1</sup>|はい|はい|はい<sup>2</sup>|はい<sup>2</sup>|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32 ビット)|はい|はい|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (64 ビット)|はい|はい|はい<sup>2</sup>|はい<sup>2</sup>|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (64 ビット)|はい|はい|はい <sup>2</sup>|はい <sup>2</sup>|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32 ビット)|はい|はい|||  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64 ビット)|はい|はい|はい|はい|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32 ビット)|はい|はい|||  
   
- <sup>1 つ</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のクラスターは WOW モードではサポートされていません。 これには、WOW で最初にインストールされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの以前のバージョンからのアップグレードが含まれます。 この場合に使用できる唯一のアップグレード オプションは、新しいバージョンをサイド バイ サイドでインストールしてから移行することです。  
+ <sup>1 つ</sup>の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クラスターは WOW モードではサポートされていません。 これには、WOW で最初にインストールされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの以前のバージョンからのアップグレードが含まれます。 この場合に使用できる唯一のアップグレード オプションは、新しいバージョンをサイド バイ サイドでインストールしてから移行することです。  
   
- <sup>2</sup>マルチサブ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネットフェールオーバークラスタリングでサポートされます。  
+ <sup>2</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネットフェールオーバークラスタリングでサポートされます。  
   
   
   
@@ -220,7 +219,7 @@ ms.locfileid: "63190340"
   
 1.  IP アドレス リソースの依存関係は、マルチサブネット構成では OR に設定されています。 詳細については、「[新しい SQL Server フェールオーバークラスターの作成 &#40;セットアップ](create-a-new-sql-server-failover-cluster-setup.md)」を参照してください&#41;  
   
-2.  AND-OR の混合 IP アドレスの依存関係はサポートされていません。 たとえば、<\<IP1> AND \<IP2> OR \<IP3> はサポートされていません。  
+2.  AND-OR の混合 IP アドレスの依存関係はサポートされていません。 たとえば、 \<IP1> および \<IP2> またははサポートされ \<IP3> ていません。  
   
 3.  1 つのサブネットに複数の IP アドレスを使用することはサポートされていません。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5fff115ff60ef5343c317794578d6facdee928c8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 381f93f5c8bd5df0dc37a1f0b511aff0c830f013
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716708"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067799"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>例 : ELEMENTXSINIL ディレクティブの指定
   ELEMENT ディレクティブを指定して要素中心の XML を生成する際、列に NULL 値が格納されていると、EXPLICIT モードでは対応する要素が生成されません。 必要に応じて ELEMENTXSINIL ディレクティブを指定し、NULL 値の列に対して要素を生成するように要求することができます。このとき、`xsi:nil` 属性に値 TRUE が設定されます。  

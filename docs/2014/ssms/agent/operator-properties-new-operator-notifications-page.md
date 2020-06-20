@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 976597ccb9130220ca6fac7fd422c0daf3122845
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067696"
 ---
 # <a name="operator-properties-new-operator-notifications-page"></a>[オペレーターのプロパティ]:[新しいオペレーター] ([通知] ページ)
   このページを使用すると、オペレーターに通知する警告およびジョブを設定できます。  
   
 ## <a name="options"></a>オプション  
- **アラート**  
+ **警告**  
  インスタンス内の警告を表示します。  
   
  **ジョブ**  

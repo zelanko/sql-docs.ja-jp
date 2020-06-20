@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57a1e67db8bcbf17dc964f7341df25a396c36ad0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5727bd88bd04deab0e1b8364bd6cbefe9e6c142
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067599"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939873"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>互換性レベル (SSAS テーブル SP1)
   新しいテーブルモデルプロジェクトを作成するとき、既存のテーブルモデルプロジェクトをアップグレードするとき、既存の配置済みテーブルモデルデータベースをアップグレードするとき、または PowerPivot ブックをインポートするときに、*互換性レベル*を指定できます。  
@@ -39,7 +38,7 @@ ms.locfileid: "66067599"
  **[今後、このメッセージを表示しない]** オプションを選択することで、既定の互換性レベルを指定することもできます。 以降、すべてのプロジェクトで、指定した互換性レベルが使用されます。 既定の互換性レベルは、SSDT の [オプション] で変更できます。  
   
 ### <a name="upgrade-an-existing-tabular-model-project-to-1103-compatibility-level"></a>既存のテーブル モデル プロジェクトを 1103 互換性レベルにアップグレードする  
- [モデルの**プロパティ**] ウィンドウの [**互換性レベル**] プロパティを[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]使用して、1103以降をインストールする前に、SSDT で作成したテーブルモデルプロジェクトをアップグレードすることができます。 テーブル モデル プロジェクトをアップグレードするには、SSDT をインストールするコンピューターに [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 以降がインストールされ、ワークスペース データベースが存在する Analysis Services インスタンス上にも [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 以降がインストールされている必要があります。 以前のバージョンにダウングレードすることはできません。  
+ [ [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] モデルの**プロパティ**] ウィンドウの [**互換性レベル**] プロパティを使用して、1103以降をインストールする前に、SSDT で作成したテーブルモデルプロジェクトをアップグレードすることができます。 テーブル モデル プロジェクトをアップグレードするには、SSDT をインストールするコンピューターに [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 以降がインストールされ、ワークスペース データベースが存在する Analysis Services インスタンス上にも [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 以降がインストールされている必要があります。 以前のバージョンにダウングレードすることはできません。  
   
 ### <a name="upgrade-a-deployed-tabular-model-database-to-1103-compatibility-level"></a>配置済みテーブル モデル データベースを 1103 互換性レベルにアップグレードする  
  **データベースプロパティ**の [**互換性レベル**] プロパティを使用すると、既存の配置済みテーブルモデルデータベースを SQL Server Management Studio (SSMS) で互換性のあるデータベースバージョン1103にアップグレードできます。 アップグレードするには、SQL Server Analysis Services インスタンスがインストールされるコンピューターに [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 以降がインストールされている必要があります。 配置済みのテーブル モデル データベースを以前のバージョンのインスタンスにダウングレードすることはできません。  
@@ -48,9 +47,9 @@ ms.locfileid: "66067599"
  新しいテーブル モデル プロジェクトを PowerPivot からインポートすることで作成する場合は、互換性レベルを既定の互換性レベルにアップグレードする (SSDT で構成済みの場合) か、PowerPivot ワークブックに既に指定されている互換性のままにするかを指定できます。  
   
 ### <a name="check-compatibility-level-for-a-tabular-model-database-in-ssms"></a>SSMS のテーブル モデル データベースの互換性レベルを確認する  
- SSMS のテーブルモデルデータベースの互換性レベルを確認するには、[**データベースのプロパティ**] の [**互換性レベル**] プロパティを表示します (の[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]新機能)。  
+ SSMS のテーブルモデルデータベースの互換性レベルを確認するには、[データベースのプロパティ] の [**互換性レベル**] プロパティを表示します (の新機能 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] )。 **Database Properties**  
   
 ### <a name="check-supported-compatibility-level-for-an-analysis-services-instance-in-ssms"></a>Analysis Services インスタンスでサポートされる互換性レベルを SSMS で確認する  
- SSMS でサポートされている互換性レベルを確認するには、 **Analysis Services のプロパティ**の**情報**ページ (の[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]新機能) で [サポートされて**いる互換性レベル**] プロパティを表示します。 サポートされる互換性レベル 1103 は、SQL Server SP1 以降がインストールされていることを示します。 サポートされる互換性レベルは変更できません。  
+ SSMS でサポートされている互換性レベルを確認するには、Analysis Services のプロパティの**情報**ページ (の新機能) で [**サポートされている互換性レベル**] プロパティを表示し [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ます。 **Analysis Services Properties** サポートされる互換性レベル 1103 は、SQL Server SP1 以降がインストールされていることを示します。 サポートされる互換性レベルは変更できません。  
   
   

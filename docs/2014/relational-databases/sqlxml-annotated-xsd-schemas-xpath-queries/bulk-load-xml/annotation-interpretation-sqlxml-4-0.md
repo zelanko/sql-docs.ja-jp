@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c46bdb6-2812-4a13-b60b-7101c04b299f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 80b472ee00aba60e2bc01883b79b570dbed07b4f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c31d56f7dd577b4b5a5b582eb0e3b1db312109a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703395"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068153"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>注釈の解釈 (SQLXML 4.0)
   ここでは、XML 一括読み込みで XSD スキーマの注釈がどのように解釈されるかを説明します。 ここで説明する動作は、XDR スキーマの注釈にも当てはまります。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 651705426b52b822c3eb8c7cf9d341968bbc088f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91062864b77ba3c62a87d66b8ff93068f9c10c8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010991"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003872"
 ---
 # <a name="semantic-search-sql-server"></a>セマンティック検索 (SQL Server)
   統計的セマンティック検索では、統計的に関連性がある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キー フレーズ *を抽出してインデックスを作成することにより、* データベースに格納されている非構造化ドキュメントを深く解釈することができます。 次に、これらのキー フレーズを使用して、 *類似または関連ドキュメント*を特定してインデックスを作成することもできます。  

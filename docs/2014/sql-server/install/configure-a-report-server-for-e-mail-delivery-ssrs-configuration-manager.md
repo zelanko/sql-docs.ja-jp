@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c2e34258f10033c61f9966e62fa7c14025423613
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f7d99c3459d7bf41a4b9b6552ad6dbb6fe2213c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036975"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)
 
@@ -67,7 +66,7 @@ ms.locfileid: "71952332"
   
 -   SMTP サーバーと、電子メールを送信する権限のあるユーザー アカウントを指定するだけの場合は、Reporting Services 構成マネージャーを使用します。 これらは、レポート サーバーの電子メール配信拡張機能を構成するために最低限必要な設定です。 詳細については、「[電子メールの設定-Configuration Manager &#40;SSRS ネイティブモード&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) 」、および「 [Reporting Services での電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
   
--   (省略可能) テキスト エディターを使用して、RSreportserver.config ファイルで追加の設定を指定します。 このファイルには、レポート サーバーの電子メール配信の構成設定がすべて含まれています。 ローカル SMTP サーバーを使用する場合や、電子メールの配信を特定のホストに限定する場合は、これらのファイルで追加の設定を指定する必要があります。 構成ファイルの検索と変更の詳細については、SQL Server オンラインブックの「 [Reporting Services 構成ファイル &#40;RSreportserver. .config&#41;を変更する](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
+-   (省略可能) テキスト エディターを使用して、RSreportserver.config ファイルで追加の設定を指定します。 このファイルには、レポート サーバーの電子メール配信の構成設定がすべて含まれています。 ローカル SMTP サーバーを使用する場合や、電子メールの配信を特定のホストに限定する場合は、これらのファイルで追加の設定を指定する必要があります。 構成ファイルの検索と変更の詳細については、SQL Server オンラインブックの「 [Reporting Services 構成ファイル &#40;RSreportserver.config&#41;の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
   
 > [!NOTE]  
 >  レポート サーバーの電子メール設定は CDO に基づいています。 特定の設定に関する詳細については、CDO の製品マニュアルを参照してください。  
@@ -148,12 +147,12 @@ ms.locfileid: "71952332"
   
  レポート サーバーとローカル SMTP サーバーまたはフォワーダーの間の接続は、次の構成設定によって決まります。  
   
--   `SendUsing`が**1**に設定されています。  
+-   `SendUsing` は **1** に設定されます。  
   
 -   **SMTPServerPickupDirectory** には、ローカル ドライブのフォルダーを設定します。  
   
     > [!NOTE]  
-    >  ローカル SMTP サーバーを使用して`SMTPServer`いる場合は、を設定しないようにしてください。  
+    >  ローカル SMTP サーバーを使用している場合は、を設定しないようにしてください `SMTPServer` 。  
   
 -   `From` メール メッセージの **[送信者]** 行に使用する値を設定します。 この値は必須です。  
   
@@ -169,7 +168,7 @@ ms.locfileid: "71952332"
   
 4.  **[送信者アドレス]** で、SMTP サーバーから電子メールを送信する権限を保持しているアカウントの名前を入力します。  
   
-5.  **[適用]** をクリックします。  
+5.  **[Apply]** をクリックします。  
   
 
   
@@ -181,7 +180,7 @@ ms.locfileid: "71952332"
   
 3.  <`UrlRoot`> がレポートサーバーの URL アドレスに設定されていることを確認します。 この値はレポート サーバーを構成するときに設定されるため、既に設定されているはずです。 設定されていない場合は、レポート サーバーの URL アドレスを入力します。  
   
-4.  [配信] セクションで、[ `ReportServerEmail` <> を見つけます。  
+4.  [配信] セクションで、[<> を見つけ `ReportServerEmail` ます。  
   
 5.  [<`SMTPServer`> で、SMTP サーバーの名前を入力します。 この値は、IP アドレス、企業イントラネット上のコンピューターの UNC 名、または完全修飾ドメイン名にすることができます。  
   
@@ -211,7 +210,7 @@ ms.locfileid: "71952332"
   
 7.  **[サービス]** コンソールでサービスが実行されていることを確認します。  
   
-8.  **Rsreportserver. .config**ファイルをテキストエディターで開きます。  
+8.  テキストエディターで**RSReportServer.config**ファイルを開きます。  
   
 9. `<UrlRoot>` がレポート サーバーの URL アドレスに設定されていることを確認します。 この値はレポート サーバーを構成するときに設定されるため、既に設定されているはずです。 設定されていない場合は、レポート サーバーの URL アドレスを入力します。  
   

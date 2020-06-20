@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dc6636946f7c94992fc831f814df57baf6397a1f
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 72b88bd1bd2a033683f83dd53cca8404eccb613f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059344"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) と Reporting Services
   Sharepoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ファームの外部にあるデータソースに対して windows 認証を使用する場合、sharepoint モードでは、Windows トークンサービスに対する Sharepoint クレーム (c2WTS) が必要です。 これは、Web フロントエンド (WFE) と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共有サービス間の通信が常に要求認証になるため、ユーザーが Windows 認証を使用してデータ ソースにアクセスする場合にも当てはまります。  
@@ -37,7 +36,7 @@ ms.locfileid: "82922150"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** Sharepoint 2013 &#124; sharepoint 2010|  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
   
 > [!NOTE]  
 >  注: 構成手順によっては、変更されたり、特定のファーム トポロジで機能しない場合があります。 たとえば、シングル サーバー インストールでは Windows Identity Foundation c2WTS サービスをサポートしていないため、Windows トークンに対するクレームの委任シナリオは、このファーム構成では可能でありません。  
@@ -69,9 +68,9 @@ ms.locfileid: "82922150"
   
 2.  C2WTS ' AllowedCallers 元 ' を構成します  
   
-     c2WTS では、構成ファイル**c2wtshost.exe.confi**に明示的にリストされた ' 呼び出し元 ' id が必要です。c2WTS は、そのように構成されている場合を除き、システム内のすべての認証済みユーザーからの要求を受け入れません。 この場合、"呼び出し元" は WSS_WPG Windows グループです。 c2wtshost.exe.confi ファイルは次の場所に保存されます。  
+     c2WTS では、構成ファイルに明示的にリストされている ' 呼び出し元 ' id が必要です**c2wtshost.exe.config**。c2WTS は、そのように構成されている場合を除き、システム内のすべての認証済みユーザーからの要求を受け入れません。 この場合、"呼び出し元" は WSS_WPG Windows グループです。 c2wtshost.exe.confi ファイルは次の場所に保存されます。  
   
-     **Foundation\v3.5\c2wtshost.exe.config Files\Windows Identity**  
+     **Files\Windows の Id Foundation\v3.5\c2wtshost.exe.config**  
   
      構成ファイルの例を次に示します。  
   

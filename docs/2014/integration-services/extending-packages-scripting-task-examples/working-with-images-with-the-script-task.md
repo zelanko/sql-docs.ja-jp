@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 413d0d42ce629076488b5971408df25ca0ce9d1e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768448"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968442"
 ---
 # <a name="working-with-images-with-the-script-task"></a>スクリプト タスクによる画像の操作
   製品またはユーザーのデータベースには、テキストや数値データに加え、画像も頻繁に含まれています。 Microsoft .NET Framework の `System.Drawing` 名前空間では、画像を操作するためのクラスが提供されています。  
@@ -47,7 +46,7 @@ ms.locfileid: "62768448"
   
 1.  `CurrentImageFile` という名前の文字列変数を作成し、その値を既存の画像ファイルのパスおよびファイル名に設定します。  
   
-2.  [**スクリプトタスクエディター**] の [**スクリプト**] ページで、 `CurrentImageFile` `ReadOnlyVariables`プロパティに変数を追加します。  
+2.  [**スクリプトタスクエディター**] の [**スクリプト**] ページで、 `CurrentImageFile` プロパティに変数を追加し `ReadOnlyVariables` ます。  
   
 3.  このスクリプト プロジェクトでは、参照を `System.Drawing` 名前空間に設定します。  
   
@@ -158,7 +157,7 @@ End Function
   
 2.  次に `MaxThumbSize` 整数変数を作成し、100 などのピクセル値を割り当てます。  
   
-3.  [**スクリプトタスクエディター**] の [**スクリプト**] ページで、両方の変数`ReadOnlyVariables`をプロパティに追加します。  
+3.  [**スクリプトタスクエディター**] の [**スクリプト**] ページで、両方の変数をプロパティに追加し `ReadOnlyVariables` ます。  
   
 4.  このスクリプト プロジェクトでは、参照を `System.Drawing` 名前空間に設定します。  
   
@@ -168,7 +167,7 @@ End Function
   
 1.  Foreach ループ コンテナー内にスクリプト タスクを入れます。  
   
-2.  **[Foreach ループ エディター]** の **[コレクション]** ページで、 **[列挙子]** として **[Foreach File 列挙子]** を選択し、次に、ソース ファイルのパスおよびファイル マスク ("*.jpg" など) を指定します。  
+2.  **[Foreach ループ エディター]** の **[コレクション]** ページで、**[列挙子]** として **[Foreach File 列挙子]** を選択し、次に、ソース ファイルのパスおよびファイル マスク ("*.jpg" など) を指定します。  
   
 3.  **[変数のマッピング]** ページで、`CurrentImageFile` 変数をインデックス 0 にマップします。 この変数は、列挙子が繰り返されるたびに、現在のファイル名をスクリプト タスクに渡します。  
   

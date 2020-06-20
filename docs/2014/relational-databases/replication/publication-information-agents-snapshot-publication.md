@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02b112a93cb6098ab873ac2a698303b8a717afd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021784"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065730"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>パブリケーション情報、[エージェント] (スナップショット パブリケーション)
   **[エージェント]** タブには、選択したパブリケーションのスナップショット エージェントに関する概要情報が表示されます。  
@@ -38,7 +37,7 @@ ms.locfileid: "63021784"
  **状態**  
  スナップショット エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   Error  
+-   エラー  
   
 -   [失敗したコマンドの再試行]  
   
@@ -52,7 +51,7 @@ ms.locfileid: "63021784"
  **前回の開始時刻**  
  エージェントが最後に起動された時刻です。  
   
- **Duration**  
+ **期間**  
  エージェントが実行された時間の長さです。 この時間は、エージェントが現在実行中の場合は経過時間、エージェントが以前に実行されている場合は合計時間を表します。  
   
  **[最後のアクション]**  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5696c47-5f10-4ab4-bd6a-8eea71d4c020
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eaed6350c6a6dde394e2ccff1617ac3bab2ba19c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c62ec98e826a14b1472345d40ce9ad440df8f133
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088701"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928120"
 ---
 # <a name="trace-template-properties-general-tab"></a>[トレース テンプレートのプロパティ] ([全般] タブ)
   **[トレース テンプレートのプロパティ]** ダイアログ ボックスの **[全般]** タブで次のオプションを使用すると、新しいトレース テンプレートを作成できます。 このダイアログ ボックスにアクセスするには、 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **New Template**.  
@@ -38,8 +37,8 @@ ms.locfileid: "66088701"
  このサーバーの種類に対して作成されたトレースには、既定でこのテンプレートを使用します。  
   
 ## <a name="see-also"></a>参照  
- [トレーステンプレート &#40;SQL Server プロファイラーを作成し&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [SQL Server プロファイラーテンプレートとアクセス許可](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [SQL Server プロファイラー](../tools/sql-server-profiler/sql-server-profiler.md)  
+ [トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

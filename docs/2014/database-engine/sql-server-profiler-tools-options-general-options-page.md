@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c9da36f49927acd2a313bcb9f8647655731006d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7845a84c45015ba3346538030725eb2973490d9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089618"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928553"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server プロファイラー-[オプション] ([全般オプション] ページ)
   **[全般オプション]** ダイアログ ボックスを使用すると、以下のオプションを確認または指定できます。  
@@ -27,10 +26,10 @@ ms.locfileid: "66089618"
 ## <a name="options"></a>オプション  
   
 ### <a name="display-options"></a>[表示オプション]  
- **[フォント名]**  
+ **フォント名**  
  トレースの実行中にトレース結果グリッドで使用されるフォントの名前を表示します。  
   
- **フォントサイズ**  
+ **フォント サイズ**  
  トレースの実行中にトレース結果グリッドで使用されるフォントのサイズを表示します。  
   
  **[フォントの選択]**  
@@ -79,7 +78,7 @@ ms.locfileid: "66089618"
  [トレースファイル &#40;SQL Server プロファイラーを再生する&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [トレースの再生](../tools/sql-server-profiler/replay-traces.md)   
  [グローバルトレースオプション &#40;SQL Server プロファイラー&#41;を設定します](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   
- [SQL Server プロファイラーテンプレートとアクセス許可](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [SQL Server プロファイラー](../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

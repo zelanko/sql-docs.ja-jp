@@ -12,22 +12,21 @@ f1_keywords:
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f5bf6ecd9b78e4e7c35c63a1b84316d59da7a10
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061111"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924563"
 ---
 # <a name="catalog-properties-dialog-box"></a>[カタログのプロパティ] ダイアログ ボックス
-  [カタログのプロパティ] ダイアログ ボックスを使用すると、SSISDB カタログを構成できます。 カタログプロパティは、機微なデータを暗号化する方法、操作およびプロジェクトのバージョン管理データを保持する方法、および検証操作がタイムアウトするタイミングを定義します。SSISDB カタログは、プロジェクト、パッケージ、パラメーター、および[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]環境のための中央のストレージと管理ポイントです。  
+  [カタログのプロパティ] ダイアログ ボックスを使用すると、SSISDB カタログを構成できます。 カタログプロパティは、機微なデータを暗号化する方法、操作およびプロジェクトのバージョン管理データを保持する方法、および検証操作がタイムアウトするタイミングを定義します。SSISDB カタログは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト、パッケージ、パラメーター、および環境のための中央のストレージと管理ポイントです。  
   
  また、カタログ プロパティを catalog.catalog_property ビューで表示し、catalog.configure_catalog ストアド プロシージャを使用してこれらのプロパティを設定できます。 詳細については、「[catalog.catalog_properties (SSISDB データベース)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)」および「[catalog.configure_catalog (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)」を参照してください。  
   
  SSISDB カタログを作成する方法の詳細については、「 [SSIS カタログの作成](catalog/ssis-catalog.md)」を参照してください。  
   
- **目的に合ったトピックをクリックしてください**  
+ **どうしたいんですか。**  
   
 -   [[カタログのプロパティ] ダイアログ ボックスを開く](#open_dialog)  
   

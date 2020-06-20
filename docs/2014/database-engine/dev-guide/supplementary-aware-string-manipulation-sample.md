@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2df5fa785f715dbf63c7682148c20bbaf971d0c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 51fe880ce3865e44620e0f7ae88c2103b0796f38
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76928101"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933266"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>補助文字対応文字列操作サンプル
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のこのサンプルは、補助文字に対応した文字列処理を示します。 このサンプルでは、組み込み関数と同じ文字列操作機能を提供する、Transact-SQL の 5 つの文字列関数の実装を示します。ただしこのサンプルの文字列操作関数では、Unicode 文字列および補助文字文字列の両方を処理することができます。 5つの関数は、レンズ ( `lefts(), rights(), subs()` ) `replace_s()`であり、組み込み関数`LEN(), LEFT(), RIGHT(), SUBSTRING()`と`REPLACE()`文字列関数に相当します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のこのサンプルは、補助文字に対応した文字列処理を示します。 このサンプルでは、組み込み関数と同じ文字列操作機能を提供する、Transact-SQL の 5 つの文字列関数の実装を示します。ただしこのサンプルの文字列操作関数では、Unicode 文字列および補助文字文字列の両方を処理することができます。 5つの関数は、レンズ () であり、 `lefts(), rights(), subs()` `replace_s()` 組み込み関数 `LEN(), LEFT(), RIGHT(), SUBSTRING()` と文字列関数に相当し `REPLACE()` ます。  
   
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
@@ -48,7 +47,7 @@ ms.locfileid: "76928101"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にするには`ALTER SETTINGS` 、サーバーレベルの権限が必要です。この権限は`sysadmin` 、 `serveradmin`固定サーバーロールおよびのメンバーによって暗黙的に保持されています。  
+    >  CLR を有効にするには、 `ALTER SETTINGS` サーバーレベルの権限が必要です。この権限は、 `sysadmin` 固定サーバーロールおよびのメンバーによって暗黙的に保持されてい `serveradmin` ます。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "76928101"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  テスト[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドスクリプトをファイルにコピーし、とし`test.sql`てサンプルディレクトリに保存します。  
+7.  [!INCLUDE[tsql](../../includes/tsql-md.md)]テストコマンドスクリプトをファイルにコピーし、として `test.sql` サンプルディレクトリに保存します。  
   
 8.  次のコマンドを使用してテスト スクリプトを実行します。  
   

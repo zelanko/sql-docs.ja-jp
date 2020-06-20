@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 619e437b-e00f-49a9-a94c-8feafc4af713
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 755f2955e7bcd12ac022b29e6e4d3c7cf3aa80be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed1b5851868705000d5aa04eb885b8e188dd45ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061844"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925913"
 ---
 # <a name="add-new-source-dialog-box"></a>[新しいソースの追加] ダイアログ ボックス
   次の表に、[新しいソースの追加] ダイアログ ボックスで使用できるオプションを示します。  
   
 |オプション|説明|  
 |------------|-----------------|  
-|型|接続先のソースの種類を選択します。|  
-|接続マネージャー|既存の接続マネージャーを選択するか、[ ** \<新しい>** ] をクリックして新しい接続マネージャーを作成します。|  
+|種類|接続先のソースの種類を選択します。|  
+|接続マネージャー|既存の接続マネージャーを選択するか、をクリックして **\<New>** 新しい接続マネージャーを作成します。|  
 |インストールされているもののみを表示する|インストールされているソースのみを表示するかどうかを指定します。|  
-|[OK]|変更を保存し、後続のダイアログ ボックスを開いてその他のオプションを構成する場合にクリックします。|  
+|OK|変更を保存し、後続のダイアログ ボックスを開いてその他のオプションを構成する場合にクリックします。|  
   
   
