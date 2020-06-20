@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dfaba668e4f2328610656db6a61f01960814bff0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7582aef38d57b15de968d96357e56c1974d733e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189507"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041461"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Create a SQL Server Agent Proxy
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で SQL Server エージェント プロキシを作成する方法について説明します。  
@@ -30,7 +29,7 @@ ms.locfileid: "68189507"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **SQL Server エージェント プロキシを作成する方法:**  
   
@@ -113,7 +112,7 @@ ms.locfileid: "68189507"
     GO  
     ```  
   
- 詳細については次を参照してください:  
+ 詳細については、次を参照してください。  
   
 -   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 812419f7ebf9501ab2409876c4cc5c0a775492b9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9d3e94cf4983fb6ee05beff3a495ef6ccbd5c54b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705623"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020790"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>高速順方向専用カーソル (ODBC)
   Native Client ODBC ドライバーは、のインスタンスに接続されている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 順方向専用の読み取り専用カーソルのパフォーマンスの最適化をサポートしています。 高速順方向専用カーソルは、既定の結果セットに類似した方法で、ドライバーとサーバーによって内部的に実装されます。 高速順方向専用カーソルには、パフォーマンスが高いこと以外にも、次のような特性があります。  

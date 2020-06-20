@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c0c48fa00e8bf3eadfa955876840bebf5b6816f5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d634f393b18124e6ae0db753def2c31860f91a74
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701990"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019644"
 ---
 # <a name="bcp_columns"></a>bcp_columns
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との一括コピー入出力に使用する、ユーザー ファイル内の合計列数を設定します。 bcp_columns と[bcp_colfmt](bcp-colfmt.md)の代わりに[bcp_setbulkmode](bcp-setbulkmode.md)を使用できます。  
@@ -52,7 +51,7 @@ nColumns
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、有効なファイル名を指定して[bcp_init](bcp-init.md)が呼び出された後にのみ呼び出すことができます。  
   
  この関数を呼び出す必要があるのは、既定とは異なる形式のユーザー ファイルを使用する場合のみです。 既定のユーザーファイル形式の詳細については、「 **bcp_init**」を参照してください。  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4ed32927e38f67c718031930023bd246048e2db5
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: baec99e63c70befde0cfce76e42dd6202ebc0bad
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849611"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930643"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>Azure への SQL Server マネージド バックアップの監視
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では、バックアップ プロセス中に問題やエラーを特定し、可能な限り修正措置によって解消するための方法が組み込まれています。  ただし、ユーザーの介入が必要になる場合もあります。 このトピックでは、バックアップの全体的な正常性状態を判定し、解決する必要があるエラーを特定するために使用できるツールについて説明します。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34d97e58469469b929e0b7a2e25d52a9c7c3e3fe
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a63035355cafdbb08c469a093407b7ce2c12e6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060320"
 ---
 # <a name="search-text-with-regular-expressions"></a>正規表現によるテキストの検索
   正規表現は、文字列のパターンの検索や置換のための、正確で柔軟性の高い表記方法です。 **の**[検索と置換][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスの **[検索する文字列]** フィールドでは、特定のセットの正規表現を使用できます。  
@@ -106,7 +105,7 @@ ms.locfileid: "82718676"
 |非空白記号|:Mn|非空白記号を検索します。|  
 |連結記号|:Mc|連結記号を検索します。|  
 |囲み記号|:Me|囲み記号を検索します。|  
-|数学記号|:Sm|+、=、~、&#124、\<、> を検索します。|  
+|数学記号|:Sm|+、=、~、&#124;、に一致 \<, and > します。|  
 |通貨記号|:Sc|$ などの通貨記号を検索します。|  
 |アクセント記号|:Sk|曲アクセント記号、抑音符、長音記号など、アクセント記号を検索します。|  
 |その他の記号|:So|著作権記号、段落記号、度記号など、その他の記号を検索します。|  

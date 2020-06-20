@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eae7433569972c217161f1681b2f7089c7604335
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74430ab1bed232b8d510a8c28a8a690d88d1f6ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091507"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041650"
 ---
 # <a name="upgrade-lookup-transformations"></a>参照変換のアップグレード
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードする場合、パッケージに変更を加え、参照変換でこれらの新しい機能を利用することを検討してください。 この変換では、[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] で使用可能なキャッシュの種類とデータ出力オプションがサポートされます。 キャッシュとデータ出力の詳細については、「[参照変換](../../integration-services/data-flow/transformations/lookup-transformation.md)」を参照してください。  

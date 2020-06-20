@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9831b194-9ad5-47b0-8009-59c7aef4319b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2c48ef876dbe3843715496751205f24fcf26f12
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929693"
 ---
 # <a name="password-expired"></a>[パスワードの有効期限が切れました]
-  認証を[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]使用し[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]てサーバーに接続し、指定したパスワードは正しいが有効期限が切れている場合に表示されます。 また、 **[ユーザーは次回ログイン時にパスワードを変更する]** オプションを使用して作成された新しいアカウントでサーバーに接続した場合にも表示されます。 **[パスワードの有効期限が切れました]** ダイアログ ボックスを使用すると、この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証ログインのパスワードを変更できます。  
+  認証を使用してサーバーに接続し、指定した [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] パスワードは正しいが有効期限が切れている場合に表示されます。 また、 **[ユーザーは次回ログイン時にパスワードを変更する]** オプションを使用して作成された新しいアカウントでサーバーに接続した場合にも表示されます。 **[パスワードの有効期限が切れました]** ダイアログ ボックスを使用すると、この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証ログインのパスワードを変更できます。  
   
 ## <a name="options"></a>オプション  
  **Login**  

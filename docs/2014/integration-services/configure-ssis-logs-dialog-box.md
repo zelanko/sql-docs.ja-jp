@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060588"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921663"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>[SSIS ログの構成] ダイアログ ボックス
   **SSIS ログの構成]** ダイアログ ボックスを使用して、パッケージのログ記録オプションを定義します。  
   
- **目的に合ったトピックをクリックしてください**  
+ **どうしたいんですか。**  
   
 1.  [[SSIS ログの構成] ダイアログ ボックスを開く](#open_dialog)  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66060588"
  **[SSIS ログの構成]** ダイアログ ボックスの **[コンテナー]** ペインを使用すると、パッケージおよびパッケージのコンテナーでログを有効できます。  
   
 ### <a name="options"></a>オプション  
- **コンテナー**  
+ **Containers**  
  パッケージとパッケージのコンテナーでログを有効にするには、階層ビューのチェック ボックスをオンにします。  
   
 -   オフになっている場合、そのコンテナーでログは無効になります。 ログを有効にする場合はオンにします。  
@@ -60,7 +59,7 @@ ms.locfileid: "66060588"
  **[SSIS ログの構成]** ダイアログ ボックスの **[プロバイダーとログ]** タブを使用すると、ランタイム イベントをキャプチャするログを作成したり構成したりできます。  
   
 ### <a name="options"></a>オプション  
- **[プロバイダーの種類]**  
+ **プロバイダー型の**  
  ログ プロバイダーの種類を一覧から選択します。  
   
  **追加**  
@@ -73,7 +72,7 @@ ms.locfileid: "66060588"
  [説明] フィールドは編集可能です。 クリックして、ログの既定の説明を変更します。  
   
  **構成**  
- 既存の接続マネージャーを一覧から選択するか、**[\<新しい接続>]** をクリックして新しい接続マネージャーを作成します。 ログ プロバイダーの種類によっては、OLE DB 接続マネージャーやファイル接続マネージャーを構成できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows イベント ログ用のログ プロバイダーの場合、接続は不要です。  
+ 既存の接続マネージャーを一覧から選択するか、をクリックして \<**New connection...**> 新しい接続マネージャーを作成します。 ログ プロバイダーの種類によっては、OLE DB 接続マネージャーやファイル接続マネージャーを構成できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows イベント ログ用のログ プロバイダーの場合、接続は不要です。  
   
  関連項目:「 [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) 」、「 [File Connection Manager](connection-manager/file-connection-manager.md)」  
   
@@ -93,10 +92,10 @@ ms.locfileid: "66060588"
  **詳細設定**  
  ログ記録するイベントをオンまたはオフにし、各イベントでログ記録する情報をオンまたはオフにします。 **[標準]** をクリックすると、ログの詳細情報がイベントの一覧を除いてすべて非表示になります。 次の情報をログ記録できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**Computer**|ログ記録されたイベントが発生したコンピューターの名前。|  
-|**演算子**|パッケージを起動した人物のユーザー名。|  
+|**Operator**|パッケージを起動した人物のユーザー名。|  
 |**SourceName**|ログ記録されたイベントが発生したパッケージ、コンテナー、またはタスクの名前。|  
 |**SourceID**|ログ記録されたイベントが発生したパッケージ、コンテナー、またはタスクの GUID (global unique identifier)。|  
 |**ExecutionID**|パッケージ実行インスタンスの GUID。|  
@@ -109,7 +108,7 @@ ms.locfileid: "66060588"
  **読み込み**  
  ログのオプションを設定するテンプレートとして使用される、既存の XML ファイルを指定します。  
   
- **および**  
+ **保存**  
  構成の詳細をテンプレートとして XML ファイルに保存します。  
   
   

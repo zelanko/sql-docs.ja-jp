@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29432a9ed953acae6f2d99ef8f9d5ace7f210793
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62629634"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043470"
 ---
 # <a name="best-practices-for-replication-administration"></a>レプリケーション管理の推奨事項
   レプリケーションを構成したら、レプリケーション トポロジの管理方法について理解することが重要です。 このトピックでは、さまざまな分野における推奨事項について説明し、また各分野の詳細情報へのリンクも提供します。 このトピックで説明する推奨事項に従うだけでなく、よく寄せられる質問のトピック「[レプリケーションの管理者に関してよく寄せられる質問](frequently-asked-questions-for-replication-administrators.md)」に目を通し、一般的な疑問と問題点について理解することをお勧めします。  

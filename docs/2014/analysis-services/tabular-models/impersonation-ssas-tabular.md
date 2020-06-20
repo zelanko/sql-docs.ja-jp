@@ -9,30 +9,29 @@ ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e04c7af85592d71d70abf8ea5f61518690599342
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067059"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938883"
 ---
 # <a name="impersonation-ssas-tabular"></a>権限借用 (SSAS テーブル)
   このトピックでは、データのインポートおよび処理 (更新) のためにデータ ソースに接続するときに、ログオン資格情報が Analysis Services によってどのように使用されるかについて、テーブル モデルの作成者を対象に説明しています。  
   
- このトピックの内容は次のとおりです。  
+ この記事は、次のセクションで構成されています。  
   
 -   [メリット](#bkmk_how_imper)  
   
--   [[オプション]](#bkmk_imp_info_options)  
+-   [Options](#bkmk_imp_info_options)  
   
--   [セキュリティ](#bkmk_impers_sec)  
+-   [Security](#bkmk_impers_sec)  
   
 -   [モデルをインポートする場合の権限借用](#bkmk_imp_newmodel)  
   
 -   [権限借用の構成](#bkmk_conf_imp_info)  
   
-##  <a name="benefits"></a><a name="bkmk_how_imper"></a>効果  
+##  <a name="benefits"></a><a name="bkmk_how_imper"></a> 利点  
  *権限借用* は、Analysis Services などのサーバー アプリケーションがクライアント アプリケーションの ID を使用するための機能です。 Analysis Services はサービス アカウントを使用して実行されますが、データのインポートと処理に対するアクセス チェックを行うことができるように、サーバーがデータ ソースへの接続を確立するときに権限借用が使用されます。  
   
  権限借用に使用される資格情報は、現在ログオンしているユーザーの資格情報とは異なります。 モデル作成時には、特定のクライアント側の操作に、ログオンしているユーザーの資格情報が使用されます。  
@@ -67,8 +66,8 @@ ms.locfileid: "66067059"
   
 |オプション|ImpersonationMode<sup>1</sup>|説明|  
 |------------|-----------------------------------|-----------------|  
-|**特定の Windows ユーザー名とパスワード** <sup>2</sup>|ImpersonateWindowsUserAccount|データ ソースのデータをインポートまたは処理する際に、モデルで Windows ユーザー アカウントが使用されるように指定します。 ユーザーアカウントのドメインと名前は、**\<ドメイン名>\\<ユーザーアカウント名\>** の形式で指定します。 テーブルのインポート ウィザードを使用して新しいモデルを作成する場合は、これが既定のオプションです。|  
-|**サービス アカウント**|ImpersonateServiceAccount|モデルを管理している Analysis Services サービス インスタンスに関連付けられているセキュリティ資格情報をモデルで使用するように指定します。|  
+|**特定の Windows ユーザー名とパスワード** <sup>2</sup>|ImpersonateWindowsUserAccount|データ ソースのデータをインポートまたは処理する際に、モデルで Windows ユーザー アカウントが使用されるように指定します。 ユーザーアカウントのドメインと名前は、次の形式を使用します:** \<Domain name> \\<\> ユーザーアカウント名**。 テーブルのインポート ウィザードを使用して新しいモデルを作成する場合は、これが既定のオプションです。|  
+|**サービスアカウント**|ImpersonateServiceAccount|モデルを管理している Analysis Services サービス インスタンスに関連付けられているセキュリティ資格情報をモデルで使用するように指定します。|  
   
  <sup>1</sup>ImpersonationMode は、データソースの[DataSourceImpersonationInfo 要素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)プロパティの値を指定します。  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66067059"
 ##  <a name="configuring-impersonation"></a><a name="bkmk_conf_imp_info"></a>権限借用の構成  
  モデルが存在する場所とコンテキストに応じて、権限借用情報の構成方法が決まります。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で作成中のモデルでは、テーブルのインポート ウィザードの **[権限借用情報]** ページで、または **[既存の接続]** ダイアログ ボックスでデータ ソース接続を編集して、権限借用情報を構成できます。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で既存の接続を表示するには、 **[モデル]** メニューの **[既存の接続]** をクリックします。  
   
- Analysis Services サーバーに配置されるモデルでは、の [**データベース**の[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]プロパティ] ダイアログボックスの [**データソースの権限借用情報**] プロパティの省略記号ボタン ([...]) をクリックして、権限借用情報を構成できます。  
+ Analysis Services サーバーに配置されるモデルでは、の [**データベースのプロパティ**] ダイアログボックスの [**データソースの権限借用情報**] プロパティの省略記号ボタン ([...]) をクリックして、権限借用情報を構成でき [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。  
   
 ## <a name="see-also"></a>参照  
  [SSAS テーブル &#40;の DirectQuery モード&#41;](directquery-mode-ssas-tabular.md)   

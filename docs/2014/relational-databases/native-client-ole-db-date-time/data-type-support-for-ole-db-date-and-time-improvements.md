@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 54cf3ae9f20f66e3930e6eadc197e09275fceacd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1559b96f382abd86246553e26173c1eca0d3abca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705082"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043739"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB の日付/時刻の強化に対するデータ型のサポート
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付および時刻データ型をサポートする OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) の型について説明します。  
@@ -26,12 +25,12 @@ ms.locfileid: "82705082"
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>行セットとパラメーターでのデータ型マッピング  
  OLE DB には、新しいサーバーの種類をサポートする 2 つの新しいデータ型 (DBTYPE_DBTIME2 と DBTYPE_DBTIMESTAMPOFFSET) が用意されています。 次の表に、完全なサーバーの型マッピングを示します。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|OLE DB データ型|[値]|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|OLE DB データ型|値|  
 |-----------------------------------------|----------------------|-----------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |date|DBTYPE_DBDATE|133 (oledb.h)|  
-|time|DBTYPE_DBTIME2|145 (sqlncli)|  
+|時間|DBTYPE_DBTIME2|145 (sqlncli)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
@@ -42,7 +41,7 @@ ms.locfileid: "82705082"
 |DATETIME|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、datetime における秒の小数部の桁数を 3 桁までサポートします。|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> このデータ型の精度は 1 分です。 秒の部分は、出力時には 0 になり、入力時にはサーバーによって丸められます。|  
 |date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
-|time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
+|時間|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
 |datetime2|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.fffffff]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.fffffff] +/-hh:mm'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
   
@@ -170,7 +169,7 @@ enum SQLVARENUM {
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable でのデータ型マッピング  
  次の型マッピングは、ITableDefinition::CreateTable で使用される DBCOLUMNDESC 構造体で使用されます。  
   
-|OLE DB データ型 (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|メモ|  
+|OLE DB データ型 (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|Notes|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|`datetime2`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、秒の小数部の有効桁数を決定するために、 *DBBFILE Desc bscale*メンバーを検査します。|  

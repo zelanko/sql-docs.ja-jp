@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6f1cba6a6a20fc804d29aeb0dbf43d7bebfbb225
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b68b667e329f99f23faf3d46cd985ce4a9dde21
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154456"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937793"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services の概念
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のナレッジ マネージメント、データ品質プロジェクト、およびデータ品質管理の概念を簡単に説明します。  
@@ -44,7 +43,7 @@ ms.locfileid: "70154456"
 ##  <a name="data-quality-project-concepts"></a><a name="Projects"></a> データ品質プロジェクトの概念  
  データ スチュワードは、データ品質に関する操作 (クレンジングおよび照合) を [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションでデータ品質プロジェクトを使用して実行します。  
   
- **Data Cleansing**  
+ **データクレンジング**  
   
  DQS でのデータ クレンジングは、DQS ナレッジ ベースのナレッジに基づいて行われます。 DQS のデータ クレンジングは、2 段階のプロセスから成ります。  
   

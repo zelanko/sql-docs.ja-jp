@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 1b29dea4-3727-4c5f-8362-4ca0374de0b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94834ef4be77aed897707d011799f2b9f877e41c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f4e96f2a7fe017aadaeb71ed05f546dabfa6540
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938719"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053307"
 ---
 # <a name="audit-database-principal-impersonation-event-class"></a>Audit Database Principal Impersonation イベント クラス
-  **Audit Database Principal Impersonation** イベント クラスは、EXECUTE AS \<*user*> や SETUSER などのデータベース スコープ内で権限の借用が生じるときに発生します。  
+  **Audit Database Principal impersonation**イベントクラスは、EXECUTE AS や SETUSER などのデータベーススコープ内で権限の借用が発生したときに発生し \<*user*> ます。  
   
 ## <a name="audit-database-principal-impersonation-event-class-data-columns"></a>Audit Database Principal Impersonation イベント クラスのデータ列  
   

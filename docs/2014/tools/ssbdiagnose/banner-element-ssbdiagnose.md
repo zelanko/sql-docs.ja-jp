@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db804d25ce3129ebb177b021a64f5a63d0620940
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186871"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006791"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 要素 (ssbdiagnose)
   **ssbdiagnose** の出力 XML ファイルを生成したユーティリティを示します。  
@@ -46,16 +45,16 @@ ms.locfileid: "63186871"
   
 |特徴|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|なし。|  
-|**既定値**|なし。|  
-|**見つかる**|**ssbdiagnose** の出力 XML ファイルにつき 1 個。|  
+|**データ型と長さ**|[なし] :|  
+|**既定値**|[なし] :|  
+|**個数**|**ssbdiagnose** の出力 XML ファイルにつき 1 個。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
 |**親要素**|[DiagnosticInformation 要素 &#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
-|**子要素**|なし。|  
+|**子要素**|[なし] :|  
   
 ## <a name="example"></a>例  
  バナー要素の例を次に示します。  

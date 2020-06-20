@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fe29a58d-8448-4512-9ffd-b414784ba338
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 99395f9a8dbcb812f5a7764634d42489526875af
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ff8350c71a853e39ff1d35a1f3fba6e8e1944934
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705613"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020655"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>暗黙のカーソル変換 (ODBC)
   アプリケーションでは、 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)を使用してカーソルの種類を要求した後、要求された種類のサーバーカーソルでサポートされていない SQL ステートメントを実行できます。 **Sqlexecute**または**SQLExecDirect**を呼び出すと SQL_SUCCESS_WITH_INFO が返され、 **SQLGetDiagRec**はを返します。  

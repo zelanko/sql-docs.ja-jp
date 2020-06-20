@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7f96156bc22f730a8e550ef6007bb45401284f60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dfb917c38003b83b9674fd31a0b80f339629971
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62666688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067177"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>新しいデータベース ダイアグラムの作成 (Visual Database Tools)
   オブジェクト エクスプローラーを使用すると、新しいデータベース ダイアグラムを作成できます。 データベース ダイアグラムは、データベースの構造をグラフィカル表示するツールです。 データベース ダイアグラムを使用すると、テーブル、列、リレーションシップ、キーを作成および変更できます。 また、インデックスや制約を変更することもできます。  

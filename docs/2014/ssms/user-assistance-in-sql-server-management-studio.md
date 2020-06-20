@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b1bd7492ada156584b05ebaf2a8afc6dd294f49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74684457"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067284"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio のユーザー サポート
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、[ヘルプ] メニューと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックという形のユーザー サポートがあります。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] の [ヘルプ] メニューでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に関する情報にアクセスするための方法がいくつか用意されています。 旧バージョンの [ヘルプ] 環境内からは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティや MSDN オンラインのリソースにアクセスすることはできませんでしたが、このバージョンからは可能になりました。 さらに、[ヘルプ] 環境を [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境内に起動するか、専用の外部ウィンドウに起動するかも設定できるようになりました。  
@@ -47,7 +46,7 @@ ms.locfileid: "74684457"
  [ヘルプに関するヘルプ]\ ([!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer のヘルプ) は、ヘルプ ビューアーに関するドキュメントへのリンクを提供しますが、トピックは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックとは別のコレクションに入っています。 ヘルプ ビューアーの詳細については、 **オンライン ブックの [ヘルプ] メニューから** [ヘルプに関するヘルプ] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を選択してください。 ヘルプトピックのトピックのコレクションをオンラインブックコレクションに追加する方法の詳細については、「 [SQL Server の製品ドキュメントを追加または削除](../2014-toc/index.yml)する」を参照してください。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN オンラインと SQL Server コミュニティ  
- [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コミュニティから情報を得るための方法も用意されています。 次の操作を行うことができます。  
+ [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コミュニティから情報を得るための方法も用意されています。 次のようにすることができます。  
   
 -   [操作方法] ページから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティにアクセスする。  
   

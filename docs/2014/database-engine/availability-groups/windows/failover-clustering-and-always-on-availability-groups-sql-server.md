@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68a24366ff96c7e6f4784a5fa989f45ed136e74e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62792005"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936843"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>フェールオーバー クラスタリングと AlwaysOn 可用性グループ (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で導入された [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] (High Availability and Disaster Recovery) ソリューションには、Windows Server フェールオーバー クラスタリング (WSFC) が必要です。  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] フェールオーバー クラスタリングには依存しませんが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、フェールオーバー クラスタリング インスタンス (FCI) を使用して、可用性グループの可用性レプリカをホストすることもできます。 実際に [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境を設計する際は、それぞれのクラスタリング テクノロジの役割を知り、注意点を把握しておくことが大切です。  
@@ -67,7 +66,7 @@ ms.locfileid: "62792005"
 |**保護レベル**|インスタンス|データベース|  
 |**ストレージの種類**|Shared|非共有<br /><br /> 可用性グループ内のレプリカがストレージを共有しない一方、FCI によってホストされるレプリカは、FCI によって必要とされたときに共有ストレージ ソリューションを使用することに注意してください。 ストレージ ソリューションは、可用性グループのレプリカ間ではなく、FCI 内のノードでのみ共有されます。|  
 |**ストレージ ソリューション**|直接接続、SAN、マウント ポイント、SMB|ノードの種類によって異なる|  
-|**読み取り可能なセカンダリ**|いいえ*|はい|  
+|**読み取り可能なセカンダリ**|いいえ*|Yes|  
 |**該当するフェールオーバー ポリシー設定**|WSFC クォーラム<br /><br /> FCI 固有<br /><br /> 可用性グループ設定**|WSFC クォーラム<br /><br /> 可用性グループの設定|  
 |**フェールオーバー リソース**|サーバー、インスタンス、およびデータベース|データベースのみ|  
   
@@ -76,7 +75,7 @@ ms.locfileid: "62792005"
  **可用性グループのフェールオーバー ポリシー設定は、スタンドアロン インスタンスと FCI インスタンスのどちらでホストされているかに関係なく、すべてのレプリカに適用されます。  
   
 > [!NOTE]  
->  フェールオーバークラスタリング内の**ノード数**、およびの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]各エディションの**AlwaysOn 可用性グループ**については、「 [SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」 (https://go.microsoft.com/fwlink/?linkid=232473)を参照してください。  
+>  フェールオーバークラスタリング内の**ノード数**、およびの各エディションの**AlwaysOn 可用性グループ**について [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、「 [SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」 (を参照してください https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI で可用性レプリカをホストする場合の考慮事項  
   

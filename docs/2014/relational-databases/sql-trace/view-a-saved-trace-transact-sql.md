@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 16adeb7225df27d571e3c8ea30daa44151f3c19c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8b67760d575b651b089a6936adc945d74a1c62b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63285578"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060199"
 ---
 # <a name="view-a-saved-trace-transact-sql"></a>保存されているトレースの表示 (Transact-SQL)
   このトピックでは、組み込み関数を使用して、保存されているトレースを表示する方法について説明します。  

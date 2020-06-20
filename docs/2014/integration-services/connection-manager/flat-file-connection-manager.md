@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e46c1ea54ba178fba73a1bfb2cc8ee296ca2b0d0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833818"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920893"
 ---
 # <a name="flat-file-connection-manager"></a>フラット ファイル接続マネージャー
   フラット ファイル接続マネージャーを使用すると、パッケージはフラット ファイルのデータにアクセスできます。 たとえば、フラット ファイルの変換元と変換先は、フラット ファイル接続マネージャーを使用して、データの抽出および読み込みを行うことができます。  
@@ -35,13 +34,13 @@ ms.locfileid: "62833818"
  接続マネージャーを使用するフラット ファイル ソースを追加および構成した後に、フラット ファイル接続マネージャーで列の長さを変更した場合は、フラット ファイル ソースの出力列のサイズを手動で変更する必要はありません。 **[フラット ファイル ソース]** ダイアログ ボックスを開くと、列のメタデータを同期するためのオプションがフラット ファイル ソースによって提供されます。  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>フラット ファイル接続マネージャーの構成  
- フラットファイル接続マネージャーをパッケージに追加すると、は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 、実行時にフラットファイル接続を解決する接続マネージャーを作成し、フラットファイル接続プロパティを設定して、フラットファイル接続マネージャーをパッケージの`Connections`コレクションに追加します。  
+ フラットファイル接続マネージャーをパッケージに追加すると、は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 実行時にフラットファイル接続を解決する接続マネージャーを作成し、フラットファイル接続プロパティを設定して、フラットファイル接続マネージャーを `Connections` パッケージのコレクションに追加します。  
   
  接続マネージャーの `ConnectionManagerType` プロパティは、`FLATFILE` に設定されます。  
   
  既定では、フラット ファイル接続マネージャーは、引用符で囲まれていないデータの行区切り記号を常に確認し、行区切り記号が見つかると新しい行を開始します。 これにより、接続マネージャーは列フィールドがない行を含むファイルを正しく解析できます。  
   
- 場合によっては、この機能を無効にすると、パッケージのパフォーマンスが向上します。 この機能を無効にするには、フラットファイル接続マネージャーのプロパティである**Always Checkforrowデリミター**をに`False`設定します。  
+ 場合によっては、この機能を無効にすると、パッケージのパフォーマンスが向上します。 この機能を無効にするには、フラットファイル接続マネージャーのプロパティである**Always Checkforrowデリミター**をに設定し `False` ます。  
   
  フラット ファイル接続マネージャーは、次の方法で構成できます。  
   

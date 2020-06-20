@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: c4128993-2333-48c7-84b1-e51cdcea393d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0277b936ddd4884f8a6b9b47b9184766dac9954b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6298ffb8c030866e3ca25b3007f1115217922c68
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060241"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917318"
 ---
 # <a name="create-a-user-defined-role"></a>ユーザー定義ロールを作成する
     
 ### <a name="to-create-a-user-defined-role"></a>ユーザー定義ロールを作成するには  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を開きます。  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開きます。  
   
 2.  **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
   

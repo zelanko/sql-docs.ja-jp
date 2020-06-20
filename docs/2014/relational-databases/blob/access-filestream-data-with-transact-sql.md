@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 067f14e857addc5f43a0b17d81d554997adbc09f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0c3157ad4e9f192a2b108b82611e844a9f735fd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010444"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955914"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Transact-SQL による FILESTREAM データへのアクセス
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の INSERT、UPDATE、および DELETE ステートメントを使用して FILESTREAM データを管理する方法について説明します。  
@@ -26,7 +25,7 @@ ms.locfileid: "66010444"
 >  このトピックの例を実行するには、「 [FILESTREAM が有効なデータベースを作成する方法](create-a-filestream-enabled-database.md) 」および「 [FILESTREAM データを格納するテーブルを作成する方法](create-a-table-for-storing-filestream-data.md)」に基づいて、FILESTREAM が有効なデータベースとテーブルを作成する必要があります。  
   
 ##  <a name="inserting-a-row-that-contains-filestream-data"></a><a name="ins"></a> FILESTREAM データを含む行の挿入  
- FILESTREAM データをサポートするテーブルに行を追加するには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT ステートメントを使用します。 FILESTREAM 列にデータを挿入するときに、NULL または値を`varbinary(max)`挿入できます。  
+ FILESTREAM データをサポートするテーブルに行を追加するには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT ステートメントを使用します。 FILESTREAM 列にデータを挿入するときに、NULL または値を挿入でき `varbinary(max)` ます。  
   
 ### <a name="inserting-null"></a>NULL の挿入  
  `NULL`を挿入する方法を次の例に示します。 FILESTREAM 値が `NULL`の場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はファイル システムにファイルを作成しません。  
@@ -72,6 +71,6 @@ ms.locfileid: "66010444"
   
 ## <a name="see-also"></a>参照  
  [FILESTREAM の有効化と構成](enable-and-configure-filestream.md)   
- [FILESTREAM アプリケーションでのデータベース操作との競合の回避](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
+ [FILESTREAM アプリケーションでのデータベース操作との競合を回避する](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
   
   

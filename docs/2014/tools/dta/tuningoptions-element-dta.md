@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3050ce285cc98386f6de6278bedd2520cb39ba36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c58386630e3ee531e14af25306a1cc3b3ca3540
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061066"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007509"
 ---
 # <a name="tuningoptions-element-dta"></a>TuningOptions 要素 (DTA)
   特定のチューニング セッションのチューニング オプションが含まれます。  
@@ -51,7 +50,7 @@ ms.locfileid: "63061066"
 |**子要素**|`ReportSet` 要素。 詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?linkid=43100)を参照してください。<br /><br /> `TuningLogTable` 要素。 詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?linkid=43100)を参照してください。<br /><br /> `NumberOfEvents` 要素。 詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?linkid=43100)を参照してください。<br /><br /> [TuningTimeInMin 要素 &#40;DTA&#41;](tuningtimeinmin-element-dta.md)<br /><br /> [StorageBoundInMB 要素 &#40;DTA&#41;](storageboundinmb-element-dta.md)<br /><br /> `MaxKeyColumnsInIndex` 要素。 詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?linkid=43100)を参照してください。<br /><br /> `MaxColumnsInIndex` 要素。 詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?linkid=43100)を参照してください。<br /><br /> `MinPercentageImprovement` 要素。 詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?linkid=43100)を参照してください。<br /><br /> [TestServer 要素 &#40;DTA&#41;](server-element-dta.md)<br /><br /> [FeatureSet 要素 &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Partitioning 要素 &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [DropOnlyMode 要素 &#40;DTA&#41;](droponlymode-element-dta.md)<br /><br /> [KeepExisting 要素 &#40;DTA&#41;](keepexisting-element-dta.md)<br /><br /> [OnlineIndexOperation 要素 &#40;DTA&#41;](onlineindexoperation-element-dta.md)<br /><br /> [DatabaseToConnect 要素 &#40;DTA&#41;](databasetoconnect-element-dta.md)<br /><br /> `IgnoreConstantsInWorkload` 要素。 詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?linkid=43100)を参照してください。<br /><br /> `RetainShellDB` 要素。 詳細については、 [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?linkid=43100)を参照してください。|  
   
 ## <a name="example"></a>例  
- `TuningOptions`要素の例については、「 [XML 入力ファイルのサンプル &#40;DTA&#41;](xml-input-file-samples-dta.md)」を参照してください。  
+ 要素の例につい `TuningOptions` ては、「 [XML 入力ファイルのサンプル &#40;DTA&#41;](xml-input-file-samples-dta.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

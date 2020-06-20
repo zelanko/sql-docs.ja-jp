@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11884b2bb52c2c38fcae708346afa54151502ffc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056201"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964072"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>[スクリプト変換エディター] ([接続マネージャー] ページ)
   **[スクリプト変換エディター]** の **[接続マネージャー]** ページを使用すると、スクリプトで使用される接続を指定できます。  
@@ -34,7 +33,7 @@ ms.locfileid: "66056201"
  接続を表す一意な名前を入力します。  
   
  **接続マネージャー**  
- 使用可能な接続マネージャーの一覧から選択するか、[ ** \<新しい接続>** を選択して [ **SSIS 接続マネージャーの追加**] ダイアログボックスを開きます。  
+ 使用可能な接続マネージャーの一覧から選択するか、を選択し **\<New connection>** て [ **SSIS 接続マネージャーの追加**] ダイアログボックスを開きます。  
   
  **説明**  
  接続の説明を入力します。  
@@ -42,7 +41,7 @@ ms.locfileid: "66056201"
  **追加**  
  **[接続マネージャー]** の一覧に、他の接続を追加します。  
   
- **Remove**  
+ **削除**  
  **[接続マネージャー]** の一覧から、選択した接続を削除します。  
   
 ## <a name="see-also"></a>参照  

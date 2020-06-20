@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 018cc6fa8b85c4a1b09ab53a6a1a94d8a7670bae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8118f0781d7c9e3d839c029c6bdaf8b01e074b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176762"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060252"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
   *Transparent Data Encryption* (TDE) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] のデータ ファイルを暗号化します。これは保存データの暗号化と呼ばれます。 セキュリティで保護されたシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの、データベースを保護するいくつかの対策を講じることができます。 ただし、物理メディア (ドライブやバックアップ テープなど) が盗まれるシナリオでは、悪意のある第三者がデータベースを復元するかアタッチするだけでデータを閲覧することができます。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。
@@ -42,13 +41,13 @@ ms.locfileid: "78176762"
 ## <a name="about-tde"></a>TDE について
  データベース ファイルの暗号化は、ページ レベルで実行されます。 暗号化されたデータベースのページは、ディスクに書き込まれる前に暗号化され、メモリに読み込まれるときに暗号化解除されます。 TDE では、暗号化されたデータベースのサイズが増えることはありません。
 
- **[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] に該当する情報**
+ **に適用される情報[!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**
 
  TDE を [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([一部のリージョンではプレビュー版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) と一緒に使用すると、マスター データベースに格納されるサーバー レベルの証明書が [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]によって自動的に作成されます。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] で TDE データベースを移動するには、データベースの暗号化を解除してデータベースを移動し、移動先の [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]で TDE を再度有効にする必要があります。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]での TDE に関する詳細な手順については、「 [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)」を参照してください。
 
  TDE のプレビューの状態は、 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のバージョン ファミリ V12 が現在一般提供の段階にあると発表されている地理的リージョンのサブセットにおいても適用されます。 TDE がプレビューから GA に昇格されたことを [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] が発表するまで、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 用の TDE の実稼働データベースでの使用は想定されていません。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12 の詳細については、「 [Azure SQL Database の新機能](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)」をご覧ください。
 
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に該当する情報**
+ **に適用される情報[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**
 
  セキュリティで保護されたデータベースは、正しい証明書を使用することで復元できます。 証明書の詳細については、「 [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。
 
@@ -143,7 +142,7 @@ GO
 
  暗号化されたデータは、暗号化されていない同等のデータより、圧縮比率が大幅に下がります。 TDE を使用してデータベースを暗号化した場合、バックアップの圧縮によってバックアップ ストレージが大幅に圧縮されることはありません。 したがって、TDE とバックアップの圧縮を併用することはお勧めしません。
 
-### <a name="restrictions"></a>制限
+### <a name="restrictions"></a>制約
  最初のデータベース暗号化、キー変更、またはデータベースの暗号化解除の実行中は、次の操作を実行できません。
 
 -   データベース内のファイル グループからのファイルの削除
@@ -215,7 +214,7 @@ GO
  データベース暗号化キーを 2 回変更した後は、データベース暗号化キーを再度変更する前に、ログ バックアップを実行する必要があります。
 
 ### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>Transparent Data Encryption と tempdb システム データベース
- tempdb システム データベースは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス上の他のデータベースが TDE を使用して暗号化されると暗号化されます。 この場合、同じ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス上にある暗号化されないデータベースのパフォーマンスに影響が生じることがあります。 tempdb システム データベースの詳細については、「 [tempdb データベース](../../databases/tempdb-database.md)」を参照してください。
+ tempdb システム データベースは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス上の他のデータベースが TDE を使用して暗号化されると暗号化されます。 この場合、同じ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス上にある暗号化されないデータベースのパフォーマンスに影響が生じることがあります。 tempdb システム データベースの詳細については、「[tempdb データベース](../../databases/tempdb-database.md)」を参照してください。
 
 ### <a name="transparent-data-encryption-and-replication"></a>Transparent Data Encryption とレプリケーション
  レプリケーションでは、TDE が有効になっているデータベースのデータが暗号化された形式で自動的にレプリケートされることはありません。 ディストリビューション データベースとサブスクライバー データベースを保護する場合は、TDE を個別に有効にする必要があります。 スナップショット レプリケーションでは、トランザクション レプリケーションとマージ レプリケーションへの最初のデータ ディストリビューションと同様に、暗号化されていない中間ファイル (bcp ファイルなど) にデータを格納できます。  トランザクション レプリケーションまたはマージ レプリケーション時に、暗号化を有効にして通信チャネルを保護することができます。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。

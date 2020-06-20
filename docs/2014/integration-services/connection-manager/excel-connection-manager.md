@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 432d48bbe848d6f66e9f3dae5365abe10d8deb62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68e44e7047f80584eca399d58b3b85cffcfc7104
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833850"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920946"
 ---
 # <a name="excel-connection-manager"></a>Excel 接続マネージャー
-  Excel 接続マネージャーを使用すると、パッケージは既存の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブック ファイルに接続できます。 Excel ソースおよび excel 変換先[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]には、excel 接続マネージャーが使用されます。  
+  Excel 接続マネージャーを使用すると、パッケージは既存の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブック ファイルに接続できます。 Excel ソースおよび excel 変換先には、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] excel 接続マネージャーが使用されます。  
   
  Excel 接続マネージャーをパッケージに追加するときに、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、実行時に Excel 接続として解決される接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーをパッケージの `Connections` コレクションに追加します。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "62833850"
   
  Excel ソースによって Excel 接続マネージャーが使用された場合は、抽出したデータに列名が含められます。 Excel 変換先によって使用された場合は、出力されたデータに列名が含められます。  
   
- Excel 接続マネージャーは、Jet [!INCLUDE[msCoName](../../includes/msconame-md.md)] 4.0 用の OLE DB プロバイダーと、それをサポートする excel ISAM (インデックス付きシーケンシャルアクセス方式) ドライバーを使用して、excel データソースへの接続とデータの読み書きを行います。 Excel ソースおよび excel 変換先で使用する場合のこのプロバイダーとドライバーの動作の詳細については、「 [Excel ソース](../data-flow/excel-source.md)および Excel[変換先](../data-flow/excel-destination.md)」を参照してください。  
+ Excel 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 4.0 用の OLE DB プロバイダーと、それをサポートする EXCEL ISAM (インデックス付きシーケンシャルアクセス方式) ドライバーを使用して、excel データソースへの接続とデータの読み書きを行います。 Excel ソースおよび excel 変換先で使用する場合のこのプロバイダーとドライバーの動作の詳細については、「 [Excel ソース](../data-flow/excel-source.md)および Excel[変換先](../data-flow/excel-destination.md)」を参照してください。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
