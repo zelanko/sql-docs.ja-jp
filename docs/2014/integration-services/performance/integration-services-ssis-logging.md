@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b563160c9cd41a449b4669bb6b17ca43d427ff6e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889814"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964712"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージ、コンテナー、およびタスクにログ記録を実装するために使用できる、ログ プロバイダーが含まれています。 ログ記録を行うと、パッケージに関する実行時の情報をキャプチャできるので、パッケージを実行するたびに監査やトラブルシューティングに役立ちます。 たとえば、パッケージを実行した演算子の名前と、パッケージの開始および完了時刻をログにキャプチャできます。  
@@ -52,7 +51,7 @@ ms.locfileid: "62889814"
     > [!NOTE]  
     >  64 ビット モードで実行されているパッケージでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のログ プロバイダーを使用できません。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログプロバイダー。ログエントリを`sysssislog` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースのテーブルに書き込みます。  
+-   ログ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロバイダー。ログエントリを `sysssislog` データベースのテーブルに書き込み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 -   Windows イベント ログのログ プロバイダー。エントリを、ローカル コンピューター上にある Windows イベント ログのアプリケーション ログに書き込みます。  
   

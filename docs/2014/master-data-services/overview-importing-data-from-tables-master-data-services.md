@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3122ddb64d9f86bd70e5b444bd7bd7fce44956de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175991"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971172"
 ---
 # <a name="data-import-master-data-services"></a>データのインポート (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]内のデータのモデルを作成すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースでデータの追加と変更ができるようになります。   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ステージング テーブル、ストアド プロシージャ、マスター データ マネージャーを使います。
 
- また、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]を使用して、MDS リポジトリ ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベース) にデータを追加することもできます。 詳細については、「[データ &#40;Excel 用 MDS アドイン&#41;のパブリッシュ](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)」を参照してください。
+ また、を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] MDS リポジトリ (データベース) にデータを追加することもでき [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ます。 詳細については、「[データ &#40;Excel 用 MDS アドイン&#41;のパブリッシュ](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)」を参照してください。
 
  データを追加して更新するときに、次の操作を行うことができます。
 
@@ -83,11 +82,11 @@ ms.locfileid: "78175991"
 
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] には、次の種類のステージング ストアド プロシージャが含まれています。
 
--   stg.udp_\<name>_Leaf
+-   stg. udp_ \<name> _Leaf
 
--   stg.udp_\<name>_Consolidated
+-   stg. udp_ \<name> _Consolidated
 
--   stg.udp_\<name>_Relationship
+-   stg. udp_ \<name> _Relationship
 
  モデル内の各エンティティには、リーフ メンバー、統合メンバー、リレーションシップ ステージング テーブルに対応する 3 つのストアド プロシージャがあります。  次の画像は、通貨、顧客、製品のエンティティのステージング ストアド テーブルを示しています。
 

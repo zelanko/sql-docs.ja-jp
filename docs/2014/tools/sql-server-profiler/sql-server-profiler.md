@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: abc9560ae39f94380a6adde48ceb4ae10788db5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211047"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040239"
 ---
 # <a name="sql-server-profiler"></a>SQL Server プロファイラー
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、トレースを作成および管理し、トレースの結果を分析および再生するために使用する機能の豊富なインターフェイスです。 キャプチャされたイベントはトレース ファイルに保存され、後で分析したり、問題の発生したステップを厳密に再現して診断する際に利用できます。  
@@ -43,8 +42,8 @@ ms.locfileid: "68211047"
 ||||  
 |-|-|-|  
 |**機能\対象のワークロード**|**リレーショナル エンジン**|**Analysis Services**|  
-|**トレースのキャプチャ**|SQL Server Management Studio の拡張イベントのグラフィカル ユーザー インターフェイス|SQL Server プロファイラー|  
-|**トレースの再生**|Distributed Replay|SQL Server プロファイラー|  
+|**トレースのキャプチャ**|SQL Server Management Studio の拡張イベントのグラフィカル ユーザー インターフェイス|SQL Server Profiler|  
+|**トレースの再生**|Distributed Replay|SQL Server Profiler|  
   
 ## <a name="benefits-of-sql-server-profiler"></a>SQL Server Profiler の利点  
  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] または Analysis Services のインスタンスを監視するための SQL トレースのグラフィカル ユーザー インターフェイスです。 各イベントに関するデータをキャプチャし、ファイルやテーブルに保存して、後で分析できます。 たとえば、稼動環境を監視して、どのストアド プロシージャの実行が遅く、パフォーマンスに影響を与えているかを確認できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、次のようなアクティビティに使用します。  
@@ -114,7 +113,7 @@ ms.locfileid: "68211047"
  **テンプレート**  
  テンプレートは、トレースの既定の構成を定義します。 特に、テンプレートには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して監視するイベント クラスを指定します。 たとえば、使用するイベント、データ列、およびフィルターを指定するテンプレートを作成できます。 テンプレートは、実行するのではなく、.tdf という拡張子を付けてファイルとして保存しておきます。 保存したテンプレートは、そのテンプレートに基づいて作成したトレースの実行時にどのようなトレース データをキャプチャするかを制御します。  
   
- **トレース**  
+ **Trace**  
  トレースでは、選択したイベント、データ列、およびフィルターに基づいたデータをキャプチャします。 たとえば、例外エラーを監視するトレースを作成できます。 これには、 **Exception** イベント クラスを選択し、そのデータ列である **Error**、 **State**、および **Severity** を選択します。 トレース結果で意味のあるデータを示すには、これら 3 列のデータを収集する必要があります。 このようにして構成されたトレースを実行し、サーバーで発生するすべての **Exception** イベントに関するデータを収集することができます。 トレース データは、保存することも、すぐに分析に使用することもできます。 トレースは、後日再生できます。ただし、 **Exception** イベントなど、再生不可能なイベントもあります。 また、トレースをテンプレートとして保存しておき、これに似たトレースを後日作成することもできます。  
   
  SQL Server では、SQL Server のインスタンスをトレースするために 2 とおりの方法が用意されています。つまり、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してトレースする方法と、システム ストアド プロシージャを使用してトレースする方法です。  
@@ -128,8 +127,8 @@ ms.locfileid: "68211047"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|特定の種類のイベントを監視することを目的として SQL Server に備わっている定義済みのテンプレートと、トレースを再生するために必要な権限を紹介します。|[SQL Server プロファイラーのテンプレートと権限](sql-server-profiler-templates-and-permissions.md)|  
-|SQL Server Profiler を実行する方法について説明します。|[SQL Server Profiler の実行に必要な権限](permissions-required-to-run-sql-server-profiler.md)|  
+|特定の種類のイベントを監視することを目的として SQL Server に備わっている定義済みのテンプレートと、トレースを再生するために必要な権限を紹介します。|[SQL Server プロファイラーのテンプレートとアクセス許可](sql-server-profiler-templates-and-permissions.md)|  
+|SQL Server Profiler を実行する方法について説明します。|[SQL Server Profiler の実行に必要なアクセス許可](permissions-required-to-run-sql-server-profiler.md)|  
 |トレースの作成方法について説明します。|[トレースの作成 &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)|  
 |トレース ファイルに含めるイベントおよびデータ列を指定する方法について説明します。|[トレース ファイルに含めるイベントとデータ列の指定 &#40;SQL Server Profiler&#41;](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)|  
 |トレース結果をファイルに保存する方法について説明します。|[トレース結果のファイルへの保存 &#40;SQL Server Profiler&#41;](save-trace-results-to-a-file-sql-server-profiler.md)|  
@@ -139,7 +138,7 @@ ms.locfileid: "68211047"
 |フィルターを変更する方法について説明します。|[フィルターの変更 &#40;SQL Server Profiler&#41;](modify-a-filter-sql-server-profiler.md)|  
 |トレース ファイルの最大ファイル サイズを設定する方法について説明します (SQL Server Profiler)。|[トレース ファイルの最大ファイル サイズの設定 &#40;SQL Server Profiler&#41;](set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md)|  
 |トレース テーブルの最大テーブル サイズを設定する方法について説明します。|[トレース テーブルの最大テーブル サイズの設定 &#40;SQL Server Profiler&#41;](set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)|  
-|トレースの開始方法について説明します。|[トレースの開始](start-a-trace.md)|  
+|トレースの開始方法について説明します。|[トレースを開始する](start-a-trace.md)|  
 |サーバーへの接続後、トレースを自動的に開始する方法について説明します。|[サーバーへの接続後の自動的なトレースの開始 &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)|  
 |イベントの開始時刻に基づいてイベントをフィルター選択する方法について説明します。|[イベントの開始時刻に基づいたイベントのフィルター選択 &#40;SQL Server Profiler&#41;](filter-events-based-on-the-event-start-time-sql-server-profiler.md)|  
 |イベントの終了時刻に基づいてイベントをフィルター選択する方法について説明します。|[イベントの終了時刻に基づいたフィルターでのイベントの選択 &#40;SQL Server Profiler&#41;](filter-events-based-on-the-event-end-time-sql-server-profiler.md)|  
@@ -173,7 +172,7 @@ ms.locfileid: "68211047"
 |トレースに表示される列を構成する方法について説明します。|[トレースに表示される列の構成 &#40;SQL Server Profiler&#41;](organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
 |SQL Server Profiler を起動する方法について説明します。|[SQL Server Profiler の起動](start-sql-server-profiler.md)|  
 |トレースとトレース テンプレートを保存する方法について説明します。|[トレースとトレース テンプレートの保存](save-traces-and-trace-templates.md)|  
-|トレース テンプレートの変更方法について説明します。|[トレーステンプレートの変更](modify-trace-templates.md)|  
+|トレース テンプレートの変更方法について説明します。|[トレース テンプレートを変更する](modify-trace-templates.md)|  
 |トレースと Windows パフォーマンス ログ データを相互に関連付ける方法について説明します。|[トレースと Windows パフォーマンス ログ データの関連付け](correlate-a-trace-with-windows-performance-log-data.md)|  
 |SQL Server Profiler を使用したトレースの表示と分析の方法について説明します。|[SQL Server Profiler を使用したトレースの表示と分析](view-and-analyze-traces-with-sql-server-profiler.md)|  
 |SQL Server Profiler を使用してデッドロックを分析する方法について説明します。|[SQL Server Profiler を使用したデッドロックの分析](analyze-deadlocks-with-sql-server-profiler.md)|  

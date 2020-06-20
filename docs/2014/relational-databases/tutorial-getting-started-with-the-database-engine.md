@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aaa1fb21c026d064c2b14db73aadc2b82e9c15d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996061"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>チュートリアル : データベース エンジンの概要
   「 [!INCLUDE[ssDE](../includes/ssde-md.md)] の概要」チュートリアルへようこそ。 このチュートリアルは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を初めて使用するユーザーで、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] または [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]をインストールしたユーザーを対象にしています。 この短いチュートリアルでは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]の簡単な使用方法を学習できます。  

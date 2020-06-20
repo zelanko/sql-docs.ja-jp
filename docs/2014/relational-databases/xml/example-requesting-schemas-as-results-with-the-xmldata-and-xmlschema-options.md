@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6c757db5cd8a5513f80233ba4ba4d6be3cc53dd1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1dd81612526ca17c5100485d1d27d246b5a8abfe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716887"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061260"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>例: XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求
   次のクエリでは、ドキュメント構造を記述する XML-DATA スキーマが返されます。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6abc209e200be39fe79209d89cfb6f3a492e0e6a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 60c4198697f8d19c9b2e5bc1b415e0787861d40a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702371"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061226"
 ---
 # <a name="use-nested-for-xml-queries"></a>入れ子になった FOR XML クエリの使用
   `xml`データ型と[for xml クエリの type ディレクティブ](type-directive-in-for-xml-queries.md)を使用すると、for xml クエリによって返された xml を、サーバーとクライアントの両方で処理できます。  

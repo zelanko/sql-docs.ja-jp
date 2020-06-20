@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 648aa642f380d042091005cf9dbd8e6d8d61add9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056440"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964592"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Integration Services サーバーのレポート
   現在のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で使用できるようになりました。 これらのレポートは、パッケージの状態と履歴を確認したり、必要に応じてパッケージ実行の失敗の原因を特定したりするのに役立ちます。  
@@ -47,7 +46,7 @@ ms.locfileid: "66056440"
   
 |Section|説明|  
 |-------------|-----------------|  
-|Assert|レポートに適用される現在のフィルターを示します (開始時間範囲など)。|  
+|フィルター|レポートに適用される現在のフィルターを示します (開始時間範囲など)。|  
 |実行情報|各パッケージの実行の開始時刻、終了時刻、および持続時間を示します。パッケージの実行で使用されたパラメーター値 (パッケージ実行タスクで子パッケージに渡された値など) の一覧を表示できます。 パラメーターの一覧を表示するには、[概要] をクリックします。|  
   
  パッケージ実行タスクを使用して子パッケージで値を使用できるようにする方法の詳細については、「 [パッケージ実行タスク](control-flow/execute-package-task.md)」を参照してください。  
@@ -61,8 +60,8 @@ ms.locfileid: "66056440"
   
 |Section|説明|  
 |-------------|-----------------|  
-|Assert|レポートに適用される現在のフィルター (指定した文字列を使用し、 **[前回失敗した日時]** 範囲にある接続など) を示します。<br /><br /> 特定の日付範囲中に発生した接続エラーのみを表示するには、 **[前回失敗した日時]** を設定します。 範囲には、複数の日、月、または年を指定できます。|  
-|詳細情報|接続文字列、接続中に失敗した実行の回数、および最後に失敗した日付を示します。|  
+|フィルター|レポートに適用される現在のフィルター (指定した文字列を使用し、 **[前回失敗した日時]** 範囲にある接続など) を示します。<br /><br /> 特定の日付範囲中に発生した接続エラーのみを表示するには、 **[前回失敗した日時]** を設定します。 範囲には、複数の日、月、または年を指定できます。|  
+|詳細|接続文字列、接続中に失敗した実行の回数、および最後に失敗した日付を示します。|  
   
 ## <a name="all-operations-report"></a>"すべての操作" レポート  
  **"すべての操作" レポート** には、パッケージの配置、検証、実行、およびその他の管理操作を含む、サーバー上で実行されたあらゆる [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 操作の概要が表示されます。 Integration Services ダッシュボードと同様に、テーブルにフィルターを適用して、表示される情報を絞り込むことができます。  
@@ -71,7 +70,7 @@ ms.locfileid: "66056440"
  **"すべての検証" レポート** には、サーバーで実行されたすべての [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の検証の概要が表示されます。 この概要には、状態、開始時刻、終了時刻など、各検証の情報が表示されます。 各概要エントリには、検証中に生成されたメッセージへのリンクが含まれます。 Integration Services ダッシュボードと同様に、テーブルにフィルターを適用して、表示される情報を絞り込むことができます。  
   
 ## <a name="custom-reports"></a>カスタム レポート  
- **の** [Integration Services カタログ] **ノードの下の** [SSISDB] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]カタログ ノードに、カスタム レポート (.rdl ファイル) を追加できます。 レポートを追加する前に、ソース テーブルなど、参照するオブジェクトを完全修飾するための 3 つの要素で構成される名前付け規則を使用していることを確認します。 そうでない場合、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でエラーが表示されます。 名前付け規則は、\<データベース>.\<所有者>.\<オブジェクト> です。 たとえば、SSISDB.internal.executions などです。  
+ **の** [Integration Services カタログ] **ノードの下の** [SSISDB] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]カタログ ノードに、カスタム レポート (.rdl ファイル) を追加できます。 レポートを追加する前に、ソース テーブルなど、参照するオブジェクトを完全修飾するための 3 つの要素で構成される名前付け規則を使用していることを確認します。 そうでない場合、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でエラーが表示されます。 名前付け規則は.. \<database> \<owner> \<object> .例として、SSISDB.internal.exeます。  
   
 > [!NOTE]  
 >  **[データベース]** ノードの下の **[SSISDB]** ノードにカスタム レポートを追加した場合、SSISDB プレフィックスは必要ありません。  

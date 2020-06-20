@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43066d036a23a063c218234b3a346bf89560994f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c430f08b4a86c981df5138c7f78e76b54e7de28
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054987"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972839"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>[ジョブ転送タスク エディター] ([ジョブ] ページ)
   **[ジョブ転送タスク エディター]** ダイアログ ボックスの **[ジョブ]** ページを使用すると、1 つ以上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 1 つのインスタンスから別のインスタンスにコピーするためのプロパティを指定できます。 ジョブ転送タスクの詳細については、「 [Transfer Jobs Task](control-flow/transfer-jobs-task.md)」を参照してください。  
@@ -29,19 +28,19 @@ ms.locfileid: "66054987"
   
 ## <a name="options"></a>オプション  
  **[Sourceconnection]**  
- SMO 接続マネージャーを一覧から選択するか、[ ** \<新しい接続... >** をクリックして、移行元サーバーへの新しい接続を作成します。  
+ SMO 接続マネージャーを一覧から選択するか、をクリックし **\<New connection...>** て、移行元サーバーへの新しい接続を作成します。  
   
  **DestinationConnection**  
- SMO 接続マネージャーを一覧から選択するか、[ ** \<新しい接続... >** をクリックして、移行先サーバーへの新しい接続を作成します。  
+ SMO 接続マネージャーを一覧から選択するか、をクリックし **\<New connection...>** て、移行先サーバーへの新しい接続を作成します。  
   
  **[TransferAllJobs]**  
  コピー元サーバーからコピー先サーバーにすべてコピーするか、指定の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブのみをコピーするかを選択します。  
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|**本来**|すべてのジョブをコピーします。|  
+|**True**|すべてのジョブをコピーします。|  
 |**False**|指定のジョブのみをコピーします。|  
   
  **[JobsList]**  
@@ -57,20 +56,20 @@ ms.locfileid: "66054987"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[FailTask]**|ジョブの名前がコピー先サーバーに既に存在する名前と同じである場合、タスクは失敗します。|  
-|**オーバーライド**|コピー先サーバーの同じ名前のジョブを上書きします。|  
-|**Tim**|コピー先サーバーの同じ名前のジョブをスキップします。|  
+|**Overwrite**|コピー先サーバーの同じ名前のジョブを上書きします。|  
+|**Skip**|コピー先サーバーの同じ名前のジョブをスキップします。|  
   
  **[EnableJobsAtDestination]**  
  コピー先サーバーにコピーされたジョブを有効にするかどうかを選択します。  
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|**本来**|コピー先サーバーのジョブを有効にします。|  
+|**True**|コピー先サーバーのジョブを有効にします。|  
 |**False**|コピー先サーバーのジョブを無効にします。|  
   
 ## <a name="see-also"></a>参照  

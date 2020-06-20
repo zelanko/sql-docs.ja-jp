@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 783843e9bc25b0f6f1771fe7459de85b8cb56431
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b37c86616aa1a8077f147fa9bc64b24bcaf17b42
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705452"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020179"
 ---
 # <a name="catalog-metadata"></a>カタログ メタデータ
   このトピックでは、`SQLColumns` および `SQLProcedureColumns` によって返される列のメタデータと、`SQLGetTypeInfo` によって返されるデータ型のメタデータについて説明します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  `SQLColumns` および `SQLProcedureColumns` によって日付型または時刻型に対して返される列の値を次に示します。  
   
 |パラメーターの型|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  

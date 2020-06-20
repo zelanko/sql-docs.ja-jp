@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c525b22c68313fb47bd7db4fc5e547735435839
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2e28f4258aef27403c107158dd13efe5ada02c03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717500"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996243"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML アップデートグラムのガイドラインと制限 (SQLXML 4.0)
   XML アップデートグラムを使用する場合は、次の点に注意してください。  
   
--   1組だけを持つ挿入操作のためのアップデートグラムを使用している場合は、>と>ブロックの** \< 後** ** \< に**、 ** \<>前**のブロックを省略できます。 逆に、削除操作の場合は、 ** \< after>** ブロックを省略できます。  
+-   とブロックのペアが1つだけである挿入操作にアップデートグラムを使用している場合は、 **\<before>** **\<after>** ブロックを **\<before>** 省略できます。 逆に、削除操作の場合は、 **\<after>** ブロックを省略できます。  
   
--   以前に複数のアップデートグラムを使用していて、 ** \< 同期>** タグで** \<>** ブロックを** \<>** している場合は、 ** \<>** ブロックの前と>のブロック** \< の後の**両方で、>** \< と>のペアの** ** \< 前に**形成するように指定する必要があります。  
+-   タグに複数のおよびブロックを含むアップデートグラムを使用している場合は、 **\<before>** **\<after>** との **\<sync>** **\<before>** **\<after>** ペアを形成するために、ブロックとブロックの両方を指定する必要があり **\<before>** **\<after>** ます。  
   
 -   アップデートグラムの更新は、XML スキーマで提供される XML ビューに適用されます。 したがって、既定のマッピングが正しく行われるようにするには、アップデートグラムでスキーマ ファイル名を指定するか、ファイル名を指定しない場合は、要素名と属性名がデータベースのテーブル名と列名に一致している必要があります。  
   
@@ -44,9 +43,9 @@ ms.locfileid: "82717500"
   
 -   アップデートグラムでは、更新中に `image` 型データをパラメーターとして引き渡すことはできません。  
   
--   やイメージのようなバイナリラージオブジェクト (BLOB) 型は `text/ntext` 、updategrams を使用する場合に、の** \< 前の>** ブロックでは使用しないでください。これには、同時実行制御に使用するものが含まれます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で、BLOB 型の比較の制限によって問題が発生する可能性があります。 たとえば、`text` データ型の列を比較するには WHERE 句で LIKE キーワードを使用しますが、データ サイズが 8 KB を超える BLOB 型の場合、この比較は失敗します。  
+-   や image のようなバイナリラージオブジェクト (BLOB) 型は、 `text/ntext` updategrams を使用するときにのブロックでは使用しない **\<before>** でください。これには、同時実行制御で使用するためのものが含まれます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で、BLOB 型の比較の制限によって問題が発生する可能性があります。 たとえば、`text` データ型の列を比較するには WHERE 句で LIKE キーワードを使用しますが、データ サイズが 8 KB を超える BLOB 型の場合、この比較は失敗します。  
   
--   `ntext` データで特殊文字を使用すると、BLOB 型の比較の制限によって、SQLXML 4.0 で問題が発生する可能性があります。 たとえば、アップデートグラムの** \< before>** ブロックで "[Serializable]" を使用した場合、型の列の同時実行制御チェックでは、 `ntext` 次の SQLOLEDB エラーの説明で失敗します。  
+-   `ntext` データで特殊文字を使用すると、BLOB 型の比較の制限によって、SQLXML 4.0 で問題が発生する可能性があります。 たとえば、アップデートグラムのブロックで "[Serializable]" を使用 **\<before>** すると、型の列に対する同時実行制御チェックに `ntext` 失敗し、次の SQLOLEDB エラー説明が返されます。  
   
     ```  
     Empty update, no updatable rows found   Transaction aborted  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7390434b1565c64b63e62c89d1e61b13f18cd6a6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058189"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965702"
 ---
 # <a name="implementation-of-child-packages"></a>子パッケージの実装
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]を使用して負荷分散を実装すると、子パッケージが他のサーバーにインストールされ、利用可能な CPU 時間またはサーバー時間を活用することができます。 子パッケージを作成および実行するには、次の手順を実行します。  
@@ -51,7 +50,7 @@ ms.locfileid: "66058189"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>SQL Server エージェント ジョブと子パッケージのデバッグ  
  次のいずれかの方法を使用して、SQL Server エージェント ジョブとその子パッケージをテストできます。  
   
--   [デバッグ] [ / **デバッグなしで開始**] を**クリックし**て、SSIS デザイナーで各子パッケージを実行します。  
+-   [デバッグ **] [**  /  **デバッグなしで開始**] をクリックして、SSIS デザイナーで各子パッケージを実行します。  
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用してリモート コンピューター上の個別の SQL Server エージェント ジョブを実行し、パッケージが実行されていることを確認します。  
   

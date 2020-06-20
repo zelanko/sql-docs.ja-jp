@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e0a4e38-4555-4750-8fd3-4425b29e6aa1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d6c2dbfb1254260f5c92df5f1da33ba26e368aa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09836db1f510ac77635924c51e5341686627d54d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192051"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995960"
 ---
 # <a name="properties-property-clientnetworkprotocol-class"></a>Properties プロパティ (ClientNetworkProtocol クラス)
   [Configure Client Protocols (クライアント プロトコルの構成)](https://technet.microsoft.com/library/ms181035.aspx)によって指定された現在のクライアント ネットワーク プロトコルに関連付けられたプロパティを取得します。  
@@ -36,12 +35,12 @@ object
 .Properties [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  [クライアントによって使用されるネットワーク プロトコルを表す](clientnetworkprotocol-class.md) ClientNetworkProtocol クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- `OrderValue`プロパティによって参照されている現在のクライアントネットワークプロトコルでサポートされているプロパティを表す[Clientnetworkprotocolproperty クラス](../clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)オブジェクトの配列。  
+ プロパティによって参照されている現在のクライアントネットワークプロトコルでサポートされているプロパティを表す[Clientnetworkprotocolproperty クラス](../clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)オブジェクトの配列 `OrderValue` 。  
   
 ## <a name="remarks"></a>Remarks  
   

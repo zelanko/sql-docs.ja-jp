@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25700bfb9e2cd28fd18efe59a2df4e68f468d39b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767654"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965362"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>手順 1:作業フォルダーと環境変数の作成
   このタスクでは、この後のチュートリアル タスクで使用する作業フォルダー (C:\DeploymentTutorial) と新しいシステム環境変数 (`DataTransfer` および `LoadXMLData`) を作成します。  
@@ -36,7 +35,7 @@ ms.locfileid: "62767654"
   
 3.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[フォルダー]** をクリックします。  
   
-4.  新しいフォルダーの名前`DeploymentTutorial`をに変更します。  
+4.  新しいフォルダーの名前をに変更 `DeploymentTutorial` します。  
   
 ### <a name="to-create-local-environment-variables"></a>ローカルの環境変数を作成するには  
   
@@ -48,11 +47,11 @@ ms.locfileid: "62767654"
   
 4.  **[環境変数]** ダイアログ ボックスの **[システム環境変数]** フレームで、 **[新規]** をクリックします。  
   
-5.  [**新しいシステム変数**] ダイアログボックスで、 `DataTransfer` [**変数名**] ボックスに「 `C:\DeploymentTutorial\datatransferconfig.dtsconfig` 」と入力し、[**変数の値**] ボックスに「」と入力します。  
+5.  [**新しいシステム変数**] ダイアログボックスで、[ `DataTransfer` **変数名**] ボックスに「」と入力し、[変数の `C:\DeploymentTutorial\datatransferconfig.dtsconfig` **値**] ボックスに「」と入力します。  
   
 6.  **[OK]** をクリックします。  
   
-7.  もう一度 [**新規**] を`LoadXMLData`クリックし、[**変数名**] `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig`ボックスに「」と入力し、[**変数の値**] ボックスに「」と入力します。  
+7.  もう一度 [**新規**] をクリックし、[ `LoadXMLData` **変数名**] ボックスに「」と入力し、[ `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` 変数の**値**] ボックスに「」と入力します。  
   
 8.  **[OK]** をクリックして **[環境変数]** ダイアログ ボックスを閉じます。  
   
@@ -70,11 +69,11 @@ ms.locfileid: "62767654"
   
 4.  **[環境変数]** ダイアログ ボックスの **[システム環境変数]** フレームで、 **[新規]** をクリックします。  
   
-5.  [**新しいシステム変数**] ダイアログボックスで、 `DataTransfer` [**変数名**] ボックスに「 `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` 」と入力し、[**変数の値**] ボックスに「」と入力します。  
+5.  [**新しいシステム変数**] ダイアログボックスで、[ `DataTransfer` **変数名**] ボックスに「」と入力し、[変数の `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` **値**] ボックスに「」と入力します。  
   
 6.  **[OK]** をクリックします。  
   
-7.  もう一度 [**新規**] を`LoadXMLData`クリックし、[**変数名**] `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig`ボックスに「」と入力し、[**変数の値**] ボックスに「」と入力します。  
+7.  もう一度 [**新規**] をクリックし、[ `LoadXMLData` **変数名**] ボックスに「」と入力し、[ `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` 変数の**値**] ボックスに「」と入力します。  
   
 8.  **[OK]** をクリックして **[環境変数]** ダイアログ ボックスを閉じます。  
   
