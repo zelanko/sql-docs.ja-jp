@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d3f2412114e50292c91908b3a20c433d022b239
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185814"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057605"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>スケジュールされたポリシーの複数インスタンスへの配置
   登録済みサーバーを使用すると、スケジュールされたポリシーを集中管理された場所からマネージド サーバーに配置できます。 スケジュールされたポリシーは、ローカル サーバー グループまたは中央管理サーバーから配置できます。  
@@ -92,10 +91,10 @@ ms.locfileid: "68185814"
 ## <a name="summary"></a>まとめ  
  このチュートリアルでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 1 つ以上のインスタンスに対して、ベスト プラクティス ポリシーの評価を要求時および定期的に実行する方法について学習しました。  
   
-## <a name="next"></a>Next  
+## <a name="next"></a>次へ  
  このチュートリアルはこれで終了です。 開始に戻るには、「[チュートリアル: ポリシーベースの管理を使用したベストプラクティスの評価](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)」を参照してください。  
   
- チュートリアルの[!INCLUDE[ssDE](../includes/ssde-md.md)]一覧を表示するには、[[データベースエンジンチュートリアル](../relational-databases/database-engine-tutorials.md)] をクリックします。  
+ チュートリアルの一覧を表示するには [!INCLUDE[ssDE](../includes/ssde-md.md)] 、[[データベースエンジンチュートリアル](../relational-databases/database-engine-tutorials.md)] をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理を使用したサーバーの管理](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

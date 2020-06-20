@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0d20a569-8a27-409c-bcab-0effefb48013
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cac1e775d5cccaccca90b03104de4132e651284e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b518c93ca9d5e7157ceaa20d9548d7b6061017d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62467846"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050041"
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>データベースの復元とリソース プールへのバインド
   メモリ最適化テーブルが含まれるデータベースを復元するためのメモリが十分にある場合も、ベスト プラクティスに従って名前付きリソース プールにデータベースをバインドする必要があります。 データベースをプールにバインドする前に、そのデータベースが存在する必要があるため、データベースを復元するプロセスには複数のステップが含まれます。 このトピックでは、そのプロセスについて説明します。  

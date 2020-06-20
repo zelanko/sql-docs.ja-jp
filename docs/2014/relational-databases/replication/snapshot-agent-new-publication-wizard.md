@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 20e4e015064dcf0e472c2f3c56ecabf4100e6fe7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d869865a00f8ec1d197cba9448477b1a4147c594
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676577"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055632"
 ---
 # <a name="snapshot-agent-new-publication-wizard"></a>[スナップショット エージェント] (パブリケーションの新規作成ウィザード)
   [スナップショット エージェント] では、新しいサブスクリプションの初期化に使用されるパブリケーション スキーマおよびデータを含んでいるファイルを作成します。 既定では、スナップショット エージェントは、パブリケーションの新規作成ウィザードでパブリケーションが作成されるとすぐに実行されます。 続いて、エージェントが指定したスケジュールに従って実行されます。 エージェントが実行されるたびに新しいスナップショット ファイルが作成されるかどうかは、選択したレプリケーションおよびオプションの種類によって異なります。 詳細については、「[スナップショットの作成および適用](create-and-apply-the-snapshot.md)」を参照してください。  

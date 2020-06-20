@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d296aae78434bcfff1c69770878705ef5f4bd0ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63145493"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025354"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1: データベース エンジンへの接続
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインストール時に一緒にインストールされるツールは、エディションとセットアップによって異なります。 このレッスンでは、主要なツールについて確認し、接続して基本機能を実行する方法について学習します。これで、さらに多くのユーザーを認証することができます。  
@@ -27,7 +26,7 @@ ms.locfileid: "63145493"
   
 ### <a name="basic-tools"></a>基本ツール  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、[!INCLUDE[ssDE](../includes/ssde-md.md)]を管理し、[!INCLUDE[tsql](../includes/tsql-md.md)] コードを記述するための主要なツールです。 このツールは、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] シェルでホストされます。 に[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]は含まれていませんが、 [Microsoft ダウンロードセンター](https://go.microsoft.com/fwlink/?LinkId=144346)から個別にダウンロードできます。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、[!INCLUDE[ssDE](../includes/ssde-md.md)]を管理し、[!INCLUDE[tsql](../includes/tsql-md.md)] コードを記述するための主要なツールです。 このツールは、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] シェルでホストされます。 には含まれていませんが、 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] [Microsoft ダウンロードセンター](https://go.microsoft.com/fwlink/?LinkId=144346)から個別にダウンロードできます。  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] およびクライアント ツールと共にインストールされます。 このツールを使用すると、サーバー プロトコルを有効化したり、TCP ポートなどのプロトコル オプション、サーバー サービスの自動開始、指定の方法によるクライアント コンピューターの接続などを構成することができます。 このツールはより詳細な接続要素を構成しますが、機能は有効にしません。  
   
@@ -36,21 +35,21 @@ ms.locfileid: "63145493"
   
 ##### <a name="to-start-sql-server-management-studio"></a>SQL Server Management Studio を起動するには  
   
--   [**スタート**] ボタンをクリックし、[**すべて**のプログラム[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]、[] の順にポイントして、[ **SQL Server Management Studio**] をクリックします。  
+-   [**スタート**] ボタンをクリックし、[**すべてのプログラム**]、[] の順にポイントして、 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] [ **SQL Server Management Studio**] をクリックします。  
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>SQL Server 構成マネージャーを起動するには  
   
--   **[スタート]** メニューで、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+-   **[スタート]** メニューで、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 ##  <a name="connecting-with-management-studio"></a><a name="connect"></a>Management Studio を使用した接続  
- インスタンスの名前がわかっている[!INCLUDE[ssDE](../includes/ssde-md.md)]場合や、コンピューターの Administrators グループのメンバーとして接続している場合は、同じコンピューターで実行されているツールからに簡単に接続できます。 次の手順は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]をホストしている同じコンピューター上で実行する必要があります。  
+ [!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスの名前がわかっている場合や、コンピューターの Administrators グループのメンバーとして接続している場合は、同じコンピューターで実行されているツールからに簡単に接続できます。 次の手順は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]をホストしている同じコンピューター上で実行する必要があります。  
   
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>データベース エンジン インスタンスの名前を確認するには  
   
 1.  Administrators グループのメンバーとして Windows にログインし、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を起動します。  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]または[!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (または[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]それ以降) に接続している場合は、を右クリック[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]し、[**管理者として実行**] をクリックして、管理者の資格情報を使用して接続する必要があります。 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 以降では、選択されたログインがセットアップ時に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に追加されるため、管理者の資格情報は必要ありません。  
+    >  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] または (またはそれ以降) に接続している場合は [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] 、を右クリック [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] し、[**管理者として実行**] をクリックして、管理者の資格情報を使用して接続する必要があります。 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 以降では、選択されたログインがセットアップ時に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に追加されるため、管理者の資格情報は必要ありません。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[キャンセル]** をクリックします。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "63145493"
   
      **[ログイン - 新規作成]** ダイアログ ボックスが表示されます。  
   
-2.  [**全般**] ページの [**ログイン名**] ボックスに、 * \<ドメイン\\><ログイン\>* の形式で Windows ログインを入力します。  
+2.  [**全般**] ページの [**ログイン名**] ボックスに、 * \<domain> \\<ログイン \> *の形式で Windows ログインを入力します。  
   
 3.  **[既定のデータベース]** ボックスで、[ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ] が有効な場合はこれを選択します。 有効でない場合は **[master]** を選択します。  
   

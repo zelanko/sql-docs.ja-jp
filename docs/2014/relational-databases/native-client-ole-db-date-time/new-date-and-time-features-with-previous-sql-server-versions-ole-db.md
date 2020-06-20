@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df9e157431a8330aed8357231c3b28d12cb4fbc1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 39f22fe37138fab22d79acc5bd667257f392737a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705010"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056298"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>以前のバージョンの SQL Server における、新しい日付または時刻の機能の動作 (OLE DB)
   このトピックでは、強化された日付と時刻を使用するクライアントアプリケーションがより前のバージョンのと通信する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] およびより前のバージョンの Native client でコンパイルされたクライアントが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 機能強化された日付と時刻をサポートするサーバーにコマンドを送信する場合の想定される動作について説明します。  
@@ -66,7 +65,7 @@ ms.locfileid: "82705010"
 |パラメーターのタイプ|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
 |date|DBTYPE_WSTR|10|~0|~0|  
-|time|DBTYPE_WSTR|8、10..16|~0|~0|  
+|時間|DBTYPE_WSTR|8、10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19、21.. 27|~0|~0|  
@@ -80,7 +79,7 @@ ms.locfileid: "82705010"
 |列の型|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
 |date|DBTYPE_WSTR|10|NULL|NULL|  
-|time|DBTYPE_WSTR|8、10..16|NULL|NULL|  
+|時間|DBTYPE_WSTR|8、10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19、21.. 27|NULL|NULL|  
@@ -107,7 +106,7 @@ ms.locfileid: "82705010"
 |列の型|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
 |date|DBTYPE_WSTR|10|20|NULL|  
-|time|DBTYPE_WSTR|8、10..16|16、20.. 32|NULL|  
+|時間|DBTYPE_WSTR|8、10..16|16、20.. 32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
 |datetime2|DBTYPE_WSTR|19、21.. 27|38, 42.. 54|NULL|  
@@ -119,7 +118,7 @@ ms.locfileid: "82705010"
 |列の型|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
 |date|DBTYPE_WSTR|10|20|date|  
-|time|DBTYPE_WSTR|8、10..16|16、20.. 32|time|  
+|time|DBTYPE_WSTR|8、10..16|16、20.. 32|時間|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
 |datetime2|DBTYPE_WSTR|19、21.. 27|38, 42.. 54|datetime2|  
@@ -128,7 +127,7 @@ ms.locfileid: "82705010"
 #### <a name="provider_types-rowset"></a>PROVIDER_TYPES 行セット  
  日付/時刻型に対して返される行を次に示します。  
   
-|型 -><br /><br /> Column|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|型 -><br /><br /> 列|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  

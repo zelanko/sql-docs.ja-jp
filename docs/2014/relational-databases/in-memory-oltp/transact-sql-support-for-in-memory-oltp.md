@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8042534c8b22863c5a00abf4969bdb9754cef892
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf3708a258e3bb97231e45b10bea2c59351a06a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702210"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025494"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Transact-SQL によるインメモリ OLTP のサポート
   Transact-SQL クエリまたは DML ステートメント (SELECT、INSERT、UPDATE、または DELETE)、アドホック ステートメント、および SQL モジュール (ストアド プロシージャ、テーブル-値関数、スカラー関数、トリガー、ビューなど) を使用して、メモリ最適化テーブルにアクセスできます。 詳細については、「解釈された[Transact-sql を使用したメモリ最適化テーブルへのアクセス](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)」を参照してください。  
@@ -42,7 +41,7 @@ ms.locfileid: "82702210"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [サポートされるデータ型](supported-data-types-for-in-memory-oltp.md)  
+-   [サポートされているデータ型](supported-data-types-for-in-memory-oltp.md)  
   
 -   [解釈された Transact-SQL を使用したメモリ最適化テーブルへのアクセス](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)  
   

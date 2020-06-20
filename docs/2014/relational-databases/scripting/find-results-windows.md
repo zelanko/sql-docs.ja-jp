@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 406c19cb8cc5609e15206c81fc0297e14c6dd8ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 06f26cb7b606052b2183c90713f0ab0470351ffc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703887"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049038"
 ---
 # <a name="find-results-windows"></a>検索結果ウィンドウ
   2 つの検索結果ウィンドウには、 **[検索と置換]** ダイアログの **[フォルダーを指定して検索]** タブまたは **[フォルダーを指定して置換]** タブを使用して検出された項目が表示されます。 **[フォルダーを指定して検索]** または **[フォルダーを指定して置換]** の **[検索結果]** コマンドを使用すると、検出された項目が表示される検索結果ウィンドウを選択できます。  

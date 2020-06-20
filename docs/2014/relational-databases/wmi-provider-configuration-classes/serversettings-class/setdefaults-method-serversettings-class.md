@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: daa5635fc64e46dd8b6ccf6b9ab4cf38dc5d492d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d57d1859e12cb86ba18779b104402cc09c979946
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056708"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults メソッド (ServerSettings クラス)
-  既存のデータを上書きするオプションを使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]して、のインスタンスのすべての既定値を設定します。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 既存のデータを上書きするオプションを使用して、のインスタンスのすべての既定値を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,9 +38,9 @@ OverwriteAll
   
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアントインスタンスを表す[serversettings クラス](serversettings-class.md)オブジェクト。  
+ クライアントインスタンスを表す[Serversettings クラス](serversettings-class.md)オブジェクト [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>パラメーター  
   

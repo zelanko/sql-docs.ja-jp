@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a07ba7d4af55fa4215a7b08ae34b718d4de46cd4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6d4619dc87bf7dfbc34f4d835ee21bced27f1a52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694589"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056236"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode には、列形式を指定するために [IBCPSession::BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md) の代替手段が用意されています。 個々の列形式属性を設定する IBCPSession::BCPColFmt とは異なり、IBCPSession2::BCPSetBulkMode では、すべての属性を設定します。  
@@ -62,7 +61,7 @@ HRESULT BCPSetBulkMode (
 |`E_INVALIDARG`|引数が無効です。|  
 |`E_OUTOFMEMORY`|メモリ不足エラー。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  IBCPSession2::BCPSetBulkMode を使用して、クエリまたはテーブルを一括コピーできます。 IBCPSession2::BCPSetBulkMode を使用してクエリ ステートメントを一括コピー出力する場合は、`IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` を呼び出してクエリ ステートメントを指定する前に、これを呼び出す必要があります。  
   
  RPC 呼び出し構文とバッチ クエリ構文 (`{rpc func};SELECT * from Tbl` など) を 1 つのコマンド テキスト内で組み合わせて使用しないでください。  ICommandPrepare::Prepare からエラーが返され、メタデータを取得できなくなるためです。 ストアド プロシージャの実行とバッチ クエリを 1 つのコマンド テキストで組み合わせて使用する必要がある場合は、ODBC CALL 構文 (`{call func}; SELECT * from Tbl` など) を使用します。  
@@ -71,10 +70,10 @@ HRESULT BCPSetBulkMode (
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP の-c オプションに対応しています。を実行し、 *Euserdatatype*プロパティをに設定して、IBCPSession:: BCPColFmt にし `BCP_TYPE_SQLCHARACTER` ます。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の-w オプションに対応しています。EXE および IBCPSession:: BCPColFmt と*Euserdatatype*プロパティをに設定 `BCP_TYPE_SQLNCHAR` します。|  
-|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP の-N オプションに対応しています。EXE および IBCPSession:: BCPColFmt で*Euserdatatype*プロパティをに設定すると `BCP_TYPE_SQLNCHAR` 、列の型が文字列であるか、文字列でない場合はに設定され `BCP_TYPE_DEFAULT` ます。|  
-|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP の-n オプションに対応しています。EXE および IBCPSession:: BCPColFmt と*Euserdatatype*プロパティをに設定 `BCP_TYPE_DEFAULT` します。|  
+|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP.EXE の-c オプション、および*Euserdatatype*プロパティがに設定された IBCPSession:: BCPColFmt に対応し `BCP_TYPE_SQLCHARACTER` ます。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP.EXE の-w オプションと*Euserdatatype*プロパティがに設定された IBCPSession:: BCPColFmt に対応し `BCP_TYPE_SQLNCHAR` ます。|  
+|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> 列の型が文字列の場合、または文字列でない場合は、 *Euserdatatype*プロパティをに設定して、BCP.EXE の-N オプションと IBCPSession:: BCPColFmt に対応し `BCP_TYPE_SQLNCHAR` `BCP_TYPE_DEFAULT` ます。|  
+|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP.EXE の-n オプションと、 *Euserdatatype*プロパティがに設定された IBCPSession:: BCPColFmt に対応し `BCP_TYPE_DEFAULT` ます。|  
   
  IBCPSession::BCPControl と IBCPSession2::BCPSetBulkMode は、IBCPSession2::BCPSetBulkMode と競合しない IBCPSession::BCPControl オプションに対して呼び出すことができます。 たとえば、 `BCP_OPTION_FIRST` および IBCPSession2:: BCPSetBulkMode を使用して、IBCPSession:: BCPControl を呼び出すことができます。  
   

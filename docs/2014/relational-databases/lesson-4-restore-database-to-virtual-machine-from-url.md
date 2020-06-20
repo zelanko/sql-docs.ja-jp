@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fb9eaf62514b76e35b73ea87b7820751f670a90f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 613b66c04a69364f3c9be1059f95021dd3eff595
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175579"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049804"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>レッスン 5: (省略可) TDE を使用してデータベースを暗号化する
   省略可能な手順として、新しく作成したデータベースを暗号化できます。 透過的なデータ暗号化 (TDE) では、データとログ ファイルの暗号化と暗号化解除がリアルタイムの I/O で実行されます。 この種の暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 詳細については、「 [tde&#41;の Transparent Data Encryption &#40;](security/encryption/transparent-data-encryption.md) [Tde で保護されたデータベースを別の SQL Server に移動する](security/encryption/move-a-tde-protected-database-to-another-sql-server.md)」を参照してください。  

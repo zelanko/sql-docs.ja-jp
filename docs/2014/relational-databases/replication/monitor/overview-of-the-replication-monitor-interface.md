@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b76d4df23f5d8bb25664ba0f1d294deca9be0418
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62668988"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057165"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>レプリケーション モニターのインターフェイスの概要
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターでは、レプリケーションのすべての利用状況について、パブリッシャー関連の情報またはディストリビューター関連の情報が 2 つのペインで表示されます。 左ペインにパブリッシャーを追加すると、パブリッシャーとそのパブリケーション、パブリケーションのサブスクリプション、およびさまざまなレプリケーション エージェントに関する情報が右ペインに表示されます。 レプリケーション モニターでは、レプリケーション トポロジに関する情報の表示に加えて、エージェントの開始や停止、データの検証などさまざまなタスクを実行できます。  
@@ -225,7 +224,7 @@ ms.locfileid: "62668988"
   
      このダイアログ ボックスでは、プロファイルのプロパティの変更、プロファイルの作成と削除、既定のプロファイルの指定、および特定の種類のエージェント (スナップショット エージェントなど) のすべてが使用するプロファイルの指定を行うことができます。  
   
--   **\<AgentProfileName > プロパティ**  
+-   **\<AgentProfileName>属性**  
   
      このダイアログ ボックスでは、プロファイルのパラメーター設定の表示と編集を行うことができます。  
   

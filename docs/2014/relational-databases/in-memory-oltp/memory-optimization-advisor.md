@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f4dcc5a7658ee3549d774989ae95a027a5787fc2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 581ce3a1b13d94814904876f61637dcad3dd76de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719077"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050076"
 ---
 # <a name="memory-optimization-advisor"></a>メモリ最適化アドバイザー
   トランザクション パフォーマンス レポート ツール ( [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)を参照) では、インメモリ OLTP を使用するように移植した場合に効果が得られる、データベース内のテーブルが通知されます。 インメモリ OLTP を使用するように移植するテーブルを特定した後に、メモリ最適化アドバイザーを使用すると、ディスク ベースのデータベース テーブルをインメモリ OLTP に移行できます。  

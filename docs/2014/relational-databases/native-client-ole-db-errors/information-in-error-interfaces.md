@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 460a0a2cf58d5980b1265db91d053e3088b55a99
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8f6718692e07fb6037d7ffcea7b21d94fdca3181
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704983"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056275"
 ---
 # <a name="information-in-error-interfaces"></a>エラー インターフェイス内の情報
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、OLE DB 定義されたエラーインターフェイス**IErrorInfo**、 **Ierrorrecords**、 **ISQLErrorInfo**でエラーと状態に関する情報を報告します。  

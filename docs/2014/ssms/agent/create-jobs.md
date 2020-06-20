@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 465fb7fc-7622-4252-a178-ea51691c935b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 986e38ef42fe1af2aba8ba1625225a336f29158d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f9424846c714070ff6bf22043d174762f873117
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162465"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008938"
 ---
 # <a name="create-jobs"></a>ジョブの作成
   ジョブとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって順番に実行される一連の操作です。 ジョブは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト、コマンド プロンプト アプリケーション、Microsoft ActiveX スクリプト、Integration Services パッケージ、Analysis Services コマンドおよびクエリ、レプリケーション タスクの実行など、広範な操作を実行できます。 ジョブは、反復的なタスクやスケジュール可能なタスクを実行でき、警告を発生させてジョブのステータスをユーザーに自動的に通知できるので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の管理が非常に簡単になります。  
@@ -39,7 +38,7 @@ ms.locfileid: "63162465"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ履歴ログをセットアップする方法について説明します。|[Set Up the Job History Log](set-up-the-job-history-log.md)|  
   
 ## <a name="see-also"></a>参照  
- [ジョブステップの管理](manage-job-steps.md)   
+ [ジョブ ステップの管理](manage-job-steps.md)   
  [企業全体の管理の自動化](automated-administration-across-an-enterprise.md)   
  [スケジュールを作成してジョブにアタッチする](create-and-attach-schedules-to-jobs.md)   
  [ジョブの実行](run-jobs.md)   

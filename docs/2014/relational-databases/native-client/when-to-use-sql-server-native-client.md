@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08f18b36-209d-4cf7-9623-ebc61859a91d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d16f4dc681042babcedc8d7ddffa8fbc0389506
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f8aeb34525bbe5c1b003e8fd95e7a414025965a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704097"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057195"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>SQL Server Native Client を使用する場合
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータにアクセスする際に使用できるテクノロジの 1 つです。  各種データ アクセス テクノロジの詳細については、「[データ アクセス テクノロジのロードマップ](https://go.microsoft.com/fwlink/?LinkID=179186)」を参照してください。  

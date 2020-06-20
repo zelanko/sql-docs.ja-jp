@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 911bd20c7d232bca52fdf9dca294bd7a4924d984
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6266664bc4e1d1c782ce75a9de4edebe52d11f0c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054134"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972032"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>システム管理者アカウントの変更 (マスター データ サービス)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]システム管理者として指定されているユーザーアカウントを変更することができます。  
+  システム管理者として指定されているユーザーアカウントを変更することができ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ます。  
   
 > [!WARNING]  
 >  この手順が完了すると、前のシステム管理者のユーザー アカウントは削除されます。  
@@ -36,7 +35,7 @@ ms.locfileid: "66054134"
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssDE](../includes/ssde-md.md)] データベースの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンスに接続します。  
   
-2.  Mdm.tbluser で、新しい管理者となるユーザーを見つけて、 `SID`列の値をコピーします。  
+2.  Mdm.tbluser で、新しい管理者となるユーザーを見つけて、列の値をコピーし `SID` ます。  
   
 3.  新しいクエリを作成します。  
   

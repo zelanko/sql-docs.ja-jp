@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3e604ee6aac125f366ac2fca6444527340213019
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90d107a624c49838588e727be94413c89f2250f5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721495"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010800"
 ---
 # <a name="distribution-agent-security"></a>[ディストリビューション エージェント セキュリティ]
   **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスを使用すると、ディストリビューション エージェントを実行する Windows アカウントを指定できます。 ディストリビューション エージェントは、プッシュ サブスクリプションのディストリビューターと、プル サブスクリプションのサブスクライバーで動作します。 エージェント プロセスはこのアカウントで実行されるため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントは、 *プロセス アカウント*としても参照されます。 ダイアログ ボックスで使用できる追加オプションは、次に示すアクセスの方法によって異なります。  

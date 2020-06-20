@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d80ca8e475bf9c2b56c11118a44e5282573f280d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee2b7992065e31bc6ef57de9b22444cf2da1f963
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055828"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963488"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>[メール送信タスク エディター] ([メール] ページ)
   **[メール送信タスク エディター]** ダイアログ ボックスの **[メール]** ページを使用すると、受信者、メッセージの種類、メッセージの重要度を指定できます。 メッセージにファイルを添付することもできます。 メッセージ テキストは、入力した文字列、テキストが含まれるファイルへのファイル接続、またはテキストが含まれる変数の名前になります。  
@@ -28,7 +27,7 @@ ms.locfileid: "66055828"
   
 ## <a name="options"></a>オプション  
  **[SMTPConnection]**  
- SMTP 接続マネージャーを一覧から選択するか、[ ** \<新しい接続... >** をクリックして新しい接続マネージャーを作成します。  
+ SMTP 接続マネージャーを一覧から選択するか、をクリックして **\<New connection...>** 新しい接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  SMTP 接続マネージャーでは、匿名認証と Windows 認証のみがサポートされています。 基本認証はサポートされていません。  
@@ -53,16 +52,16 @@ ms.locfileid: "66055828"
  **[MessageSourceType]**  
  メッセージのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|メッセージ テキストをソースとして設定します。 この値を選択すると、動的オプション **[MessageSource]** が表示されます。|  
 |**[ファイル接続]**|メッセージ テキストが含まれるファイルをソースとして設定します。 この値を選択すると、動的オプション **[MessageSource]** が表示されます。|  
-|**変数**|メッセージ テキストが含まれる変数をソースとして設定します。 この値を選択すると、動的オプション **[MessageSource]** が表示されます。|  
+|**Variable**|メッセージ テキストが含まれる変数をソースとして設定します。 この値を選択すると、動的オプション **[MessageSource]** が表示されます。|  
   
  **優先順位**  
  メッセージの重要度を設定します。  
   
- **対する**  
+ **[Attachments]**  
  電子メール メッセージに添付するファイル名を指定します。ファイル名はパイプ文字 (|) で区切ります。  
   
 > [!NOTE]  
@@ -76,13 +75,13 @@ ms.locfileid: "66055828"
   
 ### <a name="messagesourcetype--file-connection"></a>[MessageSourceType] = [ファイル接続]  
  **[MessageSource]**  
- ファイル接続マネージャーを一覧から選択するか、[\<**新しい接続...>**] をクリックして新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、をクリックして \<**New connection...**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>[MessageSourceType] = [変数]  
  **[MessageSource]**  
- 一覧で変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 変数を一覧から選択するか、をクリックして \<**New variable...**> 新しい変数を作成します。  
   
  **関連トピック:** [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)[変数の追加](../../2014/integration-services/add-variable.md)  
   

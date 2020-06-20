@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b7f53e11-15f0-4602-8134-b166160888f0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ce14de191cb8b57496cf2de87d241810e32624ec
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a0df58ce59853ee15b863cbc7bce34041c37fee4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709872"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039510"
 ---
 # <a name="batching-stored-procedure-calls"></a>ストアド プロシージャ呼び出しのバッチ化
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、必要に応じてストアドプロシージャの呼び出しがサーバーに自動的にバッチ処理されます。 これが行われるのは、ODBC CALL エスケープ シーケンスが使用されている場合のみです。[!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE ステートメントでは、この処理は行われません。 ストアド プロシージャ呼び出しをバッチにまとめると、サーバーとのやり取りの回数を削減できるので、パフォーマンスが大幅に向上します。  

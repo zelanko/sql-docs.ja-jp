@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7ac008fe139adf55376bb50fbf60dddcd6b9ae5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721684"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010893"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>初期スナップショットの作成および適用
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、初期スナップショットを作成および適用する方法について説明します。 パラメーター化されたフィルターを使用するマージ パブリケーションでは、2 つの部分から成るスナップショットが必要です。 詳しくは、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
@@ -44,7 +43,7 @@ ms.locfileid: "62721684"
   
 3.  スナップショットを作成するパブリケーションを右クリックして、 **[スナップショット エージェントの状態の表示]** をクリックします。  
   
-4.  **[スナップショット エージェントの状態の表示 - \<Publication>]** ダイアログ ボックスで **[開始]** をクリックします。  
+4.  [**スナップショットエージェントの状態の表示 \<Publication> -** ] ダイアログボックスで、[**開始**] をクリックします。  
   
  スナップショット エージェントによるスナップショットの生成が完了すると、"[100%] 17 個のアーティクルのスナップショットが生成されました。" などのメッセージが表示されます。  
   
@@ -78,13 +77,13 @@ ms.locfileid: "62721684"
   
 1.  スナップショット パブリケーション、トランザクション パブリケーション、またはマージ パブリケーションを作成します。 詳細については、「 [Create a Publication](publish/create-a-publication.md)」を参照してください。  
   
-2.  [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 と**@publication**次のパラメーターを指定します。  
+2.  [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 **@publication**と次のパラメーターを指定します。  
   
     -   **ディストリビューターで実行するスナップショット エージェントが使用するための Windows 認証の資格情報を @job_login に指定します。**  
   
     -   **Windows 資格情報に対応するパスワードを @job_password** に指定します。  
   
-    -   (省略可) エージェントからパブリッシャーへの接続に SQL Server 認証を使用する場合は、 **@publisher_security_mode** の値に **@publisher_security_mode** を指定します。 この場合は、および**@publisher_login** **@publisher_password**に対して SQL Server 認証ログイン情報も指定する必要があります。  
+    -   (省略可) エージェントからパブリッシャーへの接続に SQL Server 認証を使用する場合は、 **@publisher_security_mode** の値に **@publisher_security_mode** を指定します。 この場合は、およびに対して SQL Server 認証ログイン情報も指定する必要があり **@publisher_login** **@publisher_password** ます。  
   
     -   (省略可) スナップショット エージェント ジョブの同期スケジュールを指定します。 詳細については、「[同期スケジュールの指定](specify-synchronization-schedules.md)」を参照してください。  
   
@@ -119,15 +118,15 @@ ms.locfileid: "62721684"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **0**  
+    -   **-DistributorSecurityMode**  = **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode**  = **0**  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>例 (Transact-sql)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、トランザクション パブリケーションを作成し、 **sqlcmd** スクリプト変数を使用して、新しいパブリケーション用にスナップショット エージェント ジョブを追加します。 ジョブを開始するコードも含まれています。  
   
  [!code-sql[HowTo#sp_trangenerate_snapshot](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubinitialsnapshot.sql#sp_trangenerate_snapshot)]  
@@ -147,7 +146,7 @@ ms.locfileid: "62721684"
  スナップショット エージェントは、パブリッシャーが作成された後でスナップショットを生成します。 レプリケーション管理オブジェクト (RMO) およびレプリケーション エージェント機能への直接的なマネージド コード アクセスを使用して、これらのスナップショットをプログラムで生成できます。 使用するオブジェクトは、レプリケーションの種類によって異なります。 スナップショット エージェントを同期的に開始する場合は <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> オブジェクトを使用し、非同期的に開始する場合はエージェント ジョブを使用します。 初期スナップショットの生成後、サブスクリプションを最初に同期するときに、初期スナップショットをサブスクライバーに転送して適用することができます。 既存のスナップショットに最新の有効なデータが含まれていない場合は、エージェントを再実行する必要があります。 詳細については、「[Maintain Publications](publish/maintain-publications.md)」(パブリケーションの管理) を参照してください。  
   
 > [!IMPORTANT]  
->  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework によって提供される[暗号化サービス](https://go.microsoft.com/fwlink/?LinkId=34733)を使用します。  
+>  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、Windows .NET Framework によって提供される[暗号化サービス](https://go.microsoft.com/fwlink/?LinkId=34733)を使用し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>スナップショット エージェント ジョブを非同期的に開始して、スナップショット パブリケーションまたはトランザクション パブリケーションの初期スナップショットを生成するには  
   

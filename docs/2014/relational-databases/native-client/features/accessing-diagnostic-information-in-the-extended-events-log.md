@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 10ef11bf8d2620148f88392306aca4dbaace6f58
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 902110d601b9ea4b68fb04e8fb91e66400a452e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704359"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049611"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>拡張イベント ログの診断情報へのアクセス
   以降で [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client とデータアクセスのトレース ([データアクセスのトレース](https://go.microsoft.com/fwlink/?LinkId=125805)) が更新され、接続リングバッファーおよび拡張イベントログからのアプリケーションのパフォーマンス情報からの接続エラーに関する診断情報を簡単に取得できるようになりました。  
@@ -25,7 +24,7 @@ ms.locfileid: "82704359"
 > [!NOTE]  
 >  この機能は、トラブルシューティングおよび診断用であるため、監査やセキュリティの用途には適さない場合があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  接続操作では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はクライアント接続 ID を送信します。 接続に失敗した場合は、接続リング バッファー ([接続リング バッファーによる SQL Server 2008 での接続トラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=207752)に関する記事を参照) にアクセスし、`ClientConnectionID` フィールドを見つけて、接続エラーに関する診断情報を取得することができます。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます (ログイン前のパケットを送信する前に接続に失敗した場合、クライアント接続 ID は生成されません。)クライアント接続 ID は 16 バイトの GUID です。 拡張イベント `client_connection_id` セッションのイベントにアクションが追加されている場合は、拡張イベントの出力ターゲットでクライアント接続 ID を検索することもできます。 詳しい診断サポートが必要な場合は、データ アクセスのトレースを有効にして、接続コマンドを再実行し、失敗した操作のデータ アクセスのトレースで `ClientConnectionID` フィールドを調べます。  
   
  Native Client で ODBC を使用していて、接続に成功した場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `SQL_COPT_SS_CLIENT_CONNECTION_ID` [Sqlgetconnectattr](../../native-client-odbc-api/sqlgetconnectattr.md)属性を使用して、クライアント接続 ID を取得できます。  

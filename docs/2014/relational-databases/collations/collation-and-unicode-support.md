@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c63b7c0d1acad34bb273e4a49921d55818965e80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9a7c6c48229aa827aaed178e5ed4448c20431b9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688733"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970572"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 `char` や `varchar` などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスをインストールしているか、データベース バックアップを復元しているか、サーバーをクライアント データベースに接続しているかに関係なく、操作するデータのロケールの要件、並べ替え順序、および大文字と小文字の区別とアクセントの区別について理解することが重要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用可能な照合順序の一覧については、「 [sys」を参照してください。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)」を参照してください。  
@@ -135,7 +134,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  以下の表は、Unicode 型サーバーと非 Unicode 型サーバーの各種の組み合わせにおける多言語データの使用に関する情報を示しています。  
   
-|Server (サーバー)|クライアント|利点または制限事項|  
+|サーバー|クライアント|利点または制限事項|  
 |------------|------------|-----------------------------|  
 |Unicode|Unicode|このシナリオでは、システム全体で Unicode データが使用されるため、最高のパフォーマンスが実現され、取得されるデータが破損から保護されます。 これは、ActiveX Data Objects (ADO)、OLE DB、および ODBC Version 3.7 以降のバージョンの場合に該当します。|  
 |Unicode|非 Unicode|このシナリオで、特に新しいオペレーティング システムを実行しているサーバーと、古いバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または古いオペレーティング システムを実行しているクライアントが接続されている場合、データをクライアント コンピューターに移動するときに制約やエラーが生じることがあります。 サーバー上の Unicode データは、非 Unicode クライアント上の対応するコード ページにマップしてデータを変換しようと試みます。|  

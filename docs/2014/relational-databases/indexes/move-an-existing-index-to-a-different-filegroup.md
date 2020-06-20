@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c99847dcb8d4d65272dd3660c7fd60d3efb8d951
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63036228"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049910"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>既存のインデックスの別のファイル グループへの移動
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、既存のインデックスを現在のファイル グループから別のファイル グループに移動する方法について説明します。  
@@ -95,7 +94,7 @@ ms.locfileid: "63036228"
   
      クラスター化インデックスを移動する場合は、オンライン処理を使用できます。 オンライン処理を使用すると、インデックス操作中、基になるデータや非クラスター化インデックスへの同時ユーザー アクセスが可能になります。 詳しくは、「 [Perform Index Operations Online](perform-index-operations-online.md)」をご覧ください。  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用するマルチプロセッサ コンピューターでは、並列処理の最大許容値を設定することで、インデックス ステートメントの実行に使用するプロセッサの数を構成できます。 並列インデックス操作機能は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。 並列インデックス操作の詳細については、「 [並列インデックス操作の構成](configure-parallel-index-operations.md)」を参照してください。  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用するマルチプロセッサ コンピューターでは、並列処理の最大許容値を設定することで、インデックス ステートメントの実行に使用するプロセッサの数を構成できます。 並列インデックス操作機能は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 の各エディションでサポートされる機能の一覧につい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。 並列インデックス操作の詳細については、「 [並列インデックス操作の構成](configure-parallel-index-operations.md)」を参照してください。  
   
 8.  **[OK]** をクリックします。  
   

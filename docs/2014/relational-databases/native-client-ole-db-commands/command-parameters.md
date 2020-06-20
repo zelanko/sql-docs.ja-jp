@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 93ec7e88dba785b1559512601adebdee64ea9fdb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f6da29add8fd92530e40ebbfb7b94dedd619adf4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708205"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056437"
 ---
 # <a name="command-parameters"></a>コマンド パラメーター
   コマンド テキスト内のパラメーターは、疑問符文字でマークされます。 たとえば、次の SQL ステートメントでは 1 つの入力パラメーターがマークされています。  

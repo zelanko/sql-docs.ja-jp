@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db6d6220fbb0f756b539e63dc2496d9ddb46d9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a7bab18952820a3dc49c9479797a411521f8e71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228492"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057702"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>フィルターの変更 (SQL Server Profiler)
   トレース定義を保持するトレース テンプレートにフィルターを追加して、トレースで収集するイベントの数を制限します。 収集するイベントの数を制限すると、トレースによるパフォーマンスの影響を軽減できます。 トレース テンプレートにフィルターを設定していても、そのトレースで必要な種類の情報が収集されていないことが判明した場合は、そのフィルターを編集できます。  

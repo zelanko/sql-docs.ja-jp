@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 134ac290601e463063f78a59ea8fd5923d095663
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2df1214de60627f755538ab1340abd5b9ab0ffd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211265"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001525"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>SQL Server Management Studio によるデータベース プロジェクトのビルド
   データベース スクリプト プロジェクトは、データベースやデータベースの一部に関連付けられているスクリプト、接続情報、およびテンプレートを組織的にまとめたものです。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、スクリプト プロジェクトのコンテキスト内の [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] データベースの管理やデザインに使用できる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を提供しています。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、データベースの開発、配置、管理に役立つ、デザイナー、エディター、ガイド、およびウィザードが含まれています。  

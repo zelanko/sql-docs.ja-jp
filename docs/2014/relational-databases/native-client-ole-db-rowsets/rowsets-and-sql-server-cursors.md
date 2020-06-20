@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c1499020839e615b757fbdbb3a75fc53272249bf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 667bee5e1f3a6fabe47f18a4c36fee5ab8d03382
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694352"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011234"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行セットと SQL Server カーソル
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、2 種類の方法でコンシューマーに結果セットが返されます。  
@@ -60,7 +59,7 @@ ms.locfileid: "82694352"
   
  次の行セット プロパティによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソルを使用することが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーに指示されます。 プロパティによっては、他のプロパティと組み合わせて使用できるものもあります。 たとえば、DBPROP_IRowsetScroll プロパティと DBPROP_IRowsetChange プロパティを備えた行セットは、即時更新動作を表すブックマーク行セットになります。 同時に指定できないプロパティもあります。 たとえば、DBPROP_OTHERINSERT を備えた行セットにはブックマークを含めることはできません。  
   
-|プロパティ ID|[値]|行セットの動作|  
+|プロパティ ID|値|行セットの動作|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できません。 行セットは順次処理され、順方向のスクロールとフェッチのみがサポートされます。 相対行位置指定がサポートされます。 コマンド テキストに ORDER BY 句を指定できます。|  
 |DBPROP_CANSCROLLBACKWARDS または DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できません。 行セットでは、両方向へのスクロールとフェッチがサポートされます。 相対行位置指定がサポートされます。 コマンド テキストに ORDER BY 句を指定できます。|  
@@ -89,7 +88,7 @@ ms.locfileid: "82694352"
   
  特定の種類のカーソル モデルを使用するには、カーソル モデルに対応する列を探し、列の値が "T" であるすべての行セット プロパティを見つけます。 これらの行セット プロパティに VARIANT_TRUE を設定すると、その特定のカーソル モデルを使用できます。 値が "-" の行セット プロパティには、VARIANT_TRUE と VARIANT_FALSE のどちらも設定できます。  
   
-|行セット プロパティ/カーソル モデル|Default<br /><br /> 結果<br /><br /> set<br /><br />  (RO)|Fast<br /><br /> 順方向<br /><br /> のみ<br /><br />  (RO)|静的<br /><br />  (RO)|Keyset<br /><br /> ドリブン<br /><br />  (RO)|  
+|行セット プロパティ/カーソル モデル|Default<br /><br /> 結果<br /><br /> set<br /><br />  (RO)|速い<br /><br /> 順方向<br /><br /> のみ<br /><br />  (RO)|静的<br /><br />  (RO)|Keyset<br /><br /> ドリブン<br /><br />  (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

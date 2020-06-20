@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: cce885929deff7484a4e068bf06ac3b39dbb3062
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2907c33f6d28e5652330051979be6a20aa2be435
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244668"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058476"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>新しい登録済みサーバーの作成 (SQL Server Management Studio)
   このトピックでは、サーバーを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の 登録済みサーバー コンポーネントに登録することによって、頻繁にアクセスするサーバーの接続情報を保存する方法について説明します。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。 ローカル コンピューターのサーバー インスタンスを登録するには、特殊なメニュー オプションを使用します。  
@@ -52,7 +51,7 @@ ms.locfileid: "75244668"
      [登録済みサーバー] を使用してサーバーを登録する場合、 **[サーバーの種類]** ボックスは読み取り専用になり、[登録済みサーバー] ペインに表示されているサーバーの種類と一致する値が表示されます。 別の種類のサーバーを登録するには、新しいサーバーの登録を開始する前に、 **[登録済みサーバー]** ツール バーの **[データベース エンジン]** 、 **[分析サーバー]** 、 **[Reporting Services]** 、または **[Integration Services]** をクリックします。  
   
      **サーバー名**  
-     登録するサーバー インスタンスを、 *\<servername>* [\\ *\<instancename>* ] という形式で選択します。  
+     登録するサーバーインスタンスを [] という形式で選択し *\<servername>* \\ *\<instancename>* ます。  
   
      **認証**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続する際には、2 つの認証モードのいずれかを選択します。  
