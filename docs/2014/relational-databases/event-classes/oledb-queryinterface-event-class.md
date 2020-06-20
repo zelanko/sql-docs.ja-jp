@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b420e0b4b9c9531209f3d3227f534116e26dd206
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d02437d6faeb00b55771f7ef13725a23b3a1f92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032423"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029049"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface イベント クラス
   **OLEDB QueryInterface** イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から分散クエリやリモート ストアド プロシージャの **OLE DB QueryInterface** 呼び出しが行われるときに発生します。 このイベント クラスは、分散クエリやリモート ストアド プロシージャに関連する問題を監視するトレースに含めます。  
@@ -36,7 +35,7 @@ ms.locfileid: "63032423"
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |Duration|`bigint`|OLE DB QueryInterface イベントを完了する時間長。|13|いいえ|  
 |EndTime|`datetime`|イベントが終了した時刻。|15|はい|  
-|Error|`int`|特定のイベントのエラー番号。 多くの場合、 **sys.messages** カタログ ビューに保存されているエラー番号です。|31|はい|  
+|エラー|`int`|特定のイベントのエラー番号。 多くの場合、 **sys.messages** カタログ ビューに保存されているエラー番号です。|31|はい|  
 |EventClass|`int`|イベントの種類 = 120。|27|いいえ|  
 |EventSequence|`int`|バッチ内の OLE DB イベント クラスのシーケンス。|51|いいえ|  
 |EventSubClass|`int`|0 = 開始<br /><br /> 1 = 完了|21|いいえ|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fe555d94eb8e00cddd147c2424d0cf60e1d47b34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7c0209ef46013b7d9f6550b77c1c8e138456887
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771618"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923873"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>変換先に変更を適用する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにおいて、3 番目に行う最後のタスクは、変更を変換先に適用することです。 挿入を適用するコンポーネント、更新を適用するコンポーネント、および削除を適用するコンポーネントが必要です。  
@@ -102,6 +101,6 @@ ms.locfileid: "62771618"
 ## <a name="optimizing-inserts-and-updates-by-using-merge-functionality"></a>MERGE 機能を使用した挿入と更新の最適化  
  特定の変更データ キャプチャ オプションと Transact-SQL の MERGE キーワードを組み合わせて使用することによって、挿入と更新の処理を最適化できます。 MERGE キーワードの詳細については、「[MERGE (Transact-SQL)](/sql/t-sql/statements/merge-transact-sql)」を参照してください。  
   
- 変更データを取得する Transact-SQL ステートメントで、*cdc.fn_cdc_get_net_changes_<capture_instance>* 関数を呼び出すときに、*row_filter_option* パラメーターの値として **all with merge** を指定できます。 この変更データ キャプチャの関数は、挿入と更新を区別するために必要な追加の処理を実行する必要がない場合、効率が向上します。 *all with merge* パラメーター値を指定すると、変更データの **__$operation** 値は、削除の場合は 1、挿入または更新によって生じた変更の場合は 5 になります。 変更データの取得に使用する Transact-SQL 関数の詳細については、「 [変更データを取得および理解する](retrieve-and-understand-the-change-data.md)」を参照してください。 *all with merge* パラメーター値を使用して変更を取得したら、削除を適用して、残りの行を一時テーブルまたはステージング テーブルに出力することができます。 その後、下流の SQL 実行タスクで単一の MERGE ステートメントを使用して、すべての挿入または更新をステージング テーブルから変換先に適用できます。  
+ 変更データを取得する Transact-SQL ステートメントで、**cdc.fn_cdc_get_net_changes_<capture_instance>** 関数を呼び出すときに、*row_filter_option* パラメーターの値として *all with merge* を指定できます。 この変更データ キャプチャの関数は、挿入と更新を区別するために必要な追加の処理を実行する必要がない場合、効率が向上します。 *all with merge* パラメーター値を指定すると、変更データの **__$operation** 値は、削除の場合は 1、挿入または更新によって生じた変更の場合は 5 になります。 変更データの取得に使用する Transact-SQL 関数の詳細については、「 [変更データを取得および理解する](retrieve-and-understand-the-change-data.md)」を参照してください。 *all with merge* パラメーター値を使用して変更を取得したら、削除を適用して、残りの行を一時テーブルまたはステージング テーブルに出力することができます。 その後、下流の SQL 実行タスクで単一の MERGE ステートメントを使用して、すべての挿入または更新をステージング テーブルから変換先に適用できます。  
   
   

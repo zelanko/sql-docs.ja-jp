@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 33cb6954cab5777799809b3897a10a8d339d8991
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe1a39f16c9c7675f7683f2a30f9520573083765
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827284"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915952"
 ---
 # <a name="destination-assistant"></a>デスティネーション アシスタント
   変換先アシスタント コンポーネントを使用すると、変換先コンポーネントおよび接続マネージャーを作成できます。 このコンポーネントは、SSIS ツールボックスの **[お気に入り]** セクションにあります。  

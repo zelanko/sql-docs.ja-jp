@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d35b8f27dc0ef6a1deb40bd86ed193973c2c40b0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775305"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932529"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>SysPrep を使用した SQL Server 2014 のインストール
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep に関連するセットアップ操作には、インストール センターからアクセスできます。 **[インストール センター]** の **[詳細設定]** ページには、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** と **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [の準備済みスタンドアロン インスタンスのイメージの完了]** の 2 つのオプションがあります。 [準備](#prepare)のセクションと[完了](#complete)のセクションで、インストール プロセスについて詳しく説明します。 詳細については、「 [SysPrep を使用した SQL Server のインストールに関する注意点](considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep に関連するセットアップ操作には、インストール センターからアクセスできます。 **[インストール センター]** の **[詳細設定]** ページには、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** と **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [の準備済みスタンドアロン インスタンスのイメージの完了]** の 2 つのオプションがあります。 [準備](#prepare)のセクションと[完了](#complete)のセクションで、インストール プロセスについて詳しく説明します。 詳細については、「 [SysPrep を使用した SQL Server のインストールに関する注意点](considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。  
   
  コマンド プロンプトまたは構成ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの準備および完了を行うこともできます。 詳細については、次を参照してください。  
   
@@ -29,7 +28,7 @@ ms.locfileid: "62775305"
 ## <a name="prerequisites"></a>前提条件  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールする前に、「 [SQL サーバーのインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」のトピックを参照してください。  
   
- の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エディションおよびハードウェアとソフトウェアの要件の詳細については、「 [SQL Server 2014 をインストールするためのハードウェアおよびソフトウェアの要件](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。  
+ の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションおよびハードウェアとソフトウェアの要件の詳細については、「 [SQL Server 2014 をインストールするためのハードウェアおよびソフトウェアの要件](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  以下は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep ではサポートされていません。  
@@ -89,7 +88,7 @@ ms.locfileid: "62775305"
   
 2.  Windows フェールオーバー クラスターを結合します。  
   
-3.  すべてのノードで setup.exe `/ACTION=AddNode`を実行します。  
+3.  すべてのノードで、を使用して setup.exe を実行し `/ACTION=AddNode` ます。  
   
     ```  
     setup.exe /q /ACTION=AddNode /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -131,13 +130,13 @@ ms.locfileid: "62775305"
   
 11. [インスタンスの構成] ページで、インスタンスのインスタンス ID を指定します。 **[次へ]** をクリックして、続行します。  
   
-     **インスタンス id** -インスタンス id は、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのインストールディレクトリとレジストリキーを識別するために使用されます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 準備済みのインスタンスが完了手順で既定のインスタンスとして完了すると、インスタンス名は MSSQLSERVER として上書きされます。 インスタンス ID は指定したものと変わりません。  
+     **インスタンス id** -インスタンス id は、のインスタンスのインストールディレクトリとレジストリキーを識別するために使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 準備済みのインスタンスが完了手順で既定のインスタンスとして完了すると、インスタンス名は MSSQLSERVER として上書きされます。 インスタンス ID は指定したものと変わりません。  
   
-     **インスタンスルートディレクトリ**-既定では、インスタンスルートディレクトリは[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]です。 既定以外のルート ディレクトリを指定するには、表示されたフィールドを使用するか、 **[参照]** をクリックしてインストール フォルダーを検索します。 準備手順で指定したディレクトリは、完了手順の構成時に使用されます。  
+     **インスタンスルートディレクトリ**-既定では、インスタンスルートディレクトリは [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)] です。 既定以外のルート ディレクトリを指定するには、表示されたフィールドを使用するか、 **[参照]** をクリックしてインストール フォルダーを検索します。 準備手順で指定したディレクトリは、完了手順の構成時に使用されます。  
   
      すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack とアップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各コンポーネントに適用されます。  
   
-     [**インストール済みのインスタンス**数: セットアップ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されているコンピューター上にあるのインスタンスがグリッドに表示されます。  
+     [**インストール済みのインスタンス**数: セットアップが実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューター上にあるのインスタンスがグリッドに表示されます。  
   
 12. **[必要なディスク領域]** ページでは、指定した機能に必要なディスク領域が計算されます。 その後、必要なディスク領域が使用可能なディスク領域と比較されます。  
   
@@ -180,17 +179,17 @@ ms.locfileid: "62775305"
   
 9. [インスタンスの構成] ページで、準備済みインスタンスのインスタンス名を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の構成が完了すると、これがインスタンスの名前になります。 **[次へ]** をクリックして、続行します。  
   
-     **インスタンス id** -インスタンス id は、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのインストールディレクトリとレジストリキーを識別するために使用されます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 準備済みのインスタンスが完了手順で既定のインスタンスとして完了すると、インスタンス名は MSSQLSERVER として上書きされます。 インスタンス ID は準備手順で指定したものと変わりません。  
+     **インスタンス id** -インスタンス id は、のインスタンスのインストールディレクトリとレジストリキーを識別するために使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 準備済みのインスタンスが完了手順で既定のインスタンスとして完了すると、インスタンス名は MSSQLSERVER として上書きされます。 インスタンス ID は準備手順で指定したものと変わりません。  
   
      **インスタンスルートディレクトリ**-準備手順で指定したディレクトリが使用され、この手順では変更できません。  
   
      すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack とアップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各コンポーネントに適用されます。  
   
-     [**インストール済みのインスタンス**数: セットアップ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されているコンピューター上にあるのインスタンスがグリッドに表示されます。  
+     [**インストール済みのインスタンス**数: セットアップが実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューター上にあるのインスタンスがグリッドに表示されます。  
   
 10. このトピックの残りの部分のワーク フローは、準備手順で選択した機能によって異なります。 選択した機能によっては、表示されないページもあります。  
   
-11. [**サーバーの構成**-サービスアカウント] ページで、サービスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインアカウントを指定します。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。  
+11. [**サーバーの構成**-サービスアカウント] ページで、サービスのログインアカウントを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。  
   
      すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに同じログイン アカウントを割り当てることも、各サービス アカウントを個々に構成することもできます。 サービスを自動的に開始するか、手動で開始するか、または無効にするかを指定することもできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、各サービスに最小の権限を与えるためにはサービス アカウントを個別に構成することをお勧めします。サービス アカウントを個別に構成すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスには、サービスでのタスクの実行に必要な最小権限が付与されます。 詳細については、「 [サーバー構成 - サービス アカウント](../../sql-server/install/server-configuration-service-accounts.md) 」および「 [Windows サービス アカウントと権限の構成](../configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
@@ -200,7 +199,7 @@ ms.locfileid: "62775305"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのログイン情報を指定したら、 **[次へ]** をクリックします。  
   
-12. [サーバーの**構成-照合順序**] タブを使用して、および[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に既定以外の照合順序を指定します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 詳細については、「 [サーバー構成 - 照会順序](../../sql-server/install/server-configuration-collation.md)」を参照してください。  
+12. [**サーバーの構成-照合順序**] タブを使用して、およびに既定以外の照合順序を指定し [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。 詳細については、「 [サーバー構成 - 照会順序](../../sql-server/install/server-configuration-collation.md)」を参照してください。  
   
 13. [!INCLUDE[ssDE](../../includes/ssde-md.md)] [の構成 - アカウントの準備] ページを使用して、次の項目を指定します。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f409e978bf977d48fbfc3a9ec56d5ebfe2b545ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678720"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064084"
 ---
 # <a name="workload-element-dta"></a>Workload 要素 (DTA)
   チューニング セッションで使用するワークロードを指定します。  
@@ -57,7 +56,7 @@ ms.locfileid: "62678720"
  各チューニング セッションには 1 つのワークロードを指定する必要があります。  
   
 ## <a name="example"></a>例  
- 次のコード例では**MyDatabase.MyDBOwner.TuningTable001** 、 `Workload`要素の MyDatabase トレーステーブルを指定します。 **TuningTable001** は SQL Server Profiler でチューニング テンプレートを使用し、トレース出力をテーブルとして保存することによって作成されたものです。  
+ 次のコード例では、要素の**MyDatabase**トレーステーブルを指定します。 `Workload` **TuningTable001** は SQL Server Profiler でチューニング テンプレートを使用し、トレース出力をテーブルとして保存することによって作成されたものです。  
   
 ```  
 <DTAXML ...>  

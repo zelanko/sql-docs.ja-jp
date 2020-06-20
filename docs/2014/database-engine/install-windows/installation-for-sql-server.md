@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6dafb1e971b85adfee2ecb3579ac20b83906b9dd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228411"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932377"
 ---
 # <a name="installation-for-sql-server-2014"></a>SQL Server 2014 のインストール
  ## <a name="download-sql-server-2014-express"></a>[SQL Server 2014 Express のダウンロード](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
@@ -45,9 +44,9 @@ ms.locfileid: "75228411"
   
 -   接続コンポーネント  
   
- 各コンポーネントを個別にインストールするか、上記のコンポーネントを組み合わせて選択できます。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用できるエディションとコンポーネントを選択するには、 [SQL Server 2014 のエディションとコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)、および[SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)を参照してください。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には 32 ビット版と 64 ビット版があります。
+ 各コンポーネントを個別にインストールするか、上記のコンポーネントを組み合わせて選択できます。 で使用できるエディションとコンポーネントを選択するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [SQL Server 2014 のエディションとコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)、および[SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)を参照してください。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には 32 ビット版と 64 ビット版があります。
  
- **試してみてください。**  
+ **実際に試してみましょう。**  
   
 -   Azure アカウントをすでにお持ちですか?  次に、SQL Server 2014 Service Pack 1 (SP1) が既にインストールされている仮想マシンを起動するに**[は、ここ](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** にアクセスします。 SQL Server 2014 (SP1) の詳細については、「 [SQL Server 2014 Service Pack 1 のリリース情報](https://support.microsoft.com/kb/3058865)」を参照してください。  
   

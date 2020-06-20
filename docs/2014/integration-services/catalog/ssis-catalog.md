@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4657bf58a7160f075759a265fef883c92fee0c9
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: f24ea0800107caf026105e306ae39e1461077de5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921715"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924295"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
   `SSISDB`カタログは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置した (SSIS) プロジェクトを操作するための中心となるポイントです [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
@@ -36,14 +35,14 @@ ms.locfileid: "82921715"
 >  データベースの名前を変更することはできません `SSISDB` 。  
   
 > [!NOTE]  
->  データベースがアタッチされているインスタンスが停止した場合、または応答しない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `SSISDB` ISServerExec プロセスが終了します。 メッセージが Windows イベント ログに書き込まれます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースがアタッチされているインスタンスが停止した場合、または応答しない場合は、 `SSISDB` ISServerExec.exe プロセスが終了します。 メッセージが Windows イベント ログに書き込まれます。  
 >   
 >  クラスター フェールオーバーの一環として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースがフェールオーバーした場合、実行中のパッケージは再開されません。 チェックポイントを使用してパッケージを再開できます。 詳細については、「 [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 ## <a name="catalog-object-identifiers"></a>カタログ オブジェクト識別子  
  カタログに新しいオブジェクトを作成するときは、オブジェクトに名前を割り当てる必要があります。 オブジェクト名が識別子となります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、識別子に使用できる文字のルールが定義されています。 次のオブジェクトの名前は、識別子のルールに従っている必要があります。  
   
--   Folder  
+-   フォルダー  
   
 -   Project  
   
@@ -56,7 +55,7 @@ ms.locfileid: "82921715"
 ### <a name="folder-project-environment"></a>フォルダー、プロジェクト、環境  
  フォルダー、プロジェクト、または環境の名前を変更するときは、次のルールを考慮します。  
   
--   無効な文字には、ASCII/Unicode 文字 1 - 31、引用符 (")、小なり (\<)、大なり (>)、パイプ (|)、バックスペース (\b)、null (\0)、タブ (\t) などがあります。  
+-   無効な文字には、ASCII/Unicode 文字 1 ~ 31、引用符 (")、小なり ( \<), greater than (> )、パイプ (|)、バックスペース (\b)、null (\ 0)、およびタブ (\t) があります。  
   
 -   名前の先頭または末尾にスペースを含めることはできません。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "82921715"
 ### <a name="environment-variable"></a>環境変数  
  環境変数に名前を付けるときは、次のルールを考慮します。  
   
--   無効な文字には、ASCII/Unicode 文字 1 - 31、引用符 (")、小なり (\<)、大なり (>)、パイプ (|)、バックスペース (\b)、null (\0)、タブ (\t) などがあります。  
+-   無効な文字には、ASCII/Unicode 文字 1 ~ 31、引用符 (")、小なり ( \<), greater than (> )、パイプ (|)、バックスペース (\b)、null (\ 0)、およびタブ (\t) があります。  
   
 -   名前の先頭または末尾にスペースを含めることはできません。  
   
@@ -131,7 +130,7 @@ ms.locfileid: "82921715"
   
  暗号化アルゴリズムの変更は、時間のかかる操作です。 最初に、サーバーで以前に指定したアルゴリズムを使用して、すべての構成値の暗号化を解除する必要があります。 次に、新しいアルゴリズムを使用して、その値を再暗号化する必要があります。 この間、サーバーで他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作を実行できません。 そのため、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作を途切れることなく続行できるように、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]では、暗号化アルゴリズムが読み取り専用の値になっています。  
   
- **暗号化アルゴリズム**のプロパティ設定を変更するには、 `SSISDB` データベースをシングルユーザーモードに設定してから、configure_catalog ストアドプロシージャを呼び出します。 *property_name* 引数の ENCRYPTION_ALGORITHM を使用します。 プロパティの値の詳細については、「[catalog.catalog_properties (SSISDB データベース)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)」を参照してください。 ストアド プロシージャの詳細については、「[catalog.configure_catalog (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)」を参照してください。  
+ **暗号化アルゴリズム**のプロパティ設定を変更するには、 `SSISDB` データベースをシングルユーザーモードに設定し、catalog.configure_catalog ストアドプロシージャを呼び出します。 *property_name* 引数の ENCRYPTION_ALGORITHM を使用します。 プロパティの値の詳細については、「[catalog.catalog_properties (SSISDB データベース)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)」を参照してください。 ストアド プロシージャの詳細については、「[catalog.configure_catalog (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)」を参照してください。  
   
  シングル ユーザー モードの詳細については、「 [データベースをシングル ユーザー モードに設定する](../../relational-databases/databases/set-a-database-to-single-user-mode.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の暗号化と暗号化アルゴリズムの詳細については、「 [SQL Server の暗号化](../../relational-databases/security/encryption/sql-server-encryption.md)」のトピックを参照してください。  
   

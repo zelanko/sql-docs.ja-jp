@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d407cc3c0324b80ff63484f4e7c39ea30575ebc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057639"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967042"
 ---
 # <a name="msmq-connection-manager-editor"></a>MSMQ 接続マネージャー エディター
   **[MSMQ 接続マネージャー]** ダイアログ ボックスでは、Message Queuing (MSMQ) メッセージ キューへのパスを指定できます。  
@@ -41,8 +40,8 @@ ms.locfileid: "66057639"
   
 |[キューの種類]|パスのサンプル|  
 |----------------|-----------------|  
-|Public|\<コンピューター名>\\<キュー名\>|  
-|Private|\<コンピューター名>\Private$\\<キュー名\>|  
+|パブリック|\<computer name>\\<キュー名\>|  
+|Private|\<computer name>\ プライベート $ \\<キュー名\>|  
   
  "." を使用してローカル コンピューターを表すことができます。  
   

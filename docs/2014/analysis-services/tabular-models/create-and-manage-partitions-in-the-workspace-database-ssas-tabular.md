@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37f1b8c1f97601ab9997fdb6706587f42e1b4e6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef8a03920b20adadc19072f184a0629885d4a3fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067459"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939803"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>ワークスペース データベースのパーティションの作成と管理 (SSAS テーブル)
   パーティションは、テーブルを論理的な部分に分割します。 その後、各パーティションは、個別に、または他のパーティションと並列に処理 (更新) することができます。 パーティションによって、大規模なデータベースのスケーラビリティと管理性を向上させることができます。 既定では、各テーブルに 1 つのパーティションがあり、すべての列がこのパーティションに含まれます。 このトピックのタスクでは、の [**パーティションマネージャー** ] ダイアログボックスを使用して、モデルワークスペースデータベースでパーティションを作成および管理する方法について説明します。[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  

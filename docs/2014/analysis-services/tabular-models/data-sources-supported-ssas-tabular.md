@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7de3ea085b3e1d104f9d014317c52dce4585a2e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067381"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939773"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>サポートされているデータ ソース (SSAS テーブル)
   このトピックでは、テーブル モデルで使用できるデータ ソースの種類について説明します。  
   
- このトピックの内容は次のとおりです。  
+ この記事は、次のセクションで構成されています。  
   
--   [サポートされるデータ ソース](#bkmk_supported_ds)  
+-   [サポートされるデータソース](#bkmk_supported_ds)  
   
 -   [サポートされていないソース](#bkmk_unsupported_ds)  
   
@@ -33,11 +32,11 @@ ms.locfileid: "66067381"
   
 |||||  
 |-|-|-|-|  
-|ソース|バージョン|ファイルの種類|プロバイダー <sup>1</sup>|  
+|source|バージョン|ファイルの種類|プロバイダー <sup>1</sup>|  
 |Access データベース|Microsoft Access 2003、2007、2010。|.accdb または .mdb|ACE 14 OLE DB プロバイダー|  
 |SQL Server リレーショナル データベース|Microsoft SQL Server2005、2008、2008 R2、SQL Server 2012、Microsoft SQL Azure データベース<sup>2</sup>|(該当なし)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB プロバイダー<br /><br /> SQL Server Native 10.0 Client OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for SQL Client|  
 |SQL Server 並列データウェアハウス (PDW) <sup>3</sup>|2008 R2|(該当なし)|OLE DB provider for SQL Server PDW|  
-|Oracle リレーショナル データベース|Oracle 9i、10g、11g|(該当なし)|Oracle OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> SQL Server 用の .NET Framework データ プロバイダー<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
+|Oracle リレーショナル データベース|Oracle 9i、10g、11g|(該当なし)|Oracle OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework SQL Server 用データ プロバイダー<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata リレーショナル データベース|Teradata V2R6、V12|(該当なし)|TDOLEDB OLE DB プロバイダー<br /><br /> .Net Data Provider for Teradata|  
 |Informix リレーショナル データベース||(該当なし)|Informix OLE DB プロバイダー|  
 |IBM DB2 リレーショナル データベース|8.1|(該当なし)|DB2OLEDB|  

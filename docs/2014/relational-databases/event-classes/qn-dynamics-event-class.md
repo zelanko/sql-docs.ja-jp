@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eb59abed8be5649d9258bce0f279222e4498b547
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a55c2b2a2392cf5d9993f4bfdea8969e4f4d23f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028885"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics イベント クラス
   QN:Dynamics イベント クラスでは、クエリ通知をサポートするために [!INCLUDE[ssDE](../../includes/ssde-md.md)] が実行するバックグラウンドの利用状況に関する情報が報告されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]内部では、バックグラウンド スレッドでサブスクリプションのタイムアウト、実行を待機しているサブスクリプション、およびパラメーター テーブルの破棄が監視されています。  
@@ -34,11 +33,11 @@ ms.locfileid: "63035727"
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |EventClass|`int`|イベントの種類 = 202。|27|いいえ|  
 |EventSequence|`int`|このイベントのシーケンス番号。|51|いいえ|  
-|EventSubClass|`nvarchar`|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> クロックの実行開始: 期限切れのパラメーターテーブルを[!INCLUDE[ssDE](../../includes/ssde-md.md)]クリーンアップ用にスケジュールするのバックグラウンドスレッドが開始されたことを示します。<br /><br /> クロックの実行が終了しました: クリーンアップ用[!INCLUDE[ssDE](../../includes/ssde-md.md)]に期限切れのパラメーターテーブルをスケジュールするのバックグラウンドスレッドが終了したことを示します。<br /><br /> Master cleanup task started: 有効期限が切れたクエリ通知サブスクリプションのデータを削除するクリーンアップ (ガベージ コレクション) が開始された日時を示します。<br /><br /> Master cleanup task finished: 有効期限が切れたクエリ通知サブスクリプションのデータを削除するクリーンアップ (ガベージ コレクション) が終了した日時を示します。<br /><br /> スキップされたマスタークリーンアップタスク: [!INCLUDE[ssDE](../../includes/ssde-md.md)]がクリーンアップ (ガベージコレクション) を実行して、有効期限が切れたクエリ通知サブスクリプションデータを削除しなかったことを示します。|21|はい|  
+|EventSubClass|`nvarchar`|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> クロックの実行開始: [!INCLUDE[ssDE](../../includes/ssde-md.md)] 期限切れのパラメーターテーブルをクリーンアップ用にスケジュールするのバックグラウンドスレッドが開始されたことを示します。<br /><br /> クロックの実行が終了しました: [!INCLUDE[ssDE](../../includes/ssde-md.md)] クリーンアップ用に期限切れのパラメーターテーブルをスケジュールするのバックグラウンドスレッドが終了したことを示します。<br /><br /> Master cleanup task started: 有効期限が切れたクエリ通知サブスクリプションのデータを削除するクリーンアップ (ガベージ コレクション) が開始された日時を示します。<br /><br /> Master cleanup task finished: 有効期限が切れたクエリ通知サブスクリプションのデータを削除するクリーンアップ (ガベージ コレクション) が終了した日時を示します。<br /><br /> スキップされたマスタークリーンアップタスク: が [!INCLUDE[ssDE](../../includes/ssde-md.md)] クリーンアップ (ガベージコレクション) を実行して、有効期限が切れたクエリ通知サブスクリプションデータを削除しなかったことを示します。|21|はい|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 0 = ユーザー<br /><br /> 1 = システム|60|いいえ|  
-|LoginName|`nvarchar`|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セキュリティログインまたは*DOMAIN\Username*という形式の Windows ログイン資格情報)。|11|いいえ|  
+|LoginName|`nvarchar`|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティログインまたは*DOMAIN\Username*という形式の Windows ログイン資格情報)。|11|いいえ|  
 |LoginSID|`image`|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NTDomainName|`nvarchar`|ユーザーが属している Windows ドメイン。|7|はい|  
 |NTUserName|`nvarchar`|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  

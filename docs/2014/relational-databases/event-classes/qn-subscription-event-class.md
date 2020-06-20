@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3fda0f61806c1fa2be33b1a231e877758c4c67ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cebcb693fc6f876c74f375c16de9ad3f09bbe9bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62650517"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028901"
 ---
 # <a name="qnsubscription-event-class"></a>QN:Subscription イベント クラス
   QN:Subscription イベントでは、通知サブスクリプションに関する情報が報告されます。  
@@ -34,7 +33,7 @@ ms.locfileid: "62650517"
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |EventClass|`int`|イベントの種類 = 199。|27|いいえ|  
 |EventSequence|`int`|このイベントのシーケンス番号。|51|いいえ|  
-|EventSubClass|`nvarchar`|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> Subscription registered: クエリ通知サブスクリプションがデータベースに正常に登録された日時を示します。<br /><br /> Subscription 巻き戻し: が[!INCLUDE[ssDE](../../includes/ssde-md.md)]既存のサブスクリプションと正確に一致するサブスクリプション要求を受信する時点を示します。 この場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] により、既存のサブスクリプションのタイムアウト値が、新しいサブスクリプション要求で指定されたタイムアウト値に設定されます。<br /><br /> Subscription fired: 通知サブスクリプションによって通知メッセージが生成された日時を示します。<br /><br /> Broker エラーでの起動失敗: [!INCLUDE[ssSB](../../includes/sssb-md.md)]エラーが原因で通知メッセージが失敗したことを示します。<br /><br /> Broker エラーなしでの起動に失敗しました: 通知メッセージが失敗した[!INCLUDE[ssSB](../../includes/sssb-md.md)]が、エラーが原因ではないことを示します。<br /><br /> Broker error インターセプト: は、 [!INCLUDE[ssSB](../../includes/sssb-md.md)]クエリ通知で使用されるメッセージ交換でエラーが配信されたことを示します。<br /><br /> サブスクリプションの削除試行: は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]期限切れのサブスクリプションを削除してリソースを解放しようとしたことを示します。<br /><br /> Subscription deletion failed: 有効期限が切れたサブスクリプションを削除する試行が失敗したことを示します。 リソースを解放するために、サブスクリプションを削除するスケジュールが [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動的に組み直されます。<br /><br /> 破棄されたサブスクリプション: [!INCLUDE[ssDE](../../includes/ssde-md.md)]が有効期限切れのサブスクリプションを正常に削除したことを示します。|21|はい|  
+|EventSubClass|`nvarchar`|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> Subscription registered: クエリ通知サブスクリプションがデータベースに正常に登録された日時を示します。<br /><br /> Subscription 巻き戻し: が [!INCLUDE[ssDE](../../includes/ssde-md.md)] 既存のサブスクリプションと正確に一致するサブスクリプション要求を受信する時点を示します。 この場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] により、既存のサブスクリプションのタイムアウト値が、新しいサブスクリプション要求で指定されたタイムアウト値に設定されます。<br /><br /> Subscription fired: 通知サブスクリプションによって通知メッセージが生成された日時を示します。<br /><br /> Broker エラーでの起動失敗: エラーが原因で通知メッセージが失敗したことを示します [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。<br /><br /> Broker エラーなしでの起動に失敗しました: 通知メッセージが失敗したが、エラーが原因ではないことを示します。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Broker error インターセプト: は、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] クエリ通知で使用されるメッセージ交換でエラーが配信されたことを示します。<br /><br /> サブスクリプションの削除試行: は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 期限切れのサブスクリプションを削除してリソースを解放しようとしたことを示します。<br /><br /> Subscription deletion failed: 有効期限が切れたサブスクリプションを削除する試行が失敗したことを示します。 リソースを解放するために、サブスクリプションを削除するスケジュールが [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動的に組み直されます。<br /><br /> 破棄されたサブスクリプション: が [!INCLUDE[ssDE](../../includes/ssde-md.md)] 有効期限切れのサブスクリプションを正常に削除したことを示します。|21|はい|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 0 = ユーザー<br /><br /> 1 = システム|60|いいえ|  

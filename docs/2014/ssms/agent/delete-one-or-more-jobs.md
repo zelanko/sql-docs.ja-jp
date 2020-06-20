@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d9df271c457cb0f05f9fdfe70952b6d02224963
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 436625f9ad629a6b0e574aa046059f4e7e9c2bf2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783255"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995484"
 ---
 # <a name="delete-one-or-more-jobs"></a>1 つまたは複数のジョブの削除
-  このトピックでは、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、、または SQL Server 管理オブジェクト[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を[!INCLUDE[tsql](../../includes/tsql-md.md)]使用して、エージェントジョブを削除する方法について説明します。  
+  このトピック [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、で、、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または SQL Server 管理オブジェクトを使用して、エージェントジョブを削除する方法について説明し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
   
  
   
@@ -84,4 +83,4 @@ ms.locfileid: "72783255"
 
 ### <a name="to-delete-multiple-jobs"></a>複数のジョブを削除するには
   
- Visual Basic、 `JobCollection` Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
+ `JobCollection`Visual Basic、Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

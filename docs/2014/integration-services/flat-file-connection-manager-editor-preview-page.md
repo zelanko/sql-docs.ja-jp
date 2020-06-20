@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 233bc63102243c60c7ed74b5beeadd2c921f399a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff01832b565b0cca2e1a2550606307552ee63a33
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058741"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967092"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>[フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[プレビュー]** ノードを使用すると、ソース ファイルの内容を表形式で表示できます。  
@@ -36,7 +35,7 @@ ms.locfileid: "66058741"
  **[スキップするデータ行数]**  
  フラット ファイルの冒頭でスキップする行数を指定します。  
   
- **更新**  
+ **Refresh\(更新\)**  
  **[最新の情報に更新]** をクリックすると、スキップする行数を変更した結果が表示されます。 このボタンは、他の接続オプションを変更した場合にのみ表示されます。  
   
  **[プレビュー]**  

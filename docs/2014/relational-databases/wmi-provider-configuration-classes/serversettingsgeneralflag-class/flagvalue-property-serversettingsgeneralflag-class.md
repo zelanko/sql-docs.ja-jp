@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a32f0ef0-f5f6-4e71-96c7-7d4617dedf0e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7ef78f09512f4d1ad06c48259914fbc8742fdbd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d49f5d8b507599d8d6c4f4c3117b62c3f16b180
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135478"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056671"
 ---
 # <a name="flagvalue-property-serversettingsgeneralflag-class"></a>FlagValue プロパティ (ServerSettingsGeneralFlag クラス)
   フラグの値を取得します。  
@@ -36,7 +35,7 @@ object
 .FlagValue [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  サーバー設定に使用する一般的なフラグを表す [ServerSettingsGeneralFlag クラス](serversettingsgeneralflag-class.md) オブジェクト。  
   

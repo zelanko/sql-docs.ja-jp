@@ -1,5 +1,6 @@
 ---
 title: SQLSetConnectAttr |Microsoft Docs
+description: SQLSetConnectAttr の接続属性について説明します。これには、設定されている場合や、SQL Server Native Client ODBC ドライバーで使用できる値も含まれます。
 ms.custom: ''
 ms.date: 01/09/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17a63a481837894addbd8b626fac015025314099
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3008664916a8863a00dd36772e4b83cf27e845d5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301943"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967739"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -42,39 +43,39 @@ ms.locfileid: "81301943"
   
 |SQL Server の属性|設定タイミング (サーバーへの接続前または接続後)|  
 |--------------------------|----------------------------------------------|  
-|SQL_COPT_SS_ANSI_NPW|[指定日付より前]|  
-|SQL_COPT_SS_APPLICATION_INTENT|[指定日付より前]|  
-|SQL_COPT_SS_ATTACHDBFILENAME|[指定日付より前]|  
-|SQL_COPT_SS_BCP|[指定日付より前]|  
-|SQL_COPT_SS_BROWSE_CONNECT|[指定日付より前]|  
-|SQL_COPT_SS_BROWSE_SERVER|[指定日付より前]|  
-|SQL_COPT_SS_CONCAT_NULL|[指定日付より前]|  
-|SQL_COPT_SS_CONNECTION_DEAD|After|  
-|SQL_COPT_SS_ENCRYPT|[指定日付より前]|  
-|SQL_COPT_SS_ENLIST_IN_DTC|After|  
-|SQL_COPT_SS_ENLIST_IN_XA|After|  
-|SQL_COPT_SS_FALLBACK_CONNECT|[指定日付より前]|  
-|SQL_COPT_SS_FAILOVER_PARTNER|[指定日付より前]|  
-|SQL_COPT_SS_INTEGRATED_SECURITY|[指定日付より前]|  
-|SQL_COPT_SS_MARS_ENABLED|[指定日付より前]|  
-|SQL_COPT_SS_MULTISUBNET_FAILOVER|[指定日付より前]|  
-|SQL_COPT_SS_OLDPWD|[指定日付より前]|  
-|SQL_COPT_SS_PERF_DATA|After|  
-|SQL_COPT_SS_PERF_DATA_LOG|After|  
-|SQL_COPT_SS_PERF_DATA_LOG_NOW|After|  
-|SQL_COPT_SS_PERF_QUERY|After|  
-|SQL_COPT_SS_PERF_QUERY_INTERVAL|After|  
-|SQL_COPT_SS_PERF_QUERY_LOG|After|  
-|SQL_COPT_SS_PRESERVE_CURSORS|[指定日付より前]|  
+|SQL_COPT_SS_ANSI_NPW|以前|  
+|SQL_COPT_SS_APPLICATION_INTENT|以前|  
+|SQL_COPT_SS_ATTACHDBFILENAME|以前|  
+|SQL_COPT_SS_BCP|以前|  
+|SQL_COPT_SS_BROWSE_CONNECT|以前|  
+|SQL_COPT_SS_BROWSE_SERVER|以前|  
+|SQL_COPT_SS_CONCAT_NULL|以前|  
+|SQL_COPT_SS_CONNECTION_DEAD|これらの手順の完了後、|  
+|SQL_COPT_SS_ENCRYPT|以前|  
+|SQL_COPT_SS_ENLIST_IN_DTC|これらの手順の完了後、|  
+|SQL_COPT_SS_ENLIST_IN_XA|これらの手順の完了後、|  
+|SQL_COPT_SS_FALLBACK_CONNECT|以前|  
+|SQL_COPT_SS_FAILOVER_PARTNER|以前|  
+|SQL_COPT_SS_INTEGRATED_SECURITY|以前|  
+|SQL_COPT_SS_MARS_ENABLED|以前|  
+|SQL_COPT_SS_MULTISUBNET_FAILOVER|以前|  
+|SQL_COPT_SS_OLDPWD|以前|  
+|SQL_COPT_SS_PERF_DATA|これらの手順の完了後、|  
+|SQL_COPT_SS_PERF_DATA_LOG|これらの手順の完了後、|  
+|SQL_COPT_SS_PERF_DATA_LOG_NOW|これらの手順の完了後、|  
+|SQL_COPT_SS_PERF_QUERY|これらの手順の完了後、|  
+|SQL_COPT_SS_PERF_QUERY_INTERVAL|これらの手順の完了後、|  
+|SQL_COPT_SS_PERF_QUERY_LOG|これらの手順の完了後、|  
+|SQL_COPT_SS_PRESERVE_CURSORS|以前|  
 |SQL_COPT_SS_QUOTED_IDENT|接続前/接続後|  
 |SQL_COPT_SS_TRANSLATE|接続前/接続後|  
-|SQL_COPT_SS_TRUST_SERVER_CERTIFICATE|[指定日付より前]|  
+|SQL_COPT_SS_TRUST_SERVER_CERTIFICATE|以前|  
 |SQL_COPT_SS_TXN_ISOLATION|接続前/接続後|  
 |SQL_COPT_SS_USE_PROC_FOR_PREP|接続前/接続後|  
 |SQL_COPT_SS_USER_DATA|接続前/接続後|  
-|SQL_COPT_SS_WARN_ON_CP_ERROR|[指定日付より前]|  
+|SQL_COPT_SS_WARN_ON_CP_ERROR|以前|  
   
- 同じセッション、データベース、または [!INCLUDE[tsql](../../includes/tsql-md.md)] の状態に対して接続前の属性および同等の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドを使用すると、予期しない動作が発生する場合があります。 たとえば、  
+ 同じセッション、データベース、または [!INCLUDE[tsql](../../includes/tsql-md.md)] の状態に対して接続前の属性および同等の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドを使用すると、予期しない動作が発生する場合があります。 たとえば、次のように入力します。  
   
 ```  
 SQLSetConnectAttr(SQL_COPT_SS_QUOTED_IDENT, SQL_QI_ON) // turn ON via attribute  
@@ -102,7 +103,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- 既定値は **ReadWrite** です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client による ag の[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]サポートの詳細については、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。  
+ 既定値は **ReadWrite** です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client による ag のサポートの詳細につい [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ては、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。  
 
 <a name="sqlcoptssattachdbfilename"></a>
 ## <a name="sql_copt_ss_attachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
@@ -136,7 +137,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |値|説明|  
 |-----------|-----------------|  
-|computername|**SQLBrowseConnect**は、指定された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンピューター上ののインスタンスの一覧を返します。 サーバー名に\\\\は二重の\\円記号 () を使用しないでください (たとえば、\ myserver ではなく、myserver を使用する必要があります)。|  
+|computername|**SQLBrowseConnect**は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、指定されたコンピューター上ののインスタンスの一覧を返します。 サーバー名には二重の円記号 ( \\ \\ ) を使用しないでください (たとえば、 \\ \ myserver ではなく、myserver を使用する必要があります)。|  
 |NULL|既定値。 **SQLBrowseConnect**は、ドメイン内のすべてのサーバーに関する情報を返します。|  
 
 <a name="sqlcoptssconcatnull"></a>
@@ -211,7 +212,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client による ag の[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]サポートの詳細については、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client による ag のサポートの詳細につい [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ては、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。  
   
 |値|説明|  
 |-----------|-----------------|  

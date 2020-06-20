@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0e6e85161ea95a9494bbaf91338b4ddc559ecbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e25d8b904faaeff05620386e984ddc5bdd99fdf5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058790"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967122"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>[フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[詳細設定]** ページでは、Integration Services で、フラット ファイルからデータをどのように読み取るか、フラット ファイルにデータをどのように書き込むかを指定するプロパティを設定できます。 フラット ファイル内の列名を変更し、ファイル内の各列にデータ型および区切り記号を指定するプロパティを設定できます。  
@@ -45,15 +44,15 @@ ms.locfileid: "66058790"
 |**DataType**|使用できるデータ型を一覧から選択します。 詳細については、「 [Integration Services データ型](data-flow/integration-services-data-types.md)」を参照してください。|  
 |**[テキスト修飾子]**|テキストデータが引用符などのテキスト修飾子文字で囲まれているかどうかを示します。 有効な値は次のとおりです。<br /><br /> **True**: フラットファイルのテキストデータは修飾されます。<br /><br /> **False**: フラット ファイルのテキスト データは修飾されません。|  
 |**名前**|わかりやすい列名を指定します。 名前を入力しないと、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] によって、列 1、列 2 などの形式で自動的に名前が作成されます。|  
-|**[データ スケール]**|数値データの小数点以下の精度を指定します。 これは小数点以下の桁数を表します。 詳細については、「 [Integration Services データ型](data-flow/integration-services-data-types.md)」を参照してください。|  
-|**ColumnDelimiter**|使用できる列区切り記号の一覧から、列区切り記号を選択します。 テキストに出現しないと思われる区切り記号を選択してください。 固定幅列の場合、この値は無視されます。<br /><br /> **{CR} {LF}**。 列は、復帰と改行の組み合わせで区切られます。<br /><br /> **{CR}**。 列は、復帰で区切られます。<br /><br /> **{LF}**。 列は、改行で区切られます。<br /><br /> **セミコロン {;}**。 列は、セミコロンで区切られます。<br /><br /> **コロン {:}**。 列は、コロンで区切られます。<br /><br /> **コンマ{,} **。 列は、コンマで区切られます。<br /><br /> **タブ {t}**。 列は、タブで区切られます。<br /><br /> **縦棒 {&#124;}**。 列は、縦棒で区切られます。|  
-|**[データ精度]**|数値データの精度を指定します。 精度とは、桁数です。 詳細については、「 [Integration Services データ型](data-flow/integration-services-data-types.md)」を参照してください。|  
+|**DataScale**|数値データの小数点以下の精度を指定します。 これは小数点以下の桁数を表します。 詳細については、「 [Integration Services データ型](data-flow/integration-services-data-types.md)」を参照してください。|  
+|**ColumnDelimiter**|使用できる列区切り記号の一覧から、列区切り記号を選択します。 テキストに出現しないと思われる区切り記号を選択してください。 固定幅列の場合、この値は無視されます。<br /><br /> **{CR} {LF}**。 列は、復帰と改行の組み合わせで区切られます。<br /><br /> **{CR}**。 列は、復帰で区切られます。<br /><br /> **{LF}**。 列は、改行で区切られます。<br /><br /> **セミコロン {;}**。 列は、セミコロンで区切られます。<br /><br /> **コロン {:}**。 列は、コロンで区切られます。<br /><br /> **コンマ {,} **。 列は、コンマで区切られます。<br /><br /> **タブ {t}**。 列は、タブで区切られます。<br /><br /> **縦棒 {&#124;}**。 列は、縦棒で区切られます。|  
+|**DataPrecision**|数値データの精度を指定します。 精度とは、桁数です。 詳細については、「 [Integration Services データ型](data-flow/integration-services-data-types.md)」を参照してください。|  
 |**[入力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、これは文字数として表示されます。 区切られた列の場合、この値は無視されます。<br /><br /> **注** オブジェクト モデルでは、このプロパティの名前は ColumnWidth です。|  
   
- **新しい**  
+ **[新規作成]**  
  **[新規作成]** をクリックして新しい列を追加します。 既定では、 **[新規作成]** ボタンをクリックすると、新しい列がリストの末尾に追加されます。 さらにこのボタンのドロップダウン リストには、次のオプションがあります。  
   
-|[値]|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**列の追加**|新しい列をリストの末尾に追加します。|  
 |**[前に挿入]**|選択した列の前に新しい列を追加します。|  

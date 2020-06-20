@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fc22c4af9980eb5c1c365c0ce2d0e2f6c8462e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827195"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029000"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics イベント クラス
   Performance Statistics イベント クラスは、実行中のクエリ、ストアド プロシージャ、およびトリガーのパフォーマンスを監視するために使用できます。 6 個のイベント サブクラスがあり、それぞれがシステム内のクエリ、ストアド プロシージャ、およびトリガーの有効期間内のイベントを示します。 これらのイベント サブクラスを、関連する sys.dm_exec_query_stats、sys.dm_exec_procedure_stats、および sys.dm_exec_trigger_stats 動的管理ビューと組み合わせて使用することで、クエリ、ストアド プロシージャ、トリガーのパフォーマンス履歴を再構成できます。  
@@ -48,7 +47,7 @@ ms.locfileid: "62827195"
   
 ### <a name="eventsubclass-1"></a>EventSubclass 1  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データの種類|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|このプランが再コンパイルされた累積回数。|52|はい|  
 |BinaryData|`image`|コンパイル済みプランのバイナリ XML。|2|はい|  
@@ -72,7 +71,7 @@ ms.locfileid: "62827195"
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データの種類|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|このプランが再コンパイルされた累積回数。|52|はい|  
 |BinaryData|`image`|コンパイル済みプランのバイナリ XML。|2|はい|  
@@ -81,7 +80,7 @@ ms.locfileid: "62827195"
 |SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 2 = アドホック SQL ステートメント内のクエリがコンパイルされました。<br /><br /> アドホック バッチのトレースで、次の種類の EventSubClass が生成されます。<br /><br /> *n* 個のクエリを持つアドホック バッチでは、次のようになります。<br /><br /> 種類 2 が*n* 個|21|はい|  
 |IntegerData2|`int`|バッチ内のステートメントの最後。<br /><br /> バッチの最後に達すると -1 になります。|55|はい|  
-|ObjectID|`int`|なし|22|はい|  
+|ObjectID|`int`|N/A|22|はい|  
 |Offset|`int`|バッチ内のステートメントの開始オフセット。<br /><br /> バッチの開始時は 0 です。|61|はい|  
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |SqlHandle|`image`|SQL ハンドル。 dm_exec_sql_text 動的管理ビューを使用してバッチ SQL テキストを取得するために使用できます。|63|はい|  
@@ -95,7 +94,7 @@ ms.locfileid: "62827195"
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データの種類|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|このプランが再コンパイルされた累積回数。|52|はい|  
 |BinaryData|`image`|NULL|2|はい|  
@@ -115,7 +114,7 @@ ms.locfileid: "62827195"
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データの種類|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|NULL|52|はい|  
 |BinaryData|`image`|NULL|2|はい|  
@@ -135,7 +134,7 @@ ms.locfileid: "62827195"
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データの種類|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|NULL|52|はい|  
 |BinaryData|`image`|NULL|2|はい|  

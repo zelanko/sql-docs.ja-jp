@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af064de0f89d515f2afb87eb2a6d683d7179e4dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811229"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056904"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>メモリ最適化テーブル サブスクライバーへのレプリケーション
   トランザクション レプリケーションのサブスクライバーとして機能するテーブルは、ピア ツー ピア トランザクション レプリケーションを除き、メモリ最適化テーブルとして構成できます。 その他のレプリケーション構成はメモリ最適化テーブルとは互換性がありません。  
@@ -59,7 +58,7 @@ ms.locfileid: "68811229"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  スナップショット フォルダーに移動します。 既定の場所は "C:\Program Server\MSSQL12. SQL\<インスタンス> \mssql\repldata\unc\xxx\yyyymmddhhmmss\\"。  
+2.  スナップショット フォルダーに移動します。 既定の場所は "C:\Program Server\MSSQL12. \<INSTANCE> SQL\MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS \\ "。  
   
 3.  を見つけ**ます。** テーブルの sch-m ファイルを開き、Management Studio で開きます。 次に説明するように、テーブル スキーマを変更し、ストアド プロシージャを更新します。  
   
@@ -282,7 +281,7 @@ GO
   
  これでメモリ最適化テーブルはパブリッシャーから更新を受け取り始めます。  
   
-## <a name="restrictions"></a>制限  
+## <a name="restrictions"></a>制約  
  一方向トランザクション レプリケーションのみがサポートされています。 ピア ツー ピア トランザクション レプリケーションはサポートされていません。  
   
  メモリ最適化テーブルをパブリッシュすることはできません。  

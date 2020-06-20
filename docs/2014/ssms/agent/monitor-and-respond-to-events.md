@@ -20,25 +20,24 @@ helpviewer_keywords:
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afdf1beffd6099fce84f03a8ba65f7de9abb8f0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001945"
 ---
 # <a name="monitor-and-respond-to-events"></a>イベントの監視と応答
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メッセージ、特定のパフォーマンス条件、WINDOWS MANAGEMENT INSTRUMENTATION (WMI) イベントなどの*イベント*を監視し、自動的に応答します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、のメッセージ*events* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、特定のパフォーマンス条件、Windows Management Instrumentation (WMI) イベントなどのイベントを監視し、自動的に応答します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [アラート](alerts.md)  
+ [警告](alerts.md)  
  警告の命名、および警告が応答するイベントやパフォーマンス条件の選択について説明します。  
   
  [ユーザー定義イベントの作成](create-a-user-defined-event.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によってあらかじめ定義されているイベント以外のイベントを作成する方法について説明します。  
   
- [演算子](operators.md)  
+ [オペレーター](operators.md)  
  ジョブが失敗または成功したときに通知を送信するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用できる、管理者の別名の作成について説明します。  
   
 ## <a name="about-monitoring-and-responding-to-events"></a>イベントの監視と応答について  

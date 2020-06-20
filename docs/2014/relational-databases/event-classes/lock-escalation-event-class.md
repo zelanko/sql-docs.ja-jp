@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bf476175245000ba63e058ca333953d07276076
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662373"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029430"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation イベント クラス
   **Lock:Escalation** イベント クラスは、細かい単位のロックが大きな単位のロックに変換されたことを示します。たとえば、行ロックがオブジェクト ロックに変換された場合です。 Escalation イベント クラスは、イベント ID 60 です。  
@@ -49,7 +48,7 @@ ms.locfileid: "62662373"
 |**NTUserName**|`nvarchar`|Windows のユーザー名。|6|はい|  
 |**ObjectID**|`int`|ロックのエスカレーションがトリガーされたテーブルにシステムが割り当てた ID。|22|はい|  
 |**ObjectID2**|`bigint`|関連するオブジェクトまたはエンティティの ID (ロックのエスカレーションがトリガーされた HoBT ID)。|56|はい|  
-|**Offset**|`int`|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの開始オフセット。|61|はい|  
+|**影**|`int`|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの開始オフセット。|61|はい|  
 |**OwnerID**|`int`|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6 = WAITFOR_QUERY|58|はい|  
 |**RequestID**|`int`|ステートメントが含まれている要求の ID。|49|はい|  
 |**ServerName**|`nvarchar`|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  

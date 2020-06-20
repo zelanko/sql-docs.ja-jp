@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: df54d7fb7562e6019e581b06fd14b00bdba15376
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9128f73dc8fec388ae111781b9beeb52bbab138b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058818"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967152"
 ---
 # <a name="file-connection-manager-editor"></a>[ファイル接続マネージャー エディター] ダイアログ ボックス
   **[ファイル接続マネージャー エディター]** ダイアログ ボックスを使用すると、ファイルまたはフォルダーに接続するためのプロパティを指定できます。  
@@ -33,7 +32,7 @@ ms.locfileid: "66058818"
  **使用法の種類**  
  **ファイル接続マネージャー** が既存のファイルまたはフォルダーに接続するか、新しいファイルまたはフォルダーを作成するかを指定します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |[ファイルの作成]|実行時に新しいファイルを作成します。|  
 |[既存のファイル]|既存のファイルを使用します。|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdcf47e483c3a52879c66838a657b51d65bff8f8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284857"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938723"
 ---
 # <a name="roles-ssas-tabular"></a>ロール (SSAS テーブル)
   テーブル モデルでは、ロールはあるモデルのメンバー アクセス許可を定義します。 各ロールには、Windows ユーザー名または Windows グループ別のメンバー、および権限 (読み取り、処理、および管理者) があります。 ロールのメンバーは、ロール権限によって定義されたとおりにモデル上で各種操作を実行できます。 読み取り権限を付与して定義されたロールでは、行レベル フィルターを使用して行レベルでのセキュリティを向上させることもできます。  
@@ -40,7 +39,7 @@ ms.locfileid: "67284857"
 -   [関連タスク](#bkmk_rt)  
   
 ##  <a name="understanding-roles"></a><a name="bkmk_underst"></a>ロールについて  
- ロールは、および[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データの[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]セキュリティを管理するために、で使用されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]には、次の 2 種類のロールがあります。  
+ ロールは [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、およびデータのセキュリティを管理するために、で使用され [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]には、次の 2 種類のロールがあります。  
   
 -   サーバー ロール。管理者が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスにアクセスできるようにするための固定ロールです。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "67284857"
 |Read|メンバーは、(行フィルターに基づいて) データに対してクエリを実行できますが、SSMS のモデル データベースを表示することはできず、モデルのデータベース スキーマを変更することはできません。また、ユーザーはモデルを処理できません。|行フィルターが適用されます。 行フィルター DAX 式で指定されたデータのみがユーザーに表示されます。|  
 |Read and Process (読み取りとプロセス)|メンバーは、(行レベル フィルターに基づいて) データを照会でき、処理コマンドを埋め込んだパッケージまたはスクリプトを実行することで処理操作を実行できますが、データベースを変更することはできません。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でモデル データベースを表示することはできません。|行フィルターが適用されます。 行フィルター DAX 式で指定されたデータのみ照会できます。|  
 |Process|メンバーは、処理コマンドを埋め込んだパッケージまたはスクリプトを実行することで、処理操作を実行できます。 モデルのデータベース スキーマを変更することはできません。 データを照会することはできません。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でモデル データベースを照会することはできません。|行フィルターは適用されません。 この役割ではデータを照会できません。|  
-|Administrator|メンバーは、モデル デザイナー、レポート クライアント、および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でモデル スキーマを変更したり、すべてのデータを照会したりできます。|行フィルターは適用されません。 この役割ではすべてのデータを照会することはできません。|  
+|管理者|メンバーは、モデル デザイナー、レポート クライアント、および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でモデル スキーマを変更したり、すべてのデータを照会したりできます。|行フィルターは適用されません。 この役割ではすべてのデータを照会することはできません。|  
   
 ##  <a name="row-filters"></a><a name="bkmk_rowfliters"></a>行フィルター  
  行フィルターは、特定のロールのメンバーがクエリできるテーブル内の行を定義します。 行フィルターは、DAX 式を使用してモデル内の各テーブルに対して定義されます。  
@@ -111,8 +110,8 @@ ms.locfileid: "67284857"
   
 |LastName|FirstName|LoginID|DepartmentName|DepartmentId|  
 |--------------|---------------|-------------|--------------------|------------------|  
-|Brown|Kevin|Adventure-works\kevin0|マーケティング|7|  
-|Bradley|David|Adventure-works\david0|マーケティング|7|  
+|Brown|Kevin|Adventure-works\kevin0|Marketing|7|  
+|Bradley|David|Adventure-works\david0|Marketing|7|  
 |Dobney|JoLynn|Adventure-works\JoLynn0|Production|4|  
 |Baretto DeMattos|Paula|Adventure-works\Paula0|Human Resources|2|  
   
@@ -120,13 +119,13 @@ ms.locfileid: "67284857"
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-|1|Corporate|  
+|1|企業|  
 |2|Executive General and Administration|  
 |3|Inventory Management|  
 |4|製造|  
 |5|品質保証|  
 |6|Research and Development|  
-|7|Sales and Marketing|  
+|7|営業/マーケティング|  
   
 ##  <a name="testing-roles"></a><a name="bkmk_testroles"></a>ロールのテスト  
  モデル プロジェクトの作成時に、Excel で分析機能を使用して、定義したロールの有効性をテストできます。 モデル デザイナーで **[モデル]** メニューの **[Excel で分析]** をクリックすると、Excel が開く前に **[資格情報とパースペクティブの選択]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、データ ソースとしてワークスペース モデルに接続するために使用する、現在のユーザー名、別のユーザー名、ロール、およびパースペクティブを指定できます。 詳しくは、後の「 [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)で [ロール マネージャー] ダイアログ ボックスを使用してロールを定義するテーブル モデル作成者向けです。  

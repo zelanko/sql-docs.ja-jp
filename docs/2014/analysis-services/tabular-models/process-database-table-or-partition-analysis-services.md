@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ea2d05c2862445737ea544fdab9c4ca8fc5e6c76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08c0856df10c2b70dc58ab1b52b0b7a4a1041e1b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066844"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938743"
 ---
 # <a name="process-database-table-or-partition"></a>データベース、テーブル、またはパーティションの処理
-  このトピックのタスクでは、の [ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]オブジェクトの** \<処理>** ] ダイアログボックスを使用して、テーブルモデルデータベース、テーブル、またはパーティションを手動で処理する方法について説明します。  
+  このトピックのタスクでは、の [ ** \<object> 処理**] ダイアログボックスを使用して、テーブルモデルデータベース、テーブル、またはパーティションを手動で処理する方法について説明し [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。  
   
  テーブル モデルの処理の詳細については、[「データの処理 (SSAS テーブル)」](../process-data-ssas-tabular.md) を参照してください。  
   
