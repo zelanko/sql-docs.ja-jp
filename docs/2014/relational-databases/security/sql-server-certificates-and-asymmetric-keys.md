@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8af2d92b31fee4f220b4c950fb6b7bd9c519885
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244509"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037814"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server の証明書と非対称キー
    公開キー暗号化 (PKI) は、メッセージを秘匿する方法の 1 つです。この方法では、ユーザーが "*公開*" キーと "*秘密*" キーを作成します。 秘密キーは秘匿されますが、公開キーは他のユーザーに配布できます。 2 つのキーは数学的に相関していますが、公開キーを使用して秘密キーを簡単に導出することはできません。 公開キーはデータの暗号化に使用され、秘密キーはデータの暗号化解除に使用されます。 公開キーを使用して暗号化されたメッセージは、正しい秘密キーを使用しないと暗号化解除できません。 2 つの異なるキーが存在するので、これらのキーは *非対称*です。  
@@ -68,7 +67,7 @@ ms.locfileid: "75244509"
 |-|-|  
 |ツール|目的|  
 |[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|証明書を作成します。|  
-|[sn.exe](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|対称キーの厳密名を作成します。|  
+|[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|対称キーの厳密名を作成します。|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [暗号化アルゴリズムの選択](encryption/choose-an-encryption-algorithm.md)  
@@ -78,6 +77,6 @@ ms.locfileid: "75244509"
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>参照  
- [sys. 証明書 &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
+ [sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
  [透過的なデータ暗号化 &#40;TDE&#41;](encryption/transparent-data-encryption.md)  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d28ec166f8954b874f98b7f9f441280ab9064f1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fd06ad0921dbb113a89af77e46733a28c2226c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62826758"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061404"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias プロパティ (ClientNetworkProtocol クラス)
   [Setordervalue メソッド (ClientNetworkProtocol クラス)](clientnetworkprotocol-class.md)によって指定された現在のネットワークプロトコルがエイリアスをサポートするかどうかを指定するブール型プロパティを取得します。  
@@ -36,7 +35,7 @@ object
 .SupportAlias [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  [クライアントによって使用されるネットワーク プロトコルを表す](clientnetworkprotocol-class.md) ClientNetworkProtocol クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
   

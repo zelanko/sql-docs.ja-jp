@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a273f23d0b5f9bf21f20bc17427c7a2dc3f82ae8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871279"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965820"
 ---
 # <a name="rebuild-system-databases"></a>システム データベースの再構築
   [master](master-database.md)、 [model](model-database.md)、 [msdb](msdb-database.md)、または [resource](resource-database.md) の各システム データベースの損傷による問題を解決するか、既定のサーバー レベルの照合順序を変更するには、システム データベースを再構築する必要があります。 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でシステム データベースを再構築する手順について説明します。  
@@ -104,9 +103,9 @@ ms.locfileid: "62871279"
     |/QUIET または /Q|セットアップがユーザー インターフェイスなしで実行されるように指定します。|  
     |/ACTION=REBUILDDATABASE|セットアップでシステム データベースを再作成することを指定します。|  
     |/Instancename =*instancename*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの名前を指定します。 既定のインスタンスには「MSSQLSERVER」と入力します。|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|`sysadmin` 固定サーバー ロールに追加する Windows グループまたは個々のアカウントを指定します。 複数のアカウントを指定する場合、各アカウントを空白で区切ります。 たとえば、「 **BUILTIN\Administrators MyDomain\MyUser**」と入力します。 アカウント名に空白を含むアカウントを指定する場合は、アカウントを二重引用符で囲みます。 たとえば、`NT AUTHORITY\SYSTEM` と入力します。|  
-    |[ /SAPWD=*StrongPassword* ]|`sa`アカウントの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パスワードを指定します。 このパラメーターは、インスタンスが混合モード認証 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Windows 認証) を使用する場合に必要になります。<br /><br /> **セキュリティに\*関する注意\* \* **`sa`アカウントは、よく知ら[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れたアカウントであり、悪意のあるユーザーの対象となることがよくあります。 `sa` ログインには、複雑なパスワードを使用することが非常に重要です。<br /><br /> Windows 認証モードにはこのパラメーターを指定しないでください。|  
-    |[ /SQLCOLLATION=*CollationName* ]|新しいサーバー レベルの照合順序を指定します。 このパラメーターは省略可能です。 これを指定しない場合は、サーバーの現在の照合順序が使用されます。<br /><br /> ** \*重要\* \* **サーバーレベルの照合順序を変更しても、既存のユーザーデータベースの照合順序は変更されません。 新しく作成されたすべてのユーザー データベースには、既定で新しい照合順序が使用されます。<br /><br /> 詳細については、「 [サーバーの照合順序の設定または変更](../collations/set-or-change-the-server-collation.md)」を参照してください。|  
+    |/SQLSYSADMINACCOUNTS=*accounts*|`sysadmin` 固定サーバー ロールに追加する Windows グループまたは個々のアカウントを指定します。 複数のアカウントを指定する場合、各アカウントを空白で区切ります。 たとえば、「 **BUILTIN\Administrators MyDomain\MyUser**」と入力します。 アカウント名に空白を含むアカウントを指定する場合は、アカウントを二重引用符で囲みます。 たとえば、「`NT AUTHORITY\SYSTEM`」と入力します。|  
+    |[ /SAPWD=*StrongPassword* ]|アカウントのパスワードを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` ます。 このパラメーターは、インスタンスが混合モード認証 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Windows 認証) を使用する場合に必要になります。<br /><br /> ** \* \* セキュリティ \* \* **に関するメモアカウントは、よく知られたアカウントであり、悪意のある `sa` ユーザーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 対象となることがよくあります。 `sa` ログインには、複雑なパスワードを使用することが非常に重要です。<br /><br /> Windows 認証モードにはこのパラメーターを指定しないでください。|  
+    |[ /SQLCOLLATION=*CollationName* ]|新しいサーバー レベルの照合順序を指定します。 このパラメーターは省略可能です。 これを指定しない場合は、サーバーの現在の照合順序が使用されます。<br /><br /> 重要サーバーレベルの照合順序を変更しても、既存のユーザーデータベースの照合順序は変更されません。 ** \* \* \* \* ** 新しく作成されたすべてのユーザー データベースには、既定で新しい照合順序が使用されます。<br /><br /> 詳細については、「 [サーバーの照合順序の設定または変更](../collations/set-or-change-the-server-collation.md)」を参照してください。|  
   
 3.  セットアップによりシステム データベースの再構築が完了すると、メッセージが表示されることなく、コマンド プロンプトに戻ります。 Summary.txt ログ ファイルを調査し、プロセスが正常に完了したことを確認します。 このファイルは C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Logs にあります。  
   
@@ -142,15 +141,15 @@ ms.locfileid: "62871279"
   
 4.  [インスタンスの選択] ページで、修復するインスタンスを選択し、 **[次へ]** をクリックします。  
   
-5.  修復ルールが実行され、操作が検証されます。 続行するには、[**次へ**] をクリックします。  
+5.  修復ルールが実行され、操作が検証されます。 続行するには、 **[次へ]** をクリックします。  
   
 6.  **[修復の準備完了]** ページで **[修復]** をクリックします。 [完了] ページでは、操作が完了したことが示されます。  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a>新しい msdb データベースの作成  
- `msdb`データベースが破損していて、 `msdb`データベースのバックアップがない場合は、 **instmsdb**スクリプトを使用して新しい`msdb`を作成できます。  
+ `msdb`データベースが破損していて、データベースのバックアップがない場合は、 `msdb` `msdb` **instmsdb**スクリプトを使用して新しいを作成できます。  
   
 > [!WARNING]  
->  **Instmsdb**スクリプトを使用してデータベースを`msdb` `msdb`再構築すると、ジョブ、警告、オペレーター、メンテナンスプラン、バックアップ履歴、ポリシーベースの管理設定、データベースメール、パフォーマンスデータウェアハウスなど、に格納されているすべての情報が削除されます。  
+>  `msdb` **Instmsdb**スクリプトを使用してデータベースを再構築すると、 `msdb` ジョブ、警告、オペレーター、メンテナンスプラン、バックアップ履歴、ポリシーベースの管理設定、データベースメール、パフォーマンスデータウェアハウスなど、に格納されているすべての情報が削除されます。  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]エージェント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、および [!INCLUDE[ssRS](../../includes/ssrs.md)]と、 [!INCLUDE[ssIS](../../includes/ssis-md.md)]をデータ ストアとして使用しているすべてのアプリケーションを含め、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続しているすべてのサービスを停止します。  
   
@@ -158,21 +157,21 @@ ms.locfileid: "62871279"
   
      詳細については、「 [Start、Stop、Pause、Resume、データベースエンジン、SQL Server エージェント、または SQL Server Browser サービスの再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
-3.  別のコマンドラインウィンドウで、次`msdb`のコマンドを実行してデータベースをデタッチします。 * \<servername>* をの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに置き換えます。`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  別のコマンドラインウィンドウで、 `msdb` 次のコマンドを実行してデータベースをデタッチし *\<servername>* ます。をのインスタンスに置き換え [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
-4.  Windows エクスプローラーを使用して、 `msdb`データベースファイルの名前を変更します。 これらのファイルは、既定で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの DATA サブフォルダーにあります。  
+4.  Windows エクスプローラーを使用して、データベースファイルの名前を変更 `msdb` します。 これらのファイルは、既定で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの DATA サブフォルダーにあります。  
   
 5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスを通常の方法で停止および再起動します。  
   
 6.  コマンド ライン ウィンドウで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、コマンド `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     * \<Servername>* をのインスタンスに置き換え[!INCLUDE[ssDE](../../includes/ssde-md.md)]ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのファイル システム パスを使用してください。  
+     *\<servername>* のインスタンスで置き換え [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのファイル システム パスを使用してください。  
   
 7.  Windows のメモ帳を使用して **instmsdb.out** ファイルを開き、エラーの出力を確認します。  
   
 8.  インスタンスにインストールされていたサービス パックまたは修正プログラムがあれば、再適用します。  
   
-9. ジョブや警告など、 `msdb`データベースに格納されているユーザーコンテンツを再作成します。  
+9. ジョブや警告など、データベースに格納されているユーザーコンテンツを再作成し `msdb` ます。  
   
 10. `msdb` をバックアップします。  
   
@@ -190,6 +189,6 @@ ms.locfileid: "62871279"
  再構築操作が完了した後で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログにエラーがないか調査します。 ログの既定の場所は C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Logs です。 再構築プロセスの結果を含むログ ファイルを探すには、ディレクトリをコマンド プロンプトから Logs フォルダーに変更し、 `findstr /s RebuildDatabase summary*.*`を実行します。 この検索により、システム データベースの再構築結果を含むログ ファイルが検出されます。 ログ ファイルを開き、該当するエラー メッセージがないか調査します。  
   
 ## <a name="see-also"></a>参照  
- [システム データベース](system-databases.md)  
+ [システムデータベース](system-databases.md)  
   
   

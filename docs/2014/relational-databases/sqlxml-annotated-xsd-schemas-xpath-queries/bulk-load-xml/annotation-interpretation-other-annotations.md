@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 169d65e801aca6ed34735649757b37a3ffe13193
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b654568c93df0a0c3e08cf6eaa615b7026a9c18a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703450"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003122"
 ---
 # <a name="other-annotations-sqlxml-40"></a>その他の注釈 (SQLXML 4.0)
   前のトピックで説明した注釈に加えて、XML 一括読み込みでは、その他の注釈が次のように解釈されます。  

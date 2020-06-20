@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fc52007f-c26f-4f8e-b9d8-55a7978f4d56
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fff59c773e4c96b8d14cf604c1a9a3e2b31869f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b787403fefdd336dd82bf7ccb93cdf21fe5a90d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010310"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955722"
 ---
 # <a name="configure-a-firewall-for-filestream-access"></a>FILESTREAM アクセスのためのファイアウォールの構成
   ファイアウォールで保護された環境で FILESTREAM を使用するには、クライアントとサーバーの両方で、FILESTREAM ファイルが格納されているサーバーの DNS 名を解決できる必要があります。 FILESTREAM を使用する場合は、Windows ファイル共有ポート 139 および 445 を開く必要があります。  

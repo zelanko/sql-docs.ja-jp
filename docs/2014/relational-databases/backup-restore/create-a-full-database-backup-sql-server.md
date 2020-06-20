@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4c750f4230cc83467cc5993d2a6ab571a06d2f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f406464680a1669133dc87bdfb231c644d33fbdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958914"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>データベースの完全バックアップの作成 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell を使用して、データベースの完全バックアップを作成する方法について説明します。  
@@ -69,12 +68,12 @@ ms.locfileid: "72798034"
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
  データベースをバックアップすると、TRUSTWORTHY は OFF に設定されます。 TRUSTWORTHY を ON に設定する方法については「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)」を参照してください。  
   
- 以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]は`PASSWORD` 、 `MEDIAPASSWORD`バックアップを作成するためのオプションとオプションが廃止されました。 パスワード付きで作成されたバックアップを復元することは、引き続き可能です。  
+ 以降では [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、 `PASSWORD` バックアップを `MEDIAPASSWORD` 作成するためのオプションとオプションが廃止されました。 パスワード付きで作成されたバックアップを復元することは、引き続き可能です。  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。  
   
- バックアップ デバイスの物理ファイルに対する所有と許可の問題によって、バックアップ操作が妨げられることがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、デバイスに対して読み書きを実行できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されているアカウントには書き込み権限が必要です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)では、ファイル アクセスの権限は確認 されません 。 バックアップ デバイスの物理ファイルに関するこのような問題は、バックアップや復元が試行され、物理リソースがアクセスされるまで、表面化しない可能性があります。  
+ バックアップ デバイスの物理ファイルに対する所有と許可の問題によって、バックアップ操作が妨げられることがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、デバイスに対して読み書きを実行できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されているアカウントには書き込み権限が必要です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)では、ファイル アクセスの権限は確認されません。 バックアップ デバイスの物理ファイルに関するこのような問題は、バックアップや復元が試行され、物理リソースがアクセスされるまで、表面化しない可能性があります。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -83,11 +82,11 @@ ms.locfileid: "72798034"
   
 #### <a name="to-back-up-a-database"></a>データベースをバックアップするには  
   
-1.  の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]適切なインスタンスに接続した後、オブジェクトエクスプローラーで、サーバー名をクリックしてサーバーツリーを展開します。  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で適切な オブジェクト エクスプローラーのインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
 2.  **[データベース]** を展開し、目的のデータベースに応じて、任意のユーザー データベースを選択するか、または **[システム データベース]** を展開して任意のシステム データベースを選択します。  
   
-3.  データベースを右クリックし、**[タスク]** をポイントして、**[バックアップ]** をクリックします。 **[データベースのバックアップ]** ダイアログ ボックスが表示されます。  
+3.  データベースを右クリックして **[タスク]** をポイントし、 **[バックアップ]** をクリックします。 **[データベースのバックアップ]** ダイアログ ボックスが表示されます。  
   
 4.  `Database`リストボックスで、データベース名を確認します。 必要に応じて、このボックスの一覧から別のデータベースを選択することもできます。  
   
@@ -102,11 +101,11 @@ ms.locfileid: "72798034"
     > [!NOTE]  
     >  **[差分]** オプションが選択されている場合、コピーのみのバックアップは作成できません。  
   
-8.  [**バックアップコンポーネント**] で`Database`、[] をクリックします。  
+8.  [**バックアップコンポーネント**] で、[] をクリックし `Database` ます。  
   
-9. **[名前]** ボックスに表示されている既定のバックアップ セット名をそのまま使用するか、バックアップ セットの別の名前を入力します。  
+9. **[名前]** ボックスに表示された既定のバックアップ セット名をそのまま使用するか、または別のバックアップ セット名を入力します。  
   
-10. オプションで、**[説明]** ボックスに、バックアップ セットの説明を入力します。  
+10. 必要に応じて、 **[説明]** ボックスに、バックアップ セットの説明を入力します。  
   
 11. **[ディスク]**、 **[テープ]** 、または **[URL]** をクリックして、バックアップ先を選択します。 1 つのメディア セットを含んでいる最大 64 個のディスク ドライブまたはテープ ドライブのパスを選択するには、 **[追加]** をクリックします。 選択したパスは、 **[バックアップ先]** ボックスの一覧に表示されます。  
   
@@ -114,7 +113,7 @@ ms.locfileid: "72798034"
   
 12. メディア オプションを表示または選択するには、 **[ページの選択]** ペインの **[メディア オプション]** をクリックします。  
   
-13. 次のいずれかをクリックして、**[メディアに上書きします]** オプションを選択します。  
+13. 次のいずれかをクリックして、 **[メディアに上書きします]** オプションを選択します。  
   
     -   **[既存のメディア セットにバックアップする]**  
   
@@ -138,9 +137,9 @@ ms.locfileid: "72798034"
   
 14. [**信頼性**] セクションで、必要に応じて次のチェックボックスをオンにします。  
   
-    -   **完了時にバックアップを確認**します。  
+    -   **[完了時にバックアップを検証する]** 。  
   
-    -   **[メディアに書き込む前にチェックサムを行う]** および、必要に応じて **[エラーのまま続行する]** チェックサムの詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)」を参照してください。  
+    -   **[メディアに書き込む前にチェックサムを行う]** 、および、必要に応じて、 **[チェックサム エラーのまま続行する]** 。 チェックサムの詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)」を参照してください。  
   
 15. **[全般]** ページの **[バックアップ先]** セクションで、テープ ドライブにバックアップするように指定した場合は、 **[バックアップ後にテープをアンロードする]** チェック ボックスがアクティブになります。 このオプションをオンにすると、 **[アンロードの前にテープを巻き戻す]** オプションがアクティブになります。  
   
@@ -151,15 +150,15 @@ ms.locfileid: "72798034"
   
 17. バックアップ セットの有効期限と、有効期限が過ぎたデータを明示的に確認せずに上書きできるかどうかを指定します。  
   
-    -   特定の日数が経過した後、バックアップ セットを有効期限切れにするには、**[期間指定]** (既定のオプション) をクリックし、日数を入力します。セットの作成後、この日数が経過すると、セットは有効期限切れになります。 0 ～ 99,999 日の値を指定できます。0 日を指定すると、バックアップ セットの有効期限は無期限になります。  
+    -   バックアップ セットが指定の日数後に期限切れになるようにするには、 **[期間指定]** \(既定のオプション) をクリックし、セットを作成してからセットが期限切れになるまでの日数を入力します。 0 ～ 99,999 日の値を指定できます。0 日を指定すると、バックアップ セットの有効期限は無期限になります。  
   
          既定値は、**[サーバーのプロパティ]** ダイアログ ボックス ([データベースの設定] ページ) の **[バックアップ メディアの既定の保有期間 (日)]** オプションで設定します。 このオプションを表示するには、オブジェクト エクスプローラーでサーバー名を右クリックし、プロパティを選択してから **[データベースの設定]** ページを選択します。  
   
-    -   バックアップ セットを特定の日付で有効期限切れにするには、**[日時指定]** をクリックし、セットを有効期限切れにする日付を入力します。  
+    -   バックアップ セットが特定の日付に期限切れになるようにするには、 **[日時指定]** をクリックし、セットの有効期限が切れる日付を入力します。  
   
          バックアップの有効期限の詳細については、「 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)」を参照してください。  
   
-18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] 以降では、 [バックアップの圧縮](backup-compression-sql-server.md)がサポートされています。 既定では、バックアップが圧縮されるかどうかは、**[バックアップ圧縮の既定]** サーバー構成オプションの値によって決まります。 ただし、現在のサーバー レベルの既定値に関係なく、**[バックアップを圧縮する]** チェック ボックスをオンにしてバックアップを圧縮することも、**[バックアップを圧縮しない]** チェック ボックスをオンにして圧縮を無効にすることもできます。  
+18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] 以降では、 [バックアップの圧縮](backup-compression-sql-server.md)がサポートされています。 既定では、バックアップが圧縮されるかどうかは、 **[バックアップ圧縮の既定]** サーバー構成オプションの値によって決まります。 ただし、現在のサーバー レベルの既定の設定にかかわらず、 **[バックアップを圧縮する]** をオンにしてバックアップを圧縮することも、 **[バックアップを圧縮しない]** をオンにして圧縮しないようにすることもできます。  
   
      **現在の backup compression default 値を表示または変更するには**  
   
@@ -184,17 +183,17 @@ ms.locfileid: "72798034"
   
      BACKUP DATABASE *database*  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *backup_device* [ **,** ...*n* ]  
   
-     [ WITH *with_options* [ **,**...*o* ] ] ;  
+     [ WITH *with_options* [ **,** ...*o* ] ] ;  
   
     |オプション|説明|  
     |------------|-----------------|  
     |*database*|バックアップするデータベースです。|  
-    |*backup_device* [ **,**...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> {DISK &#124; TAPE}**=** _physical_backup_device_name_<br /><br /> 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](backup-devices-sql-server.md)」を参照してください。|  
-    |WITH *with_options* [ **,**...*o* ]|必要に応じて、1 つ以上の追加オプション ( *o*) を指定します。 基本的な with オプションについては、手順 2. を参照してください。|  
+    |*backup_device* [ **,** ...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=** _physical_backup_device_name_<br /><br /> 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](backup-devices-sql-server.md)」を参照してください。|  
+    |WITH *with_options* [ **,** ...*o* ]|必要に応じて、1 つ以上の追加オプション ( *o*) を指定します。 基本的な with オプションについては、手順 2. を参照してください。|  
   
-2.  必要に応じて、1 つ以上の WITH オプションを指定します。 ここでは、一部の基本的な WITH オプションについて説明します。 すべての WITH オプションについては、「 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)」を参照してください。  
+2.  必要に応じて、1 つ以上の WITH オプションを指定します。 ここでは、一部の基本的な WITH オプションについて説明します。 すべての WITH オプションについては、「[BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)」を参照してください。  
   
     -   基本的なバックアップ セット WITH オプション  
   
@@ -204,10 +203,10 @@ ms.locfileid: "72798034"
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          SQL Server 2014 以降でのみ、使用する暗号化アルゴリズムと暗号化の保護に使用する証明書または非対称キーを指定します。  
   
-         説明**=** { **'*`text`*'** | **@**_text_variable_ }  
+         説明 **=** { **' *`text`* '**  |  **@** _text_variable_ }  
          バックアップ セットを記述したテキストを自由な形式で指定します。 文字列の長さは最大 255 文字です。  
   
-         名前**=** { *backup_set_name* | **@**_backup_set_name_var_ }  
+         名前 **=** { *backup_set_name*  |  **@** _backup_set_name_var_ }  
          バックアップ セットの名前を指定します。 名前の長さは最大 128 文字です。 NAME を指定しないと、名前は空白になります。  
   
     -   基本的なバックアップ セット WITH オプション  
@@ -216,13 +215,13 @@ ms.locfileid: "72798034"
   
          また、FORMAT オプションを使用して、バックアップ メディアをフォーマットすることもできます。  
   
-         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media_name_variable_ }] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text_variable_ }]  
+         FORMAT [ **,** MEDIANAME **=** { *media_name*  |  **@** _media_name_variable_ }] [ **,** MEDIADESCRIPTION **=** { *text*  |  **@** _text_variable_ }]  
          FORMAT 句は、バックアップ メディアを初めて使用する場合や既存のデータをすべて上書きする場合に使用します。 必要に応じて、新しいメディアにメディア名と説明を割り当てます。  
   
         > [!IMPORTANT]  
         >  BACKUP ステートメントで FORMAT 句を使用すると、バックアップ メディアに格納されているバックアップが破棄されるので、十分注意して使用してください。  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>例 (Transact-sql)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
   
 #### <a name="a-backing-up-to-a-disk-device"></a>A. ディスク デバイスへのバックアップ  
  次の例では、新しいメディア セットを作成する [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] を使用して、 `FORMAT` データベース全体をディスクにバックアップします。  
@@ -272,7 +271,7 @@ GO
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
   
-1.  `Backup-SqlDatabase` コマンドレットを使用します。 データベースの完全バックアップであることを明示するには、 **-backupaction**パラメーターに既定値を`Database`指定します。 このパラメーターは、データベースの完全バックアップでは省略可能です。  
+1.  `Backup-SqlDatabase` コマンドレットを使用します。 データベースの完全バックアップであることを明示するには、 **-backupaction**パラメーターに既定値を指定し `Database` ます。 このパラメーターは、データベースの完全バックアップでは省略可能です。  
   
      次の例では、 `MyDB` データベースの完全なバックアップを、サーバー インスタンス `Computer\Instance`の既定のバックアップ場所に作成します。 オプションで、`-BackupAction Database` を指定します。  
   
@@ -302,11 +301,11 @@ GO
   
 ## <a name="see-also"></a>参照  
  [バックアップの概要 &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [トランザクションログのバックアップ &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [メディアセット、メディアファミリ、およびバックアップセット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
- [sp_addumpdevice &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [トランザクション ログのバックアップ &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [データベースのバックアップ &#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
- [[データベースのバックアップ &#40;バックアップオプション] ページ&#41;](back-up-database-backup-options-page.md)   
+ [データベースのバックアップ &#40;全般ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
+ [[データベースのバックアップ] &#40;[バックアップ オプション] ページ&#41;](back-up-database-backup-options-page.md)   
  [差分バックアップ &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [データベースの完全バックアップ &#40;SQL Server&#41;](full-database-backups-sql-server.md)  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87fc7802ea79a73c452f515f72f553850f017bb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14d8b3f1a998b18ae0153c1771fa11afd925da9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882325"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038071"
 ---
 # <a name="create-a-publication"></a>パブリケーションの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリケーションを作成する方法について説明します。  
@@ -45,13 +44,13 @@ ms.locfileid: "73882325"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
--   パブリケーション名およびアーティクル名には、% , \* , [ , ] , | , : , " , ? を使用できません。 、'、\、/、 \< 、> です。 データベースのオブジェクトにこれらの文字が含まれ、これらをレプリケートする場合は、 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスで、オブジェクト名と異なるアーティクル名を指定する必要があります。このダイアログ ボックスは、ウィザードの **[アーティクル]** ページより利用可能です。  
+-   パブリケーション名およびアーティクル名には、% , \* , [ , ] , | , : , " , ? を使用できません。 , ' , \ , / , \< , >. データベース内のオブジェクトにこれらの文字が含まれていて、それらをレプリケートする場合は、[アーティクルの**プロパティ- \<Article> ** ] ダイアログボックスでオブジェクト名とは異なるアーティクル名を指定する必要があります。このダイアログボックスは、ウィザードの [**アーティクル**] ページから使用できます。  
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../../includes/msconame-md.md)] を使用します。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- パブリケーションの新規作成ウィザードにより、パブリケーションを作成し、アーティクルを定義します。 パブリケーションを作成したら、 **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスでパブリケーションのプロパティを表示および変更します。 Oracle データベースからパブリケーションを作成する方法については、「[Create a Publication from an Oracle Database](create-a-publication-from-an-oracle-database.md)」(Oracle データベースからパブリケーションを作成する) をご覧ください。  
+ パブリケーションの新規作成ウィザードにより、パブリケーションを作成し、アーティクルを定義します。 パブリケーションが作成されたら、[**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスでパブリケーションのプロパティを表示および変更します。 Oracle データベースからパブリケーションを作成する方法については、「[Create a Publication from an Oracle Database](create-a-publication-from-an-oracle-database.md)」(Oracle データベースからパブリケーションを作成する) をご覧ください。  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>パブリケーションを作成し、アーティクルを定義するには  
   
@@ -110,14 +109,14 @@ ms.locfileid: "73882325"
   
     -   結果セットが空の場合は、ログ リーダー エージェント ジョブを作成します。 パブリッシャーで、[sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql) を実行します。 エージェントの実行に使用される [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 資格情報を **\@job_name** と **\@password** に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合は、 **\@publisher_security_mode** に **0** を指定し、 **\@publisher_login** と **\@publisher_password** に [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン情報を指定する必要もあります。 手順 3. に進みます。  
   
-3.  パブリッシャーで、[sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を実行します。 ** \@パブリケーション**のパブリケーション名を指定し、 ** \@repl_freq**パラメーターには、スナップショットパブリケーションの場合は`snapshot`の値を、トランザクションパブリケーション`continuous`の場合は値を指定します。 必要に応じて、その他のパブリケーション オプションを指定してください。 これにより、パブリケーションが定義されます。  
+3.  パブリッシャーで、[sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を実行します。 ** \@ パブリケーション**のパブリケーション名を指定し、 ** \@ repl_freq**パラメーターには、スナップショットパブリケーションの場合はの値を、 `snapshot` トランザクションパブリケーションの場合は値を指定し `continuous` ます。 必要に応じて、その他のパブリケーション オプションを指定してください。 これにより、パブリケーションが定義されます。  
   
     > [!NOTE]  
     >  パブリケーション名に、次の文字を含めることはできません。  
     >   
     >  % * [ ] | : " ? \ / \< >  
   
-4.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 3 で使用したパブリケーション名を **\@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **\@snapshot_job_name** と **\@password** に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **\@publisher_security_mode** に **0** を指定し、 **\@publisher_login** と **\@publisher_password** に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン情報を指定する必要があります。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
+4.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 3 で使用したパブリケーション名を **\@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **\@snapshot_job_name** と **\@password** に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **\@publisher_security_mode** に **0** を指定し、**\@publisher_login** と **\@publisher_password** に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン情報を指定する必要があります。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
@@ -137,7 +136,7 @@ ms.locfileid: "73882325"
     >   
     >  % * [ ] | : " ? \ / \< >  
   
-3.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 2 で使用したパブリケーション名を **\@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **\@snapshot_job_name** と **\@password** に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **\@publisher_security_mode** に **0** を指定し、 **\@publisher_login** と **\@publisher_password** に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン情報を指定する必要があります。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
+3.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 2 で使用したパブリケーション名を **\@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **\@snapshot_job_name** と **\@password** に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **\@publisher_security_mode** に **0** を指定し、**\@publisher_login** と **\@publisher_password** に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン情報を指定する必要があります。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  

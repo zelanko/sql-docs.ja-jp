@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b8d858e8b7ab62ac22902a15159163f8d6d01889
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c4c97e61191da4d51830b1bc8d44bfc98f698a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630558"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997960"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] (トランザクション サブスクリプション)
   **[ディストリビューターからサブスクライバーまでの履歴]** タブでは、ステータス、履歴、情報メッセージ、およびすべてのエラー メッセージを含む、ディストリビューション エージェントの詳細情報が表示されます。  
@@ -31,7 +30,7 @@ ms.locfileid: "62630558"
  **状態**  
  ディストリビューション エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   Error  
+-   エラー  
   
 -   完了  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62630558"
  **終了時刻**  
  セッションの終了時刻です。 エージェントが停止していない場合は、このフィールドは空になっています。  
   
- **Duration**  
+ **期間**  
  このセッションでディストリビューション エージェントが実行された時間の合計です。 この時間は、エージェントが現在実行中の場合の経過時間と、エージェント セッションが終了した場合のセッションの合計時間を表します。  
   
  **エラー メッセージ**  

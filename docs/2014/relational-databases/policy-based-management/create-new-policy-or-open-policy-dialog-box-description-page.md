@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5a1b4986efe0047d210410b848f1174fdb9ea1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255225"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005742"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーに説明と詳細情報を追加できます。  
@@ -45,7 +44,7 @@ ms.locfileid: "63255225"
  **更新日時**  
  ポリシーが最後に変更された日付。  
   
- **[変更者]**  
+ **更新者**  
  ポリシーを最後に変更したログイン。  
   
 ## <a name="see-also"></a>参照  

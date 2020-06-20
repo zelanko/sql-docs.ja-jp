@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eee3452c109bcd519cb24ba96b621ec25c0110df
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a4ebbf6e83524988822b6158b3524d7fff4bb40e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704594"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018209"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>テーブル値パラメーターの行セットの作成
   コンシューマーはテーブル値パラメーターに任意の行セット オブジェクトを使用できますが、通常の行セット オブジェクトはバックエンドのデータ ストアに対して実装されるため、パフォーマンスが制限されます。 このため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、コンシューマーがメモリ内データの上位に特殊な行セット オブジェクトを作成できます。 この特別なメモリ内の行セットオブジェクトは、テーブル値パラメーターの行セットと呼ばれる新しい COM オブジェクトです。 このオブジェクトには、パラメーター セットと同様の機能が用意されています。  

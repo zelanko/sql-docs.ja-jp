@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b87c66eab08243a6339f1eb2bc1912e469f2b80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5087a925ac163281f4326a5f952c11ce2953c6dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929905"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965962"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 (SQL Server)
   このトピックは、次の状況に関連しています。  
@@ -124,7 +123,7 @@ ms.locfileid: "76929905"
 ##  <a name="database-ownership"></a><a name="database_ownership"></a>データベースの所有権  
  データベースを別のコンピューターに復元すると、復元操作を開始した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン ユーザーまたは Windows ユーザーが自動的に新しいデータベースの所有者になります。 復元されたデータベースのシステム管理者または新しいデータベース所有者は、そのデータベースの所有権を変更できます。  
   
-##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a>分散クエリとリンクサーバー  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a> 分散クエリおよびリンク サーバー  
  分散クエリおよびリンク サーバーは OLE DB アプリケーションでサポートされます。 分散クエリは、同一コンピューター上または異なるコンピューター上の複数の異種データ ソースのデータにアクセスします。 リンク サーバーを構成すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はリモート サーバー上の OLE DB データ ソースに対してコマンドを実行できます。 詳しくは、「[リンク サーバー &#40;データベース エンジン&#41;](../linked-servers/linked-servers-database-engine.md)」を参照してください。  
   
  [&#91;先頭に戻る&#93;](#information_entities_and_objects)  

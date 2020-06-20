@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c87d0123c5174461e4e3470b4e77ccb4bc5b10a1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ddb4cacd31b08346d64b3d9caa4868c53a90050d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701894"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018955"
 ---
 # <a name="delete-a-data-source-odbc"></a>データ ソースの削除 (ODBC)
   データソースを削除するには、ODBC 管理者を使用してプログラムで ( [Sqlconfigdatasource](../native-client-odbc-api/sqlconfigdatasource.md)を使用)、またはファイルを削除します (ファイルデータソース名が指定されている場合)。  

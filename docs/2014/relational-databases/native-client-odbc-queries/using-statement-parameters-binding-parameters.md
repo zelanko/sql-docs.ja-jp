@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9b7865b3b928c6c6291fdd7cb419b76cae8f1e8b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 94100894323d8d15057c966f3298cf4e7d32c469
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699898"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018402"
 ---
 # <a name="binding-parameters"></a>パラメーターのバインド
   SQL ステートメントの各パラメーター マーカーは、ステートメントを実行する前にアプリケーション内の変数に関連付ける、つまりバインドする必要があります。 これは、 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)関数を呼び出すことによって行われます。 **SQLBindParameter**は、ドライバーへのプログラム変数 (Address、C データ型など) を記述します。 また、序数値を示すことでパラメーター マーカーを識別してから、そのパラメーター マーカーが表す SQL オブジェクト表現 (SQL データ型、有効桁数など) を記述します。

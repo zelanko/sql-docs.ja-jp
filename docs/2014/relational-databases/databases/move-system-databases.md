@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 748d781d6bbefb0dc710427a34ebd71ec7037fdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871539"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965845"
 ---
 # <a name="move-system-databases"></a>システム データベースの移動
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のシステム データベースを移動する方法について説明します。 システム データベースの移動は、次の状況で便利な場合があります。  
@@ -62,7 +61,7 @@ ms.locfileid: "62871539"
   
 -   [補足情報: すべてのシステム データベースを移動した後](#Follow)  
   
--   [例](#Examples)  
+-   [使用例](#Examples)  
   
 ##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a>計画された再配置とスケジュールされたディスクメンテナンスの手順  
  計画に従った再配置やスケジュールされたメンテナンス操作の中でシステム データベースのデータ ファイルやログ ファイルを移動するには、次の手順を実行します。 この手順は、master データベースと Resource データベース以外のすべてのシステム データベースに適用されます。  
@@ -194,7 +193,7 @@ ms.locfileid: "62871539"
     ```  
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a>Resource データベースの移動  
- Resource データベースの既定の場所は、\<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\ です。 データベースを移動することはできません。  
+ リソースデータベースの場所は、 \<*drive*> 次のとおり \<version> \<*instance_name*> です。\MSSQL\Binn \\ 。 データベースを移動することはできません。  
   
 ##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a>補足情報: すべてのシステムデータベースを移動した後  
  すべてのシステム データベースを、新しいドライブやボリューム、または別のドライブ文字を使用した別のサーバーに移動した場合は、次の更新を行います。  
@@ -209,7 +208,7 @@ ms.locfileid: "62871539"
   
 2.  **[エラー ログ]** を右クリックし、 **[構成]** をクリックします。  
   
-3.  **[SQL Server エージェント エラー ログの構成］** ダイアログ ボックスで、SQLAGENT.OUT ファイルの新しい場所を指定します。 既定の場所は、C:\Program Server\MSSQL12. SQL <instance_name>\\\mssql\log です。  
+3.  **[SQL Server エージェント エラー ログの構成］** ダイアログ ボックスで、SQLAGENT.OUT ファイルの新しい場所を指定します。 既定の場所は、C:\Program Server\MSSQL12. SQL <instance_name> \MSSQL\Log \\ です。  
   
 #### <a name="change-the-database-default-location"></a>データベースの既定の場所の変更  
   
@@ -264,7 +263,7 @@ ms.locfileid: "62871539"
 5.  `tempdb.mdf` ファイルおよび `templog.ldf` ファイルを元の場所から削除します。  
   
 ## <a name="see-also"></a>参照  
- [リソースデータベース](resource-database.md)   
+ [Resource データベース](resource-database.md)   
  [tempdb データベース](tempdb-database.md)   
  [master データベース](master-database.md)   
  [msdb データベース](msdb-database.md)   

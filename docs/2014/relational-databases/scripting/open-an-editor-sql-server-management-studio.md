@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 092c06c2f790c5f62901fd805dc7fd8d76d3a464
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 30ac906882fd80fcab00977534f83a2438fb7ca3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703801"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009760"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>エディターの表示 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター、MDX エディター、DMX エディター、または XML/A エディターを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で開く方法について説明します。 エディターを開くと、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の中央のペインに、それぞれのエディター ウィンドウがタブとして表示されます。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ec6f347cdbc6d14e8f621466a1708b8ee9fe7d36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90f967b2446e11a27f5a87803bb71d6e1ec53557
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489752"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039840"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>レッスン 5: SSIS を使用してクレンジングと照合を自動化する
   レッスン1では、サプライヤーナレッジベースを構築し、それを使用してレッスン2でデータをクレンジングし、ツール**DQS クライアント**を使用してレッスン3でデータを照合しました。 実際のシナリオでは、dqs**クライアント**ツールを使用しなくても、dqs がサポートしていないソースからデータを取得したり、クレンジングと照合プロセスを自動化したりすることが必要になる場合があります。 SQL Server Integration Services (SSIS) には、さまざまな異種ソースからのデータを統合するために使用できるコンポーネントと、dqs によって公開されているクレンジング機能を呼び出すための**[Dqs クレンジング変換](https://msdn.microsoft.com/library/ee677619.aspx)** コンポーネントがあります。 現在、DQS では、SSIS で使用する照合機能が公開されていませんが、**[あいまいグループ化変換](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** を使用してデータ内の重複部分を識別できます。  

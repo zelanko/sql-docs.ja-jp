@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 947866923053c025d125d36bda5eb514ae6c2005
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 155fb8e9dca4f95496196ad167f7976115cef1f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662415"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052971"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings イベント クラス
   Execution Warnings イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントまたはストアド プロシージャの実行中にメモリ許可警告が発生したことを示します。 このイベント クラスを監視すると、クエリが処理を続行する前にメモリを 1 秒以上待機する必要があったかどうかや、メモリを取得するための最初の試行が失敗したかどうかを調べることができます。 クエリの待機時間に関する情報は、システムのパフォーマンスに影響を与える競合問題の特定に役立ちます。  
@@ -33,7 +32,7 @@ ms.locfileid: "62662415"
 |DatabaseID|`int`|USE *database*ステートメントで指定されたデータベースの ID、または特定のインスタンスに対して use *database*ステートメントが発行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |Duration|`bigint`|必要なメモリを取得するためにクエリが待機する必要があった時間 (ミリ秒単位)。 EventSubClass = 1 (クエリ待機) の場合のみ有効です。|13|はい|  
-|Error|`int`|使用されていません。|31|はい|  
+|エラー|`int`|使用されていません。|31|はい|  
 |EventClass|`int`|イベントの種類 = 67。|27|いいえ|  
 |EventSequence|`int`|トレース内にある特定のイベントのシーケンス。|51|いいえ|  
 |EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 1 = クエリ待機<br /><br /> 2 = クエリ タイムアウト|21|はい|  

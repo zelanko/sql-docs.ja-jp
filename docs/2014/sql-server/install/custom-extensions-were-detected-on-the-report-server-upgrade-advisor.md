@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2149e0434c13ccc9e284385999cf94c98fb937fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952594"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059378"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>レポート サーバーでカスタム拡張機能が検出された (アップグレード アドバイザー)
   構成ファイル内のカスタム拡張機能の設定がアップグレード アドバイザーによって検出されました。これは、データ処理、配信、表示、セキュリティ、または認証用のカスタム拡張機能が 1 つ以上インストールに含まれていることを示しています。 アップグレードによって、拡張機能の構成設定はアップグレード後のレポート サーバーに移動されます。 ただし、カスタム拡張機能を既存のレポート サーバーのインストール フォルダーにインストールした場合、アップグレードの処理中に、これらのカスタム拡張機能のアセンブリ ファイルは新しいインストール フォルダーに移動されません。 アップグレードの完了後、アセンブリ ファイルを新しい [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストール フォルダーに移動する必要があります。  
@@ -34,7 +33,7 @@ ms.locfileid: "71952594"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>説明  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]には拡張可能なアーキテクチャが用意されており、開発者はデータの処理、配信、表示、セキュリティ、および認証用のカスタム拡張機能を作成できます。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は拡張可能なアーキテクチャが用意されており、開発者はデータの処理、配信、表示、セキュリティ、および認証用のカスタム拡張機能を作成できます。  
   
  現在インストールされている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でカスタム拡張機能またはアセンブリを使用している場合、セットアップを使用してアップグレードを実行できますが、アップグレードの完了後に拡張機能を新しいインストール場所に移動するか、アップグレードの前に手順を実行する必要が生じることがあります。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "71952594"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>データ処理または配信のカスタム拡張機能のアップグレード後に行う手順  
   
-1.  1 つまたは複数の拡張機能ファイルを、レポート サーバーの新しいプログラム フォルダーに移動します。 既定では、レポートサーバーのプログラムフォルダーは、SQL Server \ MSRS10_50 にあります。\<> レポートサーバーを*instance_name*します。  
+1.  1 つまたは複数の拡張機能ファイルを、レポート サーバーの新しいプログラム フォルダーに移動します。 既定では、レポートサーバーのプログラムフォルダーは、SQL Server \ MSRS10_50 にあります。 \<*instance_name*>\ レポートサーバー。  
   
  詳細については、SQL Server オンライン ブックの「データ処理拡張機能の配置」および「配信拡張機能の実装」を参照してください。  
   

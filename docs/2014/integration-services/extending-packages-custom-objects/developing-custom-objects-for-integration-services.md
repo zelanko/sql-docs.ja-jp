@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 787ec28a5e118b0a5090463be68c55c51c6f1023
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2c4d65e421915fa67f1e3700fdfa91998c0c36e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176312"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966472"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Integration Services 用のカスタム オブジェクトの開発
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる制御フロー オブジェクトおよびデータ フロー オブジェクトが、求める条件を満たしていない場合は、次のようなさまざまな種類のカスタム オブジェクトを独自に開発できます。

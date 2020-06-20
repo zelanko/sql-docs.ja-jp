@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6f072f8d748b24489ab68f971abd4872edffdf6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966792"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
   **[プロセス実行タスク エディター]** ダイアログ ボックスの **[処理]** ページを使用すると、プロセスを実行する際のオプションを構成できます。 オプションには、実行する実行可能ファイル、そのファイルの場所、コマンド プロンプト引数、入力するための変数、出力をキャプチャする変数などが含まれます。  
@@ -40,15 +39,15 @@ ms.locfileid: "66059030"
  実行可能ファイルが格納されているフォルダーのパスを入力するか、参照ボタン ([. **..])** をクリックしてフォルダーを指定します。  
   
  **[StandardInputVariable]**  
- プロセスに入力を提供する変数を選択するか、[ \<**新しい変数...**> をクリックして新しい変数を作成します。  
+ プロセスに入力を提供する変数を選択するか、をクリックして \<**New variable...**> 新しい変数を作成します。  
   
  **関連項目:**  [変数の追加](../../2014/integration-services/add-variable.md)  
   
  **[StandardOutputVariable]**  
- プロセスの出力をキャプチャする変数を選択するか、[ \<**新しい変数...**> をクリックして新しい変数を作成します。  
+ プロセスの出力をキャプチャする変数を選択するか、をクリックして \<**New variable...**> 新しい変数を作成します。  
   
  **[StandardErrorVariable]**  
- プロセッサのエラー出力をキャプチャする変数を選択するか、[ \<**新しい変数...**> をクリックして新しい変数を作成します。  
+ プロセッサのエラー出力をキャプチャする変数を選択するか、をクリックして \<**New variable...**> 新しい変数を作成します。  
   
  **[FailTaskIfReturnCodeIsNotSuccessValue]**  
  プロセス終了コードが **[SuccessValue]** で指定されている値と異なった場合、タスクを終了するかどうかを指定します。  

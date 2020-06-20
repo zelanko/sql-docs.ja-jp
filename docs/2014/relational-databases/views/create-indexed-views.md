@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d33ff37caca04f46edd6ad92d0686713829bb270
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196429"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061515"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用し、インデックス付きビューを作成する方法について説明します。 ビューに作成する最初のインデックスは、一意なクラスター化インデックスにする必要があります。 一意のクラスター化インデックスを作成した後は、非クラスター化インデックスを追加で作成できます。 ビューに一意のクラスター化インデックスを作成すると、そのビューは、クラスター化インデックスが定義されているテーブルと同じ方法でデータベースに格納されるので、クエリのパフォーマンスが向上します。 クエリ オプティマイザーではインデックス付きビューを使って、クエリの実行速度を高めることができます。 オプティマイザーでビューを代用するかどうかを判別するために、ビューがクエリで参照されている必要はありません。  
@@ -55,7 +54,7 @@ ms.locfileid: "68196429"
   
 -   クエリ オプティマイザーで、クエリ プランの生成にインデックス付きビューが使用される。  
   
-    |SET オプション|必須値|既定のサーバー値|Default<br /><br /> OLE DB および ODBC 値|Default<br /><br /> DB-Library 値|  
+    |SET オプション|必須の値|既定のサーバー値|Default<br /><br /> OLE DB および ODBC 値|Default<br /><br /> DB-Library 値|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -98,7 +97,7 @@ ms.locfileid: "68196429"
   
 -   ビュー定義で使用する CLR ユーザー定義型の CLR 関数やメソッドは、次の表のようにプロパティが設定されている必要があります。  
   
-    |プロパティ|メモ|  
+    |プロパティ|注意|  
     |--------------|----------|  
     |DETERMINISTIC = TRUE|Microsoft .NET Framework メソッドの属性として、明示的に宣言する必要があります。|  
     |PRECISE = TRUE|.NET Framework メソッドの属性として、明示的に宣言する必要があります。|  
@@ -116,7 +115,7 @@ ms.locfileid: "68196429"
     |[COUNT]|行セット関数 (OPENDATASOURCE、OPENQUERY、OPENROWSET、および OPENXML)|外部結合 (LEFT、RIGHT、または FULL)|  
     |派生テーブル (FROM 句で SELECT ステートメントを指定することで定義される)|自己結合|SELECT \* または SELECT *table_name*を使用して、列を指定します。*|  
     |DISTINCT|STDEV、STDEVP、VAR、VARP、または AVG|共通テーブル式 (CTE)|  
-    |`float`\*、 `text`、 `ntext`、 `image`、 `XML`、また`filestream`は列|サブクエリ|順位付け関数または集計関数が含まれている OVER 句|  
+    |`float`\*、 `text` 、 `ntext` 、 `image` 、 `XML` 、または `filestream` 列|サブクエリ|順位付け関数または集計関数が含まれている OVER 句|  
     |フルテキスト述語 (CONTAIN、FREETEXT)|NULL 値を許容する式を参照する SUM 関数|ORDER BY|  
     |CLR ユーザー定義集計関数|TOP|CUBE、ROLLUP、または GROUPING SETS 演算子|  
     |MIN、MAX|UNION、EXCEPT、または INTERSECT 演算子。|TABLESAMPLE|  
@@ -124,7 +123,7 @@ ms.locfileid: "68196429"
     |スパース列セット|インラインまたは複数ステートメントのテーブル値関数|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*インデックス付きビューには`float`列を含めることができます。ただし、このような列をクラスター化インデックスキーに含めることはできません。  
+     \*インデックス付きビューには列を含めることができますが `float` 、このような列をクラスター化インデックスキーに含めることはできません。  
   
 -   GROUP BY が存在する場合、VIEW 定義には COUNT_BIG(*) を含める必要があります。HAVING を含めることはできません。 このような GROUP BY 制限は、インデックス付きビュー定義にのみ適用されます。 クエリがこの GROUP BY 制限を満たしていない場合でも、実行プランでインデックス付きビューを使用することはできます。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3efdb863b0a067d3d52405c5caa5a78e85555c62
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058307"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966278"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>[あいまい参照変換エディター] ([参照テーブル] タブ)
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブを使用すると、参照に使用する変換元テーブルとインデックスを指定できます。 参照データ ソースは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースのテーブルである必要があります。  
@@ -28,7 +27,7 @@ ms.locfileid: "66058307"
 >  あいまい参照変換では、参照テーブルの作業用コピーが作成されます。 以降に説明するインデックスは、通常の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インデックスではなく、特別なテーブルを使用してこの作業用テーブルに作成されるものです。 **[保存されたインデックスを維持する]** を選択しないと、既存の変換元テーブルは変更されません。 この場合、参照テーブルに加えられた変更に基づいて作業用テーブルと参照インデックス テーブルを更新するトリガーが、参照テーブルに作成されます。  
   
 > [!NOTE]  
->  あいまい`Exhaustive`参照変換`MaxMemoryUsage`のおよびプロパティは、[**あいまい参照変換エディター**] では使用できませんが、**詳細エディター**を使用して設定できます。 また、の`MaxOutputMatchesPerInput` 100 より大きい値は、**詳細エディター**でのみ指定できます。 これらのプロパティの詳細については、「 [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)」の「あいまい参照変換」を参照してください。  
+>  `Exhaustive` `MaxMemoryUsage` あいまい参照変換のおよびプロパティは、[**あいまい参照変換エディター**] では使用できませんが、**詳細エディター**を使用して設定できます。 また、の100より大きい値は、 `MaxOutputMatchesPerInput` **詳細エディター**でのみ指定できます。 これらのプロパティの詳細については、「 [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)」の「あいまい参照変換」を参照してください。  
   
  あいまい参照変換の詳細については、「 [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md)」を参照してください。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66058307"
  **OLE DB 接続マネージャー**  
  一覧から既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
- **新しい**  
+ **[新規作成]**  
  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続を作成します。  
   
  **[新しいインデックスを生成する]**  

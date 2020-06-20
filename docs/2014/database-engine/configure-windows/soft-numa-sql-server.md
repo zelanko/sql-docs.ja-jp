@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ae4bcd90b17228283859e2dd1a2897406e8ea95f
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 731ddbf67450c917387df7e104d138c0b35df2d6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924777"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934859"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>ソフト NUMA を使用するように SQL Server を構成する方法 (SQL Server)
 最新のプロセッサでは、1 つのソケットに対して複数のコアが与えられます。 各ソケットは、通常、1 つの NUMA ノードとして表示されます。 SQL Server データベース エンジンは、さまざまな内部構造を分割し、NUMA ノード単位でサービス スレッドを分割します。 ソケットあたり10個以上のコアを含むプロセッサでは、ソフトウェア NUMA (ソフト NUMA) を使用してハードウェア NUMA ノードを分割すると、一般にスケーラビリティとパフォーマンスが向上します。   
@@ -84,7 +83,7 @@ SQL Server 2014 Service Pack 2 以降では、起動時にデータベースエ�
   
      次の例では、1 ソケットにつき 18 個のコア (4 ソケットを装備) を備え、各ソケットがそれぞれ独自の K グループに属する DL580 G9 サーバーを使用するとします。 次のようなソフト NUMA の構成を作成できます。 (ノードごとに 6 コア、グループごとに 3 ノード、4 グループ)。  
   
-    |複数の K グループを持つ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] サーバーの例|種類|値の名前|[値] に|  
+    |複数の K グループを持つ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] サーバーの例|型|値の名前|[値] に|  
     |------------------------------------------------------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|グループ|0|  
@@ -113,7 +112,7 @@ SQL Server 2014 Service Pack 2 以降では、起動時にデータベースエ�
   
      その他の例:  
   
-    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|種類|値の名前|[値] に|  
+    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|型|値の名前|[値] に|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|グループ|0|  
@@ -125,7 +124,7 @@ SQL Server 2014 Service Pack 2 以降では、起動時にデータベースエ�
     > [!TIP]  
     >  CPU 60 ～ 63 を指定するには、QWORD 値 F000000000000000 またはバイナリ値 1111000000000000000000000000000000000000000000000000000000000000 を使用します。  
   
-    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|種類|値の名前|[値] に|  
+    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|型|値の名前|[値] に|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|グループ|0|  
@@ -134,7 +133,7 @@ SQL Server 2014 Service Pack 2 以降では、起動時にデータベースエ�
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|グループ|0|  
   
-    |SQL Server 2008 R2|種類|値の名前|[値] に|  
+    |SQL Server 2008 R2|型|値の名前|[値] に|  
     |------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|グループ|0|  
@@ -143,13 +142,13 @@ SQL Server 2014 Service Pack 2 以降では、起動時にデータベースエ�
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|グループ|0|  
   
-    |SQL Server 2008|種類|値の名前|[値] に|  
+    |SQL Server 2008|型|値の名前|[値] に|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
   
-    |SQL Server 2005|種類|値の名前|[値] に|  
+    |SQL Server 2005|型|値の名前|[値] に|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  

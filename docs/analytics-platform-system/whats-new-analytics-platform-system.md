@@ -2,7 +2,6 @@
 title: 新機能
 description: MPP SQL Server Parallel Data Warehouse をホストするスケールアウトオンプレミスアプライアンスである Microsoft Analytics Platform System の新機能について説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: faf3bd1f487fb5c850759fdde3ddecd32bdd3b1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625541"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039834"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>スケールアウト MPP データウェアハウスである Analytics Platform System の新機能
 Microsoft Analytics Platform System (APS) の最新のアプライアンス更新プログラムの新機能を参照してください。 APS は、MPP SQL Server 並列データウェアハウスをホストする、スケールアウトされたオンプレミスのアプライアンスです。 
@@ -131,7 +130,7 @@ SQL Server 2017 をサポートする新しい APS SSIS 変換先アダプター
 リリース日-2018 年7月
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC コマンドは同時実行スロットを使用しません (動作の変更)
-APS は、 [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)などの t-sql [dbcc コマンド](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)のサブセットをサポートしています。 以前は、これらのコマンドは[コンカレンシー スロット](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)を消費したので、実行できるユーザー負荷/クエリの数が減少しました。 `DBCC`コマンドは、ユーザーの同時実行スロットを使用しないローカルキューで実行されるようになりました。これにより、全体的なクエリ実行パフォーマンスが向上します。
+APS は、 [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)などの t-sql [dbcc コマンド](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)のサブセットをサポートしています。 以前は、これらのコマンドは[コンカレンシー スロット](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)を消費したので、実行できるユーザー負荷/クエリの数が減少しました。 コマンドは、 `DBCC` ユーザーの同時実行スロットを使用しないローカルキューで実行されるようになりました。これにより、全体的なクエリ実行パフォーマンスが向上します。
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>一部のメタデータ呼び出しをカタログオブジェクトに置き換えます。
 SMO を使用する代わりに、メタデータ呼び出しに catalog オブジェクトを使用すると、APS のパフォーマンスが向上しています。 CU 7.1 以降、これらのメタデータ呼び出しの一部では、既定でカタログオブジェクトが使用されるようになりました。 メタデータクエリを使用しているお客様が問題が発生した場合は、[機能スイッチ](appliance-feature-switch.md)でこの動作を無効にすることができます。
@@ -139,7 +138,7 @@ SMO を使用する代わりに、メタデータ呼び出しに catalog オブ�
 ### <a name="bug-fixes"></a>バグの修正
 APS CU 7.1 で SQL Server 2016 SP2 CU2 にアップグレードしました。 このアップグレードでは、以下に示すいくつかの問題が修正されます。
 
-| タイトル | 説明 |
+| Title | 説明 |
 |:---|:---|
 | **考えられる組ムーバーのデッドロック** |このアップグレードでは、分散トランザクションと組ムーバーのバックグラウンドスレッドでデッドロックが発生する可能性があることを修正しました。 CU 7.1 をインストールした後、TF634 を使用してタプルムーバーを停止すると SQL Server スタートアップパラメーターまたはグローバルトレースフラグとして削除できます。 | 
 | **特定のラグ/リードクエリが失敗する** |遅延/リード関数が入れ子になっている CCI テーブルに対する特定のクエリは、このアップグレードによって修正されました。 | 
@@ -155,7 +154,7 @@ APS 2016 は、AU7 にアップグレードするための前提条件です。 
 既定では、APS AU7 によって統計が自動的に作成および更新されます。 統計設定を更新するために、管理者は[Configuration Manager](appliance-configuration.md#CMTasks)の新しい機能の切り替えメニュー項目を使用できます。 [機能スイッチ](appliance-feature-switch.md)は、統計の自動作成、自動更新、および非同期更新の動作を制御します。 また、 [ALTER database (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)ステートメントを使用して、統計設定を更新することもできます。
 
 ### <a name="t-sql"></a>T-SQL
-Select @varがサポートされるようになりました。 詳細については、「 [select local variable](/sql/t-sql/language-elements/select-local-variable-transact-sql) 」を参照してください。 
+Select @var がサポートされるようになりました。 詳細については、「 [select local variable](/sql/t-sql/language-elements/select-local-variable-transact-sql) 」を参照してください。 
 
 クエリヒントのハッシュと順序グループがサポートされるようになりました。 詳細については、「[ヒント (transact-sql)-Query](/sql/t-sql/queries/hints-transact-sql-query) 」を参照してください。
 
@@ -204,7 +203,7 @@ APS AU6 では、これらの T-sql 互換性の向上がサポートされて�
 - [CUME_DIST][]
 - [PERCENT_RANK][]
 
-**セキュリティ関数**
+**セキュリティ機能**
 
 - [CHECKSUM ()][]と[BINARY_CHECKSUM ()][]
 - [HAS_PERMS_BY_NAME ()][]
@@ -263,7 +262,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [bcp ユーティリティ]:/sql/tools/bcp-utility
 [一意]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
-[NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
+[番号]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [行または範囲]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql
