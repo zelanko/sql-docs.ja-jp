@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3eaed80e-6f55-42ea-a964-aca31c09d055
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5256795677f4e8ce4249737d25d3ded1c4cd69c8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62792092"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937343"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>ソース管理へのソリューションとプロジェクトの追加
   ソース管理にソリューションを追加すると、そのソリューションは動的バージョン管理アーカイブに組み込まれます。動的バージョン管理アーカイブの作成と保守には、ソース管理プロバイダーを使用します。 だれかが新しいバージョンのソリューションをチェックインすると、そのバージョンがアーカイブに組み込まれ、他のソース管理ユーザーからの利用が可能になります。  

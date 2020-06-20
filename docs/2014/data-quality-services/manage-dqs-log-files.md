@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4aa9dc994ddd11c6fad57473d20956d95e46ebeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e22df90d4e5cb08ac5836f78f4940559be266ec
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484163"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937533"
 ---
 # <a name="manage-dqs-log-files"></a>DQS ログ ファイルの管理
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のログ ファイルは、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]、および [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]の問題を診断およびトラブルシューティングする際に役に立ちます。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]、および [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)]ごとに異なるログ ファイルが生成されます。  
@@ -46,7 +45,7 @@ ms.locfileid: "65484163"
   
 -   クラスとメソッド  
   
--   Message  
+-   メッセージ  
   
  これらに加えて、ログ ファイルには、アプリケーションのバージョン、コンピューター名、ユーザー名、およびオペレーティング システムに関する情報も表示されます。  
   

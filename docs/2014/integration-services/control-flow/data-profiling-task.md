@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfde82079c32b9aaba8db0ba9e52b02886bd2c47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831888"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919253"
 ---
 # <a name="data-profiling-task"></a>データ プロファイル タスク
   データ プロファイル タスクでは、データ ソースについて詳細に理解し、解決する必要があるデータの問題を特定するために役立つさまざまなプロファイルが計算されます。  
@@ -82,7 +81,7 @@ ms.locfileid: "62831888"
 |FunctionalDependencyProfile|`integer` 型、`char` 型、および `datetime` 型の列|  
 |InclusionProfile|`integer` 型、`char` 型、および `datetime` 型の列|  
   
- \*有効`integer`なデータ型`char`の前の表では、、 `datetime`、、 `numeric`およびの各型に、次の特定のデータ型が含まれています。  
+ \*有効なデータ型の前の表では、、、 `integer` `char` `datetime` 、およびの `numeric` 各型に、次の特定のデータ型が含まれています。  
   
  整数型には `bit`、`tinyint`、`smallint`、`int`、および `bigint` が含まれます。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62831888"
   
  数値型には `integer` 型 (`bit` を除く)、`money`、`smallmoney`、`decimal`、`float`、`real`、および `numeric` が含まれます。  
   
- \*\*`image`、 `text`、 `XML`、 `udt`、および`variant`の各型は、列の Null 比プロファイル以外のプロファイルではサポートされていません。  
+ \*\*`image`、 `text` 、 `XML` 、 `udt` 、およびの各 `variant` 型は、列の Null 比プロファイル以外のプロファイルではサポートされていません。  
   
 ### <a name="valid-tables-and-columns"></a>有効なテーブルと列  
  テーブルまたは列が空の場合、データ プロファイル タスクで行われる処理は次のようになります。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7f4ddc16bdfcc7e0d3acdfabe83e81f3d06c0b93
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74775847bdff99ef83571d15529224abe720144d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154439"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937743"
 ---
 # <a name="dqs-administration"></a>DQS 管理
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) では、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]で実行されるさまざまな DQS アクティビティを管理し、DQS アクティビティに関連するサーバー レベルのプロパティを構成し、参照データ サービスの設定を構成し、DQS ログの設定を構成できます。 これらの作業は、 **の** 管理 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]機能を使用して行います。 DQS でのセキュリティ アクセス (ロール) に基づいて、特定の管理機能へのアクセスが許可/禁止されます。  

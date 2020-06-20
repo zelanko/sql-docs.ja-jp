@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe92bf5f783bb1b71c1020d0ff808aafa0594b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889222"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937163"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services と Always On 可用性グループ
   AlwaysOn 可用性グループは SQL Server リレーショナル データベースの事前に定義されたコレクションで、その中の 1 つのデータベースが条件に従ってフェールオーバーするときに一緒にフェールオーバーし、同じ可用性グループの別のインスタンスのミラー化されたデータベースに要求をリダイレクトします。 高可用性ソリューションとして可用性グループを使用している場合、そのグループ内のデータベースを Analysis Services テーブルまたは多次元ソリューションのデータ ソースとして使用できます。 可用性データベースを使用すると、次の Analysis Services の操作はすべて予期したとおりに動作します。その操作とは、データの処理またはインポート、リレーショナル データへの直接クエリ (ROLAP ストレージまたは DirectQuery モードを使用)、および書き戻しです。  
@@ -23,7 +22,7 @@ ms.locfileid: "68889222"
  処理とクエリは、読み取り専用のワークロードです。 このようなワークロードを読み取り可能なセカンダリ レプリカにオフロードすると、パフォーマンスが向上することがあります。 このシナリオには、追加の構成が必要です。 このトピックのチェック リストを使用して、すべての手順に従っていることを確認してください。  
   
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 必要条件  
  すべてのレプリカで SQL Server ログインが必要です。 可用性グループ、リスナー、およびデータベースを構成するには **sysadmin** である必要がありますが、ユーザーの場合は Analysis Services クライアントからデータベースにアクセスするためには **db_datareader** アクセス許可のみ必要です。  
   
  表形式データ ストリーム (TDS) プロトコル Version 7.4 以降をサポートするデータ プロバイダー (SQL Server Native Client 11.0、Data Provider for SQL Server in .NET Framework 4.02 など) を使用します。  
@@ -217,7 +216,7 @@ ms.locfileid: "68889222"
  そのために、Analysis Services モデルに追加のデータ ソースを作成して、読み取りと書き込みの接続をサポートします。 追加のデータ ソースを作成するとき、読み取り専用接続で指定したものと同じリスナー名とデータベースを使用しますが、 **Application Intent**を修正しないで、READWRITE 接続をサポートする既定値を保持します。 読み取りと書き込みのデータ ソースに基づいたデータ ソース ビューに新しいファクトまたはディメンション テーブルを追加し、新しいテーブルへの書き戻しを有効にできます。  
   
 ## <a name="see-also"></a>参照  
- [可用性グループリスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [アクティブなセカンダリ: 読み取り可能なセカンダリレプリカ &#40;AlwaysOn 可用性グループ&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [AlwaysOn 可用性グループ &#40;SQL Server での運用上の問題のための AlwaysOn ポリシー&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [SSAS 多次元&#41;&#40;データソースを作成する](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   

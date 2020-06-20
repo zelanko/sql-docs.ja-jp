@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9725997a5e5f8e40a10ecc6b845068432c4393c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62649697"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067385"
 ---
 # <a name="external-tools"></a>[外部ツール]
   このダイアログ ボックスを使用すると、SQL Server 構成マネージャーやメモ帳などの外部ツールを **[ツール]** メニューに追加できます。 外部ツールを追加することにより、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で作業している間に他のアプリケーションを簡単に起動できます。 また、ツールを起動するときに引数や作業ディレクトリを指定できます。 さらに、一部のツールの出力は [出力] ウィンドウに表示できます。 **[外部ツール]** ダイアログ ボックスは、 **[ツール]** メニューから使用できます。  
@@ -70,7 +69,7 @@ ms.locfileid: "62649697"
   
 2.  **[タイトル]** ボックスで、「 **SQL Server 構成マネージャー**」と入力します。  
   
-3.  [**コマンド**] ボックスに、 [!INCLUDE[msCoName](../../includes/msconame-md.md)]管理コンソールの実行可能ファイルへのパス (など) を入力します。`C:\WINNT\system32\mmc.exe`  
+3.  [**コマンド**] ボックスに、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソールの実行可能ファイルへのパス (など) を入力します。`C:\WINNT\system32\mmc.exe`  
   
 4.  [**引数**] ボックスに、.msc ファイルへのパス (など) を入力します。`"C:\WINNT\system32\SQLServerManager.msc"`  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1530594eefbb5c614901f2b8cb73030b989951fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b4054be2d956bccecd1d64dc807671caf8f980f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480974"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937993"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>DQS ログ ファイルの詳細設定の構成
   このトピックでは、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ログ ファイルと [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ログ ファイルの詳細設定を構成する方法 (ログ ファイルのローリング ファイル サイズの制限の設定、イベントのタイム スタンプ パターンの設定など) について説明します。  
@@ -113,7 +112,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 >  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] のログ設定の構成が動的に生成されて、DQS_MAIN.Log ファイルに保存されます。SQL Server の既定のインスタンスをインストールした場合、このファイルは通常 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Log に保存されています。 ただし、このファイルで直接変更した内容は保持されず、DQS_MAIN データベースの A_CONFIGURATION テーブルの構成設定で上書きされます。  
   
 ##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>Data Quality Client ログ設定の構成  
- ログ[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]設定の構成ファイルである DQLog. Client .xml は、通常、C:\Program モジュールで使用できます (& d)。XML ファイルの内容は、前に[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]ログ構成設定で変更した xml ファイルに似ています。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のログ設定を構成するには、次の手順を実行します。  
+ [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]ログ設定の構成ファイルである DQLog.Client.xml は、通常、C:\Program モジュールで使用できます (& d)。XML ファイルの内容は、前にログ構成設定で変更した XML ファイルに似てい [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ます。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のログ設定を構成するには、次の手順を実行します。  
   
 1.  管理者として、任意の XML 編集ツールやメモ帳を実行します。  
   

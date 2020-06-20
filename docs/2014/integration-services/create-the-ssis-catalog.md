@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae7f6128f14db0e1ccc423b5433744de7d3dc5d4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 38f2e94ab794accb8f3b951d0affab2451624748
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922048"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917214"
 ---
 # <a name="create-the-ssis-catalog"></a>SSIS カタログの作成
   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]でパッケージをデザインしてテストしたら、パッケージを含むプロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置できます。 プロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置するには、まずサーバーに `SSISDB` カタログを含める必要があります。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] のインストール プログラムでは、カタログは自動的に作成されません。次の手順を使用して、カタログを手動で作成する必要があります。  

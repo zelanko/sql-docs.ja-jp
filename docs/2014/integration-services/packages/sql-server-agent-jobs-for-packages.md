@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 312469e8355fb5720f1a1ce13a58a59f759da4ec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767184"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964813"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>パッケージに対する SQL Server エージェント ジョブ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行を自動化およびスケジュール設定できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージ、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、ファイル システムに格納されているパッケージのスケジュールを設定できます。  
   
 ## <a name="sections-in-this-topic"></a>このトピックのセクション  
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
 -   [SQL Server エージェントでのジョブのスケジュール設定](#jobs)  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62767184"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用してパッケージを実行する方法のデモ ビデオについては、MSDN ライブラリのビデオ ホーム ページ「 [SQL Server エージェントを使用してパッケージ実行を自動化する方法 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=141771)」を参照してください。  
   
-##  <a name="troubleshooting"></a><a name="trouble"></a>行う  
+##  <a name="troubleshooting"></a><a name="trouble"></a> トラブルシューティング  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップは、パッケージを [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] およびコマンド ラインで正常に実行できる場合でも、パッケージの開始に失敗することがあります。 この問題には、いくつかの一般的な原因と、推奨されるソリューションがあります。 詳細については、次のリソースを参照してください。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報の記事「 [SQL Server エージェントのジョブ ステップから SSIS パッケージを呼び出したときに SSIS パッケージが実行されません](https://support.microsoft.com/kb/918760)  

@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35b7c489b49a4463dc0b12f1469d1310f5d26fef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4695b53e52c9c63eaacb4f2f32c6bc9f65958213
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186991"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060826"
 ---
 # <a name="distributor-and-publisher-information-script"></a>ディストリビューターおよびパブリッシャーの情報スクリプト
   このスクリプトは、システム テーブルとレプリケーションのストアド プロシージャを使用して、ディストリビューターおよびパブリッシャーのオブジェクトについての一般的な質問に回答します。 このスクリプトはそのまま使用することもできますし、スクリプトをカスタマイズする雛形として使用することもできます。 ユーザーの環境でこのスクリプトを実行するためには、以下の 2 つの修正を行う必要があります。  
   
 -   `use AdventureWorks2012` の行を、使用するパブリケーション データベース名に変更します。  
   
--   `--` 行のコメント (`exec sp_helparticle @publication='<PublicationName>'`) を削除して、\<PublicationName> をパブリケーション名に置き換えます。  
+-   行からコメント () を削除し、 `--` `exec sp_helparticle @publication='<PublicationName>'` を \<PublicationName> パブリケーションの名前に置き換えます。  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85f2095d-2590-4f59-8a29-7e100edd02bb
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 6a802cfadfa48c7dbba7479ca169daedf70fe8b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baeeffd49ac89ce85cf64932fbfd4982d7243887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957137"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060271"
 ---
 # <a name="service-master-key"></a>インスタンスに対して生成される
   サービス マスター キーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 暗号化階層のルートです。 これは、最初に別のキーを暗号化する必要性が生じたときに自動的に生成されます。 既定では、サービス マスター キーはローカル コンピューターのキーを使用し、Windows データ保護 API により暗号化されます。 サービス マスター キーを作成した Windows サービス アカウント、またはサービス アカウント名とサービス アカウントのパスワードの両方にアクセスできるプリンシパルだけが、サービス マスター キーを開くことができます。  

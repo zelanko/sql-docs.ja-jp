@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c18cf801-f893-4fbc-8e2b-c563f6108acf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99973fe28d18dc28a0d6690567eb3923e74eb812
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2545f41db1571276b3eba53fbe34533ac6a62d6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780515"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933337"
 ---
 # <a name="sqlxml-40-net-framework-support"></a>SQLXML 4.0 の .NET Framework サポート
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスから XML データへのアクセス、[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 環境へのデータの移動、データの処理、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への更新の適用を行うアプリケーションを作成するための機能がサポートされています。 ここでは、.NET Framework のサポート機能について説明し、使用例を示します。  

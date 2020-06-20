@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b822da364fef2831f0f183089ce1cc330ca3118e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033671"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067578"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービス開始アカウントでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを実行する Windows アカウントとそのネットワーク権限を定義します。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 構成マネージャーを使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]エージェント サービス アカウントを設定する方法について説明します。  
@@ -30,7 +29,7 @@ ms.locfileid: "63033671"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   [SQL Server Management Studio を使用して SQL Server エージェントのサービス開始アカウントを設定するには](#SSMSProcedure)  
   
@@ -45,7 +44,7 @@ ms.locfileid: "63033671"
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
- この機能を実行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、の`sysadmin` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定サーバーロールのメンバーであるアカウントの資格情報を使用するようにエージェントを構成する必要があります。 このアカウントには、次の Windows 権限が必要です。  
+ この機能を実行するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の固定サーバーロールのメンバーであるアカウントの資格情報を使用するようにエージェントを構成する必要があり `sysadmin` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このアカウントには、次の Windows 権限が必要です。  
   
 -   サービスとしてログオン (SeServiceLogonRight)  
   
@@ -55,7 +54,7 @@ ms.locfileid: "63033671"
   
 -   プロセスに対してメモリ クォータを調整する (SeIncreaseQuotaPrivilege)  
   
- エージェントサービスアカウントに必要な Windows アクセス許可の詳細については、「 [SQL Server エージェントサービスのアカウントの選択](select-an-account-for-the-sql-server-agent-service.md)」および「 [windows サービスアカウントとアクセス許可の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ エージェントサービスアカウントに必要な Windows アクセス許可の詳細については [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「 [SQL Server エージェントサービスのアカウントの選択](select-an-account-for-the-sql-server-agent-service.md)」および「 [Windows サービスアカウントとアクセス許可の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   

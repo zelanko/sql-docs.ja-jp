@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 2e0ca0d5-d4f5-421d-b17d-a48b37b923e5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b3494c520c0b0cef49ce2daf6c1d77e6899ba5d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bc0227c06f2a6e747c2fff90082e7e12596ad57
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176121"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964482"
 ---
 # <a name="managing-package-roles-programmatically-ssis-service"></a>プログラムによるパッケージのロールの管理 (SSIS Service)
   プログラムによって [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を操作する際に、どのロールをパッケージに適用できるかどうかを確認したり、個々のパッケージに適用されているロールを確認または設定することが必要な場合があります。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスは、これらの要件を満たすさまざまなメソッドを提供します。
 
  ロールは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** データベースに格納されたパッケージにのみ適用されます。 パッケージ ロールの詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](../security/integration-services-roles-ssis-service.md)」を参照してください。
 
- このトピックで説明するすべてのメソッドには、`Microsoft.SqlServer.ManagedDTS` アセンブリへの参照が必要です。 新しいプロジェクトに参照を追加した後、 <xref:Microsoft.SqlServer.Dts.Runtime> `using`または`Imports`ステートメントを使用して名前空間をインポートします。
+ このトピックで説明するすべてのメソッドには、`Microsoft.SqlServer.ManagedDTS` アセンブリへの参照が必要です。 新しいプロジェクトに参照を追加した後、 <xref:Microsoft.SqlServer.Dts.Runtime> またはステートメントを使用して名前空間をインポートし `using` `Imports` ます。
 
 > [!IMPORTANT]
 >  SSIS パッケージ ストアを操作するための <xref:Microsoft.SqlServer.Dts.Runtime.Application> クラスのメソッドでは、"."、localhost、またはローカル サーバーのサーバー名のみがサポートされます。 "(local)" は使用できません。

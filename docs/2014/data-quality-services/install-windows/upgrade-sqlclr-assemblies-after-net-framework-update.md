@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aa4cd8349846a5c00f62f6cbf115b4cc3a1614ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbdd0f502f97d1329072a319648c50b48ac583ff
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480476"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937563"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>.NET Framework 更新後の SQLCLR アセンブリのアップグレード
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) は、Microsoft .NET Framework 4 アセンブリを参照する SQL 共通言語ランタイム (SQLCR) ルーチンのコレクションです。 コンピューターの .NET Framework を更新し、それが参照先の .NET Framework アセンブリに影響した場合、グローバル アセンブリ キャッシュ (GAC) 内のアセンブリのモジュール バージョン ID (MVID) が変更されます。 これが起こると、GAC 内の参照先アセンブリと [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]内のアセンブリとの間で MVID の不一致が発生します。  
@@ -38,7 +37,7 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
 1.  コマンド プロンプトを起動します。  
   
-2.  コマンド プロンプトで、DQSInstaller.exe が格納されている場所にディレクトリを変更します。 SQL Server の既定のインスタンスをインストールした場合、DQSInstaller ファイルは C:\Program Server\MSSQL12. にあります。MSSQLSERVER\MSSQL\Binn:  
+2.  コマンド プロンプトで、DQSInstaller.exe が格納されている場所にディレクトリを変更します。 SQL Server の既定のインスタンスをインストールした場合、DQSInstaller.exe ファイルは C:\Program Server\MSSQL12. にあります。MSSQLSERVER\MSSQL\Binn:  
   
     ```  
     cd C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn  

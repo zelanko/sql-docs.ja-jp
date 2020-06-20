@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8a1b81d60ef691e02d4b69cc71fa961bbaddf18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 446a0f709c35028efd5a39b347919b1e0b40b4b4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67793430"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937180"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Always On クライアント接続 (SQL Server)
   このトピックでは、AlwaysOn 可用性グループへのクライアント接続に関して、クライアント構成および設定の前提条件、制限、推奨などの考慮事項について説明します。  
@@ -33,7 +32,7 @@ ms.locfileid: "67793430"
   
  次の表は、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のドライバー サポートをまとめたものです。  
   
-|ドライバー|マルチサブネット フェールオーバー|アプリケーションの目的|読み取り専用ルーティング|マルチサブネット フェールオーバー: より高速な単一サブネット エンドポイント フェールオーバー|マルチサブネット フェールオーバー: SQL クラスター インスタンスの名前付きインスタンスの解決|  
+|Driver|マルチサブネット フェールオーバー|アプリケーションの目的|読み取り専用ルーティング|マルチサブネット フェールオーバー:より高速な単一サブネット エンドポイント フェールオーバー|マルチサブネット フェールオーバー:SQL クラスター インスタンスの名前付きインスタンスの解決|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|はい|はい|はい|はい|はい|  
 |SQL Native Client 11.0 OLEDB|いいえ|はい|はい|いいえ|いいえ|  
@@ -41,9 +40,9 @@ ms.locfileid: "67793430"
 |.NET Framework 3.5 SP1 と接続性に関する修正プログラム**<sup>**</sup>** |はい|はい|はい|はい|はい|  
 |Microsoft JDBC Driver 4.0 for SQL Server|はい|はい|はい|はい|はい|  
   
- **<sup>*</sup>**.NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211)を使用して ADO .net の接続性に関する修正プログラムをダウンロードします。  
+ **<sup>*</sup>**.NET Framework 4.0: を使用して ADO .NET の接続性に関する修正プログラムをダウンロードし [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211) ます。  
   
- **<sup>**</sup>* * .NET Framework 3.5 SP1 で、ADO.NET の接続性に関する[https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)修正プログラムをダウンロードします。  
+ **<sup>**</sup>* * .NET Framework 3.5 SP1 で、ADO.NET の接続性に関する修正プログラムをダウンロード [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347) します。  
   
 > [!IMPORTANT]  
 >  クライアントは、可用性グループ リスナーに接続するために、TCP 接続文字列を使用する必要があります。  
@@ -60,7 +59,7 @@ ms.locfileid: "67793430"
  [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [フェールオーバークラスタリングと AlwaysOn 可用性グループ &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループ &#40;SQL Server の前提条件、制限事項、推奨事項&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [可用性グループリスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
  [高可用性とディザスターリカバリーのための AlwaysOn ソリューションガイドの Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=227600)   
  [SQL Server AlwaysOn チームのブログ: AlwaysOn チームの公式 SQL Server のブログ](https://blogs.msdn.com/b/sqlalwayson/)   

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36517f60a99a1a844f6d14d489587eef1de9cb13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033642"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067526"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>ターゲット サーバーのポーリング間隔の設定
-  このトピックでは、エージェントが[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]マスターから対象サーバーに情報を更新する頻度を設定する方法について説明します。 ジョブとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行される特定の一連の処理のことです。 マルチサーバー ジョブとは、1 つ以上のターゲット サーバーでマスター サーバーにより実行されるジョブです。  
+  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがマスターから対象サーバーに情報を更新する頻度を設定する方法について説明します。 ジョブとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行される特定の一連の処理のことです。 マルチサーバー ジョブとは、1 つ以上のターゲット サーバーでマスター サーバーにより実行されるジョブです。  
   
 -   **作業を開始する準備:**  [セキュリティ](#Security)  
   
@@ -66,6 +65,6 @@ ms.locfileid: "63033642"
 3.  クエリウィンドウで、 [sp_post_msx_operation &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)システムストアドプロシージャを使用して、対象サーバーのポーリング間隔を設定します。  
   
 ## <a name="see-also"></a>参照  
- [sysdownloadlist &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
+ [dbo.sysdownloadlist &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
   
   

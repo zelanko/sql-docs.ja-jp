@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26d3e89fcba41d474ca56637f9e465f17127348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68199453"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060535"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>パブリケーション データベースでのスキーマの変更
   レプリケーションは、パブリッシュされたオブジェクトに対するさまざまなスキーマ変更をサポートしています。 パブリッシュされた適切なオブジェクトに対して、以下に示すスキーマ変更を [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーで行った場合、既定ではすべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーにその変更が反映されます。  
@@ -85,11 +84,11 @@ ms.locfileid: "68199453"
   
 #### <a name="adding-columns"></a>列の追加  
   
--   テーブルに新しい列を追加し、その列を既存のパブリケーションに含めるには、ALTER TABLE \<Table> ADD \<Column> を実行します。 この列は、既定ですべてのサブスクライバーにレプリケートされます。 この列では、NULL 値を許容するか既定の制約を含める必要があります。 列の追加の詳細については、このトピックの「マージ レプリケーション」を参照してください。  
+-   新しい列をテーブルに追加し、その列を既存のパブリケーションに含めるには、ALTER TABLE add を実行し \<Table> \<Column> ます。 この列は、既定ですべてのサブスクライバーにレプリケートされます。 この列では、NULL 値を許容するか既定の制約を含める必要があります。 列の追加の詳細については、このトピックの「マージ レプリケーション」を参照してください。  
   
--   テーブルに新しい列を追加し、その列を既存のパブリケーションに含めない場合は、スキーマ変更のレプリケーションを無効にしてから、ALTER TABLE \<Table> ADD \<Column> を実行します。  
+-   新しい列をテーブルに追加し、既存のパブリケーションにその列を含めないようにするには、スキーマ変更のレプリケーションを無効にしてから ALTER TABLE add を実行し \<Table> \<Column> ます。  
   
--   既存のパブリケーションに既存の列を含めるには、[sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスを使用します。  
+-   既存のパブリケーションに既存の列を含めるには、 [sp_articlecolumn &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、 [sp_mergearticlecolumn &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)、または [パブリケーションの**プロパティ- \<Publication> ** ] ダイアログボックスを使用します。  
   
      詳しくは、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」をご覧ください。 この場合は、サブスクリプションの再初期化が必要になります。  
   
@@ -97,9 +96,9 @@ ms.locfileid: "68199453"
   
 #### <a name="dropping-columns"></a>列の削除  
   
--   既存のパブリケーションから列を削除し、その列をパブリッシャーのテーブルから削除するには、ALTER TABLE \<Table> DROP \<Column> を実行します。 この列は、既定ですべてのサブスクライバーのテーブルから削除されます。  
+-   既存のパブリケーションから列を削除し、パブリッシャーのテーブルから列を削除するには、ALTER TABLE drop を実行し \<Table> \<Column> ます。 この列は、既定ですべてのサブスクライバーのテーブルから削除されます。  
   
--   既存のパブリケーションから列を削除し、その列をパブリッシャーのテーブルからは削除しない場合は、[sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスを使用します。  
+-   既存のパブリケーションから列を削除し、パブリッシャーのテーブルの列を保持するには、 [sp_articlecolumn &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、 [sp_mergearticlecolumn &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)、または [**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスを使用します。  
   
      詳しくは、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」をご覧ください。 この場合は、新しいスナップショットの生成が必要になります。  
   

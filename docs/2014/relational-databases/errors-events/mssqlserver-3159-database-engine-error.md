@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c93c1003-0e3a-40aa-9873-44a0f5b8b57e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0373952a28a901519d1d40e92750af3da72f94e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4942120db61798a9f5917e6b5402ffc095ba21c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62868883"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054037"
 ---
 # <a name="mssqlserver_3159"></a>MSSQLSERVER_3159
     
@@ -48,9 +47,9 @@ ms.locfileid: "62868883"
  ログ末尾をバックアップできない場合は、RESTORE ステートメントで WITH STOPAT または WITH REPLACE を使用します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server データベースを &#40;完全復旧モデルの特定の時点に復元する&#41;](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [データベースが破損したときにトランザクションログをバックアップ &#40;SQL Server&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)   
- [トランザクションログ &#40;SQL Server のバックアップ&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)   
+ [トランザクション ログのバックアップ &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)   
  [ログ末尾のバックアップ &#40;SQL Server&#41;](../backup-restore/tail-log-backups-sql-server.md)  
   
   

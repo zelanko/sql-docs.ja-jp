@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6908c21a-65e3-458f-a272-fee256d86448
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 88c5b77b4ac0f2d0f8ed579f2ff32eae8c263610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 822ae4fba589f005aaee41857a9db3388a309254
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150305"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007874"
 ---
 # <a name="viewing-the-sql-server-error-log"></a>SQL Server エラー ログの表示
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログを表示すると、バックアップ操作および復元操作、バッチ コマンド、その他のスクリプトやプロセスなどが正常に終了したことを確認できます。 これは、自動復旧メッセージ (特に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが停止してから再起動した場合)、カーネル メッセージ、またはその他のサーバー レベルのエラー メッセージを含んでいて、現在または潜在的に問題がある領域を検出するときに便利です。  

@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 57ad9d3e-8f95-4df6-af01-c291ccf49164
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d9828c02625ae2bc5a85859577a237b4c4fa99c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1649582f97e9e08691726745e4ba14b2f8226bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484682"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061076"
 ---
 # <a name="task-16-verifying-with-master-data-manager"></a>タスク 16: マスター データ マネージャーを確認する
   ここでは、マスター データ マネージャーを使用して、SSIS パッケージによって送信されたバッチ ジョブの状態をチェックし、データが MDS サーバーにアップロードされたことを確認します。  
   
-1.  **マスターデータマネージャー** (`http://localhost/MDS`) を起動します。 既に開いている場合は、上部にある [ **Microsoft SQL Server マスターデータサービス**をクリックして、**ホームページ**に移動します。  
+1.  **マスターデータマネージャー** ( `http://localhost/MDS` ) を起動します。 既に開いている場合は、上部にある [ **Microsoft SQL Server マスターデータサービス**をクリックして、**ホームページ**に移動します。  
   
 2.  [**統合管理**] をクリックします。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21be7e81440fe6eb9573ecd100a459d70319ccea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7332506666b11e96255c2b903d70b232ae4efa6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191263"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061448"
 ---
 # <a name="views"></a>ビュー
   ビューとは、クエリによって内容が定義される仮想テーブルです。 ビューは、テーブルと同様に、一連の名前の付いた列とデータ行で構成されます。 インデックスが設定されていないと、データベース内に保存された一連のデータ値としてビューが作成されることはありません。 データは、ビューを定義するクエリが参照するテーブルから取り出され、ビューの行と列はビューを参照したときに動的に作成されます。  

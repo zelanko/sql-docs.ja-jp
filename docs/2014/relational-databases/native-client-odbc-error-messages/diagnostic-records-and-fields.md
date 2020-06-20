@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3d7d839fb55aff82c9d4f2ca12a316fa7401a502
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4fe52b211eb6d5a0e4d875264609d036702b2b0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705400"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020071"
 ---
 # <a name="diagnostic-records-and-fields"></a>診断レコードと診断フィールド
   診断レコードは、ODBC 環境、接続、ステートメント、または記述子ハンドルに関連付けられています。 ODBC 関数から SQL_SUCCESS または SQL_INVALID_HANDLE 以外のリターン コードが返されるときは、その関数で呼び出されたハンドルに、情報メッセージまたはエラー メッセージが格納された診断レコードが関連付けられます。 これらの診断レコードは、同じハンドルを使用して別の関数が呼び出されるまで保持され、別の呼び出しが行われた時点で破棄されます。 1 つのハンドルに同時に関連付けることができる診断レコードの数に制限はありません。  

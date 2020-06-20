@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-manager: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 30f840c9fe558382c5a0549f09657c917c69c3d4
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: a5181dcf07745fc1bf9cd993ebd65c58f55f96c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886189"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054265"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant を使用して Azure SQL Database に移行する SQL Server のデータ資産の準備状況を評価する
 

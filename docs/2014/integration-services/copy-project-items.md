@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1606c54d-20f9-49f3-a4ef-caad83a772aa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef503e88e66bd6f89cac8d235f7175fb4cefe4e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32b5f3f11bb15576ca30b83f1c0709cb4b77ff6d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060338"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917482"
 ---
 # <a name="copy-project-items"></a>プロジェクト アイテムをコピーする
   このトピックでは、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト内のオブジェクトをコピーする方法、または [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト間でオブジェクトをコピーする方法について説明します。 他の種類の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] プロジェクト、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、および [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の間でオブジェクトをコピーすることもできます。 プロジェクト間でコピーするには、プロジェクトが同じ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ソリューションに含まれている必要があります。 詳細については、「[Integration Services (SSIS) プロジェクト](integration-services-ssis-projects-and-solutions.md)」を参照してください。  

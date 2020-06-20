@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9bb392991afbb3707fafdb18a28cc3de53f97c78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e96dd0461f3dace138b7822cdbaaa2fa242e2cb1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783200"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002215"
 ---
 # <a name="delete-a-job-category"></a>ジョブ カテゴリの削除
-  このトピックでは、または[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server 管理オブジェクトを使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でエージェントジョブカテゴリを削除する方法について説明します。  
+  このトピック [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、または SQL Server 管理オブジェクトを使用して、でエージェントジョブカテゴリを削除する方法について説明し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
   
  ジョブ カテゴリを使用してジョブを管理すると、フィルター操作やグループ化を簡単に行うことができます。 たとえば、データベース バックアップに関するすべてのジョブを [データベースのメンテナンス] カテゴリとしてまとめます。  
 

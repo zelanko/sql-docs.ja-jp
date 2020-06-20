@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76349c0ca91f24a6d8d7942a89eb9683a91b573d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84eb956d8a973cf1186eb8f7454c5a8dd8f0709d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056340"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964248"
 ---
 # <a name="save-a-package-as-a-package-template"></a>パッケージをパッケージ テンプレートとして保存する
   このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で新しい Integration Services パッケージを作成する際に、カスタム パッケージをテンプレートとして指定および使用する方法について説明します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに新しいパッケージを追加する場合に、既定で、新しいパッケージを作成するパッケージ テンプレートを使用します。 この既定のテンプレートを置き換えることはできませんが、新しいテンプレートを追加することはできます。  
@@ -41,7 +40,7 @@ ms.locfileid: "66056340"
   
 2.  ソリューション エクスプローラーで、プロジェクトを右クリックして **[追加]** をポイントし、**[新しい項目]** をクリックします。  
   
-3.  [**新しい項目の追加-\<プロジェクト名>** ] ダイアログボックスで、テンプレートとして使用するパッケージをクリックします。  
+3.  [**新しい項目の追加- \<project name> ** ] ダイアログボックスで、テンプレートとして使用するパッケージをクリックします。  
   
      テンプレートの一覧には、"新しい SSIS パッケージ" という名前の既定のパッケージ テンプレートがあります。 パッケージ テンプレートとして使用できるテンプレートは、パッケージ アイコンで示されます。  
   

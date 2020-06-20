@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 90269bc6fab7cd496561b9dfe5cae6bf0ff36bbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc72ae3ae2472fe579755fa624e9af6953c7aed8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875041"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956852"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>既存のファイルにファイルとファイル グループを復元する (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でファイルとファイル グループを既存のファイルに復元する方法について説明します。  
@@ -34,7 +33,7 @@ ms.locfileid: "62875041"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ファイルとファイル グループを既存のファイルに復元する方法:**  
   
@@ -88,9 +87,9 @@ ms.locfileid: "62875041"
     |列見出し|値|  
     |-----------------|------------|  
     |**復元**|このチェック ボックスをオンにすると、バックアップ セットが復元されます。|  
-    |**Name**|バックアップ セットの名前です。|  
-    |**[ファイルの種類]**|バックアップに含まれるデータの種類として、 **データ**、 **ログ**、 **FILESTREAM データ**のいずれかを指定します。 テーブルに含まれるデータの種類は、 **データ** ファイルです。 トランザクション ログ データの種類は、 **ログ** ファイルです。 ファイル システムに格納されたバイナリ ラージ オブジェクト (BLOB) データの種類は、 **FILESTREAM データ** ファイルです。|  
-    |**Type**|実行するバックアップの種類です。 **[完全]** 、 **[差分]** 、または **[トランザクション ログ]** のいずれかを指定します。|  
+    |**名前**|バックアップ セットの名前です。|  
+    |**[ファイルの種類]**|バックアップのデータの種類を指定します。**データ**、**ログ**、または **Filestream データ**です。 テーブルに含まれるデータの種類は、 **データ** ファイルです。 トランザクション ログ データの種類は、 **ログ** ファイルです。 ファイル システムに格納されたバイナリ ラージ オブジェクト (BLOB) データの種類は、 **FILESTREAM データ** ファイルです。|  
+    |**Type**|実行するバックアップの種類: **[完全]** 、 **[差分]** 、 **[トランザクション ログ]** 。|  
     |**[サーバー]**|バックアップ操作を実行するデータベース エンジン インスタンスの名前です。|  
     |**[ファイルの論理名]**|ファイルの論理名です。|  
     |**[データベース]**|バックアップ操作に呼び出されるデータベース名です。|  

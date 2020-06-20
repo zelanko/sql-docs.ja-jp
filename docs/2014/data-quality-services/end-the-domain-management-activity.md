@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab6505ad-3090-453b-bb01-58435e7fa7c0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d25d369870dc7a4f53e70a61726ffbb7d38d9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16e030b52e4c7f99368efd8054f87df495b67257
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480611"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937713"
 ---
 # <a name="end-the-domain-management-activity"></a>ドメイン管理アクティビティの終了
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のドメイン管理アクティビティを完了、終了、またはキャンセルする方法について説明します。 ドメイン管理はウィザードで実行されないため、以下で説明する制御はドメイン管理アクティビティのどのページからでも使用できます。  
@@ -33,7 +32,7 @@ ms.locfileid: "65480611"
  **キャンセル**  
  クリックすると、ドメイン管理アクティビティが終了して作業内容が破棄され、DQS ホーム ページに戻ります。  
   
- **閉じる**  
+ **[閉じる]**  
  クリックすると、作業内容が保存され、DQS ホーム ページに戻ります。 ナレッジ ベースがロックされ、 **[ナレッジ ベースを開く]** 画面のナレッジ ベース テーブルのナレッジ ベースの状態が **[ドメイン管理]** になります。 **[閉じる]** をクリックした後でナレッジ検出アクティビティを実行するには、 **[ドメイン管理]** 画面に戻り、 **[完了]** をクリックします。次に、ナレッジ ベースを発行する場合は **[はい]** を、作業内容をナレッジ ベースに保存して終了する場合は **[いいえ]** をクリックします。  ロックされたナレッジ ベースを開く方法の詳細については、「 [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)」を参照してください。  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a56fb4684b1326e600860da60858fcfae1d469ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6f7281341cae3f93490d9453619ecdbf426b8e0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702789"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067758"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>例 : ID ディレクティブと IDREF ディレクティブの指定
   この例は、「 [ELEMENTXSINIL ディレクティブの指定](example-specifying-the-elementxsinil-directive.md) 」の例とほぼ同じで、 クエリで **ID** ディレクティブと **IDREF** ディレクティブを指定している点のみが異なります。 これらのディレクティブは、< **> 要素と <** > 要素の `OrderHeader`SalesPersonID`OrderDetail` 属性の型を上書きします。 これにより、ドキュメント内のリンクが形成されます。 上書きされた型を確認するには、スキーマが必要です。 そのため、このクエリでは、FOR XML 句に **XMLDATA** オプションを指定して、スキーマを取得しています。  

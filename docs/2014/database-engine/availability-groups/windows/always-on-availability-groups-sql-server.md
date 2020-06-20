@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c05dc72e99d5b897412bdcf8afdd85370dd06b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75229008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937233"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループ (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能は、データベース ミラーリングに代わる、高可用性と災害復旧のためのエンタープライズ レベルのソリューションです。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]で導入された [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] により、エンタープライズのユーザー データベースの可用性が最大限に高まります。 *可用性グループ*は、相互にフェールオーバーされる個別のユーザーデータベース (*可用性データベース*と呼ばれます) のフェールオーバー環境をサポートします。 可用性グループは、読み取り/書き込みプライマリ データベースのセットをサポートし、1 ～ 8 セットの対応するセカンダリ データベースをサポートします。 必要に応じて、セカンダリ データベースで読み取り専用アクセスまたはいくつかのバックアップ操作を利用できます。  
@@ -29,7 +28,7 @@ ms.locfileid: "75229008"
  可用性グループは、可用性レプリカのレベルでフェールオーバーします。 データベースの問題 (たとえば、データ ファイルの損失、データベースの削除、トランザクション ログの破損による障害が疑われる場合など) が発生してもフェールオーバーは行われません。  
   
   
-##  <a name="benefits"></a><a name="Benefits"></a>効果  
+##  <a name="benefits"></a><a name="Benefits"></a> 利点  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] には、データベースの可用性を向上し、リソースの使用を改善できる、豊富なオプションのセットが用意されています。 主なコンポーネントは次のとおりです。  
   
 -   最大 9 つの可用性レプリカをサポートします。 *可用性グループ* は、SQL Server の特定のインスタンスによってホストされ、可用性グループに属する各可用性データベースのローカル コピーを保持します。 各可用性グループは、1 個のプライマリ レプリカと最大 8 個のセカンダリ レプリカをサポートします。 詳細については、「 [Always On 可用性グループの概要 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
@@ -132,7 +131,7 @@ ms.locfileid: "75229008"
   
 -   [リモート BLOB ストア (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
   
--   [Replication](../../install-windows/install-sql-server-replication.md)  
+-   [レプリケーション](../../install-windows/install-sql-server-replication.md)  
   
 -   [Service Broker](../../configure-windows/sql-server-service-broker.md)  
   
@@ -141,7 +140,7 @@ ms.locfileid: "75229008"
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  で[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]他の機能を使用する場合の制限事項と制限事項については、「 [Always On 可用性グループ: 相互運用性」を参照してください。SQL Server;](always-on-availability-groups-interoperability-sql-server.md)。  
+>  で他の機能を使用する場合の制限事項と制限事項については [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、「 [Always On 可用性グループ: 相互運用性」を参照してください。SQL Server;](always-on-availability-groups-interoperability-sql-server.md)。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
@@ -155,9 +154,9 @@ ms.locfileid: "75229008"
   
      [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
--   **ビデオ**  
+-   **ビデオ:**  
   
-     [Microsoft SQL Server コード ネーム "Denali" Always On シリーズ パート 1: 次世代の高可用性ソリューションの概要](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server コードネーム "Denali" Always On シリーズ パート 1: 次世代高可用性ソリューションの概要](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server コードネーム "Denali" Always On シリーズ第2部: AlwaysOn を使用したミッションクリティカルな高可用性ソリューションの構築](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

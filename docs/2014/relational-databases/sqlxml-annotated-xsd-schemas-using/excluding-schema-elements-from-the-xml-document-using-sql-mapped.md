@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bbf5bad0a8c8e633149e2868047b88833a400849
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ceb1d222131c14810d3d71bdd8faf13509f97614
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703596"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055142"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>sql:mapped を使用した、結果の XML ドキュメントからのスキーマ要素の除外 (SQLXML 4.0)
   既定のマッピングでは、XSD スキーマのすべての要素と属性が、データベースのテーブルまたはビューと列にマップされます。 XSD スキーマで、データベース テーブル (ビュー) または列にマップせず、XML に表示しない要素を作成する場合は、`sql:mapped` 注釈を指定できます。  
@@ -36,15 +35,15 @@ ms.locfileid: "82703596"
   
  `sql:mapped` 注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. sql:mapped 注釈を指定する  
- 他のソースからの XSD スキーマがあるとします。 この XSD スキーマは、 **ContactID**、 **FirstName**、 **LastName**、および**ホームアドレス**の属性を持つ Person>要素で構成され** \< ています。**  
+ 他のソースからの XSD スキーマがあるとします。 この XSD スキーマは **\<Person.Contact>** 、 **ContactID**、 **FirstName**、 **LastName**、および**ホームアドレス**属性を持つ要素で構成されています。  
   
  この XSD スキーマを AdventureWorks データベースの Person. Contact テーブルにマップする場合、 `sql:mapped` employee テーブルには従業員の自宅の住所が格納されないため、[ホーム**アドレス**] 属性にはが指定されています。 この結果、マッピング スキーマに対して Xpath クエリを指定すると、属性はデータベースにマップされず、結果の XML ドキュメント内に返されません。  
   
- スキーマの残りの部分に対しては、既定のマッピングが適用されます。 Person. contact ** \<>** 要素は、contact テーブルにマップされ、すべての属性は、person. contact テーブル内の同じ名前の列にマップされます。  
+ スキーマの残りの部分に対しては、既定のマッピングが適用されます。 **\<Person.Contact>** 要素は person. contact テーブルにマップされ、すべての属性は、person. contact テーブル内の同じ名前の列にマップされます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

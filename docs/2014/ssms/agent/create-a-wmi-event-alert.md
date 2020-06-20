@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5af4472d80e74c9d2845e6397f815ffb1c27f4d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 737e7ccac9c92e663040e71339aa120f8db8b80b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211435"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041204"
 ---
 # <a name="create-a-wmi-event-alert"></a>Create a WMI Event Alert
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、WMI Provider for Server Events によって監視されている特定の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] イベントが発生したときに通知される [!INCLUDE[tsql](../../includes/tsql-md.md)]エージェントの警告を作成する方法について説明します。  
   
- WMI プロバイダーを使用したイベントの監視[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の詳細については、「 [Wmi Provider for Server events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)」を参照してください。 WMI イベント警告の通知を受信するために必要な権限の詳細については、「 [SQL Server エージェント サービスのアカウントの選択](select-an-account-for-the-sql-server-agent-service.md)」を参照してください。 WQL の詳細については、「 [WMI Provider for Server Events と WQL の使用](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)」を参照してください。  
+ WMI プロバイダーを使用したイベントの監視の詳細については [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「 [wmi Provider For Server Events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)」を参照してください。 WMI イベント警告の通知を受信するために必要な権限の詳細については、「 [SQL Server エージェント サービスのアカウントの選択](select-an-account-for-the-sql-server-agent-service.md)」を参照してください。 WQL の詳細については、「 [WMI Provider for Server Events と WQL の使用](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)」を参照してください。  
   
  **このトピックの内容**  
   
@@ -30,7 +29,7 @@ ms.locfileid: "68211435"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **WMI イベント警告を作成する方法:**  
   

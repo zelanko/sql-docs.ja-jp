@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dc1704da-eacd-4d26-b529-c996f958ca4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bea56ada3ef490225fd08892128abb482b9342a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6275215afdb6de3aa134dbffe74aa22b9e7b6f5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999538"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054474"
 ---
 # <a name="shared-memory-properties"></a>[共有メモリのプロパティ] ダイアログ ボックス
   **[共有メモリのプロパティ]** ダイアログ ボックスの **[プロトコル]** ページは、共有メモリ プロトコルを有効または無効にするために使用します。 共有メモリは、使用できる最も単純なプロトコルであり、構成可能な設定はありません。 共有メモリ プロトコルを使用するクライアントは、同じコンピューター上で実行されている [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにしか接続できないため、ほとんどのデータベース操作にとって実用的ではありません。 共有メモリ プロトコルは、他のプロトコルが正しく構成されていない可能性がある場合に、トラブルシューティングを行うために使用できます。  

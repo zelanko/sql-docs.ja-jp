@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f0623f79c3d17f3e350c151d64bb00372e3ffe56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2f6a9b3b8e5e1f63a2c539c710b03375b7061fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481023"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937883"
 ---
 # <a name="create-a-matching-policy"></a>照合ポリシーの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースの照合ポリシーを作成する方法について説明します。 サンプル データに対して照合ポリシー アクティビティを実行して、DQS の照合プロセスの準備を行います。 このアクティビティでは、まず、ポリシーの照合ルールを 1 つ以上作成してテストします。次に、ナレッジ ベースを発行して、それらの照合ルールを使用できるように公開します。 ナレッジ ベースで作成できる照合ポリシーは 1 つだけですが、そのポリシーに複数の照合ルールを含めることができます。  

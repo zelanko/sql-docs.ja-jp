@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4aeffaf9098e2476db4a0faf95811f3ea5204aaa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b711dfaf089173dcf72f854168e6b73aa05949ab
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480924"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937973"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>DQS ログ ファイルの重大度レベルの構成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] を使用して [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)](DQS) の各種のアクティビティやモジュールの重大度レベルを構成する方法について説明します。 重大度レベルとは、DQS で発生するイベントの重大度を定義したものです。 DQS のイベントの重大度レベルは次のとおりです。ここでは、重大度が高いものから順に示しています。  
@@ -48,7 +47,7 @@ ms.locfileid: "65480924"
  ログの重大度設定を構成するには、DQS_MAIN データベースの dqs_administrator ロールが必要です。  
   
 ##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>アクティビティレベルでの重大度レベルの構成  
- DQS のドメイン管理、ナレッジ検出、照合ポリシー、データ クレンジング、データ照合、および参照データ サービスの各アクティビティについて、ログの重大度設定を構成することができます。 そのためには、次の操作を実行します。  
+ DQS のドメイン管理、ナレッジ検出、照合ポリシー、データ クレンジング、データ照合、および参照データ サービスの各アクティビティについて、ログの重大度設定を構成することができます。 次の手順に従います。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../../2014/data-quality-services/run-the-data-quality-client-application.md)します。  
   

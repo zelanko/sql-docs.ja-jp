@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17ca833a0773b48df0cc3781505b1046e2a63814
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779137"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932743"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep を使用した SQL Server のインストールに関する注意点
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sysprep を使用すると、コンピューター上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスを準備し、後で構成を完了できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sysprep では、2 段階のプロセスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のスタンドアロン インスタンスを構成します。 手順は次のとおりです。  
@@ -28,7 +27,7 @@ ms.locfileid: "62779137"
   
      この手順では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の準備済みインスタンスの構成を完了できます。 ここでは、コンピューター、ネットワーク、およびアカウントに固有の情報を入力できます。  
   
- SysPrep を使用してをインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する方法の詳細については、「 [Sysprep を使用して SQL Server 2014 をインストール](install-sql-server-using-sysprep.md)する」を参照してください。  
+ SysPrep を使用してをインストールする方法の詳細について [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、「 [Sysprep を使用して SQL Server 2014 をインストール](install-sql-server-using-sysprep.md)する」を参照してください。  
   
 ## <a name="common-uses-for-ssnoversion-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep の一般的な使用方法  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 機能は、次のいずれかの方法で使用できます。  
@@ -65,7 +64,7 @@ ms.locfileid: "62779137"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを準備すると自動的に準備され、 イメージの完了手順で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを完了させると完了します。  
   
- サポートされているの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エディションの詳細については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
+ サポートされているのエディションの詳細については [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
  準備済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの構成時に、エディションをアップグレードできます。 このオプションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition ではサポートされていません。  
   

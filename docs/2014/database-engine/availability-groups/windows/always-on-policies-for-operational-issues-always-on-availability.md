@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 090ad6a9651a01532af528f5f78316eeadb9798d
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 9d91876e2efc7ac531ebdce5794024e92cd02959
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922011"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937193"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループでの運用上の問題のポリシー ベースの管理 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の正常性モデルは、定義済みポリシー ベースの管理 (PBM) ポリシーのセットを評価します。 これらのポリシーを使用すると、可用性グループとその可用性レプリカおよびデータベースの正常性を [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]で表示できます。  
