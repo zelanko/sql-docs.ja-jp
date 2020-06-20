@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7fb2e5e85c9479726fe38e02721186a0723a2ec8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196507"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014604"
 ---
 # <a name="dml-triggers"></a>DML トリガー
   DML トリガーとは、そこに定義されているテーブルまたはビューに影響するようなデータ操作言語 (DML) イベントが発生すると自動的に実行される特殊なストアド プロシージャです。 DML イベントには、INSERT、UPDATE、または DELETE のステートメントが含まれます。 DML トリガーを使用して、ビジネス ルールやデータの整合性を強制的に適用したり、他のテーブルを照会したりできるほか、複雑な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用することもできます。 トリガーとそのトリガーを起動するステートメントは単一のトランザクションとして扱われ、このトランザクションはトリガー内からロールバックできます。 ディスクの空き容量の不足などの重大なエラーが検出されると、このトランザクション全体が自動的にロールバックされます。  
@@ -61,8 +60,8 @@ ms.locfileid: "68196507"
 |連鎖参照|制限はありません。|INSTEAD OF UPDATE トリガーと DELETE トリガーは、参照整合性制約の連鎖の対象となっているテーブルでは許可されません。|  
 |実行|次の処理の後<br /><br /> 制約処理<br />宣言参照動作<br />**inserted** テーブルと **deleted** テーブルの作成<br />トリガーを起動する動作|次の処理の前: 制約処理<br /><br /> 次の処理の代わり: トリガーを起動する動作<br /><br /> 次の処理の後:  **inserted** テーブルと **deleted** テーブルの作成|  
 |実行の順序|最初と最後の実行内容を指定できます。|適用なし|  
-|`varchar(max)`inserted `nvarchar(max)`テーブルと`varbinary(max)` **deleted**テーブルで**inserted**の、、および列参照|許可|許可|  
-|`text`inserted `ntext`テーブルと`image` **deleted**テーブルで**inserted**の、、および列参照|禁止|許可|  
+|`varchar(max)``nvarchar(max)` `varbinary(max)` **inserted**テーブルと**deleted**テーブルでの、、および列参照|許可|許可|  
+|`text``ntext` `image` **inserted**テーブルと**deleted**テーブルでの、、および列参照|禁止|許可|  
   
  CLR トリガー  
  CLR トリガーは、AFTER トリガーと INSTEAD OF トリガーのいずれかにすることができます。 また、CLR トリガーは DDL トリガーにすることもできます。 CLR トリガーは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを実行するのではなく、.NET Framework で作成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でアップロードされたアセンブリのメンバーであるマネージド コードに記述されている、1 つ以上のメソッドを実行します。  

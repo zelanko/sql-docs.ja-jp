@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 32fbc1c1-da83-4684-9479-31fc3e2df98c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b62fb5e33311f1011911c40fc858723b218bac55
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6414b887ee88ddc0281ee86fd3236f026b8a3f28
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054827"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972642"
 ---
 # <a name="union-all-transformation-editor"></a>全体結合変換エディター
   **[全体結合変換エディター]** ダイアログ ボックスを使用すると、複数の入力行セットを 1 つの出力行セットにマージできます。 データ フローに全体結合変換を含めることで、複数のデータ フローのデータをマージしたり、全体結合変換を入れ子にして複雑なデータセットを作成したり、データ内のエラーを修正した後で行を再マージしたりできます。  
@@ -40,6 +39,6 @@ ms.locfileid: "66054827"
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [全体結合変換を使用してデータをマージする](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
  [マージ変換](data-flow/transformations/merge-transformation.md)   
- [Merge Join Transformation](data-flow/transformations/merge-join-transformation.md)  
+ [マージ結合変換](data-flow/transformations/merge-join-transformation.md)  
   
   

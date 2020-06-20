@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a763d76b-06a3-4d51-9614-01fc9fb1c158
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 831d0b504a65d485413772ee3711e689e29ee2a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f12a387a7c7b5ed60ca87159628aab989d37c953
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489707"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006434"
 ---
 # <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>タスク 8: Excel で State エンティティに新しい値を追加する
   ここでは、Excel で State エンティティの値を追加し、MDS サーバーに変更をパブリッシュします。  

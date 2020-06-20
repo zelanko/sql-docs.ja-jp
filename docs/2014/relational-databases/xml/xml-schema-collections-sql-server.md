@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3ee4757f1353278447ee55e97c8d4ba23aa2d649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702264"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046504"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML スキーマ コレクション (SQL Server)
   「 [Xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)」で説明したように、SQL Server は、データ型を使用して xml データのネイティブストレージを提供し `xml` ます。 必要に応じて、 `xml` XML スキーマコレクションを使用して、XSD スキーマを型の変数または列に関連付けることができます。 XML スキーマ コレクションにはインポートした XML スキーマが格納され、その後このコレクションを次の操作に使用します。  
@@ -119,7 +118,7 @@ ms.locfileid: "82702264"
   
 -   **Customer** は、ELEMENT コンポーネントです。  
   
- スキーマをデータベースにインポートするとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではスキーマ自体は格納されません。 代わりに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって個々のさまざまなコンポーネントが格納されます。 つまり、\<Schema> タグは格納されず、定義されているコンポーネントのみが保持されます。 すべてのスキーマの要素は保持されません。 \<Schema> タグにそのコンポーネントの既定の動作を指定する属性が含まれている場合、次の表に示すように、そのような属性はインポート処理中にスキーマ コンポーネントに移動されます。  
+ スキーマをデータベースにインポートするとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではスキーマ自体は格納されません。 代わりに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって個々のさまざまなコンポーネントが格納されます。 つまり、 \<Schema> タグは格納されず、その中に定義されているコンポーネントのみが保持されます。 すべてのスキーマの要素は保持されません。 タグに \<Schema> そのコンポーネントの既定の動作を指定する属性が含まれている場合、次の表に示すように、これらの属性はインポート処理中にスキーマコンポーネントに移動されます。  
   
 |属性名|動作|  
 |--------------------|--------------|  

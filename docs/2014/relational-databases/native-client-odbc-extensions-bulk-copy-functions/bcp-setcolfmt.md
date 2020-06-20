@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 682d5d8cfe8a3c5e1e5de5286e5079d2e9856a11
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a8bd75854cc81c661d6e8ac60cab88e23d6efffc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705291"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019240"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
   **Bcp_setcolfmt**関数は、 [bcp_colfmt](bcp-colfmt.md)よりも優先されます。 列の照合順序を指定する場合は、 **bcp_setcolfmt**関数を使用する必要があります。 [bcp_setbulkmode](bcp-setbulkmode.md)を使用すると、複数の列の形式を指定できます。  
@@ -83,7 +82,7 @@ cbValue
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、 **bcp_colfmt**関数よりも優先されます。 **Bcp_setcolfmt**関数には、 **bcp_colfmt**のすべての機能が用意されています。 さらに、列の照合順序もサポートされます。 列形式属性は、次に示した順番で設定することをお勧めします。  
   
  BCP_FMT_SERVER_COL  

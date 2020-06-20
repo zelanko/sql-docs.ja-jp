@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb07987bfdca341a01a523c13db3e346ab5085f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655677"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016567"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>トランザクション アーティクルに変更を反映する方法の指定
   トランザクション レプリケーションを使用すると、パブリッシャーからサブスクライバーに変更を反映する方法を指定できます。 パブリッシュされた各テーブルに対して、次の 4 つの方法のいずれかを指定して、各操作 (INSERT、UPDATE、または DELETE) をサブスクライバーに反映できます。  
@@ -37,13 +36,13 @@ ms.locfileid: "62655677"
 ## <a name="default-and-custom-stored-procedures"></a>既定のストアド プロシージャとカスタム ストアド プロシージャ  
  各テーブル アーティクルに対して、既定でレプリケーションによって作成されるのは、次の 3 つのプロシージャです。  
   
--   **sp_MSins_\<** *tablename* **>**。挿入処理を行います。  
+-   **sp_MSins_ \<** *tablename* **> **。挿入を処理します。  
   
--   **sp_MSupd_\<** *tablename* **>**。更新処理を行います。  
+-   **sp_MSupd_ \<** *tablename* **> **。更新を処理します。  
   
--   **sp_MSdel_\<** *tablename* **>**。削除処理を行います。  
+-   **sp_MSdel_ \<** *tablename* **> **。削除を処理します。  
   
- このプロシージャで使用される** \< ***tablename*** > **は、アーティクルがパブリケーションにどのように追加されたか、およびサブスクリプションデータベースに所有者が異なる同じ名前のテーブルが含まれているかどうかによって異なります。  
+ この **\<***tablename***>** 手順で使用されるは、アーティクルがパブリケーションにどのように追加されたか、およびサブスクリプションデータベースに所有者が異なる同じ名前のテーブルが含まれているかどうかによって異なります。  
   
  これらのすべてのプロシージャは、パブリケーションにアーティクルを追加するときに指定したカスタム プロシージャと置き換えることができます。 カスタム プロシージャは、サブスクライバーでの行の更新時にデータを監査テーブルに挿入するなど、アプリケーションにカスタム ロジックが必要な場合に使用されます。 カスタム ストアド プロシージャの指定の詳細については、上記のトピックを参照してください。  
   
@@ -148,7 +147,7 @@ old-c1, old-c2, old-c3,... old-cn
 > [!NOTE]  
 >  XCALL は、 **text** 列および **image** 列の前イメージ値が NULL であるという前提で使用してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のプロシージャは、 `Vendor Table` サンプル データベース内の [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] に対して作成された既定のプロシージャです。  
   
 ```  

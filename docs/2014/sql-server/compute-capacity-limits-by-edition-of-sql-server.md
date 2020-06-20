@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a32b00ec6ad34095a17816406eb5516207fafa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714766"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013016"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQLServer のエディション別の計算容量制限
   このトピックでは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の各エディションの計算容量の制限と、ハイパースレッド プロセッサを持つ物理環境と仮想化環境での違いについて説明します。  
@@ -83,7 +82,7 @@ ms.locfileid: "62714766"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|1 つのインスタンスで使用される最大計算容量 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|1 つのインスタンスで使用される最大計算容量 (AS、RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: コアベースのライセンス<sup>1</sup>|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
-|開発者|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
+|Developer|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
 |評価|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
 |ビジネス インテリジェンス|4 ソケットまたは 16 コアのいずれか小さいほうに制限|オペレーティング システムの最大容量|  
 |Standard|4 ソケットまたは 16 コアのいずれか小さいほうに制限|4 ソケットまたは 16 コアのいずれか小さいほうに制限|  
@@ -92,7 +91,7 @@ ms.locfileid: "62714766"
 |Express with Tools|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|  
 |Express with Advanced Services|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|  
   
- <sup>1</sup> Enterprise Edition with Server および Client Access LICENSE (CAL) に基づくライセンス (新しい契約では利用できません) は、インスタンスあたり[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]最大20コアに制限されています。 コアベースのサーバー ライセンス モデルでは、制限はありません。  
+ <sup>1</sup> Enterprise Edition with Server および Client Access LICENSE (CAL) に基づくライセンス (新しい契約では利用できません) は、インスタンスあたり最大20コアに制限されてい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。 コアベースのサーバー ライセンス モデルでは、制限はありません。  
   
  仮想化された環境では、計算容量の制限はコアではなく論理プロセッサの数に基づいて決まります。これは、ゲスト アプリケーションがプロセッサのアーキテクチャを認識できないためです。  たとえば、クアッド コア プロセッサが搭載された 4 個のソケットと、コアごとに 2 個のハイパースレッドを有効にする機能を備えたサーバーには、ハイパースレッディングが有効になっている論理プロセッサが 32 個ありますが、ハイパースレッディングが無効になっている論理プロセッサは 16 個しかありません。 これらの論理プロセッサは、ホストサーバーの物理プロセッサの実行スレッドにマップされた論理プロセッサに対する仮想マシンの計算負荷を使用して、サーバー上の仮想マシンにマップできます。  
   

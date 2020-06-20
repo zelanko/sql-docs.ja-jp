@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f43faad4-2182-4b43-a76a-0e3b405816d1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7dbd50559c88e6dd1de64eb4513db2dbd4c14b29
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bc220bcdb899d18b8f439e6e0e1e4b6bdd56903f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026049"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの移行に関する問題
   このセクションでは、ネイティブ コンパイル ストアド プロシージャの作成に関するいくつかの事項について説明します。  

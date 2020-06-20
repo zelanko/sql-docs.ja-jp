@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40c16c0afd90bd7042f387fd40f48dbb0237027e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482798"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961012"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>データの読み込み (Excel 用 MDS アドイン)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]では、作業する前に、MDS リポジトリからアクティブな Excel ワークシートにデータを読み込む必要があり[!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]ます。 データの操作が完了したら、そのデータを他のユーザーが共有できるように MDS リポジトリにパブリッシュします。  
+  では、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 作業する前に、MDS リポジトリからアクティブな Excel ワークシートにデータを読み込む必要があります。 データの操作が完了したら、そのデータを他のユーザーが共有できるように MDS リポジトリにパブリッシュします。  
   
  読み込むことができるデータは、アクセスする権限があるデータに限定されます。 データにアクセスする権限は、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションで設定するか、プログラムによって設定します。  
   

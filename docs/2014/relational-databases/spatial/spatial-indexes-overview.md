@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 75cf9c751afb03b963eb888a6dbe6ed03ed4003a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36406bd60b4204469aca3d20862020870a8832fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176662"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068390"
 ---
 # <a name="spatial-indexes-overview"></a>空間インデックスの概要
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、空間データと空間インデックスがサポートされています。 *空間インデックス* は拡張インデックスの一種で、空間列にインデックスを設定することができます。 空間列とは、空間データ型 (`geometry` や `geography` など) のデータを含むテーブル列です。
@@ -58,9 +57,9 @@ ms.locfileid: "78176662"
  既定以外のグリッド密度を指定することで分解プロセスを制御できます。 たとえば、レベルごとに異なるグリッド密度を使用して、インデックスを作成する空間や空間列のオブジェクトのサイズに基づいてインデックスを微調整することができます。
 
 > [!NOTE]
->  空間インデックスのグリッド密度は、データベース互換性レベルが 100 以下に設定されている場合、 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) カタログ ビューの level_1_grid、level_2_grid、level_3_grid、level_4_grid の各列で確認できます。 テセレーション`GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID`スキームのオプションでは、これらの列は設定されません。 自動グリッドオプションが使用さ`NULL`れている場合、spatial_index_tessellations カタログビューにはこれらの列の値があります。
+>  空間インデックスのグリッド密度は、データベース互換性レベルが 100 以下に設定されている場合、 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) カタログ ビューの level_1_grid、level_2_grid、level_3_grid、level_4_grid の各列で確認できます。 `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` テセレーションスキームのオプションでは、これらの列は設定されません。 `NULL`自動グリッドオプションが使用されている場合、spatial_index_tessellations カタログビューにはこれらの列の値があります。
 
-###  <a name="tessellation"></a><a name="tessellation"></a> テセレーション
+###  <a name="tessellation"></a><a name="tessellation"></a>テセレーション
  インデックスを作成する空間がグリッド階層に分解された後、空間列のデータが行単位で読み取られます。 空間オブジェクト (インスタンス) のデータの読み取りが完了すると、空間インデックスによってそのオブジェクトに対して *テセレーション プロセス* が実行されます。 テセレーション プロセスでは、オブジェクトを、そのオブジェクトが接する一連のグリッド セル (*接するセル*) に関連付けることによって、オブジェクトをグリッド階層に当てはめます。 テセレーション プロセスはグリッド階層のレベル 1 で開始され、 *幅優先* でレベル全体にわたって続けられます。 このプロセスは、場合によっては 4 つのレベルすべてにわたって続けられます (一度に 1 レベルずつ処理されます)。
 
  テセレーション プロセスが終了すると、そのオブジェクトについて、一連の接するセルが空間インデックスに記録されます。 空間インデックスでは、記録されたそれらのセルを参照することにより、空間内のオブジェクトの場所を、同じくインデックスに格納されている空間列の他のオブジェクトを基準にして特定できます。
@@ -98,7 +97,7 @@ ms.locfileid: "78176662"
 
  たとえば先ほどの、八角形がレベル 1 グリッドのセル 15 に完全に収まっている図では、 セル 15 がテセレーションされて、八角形がレベル 2 の 9 つのセルに分解されています。 この例では、オブジェクトごとのセル数の制限が 9 以上と想定されています。 オブジェクトごとのセル数の制限が 8 以下の場合は、セル 15 はテセレーションされず、セル 15 のみがオブジェクトに対してカウントされます。
 
- 既定では、オブジェクトごとのセル数の制限は 16 です。この値は、ほとんどの空間インデックスで、スペースと精度のバランスが取れた値になります。 ただし、 [CREATE 空間インデックス](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントでは、オブジェクト`=`ごとのセル数の制限を1から8192の範囲で指定できるようにする CELLS_PER_OBJECT*n*句がサポートされています。
+ 既定では、オブジェクトごとのセル数の制限は 16 です。この値は、ほとんどの空間インデックスで、スペースと精度のバランスが取れた値になります。 ただし、 [CREATE 空間インデックス](/sql/t-sql/statements/create-spatial-index-transact-sql)ステートメントでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] `=` オブジェクトごとのセル数の制限を1から8192の範囲で指定できるようにする CELLS_PER_OBJECT*n*句がサポートされています。
 
 > [!NOTE]
 >  空間インデックスの **cells_per_object** の設定は、 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) カタログ ビューで確認できます。
@@ -113,9 +112,9 @@ ms.locfileid: "78176662"
 ###  <a name="tessellation-schemes"></a><a name="schemes"></a> テセレーション スキーム
  空間インデックスの動作の一部は、 *テセレーション スキーム*によって決まります。 テセレーション スキームはデータ型固有です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、空間インデックスで次の 2 つのテセレーション スキームがサポートされています。
 
--   *ジオメトリグリッドテセレーション*。これは、 `geometry`データ型のスキームです。
+-   *ジオメトリグリッドテセレーション*。これは、データ型のスキームです `geometry` 。
 
--   *Geography grid テセレーション*。 `geography`データ型の列に適用されます。
+-   *Geography grid テセレーション*。データ型の列に適用さ `geography` れます。
 
 > [!NOTE]
 >  空間インデックスの **tessellation_scheme** 設定は、 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) カタログ ビューで確認できます。
@@ -124,10 +123,10 @@ ms.locfileid: "78176662"
  GEOMETRY_AUTO_GRID テセレーションは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以降の `geometry` データ型用の既定のテセレーション スキームです。  GEOMETRY_GRID テセレーションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の geometry データ型で使用できる唯一のテセレーション スキームです。 ここでは、空間インデックスの操作に関連するジオメトリ グリッド テセレーションの特徴 (サポートされるメソッドと境界ボックス) について説明します。
 
 > [!NOTE]
->  [CREATE 空間インデックス](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントの using (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 句を使用して、このテセレーションスキームを明示的に指定することができます。
+>  [CREATE 空間インデックス](/sql/t-sql/statements/create-spatial-index-transact-sql)ステートメントの using (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 句を使用して、このテセレーションスキームを明示的に指定することができ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ます。
 
 ##### <a name="the-bounding-box"></a>境界ボックス
- 幾何データで用いられる平面は無限に広がっていますが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の空間インデックスは有限の空間を必要とします。 ジオメトリ グリッド テセレーション スキームでは、分解のための有限の空間を確立するために、四角形の *境界ボックス*が必要になります。 境界ボックスは、空間インデックスのプロパティと`(`して格納さ_れる、_`)` _x-min_**、**_y min_ `)` 、および`(` _x-max_**の**4 つの座標によって定義されます。 各座標の意味は次のとおりです。
+ 幾何データで用いられる平面は無限に広がっていますが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の空間インデックスは有限の空間を必要とします。 ジオメトリ グリッド テセレーション スキームでは、分解のための有限の空間を確立するために、四角形の *境界ボックス*が必要になります。 境界ボックスは、 `(` **,**_y-min_ _x-min_ `)` `(` **,**_y-max_空間インデックスのプロパティとして格納される、x-min、y min、および_x-max_の4つの座標によって定義され `)` ます。 各座標の意味は次のとおりです。
 
 -   *x-min* は、境界ボックスの左下隅の x 座標です。
 
@@ -138,13 +137,13 @@ ms.locfileid: "78176662"
 -   *y-max* は、右上隅の y 座標です。
 
 > [!NOTE]
->  これらの座標は、 [CREATE 空間インデックス](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントの BOUNDING_BOX 句によって指定されます。
+>  これらの座標は、 [CREATE 空間インデックス](/sql/t-sql/statements/create-spatial-index-transact-sql)ステートメントの BOUNDING_BOX 句によって指定され [!INCLUDE[tsql](../../../includes/tsql-md.md)] ます。
 
- `(` _X-min_**、**_y-min_ `)` 、および`(` _x-max_**,**_y-max_ `)`座標は、境界ボックスの配置と大きさを決定します。 境界ボックスの外側の空間は、番号 0 の 1 つのセルとして扱われます。
+ `(` _X-min_**、**_y-min、_ `)` および `(` _x-max_**,** 座標_は、_ `)` 境界ボックスの配置と大きさを決定します。 境界ボックスの外側の空間は、番号 0 の 1 つのセルとして扱われます。
 
  空間インデックスは、境界ボックスの内側の空間を分解します。 境界ボックスがグリッド階層のレベル 1 のグリッドで満たされ、 幾何オブジェクトをグリッド階層に配置するためにオブジェクトの座標が境界ボックスの座標と比較されます。
 
- 次の図は、境界ボックスの x の`(`_最小値_**、**_y の最小_`)`値`(`**、および**_y-max_ `)` _x-最大_座標によって定義される点を示しています。 また、グリッド階層の最上位レベルが 4 × 4 のグリッドとして示されています。 下位のレベルはわかりやすくするために省略されています。 境界ボックスの外側の空間はゼロ (0) によって示されています。 オブジェクト A はボックスから一部はみ出しており、オブジェクト B は完全にボックスの外側 (セル 0) にあります。
+ 次の図は、 `(` 境界ボックスの_x の最小_値 **、**_y の最小_値、 `)` および `(` _x-最大_**,**_y-max_座標によって定義される点を示して `)` います。 また、グリッド階層の最上位レベルが 4 × 4 のグリッドとして示されています。 下位のレベルはわかりやすくするために省略されています。 境界ボックスの外側の空間はゼロ (0) によって示されています。 オブジェクト A はボックスから一部はみ出しており、オブジェクト B は完全にボックスの外側 (セル 0) にあります。
 
  ![座標とセル 0 を表示している境界ボックス。](../../database-engine/media/spndx-bb-4x4-objects.gif "座標とセル 0 を表示している境界ボックス。")
 
@@ -157,7 +156,7 @@ ms.locfileid: "78176662"
  このテセレーション スキームは、`geography` 列のみに適用されます。 ここでは、地理グリッド テセレーションによってサポートされるメソッドの概要と、測地空間が平面に投影されてグリッド階層に分解されるしくみを説明します。
 
 > [!NOTE]
->  [CREATE 空間インデックス](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントの using (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) 句を使用して、このテセレーションスキームを明示的に指定することができます。
+>  [CREATE 空間インデックス](/sql/t-sql/statements/create-spatial-index-transact-sql)ステートメントの using (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) 句を使用して、このテセレーションスキームを明示的に指定することができ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ます。
 
 ##### <a name="projection-of-the-geodetic-space-onto-a-plane"></a>測地空間の平面への投影
  `geography` インスタンス (オブジェクト) の計算では、オブジェクトを含む空間を測地の楕円体として扱います。 地理グリッド テセレーション スキームでは、この空間を分解するために、まず、楕円体の表面が上下の半球に分割されます。その後、次の手順が実行されます。

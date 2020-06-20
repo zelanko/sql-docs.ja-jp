@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 615582b2d961f87a2d3df151175d7bd5d06e305f
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: f827c05952eadfdae4b666f256750760959bf962
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000412"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049411"
 ---
 # <a name="monitoring-replication"></a>監視 (レプリケーション)
   レプリケーション トポロジの監視は、レプリケーションの配置における重要な側面です。 レプリケーション処理は分散環境で行われるため、レプリケーションに関連するすべてのコンピューターについてその利用状況と状態を追跡することが不可欠です。 レプリケーションの監視には以下のツールを使用できます。  

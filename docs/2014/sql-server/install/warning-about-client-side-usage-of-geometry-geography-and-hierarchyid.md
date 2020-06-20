@@ -9,24 +9,23 @@ ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66898aa056800c0a7573b5afa73762785706ff7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091089"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044620"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>幾何学、地理学、HIERARCHYID のクライアント側の使用に関する警告
-  空間データ型を含むアセンブリ**Microsoft. SqlServer. .dll**は、バージョン10.0 からバージョン11.0 にアップグレードされました。 このアセンブリを参照するカスタム アプリケーションは、特定の条件に該当する場合に失敗します。  
+  空間データ型を含むアセンブリ**Microsoft.SqlServer.Types.dll**が、バージョン10.0 からバージョン11.0 にアップグレードされました。 このアセンブリを参照するカスタム アプリケーションは、特定の条件に該当する場合に失敗します。  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>説明  
- 空間データ型を含むアセンブリ**Microsoft. SqlServer. .dll**は、バージョン10.0 からバージョン11.0 にアップグレードされました。 このアセンブリを参照するカスタム アプリケーションは、次の条件に該当する場合に失敗します。  
+ 空間データ型を含むアセンブリ**Microsoft.SqlServer.Types.dll**が、バージョン10.0 からバージョン11.0 にアップグレードされました。 このアセンブリを参照するカスタム アプリケーションは、次の条件に該当する場合に失敗します。  
   
--   がインストールされているコンピューター [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]から、がインストールされているコンピューターにカスタムアプリケーションを移動すると、参照されているバージョン10.0 の**SqlTypes**アセンブリが存在しないため、アプリケーションは失敗します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] この場合、次のエラー メッセージが返されることがあります: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
+-   がインストールされているコンピューターから、がインストールされているコンピューターにカスタムアプリケーションを移動すると、参照されている [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョン10.0 の**SqlTypes**アセンブリが存在しないため、アプリケーションは失敗します。 この場合、次のエラー メッセージが返されることがあります: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
 -   **SqlTypes**アセンブリバージョン11.0 を参照するときに、バージョン10.0 もインストールされていると、次のエラーメッセージが表示されることがあります。`"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   

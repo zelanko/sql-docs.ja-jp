@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 810fc020-51cd-43ed-9f35-af99b4f35947
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e3a7d2ec134ff9b7a3fb63aed29a029ef6fc9bf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056027"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963792"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>[パッケージ管理オプションの選択] (SSIS パッケージ アップグレード ウィザード)
   **[パッケージ管理オプションの選択]** ページを使用すると、パッケージのアップグレードに関するオプションを指定できます。  

@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: e14aafe004ffd94f0711161fac73ce59c57cd810
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c701cdc2e8538a5b91093e17714fd9f6508d1c4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176722"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016020"
 ---
 # <a name="circularstring"></a>CircularString
   `CircularString` は、0 個以上の連続する円弧セグメントのコレクションです。 円弧セグメントは、2 次元平面内の 3 つの点によって定義された曲線セグメントです。最初のポイントを 3 番目のポイントと同じにすることはできません。 円弧セグメントの 3 つのポイントすべてが同一線上にある場合は、円弧セグメントが直線セグメントとして扱われます。
 
 > [!IMPORTANT]
->  サブタイプを含め、で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]導入された新しい空間機能の詳細な説明と例については、ホワイトペーパー「 [SQL Server 2012 の新しい空間機能](https://go.microsoft.com/fwlink/?LinkId=226407)」をダウンロードしてください。 `CircularString`
+>  サブタイプを含め、で導入された新しい空間機能の詳細な説明と例については、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] `CircularString` ホワイトペーパー「 [SQL Server 2012 の新しい空間機能](https://go.microsoft.com/fwlink/?LinkId=226407)」をダウンロードしてください。
 
 ## <a name="circularstring-instances"></a>CircularString インスタンス
  次の図は有効な `CircularString` インスタンスを示しています。
@@ -29,7 +28,7 @@ ms.locfileid: "78176722"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")
 
 ### <a name="accepted-instances"></a>許容されるインスタンス
- `CircularString`インスタンスは、空であるか、または奇数 (n > 1) である場合に許容されます。 次`CircularString`のインスタンスが受け入れられます。
+ インスタンスは、空であるか、 `CircularString` または奇数 (n > 1) である場合に許容されます。 次の `CircularString` インスタンスが受け入れられます。
 
 ```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';
@@ -113,7 +112,7 @@ SET @g = geometry::Parse('CIRCULARSTRING(2 1, 1 2, 0 1, 1 0, 2 1)');
 SELECT 'Circumference = ' + CAST(@g.STLength() AS NVARCHAR(10));  
 ```
 
- 結果は、次のようになります。
+ このコードを実行すると、次の出力が生成されます。
 
 ```
 Circumference = 6.28319
@@ -127,13 +126,13 @@ SET @g = geometry::STGeomFromText('LINESTRING(2 1, 1 2, 0 1, 1 0, 2 1)', 0);
 SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 ```
 
- 結果は、次のようになります。
+ このコードを実行すると、次の出力が生成されます。
 
 ```
 Perimeter = 5.65685
 ```
 
- この`CircularString`例の値は、円の実際の円周である 2&#x03c0; (2 * pi) に近いことに注意してください。
+ この例の値は、 `CircularString` 円の実際の円周である 2&#x03c0; (2 * pi) に近いことに注意してください。
 
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. CircularString を同じステートメント内で使用して geometry インスタンスを宣言およびインスタンス化する
  このコード スニペットは、`geometry` を同じステートメント内で使用して `CircularString` インスタンスを宣言およびインスタンス化する方法を示しています。

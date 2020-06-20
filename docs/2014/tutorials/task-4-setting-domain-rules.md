@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dd59bf315e90bd52ba1388d27c533ab4a3136d3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0104fe6b64ff2ecc1a37bb1da9691e34d7913f21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381741"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061090"
 ---
 # <a name="task-4-setting-domain-rules"></a>タスク 4: ドメイン ルールを設定する
-  このタスクでは、**連絡先の電子メール**ドメインのルールを作成して、電子メールアドレスの末尾が** \@adventure-works.com**であるかどうかを確認します。 ページの詳細については、「[ドメインルールの作成](https://msdn.microsoft.com/library/hh510397.aspx)」を参照してください。  
+  このタスクでは、**連絡先の電子メール**ドメインのルールを作成して、電子メールアドレスの末尾が** \@ adventure-works.com**であるかどうかを確認します。 ページの詳細については、「[ドメインルールの作成](https://msdn.microsoft.com/library/hh510397.aspx)」を参照してください。  
   
 1.  **ドメインリスト**の [**連絡先の電子メール**] をクリックします。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "72381741"
   
 5.  [**ルールの作成**] ペインで、**下矢印**をクリックし、[**値の末尾**] を選択します。  
   
-6.  テキストボックスに「 ** \@adventure-works.com** 」と入力し、 **tab**キーを押します。 [**ルールの作成**] ペインの [**選択した句に新しい条件を追加**] ツールバーボタンをクリックすると、さらに条件を追加できます。  
+6.  テキストボックスに「 ** \@ adventure-works.com** 」と入力し、 **tab**キーを押します。 [**ルールの作成**] ペインの [**選択した句に新しい条件を追加**] ツールバーボタンをクリックすると、さらに条件を追加できます。  
   
      ![電子メール検証ルール](../../2014/tutorials/media/et-settingdomainrules-02.jpg "電子メール検証ルール")  
   
@@ -44,9 +43,9 @@ ms.locfileid: "72381741"
   
      ![[ドメイン ルールのテスト] ダイアログ ボックス](../../2014/tutorials/media/et-settingdomainrules-04.jpg "[ドメイン ルールのテスト] ダイアログ ボックス")  
   
-9. [ **Contact Email** ] 列に「 **frank7\@adventure-works.com** (有効な値)」と入力します。  
+9. [ **Contact Email** ] 列に「 **frank7 \@ adventure-works.com** (有効な値)」と入力します。  
   
-10. 前の2つの手順を繰り返して、 **joe2\@adventure-work.com**を追加します (の値が無効な場合は、')。  
+10. 前の2つの手順を繰り返して、 **joe2 \@ adventure-work.com**を追加します (の値が無効な場合は、')。  
   
 11. ツールバーの最後のボタン ([**すべての用語でドメインルールをテスト**]) をクリックして、ルールに対して入力データをテストします。  
   

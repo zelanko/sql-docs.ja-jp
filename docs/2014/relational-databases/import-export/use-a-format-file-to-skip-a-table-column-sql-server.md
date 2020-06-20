@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cd83011fc7fd5b85efb5f20545dd80bb3d6dd43e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 153ef21209ff4261020e26aca3bc52d28dc852a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175930"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026250"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)
   このトピックでは、フォーマット ファイルについて説明します。 フォーマット ファイルを使用すると、データ ファイルにフィールドが存在しない場合にテーブル列のインポートをスキップできます。 スキップされる列に NULL 値が許容されているか、既定値があるか、またはその両方の場合のみ、テーブルの列の数より少ないフィールドをデータ ファイルに含めることができます。
@@ -99,7 +98,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
     3       SQLCHAR       0       100     "\r\n"   3     Col3         SQL_Latin1_General_CP1_CI_AS
     ```
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
  以下の例は、このトピックの「サンプル テーブルとデータ ファイル」で既に作成した `myTestSkipCol` サンプル テーブルおよび `myTestSkipCol2.dat` サンプル データ ファイルを基にしています。
 
 #### <a name="using-bulk-insert"></a>BULK INSERT の使用
@@ -151,7 +150,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 > [!NOTE]
 >  XML フォーマット ファイルの構造については、「[XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」をご覧ください。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
  ここに記載している例は、このトピックの「サンプル テーブルとデータ ファイル」で既に作成した `myTestSkipCol` サンプル テーブルおよび `myTestSkipCol2.dat` サンプル データ ファイルを使用します。 `myTestSkipCol2.dat` から `myTestSkipCol` テーブルにデータをインポートするため、変更した XML フォーマット ファイル `myTestSkipCol2-x.xml`を使用します。 このファイルは、このトピックの「既定の XML フォーマット ファイルの作成」で既に作成したフォーマット ファイルを基にしています。
 
 ```

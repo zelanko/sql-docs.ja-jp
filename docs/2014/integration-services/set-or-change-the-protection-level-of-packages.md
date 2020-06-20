@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcb8f4da5f39647665b3f07355ea8eed2506cda5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055850"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963412"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>パッケージの保護レベルを設定または変更する
   パッケージの内容やパッケージに含まれているパスワードなどの機密データへのアクセスを制御するには、`ProtectionLevel` プロパティの値を設定します。 プロジェクトをビルドするには、プロジェクトに含まれるパッケージの保護レベルがプロジェクトと同じである必要があります。 `ProtectionLevel` プロパティ設定をプロジェクトで変更する場合は、パッケージのプロパティ設定を手動で更新する必要があります。  
   
- パッケージのライフサイクルのさまざまな`ProtectionLevel`段階でパッケージに適した設定を確認する方法については、「[パッケージ内の機密データの Access Control](security/access-control-for-sensitive-data-in-packages.md)」を参照してください。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のセキュリティ機能の概要については、「[セキュリティの概要 #40; Integration Services & #41;](security/security-overview-integration-services.md)」を参照してください。  
+ パッケージ `ProtectionLevel` のライフサイクルのさまざまな段階でパッケージに適した設定を確認する方法については、「[パッケージ内の機密データの Access Control](security/access-control-for-sensitive-data-in-packages.md)」を参照してください。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のセキュリティ機能の概要については、「[セキュリティの概要 #40; Integration Services & #41;](security/security-overview-integration-services.md)」を参照してください。  
   
  このトピックの手順では、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] または dtutil コマンド プロンプト ユーティリティを使用して `ProtectionLevel` プロパティを変更する方法について説明します。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66055850"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>SQL Server データ ツールでパッケージの保護レベルを設定または変更するには  
   
-1.  トピックの`ProtectionLevel`プロパティで使用可能な値を確認し、パッケージ[の保護レベルを設定](security/access-control-for-sensitive-data-in-packages.md)して、パッケージの適切な値を決定します。  
+1.  トピックのプロパティで使用可能な値を確認 `ProtectionLevel` し、パッケージ[の保護レベルを設定](security/access-control-for-sensitive-data-in-packages.md)して、パッケージの適切な値を決定します。  
   
 2.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、パッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66055850"
   
 4.  [プロパティ] ウィンドウにパッケージのプロパティが表示されない場合は、デザイン画面をクリックします。  
   
-5.  プロパティウィンドウの**セキュリティ**グループで、 `ProtectionLevel`プロパティに適切な値を選択します。  
+5.  プロパティウィンドウの**セキュリティ**グループで、プロパティに適切な値を選択し `ProtectionLevel` ます。  
   
      パスワードを必要とする保護レベルを選択する場合は、 **[PackagePassword]** プロパティの値としてパスワードを入力します。  
   
@@ -50,9 +49,9 @@ ms.locfileid: "66055850"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>コマンド プロンプトでパッケージの保護レベルを設定または変更するには  
   
-1.  トピックの`ProtectionLevel`プロパティで使用可能な値を確認し、パッケージ[の保護レベルを設定](security/access-control-for-sensitive-data-in-packages.md)して、パッケージの適切な値を決定します。  
+1.  トピックのプロパティで使用可能な値を確認 `ProtectionLevel` し、パッケージ[の保護レベルを設定](security/access-control-for-sensitive-data-in-packages.md)して、パッケージの適切な値を決定します。  
   
-2.  トピック「 [Dtutil ユーティリティ](dtutil-utility.md) `ProtectionLevel` 」 `Encrypt`のオプションのマッピングを確認し、選択したプロパティの値として使用する適切な整数を決定します。  
+2.  トピック「dtutil ユーティリティ」のオプションのマッピングを確認 `Encrypt` し、選択したプロパティの値として使用する適切な整数を決定し[dtutil Utility](dtutil-utility.md) `ProtectionLevel` ます。  
   
 3.  コマンド プロンプト ウィンドウを開きます。  
   
@@ -73,6 +72,6 @@ ms.locfileid: "66055850"
          バッチ ファイルで同様のコマンドを使用する場合は、ファイルのプレースホルダー「%f」をバッチ ファイルでは「%%f」と入力します。  
   
 ## <a name="see-also"></a>参照  
- [Encrypt](dtutil-utility.md)  
+ [dtutil ユーティリティ](dtutil-utility.md)  
   
   

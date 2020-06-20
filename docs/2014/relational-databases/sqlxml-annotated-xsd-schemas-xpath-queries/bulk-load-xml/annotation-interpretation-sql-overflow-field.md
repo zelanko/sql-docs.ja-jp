@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3b91e3dcca3277a9ef1953065d3331682d1a9af7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 45f29994242d40bd91a05b68f7afc3dcc2a38384
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703407"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068204"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
   スキーマでは、XML ドキュメントからのすべての未使用データを受け取るオーバーフロー列を指定することができます。 この列は、スキーマ内で `sql:overflow-field` 注釈により指定します。 オーバーフロー列は複数指定することもできます。  
@@ -29,7 +28,7 @@ ms.locfileid: "82703407"
   
  XML 一括読み込みでは、オーバーフロー列へのデータの格納時に、`sql:overflow-field` が定義されている親要素の開始タグと終了タグも格納されます。  
   
- たとえば、次のスキーマでは、 ** \< 顧客の>** と** \< custorder>** 要素について説明しています。 これらの要素それぞれに、オーバーフロー列が指定されています。  
+ たとえば、次のスキーマでは、要素と要素が記述されて **\<Customers>** **\<CustOrder>** います。 これらの要素それぞれに、オーバーフロー列が指定されています。  
   
 ```  
 <?xml version="1.0" ?>  
@@ -73,9 +72,9 @@ ms.locfileid: "82703407"
 </xsd:schema>  
 ```  
   
- スキーマでは、 ** \< Customer>** 要素は Cust テーブルにマップされ、 ** \< Order>** 要素は custorder テーブルにマップされます。  
+ スキーマでは、 **\<Customer>** 要素は Cust テーブルにマップされ、 **\<Order>** 要素は custorder テーブルにマップされます。  
   
- ** \< Customer>** 要素と** \< Order>** 要素はどちらもオーバーフロー列を識別します。 したがって、XML 一括読み込みでは、Cust テーブルの overflow 列にある** \< Customer>** 要素のすべての未使用の子要素と属性、および custorder テーブルの overflow 列の** \< Order>** 要素のすべての未使用の子要素と属性が保存されます。  
+ 要素と要素は、どちらも **\<Customer>** **\<Order>** オーバーフロー列を識別します。 したがって、XML 一括読み込みでは、すべての未使用の子要素と要素の属性が、 **\<Customer>** Cust テーブルのオーバーフロー列と、 **\<Order>** custorder テーブルのオーバーフロー列にある要素のすべての未使用の子要素と属性に保存されます。  
   
 ### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   

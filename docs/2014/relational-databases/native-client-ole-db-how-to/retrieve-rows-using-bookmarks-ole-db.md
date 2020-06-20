@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d20cd5deb0e94fa120d42f33d4b995ffd22620d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f6d2f72dd135a92c0eb03f61c1f88698116e117e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696578"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043499"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>ブックマークを使用した行の取得 (OLE DB)
   コンシューマーは、バインド構造体の `dwFlag` フィールド値に DBCOLUMNSINFO_ISBOOKMARK を設定して、その列がブックマークに使用されることを示します。 また、コンシューマーは行セット プロパティ DBPROP_BOOKMARKS に VARIANT_TRUE を設定します。 これによって、列 0 を行セットに入れることができます。 次に `IRowsetLocate::GetRowsAt` を使用して、ブックマークからのオフセットによって指定された行で始まる行がフェッチされます。  
