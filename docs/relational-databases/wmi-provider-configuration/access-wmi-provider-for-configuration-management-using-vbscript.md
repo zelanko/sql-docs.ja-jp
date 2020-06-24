@@ -1,5 +1,6 @@
 ---
 title: VBScript を使用して WMI プロバイダーにアクセスする
+description: コンピューター上で実行されている SQL Server のインストール済みインスタンスのバージョンを一覧表示する VBScript プログラムを作成する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5415e9d425087f42e3058328f061660ffbe8c1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd515a60802f429611c1ae272216fac93642093e
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658950"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295455"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>VBScript を使用した構成管理用 WMI プロバイダーへのアクセス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  このセクションでは、コンピューター上で実行されているの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストール済みインスタンスのバージョンを一覧表示する VBScript プログラムを作成する方法について説明します。  
+  このセクションで [!INCLUDE[msCoName](../../includes/msconame-md.md)] は、コンピューター上で実行されているのインストール済みインスタンスのバージョンを一覧表示する VBScript プログラムを作成する方法について説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  コード例では、コンピューター上で実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスおよびそのバージョンをリストします。  
   

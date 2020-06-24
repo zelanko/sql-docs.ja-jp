@@ -1,5 +1,6 @@
 ---
 title: WMI Provider for Configuration Management
+description: WMI Provider for Configuration Management が WMI を使用して、SQL Server のサービス、サーバーの別名、およびクライアント/サーバーのネットワーク設定を管理する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92323972-7943-4208-bbf4-050774fb6027
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21ca5f7039b11b30c11a0fb707f6b6e89244bae2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4795ee1d456e5f4b823c24fc1ad48e81c9d6541e
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658913"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295435"
 ---
 # <a name="understanding-the-wmi-provider-for-configuration-management"></a>WMI Provider for Configuration Management について
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "73658913"
  インスタンスの取得  
  特定のクラス型インスタンスの取得です。  
   
- Enumeration  
+ 列挙  
  クラス型のすべてのインスタンスの列挙です。  
   
  変更  
@@ -44,9 +45,9 @@ ms.locfileid: "73658913"
   
  構成管理用の WMI プロバイダーを使用した管理アプリケーションの例については、「 [Wmi provider For Configuration management での WQL およびスクリプト言語の使用](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)」を参照してください。  
   
- WMI プロバイダーを使用した管理アプリケーションのプログラミングの詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK の wmi のドキュメントを参照してください。  
+ WMI プロバイダーを使用した管理アプリケーションのプログラミングの詳細については、.NET Framework SDK の WMI のドキュメントを参照してください [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [WMI Provider for Configuration Management の使用](../../relational-databases/wmi-provider-configuration/working-with-the-wmi-provider-for-configuration-management.md)   
  [WQL およびスクリプティング言語での WMI Provider for Configuration Management の使用](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)  
   
