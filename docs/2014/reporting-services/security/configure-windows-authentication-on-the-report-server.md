@@ -13,12 +13,12 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a0dffa0dc53cb8ded9f388199bef35a73a52577
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66102131"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263896"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>レポート サーバーで Windows 認証を構成する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、既定では、ネゴシエート認証または NTLM 認証を指定する要求を受け入れます。 これらのセキュリティ プロバイダーを使用するクライアント アプリケーションおよびブラウザーが配置に含まれている場合は、追加の構成なしで既定値を使用できます。 Windows 統合セキュリティの別のセキュリティ プロバイダーを使用する場合 (たとえば Kerberos を直接使用する場合)、または既定値を変更した後に元の設定を復元する場合は、このトピックの情報を使用して、レポート サーバーで認証設定を指定できます。  
@@ -32,9 +32,9 @@ ms.locfileid: "66102131"
     > [!IMPORTANT]  
     >  レポート サーバー サービスをドメイン ユーザー アカウントで実行するように構成し、かつそのアカウントのサービス プリンシパル名 (SPN) を登録していない場合は、`RSWindowsNegotiate` を使用すると Kerberos 認証エラーが発生します。 詳細については、このトピックの「 [レポート サーバー接続時の Kerberos 認証エラーの解決](#proxyfirewallRSWindowsNegotiate) 」を参照してください。  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] で Windows 認証を構成する必要があります。 既定では、レポートサーバー Web サービスおよびレポートマネージャーの web.config ファイルには、 \<認証モード = "Windows" > 設定が含まれています。 この設定を \<authentication mode="Forms"> に変更すると、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の Windows 認証が失敗します。  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] で Windows 認証を構成する必要があります。 既定では、レポートサーバー Web サービスおよびレポートマネージャーの Web.config ファイルに設定が含まれ \<authentication mode="Windows"> ます。 をに変更すると \<authentication mode="Forms"> 、の Windows 認証 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は失敗します。  
   
--   レポートサーバー Web サービスおよびレポートマネージャーの web.config ファイルには、identity impersonate = \<"true"/> が含まれている必要があります。  
+-   レポートサーバー Web サービスおよびレポートマネージャーの Web.config ファイルには、が必要 \<identity impersonate= "true" /> です。  
   
 -   クライアント アプリケーションまたはブラウザーが、Windows 統合セキュリティをサポートしている必要があります。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66102131"
           </AuthenticationTypes>  
     ```  
   
-4.  <`Authentication`> の既存のエントリの上に貼り付けます。  
+4.  <> の既存のエントリの上に貼り付け `Authentication` ます。  
   
      `Custom` の各種類と `RSWindows` は併用できないので注意してください。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "66102131"
   
  Kerberos のログ記録を有効にしていれば、エラーを検出できます。 資格情報の入力を複数回要求された後に空のブラウザー ウィンドウが表示された場合も、エラーが発生しています。  
   
- < `RSWindowsNegotiate` /> を構成ファイルから削除して接続を再試行することで、Kerberos 認証エラーが発生していることを確認できます。  
+ </> を構成ファイルから削除して接続を再試行することで、Kerberos 認証エラーが発生していることを確認でき `RSWindowsNegotiate` ます。  
   
  問題を確認したら、次の方法で問題に対処できます。  
   
@@ -160,14 +160,8 @@ ms.locfileid: "66102131"
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスを再開し、トレース ログ ファイルで次のようなエントリを探します。  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - <HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   \<Explicit> の下に、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アカウントに対して Active Directory で構成された SPN の値が表示されます。  
-  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスを再開します。
+
  拡張保護の使用を止める場合は、構成値を既定に戻し、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アカウントを再開します。  
   
 ```  
@@ -204,7 +198,7 @@ ms.locfileid: "66102131"
   
 -   Kerberos とレポート サーバーの詳細については、 [SharePoint、Reporting Services、PerformancePoint Monitoring Server と Kerberos を使用したビジネス インテリジェンス ソリューションの展開](https://go.microsoft.com/fwlink/?LinkID=177751)に関する記事を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート サーバーでの認証](authentication-with-the-report-server.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)   
  [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
