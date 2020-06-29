@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a97a07c4854fc1e25913aff7b6e966be79032e86
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a8ebde9465a5f6f9f591e5d175aa7ed26c5c2fca
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951562"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440439"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>レッスン 4:エラー フロー リダイレクトの追加
   変換プロセスで発生する可能性のあるエラーを処理するために、には、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 変換できないデータを処理する方法を、コンポーネントごと、および列ごとに決定する機能が用意されています。 特定の列で発生したエラーは無視し、変換に失敗した行全体をリダイレクトできます。または、この操作をコンポーネント単位で行うこともできます。 既定の構成では、エラーの発生時に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のすべてのコンポーネントが変換に失敗したものと見なされます。 つまり、1 つのコンポーネントの変換が失敗すると、パッケージの変換が失敗されたものと見なされ、以降の処理が中断されます。  

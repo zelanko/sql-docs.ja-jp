@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 723eb7c1c0e8547ee411fc54ecd4aca613011b38
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: aa44924311e412c348a92b0e6abb522ae36bbc14
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547114"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468997"
 ---
 # <a name="database-readwritemodes"></a>データベースの ReadWriteMode
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) がデータベースを、読み書き可能から読み取り専用に変更したり、読み取り専用から読み書き可能に変更したりすることは少なくありません。 こうした状況は、ソリューションのスケールアウトやパフォーマンスの向上のために 1 つのデータベース フォルダーを複数のサーバー間で共有するなど、ビジネス上のニーズによって頻繁に発生します。 このような場合は、`ReadWriteMode` データベース プロパティを使用すると、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA はデータベースの動作モードを容易に変更できます。  
@@ -44,9 +44,9 @@ ms.locfileid: "84547114"
 > [!NOTE]  
 >  ローカル キューブは、読み取り専用データベースから作成できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft.analysisservices.sharepoint.integration.dll * のようになります。](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Analysis Services データベースのアタッチとデタッチ](attach-and-detach-analysis-services-databases.md)   
  [Analysis Services データベースの移動](move-an-analysis-services-database.md)   
  [Detach 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   

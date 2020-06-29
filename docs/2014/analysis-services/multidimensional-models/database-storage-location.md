@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: e904333dc25e7ae58d8eae29ba00279d7e599033
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4373c881fae6599b0a470d154153250614b50627
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547104"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468987"
 ---
 # <a name="database-storage-location"></a>データベースの格納場所
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) が特定のデータベースをサーバー データ フォルダー以外の場所に配置することは少なくありません。 こうした状況は、パフォーマンスの向上やストレージの拡張などのビジネス上のニーズによって頻繁に発生します。 このような場合は、`DbStorageLocation` データベース プロパティを使用すると、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の DBA はローカル ディスクまたはネットワーク デバイス内にデータベースの格納場所を指定できます。  
@@ -40,8 +40,8 @@ ms.locfileid: "84547104"
 > [!IMPORTANT]  
 >  `Alter` コマンドを使用して、データベースの格納場所を変更しないでください。 代わりに、一連のデータベースコマンドを使用することをお勧めし `Detach` / `Attach` ます (「 [Analysis Services データベースの移動](move-an-analysis-services-database.md)」、「 [Analysis Services データベースのアタッチとデタッチ](attach-and-detach-analysis-services-databases.md)」を参照してください)。  
   
-## <a name="see-also"></a>参照  
- <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
+## <a name="see-also"></a>関連項目  
+ [Microsoft.analysisservices.sharepoint.integration.dll (DbStorageLocation *)](/dotnet/api/microsoft.analysisservices.core.database.dbstoragelocation)   
  [Analysis Services データベースのアタッチとデタッチ](attach-and-detach-analysis-services-databases.md)   
  [Analysis Services データベースの移動](move-an-analysis-services-database.md)   
  [DbStorageLocation 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   

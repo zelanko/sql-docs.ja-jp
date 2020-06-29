@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 63f8be6f47ef4a6abd20c42757648ca03a5701b3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 73c9371d28e64e41f7e0f7d2a53e94309fc66c28
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962062"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469087"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>カスタム ワークフローの作成 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、ビジネス ルールを使用して基本的なワークフロー ソリューションを作成します (たとえば、指定した条件に基づいてデータを自動的に更新および検証し、電子メール通知を送信するなど)。 組み込みのワークフロー アクションよりも複雑な処理が必要な場合は、カスタム ワークフローを使用します。 カスタム ワークフローは、ユーザーが作成する .NET アセンブリです。 作成したワークフロー アセンブリが呼び出された際には、記述したコードを通じて、状況に応じた任意のアクションを実行できます。 たとえば、複数階層の承認や複雑な意思決定ツリーなど、複雑なイベント処理を必要とするワークフローの場合は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を構成することで、データを分析し、データの承認のための送信先を決定するカスタム ワークフローを開始できます。  
@@ -38,7 +38,7 @@ ms.locfileid: "84962062"
 ## <a name="configure-master-data-services-for-custom-workflows"></a>カスタム ワークフロー向けの Master Data Services の構成  
  カスタム ワークフローを作成するには、カスタム コードの記述と [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] の構成を行って、ワークフロー データをワークフロー ハンドラーに渡す必要があります。 カスタム ワークフロー処理を有効にするには、次の手順を実行します。  
   
-1.  <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> を実装する .NET アセンブリ作成します。  
+1.  MasterDataServices を実装する .NET アセンブリを作成します。 [IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)).  
   
 2.  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースに接続してワークフロー ハンドラーにタグを関連付けるよう、SQL Server MDS Workflow Integration Services を構成します。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "84962062"
 5.  そのビジネス ルールを、カスタム ワークフローをトリガーするメンバーに適用します。  
   
 ### <a name="create-the-workflow-handler-assembly"></a>ワークフロー ハンドラー アセンブリの作成  
- カスタム ワークフローは、<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> インターフェイスを実装する .NET クラス ライブラリ アセンブリです。 SQL Server MDS Workflow Integration Service は、<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> メソッドを呼び出してコードを実行します。 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> を実装するコードの例については、「[カスタム ワークフローの例 &#40;マスター データ サービス&#41;](create-a-custom-workflow-example.md)」を参照してください。  
+ カスタムワークフローは、 [MasterDataServices のエクステンダー](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130))インターフェイスを実装する .net クラスライブラリのアセンブリの1つです。 SQL Server MDS Workflow Integration Service は、コードを実行するために[MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))メソッドを呼び出します。このメソッドは、コードを実行します。 [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))を実装するコード例については、「[マスターデータサービス&#41;&#40;カスタムワークフローの例](create-a-custom-workflow-example.md)」を参照してください。  
   
  カスタム ワークフローを処理するために SQL Server MDS Workflow Integration Service から呼び出すことができるアセンブリを、Visual Studio 2010 を使用して作成するには、次の手順を実行します。  
   
@@ -59,9 +59,9 @@ ms.locfileid: "84962062"
   
 3.  C# コード ファイルに、'using Microsoft.MasterDataServices.Core.Workflow;' を追加します。  
   
-4.  クラス宣言で、<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> を継承します。 クラス宣言は次のようになります: 'public class WorkflowTester : IWorkflowTypeExtender'  
+4.  クラス宣言で MasterDataServices を継承します。 [IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130))を継承します。 クラス宣言は次のようになります: 'public class WorkflowTester : IWorkflowTypeExtender'  
   
-5.  <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> インターフェイスを実装します。 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> メソッドは、ワークフローを開始するために SQL Server MDS Workflow Integration Service によって呼び出されます。  
+5.  MasterDataServices の[拡張](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130))インターフェイスを実装しています。 MasterDataServices は、ワークフローを開始するために SQL Server MDS Workflow Integration Service によって呼び出されます。これは、 [Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow*](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))メソッドです。  
   
 6.  アセンブリを SQL Server MDS Workflow Integration Service 実行可能ファイルの場所にコピーします。これは、Microsoft.MasterDataServices.Workflow.exe という名前で、 \<Your installation folder> \ Master Data services\webapplication\bin にあります。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "84962062"
 ### <a name="view-the-service-broker-queue"></a>Service Broker キューの表示  
  ワークフローの一部として渡されるマスター データを含んだ Service Broker キューは、mdm.microsoft/mdm/queue/externalaction です。 キューは、SQL Management Studio の **[オブジェクト エクスプローラー]** で、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースの Service Broker ノードに表示されます。 ただし、サービスがキューを適切にクリアした場合、このキューは空になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタムワークフローの例 &#40;マスターデータサービス&#41;](create-a-custom-workflow-example.md)   
  [カスタム ワークフロー XML の説明 &#40;Master Data Services&#41;](create-a-custom-workflow-xml-description.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: 高可用性と障害復旧
+description: バックエンドデータの高可用性とディザスターリカバリーを向上させるために、SQL マスターデータサービスを Always On 可用性グループにインストールして構成します。
 ms.custom: seo-lt-2019
 ms.date: 07/28/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b85fcb83b9268701f0b717faf41f07552073e37
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: cf37f6c9951107e901b05b21f4b7947bcfa381bb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732470"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440969"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>マスター データ サービスの高可用性とディザスター リカバリー
 
@@ -308,7 +309,7 @@ AG は既存のデータベースにのみ作成できます。 そのため、1
 
 8. **[レプリカの指定]** ページで、**[リスナー]** タブをクリックし、次の操作を行います。 図 18 を参照してください。
 
-   a. **[可用性グループ リスナーの作成]** をクリックし、MDS データベース接続の可用性グループ リスナーを設定します。
+   a。 **[可用性グループ リスナーの作成]** をクリックし、MDS データベース接続の可用性グループ リスナーを設定します。
 
    b. **[リスナーの DNS 名]** を入力します。たとえば、「MDSSQLServer」にします。
 

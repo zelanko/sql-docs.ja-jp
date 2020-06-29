@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Integration Services service, configuring
 - services [Integration Services], configuring
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: baa716eec75925c97f987656d11e39ba947918d8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d9e0fd3fe43ce83215923ae0c656c3a083b70c94
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951372"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440339"
 ---
 # <a name="manage-the-integration-services-service"></a>Integration Services サービスを管理する
     
@@ -51,7 +51,7 @@ ms.locfileid: "84951372"
   
 -   [Integration Services サービスのイベントを表示する](../../2014/integration-services/view-events-for-the-integration-services-service.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サービス &#40;SSIS サービス&#41;](service/integration-services-service-ssis-service.md)   
  [SSIS サービス &#40;Integration Services サービスの構成&#41;](configuring-the-integration-services-service-ssis-service.md)   
  [SQL Server インポートおよびエクスポートウィザード](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 7d028c4ca47567a1f0f6b7d4b874ad78c98ea2d1
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 2a1496bee303e94720a354002e63cefcf479df85
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547344"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468917"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え
   多くの場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース管理者 (dba) がテーブルまたは多次元データベースの読み取り/書き込みモードを変更する必要があります。 こうした状況は、ユーザーが操作しやすくなるように一連の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー間でデータベースを共有するなどのビジネス上のニーズによって頻繁に発生します。  
@@ -31,7 +31,7 @@ ms.locfileid: "84547344"
   
 -   XMLA を使用したスクリプト  
   
-## <a name="procedures"></a>手順  
+## <a name="procedures"></a>プロシージャ  
   
 #### <a name="to-switch-the-readwrite-mode-of-a-database-interactively-using-management-studio"></a>Management Studio を使用してデータベースの読み取り/書き込みモードを対話的に切り替えるには  
   
@@ -165,9 +165,9 @@ ms.locfileid: "84547344"
   
 2.  XMLA コマンドを実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft.analysisservices.sharepoint.integration.dll * のようになります。](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Analysis Services データベースのアタッチとデタッチ](attach-and-detach-analysis-services-databases.md)   
  [データベースのストレージの場所](database-storage-location.md)   
  [データベース ReadWriteModes](database-readwritemodes.md)   

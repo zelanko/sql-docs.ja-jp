@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 076c76c9232dcba910c3810d2632f799b2960142
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17bfedafcb97793ccccf414a6ae5da9bc66faa66
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966082"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440609"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>レッスン 1:プロジェクトと基本パッケージの作成
   このレッスンでは、簡単な ETL パッケージを作成します。このパッケージは、1 つのフラット ファイル ソースからデータを抽出し、2 つの参照変換コンポーネントを使用してそのデータを変換します。さらに、変換したデータを、 **AdventureWorksDW2012** の **FactCurrency**ファクト テーブルに書き込みます。 ここでは、新しいパッケージを作成する方法、データの変換元と変換先の接続を追加、構成する方法、新しい制御フロー コンポーネントとデータ フロー コンポーネントを操作する方法を学習します。  
@@ -61,10 +61,10 @@ ms.locfileid: "84966082"
   
 |列名|データの種類|参照テーブル|参照列|  
 |-----------------|---------------|------------------|-------------------|  
-|AverageRate|float|None|None|  
+|AverageRate|float|なし|なし|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|float|None|None|  
+|EndOfDayRate|float|なし|なし|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>ソース データと変換先データのマッピング  
  変換元と変換先のデータ形式を調べてみると、 **CurrencyKey** と **DateKey** の値については参照が必要であることがわかります。 これらの参照を実行する変換では、 **DimCurrency** ディメンション テーブルと **DimDate** ディメンション テーブルの代替キーを使用することにより、 **CurrencyKey** と **DateKey** の値を取得します。  

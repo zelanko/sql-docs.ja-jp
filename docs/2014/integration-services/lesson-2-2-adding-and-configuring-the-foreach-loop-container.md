@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 761407023130b2bc18c8e1b64d09d9b30155c3b3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 77aac43aa6fc00a408c049ea7f6d078417a8d4dd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966072"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440619"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>手順 2:Foreach ループ コンテナーの追加と構成
   この実習では、フラット ファイルのフォルダー全体にループ機能を付加し、レッスン 1 で使用したデータ フロー変換と同じ変換を各フラット ファイルに適用します。 そのためには、Foreach ループ コンテナーを制御フローに追加して、構成します。  
@@ -90,7 +90,7 @@ ms.locfileid: "84966072"
 ## <a name="next-lesson-task"></a>次のレッスンの作業  
  [手順 3:フラット ファイル接続マネージャーの変更](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Foreach ループコンテナーの構成](control-flow/foreach-loop-container.md)   
  [パッケージで変数を使用する](use-variables-in-packages.md)  
   

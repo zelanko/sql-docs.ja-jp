@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0df04b8388bc54f0181e5d5b7bb7600faece6260
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: b4257d883b1f39e918f0f8a6eb8135e25b784a79
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427229"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469287"
 ---
 # <a name="developing-a-custom-task"></a>カスタム タスクの開発
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] は、作業単位を実行するタスクを使用して、データの抽出、変換、および読み込みをサポートします。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、SQL ステートメントの実行から、FTP サイトからのファイルのダウンロードまで、頻繁に使用される操作を実行するためのさまざまなタスクが用意されています。 用意されているタスクとサポートされている操作が、要件を完全には満たない場合は、カスタム タスクを作成できます。  
   
- カスタム タスクを作成するには、<xref:Microsoft.SqlServer.Dts.Runtime.Task> 基本クラスを継承するクラスを作成し、新しいクラスに <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性を適用して、<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> メソッドなど、基本クラスの重要なメソッドとプロパティをオーバーライドする必要があります。  
+ カスタムタスクを作成するには、このクラスを継承するクラスを作成[して](/dotnet/api/microsoft.sqlserver.dts.runtime.task)、 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 新しいクラスに属性を適用し、メソッドを含め、基本クラスの重要なメソッドとプロパティをオーバーライドすることが必要になります。 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  ここでは、カスタム タスクとそのオプションのカスタム ユーザー インターフェイスを作成、構成、およびコーディングする方法について説明します。  

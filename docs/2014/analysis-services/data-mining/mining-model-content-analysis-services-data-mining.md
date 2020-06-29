@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 0943e3f98ae65ec6c142fb1b98f86da054e88638
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3cbfbf253bfd080084b8182b353b1efb8b535d3c
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521619"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468967"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   基になるマイニング構造のデータを使用してマイニング モデルをデザインおよび処理したら、マイニング モデルが完成し、そのモデルには *マイニング モデル コンテンツ*が含まれます。 このコンテンツを使用して、予測やデータの分析を行うことができます。  
@@ -215,12 +215,12 @@ ms.locfileid: "84521619"
 |1|Missing|ケース データにこの属性の値が含まれていないことを示します。 `Missing` 状態は、値を持つ属性とは別に計算されます。|  
 |2|Existing|ケース データにこの属性の値が含まれていることを示します。|  
 |3|継続的|属性の値が連続する数値であるため、分散および標準偏差と共に平均で表すことができることを示します。|  
-|4|Discrete|不連続値として扱われる値 (数値またはテキスト) を示します。<br /><br /> **注** 不連続値は不足値にすることもできます。ただし、計算時の処理方法は異なります。 詳細については、「[Missing 値 &#40;Analysis Services - データ マイニング&#41;](missing-values-analysis-services-data-mining.md)」をご覧ください。|  
+|4|離散|不連続値として扱われる値 (数値またはテキスト) を示します。<br /><br /> **注** 不連続値は不足値にすることもできます。ただし、計算時の処理方法は異なります。 詳細については、「[Missing 値 &#40;Analysis Services - データ マイニング&#41;](missing-values-analysis-services-data-mining.md)」をご覧ください。|  
 |5|Discretized|属性に分離された数値が含まれていることを示します。 値は、分離するためのバケットを示す書式設定された文字列です。|  
 |6|Existing|属性の値が連続する数値で、値がデータで指定されていることを示します (不足値または推定値と比較)。|  
 |7|Coefficient|係数を表す数値を示します。<br /><br /> 係数は、従属変数の値の計算時に適用される値です。 たとえば、年齢に基づいて収入を予測する回帰式をモデルで作成する場合は、年齢を収入に関連付ける式で係数が使用されます。|  
 |8|Score gain|属性のスコア ゲインを表す数値を示します。|  
-|9|統計情報|リグレッサーの統計を表す数値を示します。|  
+|9|統計|リグレッサーの統計を表す数値を示します。|  
 |10|Node unique name|値を数値または文字列として扱わずに、モデルの別のコンテンツ ノードの一意識別子として扱うことを示します。<br /><br /> たとえば、ニューラル ネットワーク モデルでは、ID によって、出力層のノードから非表示層のノード、および非表示層のノードから入力層のノードへのポインターが提供されます。|  
 |11|Intercept|回帰式における切片を表す数値を示します。|  
 |12|Periodicity|値がモデルの周期構造を表すことを示します。<br /><br /> ARIMA モデルを含むタイム シリーズ モデルだけに適用されます。<br /><br /> 注: Microsoft Time Series アルゴリズムでは、周期構造はトレーニング データに基づいて自動的に検出されます。 したがって、最終的なモデルの周期性には、モデルの作成時にパラメーターとして指定しなかった周期性の値が含まれる場合があります。|  
@@ -231,7 +231,7 @@ ms.locfileid: "84521619"
 |17|その他|アルゴリズムで定義されたカスタム値を表します。|  
 |18|Prerendered string|アルゴリズムによって文字列として表示されるカスタム値を表します。 オブジェクト モデルによって書式設定は適用されませんでした。|  
   
- 値の型は、ADMOMD.NET 列挙体から派生します。 詳細については、「<xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>」を参照してください。  
+ 値の型は、ADMOMD.NET 列挙体から派生します。 詳細については、「Microsoft.analysisservices.sharepoint.integration.dll」を参照してください。 [MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120)).  
   
 ### <a name="node-score"></a>ノード スコア  
  ノード スコアの意味はモデルの種類によって異なり、ノードの種類によっても変わる可能性があります。 各種モデルおよびノードに関する NODE_SCORE の計算方法の詳細については、「 [アルゴリズムの種類別のマイニング モデル コンテンツ](#bkmk_AlgoType)」をご覧ください。  
@@ -301,7 +301,7 @@ SELECT * FROM [<mining model name>].CONTENT
   
  また、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへの接続を開き、システム テーブルにクエリを実行することにより、データ マイニング スキーマ行セットの情報にアクセスできます。 詳細については、「データマイニング[スキーマ行セットのクエリ」 &#40;Analysis Services データマイニング&#41;](data-mining-schema-rowsets-ssas.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft 汎用コンテンツツリービューアー &#40;データマイニング&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   

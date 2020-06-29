@@ -19,12 +19,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833762"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440709"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Azure SQL データベース)
 
@@ -53,7 +53,7 @@ ms.locfileid: "82833762"
 ## <a name="permissions"></a>アクセス許可  
  このビューは、サーバーレベルプリンシパルログインの**master**データベースでのみ使用できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  このビューを使用するには、 **master**データベースに接続している必要があります。 `sys.dm_operation_status`サーバーの**master**データベースのビューを使用して [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 、に対して実行される次の操作の状態を追跡し [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ます。  
   
 -   データベースの作成  
@@ -73,7 +73,9 @@ ms.locfileid: "82833762"
 -   ダイアログ ボックスの  
   
 -   データベースの削除  
-  
+
+このビューの情報は、約1時間保持されます。 過去90日以内の操作の詳細を表示するには、 [Azure アクティビティログ](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log)を使用してください。 リテンション期間が90日を超える場合は、[アクティビティログ](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace)エントリを Log Analytics ワークスペースに送信することを検討してください。
+
 ## <a name="example"></a>例  
  データベース ' mydb ' に関連付けられている最新の geo レプリケーション操作を表示します。  
   
@@ -83,7 +85,7 @@ SELECT * FROM sys.dm_operation_status
    ORDER BY start_time DESC;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Geo レプリケーションの動的管理ビューおよび関数 &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
  [dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
  [geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   

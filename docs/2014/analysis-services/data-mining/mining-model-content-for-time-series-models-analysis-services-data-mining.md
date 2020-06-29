@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 550dd2bad920dc3538de011b7841c0174912e718
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: fc9186b0250f0bdb8dd5ad91cc7e84782218bbc2
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521256"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468907"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>タイム シリーズ モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   すべてのマイニング モデルは同じ構造を使用してコンテンツを格納します。 この構造は、データ マイニング コンテンツ スキーマ行セットに従って定義されます。 しかし、その標準の構造の中で、情報を含むノードがさまざまな形で配置されて、さまざまな種類のツリーが表現されます。 このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムに基づくマイニング モデルについて、ノードの構成や各ノードの意味を説明します。  
@@ -410,7 +410,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_DISTRIBUTION:** 入れ子になったテーブルに式の項が表示されます。このテーブルに対してクエリを実行することにより、特定の項を取得できます。 ノード ディストリビューション テーブルは XML ルールと同じ階層構造に従っているため、 ARIMA 系列のルート ノード (NODE_TYPE = 27) には切片の値と完全な式の周期性 (複数の周期性が含まれる場合もあります) が含まれ、子ノードには特定の周期構造やその周期構造の子ノードに固有の情報のみが含まれます。  
   
-|ノードの種類|属性|値の型|  
+|ノードの種類|属性|値の種類|  
 |---------------|---------------|----------------|  
 |27 (ARIMA ルート)|Intercept<br /><br /> Periodicity|11|  
 |28 (ARIMA 周期構造)|Periodicity<br /><br /> 自己回帰の次数<br /><br /> Difference order<br /><br /> Moving average order|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
@@ -423,7 +423,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  *差分の次数* の値は、系列が比較 (区別) される回数を表します。  
   
- 使用可能な値の種類の列挙体は、 <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>」を参照してください。  
+ 使用可能な値の型の列挙体については、Microsoft.analysisservices.sharepoint.integration.dll を参照してください[MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120))です。  
   
 ### <a name="using-the-arima-tree-information"></a>ARIMA ツリーの情報の使用  
  ARIMA アルゴリズムに基づく予測をビジネス ソリューションで使用する場合は、レポートに式を貼り付けて、その予測の作成に使用された方法を示すことができます。 式を短い形式で提示するにはキャプションを、長い形式で提示するには説明を使用します。  
@@ -436,10 +436,10 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 -   XML 表現: XML クエリを使用します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  ARTXP ツリーでは、各分割の情報がそれぞれツリーの異なる場所にあるため、情報を取得するのが困難な場合があります。 したがって ARTXP モデルでは、すべての断片を取得してから、なんらかの処理を行って完全な式を再構成する必要があります。 ARIMA モデルでは、ツリー全体で式を取得できるようになっているため、比較的簡単に式を取得できます。 この情報を取得するクエリの作成方法については、「 [タイム シリーズ モデルのクエリ例](time-series-model-query-examples.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Microsoft タイムシリーズアルゴリズム](microsoft-time-series-algorithm.md)   
  [タイムシリーズモデルのクエリ例](time-series-model-query-examples.md)   

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e3bb87bbf5e3e17f5468fabe50c158b30239777d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f7fcaa0ecab3561e49fc8080251d2523034f5149
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951492"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440379"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>手順 4:レッスン 5 のチュートリアル パッケージのテスト
   パッケージを実行すると、そのときに更新される変数から `Directory` の値が取得されます。パッケージの作成時に指定した元の名前は使用されません。 この変数の値は、SSISTutorial.dtsConfig ファイルにより生成されます。  

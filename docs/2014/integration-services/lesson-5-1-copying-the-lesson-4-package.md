@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6bd8de63662b070e317f7c01d1d60f15b6864787
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a2d07500e357d69ba0e07d5453ae7df7f0244360
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968192"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440429"
 ---
 # <a name="step-1-copying-the-lesson-4-package"></a>手順 1:レッスン 4 のパッケージのコピー
   ここでは、レッスン 4 で作成した Lesson 4.dtsx パッケージのコピーを作成します。 または、チュートリアルに含まれている、レッスン 4 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 5 の実習では、このパッケージの新しいコピーを使用します。  

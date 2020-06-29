@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b4483facba1a1233dda7f3330f432ef8d3f9c2b5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0e62ad84a6199568de63676c1b450dc3963c5166
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968229"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440569"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>手順 4:レッスン 2 のチュートリアル パッケージのテスト
   Foreach ループ コンテナーとフラット ファイル接続マネージャーを構成したので、Lesson 2 のパッケージは、Sample Data フォルダー内の 14 個のフラット ファイルに対して反復処理を実行できるようになりました。 指定した条件を満たすファイル名が見つかるたびに、Foreach ループ コンテナーは、ユーザー定義変数にそのファイル名を取り込みます。 次に、この変数に基づいて、フラット ファイル接続マネージャーの ConnectionString プロパティを更新し、新しいフラット ファイルへの接続を確立します。 さらに、新しいフラット ファイル内のデータに対して未変更のデータ フロー タスクを実行してから、フォルダー内の次のファイルに接続します。  
@@ -46,7 +46,7 @@ ms.locfileid: "84968229"
 ## <a name="next-lesson"></a>次のレッスン  
  [レッスン 5: パッケージ配置モデルのパッケージ構成の追加](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクトとパッケージの実行](packages/run-integration-services-ssis-packages.md)  
   
   

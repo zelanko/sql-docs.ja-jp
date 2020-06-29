@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d2ce127c6d0ce9a6a5ca62692d9f40fb70fadb69
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a71a7a181322d60caca98da4ddf3261cbce99c9e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951539"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440369"
 ---
 # <a name="step-3-modifying-the-directory-property-configuration-value"></a>手順 3:Directory プロパティの構成値の変更
   ここでは、SSISTutorial.dtsConfig ファイルに保存されている構成設定のうち、パッケージ レベル変数 `User::varFolderName`の Value プロパティを変更します。 この変数は、ForEach ループ コンテナーの Directory プロパティを更新します。 変更後の値は、 `New Sample Data` 前のタスクで作成したフォルダーを指します。 構成設定を変更し、パッケージを実行すると、パッケージ レベル変数によって Directory プロパティが更新されます。この更新では、パッケージにもともと構成されていた Directory 値は使用されず、構成ファイルから生成された値が使用されます。  
