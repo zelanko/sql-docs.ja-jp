@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], WMI
 - WMI connection manager [Integration Services]
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 29ddc30f89621e9b4875a57c191a81ef3f10784d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 066af3d35f964040b09d8afd217017925a163eff
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920273"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438309"
 ---
 # <a name="wmi-connection-manager"></a>WMI 接続マネージャー
   WMI 接続マネージャーを使用すると、パッケージは Windows Management Instrumentation (WMI) を使用して、企業環境の情報を管理できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる Web サービス タスクでは、WMI 接続マネージャーが使用されます。  
@@ -40,7 +40,7 @@ ms.locfileid: "84920273"
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Web サービスタスク](../control-flow/web-service-task.md)   
  [Integration Services &#40;SSIS&#41; の接続](integration-services-ssis-connections.md)  
   

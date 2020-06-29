@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5a969ad04f8ba5bc86167beecfab5fec85e87caa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b2a485077f501d38d5d6bab2a4d5b309f47dc6a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966882"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437389"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>[Excel 変換先エディター] ([接続マネージャー] ページ)
   **[Excel 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、データ ソース情報を指定したり、結果をプレビューしたりできます。 Excel 変換先では、 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] ブックのワークシートまたは名前付き範囲にデータが読み込まれます。  
@@ -79,7 +79,7 @@ ms.locfileid: "84966882"
  **クエリの解析**  
  クエリ テキストの構文を検査します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Excel 変換先エディターの [マッピング] ページ&#41;&#40;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Excel 変換先エディター &#40;エラー出力ページ&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   

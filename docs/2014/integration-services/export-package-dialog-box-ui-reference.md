@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Export Package dialog box
 ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: be6942f419e8b13df12268363520c0f293e1a429
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6085a6fde388cf65ed9fa8eddaf8ffc898a29999
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966772"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437399"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>[パッケージのエクスポート] ダイアログ ボックスの UI リファレンス
   **の** [パッケージのエクスポート] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを別の場所にエクスポートしたり、必要に応じてパッケージの保護レベルを変更したりできます。  
@@ -57,7 +57,7 @@ ms.locfileid: "84966772"
  **保護レベル**  
  参照ボタン ([. **..])** をクリックし、[パッケージの**保護レベル**] ダイアログボックスで保護レベルを更新します。 詳細については、「 [[パッケージの保護レベル] ダイアログ ボックス](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージのコピーの保存](../../2014/integration-services/save-copy-of-package.md)   
  [[パッケージのインポート] ダイアログボックスの UI リファレンス](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [パッケージの保存](save-packages.md)   

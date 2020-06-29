@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 43bda909-e48f-4243-9614-49f4eea84872
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 88bc9c648fde5e302347b243a9ea11f049798876
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bc3c3862cbff7d8e9db994ad3928ea4d0d87eed3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921670"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438509"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>[データ ビューアーの構成] ([ヒストグラム] タブ)
   **[データ ビューアーの構成]** ダイアログ ボックスの **[ヒストグラム]** タブを使用すると、表示する列を指定できます。 ヒストグラムには、1 つの数値列のデータ値が値の分散として表示されます。 グラフには、1 つのバッファーの内容のみが反映されます。  
@@ -27,7 +27,7 @@ ms.locfileid: "84921670"
  **[グラフィック表示する列]**  
  ヒストグラムとしてグラフィック表示する列を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[全般] タブの [データビューアーの構成] &#40;&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [[データビューアーの構成] &#40;[縦棒グラフ] タブ&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [データビューアーの構成 &#40;グリッドタブ&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   

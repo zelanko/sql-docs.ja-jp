@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7537a892e5453bb66c07ab4b2c6bd6513b754c7e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cac3a3feb6b4d3126b9c1629d4f2e4c8884e8dbf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923273"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438729"
 ---
 # <a name="error-handling"></a>エラー処理
   Oracle CDC インスタンスでは、単一の Oracle ソース データベース (Oracle RAC クラスターは単一のデータベースと見なされます) から変更を検出し、対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれる CDC データベースの変更テーブルにコミット済みの変更を書き込みます。  
@@ -47,7 +47,7 @@ ms.locfileid: "84923273"
 ## <a name="error-handling"></a>エラー処理  
  ここでは、Oracle CDC Service でのエラーの処理方法について説明します。  
   
-### <a name="logging"></a>ログ記録  
+### <a name="logging"></a>ログの記録  
  Oracle CDC Service では、次のいずれかにエラー情報を出力します。  
   
 -   Windows イベント ログ。エラーのログ記録で、Oracle CDC Service のライフ サイクル イベント (開始、停止、対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続や再接続) を示すために使用されます。  
@@ -111,6 +111,6 @@ ms.locfileid: "84923273"
 ### <a name="handling-unexpected-oracle-cdc-instance-failures"></a>Oracle CDC インスタンスの予期しないエラーの処理  
  Oracle CDC Service では、CDC インスタンスのサブプロセスを監視しています。 CDC インスタンスのサブプロセスが中止されると、MSXDBCDC.dbo.xdbcdc_databases テーブルでそのサブプロセスが無効になり、cdc.xdbcdc_state の状態が ABORTED に更新されます。 この場合、詳細な分析のために、標準の Windows エラー報告ダイアログ ボックスでこのエラーが報告されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Change Data Capture Designer for Oracle](change-data-capture-designer-for-oracle-by-attunity.md)   
  [Oracle CDC インスタンス](the-oracle-cdc-instance.md)  

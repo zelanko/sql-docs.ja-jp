@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1111b0d8f2903de9b690f269498a93d01c2afa0c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d9001c5f3890bfb3623715ff6c6deeb70116bb73
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921659"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438499"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>[データ ビューアーの構成] ([散布図] タブ)
   **[データ ビューアーの構成]** ダイアログ ボックスの **[散布図 (x,y)]** タブを使用すると、互いに対してプロットする 2 つの列を指定できます。 散布図では、2 つの数値列のデータ値が互いにプロットされます。 それぞれのデータ レコードは、プロットで 1 つの点となります。 グラフには、1 つのバッファーの内容のみが反映されます。  
@@ -30,7 +30,7 @@ ms.locfileid: "84921659"
  **[Y 軸の列]**  
  Y 軸として使用する列を選択します。 それぞれの軸について 1 つの列しか選択できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[全般] タブの [データビューアーの構成] &#40;&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [[データビューアーの構成] &#40;[縦棒グラフ] タブ&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [データビューアーの構成 &#40;グリッドタブ&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   

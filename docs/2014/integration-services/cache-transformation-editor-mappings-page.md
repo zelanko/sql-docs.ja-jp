@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 56e4197bf4e4be1ca695778920ba8abe03bf4f7e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4af49bf776757d2cbbad389d6faf4ac1afce9352
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924613"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439109"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>[キャッシュ変換エディター] ([マッピング] ページ)
   **[キャッシュ変換エディター]** の **[マッピング]** ページを使用して、キャッシュ変換の入力列をキャッシュ変換マネージャーの変換先列にマップします。  
@@ -45,7 +45,7 @@ ms.locfileid: "84924613"
  **変換先列**  
  利用可能な各変換先列を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[キャッシュ変換エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

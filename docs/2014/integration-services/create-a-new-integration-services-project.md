@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQL Server Integration Services projects, creating
 - SSIS projects, creating
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e677162d88fd1f724b53e0d1838eefd16d1a87af
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 524bea3f8b2c4e9770892f8936951a1d387dfc6f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917392"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437949"
 ---
 # <a name="create-a-new-integration-services-project"></a>新しい Integration Services プロジェクトを作成する
   この手順では、新しいプロジェクトと新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ソリューションを作成します。  
@@ -49,7 +49,7 @@ ms.locfileid: "84917392"
   
 8.  [ **OK]** をクリックして**ソリューションをソリューション**に追加し、プロジェクトをソリューションに追加します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS&#41; プロジェクトの Integration Services &#40;](integration-services-ssis-projects-and-solutions.md)   
  [ソリューション内の Integration Services プロジェクトを追加または削除する](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 54d61b7696f00aeacdd92a3803630838f6f3ad1a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e4e44aea5cfd2cee5a4da920687d0f063df11460
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923983"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438969"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>[CDC ソース エディター] ([エラー出力] ページ)
   **[CDC ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択できます。  
@@ -66,7 +66,7 @@ ms.locfileid: "84923983"
  **[フローのリダイレクト]**  
  エラーまたは切り捨てのデータ行は、CDC ソースのエラー出力に送られます。 この場合は、CDC ソースのエラー処理が使用されます。 詳細については、「 [CDC ソース](data-flow/cdc-source.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[CDC ソースエディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
  [[CDC ソース エディター] &#40;[列] ページ&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ea3e294bf2cdda912b82455d926fffc5438add2d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eff97cfad0091d2794d895f2f9b4ac086690bb05
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915822"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437829"
 ---
 # <a name="excel-destination"></a>Excel 変換先
   Excel 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブックのワークシートまたは範囲にデータを読み込みます。  
@@ -102,7 +102,7 @@ ms.locfileid: "84915822"
   
 -   [データ フロー コンポーネントのプロパティを設定する](set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Excel ソース](excel-source.md)   
  [SSIS&#41; 変数の Integration Services &#40;](../integration-services-ssis-variables.md)   
  [データフロー](data-flow.md)   

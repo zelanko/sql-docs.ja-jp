@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bdd2baa136cbd61862d014fd90bc8fca561c9578
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cdb9b2efad17bf4db069473878585cfb61daade0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920661"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438389"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>キャッシュ接続マネージャーの変換を使用してフル キャッシュ モードの参照変換を実装する
   フル キャッシュ モードおよびキャッシュ接続マネージャーを使用するように参照変換を構成できます。 フル キャッシュ モードでは、参照変換の実行前に参照データセットがキャッシュに読み込まれます。  

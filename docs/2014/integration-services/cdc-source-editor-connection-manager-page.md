@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.connection.f1
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c6ee99e02d9c3c5e78d00abd3e8d9f5673ee4d22
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1e455f049d70d3a6ad889d820f79e2fed70e326d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924063"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438979"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>[CDC ソース エディター] ([接続マネージャー] ページ)
   **[CDC ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、CDC ソースが変更行を読み取る [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] データベース (CDC データベース) の ADO.NET 接続マネージャーを選択できます。 CDC データベースを選択した後で、キャプチャされたテーブルをデータベースで選択する必要があります。  
@@ -73,7 +73,7 @@ ms.locfileid: "84924063"
   
  詳細については、「 [CDC ソースのカスタム プロパティ](data-flow/cdc-source-custom-properties.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[CDC ソースエディター] &#40;[列] ページ&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
  [CDC ソース エディター &#40;[エラー出力] ページ&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
