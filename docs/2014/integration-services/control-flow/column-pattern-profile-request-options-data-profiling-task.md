@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a00c72e6f444ec1e62082f254d6b77894b479d09
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 831350b3ab54f84236f7f258415aeb782539cdb5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919643"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433759"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>[列パターン プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[列パターン プロファイル要求]** のオプションを設定できます。 列パターン プロファイルは、文字列型の列に含まれる指定された比率の値に対応する一連の正規表現を報告します。 このプロファイルを使用すると、無効な文字列などのデータの問題を特定できます。また、このプロファイルには、新しい値を検証するために将来使用できる正規表現も提示されます。 たとえば、米国郵便番号列のパターン プロファイルでは、\d{5}-\d{4}、\d{5}、および \d{9} という正規表現が生成されます。 その他の正規表現が示された場合、データに無効な値または形式が正しくない値が含まれている可能性があります。  
@@ -42,16 +42,16 @@ ms.locfileid: "84919643"
   
  たとえば、住所に含まれる可能性がある "East"、"West"、"North"、および "South" という値を、"Direction" という 1 つのタグでグループ化できます。 次の表に、このようなタグ テーブルの例を示します。  
   
-|タグ|期間|  
+|タグ|用語|  
 |---------|----------|  
-|Direction|East|  
-|Direction|West|  
-|Direction|North|  
-|Direction|South|  
+|方向|East|  
+|方向|West|  
+|方向|North|  
+|方向|South|  
   
  別のタグを使用して、住所の "通り" の概念を表すさまざまな単語をグループ化できます。  
   
-|タグ|期間|  
+|タグ|用語|  
 |---------|----------|  
 |Street|Street|  
 |Street|Avenue|  
@@ -126,7 +126,7 @@ ms.locfileid: "84919643"
   
  詳細については、このトピックの「区切り記号と記号の使用方法について」を参照してください。  
   
- **文字**  
+ **記号**  
  パターンの一部として保持する記号の一覧が表示されます。 記号の例として、日付を表す "/"、時刻を表す ":"、電子メール アドレスを表す "@" などがあります。 既定では、**記号**の一覧には次の文字が含まれています: `,.;:-"'` ~ =&/@!?() <> [] {} | # * ^% ' です。  
   
  詳細については、このトピックの「区切り記号と記号の使用方法について」を参照してください。  
@@ -141,7 +141,7 @@ ms.locfileid: "84919643"
   
  詳細については、このトピックの「タグ テーブルの使用方法について」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[データプロファイルタスクエディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)   
  [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   

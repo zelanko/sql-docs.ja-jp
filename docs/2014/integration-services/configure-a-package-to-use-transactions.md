@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], configuring packages to use
 ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9d16473832d321e252753fa79e8b3178f2c2dcf6
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 25c111830727c7ca75357a06a0eb40ebd00aee9f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921941"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434859"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>トランザクションを使用するようにパッケージを構成する
   トランザクションを使用するようにパッケージを構成する場合、次の 2 つのオプションがあります。  
@@ -86,7 +86,7 @@ ms.locfileid: "84921941"
   
 10. トランザクションを開始する各タスクおよびコンテナーに対して、手順 6. ～ 9. を繰り返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のトランザクション](integration-services-transactions.md)  
   
   

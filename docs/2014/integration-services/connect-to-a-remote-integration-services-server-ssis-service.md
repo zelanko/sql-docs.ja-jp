@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Integration Services service, remote instance
 - service [Integration Services], connecting
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0b9fa3f54b7b16b1fd397bfe80c95d08e39289eb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 48369c2691386bc41675571c892302e3e4b7ece1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921373"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434659"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>リモートの Integration Services サーバーに接続する (SSIS サービス)
     
@@ -104,7 +104,7 @@ ms.locfileid: "84921373"
 
 詳細については、「 [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)」(SSIS パッケージで機能するクロス ドメイン Kerberos の取得) を参照してください。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS サービスにアクセスするように Windows ファイアウォールを構成する](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  
   
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 05633e4c-1370-4b05-802b-f36b07dd71c8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8d6cc5a5fb14fff5fd92d5120f56c06d57ddcbaf
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8635ced29f28781bba9d67408ce69f61171ab660
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921393"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434499"
 ---
 # <a name="connect-components-with-paths"></a>パスを使用してコンポーネントを連結する
   パッケージ内にデータ フローを構築するには、 **デザイナーにある** [データ フロー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブのデザイン画面を使用します。 データ フローにデータ フロー コンポーネントが 2 つ含まれる場合、変換元または変換からの出力を変換または変換先への入力に連結することで、これらのコンポーネントを連結できます。 2 つのデータ フロー コンポーネント間のコネクタは、パスと呼ばれます。
@@ -47,7 +47,7 @@ ms.locfileid: "84921393"
 
 -   [データ フローにデータ ビューアーを追加する](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [データフロータスク](control-flow/data-flow-task.md)の[データフロー](data-flow/data-flow.md)変換[を使用したデータの変換](data-flow/transformations/transform-data-with-transformations.md)データ[でのエラー処理](data-flow/error-handling-in-data.md)
 
 

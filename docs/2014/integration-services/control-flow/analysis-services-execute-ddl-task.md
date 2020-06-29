@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 45a865aafa287fe5fbb97a4970475bbdaa3b77c6
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2cad6dcdc4b288d7c15b611b27d90caf6c48518d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920228"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434179"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 実行タスク
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクは、データ定義言語 (DDL) ステートメントを実行します。DDL ステートメントを使用すると、マイニング モデルや多次元オブジェクト (キューブおよびディメンションなど) を作成、削除、または変更できます。 たとえば DDL ステートメントは、 **Adventure Works** キューブ内にパーティションを作成したり、 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]に含まれるサンプルの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のディメンションを削除したりできます。  

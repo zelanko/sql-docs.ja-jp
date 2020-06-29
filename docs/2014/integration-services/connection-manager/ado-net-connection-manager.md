@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO.NET connection manager [Integration Services]
 - connections [Integration Services], ADO.NET
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 850c8f0f54339594b19debd48ebf4ac7021873d3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9bdc25eeeae93fe0bd85deb55bfc86c55ab91ee5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921247"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434529"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 接続マネージャー
   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用すると、パッケージは .NET プロバイダーを使用してデータ ソースにアクセスできます。 この接続マネージャーは通常、などのデータソースにアクセスするために使用され [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。また、C# などの言語を使用してマネージコードで記述されたカスタムタスクで、OLE DB と XML を介して公開されるデータソースにもアクセスします。  
@@ -61,7 +61,7 @@ ms.locfileid: "84921247"
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; の接続](integration-services-ssis-connections.md)  
   
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], OLE DB
 - connections [Integration Services], OLE DB
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b075bb2830ab911e92ecd7efbd76e7b089e89629
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 98e9684e590493a21c9b0f526eb48bf4985c5d8a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920507"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434229"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 接続マネージャー
   OLE DB 接続マネージャーを使用すると、パッケージは OLE DB プロバイダーを使用してデータ ソースに接続できます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する OLE DB 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "84920507"
   
 -   接続マネージャーから作成される接続を、実行時に保持するかどうかを指定します。  
   
-## <a name="logging"></a>ログ記録  
+## <a name="logging"></a>ログの記録  
  OLE DB 接続マネージャーによる外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、OLE DB 接続マネージャーによる外部データ ソースへの接続に関するトラブルシューティングを行うことができます。 OLE DB 接続マネージャーが外部データプロバイダーに対して行う呼び出しをログに記録するには、パッケージログ記録を有効にし、パッケージレベルで**Diagnostic**イベントを選択します。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
   
 ## <a name="configuration-of-the-oledb-connection-manager"></a>OLEDB 接続マネージャーの構成  
@@ -57,7 +57,7 @@ ms.locfileid: "84920507"
   
 -   carlprothman.net の [OLE DB プロバイダー用接続文字列](https://go.microsoft.com/fwlink/?LinkId=220744)に関する技術記事  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB ソース](../data-flow/ole-db-source.md)   
  [OLE DB の宛先](../data-flow/ole-db-destination.md)   
  [SQL 実行タスク](../control-flow/execute-sql-task.md)   

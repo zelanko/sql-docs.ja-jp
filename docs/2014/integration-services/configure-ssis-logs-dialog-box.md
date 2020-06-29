@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0de63b2c4d438faa0dea8b8fdefa5f50d071c7e4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921663"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434809"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>[SSIS ログの構成] ダイアログ ボックス
   **SSIS ログの構成]** ダイアログ ボックスを使用して、パッケージのログ記録オプションを定義します。  
@@ -62,7 +62,7 @@ ms.locfileid: "84921663"
  **プロバイダー型の**  
  ログ プロバイダーの種類を一覧から選択します。  
   
- **追加**  
+ **[追加]**  
  パッケージのログ プロバイダーのコレクションに、指定した種類のログを追加します。  
   
  **名前**  
@@ -71,7 +71,7 @@ ms.locfileid: "84921663"
  **説明**  
  [説明] フィールドは編集可能です。 クリックして、ログの既定の説明を変更します。  
   
- **構成**  
+ **Configuration**  
  既存の接続マネージャーを一覧から選択するか、をクリックして \<**New connection...**> 新しい接続マネージャーを作成します。 ログ プロバイダーの種類によっては、OLE DB 接続マネージャーやファイル接続マネージャーを構成できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows イベント ログ用のログ プロバイダーの場合、接続は不要です。  
   
  関連項目:「 [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) 」、「 [File Connection Manager](connection-manager/file-connection-manager.md)」  
@@ -92,7 +92,7 @@ ms.locfileid: "84921663"
  **詳細設定**  
  ログ記録するイベントをオンまたはオフにし、各イベントでログ記録する情報をオンまたはオフにします。 **[標準]** をクリックすると、ログの詳細情報がイベントの一覧を除いてすべて非表示になります。 次の情報をログ記録できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**Computer**|ログ記録されたイベントが発生したコンピューターの名前。|  
 |**Operator**|パッケージを起動した人物のユーザー名。|  

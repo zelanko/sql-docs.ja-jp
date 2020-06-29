@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.EXPRESSIONTASK.F1
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2bb4a0aaf5c1cb6f11683029f4e43856fc7f7e4a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 44aac3d7e22e94a247f5530c889a28dcd08bba78
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918908"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433109"
 ---
 # <a name="expression-task"></a>式タスク
   式タスクでは、式ビルダーを使用して、実行時に変数値を設定する式を作成して評価します。 タスクを編集するときは、 [Expression Builder](../expressions/expression-builder.md) が起動します。  

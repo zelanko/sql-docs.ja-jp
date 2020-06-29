@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], ADO
 - ADO connection manager [Integration Services]
 ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 85c76037c44f6260bbfc436823d844abdf74355d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fb4b667733f81eebbaf2b6a2ab9b205c09fe2c66
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921253"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434539"
 ---
 # <a name="ado-connection-manager"></a>ADO 接続マネージャー
   ADO 接続マネージャーを使用すると、レコードセットなどの ADO (ActiveX データ オブジェクト) オブジェクトにパッケージを接続できます。 この接続マネージャーは、通常、Microsoft Visual Basic 6.0 などの以前のバージョンの言語で記述されたカスタム タスクや、ADO を使用してデータ ソースに接続する既存のアプリケーションの一部のカスタム タスクで使用されます。  
@@ -55,7 +55,7 @@ ms.locfileid: "84921253"
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; の接続](integration-services-ssis-connections.md)  
   
   

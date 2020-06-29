@@ -14,14 +14,14 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 481ec003601a642de788eb8a6131ec1777bef129
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e77b9f442ae8478c57d5b0e68955b541eda38aff
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919093"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433189"
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
   SQL 実行タスクは、パッケージ内の SQL ステートメントやストアド プロシージャを実行します。 このタスクには、1 つの SQL ステートメントまたは順に実行される複数の SQL ステートメントを含めることができます。 SQL 実行タスクは、次の目的で使用できます。  

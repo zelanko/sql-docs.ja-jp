@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3dd58a175eaecc85e8c2bd515041753cf241adf9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 229a5f6b5a0194f7bd815077274a4e7f97a21185
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919241"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433459"
 ---
 # <a name="execute-process-task"></a>プロセス実行タスク
   プロセス実行タスクでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部として、アプリケーションまたはバッチ ファイルが実行されます。 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] や [!INCLUDE[ofprword](../../includes/ofprword-md.md)]などの標準的なアプリケーションを開くためにプロセス実行タスクを使用することもできますが、一般に、このタスクはデータ ソースを処理対象とするビジネス アプリケーションやバッチ ファイルを実行する場合に使用します。 たとえば、プロセス実行タスクを使用して、圧縮されたテキスト ファイルを展開できます。 さらに、そのテキスト ファイルをパッケージ内のデータ フローのデータ ソースとして使用できます。 その他の例として、プロセス実行タスクを使用し、毎日の売り上げレポートを生成するカスタムの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] アプリケーションを実行することもできます。 その後、このレポートをメール送信タスクに添付し、配信リストに転送できます。  
@@ -85,7 +85,7 @@ ms.locfileid: "84919241"
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)  
   

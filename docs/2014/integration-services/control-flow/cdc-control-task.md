@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dc9a71c69e1b6440b5386236fa6e1f7073851b3f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fb3d85e8617e3e2e84ea205d6c47bd3422a0ce7f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919733"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433779"
 ---
 # <a name="cdc-control-task"></a>CDC 制御タスク
   CDC 制御タスクは、変更データ キャプチャ (CDC) パッケージのライフ サイクルの制御に使用します。 CDC 制御タスクは、初期読み込みパッケージと CDC パッケージとの同期処理を行い、CDC パッケージの実行で処理されるログ シーケンス番号 (LSN) 範囲を管理します。 また、エラー シナリオおよび復旧の処理も行います。  

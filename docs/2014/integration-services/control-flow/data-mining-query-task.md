@@ -12,14 +12,14 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93021fb7000bd7adccd467e04fb7cf3430db5efe
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6bb3cea630401f92395e2ca4416c03bcd870c881
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919473"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433579"
 ---
 # <a name="data-mining-query-task"></a>データ マイニング クエリ タスク
   データ マイニング クエリ タスクは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に構築されたデータ マイニング モデルに基づいて、予測クエリを実行します。 予測クエリは、マイニング モデルを使用して新しいデータの予測を作成します。 たとえば、予測クエリにより、夏季のヨット販売数を予測したり、ヨットを購入する可能性の高い顧客の一覧を生成できます。  
