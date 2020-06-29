@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bbe47dbba2def9a40caf506fe9d0b5cb914d1052
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 486fb3fd6edcd50ba90a5ce76fb34119f4c1e681
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918912"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433049"
 ---
 # <a name="file-system-task"></a>ファイル システム タスク
   ファイル システム タスクは、ファイル システム内のファイルとディレクトリの操作を実行します。 たとえば、ファイル システム タスクを使用すると、パッケージはディレクトリやファイルの作成、移動、または削除を実行できます。 また、ファイル システム タスクを使用して、ファイルやディレクトリの属性を設定することもできます。 たとえば、ファイル システム タスクを使用すると、ファイルを非表示にしたり読み取り専用にできます。  
@@ -76,7 +76,7 @@ ms.locfileid: "84918912"
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ ファイルをダウンロードまたはアップロードし、サーバー上のディレクトリを管理するタスクが含まれます。 詳細については、「 [FTP タスク](ftp-task.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)  
   

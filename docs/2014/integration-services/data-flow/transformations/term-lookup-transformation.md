@@ -17,14 +17,14 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1cc4ec27de159735b43f88dd978e7070cb0f0983
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b349710494d52d01ba82c572b4646057b8d52a02
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939275"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430119"
 ---
 # <a name="term-lookup-transformation"></a>用語参照変換
   用語参照変換は、変換入力列内のテキストから抽出された用語を、参照テーブルの用語と照合します。 次に、入力データセットで参照テーブル内の用語が検出された回数をカウントし、その数を参照テーブルの用語と共に変換出力の列に書き込みます。 この変換は、単語の使用頻度を示す統計付きのユーザー定義の単語一覧を、入力テキストから作成する場合に便利です。  

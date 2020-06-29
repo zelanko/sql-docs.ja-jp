@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b452acb2e9d168910fec06d959ce3a1c1704b814
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e68fb1edd69e20628baaeda8802ec712da7d5117
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917082"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432619"
 ---
 # <a name="data-conversion-transformation-editor"></a>データ変換変換エディター
   **[データ変換変換エディター]** ダイアログ ボックスを使用すると、変換対象の列や列の変換先のデータ型を選択したり、変換属性を設定したりできます。  
@@ -56,7 +56,7 @@ ms.locfileid: "84917082"
  **エラー出力の構成**  
  [[エラー出力の構成]](../../2014/integration-services/configure-error-output.md) ダイアログ ボックスを使用して、エラーの処理方法を指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [データ変換の変換を使用してデータを別のデータ型に変換する](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   

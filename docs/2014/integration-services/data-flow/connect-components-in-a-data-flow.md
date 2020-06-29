@@ -10,14 +10,14 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ea5c088bf16576cf6711e9f01ee21452dd001b8e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eb04140fc5a065b93f8a08533b24ca786fc9202c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916472"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432339"
 ---
 # <a name="connect-components-in-a-data-flow"></a>データ フロー内でコンポーネントを連結する
   この手順は、データ フロー内のコンポーネントの出力を、同じデータ フロー内にある別のコンポーネントに連結する方法について説明します。  
@@ -39,7 +39,7 @@ ms.locfileid: "84916472"
   
 6.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データフロー内のコンポーネントを追加または削除する](data-flow.md)   
  [データフローコンポーネントでのエラー出力の構成](../configure-an-error-output-in-a-data-flow-component.md)   
  [データ フロー](data-flow.md)  

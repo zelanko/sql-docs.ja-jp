@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 22722605b266f28981457ce0c6839ad14279a434
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 909c8a7d6bb9959a66681c317d5ba05b76028e91
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916782"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432419"
 ---
 # <a name="cdc-flow-components"></a>CDC フロー コンポーネント
   SSIS 開発者は、Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 用 Attunity 変更データ キャプチャ (CDC) コンポーネントを使用すると、CDC を操作し、CDC パッケージの複雑さを軽減できます。  
@@ -68,7 +68,7 @@ ms.locfileid: "84916782"
   
  パッケージの開発に [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] を使用している場合は、アンインストール ウィザードの実行前に [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] を閉じる必要があります。  
   
-## <a name="benefits"></a>メリット  
+## <a name="benefits"></a>利点  
  SSIS 開発者は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] コンポーネント用の CDC コンポーネントを使用して、変更データを処理する SSIS パッケージを簡単に構築できます。 これらのコンポーネントは、CDC に対処し、CDC パッケージの複雑さを軽減する SSIS 開発者の能力を高めます。  
   
  SSIS CDC コンポーネントを使用すると、レプリケーション、データ ウェアハウスの読み込み、OLAP の緩やかに変化するディメンションの更新、変更の監査などの目的で処理しやすい形で変更データを提供できます。 後で行う処理の種類は、SSIS 開発者が決定します。  
@@ -215,7 +215,7 @@ ms.locfileid: "84916782"
   
 -   technet.microsoft.com のビデオ「 [SQL Server Integration Services 2012 を使用した Oracle データベースの CDC (SQL Server ビデオ)](https://technet.microsoft.com/sqlserver/jj218898)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDC 制御タスク](../control-flow/cdc-control-task.md)  
   
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9fb3d2b9e590e12b0a902a630b4c55a3baa9108f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 57b1f70c070cdf81dc0bc899ed365d048db26cc9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939623"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430769"
 ---
 # <a name="data-conversion-transformation"></a>データ変換の変換
   データ変換の変換は、入力列のデータを別のデータ型に変換し、新しい出力列にコピーします。 たとえば、パッケージで複数の変換元のデータを抽出し、この変換を使用して、列を変換先のデータ ストアで要求されるデータ型に変換できます。 1 つの入力列に複数の変換を適用できます。  
@@ -49,7 +49,7 @@ ms.locfileid: "84939623"
 ## <a name="related-content"></a>関連コンテンツ  
  blogs.msdn.com のブログ「 [SSIS 2008 のデータ型の変換手法間のパフォーマンス比較](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [高速解析](../../fast-parse.md)   
  [データフロー](../data-flow.md)   
  [Integration Services の変換](integration-services-transformations.md)  

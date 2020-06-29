@@ -13,14 +13,14 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 06746ae92c4e5d868cf5aff709ceccbbd200b68e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c225d2fe52fcb12a5abc22df5008b6cbc9b861a0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915446"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432109"
 ---
 # <a name="integration-services-paths"></a>Integration Services のパス
   パスは、データ フロー コンポーネントの出力を別のコンポーネントの入力に連結することにより、データ フロー内の 2 つのコンポーネントを連結します。 パスには連結元と連結先があります。 たとえば、パスが OLE DB ソースと並べ替え変換を連結する場合、OLE DB ソースはパスの連結元であり、並べ替え変換はパスの連結先になります。 連結元とはパスが開始するコンポーネントで、連結先とはパスが終了するコンポーネントのことです。  
@@ -54,7 +54,7 @@ ms.locfileid: "84915446"
   
 -   [データ フロー内でコンポーネントを連結する](connect-components-in-a-data-flow.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ フロー](data-flow.md)  
   
   

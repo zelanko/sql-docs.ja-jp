@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f97259e9388575c8a300ad6e4d1284e55443a60
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9e69d741ddd2bd14a31d7aa79a8c825641713523
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84913949"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431239"
 ---
 # <a name="aggregate-transformation"></a>集計変換
   集計変換は Average などの集計関数を列の値に適用し、その結果を変換出力にコピーします。 集計変換では、集計関数の他に GROUP BY 句を使用して集計範囲のグループを指定できます。  
@@ -132,7 +132,7 @@ ms.locfileid: "84913949"
 ## <a name="related-tasks"></a>Related Tasks  
  [集計変換を使用してデータセットの値を集計する](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データフロー](../data-flow.md)   
  [Integration Services の変換](integration-services-transformations.md)  
   

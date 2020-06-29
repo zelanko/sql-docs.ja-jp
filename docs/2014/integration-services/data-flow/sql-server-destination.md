@@ -15,14 +15,14 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8032920c184e30d98f26ad9af3f377f743838c4a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fcd65007e1e6af36386cb2ceba1f7242305b81a5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914062"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431229"
 ---
 # <a name="sql-server-destination"></a>SQL Server 変換先
   SQL Server 変換先はローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続し、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルまたはビューに一括で読み込みます。 SQL Server 変換先は、リモート サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにアクセスするパッケージでは使用できません。 代わりに、このパッケージでは OLE DB 変換先を使用する必要があります。 詳細については、「 [OLE DB 変換先](ole-db-destination.md)」を参照してください。  
@@ -122,7 +122,7 @@ ms.locfileid: "84914062"
   
 -   simple-talk.com の技術記事: [SQL Server Integration Services を使用してデータの一括読み込みを行う](https://go.microsoft.com/fwlink/?LinkId=233701)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ フロー](data-flow.md)  
   
   

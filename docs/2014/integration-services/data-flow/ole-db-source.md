@@ -12,14 +12,14 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d8c8943c837be852c11d65201d0a8b71de7bec4e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f619d24503527c8067d56fa94a404af58a882c03
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915042"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431849"
 ---
 # <a name="ole-db-source"></a>OLE DB ソース
   OLE DB ソースは、データベース テーブル、ビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなリレーショナル データベースからデータを抽出します。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルからデータを抽出できます。  
@@ -114,7 +114,7 @@ ms.locfileid: "84915042"
 ## <a name="related-content"></a>関連コンテンツ  
  Social.technet.microsoft.com の Wiki 記事、 [Oracle コネクタを使用した SSIS](https://go.microsoft.com/fwlink/?LinkId=220670)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB の宛先](ole-db-destination.md)   
  [SSIS&#41; 変数の Integration Services &#40;](../integration-services-ssis-variables.md)   
  [データ フロー](data-flow.md)  

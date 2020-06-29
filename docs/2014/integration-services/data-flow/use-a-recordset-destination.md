@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4e61e8c122b284dfe448f415cd05b20feab699ef
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 80513addcc1683b6238734bd72c0ddee3608c61d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939213"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429969"
 ---
 # <a name="use-a-recordset-destination"></a>レコードセット変換先を使用する
   レコードセット変換先では、データは外部データ ソースに保存されません。 代わりに、レコードセット変換先では、`Object` データ型の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ変数に格納されるレコードセットのメモリにデータが保存されます。 レコードセット変換先でデータが保存されたら、通常、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子によって、現在の行の各列の値が個別のパッケージ変数に保存されます。 その後、Foreach ループ コンテナー内で構成したタスクによって変数から値が読み取られ、その値を使用してアクションが実行されます。  

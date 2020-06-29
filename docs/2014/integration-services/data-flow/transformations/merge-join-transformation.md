@@ -15,14 +15,14 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a35556b066a4a4c1458caa3696d8d34ef50f7056
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0e489ccd60039cc45667571e504ef1e1a5ffdea6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939433"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430269"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   マージ結合変換では、FULL、LEFT、または INNER 結合を使用して並べ替えた 2 つのデータセットを結合した出力が生成されます。 たとえば、LEFT 結合を使用して、製品情報を含むテーブルを、製品が製造された国または地域を一覧表示するテーブルと結合します。 その結果、すべての製品とその製造元である国または地域を一覧表示するテーブルが生成されます。  
@@ -60,7 +60,7 @@ ms.locfileid: "84939433"
   
 -   [マージ変換およびマージ結合変換用にデータを並べ替える](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マージ結合変換エディター](../../merge-join-transformation-editor.md)   
  [マージ変換](merge-transformation.md)   
  [全体結合変換](union-all-transformation.md)   

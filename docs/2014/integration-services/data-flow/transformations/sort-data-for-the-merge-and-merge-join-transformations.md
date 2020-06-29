@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ddd2342f766edd30af99f6e01d47c4086360ff61
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0abc9f9e93a8acf2ca4e660c0732baa09659dfbd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939318"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430189"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>マージ変換およびマージ結合変換用にデータを並べ替える
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]のマージ変換およびマージ結合変換では、入力データが並べ替えられている必要があります。 入力データは物理的に並べ替える必要があります。さらに、変換元の出力および出力列、または上流の変換の出力および出力列に対して、並べ替えオプションを設定する必要があります。 並べ替えオプションでデータの並べ替えを設定していても、実際にデータの並べ替えが行われない場合、マージ操作やマージ結合操作で予測できない結果が発生します。  

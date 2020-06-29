@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dda1608ae8a7dd59052763aafc8e4313618777c3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c242eb77173c628c4bc3752da4d1d9709724aba4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918793"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432889"
 ---
 # <a name="ftp-task"></a>FTP タスク
   FTP タスクは、データ ファイルをダウンロードまたはアップロードし、サーバー上のディレクトリを管理します。 たとえば、パッケージは、リモート サーバーまたはインターネット サイトから、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部としてデータ ファイルをダウンロードできます。 FTP タスクは、次の目的で使用できます。  
@@ -73,7 +73,7 @@ ms.locfileid: "84918793"
   
  プログラムによってこれらのプロパティを設定する方法の詳細については、「 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FTP タスクエディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)   
  [FTP タスクエディター &#40;ファイル転送ページ&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Integration Services タスク](integration-services-tasks.md)   

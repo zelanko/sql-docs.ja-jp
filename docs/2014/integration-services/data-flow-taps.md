@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 212688d5dddaa84b1b7c6aee3fe4ebbb6415e8a9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 053b34add45354d0df71fa73a72f8786cc706d15
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916866"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432439"
 ---
 # <a name="data-flow-taps"></a>データ フロー タップ
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] の新機能を使用して、ランタイム時にパッケージのデータ フロー パスのデータ タップを追加し、データ タップから外部ファイルに出力できます。 この機能を使用するには、プロジェクト配置モデルを使用して、SSIS サーバーに SSIS プロジェクトを配置する必要があります。 サーバーにパッケージを配置した後、そのパッケージを実行する前に、SSISDB データベースに対して T-SQL スクリプトを実行してデータ タップを追加する必要があります。 次にシナリオの例を示します。  

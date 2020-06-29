@@ -20,14 +20,14 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8a4834e8a32f5cb2cb512061777715f314f84299
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 320f7fc2255e9f665141929836d2e7bb7375429f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916337"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432299"
 ---
 # <a name="data-flow-performance-features"></a>データ フロー パフォーマンス機能
   このトピックでは、パフォーマンスに関する一般的な問題を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデザイン時に回避するための考え方を示します。 また、パッケージのパフォーマンスのトラブルシューティングに使用できる機能やツールについての情報も提供します。  
@@ -195,7 +195,7 @@ ms.locfileid: "84916337"
   
 -   technet.microsoft.com のビデオ「 [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージ開発のトラブルシューティングツール](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

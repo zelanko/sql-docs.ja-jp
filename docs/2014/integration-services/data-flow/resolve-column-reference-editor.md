@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.dts.designer.resolvereferences.mapper.F1
 - sql12.dts.designer.resolvereferences.preview.F1
 ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4f810a24baec565a7870fb6602b76ff8f3ba119f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8b56e089feba35c3fe83e0a4e593309f8d1ac782
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914622"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431379"
 ---
 # <a name="resolve-column-reference-editor"></a>列参照解決エディター
   入力パスが接続されていない場合、またはパスにマップ解除された列が存在する場合、対応するデータ パスの横にエラー アイコンが表示されます。 列参照エラーの解決を簡素化するために、新しい参照の解決エディターを使用して、マップ解除された出力列を、実行ツリーのすべてのパスのマップ解除された入力列とリンクできます。 また、参照の解決エディターでは、解決されているパスを示すためにパスが強調表示されます。  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6bdb65c464e63f8e7ab248c49f6dca729add3004
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61ecaa07074ed21d6f0b93c7cc544f4487431a64
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915992"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432189"
 ---
 # <a name="define-a-state-variable"></a>状態変数の定義
   この手順では、CDC 状態が格納されるパッケージ変数を定義する方法について説明します。  
@@ -83,7 +83,7 @@ ms.locfileid: "84915992"
   
  [状態の自動保持] を指定して CDC 制御タスクを使用しない場合は、パッケージが最後に実行されたときに変数の値が保存された永続ストレージからその値を読み込み、現在の処理範囲の処理が終了したときに永続ストレージにその値を書き戻す必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDC 制御タスク](../control-flow/cdc-control-task.md)   
  [CDC 制御タスク エディター](../cdc-control-task-editor.md)  
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - raw data [Integration Services]
 - Raw File source
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a5171de39727578028ed4cf01c090b98e3d70e0d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53b9b4a38e82fe37f0f1f114969f2f71fb4848a8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914752"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431539"
 ---
 # <a name="raw-file-source"></a>RAW ファイル ソース (Raw File source)
   RAW ファイル ソースは、ファイルから生データを読み取ります。 データはソース ファイル固有の方法で表示されるため、変換の必要がなく、ほとんどの場合は解析の必要もありません。 したがって、RAW ファイル ソースは、フラット ファイルや OLE DB などの他のソースよりも、高速にデータを読み取ることができます。  
@@ -52,7 +52,7 @@ ms.locfileid: "84914752"
   
 -   sqlservercentral.com のブログ「 [RAW ファイルは最高](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Raw ファイル変換先](raw-file-destination.md)   
  [データ フロー](data-flow.md)  
   

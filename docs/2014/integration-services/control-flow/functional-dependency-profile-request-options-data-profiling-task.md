@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ec0fe7952fbcca3be13d93c24247cc0434232096
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2683b86699da075be54f6d5ad6720beccbee1add
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918792"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432959"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>[機能依存プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[機能依存プロファイル要求]** のオプションを設定できます。 機能依存プロファイルは、ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているかを報告します。 また、このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、郵便番号を含む列と米国の州を含む列の間の依存関係をプロファイルできます。 このプロファイルでは、郵便番号によって州が一意に決定されますが、依存関係の違反を検出できます。  

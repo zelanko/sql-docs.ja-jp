@@ -38,14 +38,14 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 60798bb7bd856dd131592e3c67eb155cf64a6ae7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bcf5706f3c208dad54577c8dd3be4bfb6b4ea643
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939253"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430019"
 ---
 # <a name="transformation-custom-properties"></a>変換のカスタム プロパティ
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、ほとんどのデータ フロー オブジェクトには共通するプロパティがありますが、それ以外にも、多くのデータ フロー オブジェクトにはオブジェクト固有のカスタム プロパティがあります。 カスタム プロパティにアクセスできるのは実行時のみで、このプロパティに関する説明は、『[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] マネージド プログラミング リファレンス マニュアル』には記載されていません。  
@@ -476,7 +476,7 @@ ms.locfileid: "84939253"
   
 |プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
-|Selected|Boolean|サンプリングされた行を送る出力を指定します。 選択した出力で、選択したがに設定され、選択されていない `True` 出力ではがに設定され `False` ます。|  
+|選択済み|Boolean|サンプリングされた行を送る出力を指定します。 選択した出力で、選択したがに設定され、選択されていない `True` 出力ではがに設定され `False` ます。|  
   
  次の表は、行サンプリング変換の出力列のカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
   
@@ -625,7 +625,7 @@ ms.locfileid: "84939253"
   
  詳細については、「 [Unpivot Transformation](unpivot-transformation.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services の変換](integration-services-transformations.md)   
  [共通プロパティ](../../common-properties.md)   
  [パスのプロパティ](../../path-properties.md)   

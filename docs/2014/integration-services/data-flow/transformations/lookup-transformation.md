@@ -16,14 +16,14 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 69ed33b3967b3c807b21df0ab8a3a4a1cd07bebc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 567c5d95c2ee7c15ea5c541f7fe2010d46ba36f5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939493"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430459"
 ---
 # <a name="lookup-transformation"></a>参照変換
   参照変換は、入力列のデータを参照データセットの列と結合することにより参照を実行します。 参照を使用すると、共通の列の値に基づいている関連テーブル内の追加情報にアクセスできます。  
@@ -138,7 +138,7 @@ ms.locfileid: "84939493"
   
      [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 製品サンプルとサンプル データベースのインストールの詳細については、「 [SQL Server Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=267527)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [あいまい参照変換](fuzzy-lookup-transformation.md)   
  [用語参照変換](term-lookup-transformation.md)   
  [データフロー](../data-flow.md)   

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c9495343fca6da023dbf54bcf69dff6b9bb3e2b9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 42fa412dd1f199b27bc753c7e7966b62e8e36fc3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939153"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429859"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>[データ マイニング モデル トレーニング エディター] ([列] タブ)
   **[データ マイニング モデル トレーニング エディター]** ダイアログ ボックスの **[列]** タブを使用すると、入力列をマイニング構造の列にマップできます。  
@@ -38,7 +38,7 @@ ms.locfileid: "84939153"
  **マイニング構造列**  
  マップされているかどうかに関係なく、使用できるマップ先の列を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [データ マイニング モデル トレーニング エディター ([接続] タブ)](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
   

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bcd16fe757a079860845dd30369313d2e2feeee2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45ab6fdaa0227b9064ff0eed83d9c9a0331c237d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914602"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431389"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>[SAP BW 変換先エディター] ([詳細設定] ページ)
   パッケージのサイズやタイムアウトの情報などの詳細を設定するには、 **[SAP BW 変換先エディター]** の **[詳細設定]** ページを使用します。  

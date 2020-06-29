@@ -15,14 +15,14 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bf4d31a05977cc34cf9aaee8fff38867aa302f37
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 899ca6d278a3117989f2e2371020e98589d67c4b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914812"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431619"
 ---
 # <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
   RAW ファイル変換先は、生データをファイルに書き込みます。 データは変換先に固有の形式であるため、データは変換の必要がなく、解析もほとんど必要ありません。 したがって、RAW ファイル変換先は、フラット ファイルや OLE DB 変換先などの他の変換先よりも、高速にデータを書き込むことができます。  
@@ -131,7 +131,7 @@ ms.locfileid: "84914812"
 ## <a name="related-content"></a>関連コンテンツ  
  sqlservercentral.com のブログ「 [RAW ファイルは最高](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Raw ファイルソース](raw-file-source.md)   
  [データ フロー](data-flow.md)  
   

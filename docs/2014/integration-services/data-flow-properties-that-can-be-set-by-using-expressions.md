@@ -16,14 +16,14 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3d23037bc09b735fc28e52eabb1852d1af303d15
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6cf52a4488cb90d65c373111babd359da612668d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916952"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432469"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>式を使って設定できるデータ フロー プロパティ
   データ フロー タスク コンテナーで使用できるプロパティ式を使用して、データ フロー オブジェクトの特定のプロパティの値を指定できます。  
@@ -79,7 +79,7 @@ ms.locfileid: "84916952"
 ## <a name="related-content"></a>関連コンテンツ  
  pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージでプロパティ式を使用する](expressions/use-property-expressions-in-packages.md)   
  [共通プロパティ](../../2014/integration-services/common-properties.md)   
  [変換のカスタムプロパティ](data-flow/transformations/transformation-custom-properties.md)   

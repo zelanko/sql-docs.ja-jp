@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5fd09f209ac08674253d454817a6e512535dd6dc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 987b2726802888e4f69f801f72591bbb76d52ac5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915202"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431969"
 ---
 # <a name="odbc-flow-components"></a>ODBC フロー コンポーネント
   このトピックでは、SQL Server 2016 Integration Services (SSIS) を使用して ODBC データ フローを作成するために必要な概念について説明します。 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
