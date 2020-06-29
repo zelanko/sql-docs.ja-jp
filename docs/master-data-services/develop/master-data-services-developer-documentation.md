@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3a56b4417361a0d86da345f25a7c054e3fc903a9
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: ff3e640f9e6879857495f777832ddbfcf2ee0a15
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731906"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469407"
 ---
 # <a name="master-data-services-developer-documentation"></a>マスター データ サービスの開発者向けドキュメント
 
@@ -42,7 +42,7 @@ ms.locfileid: "83731906"
  <xref:Microsoft.MasterDataServices.ServiceClient> クラスの Web サービス操作のカテゴリ別一覧です。  
   
 ## <a name="custom-workflows"></a>カスタム ワークフロー  
- [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、ビジネス ルールを使用して基本的なワークフロー ソリューションを作成します。 開発者は、指定した条件に基づいてデータを自動的に更新および検証したり、電子メール通知を送信することができます。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 内のビジネス ルールは、最も一般的なワークフロー シナリオを管理するためのものです。 複数階層の承認や複雑な意思決定ツリーなど、より高度な複合イベント処理を必要とするワークフローの場合は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を構成することで、作成したカスタム アセンブリにデータを送ることができます。 カスタム ワークフローを操作するには、Web アプリケーション コンピューター上で SQL Server MDS Workflow Integration Service を構成および開始し、<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> インスタンスを実装するアセンブリを作成する必要があります。  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、ビジネス ルールを使用して基本的なワークフロー ソリューションを作成します。 開発者は、指定した条件に基づいてデータを自動的に更新および検証したり、電子メール通知を送信することができます。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 内のビジネス ルールは、最も一般的なワークフロー シナリオを管理するためのものです。 複数階層の承認や複雑な意思決定ツリーなど、より高度な複合イベント処理を必要とするワークフローの場合は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を構成することで、作成したカスタム アセンブリにデータを送ることができます。 カスタムワークフローを処理するには、web アプリケーションコンピューターで MDS Workflow Integration Service を構成して SQL Server を開始し、 [MasterDataServices](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130))インターフェイスを実装するアセンブリを作成する必要があります。  
   
 ### <a name="custom-workflow-content"></a>カスタム ワークフローに関するコンテンツ  
  [カスタム ワークフローの作成 &#40;マスター データ サービス&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
@@ -53,7 +53,7 @@ ms.locfileid: "83731906"
   
 |名前空間|説明|  
 |---------------|-----------------|  
-|<xref:Microsoft.MasterDataServices.Deployment>|モデルからの配置パッケージの作成と [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースへのパッケージの配置に使用できるクラスが含まれます。|  
+|[MasterDataServices](/previous-versions/sql/sql-server-2016/ff487448(v=sql.130))|モデルからの配置パッケージの作成と [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースへのパッケージの配置に使用できるクラスが含まれます。|  
 |<xref:Microsoft.MasterDataServices.Services>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを通じて Web サーバー コンピューターに対して行われた Web サービス操作を取得および処理するクラスが含まれます。|  
 |<xref:Microsoft.MasterDataServices.Services.DataContracts>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを通じてクライアント コンピューターから Web サーバー コンピューターにデータを渡す方法を定義するクラスが含まれます。|  
 |<xref:Microsoft.MasterDataServices.Services.MessageContracts>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを通じてクライアント コンピューターから Web サーバー コンピューターに要求と応答を渡す方法を定義するクラスが含まれます。|  
