@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cf0c153168c513c98f8b9ac58984cb88ae1811da
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 342a718e1d72a257e469cd855ffd60fff6c5704d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967132"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425679"
 ---
 # <a name="file-system-task-editor-general-page"></a>[ファイル システム タスク エディター] \([全般] ページ)
   **[ファイル システム タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクで実行するファイル システム操作を構成できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "84967132"
  **[IsDestinationPathVariable]**  
  対象になるパスを変数に格納するかどうかを示します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプション **[DestinationVariable]** が表示されます。|  
 |**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプションの [] が表示され `DestinationConnection` ます。|  
@@ -59,7 +59,7 @@ ms.locfileid: "84967132"
  **操作**  
  実行するファイル システム操作を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**ディレクトリのコピー**|ディレクトリをコピーします。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。|  
 |**ファイルのコピー**|ファイルのコピー この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。|  
@@ -75,7 +75,7 @@ ms.locfileid: "84967132"
  `IsSourcePathVariable`  
  対象になるパスを変数に格納するかどうかを示します。 このプロパティのオプションを次の表に示します。  
   
-|値||  
+|[値]||  
 |-----------|-|  
 |**本来**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプション **[SourceVariable]** が表示されます。|  
 |**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプション **[DestinationVariable]** が表示されます。|  
@@ -127,7 +127,7 @@ ms.locfileid: "84967132"
  `UseDirectoryIfExists`  
  **[ディレクトリの作成]** 操作で、新しいディレクトリを作成せずに、指定された名前の既存のディレクトリを使用するかどうかを指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[式] ページ](expressions/expressions-page.md)  
   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77604faa4cb32fc7babf273717422621b39648aa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 36e2c705382d553c9833776badfacd32aed7f6d6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966422"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425519"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>[Foreach ループ エディター] ([コレクション] ページ)
   **[Foreach ループ エディター]** ダイアログ ボックスの **[コレクション]** ページを使用すると、列挙子の型を指定して列挙子を構成できます。  
@@ -27,7 +27,7 @@ ms.locfileid: "84966422"
  **子**  
  列挙子の型を一覧から選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[Foreach File 列挙子]**|ファイルを列挙します。 この値を選択すると、セクション **[Foreach File 列挙子]** に動的オプションが表示されます。|  
 |**[Foreach Item 列挙子]**|アイテム内の値を列挙します。 この値を選択すると、セクション **[Foreach Item 列挙子]** に動的オプションが表示されます。|  
@@ -102,7 +102,7 @@ ms.locfileid: "84966422"
  **列のデータ型**  
  アクティブな列のデータ型を一覧表示します。  
   
- **削除**  
+ **[削除]**  
  アイテムを一覧から削除するには、そのアイテムを選択してから **[削除]** をクリックします。  
   
  **[列]**  
@@ -167,7 +167,7 @@ ms.locfileid: "84966422"
  **[DocumentSourceType]**  
  XML ドキュメントのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
@@ -187,7 +187,7 @@ ms.locfileid: "84966422"
  **[EnumerationType]**  
  一覧から列挙型を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[Navigator]**|XPathNavigator を使用して列挙します。|  
 |**Node**|XPath 操作によって返されたノードを列挙します。|  
@@ -197,7 +197,7 @@ ms.locfileid: "84966422"
  **[OuterXPathStringSourceType]**  
  XPath 文字列のソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
@@ -220,7 +220,7 @@ ms.locfileid: "84966422"
  **[InnerXPathStringSourceType]**  
  内部 XPath 文字列のソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|ソースを XML ドキュメントに設定します。|  
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
@@ -293,7 +293,7 @@ Azure Data Lake 接続マネージャーを指定するか、ADLS アカウン�
   
 -   ブログエントリ、 [SSIS-動的に設定するファイルマスク: FileSpec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Foreach ループエディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[Foreach ループエディター &#40;変数のマッピング] ページ&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   

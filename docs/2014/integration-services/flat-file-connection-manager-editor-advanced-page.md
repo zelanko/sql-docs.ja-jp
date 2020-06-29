@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e25d8b904faaeff05620386e984ddc5bdd99fdf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2a8064a36bce9be9cfa5e2cc88c5f23806932d2c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967122"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425689"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>[フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[詳細設定]** ページでは、Integration Services で、フラット ファイルからデータをどのように読み取るか、フラット ファイルにデータをどのように書き込むかを指定するプロパティを設定できます。 フラット ファイル内の列名を変更し、ファイル内の各列にデータ型および区切り記号を指定するプロパティを設定できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "84967122"
 |**ColumnType**|列が区切り形式、固定幅形式、幅合わせしない形式のうちどれであるかを示します。 このプロパティは読み取り専用です。 幅合わせしない形式のファイルとは、最後の列を除くすべての列が固定幅のファイルです。 最後の列は、行区切り記号で区切られます。|  
 |**[出力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、この値は文字数に対応します。 データ フロー タスクでは、この値を使用してフラット ファイル ソースの出力列の幅を設定します。<br /><br /> 注: オブジェクト モデルでは、このプロパティの名前は MaximumWidth です。|  
 |**DataType**|使用できるデータ型を一覧から選択します。 詳細については、「 [Integration Services データ型](data-flow/integration-services-data-types.md)」を参照してください。|  
-|**[テキスト修飾子]**|テキストデータが引用符などのテキスト修飾子文字で囲まれているかどうかを示します。 有効な値は次のとおりです。<br /><br /> **True**: フラットファイルのテキストデータは修飾されます。<br /><br /> **False**: フラット ファイルのテキスト データは修飾されません。|  
+|**[テキスト修飾子]**|テキストデータが引用符などのテキスト修飾子文字で囲まれているかどうかを示します。 次の値を指定できます。<br /><br /> **True**: フラットファイルのテキストデータは修飾されます。<br /><br /> **False**: フラット ファイルのテキスト データは修飾されません。|  
 |**名前**|わかりやすい列名を指定します。 名前を入力しないと、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] によって、列 1、列 2 などの形式で自動的に名前が作成されます。|  
 |**DataScale**|数値データの小数点以下の精度を指定します。 これは小数点以下の桁数を表します。 詳細については、「 [Integration Services データ型](data-flow/integration-services-data-types.md)」を参照してください。|  
 |**ColumnDelimiter**|使用できる列区切り記号の一覧から、列区切り記号を選択します。 テキストに出現しないと思われる区切り記号を選択してください。 固定幅列の場合、この値は無視されます。<br /><br /> **{CR} {LF}**。 列は、復帰と改行の組み合わせで区切られます。<br /><br /> **{CR}**。 列は、復帰で区切られます。<br /><br /> **{LF}**。 列は、改行で区切られます。<br /><br /> **セミコロン {;}**。 列は、セミコロンで区切られます。<br /><br /> **コロン {:}**。 列は、コロンで区切られます。<br /><br /> **コンマ {,} **。 列は、コンマで区切られます。<br /><br /> **タブ {t}**。 列は、タブで区切られます。<br /><br /> **縦棒 {&#124;}**。 列は、縦棒で区切られます。|  
@@ -52,7 +52,7 @@ ms.locfileid: "84967122"
  **[新規作成]**  
  **[新規作成]** をクリックして新しい列を追加します。 既定では、 **[新規作成]** ボタンをクリックすると、新しい列がリストの末尾に追加されます。 さらにこのボタンのドロップダウン リストには、次のオプションがあります。  
   
-|値|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**列の追加**|新しい列をリストの末尾に追加します。|  
 |**[前に挿入]**|選択した列の前に新しい列を追加します。|  
@@ -64,7 +64,7 @@ ms.locfileid: "84967122"
  **[型の推測]**  
  **[列の型の推測]** ダイアログ ボックスを使用して、ファイルのサンプル データを評価し、各列のデータ型と長さの推測を取得します。 詳細については、「 [[列の型の推測] ダイアログ ボックスの UI リファレンス](connection-manager/suggest-column-types-dialog-box-ui-reference.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[フラットファイル接続マネージャーエディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[フラットファイル接続マネージャーエディター &#40;列] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   

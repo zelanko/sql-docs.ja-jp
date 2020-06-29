@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b19c61cf736ad888cdcb2ecb1f36060eebf30812
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 21ec7d4d38996ecf4cb5522fcfdf29fb6e80db89
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964992"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424169"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>[OLE DB 変換先エディター] ([接続マネージャー] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換先の OLE DB 接続を選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
@@ -155,7 +155,7 @@ ms.locfileid: "84964992"
  **[クエリの解析]**  
  クエリ テキストの構文を検査します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [OLE DB 変換先エディター &#40;マッピング] ページ&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [OLE DB 変換先エディター &#40;[エラー出力] ページ&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - scripts [Integration Services], about Script task with packages
 - SSIS Script task, about Script task
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b67b80bafd052a095acaf9b5a4763ed74af3ab1e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8b607ac32e959087ef8d137fbea7bfa390c030bb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967219"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425959"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>スクリプト タスクによるパッケージの拡張
   スクリプト タスクを使用すると、カスタム コードを [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Visual C# で記述し、パッケージの実行時にコンパイル、実行することにより、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] パッケージのランタイム機能を拡張できます。 スクリプト タスクは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に含まれているタスクが十分に要件を満たしていない場合に、カスタム ランタイム タスクの開発を単純化します。 必要なすべてのインフラストラクチャ コードがスクリプト タスクによって自動生成されるため、カスタム処理を実行するために必要なコードの記述に集中できます。  
@@ -63,7 +63,7 @@ ms.locfileid: "84967219"
   
 ![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> [!INCLUDE[msCoName](../../../includes/msconame-md.md)] が提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スクリプトタスク](../../control-flow/script-task.md)   
  [スクリプト タスクとスクリプト コンポーネントの比較](../../extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
   

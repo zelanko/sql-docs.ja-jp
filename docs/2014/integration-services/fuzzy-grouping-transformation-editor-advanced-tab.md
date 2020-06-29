@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6a476770e120cd620f01096cc20f9eab7f9f4404
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 30bac381b301de4d94f8b587f324b41985dd221f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966312"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425309"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>[あいまいグループ化変換エディター] ([詳細設定] タブ)
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、入力列と出力列の指定、類似性のしきい値の設定、区切り記号の定義ができます。  
@@ -44,7 +44,7 @@ ms.locfileid: "84966312"
  **[トークン区切り記号]**  
  変換により、トークンにするデータの区切り記号の既定のセットが提供されます。必要に応じて、一覧を編集して区切り記号の追加や削除を行うことができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [あいまいグループ化変換を使用して類似のデータ行を識別する](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

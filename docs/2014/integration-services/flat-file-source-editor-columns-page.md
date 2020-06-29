@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5f882aae9062d97914c86644a7be0ea126ed9dd8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e0a62bdbfc427605a89d7241d6246cf2caaa33dc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966442"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425529"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>[フラット ファイル ソース エディター]\ ([列] ページ)
   **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[列]** ノードを使用すると、出力列を各外部 (変換元) 列にマップできます。  
@@ -38,7 +38,7 @@ ms.locfileid: "84966442"
  **出力列**  
  各出力列の一意な名前を表示します。 既定では選択された外部 (変換元) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 指定された名前は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーに表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[フラットファイルソースエディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [フラットファイルソースエディター &#40;エラー出力ページ&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   

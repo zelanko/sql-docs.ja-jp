@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02ffd6309ae31f538fecdf6af2cb8475608d6cf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 381493758306e3f7c638f46f7c331f0e6cc3e83f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966339"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425319"
 ---
 # <a name="ftp-task-editor-general-page"></a>[FTP タスク エディター] ([全般] ページ)
   **[FTP タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクの通信先の FTP サーバーに接続する FTP 接続マネージャーを指定できます。 また、FTP タスクの名前と説明を入力することもできます。  
@@ -46,7 +46,7 @@ ms.locfileid: "84966339"
  **説明**  
  FTP タスクの説明を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [FTP タスクエディター &#40;ファイル転送ページ&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [[式] ページ](expressions/expressions-page.md)  

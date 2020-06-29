@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.deploymentwizard.f1
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 727eb2b745a732049d6eb4a5e2f1808f076167d0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2039968976df2e22a16c47abbcc3f51ba25bbeb2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968312"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424809"
 ---
 # <a name="integration-services-deployment-wizard"></a>Integration Services 配置ウィザード
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 配置ウィザードでは、プロジェクト配置モデルを使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの SSISDB カタログにプロジェクトが配置されます。  
@@ -51,7 +51,7 @@ ms.locfileid: "84968312"
   
  **[閉じる]** をクリックしてウィザードを終了します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サーバーへのプロジェクトの配置](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [プロジェクトとパッケージの展開](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   

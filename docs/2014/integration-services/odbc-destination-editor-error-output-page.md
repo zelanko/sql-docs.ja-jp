@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 82853123767237314edac1e301723724628439d9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06e82633d29654872523e60a792663424594ab79
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965042"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424359"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>ODBC 変換先エディター ([エラー出力] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択できます。  
@@ -68,7 +68,7 @@ ms.locfileid: "84965042"
 ### <a name="redirect-flow"></a>[フローのリダイレクト]  
  エラーまたは切り捨てが ODBC 入力先のエラー出力に送られる原因となった行。 詳細については、「ODBC 入力先」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC 変換先エディター &#40;接続マネージャーページ&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
  [ODBC 変換先エディター &#40;[マッピング] ページ&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
   

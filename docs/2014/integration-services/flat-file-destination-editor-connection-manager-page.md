@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c7d2c37e38386f7e46c1b8a0800d45dfc0b9b0dd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 83c3553916ba629382256c0d2c1c7a89131df071
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967082"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425539"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>[フラット ファイル変換先エディター] ([接続マネージャー] ページ)
   **[フラット ファイル変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換先のフラット ファイル接続を選択したり、既存の変換先ファイルに対して上書きまたは追加のどれを実行するかを指定したりできます。 フラット ファイル変換先は、データをテキスト ファイルに書き込みます。 テキスト ファイルには、区切り形式、固定幅形式、行区切り記号付き固定幅形式、または幅合わせしない形式を使用できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "84967082"
  **プレビュー**  
  **[データ ビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 プレビューでは、最大で 200 行を表示できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[フラット ファイル変換先エディター] &#40;[マッピング] ページ&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
   

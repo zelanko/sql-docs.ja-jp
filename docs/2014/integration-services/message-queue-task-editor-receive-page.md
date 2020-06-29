@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b30a7863fe50843f4408931b2b766bcb520f3a2c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53a392a09e2120c08c43b1e373c942ff9c60e148
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950992"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424589"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>[メッセージ キュー タスク エディター] ([受信] ページ)
   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[受信]** ページを使用して、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) メッセージを受信するためのメッセージ キュー タスクを構成します。  
@@ -38,7 +38,7 @@ ms.locfileid: "84950992"
  **MessageType**  
  メッセージ型を指定します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[データ ファイル メッセージ]**|メッセージはファイルに格納されます。 この値を選択すると、動的オプションの **[DataFileMessage]** が表示されます。|  
 |**[変数メッセージ]**|メッセージは変数に格納されます。 この値を選択すると、動的オプションの **[VariableMessage]** が表示されます。|  
@@ -57,7 +57,7 @@ ms.locfileid: "84950992"
  **Assert**  
  メッセージにフィルターを適用するかどうかを指定します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**フィルターなし**|メッセージにフィルターは適用されません。 この値を選択すると、動的オプションの **[IdentifierReadOnly]** が表示されます。|  
 |**[パッケージから]**|指定したパッケージからのメッセージのみが受信されます。 この値を選択すると、動的オプションの **[Identifier]** が表示されます。|  
@@ -78,7 +78,7 @@ ms.locfileid: "84950992"
  **Assert**  
  メッセージにフィルターを適用するかどうかを指定します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**フィルターなし**|メッセージにフィルターは適用されません。 この値を選択すると、動的オプションの **[IdentifierReadOnly]** が表示されます。|  
 |**[パッケージから]**|指定したパッケージからのメッセージのみが受信されます。 この値を選択すると、動的オプションの **[Identifier]** が表示されます。|  
@@ -104,7 +104,7 @@ ms.locfileid: "84950992"
  **比較**  
  メッセージにフィルターを適用するかどうかを指定します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**なし**|メッセージは比較されません。|  
 |**完全一致**|メッセージは **[CompareString]** オプションで指定した文字列と完全に一致する必要があります。|  
@@ -118,7 +118,7 @@ ms.locfileid: "84950992"
  **比較**  
  メッセージにフィルターを適用するかどうかを指定します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**なし**|メッセージは比較されません。|  
 |**完全一致**|メッセージは **[CompareString]** オプションで指定した文字列と完全に一致する必要があります。|  
@@ -133,7 +133,7 @@ ms.locfileid: "84950992"
   
  **関連項目:** [変数の追加](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [メッセージキュータスクエディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [メッセージキュータスクエディター &#40;送信ページ&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   

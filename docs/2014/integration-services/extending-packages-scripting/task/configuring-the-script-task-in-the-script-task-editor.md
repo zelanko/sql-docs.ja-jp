@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Script Task Editor
 - SSIS Script task, configuring
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: da21a9a12a57b4ddba3b656d154136b7b70e8362
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 605b16db873a47082d1333811065c06d0d8cef46
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968382"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425979"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>スクリプト タスク エディターでのスクリプト タスクの構成
   スクリプト タスクにカスタム コードを記述する前に、 **[スクリプト タスク エディター]** の 3 つのページで、主要なプロパティを設定します。 スクリプト タスクに対して一意でない追加のタスク プロパティは、[プロパティ] ウィンドウを使用して設定できます。
@@ -60,7 +60,7 @@ ms.locfileid: "84968382"
 
 ![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> [!INCLUDE[msCoName](../../../includes/msconame-md.md)] が提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [スクリプト タスクのコーディングおよびデバッグ](coding-and-debugging-the-script-task.md)
 
 

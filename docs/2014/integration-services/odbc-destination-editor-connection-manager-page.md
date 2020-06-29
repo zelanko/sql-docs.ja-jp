@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.connection.f1
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 57a45cb3e9eace357477c0c9f2adfc25384466a1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 76a343cc89de5f9e6f9d123a0547b958b406b298
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965052"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424419"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>[ODBC 変換先エディター]\([接続マネージャー] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、入力先の ODBC 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
@@ -54,7 +54,7 @@ ms.locfileid: "84965052"
 ### <a name="preview"></a>プレビュー  
  **[プレビュー]** をクリックすると、選択したテーブルのデータが最大で 200 行表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC 入力先のカスタムプロパティ](data-flow/odbc-destination-custom-properties.md)   
  [ODBC 変換先エディター &#40;マッピングページ&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
  [ODBC 変換先エディター &#40;[エラー出力] ページ&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  

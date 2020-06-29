@@ -20,14 +20,14 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 59ce040242b87cfc955054e062a09fd579f77a14
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eae2f119e2d1fb8c52c00fc7dbe96af1d593193d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964842"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423849"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>パッケージ実行ユーティリティ (DtExecUI) の UI リファレンス
   **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 このユーザーインターフェイスで [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 `dtexecui` **DTExec**コマンドプロンプトツールを使用してパッケージを実行する代わりに、またはコマンドプロンプトで「」と入力して開くことができます。  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 948588ef8cfec8e3b3a5d689068bdff5d4396cc6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3abd9f9c0e5b2b76a2966e7c8da5583c5364d133
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965570"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424849"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード)
   [**操作の実行**] ページを使用すると、インポート/エクスポート操作の進行状況と結果を表示したり、必要に応じて操作を中断したりできます。  
@@ -26,7 +26,7 @@ ms.locfileid: "84965570"
  SQL Server インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **動作**  
+ **操作**  
  操作の一部であるそれぞれのアクションを表示します。  
   
  **状態**  

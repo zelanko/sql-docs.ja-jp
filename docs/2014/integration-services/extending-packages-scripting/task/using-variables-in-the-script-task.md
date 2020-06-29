@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SSIS Script task, variables
 - variables [Integration Services], Script task
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 55122ec1323c0e95816af4e6129f324041ab2eda
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aaa704cf3560f504f196840d8b2a31885de179ba
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967162"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425769"
 ---
 # <a name="using-variables-in-the-script-task"></a>スクリプト タスクでの変数の使用
   スクリプト タスクで変数を使用すると、パッケージ内の別のオブジェクトとデータを交換できます。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](../../integration-services-ssis-variables.md)」を参照してください。  
@@ -115,7 +115,7 @@ public class ScriptMain
   
 ![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS&#41; 変数の Integration Services &#40;](../../integration-services-ssis-variables.md)   
  [パッケージで変数を使用する](../../use-variables-in-packages.md)  
   

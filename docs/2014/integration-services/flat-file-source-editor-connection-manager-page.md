@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cef1d05182edd02c9b0cdb0e6237c09473041dde
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 43a0251b63d7a0519a2a19b6bec4c5117f0dcef0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966429"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425489"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>[フラット ファイル ソース エディター]\ ([接続マネージャー] ページ)
   **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、フラット ファイル ソースが使用する接続マネージャーを選択できます。 フラット ファイル ソースは、区切り形式、固定幅形式、または区切りと固定幅が混在した形式のテキスト ファイルからデータを読み取ります。  
@@ -44,7 +44,7 @@ ms.locfileid: "84966429"
  **プレビュー**  
  **[データ ビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 プレビューでは、最大で 200 行を表示できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[フラットファイルソースエディター] &#40;[列] ページ&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
  [フラットファイルソースエディター &#40;エラー出力ページ&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   

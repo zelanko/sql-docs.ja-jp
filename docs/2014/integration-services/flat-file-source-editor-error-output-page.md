@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c6df7faa3dbb88ba8df836b59c47cad6a391e0d8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38bc7adf218327c8718295a4300ff6a5c4b53f0c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966412"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425479"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>[フラット ファイル ソース エディター]\ ([エラー出力] ページ)
   **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページでは、エラー処理オプションの選択や、エラー出力列に対するプロパティの設定を行えます。  
@@ -49,7 +49,7 @@ ms.locfileid: "84966412"
  適用****  
  選択したセルにエラー処理オプションを適用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[フラットファイルソースエディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [[フラットファイルソースエディター] &#40;[列] ページ&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   

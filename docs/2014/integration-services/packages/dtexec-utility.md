@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 53ddc509c4f44677a2504b791502d530c2104bf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45820aa673f31ae9cea7d1f2f4e8b61d63b8670c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964872"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423949"
 ---
 # <a name="dtexec-utility"></a>dtexec ユーティリティ
   `dtexec`コマンドプロンプトユーティリティは、パッケージの構成と実行に使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ます。 `dtexec` ユーティリティを使用すると、パラメーター、接続、プロパティ、変数、ログ記録、進行状況インジケーターなど、パッケージの構成と実行に関するすべての機能にアクセスできます。 `dtexec`ユーティリティを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバー、ispac プロジェクトファイル、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージストア、およびファイルシステムからパッケージを読み込むことができます。  
@@ -102,7 +102,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  パッケージの実行時、`dtexec` は終了コードを返すことができます。 終了コードは、ERRORLEVEL 変数の値を設定する場合に使用されます。この変数の値は、バッチ ファイル内の条件ステートメントや分岐ロジックでテストできます。 次の表は、終了時に `dtexec` ユーティリティが設定できる値を示しています。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0|パッケージが正常に実行されました。|  
 |1|パッケージが失敗しました。|  
@@ -154,13 +154,13 @@ dtexec /option [value] [/option [value]]...
      *Option_name*引数を指定した場合、は `dtexec` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンラインブックを開始し、dtexec ユーティリティのトピックを表示します。  
   
 -   **/Ca [llerInfo]**:   
-                  任意。 パッケージ実行の追加情報を指定します。 SQL Server エージェントを使用してパッケージを実行する場合、エージェントはこの引数を設定して、パッケージ実行が SQL Server エージェントによって呼び出されることを示します。 `dtexec` ユーティリティがコマンド ラインから実行される場合、このパラメーターは無視されます。  
+                  省略可能。 パッケージ実行の追加情報を指定します。 SQL Server エージェントを使用してパッケージを実行する場合、エージェントはこの引数を設定して、パッケージ実行が SQL Server エージェントによって呼び出されることを示します。 `dtexec` ユーティリティがコマンド ラインから実行される場合、このパラメーターは無視されます。  
   
 -   **/CheckF[ile]** _filespec_:   
-                  任意。 Filespec の `CheckpointFileName` パスとファイル spemandcified にパッケージのプロパティを設定し*filespec*ます。 このファイルは、パッケージが再起動されたときに使用されます。 このオプションが指定されていて、ファイル名の値が指定されていない場合、パッケージの `CheckpointFileName` には空の文字列が設定されます。 このオプションが指定されない場合、パッケージの値は保持されます。  
+                  省略可能。 Filespec の `CheckpointFileName` パスとファイル spemandcified にパッケージのプロパティを設定し*filespec*ます。 このファイルは、パッケージが再起動されたときに使用されます。 このオプションが指定されていて、ファイル名の値が指定されていない場合、パッケージの `CheckpointFileName` には空の文字列が設定されます。 このオプションが指定されない場合、パッケージの値は保持されます。  
   
 -   **/CheckP [ointing]** _{on\ off}_:   
-                  任意。 パッケージの実行時にパッケージがチェックポイントを使用するかどうかを決定する値を設定します。 値 **on** を指定すると、失敗したパッケージが再実行されます。 失敗したパッケージが再実行される場合、ランタイム エンジンは、障害点からパッケージを再起動するためにチェックポイント ファイルを使用します。  
+                  省略可能。 パッケージの実行時にパッケージがチェックポイントを使用するかどうかを決定する値を設定します。 値 **on** を指定すると、失敗したパッケージが再実行されます。 失敗したパッケージが再実行される場合、ランタイム エンジンは、障害点からパッケージを再起動するためにチェックポイント ファイルを使用します。  
   
      オプションが値なしで宣言されている場合、既定値は on です。 値が on に設定されていて、チェックポイント ファイルが見つからない場合、パッケージの実行は失敗します。 このオプションが指定されない場合、パッケージの値セットは保持されます。 詳細については、「 [Restart Packages by Using Checkpoints](restart-packages-by-using-checkpoints.md)」を参照してください。  
   
@@ -174,7 +174,7 @@ dtexec /option [value] [/option [value]]...
      **/ConfigFile** オプションを使用すると、デザイン時に指定しなかった追加の構成を実行時に読み込むことができますが、 **/ConfigFile** オプションを使用しても、デザイン時に指定した構成値を置き換えることはできません。 パッケージ構成が適用されるしくみについては、「 [Package Configurations](../package-configurations.md)」を参照してください。  
   
 -   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_:   
-                  任意。 指定した名前または GUID の接続マネージャーがパッケージ内にあり、接続文字列が指定されていることを示します。  
+                  省略可能。 指定した名前または GUID の接続マネージャーがパッケージ内にあり、接続文字列が指定されていることを示します。  
   
      このオプションでは、接続マネージャーの名前または GUID を指定する *id_or_name* 引数と、有効な接続文字列を指定する *connection_string* 引数の両方のパラメーターが必須です。 詳細については、「[Integration Services (SSIS) の接続](../connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
@@ -222,7 +222,7 @@ dtexec /option [value] [/option [value]]...
      **/Consolelog**オプションの例については、「**解説**」を参照してください。  
   
 -   **/D[ts]** _package_path_:   
-                  任意。 SSIS パッケージ ストアからパッケージを読み込みます。 SSIS パッケージ ストアに格納されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、`/ISServer` オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
+                  省略可能。 SSIS パッケージ ストアからパッケージを読み込みます。 SSIS パッケージ ストアに格納されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、`/ISServer` オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
      *package_path* 引数には、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの相対パスを指定します。このパスは SSIS パッケージ ストアのルートから始まり、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの名前を含むパスです。 *package_path* 引数に指定するパスまたはファイル名に空白文字を含める場合は、 *package_path* 引数を引用符で囲む必要があります。  
   
@@ -251,7 +251,7 @@ dtexec /option [value] [/option [value]]...
      デバッグ ダンプ ファイルの詳細については、「 [Generating Dump Files for Package Execution](../troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。  
   
 -   **/Dumponerror**:   
-                  任意。 パッケージの実行中にエラーが発生した場合に、デバッグダンプファイル (mdmp と .tmp) を作成します。  
+                  省略可能。 パッケージの実行中にエラーが発生した場合に、デバッグダンプファイル (mdmp と .tmp) を作成します。  
   
      既定では、は、デバッグダンプファイルをフォルダーに保存します。このフォルダーには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] *\<drive>*  
   
@@ -267,14 +267,14 @@ dtexec /option [value] [/option [value]]...
      デバッグ ダンプ ファイルの詳細については、「 [Generating Dump Files for Package Execution](../troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。  
   
 -   `/Env[Reference]`*環境の参照 ID*:   
-                  任意。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置するパッケージ用に、パッケージ実行で使用される環境参照 (ID) を指定します。 このパラメーターを変数にバインドするように構成すると、環境に含まれる変数の値が使用されます。  
+                  省略可能。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置するパッケージ用に、パッケージ実行で使用される環境参照 (ID) を指定します。 このパラメーターを変数にバインドするように構成すると、環境に含まれる変数の値が使用されます。  
   
      `/Env[Reference]` オプションは、`/ISServer` オプションおよび `/Server` オプションと共に使用します。  
   
      このパラメーターは SQL Server エージェントによって使用されます。  
   
 -   **/F[ile]** _filespec_:   
-                  任意。 ファイル システムに保存されているパッケージを読み込みます。 ファイル システムに保存されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、`/ISServer` オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「[プロジェクトとパッケージの配置](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
+                  省略可能。 ファイル システムに保存されているパッケージを読み込みます。 ファイル システムに保存されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、`/ISServer` オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「[プロジェクトとパッケージの配置](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
      *filespec* 引数には、パッケージのパスとファイル名を指定します。 汎用名前付け規則 (UNC) 形式のパス、またはローカル パスのどちらかでパスを指定できます。 *filespec* 引数に指定するパスまたはファイル名に空白文字を含める場合は、 *filespec* 引数を引用符で囲む必要があります。  
   
@@ -285,7 +285,7 @@ dtexec /option [value] [/option [value]]...
      *Option_name*引数を指定した場合、は `dtexec` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンラインブックを開始し、dtexec ユーティリティのトピックを表示します。  
   
 -   `/ISServer`*packagepath*:  
-                  任意。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置するパッケージを実行します。 *PackagePath* 引数には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置するパッケージの完全なパスとファイル名を指定します。 *PackagePath*引数に指定されたパスまたはファイル名にスペースが含まれている場合は、 *PackagePath*引数を引用符で囲む必要があります。  
+                  省略可能。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置するパッケージを実行します。 *PackagePath* 引数には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置するパッケージの完全なパスとファイル名を指定します。 *PackagePath*引数に指定されたパスまたはファイル名にスペースが含まれている場合は、 *PackagePath*引数を引用符で囲む必要があります。  
   
      パッケージ形式は次のとおりです。  
   
@@ -300,7 +300,7 @@ dtexec /option [value] [/option [value]]...
      このパラメーターは SQL Server エージェントによって使用されます。  
   
 -   **/L[ogger]** _classid_orprogid;configstring_:  
-                  任意。 1 つまたは複数のログ プロバイダーを [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの実行と関連付けます。 *classid_orprogid* パラメーターには、ログ プロバイダーを指定します。指定できるのはクラス GUID です。 *configstring* は、ログ プロバイダーを構成するために使用する文字列です。  
+                  省略可能。 1 つまたは複数のログ プロバイダーを [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの実行と関連付けます。 *classid_orprogid* パラメーターには、ログ プロバイダーを指定します。指定できるのはクラス GUID です。 *configstring* は、ログ プロバイダーを構成するために使用する文字列です。  
   
      使用できるログ プロバイダーは次のとおりです。  
   
@@ -335,13 +335,13 @@ dtexec /option [value] [/option [value]]...
         -   ClassID: {AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   
 -   **/M[axConcurrent]** _concurrent_executables_:  
-                  任意。 パッケージが同時に実行できる実行可能ファイルの数を指定します。 負以外の整数または -1 を指定する必要があります。 値 -1 は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] が同時に実行できる実行可能ファイルの最大数が、パッケージを実行するコンピューターのプロセッサの合計数に 2 を加えたものと等しいことを意味します。  
+                  省略可能。 パッケージが同時に実行できる実行可能ファイルの数を指定します。 負以外の整数または -1 を指定する必要があります。 値 -1 は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] が同時に実行できる実行可能ファイルの最大数が、パッケージを実行するコンピューターのプロセッサの合計数に 2 を加えたものと等しいことを意味します。  
   
 -   **/Pack[age]** _PackageName_:  
-                  任意。 実行されるパッケージを指定します。 このパラメーターは、 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]からパッケージを実行する場合に主に使用されます。  
+                  省略可能。 実行されるパッケージを指定します。 このパラメーターは、 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]からパッケージを実行する場合に主に使用されます。  
   
 -   **/P [assword]** _パスワード_:  
-                  任意。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証によって保護されているパッケージの取得を可能にします。 このオプションは、 **/User** オプションと共に使用します。 **/Password** オプションを省略して **/User** オプションを使用する場合、空白のパスワードが使用されます。 *password* 値は引用符で囲むことができます。  
+                  省略可能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証によって保護されているパッケージの取得を可能にします。 このオプションは、 **/User** オプションと共に使用します。 **/Password** オプションを省略して **/User** オプションを使用する場合、空白のパスワードが使用されます。 *password* 値は引用符で囲むことができます。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
@@ -371,10 +371,10 @@ dtexec /option [value] [/option [value]]...
     ```  
   
 -   **/Proj[ect]** _ProjectFile_:  
-                  任意。 実行されるパッケージの取得元となるプロジェクトを指定します。 *ProjectFile* 引数には、.ispac ファイル名を指定します。 このパラメーターは、 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]からパッケージを実行する場合に主に使用されます。  
+                  省略可能。 実行されるパッケージの取得元となるプロジェクトを指定します。 *ProjectFile* 引数には、.ispac ファイル名を指定します。 このパラメーターは、 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]からパッケージを実行する場合に主に使用されます。  
   
 -   **/Rem** _comment_:  
-                  任意。 コマンド プロンプトまたはコマンド ファイルにコメントを含めます。 引数は省略可能です。 *comment* の値は、引用符で囲むか、空白を含まない文字列を指定する必要があります。 引数を指定しない場合、空白行が挿入されます。 *comment* の値はコマンド初期フェーズで破棄されます。  
+                  省略可能。 コマンド プロンプトまたはコマンド ファイルにコメントを含めます。 引数は省略可能です。 *comment* の値は、引用符で囲むか、空白を含まない文字列を指定する必要があります。 引数を指定しない場合、空白行が挿入されます。 *comment* の値はコマンド初期フェーズで破棄されます。  
   
 -   **/Rep [orting]** _level_ [*; event_guid_or_name*[*; event_guid_or_name*[...]]: 省略可能です。 レポートするメッセージの種類を指定します。 *level* に使用できるレポート オプションは次のとおりです。  
   
@@ -429,7 +429,7 @@ dtexec /option [value] [/option [value]]...
      **/Set** オプションを使用すると、パッケージ構成を読み込む場所を変更することができます。 ただし、**/Set** オプションを使用しても、デザイン時の構成で指定した値をオーバーライドすることはできません。 パッケージ構成の適用方法については、「[パッケージの構成](../package-configurations.md)と[動作の変更」を参照して SQL Server 2014 の Integration Services 機能を](../behavior-changes-to-integration-services-features-in-sql-server-2014.md)確認してください。  
   
 -   `/Ser[ver]`*サーバー*:  
-                  任意。 `/SQL` オプションまたは `/DTS` オプションが指定されている場合、このオプションにはパッケージを取得するサーバーの名前を指定します。 `/Server` オプションを省略して `/SQL` または `/DTS` オプションを指定した場合、ローカル サーバーに対してパッケージの実行が試行されます。 *server_instance* 値は引用符で囲むことができます。  
+                  省略可能。 `/SQL` オプションまたは `/DTS` オプションが指定されている場合、このオプションにはパッケージを取得するサーバーの名前を指定します。 `/Server` オプションを省略して `/SQL` または `/DTS` オプションを指定した場合、ローカル サーバーに対してパッケージの実行が試行されます。 *server_instance* 値は引用符で囲むことができます。  
   
      `/Ser[ver]` オプションが指定されている場合、`/ISServer` オプションは必須です。  
   
@@ -454,13 +454,13 @@ dtexec /option [value] [/option [value]]...
 -   **/Su [m]**: 省略可能。 後続のコンポーネントが受け取る行数を示す増分カウンターを表示します。  
   
 -   **/U [ser]** _user_name_:  
-                  任意。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証によって保護されているパッケージの取得を可能にします。 このオプションは、`/SQL` オプションが指定されている場合にのみ使用されます。 *User_name* 値は引用符で囲むことができます。  
+                  省略可能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証によって保護されているパッケージの取得を可能にします。 このオプションは、`/SQL` オプションが指定されている場合にのみ使用されます。 *User_name* 値は引用符で囲むことができます。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
 -   **/Va [lidate]**:  
-                  任意。 検証フェーズ後、パッケージの実行を停止します。パッケージは実際には実行されません。 検証中に、 **/WarnAsError**オプションを使用すると、は `dtexec` 警告をエラーとして処理するため、検証中に警告が発生した場合、パッケージは失敗します。  
+                  省略可能。 検証フェーズ後、パッケージの実行を停止します。パッケージは実際には実行されません。 検証中に、 **/WarnAsError**オプションを使用すると、は `dtexec` 警告をエラーとして処理するため、検証中に警告が発生した場合、パッケージは失敗します。  
   
 -   **/Verifyb [u)]** _major_[*; minor*[*; build*]]: 省略可能。 検証フェーズ中に、パッケージのビルド番号を、 *major*、 *minor*、および *build* 引数に指定されたビルド番号に対して検証します。 不一致が発生した場合、パッケージは実行されません。  
   
@@ -473,10 +473,10 @@ dtexec /option [value] [/option [value]]...
     -   *major*; *minor*; *build*  
   
 -   **/VerifyP[ackageID]** _packageID_:  
-                  任意。 実行するパッケージの GUID を、 *package_id* 引数に指定された値と比較して検証します。  
+                  省略可能。 実行するパッケージの GUID を、 *package_id* 引数に指定された値と比較して検証します。  
   
 -   **/VerifyS[igned]**:  
-                  任意。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] でパッケージのデジタル署名を確認します。 パッケージが署名されていないか、署名が有効でない場合、パッケージは失敗します。 詳細については、「 [デジタル署名を使用してパッケージのソースを特定する](../security/identify-the-source-of-packages-with-digital-signatures.md)」を参照してください。  
+                  省略可能。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] でパッケージのデジタル署名を確認します。 パッケージが署名されていないか、署名が有効でない場合、パッケージは失敗します。 詳細については、「 [デジタル署名を使用してパッケージのソースを特定する](../security/identify-the-source-of-packages-with-digital-signatures.md)」を参照してください。  
   
     > [!IMPORTANT]  
     >  パッケージの署名を確認するように構成した場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって確認されるのは、デジタル署名が存在するかどうか、有効かどうか、および信頼関係のある発行元の署名であるかどうかのみです。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、パッケージが変更されたかどうかは確認されません。  
@@ -491,7 +491,7 @@ dtexec /option [value] [/option [value]]...
      *Filespec* パラメーターを含めない場合、Integration Services でテキスト ファイルのログ プロバイダーが有効になりません。 Integration Services では、パッケージの設計時に有効にしたログ プロバイダーに対してのみ、ログ イベントが書き込まれます。  
   
 -   **/W [arnAsError]**:  
-                  任意。 パッケージは警告をエラーと判断するので、検証中に警告が発生した場合にはパッケージが失敗します。 検証中に警告が発生せず、 **/Validate** オプションが指定されていない場合、パッケージは実行されます。  
+                  省略可能。 パッケージは警告をエラーと判断するので、検証中に警告が発生した場合にはパッケージが失敗します。 検証中に警告が発生せず、 **/Validate** オプションが指定されていない場合、パッケージは実行されます。  
   
 -   **/X86**: 省略可能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは 64 ビット コンピューター上で 32 ビット モードでパッケージを実行します。 このオプションは、次に示す条件が満たされた場合に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって設定されます。  
   

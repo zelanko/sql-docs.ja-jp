@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Package Configurations Organizer dialog box
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3b880e23bdc191da1f34f2261d7c87a32f03fb42
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c50a1cba2a2fcc44fab6a9836704c9da8d9798bf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964902"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423979"
 ---
 # <a name="package-configurations-organizer"></a>[パッケージ構成オーガナイザー]
   **[パッケージ構成オーガナイザー]** ダイアログ ボックスを使用すると、パッケージ構成を有効にし、現在のパッケージの構成の一覧を表示して、構成の優先読み込み順序を指定できます。  
@@ -46,25 +46,25 @@ ms.locfileid: "84964902"
  **構成文字列**  
  構成値を格納する場所を表示します。 場所には、ファイルのパス、環境変数の名前、親パッケージ変数の名前、レジストリ キー、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルの名前を使用できます。  
   
- **[対象になるオブジェクト]**  
+ **ターゲットオブジェクト**  
  構成を更新するオブジェクトの名前を表示します。 構成が XML 構成ファイルまたは SQL Server テーブルである場合は、構成に複数のオブジェクトを含むことができるため、この列は空白になります。  
   
  **Target プロパティ**  
  構成によって変更されるプロパティの名前を表示します。 構成の種類が複数の構成をサポートしている場合、この列は空白になります。  
   
- **追加**  
+ **[追加]**  
  パッケージ構成ウィザードを使用して構成を追加します。  
   
  **[編集]**  
  パッケージ構成ウィザードを再実行することにより、既存の構成を編集します。  
   
- **削除**  
+ **[削除]**  
  構成を選択してから、 **[削除]** をクリックします。  
   
  **矢印**  
  構成を選択し、上矢印および下矢印を使用して、構成を一覧の上または下に移動します。 構成は、一覧に表示された順序で読み込まれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)  
   
   

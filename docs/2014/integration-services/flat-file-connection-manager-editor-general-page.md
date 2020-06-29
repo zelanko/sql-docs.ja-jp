@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0f4387b3311c4b2157ba202890c2a190e83e7ad5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 82181fad0220ad73804c23d7ebce2fbe6994d820
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967102"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425659"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>[フラット ファイル接続マネージャー エディター] ([全般] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、ファイルおよびデータ形式を選択できます。 フラット ファイル接続により、パッケージをテキスト ファイルに接続できるようになります。  
@@ -38,7 +38,7 @@ ms.locfileid: "84967102"
  **参照**  
  フラット ファイル接続で使用するファイル名を探します。  
   
- **Locale**  
+ **ロケール**  
  ロケールを指定して、順序付けおよび日時の形式に関する言語固有の情報を提供します。  
   
  **Unicode**  
@@ -50,7 +50,7 @@ ms.locfileid: "84967102"
  **Format**  
  区切り記号形式、固定幅形式、または幅合わせしない形式をファイルで使用するかどうかを示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |区切り記号|列は、 **[列]** ページで指定した区切り記号で区切られます。|  
 |固定幅ファイル|列は固定幅を持ちます。|  
@@ -65,7 +65,7 @@ ms.locfileid: "84967102"
  **[ヘッダー行区切り記号]**  
  ヘッダー行の区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|ヘッダー行は、復帰と改行の組み合わせで区切られます。|  
 |**リターン**|ヘッダー行は、復帰で区切られます。|  
@@ -82,7 +82,7 @@ ms.locfileid: "84967102"
  **[先頭データ行を列名として使用する]**  
  先頭データ行を列名として使用するか、ここに列名を指定するかを示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[フラットファイル接続マネージャーエディター &#40;列] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [[フラットファイル接続マネージャーエディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   

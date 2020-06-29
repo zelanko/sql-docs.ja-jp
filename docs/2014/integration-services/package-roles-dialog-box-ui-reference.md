@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Package Roles dialog box
 ms.assetid: 63f13416-c0aa-4480-a336-ef1e6e31a860
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 64cdb71f323a4ac9325da74503d8aebaa8dd4474
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 94bb72fd6cb9dca8dd76d3925f86ae64a819b7d7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964854"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423799"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>[パッケージのロール] ダイアログ ボックスの UI リファレンス
   **の** [パッケージのロール] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用すると、パッケージに対する読み取りアクセス権のあるデータベースレベル ロールおよびパッケージに対する書き込みアクセス権のあるデータベースレベル ロールを指定できます。 データベースレベル ロールは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb** データベースに格納されたパッケージにのみ適用されます。  
@@ -39,7 +39,7 @@ ms.locfileid: "84964854"
  **[ライター ロール]**  
  ロールを一覧から選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースレベルのロール](../relational-databases/security/authentication-access/database-level-roles.md)   
  [セキュリティの概要 &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   

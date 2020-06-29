@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 26ba2fc6a8cfdfb6855d7d5b29cc3be31f1d53da
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6194849367e89e2e7ba93e0f1138f4fdef59b3c0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966322"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425289"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>[あいまいグループ化変換エディター] ([列] タブ)
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[列]** タブを使用すると、重複する値を持つ行をグループ化するための列を指定できます。  
@@ -56,7 +56,7 @@ ms.locfileid: "84966322"
  **[数字]**  
  列データを比較する際の先頭および末尾の数字の有意性を指定します。 たとえば、先頭の数字が有意である場合、"123 Main Street" は "456 Main Street" と同じグループとは見なされません。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**どちらもオフ**|先頭および末尾の数字は考慮されません。|  
 |**最高**|先頭の数字のみが考慮されます。|  
@@ -66,7 +66,7 @@ ms.locfileid: "84966322"
  **[比較フラグ]**  
  文字列比較オプションについては、「 [文字列データの比較](data-flow/comparing-string-data.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [あいまいグループ化変換を使用して類似のデータ行を識別する](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

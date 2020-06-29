@@ -15,14 +15,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02a7474999dbc644684fc4065343bc87b0aa9635
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9a3a32868cbba92e623f0b8ec55039bdb27761d4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968272"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424669"
 ---
 # <a name="developer39s-guide-integration-services"></a>Developer&#39;s ガイド (Integration Services)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、完全に再記述されたオブジェクト モデルが含まれています。それは、多数の機能で強化されています。この結果、パッケージのプログラミングや拡張作業は、より簡単に、柔軟に、また強力に行えるようになりました。 開発者は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージのほとんどすべての側面を拡張およびプログラミングできます。  

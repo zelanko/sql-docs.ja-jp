@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 7737c6ae-c16b-4856-aa6e-5882640093b7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 792ef4d13c2181f95b3f8f68654b0084e921706a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 782273c8daf48925da2e25de1f95e6c24ae84a42
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964942"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424029"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>[OLE DB ソース エディター] ([エラー出力] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
@@ -49,7 +49,7 @@ ms.locfileid: "84964942"
  適用****  
  選択したセルにエラー処理オプションを適用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [OLE DB ソースエディター &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
  [OLE DB ソースエディター &#40;列] ページ&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   

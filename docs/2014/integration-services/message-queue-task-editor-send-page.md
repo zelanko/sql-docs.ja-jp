@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2ed0d210668b64ff6f6fcc8c94a713743e2f9bfa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7c78b6665e761b0ffa9da4a4abcefc2489bff07a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951062"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424689"
 ---
 # <a name="message-queue-task-editor-send-page"></a>[メッセージ キュー タスク エディター] ([送信] ページ)
   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[送信]** ページを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージからメッセージを送信するメッセージ キュー タスクを構成できます。  
@@ -41,7 +41,7 @@ ms.locfileid: "84951062"
  **MessageType**  
  メッセージ型を指定します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[データ ファイル メッセージ]**|メッセージはファイルに格納されます。 この値を選択すると、動的オプションの **[DataFileMessage]** が表示されます。|  
 |**[変数メッセージ]**|メッセージは変数に格納されます。 この値を選択すると、動的オプションの **[VariableMessage]** が表示されます。|  
@@ -63,7 +63,7 @@ ms.locfileid: "84951062"
  **[StringMessage]**  
  文字列メッセージを入力するか、参照ボタン **(** [...]) をクリックして、[**文字列メッセージの入力**] ダイアログボックスにメッセージを入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [メッセージキュータスクエディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [メッセージキュータスクエディター &#40;受信ページ&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
