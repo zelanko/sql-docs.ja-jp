@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 38b5f077-9083-406a-a9a4-8bc39972dda2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 33d0d6ec4e462b38079c43bbb47e30feb4d34ed8
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84e3e79831f65b88b55fe8769bf375a948512af0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917062"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437869"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>[データ フロー パス エディター] ([データ ビューアー] ページ)
   **[データ フロー パス エディター]** ダイアログ ボックスの **[データ ビューアー]** ページを使用すると、パスにアタッチされているデータ ビューアーを管理できます。  
@@ -30,7 +30,7 @@ ms.locfileid: "84917062"
  **[データ ビューアーの種類]**  
  データ ビューアーの種類が一覧表示されます。  
   
- **追加**  
+ **[追加]**  
  クリックすると、 **[データ ビューアーの構成]** ダイアログ ボックスを使用してデータ ビューアーを追加できます。  
   
  **削除**  
@@ -39,7 +39,7 @@ ms.locfileid: "84917062"
  **ステータス メッセージを**  
  クリックすると、選択したデータ ビューアーを **[データ ビューアーの構成]** ダイアログ ボックスを使用して構成できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データフローパスエディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [データフローパスエディター &#40;メタデータページ&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
  [データフロー](data-flow/data-flow.md)   

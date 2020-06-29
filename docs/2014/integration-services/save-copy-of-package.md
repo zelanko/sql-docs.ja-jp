@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Save Copy of Package dialog box
 ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 29e6b0cfe7d7646b317073298410c479c2cd5665
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 91c35defd543ae33ed45903e7888da905812d1fc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964337"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422449"
 ---
 # <a name="save-copy-of-package"></a>[パッケージのコピーの保存]
   **の** [パッケージのコピーの保存] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ダイアログ ボックスを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージのコピーを [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] から別の場所に保存し、必要に応じてパッケージの保護レベルを変更できます。  
@@ -57,7 +57,7 @@ ms.locfileid: "84964337"
  **保護レベル**  
  参照ボタン **([..** .]) をクリックし、[パッケージの**保護レベル**] ダイアログボックスで保護レベルを更新します。 詳細については、「 [[パッケージの保護レベル] ダイアログ ボックス](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[パッケージのインポート] ダイアログボックスの UI リファレンス](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [[パッケージのエクスポート] ダイアログボックスの UI リファレンス](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [パッケージの保存](save-packages.md)   

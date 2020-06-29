@@ -10,21 +10,21 @@ ms.topic: reference
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d6afd452c04bf4fc3d735be597fb035a6435b885
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: 63d37d37b55c119e8b36629e2572d4a12371f451
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83730654"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469427"
 ---
 # <a name="create-a-custom-workflow---example"></a>カスタム ワークフローの作成 - 例
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] では、カスタム ワークフロー クラス ライブラリを作成するときに、Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender インターフェイスを実装するクラスを作成します。 このインターフェイスには、ワークフローの開始時に SQL Server MDS Workflow Integration Service によって呼び出される 1 つのメソッド (<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>) が含まれます。 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> メソッドには、2 つのパラメーターが含まれます。1 つは *workflowType* で、これには、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] の **[ワークフローの種類]** ボックスに入力したテキストが含まれます。もう 1 つは *dataElement* で、これには、ワークフロー ビジネス ルールをトリガーしたアイテムのメタデータとアイテム データが含まれます。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] では、カスタム ワークフロー クラス ライブラリを作成するときに、Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender インターフェイスを実装するクラスを作成します。 このインターフェイスには、 [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))という1つのメソッドが含まれています。このメソッドは、ワークフローの開始時に SQL Server MDS Workflow Integration Service によって呼び出されます。 [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))メソッドには、2つのパラメーターが含まれています。 *workflowtype*には、の [**ワークフローの種類**] テキストボックスに入力したテキストが含まれ、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] *dataelement*には、ワークフロービジネスルールをトリガーしたアイテムのメタデータとアイテムデータが含まれています。  
   
 ## <a name="custom-workflow-example"></a>カスタム ワークフローの例  
- 次のコード例は、<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> メソッドを実装して、ワークフロー ビジネス ルールをトリガーした要素の XML データから Name、Code、および LastChgUserName 属性を抽出する方法と、ストアド プロシージャを呼び出して、それらの属性を別のデータベースに挿入する方法を示しています。 アイテム データ XML の例と、それに含まれるタグの説明については、「[カスタム ワークフロー XML の説明 &#40;マスター データ サービス&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)」を参照してください。  
+ 次のコード例は、 [MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))メソッドを実装して、ワークフロービジネスルールをトリガーした要素の XML データから Name、code、および LastChgUserName 属性を抽出する方法、およびストアドプロシージャを呼び出して別のデータベースに挿入する方法を示していますが、この方法を示しています。 アイテム データ XML の例と、それに含まれるタグの説明については、「[カスタム ワークフロー XML の説明 &#40;マスター データ サービス&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)」を参照してください。  
   
 ```csharp  
 using System;  
@@ -71,7 +71,7 @@ namespace MDSWorkflowTestLib
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム ワークフローの作成 &#40;マスター データ サービス&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
   
   

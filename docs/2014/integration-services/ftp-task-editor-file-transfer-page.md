@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a5d8fd967b70b0b3470ceee0c6a6311499ed4696
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6076670e37e128fb31bd6f2cbe1147073f1ac634
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966352"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425329"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>[FTP タスク エディター] ([ファイル転送] ページ)
   **[FTP タスク エディター]** ダイアログ ボックスの **[ファイル転送]** ページを使用すると、タスクで実行される FTP 操作を構成できます。  
@@ -29,7 +29,7 @@ ms.locfileid: "84966352"
  **[IsRemotePathVariable]**  
  リモート パスが変数に格納されているかどうかを表します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプションの **[RemoteVariable]** が表示されます。|  
 |**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプションの **[RemotePath]** が表示されます。|  
@@ -40,7 +40,7 @@ ms.locfileid: "84966352"
  **[IsLocalPathVariable]**  
  ローカル パスが変数に格納されているかどうかを表します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプションの **[LocalVariable]** が表示されます。|  
 |**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプションの **[LocalPath]** が表示されます。|  
@@ -48,7 +48,7 @@ ms.locfileid: "84966352"
  **操作**  
  実行する FTP 操作を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**ファイルの送信**|ファイルを送信します。 この値を選択すると、動的オプションの **[LocalVariable]**、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  
 |**ファイルの受信**|ファイルを受信します。 この値を選択すると、動的オプションの **[LocalVariable]**、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  
@@ -90,7 +90,7 @@ ms.locfileid: "84966352"
   
  **関連トピック:**[フラット ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [FTP タスクエディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[式] ページ](expressions/expressions-page.md)  

@@ -21,14 +21,14 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b563160c9cd41a449b4669bb6b17ca43d427ff6e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 30f65b7bfd4563bbc9ada1d615f0d48af225895d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964712"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423409"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージ、コンテナー、およびタスクにログ記録を実装するために使用できる、ログ プロバイダーが含まれています。 ログ記録を行うと、パッケージに関する実行時の情報をキャプチャできるので、パッケージを実行するたびに監査やトラブルシューティングに役立ちます。 たとえば、パッケージを実行した演算子の名前と、パッケージの開始および完了時刻をログにキャプチャできます。  
@@ -213,7 +213,7 @@ ms.locfileid: "84964712"
 ## <a name="related-content"></a>関連コンテンツ  
  [完全かつ詳細なログ記録用の DTLoggedExec ツール (CodePlex プロジェクト)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[ログ イベント] ウィンドウでログ エントリを表示する](../view-log-entries-in-the-log-events-window.md)  
   
   

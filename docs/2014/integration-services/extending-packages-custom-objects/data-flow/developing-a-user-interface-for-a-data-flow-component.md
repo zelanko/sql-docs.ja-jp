@@ -19,14 +19,14 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9680243a53af46aed1464d31fdeedeeaa0791f0a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a2145bc78a167ee89c5504f5a42abeb970810ffb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966482"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437009"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>データ フロー コンポーネント用ユーザー インターフェイスの開発
   コンポーネント開発者は、コンポーネント用のカスタム ユーザー インターフェイスを作成し、コンポーネントを編集するときに [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] に表示させることができます。 カスタム ユーザー インターフェイスを実装すると、データ フロー タスクでコンポーネントが追加または削除されたとき、またはコンポーネントに関するヘルプが要求されたときに通知されます。
@@ -282,7 +282,7 @@ End Namespace
 
 ![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [カスタム データ フロー コンポーネントの作成](creating-a-custom-data-flow-component.md)
 
 

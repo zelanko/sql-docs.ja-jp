@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Events property
 - Script task [Integration Services], events
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f5bf4a5de8fc27773dfebec4fdae96edea944ed
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 242abf4fa10487f55d8741ea3a815086fbaf16d6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967184"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425839"
 ---
 # <a name="raising-events-in-the-script-task"></a>スクリプト タスクでのイベントの発生
   イベントは、エラーや警告、タスクの進行状況や状態などのその他の情報を、親パッケージにレポートする方法を提供するものです。 パッケージには、イベントの通知機能を管理するためのイベント ハンドラーがあります。 スクリプト タスクは、`Dts` オブジェクトの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> プロパティに対してメソッドを呼び出して、イベントを発生させることができます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージのイベントの処理の詳細については、「[Integration Services &#40;SSIS&#41; のイベント ハンドラー](../../integration-services-ssis-event-handlers.md)」を参照してください。  
@@ -143,7 +143,7 @@ public class ScriptMain
   
 ![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS&#41; イベントハンドラーの Integration Services &#40;](../../integration-services-ssis-event-handlers.md)   
  [パッケージにイベント ハンドラーを追加する](../../add-an-event-handler-to-a-package.md)  
   

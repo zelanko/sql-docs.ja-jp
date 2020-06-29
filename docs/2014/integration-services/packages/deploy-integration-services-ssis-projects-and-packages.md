@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 807bece28f82759d0a708fa785f23141a0b4407d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e900225cc4215d586ea7494a60ba04835bcd2652
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964832"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423711"
 ---
 # <a name="deployment-of-projects-and-packages"></a>プロジェクトとパッケージの展開
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、プロジェクト配置モデルとパッケージ配置モデルの 2 つの配置モデルがサポートされています。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。  
@@ -61,7 +61,7 @@ ms.locfileid: "84964832"
 ## <a name="related-content"></a>関連コンテンツ  
  mattmasson.com のブログ「 [SSIS プロジェクトの分岐方法について](https://go.microsoft.com/fwlink/?LinkId=245739)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dtexec ユーティリティ](dtexec-utility.md)  
   
   

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ff324da58b3761c12c7fae910dd4c7e22af32260
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a9f4b99c65ef2a3927ee31380e7931209830841a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922293"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435269"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC インスタンス
   Oracle CDC インスタンスは、単一の Oracle ソース データベースからキャプチャされた変更を処理するために、Oracle CDC Service によって作成されたプロセスです。 Oracle CDC インスタンスは、その構成を **cdc.xdbcdc_config** テーブルから取得し、その状態を **cdc.xdbcdc_state** テーブルで維持します。 これらのテーブルは、Oracle CDC インスタンスを定義する CDC データベースの一部です。 xdbcdc データベースおよびテーブルの詳細については、「 [The CDC Databases](the-oracle-cdc-service.md)」を参照してください。  

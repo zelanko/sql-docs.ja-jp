@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b51049f0a55a10ae83af9e0f253c1c717f6d4962
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cc500615774a67bae70e9c9fa8845db166f44466
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964862"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423879"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>パッケージ インストール ウィザードの UI リファレンス
   **パッケージ インストール ウィザード** を使用すると、プロジェクトに含まれるパッケージおよびその他のファイル、パッケージの従属ファイルを含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを配置できます。  
@@ -167,7 +167,7 @@ ms.locfileid: "84964862"
  **完了**  
  **[完了]** をクリックすると、ウィザードが終了します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS&#41;&#40;パッケージの配置](packages/legacy-package-deployment-ssis.md)  
   
   

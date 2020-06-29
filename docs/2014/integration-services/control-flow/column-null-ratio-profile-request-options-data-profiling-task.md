@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2c8efa2db8a602b2cbed08e8731c4137a132495f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 50aeb80d600c1e5f85cd13dc36a041c459a3df1c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919623"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433709"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>[列の NULL 比プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[列の NULL 比要求]** のオプションを設定できます。 列の NULL 比プロファイルは、選択した列の NULL 値の比率を報告します。 このプロファイルを使用すると、列の NULL 値の比率が予想外に高いなどのデータの問題を特定できます。 たとえば、列の NULL 比プロファイルを使用して郵便番号列をプロファイルすると、許容範囲を超える欠落した郵便番号の比率を検出できます。  

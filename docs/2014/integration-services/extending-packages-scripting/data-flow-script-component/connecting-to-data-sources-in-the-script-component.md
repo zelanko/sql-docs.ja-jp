@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], connecting to data sources
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0fb6ccc97c2f0f5a3a69d2caa61ca67327015415
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f5618c83e680ba01a477d553dd13b1bb2571eea9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967282"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426269"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>スクリプト コンポーネントでのデータ ソースへの接続
   接続マネージャーは、便宜上、特定の種類のデータ ソースに接続するために必要な情報をカプセル化して格納するユニットです。 詳細については、「[Integration Services (SSIS) の接続](../../connection-manager/integration-services-ssis-connections.md)」を参照してください。  
@@ -55,7 +55,7 @@ ms.locfileid: "84967282"
   
 ![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS&#41; 接続の Integration Services &#40;](../../connection-manager/integration-services-ssis-connections.md)   
  [接続マネージャーを作成する](../../create-connection-managers.md)  
   

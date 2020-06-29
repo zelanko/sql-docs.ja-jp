@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 985c43aa81400904cb7b3c7c304ca52481dbb330
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 18a19848db8050cfbcdf5889c545a4e0666eb593
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964452"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422649"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>プログラムによるパッケージの実行と管理
   開発環境以外で [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理および実行する必要がある場合は、プログラムでパッケージを操作できます。 その場合、次に示すいくつかの方法があります。  
@@ -77,7 +77,7 @@ ms.locfileid: "84964452"
   
 ![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] が提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

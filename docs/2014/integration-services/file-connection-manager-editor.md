@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File Connection Manager Editor
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9128f73dc8fec388ae111781b9beeb52bbab138b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5ae883d085b1f6416096255a3b87d6e5872bc5e9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967152"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425709"
 ---
 # <a name="file-connection-manager-editor"></a>[ファイル接続マネージャー エディター] ダイアログ ボックス
   **[ファイル接続マネージャー エディター]** ダイアログ ボックスを使用すると、ファイルまたはフォルダーに接続するためのプロパティを指定できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "84967152"
  **使用法の種類**  
  **ファイル接続マネージャー** が既存のファイルまたはフォルダーに接続するか、新しいファイルまたはフォルダーを作成するかを指定します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |[ファイルの作成]|実行時に新しいファイルを作成します。|  
 |[既存のファイル]|既存のファイルを使用します。|  
@@ -47,7 +47,7 @@ ms.locfileid: "84967152"
  **参照**  
  **[ファイルの選択]** ダイアログ ボックスまたは **[フォルダーの参照]** ダイアログ ボックスを使用して、ファイルまたはフォルダーを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

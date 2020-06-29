@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b2645be842f64fae50013146a9f8f1d8aa73898a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f82c2ca9e541981adee1eea129d86dcb645b59aa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920013"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438259"
 ---
 # <a name="bulk-insert-task"></a>一括挿入タスク
   一括挿入タスクは、大量のデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはビューにコピーするための効率的な方法です。 たとえば、会社で 100 万行の製品リストをメインフレーム システムに格納し、電子商取引システムで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して Web ページを構成しているとします。 また、メインフレームにあるマスター製品リストを使用して、夜間に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の製品テーブルを更新する必要があるものとします。 このテーブルを更新するには、製品リストをタブ区切り形式で保存し、一括挿入タスクを使用してデータを直接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルにコピーします。  

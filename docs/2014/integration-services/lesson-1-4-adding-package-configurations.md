@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 719b0b357767fcc4412663449a6a7bd929b34cd3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6bd27e4ea4afee42cff12d9b01f09c6cffef8478
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965293"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436029"
 ---
 # <a name="step-4-adding-package-configurations"></a>手順 4:パッケージ構成の追加
   ここでは、各パッケージに構成を追加します。 パッケージ プロパティとパッケージ オブジェクトの値は、構成によって実行時に更新されます。  
@@ -132,7 +132,7 @@ ms.locfileid: "84965293"
   
 ![Integration Services アイコン (小)](media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージの構成](../../2014/integration-services/package-configurations.md)   
  [パッケージ構成の作成](../../2014/integration-services/create-package-configurations.md)   
  [パッケージで使用されるファイルへのアクセス](../../2014/integration-services/access-to-files-used-by-packages.md)  

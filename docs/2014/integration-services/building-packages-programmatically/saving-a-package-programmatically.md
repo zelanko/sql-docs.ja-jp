@@ -10,14 +10,14 @@ helpviewer_keywords:
 - programmatically saving a package
 - saving a package programmatically
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dc20c579a4d08d11dc53f1d39b90c4888c652dc1
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a2879c4213b2c9c0bf395c103de0d1bc37e4daab
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924873"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439219"
 ---
 # <a name="saving-a-package-programmatically"></a>パッケージをプログラムで保存
   プログラムにより新しいパッケージを構築したり、既存のパッケージを変更した後には、通常は変更を保存します。  
@@ -38,7 +38,7 @@ ms.locfileid: "84924873"
   
 ![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージを保存する](../save-packages.md)  
   
   

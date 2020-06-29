@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 560822d7cc4df81bb55d0ea9a78eb8f9dfbbeeb5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a609147a58a426ac89708b36d1e098f170c8b530
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939321"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430299"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩やかに変化するディメンション変換
   緩やかに変化するディメンション変換は、データ ウェアハウスのディメンション テーブル内にある、レコードの更新および挿入を調整します。 たとえば、この変換を使用すると、AdventureWorks OLTP データベースの Production.Products テーブルにあるデータを使って [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] データベースの DimProduct テーブルに挿入や更新を行う変換出力を構成できます。  

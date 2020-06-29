@@ -20,14 +20,14 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connections
 - SSIS Script task, connections
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 50d0914efce0fd8b91d0a4ac2e93d01d910849e4
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 24013f8e0e60e7a441df09fc4ec5bd320318afe6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967218"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425949"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>スクリプト タスクでのデータ ソースへの接続
   接続マネージャーは、パッケージ内に構成されたデータ ソースへのアクセスを提供します。 詳細については、「[Integration Services (SSIS) の接続](../../connection-manager/integration-services-ssis-connections.md)」を参照してください。  
@@ -99,7 +99,7 @@ public class ScriptMain
   
 ![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS&#41; 接続の Integration Services &#40;](../../connection-manager/integration-services-ssis-connections.md)   
  [接続マネージャーを作成する](../../create-connection-managers.md)  
   

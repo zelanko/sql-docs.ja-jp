@@ -18,14 +18,14 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e58de07841aeba956e6bc8d552b14237a31b515e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 86a4a81f2cff7f191c7233edc6fd5340d47ae726
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968828"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427709"
 ---
 # <a name="validating-a-data-flow-component"></a>データ フロー コンポーネントの検証
   基本クラス <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> メソッドを使用すると、正しく構成されていないコンポーネントが実行されることを防止できます。 このメソッドを使用すると、コンポーネントが想定どおりの数の入出力オブジェクトを持ち、カスタム プロパティの値が許容範囲内で、接続が必要な場合はそれが指定されていることを検証できます。 また、入出力コレクションの各列のデータ型が正しいこと、各列の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> がコンポーネント用に正しく設定されていることも検証できます。 この基本クラスを実装すると、コンポーネントの入力列コレクションをチェックし、コレクションの各列が上流コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> にある列を参照していることを確認できるため、検証プロセスの作業に役立ちます。  

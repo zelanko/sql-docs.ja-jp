@@ -12,14 +12,14 @@ helpviewer_keywords:
 - expressions [Integration Services], examples
 - examples [Integration Services]
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 88bbf2131ba1c067d5232ddb2fc52c8ce8b0e3e6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 698fb0b186a189d5c946601c899b57f25eb06202
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967392"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428939"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Integration Services 式の詳細の例
   このセクションでは、複数の演算子と関数を組み合わせた詳細な式の例について説明します。 式が優先順位制約または条件分割変換で使用される場合、式はブール型に評価される必要があります。 ただしこの制限は、プロパティ式、変数、派生列変換、または For ループ コンテナーで使用される式には適用されません。  

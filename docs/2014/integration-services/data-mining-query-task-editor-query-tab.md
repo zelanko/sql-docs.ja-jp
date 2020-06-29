@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 86441b7ec5750ca4b7fce07fb7e0b5025e8a6eef
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6005c92d0d48850461c01353ddf94c61140d0f2e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939123"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437449"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>[データ マイニング クエリ タスク エディター] ([クエリ] タブ)
   **[データ マイニング クエリ タスク]** ダイアログ ボックスの **[クエリ]** タブを使用すると、マイニング モデルに基づいて予測クエリを作成できます。 このダイアログ ボックスでは、パラメーターおよび結果セットを変数にバインドすることもできます。  
@@ -53,10 +53,10 @@ ms.locfileid: "84939123"
  **変数名**  
  パラメーターにマップする変数を一覧から選択します。  
   
- **追加**  
+ **[追加]**  
  一覧にパラメーターを追加します。  
   
- **削除**  
+ **[削除]**  
  パラメーターを選択してから、 **[削除]** をクリックします。  
   
 ## <a name="result-set-tab-options"></a>[結果セット] タブのオプション  
@@ -71,13 +71,13 @@ ms.locfileid: "84939123"
  **結果の種類**  
  1 行だけを返すか、完全な結果セットを返すかを示します。  
   
- **追加**  
+ **[追加]**  
  一覧に結果セットを追加します。  
   
- **削除**  
+ **[削除]**  
  結果を選択してから、 **[削除]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [データマイニングクエリタスクエディター &#40;[マイニングモデル] タブ&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [[データマイニングクエリタスクエディター] &#40;[出力] タブ&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   

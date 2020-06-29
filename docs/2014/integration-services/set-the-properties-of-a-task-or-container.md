@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], properties
 ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2116f6b07ae47325972c82f8b04ae027530a5a52
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 278ce3d1a7f1fafeb3c378559e5ec88da62895c8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963092"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421469"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>タスクまたはコンテナーのプロパティを設定する
   タスクおよびコンテナーのほとんどのプロパティは、 **[プロパティ]** ウィンドウを使用して設定できます。 例外は、タスク コレクションのプロパティと、 **[プロパティ]** ウィンドウを使用して設定するには複雑すぎるプロパティです。 たとえば、Foreach ループ コンテナーが使用する列挙子を **[プロパティ]** ウィンドウで構成することはできません。 これらの複雑なプロパティを設定するには、タスク エディターまたはコンテナー エディターを使用する必要があります。 ほとんどの場合、タスク エディターとコンテナー エディターには複数のノードがあり、各ノードには関連プロパティが含まれています。 ノードの名前は、ノードに含まれるプロパティの対象を示します。  
@@ -67,7 +67,7 @@ ms.locfileid: "84963092"
   
 8.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services タスク](control-flow/integration-services-tasks.md)   
  [Integration Services コンテナー](control-flow/integration-services-containers.md)  
   

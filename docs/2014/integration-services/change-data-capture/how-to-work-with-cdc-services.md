@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0c43adda4865adbf93b83f928d3f490caca30dfa
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9e98eabcffc3b657745c36055a6b548fb4542d45
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922933"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438679"
 ---
 # <a name="how-to-work-with-cdc-services"></a>CDC Service の操作方法
   この手順では、CDC Service 構成コンソールを使用して、Oracle CDC Service の操作用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを準備し、新しい CDC サービスを作成する方法について説明します。  

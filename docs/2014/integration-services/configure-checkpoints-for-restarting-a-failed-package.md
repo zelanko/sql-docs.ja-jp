@@ -11,14 +11,14 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d743341d7d1d6cae23165c7c1e4b1ddb15779927
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c3345ff33c620b1e6fee62b5adba5c2695c47061
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921843"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438579"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>失敗したパッケージを再開するためのチェックポイントを構成する
   パッケージ全体を再実行するのではなく、障害が発生した時点からパッケージを再開するように [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを構成するには、チェックポイントに適用するプロパティを設定します。  
@@ -52,7 +52,7 @@ ms.locfileid: "84921843"
   
     -   `True`選択した各タスクおよびコンテナーに対して、FailPackageOnFailure プロパティをに設定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チェックポイントを使用してパッケージを再開する](packages/restart-packages-by-using-checkpoints.md)  
   
   

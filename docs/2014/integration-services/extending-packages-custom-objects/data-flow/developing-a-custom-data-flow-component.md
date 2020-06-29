@@ -15,14 +15,14 @@ helpviewer_keywords:
 - extending data flow task [Integration Services]
 - components [Integration Services], data flow
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2e1a6af8407813a2a712b0c43c0b06097477f00f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ee2b30cf0796953d12f976745fb195169de86c68
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966519"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437079"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>カスタム データ フロー コンポーネントの開発
   データ フロー タスクは、さまざまなデータ ソースに接続し、そのデータを高速で変換およびルーティングするコンポーネントで構成されています。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、拡張可能なオブジェクト モデルが用意されており、開発者はそのオブジェクト モデルを使用して、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] や配置されたパッケージで使用できるカスタム変換元、カスタム変換、およびカスタム変換先を作成できます。 ここでは、カスタム データ フロー コンポーネントの開発に役立つトピックを紹介します。
@@ -54,7 +54,7 @@ ms.locfileid: "84966519"
 
  [特定の種類のデータフローコンポーネントの開発](../../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)変換元、変換、および変換先という3種類のデータフローコンポーネントの開発について説明します。
 
-## <a name="reference"></a>関連項目
+## <a name="reference"></a>リファレンス
  <xref:Microsoft.SqlServer.Dts.Pipeline>カスタムデータフローコンポーネントの作成に使用されるクラスとインターフェイスが含まれています。
 
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>データフロータスクオブジェクトモデルを構成するクラスとインターフェイスが含まれています。これは、カスタムデータフローコンポーネントを作成したり、データフロータスクを作成したりするために使用されます。
@@ -87,7 +87,7 @@ ms.locfileid: "84966519"
 
 ![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [スクリプトコンポーネントによるデータフローの拡張](../../extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md[スクリプトソリューションとカスタムオブジェクトの比較](../../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)
 
 
