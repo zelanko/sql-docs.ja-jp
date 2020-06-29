@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f99e6a65a699bae09df61f1de8a1a7c1ee88c52
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7313fb40ec44873e980d3063219c9c9ca55bff1c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922325"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435309"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC データベース
   Oracle CDC インスタンスは、ターゲット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの同名の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連付けられます。 このデータベースは、Oracle CDC データベース (または CDC データベース) と呼ばれます。  
@@ -108,7 +108,7 @@ ms.locfileid: "84922325"
   
 |Name|Default|Min|Max|静的|説明|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|trace|False|-|-|False|使用可能な値:<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **オート**|  
+|trace|False|-|-|False|使用可能な値:<br /><br /> **本来**<br /><br /> **False**<br /><br /> **on**<br /><br /> **オート**|  
 |cdc_update_state_interval|10|1|120|False|トランザクションに割り当てられるメモリのチャンクのサイズ (KB) です (トランザクションは複数のチャンクを割り当てることができます)。 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) テーブルの memory_limit 列を参照してください。|  
 |target_max_batched_transactions|100|1|1000|True|SQL Server の CT テーブルの更新で 1 つのトランザクションとして処理できる Oracle トランザクションの最大数です。|  
 |target_idle_lsn_update_interval|10|0|1|False|キャプチャ対象テーブルで操作が行われていない場合に **lsn_time_mapping** テーブルを更新する間隔 (秒) です。|  

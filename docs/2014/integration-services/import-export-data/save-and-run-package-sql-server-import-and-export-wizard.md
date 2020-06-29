@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c3b1be3f11e3a53ad291ff774cc72468af0d66ca
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2bb7f32cc36b14682de4629b238883acde4a015a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966224"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436819"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>[パッケージの保存および実行] (SQL Server インポートおよびエクスポート ウィザード)
   [**パッケージの保存と実行**] ダイアログボックスを使用すると、すぐにパッケージを実行したり、後で実行するように保存したり、その両方を実行したりできます。  
@@ -70,7 +70,7 @@ ms.locfileid: "84966224"
 > [!NOTE]  
 >  このオプションは、[**パッケージの保護レベル**] オプションで [**機微なデータをパスワードで暗号化**する] または [**すべてのデータをパスワードで暗号化**する] を設定した場合にのみ使用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクトとパッケージの実行](../packages/run-integration-services-ssis-packages.md)   
  [パッケージを保存する](../save-packages.md)  
   

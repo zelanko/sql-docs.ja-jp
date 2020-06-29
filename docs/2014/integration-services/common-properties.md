@@ -16,14 +16,14 @@ helpviewer_keywords:
 - input properties [Integration Services]
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77bb61af021bb7499f6656d2fd604f4bdc06bfeb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06b9c8378d08f8eb1e27df8b545acc12ceaa7e2b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922113"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435099"
 ---
 # <a name="common-properties"></a>共通プロパティ
   オブジェクトモデルのデータフローオブジェクトには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンポーネント、入力および出力、入力列、および出力列の各レベルで共通のプロパティとカスタムプロパティがあります。 多くのプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
@@ -32,7 +32,7 @@ ms.locfileid: "84922113"
   
 -   [コンポーネント](#components)  
   
--   [Inputaccel](#inputs)  
+-   [入力](#inputs)  
   
 -   [入力列](#inputcolumns)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "84922113"
 |PipelineVersion|Integer|コンポーネントを実行するように設計されたデータ フロー タスクのバージョン。|  
 |UsesDispositions|Boolean|コンポーネントにエラー出力があるかどうかを示します。|  
 |[ValidateExternalMetadata]|Boolean|外部列のメタデータを検証するかどうかを示します。 このプロパティの既定値は `True` です。|  
-|バージョン|Integer|コンポーネントのバージョン。|  
+|Version|Integer|コンポーネントのバージョン。|  
   
 ##  <a name="input-properties"></a><a name="inputs"></a>入力プロパティ  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、変換および変換先には入力があります。 データ フロー内のコンポーネントの入力は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> インターフェイスを実装します。  
@@ -211,7 +211,7 @@ ms.locfileid: "84922113"
 |有効桁数|Integer|数値列の有効桁数。|  
 |スケール|Integer|数値列の小数点以下桁数。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データフロー](data-flow/data-flow.md)   
  [変換のカスタムプロパティ](data-flow/transformations/transformation-custom-properties.md)   
  [パスのプロパティ](../../2014/integration-services/path-properties.md)   

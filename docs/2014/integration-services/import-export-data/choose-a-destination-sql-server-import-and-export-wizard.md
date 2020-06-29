@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 50c9419911f83c98fba5baf0f995ffbeafb916ad
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c47c5596d5674adf56105cffd7617a2e3436bc8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965652"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436839"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>[変換先の選択] (SQL Server インポートおよびエクスポート ウィザード)
   [**変換先の選択**] ページを使用すると、コピーするデータの保存先を指定できます。  
@@ -69,7 +69,7 @@ ms.locfileid: "84965652"
  **参照**  
  **[開く]** ダイアログ ボックスを使用して、ファイルを検索します。  
   
- **Locale**  
+ **ロケール**  
  文字の並べ替え順と日時の形式を定義するロケールの ID (LCID) を指定します。  
   
  **Unicode**  
@@ -81,7 +81,7 @@ ms.locfileid: "84965652"
  **Format**  
  区切り形式、固定幅形式、または幅合わせしない形式を使用するかどうかを示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |区切り記号|列は、 **[列]** ページで指定した区切り記号で区切られます。|  
 |固定幅ファイル|列は固定幅を持ちます。|  

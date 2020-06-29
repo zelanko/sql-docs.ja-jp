@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 108256e1d8a3638da5cd676a0ee57894b3ee874c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 68a9517222c6d5a3c2fecbddff9d3e811f3c2280
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966214"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436799"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>[データ型マッピングの確認]\(SQL Server インポートおよびエクスポート ウィザード)
   [**データ型マッピングの確認**] ページを使用すると、変換元データと変換先との互換性を確保するためにウィザードで実行する必要があるデータ型変換に関する詳細情報を確認できます。 この情報には、成功すると予測される変換と、エラーまたは切り捨てが発生する可能性がある変換を区別するための視覚的な手掛かりが含まれています。 変換ごとに、ウィザードによって提案された変換を受け入れるかどうかを決定したり、発生したエラーの処理方法を指定したりすることができます。  

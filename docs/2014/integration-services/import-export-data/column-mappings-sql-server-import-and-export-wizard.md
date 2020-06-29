@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1f3266bbbc100af3eac03bc18805c82b753d7aa7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1d381ec773499fdcf018375c7a51740880d3d9b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965635"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436789"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>[列マッピング]\(SQL Server インポートおよびエクスポート ウィザード)
   [**列マッピング**] ダイアログボックスを使用すると、変換パラメーターを編集できます。  
@@ -70,7 +70,7 @@ ms.locfileid: "84965635"
  **NULL 値の使用**  
  列が NULL 値を使用するかどうかを指定します。  
   
- **[サイズ]**  
+ **Size**  
  列の文字数を指定します。  
   
  **[精度]**  

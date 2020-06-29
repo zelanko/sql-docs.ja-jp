@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Character Map Transformation Editor
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6d769112c95b88becfd1ec9bfbe7beabd0130cdd
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5f74855074ac4d362c1505a0e3a4ebff416ed4b5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922106"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435079"
 ---
 # <a name="character-map-transformation-editor"></a>文字マップ変換エディター
   **[文字マップ変換エディター]** ダイアログ ボックスを使用すると、列のデータに適用する文字列関数を選択し、マッピングが埋め込み先の変更か新しい列として追加されるかを指定できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "84922106"
  **宛先**  
  文字列処理の結果を、既定の列を使用して所定の場所に保存するか、変更されたデータを新しい列として保存するかを指定します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |新しい列|データを新しい列に保存します。 **[出力の別名]** で、列名を割り当てます。|  
 |[埋め込み先変更]|変更されたデータを既存の列に保存します。|  
@@ -43,7 +43,7 @@ ms.locfileid: "84922106"
  **操作**  
  列のデータに適用する文字列関数を一覧から選択します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |小文字|小文字に変換します。|  
 |大文字|大文字に変換します。|  
@@ -62,7 +62,7 @@ ms.locfileid: "84922106"
  **[エラー出力の構成]**  
  [[エラー出力の構成]](../../2014/integration-services/configure-error-output.md) ダイアログ ボックスを使用して、この変換のエラー処理オプションを指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - child packages
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7390434b1565c64b63e62c89d1e61b13f18cd6a6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4a297324e5f51b3464fbf9e08568823e520a06bf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965702"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436929"
 ---
 # <a name="implementation-of-child-packages"></a>子パッケージの実装
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]を使用して負荷分散を実装すると、子パッケージが他のサーバーにインストールされ、利用可能な CPU 時間またはサーバー時間を活用することができます。 子パッケージを作成および実行するには、次の手順を実行します。  

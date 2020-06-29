@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d130a25fc3c3ec13a57451e89de4d362043a5962
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bdc0e93b901a6a4b00c908ec3f898b3ceea32ffb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922743"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435659"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Oracle CDC 表示スクリプト用の SQL Server の準備
   このダイアログ ボックスには、MSXDBCDC データベースを作成する SQL の準備スクリプトが表示されます。 Oracle CDC for SQL Server で使用するには、このデータベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上に配置する必要があります。  
