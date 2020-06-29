@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 86ce196fa2f7fc90d1ed3f5786881cd30ab316ad
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c71fbba23f1e3c7e4f7f628733f2efadb963ee78
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966924"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429399"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>[ディメンション処理変換先エディター] ([マッピング] ページ)
   **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
@@ -38,7 +38,7 @@ ms.locfileid: "84966924"
  **変換先列**  
  使用できる変換先列を表示し、それぞれがマップされるかどうかを示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[ディメンション処理変換先エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
  [ディメンション処理変換先エディター &#40;[詳細設定] ページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  

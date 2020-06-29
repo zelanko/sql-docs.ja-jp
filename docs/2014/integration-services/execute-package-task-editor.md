@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b9e114802c6e69467ba9438ee4c525ef85e73024
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 337b261c8c6b51125510ae463a673c746d7d6604
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966842"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429289"
 ---
 # <a name="execute-package-task-editor"></a>パッケージ実行タスク エディター
   パッケージ実行タスクを構成するには、パッケージ実行タスク エディターを使用します。 パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
@@ -68,7 +68,7 @@ ms.locfileid: "84966842"
  **場所**  
  子パッケージの場所を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**SQL Server**|場所を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに設定します。|  
 |**ファイル システム**|場所をファイル システムに設定します。|  
@@ -114,10 +114,10 @@ ms.locfileid: "84966842"
  **バインドするパラメーターまたは変数**  
  子パッケージに渡す値を含むパラメーターまたは変数を選択します。  
   
- **追加**  
+ **[追加]**  
  パラメーターまたは変数を子パッケージのパラメーターにマップする場合にクリックします。  
   
- **削除**  
+ **[削除]**  
  パラメーターまたは変数と子パッケージのパラメーターの間のマッピングを削除する場合にクリックします。  
   
   

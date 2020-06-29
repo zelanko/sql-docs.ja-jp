@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - less than or equal to operator (<=)
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a4b4c3cebb104dd57ad95945d2c790e657be0075
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d44a2298a626cd549739d54f4e277755f00f427e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969312"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428399"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (以下) (SSIS 式)
   最初の式が 2 番目の式以下かどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。  

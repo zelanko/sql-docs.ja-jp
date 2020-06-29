@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b10711f9c1940bc4cc307cb64a78227746863287
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0f8b5cdc7a800c4702d18e709a8ecb354b8ab9a8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966835"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429329"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>[Excel 変換先エディター] ([マッピング] ページ)
   **[Excel 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
@@ -38,7 +38,7 @@ ms.locfileid: "84966835"
  **変換先列**  
  マップされているかどうかに関係なく、使用できる変換先列を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[Excel 変換先エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
  [Excel 変換先エディター &#40;エラー出力ページ&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   

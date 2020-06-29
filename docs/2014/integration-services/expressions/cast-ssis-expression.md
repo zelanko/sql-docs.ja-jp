@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d94df6a59043bee136b0dc42ad8fb013c6c77456
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6d878306f095725c459a8d45ae8482d5f73e5f30
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967482"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429079"
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 式)
   式のあるデータ型を別のデータ型に明示的に変換します。 キャスト演算子は、切り捨て演算子としても機能できます。
@@ -139,7 +139,7 @@ ms.locfileid: "84967482"
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)[演算子 &#40;ssis 式&#41;](operators-ssis-expression.md) [Integration Services &#40;Ssis&#41; 式](integration-services-ssis-expressions.md)[でのデータ型 Integration Services](integration-services-data-types-in-expressions.md)式
 
 

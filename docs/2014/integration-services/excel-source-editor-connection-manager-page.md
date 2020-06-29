@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5c154b22d6469df034f4ec7cc6be77b2e7192913
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e80466c4f4346ec0ea815e4a115eb571b2e01ecc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966822"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429309"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>[Excel ソース エディター] ([接続マネージャー] ページ)
   **[Excel ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ノードを使用すると、変換元として [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] ブックを選択して使用できます。 Excel ソースは、既存のブックのワークシートまたは名前付き範囲からデータを読み取ります。  
@@ -38,7 +38,7 @@ ms.locfileid: "84966822"
  **データアクセスモード**  
  ソースからデータを選択する方法を指定します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |[テーブルまたはビュー]|Excel ファイルのワークシートまたは名前付き範囲からデータを取得します。|  
 |[テーブル名またはビュー名の変数]|ワークシートまたは範囲の名前を変数に指定します。<br /><br /> **関連情報:** [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)|  
@@ -78,7 +78,7 @@ ms.locfileid: "84966822"
  **[変数名]**  
  SQL クエリのテキストを含む変数を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Excel ソースエディター &#40;[列] ページ&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
  [Excel ソースエディター &#40;エラー出力ページ&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   

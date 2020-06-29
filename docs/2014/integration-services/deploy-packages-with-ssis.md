@@ -17,14 +17,14 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f30221e3afb898834fcc13476760499fd3a5f9e8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a2f5103c093666d59fb36b978e17dff5b51a0cdc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951842"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429769"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS チュートリアル:パッケージの配置
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージを別のコンピューターへ簡単に配置できるツールが用意されています。 この配置ツールでは、パッケージに必要な構成やファイルなどの依存関係を管理することもできます。 このチュートリアルでは、これらのツールを使用して、ターゲット コンピューターにパッケージとその依存関係をインストールする方法を学習します。
@@ -44,7 +44,7 @@ ms.locfileid: "84951842"
 ## <a name="what-you-will-learn"></a>学習する内容
  で使用できる新しいツール、コントロール、および機能について理解を深めるには、それらを使用することをお勧めし [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ます。 このチュートリアルでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加する手順を紹介します。 プロジェクトが完成したら、配置バンドルを作成し、バンドルを目的のコンピューターにコピーして、そのコンピューターにパッケージをインストールします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
  このチュートリアルは、ファイルシステムの基本的な操作について理解しているが、で利用可能な新機能の公開を制限しているユーザーを対象としてい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ます。 このチュートリアルで使用する基本的な概念について理解を深めるために [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 、最初に次のチュートリアルを完了しておくと役に立つ場合があります。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [SQL Server インポートおよびエクスポートウィザード](import-export-data/start-the-sql-server-import-and-export-wizard.md)と[SSIS チュートリアル: 簡単な ETL パッケージの作成](../integration-services/ssis-how-to-create-an-etl-package.md)。
 
  **ソース コンピューター:** 配置バンドルを作成するコンピューターには、次のコンポーネントがインストールされている必要があります。
