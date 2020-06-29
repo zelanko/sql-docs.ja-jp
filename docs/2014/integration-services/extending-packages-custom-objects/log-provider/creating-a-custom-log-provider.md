@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - custom log providers [Integration Services], creating
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e6486f87072b203da5240f01dc5c3a4e1a948fa8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f382500373abe5dd35380c2ad901362c44d26413
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968772"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427509"
 ---
 # <a name="creating-a-custom-log-provider"></a>カスタム ログ プロバイダーの作成
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイム環境には広範なログ記録機能があります。 ログを使用すると、パッケージの実行中に発生するイベントをキャプチャできます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、さまざまなログ プロバイダーを使用でき、ログを作成して XML、テキスト、データベースなどの形式で保存したり、Windows イベント ログに格納したりできます。 これらのログ プロバイダーまたは出力形式の中に要件を満たすものがない場合は、カスタム ログ プロバイダーを作成できます。
@@ -74,7 +74,7 @@ public class MyLogProvider : LogProviderBase
 
 ![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  カスタムログ[プロバイダーのコーディング](coding-a-custom-log-provider.md)カスタム[ログプロバイダーのユーザーインターフェイスを開発](developing-a-user-interface-for-a-custom-log-provider.md)する
 
 

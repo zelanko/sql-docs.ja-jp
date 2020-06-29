@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SSIS Script component, configuring
 - Script component [Integration Services], configuring
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2544c0249567e05eb3a3e3d7a297ec45fdedc8d8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e322478509ca27abf090f528d6b0d67b6340499b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967302"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426399"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成
   スクリプト コンポーネント内でカスタム コードを記述する前に、作成するデータ フロー コンポーネントの種類 (変換元、変換、または変換先) を選択し、 **[スクリプト変換エディター]** でスクリプト コンポーネントのメタデータおよびプロパティを構成する必要があります。
@@ -127,7 +127,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
 
 ![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [スクリプト コンポーネントのコーディングおよびデバッグ](coding-and-debugging-the-script-component.md)
 
 

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - tasks [Integration Services], custom
 - TaskHost object
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d9322c7e497259695f97933fe9be8a512be6bbe7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0df04b8388bc54f0181e5d5b7bb7600faece6260
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968662"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427229"
 ---
 # <a name="developing-a-custom-task"></a>カスタム タスクの開発
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] は、作業単位を実行するタスクを使用して、データの抽出、変換、および読み込みをサポートします。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、SQL ステートメントの実行から、FTP サイトからのファイルのダウンロードまで、頻繁に使用される操作を実行するためのさまざまなタスクが用意されています。 用意されているタスクとサポートされている操作が、要件を完全には満たない場合は、カスタム タスクを作成できます。  
@@ -86,7 +86,7 @@ ms.locfileid: "84968662"
   
 ![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スクリプトタスクによるパッケージの拡張](../../extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
  [スクリプティング ソリューションとカスタム オブジェクトとの比較](../../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   

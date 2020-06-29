@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services], creating
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d9226cfd55b6851779564baced0c745e8a17686b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 78b344d355a048a9933648283af4654f8ff692cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968765"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427529"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>カスタム Foreach 列挙子の作成
   カスタム foreach 列挙子の作成手順は、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の他のカスタム オブジェクトの作成手順と同様です。  
@@ -78,7 +78,7 @@ namespace Microsoft.Samples.SqlServer.Dts
   
 ![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム Foreach 列挙子のコーディング](coding-a-custom-foreach-enumerator.md)   
  [カスタム ForEach 列挙子用ユーザー インターフェイスの開発](developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   

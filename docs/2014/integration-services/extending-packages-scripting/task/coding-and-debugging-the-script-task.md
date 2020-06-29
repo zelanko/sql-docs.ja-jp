@@ -18,14 +18,14 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 24e264ad0f30a8cf3ec454405f5d40a301ce2f49
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 76cff13a67d0109e7215ee16285e49e05b0a72c6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967232"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425989"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>スクリプト タスクのコーディングおよびデバッグ
   **[スクリプト タスク エディター]** でスクリプト タスクを構成したら、スクリプト タスク開発環境でカスタム コードを記述します。
@@ -246,7 +246,7 @@ To open Help, press F1.
 
 ![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> [!INCLUDE[msCoName](../../../includes/msconame-md.md)] が提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  スクリプト[ソリューションでの他のアセンブリの参照](../referencing-other-assemblies-in-scripting-solutions.md)[スクリプトタスクエディターでのスクリプトタスクの構成](configuring-the-script-task-in-the-script-task-editor.md)
 
 

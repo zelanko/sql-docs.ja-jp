@@ -14,14 +14,14 @@ helpviewer_keywords:
 - packages [Integration Services], logs
 - Integration Services packages, log providers
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 257fec0f1d7ce59ce84cc3c54b9b5d105440a6f1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2bd0daad6090b5ad55144f74d513c7c698783700
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968720"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427419"
 ---
 # <a name="developing-a-custom-log-provider"></a>カスタム ログ プロバイダーの開発
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、パッケージの実行中に発生したイベントをキャプチャできるようにする広範なログ記録機能があります。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、さまざまなログ プロバイダーを使用でき、ログを作成して XML、テキスト、データベースなどの形式で保存したり、Windows イベント ログに格納したりできます。 提供されるログ プロバイダーと出力形式が、要件を必ずしも満たさない場合は、カスタム ログ プロバイダーを作成できます。

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9a0f52b9bd12a91d546e33787853dd8883d77b48
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 52fcf25a0334edcff17ba024da501b248e9176cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968452"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426469"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>スクリプト タスクを使用した Excel ファイルの操作
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には Excel 接続マネージャー、Excel ソース、Excel 変換先が用意されており、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ファイル形式のスプレッドシートに保存されているデータを操作できます。 このトピックで説明する方法では、スクリプト タスクを使用して、使用可能な Excel のデータベース (ワークブック ファイル) およびテーブル (ワークシートおよび名前付き範囲) に関する情報を取得します。 これらのサンプルに簡単な変更を加えて、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB プロバイダーによってサポートされる他のすべてのファイルベース データ ソースを操作することができます。  
@@ -63,7 +63,7 @@ ms.locfileid: "84968452"
   
     -   `Object` 型の `ExcelTables`。  
   
-3.  **Imports ステートメント**。 ほとんどのコード サンプルでは、スクリプト ファイルの先頭で次の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 名前空間のいずれかまたは両方をインポートする必要があります。  
+3.  **ステートメントをインポート**します。 ほとんどのコード サンプルでは、スクリプト ファイルの先頭で次の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 名前空間のいずれかまたは両方をインポートする必要があります。  
   
     -   ファイル システム操作用の `System.IO`。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "84968452"
   
     -   「`ExcelFile`.  
   
-         または  
+         \- または -  
   
     -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで変数を選択し `ExcelFile` ます。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "84968452"
   
     -   「`ExcelFileExists`.  
   
-         または  
+         \- または -  
   
     -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで変数を選択し `ExcelFileExists` ます。  
   
@@ -154,7 +154,7 @@ public class ScriptMain
   
     -   型 `ExcelTable` を `ExcelFile` コンマで区切って入力します。`.`  
   
-         または  
+         \- または -  
   
     -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで、 `ExcelTable` 変数と変数を選択し `ExcelFile` ます。  
   
@@ -162,7 +162,7 @@ public class ScriptMain
   
     -   「`ExcelTableExists`.  
   
-         または  
+         \- または -  
   
     -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで変数を選択し `ExcelTableExists` ます。  
   
@@ -261,7 +261,7 @@ public class ScriptMain
   
     -   「`ExcelFolder`」と入力します。  
   
-         または  
+         \- または -  
   
     -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで [excelfolder] 変数を選択します。  
   
@@ -269,7 +269,7 @@ public class ScriptMain
   
     -   「`ExcelFiles`.  
   
-         または  
+         \- または -  
   
     -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで [excelfiles] 変数を選択します。  
   
@@ -336,7 +336,7 @@ public class ScriptMain
   
     -   「`ExcelFile`.  
   
-         または  
+         \- または -  
   
     -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで [excelfile] 変数を選択します。  
   
@@ -344,7 +344,7 @@ public class ScriptMain
   
     -   「`ExcelTables`.  
   
-         または  
+         \- または -  
   
     -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで [excelitems] 変数を選択します。  
   
@@ -449,7 +449,7 @@ public class ScriptMain
   
     -   各変数の名前をコンマで区切って入力します。  
   
-         または  
+         \- または -  
   
     -   プロパティフィールドの横にある省略記号ボタン ([**...**]) をクリックし、[**変数の選択**] ダイアログボックスで変数を選択します。  
   
@@ -542,7 +542,7 @@ public class ScriptMain
   
 ![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Excel 接続マネージャー](../connection-manager/excel-connection-manager.md)   
  [Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する](../control-flow/foreach-loop-container.md)  
   

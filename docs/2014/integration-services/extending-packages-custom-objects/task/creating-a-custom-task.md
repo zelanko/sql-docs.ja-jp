@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom tasks [Integration Services], creating
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 84ce9053d16e0b00cfb5d04b0ee23fc08067a28c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dc1aeb650810f9b6d580dabcd22091a2e1eb9d49
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968653"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427259"
 ---
 # <a name="creating-a-custom-task"></a>カスタム タスクの作成
   カスタム タスクの作成手順は、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の他のカスタム オブジェクトの作成手順と同様です。  
@@ -92,7 +92,7 @@ End Class 'MyTask
   
 ![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタムタスクの作成](creating-a-custom-task.md)   
  [カスタムタスクのコーディング](coding-a-custom-task.md)   
  [カスタム タスク用ユーザー インターフェイスの開発](developing-a-user-interface-for-a-custom-task.md)  
