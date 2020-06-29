@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5ef142bf30473222bb39babce35b6bac59a6b848
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6d25aea1c1b42015c0384460a166d937d8c4919c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972362"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419589"
 ---
 # <a name="xml-source-editor-error-output-page"></a>[XML ソース エディター] ([エラー出力] ページ)
   **[XML ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
@@ -49,7 +49,7 @@ ms.locfileid: "84972362"
  適用****  
  選択したセルにエラー処理オプションを適用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[XML ソースエディター &#40;接続マネージャー] ページ&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
  [[XML ソースエディター &#40;列] ページ&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   

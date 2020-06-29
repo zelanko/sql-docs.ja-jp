@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1c7bb6e33dfd2ee6640e9588011d3686a72a0188
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbfc2cb7419f05884a80244445c6ce418576a402
+ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68140669"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409351"
 ---
 # <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup。 fn_available_backups (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  指定されたデータベースに使用可能なバックアップ ファイルの 0 行、1 行、または複数の行から成るテーブルを返します。 返されるバックアップファイルは、によっ[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]て作成されたバックアップです。  
+  指定されたデータベースに使用可能なバックアップ ファイルの 0 行、1 行、または複数の行から成るテーブルを返します。 返されるバックアップファイルは、によって作成されたバックアップです [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ LSN にギャップがある場合は、ログチェーンが中断されてい�
 |last_lsn|数値 (25, 0)|バックアップ セットの次のログ レコードのログ シーケンス番号。 NULL にすることができます。|  
 |backup_start_date|DATETIME|バックアップ操作が開始された日付と時刻。|  
 |backup_finish_date|NVARCHAR (128)|バックアップ操作が終了した日付と時刻。|  
-|machine_name|NVARCHAR (128)|SQL Server インスタンスがインストールされ、実行[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]されているコンピューターの名前。|  
+|machine_name|NVARCHAR (128)|SQL Server インスタンスがインストールされ、実行されているコンピューターの名前 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。|  
 |last_recovery_fork_id|一意|最後の復旧分岐の id 番号。|  
 |first_recovery_fork_id|一意|開始復旧分岐の ID。 データバックアップの場合、first_recovery_fork_guid は last_recovery_fork_guid と同じになります。|  
 |fork_point_lsn|数値 (25, 0)|first_recovery_fork_id が last_recovery_fork_id に等しくない場合は、分岐ポイントのログ シーケンス番号。 これらが同じである場合、この値は NULL になります。|  
@@ -73,16 +73,16 @@ LSN にギャップがある場合は、ログチェーンが中断されてい�
 ### <a name="permissions"></a>アクセス許可  
  この関数に対する**SELECT**権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、データベース ' MyDB ' に[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]対してバックアップされている利用可能なすべてのバックアップを一覧表示します。  
+## <a name="examples"></a>例  
+ 次の例では、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] データベース ' MyDB ' に対してバックアップされている利用可能なすべてのバックアップを一覧表示します。  
   
 ```  
 SELECT *   
-FROM managed_backup.fn_available_backups ('MyDB')  
+FROM msdb.managed_backup.fn_available_backups ('MyDB')  
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マネージバックアップを Microsoft Azure に SQL Server](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
  [Microsoft Azure に格納されたバックアップからの復元](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
   

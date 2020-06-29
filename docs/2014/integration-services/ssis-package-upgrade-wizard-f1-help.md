@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5f141b220284e758a8c7b3038ccc6cc064bd527f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61bce69d3a51d5ea238d3ed6e29f38660277ad64
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962523"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420989"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS パッケージ アップグレード ウィザードの F1 ヘルプ
   SSIS パッケージアップグレードウィザードを使用して、 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] パッケージと [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] パッケージを現在のリリースののパッケージ形式にアップグレードし [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ます。  
@@ -40,7 +40,7 @@ ms.locfileid: "84962523"
   
 -   [SSIS パッケージアップグレードウィザードを &#40;してパッケージをアップグレード&#41;](../../2014/integration-services/upgrading-the-packages-ssis-package-upgrade-wizard.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages.md)  
   
   

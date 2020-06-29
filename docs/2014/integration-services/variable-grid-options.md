@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Choose Variable Columns dialog box
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b0e53d710c6c3310641a30144a42ea5f614dffd6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6cf956c2a29e03095b12cc323d267ebc0c43ae3e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972582"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420129"
 ---
 # <a name="variable-grid-options"></a>可変グリッドのオプション
   **[可変グリッドのオプション]** ダイアログ ボックスを使用して、 **[変数]** ウィンドウに表示される列を選択したり、変数の一覧に適用するフィルターを選択したりします。 対応する変数のプロパティの詳細については、「 [Integration Services (SSIS) の変数](integration-services-ssis-variables.md)」を参照してください。  
@@ -49,9 +49,9 @@ ms.locfileid: "84972582"
   
 -   **説明**  
   
--   **条件**  
+-   **式**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [変数ウィンドウ](../../2014/integration-services/variables-window.md)   
  [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)   
  [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)   

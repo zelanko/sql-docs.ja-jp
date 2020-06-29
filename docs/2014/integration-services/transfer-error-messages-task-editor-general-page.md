@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Error Messages Task Editor
 ms.assetid: 67b21f48-4795-4128-81dc-743f7a95ef74
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3a89818eac194ff6d980fcfc801014584ee1f724
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c656b2399586025a316bb32c97496efad0648e93
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972853"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420769"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>[エラー メッセージ転送タスク エディター] ([全般] ページ)
   **[エラー メッセージ転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、エラー メッセージ転送タスクに名前を付けて説明を記述することができます。 エラー メッセージ転送タスクは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ユーザー定義エラー メッセージを転送します。 このタスクの詳細については、「 [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md)」を参照してください。  
@@ -33,7 +33,7 @@ ms.locfileid: "84972853"
  **説明**  
  エラー メッセージ転送タスクの説明を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services タスク](control-flow/integration-services-tasks.md)   
  [[エラーメッセージ転送タスクエディター &#40;メッセージ] ページ&#41;](../../2014/integration-services/transfer-error-messages-task-editor-messages-page.md)   

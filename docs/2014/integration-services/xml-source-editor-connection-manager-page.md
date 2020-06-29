@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e0df8c4cf72574df16ad42445434592faeae8548
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ead9ad63b6dfc7d144c0d9e748ad01b847774d85
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972372"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419729"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>[XML ソース エディター] ([接続マネージャー] ページ)
   **[XML ソース エディター]** の **[接続マネージャー]** ページを使用すると、XML ファイルと、XML データを変換する XSD を指定できます。  
@@ -29,7 +29,7 @@ ms.locfileid: "84972372"
  **データアクセスモード**  
  ソースからデータを選択する方法を指定します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |[XML ファイルの場所]|XML ファイルからデータを取得します。|  
 |[変数からの XML ファイル]|XML ファイルの名前を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)|  
@@ -64,7 +64,7 @@ ms.locfileid: "84972372"
  **[変数名]**  
  XML データを含む変数を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[XML ソースエディター &#40;列] ページ&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [XML ソースエディター &#40;エラー出力ページ&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   

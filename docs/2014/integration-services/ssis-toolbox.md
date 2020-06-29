@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.dts.designer.toolbox.F1
 - sql12.dts.designer.toolboxfavorites.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5ed9a0b96fced32a761e41d31c06447511fb4334
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed35218c84c77d3116ab8c897fe51fab5d6359aa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962402"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420889"
 ---
 # <a name="ssis-toolbox"></a>SSIS ツールボックス
   新しい **SSIS ツールボックス**には、ローカル コンピューターにインストールされているすべてのコンポーネント (SQL Server 2008 および 2008 R2 用に作成されたサードパーティのコンポーネントを含みます) が自動的に表示されます。 他のコンポーネントをインストールするときは、ツールボックスの内側を右クリックし、 **[ツールボックスの更新]** をクリックして、コンポーネントを追加します。  

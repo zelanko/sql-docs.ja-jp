@@ -1,7 +1,7 @@
 ---
 title: external_library_files (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 06/25/2020
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: language-reference
@@ -17,22 +17,22 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2f1bbdc3936dc6295b9ecc51b937e50cae20670
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 8068df01ade7361c542150a3ee1f98ac137110e8
+ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80664227"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409361"
 ---
 # <a name="sysexternal_library_files-transact-sql"></a>sys.external_library_files (Transact-SQL)  
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 外部ライブラリを構成するファイルごとに1行の情報を一覧表示します。
 
 |列名 |データ型 |説明|
 |------|------|-----|
-|external_library_id | int |外部ライブラリオブジェクトの ID。 |
+|external_library_id | INT |外部ライブラリオブジェクトの ID。 |
 |コンテンツ |varbinary(max) |外部ライブラリファイルの成果物のコンテンツ。 |
 |platform |tinyint |SQL Server がインストールされているホストプラットフォームの ID。 |
 |platform_desc | nvarchar(60) |ホストプラットフォームの名前。 有効な値は ' WINDOWS '、' LINUX ' です。 |
@@ -41,4 +41,3 @@ ms.locfileid: "80664227"
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
 [外部ライブラリの作成](../../t-sql/statements/create-external-library-transact-sql.md)  
-
