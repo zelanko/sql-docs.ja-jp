@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1a393352f7ec0f9384ed2d30b2909c9d9f2c1dc0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 81be066d92ef1e19a141414dad4359b60efca2f9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964622"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423159"
 ---
 # <a name="query-builder"></a>[クエリ ビルダー]
   **[クエリ ビルダー]** ダイアログ ボックスを使用すると、SQL 実行タスク、OLE DB 変換元と OLE DB 変換先、および参照変換で使用するクエリを作成できます。  
@@ -45,13 +45,13 @@ ms.locfileid: "84964622"
  **Toolbar**  
  ツール バーは、データセットの管理、表示するペインの選択、クエリ機能の制御に使用します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[ダイアグラム ペインの表示/非表示]**|**[ダイアグラム]** ペインの表示と非表示を切り替えます。|  
 |**[グリッド ペインの表示/非表示]**|**[グリッド]** ペインの表示と非表示を切り替えます。|  
 |**[SQL ペインの表示/非表示]**|**SQL**ペインの表示と非表示を切り替えます。|  
 |**[結果ペインの表示/非表示]**|**[結果]** ペインの表示と非表示を切り替えます。|  
-|**[実行]**|クエリを実行します。 結果は結果ペインに表示されます。|  
+|**実行**|クエリを実行します。 結果は結果ペインに表示されます。|  
 |**[SQL の確認]**|SQL ステートメントが有効であることを確認します。|  
 |**昇順で並べ替え**|[グリッド] ペインで選択した列の出力行を昇順で並べ替えます。|  
 |**降順で並べ替え**|[グリッド] ペインで選択した列の出力行を降順で並べ替えます。|  
@@ -69,7 +69,7 @@ ms.locfileid: "84964622"
 |**SQL**ペイン|クエリを SQL テストとして表示します。 **[ダイアグラム]** ペインおよび **[グリッド]** ペインで行われた変更がここに表示されます。このペインで行われた変更は、 **[ダイアグラム]** ペインおよび **[グリッド]** ペインに表示されます。|  
 |**結果**ペイン|ツール バーの **[実行]** をクリックしたときに、クエリの結果が表示されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL 実行タスク](control-flow/execute-sql-task.md)   
  [OLE DB ソース](data-flow/ole-db-source.md)   
  [OLE DB の宛先](data-flow/ole-db-destination.md)   

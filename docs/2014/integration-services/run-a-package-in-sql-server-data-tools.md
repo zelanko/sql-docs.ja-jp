@@ -12,14 +12,14 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - SQL Server Integration Services packages, running
 ms.assetid: 318e6beb-5540-4101-82a5-18c9d47f0570
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ae5924e5fc1cad91b5e1511c61556ece70138dcb
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0bde1af5c63aa9d0956acd96b2267e7e0b104cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964549"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422909"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>SQL Server Data Tools でのパッケージの実行
   一般に、パッケージの開発、デバッグ、およびテストの段階では、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] でパッケージを実行します。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーからパッケージを実行すると、パッケージは常に即座に実行されます。  
@@ -48,7 +48,7 @@ ms.locfileid: "84964549"
   
 3.  OutputPath プロパティの値を更新して、デザイン時配置用に使用するフォルダーを指定し、 **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクトとパッケージの実行](packages/run-integration-services-ssis-packages.md)   
  [Integration Services &#40;SSIS&#41; パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)  
   

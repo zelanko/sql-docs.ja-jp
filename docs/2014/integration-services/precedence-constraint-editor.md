@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 ms.assetid: b10d4330-6e35-4037-b309-ef56efcd60c5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02cd814a3b4e52c8685d0df654c6e74071db9907
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ba2c9c0c870294069dd1feb4eaabb72211877cc4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964652"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423199"
 ---
 # <a name="precedence-constraint-editor"></a>優先順位制約エディター
   **[優先順位制約エディター]** ダイアログ ボックスを使用すると、優先順位制約を構成できます。  
@@ -33,7 +33,7 @@ ms.locfileid: "84964652"
 > [!NOTE]  
 >   優先順位制約を表す線は、 **[成功]** の場合は緑色、 **[失敗]** の場合は強調表示、 **[完了]** の場合は青色です。  
   
- **条件**  
+ **式**  
  操作として **[式]**、 **[式と制約]**、または **[式または制約]** を使用する場合は、式を入力するか、式ビルダーを起動して式を作成します。 式はブール値に評価される必要があります。  
   
  **テスト**  
@@ -51,7 +51,7 @@ ms.locfileid: "84964652"
 > [!NOTE]  
 >  この種類の優先順位制約は、緑色、強調表示、または青色の点線で示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [優先順位制約](control-flow/precedence-constraints.md)   
  [Integration Services タスク](control-flow/integration-services-tasks.md)   
  [Integration Services コンテナー](control-flow/integration-services-containers.md)   

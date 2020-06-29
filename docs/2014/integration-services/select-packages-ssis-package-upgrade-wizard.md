@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackages.f1
 ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f67103eedf14bb405ad1655d21803ec84e6ff0ca
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2db10085a886342511e6f2fd65ec1bcd38323803
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963742"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421919"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>[パッケージの選択] (SSIS パッケージ アップグレード ウィザード)
   **[パッケージの選択]** ページを使用すると、アップグレードするパッケージを選択できます。 このページには、ウィザードの **[ソースの場所を選択]** ページで指定した場所に格納されているパッケージが一覧表示されます。  
@@ -41,7 +41,7 @@ ms.locfileid: "84963742"
  **[選択項目に適用]**  
  選択したアップグレード パッケージの復号化に、指定したパスワードを適用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[ソースの場所] &#40;SSIS パッケージアップグレードウィザードを選択し&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
  [Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages.md)  
   

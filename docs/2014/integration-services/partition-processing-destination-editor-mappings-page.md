@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 42663cf447b2fe974e7cbe655f726f741fa0dab8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a179e78b2e17391ce243a4e6b51ef5bb49f67d68
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964720"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423399"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>[パーティション処理変換先エディター] ([マッピング] ページ)
   **[パーティション処理変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列をパーティション列にマップできます。  
@@ -41,7 +41,7 @@ ms.locfileid: "84964720"
  **変換先列**  
  マップされているかどうかに関係なく、使用できる変換先列を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[パーティション処理変換先エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
  [[パーティション処理変換先エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  

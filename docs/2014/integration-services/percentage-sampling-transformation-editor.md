@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Percentage Sampling Transformation Editor
 ms.assetid: 2c40d804-26a3-4d35-809b-bc923d83d451
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1734dd95a0744e08e57bcdff3a80f882b926c2ba
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ee1227c874839c81625d054793e554a07e95b4a3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964693"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423329"
 ---
 # <a name="percentage-sampling-transformation-editor"></a>比率サンプリング変換エディター
   **[比率サンプリング変換エディター]** ダイアログ ボックスを使用すると、指定された行の割合を使用して、入力の一部をサンプルに分割できます。 この変換は、入力を 2 つの別個の出力に分割します。  
@@ -40,7 +40,7 @@ ms.locfileid: "84964693"
  **[次のランダム シードを使用する]**  
  変換でサンプルを作成するために使用する乱数ジェネレーターのサンプリング シードを指定します。 このオプションは、開発およびテスト用にのみ使用することをお勧めします。 ランダム シードが指定されない場合は、Microsoft Windows のティック数が使用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [行サンプリング変換](data-flow/transformations/row-sampling-transformation.md)  
   

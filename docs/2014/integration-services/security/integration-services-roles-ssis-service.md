@@ -15,14 +15,14 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 84f2a00b7376ae8869cafa36f8a4ab30d74fda19
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5bc65a7a3ff30deb429ceeb8458ac477432a758c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963922"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422089"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services のロール (SSIS サービス)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージへのアクセスを制御するための3つの固定データベースレベルロール、 `db_ssisadmin` 、 **db_ssisltduser**、および**db_ssisoperator**が含まれています。 ロールは、のデータベースに保存されているパッケージにのみ実装でき `msdb` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 パッケージにロールを割り当てるには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用します。 ロールの割り当てはデータベースに保存され `msdb` ます。  
@@ -30,11 +30,11 @@ ms.locfileid: "84963922"
 ## <a name="read-and-write-actions"></a>読み取りアクションと書き込みアクション  
  次の表で、Windows の読み取りおよび書き込みアクションと、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]での固定データベース レベル ロールの読み取りおよび書き込みアクションについて説明します。  
   
-|ロール|読み取りアクション|書き込みアクション|  
+|Role|読み取りアクション|書き込みアクション|  
 |----------|-----------------|------------------|  
 |`db_ssisadmin`<br /><br /> または<br /><br /> `sysadmin`|独自のパッケージを列挙する。<br /><br /> すべてのパッケージを列挙する。<br /><br /> 独自のパッケージを表示する。<br /><br /> すべてのパッケージを表示する。<br /><br /> 独自のパッケージを実行する。<br /><br /> すべてのパッケージを実行する。<br /><br /> 独自のパッケージをエクスポートする。<br /><br /> すべてのパッケージをエクスポートする。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント内のすべてのパッケージを実行する。|パッケージをインポートする。<br /><br /> 独自のパッケージを削除する。<br /><br /> すべてのパッケージを削除する。<br /><br /> 独自のパッケージのロールを変更する。<br /><br /> すべてのパッケージのロールを変更する。<br /><br /> <br /><br /> 重要 db_ssisadmin ロールおよび dc_admin ロールのメンバーは、特権を sysadmin に昇格させることができます。 ** \* \* \* \* ** このような特権の昇格が発生するのは、それらのロールが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを変更でき、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェントの sysadmin セキュリティ コンテキストを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージを実行できるためです。 メンテナンス プラン、データ コレクション セット、およびその他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行時にこの特権の昇格を防ぐには、特権が制限されたプロキシ アカウントを使用するようにパッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを構成するか、db_ssisadmin ロールおよび dc_admin ロールには sysadmin メンバーのみを追加するようにします。|  
 |**db_ssisltduser**|独自のパッケージを列挙する。<br /><br /> すべてのパッケージを列挙する。<br /><br /> 独自のパッケージを表示する。<br /><br /> 独自のパッケージを実行する。<br /><br /> 独自のパッケージをエクスポートする。|パッケージをインポートする。<br /><br /> 独自のパッケージを削除する。<br /><br /> 独自のパッケージのロールを変更する。|  
-|**db_ssisoperator**|すべてのパッケージを列挙する。<br /><br /> すべてのパッケージを表示する。<br /><br /> すべてのパッケージを実行する。<br /><br /> すべてのパッケージをエクスポートする。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント内のすべてのパッケージを実行する。|None|  
+|**db_ssisoperator**|すべてのパッケージを列挙する。<br /><br /> すべてのパッケージを表示する。<br /><br /> すべてのパッケージを実行する。<br /><br /> すべてのパッケージをエクスポートする。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント内のすべてのパッケージを実行する。|なし|  
 |**Windows 管理者**|実行中のすべてのパッケージの実行時の詳細を表示する。|現在実行中のパッケージをすべて停止する。|  
   
 ## <a name="sysssispackages-table"></a>sysssispackages テーブル  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledestinationconnectionmanager.f1
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a50ec57973deca40accbc98970919363681be63f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a85e0a0c15e42d90f49ebb207ede92a0d8ae3994
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964632"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423169"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>[RAW ファイル変換先エディター] ([接続マネージャー] ページ)
   ファイルに RAW データを書き込むための RAW ファイル変換先を構成するには、RAW ファイル変換先エディターを使用します。  
@@ -60,7 +60,7 @@ ms.locfileid: "84964632"
  **出力のエイリアス**  
  出力列に使用する代替名を指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RAW ファイル変換先](data-flow/raw-file-destination.md)  
   
   

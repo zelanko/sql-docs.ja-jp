@@ -10,14 +10,14 @@ helpviewer_keywords:
 - modifying variables
 - variables [Integration Services], properties
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 53eeb46b5ce23a8976c9de1aaace7959bc708a84
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4994947c8f23c0e3f00deecc8d71d50d6bd28100
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963083"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421459"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>ユーザー定義変数のプロパティを設定する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]でユーザー定義変数のプロパティを設定するには、次の機能のいずれかを使用します。  
@@ -95,7 +95,7 @@ ms.locfileid: "84963083"
   
 8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)   
  [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)   
  [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  

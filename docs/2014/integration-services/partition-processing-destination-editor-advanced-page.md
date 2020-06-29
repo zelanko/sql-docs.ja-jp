@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2fd341302c20d0ac79dad4169c13d1e1bca45d6c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53db6110e47f5664e7107090179b6ac7bcf4a361
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964734"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423459"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>[パーティション処理変換先エディター] ([詳細設定] ページ)
   **[パーティション処理変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、エラー処理を設定できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "84964734"
  **[キー エラー アクション]**  
  許容されないキー値を持つレコードを処理する方法を指定します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|不正なキー値を不明な値に変換します。|  
 |**DiscardRecord**|レコードを破棄します。|  
@@ -52,7 +52,7 @@ ms.locfileid: "84964734"
  **[エラー時のアクション]**  
  **[エラー時に停止する]** を選択した場合は、エラーのしきい値に達した場合に実行する操作を指定します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**StopProcessing**|処理を停止します。|  
 |**StopLogging**|ログ記録エラーを停止します。|  
@@ -60,7 +60,7 @@ ms.locfileid: "84964734"
  **[見つからないキー]**  
  見つからないキーのエラーに対する操作を指定します。 既定では、この値は **[ReportAndContinue]** です。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
@@ -69,7 +69,7 @@ ms.locfileid: "84964734"
  **重複するキー**  
  重複キーのエラーに対する操作を指定します。 既定では、この値は **IgnoreError**です。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
@@ -78,7 +78,7 @@ ms.locfileid: "84964734"
  **Null キーが不明な値に変換されました**  
  NULL キーが不明な値に変換された場合に実行する操作を指定します。 既定では、この値は **IgnoreError**です。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
@@ -87,7 +87,7 @@ ms.locfileid: "84964734"
  **Null キーは使用できません**  
  NULL キーが許可されていない場合に NULL キーが検出されたときに実行する操作を指定します。 既定では、この値は **[ReportAndContinue]** です。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
@@ -99,7 +99,7 @@ ms.locfileid: "84964734"
  **[...]**  
  エラー ログのパスを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [パーティション処理変換先エディター ([マッピング] ページ)](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
   

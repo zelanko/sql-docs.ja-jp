@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledestinationcolumns.f1
 ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 444689420ad7f83568fc584257329f5133497f38
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a0ceb00767715c3f0b5d149ecd7c8ac3116cf78
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964642"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423209"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>[Raw ファイル変換先エディター] ([列] ページ)
   ファイルに RAW データを書き込むための RAW ファイル変換先を構成するには、RAW ファイル変換先エディターを使用します。  
@@ -60,7 +60,7 @@ ms.locfileid: "84964642"
  **出力のエイリアス**  
  出力列に使用する代替名を指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RAW ファイル変換先](data-flow/raw-file-destination.md)  
   
   

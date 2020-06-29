@@ -10,14 +10,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], modifying
 - modifying connection managers
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c8581771394ed40f740ea83407b9acd47c6f4ddd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e435d5f3ea00707ba1b392058b118a06cfd7ce83
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963240"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421609"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>接続マネージャーのプロパティを設定する
   すべての接続マネージャーは **[プロパティ]** ウィンドウを使用して構成できます。  
@@ -72,7 +72,7 @@ ms.locfileid: "84963240"
   
 5.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS&#41; 接続の Integration Services &#40;](connection-manager/integration-services-ssis-connections.md)   
  [パッケージの接続マネージャーを追加、削除、または共有する](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   

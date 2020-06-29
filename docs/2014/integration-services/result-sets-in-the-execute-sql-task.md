@@ -10,14 +10,14 @@ helpviewer_keywords:
 - result sets [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 535ab473d8fe6cf9a89fafa1fc0c9f45b0096f7e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aaca4db8a4ae135424a49fb42a1a0918bdc931b7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964572"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422969"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>SQL 実行タスクにおける結果セット
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージでは、タスクが使用する SQL コマンドの種類によって、SQL 実行タスクに結果セットが返されるかどうかが決まります。 たとえば、通常、SELECT ステートメントは結果セットを返しますが、INSERT ステートメントは返しません。  
@@ -64,7 +64,7 @@ ms.locfileid: "84964572"
   
 |結果セットの種類|変数のデータ型|オブジェクトの種類|  
 |---------------------|---------------------------|--------------------|  
-|単一行|結果セット内の型列と互換性のあるすべての型|利用不可|  
+|単一行|結果セット内の型列と互換性のあるすべての型|適用なし|  
 |完全な結果セット|`Object`|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含むネイティブ接続マネージャー使用する場合、返されるオブジェクトは ADO `Recordset` です。<br /><br /> タスクで [!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーなどのマネージド接続マネージャーを使用する場合、返されるオブジェクトは `System.Data.DataSet` です。<br /><br /> 次の例に示すように、スクリプト タスクを使用して、`System.Data.DataSet` オブジェクトにアクセスできます。<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
 |XML|`Object`|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含むネイティブ接続マネージャー使用する場合、返されるオブジェクトは `MSXML6.IXMLDOMDocument` です。<br /><br /> タスクで接続マネージャーなどのマネージ接続マネージャーを使用する場合、 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 返されるオブジェクトは `System.Xml.XmlDocument` です。|  

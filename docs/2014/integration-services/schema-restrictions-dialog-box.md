@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Schema Restrictions dialog box
 ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e6d72b7f8cbb4aead7dfb87eb44fb5d943672433
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7746ef8a7fd0782524f9a6ecff194503cf3882d9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964132"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422299"
 ---
 # <a name="schema-restrictions-dialog-box"></a>[スキーマの制限] ダイアログ ボックス
   **[スキーマの制限]** ダイアログ ボックスを使用すると、Foreach ADO.NET Schema Rowset 列挙子に適用するスキーマの制限を設定できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "84964132"
  **[テキスト]**  
  制限を定義するテキストを入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Foreach ループエディター &#40;コレクションページ&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Foreach ループ コンテナー](control-flow/foreach-loop-container.md)  
   

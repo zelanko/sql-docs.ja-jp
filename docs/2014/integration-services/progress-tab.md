@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.progress.f1
 ms.assetid: a59cc952-fb73-4bd3-b5d2-f8397701e5d2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 27da51dc89038493d24447c402e2d4e2b79c4679
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3848ce670f54ebc509a901eacbe71a07be715f27
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964662"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423259"
 ---
 # <a name="progress-tab"></a>[進行状況] タブ
   **デザイナーの** [進行状況] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]パッケージを実行するときに、その進行状況を表示できます。 **[進行状況]** タブには、1) パッケージおよび実行可能ファイルの検証と実行の開始時刻、終了時刻、および経過時間、2) パッケージの情報または警告、3) 進行状況通知、4) パッケージの成功または失敗、5) パッケージの実行中に生成されたエラー メッセージなどが表示されます。  
@@ -25,7 +25,7 @@ ms.locfileid: "84964662"
   
  パッケージの実行が停止した後は、 **[進行状況]** タブは **[実行結果]** タブになります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS デザイナー](ssis-designer.md)  
   
   

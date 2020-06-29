@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8e9e9aef856276508ef557d465c20210e16f3073
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 743f6dcd75cc43bc3aa603ccb5d8733d983c8f97
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964202"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422339"
 ---
 # <a name="script-task-editor-script-page"></a>[スクリプト タスク エディター] \([スクリプト] ページ)
   **[スクリプト タスク エディター]** ダイアログ ボックスの **[スクリプト]** ページを使用すると、スクリプト プロパティを設定し、スクリプトによってアクセスできる変数を指定できます。  
@@ -56,7 +56,7 @@ ms.locfileid: "84964202"
  **[スクリプトの編集]**  
  スクリプトを作成または変更できる VSTA IDE が開きます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[全般] ページ](general-page-of-integration-services-designers-options.md)   
  [スクリプトタスクエディター &#40;[全般] ページ&#41;](../../2014/integration-services/script-task-editor-general-page.md)   

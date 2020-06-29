@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 07af1256f4935467d1230bf2987fde4cd02c5de7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4bf0b609574bc9ac12d5bc17210f89e7441bd2a3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963144"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421579"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>データ フロー パス エディターを使用してパスのプロパティを設定する
   パスは、2 つのデータ フロー コンポーネントを連結します。 パスのプロパティを設定する場合、データ フローには、2 つ以上の連結されたデータ フロー コンポーネントをあらかじめ含めておく必要があります。 詳細については、「 [データ フローでコンポーネントを追加または削除する](data-flow/add-or-delete-a-component-in-a-data-flow.md) 」と「 [データ フロー内でコンポーネントを連結する](data-flow/connect-components-in-a-data-flow.md)」を参照してください。  
@@ -35,7 +35,7 @@ ms.locfileid: "84963144"
   
 6.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services パス](data-flow/integration-services-paths.md)   
  [データ フロー](data-flow/data-flow.md)  
   

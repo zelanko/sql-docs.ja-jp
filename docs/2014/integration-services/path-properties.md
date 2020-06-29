@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 89b1e347-9579-4f6b-af74-c6519ea08eea
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bdd4c6f134af120b70546f6d27f0f8fc8aac672d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ca263b866fb6d5d7ceb6352f708f387d79cad4f7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964742"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423469"
 ---
 # <a name="path-properties"></a>パスのプロパティ
   オブジェクトモデルのデータフローオブジェクトには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンポーネント、入力、出力、入力列、および出力列のレベルで共通のプロパティとカスタムプロパティがあります。 多くのプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
@@ -37,7 +37,7 @@ ms.locfileid: "84964742"
 |[DestinationName]|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|パスに関連付けられた入力|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|パスに関連付けられた出力|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services パス](data-flow/integration-services-paths.md)   
  [共通プロパティ](../../2014/integration-services/common-properties.md)   
  [変換のカスタムプロパティ](data-flow/transformations/transformation-custom-properties.md)   

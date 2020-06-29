@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f172aa778cbaa959671da870521641147186f571
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 31dc7fca17ea5e00a242e8c32fb2a3514c5e7732
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964052"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422209"
 ---
 # <a name="script-transformation-editor-script-page"></a>[スクリプト変換エディター] ([スクリプト] ページ)
   **[スクリプト変換エディター]** ダイアログ ボックスの **[スクリプト]** タブを使用すると、スクリプトおよび関連プロパティを指定できます。  
@@ -29,7 +29,7 @@ ms.locfileid: "84964052"
  **プロパティ**  
  スクリプト変換のプロパティを表示および変更します。 表示されるプロパティの多くは読み取り専用です。 以下のプロパティを変更できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**説明**|スクリプト変換の目的を記述します。|  
 |**ロケール**|ロケールを指定して、順序付けおよび日時の変換に関する地域固有の情報を提供します。|  
@@ -43,7 +43,7 @@ ms.locfileid: "84964052"
  **[スクリプトの編集]**  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for APPLICATIONS (VSTA) を使用して、スクリプトを作成または変更します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [スクリプトコンポーネントの種類を選択](../../2014/integration-services/select-script-component-type.md)   
  [[スクリプト変換エディター] &#40;[入力列] ページ&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
