@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.columns.f1
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 44781385a12f880e71e635d2d5e6f76809923453
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 339f3de18df4a06533f97eaef8c69d01e6294491
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925833"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439549"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>[ADO NET 変換元エディター] ([列] ページ)
   **[ADO NET 変換元エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
@@ -41,7 +41,7 @@ ms.locfileid: "84925833"
  **出力列**  
  各出力列の一意な名前を表示します。 既定では選択された外部 (変換元) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 指定された名前は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーに表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[ADO NET 変換元エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
  [ADO NET 変換元エディター &#40;エラー出力ページ&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)  

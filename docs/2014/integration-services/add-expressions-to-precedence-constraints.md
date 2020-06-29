@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combining constraints
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93b9b60d3042e690d2e3e23b05131fabe384e945
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3b86869a2b5d2e1ecd93227355509170db2bd5c7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926113"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439669"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>優先順位制約に式を追加する
   優先順位制約では、優先順位付き実行可能ファイルと、制約付き実行可能ファイルの 2 つの実行可能ファイル間の制約を定義するために、式を使用できます。 これらの実行可能ファイルには、タスクまたはコンテナーを設定できます。 式は単独で使用することも、優先順位付き実行可能ファイルの実行結果と組み合わせて使用することもできます。 実行可能ファイルの実行結果は、成功または失敗のどちらかです。 優先順位制約の実行結果を構成する場合、実行結果を `Success`、`Failure`、または `Completion` に設定できます。 `Success` に設定した場合、優先順位付き実行可能ファイルは成功する必要があります。`Failure` に設定した場合、優先順位付き実行可能ファイルは失敗する必要があります。`Completion` は、優先順位付きタスクの成功または失敗にかかわらず、制約つき実行可能ファイルが実行されることを示します。 詳細については、「 [優先順位制約](control-flow/precedence-constraints.md)」を参照してください。  
@@ -47,8 +47,8 @@ ms.locfileid: "84926113"
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
 |制約|True|該当なし|True|  
 |制約|False|該当なし|False|  
-|正規表現|該当なし|True|True|  
-|正規表現|該当なし|False|False|  
+|式|該当なし|True|True|  
+|式|該当なし|False|False|  
 |制約と式の両方|True|True|True|  
 |制約と式の両方|True|False|False|  
 |制約と式の両方|False|True|False|  
@@ -67,7 +67,7 @@ ms.locfileid: "84926113"
 ## <a name="external-resources"></a>外部リソース  
  social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [複数の優先順位制約](../../2014/integration-services/multiple-precedence-constraints.md)   
  [優先順位制約](control-flow/precedence-constraints.md)  
   

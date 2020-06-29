@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.erroroutput.f1
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ec17acfb9be26fc08274d285cf98897768633b9b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6317ca0b8b53e3d9b70caf71d47b3b8bdb39d0b4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925763"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439539"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>[ADO NET 変換元エディター] ([エラー出力] ページ)
   **[ADO NET 変換元エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
@@ -55,7 +55,7 @@ ms.locfileid: "84925763"
  適用****  
  選択したセルにエラー処理オプションを適用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[ADO NET 変換元エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
  [[ADO NET 変換元エディター] &#40;[列] ページ&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)  

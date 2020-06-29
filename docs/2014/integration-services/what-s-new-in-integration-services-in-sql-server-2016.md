@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1d17451c8706722b0dac21d777f35a17fe319799
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84f0b668407c89e1d6acc3c8cfbda73f129ca19a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972472"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439859"
 ---
 # <a name="what39s-new-integration-services"></a>新機能 (Integration Services)&#39;
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]は、以前のリリースから変更されていません。  
@@ -31,7 +31,7 @@ ms.locfileid: "84972472"
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] では、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2 で `ValidationDetails` プロパティが導入されました。 その時点では、この新しいプロパティは発表されることも文書化されることもありませんでした。 `ValidationDetails` プロパティは、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] と SQL Server 2016 でも利用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 2014 の各エディションがサポートする機能](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
   

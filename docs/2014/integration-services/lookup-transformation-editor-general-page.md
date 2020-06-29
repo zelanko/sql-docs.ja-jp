@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.general.f1
 ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 19426293c9a27b82acc931904e55f1ddd2cd3811
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e1798e5a65c27e10de7da608b391d8df3f6e7d03
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966022"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440219"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>[参照変換エディター] ([全般] ページ)
   [参照変換エディター] ダイアログ ボックスの **[全般]** ページを使用して、キャッシュ モードや接続の種類を選択し、一致するエントリがない行の処理方法を指定します。  
@@ -49,7 +49,7 @@ ms.locfileid: "84966022"
 ## <a name="external-resources"></a>外部リソース  
  blogs.msdn.com のブログ「 [キャッシュ モードの参照](https://go.microsoft.com/fwlink/?LinkId=219518) 」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キャッシュ接続マネージャー](connection-manager/cache-connection-manager.md)   
  [[参照変換エディター] &#40;接続ページ&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [[参照変換エディター] &#40;[列] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   

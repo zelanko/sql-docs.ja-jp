@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Audit Transformation Editor
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6a58d216b33f5fb8fd582050374d06463fd2c99e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95c144141e26415ac576589d36b98b54c52eecb6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925528"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439439"
 ---
 # <a name="audit-transformation-editor"></a>監査変換エディター
   監査変換により、パッケージが実行される環境に関するデータをパッケージ内のデータ フローに含めることができます。 たとえば、パッケージ、コンピューター、および演算子の名前をデータ フローに追加できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、この情報を提供するシステム変数が含まれています。  
@@ -32,7 +32,7 @@ ms.locfileid: "84925528"
  **[監査の種類]**  
  監査情報を得るために使用できるシステム変数を選択します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[実行インスタンスの GUID]**|パッケージの実行インスタンスを個別に識別する GUID を挿入します。|  
 |**[パッケージ ID]**|パッケージを個別に識別する GUID を挿入します。|  
@@ -44,7 +44,7 @@ ms.locfileid: "84925528"
 |**タスク名**|監査変換が関連付けられているデータ フロー タスクの名前を挿入します。|  
 |**タスク ID**|監査変換が関連付けられているデータ フロー タスクを個別に識別する GUID を挿入します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

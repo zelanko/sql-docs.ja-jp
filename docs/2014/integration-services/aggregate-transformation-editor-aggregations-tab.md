@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4799df229e96ce8488614d8ec7b0755332360fbc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 59bf17aa0c13fcc771a75253d5ac9f46a160c57c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925593"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439509"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>[集計変換エディター] ([集計] タブ)
   **[集計変換エディター]** ダイアログ ボックスの **[集計]** タブを使用すると、集計列および集計プロパティを指定できます。 複数の集計を適用することができます。 この変換ではエラー出力を生成しません。  
@@ -43,10 +43,10 @@ ms.locfileid: "84925593"
  **[キー スケール]**  
  [詳細設定] 画面で、集計によって書き込むことのできるキーの概数をオプションで指定します。 既定では、このオプションの値は **[未指定]** です。 **[キー スケール]** プロパティと **[キー]** プロパティの両方が設定されている場合、 **[キー]** の値が優先されます。  
   
-|値|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |指定されていません。|[キー スケール] プロパティは使用されません。|  
-|低|集計では約 500,000 キーを書き込むことができます。|  
+|Low|集計では約 500,000 キーを書き込むことができます。|  
 |Medium|集計では約 5,000,000 キーを書き込むことができます。|  
 |High|集計では 25,000,000 を超えるキーを書き込むことができます。|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "84925593"
 |---------------|-----------------|  
 |**GroupBy**|データセットをグループに分割します。 どのようなデータ型を持つ列でもグループ化に使用できます。 詳細については、「GROUP BY」を参照してください。|  
 |**求め**|列内の値を合計します。 numeric データ型を持つ列のみ、合計することができます。 詳細については、「SUM」を参照してください。|  
-|**総合**|列内の列値の平均を返します。 numeric データ型を持つ列のみ、平均値を計算することができます。 詳細については、「AVG」を参照してください。|  
+|**Average**|列内の列値の平均を返します。 numeric データ型を持つ列のみ、平均値を計算することができます。 詳細については、「AVG」を参照してください。|  
 |**Count**|グループ内のアイテムの数を返します。 詳細については、「COUNT」を参照してください。|  
 |**CountDistinct**|グループ内の NULL でない一意の値の数を返します。 詳細については、「COUNT」および「DISTINCT」を参照してください。|  
 |**最小**|グループ内の最小値を返します。 numeric データ型に制限されます。|  
@@ -81,17 +81,17 @@ ms.locfileid: "84925593"
  **個別カウントスケール**  
  集計で書き込むことのできる個別の値の概数をオプションで指定します。 既定では、このオプションの値は **[未指定]** です。 `CountDistinctScale`と**CountDistinctKeys**の両方が指定されている場合、 **CountDistinctKeys**が優先されます。  
   
-|値|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |指定されていません。|`CountDistinctScale` プロパティは使用されません。|  
-|低|集計では約 500,000 の個別の値を書き込むことができます。|  
+|Low|集計では約 500,000 の個別の値を書き込むことができます。|  
 |Medium|集計では約 5,000,000 の個別の値を書き込むことができます。|  
 |High|集計では 25,000,000 を超える個別の値を書き込むことができます。|  
   
  **個別カウントキー数**  
  集計によって書き込むことのできる個別の値の正確な数をオプションで指定します。 `CountDistinctScale`と**CountDistinctKeys**の両方が指定されている場合、 **CountDistinctKeys**が優先されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[集計変換エディター] &#40;[詳細設定] タブ&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
  [集計変換を使用してデータセットの値を集計する](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  

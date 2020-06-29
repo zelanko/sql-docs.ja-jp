@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f16df0120e58b987009f0e8e674901e27bbfbe43
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 192620afe223b6c11e8ce646a15da3ddcc3258e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965132"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440109"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>[複数フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[プレビュー]** ページを使用すると、最初に選択したソース ファイルの内容をユーザーの定義に従って列に分割して表示できます。  
@@ -38,7 +38,7 @@ ms.locfileid: "84965132"
  **[プレビュー]**  
  最初に選択したフラット ファイルのサンプル データを、選択したオプションに従って列と行に分割して表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[複数フラットファイル接続マネージャーエディター &#40;全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[複数フラットファイル接続マネージャーエディター &#40;列] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   

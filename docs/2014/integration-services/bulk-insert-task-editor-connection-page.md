@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b2cd722fd8520ff011c0d57040a55d624178e15e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924643"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439169"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>[一括挿入タスク エディター] ([接続] ページ)
   **[一括挿入タスク エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、一括挿入操作の挿入元と挿入先、および使用するフォーマットを指定できます。  
@@ -37,7 +37,7 @@ ms.locfileid: "84924643"
  **Format**  
  一括挿入のフォーマットの挿入元を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[ファイルを使用]**|フォーマット指定が格納されているファイルを選択します。 このオプションを選択すると、動的オプションの **[FormatFile]** が表示されます。|  
 |**[指定]**|フォーマットを指定します。 このオプションを選択すると、動的オプションとが表示され `RowDelimiter` `ColumnDelimiter` ます。|  
@@ -67,7 +67,7 @@ ms.locfileid: "84924643"
  `ColumnDelimiter`  
  ソース ファイルの列区切り記号を指定します。 既定値は **[タブ]** です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [一括挿入タスクエディター &#40;[全般] ページ&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
  [一括挿入タスクエディター &#40;オプションページ&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   

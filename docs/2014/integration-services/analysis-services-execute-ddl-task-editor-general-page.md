@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7e8780fd707e82093bb5df50a423cb2aaa0ff5d2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 704a9f90799269937012a4c1b5f14cc1731b0399
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925603"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439479"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>[Analysis Services DDL 実行タスク エディター] ([全般] ページ)
   **[Analysis Services DDL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] DDL 実行タスクの名前と説明を入力できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "84925603"
  **説明**  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] DDL 実行タスクの説明を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Ddl 実行タスクエディター &#40;DDL ページの Analysis Services&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
  [[式] ページ](expressions/expressions-page.md)   

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Processing Task Editor
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4ae832263c3a025f53989761541e3278f5ea6a60
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0ab462b751215ed6573de20764f3dee0715e5f33
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925583"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439469"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>[Analysis Services 処理タスク エディター] ([Analysis Services] ページ)
   **[Analysis Services 処理タスク エディター]** ダイアログ ボックスの **[Analysis Services]** ページを使用すると、Analysis Services 接続マネージャーの指定、処理する分析オブジェクトの選択、処理およびエラー処理オプションの設定を行うことができます。  
@@ -52,10 +52,10 @@ ms.locfileid: "84925583"
 |**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック**:[多次元モデルオブジェクトの処理](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**設定**|指定されたオブジェクトの処理設定を表示します。|  
   
- **追加**  
+ **[追加]**  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトを一覧に追加します。  
   
- **削除**  
+ **[削除]**  
  オブジェクトを選択し、 **[削除]** をクリックします。  
   
  **[影響分析]**  
@@ -77,7 +77,7 @@ ms.locfileid: "84925583"
   
  **関連トピック:** [[設定の変更] ダイアログ ボックス (Analysis Services - 多次元データ)](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Analysis Services 処理タスクエディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [Analysis Services DDL 実行タスク](control-flow/analysis-services-execute-ddl-task.md)  

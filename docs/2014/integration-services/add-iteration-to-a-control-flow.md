@@ -14,14 +14,14 @@ helpviewer_keywords:
 - iterations [Integration Services]
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 671073193853d35f1d66f815b5952ab69e978bf9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 039f1dff39f5bc89dbe360d49ad0d4174d665074
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926063"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439639"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>制御フローに繰り返しを追加する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には For ループ コンテナーが含まれています。For ループ コンテナーとは制御フローの要素で、これを使用すると、条件に応じてパッケージ内の制御フローを繰り返すループを、簡単に含めることができます。 詳細については、「 [For ループ コンテナー](control-flow/for-loop-container.md)に評価されるまでそのワークフローを繰り返します。  
@@ -55,7 +55,7 @@ ms.locfileid: "84926063"
   
 4.  For ループ コンテナーを構成します。 詳細については、「 [For ループ コンテナーを構成する](../../2014/integration-services/configure-a-for-loop-container.md)に評価されるまでそのワークフローを繰り返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [制御フロー内のタスクまたはコンテナーを追加または削除する](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [コンポーネントのグループ化またはグループ解除](group-or-ungroup-components.md)   
  [既定の優先順位制約を使用してタスクとコンテナーを連結する](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.connection.f1
 ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 36c06fda23fc11c76df4d278a18095659d433567
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 78851d5bbad18d2d1076eaa87200dd73e6962a90
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925973"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439659"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>[ADO NET 変換先エディター] ([接続マネージャー] ページ)
   **[ADO NET 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換先の [!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続を選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
@@ -67,7 +67,7 @@ ms.locfileid: "84925973"
 ## <a name="external-resources"></a>外部リソース  
  sqlcat.com の技術記事「[Azure SQL Database へのデータの高速な読み込み](https://go.microsoft.com/fwlink/?LinkId=244333)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[ADO NET 変換先エディター &#40;マッピング] ページ&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
  [[ADO NET 変換先エディター] &#40;エラー出力ページ&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
  [ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)   

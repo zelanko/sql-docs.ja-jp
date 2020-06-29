@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5f9c37fc722613b8f30772fd825663b2dfcf9b54
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1751d1e0ac01d5459a8c76e6a48626c2ad6deafd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924673"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439179"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>[一括挿入タスク エディター] ([オプション] ページ)
   **[一括挿入タスク エディター]** ダイアログ ボックスの **[オプション]** ページを使用すると、一括挿入操作のプロパティを設定できます。 一括挿入タスクは、大量のデータを [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルまたはビューにコピーします。  
@@ -42,7 +42,7 @@ ms.locfileid: "84924673"
  コピーを開始する最初の行を指定します。  
   
  **Options**  
- |期間|定義|  
+ |用語|定義|  
 |----------|----------------|  
 |**CHECK 制約**|テーブルおよび列に対する制約をチェックします。|  
 |**[NULL を保持する]**|空の列に任意の既定値を挿入する代わりに、一括挿入操作中に NULL 値を保持します。|  
@@ -59,7 +59,7 @@ ms.locfileid: "84924673"
 > [!NOTE]  
 >  一括読み込み操作でインポートできない行は、1 つのエラーとしてカウントされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [一括挿入タスクエディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[一括挿入タスクエディター] &#40;接続ページ&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   

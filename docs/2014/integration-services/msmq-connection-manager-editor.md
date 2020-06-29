@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - MSMQ Connection Manager Editor
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4d407cc3c0324b80ff63484f4e7c39ea30575ebc
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d452aa1edc21af067f1deac0e4544b117cecf13b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967042"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440199"
 ---
 # <a name="msmq-connection-manager-editor"></a>MSMQ 接続マネージャー エディター
   **[MSMQ 接続マネージャー]** ダイアログ ボックスでは、Message Queuing (MSMQ) メッセージ キューへのパスを指定できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "84967042"
   
 |[キューの種類]|パスのサンプル|  
 |----------------|-----------------|  
-|パブリック|\<computer name>\\<キュー名\>|  
+|Public|\<computer name>\\<キュー名\>|  
 |Private|\<computer name>\ プライベート $ \\<キュー名\>|  
   
  "." を使用してローカル コンピューターを表すことができます。  
@@ -48,7 +48,7 @@ ms.locfileid: "84967042"
  **テスト**  
  MSMQ 接続マネージャーを構成した後に、 **[テスト]** をクリックして、接続が利用可能であることを確認します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

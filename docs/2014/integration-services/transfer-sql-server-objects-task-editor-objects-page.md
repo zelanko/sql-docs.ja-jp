@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9115b2a41111d65c4855cffcdc44e7fcd755285b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6fc54343ef930d4fbca1bbe25f2e03ba4e539d44
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972754"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439909"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>[SQL Server オブジェクトの転送タスク エディター] ([オブジェクト] ページ)
   **[SQL Server オブジェクトの転送タスク エディター]** ダイアログ ボックスの **[オブジェクト]** ページを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンス間で 1 つまたは複数の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトをコピーするためのプロパティを指定できます。 コピーできる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトには、テーブル、ビュー、ストアド プロシージャ、およびユーザー定義関数などがあります。 このタスクの詳細については、「 [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)」を参照してください。  
@@ -51,7 +51,7 @@ ms.locfileid: "84972754"
  **[ExistingData]**  
  転送先サーバーにデータをどのようにコピーするかを指定します。 このプロパティには、次の表に示すオプションがあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**Replace**|転送先サーバー上のデータは上書きされます。|  
 |**Append**|転送元サーバーからコピーされたデータは、転送先サーバー上の既存のデータに追加されます。|  
@@ -207,7 +207,7 @@ ms.locfileid: "84972754"
  **[XmlSchemaCollectionsList]**  
  **[XML スキーマ コレクションの選択]** ダイアログ ボックスが開きます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services タスク](control-flow/integration-services-tasks.md)   
  [SQL Server オブジェクトの転送タスクエディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   

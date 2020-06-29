@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7cb1c84cccf4123f6ca1894baba5676937d80a15
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 923a5d549cff00af096b905ac6dc06f20e132a80
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925643"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439519"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>[Analysis Services DDL 実行タスク エディター] ([DDL] ページ)
   **[Analysis Services DDL 実行タスク エディター]** ダイアログ ボックスの **[DDL]** ページを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースへの接続を指定でき、データ定義言語 (DDL) ステートメントのソースについての情報を表示できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "84925643"
  **SourceType**  
  DDL ステートメントのソースの種類を指定します。 このプロパティには、次の表に示すオプションがあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**直接入力**|**[SourceDirect]** テキスト ボックスに格納される DDL ステートメントへのソースを設定します。 この値を選択すると、次に示す動的オプションが表示されます。|  
 |**ファイル接続**|DDL ステートメントを含むファイルへのソースを設定します。 この値を選択すると、次に示す動的オプションが表示されます。|  
@@ -58,7 +58,7 @@ ms.locfileid: "84925643"
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Analysis Services DDL 実行タスクエディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[式] ページ](expressions/expressions-page.md)   

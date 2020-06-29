@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 403210fd8a60cdfb7e92b18f9bb66ccb0a6f1f4c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d22744bd83daa70994e552965ea96d148800afef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924623"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439149"
 ---
 # <a name="cache-connection-manager-editor"></a>[キャッシュ接続マネージャー エディター]
   キャッシュ接続マネージャーでは、キャッシュ変換またはキャッシュ ファイル (.caw) から参照データセットを読み取り、そのデータをキャッシュ ファイルに保存できます。 データは常にメモリに格納されます。  
@@ -97,7 +97,7 @@ ms.locfileid: "84924623"
  `Code Page`  
  列の型のコード ページを指定します。 `Code Page` は、そのデータ型で使用できる範囲内であれば更新できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [参照変換](data-flow/transformations/lookup-transformation.md)  
   
   

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 747a0de0-3c2f-4d31-a692-7111fc0911d8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5c6ffb11f208236ccf95371e8162550d8f221cfb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cd36828a7bab7fb33b86765f9f064b6406a17a9a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926401"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439759"
 ---
 # <a name="add-a-destination-using-destination-assistant"></a>デスティネーション アシスタントを使用して変換先を追加する
   このトピックでは、変換先アシスタントを使用して新しい変換先を追加する手順について説明します。また、 **[新しい変換先の追加]** ダイアログで使用できるオプションも示します。このダイアログは、変換先アシスタントを SSIS デザイナーにドラッグ アンド ドロップしたときに表示されます。  

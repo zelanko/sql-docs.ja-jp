@@ -11,14 +11,14 @@ helpviewer_keywords:
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 8db31e78-e03b-44e6-a307-a1349f52b0c6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 470da3e1a9e5bcd25d80a52d026125526a781de3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 228034102b460b7149d51d3dfe798949a9527689
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926293"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439739"
 ---
 # <a name="add-an-annotation-to-a-package"></a>パッケージに注釈を追加する
   この手順では、パッケージに注釈を追加する方法について説明します。  
@@ -46,7 +46,7 @@ ms.locfileid: "84926293"
   
 8.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージで注釈を使用する](use-annotations-in-packages.md)  
   
   

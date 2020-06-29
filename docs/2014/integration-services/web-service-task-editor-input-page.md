@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fa1858469ec8756f05e186ca1cb50c966ee47268
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a0ff06e9001c943c294b9c7ba8f93d9cad21e9c3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972462"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439839"
 ---
 # <a name="web-service-task-editor-input-page"></a>[Web サービス タスク エディター] ([入力] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[入力]** ページを使用すると、Web サービス、Web メソッド、および Web メソッドの入力値を指定できます。 値を指定するには、[値] 列に直接文字列を入力するか、[値] 列から変数を選択します。  
@@ -50,7 +50,7 @@ ms.locfileid: "84972462"
  **Value**  
  [Variable] のチェック ボックスをオンにした場合、一覧から変数を選択して入力値を指定します。それ以外の場合は、入力値として使用する値をキーボードから入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Web サービスタスクエディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [Web サービスタスクエディター &#40;出力ページ&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   

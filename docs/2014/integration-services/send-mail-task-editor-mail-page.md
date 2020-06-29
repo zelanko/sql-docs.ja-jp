@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Send Mail Task Editor
 ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ee2b7992065e31bc6ef57de9b22444cf2da1f963
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3beaed3fa3e03ddf9fa9b90349a3aa57a131c9b0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963488"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440059"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>[メール送信タスク エディター] ([メール] ページ)
   **[メール送信タスク エディター]** ダイアログ ボックスの **[メール]** ページを使用すると、受信者、メッセージの種類、メッセージの重要度を指定できます。 メッセージにファイルを添付することもできます。 メッセージ テキストは、入力した文字列、テキストが含まれるファイルへのファイル接続、またはテキストが含まれる変数の名前になります。  
@@ -52,7 +52,7 @@ ms.locfileid: "84963488"
  **[MessageSourceType]**  
  メッセージのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|メッセージ テキストをソースとして設定します。 この値を選択すると、動的オプション **[MessageSource]** が表示されます。|  
 |**[ファイル接続]**|メッセージ テキストが含まれるファイルをソースとして設定します。 この値を選択すると、動的オプション **[MessageSource]** が表示されます。|  
@@ -85,7 +85,7 @@ ms.locfileid: "84963488"
   
  **関連トピック:** [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)[変数の追加](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[メール送信タスクエディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[式] ページ](expressions/expressions-page.md)  

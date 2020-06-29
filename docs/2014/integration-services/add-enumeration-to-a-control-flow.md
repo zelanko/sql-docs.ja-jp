@@ -13,14 +13,14 @@ helpviewer_keywords:
 - repeating workflows
 - enumerations [Integration Services]
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bff127798f7c36340a85fa72cebfdc9a012c0676
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3eb7a34978221a87b0e288f37c4f728a3a470465
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926103"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439649"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>制御フローに列挙を追加する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、Foreach ループ コンテナーが含まれています。Foreach ループ コンテナーとは制御フローの要素で、これを使用すると、パッケージの制御フロー内のファイルおよびオブジェクトを列挙するループ構造を簡単に含めることができます。 詳細については、「 [Foreach ループ コンテナー](control-flow/foreach-loop-container.md)」を参照してください。  
@@ -41,7 +41,7 @@ ms.locfileid: "84926103"
   
 4.  Foreach ループ コンテナーを構成します。 詳細については、「 [Foreach ループ コンテナーを構成する](../../2014/integration-services/configure-a-foreach-loop-container.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [制御フロー内のタスクまたはコンテナーを追加または削除する](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [コンポーネントのグループ化またはグループ解除](group-or-ungroup-components.md)   
  [優先順位制約](control-flow/precedence-constraints.md)   

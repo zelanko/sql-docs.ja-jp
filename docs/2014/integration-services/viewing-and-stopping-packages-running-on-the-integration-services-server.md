@@ -12,14 +12,14 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - running package [Integration Services], managing
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 97933701539249d2294d71a12d9b92d515a5d478
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6e63839d4ab5d8d50f7d86eea05c8d58107d6799
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972504"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439869"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Integration Services サーバーで実行中のパッケージの表示と停止
   `SSISDB` データベースでは、ユーザーに表示されない内部テーブルに実行履歴を格納します。 ただし、必要な情報は、パブリック ビューに対してクエリを実行することで公開されます。 また、パッケージに関連した一般的なタスクを実行するために呼び出すことができるストアド プロシージャも用意されています。  
@@ -59,7 +59,7 @@ ms.locfileid: "84972504"
  マネージド API を使用したプログラムによるアクセス  
  <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間とそのクラスのトピックをご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクトとパッケージの実行](packages/run-integration-services-ssis-packages.md)   
  [パッケージ実行のレポートのトラブルシューティング](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   

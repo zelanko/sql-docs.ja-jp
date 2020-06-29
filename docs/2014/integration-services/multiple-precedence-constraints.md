@@ -12,14 +12,14 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], multiple
 - constrained executables [Integration Services]
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 61939b09b4a4365c09089df2b52026e96f9427ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 16fefbbf886818989131710876564fc9e147a56a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965152"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440139"
 ---
 # <a name="multiple-precedence-constraints"></a>複数の優先順位制約
   優先順位制約は、2 つのタスク、2 つのコンテナー、1 つのタスクと 1 つのコンテナーなど、2 つの実行可能ファイルを連結します。 これらは優先順位付き実行可能ファイル、および制約付き実行可能ファイルと呼ばれています。 制約付き実行可能ファイルには、複数の優先順位制約を含めることができます。 詳細については、「 [優先順位制約](control-flow/precedence-constraints.md)」を参照してください。  

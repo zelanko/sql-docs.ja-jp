@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 365a22cc515a971ff460a6433973f884c640c973
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 207c6e9837f2a828316c91c642d7397b72c4ddc3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950812"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440169"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>[複数フラット ファイル接続マネージャー エディター] ([列] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[列]** ノードを使用すると、行と列の情報を指定し、最初に選択したファイルをプレビューできます。  
@@ -38,7 +38,7 @@ ms.locfileid: "84950812"
  **[行区切り記号]**  
  使用できる行区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|行は、復帰と改行の組み合わせで区切られます。|  
 |**リターン**|行は、復帰で区切られます。|  
@@ -52,7 +52,7 @@ ms.locfileid: "84950812"
  **列区切り記号**  
  使用できる列区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|列は、復帰と改行の組み合わせで区切られます。|  
 |**リターン**|列は、復帰で区切られます。|  
@@ -63,7 +63,7 @@ ms.locfileid: "84950812"
 |**[タブ {t}]**|列は、タブで区切られます。|  
 |**縦棒 (縦棒) {&#124;}**|列は、縦棒で区切られます。|  
   
- **[列のリセット]**  
+ **列のリセット**  
  元の列以外のすべての列を削除するには、 **[列のリセット]** をクリックします。  
   
 ### <a name="format--fixed-width"></a>[形式] = [固定幅]  
@@ -76,7 +76,7 @@ ms.locfileid: "84950812"
  **[行幅]**  
  個々の列に対して区切り記号を追加する前に、行の長さを指定します。 または、プレビュー ウィンドウの垂直線をドラッグして行の終わりをマークします。 行幅値は自動的に更新されます。  
   
- **[列のリセット]**  
+ **列のリセット**  
  元の列以外のすべての列を削除するには、 **[列のリセット]** をクリックします。  
   
 ### <a name="format--ragged-right"></a>[形式] = [幅合わせしない]  
@@ -93,7 +93,7 @@ ms.locfileid: "84950812"
  **[行区切り記号]**  
  使用できる行区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|行は、復帰と改行の組み合わせで区切られます。|  
 |**リターン**|行は、復帰で区切られます。|  
@@ -104,10 +104,10 @@ ms.locfileid: "84950812"
 |**[タブ {t}]**|行は、タブで区切られます。|  
 |**縦棒 (縦棒) {&#124;}**|行は、縦棒で区切られます。|  
   
- **[列のリセット]**  
+ **列のリセット**  
  元の列以外のすべての列を削除するには、 **[列のリセット]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[複数フラットファイル接続マネージャーエディター &#40;全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[複数フラットファイル接続マネージャーエディター &#40;[詳細設定] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   

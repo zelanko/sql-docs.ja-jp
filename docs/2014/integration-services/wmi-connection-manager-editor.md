@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Connection Manager Editor
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4bc74731e0ecb5487d3f52db1af3a7f20c85bd0f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 33effc06f6ef63e4e6f8946fd7db0179e506e998
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972432"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439829"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI 接続マネージャー エディター
   **[WMI 接続マネージャー]** ダイアログ ボックスを使用すると、サーバーに対する Microsoft Windows Management Instrumentation (WMI) 接続を指定できます。  
@@ -50,7 +50,7 @@ ms.locfileid: "84972432"
  **テスト**  
  接続マネージャーの設定をテストします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [構成管理のための WMI プロバイダーの概念](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [WMI Provider for Server Events の概念](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  

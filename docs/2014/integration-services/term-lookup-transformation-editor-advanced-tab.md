@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: be3575dc-e79c-49f6-8243-ad270bce77d5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 732919f8a6f9de24bbbd5ac9aeb378b24086ccb1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2443f80e0a479edeff92b33a49c1771e54b8f979
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962142"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440009"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>[用語参照変換エディター] ([詳細設定] タブ)
   **[用語参照変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、参照で大文字と小文字を区別するかどうかを指定できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "84962142"
  **[エラー出力の構成]**  
  [[エラー出力の構成]](../../2014/integration-services/configure-error-output.md) ダイアログ ボックスは、エラーが発生した行に対するエラー処理オプションを指定するために使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[用語参照変換エディター] &#40;[参照テーブル] タブ&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
  [[用語参照変換エディター] &#40;[用語参照] タブ&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   

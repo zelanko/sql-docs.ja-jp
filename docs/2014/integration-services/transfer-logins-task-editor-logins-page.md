@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins Task Editor
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 67c81901e454c4e7a47e5d448f2aa17d6a8820fa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c849c57c0854757a75eecf163a384c06ae8f1c47
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972812"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439999"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>[ログイン転送タスク エディター] ([ログイン] ページ)
   **[ログイン転送タスク エディター]** ダイアログ ボックスの **[ログイン]** ページを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスから別のインスタンスへと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログインをコピーする際のプロパティを指定できます。 このタスクの詳細については、「 [ログイン転送タスク](control-flow/transfer-logins-task.md)」を参照してください。  
@@ -36,7 +36,7 @@ ms.locfileid: "84972812"
  **[LoginsToTransfer]**  
  転送元サーバーから転送先サーバーにコピーされる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログインを選択します。 このプロパティには、次の表に示すオプションがあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[AllLogins]**|転送元サーバーのすべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログインが転送先サーバーにコピーされます。|  
 |**[Selectedlogins]**|**[LoginsList]** に指定されているログインのみが転送先サーバーにコピーされます。|  
@@ -53,7 +53,7 @@ ms.locfileid: "84972812"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[FailTask]**|転送先サーバーに同じ名前のログインが既に存在していた場合、タスクが失敗します。|  
 |**Overwrite**|転送先サーバーにある同じ名前のログインは上書きされます。|  
@@ -62,7 +62,7 @@ ms.locfileid: "84972812"
  **[CopySids]**  
  ログインに関連付けられたセキュリティ識別子を転送先サーバーにコピーするかどうかを選択します。 ログイン転送タスクをデータベース転送タスクと同時に使用する場合、**[CopySids]** を **[True]** に設定する必要があります。 そのように設定しなかった場合、コピーされたログインは転送されたデータベースで認識されなくなります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services タスク](control-flow/integration-services-tasks.md)   
  [[ログイン転送タスクエディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   

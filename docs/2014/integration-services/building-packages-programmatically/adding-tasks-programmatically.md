@@ -13,14 +13,14 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: db7f6d541462348d464f69f6abf122aaa2acca7d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2cb0f2d50b77e16396d831ce351263a12443aab6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925093"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439299"
 ---
 # <a name="adding-tasks-programmatically"></a>プログラムによるタスクの追加
   ランタイム エンジン内の次の種類のオブジェクトに、タスクを追加できます。  
@@ -413,7 +413,7 @@ End Module
   
 ![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プログラムによるタスクの接続](../building-packages-programmatically/connecting-tasks-programmatically.md)  
   
   
