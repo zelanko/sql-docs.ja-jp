@@ -1,5 +1,5 @@
 ---
-title: xml_indexes (Transact-sql) |Microsoft Docs
+title: sys.xml_indexes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 3408de72-b067-4fda-b5d5-8e856dfd9db3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc51d1c5113059fcf373005000105a8622d89e31
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fa1d994955ce382b3c327c603b155896635818ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824993"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754370"
 ---
-# <a name="sysxml_indexes-transact-sql"></a>xml_indexes (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysxml_indexes-transact-sql"></a>sys.xml_indexes (Transact-sql)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   XML インデックスごとに1行の値を返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<継承された列>**||は[、列を継承](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)します。|  
+|**\<inherited columns>**||は[、列を継承](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)します。|  
 |**using_xml_index_id**|**int**|NULL = プライマリ XML インデックス<br /><br /> Null 以外 = セカンダリ XML インデックス。<br /><br /> Null 以外の場合は、プライマリ XML インデックスへの自己結合参照です。|  
 |**secondary_type**|**char (1)**|セカンダリインデックスの説明を入力してください:<br /><br /> P = PATH セカンダリ XML インデックス<br /><br /> V = VALUE セカンダリ XML インデックス<br /><br /> R = PROPERTY セカンダリ XML インデックス<br /><br /> NULL = プライマリ XML インデックス|  
 |**secondary_type_desc**|**nvarchar(60)**|セカンダリインデックスの説明を入力してください:<br /><br /> PATH = PATH セカンダリ XML インデックス<br /><br /> VALUE = VALUE セカンダリ XML インデックス<br /><br /> プロパティ = プロパティセカンダリ xml インデックス。<br /><br /> NULL = プライマリ XML インデックス|  
@@ -44,7 +44,7 @@ ms.locfileid: "82824993"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   

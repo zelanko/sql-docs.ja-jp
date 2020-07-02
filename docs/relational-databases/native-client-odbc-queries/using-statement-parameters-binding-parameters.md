@@ -22,15 +22,15 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c2076acbe29cefbbee12c716d3c555054c5808a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 99bba96a5572a36637549e1b228e627162aa6026
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967582"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755638"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>ステートメント パラメーターの使用 - パラメーターのバインド
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   SQL ステートメントの各パラメーター マーカーは、ステートメントを実行する前にアプリケーション内の変数に関連付ける、つまりバインドする必要があります。 これは、 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)関数を呼び出すことによって行われます。 **SQLBindParameter**は、ドライバーへのプログラム変数 (Address、C データ型など) を記述します。 また、序数値を示すことでパラメーター マーカーを識別してから、そのパラメーター マーカーが表す SQL オブジェクト表現 (SQL データ型、有効桁数など) を記述します。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "84967582"
   
  ストアドプロシージャパラメーターに**SQL_DESC_NAME**が設定されている場合は、クエリ内のすべてのストアドプロシージャパラメーターで**SQL_DESC_NAME**も設定する必要があります。  ストアドプロシージャの呼び出しでリテラルが使用されていて、パラメーターに**SQL_DESC_NAME**が設定されている場合、リテラルでは *' name*value ' という形式を使用する必要があり = *value*ます。ここで、 *NAME*はストアドプロシージャのパラメーター名 (たとえば、 @p1 ) です。 詳細については、「[名前によるパラメーターのバインド (名前付きパラメーター)](https://go.microsoft.com/fwlink/?LinkId=167215)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ステートメント パラメーターの使用](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
   
   

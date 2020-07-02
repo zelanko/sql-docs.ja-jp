@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3a10ab445bfcf9f61b7eb6c952100af9b6fadbb
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 4c634614b6cfad036146081436ce31efcf1cd464
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689566"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753614"
 ---
 # <a name="functions-on-nodes---local-name"></a>ノードの関数 - local-name
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg*の名前のローカル部分を xs: string として返します。この文字列は、長さが0の文字列であるか、または Xs: NCName という構文形式になります。 引数が指定されていない場合、既定値はコンテキストノードです。  
   
@@ -47,10 +47,10 @@ fn:local-name($arg as node()?) as xs:string
   
 -   ターゲットノードがドキュメントノード、コメント、またはテキストノードであるために名前がない場合、関数は長さ0の文字列を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. 特定のノードのローカル名を取得する  
+### <a name="a-retrieve-local-name-of-a-specific-node"></a>A: 特定のノードのローカル名を取得する  
  次のクエリは、型指定されていない XML インスタンスに対して指定されています。 クエリ式は、 `local-name(/ROOT[1])` 指定されたノードのローカル名部分を取得します。  
   
 ```  
@@ -71,7 +71,7 @@ WHERE ProductModelID=7
 -- result = Location  
 ```  
   
-### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. 述語で引数を指定せずに local-name を使用する  
+### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B: 述語で引数を指定せずに local-name を使用する  
  次のクエリは、ProductModel テーブルの型指定された**xml**列である命令列に対して指定されています。 この式は、 `root` QName のローカル名部分が "Location" である <> 要素のすべての子要素を返します。 **ローカル名 ()** 関数は、述語で指定され、引数がありません。この関数では、コンテキストノードが使用されます。  
   
 ```  
@@ -84,7 +84,7 @@ WHERE ProductModelID=7
   
  このクエリでは、 `Location` <> 要素のすべての <> 子要素が返さ `root` れます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ノードの関数](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [名前空間 uri 関数 &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
   

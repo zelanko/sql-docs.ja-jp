@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac6461e522973b43926b66b6e525526ae6952d85
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091907"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755510"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sqlmaint**スイッチを含む文字列を使用して**sqlmaint**ユーティリティを呼び出します。 **Sqlmaint**ユーティリティは、1つまたは複数のデータベースに対して一連のメンテナンス操作を実行します。  
   
@@ -48,7 +48,7 @@ xp_sqlmaint 'switch_string'
  **-?** スイッチは**xp_sqlmaint**に対して無効です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし。 **Sqlmaint**ユーティリティが失敗した場合は、エラーが返されます。  
+ [なし] : **Sqlmaint**ユーティリティが失敗した場合は、エラーが返されます。  
   
 ## <a name="remarks"></a>Remarks  
  SQL Server 認証を使用してログオンしたユーザーがこのプロシージャを呼び出すと、 **-U "***login_id***"** および **-P "***password***"** スイッチが、実行前に*switch_string*に付加されます。 ユーザーが Windows 認証でログオンしている場合、 *switch_string*は**sqlmaint**に変更されることなく渡されます。  
@@ -57,7 +57,7 @@ xp_sqlmaint 'switch_string'
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では`xp_sqlmaint` 、 `sqlmaint`を呼び出して整合性チェックを実行し、レポートファイルを`msdb.dbo.sysdbmaintplan_history`作成して、を更新します。  
+ 次の例では `xp_sqlmaint` 、 `sqlmaint` を呼び出して整合性チェックを実行し、レポートファイルを作成して、を更新 `msdb.dbo.sysdbmaintplan_history` します。  
   
 ```  
 EXEC xp_sqlmaint '-D AdventureWorks2012 -PlanID 02A52657-D546-11D1-9D8A-00A0C9054212   
@@ -70,7 +70,7 @@ EXEC xp_sqlmaint '-D AdventureWorks2012 -PlanID 02A52657-D546-11D1-9D8A-00A0C905
 The command(s) executed successfully.  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sqlmaint ユーティリティ](../../tools/sqlmaint-utility.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

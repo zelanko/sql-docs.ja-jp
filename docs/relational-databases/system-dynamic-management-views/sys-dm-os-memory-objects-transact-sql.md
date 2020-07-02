@@ -20,15 +20,15 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61cc363e15a200ed23de4ac94aba64680e1bc4a6
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 8672b03a7202d2ef7fa7666f4dd73462f1a6409f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716779"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754050"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>dm_os_memory_objects (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   現在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているメモリ オブジェクトを返します。 **Dm_os_memory_objects**を使用すると、メモリの使用量を分析し、メモリリークの可能性を特定できます。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "84716779"
 > [!NOTE]  
 >  ページサイズが最大割り当てではありません。 メモリ クラークによって実装されたページ アロケーターでサポートされている割り当ての粒度です。 メモリ オブジェクトから、8 KB を超える割り当てを要求することができます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、それぞれのメモリ オブジェクトの種類によって割り当てられたメモリのサイズを返します。  
   
 ```  
@@ -82,7 +82,7 @@ ORDER BY 'Bytes Used' DESC;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
   [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [dm_os_memory_clerks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   

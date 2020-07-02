@@ -20,15 +20,15 @@ ms.assetid: bf4032fe-7db1-40e9-a62e-d69cebff4b44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d933fd9974848437f9fa19983df14bed273fc7b0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1a8420517a23401a39bdd6935d8b09eed94bb0e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754065"
 ---
 # <a name="sysdm_os_memory_nodes-transact-sql"></a>sys.dm_os_memory_nodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   メモリマネージャーを使用する内部の割り当て [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **Dm_os_process_memory**と内部カウンターのプロセスメモリカウンターの差を追跡することで、メモリ空間内の外部コンポーネントからのメモリ使用を示すことができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -41,19 +41,19 @@ ms.locfileid: "82829374"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**memory_node_id**|**smallint**|メモリノードの ID を指定します。 **Dm_os_memory_clerks**の**memory_node_id**に関連付けられています。 Null 値は許容されません。|  
-|**virtual_address_space_reserved_kb**|**bigint**|仮想アドレス予約の数 (kb 単位) を示します。これは、コミットされていないか、物理ページにマップされていません。 Null 値は許容されません。|  
-|**virtual_address_space_committed_kb**|**bigint**|コミットまたは物理ページにマップされた仮想アドレスの量を KB 単位で指定します。 Null 値は許容されません。|  
-|**locked_page_allocations_kb**|**bigint**|によってロックされている物理メモリの量を KB 単位で指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 Null 値は許容されません。|  
+|**memory_node_id**|**smallint**|メモリノードの ID を指定します。 **Dm_os_memory_clerks**の**memory_node_id**に関連付けられています。 NULL 値は許可されません。|  
+|**virtual_address_space_reserved_kb**|**bigint**|仮想アドレス予約の数 (kb 単位) を示します。これは、コミットされていないか、物理ページにマップされていません。 NULL 値は許可されません。|  
+|**virtual_address_space_committed_kb**|**bigint**|コミットまたは物理ページにマップされた仮想アドレスの量を KB 単位で指定します。 NULL 値は許可されません。|  
+|**locked_page_allocations_kb**|**bigint**|によってロックされている物理メモリの量を KB 単位で指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 NULL 値は許可されません。|  
 |**single_pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /><br /> このノードで実行されているスレッドによって1ページアロケーターを使用して割り当てられたコミット済みメモリの量 (KB 単位)。 このメモリは、バッファープールから割り当てられます。 この値は、割り当て要求が実行された場所を示します。割り当て要求が満たされた物理的な場所ではありません。|  
-|**pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> メモリ マネージャー ページ アロケーターによってこの NUMA ノードから割り当てられる、コミット済みのメモリ量 (KB 単位) を指定します。 Null 値は許容されません。|  
+|**pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> メモリ マネージャー ページ アロケーターによってこの NUMA ノードから割り当てられる、コミット済みのメモリ量 (KB 単位) を指定します。 NULL 値は許可されません。|  
 |**multi_pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /><br /> このノード上で実行されているスレッドが複数ページ アロケーターを使って割り当てたコミット済みのメモリ量 (KB 単位)。 このメモリは、バッファー プール外から割り当てられます。 この値は、割り当て要求が実行された場所を示します。割り当て要求が満たされた物理的な場所ではありません。|  
-|**shared_memory_reserved_kb**|**bigint**|このノードから予約されている共有メモリの量を KB 単位で指定します。 Null 値は許容されません。|  
-|**shared_memory_committed_kb**|**bigint**|このノードでコミットされた共有メモリの量 (KB 単位) を指定します。 Null 値は許容されません。|  
-|**cpu_affinity_mask**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 内部使用のみ。 Null 値は許容されません。|  
-|**online_scheduler_mask**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 内部使用のみ。 Null 値は許容されません。|  
-|**processor_group**|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 内部使用のみ。 Null 値は許容されません。|  
-|**foreign_committed_kb**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 他のメモリノードからコミットされたメモリの量を KB 単位で指定します。 Null 値は許容されません。|  
+|**shared_memory_reserved_kb**|**bigint**|このノードから予約されている共有メモリの量を KB 単位で指定します。 NULL 値は許可されません。|  
+|**shared_memory_committed_kb**|**bigint**|このノードでコミットされた共有メモリの量 (KB 単位) を指定します。 NULL 値は許可されません。|  
+|**cpu_affinity_mask**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 内部使用のみです。 NULL 値は許可されません。|  
+|**online_scheduler_mask**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 内部使用のみです。 NULL 値は許可されません。|  
+|**processor_group**|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 内部使用のみです。 NULL 値は許可されません。|  
+|**foreign_committed_kb**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 他のメモリノードからコミットされたメモリの量を KB 単位で指定します。 NULL 値は許可されません。|  
 |**target_kb** |**bigint** |**適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> メモリノードのメモリ目標を KB 単位で指定します。 |   
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "82829374"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
   [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

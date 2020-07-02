@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c70ea03659fe65b594555dd6bbbba7a650558e88
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 26b26690d1120ce66dd116ed7908a68fe594e077
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753931"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   **Msdistpublishers**テーブルには、ローカルディストリビューターによってサポートされるリモートパブリッシャーごとに1つの行が含まれます。 このテーブルは、 **msdb**データベースに格納されます。  
   
 |列名|データ型|説明|  
@@ -43,7 +43,7 @@ ms.locfileid: "82832336"
 |**storage_connection_string**|**nvarchar (779)**|Azure SQL Database ストレージ接続文字列の値。|  
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

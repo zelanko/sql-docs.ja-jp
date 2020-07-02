@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26253e3a19b31dce94249a09dcf7cee71fbffeeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c69f0ed73b638fd17183c5efba1c1f5e8e3c74f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488211"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756304"
 ---
 # <a name="deploying-clr-database-objects"></a>CLR データベース オブジェクトの配置
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   配置は、完了したアプリケーションまたはモジュールを別のコンピューターにインストールし、実行するために配布するプロセスです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio を使用して、共通言語ランタイム (CLR) データベース オブジェクトを開発し、これらをテスト サーバーに配置することができます。 また、Visual Studio ではなく [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework の再配布ファイルを使用して、マネージド データベース オブジェクトをコンパイルすることも可能です。 コンパイルすると、CLR データベース オブジェクトを含むアセンブリを、Visual Studio または [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、テスト サーバーに配置することができます。 Visual Studio .NET 2003 は、CLR 統合プログラミングまたは配置には使用できない点に注意してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には .NET Framework がプレインストールされていますが、Visual Studio .NET 2003 では .NET Framework 2.0 アセンブリを使用できません。  
   
  CLR メソッドをテスト サーバーでテストおよび検証すると、配置スクリプトを使用してこれらを実稼働サーバーに配布できます。 配置スクリプトは手動で生成するか、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して生成することができます (後に示す手順を参照)。  
@@ -40,7 +40,7 @@ ms.locfileid: "81488211"
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Visual Studio を使用してアセンブリを配置するには  
   
-1.  **[ビルド] メニュー**の [プロジェクト名の> の**ビルド** \<] を選択して、プロジェクトをビルドします。  
+1.  [ビルド] メニューの [**ビルド**] を選択して、プロジェクトをビルドし \<project name> ます。 **Build**  
   
 2.  アセンブリをテスト サーバーに配置する前に、すべてのビルド エラーおよび警告を解決します。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "81488211"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  次に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに、プロシージャ、関数、集計、ユーザー定義型、またはトリガーを作成する必要があります。 **Helloworld**アセンブリに**helloworld**という名前のメソッドが**Procedures**クラスに含まれて[!INCLUDE[tsql](../../includes/tsql-md.md)]いる場合は、クエリに次のを追加して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **hello** in というプロシージャを作成できます。  
+1.  次に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに、プロシージャ、関数、集計、ユーザー定義型、またはトリガーを作成する必要があります。 **Helloworld**アセンブリに**helloworld**という名前のメソッドが**Procedures**クラスに含まれている場合は、クエリに次のを追加して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **hello** in というプロシージャを作成でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  `CREATE PROCEDURE hello`  
   
@@ -76,7 +76,7 @@ ms.locfileid: "81488211"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のさまざまな種類の管理されたデータベースオブジェクトの作成の詳細については、「 [Clr ユーザー定義関数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)」、「clr[ユーザー定義集計](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)」、「clr ユーザー定義[型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」、「Clr[ストアドプロシージャ](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)」、および「 [clr トリガー](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)」を参照してください。  
+ でのさまざまな種類の管理されたデータベースオブジェクトの作成の詳細について [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、「 [Clr ユーザー定義関数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)」、「Clr[ユーザー定義集計](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)」、「clr ユーザー定義[型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」、「Clr[ストアドプロシージャ](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)」、および「 [clr トリガー](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)」を参照してください。  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>実稼働サーバーへのアセンブリの配置  
  CLR データベース オブジェクトをテスト サーバーでテストおよび検証した後は、実稼働サーバーに配布できます。 マネージデータベースオブジェクトのデバッグの詳細については、「 [CLR データベースオブジェクトのデバッグ](../../relational-databases/clr-integration/debugging-clr-database-objects.md)」を参照してください。  
@@ -87,7 +87,7 @@ ms.locfileid: "81488211"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開き、配置するマネージド アセンブリまたはデータベース オブジェクトを登録する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。  
   
-2.  [**オブジェクトエクスプローラー**で、[ ** \<サーバー名>** および**データベース**] ツリーを展開します。 マネージデータベースオブジェクトが登録されているデータベースを右クリックし、[**タスク**]、[**スクリプトの生成**] の順に選択します。 スクリプト作成ウィザードが開きます。  
+2.  **オブジェクトエクスプローラー**で、 **\<server name>** [**データベース**] ツリーを展開します。 マネージデータベースオブジェクトが登録されているデータベースを右クリックし、[**タスク**]、[**スクリプトの生成**] の順に選択します。 スクリプト作成ウィザードが開きます。  
   
 3.  リストボックスからデータベースを選択し、[**次へ**] をクリックします。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "81488211"
   
 5.  [**オブジェクトの種類の選択**] ペインで、配置するデータベースオブジェクトの種類を選択します。 **[次へ]** をクリックします。  
   
-6.  [**オブジェクトの種類の選択**] ペインで選択したオブジェクトの種類ごとに、 **[種類の選択\<** ] ペインが表示され>ます。 このペインでは、指定したデータベースに登録されているデータベース オブジェクトの種類のすべてのインスタンスから、いずれかのオブジェクトを選択できます。 1つまたは複数のオブジェクトを選択し、[**次へ**] をクリックします。  
+6.  [**オブジェクトの種類の選択**] ペインで選択したオブジェクトの種類ごとに、 **[選択 \<type> ** ] ペインが表示されます。 このペインでは、指定したデータベースに登録されているデータベース オブジェクトの種類のすべてのインスタンスから、いずれかのオブジェクトを選択できます。 1つまたは複数のオブジェクトを選択し、[**次へ**] をクリックします。  
   
 7.  必要なデータベースオブジェクトの種類がすべて選択されると、[**出力オプション**] ウィンドウが表示されます。 [**スクリプトをファイルに**作成] を選択し、スクリプトのファイルパスを指定します。 **[次へ]** を選択します。 選択内容を確認し、[**完了**] をクリックします。 配置スクリプトが指定したファイル パスに保存されます。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "81488211"
   
  [配置] をクリックすると、プロジェクトの配置後に、このスクリプトが Visual Studio によって実行されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR &#40;共通言語ランタイム&#41; 統合のプログラミング概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

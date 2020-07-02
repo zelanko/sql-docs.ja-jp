@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9c6391540f3da535eb709bba0a39bac11a99289
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3024de2e45f8d4fe6b7a8521f24e9fe44424d5f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834256"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753984"
 ---
 # <a name="sp_table_privileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定されたテーブルのテーブル権限 (INSERT、DELETE、UPDATE、SELECT、REFERENCES など) の一覧を返します。  
   
@@ -58,7 +58,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
  アンダースコア (_)、パーセント (%)、および角かっこ ([または]) の各文字がワイルドカード文字として解釈されるかどうかを決定します。 有効な値は 0 (パターン一致がオフ) および 1 (パターン一致がオン) です。 *Fusepattern*は**ビット**,、既定値は1です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -72,7 +72,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**sysname**|使用可能なテーブル権限の 1 つ。 テーブル権限は、次に挙げる値 (または実装が定義されるときにデータ ソースによってサポートされるその他の値) のいずれかになります。<br /><br /> SELECT。GRANTEE は、1 列以上のデータを取得できます。<br /><br /> INSERT。GRANTEE は、新しい行の 1 列以上にデータを提供できます。<br /><br /> UPDATE。GRANTEE は、1 列以上の既存のデータを修正できます。<br /><br /> DELETE。GRANTEE は、テーブルから行を削除できます。<br /><br /> REFERENCES。GRANTEE は、主キー/外部キーのリレーションシップで外部テーブル内の列を参照できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、主キー/外部キーのリレーションシップはテーブル制約で定義されます。<br /><br /> 特定のテーブル特権によって GRANTEE に与えられる操作の範囲は、データ ソースに依存します。 たとえば、UPDATE 特権の場合、GRANTEE は、あるデータ ソース上ではテーブルのすべての列を更新することが許可されても、別のデータ ソース上では、GRANTOR が UPDATE 特権を持っている列しか更新できないことがあります。|  
 |IS_GRANTABLE|**sysname**|GRANTEE が他のユーザーに権限を与えることが許可されているかどうかを示します。これは "許可の許可" 権限とも呼ばれます。 YES、NO、または NULL を指定できます。 不明な値 (NULL) は、"grant with grant" が適用されないデータソースを指しています。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_table_privileges ストアド プロシージャは、ODBC の SQLTablePrivileges に相当します。 返される結果は、TABLE_QUALIFIER、TABLE_OWNER、TABLE_NAME、PRIVILEGE の値に従って並べ替えられます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -88,7 +88,7 @@ EXEC sp_table_privileges
    @table_name = 'Contact%';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のカタログストアドプロシージャ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

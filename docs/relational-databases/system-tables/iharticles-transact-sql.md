@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e5ccf91f17022ccf910c840c1af2abb7a4048dfb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 78d6dfdd7497bf8937e7f2c37e8460d883f43760
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829902"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753960"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHarticles**システムテーブルには、現在のディストリビューターを使用して SQL Server 以外のパブリッシャーからレプリケートされているアーティクルごとに1行の値が格納されます。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "82829902"
 |**tablespace_name**|**nvarchar(255)**|アーティクルのログ テーブルによって使用されるテーブルスペースを識別します。|  
 |**objid**|**int**|この列は使用されず、SQL Server アーティクル ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)) に使用される[Sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) view と**IHarticles**テーブルの[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)ビューとの互換性を確保するためだけに含まれています。|  
 |**sync_objid**|**int**|この列は使用されず、SQL Server アーティクル ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)) に使用される[Sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) view と**IHarticles**テーブルの[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)ビューとの互換性を確保するためだけに含まれています。|  
-|**記述**|**nvarchar(255)**|アーティクルの説明エントリです。|  
+|**description**|**nvarchar(255)**|アーティクルの説明エントリです。|  
 |**publisher_status**|**int**|パブリッシュされたアーティクルを定義するビューが[sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)を呼び出すことによって定義されているかどうかを示すために使用します。<br /><br /> **0**  = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)が呼び出されました。<br /><br /> **1**  = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)が呼び出されていません。|  
 |**article_view_owner**|**nvarchar(255)**|ログ リーダー エージェントによって使用されるパブリッシャー上の同期オブジェクトの所有者です。|  
 |**article_view**|**nvarchar(255)**|ログ リーダー エージェントによって使用されるパブリッシャー上の同期オブジェクトです。|  
@@ -65,7 +65,7 @@ ms.locfileid: "82829902"
 |**instance_id**|**int**|パブリッシュされたテーブルのアーティクルログの現在のインスタンスを識別します。|  
 |**use_default_datatypes**|**bit**|アーティクルが既定のデータ型マッピングを使用するかどうかを示します。値**1**は、既定のデータ型マッピングが使用されることを示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

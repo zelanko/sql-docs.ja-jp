@@ -20,17 +20,17 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: feed483cf3ee08c0652e55de51b1f73fc087ed39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 634d0d69698503a4bc483c9803858e5cda4b515d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80873118"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754474"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>database_principals (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース内のセキュリティプリンシパルごとに1行のデータを返します。  
+  データベース内のセキュリティプリンシパルごとに1行のデータを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -48,7 +48,7 @@ ms.locfileid: "80873118"
 |**authentication_type_desc**|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 認証の種類の説明。 使用可能な値とその説明を次に示します。<br /><br /> なし: 認証なし<br />インスタンス: インスタンス認証<br />データベース: データベース認証<br />WINDOWS: Windows 認証<br />外部: Azure Active Directory 認証|  
 |**default_language_name**|**sysname**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> このプリンシパルの既定の言語を示します。|  
 |**default_language_lcid**|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> このプリンシパルの既定の LCID を示します。|  
-|**allow_encrypted_value_modifications**|**bit**|**適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]以降、 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 一括コピー操作でのサーバーの暗号化メタデータ チェックを抑制します。 これにより、データの暗号化を解除することなく、テーブルまたはデータベース間で Always Encrypted を使用して暗号化されたデータを一括コピーできます。 既定値は OFF です。 |      
+|**allow_encrypted_value_modifications**|**bit**|**適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 一括コピー操作でのサーバーの暗号化メタデータ チェックを抑制します。 これにより、データの暗号化を解除することなく、テーブルまたはデータベース間で Always Encrypted を使用して暗号化されたデータを一括コピーできます。 既定値は OFF です。 |      
   
 ## <a name="remarks"></a>Remarks  
  *PasswordLastSetTime*プロパティは、SQL Server のサポートされているすべての構成で使用できますが、その他のプロパティは SQL Server が Windows Server 2003 以降で実行されており、CHECK_POLICY と CHECK_EXPIRATION の両方が有効になっている場合にのみ使用できます。 詳細については、「[パスワードポリシー](../../relational-databases/security/password-policy.md) 」を参照してください。
@@ -95,7 +95,7 @@ JOIN sys.schemas AS s
  次のクエリは、データベースプリンシパルに対して明示的に許可または拒否されている権限を一覧表示します。  
   
 > [!IMPORTANT]  
->  固定データベースロールの権限は、に`sys.database_permissions`は表示されません。 そのため、データベースプリンシパルには、ここに記載されていない追加のアクセス許可がある場合があります。  
+>  固定データベースロールの権限は、には表示されません `sys.database_permissions` 。 そのため、データベースプリンシパルには、ここに記載されていない追加のアクセス許可がある場合があります。  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -106,7 +106,7 @@ JOIN sys.database_permissions AS pe
 ```  
   
 ### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D: データベース内のスキーマオブジェクトに対する権限を一覧表示する  
- 次のクエリで`sys.database_principals`は`sys.database_permissions` 、 `sys.objects`特定`sys.schemas`のスキーマオブジェクトに対して許可または拒否されている権限を、およびと結合して一覧表示します。  
+ 次のクエリでは、 `sys.database_principals` `sys.database_permissions` 特定の `sys.objects` `sys.schemas` スキーマオブジェクトに対して許可または拒否されている権限を、およびと結合して一覧表示します。  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -121,7 +121,7 @@ JOIN sys.schemas AS s
     ON o.schema_id = s.schema_id;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [server_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

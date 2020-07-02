@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19e94b01667d666a714db22d85d866b0df2ec3fc
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: c1a4d3014286618639b045f5028935368321a3a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881846"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753584"
 ---
 # <a name="functions-on-nodes---number"></a>ノードの関数 - number
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg*によって示されるノードの数値を返します。  
   
@@ -51,10 +51,10 @@ select @x.query('/ROOT[number()=111]')
   
  ノードの値が、 **XML スキーマパート 2: データ型、W3C 勧告**で定義されているように、数値単純型の有効な字句表現でない場合、関数は空のシーケンスを返します。 NaN はサポートされません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>A. Number () XQuery 関数を使用して属性の数値を取得する  
+### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>A: Number () XQuery 関数を使用して属性の数値を取得する  
  次のクエリでは、製品モデル7の製造プロセスの最初のワークセンターの場所から、大量のサイズの属性の数値を取得します。  
   
 ```  
@@ -99,7 +99,7 @@ ProductModelID   Result
   
 -   値を数値として返すことができない場合、 **number ()** 関数は、NaN ではなく空のシーケンスを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

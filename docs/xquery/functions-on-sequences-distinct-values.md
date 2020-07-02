@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c6e52209713ca94ab9cecc9f3c7910b6fc76ce9
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 1a82bfef35b0d8aec39f7f539f65e6ff1fe8f3ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215827"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753577"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>シーケンスの関数 - distinct-values
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg*によって指定されたシーケンスから重複する値を削除します。 *$Arg*が空のシーケンスの場合、関数は空のシーケンスを返します。  
   
@@ -46,10 +46,10 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
   
  Xs: string 型の値は、XQuery の既定の Unicode コードポイント照合順序と比較されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A. Distinct-values () 関数を使用して、シーケンスから重複する値を削除する  
+### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A: Distinct-values () 関数を使用して、シーケンスから重複する値を削除する  
  この例では、電話番号を含む XML インスタンスが**xml**型の変数に割り当てられています。 この変数に対して指定された XQuery は、 **distinct-values ()** 関数を使用して、重複が含まれていない電話番号のリストをコンパイルします。  
   
 ```  
@@ -94,7 +94,7 @@ select @x.query('
   
 -   照合順序を提供する構文オプションはサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

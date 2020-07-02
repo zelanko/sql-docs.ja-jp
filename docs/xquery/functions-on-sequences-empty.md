@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b80437f4c5a51fa649a291673fc212483fd43ae
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: c522e0756ca846558acbf6ac1b96c7d4abeef57e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753567"
 ---
 # <a name="functions-on-sequences---empty"></a>シーケンスの関数 - empty
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg*の値が空のシーケンスの場合に True を返します。 それ以外の場合、関数は False を返します。  
   
@@ -42,10 +42,10 @@ fn:empty($arg as item()*) as xs:boolean
 ## <a name="remarks"></a>Remarks  
  **Fn: exists ()** 関数はサポートされていません。 代わりに、 **not ()** 関数を使用することもできます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Empty () XQuery 関数を使用して、属性が存在するかどうかを判断する  
+### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A: Empty () XQuery 関数を使用して、属性が存在するかどうかを判断する  
  製品モデル7の製造プロセスでは、このクエリは**Machinehours**属性を持たないすべてのワークセンターの場所を返します。  
   
 ```  
@@ -111,7 +111,7 @@ ProductModelID Result
   <Location LocationID="60" LaborHrs="4" MachineHours="NotFound"/>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [exist&#40;&#41; メソッド &#40;xml データ型&#41;](../t-sql/xml/exist-method-xml-data-type.md)  
   

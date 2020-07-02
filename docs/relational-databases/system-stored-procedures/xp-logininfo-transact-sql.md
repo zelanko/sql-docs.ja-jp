@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f5a3e93ed2ae3b64828a3260743410b6d007560
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67898408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755545"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Windows ユーザーおよび Windows グループに関する情報を返します。  
   
@@ -41,10 +41,10 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @acctname = ] 'account_name'`に対するアクセスを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]許可された Windows ユーザーまたはグループの名前を指定します。 *account_name*は**sysname**,、既定値は NULL です。 *Account_name*が指定されていない場合は、明示的にログイン権限が付与されているすべての windows グループと windows ユーザーがレポートされます。 *account_name*は完全修飾名である必要があります。 たとえば、' ADVWKS4\macraes '、' BUILTIN\Administrators ' のようになります。  
+`[ @acctname = ] 'account_name'`に対するアクセスを許可された Windows ユーザーまたはグループの名前を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *account_name*は**sysname**,、既定値は NULL です。 *Account_name*が指定されていない場合は、明示的にログイン権限が付与されているすべての windows グループと windows ユーザーがレポートされます。 *account_name*は完全修飾名である必要があります。 たとえば、' ADVWKS4\macraes '、' BUILTIN\Administrators ' のようになります。  
   
- **' all '** | **' メンバー '**  
- アカウントのすべてのアクセス許可パスに関する情報をレポートするか、Windows グループのメンバーに関する情報を報告するかを指定します。 オプションは**varchar (10)**,、既定値は NULL です。 ** \@** **All**を指定しない限り、最初のアクセス許可パスのみが表示されます。  
+ **' all '**  | **' members '**  
+ アカウントのすべてのアクセス許可パスに関する情報をレポートするか、Windows グループのメンバーに関する情報を報告するかを指定します。 ** \@ オプション**は**varchar (10)**,、既定値は NULL です。 **All**を指定しない限り、最初のアクセス許可パスのみが表示されます。  
   
 `[ @privilege = ] variable_name`は、指定された Windows アカウントの特権レベルを返す出力パラメーターです。 *variable_name*は**varchar (10)**,、既定値は ' 不要 ' です。 返される特権レベルは**user**、 **admin**、または**null**です。  
   
@@ -60,16 +60,16 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |-----------------|---------------|-----------------|  
 |**アカウント名**|**sysname**|完全修飾 Windows アカウント名。|  
 |**type**|**char (8)**|Windows アカウントの種類。 有効な値は、**ユーザー**または**グループ**です。|  
-|**持っ**|**char(9)**|の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセス特権。 有効な値は、 **admin**、 **user**、または**null**です。|  
-|**mapped login name**|**sysname**|ユーザー特権を持つユーザーアカウントの場合、[マップされた**ログイン名**] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、このアカウントを使用してログインするときに、その前に追加したドメイン名を持つマップされた規則を使用してログインするときに使用する、マップされたログイン名が表示されます。|  
+|**持っ**|**char(9)**|のアクセス特権 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有効な値は、 **admin**、 **user**、または**null**です。|  
+|**mapped login name**|**sysname**|ユーザー特権を持つユーザーアカウントの場合、[マップされた**ログイン名**] には、このアカウントを使用してログインするときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] その前に追加したドメイン名を持つマップされた規則を使用してログインするときに使用する、マップされたログイン名が表示されます。|  
 |**permission path**|**sysname**|アカウントへのアクセスが許可されているグループメンバーシップ。|  
   
 ## <a name="remarks"></a>Remarks  
- *Account_name*が指定されている場合、 **xp_logininfo**は、指定された Windows ユーザーまたはグループの最上位の特権レベルを報告します。 Windows ユーザーがシステム管理者とドメインユーザーの両方としてアクセス権を持っている場合は、システム管理者として報告されます。 ユーザーが同じ権限レベルの複数の Windows グループのメンバーである場合、へのアクセスが最初に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]許可されたグループのみがレポートされます。  
+ *Account_name*が指定されている場合、 **xp_logininfo**は、指定された Windows ユーザーまたはグループの最上位の特権レベルを報告します。 Windows ユーザーがシステム管理者とドメインユーザーの両方としてアクセス権を持っている場合は、システム管理者として報告されます。 ユーザーが同じ権限レベルの複数の Windows グループのメンバーである場合、へのアクセスが最初に許可されたグループのみ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がレポートされます。  
   
- *Account_name*が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインに関連付けられていない有効な Windows ユーザーまたはグループである場合は、空の結果セットが返されます。 *Account_name*が有効な Windows ユーザーまたはグループとして識別できない場合は、エラーメッセージが返されます。  
+ *Account_name*がログインに関連付けられていない有効な Windows ユーザーまたはグループである場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、空の結果セットが返されます。 *Account_name*が有効な Windows ユーザーまたはグループとして識別できない場合は、エラーメッセージが返されます。  
   
- *Account_name*と**all**が指定されている場合は、Windows ユーザーまたはグループのすべてのアクセス許可パスが返されます。 *Account_name*が複数のグループのメンバーであり、そのすべてにへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアクセスが許可されている場合は、複数の行が返されます。 **Admin**特権の行は、**ユーザー**特権行の前に返されます。特権レベルでは、対応する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインが作成された順序で行が返されます。  
+ *Account_name*と**all**が指定されている場合は、Windows ユーザーまたはグループのすべてのアクセス許可パスが返されます。 *Account_name*が複数のグループのメンバーであり、そのすべてにへのアクセスが許可されている場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、複数の行が返されます。 **Admin**特権の行は、**ユーザー**特権行の前に返されます。特権レベルでは、対応するログインが作成された順序で行が返され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  *Account_name*と**メンバー**が指定されている場合は、グループの次のレベルのメンバーの一覧が返されます。 *Account_name*がローカルグループの場合、一覧にはローカルユーザー、ドメインユーザー、およびグループを含めることができます。 *Account_name*がドメインアカウントの場合、一覧はドメインユーザーで構成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではドメイン コントローラーに接続してグループのメンバーシップ情報を取得する必要があります。 サーバーがドメインコントローラに接続できない場合、情報は返されません。  
   
@@ -79,13 +79,13 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
  **Sysadmin**固定サーバーロールのメンバーシップ、または実行権限が付与された**master**データベースの**public**固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 `BUILTIN\Administrators` Windows グループに関する情報を表示します。  
+ 次の例では、Windows グループに関する情報を表示し `BUILTIN\Administrators` ます。  
   
 ```  
 EXEC xp_logininfo 'BUILTIN\Administrators';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_denylogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   

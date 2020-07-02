@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dcaa69b0e300ebd169e762ec28ce73e6ab1ffc7c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a177473bf879f9a29c02d5483e80dcdf921751b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755454"
 ---
 # <a name="log_shipping_monitor_history_detail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   ログ配布ジョブの履歴の詳細を格納します。 このテーブルは、 **msdb**データベースに格納されます。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82834173"
 |**log_time_utc**|**datetime**|レコードが作成された日付と時刻。協定世界時で表されます。|  
 |**message**|**nvarchar(max)**|メッセージ テキスト。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このテーブルには、ログ配布エージェントの履歴の詳細が含まれています。 エージェントセッションを識別するには、列**agent_id**、 **agent_type**、および**session_id**を使用します。 エージェントセッションの履歴の詳細を表示するには、 **log_time**で並べ替えます。  
   
  リモート監視サーバーに格納されているだけでなく、プライマリサーバーに関連する情報が**log_shipping_monitor_history_detail**テーブルのプライマリサーバーに格納されます。また、セカンダリサーバーに関連する情報は、セカンダリサーバーの**log_shipping_monitor_history_detail**テーブルにも格納されます。  
@@ -50,7 +50,7 @@ ms.locfileid: "82834173"
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_delete_log_shipping_primary_database &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
- [sp_cleanup_log_shipping_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
+ [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [sp_refresh_log_shipping_monitor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
  [システムテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)   

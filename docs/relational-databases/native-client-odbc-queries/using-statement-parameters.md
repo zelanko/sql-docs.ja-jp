@@ -19,15 +19,15 @@ ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74cd70bcd9107d68551dc3f82eb1e01f76a549b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4768cc911a1044a4e916718ef164f4f09fc6a28
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755643"
 ---
 # <a name="using-statement-parameters"></a>ステートメント パラメーターの使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   パラメーターは、ODBC アプリケーションで次の操作を可能にする SQL ステートメント内の変数です。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "81297903"
   
 -   クエリ条件を作成する際のユーザーとの対話を強化する。  
   
--   **Text**、 **ntext**、および**Image**データおよび[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定の C データ型を管理します。  
+-   **Text**、 **ntext**、および**Image**データおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定の C データ型を管理します。  
   
  たとえば、 **Parts**テーブルには、 **PartID**、 **Description**、および**Price**という名前の列があります。 パラメーターを使用しないで部品を追加するには、次のような SQL ステートメントを構築する必要があります。  
   
@@ -57,7 +57,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 -   [パラメーターのバインド](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC&#41;&#40;クエリの実行](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

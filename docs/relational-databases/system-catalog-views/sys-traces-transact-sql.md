@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1a135dfd0f633858d828a476899094cb2f0409ed
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 612097238e75fd1f811050b2bba2dfb773695797
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754404"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   システム上で現在実行中のトレースは、の**トレース**カタログビューに含まれています。 このビューは、 **fn_trace_getinfo**関数の代わりとして使用されます。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82821216"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|トレース ID。|  
+|**id**|**int**|トレース ID。|  
 |**status**|**int**|トレースの状態。<br /><br /> 0 = 停止<br /><br /> 1 = 実行中|  
 |**path**|**nvarchar(260)**|トレースファイルのパス。 トレースが行セットトレースの場合、この値は null になります。|  
 |**max_size**|**bigint**|トレース ファイル サイズの上限 (MB 単位)。 トレースが行セットトレースの場合、この値は null になります。|  
@@ -60,7 +60,7 @@ ms.locfileid: "82821216"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [trace_categories &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
  [trace_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   

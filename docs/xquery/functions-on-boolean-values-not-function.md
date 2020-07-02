@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24235099ec742d4c6d62e3d97ee1f551af24f7d4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: db4fbd8e78827ff8818f74e83bf9f2d8ca8d0d39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753600"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>ブール値に対する関数 - 機能しない 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg*の有効なブール値が false の場合は true を返し、 *$arg*の有効なブール値が TRUE の場合は false を返します。  
   
@@ -41,10 +41,10 @@ fn:not($arg as item()*) as xs:boolean
  *$arg*  
  有効なブール値が指定されているアイテムのシーケンス。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Not () XQuery 関数を使用して、カタログの説明に要素が含まれていない製品モデルを検索し \<Specifications> ます。  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A: Not () XQuery 関数を使用して、カタログの説明に要素が含まれていない製品モデルを検索し \<Specifications> ます。  
  次のクエリでは、カタログの説明に <> 要素が含まれていない製品モデルの製品モデル Id を含む XML を構築し `Specifications` ます。  
   
 ```  
@@ -70,7 +70,7 @@ WHERE CatalogDescription.exist('
   
  各製品モデルカタログの説明には要素が含まれているので、この結果セットは空です \<Specifications> 。  
   
-### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B. not() XQuery 関数を使用して、MachineHours 属性を持たないワーク センターの場所を取得する  
+### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B: not() XQuery 関数を使用して、MachineHours 属性を持たないワーク センターの場所を取得する  
  次のクエリは、命令列に対して指定されています。 この列には、製品モデルの製造手順が格納されています。  
   
  特定の製品モデルでは、MachineHours を指定していないワークセンターの場所を取得します。 つまり、属性**Machinehours**は要素に対して指定されていません \<Location> 。  
@@ -109,7 +109,7 @@ ProductModelID Result
   
 -   **Not ()** 関数は、xs: boolean 型、node () *、または空のシーケンスの引数のみをサポートします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

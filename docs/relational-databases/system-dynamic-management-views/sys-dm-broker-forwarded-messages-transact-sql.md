@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5576376d-6364-417a-8475-aa770e060845
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7142fd9482b3db72a356568b97beb4467a3fab31
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e72a67d74fb6147f9710490254b752cc838b55cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830880"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754303"
 ---
 # <a name="sysdm_broker_forwarded_messages-transact-sql"></a>sys.dm_broker_forwarded_messages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   のインスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が転送処理中であることを Service Broker メッセージごとに1行の値を返します。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "82830880"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Service Broker 関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   

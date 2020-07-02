@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bdcb53b4f9654114e92b6d5bb7154652201da67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7fe1a3cd78e430b1fcbf4dd14d12097273438a6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755404"
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>FlagValue プロパティ (ClientSettingsGeneralFlag クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   フラグの値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,7 +35,7 @@ ms.locfileid: "73660639"
 object.FlagValue [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  サーバー設定に使用する一般的なフラグを表す [ClientSettingsGeneralFlag クラス](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) オブジェクト。  
   
@@ -44,7 +44,7 @@ object.FlagValue [= value]
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a676688176e164736552460667432919250f8e99
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 610dcca5103e4a819b0e6c59629ddd4d510f5469
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82261850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756355"
 ---
 # <a name="supported-net-framework-libraries"></a>サポートされている .NET Framework ライブラリ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にホストされている共通言語ランタイム (CLR) を使用すると、ストアド プロシージャ、トリガー、ユーザー定義関数、ユーザー定義型、およびユーザー定義集計をマネージド コードで作成できます。 .NET Framework クラス ライブラリに用意されている機能を使用すると、文字列操作、高度な算術演算、ファイル アクセス、暗号化などの機能を提供する組み込みのクラスにアクセスできます。 これらのクラスは、任意のマネージド ストアド プロシージャ、ユーザー定義型、トリガー、ユーザー定義関数、またはユーザー定義集計からアクセスできます。  
   
 > [!NOTE]  
@@ -57,9 +57,9 @@ https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-d
 ## <a name="unsupported-libraries"></a>サポートされていないライブラリ  
  サポートされていないライブラリは、マネージド ストアド プロシージャ、トリガー、ユーザー定義関数、ユーザー定義型、およびユーザー定義集計から呼び出すことができます。 サポートされていないライブラリは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コード内で使用する前に、 **CREATE ASSEMBLY**ステートメントを使用してデータベースに登録する必要があります。 サポートされていないライブラリをサーバーに登録して実行する場合は、そのライブラリのセキュリティと信頼性を確認およびテストする必要があります。  
   
- たとえば、 **system.directoryservices**名前空間はサポートされていません。 System.directoryservices アセンブリは、コードから呼び出す前に、 **UNSAFE**アクセス許可を使用して登録する必要があります。 **System.directoryservices**名前空間のクラスが**SAFE**または**EXTERNAL_ACCESS**の要件を満たしていないため、 **UNSAFE**アクセス許可が必要です。 詳細については、「 [Clr 統合プログラミングモデルの制限事項](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)」と「 [Clr 統合コードアクセスセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)」を参照してください。  
+ たとえば、 **system.directoryservices**名前空間はサポートされていません。 System.DirectoryServices.dll アセンブリは、コードから呼び出す前に、 **UNSAFE**アクセス許可を使用して登録する必要があります。 **System.directoryservices**名前空間のクラスが**SAFE**または**EXTERNAL_ACCESS**の要件を満たしていないため、 **UNSAFE**アクセス許可が必要です。 詳細については、「 [Clr 統合プログラミングモデルの制限事項](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)」と「 [Clr 統合コードアクセスセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アセンブリの作成](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [CLR 統合のコードアクセスセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [CLR 統合プログラミング モデルの制限事項](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f90f0f9ca490cc2adfeb2768b9d1dfe9f072eb39
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: aa9acc4c79d513392ecd85f7c667452fd5a108e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753842"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   マイナー823エラーまたは824エラーによって失敗したページごとに1行の値を格納します。 ページは問題の疑いがあると考えられるので、この表に記載されていますが、実際には問題ありません。 問題のあるページが修復されると、[ **event_type** ] 列の状態が更新されます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82834146"
 ## <a name="permissions"></a>アクセス許可  
  **msdb** に対するアクセスを持つユーザー は、 **suspect_pages** テーブルのデータを読み取ることができます。 suspect_pages テーブルに対する UPDATE 権限を持つすべてのユーザーは、そのレコードを更新できます。 **msdb** の **db_owner** 固定データベース ロールのメンバーまたは **sysadmin** 固定サーバー ロールのメンバーは、レコードの挿入、更新、および削除を行うことができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ページ復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [Database Suspect Data Page イベントクラス](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)   
  [システムテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)   

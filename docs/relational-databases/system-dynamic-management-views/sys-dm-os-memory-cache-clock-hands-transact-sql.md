@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07d96a38d97917b11614e3c48c781e615a32554b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d957bdc70afdd0e6dbc7d15e5b2ea4ee78568dc5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820840"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754100"
 ---
 # <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   特定のキャッシュ クロックに関する各ハンドの状態を返します。  
   
@@ -54,10 +54,10 @@ ms.locfileid: "82820840"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリキャッシュと呼ばれる構造体のメモリに情報を格納します。 キャッシュには、データ、インデックス エントリ、コンパイル済みプロシージャ プランなど、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関するさまざまな種類の情報が格納されます。 情報を再作成しないようにするために、メモリキャッシュは可能な限り長く保持され、通常はキャッシュから削除されます。これは、時間がかかりすぎている場合や、新しい情報のためにメモリ領域が必要な場合に、キャッシュから削除されます。 古い情報を削除するプロセスは、メモリスイープと呼ばれます。 メモリスイープは頻繁に発生するアクティビティですが、連続していません。 メモリ キャッシュのスイープはクロック アルゴリズムによって制御され、 各クロックは、両手と呼ばれる複数のメモリスイープを制御できます。 メモリキャッシュクロックハンドは、メモリスイープの1つの針の現在の場所です。  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
  [dm_os_memory_cache_counters &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)
   

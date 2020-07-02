@@ -19,15 +19,15 @@ ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8275ed39d49c8fdb64c1d2f26cc1d218c525500c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a504416014d9e3a0cb25972ab624fc720a26bef3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830513"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754164"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>dm_os_host_info (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 オペレーティングシステムのバージョン情報を表示する1行を返します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82830513"
 |**host_sku**|**int**|Windows 株価保持ユニット (SKU) ID。 SKU Id と説明の一覧については、「 [Getproductinfo 関数](https://msdn.microsoft.com/library/ms724358.aspx)」を参照してください。 NULL 値が許可されます。 <br> Linux の場合、は NULL を返します。 |  
 |**os_language_version**|**int**|オペレーティングシステムの Windows ロケール識別子 (LCID)。 LCID 値と説明の一覧については、「 [Microsoft によって割り当てられたロケール id](https://go.microsoft.com/fwlink/?LinkId=208080)」を参照してください。 null にすることはできません。|  
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 このビューは、Windows と Linux を区別するために列を追加する dm_os_windows_info に似てい[ます。](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)
   
 ## <a name="security"></a>Security  
@@ -74,7 +74,7 @@ Linux での結果セットの例を次に示します。
  |Linux |Ubuntu |16.04  |   |NULL   |1033 |  
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dm_os_sys_info &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [dm_os_windows_info (Transact-sql)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  

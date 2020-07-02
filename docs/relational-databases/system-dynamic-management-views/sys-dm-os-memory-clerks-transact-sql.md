@@ -20,15 +20,15 @@ ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: feb07dbf92a68ec12a1c4c6ae8f509acc3320867
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 41c8d6c92e835dd0285272e54cadedc6b677f73f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829369"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754069"
 ---
 # <a name="sysdm_os_memory_clerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   のインスタンスで現在アクティブなすべてのメモリクラークのセットを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82829369"
 |**memory_clerk_address**|**varbinary (8)**|メモリ クラークの一意のメモリ アドレスを指定します。 これは主キー列です。 NULL 値は許可されません。|  
 |**type**|**nvarchar(60)**|メモリクラークの種類を指定します。 各クラークには、CLR Clerks MEMORYCLERK_SQLCLR などの特定の種類があります。 NULL 値は許可されません。|  
 |**name**|**nvarchar(256)**|このメモリ クラークに内部的に割り当てられた名前を指定します。 コンポーネントは、特定の種類の複数のメモリクラークを持つことができます。 同じ種類のメモリ クラークを識別するために、コンポーネントで特定の名前を選択して使用することもできます。 NULL 値は許可されません。|  
-|**memory_node_id**|**smallint**|メモリノードの ID を指定します。 Null 値は許容されません。|  
+|**memory_node_id**|**smallint**|メモリノードの ID を指定します。 NULL 値は許可されません。|  
 |**single_pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
 |**pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> このメモリクラークに割り当てられたページメモリの量をキロバイト (KB) 単位で指定します。 NULL 値は許可されません。|  
 |**multi_pages_kb**|**bigint**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /><br /> 割り当てられた複数ページメモリの量 (KB 単位)。 これは、メモリノードの複数ページアロケーターを使用して割り当てられたメモリの量です。 このメモリは、バッファー プール外に割り当てられ、メモリ ノードの仮想アロケーターを利用します。 NULL 値は許可されません。|  
@@ -64,7 +64,7 @@ ms.locfileid: "82829369"
   
  メモリノードは、低レベルのアロケーターのインターフェイスと実装を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部では、メモリ クラークのみがメモリ ノードにアクセスできます。 メモリクラークはメモリノードインターフェイスにアクセスしてメモリを割り当てます。 また、メモリノードは、診断の clerk を使用して割り当てられたメモリを追跡します。 大量のメモリを割り当てるすべてのコンポーネントは、独自のメモリクラークを作成し、clerk インターフェイスを使用してすべてのメモリを割り当てる必要があります。 通常、コンポーネントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に、それぞれに対応したクラークを作成します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [dm_os_sys_info &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   

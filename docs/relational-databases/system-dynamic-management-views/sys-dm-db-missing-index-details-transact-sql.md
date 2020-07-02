@@ -21,15 +21,15 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77b3faae57764a936e6115d22ac00ca855d3acb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 159390f64b00aa8bd72478552e37ceaaf26566bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754238"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>dm_db_missing_index_details (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   空間インデックスを除く、欠落インデックスに関する詳細情報を返します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82829438"
 |**equality_columns**|**nvarchar (4000)**|次の形式の等値述語に使用できる列のコンマ区切り一覧。<br /><br /> *表. 列*  =*constant_value*|  
 |**inequality_columns**|**nvarchar (4000)**|次の形式のような不等値述語に使用できる列のコンマ区切り一覧。<br /><br /> *表. 列*  > *constant_value*<br /><br /> "=" 以外の比較演算子はすべて、不等値を表します。|  
 |**included_columns**|**nvarchar (4000)**|クエリの包括列として必要な列のコンマ区切り一覧。 カバリング列または付加列の詳細については、「[付加列を使用したインデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。<br /><br /> メモリ最適化インデックス (ハッシュとメモリ最適化された非クラスター化) の場合は、 **included_columns**を無視します。 すべてのメモリ最適化インデックスには、テーブルのすべての列が含まれています。|  
-|**諸表**|**nvarchar (4000)**|インデックスが欠落しているテーブルの名前。|  
+|**statement**|**nvarchar (4000)**|インデックスが欠落しているテーブルの名前。|  
   
 ## <a name="remarks"></a>Remarks  
  **sys.dm_db_missing_index_details** によって返される情報は、クエリ オプティマイザーでクエリが最適化されるときに更新されますが、保存されません。 欠落インデックスの情報が保持されるのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の再起動までです。 欠落インデックスの情報を、サーバーの再利用後も保持する場合は、データベース管理者が情報のバックアップ コピーを定期的に作成する必要があります。  
@@ -67,7 +67,7 @@ ms.locfileid: "82829438"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dm_db_missing_index_columns &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
  [dm_db_missing_index_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
  [dm_db_missing_index_group_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
