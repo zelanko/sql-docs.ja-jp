@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37c6a32b7970d8bfb0a44eaf407914c5de27f593
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04201e9127f5de173767f7b2071088f2bd4f2828
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772172"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   要求されたオブジェクトの現在のサイズを返し、要求された圧縮状態のオブジェクトサイズを推定します。 圧縮は、テーブル全体またはテーブルの一部について評価できます。 これには、ヒープ、クラスター化インデックス、非クラスター化インデックス、列ストアインデックス、インデックス付きビュー、およびテーブルとインデックスのパーティションが含まれます。 オブジェクトは、行、ページ、列ストア、または列ストアアーカイブの圧縮を使用して圧縮できます。 テーブル、インデックス、またはパーティションが既に圧縮されている場合は、この手順を使用して、テーブル、インデックス、またはパーティションが上げの場合のサイズを見積もることができます。  
   
@@ -89,7 +89,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (KB)|**bigint**|現在の圧縮設定を使用したサンプルのサイズ。 この列には、断片化も含まれます。|  
 |sample_size_with_requested_compression_setting (KB)|**bigint**|要求された圧縮設定を使用して作成されるサンプルのサイズ。また、該当する場合は、既存の FILL FACTOR と断片化はありません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  を使用 `sp_estimate_data_compression_savings` すると、行、ページ、列ストア、または列ストアアーカイブの圧縮に対してテーブルまたはパーティションを有効にした場合に発生する節約量を見積もることができます。 たとえば、行の平均サイズを40% 削減できる場合は、オブジェクトのサイズを40% 小さくすることができます。 これは FILL FACTOR と行サイズに左右されるため、領域を削減できない場合もあります。 たとえば、8000バイトの長さの行があり、そのサイズを40% 削減した場合でも、データページには1つの行だけを収めることができます。 領域は削減されません。  
   
  `sp_estimate_data_compression_savings` を実行してテーブルが増大するという結果が示される場合は、テーブルの多くの行でデータ型の有効桁数がほとんど使用されており、圧縮された形式に必要なわずかなオーバーヘッドが積み重なって、圧縮による削減量を上回ることを意味しています。 このようなまれなケースでは、圧縮を使用しないでください。  

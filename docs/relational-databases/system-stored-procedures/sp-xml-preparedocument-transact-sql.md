@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65ec62997eb25564e19696a8df2895b980d728be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1232f5eb7917606d7f7e88c912be163d13de33ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767488"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   入力として指定された XML テキストを読み取り、MSXML パーサー (Msxmlsql.dll) を使用してテキストを解析し、解析されたドキュメントを使用できる状態で提供します。 この解析済みドキュメントは、XML ドキュメント内のさまざまなノード (要素、属性、テキスト、コメントなど) のツリー表現です。  
   
@@ -71,7 +71,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  OPENXML の行と列の XPath 式で使用される名前空間宣言を指定します。 *xpath_namespaces*は、 **char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**、 **ntext** 、または**xml**のテキストパラメーターです。  
   
- 既定値は、 ** \< root xmlns: mp = "urn: schema-microsoft-com: xml-メタの >** です。 *xpath_namespaces*は、適切な形式の XML ドキュメントを使用して、OPENXML の xpath 式で使用されるプレフィックスの名前空間 uri を提供します。 名前空間**urn: schema**を参照するために使用する必要があるプレフィックスを宣言する*xpath_namespaces* 。これにより、解析された XML 要素に関するメタデータが提供されます。 この手法を使用してメタプロパティ名前空間の名前空間プレフィックスを再定義することはできますが、この名前空間は失われません。 このような宣言が含まれていない*xpath_namespaces*場合でも、 **urn: schema-microsoft-com: xml メタ prop**ではプレフィックス**mp**は引き続き有効です。  
+ 既定値は **\<root xmlns:mp="urn:schemas-microsoft-com:xml-metaprop">** です。 *xpath_namespaces*は、適切な形式の XML ドキュメントを使用して、OPENXML の xpath 式で使用されるプレフィックスの名前空間 uri を提供します。 名前空間**urn: schema**を参照するために使用する必要があるプレフィックスを宣言する*xpath_namespaces* 。これにより、解析された XML 要素に関するメタデータが提供されます。 この手法を使用してメタプロパティ名前空間の名前空間プレフィックスを再定義することはできますが、この名前空間は失われません。 このような宣言が含まれていない*xpath_namespaces*場合でも、 **urn: schema-microsoft-com: xml メタ prop**ではプレフィックス**mp**は引き続き有効です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または >0 (失敗)  
@@ -107,7 +107,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 exec sp_xml_removedocument @hdoc;  
 ```  
   
-### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>B. ウェルフォームド XML ドキュメントの内部表現を DTD を使用して準備する  
+### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>B: ウェルフォームド XML ドキュメントの内部表現を DTD を使用して準備する  
  次の例では、入力として指定された XML ドキュメントの、新しく作成された内部表現へのハンドルを返します。 このストアドプロシージャは、ドキュメントに含まれている DTD に対して読み込まれたドキュメントを検証します。 `sp_xml_preparedocument` の呼び出しでは、既定の名前空間プレフィックス マッピングを使用します。  
   
 ```  
@@ -126,7 +126,7 @@ SET @doc = '
 EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;  
 ```  
   
-### <a name="c-specifying-a-namespace-uri"></a>C. 名前空間 URI を指定する  
+### <a name="c-specifying-a-namespace-uri"></a>C: 名前空間 URI を指定する  
  次の例では、入力として指定された XML ドキュメントの、新しく作成された内部表現へのハンドルを返します。 を呼び出す `sp_xml_preparedocument` と、 `mp` メタプロパティ名前空間マッピングのプレフィックスが保持され、その `xyz` 名前空間にマッピングプレフィックスが追加され `urn:MyNamespace` ます。  
   
 ```  
@@ -152,7 +152,7 @@ SET @doc ='
 EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespace"/>';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <br>[XML ストアドプロシージャ (Transact-sql)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
  <br>[システムストアドプロシージャ (Transact-sql)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[OPENXML (Transact-sql)](../../t-sql/functions/openxml-transact-sql.md)

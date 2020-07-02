@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f951aaee96bccf0c2876c781aaebdd2a009b51d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11af27e5b94f7fa95c66e13b198ff6134df23912
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140477"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772281"
 ---
 # <a name="sp_add_log_file_recover_suspect_db-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   ログ領域が不足しているため (エラー 9002)、データベースで復旧を完了できない場合に、ログファイルをファイルグループに追加します。 ファイルが追加されると、 **sp_add_log_file_recover_suspect_db**問題のある設定がオフになり、データベースの復旧が完了します。 パラメーターは、ALTER DATABASE の*DATABASE_NAME*ログファイルの追加と同じです。  
   
@@ -46,9 +46,9 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ## <a name="arguments"></a>引数  
 `[ @dbName = ] 'database'`データベースの名前を指定します。 *データベースのデータ*型は**sysname**で、既定値はありません。  
   
-`[ @name = ] 'logical_file_name'`ファイルを参照[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するときにで使用される名前を指定します。 サーバー内で一意な名前を指定する必要があります。 *logical_file_name*は**nvarchar (260)**,、既定値はありません。  
+`[ @name = ] 'logical_file_name'`ファイルを参照するときにで使用される名前を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 サーバー内で一意な名前を指定する必要があります。 *logical_file_name*は**nvarchar (260)**,、既定値はありません。  
   
-`[ @filename = ] 'os_file_name'`は、ファイルのオペレーティングシステムによって使用されるパスとファイル名です。 ファイルは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]がインストールされているサーバーに存在している必要があります。 *os_file_name*は**nvarchar (260)**,、既定値はありません。  
+`[ @filename = ] 'os_file_name'`は、ファイルのオペレーティングシステムによって使用されるパスとファイル名です。 ファイルは、がインストールされているサーバーに存在している必要があり [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。 *os_file_name*は**nvarchar (260)**,、既定値はありません。  
   
 `[ @size = ] 'size_ '`ファイルの初期サイズです。 *サイズ*は**nvarchar (20)**,、既定値は NULL です。 整数を指定します。小数を含めないでください。 サフィックス MB、KB を使用してメガバイト、キロバイトを指定できます。 既定値は MB です。 最小値は 512 KB です。 *Size*が指定されていない場合の既定値は 1 MB です。  
   
@@ -64,13 +64,13 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。 これらのアクセス許可は転送できません。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、ログ`db1`領域が不足しているため、復旧中にデータベースが問題ありとマークされています (エラー 9002)。  
+ 次の例では、 `db1` ログ領域が不足しているため、復旧中にデータベースが問題ありとマークされています (エラー 9002)。  
   
 ```  
 USE master;  

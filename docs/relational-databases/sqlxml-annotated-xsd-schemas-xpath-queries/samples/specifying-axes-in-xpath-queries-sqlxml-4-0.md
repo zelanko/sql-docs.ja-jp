@@ -20,15 +20,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60aa4c8fa44fb9e4cd27c73ac69371594371445e
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: aabd650308ecab085b121bb5ac8f5253b681a92c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884322"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773033"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での軸の指定 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   以下の例では、XPath クエリに軸を指定する方法を示します。  
   
  これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
@@ -86,7 +86,7 @@ ms.locfileid: "84884322"
 </ROOT>  
 ```  
   
-### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. コンテキスト ノードの孫を取得する  
+### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B: コンテキスト ノードの孫を取得する  
  次の XPath クエリでは、 **\<Order>** コンテキストノードの子要素のすべての子要素を選択し **\<Customer>** ます。  
   
 ```  
@@ -164,7 +164,7 @@ ms.locfileid: "84884322"
   
  XPath クエリがとして指定されている場合 `Customer/Order/OrderDetail` 、クエリは一致する各ノードから **\<Customer>** その要素に移動し **\<Order>** ます。 また、一致するノードごとに **\<Order>** 、クエリによってノードが結果に追加され **\<OrderDetail>** ます。 **\<OrderDetail>** 結果セットにのみが返されます。  
   
-### <a name="c-use--to-specify-the-parent-axis"></a>C. .. を使用して  parent 軸を指定する  
+### <a name="c-use--to-specify-the-parent-axis"></a>C: .. を使用して  parent 軸を指定する  
  次のクエリでは、 **\<Order>** **\<Customer>** **CustomerID**属性値が1である親要素を持つすべての要素を取得します。 このクエリでは、述語の**子**軸を使用して、要素の親を検索し **\<Order>** ます。  
   
 ```  
@@ -248,7 +248,7 @@ ms.locfileid: "84884322"
 </ROOT>  
 ```  
   
-### <a name="d-specify-the-attribute-axis"></a>D. attribute 軸を指定する  
+### <a name="d-specify-the-attribute-axis"></a>D: attribute 軸を指定する  
  次の XPath クエリでは、 **\<Customer>** **CustomerID**属性値が1のコンテキストノードのすべての子要素を選択します。  
   
 ```  

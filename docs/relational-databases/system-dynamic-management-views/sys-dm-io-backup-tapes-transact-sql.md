@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f7d0e9c5198b65a6e4ddce148dbafd46821e2f40
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 745ad11ccb8b06471ac07477739580558475e363
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830541"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771591"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   テープ デバイスの一覧、およびバックアップのマウント要求の状態を返します。   
  
@@ -40,7 +40,7 @@ ms.locfileid: "82830541"
 |**mount_expiration_time**|**datetime**|マウント要求の有効期限が切れる時刻 (タイムアウト)。 保留中マウントがない場合は NULL (**status! = 2**)。 NULL 値が許可されます。|  
 |**database_name**|**nvarchar(256)**|このデバイスにバックアップされるデータベース。 NULL 値が許可されます。|  
 |**調べる**|**int**|セッション ID。 これにより、テープのユーザーが識別されます。 NULL 値が許可されます。|  
-|**メニュー**|**int**|バックアップを実行するコマンド。 NULL 値が許可されます。|  
+|**command**|**int**|バックアップを実行するコマンド。 NULL 値が許可されます。|  
 |**command_desc**|**nvarchar(120)**|コマンドの説明です。 NULL 値が許可されます。|  
 |**media_family_id**|**int**|メディアファミリのインデックス (1.* ..n*)、 *n*は、メディアセット内のメディアファミリの数です。 NULL 値が許可されます。|  
 |**media_set_name**|**nvarchar(256)**|メディアセットが作成されたときに、MEDIANAME オプションで指定されたメディアセットの名前 (存在する場合)。 NULL 値が許可されます。|  
@@ -54,7 +54,7 @@ ms.locfileid: "82830541"
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、サーバーに対する VIEW SERVER STATE 権限を持っている必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I/o 関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
   

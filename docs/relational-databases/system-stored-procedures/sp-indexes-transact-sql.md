@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d678b5643c4288c07ff7576bfced5cd9f0655d1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 77cace048b83ff3d4d93b4cc536dbc2c68415d98
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817875"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772941"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたリモート テーブルに関するインデックス情報を返します。  
   
@@ -62,7 +62,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @is_unique =] '*is_unique*'  
  情報を返す対象のインデックスの種類を指定します。 *is_unique*の部分は**bit**で、既定値は NULL です。次のいずれかの値を指定できます。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |1|一意のインデックスに関する情報を返します。|  
 |0|一意ではないインデックスに関する情報を返します。|  
@@ -99,7 +99,7 @@ EXEC sp_indexes @table_server = 'Seattle1',
    @table_catalog = 'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [分散クエリストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_catalogs &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   

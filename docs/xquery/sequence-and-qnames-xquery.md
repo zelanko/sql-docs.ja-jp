@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 017c2289864b8d2d475bea63a5828d37543b7292
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: dbf165b1121b35ccc1b68578841108866832bb80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305811"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765598"
 ---
 # <a name="sequence-and-qnames-xquery"></a>シーケンスと QName (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、XQuery の次の基本的な概念について説明します。  
   
@@ -149,7 +149,7 @@ WHERE ProductModelID=7;
 > [!NOTE]  
 >  この実装では、 `local` の XQuery 仕様で説明されているように、プレフィックスはサポートされません http://www.w3.org/2004/07/xquery-local-functions 。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery の基礎](../xquery/xquery-basics.md)  
   
   

@@ -18,15 +18,15 @@ ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a2535aff30c0a3071b641889f5e4a3f1433f88b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b362d3d3d839a624a7a04b0c2189446094387fea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823977"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771267"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在の環境内の1つのテーブルの列権限情報を返します。  
   
@@ -89,7 +89,7 @@ EXEC sp_column_privileges @table_name = 'Employee'
     ,@column_name = 'SalariedFlag';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [GRANT &#40;Transact-sql&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [&#40;Transact-sql&#41;を取り消す](../../t-sql/statements/revoke-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

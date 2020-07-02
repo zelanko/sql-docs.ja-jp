@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efa06923eeceff312def44ff13ab12b8371439c7
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 6c1186623b334d3eea465c632bc23ec58ba231ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529784"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765614"
 ---
 # <a name="primary-expressions-xquery"></a>原始式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery のプライマリ式には、リテラル、変数参照、コンテキスト項目式、コンストラクター、および関数呼び出しが含まれます。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "84529784"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、XML Version 1.0 が解析の基準として使用されます。  
   
-### <a name="examples"></a>例  
+### <a name="examples"></a>使用例  
  次の例では、リテラルと、エンティティと文字の参照の使用方法を示します。  
   
  '`<'` 文字、および `'>`' 文字には特別な意味があるため、このコードはエラーを返します。  
@@ -182,6 +182,6 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
   
 -   関数のインポートはサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML 構築 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)
  

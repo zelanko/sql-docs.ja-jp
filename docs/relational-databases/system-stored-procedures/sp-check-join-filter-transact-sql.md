@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c15b8e79dc683c299a1a3f0407b401b2565faffb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e06efc20893454c4057b85ae2f3ca6d45cd150c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824016"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771329"
 ---
 # <a name="sp_check_join_filter-transact-sql"></a>sp_check_join_filter (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   2 つのテーブル間の結合フィルターを検証し、結合フィルター句が有効かどうかを判別する場合に使用します。 このストアド プロシージャは、指定したテーブルの事前計算されたパーティションで、指定した結合フィルターを使用できるかどうかなど、指定した結合フィルターに関する情報を返します。 このストアド プロシージャは、パブリケーション上のパブリッシャー側で実行されます。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
   
@@ -72,7 +72,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_check_join_filter**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

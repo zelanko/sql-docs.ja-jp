@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8f9260aad5b07e57ff3d95b8943d85a15756077d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771472"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   マージパブリケーションのプロパティを変更します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -78,7 +78,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**サブスクライバ**|競合レコードは、競合の原因となったサブスクライバーに保存されます。 サブスクライバーではサポートされていません [!INCLUDE[ssEW](../../includes/ssew-md.md)] *。*|  
 ||**両方とも**|競合レコードは、パブリッシャーとサブスクライバーの両方に保存されます。|  
 |**conflict_retention**||競合を保持する保有期間を日数で指定する**int**です。 *Conflict_retention*を**0**に設定すると、競合のクリーンアップは必要ありません。|  
-|**記述**||パブリケーションの説明です。|  
+|**description**||パブリケーションの説明です。|  
 |**dynamic_filters**|**true**|パブリケーションは動的な句に基づいてフィルター処理されます。|  
 ||**false**|パブリケーションは動的にフィルター選択されません。|  
 |**enabled_for_internet**|**true**|パブリケーションがインターネットに対して有効になっています。 ファイル転送プロトコル (FTP) を使用して、スナップショット ファイルをサブスクライバーに転送できます。 パブリケーションの同期ファイルは、C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp ディレクトリに格納されます。|  
@@ -111,7 +111,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**snapshot_ready**|**true**|パブリケーションのスナップショットを使用できます。|  
 ||**false**|パブリケーションのスナップショットは使用できません。|  
 |**status**|**active**|パブリケーションはアクティブな状態です。|  
-||**稼動**|パブリケーションは非アクティブな状態です。|  
+||**inactive**|パブリケーションは非アクティブな状態です。|  
 |**sync_mode**|**ネイティブ**または<br /><br /> **bcp ネイティブ**|すべてのテーブルのネイティブモードの一括コピープログラム出力は、初期スナップショットに使用されます。|  
 ||**記号**<br /><br /> または**bcp 文字**|すべての非サブスクライバーに必要な初期スナップショットには、すべてのテーブルのキャラクターモードの一括コピープログラム出力が使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**use_partition_groups**<br /><br /> 注: partition_groups を使用すると、 **setupbelongs**使用されるように復帰し、 **changemergearticle**で**use_partition_groups = false**に設定した場合、スナップショットの取得後に正しく反映されない可能性があります。 スナップショットによって生成されるトリガーは、パーティショングループに準拠しています。<br /><br /> このシナリオの回避策は、状態を非アクティブに設定し、 **use_partition_groups**を変更して、状態をアクティブに設定することです。|**true**|パブリケーションは事前計算済みパーティションを使用します。|  
@@ -186,7 +186,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changemergepublication**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   

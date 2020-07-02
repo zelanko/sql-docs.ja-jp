@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe4c8864856ef9b324a5f44b4811cfff4e8de218
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 52aeca25fd6fcf112adcb2410269fdcb1c049a52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771151"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   固定データベース ロールの権限を表示します。 **sp_dbfixedrolepermission**では、に正しい情報が返さ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] れます。 出力には、に実装された権限階層への変更は反映されません [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 詳細については、「[データベースレベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles)」を参照してください。これには、固定データベースロールの一覧と、それに対応する権限が表示されます。  
   
@@ -54,7 +54,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**DbFixedRole**|**sysname**|固定データベース ロールの名前。|  
 |**権限**|**nvarchar (70)**|**Dbfixedrole**に関連付けられている権限|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  固定データベースロールの一覧を表示するには、 **sp_helpdbfixedrole**を実行します。 次の表は、固定データベースロールを示しています。  
   
 |固定データベースロール|説明|  
@@ -84,7 +84,7 @@ EXEC sp_dbfixedrolepermission;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   

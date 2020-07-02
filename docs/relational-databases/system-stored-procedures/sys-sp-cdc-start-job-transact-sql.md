@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c475a13a64defecbd420d297fb5cd513178b47f4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 23da49150e2066228247be012e065a1533895c58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834221"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768407"
 ---
 # <a name="syssp_cdc_start_job-transact-sql"></a>sp_cdc_start_job (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースの変更データキャプチャのクリーンアップジョブまたはキャプチャジョブを開始します。  
   
@@ -67,7 +67,7 @@ EXEC sys.sp_cdc_start_job;
 GO  
 ```  
   
-### <a name="b-starting-a-cleanup-job"></a>B. クリーンアップジョブの開始  
+### <a name="b-starting-a-cleanup-job"></a>B: クリーンアップジョブの開始  
  次の例では、データベースのクリーンアップジョブを開始し `AdventureWorks2012` ます。  
   
 ```  
@@ -76,7 +76,7 @@ GO
 EXEC sys.sp_cdc_start_job @job_type = N'cleanup';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dbo. cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sp_cdc_stop_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md)  
   

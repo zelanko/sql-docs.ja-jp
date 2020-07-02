@@ -29,15 +29,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17ad196110a68a83618e5048f53bfa84fb7e0f51
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: eade5e3328993176f8795d27e511902a42468192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306021"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764869"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath のデータ型 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath、および XML スキーマ (XSD) のデータ型は大きく異なります。 たとえば、XPath に整数や日付のデータ型はありませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と XSD にはこれらのデータ型が多く用意されています。 また、XSD では時間値の精度はナノ秒ですが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の精度は最大でも 1/300 秒です。 このため、あるデータ型から別のデータ型へのマッピングが常に可能であるとは限りません。 データ型の XSD データ型へのマッピングの詳細につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「[データ型の強制変換」と「sql: datatype 注釈 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)」を参照してください。  
   
  XPath には、**文字列**、**数値**、**ブール値**の3つのデータ型があります。 **数値**データ型は、常に IEEE 754 の倍精度浮動小数点です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float (53)** データ型は、XPath の最も近い**数値**です。 ただし、 **float (53)** は正確には IEEE 754 ではありません。 たとえば、非数 (NaN) も無限大も使用されません。 数値以外の文字列を**数値**に変換しようとして、0で除算しようとすると、エラーになります。  
@@ -150,7 +150,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  文字列に "E-" プレフィックスが追加され、結果が `N'E-1'` と比較されます。  
   
-### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. XPath クエリ内で複数のデータ型変換を実行する  
+### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B: XPath クエリ内で複数のデータ型変換を実行する  
  注釈付き XSD スキーマに対して指定される XPath クエリ `OrderDetail[@UnitPrice * @OrderQty > 98]` を考えてみます。  
   
  この XPath クエリは、述語を満たすすべての要素を返し **\<OrderDetail>** `@UnitPrice * @OrderQty > 98` ます。 注釈付きスキーマで、固定された**14.4**データ型を使用して**UnitPrice**に注釈が付けられている場合、この述語は SQL 式に相当します。  

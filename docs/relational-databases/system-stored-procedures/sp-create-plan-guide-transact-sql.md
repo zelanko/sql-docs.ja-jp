@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60a3b1d27b483bac16cf2f51ab3ac9222e8e9053
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bc0818b0406aaa322a9fc28563f54c06b88c732c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771163"
 ---
 # <a name="sp_create_plan_guide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   クエリヒントまたは実際のクエリプランをデータベース内のクエリに関連付けるためのプランガイドを作成します。 プラン ガイドの詳細については、「 [Plan Guides](../../relational-databases/performance/plan-guides.md)」を参照してください。  
   
@@ -98,7 +98,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  NULL  
  クエリの OPTION 句で指定した既存のヒントがクエリに適用されないことを示します。 詳細については、「 [OPTION 句 &#40;transact-sql&#41;](../../t-sql/queries/option-clause-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_create_plan_guide の引数は、表示される順序で指定する必要があります。 **sp_create_plan_guide**のパラメーターに値を指定する場合、パラメーター名はすべて明示的に指定するか、すべて指定しないかのいずれかにする必要があります。 たとえば、 ** \@ name =** が指定されている場合は、 ** \@ stmt =** 、 ** \@ type =** なども指定する必要があります。 同様に、 ** \@ name =** を省略し、パラメーター値だけを指定した場合は、残りのパラメーター名も省略し、値だけを指定する必要があります。 引数の名前は、構文を理解しやすくするための説明目的のものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定したパラメーター名と、その名前が使用されている位置にあるパラメーターの名前が一致しているかどうかは確認されません。  
   
  同一のクエリとバッチまたはモジュールに対し、複数の OBJECT または SQL プラン ガイドを作成できます。 ただし、有効にできるプラン ガイドは常に 1 つだけです。  
@@ -186,7 +186,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (OPTIMIZE FOR (@Country_region = N''US''))';  
 ```  
   
-### <a name="b-creating-a-plan-guide-of-type-sql-for-a-stand-alone-query"></a>B. スタンドアロン クエリに対する SQL タイプのプラン ガイドを作成する  
+### <a name="b-creating-a-plan-guide-of-type-sql-for-a-stand-alone-query"></a>B: スタンドアロン クエリに対する SQL タイプのプラン ガイドを作成する  
  次の例では、sp_executesql システム ストアド プロシージャを使用するアプリケーションで送信されるバッチ内のクエリに適合するプラン ガイドを作成します。  
   
  バッチは、次のようになります。  
@@ -209,7 +209,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (MAXDOP 1)';  
 ```  
   
-### <a name="c-creating-a-plan-guide-of-type-template-for-the-parameterized-form-of-a-query"></a>C. パラメーター化された形式のクエリ用に TEMPLATE 型のプランガイドを作成する  
+### <a name="c-creating-a-plan-guide-of-type-template-for-the-parameterized-form-of-a-query"></a>C: パラメーター化された形式のクエリ用に TEMPLATE 型のプランガイドを作成する  
  次の例では、指定されたフォームにパラメーター化されるクエリに適合するプラン ガイドを作成し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対してクエリのパラメーター化を強制的に実行させます。 次の 2 つのクエリは構文的には同じですが、定数リテラル値のみが異なります。  
   
 ```sql  
@@ -262,7 +262,7 @@ EXEC sp_create_plan_guide N'TemplateGuide1',
 > [!IMPORTANT]  
 >  sp_get_query_template に渡される `@stmt` パラメーターの定数リテラルの値は、リテラルを置き換えるパラメーターで選択されるデータ型に影響する場合があります。 この値は、プラン ガイドの適合にも影響します。 場合によっては、異なるパラメーター値範囲に対応する複数のプラン ガイドを作成する必要があります。  
   
-### <a name="d-creating-a-plan-guide-on-a-query-submitted-by-using-an-api-cursor-request"></a>D. API カーソル要求を使用して送信されたクエリに対してプランガイドを作成する  
+### <a name="d-creating-a-plan-guide-on-a-query-submitted-by-using-an-api-cursor-request"></a>D: API カーソル要求を使用して送信されたクエリに対してプランガイドを作成する  
  プランガイドは、API サーバーカーソルルーチンから送信されるクエリと一致することができます。 これらのルーチンには、sp_cursorprepare、sp_cursorprepexec、および sp_cursoropen があります。 ADO、OLE DB、および ODBC API を使用するアプリケーションは、API サーバー カーソルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と頻繁に対話します。 RPC:Starting プロファイラー トレース イベントを表示して、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] トレース内の API サーバー カーソル ルーチンの呼び出しを参照できます。  
   
  たとえば、次のデータが、プラン ガイドに合わせて調整するクエリの RPC:Starting プロファイル トレース イベントに示されているものとします。  
@@ -324,7 +324,7 @@ EXEC sp_create_plan_guide
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プランガイド](../../relational-databases/performance/plan-guides.md)   
  [sp_control_plan_guide &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
  [plan_guides &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   

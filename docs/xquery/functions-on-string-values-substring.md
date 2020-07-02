@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 694fb912675a15055688956a18714185e25995c4
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 4a4881fc4710ba56439eb98b5b196af93247c11f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881923"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768161"
 ---
 # <a name="functions-on-string-values---substring"></a>文字列値に使用する関数 - substring
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   *$StartingLoc*の値によって示される位置から開始し、 *$sourceString*の値の一部を返します。 *$length*の値によって示される文字数に対して続行されます。  
   
@@ -69,10 +69,10 @@ fn:substring($sourceString as xs:string?,
   
  SQL Server を使用すると、 *$startingLoc*と *$length*を空のシーケンスにすることができます。これは、空のシーケンスが () にマップされる動的エラーの結果として有効な値であるためです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、データベース内のさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
-### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Substring () XQuery 関数を使用した部分的な概要の製品モデルの説明の取得  
+### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A: Substring () XQuery 関数を使用した部分的な概要の製品モデルの説明の取得  
  このクエリでは、製品モデルを説明するテキストの最初の50文字、ドキュメント内の <> 要素が取得され `Summary` ます。  
   
 ```  
@@ -100,7 +100,7 @@ ProductModelID Result
 ...  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

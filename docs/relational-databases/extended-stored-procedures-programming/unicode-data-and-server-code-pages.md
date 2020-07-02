@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d440b710d5f8c5693308500c01b7339c33943b0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767754"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode データおよびサーバー コード ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 代わりに CLR Integration を使用してください。  
@@ -34,13 +34,13 @@ ms.locfileid: "68064267"
  Unicode 対応の拡張ストアド プロシージャ API アプリケーションの場合は、Unicode メタデータの列名やエラー メッセージなどを拡張ストアド プロシージャ API に渡す前に、マルチバイト データに変換する必要があります。  
   
 ## <a name="example"></a>例  
- 次の拡張ストアド プロシージャは、上記で説明した Unicode 変換の例です。 以下の点に注意してください。  
+ 次の拡張ストアド プロシージャは、上記で説明した Unicode 変換の例です。 次の点に注意してください。  
   
 -   列が SRVNVARCHAR として記述されているので、列データは Unicode データとして**srv_describe**に渡されます。  
   
 -   列名のメタデータは、マルチバイトデータとして**srv_describe**に渡されます。  
   
-     拡張ストアドプロシージャは、フィールドパラメーターを SRV_SPROC_CODEPAGE に設定して**srv_pfield**を呼び出し、の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]マルチバイトコードページを取得します。  
+     拡張ストアドプロシージャは、フィールドパラメーターを SRV_SPROC_CODEPAGE に設定して**srv_pfield**を呼び出し、のマルチバイトコードページを取得し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 -   エラーメッセージは、マルチバイトデータとして**srv_sendmsg**に渡されます。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "68064267"
   
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [srv_wsendmsg &#40;拡張ストアドプロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
   
   

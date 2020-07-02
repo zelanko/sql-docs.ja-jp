@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bac08516b4a0b0f30bf8314ac056e17f94f8f7b7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5f4141dc0a7c424ce1ccee021da7cf82c2a6b44b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820590"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771183"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   プラン キャッシュ内のクエリ プランから 1 つ以上のプラン ガイドを作成します。 このストアドプロシージャを使用すると、クエリオプティマイザーでは、指定されたクエリに対して常に特定のクエリプランを使用できます。 プラン ガイドの詳細については、「 [Plan Guides](../../relational-databases/performance/plan-guides.md)」を参照してください。  
   
@@ -53,7 +53,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  NULL を指定した場合や、ステートメント オフセットを指定しない場合は、指定したプラン ハンドルのクエリ プランを使用してバッチ内の各ステートメントに対してプラン ガイドが作成されます。 結果として得られるプランガイドは、USE PLAN クエリヒントを使用して特定のプランを強制的に使用するプランガイドに相当します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  すべての種類のステートメントに対してプラン ガイドを作成できるわけではありません。 プラン ガイドを作成できないステートメントがバッチ内にあった場合、そのステートメントは無視されて、バッチ内の次のステートメントが処理されます。 ステートメントが同じバッチ内で複数回出現する場合は、最後に発生したプランが有効になり、ステートメントの前のプランは無効になります。 プランガイドでバッチ内のステートメントを使用できない場合、エラー10532が発生し、ステートメントは失敗します。 このエラーを回避するため、常に sys.dm_exec_query_stats 動的管理ビューからプラン ハンドルを取得することをお勧めします。  
   
 > [!IMPORTANT]  
@@ -114,12 +114,12 @@ WHERE scope_batch LIKE N'SELECT WorkOrderID, p.Name, OrderQty, DueDate%';
 GO  
 ```  
   
-### <a name="b-creating-multiple-plan-guides-for-a-multistatement-batch"></a>B. 複数のステートメントで構成されるバッチに対して複数のプラン ガイドを作成する  
+### <a name="b-creating-multiple-plan-guides-for-a-multistatement-batch"></a>B: 複数のステートメントで構成されるバッチに対して複数のプラン ガイドを作成する  
  次の例では、ステートメントバッチ内の2つのステートメントに対してプランガイドを作成します。 プランガイドは、明示的なトランザクション内に作成されます。これにより、最初のプランガイドが作成された後に、バッチのクエリプランがプランキャッシュから削除されることはありません。 まず、複数のステートメントで構成されるバッチを実行します。 バッチのプランは、動的管理ビューを使用して検査されます。 バッチ内の各ステートメントの行が返されることに注意してください。 次に、パラメーターを指定することにより、バッチ内の最初と3番目のステートメントに対してプランガイドが作成され `@statement_start_offset` ます。 この例の最後のステートメントでは、プランガイドが存在することを確認します。  
   
  [!code-sql[PlanGuides#Create_From_Handle2](../../relational-databases/system-stored-procedures/codesnippet/tsql/sp-create-plan-guide-fro_1.sql)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [プランガイド](../../relational-databases/performance/plan-guides.md)   

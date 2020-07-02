@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7090c0ac52f82c0840c7bc36f91d146a121b1854
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ad735b116784601a348b418b7fe91a5715371e9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764522"
 ---
 # <a name="syshash_indexes-transact-sql"></a>hash_indexes (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在のハッシュインデックスとハッシュインデックスのプロパティが表示されます。 ハッシュインデックスは、インメモリ[OLTP &#40;のインメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)でのみサポートされます。  
   
@@ -35,11 +35,11 @@ ms.locfileid: "82828499"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<継承された列>**||は[、SQL&#41;&#40;transact-sql](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)の列を継承します。|  
+|**\<inherited columns>**||は[、SQL&#41;&#40;transact-sql](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)の列を継承します。|  
 |**bucket_count**|**int**|ハッシュインデックスのハッシュバケットの数。<br /><br /> 値を設定するためのガイドラインなど、bucket_count の値の詳細については、「 [transact-sql&#41;&#40;CREATE TABLE ](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)].  詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
   

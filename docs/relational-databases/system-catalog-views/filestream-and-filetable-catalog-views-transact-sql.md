@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b0294cb76ad25e4c11038be59666892c270256bb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b9ff0596667be0822e2e65717ebfd757f001f821
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829766"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764821"
 ---
 # <a name="filestream-and-filetable-catalog-views-transact-sql"></a>Filestream および FileTable のカタログ ビュー (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、FileTable 機能に関係するカタログ ビューについて説明します。  
   
@@ -36,8 +36,8 @@ ms.locfileid: "82829766"
  [sys.filetables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
  FileTable ごとに1行の値を返します。 は、 **sys. tables**から継承します。  
 
-## <a name="see-also"></a>参照
-[ストリーム](../../relational-databases/blob/filestream-sql-server.md)
+## <a name="see-also"></a>関連項目
+[FileStream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream および FileTable の動的管理ビュー (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Filestream および FileTable システムストアドプロシージャ (Transact-sql)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)

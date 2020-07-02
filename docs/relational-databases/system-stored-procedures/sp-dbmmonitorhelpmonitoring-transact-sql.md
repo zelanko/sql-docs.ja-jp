@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a085cf87-269f-454a-a146-21f80a113b72
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b16c77357795ed3c7e11454016663befcf4ae329
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d44bde22c00e2169d2f3aa74f935f18abae52923
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772246"
 ---
 # <a name="sp_dbmmonitorhelpmonitoring-transact-sql"></a>sp_dbmmonitorhelpmonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在の更新間隔を返します。  
   
@@ -40,10 +40,10 @@ sp_dbmmonitorhelpmonitoring
 ```  
   
 ## <a name="arguments"></a>引数  
- None  
+ なし  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
  現在の更新間隔、つまりデータベース ミラーリングの状態テーブルを更新する間隔 (分単位) を返します。 値の範囲は 1 ～ 120 分です。  
@@ -51,14 +51,14 @@ sp_dbmmonitorhelpmonitoring
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、現在の更新間隔を返します。  
   
 ```  
 EXEC sp_dbmmonitorhelpmonitoring;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   

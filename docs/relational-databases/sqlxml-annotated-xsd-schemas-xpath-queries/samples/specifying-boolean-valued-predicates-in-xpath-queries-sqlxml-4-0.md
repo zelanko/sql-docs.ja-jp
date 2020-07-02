@@ -20,15 +20,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8f2f4a80b6e4ab47245c55aa9fa2f2716ea39f7
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: fbc7aa62597834371ee27bcd90af567f1c1d5a0e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215396"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773089"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>XPath クエリでのブール値述語の指定 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   以下の例では、XPath クエリにブール値述語を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
@@ -91,7 +91,7 @@ ms.locfileid: "84215396"
     </ROOT>  
     ```  
   
-### <a name="b-specify-successive-and-nested-predicates"></a>B. 連続する述語を入れ子で指定する  
+### <a name="b-specify-successive-and-nested-predicates"></a>B: 連続する述語を入れ子で指定する  
  次のクエリでは、述語を連続して使用しています。 このクエリでは、 **\<Customer>** **SalesPersonID**属性の値が277で、 **TerritoryID**属性の値が3であるコンテキストノードのすべての子要素が返されます。  
   
 ```  
@@ -168,7 +168,7 @@ ms.locfileid: "84215396"
 </ROOT>  
 ```  
   
-### <a name="c-specify-a-top-level-predicate"></a>C. 最上位の述語を指定する  
+### <a name="c-specify-a-top-level-predicate"></a>C: 最上位の述語を指定する  
  次のクエリでは、子 **\<Customer>** 要素を持つコンテキストノードの子要素ノードが返され **\<Order>** ます。 このクエリでは、ロケーション パスを最上位の述語としてテストします。  
   
 ```  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2182e922599e81a2333fcbf4da5970b55d7e5bc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fdd889b1c28b037f4ab1d4f609cf93b19617e5b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823477"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771468"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   マージ プル サブスクリプションのプロパティを変更します。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
   
@@ -54,7 +54,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||場所が既定の場所に加えてまたは以外の場合に、スナップショットフォルダーが格納される場所。|  
-|**記述**||このマージ プル サブスクリプションの説明です。|  
+|**description**||このマージ プル サブスクリプションの説明です。|  
 |**ディストリビューター**||ディストリビューターの名前。|  
 |**distributor_login**||ディストリビューターで認証に使用されるログイン ID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**distributor_password**||認証のためにディストリビューターで使用されるパスワード (暗号化) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
@@ -94,7 +94,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changemergepullsubscription**は、マージレプリケーションで使用します。  
   
  現在のサーバーがサブスクライバー、現在のデータベースがサブスクライバー データベースであると解釈されます。  
@@ -104,7 +104,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changemergepullsubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   

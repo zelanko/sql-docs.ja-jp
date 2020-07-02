@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e965a11708b2d4bbb72903a05846cb14300a5c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6fa9117891f9d9350e58a2c8233dcffe05c8cfc8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826102"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772125"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   特定のリモート サーバーまたはレプリケーション サーバー、あるいはすべてのリモート サーバーとレプリケーション サーバーに関する情報をレポートします。 サーバー名、サーバーのネットワーク名、サーバーのレプリケーションの状態、サーバーの識別番号、および照合順序名を指定します。 では、リンクサーバーに接続したり、リンクサーバーに対してクエリを実行したりするためのタイムアウト値も提供されます。  
   
@@ -41,11 +41,11 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @server = ] 'server'`情報を報告するサーバーを指定します。 *サーバー*が指定されていない場合、は、 **master. サーバー**内のすべてのサーバーに関するレポートを作成します。 *サーバー*は**sysname**,、既定値は NULL です。  
+`[ @server = ] 'server'`情報を報告するサーバーを指定します。 *サーバー*を指定しない場合、master.sys のすべてのサーバーに関するレポートが作成され**ます。** *サーバー*は**sysname**,、既定値は NULL です。  
   
 `[ @optname = ] 'option'`サーバーを説明するオプションです。 *オプション*は**varchar (** 35 **)**,、既定値は NULL の場合、これらの値のいずれかを指定する必要があります。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**照合順序互換**|リンクサーバーに対する分散クエリの実行に影響します。 このオプションを true に設定した場合、|  
 |**データアクセス**|分散クエリ アクセスに対してリンク サーバーを有効または無効にします。|  
@@ -71,7 +71,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**name**|**sysname**|サーバー名。|  
 |**network_name**|**sysname**|サーバーのネットワーク名|  
 |**status**|**varchar (** 70 **)**|サーバーの状態。|  
-|**ID**|**char (** 4 **)**|サーバーの識別番号|  
+|**id**|**char (** 4 **)**|サーバーの識別番号|  
 |**collation_name**|**sysname**|サーバーの照合順序。|  
 |**connect_timeout**|**int**|リンクサーバーに接続するためのタイムアウト値。|  
 |**query_timeout**|**int**|リンク サーバーに対するクエリのタイムアウト値|  
@@ -93,7 +93,7 @@ GO
 EXEC sp_helpserver;  
 ```  
   
-### <a name="b-displaying-information-about-a-specific-server"></a>B. 特定のサーバーに関する情報を表示する  
+### <a name="b-displaying-information-about-a-specific-server"></a>B: 特定のサーバーに関する情報を表示する  
  次の例では、サーバーに関するすべての情報を表示し `SEATTLE2` ます。  
   
 ```  
@@ -102,7 +102,7 @@ GO
 EXEC sp_helpserver 'SEATTLE2';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   

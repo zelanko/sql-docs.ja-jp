@@ -19,17 +19,17 @@ ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 993715676a6abd5d6687b7b1adbbeb3ab121d39f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133789"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764693"
 ---
 # <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>fulltext_semantic_language_statistics_database (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  の現在の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスにインストールされているセマンティック言語統計データベースに関する行を返します。  
+  の現在のインスタンスにインストールされているセマンティック言語統計データベースに関する行を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  このビューに対してクエリを実行すると、セマンティック処理に必要なセマンティック言語統計コンポーネントについて調べることができます。  
    
@@ -54,14 +54,14 @@ ms.locfileid: "68133789"
  カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、の**sys.fulltext_semantic_language_statistics_database**現在のインスタンスに登録されているセマンティック言語統計データベースに関する情報を取得[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するために、fulltext_semantic_language_statistics_database のクエリを実行する方法を示します。  
+ 次の例では、の現在のインスタンスに登録されているセマンティック言語統計データベースに関する情報を取得するために、 **fulltext_semantic_language_statistics_database**のクエリを実行する方法を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

@@ -23,22 +23,22 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c165ca271c3230399d54363f22d2b220e5427830
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6567b5dfa6a6b83298793c9e5f2962d9c1bdb878
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388657"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764829"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>注釈付き XSD スキーマの概要 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XML スキーマ定義 (XSD) 言語を使用して、リレーショナル データの XML ビューを作成することができます。 作成したビューには、XML パス言語 (XPath) クエリを実行できます。 これは、CREATE VIEW ステートメントを使用してビューを作成し、そのビューに対して SQL クエリを指定することに似ています。  
   
  XML スキーマでは、XML ドキュメントの構造とドキュメント内のデータに対するさまざまな制約が記述されます。 スキーマに対して XPath クエリを指定した場合、返される XML ドキュメントの構造は、XPath クエリの実行対象のスキーマによって決定されます。  
   
- Xsd スキーマでは、 ** \<xsd: schema>** 要素によってスキーマ全体が囲まれます。すべての要素宣言は、 ** \<xsd: schema>** 要素内に含まれている必要があります。 スキーマが存在する名前空間を定義する属性と、スキーマで** \<xsd: schema>** 要素のプロパティとして使用される名前空間を定義する属性を記述できます。  
+ XSD スキーマでは、 **\<xsd:schema>** 要素はスキーマ全体を囲みます。すべての要素宣言が要素内に含まれている必要があり **\<xsd:schema>** ます。 スキーマが存在する名前空間を定義する属性と、その要素のプロパティとしてスキーマで使用される名前空間を記述でき **\<xsd:schema>** ます。  
   
- 有効な xsd スキーマには、 ** \<** 次のように定義された xsd: schema>要素が含まれている必要があります。  
+ 有効な XSD スキーマには、次のように定義された要素が含まれている必要があり **\<xsd:schema>** ます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -47,7 +47,7 @@ ms.locfileid: "81388657"
 </xsd:schema>  
 ```  
   
- ** \<Xsd: schema>** 要素は、XML スキーマ名前空間の仕様 () http://www.w3.org/2001/XMLSchemaから派生します。  
+ **\<xsd:schema>** 要素は、XML スキーマ名前空間の仕様 () から派生 http://www.w3.org/2001/XMLSchema します。  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD スキーマへの注釈  
  データベースへのマッピングを記述する注釈付きの XSD スキーマを使用して、データベースにクエリを実行し、結果を XML ドキュメントの形式で返すことができます。 注釈は、データベースのテーブルと列に XSD スキーマをマップするために指定します。 XSD スキーマで作成した XML ビューに対して XPath クエリを指定すると、データベースにクエリが実行され、結果を XML として取得できます。  
@@ -58,7 +58,7 @@ ms.locfileid: "81388657"
  リレーショナル データベースの場合、任意の XSD スキーマをリレーショナル ストアにマップすると便利です。 これを実行する 1 つの方法は、XSD スキーマに注釈を付けることです。 注釈を持つ XSD スキーマは、*マッピングスキーマ*と呼ばれます。これは、XML データをリレーショナルストアにマップする方法に関する情報を提供します。 マッピング スキーマは、実質的にはリレーショナル データの XML ビューです。 これらのマッピングを使用して、リレーショナル データを XML ドキュメントとして取得できます。  
   
 ## <a name="namespace-for-annotations"></a>注釈の名前空間  
- XSD スキーマでは、名前空間**urn: schema-microsoft-com: mapping スキーマ**を使用して注釈を指定します。 次の例に示すように、名前空間を指定する最も簡単な方法は、 ** \<xsd: schema>** タグで名前空間を指定することです。  
+ XSD スキーマでは、名前空間**urn: schema-microsoft-com: mapping スキーマ**を使用して注釈を指定します。 次の例に示すように、名前空間を指定する最も簡単な方法は、タグ内で名前空間を指定することです **\<xsd:schema>** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -70,7 +70,7 @@ ms.locfileid: "81388657"
  使用される名前空間プレフィックスは任意です。 このドキュメントでは、 **sql**プレフィックスを使用して、注釈の名前空間を表し、この名前空間内の注釈を他の名前空間内の注釈と区別します。  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>注釈付き XSD スキーマの例  
- 次の例では、XSD スキーマは** \<Person>** 要素で構成されています。 Employee>要素には、 **ContactID** attribute および** \<FirstName>** および** \<LastName>** 子要素があります。 ** \<**  
+ 次の例では、XSD スキーマは要素で構成されて **\<Person.Contact>** います。 要素には、 **\<Employee>** **ContactID**属性と **\<FirstName>** 子 **\<LastName>** 要素があります。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -111,14 +111,14 @@ ms.locfileid: "81388657"
 </xsd:schema>  
 ```  
   
- マッピングスキーマでは、 ** \<Contact>** 要素は、 **sql: relation**注釈を使用して、サンプルの AdventureWorks データベースの Person. Contact テーブルにマップされます。 属性 ConID、FName、および LName は、 **sql: field**注釈を使用して、Person. Contact テーブルの ContactID、FirstName、および LastName 列にマップされます。  
+ マッピングスキーマで **\<Contact>** は、要素は**sql: relation**注釈を使用して、サンプルの AdventureWorks データベースの Person. Contact テーブルにマップされます。 属性 ConID、FName、および LName は、 **sql: field**注釈を使用して、Person. Contact テーブルの ContactID、FirstName、および LastName 列にマップされます。  
   
  この注釈付きの XSD スキーマによって、リレーショナル データの XML ビューが提供されます。 この XML ビューには、XPath 言語を使用してクエリを実行できます。 XPath クエリを実行すると、SQL クエリによって返される行セットではなく、XML ドキュメントが返されます。  
   
 > [!NOTE]  
 >  マッピング スキーマに指定するリレーショナル値 (テーブル名や列名など) の大文字小文字の区別は、SQL Server で使用される照合順序の、大文字小文字の区別の設定によって変わります。 詳細については、「 [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
-## <a name="other-resources"></a>その他のリソース  
+## <a name="other-resources"></a>その他の参照情報  
  XML スキーマ定義言語 (XSD)、XML パス言語 (XPath)、Extensible Stylesheet Language Transformations (XSLT) の詳細については、次の Web サイトを参照してください。  
   
 -   XML スキーマパート 0: 入門、W3C 勧告 (https://www.w3.org/TR/xmlschema-0/)  
@@ -131,7 +131,7 @@ ms.locfileid: "81388657"
   
 -   XSL 変換 (XSLT) (https://www.w3.org/TR/xslt)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQLXML 4.0&#41;&#40;注釈付きスキーマのセキュリティに関する考慮事項](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
  [注釈付き XDR スキーマ &#40;SQLXML 4.0 で非推奨とされました&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
   

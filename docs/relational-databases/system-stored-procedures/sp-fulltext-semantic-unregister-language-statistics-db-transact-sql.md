@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1f6b769291c43081be2dbe9ceeb256ad4edf5c02
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bdcc6a86cb0498afadf6f899c47dd201fdc05831
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833266"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772154"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   の現在のインスタンスから既存のセマンティック言語統計データベースの登録 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を解除し、関連付けられているメタデータを削除します。  
   
@@ -76,7 +76,7 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

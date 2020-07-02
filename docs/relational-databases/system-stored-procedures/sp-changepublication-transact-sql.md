@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d5c08e0a844348210ae011e395c04de5b4cdcdd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1b2fb1031c3090046bc509acc3c0cd1779db1836
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829574"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771426"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   パブリケーションのプロパティを変更します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -72,7 +72,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**サブ reinit**|サブスクライバーの更新で競合が発生した場合は、サブスクリプションを再初期化する必要があります。 このプロパティは、アクティブなサブスクリプションがない場合にのみ変更できます。 Oracle パブリッシャーではサポートされていません。|  
 ||**sub wins**|サブスクライバーが競合で優先される場合に、サブスクライバーの更新で競合を解決する方法です。 このプロパティは、アクティブなサブスクリプションがない場合にのみ変更できます。 Oracle パブリッシャーではサポートされていません。|  
 |**conflict_retention**||競合の保有期間を日数で指定する**int**です。 既定の保有期間は14日です。 **0**は、競合のクリーンアップが必要ないことを意味します。 Oracle パブリッシャーではサポートされていません。|  
-|**記述**||パブリケーションを説明する省略可能なエントリです。|  
+|**description**||パブリケーションを説明する省略可能なエントリです。|  
 |**enabled_for_het_sub**|**true**|パブリケーションで以外のサブスクライバーをサポートできるように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 パブリケーションへのサブスクリプションが存在する場合、 **enabled_for_het_sub**を変更することはできません。 **Enabled_for_het_sub**を true に設定する前に、次の要件に準拠するために、[レプリケーションストアドプロシージャ (transact-sql)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)の実行が必要になる場合があります。<br /> - **allow_queued_tran**は**false**である必要があります。<br /> - **allow_sync_tran**は**false**である必要があります。<br /> **Enabled_for_het_sub**を**true**に変更すると、既存のパブリケーション設定が変更される可能性があります。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 ||**false**|パブリケーションは、以外のサブスクライバーをサポートしていません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**enabled_for_internet**|**true**|パブリケーションはインターネットに対して有効であり、ファイル転送プロトコル (FTP) を使用して、スナップショットファイルをサブスクライバーに転送できます。 パブリケーションの同期ファイルはディレクトリ C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp に保存されます。 *ftp_address*を NULL にすることはできません。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
@@ -105,7 +105,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**snapshot_in_defaultfolder**|**true**|スナップショットファイルは、既定のスナップショットフォルダーに格納されます。 *Alt_snapshot_folder*も指定されている場合、スナップショットファイルは既定の場所と代替の場所の両方に格納されます。|  
 ||**false**|スナップショットファイルは、 *alt_snapshot_folder*によって指定された別の場所に格納されます。|  
 |**status**|**active**|パブリケーション データはパブリケーションが作成された直後にサブスクライバーで使用できます。 Oracle パブリッシャーではサポートされていません。|  
-||**稼動**|パブリケーションデータは、パブリケーションの作成時にサブスクライバーで使用することはできません。 Oracle パブリッシャーではサポートされていません。|  
+||**inactive**|パブリケーションデータは、パブリケーションの作成時にサブスクライバーで使用することはできません。 Oracle パブリッシャーではサポートされていません。|  
 |**sync_method**|**native**|サブスクリプションの同期時に、すべてのテーブルのネイティブ モード一括コピー出力を使用します。|  
 ||**記号**|サブスクリプションを同期するときに、すべてのテーブルのキャラクターモードの一括コピー出力を使用します。|  
 ||**同時**|すべてのテーブルについてネイティブ モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショットレプリケーションでは無効です。|  
@@ -163,7 +163,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changepublication**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addpublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   

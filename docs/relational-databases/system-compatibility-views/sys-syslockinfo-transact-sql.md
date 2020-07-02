@@ -1,5 +1,5 @@
 ---
-title: syslockinfo (Transact-sql) |Microsoft Docs
+title: sys.syslockinfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90573a28292ac4f4de973dc2a5a0c5e1f331d2f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053343"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764392"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   すべての許可、変換、および待機中のロック要求に関する情報を格納します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68053343"
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 > [!IMPORTANT]  
->  この機能は、以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から変更されています。 詳細については、「 [SQL Server 2016 のデータベースエンジン機能における重大な変更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」を参照してください。  
+>  この機能は、以前のバージョンのから変更されてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「 [SQL Server 2016 のデータベースエンジン機能における重大な変更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -53,7 +53,7 @@ ms.locfileid: "68053343"
 |**req_refcnt**|**smallint**|ロック参照カウント。 トランザクションが特定のリソースのロックを要求するたびに、参照カウントがインクリメントされます。 参照カウントが0になるまで、ロックを解放できません。|  
 |**req_cryrefcnt**|**smallint**|将来使用するために予約されています。 常に0に設定されます。|  
 |**req_lifetime**|**int**|ロックの有効期限のビットマップ。 特定のクエリ処理方法の実行中は、クエリ プロセッサによってクエリの特定のフェーズが完了するまで、リソース上のロックは保持される必要があります。 ロックの有効期間のビットマップは、クエリの特定のフェーズの実行が終了したときに解放できるロックのグループを示すために、クエリプロセッサおよびトランザクションマネージャーによって使用されます。 ビットマップ内の特定のビットは、参照カウントが0の場合でも、トランザクションの終了まで保持されるロックを示すために使用されます。|  
-|**req_spid**|**int**|ロック[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]を要求しているセッションの内部プロセス ID。|  
+|**req_spid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ロックを要求しているセッションの内部プロセス ID。|  
 |**req_ecid**|**int**|実行コンテキスト ID (関連する d)。 並列操作内のどのスレッドが特定のロックを所有しているかを示すために使用されます。|  
 |**req_ownertype**|**smallint**|ロックに関連付けられているオブジェクトの種類。<br /><br /> 1 = トランザクション<br /><br /> 2 = カーソル<br /><br /> 3 = セッション<br /><br /> 4 = 前回のセッション<br /><br /> 3 と 4 は、特殊なセッション ロックで、それぞれデータベースとファイル グループのロックを追跡します。|  
 |**req_transactionID**|**bigint**|**Syslockinfo**および profiler イベントで使用される一意のトランザクション ID|  
@@ -62,7 +62,7 @@ ms.locfileid: "68053343"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

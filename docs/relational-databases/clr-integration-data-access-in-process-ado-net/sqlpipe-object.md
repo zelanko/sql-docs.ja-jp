@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b95788d37fa8f8c2e57c2b20aa222938c65dc6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17a26c5897ff10ce636297151cef9f300f4f3056
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487535"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765424"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、結果や出力パラメーターを呼び出し側のクライアントに送信するストアド プロシージャ (または拡張ストアド プロシージャ) を作成することがごく一般的でした。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)]ストアドプロシージャでは、0個以上の行を返す**SELECT**ステートメントは、接続された呼び出し元の "パイプ" に結果を送信します。  
   
- で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行される共通言語ランタイム (CLR) データベースオブジェクトの場合、 **SqlPipe**オブジェクトの**send**メソッドを使用して、接続されているパイプに結果を送信できます。 **Sqlcontext**オブジェクトの**Pipe**プロパティにアクセスして、 **SqlPipe**オブジェクトを取得します。 **SqlPipe**クラスは、概念的には ASP.NET にある**Response**クラスに似ています。 詳細については、.NET Framework Software Development Kit の SqlPipe クラスのリファレンス ドキュメントを参照してください。  
+ で実行される共通言語ランタイム (CLR) データベースオブジェクトの場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **SqlPipe**オブジェクトの**send**メソッドを使用して、接続されているパイプに結果を送信できます。 **Sqlcontext**オブジェクトの**Pipe**プロパティにアクセスして、 **SqlPipe**オブジェクトを取得します。 **SqlPipe**クラスは、概念的には ASP.NET にある**Response**クラスに似ています。 詳細については、.NET Framework Software Development Kit の SqlPipe クラスのリファレンス ドキュメントを参照してください。  
   
 ## <a name="returning-tabular-results-and-messages"></a>表形式の結果とメッセージを返す  
- **SqlPipe**には、3つのオーバーロードを持つ**Send**メソッドがあります。 それらは次のとおりです。  
+ **SqlPipe**には、3つのオーバーロードを持つ**Send**メソッドがあります。 これらは次のとおりです。  
   
 -   `void Send(string message)`  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81487535"
   
  **Send**メソッドは、データをクライアントまたは呼び出し元に直接送信します。 通常は、 **SqlPipe**からの出力を使用するクライアントですが、入れ子になった CLR ストアドプロシージャの場合は、出力コンシューマーもストアドプロシージャにすることができます。 たとえば、Procedure1 がコマンド テキスト "EXEC Procedure2" の SqlCommand.ExecuteReader() を呼び出すとします。 Procedure2 もマネージド ストアド プロシージャです。 ここで Procedure2 が SqlPipe.Send( SqlDataRecord ) を呼び出すと、行はクライアントではなく、Procedure1 のリーダーに送信されます。  
   
- **Send**メソッドは、情報メッセージとしてクライアントに表示される文字列メッセージを送信します。 [!INCLUDE[tsql](../../includes/tsql-md.md)]これは、の PRINT に相当します。 また、 **SqlDataRecord**または**SqlDataReader**を使用した複数行の結果セットを使用して、単一行の結果セットを送信することもできます。  
+ **Send**メソッドは、情報メッセージとしてクライアントに表示される文字列メッセージを送信します。これは、の PRINT に相当し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 また、 **SqlDataRecord**または**SqlDataReader**を使用した複数行の結果セットを使用して、単一行の結果セットを送信することもできます。  
   
  **SqlPipe**オブジェクトには、 **executeandsend**メソッドもあります。 このメソッドを使用して、( **SqlCommand**オブジェクトとして渡された) コマンドを実行し、結果を直接呼び出し元に返すことができます。 送信されたコマンドにエラーがある場合、パイプに例外が送信されますが、呼び出し元のマネージド コードにもコピーが送信されます。 呼び出し元コードが例外をキャッチしない場合は、履歴を伝わり [!INCLUDE[tsql](../../includes/tsql-md.md)] コードに反映され、2 度出力に表示されます。 呼び出し元コードが例外をキャッチした場合、パイプ コンシューマーにはまだエラーが表示されますが、重複するエラーはありません。  
   
@@ -134,13 +134,13 @@ End Sub
 End Class  
 ```  
   
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントは、ツーリング自転車製品の一覧を返す**Uspgetproduct**プロシージャを実行します。  
+ 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、ツーリング自転車製品の一覧を返す**Uspgetproduct**プロシージャを実行します。  
   
 ```  
 EXEC uspGetProductLineVB 'T';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SqlDataRecord オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
  [CLR ストアドプロシージャ](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [ADO.NET に対する SQL Server インプロセス固有の拡張機能](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  

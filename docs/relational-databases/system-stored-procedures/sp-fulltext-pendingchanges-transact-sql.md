@@ -18,15 +18,15 @@ ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b360a899ed17f0b1b82a5ebcdfbd664803ed8d93
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a86792b69e9bdd00c41c9ed5582046aee634d533
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772184"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   変更の追跡を使用している指定されたテーブルについて、保留中の挿入、更新、削除などの未処理の変更を返します。  
   
@@ -47,7 +47,7 @@ sp_fulltext_pendingchanges table_id
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**キー**|*|指定したテーブルからのフルテキスト キー値。|  
+|**Key**|*|指定したテーブルからのフルテキスト キー値。|  
 |**DocId**|**bigint**|キー値に対応する内部ドキュメント識別子 (DocId) 列。|  
 |**状態**|**int**|0 = 行は、フルテキストインデックスから削除されます。<br /><br /> 1 = 行にはフルテキスト インデックスが作成されます。<br /><br /> 2 = 行は最新です。<br /><br /> -1 = 行は遷移中 (バッチ処理されているがコミットされていない) 状態またはエラー状態です。|  
 |**DocState**|**tinyint**|内部ドキュメント識別子 (Docld) のマップ ステータス列の行ダンプ。|  
@@ -64,7 +64,7 @@ sp_fulltext_pendingchanges table_id
   
  特定のテーブルに対して保留中の変更の数を確認するには、OBJECTPROPERTYEX 関数の**TableFullTextPendingChanges**プロパティを使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索ストアドプロシージャ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)  
   

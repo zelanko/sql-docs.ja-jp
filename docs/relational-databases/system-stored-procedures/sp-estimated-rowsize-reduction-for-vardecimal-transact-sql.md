@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 292bd66b8c30cec9bc55442a3ab768dd23b731ff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4c25e061e8eb303f936cc129efc6e630e7be5933
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772143"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   テーブルで vardecimal ストレージ形式を有効にした場合に、行の平均サイズの減少を推定します。 この数値を使用して、テーブル サイズ全体の削減量を見積もることができます。 統計サンプリングは、行サイズの平均減少を計算するために使用されます。これは、推定値としてのみ考慮されます。 vardecimal ストレージ形式を有効にした後、まれに行サイズが増加する場合があります。  
   
@@ -60,7 +60,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 |**avg_rowlen_vardecimal_format**|**decimal (12, 2)**|Vardecimal ストレージ形式が使用されている場合の平均行サイズを表します。|  
 |**row_count**|**int**|テーブル内の行の数。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  テーブルで vardecimal ストレージ形式を有効にした場合の結果の節約量を見積もるには、 **sp_estimated_rowsize_reduction_for_vardecimal**を使用します。 たとえば、行の平均サイズを40% に減らすことができる場合は、テーブルのサイズを40% 小さくすることができます。 ただし FILL FACTOR と行サイズによっては、テーブル領域を削減できない場合もあります。 たとえば、長さ 8,000 バイトの行があり、そのサイズを 40% を削減したとしても、データ ページに収まるのは 1 行のみであることに変わりはないので、領域は削減されません。  
   
  **Sp_estimated_rowsize_reduction_for_vardecimal**の結果によってテーブルが大きくなることが示された場合、テーブルの多くの行では decimal データ型の有効桁数がほぼすべて使用されます。また、vardecimal ストレージ形式に必要な少量のオーバーヘッドの追加は、vardecimal ストレージ形式の節約よりも大きくなります。 このようなまれなケースでは、vardecimal ストレージ形式を有効にしないでください。  
@@ -80,7 +80,7 @@ EXEC sp_estimated_rowsize_reduction_for_vardecimal 'Production.WorkOrderRouting'
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_db_vardecimal_storage_format &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)   
  [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
   

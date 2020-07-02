@@ -18,15 +18,15 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbc724b9178ec867768fde3dc3d9ff58add554e9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1ffce9dd6a06b433e183570767bf165c9e6b75d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826271"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771233"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   現在の環境でクエリを実行できる、指定されたオブジェクトの列情報を返します。  
   
@@ -58,7 +58,7 @@ sp_columns [ @table_name = ] object
 `[ \@ODBCVer = ] ODBCVer`使用されている ODBC のバージョンを示します。 *Odbcver*は**int**,、既定値は2です。 これは、ODBC バージョン2を示します。 有効な値は2または3です。 バージョン2とバージョン3の動作の違いについては、ODBC **Sqlcolumns**の仕様を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
  **Sp_columns**カタログストアドプロシージャは、ODBC の**sqlcolumns**に相当します。 返される結果は、 **TABLE_QUALIFIER**、 **TABLE_OWNER**、および**TABLE_NAME**順に並べ替えられます。  
@@ -71,7 +71,7 @@ sp_columns [ @table_name = ] object
 |**COLUMN_NAME**|**sysname**|返される**TABLE_NAME**の各列の列名。 このフィールドは常に値を返します。|  
 |**DATA_TYPE**|**smallint**|ODBC データ型の整数コードです。 ODBC のデータ型にマップできないデータ型の場合は、NULL になります。 ネイティブデータ型の名前が**TYPE_NAME**列に返されます。|  
 |**TYPE_NAME**|**sysname**|データ型を表す文字列。 基になる DBMS は、このデータ型の名前を提示します。|  
-|**PRECISION**|**int**|有効桁数。 **有効桁数**列の戻り値は、10進数値です。|  
+|**精度**|**int**|有効桁数。 **有効桁数**列の戻り値は、10進数値です。|  
 |**LENGTH**|**int**|データの転送サイズ。<sup>1</sup>|  
 |**段階**|**smallint**|小数点の右側の桁数。|  
 |**ベース**|**smallint**|数値データ型のベース。|  
@@ -93,7 +93,7 @@ sp_columns [ @table_name = ] object
 ## <a name="remarks"></a>Remarks  
  **sp_columns**は、区切られた識別子の要件に従います。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、指定されたテーブルの列情報を返します。  
   
 ```  
@@ -113,7 +113,7 @@ EXEC sp_columns @table_name = N'DimEmployee',
    @table_owner = N'dbo';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
  [Transact-sql&#41;&#40;のカタログストアドプロシージャ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

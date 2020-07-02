@@ -21,23 +21,23 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3daeaabe86d91d0986fb764c3a60304ec5e09faf
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: bfa6234aae5e2744a88c4fcfb158575cb07000f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84885165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764900"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>targetNamespace 属性を使用した、対象名前空間の指定 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XSD スキーマの記述では、XSD **targetNamespace**属性を使用して、ターゲットの名前空間を指定できます。 このトピックでは、XSD **targetNamespace**、 **ElementFormDefault**、および**attributeFormDefault**属性の動作、生成される XML インスタンスへの影響、および名前空間での XPath クエリの指定方法について説明します。  
   
  **Xsd: targetNamespace**属性を使用して、既定の名前空間の要素と属性を別の名前空間に配置できます。 また、スキーマでローカルに宣言された要素と属性を、名前空間で修飾して表示するかどうかも指定できます。名前空間は、プレフィックスを使って明示的に、または既定により暗黙的に指定できます。 要素の**elementFormDefault**属性と**attributeFormDefault**属性を使用して、 **\<xsd:schema>** ローカル要素と属性の修飾をグローバルに指定することも、 **form**属性を使用して個々の要素と属性を個別に指定することもできます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
-### <a name="a-specifying-a-target-namespace"></a>A. 対象名前空間を指定する  
+### <a name="a-specifying-a-target-namespace"></a>A: 対象名前空間を指定する  
  次の XSD スキーマでは、 **xsd: targetNamespace**属性を使用してターゲットの名前空間を指定しています。 また、このスキーマでは、 **elementFormDefault**属性と**attributeFormDefault**属性の値が **"非修飾"** (これらの属性の既定値) に設定されます。 これはグローバルな宣言であり、すべてのローカル要素 ( **\<Order>** スキーマ内) と属性 (スキーマ内**ContactName**の**CustomerID、CustomerID**、および**OrderID** ) に影響します。  
   
 ```  

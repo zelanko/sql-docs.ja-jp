@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ff791855f7e65652f64d18f3128831172da9229
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3806476ffec61c155121f3238fefa8e08f689ad2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828883"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772137"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベース内のオブジェクトまたはステートメント権限に対するユーザー権限に関する情報を含むレポートを返します。  
   
@@ -92,7 +92,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
- 返される情報には、メタデータへのアクセスに関する制限が適用されます。 プリンシパルに権限がないエンティティは表示されません。  詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ 返される情報には、メタデータへのアクセスに関する制限が適用されます。 プリンシパルに権限がないエンティティは表示されません。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
   
@@ -103,21 +103,21 @@ EXEC sp_helprotect @grantorname = 'dbo';
 EXEC sp_helprotect 'titles';  
 ```  
   
-### <a name="b-listing-the-permissions-for-a-user"></a>B. ユーザーに対する権限を一覧表示する  
+### <a name="b-listing-the-permissions-for-a-user"></a>B: ユーザーに対する権限を一覧表示する  
  次の例では、ユーザー `Judy` が現在のデータベースに保持しているすべてのアクセス許可を一覧表示します。  
   
 ```  
 EXEC sp_helprotect NULL, 'Judy';  
 ```  
   
-### <a name="c-listing-the-permissions-granted-by-a-specific-user"></a>C. 特定のユーザーによって付与されたアクセス許可を一覧表示する  
+### <a name="c-listing-the-permissions-granted-by-a-specific-user"></a>C: 特定のユーザーによって付与されたアクセス許可を一覧表示する  
  次の例では、現在のデータベース内でユーザー `Judy` に許可されたすべての権限を一覧表示します。指定しないパラメーターについては、プレースホルダーとして `NULL` を使用します。  
   
 ```  
 EXEC sp_helprotect NULL, NULL, 'Judy';  
 ```  
   
-### <a name="d-listing-the-statement-permissions-only"></a>D. ステートメント権限のみを一覧表示する  
+### <a name="d-listing-the-statement-permissions-only"></a>D: ステートメント権限のみを一覧表示する  
  次の例では、現在のデータベース内のすべてのステートメント権限を表示します。指定しないパラメーターについては、プレースホルダーとして `NULL` を使用します。  
   
 ```  
@@ -131,7 +131,7 @@ EXEC sp_helprotect NULL, NULL, NULL, 's';
 EXEC sp_helprotect @name = 'CREATE TABLE';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;の拒否 &#40;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-sql&#41;](../../t-sql/statements/grant-transact-sql.md)   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4aa5ea4d06ac5b8da69eec246387007ba5d03606
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da1735c17a4d87e085fbe1e8b5f960d14a70b86c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487511"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765434"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **SqlDataRecord**オブジェクトは、関連するメタデータと共に1行のデータを表します。  
   
  マネージストアドプロシージャは、 **SqlDataReader**からではないクライアント結果セットに送信できます。 **SqlDataRecord**クラスは、 **sendresult Start**、 **Sendresult row**、および**SqlPipe**オブジェクトの**sendresultsstart**メソッドと共に、ストアドプロシージャがカスタム結果セットをクライアントに送信できるようにします。  
@@ -88,7 +88,7 @@ Public Shared Sub  CreateNewRecordVBProc ()
 End Sub  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SqlPipe オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)  
   
   

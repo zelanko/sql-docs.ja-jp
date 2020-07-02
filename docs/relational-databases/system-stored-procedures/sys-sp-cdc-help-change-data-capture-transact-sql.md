@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b5ceaaa02d07e34e1e93789d2c72f80a3459a472
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 62d1fbfffeb23e823e89ecc1a22f44c54f8245a1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808033"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768898"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sp_cdc_help_change_data_capture (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースで変更データキャプチャが有効になっている各テーブルについて、変更データキャプチャの構成を返します。 各ソーステーブルに対して最大で2つの行を返すことができます。キャプチャインスタンスごとに1つの行です。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
@@ -102,7 +102,7 @@ EXECUTE sys.sp_cdc_help_change_data_capture
 GO  
 ```  
   
-### <a name="b-returning-change-data-capture-configuration-information-for-all-tables"></a>B. すべてのテーブルについて変更データ キャプチャの構成情報を取得する  
+### <a name="b-returning-change-data-capture-configuration-information-for-all-tables"></a>B: すべてのテーブルについて変更データ キャプチャの構成情報を取得する  
  次の例では、呼び出し元がアクセスを許可されている変更データを含む、データベース内のすべての有効なテーブルの構成情報を返します。  
   
 ```  

@@ -21,15 +21,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 487ed2bbee997db22739bdeecd7e024b817ace80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7f1434cedf98b23cda736e9b956e6df0890b8f41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764919"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>sql:encode を使用した、BLOB データへの URL 参照の要求 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   注釈付き XSD スキーマで、属性 (または要素) が Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の BLOB 列にマップされた場合、XML 内に返されるデータは Base 64 エンコード形式になります。  
   
  バイナリ形式で BLOB データを取得するために後で使用できるデータ (URI) への参照が必要な場合は、 **sql: encode**注釈を指定します。 **Sql: encode**は、単純型の属性または要素に対して指定できます。  
@@ -46,7 +46,7 @@ ms.locfileid: "81388117"
 ## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
-### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. BLOB データへの URL 参照を取得するため、sql:encode を指定する  
+### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A: BLOB データへの URL 参照を取得するため、sql:encode を指定する  
  この例では、マッピングスキーマによって、 **LargePhoto**属性に**sql: encode**が指定されており、特定の製品写真への URI 参照が取得されます (Base 64 エンコード形式でバイナリデータを取得するのではありません)。  
   
 ```  

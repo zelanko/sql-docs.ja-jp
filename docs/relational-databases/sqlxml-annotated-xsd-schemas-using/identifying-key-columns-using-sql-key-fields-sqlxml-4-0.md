@@ -23,15 +23,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4902cd16e1812740e6c2cc5e298cb0915ed119f
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: fd8b23a2aaba27e166a3a13636e2362b54781704
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215834"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764938"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields を使用した、キー列の指定 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XSD スキーマに対して XPath クエリを指定する場合、結果内に適切な入れ子を生成するには、多くの場合キー情報が必要です。 **Sql: キーフィールド**の注釈を指定すると、適切な階層が生成されるようにすることができます。  
   
 > [!NOTE]  
@@ -41,10 +41,10 @@ ms.locfileid: "84215834"
   
  要素に要素と子要素の間に定義されているが含まれていても、親要素で指定されているテーブルの主キーを提供しない場合は、 **sql: キーフィールド**の注釈を使用する必要があり **\<sql:relationship>** ます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. \<sql:relationship>が十分な情報を提供しない場合に適切な入れ子を生成する  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A: \<sql:relationship>が十分な情報を提供しない場合に適切な入れ子を生成する  
  次の例は **、sql: キーフィールド**を指定する必要がある場所を示しています。  
   
  次のスキーマについて考えてみます。 スキーマでは、要素と要素の間の階層を指定します。この要素は、 **\<Order>** **\<Customer>** **\<Order>** 要素が親で **\<Customer>** あり、要素が子です。  
@@ -127,7 +127,7 @@ ms.locfileid: "84215834"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. sql:key-fields を指定して結果内に適切な入れ子を生成する  
+### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B: sql:key-fields を指定して結果内に適切な入れ子を生成する  
  次のスキーマでは、を使用して階層が指定されていません **\<sql:relationship>** 。 スキーマでは、Humanresources.employee テーブル内の従業員を一意に識別するために、 **sql: キーフィールド**の注釈を指定する必要があります。  
   
 ```  

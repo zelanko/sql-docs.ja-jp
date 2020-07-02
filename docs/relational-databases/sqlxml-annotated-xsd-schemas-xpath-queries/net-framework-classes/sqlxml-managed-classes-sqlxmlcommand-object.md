@@ -32,15 +32,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: afebd1c659015e3daf4a357b12871687207b607e
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: c3c3c829b49f52476498e744c91fa5c1af37b6b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306161"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767541"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML マネージド クラス - SqlXmlCommand オブジェクト
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   SqlXmlCommand オブジェクトのコンストラクターを次に示します。  
   
 ```  
@@ -76,7 +76,7 @@ public SqlXmlCommand(string cnString)
  void ClearParameters ()  
  指定したコマンド オブジェクトに作成されたパラメーターを消去します。 このメソッドは、同一のコマンド オブジェクトで複数のクエリを実行する場合に便利です。  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
  SqlXmlCommand オブジェクトは、次のプロパティもサポートしています。  
   
  ClientSideXml  
@@ -118,7 +118,7 @@ public SqlXmlCommand(string cnString)
 |SqlXmlCommandType. アップデートグラム|アップデートグラムを実行します。|  
 |SqlXmlCommandType. Diffgram|DiffGram を実行します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SqlXmlParameter オブジェクト &#40;SQLXML マネージクラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)   
  [SqlXmlAdapter オブジェクト &#40;SQLXML マネージクラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)  
   

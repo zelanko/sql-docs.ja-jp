@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c59b4ba84981ff4cb1240d78e1d6d472be61289
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 97c6a7d309578ebe0cc6e93b5408ad6d9fad6296
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829653"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771502"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   マージ アーティクルのプロパティを変更します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -68,7 +68,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**creation_script**||サブスクリプションデータベースでアーティクルを作成するために使用される、オプションのアーティクルスキーマスクリプトのパスと名前です。|  
 |**delete_tracking**|**true**|DELETE ステートメントがレプリケートされます。これは既定の動作です。|  
 ||**false**|DELETE ステートメントはレプリケートされません。<br /><br /> ** \* \* 重要 \* delete_tracking \* ** **false**に設定すると、非収束になり、削除された行は手動で削除する必要があります。 **delete_tracking**|  
-|**記述**||記事の内容を示すエントリ。|  
+|**description**||記事の内容を示すエントリ。|  
 |**destination_owner**||サブスクリプションデータベース内のオブジェクトの所有者の名前 ( **dbo**以外の場合)。|  
 |**identity_range**||アーティクルの**identityrangemanagementoption**が**auto**に設定されている場合、または**auto_identity_range**が**true**に設定されている場合に、新しい id 値を割り当てるときに使用する範囲のサイズを指定する**bigint**です。 テーブルアーティクルにのみ適用されます。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
 |**identityrangemanagementoption**|**手動**|自動での ID 範囲の管理を無効にします。 NOT FOR REPLICATION を使用して id 列にマークを付け、手動による id 範囲処理を有効にします。 詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。|  
@@ -139,7 +139,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|変更は、クライアントサブスクリプションを使用するサブスクライバーで許可されますが、パブリッシャーにはアップロードされません。|  
 ||**2**|クライアントサブスクリプションを使用したサブスクライバーでの変更は許可されていません。|  
 |**subset_filterclause**||行方向のフィルター選択を指定する WHERE 句。 テーブルアーティクルにのみ適用されます。<br /><br /> 重要パフォーマンス上の理由から、パラメーター化された行フィルター句 (など) では列名に関数を適用しないことをお勧めします。 ** \* \* \* \* ** `LEFT([MyColumn]) = SUSER_SNAME()` フィルター句で[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)を使用し、HOST_NAME の値をオーバーライドする場合は、 [convert](../../t-sql/functions/cast-and-convert-transact-sql.md)を使用してデータ型を変換する必要がある場合があります。 この場合のベストプラクティスの詳細については、「パラメーター化された[行フィルター](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「HOST_NAME () 値のオーバーライド」を参照してください。|  
-|**進入**||以前のバージョンのを実行しているサブスクライバーで使用される割合 [!INCLUDE[ssEW](../../includes/ssew-md.md)] の値 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **しきい値**は、マージエージェントが新しい id 範囲を割り当てるタイミングを制御します。 [しきい値] で指定した値のパーセンテージが使用されると、マージエージェントによって新しい id 範囲が作成されます。 **Identityrangemanagementoption**が**auto**に設定されている場合、または**auto_identity_range**が**true**に設定されている場合に使用します。 テーブルアーティクルにのみ適用されます。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
+|**threshold**||以前のバージョンのを実行しているサブスクライバーで使用される割合 [!INCLUDE[ssEW](../../includes/ssew-md.md)] の値 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **しきい値**は、マージエージェントが新しい id 範囲を割り当てるタイミングを制御します。 [しきい値] で指定した値のパーセンテージが使用されると、マージエージェントによって新しい id 範囲が作成されます。 **Identityrangemanagementoption**が**auto**に設定されている場合、または**auto_identity_range**が**true**に設定されている場合に使用します。 テーブルアーティクルにのみ適用されます。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
 |**verify_resolver_signature**|**1**|カスタム競合回避モジュールのデジタル署名を検証して、信頼できるソースからのものかどうかを確認します。|  
 ||**0**|カスタム競合回避モジュールのデジタル署名について、信頼されるソースからの署名であるかを判断するための検証を行いません。|  
 |NULL (既定値)||*プロパティ*に対してサポートされている値の一覧を返します。|  
@@ -236,7 +236,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changemergearticle**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アーティクルのプロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   

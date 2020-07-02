@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33f68a55cb627099150ec14941fe5de81de53fc8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ae897a8a945c477ce201b4037f3b05dbb13160e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765563"
 ---
 # <a name="string-search-in-xquery"></a>XQuery での文字列検索
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックには、XML ドキュメント内のテキストを検索する方法を示すサンプル クエリを掲載しています。  
   
@@ -45,7 +45,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 前のクエリでは、 `where` flowr 式のは`for`式の結果をフィルター処理し、 **contains ()** 条件を満たす要素のみを返します。  
+ 前のクエリでは、 `where` FLOWR 式のは式の結果をフィルター処理 `for` し、 **contains ()** 条件を満たす要素のみを返します。  
   
  結果を次に示します。  
   
@@ -58,7 +58,7 @@ WHERE ProductModelID=19
 </p1:Maintenance>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   

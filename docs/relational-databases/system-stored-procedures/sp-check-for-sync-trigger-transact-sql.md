@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e4260d05e0ed2967e9fbf151faeb53007080c21
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6fd7af5a486928e0dca9f5b2281e0b53c5038e74
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824039"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771333"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   ユーザー定義トリガーまたはストアド プロシージャが、即時更新サブスクリプションに使われるレプリケーション トリガーのコンテキストで呼び出されているかどうかを判別します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されるか、サブスクライバー側でサブスクリプションデータベースに対して実行されます。  
   
@@ -45,7 +45,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  [** @trigger_op =** ] '*trigger_output_parameters*' 出力  
  出力パラメーターが呼び出し元のトリガーの種類を返すかどうかを指定します。 *trigger_output_parameters*は**char (10)** で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**アドイン**|INSERT トリガーです。|  
 |**Upd**|UPDATE トリガーです。|  
@@ -88,7 +88,7 @@ RETURN
 ## <a name="permissions"></a>アクセス許可  
  **sp_check_for_sync_trigger**ストアドプロシージャは、 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)システムビューで SELECT 権限を持つ任意のユーザーが実行できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

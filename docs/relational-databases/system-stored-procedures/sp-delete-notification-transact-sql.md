@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb3c5166aef24bcc9890295809b8b69a68ed4112
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1546737884a815e77cf7f6a0337dd4933348018b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830324"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772199"
 ---
 # <a name="sp_delete_notification-transact-sql"></a>sp_delete_notification (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   特定の警告およびオペレーターに対する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント通知定義を削除します。  
   
@@ -70,7 +70,7 @@ EXEC dbo.sp_delete_notification
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_add_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_add_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   

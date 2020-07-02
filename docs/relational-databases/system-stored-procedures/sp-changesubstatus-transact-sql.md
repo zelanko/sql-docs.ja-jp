@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2daa7d007783434e0994846e41300c31b3e35162
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824057"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771358"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   既存のサブスクライバーの状態を変更します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -72,10 +72,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @status = ] 'status'`**Syssubscriptions**テーブルのサブスクリプションの状態を示します。 *status*の部分は**sysname**で、既定値はありません。これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**active**|サブスクライバーが同期され、データを受信しています。|  
-|**稼動**|サブスクライブはしていませんが、サブスクライバーのエントリが存在します。|  
+|**inactive**|サブスクライブはしていませんが、サブスクライバーのエントリが存在します。|  
 |**subscribed**|サブスクライバーはデータを要求していますが、まだ同期はとられていません。|  
   
 `[ @previous_status = ] 'previous_status'`は、サブスクリプションの以前の状態です。 *previous_status*は**sysname**,、既定値は NULL です。 このパラメーターを使用すると、現在その状態になっているすべてのサブスクリプションを変更することができます。これにより、特定のサブスクリプションセットに対してグループ関数が許可されます (たとえば、すべてのアクティブなサブスクリプションを**サブスクライブ**済みに設定します)。  
@@ -88,24 +88,24 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`ディストリビューションタスクの日付を指定します。 このパラメーターは、 *frequency_type*が 32 (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|末尾|  
+|**16**|末尾|  
 |NULL (既定値)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*によって使用される定期実行係数です。 *frequency_recurrence_factor*は**int**,、既定値は NULL です。  
   
 `[ @frequency_subday = ] frequency_subday`定義した期間にスケジュールを再設定する頻度を分単位で指定します。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**2**|Second|  
-|**4**|Minute|  
+|**4**|分|  
 |**8**|時間|  
 |NULL (既定値)||  
   
@@ -164,7 +164,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changesubstatus**を実行できるのは、 **sysadmin**固定サーバーロールのメンバー、 **db_owner**固定データベースロールのメンバー、またはサブスクリプションの作成者だけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   

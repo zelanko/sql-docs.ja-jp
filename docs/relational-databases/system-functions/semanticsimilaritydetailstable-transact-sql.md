@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b264f5276ad9d9f411fcdd14550130eb412a1b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771554"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   2つのドキュメント (ソースドキュメントと一致するドキュメント) に共通するキーフレーズの0行、1行、または複数の行から成るテーブルを返します。このテーブルの内容は意味が似ています。  
   
@@ -74,7 +74,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 |Column_name|Type|説明|  
 |------------------|----------|-----------------|  
 |**キーフレーズ**|**NVARCHAR**|ソースドキュメントと一致したドキュメントとの類似性に貢献するキーフレーズ。|  
-|**学生**|**real**|2つのドキュメント間で類似している他のすべてのキーフレーズとの関係における、このキーフレーズの相対値。<br /><br /> この値は [0.0, 1.0] の範囲内の小数値です。スコアの値が大きいほど類似性が高く、1.0 は完全に一致することを表します。|  
+|**学生**|**本当の**|2つのドキュメント間で類似している他のすべてのキーフレーズとの関係における、このキーフレーズの相対値。<br /><br /> この値は [0.0, 1.0] の範囲内の小数値です。スコアの値が大きいほど類似性が高く、1.0 は完全に一致することを表します。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  詳細については、「[セマンティック検索による類似および関連ドキュメントの検索](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)」を参照してください。  
@@ -92,7 +92,7 @@ SEMANTICSIMILARITYDETAILSTABLE
  フルテキストおよびセマンティック インデックスが作成されたベース テーブルに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、AdventureWorks2012 サンプルデータベースの**humanresources.employee**テーブル内の指定された候補との間に最も高い類似性スコアを持つ5つのキーフレーズを取得します。 変数@CandidateIdと@MatchedID変数は、フルテキストインデックスのキー列の値を表します。  
+ 次の例では、AdventureWorks2012 サンプルデータベースの**humanresources.employee**テーブル内の指定された候補との間に最も高い類似性スコアを持つ5つのキーフレーズを取得します。 @CandidateId変数と @MatchedID 変数は、フルテキストインデックスのキー列の値を表します。  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

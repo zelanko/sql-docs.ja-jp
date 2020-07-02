@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85afab7ff3183953da0a4655c98733dd66fb138a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0bf08fc60ba8573fbaa80d12a2d93e03cbf9ee1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827254"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768397"
 ---
 # <a name="mslogreader_agents-transact-sql"></a>MSlogreader_agents (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSlogreader_agents**テーブルには、ローカルディストリビューターで実行されているログリーダーエージェントごとに1つの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|ログリーダーエージェントの ID。|  
+|**id**|**int**|ログリーダーエージェントの ID。|  
 |**name**|**nvarchar (100)**|ログ リーダー エージェントの名前です。|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
 |**publisher_db**|**sysname**|パブリッシャーデータベースの名前。|  
@@ -46,7 +46,7 @@ ms.locfileid: "82827254"
 |**job_login**|**sysname**||  
 |**job_password**|**nvarchar (524)**||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
