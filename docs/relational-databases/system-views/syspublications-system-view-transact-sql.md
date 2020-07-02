@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f1724f86f9bfc34e505b9ba6ecddae4104270cd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a1048a31ab0970165a82abb332e29c7f814e5f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094767"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692634"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (システム ビュー) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Syspublications**ビューは、パブリケーション情報を公開します。 このビューは、ディストリビューション データベースに格納されます。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68094767"
 |**alt_snapshot_folder**|**nvarchar (510)**|スナップショットの代替フォルダーの場所を指定します。|  
 |**pre_snapshot_script**|**nvarchar (510)**|**.Sql**ファイルの場所へのポインターを指定します。 ディストリビューション エージェントは、サブスクライバー側でスナップショットを適用するとき、レプリケートされたオブジェクト スクリプトより前に、プリスナップショット スクリプトを実行します。|  
 |**post_snapshot_script**|**nvarchar (510)**|**.Sql**ファイルの場所へのポインターを指定します。 ディストリビューションエージェントは、他のすべてのレプリケートされたオブジェクトスクリプトとデータが初期同期中に適用された後に、ポストスナップショットスクリプトを実行します。|  
-|**compress_snapshot**|**bit**|*Alt_snapshot_folder*の場所に書き込まれるスナップショットを[!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 形式で圧縮することを指定します。 **1**は、スナップショットが圧縮されることを意味します。|  
+|**compress_snapshot**|**bit**|*Alt_snapshot_folder*の場所に書き込まれるスナップショットを CAB 形式で圧縮することを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 **1**は、スナップショットが圧縮されることを意味します。|  
 |**ftp_address**|**sysname**|ディストリビューター用の FTP サービスのネットワークアドレス。 ディストリビューション エージェントが受け取るパブリケーション スナップショット ファイルの場所を示します。|  
 |**ftp_port**|**int**|ディストリビューターの FTP サービスのポート番号。 ディストリビューションエージェントが取得するパブリケーションスナップショットファイルの場所を指定します。|  
 |**ftp_subdirectory**|**nvarchar (510)**|パブリケーションが FTP を使用したスナップショットの配布をサポートしている場合に、ディストリビューションエージェントでスナップショットファイルを取得できる場所を指定します。|  
@@ -64,16 +64,16 @@ ms.locfileid: "68094767"
 |**centralized_conflicts**|**bit**|競合レコードがパブリッシャーに格納されるかどうかを示します。<br /><br /> **0** = 競合レコードは、競合の原因となったパブリッシャーとサブスクライバーの両方に格納されます。<br /><br /> **1** = 競合レコードはパブリッシャーに格納されます。|  
 |**conflict_retention**|**int**|競合レコードの保有期間を日数で指定します。|  
 |**conflict_policy**|**int**|キュー更新サブスクライバーオプションを使用する場合の競合解決ポリシーを指定します。 次のいずれかの値を指定します。<br /><br /> **1** = パブリッシャー優先。<br /><br /> **2** = サブスクライバー優先。<br /><br /> **3** = サブスクリプションは再初期化されます。|  
-|**queue_type**|**int**|使用されるキューの種類。 次のいずれかの値を指定します。<br /><br /> **1** = msmq。メッセージキューを[!INCLUDE[msCoName](../../includes/msconame-md.md)]使用してトランザクションを格納します。<br /><br /> **2** = .sql。を使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]してトランザクションを格納します。<br /><br /> 注: メッセージ[!INCLUDE[msCoName](../../includes/msconame-md.md)]キューの使用は推奨されておらず、サポートされなくなりました。|  
-|**ad_guidname**|**sysname**|パブリケーションが[!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory でパブリッシュされるかどうかを指定します。 有効なグローバル一意識別子 (GUID) は、パブリケーションが Active Directory にパブリッシュされることを指定します。 GUID は、対応する Active Directory パブリケーションオブジェクトの objectGUID です。 NULL の場合、パブリケーションは Active Directory でパブリッシュされません。<br /><br /> 注: Active Directory への発行はサポートされなくなりました。|  
-|**backward_comp_level**|**int**|データベースの互換性レベル。次のいずれかの値になります。<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。|  
+|**queue_type**|**int**|使用されるキューの種類。 次のいずれかの値を指定します。<br /><br /> **1** = msmq。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージキューを使用してトランザクションを格納します。<br /><br /> **2** = .sql。を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションを格納します。<br /><br /> 注: [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージキューの使用は推奨されておらず、サポートされなくなりました。|  
+|**ad_guidname**|**sysname**|パブリケーションが Active Directory でパブリッシュされるかどうかを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 有効なグローバル一意識別子 (GUID) は、パブリケーションが Active Directory にパブリッシュされることを指定します。 GUID は、対応する Active Directory パブリケーションオブジェクトの objectGUID です。 NULL の場合、パブリケーションは Active Directory でパブリッシュされません。<br /><br /> 注: Active Directory への発行はサポートされなくなりました。|  
+|**backward_comp_level**|**int**|データベースの互換性レベル。次のいずれかの値になります。<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。|  
 |**allow_initialize_from_backup**|**bit**|サブスクライバーが、初期スナップショットではなくバックアップから、このパブリケーションに対するサブスクリプションを初期化できるかどうかを示します。 **1**は、サブスクリプションをバックアップから初期化できることを意味します。 **0**は、サブスクリプションが使用できないことを意味します。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。|  
 |**min_autonosync_lsn**|**バイナリ (1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|パブリケーションでスキーマレプリケーションがサポートされているかどうかを示します。<br /><br /> **1** = パブリッシャーで実行される DDL ステートメントはレプリケートされます。<br /><br /> **0** = DDL ステートメントがレプリケートされないことを示します。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。|  
-|**options**|**int**|追加のパブリッシングオプションを指定するビットマップ。ビットごとのオプションの値は次のとおりです。<br /><br /> **0x1** -ピアツーピアレプリケーションに対して有効になります。<br /><br /> **0x2** -ピアツーピアレプリケーションのローカル変更のみをパブリッシュします。<br /><br /> **0x4** -以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーに対して有効です。<br /><br /> **0x8** -ピアツーピア競合検出に対して有効です。|  
+|**options**|**int**|追加のパブリッシングオプションを指定するビットマップ。ビットごとのオプションの値は次のとおりです。<br /><br /> **0x1** -ピアツーピアレプリケーションに対して有効になります。<br /><br /> **0x2** -ピアツーピアレプリケーションのローカル変更のみをパブリッシュします。<br /><br /> **0x4** -以外のサブスクライバーに対して有効 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。<br /><br /> **0x8** -ピアツーピア競合検出に対して有効です。|  
 |**originator_id**|**smallint**|競合検出のためにピア ツー ピア レプリケーション トポロジの各ノードを識別します。 詳細については、「 [ピア ツー ピア レプリケーションにおける競合検出](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addpublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   

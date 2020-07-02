@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf03396170972cf1e0c44a7a668e3651385579fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1a4bfcd7d9f03e41e32551653788386612a43835
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715147"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   以外のパブリッシャーのパブリッシャーのプロパティを表示または変更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 このストアドプロシージャは、ディストリビューター側で実行されます。  
   
@@ -43,7 +43,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 `[ @propertyname = ] 'propertyname'`設定するプロパティの名前を指定します。 *propertyname*は**sysname**で、次のいずれかの値を指定できます。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**xactsetbatching**|パブリッシャーのトランザクションが、後続の処理のために、トランザクション全体で一貫性のあるセット (Xactsets と呼ばれます) にまとめられるかどうかを示します。 値が**enabled**の場合は、既定の Xactsets を作成できます。 値**disabled**は、既存の Xactsets が新しい Xactsets を作成せずに処理されることを意味します。|  
 |**xactsetjob**|Xactsets を作成するために Xactset ジョブを有効にするかどうかを示します。 値が**enabled**の場合は、Xactset ジョブが定期的に実行され、パブリッシャーで Xactsets が作成されます。 値が**disabled**の場合は、パブリッシャーに変更をポーリングするときに、ログリーダーエージェントによってのみ Xactsets が作成されることを意味します。|  
@@ -78,7 +78,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_publisherproperty**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Oracle パブリッシャー &#40;レプリケーション Transact-sql プログラミングのトランザクションセットジョブの構成&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3b7922921c64c9afb7ef37be57db23a32470eaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90f2d7e20d4cb490e738a3dd813ce6037a1bfac6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388365"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649499"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>CommandStream プロパティを使用した、テンプレート ファイルの実行
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   この例は、SqlXmlCommand オブジェクトの CommandStream プロパティを使用して、SQL クエリまたは XPath クエリで構成されるテンプレートファイルを指定する方法を示しています。 このアプリケーションでは、コマンドファイルの FileStreamobject が開かれ、実行される CommandStream としてファイルストリームが割り当てられます。  
   
  次の例では、CommandType プロパティが (TemplateFile としてではなく) SqlXmlCommandType. Template として指定されています。  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 81908d815818c0274615e9bd2bd3bf40037e2b99
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b99676242133179bbfc26421c5d740b95c7c16d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652198"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>変更データキャプチャ-sys. dm_cdc_errors
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   変更データキャプチャのログスキャンセッション中に発生したエラーごとに1行のデータを返します。  
  
@@ -45,13 +45,13 @@ ms.locfileid: "82833837"
 |**begin_lsn**|**nvarchar (23)**|エラーが発生したときに処理されていたトランザクションの開始 LSN 値。<br /><br /> 0 は、ログ スキャン セッション中にエラーが発生しなかったことを示します。|  
 |**sequence_value**|**nvarchar (23)**|エラー発生時に処理されていた行の LSN 値です。<br /><br /> 0 は、ログ スキャン セッション中にエラーが発生しなかったことを示します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **dm_cdc_errors**には、前の32セッションのエラー情報が含まれています。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Dm_cdc_errors**動的管理ビューに対してクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 動的管理ビューに対する権限の詳細については、「 [transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dm_cdc_log_scan_sessions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)   
  [dm_repl_traninfo &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-repl-traninfo-transact-sql.md)  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d778a90adf2579ca136603847762b2577a5155f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c8710aa297b01634d5307dbd3c057b9d51fe8f6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693250"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   競合テーブルまたは[MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブルから行を削除します。 このストアド プロシージャは、競合テーブルが格納されているコンピューターの、任意のデータベース上で実行されます。  
   
@@ -54,7 +54,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_deletemergeconflictrow**は、マージレプリケーションで使用します。  
   
  [MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブルはシステムテーブルであり、空の場合でも、データベースからは削除されません。  
@@ -62,7 +62,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_deletemergeconflictrow**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

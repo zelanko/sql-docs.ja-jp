@@ -15,15 +15,15 @@ ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1302798ac92456b4b2ce483ddcc2ae2e3b4f6067
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 5b321928d3e898edfcbae041391a85152d69e058
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882130"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665977"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 のプログラミング概念
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   クライアント側の XML 機能を追加し既存の機能を拡張するため、SQLXML 3.0 が Web リリースとして提供されました。この機能には、注釈付き XSD スキーマ、XML 一括読み込み、Web サービス (SOAP) サポート、アップデートグラムなどが含まれます。  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では SQLXML 4.0 が導入され、SQLXML 3.0 と同じ機能に加えて、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の新機能に対応するための追加の更新が提供されました。  

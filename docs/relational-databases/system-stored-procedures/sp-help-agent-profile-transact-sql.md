@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ae3e555f48958aec87ed012244fae9775fae1619
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 24a95d193d483c35dac0f94a839555fecb52afca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826104"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662449"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   指定されたエージェントのプロファイルを表示します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
   
@@ -40,7 +40,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ## <a name="arguments"></a>引数  
 `[ @agent_type = ] agent_type`エージェントの種類を示します。 *agent_type*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|スナップショット エージェント|  
 |**2**|ログ リーダー エージェント (Log Reader Agent)|  
@@ -58,7 +58,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_name**|**sysname**|エージェントの種類に対して一意です。|  
 |**agent_type**|**int**|**1** = スナップショットエージェント<br /><br /> **2** = ログリーダーエージェント<br /><br /> **3** = ディストリビューションエージェント<br /><br /> **4** = マージエージェント<br /><br /> **9** = キューリーダーエージェント|  
 |**Type**|**int**|**0** = システム<br /><br /> **1** = カスタム|  
-|**記述**|**varchar (3000)**|プロファイルの説明です。|  
+|**description**|**varchar (3000)**|プロファイルの説明です。|  
 |**def_profile**|**bit**|このプロファイルがこの種類のエージェントの既定のプロファイルかどうかを指定します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -70,7 +70,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_help_agent_profile**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**replmonitor**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションエージェントプロファイルの操作](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [sp_add_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_drop_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   

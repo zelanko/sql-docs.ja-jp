@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7bf9ae81bf9f6c65790bc05b7b21c14a106a90e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0a8268cd4796743afd0f71e59afc409a07c840d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820919"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664807"
 ---
 # <a name="sysserver_event_notifications-transact-sql"></a>server_event_notifications (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーレベルのイベント通知オブジェクトごとに1行の値を返します。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82820919"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

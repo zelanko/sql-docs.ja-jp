@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee37996f4d22787c8379e6a887e23769a260b6b2
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 2ad966d5a6cc4a624310d7c20ed60ea8a9210137
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306183"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649423"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText プロパティを使用した、テンプレート ファイルの実行
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   この例では、SQL または XPath クエリで構成されるテンプレートファイルを CommandText プロパティを使用して指定する方法を示します。 CommandText の値として SQL または XPath クエリを指定する代わりに、ファイル名を値として指定できます。 次の例では、CommandType プロパティが SqlXmlCommandType として指定されています。  
   
  サンプル アプリケーションでは、次のテンプレートが実行されます。  

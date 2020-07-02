@@ -21,15 +21,15 @@ ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0820a7440a154cff1e4b405175f47f087cd1d13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 58bd6bfbb98ab8f75c8959af71bd5c3658790676
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651889"
 ---
 # <a name="sp_query_store_remove_query-transact-sql"></a>sp_query_store_remove_query (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   クエリストアから、関連付けられているすべてのプランとランタイム統計を削除します。  
   
@@ -48,12 +48,12 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する**ALTER**権限が必要です。
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、クエリストア内のクエリに関する情報を返します。  
   
 ```  
@@ -73,7 +73,7 @@ JOIN sys.query_store_query_text AS Txt
 EXEC sp_query_store_remove_query 3;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_query_store_force_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   

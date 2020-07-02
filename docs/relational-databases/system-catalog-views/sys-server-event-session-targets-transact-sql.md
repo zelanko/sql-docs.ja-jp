@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 707060599513e765e702755251015899eb6732d7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ac4e6a7bb6f850c2bec6ae8bcbf0b21bb5d3ed39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821801"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664694"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   イベント セッションのイベント ターゲットごとに 1 行のデータを返します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82821801"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このビューには、次のリレーションシップ基数があります。  
   
 ||||  
@@ -51,7 +51,7 @@ ms.locfileid: "82821801"
 |From|終了|リレーションシップ|  
 |sys.server_event_session_targets.event_session_id|server_event_sessions。 event_session_id|多対一|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [拡張イベントのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  

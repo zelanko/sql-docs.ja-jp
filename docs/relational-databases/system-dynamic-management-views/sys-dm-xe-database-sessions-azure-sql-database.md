@@ -9,15 +9,15 @@ ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a0c79bba20d6885297e59c20e54141c0f99ccf76
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ccb292c21cda8a335f1630b08d462f183a1f25e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826663"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675760"
 ---
 # <a name="sysdm_xe_database_sessions-azure-sql-database"></a>sys.dm_xe_database_sessions (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   セッション イベントに関する情報を返します。 イベントは、個別の実行ポイントです。 イベントに述語を適用すると、イベントに必要な情報が含まれていない場合に、イベントの発生を防ぐことができます。  
   
@@ -43,8 +43,8 @@ ms.locfileid: "82826663"
 |dm_xe_database_session_events。 event_session_address|dm_xe_database_sessions. アドレス|多対一|  
 |sys. dm_xe_database_session_events. event_package_guid、dm_xe_database_session_events event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多対一|  
   
-## <a name="see-also"></a>参照  
-[Azure SQL Database の拡張イベント](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+## <a name="see-also"></a>関連項目  
+[Azure SQL データベースでの拡張イベント](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
 [拡張イベント](../../relational-databases/extended-events/extended-events.md)  
   
  

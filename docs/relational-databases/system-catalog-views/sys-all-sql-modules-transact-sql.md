@@ -20,17 +20,17 @@ ms.assetid: 7477a3fe-afb3-44c8-bb2c-c6e1d9bdee6f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e0d56da2a61f97a523ee67dcf4847c76ad07b26
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a7953673269229b67541c28c245c989cb3f0ac45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823401"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652784"
 ---
 # <a name="sysall_sql_modules-transact-sql"></a>all_sql_modules (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  **Sql_modules**と**sys. system_sql_modules**の和集合を返します。  
+  **Sql_modules**と**sys.system_sql_modules**の和集合を返します。  
   
  ビューは、ネイティブコンパイル済みのスカラーユーザー定義関数ごとに1行の値を返します。 詳しくは、「[インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」をご覧ください。  
   
@@ -44,17 +44,17 @@ ms.locfileid: "82823401"
 |**uses_database_collation**|**bit**|スキーマ バインドのモジュール定義が適切な評価のためにデータベースの既定の照合順序に依存する場合は 1 になります。それ以外の場合は 0 になります。 この依存性によって、データベースの既定の照合順序が変更されるのを防ぐことができます。|  
 |**is_recompiled**|**bit**|プロシージャは WITH RECOMPILE オプションを使用して作成されました。|  
 |**null_on_null_input**|**bit**|モジュールは、任意の NULL 入力上で NULL 出力を生成するように宣言されました。|  
-|**execute_as_principal_id**|**int**|実行データベースプリンシパルの ID。<br /><br /> 既定では NULL、または EXECUTE AS CALLER の場合は NULL です。<br /><br /> [SELF として実行するか、プリンシパルとして実行する場合> 指定されたプリンシパルの ID \< です。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**int**|実行データベースプリンシパルの ID。<br /><br /> 既定では NULL、または EXECUTE AS CALLER の場合は NULL です。<br /><br /> SELF として実行する場合は指定したプリンシパルの ID、または EXECUTE AS にする場合は \<principal> です。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**uses_native_compilation**|bit|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> 0 = ネイティブでコンパイルされていない<br /><br /> 1 = ネイティブコンパイル<br /><br /> 既定値は 0 です。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [system_sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-sql-modules-transact-sql.md)   
+ [sys.system_sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-sql-modules-transact-sql.md)   
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

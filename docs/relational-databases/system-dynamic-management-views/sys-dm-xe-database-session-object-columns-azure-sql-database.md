@@ -11,15 +11,15 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 652f6fe7bda0cf333734155f4a6d86f59b6ec3ce
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 8d58dfe13c3bb68290bcd0b968c14a8eab27ab40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675870"
 ---
 # <a name="sysdm_xe_database_session_object_columns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   セッションにバインドされたオブジェクトの構成値を示します。  
   
@@ -42,12 +42,12 @@ ms.locfileid: "84627371"
   
 ### <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|ソース|終了|リレーションシップ|  
+|From|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |dm_xe_database_session_object_columns。 object_name<br /><br /> dm_xe_database_session_object_columns。 object_package_guid|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|多対一|  
 |dm_xe_database_session_object_columns。 column_name<br /><br /> dm_xe_database_session_object_columns。 column_id|sys.dm_xe_object_columns.name<br /><br /> sys.dm_xe_object_columns.column_id|多対一|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  
   
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2edfbd187835a321f513f3fb9d14aaa1aef65ec5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dbfd5f0fc29efd4d2f6a02d680c9a6df34c5392b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663030"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>dm_hadr_database_replica_states (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   のローカルインスタンスが可用性レプリカをホストしている Always On 可用性グループに参加しているデータベースごとに1行のデータを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 この動的管理ビューは、プライマリ レプリカとセカンダリ レプリカの両方の状態情報を公開します。 セカンダリ レプリカの場合、このビューはサーバー インスタンス上のセカンダリ データベースごとに 1 行のデータを返します。 プライマリ レプリカの場合、このビューはプライマリ データベースごとに 1 行のデータと、対応するセカンダリ データベースについての追加の行のデータを返します。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "82827966"
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [可用性グループの監視 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   

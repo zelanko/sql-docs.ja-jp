@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94c83711131fe1b08edee73db748a8152b9b56f0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 87895b3b93059c1c6dec0e859690c8172bb143bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824352"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652037"
 ---
 # <a name="sp_resetstatus-transact-sql"></a>sp_resetstatus (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   問題のあるデータベースの状態をリセットします。  
   
@@ -48,7 +48,7 @@ sp_resetstatus [ @dbname = ] 'database'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  sp_resetstatus では、データベースの未確認フラグがオフにされます。 また、このプロシージャによって、sys.databases 内の指定のデータベースのモード列と状態列が更新されます。 このプロシージャを実行する前には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログを検討し、すべての問題を解決しておいてください。 sp_resetstatus を実行した後は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを停止し再起動します。  
   
  データベースは、いくつかの理由で問題ありの状態になる可能性があります。 その原因としては、オペレーティング システムによるデータベース リソースへのアクセス拒否や、データベース ファイルが利用できな場合や損傷している場合が考えられます。  
@@ -56,14 +56,14 @@ sp_resetstatus [ @dbname = ] 'database'
 ## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、データベースの状態をリセットし `AdventureWorks2012` ます。  
   
 ```  
 EXEC sp_resetstatus 'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   

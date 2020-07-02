@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83195bfb2e06efe5e5c0b1c4fb6105091283e23e
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 6ecdb718dec421703ffe97ec1b36617476b99ed3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649721"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>XSL 変換の適用 (SQLXML マネージド クラス)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   この例では、AdventureWorks データベースに対して SQL クエリを実行します。 クエリ結果には XSL 変換が適用され、従業員の名前と姓を示す 2 列のテーブルが生成されます。  
   
  SqlXmlCommand オブジェクトの XslPath プロパティは、XSL ファイルとそのディレクトリパスを指定するために使用されます。  

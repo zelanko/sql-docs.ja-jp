@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3782b8139b84d87a30ac575476f5535173cdc66a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662576"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたテーブル内の指定された列に関連付けられているキー フレーズに対し、0 行、1 行、または複数の行を含むテーブルを返します。  
   
@@ -50,7 +50,7 @@ SEMANTICKEYPHRASETABLE
   
  この名前には 1 ~ 4 つの部分名を指定できますが、リモートサーバー名は許可されません。  
   
- **項目**  
+ **column**  
  結果が返されるインデックス付き列の名前。 列でセマンティックインデックス作成が有効になっている必要があります。  
   
  **column_list**  
@@ -72,7 +72,7 @@ SEMANTICKEYPHRASETABLE
 |**column_id**|**int**|現在のキーフレーズを抽出してインデックスを作成した列の ID。<br /><br /> 列 ID から列名 (または列名から列 ID) を取得する方法の詳細については、COL_NAME 関数と COLUMNPROPERTY 関数のセクションを参照してください。|  
 |**document_key**|**\***<br /><br /> このキーは、ソーステーブル内の一意なキーの型と一致します。|現在のキーフレーズのインデックスが作成されたドキュメントまたは行の一意のキー値。|  
 |**キーフレーズ**|**NVARCHAR**|Column_id によって識別され、document_key によって指定されたドキュメントに関連付けられている列に含まれるキーフレーズ。|  
-|**学生**|**real**|インデックス付き列内の同じドキュメント内の他のすべてのキーフレーズとの関係における、このキーフレーズの相対値。<br /><br /> この値は [0.0, 1.0] の範囲内の小数値です。スコアの値が大きいほど類似性が高く、1.0 は完全に一致することを表します。|  
+|**学生**|**本当の**|インデックス付き列内の同じドキュメント内の他のすべてのキーフレーズとの関係における、このキーフレーズの相対値。<br /><br /> この値は [0.0, 1.0] の範囲内の小数値です。スコアの値が大きいほど類似性が高く、1.0 は完全に一致することを表します。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  詳細については、「[セマンティック検索を使用してドキュメント内のキーフレーズを検索](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)する」を参照してください。  

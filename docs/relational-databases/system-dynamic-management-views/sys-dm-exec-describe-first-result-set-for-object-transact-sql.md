@@ -18,15 +18,15 @@ ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bf2dff5e5d7a3cb1581de9c0b15ff8a58dc6be7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d0c08c6e0d41781783cf7aaffd1f26d6e7b4e417
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676765"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   この動的管理関数は、を @object_id パラメーターとして受け取り、その ID を持つモジュールの最初の結果メタデータを記述します。 @object_id指定できるは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアドプロシージャまたはトリガーの ID [!INCLUDE[tsql](../../includes/tsql-md.md)] です。 その他のオブジェクト (ビュー、テーブル、関数、または CLR プロシージャ) などの ID の場合は、結果のエラー列にエラーが記載されます。  
   
@@ -137,7 +137,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set_for_object(OBJECT_ID('TestPr
 GO  
 ```  
   
-### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B. Dm_exec_describe_first_result_set_for_object 関数とテーブルまたはビューの結合  
+### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B: Dm_exec_describe_first_result_set_for_object 関数とテーブルまたはビューの結合  
  次の例では、両方のシステムカタログビューを使用して、データベース内のすべてのストアドプロシージャの結果セットのメタデータを表示する、 **dm_exec_describe_first_result_set_for_object**関数。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
   
 ```  
@@ -151,7 +151,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sp_describe_undeclared_parameters &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [dm_exec_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  

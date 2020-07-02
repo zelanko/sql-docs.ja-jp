@@ -1,5 +1,6 @@
 ---
 title: dm_db_xtp_checkpoint_files (Transact-sql) |Microsoft Docs
+description: ファイルサイズ、物理的な場所、トランザクション ID など、チェックポイントファイルに関する情報を表示します。 SQL Server のバージョンごとにこのビューがどのように異なるかを説明します。
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,12 +21,12 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3db08ac05d88bcea9f6b138ab08a48fd61a675fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ddf365b81a6e973da8348ad011dea9e23aabba50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830846"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677523"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>dm_db_xtp_checkpoint_files (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "82830846"
 ##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降  
  次の表では、以降のの列について説明し `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** ます。  
   
-|列名|種類|説明|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|データまたはデルタ ファイルが含まれているコンテナー (sys.database_files で FILESTREAM 型のファイルとして表される) の ID。 [Database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)の file_id と結合します。|  
 |container_guid|**uniqueidentifier**|ルート、データ、またはデルタファイルが含まれているコンテナーの GUID。 Database_files テーブルの file_guid と結合します。|  
@@ -69,7 +70,7 @@ ms.locfileid: "82830846"
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  次の表では、の列について説明し `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** ます。  
   
-|列名|種類|説明|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|データまたはデルタ ファイルが含まれているコンテナー (sys.database_files で FILESTREAM 型のファイルとして表される) の ID。 [Database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)の file_id と結合します。|  
 |container_guid|**uniqueidentifier**|データファイルまたはデルタファイルが含まれているコンテナーの GUID。|  
@@ -97,7 +98,7 @@ ms.locfileid: "82830846"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW DATABASE STATE` 権限が必要です。  
   
-## <a name="use-cases"></a>例  
+## <a name="use-cases"></a>ユース ケース  
  インメモリ OLTP によって使用されているストレージを推定するには、次のようにします。  
   
 ```  
@@ -121,7 +122,7 @@ ORDER BY state, file_type
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

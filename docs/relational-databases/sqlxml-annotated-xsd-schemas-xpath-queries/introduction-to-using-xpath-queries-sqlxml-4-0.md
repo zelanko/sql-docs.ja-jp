@@ -16,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ed8de737a350181a62eb12b8c9f2f19a762a44c
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 544a8741557c222577f124014d6a04a9d066add1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649768"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath クエリの使用について (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML パス言語 (XPath) クエリは、URL の一部として、またはテンプレート内で指定できます。 この結果のフラグメントの構造はマッピング スキーマによって決定され、値はデータベースから取得されます。 このプロセスは、CREATE VIEW ステートメントを使用してビューを作成し、そのビューに対して SQL クエリを記述するのと概念的には同じです。  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ ms.locfileid: "84882251"
 ## <a name="supported-functionality"></a>サポートされる機能  
  次の表は、SQLXML 4.0 で実装されている XPath 言語の機能です。  
   
-|機能|Item|サンプル クエリへのリンク|  
+|機能|アイテム|サンプル クエリへのリンク|  
 |-------------|----------|----------------------------|  
 |軸|**属性**、**子**、**親**、および**自己**軸|[XPath クエリでの軸の指定 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |連続する述語や入れ子になった述語など、ブール値を使用する述語||[XPath クエリでの算術演算子の指定 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -106,7 +106,7 @@ ms.locfileid: "84882251"
 ## <a name="unsupported-functionality"></a>サポートされていない機能  
  次の表は、SQLXML 4.0 で実装されていない XPath 言語の機能です。  
   
-|機能|Item|  
+|機能|アイテム|  
 |-------------|----------|  
 |軸|**先祖**、**先祖、また**は self、**子孫**、**子孫、または自己 (//)**、**次**の**兄弟**、**名前空間**、**先行**、**前の兄弟**|  
 |数値を使用する述語||  
@@ -121,7 +121,7 @@ ms.locfileid: "84882251"
   
 -   XPath には、XML で特別な意味を持つ < や & などの文字を含めることができます (およびテンプレートは XML ドキュメントです)。 XML & エンコードを使用してこれらの文字をエスケープするか、URL に XPath を指定する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQLXML 4.0 での XPath クエリの使用](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
   
   

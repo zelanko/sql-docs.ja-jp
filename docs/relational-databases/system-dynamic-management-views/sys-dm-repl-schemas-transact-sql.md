@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf6739feb49e3ee365dc5c7421563952d50ed63b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 321a2d90d686072ec0460e3d59a6539b795cf013
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676228"
 ---
 # <a name="sysdm_repl_schemas-transact-sql"></a>dm_repl_schemas (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   レプリケーションでパブリッシュされたテーブル列に関する情報を返します。  
   
@@ -83,10 +83,10 @@ ms.locfileid: "82833724"
 ## <a name="permissions"></a>アクセス許可  
  **Dm_repl_schemas**を呼び出すには、パブリケーションデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  情報は、レプリケーションアーティクルキャッシュに現在読み込まれているレプリケートされたデータベースオブジェクトに対してのみ返されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [レプリケーション関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   

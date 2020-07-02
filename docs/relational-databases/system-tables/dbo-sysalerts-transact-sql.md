@@ -1,5 +1,5 @@
 ---
-title: sysalerts (Transact-sql) |Microsoft Docs
+title: dbo.sysの警告 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 277cd9ae3fdbe2414c9c3eb96208e79730ebdde6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6169691af84576e37a8f4b5a7cfc09757305c95b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675325"
 ---
-# <a name="dbosysalerts-transact-sql"></a>sysalerts (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="dbosysalerts-transact-sql"></a>dbo.sysの警告 (Transact-sql)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   警告 1 件につき 1 行のデータを格納します。 アラートは、イベントへの応答として送信されるメッセージです。 警告メッセージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境の外に転送でき、電子メールやポケットベルのメッセージとして送信することもできます。 また、警告でタスクを生成することもできます。  このテーブルは、 **msdb**データベースに格納されます。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|警告 ID。|  
+|**id**|**int**|警告 ID。|  
 |**name**|**sysname**|アラート名。|  
 |**event_source**|**nvarchar (100)**|イベントのソース ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。|  
 |**event_category_id**|**int**|将来利用するために予約されています。|  
@@ -61,7 +61,7 @@ ms.locfileid: "82813939"
   
  ## <a name="remarks"></a>Remarks
 
-次の表は、include_event_description ビットマスクの値を示しています。 10進値は、sysalerts によって返されます。 
+次の表は、include_event_description ビットマスクの値を示しています。 dbo.sysの警告によって、10進値が返されます。 
 
 |decimal | バイナリ | 意味 |
 |------|------|------|

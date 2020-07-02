@@ -20,15 +20,15 @@ ms.assetid: 997c3278-3630-47f6-ada3-190b6c16ce0e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da91debf86d943e24d998afda2911d000f926525
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e09a87b00ea2308cbf21d3d8f57670e2c0c996bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820918"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663188"
 ---
 # <a name="sysdm_db_fts_index_physical_stats-transact-sql"></a>dm_db_fts_index_physical_stats (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   フルテキストインデックスまたはセマンティックインデックスが関連付けられている各テーブルのフルテキストインデックスまたはセマンティックインデックスごとに1行の値を返します。  
   
@@ -63,7 +63,7 @@ SELECT * FROM sys.dm_db_fts_index_physical_stats;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セマンティック検索の管理および監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

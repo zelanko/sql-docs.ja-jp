@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58ddd6013cb3289cb99ab6e600d2c771cc366f41
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 13713bb4f3c5cc3f68903ffd1a22480e2922de37
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820953"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664882"
 ---
 # <a name="sysserver_audit_specifications-transact-sql"></a>server_audit_specifications (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーインスタンス上の SQL Server 監査のサーバー監査仕様に関する情報を格納します。 SQL Server Audit について詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "82820953"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

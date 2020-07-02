@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07bc4084e96a6164fe6f057d49593499c4f69f44
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a902cc7ad691da5159dc3308aa69045fdc2f169
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830260"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692690"
 ---
 # <a name="sp_denylogin-transact-sql"></a>sp_denylogin (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Windows ユーザーまたは Windows グループが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続できないようにします。  
   
@@ -62,7 +62,7 @@ sp_denylogin [ @loginame = ] 'login'
 EXEC sp_denylogin 'CORPORATE\GeorgeV';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)   

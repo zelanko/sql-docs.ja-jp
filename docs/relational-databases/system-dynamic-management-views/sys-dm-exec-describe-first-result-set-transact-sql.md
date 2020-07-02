@@ -18,15 +18,15 @@ ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1591c84de006308e96a3b8079ea05ef9ad6802b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a9597d1852cb16c4f212989d42b1b614f0e5e8fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830616"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676480"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   この動的管理関数は、ステートメントをパラメーターとして受け取り、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの最初の結果セットのメタデータを記述します。  
   
@@ -101,7 +101,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type**|**int**|返されるエラーを表す整数が格納されます。 error_type_desc にマップされます。 解説の下の一覧を参照してください。|  
 |**error_type_desc**|**nvarchar(60)**|返されるエラーを表す短い大文字の文字列が格納されます。 error_type にマップされます。 解説の下の一覧を参照してください。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、**sp_describe_first_result_set** と同じアルゴリズムを使用します。 詳細については、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) を参照してください。  
   
  次の表に、エラーの種類とその説明を示します。  
@@ -128,7 +128,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ## <a name="examples"></a>使用例  
  トピックのその他の例については[sp_describe_first_result_set 「transact-sql&#41;&#40;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)使用して、 **dm_exec_describe_first_result_set**を使用するように調整することもできます。  
   
-### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. 1つの Transact-sql ステートメントに関する情報を返す  
+### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A: 1つの Transact-sql ステートメントに関する情報を返す  
  次のコードは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの結果に関する情報を返します。  
   
 ```  
@@ -138,7 +138,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set
 (N'SELECT object_id, name, type_desc FROM sys.indexes', null, 0) ;  
 ```  
   
-### <a name="b-returning-information-about-a-procedure"></a>B. プロシージャに関する情報を返す  
+### <a name="b-returning-information-about-a-procedure"></a>B: プロシージャに関する情報を返す  
  次の例では、2つの結果セットを返す pr_TestProc という名前のストアドプロシージャを作成します。 次に、**sys.dm_exec_describe_first_result_set** がプロシージャの最初の結果セットに関する情報を返すことを示します。  
   
 ```  
@@ -155,7 +155,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set
 ('Production.TestProc', NULL, 0) ;  
 ```  
   
-### <a name="c-returning-metadata-from-a-batch-that-contains-multiple-statements"></a>C. 複数のステートメントを含むバッチからメタデータを返す  
+### <a name="c-returning-metadata-from-a-batch-that-contains-multiple-statements"></a>C: 複数のステートメントを含むバッチからメタデータを返す  
  次の例では、2 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント を含むバッチを評価します。 結果セットは、返される最初の結果セットを表します。  
   
 ```  
@@ -169,7 +169,7 @@ N'@CustomerID int', 0) AS a;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sp_describe_undeclared_parameters &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [dm_exec_describe_first_result_set_for_object &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  

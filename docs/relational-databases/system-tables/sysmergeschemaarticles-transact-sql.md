@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d22d7f3b21e4bc02846df2b5f764a2fd5bca9dd0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d6ef37acf6e75d2a55a39995906cbda7a18b61d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829816"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675113"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   マージレプリケーションのスキーマのみのアーティクルを追跡します。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82829816"
 |**type**|**tinyint**|スキーマのみのアーティクルの種類を示します。次のいずれかを指定できます。<br /><br /> **0x20** = ストアドプロシージャのスキーマのみのアーティクル。<br /><br /> **0x40** = ビュースキーマのみのアーティクルまたはインデックス付きビューのスキーマのみのアーティクル。|  
 |**objid**|**int**|アーティクルベースオブジェクトのオブジェクト識別子。 には、プロシージャ、ビュー、インデックス付き、ビュー、またはユーザー定義関数のオブジェクト識別子を指定できます。|  
 |**artid**|**uniqueidentifier**|アーティクル ID です。|  
-|**記述**|**nvarchar(255)**|アーティクルの説明です。|  
+|**description**|**nvarchar(255)**|アーティクルの説明です。|  
 |**pre_creation_command**|**tinyint**|サブスクリプション データベースの中でアーティクルが作成されるときに実行される既定の操作。<br /><br /> **0 =** なし-サブスクライバーにテーブルが既に存在する場合、アクションは実行されません。<br /><br /> **1** = Drop-テーブルを再作成する前に削除します。<br /><br /> **2** = 削除-サブセットフィルターの WHERE 句に基づいて削除を発行します。<br /><br /> **3** = 切り捨て- **2**と同じですが、行ではなくページを削除します。 ただし、は WHERE 句を受け取りません。|  
 |**pubid**|**uniqueidentifier**|パブリケーションの一意識別子です。|  
 |**status**|**tinyint**|スキーマだけのアーティクルの状態。次のいずれかになります。<br /><br /> **1** = 同期されていない-テーブルをパブリッシュする初期処理スクリプトは、次回スナップショットエージェントが実行されるときに実行されます。<br /><br /> **2** = アクティブ-テーブルをパブリッシュする初期処理スクリプトが実行されました。<br /><br /> **5** = New_inactive 追加されます。<br /><br /> **6** = New_active 追加されます。|  
@@ -44,7 +44,7 @@ ms.locfileid: "82829816"
 |**destination_object**|**sysname**|サブスクリプションデータベース内の対象オブジェクトの名前。 この値は、ストアドプロシージャ、ビュー、Udf など、スキーマのみのアーティクルに適用されます。|  
 |**destination_owner**|**sysname**|サブスクリプションデータベース内のオブジェクトの所有者 ( **dbo**ではない場合)。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

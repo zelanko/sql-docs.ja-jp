@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2ac740e844f06ce35416077f4568e19ffb6f52f
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 1dbc6d4d2be27ca0a91a7ed312d26baf19a72551
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650004"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram の例 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   ここでは、データベースに対して挿入、変更、および削除の各操作を実行する DiffGram の例を示します。 例を使用する前に、次のことに注意してください。  
   
 -   例では、2 つのテーブル (Cust と Ord) を使用します。したがって、DiffGram の例をテストするにはこれらを作成する必要があります。  
@@ -75,7 +75,7 @@ ms.locfileid: "84882442"
   
      このスキーマを、例で使用する他のファイルと同じフォルダーに DiffGramSchema.xml として保存してください。  
   
-## <a name="a-deleting-a-record-by-using-a-diffgram"></a>A. DiffGram を使用してレコードを削除する  
+## <a name="a-deleting-a-record-by-using-a-diffgram"></a>A: DiffGram を使用してレコードを削除する  
  この例の DiffGram では、CustomerID が ALFKI の顧客レコードを Cust テーブルから削除し、OrderID が 1 の、対応する注文レコードを Ord テーブルから削除します。  
   
 ```  
@@ -144,7 +144,7 @@ ms.locfileid: "84882442"
   
      詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-## <a name="b-inserting-a-record-by-using-a-diffgram"></a>B. DiffGram を使用してレコードを挿入する  
+## <a name="b-inserting-a-record-by-using-a-diffgram"></a>B: DiffGram を使用してレコードを挿入する  
  この例の DiffGram では、Cust テーブルと Ord テーブルにレコードを挿入します。  
   
 ```  
@@ -211,7 +211,7 @@ ms.locfileid: "84882442"
   
      詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-## <a name="c-updating-an-existing-record-by-using-a-diffgram"></a>C. DiffGram を使用して既存のレコードを更新する  
+## <a name="c-updating-an-existing-record-by-using-a-diffgram"></a>C: DiffGram を使用して既存のレコードを更新する  
  この例では、DiffGram で顧客 ALFKI の顧客情報 (CompanyName と ContactName) を更新します。  
   
 ```  
@@ -283,7 +283,7 @@ ms.locfileid: "84882442"
   
      詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-## <a name="d-inserting-updating-and-deleting-records-by-using-a-diffgram"></a>D. DiffGram を使用して、レコードの挿入、更新、および削除を実行する  
+## <a name="d-inserting-updating-and-deleting-records-by-using-a-diffgram"></a>D: DiffGram を使用して、レコードの挿入、更新、および削除を実行する  
  この例では、比較的複雑な DiffGram を使用して、挿入、更新、および削除操作を実行します。  
   
 ```  

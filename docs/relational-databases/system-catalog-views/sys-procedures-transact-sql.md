@@ -20,21 +20,21 @@ ms.assetid: d17af274-b2dd-464e-9523-ee1f43e1455b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 894bcc1a5dc6400fe6e13ae66b63af6cec4cb128
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5e6d1842989766c0cf77f141a62ebb6e146281f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831448"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678307"
 ---
 # <a name="sysprocedures-transact-sql"></a>sys. プロシージャ (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   特定の種類のプロシージャであるオブジェクトごとに1行の値を格納します。 **type** = P、X、RF、および PC。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<Sys. オブジェクトから継承された列>**||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 」を参照してください。|  
+|**\<Columns inherited from sys.objects>**||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 」を参照してください。|  
 |**is_auto_executed**|**bit**|1 = プロシージャは、サーバーの起動時に自動的に実行されます。それ以外の場合は0です。 master データベースのプロシージャに対してのみ設定できます。|  
 |**is_execution_replicated**|**bit**|プロシージャの実行をレプリケートします。|  
 |**is_repl_serializable_only**|**bit**|プロシージャ実行のレプリケーションは、トランザクションをシリアル化できる場合にのみ実行されます。|  
@@ -43,7 +43,7 @@ ms.locfileid: "82831448"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

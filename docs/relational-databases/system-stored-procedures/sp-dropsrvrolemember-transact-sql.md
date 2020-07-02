@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 2624ed4800a247b0847adc5839346758aa50f140
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 213b8301a471e00107ce7d3ac6bf493e6aea87c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67463564"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662464"
 ---
 # <a name="sp_dropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-sql)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 固定サーバー ロールから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインや、Windows ユーザーまたはグループを削除します。
 
@@ -43,10 +43,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 
 ## <a name="arguments"></a>引数
 
-**[ @loginame = ]**'_login_'  
+**[ @loginame =]** '_login_'  
 固定サーバーロールから削除するログインの名前を指定します。 *login*は**sysname**,、既定値はありません。 *ログイン*が存在する必要があります。  
 
-**[ @rolename = ]**'_role_'  
+**[ @rolename =]** '_role_'  
 サーバーロールの名前を指定します。 *role*の部分は**sysname**で、既定値は NULL です。 *role*には、次のいずれかの値を指定する必要があります。  
 
 -   [sysadmin]  
@@ -68,7 +68,7 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  固定サーバー ロールからログインを削除できるのは、sp_dropsrvrolemember だけです。 データベース ロールからメンバーを削除するには、sp_droprolemember を使用します。  
   
  sa ログインは、どの固定サーバー ロールからも削除できません。  
@@ -79,13 +79,13 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
  sysadmin 固定サーバー ロールのメンバーシップが必要です。または、サーバーに対する ALTER ANY LOGIN 権限と、メンバーが削除されるロールのメンバーシップの両方が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 `JackO` `sysadmin`固定サーバーロールからログインを削除します。  
+ 次の例では、 `JackO` 固定サーバーロールからログインを削除し `sysadmin` ます。  
   
 ```sql
 EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;サーバーの役割を作成する](../../t-sql/statements/create-server-role-transact-sql.md)   
  [Transact-sql&#41;&#40;サーバーロールを削除する](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   

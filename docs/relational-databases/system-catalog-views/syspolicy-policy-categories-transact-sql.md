@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: af9086ba9de7d9c61bcedecd4331e7e0e77d6489
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adf4fd9f815297fc31611f46c1c9a7c86e893f46
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68121123"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664030"
 ---
 # <a name="syspolicy_policy_categories-transact-sql"></a>syspolicy_policy_categories (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  インスタンスのポリシーベースの管理のポリシーカテゴリごとに1つの行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を表示します。 ポリシーカテゴリは、多数のポリシーがある場合にポリシーを整理するのに役立ちます。 次の表では、syspolicy_policy_groups ビュー内の列について説明します。  
+  インスタンスのポリシーベースの管理のポリシーカテゴリごとに1つの行を表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 ポリシーカテゴリは、多数のポリシーがある場合にポリシーを整理するのに役立ちます。 次の表では、syspolicy_policy_groups ビュー内の列について説明します。  
  
   
 |列名|データ型|説明|  
@@ -42,7 +42,7 @@ ms.locfileid: "68121123"
 ## <a name="permissions"></a>アクセス許可  
  msdb データベースの PolicyAdministratorRole ロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシーベースの管理を使用してサーバーを管理する](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

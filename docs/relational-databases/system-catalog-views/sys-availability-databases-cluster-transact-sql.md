@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c36c1574ae1ad289c9980e1df9bfbe3b241e164
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c520cf9e836f8db051599ed00735763c85632aab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829169"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649122"
 ---
 # <a name="sysavailability_databases_cluster-transact-sql"></a>availability_databases_cluster (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカルコピーデータベースが可用性グループにまだ参加しているかどうかに関係なく、Windows Server フェールオーバークラスタリング (WSFC) クラスター内の任意の Always On 可用性グループの可用性レプリカをホストしているのインスタンス上の可用性データベースごとに1行のデータを格納します。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "82829169"
 ## <a name="permissions"></a>アクセス許可  
  **Availability_databases_cluster**の呼び出し元がデータベースの所有者でない場合、対応する行を表示するために必要な最小限の権限は、ALTER any database または VIEW any database のサーバーレベルの権限、または**MASTER**データベースの CREATE database 権限です。  
   
-## <a name="see-also"></a>参照  
- [availability_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [dm_hadr_database_replica_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)   
  [dm_hadr_database_replica_cluster_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)   
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループ &#40;SQL Server の概要&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -21,15 +21,15 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97339050b2bb6b81945b6bc7604befdfd45f360b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8dcde5de27764979cf2258d3d1895574a4ca4e54
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829543"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677914"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>dm_db_index_physical_stats (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   に指定されたテーブルまたはビューのデータとインデックスのサイズと断片化に関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 インデックスの場合、各パーティションの B ツリーのレベルごとに 1 行のデータが返されます。 ヒープの場合、各パーティションの IN_ROW_DATA アロケーション ユニットごとに 1 行のデータが返されます。 ラージ オブジェクト (LOB) データの場合、各パーティションの LOB_DATA アロケーション ユニットごとに 1 行のデータが返されます。 テーブルに行オーバーフロー データが存在する場合、各パーティションの ROW_OVERFLOW_DATA アロケーション ユニットごとに 1 行のデータが返されます。 xVelocity メモリが最適化された列ストア インデックスに関する情報は返されません。  
   
@@ -264,7 +264,7 @@ GO
   
 ```  
   
-### <a name="b-returning-information-about-a-heap"></a>B. ヒープに関する情報を返す  
+### <a name="b-returning-information-about-a-heap"></a>B: ヒープに関する情報を返す  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースのヒープ `dbo.DatabaseLog` に関するすべての統計を返します。 テーブルには LOB データが含まれているため、ヒープのデータ ページを格納している `LOB_DATA` アロケーション ユニットの行だけではなく、`IN_ROW_ALLOCATION_UNIT` アロケーション ユニットの行も返されます。 このクエリを実行するには、少なくとも `dbo.DatabaseLog` テーブルに対する CONTROL 権限が必要です。  
   
 ```  
@@ -284,7 +284,7 @@ GO
   
 ```  
   
-### <a name="c-returning-information-for-all-databases"></a>C. すべてのデータベースに関する情報を返す  
+### <a name="c-returning-information-for-all-databases"></a>C: すべてのデータベースに関する情報を返す  
  次の例では、すべてのパラメーターにワイルドカード `NULL` を指定して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのテーブルとインデックスに関する統計を返します。 このクエリを実行するには、VIEW SERVER STATE 権限が必要です。  
   
 ```  
@@ -293,7 +293,7 @@ GO
   
 ```  
   
-### <a name="d-using-sysdm_db_index_physical_stats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D. スクリプトでの dm_db_index_physical_stats を使用したインデックスの再構築または再構成  
+### <a name="d-using-sysdm_db_index_physical_stats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D: スクリプトでの dm_db_index_physical_stats を使用したインデックスの再構築または再構成  
  次の例では、平均断片化が 10% を超えるデータベース内のすべてのパーティションを、自動的に再構成または再構築します。 このクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 この例では、データベース名を指定せずに `DB_ID` を 1 番目のパラメーターとして指定しています。 現在のデータベースの互換性レベルが 80 以下になっているとエラーが発生します。 このエラーを解決するには、`DB_ID()` を有効なデータベース名で置き換えます。 データベース互換性レベルの詳細については、「 [ALTER Database Compatibility Level &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
 ```  
@@ -423,9 +423,9 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;インデックス関連の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [インデックス関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_db_index_operational_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [dm_db_partition_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   

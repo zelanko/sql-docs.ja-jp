@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ae0c1245bdf9ff7fe1d1eb712745cbc15d2479af
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 01c5c21ef7886773e162fe1f17cbcbaae177075b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692662"
 ---
 # <a name="replication-views-transact-sql"></a>レプリケーションビュー (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   これらのビューには、のレプリケーションで使用される情報が含まれて [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] います。 ビューを使用すると、[レプリケーションシステムテーブル](../../relational-databases/system-tables/replication-tables-transact-sql.md)のデータに簡単にアクセスできます。 ビューは、データベースがパブリケーションまたはサブスクリプションデータベースとして有効になっている場合に、ユーザーデータベースに作成されます。 データベースがレプリケーショントポロジから削除されると、すべてのレプリケーションオブジェクトがユーザーデータベースから削除されます。 レプリケーションメタデータにアクセスするには、[レプリケーションストアドプロシージャ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)を使用することをお勧めします。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "83807937"
 |[sysmergeextendedarticlesview &#40;Transact-sql&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[sysmergepartitioninfoview &#40;Transact-sql&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
 |[systranschemas &#40;Transact-sql&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

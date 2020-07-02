@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 378bc455a2723bca43f1ec8252ade0a5d34c53e1
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 76d101190cc30aaed21126be336436ff655b5bf1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649755"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>.NET 環境での SQLXML 機能へのアクセス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   この例では、次のことについて説明します。  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML マネージクラス (microsoft. Data. sqlxml) を使用し [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] て、.NET Framework 環境で microsoft にアクセスする方法 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  

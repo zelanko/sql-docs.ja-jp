@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f7526cc2902829aef7e4e029428e21faa94d2a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663981"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   実行された条件式、式のターゲット、各実行の結果、および発生した場合はエラーの詳細が表示されます。 次の表では、syspolicy_execution_history_details ビューの列について説明します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68094829"
 ## <a name="remarks"></a>Remarks  
  ポリシー ベースの管理のトラブルシューティングを行う場合に、失敗した対象と条件式の組み合わせ、失敗した日時、および関連するエラーを調べるには、syspolicy_policy_execution_history_details ビューに対してクエリを実行します。  
   
- 次のクエリでは`syspolicy_policy_execution_history_details` 、ビュー `syspolicy_policy_execution_history_details` `syspolicy_policies`とビューを組み合わせて、ポリシーの名前、条件の名前、およびエラーの詳細を表示します。  
+ 次のクエリでは、ビューとビューを組み合わせて、 `syspolicy_policy_execution_history_details` `syspolicy_policy_execution_history_details` `syspolicy_policies` ポリシーの名前、条件の名前、およびエラーの詳細を表示します。  
   
 ```  
 SELECT Pol.name AS Policy,   
@@ -68,7 +68,7 @@ WHERE PolHistDet.result = 0 ;
 ## <a name="permissions"></a>アクセス許可  
  msdb データベースの PolicyAdministratorRole ロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシーベースの管理を使用してサーバーを管理する](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

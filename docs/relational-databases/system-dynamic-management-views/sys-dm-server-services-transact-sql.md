@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ed3638e3c8811235778ab2362700c9e08bf08ca5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5bec144cae5726ce8c4d5ff7af8998a41232b5a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676337"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>dm_server_services (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   の現在のインスタンスの SQL Server、フルテキスト、SQL Server Launchpad サービス (SQL Server 2017 +)、および SQL Server エージェントの各サービスに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 これらのサービスに関するステータス情報を報告するには、この動的管理ビューを使用します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82811437"
 |process_id|**int**|サービスのプロセス ID。 null にすることはできません。|  
 |last_startup_time|**datetimeoffset(7)**|サービスが最後に開始された日時。 NULL 値が許可されます。|  
 |service_account|**nvarchar(256)**|サービスを制御する権限が与えられているアカウント。 このアカウントでは、サービスの開始や停止、またはサービス プロパティの変更が可能です。 null にすることはできません。|  
-|ファイル名|**nvarchar(256)**|サービスの実行可能ファイルのパスとファイル名。 null にすることはできません。|  
+|filename|**nvarchar(256)**|サービスの実行可能ファイルのパスとファイル名。 null にすることはできません。|  
 |is_clustered|**nvarchar (1)**|サービスがクラスターサーバーのリソースとしてインストールされているかどうかを示します。 null にすることはできません。|  
 |cluster_nodename|**nvarchar(256)**|サービスがインストールされているクラスター ノードの名前。 NULL 値が許可されます。|
 |instant_file_initialization_enabled|**nvarchar (1)**|サービスに対してファイルの瞬時初期化を有効にするかどうかを指定し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。<br /><br />Y = サービスに対してファイルの瞬時初期化が有効になっています。<br /><br />N = サービスに対してファイルの瞬時初期化が無効になっています。<br /><br /> NULL 値が許可されます。<br /><br /> **注:** は、SQL Server エージェントなどの他のサービスには適用されません。<br /><br /> **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](以降 [!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降) をインストールします。|  
@@ -51,6 +51,6 @@ ms.locfileid: "82811437"
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dm_server_registry &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
   

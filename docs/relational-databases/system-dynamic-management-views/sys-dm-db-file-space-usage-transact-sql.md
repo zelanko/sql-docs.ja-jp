@@ -20,15 +20,15 @@ ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c235ebc59424eba97d985740a7cf8456eee53150
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: b451385df6189a6a81ddc04d0f402c770902a1b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152023"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663474"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   データベース内の各データファイルの領域使用状況に関する情報を返します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "83152023"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|データベース ID。|  
-|file_id|**smallint**|ファイル ID。<br /><br /> file_id は、 [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)の file_id [dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)および fileid にマップされます。|  
+|file_id|**smallint**|ファイル ID。<br /><br /> file_id は、 [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)の file_id と[sys.sysファイル](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)の fileid にマップされます。|  
 |filegroup_id|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> ファイル グループ ID。|  
 |total_page_count|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> データファイル内の総ページ数。|  
 |allocated_extent_page_count|**bigint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> データファイル内の割り当てられたエクステント内のページの合計数。|  
@@ -51,7 +51,7 @@ ms.locfileid: "83152023"
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
 |distribution_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 分布に関連付けられている一意の数値 id です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ページ数は常にエクステント レベルのものです。 したがって、ページ数の値は常に 8 の倍数になります。 グローバルアロケーションマップ (GAM) と共有グローバルアロケーションマップ (SGAM) のアロケーションページを含むエクステントには、単一エクステントが割り当てられます。 これらは、前に説明したページ数には含まれていません。 ページとエクステントの詳細については、「[ページとエクステントのアーキテクチャガイド](../../relational-databases/pages-and-extents-architecture-guide.md)」を参照してください。 
   
  現在のバージョンストアの内容は、 [dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)にあります。 バージョンストアページは、グローバルリソースであるため、セッションおよびタスクレベルではなく、ファイルレベルで追跡されます。 セッションでバージョンを生成することもできますが、セッションが終了するときバージョンを削除することはできません。 バージョンストアのクリーンアップでは、特定のバージョンへのアクセスを必要とする実行時間が最も長いトランザクションを考慮する必要があります。 バージョンストアのクリーンアップに関連する実行時間が最も長いトランザクションを検出するには、 [dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)の elapsed_time_seconds 列を表示します。  
@@ -117,7 +117,7 @@ SELECT SUM(user_object_reserved_page_count) AS [user object pages used],
 FROM sys.dm_db_file_space_usage;
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [dm_db_task_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   

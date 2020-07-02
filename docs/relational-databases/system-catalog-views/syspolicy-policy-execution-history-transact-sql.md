@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2dc0b47ce2723215d03886f7dfc5dab3f121e617
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed3bca383e5f6ad1960274145327f915c6e8ca5c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68121111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663767"
 ---
 # <a name="syspolicy_policy_execution_history-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   ポリシーが実行された時刻、各実行の結果、および発生したエラーの詳細が表示されます。 次の表では、syspolicy_policy_execution_history ビュー内の列について説明します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68121111"
 ## <a name="permissions"></a>アクセス許可  
  msdb データベースの PolicyAdministratorRole ロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシーベースの管理を使用してサーバーを管理する](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: systypes (Transact-sql) |Microsoft Docs
+title: sys.sysの型 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5533e521ba28c0190a5be57ed7637632213d7447
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 99a970b5be9f28569942b4378c488b710b13cd32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018084"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652340"
 ---
-# <a name="syssystypes-transact-sql"></a>systypes (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="syssystypes-transact-sql"></a>sys.sysの型 (Transact-sql)
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   システムによって提供される、およびデータベースで定義されているユーザー定義データ型ごとに1行のデータを返します。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68018084"
 |**xscale**|**tinyint**|内部スケール。サーバーで使用されます。 クエリでは使用されません。|  
 |**tdefault**|**int**|このデータ型の整合性チェックが含まれているストアドプロシージャの ID。|  
 |**領域**|**int**|このデータ型の整合性チェックが含まれているストアドプロシージャの ID。|  
-|**uid**|**smallint**|型の所有者のスキーマ ID です。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の前のバージョンからアップグレードしたデータベースの場合、スキーマ ID は所有者のユーザー ID と同じです。<br /><br /> ** \*重要\* \* **次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のいずれかの DDL ステートメントを使用する場合は、 **systypes**の代わりに、 [.sys](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)カタログビューを使用する必要があります。<br /><br /> 型に対する ALTER AUTHORIZATION<br /><br /> CREATE TYPE<br /><br /> ユーザーおよびロールの数が32767を超えた場合、オーバーフローまたは NULL を返します。|  
+|**uid**|**smallint**|型の所有者のスキーマ ID です。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の前のバージョンからアップグレードしたデータベースの場合、スキーマ ID は所有者のユーザー ID と同じです。<br /><br /> 重要次のいずれかの DDL ステートメントを使用する場合は、sys.sys** \* 型ではなく、sys カタログビューを使用する必要があります。 \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) **sys.systypes**<br /><br /> 型に対する ALTER AUTHORIZATION<br /><br /> CREATE TYPE<br /><br /> ユーザーおよびロールの数が32767を超えた場合、オーバーフローまたは NULL を返します。|  
 |**確保**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|文字ベースの場合、 **collationid**は現在のデータベースの照合順序の id です。それ以外の場合は NULL になります。|  
 |**usertype**|**smallint**|ユーザー型の ID です。 データ型の数が32767を超えた場合、オーバーフローまたは NULL を返します。|  
@@ -59,7 +59,7 @@ ms.locfileid: "68018084"
 |**scale**|**tinyint**|このデータ型の有効桁数に基づく小数点以下桁数です。<br /><br /> NULL = データ型は数値型ではありません。|  
 |**規則**|**sysname**|文字ベースの場合、 **collation**は現在のデータベースの照合順序です。それ以外の場合は NULL になります。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [互換性ビュー &#40;Transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   

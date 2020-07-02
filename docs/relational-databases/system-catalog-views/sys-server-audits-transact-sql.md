@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67f25c6f4d39eb8cbd3b09d2e7710462f91ed397
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 727943423817c51b646ed151c79d7fdfc255d8b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821612"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664944"
 ---
 # <a name="sysserver_audits-transact-sql"></a>server_audits (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   サーバー インスタンス内の各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査について行を 1 つずつ含みます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82821612"
 |**modify_date**|**datetime**|監査が最後に変更された UTC 日付。|  
 |**principal_id**|**int**|サーバーに登録されている監査の所有者の ID。|  
 |**type**|**char(2)**|監査の種類。<br /><br /> SL-NT セキュリティイベントログ<br /><br /> AL-NT アプリケーションイベントログ<br /><br /> ファイルシステム上の FL ファイル|  
-|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION ログ<br /><br /> FILE|  
+|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION ログ<br /><br /> ファイル|  
 |**on_failure**|**tinyint**|アクションエントリの書き込みに失敗した場合:<br /><br /> 0-続行<br /><br /> 1-サーバーインスタンスのシャットダウン<br /><br /> 2-失敗した操作|  
 |**on_failure_desc**|**nvarchar(60)**|アクションエントリの書き込みに失敗した場合:<br /><br /> CONTINUE<br /><br /> サーバーインスタンスのシャットダウン<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0-無効<br /><br /> 1 - 有効|  
@@ -52,7 +52,7 @@ ms.locfileid: "82821612"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

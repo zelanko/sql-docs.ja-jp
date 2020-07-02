@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c3a8feb-58b8-4385-b4c8-bf33cf4d276d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37b0020c00af771096a2e9066ef99752c66d9e04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75cd8fd66ef7ca0f0cfc06ce7ab18b8140b73b94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662259"
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>PauseService メソッド (SqlService クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   サービスを一時停止状態にする動作を試行します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,7 +35,7 @@ ms.locfileid: "73659268"
 object.PauseService()  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  サービスを表す [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクト。  
   
@@ -44,7 +44,7 @@ object.PauseService()
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

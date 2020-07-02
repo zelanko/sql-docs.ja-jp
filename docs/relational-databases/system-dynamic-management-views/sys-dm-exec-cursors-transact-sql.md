@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 79959d61b1753d833523e0618a41eef89dcb5e58
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5769ffe206c1fc84107707acc980ab94c51ac932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830646"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676608"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>dm_exec_cursors (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   各種データベースで開いているカーソルに関する情報を返します。  
   
@@ -71,7 +71,7 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の表では、cursor 宣言インターフェイスについて説明し、properties 列に使用できる値を示します。  
   
 |プロパティ|[説明]|  
@@ -81,7 +81,7 @@ dm_exec_cursors (session_id | 0 )
   
  次の表は、カーソルの種類に関する説明と、プロパティ列に返される値です。  
   
-|種類|Description|  
+|Type|[説明]|  
 |----------|-----------------|  
 |Keyset|カーソルはキーセットとして宣言されています。|  
 |動的|カーソルは動的として宣言されました。|  
@@ -116,7 +116,7 @@ WHERE DATEDIFF(hh, c.creation_time, GETDATE()) > 36;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  

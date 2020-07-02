@@ -16,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15375e7aaf860c5419e68cc64bb8e6e2cac125c1
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: aafc93dd9cf83a648cc4eecfe9301ad6e3ab24c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215894"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650074"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB プロバイダーの概要 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   SQLXMLOLEDB プロバイダーは、ActiveX Data Objects (ADO) を介して [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 機能へのアクセスを提供する OLE DB プロバイダーです。 ただし、このプロバイダーでは、ADO の "出力ストリームへの書き込み" モードでのみコマンドを実行できます。 SQLXMLOLEDB プロバイダーは行セット プロバイダーではありません。 コマンドを実行するときは、adExecuteStream フラグを指定する必要があります。これにより、ADO は、指定した出力ストリームを使用するように指示されます。  
   
  次の例は、adExecuteStream フラグが指定されている Execute コマンドの構文を示しています。  
@@ -50,7 +50,7 @@ oTestCommand.Execute , , adExecuteStream
 |--------------------------|----------------------------|-----------------|  
 |基本パス|""|基本ファイル パスを指定します。 基本ファイル パスは、XML Stylesheet Language (XSL) の場所またはマッピング スキーマ ファイルを指定するときに使用します。 基本ファイルパスは、xsl またはマッピングスキーマのプロパティで指定されている XSL またはマッピングスキーマファイルの相対パスを解決するためにも使用されます。<br /><br /> このプロパティを使用する例については、「 [SQLXMLOLEDB Provider&#41;&#40;XPath クエリの実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)」を参照してください。|  
 |ClientSideXML|False|行セットを XML に変換する処理をサーバーではなくクライアントで行う場合は、このプロパティを True に設定します。 これはパフォーマンスの負荷を中間層に移す場合に便利です。<br /><br /> このプロパティを使用する例については、「 [Sql クエリの実行 &#40;SQLXMLOLEDB provider&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) 」または「 [Sql クエリを含むテンプレートの実行」 &#40;SQLXMLOLEDB provider&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)を参照してください。|  
-|コンテンツ タイプ||出力コンテンツの種類を返します。 これは READ ONLY プロパティです。<br /><br /> このプロパティは、コンテンツの種類 (TEXT/XML、TEXT/HTML、image/jpeg など) に関する情報をブラウザーに提供します。 このプロパティの値は、HTTP ヘッダーの一部としてブラウザーに送信される**content-type**フィールドになります。このフィールドには、本文として送信されるドキュメントの MIME の種類 (Multipurpose Internet Mail Extensions) が格納されます。|  
+|コンテンツの種類||出力コンテンツの種類を返します。 これは READ ONLY プロパティです。<br /><br /> このプロパティは、コンテンツの種類 (TEXT/XML、TEXT/HTML、image/jpeg など) に関する情報をブラウザーに提供します。 このプロパティの値は、HTTP ヘッダーの一部としてブラウザーに送信される**content-type**フィールドになります。このフィールドには、本文として送信されるドキュメントの MIME の種類 (Multipurpose Internet Mail Extensions) が格納されます。|  
 |マッピング スキーマ|NULL|クライアント アプリケーションでマッピング スキーマ (XDR または XSD) に対して XPath クエリを実行する場合、このプロパティを使用してマッピング スキーマの名前を指定します。<br /><br /> パスは相対 (xyz/abc/MySchema.xml) または絶対 (C:\MyFolder\abc\MySchema.xml) パスで指定できます。<br /><br /> 相対パスが指定されている場合、ベースパスプロパティによって指定されるベースパスは、相対パスを解決するために使用されます。 "ベースパス" プロパティにパスが指定されていない場合、相対パスは現在のディレクトリに対する相対パスになります。<br /><br /> [マッピングスキーマ] プロパティの値を指定するときに、ローカルディレクトリのパスまたは URL (https://...) を指定できます。URL を指定する場合は、プロキシサーバー経由で HTTP および HTTPS サーバーにアクセスするように WinHTTP を構成する必要があります。 これには、Proxycfg.exe ユーティリティを実行します。 詳細については、MSDN ライブラリの「Using the WinHTTP Proxy Configuration Utility」(英語) を参照してください。<br /><br /> このプロパティを使用する例については、「 [SQLXMLOLEDB Provider&#41;&#40;XPath クエリの実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)」を参照してください。|  
 |namespaces||名前空間を使用する XPath クエリを実行できるようにします。 このプロパティを使用する例については、「 [SQLXMLOLEDB Provider&#41;&#40;名前空間を使用した XPath クエリの実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)」を参照してください。|  
 |ss Stream Flags||特定の種類のセキュリティ制限を指定するときに使用します。 たとえば、外部サイトなどで、ファイルへの URL 参照やファイルへの絶対パスを許可しない場合や、 テンプレートでクエリを許可しない場合に使用できます。<br /><br /> このプロパティには次の値を割り当てることができます。<br /><br /> 1 = STREAM_FLAGS_DISALLOW_URL 2 = STREAM_FLAGS_DISALLOW_ABSOLUTE_PATH 4 = STREAM_FLAGS_DISALLOW_QUERY 8 = STREAM_FLAGS_ &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;DONTCACHEMAPPINGSCHEMA 16 = STREAM_FLAGS_DONTCACHETEMPLATE 32 = STREAM_FLAGS_DONTCACHEXSL<br /><br /> これらの値の詳細については、次の表に示します。|  

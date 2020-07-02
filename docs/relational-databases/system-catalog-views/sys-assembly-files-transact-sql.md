@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1a384a2c-5556-4d12-a2ba-4da781363143
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a30ad97dde1c27518976fc6ee631104b5fef7d4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 604c3b2485de41135959cd5c4499827cc25cf001
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831900"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652519"
 ---
 # <a name="sysassembly_files-transact-sql"></a>sys.assembly_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   アセンブリを構成するファイルごとに 1 行のデータを保持します。  
     
@@ -41,7 +41,7 @@ ms.locfileid: "82831900"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR アセンブリカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [ASSEMBLYPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  

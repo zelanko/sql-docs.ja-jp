@@ -15,15 +15,15 @@ ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: afaee239422b557b53117441f36c79d1180802db
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 8dbebdd4908b4721ce91cd5994a6a25975ebdd42
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306101"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665502"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0 での xml データ型のサポート
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   以降で [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] は、xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を使用**xml**した xml 型のデータがサポートされています。 このトピックでは、SQLXML 4.0 が**xml**データ型のインスタンスを認識し、それらのインスタンスのサポートを実装する方法について説明します。  
   
 ## <a name="working-with-xml-data-types"></a>xml データ型の使用  

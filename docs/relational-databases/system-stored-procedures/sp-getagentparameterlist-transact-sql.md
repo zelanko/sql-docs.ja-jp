@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c23cd3918742984afdb70b84d7a9adcf5553c746
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ceb3178f8ee200b88bcb5968c110a72a7434320
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833206"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662417"
 ---
 # <a name="sp_getagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたエージェント タイプのエージェント プロファイルに設定可能なすべてのレプリケーション エージェント パラメーターの一覧を返します。 このストアドプロシージャは、任意のデータベース上でエージェントが実行されているディストリビューターで実行されます。  
   
@@ -39,23 +39,23 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ## <a name="arguments"></a>引数  
 `[ @agent_type = ] 'agent_type'`パラメーターを追加するレプリケーションエージェントを指定します。 *agent_type*は**int**で、次のいずれかの値を指定できます。  
   
-|[値]|エージェント|  
+|値|エージェント|  
 |-----------|-----------|  
 |**1**|スナップショット|  
 |**2**|ログリーダー|  
-|**3**|Distribution|  
+|**3**|配布|  
 |**4**|Merge|  
 |**9**|キュー リーダー|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_getagentparameter**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_add_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_drop_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662891"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   FILESTREAM バイナリラージオブジェクト (BLOB) のパスを返します。 OpenSqlFilestream API は、このパスを使用して、アプリケーションが Win32 Api を使用して BLOB データを操作するために使用できるハンドルを返します。 PathName は読み取り専用です。  
   
@@ -45,7 +45,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  他のデータ型の列、または FILESTREAM ストレージ属性を持たない**varbinary (max)** 列のパス名を要求すると、クエリのコンパイル時エラーが発生します。  
   
  *\@オプション*  
- パスのサーバーコンポーネントをどのように書式設定するかを定義する整数[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 オプションには、次のいずれかの値を指定できます。 * \@* 既定値は 0 です。  
+ パスのサーバーコンポーネントをどのように書式設定するかを定義する整数[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 * \@ オプション*には、次のいずれかの値を指定できます。 既定値は 0 です。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -91,7 +91,7 @@ SET @PathName = (
     );  
 ```  
   
-### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. テーブル内の FILESTREAM Blob のパスを表示する  
+### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B: テーブル内の FILESTREAM Blob のパスを表示する  
  次の例では、3つの FILESTREAM Blob のパスを作成して表示します。  
   
 ```sql  
@@ -147,7 +147,7 @@ GO
 DROP DATABASE PathNameDB;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バイナリラージオブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-sql&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [OpenSqlFilestream による FILESTREAM データへのアクセス](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  

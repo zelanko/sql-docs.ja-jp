@@ -27,15 +27,15 @@ ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c547e3c80110f71a6dcd822ecdfca3eeede54504
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: fd890e8c81638531d7e89d67ca3ffb027b77f071
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649889"
 ---
 # <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>SQLXML 4.0 の .NET Framework サポート - DiffGrams を使用したデータの変更
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   DiffGram 形式は、.NET Framework の**データセット**コンポーネントで導入されました [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 .NET Framework では、DiffGram を作成して、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースのテーブルのデータを変更するときに使用できます。  
   
 > [!NOTE]  
