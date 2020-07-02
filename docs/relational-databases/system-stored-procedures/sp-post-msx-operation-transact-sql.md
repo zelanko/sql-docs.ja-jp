@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2d9cc791a0bcd01b2af64ce61771d7460eda4b21
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d27a763efe79c9ab7f4809416b7bbc57f08e4044
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720256"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   対象サーバーをダウンロードして実行するための操作 (行) を**sysdownloadlist**システムテーブルに挿入します。  
   
@@ -47,7 +47,7 @@ sp_post_msx_operation
 ## <a name="arguments"></a>引数  
 `[ @operation = ] 'operation'`ポストされた操作の操作の種類。 *操作*は**varchar (64)**,、既定値はありません。 有効な操作は*object_type*によって異なります。  
   
-|オブジェクトの種類|Operation|  
+|オブジェクトの種類|操作|  
 |-----------------|---------------|  
 |**補足**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
 |**SERVER**|再参加<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
@@ -81,7 +81,7 @@ sp_post_msx_operation
 ## <a name="permissions"></a>アクセス許可  
  このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールがユーザーに付与されている必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_delete_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   

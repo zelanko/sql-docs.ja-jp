@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 31f7d9c3e5d297a39fd0278c51014793a4b8dbd0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ab6ea491a766bdb829a152ed02f92fcd2e71d39c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829245"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725416"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSpublications**テーブルには、パブリッシャーによってレプリケートされるパブリケーションごとに1行のレコードが格納されます。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82829245"
 |**allow_push**|**bit**|指定されたパブリケーションに対してプッシュサブスクリプションを作成できるかどうかを示します。|  
 |**allow_pull**|**bit**|指定されたパブリケーションに対してプルサブスクリプションを作成できるかどうかを示します。|  
 |**allow_anonymous**|**bit**|指定されたパブリケーションに対して匿名サブスクリプションを作成できるかどうかを示します。|  
-|**記述**|**nvarchar(255)**|パブリケーションの説明です。|  
+|**description**|**nvarchar(255)**|パブリケーションの説明です。|  
 |**vendor_name**|**nvarchar (100)**|パブリッシャーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のデータベースの場合の製造元の名前です。|  
 |**保有**|**int**|パブリケーションの保有期間 (時間) です。|  
 |**sync_method**|**int**|同期方法:<br /><br /> **0** = native (すべてのテーブルのネイティブモードの一括コピー出力を生成します)。<br /><br /> **1** = 文字 (すべてのテーブルのキャラクターモードの一括コピー出力を生成します)。<br /><br /> **3** = 同時実行 (すべてのテーブルのネイティブモードの一括コピー出力を作成しますが、スナップショット時にテーブルをロックしません)。<br /><br /> **4** = Concurrent_c (すべてのテーブルのキャラクターモードの一括コピー出力を生成しますが、スナップショット時にテーブルをロックしません)<br /><br /> 値**3**および**4**は、トランザクションレプリケーションとマージレプリケーションで使用できますが、スナップショットレプリケーションでは使用できません。|  
@@ -51,7 +51,7 @@ ms.locfileid: "82829245"
 |**allow_queued_tran**|**bit**|パブリケーションがキュー更新を許可するかどうかを指定します。<br /><br /> **0 =** パブリケーションはキューに登録されていません。<br /><br /> **1** = パブリケーションはキューに登録されています。|  
 |**options**|**int**|このリリースに関する情報はありません。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

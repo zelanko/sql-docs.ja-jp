@@ -19,15 +19,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20fec5c2625c87b2add23738b5b9d22ccfc77c4f
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: b38ef4e89db99239759ad0809a5b4828fd1906e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724707"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>注釈の解釈 - sql:mapped
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XML 一括読み込みでは、XSD スキーマの**sql: マップ**された注釈が想定どおりに処理されます。つまり、マッピングスキーマで任意の要素または属性に**sql: mapping = "false"** が指定されている場合、xml 一括読み込みでは、関連付けられているデータが対応する列に格納されません。  
   
  XML 一括読み込みでは、マップされていない要素と属性が無視されます。これは、スキーマで記述されていないか、XSD スキーマで**sql: マップト = "false"** で注釈が付けられているためです。 このような列が**sql: overflow-field**を使用して指定されている場合は、マップされていないすべてのデータがオーバーフロー列に入ります。  

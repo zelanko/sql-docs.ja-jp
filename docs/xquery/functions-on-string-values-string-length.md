@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40cd82dac9c33e6718e4f3bf3270a065af824115
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 2987001d2163340d9734a9cf606dfbe009901de3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689248"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720052"
 ---
 # <a name="functions-on-string-values---string-length"></a>文字列値に使用する関数 - string-length
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   文字列の長さを文字数で返します。  
   
@@ -58,10 +58,10 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
  XQuery 関数のサロゲートペアの動作は、データベースの互換性レベルと、場合によっては、関数の既定の名前空間 URI に依存します。 詳細については、「 [SQL Server 2016 のデータベースエンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」の「XQuery 関数はサロゲート対応」を参照してください。 「 [ALTER DATABASE Compatibility Level &#40;transact-sql&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 」と「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」も参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. 文字列長 () の XQuery 関数を使用して、長い概要の説明を含む製品を取得する  
+### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A: 文字列長 () の XQuery 関数を使用して、長い概要の説明を含む製品を取得する  
  概要説明が50文字を超える製品の場合、次のクエリでは、製品 ID、概要説明の長さ、および概要自体、<> 要素が取得され `Summary` ます。  
   
 ```  
@@ -99,7 +99,7 @@ Result
 ...  
 ```  
   
-### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>B. 文字列長 () の XQuery 関数を使用して、保証の説明が短い製品を取得する  
+### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>B: 文字列長 () の XQuery 関数を使用して、保証の説明が短い製品を取得する  
  保証の説明が20文字未満の製品の場合、次のクエリでは、製品 ID、長さ、保証の説明、および <> 要素自体を含む XML を取得し `Warranty` ます。  
   
  保証は、製品の機能の1つです。 省略可能な <`Warranty`> 子要素は <> 要素の後に続き `Features` ます。  

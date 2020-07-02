@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8c58657eda708965821c4739f76b49c558c8e76
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 387e4a0a30f5681391bb5891dc772f7c9f04790c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723085"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   トレースに対して、イベントまたはイベント列を追加または削除します。 **sp_trace_setevent**は、停止している既存のトレースに対してのみ実行できます (*状態*は**0**)。 このストアドプロシージャが存在しないトレースまたは*状態*が**0**以外のトレースで実行されると、エラーが返されます。  
   
@@ -53,7 +53,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 |イベント番号|イベント名|説明|  
 |------------------|----------------|-----------------|  
-|0-9|予約済み|予約済み|  
+|0-9|予約されています。|予約されています。|  
 |10|RPC:Completed|リモートプロシージャコール (RPC) が完了したときに発生します。|  
 |11|RPC:Starting|RPC が開始したときに発生します。|  
 |12|SQL:BatchCompleted|バッチが完了したときに発生し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。|  
@@ -73,8 +73,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |26|Lock:Cancel|リソースのロックの取得がキャンセルされたことを示します (たとえば、デッドロックが原因で)。|  
 |27|Lock:Timeout|ページなどのリソースのロックが要求されたが、他のトランザクションによってそのリソースのブロッキング ロックが保持されているため、要求がタイムアウトになったことを示します。 タイムアウトは @ 関数によって決定され、 @LOCK_TIMEOUT set LOCK_TIMEOUT ステートメントを使用して設定できます。|  
 |28|Degree of Parallelism Event (7.0 Insert)|SELECT、INSERT、または UPDATE ステートメントが実行される前に発生します。|  
-|29-31|予約済み|代わりにイベント 28 を使用してください。|  
-|32|予約済み|予約済み|  
+|29-31|予約されています。|代わりにイベント 28 を使用してください。|  
+|32|予約されています。|予約されています。|  
 |33|例外|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で例外が発生したことを示します。|  
 |34|SP:CacheMiss|ストアドプロシージャがプロシージャキャッシュ内に見つからないことを示します。|  
 |35|SP: CacheInsert|項目がプロシージャキャッシュに挿入された時点を示します。|  
@@ -90,20 +90,20 @@ sp_trace_setevent [ @traceid = ] trace_id
 |45|SP:StmtCompleted|ストアド プロシージャ内の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの実行が完了したことを示します。|  
 |46|オブジェクト: Created|CREATE INDEX、CREATE TABLE、CREATE DATABASE などのステートメントで、オブジェクトが作成されたことを示します。|  
 |47|Object:Deleted|DROP INDEX や DROP TABLE などのステートメントで、オブジェクトが削除されたことを示します。|  
-|48|予約済み||  
-|49|予約済み||  
+|48|予約されています。||  
+|49|予約されています。||  
 |50|SQL トランザクション|[!INCLUDE[tsql](../../includes/tsql-md.md)]BEGIN、COMMIT、SAVE、および ROLLBACK TRANSACTION ステートメントを追跡します。|  
 |51|スキャン: 開始|テーブル スキャンまたはインデックス スキャンが開始されたことを示します。|  
 |52|スキャン: 停止|テーブル スキャンまたはインデックス スキャンが停止したことを示します。|  
 |53|CursorOpen|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで、ODBC、OLE DB、または DB-Library によりカーソルがオープンされたことを示します。|  
 |54|TransactionLog|トランザクションがいつトランザクション ログに書き込まれるかを追跡します。|  
 |55|ハッシュの警告|バッファー パーティション上で処理されていないハッシュ演算 (ハッシュ結合、ハッシュ集計、ハッシュ ユニオン、ハッシュ識別など) が代替プランに変更されたことを示します。 これは、再帰の深さ、データスキュー、トレースフラグ、またはビットカウントが原因で発生する可能性があります。|  
-|56-57|予約済み||  
+|56-57|予約されています。||  
 |58|Auto Stats|インデックス統計の自動更新が実行されたことを示します。|  
 |59|Lock:Deadlock Chain|デッドロックにつながる各イベントに対して生成されます。|  
 |60|Lock:Escalation|ページ ロックが TABLE ロックまたは HoBT ロックにエスカレートまたは変換された場合など、細かい単位のロックが大きな単位のロックに変換されたことを示します。|  
 |61|OLE DB Errors|OLE DB エラーが発生したことを示します。|  
-|62-66|予約済み||  
+|62-66|予約されています。||  
 |67|Execution Warnings|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントまたはストアド プロシージャの実行中に発生した警告を示します。|  
 |68|Showplan Text (Unencoded)|実行された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのプラン ツリーを表示します。|  
 |69|Sort Warnings|メモリに合わない並べ替え操作を示します。 インデックスの作成に関連する並べ替え操作は対象になりません。SELECT ステートメントで使用される ORDER BY 句など、クエリ内の並べ替え操作のみが対象になります。|  
@@ -127,9 +127,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 |96|Showplan Text|クエリ オプティマイザーの SQL ステートメントのクエリ プラン ツリーを表示します。 **TextData**列には、このイベントの Showplan が含まれていないことに注意してください。|  
 |97|Showplan All|実行された SQL ステートメントのコンパイル時の完全な詳細を含むクエリプランを表示します。 **TextData**列には、このイベントの Showplan が含まれていないことに注意してください。|  
 |98|Showplan Statistics Profile|実行された SQL ステートメントの実行時の完全な詳細を含むクエリプランを表示します。 **TextData**列には、このイベントの Showplan が含まれていないことに注意してください。|  
-|99|予約済み||  
+|99|予約されています。||  
 |100|RPC Output Parameter|各 RPC に対して、パラメーターの出力値を生成します。|  
-|101|予約済み||  
+|101|予約されています。||  
 |102|監査データベーススコープ GDR|データベースに対する権限の許可などのデータベース限定の操作時に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の任意のユーザーがステートメント権限の GRANT、DENY、REVOKE を実行するたびに発生します。|  
 |103|Audit Object GDR イベント|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の任意のユーザーがオブジェクト権限の GRANT、DENY、REVOKE を実行するたびに発生します。|  
 |104|Audit AddLogin イベント|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Sp_addlogin**と**sp_droplogin**について、ログインが追加または削除されたときに発生します。|  
@@ -172,15 +172,15 @@ sp_trace_setevent [ @traceid = ] trace_id
 |141|Broker:Message Classify|[!INCLUDE[ssSB](../../includes/sssb-md.md)] でメッセージのルーティングが決定されたときに発生します。|  
 |142|Broker:Transmission|トランスポート層でエラーが発生したことを示し [!INCLUDE[ssSB](../../includes/sssb-md.md)] ます。 エラー番号と状態の値で、エラーの原因を確認できます。|  
 |143|Broker: キューが無効です|キューに連続して5つのトランザクションロールバックがあったため、有害メッセージが検出されたことを示し [!INCLUDE[ssSB](../../includes/sssb-md.md)] ます。 イベントには、有害メッセージを含むキューのデータベース ID とキュー ID が含まれます。|  
-|144-145|予約済み||  
+|144-145|予約されています。||  
 |146|Showplan XML Statistics Profile|SQL ステートメントの実行時に発生します。 Showplan 操作を識別し、コンパイル時の完全なデータを表示します。 このイベントの**バイナリ**列には、エンコードされたプラン表示が含まれていることに注意してください。 トレースを開いて Showplan を表示するには、SQL Server プロファイラーを使用します。|  
 |148|Deadlock Graph|試行がデッドロックの一部であり、デッドロックの対象として選択されたために、ロックを取得しようとしたときに発生します。 デッドロックについての XML の説明が提供されます。|  
 |149|Broker: リモートメッセージの受信確認|[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってメッセージの受信確認が送信または受信されたときに発生します。|  
 |150|トレースファイルの終了|トレースファイルのロールオーバー中にトレースファイルが閉じたときに発生します。|  
-|151|予約済み||  
+|151|予約されています。||  
 |152|Audit Change Database Owner|ALTER AUTHORIZATION を使用してデータベースの所有者を変更し、権限をチェックするときに発生します。|  
 |153|監査スキーマオブジェクトの所有権の取得イベント|ALTER AUTHORIZATION を使用してオブジェクトに所有者を割り当て、アクセス許可がチェックされるときに発生します。|  
-|154|予約済み||  
+|154|予約されています。||  
 |155|FT: クロールを開始しました|フルテキストのクロール (カタログ作成) が開始したときに発生します。 クロール要求がワーカータスクによって選択されているかどうかを確認するには、を使用します。|  
 |156|FT:Crawl Stopped|フルテキストのクロール (カタログ作成) が停止したときに発生します。 クロールが正常に完了するか、致命的なエラーが発生すると、停止します。|  
 |157|FT:Crawl Aborted|フルテキストクロール中に例外が発生した場合に発生します。 通常、これによってフルテキストのクロールは停止します。|  
@@ -221,7 +221,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |194|OLEDB Provider Information|分散クエリが実行され、プロバイダー接続に対応する情報が収集されるときに発生します。|  
 |195|Mount Tape|テープ マウント要求を受け取ったときに発生します。|  
 |196|Assembly Load|CLR アセンブリの読み込み要求が発生したときに発生します。|  
-|197|予約済み||  
+|197|予約されています。||  
 |198|XQuery Static Type|XQuery 式が実行されるときに発生します。 このイベント クラスでは静的な XQuery 式が提供されます。|  
 |199|全: サブスクリプション|クエリの登録をサブスクライブできない場合に発生します。 **TextData**列には、イベントに関する情報が含まれています。|  
 |200|: パラメーターテーブル|アクティブなサブスクリプションに関する情報は、内部パラメーター テーブルに格納されます。 このイベント クラスは、パラメーター テーブルが作成または削除されたときに発生します。 通常これらのテーブルは、データベースを再起動したときに作成または削除されます。 **TextData**列には、イベントに関する情報が含まれています。|  
@@ -264,14 +264,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |20|**Severity**|例外の重大度レベル。|  
 |21|**EventSubClass**|イベント サブクラスの種類。 すべてのイベント クラスに対して、このデータ列が作成されるわけではありません。|  
 |22|**ObjectID**|システムによって割り当てられたオブジェクト ID。|  
-|23|**Success**|アクセス許可の使用が成功しました。監査に使用されます。<br /><br /> **1** = 成功**0** = 失敗|  
+|23|**成功**|アクセス許可の使用が成功しました。監査に使用されます。<br /><br /> **1** = 成功**0** = 失敗|  
 |24|**IndexID**|イベントの影響を受けるオブジェクトに付けられたインデックス用の ID。 オブジェクトのインデックス ID を調べるには、 **sysindexes** システム テーブルの **indid** 列を使用します。|  
 |25|**IntegerData**|トレースでキャプチャされたイベント クラスに依存する整数値。|  
 |26|**ServerName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トレースされているのインスタンスの名前。 *servername*または*servername\instancename*のいずれかになります。|  
 |27|**EventClass**|記録されるイベント クラスの種類。|  
 |28|**ObjectType**|テーブル、関数、ストアドプロシージャなどのオブジェクトの型。|  
 |29|**NestLevel**|このストアドプロシージャが実行されている入れ子レベルです。 「 [@ @NESTLEVEL &#40;transact-sql&#41;](../../t-sql/functions/nestlevel-transact-sql.md)」を参照してください。|  
-|30|**State**|サーバーの状態 (エラーが発生した場合)。|  
+|30|**状態**|サーバーの状態 (エラーが発生した場合)。|  
 |31|**エラー**|エラー番号。|  
 |32|**モード**|取得したロックのロックモード。 この列は、 **Lock: Released**イベントによって設定されません。|  
 |33|**扱え**|イベントで参照されているオブジェクトのハンドル。|  
@@ -338,7 +338,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|メモリ不足。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
 |16|関数は、このトレースに対して無効です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_trace_setevent**では、以前のバージョンので使用できる拡張ストアドプロシージャによって以前に実行された操作の多くが実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 次の代わりに**sp_trace_setevent**を使用します。  
   
 -   **xp_trace_addnewqueue**  
@@ -356,11 +356,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは ALTER TRACE 権限を持っている必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [fn_trace_getinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [SQL Server イベントクラスのリファレンス](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
+ [SQL Server イベント クラスの参照](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL トレース (SQL Trace)](../../relational-databases/sql-trace/sql-trace.md)  
   
   

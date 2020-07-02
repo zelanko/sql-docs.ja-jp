@@ -15,15 +15,15 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 32655955bc150a57a6f15ebccdcf30187d3128fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9d257f5b52c6dfea82868b69570f2655675bb7ca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820577"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720286"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)]シャードとして機能する単一のリモート Azure SQL Database またはデータベースのセットに対して、行方向のパーティション構成でステートメントを実行します。  
   
@@ -72,7 +72,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>アクセス許可  
  `ALTER ANY EXTERNAL DATA SOURCE` 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  `sp_execute_remote`パラメーターは、前の「構文」セクションで説明されているように、特定の順序で入力する必要があります。 パラメーターが順序どおりに入力されていない場合は、エラーメッセージが表示されます。  
   
  `sp_execute_remote`には、バッチと名前のスコープに関して、 [transact-sql&#41;の実行 &#40;](../../t-sql/language-elements/execute-transact-sql.md)と同じ動作があります。 Sp_execute_remote * \@ stmt*パラメーター内の transact-sql ステートメントまたはバッチは、sp_execute_remote ステートメントが実行されるまでコンパイルされません。  

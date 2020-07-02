@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c06f03af5ab9cc8d06b8d7d0f87208895c1fc33
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 761579b7b1c068fe241933533cf73bb41036d9d1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724571"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの既定の言語を変更します。  
   
@@ -50,14 +50,14 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_defaultlanguage**は ALTER LOGIN を呼び出します。この場合、追加のオプションがサポートされます。 他のログインの既定値の変更については、「 [ALTER login &#40;transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)」を参照してください。  
   
  SET LANGUAGE ステートメントを使用して、現在のセッションの言語を変更します。 @LANGUAGE現在の言語設定を表示するには、@ 関数を使用します。  
   
  ログインの既定の言語がサーバーから削除された場合、ログインはサーバーの既定の言語を取得します。 **sp_defaultlanguage**は、ユーザー定義のトランザクション内では実行できません。  
   
- サーバーにインストールされている言語に関する情報は、 **sys.syslanguages**カタログビューに表示されます。  
+ サーバーにインストールされている言語に関する情報は、 **sys.sys言語**カタログビューに表示されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  ALTER ANY LOGIN 権限が必要です。  
@@ -70,12 +70,12 @@ ALTER LOGIN Fathima WITH DEFAULT_LANGUAGE = Arabic;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [sys.syslanguages &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
+ [sys.sys言語 &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e5d3ad1a0caf0eb2fd835d04ed80e0a2a044983
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 448035852653bd40c7cdf441f2f4e04b3a35f554
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659319"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722822"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>GetCurrentCertificate メソッド (ServerSettings クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   現在のセキュリティ証明書を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,9 +35,9 @@ ms.locfileid: "73659319"
 object.GetCurrentCertificate(SHA)  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス上のサーバー設定を表す**serversettings**オブジェクト。  
+ のインスタンス上のサーバー設定を表す**serversettings**オブジェクト [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>パラメーター  
   
@@ -50,7 +50,7 @@ object.GetCurrentCertificate(SHA)
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45837533806f2294665abbb242627a39d041e6d6
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: a0945ffa8845c901662acb29c3ed04826870d0ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529800"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722596"
 ---
 # <a name="path-expressions---specifying-predicates"></a>パス式 - 述語の指定
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   トピック「 [XQuery のパス式](../xquery/path-expressions-xquery.md)」で説明したように、パス式の軸ステップには、次のコンポーネントが含まれています。  
   

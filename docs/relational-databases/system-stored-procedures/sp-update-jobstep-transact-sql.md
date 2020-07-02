@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa6a12a45a5c0609b4b717ccdf90af63ea53776b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 02697937d5a0402edbaf959ed52731010eab1ce6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723075"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   自動化された処理の実行に使用するジョブのステップに関する設定を変更します。  
   
@@ -79,7 +79,7 @@ sp_update_jobstep
   
 `[ @on_success_action = ] success_action`ステップが成功した場合に実行するアクション。*success_action*は**tinyint**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|[値]|説明 (アクション)|  
+|値|説明 (アクション)|  
 |-----------|----------------------------|  
 |**1**|正常に終了します。|  
 |**2**|失敗した状態で終了|  
@@ -90,7 +90,7 @@ sp_update_jobstep
   
 `[ @on_fail_action = ] fail_action`ステップが失敗した場合に実行するアクション。 *fail_action*は**tinyint**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|[値]|説明 (アクション)|  
+|値|説明 (アクション)|  
 |-----------|----------------------------|  
 |**1**|正常に終了します。|  
 |**2**|失敗した状態で終了|  
@@ -119,13 +119,13 @@ sp_update_jobstep
   
 `[ @flags = ] flags`動作を制御するオプション。 *フラグ*は**int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|出力ファイルを上書きします。|  
 |**2**|出力ファイルに追加|  
 |**4**|Transact-SQL ジョブ ステップの出力をステップ履歴に書き込む|  
 |**8**|テーブルにログを書き込む (既存の履歴を上書きする)|  
-|**まで**|ログをテーブルに書き込む (既存の履歴に追加する)|  
+|**16**|ログをテーブルに書き込む (既存の履歴に追加する)|  
   
 `[ @proxy_id = ] proxy_id`ジョブステップを実行するプロキシの ID 番号を指定します。 *proxy_id*の型は**int**で、既定値は NULL です。 *Proxy_id*が指定されておらず、 *proxy_name*が指定されておらず、 *user_name*が指定されていない場合、ジョブステップはエージェントのサービスアカウントとして実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -134,7 +134,7 @@ sp_update_jobstep
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_update_jobstep**は、 **msdb**データベースから実行する必要があります。  
   
  ジョブ ステップを更新すると、ジョブのバージョン番号が増えます。  
@@ -168,7 +168,7 @@ EXEC dbo.sp_update_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ジョブの表示または変更](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_delete_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   

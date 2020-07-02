@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0722ccd8c4f18fd16ed4abdb3630e80bc7d5de53
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9c4cef3b1a088f0ae0a085fd4769a8e252713df4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824780"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725392"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   既知のサブスクライバーごとに1行のレコードを含み、パブリッシャー側のローカルテーブルです。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
@@ -59,12 +59,12 @@ ms.locfileid: "82824780"
 |partition_id|**int**|サブスクリプションが属する事前計算済みのパーティションを識別します。|  
 |cleanedup_unsent_changes|**bit**|未送信の変更のメタデータがサブスクライバーでクリーンアップされたことを示します。|  
 |replica_version|**int**|サブスクリプションが所属するサブスクライバー用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンを識別します。次のいずれかの値になります。<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|supportability_mode|**int**|内部使用のみ。|  
-|application_name|**nvarchar(128)**|内部使用のみ。|  
-|subscriber_number|**int**|内部使用のみ。|  
+|supportability_mode|**int**|内部使用のみです。|  
+|application_name|**nvarchar(128)**|内部使用のみです。|  
+|subscriber_number|**int**|内部使用のみです。|  
 |last_makegeneration_datetime|**datetime**|Makegeneration プロセスがパブリッシャーに対して実行した最後の**日時**。 詳細については、「[レプリケーションマージエージェント](../../relational-databases/replication/agents/replication-merge-agent.md)」の-MakeGenerationInterval パラメーターを参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

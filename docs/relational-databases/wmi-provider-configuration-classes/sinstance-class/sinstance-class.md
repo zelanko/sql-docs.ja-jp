@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: ddda92fa-5bb9-45dd-b421-243b02db4caf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 51d68eda2ef201bdd1b829ac932e295400ff0dac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eaff9bea929843dbdca73ba65e5f30ab3c39b60e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659033"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725309"
 ---
 # <a name="sinstance-class"></a>SInstance クラス
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [Sinstance クラス](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)は、の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスを表します。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  [Sinstance クラス](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)は、のインスタンスを表し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
- [Sinstance クラス](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)は、の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに関連付けられたプロトコルおよびネットワークライブラリを管理するために使用できます。 また、セキュリティ証明書を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに対して指定することもできます。  
+ [Sinstance クラス](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)は、のインスタンスに関連付けられたプロトコルおよびネットワークライブラリを管理するために使用でき [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 また、セキュリティ証明書を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに対して指定することもできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

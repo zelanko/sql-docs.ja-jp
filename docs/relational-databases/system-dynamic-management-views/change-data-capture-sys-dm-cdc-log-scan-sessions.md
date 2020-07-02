@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55b69995dc6fb639acad84c561ce3530af991c6e
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: dd6f2d08b44a8e3a3b99dcd3fdc8484e2d0f5b04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872732"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720353"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>変更データキャプチャ-sys. dm_cdc_log_scan_sessions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベース内のログスキャンセッションごとに1行のデータを返します。 最後に返された行は、現在のセッションを表します。 このビューを使用すると、現在のログ スキャン セッションのステータス情報を取得できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが開始されてからのすべてのセッションの集計情報を取得することもできます。  
    
@@ -55,7 +55,7 @@ ms.locfileid: "82872732"
 |**empty_scan_count**|**int**|変更データキャプチャトランザクションが含まれていない連続したセッションの数。|  
 |**failed_sessions_count**|**int**|失敗したセッションの数。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この動的管理ビューの値は、のインスタンスが起動されるたびにリセットされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -77,7 +77,7 @@ WHERE session_id = (SELECT MAX(b.session_id) FROM sys.dm_cdc_log_scan_sessions A
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dm_cdc_errors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
   
   

@@ -13,15 +13,15 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0d1e6e4fa9c88fc67b15a076a6c96a742fd7fdc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c4f0ff3a5cc18845bc2fcc2bec682c6bd8e2db4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724657"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>internal_partitions (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   ディスクベーステーブルの列ストアインデックスの内部データを追跡する行セットごとに1行のデータを返します。 これらの行セットは、列ストアインデックスの内部にあり、削除された行、行グループのマッピング、およびデルタストアの行グループを追跡します。 各テーブルパーティションのデータを追跡します。各テーブルには、少なくとも1つのパーティションがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列ストアインデックスを再構築するたびに、行セットを再作成します。   
   
@@ -41,7 +41,7 @@ ms.locfileid: "72304812"
 |optimize_for_sequential_key|**bit**|1 = パーティションには、最後のページ挿入最適化が有効になっています。<br><br>0 = 既定値。 パーティションで最後のページ挿入の最適化が無効になっています。|
   
 ## <a name="permissions"></a>アクセス許可  
- `public` ロールのメンバーシップが必要です。  詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ `public` ロールのメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列ストアインデックスを作成または再構築するたびに、新しい列ストア内部インデックスを再作成します。  
@@ -59,7 +59,7 @@ on i.object_id = p.object_id
 WHERE p.object_id = OBJECT_ID ( '<table name' ) ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  

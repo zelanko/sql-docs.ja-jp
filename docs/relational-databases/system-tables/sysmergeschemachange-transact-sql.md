@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ae9ce16e-6ee9-4c7c-8210-a9bf2c7efdf0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5283de7327958f369e78670aefff2c46a480f253
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 362cdb0fac2a30f80a5c1cd1c9d441d81522a6c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824790"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725399"
 ---
 # <a name="sysmergeschemachange-transact-sql"></a>sysmergeschemachange (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   スナップショット エージェントによって生成された、パブリッシュされたアーティクルに関する情報を格納します。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82824790"
 |**schemastatus**|**tinyint**|アーティクルに対してスキーマ変更が保留されているかどうかを示します。次のいずれかの値を指定できます。<br /><br /> **0** = 非アクティブ。<br /><br /> **1** = アクティブ。<br /><br /> スキーマ変更が保留中の場合、この値は**1**に設定されます。|  
 |**schemasubtype**|**int**|スキーマ変更のサブタイプ。<br /><br /> **1** = addcolumn<br /><br /> **2** = dropcolumn<br /><br /> **3** = ALTERCOLUMN<br /><br /> **4** = addprimarykey<br /><br /> **5** = addunique<br /><br /> **6** = addreference<br /><br /> **7** = dropconstraint<br /><br /> **8** = adddefault<br /><br /> **9** = addcheck<br /><br /> **10** = DISABLETRIGGER<br /><br /> **11** = ENABLETRIGGER<br /><br /> **12** = DISABLETRIGGER<br /><br /> **13** = ENABLETRIGGER<br /><br /> **14** = ENABLECONSTRAINT<br /><br /> **15** = DISABLECONSTRAINT<br /><br /> **16** = ENABLECONSTRAINT<br /><br /> **17** = DISABLECONSTRAINT|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

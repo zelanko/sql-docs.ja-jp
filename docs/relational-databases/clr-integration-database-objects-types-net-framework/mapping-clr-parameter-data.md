@@ -26,63 +26,63 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 360a94229b107e9f24bb2a769157c75cdeb3c143
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 911b56023ea78ec75e605a39a39b705724101dee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719936"
 ---
 # <a name="mapping-clr-parameter-data"></a>CLR パラメーター データのマッピング
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  次の表は[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **SqlTypes**名前空間のの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]共通言語ランタイム (CLR) に相当するデータ型と、それらのネイティブ CLR に .NET Framework 相当するものを示しています。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  次の表は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SqlTypes 名前空間のの共通言語ランタイム (CLR) に相当するデータ型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と、それらのネイティブ CLR に .NET Framework 相当**System.Data.SqlTypes**するものを示して [!INCLUDE[msCoName](../../includes/msconame-md.md)] います。  
   
 ||||  
 |-|-|-|  
 |**SQL Server のデータ型**|型 (System.Data.SqlTypes または Microsoft.SqlServer.Types)|**CLR データ型 (.NET Framework)**|  
-|**bigint**|**SqlInt64**|**Int64、Null\<許容の int64>**|  
-|**[バイナリ]**|**SqlBytes、Sqlbytes**|**Byte []**|  
-|**bit**|**SqlBoolean**|**ブール値、\<null 許容のブール値>**|  
+|**bigint**|**SqlInt64**|**Int64、Nullable\<Int64>**|  
+|**[バイナリ]**|**SqlBytes、Sqlbytes**|**Byte[]**|  
+|**bit**|**SqlBoolean**|**ブール型、Null 値を許容\<Boolean>**|  
 |**char**|なし|なし|  
 |**cursor**|なし|なし|  
-|**date**|**SqlDateTime**|**DateTime、Nullable\<datetime>**|  
-|**datetime**|**SqlDateTime**|**DateTime、Nullable\<datetime>**|  
-|**datetime2**|None|**DateTime、Nullable\<datetime>**|  
-|**DATETIMEOFFSET**|**なし**|**DateTimeOffset、Null\<値を許容する datetimeoffset>**|  
-|**decimal**|**SqlDecimal**|**Decimal、Nullable\<decimal>**|  
-|**float**|**SqlDouble**|**Double、Null\<値を許容する double>**|  
-|**geography**|**SqlGeography**<br /><br /> **Sqlgeography**は、SQL Server と共にインストールされ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=52676)からダウンロードできる、SqlServer に定義されています。|None|  
-|**geometry**|**SqlGeometry**<br /><br /> **Sqlgeometry**は、SQL Server と共にインストールされ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=52676)からダウンロードできる、SqlServer で定義されています。|None|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> **Sqlhierarchyid**は、SQL Server と共にインストールされ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=52676)からダウンロードできる、SqlServer に定義されています。|None|  
-|**image**|なし|なし|  
-|**int**|**SqlInt32**|**Int32、Nullable\<int32>**|  
-|**money**|**SqlMoney**|**Decimal、Nullable\<decimal>**|  
+|**date**|**SqlDateTime**|**DateTime、Nullable\<DateTime>**|  
+|**datetime**|**SqlDateTime**|**DateTime、Nullable\<DateTime>**|  
+|**datetime2**|なし|**DateTime、Nullable\<DateTime>**|  
+|**DATETIMEOFFSET**|**なし**|**DateTimeOffset、Nullable\<DateTimeOffset>**|  
+|**decimal**|**SqlDecimal**|**Decimal、Nullable\<Decimal>**|  
+|**float**|**SqlDouble**|**Double、Nullable\<Double>**|  
+|**geography**|**SqlGeography**<br /><br /> **Sqlgeography**は Microsoft.SqlServer.Types.dll で定義されており、SQL Server と共にインストールされ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=52676)からダウンロードできます。|なし|  
+|**geometry**|**SqlGeometry**<br /><br /> **Sqlgeometry**は Microsoft.SqlServer.Types.dll で定義されています。これは SQL Server と共にインストールされ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=52676)からダウンロードできます。|なし|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> **Sqlhierarchyid**は Microsoft.SqlServer.Types.dll で定義されており、SQL Server と共にインストールされ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=52676)からダウンロードできます。|なし|  
+|**イメージ**|なし|なし|  
+|**int**|**SqlInt32**|**Int32、Nullable\<Int32>**|  
+|**money**|**SqlMoney**|**Decimal、Nullable\<Decimal>**|  
 |**nchar**|**SqlChars、SqlString**|**String, Char[]**|  
 |**ntext**|なし|なし|  
-|**numeric**|**SqlDecimal**|**Decimal、Nullable\<decimal>**|  
+|**numeric**|**SqlDecimal**|**Decimal、Nullable\<Decimal>**|  
 |**nvarchar**|**SqlChars、SqlString**<br /><br /> **Sqlchars**は、データの転送とアクセスに適しています。また、 **SQLString**は、文字列操作を実行する場合に適しています。|**String, Char[]**|  
-|**nvarchar (1)、nchar (1)**|**SqlChars、SqlString**|**Char、String、Char []、Null\<値を許容する char>**|  
-|**real**|**Sqlsingle** ( **sqlsingle**の範囲は**real**より大きい)|**単一の Null\<許容の単一>**|  
-|**rowversion**|None|**Byte []**|  
-|**smallint**|**SqlInt16**|**Int16、Nullable\<int16>**|  
-|**smallmoney**|**SqlMoney**|**Decimal、Nullable\<decimal>**|  
-|**sql_variant**|None|**Object**|  
+|**nvarchar (1)、nchar (1)**|**SqlChars、SqlString**|**Char、String、Char []、Nullable\<char>**|  
+|**real**|**Sqlsingle** ( **sqlsingle**の範囲は**real**より大きい)|**Single、Nullable\<Single>**|  
+|**rowversion**|なし|**Byte[]**|  
+|**smallint**|**SqlInt16**|**Int16、Nullable\<Int16>**|  
+|**smallmoney**|**SqlMoney**|**Decimal、Nullable\<Decimal>**|  
+|**sql_variant**|なし|**オブジェクト**|  
 |**テーブル**|なし|なし|  
 |**text**|なし|なし|  
-|**time**|None|**TimeSpan、Nullable\<timespan>**|  
+|**time**|なし|**TimeSpan、Nullable\<TimeSpan>**|  
 |**timestamp**|なし|なし|  
-|**tinyint**|**SqlByte**|**バイト、Null\<値を許容するバイト>**|  
-|**uniqueidentifier**|**SqlGuid**|**Guid、Null\<許容 guid>**|  
-|**User-defined type(UDT)**|None|同じアセンブリまたは依存アセンブリ内のユーザー定義型にバインドされている同じクラス|  
-|**varbinary**|**SqlBytes、Sqlbytes**|**Byte []**|  
-|**varbinary (1)、binary (1)**|**SqlBytes、Sqlbytes**|**byte、Byte []、Null\<値を許容するバイト>**|  
+|**tinyint**|**SqlByte**|**Byte、Nullable\<Byte>**|  
+|**uniqueidentifier**|**SqlGuid**|**Guid、Nullable\<Guid>**|  
+|**User-defined type(UDT)**|なし|同じアセンブリまたは依存アセンブリ内のユーザー定義型にバインドされている同じクラス|  
+|**varbinary**|**SqlBytes、Sqlbytes**|**Byte[]**|  
+|**varbinary (1)、binary (1)**|**SqlBytes、Sqlbytes**|**byte、Byte []、Nullable\<byte>**|  
 |**varchar**|なし|なし|  
-|**xml**|**SqlXml**|None|  
+|**xml**|**SqlXml**|なし|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>out パラメーターによるデータ型の自動変換  
- Clr メソッドは、入力パラメーターがシステムの clr データ型である場合に、入力パラメーターを**out**修飾子 (microsoft Visual C#) または** \<out () > ByRef** (microsoft Visual Basic) でマークすることによって、呼び出し元のコードまたはプログラムに情報を返すことができ**ます。 SqlTypes**名前空間、および呼び出し元のプログラムは、対応[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するデータ型を入力パラメーターとして指定します。 CLR メソッドがデータ型を返すと、型変換が自動的に行われます。  
+ 入力パラメーターが**SqlTypes**名前空間の clr データ型で、呼び出し元のプログラムが入力パラメーターとして対応するデータ型を指定している場合、clr メソッドは呼び出し**元のコード** ** \<Out()> またはプログラム**に情報を返すことができます。これに Visual Basic より、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clr メソッドがデータ型を返すと、型変換が自動的に行われます。  
   
- たとえば、次の clr ストアドプロシージャには、 **out** (C#) または** \<out () > ByRef** (Visual Basic) でマークされている**SqlInt32** CLR データ型の入力パラメーターがあります。  
+ たとえば、次の CLR ストアドプロシージャには、 **out** (C#) または** \<Out()> ByRef** (Visual Basic) でマークされた**SqlInt32** CLR データ型の入力パラメーターがあります。  
   
 ```csharp  
 [Microsoft.SqlServer.Server.SqlProcedure]  
@@ -97,7 +97,7 @@ Public Shared Sub PriceSum( \<Out()> ByRef value As SqlInt32)
 End Sub  
 ```  
   
- アセンブリがデータベースに構築されて作成されると、次の Transact-sql を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用してストアドプロシージャが作成されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。これは、出力パラメーターとして**int**のデータ型を指定します。  
+ アセンブリがデータベースに構築されて作成されると、次の Transact-sql を使用してストアドプロシージャが作成され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 出力パラメーターとして**int**のデータ型を指定します。  
   
 ```  
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
@@ -111,10 +111,10 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR データ型 (SQL Server)**|**SQL Server のデータ型**|  
-|**10 進数**|smallmoney|  
+|**Decimal**|smallmoney|  
 |**SqlMoney**|smallmoney|  
-|**10 進数**|money|  
-|**/**|smalldatetime|  
+|**Decimal**|money|  
+|**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   
 ## <a name="change-history"></a>変更履歴  
@@ -123,7 +123,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |---------------------|  
 |マッピングテーブルに**Sqlgeography**、 **sqlgeography**、および**sqlgeography**型を追加しました。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [.NET Framework での SQL Server データ型](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfca5caa10e36196f38817c828cbd4d062763107
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e80d631e4470e04d0ab5ab7edf6883350335586e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824917"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724642"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   データベース メール システムから返される、Windows または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメッセージごとに 1 行のデータを格納します。 (このコンテキスト内のメッセージは、電子メールメッセージではなく、エラーメッセージなどのメッセージを参照します)。データベースメール構成ウィザードの [**システムパラメーターの構成**] ダイアログボックスまたは[sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)ストアドプロシージャを使用して、**ログレベル**のパラメーターを構成し、返されるメッセージを決定します。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82824917"
 |**Log_id**|**int**|ログ内のアイテムの識別子。|  
 |**event_type**|**varchar (11)**|ログに挿入された通知の種類。 指定できる値は、エラー、警告、情報メッセージ、成功メッセージ、および追加の内部メッセージです。|  
 |**log_date**|**datetime**|ログ エントリが作成された日時。|  
-|**記述**|**nvarchar(max)**|記録されているメッセージのテキスト。|  
+|**description**|**nvarchar(max)**|記録されているメッセージのテキスト。|  
 |**process_id**|**int**|データベースメール外部プログラムのプロセス id。 通常、データベース メール外部プログラムが起動するたびに変更されます。|  
 |**mailitem_id**|**int**|メールキュー内のメールアイテムの識別子。 メッセージが特定の電子メール アイテムに関係していない場合は NULL になります。|  
 |**account_id**|**int**|イベントに関連付けられているアカウントの**account_id** 。 メッセージが特定のアカウントに関連付けられていない場合は NULL です。|  
@@ -49,7 +49,7 @@ ms.locfileid: "82824917"
 ## <a name="permissions"></a>アクセス許可  
  このビューにアクセスするには、 **sysadmin**固定サーバーロールまたは**databasemailuserrole**データベースロールのメンバーである必要があります。 **Sysadmin**ロールのメンバーではない**databasemailuserrole**のメンバーは、自分が送信した電子メールのイベントのみを表示できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sysmail_faileditems &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
  [データベース メール外部プログラム](../../relational-databases/database-mail/database-mail-external-program.md)  
   

@@ -19,15 +19,15 @@ ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e908d0bfb70e60330ce47377a8537ebe25f80f09
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6f465a27aeac13a8c0a0e810d52aacccc6022133
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827466"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722972"
 ---
 # <a name="sp_xp_cmdshell_proxy_account-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **Xp_cmdshell**のプロキシ資格情報を作成します。  
   
@@ -56,7 +56,7 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  プロキシの資格情報は **# #xp_cmdshell_proxy_account # #** と呼ばれます。  
   
  NULL オプションを使用して実行すると、 **sp_xp_cmdshell_proxy_account**によってプロキシ資格情報が削除されます。  
@@ -74,7 +74,7 @@ EXEC sp_xp_cmdshell_proxy_account 'ADVWKS\Max04', 'ds35efg##65';
 GO  
 ```  
   
-### <a name="b-dropping-the-proxy-credential"></a>B. プロキシ資格情報を削除する  
+### <a name="b-dropping-the-proxy-credential"></a>B: プロキシ資格情報を削除する  
  次の例では、資格情報ストアからプロキシ資格情報を削除します。  
   
 ```  
@@ -82,7 +82,7 @@ EXEC sp_xp_cmdshell_proxy_account NULL;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xp_cmdshell &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
  [Transact-sql&#41;&#40;の資格情報の作成](../../t-sql/statements/create-credential-transact-sql.md)   
  [&#40;Transact-sql&#41;の資格情報](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   

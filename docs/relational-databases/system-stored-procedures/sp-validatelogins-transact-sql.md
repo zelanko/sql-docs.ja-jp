@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd29100f8f7c54906b8aeafa98a7cf67f526db8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 149831d9926161f697c69a893c00784230480940
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021054"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723025"
 ---
 # <a name="sp_validatelogins-transact-sql"></a>sp_validatelogins (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  プリンシパルに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]マップされているが windows 環境に存在しなくなった windows ユーザーおよびグループに関する情報を報告します。  
+  プリンシパルにマップされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が windows 環境に存在しなくなった windows ユーザーおよびグループに関する情報を報告します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,14 +57,14 @@ sp_validatelogins
  **Sysadmin**または**securityadmin**固定サーバーロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、存在しなくなってものインスタンスへの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセスが許可されている Windows ユーザーおよびグループを表示します。  
+ 次の例では、存在しなくなってものインスタンスへのアクセスが許可されている Windows ユーザーおよびグループを表示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ```  
 EXEC sp_validatelogins;  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ユーザー &#40;Transact-sql&#41;を削除します。](../../t-sql/statements/drop-user-transact-sql.md)   

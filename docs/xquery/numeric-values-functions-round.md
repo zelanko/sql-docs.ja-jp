@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53686410ff6dc36af5cc50a0210e33e9a1fb6ad1
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 7433ab9f3bd6bcadda324db1a5907f4d83040575
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720006"
 ---
 # <a name="numeric-values-functions---round"></a>数値関数 - round
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   引数に最も近く、小数部分を持たない数値を返します。 そのような数値が複数ある場合は、正の無限大に最も近いものが返されます。 次に例を示します。  
   
@@ -54,7 +54,7 @@ fn:round ( $arg as numeric?) as numeric?
   
  その他の型のデータが入力されると、静的エラーが生成されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
  **Round ()** xquery 関数には、[天井関数 (xquery)](../xquery/numeric-values-functions-ceiling.md)の working サンプルを使用できます。 クエリの**切り上げ ()** 関数を**round ()** 関数に置き換えるだけで済みます。  
@@ -66,7 +66,7 @@ fn:round ( $arg as numeric?) as numeric?
   
 -   -0.5 e0 から-0e0 までの xs: double および xs: float 値の**round ()** 関数は、-0e0 ではなく0e0 にマップされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [floor 関数 &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
  [シーリング関数 &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)  
   

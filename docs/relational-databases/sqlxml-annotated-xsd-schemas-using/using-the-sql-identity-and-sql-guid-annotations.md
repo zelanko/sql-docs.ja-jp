@@ -25,16 +25,16 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f581c1a5c0d925d48df5a16d95cdb141e2d48f83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2d1d8c72851c945f178bb9e206ad536a23f24891
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388103"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724765"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>sql:identity 注釈と sql:guid 注釈の使用
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース列にマップされている任意のノードの XSD スキーマで、 **sql: identity**注釈と**sql: guid**注釈を指定できます。 アップデートグラム形式では**updg: id**属性と**updg: guid**属性がサポートされていますが、DiffGram 形式ではサポートされていません。 **Updg: identity**属性は、id 型の列を更新するときの動作を定義します。 **Updg: guid**属性では、から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] guid 値を取得し、アップデートグラムで使用できます。 詳細および作業サンプルについては、「 [XML アップデートグラムを使用したデータの挿入 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)」を参照してください。  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  のデータベース列にマップされている任意のノードの XSD スキーマで、 **sql: identity**注釈と**sql: guid**注釈を指定でき [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 アップデートグラム形式では**updg: id**属性と**updg: guid**属性がサポートされていますが、DiffGram 形式ではサポートされていません。 **Updg: identity**属性は、id 型の列を更新するときの動作を定義します。 **Updg: guid**属性では、から guid 値を取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] し、アップデートグラムで使用できます。 詳細および作業サンプルについては、「 [XML アップデートグラムを使用したデータの挿入 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)」を参照してください。  
   
  **Sql: identity**注釈と**sql: guid**注釈によって、この機能が diffgram に拡張されます。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "81388103"
  **Sql: identity**注釈と**sql: guid**注釈は、複合コンテンツ要素で定義できます。  
   
 ## <a name="sqlidentity-annotation"></a>sql:identity 注釈  
- ID 型のデータベース列にマップされている任意のノードの XSD スキーマで、 **sql: identity**注釈を指定できます。 この注釈に指定された値は、ID 型列の更新方法を定義します (アップデートグラムで提供されている値を使用して列を変更するか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、値を無視することによって、この列に対して生成された値が使用されます)。  
+ ID 型のデータベース列にマップされている任意のノードの XSD スキーマで、 **sql: identity**注釈を指定できます。 この注釈に指定された値は、ID 型列の更新方法を定義します (アップデートグラムで提供されている値を使用して列を変更するか、値を無視することによって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列に対して生成された値が使用されます)。  
   
  **Sql: identity**注釈には、次の2つの値を割り当てることができます。  
   
@@ -64,6 +64,6 @@ ms.locfileid: "81388103"
  更新操作で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で生成される GUID を列に使用することを指定します。  
   
  useValue  
- アップデートグラムで提供される値を列に使用することを指定します。 これは、既定値です。  
+ アップデートグラムで提供される値を列に使用することを指定します。 これが既定値です。  
   
   

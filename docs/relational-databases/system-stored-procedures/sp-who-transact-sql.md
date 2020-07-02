@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7c949e62261e710854aefda9b83a7ca20c222b78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b46db697c7f8d6a7f402d98093323f47ece47d69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78866482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722947"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]インスタンス内の現在のユーザー、セッション、およびプロセスに関する情報を提供します。 情報をフィルター処理して、アイドル状態ではないプロセス、特定のユーザーに属するプロセス、または特定のセッションに属するプロセスのみを返すことができます。  
+  のインスタンス内の現在のユーザー、セッション、およびプロセスに関する情報を提供 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] します。 情報をフィルター処理して、アイドル状態ではないプロセス、特定のユーザーに属するプロセス、または特定のセッションに属するプロセスのみを返すことができます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  *login*は、特定のログインに属するプロセスを識別する**sysname**です。  
   
- *セッション id*は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに属するセッション識別番号です。 *セッション ID*は**smallint**です。  
+ *セッション id*は、インスタンスに属するセッション識別番号です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *セッション ID*は**smallint**です。  
   
  **ACTIVE**は、ユーザーから次のコマンドを待機しているセッションを除外します。  
   
@@ -64,10 +64,10 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |**hostname**|**nchar(128)**|各プロセスのホスト名またはコンピューター名。|  
 |**blk**|**char (5)**|ブロック中のプロセスが存在する場合は、そのプロセスのセッション ID。 存在しない場合は、この列は 0 になります。<br /><br /> 指定したセッション ID に関連付けられているトランザクションが、孤立した分散トランザクションによってブロックされている場合、この列はブロックしている孤立トランザクションに対して '-2 ' を返します。|  
 |**dbname**|**nchar(128)**|プロセスによって使用されるデータベース。|  
-|**プロンプト**|**nchar(16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]プロセスに[!INCLUDE[tsql](../../includes/tsql-md.md)]対して実行[!INCLUDE[ssDE](../../includes/ssde-md.md)]されるコマンド (ステートメント、内部プロセスなど)。 SQL Server 2019 では、データ型が**nchar (26)** に変更されました。|  
+|**cmd**|**nchar(16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] プロセスに対して実行されるコマンド (ステートメント、内部プロセスなど)。 SQL Server 2019 では、データ型が**nchar (26)** に変更されました。|  
 |**request_id**|**int**|特定のセッションで実行されている要求の ID。|  
   
- 並列処理の場合は、特定のセッション ID に対してサブスレッドが作成されます。 メイン スレッドは `spid = <xxx>` および `ecid =0` のように示されます。 他のサブスレッドは同じ`spid = <xxx>`ですが、 **d** > 0 になります。  
+ 並列処理の場合は、特定のセッション ID に対してサブスレッドが作成されます。 メイン スレッドは `spid = <xxx>` および `ecid =0` のように示されます。 他のサブスレッドは同じです `spid = <xxx>` が、 **d** > 0 になります。  
   
 ## <a name="remarks"></a>Remarks  
  排他ロックが設定されている可能性のあるブロックプロセスは、別のプロセスが必要とするリソースを保持しているプロセスです。  
@@ -82,7 +82,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-listing-all-current-processes"></a>A. 現在のすべてのプロセスを一覧表示する  
- 次の例で`sp_who`は、パラメーターを指定せずにを使用して、現在のすべてのユーザーを報告します。  
+ 次の例では、 `sp_who` パラメーターを指定せずにを使用して、現在のすべてのユーザーを報告します。  
   
 ```  
 USE master;  
@@ -91,7 +91,7 @@ EXEC sp_who;
 GO  
 ```  
   
-### <a name="b-listing-a-specific-users-process"></a>B. 特定のユーザーのプロセスを一覧表示する  
+### <a name="b-listing-a-specific-users-process"></a>B: 特定のユーザーのプロセスを一覧表示する  
  次の例では、ログイン名を使用して、現在のユーザーに関する情報を表示します。  
   
 ```  
@@ -101,7 +101,7 @@ EXEC sp_who 'janetl';
 GO  
 ```  
   
-### <a name="c-displaying-all-active-processes"></a>C. すべてのアクティブなプロセスを表示しています  
+### <a name="c-displaying-all-active-processes"></a>C: すべてのアクティブなプロセスを表示しています  
   
 ```  
 USE master;  
@@ -110,7 +110,7 @@ EXEC sp_who 'active';
 GO  
 ```  
   
-### <a name="d-displaying-a-specific-process-identified-by-a-session-id"></a>D. セッション ID で識別される特定のプロセスの表示  
+### <a name="d-displaying-a-specific-process-identified-by-a-session-id"></a>D: セッション ID で識別される特定のプロセスの表示  
   
 ```  
 USE master;  
@@ -119,9 +119,9 @@ EXEC sp_who '10' --specifies the process_id;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_lock &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [Transact-sql&#41;&#40;の SQL-DMO](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.sysプロセス &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

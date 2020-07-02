@@ -24,15 +24,15 @@ ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae59e0bdb005d296341970f4582100b15a0dfdf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd54f05b336284f08892022537641a1e1af99712
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307723"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719833"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>データ ソースへの接続 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   アプリケーションは、環境ハンドルと接続ハンドルを割り当て、任意の接続属性を設定してから、データ ソースまたはドライバーに接続します。 接続には、次の 3 つの関数を使用できます。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "81307723"
   
 -   ODBC データ ソースを使用せずに接続する場合  
   
- **SQLDriverConnect**接続文字列には、ODBC ドライバーによってサポートされるすべての接続情報を指定する一連のキーワードと値のペアが含まれています。 各ドライバーでは、ドライバーでサポートされるすべての接続情報を表すドライバー固有のキーワード以外に、標準の ODBC キーワード (DSN、FILEDSN, DRIVER、UID、PWD、および SAVEFILE) をサポートします。 **SQLDriverConnect**は、データソースを使用せずに接続するために使用できます。 たとえば、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対して "DSN レス" 接続を作成するように設計されたアプリケーションは、ログイン ID、パスワード、ネットワークライブラリ、接続先のサーバー名、および使用する既定のデータベースを定義する接続文字列を使用して**SQLDriverConnect**を呼び出すことができます。  
+ **SQLDriverConnect**接続文字列には、ODBC ドライバーによってサポートされるすべての接続情報を指定する一連のキーワードと値のペアが含まれています。 各ドライバーでは、ドライバーでサポートされるすべての接続情報を表すドライバー固有のキーワード以外に、標準の ODBC キーワード (DSN、FILEDSN, DRIVER、UID、PWD、および SAVEFILE) をサポートします。 **SQLDriverConnect**は、データソースを使用せずに接続するために使用できます。 たとえば、のインスタンスに対して "DSN レス" 接続を作成するように設計されたアプリケーションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン ID、パスワード、ネットワークライブラリ、接続先のサーバー名、および使用する既定のデータベースを定義する接続文字列を使用して**SQLDriverConnect**を呼び出すことができます。  
   
  **SQLDriverConnect**を使用する場合、必要な接続情報をユーザーに確認するには、次の2つのオプションがあります。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "81307723"
   
  **SQLBrowseConnect**が成功した接続を完了すると、 **SQLDriverConnect**への後続の呼び出しで使用できる接続文字列が返されます。  
   
- Native Client ODBC ドライバーは、 **SQLConnect**、SQLDriverConnect、または**SQLBrowseConnect**が正常に実行された場合、常に SQL_SUCCESS_WITH_INFO を返します。 **SQLDriverConnect** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO 取得した後に ODBC アプリケーションが**SQLGetDiagRec**を呼び出すと、次のメッセージが表示されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、 **SQLConnect**、 **SQLDriverConnect**、または**SQLBrowseConnect**が正常に実行された場合、常に SQL_SUCCESS_WITH_INFO を返します。 SQL_SUCCESS_WITH_INFO 取得した後に ODBC アプリケーションが**SQLGetDiagRec**を呼び出すと、次のメッセージが表示されます。  
   
  5701  
  このメッセージは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、ユーザーのコンテキストをデータ ソースで定義されている既定のデータベースに登録したことを示します。または、データ ソースに既定のデータベースが定義されていない場合は、接続で使用したログイン ID に対して定義されている既定のデータベースに登録したことを示します。  
@@ -100,7 +100,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
        Changed language setting to 'us_english'."  
 ```  
   
- 5701 と 5703 のメッセージは、情報提供だけを目的としているので無視できます。 ただし、SQL_SUCCESS_WITH_INFO リターン コードでは 5701 や 5703 以外のメッセージも返されることがあるので、そのようなリターン コードは無視しないでください。 たとえば、ドライバーがの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを実行しているサーバーに、古いカタログストアドプロシージャを使用して接続している場合、SQL_SUCCESS_WITH_INFO 後に**SQLGetDiagRec**によって返されたエラーの1つは次のようになります。  
+ 5701 と 5703 のメッセージは、情報提供だけを目的としているので無視できます。 ただし、SQL_SUCCESS_WITH_INFO リターン コードでは 5701 や 5703 以外のメッセージも返されることがあるので、そのようなリターン コードは無視しないでください。 たとえば、ドライバーがのインスタンスを実行しているサーバーに、古いカタログストアドプロシージャを使用して接続している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO 後に**SQLGetDiagRec**によって返されたエラーの1つは次のようになります。  
   
 ```  
 SqlState:   01000  
@@ -112,9 +112,9 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- 接続用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアプリケーションのエラー処理関数は、SQL_NO_DATA を返すまで**SQLGetDiagRec**を呼び出す必要があります。 次に、 *pfNative*コードが5701または5703のメッセージ以外のすべてのメッセージに対して動作します。  
+ 接続用のアプリケーションのエラー処理関数は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_NO_DATA を返すまで**SQLGetDiagRec**を呼び出す必要があります。 次に、 *pfNative*コードが5701または5703のメッセージ以外のすべてのメッセージに対して動作します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC&#41;&#40;SQL Server との通信](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   
