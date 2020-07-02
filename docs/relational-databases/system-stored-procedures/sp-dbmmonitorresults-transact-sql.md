@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc35a4c163642f711810f49a816e6c553855b6d9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a26ca71a9db5d85f79787f19563e87ee7e49b78d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826155"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760134"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   データベース ミラーリング監視履歴が格納されている状態テーブルから、監視対象データベースの状態行を返します。事前に、このプロシージャで最新の状態を取得するかどうかを選択できます。  
   
@@ -76,7 +76,7 @@ sp_dbmmonitorresults database_name
  1 = 結果を計算する前に**sp_dbmmonitorupdate**を呼び出すことによって、データベースの状態を更新します。 ただし、状態テーブルが過去15秒以内に更新された場合、またはユーザーが**sysadmin**固定サーバーロールのメンバーでない場合、 **sp_dbmmonitorresults**は状態を更新せずに実行します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
  指定されたデータベースについて、要求された履歴の状態の行数を返します。 各行には、次の情報が含まれています。  
@@ -108,7 +108,7 @@ sp_dbmmonitorresults database_name
 > [!NOTE]  
 >  **Sp_dbmmonitorupdate**を初めて実行すると、 **dbm_monitor**の固定データベースロールが**msdb**データベースに作成されます。 **Sysadmin**固定サーバーロールのメンバーは、任意のユーザーを**dbm_monitor**固定データベースロールに追加できます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、データベースの状態を更新せずに、前の2時間に記録された行を返します。  
   
 ```  
@@ -116,7 +116,7 @@ USE msdb;
 EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitoraddmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   

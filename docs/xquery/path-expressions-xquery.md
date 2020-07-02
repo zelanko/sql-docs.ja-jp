@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e4c87a0695c57461f444c8be4318bcd06cfdefe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d1eccee8a5acfbb810ed7636f5d073c2644f0342
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388065"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759488"
 ---
 # <a name="path-expressions-xquery"></a>パス式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery パス式は、ドキュメント内の要素、属性、テキストノードなどのノードを検索します。 パス式の結果は常に、結果シーケンス内でノードが重複することなく、ドキュメント順で生成されます。 パスを指定する場合は、省略形または省略構文を使用できます。 以下の説明では、主に省略しない構文を取り上げます。 省略された構文については、このトピックの後半で説明します。  
   
@@ -34,17 +34,17 @@ ms.locfileid: "81388065"
   
  パス式には、相対パスまたは絶対パスを指定できます。 これらの両方の説明を次に示します。  
   
--   相対パス式は、1つまたは2つのスラッシュ記号 (/または//) で区切られた1つ以上のステップで構成されます。 たとえば、 `child::Features`は、コンテキストノードの子ノードのみ`Child`を参照する相対パス式です。 これは現在処理中のノードです。 式は、コンテキスト\<ノードの子要素ノード> の機能を取得します。  
+-   相対パス式は、1つまたは2つのスラッシュ記号 (/または//) で区切られた1つ以上のステップで構成されます。 たとえば、 `child::Features` は、 `Child` コンテキストノードの子ノードのみを参照する相対パス式です。 これは現在処理中のノードです。 式は、 \<Features> コンテキストノードの子要素ノードを取得します。  
   
--   絶対パス式は、1つまたは2つのスラッシュ記号 (/または//) で始まり、その後に省略可能な相対パスが続きます。 たとえば、式 `/child::ProductDescription` の先頭のスラッシュ記号は、この式が絶対パス式であることを示しています。 式の先頭のスラッシュ記号は、コンテキストノードのドキュメントルートノードを返します。そのため、式は、ドキュメント\<ルートのすべての productdescription> 要素ノードの子を返します。  
+-   絶対パス式は、1つまたは2つのスラッシュ記号 (/または//) で始まり、その後に省略可能な相対パスが続きます。 たとえば、式 `/child::ProductDescription` の先頭のスラッシュ記号は、この式が絶対パス式であることを示しています。 式の先頭のスラッシュ記号は、コンテキストノードのドキュメントルートノードを返します。そのため、式は、 \<ProductDescription> ドキュメントルートの子要素ノードをすべて返します。  
   
      絶対パスが1つのスラッシュ記号で始まる場合は、相対パスの後に指定することもできます。 スラッシュ記号を1つだけ指定した場合、式はコンテキストノードのルートノードを返します。 XML データ型の場合、これはドキュメント ノードになります。  
   
- パス式は、通常、ステップで構成されます。 たとえば、絶対パス式`/child::ProductDescription/child::Summary`には、スラッシュ記号で区切られた2つのステップが含まれています。  
+ パス式は、通常、ステップで構成されます。 たとえば、絶対パス式には、 `/child::ProductDescription/child::Summary` スラッシュ記号で区切られた2つのステップが含まれています。  
   
--   最初のステップでは\<、ドキュメントルートの productdescription> 要素ノードの子を取得します。  
+-   最初のステップでは、 \<ProductDescription> ドキュメントルートの子要素ノードを取得します。  
   
--   2番目のステップ\<では、取得\<した productdescription> 要素ノードの概要> 要素ノードの子を取得します。このノードは、コンテキストノードになります。  
+-   2番目のステップでは、取得した \<Summary> 各要素ノードの子要素ノードが取得され、そのノードが \<ProductDescription> コンテキストノードになります。  
   
  パス式のステップは、軸ステップまたは一般的なステップにすることができます。  
   
@@ -62,11 +62,11 @@ ms.locfileid: "81388065"
   
  次の例では、パス式で**軸手順**を使用します。  
   
--   絶対パス式`/child::ProductDescription`では、1つのステップだけが含まれます。 これは、軸 (`child`) とノード テスト (`ProductDescription`) を指定しています。  
+-   絶対パス式では、 `/child::ProductDescription` 1 つのステップだけが含まれます。 これは、軸 (`child`) とノード テスト (`ProductDescription`) を指定しています。  
   
 -   相対パス式 `child::ProductDescription/child::Features` には、1 つのスラッシュ記号で区切られた 2 つのステップがあります。 どちらの手順でも、子軸を指定します。 ProductDescription と Features はノードテストです。  
   
--   相対パス式`child::root/child::Location[attribute::LocationID=10]`には、スラッシュ記号で区切られた2つのステップが含まれています。 最初のステップでは、軸`child`() とノードテスト (`root`) を指定します。 2 番目のステップは、軸ステップの 3 種類のコンポーネントをすべて指定しています。つまり、軸 (child)、ノード テスト (`Location`)、および述語 (`[attribute::LocationID=10]`) です。  
+-   相対パス式には、 `child::root/child::Location[attribute::LocationID=10]` スラッシュ記号で区切られた2つのステップが含まれています。 最初のステップでは、軸 ( `child` ) とノードテスト () を指定し `root` ます。 2 番目のステップは、軸ステップの 3 種類のコンポーネントをすべて指定しています。つまり、軸 (child)、ノード テスト (`Location`)、および述語 (`[attribute::LocationID=10]`) です。  
   
  軸ステップのコンポーネントの詳細については、「[パス式のステップでの軸の指定](../xquery/path-expressions-specifying-axis.md)」、「[パス式のステップでのノードテストの指定](../xquery/path-expressions-specifying-node-test.md)」、および「[パス式のステップで述語を指定する](../xquery/path-expressions-specifying-predicates.md)」を参照してください。  
   

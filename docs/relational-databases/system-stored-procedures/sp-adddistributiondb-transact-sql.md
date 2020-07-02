@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13ba20770fd97d0db193ab492ae0958cf4c7ad35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758038"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   新しいディストリビューション データベースを作成し、ディストリビューター スキーマをインストールします。 ディストリビューションデータベースには、レプリケーションで使用されるプロシージャ、スキーマ、およびメタデータが格納されます。 このストアドプロシージャは、ディストリビューションデータベースを作成するために、ディストリビューター側で master データベースに対して実行されます。また、レプリケーションディストリビューションを有効にするために必要なテーブルとストアドプロシージャをインストールします。  
   
@@ -55,17 +55,17 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="arguments"></a>引数  
 `[ @database = ] database'`作成するディストリビューションデータベースの名前を指定します。 *データベースのデータ*型は**sysname**で、既定値はありません。 指定したデータベースが既に存在し、既にディストリビューションデータベースとしてマークされていない場合は、ディストリビューションを有効にするために必要なオブジェクトがインストールされ、データベースがディストリビューションデータベースとしてマークされます。 指定したデータベースが、既にディストリビューション データベースとして有効な場合は、エラーが返されます。  
   
-`[ @data_folder = ] 'data_folder'_`ディストリビューションデータベースのデータファイルを格納するために使用するディレクトリの名前を指定します。 *data_folder*は**nvarchar (255)**,、既定値は NULL です。 NULL の場合、のインスタンスのデータディレクトリが[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用されます。たとえば`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`、のようになります。  
+`[ @data_folder = ] 'data_folder'_`ディストリビューションデータベースのデータファイルを格納するために使用するディレクトリの名前を指定します。 *data_folder*は**nvarchar (255)**,、既定値は NULL です。 NULL の場合、のインスタンスのデータディレクトリ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用されます。たとえば、のように `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` なります。  
   
 `[ @data_file = ] 'data_file'`データベースファイルの名前を指定します。 *data_file*は**nvarchar (255)**,、既定値は**データベース**です。 NULL の場合、ストアドプロシージャはデータベース名を使用してファイル名を構築します。  
   
 `[ @data_file_size = ] data_file_size`初期データファイルのサイズをメガバイト (MB) 単位で示します。 *data_file_size i*s **int**,、既定値は 5 mb です。  
   
-`[ @log_folder = ] 'log_folder'`データベースログファイルのディレクトリの名前を指定します。 *log_folder*は**nvarchar (255)**,、既定値は NULL です。 NULL の場合、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのデータディレクトリが使用されます (たとえば`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`、)。  
+`[ @log_folder = ] 'log_folder'`データベースログファイルのディレクトリの名前を指定します。 *log_folder*は**nvarchar (255)**,、既定値は NULL です。 NULL の場合、のインスタンスのデータディレクトリ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用されます (たとえば、 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` )。  
   
 `[ @log_file = ] 'log_file'`ログファイルの名前を指定します。 *log_file*は**nvarchar (255)**,、既定値は NULL です。 NULL の場合、ストアドプロシージャはデータベース名を使用してファイル名を構築します。  
   
-`[ @log_file_size = ] log_file_size`ログファイルの初期サイズをメガバイト (MB) 単位で示します。 *log_file_size*は**int**,、既定値は 0 MB,、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]許容される最小のログファイルサイズを使用してファイルサイズが作成されることを意味します。  
+`[ @log_file_size = ] log_file_size`ログファイルの初期サイズをメガバイト (MB) 単位で示します。 *log_file_size*は**int**,、既定値は 0 MB,、で許容される最小のログファイルサイズを使用してファイルサイズが作成されることを意味し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 `[ @min_distretention = ] min_distretention`トランザクションがディストリビューションデータベースから削除されるまでの最小保有期間を時間単位で示します。 *min_distretention*は**int**,、既定値は0時間です。  
   
@@ -73,7 +73,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @history_retention = ] history_retention`履歴を保持する時間数を指定します。 *history_retention*は**int**,、既定値は48時間です。  
   
-`[ @security_mode = ] security_mode`ディストリビューターに接続するときに使用するセキュリティモードを示します。 *security_mode*は**int**,、既定値は1です。 **0**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。**1** Windows 統合認証を指定します。  
+`[ @security_mode = ] security_mode`ディストリビューターに接続するときに使用するセキュリティモードを示します。 *security_mode*は**int**,、既定値は1です。 **0**は認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。**1** Windows 統合認証を指定します。  
   
 `[ @login = ] 'login'`ディストリビューションデータベースを作成するためにディストリビューターに接続するときに使用されるログイン名を指定します。 *Security_mode*が**0**に設定されている場合は、これが必要です。 *login* のデータ型は **sysname** で、既定値は NULL です。  
   
@@ -81,7 +81,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @createmode = ] createmode`*createmode*は**int**,、既定値は 1,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** (既定値)|データベースを作成するか、既存のデータベースを使用してから、 **instdist .sql**ファイルを適用して、ディストリビューションデータベースにレプリケーションオブジェクトを作成します。|  
@@ -97,7 +97,7 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_adddistributiondb**は、すべての種類のレプリケーションで使用されます。 ただし、このストアド プロシージャは、ディストリビューター側でのみ動作します。  
   
  **Sp_adddistributiondb**を実行する前に[sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)を実行してディストリビューターを構成する必要があります。  
@@ -163,12 +163,12 @@ GO
 ## <a name="permissions"></a>アクセス許可  
  **Sp_adddistributiondb**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリッシングおよびディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)  
+ [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)  
   
   

@@ -17,40 +17,40 @@ helpviewer_keywords:
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 21487ba46e53997ebb50403cc4eaf1ae54f0a103
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e400905801f3186f2eb54956bad612c17d686d14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029643"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757739"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  に保存されているパッケージごとに 1 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行の値を格納します。 このテーブルは、 **msdb**データベースに格納されます。  
+  に保存されているパッケージごとに1行の値を格納 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 このテーブルは、 **msdb**データベースに格納されます。  
   
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|パッケージの一意識別子です。|  
 |**id**|**uniqueidentifier**|パッケージの GUID。|  
-|**記述**|**nvarchar**|パッケージの説明 (省略可)。|  
+|**description**|**nvarchar**|パッケージの説明 (省略可)。|  
 |**createdate**|**datetime**|パッケージが作成された日付。|  
 |**folderid**|**uniqueidentifier**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] によってパッケージの一覧が格納される論理フォルダーの GUID。|  
 |**ownersid**|**varbinary**|パッケージを作成したユーザーの一意のセキュリティ識別子。|  
-|**(microsoft.sql.chainer.packagedata.dll**|**image**|パッケージです。|  
-|**packageformat**|**int**|パッケージが保存される形式は次のとおりです。<br /><br /> 値が2の場合は、パッケージが[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]形式で保存されていることを示します。<br /><br /> 値3は、パッケージが以降の[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]形式で保存されることを示します。|  
-|**packagetype**|**int**|パッケージを作成したクライアント。 次のような値が考えられます。<br /><br /> 0 (既定値)<br /><br /> 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポートウィザード)<br /><br /> 3 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レプリケーション)<br /><br /> 5 ([!INCLUDE[ssIS](../../includes/ssis-md.md)]デザイナー)<br /><br /> 6 (メンテナンス プラン デザイナーまたはメンテナンス プラン ウィザード)<br /><br /> <br /><br /> この列の値は<xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>列挙型に対応していることに注意してください。|  
+|**(microsoft.sql.chainer.packagedata.dll**|**イメージ**|パッケージです。|  
+|**packageformat**|**int**|パッケージが保存される形式は次のとおりです。<br /><br /> 値が2の場合は、パッケージが形式で保存されていることを示し [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ます。<br /><br /> 値3は、パッケージが以降の形式で保存されることを示し [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ます。|  
+|**packagetype**|**int**|パッケージを作成したクライアント。 次のような値が考えられます。<br /><br /> 0 (既定値)<br /><br /> 1 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポートウィザード)<br /><br /> 3 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション)<br /><br /> 5 ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナー)<br /><br /> 6 (メンテナンス プラン デザイナーまたはメンテナンス プラン ウィザード)<br /><br /> <br /><br /> この列の値は列挙型に対応していることに注意して <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> ください。|  
 |**vermajor**|**int**|パッケージの最新のメジャー バージョン。|  
 |**verminor**|**int**|パッケージの最新のマイナー バージョン。|  
 |**verbuild**|**int**|パッケージの最新のビルドです。|  
 |**vercomments**|**nvarchar**|パッケージ バージョンについてのコメント。|  
 |**verid**|**uniqueidentifier**|パッケージのバージョンの GUID。|  
 |**isencrypted**|**bit**|パッケージが暗号化されているかどうかを示すブール値です。|  
-|**readロール id**|**varbinary**|パッケージ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を読み込むことができるロール。|  
-|**writerolesid**|**varbinary**|パッケージ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を保存できるロール。|  
+|**readロール id**|**varbinary**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パッケージを読み込むことができるロール。|  
+|**writerolesid**|**varbinary**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パッケージを保存できるロール。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; パッケージ](../../integration-services/integration-services-ssis-packages.md)  
   
   

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7485a5603386b6eb0c3cf70964f8a0d4378eef8c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fa6ea7b3fb01512fb22a263fa1612d07976769a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759887"
 ---
 # <a name="clientsettings-class---instancename-property"></a>ClientSettings クラス - InstanceName プロパティ
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントの[!INCLUDE[msCoName](../../includes/msconame-md.md)]インスタンスの名前を取得します。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+  クライアントのインスタンスの名前を取得し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,7 +35,7 @@ ms.locfileid: "73660683"
 object.InstanceName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  **ClientSettings** クライアント インスタンス上の設定を表す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト。  
   

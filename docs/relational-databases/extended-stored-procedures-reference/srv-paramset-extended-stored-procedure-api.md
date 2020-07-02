@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3ec0de44aacbcfb2d4e6b96d7525da900017e01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8a2f3caa15eeb6e7ff25f511b4a0e92de68b383
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253550"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756681"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (拡張ストアド プロシージャ API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
@@ -71,7 +71,7 @@ len
   
  *len* が 0 である場合は、NULL を返します。 *len* を 0 に設定する以外に、クライアントに NULL を返す方法はありません。  
   
- パラメーターがデータ型の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 1 つである場合、この関数は次の値を返します。  
+ パラメーターがデータ型の1つである場合、この関数は次の値を返し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。  
   
 |新しいデータ型|戻り値のデータ長|  
 |--------------------|------------------------|  
@@ -82,7 +82,7 @@ len
 |**BIGVARBINARY**|**NULL:** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO:** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255:** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255:** _len_ = <8k、data = valid、RET = 1|  
 |NCHAR|**NULL:** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO:** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255:** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255:** _len_ = <8k、data = valid、RET = 1|  
 |NVARCHAR|**NULL:** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO:** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255:** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255:** _len_ = <8k、data = valid、RET = 1|  
-|**NTEXT**|**NULL:** _len_ = IG、data = IG、RET = 0<br /><br /> **ZERO:** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255:** _len_ = IG、data = IG、RET = 0<br /><br /> 255: _len_ = ig、data = ig、RET = 0 ** \<**|  
+|**NTEXT**|**NULL:** _len_ = IG、data = IG、RET = 0<br /><br /> **ZERO:** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255:** _len_ = IG、data = IG、RET = 0<br /><br /> ** \< 255:** _len_ = ig、data = ig、RET = 0|  
 |RET は srv_paramset の戻り値です。||  
 |IG は値が無視されることを示します。||  
 |valid はデータを指す任意の有効なポインターを示します。||  
@@ -99,7 +99,7 @@ len
 > [!IMPORTANT]  
 >  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://www.microsoft.com/msrc?rtc=1)をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [srv_paramsetoutput &#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md)  
   
   

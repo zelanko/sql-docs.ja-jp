@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94f756a893fec14d171eb059cf4ad600f95a4927
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ac83a8be0496d0d00a8e07d608167365d287e5b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760014"
 ---
 # <a name="msrepl_commands-transact-sql"></a>MSrepl_commands (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSrepl_commands**テーブルには、レプリケートされたコマンドの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
@@ -38,11 +38,11 @@ ms.locfileid: "82827194"
 |**originator_id**|**int**|発信元の ID。|  
 |**command_id**|**int**|コマンドの ID。|  
 |**partial_command**|**bit**|これが部分コマンドであるかどうかを示します。|  
-|**メニュー**|**varbinary (1024)**|コマンドの値。|  
+|**command**|**varbinary (1024)**|コマンドの値。|  
 |**hashkey**|**int**|内部使用のみ。|  
 |**originator_lsn**|**varbinary(16)**|発生元パブリケーションのコマンドの LSN を識別します。 これは、ピアツーピアトランザクションレプリケーションで使用されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)  

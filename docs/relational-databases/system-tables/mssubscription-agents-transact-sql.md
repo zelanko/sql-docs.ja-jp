@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42b29858ff276b65a30b9f465d38407b606cb792
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 740610a9fa20d3c47472f3737548a4c22fe20a19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823370"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757769"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsubscription_agents**テーブルは、更新可能なサブスクリプションのディストリビューションエージェントおよびトリガーによって、サブスクリプションのプロパティを追跡するために使用されます。 このテーブルは、サブスクリプションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|行の ID。|  
+|**id**|**int**|行の ID。|  
 |**publisher**|**sysname**|パブリッシャーの名前です。|  
 |**publisher_db**|**sysname**|パブリケーションデータベースの名前です。|  
 |**レプリケーション**|**sysname**|パブリケーションの名前を指定します。|  
@@ -47,9 +47,9 @@ ms.locfileid: "82823370"
 |**last_sync_status**|**int**|現在実行されている、または実行したばかりのディストリビューションエージェントの最終実行状態。 ステータスの値が示す内容は次のとおりです。<br /><br /> **1** = 開始しました。<br /><br /> **2** = 成功しました。<br /><br /> **3** = 実行中です。<br /><br /> **4** = アイドル状態。<br /><br /> **5** = 再試行します。<br /><br /> **6** = 失敗。|  
 |**last_sync_summary**|**sysname**|現在実行中または実行直後のディストリビューションエージェントの最後のメッセージ。 ステータスの値が示す内容は次のとおりです。<br /><br /> **開始.**<br /><br /> **行わ.**<br /><br /> **進行中です。**<br /><br /> **退席.**<br /><br /> **再試行.**<br /><br /> **オーバー.**|  
 |**last_sync_time**|**datetime**|*Last_sync_summary*列と*last_sync_status*列が更新された日付と時刻。 SqlServer エージェントサービスジョブとして実行されているプルまたは匿名ディストリビューションエージェントは、これらの列を更新しません。 この場合、履歴情報がジョブ履歴テーブルに代わりに記録されます。|  
-|**queue_server**|**sysname**|内部使用のみ。|  
+|**queue_server**|**sysname**|内部使用のみです。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 95771a75adbedc126015d54dd98e66ec8c4d0dd8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f1ed86d0b24c8479c0d3a3546845a74d5b518a36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833288"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757934"
 ---
 # <a name="sp_fulltext_service-transact-sql"></a>sp_fulltext_service (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索のサーバー プロパティを変更します。  
   
@@ -49,7 +49,7 @@ sp_fulltext_service [ [@action=] 'action'
 > [!NOTE]  
 >  次の操作は、の将来のリリースで削除される予定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です: **clean_up**、 **connect_timeout**、 **data_timeout**、および**resource_usage**。 新しい開発作業ではこれらのアクションの使用を避け、現在これらのアクションを使用しているアプリケーションの変更を検討してください。  
   
-|アクション|データ型|説明|  
+|アクション|データの種類|説明|  
 |------------|---------------|-----------------|  
 |**clean_up**|**int**|旧バージョンとの互換性のためにのみサポートされています。 値は常に0です。|  
 |**connect_timeout**|**int**|旧バージョンとの互換性のためにのみサポートされています。 値は常に0です。|  
@@ -81,7 +81,7 @@ EXEC sp_fulltext_service 'update_languages';
 GO  
 ```  
   
-### <a name="b-changing-the-full-text-upgrade-option-to-reset-full-text-catalogs"></a>B. フルテキスト カタログをリセットするようにフルテキスト アップグレード オプションを変更する  
+### <a name="b-changing-the-full-text-upgrade-option-to-reset-full-text-catalogs"></a>B: フルテキスト カタログをリセットするようにフルテキスト アップグレード オプションを変更する  
  次の例では、フルテキストカタログをリセットするようにフルテキストアップグレードオプションを変更します。 これにより、それらが完全に削除されます。 この例では、省略可能な `@action` キーワードとキーワードを指定し `@value` ます。  
   
 ```  
@@ -89,7 +89,7 @@ EXEC sp_fulltext_service @action='upgrade_option', @value=1;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
  [FULLTEXTSERVICEPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

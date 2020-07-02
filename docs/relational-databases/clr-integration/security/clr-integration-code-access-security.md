@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 912db3acb6f6dc21952e99da31a1484a9745ed0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f28692cd1a5c3f60e823d6071244ae822fc557a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488313"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759045"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 統合のコード アクセス セキュリティ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   共通言語ランタイム (CLR) では、マネージド コードに対してコード アクセス セキュリティというセキュリティ モデルがサポートされます。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 詳細については、.NET Framework Software Development Kit の「コード アクセス セキュリティ」を参照してください。  
   
  アセンブリに許可される権限を決定するセキュリティ ポリシーは、次の 3 つに分類されます。  
@@ -89,12 +89,12 @@ ms.locfileid: "81488313"
  **UNSAFE**アセンブリには**FullTrust**が指定されています。  
   
 > [!IMPORTANT]  
->  **SAFE**は、の外部[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のリソースにアクセスせずに計算とデータ管理タスクを実行するアセンブリに推奨される権限設定です。 **EXTERNAL_ACCESS**外部[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のリソースにアクセスするアセンブリには EXTERNAL_ACCESS をお勧めします。 **EXTERNAL_ACCESS**アセンブリは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]既定でサービスアカウントとして実行されます。 **EXTERNAL_ACCESS**コードは、呼び出し元の Windows 認証セキュリティコンテキストを明示的に偽装することができます。 既定では[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービスアカウントとして実行されるため、 **EXTERNAL_ACCESS**を実行するアクセス許可は、サービスアカウントとして実行するために信頼されているログインにのみ付与する必要があります。 セキュリティの観点からは、 **EXTERNAL_ACCESS**と**UNSAFE**アセンブリは同じです。 ただし、 **EXTERNAL_ACCESS**アセンブリは、**安全**でないアセンブリに含まれていないさまざまな信頼性および堅牢性保護を提供します。 **UNSAFE**を指定すると、アセンブリ内のコードは[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]プロセス空間に対して無効な操作を実行できるため、の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]堅牢性とスケーラビリティを損なう可能性があります。 で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]clr アセンブリを作成する方法の詳細については、「 [clr 統合アセンブリの管理](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)」を参照してください。  
+>  **SAFE**は、の外部のリソースにアクセスせずに計算とデータ管理タスクを実行するアセンブリに推奨される権限設定です [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 外部のリソースにアクセスするアセンブリには**EXTERNAL_ACCESS**をお勧め [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] します。 **EXTERNAL_ACCESS**アセンブリは、既定でサービスアカウントとして実行さ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] れます。 **EXTERNAL_ACCESS**コードは、呼び出し元の Windows 認証セキュリティコンテキストを明示的に偽装することができます。 既定ではサービスアカウントとして実行されるため [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、 **EXTERNAL_ACCESS**を実行するアクセス許可は、サービスアカウントとして実行するために信頼されているログインにのみ付与する必要があります。 セキュリティの観点からは、 **EXTERNAL_ACCESS**と**UNSAFE**アセンブリは同じです。 ただし、 **EXTERNAL_ACCESS**アセンブリは、**安全**でないアセンブリに含まれていないさまざまな信頼性および堅牢性保護を提供します。 **UNSAFE**を指定すると、アセンブリ内のコードはプロセス空間に対して無効な操作を実行できるため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の堅牢性とスケーラビリティを損なう可能性があり [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 で CLR アセンブリを作成する方法の詳細につい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ては、「 [Clr 統合アセンブリの管理](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)」を参照してください。  
   
 ## <a name="accessing-external-resources"></a>外部リソースへのアクセス  
- ユーザー定義型 (UDT)、ストアドプロシージャ、またはその他の種類のコンストラクトアセンブリが**安全**なアクセス許可セットに登録されている場合、そのコンストラクトで実行されるマネージコードは外部リソースにアクセスできません。 ただし、 **EXTERNAL_ACCESS**または**UNSAFE**アクセス許可セットが指定され、マネージコードが外部リソースにアクセスしよう[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]とすると、によって次の規則が適用されます。  
+ ユーザー定義型 (UDT)、ストアドプロシージャ、またはその他の種類のコンストラクトアセンブリが**安全**なアクセス許可セットに登録されている場合、そのコンストラクトで実行されるマネージコードは外部リソースにアクセスできません。 ただし、 **EXTERNAL_ACCESS**または**UNSAFE**アクセス許可セットが指定され、マネージコードが外部リソースにアクセスしようとすると、に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] よって次の規則が適用されます。  
   
-|状況|THEN|  
+|状況|Then|  
 |--------|----------|  
 |実行コンテキストが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインに対応している場合。|外部リソースへのアクセスが拒否され、セキュリティ例外が発生します。|  
 |実行コンテキストが Windows ログインに対応していると同時に、本来の呼び出し元である場合。|外部リソースへのアクセスは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストで行われます。|  
@@ -108,9 +108,9 @@ ms.locfileid: "81488313"
 |-|-|-|-|  
 ||**SAFE**|**EXTERNAL_ACCESS**|**起こす**|  
 |**コードアクセスセキュリティのアクセス許可**|実行のみ|実行および外部リソースへのアクセス|無制限 (P/Invoke を含む)|  
-|**プログラミング モデルの制限事項**|はい|はい|制限事項なし|  
-|**検証可能性の要件**|はい|はい|いいえ|  
-|**ローカルデータアクセス**|はい|はい|はい|  
+|**プログラミング モデルの制限事項**|[はい]|はい|制限事項なし|  
+|**検証可能性の要件**|[はい]|はい|いいえ|  
+|**ローカルデータアクセス**|[はい]|はい|はい|  
 |**ネイティブ コードを呼び出す機能**|いいえ|いいえ|はい|  
   
 ## <a name="see-also"></a>参照  

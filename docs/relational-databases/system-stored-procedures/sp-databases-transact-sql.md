@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1c4cd06a540709b5e100a086a426fd5bdb46abf5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d18b7657ca1274a2058ef25543309bffb97de851
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826241"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760176"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   のインスタンスに存在するか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースゲートウェイを介してアクセスできるデータベースの一覧を表示します。  
   
@@ -39,13 +39,13 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|データベース名。 では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] この列は、データベース名を表し**ます。** この名前は、データベースカタログビューに格納されています。|  
+|**DATABASE_NAME**|**sysname**|データベースの名前です。 では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] この列は、データベース名を表し**ます。** この名前は、データベースカタログビューに格納されています。|  
 |**DATABASE_SIZE**|**int**|データベースのサイズ (kb 単位)。|  
 |**備考**|**varchar (254)**|では [!INCLUDE[ssDE](../../includes/ssde-md.md)] 、このフィールドは常に NULL を返します。|  
   
@@ -66,7 +66,7 @@ GO
 EXEC sp_databases;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [HAS_DBACCESS &#40;Transact-sql&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
   

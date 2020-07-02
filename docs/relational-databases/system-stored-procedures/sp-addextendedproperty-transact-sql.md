@@ -18,15 +18,15 @@ ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd18fe45b25f4537c06de46c612f0508f9f86f9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758014"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   新しい拡張プロパティをデータベース オブジェクトに追加します。  
   
@@ -56,10 +56,10 @@ sp_addextendedproperty
  [ @name ] = {'*property_name*'}  
  追加するプロパティの名前を指定します。 *property_name*は**sysname**であり、NULL にすることはできません。 名前には、空白文字や英数字以外の文字列、およびバイナリ値を含めることもできます。  
   
- [ @value= ]{'*値*'}  
+ [ @value =] {'*値*'}  
  プロパティに関連付ける値を指定します。 *値*は**sql_variant**,、既定値は NULL です。 *value* のサイズは、7,500 バイト以下にする必要があります。  
   
- [ @level0type= ]{'*level0_object_type*'}  
+ [ @level0type =] {'*level0_object_type*'}  
  レベル 0 のオブジェクトの種類です。 *level0_object_type*は**varchar (128)**,、既定値は NULL です。  
   
  有効な値は、ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE、PLAN GUIDE、および NULL です。  
@@ -67,24 +67,24 @@ sp_addextendedproperty
 > [!IMPORTANT]  
 >  レベル 1 の種類のオブジェクトの拡張プロパティで、USER をレベル 0 の種類として指定できる機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の将来のバージョンで削除されます。 代わりに、レベル 0 の種類として SCHEMA を使用してください。 たとえば、テーブルで拡張プロパティを定義するときに、ユーザー名の代わりにテーブルのスキーマを指定します。 レベル 0 の種類として TYPE を指定できる機能は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで削除されます。 TYPE については、レベル 0 の種類として SCHEMA、レベル 1 の種類として TYPE を使用してください。  
   
- [ @level0name= ]{'*level0_object_name*'}  
+ [ @level0name =] {'*level0_object_name*'}  
  指定したレベル0のオブジェクトの種類の名前を指定します。 *level0_object_name*は**sysname**で、既定値は NULL です。  
   
- [ @level1type= ]{'*level1_object_type*'}  
+ [ @level1type =] {'*level1_object_type*'}  
  レベル1のオブジェクトの種類を示します。 *level1_object_type*は**varchar (128)**,、既定値は NULL です。 有効な値は、AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SEQUENCE、シノニム、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION、および NULL です。    
- [ @level1name= ]{'*level1_object_name*'}  
+ [ @level1name =] {'*level1_object_name*'}  
  指定したレベル1のオブジェクトの種類の名前を指定します。 *level1_object_name*は**sysname**,、既定値は NULL です。  
   
- [ @level2type= ]{'*level2_object_type*'}  
+ [ @level2type =] {'*level2_object_type*'}  
  レベル 2 のオブジェクトの種類です。 *level2_object_type*は**varchar (128)**,、既定値は NULL です。 有効な値は、COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER、および NULL です。  
   
- [ @level2name= ]{'*level2_object_name*'}  
+ [ @level2name =] {'*level2_object_name*'}  
  指定したレベル2のオブジェクトの種類の名前を指定します。 *level2_object_name*は**sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  拡張プロパティを指定するために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内のオブジェクトは、3 つのレベル (0、1、2) に分けられています。 レベル 0 は、データベース スコープに含まれる最上位レベルのオブジェクトとして定義されます。 レベル 1 のオブジェクトはスキーマ スコープまたはユーザー スコープに含まれ、レベル 2 のオブジェクトはレベル 1 のオブジェクトに含まれます。 これら、どのレベルのオブジェクトに対しても、拡張プロパティを定義できます。  
   
  1 つのレベルにあるオブジェクトを参照する場合は、そのオブジェクトを所有または格納する上位レベルのオブジェクトの名前で修飾する必要があります。 たとえば、拡張プロパティをテーブル列 (レベル 2) に追加する場合、その列を含むテーブル名 (レベル 1) とそのテーブルを含むスキーマ (レベル 0) も指定する必要があります。  
@@ -120,7 +120,7 @@ EXEC sp_addextendedproperty
 @value = 'AdventureWorks2012 Sample OLTP Database';  
 ```  
   
-### <a name="b-adding-an-extended-property-to-a-column-in-a-table"></a>B. 拡張プロパティをテーブル内の列に追加する  
+### <a name="b-adding-an-extended-property-to-a-column-in-a-table"></a>B: 拡張プロパティをテーブル内の列に追加する  
  次の例では、テーブル `PostalCode` 内の列 `Address`にタイトルのプロパティを追加します。  
   
 ```  
@@ -135,7 +135,7 @@ EXEC sp_addextendedproperty
 GO  
 ```  
   
-### <a name="c-adding-an-input-mask-property-to-a-column"></a>C. 定型入力プロパティを列に追加する  
+### <a name="c-adding-an-input-mask-property-to-a-column"></a>C: 定型入力プロパティを列に追加する  
  次の例では、定型入力プロパティ '`99999 or 99999-9999 or #### ###`' をテーブル `PostalCode` 内の列 `Address`に追加します。  
   
 ```  
@@ -149,7 +149,7 @@ EXEC sp_addextendedproperty
 GO  
 ```  
   
-### <a name="d-adding-an-extended-property-to-a-filegroup"></a>D. 拡張プロパティをファイル グループに追加する  
+### <a name="d-adding-an-extended-property-to-a-filegroup"></a>D: 拡張プロパティをファイル グループに追加する  
  次の例では、拡張プロパティが `PRIMARY` ファイル グループに追加されます。  
   
 ```  
@@ -235,7 +235,7 @@ EXEC sys.sp_addextendedproperty
 @level0name = N'CustomApp';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   

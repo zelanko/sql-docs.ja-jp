@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 18f8c9b3-cab7-4e8f-8754-11ac38c3f789
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f0d1f6c1036d946088e2cc1aa91c08f620c3f597
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d947bdcf0e777d96c18551fafae61d3db9a930b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129535"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759988"
 ---
 # <a name="sysarticles-system-view-transact-sql"></a>sysarticles (システム ビュー) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sysarticles**ビューは、アーティクルのプロパティを公開します。 このビューは、ディストリビューション データベースに格納されます。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68129535"
 |**artid**|**int**|アーティクルの一意な ID 番号を示す ID 列です。|  
 |**creation_script**|**nvarchar(255)**|アーティクルのスキーマスクリプトです。|  
 |**del_cmd**|**nvarchar(255)**|DELETE 時に実行するコマンドです。それ以外の場合は、ログから構築します。|  
-|**記述**|**nvarchar(255)**|アーティクルの説明エントリです。|  
+|**description**|**nvarchar(255)**|アーティクルの説明エントリです。|  
 |**dest_table**|**sysname**|対象テーブルの名前です。|  
 |**filter**|**int**|行方向のパーティション分割に使用されるストアドプロシージャの ID です。|  
 |**filter_clause**|**ntext**|行方向のフィルター選択に使用される、アーティクルの WHERE 句。|  
@@ -55,7 +55,7 @@ ms.locfileid: "68129535"
 |**custom_script**|**nvarchar(2048)**|DDL トリガーの最後に実行される登録済みのカスタム ストアド プロシージャまたはスクリプトです。|  
 |**fire_triggers_on_snapshot**|**bit**|スナップショットが適用されるときにレプリケートされたトリガーが実行されるかどうかを示します。次のいずれかの値をとります。<br /><br /> **0** = トリガーは実行されません。<br /><br /> **1** = トリガーが実行されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 715318b0b0ea38870317d05815845e1b6eaa3227
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072753"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760185"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  新しい拡張ストアドプロシージャの名前をに[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登録します。  
+  新しい拡張ストアドプロシージャの名前をに登録 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[CLR 統合](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)を使用してください。  
@@ -51,14 +51,14 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
- 拡張ストアドプロシージャを作成した後は、 **sp_addextendedproc**を使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]してに追加する必要があります。 詳細については、「 [SQL Server への拡張ストアドプロシージャの追加](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)」を参照してください。  
+## <a name="remarks"></a>解説  
+ 拡張ストアドプロシージャを作成した後は、sp_addextendedproc を使用してに追加する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **sp_addextendedproc** 詳細については、「 [SQL Server への拡張ストアドプロシージャの追加](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)」を参照してください。  
   
  このプロシージャは、 **master**データベースでのみ実行できます。 **Master**以外のデータベースから拡張ストアドプロシージャを実行するには、拡張ストアドプロシージャの名前を**master**で修飾します。  
   
- **sp_addextendedproc**によって、新しい拡張ストアドプロシージャの名前がに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登録された、 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログビューにエントリが追加されます。 また、 [extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md)カタログビューにエントリが追加されます。  
+ **sp_addextendedproc**によって、新しい拡張ストアドプロシージャの名前がに登録された、 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログビューにエントリが追加され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 また、 [extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md)カタログビューにエントリが追加されます。  
   
 > [!IMPORTANT]  
 >  完全パスで登録されなかった既存の DLL は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード後、機能しなくなります。 この問題を解決するには、 **sp_dropextendedproc**を使用して DLL の登録を解除した後、完全なパスを指定して**sp_addextendedproc**に再登録します。  

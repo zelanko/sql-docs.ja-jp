@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7763f7406f865194743c43a6d182466767799b41
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5f9582f9377c1ae9cdcbefb00e772f456e1018e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829843"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757824"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSreplication_queue**テーブルは、SQL ベースのキューを使用しているすべてのキュー更新サブスクリプションによって発行されたキューに登録されたコマンドを格納するために、レプリケーションプロセスによって使用されます。 このテーブルは、サブスクリプションデータベースに格納されます。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82829843"
 |**orderkey**|**bigint**|単調に増加する id 列。|  
 |**cmdstate**|**bit**|コマンドの状態:<br /><br /> 0 = 完了します。<br /><br /> 1 = 部分的。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

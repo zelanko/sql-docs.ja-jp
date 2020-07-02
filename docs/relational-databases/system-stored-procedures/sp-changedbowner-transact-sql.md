@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bca86b00ca5b2d84cc1c737ecf9d253a0451ea9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 084063f7209692bdf3ffd124b8e2b73194068686
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126459"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760198"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースの所有者を変更します。  
   
@@ -43,16 +43,16 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @loginame= ]'*login*'  
- 現在のデータベースの新しい所有者のログイン ID を指定します。 *login*は**sysname**,、既定値はありません。 *ログイン*は既に存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するログインまたは Windows ユーザーである必要があります。 データベース内の既存のユーザーセキュリティアカウントを使用して既にデータベースにアクセスできる場合、*ログイン*を現在のデータベースの所有者にすることはできません。 この問題を回避するには、先に現在のデータベース内のユーザーを削除してください。  
+ [ @loginame =] '*login*'  
+ 現在のデータベースの新しい所有者のログイン ID を指定します。 *login*は**sysname**,、既定値はありません。 *ログイン*は既に存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは Windows ユーザーである必要があります。 データベース内の既存のユーザーセキュリティアカウントを使用して既にデータベースにアクセスできる場合、*ログイン*を現在のデータベースの所有者にすることはできません。 この問題を回避するには、先に現在のデータベース内のユーザーを削除してください。  
   
- [ @map= ]*remap_alias_flag*  
- ログイン*remap_alias_flag*の別名はから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]削除されているため、remap_alias_flag パラメーターは非推奨とされます。 *Remap_alias_flag*パラメーターを使用してもエラーは発生しませんが、効果はありません。  
+ [ @map =] *remap_alias_flag*  
+ ログインの別名はから削除されているため、 *remap_alias_flag*パラメーターは非推奨とされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *Remap_alias_flag*パラメーターを使用してもエラーは発生しませんが、効果はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  sp_changedbowner を実行した後、新しい所有者はデータベース内で dbo ユーザーとして認識されるようになります。 dbo には、データベース内ですべての操作を実行できる権限が暗黙的に与えられます。  
   
  master、model、または tempdb システム データベースの所有者を変更することはできません。  
@@ -73,7 +73,7 @@ sp_changedbowner [ @loginame = ] 'login'
 EXEC sp_changedbowner 'Albert';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sp_dropalias &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   

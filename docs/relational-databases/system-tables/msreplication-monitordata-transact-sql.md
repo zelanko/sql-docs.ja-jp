@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 118602eadf5dc1f23aa811d9a295fae351f54f36
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d247bd0fa935e11f6d6ca57cad393cfddabb6b2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829873"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757839"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSreplication_monitordata**テーブルには、レプリケーションモニターによって使用されるキャッシュデータと、監視対象のサブスクリプションごとに1行のデータが含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "82829873"
 |**mergelatestsessionconnectiontype**|**int**|最新のマージエージェントセッションに使用される接続。次のいずれかの値を指定できます。<br /><br /> **1** = ローカルエリアネットワーク (LAN)<br /><br /> **2** = ダイヤルアップネットワーク接続|  
 |**retention_period_unit**|**tinyint**|保有期間を定義するときに使用する単位を指定します。次のいずれかの値をとります。<br /><br /> **1** = 週<br /><br /> **2** = 月<br /><br /> **3** = 年|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プログラムによるレプリケーションの監視](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 240fe92693fcd811c1f87744cb9a60dddda16369
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5cf27f5335cf0eb098c505ca6872564c172cf610
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758644"
 ---
 # <a name="sysarticles-transact-sql"></a>sysarticles (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   ローカルデータベースで定義されているアーティクルごとに1行のデータを格納します。 このテーブルは、パブリッシュされたデータベースに格納されます。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82833066"
 |**artid**|**int**|アーティクルの一意な ID 番号を示す ID 列です。|  
 |**creation_script**|**nvarchar(255)**|アーティクルのスキーマスクリプトです。|  
 |**del_cmd**|**nvarchar(255)**|テーブル アーティクルの削除をレプリケートするときに使用されるレプリケーション コマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
-|**記述**|**nvarchar(255)**|アーティクルの説明エントリです。|  
+|**description**|**nvarchar(255)**|アーティクルの説明エントリです。|  
 |**dest_table**|**sysname**|対象テーブルの名前です。|  
 |**filter**|**int**|行方向のパーティション分割に使用されるストアドプロシージャの ID です。|  
 |**filter_clause**|**ntext**|行方向のフィルター選択に使用される、アーティクルの WHERE 句。|  
@@ -55,7 +55,7 @@ ms.locfileid: "82833066"
 |**custom_script**|**nvarchar(2048)**|DDL トリガーの最後に実行される登録済みのカスタム ストアド プロシージャまたはスクリプトです。|  
 |**fire_triggers_on_snapshot**|**bit**|スナップショットが適用されるときに、レプリケートされたトリガーが実行されるかどうかを示します。次のいずれかの値を指定できます。<br /><br /> **0** = トリガーは実行されません。<br /><br /> **1** = トリガーが実行されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

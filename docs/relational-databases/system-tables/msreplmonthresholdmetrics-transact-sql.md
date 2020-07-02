@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a82ed4f1ec8c884105101920f41329a7314941d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4ffce4df9f6e5dbc366401d5a9d2e6112429deb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829842"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757803"
 ---
 # <a name="msreplmonthresholdmetrics-transact-sql"></a>MSreplmonthresholdmetrics (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSreplmonthresholdmetrics**テーブルは、レプリケーションを監視するために提供されるメトリックを定義します。 このテーブルは、 **msdb**データベースに格納されます。  
   
@@ -35,12 +35,12 @@ ms.locfileid: "82829842"
 |**title**|**sysname**|レプリケーション パフォーマンス基準の名前。|  
 |**warningbitstatus**|**int**|次のいずれかの基準に対応するしきい値違反の警告を示す、ビットごとの識別子です。<br /><br /> **1** = 有効期限-トランザクションパブリケーションへのサブスクリプションが、保有期間の割合として、許容されるしきい値を超える保有期間を超えました。<br /><br /> **2** = 待機時間-トランザクションパブリッシャーからサブスクライバーへのデータのレプリケートにかかった時間が、秒単位のしきい値を超えています。<br /><br /> **4** = mergeexpiration-マージパブリケーションに対するサブスクリプションが、保有期間の割合として許容されるしきい値を超える保有期間を超えました。<br /><br /> **8** = mergefastrunduration-高速ネットワーク接続経由で、マージサブスクリプションの同期の完了にかかった時間が、秒単位のしきい値を超えています。<br /><br /> **16** = mergeslowrunduration-低速またはダイヤルアップネットワーク接続を介して、マージサブスクリプションの同期の完了にかかった時間が、秒単位のしきい値を超えています。<br /><br /> **32** = mergefastrunspeed-高速ネットワーク接続上で、マージサブスクリプションの同期中の行の配信率が、1秒あたりの行数でのしきい値の比率を維持できませんでした。<br /><br /> **64** = mergeslowrunspeed-低速またはダイヤルアップネットワーク接続を介して、マージサブスクリプションの同期中の行の配信率が、1秒あたりの行数でしきい値を維持できませんでした。|  
 |**alertmessageid**|**int**|しきい値の警告が発生した場合に表示されるエラー メッセージの ID。|  
-|**記述**|**nvarchar (3000)**|レプリケーションパフォーマンス基準の説明|  
+|**description**|**nvarchar (3000)**|レプリケーションパフォーマンス基準の説明|  
 |**default_value**|**sql_variant**|レプリケーション パフォーマンス基準の既定値。|  
 |**min_value**|**sql_variant**|範囲指定されたレプリケーションパフォーマンスメトリックの最小値。|  
 |**max_value**|**sql_variant**|範囲指定されたレプリケーションパフォーマンスメトリックの最大値です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c2cba0fa65271a7668ae1945b458f26138fe36d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b9bd4367a4af33195ffdb3e233980f46205ca39a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760205"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   ディストリビューション データベースのプロパティを変更します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
   
@@ -43,7 +43,7 @@ sp_changedistributiondb [ @database= ] 'database'
   
 `[ @property = ] 'property'`特定のデータベースに対して変更するプロパティを指定します。 *プロパティ*は**sysname**で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**history_retention**|履歴テーブルの保持期間です。|  
 |**max_distretention**|ディストリビューションの最大保有期間。|  
@@ -55,7 +55,7 @@ sp_changedistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changedistributiondb**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="example"></a>例  
@@ -64,7 +64,7 @@ sp_changedistributiondb [ @database= ] 'database'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changedistributiondb**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディストリビューターとパブリッシャーのプロパティの表示および変更](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4dfb2dba5ac59cae919a0153d41cbf7c15f660e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123819"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757885"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   サブシステムに対するアクセス権をプロキシに与えます。  
   
@@ -49,7 +49,7 @@ sp_grant_proxy_to_subsystem
   
 |値|説明|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX スクリプト<br /><br /> ** \*重要\* \* **ActiveX スクリプティングサブシステムは、の将来[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンでエージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX スクリプト<br /><br /> 重要 ActiveX スクリプティングサブシステムは、の将来のバージョンでエージェントから削除される予定** \* \* です。 \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
 |**3**|オペレーティングシステム (**CmdExec**)|  
 |**4**|レプリケーション スナップショット エージェント|  
 |**5**|レプリケーション ログ リーダー エージェント|  
@@ -57,7 +57,7 @@ sp_grant_proxy_to_subsystem
 |**7**|Replication Merge Agent|  
 |**8**|Replication Queue Reader Agent|  
 |**9**|Analysis Services クエリ|  
-|**10**|Analysis Services コマンド|  
+|"**10**"|Analysis Services コマンド|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|  
 |**12**|PowerShell スクリプト|  
 | &nbsp; | &nbsp; |
@@ -70,7 +70,7 @@ sp_grant_proxy_to_subsystem
 |**CmdExec**|オペレーティングシステム (**CmdExec**)|  
 |**スナップショット**|レプリケーション スナップショット エージェント|  
 |**リーダー**|レプリケーション ログ リーダー エージェント|  
-|**Distribution**|レプリケーションディストリビューションエージェント|  
+|**配布**|レプリケーションディストリビューションエージェント|  
 |**マージ**|Replication Merge Agent|  
 |**QueueReader**|Replication Queue Reader Agent|  
 |**ANALYSISQUERY**|Analysis Services クエリ|  
@@ -88,7 +88,7 @@ sp_grant_proxy_to_subsystem
 ## <a name="examples"></a>例  
   
 ### <a name="a-granting-access-to-a-subsystem-by-id"></a>A. ID によってサブシステムへのアクセス権を付与する  
- 次の例では、 `Catalog application proxy`プロキシに ActiveX スクリプティングサブシステムへのアクセスを許可します。  
+ 次の例では、プロキシ `Catalog application proxy` に ActiveX スクリプティングサブシステムへのアクセスを許可します。  
   
 ```sql
 USE msdb ;  
@@ -100,7 +100,7 @@ EXEC dbo.sp_grant_proxy_to_subsystem
 GO  
 ```  
   
-### <a name="b-granting-access-to-a-subsystem-by-name"></a>B. 名前によってサブシステムへのアクセスを許可します。  
+### <a name="b-granting-access-to-a-subsystem-by-name"></a>B: 名前によってサブシステムへのアクセスを許可します。  
  次の例では、 `Catalog application proxy` SSIS パッケージ実行サブシステムへのアクセス権をプロキシに付与します。  
   
 ```sql
@@ -113,7 +113,7 @@ EXEC dbo.sp_grant_proxy_to_subsystem
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server エージェントセキュリティを実装する](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_revoke_proxy_from_subsystem &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
  [sp_add_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   

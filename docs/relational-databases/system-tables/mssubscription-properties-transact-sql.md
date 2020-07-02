@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 38013350a75e6632995d8025535ea115110894e0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 03dcac4c5e4a74503e7ad30cc499a2319375f950
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827191"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758683"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsubscription_properties**テーブルには、サブスクライバーでレプリケーションエージェントを実行するために必要なパラメーター情報の行が含まれています。 このテーブルは、プルサブスクリプションの場合はサブスクライバー側のサブスクリプションデータベースに格納され、プッシュサブスクリプションの場合はディストリビューター側のディストリビューションデータベースに格納されます。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "82827191"
 |**internet_timeout**|**int**|Web 同期要求が期限切れとなるまでの時間の長さ (秒単位)。|  
 |**hostname**|**sysname**|結合フィルターまたは論理レコードリレーションシップの**where**句でこの関数を使用する場合の**HOST_NAME**の値を指定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   

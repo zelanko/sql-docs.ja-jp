@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 32a9ac79aaac19976158392520e500b635bc8ebd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 58f7f1e887039a5b2ef497a52643a793985f090e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831963"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758660"
 ---
 # <a name="mssync_states-transact-sql"></a>MSsync_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsync_states**テーブルでは、同時にスナップショットモードになっているパブリケーションを追跡します。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82831963"
 |**publisher_db**|**sysname**|パブリケーションデータベースの名前です。|  
 |**publication_id**|**int**|パブリケーションの ID です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Integration Services テーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)   
  [Transact-sql&#41;&#40;のテーブルのバックアップと復元](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   

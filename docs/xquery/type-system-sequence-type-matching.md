@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8904ab2ea9e8f78037b03f886e6b61d692b65e60
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 9d2163610d1ea537301ec61e1a34c8b6e727d6e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306072"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759452"
 ---
 # <a name="type-system---sequence-type-matching"></a>型システム - シーケンス型の照合
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery 式の値は必ず 0 個以上のアイテムのシーケンスになります。 項目は、アトミック値またはノードのいずれかになります。 シーケンス型は、クエリ式によって返されるシーケンス型を特定の型と一致させる機能を表します。 次に例を示します。  
   
@@ -433,7 +433,7 @@ RETURN
   
 -   **Xsi: type**または**xsi: nil**の明示的なクエリはサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [型システム &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

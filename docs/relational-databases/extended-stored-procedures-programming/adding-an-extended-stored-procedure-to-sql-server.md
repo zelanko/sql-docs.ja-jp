@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bba543dbf89cb1dd3c0eb8a456a54c3c31c51d02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22f2b2b5345d4d5cb11b96ecf7741ce144597548
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67903409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756773"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>SQL Server への拡張ストアド プロシージャの追加
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 代わりに CLR Integration を使用してください。  
   
- 拡張ストアド プロシージャ関数を含んでいる DLL は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の拡張機能としての役割を果たします。 DLL をインストールするには、標準[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の dll ファイルが格納されているディレクトリ (C:\Program Server\MSSQL12.0.* ) にファイルをコピーします。x*\MSSQL\Binn (既定)。  
+ 拡張ストアド プロシージャ関数を含んでいる DLL は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の拡張機能としての役割を果たします。 DLL をインストールするには、標準の dll ファイルが格納されているディレクトリ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (C:\Program Server\MSSQL12.0.* ) にファイルをコピーします。x*\MSSQL\Binn (既定)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者は、拡張ストアド プロシージャ DLL をサーバーにコピーした後、DLL 内の各拡張ストアド プロシージャを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録する必要があります。 この操作を行うには、sp_addextendedproc システム ストアド プロシージャを使用します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67903409"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL13.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- `sp_addextendedproc` に指定した関数の名前が、DLL 内の関数名と正確に一致しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に新しい名前が登録されますが、その名前は役に立ちません。 たとえば、がに`xp_Hello` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xp_hello.dll`配置されている拡張ストアドプロシージャとし[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]て登録されていても、を使用`xp_Hello`して関数を後で呼び出す場合、は DLL 内で関数を見つけることができません。  
+ `sp_addextendedproc` に指定した関数の名前が、DLL 内の関数名と正確に一致しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に新しい名前が登録されますが、その名前は役に立ちません。 たとえば、 `xp_Hello` がに配置されている拡張ストアドプロシージャとして登録されていても、を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 関数を `xp_hello.dll` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xp_Hello` 後で呼び出す場合、は DLL 内で関数を見つけることができません。  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  
@@ -93,7 +93,7 @@ Server: Msg 2812, Level 16, State 62, Line 1
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止して再起動する必要はありません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
  [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
   
