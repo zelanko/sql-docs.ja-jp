@@ -14,23 +14,23 @@ ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ebda3de96cbd9a4a1ceadd62093420cc372a169
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b351ded757bc424b5ae37459ce14fd3f1bd45f73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302159"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789181"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **SQLGetData**は、列の値をバインドせずに結果セットのデータを取得するために使用します。 **SQLGetData**を同じ列に対して連続して呼び出すと、 **text**、 **ntext**、または**image**データ型の列から大量のデータを取得できます。  
   
  アプリケーションでは、変数をバインドして結果セット データをフェッチする必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLGetData**を使用して、Native Client ODBC ドライバーから任意の列のデータを取得できます。  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、ランダム列の順序でデータを取得するための**SQLGetData**の使用はサポートされていません。 **SQLGetData**で処理されるすべてのバインドされていない列には、結果セット内のバインドされた列よりも大きな列序数が必要です。 アプリケーションでは、バインドされていない列の値を、列序数の小さい列から大きい列へと処理する必要があります。 前に処理した列よりも列序数が小さい列からデータを取得しようとすると、エラーが発生します。 アプリケーションで、結果セット行を報告するためにサーバー カーソルを使用している場合は、現在の行を再フェッチしてから列の値をフェッチできます。 ステートメントが既定の読み取り専用、順方向専用カーソルで実行される場合、ステートメントを再実行して**SQLGetData**をバックアップする必要があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、ランダム列の順序でデータを取得するための**SQLGetData**の使用はサポートされていません。 **SQLGetData**で処理されるすべてのバインドされていない列には、結果セット内のバインドされた列よりも大きな列序数が必要です。 アプリケーションでは、バインドされていない列の値を、列序数の小さい列から大きい列へと処理する必要があります。 前に処理した列よりも列序数が小さい列からデータを取得しようとすると、エラーが発生します。 アプリケーションで、結果セット行を報告するためにサーバー カーソルを使用している場合は、現在の行を再フェッチしてから列の値をフェッチできます。 ステートメントが既定の読み取り専用、順方向専用カーソルで実行される場合、ステートメントを再実行して**SQLGetData**をバックアップする必要があります。  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、 **SQLGetData**を使用して取得した**text**型、 **ntext**型、および**image**型のデータの長さが正確に報告されます。 アプリケーションでは、 *StrLen_or_IndPtr*パラメーターの戻り値を使用して、長いデータを迅速に取得することができます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 **SQLGetData**を使用して取得した**text**型、 **ntext**型、および**image**型のデータの長さが正確に報告されます。 アプリケーションでは、 *StrLen_or_IndPtr*パラメーターの戻り値を使用して、長いデータを迅速に取得することができます。  
   
 > [!NOTE]  
 >  大きな値型の場合、 *StrLen_or_IndPtr*はデータの切り捨て時に SQL_NO_TOTAL を返します。  

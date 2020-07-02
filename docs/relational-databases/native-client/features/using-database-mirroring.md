@@ -18,15 +18,15 @@ ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9c702d8d0508dcb64090f0b753da64019736ceb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40879f902b6d014f90e6e2493b1761018c29ce40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303224"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787841"
 ---
 # <a name="using-database-mirroring"></a>データベース ミラーリングの使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 > [!NOTE]  
@@ -60,22 +60,22 @@ ms.locfileid: "81303224"
 >  また、サーバー名は大文字小文字が区別されませんが、データベース名は区別されます。 したがって、大文字小文字の使い方を DSN と接続文字列で統一してください。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、接続および接続文字列の属性を使用してデータベースミラーリングをサポートしています。 DBPROPSET_SQLSERVERDBINIT プロパティ セットには、SSPROP_INIT_FAILOVERPARTNER プロパティが追加されています。**FailoverPartner** キーワードは、DBPROP_INIT_PROVIDERSTRING の新しい接続文字列属性です。 詳細については、「 [SQL Server Native Client での接続文字列キーワードの使用](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、接続および接続文字列の属性を使用してデータベースミラーリングをサポートしています。 DBPROPSET_SQLSERVERDBINIT プロパティ セットには、SSPROP_INIT_FAILOVERPARTNER プロパティが追加されています。**FailoverPartner** キーワードは、DBPROP_INIT_PROVIDERSTRING の新しい接続文字列属性です。 詳細については、「 [SQL Server Native Client での接続文字列キーワードの使用](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
- フェールオーバーキャッシュは、プロバイダーが読み込まれるまで保持されます。これは、 **CoUninitialize**が呼び出されるか、または、アプリケーションに、データソースオブジェクト[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]などの Native Client OLE DB プロバイダーによって管理されるオブジェクトへの参照が含まれている限り保持されます。  
+ フェールオーバーキャッシュは、プロバイダーが読み込まれるまで保持されます。これは、 **CoUninitialize**が呼び出されるか、または、アプリケーションに、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データソースオブジェクトなどの Native Client OLE DB プロバイダーによって管理されるオブジェクトへの参照が含まれている限り保持されます。  
   
- Native Client OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]プロバイダーによるデータベースミラーリングのサポートの詳細については、「[初期化と承認のプロパティ](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーによるデータベースミラーリングのサポートの詳細については、「[初期化と承認のプロパティ](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、接続と接続文字列の属性を使用してデータベースミラーリングをサポートしています。 具体的には、SQL_COPT_SS_FAILOVER_PARTNER 属性は[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)および[Sqlgetconnectattr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)関数で使用するために追加されています。また、 **Failover_Partner**キーワードが新しい接続文字列属性として追加されています。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、接続と接続文字列の属性を使用してデータベースミラーリングをサポートしています。 具体的には、SQL_COPT_SS_FAILOVER_PARTNER 属性は[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)および[Sqlgetconnectattr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)関数で使用するために追加されています。また、 **Failover_Partner**キーワードが新しい接続文字列属性として追加されています。  
   
  アプリケーションに環境ハンドルが少なくとも 1 つ割り当てられている限り、フェールオーバー キャッシュが保持されます。 反対に、最後の環境ハンドルの割り当てが解除されると、キャッシュが消失します。  
   
 > [!NOTE]  
 >  ODBC ドライバー マネージャーが拡張され、フェールオーバー サーバーの名前を指定できるようになりました。  
   
-## <a name="see-also"></a>参照  
- [SQL Server Native Client 機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+## <a name="see-also"></a>関連項目  
+ [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [クライアントをデータベースミラーリングセッションに接続する &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [データベース ミラーリング &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

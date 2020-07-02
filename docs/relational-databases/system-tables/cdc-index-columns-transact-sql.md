@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c2dac6ec3b2799a4489d660c9467000b27391236
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 219e3c75b0c89c0707d772df86810419089bfe8f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833083"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790320"
 ---
 # <a name="cdcindex_columns-transact-sql"></a>cdc. index_columns (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   変更テーブルに関連付けられている各インデックス列に対して1行の値を返します。 インデックス列は、ソーステーブル内の行を一意に識別するために、変更データキャプチャによって使用されます。 既定では、ソース テーブルの主キー列が含まれます。 ただし、ソース テーブルに対して変更データ キャプチャを有効にする際、ソース テーブルの一意のインデックスが指定された場合は、代わりにそのインデックスの列が使用されます。 差分変更の追跡が有効になっている場合、ソーステーブルには主キーまたは一意のインデックスが必要です。 詳細については、「 [sys. sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)」を参照してください。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82833083"
 |**index_ordinal**|**tinyint**|インデックス内の列の 1 から始まる序数。|  
 |**column_id**|**int**|ソーステーブル内の列の ID。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [cdc. change_tables &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
   
   

@@ -13,19 +13,19 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5de109f0f26dcc8b892f7856f889ea93089c1205
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2358894c1303856fc3e1b9db06bca1f7e9427509
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304373"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787696"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大きな CLR ユーザー定義型 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   このトピックでは、大きな共通言語ランタイム (CLR) ユーザー定義型 (UDT) をサポートするための、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の OLE DB に対する変更について説明します。  
   
- Native Client で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の大きな clr udt のサポートの詳細については、「[大きな Clr ユーザー定義型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)」を参照してください。 サンプルについては、「[大きな CLR UDT の使用 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)」を参照してください。  
+ Native Client での大きな CLR Udt のサポートの詳細につい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ては、「[大きな Clr ユーザー定義型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)」を参照してください。 サンプルについては、「[大きな CLR UDT の使用 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)」を参照してください。  
   
 ## <a name="data-format"></a>データ形式  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、大きなオブジェクト (LOB) の型についてサイズが無制限である値の長さを表す場合に、~0 が使用されます。 8,000 バイトを超える CLR UDT のサイズも ~0 で表されます。  
@@ -121,13 +121,13 @@ ms.locfileid: "81304373"
 |Binding データ型|UDT からサーバー|UDT 以外からサーバー|サーバーから UDT|サーバーから UDT 以外|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|サポート (5)|エラー (1)|サポート (5)|エラー (4)|  
-|DBTYPE_BYTES|サポート (5)|なし|サポート (5)|なし|  
-|DBTYPE_WSTR|サポート (2)、(5)|なし|サポート (3)、(5)、(6)|なし|  
-|DBTYPE_BSTR|サポート (2)、(5)|なし|サポート (3)、(5)|なし|  
-|DBTYPE_STR|サポート (2)、(5)|なし|サポート (3)、(5)|なし|  
-|DBTYPE_IUNKNOWN|サポート (6)|なし|サポート (6)|なし|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|サポート (5)|なし|サポート (3)、(5)|なし|  
-|DBTYPE_VARIANT (VT_BSTR)|サポート (2)、(5)|なし|該当なし|該当なし|  
+|DBTYPE_BYTES|サポート (5)|該当なし|サポート (5)|該当なし|  
+|DBTYPE_WSTR|サポート (2)、(5)|該当なし|サポート (3)、(5)、(6)|該当なし|  
+|DBTYPE_BSTR|サポート (2)、(5)|該当なし|サポート (3)、(5)|該当なし|  
+|DBTYPE_STR|サポート (2)、(5)|該当なし|サポート (3)、(5)|該当なし|  
+|DBTYPE_IUNKNOWN|サポート (6)|該当なし|サポート (6)|該当なし|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|サポート (5)|該当なし|サポート (3)、(5)|該当なし|  
+|DBTYPE_VARIANT (VT_BSTR)|サポート (2)、(5)|該当なし|該当なし|該当なし|  
   
 ### <a name="key-to-symbols"></a>記号の説明  
   
@@ -172,7 +172,7 @@ ms.locfileid: "81304373"
   
  **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) を "80" に設定すると、大きな UDT 型が、下位クライアントで表示されるときと同じようにクライアントで表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [大きな CLR ユーザー定義型](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

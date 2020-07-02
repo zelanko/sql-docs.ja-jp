@@ -14,19 +14,19 @@ ms.assetid: e7134d65-5c1c-4ae2-b119-d9b4b9a42483
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb20bfa7ca76b8156ef2400e6db3235c590680ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dad8e1277a0161755f65bdafa1276ab401f9e3b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302632"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789401"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  **SqlcloSQLFreeStmt**は、 [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) *オプション*の値を SQL_CLOSE に置き換えます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーでは、 **sqlcloの**受信時に保留中の結果セットの行が破棄されます。 ステートメントの列とパラメーターのバインド (存在する場合) は、 **Sqlcloに**よって変更されないことに注意してください。  
+  **SqlcloSQLFreeStmt**は、 [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) *オプション*の値を SQL_CLOSE に置き換えます。 Native Client ODBC ドライバーでは、 **Sqlcloの**受信時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留中の結果セットの行が破棄されます。 ステートメントの列とパラメーターのバインド (存在する場合) は、 **Sqlcloに**よって変更されないことに注意してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

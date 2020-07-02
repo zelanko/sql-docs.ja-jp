@@ -14,17 +14,17 @@ ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f59b7f006387beea3d213b7f120e567487232e69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 409ee4f3b9206ce614ca62ba4935b8ff96a4f85a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282057"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789137"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、ドライバー固有のステートメント属性を公開するために、SQLGetStmtAttr を拡張します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、ドライバー固有のステートメント属性を公開するために、SQLGetStmtAttr を拡張します。  
   
  [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)には、読み取りと書き込みの両方のステートメント属性が一覧表示されます。 ここでは、読み取り専用のステートメント属性のみを示します。  
   
@@ -32,14 +32,14 @@ ms.locfileid: "81282057"
  コマンド バッチの現在のコマンドを公開します。 バッチ内のコマンドの位置を表す整数を返します。 *Valueptr*値の型は SQLLEN です。  
   
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
- SQL_SOPT_SS_NOCOUNT_STATUS 属性は、NOCOUNT オプションの現在の設定を示します。これ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、 [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)が呼び出されたときに、がステートメントの影響を受ける行の数をレポートするかどうかを制御します。 *Valueptr*値の型は SQLLEN です。  
+ SQL_SOPT_SS_NOCOUNT_STATUS 属性は、NOCOUNT オプションの現在の設定を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。これは、 [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)が呼び出されたときに、がステートメントの影響を受ける行の数をレポートするかどうかを制御します。 *Valueptr*値の型は SQLLEN です。  
   
 |値|説明|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT を OFF にします。 SQLRowCount は、影響を受けた行数を返します。|  
 |SQL_NC_ON|NOCOUNT を ON にします。 影響を受ける行の数は SQLRowCount によって返されず、戻り値は0です。|  
   
- SQLRowCount が0を返す場合、アプリケーションは SQL_SOPT_SS_NOCOUNT_STATUS をテストする必要があります。 SQL_NC_ON が返された場合、SQLRowCount の値が0の場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、によって行数が返されなかったことを示します。 SQL_NC_OFF が返される場合、NOCOUNT が無効になっており、SQLRowCount から返される値が 0 であると、ステートメントで処理された行がなかったことを示します。  
+ SQLRowCount が0を返す場合、アプリケーションは SQL_SOPT_SS_NOCOUNT_STATUS をテストする必要があります。 SQL_NC_ON が返された場合、SQLRowCount の値が0の場合は、によって行数が返されなかったことを示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SQL_NC_OFF が返される場合、NOCOUNT が無効になっており、SQLRowCount から返される値が 0 であると、ステートメントで処理された行がなかったことを示します。  
   
  SQL_SOPT_SS_NOCOUNT_STATUS が SQL_NC_OFF のときは、アプリケーションでは、SQLRowCount の値を表示しないでください。 大きなバッチやストアド プロシージャには、複数の SET NOCOUNT ステートメントが含まれていることがあるので、SQL_SOPT_SS_NOCOUNT_STATUS が一定であると想定することはできません。 このオプションは、SQLRowCount が0を返すたびにテストする必要があります。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "81282057"
   
  テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQLSetStmtAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59370)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

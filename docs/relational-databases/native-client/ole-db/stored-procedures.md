@@ -16,15 +16,15 @@ ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f317ab69c210d91c9d5c85a0e6d5061b1177bdbb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8ba52fb27ecd67e5d42d77fbdb4cc6c5b8ece025
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305313"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787638"
 ---
 # <a name="stored-procedures"></a>ストアド プロシージャ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   ストアド プロシージャ ([ストアド プロシージャ &#40;データベース エンジン&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) は、データベースに格納されている実行可能なオブジェクトです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では次に示すオブジェクトをサポートしています。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "81305313"
   
 -   [ストアド プロシージャの呼び出し &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-calling.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

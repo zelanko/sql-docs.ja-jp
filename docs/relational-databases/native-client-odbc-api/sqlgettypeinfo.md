@@ -14,23 +14,23 @@ ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81ba57c6e66f156f13055ff5ec941fa8f0c86381
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7a0f52c2a1bb2826126ae6548cfad95c5ccf5eac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298448"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85788067"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、 **SQLGetTypeInfo**の結果セットの列 USERTYPE を報告します。 USERTYPE には DB-Library データ型の定義が示されるので、既存の DB-Library アプリケーションを ODBC に移植する開発者にとって便利です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、 **SQLGetTypeInfo**の結果セットの列 USERTYPE を報告します。 USERTYPE には DB-Library データ型の定義が示されるので、既存の DB-Library アプリケーションを ODBC に移植する開発者にとって便利です。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では ID が属性として処理されますが、ODBC ではデータ型として処理されます。 この不一致を解決するために、 **SQLGetTypeInfo**は、 **intidentity**、 **smallintidentity**、 **tinyintidentity**、 **decimalidentity**、および**numericidentity**というデータ型を返します。 **SQLGetTypeInfo**結果セットの列 AUTO_UNIQUE_VALUE は、これらのデータ型の値 TRUE を報告します。  
   
- **Varchar**、 **nvarchar** 、および**Varbinary**の場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Native Client ODBC ドライバーは、実際には無制限であるにもかかわらず、COLUMN_SIZE の値に対してそれぞれ8000、4000、および8000を報告し続けます。 これにより、旧バージョンとの互換性が確保されます。  
+ **Varchar**、 **nvarchar** 、および**Varbinary**の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、実際には無制限であるにもかかわらず、COLUMN_SIZE の値に対してそれぞれ8000、4000、および8000を報告し続けます。 これにより、旧バージョンとの互換性が確保されます。  
   
- **Xml**データ型の場合、NATIVE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、サイズを無制限に示す COLUMN_SIZE の SQL_SS_LENGTH_UNLIMITED を報告します。  
+ **Xml**データ型の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、サイズを無制限に示す COLUMN_SIZE の SQL_SS_LENGTH_UNLIMITED を報告します。  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo とテーブル値パラメーター  
  テーブル値パラメーターのテーブル型は、実質的には、他の型を定義するために使用される型であるメタ型です。 そのため、SQLGetTypeInfo を介して公開する必要はありません。 アプリケーションでは、テーブル値パラメーターで使用されるテーブル型のメタデータを取得するために、SQLGetTypeInfo ではなく SQLTables を使用する必要があります。  
@@ -47,7 +47,7 @@ ms.locfileid: "81298448"
 ## <a name="sqlgettypeinfo-support-for-large-clr-udts"></a>SQLGetTypeInfo による大きな CLR UDT のサポート  
  **SQLGetTypeInfo**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQLGetTypeInfo 関数](https://go.microsoft.com/fwlink/?LinkId=59356)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

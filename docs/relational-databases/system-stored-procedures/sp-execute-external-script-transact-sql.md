@@ -5,7 +5,7 @@ ms.date: 05/28/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -20,16 +20,16 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 45273b83d5beb033d8c3aad60fa9919a885e55c4
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 10c29ab8faed05c2fb2750e1e4de17b2fc1fb2b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790402"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **Sp_execute_external_script**ストアドプロシージャは、プロシージャへの入力引数として指定されたスクリプトを実行し、 [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md)および[言語拡張](../../language-extensions/language-extensions-overview.md)と共に使用されます。 
@@ -189,9 +189,9 @@ sp_execute_external_script
 > [!NOTE]  
 > ストリーミングと並列処理は、Enterprise Edition でのみサポートされています。 標準エディションのクエリには、エラーを発生させることなくパラメーターを含めることができますが、パラメーターが無効になり、R スクリプトが1つのプロセスで実行されます。  
   
-## <a name="restrictions"></a>制限  
+## <a name="restrictions"></a>制限事項  
 
-### <a name="data-types"></a>データの種類
+### <a name="data-types"></a>データ型
 
 次のデータ型は、 **sp_execute_external_script**プロシージャの入力クエリまたはパラメーターで使用されている場合はサポートされません。また、サポートされていない型エラーを返します。  
 
@@ -225,11 +225,11 @@ Float 値 (たとえば、、 `+Inf` 、 `-Inf` `NaN` ) は、両方の言語で
 
 **すべての外部スクリプトデータベースの実行**権限が必要です。  
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 このセクションでは、を使用して、このストアドプロシージャを使用して R または Python スクリプトを実行する方法の例について説明 [!INCLUDE[tsql](../../includes/tsql-md.md)] します。
 
-### <a name="a-return-an-r-data-set-to-sql-server"></a>A. R データセットを SQL Server に返す  
+### <a name="a-return-an-r-data-set-to-sql-server"></a>A: R データセットを SQL Server に返す  
 
 次の例では、 **sp_execute_external_script**を使用して、R に含まれる虹彩データセットを返すストアドプロシージャを作成します。  
 
@@ -252,7 +252,7 @@ END;
 GO
 ```
 
-### <a name="b-create-a-python-model-and-generate-scores-from-it"></a>B. Python モデルを作成し、それからスコアを生成する
+### <a name="b-create-a-python-model-and-generate-scores-from-it"></a>B: Python モデルを作成し、それからスコアを生成する
 
 この例では、を使用し `sp_execute_external_script` て、単純な Python モデルでスコアを生成する方法を示します。
 
@@ -289,7 +289,7 @@ GO
 Python コードで使用される列見出しは SQL Server に出力されません。したがって、SQL で使用する列の名前とデータ型を指定するには、WITH RESULT ステートメントを使用します。
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-### <a name="c-generate-an-r-model-based-on-data-from-sql-server"></a>C. SQL Server からのデータに基づいて R モデルを生成する  
+### <a name="c-generate-an-r-model-based-on-data-from-sql-server"></a>C: SQL Server からのデータに基づいて R モデルを生成する  
 
 次の例では、 **sp_execute_external_script**を使用して、虹彩モデルを生成し、モデルを返すストアドプロシージャを作成します。  
 

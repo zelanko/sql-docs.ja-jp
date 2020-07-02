@@ -1,5 +1,5 @@
 ---
-title: sys 保護 (Transact-sql) |Microsoft Docs
+title: sys.sysによる保護 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca403b5ad56386252d789ddede007a7293e59a40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 457eccb7cf032a8b4e0be3a112e15cfe492a32f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079237"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790474"
 ---
-# <a name="syssysprotects-transact-sql"></a>sys 保護 (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syssysprotects-transact-sql"></a>sys.sysによる保護 (Transact-sql)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   GRANT ステートメントと DENY ステートメントを使用して、データベース内のセキュリティアカウントに適用されている権限に関する情報を格納します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68079237"
 |**欄**|**varbinary(8000)**|これらの SELECT または UPDATE 権限を適用する列のビットマップです。<br /><br /> ビット 0 = すべての列。<br /><br /> ビット 1 = 権限を適用する列<br /><br /> NULL = 情報がありません。|  
 |**権限**|**smallint**|GRANT または DENY 権限を発行したユーザーのユーザー ID です。 ユーザーおよびロールの数が32767を超えた場合、オーバーフローまたは NULL を返します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

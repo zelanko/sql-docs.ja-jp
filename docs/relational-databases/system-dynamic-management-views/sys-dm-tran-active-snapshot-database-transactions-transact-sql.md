@@ -20,15 +20,15 @@ ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42ed4cebfda43801cdbc3ab42225783c674612e0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4dd4273074d543c97161ce0fdca9b585bb1a6d5c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811069"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790515"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>dm_tran_active_snapshot_database_transactions (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   インスタンスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、この動的管理ビューは、行バージョンを生成またはアクセスする可能性のあるすべてのアクティブなトランザクションの仮想テーブルを返します。 トランザクションは、次の条件を 1 つ以上満たします。  
   
@@ -153,7 +153,7 @@ elapsed_time_seconds
   
 -   XSN-60: これは、スナップショット分離で実行されている2番目のトランザクションです。 出力では、XSN-59 と同じ情報が示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;トランザクション分離レベルを設定する](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  

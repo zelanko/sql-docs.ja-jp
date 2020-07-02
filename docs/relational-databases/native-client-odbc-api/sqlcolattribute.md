@@ -14,17 +14,17 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6113316f3be68ca03b5c107ed54965577b6963c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b539e532d6de43bf646652a1d4845eaf38d8bd2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789390"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  **Sqlcolattribute**を使用すると、準備済みまたは実行済みの ODBC ステートメントの結果セット列の属性を取得できます。 準備されたステートメントで**Sqlcolattribute**を呼び[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]出すと、との間にラウンドトリップが発生します。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、ステートメントの実行の一部として結果セットの列データを受け取ります。そのため **、Sqlexecute**または**SQLExecDirect**の完了後に**sqlcolattribute**を呼び出すと、サーバーのラウンドトリップが発生しません。  
+  **Sqlcolattribute**を使用すると、準備済みまたは実行済みの ODBC ステートメントの結果セット列の属性を取得できます。 準備されたステートメントで**Sqlcolattribute**を呼び出すと、との間にラウンドトリップが発生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、ステートメントの実行の一部として結果セットの列データを受け取ります。そのため、 **sqlexecute**または**SQLExecDirect**の完了後に**sqlcolattribute**を呼び出すと、サーバーのラウンドトリップが発生しません。  
   
 > [!NOTE]  
 >  すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の結果セットで、ODBC 列の ID 属性は使用できません。  
@@ -56,7 +56,7 @@ ms.locfileid: "81302631"
   
  すべてのバージョンで、準備された SQL ステートメントのバッチによって複数の結果セットが生成されるときは、最初の結果セットのみの列属性が報告されます。  
   
- 次の列属性は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーによって公開される拡張機能です。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、 *numericattrptr*パラメーター内のすべての値を返します。 WORD 配列へのポインターである SQL_CA_SS_COMPUTE_BYLIST を除き、SDWORD 型 (符号付き long 型) として値が返されます。  
+ 次の列属性は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーによって公開される拡張機能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、 *Numericattrptr*パラメーター内のすべての値を返します。 WORD 配列へのポインターである SQL_CA_SS_COMPUTE_BYLIST を除き、SDWORD 型 (符号付き long 型) として値が返されます。  
   
 |フィールド ID|返される値|  
 |----------------------|--------------------|  
@@ -108,7 +108,7 @@ ms.locfileid: "81302631"
   
  詳細については、「[スパース列のサポート &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQLColAttribute 関数](https://go.microsoft.com/fwlink/?LinkId=59334)   
  [ODBC API の実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  

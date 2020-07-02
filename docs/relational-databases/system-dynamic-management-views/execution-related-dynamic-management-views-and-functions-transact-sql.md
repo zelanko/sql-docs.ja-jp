@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46db1a37a7ee05dfe85d1fcbedc3400ef6ffcf24
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ce9611eb339466c6f1b6bfde7ac3516b14716305
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829535"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790476"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>実行関連の動的管理ビューおよび関数 (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、次の動的管理オブジェクトについて説明します。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "82829535"
 > [!NOTE]  
 >  **Dm_exec_query_transformation_stats**動的管理ビューは、情報提供のみを目的としています。 サポートされていません。 将来の互換性は保証されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

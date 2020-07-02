@@ -19,16 +19,16 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 143ed8e5487772a39e4e98c92f8f07d78de7f370
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c57cc780bc3e05347daf8dd7778e7e5de274d303
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790487"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>index_resumable_operations (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 **index_resumable_operations**は、再開可能なインデックスの再構築または作成のために現在の実行状態を監視して確認するシステムビューです。  
 **適用対象**: SQL Server (2017 以降)、および Azure SQL Database
   
@@ -60,7 +60,7 @@ ms.locfileid: "82823383"
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)

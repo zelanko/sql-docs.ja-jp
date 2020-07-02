@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6b06a0bdbb0cfa7e80d30128ccce71661edde219
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: facfcf92693f108bb04cbb864ac8364e2bef6721
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790407"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>データベースメンテナンスプランのストアドプロシージャ (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、メンテナンスタスクの設定に使用される次のシステムストアドプロシージャがサポートされています。 これらのストアドプロシージャは、データベースメンテナンスプランで使用されます。 この機能は、これらのストアドプロシージャを使用しないメンテナンスプランに置き換えられました。 これらのプロシージャは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたプログラムでデータベース メンテナンス プランを管理する場合に使用します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、メンテナンスタスクの設定に使用される次のシステムストアドプロシージャがサポートされています。 これらのストアドプロシージャは、データベースメンテナンスプランで使用されます。 この機能は、これらのストアドプロシージャを使用しないメンテナンスプランに置き換えられました。 これらのプロシージャは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたプログラムでデータベース メンテナンス プランを管理する場合に使用します。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67942303"
 |[sp_add_maintenance_plan_job](../../relational-databases/system-stored-procedures/sp-add-maintenance-plan-job-transact-sql.md)|[sp_help_maintenance_plan](../../relational-databases/system-stored-procedures/sp-help-maintenance-plan-transact-sql.md)|  
 |[sp_delete_maintenance_plan](../../relational-databases/system-stored-procedures/sp-delete-maintenance-plan-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   

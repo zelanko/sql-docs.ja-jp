@@ -33,17 +33,17 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1e4af8a90a4f83d8200f02910f3e445b49fca91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3107dbb5771731fd15bb1432b2a180af612c86fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790450"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  1つの単語や語句に対する完全一致またはあいまいな一致を含む列に対して、0行、1行、または複数の行から成るテーブルを返します。特定の範囲内での近接語句、または重み付け一致が含まれます。 CONTAINSTABLE は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの[from 句](../../t-sql/queries/from-transact-sql.md)で使用され、通常のテーブル名のように参照されます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字ベースのデータ型を含むフルテキストインデックス列に対してフルテキスト検索を実行します。  
+  1つの単語や語句に対する完全一致またはあいまいな一致を含む列に対して、0行、1行、または複数の行から成るテーブルを返します。特定の範囲内での近接語句、または重み付け一致が含まれます。 CONTAINSTABLE は、SELECT ステートメントの[from 句](../../t-sql/queries/from-transact-sql.md)で使用され、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 通常のテーブル名のように参照されます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字ベースのデータ型を含むフルテキストインデックス列に対してフルテキスト検索を実行します。  
   
  CONTAINSTABLE は、 [contains 述語](../../t-sql/queries/contains-transact-sql.md)と同じ種類の一致に便利であり、contains と同じ検索条件を使用します。  
   
@@ -132,9 +132,9 @@ CONTAINSTABLE
   
  1 つの列に言語の異なる複数のドキュメントが BLOB (Binary Large Object) として格納されている場合、そのインデックスの作成に使用される言語は、そのドキュメントのロケール識別子 (LCID) によって決まります。 そのような列に対してクエリを実行する場合は、*LANGUAGE**language_term* を指定すると検索結果の一致率が高まります。  
   
- 文字列として指定した場合、 *language_term*は、 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)互換性ビューの**alias**列の値に対応します。  文字列の場合は、'*language_term*' のように引用符 (') で囲む必要があります。 *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 *language_term* を 16 進数の値で指定する場合は、「0x」の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
+ 文字列として指定した場合、 *language_term* [sys.sys言語](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)の互換性ビューの**alias**列の値に対応します。  文字列の場合は、'*language_term*' のように引用符 (') で囲む必要があります。 *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 *language_term* を 16 進数の値で指定する場合は、「0x」の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
   
- 値が2バイト文字セット (DBCS) 形式の場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はそれを Unicode に変換します。  
+ 値が2バイト文字セット (DBCS) 形式の場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はそれを Unicode に変換します。  
   
  指定した言語が無効であるか、その言語に該当するリソースがインストールされていない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりエラーが返されます。 ニュートラル言語リソースを使用するには、*language_term* に「0x0」を指定してください。  
   
@@ -190,7 +190,7 @@ SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green') ORDER BY RANK DESC;
 SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green or Black') ORDER BY RANK DESC;  
 ```  
   
-### <a name="b-returning-rank-values"></a>B. 順位値を返す  
+### <a name="b-returning-rank-values"></a>B: 順位値を返す  
  次の例では、"frame"、"wheel"、または "tire" という単語を含むすべての製品名を検索します。各単語にはさまざまな重みが割り当てられています。 これらの検索条件に一致する行が返されるたびに、一致の相対的な近さ (順位付け値) が表示されます。 また、最も順位値の高い行を最初に返します。  
   
 ```  
@@ -207,7 +207,7 @@ ORDER BY KEY_TBL.RANK DESC;
 GO  
 ```  
   
-### <a name="c-returning-rank-values-greater-than-a-specified-value"></a>C. 指定された値より大きい順位値を返す  
+### <a name="c-returning-rank-values-greater-than-a-specified-value"></a>C: 指定された値より大きい順位値を返す  
   
 ||  
 |-|  
@@ -232,7 +232,7 @@ GO
 > [!NOTE]  
 >  フルテキストクエリで最大距離として整数が指定されていない場合、ギャップが100の論理用語を超えるヒットのみを含むドキュメントは、NEAR の要件を満たしておらず、順位が0になります。  
   
-### <a name="d-returning-top-5-ranked-results-using-top_n_by_rank"></a>D. top_n_by_rank を使用して上位 5 個の結果を返す  
+### <a name="d-returning-top-5-ranked-results-using-top_n_by_rank"></a>D: top_n_by_rank を使用して上位 5 個の結果を返す  
  次の例では、`Description` 列内で "light" または "lightweight" という単語の近くに "aluminum" という語句を含んでいる、上位 5 種の製品の説明を返します。  
   
 ```  
@@ -256,7 +256,7 @@ GO
  `GO`  
   
 ### <a name="e-specifying-the-language-argument"></a>E. LANGUAGE 引数を指定する  
- `LANGUAGE`引数を使用する例を次に示します。  
+ 引数を使用する例を次に示し `LANGUAGE` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -280,7 +280,7 @@ GO
 > [!NOTE]  
 >  Top_n_by_rank を使用するために必要な言語*language_term*引数 *。*  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランクを使用して検索結果を制限する](../../relational-databases/search/limit-search-results-with-rank.md)   
  [フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)   
  [フルテキスト検索クエリの作成 &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   

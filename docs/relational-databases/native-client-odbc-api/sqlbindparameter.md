@@ -14,17 +14,17 @@ ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74122d531eba1f714e16c168838ee1653a8f1293
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc270cb83833e3fcfc54ef4721a62ccaf3980729
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789435"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  **SQLBindParameter**を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーにデータを提供する際にデータ変換の負荷が軽減されるため、アプリケーションのクライアントコンポーネントとサーバーコンポーネントの両方でパフォーマンスが大幅に向上します。 その他に、概数データ型を挿入または更新するときに有効桁数を失うことが少なくなるという利点もあります。  
+  **SQLBindParameter**を使用すると、NATIVE Client ODBC ドライバーにデータを提供する際にデータ変換の負荷が軽減されるため [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、アプリケーションのクライアントコンポーネントとサーバーコンポーネントの両方でパフォーマンスが大幅に向上します。 その他に、概数データ型を挿入または更新するときに有効桁数を失うことが少なくなるという利点もあります。  
   
 > [!NOTE]  
 >  **Char**型と**wchar**型のデータを image 型の列に挿入する場合は、バイナリ形式に変換した後のデータサイズではなく、渡されるデータのサイズが使用されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "81302683"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを使用する場合は、入力パラメーターのバインド時に SQL_PARAM_INPUT を指定します。 OUTPUT キーワードで定義されたストアド プロシージャ パラメーターをバインドするときは、SQL_PARAM_OUTPUT または SQL_PARAM_INPUT_OUTPUT のみを指定してください。  
   
- [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)は、バインドさ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れたパラメーター配列の配列要素によってステートメントの実行でエラーが発生した場合に、Native Client ODBC ドライバーと互換性がありません。 また、ODBC ステートメント属性 SQL_ATTR_PARAMS_PROCESSED_PTR は、エラーが発生する前に処理された行数を報告します。 その後、必要に応じてパラメーター状態配列全体をアプリケーションで調査することにより、正常に実行されたステートメント数を検出できます。  
+ [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)は、バインドされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パラメーター配列の配列要素によってステートメントの実行でエラーが発生した場合に、Native Client ODBC ドライバーと互換性がありません。 また、ODBC ステートメント属性 SQL_ATTR_PARAMS_PROCESSED_PTR は、エラーが発生する前に処理された行数を報告します。 その後、必要に応じてパラメーター状態配列全体をアプリケーションで調査することにより、正常に実行されたステートメント数を検出できます。  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>SQL 文字型のパラメーターのバインド  
  渡された SQL データ型が文字型の場合、 *Columnsize*は文字数 (バイト数ではない) のサイズになります。 データ文字列の長さが8000を超える場合、 *Columnsize*を**SQL_SS_LENGTH_UNLIMITED**に設定し、SQL 型のサイズに制限がないことを示します。  
@@ -57,7 +57,7 @@ ms.locfileid: "81302683"
 ## <a name="sqlbindparameter-support-for-large-clr-udts"></a>SQLBindParameter による大きな CLR UDT のサポート  
  **SQLBindParameter**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC API の実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SQLBindParameter 関数](https://go.microsoft.com/fwlink/?LinkId=59328)  
   

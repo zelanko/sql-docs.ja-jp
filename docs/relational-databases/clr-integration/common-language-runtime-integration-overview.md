@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 768ef9a74a7d7856533fa3ace09e25fee9e36c0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dce6f579e4a1e0b983dbd5f3e1c2df6bca7c76c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488396"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789566"
 ---
 # <a name="common-language-runtime-integration"></a>共通言語ランタイムの統合
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]および[Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)を使用すると、ネイティブの共通言語ランタイム (CLR) 統合を SQL Server サーバー側モジュール (プロシージャ、関数、トリガー) として使用して、.net 言語を使用して一部の機能を実装できます。 CLR では、言語間の統合、コード アクセス セキュリティ、オブジェクトの有効期間の管理、デバッグとプロファイルのサポートなどのサービスがマネージド コードに提供されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザーやアプリケーション開発者にとっての CLR 統合とは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# などの .NET Framework 言語を使用して、ストアド プロシージャ、トリガー、ユーザー定義型、ユーザー定義関数 (スカラー関数とテーブル値関数)、ユーザー定義集計関数を記述できるようになることを意味します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、.NET Framework Version 4 が付属します。  
 
@@ -67,8 +67,8 @@ CLR 統合を使用すると、正規表現、外部リソース (サーバー�
  [CLR 統合の有効化](../../relational-databases/clr-integration/clr-integration-enabling.md)  
  CLR 統合を有効にする方法を説明します。  
   
-## <a name="see-also"></a>参照  
- [.NET Framework のインストール](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のみ)   
+## <a name="see-also"></a>関連項目  
+ [.NET Framework のインストール](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のみ)   
  [CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   

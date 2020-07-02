@@ -14,15 +14,15 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87470f9dc2c0bedbb3dd6fd0e45de64e256775cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55abc5e347639f50593a5efc4223713e79bd2207
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388035"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787569"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client のシステム要件
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ アクセス機能 (MARS など) を使用するには、次のソフトウェアがインストールされている必要があります。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "81388035"
 >  このソフトウェアは、必ず管理者特権でログオンしてからインストールしてください。  
   
 ## <a name="operating-system-requirements"></a>オペレーティング システムの要件  
- Native Client をサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するオペレーティングシステムの一覧については、「 [SQL Server Native Client のサポートポリシー](../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md)」を参照してください。  
+ Native Client をサポートするオペレーティングシステムの一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [SQL Server Native Client のサポートポリシー](../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md)」を参照してください。  
   
 ## <a name="sql-server-requirements"></a>SQL Server の要件  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータにアクセスするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがインストールされている必要があります。  
@@ -44,7 +44,7 @@ ms.locfileid: "81388035"
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は、MDAC、Windows Data Access Components、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client のすべてのバージョンからの接続をサポートします。 古いクライアント バージョンで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する場合、クライアントで認識されないサーバーのデータ型は、クライアント バージョンと互換する型にマップされます。 詳細については、このトピックの「クライアント バージョンのデータ型の互換性」をご覧ください。  
   
 ## <a name="cross-language-requirements"></a>言語間の要件  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の英語版は、サポートされているオペレーティング システムであれば、そのすべてのローカライズ版でもサポートされます。 ネイティブクライアントの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカライズ版は、ローカライズされた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブクライアントバージョンと同じ言語のローカライズされたオペレーティングシステムでサポートされています。 ローカライズされ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]たバージョンの Native Client は、対応する言語設定がインストールされている限り、サポートされているオペレーティングシステムの英語版でもサポートされています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の英語版は、サポートされているオペレーティング システムであれば、そのすべてのローカライズ版でもサポートされます。 ネイティブクライアントのローカライズ版は、ローカライズされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] たネイティブクライアントバージョンと同じ言語のローカライズされたオペレーティングシステムでサポートされてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ローカライズされたバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は、対応する言語設定がインストールされている限り、サポートされているオペレーティングシステムの英語版でもサポートされています。  
   
  アップグレードの要件を次に示します。  
   
@@ -52,14 +52,14 @@ ms.locfileid: "81388035"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client のローカライズ版は、同じ言語にローカライズされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client にアップグレードできます。  
   
--   Native Client の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカライズ版は、英語版の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client にアップグレードできます。  
+-   Native Client のローカライズ版は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、英語版の Native client にアップグレードでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client のローカライズ版は、異なる言語にローカライズされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client にはアップグレードできません。  
   
 ## <a name="data-type-compatibility-for-client-versions"></a>クライアント バージョンのデータ型の互換性  
  以下の表に示すように、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は新しいデータ型を、下位クライアントと互換する古いデータ型にマップします。  
   
- OLE DB と ADO アプリケーションでは、 **DataTypeCompatibility** Native Client で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DataTypeCompatibility 接続文字列キーワードを使用して、古いデータ型を操作できます。 **DataTypeCompatibility=80** の場合、OLE DB クライアントは TDS (表形式データ ストリーム) バージョンではなく、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] TDS バージョンを使用して接続します。 つまり、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のデータ型の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ではなく、サーバーによって下位変換が実行されます。 またこの場合は、接続で使用可能な機能が、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 機能セットに制限されます。 新しいデータ型または機能を使用しようとすると、API 呼び出し時にすぐに検出されます。無効な要求はサーバーに渡されず、呼び出し元のアプリケーションにエラーが返されます。  
+ OLE DB と ADO アプリケーションでは、Native Client で**DataTypeCompatibility**接続文字列キーワードを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 古いデータ型を操作できます。 **DataTypeCompatibility=80** の場合、OLE DB クライアントは TDS (表形式データ ストリーム) バージョンではなく、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] TDS バージョンを使用して接続します。 つまり、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のデータ型の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ではなく、サーバーによって下位変換が実行されます。 またこの場合は、接続で使用可能な機能が、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 機能セットに制限されます。 新しいデータ型または機能を使用しようとすると、API 呼び出し時にすぐに検出されます。無効な要求はサーバーに渡されず、呼び出し元のアプリケーションにエラーが返されます。  
   
  ODBC の**DataTypeCompatibility**コントロールはありません。  
   
@@ -76,9 +76,9 @@ ms.locfileid: "81388035"
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
-|時間|時間|varchar|Varchar|  
+|time|time|varchar|Varchar|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client プログラミング](../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [SQL Server Native Client のインストール](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   

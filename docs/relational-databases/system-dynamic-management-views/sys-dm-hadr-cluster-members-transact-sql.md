@@ -22,15 +22,15 @@ ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffa67137c4b7d99cd0aa394319e9415a72b73103
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3ec0ed5aa4ddedd7e3fcfd544d53a270eb9e3372
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829395"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790457"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   が有効になっているのローカルインスタンスをホストする WSFC ノードに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] wsfc クォーラムがある場合、はクォーラムを構成するメンバーごとに1行の値を返し、それぞれの状態を返します。 これには、クラスター内のすべてのノード ( **Clusterenum**関数によって CLUSTER_ENUM_NODE の種類で返されます) とディスクまたはファイル共有監視 (存在する場合) が含まれます。 特定のメンバーに対して返される行には、そのメンバーの状態に関する情報が含まれています。 たとえば、1つのノードがダウンしているノードが5つあるノードクラスターの場合、クォーラムを持つノード上に存在するが有効になっているサーバーインスタンスから**sys. dm_hadr_cluster_members**を照会すると、dm_hadr_cluster_members には、 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ダウンノードの状態が "NODE_DOWN" として反映され**ます**。  
   
