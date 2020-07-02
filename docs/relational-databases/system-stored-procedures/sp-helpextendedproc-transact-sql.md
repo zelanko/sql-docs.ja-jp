@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8341f752b266d245603f849325dc32f90f9d92c2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7866b9d64a6064cac23382ea3bb33f4fc355cd80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828913"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733206"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在定義されている拡張ストアドプロシージャと、プロシージャ (関数) が属するダイナミックリンクライブラリ (DLL) の名前を報告します。  
   
@@ -72,7 +72,7 @@ EXEC sp_helpextendedproc;
 GO  
 ```  
   
-### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>B. 1つの拡張ストアドプロシージャに関するヘルプをレポートする  
+### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>B: 1つの拡張ストアドプロシージャに関するヘルプをレポートする  
  次の例では、拡張ストアドプロシージャに関するレポートを作成し `xp_cmdshell` ます。  
   
 ```  
@@ -82,7 +82,7 @@ EXEC sp_helpextendedproc xp_cmdshell;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
  [sp_dropextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

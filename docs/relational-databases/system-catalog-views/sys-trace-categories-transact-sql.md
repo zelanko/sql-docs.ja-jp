@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4898bdb8e05c2b2fce20ca30ef7f056107a4befa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8ebbce0ef5bf49b1105a5ce7306011b4f7e512e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821271"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733417"
 ---
 # <a name="systrace_categories-transact-sql"></a>sys.trace_categories (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   類似したイベント クラスは、同じカテゴリに分類されます。 Trace_categories カタログビューの各行は、サーバー全体で一意のカテゴリを識別し**ます**。 これらのカテゴリは、の特定のバージョンでは変更されません [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82821271"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;のトレース](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
  [trace_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   

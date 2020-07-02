@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9398862ba3c86496ce235efc53b750d2c5f91ccf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4d4590c88082a2788039c2e0ea2d1789703b4501
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832780"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733480"
 ---
 # <a name="sysconversation_priorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースに作成されたメッセージ交換の優先度ごとに 1 行のデータを格納します。この行の内容を次の表に示します。 
   
@@ -64,7 +64,7 @@ ORDER BY priority_name, contract_name,
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER BROKER PRIORITY &#40;Transact-sql&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [DROP BROKER PRIORITY &#40;Transact-sql&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   

@@ -22,20 +22,20 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b4ee24b0ee74540a967c713579365c68aa849dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "73982992"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738564"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   拡張イベント非同期ファイル ターゲットによって作成されるファイルを読み取ります。 行ごとに、XML 形式の 1 つのイベントが返されます。  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]および[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]は、XEL および XEM 形式で生成されたトレース結果を受け入れます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]拡張イベントでは、XEL 形式のトレース結果のみがサポートされます。 SQL Server Management Studio を使用して、トレース結果を XEL 形式で読み取ることをお勧めします。    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]および [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] は、XEL および XEM 形式で生成されたトレース結果を受け入れます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]拡張イベントでは、XEL 形式のトレース結果のみがサポートされます。 SQL Server Management Studio を使用して、トレース結果を XEL 形式で読み取ることをお勧めします。    
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -79,7 +79,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 
   
 ## <a name="remarks"></a>Remarks  
- **Fn_xe_file_target_read_file**を実行して大きな結果セットを読み取る[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]と、エラーが発生する可能性があります。 結果を**ファイル**モード (**Ctrl + Shift + F キー**) に使用して、大きな結果セットをファイルにエクスポートし、代わりに別のツールでファイルを読み取ります。  
+ **Fn_xe_file_target_read_file**を実行して大きな結果セットを読み取る [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] と、エラーが発生する可能性があります。 結果を**ファイル**モード (**Ctrl + Shift + F キー**) に使用して、大きな結果セットをファイルにエクスポートし、代わりに別のツールでファイルを読み取ります。  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
@@ -93,7 +93,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\metafile.xem', null, null);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベントの動的管理ビュー](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [拡張イベントのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  

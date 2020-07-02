@@ -22,17 +22,17 @@ ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ab1797fabd8fb7d77eab85c97604b77e72f25c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae1f88ba7694f99546382d9b1450aea4c555f4d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042762"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734380"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの[from 句](../../t-sql/queries/from-transact-sql.md)で使用される関数で、文字[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ベースのデータ型を含むフルテキストインデックス列に対してフルテキスト検索を実行します。 この関数は、指定された*freetext_string*内のテキストの正確な表現だけでなく、意味に一致する値を含む列について、0行、1行、または複数の行から成るテーブルを返します。 FREETEXTTABLE は、通常のテーブル名のように参照されます。  
+  は、SELECT ステートメントの[from 句](../../t-sql/queries/from-transact-sql.md)で使用される関数で、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字ベースのデータ型を含むフルテキストインデックス列に対してフルテキスト検索を実行します。 この関数は、指定された*freetext_string*内のテキストの正確な表現だけでなく、意味に一致する値を含む列について、0行、1行、または複数の行から成るテーブルを返します。 FREETEXTTABLE は、通常のテーブル名のように参照されます。  
   
  FREETEXTTABLE は、 [FREETEXT &#40;transact-sql&#41;](../../t-sql/queries/freetext-transact-sql.md)と同じ種類の一致に便利です。  
   
@@ -84,7 +84,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
  *language_term* を文字列で指定する場合は、[sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 互換性ビューの **alias** 列の値と同じ値を指定します。  文字列の場合は、'*language_term*' のように引用符 (') で囲む必要があります。 *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 *language_term* を 16 進数の値で指定する場合は、「0x」の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
   
- 値が2バイト文字セット (DBCS) 形式の場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はそれを Unicode に変換します。  
+ 値が2バイト文字セット (DBCS) 形式の場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はそれを Unicode に変換します。  
   
  指定した言語が無効であるか、その言語に該当するリソースがインストールされていない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりエラーが返されます。 ニュートラル言語リソースを使用するには、*language_term* に「0x0」を指定してください。  
   
@@ -124,8 +124,8 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Blue');
 SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');  
 ```  
   
-### <a name="b-using-freetext-in-an-inner-join"></a>B. INNER JOIN での FREETEXT の使用  
- 次の例では、の`high level of performance`意味に一致する説明を持つ製品の説明と順位を返します。  
+### <a name="b-using-freetext-in-an-inner-join"></a>B: INNER JOIN での FREETEXT の使用  
+ 次の例では、の意味に一致する説明を持つ製品の説明と順位を返し `high level of performance` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -142,7 +142,7 @@ ORDER BY RANK DESC;
 GO  
 ```  
   
-### <a name="c-specifying-language-and-highest-ranked-matches"></a>C. 言語および最高順位の一致の指定  
+### <a name="c-specifying-language-and-highest-ranked-matches"></a>C: 言語および最高順位の一致の指定  
  次の例は同じであり、 `LANGUAGE` *language_term*と*top_n_by_rank*パラメーターの使用方法を示しています。  
   
 ```  

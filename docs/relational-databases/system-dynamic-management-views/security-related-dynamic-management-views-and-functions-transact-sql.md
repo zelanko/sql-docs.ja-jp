@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 450d131c-773a-4e05-ab96-3837b6c33aae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a2b6d8ad8bc374c30e6fcd7b14b8d0762e66251
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61252e1feb85236244b9af9fa7811ec13234803e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832656"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734800"
 ---
 # <a name="security-related-dynamic-management-views-and-functions-transact-sql"></a>セキュリティ関連の動的管理ビューおよび関数 (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、次の動的管理オブジェクトについて説明します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "82832656"
 |[sys.dm_cryptographic_provider_algorithms &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql.md)|[sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)|  
 |[sys.dm_cryptographic_provider_keys &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql.md)|[sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
  [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

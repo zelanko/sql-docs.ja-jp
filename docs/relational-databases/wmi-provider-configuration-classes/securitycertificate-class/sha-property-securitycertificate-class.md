@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 73dfe0b7-0237-4d92-8161-9264a10a28a7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2bf2057156191cb45b3528e691d78630bb3aedf4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9dfbe540ff5234d70a7da60ba50dd4f3e19e1548
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736619"
 ---
 # <a name="sha-property-securitycertificate-class"></a>SHA プロパティ (SecurityCertificate クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   セキュリティ証明書の SHA サムプリント属性を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,7 +35,7 @@ ms.locfileid: "73658781"
 object.SHA [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  セキュリティ証明書を表す [SecurityCertificate クラス](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) オブジェクト。  
   
@@ -44,7 +44,7 @@ object.SHA [= value]
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

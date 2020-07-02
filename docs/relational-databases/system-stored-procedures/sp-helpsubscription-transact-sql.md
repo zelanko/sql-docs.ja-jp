@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6ad28ace9f8b3a1b4852c54e3e4f427bd22c06d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43951ff65e904bcb0802f84793f9f2101bfd14e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824447"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736941"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   特定のパブリケーション、アーティクル、サブスクライバー、またはサブスクリプションのセットに関連付けられているサブスクリプション情報を一覧表示します。 このストアドプロシージャは、パブリッシャー側のパブリケーションデータベースで実行されます。  
   
@@ -103,7 +103,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、既定で**public**ロールに設定されています。 ユーザーに返されるのは、ユーザーが自分で作成したサブスクリプションの情報だけです。 すべてのサブスクリプションに関する情報は、パブリッシャーの**sysadmin**固定サーバーロールのメンバー、またはパブリケーションデータベースの固定データベースロール**db_owner**のメンバーに返されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

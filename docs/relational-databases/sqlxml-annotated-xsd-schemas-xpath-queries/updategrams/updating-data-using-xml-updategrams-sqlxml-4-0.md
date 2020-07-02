@@ -28,15 +28,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e4cfa5ef312bc9048a53405a6c1083183b10054
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 01fd8e99d6eb770c2f5680ead1e2c4d9b9ec98b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733661"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの更新 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   既存のデータを更新する場合は、ブロックとブロックの両方を指定する必要があり **\<before>** **\<after>** ます。 およびブロックで指定された要素は、 **\<before>** **\<after>** 必要な変更を記述します。 アップデートグラムでは、ブロックに指定されている要素を使用して、 **\<before>** データベース内の既存のレコードを識別します。 ブロック内の対応する要素は、 **\<after>** 更新操作の実行後にレコードがどのように表示されるかを示します。 この情報から、アップデートグラムでは、ブロックと一致する SQL ステートメントが作成され **\<after>** ます。 そのステートメントによってデータベースが更新されます。  
   
  更新操作のアップデートグラムの形式は次のとおりです。  
@@ -87,14 +87,14 @@ ms.locfileid: "84529782"
   
  ブロック内に1つの要素を指定し、 **\<before>** ブロック内に対応する要素を1つだけ指定する場合 **\<after>** は、 **updg: id**を使用する必要はありません。 ただし、あいまいさを避けるために、 **updg: id**を指定することをお勧めします。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  アップデートグラムの例を使用する前に、次のことに注意してください。  
   
 -   ほとんどの例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピングスキーマを使用するアップデートグラムの例については、「[アップデートグラムでの注釈付きマッピングスキーマの指定 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)」を参照してください。  
   
 -   ほとんどの例では、AdventureWorks サンプル データベースを使用します。 すべての更新内容は、このデータベースのテーブルに適用されます。 AdventureWorks データベースは復元できます。  
   
-### <a name="a-updating-a-record"></a>A. レコードを更新する  
+### <a name="a-updating-a-record"></a>A: レコードを更新する  
  次のアップデートグラムでは、AdventureWorks データベースの Person.Contact テーブルで、従業員の姓を Fuller に更新します。 アップデートグラムにマッピング スキーマは指定しないので、既定のマッピングが使用されます。  
   
 ```  
@@ -122,7 +122,7 @@ ms.locfileid: "84529782"
 
      詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. updg:id 属性を使用して複数のレコードを更新する  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B: updg:id 属性を使用して複数のレコードを更新する  
  この例では、アップデートグラムで、AdventureWorks データベースの HumanResources.Shift テーブルに次の 2 つの更新操作を行います。  
   
 -   7:00AM から始まる勤務時間の名前を "Day" から "Early Morning" に変更する。  
@@ -158,7 +158,7 @@ ms.locfileid: "84529782"
   
      詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. 複数 \<before> のブロックとブロックの指定 \<after>  
+### <a name="c-specifying-multiple-before-and-after-blocks"></a>C: 複数 \<before> のブロックとブロックの指定 \<after>  
  あいまいさを避けるために、複数のおよびブロックのペアを使用して、例 B でアップデートグラムを記述でき **\<before>** **\<after>** ます。 **\<before>** とのペアを指定する **\<after>** ことは、少なくとも混乱を最小限に抑えて複数の更新プログラムを指定する方法の1つです。 また、との各 **\<before>** ブロックが **\<after>** 1 つの要素のみを指定している場合は、 **updg: id**属性を使用する必要はありません。  
   
 > [!NOTE]  
@@ -195,7 +195,7 @@ ms.locfileid: "84529782"
   
      詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-### <a name="d-specifying-multiple-sync-blocks"></a>D. 複数の \<sync> ブロックの指定  
+### <a name="d-specifying-multiple-sync-blocks"></a>D: 複数の \<sync> ブロックの指定  
  アップデートグラムでは、複数のブロックを指定でき **\<sync>** ます。 指定された各 **\<sync>** ブロックは、独立したトランザクションです。  
   
  次のアップデートグラムでは、最初の **\<sync>** ブロックが Sales. Customer テーブルのレコードを更新します。 簡素化するため、アップデートグラムでは ID 値 (CustomerID) と更新する値 (SalesPersonID) の 2 つの必要な値だけを指定します。  
@@ -557,7 +557,7 @@ ms.locfileid: "84529782"
   
  マッピングスキーマを使用するアップデートグラムの例については、「[アップデートグラムでの注釈付きマッピングスキーマの指定 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQLXML 4.0&#41;&#40;アップデートグラムのセキュリティに関する考慮事項](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

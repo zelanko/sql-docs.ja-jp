@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59b7f4a0cf0c3ba3335a181b35560af8847fca8b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 83da8c71ce35f26c44cf0c5fc0caab8bd44b9c64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738474"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Microsoft&#xAE; SQL Server&#x2122; のバックアップ デバイスに関する情報をレポートします。  
   
@@ -53,7 +53,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|論理デバイス名。|  
 |**physical_name**|**nvarchar(260)**|物理ファイル名。|  
-|**記述**|**nvarchar(255)**|デバイスの説明|  
+|**description**|**nvarchar(255)**|デバイスの説明|  
 |**status**|**int**|[**説明**列の状態の説明に対応する数値。|  
 |**cntrltype**|**smallint**|デバイスのコントローラーの種類<br /><br /> 2 = ディスク デバイス<br /><br /> 5 = テープデバイス|  
 |**size**|**int**|デバイスサイズ (2 KB ページ単位)。|  
@@ -73,7 +73,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 EXEC sp_helpdevice;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   

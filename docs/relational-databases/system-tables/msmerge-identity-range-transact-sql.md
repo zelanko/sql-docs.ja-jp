@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 672715bb7bfa83767975c399f75595af04f23d57
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dc93ee74d92afadcf302a39ff066ba7e7218240f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825844"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736702"
 ---
 # <a name="msmerge_identity_range-transact-sql"></a>MSmerge_identity_range (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_identity_range**テーブルは、レプリケーションがこれらの範囲の割り当てを自動的に管理するパブリケーションに対するサブスクリプションの id 列に割り当てられた数値範囲を追跡するために使用されます。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82825844"
 |**is_pub_range**|**bit**|Id 範囲がパブリケーションに割り当てられている場合は**1**を指定します。|  
 |**max_used**|**数値 (38)**|割り当てることができる最大 id 値。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

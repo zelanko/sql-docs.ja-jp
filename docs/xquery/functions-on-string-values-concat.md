@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02d3762f419789732406564606ad7a3b990e30fd
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: f6fadf3bed15869ccd3d3307dcfe8b70c53d5310
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881816"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737869"
 ---
 # <a name="functions-on-string-values---concat"></a>文字列値に使用する関数 - concat
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   0個以上の文字列を引数として受け取り、これらの各引数の値を連結することによって作成された文字列を返します。  
   
@@ -47,10 +47,10 @@ fn:concat ($string as xs:string?
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
  XQuery 関数のサロゲートペアの動作は、データベースの互換性レベルと、場合によっては、関数の既定の名前空間 URI に依存します。 詳細については、「 [SQL Server 2016 のデータベースエンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」の「XQuery 関数はサロゲート対応」を参照してください。 「 [ALTER DATABASE Compatibility Level &#40;transact-sql&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 」と「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」も参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks サンプルデータベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. concat() XQuery 関数を使用した文字列の連結  
+### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A: concat() XQuery 関数を使用した文字列の連結  
  このクエリは、特定の製品モデルについて、保証期間と保証の説明を連結して作成された文字列を返します。 カタログの説明ドキュメントでは、<`Warranty`> 要素は <> で構成され、<`WarrantyPeriod` `Description` 子要素も> ます。  
   
 ```  
@@ -113,7 +113,7 @@ WHERE CatalogDescription.exist('//pd:ProductDescription ') = 1
   
 -   SQL Server の**concat ()** 関数は、xs: string 型の値のみを受け取ります。 その他の値は、xs: string または xdt: untypedAtomic に明示的にキャストする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

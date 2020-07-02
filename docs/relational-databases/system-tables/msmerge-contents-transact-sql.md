@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d0dc39424f0636d975195b00580a4ff7649ec64
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 07ae3a15b05226ed6d518bbf70f22e4950c70fd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736780"
 ---
 # <a name="msmerge_contents-transact-sql"></a>MSmerge_contents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_contents**テーブルは、パブリッシュされてから現在のデータベースで変更された行ごとに1行のデータを格納します。 このテーブルは、変更された行を確認するために、マージプロセスによって使用されます。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82805456"
 |**logical_record_lineage**|**varbinary (501)**|サブスクライバーのニックネーム。バージョン番号のペアです。論理レコードの最上位の親行に対する変更の履歴を保持するために使用されます。 論理レコードのすべての子行に対しては、この値は NULL です。|  
 |**logical_relation_change_gen**|**bigint**|論理レコードの再調整の原因となった最後の変更に関連付けられている生成値。既存の行が論理レコードの内外に移動された場合。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 560c425c5bda4ee1f9dd7ecf454c65d3ba7eab1e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0bc0c7973ad8ac653c2d9e7f613a3ec0325c12fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733318"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   カーソルオプションを設定するか、sp_cursoropen ストアドプロシージャによって作成されたカーソル情報を返します。 sp_cursoroption は、ID = 8 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
@@ -86,7 +86,7 @@ sp_cursoroption cursor, code, value
 |0x0002|SCROLL_LOCKS|  
 |0x0004 または0x0008|OPTIMISTIC|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  

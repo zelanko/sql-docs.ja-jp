@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c3c044f9cd63f5942fdc212b2321628ac1b2c21
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eca0c3f3c03438c9bcc6a715bf06b4aa58f8690a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733240"
 ---
 # <a name="sp_helpdistributor_properties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   ディストリビューターのプロパティを返します。 このストアドプロシージャは、ディストリビューター側のディストリビューションデータベースで実行されます。  
   
@@ -51,7 +51,7 @@ sp_helpdistributor_properties
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバー、ディストリビューションデータベースの固定データベースロール**db_owner**または**replmonitor**のメンバー、およびこのディストリビューターを使用するパブリケーションのパブリケーションアクセスリスト (PAL) のユーザーだけが**sp_helpdistributor_properties**を実行できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_changedistributor_property &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

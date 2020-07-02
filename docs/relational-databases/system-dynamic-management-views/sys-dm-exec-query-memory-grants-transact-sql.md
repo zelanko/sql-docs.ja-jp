@@ -20,15 +20,15 @@ ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50c336c329f5e610d90637f80ef8ef24569bb204
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: f39ef72cb01ecef7fca9d26cc87d003807089e16
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734761"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   メモリ許可を待機しているか、メモリ許可が与えられている、要求されたすべてのクエリに関する情報を返します。 メモリ許可を必要としないクエリは、このビューに表示されません。 たとえば、並べ替えとハッシュ結合の操作には、クエリの実行にメモリ許可がありますが、 **ORDER by**句を使用しないクエリにはメモリ許可がありません。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "83731891"
   
  データベース管理者は、リソース ガバナー機能を使用することで、サーバー リソースを最大 64 個までのリソース プールに分散できます。 以降 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、各プールは小規模の独立したサーバーインスタンスのように動作し、2つのセマフォが必要です。 **Dm_exec_query_resource_semaphores**から返される行の数は、で返された行より最大で20倍になることがあります [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dm_exec_query_resource_semaphores &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [dm_os_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    

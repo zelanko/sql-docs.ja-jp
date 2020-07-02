@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 641086797c9d6b8ddf6a86a83de1b5d7b69dcb39
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 21710c1cda732c09eed0a71da2286a12b8496783
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831718"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733326"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   カーソル ステートメントまたはバッチをコンパイルして実行プランを作成します。カーソルは作成しません。 コンパイルされたステートメントは、後で sp_cursorexecute で使用できます。 このプロシージャは、sp_cursorexecute と組み合わせて sp_cursoropen と同じ機能を持ちますが、2つのフェーズに分割されています。 sp_cursorprepare は、ID = 3 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
@@ -61,14 +61,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *options*  
  カーソル結果セット列の説明を返す省略可能なパラメーターです。 *オプション*には、次の**int**入力値が必要です。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  スクロールオプション。 *scrollopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,7 +90,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  同時実行制御オプション。 *ccopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (以前の LOCKCC)|  
@@ -106,12 +106,12 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
  *同様 scrollpt,* と同様に、では、要求されたものとは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 異なる値を割り当てることができます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  RPC 状態パラメーターは、次のいずれかになります。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|0|Success|  
+|0|成功|  
 |0x0001|障害|  
 |1FF6|メタデータを返せませんでした。<br /><br /> 注: これは、ステートメントによって結果セットが生成されないためです。たとえば、INSERT ステートメントや DDL ステートメントなどです。|  
   
@@ -144,9 +144,9 @@ exec sp_cursorclose @p2
  
  *Stmt*がパラメーター化され、 *scrollopt* PARAMETERIZED_STMT 値が ON の場合、文字列の形式は次のようになります。  
   
- { * \< ローカル変数名> * * \< データ型>* } [,...*n* ]  
+ { *\<local variable name>**\<data type>* } [ ,...*n* ]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_cursorexecute &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorunprepare &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   

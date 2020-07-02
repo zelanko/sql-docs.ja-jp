@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: da51b0f8-5ad0-4aeb-96ed-2b3672a2a6e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f5f46199af13e6ed0ab661c8d19d1a64710ab1d3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5deea8cedba0f78577d58bf975b8b9646c42010f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736806"
 ---
 # <a name="msmerge_altsyncpartners-transact-sql"></a>MSmerge_altsyncpartners (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_altsyncpartners**テーブルは、パブリッシャーの現在の同期パートナーとの関連付けを追跡します。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
@@ -33,9 +33,9 @@ ms.locfileid: "82805505"
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|元のパブリッシャーの識別子。|  
 |**alternate_subid**|**uniqueidentifier**|代替同期パートナーであるサブスクライバーの識別子。|  
-|**記述**|**nvarchar(255)**|代替同期パートナーの説明|  
+|**description**|**nvarchar(255)**|代替同期パートナーの説明|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

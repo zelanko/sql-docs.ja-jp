@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2bd7a4ce174d547d0cb8d0f9bcb89d23e6543db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6304e6381b9bbfcc17b218122631d06293e15830
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180093"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734711"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>dm_exec_query_statistics_xml (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 インフライト要求のクエリ実行プランを返します。 この DMV を使用すると、一時的な統計情報を含む showplan XML を取得できます。 
 
@@ -48,14 +48,14 @@ sys.dm_exec_query_statistics_xml(session_id)
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|
-|session_id|**smallint**|セッションの ID。 Null 値は許容されません。|
-|request_id|**int**|要求の ID。 Null 値は許容されません。|
+|session_id|**smallint**|セッションの ID。 NULL 値は許可されません。|
+|request_id|**int**|要求の ID。 NULL 値は許可されません。|
 |sql_handle|**varbinary(64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 NULL 値は許可されます。|
 |plan_handle|**varbinary(64)**|現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 NULL 値は許可されます。|
 |query_plan|**xml**|部分統計を含む*plan_handle*で指定されたクエリ実行プランのランタイム Showplan 表現を格納します。 プラン表示は XML 形式です。 アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、ストアド プロシージャ コール、ユーザー定義関数コールなどを含むバッチごとに、1 つのプランが生成されます。 NULL 値は許可されます。|
 
 ## <a name="remarks"></a>Remarks
-このシステム関数は、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降で使用できます。 KB [3190871](https://support.microsoft.com/help/3190871)を参照
+このシステム関数は、SP1 以降で使用でき [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ます。 KB [3190871](https://support.microsoft.com/help/3190871)を参照
 
 このシステム関数は、**標準**および**簡易**クエリ実行統計プロファイルインフラストラクチャの両方で動作します。 詳細については、「[クエリプロファイリングインフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。  
 
@@ -63,23 +63,23 @@ sys.dm_exec_query_statistics_xml(session_id)
   
 -   指定された*session_id*に対応するクエリプランが実行されなくなった場合、返されるテーブルの**query_plan**列は null になります。 たとえば、プランハンドルがキャプチャされてから、 **dm_exec_query_statistics_xml**で使用された時間の間に遅延がある場合に、この状態が発生する可能性があります。  
     
-**Xml**データ型で許可されている入れ子になったレベルの数に制限があるため、 **dm_exec_query_statistics_xml**は入れ子になった要素の128レベル以上のクエリプランを返すことができません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでは、この条件が原因でクエリ プランが返されず、エラー 6335 が生成されます。 Service [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Pack 2 以降のバージョンでは、 **query_plan**列には NULL が返されます。   
+**Xml**データ型で許可されている入れ子になったレベルの数に制限があるため、 **dm_exec_query_statistics_xml**は入れ子になった要素の128レベル以上のクエリプランを返すことができません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでは、この条件が原因でクエリ プランが返されず、エラー 6335 が生成されます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Service Pack 2 以降のバージョンでは、 **query_plan**列には NULL が返されます。   
 
 ## <a name="permissions"></a>アクセス許可  
-で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`サーバーに対する権限が必要です。  
-Premium [!INCLUDE[ssSDS](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。
+では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 `VIEW SERVER STATE` サーバーに対する権限が必要です。  
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。
 
 ## <a name="examples"></a>例  
   
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. 実行中のバッチのライブクエリプランと実行統計を確認する  
- 次の例では、 **dm_exec_requests**を照会して、興味深いクエリ`session_id`を検索し、出力からをコピーします。  
+ 次の例では、 **dm_exec_requests**を照会して、興味深いクエリを検索し、出力からをコピーし `session_id` ます。  
   
 ```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
- 次に、ライブクエリプランと実行統計を取得するには、 `session_id`システム関数**sys. dm_exec_query_statistics_xml**でコピーしたを使用します。  
+ 次に、ライブクエリプランと実行統計を取得するには、 `session_id` システム関数**sys. dm_exec_query_statistics_xml**でコピーしたを使用します。  
   
 ```sql  
 --Run this in a different session than the session in which your query is running.
@@ -96,7 +96,7 @@ CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);
 GO  
 ```   
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
   [トレースフラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

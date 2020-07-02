@@ -1,5 +1,5 @@
 ---
-title: sysjobs (Transact-sql) |Microsoft Docs
+title: dbo.sysジョブ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fe374a81fc88b6591da8fb0303d5ea490cccac0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: adf7124fe37d506eb0ac9b3dcb0bab5d6e85423b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807042"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736871"
 ---
-# <a name="dbosysjobs-transact-sql"></a>sysjobs (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="dbosysjobs-transact-sql"></a>dbo.sysジョブ (Transact-sql)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによる実行が予定されているジョブに関する情報を格納します。 このテーブルは、 **msdb**データベースに格納されます。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82807042"
 |**originating_server_id**|**int**|ジョブの送信元のサーバーの ID。|  
 |**name**|**sysname**|ジョブの名前。|  
 |**enabled**|**tinyint**|ジョブの実行が有効かどうかを示します。|  
-|**記述**|**nvarchar(512)**|ジョブの説明。|  
+|**description**|**nvarchar(512)**|ジョブの説明。|  
 |**start_step_id**|**int**|実行を開始するジョブのステップの ID。|  
 |**category_id**|**int**|ジョブカテゴリの ID。|  
 |**owner_sid**|**varbinary (85)**|ジョブ所有者のセキュリティ識別番号 (SID)。|  

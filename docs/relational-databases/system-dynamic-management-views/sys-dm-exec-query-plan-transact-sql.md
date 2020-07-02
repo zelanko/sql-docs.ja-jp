@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4cc8fd7a20da6d0bf56d68b690bf35341cb6a63e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b57d657f0f6b1113db6b36bfa7c559110f77e84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812140"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734735"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>dm_exec_query_plan (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 プラン ハンドルで指定されたバッチのプラン表示を XML 形式で返します。 プラン ハンドルで指定するプランは、キャッシュ内のもの、または現在実行中のものを指定できます。  
   
@@ -87,9 +87,9 @@ sys.dm_exec_query_plan(plan_handle)
 ## <a name="examples"></a>使用例  
  次の例は、**sys.dm_exec_query_plan** 動的管理ビューの使用方法を示しています。  
   
- XML プラン表示を表示するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで次のクエリを実行した後、**sys.dm_exec_query_plan** によって返されるテーブルの **query_plan** 列で **[ShowPlanXML]** をクリックします。 XML プラン表示は、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の概要ペインに表示されます。 XML プラン表示をファイルに保存するには、[ **query_plan** ] 列の [ **showplan XML** ] を右クリックし、[結果に名前を付け**て保存**] をクリックします。次の形式でファイル名を指定し \< ます (例: myxmlshowplan> *file_name* )。  
+ XML プラン表示を表示するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで次のクエリを実行した後、**sys.dm_exec_query_plan** によって返されるテーブルの **query_plan** 列で **[ShowPlanXML]** をクリックします。 XML プラン表示は、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の概要ペインに表示されます。 XML プラン表示をファイルに保存するには、[ **query_plan** ] 列の [ **showplan XML** ] を右クリックし、[結果に名前を付け**て保存**] をクリックします。ファイルの名前を sqlplan のように指定します ( \<*file_name*> 例: myxmlshowplan. sqlplan)。  
   
-### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. 実行速度の遅い Transact-sql クエリまたはバッチのキャッシュされたクエリプランを取得する  
+### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A: 実行速度の遅い Transact-sql クエリまたはバッチのキャッシュされたクエリプランを取得する  
  アドホック バッチ、ストアド プロシージャ、ユーザー定義関数などの各種 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチのクエリ プランは、プラン キャッシュと呼ばれるメモリ領域にキャッシュされます。 キャッシュされたそれぞれのクエリ プランは、プラン ハンドルと呼ばれる一意識別子で識別されます。 **sys.dm_exec_query_plan** 動的管理ビューでは、このプラン ハンドルを指定して、特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリまたはバッチの実行プランを取得できます。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バッチが、特定の  との接続において長時間実行されている場合は、このクエリやバッチの実行プランを取得して、遅延の原因を調べることができます。 次の例では、実行速度の遅いクエリまたはバッチに対して XML プラン表示を取得する方法を示します。  
@@ -126,7 +126,7 @@ FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);
 GO  
 ```  
   
-### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>B. プランキャッシュからすべてのクエリプランを取得する  
+### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>B: プランキャッシュからすべてのクエリプランを取得する  
  プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得するには、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得します。 プラン ハンドルは、`plan_handle` の `sys.dm_exec_cached_plans` 列に格納されます。 その後、次のように CROSS APPLY 演算子を使用して、プラン ハンドルを `sys.dm_exec_query_plan` に渡します。 現在プラン キャッシュにある各プランの XML プラン表示の出力は、返されるテーブルの `query_plan` 列に格納されます。  
   
 ```sql  
@@ -138,7 +138,7 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);
 GO  
 ```  
   
-### <a name="c-retrieve-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C. サーバーがクエリ統計情報を収集したすべてのクエリプランをプランキャッシュから取得します。  
+### <a name="c-retrieve-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C: サーバーがクエリ統計情報を収集したすべてのクエリプランをプランキャッシュから取得します。  
  現在プラン キャッシュにあるクエリ プランのうち、サーバーで統計情報が収集されたすべてのクエリ プランのスナップショットを取得するには、`sys.dm_exec_query_stats` 動的管理ビューに対してクエリを実行し、キャッシュにあるこれらのプランのプラン ハンドルを取得します。 プラン ハンドルは、`plan_handle` の `sys.dm_exec_query_stats` 列に格納されます。 その後、次のように CROSS APPLY 演算子を使用して、プラン ハンドルを `sys.dm_exec_query_plan` に渡します。 現在プラン キャッシュにある、収集された統計情報に関連する各プランの XML プラン表示の出力は、返されるテーブルの `query_plan` 列に格納されます。  
   
 ```sql  
@@ -150,7 +150,7 @@ CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle);
 GO  
 ```  
   
-### <a name="d-retrieve-information-about-the-top-five-queries-by-average-cpu-time"></a>D. 平均 CPU 時間に基づく上位 5 つのクエリに関する情報を取得する  
+### <a name="d-retrieve-information-about-the-top-five-queries-by-average-cpu-time"></a>D: 平均 CPU 時間に基づく上位 5 つのクエリに関する情報を取得する  
  次の例では、上位 5 つのクエリにかかった平均 CPU 時間とプランを返します。  
   
 ```sql  
@@ -162,7 +162,7 @@ ORDER BY total_worker_time/execution_count DESC;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   

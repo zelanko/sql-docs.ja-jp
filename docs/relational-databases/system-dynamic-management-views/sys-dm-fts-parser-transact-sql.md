@@ -19,16 +19,16 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0552dbdce5da12db4fedadecb5a4bd7e9c55c278
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900916"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738658"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>dm_fts_parser (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   特定の[ワードブレーカー](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)、[類義語辞典](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)、および[ストップリスト](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)の組み合わせをクエリ文字列入力に適用した後に、最終的なトークン化の結果を返します。 トークン化の結果は、指定されたクエリ文字列のフルテキストエンジンの出力に相当します。  
   
@@ -55,13 +55,13 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *accent_sensitivity*  
  フルテキスト検索で分音文字を区別するかしないかを制御するブール値です。 *accent_sensitivity*は**ビット**で、次のいずれかの値になります。  
   
-|[値]|アクセントの区別は...|  
+|値|アクセントの区別は...|  
 |-----------|----------------------------|  
 |0|大文字と小文字は区別されない<br /><br /> "カフェ" や "カフェ" などの単語は、同じように扱われます。|  
 |1|重要<br /><br /> "カフェ" や "カフェ" などの単語は、異なる方法で処理されます。|  
   
 > [!NOTE]  
->  フルテキストカタログのこの値の現在の設定を表示するに[!INCLUDE[tsql](../../includes/tsql-md.md)]は、次のステートメントを`SELECT fulltextcatalogproperty('`実行します: *catalog_name*`', 'AccentSensitivity');`。  
+>  フルテキストカタログのこの値の現在の設定を表示するには、次のステートメントを実行します [!INCLUDE[tsql](../../includes/tsql-md.md)] : `SELECT fulltextcatalogproperty('` *catalog_name* `', 'AccentSensitivity');` 。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
@@ -73,14 +73,14 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |occurrence|**int**|解析結果の各用語の順序を示します。 たとえば、英語の "`SQL Server query processor`" という語句の場合、occurrence には語句内の用語に対する次のオカレンス値が格納されます。<br /><br /> の場合は1`SQL`<br />2`Server`<br />3`query`<br />4`processor`|  
 |special_term|**nvarchar (4000)**|ワード ブレーカーによって発行されている用語の特性に関する情報を格納します。次のいずれかになります。<br /><br /> 完全一致<br /><br /> ノイズワード<br /><br /> 文の終わり<br /><br /> 段落の末尾<br /><br /> 章の終わり|  
 |display_term|**nvarchar (4000)**|人間が判読できる形式のキーワードが含まれています。 フルテキスト インデックスのコンテンツにアクセスするように設計されている関数と同様に、ここに表示される用語は、非正規化の制限のため元の用語と同一とは限りません。 ただし、元の入力から識別しやすいように、十分な値にする必要があります。|  
-|expansion_type|**int**|特定の用語の拡張の特性に関する情報を格納します。次のいずれかになります。<br /><br /> 0 = 1 つの単語の場合<br /><br /> 2 = 変化形の拡張<br /><br /> 4 = 類義語辞典の拡張と置換<br /><br /> たとえば、類義語辞典で run が `jog` の拡張として定義されている場合を考えてみます。<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> この用語`FORMSOF (FREETEXT, run)`は、次の出力を生成します。<br /><br /> `run` : expansion_type=0<br /><br /> `runs` : expansion_type=2<br /><br /> `running` : expansion_type=2<br /><br /> `ran` : expansion_type=2<br /><br /> `jog` : expansion_type=4|  
+|expansion_type|**int**|特定の用語の拡張の特性に関する情報を格納します。次のいずれかになります。<br /><br /> 0 = 1 つの単語の場合<br /><br /> 2 = 変化形の拡張<br /><br /> 4 = 類義語辞典の拡張と置換<br /><br /> たとえば、類義語辞典で run が `jog` の拡張として定義されている場合を考えてみます。<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> この用語は、 `FORMSOF (FREETEXT, run)` 次の出力を生成します。<br /><br /> `run` : expansion_type=0<br /><br /> `runs` : expansion_type=2<br /><br /> `running` : expansion_type=2<br /><br /> `ran` : expansion_type=2<br /><br /> `jog` : expansion_type=4|  
 |source_term|**nvarchar (4000)**|特定の用語の生成元または解析元になった用語または語句です。 たとえば、英語の場合、`word breakers" AND stemmers'` に対するクエリで次の source_term 値が生成されます。<br /><br /> `word breakers`display_term`word`<br />`word breakers`display_term`breakers`<br />`stemmers`display_term`stemmers`|  
   
 ## <a name="remarks"></a>Remarks  
  **dm_fts_parser**は、 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)や[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)などのフルテキスト述語の構文と機能、および[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)や[FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)などの関数をサポートしています。  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>特殊文字の解析での Unicode の使用  
- クエリ文字列を解析する場合、dm_fts_parser では、クエリ文字列を Unicode として指定しない限り、接続先のデータベースの照合順序が使用され**ます。** したがって、üやçなどの特殊文字を含む非 Unicode 文字列の場合、データベースの照合順序によっては出力が予期しないものになる可能性があります。 データベースの照合順序とは無関係にクエリ文字列を処理するには`N`、文字列の先頭`N'`にを付けます。つまり、 *query_string*`'`します。  
+ クエリ文字列を解析する場合、dm_fts_parser では、クエリ文字列を Unicode として指定しない限り、接続先のデータベースの照合順序が使用され**ます。** したがって、üやçなどの特殊文字を含む非 Unicode 文字列の場合、データベースの照合順序によっては出力が予期しないものになる可能性があります。 データベースの照合順序とは無関係にクエリ文字列を処理するには、文字列の先頭にを付け `N` ます。つまり、 `N'` *query_string* `'` します。  
   
  詳細については、「C」を参照してください。 特殊文字を含む文字列の出力を表示する」を参照してください。  
   
@@ -139,7 +139,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);  
 ```  
   
-### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>B. ストップリストのフィルター処理のコンテキストで特定のワードブレーカーの出力を表示する  
+### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>B: ストップリストのフィルター処理のコンテキストで特定のワードブレーカーの出力を表示する  
  次の例では、次のクエリ文字列に対して LCID が1033で、ID が77である英語ストップリストを使用した場合の出力が返されます。  
   
  `"The Microsoft business analysis" OR "MS revenue"`  
@@ -150,7 +150,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0,
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS revenue" ', 1033, 77, 0);  
 ```  
   
-### <a name="c-displaying-the-output-of-a-string-that-contains-special-characters"></a>C. 特殊文字を含む文字列の出力を表示する  
+### <a name="c-displaying-the-output-of-a-string-that-contains-special-characters"></a>C: 特殊文字を含む文字列の出力を表示する  
  次の例では、Unicode を使用して次のフランス語の文字列を解析します。  
   
  `français`  
@@ -161,7 +161,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS re
 SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のフルテキスト検索とセマンティック検索の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
  [検索用のワードブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 4a94c22c7f524572a4b629c27d49ad35a84c3b02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9fe9aa39bf4c243a0177ac108a742037598983d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123810"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733271"
 ---
 # <a name="sp_grant_publication_access-transact-sql"></a>sp_grant_publication_access (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   パブリケーションのアクセスリストにログインを追加します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -55,7 +55,7 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ## <a name="permissions"></a>アクセス許可  
  **Sp_grant_publication_access**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_help_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
  [sp_revoke_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [パブリッシャーのセキュリティ保護](../../relational-databases/replication/security/secure-the-publisher.md)   

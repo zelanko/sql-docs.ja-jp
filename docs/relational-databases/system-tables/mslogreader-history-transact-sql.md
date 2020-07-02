@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5dfb1efc93efe8c4b59d649466f8b0c0af0a64a6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7d4cad38c515815f5cc4e30424156311388c7420
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812827"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736854"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSlogreader_history**テーブルには、ローカルディストリビューターに関連付けられているログリーダーエージェントの履歴行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82812827"
 |**timestamp**|**timestamp**|このテーブルのタイムスタンプ列です。|  
 |**updateable_row**|**bit**|履歴行を上書きできる場合は、 **1**に設定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

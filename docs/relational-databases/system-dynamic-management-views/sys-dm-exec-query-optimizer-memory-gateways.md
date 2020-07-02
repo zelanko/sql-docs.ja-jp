@@ -20,19 +20,19 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5720617f6652a8acb1ab8b6daf0e5e8919a86f8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 01b0a68658112ebde642dde3f9c1fa0fb1d73c57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165003"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734737"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>dm_exec_query_optimizer_memory_gateways (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 同時クエリの最適化を調整するために使用されるリソースセマフォの現在の状態を返します。
 
-|列|Type|説明|  
+|Column|種類|説明|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|Resource Governor の下のリソースプール ID|  
 |**name**|**sysname**|コンパイルゲート名 (小規模ゲートウェイ、中規模ゲートウェイ、ビッグゲートウェイ)|
@@ -40,7 +40,7 @@ ms.locfileid: "74165003"
 |**active_count**|**int**|このゲートで現在アクティブなコンパイルの数|
 |**waiter_count**|**int**|このゲート内の待機処理の数|
 |**threshold_factor**|**bigint**|クエリの最適化で使用される最大メモリ部分を定義するしきい値係数。  小さいゲートウェイの場合、threshold_factor は、小さいゲートウェイでのアクセスを取得するために1つのクエリに対して最大オプティマイザーメモリ使用量 (バイト単位) を示します。  M とビッグゲートウェイの場合、threshold_factor は、このゲートで使用可能な合計サーバーメモリの部分を示します。 ゲートのメモリ使用量のしきい値を計算するときに除数として使用されます。|
-|**進入**|**bigint**|次のしきい値メモリ (バイト単位)。  このクエリは、メモリ消費量がこのしきい値に達した場合に、このゲートウェイへのアクセスを取得するために必要です。  クエリがこのゲートウェイへのアクセスを取得する必要がない場合は、"-1" になります。|
+|**threshold**|**bigint**|次のしきい値メモリ (バイト単位)。  このクエリは、メモリ消費量がこのしきい値に達した場合に、このゲートウェイへのアクセスを取得するために必要です。  クエリがこのゲートウェイへのアクセスを取得する必要がない場合は、"-1" になります。|
 |**is_active**|**bit**|クエリが現在のゲートを渡す必要があるかどうかを示します。|
 
 
@@ -68,8 +68,8 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](./system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[DBCC MEMORYSTATUS コマンドを使用して SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
-のメモリ使用量を監視する方法[SQL Server 2014 の RESOURCE_SEMAPHORE_QUERY_COMPILE での大きなクエリのコンパイル待機](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)
+[DBCC MEMORYSTATUS コマンドを使用して SQL Server 2005 のメモリ使用率を監視する方法](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005) 
+[SQL Server 2014 の RESOURCE_SEMAPHORE_QUERY_COMPILE での大規模なクエリのコンパイルの待機](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

@@ -20,15 +20,15 @@ ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abf872e708b04e7c31b65bec3d90d357520b5c7b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9ff8932afd459a9fcb836a4a41b176b0a0871a78
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734496"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>dm_os_schedulers (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスケジューラごとに 1 行のデータを返します。各スケジューラは個別のプロセッサにマップされています。 このビューは、スケジューラの状況の監視やランナウェイ タスクの特定に使用できます。 スケジューラの詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82829341"
 |parent_node_id|**int**|スケジューラが属しているノードの ID。親ノードとも呼ばれます。 これは非均質メモリ アクセス (NUMA) ノードを表します。 NULL 値は許可されません。|  
 |scheduler_id|**int**|スケジューラの ID。 通常のクエリを実行するために使用されるすべてのスケジューラには、1048576未満の ID 番号が付けられています。 Id が1048576以上のスケジューラは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、専用管理者接続スケジューラなど、によって内部的に使用されます。 NULL 値は許可されません。|  
 |cpu_id|**smallint**|スケジューラに割り当てられた CPU ID。<br /><br /> NULL 値は許可されません。<br /><br /> **注:** 255 は、の場合とは関係がないことを示していません [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 追加のアフィニティ情報については[、「sys. dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) 」を参照してください。|  
-|status|**nvarchar(60)**|スケジューラの状態。 値は、次のいずれかです。<br /><br /> -非表示 (オンライン)<br />-非表示 (オフライン)<br />-オンラインで表示<br />-オフラインで表示<br />-オンラインで表示 (DAC)<br />-HOT_ADDED<br /><br /> NULL 値は許可されません。<br /><br /> 非表示のスケジューラは、の内部の要求を処理するために使用され [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。 表示されるスケジューラは、ユーザー要求を処理するために使用されます。<br /><br /> オフラインスケジューラは、関係マスクでオフラインになっているプロセッサにマップされるため、要求の処理には使用されません。 ONLINE スケジューラは、関係マスクでオンラインになっているプロセッサにマップされ、スレッドの処理に使用されます。<br /><br /> DAC は、スケジューラが専用管理者接続で実行されていることを示します。<br /><br /> HOT ADDED は、スケジューラがホット アド CPU イベントに応答して追加されたことを示します。|  
+|status|**nvarchar(60)**|スケジューラの状態。 次の値のいずれかです。<br /><br /> -非表示 (オンライン)<br />-非表示 (オフライン)<br />-オンラインで表示<br />-オフラインで表示<br />-オンラインで表示 (DAC)<br />-HOT_ADDED<br /><br /> NULL 値は許可されません。<br /><br /> 非表示のスケジューラは、の内部の要求を処理するために使用され [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。 表示されるスケジューラは、ユーザー要求を処理するために使用されます。<br /><br /> オフラインスケジューラは、関係マスクでオフラインになっているプロセッサにマップされるため、要求の処理には使用されません。 ONLINE スケジューラは、関係マスクでオンラインになっているプロセッサにマップされ、スレッドの処理に使用されます。<br /><br /> DAC は、スケジューラが専用管理者接続で実行されていることを示します。<br /><br /> HOT ADDED は、スケジューラがホット アド CPU イベントに応答して追加されたことを示します。|  
 |is_online|**bit**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバーで使用可能なプロセッサの一部だけを使用するようにが構成されている場合、この構成では、一部のスケジューラが関係マスクに含まれていないプロセッサにマップされていることを意味します。 この場合、この列は0を返します。 この値は、スケジューラがクエリまたはバッチの処理に使用されていないことを意味します。<br /><br /> NULL 値は許可されません。|  
 |is_idle|**bit**|1 = スケジューラはアイドル状態です。 現在実行中のワーカーはありません。 NULL 値は許可されません。|  
 |preemptive_switches_count|**int**|このスケジューラのワーカーがプリエンプティブモードに切り替えた回数。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。|  
@@ -141,7 +141,7 @@ active_workers_count work_queue_count
   
 -   非表示のスケジューラは、一般的なユーザー要求を処理しません。 ただし、DAC スケジューラは例外です。 この DAC スケジューラには、要求を処理するためのスレッドが 1 つあります。  
   
-### <a name="b-monitoring-nonhidden-schedulers-in-a-busy-system"></a>B. ビジー状態のシステムでの表示スケジューラスケジューラの監視  
+### <a name="b-monitoring-nonhidden-schedulers-in-a-busy-system"></a>B: ビジー状態のシステムでの表示スケジューラスケジューラの監視  
  次のクエリでは、負荷が高い表示スケジューラの状態を示します。このスケジューラでは、利用可能なワーカーの処理数を上回る要求が存在します。 この例では、256のワーカーにタスクが割り当てられています。 一部のタスクはワーカーへの割り当てを待機中です。 実行可能数を低くすると、複数のタスクがリソースを待機していることを意味します。  
   
 > [!NOTE]  
@@ -190,5 +190,5 @@ current_workers_count active_workers_count work_queue_count
 128                   108                  0  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  

@@ -21,17 +21,17 @@ ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b805e9db3c9a5472f78cffd24624cf0a26a463dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059187"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738596"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>fn_virtualfilestats (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  ログファイルを含む、データベースファイルの i/o 統計を返します。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この情報は、 [dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)動的管理ビューからも利用できます。  
+  ログファイルを含む、データベースファイルの i/o 統計を返します。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この情報は、 [dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)動的管理ビューからも利用できます。  
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,11 +51,11 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|説明|  
+|列名|データの種類|説明|  
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|データベース ID。|  
 |**FileId**|**smallint**|ファイル ID。|  
-|**タイムスタンプ**|**bigint**|データが取り出されたデータベース タイムスタンプです。 **int**以前[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]のバージョンの int。 |  
+|**タイムスタンプ**|**bigint**|データが取り出されたデータベース タイムスタンプです。 以前のバージョンの**int** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 。 |  
 |**NumberReads**|**bigint**|ファイルに対して発行された読み取りの数。|  
 |**BytesRead**|**bigint**|ファイルに対して発行された読み取りバイト数。|  
 |**IoStallReadMS**|**bigint**|ファイルの読み取り i/o の完了をユーザーが待機した時間の合計 (ミリ秒単位)。|  
@@ -75,7 +75,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ## <a name="examples"></a>例  
   
 ### <a name="a-displaying-statistical-information-for-a-database"></a>A. データベースの統計情報を表示する  
- 次の例では、ID がの`1`データベースのファイル id 1 の統計情報を表示します。  
+ 次の例では、ID がのデータベースのファイル ID 1 の統計情報を表示 `1` します。  
   
 ```sql  
 SELECT *  
@@ -83,8 +83,8 @@ FROM fn_virtualfilestats(1, 1);
 GO  
 ```  
   
-### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. 名前付きデータベースとファイルの統計情報を表示する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースのログ ファイルの統計情報を表示します。 システム関数`DB_ID`は、 *database_id*パラメーターを指定するために使用されます。  
+### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B: 名前付きデータベースとファイルの統計情報を表示する  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースのログ ファイルの統計情報を表示します。 システム関数 `DB_ID` は、 *database_id*パラメーターを指定するために使用されます。  
   
 ```sql  
 SELECT *  
@@ -92,7 +92,7 @@ FROM fn_virtualfilestats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="c-displaying-statistical-information-for-all-databases-and-files"></a>C. すべてのデータベースおよびファイルの統計情報を表示する  
+### <a name="c-displaying-statistical-information-for-all-databases-and-files"></a>C: すべてのデータベースおよびファイルの統計情報を表示する  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのデータベースにあるすべてのファイルの統計情報を表示します。  
   
 ```sql  
@@ -101,7 +101,7 @@ FROM fn_virtualfilestats(NULL,NULL);
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DB_ID &#40;Transact-sql&#41;](../../t-sql/functions/db-id-transact-sql.md)   
  [FILE_IDEX &#40;Transact-sql&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
  [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

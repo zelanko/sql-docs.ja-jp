@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: feaf2a222df364a41e51969a2c95a978f2d0a289
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04cedd0df5552ee19f7fc98ecdd94ff2d9dc88fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734562"
 ---
 # <a name="sysdm_fts_index_keywords_position_by_document-transact-sql"></a>dm_fts_index_keywords_position_by_document (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   インデックス付きドキュメント内のキーワード位置情報を返します。  
   
@@ -64,7 +64,7 @@ OBJECT_ID('table_name')
  フルテキスト インデックスに含まれる列に対する SELECT 権限と、CREATE FULL TEXT CATALOG 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 `Production.Document` `AdventureWorks`サンプルデータベースのテーブルのフルテキストインデックスからキーワードを返します。  
+ 次の例では、サンプルデータベースのテーブルのフルテキストインデックスからキーワードを返し `Production.Document` `AdventureWorks` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -89,7 +89,7 @@ SELECT * FROM sys.dm_fts_index_keywords_position_by_document
 WHERE document_id = 7 AND display_term = 'performance';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
  [フルテキストインデックスのパフォーマンスの向上](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [フルテキスト検索およびセマンティック検索関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)   

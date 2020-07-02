@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829454"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734789"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   プランハンドルで指定されたプランのプラン属性ごとに1行の値を返します。 このテーブル値関数を使用すると、キャッシュキー値やプランの現在の同時実行数など、特定のプランに関する詳細情報を取得できます。  
   
 > [!NOTE]  
->  この関数から返される情報の一部は、 [syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)の下位互換性ビューにマップされます。
+>  この関数によって返される一部の情報は、 [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)の下位互換性ビューにマップされます。
 
 ## <a name="syntax"></a>構文  
 ```  
@@ -52,14 +52,14 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 上記の表では、**属性**の値は次のようになります。
 
-|属性|データ型|説明|  
+|属性|データの種類|説明|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|プランをコンパイルしたオプションの値を示します。|  
 |objectid|**int**|キャッシュ内のオブジェクトを検索するために使用される主キーの1つ。 これは、データベースオブジェクト (プロシージャ、ビュー、トリガーなど) のために、 [sys. オブジェクト](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)に格納されているオブジェクト ID です。 "アドホック プラン" または "準備されたプラン" では、バッチ テキストの内部ハッシュです。|  
 |dbid|**int**|プランが参照するエンティティを含むデータベースの ID を示します。<br /><br /> アドホックまたは準備されたプランの場合は、バッチの実行元のデータベース ID です。|  
 |dbid_execute|**int**|**リソース**データベースに格納されているシステムオブジェクトの場合、キャッシュされたプランの実行元のデータベース ID。 その他の場合は 0 になります。|  
 |user_id|**int**|値-2 は、送信されたバッチが暗黙的な名前解決に依存せず、異なるユーザー間で共有できることを示します。 可能であればこの方法の使用をお勧めします。 他の値は、データベースのクエリを送っているユーザーのユーザー ID を示します。| 
-|language_id|**smallint**|キャッシュオブジェクトを作成した接続の言語の ID。 詳細については、「 [sys.syslanguages &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)」を参照してください。|  
+|language_id|**smallint**|キャッシュオブジェクトを作成した接続の言語の ID。 詳細については、「 [sys.sys言語 &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)」を参照してください。|  
 |date_format|**smallint**|キャッシュオブジェクトを作成した接続の日付形式。 詳しくは、「[SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)」をご覧ください。|  
 |date_first|**tinyint**|日付の最初の値。 詳しくは、「[SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)」をご覧ください。|  
 |status|**int**|キャッシュ参照キーの一部である内部ステータス ビットです。|  
@@ -91,7 +91,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-set-options"></a>Set オプションの評価  
  **Set_options**に返された値を、プランをコンパイルしたオプションに変換するには、 **set_options**値から値を減算します。値の最大値は、可能な限り多く、0に達するまで続きます。 減算する各値は、クエリ プランに使用されたオプションに対応しています。 たとえば、 **set_options**の値が251の場合、プランをコンパイルしたオプションは ANSI_NULL_DFLT_ON (128)、QUOTED_IDENTIFIER (64)、ANSI_NULLS (32)、ANSI_WARNINGS (16)、CONCAT_NULL_YIELDS_NULL (8)、並列プラン (2)、および ANSI_PADDING (1) になります。  
   
-|オプション|[値]|  
+|オプション|値|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Parallel Plan|2|  
@@ -119,9 +119,9 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-cursor-options"></a>カーソルオプションの評価  
  **Acceptable_cursor_options** **required_cursor_options**に返された値を、プランをコンパイルしたオプションに変換するには、列の値から、可能な最大値から順に、0に達するまで値を減算します。 減算する各値は、クエリ プランに使用されたカーソル オプションに対応しています。  
   
-|オプション|[値]|  
+|オプション|値|  
 |------------|-----------|  
-|None|0|  
+|なし|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
@@ -152,7 +152,7 @@ FROM sys.dm_exec_plan_attributes(<plan_handle>);
 GO  
 ```  
   
-### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>B. コンパイル済みプランの SET オプションとキャッシュされたプランの SQL ハンドルを返す  
+### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>B: コンパイル済みプランの SET オプションとキャッシュされたプランの SQL ハンドルを返す  
  次の例では、各プランがコンパイルされたオプションを表す値を返します。 さらに、キャッシュされたすべてのプランの SQL ハンドルが返されます。  
   
 ```sql  
@@ -166,7 +166,7 @@ PIVOT (MAX(ecpa.value) FOR ecpa.attribute IN ("set_options", "sql_handle")) AS p
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   

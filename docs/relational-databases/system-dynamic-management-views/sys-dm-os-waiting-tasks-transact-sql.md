@@ -20,15 +20,15 @@ ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ab32f364725d11a606ac698fdefb7f9f95a312d
-ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
+ms.openlocfilehash: 0cd7cab9ed1edc9a62398c119b3b5cc72006c5af
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84748255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734464"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   あるリソースで待機しているタスクの待機キューに関する情報を返します。 タスクの詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
    
@@ -140,14 +140,14 @@ ms.locfileid: "84748255"
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
  
 ## <a name="example"></a>例
-### <a name="a-identify-tasks-from-blocked-sessions"></a>A. ブロックされたセッションからタスクを識別します。 
+### <a name="a-identify-tasks-from-blocked-sessions"></a>A: ブロックされたセッションからタスクを識別します。 
 
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 
 ```   
 
-### <a name="b-view-waiting-tasks-per-connection"></a>B. 接続ごとの待機中のタスクの表示
+### <a name="b-view-waiting-tasks-per-connection"></a>B: 接続ごとの待機中のタスクの表示
 
 ```sql
 SELECT st.text AS [SQL Text], c.connection_id, w.session_id, 
@@ -161,7 +161,7 @@ ORDER BY c.connection_id, w.session_id
 GO
 ```
 
-### <a name="c-view-waiting-tasks-for-all-user-processes-with-additional-information"></a>C. すべてのユーザープロセスの待機中のタスクを追加情報で表示する
+### <a name="c-view-waiting-tasks-for-all-user-processes-with-additional-information"></a>C: すべてのユーザープロセスの待機中のタスクを追加情報で表示する
 
 ```sql
 SELECT 'Waiting_tasks' AS [Information], owt.session_id,
@@ -179,7 +179,7 @@ ORDER BY owt.session_id;
 GO
 ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
 [スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)     
    

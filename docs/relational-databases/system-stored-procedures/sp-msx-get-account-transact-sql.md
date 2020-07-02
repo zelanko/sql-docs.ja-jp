@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e0fbfe21194dbfa30c54942352d9bd28d6df45b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 82c26d20933562b05bb95796140dcc51bbc0777d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828845"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734330"
 ---
 # <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   対象サーバーがマスターサーバーへのログインに使用する資格情報に関する情報を一覧表示します。  
   
@@ -44,7 +44,7 @@ sp_msx_get_account
 ## <a name="result-sets"></a>結果セット  
  次の結果セットを返します。  
   
-|列名|種類|説明|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |msx_connection|**int**|マスターサーバーの接続番号。|  
 |msx_credential_id|**int**|このマスターサーバー接続に使用される資格情報の ID。|  
@@ -76,7 +76,7 @@ GO
   
  `1              65538             MsxAccount           AdventureWorks2012\MsxAccount`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;の資格情報の作成](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_msx_set_account &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md)  

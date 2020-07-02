@@ -20,15 +20,15 @@ ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 082de052d40cc41a81ea7a0963b2e3174338b8a5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3608a821be446c864dfac54b99e131a982a80dc2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734651"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ、またはバッチ内の特定のステートメントのプラン表示をテキスト形式で返します。 プラン ハンドルで指定するクエリ プランは、キャッシュ内のもの、または現在実行中のものを指定できます。 このテーブル値関数は、 [transact-sql&#41;&#40;dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)に似ていますが、次の点が異なります。  
   
@@ -144,7 +144,7 @@ FROM sys.dm_exec_text_query_plan (0x06000100A27E7C1FA821B10600,0,-1);
 GO  
 ```  
   
-### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. プランキャッシュからすべてのクエリプランを取得する  
+### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B: プランキャッシュからすべてのクエリプランを取得する  
  プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得するには、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得します。 プラン ハンドルは、`plan_handle` の `sys.dm_exec_cached_plans` 列に格納されます。 その後、次のように CROSS APPLY 演算子を使用して、プラン ハンドルを `sys.dm_exec_text_query_plan` に渡します。 現在プランキャッシュにある各プランのプラン表示出力は、 `query_plan` 返されるテーブルの列にあります。  
   
 ```sql  
@@ -156,7 +156,7 @@ CROSS APPLY sys.dm_exec_text_query_plan(cp.plan_handle, DEFAULT, DEFAULT);
 GO  
 ```  
   
-### <a name="c-retrieving-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C. サーバーがクエリ統計情報を収集したすべてのクエリプランをプランキャッシュから取得する  
+### <a name="c-retrieving-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C: サーバーがクエリ統計情報を収集したすべてのクエリプランをプランキャッシュから取得する  
  現在プラン キャッシュにあるクエリ プランのうち、サーバーで統計情報が収集されたすべてのクエリ プランのスナップショットを取得するには、`sys.dm_exec_query_stats` 動的管理ビューに対してクエリを実行し、キャッシュにあるこれらのプランのプラン ハンドルを取得します。 プラン ハンドルは、`plan_handle` の `sys.dm_exec_query_stats` 列に格納されます。 その後、次のように CROSS APPLY 演算子を使用して、プラン ハンドルを `sys.dm_exec_text_query_plan` に渡します。 各プランのプラン表示出力は、返されるテーブルの `query_plan` 列に格納されます。  
   
 ```sql  
@@ -167,7 +167,7 @@ CROSS APPLY sys.dm_exec_text_query_plan(qs.plan_handle, qs.statement_start_offse
 GO  
 ```  
   
-### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. 平均 CPU 時間による上位5つのクエリに関する情報の取得  
+### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D: 平均 CPU 時間による上位5つのクエリに関する情報の取得  
  次の例では、上位 5 つのクエリにかかった平均 CPU 時間とクエリ プランを返します。 **sys.dm_exec_text_query_plan** 関数で、既定値 0 および -1 を使用してクエリ プランのバッチ内のすべてのステートメントを返します。  
   
 ```sql  
@@ -179,5 +179,5 @@ ORDER BY total_worker_time/execution_count DESC;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

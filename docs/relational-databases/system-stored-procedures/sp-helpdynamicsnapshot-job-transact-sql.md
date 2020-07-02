@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 866f05904cfa1b6c7b3ce6b20a59a5be3096be2b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a155e7031a78cac6dcea4ca380f7b496d59170f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733221"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   フィルター処理されたデータ スナップショットを生成するエージェント ジョブに関する情報を返します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -59,7 +59,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|フィルター選択されたデータスナップショットジョブを識別します。|  
+|**id**|**int**|フィルター選択されたデータスナップショットジョブを識別します。|  
 |**job_name**|**sysname**|フィルター選択されたデータスナップショットジョブの名前。|  
 |**job_id**|**uniqueidentifier**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディストリビューター側のエージェントジョブを識別します。|  
 |**dynamic_filter_login**|**sysname**|パブリケーションに対して定義されたパラメーター化された行フィルターの[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)関数を評価するために使用される値。|  
@@ -87,7 +87,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpdynamicsnapshot_job**を実行できるのは、 **sysadmin**固定サーバーロール、 **db_owner**固定データベースロール、およびパブリケーションのパブリケーションアクセスリストのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

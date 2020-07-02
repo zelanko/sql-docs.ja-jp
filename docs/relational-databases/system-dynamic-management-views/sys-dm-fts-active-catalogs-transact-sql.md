@@ -20,20 +20,20 @@ ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a7b691103a32b49ab7ef017a9820500b7ab0526
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265974"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734576"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>dm_fts_active_catalogs (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   サーバー上でいくつかの作成アクティビティが進行中のフルテキストカタログに関する情報を返します。  
   
 > [!NOTE]
->  次の列は、の将来の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンで削除される予定です: is_paused、previous_status、previous_status_description、row_count_in_thousands、状態、status_description、および worker_count。 新しい開発作業ではこれらの列を使用しないようにし、現在これらの列を使用しているアプリケーションの変更を検討してください。  
+>  次の列は、の将来のバージョンで削除される予定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です: is_paused、previous_status、previous_status_description、row_count_in_thousands、状態、status_description、および worker_count。 新しい開発作業ではこれらの列を使用しないようにし、現在これらの列を使用しているアプリケーションの変更を検討してください。  
   
  
 |列名|データ型|説明|  
@@ -56,19 +56,19 @@ ms.locfileid: "68265974"
 |**is_importing**|**bit**|フルテキストカタログがインポートされているかどうかを示します。<br /><br /> 1 = カタログがインポートされています。<br /><br /> 2 = カタログがインポートされていません。|  
   
 ## <a name="remarks"></a>Remarks  
- Is_importing 列はで[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]新しく追加されました。  
+ Is_importing 列はで新しく追加されました [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。  
   
 ## <a name="permissions"></a>アクセス許可  
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
    
 ## <a name="physical-joins"></a>物理結合  
  ![この動的管理ビューの重要な結合](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "この動的管理ビューの重要な結合")  
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|ソース|終了|リレーションシップ|  
+|From|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs。 database_id|dm_fts_index_population。 database_id|一対一|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|一対一|  
@@ -91,7 +91,7 @@ AND catalog.database_id = (SELECT dbid FROM sys.sysdatabases WHERE name = DB_NAM
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  
  [Transact-sql&#41;&#40;のフルテキスト検索とセマンティック検索の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   

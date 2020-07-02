@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f439fa61b8bfecfba9d03589af0d09ff737f3bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b09864e65bb0c46370ee0f8c3d09994f94027d6d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831769"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733340"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   カーソルを開きます。 sp_cursoropen は、カーソルオプションおよびカーソルオプションに関連付けられた SQL ステートメントを定義し、カーソルを設定します。 sp_cursoropen は、ステートメント DECLARE_CURSOR とを組み合わせたものと同じです [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 このプロシージャは、ID = 2 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
@@ -52,7 +52,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  スクロール オプションです。 *scrollopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -74,7 +74,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  同時実行制御オプション。 *ccopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (以前の LOCKCC)|  
@@ -147,7 +147,7 @@ sp_cursoropen cursor OUTPUT, stmt
 > [!NOTE]  
 >  Sp_cursoropen プロシージャが正常に実行された場合、RPC の戻りパラメーターと TDS 列形式の情報 (0xa0 & 0xa1 messages) を含む結果セットが送信されます。 失敗した場合は、1つまたは複数の TDS エラーメッセージが送信されます。 どちらの場合も、行データは返されず、 *done*メッセージカウントはゼロになります。 7.0 より前のバージョンを使用している場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、0xa0、0xa1 (SELECT ステートメントの標準) は、0xa5 および0xa5 のトークンストリームと共に返されます。 7.0 を使用している場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、0xa5 および0xa5 のトークンストリームと共に0x81 が返されます (SELECT ステートメントの標準)。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="stmt-parameter"></a>stmt パラメーター  
  *Stmt*でストアドプロシージャの実行を指定する場合、入力パラメーターは、 *stmt*文字列の一部として、または*boundparam*引数として指定することによって、定数として定義することができます。 宣言された変数は、この方法でバインドされたパラメーターとして渡すことができます。  
@@ -210,7 +210,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  後続のパラメーターは、ステートメントで*ローカル変数名*の代わりに使用する値を渡すために使用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_cursorfetch &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

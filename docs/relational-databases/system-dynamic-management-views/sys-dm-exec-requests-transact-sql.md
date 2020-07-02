@@ -20,16 +20,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8e1cf6bdf4270759a94761e67b94009576ef6ad
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 44c20aeed09468b9f2e0cc7047364f563e463daf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84941083"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734690"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>dm_exec_requests (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 で実行されている各要求に関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 要求の詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
    
@@ -38,7 +38,7 @@ ms.locfileid: "84941083"
 |session_id|**smallint**|この要求が関連付けられているセッションの ID。 NULL 値は許可されません。|  
 |request_id|**int**|要求の ID。 セッションのコンテキスト内で一意です。 NULL 値は許可されません。|  
 |start_time|**datetime**|要求が到着したときのタイムスタンプ。 NULL 値は許可されません。|  
-|status|**nvarchar(30)**|要求の状態。 DLL は、次のいずれかの場所に置くことができます。<br /><br /> 背景<br />実行中<br />実行可能<br />休止中<br />Suspended<br /><br /> NULL 値は許可されません。|  
+|status|**nvarchar(30)**|要求の状態。 DLL は、次のいずれかの場所に置くことができます。<br /><br /> バックグラウンド<br />実行中<br />実行可能<br />休止中<br />Suspended<br /><br /> NULL 値は許可されません。|  
 |コマンドを使用します|**nvarchar(32)**|現在処理中のコマンドの種類。 一般的なコマンドの種類には次のものがあります。<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 要求のテキストを取得するには、対応する sql_handle と共に、要求に対して sys.dm_exec_sql_text を使用します。 内部システムプロセスは、実行するタスクの種類に基づいて、コマンドを設定します。 タスクには次のものが含まれます。<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> NULL 値は許可されません。|  
 |sql_handle|**varbinary(64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 NULL 値が許可されます。| 
 |statement_start_offset|**int**|現在実行中のバッチまたは保存されたオブジェクトに対して現在実行中のステートメントの開始位置を、0で始まるバイト単位で示します。 、、および動的管理関数と共に使用して、 `sql_handle` `statement_end_offset` `sys.dm_exec_sql_text` 要求に対して現在実行中のステートメントを取得できます。 NULL 値が許可されます。|  
@@ -98,7 +98,7 @@ ms.locfileid: "84941083"
 |page_server_reads|**bigint**|**適用対象**: Azure SQL Database ハイパースケール<br /><br /> この要求によって実行されたページサーバーの読み取り回数。 NULL 値は許可されません。|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>注釈 
+## <a name="remarks"></a>Remarks 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。 この動的管理ビューによって返される時刻値には、プリエンプティブモードで費やされた時間は含まれません。
 
 [行モード](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)で並列要求を実行する場合、は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 割り当てられたタスクを完了するワーカースレッドを調整するワーカースレッドを割り当てます。 この DMV では、コーディネーターのスレッドのみが要求に対して表示されます。 列の**読み取り**、**書き込み**、 **logical_reads**、 **row_count**は、コーディネータースレッドに対して更新され**ません**。 列**wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**、および**granted_query_memory**は、コーディネータースレッドに対して**のみ更新**されます。 詳細については、「[スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
@@ -127,7 +127,7 @@ SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);
 GO  
 ```
 
-### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. 実行中のバッチが保持しているすべてのロックを検索する
+### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B: 実行中のバッチが保持しているすべてのロックを検索する
 
 次の例では、 **dm_exec_requests**を照会して、興味深いバッチを見つけて、出力からコピーします `transaction_id` 。
 
@@ -145,7 +145,7 @@ WHERE request_owner_type = N'TRANSACTION'
 GO  
 ```
 
-### <a name="c-finding-all-currently-blocked-requests"></a>C. 現在ブロックされているすべての要求を検索しています
+### <a name="c-finding-all-currently-blocked-requests"></a>C: 現在ブロックされているすべての要求を検索しています
 
 次の例では、 **sys. dm_exec_requests**を照会して、ブロックされた要求に関する情報を検索します。  
 
@@ -158,7 +158,7 @@ WHERE status = N'suspended';
 GO  
 ```  
 
-### <a name="d-ordering-existing-requests-by-cpu"></a>D. CPU による既存の要求の順序付け
+### <a name="d-ordering-existing-requests-by-cpu"></a>D: CPU による既存の要求の順序付け
 
 ```sql
 SELECT 
@@ -186,7 +186,7 @@ FROM sys.dm_exec_requests AS req
 GO
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [動的管理ビューと動的管理関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
 [実行関連の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)      
 [dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     

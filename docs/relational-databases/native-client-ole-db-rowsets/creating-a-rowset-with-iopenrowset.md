@@ -16,17 +16,17 @@ ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a22369ae477bf1cf59fa2266c2178ae3a0147fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5612d3f791ef6e32f9d9c699cbcb77de6ede42a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301718"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734908"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>IOpenRowset を使用した行セットの作成
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、 **IOpenRowset:: OpenRowset**メソッドがサポートされていますが、次の制限があります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーでは、 **IOpenRowset:: OpenRowset**メソッドがサポートされていますが、次の制限があります。  
   
 -   *pTableID* パラメーターが指すデータベース ID (DBID) 構造体に、ベース テーブルまたはビューを指定する必要があります。  
   
@@ -36,9 +36,9 @@ ms.locfileid: "81301718"
   
 -   **OpenRowset** の *pIndexID* パラメーターには NULL を指定する必要があります。  
   
- **IOpenRowset::OpenRowset** の結果セットには、1 つの行セットが含まれます。 1つの行セットを含む結果セットは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カーソルでサポートできます。 開発者はカーソル サポートによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンカレンシー メカニズムを使用できます。  
+ **IOpenRowset::OpenRowset** の結果セットには、1 つの行セットが含まれます。 1つの行セットを含む結果セットは、カーソルでサポートでき [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 開発者はカーソル サポートによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンカレンシー メカニズムを使用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [行セット](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

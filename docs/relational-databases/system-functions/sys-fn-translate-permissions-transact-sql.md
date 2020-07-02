@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3d7a464f3faba633dd09be12ef4c3d006ef19ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68055375"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738588"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   SQL トレースによって返されるアクセス許可のビットマスクを権限名のテーブルに変換します。  
   
@@ -43,7 +43,7 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>引数  
- *平準*  
+ *レベル*  
  権限が適用されるセキュリティ保護可能なリソースの種類を指定します。 *レベル*は**nvarchar (60)** です。  
   
  *perms*  
@@ -53,13 +53,13 @@ sys.fn_translate_permissions ( level , perms )
  **テーブル**  
   
 ## <a name="remarks"></a>Remarks  
- SQL トレースの**permissions**列に返される値は、有効な権限を計算するためにに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よって使用されるビットマスクを整数で表したものです。 25種類の securables にはそれぞれ、対応する数値を持つ独自のアクセス許可セットがあります。 **fn_translate_permissions**は、このビットマスクを権限名のテーブルに変換します。  
+ SQL トレースの**permissions**列に返される値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有効な権限を計算するためにによって使用されるビットマスクを整数で表したものです。 25種類の securables にはそれぞれ、対応する数値を持つ独自のアクセス許可セットがあります。 **fn_translate_permissions**は、このビットマスクを権限名のテーブルに変換します。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="example"></a>例  
- 次のクエリで`sys.fn_builtin_permissions`は、を使用して、証明書に適用さ`sys.fn_translate_permissions`れるアクセス許可を表示し、を使用してアクセス許可のビットマスクの結果を返します。  
+ 次のクエリでは、を使用して、 `sys.fn_builtin_permissions` 証明書に適用されるアクセス許可を表示し、を使用して `sys.fn_translate_permissions` アクセス許可のビットマスクの結果を返します。  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  
@@ -68,7 +68,7 @@ SELECT '0010' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0010)
 SELECT '0011' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0011);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アクセス許可 &#40;データベースエンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [server_permissions &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  

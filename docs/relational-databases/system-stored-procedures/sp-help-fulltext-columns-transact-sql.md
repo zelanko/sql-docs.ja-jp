@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7b49f8be9ead1b94d9320f4a912f7e20d7891c53
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0a59ec7b385ca6c1b51967ec9a49f3d96d5b3e1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738542"
 ---
 # <a name="sp_help_fulltext_columns-transact-sql"></a>sp_help_fulltext_columns (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   フルテキスト インデックス作成用として指定された列を返します。  
   
@@ -66,7 +66,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、既定では**public**ロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`Document` テーブルでフルテキスト インデックス作成用に指定された列に関する情報を返します。  
   
 ```  
@@ -76,7 +76,7 @@ EXEC sp_help_fulltext_columns 'Production.Document';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [COLUMNPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
  [sp_fulltext_column &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
  [sp_help_fulltext_columns_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   

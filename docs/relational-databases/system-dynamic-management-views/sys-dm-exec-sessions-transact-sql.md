@@ -20,19 +20,19 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ce44d14573000e9880fb1daf3a1ddb42746ee85
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: eff5e947caed2471d63c980418688f6945c78b21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151963"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734685"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   の認証済みセッションごとに1行を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 sys.dm_exec_sessions は、すべてのアクティブなユーザー接続と内部タスクに関する情報を示すサーバー スコープのビューです。 この情報には、クライアント バージョン、クライアント プログラム名、クライアントのログイン日時、ログイン ユーザー、現在のセッション設定などが含まれます。 sys.dm_exec_sessions を使用して、最初に、現在のシステムの負荷を表示して目的のセッションを特定します。その後、他の動的管理ビューまたは動的管理関数を使用して、そのセッションの詳細を参照します。  
   
- Dm_exec_connections、sys. dm_exec_sessions、および dm_exec_requests の動的管理ビューは、システムテーブルにマップさ[れます。](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)  
+ Dm_exec_connections、dm_exec_sessions、および dm_exec_requests の動的管理ビューは、 [sys.sysプロセス](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)システムテーブルにマップされます。  
   
 > **注:** またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_exec_sessions**という名前を使用します。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "83151963"
 ** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** `VIEW DATABASE STATE` 現在のデータベースへのすべての接続を表示する必要があります。 `VIEW DATABASE STATE`データベースでは許可さ `master` れません。 
   
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [ **Common criteria 準拠を有効に**する] サーバー構成オプションを有効にすると、次の列にログオンの統計情報が表示されます。  
   
 -   last_successful_logon  
@@ -133,7 +133,7 @@ FROM sys.dm_exec_sessions
 GROUP BY login_name;  
 ```  
   
-### <a name="b-finding-long-running-cursors"></a>B. 長時間実行されているカーソルを検索する  
+### <a name="b-finding-long-running-cursors"></a>B: 長時間実行されているカーソルを検索する  
  次の例では、特定の期間よりも長く開いているカーソル、カーソルの作成者、およびカーソルが配置されているセッションを検索します。  
   
 ```sql  
@@ -147,7 +147,7 @@ JOIN sys.dm_exec_sessions AS s
 WHERE DATEDIFF(mi, c.creation_time, GETDATE()) > 5;  
 ```  
   
-### <a name="c-finding-idle-sessions-that-have-open-transactions"></a>C. トランザクションが開いているアイドル状態のセッションを検索する  
+### <a name="c-finding-idle-sessions-that-have-open-transactions"></a>C: トランザクションが開いているアイドル状態のセッションを検索する  
  次の例では、開いているトランザクションがあり、アイドル状態のセッションを検索します。 アイドル状態のセッションとは、現在要求が実行されていないセッションです。  
   
 ```sql  
@@ -167,7 +167,7 @@ WHERE EXISTS
     );  
 ```  
   
-### <a name="d-finding-information-about-a-queries-own-connection"></a>D. クエリ所有の接続に関する情報の検索  
+### <a name="d-finding-information-about-a-queries-own-connection"></a>D: クエリ所有の接続に関する情報の検索  
  クエリ所有の接続に関する情報を収集するための一般的なクエリ。  
   
 ```sql  
@@ -183,7 +183,7 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   

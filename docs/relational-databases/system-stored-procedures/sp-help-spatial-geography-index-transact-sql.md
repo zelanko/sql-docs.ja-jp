@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73bb564880cae238cdbaa7e3c13a1f18ab95dc99
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1864aec83a60c83a1ff10bb0c5e3f814631c27fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304876"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733261"
 ---
 # <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Geography**空間インデックスに関する指定された一連のプロパティの名前と値を返します。 結果はテーブル形式で返されます。 プロパティのコアセットとインデックスのすべてのプロパティのどちらを返すかを選択できます。  
   
@@ -53,7 +53,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="example"></a>例  
- 次の例で`sp_help_spatial_geography_index` **は、を**使用して、テーブル**geography_col**で定義されている、指定されたクエリサンプル** \@** のテーブルの**SIndx_SpatialTable_geography_col2**を調査します。 この例では、指定したインデックスのコアプロパティのみが返されます。  
+ 次の例では、を使用して `sp_help_spatial_geography_index` 、 ** \@ **テーブル**geography_col**で定義されている、指定されたクエリサンプルのテーブルの**SIndx_SpatialTable_geography_col2**を調査します。 **geography** この例では、指定したインデックスのコアプロパティのみが返されます。  
   
 ```  
 declare @qs geography  
@@ -63,9 +63,9 @@ exec sp_help_spatial_geography_index 'geography_col', 'SIndx_SpatialTable_geogra
   
  **Geography**インスタンスの境界ボックスは、地球全体です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [空間インデックスストアドプロシージャ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)   

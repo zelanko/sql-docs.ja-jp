@@ -20,15 +20,15 @@ ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ea2f693b49f2b8eebd2c2348883607e08112600
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1489905b5f91743892906655b2987c702c048516
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734717"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>dm_exec_query_resource_semaphores (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   現在のクエリのリソースセマフォの状態に関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ますです。 **dm_exec_query_resource_semaphores**は、一般的なクエリ実行メモリの状態を提供し、システムが十分なメモリにアクセスできるかどうかを判断できます。 このビューは、サーバーのメモリステータスの完全な画像を提供するために、dm_os_memory_clerks から取得したメモリ情報を補完し[ます](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。 **dm_exec_query_resource_semaphores**は、通常のリソースセマフォに対して1つの行を返し、小さいクエリのリソースセマフォ用に別の行を返します。 小規模クエリセマフォには、次の2つの要件があります。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "82827961"
   
  データベース管理者は、リソース ガバナー機能を使用することで、サーバー リソースを最大 64 個までのリソース プールに分散できます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、各プールが小規模の独立したサーバー インスタンスのように動作し、2 つのセマフォを必要とします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36809be121087741d2a23becf41a32b2ffe9f5cd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9242f547d8f44e09341183a30a49afef4d2c4f52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736919"
 ---
 # <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   指定されたトレーサー トークンの詳細な待機時間情報を、各サブスクライバーに対して 1 行ずつ返します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して、またはディストリビューター側でディストリビューションデータベースに対して実行されます。  
   
@@ -77,7 +77,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helptracertokenhistory**を実行できるのは、 **sysadmin**固定サーバーロールのメンバー、パブリケーションデータベースの固定データベースロール**db_owner** 、またはディストリビューションデータベースの**db_owner**固定データベースロールまたは**replmonitor**ロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランザクションレプリケーションの待機時間を計測して接続を検証する](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
  [sp_deletetracertokenhistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   

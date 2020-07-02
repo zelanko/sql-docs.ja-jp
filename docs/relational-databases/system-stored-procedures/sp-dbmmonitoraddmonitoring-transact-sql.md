@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4b8ddf9753578f6d73cd6baf7511c73d90377e1a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7869fed1b04a16a57750fcfd91d18e1b0c0d18a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831650"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738527"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーインスタンス上のミラー化されたデータベースごとにミラーリングの状態を定期的に更新する、データベースミラーリングモニターのジョブを作成します。  
   
@@ -47,7 +47,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 >  更新期間が短すぎると、クライアントの応答時間が長くなる可能性があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -70,7 +70,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 EXEC sp_dbmmonitoraddmonitoring 3;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitordropmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   

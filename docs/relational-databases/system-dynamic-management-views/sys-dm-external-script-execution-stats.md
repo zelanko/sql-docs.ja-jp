@@ -20,15 +20,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ae59154acbaed6d02ab0e2a4ba1f78c5f46dc93
-ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
+ms.openlocfilehash: 8267c35e2453873269ae94d1bff331d025a76fd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734641"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 外部スクリプト要求の種類ごとに 1 つの行を返します。 外部スクリプト要求は、サポートされている外部スクリプト言語でグループ化されます。 登録されている外部スクリプト関数ごとに 1 つの行が生成されます。 `rxExec`など、任意の外部スクリプト関数は、親プロセスによって送信された場合を除き、記録されません。
   
@@ -48,7 +48,7 @@ ms.locfileid: "85409341"
 > [!NOTE]  
 > 外部スクリプトを実行するユーザーはさらに EXECUTE ANY EXTERNAL SCRIPT 権限も持っている必要がありますが、管理者はこの権限がなくてもこの DMV を使用できます。
   
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>Remarks
 
   この DMV は、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]で提供される新しい外部スクリプト実行機能の全体的な使用状況を監視するために、内部テレメトリ用に提供されます。 登録されている外部スクリプト関数が呼び出されるたびにスタート パッドがディスクベースのカウンターを増分すると、テレメトリ サービスが開始します。
 
@@ -74,7 +74,7 @@ R は任意のスクリプトをサポートしており、R コミュニティ�
 
 これらの関数の登録は機能がインストールされると実行され、登録された関数を追加または削除することはできません。
 
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="viewing-the-number-of-r-scripts-run-on-the-server"></a>サーバー上で実行されている R スクリプトの数を表示する
 

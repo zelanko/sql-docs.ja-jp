@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9adbc21b0c226746c879bf1b32377c93b2d76c1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c2495cf2bc8941e2c619255f4328eba6be1942a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736730"
 ---
 # <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_identity_range_allocations**テーブルは、パブリッシュされたアーティクルについて、パブリッシャーとサブスクライバーの両方に対する id 範囲の割り当ての履歴を追跡するために使用されます。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "82829265"
 |**max_used**|**数値 (38)**|使用されている最大 ID 値です。|  
 |**time_of_allocation**|**datetime**|割り当てが行われた時刻。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

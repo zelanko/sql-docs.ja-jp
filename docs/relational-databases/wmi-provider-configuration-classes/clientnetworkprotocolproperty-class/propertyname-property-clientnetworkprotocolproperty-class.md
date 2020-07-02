@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 25c3b5e7-0301-4f7b-9635-b3db06dad1e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60ecd0972659f69461b6f94b7e3f24c99bcf8cec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e808c4e53d7be4c42c7e1e4b8effa574997cd3a8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658908"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738498"
 ---
 # <a name="propertyname-property-clientnetworkprotocolproperty-class"></a>PropertyName プロパティ (ClientNetworkProtocolProperty クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   [Propertyidx プロパティ (ClientNetworkProtocolProperty クラス)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md)のプロパティ値によって参照される現在のプロパティの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,7 +35,7 @@ ms.locfileid: "73658908"
 object.PropertyName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  [クライアントによって使用されるネットワーク プロトコルの属性を表す](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) ClientNetworkProtocolProperty クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
   
@@ -44,7 +44,7 @@ object.PropertyName [= value]
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クライアント プロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

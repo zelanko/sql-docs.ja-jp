@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00cc39e233a78642aa805bb0d08f2de559c814af
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 595898809144af584bad34afe120f36291c88b7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832316"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736828"
 ---
 # <a name="msmerge_articlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_articlehistory**テーブルは、マージエージェント同期セッション中にアーティクルに加えられた変更を追跡し、変更が行われた各アーティクルに対して1つの行を使用します。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "82832316"
 |**estimated_changes**|**int**|アーティクルに適用する必要がある行の変更の推定数。|  
 |**relative_cost**|**decimal**|この記事の変更を適用するために費やされた時間と、セッション全体の合計時間。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

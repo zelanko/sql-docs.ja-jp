@@ -20,15 +20,15 @@ ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de6ed0a0b8f91157b61c7d38564c8ab0941f1c6c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b2a7a5e9f8410ab8ca66f0621d6a2c955258c28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734662"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定された*sql_handle*によって識別される SQL バッチのテキストを返します。 このテーブル値関数は、システム関数 **fn_get_sql** に代わるものです。  
   
@@ -85,7 +85,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 アドホッククエリの場合、SQL ハンドルは、サーバーに送信される SQL テキストに基づくハッシュ値であり、任意のデータベースからのものである可能性があります。 
 
 ストアドプロシージャ、トリガー、関数などのデータベースオブジェクトでは、SQL ハンドルはデータベース ID、オブジェクト ID、およびオブジェクト番号から取得されます。 
@@ -132,7 +132,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
          ```      
     
   
-### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. 平均 CPU 時間による上位5つのクエリに関する情報を取得する  
+### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B: 平均 CPU 時間による上位5つのクエリに関する情報を取得する  
  次の例では、上位 5 つのクエリにかかった平均 CPU 時間と SQL ステートメントのテキストを返します。  
   
 ```sql  
@@ -147,7 +147,7 @@ CROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) AS st
 ORDER BY total_worker_time/execution_count DESC;  
 ```  
   
-### <a name="c-provide-batch-execution-statistics"></a>C. バッチ実行の統計を指定する  
+### <a name="c-provide-batch-execution-statistics"></a>C: バッチ実行の統計を指定する  
  次の例では、バッチで実行されている SQL クエリのテキストを返し、クエリに関する統計情報を提供します。  
   
 ```sql  

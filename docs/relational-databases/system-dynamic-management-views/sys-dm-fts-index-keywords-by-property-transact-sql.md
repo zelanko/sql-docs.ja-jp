@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 82f433d18ff0940c9283f93cfa5e3f87179d31ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cffa7327162b4ae333719ad0e50c02002d0a4528
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734551"
 ---
 # <a name="sysdm_fts_index_keywords_by_property-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたテーブルのフルテキストインデックスに含まれるプロパティ関連のすべてのコンテンツを返します。 これには、そのフルテキストインデックスに関連付けられている検索プロパティリストによって登録されたすべてのプロパティに属するすべてのデータが含まれます。  
   
@@ -85,7 +85,7 @@ OBJECT_ID('table_name')
   
  フルテキスト キー列が整数データ型 (推奨されるデータ型) の場合、document_id はベース テーブルのフルテキスト キー値に直接マップされます。  
   
- 一方、フルテキスト キー列で整数データ型以外のデータ型が使用されている場合は、document_id はベース テーブルのフルテキスト キーを表しません。 この場合、dm_fts_index_keywords_by_property によって返されるベーステーブル内の行を識別するには、 [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)によって返された結果と共にこのビューを結合する必要があります。 結合する前に、ストアドプロシージャの出力を一時テーブルに格納する必要があります。 その後、dm_fts_index_keywords_by_property の document_id 列を、このストアドプロシージャによって返される DocId 列に結合できます。 **Timestamp**列はによって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自動生成されるため、挿入時に値を受け取ることはできません。 そのため、 **timestamp**列は、 **varbinary (8)** 列に変換する必要があります。 次の例では、これらの手順を示します。 この例では、 *table_id*はテーブルの id、 *database_name*はデータベースの名前、 *table_name*はテーブルの名前です。  
+ 一方、フルテキスト キー列で整数データ型以外のデータ型が使用されている場合は、document_id はベース テーブルのフルテキスト キーを表しません。 この場合、dm_fts_index_keywords_by_property によって返されるベーステーブル内の行を識別するには、 [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)によって返された結果と共にこのビューを結合する必要があります。 結合する前に、ストアドプロシージャの出力を一時テーブルに格納する必要があります。 その後、dm_fts_index_keywords_by_property の document_id 列を、このストアドプロシージャによって返される DocId 列に結合できます。 **Timestamp**列はによって自動生成されるため、挿入時に値を受け取ることはできません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 そのため、 **timestamp**列は、 **varbinary (8)** 列に変換する必要があります。 次の例では、これらの手順を示します。 この例では、 *table_id*はテーブルの id、 *database_name*はデータベースの名前、 *table_name*はテーブルの名前です。  
   
 ```  
 USE database_name;  
@@ -130,7 +130,7 @@ SELECT KWBPOP.* FROM
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
  [フルテキストインデックスのパフォーマンスの向上](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [sp_fulltext_keymappings &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   

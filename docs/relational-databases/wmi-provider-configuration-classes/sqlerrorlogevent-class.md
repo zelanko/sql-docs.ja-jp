@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f77b7a36e51d08aa3ae82b5d42e28b0173d750cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2a07c87dea5be1a3d66c5e24996a120323d09ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738461"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent クラス
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイル内のイベントの表示に関するプロパティを提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -58,7 +58,7 @@ class SQLErrorLogEvent
 |名前空間|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>例  
- 次の例では、指定したログ ファイルに記録されたすべてのイベントの値を取得する方法を示します。 この例を実行するに\<は、 *Instance_Name*> をの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの名前 (' Instance1 ' など) に置き換え、' File_Name ' をエラーログファイルの名前 (' log. 1 ' など) に置き換えます。  
+ 次の例では、指定したログ ファイルに記録されたすべてのイベントの値を取得する方法を示します。 この例を実行するには、を \<*Instance_Name*> のインスタンスの名前 (' Instance1 ' など) に置き換え、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ' File_Name ' をエラーログファイルの名前 (' log. 1 ' など) に置き換えます。  
   
 ```  
 on error resume next  
@@ -79,24 +79,24 @@ Next
 ```  
   
 ## <a name="comments"></a>説明  
- WQL ステートメントで*InstanceName*または*FileName*が指定されていない場合、クエリは既定のインスタンスと現在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のログファイルに関する情報を返します。 たとえば、次の WQL ステートメントは、既定のインスタンス (MSSQLSERVER) 上の現在のログ ファイル (ERRORLOG) に含まれるすべてのログ イベントを返します。  
+ WQL ステートメントで*InstanceName*または*FileName*が指定されていない場合、クエリは既定のインスタンスと現在のログファイルに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 たとえば、次の WQL ステートメントは、既定のインスタンス (MSSQLSERVER) 上の現在のログ ファイル (ERRORLOG) に含まれるすべてのログ イベントを返します。  
   
 ```  
 "SELECT * FROM SqlErrorLogEvent"  
 ```  
   
 ## <a name="security"></a>セキュリティ  
- WMI を使用し[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]てログファイルに接続するには、ローカルコンピューターとリモートコンピューターの両方に対して次のアクセス許可を持っている必要があります。  
+ WMI を使用してログファイルに接続するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ローカルコンピューターとリモートコンピューターの両方に対して次のアクセス許可を持っている必要があります。  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement10** WMI 名前空間への読み取りアクセス。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。  
   
--   エラー ログを格納したフォルダーへの読み取り権限。 既定では、エラーログは次のパスにあります\<*ドライブ>* は、がインストールさ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<れているドライブを表し、 *InstanceName*> は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの名前です)。  
+-   エラー ログを格納したフォルダーへの読み取り権限。 既定では、エラーログは次のパスにあり \<*Drive> ます (* は、がインストールされているドライブを表し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<*InstanceName*> はのインスタンスの名前です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )。  
   
-     **ドライブ>: Server\MSSQL13 を実行します。 \<** **\<InstanceName> \MSSQL\Log**  
+     ** \<Drive> : Server\MSSQL13** **。 \<InstanceName>\MSSQL\Log**  
   
  ファイアウォール経由で接続する場合は、リモート ターゲット コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、「 [Windows Vista 以降で WMI にリモート接続する](https://go.microsoft.com/fwlink/?LinkId=178848)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SqlErrorLogFile クラス](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   
  [オフライン ログ ファイルの表示](../../relational-databases/logs/view-offline-log-files.md)  
   

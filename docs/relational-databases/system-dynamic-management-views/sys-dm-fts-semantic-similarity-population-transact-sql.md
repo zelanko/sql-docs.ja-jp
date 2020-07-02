@@ -18,15 +18,15 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 280ab197ef9347c6a209be7ef05e8f1ce2dfd23e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea4f2fbd33bf3eb1e9e6a2e2b079ef78796f6f61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900871"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738639"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>dm_fts_semantic_similarity_population (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   関連付けられたセマンティックインデックスを持つ各テーブルの各類似性インデックスについて、ドキュメントの類似性のインデックスの作成に関するステータス情報の1行を返します。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "67900871"
 ## <a name="general-remarks"></a>全般的な解説  
  詳細については、「[セマンティック検索の管理と監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)」を参照してください。  
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
  セマンティックインデックス作成の状態の詳細については、 [dm_fts_index_population &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)を参照してください。  
   
 ## <a name="security"></a>Security  
@@ -67,7 +67,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セマンティック検索の管理および監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

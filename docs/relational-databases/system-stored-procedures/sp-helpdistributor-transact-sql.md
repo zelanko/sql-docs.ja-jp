@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d849e7d43cc73ca6153375f5e5b3772944af1f7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cb2b1fb97504b50f2c26ddbfe26f67888f507328
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733234"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   ディストリビューター、ディストリビューションデータベース、作業ディレクトリ、およびエージェントユーザーアカウントに関する情報を一覧表示し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースまたは任意のデータベースに対して実行されます。  
   
@@ -126,7 +126,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |rpc server name|**\@rpcsrvname**|  
 |publisher type|**\@publisher_type**|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディストリビューターとパブリッシャーのプロパティの表示および変更](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  

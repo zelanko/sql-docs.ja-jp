@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d7e4ac0e338ac556c88c8cc22d6a87a53c67d51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7c93aec2d5246073073fefaaaf4b21d3d542416a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737655"
 ---
 # <a name="clr-integration-and-transactions"></a>CLR 統合とトランザクション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  System.string**名前空間は、** ADO.NET および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]共通言語ランタイム (CLR) 統合と完全に統合されたトランザクションフレームワークを提供します。 ADO.NET とは連携して、マネージアプリケーションでのローカル**トランザクションと分散**トランザクションの使用を拡張し、簡素化します。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  System.string**名前空間は、** ADO.NET および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共通言語ランタイム (CLR) 統合と完全に統合されたトランザクションフレームワークを提供します。 ADO.NET とは連携して、マネージアプリケーションでのローカル**トランザクションと分散**トランザクションの使用を拡張し、簡素化します。  
   
 > [!NOTE]  
 >  CLR ユーザー定義プロシージャ (UDP) は、このプロシージャが実行されているサーバーへの接続 (ループバック接続) を確立して、同じトランザクションに参加することができません。 この操作を試みると、接続試行がブロックされ、制御は UDP に返されません。 これにより、UDP でタイムアウト エラー (メッセージ 1206) が発生します。  
@@ -46,7 +46,7 @@ ms.locfileid: "81487486"
  [トランザクションの有効期間](../../relational-databases/clr-integration-data-access-transactions/transaction-lifetimes.md)  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャで開始されたトランザクションと、CLR アプリケーションで開始されたトランザクションの有効期間の違いについて説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR データベース オブジェクトからのデータ アクセス](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

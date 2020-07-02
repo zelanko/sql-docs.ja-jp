@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7b44d76ad893775216e6566add3636603ea7dce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e27de1c2b303474117a0ea442dde81606a9f48f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830626"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734605"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   指定した時点で名前空間の所有者 (NSO) によって処理されている i/o 要求の一覧を表示します。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "82830626"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の Filestream および FileTable の動的管理ビュー](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

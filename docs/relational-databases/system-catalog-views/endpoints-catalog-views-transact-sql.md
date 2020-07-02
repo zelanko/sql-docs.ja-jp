@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b0a153beae9d95d9ff3d59945ee1665374a4cf12
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 983afc645aa8f627654f0e8ed26ed90773e5daed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733605"
 ---
 # <a name="endpoints-catalog-views-transact-sql"></a>エンドポイントのカタログビュー (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、次のカタログビューについて説明します。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82829147"
 |[sys.endpoint_webmethods](../../relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql.md)|[sys.tcp_endpoints](../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md)|  
 |[sys.http_endpoints](../../relational-databases/system-catalog-views/sys-http-endpoints-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
