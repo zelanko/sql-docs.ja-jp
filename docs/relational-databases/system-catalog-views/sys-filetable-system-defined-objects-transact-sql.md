@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 62022e6b-46f6-495f-b14b-53f41e040361
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5ed70162c89d9aa3a02d8d1fe5cb76f7031a806c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0232a635267dc97f53f67309fb59d06651d918ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828136"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786441"
 ---
 # <a name="sysfiletable_system_defined_objects-transact-sql"></a>sys.filetable_system_defined_objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Filetable に関連するシステム定義のオブジェクトの一覧を表示します。 システム定義オブジェクトごとに1行のレコードを格納します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82828136"
 |**object_id**|**int**|FileTable に関連するシステム定義のオブジェクトのオブジェクト ID。<br /><br /> は、 **sys. オブジェクト**内のオブジェクトを参照します。|  
 |**parent_object_id**|**int**|親 FileTable のオブジェクト ID。<br /><br /> は、 **sys. オブジェクト**内のオブジェクトを参照します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FileTable の作成、変更、および削除](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [FileTable の管理](../../relational-databases/blob/manage-filetables.md)  
   

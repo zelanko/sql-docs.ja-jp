@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f0a3edd44f7795fd57fab1cf640e7ab95d59ee2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f29d2f67f50ecda28b0675ed6e716afd390ca899
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786261"
 ---
 # <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   マージパブリケーションに対するプッシュサブスクリプションの同期をスケジュールするために使用する、新しいエージェントジョブを追加します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -97,13 +97,13 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_type = ] frequency_type`マージエージェントをスケジュールする頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
 |**8**|週次|  
-|**まで**|月 1 回|  
+|**16**|月単位|  
 |**32**|月単位の相対|  
 |**64**|自動開始|  
 |**128**|繰り返し|  
@@ -114,7 +114,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`マージエージェントを実行する曜日。 *frequency_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|土曜日|  
 |**2**|月曜日|  
@@ -130,24 +130,24 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`マージエージェントの日付を指定します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|末尾|  
+|**16**|末尾|  
 |NULL (既定値)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*によって使用される定期実行係数です。 *frequency_recurrence_factor*は**int**,、既定値は NULL です。  
   
 `[ @frequency_subday = ] frequency_subday`定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday*は**int**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**2**|Second|  
-|**4**|Minute|  
+|**4**|分|  
 |**8**|時間|  
 |NULL (既定値)||  
   
@@ -175,7 +175,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_addmergepushsubscription_agent**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プッシュサブスクリプションを作成する](../../relational-databases/replication/create-a-push-subscription.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

@@ -20,22 +20,22 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 719f7ea686f1a93842d837c002ef2bca4a8c7a78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 047e6d6f9f6e7c0405eab27655ee9e2d97e1236b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828526"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787138"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL データベース)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   データベース接続の [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 成功**connectivity**と失敗の概要を提供する、データベース接続イベントの統計が含まれます。 接続イベントの詳細については、「 [event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)」の「イベントの種類」を参照してください。  
   
-|統計|種類|説明|  
+|統計|Type|説明|  
 |---------------|----------|-----------------|  
-|**database_name**|**sysname**|データベース名。|  
+|**database_name**|**sysname**|データベースの名前です。|  
 |**start_time**|**datetime2**|集計間隔の開始時刻を示す UTC 日時。 この時刻は常に 5 分の倍数です。 次に例を示します。<br /><br /> ' 2011-09-28 16:00:00 '<br />' 2011-09-28 16:05:00 '<br />' 2011-09-28 16:10:00 '|  
 |**end_time**|**datetime2**|集計間隔の終了時刻を示す UTC 日時。 **End_time**は、同じ行の対応する**start_time**よりも常に5分後になります。|  
 |**success_count**|**int**|成功した接続の数。|  
@@ -44,7 +44,7 @@ ms.locfileid: "82828526"
 |**terminated_connection_count**|**int**|**_V11 にのみ適用さ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] れます。_**<br /><br /> 終了した接続の数。|  
 |**throttled_connection_count**|**int**|**_V11 にのみ適用さ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] れます。_**<br /><br /> スロットルされた接続の数。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="event-aggregation"></a>イベント集計
 
@@ -99,7 +99,7 @@ FROM sys.database_connection_stats
 WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';  
 ```  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [Azure SQL Database との接続に関する一般的な問題のトラブルシューティング](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   

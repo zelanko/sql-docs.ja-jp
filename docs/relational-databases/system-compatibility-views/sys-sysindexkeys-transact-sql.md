@@ -1,5 +1,5 @@
 ---
-title: sys. sysindexkeys (Transact-sql) |Microsoft Docs
+title: sys.sysindexkeys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 53a33c8d-e5f0-430d-a712-b65f43d64318
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ead3e8b7df6eb563ce87fa6d6abbffa4a5d2b413
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08a5da418d2a30d51693871b8c0089fb6c5d373a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053407"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786315"
 ---
 # <a name="syssysindexkeys-transact-sql"></a>sys.sysindexkeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   データベースのインデックスのキーまたは列に関する情報を保持します。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68053407"
 |**colid**|**smallint**|列の ID。|  
 |**keyno**|**smallint**|インデックス内での列の位置です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

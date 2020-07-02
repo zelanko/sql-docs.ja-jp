@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8aa3fc831b81827d230274b95bf3cbfbe0d5a560
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8d86eeabda755e5b6546f3f5d800f1a35ba40e7e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786152"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   ピアツーピアレプリケーショントポロジ内の参加者が受信したすべてのステータス要求に関する情報を返します。これらの要求は、トポロジ内のパブリッシュされたデータベースで[sp_requestpeerresponse &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)を実行することによって開始されます。 このストアドプロシージャは、ピアツーピアレプリケーショントポロジに参加しているパブリッシャー側のパブリケーションデータベースで実行されます。 詳細については、「[ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
   
@@ -46,15 +46,15 @@ sp_helppeerrequests [ @publication = ] 'publication'
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|要求を識別します。|  
+|**id**|**int**|要求を識別します。|  
 |**レプリケーション**|**sysname**|ステータス要求が送信されたパブリケーションの名前。|  
 |**sent_date**|**datetime**|ステータス要求が送信された日付と時刻。|  
-|**記述**|**nvarchar (4000)**|個々の状態要求を識別するために使用できるユーザー定義情報。|  
+|**description**|**nvarchar (4000)**|個々の状態要求を識別するために使用できるユーザー定義情報。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helppeerrequests**は、ピアツーピアトランザクションレプリケーションで使用されます。  
   
  **sp_helppeerrequests**は、ピアツーピアトポロジでパブリッシュされたデータベースを復元する場合に使用します。  
@@ -62,7 +62,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helppeerrequests**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_deletepeerrequesthistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
  [sp_helppeerresponses &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
   

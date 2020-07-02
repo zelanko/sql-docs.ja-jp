@@ -19,24 +19,24 @@ helpviewer_keywords:
 ms.assetid: 9fd9fa76-6128-410c-896f-741e6050143a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f0ffcc306a6b8194aeadcaa473e6eb981e7b97cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cc4f4b7ea3cca4b0dd7a3f2bbe643786ae3324ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834040"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786430"
 ---
 # <a name="sysservice_queues-transact-sql"></a>sys.service_queues (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   データベース内のサービスキューであるオブジェクトごとに1行のデータを格納します。 **type** = SQ。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<継承された列>**||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。|  
+|**\<inherited columns>**||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。|  
 |**max_readers**|**smallint**|キューで許可される同時読み取りの最大数です。|  
 |**activation_procedure**|**nvarchar (776)**|3 つの要素で構成されるアクティブ化プロシージャの名前です。|  
-|**execute_as_principal_id**|**int**|実行データベースプリンシパルの ID。<br /><br /> 既定では NULL、または EXECUTE AS CALLER の場合は NULL です。<br /><br /> [自己実行として実行する場合は、指定したプリンシパルの ID \<> です。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**int**|実行データベースプリンシパルの ID。<br /><br /> 既定では NULL、または EXECUTE AS CALLER の場合は NULL です。<br /><br /> [自己実行として実行する場合は、指定されたプリンシパルの ID \<principal> です。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**is_activation_enabled**|**bit**|1 = アクティブ化が有効になっています。|  
 |**is_receive_enabled**|**bit**|1 = 受信は有効になっています。|  
 |**is_enqueue_enabled**|**bit**|1 = エンキューは有効です。|  
@@ -46,7 +46,7 @@ ms.locfileid: "82834040"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

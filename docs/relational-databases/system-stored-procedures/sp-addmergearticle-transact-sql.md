@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ba2cebf6c4b779119696f19ee78b7ce8ec1cf66
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ebb47597b5d08e0f14d37490304001811d0b33e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786277"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   既存のマージパブリケーションにアーティクルを追加します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -81,7 +81,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'`アーティクルの種類を示します。 *種類*は**sysname**で、既定値は**table**です。次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**テーブル**(既定値)|スキーマとデータを含むテーブル。 レプリケーションはテーブルを監視して、レプリケートするデータを特定します。|  
 |**func スキーマのみ**|スキーマのみを使用する関数。|  
@@ -101,7 +101,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`スナップショットを適用するときに、サブスクライバーにテーブルが存在する場合にシステムが実行する処理を指定します。 *pre_creation_cmd*は**nvarchar (10)** で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |"**なし**"|テーブルがサブスクライバーに既に存在する場合、アクションは実行されません。|  
 |**delete**|サブセットフィルターの WHERE 句に基づいて削除を発行します。|  
@@ -115,7 +115,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option`指定されたアーティクルのスキーマ生成オプションのビットマップです。 *schema_option*は**binary (8)** で、| を指定できます。 [(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)これらの値の1つ以上の積。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0x00**|スナップショットエージェントによるスクリプト作成を無効にし、 *creation_script*で定義されているスキーマ作成前スクリプトを使用します。|  
 |**0x01**|オブジェクトの作成 (CREATE TABLE、CREATE PROCEDURE など) を生成します。 これは、ストアドプロシージャアーティクルの既定値です。|  
@@ -212,7 +212,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @check_permissions = ] check_permissions`マージエージェントがパブリッシャーに変更を適用するときに検証されるテーブルレベルの権限のビットマップです。 マージ処理が使用するパブリッシャーのログインまたはユーザー アカウントが正しいテーブル権限を持っていない場合、無効な変更は競合としてログに記録されます。 *check_permissions*は**int**で、| を指定できます。 [(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)次の1つ以上の値の積。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0x00** (既定値)|権限は確認されません。|  
 |**0x10**|サブスクライバーで実行される挿入操作をアップロードする前に、パブリッシャー側で権限をチェックします。|  
@@ -253,7 +253,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @partition_options = ] partition_options`アーティクル内のデータをパーティション分割する方法を定義します。これにより、すべての行が1つのパーティションまたは1つのサブスクリプションのみに属している場合に、パフォーマンスを最適化できます。 *partition_options*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|アーティクルのフィルター選択は、静的であるか、パーティションごとに一意のデータのサブセットを生成しません。つまり、"重複する" パーティションになります。|  
 |**1**|パーティションは重複しており、サブスクライバーで行われたデータ操作言語 (DML) の更新では、行が属するパーティションを変更することはできません。|  
@@ -267,7 +267,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @subscriber_upload_options = ] subscriber_upload_options`クライアントサブスクリプションを使用して、サブスクライバーで行われた更新に対する制限を定義します。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。 *subscriber_upload_options*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|制限はありません。 サブスクライバー側で行われた変更は、パブリッシャーにアップロードされます。|  
 |**1**|サブスクライバーでの変更は許可されますが、パブリッシャーにはアップロードされません。|  
@@ -280,7 +280,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`アーティクルに対する id 範囲管理の処理方法を指定します。 *identityrangemanagementoption*は**nvarchar (10)**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |"**なし**"|Id 範囲の管理を無効にします。|  
 |**手動**|NOT FOR REPLICATION を使用して id 列をマークし、手動による id 範囲処理を有効にします。|  
@@ -357,7 +357,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールまたは**db_owner**固定データベースロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アーティクルの定義](../../relational-databases/replication/publish/define-an-article.md)   
  [データとデータベースオブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)   

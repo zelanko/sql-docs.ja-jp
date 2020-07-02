@@ -19,17 +19,17 @@ ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 9ff85273a1e970b3bb891d1816a96019dd4f3ae5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55bb26edf9d51731a4a5986a8a6063f6214df1f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135190"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787081"
 ---
 # <a name="sysselective_xml_index_paths-transact-sql"></a>selective_xml_index_paths (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Service Pack 1 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降で使用できるようになりました。 selective_xml_index_paths の各行は、特定の選択的 xml インデックスの1つの昇格されたパスを表します。  
+  Service Pack 1 以降で使用できるようになりました [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。 selective_xml_index_paths の各行は、特定の選択的 xml インデックスの1つの昇格されたパスを表します。  
   
  次のステートメントを使用して、テーブル T の xmlcol に対して選択的 XML インデックスを作成すると、  
   
@@ -69,7 +69,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Xml スキーマ &#40;XML 型システム&#41; カタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   

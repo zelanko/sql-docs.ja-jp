@@ -16,17 +16,17 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ba1762bdc54c5ffe3e3879d21edd5e48c096f03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4927ffc7ded9a291e5910cd359cb59edea0bf3bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303623"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785560"
 ---
 # <a name="getting-large-data"></a>大きなデータの取得
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  一般に、コンシューマーは、 **ISequentialStream**インターフェイスポインターに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よって参照されていないデータを処理する他のコードから、Native Client OLE DB プロバイダーストレージオブジェクトを作成するコードを分離する必要があります。  
+  一般に、コンシューマーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ISequentialStream**インターフェイスポインターによって参照されていないデータを処理する他のコードから、Native Client OLE DB プロバイダーストレージオブジェクトを作成するコードを分離する必要があります。  
   
  このトピックでは、次の関数で使用可能な機能について説明します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81303623"
   
  DBPROP_ACCESSORDER プロパティ (行セットプロパティグループ) が DBPROPVAL_AO_SEQUENTIAL または DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS のいずれかの値に設定されている場合、コンシューマーは**GetNextRows**メソッドの呼び出しで1行のデータのみをフェッチする必要があります。これは、BLOB データがバッファリングされていないためです。 DBPROP_ACCESSORDER の値を DBPROPVAL_AO_RANDOM に設定した場合は、**GetNextRows** で複数行のデータをフェッチできます。  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、コンシューマーによって要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]されるまで、から大きなデータを取得しません。 コンシューマーは、すべての短いデータを 1 つのアクセサーにバインドし、次に 1 つ以上の一時アクセサーを使用して、必要に応じて大きなデータ値を取得する必要があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンシューマーによって要求されるまで、から大きなデータを取得しません。 コンシューマーは、すべての短いデータを 1 つのアクセサーにバインドし、次に 1 つ以上の一時アクセサーを使用して、必要に応じて大きなデータ値を取得する必要があります。  
   
 ## <a name="example"></a>例  
  次の例では、大きなデータ値を 1 つの列から取得します。  
@@ -148,7 +148,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Blob と OLE オブジェクト](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [大きな値をとるデータ型の使用](../../relational-databases/native-client/features/using-large-value-types.md)  
   

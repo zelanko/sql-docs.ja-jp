@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b9af4f3564c5834b856632db70bd6b12368a22c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826302"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786234"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   マージ パブリケーションに対するプル サブスクリプションの同期化をスケジュールするための、新しいエージェント ジョブを追加します。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
   
@@ -149,13 +149,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_type = ] frequency_type`マージエージェントをスケジュールする頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
 |**8**|週次|  
-|**まで**|月 1 回|  
+|**16**|月単位|  
 |**32**|月単位の相対|  
 |**64**|自動開始|  
 |**128**|繰り返し|  
@@ -166,7 +166,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_interval = ] frequency_interval`マージエージェントが実行される日または日。 *frequency_interval*は**int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|土曜日|  
 |**2**|月曜日|  
@@ -182,24 +182,24 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`マージエージェントの日付を指定します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|末尾|  
+|**16**|末尾|  
 |NULL (既定値)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*によって使用される定期実行係数です。 *frequency_recurrence_factor*は**int**,、既定値は NULL です。  
   
 `[ @frequency_subday = ] frequency_subday`定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**2**|Second|  
-|**4**|Minute|  
+|**4**|分|  
 |**8**|時間|  
 |NULL (既定値)||  
   
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`Web 同期が有効になっていることを示します。 *use_web_sync*は**ビット**,、既定値は0です。 **1**は、HTTP を使用してインターネット経由でプルサブスクリプションを同期できることを指定します。  
   
-`[ @internet_url = ] 'internet_url'`レプリケーションリスナーの場所を指定します (REPLISAPI.DLL) を使用します。 *internet_url*は**nvarchar (260)**,、既定値は NULL です。 *internet_url*は、という形式の完全修飾 url です `http://server.domain.com/directory/replisapi.dll` 。 サーバーの構成で、リッスンするポートがポート 80 以外の場合は、`http://server.domain.com:portnumber/directory/replisapi.dll` の形式のポート番号も指定する必要があります。ここで `portnumber` はポートを表します。  
+`[ @internet_url = ] 'internet_url'`Web 同期用のレプリケーションリスナー (REPLISAPI.DLL) の場所を指定します。 *internet_url*は**nvarchar (260)**,、既定値は NULL です。 *internet_url*は、という形式の完全修飾 url です `http://server.domain.com/directory/replisapi.dll` 。 サーバーの構成で、リッスンするポートがポート 80 以外の場合は、`http://server.domain.com:portnumber/directory/replisapi.dll` の形式のポート番号も指定する必要があります。ここで `portnumber` はポートを表します。  
   
 `[ @internet_login = ] 'internet_login'`HTTP 基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージエージェントが使用するログインを示します。 *internet_login*は**sysname**,、既定値は NULL です。  
   
@@ -266,7 +266,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @internet_security_mode = ] internet_security_mode`は、HTTPS を使用した Web 同期時に Web サーバーに接続するときにマージエージェントによって使用される認証方法です。 *internet_security_mode*は**int**で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|基本認証が使用されます。|  
 |**1** (既定値)|Windows 統合認証を使用|  
@@ -288,7 +288,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_addmergepullsubscription_agent**は、マージレプリケーションで使用され、 [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)と同様の機能を使用します。  
   
  **Sp_addmergepullsubscription_agent**の実行時にセキュリティ設定を正しく指定する方法の例については、「[プルサブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)」を参照してください。  

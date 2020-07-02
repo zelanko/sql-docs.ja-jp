@@ -22,15 +22,15 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 437dbbc4ea7deb32a9723febb443cc67941fdc5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6660bc43a6db9437ba628c0856760aac4ccd52f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67940225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787142"
 ---
-# <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>データベース\_の自動\_tuning_options (transact-sql)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+# <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>データベースの \_ 自動 \_ Tuning_options (transact-sql)
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   このデータベースの自動チューニングオプションを返します。  
 
@@ -42,12 +42,12 @@ ms.locfileid: "67940225"
 |**actual_state**|**smallint**|自動チューニングオプションの操作モードを示します。<br />0 = OFF<br />1 = ON|  
 |**actual_state_desc**|**nvarchar(60)**|自動チューニングオプションの実際の操作モードの説明テキストです。<br />OFF<br />ON|  
 |**reason**|**smallint**|実際の状態と目的の状態が異なる理由を示します。<br />2 = 無効<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
-|**reason_desc**|**nvarchar(60)**|実際の状態と目的の状態が異なる理由の説明テキスト。<br />DISABLED = オプションはシステムによって無効にされています<br />QUERY_STORE_OFF = クエリストアがオフになっています<br />QUERY_STORE_READ_ONLY = クエリストアが読み取り専用モードです。<br />NOT_SUPPORTED = Enterprise edition で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のみ使用可能| 
+|**reason_desc**|**nvarchar(60)**|実際の状態と目的の状態が異なる理由の説明テキスト。<br />DISABLED = オプションはシステムによって無効にされています<br />QUERY_STORE_OFF = クエリストアがオフになっています<br />QUERY_STORE_READ_ONLY = クエリストアが読み取り専用モードです。<br />NOT_SUPPORTED = Enterprise edition でのみ使用可能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]| 
   
 ## <a name="permissions"></a>アクセス許可  
  `VIEW DATABASE STATE` アクセス許可が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [自動チューニング](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

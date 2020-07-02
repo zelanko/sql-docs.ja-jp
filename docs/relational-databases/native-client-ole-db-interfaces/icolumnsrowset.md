@@ -11,19 +11,19 @@ ms.assetid: e35d37ed-dd9b-4a34-a76a-bc9251f06c4f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b288554ba1958880d9b172da2c827c447d6a08a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 388ba06ae72fd6e7d9ced8de50cf2af2af9d0cf3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785446"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、IColumnsRowset::GetColumnRowset に DBCOLUMN_BASETABLEINSTANCE 列が追加されました。 この列は DBTYPE_I2 を返します。この列は、マイクロソフトが使用するために予約されています。 この列の情報は今後のリリースで変更されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インターフェイス &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
   
   

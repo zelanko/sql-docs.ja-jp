@@ -20,15 +20,15 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2b1ed24045f609b2feff1bfef6f288cd97047cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61a84a655bced5a053f47d0aae1493ec80dd9ff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787012"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在バッファープールにあるすべてのデータページに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このビューの出力を使用すると、データベース、オブジェクト、または型に応じて、バッファープール内のデータベースページの分布を確認できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、この動的管理ビューは、バッファー プール拡張ファイルのデータ ページに関する情報も返します。 詳細については、「[バッファープール拡張](../../database-engine/configure-windows/buffer-pool-extension.md)」を参照してください。  
   
@@ -63,8 +63,8 @@ ms.locfileid: "82827899"
 |From|終了|オン|リレーションシップ|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|多対一|  
-|sys.dm_os_buffer_descriptors|\<userdb> allocation_units|allocation_unit_id|多対一|  
-|sys.dm_os_buffer_descriptors|\<userdb> database_files|file_id|多対一|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys. allocation_units|allocation_unit_id|多対一|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys. database_files|file_id|多対一|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|多対一|  
   
 ## <a name="examples"></a>例  
@@ -83,7 +83,7 @@ GROUP BY DB_NAME(database_id) ,database_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-### <a name="b-returning-cached-page-count-for-each-object-in-the-current-database"></a>B. 現在のデータベース内の各オブジェクトのキャッシュ ページ数を返す  
+### <a name="b-returning-cached-page-count-for-each-object-in-the-current-database"></a>B: 現在のデータベース内の各オブジェクトのキャッシュ ページ数を返す  
  次の例では、現在のデータベース内の各オブジェクトに対して読み込まれたページ数を返します。  
   
 ```  
@@ -112,7 +112,7 @@ GROUP BY name, index_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   

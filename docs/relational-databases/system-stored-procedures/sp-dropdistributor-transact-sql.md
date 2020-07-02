@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55ebb2b9c42c0690bcffe409cbc6a5bf5bf68fc0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fdd3c733d93fa803906523d7150b4377e6f28666
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830154"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786933"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   ディストリビューターをアンインストールします。 このストアドプロシージャは、ディストリビューター側のディストリビューションデータベース以外の任意のデータベースで実行されます。  
   
@@ -53,7 +53,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_dropdistributor**は、すべての種類のレプリケーションで使用されます。  
   
  他のパブリッシャーまたは配布オブジェクトがサーバーに存在する場合、 ** \@ no_checks**が**1**に設定されていないと**sp_dropdistributor**は失敗します。  
@@ -66,7 +66,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_dropdistributor**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリッシングおよびディストリビューションを無効にする](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sp_adddistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [sp_changedistributor_property &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   

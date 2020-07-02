@@ -1,5 +1,5 @@
 ---
-title: sys. sysindexes (Transact-sql) |Microsoft Docs
+title: sys.sysインデックス (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 560b5ab5d85c7f2a69fb5062a6eacc6e5c85ee1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8ae519a06d98c3c70cdd01064c220e5f2e4ed424
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786322"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベース内のインデックスとテーブルごとに 1 行のデータを格納します。 XML インデックスは、このビューではサポートされていません。 パーティションテーブルとパーティションインデックスは、このビューでは完全にはサポートされていません。代わりに、このカタログ[ビューを使用してください](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
   
@@ -49,11 +49,11 @@ ms.locfileid: "68053438"
 |**確保**|**int**|**Indid** = 0 または**indid** = 1 の場合、 **reserved**は、すべてのインデックスとテーブルデータに割り当てられたページ数を示します。<br /><br /> **Indid** > 1 の場合、**予約**されるのは、インデックスに割り当てられたページ数です。<br /><br /> 0 = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> 0 = **indid**が0または1の場合、テーブルはパーティション分割されます。<br /><br /> 行オーバーフローが発生した場合、は正確な結果を生成しません。|  
 |**用い**|**int**|**Indid** = 0 または**indid** = 1 の場合は、すべてのインデックスとテーブルデータに使用される合計ページ数が**使用**されます。<br /><br /> **Indid** > 1 の場合は、インデックスに使用されるページ数が**使用さ**れます。<br /><br /> 0 = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> 0 = **indid**が0または1の場合、テーブルはパーティション分割されます。<br /><br /> 行オーバーフローが発生した場合、は正確な結果を生成しません。|  
 |**rowcnt**|**bigint**|**Indid** = 0 および**indid** = 1 に基づくデータレベルの行数。<br /><br /> 0 = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> 0 = **indid**が0または1の場合、テーブルはパーティション分割されます。|  
-|**rowmodctr**|**int**|テーブルの統計情報が前回更新されてから挿入、削除、更新された行の総数。<br /><br /> 0 = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> 0 = **indid**が0または1の場合、テーブルはパーティション分割されます。<br /><br /> 以降[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]では、 **rowmodctr**は以前のバージョンと完全には互換性がありません。 詳細については、「解説」を参照してください。|  
+|**rowmodctr**|**int**|テーブルの統計情報が前回更新されてから挿入、削除、更新された行の総数。<br /><br /> 0 = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> 0 = **indid**が0または1の場合、テーブルはパーティション分割されます。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降では、 **rowmodctr**は以前のバージョンと完全には互換性がありません。 詳細については、「解説」を参照してください。|  
 |**reserved3**|**int**|0 を返します。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**reserved4**|**int**|0 を返します。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xmaxlen**|**smallint**|行の最大サイズ|  
-|**maxirow**|**smallint**|非リーフインデックス行の最大サイズ。<br /><br /> 以降[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]では、 **maxirow**は、以前のバージョンと完全には互換性がありません。|  
+|**maxirow**|**smallint**|非リーフインデックス行の最大サイズ。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降では、 **maxirow**は、以前のバージョンと完全には互換性がありません。|  
 |**OrigFillFactor**|**tinyint**|インデックスが作成されたときに使用された元の FILL FACTOR 値。 この値は維持されません。ただし、インデックスを再作成する必要があり、使用された FILL FACTOR 値を記憶していない場合に便利です。|  
 |**StatVersion**|**tinyint**|0 を返します。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**reserved2**|**int**|0 を返します。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -61,9 +61,9 @@ ms.locfileid: "68053438"
 |**impid**|**smallint**|インデックスの実装フラグ。<br /><br /> 0 を返します。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|インデックスのロック粒度を制限するために使用されます。 たとえば、ロック コストを最小限にするには、基本的に読み取り専用の参照テーブルで、テーブル レベルのロックだけを行うように設定します。|  
 |**pgmodctr**|**int**|0 を返します。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**鍵**|**varbinary(816)**|インデックス キーを構成する列の列 ID の一覧。<br /><br /> NULL を返します。<br /><br /> インデックスキー列を表示するには、 [sys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)を使用します。|  
+|**鍵**|**varbinary(816)**|インデックス キーを構成する列の列 ID の一覧。<br /><br /> NULL を返します。<br /><br /> インデックスキー列を表示するには、 [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)を使用します。|  
 |**name**|**sysname**|インデックスまたは統計の名前。 **Indid** = 0 の場合は NULL を返します。 アプリケーションを変更して、ヒープ名が NULL であることを確認します。|  
-|**statblob**|**image**|統計バイナリ ラージ オブジェクト (BLOB)。<br /><br /> NULL を返します。|  
+|**statblob**|**イメージ**|統計バイナリ ラージ オブジェクト (BLOB)。<br /><br /> NULL を返します。|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**レコード**|**int**|**Indid = 0**および**indid** = 1 に基づくデータレベルの行数。 **indid** >1 に対して値が繰り返されます。|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68053438"
   
 -   アプリケーションレベルの情報を使用して、統計を更新するタイミングを決定します。 たとえば、 **id**列の最大値が1万以上に変更されるたび、または一括挿入操作が実行されるたびに発生します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

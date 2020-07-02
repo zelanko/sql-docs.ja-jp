@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 396e370e7cb271c516033eb160332ac749a27aca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830235"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787004"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   テーブルまたはビューに依存するビューやプロシージャ、ビューまたはプロシージャに依存しているテーブルやビューなど、データベースオブジェクトの依存関係に関する情報を表示します。 現在のデータベース内に存在しないオブジェクトへの参照はレポートされません。  
   
@@ -63,7 +63,7 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>結果セット  
  **sp_depends**には、2つの結果セットが表示されます。  
   
- 次の結果セットは、 * \< オブジェクト>* が依存するオブジェクトを示しています。  
+ 次の結果セットは、が依存するオブジェクトを示して *\<object>* います。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -73,7 +73,7 @@ sp_depends [ @objname = ] '<object>'
 |**オフ**|**nvarchar(8)**|項目が SELECT ステートメントで使用されているかどうか。|  
 |**column**|**sysname**|従属性が存在する列またはパラメーター。|  
   
- 次の結果セットは、 * \< オブジェクト>* に依存するオブジェクトを示しています。  
+ 次の結果セットは、に依存するオブジェクトを示して *\<object>* います。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -94,14 +94,14 @@ GO
 EXEC sp_depends @objname = N'Sales.Customer' ;  
 ```  
   
-### <a name="b-listing-dependencies-on-a-trigger"></a>B. トリガーの従属性を一覧表示する  
+### <a name="b-listing-dependencies-on-a-trigger"></a>B: トリガーの従属性を一覧表示する  
  次の例では、トリガーが依存しているデータベースオブジェクトを一覧表示し `iWorkOrder` ます。  
   
 ```  
 EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

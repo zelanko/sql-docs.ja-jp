@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30b325dcd012defe3755f769c74ec2fc5d57522e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 78a0a77cc02512d031f7a6749871150026647acf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834506"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787206"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>SQL Server システム カタログに対するクエリに関してよく寄せられる質問
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックには、よく寄せられる質問の一覧が含まれています。 これらの質問に対する答えは、カタログビューに基づくクエリです。  
   
@@ -988,7 +988,7 @@ GO
   
  [TOP](#_TOP)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

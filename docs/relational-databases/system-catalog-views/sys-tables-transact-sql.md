@@ -20,21 +20,21 @@ ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25661cc9d9166da61bd7cef8e3368c2a393a931e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc6b21029c829194c5287b450e266119b08a934f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787101"
 ---
 # <a name="systables-transact-sql"></a>sys. tables (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   のユーザーテーブルごとに1行の値を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|\<継承された列>||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。|  
+|\<inherited columns>||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。|  
 |lob_data_space_id|**int**|0 以外の値は、このテーブルのラージ オブジェクト バイナリ (LOB) データを格納するデータ領域 (ファイル グループまたはパーティション構成) の ID です。 LOB データ型の例としては、 **varbinary (max)**、 **varchar (max)**、 **geography**、 **xml**などがあります。<br /><br /> 0 = テーブルは LOB データではありません。|  
 |filestream_data_space_id|**int**|FILESTREAM ファイル グループまたは FILESTREAM ファイル グループから成るパーティション構成のデータ領域 ID です。<br /><br /> FILESTREAM ファイルグループの名前を報告するには、クエリを実行し `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` ます。<br /><br /> sys.tables は、filestream_data_space_id = data_space_id で次のビューに結合できます。<br /><br /> -sys. ファイルグループ<br /><br /> -sys. partition_schemes<br /><br /> -sys. インデックス<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup (filegroup_id での結合)|  
 |max_column_id_used|**int**|このテーブルで使用される最大列 ID。|  
@@ -61,7 +61,7 @@ ms.locfileid: "82821290"
 |is_external|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、、 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] 。<br /><br /> テーブルが外部テーブルであることを示します。<br /><br /> 0 = テーブルは、外部テーブルではありません。<br /><br /> 1 = テーブルは外部テーブルです。| 
 |history_retention_period|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>History_retention_period_unit で指定された単位で表した、テンポラル履歴の保有期間を表す数値。 |  
 |history_retention_period_unit|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴の保有期間の単位の種類を表す数値。 <br /><br />-1: 無制限 <br /><br />3: 日 <br /><br />4: 週 <br /><br />5: 月 <br /><br />6: 年 |  
-|history_retention_period_unit_desc|**nvarchar (10)**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴保有期間の単位の種類の説明テキスト。 <br /><br />INFINITE <br /><br />DAY <br /><br />[WEEK] <br /><br />MONTH <br /><br />YEAR |  
+|history_retention_period_unit_desc|**nvarchar (10)**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴保有期間の単位の種類の説明テキスト。 <br /><br />容量 <br /><br />DAY <br /><br />[WEEK] <br /><br />MONTH <br /><br />YEAR |  
 |is_node|**bit**|**適用対象**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = これはグラフノードテーブルです。 <br /><br />0 = これはグラフノードテーブルではありません。 |  
 |is_edge|**bit**|**適用対象**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = これはグラフのエッジテーブルです。 <br /><br />0 = これは、グラフのエッジテーブルではありません。 |  
 
@@ -109,7 +109,7 @@ LEFT JOIN sys.tables T2
 ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2 
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [DBCC CHECKDB &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   

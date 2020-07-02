@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 893c7b0a4c7c88c0fdc7bf89b01b61bfaae6f2f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e858279730f4a9d50eaf9d00804ab7c3125b2efc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786300"
 ---
 # <a name="sysfn_cdc_get_column_ordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたキャプチャインスタンスに関連付けられている[変更テーブル](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)に表示される、指定された列の序数を返します。  
   
@@ -75,7 +75,7 @@ FROM cdc.fn_cdc_get_net_changes_HumanResources_Employee
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [変更データキャプチャ関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [変更データキャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   

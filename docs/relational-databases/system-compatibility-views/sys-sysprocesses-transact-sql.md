@@ -1,5 +1,5 @@
 ---
-title: システムの sysprocesses (Transact-sql) |Microsoft Docs
+title: sys.sysのプロセス (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9e90b22dc5542d83533bff584af326abdcc4902
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78866372"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787047"
 ---
-# <a name="syssysprocesses-transact-sql"></a>-sysprocesses (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syssysprocesses-transact-sql"></a>sys.sysのプロセス (Transact-sql)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスで実行されているプロセスに関する情報を格納します。 これらのプロセスには、クライアントプロセスまたはシステムプロセスを使用できます。 sysprocesses にアクセスするには、master データベースのコンテキストからアクセスするか、3 つの要素から成る名前 (master.dbo.sysprocesses) を使用する必要があります。  
+  のインスタンスで実行されているプロセスに関する情報を格納 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 これらのプロセスには、クライアントプロセスまたはシステムプロセスを使用できます。 sysprocesses にアクセスするには、master データベースのコンテキストからアクセスするか、3 つの要素から成る名前 (master.dbo.sysprocesses) を使用する必要があります。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -53,7 +53,7 @@ ms.locfileid: "78866372"
 |last_batch|**datetime**|クライアントプロセスがリモートストアドプロシージャ呼び出しまたは EXECUTE ステートメントを最後に実行した時刻。|  
 |ecid|**smallint**|1つのプロセスに代わって動作するサブスレッドを一意に識別するために使用される実行コンテキスト ID。|  
 |open_tran|**smallint**|プロセスの開いているトランザクションの数。|  
-|status|**nchar(30)**|プロセス ID の状態。 次の値を指定できます。<br /><br /> **dormant** = 休止[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中にセッションをリセットしています。<br /><br /> **running** = セッションで1つ以上のバッチが実行されています。 複数のアクティブな結果セット (MARS) が有効になっている場合、1つのセッションで複数のバッチを実行できます。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。<br /><br /> **background** = セッションは、デッドロック検出などのバックグラウンドタスクを実行しています。<br /><br /> **rollback** = セッションでトランザクションのロールバックが進行中です。<br /><br /> **pending** = セッションは、ワーカースレッドが使用可能になるのを待機しています。<br /><br /> 実行**可能 = セッション**のタスクは、時間の経過を待機している間に、スケジューラの実行可能キューにあります。<br /><br /> **spinloop** = セッションのタスクは、スピンロックが解放されるのを待機しています。<br /><br /> **中断**= セッションは、i/o などのイベントが完了するのを待機しています。|  
+|status|**nchar(30)**|プロセス ID の状態。 次の値を指定できます。<br /><br /> **休止中**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セッションをリセットしています。<br /><br /> **running** = セッションで1つ以上のバッチが実行されています。 複数のアクティブな結果セット (MARS) が有効になっている場合、1つのセッションで複数のバッチを実行できます。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。<br /><br /> **background** = セッションは、デッドロック検出などのバックグラウンドタスクを実行しています。<br /><br /> **rollback** = セッションでトランザクションのロールバックが進行中です。<br /><br /> **pending** = セッションは、ワーカースレッドが使用可能になるのを待機しています。<br /><br /> 実行**可能 = セッション**のタスクは、時間の経過を待機している間に、スケジューラの実行可能キューにあります。<br /><br /> **spinloop** = セッションのタスクは、スピンロックが解放されるのを待機しています。<br /><br /> **中断**= セッションは、i/o などのイベントが完了するのを待機しています。|  
 |sid|**binary(86)**|ユーザーのグローバル一意識別子 (GUID)。|  
 |hostname|**nchar(128)**|ワークステーションの名前。|  
 |program_name|**nchar(128)**|アプリケーション プログラム名です。|  
@@ -65,16 +65,16 @@ ms.locfileid: "78866372"
 |net_library|**nchar(12)**|クライアントのネットワークライブラリが格納されている列。 各クライアント プロセスはネットワーク接続を行います。 ネットワーク接続には、接続を確立するためのネットワークライブラリが関連付けられています。|  
 |loginame|**nchar(128)**|ログイン名。|  
 |context_info|**binary(128)**|SET CONTEXT_INFO ステートメントを使用してバッチに格納されたデータ。|  
-|sql_handle|**binary(20)**|現在実行されているバッチまたはオブジェクトを表します。<br /><br /> **メモ**この値は、オブジェクトのバッチまたはメモリアドレスから取得されます。 この値は、ハッシュベースの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アルゴリズムを使用して計算されません。|  
+|sql_handle|**binary(20)**|現在実行されているバッチまたはオブジェクトを表します。<br /><br /> **メモ**この値は、オブジェクトのバッチまたはメモリアドレスから取得されます。 この値は、ハッシュベースのアルゴリズムを使用して計算されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |stmt_start|**int**|指定された sql_handle の現在の SQL ステートメントの開始オフセットです。|  
 |stmt_end|**int**|指定した sql_handle の現在の SQL ステートメントの終了オフセットです。<br /><br /> -1 = 現在のステートメントは、指定した sql_handle に対して fn_get_sql 関数が返す結果の最後まで実行されます。|  
 |request_id|**int**|要求の ID。 特定のセッションで実行されている要求を識別するために使用されます。|
-|page_resource |**binary (8)** |**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> 列に`waitresource`ページが含まれている場合は、ページリソースの8バイトの16進数表現。 |  
+|page_resource |**binary (8)** |**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> `waitresource`列にページが含まれている場合は、ページリソースの8バイトの16進数表現。 |  
   
 ## <a name="remarks"></a>Remarks  
- ユーザーがサーバーに対する VIEW SERVER STATE 権限を持っている場合、ユーザーにはのインスタンスで実行中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのセッションが表示されます。それ以外の場合、ユーザーには現在のセッションのみが表示されます。  
+ ユーザーがサーバーに対する VIEW SERVER STATE 権限を持っている場合、ユーザーにはのインスタンスで実行中のすべてのセッションが表示されます。それ以外の場合、ユーザーには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 現在のセッションのみが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  

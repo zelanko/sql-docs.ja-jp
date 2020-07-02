@@ -1,5 +1,5 @@
 ---
-title: sys. syscurconfigs (Transact-sql) |Microsoft Docs
+title: sys.syscurconfigs (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: 454ab849-07a5-4b50-ba0a-6b1b14721f77
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b0fad344831d8073badb2618eb2c34a1cdc2161
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea035c3dc7ec911034fff20fda22b60ef0ad0108
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089180"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786402"
 ---
 # <a name="syssyscurconfigs-transact-sql"></a>sys.syscurconfigs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  現在の各構成オプションのエントリが含まれています。 また、このビューには、構成構造を表す 4 つのエントリも登録されます。 **syscurconfigs**は、ユーザーがクエリを行うときに動的に構築されます。 詳細については、「 [sys の構成 &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysconfigures-transact-sql.md)」を参照してください。  
+  現在の各構成オプションのエントリが含まれています。 また、このビューには、構成構造を表す 4 つのエントリも登録されます。 **syscurconfigs**は、ユーザーがクエリを行うときに動的に構築されます。 詳細については、「 [sys.sys&#40;transact-sql&#41;を構成](../../relational-databases/system-compatibility-views/sys-sysconfigures-transact-sql.md)する」を参照してください。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**value**|**int**|ユーザーが変更可能な変数の値。 再構成が実行さ[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]れている場合にのみ、によって使用されます。|  
-|**.config**|**smallint**|構成変数番号。|  
-|**関する**|**nvarchar(255)**|構成オプションの説明。|  
+|**value**|**int**|ユーザーが変更可能な変数の値。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]再構成が実行されている場合にのみ、によって使用されます。|  
+|**config**|**smallint**|構成変数番号。|  
+|**comment**|**nvarchar(255)**|構成オプションの説明。|  
 |**status**|**smallint**|オプションの状態を示すビットマップ。 次の値があります。<br /><br /> 0 = 静的。 設定は、サーバーの再起動時に有効になります。<br /><br /> 1 = 動的。 変数は、再構成ステートメントが実行されたときに有効になります。<br /><br /> 2 = 詳細。 変数は、 **[詳細の表示] オプション**が設定されている場合にのみ表示されます。<br /><br /> 3 = 動的および詳細。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

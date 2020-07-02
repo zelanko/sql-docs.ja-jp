@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3040f585e10816d4f8664566be8af1523048db88
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a06023c8747c4226f7387b0f68bba13220707b99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830129"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786901"
 ---
 # <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   を実行しているローカルサーバー上のログインと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リンクサーバー上のログインとの間の既存のマッピングを削除します。  
   
@@ -66,14 +66,14 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 EXEC sp_droplinkedsrvlogin 'Accounts', 'Mary';  
 ```  
   
-### <a name="b-removing-the-default-login-mapping"></a>B. 既定のログインマッピングを削除しています  
+### <a name="b-removing-the-default-login-mapping"></a>B: 既定のログインマッピングを削除しています  
  次の例では、リンクサーバーでを実行して作成された既定のログインマッピングを削除し `sp_addlinkedserver` `Accounts` ます。  
   
 ```  
 EXEC sp_droplinkedsrvlogin 'Accounts', NULL;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

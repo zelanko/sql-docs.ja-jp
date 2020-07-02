@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fcf2bbd2d6c1ab7c9b73c1e122c746e56814c4fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61229514cb837a40537b6a363d2ebba81a5cef5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824535"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786866"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース管理システム (DBMS) の間の定義済みデータ型マッピングに関する情報を返します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
   
@@ -45,7 +45,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>引数  
 `[ @source_dbms = ] 'source_dbms'`データ型のマップ元となる DBMS の名前を指定します。 *source_dbms*は**sysname**で、次のいずれかの値を指定できます。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|ソースは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースです。|  
 |**ORACLE11I**|マップ元は Oracle データベース。|  
@@ -56,7 +56,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'`マップ先 DBMS の名前を指定します。 *destination_dbms*は**sysname**で、次のいずれかの値を指定できます。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|マップ先は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。|  
 |**ORACLE11I**|変換先は、Oracle データベースです。|  
@@ -91,7 +91,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpdatatypemap**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバー、またはディストリビューションデータベースの**db_owner**固定データベースロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_getdefaultdatatypemapping &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
  [sp_setdefaultdatatypemapping &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   

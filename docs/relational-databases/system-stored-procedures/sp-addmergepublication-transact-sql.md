@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d5b7870faed5423d4b12861d18f9bdb85e40c68
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 09e3c873ecdab8f967fb454854ae66b3a367ab87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826314"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786247"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   新しいマージパブリケーションを作成します。 このストアドプロシージャは、パブリッシャー側でパブリッシュされているデータベースに対して実行されます。  
   
@@ -86,7 +86,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'`パブリケーションに対するサブスクライバーの初期同期モードを示します。 *sync_mode*は**nvarchar (10)** で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**native** (既定値)|すべてのテーブルのネイティブモードの一括コピープログラム出力を生成します。|  
 |**記号**|すべてのテーブルのキャラクターモードの一括コピープログラム出力を生成します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] および以外のサブスクライバーをサポートするために必要です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
@@ -162,7 +162,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'`同期プロセスを最適化するために事前計算済みパーティションを使用する必要があることを指定します。 *use_partition_groups*は**nvarchar (5)** で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**true**|パブリケーションは事前計算済みパーティションを使用します。|  
 |**false**|パブリケーションは事前計算済みパーティションを使用しません。|  
@@ -172,7 +172,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @publication_compatibility_level = ] backward_comp_level`パブリケーションの旧バージョンとの互換性を示します。 *backward_comp_level*は**nvarchar (6)** で、次のいずれかの値を指定できます。  
   
-|[値]|バージョン|  
+|値|Version|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -200,7 +200,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @retention_period_unit = ] 'retention_period_unit'`*保有*期間によって設定された保有期間の単位を指定します。 *retention_period_unit*は**nvarchar (10)** で、次のいずれかの値を指定できます。  
   
-|[値]|バージョン|  
+|値|Version|  
 |-----------|-------------|  
 |**day** (既定値)|保有期間は日数で指定します。|  
 |**week**|保有期間は週単位で指定します。|  
@@ -216,7 +216,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @conflict_logging = ] 'conflict_logging'`競合レコードを格納する場所を指定します。 *conflict_logging*は**nvarchar (15)** で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**publisher**|競合レコードはパブリッシャーに格納されます。|  
 |**サブスクライバ**|競合レコードは、競合の原因となったサブスクライバーに保存されます。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] サブスクライバーではサポートされません。|  
@@ -226,7 +226,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_addmergepublication**は、マージレプリケーションで使用します。  
   
  ** \@ Add_to_active_directory**パラメーターを使用して Active Directory にパブリケーションオブジェクトを一覧表示するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを Active Directory にあらかじめ作成しておく必要があります。  

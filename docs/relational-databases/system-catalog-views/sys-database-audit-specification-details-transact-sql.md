@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0c2666b30a0a9618aa03f68a7266d14b7c37d625
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a1c622b94e5f81a27f1835d36d7bc41d0a051bcd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787171"
 ---
 # <a name="sysdatabase_audit_specification_details-transact-sql"></a>database_audit_specification_details (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   すべてのデータベースについてサーバー インスタンス上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査に含まれる、データベース監査仕様に関する情報を含みます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。 すべての audit_action_id とその名前の一覧については、 [dm_audit_actions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)をクエリします。  
   
@@ -42,14 +42,14 @@ ms.locfileid: "82828551"
 |**minor_id**|**Int**|監査対象のオブジェクトのセカンダリ ID。テーブル監査アクションの列 ID など、クラスに従って解釈されます。|  
 |**audited_principal_id**|**int**|監査対象のプリンシパル。|  
 |**audited_result**|**Nvarchar (60)**|監査アクションの結果。<br /><br /> - SUCCESS AND FAILURE (成功および失敗) – SUCCESS (成功)<br /><br /> -失敗|  
-|**is_group**|**16-bit**|オブジェクトがグループかどうかを示します。<br /><br /> 0 - グループではない<br /><br /> 1 - グループ|  
+|**is_group**|**ビット**|オブジェクトがグループかどうかを示します。<br /><br /> 0 - グループではない<br /><br /> 1 - グループ|  
   
 ## <a name="permissions"></a>アクセス許可  
  **ALTER ANY DATABASE AUDIT**権限または**VIEW DEFINITION**権限を持つプリンシパル、 **dbo**ロール、および**db_owners**固定データベースロールのメンバーは、このカタログビューにアクセスできます。 また、プリンシパルに対して**VIEW DEFINITION**権限を拒否することはできません。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

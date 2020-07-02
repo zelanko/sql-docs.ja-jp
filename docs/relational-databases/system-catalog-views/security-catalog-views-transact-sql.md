@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4d5cf1bf-09a7-4ee0-9dbb-5c584750fc67
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 62be038f59d30ef427696190335e79946d46f285
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c56c8c2ca36eb0f1622f7d616d5d6eb93bdb600d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81635444"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787193"
 ---
 # <a name="security-catalog-views-transact-sql"></a>セキュリティ カタログ ビュー (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   セキュリティ情報は、パフォーマンスとユーティリティ用に最適化されたカタログビューで公開されます。 可能な場合は、次のカタログ ビューを使用して、カタログ メタデータにアクセスできます。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "81635444"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server データベースエンジンおよび Azure SQL Database の Security Center](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [セキュリティ関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   

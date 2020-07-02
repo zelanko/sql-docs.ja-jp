@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69b98f779a30e15a83e7ce6eed681f8c7c0df04b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8c1d563e64769768a4c317bc0411eb40fb82b8d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831688"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786194"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   データベースの特定の動作に、指定したバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との互換性を設定します。  
   
@@ -65,13 +65,13 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
  *Name*が指定されて*いない場合、は*、指定された [!INCLUDE[ssDE](../../includes/ssde-md.md)] データベースの現在の互換性レベルを表示するメッセージを返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  互換性レベルの詳細については、「 [ALTER Database Compatibility Level &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、データベース所有者、固定サーバーロール**sysadmin**のメンバー、および**db_owner**固定データベースロール (現在のデータベースを変更している場合) だけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [予約済みキーワード &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   

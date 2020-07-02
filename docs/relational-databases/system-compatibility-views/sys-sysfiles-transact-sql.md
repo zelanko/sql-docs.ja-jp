@@ -1,5 +1,5 @@
 ---
-title: sys.sysfiles (Transact-sql) |Microsoft Docs
+title: sys.sysファイル (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a3554e254be0623e36719fe76b2d811908a939d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23f0a88653887177a84da079d00550dc9915f0d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053468"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786391"
 ---
-# <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syssysfiles-transact-sql"></a>sys.sysファイル (Transact-sql)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   データベース内のファイルごとに1行のデータを格納します。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "68053468"
 |**status**|**int**|メガバイト (MB) またはキロバイト (KB) のいずれかの**拡張**値のステータスビット。<br /><br /> 0x2 = ディスク ファイル。<br /><br /> 0x40 = ログ ファイル。<br /><br /> 0x100000 = 拡張。 この値は、ページ数ではなくパーセンテージです。|  
 |**perf**|**int**|予約済み。|  
 |**name**|**sysname**|ファイルの論理名です。|  
-|**/db**|**nvarchar(260)**|物理デバイスの名前です。 これには、ファイルの完全パスが含まれます。|  
+|**filename**|**nvarchar(260)**|物理デバイスの名前です。 これには、ファイルの完全パスが含まれます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e214f2247009af8e43aefd9cb3274ea59332bcd5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a644e06ca84bbc4ae5d4da6c9620c4afe1aeccba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820561"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786996"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   接続に対して現在開いているサーバーカーソルの属性を報告します。  
   
@@ -47,14 +47,14 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_scope =] *cursor_scope*  
  レポートするカーソルのレベルを指定します。 *cursor_scope*は**int**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |1|すべてのローカル カーソルをレポートします。|  
 |2|すべてのグローバル カーソルをレポートします。|  
 |3|ローカル カーソルとグローバル カーソルの両方をレポートします。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="cursors-returned"></a>返されるカーソル  
  sp_cursor_list は、結果セットとしてではなく、[!INCLUDE[tsql](../../includes/tsql-md.md)] カーソル出力パラメーターとしてレポートを返します。 これにより、 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ、ストアドプロシージャ、およびトリガーは、一度に1行ずつ出力を処理できます。 また、データベース API 関数からプロシージャを直接呼び出すことができなくなります。 Cursor 出力パラメーターはプログラム変数にバインドする必要がありますが、データベース Api では、カーソルパラメーターまたは変数のバインドがサポートされていません。  
@@ -67,8 +67,8 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |cursor_name|**sysname**|DECLARE CURSOR ステートメントに指定されたカーソルの名前です。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、カーソル変数をカーソルに設定することによってカーソルが作成された場合、 **cursor_name**はカーソル変数の名前を返します。  以前のリリースでは、この出力列にはシステムによって生成された名前が返されていました。|  
 |cursor_scope|**smallint**|1 = ローカル<br /><br /> 2 = GLOBAL|  
 |status|**smallint**|CURSOR_STATUS システム関数によって報告されたものと同じ値です。<br /><br /> 1 = カーソル名または変数によって参照されているカーソルが開いています。 カーソルが状態非依存、静的、キーセットのいずれかの場合には、結果セットに少なくとも 1 行が含まれます。 カーソルが動的な場合、結果セットには0個以上の行が含まれます。<br /><br /> 0 = カーソル名または変数によって参照されるカーソルが開かれていますが、行がありません。 動的カーソルがこの値を返すことはありません。<br /><br /> -1 = カーソル名または変数によって参照されたカーソルは閉じています。<br /><br /> -2 = カーソル変数にのみ適用されます。 変数に割り当てられたカーソルがありません。 おそらく、OUTPUT パラメーターによってカーソルを変数に割り当てましたが、戻る前にストアド プロシージャがカーソルを閉じました。<br /><br /> -3 = 指定された名前のカーソルまたはカーソル変数が存在しないか、またはカーソル変数にカーソルが割り当てられていません。|  
-|model|**smallint**|1 = 非依存 (または静的)<br /><br /> 2 = キーセット<br /><br /> 3 = 動的<br /><br /> 4 = 高速順方向|  
-|コンカレンシー|**smallint**|1 = 読み取り専用<br /><br /> 2 = スクロール ロック<br /><br /> 3 = オプティミスティック|  
+|対象となるのは、モデル|**smallint**|1 = 非依存 (または静的)<br /><br /> 2 = キーセット<br /><br /> 3 = 動的<br /><br /> 4 = 高速順方向|  
+|concurrency|**smallint**|1 = 読み取り専用<br /><br /> 2 = スクロール ロック<br /><br /> 3 = オプティミスティック|  
 |scrollable|**smallint**|0 = 順方向専用<br /><br /> 1 = スクロール可能|  
 |open_status|**smallint**|0 = 終了<br /><br /> 1 = 開く|  
 |cursor_rows|**int**|結果セット内の条件を満たす行の数。 詳細については、「 [@ @CURSOR_ROWS ](../../t-sql/functions/cursor-rows-transact-sql.md)」を参照してください。|  
@@ -78,7 +78,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |last_operation|**smallint**|カーソルに対して最後に実行された操作:<br /><br /> 0 = カーソルに対して操作が実行されていません。<br /><br /> 1 = OPEN <br /><br /> 2 = FETCH <br /><br /> 3 = 挿入<br /><br /> 4 = UPDATE <br /><br /> 5 = 削除<br /><br /> 6 = 閉じる<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|サーバーのスコープ内でカーソルを識別する一意の値です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_cursor_list は、接続によってオープンされた現在のサーバー カーソルの一覧を作成し、カーソルのスクロール機能や更新機能など、各カーソルにとってグローバルな属性を示します。 sp_cursor_list によってレポートされるカーソルは次のとおりです。  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバーカーソル。  
@@ -129,7 +129,7 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

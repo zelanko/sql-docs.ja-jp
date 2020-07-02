@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21d9afddaf2fc4c937949244959cb346233cb51a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: daa2f455f4b1b1bbb4f809797857f62b82137915
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786222"
 ---
 # <a name="sp_addmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   マージパブリケーションにプルサブスクリプションを追加します。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
   
@@ -63,7 +63,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addmergepullsubscription**は、マージレプリケーションに使用されます。  
   
  エージェントを使用してサブスクリプションを同期する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、サブスクライバーで[sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)ストアドプロシージャを実行して、パブリケーションと同期するエージェントとジョブを作成する必要があります。  

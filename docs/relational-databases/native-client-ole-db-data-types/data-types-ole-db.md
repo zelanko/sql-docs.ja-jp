@@ -16,17 +16,17 @@ ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 501e73cd5db2fbf79cd84c0184161f0c6ec6a341
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2813653f46573ad0e5b1db558fbc31de50e1071d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304445"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785474"
 ---
 # <a name="data-types-ole-db"></a>データ型 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB プロバイダー [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してステートメントを実行し、結果を処理するには、行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セット内のパラメーターまた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は列をバインドするとき、および**itabledefinition**インターフェイスを使用してで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルを作成するときに、native client OLE DB プロバイダーがデータ型を OLE DB データ型にマップする方法を把握しておく必要があります。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]Native client OLE DB プロバイダーを使用してステートメントを実行し、結果を処理するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行セット内のパラメーターまたは列をバインドするとき、および**itabledefinition**インターフェイスを使用してでテーブルを作成するときに、native client OLE DB プロバイダーがデータ型を OLE DB データ型にマップする方法を把握しておく必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -36,7 +36,7 @@ ms.locfileid: "81304445"
   
 -   [SSVARIANT 構造体](../../relational-databases/native-client-ole-db-data-types/ssvariant-structure.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

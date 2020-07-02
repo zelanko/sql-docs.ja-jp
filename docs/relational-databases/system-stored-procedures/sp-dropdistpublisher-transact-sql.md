@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 060b3b793adf53ab988cbba8b82ae683dac1e40a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cfac0b293e4bf564ef334cd0dc1ef5c3d5395364
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830186"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786976"
 ---
 # <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   ディストリビューションパブリッシャーを削除します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
   
@@ -56,7 +56,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_dropdistpublisher**は、すべての種類のレプリケーションで使用されます。  
   
  Oracle パブリッシャーを削除できない場合は、パブリッシャーを削除できないと**sp_dropdistpublisher**によってエラーが返され、パブリッシャーのディストリビューターオブジェクトが削除されます。  
@@ -67,7 +67,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_dropdistpublisher**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリッシングおよびディストリビューションを無効にする](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   

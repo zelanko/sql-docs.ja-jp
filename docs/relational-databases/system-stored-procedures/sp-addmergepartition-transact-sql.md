@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0af6f62a45dd519f8a63839ae1435815569b93be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a4f4743efbd0ee3b7a57cb4fab02c98a2680a870
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786269"
 ---
 # <a name="sp_addmergepartition-transact-sql"></a>sp_addmergepartition (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   サブスクライバーで[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)または[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)の値によってフィルター処理されたサブスクリプションに対して、動的にフィルター選択されたパーティションを作成します。 このストアド プロシージャは、パブリッシュされるデータベース上のパブリッシャー側で実行されるもので、手動でパーティションを生成する場合に使用します。  
   
@@ -48,7 +48,7 @@ sp_addmergepartition [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addmergepartition**は、マージレプリケーションで使用します。  
   
 ## <a name="example"></a>例  
@@ -57,7 +57,7 @@ sp_addmergepartition [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_addmergepartition**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パラメーター化されたフィルターを使用してマージパブリケーションのスナップショットを作成する](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
  [パラメーター化された行フィルター](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   

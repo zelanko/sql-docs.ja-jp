@@ -1,5 +1,5 @@
 ---
-title: . sysdepends (Transact-sql) |Microsoft Docs
+title: sys.sys依存 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f9c182cb-386f-4e72-859f-9f1115b389f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d928926294bb3e80f860a535a266b5c106e3f18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c163fb545c5eef4b1d4e10a7dcf0bfea79f3b4a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053498"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786396"
 ---
 # <a name="syssysdepends-transact-sql"></a>sys.sysdepends (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   データベース内のオブジェクト (ビュー、プロシージャ、トリガー) 間の従属情報と、その定義に含まれるオブジェクト (テーブル、ビュー、プロシージャ) を格納します。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68053498"
 |**resultobj**|**bit**|1 = オブジェクトが更新されています。<br /><br /> 0 = いいえ。|  
 |**readobj**|**bit**|1 = オブジェクトが読み取られています。<br /><br /> 0 = いいえ。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [sp_depends &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-depends-transact-sql.md)   

@@ -16,19 +16,19 @@ ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31fff0767ecbbbf41349b3f0dd431eb440fa7d77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1fae8e86b680289fd458924a757bdb1f239b266
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785164"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client (OLE DB) インターフェイス
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、を実行している[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]1 台以上のコンピューター上のデータにアクセスするために、コンシューマーへのインターフェイスを公開します。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、OLE DB バージョン2.0 に準拠しているプロバイダーです。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、を実行している1台以上のコンピューター上のデータにアクセスするために、コンシューマーへのインターフェイスを公開し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、OLE DB バージョン2.0 に準拠しているプロバイダーです。  
   
- この[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB プロバイダープログラミングリファレンスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブクライアント OLE DB プロバイダーを使用する場合に、プロバイダー固有の動作を示すインターフェイスとメソッドだけでなく、OLE DB のインターフェイスとメソッドについては説明しません。  
+ この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB プロバイダープログラミングリファレンスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネイティブクライアント OLE DB プロバイダーを使用する場合に、プロバイダー固有の動作を示すインターフェイスとメソッドだけでなく、OLE DB のインターフェイスとメソッドについては説明しません。  
   
  OLE DB の中核となるインターフェイスやメソッドの完全な説明については、[OLE DB のプログラマー リファレンス](https://go.microsoft.com/fwlink/?LinkId=45232)に関するページをご覧ください。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "81388524"
   
 -   [インターフェイス &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

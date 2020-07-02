@@ -16,17 +16,17 @@ ms.assetid: c643f09f-9ccc-4d8b-9243-3cde86c2bd46
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2c6bc2d66be0b89a62b5b1c678a955891cc06c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b8d71390bfd3fa25e7aa30edbe86dba06916435
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785345"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  **ISSAsynchStatus**は、非同期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]操作のサポートを公開します。 これは、コア OLE DB インターフェイス**id**から継承される省略可能なインターフェイスです。 **ISSAsynchStatus** には、**IDBAsynchStatus** から継承される **Abort** メソッドと **GetStatus** メソッドに加えて、非同期操作が完了するかタイムアウトが発生するまで待機する際に使用する新しいメソッドが 1 つ用意されています。  
+  **ISSAsynchStatus**は、非同期操作のサポートを公開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 これは、コア OLE DB インターフェイス**id**から継承される省略可能なインターフェイスです。 **ISSAsynchStatus** には、**IDBAsynchStatus** から継承される **Abort** メソッドと **GetStatus** メソッドに加えて、非同期操作が完了するかタイムアウトが発生するまで待機する際に使用する新しいメソッドが 1 つ用意されています。  
   
 |メソッド|説明|  
 |------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "81306731"
   
 -   **IMultipleResults::GetResult**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インターフェイス &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
  [非同期操作の実行](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
   

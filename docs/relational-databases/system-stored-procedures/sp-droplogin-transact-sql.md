@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07a91b923ffedb2c76cc1140ae3b5a4ee33a8553
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b4825478c6ae6b8da25d66ccefa27d56e969676c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830116"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786909"
 ---
 # <a name="sp_droplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを削除します。 削除されたログイン名では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにアクセスできなくなります。  
   
@@ -63,7 +63,7 @@ DROP LOGIN Victoria;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のログインを削除します。](../../t-sql/statements/drop-login-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
