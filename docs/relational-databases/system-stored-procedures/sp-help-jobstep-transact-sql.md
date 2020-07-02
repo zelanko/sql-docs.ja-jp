@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7313e3784c5af9922fb5301b339087510a98e91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773837"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   エージェントサービスが自動化された活動を実行するために使用するジョブのステップに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -65,7 +65,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**step_id**|**int**|ステップの一意識別子。|  
 |**step_name**|**sysname**|ジョブのステップの名前。|  
 |**サブ**|**nvarchar(40)**|ステップ コマンドを実行するサブシステム。|  
-|**メニュー**|**nvarchar(max)**|コマンドを実行します。|  
+|**command**|**nvarchar(max)**|コマンドを実行します。|  
 |**flags**|**int**|ステップの動作を制御する値のビットマスク。|  
 |**cmdexec_success_code**|**int**|**CmdExec**ステップの場合、これは成功したコマンドのプロセス終了コードです。|  
 |**on_success_action**|**tinyint**|ステップが成功した場合に実行するアクション:<br /><br /> **1** = 成功を報告するジョブを終了します。<br /><br /> **2** = エラーを報告するジョブを終了します。<br /><br /> **3** = 次の手順に進みます。<br /><br /> **4** = ステップに進みます。|  
@@ -116,7 +116,7 @@ EXEC dbo.sp_help_jobstep
 GO  
 ```  
   
-### <a name="b-return-information-about-a-specific-job-step"></a>B. 特定のジョブステップに関する情報を返す  
+### <a name="b-return-information-about-a-specific-job-step"></a>B: 特定のジョブステップに関する情報を返す  
  次の例では、という名前のジョブの最初のジョブステップに関する情報を返し `Weekly Sales Data Backup` ます。  
   
 ```  
@@ -129,7 +129,7 @@ EXEC dbo.sp_help_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   

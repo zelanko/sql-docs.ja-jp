@@ -14,26 +14,26 @@ ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b52f83e36c315ccd86d1516df9e11b913c80ba8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b9777fb07714eb0d3c23c6ad4e9385921746771
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773487"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>テーブル値パラメーターの追加メタデータ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  アプリケーションは、テーブル値パラメーターのメタデータを取得するために SQLProcedureColumns を呼び出します。 テーブル値パラメーターの場合、SQLProcedureColumns は単一の行を返します。 テーブル値[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パラメーターに関連付けられているテーブル型のスキーマとカタログの情報を提供するために、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME という2つの追加固有の列が追加されました。 ODBC 仕様に準拠して、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME は、以前のバージョンので追加されたすべて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のドライバー固有の列の前、および odbc 自体によって必須とされるすべての列の前に表示されます。  
+  アプリケーションは、テーブル値パラメーターのメタデータを取得するために SQLProcedureColumns を呼び出します。 テーブル値パラメーターの場合、SQLProcedureColumns は単一の行を返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル値パラメーターに関連付けられているテーブル型のスキーマとカタログの情報を提供するために、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME という2つの追加固有の列が追加されました。 ODBC 仕様に準拠して、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME は、以前のバージョンので追加されたすべてのドライバー固有の列の前、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および odbc 自体によって必須とされるすべての列の前に表示されます。  
   
  テーブル値パラメーターにとって重要な列を次の表に示します。  
   
-|列名|データの種類|値およびコメント|  
+|列名|データ型|値およびコメント|  
 |-----------------|---------------|---------------------|  
 |DATA_TYPE|Smallint (NULL 以外)|SQL_SS_TABLE|  
 |TYPE_NAME|WVarchar(128) (NULL 以外)|テーブル値パラメーターの型名|  
-|COLUMN_SIZE|Integer|NULL|  
-|BUFFER_LENGTH|Integer|0|  
+|COLUMN_SIZE|整数型|NULL|  
+|BUFFER_LENGTH|整数型|0|  
 |DECIMAL_DIGITS|Smallint|NULL|  
 |NUM_PREC_RADIX|Smallint|NULL|  
 |NULLABLE|Smallint (NULL 以外)|SQL_NULLABLE|  
@@ -41,7 +41,7 @@ ms.locfileid: "81304539"
 |COLUMN_DEF|WVarchar(4000)|NULL|  
 |SQL_DATA_TYPE|Smallint (NULL 以外)|SQL_SS_TABLE|  
 |SQL_DATETIME_SUB|Smallint|NULL|  
-|CHAR_OCTET_LENGTH|Integer|NULL|  
+|CHAR_OCTET_LENGTH|整数型|NULL|  
 |ORDINAL_POSITION|Integer (NULL 以外)|パラメーターの序数位置。|  
 |IS_NULLABLE|Varchar|"YES"|  
 |SS_TYPE_CATALOG_NAME|WVarchar(128) (NULL 以外)|テーブル値パラメーターのテーブル型の型定義が格納されているカタログ。|  
@@ -53,7 +53,7 @@ ms.locfileid: "81304539"
   
  SQL_SOPT_SS_NAME_SCOPE が SQL_SS_NAME_SCOPE_TABLE に設定されると、リンク サーバーへのクエリは失敗します。 サーバーコンポーネントを含むカタログを使用した SQLColumns または Sqlprimarykey の呼び出しは失敗します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

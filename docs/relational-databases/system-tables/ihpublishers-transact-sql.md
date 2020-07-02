@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9035598991b846fa36edf17631b9d9bf9ec878e3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 57a3e336b5b3183d10a6284ecb19d84eabcf1b4d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832373"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773761"
 ---
 # <a name="ihpublishers-transact-sql"></a>IHpublishers (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHpublishers**システムテーブルには、現在のディストリビューターを使用する非 SQL Server パブリッシャーごとに1つの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82832373"
 |**flush_request_time**|**datetime**|メタデータキャッシュを更新するためにログリーダーエージェントが必要とした、アーティクルメタデータに対して最後に変更が行われた日時を示します。|  
 |**version**|**sysname**|SQL&#xA0;Server 以外のパブリッシャーのバージョンの特徴を表すテキスト文字列です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
