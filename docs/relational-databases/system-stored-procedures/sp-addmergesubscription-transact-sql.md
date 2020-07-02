@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 96cd2abcc3e9bc76b2dd32026fedfe6ad774c19b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716587"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   プッシュ マージ サブスクリプションまたはプル マージ サブスクリプションを作成します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -74,7 +74,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'`サブスクライバーの種類を示します。 *subscriber_type*は**nvarchar (15)** で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**local** (既定値)|パブリッシャーだけが認識しているサブスクライバー。|  
 |**global**|すべてのサーバーが認識しているサブスクライバー。|  
@@ -90,19 +90,19 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`マージエージェントがいつ実行されるかを示す値です。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**4**|毎日|  
 |**8**|週次|  
-|"**10**"|月 1 回|  
+|"**10**"|月単位|  
 |**20@@**|frequency_interval を基準とした月単位|  
 |**40**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの起動時|  
 |NULL (既定値)||  
   
 `[ @frequency_interval = ] frequency_interval`マージエージェントが実行される日または日。 *frequency_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|土曜日|  
 |**2**|月曜日|  
@@ -118,24 +118,24 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`スケジュールされたマージの実行間隔を月単位で指定します。 *frequency_relative_interval*は**int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|末尾|  
+|**16**|末尾|  
 |NULL (既定値)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*によって使用される定期実行係数です。 *frequency_recurrence_factor*は**int**,、既定値は NULL です。  
   
 `[ @frequency_subday = ] frequency_subday`*Frequency_subday_interval*の単位です。 *frequency_subday*は**int**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**2**|Second|  
-|**4**|Minute|  
+|**4**|分|  
 |**8**|時間|  
 |NULL (既定値)||  
   
@@ -174,7 +174,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addmergesubscription**は、マージレプリケーションで使用します。  
   
  プッシュサブスクリプションを作成するために**sysadmin**固定サーバーロールのメンバーによって**sp_addmergesubscription**が実行されると、マージエージェントジョブが暗黙的に作成され、エージェントサービスアカウントで実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [Sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)を実行し、 ** \@ job_login**と** \@ job_password**のために、エージェント固有の別の Windows アカウントの資格情報を指定することをお勧めします。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
@@ -185,7 +185,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_addmergesubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プッシュサブスクリプションを作成する](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [インタラクティブな競合解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   

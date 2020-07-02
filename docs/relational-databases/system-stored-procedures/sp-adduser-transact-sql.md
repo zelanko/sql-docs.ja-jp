@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e7ba3827b9a659c0100805d0a9895fad503b2a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68117904"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716294"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースに新しいユーザーを追加します。  
   
@@ -44,7 +44,7 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @loginame = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインの名前を指定します。 *login*は**sysname**であり、既定値はありません。 *ログイン*には、既存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のログインまたは Windows ログインを指定する必要があります。  
+`[ @loginame = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインの名前を指定します。 *login*は**sysname**であり、既定値はありません。 *ログイン*には、既存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインまたは Windows ログインを指定する必要があります。  
   
 `[ @name_in_db = ] 'user'`新しいデータベースユーザーの名前を指定します。 *user*は**sysname**,、既定値は NULL です。 *User*が指定されていない場合、新しいデータベースユーザーの名前は既定で*ログイン*名になります。 *ユーザー*を指定すると、新しいユーザーには、サーバーレベルのログイン名とは異なる名前が付けられます。  
   
@@ -53,7 +53,7 @@ sp_adduser [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  また、 **sp_adduser**では、ユーザーの名前を持つスキーマも作成されます。  
   
  ユーザーが追加されたら、GRANT、DENY、および REVOKE ステートメントを使用して、ユーザーが実行するアクティビティを制御するアクセス許可を定義します。  
@@ -79,27 +79,27 @@ GO
 ## <a name="examples"></a>例  
   
 ### <a name="a-adding-a-database-user"></a>A. データベースユーザーの追加  
- 次の例では、既存`Vidur` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のログイン`Vidur`を`Recruiting`使用して、現在のデータベースの既存のロールにデータベースユーザーを追加します。  
+ 次の例では、 `Vidur` 既存のログインを `Recruiting` 使用して、現在のデータベースの既存のロールにデータベースユーザーを追加し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Vidur` ます。  
   
 ```  
 EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';  
 ```  
   
-### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. 同じログイン ID を持つデータベースユーザーを追加する  
+### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B: 同じログイン ID を持つデータベースユーザーを追加する  
  次の例では、ユーザー `Arvind` を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログイン `Arvind` として現在のデータベースに追加します。 このユーザーは、既定の**public**ロールに属しています。  
   
 ```  
 EXEC sp_adduser 'Arvind';  
 ```  
   
-### <a name="c-adding-a-database-user-with-a-different-name-than-its-server-level-login"></a>C. サーバーレベルのログインとは異なる名前のデータベースユーザーを追加する  
- 次の例で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は`BjornR` `Bjorn`、ユーザー名がである現在のデータベースにログインを追加し、 `Bjorn`データベースユーザー `Production`をデータベースロールに追加します。  
+### <a name="c-adding-a-database-user-with-a-different-name-than-its-server-level-login"></a>C: サーバーレベルのログインとは異なる名前のデータベースユーザーを追加する  
+ 次の例で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は `BjornR` 、ユーザー名がである現在のデータベースにログインを追加し、データベース `Bjorn` ユーザーを `Bjorn` データベースロールに追加し `Production` ます。  
   
 ```  
 EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [server_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sp_addrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   

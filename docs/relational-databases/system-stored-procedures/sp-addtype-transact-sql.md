@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c876b024b0e8dd218064999adde4a43a18404829
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d8d8626c8f4b3d256899514d14494b119ee8149c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833590"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716327"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   別名データ型を作成します。  
   
@@ -67,7 +67,7 @@ sp_addtype [ @typename = ] type,
  *P*  
  小数点の左側と右側に格納できる 10 進数の最大合計桁数を示す、負以外の整数を指定します。 詳しくは、「[decimal 型と numeric 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)」をご覧ください。  
   
- *s*  
+ *2$s*  
  小数点の右側に格納できる10進数の最大桁数を示す負以外の整数で、有効桁数以下である必要があります。 詳しくは、「[decimal 型と numeric 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)」をご覧ください。  
   
 `[ @nulltype = ] 'null_type'`別名データ型が null 値を処理する方法を示します。 *null_type*は**varchar (** 8 **)**,、既定値は null の場合、単一引用符で囲む必要があります (' null '、' not NULL '、または ' NONULL ')。 **Sp_addtype**によって*null_type*明示的に定義されていない場合は、現在の既定の null 値の許容属性に設定されます。 GETANSINULL システム関数を使用して、現在の既定の null 値の許容属性を決定します。 これは、SET ステートメントまたは ALTER DATABASE を使用して調整できます。 NULL 値の許容属性は、明示的に定義してください。 場合** \@ phy**は**ビット**,、 ** \@ nulltype**が指定されていない、既定値は NULL ではありません。  
@@ -110,7 +110,7 @@ EXEC sp_addtype ssn, 'varchar(11)', 'NOT NULL';
 GO  
 ```  
   
-### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>B. NULL 値を許容する別名データ型を作成する  
+### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>B: NULL 値を許容する別名データ型を作成する  
  次の例では、NULL 値を許容する、`datetime` 型に基づく `birthday` という別名データ型を作成します。  
   
 ```  
@@ -119,7 +119,7 @@ GO
 EXEC sp_addtype birthday, datetime, 'NULL';  
 ```  
   
-### <a name="c-creating-additional-alias-data-types"></a>C. 追加の別名データ型を作成する  
+### <a name="c-creating-additional-alias-data-types"></a>C: 追加の別名データ型を作成する  
  次の例では、2つの追加の別名データ型 `telephone` と `fax` 、国内電話番号と fax 番号の両方を作成します。  
   
 ```  
@@ -131,7 +131,7 @@ EXEC sp_addtype fax, 'varchar(24)', 'NULL';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;型の作成](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   

@@ -20,15 +20,15 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3557f9f77a310a9e72e8a9fb1e11a6976256d2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811425"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717446"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>dm_sql_referencing_entities (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   別のユーザー定義エンティティを名前で参照する、現在のデータベース内のエンティティごとに1行のデータを返します。 2つのエンティティ間の依存関係は、*参照先*エンティティと呼ばれる1つのエンティティが、別のエンティティの永続化された SQL 式 (参照*元エンティティ*と呼ばれます) で名前によって表示される場合に作成されます。 たとえば、参照先エンティティとしてユーザー定義型 (UDT) が指定されている場合、この関数は、定義内でその型を名前で参照する各ユーザー定義エンティティを返します。 関数は、指定されたエンティティを参照する可能性がある他のデータベース内のエンティティを返しません。 この関数は、サーバーレベルの DDL トリガーを参照元エンティティとして返すために、master データベースのコンテキストで実行する必要があります。  
   
@@ -99,10 +99,10 @@ sys.dm_sql_referencing_entities (
 ## <a name="remarks"></a>Remarks  
  次の表に、依存関係情報が作成および管理されるエンティティの種類を示します。 依存関係情報は、ルール、既定値、一時テーブル、一時ストアドプロシージャ、またはシステムオブジェクトに対して作成または管理されません。  
   
-|エンティティ型|参照元エンティティ|参照先エンティティ|  
+|エンティティの種類|参照元エンティティ|参照先エンティティ|  
 |-----------------|------------------------|-----------------------|  
 |テーブル|はい*|はい|  
-|View|はい|はい|  
+|表示|はい|はい|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ**|はい|はい|  
 |CLR ストアド プロシージャ (CLR stored procedure)|いいえ|はい|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|はい|はい|  
@@ -153,7 +153,7 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. 指定された型を参照するエンティティを返す  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B: 指定された型を参照するエンティティを返す  
  次の例では、別名型を参照するエンティティを返し `dbo.Flag` ます。 結果セットは、2つのストアドプロシージャがこの型を使用することを示しています。 この型は、テーブル `dbo.Flag` 内の複数の列の定義でも使用されます `HumanResources.Employee` 。ただし、この型はテーブルの計算列、check 制約、または DEFAULT 制約の定義に含まれていないため、テーブルに対して行は返されません `HumanResources.Employee` 。  
   
 ```sql  
@@ -174,7 +174,7 @@ GO
  (2 row(s) affected)`  
  ``` 
  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 62552e4e533126bc1e6b53e78e2b0456557e7f45
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 140a1631cfd4b7068e4729004f7aa41d9535a904
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689019"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717182"
 ---
 # <a name="logical-expressions-xquery"></a>論理式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery**では、論理**演算子**と演算子が**サポートされています。  
   
@@ -74,7 +74,7 @@ where ProductModelID=19
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery 式](../xquery/xquery-expressions.md)  
   
   

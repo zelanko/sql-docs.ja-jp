@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a079a279c9d342033086c565203f85ad360e753
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ec133e7424a6c2a947b5f0f7a6ed52505c37fb1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716068"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   セッションをの同じインスタンス内の他のセッションにバインドまたはバインド解除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] します。 バインドセッションを使用すると、2つ以上のセッションを同じトランザクションに参加させ、ROLLBACK TRANSACTION または COMMIT TRANSACTION が実行されるまで、そのロックを共有できます。  
   
@@ -48,7 +48,7 @@ sp_bindsession { 'bind_token' | NULL }
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  バインドされている2つのセッションは、トランザクションとロックのみを共有します。 各セッションは独自の分離レベルを保持し、1つのセッションで新しい分離レベルを設定しても、もう一方のセッションの分離レベルには影響しません。 各セッションは、そのセキュリティアカウントによって識別され、アカウントにアクセス許可が付与されているデータベースリソースにのみアクセスできます。  
   
  **sp_bindsession**は、バインドトークンを使用して、2つ以上の既存のクライアントセッションをバインドします。 これらのクライアントセッションは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] バインドトークンが取得されたの同じインスタンス上にある必要があります。 セッションとは、コマンドを実行するクライアントです。 バインドされたデータベースセッションは、トランザクションとロック領域を共有します。  
@@ -75,8 +75,8 @@ EXEC sp_bindsession 'BP9---5---->KB?-V'<>1E:H-7U-]ANZ';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [sp_getbindtoken &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [sp_getbindtoken &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
  [srv_getbindtoken &#40;拡張ストアドプロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

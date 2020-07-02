@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 429b908f01c7b0436f05622544b2aa8b241a6211
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2ad62613462575fb1bb33bf472e367d8f7640b03
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833596"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716336"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在追跡テーブルに含まれていないソース テーブル内の行への参照をマージ追跡テーブルに挿入します。 **Bcp**を使用して大量のデータを一括で読み込む場合は、このオプションを使用します。これにより、マージ追跡トリガーは起動されません。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -48,7 +48,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addtabletocontents**は、マージレプリケーションでのみ使用されます。  
   
  *Table_name*内の行は**rowguidcol**によって参照され、その参照がマージ追跡テーブルに追加されます。 **sp_addtabletocontents**は、マージレプリケーションを使用してパブリッシュされたテーブルにデータを一括コピーした後に使用する必要があります。 このストアド プロシージャは、コピーされた行のトラッキングを実行し、次の同期処理の際に新しい行を確実に挿入します。  
@@ -56,7 +56,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_addtabletocontents**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

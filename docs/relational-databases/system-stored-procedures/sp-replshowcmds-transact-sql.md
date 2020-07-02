@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21f2bf7a43bd391044deb03d08cc86ebc9a772bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 67cf4522b88e9922027a671feeda02b3305dbfc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828241"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718635"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   レプリケーション対象のマークが付けられたトランザクションのコマンドを判読可能な形式で返します。 **sp_replshowcmds**を実行できるのは、クライアント接続 (現在の接続を含む) が、レプリケートされたトランザクションをログから読み取っていない場合のみです。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -49,7 +49,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**publisher_database_id**|**int**|パブリッシャーデータベースの ID、常に**0**です。|  
 |**article_id**|**int**|アーティクルの ID。|  
 |**type**|**int**|コマンドの種類。|  
-|**メニュー**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]メニュー.|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]メニュー.|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_replshowcmds**は、トランザクションレプリケーションで使用します。  
@@ -66,7 +66,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ## <a name="permissions"></a>アクセス許可  
  **Sp_replshowcmds**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラーメッセージ](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [sp_replcmds &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_repldone &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   

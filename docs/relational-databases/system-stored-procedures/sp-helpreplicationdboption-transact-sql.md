@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84f009a2f2184ce2974f837006471d2b9bb97346
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0376653d2466bf756ba76575f90841f78956ade7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824446"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718671"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   パブリッシャー側のデータベースでレプリケーションが有効になっているかどうかを示します。 このストアドプロシージャは、パブリッシャー側で任意のデータベースに対して実行されます。 *Oracle パブリッシャーではサポートされていません。*  
   
@@ -43,7 +43,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 `[ @type = ] 'type'`指定されたレプリケーションオプションの*種類*の値が有効になっているデータベースのみが含まれるように結果セットを制限します。 *種類*は**sysname**で、次のいずれかの値を指定できます。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**投稿**|トランザクションレプリケーションを許可します。|  
 |**merge publish**|マージレプリケーションが許可されています。|  
@@ -55,8 +55,8 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|データベース名。|  
-|**ID**|**int**|データベース識別子。|  
+|**name**|**sysname**|データベースの名前です。|  
+|**id**|**int**|データベース識別子。|  
 |**transpublish**|**bit**|データベースでスナップショットまたはトランザクションパブリッシングが有効になっている場合は、値が**1**の場合は、スナップショットパブリケーションまたはトランザクションパブリッシングが有効であることを示します。|  
 |**mergepublish**|**bit**|データベースでマージパブリッシングが有効になっている場合は、値が**1**の場合は、マージパブリッシングが有効であることを示します。|  
 |**dbowner**|**bit**|ユーザーが**db_owner**固定データベースロールのメンバーである場合は、値が**1**の場合は、ユーザーがこのロールのメンバーであることを示します。|  
@@ -73,7 +73,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーは、任意のデータベースに対して**sp_helpreplicationdboption**を実行できます。 **Db_owner**固定データベースロールのメンバーは、そのデータベースの**sp_helpreplicationdboption**を実行できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_replicationdboption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

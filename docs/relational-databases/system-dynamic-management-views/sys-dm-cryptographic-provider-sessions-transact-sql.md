@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 63ee7a3cdc47d1464ea1cbd78d722938ddafac5b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: db19b7be6162c5b472f928d14a5a028efe4fc910
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824651"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717425"
 ---
 # <a name="sysdm_cryptographic_provider_sessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   暗号プロバイダーの開いているセッションに関する情報を返します。  
  
@@ -57,7 +57,7 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 ## <a name="remarks"></a>Remarks  
  現在の接続では、 **dm_cryptographic_provider_sessions**ビューがパブリックに表示されます。 すべての暗号化接続を表示するには、 **CONTROL** server 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [Transact-sql&#41;&#40;暗号化サービスプロバイダーを作成する](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   

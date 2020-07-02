@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 755ba9552945e0e983fa5eef6cc53de1c29be5e3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 35de5fe106b437429265fcce03d49a9cb1b61401
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715190"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのランタイム状態に関する情報を一覧表示します。  
   
@@ -78,7 +78,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Remarks  
  このプロシージャでは、ジョブに関する現在の状態のスナップショットが生成されます。 返される結果は、要求が処理された時点の情報を表します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービスが開始されるたびに、エージェントによってセッション id が作成されます。 セッション id は、テーブル**msdb セッション**に格納されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービスが開始されるたびに、エージェントによってセッション id が作成されます。 セッション id は、テーブル**msdb.dbo.sysのセッション**に格納されます。  
   
  *Session_id*が指定されていない場合は、最新のセッションに関する情報が一覧表示されます。  
   
@@ -97,7 +97,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
  他のユーザーが所有するジョブのアクティビティを表示できるのは、 **sysadmin**のメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、現在のユーザーが表示する権限を持っているすべてのジョブのアクティビティを一覧表示します。  
   
 ```  
@@ -108,7 +108,7 @@ EXEC dbo.sp_help_jobactivity ;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

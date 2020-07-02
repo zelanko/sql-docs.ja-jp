@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9af57e2f3a3bcf6554e88d8c6f9d54b8ec069009
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 845fe5389792dbe4c1df7bb9cf3e920073cd23ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827816"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717385"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーカーソルによって参照されるオブジェクトまたはベーステーブルを報告します。  
   
@@ -64,7 +64,7 @@ sp_describe_cursor_tables
  開いているカーソルに関連付けられたカーソル変数の名前です。 *input_cursor_variable*は**nvarchar (128)** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="cursors-returned"></a>返されるカーソル  
  sp_describe_cursor_tables は、そのレポートを、カーソル出力パラメーターとしてカプセル化 [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor**します。 これにより、 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ、ストアドプロシージャ、およびトリガーは、一度に1行ずつ出力を処理できます。 これは、このプロシージャを API 関数から直接呼び出すことができないことも意味します。 **Cursor**出力パラメーターはプログラム変数にバインドする必要がありますが、api では**カーソル**パラメーターまたは変数のバインドがサポートされていません。  
@@ -129,7 +129,7 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [求](../../relational-databases/cursors.md)   
  [CURSOR_STATUS &#40;Transact-sql&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [Transact-sql&#41;&#40;カーソルの宣言](../../t-sql/language-elements/declare-cursor-transact-sql.md)   

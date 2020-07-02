@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8578cccba27f38999ef786e1fb48b46445ad682c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 73f9bb5e2201b9c8b7577c54228e038310e7a141
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833660"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716384"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカル インスタンスの名前を定義します。 をホストしているコンピューターの名前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を変更したら、 **sp_addserver**を使用して、新しいコンピューター名ののインスタンスに通知し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。 このプロシージャは、コンピューターでホストされている、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のすべてのインスタンスで実行する必要があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前は変更できません。 名前付きインスタンスのインスタンス名を変更するには、指定した名前で新しいインスタンスをインストールし、古いインスタンスからデータベース ファイルをデタッチし、新しいインスタンスにデータベースをアタッチして古いインスタンスをドロップします。 または、クライアント コンピューター上でクライアント別名を作成して、サーバー コンピューター上のインスタンス名を変更せずに、接続を別のサーバーとインスタンス名か **サーバー:ポート** の組み合せにリダイレクトできます。
 
@@ -76,7 +76,7 @@ sp_addserver [ @server = ] 'server' ,
 sp_addserver 'ACCOUNTS', 'local';
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [SQL Server sp_addlinkedserver のスタンドアロンインスタンスをホストするコンピューターの名前を変更し](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)ます。 transact-sql [&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) [sp_dropserver](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md) &#40;transact-sql [&#41;sp_helpserver &#40;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md) transact-sql&#41;&#40;&#41;transact-sql &#40;[セキュリティストアド](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)[プロシージャ&#41;transact-sql](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) &#40;ます。
 
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf8c3510ffbd2d40c882061cc81bb8f6a80d294f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ebef567c36028f63317be3e00ea4c8078a765b6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719477"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)テーブルからセキュリティ情報を取得します。 このストアドプロシージャは、サブスクライバー側で実行されます。  
   
@@ -48,7 +48,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 `[ @publication_type = ] publication_type`パブリケーションの種類を示します。*publication_type*は**int**,、既定値は NULL です。 指定する場合は、次のいずれかの値を*publication_type*必要があります。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|トランザクション パブリケーション|  
 |**1**|スナップショット パブリケーション|  
@@ -99,7 +99,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpsubscription_properties**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -14,15 +14,15 @@ ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e88092c6566d9e5838f8a2cb59cd7c23564af9b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5be9838e0c4e989c6b802d9c74e240a0d01c354b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297741"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715322"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC テーブル値パラメーターの使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   このトピックでは、ODBC でテーブル値パラメーターを使用する主なユーザー シナリオについて説明します。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "81297741"
  このシナリオのサンプルコードは、「 `demo_variable_TVP_binding` [テーブル値パラメーター &#40;ODBC&#41;に使用する](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)」のルーチンに含まれています。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>システム カタログからテーブル値パラメーターのメタデータを取得  
- アプリケーションが SQLProcedureColumns を呼び出して、テーブル値パラメーターのパラメーターを持つプロシージャを呼び出すと、DATA_TYPE が SQL_SS_TABLE として返され、TYPE_NAME はテーブル値パラメーターのテーブル型の名前になります。 SQLProcedureColumns によって返される結果セットには、次の2つの列が追加されます。 SS_TYPE_CATALOG_NAME は、テーブル値パラメーターのテーブル型が定義されているカタログの名前を返し、SS_TYPE_SCHEMA_NAME はテーブル値パラメーターのテーブル型が定義されているスキーマの名前を返します。 ODBC 仕様に準拠して、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME は、以前のバージョンので追加されたすべての[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ドライバー固有の列の前と、odbc 自体によって指定されたすべての列の前に表示されます。  
+ アプリケーションが SQLProcedureColumns を呼び出して、テーブル値パラメーターのパラメーターを持つプロシージャを呼び出すと、DATA_TYPE が SQL_SS_TABLE として返され、TYPE_NAME はテーブル値パラメーターのテーブル型の名前になります。 SQLProcedureColumns によって返される結果セットには、次の2つの列が追加されます。 SS_TYPE_CATALOG_NAME は、テーブル値パラメーターのテーブル型が定義されているカタログの名前を返し、SS_TYPE_SCHEMA_NAME はテーブル値パラメーターのテーブル型が定義されているスキーマの名前を返します。 ODBC 仕様に準拠して、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME は、以前のバージョンので追加されたすべてのドライバー固有の列の前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と、odbc 自体によって指定されたすべての列の前に表示されます。  
   
  新しい列は、テーブル値パラメーター用だけでなく、CLR ユーザー定義型パラメーター用にも作成されます。 UDT パラメーターの既存のスキーマ列とカタログ列も依然として作成されますが、共通のスキーマ列とカタログ列を必要とするデータ型にもそれらの列を含めておくと、今後アプリケーション開発が簡単になります  (XML スキーマ コレクションは多少異なり、この変更には含まれていないことに注意してください)。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "81297741"
   
  このユースケースのサンプルコードは、「 `demo_metadata_from_prepared_statement` [テーブル値パラメーター &#40;ODBC&#41;に使用する](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)」のルーチンに含まれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

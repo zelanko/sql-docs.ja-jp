@@ -13,19 +13,19 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f8161ea07e394192e972caf4f772d9e7def36e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97867fb2debffab4684aaef302773ebe531d820b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301793"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719011"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime データ型の C から SQL への変換
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  このトピックでは、C 型から日付型または時刻[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型に変換する際に考慮すべき問題を示します。  
+  このトピックでは、C 型から日付型または時刻型に変換する際に考慮すべき問題を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
- 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 サーバーで定義されているものとは異なるパラメーターの秒の小数部の有効桁数をクライアントが指定している場合、クライアントの変換は成功する可能性がありますが、 **Sqlexecute**または**sqlexecutedirect**が呼び出されると、サーバーからエラーが返されます。 特に、ODBC は秒の小数部の切り捨てをエラーとして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]処理しますが、動作は round になります。たとえば、 **datetime2 (6)** から**datetime2 (2)** に進むと丸め処理が行われます。 datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
+ 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 サーバーで定義されているものとは異なるパラメーターの秒の小数部の有効桁数をクライアントが指定している場合、クライアントの変換は成功する可能性がありますが、 **Sqlexecute**または**sqlexecutedirect**が呼び出されると、サーバーからエラーが返されます。 特に、ODBC では、秒の小数部の切り捨てがエラーとして処理されます。一方、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime2 (6)** から**datetime2 (2)** に進むと丸めが発生します。 datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -33,17 +33,17 @@ ms.locfileid: "81301793"
 |SQL_C_DATE|1|-|-|1、6|1、5、6|1、13|1、13|  
 |SQL_C_TIME|-|1|1|1、7|1、5、7|1、13|1、13|  
 |SQL_C_SS_TIME2|-|1、3|1、10|1、7|1、5、7|1、13|1、13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|なし|なし|1、10、11|なし|なし|なし|なし|  
+|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|該当なし|該当なし|1、10、11|該当なし|該当なし|該当なし|該当なし|  
 |SQL_C_TYPE_TIMESTAMP|1、2|1、3、4|1、4、10|1、10|1、5、10|1、13|1、13|  
 |SQL_C_SS_TIMESTAMPOFFSET|1、2、8|1、3、4、8|1、4、8、10|1、8、10|1、10|1、13|1、13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|なし|なし|なし|なし|1、10、11|なし|なし|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9、6|9、5、6|なし|なし|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9、3|9、10|9、7、10|9、5、7、10|なし|なし|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9、2|9、3、4|9、4、10|9、10|9、5、10|なし|なし|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9、2、8|9、3、4、8|9、4、8、10|9、8、10|9、10|なし|なし|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1、11|なし|なし|なし|なし|なし|なし|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|なし|なし|なし|なし|なし|なし|なし|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|なし|なし|なし|なし|なし|なし|なし|  
+|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|該当なし|該当なし|該当なし|該当なし|1、10、11|該当なし|該当なし|  
+|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9、6|9、5、6|該当なし|該当なし|  
+|SQL_C_CHAR/SQL_WCHAR (time2)|9|9、3|9、10|9、7、10|9、5、7、10|該当なし|該当なし|  
+|SQL_C_CHAR/SQL_WCHAR (datetime)|9、2|9、3、4|9、4、10|9、10|9、5、10|該当なし|該当なし|  
+|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9、2、8|9、3、4、8|9、4、8、10|9、8、10|9、10|該当なし|該当なし|  
+|SQL_C_BINARY(SQL_DATE_STRUCT)|1、11|該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|  
+|SQL_C_BINARY(SQL_TIME_STRUCT)|該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|  
+|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
@@ -90,9 +90,9 @@ ms.locfileid: "81301793"
   
      列サイズ 0 は、ODBC では可変長文字型のサイズが無制限であることを意味します (SQL_C_TYPE_TIMESTAMP の 3 桁ルールが適用されなければ 9 桁)。 固定長文字型の列サイズ 0 を指定すると、エラーになります。  
   
--   **N/A**: 既存[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]の動作と以前の動作が維持されます。  
+-   **N/A**: 既存の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 動作と以前の動作が維持されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC&#41;&#40;の日付と時刻の改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

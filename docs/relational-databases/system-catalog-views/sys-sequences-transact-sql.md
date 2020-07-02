@@ -21,21 +21,21 @@ ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5afddee7cf2d8d5e61db8833df45b839e6f70eca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a6588e142fb17f0b90dfb302dda242255513ed3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815838"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717561"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   データベース内のシーケンス オブジェクトごとに 1 行のデータを格納します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|\<継承された列>||は、すべての[列を継承します。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
+|\<inherited columns>||は、すべての[列を継承します。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
 |**start_value**|**NULL 以外の sql_variant**|シーケンスオブジェクトの開始値。 ALTER SEQUENCE を使用してシーケンス オブジェクトを再開するときに、この値から再開されます。 シーケンスオブジェクトは、 **start_value**ではなく、 **minimum_value**または**maximum_value**に進みます。|  
 |**increment**|**NULL 以外の sql_variant**|生成された各値の後にシーケンスオブジェクトをインクリメントするために使用される値。|  
 |**minimum_value**|**sql_variant NULL**|シーケンスオブジェクトによって生成できる最小値。 この値に達すると、シーケンスオブジェクトは、より多くの値を生成するときにエラーを返すか、または CYCLE オプションが指定されている場合に再起動します。 MINVALUE が指定されていない場合、この列は、シーケンスジェネレーターのデータ型でサポートされる最小値を返します。|  
@@ -52,9 +52,9 @@ ms.locfileid: "82815838"
 |**last_used_value**|**sql_variant NULL**|[Next Value For](../../t-sql/functions/next-value-for-transact-sql.md)関数によって生成された最後の値を返します。 SQL Server 2017 以降に適用されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンでは、カタログビューでのメタデータの表示は、ユーザーが所有しているか、ユーザーが権限を許可されている securables に制限されます。  詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンでは、カタログビューでのメタデータの表示は、ユーザーが所有しているか、ユーザーが権限を許可されている securables に制限されます。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)   
  [CREATE SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
  [ALTER SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   

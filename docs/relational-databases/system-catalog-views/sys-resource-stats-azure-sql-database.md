@@ -19,23 +19,23 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e88d3916f5122564b443bc3c439200526b1f2d5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a72bb16eddc55f5cf741a7809665b44ada4a7a30
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246911"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717575"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL データベース)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Azure SQL Database の CPU 使用率とストレージ データを返します。 データは、5 分間隔で収集と集計が実行されます。 各ユーザーデータベースには、5分間のレポートウィンドウごとに1行のデータがあり、リソースの消費量が変化します。 返されるデータには、CPU 使用率、ストレージサイズの変更、およびデータベース SKU の変更が含まれます。 変更のないアイドル状態のデータベースは、5分間隔で行を保持できません。 履歴データは約14日間保持されます。  
+  Azure SQL Database の CPU 使用率とストレージ データを返します。 データは、5 分間隔で収集と集計が実行されます。 各ユーザーデータベースには、5分間のレポートウィンドウごとに1行のデータがあり、リソースの消費量が変化します。 返されるデータには、CPU 使用率、ストレージサイズの変更、およびデータベース SKU の変更が含まれます。 変更のないアイドル状態のデータベースは、5分間隔で行を保持できません。 履歴データは約 14 日間保持されます。  
   
  **Resource_stats**ビューには、データベースが関連付けられている Azure SQL Database サーバーのバージョンによって異なる定義があります。 新しいサーバーバージョンにアップグレードするときに、これらの違いとアプリケーションで必要な変更を検討してください。  
   
  次の表では、v12 サーバーで使用できる列について説明します。  
   
-|列|データ型|説明|  
+|[列]|データ型|説明|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime**|5分間のレポート間隔の開始を示す UTC 時刻。|  
 |end_time|**datetime**|5分間のレポート間隔の終了を示す UTC 時刻。|  
@@ -83,7 +83,7 @@ GROUP BY database_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスレベル](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [サービス層の機能と制限](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

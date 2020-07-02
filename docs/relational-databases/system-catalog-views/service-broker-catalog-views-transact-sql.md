@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a6c9a267656fddb1b57bf92539c378b3f6bff262
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dc5f1972bd25be9b18341abf2c5fbc7d77ac2303
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718921"
 ---
 # <a name="service-broker-catalog-views-transact-sql"></a>Service Broker カタログ ビュー (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、次のカタログビューについて説明します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82823594"
 |[sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)|[sys.services](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)|  
 |[sys.service_contract_message_usages](../../relational-databases/system-catalog-views/sys-service-contract-message-usages-transact-sql.md)|[sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [service_broker_endpoints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-service-broker-endpoints-transact-sql.md)   

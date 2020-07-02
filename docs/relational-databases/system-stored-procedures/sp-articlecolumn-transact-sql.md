@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 250d8687a97afdfa937abb9c49b2efa131195a52
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 460a3615517a0a0b62c70351613836c1b3bfb5d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716238"
 ---
 # <a name="sp_articlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   パブリッシュされたテーブルのデータを垂直方向にフィルター選択するために、アーティクルに含まれる列を指定するために使用します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -82,7 +82,7 @@ sp_articlecolumn [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_articlecolumn**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  **Sp_articlecolumn**を使用してフィルター処理できるのは、サブスクライブされていないアーティクルだけです。  
@@ -93,7 +93,7 @@ sp_articlecolumn [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_articlecolumn**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アーティクルの定義](../../relational-databases/replication/publish/define-an-article.md)   
  [列フィルターを定義および変更する](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
  [パブリッシュされたデータのフィルター処理](../../relational-databases/replication/publish/filter-published-data.md)   

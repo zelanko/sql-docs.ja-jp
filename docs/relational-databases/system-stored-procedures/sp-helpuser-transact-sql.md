@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e186b87680ec0592f5c69ee5659c3b9c74f680b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b905d3f362aa16e36caa0795357c1ec1619d5ec7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826052"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715837"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースに存在するデータベース レベルのプリンシパルに関する情報をレポートします。  
   
@@ -82,7 +82,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
- 返される情報には、メタデータへのアクセスに関する制限が適用されます。 プリンシパルに権限がないエンティティは表示されません。  詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ 返される情報には、メタデータへのアクセスに関する制限が適用されます。 プリンシパルに権限がないエンティティは表示されません。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
   
@@ -93,21 +93,21 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 EXEC sp_helpuser;  
 ```  
   
-### <a name="b-listing-information-for-a-single-user"></a>B. 特定のユーザーの情報を表示する  
+### <a name="b-listing-information-for-a-single-user"></a>B: 特定のユーザーの情報を表示する  
  次の例では、ユーザーデータベースの所有者 () に関する情報を一覧表示し `dbo` ます。  
   
 ```  
 EXEC sp_helpuser 'dbo';  
 ```  
   
-### <a name="c-listing-information-for-a-database-role"></a>C. データベースロールの情報を一覧表示する  
+### <a name="c-listing-information-for-a-database-role"></a>C: データベースロールの情報を一覧表示する  
  次の例では、`db_securityadmin` 固定データベース ロールに関する情報を表示します。  
   
 ```  
 EXEC sp_helpuser 'db_securityadmin';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

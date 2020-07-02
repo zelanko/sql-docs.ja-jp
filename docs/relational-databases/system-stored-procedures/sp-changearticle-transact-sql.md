@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 664f503aa6d3c6d3d0f8c32d83fc2ea9f238ff3b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829718"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717392"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   トランザクションパブリケーションまたはスナップショットパブリケーションのアーティクルのプロパティを変更します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -57,7 +57,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |--------------|------------|-----------------|  
 |**creation_script**||ターゲットテーブルを作成するために使用されるアーティクルスキーマスクリプトのパスと名前です。 既定値は NULL です。|  
 |**del_cmd**||実行する DELETE ステートメントです。指定しないと、ログから作成されます。|  
-|**記述**||記事の新しい説明エントリ。|  
+|**description**||記事の新しい説明エントリ。|  
 |**dest_object**||これは旧バージョンとの互換性のために用意されています。 **Dest_table**を使用します。|  
 |**dest_table**||新しい変換先テーブル。|  
 |**destination_owner**||対象オブジェクトの所有者の名前。|  
@@ -128,7 +128,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**文字列リテラル**|変更は、文字列リテラル値を使用してサブスクライバーに反映されます。|  
 |**sync_object**||同期出力ファイルを生成するために使用されるテーブルまたはビューの名前。 既定値は NULL です。 Oracle パブリッシャーではサポートされていません。|  
 |**テーブルスペース**||Oracle データベースからパブリッシュされたアーティクルのログ テーブルによって使用されたテーブルスペースを識別します。 詳細については、「[Manage Oracle Tablespaces](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)」 (Oracle テーブルスペースの管理) を参照してください。|  
-|**進入**||ディストリビューション エージェントがどの時点で新しい ID 範囲を割り当てるかを制御するパーセンテージの値です。 ピア ツー ピア レプリケーションではサポートされません。|  
+|**threshold**||ディストリビューション エージェントがどの時点で新しい ID 範囲を割り当てるかを制御するパーセンテージの値です。 ピア ツー ピア レプリケーションではサポートされません。|  
 |**type**||Oracle パブリッシャーではサポートされていません。|  
 ||**logbased**|ログベースのアーティクル。|  
 ||**logbased manualboth**|手動フィルターと手動ビューを使用したログベースのアーティクル。 このオプションでは、 *sync_object*プロパティと*フィルター*プロパティも設定する必要があります。 Oracle パブリッシャーではサポートされていません。|  
@@ -236,7 +236,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changearticle**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アーティクルのプロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

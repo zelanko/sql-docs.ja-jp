@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0f4d1b571bd32023b6ea47331c2757c814dc00ac
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a3fa3274901d881be7d52ecd62c60a802b597a0a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716251"
 ---
 # <a name="sp_article_validation-transact-sql"></a>sp_article_validation (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   指定されたアーティクルに対する検証の要求を開始します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行され、サブスクライバー側でサブスクリプションデータベースに対して実行されます。  
   
@@ -78,7 +78,7 @@ sp_article_validation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_article_validation**は、トランザクションレプリケーションで使用します。  
   
  **sp_article_validation**によって、指定されたアーティクルで検証情報が収集され、検証要求がトランザクションログに送信されます。 ディストリビューション エージェントは、この要求を受け取ると、要求に含まれている検証の情報をサブスクライバー テーブルと比較します。 検証の結果は、レプリケーション モニターおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告に表示されます。  
@@ -86,7 +86,7 @@ sp_article_validation [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_article_validation**を実行できるのは、検証対象のアーティクルのソーステーブルに対する SELECT ALL 権限を持つユーザーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケートされたデータの検証](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_marksubscriptionvalidation &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
  [sp_publication_validation &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   

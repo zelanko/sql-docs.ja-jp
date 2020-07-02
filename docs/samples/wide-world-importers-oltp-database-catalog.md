@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9dc40928fddda2708a23a7fc927627cf0e9450d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112405"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718579"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters データベースカタログ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 WideWorldImporters データベースには、販売および購入のためのすべてのトランザクション情報と毎日のデータのほか、車両やコールドルームのセンサーデータも含まれています。
 
 ## <a name="schemas"></a>スキーマ
@@ -29,21 +29,21 @@ WideWorldImporters は、データの格納、ユーザーがデータにアク�
 
 これらのスキーマにはデータが含まれています。 他のすべてのスキーマでは、複数のテーブルが必要であり、アプリケーションスキーマに格納されています。
 
-|Schema|説明|
+|スキーマ|説明|
 |-----------------------------|---------------------|
-|アプリケーション|アプリケーション全体のユーザー、連絡先、およびパラメーター。 これには、複数のスキーマで使用されるデータを含む参照テーブルも含まれます。|
+|Application|アプリケーション全体のユーザー、連絡先、およびパラメーター。 これには、複数のスキーマで使用されるデータを含む参照テーブルも含まれます。|
 |購入|サプライヤーからの在庫品目の購入とサプライヤーに関する詳細。|  
-|売上|小売顧客に対する在庫品目の売上、および顧客と販売員に関する詳細。 |  
+|Sales|小売顧客に対する在庫品目の売上、および顧客と販売員に関する詳細。 |  
 |Warehouse|在庫品目の在庫とトランザクション。|  
 
 ### <a name="secure-access-schemas"></a>セキュリティで保護されたアクセススキーマ
 
 これらのスキーマは、データテーブルへの直接アクセスが許可されていない外部アプリケーションに使用されます。 外部アプリケーションで使用されるビューとストアドプロシージャが含まれています。
 
-|Schema|説明|
+|スキーマ|説明|
 |-----------------------------|---------------------|
 |Web サイト|会社の web サイトからデータベースへのすべてのアクセスは、このスキーマを通じて行われます。|
-|Reports|Reporting Services レポートからデータベースへのすべてのアクセスは、このスキーマを介して行われます。|
+|レポート|Reporting Services レポートからデータベースへのすべてのアクセスは、このスキーマを介して行われます。|
 |PowerBI|エンタープライズゲートウェイ経由の Power BI ダッシュボードからデータベースへのすべてのアクセスは、このスキーマを介して行われます。|
 
 レポートおよび PowerBI スキーマは、サンプルデータベースの初期リリースでは使用されないことに注意してください。 ただし、このデータベース上に構築されたすべての Reporting Services と Power BI のサンプルには、これらのスキーマを使用することをお勧めします。
@@ -52,7 +52,7 @@ WideWorldImporters は、データの格納、ユーザーがデータにアク�
 
 特別な用途のスキーマ
 
-|Schema|説明|
+|スキーマ|説明|
 |-----------------------------|---------------------|
 |統合|データウェアハウスの統合に必要なオブジェクトとプロシージャ (つまり、データを WideWorldImportersDW データベースに移行する)。|
 |シーケンス|アプリケーション内のすべてのテーブルによって使用されるシーケンスを保持します。|
@@ -82,7 +82,7 @@ WideWorldImporters は、データの格納、ユーザーがデータにアク�
 
 |テーブル|説明|
 |-----------------------------|---------------------|
-|Suppliers|仕入先 (組織) のメインエンティティテーブル|
+|Suppliers (仕入先)|仕入先 (組織) のメインエンティティテーブル|
 |SupplierCategories|仕入先のカテゴリ (例: novelties、toys、衣料、パッケージングなど)|
 |SupplierTransactions|仕入先に関連するすべての金融取引 (請求書、支払い)|
 |Purchaseorders.xaml|仕入先の注文書の詳細|
@@ -102,7 +102,7 @@ WideWorldImporters は、データの格納、ユーザーがデータにアク�
 |特別取引|特別価格。 これには、固定価格、割引 (ドル単位または割引率) を含めることができます。|
 |Orders|顧客の注文の詳細|
 |OrderLines|顧客の注文の詳細行|
-|請求書|顧客の請求書の詳細|
+|Invoices|顧客の請求書の詳細|
 |InvoiceLines|顧客の請求書の詳細行|
 
 ### <a name="warehouse-schema"></a>ウェアハウススキーマ
@@ -122,7 +122,7 @@ WideWorldImporters は、データの格納、ユーザーがデータにアク�
 |すべての温度|コールドルーム冷却装置の温度を定期的に記録する|
 
 
-## <a name="design-considerations"></a>設計時の考慮事項
+## <a name="design-considerations"></a>設計上の考慮事項
 
 データベースの設計は主観的であり、データベースを設計するための適切な方法や不正確な方法はありません。 このデータベースのスキーマとテーブルには、独自のデータベースを設計するためのアイデアが示されています。
 
@@ -153,9 +153,9 @@ WideWorldImporters は少数のスキーマを使用するため、データベ�
 
 ストアドプロシージャは、スキーマで構成されます。 ほとんどのスキーマは、構成またはサンプルの目的で使用されます。
 
-スキーマ`Website`には、Web フロントエンドで使用できるストアドプロシージャが含まれています。
+スキーマには、 `Website` Web フロントエンドで使用できるストアドプロシージャが含まれています。
 
-および`Reports` `PowerBI`スキーマは、reporting services と PowerBI の目的で使用されます。 このサンプルの拡張機能には、レポートのためにこれらのスキーマを使用することをお勧めします。
+`Reports`および `PowerBI` スキーマは、reporting Services と PowerBI の目的で使用されます。 このサンプルの拡張機能には、レポートのためにこれらのスキーマを使用することをお勧めします。
 
 ### <a name="website-schema"></a>Web サイトスキーマ
 
@@ -163,12 +163,12 @@ WideWorldImporters は少数のスキーマを使用するため、データベ�
 
 |手順|目的|
 |-----------------------------|---------------------|
-|ActivateWebsiteLogon|ユーザー `Application.People`が web サイトにアクセスできるようにします。|
+|ActivateWebsiteLogon|ユーザーが `Application.People` web サイトにアクセスできるようにします。|
 |ChangePassword|ユーザーのパスワードを変更します (外部の認証メカニズムを使用していないユーザーの場合)。|
 |InsertCustomerOrders|1つまたは複数の顧客の注文 (注文明細を含む) を挿入できます。|
 |InvoiceCustomerOrders|請求される注文の一覧を取得し、請求書を処理します。|
-|Recordcolの温度|センサーデータリストをテーブル値パラメーター (TVP) として受け取り、そのデータを`Warehouse.ColdRoomTemperatures`テンポラルテーブルに適用します。|
-|RecordVehicleTemperature|JSON 配列を受け取り、それを使用し`Warehouse.VehicleTemperatures`てを更新します。|
+|Recordcolの温度|センサーデータリストをテーブル値パラメーター (TVP) として受け取り、そのデータを `Warehouse.ColdRoomTemperatures` テンポラルテーブルに適用します。|
+|RecordVehicleTemperature|JSON 配列を受け取り、それを使用してを更新 `Warehouse.VehicleTemperatures` します。|
 |SearchForCustomers|名前または名前の一部 (会社名または個人名) を使用して顧客を検索します。|
 |SearchForPeople|名前または名前の一部で人間を検索します。|
 |SearchForStockItems|名前または名前またはマーケティングのコメントの一部で在庫品目を検索します。|
@@ -181,7 +181,7 @@ WideWorldImporters は少数のスキーマを使用するため、データベ�
 
 ### <a name="dataloadsimulation-schema"></a>DataLoadSimulation スキーマ
 
-売上と購入を挿入するワークロードをシミュレートします。 メインのストアドプロシージャは`PopulateDataToCurrentDate`です。これは、現在の日付までサンプルデータを挿入するために使用されます。
+売上と購入を挿入するワークロードをシミュレートします。 メインのストアドプロシージャはです `PopulateDataToCurrentDate` 。これは、現在の日付までサンプルデータを挿入するために使用されます。
 
 |手順|目的|
 |-----------------------------|---------------------|
@@ -200,12 +200,12 @@ WideWorldImporters は少数のスキーマを使用するため、データベ�
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|メンバーがロールにまだ存在しない場合は、メンバーをロールに追加します。|
 |Configuration_ApplyAuditing|監査を追加します。 サーバー監査は standard edition データベースに適用されます。enterprise edition では、追加のデータベース監査が追加されています。|
-|Configuration_ApplyColumnstoreIndexing|列ストアインデックスを`Sales.OrderLines`に`Sales.InvoiceLines`適用し、適切にインデックスを再作成します。|
-|Configuration_ApplyFullTextIndexing|、 `Application.People` `Sales.Customers`、 `Purchasing.Suppliers`、および`Warehouse.StockItems`にフルテキストインデックスを適用します。 、 `Website.SearchForPeople` `Website.SearchForSuppliers`、 `Website.SearchForCustomers`、 `Website.SearchForStockItems`を`Website.SearchForStockItemsByTags` 、フルテキストインデックスを使用する置換プロシージャに置き換えます。|
-|Configuration_ApplyPartitioning|と`Sales.CustomerTransactions` `Purchasing.SupplierTransactions`にテーブルパーティション分割を適用し、に合わせてインデックスを再配置します。|
+|Configuration_ApplyColumnstoreIndexing|列ストアインデックスをに適用し、適切にインデックスを再作成し `Sales.OrderLines` `Sales.InvoiceLines` ます。|
+|Configuration_ApplyFullTextIndexing|、、、およびにフルテキストインデックスを適用し `Application.People` `Sales.Customers` `Purchasing.Suppliers` `Warehouse.StockItems` ます。 `Website.SearchForPeople`、、 `Website.SearchForSuppliers` `Website.SearchForCustomers` 、を `Website.SearchForStockItems` 、 `Website.SearchForStockItemsByTags` フルテキストインデックスを使用する置換プロシージャに置き換えます。|
+|Configuration_ApplyPartitioning|とにテーブルパーティション分割を適用し、に合わせてインデックスを再配置 `Sales.CustomerTransactions` `Purchasing.SupplierTransactions` します。|
 |Configuration_ApplyRowLevelSecurity|販売区域に関連するロールを使って顧客をフィルター処理するために、行レベルのセキュリティを適用します。|
 |Configuration_ConfigureForEnterpriseEdition|列ストアインデックス、フルテキスト、メモリ内、polybase、およびパーティション分割を適用します。|
-|Configuration_EnableInMemory|メモリ最適化ファイルグループを追加し (Azure で動作していない`Warehouse.ColdRoomTemperatures`場合`Warehouse.VehicleTemperatures` )、をその等価のメモリ`Website.OrderIDList`に置き換え、データ`Website.OrderList`を移行します`Website.OrderLineList`。 `Website.SensorDataList`さらに、、、、、および`Website.InvoiceCustomerOrders` `Website.RecordColdRoomTemperatures`メモリ最適化された同等`Website.InsertCustomerOrders`のテーブル型を再作成し、これらのテーブル型を使用するプロシージャを削除して再作成します。|
+|Configuration_EnableInMemory|メモリ最適化ファイルグループを追加し (Azure で動作していない場合)、を `Warehouse.ColdRoomTemperatures` `Warehouse.VehicleTemperatures` その等価のメモリに置き換え、データを移行します。さらに、、、、、およびメモリ最適化された同等のテーブル型を再作成し、 `Website.OrderIDList` これらの `Website.OrderList` `Website.OrderLineList` `Website.SensorDataList` `Website.InvoiceCustomerOrders` `Website.InsertCustomerOrders` テーブル型を使用するプロシージャを削除して `Website.RecordColdRoomTemperatures` 再作成します。|
 |Configuration_RemoveAuditing|監査構成を削除します。|
 |Configuration_RemoveRowLevelSecurity|行レベルのセキュリティ構成を削除します (これは、関連付けられているテーブルに対する変更に必要です)。|
 |CreateRoleIfNonExistant 存在しません|データベースロールがまだ存在しない場合は、作成します。|

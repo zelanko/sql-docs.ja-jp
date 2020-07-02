@@ -20,15 +20,15 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 98d71c76b927e0dcb7cfdf87459f15eb82ef3c9e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b2c90c3a6e6251da7b8e318a57002f224e074ac5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717477"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Geo レプリケーションの連続コピーリレーションシップに現在関与しているユーザーデータベース (V11) ごとに1行のデータを返します。 特定のプライマリデータベースに対して複数の連続コピーリレーションシップが開始された場合、このテーブルにはアクティブなセカンダリデータベースごとに1行のデータが格納されます。  
   
@@ -51,14 +51,14 @@ SQL Database V12 を使用している場合は、 [dm_geo_replication_link_stat
 ## <a name="permissions"></a>アクセス許可  
  データを取得するには、 **db_owner**データベースロールのメンバーシップが必要です。 Dbo ユーザー、 **dbmanager**データベースロールのメンバー、および sa ログインでも、このビューに対してクエリを実行できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Dm_continuous_copy_status ビューは**リソース**データベースに作成され、論理マスターを含むすべてのデータベースで表示**でき**ます。 ただし、論理 master データベースでこのビューにクエリを実行しても、空のセットが返されます。  
   
  連続コピーリレーションシップがデータベースで終了した場合、そのデータベースの行は**dm_continuous_copy_status**ビューに表示されなくなります。  
   
  **Dm_database_copies**ビューと同様に、 **dm_continuous_copy_status**には、データベースがプライマリまたはアクティブセカンダリデータベースである連続コピーリレーションシップの状態が反映されます。 **Dm_database_copies**とは異なり、 **sys. dm_continuous_copy_status**には、操作とパフォーマンスに関する詳細情報を提供するいくつかの列が含まれています。 これらの列には、 **last_replication**、および**replication_lag_sec**が含まれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
  [Transact-sql&#41;&#40;アクティブ Geo レプリケーションのストアドプロシージャ](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
   

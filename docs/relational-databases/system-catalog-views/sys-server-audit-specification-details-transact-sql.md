@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68283872613baf6cb64546ef79a9f03996815439
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 39caf91dc69639be4207e3417982acfccf429bea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834071"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717543"
 ---
 # <a name="sysserver_audit_specification_details-transact-sql"></a>server_audit_specification_details (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   サーバー インスタンス上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査に含まれるサーバー監査仕様の詳細 (アクション) に関する情報を含みます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。 すべての audit_action_id とその名前の一覧については、 [dm_audit_actions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)をクエリします。  
   
@@ -36,11 +36,11 @@ ms.locfileid: "82834071"
 |server_specification_id|**int**|監査サーバーの仕様の ID|  
 |audit_action_id|**int**|監査アクションの ID|  
 |audit_action_name|**sysname**|グループ名または監査アクションの名前|  
-|class|**tinyint**|予約済み|  
-|class_desc|**nvarchar(60)**|予約済み|  
-|major_id|**int**|予約済み|  
-|minor_id|**int**|予約済み|  
-|audited_principal_id|**int**|予約済み|  
+|class|**tinyint**|予約されています。|  
+|class_desc|**nvarchar(60)**|予約されています。|  
+|major_id|**int**|予約されています。|  
+|minor_id|**int**|予約されています。|  
+|audited_principal_id|**int**|予約されています。|  
 |audited_result|**nvarchar(60)**|監査結果:<br /><br /> - SUCCESS AND FAILURE (成功および失敗)<br /><br /> - SUCCESS (成功)<br /><br /> -失敗|  
 |is_group|**bit**|監査対象オブジェクトがグループかどうか:<br /><br /> 0 - グループではない<br /><br /> 1 - グループ|  
   
@@ -49,7 +49,7 @@ ms.locfileid: "82834071"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   

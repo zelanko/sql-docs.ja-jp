@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8f9e7e8124ec0aa1246a7ef9805ad9761ec9baf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1b150636804bc4d312f6f6bfbe046ef7e9612207
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830209"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717298"
 ---
 # <a name="sp_droparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   スナップショットパブリケーションまたはトランザクションパブリケーションからアーティクルを削除します。 1 つでもサブスクリプションがあると、そのアーティクルは削除できません。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -64,7 +64,7 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_droparticle**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  行方向にフィルター選択されたアーティクルの場合、 **sp_droparticle** [&#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルのアーティクルの**type**列をチェックして、ビューまたはフィルターも削除する必要があるかどうかを判断します。 ビューまたはフィルターが自動生成された場合は、アーティクルによって削除されます。 手動で作成された場合は、削除されません。  
@@ -77,7 +77,7 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_droparticle**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アーティクルの削除](../../relational-databases/replication/publish/delete-an-article.md)   
  [既存のパブリケーションに対してアーティクルを追加または削除する](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

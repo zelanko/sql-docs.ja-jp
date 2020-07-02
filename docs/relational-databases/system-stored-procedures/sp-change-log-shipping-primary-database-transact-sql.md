@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 244811989bd5ab58a3ab1f6ffdfcf82649af1916
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02ba9c11d9c74daa6cc88051ada7037edc16f35b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045819"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715931"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   プライマリデータベースの設定を変更します。  
   
@@ -90,15 +90,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  1 = 有効。 ログバックアップは常に圧縮します。  
   
- 2 = [ビューの設定[] または [backup compression Default サーバー構成オプションの構成]](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)を使用します。 これは、既定値です。  
+ 2 = [ビューの設定[] または [backup compression Default サーバー構成オプションの構成]](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)を使用します。 これが既定値です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_change_log_shipping_primary_database**は、プライマリサーバーの**master**データベースから実行する必要があります。 このストアド プロシージャでは次の処理が行われます。  
   
 1.  必要に応じて、 **log_shipping_primary_database**レコードの設定を変更します。  
@@ -111,7 +111,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
- この例では、 **sp_change_log_shipping_primary_database**を使用して、プライマリデータベース[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]に関連付けられている設定を更新する方法を示します。  
+ この例では、 **sp_change_log_shipping_primary_database**を使用して、プライマリデータベースに関連付けられている設定を更新する方法を示し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_primary_database   

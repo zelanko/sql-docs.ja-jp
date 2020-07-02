@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98ce2b9aa11b2e1381da1f16455df8a2c0d3f243
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1dfba407449b9517af2ed899f49387732c48353b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718523"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL ワークフロー
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 データの変更に応じて、WideWorldImporters データベースから WideWorldImportersDW データベースにデータを移行するには、 *WWI_Integration* ETL パッケージを使用します。 パッケージは定期的に (通常は毎日) 実行されます。
 
 このパッケージは、SQL Server Integration Services を使用して、(Integration Services で個別の変換ではなく) 一括 T-sql 操作を調整することで、高いパフォーマンスを保証します。
@@ -59,11 +59,11 @@ ms.locfileid: "81487431"
    5. [**配置**] を選択してウィザードを終了します。
 
 2. ETL プロセス用の SQL Server エージェントジョブを作成します。
-   1. Management Studio で、[ **SQL Server エージェント**] を右クリックし、[**新しい** > **ジョブ**] を選択します。
+   1. Management Studio で、[ **SQL Server エージェント**] を右クリックし、[**新しい**ジョブ] を選択し  >  **Job**ます。
    2. *WIDEWORLDIMPORTERS ETL*などの名前を入力します。
    3. 種類**SQL Server Integration Services パッケージ**の**ジョブステップ**を追加します。
    4. Integration Services カタログがあるサーバーを選択し、*毎日の ETL*パッケージを選択します。
-   5. [**構成** > ] [**接続マネージャー**] で、ソースとターゲットへの接続が正しく構成されていることを確認します。 既定では、ローカルインスタンスに接続します。
+   5. [**構成**] [  >  **接続マネージャー**] で、ソースとターゲットへの接続が正しく構成されていることを確認します。 既定では、ローカルインスタンスに接続します。
    6. [ **OK** ] を選択してジョブを作成します。
 
 3. ジョブを実行またはスケジュールします。

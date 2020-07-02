@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eecd689b38ffbc1236925423df6af84e17ddf410
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 037812be8b38c9be107197a72bd7a161e56904c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833517"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716231"
 ---
 # <a name="sp_articlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   テーブルアーティクルに基づいてパブリッシュされたデータをフィルター処理します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -71,7 +71,7 @@ sp_articlefilter [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_articlefilter**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  既存のサブスクリプションを持つアーティクルに対して**sp_articlefilter**を実行するには、それらのサブスクリプションを再初期化する必要があります。  
@@ -88,7 +88,7 @@ sp_articlefilter [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_articlefilter**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アーティクルの定義](../../relational-databases/replication/publish/define-an-article.md)   
  [静的行フィルターを定義および変更する](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

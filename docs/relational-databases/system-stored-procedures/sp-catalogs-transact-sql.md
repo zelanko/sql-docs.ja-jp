@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b760e27d7a0b320c0e911a1a485d1e5e9033146a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 155653adbfdb7902eb30e82dbade7fa3589ae00f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715972"
 ---
 # <a name="sp_catalogs-transact-sql"></a>sp_catalogs (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたリンクサーバーのカタログの一覧を返します。 これは、のデータベースに相当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
@@ -51,7 +51,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`OLE DB ODBC Linked Server #3` というリンク サーバーのカタログ情報を返します。  
   
 > [!NOTE]  
@@ -63,7 +63,7 @@ GO
 EXEC sp_catalogs 'OLE DB ODBC Linked Server #3';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_columns_ex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
  [sp_column_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   

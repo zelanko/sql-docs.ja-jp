@@ -20,15 +20,15 @@ ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 552ca2de9ac8077beb25b9ad77f259790b92a1be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4d6484d5f9762590f3bef941f7deff5092c720ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819039"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718705"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   バージョン ストアに最も多くバージョンを作成しているオブジェクトの仮想テーブルを返します。 **dm_tran_top_version_generators**は、 **database_id**と**rowset_id**によってグループ化された上位256の集計レコード長を返します。 **dm_tran_top_version_generators**は、 **dm_tran_version_store**仮想テーブルに対してクエリを実行してデータを取得します。 このビューはバージョンストアに対してクエリを実行し、バージョンストアは非常に大きくなる可能性があるため、dm_tran_top_version_generators を実行するには、非効率的なビューを使用し**ます。** この関数を使用して、バージョンストアの最大のコンシューマーを検索することをお勧めします。  
   
@@ -91,7 +91,7 @@ database_id rowset_id            aggregated_record_length_in_bytes
   
  出力には、すべてのバージョンがによって作成され、バージョンが2つのテーブルから生成されることが示されて `database_id``9` います。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

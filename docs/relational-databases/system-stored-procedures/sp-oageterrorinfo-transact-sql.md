@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a6f56713f2ac50a5e367f23a7987b62e2fb9a78b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828862"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719250"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   OLE オートメーションのエラー情報を取得します。  
   
@@ -69,7 +69,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="result-sets"></a>結果セット  
  出力パラメーターを指定しない場合、エラー情報は結果セットとしてクライアントに返されます。  
   
-|列名|データ型|説明|  
+|列名|データの種類|説明|  
 |------------------|---------------|-----------------|  
 |**エラー**|**バイナリ (4)**|エラー番号のバイナリ表現。|  
 |**ソース**|**nvarchar (nn)**|エラーのソース。|  
@@ -86,7 +86,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |-----------------------|------------------|  
 |**変数型が不正です&amp;#x2028;(0x80020008)**|メソッドパラメーター [!INCLUDE[tsql](../../includes/tsql-md.md)] として渡された値のデータ型が、メソッドパラメーターのデータ型と一致しなかった [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] か、またはメソッドパラメーターとして NULL 値が渡されました。|  
 |**不明な名前です&amp;#x2028;(0x8002006)**|指定したプロパティ名またはメソッド名が、指定したオブジェクトに見つかりませんでした。|  
-|**無効なクラス文字列です&amp;#x2028;(0x800401f3)**|指定した ProgID または CLSID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに OLE オブジェクトとして登録されていません。 **Sp_OACreate**を使用してインスタンス化するには、事前にカスタム OLE オートメーションサーバーを登録しておく必要があります。 これを行うには、インプロセス (.dll) サーバーの場合は Regsvr32 ユーティリティを使用し、ローカル (.exe) サーバーの場合**はコマンドライン**スイッチを使用します。|  
+|**無効なクラス文字列です&amp;#x2028;(0x800401f3)**|指定した ProgID または CLSID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに OLE オブジェクトとして登録されていません。 **Sp_OACreate**を使用してインスタンス化するには、事前にカスタム OLE オートメーションサーバーを登録しておく必要があります。 これを行うには、インプロセス (.dll) サーバーの場合は Regsvr32.exe ユーティリティを使用し、ローカル (.exe) サーバーの場合**はコマンドライン**スイッチを使用します。|  
 |**サーバーの実行に失敗しました (0x80080005)**|指定した OLE オブジェクトは、ローカル OLE サーバー (.exe ファイル) として登録されていますが、.exe ファイルが見つからないか、起動できません。|  
 |**指定されたモジュールが見つかりませんでした&amp;#x2028;(0x8007007e)**|指定された OLE オブジェクトは、インプロセス OLE サーバー (.dll ファイル) として登録されていますが、.dll ファイルが見つからないか、または読み込めませんでした。|  
 |**型が一致しません&amp;#x2028;(0x80020005)**|プロパティ値またはメソッドの戻り値を格納するために使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] ローカル変数のデータ型が、プロパティ値またはメソッドの戻り値の [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] データ型と一致しません。 または、プロパティやメソッドの戻り値を要求しましたが、そのプロパティやメソッドで戻り値が返されません。|  
@@ -97,7 +97,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures`OLE オートメーションに関連するシステムプロシージャを使用するには、構成を**有効**にする必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、OLE オートメーションのエラー情報を表示します。  
   
 ```  
@@ -121,7 +121,7 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の OLE オートメーションストアドプロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE オートメーションのサンプル スクリプト](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0bd62fe3462441d4eab9d3d89bce20cf1144131
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d584b2db0e66b2affad0e061098f75fc9258fbdb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715923"
 ---
 # <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   セカンダリデータベースの設定を変更します。  
   
@@ -69,7 +69,7 @@ sp_change_log_shipping_secondary_database
   
 `[ @buffer_count = ] 'buffer_count'`バックアップまたは復元操作によって使用されるバッファーの合計数。 *buffer_count*は**int**で、既定値は-1 です。  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`によって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バックアップデバイスに発行される入力要求または出力要求の最大サイズ (バイト単位)。 *max_transfersize*は**int**であり、NULL を指定できます。  
+`[ @max_transfer_size = ] 'max_transfer_size'`によってバックアップデバイスに発行される入力要求または出力要求の最大サイズ (バイト単位) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *max_transfersize*は**int**であり、NULL を指定できます。  
   
 `[ @restore_threshold = ] 'restore_threshold'`復元操作の間に、アラートが生成されるまでの経過時間 (分単位)。 *restore_threshold*は**int**であり、NULL にすることはできません。  
   
@@ -83,9 +83,9 @@ sp_change_log_shipping_secondary_database
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_change_log_shipping_secondary_database**は、セカンダリサーバーの**master**データベースから実行する必要があります。 このストアド プロシージャでは次の処理が行われます。  
   
 1.  必要に応じて**log_shipping_secondary_database**レコードの設定を変更します。  

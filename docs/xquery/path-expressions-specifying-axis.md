@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f8e753f4961d33251120151bff6db1f8cd5e14c
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 96240f605762be382065268fa39198baeeaaa53f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717178"
 ---
 # <a name="path-expressions---specifying-axis"></a>パス式 - 軸の指定
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   パス式の軸ステップには、次のコンポーネントが含まれます。  
   
@@ -57,10 +57,10 @@ ms.locfileid: "84215756"
   
  相対パス式では、 `child::root/child::Location/attribute::LocationID` 3 つのステップがあります。 最初の2つの手順では、それぞれ軸を指定し、3番目の手順で軸を指定し `child` `attribute` ます。 製品版の**ProductModel**テーブル内の製造手順の XML ドキュメントに対して実行した場合、式は `LocationID` \<Location> 要素の子要素ノードの属性を返し \<root> ます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックのクエリ例は、 **AdventureWorks**データベースの**xml**型の列に対して指定されています。  
   
-### <a name="a-specifying-a-child-axis"></a>A. 子軸の指定  
+### <a name="a-specifying-a-child-axis"></a>A: 子軸の指定  
  次のクエリでは、特定の製品モデルについて、 \<Features> \<ProductDescription> テーブルに格納されている製品カタログの説明から要素ノードの子要素ノードを取得し `Production.ProductModel` ます。  
   
 ```  
@@ -77,7 +77,7 @@ WHERE ProductModelID=19
   
 -   パス式の両方のステップが、`child` 軸およびノード名 (`ProductDescription`、`Features`) をノード テストとして指定しています。 ノードテストの詳細については、「[パス式のステップでのノードテストの指定](../xquery/path-expressions-specifying-node-test.md)」を参照してください。  
   
-### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>B. descendant 軸と descendant-or-self 軸の指定  
+### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>B: descendant 軸と descendant-or-self 軸の指定  
  次の例では、子孫軸または子孫軸を使用します。 この例のクエリは、 **xml**型の変数に対して指定されています。 XML インスタンスは、生成された結果の違いを簡単に示すために簡略化されています。  
   
 ```  
@@ -151,7 +151,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
-### <a name="c-specifying-a-parent-axis"></a>C. parent 軸の指定  
+### <a name="c-specifying-a-parent-axis"></a>C: parent 軸の指定  
  次のクエリでは、 `Summary` `ProductDescription` テーブルに格納されている製品カタログ XML ドキュメント内の <> 要素の <> 子要素が返され `Production.ProductModel` ます。  
   
  この例では、parent 軸を使用して <> 要素の親に戻り、 `Feature` `Summary` <> 要素の <> 要素の子を取得し `ProductDescription` ます。  

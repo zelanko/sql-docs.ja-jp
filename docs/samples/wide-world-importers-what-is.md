@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2fb0c990c03e0dfbf1cd279efa7a249bb5bc9645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adc2e7d74f8479384bd9f34b5442e796e4b74d66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718547"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Microsoft SQL 用の大規模なインポーターのサンプルデータベース
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 これは、架空の会社全体のインポーターと、SQL Server および Azure SQL Database 用の WideWorldImporters サンプルデータベースで対処されているワークフローの概要です。  
 
 Wide World のインポーター (WWI) は、サンフランシスコベイ領域からの卸売分野商品インポーターおよびディストリビューターです。
@@ -63,6 +63,6 @@ SQL Server Analysis Services は、ディメンションデータモデルのデ
 
 ## <a name="terms-of-use"></a>使用条件
 
-サンプルデータベースとサンプルコードのライセンスについては、「 [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt) 」を参照してください。
+サンプルデータベースとサンプルコードのライセンスについては、次を参照してください: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
 サンプルデータベースには、data.gov および自然 EarthData から読み込まれたパブリックデータが含まれています。 使用条件は次のとおりです。[https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c046d562164e47ed72580801196756714547755e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b44560cfd5c97abf536b372d534aaec59318f021
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820722"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716559"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   のインスタンスに新しいユーザー定義エラーメッセージを格納 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] します。 **Sp_addmessage**を使用して格納されたメッセージを表示するには、**メッセージ**カタログビューを使用します。  
   
@@ -91,7 +91,7 @@ EXEC sp_addmessage 50001, 16,
 GO  
 ```  
   
-### <a name="b-adding-a-message-in-two-languages"></a>B. 2 種類の言語のメッセージを追加する  
+### <a name="b-adding-a-message-in-two-languages"></a>B: 2 種類の言語のメッセージを追加する  
  次の例では、まず英語のメッセージを追加し、次に同じメッセージのフランス語版を追加します。`.`  
   
 ```  
@@ -107,7 +107,7 @@ EXEC sp_addmessage @msgnum = 60000, @severity = 16,
 GO  
 ```  
   
-### <a name="c-changing-the-order-of-parameters"></a>C. パラメーターの順序を変更する  
+### <a name="c-changing-the-order-of-parameters"></a>C: パラメーターの順序を変更する  
  次の例では、まず英語のメッセージを追加し、次にパラメーターの順序を変えてローカライズされたメッセージを追加します。  
   
 ```  
@@ -156,7 +156,7 @@ RAISERROR(60000,1,1,15,'param1','param2'); -- error, severity, state,
 GO                                       -- parameters.  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_altermessage &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   

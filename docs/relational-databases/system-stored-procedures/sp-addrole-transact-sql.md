@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1711ec3941a5fced5ef9e0c32808d6153b673e2b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c4c882111446a24ca0dc8e0ac5ec8c0c28abbd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716413"
 ---
 # <a name="sp_addrole-transact-sql"></a>sp_addrole (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースに新しいデータベース ロールを作成します。  
   
 > [!IMPORTANT]
->  **sp_addrole**は、以前のバージョンのとの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]互換性のために含まれており、将来のリリースではサポートされない可能性があります。 代わりに[CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md)を使用してください。  
+>  **sp_addrole**は、以前のバージョンのとの互換性のために含まれて [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] おり、将来のリリースではサポートされない可能性があります。 代わりに[CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md)を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,8 +49,8 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
- データベースロールの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名前には、1 ~ 128 文字を含めることができます (文字、記号、数字を含む)。 データベースロールの名前には、円記号 (\\)、NULL、または空の文字列 (**' '**) を含めることはできません。  
+## <a name="remarks"></a>解説  
+ データベースロールの名前には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 1 ~ 128 文字を含めることができます (文字、記号、数字を含む)。 データベースロールの名前には、円記号 ( \\ )、NULL、または空の文字列 (**' '**) を含めることはできません。  
   
  データベースロールを追加した後、 [sp_addrolemember &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)を使用してプリンシパルをロールに追加します。 GRANT、DENY、または REVOKE ステートメントを使用してデータベースロールに権限を適用すると、データベースロールのメンバーは、権限がそのアカウントに直接適用されているかのように権限を継承します。  
   
@@ -69,7 +69,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 EXEC sp_addrole 'Managers';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  

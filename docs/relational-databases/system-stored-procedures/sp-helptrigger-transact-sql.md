@@ -18,15 +18,15 @@ ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c01290f0f95a7e240931a9398ab7acea1b287be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 546e980aeb021f57a0267d1f668f7acd181b4dcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824405"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719272"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のデータベースにある、指定したテーブルに定義されている DML トリガーの種類を返します。 sp_helptrigger は DDL トリガーでは使用できません。 代わりに、[システムストアドプロシージャ](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)カタログビューに対してクエリを実行します。  
   
@@ -45,7 +45,7 @@ sp_helptrigger [ @tabname = ] 'table'
   
 `[ @triggertype = ] 'type'`情報を返す DML トリガーの種類を示します。 *種類*は**char (6)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**DELETE**|DELETE トリガー情報を返します。|  
 |**INSERT**|挿入トリガー情報を返します。|  
@@ -71,7 +71,7 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="permissions"></a>アクセス許可  
  テーブルに対する[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、を実行し `sp_helptrigger` て、テーブルのトリガーに関する情報を生成し `Person.Person` ます。  
   
 ```  
@@ -80,7 +80,7 @@ GO
 EXEC sp_helptrigger 'Person.Person';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cd8e54f8de50ffe1912dd58abc6484198fac46c9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e44f9ec66a45b7ba399c1bc4abb2154bc6dd0349
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716313"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   
 **に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (を [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
 
@@ -49,7 +49,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ## <a name="arguments"></a>引数  
 `[ @devtype = ] 'device_type'`バックアップデバイスの種類を示します。 *device_type*は**varchar (20)** で、既定値はありません。次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**ディスク**|バックアップデバイスとしてのハードディスクファイル。|  
 |**テープ**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows でサポートされるテープ デバイス。<br /><br /> 注:テープ バックアップ デバイスは、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
@@ -104,7 +104,7 @@ GO
 EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak';  
 ```  
   
-### <a name="b-adding-a-network-disk-backup-device"></a>B. ネットワークディスクバックアップデバイスを追加する  
+### <a name="b-adding-a-network-disk-backup-device"></a>B: ネットワークディスクバックアップデバイスを追加する  
  次の例では、`networkdevice` というリモートのディスク バックアップ デバイスを追加します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]を起動する名前には、そのリモート ファイル (`\\<servername>\<sharename>\<path>\<filename>.bak`) を扱う権限が必要です。  
   
 ```  
@@ -114,7 +114,7 @@ EXEC sp_addumpdevice 'disk', 'networkdevice',
     '\\<servername>\<sharename>\<path>\<filename>.bak';  
 ```  
   
-### <a name="c-adding-a-tape-backup-device"></a>C. テープ バックアップ デバイスを追加する  
+### <a name="c-adding-a-tape-backup-device"></a>C: テープ バックアップ デバイスを追加する  
  次の例では、 `tapedump1` 物理名を使用してデバイスを追加し `\\.\tape0` ます。  
   
 ```  
@@ -123,7 +123,7 @@ GO
 EXEC sp_addumpdevice 'tape', 'tapedump1', '\\.\tape0';  
 ```  
   
-### <a name="d-backing-up-to-a-logical-backup-device"></a>D. 論理バックアップデバイスへのバックアップ  
+### <a name="d-backing-up-to-a-logical-backup-device"></a>D: 論理バックアップデバイスへのバックアップ  
  次の例では、 `AdvWorksData` バックアップディスクファイル用の論理バックアップデバイスを作成します。 作成した論理バックアップ デバイスに [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースをバックアップします。  
   
 ```  

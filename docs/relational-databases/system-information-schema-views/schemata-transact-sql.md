@@ -19,15 +19,15 @@ ms.assetid: 69617642-0f54-4b25-b62f-5f39c8909601
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9da138ea801881ebbef5c7380c818563908b738
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a257a28a51a9e54643b14e57ff8c778179ee3bd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716625"
 ---
 # <a name="schemata-transact-sql"></a>スキーマ (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   現在のデータベースのスキーマごとに1行のデータを返します。 これらのビューから情報を取得するには、INFORMATION_SCHEMA の完全修飾名を指定し**ます。**_view_name_。 のインスタンス内のすべてのデータベースに関する情報を取得するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 [transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)カタログビューを &#40;て、データベースに対してクエリを実行します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "83669484"
 SELECT * FROM master.INFORMATION_SCHEMA.SCHEMATA;
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [情報スキーマビュー &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

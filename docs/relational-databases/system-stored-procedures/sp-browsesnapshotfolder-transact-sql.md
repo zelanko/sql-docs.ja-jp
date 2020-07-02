@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67d4520998dd87c14a817ec05bc14c987e4810a1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ea912014440191f1d5e200ed583366ad43ecb27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831743"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715996"
 ---
 # <a name="sp_browsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   パブリケーションに対して生成された最新のスナップショットの完全なパスを返します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -54,7 +54,7 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar(512)**|スナップショットディレクトリへの完全パスです。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_browsesnapshotfolder**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  *サブスクライバー*と*subscriber_db*のフィールドが NULL のままになっている場合、ストアドプロシージャは、パブリケーションに対して検索できる最新のスナップショットのスナップショットフォルダーを返します。 *サブスクライバー*と*subscriber_db*のフィールドが指定されている場合、ストアドプロシージャは、指定されたサブスクリプションのスナップショットフォルダーを返します。 パブリケーションに対するスナップショットが生成されていない場合は、空の結果セットが返されます。  
@@ -64,7 +64,7 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_browsesnapshotfolder**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

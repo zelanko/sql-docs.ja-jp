@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 25d292ed7f45d921d2fc9eafbc1d2d5fe5912dbe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9eaae9a00a125a2ffe2f290e2bd772eb40d84c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830230"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717351"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   サーバー インスタンスから現在使用されていないデータベースを切り離します。必要に応じて、切り離す前に、すべてのテーブルに対して UPDATE STATISTICS を実行します。  
   
@@ -68,7 +68,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 > [!NOTE]  
 >  すべてのログインアカウントの既定のデータベースを表示する方法の詳細については、「 [sp_helplogins &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)」を参照してください。 必要なアクセス許可がある場合は、 [ALTER login](../../t-sql/statements/alter-login-transact-sql.md)を使用して、新しい既定のデータベースをログインに割り当てることができます。  
   
-## <a name="restrictions"></a>制限  
+## <a name="restrictions"></a>制限事項  
  次のいずれかに該当する場合、データベースをデタッチすることはできません。  
   
 -   データベースは現在使用されています。 詳細については、このトピックで後述する「排他アクセスの取得」を参照してください。  

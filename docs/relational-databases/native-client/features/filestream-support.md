@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf8ddb4e3794c8ad7889f395726fb325e071deb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97ee05c8deb88efcd451eb55007983833d0b1879
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303884"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719677"
 ---
 # <a name="filestream-support"></a>FILESTREAM のサポート
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
   FILESTREAM を使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を経由するか、Windows ファイル システムに直接アクセスすることで、大きなバイナリ値の格納やアクセスが可能になります。 大きなバイナリ値とは、2 ギガバイト (GB) よりも大きい値です。 強化された FILESTREAM のサポートの詳細については、「[FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)」を参照してください。  
   
- データベース接続を開い** \@ \@** たときに、既定では、値の設定が-1 ("無制限") に設定されます。  
+ データベース接続を開いたときに、既定では、値の設定が-1 ("無制限") に設定** \@ \@ されます**。  
   
  Windows ファイル システムの API を使用して、FILESTREAM 列にアクセスし、更新することもできます。  
   
- 詳細については、以下のトピックを参照してください。  
+ 詳細については、次のトピックを参照してください。  
   
 -   [FILESTREAM サポート &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "81303884"
   
  FILESTREAM 列を作成する場合や、既存の FILESTREAM 列を検出する場合は、[sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) カタログ ビューの **is_filestream** 列を使用できます。  
   
- 以下に例を示します。  
+ 次に例を示します。  
   
 ```  
 -- Create a table with a FILESTREAM column.  
@@ -58,13 +58,13 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下位互換性  
- クライアントが、に[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]含ま[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]れていたバージョンの Native client を使用してコンパイルされ、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]アプリケーションがに接続している場合、 **varbinary (max)** の動作はと[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]互換性があります。 返されるデータの最大サイズが 2 GB に制限されます。 戻り値が 2 GB より大きい場合は切り捨てが行われ、"文字列データの右側が切り捨てられました" という警告が返されます。  
+ クライアントが、に含まれていたバージョンの Native Client を使用してコンパイルされ、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] アプリケーションがに接続している場合 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 **varbinary (max)** の動作はと互換性があり [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ます。 返されるデータの最大サイズが 2 GB に制限されます。 戻り値が 2 GB より大きい場合は切り捨てが行われ、"文字列データの右側が切り捨てられました" という警告が返されます。  
   
  データ型の互換性が 80 に設定されている場合は、クライアントの動作で下位クライアントとの互換性が維持されます。  
   
- ネイティブクライアントの[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]バージョンより前にリリースされた SQLOLEDB またはその他のプロバイダーを使用するクライアントでは、 **varbinary (max)** は image にマップされます。  
+ ネイティブクライアントのバージョンより前にリリースされた SQLOLEDB またはその他のプロバイダーを使用するクライアントでは [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、 **varbinary (max)** は image にマップされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3447b9111ec6d6a6fd6a4084f884647cbd38eec2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 68540299b14af875f6625771d9d47f81f048f43d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716534"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   指定されたパブリケーションのスナップショット エージェントを作成します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -61,12 +61,12 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`スナップショットエージェントを実行する頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 回のみ|  
 |**4** (既定値)|毎日|  
 |**8**|業務.|  
-|**まで**|月単位。|  
+|**16**|月単位。|  
 |**32**|月単位に frequency_interval で示される間隔|  
 |**64**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントの起動時。|  
 |**128**|コンピューターがアイドル状態のときに実行する|  
@@ -78,18 +78,18 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|*frequency_interval*は使用されていません。|  
 |**4** (既定値)|*Frequency_interval*毎日、既定値は日単位です。|  
 |**8**|*frequency_interval*は、次の1つまたは複数の[&#124; (ビットごと](../../t-sql/language-elements/bitwise-or-transact-sql.md)の or) 論理演算子と組み合わせて使用します。<br /><br /> **1** = 日曜日 &#124;<br /><br /> **2** = 月曜日 &#124;<br /><br /> **4** = 火曜日 &#124;<br /><br /> **8** = 水曜日 &#124;<br /><br /> **16** = 木曜日 &#124;<br /><br /> **32** = 金曜日 &#124;<br /><br /> **64** = 土曜日|  
-|**まで**|月の*frequency_interval*日。|  
+|**16**|月の*frequency_interval*日。|  
 |**32**|*frequency_interval*は次のいずれかです。<br /><br /> **1** = 日曜日 &#124;<br /><br /> **2** = 月曜日 &#124;<br /><br /> **3** = 火曜日 &#124;<br /><br /> **4** = 水曜日 &#124;<br /><br /> **5** = 木曜日 &#124;<br /><br /> **6** = 金曜日 &#124;<br /><br /> **7** = 土曜日 &#124;<br /><br /> **8** = 日 &#124;<br /><br /> **9** = 平日 &#124;<br /><br /> **10** = 週末|  
 |**64**|*frequency_interval*は使用されていません。|  
 |**128**|*frequency_interval*は使用されていません。|  
   
 `[ @frequency_subday = ] frequency_subday`*Freq_subday_interval*の単位です。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**2**|Second|  
-|**4** (既定値)|Minute|  
+|**4** (既定値)|分|  
 |**8**|時間|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*の間隔を指定します。 *frequency_subday_interval*は**int**,、既定値は 5 (5 分ごと) を意味します。  
@@ -135,7 +135,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addpublication_snapshot**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="example"></a>例  

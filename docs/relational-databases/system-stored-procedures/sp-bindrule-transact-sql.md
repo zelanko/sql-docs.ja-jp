@@ -18,15 +18,15 @@ ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c89b2cb803df80872d82f18b5f26b207e9e4bc38
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f2d068c18f692009f29ee7e8d6450c4f013c6906
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828492"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716127"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   ルールを列または別名データ型にバインドします。  
   
@@ -62,7 +62,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  新しいルールを列にバインドすることができます (CHECK 制約を使用することをお勧めします)。または、既存のルールをバインド解除せずに**sp_bindrule**の別名データ型にバインドすることもできます。 元のルールはオーバーライドされます。 既に CHECK 制約のある列にルールをバインドすると、すべての制限が評価されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型にはルールをバインドできません。  
   
  このルールは、バインドではなく、INSERT ステートメントが試行されたときに適用されます。 文字ルールを**数値**データ型の列にバインドすることはできますが、このような挿入操作は無効です。  
@@ -85,7 +85,7 @@ GO
 EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. 別名データ型にルールをバインドする  
+### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B: 別名データ型にルールをバインドする  
  `rule_ssn` という名前のルールがあり、`ssn` という名前の別名データ型があるものとします。次の例では、`rule_ssn` を `ssn` にバインドします。 CREATE TABLE ステートメントでは、型の列が `ssn` ルールを継承し `rule_ssn` ます。 `ssn` `rule_ssn` *Futureonly_flag*に対して**futureonly**が指定されていない場合、または `ssn` ルールが直接バインドされている場合を除き、型の既存の列もルールを継承します。 列にバインドされたルールは、データ型にバインドされたルールよりも常に優先されます。  
   
 ```  
@@ -94,7 +94,7 @@ GO
 EXEC sp_bindrule 'rule_ssn', 'ssn';  
 ```  
   
-### <a name="c-using-the-futureonly_flag"></a>C. Futureonly_flag の使用  
+### <a name="c-using-the-futureonly_flag"></a>C: Futureonly_flag の使用  
  次の例では、`rule_ssn` ルールを別名データ型 `ssn` にバインドします。 `futureonly` が指定されているため、`ssn` 型の既存の列は影響を受けません。  
   
 ```  
@@ -103,7 +103,7 @@ GO
 EXEC sp_bindrule rule_ssn, 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D. 区切られた識別子の使用  
+### <a name="d-using-delimited-identifiers"></a>D: 区切られた識別子の使用  
  *Object_name*パラメーターで区切られた識別子の使用例を次に示します。  
   
 ```  
@@ -117,7 +117,7 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
 -- and the second distinguishes the table name from the column name.  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9a7cb410a1e520ee05b7f93263dcc46750dfb87
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b5c067b42d61c2dae1dbe247a6212611d155348
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833471"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716135"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   バッチに含まれるパラメーターに関する情報を含む行セットを返し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 **sp_batch_params**は、指定されたバッチを解析し、埋め込みパラメーター値に関する情報を返します。 バッチの実行や、実行環境の変更は行いません。  
   
@@ -42,7 +42,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 `[ @tsqlbatch = ] 'tsqlbatch'`は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] パラメーター情報を必要とするステートメントまたはバッチを含む Unicode 文字列です。 *tsqlbatch*は**nvarchar (max)** または**nvarchar (max)** に暗黙的に変換できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -52,7 +52,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**COLUMN_TYPE**|**smallint**|このフィールドは、次のいずれかの値を返します。<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE<br /><br /> この列は常に 0 です。|  
 |**DATA_TYPE**|**smallint**|パラメーターのデータ型 (ODBC データ型の整数コード)。 このデータ型を ISO 型にマップできない場合、値は NULL になります。 ネイティブデータ型の名前が**TYPE_NAME**列に返されます。 この値は常に NULL です。|  
 |**TYPE_NAME**|**sysname**|基になる DBMS によって表された、データ型を表す文字列です。 この値は NULL です。|  
-|**PRECISION**|**int**|有効桁数。 **有効桁数**列の戻り値は、10進数値です。|  
+|**精度**|**int**|有効桁数。 **有効桁数**列の戻り値は、10進数値です。|  
 |**LENGTH**|**int**|データの転送サイズです。 この値は NULL です。|  
 |**段階**|**smallint**|小数点の右側の桁数。 この値は NULL です。|  
 |**ベース**|**smallint**|数値型の基数です。 この値は NULL です。|  
@@ -77,7 +77,7 @@ SET @SQLString =
 EXECUTE sp_batch_params @SQLString;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ストアドプロシージャの実行](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [ストアドプロシージャの実行方法に関するトピック &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
  [ストアド プロシージャの実行 &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  

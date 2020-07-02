@@ -18,15 +18,15 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2e822d1ca6aff1e91a848f839b824bb4476fc5a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 84e6c530b4887502346b69adcf2590bce9d0e8fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718684"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   ユーザー定義テーブルのオプション値を設定します。 sp_tableoption を使用すると、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、 **xml**、 **text**、 **ntext**、 **image**、または大きなユーザー定義型の列を含むテーブルの行内での動作を制御できます。  
   
@@ -52,7 +52,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName =] '*option_name*'  
  テーブル オプション名を指定します。 *option_name*は**varchar (35)**,、既定値は NULL です。 *option_name* 、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |table lock on bulk load|無効である場合 (既定)、ユーザー定義テーブル上で行ロックを取得するための一括読み込み処理が行われます。 有効である場合、ユーザー定義テーブル上で一括更新ロックを取得するための一括読み込み処理が行われます。|  
 |insert row lock|サポート対象から除外されました。<br /><br /> このオプションは、のロック動作には影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] しません。また、既存のスクリプトおよびプロシージャとの互換性のためだけに含まれています。|  
@@ -68,7 +68,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) またはエラー番号 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_tableoption は、ユーザー定義テーブルのオプション値を設定するためにのみ使用できます。 テーブルのプロパティを表示するには、OBJECTPROPERTY またはクエリのテーブルを使用します。  
   
  sp_tableoption の text in row オプションを有効または無効にできるのは、テーブルにテキスト列が含まれている場合だけです。 テーブルにテキスト列がない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーが発生します。  
@@ -117,7 +117,7 @@ GO
 EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row', 1;  
 ```  
   
-### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>B. テーブルでの vardecimal ストレージ形式の有効化  
+### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>B: テーブルでの vardecimal ストレージ形式の有効化  
  次の例では、 `Production.WorkOrderRouting` `decimal` データ型をストレージ形式で格納するようにテーブルを変更し `vardecimal` ます。  
 
 ```sql  
@@ -133,7 +133,7 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
    'vardecimal storage format', 'ON';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL&#41;&#40;Transact-sql](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
