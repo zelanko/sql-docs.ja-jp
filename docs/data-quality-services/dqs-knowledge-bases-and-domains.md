@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b84c1cee7dd805e68e0742c72980d7fb8a55c54b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef8b40ceea2be0963d21dddc7c2cbef37474f6cf
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251651"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85810655"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS のナレッジ ベースとドメイン
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でのナレッジ ベースについて説明します。 データをクレンジングするには、データについての知識 (ナレッジ) が必要です。 データ品質プロジェクト用のナレッジを準備するには、ナレッジ ベース (KB) を構築して保守します。DQS はこれを使用して、正しくないデータまたは無効なデータを識別できます。 DQS では、コンピューター支援型と対話型の両方のプロセスを使用して、ナレッジ ベースを作成、構築、および更新できます。 ナレッジ ベース内のナレッジはドメインに保持され、各ドメインはデータ フィールドに固有です。 ナレッジ ベースはデータに関するナレッジのリポジトリです。ナレッジ ベースを使用して、データを理解し、その整合性を維持できます。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "75251651"
   
  ただし、クレンジングの結果でエクスポートする値では、大文字と小文字を制御できます。 そのためには、**[形式の出力先]** ドメイン プロパティを設定し (「[ドメインのプロパティの設定](../data-quality-services/set-domain-properties.md)」を参照)、クレンジング結果をエクスポートするときに **[出力の標準化]** チェック ボックスを使います (「[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)」を参照)。  
   
-##  <a name="domain-management"></a><a name="Domains"></a> ドメインの管理  
+##  <a name="domain-management"></a><a name="Domains"></a>ドメイン管理  
  データ スチュワードはドメイン管理で、コンピューター支援型のナレッジ検出アクティビティによって生成されたメタデータを、対話形式で変更および拡張できます。 各変更はナレッジ ベースのドメインに対して行われます。 ドメイン管理アクティビティでは、次の操作を実行できます。  
   
 -   新しいドメインを作成します。 新しいドメインは、既存のドメインにリンクしたり、既存のドメインからコピーしたりできます。  

@@ -35,15 +35,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 305a167d233ee5a11348b0cc8a050dc2f61548ae
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 88e1f334629482182fb182dde60f715c0d122d25
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84883217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790601"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの挿入 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   アップデートグラムは、レコードインスタンスがブロック内に存在する **\<after>** が、対応するブロックには存在しない場合に挿入操作を示し **\<before>** ます。 この場合、アップデートグラムではブロック内のレコードがデータベースに挿入され **\<after>** ます。  
   
  挿入操作のアップデートグラムの形式は次のとおりです。  
@@ -84,7 +84,7 @@ ms.locfileid: "84883217"
 ## <a name="updgguid-attribute"></a>updg:guid 属性  
  **Updg: guid**属性は、グローバル一意識別子を生成する省略可能な属性です。 この値は、指定されているブロック全体のスコープ内に残り **\<sync>** ます。 この値は、ブロック内の任意の場所で使用でき **\<sync>** ます。 属性は、 **NEWGUID()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一意の識別子を生成するために newguid () 関数を呼び出します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用して実際のサンプルを作成するには、 [SQLXML の例を実行するための要件](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)を満たす必要があります。  
   
  アップデートグラムの例を使用する前に、次の点に注意してください。  
@@ -93,7 +93,7 @@ ms.locfileid: "84883217"
   
 -   ほとんどの例では、[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] サンプル データベースを使用します。 すべての更新内容は、このデータベースのテーブルに適用されます。  
   
-### <a name="a-inserting-a-record-by-using-an-updategram"></a>A. アップデートグラムを使用してレコードを挿入する  
+### <a name="a-inserting-a-record-by-using-an-updategram"></a>A: アップデートグラムを使用してレコードを挿入する  
  この属性中心のアップデートグラムでは、[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] データベース内の HumanResources.Employee テーブルにレコードを挿入します。  
   
  この例では、アップデートグラムでマッピングスキーマが指定されていません。 したがって、アップデートグラムでは既定のマッピングが使用されます。このマッピングでは、要素名はテーブル名にマップされ、属性または子要素はそのテーブル内の列にマップされます。  
@@ -159,7 +159,7 @@ ms.locfileid: "84883217"
 </ROOT>  
 ```  
   
-### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. アップデートグラムを使用して複数のレコードを挿入する  
+### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B: アップデートグラムを使用して複数のレコードを挿入する  
  このアップデートグラムでは、HumanResources.Shift テーブルに 2 つの新しい勤務時間レコードを追加します。 アップデートグラムでは、省略可能なブロックが指定されていません **\<before>** 。  
   
 ```  
@@ -210,7 +210,7 @@ ms.locfileid: "84883217"
 </ROOT>  
 ```  
   
-### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. SQL Server で有効で、XML では有効でない文字を処理する  
+### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C: SQL Server で有効で、XML では有効でない文字を処理する  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、テーブル名は、Northwind データベースの Order Details テーブルのようにスペースを含めて指定できます。 ただし、有効な識別子である XML 文字では有効ではありませんが、有効な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] xml 識別子はエンコード値として ' __xHHHH ' を使用してエンコードできます \_ \_ 。ここで、HHHH は、最上位ビットから順に、文字の4桁の16進数の UCS 2 コードを表します。  
   
 > [!NOTE]  
@@ -248,7 +248,7 @@ ms.locfileid: "84883217"
   
      詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. at-identity 属性を使用して、IDENTITY 型の列に挿入されている値を取得する  
+### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D: at-identity 属性を使用して、IDENTITY 型の列に挿入されている値を取得する  
  次のアップデートグラムでは、Sales.SalesOrderHeader テーブルと Sales.SalesOrderDetail テーブルに 1 つずつ、合計 2 つのレコードを挿入します。  
   
  このアップデートグラムでは、最初にレコードを Sales.SalesOrderHeader テーブルに追加します。 このテーブルで、SalesOrderID 列は IDENTITY 型の列です。 このため、このレコードをテーブルに追加すると、アップデートグラムでは、 **id**属性を使用して、割り当てられた salesorderid 値を "x" (プレースホルダー値) としてキャプチャします。 次に、この**at id**変数を要素の salesorderid 属性の値として指定し \<Sales.SalesOrderDetail> ます。  
@@ -728,7 +728,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQLXML 4.0&#41;&#40;アップデートグラムのセキュリティに関する考慮事項](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

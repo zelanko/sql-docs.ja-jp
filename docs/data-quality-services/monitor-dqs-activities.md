@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: d9926eb251d109eb8ed9529a4ae739e8a1915b07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba2bfe0a9979d94df43b923b7eff2ed68750e19a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85809931"
 ---
 # <a name="monitor-dqs-activities"></a>DQS アクティビティの監視
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ検出、ドメイン管理、照合ポリシー、データ クレンジング、データ照合、および SSIS クレンジングの各アクティビティを一元的に監視する方法について説明します。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "75245461"
 2.  **[アクティビティの一覧を更新します]** アイコンをクリックしてフィルターを適用し、フィルター処理された DQS アクティビティのみを表示します。  
   
 ##  <a name="view-dqs-activity-details"></a><a name="ActivityDetails"></a> DQS アクティビティの詳細の表示  
- アクティビティ監視画面で、アクティビティ ステップやプロファイラー情報などの DQS アクティビティの詳細情報を表示できます。 これを実行するには、次のようにします。  
+ アクティビティ監視画面で、アクティビティ ステップやプロファイラー情報などの DQS アクティビティの詳細情報を表示できます。 次の手順に従います。  
   
 1.  アクティビティ グリッド (上部ペイン) で DQS アクティビティを選択します。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "75245461"
     -   **[プロファイラー]**: 現在のアクティビティと履歴アクティビティのプロファイル情報が表示されます。 現在のアクティビティについては、部分的ではあるが一貫性のある情報が表示されます。 アクティビティのプロファイル情報は、対応するアクティビティの詳細を Excel ファイルにエクスポートしたときに Excel ファイルにエクスポートされます。 この情報は、エクスポートされた Excel ファイルの [**プロファイラー-ソース**] シートと [**プロファイラー-フィールド**] シートで使用できます。  
   
 ##  <a name="export-dqs-activity-details"></a><a name="Export"></a> DQS アクティビティの詳細のエクスポート  
- 監視画面のアクティビティのプロパティ、プロセス、およびプロファイル情報を Excel ファイルにエクスポートできます。 これを実行するには、次のようにします。  
+ 監視画面のアクティビティのプロパティ、プロセス、およびプロファイル情報を Excel ファイルにエクスポートできます。 次の手順に従います。  
   
 1.  アクティビティ グリッド (上部ペイン) でアクティビティを選択します。  
   

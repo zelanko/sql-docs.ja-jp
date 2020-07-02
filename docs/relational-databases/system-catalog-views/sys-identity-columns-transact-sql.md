@@ -20,15 +20,15 @@ ms.assetid: 97ee01e6-9c9e-4fd9-884b-68b4084669d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49684671c25ea83fa7554bec7f80d0b16c30d4eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbdb7e8b57469dc025dbc9729758c72199dfb18d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122715"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790531"
 ---
 # <a name="sysidentity_columns-transact-sql"></a>identity_columns (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Id 列である列ごとに1行の値を格納します。  
   
@@ -36,11 +36,11 @@ ms.locfileid: "68122715"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<列から継承された列>**||**Identity_columns**ビューでは、すべての列が返されます、、**列、ビュー**です。 また、以下に示す追加の列も返されます。 **Identity_columns**ビューが**sys**から継承する列の詳細については、「 [sys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)」を参照してください。|  
+|**\<columns inherited from sys.columns>**||**Identity_columns**ビューでは、すべての列が返されます、、**列、ビュー**です。 また、以下に示す追加の列も返されます。 **Identity_columns**ビューが**sys**から継承する列の詳細については、「 [sys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)」を参照してください。|  
 |**seed_value**|**sql_variant**|この id 列のシード値。 シード値のデータ型は、列自体のデータ型と同じです。|  
 |**increment_value**|**sql_variant**|この ID 列に対する増分値です。 シード値のデータ型は、列自体のデータ型と同じです。|  
 |**last_value**|**sql_variant**|この id 列に対して生成された最後の値。 シード値のデータ型は、列自体のデータ型と同じです。|  
-|**is_not_for_replication**|**bit**|Id 列は、NOT FOR REPLICATION として宣言されています。|  
+|**is_not_for_replication**|**bit**|Id 列は、NOT FOR REPLICATION として宣言されています。 **注:** この列は、Azure Synapse Analytics には適用されません。|  
   
 > [!NOTE]  
 >  複数のテーブルで使用できる自動的に増分する番号、またはテーブルを参照せずにアプリケーションから呼び出すことができる自動的に増分する番号を作成するには、「[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)」を参照してください。  
@@ -48,7 +48,7 @@ ms.locfileid: "68122715"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
