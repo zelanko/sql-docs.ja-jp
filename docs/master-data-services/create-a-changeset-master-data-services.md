@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 859eb2c829b7d6f35aa39cb2301a4a380c0d039e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db37dd8b4eed5c887cfceceb382fe57aa0d2fc33
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729624"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812447"
 ---
 # <a name="create-a-changeset-master-data-services"></a>変更セットを作成する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   変更セットは、マスター データに対する保留中の変更のコレクションです。 エンティティに変更の承認が必要な場合、保留中の変更は、変更セットに保存してから、管理者の承認を得るために送信する必要があります。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73729624"
   
 ## <a name="to-create-a-local-changeset"></a>ローカルの変更セットを作成するには  
   
-1.  [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]ホーム] ページで、モデルとバージョンを選択し、[**エクスプローラー**] をクリックします。  
+1.  [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ホーム] ページで、モデルとバージョンを選択し、[**エクスプローラー**] をクリックします。  
   
 2.  **[エンティティ]** メニューでエンティティをクリックします。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73729624"
   
 ## <a name="to-create-a-changeset-for-approval"></a>承認のための変更セットを作成するには  
   
-1.  [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]ホーム] ページで、モデルとバージョンを選択し、[**エクスプローラー**] をクリックします。  
+1.  [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ホーム] ページで、モデルとバージョンを選択し、[**エクスプローラー**] をクリックします。  
   
 2.  **[エンティティ]** メニューでエンティティをクリックします。  
   
@@ -55,10 +55,10 @@ ms.locfileid: "73729624"
   
 6.  既存の変更セットを使用するには、 **[既存]** をクリックし、一覧から変更セットを選択します。 オープンまたは拒否の状態の変更セットのみを使用できます。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
  [変更セットの適用および更新 (マスター データ サービス)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [変更セット &#40;マスターデータサービスのコミットまたは送信&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   
  [変更セットの承認または拒否 (マスター データ サービス)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   

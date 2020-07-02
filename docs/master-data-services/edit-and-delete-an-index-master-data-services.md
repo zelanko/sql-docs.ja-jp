@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f4855daea163d799d8f880dc74e5fee8d2a50c93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a543cc6c153af6cd40617d4fe7699ccabad8f9a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812367"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>インデックスの編集と削除 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   作成したインデックスの属性の編集と、インデックスの削除を実行できます。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73728216"
   
 8.  一覧に属性を追加するか一覧から削除することで、割り当てられている属性の一覧を編集します。  
   
-9. **[Save]** (保存) をクリックします。  
+9. **[保存]** をクリックします。  
   
  **インデックスを削除するには**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "73728216"
   
 5.  確認メッセージ ボックスで、 **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インデックス &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-an-index-master-data-services.md)   
  [カスタム インデックス (マスター データ サービス)](../master-data-services/custom-index-master-data-services.md)  
   

@@ -12,16 +12,16 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8f122f6fbc746b025b0354265ff9e176845333f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84999961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812920"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>マネージインスタンスで MDS データベースをホストする
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   この記事では、マネージインスタンスでマスターデータサービス (MDS) データベースを構成する方法について説明します。
   
@@ -64,7 +64,7 @@ ms.locfileid: "84999961"
      - 要求の監視
      - パフォーマンス
      - 静的なコンテンツの圧縮
-     - Security
+     - セキュリティ
      - 要求フィルター
      - Windows 認証
        > [!NOTE]

@@ -11,16 +11,16 @@ ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: dc51405421a1fd9c5a7d233b3f50db41dfc44d99
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc5445bda8cb42c3a8a14851ccbd395c30849968
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812747"
 ---
 # <a name="discontinued-master-data-services-features"></a>提供が中止されたマスター データ サービス機能
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   このトピックでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で使用できなくなった [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の機能について説明します。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "73728251"
   
  メタデータ モデルは使用できなくなります。 また、エクスプローラーの機能領域でメタデータを表示できなくなりました。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [非推奨のマスター データ サービス機能](../master-data-services/deprecated-master-data-services-features.md)  
   
   

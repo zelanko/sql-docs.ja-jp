@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 65164c1732aefe6555aa19325a158793d07631a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7badbd43fd526ff66b599f04e6aeb36443cd3684
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811543"
 ---
 # <a name="delete-a-model-master-data-services"></a>モデルを削除する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   モデルを削除して、モデルおよびそのすべてのデータを [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]から削除します。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "73728358"
   
 6.  追加の確認のダイアログ ボックスで **[OK]** をクリックします。  
   
- グリッドの **[状態]** 列には、モデルに対する操作の状態が示されます。 [**モデルの保存**] ボタンをクリックすると、![更新](../master-data-services/media/mds-model-status-updating.png "更新中")中のイメージが表示されます。これは、モデルが更新中であることを示します。 モデルの作成時または編集時にエラーが発生した場合は、![エラー](../master-data-services/media/mds-model-status-error.png "Error")イメージが表示されます。 それ以外の場合、状態は [OK] になり、 ![[Ok]](../master-data-services/media/mds-model-status-ok.png "[OK]")のイメージが表示されます。  
+ グリッドの **[状態]** 列には、モデルに対する操作の状態が示されます。 [**モデルの保存**] ボタンをクリックすると、![更新](../master-data-services/media/mds-model-status-updating.png "更新中")中のイメージが表示されます。これは、モデルが更新中であることを示します。 モデルの作成時または編集時にエラーが発生した場合は、![エラー](../master-data-services/media/mds-model-status-error.png "エラー")イメージが表示されます。 それ以外の場合、状態は [OK] になり、 ![[Ok]](../master-data-services/media/mds-model-status-ok.png "OK")のイメージが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデル &#40;マスターデータサービス&#41;](../master-data-services/models-master-data-services.md)   
  [モデルを作成する (マスター データ サービス)](../master-data-services/create-a-model-master-data-services.md)  
   

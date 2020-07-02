@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9aab396644dde824668cda8717ed7d14b695bb6d
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 2c7e24a7d519d787882ec587fc33f624f1eb6472
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811487"
 ---
 # <a name="master-data-services-database"></a>マスター データ サービス データベース
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   データベースには、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システムに関するすべての情報が含まれています。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 配置の中心となる要素です。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの機能は次のとおりです。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "84796253"
   
 -   [ステージング処理のエラー (マスター データ サービス)](../master-data-services/staging-process-errors-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスターデータサービスデータベースを作成する](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [データベースオブジェクトセキュリティ &#40;マスターデータサービス&#41;](../master-data-services/database-object-security-master-data-services.md)   
  [データベース ログイン、ユーザー、およびロール &#40;マスター データ サービス&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)  

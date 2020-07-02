@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9e715a59f45eeaf549d2f553099e47ba420223f6
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: f9a8b66f7b499f508378fa0d73eef4650063a08f
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796597"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811654"
 ---
 # <a name="attributes-master-data-services"></a>属性 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   属性とは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] エンティティに含まれるオブジェクトです。 属性値はエンティティのメンバーを表します。 属性を使用してリーフ メンバー、統合メンバー、またはコレクションを表すことができます。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "84796597"
  エンティティを作成すると、Name 属性と Code 属性が自動的に作成されます。 Code 属性には値が必要であり、Code 属性はエンティティ内で一意であることが必要です。 Name 属性と Code 属性を削除することはできません。  
   
 ## <a name="attribute-types"></a>属性の種類  
- 属性には、次の 3 種類があります。  
+ 次の 3 種類の属性があります。  
   
 -   自由形式属性。テキスト、数値、日付、またはリンクを自由形式で入力できます。  
   

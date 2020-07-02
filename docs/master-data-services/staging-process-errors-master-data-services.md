@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 10c5dfcc5dcebefe617e065ab525012533f8c967
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 0a038abb5ac1152a09face7a4838f18a69b65400
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812340"
 ---
 # <a name="staging-process-errors-master-data-services"></a>ステージング処理のエラー (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   ステージング処理が完了すると、ステージング テーブル内のすべての処理済みレコードの [ErrorCode] 列に値が格納されます。 これらの値を次の表に示します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "84796489"
 |210047|Unused の兄弟をメンバーにすることはできません。|このエラーは、 **RelationshipType**  =  **2** (兄弟) と**parentcode**または**childcode**のどちらかが使用されてい**ない**場合に発生します。 未使用ノードの子しかメンバーになれません。|リレーションシップ|  
 |210048|**ParentCode** と **ChildCode** を同じにすることはできません。|**ParentCode** の値は **ChildCode** の値と同じです。 これらの値は別にする必要があります。|リレーションシップ|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ステージング &#40;マスターデータサービス中に発生したエラーを表示&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [概要: テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

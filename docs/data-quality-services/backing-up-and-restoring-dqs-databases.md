@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ce0686211440291711815fa3b1d76641a374da8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812607"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS データベースのバックアップと復元
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   このトピックでは、DQS データベースのバックアップと復元を行う方法について説明します。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "75258852"
   
 10. オブジェクト エクスプローラーでサーバーを右クリックし、 **[新しいクエリ]** をクリックします。  
   
-11. クエリエディターウィンドウで、次の SQL ステートメントをコピーし、 * \<パスワード>* を、DQS のインストール時にデータベースマスターキーのインストール時に指定したパスワードに置き換えます。  
+11. クエリエディターウィンドウで、次の SQL ステートメントをコピーし、を *\<PASSWORD>* DQS のインストール時にデータベースマスターキーに対して指定したパスワードに置き換えます。  
   
     ```  
     USE [DQS_MAIN]  
@@ -74,7 +74,7 @@ ms.locfileid: "75258852"
   
 12. F5 キーを押してステートメントを実行します。 **[結果]** ペインを確認してステートメントが正常に実行されたことを確認します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
   
   

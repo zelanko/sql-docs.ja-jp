@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2e125f1dc6b4cb9f30a69c7410c5c404b38d42ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4183f8be34e7322af72a76297631df2b4060421c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811507"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>フォルダーとファイルの権限 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のインストール時に、ファイル システムで指定のインストール パスにフォルダーとファイルが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共有機能用にインストールされます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共有機能に既定のインストール パスを使用する場合、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のインストール パスは *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services です。 共有機能のインストール パスは変更できますが、親フォルダーから継承される権限と [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]に対して明示的に設定されている権限に注意する必要があります。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "73728200"
 |---------------------------|-----------------|  
 |CREATOR OWNER|特別な権限|  
 |SYSTEM|特別な権限|  
-|管理者|特別な権限|  
+|Administrators|特別な権限|  
 |ユーザー|読み取りと実行、フォルダー内容の一覧表示、読み取り|  
 |TrustedInstaller|フォルダー内容の一覧表示、特別な権限|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73728200"
 |グループ名またはアカウント名|アクセス許可|  
 |---------------------------|-----------------|  
 |SYSTEM|変更、読み取りと実行、フォルダー内容の一覧表示、読み取り、書き込み|  
-|管理者|変更、読み取りと実行、フォルダー内容の一覧表示、読み取り、書き込み|  
+|Administrators|変更、読み取りと実行、フォルダー内容の一覧表示、読み取り、書き込み|  
 |MDS_ServiceAccounts|変更、読み取りと実行、フォルダー内容の一覧表示、読み取り、書き込み|  
   
 ###### <a name="webconfig-permissions"></a>Web.config 権限  
@@ -59,12 +59,12 @@ ms.locfileid: "73728200"
 |グループ名またはアカウント名|アクセス許可|  
 |---------------------------|-----------------|  
 |SYSTEM|フル コントロール、変更、読み取りと実行、読み取り、書き込み|  
-|管理者|フル コントロール、変更、読み取りと実行、読み取り、書き込み|  
+|Administrators|フル コントロール、変更、読み取りと実行、読み取り、書き込み|  
 |MDS_ServiceAccounts|読み取りと実行、読み取り|  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config ファイルのコンテンツの詳細については、「[Web 設定リファレンス (マスター データ サービス)](../master-data-services/web-configuration-reference-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ サービスのインストール](../master-data-services/install-windows/install-master-data-services.md)  
   
   

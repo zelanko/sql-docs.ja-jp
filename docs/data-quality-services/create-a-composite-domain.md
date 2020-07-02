@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 89c71bd3864fcaa682d3587a54fc2b32c26e5659
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1ae1d6732b3661ca70511f0de8b3be0730ed63b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289870"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812582"
 ---
 # <a name="create-a-composite-domain"></a>複合ドメインの作成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースの複合ドメインを作成する方法について説明します。 複合ドメインは、1 つのデータ フィールドに適用される 1 つ以上の単一ドメインで構成されます。 複合ドメインについて詳しくは、「[複合ドメインの管理](../data-quality-services/managing-a-composite-domain.md)」をご覧ください。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "79289870"
   
 2.  **[ドメイン リスト]** で、複合ドメインの一部となるドメインを選択し、右矢印をクリックして **"複合ドメイン内のドメイン"** テーブルに移動します。 これは、作成する複合ドメインに追加できる単一ドメインの一覧です。 既存の複合ドメインに追加されていない既に作成済みの単一ドメインのみを使用できます。 単一ドメインをナレッジ ベースの複数の複合ドメインに追加したり、複合ドメインを別の複合ドメインに追加したりすることはできません。  
   
-3.  [**詳細設定**] をクリックします。  
+3.  **[詳細設定]** をクリックします。  
   
 4.  **[解析方法]** で、次のいずれかを選択します。  
   

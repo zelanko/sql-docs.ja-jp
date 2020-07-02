@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3a50b48b4c498020b3428af2eca2c9d045187682
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de3733023aef2975b2276e2a804e0eec503a0930
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251784"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811341"
 ---
 # <a name="create-a-matching-policy"></a>照合ポリシーの作成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースの照合ポリシーを作成する方法について説明します。 サンプル データに対して照合ポリシー アクティビティを実行して、DQS の照合プロセスの準備を行います。 このアクティビティでは、まず、ポリシーの照合ルールを 1 つ以上作成してテストします。次に、ナレッジ ベースを発行して、それらの照合ルールを使用できるように公開します。 ナレッジ ベースで作成できる照合ポリシーは 1 つだけですが、そのポリシーに複数の照合ルールを含めることができます。  
   

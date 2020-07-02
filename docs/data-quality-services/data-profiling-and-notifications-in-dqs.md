@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1e5c51996ba85b9645650f453a0e4ed18478ccf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab254c9deaee5a9e31a89d2a44d281e83a2beead
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80607822"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812564"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS のデータ プロファイルと通知
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のデータ プロファイルは、既存のデータ ソースのデータを分析し、DQS のアクティビティでデータに関する統計情報を表示するプロセスです。 このプロセスでは、データ品質が自動的に測定されます。 DQS のプロファイルは、DQS のナレッジ マネージメントおよびデータ品質プロジェクトに統合されており、 動的で調整が可能です。 プロファイルの主な目的は、一連のデータ品質プロセスを通じて意思決定を支援すること、およびプロセスの有効性を評価することの 2 つです。 DQS のプロファイル プロセスには次の利点があります。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "80607822"
 ##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a>アクティビティ監視のプロファイルデータ  
  ナレッジ検出、照合ポリシー、照合、およびクレンジングアクティビティのプロファイル情報は、Data Quality client のアクティビティページだけでなく、アクティビティ監視でも使用できます。 アクティビティ監視には、現在と過去のアクティビティの概要が表示されます。 アクティビティのプロパティおよび関連する計算プロセスに加え、各アクティビティに対して生成されるプロファイル情報を 1 か所で確認することができます。 アクティビティのテーブルでアクティビティを選択すると、下のテーブルにプロファイル結果が表示されます。 プロファイル結果はエクスポートすることもできます。 詳細については、「 [DQS Administration](../data-quality-services/dqs-administration.md)」をご参照ください。  
   
-##  <a name="notifications"></a><a name="Notifications"></a>警告  
+##  <a name="notifications"></a><a name="Notifications"></a> 記事  
  DQS では、プロファイルによって重要な統計情報や基準を収集して表示することに加え、表示されるプロファイル統計情報に基づいて推奨される操作がある場合に、そのことを示す通知が生成されます (有効にしている場合)。 DQS は、通知を使用して、データソースに関する重要な事実を強調し、現在のアクティビティが実行された目的と比較してその効果を示します。 通知で提供されるヒントや推奨事項には、現在の状況を示す情報と、ナレッジ検出、データ クレンジング、またはデータ照合のアクティビティを改善するための推奨される方法が示されます。  
   
  DQS の通知は、ユーザーに関連すると思われる問題を提起したり、潜在的な問題に対処したりすることを目的としたものです。 通知を操作するかどうかは、目的に応じて決定されます。 たとえば、データ クレンジングで修正された値や提案された値がなく、完全性と正確性がどちらも 100% である場合に DQS で通知が生成されたとします。 この通知はアクティビティを実行する必要がないことを示していると考えられますが、 アクティビティを実行するかどうかはユーザーが選択できます。  
@@ -98,7 +98,7 @@ ms.locfileid: "80607822"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|タスクの説明|[アーティクル]|  
+|タスクの説明|記事|  
 |----------------------|-----------|  
 |DQS で通知を有効または無効にする方法について説明します。|[DQS のプロファイル通知の有効化または無効化](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   

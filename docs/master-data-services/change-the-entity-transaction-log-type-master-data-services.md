@@ -10,24 +10,24 @@ ms.topic: conceptual
 ms.assetid: 75250b32-3384-43c2-9b5c-1607cc3aa7b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fde8e314462846088c7c673524d6e6d8d29ee631
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af42a3c638155ab07b77a2c21fff95ba87cc265b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729664"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811850"
 ---
 # <a name="change-the-entity-transaction-log-type-master-data-services"></a>エンティティのトランザクション ログの種類の変更 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   エンティティのトランザクション ログの種類を、"属性"、"メンバー"、または "なし" に変更できます。  
   
 |[トランザクション ログの種類]|説明|  
 |--------------------------|-----------------|  
-|属性|エンティティの変更ログは、属性レベルで保存されます。<br /><br /> トランザクションログは、の場合[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]と同様に保存されます。|  
+|属性|エンティティの変更ログは、属性レベルで保存されます。<br /><br /> トランザクションログは、の場合と同様に保存され [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ます。|  
 |メンバー|エンティティの変更ログは、行レベルで保存されます。<br /><br /> すべての属性の変更に対し、新しい行の更新がトリガーされます。<br /><br /> トランザクション ログの種類として "行" を使用している場合、エンティティは、緩やかに変化するディメンション タイプ 4 として保存されます。 タイプ 2 のサブスクリプション ビューとタイプ 4 の (履歴) サブスクリプション ビューがサポートされます。 詳細については、「[サブスクリプション ビュー形式 (マスター データ サービス)](../master-data-services/subscription-view-formats-master-data-services.md)」を参照してください。<br /><br /> より優れたパフォーマンスが得られます。|  
-|None|変更ログは保存されません。<br /><br /> 最適なパフォーマンスが得られます。|  
+|なし|変更ログは保存されません。<br /><br /> 最適なパフォーマンスが得られます。|  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  

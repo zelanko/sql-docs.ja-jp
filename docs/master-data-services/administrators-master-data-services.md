@@ -1,5 +1,5 @@
 ---
-title: 管理者
+title: Administrators
 description: マスターデータサービスの管理者の種類 (モデル管理者、エンティティ管理者、およびスーパーユーザー) について説明します。
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c1a4393881b05c21a690c06bfa39fd2114da0b18
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: a8f4fd055394df55b96b8694621d430bbac6c320
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796599"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812835"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   この記事では、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の管理者の種類 (モデル管理者、エンティティ管理者、およびスーパー ユーザー) について説明します。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "84796599"
 ## <a name="external-resources"></a>外部リソース  
  msdn.com のブログ投稿「 [Security Improvements (セキュリティの向上)](https://go.microsoft.com/fwlink/p/?LinkId=615376)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデル管理者 &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [マスターデータサービスデータベースを作成する](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [通知 (マスター データ サービス)](../master-data-services/notifications-master-data-services.md)  
