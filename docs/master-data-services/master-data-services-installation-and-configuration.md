@@ -2,7 +2,7 @@
 title: インストールと構成
 description: Windows Server 2012 R2 コンピューターにマスターデータサービスをインストールする方法、MDS データベースと web サイトを構成する方法、およびサンプルモデルとデータを配置する方法について説明します。
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -11,16 +11,16 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f9a0a43bb913437e4818c46fc81c0794019639c7
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 777d0b497bae5e52c49fb95e1e7ff3e7387ea676
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796283"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834773"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>マスター データ サービスのイントールと構成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   この記事では、Windows Server 2012 R2 コンピューターへの [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] のインストール方法、MDS データベースと Web サイトの設定方法、およびサンプル モデルとデータの配置方法について説明します。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) では、組織が信頼されたバージョンのデータを管理できるようにします。   
   
@@ -204,12 +204,12 @@ ms.locfileid: "84796283"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. **[Apply]** をクリックします。 **[構成の完了]** メッセージ ボックスが表示されます。 メッセージ ボックスで **[OK]** をクリックして、Web アプリケーションを起動します。 Web サイトのアドレスは、https://*server name* / *web application*/です。 
+15. **[適用]** をクリックします。 **[構成の完了]** メッセージ ボックスが表示されます。 メッセージ ボックスで **[OK]** をクリックして、Web アプリケーションを起動します。 Web サイトのアドレスは、https://*server name* / *web application*/です。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
   
-     For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+[Web の構成] ページの設定に関する詳細については、「[[Web の構成] ページ (マスター データ サービス構成マネージャー)](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)」を参照してください。  
   
  また、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] を使って、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに関連付けられている Web アプリケーションとサービスのその他の設定値も指定できます。 たとえば、データの読み込み頻度や検証メールの送信頻度を指定できます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  
   
@@ -217,9 +217,7 @@ ms.locfileid: "84796283"
  次の 3 つのサンプル モデル パッケージは、  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]に付属しています。   これらのサンプル モデルには、データが含まれます。 **サンプル モデル パッケージの既定の場所は、%programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages です。**
   
 -   chartofaccounts_en.pkg  
-  
 -   customer_en.pkg  
-  
 -   product_en.pkg  
   
  このパッケージは、MDSModelDeploy ツールを使用して配置します。 MDSModelDeploy ツールの既定の場所は、 *drive*\Program Files\Microsoft SQL Server\ 140\Master Data Services\Configuration にあります。  
@@ -248,28 +246,26 @@ ms.locfileid: "84796283"
     >  `MDSModelDeploy listservices`  
     >   
     >  戻り値のリスト内の最初のサービス値は、モデルを配置するために指定する値です。  
-    >
+
     > [!NOTE]
     > サンプル モデルのメタデータ情報に関する詳細については、"c:\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration" の場所にある使用可能な readme ファイルを参照してください。
-    >
    
      **chartofaccounts_en.pkg サンプル モデルを配置するには**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package chartofaccounts_en.pkg -model ChartofAccounts -service MDS1  
     ```  
   
      **customer_en.pkg サンプル モデルを配置するには**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package customer_en.pkg -model Customer -service MDS1  
     ```  
   
      **product_en.pkg サンプル モデルを配置するには**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package product_en.pkg -model Product -service MDS1  
-  
     ```  
   
      モデルが正常に配置されると、" **MDSModelDeploy 操作は完了しました** " というメッセージが表示されます。  
@@ -293,7 +289,7 @@ ms.locfileid: "84796283"
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のデータの構造を構築するモデルとエンティティを使用する方法の概要については、「[マスター データ サービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)」を参照してください。  
     
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスターデータサービスデータベース](../master-data-services/master-data-services-database.md)   
  [マスターデータマネージャー Web アプリケーション](../master-data-services/master-data-manager-web-application.md)   
  [[データベースの構成] ページ &#40;マスターデータサービス構成マネージャー&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   

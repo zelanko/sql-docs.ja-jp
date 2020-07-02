@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f4c0431afb7d1c2de0fc5e4fae5e7c7c25639002
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98c6ef2767f7ac64567f3e0a3d31381935577c59
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813876"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>DQS ログ ファイルの詳細設定の構成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ログ ファイルと [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ログ ファイルの詳細設定を構成する方法 (ログ ファイルのローリング ファイル サイズの制限の設定、イベントのタイム スタンプ パターンの設定など) について説明します。  
   
@@ -115,7 +115,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 >  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] のログ設定の構成が動的に生成されて、DQS_MAIN.Log ファイルに保存されます。SQL Server の既定のインスタンスをインストールした場合、このファイルは通常 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log に保存されています。 ただし、このファイルで直接変更した内容は保持されず、DQS_MAIN データベースの A_CONFIGURATION テーブルの構成設定で上書きされます。  
   
 ##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>Data Quality Client ログ設定の構成  
- ログ[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]設定の構成ファイル (DQLog. .sql) は、通常、C:\Program 130にあります。このファイルは、既定では C:\Program モジュールにあります。XML ファイルの内容は、前に[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]ログ構成設定で変更した xml ファイルに似ています。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のログ設定を構成するには、次の手順を実行します。  
+ [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]ログ設定の構成ファイルである DQLog.Client.xml は、通常、C:\Program 130にあります (& d)。XML ファイルの内容は、前にログ構成設定で変更した XML ファイルに似てい [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ます。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のログ設定を構成するには、次の手順を実行します。  
   
 1.  管理者として、任意の XML 編集ツールやメモ帳を実行します。  
   
@@ -123,7 +123,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  必要な変更を行い、ファイルを保存して、新しいログの変更を適用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DQS ログ ファイルの重大度レベルの構成](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
   
   

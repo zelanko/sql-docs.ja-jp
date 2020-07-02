@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b1941b6be24b926b870ad284b0aa8ce7242fba4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b9b7d6368d8ecf920784dbb1dbcdd9b043c00c2
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729682"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813639"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>ユーザーの電子メール アドレスを変更する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、通知の送信先の電子メール アドレスおよび通知電子メールの既定の形式を変更できます。  
   
@@ -42,13 +42,13 @@ ms.locfileid: "73729682"
   
 5.  電子メール アドレスまたは電子メールの形式を更新します。  
   
-6.  **[Save]** (保存) をクリックします。  
+6.  **[保存]** をクリックします。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
   
 -   [機能領域の権限を割り当てる (マスター データ サービス)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  
   
   

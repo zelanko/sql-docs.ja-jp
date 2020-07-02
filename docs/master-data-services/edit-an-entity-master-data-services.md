@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 484fdb93ac51f353de97333d115aed4591715e9a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729301"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813335"
 ---
 # <a name="edit-an-entity-master-data-services"></a>エンティティを編集する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、エンティティを編集することができます。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73729301"
   
      詳細については、「[データ圧縮](../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
-## <a name="status"></a>状態  
+## <a name="status"></a>Status  
  グリッドの状態列には、エンティティに対する操作の状態が示されます。 **[エンティティの保存]** をクリックすると、エンティティが更新中であることを示す次の画像が表示されます。  
   
  ![状態を更新するためのアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン")  
@@ -71,7 +71,7 @@ ms.locfileid: "73729301"
   
  ![OK 状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [明示的階層 &#40;マスターデータサービス&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [エンティティ &#40;マスターデータサービスの削除&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
  [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)  

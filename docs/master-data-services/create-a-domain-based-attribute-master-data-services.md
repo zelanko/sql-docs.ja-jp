@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7bc13897797e8f782a1dbe83401fa658107eb5b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7446ea090bb0776b2a55e7be10e9c35bc566c8b1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177392"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813125"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>ドメイン ベースの属性を作成する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でドメイン ベースの属性を作成して、属性の値にエンティティのメンバーを設定します。
 
@@ -41,9 +41,9 @@ ms.locfileid: "78177392"
 ## <a name="attribute-information"></a>属性情報
  作成された属性ごとに、7 列の行がグリッドに追加されます。 次の表で各列について説明します。
 
-|列|説明|
+|Column|説明|
 |------------|-----------------|
-|状態|属性の状態。<br /><br /> [保存] をクリックすると、属性が更新中であることを示す![更新状態の画像のアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン")が表示されます。<br /><br /> 属性の作成時または編集時にエラーが発生した場合は、![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] 状態の画像のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")が表示されます。|
+|Status|属性の状態。<br /><br /> [保存] をクリックすると、属性が更新中であることを示す![更新状態の画像のアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン")が表示されます。<br /><br /> 属性の作成時または編集時にエラーが発生した場合は、![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] 状態の画像のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")が表示されます。|
 |名前|属性名です。|
 |表示名|属性の表示名。|
 |説明|属性の説明。|
@@ -97,9 +97,9 @@ ms.locfileid: "78177392"
 
 12. **省略可。** **[変更の追跡を有効化]** を選択して、属性のグループに対する変更を追跡します。 詳細については、「[変更の追跡グループに属性を追加する方法 (マスター データ サービス)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)」を参照してください。
 
-13. **[Save]** (保存) をクリックします。
+13. **[保存]** をクリックします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [ドメインベースの属性 &#40;マスターデータサービス](../master-data-services/domain-based-attributes-master-data-services.md)[派生 &#40;階層を作成](../master-data-services/create-a-derived-hierarchy-master-data-services.md)&#41;マスターデータサービス&#41;属性[名とデータ型を変更](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)&#40;マスターデータサービス&#41;[属性 &#40;削除](../master-data-services/delete-an-attribute-master-data-services.md)マスターデータサービス&#41;
 
 

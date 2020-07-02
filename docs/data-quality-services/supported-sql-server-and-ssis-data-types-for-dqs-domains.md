@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc77f107fe0b3e57e1e8f48fb0e413d9ea22f31f
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75558171"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813776"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>DQS ドメインでサポートされている SQL Server と SSIS のデータ型
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   SQL Server と SQL Server Integration Services (SSIS) にはさまざまなデータ型が存在しますが、DQS ドメインのデータ型は Date、Decimal、Integer、String の 4 つだけです。 SQL Server と SSIS のデータ型には、DQS でサポートされないものも存在します。 ソース データを DQS ドメインにマッピングし、データ品質アクティビティを実行できるのは、ソースのデータ型が DQS でサポートされていて、なおかつ DQS ドメインのデータ型と一致する場合だけです。 このトピックでは、SQL Server と SSIS のデータ型のうち、DQS ドメインの 4 つのデータ型にそれぞれマッピングできる、サポートされるデータ型について取り上げます。  
   
@@ -32,9 +32,9 @@ ms.locfileid: "75558171"
   
 |DQS ドメインのデータ型|サポートされる SQL Server のデータ型|  
 |--------------------------|------------------------------------|  
-|日付|date|  
-|Decimal|decimal<br /><br /> float<br /><br /> money<br /><br /> numeric<br /><br /> real<br /><br /> smallmoney|  
-|Integer|bigint<br /><br /> INT<br /><br /> smallint<br /><br /> tinyint|  
+|Date|日付|  
+|Decimal (10 進数型)|decimal<br /><br /> float<br /><br /> money<br /><br /> 数値<br /><br /> real<br /><br /> smallmoney|  
+|整数型|bigint<br /><br /> INT<br /><br /> smallint<br /><br /> tinyint|  
 |String|char<br /><br /> nchar<br /><br /> nvarchar<br /><br /> varchar|  
   
  その他の SQL Server データ型は、DQS ではサポートされません。 SQL Server データ型については、「[データ型 &#40;Transact-SQL&#41;](../t-sql/data-types/data-types-transact-sql.md)」をご覧ください。  
@@ -44,14 +44,14 @@ ms.locfileid: "75558171"
   
 |DQS ドメインのデータ型|サポートされる SSIS のデータ型|  
 |--------------------------|------------------------------|  
-|日付|DT_DATE|  
-|Decimal|DT_DECIMAL<br /><br /> DT_NUMERIC<br /><br /> DT_R4<br /><br /> DT_R8|  
-|Integer|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
+|Date|DT_DATE|  
+|Decimal (10 進数型)|DT_DECIMAL<br /><br /> DT_NUMERIC<br /><br /> DT_R4<br /><br /> DT_R8|  
+|整数型|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
 |String|DT_STR<br /><br /> DT_WSTR|  
   
  その他の SSIS データ型は、DQS ではサポートされません。 SSIS のすべてのデータ型については、「 [Integration Services Data Types](../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドメインの管理](../data-quality-services/managing-a-domain.md)  
   
   

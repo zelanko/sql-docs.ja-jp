@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 89fa4dea57c4936a2d6a51e08f48668215ba53a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a0a2bd63e5b69cd9e0b206f18414b41c823441d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728211"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812994"
 ---
 # <a name="edit-model-master-data-services"></a>モデルを編集する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデルの名前と説明を変更し、トランザクション ログを保持する日数を指定できます。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "73728211"
   
 8.  **[モデルの保存]** をクリックします。  
   
- グリッドの **[状態]** 列には、モデルに対する操作の状態が示されます。 [**モデルの保存**] ボタンをクリックすると、![更新](../master-data-services/media/mds-model-status-updating.png "更新中")中のイメージが表示されます。これは、モデルが更新中であることを示します。 モデルの作成時または編集時にエラーが発生した場合は、![エラー](../master-data-services/media/mds-model-status-error.png "Error")イメージが表示されます。 それ以外の場合、状態は [OK] になり、 ![[Ok]](../master-data-services/media/mds-model-status-ok.png "[OK]")のイメージが表示されます。  
+ グリッドの **[状態]** 列には、モデルに対する操作の状態が示されます。 [**モデルの保存**] ボタンをクリックすると、![更新](../master-data-services/media/mds-model-status-updating.png "更新中")中のイメージが表示されます。これは、モデルが更新中であることを示します。 モデルの作成時または編集時にエラーが発生した場合は、![エラー](../master-data-services/media/mds-model-status-error.png "エラー")イメージが表示されます。 それ以外の場合、状態は [OK] になり、 ![[Ok]](../master-data-services/media/mds-model-status-ok.png "OK")のイメージが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデル &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-a-model-master-data-services.md)   
  [モデル &#40;マスターデータサービスの削除&#41;](../master-data-services/delete-a-model-master-data-services.md)   
  [モデル (マスター データ サービス)](../master-data-services/models-master-data-services.md)  

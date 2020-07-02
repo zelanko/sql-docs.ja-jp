@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1036d8b05bf3dfca825f88d562c89dbce7f6b538
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1dee8767cc5d8d975ef327073d5767967207eed2
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813044"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>エンティティの同期関係の作成と実行 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   エンティティ同期は、エンティティのバージョン間での反復可能な一方向の同期です。 異なるモデルの間でエンティティ データを共有する方法を提供します。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "73729523"
   
 10. **[Sync On Demand]**(オンデマンドで同期) を選択するか、 **[Auto Sync]** (自動同期) を選択して頻度を設定します。  
   
-11. **[Save]** (保存) をクリックします。  
+11. **[保存]** をクリックします。  
   
  **エンティティの同期関係を実行するには**  
   
@@ -95,9 +95,9 @@ ms.locfileid: "73729523"
 ## <a name="sync-relationship-information"></a>同期関係の情報  
  作成された同期関係ごとに、10 列の行がグリッドに追加されます。 次の表で各列について説明します。  
   
-|列|説明|  
+|Column|説明|  
 |------------|-----------------|  
-|状態|同期関係の状態。<br /><br /> [**保存**] をクリックするか、同期関係を実行すると、同期関係が更新中であることを示す![更新状態の画像のアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン")が表示されます。<br /><br /> 同期関係の作成、編集、または実行中にエラーが発生した場合は、![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] 状態の画像のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")が表示されます。|  
+|Status|同期関係の状態。<br /><br /> [**保存**] をクリックするか、同期関係を実行すると、同期関係が更新中であることを示す![更新状態の画像のアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン")が表示されます。<br /><br /> 同期関係の作成、編集、または実行中にエラーが発生した場合は、![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] 状態の画像のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")が表示されます。|  
 |ソース モデル|ソース モデルの名前。|  
 |ソース バージョン|ソース バージョンの名前。|  
 |ソース エンティティ|ソース エンティティの名前。|  
@@ -120,7 +120,7 @@ ms.locfileid: "73729523"
   
 -   **更新日時**: 同期が最後に更新された日時。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
  [エンティティの同期関係の編集と削除 (マスター データ サービス)](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   

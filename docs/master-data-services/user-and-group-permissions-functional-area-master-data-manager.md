@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e651a31bc37de8f90ecf18615c761100dbdfff2d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1e4c41bd4edd55fea00d20d89c7d1b944a868d8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727816"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813204"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>[ユーザー/グループの権限] 機能領域 (マスター データ マネージャー)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [ユーザー/グループの権限] 機能領域では、管理者は機能領域、属性 ([モデル] タブ)、およびメンバー ([階層メンバー] タブ) に権限を付与できます。 権限の重複を解決し、個々の属性値に対するユーザーの権限を決定します。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73727816"
   
  [マスター データ マネージャー セキュリティのトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ マネージャー Web アプリケーション](../master-data-services/master-data-manager-web-application.md)  
   
   

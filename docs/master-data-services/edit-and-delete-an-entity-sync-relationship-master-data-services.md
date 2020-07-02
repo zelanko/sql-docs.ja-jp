@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92b67b981c5eb7dbd1e05b1d18af291cae78aaa1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728236"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813994"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>エンティティの同期関係の編集と削除 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   エンティティ同期は、エンティティのバージョン間での反復可能な一方向の同期です。 異なるモデルの間でエンティティ データを共有する方法を提供します。 自分で作成した同期関係は編集および削除できます。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "73728236"
   
 5.  **[頻度]** を変更します。 **[Sync On Demand]**(オンデマンドで同期) を選択するか、 **[Auto Sync]** (自動同期) を選択して頻度を設定します。  
   
-6.  **[Save]** (保存) をクリックします。  
+6.  **[保存]** をクリックします。  
   
  **エンティティの同期関係を削除するには**  
   
@@ -84,7 +84,7 @@ ms.locfileid: "73728236"
   
 5.  確認ダイアログで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エンティティの同期関係を作成して実行する &#40;マスターデータサービス&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
  [エンティティの同期関係 (マスター データ サービス)](../master-data-services/entity-sync-relationship-master-data-services.md)  
   

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2dfc03bc292d7c39024116eca9cf49a5179a5b7c
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 39fdd6cebd0c27ec4a27a4543129a659bcdb22a3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796399"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813046"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>ビジネス ルールを作成しパブリッシュする (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、マスター データの精度を保証するためにビジネス ルールを作成します。 ルールを作成した後、データに適用する前に、そのルールをパブリッシュする必要があります。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "84796399"
   
     -   [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [通知を送信するようにビジネスルールを構成する &#40;マスターデータサービス&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [ビジネスルールの名前を変更する &#40;マスターデータサービス&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [ビジネス ルールに複数の条件を追加する &#40;マスター データ サービス&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  

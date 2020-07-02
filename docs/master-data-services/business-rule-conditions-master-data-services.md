@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ab2b632307f966a0f8e37d290c3cc12d52cda064
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4849b2f16c691db08766ca451673d0960ee69222
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728722"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813713"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>ビジネス ルール条件 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、1 つまたは複数のアクションの実行にあたって true になることが必須の条件が、ビジネス ルールの条件によって判定されます。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "73728722"
 > [!NOTE]  
 >  ビジネス ルールに 2 つの値を比較する条件が含まれていて、そのルールが両方の値とも NULL であるメンバーに適用されている場合、そのメンバーは検証に失敗します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネスルールアクション &#40;マスターデータサービス&#41;](../master-data-services/business-rule-actions-master-data-services.md)   
  [ビジネスルール &#40;マスターデータサービス&#41;](../master-data-services/business-rules-master-data-services.md)   
  [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

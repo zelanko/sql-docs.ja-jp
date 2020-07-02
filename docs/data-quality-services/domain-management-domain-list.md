@@ -11,23 +11,23 @@ f1_keywords:
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74486901a641b42f5f3c2c324b97307ef17c0182
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251652"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813852"
 ---
 # <a name="domain-management-domain-list"></a>ドメイン管理:ドメイン リスト
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   このトピックでは、 **(DQS) の** [ドメイン管理] [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ページの [ドメイン] リスト内のコントロールについて説明します。 このペインを使用して管理操作を実行するドメインを選択します。 これと同じペインが、 **[ドメイン管理]** ページのすべてのタブ ページで使用されています。  
   
 ## <a name="options"></a>オプション  
   
 ### <a name="domains-list"></a>[ドメイン] リスト  
- **[ドメイン]**  
+ **ドメイン**  
  この一覧にはナレッジ ベースのすべてのドメインが表示されます。 右側のペインのタブ ページで実行する操作は、この一覧で選択されているドメインに対して実行されます。 詳細については、「  
   
  **複合ドメインの作成**  

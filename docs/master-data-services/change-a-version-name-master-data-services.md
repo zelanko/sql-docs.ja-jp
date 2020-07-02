@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d74ce56cb1289e218d65370cd6de8fef653e462a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d58e5aaa11a69b6b4c733a238bf6d0e0b15ddef
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729696"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813616"
 ---
 # <a name="change-a-version-name-master-data-services"></a>バージョン名を変更する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で組織に合わせてバージョン名を変更してカスタマイズします。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73729696"
   
 4.  Enter キーを押します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネスルールに対してバージョンを検証する &#40;マスターデータサービス&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [マスターデータサービス &#40;のバージョンをロックする&#41;](../master-data-services/lock-a-version-master-data-services.md)   
  [マスターデータサービス &#40;のバージョンをコミット&#41;](../master-data-services/commit-a-version-master-data-services.md)   

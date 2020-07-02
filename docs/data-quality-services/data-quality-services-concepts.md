@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a9f1ab0eaca67eb1e5266f11381f316607031635
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24227f2afa1f48afe18e5334bfa176d22e59c6a7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251719"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813853"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services の概念
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のナレッジ マネージメント、データ品質プロジェクト、およびデータ品質管理の概念を簡単に説明します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "75251719"
 ##  <a name="data-quality-project-concepts"></a><a name="Projects"></a> データ品質プロジェクトの概念  
  データ スチュワードは、データ品質に関する操作 (クレンジングおよび照合) を [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションでデータ品質プロジェクトを使用して実行します。  
   
- **Data Cleansing**  
+ **データクレンジング**  
   
  DQS でのデータ クレンジングは、DQS ナレッジ ベースのナレッジに基づいて行われます。 DQS のデータ クレンジングは、2 段階のプロセスから成ります。  
   
@@ -69,11 +69,11 @@ ms.locfileid: "75251719"
 ##  <a name="data-quality-administration-concepts"></a><a name="Admin"></a> データ品質管理の概念  
  DQS 管理者は、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを使用して、さまざまな管理タスクを実行できます。  
   
- **[アクティビティ監視]**  
+ **アクティビティの監視**  
   
  アクティビティ監視では、データ範囲内で実行された各アクティビティの状態が表示され、DQS 管理者は各アクティビティのデータを確認しながらアクティビティを制御することができます。 詳細については、「 [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md)」をご覧ください。  
   
- **構成**  
+ **Configuration**  
   
  構成オプションでは、次の操作を実行できます。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "75251719"
   
  DQS 管理の詳細については、「 [DQS Administration](../data-quality-services/dqs-administration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   
