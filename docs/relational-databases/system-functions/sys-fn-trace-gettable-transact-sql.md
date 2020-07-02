@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18a6225bca9539f10c4dfea61e99d147cb188d4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e870c1411382fc38494a899fa3621c80342c1a8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059221"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730083"
 ---
 # <a name="sysfn_trace_gettable-transact-sql"></a>fn_trace_gettable (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   1つ以上のトレースファイルの内容を表形式で返します。  
   
@@ -62,7 +62,7 @@ fn_trace_gettable ( 'filename' , number_files )
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-fn_trace_gettable-to-import-rows-from-a-trace-file"></a>A. Fn_trace_gettable を使用したトレースファイルからの行のインポート  
- 次の例で`fn_trace_gettable`は、 `FROM` `SELECT...INTO`ステートメントの句内でを呼び出します。  
+ 次の例では、 `fn_trace_gettable` ステートメントの句内でを呼び出し `FROM` `SELECT...INTO` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -72,8 +72,8 @@ FROM fn_trace_gettable('c:\temp\mytrace.trc', default);
 GO  
 ```  
   
-### <a name="b-using-fn_trace_gettable-to-return-a-table-with-an-identity-column-that-can-be-loaded-into-a-sql-server-table"></a>B. fn_trace_gettable を使用して、SQL Server テーブルに読み込むことができる IDENTITY 列を含むテーブルを返す  
- 次の例では、 `SELECT...INTO`ステートメントの一部として関数を呼び出し、テーブル`IDENTITY` `temp_trc`に読み込むことのできる列を含むテーブルを返します。  
+### <a name="b-using-fn_trace_gettable-to-return-a-table-with-an-identity-column-that-can-be-loaded-into-a-sql-server-table"></a>B: fn_trace_gettable を使用して、SQL Server テーブルに読み込むことができる IDENTITY 列を含むテーブルを返す  
+ 次の例では、ステートメントの一部として関数を呼び出し `SELECT...INTO` 、 `IDENTITY` テーブルに読み込むことのできる列を含むテーブルを返し `temp_trc` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -83,7 +83,7 @@ FROM fn_trace_gettable('c:\temp\mytrace.trc', default);
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   

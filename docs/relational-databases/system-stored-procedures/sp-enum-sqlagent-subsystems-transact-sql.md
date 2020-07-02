@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 356357df8d2c8a3202a5ff088ba2c277aa9fd73c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3e3cb3c3a3d5b623bdac08f2cf97d203db632ebd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831126"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731701"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   エージェントサブシステムの一覧を表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
@@ -39,7 +39,7 @@ sp_enum_sqlagent_subsystems
 ```  
   
 ## <a name="arguments"></a>引数  
- None  
+ なし  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -49,7 +49,7 @@ sp_enum_sqlagent_subsystems
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**サブ**|**nvarchar(40)**|サブシステムの名前。|  
-|**記述**|**nvarchar(512)**|サブシステムの説明。|  
+|**description**|**nvarchar(512)**|サブシステムの説明。|  
 |**subsystem_dll**|**nvarchar (510)**|サブシステムを格納している DLL モジュール|  
 |**agent_exe**|**nvarchar (510)**|サブシステムによって使用される実行可能モジュール。|  
 |**start_entry_point**|**nvarchar(30)**|ジョブステップの実行中に SQL Server エージェント呼び出しを行う手順。|  
@@ -58,7 +58,7 @@ sp_enum_sqlagent_subsystems
 |**max_worker_threads**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このサブシステムに対してエージェントが開始するスレッドの最大数。|  
 |**subsystem_id**|**int**|サブシステムの識別子|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この手順では、インスタンスで使用可能なサブシステムの一覧を示します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -66,7 +66,7 @@ sp_enum_sqlagent_subsystems
   
  **Sqlagentoperatorrole**の詳細については、「 [SQL Server エージェント固定データベースロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server エージェントセキュリティを実装する](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
   

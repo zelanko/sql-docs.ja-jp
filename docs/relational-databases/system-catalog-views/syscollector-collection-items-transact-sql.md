@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8f55a496a5d5fc4a0a0c499056eff5e00bd1ea8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c24af2de8be7656ece793c17c051ff59ae5c8fa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730150"
 ---
 # <a name="syscollector_collection_items-transact-sql"></a>syscollector_collection_items (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   コレクション セット内のアイテムに関する情報を返します。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82833825"
 ## <a name="permissions"></a>アクセス許可  
  **Dc_operator**、 **dc_proxy**を選択する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [データコレクタービュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [データコレクション](../../relational-databases/data-collection/data-collection.md)  

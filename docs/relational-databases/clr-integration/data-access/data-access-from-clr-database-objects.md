@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fdd552b0954f0eda838743530ab94e73aa27067
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 749be1b26a7802119346434b016b376ea94910cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81485231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727597"
 ---
 # <a name="data-access-from-clr-database-objects"></a>CLR データベース オブジェクトからのデータ アクセス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  共通言語ランタイム (CLR) ルーチンは、リモートインスタンスに格納されている[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データだけでなく、実行されるのインスタンスに格納されているデータにも簡単にアクセスできます。 ルーチンからどのデータにアクセスできるかは、コードが実行されているユーザー コンテキストによって決まります。 の .NET Framework Data Provider ( **SqlClient**とも呼ばれます) を使用し[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]て、CLR データベースオブジェクト内からデータにアクセスします。 これは、開発者がマネージド クライアント アプリケーションや中間層アプリケーションから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データにアクセスする際に使用するプロバイダーと同じです。 このため、クライアントおよび中間層アプリケーションでは、ADO.NET と**SqlClient**に関する知識を活用できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  共通言語ランタイム (CLR) ルーチンは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リモートインスタンスに格納されているデータだけでなく、実行されるのインスタンスに格納されているデータにも簡単にアクセスできます。 ルーチンからどのデータにアクセスできるかは、コードが実行されているユーザー コンテキストによって決まります。 の .NET Framework Data Provider [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ( **SqlClient**とも呼ばれます) を使用して、CLR データベースオブジェクト内からデータにアクセスします。 これは、開発者がマネージド クライアント アプリケーションや中間層アプリケーションから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データにアクセスする際に使用するプロバイダーと同じです。 このため、クライアントおよび中間層アプリケーションでは、ADO.NET と**SqlClient**に関する知識を活用できます。  
   
 > [!NOTE]  
 >  ユーザー定義型メソッドとユーザー定義関数では、既定ではデータ アクセスの実行が許可されていません。 ユーザー定義型 (UDT) メソッドまたはユーザー定義関数からの読み取り専用データアクセスを有効にするには、 **SqlMethodAttribute**または**sqlfunctionattribute** **のデータアクセスプロパティを** **dataaccesskind**に設定する必要があります。 UDT またはユーザー定義関数によるデータ変更操作は許可されません。この操作を実行しようとすると、実行時に例外がスローされます。  

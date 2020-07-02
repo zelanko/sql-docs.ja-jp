@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2aeaeb5d4eb06d6d632a59300225d01cc4376369
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 593318f929f3e0cb7862aab957e8864a35a618e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488058"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727692"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>ホスト保護属性と CLR 統合プログラミング
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   CLR (共通言語ランタイム) には、.NET Framework の一部であるマネージド API (アプリケーション プログラミング インターフェイス) に、特定の属性で注釈を付けるメカニズムが用意されています。このような属性は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降) など CLR のホストのための属性です。 このような HPA (ホスト保護属性) の例としては、次のものがあります。  
   
 -   **Sharedstate**。共有状態を作成または管理する機能が API で公開されているかどうかを示します (静的クラスフィールドなど)。  
@@ -34,7 +34,7 @@ ms.locfileid: "81488058"
   
 -   **Externalprocessmgmt**。 API がホストプロセスを制御する方法を公開するかどうかを示します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、これらの属性が与えられると、CAS (コード アクセス セキュリティ) を使用して、ホストされた環境で許可されない HPA の一覧を指定します。 CA の要件は、 **SAFE**、 **EXTERNAL_ACCESS**、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **UNSAFE**の3つのアクセス許可セットのいずれかによって指定されます。 これら3つのセキュリティレベルのうちの1つは、アセンブリを**CREATE assembly**ステートメントを使用してサーバーに登録するときに指定します。 **SAFE**または**EXTERNAL_ACCESS**のアクセス許可セット内で実行されるコードで**は、特定**の型やメンバーが適用されないようにする必要があります。 詳細については、「[アセンブリの作成](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)」および「 [CLR 統合プログラミングモデルの制限](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、これらの属性が与えられると、CAS (コード アクセス セキュリティ) を使用して、ホストされた環境で許可されない HPA の一覧を指定します。 CA の要件は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SAFE**、 **EXTERNAL_ACCESS**、 **UNSAFE**の3つのアクセス許可セットのいずれかによって指定されます。 これら3つのセキュリティレベルのうちの1つは、アセンブリを**CREATE assembly**ステートメントを使用してサーバーに登録するときに指定します。 **SAFE**または**EXTERNAL_ACCESS**のアクセス許可セット内で実行されるコードで**は、特定**の型やメンバーが適用されないようにする必要があります。 詳細については、「[アセンブリの作成](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)」および「 [CLR 統合プログラミングモデルの制限](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)」を参照してください。  
   
  **Hostprotectionattribute**は、信頼性を向上させるためのセキュリティ権限ではありません。これは、ホストが許可しない可能性のある特定のコード構造 (型またはメソッド) を識別するためです。 **Hostprotectionattribute**を使用すると、ホストの安定性を保護するのに役立つプログラミングモデルが適用されます。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "81488058"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Externalprocessmgmt**、 **externalスレッディング**、 **MayLeakOnAbort**、 **securityinfrastructure**、 **SelfAffectingProcessMgmnt**、 **SelfAffectingThreading**、 **sharedstate**、 **Synchronization**、または**UI**の値を持つ system.object を指定する**hostprotectionattribute**を持つ型またはメンバーを使用できないようにして**います。** これにより、状態の共有を可能にしたり、同期を実行するメンバーをアセンブリから呼び出すことができなくなります。さらに、終了時にリソース リークを発生させたり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性に影響を与える可能性があるメンバーの呼び出しも禁止されます。  
   
 ### <a name="disallowed-types-and-members"></a>禁止されている型とメンバー  
- 次のトピックでは、 **Hostprotectionresource**値がで許可され[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ていない型とメンバーについて説明します。  
+ 次のトピックでは、 **Hostprotectionresource**値がで許可されていない型とメンバーについて説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 > [!NOTE]  
 >  各トピックに含まれる一覧は、サポートされているアセンブリから作成されたものです。  詳細については、「[サポートされている .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)」を参照してください。  
@@ -71,7 +71,7 @@ ms.locfileid: "81488058"
  [System.Core.dll の許可されない型およびメンバー](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
  HPA の値が許可されない System.Core.dll の型およびメンバーの一覧を示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR 統合のコードアクセスセキュリティ](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [CLR 統合プログラミングモデルの制限事項](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
  [アセンブリの作成](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  

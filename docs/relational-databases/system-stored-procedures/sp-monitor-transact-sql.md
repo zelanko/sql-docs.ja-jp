@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55386d32348257db3f89feb81d6a6b0ff7292499
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7bb5e41265e3dd6b69ae1807837b2ac8bda9ba09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828319"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727168"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   に関する統計情報 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を表示します。  
   
@@ -47,7 +47,7 @@ sp_monitor
 |-----------------|-----------------|  
 |**last_run**|**Sp_monitor**前回の実行時刻。|  
 |**current_run**|**Sp_monitor**の実行時間。|  
-|**待ち時間**|**Sp_monitor**が実行されてから経過した秒数。|  
+|**seconds**|**Sp_monitor**が実行されてから経過した秒数。|  
 |**cpu_busy**|サーバーコンピューターの CPU が処理している秒数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**io_busy**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が入出力操作に費やした秒数|  
 |**退席**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がアイドル状態だった秒数|  
@@ -79,7 +79,7 @@ EXEC sp_monitor
   
 ||||  
 |-|-|-|  
-|**last_run**|**current_run**|**待ち時間**|  
+|**last_run**|**current_run**|**seconds**|  
 |1998 年 3 月 29 日午前 11:55|1998 年 4 月 4 日午後 2:22|561|  
   
 ||||  
@@ -97,7 +97,7 @@ EXEC sp_monitor
 |**total_read**|**total_write**|**total_errors**|**connections**|  
 |141 (0)|54920 (127)|0 (0)|4 (0)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_who &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

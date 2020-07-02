@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b19a9179cba2225a2209255ce48220669e4bbef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b20192a3804dfba713b04706d528738ceb8768c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486971"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727809"
 ---
 # <a name="creating-user-defined-types---requirements"></a>ユーザー定義型の作成 - 要件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  にインストールするユーザー定義型 (UDT) を作成する際には、いくつかの重要な[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設計上の決定を行う必要があります。 ほとんどの場合は、UDT を構造体として作成することをお勧めしますが、クラスとして作成することもできます。 UDT の定義は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録する UDT を作成するための仕様に準拠している必要があります。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  にインストールするユーザー定義型 (UDT) を作成する際には、いくつかの重要な設計上の決定を行う必要があり [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ほとんどの場合は、UDT を構造体として作成することをお勧めしますが、クラスとして作成することもできます。 UDT の定義は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録する UDT を作成するための仕様に準拠している必要があります。  
   
 ## <a name="requirements-for-implementing-udts"></a>UDT の実装要件  
  UDT を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行するには、UDT の定義に次の要件を実装する必要があります。  
   
  UDT は**SqlUserDefinedTypeAttribute**を指定する必要があります。 **SerializableAttribute**の使用は省略可能ですが、推奨されます。  
   
--   UDT は、public **static** ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic) **Null** **メソッドを作成**することによって、クラスまたは構造体に**INullable**インターフェイスを実装する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、既定で NULL 値に対応します。 この作業は、UDT で実行されるコードが NULL 値を認識するために必要です。  
+-   UDT は、public **static** (Visual Basic) Null メソッド**を作成**することによって、クラスまたは構造体に**INullable**インターフェイスを実装する必要があり [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 **Null** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、既定で NULL 値に対応します。 この作業は、UDT で実行されるコードが NULL 値を認識するために必要です。  
   
 -   UDT には、からの解析をサポートするパブリックな**static** (または**Shared**) **Parse**メソッドと、オブジェクトの文字列形式に変換するためのパブリック**ToString**メソッドが含まれている必要があります。  
   
 -   ユーザー定義のシリアル化形式を持つ UDT は、system.string **serialize**インターフェイスを実装し、 **Read**および**Write**メソッドを提供する必要があります。  
   
--   UDT は XmlIgnore を実装する必要があります。また**は、標準**のシリアル化をオーバーライドする必要がある場合は、すべてのパブリックフィールドおよびパブリックプロパティが Xml シリアル化可能な型であるか、または**XmlIgnore**属性で修飾されている必要があります。  
+-   UDT はSystem.Xml を実装する必要があり**ます。XmlIgnore は、標準**のシリアル化をオーバーライドする必要がある場合に、XML シリアル化可能な型であるか、またはすべてのパブリックフィールドとプロパティが**XmlIgnore**属性で修飾されている必要があります。  
   
 -   UDT オブジェクトのシリアル化は 1 つだけ存在する必要があります。 シリアル化ルーチンまたはシリアル化解除ルーチンでは、特定のオブジェクトの表現が複数認識されると検証が失敗します。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "81486971"
   
 -   UDT では、データ要素をパブリック フィールドまたはプロパティ プロシージャとして公開する必要があります。  
   
--   パブリック名は、128文字より長くすることはできません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。また、[データベース識別子](../../relational-databases/databases/database-identifiers.md)で定義されている識別子の名前付け規則に従っている必要があります。  
+-   パブリック名は、128文字より長くすることはできません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。また、[データベース識別子](../../relational-databases/databases/database-identifiers.md)で定義されている識別子の名前付け規則に従っている必要があります。  
   
 -   **sql_variant**列に UDT のインスタンスを含めることはできません。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "81486971"
 >  比較を実行するためにサーバーによって使用されることはありませんが、必要に応じて、1つのメソッドである**CompareTo**を公開する**system.icomparable**インターフェイスを実装することができます。 このインターフェイスは、クライアント側で UDT 値を正確に比較したり並べ替える場合に使用します。  
   
 ## <a name="native-serialization"></a>ネイティブ シリアル化  
- UDT に適したシリアル化属性は、作成する UDT の種類によって異なります。 **ネイティブ**シリアル化形式では、非常に単純な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構造を使用して、がディスク上に UDT の効率的なネイティブ表現を格納できるようにします。 UDT が単純で、次の型のフィールドのみが含まれている場合は、**ネイティブ**形式をお勧めします。  
+ UDT に適したシリアル化属性は、作成する UDT の種類によって異なります。 **ネイティブ**シリアル化形式では、非常に単純な構造を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がディスク上に UDT の効率的なネイティブ表現を格納できるようにします。 UDT が単純で、次の型のフィールドのみが含まれている場合は、**ネイティブ**形式をお勧めします。  
   
  **bool**、 **byte**、 **sbyte**、 **short**、 **ushort**、 **int**、 **uint**、 **long**、 **ulong**、 **float**、 **double**、 **sqlbyte**、 **SqlInt16**、 **SqlInt32**、 **SqlInt64**、 **sqlbyte**、 **sqlbyte**、 **sqlbyte**、 **sqlbyte**、 **sqlbyte**  
   
@@ -99,15 +99,15 @@ ms.locfileid: "81486971"
 >  UDT フィールドをインデックス化するには、ネイティブ シリアル化を使用するか、UDT フィールドを保存する必要があります。  
   
 ## <a name="serialization-attributes"></a>シリアル化属性  
- UDT のストレージ表現を構築し、クライアントに UDT を値として転送するためにシリアル化を使用する方法は、属性で決まります。 UDT を作成するときは、 **SqlUserDefinedTypeAttribute**を指定する必要があります。 **SqlUserDefinedTypeAttribute**属性は、クラスが udt であることを示し、udt のストレージを指定します。 必要に応じて、 **Serializable**属性を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]することもできますが、これは必須ではありません。  
+ UDT のストレージ表現を構築し、クライアントに UDT を値として転送するためにシリアル化を使用する方法は、属性で決まります。 UDT を作成するときは、 **SqlUserDefinedTypeAttribute**を指定する必要があります。 **SqlUserDefinedTypeAttribute**属性は、クラスが udt であることを示し、udt のストレージを指定します。 必要に応じて、 **Serializable**属性を指定することもできますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これは必須ではありません。  
   
  **SqlUserDefinedTypeAttribute**には、次のプロパティがあります。  
   
- **形式**  
+ **Format**  
  UDT のデータ型に応じて、**ネイティブ**また**は**独自に設定できるシリアル化形式を指定します。  
   
  **IsByteOrdered**  
- が**Boolean** UDT でバイナリ比較を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行する方法を決定するブール値。  
+ **Boolean** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が UDT でバイナリ比較を実行する方法を決定するブール値。  
   
  **IsFixedLength**  
  この UDT のすべてのインスタンスの長さが同じであるかどうかを示します。  
@@ -146,13 +146,13 @@ ms.locfileid: "81486971"
 -   以下 (<=)  
   
 ### <a name="implementing-nullability"></a>NULL 値の許容属性の実装  
- アセンブリの属性を正しく指定することに加えて、クラスで NULL 値の許容属性をサポートする必要があります。 に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込まれる udt は null 対応ですが、udt が null 値を認識できるようにするには、クラスで**INullable**インターフェイスを実装する必要があります。 UDT に null 値の許容属性を実装する方法の詳細と例については、「[ユーザー定義型のコーディング](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)」を参照してください。  
+ アセンブリの属性を正しく指定することに加えて、クラスで NULL 値の許容属性をサポートする必要があります。 に読み込ま [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] れる udt は null 対応ですが、udt が null 値を認識できるようにするには、クラスで**INullable**インターフェイスを実装する必要があります。 UDT に null 値の許容属性を実装する方法の詳細と例については、「[ユーザー定義型のコーディング](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)」を参照してください。  
   
 ### <a name="string-conversions"></a>文字列の変換  
  UDT との間の文字列変換をサポートするには、クラスで**Parse**メソッドと**ToString**メソッドを指定する必要があります。 **Parse**メソッドを使用すると、文字列を UDT に変換できます。 これは、 **static**として宣言されている (または Visual Basic で**共有**されている) 必要があり、 **SqlString**型のパラメーターを受け取ります。 **Parse**メソッドと**ToString**メソッドを実装する方法の詳細と例については、「[ユーザー定義型のコーディング](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)」を参照してください。  
   
 ## <a name="xml-serialization"></a>XML シリアル化  
- Udt は、XML シリアル化のコントラクトに準拠して、 **xml**データ型との間の変換をサポートする必要があります。 System.xml**名前空間**には、オブジェクトを Xml 形式のドキュメントまたはストリームにシリアル化するために使用されるクラスが含まれています。 Xml**シリアル化の実装は**、xml シリアル化と逆シリアル化のカスタム書式設定を提供する**IXmlSerializable**インターフェイスを使用して行うことができます。  
+ Udt は、XML シリアル化のコントラクトに準拠して、 **xml**データ型との間の変換をサポートする必要があります。 **System.Xml。シリアル化**名前空間には、オブジェクトを XML 形式のドキュメントまたはストリームにシリアル化するために使用されるクラスが含まれています。 Xml**シリアル化の実装は**、xml シリアル化と逆シリアル化のカスタム書式設定を提供する**IXmlSerializable**インターフェイスを使用して行うことができます。  
   
  Xml シリアル化を使用すると、UDT から**xml**への明示的な変換に加えて、次のことが可能になります。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "81486971"
   
  UDT は、FOR XML クエリではシリアル化されません。 Udt の XML シリアル化を表示する FOR XML クエリを実行するには、各 UDT 列を SELECT ステートメントの**xml**データ型に明示的に変換します。 また、列を**varbinary**、 **varchar**、または**nvarchar**に明示的に変換することもできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー定義型を作成する](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2567640f49beb0c1921811a9d04671833dca11be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c471e1bf5c2e3eac60d47418dc3957cef2209b02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730025"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   特定のスケジュールがアタッチされているジョブに関する情報を返します。  
   
@@ -57,7 +57,7 @@ sp_help_jobs_in_schedule
 |**originating_server**|**nvarchar(30)**|ジョブの送信元のサーバーの名前。|  
 |**name**|**sysname**|ジョブの名前。|  
 |**enabled**|**tinyint**|ジョブの実行が有効かどうかを示します。|  
-|**記述**|**nvarchar(512)**|ジョブの説明。|  
+|**description**|**nvarchar(512)**|ジョブの説明。|  
 |**start_step_id**|**int**|実行を開始するジョブのステップの ID。|  
 |**category**|**sysname**|ジョブ カテゴリ。|  
 |**責任**|**sysname**|ジョブ所有者。|  
@@ -102,7 +102,7 @@ sp_help_jobs_in_schedule
   
  **SQLAgentUserRole**のメンバーは、自分が所有しているジョブの状態のみを表示できます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`NightlyJobs` スケジュールにアタッチされたジョブを一覧表示します。  
   
 ```  
@@ -114,7 +114,7 @@ EXEC sp_help_jobs_in_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   

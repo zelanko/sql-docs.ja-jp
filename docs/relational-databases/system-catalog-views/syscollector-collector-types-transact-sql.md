@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05f09d6c94c17cb54f92d6d5f786515dc229b86c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fbfbf38e084d147e13705ae76ac5367b697c5fe6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830928"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730143"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   コレクション アイテムのコレクターの種類に関する情報を提供します。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "82830928"
 |**Collection_package_path**列のデータ型を修正し、値が null 許容であることを示す説明を更新しました。|  
 |**Upload_package_path**列のデータ型を修正し、値が null 許容であることを示す説明を更新しました。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [データコレクタービュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [データコレクション](../../relational-databases/data-collection/data-collection.md)  

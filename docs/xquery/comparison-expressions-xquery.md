@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 082fb2d1afdfa8824ea6f3d6e7bd3e4c484e281e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db27f240030115ea24d8d32e2ffa1d5e4bf8921e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729510"
 ---
 # <a name="comparison-expressions-xquery"></a>比較式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   XQuery には、次の種類の比較演算子が用意されています。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "81388165"
   
 |演算子|説明|  
 |--------------|-----------------|  
-|=|Equal|  
+|=|等しい|  
 |!=|等しくない|  
 |\<|より小さい|  
 |>|より大きい|  
@@ -80,7 +80,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- 次のクエリは、AdventureWorks サンプルデータベースで提供されている製品カタログから製品モデルの小さいサイズの画像を返します。 このクエリは、によって`PD:ProductDescription/PD:Picture/PD:Size`返されたアトミック値のシーケンスをシングルトンシーケンス "small" と比較します。 比較が True の場合は、<Picture\>要素が返されます。  
+ 次のクエリは、AdventureWorks サンプルデータベースで提供されている製品カタログから製品モデルの小さいサイズの画像を返します。 このクエリは、によって返されたアトミック値のシーケンスを `PD:ProductDescription/PD:Picture/PD:Size` シングルトンシーケンス "small" と比較します。 比較が True の場合は、<Picture 要素が返され \> ます。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -91,7 +91,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- 次のクエリでは、<数値\>要素内の電話番号のシーケンスを文字列リテラル "112-111-1111" と比較しています。 このクエリでは、AdditionalContactInfo 列の電話番号要素のシーケンスを比較して、特定の顧客の特定の電話番号がドキュメントに存在するかどうかを判断します。  
+ 次のクエリでは、<数値要素内の電話番号のシーケンスを \> 文字列リテラル "112-111-1111" と比較しています。 このクエリでは、AdditionalContactInfo 列の電話番号要素のシーケンスを比較して、特定の顧客の特定の電話番号がドキュメントに存在するかどうかを判断します。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -104,7 +104,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- このクエリは True を返します。 これは、その数字がドキュメント内に存在することを示します。 次のクエリは、前のクエリの少し変更されたバージョンです。 このクエリでは、ドキュメントから取得した電話番号の値が、2つの電話番号の値のシーケンスと比較されます。 比較が True の場合、<number\>要素が返されます。  
+ このクエリは True を返します。 これは、その数字がドキュメント内に存在することを示します。 次のクエリは、前のクエリの少し変更されたバージョンです。 このクエリでは、ドキュメントから取得した電話番号の値が、2つの電話番号の値のシーケンスと比較されます。 比較が True の場合、<number \> 要素が返されます。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -142,7 +142,7 @@ WHERE ContactID=1
   
 |演算子|説明|  
 |--------------|-----------------|  
-|eq|Equal|  
+|eq|等しい|  
 |ne|等しくない|  
 |lt|より小さい|  
 |gt|より大きい|  
@@ -153,7 +153,7 @@ WHERE ContactID=1
   
  これらの演算子は、単一のアトミック値でのみ機能します。 つまり、オペランドの 1 つにシーケンスを指定することはできません。  
   
- たとえば、次のクエリでは\<、画像のサイズが "small" である製品モデルの画像> 要素が取得されます。  
+ たとえば、次のクエリは、 \<Picture> 画像のサイズが "small" である製品モデルの要素を取得します。  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -170,7 +170,7 @@ WHERE ProductModelID=19
   
 -   `declare namespace`後でクエリで使用される名前空間プレフィックスを定義します。  
   
--   > \<要素の値のサイズは、指定したアトミック値 "small" と比較されます。  
+-   \<Size>要素の値は、指定された atomic 値 "small" と比較されます。  
   
 -   値演算子はアトミック値でのみ機能するので、 **data ()** 関数はノード値を取得するために暗黙的に使用されることに注意してください。 つまり、`data($P/PD:Size) eq "small"` も同じ結果になります。  
   
@@ -185,7 +185,7 @@ WHERE ProductModelID=19
 \</PD:Picture>  
 ```  
   
- 値の比較でのデータ型の上位変換の規則は、一般的な比較でのデータ型の上位変換の規則と同じです。 また、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、一般的な比較時に使用される値の比較時に、型指定されていない値に対して同じキャスト規則を使用します。 それに対して、XQuery 仕様の規則では、値の比較時に型指定されていない値は xs:string に常にキャストされます。  
+ 値の比較でのデータ型の上位変換の規則は、一般的な比較でのデータ型の上位変換の規則と同じです。 また、は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一般的な比較時に使用される値の比較時に、型指定されていない値に対して同じキャスト規則を使用します。 それに対して、XQuery 仕様の規則では、値の比較時に型指定されていない値は xs:string に常にキャストされます。  
   
 ## <a name="node-comparison-operator"></a>ノードの比較演算子  
  ノード比較演算子**は**で、ノード型にのみ適用されます。 返される結果は、オペランドとして渡される2つのノードが、ソースドキュメント内の同じノードを表すかどうかを示します。 この演算子は、2つのオペランドが同じノードである場合に True を返します。 それ以外の場合は False を返します。  
@@ -225,7 +225,7 @@ ProductModelID       Result
   
 -   `>>`: ドキュメント順で、**オペランド 1**が**オペランド 2**に従います。  
   
- 次のクエリは、特定の製品のドキュメント順で\<、 \<メンテナンス> 要素の前に、製品カタログの説明に保証> 要素がある場合に True を返します。  
+ 次のクエリでは、製品カタログの説明に、 \<Warranty> \<Maintenance> 特定の製品のドキュメント順序で要素の前に要素が表示されている場合に True が返されます。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -247,7 +247,7 @@ where ProductModelID=19
   
 -   このクエリは True を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [型システム &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [XQuery 式](../xquery/xquery-expressions.md)  
   

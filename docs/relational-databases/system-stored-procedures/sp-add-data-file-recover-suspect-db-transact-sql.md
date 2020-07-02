@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2c95b74b5c1875f2a1f1db40ec42e3f3ada87a63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 144d563bf27f0d6133da0ab4facb26edd3a23d44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942364"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731750"
 ---
 # <a name="sp_add_data_file_recover_suspect_db-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   ファイル グループの領域が不足していたため (エラー 1105)、データベースの復旧を完了できなかったときに、データ ファイルをファイル グループに追加します。 ファイルが追加された後、このストアド プロシージャは未復旧の設定をオフにして、データベースの復旧を完了します。 パラメーターは、ALTER DATABASE *database_name* ADD FILE のパラメーターと同じです。  
   
@@ -49,7 +49,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
   
 `[ @filegroup = ] 'filegroup_name_ '`ファイルを追加するファイルグループを指定します。 *filegroup_name*は**nvarchar (260)**,、既定値は NULL の場合、プライマリファイルを示します。  
   
-`[ @name = ] 'logical_file_name_ '`ファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照するためにで使用される名前を指定します。 サーバー内で一意な名前を指定する必要があります。 *logical_file_name*は**nvarchar (260)**,、既定値はありません。  
+`[ @name = ] 'logical_file_name_ '`ファイルを参照するためにで使用される名前を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 サーバー内で一意な名前を指定する必要があります。 *logical_file_name*は**nvarchar (260)**,、既定値はありません。  
   
 `[ @filename = ] 'os_file_name_ '`は、ファイルのオペレーティングシステムによって使用されるパスとファイル名です。 ファイルは[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンス上に存在している必要があります。 *os_file_name*は**nvarchar (260)**,、既定値はありません。  
   
@@ -67,13 +67,13 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。 これらのアクセス許可は転送できません。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 `db1`データベースは、ファイルグループ`fg1`の領域が不足しているため (エラー 1105)、回復中に suspect とマークされています。  
+ 次の例では、データベースは、 `db1` ファイルグループの領域が不足しているため (エラー 1105)、回復中に suspect とマークされてい `fg1` ます。  
   
 ```  
 USE master;  

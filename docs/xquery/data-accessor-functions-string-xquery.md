@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59c90ce7e0bdbe46fa1ca577e2b16e6576650751
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: d4c0dee40eb08aac425f93570c98fc88d32bcc60
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730974"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>データ アクセサー関数 - string (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   文字列として表される *$arg*の値を返します。  
   
@@ -52,10 +52,10 @@ fn:string($arg as item()?) as xs:string
   
 -   この実装では、引数のない**fn: string ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([]) 内でのみ使用できます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-string-function"></a>A. String 関数の使用  
+### <a name="a-using-the-string-function"></a>A: String 関数の使用  
  次のクエリでは、 `Features` <> 要素の <> 子要素ノードが取得され `ProductDescription` ます。  
   
 ```  
@@ -98,7 +98,7 @@ These are the product highlights.
 3 yearsparts and labor...    
 ```  
   
-### <a name="b-using-the-string-function-on-various-nodes"></a>B. さまざまなノードでの string 関数の使用  
+### <a name="b-using-the-string-function-on-various-nodes"></a>B: さまざまなノードでの string 関数の使用  
  次の例では、XML インスタンスが xml 型の変数に割り当てられています。 クエリは、さまざまなノードに**文字列 ()** を適用した結果を示すために指定されます。  
   
 ```  
@@ -145,7 +145,7 @@ select @x.query('string(/comment()[1])')
 This is a comment   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

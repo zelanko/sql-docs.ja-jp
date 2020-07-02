@@ -31,15 +31,15 @@ helpviewer_keywords:
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9d51cc0c33c8b656df176baa606a88a542ca4bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5339a0d52754c19024a3774962d947bb4240ccba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486959"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727820"
 ---
 # <a name="creating-user-defined-types---coding"></a>ユーザー定義型の作成 - コーディング
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ユーザー定義型 (UDT) の定義をコーディングする際は、形式やシリアル化のオプションを選択するだけでなく、UDT をクラスと構造体のどちらで実装するかによって、さまざまな機能を実装する必要があります。  
   
  このセクションの例では、 **Point** UDT を**構造体**(Visual Basic の**構造体**) として実装する方法を示します。 **Point** UDT は、プロパティプロシージャとして実装された X 座標と Y 座標で構成されます。  
@@ -58,7 +58,7 @@ using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;  
 ```  
   
- SqlTypes**名前空間には**、UDT のさまざまな属性に必要なオブジェクトが含まれてい**System.Data.SqlTypes**ます。また、この名前空間には、アセンブリ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用可能なネイティブデータ型を表すクラスが含まれています。 それ以外にもアセンブリが正しく機能するために必要な名前空間が存在する場合があります。 また、 **Point** UDT は、文字列を操作するために**system.string 名前空間**も使用します。  
+ SqlTypes**名前空間には**、UDT のさまざまな属性に必要なオブジェクトが含まれてい**System.Data.SqlTypes**ます。また、この名前空間には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アセンブリで使用可能なネイティブデータ型を表すクラスが含まれています。 それ以外にもアセンブリが正しく機能するために必要な名前空間が存在する場合があります。 また、 **Point** UDT は、文字列を操作するために**system.string 名前空間**も使用します。  
   
 > [!NOTE]  
 >  **/Clr: pure**を使用してコンパイルされた udt などの Visual C++ データベースオブジェクトは、実行がサポートされていません。  
@@ -89,11 +89,11 @@ public struct Point : INullable
 ```  
   
 ## <a name="implementing-nullability"></a>NULL 値の許容属性の実装  
- アセンブリの属性を正しく指定することに加えて、UDT で NULL 値の許容属性をサポートする必要があります。 に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込まれた udt は null 対応ですが、udt が null 値を認識できるようにするには、Udt は**INullable**インターフェイスを実装する必要があります。  
+ アセンブリの属性を正しく指定することに加えて、UDT で NULL 値の許容属性をサポートする必要があります。 に読み込まれた Udt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は null 対応ですが、udt が null 値を認識できるようにするには、udt は**INullable**インターフェイスを実装する必要があります。  
   
  CLR コード内から値が null かどうかを判断するために必要な、 **IsNull**という名前のプロパティを作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では UDT が NULL インスタンスであることを検出すると、通常の NULL 値処理メソッドを使用して UDT を保存します。 そのため、サーバーが NULL の UDT の不要なシリアル化やシリアル化解除に時間を費やしたり、NULL の UDT を格納して領域を無駄にすることはありません。 この NULL に関するチェックは CLR から UDT が渡されるたびに実行されます。つまり、[!INCLUDE[tsql](../../includes/tsql-md.md)] の IS NULL コンストラクトを使用して NULL UDT のチェックを実行すると、必ず成功することを意味します。 **IsNull**プロパティは、インスタンスが null かどうかをテストするためにサーバーによっても使用されます。 UDT が NULL であることを判断できれば、サーバーはネイティブの NULL 処理を使用できます。  
   
- **IsNull**の**get ()** メソッドは、特別なケースではありません。 **Point**変数** \@p**が**Null** ** \@** の場合、既定では、"1" ではなく "Null" に評価されます。 これは、 **IsNull get ()** メソッドの**Sqlmethod (onnullcall)** 属性が既定で false に設定されているためです。 オブジェクトが**Null**の場合、プロパティが要求されると、オブジェクトは逆シリアル化されず、メソッドは呼び出されず、既定値の "Null" が返されます。  
+ **IsNull**の**get ()** メソッドは、特別なケースではありません。 **Point**変数** \@ p**が**Null**の場合、既定では、"1" ではなく "Null" に評価され** \@ ます**。 これは、 **IsNull get ()** メソッドの**Sqlmethod (onnullcall)** 属性が既定で false に設定されているためです。 オブジェクトが**Null**の場合、プロパティが要求されると、オブジェクトは逆シリアル化されず、メソッドは呼び出されず、既定値の "Null" が返されます。  
   
 ### <a name="example"></a>例  
  次の例では、プライベート変数の `is_Null` に、UDT のインスタンスが NULL かどうかに関する状態が格納されます。 コードを作成する際は、`is_Null` の値を適切な状態に保つように注意する必要があります。 UDT には、UDT の null 値のインスタンスを返す**null**という名前の静的プロパティも必要です。 これにより、データベース内の UDT のインスタンスが実際に NULL の場合に、UDT から NULL 値を返すことができます。  
@@ -156,7 +156,7 @@ FROM Points
 WHERE location.IsNull = 0;  
 ```  
   
- どちらのクエリも、**Null**以外の場所にあるポイントの id を返します。 クエリ 1 では、通常の Null 処理が使用されるため、UDT のシリアル化解除は必要ありません。 一方、クエリ2では、**Null**以外の各オブジェクトを逆シリアル化し、CLR を呼び出して**IsNull**プロパティの値を取得する必要があります。 明らかに、 **IS NULL**を使用するとパフォーマンスが向上します。また、コードから**IsNull** [!INCLUDE[tsql](../../includes/tsql-md.md)] UDT の IsNull プロパティを読み取ることができなくなることはありません。  
+ どちらのクエリも、**Null**以外の場所にあるポイントの id を返します。 クエリ 1 では、通常の Null 処理が使用されるため、UDT のシリアル化解除は必要ありません。 一方、クエリ2では、**Null**以外の各オブジェクトを逆シリアル化し、CLR を呼び出して**IsNull**プロパティの値を取得する必要があります。 明らかに、 **IS NULL**を使用するとパフォーマンスが向上します。また、コードから UDT の**IsNull**プロパティを読み取ることができなくなることはありません [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  では、 **IsNull**プロパティはどのように使用されていますか。 まず、CLR コード内から値が**Null**かどうかを判断する必要があります。 次に、サーバーには、インスタンスが**Null**かどうかをテストする方法が必要であるため、このプロパティはサーバーによって使用されます。 **Null**であると判断した後は、ネイティブの null 処理を使用して処理できます。  
   
@@ -544,7 +544,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  **SqlMethodAttribute**クラスは、決定性、null 呼び出し動作、およびメソッドがミューテーターかどうかを指定するためにメソッド定義をマークするために使用できるカスタム属性を提供します。 これらのプロパティは既定値に設定されるので、既定値以外の値を設定する場合のみカスタム属性を使用します。  
   
 > [!NOTE]  
->  **SqlMethodAttribute**クラスは**sqlfunctionattribute**クラスを継承するため、 **SqlMethodAttribute**は**sqlfunctionattribute**から**fillrowmethodname**フィールドと**tabledefinition**フィールドを継承します。 これは、一見テーブル値メソッドを記述できることを示していますが、この場合には該当しません。 メソッドがコンパイルされ、アセンブリが配置されますが、実行時に**IEnumerable**の戻り値の型に関するエラーが発生します。アセンブリ '\<\<assembly> ' のクラス '\<class> ' の "method、property、または field ' name> ' には、無効な戻り値の型が含まれています。"  
+>  **SqlMethodAttribute**クラスは**sqlfunctionattribute**クラスを継承するため、 **SqlMethodAttribute**は**sqlfunctionattribute**から**fillrowmethodname**フィールドと**tabledefinition**フィールドを継承します。 これは、一見テーブル値メソッドを記述できることを示していますが、この場合には該当しません。 メソッドがコンパイルされ、アセンブリが配置されますが、実行時に**IEnumerable**の戻り値の型に関するエラーが発生します。これは、アセンブリ ' ' のクラス ' ' のメソッド、プロパティ、またはフィールド ' \<name> ' に \<class> \<assembly> 無効な戻り値の型が含まれています。  
   
  次の表では、UDT メソッドで使用できる関連する**SqlMethodAttribute**プロパティのいくつかについて説明し、それらの既定値を示します。  
   
@@ -569,13 +569,13 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
 > [!NOTE]  
 >  ミューテーター メソッドはクエリ内では使用できません。 代入ステートメントかデータ変更ステートメントでのみ、これらのメソッドを呼び出すことができます。 ミューテーターとしてマークされたメソッドが**void**を返さない場合 (または Visual Basic の**Sub**ではない場合)、CREATE TYPE はエラーで失敗します。  
   
- 次のステートメントは、 **Rotate**メソッドを持つ**三角形**UDT が存在することを前提としています。 次[!INCLUDE[tsql](../../includes/tsql-md.md)]の update ステートメントは、 **Rotate**メソッドを呼び出します。  
+ 次のステートメントは、 **Rotate**メソッドを持つ**三角形**UDT が存在することを前提としています。 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] update ステートメントは、 **Rotate**メソッドを呼び出します。  
   
 ```  
 UPDATE Triangles SET t.RotateY(0.6) WHERE id=5  
 ```  
   
- **Rotate**メソッドは、 **sqlmethod**属性設定**ismutator**を**true**に設定して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がメソッドをミューテーターメソッドとしてマークできるように装飾されています。 また、このコードでは、 **Onnullcall**を**false**に設定しています。これは、入力パラメーターのいずれかが null 参照の場合に、メソッドが null 参照 (Visual Basic では**Nothing** ) を返すことをサーバーに示すことを示します。  
+ **Rotate**メソッドは、 **sqlmethod**属性設定**ismutator**を**true**に設定して、が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メソッドをミューテーターメソッドとしてマークできるように装飾されています。 また、このコードでは、 **Onnullcall**を**false**に設定しています。これは、入力パラメーターのいずれかが null 参照の場合に、メソッドが null 参照 (Visual Basic では**Nothing** ) を返すことをサーバーに示すことを示します。  
   
 ```vb  
 <SqlMethod(IsMutator:=True, OnNullCall:=False)> _  
@@ -601,7 +601,7 @@ public void Rotate(double anglex, double angley, double anglez)
  ユーザー定義形式を使用して UDT を実装する場合は、UDT データのシリアル化と逆シリアル化を処理するために、Microsoft の SqlServer. IBinarySerialize インターフェイスを実装する**読み取り**および**書き込み**メソッドを実装する必要があります。 また、 **SqlUserDefinedTypeAttribute**の**maxbytesize**も指定する必要があります。  
   
 ### <a name="the-currency-udt"></a>Currency UDT  
- **通貨**UDT は、以降でインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]できる CLR サンプルに含まれてい[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ます。  
+ **通貨**UDT は、以降でインストールできる CLR サンプルに含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。  
   
  **通貨**UDT は、特定のカルチャの通貨システムでの金額の処理をサポートします。 2つのフィールドを定義する必要があります。 **CultureInfo**の**文字列**。たとえば、通貨の発行者 (En-us など) と**CurrencyValue**の**decimal** (金額) を指定します。  
   
@@ -609,9 +609,9 @@ public void Rotate(double anglex, double angley, double anglez)
   
  CLR で実行されているコードでは、カルチャが通貨値とは別に比較されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードでは、次の操作により比較結果が決まります。  
   
-1.  **Isbyteordered**属性を true に設定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]これにより、比較のためにディスクに保存されたバイナリ表現を使用するように指示されます。  
+1.  **Isbyteordered**属性を true に設定します。これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 比較のためにディスクに保存されたバイナリ表現を使用するように指示されます。  
   
-2.  **Currency** udt に対して**Write**メソッドを使用して、udt がディスクにどのように永続化されるかを判断し[!INCLUDE[tsql](../../includes/tsql-md.md)]ます。したがって、udt 値の比較と操作の順序を決定します。  
+2.  **Currency** udt に対して**Write**メソッドを使用して、udt がディスクにどのように永続化されるかを判断します。したがって、udt 値の比較と操作の順序を決定し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
   
 3.  次のバイナリ形式を使用して、**通貨**UDT を保存します。  
 
@@ -747,7 +747,7 @@ public void Read(System.IO.BinaryReader r)
   
  **通貨**UDT の完全なコードリストについては、「 [SQL Server データベースエンジンサンプル](https://msftengprodsamples.codeplex.com/)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー定義型を作成する](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   

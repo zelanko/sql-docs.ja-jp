@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a641f363b4a39b28b7a7ea767914d952c83d697e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d3faf15999e0c157859e3d2eee9c4119ab344844
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828293"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727152"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ログインにマップされているデータベースユーザーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、パスワードを持つ包含データベースユーザーに変換します。 包含データベースでは、データベースがインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの依存関係を削除するには、このプロシージャを使用します。 **sp_migrate_user_to_contained**では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パスワードや既定の言語などの設定を包含データベースに対して個別に管理できるように、ユーザーを元のログインから分離します。 **sp_migrate_user_to_contained**は、包含データベースをの別のインスタンスに移動する前に、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 現在のインスタンスログインに対する依存関係をなくすために使用でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -54,7 +54,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_migrate_user_to_contained**は、ログインのプロパティまたは権限に関係なく、パスワードを持つ包含データベースユーザーを作成します。 たとえば、ログインが無効になっている場合、またはデータベースへの**CONNECT**権限がユーザーに拒否された場合、プロシージャは成功します。  
   
  **sp_migrate_user_to_contained**には次の制限があります。  
@@ -90,7 +90,7 @@ sp_migrate_user_to_contained
   
 ```  
   
-### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>B. ログインのあるすべてのデータベースユーザーを、ログインのない包含データベースユーザーに移行する  
+### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>B: ログインのあるすべてのデータベースユーザーを、ログインのない包含データベースユーザーに移行する  
  次の例では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインに基づくすべてのユーザーを、パスワードを持つ包含データベース ユーザーに移行します。 有効になっていないログインは除外します。 この例は、包含データベースで実行する必要があります。  
   
 ```sql  
@@ -116,7 +116,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [部分的包含データベースへの移行](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [包含データベース](../../relational-databases/databases/contained-databases.md)  
   

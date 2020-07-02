@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e7b88b5e28794ff8bc27c02b64b49471af92a05
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: a5ee393faed7f88bb155527d2233285d142b3a09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882035"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726790"
 ---
 # <a name="aggregate-functions---avg"></a>集計関数 - avg
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   一連の数値の平均値を返します。  
   
@@ -54,10 +54,10 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  他のすべての場合は、関数から静的エラーが返されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. Avg () XQuery 関数を使用して、製造プロセス内のワークセンターの場所を検索します。この場合、労働時間はすべてのワークセンターの場所の平均よりも大きくなります。  
+### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A: Avg () XQuery 関数を使用して、製造プロセス内のワークセンターの場所を検索します。この場合、労働時間はすべてのワークセンターの場所の平均よりも大きくなります。  
  [Min 関数 (XQuery)](../xquery/aggregate-functions-min.md)で指定されたクエリを書き直して、 **avg ()** 関数を使用することができます。  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
@@ -69,7 +69,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
 -   基本データ型の境界を超えて複数の型が混在するシーケンスはサポートされません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

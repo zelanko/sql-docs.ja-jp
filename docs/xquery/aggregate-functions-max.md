@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b2a7449da7c255d0ddbbed71fef3561f77e294d
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: caf736973d288a89bec287aff3cb1c1993e3b0dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726777"
 ---
 # <a name="aggregate-functions---max"></a>集計関数 - max
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   アトミック値のシーケンス ( *$arg*) から、その値が他の値より大きい値を持つ1つの項目を返します。  
   
@@ -46,10 +46,10 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  **Max ()** 関数は、入力シーケンス内の他の値よりも大きいシーケンス内の1つの値を返します。 Xs: string 値の場合、既定の Unicode コードポイント照合順序が使用されます。 Xdt: untypedAtomic 値を xs: double にキャストできない場合、入力シーケンスの値は無視されます ( *$arg*)。 入力が動的に計算された空のシーケンスである場合は、空のシーケンスが返されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
-### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. Max () XQuery 関数を使用して、製造プロセス内で最も労働時間があるワークセンターの場所を検索する  
+### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A: Max () XQuery 関数を使用して、製造プロセス内で最も労働時間があるワークセンターの場所を検索する  
  [Min 関数 (XQuery)](../xquery/aggregate-functions-min.md)で指定されたクエリは、 **max ()** 関数を使用するように書き直すことができます。  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
@@ -63,7 +63,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
 -   照合順序を提供する構文オプションはサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

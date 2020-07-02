@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d35db27e171c8cc31a463ad9ae91613d1c0708c
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: ad25db1aa5a10039bc80766b30e1d2ba478df123
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305711"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730977"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>xml データ型に対する XQuery 関数
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックとサブトピックでは、 **xml**データ型に対して XQuery を指定するときに使用できる関数について説明します。 W3C 仕様については、「」を参照してください [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873) 。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "84305711"
 ||[contains](../xquery/functions-on-string-values-contains.md)|  
 ||[substring](../xquery/functions-on-string-values-substring.md)|  
 ||[XQuery&#41;&#40;小文字関数](../xquery/functions-on-string-values-lower-case.md)|  
-||[文字列-長さ](../xquery/functions-on-string-values-string-length.md)|  
+||[string-length](../xquery/functions-on-string-values-string-length.md)|  
 ||[&#40;XQuery&#41;の大文字関数](../xquery/functions-on-string-values-upper-case.md)|  
 |ブール値に対する関数|[not](../xquery/functions-on-boolean-values-not-function.md)|  
 |[ノードの関数](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)|[number](../xquery/functions-on-nodes-number.md)|  
@@ -69,7 +69,7 @@ ms.locfileid: "84305711"
 |[XQuery 拡張関数の SQL Server](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)|[sql: column () 関数 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)|  
 ||[sql:variable() 関数 (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型メソッド](../t-sql/xml/xml-data-type-methods.md)   
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  

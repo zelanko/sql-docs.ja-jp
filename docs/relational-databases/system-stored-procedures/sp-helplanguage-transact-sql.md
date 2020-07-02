@@ -19,15 +19,15 @@ ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097629a1642c952384ed96ac8349f241237332b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2878d206d4bc90d801e1e8f42f4f3f2c04d2c121
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733203"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] での特定の代替言語、またはすべての言語に関する情報を報告します。  
   
@@ -41,7 +41,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @language = ] 'language'`情報を表示する代替言語の名前を指定します。 *language*は**sysname**,、既定値は NULL です。 *Language*を指定すると、指定した言語に関する情報が返されます。 場合言語が指定されていない、 **sys.syslanguages**互換性ビューのすべての言語に関する情報が返されます。  
+`[ @language = ] 'language'`情報を表示する代替言語の名前を指定します。 *language*は**sysname**,、既定値は NULL です。 *Language*を指定すると、指定した言語に関する情報が返されます。 言語が指定されていない場合は、 **sys.sys言語**の互換性ビューのすべての言語に関する情報が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -74,14 +74,14 @@ sp_helplanguage [ [ @language = ] 'language' ]
 sp_helplanguage French;  
 ```  
   
-### <a name="b-returning-information-about-all-languages"></a>B. すべての言語に関する情報を返す  
+### <a name="b-returning-information-about-all-languages"></a>B: すべての言語に関する情報を返す  
  次の例では、インストールされているすべての代替言語に関する情報を表示します。  
   
 ```  
 sp_helplanguage;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [SET LANGUAGE &#40;Transact-sql&#41;](../../t-sql/statements/set-language-transact-sql.md)   

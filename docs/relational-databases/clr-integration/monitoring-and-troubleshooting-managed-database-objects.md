@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e04b5308aeca5881f624122c70ad74c27417a46b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9b05b11fcf3110b9f51d1f9cb44fdabb4a3ba36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258332"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728453"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>マネージド データベース オブジェクトの監視とトラブルシューティング
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行されるマネージド データベース オブジェクトとアセンブリの監視およびトラブルシューティングに使用できるツールに関する情報を提供します。  
   
 ## <a name="profiler-trace-events"></a>プロファイラー トレース イベント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、データベース エンジンで発生するイベントを監視するための SQL トレースとイベント通知が用意されています。 SQL トレースは、指定したイベントを記録することによって、パフォーマンスのトラブルシューティング、データベースの利用状況の監査、テスト環境のサンプル データの収集、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとストアド プロシージャのデバッグ、およびパフォーマンス分析ツール用のデータの収集に役立ちます。 詳細については、「 [SQL トレース](../../relational-databases/sql-trace/sql-trace.md)と[拡張イベント](../../relational-databases/extended-events/extended-events.md)」を参照してください。  
   
-|event|説明|  
+|Event|説明|  
 |-----------|-----------------|  
 |[Assembly Load イベントクラス](/sql/database-engine/assembly-load-event-class)|アセンブリの読み込み要求 (成功と失敗) の監視に使用されます。|  
 |[Sql: BatchStarting イベントクラス](../../relational-databases/event-classes/sql-batchstarting-event-class.md)、 [Sql: Batchstarting イベントクラス](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|開始または完了した [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチに関する情報を提供します。|  
@@ -84,7 +84,7 @@ ms.locfileid: "75258332"
 |[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で実行中の各要求に関する情報を返します。|  
 |[dm_os_memory_clerks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|CLR メモリ クラークなど、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内でアクティブになっているすべてのメモリ クラークを返します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR &#40;共通言語ランタイム&#41; 統合のプログラミング概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac12bf75588d70f12b4550260f9911796c1c3a56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8199df81aca3688855b771923f6fa19a0e4f33db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488161"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727631"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 統合のアーキテクチャ - パフォーマンス
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 共通言語ランタイム (CLR) との統合のパフォーマンスを向上させる、いくつかの設計上の選択肢について説明します。  
   
 ## <a name="the-compilation-process"></a>コンパイル処理  
@@ -56,7 +56,7 @@ ms.locfileid: "81488161"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**varchar**などの文字データは、マネージ関数では SqlString または sqlchars 型にすることができます。 SqlString 変数は値全体のインスタンスをメモリに作成します。 SqlChars 変数には、ストリーミング インターフェイスが用意されており、これを使用すると、値全体のインスタンスをメモリに作成しないことでパフォーマンスおよびスケーラビリティを高めることができます。 このことは、特に LOB (ラージ オブジェクト) データにとって重要です。 さらに、 **SqlXml Eader ()** によって返されるストリーミングインターフェイスを使用して、サーバーの XML データにアクセスできます。  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR と拡張ストアド プロシージャ  
- マネージド プロシージャから結果セットをクライアントに返す Microsoft.SqlServer.Server API (アプリケーション プログラミング インターフェイス) は、拡張ストアド プロシージャにより使用される ODS (オープン データ サービス) API に比べパフォーマンスに優れています。 さらに[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、system.string api は、で導入された**xml**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)** などのデータ型をサポートしています。また、新しいデータ型をサポートするように ODS api が拡張されていません。  
+ マネージド プロシージャから結果セットをクライアントに返す Microsoft.SqlServer.Server API (アプリケーション プログラミング インターフェイス) は、拡張ストアド プロシージャにより使用される ODS (オープン データ サービス) API に比べパフォーマンスに優れています。 さらに、system.string Api は、で導入された**xml**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)** などのデータ型をサポートして [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] います。また、新しいデータ型をサポートするように ODS api が拡張されていません。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではマネージド コードによってメモリ、スレッド、同期などのリソースの使用状況が管理されます。 これらのリソースを公開するマネージド API が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース マネージャーの上位に実装されるためです。 逆に、拡張ストアド プロシージャは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってリソースの使用状況が監視または制御されることがありません。 たとえば、拡張ストアド プロシージャで大量の CPU リソースまたはメモリ リソースが消費されていても、それを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で検出したり制御することはできません。 一方、マネージド コードでは、特定のスレッドが長期間リソースを占有していることを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で検出して、タスクからリソースを解放し、他の作業のスケジュールを設定できるようになります。 つまり、マネージド コードを使用すると、スケーラビリティやシステム リソースの使用状況が改善されます。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "81488161"
 ### <a name="scalable-memory-usage"></a>スケーラビリティを確保するメモリの使用方法  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド ガベージ コレクションのパフォーマンスやスケーラビリティを高めるには、大量のメモリを 1 単位として割り当てないようにしてください。 88 KB を超える割り当てはラージ オブジェクト ヒープに配置されます。その結果、小規模の割り当てをいくつも行った場合に比べて、ガベージ コレクションのパフォーマンスやスケーラビリティが低下します。 たとえば、大きな多次元配列を割り当てる場合、ジャグ (散在した) 配列を割り当てることをお勧めします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

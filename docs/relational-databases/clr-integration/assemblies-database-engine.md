@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 386e1980ae19ba4f98222b51a4955b024f815083
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 399c1dca1657c95edd70dcec0ba26619f6001180
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488081"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727685"
 ---
 # <a name="assemblies-database-engine"></a>アセンブリ (データベース エンジン)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このセクションのトピックでは、アセンブリの理解、設計、および実装に役立つ情報について説明します。  
   
- アセンブリは、関数、ストアドプロシージャ、トリガー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ユーザー定義集計、およびユーザー定義型を配置するために、のインスタンスで使用される DLL ファイルです。で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]はなく、共通言語ランタイム (CLR) によってホストされるマネージコード言語のいずれかで記述されます。  
+ アセンブリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 関数、ストアドプロシージャ、トリガー、ユーザー定義集計、およびユーザー定義型を配置するために、のインスタンスで使用される DLL ファイルです [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 。ではなく、共通言語ランタイム (CLR) によってホストされるマネージコード言語のいずれかで記述され [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアセンブリは、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイムで作成されたマネージド アプリケーション モジュール (.dll ファイル) を参照するオブジェクトです。 アセンブリには、クラス メタデータとマネージド コードが含まれています。 SQL Server のインスタンスにアセンブリをアップロードすることが、次のいずれかのデータベース オブジェクトを作成するための最初の手順になります。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "81488081"
 |[アセンブリの実装](../../relational-databases/clr-integration/assemblies-implementing.md)|アセンブリを作成または削除する方法、アセンブリを変更するタイミングとその方法、およびアセンブリに関するメタデータの取得方法について説明します。|  
 |[アセンブリについての情報の取得](../../relational-databases/clr-integration/assemblies-getting-information.md)|アセンブリに関するメタデータに対してクエリを実行可能なカタログ ビューや関数を一覧します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR &#40;共通言語ランタイム&#41; 統合のプログラミング概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

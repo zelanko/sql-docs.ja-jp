@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac01c2d29dbe79d0a5702e1bd42730d0b31efcf2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b13792fb7a5d151987983a959751dd94f12e0a9b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731681"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーインスタンスが、LCID が指定されている言語に対応する類義語辞典ファイルのデータを解析して読み込みます。 このストアドプロシージャは、類義語辞典ファイルを更新した後に便利です。 **Sp_fulltext_load_thesaurus_file**を実行すると、指定した LCID の類義語辞典を使用するフルテキストクエリが再コンパイルされます。  
   
@@ -47,13 +47,13 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  ** \@ loadonlyifnotloaded**  =  *アクション*  
  類義語辞典ファイルが既に読み込まれている場合でも、内部の類義語辞典テーブルに類義語辞典ファイルを読み込むかどうかを指定します。 *アクション*は次のいずれかです。  
   
-|[値]|定義|  
+|値|定義|  
 |-----------|----------------|  
 |**0**|既に読み込まれているかどうかにかかわらず、類義語辞典ファイルを読み込みます。 これは**sp_fulltext_load_thesaurus_file**の既定の動作です。|  
 |1|類義語辞典ファイルがまだ読み込まれていない場合にのみ、類義語辞典ファイルを読み込みます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -77,14 +77,14 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 EXEC sys.sp_fulltext_load_thesaurus_file 1033;
 ```  
   
-### <a name="b-load-a-thesaurus-file-only-if-it-is-not-yet-loaded"></a>B. 類義語辞典ファイルがまだ読み込まれていない場合にのみ、類義語辞典ファイルを読み込む。  
+### <a name="b-load-a-thesaurus-file-only-if-it-is-not-yet-loaded"></a>B: 類義語辞典ファイルがまだ読み込まれていない場合にのみ、類義語辞典ファイルを読み込む。  
  次の例では、既に読み込まれている場合を除き、アラビア語の類義語辞典ファイルを解析して読み込みます。  
   
 ```sql
 EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;
 ```  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)  
 [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

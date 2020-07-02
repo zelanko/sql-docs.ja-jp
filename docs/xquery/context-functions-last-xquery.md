@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f88c438206551e170810f467e7944b21232e245d
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3713f0fadfe186c31a26f2f19adea88da2f28384
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729523"
 ---
 # <a name="context-functions---last-xquery"></a>コンテキスト関数 - last (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   現在処理中のシーケンス内のアイテム数を返します。 具体的には、シーケンス内の最後のアイテムの整数インデックスを返します。 シーケンスの最初の項目のインデックス値は1です。  
   
@@ -38,10 +38,10 @@ fn:last() as xs:integer
 ## <a name="remarks"></a>Remarks  
  SQL Server では、 **fn: last ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ () 内でのみ使用でき `[ ]` ます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. Last () XQuery 関数を使用した最後の2つの製造手順の取得  
+### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A: Last () XQuery 関数を使用した最後の2つの製造手順の取得  
  次のクエリでは、特定の製品モデルについて、最後の2つの製造手順を取得します。 最後の2つの製造手順を取得するために、このクエリでは、 **last ()** 関数によって返された製造手順の数である値が使用されます。  
   
 ```  
@@ -78,7 +78,7 @@ ProductModelID Result
        </LastTwoManuSteps>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

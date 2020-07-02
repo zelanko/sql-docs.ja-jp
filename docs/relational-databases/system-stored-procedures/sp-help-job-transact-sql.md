@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc69a273dfa331e558f076429be95c2462b551d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827649"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730043"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   自動化された操作を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用されるジョブに関する情報を返します。  
   
@@ -61,7 +61,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'`表示するジョブ属性。 *job_aspect*は**varchar (9)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**ALL**|ジョブのすべての属性情報|  
 |**補足**|ジョブ情報|  
@@ -81,7 +81,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status`ジョブの実行状態です。 *状態*は**int**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**0**|アイドルまたは中断されていないジョブのみを返します。|  
 |**1**|実行.|  
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|状態.|  
 |**7**|完了操作の実行中。|  
   
-`[ @date_comparator = ] 'date_comparison'`*Date_created*と*date_modified*の比較に使用する比較演算子。 *date_comparison*は**char (1)** で、=、、または > にすることができ \< ます。  
+`[ @date_comparator = ] 'date_comparison'`*Date_created*と*date_modified*の比較に使用する比較演算子。 *date_comparison*は**char (1)**,、は =, \<, or > です。  
   
 `[ @date_created = ] date_created`ジョブが作成された日付。 *date_created*は**datetime**,、既定値は NULL です。  
   
@@ -111,7 +111,7 @@ sp_help_job { [ @job_id = ] job_id
 |**originating_server**|**nvarchar(30)**|ジョブの送信元のサーバーの名前。|  
 |**name**|**sysname**|ジョブの名前。|  
 |**enabled**|**tinyint**|ジョブの実行が有効かどうかを示します。|  
-|**記述**|**nvarchar(512)**|ジョブの説明。|  
+|**description**|**nvarchar(512)**|ジョブの説明。|  
 |**start_step_id**|**int**|実行を開始するジョブのステップの ID。|  
 |**category**|**sysname**|ジョブ カテゴリ。|  
 |**責任**|**sysname**|ジョブ所有者。|  
@@ -149,7 +149,7 @@ sp_help_job { [ @job_id = ] job_id
 |**step_id**|**int**|ステップの (このジョブで) 一意の ID。|  
 |**step_name**|**sysname**|ステップの名前。|  
 |**サブ**|**nvarchar(40)**|ステップ コマンドを実行するサブシステム。|  
-|**メニュー**|**nvarchar (3200)**|実行するコマンド。|  
+|**command**|**nvarchar (3200)**|実行するコマンド。|  
 |**flags**|**nvarchar (4000)**|ステップの動作を制御する値の**ビットマスク**。|  
 |**cmdexec_success_code**|**int**|**CmdExec**ステップの場合、これは成功したコマンドのプロセス終了コードです。|  
 |**on_success_action**|**nvarchar (4000)**|ステップが成功した場合の対処方法:<br /><br /> **1** = 正常に終了します。<br /><br /> **2** = エラーで終了します。<br /><br /> **3** = 次の手順に進みます。<br /><br /> **4** = ステップに進みます。|  
@@ -234,7 +234,7 @@ EXEC dbo.sp_help_job ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-jobs-matching-a-specific-criteria"></a>B. 特定の条件に一致するジョブの情報を一覧表示する  
+### <a name="b-listing-information-for-jobs-matching-a-specific-criteria"></a>B: 特定の条件に一致するジョブの情報を一覧表示する  
  次の例では、`françoisa` が所有するマルチサーバー ジョブのジョブ情報を一覧表示します。ここでは、有効でかつ、実行中のジョブが対象になります。  
   
 ```  
@@ -249,7 +249,7 @@ EXEC dbo.sp_help_job
 GO  
 ```  
   
-### <a name="c-listing-all-aspects-of-information-for-a-job"></a>C. ジョブに関するすべての属性情報を一覧表示する  
+### <a name="c-listing-all-aspects-of-information-for-a-job"></a>C: ジョブに関するすべての属性情報を一覧表示する  
  次の例では、`NightlyBackups` ジョブに関するすべての属性情報を一覧表示します。  
   
 ```  
@@ -262,7 +262,7 @@ EXEC dbo.sp_help_job
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_delete_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_update_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2bbdd0932b38efdb305a592f1e18174e1c39f554
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f448e7027b69d81f9f2690eff1b431837320aa51
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725746"
 ---
 # <a name="sp_remoteoption-transact-sql"></a>sp_remoteoption (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているローカル サーバーで定義されているリモート ログインのオプションを表示または変更します。  
   
@@ -50,7 +50,7 @@ sp_remoteoption [ [ @remoteserver = ] 'remoteserver' ]
   
  `The trusted option in remote login mapping is no longer supported.`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
   

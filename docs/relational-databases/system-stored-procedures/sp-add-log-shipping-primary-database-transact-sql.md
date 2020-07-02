@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5af11c14c7b0bf3b8e32d503c4b77e59623ce9ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee4fd4f6b8ea67fd9e1b973fd2b283a10d525437
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140447"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731777"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   バックアップ ジョブ、ローカル監視レコード、リモート監視レコードを含め、ログ配布構成のプライマリ データベースを設定します。  
   
@@ -71,7 +71,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
  1 = Windows 認証。  
   
- 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証。 *monitor_server_security_mode*は**ビット**であり、NULL にすることはできません。  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証。 *monitor_server_security_mode*は**ビット**であり、NULL にすることはできません。  
   
 `[ @monitor_server_login = ] 'monitor_server_login'`監視サーバーへのアクセスに使用するアカウントのユーザー名を示します。  
   
@@ -85,7 +85,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 `[ @history_retention_period = ] history_retention_period`履歴を保持する時間の長さを分単位で指定します。 *history_retention_period*は**int**,、既定値は NULL です。 値が指定されていない場合は、14420の値が使用されます。  
   
-`[ @backup_job_id = ] backup_job_id OUTPUT`プライマリ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバー上のバックアップジョブに関連付けられているエージェントジョブ ID。 *backup_job_id*は**uniqueidentifier**であり、NULL にすることはできません。  
+`[ @backup_job_id = ] backup_job_id OUTPUT`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プライマリサーバー上のバックアップジョブに関連付けられているエージェントジョブ ID。 *backup_job_id*は**uniqueidentifier**であり、NULL にすることはできません。  
   
 `[ @primary_id = ] primary_id OUTPUT`ログ配布構成のプライマリデータベースの ID。 *primary_id*は**uniqueidentifier**であり、NULL にすることはできません。  
   
@@ -95,15 +95,15 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
  1 = 有効。 ログバックアップは常に圧縮します。  
   
- 2 = [ビューの設定[] または [backup compression Default サーバー構成オプションの構成]](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)を使用します。 これは、既定値です。  
+ 2 = [ビューの設定[] または [backup compression Default サーバー構成オプションの構成]](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)を使用します。 これが既定値です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_add_log_shipping_primary_database**は、プライマリサーバーの**master**データベースから実行する必要があります。 このストアドプロシージャは、次の機能を実行します。  
   
 1.  プライマリ ID を生成し、指定された引数を使用して**log_shipping_primary_databases**テーブルにプライマリデータベースのエントリを追加します。  

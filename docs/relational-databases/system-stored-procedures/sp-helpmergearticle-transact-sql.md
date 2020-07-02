@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e01a1c9c96813c14827ca2f941c84d151c147195
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04d1397494aec0d35e0ecfa9debcb6f844e6ebc2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733135"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   アーティクルに関する情報を返します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されるか、サブスクリプションデータベースの再パブリッシュサブスクライバーで実行されます。  
   
@@ -46,13 +46,13 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|アーティクルの識別子。|  
+|**id**|**int**|アーティクルの識別子。|  
 |**name**|**sysname**|アーティクルの名前。|  
 |**source_owner**|**sysname**|ソースオブジェクトの所有者の名前。|  
 |**source_object**|**sysname**|追加するアーティクルのソース オブジェクトの名前。|  
 |**sync_object_owner**|**sysname**|パブリッシュされたアーティクルを定義するビューの所有者の名前。|  
 |**sync_object**|**sysname**|パーティションの初期データを確立するために使用されるカスタムオブジェクトの名前。|  
-|**記述**|**nvarchar(255)**|アーティクルの説明です。|  
+|**description**|**nvarchar(255)**|アーティクルの説明です。|  
 |**status**|**tinyint**|アーティクルの状態。次のいずれかの値になります。<br /><br /> **1** = 非アクティブ<br /><br /> **2** = アクティブ<br /><br /> **5** = データ定義言語 (DDL) 操作の保留中<br /><br /> **6** = 新しく生成されたスナップショットを使用する DDL 操作<br /><br /> 注: アーティクルが再初期化されると、 **5**と**6**の値が**2**に変更されます。|  
 |**creation_script**|**nvarchar(255)**|サブスクリプションデータベースでアーティクルを作成するために使用される、オプションのアーティクルスキーマスクリプトのパスと名前です。|  
 |**conflict_table**|**nvarchar (270)**|挿入または更新の競合を格納するテーブルの名前。|  
@@ -68,7 +68,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**int**|自動 id 範囲の処理が有効になっている場合は。**1**は有効で、 **0**は無効になっています。|  
 |**pub_identity_range**|**bigint**|新しい id 値を割り当てるときに使用する範囲のサイズ。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
 |**identity_range**|**bigint**|新しい id 値を割り当てるときに使用する範囲のサイズ。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
-|**進入**|**int**|[!INCLUDE[ssEW](../../includes/ssew-md.md)]または以前のバージョンのを実行しているサブスクライバーで使用されるパーセンテージ値 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **しきい値**は、マージエージェントが新しい id 範囲を割り当てるタイミングを制御します。 [しきい値] で指定した値のパーセンテージが使用されると、マージエージェントによって新しい id 範囲が作成されます。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
+|**threshold**|**int**|[!INCLUDE[ssEW](../../includes/ssew-md.md)]または以前のバージョンのを実行しているサブスクライバーで使用されるパーセンテージ値 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **しきい値**は、マージエージェントが新しい id 範囲を割り当てるタイミングを制御します。 [しきい値] で指定した値のパーセンテージが使用されると、マージエージェントによって新しい id 範囲が作成されます。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
 |**verify_resolver_signature**|**int**|マージレプリケーションで競合回避モジュールを使用する前にデジタル署名を検証する場合は、**0**は、署名が検証されないことを示します。 **1**は、署名が信頼できるソースからのものかどうかを確認することを意味します。|  
 |**destination_object**|**sysname**|対象オブジェクトの名前。 ストアド プロシージャ、ビュー、および UDF スキーマ アーティクルをマージするときのみ適用されます。|  
 |**allow_interactive_resolver**|**int**|インタラクティブ競合回避モジュールが記事で使用されている場合**1**は、このリゾルバーが使用されることを示し、 **0**は使用されないことを示します。|  
@@ -87,7 +87,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergearticle**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

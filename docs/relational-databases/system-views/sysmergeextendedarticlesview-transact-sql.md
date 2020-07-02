@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 576fe599772454cb0cc8a01bf28c530f5cdfb13b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb2b30da196f79fc10905ffb3ead95f8b5fca4d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278175"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733048"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sysmergeextendedarticlesview**ビューは、アーティクル情報を公開します。 このビューは、パブリッシャーのパブリケーションデータベースとサブスクライバーのサブスクリプションデータベースに格納されます。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "72278175"
 |**sync_objid**|**int**|同期されたデータセットを表すビューの識別子。|  
 |**view_type**|**tinyint**|ビューの種類。<br /><br /> **0** = ビューではありません。すべてのベースオブジェクトを使用します。<br /><br /> **1** = 永続的なビュー。<br /><br /> **2** = 一時ビュー。|  
 |**artid**|**uniqueidentifier**|指定されたアーティクルの一意の識別番号。|  
-|**記述**|**nvarchar(255)**|記事の簡単な説明。|  
+|**description**|**nvarchar(255)**|記事の簡単な説明。|  
 |**pre_creation_command**|**tinyint**|サブスクリプションデータベースでアーティクルが作成されたときに実行する既定のアクションです。<br /><br /> **0** = なし-サブスクライバーにテーブルが既に存在する場合、アクションは実行されません。<br /><br /> **1** = Drop-テーブルを再作成する前に削除します。<br /><br /> **2** = 削除-サブセットフィルターの WHERE 句に基づいて削除を発行します。<br /><br /> **3** = 切り捨て-2 と同じですが、行ではなくページを削除します。 ただし、は WHERE 句を受け取りません。|  
 |**pubid**|**uniqueidentifier**|現在のアーティクルが属するパブリケーションの ID。|  
 |**ニックネーム**|**int**|アーティクル id のニックネームマッピングです。|  
@@ -67,7 +67,7 @@ ms.locfileid: "72278175"
 |**identity_support**|**int**|Id 範囲の自動処理を有効にするかどうかを指定します。 **1**は、id 範囲の処理が有効になっていることを示し、 **0**は id 範囲のサポートがないことを意味します。|  
 |**destination_owner**|**sysname**|目的のオブジェクトの所有者名。|  
 |**before_image_objid**|**int**|追跡テーブルオブジェクト ID です。 パブリケーションがパーティション変更の最適化を有効にするように構成されている場合、追跡テーブルには特定のキー列の値が含まれます。|  
-|**before_view_objid**|**int**|ビューテーブルのオブジェクト ID。 ビューは、削除または更新される前に、行が特定のサブスクライバーに属しているかどうかを追跡するテーブルにあります。 * \@Keep_partition_changes* = **true**を使用してパブリケーションが作成された場合にのみ適用されます。|  
+|**before_view_objid**|**int**|ビューテーブルのオブジェクト ID。 ビューは、削除または更新される前に、行が特定のサブスクライバーに属しているかどうかを追跡するテーブルにあります。 * \@ Keep_partition_changes*true を使用してパブリケーションが作成された場合にのみ適用され  =  **true**ます。|  
 |**verify_resolver_signature**|**int**|マージレプリケーションで競合回避モジュールを使用する前に、デジタル署名を検証するかどうかを指定します。<br /><br /> **0** = 署名は検証されません。<br /><br /> **1** = 署名は、信頼されたソースからのものかどうかを確認するために検証されます。|  
 |**allow_interactive_resolver**|**bit**|アーティクルに対してインタラクティブ競合回避モジュールの使用を有効にするかどうかを指定します。 **1**は、インタラクティブ競合回避モジュールがアーティクルで使用されることを示します。|  
 |**fast_multicol_updateproc**|**bit**|1 つの UPDATE ステートメントで同じ行の複数の列に対して変更を適用するように、マージ エージェントが有効になっているかどうかを示します。<br /><br /> **0** = 変更された列ごとに個別の更新を発行します。<br /><br /> **1** = update ステートメントで発行され、1つのステートメントで複数の列に対して更新が行われるようにします。|  
@@ -83,12 +83,12 @@ ms.locfileid: "72278175"
 |**compensate_for_errors**|**bit**|同期中にエラーが検出されたときに補正アクションが行われるかどうかを示します。<br /><br /> **0** = 補正アクションは無効です。<br /><br /> **1** = サブスクライバーまたはパブリッシャーで適用できない変更は、常に、マージレプリケーションの既定の動作である変更を元に戻す補正アクションにつながります。<br /><br /> 注: 値が**0**の場合は、非収束になります。|  
 |**pub_range**|**bigint**|パブリッシャーの id 範囲のサイズ。|  
 |**range**|**bigint**|調整でサブスクライバーに割り当てられる連続する id 値のサイズ。|  
-|**進入**|**int**|Id 範囲のしきい値の割合。|  
+|**threshold**|**int**|Id 範囲のしきい値の割合。|  
 |**metadata_select_proc**|**sysname**|マージレプリケーションシステムテーブル内のメタデータにアクセスするために使用する、自動的に生成されたストアドプロシージャの名前。|  
 |**stream_blob_columns**|**bit**|バイナリ ラージ オブジェクトの列をレプリケートするときに、データ ストリーム最適化が使用されるかどうかを示します。 **1**は、最適化が試行されることを意味します。|  
 |**preserve_rowguidcol**|**bit**|レプリケーションが既存の rowguid 列を使用するかどうかを示します。 値**1**は、既存の ROWGUIDCOL 列が使用されることを意味します。 **0**は、レプリケーションによって ROWGUIDCOL 列が追加されたことを示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   

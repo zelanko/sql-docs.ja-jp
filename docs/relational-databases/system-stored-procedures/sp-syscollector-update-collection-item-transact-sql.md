@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e14f60cb3e1a4493e58968913a3ae840625e190f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 786f2d3aa1b0f415ea349e9196082f305e904db8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725516"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   ユーザー定義のコレクション アイテムのプロパティまたは名前の変更に使用されます。  
   
@@ -88,10 +88,10 @@ WHERE collection_item_id = <collection_item_id>;
   
 -   @parameters  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、「 [sp_syscollector_create_collection_item &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)」で定義されている例で作成したコレクションアイテムに基づいています。  
   
-### <a name="a-changing-the-collection-frequency"></a>A. 収集頻度を変更する  
+### <a name="a-changing-the-collection-frequency"></a>A: 収集頻度を変更する  
  次の例では、指定したコレクション アイテムの収集頻度を変更します。  
   
 ```  
@@ -103,7 +103,7 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-### <a name="b-renaming-a-collection-item"></a>B. コレクションアイテムの名前の変更  
+### <a name="b-renaming-a-collection-item"></a>B: コレクションアイテムの名前の変更  
  次の例では、コレクション アイテムの名前を変更します。  
   
 ```  
@@ -115,7 +115,7 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-### <a name="c-changing-the-parameters-of-a-collection-item"></a>C. コレクション アイテムのパラメーターを変更する  
+### <a name="c-changing-the-parameters-of-a-collection-item"></a>C: コレクション アイテムのパラメーターを変更する  
  次の例では、コレクションアイテムに関連付けられているパラメーターを変更します。 `<Value>` 属性内で定義されているステートメントを変更し、`UseSystemDatabases` 属性を false に設定します。 このアイテムの現在のパラメーターを表示するには、syscollector_collection_items システム ビューの parameters 列にクエリを実行します。 の値を変更することが必要になる場合があり `@collection_item_id` ます。  
   
 ```  
@@ -137,7 +137,7 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データコレクション](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_create_collection_item &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
