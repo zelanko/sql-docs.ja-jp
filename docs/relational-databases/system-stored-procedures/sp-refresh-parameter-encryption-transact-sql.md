@@ -19,15 +19,15 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47f622c287eb0e32e1c5db2d33b64af2de3e379b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 87b905aa178aec6aa10d4d7585384183bdb5d6c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783005"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 現在のデータベースのスキーマバインドされていないストアドプロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベースレベルの DDL トリガー、またはサーバーレベルの DDL トリガーのパラメーターの Always Encrypted メタデータを更新します。 
 
@@ -48,14 +48,14 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 `[ @name = ] 'module_name'`ストアドプロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベースレベルの DDL トリガー、またはサーバーレベルの DDL トリガーの名前を指定します。 *module_name*を共通言語ランタイム (clr) ストアドプロシージャまたは clr 関数にすることはできません。 *module_name*をスキーマバインドにすることはできません。 の*module_name*はで `nvarchar` 、既定値はありません。 *module_name*にはマルチパート識別子を指定できますが、参照できるのは現在のデータベース内のオブジェクトだけです。
 
-`[ @namespace = ] ' < class > '`は、指定されたモジュールのクラスです。 *Module_name*が DDL トリガーである場合 `<class>` は、が必要です。 `<class>` は `nvarchar(20)` です。 有効な入力値は `DATABASE_DDL_TRIGGER` 、と `SERVER_DDL_TRIGGER` です。    
+`[ @namespace = ] ' < class > '`は、指定されたモジュールのクラスです。 *Module_name*が DDL トリガーである場合 `<class>` は、が必要です。 `<class>` が `nvarchar(20)`です。 有効な入力値は `DATABASE_DDL_TRIGGER` 、と `SERVER_DDL_TRIGGER` です。    
 
 ## <a name="return-code-values"></a>リターン コードの値  
 
 0 (成功) または0以外の数値 (失敗)
 
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 次の場合、モジュールのパラメーターの暗号化メタデータが古くなる可能性があります。   
 * モジュールが参照しているテーブル内の列の暗号化プロパティが更新されました。 たとえば、列が削除され、同じ名前の新しい列が存在しますが、別の暗号化の種類、暗号化キー、または暗号化アルゴリズムが追加されています。  
@@ -153,7 +153,7 @@ EXEC sp_refresh_parameter_encryption [find_patient];
 GO
 ```
 
-## <a name="see-also"></a>参照 
+## <a name="see-also"></a>関連項目 
 
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Always Encrypted ウィザード](../../relational-databases/security/encryption/always-encrypted-wizard.md)   

@@ -20,15 +20,15 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f51c090baea876c662b3fa31210d1eec59139bf4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9ab99e0ce3e63a42795d17fc859bbbd3b6c8059d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785020"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   データベース自体に保存されているデータベースのファイルごとに 1 行のデータを格納します。 これはデータベース単位のビューです。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82823489"
 |**type_desc**|**nvarchar(60)**|ファイルの種類の説明。<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|値には0または0より大きい値を指定できます。 値0はデータベースログファイルを表し、0より大きい値はこのデータファイルが格納されているファイルグループの ID を表します。|  
 |**name**|**sysname**|データベース内のファイルの論理名。|  
-|**physical_name**|**nvarchar(260)**|オペレーティングシステムのファイル名。 データベースが AlwaysOn の[読み取り可能なセカンダリレプリカ](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)によってホストされている場合、 **physical_name**は、プライマリレプリカデータベースのファイルの場所を示します。 読み取り可能なセカンダリデータベースの正しいファイルの場所については、 [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)をクエリします。|  
+|**physical_name**|**nvarchar(260)**|オペレーティングシステムのファイル名。 データベースが AlwaysOn の[読み取り可能なセカンダリレプリカ](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)によってホストされている場合、 **physical_name**は、プライマリレプリカデータベースのファイルの場所を示します。 読み取り可能なセカンダリデータベースの正しいファイルの場所に対して、クエリ[sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)を使用します。|  
 |**状態**|**tinyint**|ファイルの状態です。<br /><br /> 0 = ONLINE<br /><br /> 1 = 復元中<br /><br /> 2 = 回復中<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = 問題あり<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|ファイルの状態の説明です。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 詳しくは、「[ファイルの状態](../../relational-databases/databases/file-states.md)」をご覧ください。|  
 |**size**|**int**|ファイルの現在のサイズ (8 KB ページ単位)。<br /><br /> 0 = 適用なし<br /><br /> データベース スナップショットの場合、size は、スナップショットがファイルに対して使用する中で最大の領域を表します。<br /><br /> FILESTREAM ファイルグループコンテナーの場合、サイズはコンテナーの現在使用されているサイズを反映します。|  
@@ -68,7 +68,7 @@ ms.locfileid: "82823489"
 >  大きなインデックスを削除または再構築したり、大きなテーブルを削除したり切り捨てたりすると、では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] トランザクションがコミットされるまで、実際のページの割り当て解除とそれに関連付けられているロックが延期されます。 遅延削除操作では、割り当てられた領域はすぐに解放されません。 そのため、ラージオブジェクトを削除または切り捨てた直後に、sys. database_files によって返された値は、実際に使用可能なディスク領域を反映していない可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- ロール **public** のメンバーシップが必要です。  詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
 
 ## <a name="examples"></a>使用例  
 次のステートメントは、各データベースファイルの名前、ファイルサイズ、および空き領域の大きさを返します。
@@ -81,7 +81,7 @@ FROM sys.database_files;
 ```
 を使用する場合の詳細につい [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ては、SQL Customer アドバイザリチームブログの「 [Azure SQL Database V12 でのデータベースサイズの決定](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/)」を参照してください。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースとファイルのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [ファイルの状態](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

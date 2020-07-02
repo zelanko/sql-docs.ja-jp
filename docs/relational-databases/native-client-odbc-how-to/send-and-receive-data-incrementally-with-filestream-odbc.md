@@ -11,15 +11,15 @@ ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba9829fc2273959f2292d8a3e9ed8e3975c0a525
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d58e2658f4dde3cbbe083c73b203b1a3f803a13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281822"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783249"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>FILESTREAM を使用したデータのインクリメンタル式での送受信 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   このサンプルでは、FILESTREAM 機能を使用して、SQLPutData と SQLGetData でデータをインクリメンタル式に送受信する方法を紹介します。  
   
@@ -28,11 +28,11 @@ ms.locfileid: "81281822"
 ## <a name="example"></a>例  
  このサンプルをコンパイルして実行する前に、FILESTREAM のサポートを有効にしてください (「[FILESTREAM の有効化と構成](../../relational-databases/blob/enable-and-configure-filestream.md)」を参照)。  
   
- 1つ目[!INCLUDE[tsql](../../includes/tsql-md.md)]の () コードリストは、このサンプルで使用するデータベースを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスには、このスクリプトを実行するための書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
+ 1つ目の ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) コードリストは、このサンプルで使用するデータベースを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスには、このスクリプトを実行するための書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
   
  2 つ目のコード リストは C++ コードです。 サーバーを指定する必要があります。C++ コード リストで、"MyServer" を有効なサーバー名に変更してください。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib、および /EHsc を使用して C++ コード リストをコンパイルします。  
   
- 3番目[!INCLUDE[tsql](../../includes/tsql-md.md)]の () コードリストは、このサンプルで使用されるデータベースを削除します。  
+ 3番目の ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) コードリストは、このサンプルで使用されるデータベースを削除します。  
   
 ```sql
 USE master  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b5d39e560b3137daf711ea49794fe6a2a0499743
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 1a0b9cf43331e45d4aa1253fe5ad4b90d0bbea92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775459"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery と静的な型指定
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の XQuery は静的型指定の言語です。 つまり、特定の関数または演算子で受け入れられない型またはカーディナリティを持つ値が式から返された場合、クエリのコンパイル中に型エラーが発生します。 また、静的な型チェックでは、型指定された XML ドキュメントのパス式の入力ミスが間違いであるかどうかを検出することもできます。 XQuery コンパイラは、アトミック化などの暗黙的な操作を加える正規化を適用してから、静的な型の推定および確認を行います。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "84529726"
 ### <a name="example-operator-over-union-type"></a>例: Union 型に対する演算子  
  加算演算 (' + ') には、オペランドの正確な型が必要です。 その結果、式は、 `(//r)[1] + 1` 前に説明した要素 <> の型定義を持つ静的エラーを返し `r` ます。 解決策の 1 つは、「`(//r)[1] cast as xs:int? +1`」("?" は 0 回または 1 回の出現を示す) に書き換える方法です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、すべてのキャストは実行時エラーの結果として空のシーケンスになる可能性があるので、"cast as" に "?" を付ける必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

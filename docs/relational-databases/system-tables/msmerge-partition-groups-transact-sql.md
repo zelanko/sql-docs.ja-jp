@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36dcdf9fbe003daa110c38a9e3f10650af422075
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2e0c7be221847924f48523526793fcd3d4664477
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784843"
 ---
 # <a name="msmerge_partition_groups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_partition_groups**テーブルには、特定のデータベースの事前計算済みパーティションごとに1つの行が格納されます。 表示される列に加えて、パラメーター化された行フィルターで使用される関数ごとに1つの列がこのテーブルに追加されます。 たとえば、フィルターで[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)関数が使用されている場合は、 **HOST_NAME_FN**という名前の列がテーブルに追加されます。 このパブリッシャーと同期した関数値の一意のセットごとに1つの行が格納されます。 これらすべての関数について、まったく同じ値と同期している 2 つ以上のサブスクライバーは、このテーブルの同じ行を共有しているので、同じパーティション ID を共有します。このテーブルは、パブリケーション データベースに格納されます。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82827233"
 |**using_partition_groups**|**bit**|パーティションが事前計算済みパーティションを使用するパブリケーションに属しているかどうかを示し、次のいずれかの値を指定できます。<br /><br /> **0** = パブリケーションは事前計算済みパーティションを使用しません。<br /><br /> **1** = パブリケーションは事前計算済みパーティションを使用します。<br /><br /> 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。|  
 |**HOST_NAME_FN**|**nvarchar(128)**|パラメーター化された行フィルターを使用してパーティションを生成するときに指定される値。 詳しくは、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

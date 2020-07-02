@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ef05644d0d36f8cc784afbf7e4face426817a30
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 4756d86070e933f4c281922d54d80974832e9f5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524480"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775503"
 ---
 # <a name="general-xquery-use-cases"></a>XQuery の一般的な使用例
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、XQuery の使用例について説明します。  
   
@@ -89,7 +89,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
   
  上記のクエリでは、WHERE 句で**xml**データ型の**exist ()** メソッドが、 `Weight` <> 要素に <> 要素があるかどうかを確認し `Specifications` ます。  
   
-### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. カタログの説明に正面からの小さな製品写真が含まれる製品モデルの製品モデル ID の検索  
+### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B: カタログの説明に正面からの小さな製品写真が含まれる製品モデルの製品モデル ID の検索  
  XML 製品カタログの説明には、製品の画像、<> 要素が含まれてい `Picture` ます。 各写真には、いくつかのプロパティがあります。 これには、画像の角度、<`Angle`> 要素、サイズ、<> 要素が含まれ `Size` ます。  
   
  カタログの説明に正面と小さいサイズの画像が含まれる製品モデルの場合、クエリでは次の形式の XML が構築されます。  
@@ -136,7 +136,7 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
 ...  
 ```  
   
-### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. 製品モデルの名前と特徴のペアの単純なリストを作成します。各ペアは要素で囲まれています。 \<Features>  
+### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C: 製品モデルの名前と特徴のペアの単純なリストを作成します。各ペアは要素で囲まれています。 \<Features>  
  製品モデルカタログの説明では、XML にいくつかの製品機能が含まれています。 これらの機能はすべて <> 要素に含まれてい `Features` ます。 このクエリでは、 [Xml 構築 (XQuery)](../xquery/xml-construction-xquery.md)を使用して、必要な xml を構築します。 中かっこ内の式は、結果に置き換えられます。  
   
 ```  
@@ -187,7 +187,7 @@ WHERE ProductModelID=19
 ...      
 ```  
   
-### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. 製品モデルのカタログの説明から製品モデルの名前、モデル ID、および要素内にグループ化された機能を一覧表示します。 \<Product>  
+### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D: 製品モデルのカタログの説明から製品モデルの名前、モデル ID、および要素内にグループ化された機能を一覧表示します。 \<Product>  
  次のクエリでは、製品モデルのカタログの説明に格納されている情報を使用して、製品モデルの名前、モデル ID、および要素内にグループ化された機能を一覧表示し \<Product> ます。  
   
 ```  
@@ -339,7 +339,7 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
   
 -   すべての製品の説明には <の> 要素が含まれているため `Picture` 、この場合、結果セットは空になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層に関連する XQueries](../xquery/xqueries-involving-hierarchy.md)   
  [注文に関連する XQueries](../xquery/xqueries-involving-order.md)   
  [XQueries リレーショナルデータを処理する](../xquery/xqueries-handling-relational-data.md)   

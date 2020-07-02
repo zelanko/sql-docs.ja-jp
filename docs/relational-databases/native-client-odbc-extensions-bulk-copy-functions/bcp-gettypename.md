@@ -18,15 +18,15 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12c4be2e1145d488ed057df5b206042b31bdb5b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782656"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774284"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   指定された BCP 型トークンの SQL 型名を返します。  
   
@@ -54,7 +54,7 @@ RETCODE bcp_gettypename (
   
  次の表では、指定できる BCP 型、それらの BCP 型が max 型かどうか、および予想される出力を示しています。  
   
-|BCP 型名|MaxType|Output|  
+|BCP 型名|MaxType|出力|  
 |-------------------|-------------|------------|  
 |**SQLDECIMAL**|接続前/接続後|**decimal**|  
 |**SQLNUMERIC**|接続前/接続後|**numeric**|  
@@ -72,7 +72,7 @@ RETCODE bcp_gettypename (
 |**SQLVARCHAR**|いいえ|**varchar**|  
 |**SQLTEXT**|接続前/接続後|**text**|  
 |**SQLBIGBINARY**|いいえ|**[バイナリ]**|  
-|**SQLBINARY**|いいえ|**バイナリ**|  
+|**SQLBINARY**|いいえ|**Binary**|  
 |**SQLBIGVARBINARY**|いいえ|**可変長**|  
 |**SQLVARBINARY**|いいえ|**可変長**|  
 |**SQLIMAGE**|接続前/接続後|**Image**|  
@@ -82,7 +82,7 @@ RETCODE bcp_gettypename (
 |**SQLFLTN**|接続前/接続後|**float-null**|  
 |**SQLAOPSUM**|接続前/接続後|**求め**|  
 |**SQLAOPAVG**|接続前/接続後|**Avg**|  
-|**SQLAOPCNT**|接続前/接続後|**Count**|  
+|**SQLAOPCNT**|接続前/接続後|**カウント**|  
 |**SQLAOPMIN**|接続前/接続後|**」**|  
 |**SQLAOPMAX**|接続前/接続後|**制限**|  
 |**SQLDATETIM4**|接続前/接続後|**smalldatetime**|  
@@ -112,7 +112,7 @@ RETCODE bcp_gettypename (
   
  詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

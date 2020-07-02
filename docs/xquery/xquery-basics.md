@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92882722baab0284f421989ba4906e60e777049e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4d0568988fc1652005b036cefebe507b9a47f82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388137"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775447"
 ---
 # <a name="xquery-basics"></a>XQuery の基礎
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   ここでは、XQuery の基礎について説明します。  
   
@@ -47,12 +47,12 @@ ms.locfileid: "81388137"
  XQuery の静的エラー、動的エラー、および型エラーの処理について説明します。  
   
  [XQuery のコメント](../xquery/comments-in-xquery.md)  
- "`(:`" および "`:)`" 区切り記号を使用して XQuery にコメントを追加する方法について説明します。  
+ " `(:` " および " `:)` " 区切り記号を使用して XQuery にコメントを追加する方法について説明します。  
   
  [XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)  
  静的に型指定された言語として [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の XQuery について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8241e15643eb4aa25912451ddfed94699954797f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52d3c9676adbd95d219221270090dbcedc798bfb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388606"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775423"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>XQuery Extension Functions - sql:variable()
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   SQL リレーショナル値を含む変数を XQuery 式内部に公開します。  
   
@@ -51,11 +51,11 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
 -   XML 以外の列の値 (`ProductID`)。 [Sql: column () 関数](../xquery/xquery-extension-functions-sql-column.md)は、この値を XML にバインドするために使用されます。  
   
--   他のテーブルの XML 以外の列の値 (`ListPrice`)。 この場合`sql:column()`も、を使用して、この値を XML にバインドします。  
+-   他のテーブルの XML 以外の列の値 (`ListPrice`)。 この場合 `sql:column()` も、を使用して、この値を XML にバインドします。  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)] 変数の値 (`DiscountPrice`)。 この`sql:variable()`値を XML にバインドするには、メソッドを使用します。  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)] 変数の値 (`DiscountPrice`)。 `sql:variable()`この値を XML にバインドするには、メソッドを使用します。  
   
--   Xml 型の`ProductModelName`列の値**xml** () を使用して、クエリをさらに興味深いものにします。  
+-   `ProductModelName` **Xml**型の列の値 () を使用して、クエリをさらに興味深いものにします。  
   
  クエリは次のとおりです。  
   
@@ -81,9 +81,9 @@ WHERE ProductID=771
   
  上のクエリに関して、次の点に注意してください。  
   
--   `query()`メソッド内の XQuery により、XML が構築されます。  
+-   メソッド内の XQuery により、 `query()` XML が構築されます。  
   
--   `namespace`キーワードは、 [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)で名前空間プレフィックスを定義するために使用されます。 これは、 `ProductModelName`属性値が、関連付けられ`CatalogDescription xml`ているスキーマを持つ型列から取得されるためです。  
+-   `namespace`キーワードは、 [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)で名前空間プレフィックスを定義するために使用されます。 これは、 `ProductModelName` 属性値が、 `CatalogDescription xml` 関連付けられているスキーマを持つ型列から取得されるためです。  
   
  結果を次に示します。  
   
@@ -93,12 +93,12 @@ WHERE ProductID=771
          ListPrice="3399.99" DiscountPrice="2500" />  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery 拡張関数の SQL Server](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XML データのインスタンスの作成](../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml データ型のメソッド](../t-sql/xml/xml-data-type-methods.md)   
+ [xml データ型メソッド](../t-sql/xml/xml-data-type-methods.md)   
  [XML データ変更言語 &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

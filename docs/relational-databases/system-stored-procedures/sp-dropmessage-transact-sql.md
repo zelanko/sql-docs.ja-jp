@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa242b7adf46269402b28d459eace429fd247bc1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0c12c9fd481b8fdef50f9a2e0339b276598cd69a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783806"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   のインスタンスから、指定されたユーザー定義エラーメッセージを削除 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] します。 ユーザー定義のメッセージは、**システム**カタログビューを使用して表示できます。  
   
@@ -53,7 +53,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**および**serveradmin**固定サーバーロールのメンバーシップが必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *Language*に**all**を指定しない限り、英語版のメッセージを削除する前に、メッセージのすべてのローカライズ版を削除する必要があります。  
   
 ## <a name="examples"></a>例  
@@ -67,7 +67,7 @@ GO
 EXEC sp_dropmessage 50001;  
 ```  
   
-### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>B. ローカライズされたバージョンを含むユーザー定義メッセージを削除する  
+### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>B: ローカライズされたバージョンを含むユーザー定義メッセージを削除する  
  次の例では、 `60000` メッセージのローカライズされたバージョンを含む、ユーザー定義のメッセージ番号を削除します。  
   
 ```  
@@ -101,7 +101,7 @@ EXEC sp_dropmessage
 GO  
 ```  
   
-### <a name="c-dropping-a-localized-version-of-a-user-defined-message"></a>C. ユーザー定義メッセージのローカライズ版の削除  
+### <a name="c-dropping-a-localized-version-of-a-user-defined-message"></a>C: ユーザー定義メッセージのローカライズ版の削除  
  次の例では、メッセージ全体を削除せずに、ユーザー定義のメッセージ数のローカライズ版を削除し `60000` ます。  
   
 ```  
@@ -130,7 +130,7 @@ EXEC sp_dropmessage
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_altermessage &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   

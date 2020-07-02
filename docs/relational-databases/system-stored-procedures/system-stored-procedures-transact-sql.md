@@ -22,15 +22,15 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6d46a0e06f96f646ebd68e383ad26f99e309082
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037324"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783639"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>システム ストアド プロシージャ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、システム ストアド プロシージャを使用して、さまざまな管理操作や情報操作を実行できます。 システム ストアド プロシージャは、次の表に示すカテゴリに分類されます。  
   
@@ -44,16 +44,16 @@ ms.locfileid: "68037324"
 |[カーソル ストアド プロシージャ](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|カーソル変数の機能を実装するために使用されます。|  
 |[データ コレクター ストアド プロシージャ](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)|データコレクターおよび次のコンポーネント (コレクションセット、コレクションアイテム、コレクション型) を操作するために使用します。|  
 |[データベース エンジン ストアド プロシージャ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の全般的なメンテナンスに使用します。|  
-|[Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内から電子メール操作を実行するために使用されます。|  
+|[Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|のインスタンス内から電子メール操作を実行するために使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |[データベース メンテナンス プラン ストアド プロシージャ](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|データベースのパフォーマンスの管理に必要な基本のメンテナンス タスクを設定する場合に使用します。|  
 |[分散クエリ ストアド プロシージャ](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|分散クエリを実装および管理するために使用します。|  
 |[Filestream および FileTable ストアドプロシージャ &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|FILESTREAM 機能および FileTable 機能の構成と管理に使用します。|  
 |[ファイアウォールルールのストアドプロシージャ &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Azure SQL Database ファイアウォールを構成するために使用します。|  
 |[フルテキスト検索ストアド プロシージャ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|フルテキストインデックスの実装とクエリに使用されます。|  
-|[汎用拡張ストアド プロシージャ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|さまざまなメンテナンス作業のために、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスから外部プログラムへのインターフェイスを提供するために使用されます。|  
+|[汎用拡張ストアド プロシージャ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|さまざまなメンテナンス作業のために、のインスタンスから外部プログラムへのインターフェイスを提供するために使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |[ログ配布ストアド プロシージャ](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)|ログ配布構成を構成、変更、および監視するために使用します。|  
 |[管理データ ウェアハウスのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|管理データウェアハウスを構成するために使用します。|  
-|[OLE オートメーションストアドプロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|標準[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ内で使用する標準オートメーションオブジェクトを有効にするために使用されます。|  
+|[OLE オートメーションストアドプロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|標準バッチ内で使用する標準オートメーションオブジェクトを有効にするために使用され [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。|  
 |[ポリシー ベースの管理ストアド プロシージャ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|ポリシー ベースの管理に使用します。|  
 |[PolyBase ストアド プロシージャ](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|PolyBase スケールアウトグループのコンピューターを追加または削除します。|  
 |[クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|パフォーマンスを調整するために使用します。|  
@@ -62,7 +62,7 @@ ms.locfileid: "68037324"
 |[スナップショットバックアップストアドプロシージャ](https://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|FILE_SNAPSHOT バックアップをすべてのスナップショットと共に削除したり、個々のバックアップファイルスナップショットを削除したりする場合に使用します。|  
 |[空間インデックスストアドプロシージャ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|空間インデックスのインデックス作成のパフォーマンスを分析し、改善するために使用されます。|  
 |[SQL Server エージェント ストアド プロシージャ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] で、パフォーマンスと利用状況の監視に使用します。|  
-|[SQL Server Profiler ストアド プロシージャ](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|スケジュールさ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れたアクティビティとイベントドリブンアクティビティを管理するためにエージェントによって使用されます。|  
+|[SQL Server Profiler ストアド プロシージャ](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|スケジュールされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクティビティとイベントドリブンアクティビティを管理するためにエージェントによって使用されます。|  
 |[ストアドプロシージャの Stretch Database](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Stretch データベースを管理するために使用します。|  
 |[テンポラルテーブルストアドプロシージャ](https://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|テンポラルテーブルに使用する|  
 |[XML ストアド プロシージャ](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)|XML テキストの管理に使用します。|  
@@ -71,15 +71,15 @@ ms.locfileid: "68037324"
 >  特に明記されていない限り、すべてのシステムストアドプロシージャは、成功を示す値0を返します。 失敗した場合は、0 以外の値が返されます。  
   
 ## <a name="api-system-stored-procedures"></a>API システム ストアド プロシージャ  
- ADO、OLE DB [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 、および ODBC アプリケーションに対して実行するユーザーは、この[!INCLUDE[tsql](../../includes/tsql-md.md)]リファレンスで説明されていないシステムストアドプロシージャを使用して、これらのアプリケーションに気付くことがあります。 これらのストアドプロシージャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB プロバイダーおよび[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client ODBC ドライバーによって、データベース API の機能を実装するために使用されます。 ユーザー要求を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに伝えるための機能を持っています。 プロバイダーまたはドライバーの内部使用のみを目的としています。 ベースのアプリケーションから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の明示的な呼び出しはサポートされていません。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]ADO、OLE DB、および ODBC アプリケーションに対して実行するユーザーは、このリファレンスで説明されていないシステムストアドプロシージャを使用して、これらのアプリケーションに気付くことがあり [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 これらのストアドプロシージャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client OLE DB プロバイダーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client ODBC ドライバーによって、データベース API の機能を実装するために使用されます。 ユーザー要求を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに伝えるための機能を持っています。 プロバイダーまたはドライバーの内部使用のみを目的としています。 ベースのアプリケーションからの明示的な呼び出し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はサポートされていません。  
   
  Sp_createorphan および sp_droporphans ストアドプロシージャは、ODBC の**ntext**、**テキスト**、および**イメージ**の処理に使用されます。  
   
  sp_reset_connection ストアド プロシージャは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でトランザクション内のリモート ストアド プロシージャ呼び出しをサポートする場合に使用します。 このストアドプロシージャは、接続が接続プールから再利用された場合に、Audit Login イベントと Audit Logout イベントも発生させます。  
   
- 次の表のシステムストアドプロシージャは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内、またはクライアント api を使用してのみ使用され、一般的なユーザーの使用は想定されていません。 これらは変更される可能性があり、互換性は保証されていません。  
+ 次の表のシステムストアドプロシージャは、のインスタンス内、またはクライアント Api を使用してのみ使用され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一般的なユーザーの使用は想定されていません。 これらは変更される可能性があり、互換性は保証されていません。  
   
- 次のストアドプロシージャは、オンライン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ブックに記載されています。  
+ 次のストアドプロシージャは、オンラインブックに記載されてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 |||  
 |-|-|  
@@ -171,7 +171,7 @@ ms.locfileid: "68037324"
 |sp_views_rowset2|sp_xml_schema_rowset|  
 |sp_xml_schema_rowset2||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [ストアドプロシージャ &#40;データベースエンジン&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [ストアドプロシージャの実行 &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   

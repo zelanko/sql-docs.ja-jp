@@ -20,16 +20,16 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e6eb1173bf191ae319dc257c42199f02a05c9455
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 52bc643e1af6f09c0f1ab8e90021ae949310968c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832004"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784930"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL データベース)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   成功した [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] データベース接続、接続エラー、およびデッドロックを返します。 この情報を使用して、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] でのデータベースの利用状況の追跡またはトラブルシューティングを行うことができます。  
   
@@ -40,16 +40,16 @@ ms.locfileid: "82832004"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|データベース名。 接続が失敗し、ユーザーがデータベース名を指定していない場合、この列は空白です。|  
+|**database_name**|**sysname**|データベースの名前です。 接続が失敗し、ユーザーがデータベース名を指定していない場合、この列は空白です。|  
 |**start_time**|**datetime2**|集計間隔の開始時刻を示す UTC 日時。 集計イベントの場合、時刻は常に 5 分単位になります。 次に例を示します。<br /><br /> ' 2011-09-28 16:00:00 '<br />' 2011-09-28 16:05:00 '<br />' 2011-09-28 16:10:00 '|  
 |**end_time**|**datetime2**|集計間隔の終了時刻を示す UTC 日時。 集計イベントの場合、 **End_time**は、同じ行の対応する**start_time**よりも常に5分後になります。 集計されていないイベントの場合、 **start_time**と**end_time**はイベントの実際の UTC 日時と同じになります。|  
 |**event_category**|**nvarchar (64)**|このイベントを生成した上位レベルのコンポーネント。<br /><br /> 使用可能な値の一覧については、「[イベントの種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)」を参照してください。|  
 |**event_type**|**nvarchar (64)**|イベントの種類。<br /><br /> 使用可能な値の一覧については、「[イベントの種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)」を参照してください。|  
 |**event_subtype**|**int**|発生したイベントのサブタイプ。<br /><br /> 使用可能な値の一覧については、「[イベントの種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)」を参照してください。|  
 |**event_subtype_desc**|**nvarchar (64)**|イベントのサブタイプの説明。<br /><br /> 使用可能な値の一覧については、「[イベントの種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)」を参照してください。|  
-|**severity**|**int**|エラーの重大度。 指定できる値は次のとおりです。<br /><br /> 0 = 情報<br />1 = 警告<br />2 = エラー|  
+|**severity**|**int**|エラーの重大度。 次のいずれかの値になります。<br /><br /> 0 = 情報<br />1 = 警告<br />2 = エラー|  
 |**event_count**|**int**|指定された期間内に、指定されたデータベースでこのイベントが発生した回数 (**start_time**および**end_time**)。|  
-|**記述**|**nvarchar(max)**|イベントの詳細な説明。<br /><br /> 使用可能な値の一覧については、「[イベントの種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)」を参照してください。|  
+|**description**|**nvarchar(max)**|イベントの詳細な説明。<br /><br /> 使用可能な値の一覧については、「[イベントの種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)」を参照してください。|  
 |**additional_data**|**XML**|*注: Azure SQL Database V12 では、この値は常に NULL です。V12 のデッドロックイベントを取得する方法については、「[例](#Deadlock)」を参照してください。*<br /><br /> **デッドロック**イベントの場合は、この列にデッドロックグラフが表示されます。 他の種類のイベントの場合、この列は NULL になります。 |  
   
 ##  <a name="event-types"></a><a name="EventTypes"></a>イベントの種類
@@ -61,7 +61,7 @@ ms.locfileid: "82832004"
 > [!NOTE]  
 > このビューには、発生する可能性のあるすべての [!INCLUDE[ssSDS](../../includes/sssds-md.md)] データベース イベントが表示されるわけではなく、この表に示されているイベントのみが表示されます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の今後のリリースで他のカテゴリ、イベントの種類、およびサブタイプが報告対象として追加される可能性はあります。  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**記述**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**description**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**できる**|**connection_successful**|0|**connection_successful**|0|データベースに正常に接続されました。|  
 |**できる**|**connection_failed**|0|**invalid_login_name**|2|ログイン名がこのバージョンの SQL Server では無効です。|  
@@ -76,7 +76,7 @@ ms.locfileid: "82832004"
 |**できる**|**connection_failed**|9|**ブート**|2|*注: Azure SQL Database V11 にのみ適用されます。*<br /><br /> データベースで再構成が行われていたため、接続に失敗しました。|  
 |**できる**|**connection_terminated**|0|**idle_connection_timeout**|2|*注: Azure SQL Database V11 にのみ適用されます。*<br /><br /> システム定義のしきい値より長く接続のアイドル状態が続いています。|  
 |**できる**|**connection_terminated**|1|**ブート**|2|*注: Azure SQL Database V11 にのみ適用されます。*<br /><br /> データベース再構成が原因で、セッションが終了しました。|  
-|**できる**|**調整**|*\<理由コード>*|**reason_code**|2|*注: Azure SQL Database V11 にのみ適用されます。*<br /><br /> 要求が調整されています。  調整理由コード: * \< 理由コード>*。 詳細については、「[エンジン調整](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)」を参照してください。|  
+|**できる**|**調整**|*\<reason code>*|**reason_code**|2|*注: Azure SQL Database V11 にのみ適用されます。*<br /><br /> 要求が調整されています。  調整理由コード: *\<reason code>* 。 詳細については、「[エンジン調整](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)」を参照してください。|  
 |**できる**|**throttling_long_transaction**|40549|**long_transaction**|2|*注: Azure SQL Database V11 にのみ適用されます。*<br /><br /> トランザクションが長時間実行されているため、セッションを終了しました。 トランザクションを短くしてください。 詳細については、「[リソースの制限](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)」を参照してください。|  
 |**できる**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注: Azure SQL Database V11 にのみ適用されます。*<br /><br /> 取得したロックの数が多すぎるため、セッションを終了しました。 1 つのトランザクションで読み取る行または変更する行の数を減らしてください。 詳細については、「[リソースの制限](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)」を参照してください。|  
 |**できる**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注: Azure SQL Database V11 にのみ適用されます。*<br /><br /> TEMPDB の使用量が多すぎるため、セッションを終了しました。 クエリを変更して一時テーブルの使用領域を減らしてください。 詳細については、「[リソースの制限](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)」を参照してください。|  
@@ -88,7 +88,7 @@ ms.locfileid: "82832004"
 
  **Master**データベースへのアクセス権限を持つユーザーには、このビューに対する読み取り専用アクセス権があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="event-aggregation"></a>イベント集計
 
@@ -99,7 +99,7 @@ ms.locfileid: "82832004"
   
  たとえば、2012 年 2 月 5 日 (UTC) の 11:00 から 11:05 までに、無効なログイン名が原因でユーザーがデータベース Database1 への接続に 7 回失敗した場合、この情報はこのビューの単一行に示されます。  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**記述**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**description**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -228,7 +228,7 @@ WITH CTE AS (
 SELECT * FROM CTE2;  
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
- [Azure SQL Database の拡張イベント](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Azure SQL データベースでの拡張イベント](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

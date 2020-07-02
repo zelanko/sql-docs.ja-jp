@@ -20,16 +20,16 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05901a97ea85deb6f45b5ee440d0eefaac1c8fd6
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7bc0873bcafa37c0fa35118fcd033caae2049449
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785012"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに、データベースごとに 1 行のデータを保持します。  
   
@@ -145,7 +145,7 @@ SELECT name, user_access_desc, is_read_only, state_desc, recovery_model_desc
 FROM sys.databases;  
 ```  
   
-### <a name="b-check-the-copying-status-in-sssds"></a>B. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] でのコピーの進行状況を確認します。
+### <a name="b-check-the-copying-status-in-sssds"></a>B: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] でのコピーの進行状況を確認します。
 
 次の例では、ビューとビューに対してクエリを実行し、 `sys.databases` `sys.dm_database_copies` データベースのコピー操作に関する情報を返します。  
   
@@ -159,7 +159,7 @@ INNER JOIN sys.dm_database_copies AS b ON a.database_id = b.database_id
 WHERE a.state = 7;  
 ```
 
-### <a name="c-check-the-temporal-retention-policy-status-in-sssds"></a>C. の一時リテンション期間ポリシーの状態を確認します。[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+### <a name="c-check-the-temporal-retention-policy-status-in-sssds"></a>C: の一時リテンション期間ポリシーの状態を確認します。[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
 
 次の例では、をクエリして、 `sys.databases` テンポラル保持クリーンアップタスクが有効になっているかどうかの情報を返します。 復元操作の後、テンポラルリテンション期間は既定で無効になっていることに注意してください。 を使用し `ALTER DATABASE` て、明示的に有効にします。
   
@@ -171,7 +171,7 @@ SELECT a.name, a.is_temporal_history_retention_enabled
 FROM sys.databases AS a;
 ```  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)
 - [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)

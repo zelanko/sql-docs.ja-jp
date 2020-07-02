@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3dd772a1519ea856cac0302d31be9eb7d0f9d782
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df0cbdda40b8e473ce81bf95b7c38e1cd2ec75c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283191"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783679"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   既存のデータベース メール アカウントの情報を変更します。  
  
@@ -64,7 +64,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @description = ] 'description'`アカウントの新しい説明。 *説明*は**nvarchar (256)**,、既定値は NULL です。  
   
-`[ @mailserver_name = ] 'server_name'`このアカウントに使用する SMTP メールサーバーの新しい名前を指定します。 を実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するコンピューターは、 *server_name*を IP アドレスに解決できる必要があります。 *server_name*は**sysname**であり、既定値はありません。  
+`[ @mailserver_name = ] 'server_name'`このアカウントに使用する SMTP メールサーバーの新しい名前を指定します。 を実行するコンピューターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *SERVER_NAME*を IP アドレスに解決できる必要があります。 *server_name*は**sysname**であり、既定値はありません。  
   
 `[ @mailserver_type = ] 'server_type'`メールサーバーの新しい種類。 *server_type*は**sysname**であり、既定値はありません。 **' SMTP '** の値のみがサポートされています。  
   
@@ -76,7 +76,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @password = ] 'password'`メールサーバーへのログオンに使用する新しいパスワード。 *パスワード*は**sysname**,、既定値はありません。  
   
-`[ @use_default_credentials = ] use_default_credentials`[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]サービスの資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定します。 **use_default_credentials**はビット,、既定値はありません。 このパラメーターが1の場合、データベースメールはの資格情報[!INCLUDE[ssDE](../../includes/ssde-md.md)]を使用します。 このパラメーターが0の場合、データベースメールは、SMTP サーバーの認証に** \@ユーザー名**と** \@パスワード**を使用します。 ** \@ユーザー名**と** \@パスワード**が NULL の場合は、匿名認証が使用されます。 このパラメーターを指定する前に、SMTP 管理者に相談してください。  
+`[ @use_default_credentials = ] use_default_credentials`サービスの資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。 **use_default_credentials**はビット,、既定値はありません。 このパラメーターが1の場合、データベースメールはの資格情報を使用し [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。 このパラメーターが0の場合、データベースメールは、SMTP サーバーの認証に** \@ ユーザー名**と** \@ パスワード**を使用します。 ** \@ ユーザー名**と** \@ パスワード**が NULL の場合は、匿名認証が使用されます。 このパラメーターを指定する前に、SMTP 管理者に相談してください。  
   
 `[ @enable_ssl = ] enable_ssl`データベースメールトランスポート層セキュリティ (TLS) を使用して通信を暗号化するかどうかを指定します。これは、以前 Secure Sockets Layer (SSL) と呼ばれていました。 このオプションは、SMTP サーバーで TLS が必要な場合に使用します。 **enable_ssl**はビット,、既定値はありません。  
   
@@ -94,7 +94,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ## <a name="examples"></a>例  
   
 ### <a name="a-changing-the-information-for-an-account"></a>A. アカウントの情報を変更する  
- 次の例では、 `AdventureWorks Administrator` **msdb**データベースのアカウントを更新します。 アカウントの情報は、指定された値に設定されます。  
+ 次の例では、msdb データベースのアカウントを更新し `AdventureWorks Administrator` ます。 **msdb** アカウントの情報は、指定された値に設定されます。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  
@@ -113,8 +113,8 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
     ,@enable_ssl = 0;  
 ```  
   
-### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>B. アカウントの名前とアカウントの情報を変更する  
- 次の例では、アカウント ID `125` の名前を変更し、アカウント情報を更新します。 アカウントの新しい名前は`Backup Mail Server`です。  
+### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>B: アカウントの名前とアカウントの情報を変更する  
+ 次の例では、アカウント ID `125` の名前を変更し、アカウント情報を更新します。 アカウントの新しい名前は `Backup Mail Server` です。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  
@@ -134,7 +134,7 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
     ,@enable_ssl = 0;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

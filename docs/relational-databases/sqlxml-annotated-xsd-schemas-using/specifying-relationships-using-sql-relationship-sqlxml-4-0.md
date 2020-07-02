@@ -30,15 +30,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58155c9ec390259410538e9716dad87146acda2a
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 15274c3b46ac7b0dfb3e9f43fad0dd1174f5fbbf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215717"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775765"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship を使用した、リレーションシップの指定 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML ドキュメント内の要素は関連付けることができます。 要素は階層的に入れ子にでき、要素間に ID、IDREF、または IDREFS のリレーションシップを指定することができます。  
   
  たとえば、XSD スキーマでは、要素に **\<Customer>** 子要素が含まれてい **\<Order>** ます。 スキーマを AdventureWorks データベースにマップすると、要素は **\<Customer>** sales. Customer テーブルにマップされ、 **\<Order>** 要素は SalesOrderHeader テーブルにマップされます。 これらの基になるテーブル (Sales. Customer および SalesOrderHeader) は、顧客が注文を配置するため、関連付けられています。 ここで、Sales.SalesOrderHeader テーブル内の CustomerID は、Sales.Customer テーブル内の CustomerID 主キーを参照する外部キーです。 **Sql: relationship**注釈を使用すると、マッピングスキーマ要素間にこれらのリレーションシップを設定できます。  
@@ -75,10 +75,10 @@ ms.locfileid: "84215717"
   
  結果に適切な入れ子を生成するには、すべてのスキーマで**sql: キーフィールド**を指定することをお勧めします。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
-### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. 要素に sql:relationship 注釈を指定する  
+### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A: 要素に sql:relationship 注釈を指定する  
  次の注釈付き XSD スキーマには、要素と要素が含まれてい **\<Customer>** **\<Order>** ます。 **\<Order>** 要素は要素の子要素です **\<Customer>** 。  
   
  スキーマでは、子要素に**sql: relationship**注釈が指定されてい **\<Order>** ます。 リレーションシップ自体は、要素で定義され **\<xsd:appinfo>** ます。  
@@ -187,7 +187,7 @@ ms.locfileid: "84215717"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-a-relationship-chain"></a>B. リレーションシップ チェーンを指定する  
+### <a name="b-specifying-a-relationship-chain"></a>B: リレーションシップ チェーンを指定する  
  この例では、AdventureWorks データベースから取得したデータを使用して、次の XML ドキュメントを要求するとします。  
   
 ```  
@@ -319,7 +319,7 @@ ms.locfileid: "84215717"
 </ROOT>  
 ```  
   
-### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>C. 属性にリレーションシップ注釈を指定する  
+### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>C: 属性にリレーションシップ注釈を指定する  
  この例のスキーマには、 \<Customer> 子要素を持ち、 \<CustomerID> IDREFS 型の OrderIDList 属性を持つ要素が含まれています。 要素は、 \<Customer> AdventureWorks データベースの Sales. Customer テーブルにマップされます。 既定では、このマッピングのスコープは、子要素または属性に**sql: relation**が指定されていない限り、すべての子要素または属性に適用されます。その場合は、要素を使用して、適切な主キー/外部キーのリレーションシップを定義する必要があり \<relationship> ます。 また、**リレーションシップ注釈を**使用して別のテーブルを指定する子要素または属性では、**リレーションシップ**注釈も指定する必要があります。  
   
 ```  
@@ -384,7 +384,7 @@ ms.locfileid: "84215717"
 </ROOT>  
 ```  
   
-### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. 複数の要素に sql:relationship を指定する  
+### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D: 複数の要素に sql:relationship を指定する  
  この例では、注釈付き XSD スキーマには、、、およびの各要素が含まれてい **\<Customer>** **\<Order>** **\<OrderDetail>** ます。  
   
  **\<Order>** 要素は要素の子要素です **\<Customer>** 。 **\<sql:relationship>** は子要素で指定されます **\<Order>** 。したがって、顧客に属する注文は、の子要素として表示され **\<Customer>** ます。  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b0a50ee81aa2247d569dab8125924fd6a2c7cf7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 241f6df631098fedbf4b7f5a9849d9b7ea9f3fa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831871"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775199"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>dm_server_registry (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンスについて Windows レジストリに格納されている構成情報とインストール情報を返します。 レジストリキーごとに1行を返します。 この動的管理ビューを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ホストコンピューターで使用できるサービスやのインスタンスのネットワーク構成値などの情報を返すことができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -52,7 +52,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%ControlSet%';  
 ```  
   
-### <a name="b-display-the-sql-server-agent-registry-key-values"></a>B. SQL Server エージェントのレジストリ キーの値を表示します。  
+### <a name="b-display-the-sql-server-agent-registry-key-values"></a>B: SQL Server エージェントのレジストリ キーの値を表示します。  
  次の例では、SQL Server の現在のインスタンスについて SQL Server エージェントのレジストリ キーの値を返します。  
   
 ```  
@@ -61,7 +61,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%SQLAgent%';  
 ```  
   
-### <a name="c-display-the-current-version-of-the-instance-of-sql-server"></a>C. SQL Server のインスタンスの現在のバージョンを表示します。  
+### <a name="c-display-the-current-version-of-the-instance-of-sql-server"></a>C: SQL Server のインスタンスの現在のバージョンを表示します。  
  次の例では、SQL Server の現在のインスタンスのバージョンを返します。  
   
 ```  
@@ -70,7 +70,7 @@ FROM sys.dm_server_registry
 WHERE value_name = N'CurrentVersion';  
 ```  
   
-### <a name="d-display-the-parameters-passed-to-the-instance-of-sql-server-during-startup"></a>D. スタートアップ中に SQL Server のインスタンスに渡されるパラメーターを表示します。  
+### <a name="d-display-the-parameters-passed-to-the-instance-of-sql-server-during-startup"></a>D: スタートアップ中に SQL Server のインスタンスに渡されるパラメーターを表示します。  
  次の例では、スタートアップ中に SQL Server のインスタンスに渡されるパラメーターを返します。  
   
 ```  
@@ -88,7 +88,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%SuperSocketNetLib%';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dm_server_services &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

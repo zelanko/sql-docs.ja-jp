@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dd9644253302c6a577c6cc3923bb3a9e3a0d8c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f488c50518f0a1dd06d72532f1e9edad865e26a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783669"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   プリンシパルとプロファイルの関連付けに関する情報を更新します。  
   
@@ -55,14 +55,14 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このストアド プロシージャでは、指定したプロファイルを、データベース ユーザーの既定のプロファイルにするかどうかを変更します。 データベース ユーザーが持つことのできる既定のプライベート プロファイルは 1 つだけです。  
   
  アソシエーションのプリンシパル名が**public**の場合、またはアソシエーションのプリンシパル id が**0**の場合、このストアドプロシージャはパブリックプロファイルを変更します。 既定のパブリック プロファイルは 1 つしか存在できません。  
   
- ** \@Is_default**が '**1**' で、プリンシパルが複数のプロファイルに関連付けられている場合、指定されたプロファイルはプリンシパルの既定のプロファイルになります。 以前既定のプロファイルであったプロファイルは引き続きプリンシパルに関連付けられていますが、既定のプロファイルではなくなりました。  
+ ** \@ Is_default**が '**1**' で、プリンシパルが複数のプロファイルに関連付けられている場合、指定されたプロファイルはプリンシパルの既定のプロファイルになります。 以前既定のプロファイルであったプロファイルは引き続きプリンシパルに関連付けられていますが、既定のプロファイルではなくなりました。  
   
  ストアドプロシージャ**sysmail_update_principalprofile_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
@@ -72,7 +72,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="examples"></a>使用例  
  **A. プロファイルをデータベースの既定のパブリック プロファイルに設定する**  
   
- 次の例では、 `General Use Profile`プロファイルを、 **msdb**データベースのユーザーの既定のパブリックプロファイルに設定します。  
+ 次の例では、プロファイル `General Use Profile` を、 **msdb**データベースのユーザーの既定のパブリックプロファイルに設定します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
   
  **B. プロファイルをユーザーの既定のプライベート プロファイルに設定する**  
   
- 次の例では、 `AdventureWorks Administrator`プロファイルを、 **msdb**データベース内のプリンシパル`ApplicationUser`の既定のプロファイルに設定します。 このプロファイルはプリンシパルに既に関連付けられている必要があります。 以前既定のプロファイルであったプロファイルは引き続きプリンシパルに関連付けられていますが、既定のプロファイルではなくなりました。  
+ 次の例では、プロファイル `AdventureWorks Administrator` を、 `ApplicationUser` **msdb**データベース内のプリンシパルの既定のプロファイルに設定します。 このプロファイルはプリンシパルに既に関連付けられている必要があります。 以前既定のプロファイルであったプロファイルは引き続きプリンシパルに関連付けられていますが、既定のプロファイルではなくなりました。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -92,7 +92,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
     @is_default = '1' ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

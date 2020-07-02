@@ -13,15 +13,15 @@ ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 959110f3e240553bd94dab6c26e208b40c8d43ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0a87ab71ef062ad78c4b466bd2e75a6a36d4fdf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294178"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783311"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>カーソルを使用する方法に関するトピック (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   カーソルを使用するには、最初に ODBC のカーソル動作を制御する接続属性とステートメント属性を設定する必要があります。 アプリケーションでカーソルを使用すると、1 回のフェッチによる複数行の取得や、現在のカーソルの場所で UPDATE、INSERT、DELETE の各ステートメントの実行が可能になります。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "81294178"
   
 -   [ODBC&#41;&#40;行セットのフェッチと更新](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC の使用法に関するトピック](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

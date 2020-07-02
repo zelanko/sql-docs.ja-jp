@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 395a7c2227fb23a177cb1b3980b26014f0651c0c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e04daaa5be757df60f07a8bd9205e1fd44f95502
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817742"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775740"
 ---
 # <a name="sp_helpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   サーバーで有効なレプリケーション オプションの種類を示します。 このストアドプロシージャは、任意のデータベースの任意のサーバーで実行されます。  
   
@@ -39,21 +39,21 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ## <a name="arguments"></a>引数  
 `[ @optname = ] 'option_name'`クエリを実行するレプリケーションオプションの名前を指定します。 *option_name*は**sysname**,、既定値は NULL です。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**パブリケーション**|トランザクションレプリケーションが有効になっている場合は、結果セットが返されます。|  
-|**マージ**|結果セットは、マージレプリケーションが有効になっている場合に返されます。|  
+|**merge**|結果セットは、マージレプリケーションが有効になっている場合に返されます。|  
 |NULL (既定値)|結果セットは返されません。|  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|レプリケーション オプションの名前。次のいずれかになります。<br /><br /> **パブリケーション**<br /><br /> **マージ**|  
+|**optname**|**sysname**|レプリケーション オプションの名前。次のいずれかになります。<br /><br /> **パブリケーション**<br /><br /> **merge**|  
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**revision**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**改定**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -65,7 +65,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、既定で**public**ロールに設定されています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

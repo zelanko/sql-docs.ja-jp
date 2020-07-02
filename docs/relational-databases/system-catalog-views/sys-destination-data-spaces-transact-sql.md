@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 92df932b-ad5c-43f8-81f4-b158823ab189
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bbac8f5c9afd5fd8603764824757e33d103354d0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ef0cfbc64b3918d5b9be21573c1567dbcd96799
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828192"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784968"
 ---
 # <a name="sysdestination_data_spaces-transact-sql"></a>destination_data_spaces (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   パーティション構成のデータ領域の転送先ごとに 1 行のデータを保持します。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "82828192"
 |**data_space_id**|**int**|この構成の転送先のデータがマッピングされるデータ領域の ID です。|  
   
 ## <a name="permissions"></a>アクセス許可  
- ロール **public** のメンバーシップが必要です。  詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

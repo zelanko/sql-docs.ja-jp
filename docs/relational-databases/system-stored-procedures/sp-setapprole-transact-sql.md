@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b158c4571deadadeaee23ffa6e46eb48a8c8446e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba0a1d118ce62912e082b0553f000018e5d8233e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783715"
 ---
 # <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のデータベースのアプリケーションロールに関連付けられている権限をアクティブにします。  
   
@@ -58,11 +58,11 @@ sp_setapprole [ @rolename = ] 'role',
  暗号化を使用しないことを示します。 パスワードはプレーンテキストとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に渡されます。 既定値です。  
   
  **@encrypt= ' odbc '**  
- Odbc がパスワードをに送信する前に ODBC **encrypt**関数を使用してパスワードを難読[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]化することを指定します。 これは、ODBC クライアントまたは OLE DB Provider for SQL Server のいずれかを使用している場合にのみ指定できます。  
+ Odbc がパスワードをに送信する前に ODBC **encrypt**関数を使用してパスワードを難読化することを指定し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。 これは、ODBC クライアントまたは OLE DB Provider for SQL Server のいずれかを使用している場合にのみ指定できます。  
   
 `[ @fCreateCookie = ] true | false`クッキーを作成するかどうかを指定します。 **true**は、暗黙的に1に変換されます。 **false**は暗黙的に0に変換されます。  
   
-`[ @cookie = ] @cookie OUTPUT`クッキーを格納する出力パラメーターを指定します。 クッキーは、 ** \@fCreateCookie**の値が**true**の場合にのみ生成されます。 **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT`クッキーを格納する出力パラメーターを指定します。 クッキーは、 ** \@ fCreateCookie**の値が**true**の場合にのみ生成されます。 **varbinary(8000)**  
   
 > [!NOTE]  
 > **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)** を返します。 アプリケーションは、今後のリリースでクッキーの戻り値のサイズが増加した場合にアプリケーションが引き続き正常に動作するように、 **varbinary (8000)** を引き続き予約する必要があります。
@@ -73,13 +73,13 @@ sp_setapprole [ @rolename = ] 'role',
   
 ## <a name="remarks"></a>Remarks
 
- **Sp_setapprole**を使用してアプリケーションロールをアクティブ化した後は、ユーザーがサーバーとの接続を切断するか**sp_unsetapprole**を実行するまで、ロールはアクティブのままになります。 **sp_setapprole**は、直接[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントによってのみ実行できます。 **sp_setapprole**は、別のストアドプロシージャ内、またはユーザー定義のトランザクション内では実行できません。  
+ **Sp_setapprole**を使用してアプリケーションロールをアクティブ化した後は、ユーザーがサーバーとの接続を切断するか**sp_unsetapprole**を実行するまで、ロールはアクティブのままになります。 **sp_setapprole**は、直接のステートメントによってのみ実行でき [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 **sp_setapprole**は、別のストアドプロシージャ内、またはユーザー定義のトランザクション内では実行できません。  
   
  アプリケーションロールの概要については、「[アプリケーションロール](../../relational-databases/security/authentication-access/application-roles.md)」を参照してください。  
   
 > [!IMPORTANT]  
 > ネットワーク経由で転送されるときにアプリケーションロールのパスワードを保護するには、アプリケーションロールを有効にするときに、常に暗号化された接続を使用する必要があります。
-> ODBC [!INCLUDE[msCoName](../../includes/msconame-md.md)]の**encrypt**オプションは、 **SqlClient**ではサポートされていません。 資格情報を格納する必要がある場合は、Crypto API 関数を使用して暗号化します。 パラメーターの*パスワード*は、一方向のハッシュとして格納されます。 以前のバージョンのとの互換性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を維持するために、 **sp_addapprole**によってパスワードの複雑さのポリシーは適用されません。 パスワードの複雑さのポリシーを適用するには、[[アプリケーションロールの作成](../../t-sql/statements/create-application-role-transact-sql.md)] を使用します。  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC の**encrypt**オプションは、 **SqlClient**ではサポートされていません。 資格情報を格納する必要がある場合は、Crypto API 関数を使用して暗号化します。 パラメーターの*パスワード*は、一方向のハッシュとして格納されます。 以前のバージョンのとの互換性を維持するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sp_addapprole**によってパスワードの複雑さのポリシーは適用されません。 パスワードの複雑さのポリシーを適用するには、[[アプリケーションロールの作成](../../t-sql/statements/create-application-role-transact-sql.md)] を使用します。  
   
 ## <a name="permissions"></a>アクセス許可
 
@@ -96,7 +96,7 @@ EXEC sys.sp_setapprole 'SalesApprole', 'AsDeF00MbXX';
 GO
 ```
 
-### <a name="b-activating-an-application-role-with-a-cookie-and-then-reverting-to-the-original-context"></a>B. Cookie を使用してアプリケーションロールをアクティブ化し、元のコンテキストに戻す
+### <a name="b-activating-an-application-role-with-a-cookie-and-then-reverting-to-the-original-context"></a>B: Cookie を使用してアプリケーションロールをアクティブ化し、元のコンテキストに戻す
 
  次の例では、パスワード `Sales11` が設定されているアプリケーション ロール `fdsd896#gfdbfdkjgh700mM` をアクティブ化し、クッキーを作成します。 この例では、現在のユーザーの名前が返されます。その後、`sp_unsetapprole` を実行して元のコンテキストに戻します。  
 
@@ -116,6 +116,6 @@ SELECT USER_NAME();
 GO
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  Sql&#41;[セキュリティストアドプロシージャ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)を[&#40;するシステムストアドプロシージャ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)TRANSACT-SQL&#41;[CREATE application ROLE &#40;](../../t-sql/statements/create-application-role-transact-sql.md) transact-sql&#41;[DROP Application role](../../t-sql/statements/drop-application-role-transact-sql.md) &#40;transact-sql&#41;sp_unsetapprole &#40;[transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)を &#40;ます。

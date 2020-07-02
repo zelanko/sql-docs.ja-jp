@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa069ffe0d4ce677542ac714b19475aa3930f290
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 27a3c7b3f36b6bb4948b327cb7c9a3287f302f79
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783042"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Oracle パブリケーションのアーティクル列データ型マッピングを変更します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
   
@@ -64,7 +64,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サポートされているパブリッシャーの種類 (Oracle および) 間の既定のデータ型マッピングをオーバーライドするには、 **Sp_changearticlecolumndatatype**を使用し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 これらの既定のデータ型マッピングを表示するには、 [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)を実行します。  
   
  **sp_changearticlecolumndatatype**は、Oracle パブリッシャーに対してのみサポートされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションに対してこのストアド プロシージャを実行すると、エラーが発生します。  
@@ -74,7 +74,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changearticlecolumndatatype**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Oracle パブリッシャーのデータ型マッピング](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

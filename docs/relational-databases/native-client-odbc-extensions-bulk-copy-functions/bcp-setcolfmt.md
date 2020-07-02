@@ -18,21 +18,21 @@ ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e2942f60e1bb41edfcd2d474619867d35806660
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f48f5cf3bfc75bb8aa52d981a42aa83b8007e09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782329"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783391"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **Bcp_setcolfmt**関数は、 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)よりも優先されます。 列の照合順序を指定する場合は、 **bcp_setcolfmt**関数を使用する必要があります。 [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)を使用すると、複数の列の形式を指定できます。  
   
  この関数では、一括コピー操作で列の形式を柔軟に指定できます。 個別の列形式属性を設定する場合に、この関数を使用します。 **Bcp_setcolfmt**を呼び出すたびに、1つの列形式属性が設定されます。  
   
- **Bcp_setcolfmt**関数は、ユーザーファイル内のデータのソースまたはターゲットの形式を指定します。 ソース形式として使用する場合、 **bcp_setcolfmt**は、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルに一括コピーするデータソースとして使用される既存のデータファイルの形式を指定します。 ターゲット形式として使用する場合は、 **bcp_setcolfmt**で指定された列形式を使用してデータファイルが作成されます。  
+ **Bcp_setcolfmt**関数は、ユーザーファイル内のデータのソースまたはターゲットの形式を指定します。 ソース形式として使用する場合、 **bcp_setcolfmt**は、のテーブルに一括コピーするデータソースとして使用される既存のデータファイルの形式を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ターゲット形式として使用する場合は、 **bcp_setcolfmt**で指定された列形式を使用してデータファイルが作成されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,7 +53,7 @@ RETCODE bcp_setcolfmt (
  *分野*  
  プロパティを設定する列の序数です。  
   
- *property*  
+ *プロパティ*  
  プロパティ定数のいずれかを指定します。 次の表に、プロパティ定数を示します。  
   
 |プロパティ|値|説明|  
@@ -112,7 +112,7 @@ RETCODE bcp_setcolfmt (
   
  詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 098d027ff74bad7b4215a96044f4044fda9ee98e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b8075648f4f3ce87b0ee34ba28479d1f8e20cd50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832528"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775158"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   アラートおよびジョブで使用するオペレーター (通知受信者) に関する情報を更新します。  
   
@@ -89,13 +89,13 @@ sp_update_operator
  [ @pager_days =] *pager_days*  
  オペレーターがページの受信に使用できる曜日を指定します (指定した開始/終了時刻に従います)。 *pager_days*は**tinyint**,、既定値は NULL の場合、 **0** ~ **127**の値である必要があります。 *pager_days*は、必要な日数の個々の値を加算することによって計算されます。 たとえば、月曜日から金曜日の場合は、 **2** + **4** + **8** + **16** + **32**  =  **64**になります。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|土曜日|  
 |**2**|月曜日|  
 |**4**|Tuesday|  
 |**8**|水曜日|  
-|**まで**|Thursday|  
+|**16**|Thursday|  
 |**32**|金曜日|  
 |**64**|土曜日|  
   
@@ -108,7 +108,7 @@ sp_update_operator
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_update_operator は、msdb データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -132,7 +132,7 @@ EXEC dbo.sp_update_operator
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   

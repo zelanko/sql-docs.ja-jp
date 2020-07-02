@@ -18,15 +18,15 @@ ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08926660face8061abdf8352d0c4a84ad7e67f8a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3e410f33be5b11d96055a3aac8d86fb1ef1c73e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305396"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774428"
 ---
 # <a name="using-sql-server-default-result-sets"></a>SQL Server の既定の結果セットの使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   ODBC カーソルの既定の属性を次に示します。  
   
@@ -36,7 +36,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_CONCURRENCY, SQL_CONCUR_READ_ONLY, SQL_IS_INTEGER
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_ARRAY_SIZE, 1, SQL_IS_INTEGER);  
 ```  
   
- これらの属性が既定値に設定され[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ている場合、NATIVE Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC ドライバーでは、既定の結果セットが使用されます。 既定の結果セットは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされるすべての SQL ステートメントに使用でき、結果セット全体をクライアントに転送する際の最も効率的な方法です。  
+ これらの属性が既定値に設定されている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーでは、既定の結果セットが使用され [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 既定の結果セットは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされるすべての SQL ステートメントに使用でき、結果セット全体をクライアントに転送する際の最も効率的な方法です。  
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]では、複数のアクティブな結果セット (MARS) のサポートが導入されました。アプリケーションは、接続ごとに複数のアクティブな既定の結果セットを持つことができるようになりました。 MARS は既定では有効になっていません。  
   
@@ -48,7 +48,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]
                 Connection is busy with results for another hstmt."  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カーソルの実装方法](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
   

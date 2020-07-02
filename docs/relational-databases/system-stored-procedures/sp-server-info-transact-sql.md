@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a83d216b0830b035da72ad579a2448a12f41adba
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a711624214b262560766f49e8294b36291ad9d91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783733"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データベースゲートウェイ、または基になるデータソースの属性名と一致する値の一覧を返します。  
   
@@ -43,7 +43,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 `[ @attribute_id = ] 'attribute_id'`属性の整数 ID を示します。 *attribute_id*は**int**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -65,8 +65,8 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**13**|TABLE_LENGTH<br /><br /> テーブル名の最大文字数です。|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> テーブル修飾子の名前 (3 つの要素から成る名前の最初の部分) の最大の長さです。|128|  
 |**15**|COLUMN_LENGTH<br /><br /> 列名の最大文字数です。|128|  
-|**まで**|IDENTIFIER_CASE<br /><br /> データベース内のユーザー定義の名前 (テーブル名、列名、ストアド プロシージャ名) です。大文字か小文字かは、システム カタログ内でオブジェクトの名前に従います。|SENSITIVE|  
-|**a3**|TX_ISOLATION<br /><br /> SQL-92 で定義されている分離レベルに対応する、サーバーが想定する初期トランザクション分離レベルを指定します。|2|  
+|**16**|IDENTIFIER_CASE<br /><br /> データベース内のユーザー定義の名前 (テーブル名、列名、ストアド プロシージャ名) です。大文字か小文字かは、システム カタログ内でオブジェクトの名前に従います。|SENSITIVE|  
+|**17**|TX_ISOLATION<br /><br /> SQL-92 で定義されている分離レベルに対応する、サーバーが想定する初期トランザクション分離レベルを指定します。|2|  
 |**18**|COLLATION_SEQ<br /><br /> このサーバーの文字セットの順序です。|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**21**|SAVEPOINT_SUPPORT<br /><br /> 基になる DBMS が、名前付きセーブポイントをサポートするかどうかを示します。|○|  
 |**20@@**|MULTI_RESULT_SETS<br /><br /> 基になるデータベースまたはゲートウェイ自体が複数の結果セットをサポートするかどうかを指定します (複数のステートメントをゲートウェイを介して送信し、複数の結果セットをクライアントに返すことができます)。|○|  
@@ -93,7 +93,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のカタログストアドプロシージャ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

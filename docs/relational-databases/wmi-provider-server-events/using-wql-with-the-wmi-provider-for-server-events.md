@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6fae362d3a8d1fe387dd7561b1476bb37f0c255
-ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
+ms.openlocfilehash: 692eda0029e60121422244f8829bac9785269423
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295385"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775637"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>WMI Provider for Server Events と WQL の使用
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   管理アプリケーションは WQL (WMI Query Language) ステートメントを実行することにより、WMI Provider for Server Events を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントにアクセスすることができます。 WQL は、WMI 特有の拡張機能を複数持つ、構造化照会言語 (SQL) の単純化されたサブセットです。 WQL を使用した場合、アプリケーションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンス、データベース、またはデータベース オブジェクト (現在サポートされているオブジェクトはキューのみ) に対してイベントの種類を取得します。 WMI Provider for Server Events は、データベーススコープまたはオブジェクトスコープのイベント通知の対象データベースで作成されたイベント通知、またはサーバースコープのイベント通知の**master**データベースにクエリを変換します。  
   
  たとえば、次の WQL クエリについて考えてみます。  
@@ -84,7 +84,7 @@ WHERE where_condition
   
  DatabaseName、 `=` **SchemaName**、および**ObjectName**と共**DatabaseName**に使用できるのは、オペランドだけです。 その他の式は、これらのイベント プロパティと共に使用することはできません。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>Remarks  
  WMI Provider for Server Events 構文の*where_condition*によって、次のことが決定されます。  
   
 -   プロバイダーが指定された*event_type*を取得しようとするスコープ。サーバーレベル、データベースレベル、またはオブジェクトレベル (現在サポートされている唯一のオブジェクトは queue) です。 最終的に、このスコープは対象データベースで作成されたイベント通知の種類を決定します。 このプロセスは、イベント通知登録と呼ばれます。  

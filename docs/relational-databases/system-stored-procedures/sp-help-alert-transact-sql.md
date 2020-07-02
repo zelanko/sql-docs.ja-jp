@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08569c2313bfb7c9d992c510ef4c9c7548f51e64
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 525ebee42d097c4d4d171767a8b0a8fc844bc5f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783748"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   特定のサーバーに対して定義された警告に関する情報をレポートします。  
   
@@ -61,7 +61,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|システムによって割り当てられた一意な整数識別子。|  
+|**id**|**int**|システムによって割り当てられた一意な整数識別子。|  
 |**name**|**sysname**|アラート名 (例: Demo: Full **msdb** log)。|  
 |**event_source**|**nvarchar (100)**|イベントのソース。 バージョン7.0 の場合、常に**MSSQLServer**になります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -95,7 +95,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|システムによって割り当てられた一意な整数識別子。|  
+|**id**|**int**|システムによって割り当てられた一意な整数識別子。|  
 |**name**|**sysname**|アラート名 (例: Demo: Full **msdb** log)。|  
 |**event_source**|**nvarchar (100)**|イベントのソース。 バージョン7.0 の場合、常に**MSSQLServer**になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -131,7 +131,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
   
  **Sqlagentoperatorrole**の詳細については、「 [SQL Server エージェント固定データベースロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`Demo: Sev. 25 Errors` 警告に関する情報をレポートします。  
   
 ```  
@@ -142,7 +142,7 @@ EXEC sp_help_alert @alert_name = 'Demo: Sev. 25 Errors';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_update_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

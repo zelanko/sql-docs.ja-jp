@@ -15,15 +15,15 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d26af711c07c4ea296d5351d0fcb0d1f9710706
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9adc8ed5547691f693a88a5d468581022afd363e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294526"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783345"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>ハンドルの割り当てと SQL Server への接続 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 ### <a name="to-allocate-handles-and-connect-to-sql-server"></a>ハンドルを割り当てて SQL Server に接続するには  
@@ -42,11 +42,11 @@ ms.locfileid: "81294526"
   
 7.  必要に応じて、 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出して接続オプションを設定するか、 [Sqlgetconnectattr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)を呼び出して接続オプションを取得します。  
   
-8.  SQLConnect を呼び出して、既存のデータソースを使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]してに接続します。  
+8.  SQLConnect を呼び出して、既存のデータソースを使用してに接続 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
      または  
   
-     接続[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)文字列を使用してに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続するには、SQLDriverConnect を呼び出します。  
+     接続文字列を使用してに接続するには、 [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)を呼び出し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
      最小の完全な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続文字列は、次の 2 つの形式のいずれかになります。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "81294526"
   
      \- または  
   
-     反復的な方法で[SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)を複数回呼び出して、接続文字列を作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]し、に接続します。  
+     反復的な方法で[SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)を複数回呼び出して、接続文字列を作成し、に接続し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-9. 必要に応じて、 [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)を呼び出して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データソースのドライバー属性と動作を取得します。  
+9. 必要に応じて、 [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)を呼び出して、データソースのドライバー属性と動作を取得し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 10. ステートメントを割り当てて使用します。  
   
-11. 切断[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するには sqldisconnect を呼び出し、接続ハンドルを新しい接続に使用できるようにします。  
+11. 切断するには SQLDisconnect を呼び出し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続ハンドルを新しい接続に使用できるようにします。  
   
 12. SQL_HANDLE_DBC の**Handletype**を使用して[sqlfreehandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)を呼び出し、接続ハンドルを解放します。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "81294526"
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ## <a name="example"></a>例  
- この例では、既存**SQLDriverConnect**の ODBC データソースを必要と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]せずにのインスタンスに接続するための SQLDriverConnect の呼び出しを示します。 不完全な接続文字列を**SQLDriverConnect**に渡すと、ODBC ドライバーによって、不足している情報を入力するように求めるメッセージが表示されます。  
+ この例では、既存の ODBC データソースを必要とせずにのインスタンスに接続するための**SQLDriverConnect**の呼び出しを示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 不完全な接続文字列を**SQLDriverConnect**に渡すと、ODBC ドライバーによって、不足している情報を入力するように求めるメッセージが表示されます。  
   
 ```  
 #define MAXBUFLEN   255  

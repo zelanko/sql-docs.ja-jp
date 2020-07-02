@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 36731206770b324bf4387143ef2c98b0532475ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b9fd67cdd08de9ab85b0da224db970f6cd6d14d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67902889"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783649"
 ---
 # <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   データベース メール プロファイルの説明または名前を変更します。  
   
@@ -60,7 +60,7 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ## <a name="examples"></a>使用例  
  **A. プロファイルの説明を変更する**  
   
- 次の例では、 **msdb**データベースのと`AdventureWorks Administrator`いう名前のプロファイルの説明を変更します。  
+ 次の例では、msdb データベースのという名前のプロファイルの説明を変更し `AdventureWorks Administrator` ます。 **msdb**  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profile_sp  
@@ -70,7 +70,7 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
   
  **B. プロファイルの名前と説明を変更する**  
   
- 次の例では、プロファイルの名前と説明をプロファイル id `750`で変更します。  
+ 次の例では、プロファイルの名前と説明をプロファイル id で変更し `750` ます。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profile_sp  
@@ -79,7 +79,7 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
     ,@description = 'Profile to send alert e-mail to operators.';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   

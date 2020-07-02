@@ -18,15 +18,15 @@ ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 388b51c79681589d3caec2ee3ea03b1ece6ff459
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e95fa5bb0948661faf9f8575557a39b90528879c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783374"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   現在の一括コピー データ ファイルの形式に関する記述を含むフォーマット ファイルを作成します。  
   
@@ -57,7 +57,7 @@ RETCODE bcp_writefmt (
  保存されたフォーマットファイルを読み込むには、 [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)を使用します。  
   
 > [!NOTE]  
->  **Bcp_writefmt**によって生成されるフォーマットファイルは、バージョン 7.0 **bcp**以降で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配布されるバージョンの bcp ユーティリティでのみサポートされます。  
+>  **Bcp_writefmt**によって生成されるフォーマットファイルは、バージョン7.0 以降で配布されるバージョンの**bcp**ユーティリティでのみサポートされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="example"></a>例  
   

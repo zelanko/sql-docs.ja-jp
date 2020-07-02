@@ -13,17 +13,17 @@ ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 773d00c14953e14d680c75d06c11701bc654c06f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d309ed29361d12caf6b52f27806794d8cd3840df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775270"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB の使用法に関するトピック
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用するには、サーバーへの接続を作成し、コマンドを実行して結果を処理する方法を理解する必要があります。  
+  Native Client OLE DB プロバイダーを使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバーへの接続を作成し、コマンドを実行して結果を処理する方法を理解する必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -59,7 +59,7 @@ ms.locfileid: "81302216"
   
 -   [テーブル値パラメーターの使用 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client プログラミング](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c87de2327918c383b57e4baef7f4948d43ddd85e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3906e38fbcce8edccf9e0a7bda3be0ed93e110b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784818"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_sessions**テーブルには、前のマージエージェントジョブセッションの結果を含む履歴行が含まれています。 このテーブルには、マージ エージェントが実行されるたびに、新しい行が追加されます。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "82805253"
 |**connection_type**|**int**|アップロード中に使用される接続:<br /><br /> **1** = ローカルエリアネットワーク (LAN)。<br /><br /> **2** = ダイヤルアップネットワーク接続。<br /><br /> **3** = Web 同期。|  
 |**timestamp**|**timestamp**|このテーブルのタイムスタンプ列です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

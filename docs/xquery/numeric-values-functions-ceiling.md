@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: dc2a85c48e404fa717b001482bbe5fc8f8356e99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689764"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775492"
 ---
 # <a name="numeric-values-functions---ceiling"></a>数値関数 - ceiling 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   小数部を含まない最小の数値を返します。引数の値よりも小さくありません。 引数が空のシーケンスの場合は、空のシーケンスを返します。  
   
@@ -48,10 +48,10 @@ fn:ceiling ( $arg as numeric?) as numeric?
   
  その他の型のデータが入力されると、静的エラーが生成されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-ceiling-xquery-function"></a>A. ceiling() XQuery 関数の使用  
+### <a name="a-using-the-ceiling-xquery-function"></a>A: ceiling() XQuery 関数の使用  
  製品モデル7の場合、このクエリは、製品モデルの製造プロセスにおけるワークセンターの場所の一覧を返します。 ドキュメントに記載されている場合、ワークセンターの場所ごとに、場所 ID、労働時間、および膨大なサイズが返されます。 このクエリでは、**天井**関数を使用して、 **decimal**型の値として労働時間を返します。  
   
 ```  
@@ -76,9 +76,9 @@ WHERE ProductModelID=7
   
 -   **命令**は**xml**型の列です。 したがって、 [query () メソッド (XML データ型)](../t-sql/xml/query-method-xml-data-type.md)を使用して XQuery を指定します。 XQuery ステートメントは、クエリメソッドの引数として指定されます。  
   
--   **...return**はループ構造です。 クエリでは、 **for**ループは> 要素の場所の一覧を識別し \< ます。 各ワークセンターの場所では、 **for**ループの**return**ステートメントによって、生成される XML が記述されます。  
+-   **...return**はループ構造です。 クエリでは、 **for**ループは要素のリストを識別し \<Location> ます。 各ワークセンターの場所では、 **for**ループの**return**ステートメントによって、生成される XML が記述されます。  
   
-    -   \<LocationID 属性と LaborHrs 属性を持つ要素> 位置。 中かっこ ({}) 内の対応する式は、ドキュメントから必要な値を取得します。  
+    -   \<Location>LocationID 属性と LaborHrs 属性を持つ要素。 中かっこ ({}) 内の対応する式は、ドキュメントから必要な値を取得します。  
   
     -   {$ i/@LotSize } 式は、ドキュメントから LotSize 属性を取得します (存在する場合)。  
   
@@ -100,7 +100,7 @@ ProductModelID Result
   
 -   **切り上げ ()** 関数は、すべての整数値を xs: decimal にマップします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [floor 関数 &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
  [round 関数 &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
   

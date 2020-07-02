@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 257592ce6bd3c8080a6f4244a7528e79259e5cfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783793"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行中のローカル サーバーに対してリモート ストアド プロシージャを実行する場合に使用される、ローカル ログインにマップされているリモート ログインを削除します。  
   
@@ -53,7 +53,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *Remoteserver*のみを指定した場合は、そのリモートサーバーのすべてのリモートログインがローカルサーバーから削除されます。 *Login*も指定すると、その特定のローカルログインにマップされている*remoteserver*からのすべてのリモートログインが、ローカルサーバーから削除されます。 *Remote_name*も指定されている場合、 *remoteserver*からのリモートユーザーのリモートログインのみがローカルサーバーから削除されます。  
   
  ローカルサーバーユーザーを追加するには、 **sp_addlogin**を使用します。 ローカルサーバーユーザーを削除するには、 **sp_droplogin**を使用します。  
@@ -68,27 +68,27 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="examples"></a>例  
   
 ### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>A. リモートサーバーのすべてのリモートログインを削除する  
- 次の例では、リモートサーバー `ACCOUNTS`のエントリを削除します。したがって、ローカルサーバー上のログインとリモートサーバー上のリモートログインの間のすべてのマッピングが削除されます。  
+ 次の例では、リモートサーバーのエントリを削除 `ACCOUNTS` します。したがって、ローカルサーバー上のログインとリモートサーバー上のリモートログインの間のすべてのマッピングが削除されます。  
   
 ```sql
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
-### <a name="b-dropping-a-login-mapping"></a>B. ログインマッピングを削除する  
+### <a name="b-dropping-a-login-mapping"></a>B: ログインマッピングを削除する  
  次の例では、リモート サーバー `ACCOUNTS` からのリモート ログインとローカル ログイン `Albert` をマップしているエントリを削除します。  
   
 ```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';  
 ```  
   
-### <a name="c-dropping-a-remote-user"></a>C. リモートユーザーを削除する  
- 次の例では、ローカルログイン`Chris` `ACCOUNTS` `salesmgr`にマップされているリモートサーバー上のリモートログインのログインを削除します。  
+### <a name="c-dropping-a-remote-user"></a>C: リモートユーザーを削除する  
+ 次の例では、 `Chris` `ACCOUNTS` ローカルログインにマップされているリモートサーバー上のリモートログインのログインを削除し `salesmgr` ます。  
   
 ```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   

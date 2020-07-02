@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3405621d604e6450756520f6d93b66a51d4d66c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5cd7b04ebf16ce11791bf1d7caeb0d1012c5d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783046"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>オブジェクト階層の構文 (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Sp_OAGetProperty および sp_OASetProperty の*propertyname*パラメーターと、sp_OAMethod の*methodname*パラメーターでは、の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]オブジェクト階層構文がサポートされています。 この特別な構文を使用する場合、これらのパラメーターの一般的な形式は次のとおりです。  
+  Sp_OAGetProperty および sp_OASetProperty の*propertyname*パラメーターと、sp_OAMethod の*methodname*パラメーターでは、のオブジェクト階層構文がサポートされて [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] います。 この特別な構文を使用する場合、これらのパラメーターの一般的な形式は次のとおりです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -88,7 +88,7 @@ EXEC @hr = sp_OAMethod @object,
    @checkoutput OUT  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE オートメーションのサンプルスクリプト](../../relational-databases/stored-procedures/ole-automation-sample-script.md)   
  [OLE オートメーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
   

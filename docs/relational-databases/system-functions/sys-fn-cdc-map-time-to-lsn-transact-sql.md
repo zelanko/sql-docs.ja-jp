@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea779dfb66d9fce2053fcee0b6fd3eedbc26a4ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046330"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784848"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   指定された時間について、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)システムテーブルの**start_lsn**列のログシーケンス番号 (LSN) 値を返します。 この関数を使用すると、変更データキャプチャの列挙関数[cdc. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)および[cdc. fn_cdc_get_net_changes_](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)によって必要とされる LSN 範囲を体系的にマップし、その範囲内のデータ変更を返すことができます。  
   
@@ -75,13 +75,13 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
   
  `SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@begin_lsn, @end_lsn, 'all` `');`  
   
- 関係演算子 '`smallest greater than`' は、前日の午前0時より後に発生した変更を制限するために使用されます。 LSN 値が異なる複数のエントリが、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)テーブル内の下限として識別された**tran_end_time**値を共有する場合、関数は、すべてのエントリが含まれていることを確認する最小の lsn を返します。 上限を設定するために、関係演算子`largest less than or equal to`' ' を使用して、午前0時を含むすべてのエントリを**tran_end_time**値として範囲に含めます。 LSN 値が異なる複数のエントリが上限として識別された**tran_end_time**値を共有している場合、関数は、すべてのエントリが含まれていることを保証する最大の lsn を返します。  
+ 関係演算子 ' `smallest greater than` ' は、前日の午前0時より後に発生した変更を制限するために使用されます。 LSN 値が異なる複数のエントリが、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)テーブル内の下限として識別された**tran_end_time**値を共有する場合、関数は、すべてのエントリが含まれていることを確認する最小の lsn を返します。 上限を設定するために、関係演算子 ' ' を使用して、 `largest less than or equal to` 午前0時を含むすべてのエントリを**tran_end_time**値として範囲に含めます。 LSN 値が異なる複数のエントリが上限として識別された**tran_end_time**値を共有している場合、関数は、すべてのエントリが含まれていることを保証する最大の lsn を返します。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では`sys.fn_cdc_map_time_lsn` 、関数を使用して、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)テーブルに、 **tran_end_time**値が午前0時以上の行があるかどうかを確認します。 このクエリを使用すると、たとえば、その日の午前0時にコミットされた変更がキャプチャプロセスによって既に処理されているかどうかを判断し、その日の変更データの抽出を続行できます。  
+ 次の例では、関数を使用して、 `sys.fn_cdc_map_time_lsn` [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)テーブルに、 **tran_end_time**値が午前0時以上の行があるかどうかを確認します。 このクエリを使用すると、たとえば、その日の午前0時にコミットされた変更がキャプチャプロセスによって既に処理されているかどうかを判断し、その日の変更データの抽出を続行できます。  
   
 ```  
 DECLARE @extraction_time datetime, @lsn binary(10);  
@@ -93,7 +93,7 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [cdc. lsn_time_mapping &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
  [fn_cdc_map_lsn_to_time &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)   
  [cdc. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   

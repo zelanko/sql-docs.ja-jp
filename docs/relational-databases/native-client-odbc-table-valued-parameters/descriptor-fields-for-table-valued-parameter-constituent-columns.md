@@ -13,15 +13,15 @@ ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08074ad57ca4f0e4f7c2c56d9eca595baf595b5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fc2ea564bff8899b3df82fd5d82297b7997c08c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297858"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783204"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>テーブル値パラメーターを構成する列の記述子フィールド
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   このセクションで説明するテーブル値パラメーターの記述子フィールドは、実装パラメーター記述子 (IPD) のハンドルと共に[SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)と[SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)を使用して操作します。  
   
@@ -46,9 +46,9 @@ ms.locfileid: "81297858"
 
  これらの属性は、テーブル値パラメーターの列に対してのみ有効です。 他のパラメーターでは無視されます。  
   
- テーブル値パラメーターの列に SQL_CA_SS_COL_HAS_DEFAULT_VALUE を設定する場合は、その列の SQL_DESC_DATA_PTR が NULL ポインターである必要があります。 それ以外の場合は、SQLExecute または SQLExecDirect は SQL_ERROR を返します。 SQLSTATE = 07S01 というメッセージで、" \<パラメーター p>、列\<c> の既定のパラメーターが正しく使用されていません" \<というメッセージで診断レコードが\<生成されます。ここで、p> はパラメーターの序数、c> は列の序数です。  
+ テーブル値パラメーターの列に SQL_CA_SS_COL_HAS_DEFAULT_VALUE を設定する場合は、その列の SQL_DESC_DATA_PTR が NULL ポインターである必要があります。 それ以外の場合は、SQLExecute または SQLExecDirect は SQL_ERROR を返します。 SQLSTATE = 07S01 というメッセージが表示され、"パラメーターの既定のパラメーターが正しく使用されていません" というメッセージが表示されます \<p> \<c> 。ここで、 \<p> はパラメーター序数で、 \<c> は列序数です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

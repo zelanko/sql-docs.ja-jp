@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3698431316b86a40e70e144bfac23d81678db45c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68122634"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783085"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   セキュリティ保護可能なリソースに対して、プリンシパルに対して効果的に付与された権限の一覧を返します。 関連する関数が[HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)。  
   
@@ -51,7 +51,7 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>返される列  
  次の表に、 **fn_my_permissions**が返す列を示します。 返される各行によって、セキュリティ保護可能なリソースについて、現在のセキュリティ コンテキストで保持されている権限の詳細が示されます。 クエリが失敗した場合は NULL を返します。  
   
-|列名|種類|説明|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |entity_name へのアイテムの追加|**sysname**|リストされたアクセス許可が実質的に付与される、セキュリティ保護可能なリソースの名前。|  
 |subentity_name|**sysname**|セキュリティ保護可能な列に列がある場合は列名、それ以外の場合は NULL です。|  
@@ -92,8 +92,8 @@ SELECT * FROM fn_my_permissions(NULL, 'SERVER');
 GO  
 ```  
   
-### <a name="b-listing-effective-permissions-on-the-database"></a>B. データベースの有効な権限を一覧表示する  
- 次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースに対する呼び出し元の有効な権限の一覧を返します。  
+### <a name="b-listing-effective-permissions-on-the-database"></a>B: データベースの有効な権限を一覧表示する  
+ 次の例では、データベースに対する呼び出し元の有効な権限の一覧を返し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -101,7 +101,7 @@ SELECT * FROM fn_my_permissions (NULL, 'DATABASE');
 GO  
 ```  
   
-### <a name="c-listing-effective-permissions-on-a-view"></a>C. ビューに対する有効な権限を一覧表示する  
+### <a name="c-listing-effective-permissions-on-a-view"></a>C: ビューに対する有効な権限を一覧表示する  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの `vIndividualCustomer` スキーマにある `Sales` ビューについて、呼び出し元が保持している有効な権限の一覧を返します。  
   
 ```  
@@ -111,8 +111,8 @@ SELECT * FROM fn_my_permissions('Sales.vIndividualCustomer', 'OBJECT')
 GO   
 ```  
   
-### <a name="d-listing-effective-permissions-of-another-user"></a>D. 別のユーザーの有効な権限を一覧表示する  
- 次の例`Wanida`では、 `Employee` `HumanResources` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースのスキーマにあるテーブルに対するデータベースユーザーの有効な権限の一覧を返します。 呼び出し元には、ユーザー `Wanida`に対する IMPERSONATE 権限が必要です。  
+### <a name="d-listing-effective-permissions-of-another-user"></a>D: 別のユーザーの有効な権限を一覧表示する  
+ 次の例では、 `Wanida` `Employee` データベースのスキーマにあるテーブルに対するデータベースユーザーの有効な権限の一覧を返し `HumanResources` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。 呼び出し元には、ユーザーに対する IMPERSONATE 権限が必要です `Wanida` 。  
   
 ```  
 EXECUTE AS USER = 'Wanida';  
@@ -123,7 +123,7 @@ GO
 ```  
   
 ### <a name="e-listing-effective-permissions-on-a-certificate"></a>E. 証明書に対する有効な権限を一覧表示する  
- 次の例では、現在のデータベースにあるという名前`Shipping47`の証明書に対する呼び出し元の有効な権限の一覧を返します。  
+ 次の例では、現在のデータベースにあるという名前の証明書に対する呼び出し元の有効な権限の一覧を返し `Shipping47` ます。  
   
 ```  
 SELECT * FROM fn_my_permissions('Shipping47', 'CERTIFICATE');  
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. XML スキーマコレクションに対する有効な権限を一覧表示する  
- 次の例では、 `ProductDescriptionSchemaCollection` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース内のという名前の XML スキーマコレクションに対する呼び出し元の有効な権限の一覧を返します。  
+ 次の例では、データベース内のという名前の XML スキーマコレクションに対する呼び出し元の有効な権限の一覧を返し `ProductDescriptionSchemaCollection` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -141,7 +141,7 @@ GO
 ```  
   
 ### <a name="g-listing-effective-permissions-on-a-database-user"></a>G. データベース ユーザーの有効な権限を一覧表示する  
- 次の例では、現在のデータベース内のという名前`MalikAr`のユーザーについて、呼び出し元の有効な権限の一覧を返します。  
+ 次の例では、現在のデータベース内のという名前のユーザーについて、呼び出し元の有効な権限の一覧を返し `MalikAr` ます。  
   
 ```  
 SELECT * FROM fn_my_permissions('MalikAr', 'USER');  
@@ -149,7 +149,7 @@ GO
 ```  
   
 ### <a name="h-listing-effective-permissions-of-another-login"></a>H. 別のログインの有効な権限を一覧表示する  
- 次の例では[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 `WanidaBenshoof` `Employee` `HumanResources` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースのスキーマ内のテーブルに対するログインの有効な権限の一覧を返します。 呼び出し元には、ログイン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof`に対する IMPERSONATE 権限が必要です。  
+ 次の例では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` `Employee` データベースのスキーマ内のテーブルに対するログインの有効な権限の一覧を返し `HumanResources` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。 呼び出し元には、ログインに対する IMPERSONATE 権限が必要です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` 。  
   
 ```  
 EXECUTE AS LOGIN = 'WanidaBenshoof';  
@@ -159,7 +159,7 @@ REVERT;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ関数 &#40;Transact-sql&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [アクセス許可 &#40;データベースエンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
