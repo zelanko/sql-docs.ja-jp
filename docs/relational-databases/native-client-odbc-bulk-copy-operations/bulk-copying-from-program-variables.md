@@ -19,15 +19,15 @@ ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f88a966e2095f527f36c84498e026c1e23aaa2ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b22b180eb2467455e4dce34906ab7481801c139d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785222"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760746"
 ---
 # <a name="bulk-copying-from-program-variables"></a>プログラム変数からの一括コピー
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   プログラム変数から直接一括コピーできます。 行のデータを保持し、 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を呼び出して一括コピーを開始する変数を割り当てた後、各列に対して[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)を呼び出して、列に関連付けられるプログラム変数の場所と形式を指定します。 各変数にデータを入力し、 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)を呼び出して、サーバーに1行のデータを送信します。 すべての行がサーバーに送信されるまで、変数の入力と**bcp_sendrow**の呼び出しを繰り返します。次に、 [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)を呼び出して、操作が完了したことを指定します。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73785222"
   
  **Bcp_bind**_type_パラメーターは、ODBC データ型識別子ではなく、db-library データ型識別子を使用します。 DB-LIBRARY のデータ型識別子は、ODBC **bcp_bind**関数で使用するために sqlncli で定義されています。  
   
- 一括コピー関数では、すべての ODBC C データ型をサポートしているわけではありません。 たとえば、一括コピー関数では ODBC SQL_C_TYPE_TIMESTAMP 構造がサポートされていないため、 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)または[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)を使用して odbc SQL_TYPE_TIMESTAMP データを SQL_C_CHAR 変数に変換します。 その後**bcp_bind**を sqlcharacter の*型*パラメーターと共に使用して、変数を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**列にバインドすると、一括コピー関数は、文字変数内の timestamp エスケープ句を適切な datetime 形式に変換します。  
+ 一括コピー関数では、すべての ODBC C データ型をサポートしているわけではありません。 たとえば、一括コピー関数では ODBC SQL_C_TYPE_TIMESTAMP 構造がサポートされていないため、 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)または[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)を使用して odbc SQL_TYPE_TIMESTAMP データを SQL_C_CHAR 変数に変換します。 その後**bcp_bind**を sqlcharacter の*型*パラメーターと共に使用して、変数を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**列にバインドすると、一括コピー関数は、文字変数内の timestamp エスケープ句を適切な datetime 形式に変換します。  
   
  次の表に、ODBC SQL データ型から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型へのマッピングを行う際に使用が推奨されるデータ型を示します。  
   
@@ -107,13 +107,13 @@ GO
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、interval データ型を直接サポートしません。 ただしアプリケーションでは、interval 型のエスケープ シーケンスを文字列として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字型列に格納できます。 アプリケーションでは、後で使用するためにこれらのエスケープ シーケンスを読み取ることができますが、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内では使用できません。  
   
- 一括コピー関数を使用すると、ODBC データ ソースから読み取ったデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にすばやく読み込むことができます。 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)を使用して結果セットの列をプログラム変数にバインドした後、 **bcp_bind**を使用して、同じプログラム変数を一括コピー操作にバインドします。 [Sqlfetchscroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)または**sqlfetch**を呼び出すと、ODBC データソースからプログラム変数にデータの行がフェッチされ、 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)を呼び出すと、プログラム変数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からにデータが一括コピーされます。  
+ 一括コピー関数を使用すると、ODBC データ ソースから読み取ったデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にすばやく読み込むことができます。 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)を使用して結果セットの列をプログラム変数にバインドした後、 **bcp_bind**を使用して、同じプログラム変数を一括コピー操作にバインドします。 [Sqlfetchscroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)または**sqlfetch**を呼び出すと、ODBC データソースからプログラム変数にデータの行がフェッチされ、 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)を呼び出すと、プログラム変数からにデータが一括コピーされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  アプリケーションでは、 **bcp_bind** _pData_パラメーターに指定されたデータ変数のアドレスを変更する必要があるときに、いつでも[bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)関数を使用できます。 アプリケーションでは、 **bcp_bind**_cbdata_パラメーターでもともと指定されていたデータ長を変更する必要がある場合、いつでも[bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)関数を使用できます。  
   
  "bcp_readrow" のような関数は用意されていないため、一括コピーを使用してデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からプログラム変数に読み取ることはできません。 実行できるのは、アプリケーションからサーバーへのデータの送信だけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC&#41;&#40;の一括コピー操作の実行](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

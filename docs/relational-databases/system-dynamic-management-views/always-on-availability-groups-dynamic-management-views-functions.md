@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d5b8b0e237b25b36a48eea1fc168e52eeb3444e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8892fb92e9cbb2e2cbf3b8d9f47137af3a10fb90
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826468"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760275"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Always On 可用性グループの動的管理ビュー-関数
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]に関連する動的管理ビューおよび関数について説明します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82826468"
 |[sys.dm_hadr_cluster](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)|[sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)|  
 |[sys.dm_hadr_cluster_members](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [可用性グループの監視 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  

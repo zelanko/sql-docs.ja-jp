@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2634ff8b9e863c4eaf46e735f5505ac85d273331
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8d1f6b6a078aa8adf8e62663491714f14f7b0944
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827252"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762559"
 ---
 # <a name="msdbms_map-transact-sql"></a>MSdbms_map (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSdbms_map**テーブルには、ソースデータ型の情報に加えて、ソースとターゲットの DBMS ペアに関する既定の変換先のデータ型情報へのリンクが含まれています。 このテーブルは**msdb**データベースに格納され、異種パブリッシングに使用されます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82827252"
 |**src_nullable**|**bit**|マッピングの変換先列で NULL 値を許容するかどうかを示します。値が NULL の場合、この定義は必要ありません。|  
 |**default_datatype_mapping_id**|**int**|テーブル[MSdbms_datatype_mapping](../../relational-databases/system-tables/msdbms-datatype-mapping-transact-sql.md)で**map_id**を指定することによって、既定のデータ型マッピングを識別します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Oracle パブリッシャーのデータ型マッピングの指定](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

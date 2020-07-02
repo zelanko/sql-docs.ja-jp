@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 24193b3474b1088a87acb5bdd15a5c5c4459f44d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 759ac2b464bbdee2a0199afe540f00c7695381a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68140547"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764278"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定した列の内容が、指定したドキュメントと意味的に似ているドキュメントについて、0行、1行、または複数の行から成るテーブルを返します。  
   
@@ -50,7 +50,7 @@ SEMANTICSIMILARITYTABLE
   
  この名前には 1 ~ 4 つの部分名を指定できますが、リモートサーバー名は許可されません。  
   
- **項目**  
+ **column**  
  結果が返されるインデックス付き列の名前。 列でセマンティックインデックス作成が有効になっている必要があります。  
   
  **column_list**  
@@ -69,7 +69,7 @@ SEMANTICSIMILARITYTABLE
   
  結果が複数の列から要求された場合、一致したドキュメントが列ごとに返されます。  
   
-|Column_name|種類|説明|  
+|Column_name|Type|説明|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|ソース ドキュメントを使用して類似したドキュメントを検出したときの、検出元の列の ID。<br /><br /> 列 ID から列名 (または列名から列 ID) を取得する方法の詳細については、COL_NAME 関数と COLUMNPROPERTY 関数のセクションを参照してください。|  
 |**matched_column_id**|**int**|類似したドキュメントが見つかった列の ID。<br /><br /> 列 ID から列名 (または列名から列 ID) を取得する方法の詳細については、COL_NAME 関数と COLUMNPROPERTY 関数のセクションを参照してください。|  
@@ -82,7 +82,7 @@ SEMANTICSIMILARITYTABLE
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  複数の列にわたって類似したドキュメントに対するクエリを実行することはできません。 **SEMANTICSIMILARITYTABLE**関数は、 **source_key**引数によって識別される、ソース列と同じ列から類似したドキュメントだけを取得します。  
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
  セマンティック類似性の抽出と作成の詳細と状態については、次の動的管理ビューに対してクエリを実行します。  
   
 -   [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  

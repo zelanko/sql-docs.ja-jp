@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6559be1c680c45b75154cea222ddfece355f49cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762754"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   既存のアラートの設定を更新します。  
   
@@ -78,13 +78,13 @@ sp_update_alert
   
 `[ @include_event_description_in = ] include_event_description_in`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows アプリケーションログからのエラーの説明を通知メッセージに含めるかどうかを指定します。 *include_event_description_in*は**tinyint**,、既定値は NULL の場合、これらの値の1つ以上を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|**0**|None|  
+|**0**|なし|  
 |**1**|電子メール|  
 |**2**|ポケットベル|  
 |**4**|**net send**|  
-|**7**|すべて|  
+|**7**|All|  
   
 `[ @database_name = ] 'database'`警告を起動するためにエラーが発生する必要があるデータベースの名前。 *データベース*は**sysname です。** 角かっこ ([]) で囲まれた名前は使用できません。 既定値は NULL です。  
   
@@ -116,7 +116,7 @@ sp_update_alert
 |--------------------|-----------------|  
 |*Item*|パフォーマンス オブジェクト、パフォーマンス カウンター、またはカウンターの名前付きインスタンス。|  
 |*演算子*|次のいずれかの演算子: **>** 、 **<** 、**=**|  
-|*値*|カウンターの数値|  
+|*Value*|カウンターの数値|  
   
 `[ @category_name = ] 'category'`警告カテゴリの名前。 *category*は**sysname**で、既定値は NULL です。  
   
@@ -127,7 +127,7 @@ sp_update_alert
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Windows アプリケーションログに書き込まれた**sysmessages**のみ [!INCLUDE[msCoName](../../includes/msconame-md.md)] が、アラートを発生させることができます。  
   
  **sp_update_alert**は、パラメーター値が指定されている警告設定のみを変更します。 パラメーターを省略した場合は、現在の設定が保持されます。  
@@ -148,7 +148,7 @@ EXEC dbo.sp_update_alert
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

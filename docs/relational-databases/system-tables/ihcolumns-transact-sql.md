@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f862824d6fe4e35eef25cbca949971276f1d0acd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 47fcad03fb8329c3d39150aa0aaf9b5688e0456f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764243"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHcolumns**システムテーブルには、パブリッシュされた列ごとに1つの行が含まれています。 このテーブルは、SQL&#xA0;Server 以外のパブリッシャーの列のデータ型がパブリッシュされたときの表示方法を定義するために使用されます。これにより、実質的に、SQL&#xA0;Server 以外のデータベース管理システム (DBMS) と SQL&#xA0;Server の間でデータ型をマップします。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82827299"
 |**mapped_scale**|**int**|サブスクライバーの列の小数点以下桁数です。|  
 |**mapped_nullable**|**bit**|サブスクライバーの列で NULL 値を許容するかどうかを示します。 **1**は null 値が許容されることを示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

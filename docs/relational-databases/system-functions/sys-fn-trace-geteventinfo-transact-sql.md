@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 62296eb8d1ef53969e33f3807bd81f47025a4893
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e079f473cbf08dc1a67f031d973149be0e987a2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762814"
 ---
 # <a name="sysfn_trace_geteventinfo-transact-sql"></a>fn_trace_geteventinfo (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   トレースされているイベントに関する情報を返します。  
   
@@ -70,7 +70,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_trace_setevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [Transact-sql&#41;&#40;トレースを作成する](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   

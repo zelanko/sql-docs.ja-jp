@@ -23,15 +23,15 @@ ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: beede3f42597a6b3c7acc6f5bc5a57bc070d0eba
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: e946fcfc3792d42af5cf32e9e5494bc90c8b91c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760328"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   ネイティブコンパイルのスカラーユーザー定義関数を含む、データベース内に作成される、ユーザー定義のスキーマスコープオブジェクトごとに1行のデータを格納します。  
   
@@ -96,7 +96,7 @@ ORDER BY modify_date;
 GO  
 ```  
   
-### <a name="b-returning-the-parameters-for-a-specified-stored-procedure-or-function"></a>B. 指定されたストアドプロシージャまたは関数のパラメーターを返す  
+### <a name="b-returning-the-parameters-for-a-specified-stored-procedure-or-function"></a>B: 指定されたストアドプロシージャまたは関数のパラメーターを返す  
  次のクエリを実行する前に、 `<database_name>` とを `<schema_name.object_name>` 有効な名前に置き換えます。  
   
 ```sql  
@@ -119,7 +119,7 @@ ORDER BY schema_name, object_name, p.parameter_id;
 GO  
 ```  
   
-### <a name="c-returning-all-the-user-defined-functions-in-a-database"></a>C. データベース内のすべてのユーザー定義関数を返す  
+### <a name="c-returning-all-the-user-defined-functions-in-a-database"></a>C: データベース内のすべてのユーザー定義関数を返す  
  次のクエリを実行する前に、を `<database_name>` 有効なデータベース名に置き換えます。  
   
 ```sql  
@@ -135,7 +135,7 @@ WHERE type_desc LIKE '%FUNCTION%';
 GO  
 ```  
   
-### <a name="d-returning-the-owner-of-each-object-in-a-schema"></a>D. スキーマ内の各オブジェクトの所有者を返す  
+### <a name="d-returning-the-owner-of-each-object-in-a-schema"></a>D: スキーマ内の各オブジェクトの所有者を返す  
  次のクエリの `<database_name>` と `<schema_name>` をすべて有効な名前に置き換えてから、クエリを実行します。  
   
 ```sql  
@@ -160,7 +160,7 @@ WHERE s.name = '<schema_name>';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [all_objects &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
  [sys.system_objects &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   

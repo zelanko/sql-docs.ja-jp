@@ -17,17 +17,17 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0944552bdf8db7ef97a594887a8e84e2ed834a72
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785189"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760733"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library から ODBC への一括コピーの変換
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client odbc ドライバーでサポートされている一括コピー関数は db-library の一括コピー関数に似ているため、db-library 一括コピープログラムを ODBC に変換するのは簡単です。ただし、次のような例外があります。  
+  Native Client ODBC ドライバーでサポートされている一括コピー関数は DB-LIBRARY の一括コピー関数に似ているため、DB-LIBRARY 一括コピープログラムを ODBC に変換するのは簡単です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。ただし、次のような例外があります。  
   
 -   DB-Library アプリケーションでは、DBPROCESS 構造体を指すポインターを一括コピー関数の最初のパラメーターに渡します。 ODBC アプリケーションでは、DBPROCESS ポインターが ODBC 接続ハンドルに置き換わります。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73785189"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、db-library メッセージとエラーハンドラーがサポートされていません。ODBC 一括コピー関数によって発生したエラーとメッセージを取得するには、 **SQLGetDiagRec**を呼び出す必要があります。 ODBC バージョンの一括コピー関数は、標準的な一括コピーのリターン コードである SUCCEED または FAILED を返しますが、SQL_SUCCESS や SQL_ERROR など、ODBC 形式のリターン コードを返しません。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、db-library メッセージとエラーハンドラーがサポートされていません。 odbc 一括コピー関数によって発生したエラーとメッセージを取得するには、 **SQLGetDiagRec**を呼び出す必要があります。 ODBC バージョンの一括コピー関数は、標準的な一括コピーのリターン コードである SUCCEED または FAILED を返しますが、SQL_SUCCESS や SQL_ERROR など、ODBC 形式のリターン コードを返しません。  
   
 -   DB-LIBRARY [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)の*varlen*パラメーターに指定された値は、ODBC **bcp_bind**の_cbdata_パラメーターとは異なる解釈になります。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73785189"
     |-------------------------|--------------------------------|-------------------------|  
     |NULL 値が指定された場合|0|-1 (SQL_NULL_DATA)|  
     |可変長のデータが指定された場合|-1|-10 (SQL_VARLEN_DATA)|  
-    |長さが 0 の文字列またはバイナリ文字列の場合|N/A|0|  
+    |長さが 0 の文字列またはバイナリ文字列の場合|NA|0|  
   
      DB-LIBRARY では、 *varlen*値-1 は、可変長データが指定されていることを示します。これは、ODBC *CBDATA*で、NULL 値のみが指定されていることを意味します。 DB-LIBRARY のすべての*varlen*仕様 (-1) を SQL_VARLEN_DATA に、および0のすべての*varlen*仕様を SQL_NULL_DATA に変更します。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "73785189"
   
     -   DB-LIBRARY **dbconvert**関数でサポートされている任意の形式の**datetime**文字列および**smalldatetime**文字列。  
   
-    -   クライアントネットワークユーティリティの [DB-LIBRARY オプション] タブで [**インターナショナル設定を使用する**] チェックボックスをオンにすると、db-library 一括コピー関数は、クライアントコンピューターのレジストリのロケール設定に定義されている地域の日付形式の日付も受け入れます。 **Options** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+    -   クライアントネットワークユーティリティの [DB-LIBRARY**オプション**] タブで [**インターナショナル設定を使用する**] チェックボックスをオンにすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db-library 一括コピー関数は、クライアントコンピューターのレジストリのロケール設定に定義されている地域の日付形式の日付も受け入れます。  
   
      DB-LIBRARY 一括コピー関数では、ODBC **datetime**および**smalldatetime**形式は使用できません。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "73785189"
   
 -   文字形式で**通貨**値を出力する場合、ODBC 一括コピー関数では、有効桁数が4桁、コンマ区切り文字が指定されません。DB-LIBRARY バージョンでは、2桁の有効桁数が指定され、コンマ区切り記号が含まれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC&#41;&#40;の一括コピー操作の実行](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   

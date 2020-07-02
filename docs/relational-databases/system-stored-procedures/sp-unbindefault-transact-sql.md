@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7fdce8d2fad56d56e13343bc3397353e72d3be1b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cc3e3af8e1b2333f68ea43fe9cacdfb4c3d39e40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809627"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762779"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースの列または別名データ型から、デフォルトをバインド解除 (削除) します。  
   
@@ -55,7 +55,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  既定のテキストを表示するには、パラメーターとして既定の名前を使用して**sp_helptext**を実行します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -70,21 +70,21 @@ sp_unbindefault [ @objname = ] 'object_name'
 EXEC sp_unbindefault 'employees.hiredate';  
 ```  
   
-### <a name="b-unbinding-a-default-from-an-alias-data-type"></a>B. 別名データ型からデフォルトをバインド解除する  
+### <a name="b-unbinding-a-default-from-an-alias-data-type"></a>B: 別名データ型からデフォルトをバインド解除する  
  次の例では、別名データ型の `ssn` からデフォルトをバインド解除します。 この型の既存の列と将来の列をバインド解除します。  
   
 ```  
 EXEC sp_unbindefault 'ssn';  
 ```  
   
-### <a name="c-using-the-futureonly_flag"></a>C. Futureonly_flag の使用  
+### <a name="c-using-the-futureonly_flag"></a>C: Futureonly_flag の使用  
  次の例では、既存の列に影響を与えずに別名データ型の将来の使用をバインド解除し `ssn` `ssn` ます。  
   
 ```  
 EXEC sp_unbindefault 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D. 区切られた識別子の使用  
+### <a name="d-using-delimited-identifiers"></a>D: 区切られた識別子の使用  
  次の例では、 *object_name*パラメーターで区切られた識別子を使用しています。  
   
 ```  
@@ -99,7 +99,7 @@ EXEC sp_bindefault 'default2', '[t.3].c1' ;
 EXEC sp_unbindefault '[t.3].c1';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   

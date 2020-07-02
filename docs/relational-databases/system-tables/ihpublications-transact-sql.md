@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 112d237781ecbe257ef0b9d8c3f4bdee37ca5bc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a8185249a40c11a031be8206a4a1ea016ed50faa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813606"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764236"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHpublications**システムテーブルには、現在のディストリビューターを使用する非 SQL Server パブリケーションごとに1行のレコードが格納されます。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "82813606"
 |**queue_type**|**int**|使用されるキューの種類。 次のいずれかの値を指定します。<br /><br /> **1** = msmq は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージキューを使用してトランザクションを格納します。<br /><br /> **2** = sql: を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションを格納します。<br /><br /> この列は、以外のパブリッシャーでは使用されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 注: [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージキューの使用は推奨されておらず、サポートされなくなりました。<br /><br /> *この列は、SQL 以外のパブリッシャーではサポートされていません。*|  
 |**ad_guidname**|**sysname**|パブリケーションが Active Directory でパブリッシュされるかどうかを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 有効なグローバル一意識別子 (GUID) は、パブリケーションが Active Directory にパブリッシュされることを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 guid は、対応する Active Directory パブリケーションオブジェクトの**objectGUID**です。 NULL の場合、パブリケーションは Active Directory でパブリッシュされません [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
 |**backward_comp_level**|**int**|データベースの互換性レベル。次のいずれかの値になります。<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。<br /><br /> *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
-|**記述**|**nvarchar(255)**|パブリケーションの内容を示すエントリ。|  
+|**description**|**nvarchar(255)**|パブリケーションの内容を示すエントリ。|  
 |**independent_agent**|**bit**|このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを示します。<br /><br /> **0** = パブリケーションは共有ディストリビューションエージェントを使用し、各パブリッシャーデータベース/サブスクライバーデータベースのペアには1つの共有エージェントがあります。<br /><br /> **1** = このパブリケーションには、スタンドアロンのディストリビューションエージェントがあります。|  
 |**immediate_sync**|**bit**|スナップショットエージェントを実行するたびに同期ファイルを作成または再作成するかどうかを示します。 **1**は、エージェントを実行するたびに同期ファイルが作成されることを意味します。|  
 |**allow_push**|**bit**|パブリケーションでプッシュサブスクリプションが許可されているかどうかを示します。 **1**は、このパブリケーションが許可されていることを示します。|  
@@ -72,7 +72,7 @@ ms.locfileid: "82813606"
 |**replicate_ddl**|**int**|パブリケーションでスキーマレプリケーションがサポートされているかどうかを示します。 **1**は、パブリッシャー側で実行される ddl ステートメントがレプリケートされることを示し、 **0**は ddl ステートメントがレプリケートされないことを示します。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。 *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
 |**options**|**int**|追加のパブリッシングオプションを指定するビットマップ。ビットごとのオプションの値は次のとおりです。<br /><br /> **0x1** -ピアツーピアレプリケーションに対して有効になります。<br /><br /> **0x2** -ローカル変更のみを発行します。<br /><br /> **0x4** -SQL Server 以外のサブスクライバーに対して有効です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addpublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7282472dcb916d7122625534cb64f80ce9f4ea6a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a12465c60bdc7c8cba52d4e82a26d0ee741fe9f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827485"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762675"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   警告通知の通知方法を更新します。  
 
@@ -49,7 +49,7 @@ sp_update_notification
   
 `[ @notification_method = ] notification`オペレーターに通知する方法。 *通知*は**tinyint**,、既定値はありませんが、これらの値の1つ以上を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|電子メール|  
 |**2**|ポケットベル|  
@@ -81,7 +81,7 @@ EXEC dbo.sp_update_notification
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_delete_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   

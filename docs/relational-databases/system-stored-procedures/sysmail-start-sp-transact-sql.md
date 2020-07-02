@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e15996a9db6e1b782875f2dd3d73d0e3e514c8f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e26409c4bbf3f5bff6332bce1804da3b60751e82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68044442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762640"
 ---
 # <a name="sysmail_start_sp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  外部プログラムが使用する[!INCLUDE[ssSB](../../includes/sssb-md.md)]オブジェクトを起動することによってデータベースメールを開始します。  
+  外部プログラムが使用するオブジェクトを起動することによってデータベースメールを開始 [!INCLUDE[ssSB](../../includes/sssb-md.md)] します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,15 +39,15 @@ sysmail_start_sp
 ```  
   
 ## <a name="arguments"></a>引数  
- None  
+ なし  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- None  
+ なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベース メールは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に有効化またはインストールされません。 データベース メール オブジェクトを有効化およびインストールするには、データベース メール構成ウィザードを使用します。  
   
  このストアドプロシージャは**msdb**データベースにあります。 このストアド プロシージャは、送信メッセージ要求を保持しているデータベース メール キューを開始し、外部プログラムに対する [!INCLUDE[ssSB](../../includes/sssb-md.md)] のアクティブ化を有効にします。  
@@ -71,7 +71,7 @@ EXECUTE dbo.sysmail_start_sp ;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメール XPs サーバー構成オプション](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)   
  [sysmail_stop_sp &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)   
