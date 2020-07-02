@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 163b5aba5f676f14afd26b962c856b325ccc4dc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6f9096b3e974b0fad906c4121a8c81bd2ba26e90
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819932"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751558"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   レプリケーションの警告が発生する原因となった条件に関する情報が含まれます。 このテーブルは、 **msdb**データベースに格納されます。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "82819932"
 |**source_object**|**sysname**|警告に関連付けられているパブリッシュ済みテーブルの名前。|  
 |**alert_error_text**|**ntext**|警告のテキスト。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

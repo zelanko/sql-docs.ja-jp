@@ -1,5 +1,5 @@
 ---
-title: dbo. sysdac_instances (Transact-sql) |Microsoft Docs
+title: dbo.sysdac_instances (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dfff37bc876302e404b63eb7babf4fc3700fc9d9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 18031fac584eea39e5901276b597fc556263b18e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823650"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752972"
 ---
-# <a name="data-tier-application-views---dbosysdac_instances"></a>データ層アプリケーションビュー-dbo. sysdac_instances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="data-tier-application-views---dbosysdac_instances"></a>データ層アプリケーションビュー-dbo.sysdac_instances
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに配置されたデータ層アプリケーション (DAC) インスタンスごとに 1 行を表示します。 sysdac_instances は、msdb データベースの dbo スキーマに属しています。 次の表では、sysdac_instances ビューの列について説明します。  
   
@@ -44,13 +44,13 @@ ms.locfileid: "82823650"
 |created_by|**sysname**|DAC インスタンスを作成したログイン。|  
 |database_name|**sysname**|DAC インスタンスのために作成したデータベースの名前。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  DAC には、テーブルやビューなどのアプリケーションによって使用される論理データ層オブジェクトの定義である DAC 型が含まれています。 DAC パッケージは、DAC を配置するために使用されるファイルです。 DAC パッケージは、DAC 型に含まれるすべての論理オブジェクトの表現を含んでいます。 DAC パッケージは、DAC の1つ以上のコピー (インスタンス) をのインスタンスに配置するために使用でき [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。 同じ DAC パッケージから配置された各 DAC インスタンスは同じ種類を共有しますが、一意のインスタンス名と識別子が割り当てられます。  
   
 ## <a name="permissions"></a>アクセス許可  
  すべての列を表示するには、sysadmin 固定サーバー ロールのメンバーシップが必要です。 パブリック ロールのメンバーは、instance_name、description、および type_version の各列を表示できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [データ層アプリケーションビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
   

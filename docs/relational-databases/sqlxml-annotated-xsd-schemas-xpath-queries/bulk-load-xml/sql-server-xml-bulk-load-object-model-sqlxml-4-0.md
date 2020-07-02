@@ -33,22 +33,22 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56dff7936e236ae76333543e902f588fa8ead1be
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 2e4a307dc619477cdc7006fcbd6060a86133bd8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751753"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 一括読み込みオブジェクト モデル (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 一括読み込みオブジェクトモデルは、SQLXMLBulkLoad オブジェクトで構成されています。 このオブジェクトでは、次のメソッドとプロパティがサポートされます。  
   
 ## <a name="methods"></a>メソッド  
  実行  
  パラメーターとして渡されるスキーマ ファイルとデータ ファイル (またはストリーム) を使用して、データの一括読み込みを行います。  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
  BulkLoad  
  一括読み込みを実行するかどうかを指定します。 このプロパティは、スキーマのみを生成する場合に便利です (以降の SchemaGen、SGDropTables、SGUseID の各プロパティを参照してください)。一括読み込みは実行されません。 このプロパティはブール値をとります。 このプロパティを TRUE に設定すると、XML 一括読み込みが行われます。 FALSE に設定すると、XML 一括読み込みは行われません。  
   

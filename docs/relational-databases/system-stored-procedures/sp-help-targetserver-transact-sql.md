@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6e24fcd2d134e9b66c15bd704416ef332f41d31e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ed310262b4f233a8642bbbab382a6d0b30a311e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820405"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752797"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   すべての対象サーバーを一覧表示します。  
   
@@ -78,7 +78,7 @@ EXEC dbo.sp_help_targetserver ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-target-server"></a>B. 特定の対象サーバーの情報を一覧表示する  
+### <a name="b-listing-information-for-a-specific-target-server"></a>B: 特定の対象サーバーの情報を一覧表示する  
  次の例では、対象サーバーの情報を一覧表示し `SEATTLE2` ます。  
   
 ```  
@@ -89,12 +89,12 @@ EXEC dbo.sp_help_targetserver N'SEATTLE2' ;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_delete_targetserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
  [sp_delete_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
- [sysdownloadlist &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
+ [dbo.sysdownloadlist &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

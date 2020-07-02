@@ -20,15 +20,15 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06a8b8e36123f34b42b890c8315b8847a3c0e0bb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f9c203cef9234c070bcefcc82bea396734123d4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828054"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738713"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 現在のデータベース内の指定されたデータベースオブジェクト (テーブルまたはインデックス付きビュー) の統計ヒストグラムを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 `DBCC SHOW_STATISTICS WITH HISTOGRAM` と似ています。
 
@@ -110,7 +110,7 @@ CREATE STATISTICS Country_Stats
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-### <a name="b-useful-query"></a>B. 便利なクエリ:   
+### <a name="b-useful-query"></a>B: 便利なクエリ:   
 ```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
@@ -119,7 +119,7 @@ CROSS APPLY sys.dm_db_stats_histogram(s.[object_id], s.stats_id) AS hist
 WHERE s.[name] = N'<statistic_name>';
 ```
 
-### <a name="c-useful-query"></a>C. 便利なクエリ:
+### <a name="c-useful-query"></a>C: 便利なクエリ:
 次の例では、列の述語を含むテーブルからを選択し `Country` `Country_Name` ます。
 
 ```sql  
@@ -144,7 +144,7 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
     AND sh.range_high_key = CAST('Canada' AS CHAR(8));
 ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [DBCC SHOW_STATISTICS (Transact-sql)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [オブジェクト関連の動的管理ビューおよび関数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

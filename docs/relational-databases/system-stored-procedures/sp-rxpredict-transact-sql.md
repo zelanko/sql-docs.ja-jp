@@ -4,7 +4,7 @@ ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - sp_rxPredict
@@ -16,19 +16,19 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9663b4cd51a7aca9e9e30ccafcdcb0652ec4229a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3f6ee7c1f0b1dc1ccbcd4db260621dc5bda3168
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488543"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750463"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server データベースにバイナリ形式で格納されている機械学習モデルで構成される、指定された入力の予測値を生成します。
 
-R と Python の機械学習モデルのスコア付けをほぼリアルタイムで提供します。 `sp_rxPredict`は`rxPredict` 、 [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)および[microsoft ml](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)の R 関数のラッパーとして提供されているストアドプロシージャ、および[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)と[microsoft ml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)の[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 関数のためのものです。 これは C++ で記述され、スコアリング操作専用に最適化されています。
+R と Python の機械学習モデルのスコア付けをほぼリアルタイムで提供します。 `sp_rxPredict`は、RevoScaleR および Microsoft Ml の R 関数のラッパーとして提供されているストアドプロシージャ、 `rxPredict` および[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)と[microsoft ml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)の[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 関数[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)のためのものです。 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) これは C++ で記述され、スコアリング操作専用に最適化されています。
 
 モデルは R または Python を使用して作成する必要がありますが、シリアル化され、ターゲットデータベースエンジンインスタンスでバイナリ形式で格納されると、R または Python の統合がインストールされていない場合でも、そのデータベースエンジンのインスタンスから使用できます。 詳細については、「 [sp_rxPredict を使用したリアルタイムのスコアリング](https://docs.microsoft.com/sql/machine-learning/real-time-scoring)」を参照してください。
 
@@ -60,7 +60,7 @@ sp_rxPredict  ( @model, @input )
 > [!NOTE]
 > このオプションの enabing には、セキュリティ上の影響があります。 サーバーで SQLCLR が有効になっていない場合は、 [TRANSACT-SQL PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017)関数などの代替の実装を使用します。
 
-ユーザーは、 `EXECUTE`データベースに対する権限が必要です。
+ユーザーは、 `EXECUTE` データベースに対する権限が必要です。
 
 ### <a name="supported-algorithms"></a>サポートされているアルゴリズム
 
@@ -87,7 +87,7 @@ sp_rxPredict  ( @model, @input )
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
-  + [カテゴリ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
@@ -113,14 +113,14 @@ sp_rxPredict  ( @model, @input )
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
-  + [カテゴリ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
 ### <a name="unsupported-model-types"></a>サポートされていないモデルの種類
 
 次の種類のモデルはサポートされていません。
 
-+ RevoScaleR のアルゴリズム`rxGlm`また`rxNaiveBayes`はアルゴリズムを使用するモデル
++ `rxGlm`RevoScaleR のアルゴリズムまたはアルゴリズムを使用するモデル `rxNaiveBayes`
 + R の PMML モデル
 + 他のサードパーティライブラリを使用して作成されたモデル 
 
@@ -135,7 +135,7 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-Inputdata の入力データには、有効な SQL クエリに加えて、格納されているモデルの列と互換性のある列が含まれている必要があります。 * \@*
+* \@ Inputdata*の入力データには、有効な SQL クエリに加えて、格納されているモデルの列と互換性のある列が含まれている必要があります。
 
 `sp_rxPredict`でサポートされている .NET 列の型は、double、float、short、ushort、long、ulong、および string のみです。 リアルタイムスコアリングに使用する前に、入力データでサポートされていない型を除外することが必要になる場合があります。 
 

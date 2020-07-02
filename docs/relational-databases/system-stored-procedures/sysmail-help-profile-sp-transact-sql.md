@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 95660c293ef8a5efcca132407cd930ab0b721d89
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5d98f997c2ab70060aa8770d73c8a8a4823c09bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827426"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752714"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   1 つ以上のメール プロファイルに関する情報を一覧表示します。  
   
@@ -54,7 +54,7 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |列名|データ型|説明|  
 |**profile_id**|**int**|プロファイルのプロファイル id。|  
 |**name**|**sysname**|プロファイルのプロファイル名。|  
-|**記述**|**nvarchar(256)**|プロファイルの説明。|  
+|**description**|**nvarchar(256)**|プロファイルの説明。|  
   
 ## <a name="remarks"></a>Remarks  
  プロファイル名またはプロファイル id が指定されている場合、 **sysmail_help_profile_sp**はそのプロファイルに関する情報を返します。 それ以外の場合、 **sysmail_help_profile_sp**は、インスタンス内のすべてのプロファイルに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -64,7 +64,7 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  **A. すべてのプロファイルを一覧表示する**  
   
  次の例では、インスタンス内のすべてのプロファイルを一覧表示します。  
@@ -99,7 +99,7 @@ profile_id  name                          description
 56          AdventureWorks Administrator  Administrative mail profile.    
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   

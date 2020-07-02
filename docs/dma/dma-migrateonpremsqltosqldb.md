@@ -1,7 +1,7 @@
 ---
 title: Data Migration Assistant を使用して SQL Server を Azure SQL Database に移行する
 description: Data Migration Assistant を使用して、オンプレミスの SQL Server をに移行する方法について説明し Azure SQL Database
-ms.date: 07/15/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6280a3ea803424dc2a6a72d673c59e1e48816601
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ec6b5ad0ab2047e72a1f3e3e5dfcd9fc49b954d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885929"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749787"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant を使用して、オンプレミスの SQL Server または Azure Vm の SQL Server を Azure SQL Database に移行する
 
@@ -75,7 +75,7 @@ Data Migration Assistant は、オンプレミスの SQL Server と、それ以�
 4. 移行先の単一の対象になるデータベースを選択します。
 
    > [!NOTE]
-   > Windows ユーザーを移行する場合は、[**ターゲットの外部ユーザーのドメイン名**] テキストボックスで、ターゲット外部ユーザーのドメイン名が正しく指定されていることを確認します。
+   > Windows ユーザーを移行する場合は、[**ターゲットの外部ユーザーのドメイン名**] テキストボックスで、ターゲットの外部ユーザーのドメイン名が正しく指定されていることを確認します。
 
     ![ターゲットデータベースの選択](../dma/media/select-target-database.png)
 
@@ -87,8 +87,8 @@ Data Migration Assistant は、オンプレミスの SQL Server と、それ以�
 
     ![スキーマ オブジェクトの選択](../dma/media/select-schema-objects.png)
 
-       > [!NOTE]
-       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
+    > [!NOTE]
+    > そのまま変換できないオブジェクトの一部が、自動修正の可能性と共に表示されます。 左側のウィンドウでこれらのオブジェクトをクリックすると、右側のウィンドウに提案された修正が表示されます。 修正を確認して、オブジェクトごとにすべての変更を適用するか、無視するかを選びます。 1 つのオブジェクトに対してすべての変更を適用するか、無視しても、他のデータベース オブジェクトには変更が適用されないことに注意してください。 変換できない、または自動修正できないというステートメントが、対象になるデータベースに対して再現され、コメントされます。
 
     ![修正案](../dma/media/suggested-fix.png)
 

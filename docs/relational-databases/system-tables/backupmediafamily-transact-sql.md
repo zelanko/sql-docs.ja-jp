@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e955cb7378a9da430608bf55d287be0fd7237ef5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be1df53780b7472d613c49d2d105c606a09de8df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807424"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750372"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   メディア ファミリごとに 1 行のデータを格納します。 メディア ファミリがミラー化されたメディア セット内にある場合は、メディア セット内のミラーごとに個別の行が格納されます。 このテーブルは、 **msdb**データベースに格納されます。  
     
@@ -40,14 +40,14 @@ ms.locfileid: "82807424"
 |**physical_device_name**|**nvarchar(260)**|バックアップデバイスの物理名。 NULL にすることができます。 このフィールドは、バックアップと復元のプロセス間で共有されます。 元のバックアップ先のパスまたは元の復元元のパスが含まれている場合があります。 データベースのサーバーでバックアップまたは復元が最初に実行されたかどうかによって異なります。 同じバックアップファイルからの連続した復元では、復元時の場所に関係なく、パスが更新されないことに注意してください。 このため、使用されている復元パスを確認するために**physical_device_name**フィールドを使用することはできません。|  
 |**device_type**|**tinyint**|バックアップ デバイスの種類。<br /><br /> 2 = ディスク<br /><br /> 5 = テープ<br /><br /> 7 = 仮想デバイス<br /><br /> 9 = Azure Storage<br /><br /> 105 = パーマネントなバックアップ デバイス。<br /><br /> NULL にすることができます。<br /><br /> すべての永続的なデバイス名とデバイス番号は、 **sys. backup_devices**にあります。|  
 |**physical_block_size**|**int**|メディアファミリの書き込みに使用される物理ブロックサイズ。 NULL にすることができます。|  
-|**イメージ**|**tinyint**|ミラー数 (0 ～ 3)。|  
+|**mirror**|**tinyint**|ミラー数 (0 ～ 3)。|  
   
 ## <a name="remarks"></a>Remarks  
  LOADHISTORY を使用した*backup_device*からの RESTORE verifyonly は、 **backupmediaset**テーブルの列に、メディアセットヘッダーからの適切な値を設定します。  
   
  このテーブルおよびその他のバックアップテーブルと履歴テーブルの行の数を減らすには、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)ストアドプロシージャを実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のテーブルのバックアップと復元](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   

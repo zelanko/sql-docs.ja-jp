@@ -20,15 +20,15 @@ ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21007e66d8f193ce8e2a166e1615619be409cb9d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f7a88ef6865575d8e5c505cd563b463637dd8070
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738700"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のデータベース内の指定されたデータベースオブジェクト (テーブルまたはインデックス付きビュー) の統計のプロパティを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 パーティションテーブルについては、同様の[dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)を参照してください。 
  
@@ -83,7 +83,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
 SELECT * FROM sys.dm_db_stats_properties (object_id('Person.Person'), 1);
 ``` 
   
-### <a name="b-returning-all-statistics-properties-for-a-table"></a>B. テーブルのすべての統計プロパティを返す  
+### <a name="b-returning-all-statistics-properties-for-a-table"></a>B: テーブルのすべての統計プロパティを返す  
  次の例では、テーブルテストに存在するすべての統計のプロパティを返します。  
   
 ```sql  
@@ -93,7 +93,7 @@ CROSS APPLY sys.dm_db_stats_properties(stat.object_id, stat.stats_id) AS sp
 WHERE stat.object_id = object_id('TEST');  
 ```  
   
-### <a name="c-returning-statistics-properties-for-frequently-modified-objects"></a>C. 頻繁に変更されるオブジェクトの統計プロパティを返す  
+### <a name="c-returning-statistics-properties-for-frequently-modified-objects"></a>C: 頻繁に変更されるオブジェクトの統計プロパティを返す  
  次の例では、統計が前回更新されてからの先頭列の変更が 1,000 回を超える、現在のデータベース内にあるすべてのテーブル、インデックス付きビュー、および統計を返します。  
   
 ```sql  
@@ -104,7 +104,7 @@ CROSS APPLY sys.dm_db_stats_properties(stat.object_id, stat.stats_id) AS sp
 WHERE modification_counter > 1000;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [SQLSERVER &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [オブジェクト関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   

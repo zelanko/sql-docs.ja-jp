@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 95598885a80b1f697f5e1287e22c1048e737ba6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f7b0c3e906fdd9576970ed1e8dfd69893b0759a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750476"
 ---
 # <a name="sp_revokelogin-transact-sql"></a>sp_revokelogin (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  CREATE LOGIN、 **sp_grantlogin**、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または**sp_denylogin**を使用して作成された Windows ユーザーまたはグループに対して、からログインエントリを削除します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CREATE login、 **sp_grantlogin**、または**sp_denylogin**を使用して作成された Windows ユーザーまたはグループに対して、からログインエントリを削除します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)を使用してください。  
@@ -42,23 +42,23 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @loginame = ] 'login'`Windows ユーザーまたはグループの名前を指定します。 *login*は**sysname**,、既定値はありません。 *ログイン*には、*コンピューター名*\\*ユーザーまたはドメイン*\\*ユーザー*の形式で、既存の Windows ユーザー名またはグループを指定できます。  
+`[ @loginame = ] 'login'`Windows ユーザーまたはグループの名前を指定します。 *login*は**sysname**,、既定値はありません。 *ログイン*には、*コンピューター名* \\ *ユーザーまたはドメイン* \\ *ユーザー*の形式で、既存の Windows ユーザー名またはグループを指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_revokelogin**は、 *login*パラメーターで指定されたアカウントを使用した接続を無効にします。 ただし、Windows グループのメンバーシップによってのインスタンスへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアクセスが許可されている windows ユーザーは、個別のアクセスが取り消された後もグループとして接続できます。 同様に、 *login*パラメーターで Windows グループの名前を指定した場合、そのグループのメンバーはのインスタンスへの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセスが個別に許可されていても接続できます。  
+## <a name="remarks"></a>解説  
+ **sp_revokelogin**は、 *login*パラメーターで指定されたアカウントを使用した接続を無効にします。 ただし、Windows グループのメンバーシップによってのインスタンスへのアクセスが許可されている Windows ユーザー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、個別のアクセスが取り消された後もグループとして接続できます。 同様に、 *login*パラメーターで Windows グループの名前を指定した場合、そのグループのメンバーはのインスタンスへのアクセスが個別に許可されていて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] も接続できます。  
   
- たとえば、Windows ユーザー **ADVWORKS\john**が windows グループ**ADVWORKS\Admins**のメンバーである場合、 **sp_revokelogin**は次の`ADVWORKS\john`アクセス権を取り消します。  
+ たとえば、Windows ユーザー **ADVWORKS\john**が windows グループ**ADVWORKS\Admins**のメンバーである場合、 **sp_revokelogin**は次のアクセス権を取り消し `ADVWORKS\john` ます。  
   
 ```  
 sp_revokelogin [ADVWORKS\john]  
 ```  
   
- ユーザー **ADVWORKS\john**は、 **ADVWORKS\Admins**にのインスタンスへのアクセスが許可され[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ている場合でも接続できます。 同様に、Windows グループ**ADVWORKS\Admins**のアクセスが取り消されても、 **ADVWORKS\john**にアクセス権が付与されている場合、 **ADVWORKS\john**は引き続き接続できます。  
+ ユーザー **ADVWORKS\john**は、 **ADVWORKS\Admins**にのインスタンスへのアクセスが許可されている場合でも接続でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 同様に、Windows グループ**ADVWORKS\Admins**のアクセスが取り消されても、 **ADVWORKS\john**にアクセス権が付与されている場合、 **ADVWORKS\john**は引き続き接続できます。  
   
- **Sp_denylogin**を使用すると、Windows グループメンバーシップに関係なく[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ユーザーがのインスタンスに明示的に接続するのを防ぐことができます。  
+ **Sp_denylogin**を使用すると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Windows グループメンバーシップに関係なく、ユーザーがのインスタンスに明示的に接続するのを防ぐことができます。  
   
  **sp_revokelogin**は、ユーザー定義のトランザクション内では実行できません。  
   
@@ -66,7 +66,7 @@ sp_revokelogin [ADVWORKS\john]
  サーバーに対する ALTER ANY LOGIN 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、Windows ユーザー `Corporate\MollyA`のログインエントリを削除します。  
+ 次の例では、Windows ユーザーのログインエントリを削除し `Corporate\MollyA` ます。  
   
 ```  
 EXEC sp_revokelogin 'Corporate\MollyA';  
@@ -78,7 +78,7 @@ EXEC sp_revokelogin 'Corporate\MollyA';
 EXEC sp_revokelogin [Corporate\MollyA];  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のログインを削除します。](../../t-sql/statements/drop-login-transact-sql.md)   
  [sp_denylogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   

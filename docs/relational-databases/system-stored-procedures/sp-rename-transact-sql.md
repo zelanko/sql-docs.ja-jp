@@ -21,15 +21,15 @@ ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac92f07acb7e7322adcf00e09774f72e93e39963
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d1d9daa3350d252b6ef11c1dda88fc1383964e08
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751654"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のデータベース内のユーザーが作成したオブジェクトの名前を変更します。 このオブジェクトには、テーブル、インデックス、列、別名データ型、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) ユーザー定義型を使用できます。  
   
@@ -61,7 +61,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objtype =] '*object_type*'  
  名前を変更するオブジェクトの種類を指定します。 *object_type*は**varchar (13)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |COLUMN|名前を変更する列。|  
 |DATABASE|ユーザー定義データベース。 このオブジェクトの種類は、データベースの名前を変更するときに必要です。|  
@@ -99,7 +99,7 @@ EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';
 GO  
 ```  
   
-### <a name="b-renaming-a-column"></a>B. 列の名前を変更する  
+### <a name="b-renaming-a-column"></a>B: 列の名前を変更する  
  次の例では、テーブルの列の名前 `TerritoryID` `SalesTerritory` をに変更 `TerrID` します。  
   
 ```  
@@ -109,7 +109,7 @@ EXEC sp_rename 'Sales.SalesTerritory.TerritoryID', 'TerrID', 'COLUMN';
 GO  
 ```  
   
-### <a name="c-renaming-an-index"></a>C. インデックス名を変更する  
+### <a name="c-renaming-an-index"></a>C: インデックス名を変更する  
  次の例では、インデックスの名前 `IX_ProductVendor_VendorID` をに変更 `IX_VendorID` します。  
   
 ```  
@@ -119,7 +119,7 @@ EXEC sp_rename N'Purchasing.ProductVendor.IX_ProductVendor_VendorID', N'IX_Vendo
 GO  
 ```  
   
-### <a name="d-renaming-an-alias-data-type"></a>D. 別名データ型の名前を変更する  
+### <a name="d-renaming-an-alias-data-type"></a>D: 別名データ型の名前を変更する  
  次の例では、 `Phone` 別名データ型の名前をに変更し `Telephone` ます。  
   
 ```  
@@ -203,7 +203,7 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

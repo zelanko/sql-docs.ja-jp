@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5ebb27860d7b7da46680a61486c59de3929117ce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 36ac5833a4bf714c6f4b294f15f0cf6aca6fb64d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834218"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750424"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたリンクサーバーからテーブルに関するテーブル情報を返します。  
   
@@ -54,12 +54,12 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'`返されるテーブルの型を示します。 *table_type*は**sysname**で、既定値は NULL です。次のいずれかの値を指定できます。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**ALIAS**|エイリアスの名前。|  
+|**エイリアス**|エイリアスの名前。|  
 |**GLOBAL TEMPORARY**|システム全体で使用可能な一時テーブルの名前。|  
 |**LOCAL TEMPORARY**|現在のジョブでのみ使用可能な一時テーブルの名前。|  
-|**SYNONYM**|シノニムの名前。|  
+|**同義語**|シノニムの名前。|  
 |**システムテーブル**|システム テーブルの名前です。|  
 |**システムビュー**|システムビューの名前。|  
 |**一覧**|ユーザーテーブルの名前。|  
@@ -68,7 +68,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 `[ @fUsePattern = ] 'fUsePattern'`**_**、 **%** 、 **[**、および **]** 文字をワイルドカード文字として解釈するかどうかを決定します。 有効な値は 0 (パターン一致がオフ) および 1 (パターン一致がオン) です。 *Fusepattern*は**ビット**,、既定値は1です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -80,7 +80,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE_TYPE**|**varchar(32)**|テーブル、システムテーブル、またはビュー。|  
 |**備考**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はこの列の値を返しません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_tables_ex**は、 *table_server*に対応する OLE DB プロバイダーの**IDBSchemaRowset**インターフェイスのテーブル行セットを照会することによって実行されます。 返される行を制限するために、 *table_name*、 *table_schema*、 *table_catalog*、および*列*の各パラメーターがこのインターフェイスに渡されます。  
   
  指定されたリンクサーバーの OLE DB プロバイダーが**IDBSchemaRowset**インターフェイスの tables 行セットをサポートしていない場合、 **sp_tables_ex**は空の結果セットを返します。  
@@ -98,7 +98,7 @@ EXEC sp_tables_ex @table_server = 'LONDON2',
 @table_type = 'TABLE';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [分散クエリストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_catalogs &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_columns_ex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   

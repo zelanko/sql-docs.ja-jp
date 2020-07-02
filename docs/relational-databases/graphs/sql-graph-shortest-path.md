@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056399"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753250"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-sql)
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
 
   再帰的または繰り返し検索されるグラフの検索条件を指定します。 SHORTEST_PATH は、SELECT ステートメント内のグラフノードとエッジテーブルとの一致内部で使用できます。 
   
@@ -85,7 +85,7 @@ STRING_AGG 関数は、式と区切り記号を入力として受け取り、文
 ### <a name="last_value"></a>LAST_VALUE
 走査されたパスの最後のノードから属性を射影するために、LAST_VALUE 集計関数を使用できます。 この関数への入力としてエッジテーブルの別名を指定するとエラーになります。使用できるのは、ノードのテーブル名または別名だけです。
 
-**最後のノード**: 最後のノードは、一致述語の矢印の方向に関係なく、走査されたパスの最後に表示されるノードを参照します。 たとえば、 `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`と指定します。 ここで、パスの最後のノードが最後にアクセスした P ノードになります。 
+**最後のノード**: 最後のノードは、一致述語の矢印の方向に関係なく、走査されたパスの最後に表示されるノードを参照します。 例: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`。 ここで、パスの最後のノードが最後にアクセスした P ノードになります。 
 
 一方、最後のノードは、このパターンの出力グラフパスの最後の n 番目のノードです。`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
@@ -93,7 +93,7 @@ STRING_AGG 関数は、式と区切り記号を入力として受け取り、文
 この関数は、指定されたノード/エッジ属性値またはスキャンされたパスに出現する式の合計を返します。
 
 ### <a name="count"></a>[COUNT]
-この関数は、パス内の必要なノード/エッジ属性の null 以外の値の数を返します。 COUNT 関数では、ノード\*またはエッジテーブルの別名を持つ ' ' 演算子がサポートされています。 ノードまたはエッジテーブルの別名がないと、 \*の使用法があいまいになり、エラーが発生します。
+この関数は、パス内の必要なノード/エッジ属性の null 以外の値の数を返します。 COUNT 関数では、 \* ノードまたはエッジテーブルの別名を持つ ' ' 演算子がサポートされています。 ノードまたはエッジテーブルの別名がないと、の使用法があいまいになり、エラーが発生し \* ます。
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
@@ -117,7 +117,7 @@ LAST_NODE は shortest_path 内でのみサポートされます。
 ## <a name="examples"></a>使用例 
 ここに示したクエリの例では、 [SQL Graph サンプル](./sql-graph-sample.md)で作成したノードテーブルとエッジテーブルを使用します。
 
-### <a name="a--find-shortest-path-between-2-people"></a>A.  2つのメンバーの間の最短パスを検索する
+### <a name="a--find-shortest-path-between-2-people"></a>A:  2つのメンバーの間の最短パスを検索する
  次の例では、Jacob と Alice の間の最短のパスを見つけます。 Graph サンプルスクリプトから作成された Person ノードと FriendOf edge が必要になります。 
 
  ```
@@ -137,7 +137,7 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
- ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  指定されたノードからグラフ内の他のすべてのノードまでの最短パスを検索します。 
+ ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B:  指定されたノードからグラフ内の他のすべてのノードまでの最短パスを検索します。 
  次の例では、グラフ内の Jacob が接続されているすべてのユーザーと、Jacob からすべてのユーザーを対象とする最短パスを検索します。 
 
  ```
@@ -152,7 +152,7 @@ WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2)+))
 AND Person1.name = 'Jacob'
  ```
 
-### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C.  グラフ内で1人のユーザーから別のユーザーに送られるホップ数またはレベル数をカウントします。
+### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C:  グラフ内で1人のユーザーから別のユーザーに送られるホップ数またはレベル数をカウントします。
  次の例では、Jacob と Alice の間の最短パスを検索し、Jacob から Alice に移動するために必要なホップ数を出力します。 
 
  ```
@@ -173,7 +173,7 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
-### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. 特定のユーザーからの1-3 のホップを検索する
+### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D: 特定のユーザーからの1-3 のホップを検索する
 次の例では、Jacob と、その接続先であるすべての人の間の最短のパスを、グラフ1-3 のホップから離れた場所に検索します。 
 
 ```
@@ -208,7 +208,7 @@ FROM (
 WHERE Q.levels = 2
 ```
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MATCH (SQL グラフ)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL グラフ)](../../t-sql/statements/insert-sql-graph.md)]  

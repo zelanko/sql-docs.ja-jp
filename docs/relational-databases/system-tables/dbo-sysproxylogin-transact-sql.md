@@ -1,5 +1,5 @@
 ---
-title: dbo. sysproxylogin (Transact-sql) |Microsoft Docs
+title: dbo.sysproxylogin (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfa29500a798cdcfe535a377abd8c649972415b0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b798627a09a9bb96e753221750711dbfe465657f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750292"
 ---
-# <a name="dbosysproxylogin-transact-sql"></a>dbo. sysproxylogin (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (Transact-sql)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   各 SQL Server エージェント プロキシ アカウントに関連付けられている、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインを記録します。 このテーブルは、 **msdb**データベースに格納されます。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82825958"
 ## <a name="remarks"></a>Remarks  
  このテーブルにアクセスできるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [dbo .SQL プロキシ &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [dbo.sysプロキシ &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   
   

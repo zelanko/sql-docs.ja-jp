@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 77497b56d5f889c698ce5b27088032bb96b7135a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 835ca342cabc37826c4425391e531820c8600b11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806223"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750207"
 ---
 # <a name="extended-events-tables---trace_xe_action_map"></a>拡張イベント テーブル - trace_xe_action_map
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   SQL トレース列 ID に割り当てられている拡張イベントのアクションごとに 1 行のデータを格納します。 このテーブルは、sys スキーマの master データベースに格納されます。  
   
@@ -49,7 +49,7 @@ INNER JOIN sys.trace_xe_action_map AS am
   
  アクションにマップされない SQL トレース列は、テーブルには含まれません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [trace_xe_event_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)  
   
   

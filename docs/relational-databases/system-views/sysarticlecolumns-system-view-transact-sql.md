@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a8dd8d13-c827-45c4-87ba-802725301382
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8a0505b8316254090fe5f2310fa68011d8289679
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10467dfa991efbed27941ba31424057b721527d1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750132"
 ---
 # <a name="sysarticlecolumns-system-view-transact-sql"></a>sysarticlecolumns (システム ビュー) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sysarticlecolumns**ビューでは、パブリッシュされたアーティクルの列に関する追加情報が公開されます。 このビューは、ディストリビューション データベースに格納されます。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68129553"
 |**is_xml**|**int**|列が**xml**列かどうかを示します。 値**1**は**xml**列を示します。|  
 |**is_max**|**int**|列が大きな値のデータ型の列 (**varchar (max)**、 **nvarchar (max)** 、または**varbinary (max)**) であるかどうかを示します。 値**1**は大きな値の列を示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sysarticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
   

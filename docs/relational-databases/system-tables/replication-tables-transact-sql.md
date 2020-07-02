@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05ddadf1089969a2e345bbfdb638c9dea8b71676
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 709f99ce8e45e9a362aa8ef1aa0d5607d3b79172
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751582"
 ---
 # <a name="replication-tables-transact-sql"></a>レプリケーション テーブル (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   レプリケーショントポロジは、レプリケーションシステムテーブルでサポートされています。 ユーザーデータベースがパブリッシャーまたはサブスクライバーとして構成されている場合、レプリケーションによってシステムテーブルがデータベースに追加されます。 これらのテーブルは、ユーザーデータベースがレプリケーショントポロジから削除されると削除されます。 システムテーブルの使用に関する一般的な規則については、「[システムテーブル &#40;transact-sql&#41;](system-tables-transact-sql.md)」を参照してください。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "83808144"
  
 |||  
 |-|-|  
-|[conflict_ \< スキーマ>_ \< テーブル>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[conflict_ \<schema> _\<table>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  
@@ -139,7 +139,7 @@ ms.locfileid: "83808144"
 |[MSmerge_settingshistory](msmerge-settingshistory-transact-sql.md)               |[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)| 
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリッシングおよびディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [パブリッシングおよびディストリビューションを無効にする](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

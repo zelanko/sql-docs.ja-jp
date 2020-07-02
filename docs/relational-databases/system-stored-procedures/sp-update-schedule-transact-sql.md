@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bad747d2c88b7d159b9d043d12c81cc380c84c7b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ab7241fe17306fedf25c1562bcabe366d7754e84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809258"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749288"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   エージェントスケジュールの設定を変更し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -65,12 +65,12 @@ sp_update_schedule
   
 `[ @freq_type = ] freq_type`ジョブがいつ実行されるかを示す値です。 *freq_type*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**4**|毎日|  
 |**8**|週次|  
-|**まで**|月 1 回|  
+|**16**|月単位|  
 |**32**|毎月 ( *freq 間隔*を基準)|  
 |**64**|SQLServerAgent サービスの開始時に実行する|  
 |**128**|コンピューターがアイドル状態のときに実行する|  
@@ -89,7 +89,7 @@ sp_update_schedule
   
 `[ @freq_subday_type = ] freq_subday_type`*Freq_subday_interval * ** の単位を指定します。 *freq_subday_type*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。  
   
-|[値]|説明 (単位)|  
+|値|説明 (単位)|  
 |-----------|--------------------------|  
 |**0x1**|指定された時間|  
 |**0x2**|Seconds|  
@@ -100,13 +100,13 @@ sp_update_schedule
   
 `[ @freq_relative_interval = ] freq_relative_interval`*Freq_interval*が**32** (月単位) の場合、各月における*freq_interval*のジョブの発生回数。 *freq_relative_interval*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。  
   
-|[値]|説明 (単位)|  
+|値|説明 (単位)|  
 |-----------|--------------------------|  
 |**1**|First|  
 |**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|末尾|  
+|**16**|末尾|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`ジョブのスケジュールされた実行の間隔を週または月単位で指定します。 *freq_recurrence_factor*は*freq_type*が**8**、 **16**、または**32**の場合にのみ使用されます。 *freq_recurrence_factor*は**int**,、既定値は**0**です。  
   
@@ -157,7 +157,7 @@ EXEC dbo.sp_update_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スケジュールを作成してジョブにアタッチする](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [ジョブのスケジュール設定](../../ssms/agent/schedule-a-job.md)   
  [スケジュールを作成する](../../ssms/agent/create-a-schedule.md)   

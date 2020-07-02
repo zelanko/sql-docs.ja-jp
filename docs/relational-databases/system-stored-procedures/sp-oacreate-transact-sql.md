@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d851461ae4cd07f3dd89e2cff4326d03e05a5d66
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 511101642570c9ddf28763b6303aa90bb985317a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815275"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752780"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   OLE オブジェクトのインスタンスを作成します。  
   
@@ -104,7 +104,7 @@ END;
 GO  
 ```  
   
-### <a name="b-using-clsid"></a>B. CLSID の使用  
+### <a name="b-using-clsid"></a>B: CLSID の使用  
  次の例では、CLSID を使用して、SQL-DMO **SQLServer**オブジェクトを作成します。  
   
 ```  
@@ -122,7 +122,7 @@ END;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の OLE オートメーションストアドプロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Ole Automation Procedures サーバー構成オプション](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)   
  [OLE オートメーションのサンプル スクリプト](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e9873045fd7e4fb11ad19bbbce953a086512df9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d6414be15bcd33e8ae2a0ab267baaa039761fc04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824372"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750453"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   パブリッシュの対象となる Oracle テーブルを一覧表示するときに除外されるスキーマに関する情報を変更して表示します。  
   
@@ -45,7 +45,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 `[ @operation = ] 'operation'`このスキーマに対して実行するアクションを指定します。 *操作*は**nvarchar (4)**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**add**|指定されたスキーマを、パブリケーションに適合しないスキーマの一覧に追加します。|  
 |**」**|指定されたスキーマを、パブリケーションに適合しないスキーマの一覧から削除します。|  
@@ -66,7 +66,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_schemafilter**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

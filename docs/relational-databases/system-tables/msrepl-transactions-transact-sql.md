@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 62cb6c4d977b1096b76f46f7d6924811e1185ae3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 642a6331f8466a37dbb3531d9d2e0052638bdbb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820064"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752665"
 ---
 # <a name="msrepl_transactions-transact-sql"></a>MSrepl_transactions (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSrepl_transactions**テーブルには、レプリケートされたトランザクションごとに1つの行が含まれます。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82820064"
 |**xact_seqno**|**varbinary(16)**|トランザクションのシーケンス番号。|  
 |**entry_time**|**datetime**|トランザクションがディストリビューションデータベースに入力された時刻です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

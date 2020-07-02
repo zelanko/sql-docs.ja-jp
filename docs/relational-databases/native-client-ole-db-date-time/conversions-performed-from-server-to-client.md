@@ -13,42 +13,42 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ed1216a0afd9091af7a0597592310eb457a4cbe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1143407da0e09d801e4ac75ae364c6c08d670040
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304423"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753075"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>サーバーからクライアントへの変換
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   このトピックでは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降) と、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB で作成されたクライアント アプリケーションとの間で実行される日付または時刻の変換について説明します。  
   
-## <a name="conversions"></a>コンバージョン  
+## <a name="conversions"></a>変換  
  次の表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターでは、ICommandWithParameters::SetParameterInfo が呼び出され、*pwszDataSourceType* で指定された型が実際のサーバーの型と一致しない場合、サーバーによって暗黙的な変換が実行され、クライアントに返された型は ICommandWithParameters::SetParameterInfo を介して指定された型と一致します。 これにより、サーバーの変換規則がこのトピックで説明したものと異なる場合に、予期しない変換結果が発生する可能性があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 1899-12-30 ではなく 1900-1-1 が使用されます。  
   
-|To -><br /><br /> ソース|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|To -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|日付|1、7|[OK]|-|-|1|1、3|1、7|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
-|Time|5、6、7|-|9|[OK]|6|3、6|5、6|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
-|Smalldatetime|7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
-|Datetime|5、7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
-|Datetime2|5、7|8|9、10|10|7|3|5、7|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
-|Datetimeoffset|5、7、11|8、11|9、10、11|10、11|7、11|[OK]|5、7、11|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
-|Char、Varchar、<br /><br /> Nchar、Nvarchar|7、13|12|12、9|12|12|12|7、13|なし|該当なし|該当なし|該当なし|該当なし|該当なし|  
-|Sql_variant<br /><br /> (datetime)|7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
-|Sql_variant<br /><br /> (smalldatetime)|7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
-|Sql_variant<br /><br /> (date)|1、7|[OK]|2|2|1|1、3|1、7|-|OK (VT_BSTR)|[OK]|[OK]|4|4|  
-|Sql_variant<br /><br /> (time)|5、6、7|2|6|[OK]|6|3、6|5、6|-|OK (VT_BSTR)|[OK]|[OK]|4|4|  
-|Sql_variant<br /><br /> (datetime2)|5、7|8|9、10|10|[OK]|3|5、7|-|OK (VT_BSTR)|[OK]|[OK]|4|4|  
-|Sql_variant<br /><br /> (datetimeoffset)|5、7、11|8、11|9、10、11|10、11|7、11|[OK]|5、7、11|-|OK (VT_BSTR)|[OK]|[OK]|4|4|  
+|Date|1、7|OK|-|-|1|1、3|1、7|-|[OK] \(VT_BSTR)|OK|[OK]|4|4|  
+|時間|5、6、7|-|9|OK|6|3、6|5、6|-|[OK] \(VT_BSTR)|OK|[OK]|4|4|  
+|Smalldatetime|7|8|9、10|10|OK|3|7|-|7 (VT_DATE)|OK|[OK]|4|4|  
+|Datetime|5、7|8|9、10|10|OK|3|7|-|7 (VT_DATE)|OK|[OK]|4|4|  
+|Datetime2|5、7|8|9、10|10|7|3|5、7|-|[OK] \(VT_BSTR)|OK|[OK]|4|4|  
+|Datetimeoffset|5、7、11|8、11|9、10、11|10、11|7、11|OK|5、7、11|-|[OK] \(VT_BSTR)|OK|[OK]|4|4|  
+|Char、Varchar、<br /><br /> Nchar、Nvarchar|7、13|12|12、9|12|12|12|7、13|該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|  
+|Sql_variant<br /><br /> (datetime)|7|8|9、10|10|OK|3|7|-|7 (VT_DATE)|OK|[OK]|4|4|  
+|Sql_variant<br /><br /> (smalldatetime)|7|8|9、10|10|OK|3|7|-|7 (VT_DATE)|OK|[OK]|4|4|  
+|Sql_variant<br /><br /> (date)|1、7|OK|2|2|1|1、3|1、7|-|OK (VT_BSTR)|OK|[OK]|4|4|  
+|Sql_variant<br /><br /> (time)|5、6、7|2|6|OK|6|3、6|5、6|-|OK (VT_BSTR)|OK|[OK]|4|4|  
+|Sql_variant<br /><br /> (datetime2)|5、7|8|9、10|10|OK|3|5、7|-|OK (VT_BSTR)|OK|[OK]|4|4|  
+|Sql_variant<br /><br /> (datetimeoffset)|5、7、11|8、11|9、10、11|10、11|7、11|OK|5、7、11|-|OK (VT_BSTR)|OK|[OK]|4|4|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
 |Symbol|意味|  
 |------------|-------------|  
-|[OK]|変換は必要ありません。|  
+|OK|変換は必要ありません。|  
 |-|変換はサポートされていません。 IAccessor::CreateAccessor の呼び出し時にバインドが検証される場合、DBBINDSTATUS_UPSUPPORTEDCONVERSION が *rgStatus* で返されます。 アクセサー検証が遅延する場合は、DBSTATUS_E_BADACCESSOR が設定されます。|  
 |1|時刻フィールドに 0 が設定されます。|  
 |2|DBSTATUS_E_CANTCONVERTVALUE が設定されます。|  
@@ -64,7 +64,7 @@ ms.locfileid: "81304423"
 |12|文字列は ISO リテラルとして解析され、対象の型に変換されます。 これが失敗すると、文字列は OLE 日付リテラル (時刻要素も含む) として解析され、OLE Date (DBTYPE_DATE) から対象の型に変換されます。 文字列は、ISO 形式の解析を成功させるために許可された対象の型のリテラルの構文に準拠している必要があります。 OLE での解析を成功させるには、文字列は OLE で認識される構文に準拠している必要があります。 文字列を解析できない場合は、DBSTATUS_E_CANTCONVERTVALUE が設定されます。 任意の部分の値が範囲外の場合は、DBSTATUS_E_DATAOVERFLOW が設定されます。|  
 |13|文字列は ISO リテラルとして解析され、対象の型に変換されます。 これが失敗すると、文字列は OLE 日付リテラル (時刻要素も含む) として解析され、OLE Date (DBTYPE_DATE) から対象の型に変換されます。 文字列は datetime リテラルの構文に準拠している必要があります。ただし、変換先が DBTYPE_DATE または DBTYPE_DBTIMESTAMP の場合は別です。 この場合、ISO 形式の解析を成功させるために、datetime リテラルまたは時刻リテラルが許容されています。 OLE での解析を成功させるには、文字列は OLE で認識される構文に準拠している必要があります。 文字列を解析できない場合は、DBSTATUS_E_CANTCONVERTVALUE が設定されます。 任意の部分の値が範囲外の場合は、DBSTATUS_E_DATAOVERFLOW が設定されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バインドと変換 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
   
   

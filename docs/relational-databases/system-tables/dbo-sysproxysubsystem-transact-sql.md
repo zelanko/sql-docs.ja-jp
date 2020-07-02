@@ -1,5 +1,5 @@
 ---
-title: dbo. sysproxysubsystem (Transact-sql) |Microsoft Docs
+title: dbo.sysproxysubsystem (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4065c65b8e93d551fcf0af8f2bd242fa71d8d0aa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04ffb0b8cd280566c77111cfba55319510237127
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806806"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750286"
 ---
-# <a name="dbosysproxysubsystem-transact-sql"></a>dbo. sysproxysubsystem (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="dbosysproxysubsystem-transact-sql"></a>dbo.sysproxysubsystem (Transact-sql)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   各プロキシ アカウントで、どの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサブシステムが使用されているかを記録します。 このテーブルは、 **msdb**データベースに格納されます。  
   
@@ -39,8 +39,8 @@ ms.locfileid: "82806806"
 ## <a name="remarks"></a>Remarks  
  このテーブルにアクセスできるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [dbo. syssubsystems システム &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)   
- [dbo .SQL プロキシ &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [dbo.sysサブシステム &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)   
+ [dbo.sysプロキシ &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   
   

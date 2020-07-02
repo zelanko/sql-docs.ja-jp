@@ -21,21 +21,21 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa359c1c1e855c3652d7c6486d3993f588bae46d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 700d2cb18bad966e1a2edfd1f11e5fde9ac1b040
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388193"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750856"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>sql:use-cdata を使用した、CDATA セクションの作成 (SQLXML 4.0)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML では、文字がマークアップ文字として処理されないよう、文字を含むテキスト ブロックをエスケープするときに CDATA セクションを使用します。  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベースには、XML パーサーによってマークアップ文字として扱われる文字が含まれている場合があります。たとえば、山かっこ (< と >)、小なり記号 (<=)、およびアンパサンド (&) は、マークアップ文字として扱われます。 この種類の特殊文字は、CDATA セクションで囲むことでマークアップ文字として扱われないようにできます。 CDATA セクション内の文字は、XML パーサーでプレーン テキストとして扱われます。  
+ Microsoft のデータベースには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML パーサーによってマークアップ文字として扱われる文字が含まれる場合があります。たとえば、山かっこ (< と >)、小なり記号 (<=)、アンパサンド (&) はマークアップ文字として扱われます。 この種類の特殊文字は、CDATA セクションで囲むことでマークアップ文字として扱われないようにできます。 CDATA セクション内の文字は、XML パーサーでプレーン テキストとして扱われます。  
   
- **Sql: 使用-cdata**注釈は、によって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返されるデータを cdata セクションにラップする必要があることを指定するために使用されます (つまり、 **sql: field**によって指定された列の値を cdata セクションで囲む必要があるかどうかを示します)。 **Sql: use-cdata**注釈は、データベース列にマップされる要素に対してのみ指定できます。  
+ **Sql: 使用-cdata**注釈は、によって返されるデータを cdata セクションにラップする必要があることを指定するために使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます (つまり、 **sql: field**によって指定された列の値を cdata セクションで囲む必要があるかどうかを示します)。 **Sql: use-cdata**注釈は、データベース列にマップされる要素に対してのみ指定できます。  
   
  **Sql: use-cdata**注釈はブール値 (0 = false、1 = true) を取ります。 指定できる値は 0、1、true、false です。  
   
@@ -44,8 +44,8 @@ ms.locfileid: "81388193"
 ## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
-### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 要素に対して sql:use-cdata を指定する  
- 次のスキーマでは、 ** \<Address>** 要素内の** \<AddressLine1>** について、 **sql: use-cdata**が 1 (True) に設定されています。 この結果、データは CDATA セクション内に返されます。  
+### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A: 要素に対して sql:use-cdata を指定する  
+ 次のスキーマでは、要素内のに対して**sql: use-cdata**が 1 (True) に設定されてい **\<AddressLine1>** **\<Address>** ます。 この結果、データは CDATA セクション内に返されます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -23,15 +23,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d2a4789dfc29cdd581ab50f9f0a0f3d5d69ff0f
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 926f9588ad5bf9a29490a84017f3317f8ec5c424
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84885613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750780"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>データ型の変換と sql: datatype 注釈 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Xsd スキーマでは、 **xsd: type**属性は、要素または属性の xsd データ型を指定します。 XSD スキーマを使用したデータベースからのデータの抽出では、指定されているデータ型を使用して、データが書式設定されます。  
   
  スキーマで XSD 型を指定するだけでなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sql: datatype**注釈を使用して Microsoft データ型を指定することもできます。 Xsd **: type**属性と**sql: datatype**属性は、xsd データ型とデータ型の間のマッピングを制御し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -43,12 +43,12 @@ ms.locfileid: "84885613"
   
 |XSD データ型|SQL Server の変換|  
 |-------------------|---------------------------|  
-|Boolean|CONVERT(bit, COLUMN)|  
+|ブール型|CONVERT(bit, COLUMN)|  
 |Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|時刻|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|時間|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |その他すべて|追加の変換はありません。|  
   
 > [!NOTE]  
@@ -97,10 +97,10 @@ ms.locfileid: "84885613"
   
  一般に、スキーマには**sql: datatype**を指定することをお勧めします。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
-### <a name="a-specifying-xsdtype"></a>A. xsd:type を指定する  
+### <a name="a-specifying-xsdtype"></a>A: xsd:type を指定する  
  この例では、スキーマで**xsd: type**属性を使用して指定した xsd の**日付**型が、結果の XML ドキュメントに影響を与える方法を示します。 このスキーマでは、AdventureWorks データベース内の Sales.SalesOrderHeader テーブルの XML ビューが提供されます。  
   
 ```  
@@ -192,7 +192,7 @@ ms.locfileid: "84885613"
 </Schema>  
 ```  
   
-### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B. sql:datatype を使用して SQL データ型を指定する  
+### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B: sql:datatype を使用して SQL データ型を指定する  
  実際のサンプルについては、「 [XML 一括読み込みの例 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)」を参照してください。 この例では、"{" および "}" を含む GUID 値の一括読み込みが行われます。 この例のスキーマでは、データ型を uniqueidentifier として識別する**sql: datatype**を指定して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier**います。 この例では、 **sql: datatype**がスキーマで指定されている必要があることを示します。  
   
   

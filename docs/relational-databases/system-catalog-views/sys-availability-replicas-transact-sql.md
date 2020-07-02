@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3d0e745d2c9f9db062733949134dc66903c93c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b924ccc5deb5b533bd593ccc50eca111ac52ce66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832025"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752928"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 WSFC フェールオーバー クラスター内の AlwaysOn 可用性グループに属している各可用性レプリカに対する行を返します。  
   
@@ -62,8 +62,8 @@ WSFC フェールオーバー クラスター内の AlwaysOn 可用性グルー�
 ### <a name="permissions"></a>アクセス許可  
  サーバー インスタンスに対する VIEW ANY DEFINITION 権限が必要です。  
   
-## <a name="see-also"></a>参照  
- [availability_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Transact-sql&#41;&#40;可用性グループの監視](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   

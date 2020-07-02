@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb61b115689472c5be3ec14de2e7387de3317d4d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f5d5c822264682aa3fb6fd43d26f589aeb272f45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752744"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   データベース メール アカウントに関する、パスワード以外の情報を一覧表示します。  
   
@@ -54,7 +54,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |列名|データ型|説明|  
 |**account_id**|**int**|アカウントの ID。|  
 |**name**|**sysname**|アカウントの名前。|  
-|**記述**|**nvarchar(256)**|アカウントの説明。|  
+|**description**|**nvarchar(256)**|アカウントの説明。|  
 |**email_address**|**nvarchar(128)**|メッセージの送信元の電子メールアドレス。|  
 |**display_name**|**nvarchar(128)**|アカウントの表示名。|  
 |**replyto_address**|**nvarchar(128)**|このアカウントからのメッセージに対する返信アドレス。|  
@@ -108,7 +108,7 @@ account_id  name                         description                            
 148         AdventureWorks Administrator Mail account for administrative e-mail. dba@Adventure-Works.com   AdventureWorks Automated Mailer  NULL            SMTP       smtp.Adventure-Works.com  25          NULL     0                       0       
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

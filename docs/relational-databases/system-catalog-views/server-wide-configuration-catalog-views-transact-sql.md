@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 191fa023b1ee22607f5634f3855e0e2a5abd503a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a54f82c38250561fd4f2cb8872ceb187a3e21fc1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825287"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738782"
 ---
 # <a name="server-wide-configuration-catalog-views-transact-sql"></a>サーバー全体の構成のカタログビュー (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、次のカタログビューについて説明します。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82825287"
 |[sys.traces](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)|[sys.trace_event_bindings](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)|  
 |[sys.trace_categories](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)|[sys.trace_subclass_values](../../relational-databases/system-catalog-views/sys-trace-subclass-values-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

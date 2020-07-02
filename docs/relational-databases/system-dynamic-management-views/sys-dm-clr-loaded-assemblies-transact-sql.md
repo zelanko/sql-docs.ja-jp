@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1597a3b6f8366b74e713eaeeda2ce412762809b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9c45fa084aa6e7231ebb62a01d0192dc1e2c200
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738740"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>dm_clr_loaded_assemblies (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーのアドレス空間に読み込まれた管理対象ユーザーアセンブリごとに1行の値を返します。 このビューを使用すると、で実行されている CLR 統合マネージデータベースオブジェクトについて理解し、トラブルシューティングを行うことが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "82824731"
 ## <a name="remarks"></a>Remarks  
  Appdomain_address ビューには**dm_clr_loaded_assemblies** 、 **dm_clr_appdomains appdomain_address**との多対一のリレーションシップがあります。 **Dm_clr_loaded_assemblies assembly_id**ビューには、 **assembly_id**との一対多のリレーションシップがあります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、現在読み込まれている現在のデータベースのすべてのアセンブリの詳細を表示する方法を示しています。  
   
 ```  
@@ -66,7 +66,7 @@ WHERE appdomain_address =
  WHERE assembly_id = 555);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;共通言語ランタイム関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

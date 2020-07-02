@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e0efc86400b0858e387a83e8ea765f0058e30459
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e8097e5f528685a35038d4d20170277b7a922d64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749315"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   指定されたディストリビューションデータベースのプロパティを返します。 このストアドプロシージャは、ディストリビューター側のディストリビューションデータベースで実行されます。  
   
@@ -49,7 +49,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|履歴を保持する時間数。|  
 |**history_cleanup_agent**|**sysname**|履歴クリーンアップエージェントの名前。|  
 |**distribution_cleanup_agent**|**sysname**|ディストリビューションクリーンアップエージェントの名前。|  
-|**status**|**int**|内部使用のみ。|  
+|**status**|**int**|内部使用のみです。|  
 |**data_folder**|**nvarchar(255)**|データベース ファイルを格納するときに使用するディレクトリの名前。|  
 |**data_file**|**nvarchar(255)**|データベースファイルの名前。|  
 |**data_file_size**|**int**|データ ファイルの初期サイズ (MB 単位)。|  
@@ -66,7 +66,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="permissions"></a>アクセス許可  
  ディストリビューションデータベースの**db_owner**固定データベースロールのメンバー、またはディストリビューションデータベースの**replmonitor**ロールのメンバー、およびディストリビューションデータベースを使用するパブリケーションのパブリケーションアクセスリストのユーザーは、 **sp_helpdistributiondb**を実行してファイルに関連する情報を返すことができます。 **Public**ロールのメンバーは、 **sp_helpdistributiondb**を実行して、アクセス権のあるディストリビューションデータベースについて、ファイルに関連しない情報を返すことができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディストリビューターとパブリッシャーのプロパティの表示および変更](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   

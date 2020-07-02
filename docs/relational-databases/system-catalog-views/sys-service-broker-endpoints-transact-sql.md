@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 221a490f6accb13706c19860f70c1de2db6d2bf8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a59beeb51d59b00fbd902045f0f1aaebc9322a64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752901"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>service_broker_endpoints (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   このカタログビューには、Service Broker エンドポイントの1つの行が含まれています。 このビューのすべての行には、TCP 構成メタデータを含む、 **tcp_endpoints**ビューに同じ**endpoint_id**を持つ対応する行があります。 Service Broker で使用できるプロトコルは TCP のみです。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<継承された列>**|**--**|[では、transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)から列を継承しています。|  
+|**\<inherited columns>**|**--**|[では、transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)から列を継承しています。|  
 |**is_message_forwarding_enabled**|**bit**|エンドポイントがメッセージの転送をサポートします。 これは、最初は**0** (無効) に設定されます。 NULL 値は許容されません。|  
 |**message_forwarding_size**|**int**|転送されるメッセージに使用できる**tempdb**領域の最大値 (mb)。 初期設定は**10**に設定されています。 NULL 値は許容されません。|  
 |**connection_auth**|**tinyint**|エンドポイントへの接続に必要な接続認証の種類。次のいずれかになります。<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -ネゴシエート<br /><br /> **4** -証明書<br /><br /> **5** -NTLM、証明書<br /><br /> **6** -KERBEROS、証明書<br /><br /> **7** -NEGOTIATE、CERTIFICATE<br /><br /> **8** -証明書、NTLM<br /><br /> **9** -証明書、KERBEROS<br /><br /> **10** -証明書、ネゴシエート<br /><br /> NULL 値は許容されません。|  
@@ -42,7 +42,7 @@ ms.locfileid: "82832673"
 |**encryption_algorithm**|**tinyint**|暗号化アルゴリズム。 使用可能な値とその説明および対応する DDL オプションを次に示します。<br /><br /> **0** : なし。 対応する DDL オプション: Disabled。<br /><br /> **1** : RC4。 対応する DDL オプション: {必須 &#124; アルゴリズム RC4}。<br /><br /> **2** : AES。 対応する DDL オプション: アルゴリズム AES が必要です。<br /><br /> **3** : なし、RC4。 対応する DDL オプション: {supported &#124; サポートされているアルゴリズム RC4}。<br /><br /> **4** : NONE、AES。 対応する DDL オプション: アルゴリズム AES がサポートされています。<br /><br /> **5** : RC4、AES。 対応する DDL オプション: アルゴリズム RC4 AES が必要です。<br /><br /> **6** : AES、RC4。 対応する DDL オプション: アルゴリズム AES RC4 が必要です。<br /><br /> **7** : NONE、RC4、AES。 対応する DDL オプション: アルゴリズム RC4 AES がサポートされています。<br /><br /> **8** : NONE、AES、RC4。 対応する DDL オプション: アルゴリズム AES RC4 がサポートされています。<br /><br /> NULL 値は許容されません。|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|暗号化アルゴリズムの説明。 有効な値とそれに対応する DDL オプションを以下に示します。<br /><br /> なし: 無効<br /><br /> RC4: {必須 &#124; アルゴリズム RC4}<br /><br /> AES: アルゴリズム AES が必要です。<br /><br /> なし、RC4: {サポートされている &#124; アルゴリズム RC4}<br /><br /> NONE、AES: サポートされているアルゴリズム AES<br /><br /> RC4、AES: アルゴリズム RC4 AES が必要です。<br /><br /> AES、RC4: アルゴリズム AES RC4 が必要<br /><br /> NONE、RC4、AES: サポートされているアルゴリズム RC4 AES<br /><br /> NONE、AES、RC4: サポートされているアルゴリズム AES RC4<br /><br /> NULLABLE.|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
 >  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のバージョンでは、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
@@ -50,7 +50,7 @@ ms.locfileid: "82832673"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)  
   

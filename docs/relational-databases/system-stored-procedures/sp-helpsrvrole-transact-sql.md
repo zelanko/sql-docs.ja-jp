@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9abcbec940d9afa7b5aeb36183610b471bb3a3df
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 204668e8983ed3503e1a5697c47a4abde92d26cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833192"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750508"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定サーバー ロールの一覧を返します。  
   
@@ -62,7 +62,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |ServerRole|**sysname**|サーバーロールの名前|  
 |説明|**sysname**|ServerRole の説明。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  固定サーバー ロールは、サーバー レベルで定義され、特定のサーバーレベルの管理操作を実行する権限が与えられます。 固定サーバー ロールは、追加、削除、または変更することはできません。  
   
  サーバーロールのメンバーを追加または削除するには、「 [ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)」を参照してください。  
@@ -83,21 +83,21 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 EXEC sp_helpsrvrole ;  
 ```  
   
-### <a name="b-listing-fixed-and-user-defined-server-roles"></a>B. 固定サーバーロールとユーザー定義サーバーロールの一覧表示  
+### <a name="b-listing-fixed-and-user-defined-server-roles"></a>B: 固定サーバーロールとユーザー定義サーバーロールの一覧表示  
  次のクエリでは、固定サーバーロールとユーザー定義サーバーロールの両方の一覧が返されます。  
   
 ```  
 SELECT * FROM sys.server_principals WHERE type = 'R' ;  
 ```  
   
-### <a name="c-returning-a-description-of-a-fixed-server-role"></a>C. 固定サーバー ロールの説明を返す  
+### <a name="c-returning-a-description-of-a-fixed-server-role"></a>C: 固定サーバー ロールの説明を返す  
  次のクエリでは、`diskadmin` 固定サーバー ロールの名前と説明を返します。  
   
 ```  
 sp_helpsrvrole 'diskadmin' ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [サーバーレベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [sp_addsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   

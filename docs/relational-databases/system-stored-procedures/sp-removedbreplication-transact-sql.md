@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60004b81134b550761e65eba2ce38e155732c77f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 14c013da5fed9a0a9477692ce6bdda20b5d921a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751669"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   このストアド プロシージャにより、SQL Server のパブリッシャー インスタンス側のパブリケーション データベース、または SQL Server のサブスクライバー インスタンス側のサブスクリプション データベースから、すべてのレプリケーション オブジェクトが削除されます。 適切なデータベースで実行するか、または同じインスタンスにある別のデータベースのコンテキストで実行する場合は、レプリケーション オブジェクトを削除するデータベースを指定します。 このプロシージャでは、ディストリビューション データベースなどその他のデータベースからオブジェクトが削除されることはありません。  
   
@@ -49,13 +49,13 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 |||  
 |-|-|  
 |**さん**|トランザクション レプリケーション パブリッシング オブジェクトを削除。|  
-|**マージ**|マージ レプリケーション パブリッシング オブジェクトを削除。|  
+|**merge**|マージ レプリケーション パブリッシング オブジェクトを削除。|  
 |**both** (既定値)|すべてのレプリケーション パブリッシング オブジェクトを削除。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_removedbreplication**は、すべての種類のレプリケーションで使用されます。  
   
  **sp_removedbreplication**は、復元する必要のあるレプリケーションオブジェクトを持たないレプリケートされたデータベースを復元する場合に便利です。  

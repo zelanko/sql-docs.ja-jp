@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: da10984fa1934da787a391bc2f7cd4c094800847
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: df4842ec25a69805843506cb052f69f09b6e23ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750568"
 ---
 # <a name="sp_dropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   アーティクルをマージ パブリケーションから削除します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -68,7 +68,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_dropmergearticle**は、マージレプリケーションで使用します。 アーティクルの削除の詳細については、「[既存のパブリケーションのアーティクルの追加および削除](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」を参照してください。  
   
  **Sp_dropmergearticle**を実行してパブリケーションからアーティクルを削除しても、パブリケーションデータベースからオブジェクトが削除されたり、サブスクリプションデータベースから対応するオブジェクトが削除されることはありません。 必要であれば `DROP <object>` を使用して、手動でこれらのオブジェクトを削除します。  

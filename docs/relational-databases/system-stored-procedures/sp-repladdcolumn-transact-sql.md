@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08f459761c6e72063979bef6f7d9067611f2dd78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05c00137acdf989456903fedddcc45a7b79e0e61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826574"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751637"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   パブリッシュされた既存のテーブル アーティクルに列を追加します。 このテーブルをパブリッシュするすべてのパブリッシャーに新しい列を追加することも、テーブルをパブリッシュする特定のパブリケーションに列を追加することもできます。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -52,7 +52,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  [ @column =] '*column*'  
  レプリケーション用に追加するテーブル内の列の名前を指定します。 *列*は**sysname**,、既定値はありません。  
   
- [ @typetext =] '*typetext*'  
+ [ @typetext = ] '*typetext*'  
  追加する列の定義を指定します。 *typetext*は**nvarchar (3000)**,、既定値はありません。 たとえば、列 order_filled が追加されていて、それが NULL ではなく1つの文字フィールドで、既定値が**N**の場合、order_filled は*列*パラメーターになり、列の定義では**CHAR (1) not NULL 制約 constraint_name default ' n '** は*typetext*パラメーター値になります。  
   
  [ @publication_to_add =] '*publication_to_add*'  
@@ -88,7 +88,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
 ## <a name="permissions"></a>アクセス許可  
  sp_repladdcolumn を実行できるのは、sysadmin 固定サーバー ロールまたは db_owner 固定データベース ロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server レプリケーションの非推奨の機能](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

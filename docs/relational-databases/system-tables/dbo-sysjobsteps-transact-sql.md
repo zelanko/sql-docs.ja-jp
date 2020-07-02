@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4bf7ed1c52aedb63ffe1e2e257022e004b327787
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: 00432619ac30e7f5e0fefc87d335634563a270df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423391"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750344"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって実行されるジョブ内の各ステップに関する情報を格納します。 このテーブルは、 **msdb**データベースに格納されます。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "84423391"
 |**proxy_id**|**int**|ジョブステップのプロキシ。|  
 |**step_uid**|**uniqueidentifier**|ジョブステップの識別子。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server エージェントテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

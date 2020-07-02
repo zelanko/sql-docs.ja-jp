@@ -20,15 +20,15 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a95bd2d98f84c288662838e030961bd4a753cff3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c57cc3e4be2683ec0dee5e9cc209718bf97b3859
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829316"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752863"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>dm_os_threads (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オペレーティング システム スレッドの一覧を返します。  
   
@@ -51,13 +51,13 @@ ms.locfileid: "82829316"
 |stack_bytes_used|**int**|スレッドでアクティブに使用されているバイト数。|  
 |affinity|**bigint**|このスレッドが実行されている CPU マスク。 これは、 **ALTER SERVER CONFIGURATION SET PROCESS AFFINITY**ステートメントで構成された値によって異なります。 ソフト アフィニティの場合は、スケジューラと異なることがあります。|  
 |Priority|**int**|このスレッドの優先度の値。|  
-|ロケール|**int**|スレッドのキャッシュされたロケール LCID。|  
+|Locale|**int**|スレッドのキャッシュされたロケール LCID。|  
 |トークン|**varbinary (8)**|スレッドのキャッシュされた偽装トークンハンドル。|  
 |is_impersonating|**int**|スレッドで Win32 権限借用が使用されているかどうかを示します。<br /><br /> 1 = スレッドではプロセスの既定値と異なるセキュリティ資格情報が使用されています。 これは、スレッドが、プロセスを作成したエンティティ以外のエンティティを偽装していることを示します。|  
 |is_waiting_on_loader_lock|**int**|スレッドでローダー ロックを待機中かどうかを示す、オペレーティング システムの状態。|  
 |fiber_data|**varbinary (8)**|スレッドで実行されている現在の Win32 ファイバー。 これは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、が簡易プーリング用に構成されている場合にのみ適用されます。|  
-|thread_handle|**varbinary (8)**|内部使用のみ。|  
-|event_handle|**varbinary (8)**|内部使用のみ。|  
+|thread_handle|**varbinary (8)**|内部使用のみです。|  
+|event_handle|**varbinary (8)**|内部使用のみです。|  
 |scheduler_address|**varbinary (8)**|このスレッドに関連付けられているスケジューラのメモリアドレス。 詳細については、「 [sys. dm_os_schedulers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)」を参照してください。|  
 |worker_address|**varbinary (8)**|スレッドにバインドしているワーカーのメモリ アドレス。 詳細については、「 [sys. dm_os_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)」を参照してください。|  
 |fiber_context_address|**varbinary (8)**|内部ファイバー コンテキスト アドレス。 これは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、が簡易プーリング用に構成されている場合にのみ適用されます。|  
@@ -88,7 +88,7 @@ SELECT *
   WHERE started_by_sqlservr = 0;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
   [dm_os_workers &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   

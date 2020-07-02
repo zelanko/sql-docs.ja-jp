@@ -16,15 +16,15 @@ ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef1b52cfc45099bbfe09683b871f5ef822b36370
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a53d40141c8f770452cfebd321458616f304222
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298359"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753089"
 ---
 # <a name="cursor-properties"></a>カーソルのプロパティ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   ODBC 形式のカーソルの種類または SQL-92/ISO 形式のカーソルの動作のいずれかを設定することで、カーソルの全体的な特性が決まります。 以下のトピックでは、カーソルの動作に影響を与える追加のステートメントと接続属性について説明しています。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "81298359"
   
 -   [カーソルのトランザクション分離レベル](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC&#41;&#40;カーソルの使用](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

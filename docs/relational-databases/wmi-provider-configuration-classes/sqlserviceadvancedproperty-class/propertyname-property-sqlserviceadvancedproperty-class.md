@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e51d3475-e998-47f3-837b-4b4bd7635dcb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7278429f8dc497b0ad0546c045a6e5f03e654c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b50825211387605b9d92c258df03de90c71ef228
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660058"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750015"
 ---
 # <a name="propertyname-property-sqlserviceadvancedproperty-class"></a>PropertyName プロパティ (SqlServiceAdvancedProperty クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   詳細プロパティの名前を取得または設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,7 +35,7 @@ ms.locfileid: "73660058"
 object.PropertyName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  詳細プロパティを表す [SqlServiceAdvancedProperty クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) オブジェクト。  
   
@@ -44,7 +44,7 @@ object.PropertyName [= value]
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

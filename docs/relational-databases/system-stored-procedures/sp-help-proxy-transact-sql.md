@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e9c59c6347317d193eafe43c511c0ece3831e29c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750533"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   1つまたは複数のプロキシの情報を一覧表示します。  
   
@@ -51,13 +51,13 @@ sp_help_proxy
   
  次の表に、各サブシステムの値を示します。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |ActiveScripting| ActiveX スクリプト|  
 |CmdExec|オペレーティング システム (CmdExec)|  
 |スナップショット|レプリケーション スナップショット エージェント|  
 |LogReader|レプリケーション ログ リーダー エージェント|  
-|Distribution|レプリケーションディストリビューションエージェント|  
+|配布|レプリケーションディストリビューションエージェント|  
 |Merge|Replication Merge Agent|  
 |QueueReader|Replication Queue Reader Agent|  
 |ANALYSISQUERY|Analysis Services コマンド|  
@@ -78,7 +78,7 @@ sp_help_proxy
 |**name**|**sysname**|プロキシの名前。|  
 |**credential_identity**|**sysname**|プロキシに関連付けられている資格情報の Microsoft Windows ドメイン名とユーザー名。|  
 |**enabled**|**tinyint**|プロキシが有効かどうか  { **0** = 無効、 **1** = 有効}|  
-|**記述**|**nvarchar(1024)**|このプロキシの説明。|  
+|**description**|**nvarchar(1024)**|このプロキシの説明。|  
 |**user_sid**|**varbinary (85)**|プロキシに関する Windows ユーザーの Windows セキュリティ ID|  
 |**credential_id**|**int**|このプロキシに関連付けられている資格情報の識別子。|  
 |**credential_identity_exists**|**int**|credential_identity が存在するかどうか  {0 = 存在しない、1 = 存在する}|  
@@ -109,7 +109,7 @@ EXEC dbo.sp_help_proxy ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-proxy"></a>B. 特定のプロキシに関する情報を一覧表示する  
+### <a name="b-listing-information-for-a-specific-proxy"></a>B: 特定のプロキシに関する情報を一覧表示する  
  次の例では、という名前のプロキシに関する情報を一覧表示 `Catalog application proxy` します。  
   
 ```  
@@ -121,7 +121,7 @@ EXEC dbo.sp_help_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  

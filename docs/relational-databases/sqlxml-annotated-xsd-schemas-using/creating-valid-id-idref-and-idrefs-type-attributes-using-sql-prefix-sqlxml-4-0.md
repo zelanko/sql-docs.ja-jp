@@ -24,15 +24,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 336db1dba88e245492fb4c2e9fcefddb751b59ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 832607a376c8c08dbcdcff0c70278401a166a7f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388184"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750808"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>sql:prefix を使用した、有効な ID 型、IDREF 型、IDREFS 型の属性の作成 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   属性を ID 型属性として指定することができます。 ID 型属性を指定すると、IDREF または IDREFS として指定した属性から ID 型属性を参照でき、ドキュメント間をリンクできるようになります。  
   
  ID、IDREF、IDREFS は、データベースの PK と FK (主キーと外部キー) のリレーションシップにほぼ対応し、ほとんど違いはありません。 XML ドキュメントでは、ID 型の属性の値は一意である必要があります。 **CustomerID**属性と**ORDERID**属性が XML ドキュメントで ID 型として指定されている場合、これらの値は個別である必要があります。 一方データベースでは、CustomerID 列と OrderID 列の値は同じにできます。 たとえば、CustomerID = 1、OrderID = 1 はデータベース内で有効です。  
@@ -54,10 +54,10 @@ ms.locfileid: "81388184"
 ## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
-### <a name="a-specifying-id-and-idrefs-types"></a>A. ID 型と IDREFS 型を指定する  
- 次のスキーマでは、 ** \<Customer>** 要素は** \<Order>** 子要素で構成されています。 Order>要素には、子要素である** \<orderdetail>** 要素もあります。 ** \<**  
+### <a name="a-specifying-id-and-idrefs-types"></a>A: ID 型と IDREFS 型を指定する  
+ 次のスキーマでは、 **\<Customer>** 要素は子要素で構成されて **\<Order>** います。 要素には、 **\<Order>** 子要素である要素もあり **\<OrderDetail>** ます。  
   
- ** \<Customer>** の**orderidlist**属性は、 ** \<Order>** 要素の**OrderID**属性を参照する IDREFS 型の属性です。  
+ の**Orderidlist**属性 **\<Customer>** は、要素の**OrderID**属性を参照する IDREFS 型の属性です **\<Order>** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

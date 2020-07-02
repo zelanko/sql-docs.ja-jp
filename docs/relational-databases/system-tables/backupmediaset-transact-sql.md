@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4b268bf205245f8c63ca9e8273e4b80607282a00
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 86f1b7fcc8e801f70bf070911feadb059108dff5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807485"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750360"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   バックアップ メディア セットごとに 1 行のデータを格納します。 このテーブルは、 **msdb**データベースに格納されます。  
  
@@ -37,21 +37,21 @@ ms.locfileid: "82807485"
 |**media_uuid**|**uniqueidentifier**|メディアセットの UUID。 すべて [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメディアセットに UUID があります。<br /><br /> 以前のバージョンのでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メディアセットに1つのメディアファミリしか含まれていない場合、 **media_uuid**列が NULL になることがあります (**media_family_count**は 1)。|  
 |**media_family_count**|**tinyint**|メディア セット内のメディア ファミリの数。 NULL にすることができます。|  
 |**name**|**nvarchar(128)**|メディアセットの名前。 NULL にすることができます。<br /><br /> 詳細については、「[バックアップ &#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)」の「MEDIANAME と MEDIADESCRIPTION」を参照してください。|  
-|**記述**|**nvarchar(255)**|メディア セットの説明。 NULL にすることができます。<br /><br /> 詳細については、「[バックアップ &#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)」の「MEDIANAME と MEDIADESCRIPTION」を参照してください。|  
+|**description**|**nvarchar(255)**|メディア セットの説明。 NULL にすることができます。<br /><br /> 詳細については、「[バックアップ &#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)」の「MEDIANAME と MEDIADESCRIPTION」を参照してください。|  
 |**software_name**|**nvarchar(128)**|メディアラベルを書き込んだバックアップソフトウェアの名前。 NULL にすることができます。|  
 |**software_vendor_id**|**int**|バックアップ メディア ラベルを記述したソフトウェア ベンダーの識別番号。 NULL にすることができます。<br /><br /> の値 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は16進数の0x1200 です。|  
 |**MTF_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]このメディアセットの生成に使用されるテープ形式のメジャーバージョン番号。 NULL にすることができます。|  
 |**mirror_count**|**tinyint**|メディアセット内のミラーの数。|  
 |**is_password_protected**|**bit**|メディアセットパスワードが保護されているかを示します。<br /><br /> 0 = 保護されていない<br /><br /> 1 = 保護されている|  
 |**is_compressed**|**bit**|バックアップが圧縮されているかどうか。<br /><br /> 0 = 圧縮されていません。<br /><br /> 1 = 圧縮<br /><br /> この値は、 **msdb**のアップグレード中に NULL に設定されます。 これは圧縮されていないバックアップを示します。|  
-|**is_encrypted**|**16-bit**|バックアップが暗号化されているかどうか。<br /><br /> 0 = 暗号化なし<br /><br /> 1 = 暗号化|  
+|**is_encrypted**|**ビット**|バックアップが暗号化されているかどうか。<br /><br /> 0 = 暗号化なし<br /><br /> 1 = 暗号化|  
   
 ## <a name="remarks"></a>Remarks  
  LOADHISTORY を使用した*backup_device*からの RESTORE verifyonly は、 **backupmediaset**テーブルの列に、メディアセットヘッダーからの適切な値を設定します。  
   
  このテーブルおよびその他のバックアップテーブルと履歴テーブルの行の数を減らすには、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)ストアドプロシージャを実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のテーブルのバックアップと復元](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   

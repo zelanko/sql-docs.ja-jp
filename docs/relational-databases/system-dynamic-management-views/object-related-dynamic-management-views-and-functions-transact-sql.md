@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f9dfff29-2e68-4c76-9460-c46085dca2e8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1cc5609b3e81767ceecd0963330abd422e6189a9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 272c6d84b382bfc6ddf4e047df388401999da8f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826396"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752876"
 ---
 # <a name="object-related-dynamic-management-views-and-functions-transact-sql"></a>オブジェクト関連の動的管理ビューおよび関数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] の次の動的管理オブジェクトについて説明します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "82826396"
 |[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)|| 
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

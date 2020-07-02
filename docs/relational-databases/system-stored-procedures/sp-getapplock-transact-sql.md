@@ -19,15 +19,15 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b415e24ec1b81ed660f1ca43b3d4283d11c8e44
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: 7f1072cf996bf32c9511586c24cd6eb8dbb920f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423186"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752814"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   アプリケーションリソースのロックを配置します。  
   
@@ -111,7 +111,7 @@ GO
   
  アプリケーション ロック時にデッドロックが発生すると、アプリケーション ロックを要求したトランザクションはロールバックされません。 戻り値の結果として必要になる可能性のあるロールバックは、手動で行う必要があります。 したがって、ある特定の値 (たとえば -3) が返された場合に ROLLBACK TRANSACTION または代替の操作が開始できるように、コードにはエラー チェックを含めることをお勧めします。  
   
- 次に例を示します。  
+ たとえば次のようになります。  
   
 ```  
 USE AdventureWorks2012;  
@@ -139,7 +139,7 @@ GO
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、現在のトランザクションに関連付けられている共有ロックを、`Form1` データベースのリソース `AdventureWorks2012` に設定します。  
   
 ```  
@@ -163,7 +163,7 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [APPLOCK_MODE &#40;Transact-sql&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;Transact-sql&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
  [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  

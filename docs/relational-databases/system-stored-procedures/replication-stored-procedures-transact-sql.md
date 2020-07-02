@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b62346e11923a1c9e1683ae0ccff1b3898b528a2
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: f02b55e6b798bd66e7e13a8ba8a40329fc0255e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807776"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752798"
 ---
 # <a name="replication-stored-procedures-transact-sql"></a>レプリケーションストアドプロシージャ (Transact-sql)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
   レプリケーションシステムストアドプロシージャは、レプリケーションの実装やバッチファイルやスクリプトでの使用など、1回限りのタスクを実行するための方法としてドキュメント化され、使用できます。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "83807776"
 |[sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)|[sp_vupgrade_replication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md)|  
 |[sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション管理オブジェクトの概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [レプリケーションのプログラミング概念](../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   

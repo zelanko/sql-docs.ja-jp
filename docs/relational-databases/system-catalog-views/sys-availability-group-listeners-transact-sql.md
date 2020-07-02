@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e4ae93cfcb4df935b3b006413ab8d8c884090ff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8b4257c7a4eba52ece199ee3a3426774e92ce0da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750711"
 ---
 # <a name="sysavailability_group_listeners-transact-sql"></a>availability_group_listeners (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   各 AlwaysOn 可用性グループについて、可用性グループにネットワーク名が関連付けられていないことを示すゼロ行を返すか、Windows Server フェールオーバー クラスタリング (WSFC) クラスター内の可用性グループ リスナーの構成ごとに 1 行のデータを返します。 このビューには、クラスターから収集されたリアルタイム構成が表示されます。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "82829117"
 ### <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Always On 可用性グループの動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Always On 可用性グループのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;可用性グループの監視](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   

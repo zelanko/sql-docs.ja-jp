@@ -18,15 +18,15 @@ ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 674da069c1c47c9e577327e9482add64353de881
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc4cb9acc25255988d46e4e4bb5a922eb23a98fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832626"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749307"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のデータベース内のロールに関する情報を返します。  
   
@@ -53,7 +53,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 |**RoleId**|**smallint**|**RoleName**の ID。|  
 |**IsAppRole**|**int**|0 = **RoleName**はアプリケーションロールではありません。<br /><br /> 1 = **RoleName**はアプリケーションロールです。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ロールに関連付けられている権限を表示するには、 **sp_helprotect**を使用します。 データベースロールのメンバーを表示するには、 **sp_helprolemember**を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -66,7 +66,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 EXEC sp_helprole  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [サーバーレベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [データベースレベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)   

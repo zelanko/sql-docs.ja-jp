@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85271f37c441ab88ce5ad14279c07f6feda3d95d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f122698756a6d2359112b535158dcb6ff89569b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827365"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750443"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   データベースの各データまたは各ログ ファイルに対して 1 行のデータを格納します。 各列では、バックアップ作成時のファイル構成の詳細が示されます。 ファイルがバックアップに含まれるかどうかは、 **is_present**列によって決まります。 このテーブルは、 **msdb**データベースに格納されます。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "82827365"
   
  このテーブルおよびその他のバックアップテーブルと履歴テーブルの行の数を減らすには、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)ストアドプロシージャを実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のテーブルのバックアップと復元](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   

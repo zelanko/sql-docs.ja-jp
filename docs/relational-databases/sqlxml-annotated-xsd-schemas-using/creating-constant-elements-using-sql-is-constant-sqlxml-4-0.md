@@ -20,16 +20,16 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 854378b57a4798375e4f97841c8bd72ef0d7d0f3
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 50e2a6efad0cf14739fe2ef28135ea797ce6140e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524908"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750820"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant を使用した、定数要素の作成 (SQLXML 4.0)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   定数要素 (つまり、データベースのテーブルまたは列にマップされない XSD スキーマの要素) を指定するには、 **sql:: 定数**注釈を使用します。 この注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。 **Sql:: 定数**注釈は、属性を持たない要素に対して指定できます。 この注釈を値 true (または 1) と共に要素に指定した場合、その要素は XML ドキュメント内に表示されますが、データベースにはマップされなくなります。  
   
  **Sql: 定数**注釈は、次の場合に使用できます。  
@@ -40,10 +40,10 @@ ms.locfileid: "84524908"
   
  **Sql: は定数**注釈を要素に追加でき **\<complexType>** ます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
-### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. sql:is-constant を指定してコンテナー要素を追加する  
+### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A: sql:is-constant を指定してコンテナー要素を追加する  
  この注釈付き XSD スキーマで **\<CustomerOrders>** は、値が1である**sql: の定数**属性を指定することにより、が定数要素として定義されます。 したがって、 **\<CustomerOrders>** は、どのデータベーステーブルまたは列にもマップされません。 この定数要素は、子要素で構成さ **\<Order>** れます。  
   
  **\<CustomerOrders>** はどのデータベーステーブルまたは列にもマップされませんが、結果の XML には子要素を含むコンテナー要素として表示され **\<Order>** ます。  

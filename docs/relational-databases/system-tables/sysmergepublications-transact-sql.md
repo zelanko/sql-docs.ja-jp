@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96708a8109594e0978757a163840d605d09cb522
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ae4203442a4596a8e52ab7212c21c7cc24759d50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829835"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751574"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   データベースで定義されているマージパブリケーションごとに1行のデータを格納します。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82829835"
 |**publisher**|**sysname**|既定のサーバーの名前。|  
 |**publisher_db**|**sysname**|既定のパブリッシャーデータベースの名前。|  
 |**name**|**sysname**|パブリケーションの名前を指定します。|  
-|**記述**|**nvarchar(255)**|パブリケーションの簡単な説明。|  
+|**description**|**nvarchar(255)**|パブリケーションの簡単な説明。|  
 |**保有**|**int**|パブリケーションセット全体の保有期間。単位は**retention_period_unit**列の値によって示されます。|  
 |**publication_type**|**tinyint**|パブリケーションがフィルター選択されていることを示します。<br /><br /> **0** = フィルター処理されていません。<br /><br /> **1** = フィルター処理済み。|  
 |**pubid**|**uniqueidentifier**|このパブリケーションの一意な識別番号です。 パブリケーションが追加されたときに生成されます。|  
@@ -65,7 +65,7 @@ ms.locfileid: "82829835"
 |**allow_synctoalternate**|**bit**|代替同期パートナーがこのパブリッシャーと同期できるようにするかどうかを指定します。 **0**は、同期パートナーが許可されていないことを示します。|  
 |**validate_subscriber_info**|**nvarchar (500)**|サブスクライバー情報を取得し、パラメーター化された行フィルター条件をサブスクライバーで検証するために使用される関数の一覧を示します。|  
 |**ad_guidname**|**sysname**|パブリケーションが Active Directory でパブリッシュされるかどうかを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 有効な GUID は、パブリケーションが Active Directory にパブリッシュされることを指定します。 GUID は、対応する Active Directory パブリケーションオブジェクトの**objectGUID**です。 NULL の場合、パブリケーションは Active Directory でパブリッシュされません。|  
-|**backward_comp_level**|**int**|データベースの互換性レベル。 値は、次のいずれかです。<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。|  
+|**backward_comp_level**|**int**|データベースの互換性レベル。 次の値のいずれかです。<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。|  
 |**max_concurrent_merge**|**int**|同時に実行できるマージプロセスの最大数。 このプロパティの値が**0**の場合は、特定の時点で同時に実行されているマージプロセスの数に制限がないことを意味します。 このプロパティは、マージパブリケーションに対して一度に実行できる同時マージプロセスの数に制限を設定します。 同時にスケジュールされているスナップショットプロセスの数が、の値の実行を許可している場合は、余分なジョブがキューに格納され、現在実行中のマージプロセスが終了するまで待機します。|  
 |**max_concurrent_dynamic_snapshots**|**int**|マージ パブリケーションに対して実行できるフィルター選択されたデータの同時実行スナップショット セッションの最大数です。 **0**の場合、任意の時点でパブリケーションに対して同時に実行できるフィルター選択されたデータスナップショットセッションの最大数に制限はありません。 このプロパティは、1 つのマージ アプリケーションに対して一度に実行できる同時実行スナップショット処理数の制限値を設定します。 同時にスケジュールされているスナップショットプロセスの数が、の値の実行を許可している場合は、余分なジョブがキューに格納され、現在実行中のマージプロセスが終了するまで待機します。|  
 |**use_partition_groups**|**smallint**|パブリケーションで事前計算済みパーティションを使用するかどうかを指定します。|  
@@ -86,7 +86,7 @@ ms.locfileid: "82829835"
 |**generation_leveling_threshold**|**int**|ジェネレーションに含まれる変更の数を指定します。 生成とは、パブリッシャーまたはサブスクライバーに配信される変更のコレクションです。|  
 |**automatic_reinitialization_policy**|**bit**|自動再初期化を実行する前に、サブスクライバーから変更をアップロードするかどうかを示します。<br /><br /> **1** = 自動再初期化が行われる前に、サブスクライバーから変更がアップロードされます。<br /><br /> **0** = 自動再初期化の前に変更がアップロードされることはありません。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   

@@ -18,15 +18,15 @@ ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ad6ca284f99a777b8909d2f96ea68ff83c9f467
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c737f6c139a82735e4da1d764b4036bb93c8b2a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818082"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751688"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   アプリケーションリソースのロックを解放します。  
   
@@ -55,7 +55,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  \>= 0 (成功)、または < 0 (失敗)  
   
-|[値]|結果|  
+|値|結果|  
 |-----------|------------|  
 |0|ロックが正常に解放されました。|  
 |-999|パラメーターの検証エラーまたはその他の呼び出しエラーです。|  
@@ -80,7 +80,7 @@ EXEC sp_releaseapplock @DbPrincipal = 'dbo', @Resource = 'Form1';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [APPLOCK_MODE &#40;Transact-sql&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;Transact-sql&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
  [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  

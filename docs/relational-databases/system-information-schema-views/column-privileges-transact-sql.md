@@ -19,15 +19,15 @@ ms.assetid: 8ae29a85-2b77-48db-a2b9-a1720287b271
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 071207287544c74b3ecc66ce7160e4c8bd43353e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: c596539b5aff9c90947fb589627c8eabd134e6a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669570"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750685"
 ---
 # <a name="column_privileges-transact-sql"></a>COLUMN_PRIVILEGES (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のデータベースの現在のユーザーに対して許可または付与されている権限を持つ、列ごとに1行のデータを返します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "83669570"
 |**PRIVILEGE_TYPE**|**varchar (** 10 **)**|特権の種類。|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|権限付与対象ユーザーが他のユーザーに権限を許可できるかどうかを指定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [情報スキーマビュー &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   

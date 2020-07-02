@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a0e6ab6c9c633181d72c6916f92606a9c71b177a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ada6e3bd06cdc915f8d34b18434994e9cc662a5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824559"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749335"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   ディストリビューターを使用しているパブリッシャーのプロパティを返します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
   
@@ -70,7 +70,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーは、ローカルサーバーをディストリビューターとして使用している任意のパブリッシャーに対して**sp_helpdistpublisher**を実行できます。 ディストリビューションデータベースの**db_owner**固定データベースロールまたは**replmonitor**ロールのメンバーは、そのディストリビューションデータベースを使用しているすべてのパブリッシャーに対して**sp_helpdistpublisher**を実行できます。 指定された*パブリッシャー*にあるパブリケーションのパブリケーションアクセスリストのユーザーは**sp_helpdistpublisher**を実行できます。 場合*パブリッシャー*が指定されていない、ユーザーがアクセス権を持っているすべてのパブリッシャーの情報が返されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディストリビューターとパブリッシャーのプロパティの表示および変更](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
