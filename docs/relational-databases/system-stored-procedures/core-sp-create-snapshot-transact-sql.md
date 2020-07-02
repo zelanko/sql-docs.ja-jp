@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98963dbab83ffea8590c213284b2540393d7c0fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4ba72a35ba3b8339a1ebc919327ce353b2c7697
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646942"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>sp_create_snapshot (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   管理データ ウェアハウスの core.snapshots ビューに行を挿入します。 このプロシージャは、アップロードパッケージが管理データウェアハウスへのデータのアップロードを開始するたびに呼び出されます。  
   
@@ -60,7 +60,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  コレクションセットのインスタンスの名前です。 *named_instance*は**sysname**であり、既定値はありません。  
   
  [ @log_id =] *log_id*  
- データを収集したサーバー上のコレクションセットのイベントログにマップされる一意の識別子。 *log_id*は**bigint**で、既定値はありません。 *Log_id*の値を取得するには、msdb データベースの dbo. syscollector_execution_log ビューに対してクエリを実行します。  
+ データを収集したサーバー上のコレクションセットのイベントログにマップされる一意の識別子。 *log_id*は**bigint**で、既定値はありません。 *Log_id*の値を取得するには、msdb データベースの dbo.syscollector_execution_log ビューに対してクエリを実行します。  
   
  [ @snapshot_id =] *snapshot_id*  
  コアスナップショットビューに挿入される行の一意の識別子です。 *snapshot_id*は**INT**で、出力として返されます。  
@@ -68,7 +68,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  アップロード パッケージが管理データ ウェアハウスへのデータのアップロードを開始するごとに、データ コレクターの実行時コンポーネントが core.sp_create_snapshot を呼び出します。  
   
  このプロシージャでは、次の条件がチェックされます。  
@@ -97,7 +97,7 @@ EXEC core.sp_create_snapshot
     @snapshot_id = @snapshot_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [管理データ ウェアハウス (management data warehouse)](../../relational-databases/data-collection/management-data-warehouse.md)  

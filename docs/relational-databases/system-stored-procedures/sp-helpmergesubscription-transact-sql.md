@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e790d110fc45708c7aa2be76db3890c8d1bc7f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c966899707c7e37dee82dda9c678b4ac40df026f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834475"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626984"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   プッシュとプルの両方のマージパブリケーションに対するサブスクリプションに関する情報を返します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されるか、サブスクリプションデータベースの再パブリッシュサブスクライバーで実行されます。  
   
@@ -55,7 +55,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 `[ @subscription_type = ] 'subscription_type'`サブスクリプションの種類を示します。 *subscription_type*は**nvarchar (15)** で、次のいずれかの値を指定できます。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**push** (既定値)|プッシュ サブスクリプション|  
 |**だとすると**|プルサブスクリプション|  
@@ -78,7 +78,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|サブスクリプションの種類:<br /><br /> **0** = プッシュ<br /><br /> **1** = プル<br /><br /> **2** = 両方|  
 |**的**|**float (8)**|サブスクリプションの優先度を示す数値。|  
 |**sync_type**|**tinyint**|サブスクリプションの同期の種類。|  
-|**記述**|**nvarchar(255)**|マージ サブスクリプションの簡単な説明。|  
+|**description**|**nvarchar(255)**|マージ サブスクリプションの簡単な説明。|  
 |**merge_jobid**|**binary(16)**|マージエージェントのジョブ ID。|  
 |**full_publication**|**tinyint**|サブスクリプションが完全またはフィルター選択されたパブリケーションであるかどうか。|  
 |**offload_enabled**|**bit**|レプリケーションエージェントのオフロード実行がサブスクライバーで実行されるように設定されているかどうかを指定します。 NULL の場合、実行はパブリッシャー側で実行されます。|  
@@ -92,7 +92,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergesubscription**は、パブリッシャーまたは再パブリッシュサブスクライバーに格納されているサブスクリプション情報を返すために、マージレプリケーションで使用されます。  
   
  匿名サブスクリプションの場合、 *subscription_type*値は常に**1** (プル) です。 ただし、匿名サブスクリプションに関する情報を表示するには、サブスクライバーで[sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)を実行する必要があります。  
@@ -100,7 +100,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpmergesubscription**を実行できるのは、 **sysadmin**固定サーバーロールのメンバー、 **db_owner**固定データベースロール、またはサブスクリプションが属しているパブリケーションのパブリケーションアクセスリストのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
  [sp_changemergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   

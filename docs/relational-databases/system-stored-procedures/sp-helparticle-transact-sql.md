@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f840af0170278692de43b7933965500b304669b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e863c10b3f2086d6318d6c53b599c7ad186572c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828352"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634228"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   アーティクルに関する情報を表示します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。 Oracle パブリッシャーの場合、このストアドプロシージャは、ディストリビューター側の任意のデータベースで実行されます。  
   
@@ -66,7 +66,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**type**|**smallint**|アーティクルのタイプです。<br /><br /> **1** = ログベース。<br /><br /> **3** = 手動フィルターを使用したログベース。<br /><br /> **5** = ログベースの手動ビュー。<br /><br /> **7** = 手動フィルターと手動ビューを使用したログベース。<br /><br /> **8** = ストアドプロシージャの実行。<br /><br /> **24** = シリアル化可能なストアドプロシージャの実行。<br /><br /> **32** = ストアドプロシージャ (スキーマのみ)。<br /><br /> **64** = ビュー (スキーマのみ)。<br /><br /> **96** = 集計関数 (スキーマのみ)。<br /><br /> **128** = 関数 (スキーマのみ)。<br /><br /> **257** = ログベースのインデックス付きビュー。<br /><br /> **259** = 手動フィルターを使用したログベースのインデックス付きビュー。<br /><br /> **261** = 手動ビューを使用したログベースのインデックス付きビュー。<br /><br /> **263** = 手動フィルターと手動ビューを使用するログベースのインデックス付きビュー。<br /><br /> **320** = インデックス付きビュー (スキーマのみ)。<br /><br />|  
 |**status**|**tinyint**|1つ以上のアーティクルプロパティの[& (ビットごとの and)](../../t-sql/language-elements/bitwise-and-transact-sql.md)の結果にすることができます。<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = アーティクルはアクティブです。<br /><br /> **0x08** = insert ステートメントに列名を含めます。<br /><br /> **0x16** = パラメーター化されたステートメントを使用します。<br /><br /> **0x32** = パラメーター化されたステートメントを使用し、insert ステートメントに列名を含めます。|  
 |**filter**|**nvarchar (257)**|テーブルを行方向にフィルター選択するために使用されるストアドプロシージャです。 このストアドプロシージャは、FOR REPLICATION 句を使用して作成されている必要があります。|  
-|**記述**|**nvarchar(255)**|記事の内容を示すエントリ。|  
+|**description**|**nvarchar(255)**|記事の内容を示すエントリ。|  
 |**insert_command**|**nvarchar(255)**|Insert をテーブルアーティクルと共にレプリケートするときに使用されるレプリケーションコマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
 |**update_command**|**nvarchar(255)**|テーブルアーティクルで更新をレプリケートするときに使用されるレプリケーションコマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
 |**delete_command**|**nvarchar(255)**|テーブル アーティクルの削除をレプリケートするときに使用されるレプリケーション コマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
@@ -85,7 +85,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**auto_identity_range**|**int**|パブリケーションの作成時に、ID 範囲の自動処理がパブリケーションで有効に設定されたかどうかを示すフラグです。 **1**は、自動 id 範囲が有効になっていることを示します。**0**は、無効になっていることを示します。|  
 |**publisher_identity_range**|**int**|アーティクルの*identityrangemanagementoption*が**auto**に設定されている場合、または**auto_identity_range**が**true**に設定されている場合は、パブリッシャーでの id 範囲の範囲サイズ。|  
 |**identity_range**|**bigint**|アーティクルの*identityrangemanagementoption*が**auto**に設定されている場合、または**auto_identity_range**が**true**に設定されている場合は、サブスクライバーでの id 範囲の範囲サイズ。|  
-|**進入**|**bigint**|ディストリビューションエージェントが新しい id 範囲を割り当てるタイミングを示すパーセント値。|  
+|**threshold**|**bigint**|ディストリビューションエージェントが新しい id 範囲を割り当てるタイミングを示すパーセント値。|  
 |**identityrangemanagementoption**|**int**|アーティクルに対して処理される ID 範囲管理を示します。|  
 |**fire_triggers_on_snapshot**|**bit**|初期スナップショットが適用されるときに、レプリケートされたユーザートリガーが実行されるかどうかを示します。<br /><br /> **1** = ユーザートリガーが実行されます。<br /><br /> **0** = ユーザートリガーは実行されません。|  
   

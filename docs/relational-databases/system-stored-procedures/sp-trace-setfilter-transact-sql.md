@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d6646bb794b50158035759916ba823c6fca2102
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eeb6fd370bfd107864845439086138fff3d379c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820269"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85644848"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   トレースにフィルターを適用します。 **sp_trace_setfilter**は、停止している既存のトレースに対してのみ実行できます (*状態*は**0**)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このストアドプロシージャが存在しないトレースに対して実行されるか、*状態*が**0**ではない場合、はエラーを返します。  
   
@@ -54,7 +54,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
 `[ @comparison_operator = ] comparison_operator`実行する比較の種類を指定します。 *comparison_operator*は**int**,、既定値はありません。 このテーブルには、比較演算子とその代表的な値が含まれています。  
   
-|[値]|比較演算子|  
+|値|比較演算子|  
 |-----------|-------------------------|  
 |**0**|= (等しい)|  
 |**1**|<>  (等しくない)|  
@@ -91,7 +91,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |13|メモリ不足。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
 |16|関数は、このトレースに対して無効です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_trace_setfilter**は、以前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンので使用できる拡張ストアドプロシージャによって以前に実行された操作の多くを実行するストアドプロシージャです [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 トレースのフィルターを作成、適用、削除、または操作するには、 **xp_trace_set \* フィルター**拡張ストアドプロシージャの代わりに**sp_trace_setfilter**を使用します。 詳細については、「[トレースのフィルター処理](../../relational-databases/sql-trace/filter-a-trace.md)」を参照してください。  
   
  **Sp_trace_setfilter**の1回の実行で、特定の列のすべてのフィルターを同時に有効にする必要があります。 たとえば、ユーザーが [アプリケーション名] 列に2つのフィルターを適用し、[ユーザー名] 列に1つのフィルターを適用する場合、ユーザーはアプリケーション名に対して順番にフィルターを指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーが1つのストアドプロシージャ呼び出しでアプリケーション名に対してフィルターを指定し、その後にユーザー名のフィルターを指定した後、アプリケーション名に対して別のフィルターを指定しようとすると、エラーが返されます。  
@@ -110,7 +110,7 @@ sp_trace_setfilter  1, 10, 0, 6, N'MS%';
 sp_trace_setfilter  1, 11, 0, 0, N'joe';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [fn_trace_getfilterinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [fn_trace_getinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [SQL トレース (SQL Trace)](../../relational-databases/sql-trace/sql-trace.md)  

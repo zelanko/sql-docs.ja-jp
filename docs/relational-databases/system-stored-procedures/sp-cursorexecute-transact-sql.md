@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3152e180ceb1681f259f0b1cfcfbccce224a68c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3da197547fcc0b08cb1154c6f32b11a65247304e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831742"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646272"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   sp_cursorprepare によって作成された実行プランに基づいてカーソルを作成してデータを格納します。 このプロシージャは、sp_cursorprepare と組み合わせて sp_cursoropen と同じ機能を持ちますが、2つのフェーズに分割されています。 sp_cursorexecute は、ID = 4 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
@@ -79,12 +79,12 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>コードの戻り値  
  *rowcount*は次の値を返す場合があります。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |-1|不明な行の数。|  
 |-n|非同期設定が有効になっています。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>scrollopt パラメーターと ccopt パラメーター  
  *scrollopt*と*ccopt*は、キャッシュされたプランがサーバーキャッシュに対して割り込まれる場合に役立ちます。つまり、ステートメントを識別する準備済みハンドルを再コンパイルする必要があります。 *Scrollopt*および*ccopt*パラメーターの値は、元の要求で sp_cursorprepare に送信された値と一致している必要があります。  
@@ -97,7 +97,7 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="rpc-and-tds-considerations"></a>RPC と TDS に関する考慮事項  
  RPC の RETURN_METADATA 入力フラグを 1 に設定すると、カーソル選択リストのメタデータを TDS ストリームで返すように要求できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

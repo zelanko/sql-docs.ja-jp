@@ -19,16 +19,16 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 286449b00f20858f641e25fd1b4e3f1914925bb0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 76acad96bb43b23487490cab79072311906f7e8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648111"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>dm_xtp_gc_queue_stats (Transact-sql)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   サーバー上の各ガベージコレクションワーカーキューに関する情報と、それぞれに関するさまざまな統計情報を出力します。 論理 CPU ごとに1つのキューがあります。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82829053"
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
 
-|列名|種類|説明|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|キューの一意識別子。|  
 |total_enqueues|**bigint**|サーバーが起動してからこのキューにエンキューされたガベージコレクション作業項目の総数。|  
@@ -65,7 +65,7 @@ queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth 
 3        15625                15625    0                    15625                1233571605761  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

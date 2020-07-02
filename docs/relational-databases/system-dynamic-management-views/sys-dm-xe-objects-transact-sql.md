@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80170f22636b9542524f8ce97b6fe8a5e595953c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f89b6d7e2e4843ba252f884f02a6944de57a8326
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648393"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   イベント パッケージによって公開されるオブジェクトごとに 1 行のデータを返します。 オブジェクトには、次のいずれかを指定できます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82827849"
  |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|オブジェクトの名前。 名前は、特定の種類のオブジェクトのパッケージ内で一意です。 NULL 値は許可されません。|  
-|object_type|**nvarchar(60)**|オブジェクトの古い型。 object_type は次のいずれかです。<br /><br /> event<br /><br /> action<br /><br /> ターゲット (target)<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> 型<br /><br /> NULL 値は許可されません。|  
+|object_type|**nvarchar(60)**|オブジェクトの古い型。 object_type は次のいずれかです。<br /><br /> イベント<br /><br /> action<br /><br /> ターゲット (target)<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> 型<br /><br /> NULL 値は許可されません。|  
 |package_guid|**uniqueidentifier**|このアクションを公開するパッケージの GUID。 sys.dm_xe_packages.package_id との間に多対一のリレーションシップがあります。 NULL 値は許可されません。|  
 |description|**nvarchar(256)**|アクションの説明。 説明はパッケージの作成者によって設定されます。 NULL 値は許可されません。|  
 |capabilities|**int**|オブジェクトの機能を説明するビットマップ。 NULL 値が許可されます。|  
@@ -62,7 +62,7 @@ ms.locfileid: "82827849"
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|多対一|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

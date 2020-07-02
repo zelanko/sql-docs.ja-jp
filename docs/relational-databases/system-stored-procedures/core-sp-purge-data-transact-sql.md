@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27f2d95a23a89c4e50924944709ba38a39a6ff2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c01cfb6e469ef33c897d581eadf2da757cdb06f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833715"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646882"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   保有ポリシーに基づいて、管理データ ウェアハウスからデータを削除します。 このプロシージャは、指定されたインスタンスに関連付けられている管理データ ウェアハウスに対して、mdw_purge_data [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブによって毎日実行されます。 このストアドプロシージャを使用すると、管理データウェアハウスからデータをオンデマンドで削除できます。  
   
@@ -63,7 +63,7 @@ core.sp_purge_data
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロシージャでは、保有期間に基づいて削除対象となる core.snapshots ビューの行が選択されます。 削除の対象となるすべての行が、snapshots_internal テーブルから削除されます。 前の行を削除すると、すべての管理データウェアハウステーブルで連鎖削除操作がトリガーされます。 これは、収集されたデータを格納するすべてのテーブルに対して定義されている ON DELETE CASCADE 句を使って実行されます。  
   
  各スナップショットとその関連データは、明示的なトランザクションで削除されてからコミットされます。 そのため、パージ操作が手動で停止された場合、またはに指定された値を超えた場合は、コミットされて @duration いないデータのみが残ります。 このデータは、ジョブの次回の実行時に削除できます。  
@@ -84,7 +84,7 @@ EXECUTE core.sp_purge_data;
 GO  
 ```  
   
-### <a name="b-specifying-retention-and-duration-values"></a>B. 保有期間と実行時間の値を指定する  
+### <a name="b-specifying-retention-and-duration-values"></a>B: 保有期間と実行時間の値を指定する  
  次の例では、7日よりも前の管理データウェアハウスからデータを削除します。 また、パラメーターを指定して、 @duration 操作が5分以内に実行されるようにします。  
   
 ```  
@@ -93,7 +93,7 @@ EXECUTE core.sp_purge_data @retention_days = 7, @duration = 5;
 GO  
 ```  
   
-### <a name="c-specifying-an-instance-name-and-collection-set"></a>C. インスタンス名とコレクションセットの指定  
+### <a name="c-specifying-an-instance-name-and-collection-set"></a>C: インスタンス名とコレクションセットの指定  
  次の例では、指定されたインスタンスの特定のコレクションセットの管理データウェアハウスからデータを削除し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 @retention_daysが指定されていないので、valid_through 列の値は、削除の対象となるコレクションセットの行を決定するために使用されます。  
   
 ```  
@@ -107,7 +107,7 @@ EXECUTE core.sp_purge_data @instance_name = @@SERVERNAME, @collection_set_uid = 
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f77db9fd0d7dd45a7ee7d4fbb4b0490132f7854
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a04b329e5f2cec402c9aaca35e2f9f24504be856
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831928"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633452"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   各アーティクルのパーティションに関する情報を提供します。 ローカルデータベースで定義されているマージアーティクルごとに1行のデータを格納します。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82831928"
 |**logical_record_level_conflict_resolution**|**bit**|競合を、論理レコード レベルと、行または列レベルのどちらで解決するかを示します。<br /><br /> **0** = 行または列レベルの解決が使用されます。<br /><br /> **1** = 競合が発生した場合、勝者からの論理レコード全体が、損失側の論理レコード全体を上書きします。<br /><br /> 値**1**は、論理レコードレベルの検出と、行レベルまたは列レベルの検出の両方で使用できます。|  
 |**partition_options**|**tinyint**|アーティクル内のデータをパーティション分割する方法を定義します。これにより、すべての行が1つのパーティションまたは1つのサブスクリプションのみに属している場合に、パフォーマンスを最適化できます。 *partition_options* 、次のいずれかの値を指定できます。<br /><br /> **0** = アーティクルのフィルター選択は静的であるか、またはパーティションごとに一意のデータのサブセットを生成しません。つまり "重複する" パーティションです。<br /><br /> **1** = パーティションは重複しており、サブスクライバーで行われた DML の更新では、行が属するパーティションを変更することはできません。<br /><br /> **2** = アーティクルのフィルター選択によって重複しないパーティションが生成されますが、複数のサブスクライバーが同じパーティションを受け取ることができます。<br /><br /> **3** = アーティクルのフィルター選択により、各サブスクリプションで一意な重複しないパーティションが生成されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9559a882da12c3e2a7a48a0aaa656a554633aa6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c88a4ac30ba51cdfdbd9a9d711a141044d099a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937913"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634548"
 ---
 # <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   プライマリデータベースの設定を取得します。  
   
@@ -57,10 +57,10 @@ sp_help_log_shipping_primary_database
 |**backup_directory**|プライマリサーバーからのトランザクションログバックアップファイルが格納されているディレクトリ。|  
 |**backup_share**|バックアップディレクトリへのネットワークまたは UNC パス。|  
 |**backup_retention_period**|バックアップ ディレクトリでログ バックアップ ファイルが保持される時間 (分単位)。この時間を過ぎるとファイルは削除されます。|  
-|**backup_compression**|ログ配布構成で[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)を使用するかどうかを示します。<br /><br /> **0** = 無効です。 ログ バックアップは圧縮されません。<br /><br /> **1** = 有効。 ログバックアップは常に圧縮します。<br /><br /> **2** = [ビューの設定[] または [Backup Compression Default サーバー構成オプションの構成]](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)を使用します。 これは、既定値です。<br /><br /> バックアップの圧縮は、( [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]以降のバージョン) でのみサポートされています。 その他のエディションでは、値は常に 2 です。|  
+|**backup_compression**|ログ配布構成で[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)を使用するかどうかを示します。<br /><br /> **0** = 無効です。 ログ バックアップは圧縮されません。<br /><br /> **1** = 有効。 ログバックアップは常に圧縮します。<br /><br /> **2** = [ビューの設定[] または [Backup Compression Default サーバー構成オプションの構成]](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)を使用します。 これが既定値です。<br /><br /> バックアップの圧縮は、(以降のバージョン) でのみサポートされてい [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] ます。 その他のエディションでは、値は常に 2 です。|  
 |**backup_job_id**|プライマリ サーバー上のバックアップ ジョブに関連付けられている、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ID。|  
-|**monitor_server**|ログ配布構成で監視サーバーと[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]して使用されているのインスタンスの名前。|  
-|**monitor_server_security_mode**|監視サーバーへの接続に使用されるセキュリティモード。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証。|  
+|**monitor_server**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成で監視サーバーとして使用されているのインスタンスの名前。|  
+|**monitor_server_security_mode**|監視サーバーへの接続に使用されるセキュリティモード。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証。|  
 |**backup_threshold**|バックアップ操作の間に、アラートが生成されるまでの経過時間 (分) です。|  
 |**threshold_alert**|バックアップのしきい値を超えたときに発生するアラート。|  
 |**threshold_alert_enabled**|バックアップしきい値アラートを有効にするかどうかを決定します。<br /><br /> **1** = 有効。<br /><br /> **0** = 無効です。|  
@@ -76,7 +76,7 @@ sp_help_log_shipping_primary_database
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
- この例では、 **sp_help_log_shipping_primary_database**を使用して、データベース[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]のプライマリデータベースの設定を取得する方法を示します。  
+ この例では、 **sp_help_log_shipping_primary_database**を使用して、データベースのプライマリデータベースの設定を取得する方法を示し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
 EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks2012';  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8901c46c5654b6c633e03d62e8eaec2a3e903e02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a6654fb7bd83f3c247c972c3c044af7b0a2d932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645440"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   サブシステムに対するアクセス権をプロキシから取り消します。  
   
@@ -51,7 +51,7 @@ sp_revoke_proxy_from_subsystem
   
 |値|説明|  
 |-----------|-----------------|  
-|**2**| ActiveX スクリプト<br /><br /> ** \*重要\* \* **ActiveX スクリプティングサブシステムは、の将来[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンでエージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
+|**2**| ActiveX スクリプト<br /><br /> 重要 ActiveX スクリプティングサブシステムは、の将来のバージョンでエージェントから削除される予定** \* \* です。 \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
 |**3**|オペレーティング システム (CmdExec)|  
 |**4**|レプリケーション スナップショット エージェント|  
 |**5**|レプリケーション ログ リーダー エージェント|  
@@ -59,7 +59,7 @@ sp_revoke_proxy_from_subsystem
 |**7**|Replication Merge Agent|  
 |**8**|Replication Queue Reader Agent|  
 |**9**|Analysis Services コマンド|  
-|**10**|Analysis Services クエリ|  
+|"**10**"|Analysis Services クエリ|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|  
 |**12**|PowerShell スクリプト|  
   
@@ -71,7 +71,7 @@ sp_revoke_proxy_from_subsystem
 |CmdExec|オペレーティング システム (CmdExec)|  
 |スナップショット|レプリケーション スナップショット エージェント|  
 |LogReader|レプリケーション ログ リーダー エージェント|  
-|Distribution|レプリケーション ディストリビューション エージェント|  
+|配布|レプリケーション ディストリビューション エージェント|  
 |Merge|Replication Merge Agent|  
 |QueueReader|Replication Queue Reader Agent|  
 |ANALYSISQUERY|Analysis Services コマンド|  
@@ -83,7 +83,7 @@ sp_revoke_proxy_from_subsystem
  サブシステムへのアクセスを取り消しても、プロキシで指定されたプリンシパルのアクセス許可は変更されません。  
   
 > [!NOTE]  
->  プロキシを参照するジョブステップを確認するには、Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [ **SQL Server エージェント**] の下にある [**プロキシ**] ノードを右クリックし、[**プロパティ**] をクリックします。 [**プロキシアカウントのプロパティ**] ダイアログボックスで、[**参照**] ページを選択して、このプロキシを参照するすべてのジョブステップを表示します。  
+>  プロキシを参照するジョブステップを確認するには、Microsoft の [ **SQL Server エージェント**] の下にある [**プロキシ**] ノードを右クリック [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] し、[**プロパティ**] をクリックします。 [**プロキシアカウントのプロパティ**] ダイアログボックスで、[**参照**] ページを選択して、このプロキシを参照するすべてのジョブステップを表示します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_revoke_proxy_from_subsystem**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
@@ -100,7 +100,7 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
     @subsystem_name = N'Dts';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [SQL Server エージェントセキュリティを実装する](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_grant_proxy_to_subsystem &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  

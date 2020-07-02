@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 76fbc3e1-ad88-4a47-8bf1-471c3bee5ad8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 163efc4d8f2a590c4469f950d56e9fa396e40b9a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 040c33a7c04aa7da231f952ebe7c32fbba7ee1a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820787"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648366"
 ---
 # <a name="sysdm_xe_session_targets-transact-sql"></a>sys.dm_xe_session_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   セッション ターゲットに関する情報を返します。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "82820787"
 |Target_data 列の説明を、null 値が許容される値であることを示すように修正しました。|  
 |"Relationship 基数" テーブルを修正しました。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

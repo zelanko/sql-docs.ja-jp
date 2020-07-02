@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e272d66fef1a6426e13cc6ab8ea72d3912003d3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9d238313d97ff3e509803d284efa3cfd9b8d6a9f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647977"
 ---
 # <a name="sysdm_xtp_transaction_stats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   サーバーが起動してから実行されたトランザクションに関する統計を報告します。  
   
@@ -39,36 +39,36 @@ ms.locfileid: "82829017"
 |total_aborts|**bigint**|ユーザーまたはシステムの中止によって中止されたトランザクションの総数。|  
 |user_aborts|**bigint**|システムによって開始された中止の回数。 たとえば、書き込みの競合、検証の失敗、依存関係のエラーなどがあります。|  
 |validation_failures|**bigint**|検証エラーによってトランザクションが中止された回数。|  
-|dependencies_taken|**bigint**|内部使用のみ。|  
+|dependencies_taken|**bigint**|内部使用のみです。|  
 |dependencies_failed|**bigint**|トランザクションが依存していたトランザクションが中止されたためにトランザクションが中止された回数。|  
 |savepoint_create|**bigint**|作成されたセーブポイントの数。 ATOMIC ブロックごとに新しいセーブポイントが作成されます。|  
 |savepoint_rollbacks|**bigint**|前のセーブポイントにロールバックする回数。|  
-|savepoint_refreshes|**bigint**|内部使用のみ。|  
+|savepoint_refreshes|**bigint**|内部使用のみです。|  
 |log_bytes_written|**bigint**|インメモリ OLTP ログレコードに書き込まれた合計バイト数。|  
 |log_IO_count|**bigint**|ログ IO を必要とするトランザクションの総数。 持続性のあるテーブルのトランザクションのみを考慮します。|  
-|phantom_scans_started|**bigint**|内部使用のみ。|  
-|phatom_scans_retries|**bigint**|内部使用のみ。|  
-|phantom_rows_touched|**bigint**|内部使用のみ。|  
-|phantom_rows_expiring|**bigint**|内部使用のみ。|  
-|phantom_rows_expired|**bigint**|内部使用のみ。|  
-|phantom_rows_expired_removed|**bigint**|内部使用のみ。|  
-|scans_started|**bigint**|内部使用のみ。|  
-|scans_retried|**bigint**|内部使用のみ。|  
-|rows_returned|**bigint**|内部使用のみ。|  
-|rows_touched|**bigint**|内部使用のみ。|  
-|rows_expiring|**bigint**|内部使用のみ。|  
-|rows_expired|**bigint**|内部使用のみ。|  
-|rows_expired_removed|**bigint**|内部使用のみ。|  
-|rows_inserted|**bigint**|内部使用のみ。|  
-|rows_updated|**bigint**|内部使用のみ。|  
-|rows_deleted|**bigint**|内部使用のみ。|  
-|write_conflicts|**bigint**|内部使用のみ。|  
+|phantom_scans_started|**bigint**|内部使用のみです。|  
+|phatom_scans_retries|**bigint**|内部使用のみです。|  
+|phantom_rows_touched|**bigint**|内部使用のみです。|  
+|phantom_rows_expiring|**bigint**|内部使用のみです。|  
+|phantom_rows_expired|**bigint**|内部使用のみです。|  
+|phantom_rows_expired_removed|**bigint**|内部使用のみです。|  
+|scans_started|**bigint**|内部使用のみです。|  
+|scans_retried|**bigint**|内部使用のみです。|  
+|rows_returned|**bigint**|内部使用のみです。|  
+|rows_touched|**bigint**|内部使用のみです。|  
+|rows_expiring|**bigint**|内部使用のみです。|  
+|rows_expired|**bigint**|内部使用のみです。|  
+|rows_expired_removed|**bigint**|内部使用のみです。|  
+|rows_inserted|**bigint**|内部使用のみです。|  
+|rows_updated|**bigint**|内部使用のみです。|  
+|rows_deleted|**bigint**|内部使用のみです。|  
+|write_conflicts|**bigint**|内部使用のみです。|  
 |unique_constraint_violations|**bigint**|UNIQUE 制約の違反の総数。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

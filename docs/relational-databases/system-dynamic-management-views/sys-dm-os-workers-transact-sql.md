@@ -20,15 +20,15 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf694bcd82d57b0c021797677674ceb418f875a2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3534afe09635fdc626c51b63469c801a0c3ac418
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811506"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648597"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>dm_os_workers (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   システム内のすべてのワーカーに対して1行の値を返します。 ワーカーの詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。 
   
@@ -38,7 +38,7 @@ ms.locfileid: "82811506"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary (8)**|ワーカーのメモリアドレス。|  
-|status|**int**|内部使用のみ。|  
+|status|**int**|内部使用のみです。|  
 |is_preemptive|**bit**|1 = ワーカーは、プリエンプティブなスケジュール設定で実行中です。 外部コードを実行しているワーカーは、プリエンプティブスケジューリングの下で実行されます。|  
 |is_fiber|**bit**|1 = ワーカーは、簡易プーリングを使用して実行されています。 詳細については、「 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」を参照してください。|  
 |is_sick|**bit**|1 = ワーカーは、スピン ロックを取得しようとして停止しています。 このビットが設定されている場合は、頻繁にアクセスされるオブジェクトの競合に問題がある可能性があります。|  
@@ -58,14 +58,14 @@ ms.locfileid: "82811506"
 |exception_severity|**int**|ワーカーで前回発生した例外の重大度。|  
 |exception_address|**varbinary (8)**|例外をスローしたコード アドレス。|  
 |affinity|**bigint**|ワーカーのスレッド関係。 [Dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)のスレッドの関係と一致します。|  
-|state|**nvarchar(60)**|ワーカーの状態。 値は、次のいずれかです。<br /><br /> INIT = Worker は現在初期化中です。<br /><br /> RUNNING = ワーカーは、現在非プリエンプティブまたはプリエンプティブのいずれかで実行中です。<br /><br /> RUNNABLE = ワーカーは、スケジューラ上で実行できる状態です。<br /><br /> SUSPENDED = ワーカーは現在中断されています。イベントによるシグナル送信を待機中です。|  
+|state|**nvarchar(60)**|ワーカーの状態。 次の値のいずれかです。<br /><br /> INIT = Worker は現在初期化中です。<br /><br /> RUNNING = ワーカーは、現在非プリエンプティブまたはプリエンプティブのいずれかで実行中です。<br /><br /> RUNNABLE = ワーカーは、スケジューラ上で実行できる状態です。<br /><br /> SUSPENDED = ワーカーは現在中断されています。イベントによるシグナル送信を待機中です。|  
 |start_quantum|**bigint**|ワーカーの現在の実行が開始された時間 (ミリ秒単位)。|  
 |end_quantum|**bigint**|このワーカーの現在の実行が終了するまでの時間 (ミリ秒単位)。|  
 |last_wait_type|**nvarchar(60)**|最後の待機の種類。 待機の種類の一覧については、「 [sys. dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。|  
-|return_code|**int**|前回の待機からの戻り値。 値は、次のいずれかです。<br /><br /> 0 =SUCCESS<br /><br /> 3 = デッドロック<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
-|quantum_used|**bigint**|内部使用のみ。|  
-|max_quantum|**bigint**|内部使用のみ。|  
-|boost_count|**int**|内部使用のみ。|  
+|return_code|**int**|前回の待機からの戻り値。 次の値のいずれかです。<br /><br /> 0 =SUCCESS<br /><br /> 3 = デッドロック<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
+|quantum_used|**bigint**|内部使用のみです。|  
+|max_quantum|**bigint**|内部使用のみです。|  
+|boost_count|**int**|内部使用のみです。|  
 |tasks_processed_count|**int**|このワーカーが処理したタスクの数。|  
 |fiber_address|**varbinary (8)**|ワーカーが関連付けられているファイバーのメモリ アドレス。<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、簡易プーリング用に構成されていません。|  
 |task_address|**varbinary (8)**|現在のタスクのメモリアドレス。 詳細については、「 [sys. dm_os_tasks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)」を参照してください。|  
@@ -135,7 +135,7 @@ SELECT
 
  出力で、 `w_runnable` と `w_suspended` が等しい場合、これはワーカーが中断状態にある時間を表します。 等しくない場合、`w_runnable` は、RUNNABLE 状態でワーカーが費やした時間を示します。 出力では、セッション `52` は `SUSPENDED` ミリ秒を対象としてい `35,094` ます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md#DOP)       
 [スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)    

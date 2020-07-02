@@ -20,15 +20,15 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3aa9409d45586d996d28032df9e2af6e02ce36c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68102381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635078"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 ユーザー メモリ最適化テーブルを格納するために使用される各内部メモリ最適化テーブルの行が含まれます。 各ユーザー テーブルは、1 つ以上の内部テーブルに対応します。 1 つのテーブルは、コア データ ストレージで使用されます。 その他の内部テーブルは、メモリ最適化テーブルの一時的な列ストア インデックスおよび行外 (LOB) ストレージなどの機能をサポートするために使用されます。
  
@@ -36,7 +36,7 @@ ms.locfileid: "68102381"
 | :------ |:----------| :-----|
 |object_id  |**int**|       ユーザー テーブルの ID。 ユーザー テーブル (hk/列ストアの組み合わせの場合は行外ストレージまたは削除行など) をサポートするために存在する内部メモリ最適化テーブルは、その親と同じ object_id を持ちます。 |
 |xtp_object_id  |**bigint**|    ユーザー テーブルをサポートするために使用される内部メモリ最適化テーブルに対応するインメモリ OLTP オブジェクト ID。 データベース内では一意であり、オブジェクトの有効期間中に変わる可能性があります。 
-|type|  **int** |   内部テーブルの種類。<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|型|  **int** |   内部テーブルの種類。<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
 |type_desc| **nvarchar(60)**|   種類の説明<br/><br/>DELETED_ROWS_TABLE -> 列ストア インデックスの削除行を追跡する内部テーブル<br/>USER_TABLE -> 行内ユーザー データを含むテーブル<br/>DICTIONARIES_TABLE -> 列ストア インデックスの辞書<br/>SEGMENTS_TABLE -> 列ストア インデックスの圧縮セグメント<br/>ROW_GROUPS_INFO_TABLE -> 列ストア インデックスの圧縮行グループに関するメタデータ<br/>INTERNAL OFF-ROW DATA TABLE -> 行外列のストレージに使用される内部テーブル。 この場合、minor_id には column_id が反映されます。<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> ディスク ベース履歴テーブルの末尾。 履歴に挿入された行は、最初にこの内部メモリ最適化テーブルに挿入されます。 この内部テーブルからディスク ベースの履歴テーブルに行を非同期的に移動するバックグラウンド タスクがあります。 |
 |minor_id|  **int**|    0 は、ユーザー テーブルまたは内部テーブルを示します。<br/><br/>0 以外は、行外に格納されている列の ID を示します。 sys.columns で column_id と結合されます。<br/><br/>このシステム ビューには行外に格納されている各列に対応する行があります。|
 
@@ -75,7 +75,7 @@ FROM sys.memory_optimized_tables_internal_attributes moa
 WHERE moa.type=5;
 ```
 
-### <a name="b-returning-memory-consumption-of-all-columns-that-are-stored-off-row"></a>B. 行外に格納されているすべての列のメモリ使用量を返す
+### <a name="b-returning-memory-consumption-of-all-columns-that-are-stored-off-row"></a>B: 行外に格納されているすべての列のメモリ使用量を返す
 
 行外列のメモリ使用量の詳細を取得する場合は、以下のクエリを使用できます。このクエリでは、行外列を格納するために使用されるすべての内部テーブルとそのインデックスのメモリ使用量が示されます。
 
@@ -95,7 +95,7 @@ FROM sys.memory_optimized_tables_internal_attributes moa
 WHERE moa.type=5;
 ```
 
-### <a name="c-returning-memory-consumption-of-columnstore-indexes-on-memory-optimized-tables"></a>C. メモリ最適化テーブルでの列ストア インデックスのメモリ使用量を返す
+### <a name="c-returning-memory-consumption-of-columnstore-indexes-on-memory-optimized-tables"></a>C: メモリ最適化テーブルでの列ストア インデックスのメモリ使用量を返す
 
 次のクエリを使用して、メモリ最適化テーブルの列ストアインデックスのメモリ使用量を表示します。
 

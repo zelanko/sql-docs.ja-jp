@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac86bea128939be70a3931183f23d4fdffa0d8c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12cfa8fa0ebde7fe2cb6d1a6e9402a0466a4895f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648023"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>dm_xtp_system_memory_consumers (Transact-sql)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   のシステムレベルのメモリコンシューマーを報告 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] します。 これらのコンシューマーのメモリは、既定のプール (割り当てがユーザースレッドのコンテキスト内にある場合)、または内部プール (割り当てがシステムスレッドのコンテキスト内にある場合) から取得されます。  
   
@@ -37,7 +37,7 @@ select * from sys.dm_xtp_system_memory_consumers
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
-|列名|種類|説明|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|メモリコンシューマーの内部 ID。|  
 |memory_consumer_type|**int**|次のいずれかの値を持つメモリコンシューマーの種類を表す整数。<br /><br /> 0: 表示されません。 複数のコンシューマーのメモリ使用量を集計します。<br /><br /> 1-ルックアサイド: システムルックアサイドのメモリ使用量を追跡します。<br /><br /> 2-VARHEAP: 可変長ヒープのメモリ使用量を追跡します。<br /><br /> 4-IO ページプール: IO 操作に使用されるシステムページプールのメモリ使用量を追跡します。|  
@@ -48,10 +48,10 @@ select * from sys.dm_xtp_system_memory_consumers
 |allocated_bytes|**bigint**|このコンシューマーのために予約されたバイト数。|  
 |used_bytes|**bigint**|このコンシューマーによって使用されているバイト数。 varheap メモリ コンシューマーのみに適用されます。|  
 |allocation_count|**int**|割り当ての数。|  
-|partition_count|**int**|内部使用のみ。|  
-|sizeclass_count|**int**|内部使用のみ。|  
-|min_sizeclass|**int**|内部使用のみ。|  
-|max_sizeclass|**int**|内部使用のみ。|  
+|partition_count|**int**|内部使用のみです。|  
+|sizeclass_count|**int**|内部使用のみです。|  
+|min_sizeclass|**int**|内部使用のみです。|  
+|max_sizeclass|**int**|内部使用のみです。|  
 |memory_consumer_address|**varbinary**|コンシューマーの内部アドレス。|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -104,7 +104,7 @@ total_allocated_MB   total_used_MB
 2                    2  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

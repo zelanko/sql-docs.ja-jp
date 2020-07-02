@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65f75b5f9830a19a973db0fffa06b7baf2bbdbae
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 194835abe2691a74116e51222fb069d941fd3c92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626263"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースに、変更データキャプチャのクリーンアップジョブまたはキャプチャジョブを作成します。  
   
@@ -89,7 +89,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  クリーンアップ ジョブとキャプチャ ジョブは既定で作成されるため、このストアド プロシージャが必要となるのは、ジョブを明示的に削除した後で、再び作成する必要が生じた場合だけです。  
   
- ジョブの名前は**cdc です。**_ \< データベース \_ 名 \> _の** \_ クリーンアップ**または**cdc。**_ \< データベース \_ 名 \> _の** \_ キャプチャ**。ここで *<database_name>* は現在のデータベースの名前です。 同じ名前のジョブが既に存在する場合、名前にはピリオド (**.**) と一意の識別子 (例: cdc) が付加されます。 **AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
+ ジョブの名前は**cdc です。** _\<database\_name\>_** \_ クリーンアップ**または**cdc。** _\<database\_name\>_** \_ capture**。ここで *<database_name>* は現在のデータベースの名前です。 同じ名前のジョブが既に存在する場合、名前にはピリオド (**.**) と一意の識別子 (例: cdc) が付加されます。 **AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
   
  クリーンアップジョブまたはキャプチャジョブの現在の構成を表示するには、 [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)を使用します。 ジョブの構成を変更するには、 [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)を使用します。  
   
@@ -108,7 +108,7 @@ EXEC sys.sp_cdc_add_job @job_type = N'capture';
 GO  
 ```  
   
-### <a name="b-creating-a-cleanup-job"></a>B. クリーンアップジョブの作成  
+### <a name="b-creating-a-cleanup-job"></a>B: クリーンアップジョブの作成  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにクリーンアップ ジョブを作成します。 パラメーター `@start_job` は 0 に、`@retention` は 5760 分 (96 時間) に設定します。 明示的に削除された既存のクリーンアップ ジョブを改めて作成するという状況を想定しています。  
   
 ```  
@@ -120,7 +120,7 @@ EXEC sys.sp_cdc_add_job
     ,@retention = 5760;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dbo. cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  

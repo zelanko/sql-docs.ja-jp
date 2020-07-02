@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac340466d1d816139249e4b007c7b2bc733dd390
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: a5d0940f6e182d477d2c0660f4c93aaa9fedeb6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881876"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643548"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>データ アクセサー関数 - data (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg*によって指定された各項目の型指定された値を返します。  
   
@@ -76,10 +76,10 @@ set @x = ''
 select @x.query('data(<SomeNode>value</SomeNode>)')  
 ```  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. data() XQuery 関数によるノードの型指定された値の抽出  
+### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A: data() XQuery 関数によるノードの型指定された値の抽出  
  次のクエリは、 **data ()** 関数を使用して、属性、要素、およびテキストノードの値を取得する方法を示しています。  
   
 ```  
@@ -167,7 +167,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID = 23  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

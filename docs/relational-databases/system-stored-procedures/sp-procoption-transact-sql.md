@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94a5983701bdb7370c389f970d0c75af11a7779c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b8ac7eae727206e0ad9b236229dbfca009529e3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815276"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645824"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   ストアド プロシージャの自動実行を設定または解除します。 自動実行に設定されているストアドプロシージャは、のインスタンスが起動されるたびに実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -73,7 +73,7 @@ EXEC sp_procoption @ProcName = N'<procedure name>'
     , @OptionValue = 'off';   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ストアドプロシージャの実行](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)  
   
   

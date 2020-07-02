@@ -20,16 +20,16 @@ ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb2b6e422b9b9e746e851e6d7b799cdf7c63387f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5acf2b0afd2285025112d6e3f224a5f44241a0b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811278"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634935"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 内の指定した参照元エンティティの定義で、名前によって参照されるユーザー定義エンティティごとに1行の値を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 2つのエンティティ間の依存関係は、*参照先*エンティティと呼ばれる1つのユーザー定義エンティティが、参照*元エンティティ*と呼ばれる別のユーザー定義エンティティの永続化された SQL 式に名前で表示されると作成されます。 たとえば、ストアドプロシージャが指定した参照元エンティティである場合、この関数は、テーブル、ビュー、ユーザー定義型 (Udt)、またはその他のストアドプロシージャなど、ストアドプロシージャで参照されているすべてのユーザー定義エンティティを返します。  
   
@@ -119,10 +119,10 @@ sys.dm_sql_referenced_entities (
   
  次の表に、依存関係情報が作成および管理されるエンティティの種類を示します。 依存関係情報は、ルール、既定値、一時テーブル、一時ストアドプロシージャ、またはシステムオブジェクトに対して作成または管理されません。  
   
-|エンティティ型|参照元エンティティ|参照先エンティティ|  
+|エンティティの種類|参照元エンティティ|参照先エンティティ|  
 |-----------------|------------------------|-----------------------|  
 |テーブル|はい*|はい|  
-|View|はい|はい|  
+|表示|はい|はい|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ**|はい|はい|  
 |CLR ストアド プロシージャ (CLR stored procedure)|いいえ|はい|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|はい|はい|  
@@ -168,7 +168,7 @@ SELECT
 GO  
 ```  
   
-### <a name="b-return-entities-that-are-referenced-by-an-object"></a>B. オブジェクトによって参照されるエンティティを返す  
+### <a name="b-return-entities-that-are-referenced-by-an-object"></a>B: オブジェクトによって参照されるエンティティを返す  
  次の例では、ユーザー定義関数 `dbo.ufnGetContactInformation` によって参照されるエンティティを取得します。  
   
 ```sql  
@@ -190,7 +190,7 @@ SELECT
 GO  
 ```  
   
-### <a name="c-return-column-dependencies"></a>C. 列の依存関係を返す  
+### <a name="c-return-column-dependencies"></a>C: 列の依存関係を返す  
  次の例では、 `Table1` `c` 列との合計として定義された計算列を含むテーブルを作成し `a` `b` ます。 その後、`sys.dm_sql_referenced_entities` ビューが呼び出されます。 このビューは、2 つの行 (計算列で定義された各列につき 1 行) を返します。  
   
 ```sql  
@@ -223,7 +223,7 @@ GO
  dbo         Table1     b                 c  
 ```
 
-### <a name="d-returning-non-schema-bound-column-dependencies"></a>D. 非スキーマバインド列の依存関係を返す  
+### <a name="d-returning-non-schema-bound-column-dependencies"></a>D: 非スキーマバインド列の依存関係を返す  
  次の例では、 `Table1` を削除し、 `Table2` ストアドプロシージャを作成し `Proc1` ます。 プロシージャが参照し、存在しないテーブルが参照されて `Table2` `Table1` います。 ビュー `sys.dm_sql_referenced_entities` は、参照元エンティティとして指定されたストアドプロシージャを使用して実行されます。 結果セットには、`Table1` に対する 1 行と `Table2` に対する 3 行があります。 `Table1`が存在しないため、列の依存関係を解決できず、エラー2020が返されます。 `is_all_columns_found` 列の `Table1` に対する 0 は、検出できなかった列があることを示します。  
   
 ```sql  
@@ -334,7 +334,7 @@ SELECT
  Employee      Gender              0           1          0
  ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

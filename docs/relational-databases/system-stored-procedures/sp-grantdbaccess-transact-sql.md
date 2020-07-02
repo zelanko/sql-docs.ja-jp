@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 3b88badb8b1852617d9edd8acd31f2c19258cca7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85ab6ead295b4459890a61deccdac3dc2775033a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304865"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646004"
 ---
 # <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースにデータベース ユーザーを追加します。  
   
@@ -43,14 +43,14 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @loginame = ] 'login_ '`新しいデータベースユーザーにマップされる Windows グループ、Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン、またはログインの名前を指定します。 Windows グループと windows ログインの名前は、*ドメイン*\\*ログイン*形式の windows ドメイン名で修飾する必要があります。たとえば、 **LONDON\Joeb**のようになります。 ログインをデータベース内のユーザーにマップすることはできません。 *login*は**sysname**であり、既定値はありません。  
+`[ @loginame = ] 'login_ '`新しいデータベースユーザーにマップされる Windows グループ、Windows ログイン、またはログインの名前を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定します。 Windows グループと windows ログインの名前は、*ドメイン*ログイン形式の windows ドメイン名で修飾する必要があり \\ *login*ます (例: **LONDON\Joeb**)。 ログインをデータベース内のユーザーにマップすることはできません。 *login*は**sysname**であり、既定値はありません。  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``新しいデータベースユーザーの名前を指定します。 *name_in_db*のデータ型は**sysname**で、既定値は NULL です。 指定しない場合は、*ログイン*が使用されます。 値が NULL の出力変数として指定した場合、 ** \@name_in_db**は*login*に設定されます。 *name_in_db*は、現在のデータベースに存在していない必要があります。  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``新しいデータベースユーザーの名前を指定します。 *name_in_db*のデータ型は**sysname**で、既定値は NULL です。 指定しない場合は、*ログイン*が使用されます。 値が NULL の出力変数として指定した場合、 ** \@ name_in_db**は*login*に設定されます。 *name_in_db*は、現在のデータベースに存在していない必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_grantdbaccess**は、追加のオプションをサポートする CREATE USER を呼び出します。 データベースユーザーの作成の詳細については、「 [CREATE USER &#40;transact-sql&#41;](../../t-sql/statements/create-user-transact-sql.md)」を参照してください。 データベースからデータベースユーザーを削除するには、 [DROP user](../../t-sql/statements/drop-user-transact-sql.md)を使用します。  
   
  **sp_grantdbaccess**は、ユーザー定義のトランザクション内では実行できません。  
@@ -59,14 +59,14 @@ sp_grantdbaccess [ @loginame = ] 'login'
  **Db_owner**固定データベースロールまたは**db_accessadmin**固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例で`CREATE USER`は、を使用して、Windows ログイン`Edmonds\LolanSo`のデータベースユーザーを現在のデータベースに追加します。 新しいユーザーの名前は `Lolan` です。 これは、データベースユーザーを作成するための推奨される方法です。  
+ 次の例では、を使用して、 `CREATE USER` Windows ログインのデータベースユーザーを `Edmonds\LolanSo` 現在のデータベースに追加します。 新しいユーザーの名前は `Lolan` です。 これは、データベースユーザーを作成するための推奨される方法です。  
   
 ```sql
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ユーザー &#40;Transact-sql&#41;の作成](../../t-sql/statements/create-user-transact-sql.md)   
  [ユーザー &#40;Transact-sql&#41;を削除します。](../../t-sql/statements/drop-user-transact-sql.md)   

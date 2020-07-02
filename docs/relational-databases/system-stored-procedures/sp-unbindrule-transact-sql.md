@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 54c5c0f9bfa6bc64a79e0f4dcde72c09b2a281fb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43fef1a35d36446cdf402b145c0afec68c9eb47d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809423"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639538"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベース内の列または別名データ型のルールをバインド解除します。  
   
@@ -53,7 +53,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ルールのテキストを表示するには、ルール名をパラメーターに使用して **sp_helptext** を実行します。  
   
  ルールがバインド解除されると、ルールが列にバインドされている場合は、そのバインドに関する情報が**sys**テーブルから削除されます。また、ルールが別名データ型にバインドされている場合は、 **.sys**テーブルからも削除されます。  
@@ -72,21 +72,21 @@ sp_unbindrule [ @objname = ] 'object_name'
 EXEC sp_unbindrule 'employees.startdate';  
 ```  
   
-### <a name="b-unbinding-a-rule-from-an-alias-data-type"></a>B. 別名データ型からルールをバインド解除する  
+### <a name="b-unbinding-a-rule-from-an-alias-data-type"></a>B: 別名データ型からルールをバインド解除する  
  次の例では、別名データ型 `ssn` からルールをバインド解除します。 その型の既存および将来の列からルールをバインド解除します。  
   
 ```  
 EXEC sp_unbindrule ssn;  
 ```  
   
-### <a name="c-using-futureonly_flag"></a>C. Futureonly_flag の使用  
+### <a name="c-using-futureonly_flag"></a>C: Futureonly_flag の使用  
  次の例では、既存の `ssn` 列に影響を与えずに、別名データ型 `ssn` からルールをバインド解除します。  
   
 ```  
 EXEC sp_unbindrule 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D. 区切られた識別子の使用  
+### <a name="d-using-delimited-identifiers"></a>D: 区切られた識別子の使用  
  次の例では、 *object_name*パラメーターで区切られた識別子を使用しています。  
   
 ```  
@@ -102,7 +102,7 @@ GO
 EXEC sp_unbindrule '[t.4].c1';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   

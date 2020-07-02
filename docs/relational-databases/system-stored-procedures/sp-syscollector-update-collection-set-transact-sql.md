@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cb261fdfb745e935b94fc5c2944640c507674ece
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9385503d625c14932d520e4cf7390bf42612faff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816492"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639854"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   ユーザー定義のコレクションセットのプロパティを変更したり、ユーザー定義のコレクションセットの名前を変更したりするために使用します。  
   
@@ -148,7 +148,7 @@ EXECUTE dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-### <a name="b-changing-the-collection-mode-from-non-cached-to-cached"></a>B. コレクション モードを非キャッシュからキャッシュに変更する  
+### <a name="b-changing-the-collection-mode-from-non-cached-to-cached"></a>B: コレクション モードを非キャッシュからキャッシュに変更する  
  次の例では、コレクション モードを非キャッシュ モードからキャッシュ モードに変更します。 この変更を行うには、スケジュール ID またはスケジュール名を指定する必要があります。  
   
 ```  
@@ -163,7 +163,7 @@ EXECUTE dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-### <a name="c-changing-other-collection-set-parameters"></a>C. その他のコレクションセットのパラメーターの変更  
+### <a name="c-changing-other-collection-set-parameters"></a>C: その他のコレクションセットのパラメーターの変更  
  次の例では、"Simple collection set test 2" という名前のコレクションセットのさまざまなプロパティを更新します。  
   
 ```  
@@ -178,10 +178,10 @@ EXEC dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データコレクション](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [Transact-sql&#41;&#40;の dbo の sysschedules](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [dbo.sysのスケジュール &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c393ccfc3225136996be33efe31a3d1d6bdbfd9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 00347b61a88092b8d95e2851e132ef69aa5edf93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827448"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626425"
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>SQL Server エージェントのストアド プロシージャ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、スケジュールが設定された作業やイベントにより実行される作業を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで管理する場合に、次のシステム ストアド プロシージャを使用できます。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "82827448"
 |[sp_help_downloadlist](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)|[sp_update_targetservergroup](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)|  
 |[sp_help_job](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

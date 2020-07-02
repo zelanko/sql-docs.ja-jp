@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 65c4cd3f6ca07f2c3cb35dc7dcbaad373930ecc5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e1aa82b9ced4593bbc1341c3ef305519fb1d1eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066809"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634426"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   1 つ以上のセカンダリ データベースの設定を取得します。  
   
@@ -62,8 +62,8 @@ sp_help_log_shipping_secondary_database
 |**file_retention_period**|バックアップファイルが削除される前にセカンダリサーバーで保持される時間 (分単位)。|  
 |**copy_job_id**|セカンダリ サーバーでのコピー ジョブに関連付けられた ID。|  
 |**restore_job_id**|セカンダリサーバー上の復元ジョブに関連付けられている ID。|  
-|**monitor_server**|ログ配布構成で監視サーバーと[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]して使用されているのインスタンスの名前。|  
-|**monitor_server_security_mode**|監視サーバーへの接続に使用されるセキュリティモード。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証。|  
+|**monitor_server**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成で監視サーバーとして使用されているのインスタンスの名前。|  
+|**monitor_server_security_mode**|監視サーバーへの接続に使用されるセキュリティモード。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証。|  
 |**secondary_database**|ログ配布構成のセカンダリデータベースの名前。|  
 |**restore_delay**|指定されたバックアップファイルを復元する前に、セカンダリサーバーが待機する時間 (分単位)。 既定値は、0 分です。|  
 |**restore_all**|1 に設定すると、セカンダリ サーバーでは復元ジョブの実行時にすべてのトランザクション ログ バックアップが復元されます。 それ以外の場合は、1つのファイルが復元された後に停止します。|  
@@ -71,7 +71,7 @@ sp_help_log_shipping_secondary_database
 |**disconnect_users**|1に設定すると、復元操作の実行時にユーザーがセカンダリデータベースから切断されます。 既定値は 0 です。|  
 |**block_size**|バックアップデバイスのブロックサイズとして使用されるサイズ (バイト単位)。|  
 |**buffer_count**|バックアップまたは復元操作によって使用されるバッファーの合計数。|  
-|**max_transfer_size**|によって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バックアップデバイスに発行される入力要求または出力要求の最大サイズ (バイト単位)。|  
+|**max_transfer_size**|によってバックアップデバイスに発行される入力要求または出力要求の最大サイズ (バイト単位) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**restore_threshold**|復元操作の間に、アラートが生成されるまでの経過時間 (分単位)。|  
 |**threshold_alert**|復元のしきい値を超えたときに発生する警告。|  
 |**threshold_alert_enabled**|復元のしきい値の警告を有効にするかどうか。<br /><br /> 1 = 有効。<br /><br /> 0 = 無効です。|  
@@ -92,7 +92,7 @@ sp_help_log_shipping_secondary_database
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_help_log_shipping_secondary_primary &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

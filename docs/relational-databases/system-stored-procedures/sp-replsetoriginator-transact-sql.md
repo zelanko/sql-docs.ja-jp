@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e1f29f06d7a840ed6628ecd4dc193a4f1c54b82
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1811a523e23de9726517bfabd1ddf8417aa3c5fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817072"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626737"
 ---
 # <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   双方向のトランザクション レプリケーションでのループバックの検出および処理を開始するために使用されます。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -45,13 +45,13 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_replsetoriginator**は、レプリケーションによって適用されたトランザクションのソースを記録するためにディストリビューションエージェントによって実行されます。 この情報は、ループバック プロパティ セットを持つ双方向のトランザクション サブスクリプションに対するループバックの検出を開始するために使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_replsetoriginator**を実行できるのは、パブリッシャー側の**sysadmin**固定サーバーロールのメンバー、パブリケーションデータベースの固定データベースロール**db_owner**のメンバー、またはパブリケーションアクセスリスト (PAL) のユーザーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

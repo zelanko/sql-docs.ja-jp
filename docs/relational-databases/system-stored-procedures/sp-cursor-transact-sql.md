@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7550a640b723e77f3bfbc9b3473e762962ae2da3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820612"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646416"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   位置指定更新を要求します。 このプロシージャは、カーソルのフェッチ バッファー内にある 1 つ以上の行に対して操作を実行します。 sp_cursor は、ID = 1 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  UPDATE \< table name> が指定されている場合、 *table*パラメーターに指定された値はすべて無視されます。  
+>  UPDATE \<table name> を指定した場合、 *table*パラメーターに指定した値は無視されます。  
   
  複数のパラメーターを使用する場合、最初のパラメーターは次の形式の文字列である必要があります。  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- この場合、 \< 構築された update ステートメント内の> テーブル名は、指定されているか、*テーブル*パラメーターによって既定値になります。  
+ この場合、 \<table name> 構築された update ステートメント内のは、指定されたか、または*table*パラメーターによって既定値になります。  
   
  挿入の場合:  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  INSERT * \< table name>* が指定されている場合、 *table*パラメーターに指定された値はすべて無視されます。  
+>  INSERT *\<table name>* を指定した場合、 *table*パラメーターに指定した値は無視されます。  
   
  複数のパラメーターを使用する場合、最初のパラメーターは次の形式の文字列である必要があります。  
   
@@ -168,12 +168,12 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- 値が指定されている場合を除き、最後の式の後に ")" が続く必要があります。 この場合、構築された UPDATE ステートメント内の* \<>テーブル名*は、指定されているか、*テーブル*パラメーターによって既定値になります。  
+ 値が指定されている場合を除き、最後の式の後に ")" が続く必要があります。 この場合、 *\<table name>* 構築された UPDATE ステートメント内のは、指定されたか、または*table*パラメーターによって既定値になります。  
   
 > [!NOTE]  
 >  1 つのパラメーターを名前付きパラメーターとして送信することもできます ("`@VALUES`" など)。 この場合は、他の名前付きパラメーターは使用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

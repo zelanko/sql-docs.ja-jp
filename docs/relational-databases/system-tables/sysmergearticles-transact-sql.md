@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8328c332fe35b8e157c8631d90b8de67c6e96e17
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 79e19b531b7dfb10587ec6bdb4db71632066ef87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633389"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   ローカルデータベースで定義されているマージアーティクルごとに1行のデータを格納します。 このテーブルは、パブリケーションデータベースに格納されます。  
   
@@ -37,10 +37,10 @@ ms.locfileid: "82831943"
 |**sync_objid**|**int**|同期データセットを表すビューのオブジェクト ID。|  
 |**view_type**|**tinyint**|ビューの種類。<br /><br /> **0** = ビューではありません。すべてのベースオブジェクトを使用します。<br /><br /> **1** = 永続的なビュー。<br /><br /> **2** = 一時ビュー。|  
 |**artid**|**uniqueidentifier**|指定されたアーティクルの一意の識別番号。|  
-|**記述**|**nvarchar(255)**|記事の簡単な説明。|  
+|**description**|**nvarchar(255)**|記事の簡単な説明。|  
 |**pre_creation_command**|**tinyint**|サブスクリプションデータベースでアーティクルが作成されたときに実行する既定のアクションです。<br /><br /> **0 =** なし-サブスクライバーにテーブルが既に存在する場合、アクションは実行されません。<br /><br /> **1** = Drop-テーブルを再作成する前に削除します。<br /><br /> **2** = 削除-サブセットフィルターの WHERE 句に基づいて削除を発行します。<br /><br /> **3** = 切り捨て- **2**と同じですが、行ではなくページを削除します。 ただし、は WHERE 句を受け取りません。|  
 |**pubid**|**uniqueidentifier**|現在のアーティクルが属するパブリケーションの ID。|  
-|**nickname**|**int**|アーティクル id のニックネームマッピングです。|  
+|**ニックネーム**|**int**|アーティクル id のニックネームマッピングです。|  
 |**column_tracking**|**int**|列の追跡がアーティクルに対して実装されているかどうかを示します。|  
 |**status**|**tinyint**|アーティクルの状態。次のいずれかになります。<br /><br /> **1** = 同期されていない-テーブルをパブリッシュする初期処理スクリプトは、次にスナップショットエージェントが実行されるときに実行されます。<br /><br /> **2** = アクティブ-テーブルをパブリッシュする初期処理スクリプトが実行されました。<br /><br /> **5** = New_inactive 追加されます。<br /><br /> **6** = New_active 追加されます。|  
 |**conflict_table**|**sysname**|現在のアーティクルに対して競合しているレコードを含むローカルテーブルの名前です。 このテーブルには情報提供のみを目的としています。このテーブルの内容は、カスタム競合解決ルーチンによって変更または削除されるか、管理者によって直接削除される可能性があります。|  
@@ -87,11 +87,11 @@ ms.locfileid: "82831943"
 |**compensate_for_errors**|**bit**|同期中にエラーが発生した場合に補正アクションを実行するかどうかを示します。<br /><br /> **0** = 補正アクションは無効です。<br /><br /> **1** = サブスクライバーまたはパブリッシャーで適用できない変更は、常に、マージレプリケーションの既定の動作である変更を元に戻す補正アクションにつながります。<br /><br /> 注: 値が**0**の場合は、非収束になります。|  
 |**pub_range**|**bigint**|パブリッシャーの id 範囲のサイズ。|  
 |**range**|**bigint**|調整でサブスクライバーに割り当てられる連続する id 値のサイズ。|  
-|**進入**|**int**|Id 範囲のしきい値の割合。|  
+|**threshold**|**int**|Id 範囲のしきい値の割合。|  
 |**stream_blob_columns**|**bit**|バイナリ ラージ オブジェクト列をレプリケートするときにデータ ストリームの最適化が使用されるかどうかを示します。 **1**は、最適化が試行されることを意味します。|  
 |**preserve_rowguidcol**|**bit**|レプリケーションが既存の rowguid 列を使用するかどうかを示します。 値**1**は、既存の ROWGUIDCOL 列が使用されることを意味します。 **0**は、レプリケーションによって ROWGUIDCOL 列が追加されたことを示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   

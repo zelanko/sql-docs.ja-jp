@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1949134790942ea510060534a4760e76b63469d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: af008513b8305d2e7ec0c12ad3fddd937daed9d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824856"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633498"
 ---
 # <a name="msrepl_identity_range-transact-sql"></a>MSrepl_identity_range (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSrepl_identity_range**テーブルでは、id 範囲の管理がサポートされています。 このテーブルは、パブリケーション、ディストリビューション、およびサブスクリプションデータベースに格納されます。  
   
@@ -39,10 +39,10 @@ ms.locfileid: "82824856"
 |**pub_range**|**bigint**|パブリッシャーの id 範囲のサイズ。|  
 |**range**|**bigint**|調整でサブスクライバーに割り当てられる連続する id 値のサイズ。|  
 |**max_identity**|**bigint**|ID 範囲の上限です。|  
-|**進入**|**int**|Id 範囲のしきい値の割合。|  
+|**threshold**|**int**|Id 範囲のしきい値の割合。|  
 |**current_max**|**bigint**|割り当て可能であるが必ずしも割り当てられていない、現在の最大値。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

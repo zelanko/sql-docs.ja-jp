@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 74a5865151cb283aed16efe8ef2ea2908a9f56c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830948"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626628"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   マージレプリケーションのアーティクルとして使用されているテーブル内の行に関する情報を表示します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -56,7 +56,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|このエントリを作成したデータベースの名前です。|  
 |**db_nickname**|**binary(6)**|このエントリを作成したデータベースのニックネーム。|  
 |**version**|**int**|エントリのバージョン。|  
-|**current_state**|**nvarchar (9)**|行の現在の状態に関する情報を返します。<br /><br /> **y**行のデータは、行の現在の状態を表します。<br /><br /> **n**行のデータは、行の現在の状態を表していません。<br /><br /> ** \< n/a>** -適用されません。<br /><br /> ** \< 不明な>** -現在の状態を特定できません。|  
+|**current_state**|**nvarchar (9)**|行の現在の状態に関する情報を返します。<br /><br /> **y**行のデータは、行の現在の状態を表します。<br /><br /> **n**行のデータは、行の現在の状態を表していません。<br /><br /> **\<n/a>**-適用できません。<br /><br /> **\<unknown>**-現在の状態を特定できません。|  
 |**rowversion_table**|**nchar (17)**|行のバージョンが[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)テーブルと[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)テーブルのどちらに格納されているかを示します。|  
 |**comment**|**nvarchar(255)**|この行バージョンエントリに関する追加情報。 通常、このフィールドは空です。|  
   
@@ -74,13 +74,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ## <a name="result-set-for-both"></a>両方の結果セット  
  **両方**の値が*show*に選択されている場合、行と列の両方の結果セットが返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_showrowreplicainfo**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sp_showrowreplicainfo**を実行できるのは、パブリケーションデータベースの**db_owner**固定データベースロールのメンバー、またはパブリケーションデータベースのパブリケーションアクセスリスト (PAL) のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マージレプリケーションの競合の検出と解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f66891393527b12f859d1a0aa6447470473a4d49
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dd907c83ad7c2fc2751134003f820d43a1023129
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626217"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベース内の指定したソース テーブルを対象に変更データ キャプチャを有効にします。 テーブルで変更データキャプチャが有効になっている場合、テーブルに適用された各データ操作言語 (DML) 操作のレコードがトランザクションログに書き込まれます。 変更データキャプチャプロセスでは、この情報をログから取得し、一連の関数を使用してアクセスする変更テーブルに書き込みます。  
   
@@ -137,7 +137,7 @@ EXECUTE sys.sp_cdc_enable_table
 GO  
 ```  
   
-### <a name="b-enabling-change-data-capture-by-specifying-additional-optional-parameters"></a>B. 追加の省略可能なパラメーターを指定して変更データキャプチャを有効にする  
+### <a name="b-enabling-change-data-capture-by-specifying-additional-optional-parameters"></a>B: 追加の省略可能なパラメーターを指定して変更データキャプチャを有効にする  
  次の例では、テーブルに対して変更データキャプチャを有効にし `HumanResources.Department` ます。 を除くすべてのパラメーターが指定されてい `@allow_partition_switch` ます。  
   
 ```  
@@ -155,7 +155,7 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_cdc_disable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
  [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   

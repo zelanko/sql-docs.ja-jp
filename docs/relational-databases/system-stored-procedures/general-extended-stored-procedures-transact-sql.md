@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 9129f571-d162-42e6-a66b-340fbbf0acd1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: daa3dc088a4a448e6b20cdf2ade73e64e86d491d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a2a59d30dfc86a84d76ebd25143f4d7d1090a4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942196"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634848"
 ---
 # <a name="general-extended-stored-procedures-transact-sql"></a>一般的な拡張ストアドプロシージャ (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、のインスタンスから外部プログラムへの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インターフェイスを提供する次のシステムストアドプロシージャをサポートしています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、のインスタンスから外部プログラムへのインターフェイスを提供する次のシステムストアドプロシージャをサポートしてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 |||  
 |-|-|  
@@ -40,7 +40,7 @@ ms.locfileid: "67942196"
 |[xp_loginconfig](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)|[xp_sqlmaint](../../relational-databases/system-stored-procedures/xp-sqlmaint-transact-sql.md)|  
 ||[xp_sscanf](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

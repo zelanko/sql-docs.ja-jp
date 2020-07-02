@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 207b27a4d7006f8181cbfe7a6cb6e072ee741d82
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 49859c498b0c2cb8550d7153334252a35d5d0e42
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646864"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>sp_update_data_source (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   管理データ ウェアハウスの core.source_info_internal テーブルで既存行の更新または新規行の挿入を行います。 このプロシージャは、アップロードパッケージが管理データウェアハウスへのデータのアップロードを開始するたびに、データコレクターの実行時コンポーネントによって呼び出されます。  
   
@@ -77,7 +77,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="permissions"></a>アクセス許可  
  **Mdw_writer** (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、データソース (この場合はディスク使用量コレクションセット) を更新し、有効期限までの日数を設定して、ソースの識別子を返します。 この例では、既定のインスタンスが使用されています。  
   
 ```  
@@ -92,7 +92,7 @@ EXEC core.sp_update_data_source
 @source_id = @source_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [管理データ ウェアハウス (management data warehouse)](../../relational-databases/data-collection/management-data-warehouse.md)  

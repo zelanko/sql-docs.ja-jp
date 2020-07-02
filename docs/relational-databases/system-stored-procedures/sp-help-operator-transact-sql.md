@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c41a8f1bb7e1083bdb80eca875331e0ce8c92ab1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 79a123faab9b587d56d957a3f9e1765e8619f97d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634306"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーに対して定義されているオペレーターに関する情報をレポートします。  
   
@@ -56,7 +56,7 @@ sp_help_operator
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|オペレーター識別番号。|  
+|**id**|**int**|オペレーター識別番号。|  
 |**name**|**sysname**|オペレーター名。|  
 |**enabled**|**tinyint**|オペレーターが通知を受け取ることが可能かどうか。<br /><br /> **1** = はい<br /><br /> **0** = いいえ|  
 |**email_address**|**nvarchar (100)**|オペレーターの電子メールアドレス。|  
@@ -77,7 +77,7 @@ sp_help_operator
 |**last_netsend_time**|**int**|オペレーターが前回、ネットワーク ポップアップによる通知を受け取った時刻。|  
 |**category_name**|**sysname**|このオペレーターが所属するオペレーター カテゴリの名前。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_help_operator**は、 **msdb**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  

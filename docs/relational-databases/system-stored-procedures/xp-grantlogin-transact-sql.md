@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 957bbdc43c0f0adf3a545fee76e9f69df130d8f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81237214608b6fb0c04fa0857203d0488db375ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116669"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633551"
 ---
 # <a name="xp_grantlogin-transact-sql"></a>xp_grantlogin (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Windows グループまたはユーザーにへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアクセスを許可します。  
+  Windows グループまたはユーザーにへのアクセスを許可 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)を使用してください。  
@@ -42,20 +42,20 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @loginame = ] 'login'`追加する Windows ユーザーまたはグループの名前を指定します。 Windows ユーザーまたはグループは、*ドメイン*\\*ユーザー*という形式の windows ドメイン名で修飾されている必要があります。 *login*は**sysname**,、既定値はありません。  
+`[ @loginame = ] 'login'`追加する Windows ユーザーまたはグループの名前を指定します。 Windows ユーザーまたはグループは、*ドメイン*ユーザーという形式の windows ドメイン名で修飾されている必要があり \\ *User*ます。 *login*は**sysname**,、既定値はありません。  
   
-`[ @logintype = ] 'logintype'`アクセス権が付与されているログインのセキュリティレベルを示します。 *logintype*は**varchar (5)**,、既定値は NULL です。 指定できるのは**管理者**だけです。 **Admin**を指定した場合、*ログイン*には[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアクセスが許可され、 **sysadmin**固定サーバーロールのメンバーとして追加されます。  
+`[ @logintype = ] 'logintype'`アクセス権が付与されているログインのセキュリティレベルを示します。 *logintype*は**varchar (5)**,、既定値は NULL です。 指定できるのは**管理者**だけです。 **Admin**を指定した場合、*ログイン*にはへのアクセスが許可され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**固定サーバーロールのメンバーとして追加されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **xp_grantlogin**は、拡張ストアドプロシージャではなく、システムストアドプロシージャになりました。 **xp_grantlogin**は**sp_grantlogin**と**sp_addsrvrolemember**を呼び出します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Securityadmin**固定サーバーロールのメンバーシップが必要です。 *Logintype*を変更する場合は、 **sysadmin**固定サーバーロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_denylogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

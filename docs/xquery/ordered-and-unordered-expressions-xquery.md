@@ -18,21 +18,21 @@ helpviewer_keywords:
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 995e2072be85128ab58b85213c255ee35c042d5b
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: a337cc615a8566040a654829c4a2853117efcf9c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886857"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643518"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>順序付けられた式と順序付けられていない式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   既定では、のすべての操作の順序付けモード [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は**順序付け**されています。 したがって、パス式および FLWOR 式によって返されるノードシーケンスは、 **order by**句を使用せずにドキュメント順になります。  
   
  XQuery 仕様で説明されている追加の**順序付き**構文と**順序**付けられていない構文はサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery 式](../xquery/xquery-expressions.md)   
  [FLWOR ステートメントとイテレーション &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)   
  [パス式 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  

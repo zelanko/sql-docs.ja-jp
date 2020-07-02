@@ -18,21 +18,21 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57087264554d228ec02ed22baa2afb932e646b10
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c748dd4980fb7b3b142893f5a04dd36f1676f8a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826390"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635008"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>クエリ通知-sys. dm_qn_subscriptions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーのアクティブ クエリ通知サブスクリプションに関する情報を返します。 このビューは、サーバーまたは指定したデータベース内のアクティブなサブスクリプションを確認したり、指定したサーバー プリンシパルを確認する際に使用できます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|サブスクリプションの ID。|  
+|**id**|**int**|サブスクリプションの ID。|  
 |**database_id**|**int**|通知クエリが実行されたデータベースの ID。 このデータベースには、このサブスクリプションに関連する情報が格納されます。|  
 |**sid**|**varbinary (85)**|このサブスクリプションを作成して所有しているサーバー プリンシパルのセキュリティ ID。|  
 |**object_id**|**int**|サブスクリプションパラメーターに関する情報を格納する内部テーブルの ID。|  
@@ -107,7 +107,7 @@ FROM sys.dm_qn_subscriptions;
 GO  
 ```  
   
-### <a name="b-returning-active-query-notification-subscriptions-for-a-specified-user"></a>B. 指定されたユーザーのアクティブなクエリ通知サブスクリプションを返す  
+### <a name="b-returning-active-query-notification-subscriptions-for-a-specified-user"></a>B: 指定されたユーザーのアクティブなクエリ通知サブスクリプションを返す  
  次の例では、ログイン `Ruth0` によってサブスクライブされたアクティブなクエリ通知サブスクリプションを返します。  
   
 ```  
@@ -117,7 +117,7 @@ WHERE sid = SUSER_SID('Ruth0');
 GO  
 ```  
   
-### <a name="c-returning-internal-table-metadata-for-query-notification-subscriptions"></a>C. クエリ通知サブスクリプションの内部テーブルメタデータを返す  
+### <a name="c-returning-internal-table-metadata-for-query-notification-subscriptions"></a>C: クエリ通知サブスクリプションの内部テーブルメタデータを返す  
  次の例では、クエリ通知サブスクリプションに関する内部テーブルのメタデータを返します。  
   
 ```  
@@ -130,7 +130,7 @@ WHERE it.internal_type_desc = 'QUERY_NOTIFICATION';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [クエリ通知関連の動的管理ビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  

@@ -17,16 +17,16 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e31935a52d4819023b5ed17ac0ef12c106ec49ba
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c59f3379d2f210d96b97e497ecb8f332a6f93d2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828992"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647895"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Geo レプリケーションパートナーシップのプライマリデータベースとセカンダリデータベースの間のレプリケーションリンクごとに1行の値を格納します。 このビューは、論理マスター データベースに存在します。  
   
@@ -40,10 +40,10 @@ ms.locfileid: "82828992"
 |partner_database|**sysname**|リンクされた SQL Database サーバー上の geo レプリケートされたデータベースの名前。|  
 |replication_state|**tinyint**|このデータベースの geo レプリケーションの状態。次のいずれかになります。<br /><br /> 0 = 保留中。 アクティブなセカンダリデータベースの作成がスケジュールされていますが、必要な準備手順がまだ完了していません。<br /><br /> 1 = シード処理。 Geo レプリケーションターゲットはシードされていますが、2つのデータベースがまだ同期されていません。 シード処理が完了するまで、セカンダリデータベースに接続することはできません。 プライマリからセカンダリデータベースを削除すると、シード処理操作が取り消されます。<br /><br /> 2 = キャッチアップ。 セカンダリデータベースはトランザクション一貫性のある状態であり、常にプライマリデータベースと同期されています。|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|ロール|**tinyint**|Geo レプリケーションロール。次のいずれかになります。<br /><br /> 0 = プライマリ。 Database_id は、geo レプリケーションパートナーシップのプライマリデータベースを参照します。<br /><br /> 1 = セカンダリ。  Database_id は、geo レプリケーションパートナーシップのプライマリデータベースを参照します。|  
+|role|**tinyint**|Geo レプリケーションロール。次のいずれかになります。<br /><br /> 0 = プライマリ。 Database_id は、geo レプリケーションパートナーシップのプライマリデータベースを参照します。<br /><br /> 1 = セカンダリ。  Database_id は、geo レプリケーションパートナーシップのプライマリデータベースを参照します。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|セカンダリ型。次のいずれかになります。<br /><br /> 0 = いいえ。 セカンダリデータベースには、フェールオーバーまでアクセスできません。<br /><br /> 1 = ReadOnly。 セカンダリデータベースは、ApplicationIntent = ReadOnly のクライアント接続のみにアクセスできます。<br /><br /> 2 = すべて。 セカンダリデータベースには、任意のクライアント接続からアクセスできます。|  
-|secondary_allow_connections _desc|**nvarchar(256)**|いいえ<br /><br /> すべて<br /><br /> 読み取り専用|  
+|secondary_allow_connections _desc|**nvarchar(256)**|いいえ<br /><br /> All<br /><br /> 読み取り専用|  
   
 ## <a name="permissions"></a>アクセス許可
 
@@ -65,7 +65,7 @@ SELECT
 FROM sys.geo_replication_links;  
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   

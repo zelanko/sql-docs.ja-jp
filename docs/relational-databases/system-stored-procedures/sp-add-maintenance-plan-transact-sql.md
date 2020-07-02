@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa33e418b81cb2f77a39f20d36bba7a25caffb4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40eaf88f2bd0824d133571e53fd4d9b9831454b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104581"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646523"
 ---
 # <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   メンテナンスプランを追加し、プラン ID を返します。  
   
@@ -47,13 +47,13 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="arguments"></a>引数  
 `[ @plan_name = ] 'plan_name'`追加するメンテナンスプランの名前を指定します。 *plan_name*は**varchar (128)** です。  
   
- *plan_id* ** @plan_id = '** plan_id **'**  
+ ** @plan_id = '** *plan_id* **'**  
  メンテナンスプランの ID を指定します。 *plan_id*は**uniqueidentifier**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_add_maintenance_plan**は、 **msdb**データベースから実行する必要があり、新しい (空の) メンテナンスプランを作成します。 1つ以上のデータベースを追加し、ジョブまたはジョブに関連付けるには、 **sp_add_maintenance_plan_db**を実行し、 **sp_add_maintenance_plan_job**します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -75,8 +75,8 @@ GO
 'The id for the maintenance plan "Myplan" is:' FAD6F2AB-3571-11D3-9D4A-00C04FB925FC  
 ```  
   
-## <a name="see-also"></a>参照  
- [メンテナンスプラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
+## <a name="see-also"></a>関連項目  
+ [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [データベースメンテナンスプランのストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

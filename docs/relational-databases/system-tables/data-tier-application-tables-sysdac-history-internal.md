@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 025c11a6d04f61378080c303a4935ce98e64f164
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0330c68c8399318b2db96a5f88880fdd566c9acd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833136"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625753"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>データ層アプリケーション テーブル - sysdac_history_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   データ層アプリケーション (DAC) を管理するために実行したアクションについての情報を格納します。 このテーブルは、 **msdb**データベースの**dbo**スキーマに格納されます。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82833136"
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|アクションの識別子。|  
 |**sequence_id**|**int**|アクション内のステップを識別します。|  
-|**instance_id**|**uniqueidentifier**|DAC インスタンスの識別子。 この列は、dbo. sysdac_instances の**instance_id**列に結合できます[。 transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)ます。|  
+|**instance_id**|**uniqueidentifier**|DAC インスタンスの識別子。 この列は、 [transact-sql&#41;&#40;dac_instancesdbo.sys](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)の**instance_id**列に結合できます。|  
 |**action_type**|**tinyint**|アクションの種類の識別子。<br /><br /> **0** = 配置<br /><br /> **1** = 作成<br /><br /> **2** = 名前の変更<br /><br /> **3** = デタッチ<br /><br /> **4** = 削除|  
 |**action_type_name**|**varchar (19)**|アクションの種類の名前:<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **分離**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|アクションの影響を受けるオブジェクトの種類の識別子。<br /><br /> **0** = dacpac<br /><br /> **1** = ログイン<br /><br /> **2** = データベース|  
@@ -51,7 +51,7 @@ ms.locfileid: "82833136"
 |**date_created**|**datetime**|このエントリが作成された日付と時刻。|  
 |**date_modified**|**datetime**|エントリが最後に変更された日付と時刻。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Dac の配置や削除などの DAC 管理操作では、複数の手順が生成されます。 各アクションには、アクション識別子が割り当てられます。 各ステップには、シーケンス番号と**sysdac_history_internal**内の行が割り当てられます。この場合、ステップの状態が記録されます。 各行は、アクションステップの開始時に作成され、操作の状態を反映するために必要に応じて更新されます。 たとえば、[DAC の配置] アクションを 12 **action_id**割り当て、 **sysdac_history_internal**の4つの行を取得することができます。  
   
 |||||  
@@ -79,9 +79,9 @@ WHERE instance_id NOT IN
 ## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。 このビューへの読み取り専用アクセスは、master データベースに接続する権限を持つすべてのユーザーが使用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo. sysdac_instances &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [dbo.sysdac_instances &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [sysdac_instances_internal &#40;Transact-sql&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

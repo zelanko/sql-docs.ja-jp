@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3573b876a10b4400969bf63200682e91bfc45fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21290d164b899bf1ea14f392df31d09d38becc71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046340"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647672"
 ---
 # <a name="sysfn_cdc_map_lsn_to_time-transact-sql"></a>fn_cdc_map_lsn_to_time (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたログシーケンス番号 (LSN) について、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)システムテーブルの**tran_end_time**列から日付と時刻の値を返します。 この関数を使用すると、変更テーブルの日付範囲に LSN 範囲を体系的にマップできます。  
   
@@ -55,7 +55,7 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、 `sys.fn_cdc_map_lsn_to_time`関数を使用して、 `HumanResources_Employee`キャプチャインスタンスの指定した LSN 間隔で最後に処理された変更に関連付けられたコミット時間を確認します。  
+ 次の例では、関数を使用して、 `sys.fn_cdc_map_lsn_to_time` キャプチャインスタンスの指定した LSN 間隔で最後に処理された変更に関連付けられたコミット時間を確認し `HumanResources_Employee` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -67,7 +67,7 @@ SELECT sys.fn_cdc_map_lsn_to_time(@max_lsn);
 GO   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [cdc. lsn_time_mapping &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
  [fn_cdc_map_time_to_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
  [cdc. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   

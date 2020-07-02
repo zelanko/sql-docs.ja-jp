@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 965fc3fe168ecd6027c2c1fc2ebad92bc334e383
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e1b8659d7828feaab219ce5c2b883137f252314
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816845"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645372"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更新可能なサブスクリプションのサブスクライバーで適用される**sp_addsynctrigger**呼び出しを含むスクリプトを生成します。 パブリケーション内の各アーティクルに対して1つの**sp_addsynctrigger**呼び出しがあります。 生成されたスクリプトには、キューに置かれたパブリケーションを処理するために必要な**MSsubsciption_articles**テーブルを作成する**sp_addqueued_artinfo**呼び出しも含まれています。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -48,7 +48,7 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ## <a name="results-set"></a>結果セット  
  **sp_script_synctran_commands**は、1つの**nvarchar (4000)** 列で構成される結果セットを返します。 結果セットは、サブスクライバーで適用される**sp_addsynctrigger**と**sp_addqueued_artinfo**呼び出しの両方を作成するために必要なスクリプト全体を形成します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_script_synctran_commands**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  キュー更新可能なサブスクリプションには**sp_addqueued_artinfo**が使用されます。  
@@ -56,7 +56,7 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_script_synctran_commands**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addsynctriggers &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
  [sp_addqueued_artinfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
