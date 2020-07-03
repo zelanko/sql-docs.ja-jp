@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c966899707c7e37dee82dda9c678b4ac40df026f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c1c2ff23ecde51f13270fca3f674c58412858f6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626984"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899565"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   プッシュとプルの両方のマージパブリケーションに対するサブスクリプションに関する情報を返します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されるか、サブスクリプションデータベースの再パブリッシュサブスクライバーで実行されます。  
   
@@ -92,7 +92,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_helpmergesubscription**は、パブリッシャーまたは再パブリッシュサブスクライバーに格納されているサブスクリプション情報を返すために、マージレプリケーションで使用されます。  
   
  匿名サブスクリプションの場合、 *subscription_type*値は常に**1** (プル) です。 ただし、匿名サブスクリプションに関する情報を表示するには、サブスクライバーで[sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)を実行する必要があります。  

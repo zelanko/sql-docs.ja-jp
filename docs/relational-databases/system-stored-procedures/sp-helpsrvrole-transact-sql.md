@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 204668e8983ed3503e1a5697c47a4abde92d26cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9319cc35d3059bc1efafa3c4640b164c39d8bbfa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750508"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899484"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定サーバー ロールの一覧を返します。  
   
@@ -41,7 +41,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ## <a name="arguments"></a>引数  
 `[ @srvrolename = ] 'role'`固定サーバーロールの名前を指定します。 *role*の部分は**sysname**で、既定値は NULL です。 *role*には、次のいずれかの値を指定できます。  
   
-|固定サーバーロール|説明|  
+|固定サーバーロール|Description|  
 |-----------------------|-----------------|  
 |[sysadmin]|システム管理者|  
 |securityadmin|セキュリティ管理者|  
@@ -60,9 +60,9 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|サーバーロールの名前|  
-|説明|**sysname**|ServerRole の説明。|  
+|Description|**sysname**|ServerRole の説明。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  固定サーバー ロールは、サーバー レベルで定義され、特定のサーバーレベルの管理操作を実行する権限が与えられます。 固定サーバー ロールは、追加、削除、または変更することはできません。  
   
  サーバーロールのメンバーを追加または削除するには、「 [ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)」を参照してください。  

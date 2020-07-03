@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fa9117891f9d9350e58a2c8233dcffe05c8cfc8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe5e3bd8d7d5ce0046a908f16ae860bc68386054
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772125"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899471"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   特定のリモート サーバーまたはレプリケーション サーバー、あるいはすべてのリモート サーバーとレプリケーション サーバーに関する情報をレポートします。 サーバー名、サーバーのネットワーク名、サーバーのレプリケーションの状態、サーバーの識別番号、および照合順序名を指定します。 では、リンクサーバーに接続したり、リンクサーバーに対してクエリを実行したりするためのタイムアウト値も提供されます。  
   
@@ -76,7 +76,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**connect_timeout**|**int**|リンクサーバーに接続するためのタイムアウト値。|  
 |**query_timeout**|**int**|リンク サーバーに対するクエリのタイムアウト値|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  1 つのサーバーについて複数の状態値が返されることもあります。  
   
 ## <a name="permissions"></a>アクセス許可  

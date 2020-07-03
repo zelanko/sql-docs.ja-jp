@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e869cd092dd242caff859298b97502693abe2116
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 382be73e4047c1d75b5ab95d1b3959cb05af68c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812115"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901183"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   データベースメールによって送信されたメッセージごとに1行のレコードを格納します。 正常に送信されたメッセージを確認するには、 **sysmail_sentitems**を使用します。  
   
@@ -61,13 +61,13 @@ ms.locfileid: "82812115"
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  データベースメールのトラブルシューティングを行うときに、このビューは、正常に送信されたメッセージの属性を表示することによって、問題の性質を特定するのに役立ちます。 データベースメールは、SMTP メールサーバーに正常に送信されたときにメッセージを送信済みとしてマークします。 通常、電子メールは数分のうちに相手側に届きますが、SMTP サーバーの問題が原因で遅れることもあります。 データベースメールは、SMTP メールサーバーによって受け付けられたときにメッセージを送信済みとしてマークします。 受信者の電子メール アドレスに配信できないなど、SMTP メール サーバーで発生する電子メール エラーは、データベース メールには返されません。 これらの電子メールは、配信されていない場合でも、送信済みとして記録されます。 SMTP サーバーでのエラーのトラブルシューティングを行います。 また、SMTP メールサーバーは、データベースメールアカウントの返信用電子メールアドレスに配信不能メッセージ通知を送信する場合があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールおよび**databasemailuserrole**データベースロールに付与されます。 **Sysadmin**固定サーバーロールのメンバーによって実行されると、このビューには、送信されたすべてのメッセージが表示されます。 その他のユーザーの場合は、自分が送信したメッセージだけを確認できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール メッセージング オブジェクト](../../relational-databases/database-mail/database-mail-messaging-objects.md)  
   
   

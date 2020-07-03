@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f3f7c55d0a4cf165b5ff77e51f1fe7bb861abc7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3f1fd96f8a9809f102bfb8fe8650513fd8eb01e5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828104"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900983"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   **未送信**または**再試行**中の状態のデータベースメールメッセージごとに1行の情報を格納します。 未送信または再試行の状態のメッセージは、メールキューに残ります。いつでも送信できます。 メッセージは、次の理由により、**未送信**状態になることがあります。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "82828104"
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  データベース メールのトラブルシューティングを行うとき、このビューでは送信済みのメッセージ数とメッセージの待機時間を確認できるので、問題の性質を特定するのに役立ちます。 メッセージが 1 つも送信されていない場合は、データベース メール外部プログラムが動作していないか、ネットワークの問題によってデータベース メールから SMTP サーバーへの接続に障害が発生している可能性があります。 未送信のメッセージの多くが同じ**profile_id**を持っている場合は、SMTP サーバーに問題がある可能性があります。 プロファイルにアカウントを追加することを検討してください。 メッセージが送信されているにもかかわらず、メッセージがキューに過剰に時間を費やしている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必要なメッセージの量を処理するためにより多くのリソースが必要になることがあります。  
   
 ## <a name="permissions"></a>アクセス許可  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8f7526cc2902829aef7e4e029428e21faa94d2a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b761d0e056037c134a3be837be04cba9395d9273
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85663981"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900038"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   実行された条件式、式のターゲット、各実行の結果、および発生した場合はエラーの詳細が表示されます。 次の表では、syspolicy_execution_history_details ビューの列について説明します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85663981"
 |exception_message|**nvarchar(max)**|例外が発生した場合は、例外によって生成されたメッセージ。|  
 |exception|**nvarchar(max)**|例外が発生した場合の説明。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  ポリシー ベースの管理のトラブルシューティングを行う場合に、失敗した対象と条件式の組み合わせ、失敗した日時、および関連するエラーを調べるには、syspolicy_policy_execution_history_details ビューに対してクエリを実行します。  
   
  次のクエリでは、ビューとビューを組み合わせて、 `syspolicy_policy_execution_history_details` `syspolicy_policy_execution_history_details` `syspolicy_policies` ポリシーの名前、条件の名前、およびエラーの詳細を表示します。  

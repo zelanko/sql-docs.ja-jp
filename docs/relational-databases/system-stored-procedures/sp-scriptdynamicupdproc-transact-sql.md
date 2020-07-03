@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c46a7e30f6f5163fba7b630e365f90e521a96e0c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c6d6639f22963c1b058a1b9a20ed5758c00c417
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645311"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901319"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   動的な更新ストアド プロシージャを作成する CREATE PROCEDURE ステートメントを生成します。 カスタムストアドプロシージャ内の UPDATE ステートメントは、変更する列を示す MCALL 構文に基づいて動的に作成されます。 このストアドプロシージャは、サブスクライブしているテーブルのインデックスの数が増加しており、変更される列の数が少ない場合に使用します。 このストアドプロシージャは、パブリッシャー側のパブリケーションデータベースで実行されます。  
   
@@ -48,7 +48,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="permissions"></a>アクセス許可  
  **Sp_scriptdynamicupdproc**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 **pubs**データベースの**authors**テーブルで ( *artid*が**1**に設定された) アーティクルを作成し、UPDATE ステートメントが実行するカスタムプロシージャであることを指定します。  
   
 ```  

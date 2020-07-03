@@ -4,19 +4,19 @@ description: WideWorldImportersDW データベースで、データウェアハ�
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
-ms.date: 08/04/2018
+ms.date: 07/01/2020
 ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 431ca4762b15003f49a5145eb603b7508f2d6844
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 837947acfb36857414b53edc9f89054a4dd4bbd8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112428"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899980"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>SQL Server の機能の WideWorldImportersDW 使用方法
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -30,43 +30,53 @@ PolyBase を使用して、WideWorldImportersDW の売上情報と、人口統�
 
 サンプルデータベースで PolyBase を使用できるようにするには、PolyBase がインストールされていることを確認し、データベースで次のストアドプロシージャを実行します。
 
-    EXEC [Application].[Configuration_ApplyPolyBase]
+```sql
+EXECUTE [Application].[Configuration_ApplyPolyBase]
+```
 
-これにより、Azure blob `dbo.CityPopulationStatistics` storage でホストされている米国内の都市の人口データを含むパブリックデータセットを参照する外部テーブルが作成されます。 構成プロセスを理解するために、ストアドプロシージャのコードを確認することをお勧めします。 Azure blob storage で独自のデータをホストし、一般公開されているデータの安全性を維持するには、追加の構成手順を実行する必要があります。 次のクエリでは、その外部データセットからデータが返されます。
+これにより、 `dbo.CityPopulationStatistics` Azure blob storage でホストされている米国内の都市の人口データを含むパブリックデータセットを参照する外部テーブルが作成されます。 構成プロセスを理解するために、ストアドプロシージャのコードを確認することをお勧めします。 Azure blob storage で独自のデータをホストし、一般公開されているデータの安全性を維持するには、追加の構成手順を実行する必要があります。 次のクエリでは、その外部データセットからデータが返されます。
 
-    SELECT CityID, StateProvinceCode, CityName, YearNumber, LatestRecordedPopulation FROM dbo.CityPopulationStatistics;
+```sql
+SELECT
+        CityID, StateProvinceCode, CityName,
+        YearNumber, LatestRecordedPopulation
+    FROM
+        dbo.CityPopulationStatistics;
+```
 
-次のクエリでは、さらに拡張するために関心がある都市を把握するために、都市の成長率を確認し、大幅に増加している上位100の都市を返します。また、大規模な輸入者には売上が存在しません。 このクエリでは、リモートテーブル`dbo.CityPopulationStatistics`とローカルテーブル`Dimension.City`の間の結合と、ローカルテーブル`Fact.Sales`を含むフィルターが関係しています。
+次のクエリでは、さらに拡張するために関心がある都市を把握するために、都市の成長率を確認し、大幅に増加している上位100の都市を返します。また、大規模な輸入者には売上が存在しません。 このクエリでは、リモートテーブルとローカルテーブルの間の結合と、ローカルテーブルを含むフィルターが関係して `dbo.CityPopulationStatistics` `Dimension.City` `Fact.Sales` います。
 
-    WITH PotentialCities
-    AS
-    (
-        SELECT cps.CityName,
-               cps.StateProvinceCode,
-               MAX(cps.LatestRecordedPopulation) AS PopulationIn2016,
-               (MAX(cps.LatestRecordedPopulation) - MIN(cps.LatestRecordedPopulation)) * 100.0
-                   / MIN(cps.LatestRecordedPopulation) AS GrowthRate
-        FROM dbo.CityPopulationStatistics AS cps
-        WHERE cps.LatestRecordedPopulation IS NOT NULL
-        AND cps.LatestRecordedPopulation <> 0
-        GROUP BY cps.CityName, cps.StateProvinceCode
-    ),
-    InterestingCities
-    AS
-    (
-        SELECT DISTINCT pc.CityName,
-                        pc.StateProvinceCode,
-                        pc.PopulationIn2016,
-                        FLOOR(pc.GrowthRate) AS GrowthRate
-        FROM PotentialCities AS pc
-        INNER JOIN Dimension.City AS c
-        ON pc.CityName = c.City
-        WHERE GrowthRate > 2.0
-        AND NOT EXISTS (SELECT 1 FROM Fact.Sale AS s WHERE s.[City Key] = c.[City Key])
-    )
-    SELECT TOP(100) CityName, StateProvinceCode, PopulationIn2016, GrowthRate
-    FROM InterestingCities
-    ORDER BY PopulationIn2016 DESC;
+```sql
+WITH PotentialCities
+AS
+(
+    SELECT cps.CityName,
+            cps.StateProvinceCode,
+            MAX(cps.LatestRecordedPopulation) AS PopulationIn2016,
+            (MAX(cps.LatestRecordedPopulation) - MIN(cps.LatestRecordedPopulation)) * 100.0
+                / MIN(cps.LatestRecordedPopulation) AS GrowthRate
+    FROM dbo.CityPopulationStatistics AS cps
+    WHERE cps.LatestRecordedPopulation IS NOT NULL
+    AND cps.LatestRecordedPopulation <> 0
+    GROUP BY cps.CityName, cps.StateProvinceCode
+),
+InterestingCities
+AS
+(
+    SELECT DISTINCT pc.CityName,
+                    pc.StateProvinceCode,
+                    pc.PopulationIn2016,
+                    FLOOR(pc.GrowthRate) AS GrowthRate
+    FROM PotentialCities AS pc
+    INNER JOIN Dimension.City AS c
+    ON pc.CityName = c.City
+    WHERE GrowthRate > 2.0
+    AND NOT EXISTS (SELECT 1 FROM Fact.Sale AS s WHERE s.[City Key] = c.[City Key])
+)
+SELECT TOP(100) CityName, StateProvinceCode, PopulationIn2016, GrowthRate
+FROM InterestingCities
+ORDER BY PopulationIn2016 DESC;
+```
 
 ## <a name="clustered-columnstore-indexes"></a>クラスター化列ストア インデックス
 
@@ -80,9 +90,11 @@ PolyBase を使用して、WideWorldImportersDW の売上情報と、人口統�
 
 サンプルデータベースには、サンプルを簡単にダウンロードしてインストールできるように、データサイズが制限されています。 ただし、列ストアインデックスの実際のパフォーマンス上の利点を確認するには、より大きなデータセットを使用することをお勧めします。
 
-次のステートメントを実行すると、別の1200万行`Fact.Sales`のサンプルデータを挿入することにより、テーブルのサイズを大きくすることができます。 これらの行はすべて2012年に挿入され、ETL プロセスに干渉しないようになっています。
+次のステートメントを実行すると、 `Fact.Sales` 別の1200万行のサンプルデータを挿入することにより、テーブルのサイズを大きくすることができます。 これらの行はすべて2012年に挿入され、ETL プロセスに干渉しないようになっています。
 
+```sql
     EXECUTE [Application].[Configuration_PopulateLargeSaleTable]
+```
 
 このステートメントの実行には約5分かかります。 1200万を超える行を挿入するには、挿入する行の数をこのストアドプロシージャにパラメーターとして渡します。
 
@@ -90,11 +102,15 @@ PolyBase を使用して、WideWorldImportersDW の売上情報と、人口統�
 
 インデックスを削除するには、次のようにします。
 
-    DROP INDEX [CCX_Fact_Order] ON [Fact].[Order]
+```sql
+ DROP INDEX [CCX_Fact_Order] ON [Fact].[Order]
+```
 
 再作成するには:
 
-    CREATE CLUSTERED COLUMNSTORE INDEX [CCX_Fact_Order] ON [Fact].[Order]
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX [CCX_Fact_Order] ON [Fact].[Order]
+```
 
 ## <a name="partitioning"></a>パーティション分割
 
@@ -102,14 +118,14 @@ PolyBase を使用して、WideWorldImportersDW の売上情報と、人口統�
 
 データウェアハウスのデータサイズが非常に大きくなることがあります。 そのため、データベース内の大きなテーブルのストレージを管理するには、パーティション分割を使用することをお勧めします。
 
-より大きなファクトテーブルはすべて年でパーティション分割されます。 唯一の例外は`Fact.Stock Holdings`で、日付ベースではなく、他のファクトテーブルと比較してデータサイズが制限されています。
+より大きなファクトテーブルはすべて年でパーティション分割されます。 唯一の例外は `Fact.Stock Holdings` で、日付ベースではなく、他のファクトテーブルと比較してデータサイズが制限されています。
 
-すべてのパーティションテーブルに使用されるパーティション`PF_Date`関数はで、使用されるパーティション`PS_Date`構成はです。
+すべてのパーティションテーブルに使用されるパーティション関数は `PF_Date` で、使用されるパーティション構成は `PS_Date` です。
 
 ## <a name="in-memory-oltp"></a>インメモリ OLTP
 
 (完全バージョンのサンプル)
 
-WideWorldImportersDW は、ステージングテーブルに SCHEMA_ONLY メモリ最適化テーブルを使用します。 `Integration.` *すべて`_Staging`のテーブルは、メモリ最適化テーブル SCHEMA_ONLY ます。
+WideWorldImportersDW は、ステージングテーブルに SCHEMA_ONLY メモリ最適化テーブルを使用します。 すべて `Integration.` * `_Staging` のテーブルは、メモリ最適化テーブル SCHEMA_ONLY ます。
 
 SCHEMA_ONLY テーブルの利点は、ログに記録されず、ディスクにアクセスする必要がないことです。 これにより、ETL プロセスのパフォーマンスが向上します。 これらのテーブルはログに記録されないため、エラーが発生した場合、内容は失われます。 ただし、データソースは引き続き使用できるので、エラーが発生した場合は ETL プロセスを再起動するだけで済みます。

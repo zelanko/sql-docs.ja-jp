@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dee2cdf797bb3336bdf2645c42435ae441c63607
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bc658776dddbf79362e3ab4c90ba052abb193e63
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724561"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901504"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたジョブの**sysdownloadlist**システムテーブル内のすべての行、またはジョブが指定されていない場合はすべての行を一覧表示します。  
   
@@ -55,7 +55,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'`指定されたジョブの有効な操作です。 *操作*は**varchar (64)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**不具合**|マスター **SQLServerAgent**サービスからの参加を解除する対象サーバーを要求するサーバー操作。|  
 |**DELETE**|ジョブ全体を削除するジョブ操作。|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05a1563188b5a8332c547901247ef43e07b1efa5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b9277918b8ed869e121e3cf1fe3389bf402b2a0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646125"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901468"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたリモート テーブルの主キー列を、キー列ごとに 1 行ずつ返します。  
   
@@ -51,7 +51,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 `[ @table_catalog = ] 'table_catalog'`指定した*table_name*が存在するカタログの名前を指定します。 環境では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、これはデータベース名に対応しています。 *table_catalog*は**sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -64,7 +64,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |**KEY_SEQ**|**int**|複数列の主キーの列のシーケンス番号。|  
 |**PK_NAME**|**sysname**|主キー識別子。 データソースに該当しない場合は NULL を返します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_primarykeys**は、 *table_server*に対応する OLE DB プロバイダーの**IDBSchemaRowset**インターフェイスの PRIMARY_KEYS 行セットを照会することによって実行されます。 返される行を制限するために、 *table_name*、 *table_schema*、 *table_catalog*、および*列*の各パラメーターがこのインターフェイスに渡されます。  
   
  指定されたリンクサーバーの OLE DB プロバイダーが**IDBSchemaRowset**インターフェイスの PRIMARY_KEYS 行セットをサポートしていない場合、 **sp_primarykeys**は空の結果セットを返します。  
@@ -72,7 +72,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベース内のテーブルの主キー列をサーバーから返し `LONDON1` `HumanResources.JobCandidate` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  

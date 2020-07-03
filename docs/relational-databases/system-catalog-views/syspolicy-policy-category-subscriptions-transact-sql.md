@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b3b3a7d7-0b78-46c0-9755-045f7a5692b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f8bd5886c9cb0686b1bef9764f9f9fb12d1548cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ac307cf73097214a0100365de5fc76097a890df6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786412"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900564"
 ---
 # <a name="syspolicy_policy_category_subscriptions-transact-sql"></a>syspolicy_policy_category_subscriptions (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのポリシー ベースの管理サブスクリプションごとに 1 つの行を表示します。 各行には、ターゲットとポリシーカテゴリのペアが記述されています。 次の表では、syspolicy_policy_group_subscriptions ビュー内の列について説明します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "85786412"
 |target_object|**sysname**|対象オブジェクトの名前。|  
 |policy_category_id|**int**|ターゲットに適用されるポリシーカテゴリの ID。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  このビューには、ポリシーカテゴリにサブスクライブされているターゲットが表示されます。  
   
 ## <a name="permissions"></a>アクセス許可  

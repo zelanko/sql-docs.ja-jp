@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f7b0c3e906fdd9576970ed1e8dfd69893b0759a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95727b3cb27e5ac72af38374da01b203f1a076cc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750476"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901333"
 ---
 # <a name="sp_revokelogin-transact-sql"></a>sp_revokelogin (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CREATE login、 **sp_grantlogin**、または**sp_denylogin**を使用して作成された Windows ユーザーまたはグループに対して、からログインエントリを削除します。  
   
@@ -65,7 +65,7 @@ sp_revokelogin [ADVWORKS\john]
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する ALTER ANY LOGIN 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、Windows ユーザーのログインエントリを削除し `Corporate\MollyA` ます。  
   
 ```  

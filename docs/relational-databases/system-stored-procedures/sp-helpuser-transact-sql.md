@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b905d3f362aa16e36caa0795357c1ec1619d5ec7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 049b1183ad21e481ca47368b3dfe916d0ee41185
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715837"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899463"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースに存在するデータベース レベルのプリンシパルに関する情報をレポートします。  
   
@@ -76,7 +76,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Users_in_role**|**sysname**|現在のデータベースのロールのメンバー。|  
 |**Userid**|**smallint**|ロールのメンバーのユーザー ID。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  データベースロールのメンバーシップに関する情報を表示するには、 [database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)を使用します。 サーバーロールのメンバーに関する情報を表示するには、 [server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)を使用し、サーバーレベルのプリンシパルに関する情報を表示するには、 [server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

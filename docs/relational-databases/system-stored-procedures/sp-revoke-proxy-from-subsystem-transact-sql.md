@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5a6654fb7bd83f3c247c972c3c044af7b0a2d932
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c8dc5e9a20c9a00b840ec51d3339299cc3756a3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645440"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901379"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サブシステムに対するアクセス権をプロキシから取り消します。  
   
@@ -79,7 +79,7 @@ sp_revoke_proxy_from_subsystem
 |Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|  
 |PowerShell|PowerShell スクリプト|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  サブシステムへのアクセスを取り消しても、プロキシで指定されたプリンシパルのアクセス許可は変更されません。  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ sp_revoke_proxy_from_subsystem
 ## <a name="permissions"></a>アクセス許可  
  **Sp_revoke_proxy_from_subsystem**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、プロキシ `Catalog application proxy` が持つ [!INCLUDE[ssIS](../../includes/ssis-md.md)] サブシステムへのアクセス権を取り消します。  
   
 ```  

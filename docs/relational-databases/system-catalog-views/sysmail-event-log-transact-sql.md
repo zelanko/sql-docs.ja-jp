@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e80d631e4470e04d0ab5ab7edf6883350335586e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68ef84e8efb3606042afbcf8579cf285a2077ab7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724642"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901040"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース メール システムから返される、Windows または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメッセージごとに 1 行のデータを格納します。 (このコンテキスト内のメッセージは、電子メールメッセージではなく、エラーメッセージなどのメッセージを参照します)。データベースメール構成ウィザードの [**システムパラメーターの構成**] ダイアログボックスまたは[sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)ストアドプロシージャを使用して、**ログレベル**のパラメーターを構成し、返されるメッセージを決定します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85724642"
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。 電子メールの場合は、メールを送信したユーザーです。 データベースメール外部プログラムによって生成されるメッセージの場合、これはプログラムのユーザーコンテキストです。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  データベースメールのトラブルシューティングを行う場合は、 **sysmail_event_log**ビューで、電子メールの失敗に関連するイベントを検索します。 データベースメール外部プログラムの失敗などの一部のメッセージは、特定の電子メールに関連付けられていません。 特定の電子メールに関連するエラーを検索するには、 **sysmail_faileditems**ビューで失敗した電子メールの**mailitem_id**を参照し、その**mailitem_id**に関連するメッセージを**sysmail_event_log**で検索します。 **Sp_send_dbmail**からエラーが返された場合、電子メールはデータベースメールシステムに送信されず、この表示にはエラーが表示されません。  
   
  個々のアカウントで配信試行が失敗した場合は、再試行の間、メール アイテムの配信が成功または失敗するまで、データベース メールでエラー メッセージが保持されます。 究極の成功の場合、すべての累積エラーは、 **account_id**を含む個別の警告としてログに記録されます。 これにより、電子メールが送信された場合でも警告が表示されることがあります。 最終的な配信エラーが発生した場合、すべてのアカウントで障害が発生したため、以前のすべての警告は、 **account_id**なしで1つのエラーメッセージとしてログに記録されます。  

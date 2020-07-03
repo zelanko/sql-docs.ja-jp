@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2d5a9063447752406a2898f6d72ea6e43ff316ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fd6122ec99d4f5788fbe9f2b33478df7723f238
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733395"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900973"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベースメールに送信された添付ファイルごとに1行のデータを格納します。 データベースメールの添付ファイルに関する情報が必要な場合は、このビューを使用します。 データベースメールによって処理されるすべての電子メールを確認するには[sysmail_allitems &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)を使用します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "85733395"
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  データベースメールのトラブルシューティングを行う場合は、このビューを使用して添付ファイルのプロパティを表示します。  
   
  システムテーブルに格納されている添付ファイルは、 **msdb**データベースのサイズが大きくなる可能性があります。 **Sysmail_delete_mailitems_sp**を使用して、メールアイテムとそれに関連付けられている添付ファイルを削除します。 詳細については、「[データベースメールメッセージとイベントログをアーカイブするための SQL Server エージェントジョブの作成](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)」を参照してください。  

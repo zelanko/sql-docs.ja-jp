@@ -11,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cf37f6c9951107e901b05b21f4b7947bcfa381bb
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: f17290773a3becf0b33b28eb5e95bf914d53af06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440969"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901725"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>マスター データ サービスの高可用性とディザスター リカバリー
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 この記事では、Always On 可用性グループ構成でホストされているマスターデータサービス (MDS) のソリューションについて説明します。 この記事では、sql 2016 Always On 可用性グループ (AG) に SQL 2016 マスターデータサービスをインストールして構成する方法について説明します。 このソリューションの主な目的は、SQL Server データベースでホストされている MDS バックエンド データの高可用性とディザスター リカバリーの改善です。
 
-## <a name="introduction"></a>はじめに
+## <a name="introduction"></a>概要
 
 この記事では、Always On 可用性グループ構成でホストされているマスターデータサービス (MDS) のソリューションについて説明します。 この記事では、sql 2016 Always On 可用性グループ (AG) に SQL 2016 MDS をインストールして構成する方法について説明します。 このソリューションの主な目的は、SQL Server データベースでホストされている MDS バックエンド データの高可用性とディザスター リカバリーの改善です。
 
@@ -91,7 +91,7 @@ ms.locfileid: "85440969"
 
 WSFC は、アプリケーションやサービスの高可用性を改善する機能です。 Microsoft フェールオーバー クラスター サービスを実行する非依存 Windows Server インスタンスのグループで構成されています。 Windows Server インスタンス (ノードと呼ばれることもあります) は互いに通信できるように接続され、不具合の検出が可能になります。 WSFC は不具合の検出機能とフェールオーバー機能を提供します。 クラスターでノードやサービスに不具合が生じた場合、それが検出され、別のノードが、自動または手動で、不具合のあるノードでホストされているサービスの提供を開始します。 そのため、ユーザーにとっては、サービスの中断が最小限に抑えられます。サービスの可用性が向上します。  
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>必須コンポーネント
 
 Windows Server オペレーティング システムがすべてのインスタンスにインストールされており、あらゆる更新プログラムが適用されていること。
 
@@ -208,7 +208,7 @@ AG は、データベースレベルの可用性を提供します。 AG (ユー
 
 FCIs は、インスタンスレベルの高可用性を提供します。 SQL Server サービスとその関連サービスは、WSFC にリソースとして登録されます。 また、FCI ソリューションには、SAN または SMB ファイル共有など、対称的共有ディスク ストレージが必要です。対称的共有ディスク ストレージは、WFC クラスターのすべてのノードで利用できるようにする必要があります。
    
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>必須コンポーネント
 
 - すべてのノードに SQL Server をインストールすること。 詳細については、「[SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server.md)」を参照してください。
 
@@ -309,7 +309,7 @@ AG は既存のデータベースにのみ作成できます。 そのため、1
 
 8. **[レプリカの指定]** ページで、**[リスナー]** タブをクリックし、次の操作を行います。 図 18 を参照してください。
 
-   a。 **[可用性グループ リスナーの作成]** をクリックし、MDS データベース接続の可用性グループ リスナーを設定します。
+   a. **[可用性グループ リスナーの作成]** をクリックし、MDS データベース接続の可用性グループ リスナーを設定します。
 
    b. **[リスナーの DNS 名]** を入力します。たとえば、「MDSSQLServer」にします。
 

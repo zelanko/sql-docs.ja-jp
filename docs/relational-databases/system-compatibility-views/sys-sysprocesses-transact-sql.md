@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9e90b22dc5542d83533bff584af326abdcc4902
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0f195a452ffde16d7de821841367e259a686578f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787047"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899777"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysのプロセス (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   のインスタンスで実行されているプロセスに関する情報を格納 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 これらのプロセスには、クライアントプロセスまたはシステムプロセスを使用できます。 sysprocesses にアクセスするには、master データベースのコンテキストからアクセスするか、3 つの要素から成る名前 (master.dbo.sysprocesses) を使用する必要があります。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "85787047"
 |request_id|**int**|要求の ID。 特定のセッションで実行されている要求を識別するために使用されます。|
 |page_resource |**binary (8)** |**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> `waitresource`列にページが含まれている場合は、ページリソースの8バイトの16進数表現。 |  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  ユーザーがサーバーに対する VIEW SERVER STATE 権限を持っている場合、ユーザーにはのインスタンスで実行中のすべてのセッションが表示されます。それ以外の場合、ユーザーには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 現在のセッションのみが表示されます。  
   
 ## <a name="see-also"></a>関連項目  
