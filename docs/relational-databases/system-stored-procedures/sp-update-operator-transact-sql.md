@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8075648f4f3ce87b0ee34ba28479d1f8e20cd50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8966e5d423a24be8c7d7329f270368ea20e9ef7b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775158"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891301"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   アラートおよびジョブで使用するオペレーター (通知受信者) に関する情報を更新します。  
   
@@ -108,13 +108,13 @@ sp_update_operator
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  sp_update_operator は、msdb データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、無効であったオペレーターの状態を有効に更新し、ポケットベルを受信できる曜日 (月曜～金曜日、 午前 8 時～午後 5 時) を設定します。  
   
 ```  

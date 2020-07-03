@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e228f2a2363cab777c2b7ae44185e3c215e8f93
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c83ca09ff6e519420a8a4f8d077d9b855d9459f4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633702"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890778"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ローカルの Microsoft Windows グループの一覧、または指定された Windows ドメインで定義されているグローバルグループの一覧が表示されます。  
   
@@ -52,7 +52,7 @@ xp_enumgroups [ 'domain_name' ]
 |**group**|**sysname**|Windows グループの名前|  
 |**comment**|**sysname**|Windows によって提供される Windows グループの説明|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  *Domain_name*が、のインスタンスが実行されている Windows ベースのコンピューターの名前である場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはドメイン名が指定されていない場合**xp_enumgroups**は、を実行しているコンピューターからローカルグループを列挙し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  **xp_enumgroups**のインスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が Windows 98 で実行されている場合、xp_enumgroups は使用できません。  
@@ -60,7 +60,7 @@ xp_enumgroups [ 'domain_name' ]
 ## <a name="permissions"></a>アクセス許可  
  **Master**データベースの**db_owner**固定データベースロールのメンバーシップ、または**sysadmin**固定サーバーロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ドメイン内のグループを一覧表示し `sales` ます。  
   
 ```  

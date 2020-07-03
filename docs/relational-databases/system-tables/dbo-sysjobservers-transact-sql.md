@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9a634b9b190747e37b1376ea2b38adf842ef4fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b02aa88951f7dd4e82ab26fcd54d715027b1ab7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736842"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890454"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 特定のジョブと 1 つ以上のターゲット サーバーとの関連付けまたはリレーションシップを格納します。 このテーブルは、msdb データベースに格納されます。
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 810a509248e57344dc095395e1a6766d74355681
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f8fae7b7f9ec0fbd5a8310bcbdacc6a436dd232c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762669"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890872"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   1 つ以上のデータベース メール プロファイルに関連付けられているアカウントを一覧表示します。  
     
@@ -66,7 +66,7 @@ sysmail_help_profileaccount_sp
 |**account_name**|**sysname**|アカウントの名前。|  
 |**sequence_number**|**int**|プロファイル内のアカウントのシーケンス番号。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  *Profile_id*または*profile_name*が指定されていない場合、このストアドプロシージャは、インスタンス内のすべてのプロファイルに関する情報を返します。  
   
  ストアドプロシージャ**sysmail_help_profileaccount_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
@@ -74,7 +74,7 @@ sysmail_help_profileaccount_sp
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **A. 特定のプロファイルのアカウントを名前順に一覧表示する**  
   
  次の例では、プロファイル名を指定して、プロファイルの情報を一覧表示し `AdventureWorks Administrator` ます。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02697937d5a0402edbaf959ed52731010eab1ce6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a81a0f6b79cdf2f2975372dc4bbefc02ae6c4cbe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723075"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891312"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   自動化された処理の実行に使用するジョブのステップに関する設定を変更します。  
   
@@ -134,7 +134,7 @@ sp_update_jobstep
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_update_jobstep**は、 **msdb**データベースから実行する必要があります。  
   
  ジョブ ステップを更新すると、ジョブのバージョン番号が増えます。  
@@ -154,7 +154,7 @@ sp_update_jobstep
   
  ジョブステップがプロキシへのアクセスを必要とする場合、ジョブステップの作成者は、そのジョブステップのプロキシへのアクセス権を持っている必要があります。 Transact-SQL を除くすべてのサブシステムでは、プロキシ アカウントが必要です。 **Sysadmin**のメンバーは、すべてのプロキシにアクセスでき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロキシにエージェントサービスアカウントを使用できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ジョブの最初のステップの再試行回数を変更し `Weekly Sales Data Backup` ます。 この例を実行すると、再試行回数は `10` 回になります。  
   
 ```  

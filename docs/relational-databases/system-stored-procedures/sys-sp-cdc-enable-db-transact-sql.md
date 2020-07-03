@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a7a07452a0dcb9ebfe91e7e51b10239b3eb3f15
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98258dbee3e2afa59314e340b27661a816a48b0f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85769637"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891133"
 ---
 # <a name="syssp_cdc_enable_db-transact-sql"></a>sp_cdc_enable_db (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースの変更データキャプチャを有効にします。 データベース内のテーブルの変更データ キャプチャを有効にするには、まずそのデータベースに対してこの手順を実行する必要があります。 変更データキャプチャは、有効になっているテーブルに適用された挿入、更新、削除の各アクティビティを記録し、変更の詳細を使用しやすいリレーショナル形式で表示します。 追跡対象のソーステーブルの列構造を反映する列情報は、変更された行に対してキャプチャされ、その変更をターゲット環境に適用するために必要なメタデータと共にキャプチャされます。  
   

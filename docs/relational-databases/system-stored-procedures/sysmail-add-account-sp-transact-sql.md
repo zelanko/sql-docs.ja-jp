@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee45e8d687f4da228508ebfdefc50fa55090f0b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f3b97b134e424cb46b98b09001a86f66bb5e8c4d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814502"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891038"
 ---
 # <a name="sysmail_add_account_sp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   SMTP アカウントに関する情報を保持する新しいデータベースメールアカウントを作成します。  
   
@@ -104,7 +104,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

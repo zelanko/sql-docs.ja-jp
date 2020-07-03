@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4bfba2f8a8512926a42c12236e5baf0d07ceda9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42a87821f13ecbfd08f12257a2c2145423eb4a65
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758723"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890643"
 ---
 # <a name="cdccaptured_columns-transact-sql"></a>cdc.captured_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   キャプチャインスタンスで追跡されている列ごとに1行の値を返します。 既定では、ソーステーブルのすべての列がキャプチャされます。 ただし、列リストを指定することで、ソース テーブルでの変更データ キャプチャが有効になっているときに列を含めたり除外したりできます。 詳細については、「 [sys. sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)」を参照してください。  
   

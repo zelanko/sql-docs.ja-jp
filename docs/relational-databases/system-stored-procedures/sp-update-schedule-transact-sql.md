@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab7241fe17306fedf25c1562bcabe366d7754e84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4194de86ec5ba51455f37d75bccf574d4316762f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749288"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891295"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   エージェントスケジュールの設定を変更し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -65,7 +65,7 @@ sp_update_schedule
   
 `[ @freq_type = ] freq_type`ジョブがいつ実行されるかを示す値です。 *freq_type*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**4**|毎日|  
@@ -89,7 +89,7 @@ sp_update_schedule
   
 `[ @freq_subday_type = ] freq_subday_type`*Freq_subday_interval * ** の単位を指定します。 *freq_subday_type*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。  
   
-|値|説明 (単位)|  
+|[値]|説明 (単位)|  
 |-----------|--------------------------|  
 |**0x1**|指定された時間|  
 |**0x2**|Seconds|  
@@ -100,7 +100,7 @@ sp_update_schedule
   
 `[ @freq_relative_interval = ] freq_relative_interval`*Freq_interval*が**32** (月単位) の場合、各月における*freq_interval*のジョブの発生回数。 *freq_relative_interval*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。  
   
-|値|説明 (単位)|  
+|[値]|説明 (単位)|  
 |-----------|--------------------------|  
 |**1**|First|  
 |**2**|Second|  

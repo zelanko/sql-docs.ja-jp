@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eeb6fd370bfd107864845439086138fff3d379c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36cb1003bcb0884bce069a7f41b3264d045e86e1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644848"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891457"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   トレースにフィルターを適用します。 **sp_trace_setfilter**は、停止している既存のトレースに対してのみ実行できます (*状態*は**0**)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このストアドプロシージャが存在しないトレースに対して実行されるか、*状態*が**0**ではない場合、はエラーを返します。  
   
@@ -91,7 +91,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |13|メモリ不足。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
 |16|関数は、このトレースに対して無効です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_trace_setfilter**は、以前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンので使用できる拡張ストアドプロシージャによって以前に実行された操作の多くを実行するストアドプロシージャです [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 トレースのフィルターを作成、適用、削除、または操作するには、 **xp_trace_set \* フィルター**拡張ストアドプロシージャの代わりに**sp_trace_setfilter**を使用します。 詳細については、「[トレースのフィルター処理](../../relational-databases/sql-trace/filter-a-trace.md)」を参照してください。  
   
  **Sp_trace_setfilter**の1回の実行で、特定の列のすべてのフィルターを同時に有効にする必要があります。 たとえば、ユーザーが [アプリケーション名] 列に2つのフィルターを適用し、[ユーザー名] 列に1つのフィルターを適用する場合、ユーザーはアプリケーション名に対して順番にフィルターを指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーが1つのストアドプロシージャ呼び出しでアプリケーション名に対してフィルターを指定し、その後にユーザー名のフィルターを指定した後、アプリケーション名に対して別のフィルターを指定しようとすると、エラーが返されます。  
@@ -101,7 +101,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは ALTER TRACE 権限を持っている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、トレースに対して3つのフィルターを設定し `1` ます。 フィルター処理 `N'SQLT%'` と `N'MS%'` 操作は、 `AppName` `10` "" 比較演算子を使用して1つの列 (、値) に対して行われ `LIKE` ます。 フィルター `N'joe'` は、"`UserName`" 比較演算子を使用して別の列 (`11`、値 `EQUAL`) に適用されます。  
   
 ```  

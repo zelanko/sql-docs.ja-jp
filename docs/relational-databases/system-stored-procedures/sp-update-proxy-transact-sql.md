@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 66ca1f35a5920f6f6d26bea0663e51d305fc1c3b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb6af87e40c663ae6e1d7465919abb2f14f85979
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775154"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891280"
 ---
 # <a name="sp_update_proxy-transact-sql"></a>sp_update_proxy (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   既存のプロキシのプロパティを変更します。  
   
@@ -64,7 +64,7 @@ sp_update_proxy
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  ** \@ Proxy_name**または** \@ proxy_id**のいずれかを指定する必要があります。 両方の引数を指定する場合は、両方とも同じプロキシを参照する必要があります。異なるプロキシを参照する場合、ストアド プロシージャは失敗します。  
   
  プロキシの資格情報を変更するには、 ** \@ credential_name**または** \@ credential_id**のいずれかを指定する必要があります。 両方の引数を指定する場合は、両方とも同じ資格情報を参照する必要があります。異なる資格情報を参照する場合、ストアド プロシージャは失敗します。  
@@ -74,7 +74,7 @@ sp_update_proxy
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定セキュリティロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、プロキシ `Catalog application proxy` の enabled の値を `0` に設定します。  
   
 ```  

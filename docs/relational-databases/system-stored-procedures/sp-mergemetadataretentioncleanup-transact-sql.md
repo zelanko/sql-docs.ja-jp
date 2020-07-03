@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 272d40daaf3b3ae93493c7ea3f1f9b775cd5ca32
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9e922d92f217cead21116b61ebd828a1dd588abb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640160"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891600"
 ---
 # <a name="sp_mergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)、 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)、 [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)、 [MSmerge_past_partition_mappings](../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)、および[MSmerge_current_partition_mappings](../../relational-databases/system-tables/msmerge-current-partition-mappings.md)システムテーブル内のメタデータの手動クリーンアップを実行します。 このストアド プロシージャは、トポロジ内の各パブリッシャーおよびサブスクライバーで実行されます。  
   
@@ -51,7 +51,7 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 > [!IMPORTANT]  
 >  データベースに複数のパブリケーションが存在し、それらのパブリケーションのいずれかが無期限のパブリケーション保有期間を使用する場合、 **sp_mergemetadataretentioncleanup**を実行しても、データベースのマージレプリケーション変更追跡メタデータはクリーンアップされません。 このため、無期限のパブリケーション保有期間は注意して使用してください。 パブリケーションに無期限の保有期間が設定されているかどうかを確認するには、パブリッシャーで[transact-sql&#41;を実行 &#40;sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)を実行し、**保有**期間に**0**を指定して結果セット内のすべてのパブリケーションを確認します。  

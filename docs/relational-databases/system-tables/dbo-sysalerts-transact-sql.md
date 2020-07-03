@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6169691af84576e37a8f4b5a7cfc09757305c95b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6113a7d05c7128df4b7691bd7f72d09ba8f0548b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85675325"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890535"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysの警告 (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   警告 1 件につき 1 行のデータを格納します。 アラートは、イベントへの応答として送信されるメッセージです。 警告メッセージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境の外に転送でき、電子メールやポケットベルのメッセージとして送信することもできます。 また、警告でタスクを生成することもできます。  このテーブルは、 **msdb**データベースに格納されます。
   

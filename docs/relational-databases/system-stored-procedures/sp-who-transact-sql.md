@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b46db697c7f8d6a7f402d98093323f47ece47d69
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfcf04c0f6dd7455bac9beaa65b29eb1b2a8f9cc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722947"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891215"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   のインスタンス内の現在のユーザー、セッション、およびプロセスに関する情報を提供 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] します。 情報をフィルター処理して、アイドル状態ではないプロセス、特定のユーザーに属するプロセス、または特定のセッションに属するプロセスのみを返すことができます。  
   
@@ -69,7 +69,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  並列処理の場合は、特定のセッション ID に対してサブスレッドが作成されます。 メイン スレッドは `spid = <xxx>` および `ecid =0` のように示されます。 他のサブスレッドは同じです `spid = <xxx>` が、 **d** > 0 になります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  排他ロックが設定されている可能性のあるブロックプロセスは、別のプロセスが必要とするリソースを保持しているプロセスです。  
   
  孤立したすべての分散トランザクションにセッション ID 値 '-2' が割り当てられます。 孤立した分散トランザクションとは、どのセッション ID にも関連付けられていない分散トランザクションです。 詳細については、「 [マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)」を参照してください。  

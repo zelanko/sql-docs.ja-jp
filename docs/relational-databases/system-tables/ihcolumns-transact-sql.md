@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 47fcad03fb8329c3d39150aa0aaf9b5688e0456f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1870e1d826fef593f5458004d424a02185028e2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764243"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890313"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **IHcolumns**システムテーブルには、パブリッシュされた列ごとに1つの行が含まれています。 このテーブルは、SQL&#xA0;Server 以外のパブリッシャーの列のデータ型がパブリッシュされたときの表示方法を定義するために使用されます。これにより、実質的に、SQL&#xA0;Server 以外のデータベース管理システム (DBMS) と SQL&#xA0;Server の間でデータ型をマップします。 このテーブルは、ディストリビューションデータベースに格納されます。  
   

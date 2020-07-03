@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f5d5c822264682aa3fb6fd43d26f589aeb272f45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8374beba2eda97df3817dc27c337e46f9ba57780
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752744"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890918"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース メール アカウントに関する、パスワード以外の情報を一覧表示します。  
   
@@ -65,7 +65,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**use_default_credentials**|**bit**|の資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。 **use_default_credentials**はビット,、既定値はありません。 このパラメーターが1の場合、データベースメールはサービスの資格情報を使用し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。 このパラメーターが0の場合、データベースメールは、SMTP サーバーの認証に** \@ ユーザー名**と** \@ パスワード**を使用します。 ** \@ ユーザー名**と** \@ パスワード**が NULL の場合、データベースメールは匿名認証を使用します。 このパラメーターを指定する前に、SMTP 管理者に問い合わせてください。|  
 |**enable_ssl**|**bit**|データベースメールトランスポート層セキュリティ (TLS) を使用して通信を暗号化するかどうかを指定します。これは、以前 Secure Sockets Layer (SSL) と呼ばれていました。 このオプションは、SMTP サーバーで TLS が必要な場合に使用します。 **enable_ssl**はビット,、既定値はありません。 1データベースメール TLS を使用して通信を暗号化することを示します。 0は、データベースメールが TLS 暗号化を使用せずにメールを送信することを示します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  *Account_id*または*account_name*が指定されていない場合、 **sysmail_help_account**は、Microsoft SQL Server インスタンス内のすべてのデータベースメールアカウントに関する情報を一覧表示します。  
   
  ストアドプロシージャ**sysmail_help_account_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
@@ -73,7 +73,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **A. すべてのアカウントの情報を一覧表示する**  
   
  次の例では、インスタンス内のすべてのアカウントのアカウント情報を一覧表示します。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bb1097facd4da22b74e76c480c11011269590b39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 935796cb328807eb4413991eeac97a95bd9b9384
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762758"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891383"
 ---
 # <a name="sp_unregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   以前に登録されたビジネスロジックモジュールの登録を解除します。 ビジネスロジックは、COM コンポーネントまたは .NET Framework アセンブリのいずれかの形式にすることができ [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 このストアド プロシージャは、カスタム ビジネス ロジックが登録されたディストリビューターで実行されます。  
   
@@ -42,7 +42,7 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_unregistercustomresolver**は、マージレプリケーションで使用します。  
   
  レプリケーショントポロジ内の任意のサーバーで[sp_enumcustomresolvers](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)を使用して、トポロジで使用可能な登録済みカスタムビジネスロジックモジュールまたは COM 競合回避モジュールの一覧を返します。  

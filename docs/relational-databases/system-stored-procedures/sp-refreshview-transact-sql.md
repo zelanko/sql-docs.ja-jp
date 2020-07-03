@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bd963a39dddaca5cd2558ea95853fdebf366e2ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dbc12b5e9013e8cbb5fb223f473e68c2e1cab445
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719221"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891508"
 ---
 # <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定された非スキーマ バインド ビューのメタデータを更新します。 ビューが依存している基になるオブジェクトが変更されたため、ビューの永続的なメタデータが古くなることがあります。  
   
@@ -44,7 +44,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または0以外の数値 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  ビューが schemabinding で作成されていない場合は、ビューの定義に影響を与えるビューの基になるオブジェクトに対して変更が行われたときに**sp_refreshview**を実行する必要があります。 それ以外の場合は、ビューのクエリ時に、予期しない結果が生成される可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  

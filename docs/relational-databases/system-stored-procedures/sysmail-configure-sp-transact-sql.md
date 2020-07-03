@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e3ca89ab5974dbe53b12a2b5b369958ab38755c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3156ac4443bd116767ece63c37cbe0ff51198984
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720165"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890997"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース メールの構成設定を変更します。 **Sysmail_configure_sp**で指定された構成設定は、インスタンス全体に適用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -75,7 +75,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **A. 各アカウントに対して 10 回再試行するようデータベース メールを設定する**  
   
  次の例では、アカウントに到達できないことを考慮する前に、各アカウントを10回再試行するようにデータベースメールを設定しています。  

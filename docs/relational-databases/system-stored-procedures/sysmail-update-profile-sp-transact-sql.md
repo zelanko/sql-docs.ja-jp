@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3b9fd67cdd08de9ab85b0da224db970f6cd6d14d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c795b604538a26fc7602ea245bd4d1d8c9c52d33
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783649"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890816"
 ---
 # <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース メール プロファイルの説明または名前を変更します。  
   
@@ -49,7 +49,7 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  プロファイル id とプロファイル名の両方を指定すると、プロファイルの名前が指定した名前に変更され、プロファイルの説明が更新されます。 これらの引数のいずれか1つだけを指定すると、プロファイルの説明が更新されます。  
   
  ストアドプロシージャ**sysmail_update_profile_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
@@ -57,7 +57,7 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **A. プロファイルの説明を変更する**  
   
  次の例では、msdb データベースのという名前のプロファイルの説明を変更し `AdventureWorks Administrator` ます。 **msdb**  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 63e7422cc26106ab6a9eadd9232ed9d168afd691
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f47e06875d2076e4ae9510d7cb1c5bf5f706c45
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762656"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890880"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース メールには、メール キューと状態キューの 2 つのキューがあります。 メール キューには、送信待ちのメール アイテムが格納され、 状態キューには、送信済みのアイテムの状態が格納されます。 このストアドプロシージャを使用すると、メールキューまたはステータスキューの状態を表示できます。 パラメーター ** \@ queue_type**が指定されていない場合、ストアドプロシージャは、キューごとに1つの行を返します。  
   
@@ -54,13 +54,13 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |**last_empty_rowset_time**|**/**|キューが最後に空だった日付と時刻。 [軍用時刻形式] と [GMT タイムゾーン]。|  
 |**last_activated_time**|**/**|キューが最後にアクティブ化された日時。 [軍用時刻形式] と [GMT タイムゾーン]。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  データベースメールのトラブルシューティングを行う場合は、 **sysmail_help_queue_sp**を使用して、キューにあるアイテムの数、キューの状態、および最後にアクティブ化された日時を確認します。  
   
 ## <a name="permissions"></a>アクセス許可  
  既定では、 **sysadmin**固定サーバーロールのメンバーだけがこのプロシージャにアクセスできます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、メール キューと状態キュー両方を返します。  
   
 ```  

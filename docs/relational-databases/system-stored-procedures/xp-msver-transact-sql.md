@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 385bae0bd40fd392f038ef4dd85204c853a81773
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 995668cb4b36e7086c2777d9cb7cd663e7d33ef4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762629"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890757"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   に関するバージョン情報を返し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 また**xp_msver**は、サーバーの実際のビルド番号とサーバー環境に関する情報も返します。 **Xp_msver**返される情報は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、バッチ、ストアドプロシージャなどで使用して、プラットフォームに依存しないコードのロジックを強化することができます。  
   
@@ -46,7 +46,7 @@ xp_msver [ optname ]
 |-------------------------|-----------------|  
 |**同様**|製品名;たとえば、のように [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] なります。|  
 |**ProductVersion**|製品のバージョン。|  
-|**Language**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語バージョン。|  
+|**言語**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語バージョン。|  
 |**プラットフォーム**|を実行しているコンピューターのオペレーティングシステム名、製造元名、およびチップファミリ名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**コメント**|に関するその他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の情報。|  
 |**CompanyName**|によって生成される会社名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。たとえば、「Corporation」と指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] します。|  

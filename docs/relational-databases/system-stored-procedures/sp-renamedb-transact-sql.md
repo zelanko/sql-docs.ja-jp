@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a707a2dc0f7e4350e4447550d218f243ed07f8da
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a947bd670e57660f1f523c56f7422a28eacc39e0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826554"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891486"
 ---
 # <a name="sp_renamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   データベースの名前を変更します。  
   
@@ -68,7 +68,7 @@ WHERE name = N'Financial';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_changedbowner &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   

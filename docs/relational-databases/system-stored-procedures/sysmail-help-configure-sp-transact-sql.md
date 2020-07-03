@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 058d611f1ee9eaf73d8ca8c022728fb1920091ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb13be5e26fb4bdb74b4776ca34ab42eacc7eb03
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752729"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890903"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース メールの構成設定を表示します。  
   
@@ -54,7 +54,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 |**paramvalue**|**nvarchar(256)**|構成パラメーターの値|  
 |**description**|**nvarchar(256)**|構成パラメーターの説明|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  ストアドプロシージャ**sysmail_help_configure_sp**には、インスタンスの現在のデータベースメール構成設定が一覧表示されます。  
   
  ** \@ Parameter_name**が指定されていても、 ** \@ parameter_value**の出力パラメーターが指定されていない場合、このストアドプロシージャは出力を生成しません。  
@@ -64,7 +64,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、インスタンスのデータベースメール構成設定を一覧表示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ```  

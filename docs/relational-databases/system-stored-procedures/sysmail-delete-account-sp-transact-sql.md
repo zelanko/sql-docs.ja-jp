@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 823f6abad57e057bf6682f3daa6a282f8726fd88
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9b49f1b42a1484ca5449c3e65e274a3626b62809
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820124"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890982"
 ---
 # <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   データベースメール SMTP アカウントを削除します。 データベースメール構成ウィザードを使用してアカウントを削除することもできます。  
   
@@ -57,7 +57,7 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、という名前のデータベースメールアカウントを削除し `AdventureWorks Administrator` ます。  
   
 ```  
@@ -65,7 +65,7 @@ EXECUTE msdb.dbo.sysmail_delete_account_sp
     @account_name = 'AdventureWorks Administrator' ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   

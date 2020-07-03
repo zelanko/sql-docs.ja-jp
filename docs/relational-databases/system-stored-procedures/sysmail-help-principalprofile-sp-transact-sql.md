@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 534e695a9648ef1e183660f15f6f76d882c52bd9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 024eec5c9e74eb48ac57dcf16a40a7783d79f5b3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752727"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890893"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース メール プロファイルと msdb データベース プリンシパルとの関連付けに関する情報を表示します。  
   
@@ -64,7 +64,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 |**profile_name**|**sysname**|データベースメールプロファイルの名前。|  
 |**is_default**|**bit**|このプロファイルがユーザーの既定のプロファイルかどうかを示すフラグ|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  パラメーターを指定せずに**sysmail_help_principalprofile_sp**が呼び出された場合、返される結果セットには、のインスタンス内のすべての関連付けが一覧表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 それ以外の場合、結果セットには、指定されたパラメーターに一致するアソシエーションの情報が含まれます。 たとえば、プロファイル名が指定されている場合、このプロシージャはプロファイルのすべての関連付けを一覧表示します。  
   
  **sysmail_help_principalprofile_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  

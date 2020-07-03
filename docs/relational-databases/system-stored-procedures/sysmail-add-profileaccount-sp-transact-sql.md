@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68d09a8149234651b4741caaeb8436f6b6cda6da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3de6a0b8ed5cbabd37cfa18f3b107c90121fe459
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786116"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891005"
 ---
 # <a name="sysmail_add_profileaccount_sp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベースメールプロファイルにデータベースメールアカウントを追加します。 [Sysmail_add_account_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)を使用してデータベースアカウントを作成した後、 **sysmail_add_profileaccount_sp**を実行します。 [transact-sql sysmail_add_profile_sp ](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md)&#40;を使用してデータベースプロファイルが作成されます。  
   
@@ -54,7 +54,7 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  プロファイルとアカウントの両方が既に存在している必要があります。 両方またはいずれかが存在しないと、このストアド プロシージャはエラーを返します。  
   
  このストアドプロシージャは、指定されたプロファイルに既に関連付けられているアカウントのシーケンス番号を変更しないことに注意してください。 アカウントのシーケンス番号の更新の詳細については、「 [sysmail_update_profileaccount_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)」を参照してください。  
@@ -68,7 +68,7 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、プロファイルを `AdventureWorks Administrator` アカウントに関連付け `Audit Account` ます。 監査アカウントのシーケンス番号は1です。  
   
 ```  

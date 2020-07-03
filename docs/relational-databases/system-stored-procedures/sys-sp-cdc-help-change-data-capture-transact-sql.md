@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 62d1fbfffeb23e823e89ecc1a22f44c54f8245a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7935bc8e0472b90d22a93190f5af81c8e5910e67
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768898"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891089"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sp_cdc_help_change_data_capture (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースで変更データキャプチャが有効になっている各テーブルについて、変更データキャプチャの構成を返します。 各ソーステーブルに対して最大で2つの行を返すことができます。キャプチャインスタンスごとに1つの行です。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
@@ -82,7 +82,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|ソーステーブル内の行を一意に識別するために使用されるインデックス列の一覧です。|  
 |captured_column_list|**nvarchar(max)**|キャプチャ対象のソース列のリスト。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  *Source_schema*と*source_name*が既定で null に設定されているか、明示的に null が設定されている場合、このストアドプロシージャは、呼び出し元が選択したアクセス権を持つすべてのデータベースキャプチャインスタンスに関する情報を返します。 *Source_schema*および*source_name*が NULL 以外の場合は、特定の名前が有効になっているテーブルに関する情報のみが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  

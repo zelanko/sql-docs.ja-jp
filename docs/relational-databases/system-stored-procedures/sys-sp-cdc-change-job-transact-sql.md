@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df05d1b68da88c309cb69eb1187c9ec5f0b3375f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 54d6e50e6c29ab29d48143ed9a12c4bb0591d769
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626167"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891178"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sp_cdc_change_job (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースの変更データキャプチャのクリーンアップジョブまたはキャプチャジョブの構成を変更します。 ジョブの現在の構成を表示するには、 [cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)テーブルに対してクエリを実行するか、 [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)を使用します。  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd907c83ad7c2fc2751134003f820d43a1023129
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb3fc807a0c0af8c27f6464571a7556615a1797d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626217"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891115"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベース内の指定したソース テーブルを対象に変更データ キャプチャを有効にします。 テーブルで変更データキャプチャが有効になっている場合、テーブルに適用された各データ操作言語 (DML) 操作のレコードがトランザクションログに書き込まれます。 変更データキャプチャプロセスでは、この情報をログから取得し、一連の関数を使用してアクセスする変更テーブルに書き込みます。  
   

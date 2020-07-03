@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7bb5e41265e3dd6b69ae1807837b2ac8bda9ba09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 21d6e73f79c2cb8c1c0a749f4d8e849d644c8291
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727168"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891582"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   に関する統計情報 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を表示します。  
   
@@ -59,7 +59,7 @@ sp_monitor
 |**total_errors**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の読み書き中に発生したエラー数|  
 |**connections**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのログインまたはログイン試行の回数|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、いくつかの関数によって処理量が追跡されます。 **Sp_monitor**を実行すると、これらの関数によって返された現在の値が表示され、最後にプロシージャが実行されてから変更された量が表示されます。  
   
  各列について、統計情報は*number*(*number)-**number*% または*number*(*number*) の形式で出力されます。 最初の*数値*は、が再起動されてからの秒数 ( **cpu_busy**、 **io_busy**、および**アイドル**の場合) または合計数 (他の変数の場合) を表し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 かっこ内の*数値*は、最後に**sp_monitor**が実行されてからの秒数または合計数を表します。 割合は**sp_monitor**が最後に実行されてからの時間の割合です。 たとえば、レポートに**cpu_busy** (215)-68% と表示されている場合、cpu は、前回の起動以降に4250秒 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sp_monitor**が最後に実行されてから215秒、 **sp_monitor**が最後に実行されてからの合計時間の68% に達しています。  
@@ -67,7 +67,7 @@ sp_monitor
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のビジー状況に関する情報をレポートします。  
   
 ```  

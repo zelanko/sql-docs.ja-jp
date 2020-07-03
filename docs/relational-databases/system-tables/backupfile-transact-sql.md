@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f122698756a6d2359112b535158dcb6ff89569b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5c304cfafc04d9f7c0ec77dc5faedc75ada79df
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750443"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890692"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベースの各データまたは各ログ ファイルに対して 1 行のデータを格納します。 各列では、バックアップ作成時のファイル構成の詳細が示されます。 ファイルがバックアップに含まれるかどうかは、 **is_present**列によって決まります。 このテーブルは、 **msdb**データベースに格納されます。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "85750443"
 |**is_readonly**|**bit**|1 = ファイルは読み取り専用です。|  
 |**is_present**|**bit**|1 = ファイルはバックアップ セットに含まれる。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  LOADHISTORY を使用した*backup_device*からの RESTORE verifyonly は、 **backupmediaset**テーブルの列に、メディアセットヘッダーからの適切な値を設定します。  
   
  このテーブルおよびその他のバックアップテーブルと履歴テーブルの行の数を減らすには、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)ストアドプロシージャを実行します。  

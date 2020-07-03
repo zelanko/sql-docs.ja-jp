@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7905ab0197c4286013f5a407570cdeaa39b3b009
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db6f15fe8ce2f515bf79211e6db49a135eb6fb3f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85625992"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890968"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベースメールログからイベントを削除します。 ログ内のすべてのイベント、または日付または種類の条件を満たすイベントを削除します。  
   
@@ -48,7 +48,7 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  データベースメールログからエントリを完全に削除するには、 **sysmail_delete_log_sp**ストアドプロシージャを使用します。 日時を指定する引数を使用すると、古い記録だけを削除できます。 この場合、引数で指定した日時より前のイベントが削除されます。 省略可能な引数を使用すると、 **event_type**引数として指定された特定の種類のイベントのみを削除できます。  
   
  データベース メール ログのエントリを削除しても、データベース メールのテーブルから電子メールのエントリは削除されません。 [Sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)を使用して、データベースメールテーブルから電子メールを削除します。  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 579fecbc9882859cc379e9ef49904d00109a7ae4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 23b8676f6bc1f2bfea8d2c2d974996ec77f5e78d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626209"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891154"
 ---
 # <a name="syssp_cdc_disable_db-transact-sql"></a>sp_cdc_disable_db (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースの変更データ キャプチャ機能を無効にします。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
@@ -58,7 +58,7 @@ sys.sp_cdc_disable_db
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`AdventureWorks2012` データベースで変更データ キャプチャを無効にします。  
   
 ```sql  

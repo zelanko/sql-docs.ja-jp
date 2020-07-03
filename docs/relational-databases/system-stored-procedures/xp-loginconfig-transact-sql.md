@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ac7a3e57c18f6ce4ea73415224aabc3843488cf9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: afef091db5038a6ca302c07a6171557577d46797
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755555"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890743"
 ---
 # <a name="xp_loginconfig-transact-sql"></a>xp_loginconfig (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   のインスタンスのログインセキュリティ構成を報告し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -45,7 +45,7 @@ xp_loginconfig ['config_name']
  **'** *config_name* **'**  
  表示する構成値を指定します。 *Config_name*が指定されていない場合は、すべての構成値が報告されます。 *config_name*は**sysname**で、既定値は NULL です。次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**login mode**|ログインセキュリティモード。 使用できる値は、 **Mixed**と**Windows 認証**です。<br /><br /> 置換後の方法:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**default login**|信頼関係接続が許可されているユーザー (ログイン名が照合されないユーザー) に対する、既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン ID の名前。 既定のログインは**guest**です。 この値は、旧バージョンとの互換性のために用意されています。|  

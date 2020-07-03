@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 700bab92fde35f26ba1ce6ca956fabd72f130e31
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 18fe415653a912bda012e786b0a65e5f5b30dd3c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762737"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891363"
 ---
 # <a name="sp_unsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   アプリケーションロールを非アクティブ化して、以前のセキュリティコンテキストに戻します。  
   
@@ -48,7 +48,7 @@ sp_unsetapprole @cookie
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) と 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **Sp_setapprole**を使用してアプリケーションロールをアクティブ化した後は、ユーザーがサーバーとの接続を切断するか**sp_unsetapprole**を実行するまで、ロールはアクティブのままになります。  
   
  アプリケーションロールの概要については、「[アプリケーションロール](../../relational-databases/security/authentication-access/application-roles.md)」を参照してください。  
@@ -56,7 +56,7 @@ sp_unsetapprole @cookie
 ## <a name="permissions"></a>アクセス許可  
  アプリケーションロールがアクティブ化されたときに保存された cookie の**メンバーシップとナレッジ**のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="activating-an-application-role-with-a-cookie-then-reverting-to-the-previous-context"></a>Cookie を使用してアプリケーションロールをアクティブ化してから、前のコンテキストに戻す  
  次の例では、パスワード `Sales11` が設定されているアプリケーション ロール `fdsd896#gfdbfdkjgh700mM` をアクティブ化し、クッキーを作成します。 この例では、現在のユーザーの名前を返し、 **sp_unsetapprole**を実行して元のコンテキストに戻します。  

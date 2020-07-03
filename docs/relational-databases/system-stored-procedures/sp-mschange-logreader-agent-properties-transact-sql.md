@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 852346183f56901e1cee32e3bb8d21d0ea24beb8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 76a3f657600ed2f8f545dd95c1ba85fa682d51c4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786147"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891563"
 ---
 # <a name="sp_mschange_logreader_agent_properties-transact-sql"></a>sp_MSchange_logreader_agent_properties (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   以降のバージョンのディストリビューターで実行されるログリーダーエージェントジョブのプロパティを変更し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。 このストアドプロシージャは、パブリッシャーがのインスタンスで実行されている場合に、プロパティを変更するために使用し [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ます。 このストアドプロシージャは、ディストリビューター側のディストリビューションデータベースで実行されます。  
   
@@ -65,7 +65,7 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
 `[ @publisher_type = ] 'publisher_type'`パブリッシャーがのインスタンスで実行されていない場合のパブリッシャーの種類を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher_type*は**sysname**で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|パブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**ORACLE11I**|標準の Oracle パブリッシャーを指定します。|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0f5bc0b6e7960faac9d68469750c445e469896e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1354645781d4d6207311349689fb8431e3cb7912
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720216"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891539"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このプロシージャは、パブリッシャー側のトランザクション ログにトレーサー トークンを送信し、待機時間の統計を追跡する処理を開始します。 情報が記録されるタイミングは、トレーサー トークンがトランザクション ログに書き込まれたとき、ログ リーダー エージェントに処理されたとき、およびディストリビューション エージェントによって適用されたときです。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。 詳細については、「 [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)」を参照してください。  
   

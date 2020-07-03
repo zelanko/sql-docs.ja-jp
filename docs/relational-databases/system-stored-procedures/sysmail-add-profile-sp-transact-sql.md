@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 258d5b77178bbf7603516e7db7b0aaf666c9acd3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2ae569ea3623c81e99bac6dd5a163393c07c0301
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832480"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891014"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   新しいデータベースメールプロファイルを作成します。  
   
@@ -53,7 +53,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  データベースメールプロファイルには、任意の数のデータベースメールアカウントが保持されます。 データベース メールのストアド プロシージャでは、このプロシージャで生成されたプロファイル名またはプロファイル ID によって、プロファイルを参照できます。 アカウントをプロファイルに追加する方法の詳細については、「 [sysmail_add_profileaccount_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)」を参照してください。  
   
  プロファイルの名前と説明はストアドプロシージャ**sysmail_update_profile_sp**で変更できますが、プロファイル id はプロファイルの有効期間中は一定のままです。  
@@ -65,7 +65,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **A. 新しいプロファイルを作成する**  
   
  次の例では、`AdventureWorks Administrator` という新しいデータベース メール プロファイルを作成します。  
@@ -91,7 +91,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 SELECT @profileId ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   

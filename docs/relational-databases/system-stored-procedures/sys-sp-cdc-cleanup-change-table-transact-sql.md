@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 061321d6fdefb52890a54fb7e18aa0a618cd986f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ac10ff9accd4cac39caef8139406319701026e79
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626245"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891173"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sp_cdc_cleanup_change_table (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定された*low_water_mark*値に基づいて、現在のデータベースの変更テーブルから行を削除します。 このストアドプロシージャは、変更テーブルのクリーンアッププロセスを直接管理する必要があるユーザー向けに用意されています。 ただし、このプロシージャは、変更テーブルに含まれるデータのすべてのコンシューマーに影響を及ぼすため、使用する際は注意が必要です。  
   
