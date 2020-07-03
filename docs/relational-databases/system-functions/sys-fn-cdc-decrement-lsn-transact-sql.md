@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50f1699f857bafed3aa904ce03b31b2c5e9bd00b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d3650074475fef2ed74dd589a53c78ce7090676
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738579"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898435"
 ---
 # <a name="sysfn_cdc_decrement_lsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定された LSN の直前のログ シーケンス番号 (LSN) を返します。  
   
@@ -48,13 +48,13 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
 ## <a name="return-type"></a>戻り値の型  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  この関数から返される LSN は、指定された値よりも必ず小さくなり、2 つの値の間に LSN 値が存在することはありません。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Public**データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、を使用して、lsn 値 `sys.fn_cdc_decrement_lsn` が最大値よりも小さい変更データ行を返すクエリで、上限の lsn の境界を設定します。  
   
 ```  

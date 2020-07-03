@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c7b1401be0d9926874bf4025fbce964994f86f04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 40e8457a4f31e0961560c1c48cc5885fa3cfd053
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730097"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898641"
 ---
 # <a name="sysdm_server_memory_dumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   によって生成されたメモリダンプファイルごとに1行の値を返し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。 この動的管理ビューを使用して、潜在的な問題のトラブルシューティングを行います。  
  

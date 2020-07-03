@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de9b846bf0ce5f821d7aeed213c353ac383d5944
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3051a630fe797e6856f110348af945a681bb83ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758746"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899249"
 ---
 # <a name="sp_restoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このストアドプロシージャは、id 範囲の割り当てを更新するために使用されます。 このストアド プロシージャを使用すると、パブリッシャーがバックアップから復元された後に自動 ID 範囲の管理が正しく機能します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -45,7 +45,7 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_restoremergeidentityrange**は、マージレプリケーションで使用します。  
   
  **sp_restoremergeidentityrange**は、ディストリビューターから最大 id 範囲割り当て情報を取得し、自動 id 範囲管理を使用するアーティクルの[MSmerge_identity_range_allocations &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md)の**max_used**列の値を更新します。  

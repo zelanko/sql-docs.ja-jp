@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5bec144cae5726ce8c4d5ff7af8998a41232b5a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 728eb088f02d338d5ac9d22f2b0cb5f2127450e6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676337"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898618"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>dm_server_services (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   の現在のインスタンスの SQL Server、フルテキスト、SQL Server Launchpad サービス (SQL Server 2017 +)、および SQL Server エージェントの各サービスに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 これらのサービスに関するステータス情報を報告するには、この動的管理ビューを使用します。  
   

@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3484bef3a7af5048e5023957a5b1aaa7355fafc8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ccdb22362e8e52fe58aca8b7430d5329400a4908
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734815"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896743"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   コレクションセットのインスタンスではなく、データコレクター全体に適用されるプロパティを返します。 このビューの各行は、管理データ ウェアハウスの名前や、管理データ ウェアハウスが置かれているインスタンスの名前など、データ コレクターの特定のプロパティを表します。  
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |parameter_name|**nvarchar(128)**|プロパティの名前。 NULL 値は許可されません。|  
 |parameter_value|**sql_variant**|プロパティの実際の値。 NULL 値が許可されます。|  
@@ -38,7 +38,7 @@ ms.locfileid: "85734815"
 ## <a name="permissions"></a>アクセス許可  
  ビューの SELECT 権限、または dc_operator、dc_proxy、dc_admin のいずれかの固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  使用できるプロパティの一覧は固定されており、それらの値は適切なストアドプロシージャを使用してのみ変更できます。 次の表で、このビューを介して公開されるプロパティについて説明します。  
   
 |プロパティ名|説明|  
@@ -49,7 +49,7 @@ ms.locfileid: "85734815"
 |MDWDatabase|管理データウェアハウスの名前。 この値を変更するには、sp_syscollector_set_warehouse_database_name ストアド プロシージャを使用します。|  
 |なっ|管理データ ウェアハウスが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前です。 この値を変更するには、sp_syscollector_set_warehouse_instance_name ストアド プロシージャを使用します。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、syscollector_config_store ビューのクエリを実行します。  
   
 ```sql  

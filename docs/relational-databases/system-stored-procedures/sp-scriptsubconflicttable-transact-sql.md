@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 32ff25b25b7bf5fb2056196bc91b558beb353f09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 93656ff6bec2acc3c3f6f7ee189b1c45db75a7d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645294"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899193"
 ---
 # <a name="sp_scriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   キューに登録されたサブスクリプション アーティクルのサブスクライバー上に競合テーブルを作成するためのスクリプトを生成します。 生成されたスクリプトは、サブスクライバー側でサブスクリプション データベースについて実行されます。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -50,7 +50,7 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 |-----------------|---------------|-----------------|  
 |**cmdtext**|**nvarchar (4000)**|キューに登録されたサブスクリプション アーティクルのサブスクライバー上に競合テーブルを作成するための [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを返します。 このスクリプトは、サブスクリプションデータベースのサブスクライバーで実行されます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_scriptsubconflicttable**は、初期スナップショットが手動で適用されるサブスクリプションを持つサブスクライバーに対して使用します。 競合テーブルは、サブスクライバー側のオプションのテーブルです。  
   
 ## <a name="permissions"></a>アクセス許可  

@@ -18,15 +18,15 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: ea4f2fbd33bf3eb1e9e6a2e2b079ef78796f6f61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a148750db907ebf43d6976d4d574145516e13d65
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738639"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898828"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>dm_fts_semantic_similarity_population (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   関連付けられたセマンティックインデックスを持つ各テーブルの各類似性インデックスについて、ドキュメントの類似性のインデックスの作成に関するステータス情報の1行を返します。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "85738639"
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、セマンティックインデックスが関連付けられているすべてのテーブルについて、ドキュメントの類似性のインデックス作成の状態を照会する方法を示します。  
   
 ```  

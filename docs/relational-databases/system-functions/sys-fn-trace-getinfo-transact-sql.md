@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fce5e207ef1ca7f28c0d2088e9f23e701d860b7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 76c1dc6253d1a1b16824966c0fe56f1b4b8822f3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754014"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898263"
 ---
 # <a name="sysfn_trace_getinfo-transact-sql"></a>fn_trace_getinfo (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定したトレースまたはすべての既存のトレースに関する情報を返します。  
   
@@ -65,7 +65,7 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する ALTER TRACE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、すべてのアクティブなトレースに関する情報を返します。  
   
 ```  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 40cc138d811aae6377d0928c3b63a824e223adad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 559a88809e903c56221088e811b1b04875f3849a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756664"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899446"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定サーバー ロールのメンバーに関する情報を返します。  
   
@@ -43,7 +43,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
  *role*には、次のいずれかの値を指定できます。  
   
-|固定サーバーロール|説明|  
+|固定サーバーロール|Description|  
 |-----------------------|-----------------|  
 |[sysadmin]|システム管理者|  
 |securityadmin|セキュリティ管理者|  
@@ -65,7 +65,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |メンバー名|**sysname**|ServerRole のメンバーの名前。|  
 |MemberSID|**varbinary (85)**|MemberName のセキュリティ識別子|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  データベースロールのメンバーを表示するには、sp_helprolemember を使用します。  
   
  すべてのログインは public のメンバーです。 内部で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は public がロールとして実装されていないため、sp_helpsrvrolemember はパブリックロールを認識しません。  
@@ -77,7 +77,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、固定サーバーロールのメンバーを一覧表示し `sysadmin` ます。  
   
 ```  

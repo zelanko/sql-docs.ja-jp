@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3698431316b86a40e70e144bfac23d81678db45c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9bb57e2d01c4942955e838cf358444636bf7aedb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783085"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898348"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   セキュリティ保護可能なリソースに対して、プリンシパルに対して効果的に付与された権限の一覧を返します。 関連する関数が[HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)。  
   
@@ -51,13 +51,13 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>返される列  
  次の表に、 **fn_my_permissions**が返す列を示します。 返される各行によって、セキュリティ保護可能なリソースについて、現在のセキュリティ コンテキストで保持されている権限の詳細が示されます。 クエリが失敗した場合は NULL を返します。  
   
-|列名|Type|説明|  
+|列名|型|Description|  
 |-----------------|----------|-----------------|  
 |entity_name へのアイテムの追加|**sysname**|リストされたアクセス許可が実質的に付与される、セキュリティ保護可能なリソースの名前。|  
 |subentity_name|**sysname**|セキュリティ保護可能な列に列がある場合は列名、それ以外の場合は NULL です。|  
 |permission_name|**nvarchar**|アクセス許可の名前。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  このテーブル値関数は、指定されたセキュリティ保護可能なリソースについて、呼び出し元のプリンシパルが保持している有効な権限の一覧を返します。 有効な権限は、次のいずれかになります。  
   
 -   プリンシパルに直接許可されており、拒否されていない権限。  

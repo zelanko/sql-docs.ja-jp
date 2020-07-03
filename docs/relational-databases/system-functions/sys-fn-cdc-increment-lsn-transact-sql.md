@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 770954f8479a97c5dcf96714a44ac025ccc55e04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6907b5df12a655d6444981afa4a84a2753d22f53
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755606"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898389"
 ---
 # <a name="sysfn_cdc_increment_lsn-transact-sql"></a>fn_cdc_increment_lsn (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定された LSN の直後のログ シーケンス番号 (LSN) を返します。  
   
@@ -48,7 +48,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
 ## <a name="return-type"></a>戻り値の型  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  関数によって返される LSN 値は、常に指定された値より大きくなり、2つの値の間に LSN 値は存在しません。  
   
  時間の経過と共に変更データのストリームを体系的にクエリするには、クエリで返される変更をバインドする新しいクエリ間隔を指定するたびに、クエリ関数呼び出しを定期的に繰り返すことができます。 データが失われないようにするために、前のクエリの上限を使用して、その後のクエリの下限を生成することがよくあります。 クエリ間隔は終了間隔であるため、新しい下限は前の上限よりも大きくする必要がありますが、この値と古い上限の間にある LSN 値が変更されていないことを確認するのに十分な大きさにする必要があります。 sys.fn_cdc_increment_lsn 関数は、このような値を取得するために使用します。  
@@ -56,7 +56,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
 ## <a name="permissions"></a>アクセス許可  
  public データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、前回のクエリ時に保存した上限を `sys.fn_cdc_increment_lsn` 変数に格納し、それを `@save_to_lsn` 関数に渡すことによって、変更データ キャプチャ クエリに使用する新しい下限値を取得しています。  
   
 ```  

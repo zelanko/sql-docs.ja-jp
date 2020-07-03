@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce7301325f8cf6ec782b9c9850399617171146f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa0b61680108d669ce023797b787ccb0e1d9c840
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652004"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898315"
 ---
 # <a name="sysfn_servershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   クラスター化されたサーバーが使用する共有ドライブの名前を返します。  
   
@@ -49,7 +49,7 @@ fn_servershareddrives()
   
  現在のサーバーインスタンスがクラスター化されたサーバーでない場合、 **fn_servershareddrives**は空の行セットを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  `fn_servershareddrives`このクラスター化されたサーバーによって使用される共有ドライブの一覧を返します。 これらの共有ドライブは、リソースと同じクラスターグループに属して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] います。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリソースはこれらのドライブに依存しています。  
   
  この機能は、ユーザーが利用できるドライブを特定するのに役立ちます。  
@@ -57,7 +57,7 @@ fn_servershareddrives()
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、を使用し `fn_servershareddrives` て、クラスター化されたサーバーインスタンスに対してクエリを実行します。  
   
 ```  

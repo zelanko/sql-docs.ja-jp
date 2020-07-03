@@ -19,16 +19,16 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 0552dbdce5da12db4fedadecb5a4bd7e9c55c278
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 171d63913c0d46b1d344082a5784c7507111a39b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738658"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898840"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>dm_fts_parser (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   特定の[ワードブレーカー](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)、[類義語辞典](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)、および[ストップリスト](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)の組み合わせをクエリ文字列入力に適用した後に、最終的なトークン化の結果を返します。 トークン化の結果は、指定されたクエリ文字列のフルテキストエンジンの出力に相当します。  
   
@@ -55,7 +55,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *accent_sensitivity*  
  フルテキスト検索で分音文字を区別するかしないかを制御するブール値です。 *accent_sensitivity*は**ビット**で、次のいずれかの値になります。  
   
-|値|アクセントの区別は...|  
+|[値]|アクセントの区別は...|  
 |-----------|----------------------------|  
 |0|大文字と小文字は区別されない<br /><br /> "カフェ" や "カフェ" などの単語は、同じように扱われます。|  
 |1|重要<br /><br /> "カフェ" や "カフェ" などの単語は、異なる方法で処理されます。|  

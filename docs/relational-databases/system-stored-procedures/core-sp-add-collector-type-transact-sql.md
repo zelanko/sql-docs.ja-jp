@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee13dd34ff87a68ed4dc1b07a4ff8c28ee6d4daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28353a7b2112be801f465b5a919b537f17a17f4d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647010"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898224"
 ---
 # <a name="coresp_add_collector_type-transact-sql"></a>sp_add_collector_type (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   管理データ ウェアハウス データベースの core.supported_collector_types ビューに新しいエントリを追加します。 プロシージャは、管理データウェアハウスデータベースのコンテキストで実行する必要があります。  
   
@@ -51,7 +51,7 @@ core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ## <a name="permissions"></a>アクセス許可  
  **Mdw_admin** (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、core.supported_collector_types ビューにジェネリック T-SQL Query コレクター型を追加します。 既定では、ジェネリック T-sql Query コレクター型は既に存在します。 このため、既定のインストールでこのコードを実行すると、コレクター型が既に存在することを示すメッセージが表示されます。  
   
  sp_remove_collector_type ストアド プロシージャを使用してジェネリック T-SQL Query コレクター型を削除してから、管理データ ウェアハウスにデータをアップロードできる登録済みのコレクター型としてジェネリック T-SQL Query コレクター型を再度追加すると、このコードは正常に動作します。  

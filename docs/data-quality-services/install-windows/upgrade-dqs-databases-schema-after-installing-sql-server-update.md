@@ -1,6 +1,6 @@
 ---
 title: SQL Server 更新プログラムのインストール後に DQS データベーススキーマをアップグレードする
-description: 修正プログラム、修正プログラム、または累積的な更新プログラムによって SQL Server が更新された後に、DQSInstaller を使用して Data Quality Services (DQS) インスタンスをアップグレードする方法について説明します。
+description: 修正プログラム、修正プログラム、または累積的な更新プログラムによって SQL Server が更新された後に DQSInstaller.exe を使用して Data Quality Services (DQS) インスタンスをアップグレードする方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: db5009ef7f5c9ff2a57022d30b2eb9f009fb6ab8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2491a46bb4c0e07c61b5c827a7b8f666d09d94c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75558065"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897803"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>SQL Server 更新プログラムのインストール後に DQS データベーススキーマをアップグレードする
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   あらかじめ構成された DQS インスタンスに SQL Server の更新プログラム (パッチ、修正プログラム、または累積的な更新プログラム) をインストールした後、 **upgrade** コマンド ライン パラメーターを指定して DQSInstaller.exe ファイルを実行し、DQS データベース スキーマをアップグレードする必要がある場合があります。 アップグレードしなかった場合、Data Quality Client を使用して Data Quality Server に接続しようとすると、次のエラーが表示されることがあります。  
   
@@ -33,7 +33,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 > [!NOTE]  
 >  SQL Server の更新プログラムのほとんどで、DQS データベース スキーマのアップグレードが必要になります。 DQS データベース スキーマのアップグレードが必要になる SQL Server 更新プログラムの詳細については、「 [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565)」(DQS のアップグレード: Data Quality Services への累積的な更新プログラムまたは修正プログラムのインストール) の手順 1.A にある表を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
   
 -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] コンピューターの Administrators グループのメンバーとしてログオンする必要があります。  
   
@@ -61,12 +61,12 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
   
 6.  DQS データベース スキーマのアップグレードが正常に完了すると、完了のメッセージが表示されます。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
  Data Quality Client アプリケーションから、アップグレードされた Data Quality Server にログオンします。  
   
  SQL Server の更新プログラムをインストールしてからの DQS データベース スキーマのアップグレードの詳細、および関連するトラブルシューティング手順については、「 [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565)」(DQS のアップグレード: Data Quality Services への累積的な更新プログラムまたは修正プログラムのインストール) を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Data Quality Services のインストール](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [.NET Framework 更新後の SQLCLR アセンブリのアップグレード](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)  
   

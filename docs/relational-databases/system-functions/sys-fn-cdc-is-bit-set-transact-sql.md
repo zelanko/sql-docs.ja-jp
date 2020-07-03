@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b9de9ca9259ed89e4965a1659f46031e74cac3d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b099f578ebe60a7caaf1f0179af549cd42679c11
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724606"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898369"
 ---
 # <a name="sysfn_cdc_is_bit_set-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   序数位置が指定されたビットマスク内にあるかどうかを確認することで、キャプチャした列が更新されているかどうかを示します。  
   
@@ -51,7 +51,7 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
 ## <a name="return-type"></a>戻り値の型  
  **bit**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  通常、この関数は、列が変更されたかどうかを示すために、変更データクエリの一部として使用されます。 このシナリオでは、クエリの前に関数[sys. fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)を使用して、必要な列の序数を取得します。 次に、返された変更データの各行に**sys. fn_cdc_is_bit_set**が適用され、返された結果セットの一部として列固有の情報が提供されます。  
   
  返される結果セットのすべての行に対して列が変更されたかどうかを判断するときは、関数の代わりにこの関数を使用することをお勧めします[。 fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md) 。  

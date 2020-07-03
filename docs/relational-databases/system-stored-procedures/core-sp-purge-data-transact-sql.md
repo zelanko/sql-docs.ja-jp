@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c01cfb6e469ef33c897d581eadf2da757cdb06f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b7432238a3bedc85f6f9d971299fa7de2705df8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646882"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898204"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   保有ポリシーに基づいて、管理データ ウェアハウスからデータを削除します。 このプロシージャは、指定されたインスタンスに関連付けられている管理データ ウェアハウスに対して、mdw_purge_data [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブによって毎日実行されます。 このストアドプロシージャを使用すると、管理データウェアハウスからデータをオンデマンドで削除できます。  
   
@@ -63,7 +63,7 @@ core.sp_purge_data
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  このプロシージャでは、保有期間に基づいて削除対象となる core.snapshots ビューの行が選択されます。 削除の対象となるすべての行が、snapshots_internal テーブルから削除されます。 前の行を削除すると、すべての管理データウェアハウステーブルで連鎖削除操作がトリガーされます。 これは、収集されたデータを格納するすべてのテーブルに対して定義されている ON DELETE CASCADE 句を使って実行されます。  
   
  各スナップショットとその関連データは、明示的なトランザクションで削除されてからコミットされます。 そのため、パージ操作が手動で停止された場合、またはに指定された値を超えた場合は、コミットされて @duration いないデータのみが残ります。 このデータは、ジョブの次回の実行時に削除できます。  

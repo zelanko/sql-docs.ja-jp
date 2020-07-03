@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e858279730f4a9d50eaf9d00804ab7c3125b2efc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 97c9c8d5b8c15bd2400874104bc1595aa93a4def
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786300"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898415"
 ---
 # <a name="sysfn_cdc_get_column_ordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたキャプチャインスタンスに関連付けられている[変更テーブル](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)に表示される、指定された列の序数を返します。  
   
@@ -51,13 +51,13 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
 ## <a name="return-type"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  この関数は、変更データキャプチャの更新マスク内でキャプチャされた列の序数位置を識別するために使用されます。 主に、変更データを照会するときに更新マスクから情報を抽出するために、関数[sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)と組み合わせて使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  ソーステーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。 変更データキャプチャコンポーネントのデータベースロールがキャプチャインスタンスに対して指定されている場合は、そのロールのメンバーシップも必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`VacationHours` キャプチャ インスタンスの更新マスク内の、`HumanResources_Employee` 列の序数位置を取得します。 さらに、この値を `sys.fn_cdc_is_bit_set` 関数の中で使用し、返された更新マスクから情報を抽出します。  
   
 ```  

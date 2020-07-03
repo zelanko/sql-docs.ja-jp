@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1c622b94e5f81a27f1835d36d7bc41d0a051bcd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3a691e994c4c8389847c86bcba2283f5ef72decc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787171"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896050"
 ---
 # <a name="sysdatabase_audit_specification_details-transact-sql"></a>database_audit_specification_details (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   すべてのデータベースについてサーバー インスタンス上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査に含まれる、データベース監査仕様に関する情報を含みます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。 すべての audit_action_id とその名前の一覧については、 [dm_audit_actions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)をクエリします。  
   

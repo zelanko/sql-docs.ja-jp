@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21aeb49750c0a451166da8147b424589b3902856
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f512f5e262393fa8cfec433c801a36838fd1ba88
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734436"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898505"
 ---
 # <a name="change-data-capture-functions-transact-sql"></a>変更データキャプチャ関数 (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   変更データ キャプチャは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルに対して適用された挿入、更新、削除の各アクティビティを記録し、変更の詳細を利用しやすいリレーショナル形式で格納します。 追跡対象のソーステーブルの列構造を反映する列情報は、変更された行に対してキャプチャされ、その変更をターゲット環境に適用するために必要なメタデータと共にキャプチャされます。 次の関数は、変更に関する情報を返すために使用されます。  
   

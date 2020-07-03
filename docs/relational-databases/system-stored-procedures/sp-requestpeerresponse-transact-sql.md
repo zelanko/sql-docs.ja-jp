@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9716985438a9e29c9ef8d72eb2ba3e77b8db42f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: adcf5709bc3bf086123324095a796e024a08911e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640002"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899282"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このプロシージャは、ピアツーピアトポロジ内のノードから実行された場合、トポロジ内の他のすべてのノードからの応答を要求します。 この手順を実行し、対応する応答を確認することで、前のすべてのコマンドが応答ノードに配信されたことを保証できます。 このストアドプロシージャは、任意のデータベースの要求元のノードで実行されます。  
   
@@ -48,7 +48,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_requestpeerresponse**は、ピアツーピアトランザクションレプリケーションで使用されます。  
   
  **sp_requestpeerresponse**は、ピアツーピアトポロジでパブリッシュされたデータベースを復元する前に、すべてのコマンドが他のすべてのノードによって受信されたことを確認するために使用されます。 また、ノードがオフラインの間に行われたデータ定義言語 (DDL) の変更をレプリケートするときに、これらの変更が他のノードに到達する時間を推定する場合にも使用できます。  

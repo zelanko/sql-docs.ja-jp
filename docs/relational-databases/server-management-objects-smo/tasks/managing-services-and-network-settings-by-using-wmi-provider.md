@@ -16,15 +16,15 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0807a034f05d723ae19c86e8b00d08309176551c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 798389eb361bb9b01c79ade7b85ad62a0e7a0c8a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095152"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897149"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>WMI プロバイダーを使用したサービスの管理とネットワーク設定
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   WMI プロバイダーは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] のサービスおよびネットワーク プロトコルを管理するために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理コンソール (MMC) によって使用される、公開されたインターフェイスです。 SMO では、<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクトは WMI プロバイダーを表します。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "74095152"
 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
 
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Wmi プロバイダーを使用するプログラムの場合は、wmi 名前空間を修飾する**Imports**ステートメントを含める必要があります。 アプリケーションの宣言の前、かつ他の **Imports** ステートメントの後に、次のようにステートメントを挿入します。  
+ Wmi プロバイダーを使用するプログラムの場合は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、wmi 名前空間を修飾する**Imports**ステートメントを含める必要があります。 アプリケーションの宣言の前、かつ他の **Imports** ステートメントの後に、次のようにステートメントを挿入します。  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -212,7 +212,7 @@ $svc.ServiceState
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構成管理用の WMI プロバイダーの概念](../../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
   

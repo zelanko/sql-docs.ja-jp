@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c19cef2ed170dc8e40b8f1c10c16a4068d718005
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fe6c5074f8f9d6bb34bf3dfed8c8506fea1c939
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758761"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899293"
 ---
 # <a name="sp_oasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   OLE オブジェクトのプロパティを新しい値に設定します。  
   
@@ -64,7 +64,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures`OLE オートメーションに関連するシステムプロシージャを使用するには、構成を**有効**にする必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 `HostName` 以前に作成した**SQLServer**オブジェクトのプロパティを新しい値に設定します。  
   
 ```  

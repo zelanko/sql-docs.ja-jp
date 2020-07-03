@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: add3f81793b2dc21c08ca601bb1c48cc7d4588be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f000c8d2dc4f0f2adc95814ba9ef687602403dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783074"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898323"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>fn_net_changes_ &lt; capture_instance &gt; (transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **差分変更**クエリ関数のラッパー。 これらの関数を作成するために必要なスクリプトは、sys.sp_cdc_generate_wrapper_function ストアド プロシージャで生成されます。  
   
@@ -93,13 +93,13 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|列の型|説明|  
+|列名|列の型|Description|  
 |-----------------|-----------------|-----------------|  
 |\<columns from @column_list>|**状況に応じて異なる**|ラッパーを作成するスクリプトを生成するために呼び出されたときに、 **column_list**引数で指定された sp_cdc_generate_wrapper_function の列。 *Column_list*が NULL の場合、すべての追跡対象のソース列が結果セットに表示されます。|  
 |__CDC_OPERATION|**nvarchar (2)**|ターゲット環境に行を適用するために必要な操作を示す操作コード。 操作は、次の呼び出しで指定された引数*row_filter_option*の値によって異なります。<br /><br /> *row_filter_option* = ' all ', ' all with mask '<br /><br /> ' D '-削除操作<br /><br /> ' I '-挿入操作<br /><br /> 'UN' : 更新操作<br /><br /> *row_filter_option* = ' all with merge '<br /><br /> ' D '-削除操作<br /><br /> 'M' : 挿入操作または更新操作|  
 |\<columns from @update_flag_list>|**bit**|列名の後に "_uflag" が付加されている、ビット フラグです。 フラグが null 以外の値を使用するのは、 *row_filter_option* **= ' all with mask '** および \_ _CDC_OPERATION **= ' UN '** の場合のみです。 対応する列がクエリウィンドウ内で変更された場合は、1に設定されます。 それ以外の場合は、0 に設定されます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  Fn_net_changes_<capture_instance> 関数は、cdc. fn_cdc_get_net_changes_<capture_instance のクエリ関数のラッパーとして機能します。 ラッパーのスクリプトを作成するには、sys.sp_cdc_generate_wrapper ストアド プロシージャを使用します。  
   
  ラッパー関数が自動的に作成されることはありません。 ラッパー関数を作成するには、次の 2 つを行う必要があります。  

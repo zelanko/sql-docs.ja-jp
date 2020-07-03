@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e0413917ead793ed0034ff04ea43394ec4a39a12
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5cb05c50ce37434161c04bf26083990b319fafc3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720265"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899390"
 ---
 # <a name="sp_lock-transact-sql"></a>sp_lock (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ロックに関する情報を報告します。  
   
@@ -63,7 +63,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
 |**モード**|**nvarchar(8)**|要求されたロック モードです。 次の値をとります。<br /><br /> NULL = リソースへのアクセスは許可されていません。 プレースホルダーとして機能します。<br /><br /> Sch-S = スキーマ安定度。 スキーマ要素に対するスキーマの安定性ロックを保持しているセッションがある間、テーブルやインデックスなどのスキーマ要素が削除されないようにします。<br /><br /> Sch-M = スキーマ修正。 は、指定されたリソースのスキーマを変更する必要があるすべてのセッションによって保持される必要があります。 指定されたオブジェクトを参照している他のセッションがないことを確認します。<br /><br /> S = 共有。 保持しているセッションに、リソースへの共有アクセスが許可されます。<br /><br /> U = 更新。 リソース上で取得された更新ロックが、最終的に更新されることが許可されます。 これは、複数のセッションが、後で潜在的な更新のためにリソースをロックするときに発生する一般的な形式のデッドロックを防ぐために使用されます。<br /><br /> X = 排他。 保持しているセッションで、リソースへの排他アクセスが許可されます。<br /><br /> IS = インテント共有。 ロック階層の下位のリソースに S ロックを配置することを示します。<br /><br /> IU = インテント更新。 ロック階層の下位のリソースに U ロックを設定するよう指定します。<br /><br /> IX = インテント排他。 ロック階層の下位のリソースに X ロックを設定するよう指定します。<br /><br /> SIU = 共有インテント更新。 ロック階層の下位のリソースに更新ロックを設定する目的で、リソースへの共有アクセスを指定します。<br /><br /> 6 = 共有インテント排他。 ロック階層内の下位のリソースに排他ロックを取得する目的で、リソースへの共有アクセスを示します。<br /><br /> UIX = 更新インテント排他。 ロック階層の下位のリソースに排他ロックを設定する目的で、リソースに保持する更新ロックを指定します。<br /><br /> BU = 一括更新。 一括操作で使用されます。<br /><br /> RangeS_S = 共有キー範囲と共有リソースロック。 シリアル化可能な範囲スキャンを示します。<br /><br /> RangeS_U = 共有キー範囲と更新リソースロック。 シリアル化可能な更新プログラムのスキャンを示します。<br /><br /> RangeI_N = 挿入キー範囲と NULL リソース ロック。 インデックスに新しいキーを挿入する前に範囲をテストするために使用されます。<br /><br /> RangeI_S = キー範囲変換ロック。 RangeI_N と S ロックの重複によって作成されます。<br /><br /> RangeI_U = RangeI_N と U ロックの重なりによって作成されるキー範囲変換ロック。<br /><br /> RangeI_X = RangeI_N と X ロックの重なりによって作成されるキー範囲変換ロック。<br /><br /> RangeX_S = RangeI_N と RangeS_S の重なりによって作成されるキー範囲変換ロック。 固定.<br /><br /> RangeX_U = 範囲 I_N と範囲 S_U ロックの重複によって作成されるキー範囲変換ロックです。<br /><br /> RangeX_X = 排他キー範囲と排他リソース ロック。 範囲内のキーを更新する場合に使用する変換ロックです。|  
 |**状態**|**nvarchar (5)**|ロック要求の状態:<br /><br /> CNVRT: ロックは別のモードから変換されていますが、競合するモードでロックを保持している別のプロセスによって変換がブロックされています。<br /><br /> GRANT : ロックが取得されたことを示します。<br /><br /> WAIT : 競合するモードでロックを保持している別のプロセスによってロックがブロックされていることを示します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  ユーザーは、次の方法で読み取り操作のロックを制御できます。  
   
 -   SET TRANSACTION ISOLATION LEVEL を使用してセッションのロック レベルを指定します。 構文と制限については、「 [SET TRANSACTION 分離レベル &#40;transact-sql&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  

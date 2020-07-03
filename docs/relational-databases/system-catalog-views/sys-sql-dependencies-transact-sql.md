@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 106c295d200ce823f80988be2276a927aba8126d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b246947ce4657dc97b4f9a3dc6356ef4a150da8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764455"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897729"
 ---
 # <a name="syssql_dependencies-transact-sql"></a>sql_dependencies (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   参照先エンティティの依存関係ごとに1行の値を格納します。参照先のエンティティ [!INCLUDE[tsql](../../includes/tsql-md.md)] は、他の参照元オブジェクトを定義する式またはステートメントで参照されます。  
   

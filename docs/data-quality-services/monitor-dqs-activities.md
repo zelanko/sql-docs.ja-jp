@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ba2bfe0a9979d94df43b923b7eff2ed68750e19a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 92f0d05b8b7f6bc4e72c70c73d9b93f0e785206d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85809931"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897480"
 ---
 # <a name="monitor-dqs-activities"></a>DQS アクティビティの監視
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ検出、ドメイン管理、照合ポリシー、データ クレンジング、データ照合、および SSIS クレンジングの各アクティビティを一元的に監視する方法について説明します。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "85809931"
     |シート名|説明|  
     |----------------|-----------------|  
     |アクティビティ|アクティビティ グリッドと同様の、アクティビティに関する情報 (列) が表示されます。|  
-    |処理|**[アクティビティ ステップ]** タブと同様の、アクティビティのプロセスに関する情報 (列) が表示されます。|  
+    |プロセス|**[アクティビティ ステップ]** タブと同様の、アクティビティのプロセスに関する情報 (列) が表示されます。|  
     |プロファイラー - ソース|**[クレンジング]** サブタイプの場合は、アクティビティに関する [レコード]、[適正なレコード]、[修正されたレコード]、および [無効なレコード] の情報が表示されます。<br /><br /> **[ナレッジ検出]**、 **[ドメイン管理]**、 **[照合ポリシー]**、および **[照合]** サブタイプの場合は、アクティビティに関する [レコード]、[合計値]、[新しい値]、[一意の値]、および [新しい一意の値] の情報が表示されます。|  
     |プロファイラー - フィールド|**[クレンジング]** および **[SSIS クレンジング]** サブタイプの場合は、アクティビティに関する [フィールド]、[ドメイン]、[修正された値]、[提案された値]、[完全]、および [精度] の情報が表示されます。<br /><br /> **[ナレッジ検出]**、 **[ドメイン管理]**、 **[照合ポリシー]**、および **[照合]** サブタイプの場合は、アクティビティに関する [フィールド]、[ドメイン]、[新規]、[一意]、[ドメインで有効]、および [完全] の情報が表示されます。|  
   

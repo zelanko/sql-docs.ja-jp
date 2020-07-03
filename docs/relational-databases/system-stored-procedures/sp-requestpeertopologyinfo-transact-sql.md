@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b5d3a61a52ffcdc1aec49e0682a6a9f00af188b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c88b25976af9914d21ea4ee80d165e893360bdf0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639967"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899270"
 ---
 # <a name="sp_requestpeertopologyinfo-transact-sql"></a>sp_requestpeertopologyinfo (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md)システムテーブルに、ピアツーピアトランザクションレプリケーショントポロジに関する情報を設定します。 [Sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)を実行して、XML 形式でテーブルから情報を取得します。  
   
@@ -47,7 +47,7 @@ sp_requestpeertopologyinfo [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  sp_requestpeertopologyinfo は、ピア ツー ピア トランザクション レプリケーションで使用します。 [Sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)を実行する前に sp_requestpeertopologyinfo を実行してください。 これらの手順は、ピアツーピアトポロジ構成ウィザードで使用されますが、XML 形式でトポロジ情報が必要な場合は、直接使用することもできます。 表形式の結果を優先する場合は、 [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md)システムテーブルに対してクエリを実行します。  
   
 ## <a name="permissions"></a>アクセス許可  

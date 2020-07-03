@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa7c9997a8044181c5d60d1efd19c057fc433814
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9355cc5c9aeafc6da302a12af3e276d8f5b35c97
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754444"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899020"
 ---
 # <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   システム内の TCP エンドポイントごとに1行のレコードを格納します。 Tcp_endpoints によって記述されるエンドポイントは、接続特権を許可および取り消すためのオブジェクトを提供し**ます**。 ポートと IP アドレスについて表示される情報は、プロトコルの構成には使用されず、実際のプロトコル構成と一致しない場合があります。 プロトコルを表示および構成するには、Configuration Manager を使用し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   

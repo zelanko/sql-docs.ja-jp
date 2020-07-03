@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb9512bcf60d7a82d19cb383a87618c7d4c30393
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48dac5345df6d9e963f3601741aa93a68e2dfa3f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767474"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899221"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定した既知の検証状態にマージサブスクリプションを再同期します。 これによって、サブスクリプション データベースを、正常終了した前回の検証時や指定の日時など、特定の時点に強制的に集約または同期できます。 この方法を使用してサブスクリプションを再同期する場合、スナップショットは再適用されません。 このストアド プロシージャは、スナップショット レプリケーション サブスクリプションまたはトランザクション レプリケーション サブスクリプションでは使用しません。 このストアドプロシージャは、パブリッシャー、パブリケーションデータベース、またはサブスクライバー側のサブスクリプションデータベースで実行されます。  
   
@@ -55,7 +55,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
   
 `[ @resync_type = ] resync_type`再同期が開始されるタイミングを定義します。 *resync_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|初期スナップショットの後から同期が開始されます。 初期スナップショット以降のすべての変更がサブスクライバーに再適用されるため、これは最もリソースを大量に消費するオプションです。|  
 |**1**|前回の検証が正常に完了した後に同期が開始されます。 最後に検証が正常に完了した後に発生した、新規または不完全なすべてのジェネレーションがサブスクライバーに再適用されます。|  

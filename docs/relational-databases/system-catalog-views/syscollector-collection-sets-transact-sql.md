@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 62b63057e34c2d26ad9d8ee3689267c9a06c93dc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b65cbb9596ff25e334609e978fdf61a89be41db4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754312"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896783"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   スケジュール、コレクションモード、およびその状態を含む、コレクションセットに関する情報を提供します。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "85754312"
 ## <a name="permissions"></a>アクセス許可  
  dc_operator、dc_proxy に対する SELECT 権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  データ コレクター API で変更または削除が許可されるコレクション セットは、ユーザーが作成したコレクション セットのみです。 システムが提供するコレクション セットは変更または削除できません。 ただし、システム コレクション セットを有効または無効にしたり、その構成を変更することはできます。  
   
 ## <a name="see-also"></a>関連項目  

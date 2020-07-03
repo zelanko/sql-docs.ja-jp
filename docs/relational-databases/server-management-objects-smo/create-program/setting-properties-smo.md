@@ -15,17 +15,17 @@ ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdf4d998eb87cc213f7ce6b3068c4bc142790e5a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148714"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899061"
 ---
 # <a name="setting-properties---smo"></a>プロパティの設定 - SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  プロパティとは、オブジェクトに関する説明情報を格納する値のことです。 たとえば、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]構成オプションは、 <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>オブジェクトのプロパティによって表されます。 プロパティは、直接、またはプロパティ コレクションを使用して間接的にアクセスすることができます。 プロパティへの直接アクセス時には、次の構文を使用します。  
+  プロパティとは、オブジェクトに関する説明情報を格納する値のことです。 たとえば、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成オプションは、オブジェクトのプロパティによって表され <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> ます。 プロパティは、直接、またはプロパティ コレクションを使用して間接的にアクセスすることができます。 プロパティへの直接アクセス時には、次の構文を使用します。  
   
  `objInstance.PropertyName`  
   
@@ -57,12 +57,12 @@ ms.locfileid: "70148714"
   
  <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドでは、アプリケーションの残り部分に対して、またはリセットされるまでの、プロパティの読み込み動作を設定することができます。 <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> メソッドを使用して、元の動作を保存し、必要に応じて復元することができます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Visual Basic でのプロパティの取得および設定  
- このコード例では、 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> <xref:Microsoft.SqlServer.Management.Smo.Information>オブジェクトのプロパティを取得する方法と、 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>プロパティのプロパティを<xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes>列挙型の**ExecuteSql**メンバーに設定する方法を示します。  
+ このコード例では、オブジェクトのプロパティを取得する方法 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> <xref:Microsoft.SqlServer.Management.Smo.Information> と <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> 、プロパティのプロパティを <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 列挙型の**ExecuteSql**メンバーに設定する方法を示し <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> ます。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -75,7 +75,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>Visual C# でのプロパティの取得および設定  
- このコード例では、 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> <xref:Microsoft.SqlServer.Management.Smo.Information>オブジェクトのプロパティを取得する方法と、 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>プロパティのプロパティを<xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes>列挙型の**ExecuteSql**メンバーに設定する方法を示します。  
+ このコード例では、オブジェクトのプロパティを取得する方法 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> <xref:Microsoft.SqlServer.Management.Smo.Information> と <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> 、プロパティのプロパティを <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 列挙型の**ExecuteSql**メンバーに設定する方法を示し <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> ます。  
   
 ```csharp  
 {   
@@ -154,7 +154,7 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Visual Basic でのオブジェクトのすべてのプロパティの反復処理  
- このコード例では<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 、オブジェクトの[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Properties**コレクションを反復処理し、出力画面に表示します。  
+ このコード例では、オブジェクトの**Properties**コレクションを反復処理 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> し、出力画面に表示し [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ます。  
   
  この例では、<xref:Microsoft.SqlServer.Management.Smo.Property> オブジェクトは [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] のキーワードでもあるため、角かっこで囲まれています。  
   
@@ -178,7 +178,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>Visual C# でのオブジェクトのすべてのプロパティの反復処理  
- このコード例では<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 、オブジェクトの[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Properties**コレクションを反復処理し、出力画面に表示します。  
+ このコード例では、オブジェクトの**Properties**コレクションを反復処理 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> し、出力画面に表示し [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ます。  
   
 ```csharp  
 {   

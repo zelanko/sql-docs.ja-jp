@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 71da34c0af430dbad8f5b6aeb24cc03cfdd1492d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 26cf5253d95a1c716c3c2ecfc1be0d9f99897832
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648477"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898723"
 ---
 # <a name="sysdm_os_windows_info-transact-sql"></a>dm_os_windows_info (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Windows オペレーティングシステムのバージョン情報を表示する1行を返します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "85648477"
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 Linux など、Windows 以外のホストで実行されている SQL のについを表示するには、 [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)を使用 dm_os_host_info ます。 
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 **dm_os_windows_info**ビューからすべての列を返します。  
   
 ```  

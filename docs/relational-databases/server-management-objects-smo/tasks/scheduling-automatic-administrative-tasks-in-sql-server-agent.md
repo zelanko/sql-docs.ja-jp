@@ -15,15 +15,15 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c7a9824d68f2d1b912f19b43330eae1d3bc2c0a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74094386"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897780"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server エージェントでの自動管理タスクのスケジュール設定
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   SMO では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントは次のオブジェクトで表現されます。  
   
@@ -37,10 +37,10 @@ ms.locfileid: "74094386"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Agent> 名前空間にあります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
-エージェントを使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]するプログラムの場合、エージェントの名前空間を修飾するには、 **using**ステートメントを含める必要があります。 次のように、アプリケーションの宣言の前に、ステートメントを他の**using**ステートメントの後に挿入します。
+エージェントを使用するプログラムの場合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、エージェントの名前空間を修飾するには、 **using**ステートメントを含める必要があります。 次のように、アプリケーションの宣言の前に、ステートメントを他の**using**ステートメントの後に挿入します。
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -168,7 +168,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |Instance |ComparisionOp |CompValue**  
   
- 警告の通知にはオペレーターが必要です。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> **演算子**は[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]キーワードであるため、型には角かっこが必要です。  
+ 警告の通知にはオペレーターが必要です。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>**演算子**はキーワードであるため、型には角かっこが必要です [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 。  
   
 ```csharp  
 {  
@@ -201,7 +201,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |Instance |ComparisionOp |CompValue**  
   
- 警告の通知にはオペレーターが必要です。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> **演算子**は[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]キーワードであるため、型には角かっこが必要です。  
+ 警告の通知にはオペレーターが必要です。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>**演算子**はキーワードであるため、型には角かっこが必要です [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 。  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  
@@ -266,7 +266,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server エージェント](../../../ssms/agent/sql-server-agent.md)   
  [ジョブの実装](../../../ssms/agent/implement-jobs.md)  
   

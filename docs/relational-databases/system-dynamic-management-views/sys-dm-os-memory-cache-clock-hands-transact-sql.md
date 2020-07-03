@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d957bdc70afdd0e6dbc7d15e5b2ea4ee78568dc5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: edfb4ec3851f27750499def7b0652929f3c89cb8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754100"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898745"
 ---
 # <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   特定のキャッシュ クロックに関する各ハンドの状態を返します。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "85754100"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリキャッシュと呼ばれる構造体のメモリに情報を格納します。 キャッシュには、データ、インデックス エントリ、コンパイル済みプロシージャ プランなど、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関するさまざまな種類の情報が格納されます。 情報を再作成しないようにするために、メモリキャッシュは可能な限り長く保持され、通常はキャッシュから削除されます。これは、時間がかかりすぎている場合や、新しい情報のためにメモリ領域が必要な場合に、キャッシュから削除されます。 古い情報を削除するプロセスは、メモリスイープと呼ばれます。 メモリスイープは頻繁に発生するアクティビティですが、連続していません。 メモリ キャッシュのスイープはクロック アルゴリズムによって制御され、 各クロックは、両手と呼ばれる複数のメモリスイープを制御できます。 メモリキャッシュクロックハンドは、メモリスイープの1つの針の現在の場所です。  
 
 ## <a name="see-also"></a>関連項目  

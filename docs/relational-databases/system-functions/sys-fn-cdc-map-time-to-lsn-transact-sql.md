@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea779dfb66d9fce2053fcee0b6fd3eedbc26a4ef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3cd283f09263d4f36f0f4e2cfd4a18767dd614e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784848"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898365"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定された時間について、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)システムテーブルの**start_lsn**列のログシーケンス番号 (LSN) 値を返します。 この関数を使用すると、変更データキャプチャの列挙関数[cdc. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)および[cdc. fn_cdc_get_net_changes_](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)によって必要とされる LSN 範囲を体系的にマップし、その範囲内のデータ変更を返すことができます。  
   
@@ -60,7 +60,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ## <a name="return-type"></a>戻り値の型  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **Fn_cdc_map_time_lsn**を使用して datetime 範囲を lsn 範囲にマップする方法を理解するには、次のシナリオを検討してください。 変更データを毎日抽出するとします。 つまり、特定の日の午前 0 時までに発生した変更を取得する必要があります。 時間範囲の下限は、前の日の深夜を含めずに最大になります。 上限は、指定された日の深夜を含む最大までの範囲です。 次の例では、 **fn_cdc_map_time_to_lsn**関数を使用して、この時間ベースの範囲を変更データキャプチャの列挙関数で必要な lsn ベースの範囲に体系的にマップし、その範囲内のすべての変更を返す方法を示しています。  
   
  `DECLARE @begin_time datetime, @end_time datetime, @begin_lsn binary(10), @end_lsn binary(10);`  

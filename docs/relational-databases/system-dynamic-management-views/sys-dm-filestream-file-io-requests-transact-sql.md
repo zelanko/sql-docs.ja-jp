@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e27de1c2b303474117a0ea442dde81606a9f48f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 645c3c6c061d1e6c94176594a20748e52cc7fea6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734605"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898865"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定した時点で名前空間の所有者 (NSO) によって処理されている i/o 要求の一覧を表示します。  
   
-|Column|種類|説明|  
+|Column|種類|Description|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary (8)**|ドライバーからの I/O 要求を含む NSO メモリ ブロックの内部アドレスを示します。 NULL 値は許可されません。|  
 |**current_spid**|**smallint**|現在の SQL Server の接続のシステムプロセス id (SPID) を表示します。 NULL 値は許可されません。|  

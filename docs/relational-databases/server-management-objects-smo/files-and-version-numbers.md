@@ -17,22 +17,22 @@ ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a7d7e7dd9bf7e6d5ad6dfa5776d76892f96ad05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42f1adda80e8b47e2cea7faebdc374df29d29a39
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148667"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895977"
 ---
 # <a name="files-and-version-numbers"></a>ファイルとバージョン番号
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   SqlManagementObjects NuGet パッケージには、必要なすべての SQL Server 管理オブジェクト (SMO) コンポーネントが含まれています。 SMO は複数のマネージド アセンブリに実装されます。 クライアント上またはサーバー上のいずれかで SMO アプリケーションを開発することができます。  
 
 > > [!Important]
 > > SMO アセンブリのファイルバージョンは、メジャーとして表示されます。**0**。ビルド. リビジョン。 ただし、埋め込みアセンブリのバージョンは Major です。**100**。ビルド. リビジョン。 これは、各アプリケーションで使用されている SMO のバージョンを別々に保持し、1つの更新プログラムが他のアプリケーションに影響を与えないようにするためです。
 > > 
-> > このため、これらのバージョンのアセンブリをグローバルアセンブリキャッシュ (GAC) にインストール**しない**でください。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio などの他のアプリケーションが中断する可能性があります。 
+> > このため、これらのバージョンのアセンブリをグローバルアセンブリキャッシュ (GAC) にインストール**しない**でください。 これにより、Management Studio などの他のアプリケーションが中断する可能性があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 
   
 |ファイル|説明|  
 |-----------|-----------------|  

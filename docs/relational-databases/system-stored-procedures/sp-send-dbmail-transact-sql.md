@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42dbd7a5bf6e1bc7b705bcf017987da959faa114
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 63b7029c69fff73615d34bd723b97290b2557afb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827526"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899203"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   指定した受信者に電子メール メッセージを送信します。 このメッセージには、クエリ結果セット、添付ファイル、またはその両方が含まれる場合があります。 メールがデータベースメールキューに正常に配置されると、 **sp_send_dbmail**によってメッセージの**mailitem_id**が返されます。 このストアドプロシージャは**msdb**データベースにあります。  
   
@@ -81,7 +81,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 `[ @body_format = ] 'body_format'`メッセージ本文の形式を指定します。 パラメーターの型は**varchar (20)**,、既定値は NULL です。 指定した場合、送信メッセージのヘッダーには、メッセージの本文が指定の形式であることを示す文字列が設定されます。 パラメーターには、次のいずれかの値を含めることができます。  
   
--   TEXT  
+-   [TEXT]  
   
 -   HTML  
   
@@ -91,7 +91,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 -   低  
   
--   Normal  
+-   標準  
   
 -   高  
   
@@ -99,7 +99,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 `[ @sensitivity = ] 'sensitivity'`メッセージの秘密度を示します。 パラメーターの型は**varchar (12)** です。 パラメーターには、次のいずれかの値を含めることができます。  
   
--   Normal  
+-   標準  
   
 -   個人用  
   
@@ -161,7 +161,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ## <a name="result-sets"></a>結果セット  
  成功すると、"メールがキューに登録されました。" というメッセージが返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  使用する前に、データベースメール構成ウィザードまたは**sp_configure**を使用してデータベースメールを有効にする必要があります。  
   
  **sysmail_stop_sp**は、外部プログラムが使用する Service Broker オブジェクトを停止することによってデータベースメールを停止します。 **sysmail_stop_sp**を使用してデータベースメールを停止しても、 **sp_send_dbmail**は引き続きメールを受け取ります。 データベースメールを開始するには、 **sysmail_start_sp**を使用します。  
@@ -196,7 +196,7 @@ EXEC msdb.dbo.sp_send_dbmail
     @subject = 'Automated Success Message' ;  
 ```  
   
-### <a name="b-sending-an-e-mail-message-with-the-results-of-a-query"></a>B. 電子メール メッセージをクエリの結果と共に送信する  
+### <a name="b-sending-an-e-mail-message-with-the-results-of-a-query"></a>B: 電子メール メッセージをクエリの結果と共に送信する  
  この例では、電子メールアドレスを使用して、友人に電子メールメッセージを送信 `yourfriend@Adventure-Works.com` します。 メッセージの件名は `Work Order Count` で、このメッセージでは `DueDate` が 2004 年 4 月 30 日から 2 日以内となっている作業指示の番号を表示するクエリが実行されます。 データベースメール結果をテキストファイルとして添付します。  
   
 ```  
@@ -210,7 +210,7 @@ EXEC msdb.dbo.sp_send_dbmail
     @attach_query_result_as_file = 1 ;  
 ```  
   
-### <a name="c-sending-an-html-e-mail-message"></a>C. HTML 電子メールメッセージの送信  
+### <a name="c-sending-an-html-e-mail-message"></a>C: HTML 電子メールメッセージの送信  
  この例では、電子メールアドレスを使用して、友人に電子メールメッセージを送信 `yourfriend@Adventure-Works.com` します。 メッセージの件名は `Work Order List` で、 `DueDate` 2004 年4月30日から2日以内の作業指示を示す HTML ドキュメントが含まれています。 データベース メールでは、このメッセージが HTML 形式で送信されます。  
   
 ```  
@@ -245,7 +245,7 @@ EXEC msdb.dbo.sp_send_dbmail @recipients='yourfriend@Adventure-Works.com',
     @body_format = 'HTML' ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)   

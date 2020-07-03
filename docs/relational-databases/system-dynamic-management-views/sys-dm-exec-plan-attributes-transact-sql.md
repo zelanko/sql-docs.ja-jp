@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b616e6186e9d5e19f353df1053d479e0d0afdd6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734789"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898893"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   プランハンドルで指定されたプランのプラン属性ごとに1行の値を返します。 このテーブル値関数を使用すると、キャッシュキー値やプランの現在の同時実行数など、特定のプランに関する詳細情報を取得できます。  
   
@@ -91,7 +91,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-set-options"></a>Set オプションの評価  
  **Set_options**に返された値を、プランをコンパイルしたオプションに変換するには、 **set_options**値から値を減算します。値の最大値は、可能な限り多く、0に達するまで続きます。 減算する各値は、クエリ プランに使用されたオプションに対応しています。 たとえば、 **set_options**の値が251の場合、プランをコンパイルしたオプションは ANSI_NULL_DFLT_ON (128)、QUOTED_IDENTIFIER (64)、ANSI_NULLS (32)、ANSI_WARNINGS (16)、CONCAT_NULL_YIELDS_NULL (8)、並列プラン (2)、および ANSI_PADDING (1) になります。  
   
-|オプション|値|  
+|オプション|[値]|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Parallel Plan|2|  
@@ -119,7 +119,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-cursor-options"></a>カーソルオプションの評価  
  **Acceptable_cursor_options** **required_cursor_options**に返された値を、プランをコンパイルしたオプションに変換するには、列の値から、可能な最大値から順に、0に達するまで値を減算します。 減算する各値は、クエリ プランに使用されたカーソル オプションに対応しています。  
   
-|オプション|値|  
+|オプション|[値]|  
 |------------|-----------|  
 |なし|0|  
 |INSENSITIVE|1|  

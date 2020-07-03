@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0148158217909c0989ccd1c7833df3bd4f0a0dca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8615bee01595b827e7238d0dc7c0df8c4434090a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787818"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894995"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM のサポート (ODBC)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の ODBC では、強化された FILESTREAM 機能がサポートされています。 この機能の詳細については、「 [FILESTREAM のサポート](../../../relational-databases/native-client/features/filestream-support.md)」を参照してください。 FILESTREAM の ODBC サポートを示すサンプルについては、「 [filestream &#40;ODBC&#41;を使用した増分データの送受信](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)」を参照してください。  
   

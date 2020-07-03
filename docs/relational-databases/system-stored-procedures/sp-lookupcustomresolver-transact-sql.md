@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b86fd5bd04c41d10437a8a0f7bcc21b61ab22fef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fafdcdd2d0fea423ddf44058e7615aff7241565e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720238"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899378"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ビジネス ロジック ハンドラーの情報、またはディストリビューターで登録されている COM ベースのカスタム競合回避モジュールのクラス ID (CLSID) の値を返します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -57,7 +57,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_lookupcustomresolver**は、マージレプリケーションで使用します。  
   
  **sp_lookupcustomresolver**は、コンポーネントがディストリビューションで登録されていない場合は*resolver_clsid*に NULL 値を返し、登録がビジネスロジックハンドラーとして登録されている .NET Framework アセンブリに属している場合は値 "00000000-0000-0000-0000-000000000000" を返します。  

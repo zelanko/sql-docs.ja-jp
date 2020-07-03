@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7e0d440a453b0481a4440ec432669d3981b9da8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ddc9e534b5f0e434dd9c0ca980da82eddb8006a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754005"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898275"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたプランガイドの有効性を確認します。 sys.fn_validate_plan_guide 関数では、クエリにプラン ガイドを適用した場合に最初に発生するエラーのメッセージが返されます。 プラン ガイドが有効な場合は空の行セットが返されます。 プランガイドは、データベースの物理デザインに変更が加えられた後に無効になることがあります。 たとえば、プランガイドで特定のインデックスが指定されている場合、そのインデックスが削除されると、クエリはそのプランガイドを使用できなくなります。  
   

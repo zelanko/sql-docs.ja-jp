@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d58dcdaf-f82d-43d9-941b-f520581442bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a693e0638c724a8a30cdded509e961b4baa0620e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6f7faaeb7aa9a66a2738beaf75cf6fa28683f5b3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752890"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897384"
 ---
 # <a name="sysservice_queue_usages-transact-sql"></a>service_queue_usages (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サービスとサービス キュー間の参照ごとに 1 行のデータを返すカタログ ビューです。 1 つのサービスは 1 つのキューにのみ関連付けることができます。 キューは、複数のサービスに関連付けることができます。  
   

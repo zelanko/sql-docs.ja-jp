@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e05ef7753ae6375382bfd2bd6e199b6cabffd63
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4946bff122f64da126291bb797effe60c361663f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647995"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898542"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc. fn_cdc_get_all_changes_ &lt; capture_instance &gt; (transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたログシーケンス番号 (LSN) の範囲内で、ソーステーブルに適用された変更ごとに1行の値を返します。 該当する期間中、1 つのソース行に複数の変更が加えられた場合、返される結果セットには、それぞれの変更が格納されます。 変更データを返すだけでなく、4つのメタデータ列によって、変更を別のデータソースに適用するために必要な情報が提供されます。 行フィルターオプションでは、メタデータ列の内容と、結果セットで返される行が制御されます。 ' All ' 行フィルターオプションを指定した場合は、変更を識別するための行が1つだけになります。 ' All update old ' オプションが指定されている場合、更新操作は2行で表されます。1つは更新前にキャプチャされた列の値を格納し、もう1つは更新後にキャプチャされた列の値を格納します。  
   
@@ -79,12 +79,12 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールまたは**db_owner**固定データベースロールのメンバーシップが必要です。 他のすべてのユーザーに対して、ソーステーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。また、キャプチャインスタンスのゲートロールが定義されている場合は、そのデータベースロールのメンバーシップが必要です。 呼び出し元にソースデータを表示するアクセス許可がない場合、関数はエラー 229 ("オブジェクト ' fn_cdc_get_all_changes_... '、データベース ' \<DatabaseName> '、スキーマ ' cdc ') で SELECT 権限が拒否されました。" を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  指定した LSN 範囲がキャプチャインスタンスの変更追跡タイムライン内に収まらない場合、関数はエラー 208 ("プロシージャまたは関数 cdc. fn_cdc_get_all_changes に指定された引数の数が不足しています。") を返します。  
   
  **__ $ Operation** = 1 または **__ $ operation** = 3 の場合、データ型**image**、 **text**、および**ntext**の列には常に NULL 値が割り当てられます。 データ型**varbinary (max)**、 **varchar (max)**、または**nvarchar (max)** の列は、更新中に列が変更されない限り、 **__ $ operation** = 3 の場合は NULL 値が割り当てられます。 **__ $ Operation** = 1 の場合、これらの列には削除時に値が割り当てられます。 キャプチャ インスタンスに含まれる計算列の値は、常に NULL になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]変更データキャプチャのクエリ関数の使用方法を示すいくつかのテンプレートが用意されています。 これらのテンプレートは、の [**表示**] メニューで使用でき [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ます。 詳細については、「[テンプレートエクスプローラー](../../ssms/template/template-explorer.md)」を参照してください。  
   
  この例は、`Enumerate All Changes for Valid Range Template` を示しています。 この例では、関数 `cdc.fn_cdc_get_all_changes_HR_Department` を使用して、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内の HumanResources.Department ソース テーブルに対して定義されているキャプチャ インスタンス `HR_Department` で現在使用できる変更をすべてレポートします。  

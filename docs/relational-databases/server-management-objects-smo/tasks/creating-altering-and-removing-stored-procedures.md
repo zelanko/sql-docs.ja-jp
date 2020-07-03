@@ -13,19 +13,19 @@ ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff489b218f783201d5ea3bd0a0165951f51ff4e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d62d3e7314f2ea9a7cbc5e2412a010b98c99fb89
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095492"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896362"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>ストアド プロシージャの作成、変更、および削除
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) では、ストアド プロシージャは <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> オブジェクトで表現されます。  
   
- SMO で <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> オブジェクトを作成する場合は、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> プロパティに、ストアド プロシージャを定義する [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを設定する必要があります。 パラメーターには\@プレフィックスが必要であり、オブジェクトを<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>使用して<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>オブジェクトの<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>コレクションに追加することで、個別に作成する必要があります。  
+ SMO で <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> オブジェクトを作成する場合は、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> プロパティに、ストアド プロシージャを定義する [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを設定する必要があります。 パラメーターにはプレフィックスが必要で \@ あり、オブジェクトを使用 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> してオブジェクトのコレクションに追加することで、個別に作成する必要があり <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> ます。  
   
 ## <a name="example"></a>例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
@@ -151,7 +151,7 @@ $sp.Alter()
 $sp.Drop()  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>  
   
   

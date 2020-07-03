@@ -13,15 +13,15 @@ ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4da1cefbb07186134a1c6f14c335a2aacc507f6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c96656b905f0360c220b3f1c8fb7301d86308c6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148307"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896064"
 ---
 # <a name="using-synonyms"></a>シノニムの使用
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   シノニムは、スキーマ スコープ オブジェクトの別名です。 SMO では、シノニムは <xref:Microsoft.SqlServer.Management.Smo.Synonym> オブジェクトで表現します。 <xref:Microsoft.SqlServer.Management.Smo.Synonym> オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトの子です。 これは、シノニムは、そのシノニムが定義されているデータベースのスコープ内でのみ有効であることを意味しています。 ただし、シノニムは、別のデータベース上または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のリモート インスタンス上のオブジェクトを参照することができます。  
   
@@ -81,7 +81,7 @@ $syn.BaseServer = $srv.Name
 $syn.Create()  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SYNONYM &#40;Transact-SQL&#41;](../../../t-sql/statements/create-synonym-transact-sql.md)  
   
   

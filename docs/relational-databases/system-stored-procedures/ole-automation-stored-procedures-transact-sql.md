@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 81820891cbd7d5dda273b633818f9ace057745ca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28e5344dfe0b5e026df51e5accda6edecd6c4487
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758047"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898146"
 ---
 # <a name="ole-automation-stored-procedures-transact-sql"></a>OLE オートメーションストアドプロシージャ (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ内で OLE オートメーション オブジェクトを使用するために、次のシステム ストアド プロシージャが用意されています。 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は OLE オートメーション ストアド プロシージャへのアクセスをブロックします。これは、このコンポーネントがサーバーのセキュリティ構成の中で無効になっているためです。 システム管理者は、sp_configure を使用して、OLE オートメーションプロシージャへのアクセスを有効にすることができます。 詳細については、「 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)」を参照してください。  
   

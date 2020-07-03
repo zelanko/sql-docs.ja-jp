@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0650278c0c0de78cf33b5b65b28bb00479f88f1e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58830fc28bea6432e32629c43c103f2ba9cd7ad5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754225"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898803"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   親サーバーインスタンスから作成されたユーザーインスタンスごとに1行の値を返します。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "85754225"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  動的管理ビューの詳細については、オンラインブックの「[動的管理ビューと関数 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>関連項目  

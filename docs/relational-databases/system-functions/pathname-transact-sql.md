@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 348069dcab86747bccd179f85fd343e5c9d2c47f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662891"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898454"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   FILESTREAM バイナリラージオブジェクト (BLOB) のパスを返します。 OpenSqlFilestream API は、このパスを使用して、アプリケーションが Win32 Api を使用して BLOB データを操作するために使用できるハンドルを返します。 PathName は読み取り専用です。  
   
@@ -47,7 +47,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *\@オプション*  
  パスのサーバーコンポーネントをどのように書式設定するかを定義する整数[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 * \@ オプション*には、次のいずれかの値を指定できます。 既定値は 0 です。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0|サーバー名を BIOS 形式に変換して返します (例: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`)。|  
 |1|次の例のように、変換せずにサーバー名を返します。`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  データベースが Always On 可用性グループに属している場合、 *use_replica_computer_name*の値は**PathName**関数の出力に次のように影響します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |指定されていません。|関数は、パス内の仮想ネットワーク名 (VNN) を返します。|  
 |0|関数は、パス内の仮想ネットワーク名 (VNN) を返します。|  

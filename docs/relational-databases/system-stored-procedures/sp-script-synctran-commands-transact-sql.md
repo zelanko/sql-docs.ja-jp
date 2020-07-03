@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e1b8659d7828feaab219ce5c2b883137f252314
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 697cba4e04483e28fe0099096916391057c1568a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645372"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899214"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更新可能なサブスクリプションのサブスクライバーで適用される**sp_addsynctrigger**呼び出しを含むスクリプトを生成します。 パブリケーション内の各アーティクルに対して1つの**sp_addsynctrigger**呼び出しがあります。 生成されたスクリプトには、キューに置かれたパブリケーションを処理するために必要な**MSsubsciption_articles**テーブルを作成する**sp_addqueued_artinfo**呼び出しも含まれています。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   

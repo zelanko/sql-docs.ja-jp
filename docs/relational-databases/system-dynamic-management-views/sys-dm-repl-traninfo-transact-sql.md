@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2def277c877311fc5bfaa77bbab5923563d39a75
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9602f889c7074bcb8b0f6493168226bc6786c5d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716641"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898666"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   レプリケートされたトランザクションまたは変更データ キャプチャ トランザクションごとの情報を返します。  
 
@@ -70,7 +70,7 @@ ms.locfileid: "85716641"
 ## <a name="permissions"></a>アクセス許可  
  パブリケーション データベースまたは変更データ キャプチャが有効にされたデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  この情報は、アーティクルキャッシュに現在読み込まれている、レプリケートされたデータベースオブジェクトまたは変更データキャプチャが有効になっているテーブルに対してのみ返されます。  
   
 ## <a name="see-also"></a>関連項目  

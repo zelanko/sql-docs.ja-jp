@@ -1,6 +1,6 @@
 ---
-title: DQSInstaller を使用した DQS ナレッジベースのエクスポートとインポート
-description: DQSInstaller を使用して SQL Server Data Quality Services (DQS) の DQS ナレッジベースをエクスポートおよびインポートする方法について説明します。
+title: DQSInstaller.exe を使用した DQS ナレッジベースのエクスポートとインポート
+description: DQSInstaller.exe を使用して SQL Server Data Quality Services (DQS) の DQS ナレッジベースをエクスポートおよびインポートする方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ae87b9daebdef6b81c4d96abc253820cf7cb8228
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81308fb45447a87a349e0fbbd50c56f2f6237228
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75558147"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895193"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>DQSInstaller.exe を使用した DQS ナレッジ ベースのエクスポートとインポート
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   DQS の既存のインストールでは、コマンド プロンプトで DQSInstaller.exe ファイルを実行して、 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のすべてのナレッジ ベースを DQS バックアップ ファイル (.dqsb) へ一度にエクスポートし、その後で .dqsb ファイルを使用してすべてのナレッジ ベースを別の [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] へ一度にインポートできます。 コマンド プロンプトからの DQSInstaller.exe の実行の詳細については、「 [コマンド プロンプトから DQSInstaller.exe を実行する](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) 」の「 [Data Quality Server のインストールを完了するための DQSInstaller.exe の実行](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)」を参照してください。  
   
@@ -58,8 +58,8 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
   
  インポートしているナレッジ ベースと同じ名前のナレッジ ベースが [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] に既に存在する場合は、インポートされたナレッジ ベースの名前の後にアンダースコア (_) と 1 から始まる整数値が付加されます。 たとえば、"CompanyName" ドメインが重複する場合、インポートされたドメイン名は "CompanyName_1" になります。  
   
-## <a name="see-also"></a>参照  
- [Data Quality Server のインストールを完了するには、DQSInstaller を実行します](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+## <a name="see-also"></a>関連項目  
+ [Data Quality Server のインストールを完了するために DQSInstaller.exe を実行する](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Data Quality Services のインストール](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [ナレッジベースを dqs ファイルにエクスポートする](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
  [.dqs ファイルからのナレッジ ベースのインポート](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  

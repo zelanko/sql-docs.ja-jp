@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e079f473cbf08dc1a67f031d973149be0e987a2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03937eba8daecfab8e25735fd01b072cf71d87d3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762814"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898307"
 ---
 # <a name="sysfn_trace_geteventinfo-transact-sql"></a>fn_trace_geteventinfo (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   トレースされているイベントに関する情報を返します。  
   
@@ -55,13 +55,13 @@ fn_trace_geteventinfo ( trace_id )
 |**イベント**|**int**|トレースされるイベントの ID|  
 |**columnid**|**int**|各イベントに対して収集されたすべての列の ID 番号|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  特定のトレースの ID が渡された場合、 **fn_trace_geteventinfo**はそのトレースに関する情報を返します。 無効な ID が渡された場合、空の行セットが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する ALTER TRACE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、トレース番号 2 に関する情報を返します。  
   
 ```  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c4ba72a35ba3b8339a1ebc919327ce353b2c7697
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6b3ffe874615e58d276428548cb1c2ad318f111d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646942"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898229"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>sp_create_snapshot (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   管理データ ウェアハウスの core.snapshots ビューに行を挿入します。 このプロシージャは、アップロードパッケージが管理データウェアハウスへのデータのアップロードを開始するたびに呼び出されます。  
   

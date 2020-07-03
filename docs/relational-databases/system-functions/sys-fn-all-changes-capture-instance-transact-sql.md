@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c40f335e4b40a1c15af6247439ac1f19e88d9d37
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4a412ac614037a79e033636b20c21e2464c427ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730087"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898474"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>fn_all_changes_ &lt; capture_instance &gt; (transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **すべての変更**クエリ関数のラッパー。 これらの関数を作成するために必要なスクリプトは、sys.sp_cdc_generate_wrapper_function ストアド プロシージャで生成されます。  
   
@@ -83,7 +83,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|列の型|説明|  
+|列名|列の型|Description|  
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|変更に関連付けられているトランザクションのコミット LSN。 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。|  
 |__CDC_SEQVAL|**binary(10)**|特定のトランザクションに含まれる行の変更を並べ替えるためのシーケンス値です。|  
@@ -91,7 +91,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |__CDC_OPERATION|**nvarchar (2)**|ターゲット環境に行を適用するために必要な操作を示す操作コード。 これは、呼び出しで指定された引数*row_filter_option*の値によって異なります。<br /><br /> *row_filter_option* = ' all '<br /><br /> ' D '-削除操作<br /><br /> ' I '-挿入操作<br /><br /> ' UN '-更新操作の新しい値<br /><br /> *row_filter_option* = ' all update old '<br /><br /> ' D '-削除操作<br /><br /> ' I '-挿入操作<br /><br /> ' UN '-更新操作の新しい値<br /><br /> ' UO '-更新操作の古い値|  
 |\<columns from @update_flag_list>|**bit**|ビットフラグには、列名に _uflag を追加することによって名前が付けられます。 フラグは、 \_ ' UO ' の _CDC_OPERATION が ' i ' の場合は常に NULL に設定されます。 \__CDC_OPERATION が ' UN ' の場合、更新によって対応する列が変更された場合は1に設定されます。 それ以外の場合は、0 に設定されます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  Fn_all_changes_<capture_instance> 関数は、cdc. fn_cdc_get_all_changes_<capture_instance のクエリ関数のラッパーとして機能します。 ラッパーを作成するスクリプトを生成するには、sys.sp_cdc_generate_wrapper ストアド プロシージャを使用します。  
   
  ラッパー関数が自動的に作成されることはありません。 ラッパー関数を作成するには、次の 2 つを行う必要があります。  
