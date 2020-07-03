@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3336905579401f17a5c3afa2509e64670e5ea1ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd89fffb6513306c8877ce6b02a3fadfceb6f1cf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752641"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889233"
 ---
 # <a name="system-base-tables"></a>システム ベース テーブル
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   システム ベース テーブルは、特定のデータベースのメタデータを実際に格納する、基になるテーブルです。 **Master**データベースには、他のどのデータベースにも存在しない追加のテーブルが含まれているので、この点で特別なことです。 これらのテーブルには、サーバー全体のスコープを持つ永続化されたメタデータが含まれています。  
   

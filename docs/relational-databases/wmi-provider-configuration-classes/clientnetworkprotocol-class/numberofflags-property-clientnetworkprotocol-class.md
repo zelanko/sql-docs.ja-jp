@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7a656644-2154-419f-9787-99877f597770
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f1ac43527155e4dfe4439f86d9b628ed68cfa9ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd30518f441dc2f54e65c838911503fd6d57fd56
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731450"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889039"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>NumberOfFlags プロパティ (ClientNetworkProtocol クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [Setordervalue メソッド (ClientNetworkProtocol クラス)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md)によって指定されたクライアントネットワークプロトコルに必要なフラグオプションの数を取得します。  
   
 ## <a name="syntax"></a>構文  
