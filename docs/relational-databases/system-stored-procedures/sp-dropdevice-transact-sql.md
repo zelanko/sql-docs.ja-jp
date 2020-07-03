@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7b68a7497dc3ed64eaf1b9047d1489e38f99be6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9be64080f6e1c56daa0901dbdc174c83d40cf541
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786956"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85859993"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   のインスタンスからデータベースデバイスまたはバックアップデバイスを削除し [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] 、 **master.dbo.sysデバイス**からエントリを削除します。  
    
