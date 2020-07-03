@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d418d0b83951c0b9d91f858f54aab79f197be3d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 10d27989dd5f6fe224d3fc8a70da27634b70ce32
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85663998"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883605"
 ---
 # <a name="systrace_event_bindings-transact-sql"></a>trace_event_bindings (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Trace_event_bindings**カタログビューには、イベントと列の使用可能なすべての使用法の組み合わせの一覧が含まれています。 [ **Trace_event_id** ] 列に表示されている各イベントについて、使用可能なすべての列が [ **trace_column_id** ] 列に一覧表示されます。 特定のイベントが発生するたびに、使用可能なすべての列が設定されるわけではありません。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のバージョンによっては、これらの値は変化しません。  
   

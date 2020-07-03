@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f7be51122765131e8681c11a7c84759e173f1517
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9f1d6865a4c432694201c9b5a666fff3fd46d117
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813799"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883397"
 ---
 # <a name="perform-knowledge-discovery"></a>ナレッジ検出の実行
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、ナレッジ検出を使用してナレッジ ベースを構築する方法について説明します。 検出プロセスでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) によって、コンピューター支援型のプロセスを使用してサンプル データ ソースのデータが分析され、取得されたナレッジがナレッジ ベースに追加されます。 そのナレッジは、ナレッジ検出アクティビティの **[ドメイン値の管理]** 手順か、ドメイン管理アクティビティで変更および強化できます。  
   

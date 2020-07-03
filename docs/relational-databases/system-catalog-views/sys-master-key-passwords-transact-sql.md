@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7d4bdd76786d4c70b0c27bf60c1a51f08828d1b2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a29e6db2af545f919ad176f3b7453e237b08888b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825097"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883808"
 ---
 # <a name="sysmaster_key_passwords-transact-sql"></a>master_key_passwords (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   **Sp_control_dbmasterkey_password**ストアドプロシージャを使用して追加されたデータベースマスターキーのパスワードごとに1行のデータを返します。 マスターキーを保護するために使用されるパスワードは、資格情報ストアに格納されます。 資格情報名は、# #DBMKEY_<database_family_guid>_<random_password_guid # # の形式に従います。 パスワードは、資格情報のシークレットとして保存されます。 **Sp_control_dbmasterkey_password**を使用して追加されたパスワードごとに、 **sys. 資格情報**に行があります。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82825097"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sp_control_dbmasterkey_password &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md)   
  [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02415dbcb9fb4d1b2ccbc4c93d505e292b813fd4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 80e68dada9ec917ed6c47d0ab1e38e6e608ce209
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753730"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888418"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>AcceptPause プロパティ (SqlService クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   サービスを一時停止できるかどうかを指定するブール型のプロパティ値を取得します。  
   
 ## <a name="syntax"></a>構文  

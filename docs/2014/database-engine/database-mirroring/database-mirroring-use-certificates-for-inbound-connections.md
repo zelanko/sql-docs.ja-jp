@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbd9c6fa86e3ef26f0779795ddeacda67976ec21
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: c05397dfbd1740293c4b154ace1ed5704cec11a9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84934223"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885998"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>データベース ミラーリング エンドポイントで着信接続に証明書を使用できるようにする (Transact-SQL)
   このトピックでは、データベース ミラーリングの着信接続を認証する際に証明書を使用するようにサーバー インスタンスを構成する手順について説明します。 着信接続を設定する前に、各サーバー インスタンスで発信接続を構成する必要があります。 詳細については、「 [データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)を使用します。  
@@ -45,7 +45,7 @@ ms.locfileid: "84934223"
   
      次の例では、システム HOST_B のログインを HOST_A のサーバー インスタンスの **master** データベースに作成します。この例では、このログインに `HOST_B_login`という名前が付けられています。 サンプルのパスワードは、独自のパスワードに置き換えてください。  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE LOGIN HOST_B_login   
        WITH PASSWORD = '1Sample_Strong_Password!@#';  
@@ -56,8 +56,8 @@ ms.locfileid: "84934223"
   
      このサーバー インスタンスのログインを表示するには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用できます。  
   
-    ```  
-    SELECT * FROM sys.server_principals  
+    ```sql  
+    SELECT * FROM sys.server_principals;  
     ```  
   
      詳細については、「[sys.server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)」を参照してください。  
@@ -66,7 +66,7 @@ ms.locfileid: "84934223"
   
      次の例では、上記の手順で作成したログイン用のユーザー `HOST_B_user` を作成します。  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE USER HOST_B_user FOR LOGIN HOST_B_login;  
     GO  
@@ -76,7 +76,7 @@ ms.locfileid: "84934223"
   
      このサーバー インスタンスのユーザーを表示するには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用できます。  
   
-    ```  
+    ```sql  
     SELECT * FROM sys.sysusers;  
     ```  
   
@@ -92,7 +92,7 @@ ms.locfileid: "84934223"
   
      次の例では、HOST_B の証明書と HOST_B のユーザーを HOST_A で関連付けています。  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE CERTIFICATE HOST_B_cert  
        AUTHORIZATION HOST_B_user  
@@ -104,8 +104,8 @@ ms.locfileid: "84934223"
   
      このサーバー インスタンスの証明書を表示するには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用します。  
   
-    ```  
-    SELECT * FROM sys.certificates  
+    ```sql  
+    SELECT * FROM sys.certificates;  
     ```  
   
      詳細については、「[sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)」を参照してください。  
@@ -114,7 +114,7 @@ ms.locfileid: "84934223"
   
      たとえば、HOST_A に対する権限を HOST_B 上のリモート サーバー インスタンスに許可し、このローカル ログインに接続 (つまり、`HOST_B_login` に接続) するには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用します。  
   
-    ```  
+    ```sql  
     USE master;  
     GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO [HOST_B_login];  
     GO  
@@ -132,13 +132,13 @@ ms.locfileid: "84934223"
 > [!NOTE]  
 >  この例では、「[データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)」のコード スニペットによって作成される HOST_A 証明書を含む証明書ファイルを使用します。  
   
-```  
+```sql  
 USE master;  
 --On HOST_B, create a login for HOST_A.  
 CREATE LOGIN HOST_A_login WITH PASSWORD = 'AStrongPassword!@#';  
 GO  
 --Create a user, HOST_A_user, for that login.  
-CREATE USER HOST_A_user FOR LOGIN HOST_A_login  
+CREATE USER HOST_A_user FOR LOGIN HOST_A_login;  
 GO  
 --Obtain HOST_A certificate. (See the note   
 --   preceding this example.)  
@@ -148,7 +148,7 @@ CREATE CERTIFICATE HOST_A_cert
    FROM FILE = 'C:\HOST_A_cert.cer';  
 GO  
 --Grant CONNECT permission for the server instance on HOST_A.  
-GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO HOST_A_login  
+GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO HOST_A_login;  
 GO  
 ```  
   
@@ -161,7 +161,7 @@ GO
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  証明書を別のシステムにコピーする場合は、セキュリティで保護されたコピー方法を使用してください。 すべての証明書をセキュリティで保護された状態で保管するよう十分に注意してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースミラーリングと AlwaysOn 可用性グループ &#40;SQL Server のトランスポートセキュリティ&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Transact-sql&#41;&#40;エンドポイントのアクセス許可を付与する](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [暗号化されたミラーデータベースを設定する](set-up-an-encrypted-mirror-database.md)   

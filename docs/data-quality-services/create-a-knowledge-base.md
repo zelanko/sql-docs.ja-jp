@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: eead2ec7e87b11c742adbcf35c681d2645211077
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: aa740172957e3f0ba08812e298db5621ba43e890
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85810644"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887983"
 ---
 # <a name="create-a-knowledge-base"></a>ナレッジ ベースの作成
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースを作成し、ドメイン管理、ナレッジ検出、または照合ポリシーの追加の準備を行う方法について説明します。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "85810644"
   
     -   **[照合ポリシー]** を選択すると、照合ポリシーを作成してナレッジ ベースに追加します。  
   
-6.  **Create** をクリックしてください。  
+6.  **[作成]** をクリックします。  
   
 ##  <a name="follow-up-after-creating-a-knowledge-base"></a><a name="FollowUp"></a>補足情報: ナレッジベースを作成した後  
  ナレッジ ベースを作成した後は、ナレッジ検出を実行するためのウィザード、照合ポリシーを作成するためのウィザード、またはドメイン管理を実行するためのページが表示されます。 ナレッジ検出、ドメイン管理、または照合ポリシーについて詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  

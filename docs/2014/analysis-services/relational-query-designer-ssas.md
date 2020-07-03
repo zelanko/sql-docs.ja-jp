@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: d3bd6b89713edad4429dc0a93aa96cf041a9562a
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 79765f589dcc649bdb2d12bd9dda0d4c955ae916
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84539684"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883930"
 ---
 # <a name="relational-query-designer-ssas"></a>リレーショナル クエリ デザイナー (SSAS)
   リレーショナルクエリデザイナーを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] リレーショナルデータベースおよびから [!INCLUDE[msCoName](../includes/msconame-md.md)] 取得するデータを指定するクエリを作成でき [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] ます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。  グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
@@ -219,7 +219,7 @@ ms.locfileid: "84539684"
 #### <a name="example"></a>例  
  次のクエリでは、`ContactType` というテーブルから名前の一覧を取得します。  
   
-```  
+```sql  
 SELECT Name FROM ContactType  
 ```  
   
@@ -242,7 +242,7 @@ SELECT Name FROM ContactType
 #### <a name="example"></a>例  
  次のクエリでは、`uspGetWhereUsedProductID` というストアド プロシージャを呼び出します。 ストアド プロシージャに入力パラメーターがあるときは、クエリの実行時にパラメーター値を指定する必要があります。  
   
-```  
+```sql  
 uspGetWhereUsedProductID  
 ```  
   

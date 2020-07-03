@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ae17b350622625fef79f7facff1a1ebe6352d3d3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 2f445f4c076497db3c41947e3105440de9025175
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85810341"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882746"
 ---
 # <a name="manage-a-knowledge-base"></a>ナレッジ ベースの管理
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のナレッジ ベースに対して管理機能を実行する方法について説明します。 ナレッジ ベースの削除、ロック解除、作業の破棄、名前の変更、およびプロパティの表示を行うことができます。  
   

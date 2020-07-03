@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5b098d42c8e770496b67f365dd8ccd7bd8ad640
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3405cf5aaf6e25c8d2efc3c0e4753b52e63f2372
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528418"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882125"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>SQL Server トランザクションのロックおよび行のバージョン管理ガイド
 
@@ -231,7 +231,7 @@ GO
   
      ファントム読み取りとは、2 つの同じクエリが実行されたときに 2 番目のクエリによって返された行のコレクションが異なる場合に発生する状況です。 以下の例に、この状況がどのように発生するかを示します。 次の 2 つのトランザクションが同時に実行されると仮定します。 最初のトランザクションにある 2 つの SELECT ステートメントは、異なる結果を返す可能性があります。これは、これら 2 つのステートメントで使用されるデータが 2 番目のトランザクションの INSERT ステートメントで変更されるためです。  
   
-    ```  
+    ```sql  
     --Transaction 1  
     BEGIN TRAN;  
     SELECT ID FROM dbo.employee  
@@ -240,10 +240,9 @@ GO
     SELECT ID FROM dbo.employee  
     WHERE ID > 5 and ID < 10;  
     COMMIT;  
-  
     ```  
   
-    ```  
+    ```sql  
     --Transaction 2  
     BEGIN TRAN;  
     INSERT INTO dbo.employee  
@@ -511,7 +510,7 @@ GO
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|共有範囲。共有リソース ロック、シリアル化可能範囲スキャン。|  
     |RangeS|U|RangeS-U|共有範囲。更新リソース ロック。シリアル化可能更新スキャン。|  
-    |RangeI|[Null]|RangeI-N|挿入範囲。NULL リソース ロック。新しいキーをインデックスに挿入する前に範囲をテストするのに使用します。|  
+    |RangeI|Null|RangeI-N|挿入範囲。NULL リソース ロック。新しいキーをインデックスに挿入する前に範囲をテストするのに使用します。|  
     |RangeX|X|RangeX-X|排他範囲。排他リソース ロック。範囲内のキーを更新するのに使用します。|  
   
 > [!NOTE]  
@@ -562,7 +561,7 @@ GO
   
 -   クエリ プロセッサではインデックスを使用して範囲フィルター述語を実装する必要があります。 たとえば、SELECT ステートメントで WHERE 句を使用すると、ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** 述語を使用して範囲条件を設定できます。 **ColumnX** がインデックス キーに含まれている場合、キー範囲ロックだけを取得できます。  
   
-#### <a name="examples"></a>例  
+#### <a name="examples"></a>使用例  
 
  次のテーブルとインデックスは、この後のキー範囲ロックの例の基準として使用されます。  
   
@@ -572,7 +571,7 @@ GO
 
  範囲スキャン クエリを確実にシリアル化するには、同じトランザクション内で同じクエリを実行するたびに同じ結果が返されるようにします。 他のトランザクションによる範囲スキャン クエリ内に新しい行を挿入しないでください。これはファントム挿入になります。 たとえば、上の図のテーブルとインデックスを使用する次のクエリについて考えます。  
   
-```  
+```sql  
 SELECT name  
     FROM mytable  
     WHERE name BETWEEN 'A' AND 'C';  
@@ -587,7 +586,7 @@ SELECT name
 
  トランザクション内のクエリで存在しない行を選択しようとする場合、同じトランザクション内で再度そのクエリを実行しても、同じ結果を返す必要があります。 どのトランザクションも、存在しない行を追加することはできません。 たとえば、次のクエリについて考えてみます。  
   
-```  
+```sql 
 SELECT name  
     FROM mytable  
     WHERE name = 'Bill';  
@@ -599,7 +598,7 @@ SELECT name
 
  トランザクション内で値を削除する場合、削除処理を実行するトランザクションの間、値が存在する範囲をロックする必要はありません。 シリアル化可能性を維持するには、削除するキー値をトランザクションの終了時までロックするだけで十分です。 たとえば、次の DELETE ステートメントについて考えてみます。  
   
-```  
+```sql  
 DELETE mytable  
     WHERE name = 'Bob';  
 ```  
@@ -612,7 +611,7 @@ DELETE mytable
 
  トランザクション内で値を挿入する場合、挿入処理を行うトランザクションの実行中、その値が含まれている範囲をロックする必要はありません。 シリアル化可能性を維持するには、挿入するキー値をトランザクションの終了時までロックするだけで十分です。 たとえば、次の INSERT ステートメントについて考えてみます。  
   
-```  
+```sql  
 INSERT mytable VALUES ('Dan');  
 ```  
   
@@ -976,7 +975,7 @@ deadlock-list
   
  これらの [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントにより、その後の例で使用するテスト オブジェクトが作成されます。  
   
-```  
+```sql  
 -- Create a test table.  
 CREATE TABLE TestTable  
     (col1        int);  
@@ -998,7 +997,7 @@ GO
   
  あるトランザクションで `SELECT` ステートメントが実行されます。 `HOLDLOCK` ロック ヒントにより、このステートメントではテーブルのインテント共有 (IS) ロックが獲得および保持されます (ここでは、説明のため、行ロックとページ ロックは無視します)。 IS ロックは、トランザクションに割り当てられたパーティションに対してのみ獲得されます。 この例では、パーティション ID 7 に対して IS ロックが獲得されるものとします。  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1011,7 +1010,7 @@ BEGIN TRANSACTION
   
  トランザクションが開始され、このトランザクションで実行されている `SELECT` ステートメントにより、テーブルの共有 (S) ロックが獲得および保持されます。 S ロックはすべてのパーティションに対して獲得されるため、複数のテーブル ロック (各パーティションに 1 つのロック) が存在することになります。 たとえば、16 基の CPU を搭載しているシステムで、ロック パーティション ID 0 ～ 15 に 16 個の S ロックが発行されるとします。 S ロックは、セッション 1 のトランザクションによりパーティション ID 7 に対して保持されている IS ロックと互換性があるので、トランザクション間のブロッキングは発生しません。  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1022,7 +1021,7 @@ BEGIN TRANSACTION
   
  セッション 1 において依然としてアクティブなトランザクションで次の `SELECT` ステートメントが実行されます。 排他 (X) テーブル ロック ヒントにより、このトランザクションではテーブルの X ロックの獲得が試行されます。 ただし、セッション 2 のトランザクションで保持されている S ロックにより、パーティション ID 0 で X ロックがブロックされます。  
   
-```  
+```sql  
 SELECT col1  
     FROM TestTable  
     WITH (TABLOCKX);  
@@ -1034,7 +1033,7 @@ SELECT col1
   
  あるトランザクションで `SELECT` ステートメントが実行されます。 `HOLDLOCK` ロック ヒントにより、このステートメントではテーブルのインテント共有 (IS) ロックが獲得および保持されます (ここでは、説明のため、行ロックとページ ロックは無視します)。 IS ロックは、トランザクションに割り当てられたパーティションに対してのみ獲得されます。 この例では、パーティション ID 6 に対して IS ロックが獲得されるものとします。  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1049,7 +1048,7 @@ BEGIN TRANSACTION
   
  X ロックが獲得されていないパーティション ID 7 ～ 15 に対しては、他のトランザクションがロックの獲得を続行できます。  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1308,13 +1307,13 @@ BEGIN TRANSACTION
 
  以下の例は、スナップショット分離トランザクションと、行のバージョン管理を使用する Read Committed トランザクションとの動作の違いを示しています。  
   
-#### <a name="a-working-with-snapshot-isolation"></a>A. スナップショット分離を使用した作業  
+#### <a name="a-working-with-snapshot-isolation"></a>A: スナップショット分離を使用した作業  
 
  この例では、スナップショット分離レベルで実行中のトランザクションが、別のトランザクションにより変更されるデータを読み取ります。 スナップショット トランザクションでは、別のトランザクションで実行される更新操作をブロックしないで、バージョン管理される行から引き続きデータを読み取り、データの変更が無視されます。 ただし、スナップショット トランザクションが、別のトランザクションによって既に変更されているデータの変更を試みた場合は、そのスナップショット トランザクションがエラーを生成し、終了します。  
   
  セッション 1:  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or the 2008 or 2008R2 version of the AdventureWorks database.  
 GO  
   
@@ -1337,7 +1336,7 @@ BEGIN TRANSACTION;
   
  セッション 2 :  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1359,7 +1358,7 @@ BEGIN TRANSACTION;
   
  セッション 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this shows  
     -- the employee having 48 vacation hours.  The  
     -- snapshot transaction is still reading data from  
@@ -1371,7 +1370,7 @@ BEGIN TRANSACTION;
   
  セッション 2 :  
   
-```  
+```sql  
 -- Commit the transaction; this commits the data  
 -- modification.  
 COMMIT TRANSACTION;  
@@ -1380,7 +1379,7 @@ GO
   
  セッション 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still   
     -- shows the employee having 48 vacation hours  
     -- even after the other transaction has committed  
@@ -1405,7 +1404,7 @@ ROLLBACK TRANSACTION
 GO  
 ```  
   
-#### <a name="b-working-with-read-committed-using-row-versioning"></a>B. 行のバージョン管理を使用する Read Committed  
+#### <a name="b-working-with-read-committed-using-row-versioning"></a>B: 行のバージョン管理を使用する Read Committed  
 
  この例では、行のバージョン管理を使用する Read Committed トランザクションを、別のトランザクションと同時に実行しています。 Read Committed トランザクションは、スナップショット トランザクションとは異なる動作をします。 スナップショット トランザクションと同様に Read Committed トランザクションも、別のトランザクションがデータを変更した後でも、バージョン管理される行を読み取ります。 ただし、スナップショット トランザクションとは異なり、Read Committed トランザクションは以下のように動作します。  
   
@@ -1415,7 +1414,7 @@ GO
   
  セッション 1:  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or any earlier version of the AdventureWorks database.  
 GO  
   
@@ -1442,7 +1441,7 @@ BEGIN TRANSACTION;
   
  セッション 2 :  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1465,7 +1464,7 @@ BEGIN TRANSACTION;
   
  セッション 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still shows  
     -- the employee having 48 vacation hours.  The  
     -- read-committed transaction is still reading data   
@@ -1479,7 +1478,7 @@ BEGIN TRANSACTION;
   
  セッション 2 :  
   
-```  
+```sql  
 -- Commit the transaction.  
 COMMIT TRANSACTION;  
 GO  
@@ -1488,7 +1487,7 @@ GO
   
  セッション 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement which now shows the   
     -- employee having 40 vacation hours.  Being   
     -- read-committed, this transaction is reading the   
@@ -1518,7 +1517,7 @@ GO
   
  次の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントで、READ_COMMITTED_SNAPSHOT を有効にします。  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET READ_COMMITTED_SNAPSHOT ON;  
 ```  
@@ -1527,7 +1526,7 @@ ALTER DATABASE AdventureWorks2012
   
  次の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントで、ALLOW_SNAPSHOT_ISOLATION を有効にします。  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
 ```  
@@ -1557,7 +1556,7 @@ ALTER DATABASE AdventureWorks2012
   
 -   Read Committed。次のコード例に示すように、`READ_COMMITTED_SNAPSHOT` データベース オプションを `ON` に設定して行のバージョン管理を使用します。  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET READ_COMMITTED_SNAPSHOT ON;  
     ```  
@@ -1566,14 +1565,14 @@ ALTER DATABASE AdventureWorks2012
   
 -   次のコード例に示すように、`ALLOW_SNAPSHOT_ISOLATION` データベース オプションを `ON` に設定することによってスナップショット分離を有効にします。  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET ALLOW_SNAPSHOT_ISOLATION ON;  
     ```  
   
      スナップショット分離レベルで実行中のトランザクションでは、スナップショットが有効になっているデータベースのテーブルにアクセスできます。 スナップショットが有効になっていないテーブルにアクセスするには、分離レベルを変更する必要があります。 たとえば、次のコード例では、スナップショット トランザクションで実行中に 2 つのテーブルを結合する `SELECT` ステートメントを示します。 1 つのテーブルは、スナップショット分離が無効なデータベースに属しています。 スナップショット分離レベルで `SELECT` ステートメントを実行すると、実行に失敗します。  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1584,7 +1583,7 @@ ALTER DATABASE AdventureWorks2012
   
      次に、トランザクション分離レベルを Read Committed に変更するように変更した同じ `SELECT` ステートメントのコード例を示します。 この変更により、`SELECT` ステートメントは正常に実行されます。  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1618,7 +1617,7 @@ ALTER DATABASE AdventureWorks2012
   
      たとえば、データベース管理者が、次の `ALTER INDEX` ステートメントを実行したとします。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     ALTER INDEX AK_Employee_LoginID  
@@ -1648,7 +1647,7 @@ ALTER DATABASE AdventureWorks2012
   
  現在の LOCK_TIMEOUT 設定を確認するには、@ 関数を実行し @LOCK_TIMEOUT ます。  
   
-```  
+```sql  
 SELECT @@lock_timeout;  
 GO  
 ```  
@@ -1671,7 +1670,7 @@ GO
   
  次の例では、`SERIALIZABLE` 分離レベルを設定します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1688,7 +1687,7 @@ GO
   
  現在設定されているトランザクション分離レベルを特定するには、次の例に示すように、`DBCC USEROPTIONS` ステートメントを使用します。 次に示す結果セットは、使用中のシステムの結果セットとは異なる場合があります。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;  
@@ -1736,7 +1735,7 @@ GO
   
  次の例のように、トランザクションの分離レベルを `SERIALIZABLE` に設定し、テーブルレベルのロック ヒントとして `NOLOCK` を `SELECT` ステートメントで使用すると、シリアル化可能なトランザクションの管理に通常使用されるキー範囲ロックが取得されません。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1793,7 +1792,7 @@ GO
   
  次の例は、入れ子構造のトランザクションの使用方法を示しています。 プロシージャ `TransProc` は、プロセスのトランザクション モードに関係なくトランザクションを実行します。 トランザクションがアクティブであるときに `TransProc` を呼び出すと、`TransProc` 内の入れ子になっているトランザクションは概して無視され、外側のトランザクションに対して行った最終的な操作に基づいて INSERT ステートメントがコミットまたはロールバックされます。 未完了のトランザクションがないプロセスが `TransProc` を実行した場合は、プロシージャの最後に INSERT ステートメントが COMMIT TRANSACTION によって有効にコミットされます。  
   
-```  
+```sql  
 SET QUOTED_IDENTIFIER OFF;  
 GO  
 SET NOCOUNT OFF;  
@@ -1947,7 +1946,7 @@ GO
   
  [このガイドの [](#Top) ![トップに戻る] リンクで使用される矢印アイコン](media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
  [SQL Server 2005 行のバージョン管理ベースのトランザクション分離](https://msdn.microsoft.com/library/ms345124(v=sql.90).aspx)   
  [行のバージョン管理のオーバーヘッド](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   

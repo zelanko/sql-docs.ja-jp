@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 87af29b64e7185148ead0f089d539bc0519911a5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: e83f8c2f75725c5de0dc7fa6e3e78666568fad8f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84937773"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886014"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>DQS データベースのデタッチとアタッチ
   ここでは、DQS データベースをデタッチおよびアタッチする方法について説明します。  
@@ -82,14 +82,13 @@ ms.locfileid: "84937773"
   
 9. クエリ エディター ウィンドウで、SQL ステートメントをコピーします。  
   
-    ```  
+    ```sql  
     ALTER DATABASE [DQS_MAIN] SET TRUSTWORTHY ON;  
     EXEC sp_configure 'clr enabled', 1;  
     RECONFIGURE WITH OVERRIDE  
     ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER  
     ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##]  
     ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##]  
-  
     ```  
   
 10. F5 キーを押してステートメントを実行します。 [結果] ペインを確認してステートメントが正常に実行されたことを確認します。 " `Configuration option 'clr enabled' changed from 1 to 1. Run the RECONFIGURE statement to install.`" というメッセージが表示されます。  
@@ -98,7 +97,7 @@ ms.locfileid: "84937773"
   
  また、Transact-SQL ステートメントを使用して DQS データベースをアタッチすることもできます。 Transact-SQL ステートメントを使用したデータベースのインポートに関する詳細については、「 [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) 」の「 [Attach a Database](../relational-databases/databases/attach-a-database.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a70c96b28665141ada5138ac5dd99477d37de1ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 25d1e3624dcaacd78325ba359cfb559a24eff3f6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764338"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882049"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]から返すことのできるシステム エラーまたは警告ごとに 1 行のデータを保持します。 では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] エラーの説明がユーザーの画面に表示されます。  
   

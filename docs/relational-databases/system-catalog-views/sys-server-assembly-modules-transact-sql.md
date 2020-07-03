@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: af799e38-2d16-49b2-bcf5-6f9199af899e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9e60d1bca57e68da621eaef448cc9a83ede5aa7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cfbeafd7ef52674adbd8fc6898baf663373b91a9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717556"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887878"
 ---
 # <a name="sysserver_assembly_modules-transact-sql"></a>server_assembly_modules (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   TA 型のサーバーレベルのトリガーのアセンブリモジュールごとに1行の値を格納します。 このビューは、アセンブリ トリガーを、基になる CLR 実装にマップします。 この関係を**server_triggers**に結合できます。 アセンブリを**master**データベースに読み込む必要があります。 組 (object_id) は、リレーションシップのキーです。  
   

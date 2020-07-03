@@ -14,17 +14,17 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63f6e86f08ea93525704159483b939c79c6575d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59574cdd08b519704d94aa0303b30f2428036157
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909041"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884772"
 ---
-# <a name="scripting"></a>スクリプトの作成
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+# <a name="scripting"></a>スクリプト
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  SMO でのスクリプト作成は、 <xref:Microsoft.SqlServer.Management.Smo.Scripter>オブジェクトとその子オブジェクト、または個々のオブジェクトの**スクリプト**メソッドによって制御されます。 オブジェクト<xref:Microsoft.SqlServer.Management.Smo.Scripter>は、の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス上のオブジェクトに対する依存関係からのマッピングを制御します。  
+  SMO でのスクリプト作成は、 <xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクトとその子オブジェクト、または個々のオブジェクトの**スクリプト**メソッドによって制御されます。 オブジェクトは、 <xref:Microsoft.SqlServer.Management.Smo.Scripter> のインスタンス上のオブジェクトに対する依存関係からのマッピングを制御し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクト、およびその子オブジェクトを使用する高度なスクリプティング プロセスには、次の 3 つのフェーズがあります。  
   

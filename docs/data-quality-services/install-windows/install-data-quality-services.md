@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b7a9d9ce36a3419883adae9050ffabd0d1f9b012
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ef1d88921555a30c74c09a0c768e7a29ca9c894
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252189"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887972"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services のインストール
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)](DQS) には、 **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** と**[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** の2つのコンポーネントが含まれています。  
+  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)](DQS) には、との2つのコンポーネントが含まれてい **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** ます。  
   
 |DQS コンポーネント|説明|  
 |-------------------|-----------------|  
@@ -67,7 +67,7 @@ ms.locfileid: "75252189"
   
 |ページ|アクション|  
 |----------|------------|  
-|特徴選択|選択:<br /><br /> **[データベース エンジン サービス]** の下の **[Data Quality Services]** を選択して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]をインストールします。 <br />**[Data Quality Services]** チェック ボックスをオンにすると、SQL Server セットアップでインストーラー ファイル DQSInstaller.exe がコンピューターの SQL Server インスタンス ディレクトリにコピーされます。 *のインストールを完了*[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] するには、SQL Server セットアップを完了した後で、このファイルを実行する必要があります。 また、使用する前に、いくつかの追加の手順を実行して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] を構成する必要があります。 詳細については、「 [インストール後の作業](#PostInstallationTasks)」を参照してください。<br /><br /> **[Data Quality Client]** を選択して [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]をインストールします。<br /><br /> しない**管理ツール-** [**管理ツール-基本] の**下[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]にある [インストール] を実行します。 これにより、グラフィカル ユーザー インターフェイスを使用して SQL Server のインスタンスを管理できるようになり、次のセクションで示すインストール後の追加の作業の実行が容易になります。|  
+|特徴選択|選択:<br /><br /> **[データベース エンジン サービス]** の下の **[Data Quality Services]** を選択して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]をインストールします。 <br />**[Data Quality Services]** チェック ボックスをオンにすると、SQL Server セットアップでインストーラー ファイル DQSInstaller.exe がコンピューターの SQL Server インスタンス ディレクトリにコピーされます。 *のインストールを完了*[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] するには、SQL Server セットアップを完了した後で、このファイルを実行する必要があります。 また、使用する前に、いくつかの追加の手順を実行して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] を構成する必要があります。 詳細については、「 [インストール後の作業](#PostInstallationTasks)」を参照してください。<br /><br /> **[Data Quality Client]** を選択して [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]をインストールします。<br /><br /> しない**管理ツール-** [**管理ツール-基本] の**下にある [インストール] を実行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。 これにより、グラフィカル ユーザー インターフェイスを使用して SQL Server のインスタンスを管理できるようになり、次のセクションで示すインストール後の追加の作業の実行が容易になります。|  
 |データベース エンジンの構成|**[現在のユーザーの追加]** をクリックして、ユーザー Windows アカウントを sysadmin 固定サーバー ロールに追加します。 これは、後で DQSInstaller.exe ファイルを実行して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了するために必要です。|  
   
 ##  <a name="post-installation-tasks"></a><a name="PostInstallationTasks"></a>インストール後の作業  
@@ -89,7 +89,7 @@ ms.locfileid: "75252189"
   
      これにより [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールが完了します。  
   
-     詳細については、「 [Data Quality Server のインストールを完了するための DQSInstaller の実行」を](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)参照してください。  
+     詳細については、「 [Data Quality Server のインストールを完了するための DQSInstaller.exe の実行」を](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)参照してください。  
   
 2.  ユーザーに DQS ロールを付与します。  
   
@@ -113,10 +113,10 @@ ms.locfileid: "75252189"
      詳細については、「  
                     [DQS 操作のデータにアクセス](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビデオ: DQS をインストールして構成する](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [.NET Framework の更新後に SQLCLR アセンブリをアップグレードする](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [DQSInstaller を使用した DQS ナレッジベースのエクスポートとインポート](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
+ [DQSInstaller.exeを使用した DQS ナレッジベースのエクスポートとインポート](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Data Quality Services のアップグレード](../../database-engine/install-windows/upgrade-data-quality-services.md)   
  [Data Quality Server オブジェクトの削除](../../sql-server/install/remove-data-quality-server-objects.md)   
  [ビジネスインテリジェンス機能のインストール SQL Server](../../sql-server/install/install-sql-server-business-intelligence-features.md)   

@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 9abc595c-346d-42dc-a227-a73cd0a356eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9ed21f6458cfeb7b9a812a179339029846209344
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cacca0d6558670f48ba0d8458c28d0213e57373f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733556"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882980"
 ---
 # <a name="external-operations-catalog-views-transact-sql"></a>外部の操作のカタログビュー (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データソース、ファイル形式、テーブルなどの外部データオブジェクトのカタログビューを次に示します。 これらのビューを使用して、PolyBase 操作で使用される Hadoop テーブルなどの項目の状態を照会します。  
   
