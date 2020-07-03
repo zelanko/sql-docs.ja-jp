@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11aa73828caba66637d5d5b87a478dca851bdaf9
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 7c7f644b94c405fa4072ecd7d7c448f6ea865404
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151951"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879972"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   SQL エージェントジョブのスケジュールを作成します。  
   
@@ -73,7 +73,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**1**|1 度|  
 |**4**|毎日|  
 |**8**|週次|  
-|**まで**|月 1 回|  
+|**16**|月単位|  
 |**32**|毎月、frequency_interval を基準と*します。*|  
 |**64**|エージェントサービスが開始されたときに実行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。|  
 |**128**|コンピューターがアイドル状態のときに実行します。|  
@@ -110,7 +110,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|末尾|  
+|**16**|末尾|  
   
  *frequency_relative_interval*は、間隔の発生を示します。 たとえば、 *frequency_relative_interval*が**2**に設定され、 *frequency_type*が**32**に設定され、 *frequency_interval*が**3**に設定されている場合、スケジュールされたジョブは毎月第2火曜日に発生します。  
   
@@ -162,7 +162,7 @@ EXEC msdb.dbo.sp_add_jobschedule
         @active_start_time = 20000 -- 2:00 AM
 ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スケジュールを作成してジョブにアタッチする](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [ジョブのスケジュール設定](../../ssms/agent/schedule-a-job.md)   
  [スケジュールを作成する](../../ssms/agent/create-a-schedule.md)   

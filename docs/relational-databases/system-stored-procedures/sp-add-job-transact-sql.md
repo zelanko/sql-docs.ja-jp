@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c78536fbf8e9bb00133d7724f218c60c3d005fb2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e6a2cc2c6dcb1eb1d9068a5107f504683eb516bf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826348"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879976"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   SQL エージェントサービスによって実行される新しいジョブを追加します。  
   
@@ -78,7 +78,7 @@ sp_add_job [ @job_name = ] 'job_name'
 |**0**|行わない|  
 |**1**|成功時|  
 |**2** (既定値)|失敗時|  
-|**3**|Always|  
+|**3**|常に表示する|  
   
 `[ @notify_level_email = ] email_level`このジョブの完了時に電子メールを送信するタイミングを示す値。 *email_level*は**int**,、既定値は**0**,、しないことを示します。 *email_level*は*eventlog_level*と同じ値を使用します。  
   
@@ -141,7 +141,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>B. ポケットベル、電子メール、および net send の情報を含むジョブの追加  
+### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>B: ポケットベル、電子メール、および net send の情報を含むジョブの追加  
  この例では、ジョブが失敗した `Ad hoc Sales Data Backup` `François Ajenstat` 場合に (ポケットベル、電子メール、またはネットワークのポップアップメッセージによって) 通知されるという名前のジョブを作成し、正常に完了したときにジョブを削除します。  
   
 > [!NOTE]  
@@ -167,7 +167,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_add_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_add_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   

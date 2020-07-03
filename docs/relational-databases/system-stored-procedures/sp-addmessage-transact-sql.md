@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b44560cfd5c97abf536b372d534aaec59318f021
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: adf32fad3c233023529d362cd7382ca6376b3cee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716559"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85877391"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   のインスタンスに新しいユーザー定義エラーメッセージを格納 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] します。 **Sp_addmessage**を使用して格納されたメッセージを表示するには、**メッセージ**カタログビューを使用します。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b4a3586625fa0a20d59ca0222ea1abbde6a6fef5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 007b31ebb5ec7f35f6bf3b1f9fd4f76ff8c47f9e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716433"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876780"
 ---
 # <a name="sp_addremotelogin-transact-sql"></a>sp_addremotelogin (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ローカルサーバーに新しいリモートログイン ID を追加します。 これにより、リモートサーバーがリモートプロシージャコールに接続して実行できるようになります。  
   

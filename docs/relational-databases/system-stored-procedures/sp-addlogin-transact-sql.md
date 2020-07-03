@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06629b059afffe3baa0a34caec1337d7bc3f2517
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 477393f34743ba0643384762164697b845cadde4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757989"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85877377"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーが認証を使用してのインスタンスに接続できるようにする新しいログインを作成し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -72,7 +72,7 @@ sp_addlogin [ @loginame = ] 'login'
  [ @encryptopt =] '*encryption_option*'  
  パスワードを、クリア テキストとして渡すか、またはクリア テキスト パスワードのハッシュとして渡すかを指定します。 暗号化は行われないことに注意してください。 ここでは、"暗号化" という用語を旧バージョンとの互換性のために使用しています。 クリアテキストのパスワードが渡されると、ハッシュされます。 ハッシュは保存されます。 *encryption_option*は**varchar (20)** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |NULL|パスワードがクリア テキストで渡されます。 既定値です。|  
 |**skip_encryption**|パスワードは既にハッシュされています。 は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 再ハッシュせずに値を格納する必要があります。|  

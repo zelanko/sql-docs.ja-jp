@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e917afd75495ed2e6c2506bc0c012d4bfa7a8e4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d2bdee46efa339776a3d6baf92e616c56026c0b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727220"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880016"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   アラートを作成します。  
   
@@ -79,9 +79,9 @@ sp_add_alert [ @name = ] 'name'
 > [!IMPORTANT]
 >  ポケットベルと**net send**のオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンでエージェントから削除される予定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**0**|なし|  
+|**0**|None|  
 |**1**|電子メール|  
 |**2**|ポケットベル|  
 |**4**|**net send**|  

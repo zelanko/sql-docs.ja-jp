@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c12d6650023fcb3473a834d8145437d8a013df5e
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 88dafeff6621a181b3720917235705d4e0b12e2d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818134"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85878291"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   任意の数のジョブで使用できるスケジュールを作成します。  
   
@@ -60,7 +60,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_type = ] freq_type`ジョブがいつ実行されるかを示す値です。 *freq_type*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**4**|毎日|  
@@ -84,7 +84,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_subday_type = ] freq_subday_type`*Freq_subday_interval*の単位を指定します。 *freq_subday_type*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。  
   
-|値|説明 (単位)|  
+|[値]|説明 (単位)|  
 |-----------|--------------------------|  
 |**0x1**|指定された時間|  
 |**0x2**|Seconds|  
@@ -95,7 +95,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_relative_interval = ] freq_relative_interval`*Freq_interval*が 32 (月単位) の場合、各月における*freq_interval*のジョブの発生回数。 *freq_relative_interval*は**int**,、既定値は**0**,、これらの値のいずれかを指定することができます。 *freq_type*が32と等しくない場合、 *freq_relative_interval*は無視されます。  
   
-|値|説明 (単位)|  
+|[値]|説明 (単位)|  
 |-----------|--------------------------|  
 |**1**|First|  
 |**2**|Second|  
@@ -162,7 +162,7 @@ EXEC dbo.sp_add_schedule
 GO  
 ```  
   
-### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>B. スケジュールを作成し、複数のジョブにスケジュールをアタッチする  
+### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>B: スケジュールを作成し、複数のジョブにスケジュールをアタッチする  
  次の例では、という名前のスケジュールを作成し `NightlyJobs` ます。 このスケジュールを使用するジョブは、毎日、サーバーの時間が `01:00` になると実行されます。 この例では、スケジュールをジョブ `BackupDatabase` とジョブにアタッチし `RunReports` ます。  
   
 > [!NOTE]  
@@ -190,7 +190,7 @@ EXEC sp_attach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スケジュールを作成してジョブにアタッチする](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [ジョブのスケジュール設定](../../ssms/agent/schedule-a-job.md)   
  [スケジュールを作成する](../../ssms/agent/create-a-schedule.md)   
