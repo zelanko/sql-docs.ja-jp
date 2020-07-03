@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cea339352a983028c161cef6fec8643955457b55
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6962e4bb4387cad22e16d62176ced10ad8e82205
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750663"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85864350"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定したジョブ、警告、またはオペレーターのカテゴリを、現在のサーバーから削除します。  
   
@@ -42,7 +42,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="arguments"></a>引数  
 `[ @class = ] 'class'`カテゴリのクラス。 *クラス*は**varchar (8)**,、既定値はありませんが、次のいずれかの値を持つ必要があります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**補足**|ジョブカテゴリを削除します。|  
 |**アラート**|アラートカテゴリを削除します。|  
