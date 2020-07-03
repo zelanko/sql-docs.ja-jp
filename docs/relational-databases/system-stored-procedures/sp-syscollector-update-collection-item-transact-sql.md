@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 786f2d3aa1b0f415ea349e9196082f305e904db8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efbdc613c641482df6b4dfe88a7f132124276578
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725516"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892812"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ユーザー定義のコレクション アイテムのプロパティまたは名前の変更に使用されます。  
   
@@ -66,7 +66,7 @@ sp_syscollector_update_collection_item
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  コレクション セットが非キャッシュ モードに設定されている場合、このモードではコレクション セットに指定されたスケジュールでデータ収集とアップロードが行われるため、頻度を変更しても無視されます。 コレクションセットの状態を表示するには、次のクエリを実行します。 `<collection_item_id>` は、更新するコレクション アイテムの ID に置き換えてください。  
   
 ```  
@@ -88,7 +88,7 @@ WHERE collection_item_id = <collection_item_id>;
   
 -   @parameters  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、「 [sp_syscollector_create_collection_item &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)」で定義されている例で作成したコレクションアイテムに基づいています。  
   
 ### <a name="a-changing-the-collection-frequency"></a>A: 収集頻度を変更する  

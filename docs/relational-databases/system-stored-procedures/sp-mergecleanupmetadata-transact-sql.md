@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3670565137456fe32206072ac91fa0b5f90b410c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 385176695fe9600250eaa5b6a839ebd833910618
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640369"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891623"
 ---
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 より前のバージョンのを実行しているサーバーを含むレプリケーショントポロジでのみ使用してください。**sp_mergecleanupmetadata**を使用すると、管理者は、 **MSmerge_genhistory**、 **MSmerge_contents**および**MSmerge_tombstone**システムテーブル内のメタデータをクリーンアップできます。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -45,7 +45,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_mergecleanupmetadata**は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 1 より前のバージョンのを実行しているサーバーを含むレプリケーショントポロジでのみ使用してください [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。 Service Pack 1 以降のみを含むトポロジでは、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 自動保有期間に基づくメタデータのクリーンアップを使用する必要があります。 このストアド プロシージャを実行する場合は、実行するコンピューター上で、きわめて大きいログファイルが必要であり、作成される可能性があることに注意してください。  
   
 > [!CAUTION]

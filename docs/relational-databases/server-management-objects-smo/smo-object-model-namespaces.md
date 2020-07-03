@@ -16,26 +16,26 @@ ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e606844d031bb4ab2c29d9dfd012c97601ca12f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 510ec428f43f20715ab85d1f1f5e719e11863a74
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71077541"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894827"
 ---
 # <a name="smo-object-model-namespaces"></a>SMO オブジェクト モデル名前空間
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) にはさまざまな名前空間があります。 それぞれの名前空間は、SMO 内の機能の各領域を表しています。  
   
- で[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は、SMO アセンブリは C:\PROGRAM are SQL Server\130\SDK\Assemblies フォルダーにあります。  
+ では、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SMO アセンブリは C:\Program ARE SQL Server\130\SDK\Assemblies フォルダーにあります。  
   
 ## <a name="namespaces"></a>名前空間  
  SMO 名前空間は次のとおりです。  
   
 |クラス|関数|  
 |-----------|--------------|  
-|<xref:Microsoft.SqlServer.Management.Smo>|プログラムによって操作[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するために使用されるインスタンスクラス、ユーティリティクラス、および列挙が含まれています。|  
+|<xref:Microsoft.SqlServer.Management.Smo>|プログラムによって操作するために使用されるインスタンスクラス、ユーティリティクラス、および列挙が含まれてい [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |<xref:Microsoft.SqlServer.Management.Common>|接続クラスなど、レプリケーション管理オブジェクト (RMO) および SMO に共通のクラスが含まれています。|  
 |<xref:Microsoft.SqlServer.Management.Smo.Agent>|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを表すクラスが含まれています。|  
 |<xref:Microsoft.SqlServer.Management.Smo.Wmi>|WMI プロバイダーを表すクラスが含まれています。|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ca67d4b23ee91330939e5607dd3e32a0a79e808c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a14767d15891ae970269feda6e712bf490ff5420
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634373"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893608"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定したメンテナンス プランに関する情報を返します。 プランが指定されていない場合、このストアドプロシージャは、すべてのメンテナンスプランに関する情報を返します。  
   
@@ -47,14 +47,14 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 `[ @plan_id = ] 'plan\_id'`メンテナンスプランのプラン ID を指定します。 *plan_id*は**UNIQUEIDENTIFIER**です。 既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
  *Plan_id*が指定されている場合、 **sp_help_maintenance_plan**は Plan、Database、Job という3つのテーブルを返します。  
   
 ### <a name="plan-table"></a>プランテーブル  
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|メンテナンスプラン ID。|  
 |**plan_name**|**sysname**|メンテナンスプランの名前。|  
@@ -80,13 +80,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|-----------------|  
 |**job_id**|メンテナンスプランに関連付けられているすべてのジョブの ID。 *job_id*は**uniqueidentifier**です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_help_maintenance_plan**は**msdb**データベースにあります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_help_maintenance_plan**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、メンテナンスプランの FAD6F2AB-3571-11D3-9D4A-00C04FB925FC について説明します。  
   
 ```  

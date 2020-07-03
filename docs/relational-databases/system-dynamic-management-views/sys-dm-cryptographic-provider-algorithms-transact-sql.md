@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e355af1188960696170e0ad7a01175e55504e22
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84b7a59ce701118f2c7e1fc28160ebc6d9e8b60d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717462"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894607"
 ---
 # <a name="sysdm_cryptographic_provider_algorithms-transact-sql"></a>dm_cryptographic_provider_algorithms (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   拡張キー管理 (EKM) プロバイダーによってサポートされているアルゴリズムを返します。  
   
@@ -55,7 +55,7 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、public データベース ロールのメンバーである必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、識別番号が `1234567` であるプロバイダーのプロバイダー オプションを表示しています。  
   
 ```  

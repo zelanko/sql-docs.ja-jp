@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e3cb3c3a3d5b623bdac08f2cf97d203db632ebd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 869071ff8e66b5e9d20269c91823f3019e2b03b6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731701"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891912"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   エージェントサブシステムの一覧を表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
@@ -39,7 +39,7 @@ sp_enum_sqlagent_subsystems
 ```  
   
 ## <a name="arguments"></a>引数  
- なし  
+ None  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -58,7 +58,7 @@ sp_enum_sqlagent_subsystems
 |**max_worker_threads**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このサブシステムに対してエージェントが開始するスレッドの最大数。|  
 |**subsystem_id**|**int**|サブシステムの識別子|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  この手順では、インスタンスで使用可能なサブシステムの一覧を示します。  
   
 ## <a name="permissions"></a>アクセス許可  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b99676242133179bbfc26421c5d740b95c7c16d8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2322ed6f6f8a732a6bffd0f75946764c52e04265
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652198"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894751"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>変更データキャプチャ-sys. dm_cdc_errors
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   変更データキャプチャのログスキャンセッション中に発生したエラーごとに1行のデータを返します。  
  
@@ -45,7 +45,7 @@ ms.locfileid: "85652198"
 |**begin_lsn**|**nvarchar (23)**|エラーが発生したときに処理されていたトランザクションの開始 LSN 値。<br /><br /> 0 は、ログ スキャン セッション中にエラーが発生しなかったことを示します。|  
 |**sequence_value**|**nvarchar (23)**|エラー発生時に処理されていた行の LSN 値です。<br /><br /> 0 は、ログ スキャン セッション中にエラーが発生しなかったことを示します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **dm_cdc_errors**には、前の32セッションのエラー情報が含まれています。  
   
 ## <a name="permissions"></a>アクセス許可  

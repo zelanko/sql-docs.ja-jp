@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a59ec7b385ca6c1b51967ec9a49f3d96d5b3e1c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd1b3b6430baa2e1df39373876fbe08a57b9b926
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738542"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893732"
 ---
 # <a name="sp_help_fulltext_columns-transact-sql"></a>sp_help_fulltext_columns (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   フルテキスト インデックス作成用として指定された列を返します。  
   
@@ -66,7 +66,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、既定では**public**ロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`Document` テーブルでフルテキスト インデックス作成用に指定された列に関する情報を返します。  
   
 ```  

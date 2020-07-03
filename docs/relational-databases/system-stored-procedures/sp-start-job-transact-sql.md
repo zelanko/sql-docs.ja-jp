@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f61de8794969712c6a448cbcee59c70b7156028f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 506fde9c77a0a78ef36bc4a89933ccdbe6a5f45d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725681"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893014"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]直ちにジョブを実行するようにエージェントに指示します。  
   
@@ -79,7 +79,7 @@ sp_start_job
   
  **SQLAgentUserRole**と**SQLAgentReaderRole**のメンバーは、自分が所有するジョブのみを開始できます。 **Sqlagentoperatorrole**のメンバーは、他のユーザーによって所有されているものも含め、すべてのローカルジョブを開始できます。 **Sysadmin**のメンバーは、すべてのローカルジョブとマルチサーバージョブを開始できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、という名前のジョブを開始し `Weekly Sales Data Backup` ます。  
   
 ```  

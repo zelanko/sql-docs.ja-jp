@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7f158839f45b3b890c0ae46aee1d74f4e6a3e59b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 930b5ae195ab917faf5425bd2084314a633318b3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772948"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893036"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   固定サーバーロールの権限を表示します。  
   
@@ -65,7 +65,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |**ServerRole**|**sysname**|固定サーバーロールの名前|  
 |**権限**|**sysname**|**ServerRole**に関連付けられたアクセス許可|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  表示される権限には、固定サーバー ロールのメンバーが実行できる、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとその他の特別な操作が含まれます。 固定サーバーロールの一覧を表示するには、 **sp_helpsrvrole**を実行します。  
   
  **Sysadmin**固定サーバーロールには、他のすべての固定サーバーロールの権限が与えられています。  

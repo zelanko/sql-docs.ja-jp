@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b16ddb35ed3d8ec64eb783e904f3c9b6120cfbd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 50ed280cf691c974a7a17991e4c4a28f851191e1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725632"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892984"
 ---
 # <a name="sp_subscription_cleanup-transact-sql"></a>sp_subscription_cleanup (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サブスクライバーでサブスクリプションが削除されたときに、メタデータを削除します。 同期トランザクション サブスクリプションの場合、これには即時更新トリガーも含まれます。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
   
@@ -51,7 +51,7 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_subscription_cleanup**は、トランザクションレプリケーションとスナップショットレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

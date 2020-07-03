@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6a542e44f33a64b5cdd4727aab891592338b880
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c3c0351bd541738e2540cc1a0624cf0ca9836c5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724616"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893980"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>dm_clr_appdomains (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サーバー内のアプリケーションドメインごとに1行の値を返します。 アプリケーションドメイン (**AppDomain**) は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アプリケーションの分離の単位である共通言語ランタイム (CLR) の構成要素です。 このビューを使用すると、で実行されている CLR 統合オブジェクトを理解し、トラブルシューティングを行うことができ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   

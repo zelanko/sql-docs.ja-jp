@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 99e2db4ca29fc39a4cebbd0b2dfb0564a5837e80
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04df50dc8378dc346079c807f8e517f1e6bbecdd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760058"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891882"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   リンクサーバー内のテーブルの主キーを参照する外部キーを返します。  
   
@@ -60,7 +60,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 `[ @fktab_catalog = ] 'fktab_catalog'`外部キーを持つカタログの名前を指定します。 *fktab_catalog*は**sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
  さまざまな DBMS 製品では、3つの要素で構成するテーブル (_カタログ_) がサポート**しています。**_スキーマ_**。**_テーブル_)。これは、結果セットで表されます。  
@@ -84,13 +84,13 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
  結果セットでは、FK_NAME 列と PK_NAME 列は常に NULL を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_foreignkeys**は、 *table_server*に対応する OLE DB プロバイダーの**IDBSchemaRowset**インターフェイスの FOREIGN_KEYS 行セットを照会します。 返される行を制限するために、 *table_name*、 *table_schema*、 *table_catalog*、および*列*の各パラメーターがこのインターフェイスに渡されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 `Department` リンクサーバー上のデータベース内のテーブルに関する外部キー情報を返し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] `Seattle1` ます。  
   
 ```  

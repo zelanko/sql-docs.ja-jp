@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3131a5e0a44cf0ccbdb4537dc8e409cc8b56be39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3e8529a1a3be2bed8ddbea1ff475b21801a34424
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786107"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892642"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定したリンク サーバーから、指定したテーブルの特権情報を返します。  
   
@@ -54,7 +54,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 `[ @fUsePattern = ] 'fUsePattern'`文字 ' _ '、'% '、' ['、および '] ' がワイルドカード文字として解釈されるかどうかを判断します。 有効な値は 0 (パターン一致がオフ) および 1 (パターン一致がオン) です。 *Fusepattern*は**ビット**,、既定値は1です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -68,13 +68,13 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 |**持っ**|**varchar (** 32 **)**|使用可能なテーブル権限の 1 つ。 テーブル権限は、次の値のいずれか、または実装が定義されている場合にデータソースでサポートされるその他の値のいずれかになります。<br /><br /> SELECT = 権限付与対象ユーザーは、1つまたは複数の列のデータを取得**できます。**<br /><br /> INSERT = 権限付与対象ユーザーは、1つまたは複数の列に新しい行のデータを提供**できます。**<br /><br /> UPDATE = 権限付与対象ユーザーは、1つまたは複数の列の既存のデータを変更**できます。**<br /><br /> DELETE = 権限付与対象ユーザーは、テーブルから**行を削除**できます。<br /><br /> REFERENCES = 権限付与対象ユーザーは、主キー/外部キーのリレーションシップで外部テーブルの列を参照**できます。** で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、主キー/外部キーのリレーションシップはテーブル制約を使用して定義されます。<br /><br /> 特定**のテーブル特権によって**権限付与対象ユーザーに与えられるアクションのスコープは、データソースによって異なります。 たとえば、更新権限が**与えられている場合**、権限付与対象ユーザーは、1つのデータソース上のテーブル内のすべての列を更新できます。また、権限付与対象ユーザーが別のデータソースに対する update 権限**を持って**いる列だけを更新することもできます。|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|権限付与対象**ユーザーに対し、他**のユーザーに権限を許可することを許可するかどうかを示します。 これは、"許可の許可" 権限と呼ばれることがあります。 YES、NO、または NULL を指定できます。 不明、つまり NULL の場合は、"許可の許可" が適用されないデータ ソースを示します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  返される結果は、 **TABLE_QUALIFIER**、 **TABLE_OWNER**、 **TABLE_NAME**、および**特権**によって並べ替えられます。  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 `Product` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 指定したリンクサーバーから、データベースので始まる名前のテーブルに関する特権情報を返し `Seattle1` ます。 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はリンクサーバーと見なされます)。  
   
 ```  

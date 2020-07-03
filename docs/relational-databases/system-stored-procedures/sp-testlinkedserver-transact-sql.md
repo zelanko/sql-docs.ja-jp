@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27fd5a01211fabd1399fe45f2c30b043368d5f0a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01ae2d33ab38b5a3f2720b817a036cd152f2c47f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750417"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892610"
 ---
 # <a name="sp_testlinkedserver-transact-sql"></a>sp_testlinkedserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   リンク サーバーへの接続をテストします。 テストが成功しなかった場合は、例外が発生し、失敗の理由が示されます。  
   
@@ -47,7 +47,7 @@ sp_testlinkedserver [ @servername ] = servername
 ## <a name="permissions"></a>アクセス許可  
  アクセス許可はチェックされません。ただし、呼び出し元には適切なログインマッピングが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、という名前のリンクサーバーを作成 `SEATTLESales` し、接続をテストします。  
   
 ```  

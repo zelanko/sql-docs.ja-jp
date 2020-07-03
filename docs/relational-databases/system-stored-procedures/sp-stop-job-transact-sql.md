@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 66a4d334719707d8f906b6026737037d7ea28175
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7be2717c1f98291c0ce60b25e4290c20d23a86ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725652"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892993"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントにジョブの実行を停止するよう指示します。  
 
@@ -79,7 +79,7 @@ sp_stop_job
   
  **SQLAgentUserRole**と**SQLAgentReaderRole**のメンバーは、自分が所有するジョブのみを停止できます。 **Sqlagentoperatorrole**のメンバーは、他のユーザーによって所有されているものも含め、すべてのローカルジョブを停止できます。 **Sysadmin**のメンバーは、すべてのローカルジョブとマルチサーバージョブを停止できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、という名前のジョブを停止 `Weekly Sales Data Backup` します。  
   
 ```  

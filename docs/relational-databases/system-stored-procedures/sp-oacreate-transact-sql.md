@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 511101642570c9ddf28763b6303aa90bb985317a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 74daa037fab18fc2ddb4126f8cf5f33e9d4e5159
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752780"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893437"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   OLE オブジェクトのインスタンスを作成します。  
   
@@ -77,7 +77,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  HRESULT のリターンコードの詳細については、「 [OLE オートメーションのリターンコードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  OLE オートメーションプロシージャが有効になっている場合、 **sp_OACreate**を呼び出すと、ole オートメーションの共有実行環境が開始されます。 OLE オートメーションを有効にする方法の詳細については、「 [Ole Automation Procedures サーバー構成オプション](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)」を参照してください。  
   
  作成された OLE オブジェクトは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント バッチの最後に自動的に破棄されます。  

@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b74bcf3ceb8105da7515a227e76fd9cd992ebbb2
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1270595171ef164f29409f55a0083fa4f1afa49d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813906"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894245"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS (内部) ナレッジを使用したデータのクレンジング
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のデータ品質プロジェクトを使用してデータをクレンジングする方法について説明します。 データ クレンジングは、DQS で高品質なデータ セットに対して作成されたナレッジ ベースを使用して、ソース データに対して実行されます。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/building-a-knowledge-base.md)」をご参照ください。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ba144f6cf06104f406545e3c7651072784de3c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4ba169522f0deac50dd840a5eeceff63c9eb178e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824893"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891967"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   データベース メールで処理されたメッセージごとに 1 行のデータを格納します。 すべてのメッセージの状態を表示するには、このビューを使用します。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "82824893"
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  データベースメールによって処理されたすべてのメッセージの状態を表示するには、 **sysmail_allitems**ビューを使用します。 データベース メールのトラブルシューティングを行うとき、このビューでは送信済みとそれ以外のメッセージの属性を比較できるので、問題の性質を特定するのに役立ちます。  
   
  このビューによって公開されるシステムテーブルにはすべてのメッセージが含まれているため、 **msdb**データベースのサイズが大きくなる可能性があります。 テーブルのサイズを小さくするために、古いメッセージをビューから定期的に削除します。 詳細については、「[データベースメールメッセージとイベントログをアーカイブするための SQL Server エージェントジョブの作成](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)」を参照してください。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2dc82e34234082013b1c590008ef610f1492f9a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc11f219d98e4b8018bc7d763345feb279790e13
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733066"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893245"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ユーザー定義のクラスター化インデックスと非クラスター化インデックス、またはクラスター化インデックスのないテーブルに対して、ロックのオプション値を設定します。  
   
@@ -62,7 +62,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または0より大きい (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  XML インデックスはサポートされていません。 XML インデックスが指定されている場合、またはテーブル名にインデックス名が指定されておらず、テーブルに XML インデックスが含まれている場合、ステートメントは失敗します。 これらのオプションを設定するには、代わりに[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)を使用します。  
   
  現在の行およびページロックのプロパティを表示するには、 [Indexproperty](../../t-sql/functions/indexproperty-transact-sql.md)またはのカタログビューを使用[します。](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 387e4a0a30f5681391bb5891dc772f7c9f04790c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d1f047fed74a212358ef7c1af61034d021661ef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723085"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892597"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   トレースに対して、イベントまたはイベント列を追加または削除します。 **sp_trace_setevent**は、停止している既存のトレースに対してのみ実行できます (*状態*は**0**)。 このストアドプロシージャが存在しないトレースまたは*状態*が**0**以外のトレースで実行されると、エラーが返されます。  
   
@@ -338,7 +338,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|メモリ不足。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
 |16|関数は、このトレースに対して無効です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_trace_setevent**では、以前のバージョンので使用できる拡張ストアドプロシージャによって以前に実行された操作の多くが実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 次の代わりに**sp_trace_setevent**を使用します。  
   
 -   **xp_trace_addnewqueue**  

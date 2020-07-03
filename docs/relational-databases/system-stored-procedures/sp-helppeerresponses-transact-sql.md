@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be1bfbea0d6681a2fd22eb0e26991f3622f18d70
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7b6e6ed76873abba0988045a1c336b4a34fb5d48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730788"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893532"
 ---
 # <a name="sp_helppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ピアツーピアレプリケーショントポロジの参加者から受信した特定の状態要求に対するすべての応答を返します。この要求は、トポロジ内のパブリッシュされたデータベースで[sp_helppeerrequests](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)を実行することによって開始されます。 このストアドプロシージャは、ピアツーピアレプリケーショントポロジに参加しているパブリッシャー側のパブリケーションデータベースで実行されます。 詳細については、「[ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
   
@@ -51,7 +51,7 @@ sp_helppeerresponses [ @request_id = ] request_id
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_helppeerresponses**は、ピアツーピアトランザクションレプリケーションで使用されます。  
   
  **sp_helppeerresponses**プロシージャは、ピアツーピアトポロジでパブリッシュされたデータベースを復元する場合に使用します。  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9c45fa084aa6e7231ebb62a01d0192dc1e2c200
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb2a7ffc194741e546e10261711af3f78b697a77
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738740"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894624"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>dm_clr_loaded_assemblies (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーのアドレス空間に読み込まれた管理対象ユーザーアセンブリごとに1行の値を返します。 このビューを使用すると、で実行されている CLR 統合マネージデータベースオブジェクトについて理解し、トラブルシューティングを行うことが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。  
   
@@ -42,10 +42,10 @@ ms.locfileid: "85738740"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  Appdomain_address ビューには**dm_clr_loaded_assemblies** 、 **dm_clr_appdomains appdomain_address**との多対一のリレーションシップがあります。 **Dm_clr_loaded_assemblies assembly_id**ビューには、 **assembly_id**との一対多のリレーションシップがあります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、現在読み込まれている現在のデータベースのすべてのアセンブリの詳細を表示する方法を示しています。  
   
 ```  

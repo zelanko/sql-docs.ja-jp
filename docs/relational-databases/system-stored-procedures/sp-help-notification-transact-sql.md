@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3fe885be9072f24c18e6115efcf511faea2d8908
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9fad9d93a1c0d4781f792fedfe3fe7649e17c98
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634370"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891733"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたオペレーターのアラートの一覧、または特定のアラートのオペレーターの一覧を報告します。  
   
@@ -50,7 +50,7 @@ sp_help_notification
   
 `[ @enum_type = ] 'enum_type'`返される*object_type*情報。 ほとんどの場合、 *enum_type*は実際のものです。 *enum_type*は**char (10)** で、既定値はありません。これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |ACTUAL|*名前*に関連付けられている*object_types*のみを一覧表示します。|  
 |ALL|*名前*に関連付けられていないものを含むすべての*object_types*を一覧表示します。|  
@@ -58,7 +58,7 @@ sp_help_notification
   
 `[ @notification_method = ] notification_method`返される通知方法の列を決定する数値。 *notification_method*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|電子メール: **use_email**列だけを返します。|  
 |**2**|Pager: **use_pager**列だけを返します。|  

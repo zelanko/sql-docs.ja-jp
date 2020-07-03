@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 67dd1925-d672-4986-a85f-bce4fe832ef7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d6b6f8e37dca038c25cb9afe86f97d86e4e3121
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd0b57e73757348959a0b8b5f144fbc5c4ef0f8c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717936"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892473"
 ---
 # <a name="context-connection"></a>コンテキスト接続
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   内部データへのアクセスに関する問題は、ごく一般的なものです。 内部データにアクセスすることは、CLR (共通言語ランタイム) ストアド プロシージャや関数を実行しているサーバーへのアクセスを考えることです。 1つの方法として、**システム**を使用して接続を作成し、ローカルサーバーを参照する接続文字列を指定して、接続を開く方法があります。 これには、ログインのための資格情報を指定することが必要になります。 この接続は、ストアドプロシージャまたは関数とは別のデータベースセッションにあり、異なる**SET**オプションが設定されている可能性があります。別のトランザクションに含まれているか、一時テーブルが表示されていません。 マネージド ストアド プロシージャや関数のコードが SQL Server プロセスで実行されているということは、だれかがそのサーバーに接続して、マネージド コードを呼び出す SQL ステートメントを実行したことを意味します。 ストアドプロシージャまたは関数は、その接続のコンテキストでトランザクションや**SET**オプションなどと共に実行することをお勧めします。 これを "コンテキスト接続" と呼びます。  
   
  コンテキスト接続を使用すると、コードを最初に呼び出したのと同じコンテキストで Transact-SQL ステートメントを実行することができます。 コンテキスト接続を取得するには、次の例に示すように "context connection" 接続文字列キーワードを使用する必要があります。  

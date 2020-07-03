@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9c59c6347317d193eafe43c511c0ece3831e29c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 051f41139627420e825feffb292a02905917705d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750533"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891699"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   1つまたは複数のプロキシの情報を一覧表示します。  
   
@@ -83,7 +83,7 @@ sp_help_proxy
 |**credential_id**|**int**|このプロキシに関連付けられている資格情報の識別子。|  
 |**credential_identity_exists**|**int**|credential_identity が存在するかどうか  {0 = 存在しない、1 = 存在する}|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  パラメーターを指定しない場合、 **sp_help_proxy**インスタンス内のすべてのプロキシに関する情報が一覧表示されます。  
   
  特定のサブシステムに対してログインが使用できるプロキシを特定するには、*名前*と*subsystem_name*を指定します。 これらの引数を指定すると、 **sp_help_proxy**指定されたログインがアクセスする可能性があり、指定したサブシステムに使用できるプロキシが一覧表示されます。  

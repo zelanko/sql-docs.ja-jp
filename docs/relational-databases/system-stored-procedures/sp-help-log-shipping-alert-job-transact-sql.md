@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 20b946ba96e1c4fa8830b79a43f1568e866acf7b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d831935d70d65756b431632c0b9b64d87049173c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715883"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891766"
 ---
 # <a name="sp_help_log_shipping_alert_job-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ログ配布モニターからの警告ジョブのジョブ ID を返します。  
   
@@ -40,7 +40,7 @@ sp_help_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>引数  
- なし  
+ None  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -48,7 +48,7 @@ sp_help_log_shipping_alert_job
 ## <a name="result-sets"></a>結果セット  
  このストアドプロシージャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ配布警告ジョブのエージェントジョブ ID を返します。 ログ配布の警告ジョブが存在しない場合は、空の結果セットが返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_help_log_shipping_alert_job**は、監視サーバーの**master**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  

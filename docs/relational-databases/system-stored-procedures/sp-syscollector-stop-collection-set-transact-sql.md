@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb3d3e7aaa8816c6bc5514cd37c64c4b02550f35
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 46e8735e48925464d2dc715979a75998b97bd673
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644858"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892804"
 ---
 # <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   コレクションセットを停止します。  
   
@@ -57,13 +57,13 @@ sp_syscollector_stop_collection_set
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  sp_syscollector_create_collection_set は、msdb システム データベースのコンテキストで実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) dc_operator 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、識別子を使用してコレクションセットを停止します。  
   
 ```  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25d3c2133ee02bc25a869ad3a465081de4d7d38e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a52339c2ff0b609b2c9f0dab4a3a893135be2d31
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634498"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893639"
 ---
 # <a name="sp_help_log_shipping_primary_secondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このストアドプロシージャは、指定されたプライマリデータベースのすべてのセカンダリデータベースに関する情報を返します。  
   
@@ -52,13 +52,13 @@ sp_help_log_shipping_primary_secondary
 |**secondary_server**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ログ配布構成におけるのセカンダリインスタンスの名前です。|  
 |**secondary_database**|ログ配布構成のセカンダリデータベースの名前。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_help_log_shipping_primary_secondary**は、プライマリサーバーの**master**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、 **sp_help_log_shipping_primary_secondary**を使用して、プライマリデータベースに関連付けられているセカンダリデータベースの一覧を取得する方法を示し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  

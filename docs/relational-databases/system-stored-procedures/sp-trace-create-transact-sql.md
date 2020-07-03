@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e21038736343ecce98ded93d87f32d64b7ebe4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8327dc8beafb5d4e219cdaf25c44c75af3e85e5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750407"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892607"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   トレース定義を作成します。 新しいトレースは停止状態になります。  
   
@@ -53,7 +53,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  次の表に、オプション、説明、およびそれらの値を示します。  
   
-|オプション名|オプション値|説明|  
+|オプション名|オプション値|Description|  
 |-----------------|------------------|-----------------|  
 |TRACE_FILE_ROLLOVER|**2**|*Max_file_size*に達すると、現在のトレースファイルが閉じられ、新しいファイルが作成されることを指定します。 新しいレコードはすべて新しいファイルに書き込まれます。 新しいファイルは前のファイルと同じ名前になりますが、シーケンスを示すために整数が追加されます。 たとえば、元のトレース ファイルの名前が filename.trc の場合、次のトレース ファイルの名前は順に filename_1.trc、filename_2.trc となります。<br /><br /> ロールオーバートレースファイルがさらに作成されると、ファイル名に付加された整数値が順番に増加します。<br /><br /> *Max_file_size*の値を指定せずにこのオプションを指定した場合、SQL Server は*MAX_FILE_SIZE* (5 MB) の既定値を使用します。|  
 |SHUTDOWN_ON_ERROR|**4**|なんらかの理由によりトレースをファイルに書き込めない場合、SQL Server はシャットダウンします。 このオプションは、セキュリティ監査トレースを実行するときに役立ちます。|  

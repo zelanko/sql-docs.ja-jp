@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27c5b993817e063caf08ca55e03a31ebaacc17b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9e0e355c033c0ee33dd8c503875d03a163f998b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731612"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893456"
 ---
 # <a name="sp_msx_set_account-transact-sql"></a>sp_msx_set_account (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ターゲット サーバーに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター サーバーのアカウント名とパスワードを設定します。  
   
@@ -49,7 +49,7 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、資格情報を使用して、対象サーバーがマスターサーバーへのログインに使用するユーザー名とパスワードの情報を格納します。 このプロシージャでは、ターゲット サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがマスター サーバーへのログインで使用する資格情報を設定します。  
   
  既存の資格情報を指定する必要があります。 資格情報の作成の詳細については、「 [CREATE credential &#40;transact-sql&#41;](../../t-sql/statements/create-credential-transact-sql.md)」を参照してください。  
@@ -57,7 +57,7 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ## <a name="permissions"></a>アクセス許可  
  **Sp_msx_set_account**の実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、マスター サーバーへのログインで資格情報 `MsxAccount` を使用するように、サーバーを設定します。  
   
 ```  

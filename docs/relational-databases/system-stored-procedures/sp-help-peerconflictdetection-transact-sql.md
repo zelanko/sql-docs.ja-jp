@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 63325c7b3ba43ae4b9f76224121010a3ebfb6a7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0bf806900b25b69d98cc1abaab4bd49db444e5e9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634300"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891708"
 ---
 # <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ピアツーピアトランザクションレプリケーショントポロジに関係するパブリケーションの競合検出設定に関する情報を返します。  
   
@@ -56,7 +56,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  sp_help_peerconflictdetection は、ピア ツー ピア トランザクション レプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  

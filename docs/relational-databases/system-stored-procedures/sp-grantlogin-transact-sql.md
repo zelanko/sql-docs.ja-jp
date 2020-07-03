@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 3f605d17348c651ef0fbc58ebd52b422bdba1896
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de02d84d781c5db2d86902034b500c6b4a02ea2f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728186"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891809"
 ---
 # <a name="sp_grantlogin-transact-sql"></a>sp_grantlogin (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ログインを作成し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -55,7 +55,7 @@ sp_grantlogin [@loginame=] 'login'
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する ALTER ANY LOGIN 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、を使用して `CREATE LOGIN` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows ユーザーのログインを作成し `Corporate\BobJ.` ます。この方法をお勧めします。  
   
 ```sql

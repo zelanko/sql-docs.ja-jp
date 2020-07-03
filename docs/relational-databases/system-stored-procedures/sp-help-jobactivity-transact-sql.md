@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35de5fe106b437429265fcce03d49a9cb1b61401
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84dee2f945feaa59d96adb03fc6d531d7f2fd925
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715190"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893699"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのランタイム状態に関する情報を一覧表示します。  
   
@@ -75,7 +75,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**operator_id_netsent**|**int**|ジョブの完了時に**net send**によって通知されたオペレーターの ID 番号。|  
 |**operator_id_paged**|**int**|ジョブの完了時に、ポケットベルの通知を受けたオペレーターの ID 番号。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  このプロシージャでは、ジョブに関する現在の状態のスナップショットが生成されます。 返される結果は、要求が処理された時点の情報を表します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービスが開始されるたびに、エージェントによってセッション id が作成されます。 セッション id は、テーブル**msdb.dbo.sysのセッション**に格納されます。  
@@ -97,7 +97,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
  他のユーザーが所有するジョブのアクティビティを表示できるのは、 **sysadmin**のメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在のユーザーが表示する権限を持っているすべてのジョブのアクティビティを一覧表示します。  
   
 ```  
