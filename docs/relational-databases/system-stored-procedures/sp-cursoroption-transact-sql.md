@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0bc0c7973ad8ac653c2d9e7f613a3ec0325c12fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 581a154dfefa7823e9a1c0cefa53518352c66d55
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733318"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869107"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   カーソルオプションを設定するか、sp_cursoropen ストアドプロシージャによって作成されたカーソル情報を返します。 sp_cursoroption は、ID = 8 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   

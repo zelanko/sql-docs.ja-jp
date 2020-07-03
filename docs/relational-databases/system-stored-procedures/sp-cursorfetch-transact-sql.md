@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6accbb03bf4ed06f84f67263e89ab9c6bfa7654
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3729587261ab090548ad93f5a1000f621239557
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646045"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868961"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベースから1つ以上の行のバッファーをフェッチします。 このバッファー内の行のグループを、カーソルの*フェッチバッファー*と呼びます。 sp_cursorfetch は、ID = 7 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
@@ -133,7 +133,7 @@ sp_cursorfetch cursor
   
  RPC 状態パラメーターは、次の表に示すいずれかの値に設定されています。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0|プロシージャが正常に実行されました。|  
 |0x0001|プロシージャが失敗しました。|  
@@ -142,7 +142,7 @@ sp_cursorfetch cursor
   
  行は、通常の結果セットとして返されます。つまり、列形式 (0x2a)、rows (0xd1)、done (0xfd) の順に続きます。 メタデータトークンは sp_cursoropen に対して指定されたものと同じ形式で送信されます。これは、SQL Server 7.0 ユーザーの場合は0x81、0xa5、および0xa5 です。 行の状態インジケーターは、ブラウズ モードのように、各行の末尾の非表示の列として送信されます (列名は rowstat、データ型は INT4)。 この rowstat 列には、次のいずれかの値が含まれます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

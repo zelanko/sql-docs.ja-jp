@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 620a174f50d133c4a1dd34ed54c74abb7ee06a71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30529fbb5d4b80b0835ddb502c9a2c964ca8776
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81012448"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85870629"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   データベースマスターキーを開くために必要なパスワードを含む資格情報を追加または削除します。  
   
@@ -47,18 +47,18 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  マスター キーのパスワードを指定します。 *パスワード*は**nvarchar**です。  
   
  @action= N'add '  
- 指定したデータベースの資格情報を、資格情報ストアに追加します。 資格情報には、データベースマスターキーのパスワードが含まれます。 に@action渡される値は**nvarchar**です。  
+ 指定したデータベースの資格情報を、資格情報ストアに追加します。 資格情報には、データベースマスターキーのパスワードが含まれます。 に渡される値 @action は**nvarchar**です。  
   
  @action= N'drop '  
- 指定されたデータベースの資格情報が資格情報ストアから削除されることを指定します。 に@action渡される値は**nvarchar**です。  
+ 指定されたデータベースの資格情報が資格情報ストアから削除されることを指定します。 に渡される値 @action は**nvarchar**です。  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、キーの暗号化解除や暗号化にデータベースのマスター キーが必要となる場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではインスタンスのサービス マスター キーを使用して、データベースのマスター キーの暗号化解除が試行されます。 暗号化解除が失敗し[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]た場合、は、マスターキーが必要なデータベースと同じファミリ GUID を持つマスターキー資格情報を資格情報ストアで検索します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次に、一致した資格情報を順に使用してデータベースのマスター キーの暗号化解除が試行されます。これは暗号化解除が成功するか、資格情報がなくなった時点で終了します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、キーの暗号化解除や暗号化にデータベースのマスター キーが必要となる場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではインスタンスのサービス マスター キーを使用して、データベースのマスター キーの暗号化解除が試行されます。 暗号化解除が失敗した場合、は、マスターキーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必要なデータベースと同じファミリ GUID を持つマスターキー資格情報を資格情報ストアで検索します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次に、一致した資格情報を順に使用してデータベースのマスター キーの暗号化解除が試行されます。これは暗号化解除が成功するか、資格情報がなくなった時点で終了します。  
   
 > [!CAUTION]  
 >  sa やその他の高位の権限を持つサーバー プリンシパルに対してデータベースへのアクセスを禁止する場合は、データベースのマスター キー資格情報を作成しないでください。 データベースのキー階層をサービス マスター キーで暗号化解除できないようにデータベースを構成できます。 この機能は、sa または高位の権限を持つサーバー プリンシパルに対して、データベースに含まれる暗号化情報へのアクセスを禁止するための、多重の防御としてサポートされているものです。 このようなデータベースに対してマスター キー資格情報を作成すると、この多重の防御が無効になり、sa およびその他の高位の権限を持つサーバー プリンシパルがデータベースの暗号化を解除できるようになります。  
   
- Sp_control_dbmasterkey_password を使用して作成された資格情報は、 [master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md)カタログビューに表示されます。 データベースのマスターキーに対して作成される資格情報の名前は、 `##DBMKEY_<database_family_guid>_<random_password_guid>##`の形式になります。 パスワードは、資格情報のシークレットとして保存されます。 sys.credentials には、資格情報ストアに追加されたパスワードごとに 1 行のデータが格納されます。  
+ Sp_control_dbmasterkey_password を使用して作成された資格情報は、 [master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md)カタログビューに表示されます。 データベースのマスターキーに対して作成される資格情報の名前は、の形式に `##DBMKEY_<database_family_guid>_<random_password_guid>##` なります。 パスワードは、資格情報のシークレットとして保存されます。 sys.credentials には、資格情報ストアに追加されたパスワードごとに 1 行のデータが格納されます。  
   
  sp_control_dbmasterkey_password を使用して、システム データベース master、model、msdb、または tempdb の資格情報を作成することはできません。  
   
@@ -82,7 +82,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. AdventureWorks2012 マスターキーの資格情報を作成しています  
- 次の例では、`AdventureWorks2012` データベースのマスター キーの資格情報を作成し、マスター キーのパスワードをシークレットとして資格情報に保存します。 に`sp_control_dbmasterkey_password`渡されるすべてのパラメーターのデータ型は**nvarchar**である必要があるため、テキスト文字列はキャスト演算子`N`で変換されます。  
+ 次の例では、`AdventureWorks2012` データベースのマスター キーの資格情報を作成し、マスター キーのパスワードをシークレットとして資格情報に保存します。 に渡されるすべて `sp_control_dbmasterkey_password` のパラメーターのデータ型は**nvarchar**である必要があるため、テキスト文字列はキャスト演算子で変換され `N` ます。  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   
@@ -90,7 +90,7 @@ EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',
 GO  
 ```  
   
-### <a name="b-dropping-a-credential-for-a-database-master-key"></a>B. データベースのマスター キーの資格情報を削除する  
+### <a name="b-dropping-a-credential-for-a-database-master-key"></a>B: データベースのマスター キーの資格情報を削除する  
  次の例では、例 A で作成した資格情報を削除します。パスワードを含め、すべてのパラメーターが必要であることに注意してください。  
   
 ```  
@@ -99,7 +99,7 @@ EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [暗号化されたミラーデータベースを設定する](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

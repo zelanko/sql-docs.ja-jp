@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b208b33cba633a168c9a0c2d77f71ae84d592ff2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b2fa71ba90acc49f3edf70ff35363410fb3d3b6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772262"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85866645"
 ---
 # <a name="sp_dbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース ミラーリング監視パラメーターの値を変更します。  
   
@@ -41,7 +41,7 @@ sp_dbmmonitorchangemonitoring parameter
 ```  
   
 ## <a name="arguments"></a>引数  
- *引き*  
+ *パラメーター*  
  変更するパラメーターの識別子を指定します。 現時点では、次のパラメーターのみを使用できます。  
   
  1 = 更新期間  
@@ -56,7 +56,7 @@ sp_dbmmonitorchangemonitoring parameter
 |1|新しい更新間隔 (分単位) を表す 1 ～ 120 の範囲の整数。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
  なし  

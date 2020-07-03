@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 64fef5a7f6d135961a6757a92d734e75f2114273
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 172d50a126ff0c12d55e9566e5bb7b9213c38fe8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760100"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865020"
 ---
 # <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定した日付より古いバックアップセットのエントリを削除することにより、バックアップと復元の履歴テーブルのサイズを小さくします。 バックアップまたは復元の各操作が実行された後、バックアップと復元の履歴テーブルに追加の行が追加されます。そのため、 **sp_delete_backuphistory**を定期的に実行することをお勧めします。  
   

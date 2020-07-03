@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b5c067b42d61c2dae1dbe247a6212611d155348
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 135937bbdac930d3ee90259c7e5b0f4faaab098f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716135"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85874136"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   バッチに含まれるパラメーターに関する情報を含む行セットを返し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 **sp_batch_params**は、指定されたバッチを解析し、埋め込みパラメーター値に関する情報を返します。 バッチの実行や、実行環境の変更は行いません。  
   
@@ -42,7 +42,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 `[ @tsqlbatch = ] 'tsqlbatch'`は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] パラメーター情報を必要とするステートメントまたはバッチを含む Unicode 文字列です。 *tsqlbatch*は**nvarchar (max)** または**nvarchar (max)** に暗黙的に変換できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
   
