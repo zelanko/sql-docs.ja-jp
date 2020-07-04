@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 859751ebe806a662c4ec40d6812862d63a84a450
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7dab88e8e10bc854e3210d5898cbd965eb268e04
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887939"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942851"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Data Quality Server のインストールを完了するための DQSInstaller.exe の実行
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了するには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインストールを完了した後で、DQSInstaller.exe ファイルを実行する必要があります。 このトピックでは、 **[スタート]** 画面、 **[スタート]** メニュー、Windows エクスプローラー、またはコマンド プロンプトから DQSInstaller.exe を実行する方法について説明します。DQSInstaller.exe ファイルの実行には、これらの方法のいずれも使用できます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "85887939"
 3.  データベース マスター キーのパスワードの入力を求めるメッセージが表示されます。 後で [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) に参照データ プロバイダーを設定するときに DQS_MAIN データベースに保存される参照データ サービス プロバイダー キーを暗号化するには、データベース マスター キーが必要です。  
   
     > [!IMPORTANT]  
-    >  パスワードは8文字以上である必要があり、次の4つのカテゴリのうちの3つのカテゴリの文字を含める必要があります。英語の大文字 (A、B、C,...Z)、英語の小文字 (a、b、c,...z)、数字 (0、1、2,...9) と英数字以外の特殊文字 (~! @ # $% ^& * () _-+ = | \\ {}[]:;"'<>,.?/). 例: P@ssword。 現在のパスワードがこの要件を満たしていない場合は、別のパスワードの入力を求めるメッセージが表示されます。  
+    >  パスワードは8文字以上である必要があり、次の4つのカテゴリのうちの3つのカテゴリの文字を含める必要があります。英語の大文字 (A、B、C,...Z)、英語の小文字 (a、b、c,...z)、数字 (0、1、2,...9) と英数字以外の特殊文字 (~! @ # $% ^& * () _-+ = | \\ {}[]:;"'<>,.?/). たとえば、P@ssword のように指定します。 現在のパスワードがこの要件を満たしていない場合は、別のパスワードの入力を求めるメッセージが表示されます。  
   
 4.  パスワードを入力し、さらに確認のためにもう一度そのパスワードを入力してから、Enter キーを押してインストールを続行します。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "85887939"
 ##  <a name="run-dqsinstallerexe-from-command-prompt"></a><a name="CommandPrompt"></a>コマンドプロンプトから DQSInstaller.exe を実行する  
  DQSInstaller.exe をコマンド プロンプトから実行する場合は、次のコマンド ライン パラメーターを使用します。  
   
-|DQSInstaller.exe のパラメーター|説明|サンプル構文|  
+|DQSInstaller.exe のパラメーター|Description|サンプル構文|  
 |--------------------------------|-----------------|-------------------|  
 |-collation|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]のインストールに使用するサーバー照合順序。<br /><br /> DQS は、大文字と小文字を区別しない照合順序のみをサポートします。 大文字と小文字が区別される照合順序を指定した場合、インストーラーは、指定された照合順序の大文字と小文字を区別しないバージョンを使用して処理を実行しようとします。 大文字と小文字を区別しないバージョンが存在しない場合や、照合順序が SQL によってサポートされていない場合、 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールは失敗します。<br /><br /> サーバーの照合順序を指定しなかった場合は、既定の照合順序 (SQL_Latin1_General_CP1_CI_AS) が使用されます。|`dqsinstaller.exe -collation <collation_name>`|  
 |-upgradedlls|DQS データベース (DQS_MAIN、DQS_PROJECTS、および DQS_STAGING_DATA) の再作成をスキップし、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースで DQS によって使用される SQL 共通言語ランタイム アセンブリ (SQLCLR) の更新のみを行います。<br /><br /> 詳細については、「 [.NET Framework 更新後の SQLCLR アセンブリのアップグレード](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)」を参照してください。|`dqsinstaller.exe -upgradedlls`|  

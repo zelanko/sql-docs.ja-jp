@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ad9bd9142a3021bd02d7fa2632e55b7490467b04
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b9bb91a34a2755ba14f8e64eecae2dc14498a07d
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900093"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942896"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>DQS 操作のためのデータへのアクセス
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 操作にソース データを使用し、処理後のデータをエクスポートするには、次のいずれかの方法を使用できます。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "85900093"
   
 -   DQS 操作のソース データと、処理後のデータのエクスポート先に、自分専用のデータベースを使用する。 これを行うには、自分のデータベースが、Data Quality Server データベースと同じ SQL Server インスタンス内に存在する必要があります。 それ以外の場合、DQS 操作を行うために Data Quality Client でデータベースを利用することはできません。 また、Windows ユーザー アカウントには、照合結果をエクスポートする DQS_STAGING_DATA データベースへのアクセス権も付与する必要があります。これは、照合結果のエクスポートが、最初に照合結果が DQS_STAGING_DATA データベース内の一時テーブルにエクスポートされてから、エクスポート先データベース内のテーブルに移動されるという 2 段階で構成されるためです。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
   
 -   DQSInstaller.exe ファイルを実行して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了しておく必要があります。 詳細については、「 [Data Quality Server のインストールを完了するための DQSInstaller.exe の実行](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)」をご覧ください。  
   

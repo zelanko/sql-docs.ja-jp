@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 23a525c6e19b550b90b78ac83cbd14345a8c94ba
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 23e87edda8602c74a981dbbecd61d84d1e1217cb
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895172"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942904"
 ---
 # <a name="grant-dqs-roles-to-users"></a>ユーザーに DQS ロールを付与する
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
   このトピックでは、Windows プリンシパルに基づいて SQL ログインを作成し、DQS_MAIN データベースで [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) ロールを付与する方法を説明します。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
   
 -   DQSInstaller.exe ファイルを実行して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了しておく必要があります。 詳細については、「 [Data Quality Server のインストールを完了するための DQSInstaller.exe の実行](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)」をご覧ください。  
   
