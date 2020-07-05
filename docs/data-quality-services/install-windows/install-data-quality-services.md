@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4ef1d88921555a30c74c09a0c768e7a29ca9c894
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7558b68c6cdc286d2152f1dee8d4ae325d699ed1
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887972"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942699"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services のインストール
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)](DQS) には、との2つのコンポーネントが含まれてい **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** ます。  
   
