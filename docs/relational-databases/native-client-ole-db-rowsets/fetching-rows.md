@@ -17,15 +17,14 @@ ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37018708e8f54b37041a5c25c8a8e0ec5a79ee68
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: f74d247ef06762d4ca5a9533e04b784aac4c477a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724826"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007878"
 ---
 # <a name="fetching-rows"></a>行のフェッチ
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **IRowset** インターフェイスは、行セットの基本インターフェイスです。 **IRowset** インターフェイスには、行を順番にフェッチするメソッド、フェッチした行からデータを取得するメソッド、行を管理するメソッドが用意されています。 コンシューマーは、すべての基本的な行セット操作に **IRowset** のメソッドを使用します。 基本的な操作には、行のフェッチと解放、列値の取得などがあります。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "85724826"
   
 -   [次のフェッチ位置](../../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [行セット](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

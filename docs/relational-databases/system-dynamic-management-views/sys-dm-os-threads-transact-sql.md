@@ -20,15 +20,14 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c57cc3e4be2683ec0dee5e9cc209718bf97b3859
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 53957ed65247124927e248c4e9aad104362ec84e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752863"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008564"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>dm_os_threads (Transact-sql)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オペレーティング システム スレッドの一覧を返します。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "85752863"
 |thread_address|**varbinary (8)**|スレッドのメモリアドレス (主キー)。|  
 |started_by_sqlservr|**bit**|スレッドの開始側を示します。<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってスレッドが開始されました。<br /><br /> 0 = 別のコンポーネントがスレッドを開始しました。たとえば、内から拡張ストアドプロシージャを起動し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |os_thread_id|**int**|オペレーティングシステムによって割り当てられたスレッドの ID。|  
-|status|**int**|内部状態フラグ。|  
+|状態|**int**|内部状態フラグ。|  
 |instruction_address|**varbinary (8)**|現在実行されている命令のアドレス。|  
 |creation_time|**datetime**|このスレッドが作成された時刻。|  
 |kernel_time|**bigint**|このスレッドで使用されるカーネル時間の量。|  
@@ -74,7 +73,7 @@ ms.locfileid: "85752863"
 
 Linux での SQL エンジンの動作によって、この情報の一部が Linux 診断データと一致しません。 たとえば、は、、 `os_thread_id` `ps` `top` procfs (/proc/) などのツールの結果と一致しません `pid` 。  これは、プラットフォームアブストラクションレイヤー (SQLPAL)、SQL Server コンポーネントとオペレーティングシステムの間のレイヤーです。
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  スタートアップ時に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スレッドを開始し、ワーカーをそれらのスレッドに関連付けます。 ただし、拡張ストアドプロシージャなどの外部コンポーネントは、プロセスでスレッドを開始でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、これらのスレッドを制御できません。 dm_os_threads では、プロセス内のリソースを消費する、悪意のあるスレッドに関する情報を提供できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  次のクエリは、によって開始されていないスレッドを実行しているワーカーと、実行に使用された時間を検索するために使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -88,7 +87,7 @@ SELECT *
   WHERE started_by_sqlservr = 0;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
   [dm_os_workers &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   

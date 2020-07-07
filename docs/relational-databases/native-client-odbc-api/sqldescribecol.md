@@ -14,15 +14,14 @@ ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 413e8f65cb135a46a7dd440b687beb448e15ede2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ff762ab39c2d915538dc58d2162175803895f877
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789341"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006613"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   実行されるステートメントの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーでは、結果セットの列を説明するためにサーバーに対してクエリを実行する必要はありません。 この場合、 **SQLDescribeCol**ではサーバーのやり取りは行われません。 [Sqlcolattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)や[Sqlnumresultcols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)と同様に、 **SQLDescribeCol**に対して、実行されていないステートメントを呼び出すと、サーバーのラウンドトリップが生成されます。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "85789341"
 ## <a name="sqldescribecol-support-for-large-clr-udts"></a>SQLDescribeCol による大きな CLR UDT のサポート  
  **SQLDescribeCol**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQLDescribeCol 関数](https://go.microsoft.com/fwlink/?LinkID=59338)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

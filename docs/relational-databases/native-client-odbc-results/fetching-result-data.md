@@ -23,15 +23,14 @@ ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00a3245009d7f7db437a990fdf5dc814d6b19f7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e83a9c039a5da06a63261f8d062d0f4da5ddf8a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724992"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007476"
 ---
 # <a name="fetching-result-data"></a>結果データのフェッチ
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC アプリケーションでは、結果データのフェッチを 3 つの方法で実行できます。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "85724992"
   
  この最適化をアプリケーションに適用すると、ユーザーがカーソルを上下にスクロールしている間に**text**、 **ntext**、または**image**データが表示されないようにすることができます。 ユーザーが行を選択すると、アプリケーションは**SQLGetData**を呼び出して、 **text**、 **ntext**、または**image**型のデータを取得できます。 これにより、ユーザーが選択していない行の**text**型、 **ntext**型、または**image**型のデータが送信され、大量のデータの転送を保存できるようになります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;結果の処理](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

@@ -4,22 +4,28 @@ description: 各リリースの Sybase (SybaseToSQL) の SQL Server Migration As
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: ce526f0ae42ac3d44e21f57d0542409d4a3dec0a
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: 10ac2af79db21b9320c3ef180a64de8c2a13b29f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778948"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007855"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE の新機能 (SybaseToSQL)
 
 この記事では、各リリースでの SAP ASE (旧称 SSMA for Sybase) の変更 (SSMA) の SQL Server Migration Assistant を示します。
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+SSMA for SAP ASE の v 8.11 リリースには、次の変更が含まれています。
+
+* 一時テーブルの変換の修正
+* MSAL.NET library を使用して対話型 Azure Active Directory 認証を行う
 
 ## <a name="ssma-v810"></a>SSMA v 8.10
 
