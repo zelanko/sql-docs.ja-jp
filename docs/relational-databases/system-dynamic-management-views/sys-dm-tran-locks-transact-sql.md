@@ -20,15 +20,14 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd504c18b41480b2d384efc5546f10b957a43bac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d3e453de669cc69373b8e3fc1fc76a1056721bec
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764317"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000249"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>dm_tran_locks (Transact-sql)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で現在アクティブなロック マネージャーのリソースに関する情報を返します。 各行は、ロック マネージャーに対して現在アクティブになっている要求を示しています。この要求は、許可されたロックまたは許可を待機しているロックに対するものです。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "85764317"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
  
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  要求が許可された状態とは、要求元に対してリソースのロックが許可されたことを示します。 要求を待機している状態とは、その要求がまだ許可されていないことを示します。 次に示す要求待機の種類は、**request_status** 列で返されます。  
   
 -   要求変換の状態とは、要求元がリソース要求を既に許可されており、最初の要求からさらに上の段階の許可を現在待機中であることを示します。  
@@ -97,15 +96,15 @@ ms.locfileid: "85764317"
   
 |リソースの種類|リソースの説明|Resource_associated_entity_id|  
 |-------------------|--------------------------|--------------------------------------|  
-|DATABASE|データベースを示します。|適用なし|  
-|ファイル|データベース ファイルを示します。 このファイルは、データまたはログ ファイルのいずれかになります。|適用なし|  
+|DATABASE|データベースを示します。|適用できません|  
+|ファイル|データベース ファイルを示します。 このファイルは、データまたはログ ファイルのいずれかになります。|適用できません|  
 |OBJECT|データベース オブジェクトを示します。 このオブジェクトは、データ テーブル、ビュー、ストアド プロシージャ、拡張ストアド プロシージャ、またはオブジェクト ID 付きのオブジェクトのいずれかになります。|Object ID|  
 |PAGE|データ ファイル内の 1 ページを示します。|HoBt ID。 この値は **sys.partitions.hobt_id** に対応します。 PAGE リソースに対し常に HoBt ID が使用できるとは限りません。HoBt ID は呼び出し元から提供される追加情報であり、呼び出し元によってはこの情報を提供できないことがあります。|  
 |KEY|インデックス内の行を示します。|HoBt ID。 この値は **sys.partitions.hobt_id** に対応します。|  
-|EXTENT|データ ファイルのエクステントを示します。 エクステントは連続する 8 ページのグループです。|適用なし|  
+|EXTENT|データ ファイルのエクステントを示します。 エクステントは連続する 8 ページのグループです。|適用できません|  
 |RID|ヒープ内の物理的な行を示します。|HoBt ID。 この値は **sys.partitions.hobt_id** に対応します。 RID リソースに対し常に HoBt ID が使用できるとは限りません。HoBt ID は呼び出し元から提供される追加情報であり、呼び出し元によってはこの情報を提供できないことがあります。|  
-|APPLICATION|アプリケーション固有のリソースを示します。|適用なし|  
-|METADATA|メタデータの情報を示します。|適用なし|  
+|APPLICATION|アプリケーション固有のリソースを示します。|適用できません|  
+|METADATA|メタデータの情報を示します。|適用できません|  
 |HOBT|ヒープまたは B-Tree を示します。 これは、基本的なアクセス パス構造です。|HoBt ID。 この値は **sys.partitions.hobt_id** に対応します。|  
 |ALLOCATION_UNIT|インデックス パーティションなどの関連ページのセットを示します。 各アロケーション ユニットは、1 つの IAM (Index Allocation Map) チェーンを対象としています。|アロケーション ユニット ID。 この値は **sys.allocation_units.allocation_unit_id** に対応します。|  
   
@@ -199,7 +198,7 @@ ms.locfileid: "85764317"
   
 |リソース|Format|説明|  
 |--------------|------------|-----------------|  
-|DATABASE|適用なし|データベース ID は **resource_database_id** 列で既に使用可能になっています。|  
+|DATABASE|適用できません|データベース ID は **resource_database_id** 列で既に使用可能になっています。|  
 |ファイル|<file_id>|このリソースが示すファイルの ID。|  
 |OBJECT|<object_id>|このリソースが示すオブジェクトの ID。 テーブルだけでなく、**sys.objects** に一覧表示されるあらゆるオブジェクトが対象になります。|  
 |PAGE|<file_id>:<page_in_file>|このリソースが示すページの、ファイルおよびページ ID。|  
@@ -207,8 +206,8 @@ ms.locfileid: "85764317"
 |EXTENT|<file_id>:<page_in_files>|このリソースが示すエクステントの、ファイルおよびページ ID。 エクステント ID は、そのエクステント内にある最初のページのページ ID と同じになります。|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|このリソースが示すページ ID と、行の行 ID。 関連するオブジェクト ID が 99 の場合、このリソースは、IAM チェーンの最初の IAM ページにある、8 つの混合ページ スロットのいずれかを表すことに注意してください。|  
 |APPLICATION|\<DbPrincipalId>: \<upto 32 characters> :(<hash_value>)|アプリケーションのロック リソースのスコープに使用する、データベース プリンシパルの ID。 アプリケーションのロック リソースに対応する、最大 32 文字のリソース文字列も含まれます。 場合によっては、完全な文字列が使用できず、2 文字のみが表示されることがあります。 この動作は、データベース復旧時、復旧処理の一部として再取得されるアプリケーション ロックに関してのみ発生します。 ハッシュ値は、このアプリケーション ロック リソースに対応する、完全リソース文字列のハッシュを示します。|  
-|HOBT|適用なし|**resource_associated_entity_id** として含まれる HoBt ID。|  
-|ALLOCATION_UNIT|適用なし|**resource_associated_entity_id** として含まれるアロケーション ユニット ID。|  
+|HOBT|適用できません|**resource_associated_entity_id** として含まれる HoBt ID。|  
+|ALLOCATION_UNIT|適用できません|**resource_associated_entity_id** として含まれるアロケーション ユニット ID。|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_CLR_NAME|$qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_TOKEN|assembly_id = A, $token_id|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -371,7 +370,7 @@ ROLLBACK;
 GO  
 ```  
   
-### <a name="b-linking-session-information-to-operating-system-threads"></a>B: セッション情報のオペレーティングシステムスレッドへのリンク  
+### <a name="b-linking-session-information-to-operating-system-threads"></a>B. セッション情報のオペレーティングシステムスレッドへのリンク  
  次の例では、セッション ID と Windows のスレッド ID を関連付ける情報を返します。 スレッドのパフォーマンスは、Windows パフォーマンス モニターで監視できます。 このクエリでは、現在休止しているセッション ID は返されません。  
   
 ```sql  
@@ -384,7 +383,7 @@ SELECT STasks.session_id, SThreads.os_thread_id
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [dm_tran_database_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
 [Transact-sql&#41;&#40;の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
 [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      

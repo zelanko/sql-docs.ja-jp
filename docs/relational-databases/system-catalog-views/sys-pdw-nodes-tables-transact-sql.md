@@ -12,21 +12,20 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5fa2412e61e30852497ffa00493ea6dbe244989a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: d91fdabce5350614d504b7dfdf990e2dd54b8b48
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001114"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999125"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>pdw_nodes_tables (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   プリンシパルが所有しているか、プリンシパルが権限を許可されている、テーブルオブジェクトごとに1行の値を格納します。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|\<継承された列>||このビューが継承する列の一覧については、「 [sys. オブジェクト](../system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)」を参照してください。||  
+|\<inherited columns>||このビューが継承する列の一覧については、「 [sys. オブジェクト](../system-catalog-views/sys-objects-transact-sql.md)」を参照してください。||  
 |lob_data_space_id|**int**||常に 0 です。|  
 |filestream_data_space_id|**int**|FILESTREAM ファイルグループのデータ領域 ID または[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|このテーブルで使用される列の最大 ID。||  
@@ -42,7 +41,7 @@ ms.locfileid: "68001114"
 |is_tracked_by_cdc|**bit**|1 = テーブルで変更データキャプチャが有効になっている|常に0です。CDC サポートはありません。|  
 |lock_escalation|**tinyint**|テーブルの LOCK_ESCALATION オプションの値: 2 = AUTO|常に2。|  
 |lock_escalation_desc|**nvarchar(60)**|Lock_escalation オプションの説明テキスト。|常にꞌ AUTO ꞌです。|  
-|pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノードの一意識別子。|NOT NULL|  
+|pdw_node_id|**int**|ノードの一意識別子 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|NOT NULL|  
   
 ## <a name="see-also"></a>参照  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

@@ -18,15 +18,14 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ffce9dd6a06b433e183570767bf165c9e6b75d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 83f46ddd70061ef0f0647c902221b7f906917048
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771233"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999906"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在の環境でクエリを実行できる、指定されたオブジェクトの列情報を返します。  
   
@@ -90,10 +89,10 @@ sp_columns [ @table_name = ] object
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT および VIEW DEFINITION 権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  **sp_columns**は、区切られた識別子の要件に従います。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、指定されたテーブルの列情報を返します。  
   
 ```  
@@ -113,7 +112,7 @@ EXEC sp_columns @table_name = N'DimEmployee',
    @table_owner = N'dbo';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
  [Transact-sql&#41;&#40;のカタログストアドプロシージャ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

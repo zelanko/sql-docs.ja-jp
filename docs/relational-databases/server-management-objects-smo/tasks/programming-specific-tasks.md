@@ -19,15 +19,14 @@ ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d38096aacda2d50992c7ac3bc886a8740cb22f8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 8e3c7296ee1eb0401fce59094750471139a46967
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892007"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998313"
 ---
 # <a name="programming-specific-tasks"></a>プログラミング特有のタスク
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   SMO オブジェクトを使用したプログラミングに特有のタスクには、バックアップ、統計の監視、レプリケーション、インスタンス オブジェクトの管理、および構成オプションの設定など、特定の関数を使用したプログラムにのみ必要となる場合がある複雑な処理が含まれています。  
   

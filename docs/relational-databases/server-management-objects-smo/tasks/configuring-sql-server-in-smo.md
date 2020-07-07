@@ -14,15 +14,14 @@ ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63d520192b0366819b5be59aa73c90f192aa8643
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 6e685a8c2980cf3faa375e9fb13b3d6d873f1735
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900055"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000274"
 ---
 # <a name="configuring-sql-server-in-smo"></a>SMO での SQL Server の構成
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   SMO では、オブジェクト、オブジェクト、オブジェクト、 <xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Smo.Settings> およびオブジェクトに、 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> <xref:Microsoft.SqlServer.Management.Smo.Configuration> のインスタンスの設定と情報が含まれて [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] います。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "85900055"
   
  <xref:Microsoft.SqlServer.Management.Smo.Configuration> オブジェクトの構成オプションの変更はすべて、システム管理者が行う必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="modifying-sql-server-configuration-options-in-visual-basic"></a>Visual Basic での SQL Server 構成オプションの変更  

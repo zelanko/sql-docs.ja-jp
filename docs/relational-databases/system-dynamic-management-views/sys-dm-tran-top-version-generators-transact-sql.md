@@ -20,22 +20,21 @@ ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d6484d5f9762590f3bef941f7deff5092c720ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 416e527ad37ae34fcd3484a80cf774b054649548
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718705"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000232"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   バージョン ストアに最も多くバージョンを作成しているオブジェクトの仮想テーブルを返します。 **dm_tran_top_version_generators**は、 **database_id**と**rowset_id**によってグループ化された上位256の集計レコード長を返します。 **dm_tran_top_version_generators**は、 **dm_tran_version_store**仮想テーブルに対してクエリを実行してデータを取得します。 このビューはバージョンストアに対してクエリを実行し、バージョンストアは非常に大きくなる可能性があるため、dm_tran_top_version_generators を実行するには、非効率的なビューを使用し**ます。** この関数を使用して、バージョンストアの最大のコンシューマーを検索することをお勧めします。  
   
 > [!NOTE]  
 >  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_tran_top_version_generators**という名前を使用します。  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -56,10 +55,10 @@ sys.dm_tran_top_version_generators
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  **Dm_tran_top_version_generators**はバージョンストア全体をスキャンするので、多くのページを読み取る必要があるため、 **dm_tran_top_version_generators**を実行すると、システムのパフォーマンスが低下する可能性があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、4 つの同時実行トランザクションが存在するテスト シナリオを使用します。これらのトランザクションはそれぞれトランザクション シーケンス番号 (XSN) で識別され、ALLOW_SNAPSHOT_ISOLATION オプションと READ_COMMITTED_SNAPSHOT オプションが ON に設定されているデータベース内で実行されます。 実行されるトランザクションは次のとおりです。  
   
 -   XSN-57。SERIALIZABLE 分離での更新操作です。  
@@ -91,7 +90,7 @@ database_id rowset_id            aggregated_record_length_in_bytes
   
  出力には、すべてのバージョンがによって作成され、バージョンが2つのテーブルから生成されることが示されて `database_id``9` います。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

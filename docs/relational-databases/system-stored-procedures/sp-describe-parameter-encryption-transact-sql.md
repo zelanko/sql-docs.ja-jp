@@ -18,15 +18,14 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 583536c1b69951b18e6d30910f4e4d9d44b8d99f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ccba808ada0276933608b9297b6c416c11cdb194
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717366"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998955"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   指定した [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとそのパラメーターを分析して、Always Encrypted 機能を使用して保護されているデータベース列に対応するパラメーターを特定します。 暗号化された列に対応するパラメーターの暗号化メタデータを返します。  
   
@@ -83,13 +82,13 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|最初の結果セットの行のコード。 参照先の行では、列に対して構成されている列暗号化キーが記述され、パラメーターはに対応します。|  
 |**column_encryption_normalization_rule_version**|**tinyint**|型の正規化アルゴリズムのバージョン番号。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントドライバー (Always Encrypted をサポートする) は、アプリケーションによって発行されたパラメーター化クエリの暗号化メタデータを取得するために、 **sp_describe_parameter_encryption**を自動的に呼び出します。 その後、ドライバーは、暗号化メタデータを使用して、Always Encrypted で保護されているデータベース列に対応するパラメーターの値を暗号化し、データベースエンジンにクエリを送信する前に、暗号化されたパラメーター値を使用して、アプリケーションによって送信されたプレーンテキストパラメーター値を置き換えます。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースで、 **VIEW ANY COLUMN ENCRYPTION KEY definition**および**VIEW ANY COLUMN MASTER key definition**権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ```sql  
 CREATE COLUMN MASTER KEY [CMK1]  
@@ -163,7 +162,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |--------------------------------------|------------------------------------------------------|  
 |1|1|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted を使用したアプリケーションの開発](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   

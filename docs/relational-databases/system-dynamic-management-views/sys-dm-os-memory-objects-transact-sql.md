@@ -20,15 +20,14 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8672b03a7202d2ef7fa7666f4dd73462f1a6409f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 31af260a5290b899bb64fa3942d1e2aa0a076d31
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754050"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999047"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>dm_os_memory_objects (Transact-sql)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているメモリ オブジェクトを返します。 **Dm_os_memory_objects**を使用すると、メモリの使用量を分析し、メモリリークの可能性を特定できます。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "85754050"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  メモリ オブジェクトはヒープであり、 割り当ての粒度はメモリ クラークよりも細かくなります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントでは、メモリ クラークの代わりにメモリ オブジェクトが使用されます。 メモリオブジェクトは、メモリクラークのページアロケーターインターフェイスを使用してページを割り当てます。 メモリオブジェクトは、仮想または共有メモリインターフェイスを使用しません。 割り当てパターンに応じて、コンポーネントでは各種メモリ オブジェクトを作成し、任意のサイズの領域を割り当てることができます。  
   
  メモリオブジェクトの一般的なページサイズは 8 KB です。 ただし、増分メモリオブジェクトのページサイズは、512バイトから 8 KB の範囲で指定できます。  
@@ -71,7 +70,7 @@ ms.locfileid: "85754050"
 > [!NOTE]  
 >  ページサイズが最大割り当てではありません。 メモリ クラークによって実装されたページ アロケーターでサポートされている割り当ての粒度です。 メモリ オブジェクトから、8 KB を超える割り当てを要求することができます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、それぞれのメモリ オブジェクトの種類によって割り当てられたメモリのサイズを返します。  
   
 ```  
@@ -82,7 +81,7 @@ ORDER BY 'Bytes Used' DESC;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
   [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [dm_os_memory_clerks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   

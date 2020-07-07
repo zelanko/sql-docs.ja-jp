@@ -14,15 +14,14 @@ ms.assetid: 2498fbad-b3db-4bea-8fc6-fef5317d3eba
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a354a5b37c7c5ee275d51b0aab6571a6ebecac51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 2044bed875e8671696ea5bc262eff1bf1dfd59e1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785529"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998255"
 ---
 # <a name="session-properties---sql-server-native-client-ole-db-provider"></a>セッション プロパティ - SQL Server Native Client OLE DB プロバイダー
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、OLE DB セッションプロパティを次のように解釈します。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "85785529"
 |SSPROP_ASYNCH_BULKCOPY|非同期モードを使用するには、プロバイダー固有のセッション プロパティ SSPROP_ASYNCH_BULKCOPY を VARIANT_TRUE に設定してから、BCPExec メソッドを呼び出します。 このプロパティは、DBPROPSET_SQLSERVERSESSION プロパティ セットに含まれています。|  
 |||
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ ソース オブジェクト &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   
