@@ -12,22 +12,21 @@ ms.assetid: 1d60cb30-4c46-49b2-89ab-701e77a330a2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8e1a1c47d0842a51a7d090f611bb676d2bad537
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: f08b341046e7963aa4479bc43d67285dc2863d9e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787761"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009710"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>クライアント接続におけるサービス プリンシパル名 (SPN) (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ここでは、クライアント アプリケーションのサービス プリンシパル名 (SPN) をサポートする ODBC 属性および関数について説明します。 クライアントアプリケーションでの Spn の詳細については、「[サービスプリンシパル名 &#40;spn&#41; クライアント接続でのサポート](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)」および「[相互 Kerberos 認証の取得](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md)」を参照してください。  
   
 ## <a name="connection-string-keywords"></a>接続文字列キーワード  
  次の接続文字列キーワードを使用すると、クライアント アプリケーションは SPN を指定できます。  
   
-|Keyword|値|  
+|キーワード|値|  
 |-------------|-----------|  
 |**ServerSPN**|サーバーの SPN。 既定値は空文字です。この場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、ドライバーが生成した SPN を既定値として使用します。|  
 |**FailoverPartnerSPN**|フェールオーバー パートナーの SPN。 既定値は空文字です。この場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、ドライバーが生成した SPN を既定値として使用します。|  
@@ -54,7 +53,7 @@ ms.locfileid: "85787761"
   
 -   [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

@@ -21,15 +21,14 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f75555473e529b44d0b1fa99d0b526db8be1e64b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 0648fda674a0dba83ae4560fa3744e3c1b1430dc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773235"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009084"
 ---
 # <a name="changing-passwords-programmatically"></a>プログラムによるパスワードの変更
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のリリースでは、ユーザーのパスワードの有効期限が切れたとき、そのパスワードをリセットできるのは管理者だけでした。 以降で [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] は、Native client は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB プロバイダーと NATIVE client ODBC ドライバーの両方を介してプログラムによってパスワードの有効期限を処理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **SQL Server のログイン**ダイアログボックスに変更を加えることができます。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "85773235"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、パスワードの有効期限、パスワードポリシーの競合、アカウントのロックアウト、Windows 認証の使用時に古いパスワードプロパティが設定されている場合に、この機能の4つのケースで SQL_ERROR を返します。 [SQLGetDiagField](../../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)が呼び出されると、ドライバーはユーザーに適切なエラーメッセージを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

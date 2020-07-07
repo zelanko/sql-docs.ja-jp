@@ -14,28 +14,27 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c1bdf37018f75e1683fa0879ce4e25872efe20c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 690e853ceb908cb85d27831c0c9a4961591158f8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789417"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012095"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **SQLBrowseConnect**は、3つのレベルの接続情報に分類できるキーワードを使用します。 次の表では、キーワードごとに、有効な値の一覧が返されるかどうか、およびそのキーワードが省略可能であるかどうかを示します。  
   
 ## <a name="level-1"></a>[レベル 1]  
   
-|Keyword|一覧が返されるかどうか|省略できるかどうか|説明|  
+|キーワード|一覧が返されるかどうか|省略できるかどうか|説明|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN (DSN)|該当なし|いいえ|**Sqldatasources**ソースによって返されるデータソースの名前。 DSN キーワードは、DRIVER キーワードと同時に使用できません。|  
 |DRIVER|該当なし|いいえ|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバー名は { [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client 11} です。 DRIVER キーワードは、DSN キーワードと同時に使用できません。|  
   
 ## <a name="level-2"></a>[レベル 2]  
   
-|Keyword|一覧が返されるかどうか|省略できるかどうか|説明|  
+|キーワード|一覧が返されるかどうか|省略できるかどうか|説明|  
 |-------------|--------------------|---------------|-----------------|  
 |SERVER|はい|×|データ ソースがあるネットワーク上のサーバー名。 サーバー名には「(local)」と入力することもできます。これは、ネットワークに接続されていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル コピーも使用できることを意味します。|  
 |UID|いいえ|はい|ユーザー ログイン ID。|  
@@ -45,7 +44,7 @@ ms.locfileid: "85789417"
   
 ## <a name="level-3"></a>レベル 3  
   
-|Keyword|一覧が返されるかどうか|省略できるかどうか|説明|  
+|キーワード|一覧が返されるかどうか|省略できるかどうか|説明|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|はい|はい|データベースの名前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |LANGUAGE|はい|はい|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される言語。|  
@@ -74,7 +73,7 @@ ms.locfileid: "85789417"
 |---------------------|  
 |SQL_COPT_SS_BROWSE_CACHE_DATA に関する記述を追加しました。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQLBrowseConnect 関数](https://go.microsoft.com/fwlink/?LinkId=59329)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

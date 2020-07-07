@@ -20,15 +20,14 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1bf6607cd049e589e5050e111052723bbdb38e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 191dc00caa5ab39d3a3adf7882aa3bb88ea0d3f3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718795"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011637"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベースのパーティションごとに、ページ数と行数の情報を返します。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "85718795"
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
 |**distribution_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 分布に関連付けられている一意の数値 id です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  **sys.dm_db_partition_stats** では、データベースにあるすべてのパーティションの行内データ、LOB データ、行オーバーフロー データについて、格納と管理に使用されている領域に関する情報が表示されます。 ここではパーティションごとに 1 行が表示されます。  
   
  出力の基になる数字は、メモリにキャッシュされるか、各種システム テーブルのディスクに格納されます。  
@@ -80,7 +79,7 @@ SELECT * FROM sys.dm_db_partition_stats;
 GO  
 ```  
   
-### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>B: テーブルとそのインデックスのすべてのパーティションについて、すべてのカウントを返す  
+### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>B. テーブルとそのインデックスのすべてのパーティションについて、すべてのカウントを返す  
  次の例では、`HumanResources.Employee` テーブルとテーブルのインデックスに関するすべてのパーティションについて、ページ数や行数を表示します。  
   
 ```sql  
@@ -91,7 +90,7 @@ WHERE object_id = OBJECT_ID('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="c-returning-total-used-pages-and-total-number-of-rows-for-a-heap-or-clustered-index"></a>C: ヒープまたはクラスター化インデックスについて、合計使用ページ数と合計行数を返す  
+### <a name="c-returning-total-used-pages-and-total-number-of-rows-for-a-heap-or-clustered-index"></a>C. ヒープまたはクラスター化インデックスについて、合計使用ページ数と合計行数を返す  
  次の例では、`HumanResources.Employee` テーブルのヒープまたはクラスター化インデックスについて、合計使用ページ数と合計行数を返します。 `Employee` テーブルは既定ではパーティション分割されていないため、合計値には 1 つのパーティションだけが含まれます。  
   
 ```sql  
@@ -104,7 +103,7 @@ WHERE object_id=OBJECT_ID('HumanResources.Employee')    AND (index_id=0 or index
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

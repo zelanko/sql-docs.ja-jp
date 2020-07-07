@@ -20,15 +20,14 @@ ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ab738105b907f4b1078cc8add761fc9f5431d35
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 84be14f04a39f3697c6cf0bca87c5369cced2c48
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677180"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011609"
 ---
 # <a name="sysdm_exec_background_job_queue-transact-sql"></a>dm_exec_background_job_queue (Transact-sql)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   非同期 (バックグラウンド) 実行用にスケジュールされているクエリプロセッサジョブごとに1行の値を返します。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "85677180"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このビューは、統計の非同期更新ジョブに関する情報のみを返します。 統計の非同期更新の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。  
   
  **Object_id4**を通じて**object_id1**の値は、ジョブ要求の種類によって異なります。 次の表は、それぞれのジョブの種類の列に関する説明です。  
@@ -64,7 +63,7 @@ ms.locfileid: "85677180"
 |------------------|-----------------|-----------------|-----------------|-----------------|  
 |統計の非同期更新|テーブルまたはビュー ID|統計 ID|使用されていない|使用されていない|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、のインスタンス内の各データベースについて、バックグラウンドキューにあるアクティブな非同期ジョブの数を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ```  
@@ -75,7 +74,7 @@ GROUP BY database_id;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [値](../../relational-databases/statistics/statistics.md)   

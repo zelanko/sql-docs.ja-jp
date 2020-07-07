@@ -19,15 +19,14 @@ ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe57fda774997f8439c44a75fa917ecb3db3495e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 940c3210f25430550c11e0ad836d536427d2936a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647637"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012030"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-sql)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベースの現在のユーザーがアクセスできる列ごとに1行のデータを返します。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "85647637"
 |**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|列がユーザー定義データ型の場合、この列はユーザー定義データ型のスキーマの名前を返します。 その他の場合は NULL が返されます。<br /><br /> **&#42;&#42; の重要な &#42;&#42;** データ型のスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 型のスキーマを検索する唯一の信頼性のある方法は、TYPEPROPERTY 関数を使用することです。|  
 |**DOMAIN_NAME**|**nvarchar (** 128 **)**|列がユーザー定義データ型の場合、この列はユーザー定義データ型の名前になります。 その他の場合は NULL が返されます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  INFORMATION_SCHEMA の**ORDINAL_POSITION**列 **。列**ビューは、COLUMNS_UPDATED 関数によって返される列のビットパターンと互換性がありません。 COLUMNS_UPDATED と互換性のあるビットパターンを取得するには、INFORMATION_SCHEMA に対してクエリを実行するときに、COLUMNPROPERTY システム関数の**ColumnID**プロパティを参照する必要があり**ます。列**ビュー。 次に例を示します。  
   
 ```  
@@ -71,7 +70,7 @@ WHERE TABLE_NAME = 'Person';
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [情報スキーマビュー &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.sys文字セット &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   

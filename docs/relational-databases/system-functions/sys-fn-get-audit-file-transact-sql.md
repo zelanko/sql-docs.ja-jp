@@ -21,15 +21,14 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: aa14b65d527de3efa82f54212e6668e232197486
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
-ms.translationtype: MT
+ms.openlocfilehash: e4e107fea977e70d8b32e4b84c09bfb320cc8b47
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813913"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009955"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>fn_get_audit_file (Transact-sql)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]    
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサーバー監査で作成された監査ファイルからの情報を返します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
@@ -127,7 +126,7 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar (4000)** | **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、Azure SQL DB、およびマネージインスタンス<br /><br /> **Sp_audit_write**ストアドプロシージャを使用して、監査ログに記録する必要のある追加情報を記録するために使用します。 |  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  **Fn_get_audit_file**に渡された*file_pattern*引数が、存在しないパスまたはファイルを参照している場合、またはファイルが監査ファイルでない場合は、 **MSG_INVALID_AUDIT_FILE**エラーメッセージが返されます。  
   
 ## <a name="permissions"></a>アクセス許可
@@ -138,7 +137,7 @@ fn_get_audit_file ( file_pattern,
   - 非サーバー管理者は、現在のデータベースからの監査ログにのみアクセスできます。
   - 上記の条件を満たしていない blob はスキップされます (スキップされた blob の一覧がクエリ出力メッセージに表示されます)。関数は、アクセスが許可されている blob からのログのみを返します。  
   
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 - **SQL Server**
 
@@ -178,7 +177,7 @@ fn_get_audit_file ( file_pattern,
 
 Azure SQL Database 監査の設定の詳細については、「 [SQL Database 監査の概要](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)」を参照してください。
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
