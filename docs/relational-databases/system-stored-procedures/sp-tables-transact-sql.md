@@ -18,15 +18,14 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03a1d909dc1d3a89b68895e05953cc0ed0da2a7b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 92ea113cfde897e2735be4ae1a3cc35b6bb788fc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725508"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85984895"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在の環境でクエリを実行できるオブジェクトの一覧を返します。 これは、シノニムオブジェクトを除くすべてのテーブルまたはビューを意味します。  
   
@@ -76,7 +75,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_TYPE**|**varchar(32)**|テーブル、システムテーブル、またはビュー。|  
 |**備考**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はこの列の値を返しません。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  相互運用性を最大にするために、ゲートウェイクライアントは SQL-92-標準の SQL パターン照合 (% と _ ワイルドカード文字) のみを想定する必要があります。  
   
  現在のユーザーの特定のテーブルに対する読み取りまたは書き込みアクセスに関する特権情報は、常にチェックされません。 そのため、アクセスは保証されません。 この結果セットには、テーブルとビューだけでなく、これらの型をサポートする DBMS 製品へのゲートウェイのシノニムと別名も含まれています。 **Sp_server_info**の結果セットで server 属性**ACCESSIBLE_TABLES**が Y の場合は、現在のユーザーがアクセスできるテーブルだけが返されます。  
@@ -95,7 +94,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 EXEC sp_tables ;  
 ```  
   
-### <a name="b-returning-information-about-the-tables-in-a-specified-schema"></a>B: 指定されたスキーマ内のテーブルに関する情報を返す  
+### <a name="b-returning-information-about-the-tables-in-a-specified-schema"></a>B. 指定されたスキーマ内のテーブルに関する情報を返す  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Person` スキーマに属するテーブルに関する情報が返されます。  
   
 ```  
@@ -116,7 +115,7 @@ EXEC sp_tables
 EXEC sp_tables ;  
 ```  
   
-### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D: 指定されたスキーマ内のテーブルに関する情報を返す  
+### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D. 指定されたスキーマ内のテーブルに関する情報を返す  
  次の例では、データベース内のディメンションテーブルに関する情報を返し `AdventureWorksPDW201` ます。  
   
 ```  
@@ -128,7 +127,7 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorksPDW2012';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Transact-sql &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

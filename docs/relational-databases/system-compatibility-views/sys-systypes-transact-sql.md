@@ -21,15 +21,14 @@ ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99a970b5be9f28569942b4378c488b710b13cd32
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 4f0e341c069b1ce7e095e5ee8e17c098f21fd088
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652340"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85987041"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.sysの型 (Transact-sql)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   システムによって提供される、およびデータベースで定義されているユーザー定義データ型ごとに1行のデータを返します。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "85652340"
 |**xprec**|**tinyint**|サーバーで使用される内部精度。 クエリでは使用されません。|  
 |**xscale**|**tinyint**|内部スケール。サーバーで使用されます。 クエリでは使用されません。|  
 |**tdefault**|**int**|このデータ型の整合性チェックが含まれているストアドプロシージャの ID。|  
-|**領域**|**int**|このデータ型の整合性チェックが含まれているストアドプロシージャの ID。|  
+|**domain**|**int**|このデータ型の整合性チェックが含まれているストアドプロシージャの ID。|  
 |**uid**|**smallint**|型の所有者のスキーマ ID です。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の前のバージョンからアップグレードしたデータベースの場合、スキーマ ID は所有者のユーザー ID と同じです。<br /><br /> 重要次のいずれかの DDL ステートメントを使用する場合は、sys.sys** \* 型ではなく、sys カタログビューを使用する必要があります。 \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) **sys.systypes**<br /><br /> 型に対する ALTER AUTHORIZATION<br /><br /> CREATE TYPE<br /><br /> ユーザーおよびロールの数が32767を超えた場合、オーバーフローまたは NULL を返します。|  
 |**確保**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|文字ベースの場合、 **collationid**は現在のデータベースの照合順序の id です。それ以外の場合は NULL になります。|  
@@ -59,7 +58,7 @@ ms.locfileid: "85652340"
 |**scale**|**tinyint**|このデータ型の有効桁数に基づく小数点以下桁数です。<br /><br /> NULL = データ型は数値型ではありません。|  
 |**規則**|**sysname**|文字ベースの場合、 **collation**は現在のデータベースの照合順序です。それ以外の場合は NULL になります。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [互換性ビュー &#40;Transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
