@@ -20,15 +20,14 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0f2ac10fe68f5e51f72d12f3b5514ef293afda0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: f6236e2744487742a3fec119b62a2a08e7594822
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775964"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002373"
 ---
 # <a name="diagnostic-records-and-fields"></a>診断レコードと診断フィールド
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   診断レコードは、ODBC 環境、接続、ステートメント、または記述子ハンドルに関連付けられています。 ODBC 関数から SQL_SUCCESS または SQL_INVALID_HANDLE 以外のリターン コードが返されるときは、その関数で呼び出されたハンドルに、情報メッセージまたはエラー メッセージが格納された診断レコードが関連付けられます。 これらの診断レコードは、同じハンドルを使用して別の関数が呼び出されるまで保持され、別の呼び出しが行われた時点で破棄されます。 1 つのハンドルに同時に関連付けることができる診断レコードの数に制限はありません。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "85775964"
   
  Native Client ODBC ドライバーによって報告されるほとんどのエラー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **SQLGetDiagRec**によって返された情報のみを使用して、効果的に診断することができます。 ただし、ドライバー固有の診断フィールドから返される情報がエラーを診断するうえで重要になることもあります。 Native Client ODBC ドライバーを使用してアプリケーションの ODBC エラーハンドラをコーディングする場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **SQLGetDiagField**を使用して、少なくとも SQL_DIAG_SS_MSGSTATE および SQL_DIAG_SS_SEVERITY ドライバ固有のフィールドを取得することをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード内の複数の箇所で特定のエラーが発生した可能性がある場合は、SQL_DIAG_SS_MSGSTATE により、エラーの厳密な発生箇所がマイクロソフトのサポート エンジニアに報告されます。この情報は、問題の診断に役立つことがあります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エラーとメッセージの処理](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

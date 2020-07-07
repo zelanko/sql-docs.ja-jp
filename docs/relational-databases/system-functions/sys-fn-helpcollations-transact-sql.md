@@ -20,16 +20,15 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa2a3f7436574d43f0cfc04d5cb7147b1c15f629
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d91ff0f85ba496397025ea99012509edea9dd865
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783140"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000914"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   サポートされているすべての照合順序の一覧を返します。  
   
@@ -52,7 +51,7 @@ fn_helpcollations ()
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は Windows 照合順序をサポートします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サポートされている Windows 照合順序の前に開発された、照合順序と呼ばれる限定された数 (<80) の照合順序もサポートしてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]照合順序は旧バージョンとの互換性のために引き続きサポートされていますが、新規の開発作業には使用しないでください。 Windows 照合順序について詳しくは、「[Windows 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)」をご覧ください。 照合順序の詳細については、「[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」 (照合順序と Unicode のサポート) を参照してください。  
   
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
  次の例では、文字で始まるすべての照合順序名 `L` と、バイナリ並べ替え照合順序を返します。
 
@@ -80,7 +79,7 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
  (7 row(s) affected)  
  ```
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
 [COLLATIONPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  

@@ -23,15 +23,14 @@ ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f299d5535a6b07d04eab3d8e16ad8f4bbe99f058
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 7c24230b76a08f629f219d23f67771e91ff3486c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775897"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002898"
 ---
 # <a name="autotranslation-of-character-data"></a>文字データの自動変換
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   SQL_C_CHAR で宣言された ANSI 文字変数や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CHAR**、 **varchar**、または**text**データ型を使用してに格納されているデータなどの文字データは、制限された文字数のみを表すことができます。 1 文字ごとに 1 バイトを使用して保存される文字データでは、256 文字しか表現できません。 SQL_C_CHAR 変数に格納される値は、クライアント コンピューターの ANSI コード ページ (ACP) を使用して解釈されます。 サーバーで**char**、 **varchar**、または**text**データ型を使用して格納されている値は、サーバーの ACP を使用して評価されます。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "85775897"
   
  文字から Unicode にデータが移動される場合、データは必ず変換されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;結果の処理](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)   
  [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)  
   

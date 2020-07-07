@@ -20,15 +20,14 @@ ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f9ca2219c0c9e26ee13fdaa3a0acefc0da31f24
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 5c68381c68a70ef72cf10481f05584aa25098773
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724980"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004663"
 ---
 # <a name="mapping-data-types-odbc"></a>データ型のマッピング (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc ドライバーでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sql データ型が odbc sql データ型にマップされます。 次のセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL データ型とマップ先の ODBC SQL データ型について説明します。 また、ODBC SQL データ型と対応する ODBC C データ型、およびサポートされる変換と既定の変換についても説明します。  
   
@@ -91,7 +90,7 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
 ### <a name="sending-data-to-the-server"></a>サーバーへのデータの送信  
  **SQL_SS_VARIANT**は、NATIVE Client ODBC ドライバーに固有の新しいデータ型で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sql_variant**列に送信されるデータに使用されます。 パラメーターを使用してサーバーにデータを送信する場合 (たとえば、INSERT INTO TableName VALUES (?,?))、 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)を使用して、C 型や対応する型などのパラメーター情報を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、C データ型を適切な**sql_variant**のサブタイプのいずれかに変換します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;結果の処理](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

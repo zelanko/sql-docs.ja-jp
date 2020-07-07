@@ -18,15 +18,14 @@ ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362d30f637de94607777fca0c664822f98e28e39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 1974bca39ef90357e66467525843ba24b4a0f9cc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775923"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001380"
 ---
 # <a name="prepared-execution"></a>準備実行
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC API では、準備実行とは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを繰り返し実行する際に関連して生じる解析やコンパイルのオーバーヘッドを削減する方法と定義されています。 アプリケーションでは SQL ステートメントを保持する文字列を構築してから、そのステートメントを 2 段階に分けて実行します。 [SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)を1回呼び出して、ステートメントが解析され、によって実行プランにコンパイルされるようにし [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ます。 次に、準備された実行プランの各実行に対して**Sqlexecute**を呼び出します。 この方法では、各実行にかかる解析とコンパイルのオーバーヘッドが抑制されます。 準備実行は、通常、同一のパラメーター化された SQL ステートメントを繰り返し実行するアプリケーションで使用されます。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "85775923"
   
  一部の初期 ODBC アプリケーションでは、 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)を使用したときに**SQLPrepare**が使用されていました。 **SQLBindParameter**では、 **SQLPrepare**を使用する必要はありません。 **SQLExecDirect**と共に使用できます。 たとえば、 **SQLExecDirect**を**SQLBindParameter**と共に使用すると、ストアドプロシージャから返されるリターンコードまたは出力パラメーターが1回だけ実行されます。 同じステートメントが複数回実行される場合を除き、 **SQLPrepare**と**SQLBindParameter**を同時に使用しないでください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;のステートメントの実行](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

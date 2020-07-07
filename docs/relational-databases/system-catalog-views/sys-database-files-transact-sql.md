@@ -20,15 +20,14 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ab99e0ce3e63a42795d17fc859bbbd3b6c8059d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 5c12fdc6ebdd5932715de28083ff5bbb9169d930
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785020"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003035"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   データベース自体に保存されているデータベースのファイルごとに 1 行のデータを格納します。 これはデータベース単位のビューです。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "85785020"
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次のステートメントは、各データベースファイルの名前、ファイルサイズ、および空き領域の大きさを返します。
 
 ```
@@ -81,7 +80,7 @@ FROM sys.database_files;
 ```
 を使用する場合の詳細につい [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ては、SQL Customer アドバイザリチームブログの「 [Azure SQL Database V12 でのデータベースサイズの決定](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/)」を参照してください。
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベースとファイルのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [ファイルの状態](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

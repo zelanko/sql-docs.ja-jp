@@ -13,15 +13,14 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00f8e05a901c5c2729907ec64ae5cd14a8c23413
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 80757fcbaf0548b520f8357de4eb5cc23db86386
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725011"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005831"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>ODBC ドライバー パフォーマンス データのプロファイル - 長時間実行クエリのログ
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このサンプルでは、実行時間の長いクエリをログに記録するための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバー固有のオプションを示します。 このサンプルを実行すると Odbcqry.log が作成されます。このファイルには、アプリケーションの設定間隔よりも実行時間が長いクエリの一覧が格納されます。 このサンプルは IA64 ではサポートされていません。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "85725011"
   
 3.  実行時間の長いクエリのログを記録するデータ ソースをクリックします。  
   
-4.  **[構成]** をクリックします。  
+4.  **[Configure]\(構成\)** をクリックします。  
   
 5.  Microsoft SQL Server DSN の構成ウィザードで、[**実行時間の長いクエリをログファイルに保存する**] ページに移動します。  
   
@@ -218,7 +217,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Odbc&#41;&#40;ODBC ドライバーのパフォーマンスのプロファイル方法に関するトピック](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

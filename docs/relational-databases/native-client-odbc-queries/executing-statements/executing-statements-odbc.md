@@ -16,15 +16,14 @@ ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a284851d59ce1a5a8f64faa02555303adcd66092
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 2680d1d65e051abfdcb22e239d9c97a9fc535745
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775929"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001393"
 ---
 # <a name="executing-statements-odbc"></a>ステートメントの実行 (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーには、データベース内で SQL ステートメントを実行するためのさまざまな方法が用意されてい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "85775929"
   
 -   [ISO オプションの効果](../../../relational-databases/native-client-odbc-queries/executing-statements/effects-of-iso-options.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;クエリの実行](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

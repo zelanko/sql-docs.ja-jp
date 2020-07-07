@@ -4,22 +4,30 @@ description: 各リリースの SQL Server Migration Assistant (SSMA) for DB2 (D
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 18e7ba16dcbcc44155172f239accbfe26fe86fc2
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: c35b67bebc63c47750b856d5a2ec2d45666c90b8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779054"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003873"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 の新機能 (DB2ToSQL)
 
 この記事では、各リリースでの DB2 変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+SSMA for DB2 の v 8.11 リリースには、次の変更が含まれています。
+
+* DB2 for i (v2.0 以降) のサポート
+* との変換 `SQLSTATE``SQLCODE`
+* 関数内の副作用のある演算子の変換エラーメッセージ
+* MSAL.NET library を使用して対話型 Azure Active Directory 認証を行う
 
 ## <a name="ssma-v810"></a>SSMA v 8.10
 

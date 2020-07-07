@@ -24,15 +24,14 @@ ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd54f05b336284f08892022537641a1e1af99712
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 8d9bb89822a24116b34f9be297b379c66512a081
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719833"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005883"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>データ ソースへの接続 (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   アプリケーションは、環境ハンドルと接続ハンドルを割り当て、任意の接続属性を設定してから、データ ソースまたはドライバーに接続します。 接続には、次の 3 つの関数を使用できます。  
   
@@ -114,7 +113,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
   
  接続用のアプリケーションのエラー処理関数は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_NO_DATA を返すまで**SQLGetDiagRec**を呼び出す必要があります。 次に、 *pfNative*コードが5701または5703のメッセージ以外のすべてのメッセージに対して動作します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;SQL Server との通信](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

@@ -16,15 +16,14 @@ ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ad277bb18a8ba549b9e5331fd9dcda7a774f093
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 030a793b949c0e3b94cbee2b35a24bde46dfee2f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719785"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000638"
 ---
 # <a name="cursor-types"></a>カーソルの種類
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC では、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と Native CLIENT ODBC ドライバーでサポートされる4種類のカーソルを定義して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] います。 これらのカーソルは、結果セットへの変更や、 **tempdb**のメモリや領域など、使用するリソースに対する変更を検出する機能によって異なります。 カーソルが行への変更を検出できるのは、変更が加えられた行の再フェッチを試みたときだけです。現在フェッチしている行への変更を、データ ソースからカーソルに通知する方法はありません。 カーソルを使用して行われなかった変更を検出する機能は、トランザクション分離レベルによって異なる場合があります。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "85719785"
   
 -   動的カーソルは静的カーソルと対照的です。 動的カーソルでは、結果セット内の行に対するすべての変更が反映されます。 結果セット内の行のデータ値、順序、およびメンバーシップは、フェッチを実行するたびに変化する可能性があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;カーソルの使用](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

@@ -16,15 +16,14 @@ ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73cd53e5b9c83fe77027b8260d46bc5b989e91a6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 14c2a982d1d1744eb8ee0da40203b86d62bfaccd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775943"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001414"
 ---
 # <a name="direct-execution"></a>直接実行
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   直接実行はステートメントを実行する最も基本的な方法です。 アプリケーションは、ステートメントを含む文字列を構築 [!INCLUDE[tsql](../../../includes/tsql-md.md)] し、 **SQLExecDirect**関数を使用して実行するために送信します。 ステートメントがサーバーに到達すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がステートメントを実行プランにコンパイルしてから、すぐにその実行プランを実行します。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "85775943"
   
  **SQLExecDirect**で実行されたすべてのステートメントがこれらの規則を使用してコード化されている場合、では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 営業案件が発生したときに実行プランを再利用  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;のステートメントの実行](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

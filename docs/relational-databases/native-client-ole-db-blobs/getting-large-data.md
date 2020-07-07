@@ -16,15 +16,14 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4927ffc7ded9a291e5910cd359cb59edea0bf3bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e9ba0351a3ea398661642a2e737a58fb7adecf8d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785560"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005839"
 ---
 # <a name="getting-large-data"></a>大きなデータの取得
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   一般に、コンシューマーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ISequentialStream**インターフェイスポインターによって参照されていないデータを処理する他のコードから、Native Client OLE DB プロバイダーストレージオブジェクトを作成するコードを分離する必要があります。  
   
@@ -148,7 +147,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Blob と OLE オブジェクト](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [大きな値をとるデータ型の使用](../../relational-databases/native-client/features/using-large-value-types.md)  
   

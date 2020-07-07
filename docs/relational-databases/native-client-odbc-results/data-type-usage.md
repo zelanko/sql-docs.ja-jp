@@ -19,19 +19,18 @@ ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61ce0136a7e94b6b4382d13f2b80a6786340585a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: a20fcafe79f5ba0ddb3a5cc98208158967aafb3b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751799"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002879"
 ---
 # <a name="data-type-usage"></a>データ型の使用方法
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次のデータ型の使用が強制されます。  
   
-|データの種類|制限事項|  
+|データ型|制限事項|  
 |---------------|----------------|  
 |日付リテラル|日付リテラルは、SQL_TYPE_TIMESTAMP 列 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**または**smalldatetime**のデータ型) に格納されている場合、時刻の値は 12:00: 00.000 A.M. になります。|  
 |**money**と**smallmoney**|**Money**データ型と**smallmoney**データ型の整数部分のみが重要です。 データ型の変換中に SQL **money**データの小数部が切り捨てられた場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーはエラーではなく警告を返します。|  
@@ -49,7 +48,7 @@ ms.locfileid: "85751799"
 |ユーザー定義型 (UDT)|UDT 列は SQL_SS_UDT としてマップされます。 SQL ステートメントで、UDT の ToString() メソッドまたは ToXMLString() メソッドを使用するか、CAST/CONVERT 関数を使用して UDT 列を明示的に別の型にマップする場合、結果セット内の列の型には変換された列の実際の型が反映されます。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、UDT 列にバイナリとしてのみバインドできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされるのは、SQL_SS_UDT データ型と SQL_C_BINARY データ型の間の変換のみです。|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML を Unicode テキストに自動的に変換します。 XML 型は SQL_SS_XML としてマップされます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;結果の処理](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

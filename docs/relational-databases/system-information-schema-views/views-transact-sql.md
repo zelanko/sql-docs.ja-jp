@@ -19,15 +19,14 @@ ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1a910110ac34ebcd52dacf2c4f549f76f44cb06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 9aca4edc4d2b30eba8fe37467698f80b0c4ab5f4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647272"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006190"
 ---
 # <a name="views-transact-sql"></a>ビュー (Transact-sql)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベースで現在のユーザーがアクセスできるビューを表す 1 行のデータを返します。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "85647272"
 |**CHECK_OPTION**|**varchar (** 7 **)**|WITH CHECK OPTION の型。 元のビューが WITH CHECK OPTION を使用して作成されている場合、CASCADE です。 その他の場合は NONE が返されます。|  
 |**IS_UPDATABLE**|**varchar (** 2 **)**|ビューが更新可能であるかどうかを指定します。 常に NO が返されます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [情報スキーマビュー &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   

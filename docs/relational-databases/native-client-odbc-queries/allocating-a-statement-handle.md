@@ -21,15 +21,14 @@ ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bd93e3ac61c81bf7e61f9fd98cd05685877f287
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: f3ff0249ecbe1193a67014dc5c2ad28e79cae7d4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730351"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001465"
 ---
 # <a name="allocating-a-statement-handle"></a>ステートメント ハンドルの割り当て
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   アプリケーションでステートメントを実行する前に、ステートメント ハンドルを割り当てる必要があります。 これを行うには、 *Handletype*パラメーターを SQL_HANDLE_STMT に設定し、 *InputHandle*をポイントするように**SQLAllocHandle**を呼び出します。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "85730351"
   
  上記のオプションを設定するときは注意が必要です。 SQL_ATTR_MAX_LENGTH と SQL_ATTR_MAX_ROWS の場合、接続ハンドルのすべてのステートメント ハンドルが同じ設定になるようにすることをお勧めします。 ドライバーが、あるステートメント ハンドルから、これらのオプションに異なる値を持つ別のステートメント ハンドルに切り替える場合、適切な SET TEXTSIZE ステートメントと SET ROWCOUNT ステートメントを生成して、設定を変更する必要があります。 ユーザー SQL ステートメントには、バッチ内では先頭に含めなければならないステートメントを含めることができるので、ドライバーはユーザー SQL ステートメントと同じバッチ内にこれらのステートメントを配置することはできません。 ドライバーは SET TEXTSIZE ステートメントと SET ROWCOUNT ステートメントを別のバッチで送信する必要があります。その結果、サーバーに対する追加のラウンドトリップが自動的に生成されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;クエリの実行](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

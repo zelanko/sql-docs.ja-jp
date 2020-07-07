@@ -16,15 +16,14 @@ ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae8db3dad7c93b49f5698396e84b5feff1198393
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 72c17f0417bf0b3115d1c8c69d208dfafb361e7b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783478"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006009"
 ---
 # <a name="error-messages"></a>エラー メッセージ
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Native Client ODBC ドライバーによって返されるメッセージのテキスト [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **SQLGetDiagRec**の*messagetext*パラメーターに格納されます。 メッセージのヘッダーには、次のようにエラーの発生元が記載されます。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "85783478"
  エクスプローラー[SQL Server Native Client][ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  
  このヘッダーに関連するエラーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で発生しています。 エラー メッセージの残りの部分は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー メッセージのテキストです。 これらのエラーと共に返される*pfNative*コードは、からのエラー番号です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 によって返されるエラーメッセージの一覧 (およびその番号) の詳細については [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、の**master**データベースにある**sysmessages**システムテーブルの description 列と error 列を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エラーとメッセージの処理](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

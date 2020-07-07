@@ -19,15 +19,14 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87b905aa178aec6aa10d4d7585384183bdb5d6c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e4d6914ce4b46a7fc787b496ebf6b23036b9c21c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783005"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002137"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 現在のデータベースのスキーマバインドされていないストアドプロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベースレベルの DDL トリガー、またはサーバーレベルの DDL トリガーのパラメーターの Always Encrypted メタデータを更新します。 
 
@@ -55,7 +54,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 0 (成功) または0以外の数値 (失敗)
 
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 次の場合、モジュールのパラメーターの暗号化メタデータが古くなる可能性があります。   
 * モジュールが参照しているテーブル内の列の暗号化プロパティが更新されました。 たとえば、列が削除され、同じ名前の新しい列が存在しますが、別の暗号化の種類、暗号化キー、または暗号化アルゴリズムが追加されています。  
@@ -80,7 +79,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 句を使用して定義されているモジュールの場合 `EXECUTE AS` 、 `IMPERSONATE` 指定されたプリンシパルに対する権限が必要です。 一般に、オブジェクトを更新してもプリンシパルは変更されません `EXECUTE AS` 。ただし、モジュールがで定義されていて、 `EXECUTE AS USER` プリンシパルのユーザー名が、モジュールが作成されたときとは別のユーザーに解決されるようになった場合を除きます。
  
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、テーブルと、テーブルを参照するプロシージャを作成し、Always Encrypted を構成して、テーブルを変更してプロシージャを実行する方法を示し `sp_refresh_parameter_encryption` ます。  
 
@@ -153,7 +152,7 @@ EXEC sp_refresh_parameter_encryption [find_patient];
 GO
 ```
 
-## <a name="see-also"></a>関連項目 
+## <a name="see-also"></a>参照 
 
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Always Encrypted ウィザード](../../relational-databases/security/encryption/always-encrypted-wizard.md)   

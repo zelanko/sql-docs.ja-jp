@@ -23,15 +23,14 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6fb0669f2dc631981145061f240d69fa16e4e674
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 9962a7fbcb3b308862db7e8813ee2733155950ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892188"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004783"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 データベース内の分類されたアイテムごとに1行のデータを返します。
 
@@ -49,7 +48,7 @@ ms.locfileid: "85892188"
 |**rank_desc**|**sysname**|ランクのテキスト表現:  <br><br>なし、低、中、高、重大|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
 
 - このビューでは、データベースの分類状態を表示できます。 データベースの分類を管理したり、レポートを生成したりするために使用できます。
 - 現在、データベース列の分類のみがサポートされています。
@@ -80,7 +79,7 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 
 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 

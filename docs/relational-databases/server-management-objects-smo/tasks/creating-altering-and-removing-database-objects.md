@@ -14,15 +14,14 @@ ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f961d0aba5bb42c924f5c6174670d6e8566f662
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 624de23d309aac6f453054c2bf7a7a10b4a478ec
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900065"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001351"
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>データベース オブジェクトの作成、変更、および削除
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   SMO オブジェクトの作成には次の段階があります。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "85900065"
   
  **Drop**ステートメントを使用して、オブジェクトと、オブジェクトを最初に作成するために必要だったすべての共存子オブジェクトを削除します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SMO オブジェクト モデル](../../../relational-databases/server-management-objects-smo/smo-object-model.md)  
   
   

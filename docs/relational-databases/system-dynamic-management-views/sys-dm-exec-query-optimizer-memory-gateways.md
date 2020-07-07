@@ -20,15 +20,14 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01b0a68658112ebde642dde3f9c1fa0fb1d73c57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: da47c1b31551abd538adca6a447ac57a3fc429ff
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734737"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005193"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>dm_exec_query_optimizer_memory_gateways (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 同時クエリの最適化を調整するために使用されるリソースセマフォの現在の状態を返します。
 
@@ -50,7 +49,7 @@ SQL Server には、サーバーに対する VIEW SERVER STATE 権限が必要�
 Azure SQL Database には、データベースに対する VIEW DATABASE STATE 権限が必要です。
 
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
 SQL Server では、階層化されたゲートウェイアプローチを使用して、許可される同時コンパイルの数を調整します。  小規模、中、大など、3つのゲートウェイが使用されます。 ゲートウェイを使用すると、より大きなコンパイルメモリを必要とするコンシューマーによって、全体的なメモリリソースが枯渇するのを防ぐことができます。
 
 ゲートウェイの結果を遅延コンパイルで待機します。 調整された要求には、コンパイル時の遅延に加えて、RESOURCE_SEMAPHORE_QUERY_COMPILE の待機の種類の累積が関連付けられます。 RESOURCE_SEMAPHORE_QUERY_COMPILE の待機の種類は、クエリがコンパイルに大量のメモリを使用していて、メモリが不足していること、または、特定のゲートウェイで使用可能なユニットがいっぱいになっていることを示している場合があります。 **Dm_exec_query_optimizer_memory_gateways**の出力を使用して、クエリ実行プランをコンパイルするためのメモリが不足しているシナリオのトラブルシューティングを行うことができます。  
@@ -68,7 +67,7 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 
 ```  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;の動的管理ビューおよび関数](./system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [DBCC MEMORYSTATUS コマンドを使用して SQL Server 2005 のメモリ使用率を監視する方法](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005) 

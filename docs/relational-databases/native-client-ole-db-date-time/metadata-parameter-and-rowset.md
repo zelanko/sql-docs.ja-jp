@@ -13,15 +13,14 @@ ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e26d334a360b42ba1bdaa6311eb09bcffd70489
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 79bf81886795d4772a4eac08ee51912b775cc4c8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773447"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005433"
 ---
 # <a name="metadata---parameter-and-rowset"></a>メタデータ - パラメーターと行セット
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、OLE DB の日付および時刻の機能強化に関連する、次の型と型メンバーについて説明します。  
   
@@ -40,10 +39,10 @@ ms.locfileid: "85773447"
   
 |パラメーターの型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|クリア|  
 |time|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|クリア|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|クリア|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19、21.. 27|0..7|オン|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28.. 34|0..7|オン|  
   
@@ -85,10 +84,10 @@ ms.locfileid: "85773447"
   
 |列の型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|クリア|  
 |time|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|クリア|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|クリア|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|オン|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|オン|  
   
@@ -119,10 +118,10 @@ ms.locfileid: "85773447"
   
 |パラメーターの型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|クリア|  
 |time(1..7)|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|クリア|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|クリア|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|オン|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|オン|  
   
@@ -144,7 +143,7 @@ ms.locfileid: "85773447"
   
  *dwFlags* に用意されている新しいフラグ DBCOLUMNFLAGS_SS_ISVARIABLESCALE を使用すると、アプリケーションは、*wType* が DBTYPE_DBTIMESTAMP である列のサーバーの種類を判断できます。 サーバーの種類を識別するには、*bScale* も使用する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メタデータ &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

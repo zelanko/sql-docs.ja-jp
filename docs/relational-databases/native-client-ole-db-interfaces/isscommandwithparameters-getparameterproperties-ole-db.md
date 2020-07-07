@@ -16,15 +16,14 @@ ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26678d79897b4c60e71e39c8c502c38b50d2d965
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 573cc481f73288443ff7de084404432ead6a4e42
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785325"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005360"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   SSPARAMPROPS プロパティ セット構造体の配列を返します。各 UDT または XML パラメーターごとに 1 つの SSPARAMPROPS プロパティ セットが返されます。  
   
@@ -46,7 +45,7 @@ HRESULT GetParameterProperties(
 ## <a name="return-code-values"></a>リターン コードの値  
  **Getparameterproperties**メソッドは、DB_S_ERRORSOCCURRED と DB_E_ERRORSOCCURED を発生させることができない点を除いて、Core OLE DB **ICommandProperties:: GetProperties**メソッドと同じエラーコードを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  **Isscommandwithparameters:: GetParameterProperties**は、 **getparameterinfo**に関して一貫して動作します。 [Isscommandwithparameters:: SetParameterProperties](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)または**setparameterinfo**が呼び出されていないか、または cparams が0と等しい場合に呼び出された場合、 **getparameterinfo**はパラメーター情報を取得し、これを返します。 **Isscommandwithparameters:: setparameterproperties**または**setparameterinfo**が少なくとも1つのパラメーターに対して呼び出されている場合、 **Isscommandwithparameters:: Getparameterproperties**は、 **isscommandwithparameters:: setparameterproperties**が呼び出されたパラメーターに対してのみプロパティを返します。 Isscommandwithparameters:: **getparameterproperties**または**getparameterinfo**の後に Isscommandwithparameters **:: setparameterproperties**を呼び出すと、Isscommandwithparameters:: **getparameterproperties**の後続の呼び出しで、 **isscommandwithparameters:: setparameterproperties**が呼び出されたこれらのパラメーターのオーバーライドされた値が返されます。  
   
  SSPARAMPROPS 構造体は、次のように定義されています。  
@@ -66,7 +65,7 @@ struct SSPARAMPROPS {
 |*rgPropertySets*|DBPROPSET 構造体の配列を返すメモリへのポインター|  
 |||
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

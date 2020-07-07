@@ -13,15 +13,14 @@ ms.assetid: 5f14850b-b85c-41e2-8116-6f5b3f5e0856
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f96cc2fdd2251b1557f27b2023a6301da4c500cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: cfb469260d740e2e2ec6beda4a51ecba9330a34d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771682"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001110"
 ---
 # <a name="cross-version-compatibility"></a>複数バージョン間の互換性
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   バージョン間の競合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のクライアント インスタンスまたはサーバー インスタンスでテーブル値パラメーターを処理する必要がある場合に発生することがあります。  
   
@@ -31,7 +30,7 @@ ms.locfileid: "85771682"
   
  Native Client 10.0 以降でコンパイルされたクライアントアプリケーションが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のサーバーインスタンスに接続したときにテーブル値パラメーターを使用しようとした場合、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client はこれを検出し、SQLBindCol、SQLBindParameter、SQLSetDescFields、SQLSetDescRec の呼び出しは SQLSTATE 07006 で失敗し、メッセージ "制限付き SQL Server のデータ型属性違反 (この接続のバージョンはテーブル値パラメーターを  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

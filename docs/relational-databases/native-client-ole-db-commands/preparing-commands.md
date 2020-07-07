@@ -16,15 +16,14 @@ ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0297fe59e998afd50eb7bb2320c59ab54e59b0e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 731f03b29f48d8e1970bdddd1f6ee2d1a7748c3e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715297"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002802"
 ---
 # <a name="preparing-commands"></a>コマンドの準備
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、1 つのコマンドを最適化された状態で複数回実行できるように、コマンドを準備できます。ただし、コマンドを準備することでオーバーヘッドが生じるので、コンシューマーではコマンドを 2 回程度実行する場合は準備する必要はありません。 一般的には、コマンドを 4 回以上実行する場合に準備します。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "85715297"
   
  コマンド オブジェクトは、最大で 1 つだけ一時ストアド プロシージャを **tempdb** に保持します。 既存の一時ストアド プロシージャは、特定のコマンド オブジェクトに関する現在のコマンド テキストを表します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コマンド](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

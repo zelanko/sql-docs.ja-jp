@@ -13,15 +13,14 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f7111f4e0f67e1102712c140737b68914feada6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 9ffc1ca0ec2e44377012f4149255bca80bce6af7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652022"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002989"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>fn_stmt_sql_handle_from_sql_stmt (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   **stmt_sql_handle** [!INCLUDE[tsql](../../includes/tsql-md.md)] 指定されたパラメーター化の型 (simple または forced) の下のステートメントの stmt_sql_handle を取得します。 これにより、テキストがわかっている場合に**stmt_sql_handle**を使用して、クエリストアに格納されているクエリを参照できます。  
   
@@ -71,7 +70,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="permissions"></a>アクセス許可  
  では、データベースに対する**EXECUTE**権限と、クエリストアのカタログビューに対する**DELETE**権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ステートメントを実行し、を使用し `sys.fn_stmt_sql_handle_from_sql_stmt` てそのステートメントの SQL ハンドルを返します。  
   
 ```  
@@ -92,7 +91,7 @@ JOIN sys.dm_exec_query_stats AS qs
     ON fn_handle_from_stmt.statement_sql_handle = qs.statement_sql_handle;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_query_store_force_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
