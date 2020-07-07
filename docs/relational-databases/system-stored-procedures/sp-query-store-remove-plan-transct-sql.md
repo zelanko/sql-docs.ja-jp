@@ -21,15 +21,14 @@ ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63a12763336d7637809faef3826518b00a3b39de
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: cbc49d5c3644a71149a07946d116b2e379fab500
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728136"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012640"
 ---
 # <a name="sp_query_store_remove_plan-transct-sql"></a>sp_query_store_remove_plan (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   クエリストアから1つのプランを削除します。  
   
@@ -53,7 +52,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する**ALTER**権限が必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、クエリストア内のクエリに関する情報を返します。  
   
 ```  
@@ -71,7 +70,7 @@ JOIN sys.query_store_query_text AS Txt
 EXEC sp_query_store_remove_plan 3;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_query_store_force_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
  [sp_query_store_remove_query &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   

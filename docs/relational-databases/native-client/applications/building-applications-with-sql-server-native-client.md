@@ -16,15 +16,14 @@ ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b93aa14d5ac16688cac8ef021023378a270a42f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: efb4fea164129627f846571a8a2913afc7097260
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85658051"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012926"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>SQL Server Native Client を使用したアプリケーションのビルド
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ライブラリを使用するアプリケーションを開発する際には、いくつかの課題があります。 このセクションのトピックでは、MDAC から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client へのアップグレード、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイルやライブラリ ファイルの使用など、これらの課題の多くについて説明します。また、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と併用できるさまざまな接続文字列の概要についても説明します。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "85658051"
  [SQL Server Native Client を使用した Azure SQL データベースへの接続](../../../relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client プログラミング](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [ODBC の操作方法に関するトピック](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB の使用法に関するトピック](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  

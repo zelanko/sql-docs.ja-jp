@@ -18,15 +18,14 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: b959348aaf7ca293a9d475a8b4eb6cb5cfdee7aa
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
-ms.translationtype: MT
+ms.openlocfilehash: 334b4ee83df73284abe7d20cdff66675d42039d5
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834636"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032562"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-sql)
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
   再帰的または繰り返し検索されるグラフの検索条件を指定します。 SHORTEST_PATH は、SELECT ステートメント内のグラフノードとエッジテーブルとの一致内部で使用できます。 
   
@@ -85,7 +84,7 @@ STRING_AGG 関数は、式と区切り記号を入力として受け取り、文
 ### <a name="last_value"></a>LAST_VALUE
 走査されたパスの最後のノードから属性を射影するために、LAST_VALUE 集計関数を使用できます。 この関数への入力としてエッジテーブルの別名を指定するとエラーになります。使用できるのは、ノードのテーブル名または別名だけです。
 
-**最後のノード**: 最後のノードは、一致述語の矢印の方向に関係なく、走査されたパスの最後に表示されるノードを参照します。 例: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`。 ここで、パスの最後のノードが最後にアクセスした P ノードになります。 
+**最後のノード**: 最後のノードは、一致述語の矢印の方向に関係なく、走査されたパスの最後に表示されるノードを参照します。 (例: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`)。 ここで、パスの最後のノードが最後にアクセスした P ノードになります。 
 
 一方、最後のノードは、このパターンの出力グラフパスの最後の n 番目のノードです。`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
@@ -108,17 +107,17 @@ STRING_AGG 関数は、式と区切り記号を入力として受け取り、文
 ### <a name="max"></a>[MAX]
 指定されたノード/エッジ属性値、またはスキャンされたパスに出現する式から最大値を返します。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
 shortest_path 関数は、MATCH 内でのみ使用できます。     
 LAST_NODE は shortest_path 内でのみサポートされます。     
 重み付けされた最短パス、すべてのパス、またはすべての最短パスを検索することはできません。         
 場合によっては、ホップ数が多いクエリに対して不適切なプランが生成され、クエリの実行時間が長くなります。 ハッシュ結合ヒントを使用すると役立つ場合があります。    
 
 
-## <a name="examples"></a>使用例 
+## <a name="examples"></a>例 
 ここに示したクエリの例では、 [SQL Graph サンプル](./sql-graph-sample.md)で作成したノードテーブルとエッジテーブルを使用します。
 
-### <a name="a--find-shortest-path-between-2-people"></a>A:  2つのメンバーの間の最短パスを検索する
+### <a name="a--find-shortest-path-between-2-people"></a>A.  2つのメンバーの間の最短パスを検索する
  次の例では、Jacob と Alice の間の最短のパスを見つけます。 Graph サンプルスクリプトから作成された Person ノードと FriendOf edge が必要になります。 
 
 ```sql
@@ -138,7 +137,7 @@ FROM (
 WHERE Q.LastNode = 'Alice'
 ```
 
- ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B:  指定されたノードからグラフ内の他のすべてのノードまでの最短パスを検索します。 
+ ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  指定されたノードからグラフ内の他のすべてのノードまでの最短パスを検索します。 
  次の例では、グラフ内の Jacob が接続されているすべてのユーザーと、Jacob からすべてのユーザーを対象とする最短パスを検索します。 
 
 ```sql
@@ -153,7 +152,7 @@ WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2)+))
 AND Person1.name = 'Jacob'
 ```
 
-### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C:  グラフ内で1人のユーザーから別のユーザーに送られるホップ数またはレベル数をカウントします。
+### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C.  グラフ内で1人のユーザーから別のユーザーに送られるホップ数またはレベル数をカウントします。
  次の例では、Jacob と Alice の間の最短パスを検索し、Jacob から Alice に移動するために必要なホップ数を出力します。 
 
 ```sql
@@ -174,7 +173,7 @@ FROM (
 WHERE Q.LastNode = 'Alice'
 ```
 
-### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D: 特定のユーザーからの1-3 のホップを検索する
+### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. 特定のユーザーからの1-3 のホップを検索する
 次の例では、Jacob と、その接続先であるすべての人の間の最短のパスを、グラフ1-3 のホップから離れた場所に検索します。 
 
 ```sql
@@ -209,7 +208,7 @@ FROM (
 WHERE Q.levels = 2
 ```
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MATCH (SQL グラフ)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL グラフ)](../../t-sql/statements/insert-sql-graph.md)]  
