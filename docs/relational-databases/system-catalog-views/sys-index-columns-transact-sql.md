@@ -20,15 +20,14 @@ ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64ea1fec83beed661ee996302a90fe05b497d2b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 1e6ad338ac15944ab2ac7113dc134ecec1f143a3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790520"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000511"
 ---
 # <a name="sysindex_columns-transact-sql"></a>sys.index_columns (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **Sys**インデックスまたは順序なしテーブル (ヒープ) の一部である列ごとに1行の値を格納します。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "85790520"
 
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
  次の例では、`Production.BillOfMaterials` テーブルのすべてのインデックスおよびインデックス列を返します。  
   
@@ -83,7 +82,7 @@ IX_BillOfMaterials_UnitMeasureCode                         UnitMeasureCode    1 
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL&#41;&#40;Transact-sql のインデックス](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   

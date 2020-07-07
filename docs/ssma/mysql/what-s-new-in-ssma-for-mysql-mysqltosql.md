@@ -4,22 +4,27 @@ description: リリースごとに SQL Server Migration Assistant (SSMA) for MyS
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: ce77e0e9a3421fab7f1fc031bbf55e8a84c235df
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: 1c0292d05624e2d3cb8640d719fc2c0e29474cb0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778064"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000369"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL の新機能 (MySqlToSql)
 
 この記事では、各リリースでの MySQL 変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+SSMA for MySQL の v 8.11 リリースには、次の変更が含まれています。
+
+* MSAL.NET library を使用して対話型 Azure Active Directory 認証を行う
 
 ## <a name="ssma-v810"></a>SSMA v 8.10
 
