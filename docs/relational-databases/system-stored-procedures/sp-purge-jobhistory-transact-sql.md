@@ -18,15 +18,14 @@ ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47952d7c246a0de94d4515774e89a185c0460f2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: db00bdaaf3414da7bf639331f47b4872992e016c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783021"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012669"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ジョブの履歴レコードを削除します。  
   
@@ -82,7 +81,7 @@ EXEC dbo.sp_purge_jobhistory
 GO  
 ```  
   
-### <a name="b-remove-history-for-all-jobs"></a>B: すべてのジョブの履歴を削除する  
+### <a name="b-remove-history-for-all-jobs"></a>B. すべてのジョブの履歴を削除する  
   
 > [!NOTE]  
 >  **Sysadmin**固定サーバーロールのメンバー、および**Sqlagentoperatorrole**のメンバーだけが、すべてのジョブの履歴を削除できます。 **Sysadmin**ユーザーがパラメーターを使用せずにこのストアドプロシージャを実行すると、すべてのローカルジョブとマルチサーバージョブのジョブ履歴が削除されます。 **Sqlagentoperatorrole**ユーザーがパラメーターを使用せずにこのストアドプロシージャを実行すると、すべてのローカルジョブのジョブ履歴のみが削除されます。  
@@ -97,7 +96,7 @@ EXEC dbo.sp_purge_jobhistory ;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobhistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

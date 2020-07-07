@@ -18,15 +18,14 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d5eded47338315fa69bcb7a9dd270108f69574c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 2c280be43be2ef4f14e57321cb96420e6cf51eb6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757953"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012685"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在の環境への論理外部キーの情報を返します。 この手順では、無効な外部キーを含む外部キーリレーションシップを示します。  
   
@@ -89,7 +88,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  返される結果は、FKTABLE_QUALIFIER、FKTABLE_OWNER、FKTABLE_NAME、KEY_SEQ の順序に従って並べ替えられます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  無効な外部キーを含むテーブルを含むアプリケーションのコーディングは、次の方法で実装できます。  
   
 -   そのテーブルで作業している間は、一時的に制約チェックを無効にして (ALTER TABLE NOCHECK または CREATE TABLE NOT FOR REPLICATION)、その後再び有効にします。  
@@ -103,7 +102,7 @@ sp_fkeys ストアド プロシージャは、ODBC の SQLForeignKeys に相当�
 ## <a name="permissions"></a>アクセス許可  
  `SELECT`スキーマに対する権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベース内のテーブルの外部キーの一覧を取得し `HumanResources.Department` `AdventureWorks2012` ます。  
   
 ```sql  
@@ -120,7 +119,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
 EXEC sp_fkeys @pktable_name = N'DimDate;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のカタログストアドプロシージャ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_pkeys &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  

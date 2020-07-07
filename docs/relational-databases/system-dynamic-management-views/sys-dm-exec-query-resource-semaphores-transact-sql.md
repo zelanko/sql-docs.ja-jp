@@ -20,15 +20,14 @@ ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1489905b5f91743892906655b2987c702c048516
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d252d5976b07f688d890ed8ccf43a7b0a0c96b2c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734717"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012875"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>dm_exec_query_resource_semaphores (Transact-sql)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のクエリのリソースセマフォの状態に関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ますです。 **dm_exec_query_resource_semaphores**は、一般的なクエリ実行メモリの状態を提供し、システムが十分なメモリにアクセスできるかどうかを判断できます。 このビューは、サーバーのメモリステータスの完全な画像を提供するために、dm_os_memory_clerks から取得したメモリ情報を補完し[ます](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。 **dm_exec_query_resource_semaphores**は、通常のリソースセマフォに対して1つの行を返し、小さいクエリのリソースセマフォ用に別の行を返します。 小規模クエリセマフォには、次の2つの要件があります。  
   
@@ -60,14 +59,14 @@ ms.locfileid: "85734717"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  ORDER BY または集計を含む動的管理ビューを使用するクエリでは、メモリ使用量が増加し、トラブルシューティングの問題に寄与する可能性があります。  
   
  トラブルシューティングには**dm_exec_query_resource_semaphores**を使用しますが、今後のバージョンのを使用するアプリケーションには含めないでください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  データベース管理者は、リソース ガバナー機能を使用することで、サーバー リソースを最大 64 個までのリソース プールに分散できます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、各プールが小規模の独立したサーバー インスタンスのように動作し、2 つのセマフォを必要とします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
   

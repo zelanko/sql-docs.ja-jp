@@ -14,15 +14,14 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b539e532d6de43bf646652a1d4845eaf38d8bd2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 1815a76dcfde42e45cb3b2ca1ffe4186ff52a238
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789390"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012433"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **Sqlcolattribute**を使用すると、準備済みまたは実行済みの ODBC ステートメントの結果セット列の属性を取得できます。 準備されたステートメントで**Sqlcolattribute**を呼び出すと、との間にラウンドトリップが発生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、ステートメントの実行の一部として結果セットの列データを受け取ります。そのため、 **sqlexecute**または**SQLExecDirect**の完了後に**sqlcolattribute**を呼び出すと、サーバーのラウンドトリップが発生しません。  
   
@@ -108,7 +107,7 @@ ms.locfileid: "85789390"
   
  詳細については、「[スパース列のサポート &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQLColAttribute 関数](https://go.microsoft.com/fwlink/?LinkId=59334)   
  [ODBC API の実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  

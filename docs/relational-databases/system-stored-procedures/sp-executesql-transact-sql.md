@@ -19,15 +19,14 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d6efd10e3b7cb385c576cf8644ec945736765ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: fdd669732bb26fcf14bde80efeb51673aeb3ce3e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634819"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012697"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-sql)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   何回も再利用可能な、または動的に作成した [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントやバッチを実行します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントやバッチには、埋め込みパラメーターを含めることができます。  
   
@@ -75,7 +74,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>結果セット  
  SQL 文字列に組み込まれているすべての SQL ステートメントからの結果セットを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  sp_executesql パラメーターは、このトピックの「構文」セクションで説明されているように、特定の順序で入力する必要があります。 パラメーターが順序どおりに入力されていない場合は、エラーメッセージが表示されます。  
   
  sp_executesql は、バッチ、名前の有効範囲、およびデータベース コンテキストに関して、EXECUTE と同じように動作します。 [!INCLUDE[tsql](../../includes/tsql-md.md)]Sp_executesql stmt パラメーターのステートメントまたはバッチ \@ は、sp_executesql ステートメントが実行されるまでコンパイルされません。 次に、stmt の内容を \@ コンパイルして、sp_executesql を呼び出したバッチの実行プランとは別の実行プランとして実行します。 sp_executesql バッチから、sp_executesql を呼び出すバッチ内で宣言されている変数は参照できません。 sp_executesql バッチ内のローカル カーソルまたはローカル変数は、sp_executesql を呼び出すバッチでは認識されません。 データベース コンテキストの変更は、sp_executesql ステートメント終了時まで有効です。  
@@ -150,7 +149,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
-### <a name="b-executing-a-dynamically-built-string"></a>B: 動的に作成された文字列の実行  
+### <a name="b-executing-a-dynamically-built-string"></a>B. 動的に作成された文字列の実行  
  次の例では、を使用して `sp_executesql` 、動的に作成された文字列を実行します。 この例で使用するストアド プロシージャでは、特定の年の販売データをパーティション分割するために使用されるテーブル セットにデータを追加します。 年の月ごとに、次の形式のテーブルが1つあります。  
   
 ```  
@@ -204,7 +203,7 @@ GO
   
  このプロシージャでは、sp_executesql を使用して文字列を実行しますが、これは EXECUTE を使用する場合と比べて効率的です。 sp_executesql を使用する場合、INSERT 文字列は各月のテーブルごとに 1 つずつ、12 とおり作成されます。 EXECUTE では、パラメーター値が異なるため、各挿入文字列は一意です。 どちらの方法でも作成するバッチの数は同じですが、sp_executesql で作成される INSERT 文字列には類似性があるので、クエリ オプティマイザーで実行プランを再利用しやすくなります。  
   
-### <a name="c-using-the-output-parameter"></a>C: OUTPUT パラメーターを使用する  
+### <a name="c-using-the-output-parameter"></a>C. OUTPUT パラメーターを使用する  
  次の例では、パラメーターを使用し `OUTPUT` て、ステートメントによって生成された結果セットを `SELECT` パラメーターに格納し `@SQLString` ます。`SELECT`次に、パラメーターの値を使用する2つのステートメントが実行され `OUTPUT` ます。  
   
 ```  
