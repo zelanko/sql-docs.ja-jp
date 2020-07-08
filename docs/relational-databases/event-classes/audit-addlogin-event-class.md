@@ -12,15 +12,15 @@ ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 202baede7eed746a581a11d165fe6d7b0fb5afdd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bad68dc1125b50d956b1580751d5911d031a37bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903606"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693798"
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Addlogin** イベント クラスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが追加または削除されたときに発生します。  
   
  このログインを追加するときに、既定のデータベースなど別のプロパティを設定すると、そのプロパティに関する情報がこのイベントの **TextData** 列に表示されます。 ログインの追加中にこれらのプロパティを設定した場合、 **Audit Login Change Property Event** は発生しません。  
