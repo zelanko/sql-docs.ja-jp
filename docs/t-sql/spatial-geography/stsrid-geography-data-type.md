@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4561b52049da9c051b7e8eda3835545f600c0e70
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e0faef07f7473c004bbb30358e501082cedb0c80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85701755"
 ---
 # <a name="stsrid-geography-data-type"></a>STSrid (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **STSrid** はインスタンスの SRID (spatial reference identifier) を表す整数です。  
   

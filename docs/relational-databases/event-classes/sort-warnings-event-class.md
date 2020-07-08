@@ -12,15 +12,15 @@ ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98bf70f1bc26b4b3dd3182024aa62ed41dd3bbab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d139be67f2dceef498267376cf5cb74d8eabb164
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910972"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717754"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Sort Warnings イベント クラスは、並べ替え操作をメモリ内で処理できないことを示します。 インデックスの作成に関連する並べ替え操作は対象になりません。SELECT ステートメントで使用される ORDER BY 句などのクエリ内の並べ替え操作のみが対象になります。  
   
  並べ替え操作を伴うクエリで Sort Warnings イベント クラスが発生し、EventSubClass データ列の値が 2 である場合は、データを並べ替えるためにデータを複数回受け渡す必要があるため、クエリのパフォーマンスが低下する可能性があります。 クエリをさらに検証し、並べ替え操作を排除できるかどうかを確認してください。  

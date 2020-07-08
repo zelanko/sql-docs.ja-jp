@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 143925d3fa6867d656a4f473194608e77f5a960e
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: bde7cdd19ac66d30ceee0e73d6ea74ff5a66b2a8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924976"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717970"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>復元と復旧の概要 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをエラーから復旧するには、データベース管理者が論理的に正しく意味のある復元シーケンスで一連の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを復元する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の復元および復旧では、次に示すように、データベース全体、データ ファイル、またはデータ ページの各バックアップからのデータの復元をサポートしています。  
   

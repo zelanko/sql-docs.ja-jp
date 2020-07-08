@@ -15,15 +15,15 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8993d0512f4809302b2d4ac8193971decc2e0566
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ecf9c330ef81a37a70237061f039db29b17576d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716737"
 ---
 # <a name="replication-monitor"></a>レプリケーション モニター
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   ここでは、レプリケーション モニターに関する情報を紹介します。 モニターに表示されるページとダイアログ ボックスは、レプリケーションの種類と、監視の対象となる [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンに応じて変わります。  
   
 -   [レプリケーション モニター、メイン ページ](../../relational-databases/replication/replication-monitor-main-page.md)  

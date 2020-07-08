@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bf40ce38bf96ae4d31c9102290e74d5db2230240
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 326cce7eaa06eca6e981e72ea60d4f4144442942
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85708322"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   スカラー値を単一列で構成される値のセットと比較します。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67927383"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )  
 ```  
@@ -65,7 +65,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  この記事では、ALL をサブクエリと共に使用する場合を想定しています。 ALL は [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) および [SELECT](../../t-sql/queries/select-transact-sql.md) と共に使用できます。  
   
 ## <a name="examples"></a>例  
- 次の例では、ストアド プロシージャを作成し、`SalesOrderID` データベース内にある指定した [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] のすべての部品が、指定した日数で製造できるかどうかを判定します。 この例では、サブクエリを使用して、特定の `SalesOrderID` のすべての部品に対する `DaysToManufacture` の値一覧を作成し、その中のすべての `DaysToManufacture` が指定した日数以内であることを確認します。  
+ 次の例では、ストアド プロシージャを作成し、`SalesOrderID` データベース内にある指定した [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] のすべての部品が、指定した日数で製造できるかどうかを判定します。 この例では、サブクエリを使用して、特定の `DaysToManufacture` のすべての部品に対する `SalesOrderID` の値一覧を作成し、その中のすべての `DaysToManufacture` が指定した日数以内であることを確認します。  
   
 ```  
 -- Uses AdventureWorks  

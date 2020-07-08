@@ -12,15 +12,15 @@ ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68fd54ddc0f40da91efca486759e2b55dc00cdfc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c66dc8844aa47748fe5f4beb3a15e8b26f120c90
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089587"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716950"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **DTCTransaction** イベント クラスは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 分散トランザクション コーディネーター (DTC) によってコーディネートされた [!INCLUDE[msCoName](../../includes/msconame-md.md)] トランザクションの状態を監視するために使用します。 このようなトランザクションには、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の同一インスタンスの 2 つ以上のデータベースに関連するトランザクションや、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の 2 つ以上のインスタンスに関連する分散トランザクションがあります。  
   
 ## <a name="dtctransaction-event-class-data-columns"></a>DTCTransaction イベント クラスのデータ列  

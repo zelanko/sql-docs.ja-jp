@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e16193e0bf6a9596a17f767b157fc825ff3e0a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d47b798f9af00fc3cae3699001b645fc5564b4b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706211"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   クエリまたはプロシージャを無条件で終了します。 RETURN は即時に実行され、完了します。また、プロシージャ、バッチ、またはステートメント ブロックを終了する任意の位置で使用できます。 RETURN の後に続くステートメントは実行されません。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68072371"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 RETURN [ integer_expression ]   
 ```  

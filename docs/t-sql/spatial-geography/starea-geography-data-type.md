@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 817a6325b956f5fc4214597b0b8bc46f6aff49f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: acbc28abde35089acbb76af886b1e9a8c27ed9a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042514"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705263"
 ---
 # <a name="starea-geography-data-type"></a>STArea (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geography** インスタンスの合計面積を返します。 STArea() の結果は、**geography** インスタンスの空間参照識別子で使用される平方の測定単位です。 たとえば、インスタンスの SRID が 4326 の場合、STArea() は結果を平方メートル単位で返します。  
   

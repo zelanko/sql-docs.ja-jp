@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: f4a1d0e8-f27f-4cb8-a25d-040b40555dcc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27f8965d0244a532b9afeae44b43df6081aac64b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9cbf321c6151dbd55bfc27079a230bc6f05df9e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68053620"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716997"
 ---
 # <a name="mssqlserver_5250"></a>MSSQLSERVER_5250
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|5250|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC4_CRITICAL_DATABASE_PAGE_CORRUPT|  
-|メッセージ テキスト|データベース エラー : データベース 'NAME' (データベース ID DB_ID) の PAGE_TYPE ページ P_ID が無効です。 このエラーを修正することはできません。 バックアップから復元してください。|  
+|メッセージ テキスト|データベース エラー:データベース 'NAME' (データベース ID DB_ID) の PAGE_TYPE ページ P_ID が無効です。 このエラーを修正することはできません。 バックアップから復元してください。|  
   
 ## <a name="explanation"></a>説明  
 示されているデータベースのファイル ヘッダー ページまたはブート ページが破損しています。  
