@@ -10,11 +10,11 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a2332a81105124d9060b2416ae1c9b8699376393
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 316c3c95e0928fc4b1ed0c0d4235220c527e68f6
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004759"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052762"
 ---
 # <a name="adventureworks-sample-databases"></a>AdventureWorks サンプル データベース
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,21 +58,6 @@ ms.locfileid: "86004759"
 
 このファイルを使用して、 `.bak` サンプルデータベースを SQL Server インスタンスに復元できます。 これを行うには、 [RESTORE (transact-sql)](../t-sql/statements/restore-statements-transact-sql.md)コマンドを使用するか、 [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)または[AZURE DATA STUDIO](../azure-data-studio/download-azure-data-studio.md)のグラフィカルインターフェイス (GUI) を使用します。
 
-# <a name="transact-sql-t-sql"></a>[Transact-SQL (T-SQL)](#tab/tsql)
-
-Transact-sql (T-sql) を使用して、サンプルデータベースを復元できます。 AdventureWorks2019 を復元する例を以下に示しますが、データベース名とインストールファイルのパスは環境によって異なる場合があります。 
-
-AdventureWorks2019 を復元するには、必要に応じて環境に合わせて値を変更し、次の Transact-sql (T-sql) コマンドを実行します。
-
-```sql
-USE [master]
-RESTORE DATABASE [AdventureWorks2019] 
-FROM  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\AdventureWorks2019.bak' 
-WITH  FILE = 1,  NOUNLOAD,  STATS = 5
-GO
-
-```
-
 # <a name="sql-server-management-studio-ssms"></a>[SQL Server Management Studio (SSMS)](#tab/ssms)
 
 SQL Server Management Studio (SSMS) を使い慣れていない場合は、[接続 & クエリ](../ssms/tutorials/connect-query-sql-server.md)を使用して開始することができます。 
@@ -99,6 +84,21 @@ SQL Server Management Studio でデータベースを復元するには、次の
    :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="オブジェクトエクスプローラーでデータベースを右クリックし、[データベースの復元] を選択して、データベースを復元することを選択します。":::
 
 SQL Server データベースの復元の詳細については、「 [SSMS を使用したデータベースバックアップの復元](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)」を参照してください。
+
+# <a name="transact-sql-t-sql"></a>[Transact-SQL (T-SQL)](#tab/tsql)
+
+Transact-sql (T-sql) を使用して、サンプルデータベースを復元できます。 AdventureWorks2019 を復元する例を以下に示しますが、データベース名とインストールファイルのパスは環境によって異なる場合があります。 
+
+AdventureWorks2019 を復元するには、必要に応じて環境に合わせて値を変更し、次の Transact-sql (T-sql) コマンドを実行します。
+
+```sql
+USE [master]
+RESTORE DATABASE [AdventureWorks2019] 
+FROM  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\AdventureWorks2019.bak' 
+WITH  FILE = 1,  NOUNLOAD,  STATS = 5
+GO
+
+```
 
 # <a name="azure-data-studio"></a>[Azure Data Studio](#tab/data-studio)
 

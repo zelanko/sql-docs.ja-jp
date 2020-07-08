@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: e8c2108d-b104-46cb-9645-a15f46112c86
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 044cdc1b334732a0730cd2c223d5690e4089a0cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: a697cff22257c49774c91dc0b5c646034e34fba1
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140644"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053418"
 ---
 # <a name="managed_backupfn_is_master_switch_on-transact-sql"></a>managed_backup。 fn_is_master_switch_on (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   SQL Server のインスタンスにおける [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]操作の状態を返します。  
   
@@ -44,10 +43,10 @@ managed_backup.fn_is_master_switch_on ()
 ```  
   
 ##  <a name="arguments"></a><a name="Arguments"></a>数値  
- None  
+ なし  
   
 ## <a name="return-type"></a>戻り値の型  
- **BIT**  
+ **16-BIT**  
   
  1 = [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]はアクティブです。0 = [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は一時停止しています。  
   
@@ -57,6 +56,6 @@ managed_backup.fn_is_master_switch_on ()
  この関数に対する SELECT 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [マネージバックアップを Microsoft Azure に SQL Server](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Microsoft Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

@@ -10,11 +10,11 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: e2c45c4aea17448af7ed496c1c56b8629c30e429
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7e898fa94dda37342765001ba87283b986ac9eb1
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85978844"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091766"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access の新機能 (アクセス可能な Sql)
 
@@ -213,7 +213,7 @@ SSMA for Access の2016年3月のプレビューリリースでは、SQL Server 
 SSMA for Access の2016年1月のメンテナンスリリースには、次の変更が含まれています。
 
 * GUID フィールドの既定の無効な関数 (RFC 3894811) を修正しています。
-* SQL Database (Azure) へのレコードのインポート時のハングを修正した (RFC 4919573)。
+* SQL Database (Azure) にレコードをインポートするときにシステムが応答しなくなる問題を修正した (RFC 4919573)。
 * SSMA (RFC 5706203) に [ログの表示] メニュー項目が追加されました。
 * テレメトリを追加しました。
 

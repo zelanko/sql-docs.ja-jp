@@ -15,12 +15,11 @@ helpviewer_keywords:
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: f2018c557b8fd7dffdceb14c0a872595a3ce21da
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
-ms.translationtype: MT
+ms.openlocfilehash: 27545026fcf426e024237ff837ce078fed3c4a00
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544346"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091576"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>グローバリゼーションのヒントとベスト プラクティス (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** 多次元のみ  
@@ -69,7 +68,7 @@ ms.locfileid: "84544346"
   
      台湾では、繁体字中国語のほうが一般的で、お勧めする並べ替え順序は画数に基づく次のものです。Chinese_Taiwan_Stroke (SQL Server 2000 の場合)、Chinese_Taiwan_Stroke_90 (SQL Server 2005 の場合)、Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 以降の場合)。  
   
-     その他の地域 (香港やマカオなど) でも、繁体字中国語が使用されます。 香港では、照合順序に Chinese_Hong_Kong_Stroke_90 (SQL Server 2005 上) が使用されることも珍しくありません。 マカオでは、Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 以降) が非常に頻繁に使用されています。  
+     その他の地域 (香港特別行政区やマカオ特別行政区など) も、繁体字中国語を使用します。 香港では、照合順序に Chinese_Hong_Kong_Stroke_90 (SQL Server 2005 上) が使用されることも珍しくありません。 マカオでは、Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 以降) が非常に頻繁に使用されています。  
   
 -   日本語では、最もよく使用される照合順序は Japanese_CI_AS です。 [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)をサポートするシステムでは、Japanese_XJIS_100 が使用されます。 Japanese_BIN2 は、通常、Windows 以外のプラットフォームからのデータ、または SQL Server リレーショナル データベース エンジン以外のデータ ソースからのデータを移行するプロジェクトで使用されるのが一般的です。  
   
@@ -159,7 +158,5 @@ ms.locfileid: "84544346"
     ```  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services Multiidimensional のグローバリゼーションのシナリオ](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [多次元 Analysis Services のグローバリゼーションのシナリオ](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [国際化に対応した Transact-SQL ステートメントの記述](../relational-databases/collations/write-international-transact-sql-statements.md)  
-  
-  

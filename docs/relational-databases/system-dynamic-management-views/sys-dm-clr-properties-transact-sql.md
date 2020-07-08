@@ -20,15 +20,14 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: a61484691e4e5a2ea5ca4c08b6382b501f1cc851
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824727"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091879"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の共通言語ランタイム (CLR) 統合に関係するプロパティごとに 1 行のデータを返します。このプロパティには、ホストされる CLR のバージョンや状態などが含まれます。 ホストされる CLR は、 [CREATE assembly](../../t-sql/statements/create-assembly-transact-sql.md)、 [ALTER assembly](../../t-sql/statements/alter-assembly-transact-sql.md)、または[DROP assembly](../../t-sql/statements/drop-assembly-transact-sql.md)ステートメントを実行するか、任意の CLR ルーチン、型、またはトリガーを実行することによって初期化されます。 **Dm_clr_properties**ビューでは、ユーザー clr コードの実行がサーバーで有効になっているかどうかは指定されません。 [Clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)オプションを1に設定して[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)ストアドプロシージャを使用すると、ユーザー clr コードの実行が有効になります。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "82824727"
   
  **CLR が停止状態**は、がシャットダウン処理中の場合にのみ表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR 統合機能の強化により、このビューのプロパティおよび値は、の将来のバージョンで変更される可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -76,7 +75,7 @@ ms.locfileid: "82824727"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ホストされる CLR に関する情報を取得します。  
   
 ```  

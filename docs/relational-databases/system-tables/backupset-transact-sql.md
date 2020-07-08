@@ -20,15 +20,14 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0eb367dd29a96f5819563f0b10e036b7274c4303
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 5cd91cd99d70a90e3aaec5972ddcdccf472a18f1
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827376"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091862"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   バックアップ セットごとに 1 行のデータを格納します。 *バックアップ セット* には、正常に終了した 1 つのバックアップ操作のバックアップが含まれます。 RESTORE、RESTORE FILELISTONLY、RESTORE HEADERONLY、および RESTORE VERIFYONLY ステートメントは、単一または複数の指定バックアップ デバイス上のメディア セット内にある単一のバックアップ セットに対して機能します。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "82827376"
 |**expiration_date**|**datetime**|バックアップ セットの期限が切れる日付と時刻。 NULL にすることができます。|  
 |**software_vendor_id**|**int**|バックアップ メディア ヘッダーを記述するソフトウェア ベンダーの識別番号。 NULL にすることができます。|  
 |**name**|**nvarchar(128)**|バックアップ セットの名前。 NULL にすることができます。|  
-|**記述**|**nvarchar(255)**|バックアップセットの説明です。 NULL にすることができます。|  
+|**description**|**nvarchar(255)**|バックアップセットの説明です。 NULL にすることができます。|  
 |**user_name**|**nvarchar(128)**|バックアップ操作を実行するユーザー名。 NULL にすることができます。|  
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メジャーバージョン番号。 NULL にすることができます。|  
 |**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマイナー バージョン番号。 NULL にすることができます。|  
@@ -101,7 +100,7 @@ ms.locfileid: "82827376"
 |**encryptor_thumbprint**|**varbinary(20)**|データベースに保存されている証明書や非対称キーを検索するために使用される暗号化機能の拇印。 バックアップが暗号化されていない場合、この値は NULL になります。|  
 |**encryptor_type**|**nvarchar(32)**|使用される暗号化機能の種類 (証明書または非対称キー)。 . バックアップが暗号化されていない場合、この値は NULL になります。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  LOADHISTORY を使用した*backup_device*からの RESTORE verifyonly は、 **backupmediaset**テーブルの列に、メディアセットヘッダーからの適切な値を設定します。  
   
  このテーブルおよびその他のバックアップテーブルと履歴テーブルの行の数を減らすには、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)ストアドプロシージャを実行します。  

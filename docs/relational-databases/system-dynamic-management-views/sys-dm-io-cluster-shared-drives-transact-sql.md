@@ -20,15 +20,14 @@ ms.assetid: c8fcced8-c780-49dc-99bd-6beb3ca532c4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e89252effd6e8fbb14d800837328c9ff8042e0d3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 9dedfbbb19fe186758d865f97271410ddcd5d27d
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827946"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091638"
 ---
 # <a name="sysdm_io_cluster_shared_drives-transact-sql"></a>dm_io_cluster_shared_drives (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   現在のサーバーインスタンスがクラスター化されたサーバーの場合、このビューは各共有ドライブのドライブ名を返します。 現在のサーバーインスタンスがクラスター化されたインスタンスでない場合は、空の行セットが返されます。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "82827946"
 |**DriveName**|**nchar(2)**|クラスターの共有ディスクアレイに参加している個々のディスクを表すドライブ (ドライブ文字) の名前。 NULL 値は許可されません。|  
 |**pdw_node_id**|**int**|**適用対象**: ssPDW<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  クラスタリングが有効になっている場合、フェールオーバークラスターインスタンスは、インスタンスが別のノードにフェールオーバーした後にアクセスできるように、共有ディスク上にデータファイルとログファイルを配置する必要があります。 このビューの各行は、クラスター化された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで使用される 1 つの共有ディスクを表します。 このビューによって一覧表示されたディスクのみを使用して、のこのインスタンスのデータファイルまたはログファイルを格納でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このビューに表示されているディスクは、そのインスタンスに関連付けられているクラスターリソースグループ内のディスクです。  
   
 > [!NOTE]  
@@ -49,7 +48,7 @@ ms.locfileid: "82827946"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、sys.dm_io_cluster_shared_drives を使用して、クラスター サーバー インスタンスの共有デバイスを特定します。  
   
 ```  

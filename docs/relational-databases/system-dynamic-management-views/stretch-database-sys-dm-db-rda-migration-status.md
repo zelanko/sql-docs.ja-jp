@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 1e383b01ce40dbb03f5134bf5374b9b39bc2a99e
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937062"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053488"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカルインスタンス上の各 Stretch が有効なテーブルから、移行されたデータのバッチごとに1行のデータを格納します。 バッチは、開始時刻と終了時刻によって識別されます。  
+  のローカルインスタンス上の各 Stretch が有効なテーブルから、移行されたデータのバッチごとに1行のデータを格納 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 バッチは、開始時刻と終了時刻によって識別されます。  
   
  **dm_db_rda_migration_status**は、現在のデータベースコンテキストにスコープが設定されています。 移行の状態を確認する Stretch enable テーブルのデータベースコンテキストを使用していることを確認します。  
   
- で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]は、 **dm_db_rda_migration_status**の出力は200行に制限されています。  
+ で [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] は、 **dm_db_rda_migration_status**の出力は200行に制限されています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cbfc2cb7419f05884a80244445c6ce418576a402
-ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
-ms.translationtype: MT
+ms.openlocfilehash: 8c9cbad2124420f62f50c8497fcc5baa21720634
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409351"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052888"
 ---
 # <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup。 fn_available_backups (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   指定されたデータベースに使用可能なバックアップ ファイルの 0 行、1 行、または複数の行から成るテーブルを返します。 返されるバックアップファイルは、によって作成されたバックアップです [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
   
@@ -82,7 +81,7 @@ FROM msdb.managed_backup.fn_available_backups ('MyDB')
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マネージバックアップを Microsoft Azure に SQL Server](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
  [Microsoft Azure に格納されたバックアップからの復元](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
   

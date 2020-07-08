@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4133f8bb64d5d7e2e2b511c2128b9ddbca1fa550
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: cff78d30f768360c55b212742770d8caded6f5ee
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910245"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053452"
 ---
 # <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup。 fn_get_current_xevent_settings (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   スマートな制御者によってサポートされる拡張イベントの種類ごとに1行の値を返します。  
   
@@ -59,7 +58,7 @@ smart_admin.fn_get_current_xevent_settings ()
 ### <a name="permissions"></a>アクセス許可  
  関数に対する**SELECT**権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、すべての拡張イベントが現在の状態と共に返されます。  
   
 ```  

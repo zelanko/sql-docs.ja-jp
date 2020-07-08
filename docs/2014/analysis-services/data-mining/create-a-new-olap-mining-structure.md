@@ -13,12 +13,11 @@ helpviewer_keywords:
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 1e36f718ebef46a63b52f309ccd28eed15a8e2b4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
-ms.translationtype: MT
+ms.openlocfilehash: 195805ac2257df8a7f1951d761c83432ff7d0578
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84523788"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091596"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>新規の OLAP マイニング構造の作成
   のデータマイニングウィザードを使用し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] て、多次元モデルのデータを使用するマイニング構造を作成できます。 OLAP キューブに基づくマイニング モデルでは、ファクト テーブルの列と値、ディメンション、およびメジャー グループを分析の属性として使用できます。  
@@ -102,7 +101,7 @@ ms.locfileid: "84523788"
   
     -   **フィルター式**: フィルター条件として使用する値または式を入力するか、ドロップダウン リストを使用して、指定した階層レベルでメンバーの一覧から値を選択します。  
   
-         たとえば、[Geography] をディメンションとして選択し、[Region Country Name] を階層レベルとして選択した場合、ドロップダウン リストには、フィルター条件として使用できる有効な国がすべて含まれます。 複数選択することができます。 その結果、マイニング構造内のデータは、これらの地域のキューブ データに制限されます。  
+         たとえば、[Geography] をディメンションとして選択し、[Region Country Name] を階層レベルとして選択した場合、ドロップダウンリストには、フィルター条件として使用できるすべての有効な国/地域が表示されます。 複数選択することができます。 その結果、マイニング構造内のデータは、これらの地域のキューブ データに制限されます。  
   
     -   **パラメーター**: このチェック ボックスは無視します。 このダイアログ ボックスでは複数のキューブ フィルター シナリオがサポートされ、このオプションはマイニング構造の作成に関係しません。  
   
@@ -130,5 +129,3 @@ ms.locfileid: "84523788"
   
 ## <a name="see-also"></a>参照  
  [マイニング構造のタスクと操作方法](mining-structure-tasks-and-how-tos.md)  
-  
-  
