@@ -11,15 +11,15 @@ f1_keywords:
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 52b3154649a06bfb899e6993eb875a04190c59d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5e5dbbe43dfb0bff348f68bcd0f237e570eed75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67946947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655497"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] データベース エンジン チューニング アドバイザー (DTA) は、データベースを分析し、クエリ パフォーマンスを最適化する手助けをします。 データベース エンジン チューニング アドバイザーを使用すると、データベースの構造や [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の内部構造に関する専門的な知識がなくても、インデックス、インデックス付きビュー、テーブル パーティション分割の最適な組み合わせを選択して作成することができます。 DTA を使用して、次の作業を実行できます。  
   
 -   問題のある特定のクエリのパフォーマンスをトラブルシューティングする。  

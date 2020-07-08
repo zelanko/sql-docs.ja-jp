@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2962d457ce079bd0ec2164f9fdd2a982b983f14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77179283"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85638139"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 自動的に生成された、データベース内で一意の 2 進数を公開するデータ型です。 **rowversion** は、通常、テーブルの行のバージョンを記録するためのメカニズムとして使用します。 ストレージ サイズは 8 バイトです。 **rowversion** データ型は数値を加算していくだけであり、日付や時刻では保持されません。 日付または時刻を記録するには、 **datetime2** データ型を使用してください。
   

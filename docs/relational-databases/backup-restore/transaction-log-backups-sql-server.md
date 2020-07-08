@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b4cbba5a13a41d9f24901d348566c4c09234060f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec8d0f5d72a6f195f489d67d6df32c2f33da7f12
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180452"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642878"
 ---
 # <a name="transaction-log-backups-sql-server"></a>トランザクション ログのバックアップ (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのみに関連しています。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのトランザクション ログのバックアップについて説明します。  
   
  少なくとも 1 つの完全バックアップを作成しておかなければ、ログ バックアップを作成できません。 完全バックアップを作成しておくと、いつでもトランザクション ログをバックアップできます。ただし、そのログのバックアップが既に進行中である場合、バックアップを開始できません。 

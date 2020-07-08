@@ -12,15 +12,15 @@ ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f37620479cd2960f6908430a12c6388dee4d8e64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8d3a11521b55663318db72663a58980ca07775b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641952"
 ---
 # <a name="missing-column-statistics-event-class"></a>Missing Column Statistics イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Missing Column Statistics イベント クラスは、オプティマイザーにとって役立つ列統計が使用できないことを示します。  
   
  Missing Column Statistics イベント クラスを監視することにより、クエリに使用する列の統計が存在するかどうかを判断できます。 列統計が存在しないと、オプティマイザーは通常よりも効率の低いクエリ プランを選択することがあります。  
