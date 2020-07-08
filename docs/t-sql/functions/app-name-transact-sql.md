@@ -19,17 +19,17 @@ helpviewer_keywords:
 - current session application names
 - APP_NAME function
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 21b49eb9638b4651ff52c6515f6e5f62177fc504
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f28288b99fd67b41431c63d11f1174458cab2854
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85684853"
 ---
 # <a name="app_name-transact-sql"></a>APP_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数は、現在のセッションのアプリケーション名の値が設定されている場合、その名前を返します。
   
