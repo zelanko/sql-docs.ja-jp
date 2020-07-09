@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b57d3443ab83ead35d92615ad6c718cde6977097
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b50f2cda111a38ffd6ba67dbbf0fb9fc74192168
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000225"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894493"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>ドメインに依存しない可用性グループを作成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Always On 可用性グループ (AG) には、基になる Windows Server フェールオーバー クラスター (WSFC) が必要です。 Windows Server 2012 R2 を使用して WSFC を展開するには、WSFC (ノードとも呼ばれる) に参加しているサーバーが同じドメインに追加されていることが常に必要です。 Active Directory Domain Services (AD DS) の詳細については、[ここ](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx)を参照してください。
 

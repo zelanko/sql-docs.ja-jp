@@ -23,26 +23,26 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2646b37d4f8dfd344df916f3f47540890c41dc12
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948102"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892107"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   既存の **text**、**ntext**、または **image** 列の最小限ログに記録する対話型の更新を許可します。 WRITETEXT は、影響のある列内の既存のすべてのデータを上書きします。 WRITETEXT をビュー内の **text** 列、**ntext** 列、**image** 列に対して使用することはできません。  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、large-value データ型と [UPDATE](../../t-sql/queries/update-transact-sql.md) ステートメントの **.** WRITE 句を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、large-value データ型と **UPDATE** ステートメントの [.](../../t-sql/queries/update-transact-sql.md)WRITE 句を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 WRITETEXT [BULK]  
   { table.column text_ptr }  
@@ -60,7 +60,7 @@ WRITETEXT [BULK]
  更新するテーブルと **text**、**ntext**、または **image** 型の列の名前。 テーブル名と列名は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。 データベース名と所有者名の指定は省略可能です。  
   
  *text_ptr*  
- **text**、**ntext**、または **image** データへのポインターを保存する値です。 *text_ptr* は **binary(16)** にする必要があります。テキスト ポインターを作成するには、**text**、**ntext**、または **image** 列に対して NULL 以外のデータを使用する [INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントまたは [UPDATE](../../t-sql/queries/update-transact-sql.md) ステートメントを実行します。  
+ **text**、**ntext**、または **image** データへのポインターを保存する値です。 *text_ptr* は **binary(16)** にする必要があります。テキスト ポインターを作成するには、[text](../../t-sql/statements/insert-transact-sql.md)、[ntext](../../t-sql/queries/update-transact-sql.md)、または **image** 列に対して NULL 以外のデータを使用する **INSERT** ステートメントまたは **UPDATE** ステートメントを実行します。  
   
  WITH LOG  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では無視されます。 ログ記録は、データベースで有効になっている復旧モデルによって異なります。  

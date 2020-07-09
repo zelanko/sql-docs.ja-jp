@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 47428ffc2ab1074ec2b4ce1789e679c184607a05
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ccff00e5094d9d966d9edbf3f77b9eef1cc427d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914200"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895982"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>REVOKE (システム オブジェクトの権限の取り消し) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ストアド プロシージャ、拡張ストアド プロシージャ、関数、ビューなどのシステム オブジェクトに対する権限が、プリンシパルから取り消されます。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "67914200"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal   
 ```  
@@ -64,7 +64,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、`sp_addlinkedserver` に対する `EXECUTE` 権限を、`public` から取り消します。  
+ 次の例では、`EXECUTE` に対する `sp_addlinkedserver` 権限を、`public` から取り消します。  
   
 ```  
 REVOKE EXECUTE ON sys.sp_addlinkedserver FROM public;  

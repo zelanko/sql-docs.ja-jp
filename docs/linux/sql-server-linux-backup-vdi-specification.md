@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ee533d9a0c3dace8f7fe8ec8e0c615b444ea91d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68810969"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892284"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server on Linux の VDI クライアント SDK の仕様
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 このドキュメントでは、SQL Server on Linux の仮想デバイス インターフェイス (VDI) クライアント SDK によって提供されるインターフェイスについて説明します。 独立系ソフトウェア ベンダー (ISV) は、仮想バックアップ デバイス アプリケーション プログラミング インターフェイス (API) を使用して、自社の製品に SQL Server を統合することができます。 全般的に、Linux 上の VDI は Windows 上の VDI と同様に動作しますが、次の点が変更されます。
 

@@ -22,15 +22,15 @@ ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6aef8ae36dc8cb571c4ae1993df1a7b3a81f130
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927184"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895608"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存のルートに関するルート情報を変更します。 
 
@@ -39,7 +39,7 @@ ms.locfileid: "67927184"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 ALTER ROUTE route_name  
 WITH    
@@ -89,7 +89,7 @@ WHERE database_id = DB_ID();
   
  **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
- 指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの [!INCLUDE[ssSB](../../includes/sssb-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
+ 指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssSB](../../includes/sssb-md.md)] インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
 ```  
 SELECT tcpe.port  
@@ -99,9 +99,9 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- ルートの *next_hop_address* が **'LOCAL'** になっている場合、メッセージは現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のサービスに配信されます。  
+ ルートの **next_hop_address** が *'LOCAL'* になっている場合、メッセージは現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のサービスに配信されます。  
   
- ルートの *next_hop_address* が **'TRANSPORT'** になっている場合、ネットワーク アドレスは、サービス名の中にあるネットワーク アドレスに基づいて決まります。 **'TRANSPORT'** を指定するルートは、サービス名またはブローカー インスタンスを指定できます。  
+ ルートの **next_hop_address** が *'TRANSPORT'* になっている場合、ネットワーク アドレスは、サービス名の中にあるネットワーク アドレスに基づいて決まります。 **'TRANSPORT'** を指定するルートは、サービス名またはブローカー インスタンスを指定できます。  
   
  *next_hop_address* にデータベース ミラーのプリンシパル サーバーを指定した場合は、ミラー サーバーの MIRROR_ADDRESS も指定する必要があります。 それ以外の場合、このルートではミラー サーバーへの自動フェールオーバーは行われません。  
   
@@ -113,7 +113,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- 指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの [!INCLUDE[ssSB](../../includes/sssb-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
+ 指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssSB](../../includes/sssb-md.md)] インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
 ```  
 SELECT tcpe.port  
@@ -123,7 +123,7 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- MIRROR_ADDRESS が指定されている場合、ルートには SERVICE_NAME 句と BROKER_INSTANCE 句を指定する必要があります。 *next_hop_address* に **'LOCAL'** または **'TRANSPORT'** を指定するルートでは、ミラー アドレスが指定されない場合があります。  
+ MIRROR_ADDRESS が指定されている場合、ルートには SERVICE_NAME 句と BROKER_INSTANCE 句を指定する必要があります。 **next_hop_address** に **'LOCAL'** または *'TRANSPORT'* を指定するルートでは、ミラー アドレスが指定されない場合があります。  
   
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
@@ -133,7 +133,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  ALTER ROUTE コマンドで指定されない句は、変更されません。 したがって、ALTER を使用して、ルートのタイムアウトを無効にしたり、ルートをすべてのサービス名やブローカー インスタンスと照合したりするようにルートを変更することはできません。 このようなルートの特性を変更するには、既存のルートを削除して新しいルートを作成し、新しい情報を指定する必要があります。  
   
- ルートが *next_hop_address* に **'TRANSPORT'** を指定した場合、ネットワーク アドレスはサービスの名前に基づいて決定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*next_hop_address* のネットワーク アドレスが有効な形式であれば、このネットワーク アドレスで始まるサービス名が適切に処理されます。 名前に有効なネットワーク アドレスが含まれているサービスは、そのサービス名のネットワーク アドレスにルートされます。  
+ ルートが **next_hop_address** に *'TRANSPORT'* を指定した場合、ネットワーク アドレスはサービスの名前に基づいて決定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*next_hop_address* のネットワーク アドレスが有効な形式であれば、このネットワーク アドレスで始まるサービス名が適切に処理されます。 名前に有効なネットワーク アドレスが含まれているサービスは、そのサービス名のネットワーク アドレスにルートされます。  
   
  ルートで指定されているサービス、ネットワーク アドレス、ブローカー インスタンス識別子のいずれか、またはすべてが同じであれば、ルーティング テーブルにはルートをいくつでも含めることができます。 このような場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] でルートを選択するときには、メッセージ交換で指定された情報とルーティング テーブル内の情報を照合して、最も正確に一致する情報を取得するためのプロシージャが使用されます。  
   
@@ -163,7 +163,7 @@ ALTER ROUTE ExpenseRoute
 ```  
   
 ### <a name="c-changing-the-address-for-a-route"></a>C. ルートのアドレスを変更する  
- 次の例では、IP アドレスが `10.2.19.72` のホストで、`ExpenseRoute` ルートのネットワーク アドレスが TCP ポート `1234` に変更されます。  
+ 次の例では、IP アドレスが `ExpenseRoute` のホストで、`1234` ルートのネットワーク アドレスが TCP ポート `10.2.19.72` に変更されます。  
   
 ```  
 ALTER ROUTE ExpenseRoute   
