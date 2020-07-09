@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8f7160513cd23e16f06dbba27851920b66bf72c8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: de603ecc1d221dad96c7aaf70330198f7732c60c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68119815"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759596"
 ---
 # <a name="parse-database-engine"></a>Parse (データベース エンジン)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 正規文字列形式に変換する **hierarchyid** を **hierarchyid** 値。 解析 から文字列型を変換するとき暗黙的に呼び出されます **hierarchyid** が発生します。 逆の役割を果たします [ToString](../../t-sql/data-types/tostring-database-engine.md)です。 Parse() 静的メソッドです。
   

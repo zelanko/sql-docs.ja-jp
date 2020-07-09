@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1ca7e74743773fb42a85300a37cc6b8aaa9d8f39
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 48f33e2fbc22a1d2cf9228ca5b7cbdc79d787445
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762121"
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** インスタンスが別の **geometry** インスタンスに完全に含まれている場合は 1 を返します。それ以外の場合は 0 を返します。 `STWithin` コマンドでは大文字と小文字が区別されます。
   
