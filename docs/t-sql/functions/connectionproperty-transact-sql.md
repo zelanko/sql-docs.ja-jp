@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - CONNECTIONPROPERTY statement
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a5cf9d02986587ed3e5234343306d6d73c7203a7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 94eb8e6d45606da75c6661a78b5f296940248388
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732591"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 サーバーに送信される要求に対して、この関数は、その要求をサポートする固有の接続の接続プロパティに関する情報を返します。
   
@@ -43,14 +43,14 @@ CONNECTIONPROPERTY ( property )
   
 |値|データ型|説明|  
 |---|---|---|
-|net_transport|**nvarchar(40)**|この接続で使用される物理的な転送プロトコルを返します。 この値は NULL 許容ではありません。 有効な戻り値:<br /><br /> **HTTP**<br /> **名前付きパイプ**<br /> **セッション**<br /> **共有メモリ**<br /> **SSL**<br /> **TCP**<br /><br /> and<br /><br /> **VIA**<br /><br /> 注: 接続で複数のアクティブな結果セット (MARS) の両方が有効になっているときに、接続プールが有効になっている場合は、常に**セッション**を返します。|  
+|net_transport|**nvarchar(40)**|この接続で使用される物理的な転送プロトコルを返します。 この値は NULL 許容ではありません。 有効な戻り値:<br /><br /> **HTTP**<br /> **名前付きパイプ**<br /> **セッション**<br /> **共有メモリ**<br /> **SSL**<br /> **TCP**<br /><br /> and<br /><br /> **VIA**<br /><br /> 注: 接続において、複数のアクティブな結果セット (MARS) が有効になっていると共に接続プールが有効になっている場合は、常に**セッション**が返されます。|  
 |protocol_type|**nvarchar(40)**|ペイロードのプロトコルの種類を返します。 現在、これによって TDS (TSQL) と SOAP が区別されています。 NULL 値が許可されます。|  
 |auth_scheme|**nvarchar(40)**|接続の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証スキームを返します。 認証方法は、Windows 認証 (NTLM、KERBEROS、DIGEST、BASIC、NEGOTIATE) または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のいずれかです。 NULL 値は許可されません。|  
 |local_net_address|**varchar(48)**|この特定の接続の対象となったサーバーの IP アドレスを返します。 TCP トランスポート プロバイダーを使用する接続の場合にのみ該当します。 NULL 値が許可されます。|  
 |local_tcp_port|**int**|接続が TCP トランスポートを使用する接続であった場合に、この接続の対象となったサーバー TCP ポートを返します。 NULL 値が許可されます。|  
 |client_net_address|**varchar(48)**|このサーバーに接続を試行しているクライアントのアドレスを要求します。 NULL 値が許可されます。|  
 |physical_net_transport|**nvarchar(40)**|この接続で使用される物理的な転送プロトコルを返します。 接続で複数のアクティブな結果セット (MARS) が有効になっている場合は、正確です。|  
-|\<その他の文字列>||無効な入力の場合は NULL を返します。|  
+|\<Any other string>||無効な入力の場合は NULL を返します。|  
   
 ## <a name="remarks"></a>解説  
 **local_net_address** と **local_tcp_port** で NULL を返す [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。
@@ -63,7 +63,7 @@ ConnectionProperty('net_transport') AS 'Net transport',
 ConnectionProperty('protocol_type') AS 'Protocol type';  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
 [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
   

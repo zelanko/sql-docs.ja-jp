@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e723e3f50db5090279ec6531906018471076af7f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 592aa9b31ce957500210a9a4d3caa7f780bf588d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738424"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>無効な文字とエスケープの規則
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、無効な XML 文字が FOR XML 句でどのように処理されるのかを説明し、XML 名では無効になる文字のエスケープの規則を示します。  
   
 ## <a name="for-xml-and-invalid-characters"></a>For XML と無効な文字  

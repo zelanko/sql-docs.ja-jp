@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 27845cc5995f6c9572672a1457669fb87a68dbf4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55cf92ac9a4c2324449e27840782a6930478e953
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85747768"
 ---
 # <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>例:読み取り専用ファイルのオンライン復元 (完全復旧モデル)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックは、複数のファイルやファイル グループを含む、完全復旧モデルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連しています。  
   

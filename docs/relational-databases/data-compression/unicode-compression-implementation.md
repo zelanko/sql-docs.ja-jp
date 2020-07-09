@@ -14,15 +14,15 @@ ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71f1d8a1c25f099338bbdfcc483ab2e8e8061bc9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab0732ae3773a7fefb86461272ff036fdb41d7a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030473"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737651"
 ---
 # <a name="unicode-compression-implementation"></a>Unicode 圧縮の実装
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Standard Compression Scheme for Unicode (SCSU) アルゴリズムの実装を使用して、行またはページの圧縮オブジェクトに格納する Unicode 値を圧縮します。 これらの圧縮オブジェクトでは、 **nchar(n)** 列および **nvarchar(n)** 列の Unicode 圧縮が自動的に行われます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ロケールに関係なく、Unicode データが 2 バイトで格納されます。 これは UCS-2 エンコードと呼ばれています。 ロケールによっては、SQL Server の SCSU 圧縮実装で保存できる最大領域がストレージ領域の 50% になる場合があります。  
   

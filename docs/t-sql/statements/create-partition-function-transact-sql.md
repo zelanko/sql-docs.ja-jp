@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 30e57f094256004d90d82df175fff9f9e2e17ddd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735789"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   テーブルまたはインデックスの行を指定された列の値に基づいてパーティションにマップする関数を、現在のデータベース内に作成します。 CREATE PARTITION FUNCTION の使用は、パーティション テーブルまたはパーティション インデックスを作成する最初の手順です。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、1 つのテーブルまたはインデックスは、最大 15,000 個のパーティションに分割できます。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67912613"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CREATE PARTITION FUNCTION partition_function_name ( input_parameter_type )  
 AS RANGE [ LEFT | RIGHT ]   
 FOR VALUES ( [ boundary_value [ ,...n ] ] )   

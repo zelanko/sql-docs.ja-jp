@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 470045b0-ebe9-44a7-b456-480e7a516a2c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 72cab4cc129690b5e544a979f0b18892454dfcef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 556105822ae0109ea5b05cd83c07834814c95e8f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951423"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637138"
 ---
 # <a name="mssqlserver_7908"></a>MSSQLSERVER_7908
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|7908|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|メッセージ テキスト|テーブル エラー : パーティション ID PN_ID のファイル 'FILE' は有効な FileStream ファイルではありません。|  
+|メッセージ テキスト|テーブル エラー:パーティション ID PN_ID のファイル 'FILE' は有効な FileStream ファイルではありません。|  
   
 ## <a name="explanation"></a>説明  
 列ディレクトリにある FILESTREAM ファイルの名前は ROWGUID です。 列ディレクトリにあるファイル名を ROWGUID に変換できない場合、そのファイルは有効なファイルではありません。  

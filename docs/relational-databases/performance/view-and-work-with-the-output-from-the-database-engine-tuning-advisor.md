@@ -26,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75a8ee28972b2b80fc1244a80b35b7c9d5d6daee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737086"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>データベース エンジン チューニング アドバイザー (DTA) からの出力を表示および操作する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース エンジン チューニング アドバイザーによってデータベースをチューニングすると、サマリー、推奨設定、レポート、およびチューニング ログが作成されます。 チューニング ログ出力を使用すると、データベース エンジン チューニング アドバイザーのチューニング セッションをトラブルシューティングできます。 サマリー、推奨設定、レポートを使用すると、チューニングに関する推奨設定を実装するか、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに必要なクエリのパフォーマンスを向上させるまでチューニングを継続するかを判断できます。 データベース チューニング アドバイザーを使用してワークロードを作成およびデータベースをチューニングする方法については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。  
   

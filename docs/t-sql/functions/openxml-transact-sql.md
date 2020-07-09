@@ -17,17 +17,17 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9dacd09604661f9880533fcdcafd2fb7ab9ab12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: c9f0034e6f3fb620bd55410d345c1c2291db280f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738070"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   OPENXML は XML ドキュメントに対して行セット ビューを提供します。 OPENXML は行セット プロバイダーなので、テーブル、ビュー、または OPENROWSET 関数など、行セット プロバイダーを指定できる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの中で使用できます。  
   
@@ -68,7 +68,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  行セット内の列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を指定します。 列のデータ型が、基になる属性の **xml** データ型とは異なる場合、強制型変換が行われます。  
   
  *ColPattern*  
- XML ノードを列へマップする方法を表す標準 XPath パターンを指定します (省略可能)。 *ColPattern* を指定しない場合、既定のマッピング (*flags* で指定した**属性中心**または**要素中心**のマッピング) が適用されます。  
+ XML ノードを列へマップする方法を表す標準 XPath パターンを指定します (省略可能)。 *ColPattern* を指定しない場合、既定のマッピング (**flags** で指定した**属性中心**または*要素中心*のマッピング) が適用されます。  
   
  *ColPattern* として指定した XPath パターンは、**属性中心**および**要素中心**のマッピングの場合に、*flags* で指定される既定のマッピングを上書きまたは拡張する、特殊なマッピング特性を指定するときに使用されます。  
   
@@ -143,7 +143,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- *flags* を `2` に設定して (**要素中心**のマッピングを示します) 同じ `SELECT` ステートメントを実行すると、XML ドキュメント内の両方の顧客に対する `CustomerID` および `ContactName` の値が NULL として返されます。これは、`CustomerID` または `ContactName` という名前の要素が XML ドキュメント内に存在しないためです。  
+ `SELECT`flags*を* に設定して (`2`要素中心**のマッピングを示します) 同じ**  ステートメントを実行すると、XML ドキュメント内の両方の顧客に対する `CustomerID` および `ContactName` の値が NULL として返されます。これは、`CustomerID` または `ContactName` という名前の要素が XML ドキュメント内に存在しないためです。  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -161,9 +161,9 @@ NULL       NULL
   
 -   行セット内の `OrderID`、`CustomerID`、および `OrderDate` 列は、XML ドキュメント内の *rowpattern* によって識別されるノードの親の属性にマップされます。  
   
--   行セット内の `ProdID` 列は `ProductID` 属性にマップされます。行セット内の `Qty` 列は *rowpattern* によって識別されるノードの `Quantity` 属性にマップされます。  
+-   行セット内の `ProdID` 列は `ProductID` 属性にマップされます。行セット内の `Qty` 列は `Quantity`rowpattern*によって識別されるノードの* 属性にマップされます。  
   
- *flags* パラメーターでは**要素中心**のマッピングを指定しますが、これは *ColPattern* で指定するマッピングで上書きされます。  
+ **flags** パラメーターでは*要素中心*のマッピングを指定しますが、これは *ColPattern* で指定するマッピングで上書きされます。  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   
@@ -190,11 +190,11 @@ EXEC sp_xml_preparedocument @idoc OUTPUT, @doc;
 -- SELECT stmt using OPENXML rowset provider  
 SELECT *  
 FROM   OPENXML (@idoc, '/ROOT/Customer/Order/OrderDetail',2)   
-         WITH (OrderID       int         '../@OrderID',   
-               CustomerID  varchar(10) '../@CustomerID',   
-               OrderDate   datetime    '../@OrderDate',   
-               ProdID      int         '@ProductID',   
-               Qty         int         '@Quantity');  
+         WITH (OrderID       int         '../@OrderID',
+               CustomerID  varchar(10) '../@CustomerID',
+               OrderDate   datetime    '../@OrderDate',
+               ProdID      int         '@ProductID',
+               Qty         int         '@Quantity');
   
 ```  
   

@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: c3c3ae9a-1e4c-4de6-ba72-2f393375b053
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f137d859fa6f6233e14bc34c6bf50797a4360a98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a459a23e9f74f04baed73c24c25c1757fbcc047f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85694136"
 ---
 # <a name="mssqlserver_41333"></a>MSSQLSERVER_41333
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |イベント ID|41333|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|CROSS_CONTAINER_ISOLATION_FAILURE|  
-|メッセージ テキスト|RepeatableRead トランザクション、Serializable トランザクション、および RepeatableRead または Serializable 分離でメモリ最適化されていないテーブルにアクセスするトランザクションでは、スナップショット分離を使用したうえでメモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャにアクセスする必要があります。|  
+|メッセージ テキスト|次に示すトランザクションは、スナップショット分離を使用したうえでメモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャにアクセスする必要があります。RepeatableRead トランザクション、Serializable トランザクション、RepeatableRead または Serializable 分離でメモリ最適化されていないテーブルにアクセスするトランザクション。|  
   
 ## <a name="explanation"></a>説明  
 ディスク ベース トランザクションと XTP トランザクションの間の分離レベルが高いユーザーに対しては、制約があります。  

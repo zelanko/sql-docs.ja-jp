@@ -21,23 +21,23 @@ helpviewer_keywords:
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70f3b23244095b79dc8340d3060e6d30d5009a2a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3fa064e31405ca8096f058195fae2c931d75993
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121934"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736352"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー カーソルをオープンし、DECLARE CURSOR または SET *cursor_variable* ステートメントで指定される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することによって、カーソルを生成します。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー カーソルをオープンし、DECLARE CURSOR または SET [!INCLUDE[tsql](../../includes/tsql-md.md)]cursor_variable*ステートメントで指定される* ステートメントを実行することによって、カーソルを生成します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  

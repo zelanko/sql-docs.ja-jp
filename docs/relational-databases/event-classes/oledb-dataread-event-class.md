@@ -12,15 +12,15 @@ ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8987894318819ffd6a91f52462366b8175ce3cf7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 03ed5dd006df07c218f6891308dbf979883bb9e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115846"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737173"
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   OLEDB DataRead イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から分散クエリやリモート ストアド プロシージャの OLE DB プロバイダーが呼び出されるときに発生します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が OLE DB プロバイダーにデータ要求呼び出しを行う時点を監視するトレースに、このイベント クラスを含めます。  
   
  OLEDB DataRead クラスがトレースに含まれていると、発生するオーバーヘッドの量が高くなります。 このイベント クラスの使用を、短期間だけ特定の問題を監視するトレースに制限することをお勧めします。  

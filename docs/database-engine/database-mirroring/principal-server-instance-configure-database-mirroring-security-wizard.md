@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8d48c59b06202f898fdf61746aee9f62ca155da6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b6afefac893920b3a11dcb4cb763e8f6cae6f0a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735210"
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>[プリンシパル サーバー インスタンス] (データベース ミラーリング セキュリティ構成ウィザード)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページを使用すると、プリンシパル データベースのサーバー インスタンスに関する情報を指定できます。 プリンシパル データベースは、ミラーリング セッションを開始するデータベースのコピーです。 セッションが開始された後は、プリンシパル データベースは、ユーザーが変更できるデータベースのコピーになります。 フェールオーバーが発生するとプリンシパル ロールとミラーリング ロールが入れ替わるため、最初のプリンシパル データベースが途中でプリンシパル データベースでなくなる可能性があります。  
   
  **SQL Server Management Studio を使用してデータベース ミラーリングを構成するには**  

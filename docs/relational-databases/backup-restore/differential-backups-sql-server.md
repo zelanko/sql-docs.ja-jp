@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf10fdcdee4d3fcca3cf3e119bf18bb341352edb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9452fc4f3ca4a0ccfa4983b8e47f97f47108eb75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179193"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737806"
 ---
 # <a name="differential-backups-sql-server"></a>差分バックアップ (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックで取り上げるバックアップと復元は、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに当てはまります。  
   
  差分バックアップは、直近の完全データ バックアップに基づきます。 差分バックアップでは、その完全バックアップの作成後に変更されたデータのみがキャプチャされます。 差分バックアップの基になる完全バックアップを差分の *ベース* といいます。 完全バックアップ (コピーのみのバックアップを除く) は、データベース バックアップ、部分バックアップ、ファイル バックアップなど、一連の差分バックアップのベースとなります。 ファイルの差分バックアップのベース バックアップは、完全バックアップ、ファイル バックアップ、または部分バックアップ内に格納できます。  

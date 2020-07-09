@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9475e53b10fc68763471441163a7905d2bcfc5bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048153"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735770"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   パーティション テーブルまたはパーティション インデックスのパーティションをファイル グループにマップする構成を、現在のデータベース内に作成します。 パーティション テーブルまたはパーティション インデックスのパーティションの数とドメインは、パーティション関数で決まります。 パーティション構成を作成する前に、まず [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) ステートメントでパーティション関数を作成しておく必要があります。  
 
@@ -47,7 +47,7 @@ ms.locfileid: "68048153"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CREATE PARTITION SCHEME partition_scheme_name  
 AS PARTITION partition_function_name  
 [ ALL ] TO ( { file_group_name | [ PRIMARY ] } [ ,...n ] )  
@@ -67,7 +67,7 @@ AS PARTITION partition_function_name
  *file_group_name* |  **[** PRIMARY **]** [ **,** _...n_]  
  *partition_function_name* によって指定されたパーティションを保持するファイル グループの名前を指定します。 *file_group_name* がデータベースに既に存在する必要があります。  
   
- **[** PRIMARY **]** を指定した場合、パーティションはプライマリ ファイル グループに格納されます。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。 パーティションは、パーティション 1 から始まり、[ **,** _...n_] で一覧表示されているファイル グループの順序で、ファイル グループに割り当てられます。 [ **,** _...n_] では、同じ *file_group_name* を複数回指定できます。 *n* が *partition_function_name* で指定されたパーティションの数を保持するのに十分ではない場合、CREATE PARTITION SCHEME は失敗し、エラーが発生します。  
+ **[** PRIMARY **]** を指定した場合、パーティションはプライマリ ファイル グループに格納されます。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。 パーティションは、パーティション 1 から始まり、[ **,** _...n_] で一覧表示されているファイル グループの順序で、ファイル グループに割り当てられます。 [ *,* **...n**] では、同じ _file_group_name_ を複数回指定できます。 *n* が *partition_function_name* で指定されたパーティションの数を保持するのに十分ではない場合、CREATE PARTITION SCHEME は失敗し、エラーが発生します。  
   
  *partition_function_name* によって生成されるパーティションの数がファイル グループより少ない場合、割り当てられていない最初のファイル グループが NEXT USED とマークされ、情報メッセージに NEXT USED ファイル グループの名前が表示されます。 ALL を指定した場合、唯一の *file_group_name* に、この *partition_function_name* に対する NEXT USED プロパティが設定されます。 ALTER PARTITION FUNCTION ステートメントで追加のパーティションを作成した場合は、NEXT USED ファイル グループがそのパーティションを受け取ります。 追加の割り当てられていないファイル グループを作成して新しいパーティションを保持するには、ALTER PARTITION SCHEME を使用します。  
   
@@ -98,7 +98,7 @@ AS PARTITION myRangePF1
 TO (test1fg, test2fg, test3fg, test4fg);  
 ```  
   
- パーティション分割列 **col1** でパーティション関数 `myRangePF1` を使用するテーブルのパーティションは、次の表に示すように割り当てられます。  
+ パーティション分割列 `myRangePF1`col1**でパーティション関数** を使用するテーブルのパーティションは、次の表に示すように割り当てられます。  
   
 ||||||  
 |-|-|-|-|-|  
@@ -118,7 +118,7 @@ AS PARTITION myRangePF2
 TO ( test1fg, test1fg, test1fg, test2fg );  
 ```  
   
- パーティション分割列 **col1** でパーティション関数 `myRangePF2` を使用するテーブルのパーティションは、次の表に示すように割り当てられます。  
+ パーティション分割列 `myRangePF2`col1**でパーティション関数** を使用するテーブルのパーティションは、次の表に示すように割り当てられます。  
   
 ||||||  
 |-|-|-|-|-|  

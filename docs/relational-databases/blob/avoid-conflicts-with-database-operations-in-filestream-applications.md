@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3641401fbb2314bf4712cc524777a490ced01541
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8d98470daf000115061fde1d5b8a276f1bd76a4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85743939"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>FILESTREAM アプリケーションでのデータベース操作との競合の回避
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SqlOpenFilestream() により Win32 ファイル ハンドルを開いて FILESTREAM BLOB データの読み取りまたは書き込みを行うアプリケーションでは、共通のトランザクションで管理される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで競合エラーが発生する場合があります。 この例として、完了までに時間がかかる [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリや MARS クエリなどがあります。 アプリケーションは、このような競合を回避できるように注意深く設計する必要があります。  
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] またはアプリケーションが FILESTREAM BLOB を開こうとする場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって、関連付けられたトランザクション コンテキストがチェックされます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、DDL ステートメント、DML ステートメント、データの取得、トランザクションの管理のうち、どれが開く操作の対象になっているかに基づいて、要求を許可または拒否します。 次の表は、トランザクションで開いているファイルの種類に基づいて、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントが許可されるか拒否されるかが、 [!INCLUDE[tsql](../../includes/tsql-md.md)] でどのように決まるかを示しています。  

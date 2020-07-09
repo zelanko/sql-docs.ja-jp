@@ -17,17 +17,17 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c9f43a8c3739652cabfbe4abe21fca7612e9d38
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071169"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735471"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL グラフ)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、1 つまたは複数の行を`node`や`edge`に追加します。 
+`node` で、1 つまたは複数の行を`edge`や[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に追加します。 
 
 > [!NOTE]   
 >  標準の Transact-SQL ステートメントについては、「[INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)」を参照してください。
@@ -37,7 +37,7 @@ ms.locfileid: "68071169"
 ## <a name="insert-into-node-table-syntax"></a>ノード テーブルへの INSERT 構文 
 ノード テーブルに挿入するための構文は、通常のテーブルの場合と同じです。 
 
-```sql
+```syntaxsql
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  

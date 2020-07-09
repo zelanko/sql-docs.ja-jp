@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 369dd7ec16ee530d7612222ad7e77dd6faf66e14
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 26ffe6c73d00056b9b15bd07f41349b367bef02d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73980947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735695"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 DML トリガー、DDL トリガー、またはログオン トリガーを有効化します。  
   
@@ -38,7 +38,7 @@ DML トリガー、DDL トリガー、またはログオン トリガーを有�
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 ENABLE TRIGGER { [ schema_name . ] trigger_name [ ,...n ] | ALL }  
 ON { object_name | DATABASE | ALL SERVER } [ ; ]  
 ```  
@@ -78,7 +78,7 @@ DML トリガーを有効化するには、少なくとも、そのトリガー�
 ## <a name="examples"></a>例  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. テーブル上の DML トリガーを有効化する  
-次の例では、AdventureWorks データベースのテーブル `Address` 上に作成されたトリガー `uAddress` を無効化し、次に有効化します。  
+次の例では、AdventureWorks データベースのテーブル `uAddress` 上に作成されたトリガー `Address` を無効化し、次に有効化します。  
   
 ```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a84e0a0d50de36d5aa9e98a36f3ff250d77aedfe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f680bae8939aa6c4f6648c6076616564cd7d195c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179036"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737767"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>例:データベースの部分復元 (完全復旧モデル)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   段階的な部分復元シーケンスでは、プライマリ ファイル グループとすべての読み書き可能なセカンダリ ファイル グループから順に、ファイル グループ レベルで段階的にデータベースが復元され、復旧されます。  
   

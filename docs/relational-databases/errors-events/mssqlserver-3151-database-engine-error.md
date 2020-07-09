@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: a8657a91-ec75-4649-a09a-21920e0030ff
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 068f4737a3367acdd01862cc800a4255a472c843
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0d4c51bd7f4e1eca3bf57fbcfa89aec93357fb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001908"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723741"
 ---
 # <a name="mssqlserver_3151"></a>MSSQLSERVER_3151
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|3151|  
 |イベント ソース|MSSQLSERVER|  
@@ -36,5 +36,5 @@ ms.locfileid: "68001908"
 これは一般エラー メッセージであり、**master** データベースに関するさまざまな問題を示しています。  
   
 ## <a name="user-action"></a>ユーザーの操作  
-詳細については、エラー ログを確認してください。 使用可能な **master** データベースを作成するには、REBUILDDATABASE オプションを使用して Setup.exe を実行します。 詳細については、SQL Server オンライン ブックの「コマンド プロンプトから SQL Server をインストールする方法」を参照してください。  
+詳細については、エラー ログを確認してください。 使用可能な **master** データベースを作成するには、REBUILDDATABASE オプションを使用して Setup.exe を実行します。 詳細については、SQL Server オンライン ブックの「方法:コマンド プロンプトからの SQL Server のインストール」を参照してください。  
   

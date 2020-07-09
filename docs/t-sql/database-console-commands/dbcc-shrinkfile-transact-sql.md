@@ -29,15 +29,15 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: ac274000ffdb1bcd29ebad2a2e0d0395b8daba0c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a9498c5d2705abece345533573a768e71e0b7030
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930324"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748902"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 現在のデータベースに指定されているデータまたはログ ファイルのサイズを圧縮します。 同じファイル グループ内のあるファイルから他のファイルにデータを移動するために使用できます。この処理で、ファイルを空にしてデータベースを削除することができます。 ファイルを作成時のサイズよりも圧縮し、最小ファイル サイズを新しい値にリセットすることができます。
   
@@ -45,7 +45,7 @@ ms.locfileid: "67930324"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
   
 DBCC SHRINKFILE   
 (  
@@ -161,7 +161,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-このメッセージは、109 (圧縮操作が完了した最後のトランザクション) よりもタイムスタンプが古いスナップショット トランザクションによって圧縮操作がブロックされていることを意味します。 また、[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 動的管理ビューの **transaction_sequence_num** 列または **first_snapshot_sequence_num** 列に、値 15 が含まれることも示しています。 **transaction_sequence_num** または **first_snapshot_sequence_num** のいずれかのビュー列に、圧縮操作の最後に完了したトランザクション (109) より低い番号が含まれている場合、それらのトランザクションが完了するまで圧縮操作は待機状態になります。
+このメッセージは、109 (圧縮操作が完了した最後のトランザクション) よりもタイムスタンプが古いスナップショット トランザクションによって圧縮操作がブロックされていることを意味します。 また、**sys.dm_tran_active_snapshot_database_transactions** 動的管理ビューの **transaction_sequence_num** 列または [first_snapshot_sequence_num](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 列に、値 15 が含まれることも示しています。 **transaction_sequence_num** または **first_snapshot_sequence_num** のいずれかのビュー列に、圧縮操作の最後に完了したトランザクション (109) より低い番号が含まれている場合、それらのトランザクションが完了するまで圧縮操作は待機状態になります。
   
 この問題を解決するには、次のいずれかの作業を実行します。
 -   圧縮操作をブロックしているトランザクションを終了します。
@@ -174,7 +174,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 ## <a name="examples"></a>例  
   
 ### <a name="shrinking-a-data-file-to-a-specified-target-size"></a>指定した目標サイズにデータ ファイルを圧縮する  
-次の例では、`UserDB` ユーザー データベース内の `DataFile1` というデータ ファイルのサイズを 7 MB に圧縮します。
+次の例では、`DataFile1` ユーザー データベース内の `UserDB` というデータ ファイルのサイズを 7 MB に圧縮します。
   
 ```sql  
 USE UserDB;  

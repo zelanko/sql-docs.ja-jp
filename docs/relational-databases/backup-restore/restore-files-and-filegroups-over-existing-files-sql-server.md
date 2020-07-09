@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b5d477202b26c06ed2507ebd87dc908ad4a845c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fe155516996d9f5761ccb2b8b1d1071fb975bbe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180743"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737695"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>既存のファイルにファイルとファイル グループを復元する (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でファイルとファイル グループを既存のファイルに復元する方法について説明します。  
   

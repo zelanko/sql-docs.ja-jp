@@ -12,15 +12,15 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c3bc0a8e805b8a416cba9e7bf7786cfc9840e046
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 1e49a379ed12123c684497d84804c9ebd1ebf9ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220480"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748471"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップの詳細設定オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   次のチュートリアルでは、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の詳細設定オプションを設定する方法について説明します。 この手順は、その機能が必要な場合のみ必要です。 それ以外の場合、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にし、既定の動作に依存します。  
   
  各シナリオで、バックアップは `database_name` パラメーターを使用して指定します。 `database_name` が NULL または * の場合、変更はインスタンス レベルで既定の設定に影響します。 インスタンス レベルの設定は、変更後に作成された新しいデータベースにも影響します。  

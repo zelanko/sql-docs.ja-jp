@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 02a90a155bcfcc2ad2294fb03c4e8b832701e36c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e7ccef337d7b693561ec2d328fcc3a2f8afae72c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748924"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 DBCC OPENTRAN はアクティブなトランザクションを識別するのに役立ち、ログの切り捨てを防ぐ目的でも使用できます。 DBCC OPENTRAN によって、指定したデータベースのトランザクション ログ内に存在する最も古いアクティブ トランザクション、および (存在する場合は) 最も古い分散型と非分散型のレプリケートされたトランザクションに関する情報が表示されます。 ログ内にアクティブ トランザクションが存在する場合、またはデータベースにレプリケーション情報が存在する場合にのみ、結果が表示されます。 ログ内にアクティブ トランザクションがない場合は、情報メッセージが表示されます。
   

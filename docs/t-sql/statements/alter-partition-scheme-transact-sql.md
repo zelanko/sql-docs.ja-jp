@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c701ad852eb7c33dbf2721be765d2df9fe36f1cd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 53949b7fd1f937c8a2e816ac438f295fa95ebbf6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81627226"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735982"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   パーティション構成にファイル グループを追加したり、パーティション構成の NEXT USED ファイル グループの指定を変更します。 
 
