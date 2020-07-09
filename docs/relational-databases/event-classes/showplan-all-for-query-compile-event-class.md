@@ -12,15 +12,15 @@ ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 480d2d238a82039fd04c1c960e74b0c9da57449e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 582efa7068b9e4ebadc4cdfd9f10ee93eb2774df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911102"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726193"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Showplan All for Query Compile イベント クラスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントがコンパイルされるときに発生します。 Showplan 操作を識別するには、このイベント クラスを含めます。 含まれる情報は、Showplan XML For Query Compile イベント クラスで使用できる情報のサブセットです。  
   
  Showplan All for Query Compile イベント クラスにより、コンパイル時の完全なデータが表示されるので、Showplan All for Query Compile を含むトレースでは、パフォーマンスのオーバーヘッドが大幅に増加することがあります。 このパフォーマンスの低下を最小限に抑えるには、このイベント クラスの使用を、短期間だけ特定の問題を監視するトレースに制限します。  
