@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 67a62cc33877644f9feb6384c5d454b2cf30695b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97514b5bab233bbef63876dd8f0cd6b0afca2274
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76831803"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749531"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したサーバーの管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
    ポリシー ベースの管理とは、1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを管理するためのポリシー ベースのシステムのことです。 条件式を含む条件を作成します。 次に、作成した条件を対象のデータベース オブジェクトに適用するポリシーを作成します。  
 
 たとえば、データベース管理者として、特定のサーバーでデータベース メールが有効になっていないことを確認することが必要があるとします。その場合は、そのサーバー オプションを設定した条件とポリシーを作成します。 

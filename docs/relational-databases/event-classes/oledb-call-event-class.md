@@ -12,15 +12,15 @@ ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23ce9be8428799a963addda5510e3528f94fb86b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7a69d13beae131a6635c51c305c8d87c1c35127
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115864"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753345"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **OLEDB Call** イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から分散クエリやリモート ストアド プロシージャの OLE DB プロバイダーが呼び出されるときに発生します。  
   
  データを要求しない呼び出し、または **QueryInterface** メソッドに対して行われていない呼び出しだけを監視するには、トレースに **OLEDB Call** イベント クラスを含めます。 **OLEDB Call** イベント クラスをトレースに含めた場合、発生するオーバーヘッドの量は、トレース中にデータベースに対して OLE DB 呼び出しが発生する頻度によって異なります。 呼び出しが頻繁に行われると、トレースによってパフォーマンスが大きく低下することがあります。  

@@ -14,15 +14,15 @@ ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 388a9d8e11cc738b13df752868568cd4cea556d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e4371ed373d7937f177dab5979c3e50fe1096c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68074164"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757649"
 ---
 # <a name="ddl-event-groups"></a>DDL イベント グループ
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   次の表に、DDL トリガーまたはイベント通知の実行に使用できる DDL イベント グループ、およびそれらのグループで処理される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの一覧を示します。 イベント グループは入れ子になっていることに注意してください。 たとえば、FOR DDL_TABLE_EVENTS (10018) を指定した DDL トリガー、またはイベント通知の対象になるのは、CREATE TABLE ステートメント、ALTER TABLE ステートメント、および DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。 FOR DDL_TABLE_VIEW_EVENTS (10017) を指定した DDL トリガーまたはイベント通知の対象になるのは、DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS、および DDL_STATISTICS_EVENTS という型の下のすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。  
   
 > [!NOTE]  

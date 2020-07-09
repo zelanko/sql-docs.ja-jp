@@ -14,15 +14,15 @@ ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 543b28f5980c8126a9475a54557a05964718c707
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e1475b0b2145d40f22760edb5a23e040cb9fef58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68056129"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757590"
 ---
 # <a name="dml-triggers"></a>DML トリガー
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   DML トリガーとは、そこに定義されているテーブルまたはビューに影響するようなデータ操作言語 (DML) イベントが発生すると自動的に実行される特殊なストアド プロシージャです。 DML イベントには、INSERT、UPDATE、または DELETE のステートメントが含まれます。 DML トリガーを使用して、ビジネス ルールやデータの整合性を強制的に適用したり、他のテーブルを照会したりできるほか、複雑な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用することもできます。 トリガーとそのトリガーを起動するステートメントは単一のトランザクションとして扱われ、このトランザクションはトリガー内からロールバックできます。 ディスクの空き容量の不足などの重大なエラーが検出されると、このトランザクション全体が自動的にロールバックされます。  
   
 ## <a name="dml-trigger-benefits"></a>DML トリガーの利点  

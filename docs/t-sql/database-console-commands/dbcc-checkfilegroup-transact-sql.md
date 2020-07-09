@@ -25,21 +25,21 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: c3b8061b49d0acacedae323645cd8822beaa016e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad67fa7e1cda5208fa5468e233c60a27edb10837
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68102036"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754837"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 現在のデータベースで、指定されたファイル グループのすべてのテーブルおよびインデックス付きビューの割り当てと構造的整合性をチェックします。
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
   
 DBCC CHECKFILEGROUP   
 [  
@@ -206,7 +206,7 @@ GO
 ```  
   
 ### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. 非クラスター化インデックスを除く AdventureWorks データベースの PRIMARY ファイル グループをチェックする  
-次の例では、プライマリ ファイル グループの ID 番号を指定し、`NOINDEX` オプションを指定することによって、非クラスター化インデックスを除く `AdventureWorks2012` データベースのプライマリ ファイル グループをチェックします。
+次の例では、プライマリ ファイル グループの ID 番号を指定し、`AdventureWorks2012` オプションを指定することによって、非クラスター化インデックスを除く `NOINDEX` データベースのプライマリ ファイル グループをチェックします。
   
 ```sql  
 USE AdventureWorks2012;  
