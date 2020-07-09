@@ -18,17 +18,17 @@ helpviewer_keywords:
 - number of characters
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
-ms.author: mikeray
+ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b6f470a08c3605f9ea5afa5fff1f7b6cbd17f1b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c505d2a72e9ccd0432f685307e97b16e625e859b
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72798416"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032458"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 指定された文字列式の、末尾の空白を除いた文字数を返します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "72798416"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 LEN ( string_expression )  
 ```  
   
@@ -48,7 +48,7 @@ LEN ( string_expression )
  評価される文字列[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *string_expression* には、文字データまたはバイナリ データの定数、変数、または列を使用できます。  
   
 ## <a name="return-types"></a>戻り値の型  
- *式*が **varchar(max)** 、**nvarchar(max)** 、または **varbinary(max)** データ型の場合は **bigint**。それ以外の場合は **int**。  
+ **式**が *varchar(max)* 、**nvarchar(max)** 、または **varbinary(max)** データ型の場合は **bigint**。それ以外の場合は **int**。  
   
  SC の照合順序を使用する場合、返される整数値では、UTF-16 サロゲート ペアが 1 文字としてカウントされます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
@@ -56,13 +56,13 @@ LEN ( string_expression )
 LEN では末尾の空白が除外されます。 これが問題の場合は、文字列が切り捨てられない [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md) 関数の使用を検討してください。 Unicode 文字列を処理する場合、DATALENGTH では文字の数と等しくない値が返される場合があります。 次の例では、末尾のスペースを持つ LEN および DATALENGTH を示します。  
   
 ```sql  
-DECLARE @v1 varchar(40),  
-    @v2 nvarchar(40);  
+  DECLARE @v1 VARCHAR(40),  
+    @v2 NVARCHAR(40);  
 SELECT   
 @v1 = 'Test of 22 characters ',   
 @v2 = 'Test of 22 characters ';  
-SELECT LEN(@v1) AS [varchar LEN] , DATALENGTH(@v1) AS [varchar DATALENGTH];  
-SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];  
+SELECT LEN(@v1) AS [VARCHAR LEN] , DATALENGTH(@v1) AS [VARCHAR DATALENGTH];  
+SELECT LEN(@v2) AS [NVARCHAR LEN], DATALENGTH(@v2) AS [NVARCHAR DATALENGTH];  
 ```  
 
 > [!NOTE]
