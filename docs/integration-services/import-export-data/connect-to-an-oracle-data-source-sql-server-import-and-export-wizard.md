@@ -1,7 +1,7 @@
 ---
 title: Oracle データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c114a5e17c95d21d999819e73dcfd53f84179802
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773551"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Oracle データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -36,6 +36,7 @@ ms.locfileid: "71285433"
 |---|---|
 |サーバー名|**データ ソース**|
 |認証 (ログイン) 情報|**ユーザー ID** と**パスワード**、または**統合セキュリティ**|
+|||
 
 リストの **[ConnectionString]** フィールドに接続文字列を入力する必要はありません。 Oracle サーバー名 (**データ ソース**) とログイン情報に個別の値を入力すると、ウィザードが個々のプロパティとその値から、接続文字列をアセンブルします。 
 
@@ -70,9 +71,9 @@ Oracle サーバーの名前。
 ### <a name="connection-string-format"></a>接続文字列の形式
 一般的な接続文字列の形式を次に示します。
 
-    ```
-    Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
-    ```
+```console
+Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+```
 
 ### <a name="enter-the-connection-string"></a>接続文字列を入力する
 **[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、 **[ConnectionString]** フィールドに接続文字列を入力するか、 **[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。

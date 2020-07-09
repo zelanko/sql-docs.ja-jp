@@ -1,7 +1,7 @@
 ---
 title: MySQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/20/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fc1128ff50a6b5f6fbb459dca23f518cbcd4f26
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdec318d9fdc895470c7dde94e254c2cc164f079
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285685"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768089"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>MySQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -40,6 +40,7 @@ ms.locfileid: "71285685"
 |サーバー名|**[サーバー]**|
 |データベース名|**[データベース]**|
 |認証 (ログイン) 情報|**ユーザー ID**と**パスワード**|
+|||
 
 リストの **[ConnectionString]** フィールドに接続文字列を入力する必要はありません。 MySQL サーバー名 (**サーバー**) とログイン情報に個別の値を入力すると、ウィザードが個々のプロパティとその値から、接続文字列をアセンブルします。 
 
@@ -79,18 +80,18 @@ MySQL データベースの名前。
 ### <a name="connection-string-format"></a>接続文字列の形式
 一般的な接続文字列の形式を次に示します。
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
+```
 
 ### <a name="enter-the-connection-string"></a>接続文字列を入力する
 **[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、 **[ConnectionString]** フィールドに接続文字列を入力するか、 **[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
 
 次の例では、この接続文字列を使用しています。
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
+```
 
 接続文字列を入力した後に表示される画面を次に示します。
 

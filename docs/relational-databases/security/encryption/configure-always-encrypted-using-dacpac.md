@@ -12,15 +12,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df18a2ca6f79982db41b5188283bf1721b518e31
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc10c556999d843456728289acb72bddb3b0784e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765135"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>DAC パッケージでの Always Encrypted を使用した列暗号化の構成 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 [データ層アプリケーション (DAC) パッケージ](../../data-tier-applications/data-tier-applications.md) (DACPAC とも呼ばれます) は、テーブル内のテーブルや列を含むすべての SQL Server オブジェクトを定義する SQL Server データベースのデプロイの移植可能な単位です。 DACPAC をデータベースに発行する場合 (DACPAC を使用してデータベースをアップグレードする場合)、ターゲット データベースのスキーマは、DACPAC のスキーマに一致するように更新されます。 SQL Server Management Studio、[PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell)、または [sqlpackage](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables) の[データ層アプリケーションのアップグレード ウィザード](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard)を使用して、DACPAC を発行できます。
 

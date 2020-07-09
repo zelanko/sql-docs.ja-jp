@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 620e79cd69c11c6f5de32d3ef0ae97af489f9398
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: e9d94bb7b7002b1e83a6e5dbc5566f77a4093274
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81304843"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775774"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, クエリ ストア オブジェクト
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 クエリ ストア オブジェクトは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリソース使用率を監視するカウンターを提供し、クエリ テキスト、オブジェクト (ストアド プロシージャなど) の実行プランとランタイム統計情報、アドホックおよび準備された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、トリガーを格納します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "81304843"
 |クエリ ストアのインスタンス|説明|  
 |--------------------------|-----------------|  
 |**_Total**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのインスタンスのクエリ ストアの情報です。|  
-|\<データベース名>|このデータベースのクエリ ストアの情報です。|  
+|\<database name>|このデータベースのクエリ ストアの情報です。|  
   
 ## <a name="see-also"></a>参照  
 

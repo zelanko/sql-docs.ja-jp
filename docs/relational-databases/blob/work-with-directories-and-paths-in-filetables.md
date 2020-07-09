@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bce7416918ec17d0fbea13a1df01f8dec2cb9729
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4ab8501b5b0753143ce5bfe2b289211729c35821
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765467"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable 内のディレクトリとパスの操作
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   FileTable 内でファイルが格納されるディレクトリ構造について説明します。  
   
 ##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> 方法:FileTable 内のディレクトリとパスの操作  
@@ -97,9 +97,9 @@ GO
 |-|-|-|  
 |*is_directory* **value**|*file_stream* **value**|**動作**|  
 |FALSE|NULL|これは、システム定義の制約によってキャッチされる無効な組み合わせです。|  
-|FALSE|\<値>|アイテムはファイルを表します。|  
-|TRUE|NULL|アイテムはディレクトリを表します。|  
-|TRUE|\<値>|これは、システム定義の制約によってキャッチされる無効な組み合わせです。|  
+|FALSE|\<value>|アイテムはファイルを表します。|  
+|true|NULL|アイテムはディレクトリを表します。|  
+|TRUE|\<value>|これは、システム定義の制約によってキャッチされる無効な組み合わせです。|  
   
 ##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a> AlwaysOn 可用性グループでの仮想ネットワーク名 (VNN) の使用  
  FILESTREAM データまたは FileTable データを格納するデータベースが AlwaysOn 可用性グループに属する場合、次の処理が行われます。  

@@ -10,16 +10,16 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 651467463e0563c9da00e23115ffb7bc4f151d23
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2eec1f7f24f8465fb5d2bd4406de4c11aef8a518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773591"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Windows 上と Linux 上で SQL Server の Always On 可用性グループを構成する (クロスプラットフォーム)
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/applies-to-version/sqlserver2017.md)]
 
 この記事では、Windows サーバー上の 1 つのレプリカと Linux サーバー上のもう 1 つのレプリカを使用して、Always On 可用性グループ (AG) を作成する手順について説明します。 レプリカが異なるオペレーティング システム上にあるため、この構成はクロスプラットフォームです。 この構成は、プラットフォーム間の移行またはディザスター リカバリー (DR) を目的として使用してください。 クロスプラットフォーム構成を管理するクラスター ソリューションがないため、この構成では高可用性はサポートされません。 
 

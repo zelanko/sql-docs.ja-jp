@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e426d6af578cd822befdeab928c522a55f98d7e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8179c57a2d472d4cdddda10dacdd07ffe473504
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76259420"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766601"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   トリガーを無効にします。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "76259420"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DISABLE TRIGGER { [ schema_name . ] trigger_name [ ,...n ] | ALL }  
 ON { object_name | DATABASE | ALL SERVER } [ ; ]  
 ```  
@@ -85,7 +85,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 次の例は、AdventureWorks2012 データベースで記述されています。
   
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. テーブルの DML トリガーを無効にする  
- 次の例では、テーブル `Person` に作成されたトリガー `uAddress` を無効にします。  
+ 次の例では、テーブル `uAddress` に作成されたトリガー `Person` を無効にします。  
   
 ```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  

@@ -2,7 +2,7 @@
 title: ODBC データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 description: SQL Server インポートおよびエクスポート ウィザードで使用する目的で ODBC DSN を構成するか、ODBC 接続文字列を作成する方法
 ms.custom: ''
-ms.date: 12/31/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: integration-services
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73259121c31fcfc74352bf47938fcf28b294b894
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75608031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773583"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>ODBC データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -93,9 +93,9 @@ DSN (データ ソース名) で接続情報を指定する場合は、 **[ODBC 
 
 この例では、Microsoft SQL Server に接続する次の接続文字列を使います。 使用されるデータベース例は **WideWorldImporters** であり、ローカル コンピューターで SQL Server に接続します。
 
-    ```
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
-    ```
+```console
+Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+```
 
 **[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、 **[ConnectionString]** フィールドに接続文字列を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
 
@@ -140,7 +140,7 @@ ODBC ドライバーの接続文字列をオンラインで調べるには、「
 
 10. メモ帳または他のテキスト エディターで、保存したファイルを開きます。 この SQL Server の例の内容を次に示します。
 
-    ```   
+    ```console
     [ODBC]  
     DRIVER=ODBC Driver 13 for SQL Server  
     TrustServerCertificate=No  
@@ -155,9 +155,9 @@ ODBC ドライバーの接続文字列をオンラインで調べるには、「
 
     サンプルのファイル DSN から必要な値を組み立てた後、接続文字列は次のようになります。
     
-        ```
-        DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
-        ```
+    ```console
+    DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+    ```
 
     通常、動作する接続文字列を作成するために、ODBC データ ソース アドミニストレーターによって作成された DSN のすべての設定は必要はありません。  
     -   ODBC ドライバーは、常に指定する必要があります。
