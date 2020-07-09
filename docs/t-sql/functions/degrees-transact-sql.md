@@ -16,18 +16,18 @@ helpviewer_keywords:
 - DEGREES function
 - number of degrees
 ms.assetid: 5208de3c-90a3-4f59-a7e3-10b01bf285bb
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 041b54d110686b8309320612164ca6815daff0d8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7fb2e184245b526c3cacc18fa8b7003625e27fcf
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68135952"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005925"
 ---
 # <a name="degrees-transact-sql"></a>DEGREES (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数は、ラジアン単位で指定された角度に対して、対応する角度を度の単位で返します。  
   
@@ -35,13 +35,13 @@ ms.locfileid: "68135952"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DEGREES ( numeric_expression )  
 ```  
   
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
-**bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+[bit](../../t-sql/language-elements/expressions-transact-sql.md) データ型を除く、真数または概数データ型カテゴリの**式**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
 データ型が *numeric_expression* のデータ型に一致する値を返します。  
@@ -51,7 +51,7 @@ DEGREES ( numeric_expression )
   
 ```  
 SELECT 'The number of degrees in PI/2 radians is: ' +   
-CONVERT(varchar, DEGREES((PI()/2)));  
+CONVERT(VARCHAR, DEGREES((PI()/2)));  
 GO  
 ```  
   

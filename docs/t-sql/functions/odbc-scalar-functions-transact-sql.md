@@ -49,20 +49,20 @@ helpviewer_keywords:
 - functions, ODBC WEEK
 - HOUR ODBC function
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fd8173f0c29855fc4553dedcd9ac47ddc909f57
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ebe21e82e6065aa28e4967b7d2f4d13f0fafe9d6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76909832"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003825"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC スカラー関数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、[ODBC スカラー関数](https://go.microsoft.com/fwlink/?LinkID=88579)を使用できます。 これらのステートメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって解釈されます。 具体的には、ストアド プロシージャやユーザー定義関数の中で、 文字列、数値、時刻、日付、間隔を扱う関数のほか、システム関数を使用することができます。  
+  [ ステートメントでは、](https://go.microsoft.com/fwlink/?LinkID=88579)ODBC スカラー関数[!INCLUDE[tsql](../../includes/tsql-md.md)]を使用できます。 これらのステートメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって解釈されます。 具体的には、ストアド プロシージャやユーザー定義関数の中で、 文字列、数値、時刻、日付、間隔を扱う関数のほか、システム関数を使用することができます。  
   
 ## <a name="usage"></a>使用法  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
@@ -109,9 +109,9 @@ ms.locfileid: "76909832"
   
 ```  
 CREATE PROCEDURE dbo.ODBCprocedure  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
 AS  
 SELECT {fn OCTET_LENGTH( @string_exp )};  
 ```  
@@ -121,13 +121,13 @@ SELECT {fn OCTET_LENGTH( @string_exp )};
   
 ```  
 CREATE FUNCTION dbo.ODBCudf  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
-RETURNS int  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
+RETURNS INT  
 AS  
 BEGIN  
-DECLARE @len int  
+DECLARE @len INT  
 SET @len = (SELECT {fn OCTET_LENGTH( @string_exp )})  
 RETURN(@len)  
 END ;  
@@ -156,7 +156,7 @@ SELECT {fn CURRENT_DATE( )};
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns 10:27:11.973000  
   
-DECLARE @date_exp nvarchar(30) = '2007-04-21 01:01:01.1234567';  
+DECLARE @date_exp NVARCHAR(30) = '2007-04-21 01:01:01.1234567';  
 SELECT {fn DAYNAME( @date_exp )};  
 -- Returns Saturday  
 SELECT {fn DAYOFMONTH( @date_exp )};  
@@ -184,9 +184,9 @@ SELECT {fn WEEK( @date_exp )};
   
 ```  
 CREATE PROCEDURE dbo.ODBCprocedure  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
 AS  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 ```  
@@ -196,13 +196,13 @@ SELECT {fn BIT_LENGTH( @string_exp )};
   
 ```  
 CREATE FUNCTION dbo.ODBCudf  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
-RETURNS int  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
+RETURNS INT  
 AS  
 BEGIN  
-DECLARE @len int  
+DECLARE @len INT  
 SET @len = (SELECT {fn BIT_LENGTH( @string_exp )})  
 RETURN(@len)  
 END ;  
@@ -216,7 +216,7 @@ SELECT dbo.ODBCudf('Returns the length in bits.');
  次の SELECT ステートメントでは、ODBC 関数が使用されています。  
   
 ```  
-DECLARE @string_exp nvarchar(4000) = 'Returns the length.';  
+DECLARE @string_exp NVARCHAR(4000) = 'Returns the length.';  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 -- Returns 304  
   
@@ -227,7 +227,7 @@ SELECT {fn CURRENT_DATE( )};
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns the time  
   
-DECLARE @date_exp nvarchar(30) = '2007-04-21 01:01:01.1234567';  
+DECLARE @date_exp NVARCHAR(30) = '2007-04-21 01:01:01.1234567';  
 SELECT {fn DAYNAME( @date_exp )};  
 -- Returns Saturday  
 SELECT {fn DAYOFMONTH( @date_exp )};  
@@ -250,4 +250,3 @@ SELECT {fn WEEK( @date_exp )};
   
 ## <a name="see-also"></a>参照  
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
-  

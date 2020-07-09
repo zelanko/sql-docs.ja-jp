@@ -16,18 +16,18 @@ helpviewer_keywords:
 - COT function
 - cotangent
 ms.assetid: c87a9dac-e398-4125-80c3-7df3c2ce6b63
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2a571663ed1987f9eb9e847f6065e3efd30ae56
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6388253bcdc7bacecdcb544885e4e22fecc48fc1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914948"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011519"
 ---
 # <a name="cot-transact-sql"></a>COT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 指定した、ラジアンで指定された角度の三角関数コタンジェントを返す数学関数 **float** 式です。
   
@@ -35,13 +35,13 @@ ms.locfileid: "67914948"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 COT ( float_expression )  
 ```  
   
 ## <a name="arguments"></a>引数  
 *float_expression*  
-**float** 型、または暗黙的に **float** 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。
+[float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に **float** 型に変換できる**式**を指定します。
   
 ## <a name="return-types"></a>戻り値の型
 **float**
@@ -50,9 +50,9 @@ COT ( float_expression )
 この例では、特定の角度の `COT` 値が返されます。
   
 ```sql
-DECLARE @angle float;  
+DECLARE @angle FLOAT;  
 SET @angle = 124.1332;  
-SELECT 'The COT of the angle is: ' + CONVERT(varchar,COT(@angle));  
+SELECT 'The COT of the angle is: ' + CONVERT(VARCHAR, COT(@angle));  
 GO  
 ```  
   

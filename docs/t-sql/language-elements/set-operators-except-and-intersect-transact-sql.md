@@ -23,15 +23,15 @@ ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9e0f46e098ec0944577738332a38e08384a2579
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a76fa18b50c62127208db9430fafcfb5668225c1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121773"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004980"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>セット演算子 - EXCEPT および INTERSECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 2 つのクエリの結果を比較して、個別の行を返します。  
   
@@ -49,7 +49,7 @@ EXCEPT と INTERSECT を使用する 2 つのクエリの結果セットを結�
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 { <query_specification> | ( <query_expression> ) }   
 { EXCEPT | INTERSECT }  
 { <query_specification> | ( <query_expression> ) }  
@@ -99,9 +99,9 @@ EXCEPT と INTERSECT は分散クエリで使用できますが、この場合�
 EXCEPT 演算が、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のグラフィカル プラン表示機能を使用して表示される場合、この演算は [left anti semi join](../../relational-databases/showplan-logical-and-physical-operators-reference.md) として表示され、INTERSECT 演算は [left semi join](../../relational-databases/showplan-logical-and-physical-operators-reference.md) として表示されます。  
   
 ## <a name="examples"></a>例  
-次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`INTERSECT` および `EXCEPT` の結果と比較するため、`Production.Product` テーブルからすべての値を返します。  
+次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`Production.Product` および `INTERSECT` の結果と比較するため、`EXCEPT` テーブルからすべての値を返します。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -111,7 +111,7 @@ FROM Production.Product ;
   
 次のクエリでは、`INTERSECT` 演算子の左右両方のクエリによって返される個別の値が返されます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -124,7 +124,7 @@ FROM Production.WorkOrder ;
   
 次のクエリでは、`EXCEPT` 演算子の左のクエリにあって、右のクエリにない個別の値が返されます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -137,7 +137,7 @@ FROM Production.WorkOrder ;
   
 次のクエリでは、`EXCEPT` 演算子の左のクエリにあって、右のクエリにない個別の値が返されます。 テーブルは、前の例と逆になります。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -149,9 +149,9 @@ FROM Production.Product ;
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`INTERSECT` および `EXCEPT` の結果と比較するため、`FactInternetSales` テーブルからすべての値を返します。  
+次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`FactInternetSales` および `INTERSECT` の結果と比較するため、`EXCEPT` テーブルからすべての値を返します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -161,7 +161,7 @@ FROM FactInternetSales;
   
 次のクエリでは、`INTERSECT` 演算子の左右両方のクエリによって返される個別の値が返されます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -176,7 +176,7 @@ ORDER BY CustomerKey;
   
 次のクエリでは、`EXCEPT` 演算子の左のクエリにあって、右のクエリにない個別の値が返されます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   

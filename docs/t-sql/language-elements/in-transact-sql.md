@@ -23,15 +23,15 @@ ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99d179218e52801da593eaba6ef9ff5c7dde5ee0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 728d11420c1a91e581fa153020174f2d4339311f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075064"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007353"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   指定された値が、サブクエリまたは一覧内の値と一致するかどうかを判断します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68075064"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 test_expression [ NOT ] IN   
     ( subquery | expression [ ,...n ]  
     )   
@@ -126,7 +126,7 @@ Mary        Dempsey     Marketing Assistant
 ```  
   
 ### <a name="b-using-in-with-a-subquery"></a>B. IN とサブクエリを使用する  
- 次の例では、年間の販売ノルマが 250,000 ドルを超えるすべての販売員の ID が `SalesPerson` テーブルから検索され、次に、`Employee` テーブルから、`SELECT` サブクエリの結果に一致する `EmployeeID` の従業員の名前がすべて選択されます。  
+ 次の例では、年間の販売ノルマが 250,000 ドルを超えるすべての販売員の ID が `SalesPerson` テーブルから検索され、次に、`Employee` テーブルから、`EmployeeID` サブクエリの結果に一致する `SELECT` の従業員の名前がすべて選択されます。  
   
 ```  
 -- Uses AdventureWorks  
@@ -174,7 +174,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-in-and-not-in"></a>D. IN と NOT IN の使用  
- 次の例では、`DimSalesReason` テーブルの `SalesReasonKey` 値と一致する `FactInternetSales` テーブルのすべてのエントリを検出します。  
+ 次の例では、`FactInternetSales` テーブルの `SalesReasonKey` 値と一致する `DimSalesReason` テーブルのすべてのエントリを検出します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -184,7 +184,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- 次の例では、`DimSalesReason` テーブルの `SalesReasonKey` 値と一致しない `FactInternetSalesReason` テーブルのすべてのエントリを検出します。  
+ 次の例では、`FactInternetSalesReason` テーブルの `SalesReasonKey` 値と一致しない `DimSalesReason` テーブルのすべてのエントリを検出します。  
   
 ```  
 -- Uses AdventureWorks  

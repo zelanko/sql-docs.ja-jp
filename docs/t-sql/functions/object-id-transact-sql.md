@@ -26,15 +26,15 @@ ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2191fbd39cea24142b866f0acc9a27717896dab9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c926d7ecebea11ea054b2a63ddb1e7b62d9cb84f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914862"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010863"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   スキーマ スコープ オブジェクトのデータベース オブジェクト ID 番号を返します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67914862"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]   
   object_name' [ ,'object_type' ] )  
 ```  
@@ -55,7 +55,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  使用するオブジェクトです。 *object_name* は **varchar** または **nvarchar** です。 場合 *object_name* は **varchar**, に暗黙的に変換されます **nvarchar** です。 データベース名とスキーマ名の指定は省略可能です。  
   
  **'** *object_type* **'**  
- スキーマ スコープのオブジェクトの種類です。 *object_type* は **varchar** または **nvarchar** です。 場合 *object_type* は **varchar**, に暗黙的に変換されます **nvarchar** です。 オブジェクトの種類の一覧については、「[sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」 の **type** 列を参照してください。  
+ スキーマ スコープのオブジェクトの種類です。 *object_type* は **varchar** または **nvarchar** です。 場合 *object_type* は **varchar**, に暗黙的に変換されます **nvarchar** です。 オブジェクトの種類の一覧については、「**sys.objects &#40;Transact-SQL&#41;** 」 の [type](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 列を参照してください。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -77,7 +77,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-object-id-for-a-specified-object"></a>A. 指定したオブジェクトのオブジェクト ID を返す  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Production.WorkOrder` テーブルのオブジェクト ID を返します。  
+ 次の例では、`Production.WorkOrder` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルのオブジェクト ID を返します。  
   
 ```  
 USE master;  
@@ -98,7 +98,7 @@ GO
 ```  
   
 ### <a name="c-using-object_id-to-specify-the-value-of-a-system-function-parameter"></a>C. OBJECT_ID を使用して、システム関数パラメーターの値を指定する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内にある `Person.Address` テーブルのすべてのインデックスとパーティションについて、[sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) 関数を使用して情報を返しています。  
+ 次の例では、`Person.Address` データベース内にある [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルのすべてのインデックスとパーティションについて、[sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) 関数を使用して情報を返しています。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数 DB_ID および OBJECT_ID を使ってパラメーター値を返すときには、有効な ID が返されることを常に確認してください。 存在しない場合やスペルが正しくない場合など、データベースまたはオブジェクト名が見つからない場合、両方の関数が NULL を返します。 **sys.dm_db_index_operational_stats** 関数では、NULL 値はすべてのデータベースまたはすべてのオブジェクトを指定するワイルドカード値として解釈されます。 これは、意図しない操作である可能性があるため、このセクションの例では、データベースおよびオブジェクト ID を確認する安全な方法を示します。  
@@ -126,7 +126,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-returning-the-object-id-for-a-specified-object"></a>D. 指定したオブジェクトのオブジェクト ID を返す  
- 次の例では、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] データベース内の `FactFinance` テーブルのオブジェクト ID を返します。  
+ 次の例では、`FactFinance` データベース内の [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] テーブルのオブジェクト ID を返します。  
   
 ```  
 SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  

@@ -23,15 +23,15 @@ ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d835e68c767866a130ebb62c26fd315f5448416e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9b8340e655cc46a856995c0baa3c3cad4036f6e2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947763"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004027"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   テスト範囲を指定します。  
   
@@ -39,13 +39,13 @@ ms.locfileid: "67947763"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 test_expression [ NOT ] BETWEEN begin_expression AND end_expression  
 ```  
   
 ## <a name="arguments"></a>引数  
  *test_expression*  
- *begin_expression* と *end_expression* で定義した範囲内でテストする[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *test_expression* のデータ型は、*begin_expression* および *end_expression* の両方と同じにする必要があります。  
+ [begin_expression](../../t-sql/language-elements/expressions-transact-sql.md) と *end_expression* で定義した範囲内でテストする*式*を指定します。 *test_expression* のデータ型は、*begin_expression* および *end_expression* の両方と同じにする必要があります。  
   
  NOT  
  述語の結果を否定することを指定します。  
@@ -63,9 +63,9 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
  **Boolean**  
   
 ## <a name="result-value"></a>結果の値  
- *test_expression* の値が *begin_expression* の値以上で *end_expression* の値以下の場合、BETWEEN は **TRUE** を返します。  
+ **test_expression** の値が *begin_expression* の値以上で *end_expression* の値以下の場合、BETWEEN は *TRUE* を返します。  
   
- *test_expression* の値が *begin_expression* の値より小さく *end_expression* の値より大きい場合、NOT BETWEEN は **TRUE** を返します。  
+ **test_expression** の値が *begin_expression* の値より小さく *end_expression* の値より大きい場合、NOT BETWEEN は *TRUE* を返します。  
   
 ## <a name="remarks"></a>解説  
  両端を除いた範囲を指定するには、より大きいことを表す演算子 (>) と、より小さいことを表す演算子 (<) を使用します。 BETWEEN または NOT BETWEEN の述語に対する入力が NULL の場合、結果は UNKNOWN になります。  
@@ -178,7 +178,7 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  4           2002-01-05 00:00:00.000  
  ```  
  
- クエリ内の日付値と `RateChangeDate` 列の **datetime** 値は、時刻部分なしで日付が指定されているため、このクエリは予測される行を取得します。 時刻部分は、指定されていなければ、既定で午前 12 時になります。 時刻部分として 2002 年 1 月 5 日の午前 12 時よりも後の値が格納されている行は、 2002-01-05 は範囲外になるため、このクエリでは返されません。  
+ クエリ内の日付値と **列の**datetime`RateChangeDate` 値は、時刻部分なしで日付が指定されているため、このクエリは予測される行を取得します。 時刻部分は、指定されていなければ、既定で午前 12 時になります。 時刻部分として 2002 年 1 月 5 日の午前 12 時よりも後の値が格納されている行は、 2002-01-05 は範囲外になるため、このクエリでは返されません。  
   
   
 ## <a name="see-also"></a>参照  

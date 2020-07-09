@@ -20,18 +20,18 @@ helpviewer_keywords:
 - number of group items
 - COUNT function [Transact-SQL]
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e0c4ebccf102051d3144ca8a9955bfa0f1aef1ee
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026493"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011498"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数は、グループ内で見つかった項目数を返します。 `COUNT` は [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) 関数と同じように動作します。 これらの関数の違いは、戻り値のデータ型のみです。 `COUNT` は常に **int** データ型の値を返します。 `COUNT_BIG` は常に **bigint** データ型の値を返します。
   
@@ -39,7 +39,7 @@ ms.locfileid: "68026493"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 
 -- Aggregation Function Syntax  
 COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )  
@@ -56,7 +56,7 @@ DISTINCT
 `COUNT` で一意の NULL ではない値の数を返すことを指定します。
   
 *式 (expression)*  
-**image**、**ntext**、**text** を除く、任意の型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 `COUNT` は、式の集計関数またはサブクエリをサポートしていません。
+[image](../../t-sql/language-elements/expressions-transact-sql.md)、**ntext**、**text** を除く、任意の型の**式**です。 `COUNT` は、式の集計関数またはサブクエリをサポートしていません。
   
 \*  
 `COUNT` ですべての行をカウントし、返すテーブルの合計行数を決定することを指定します。 `COUNT(*)` はパラメーターを受け取らず、DISTINCT の使用をサポートしていません。 `COUNT(*)` では、この関数の定義上、特定の列についての情報は使用されないため、*expression* パラメーターは必要ありません。 `COUNT(*)` は、指定されたテーブル内の行数を返し、重複する行を保持します。 各行は 1 行としてカウントされ、 これには NULL 値を保持している行も含まれます。

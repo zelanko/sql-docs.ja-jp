@@ -20,15 +20,15 @@ ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2ff6cc86bb2b8df43ccf47beb144190567492fc
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ce5cd6a457608671ad359ab4bc81423f4441ecbc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634942"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005022"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行する条件を設定します。 *Boolean_expression* が TRUE に評価された場合、*Boolean_expression* に続く [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント (*sql_statement*) が実行されます。 オプションの ELSE キーワードは、*Boolean_expression* が FALSE または NULL と評価される場合に、代わりに実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。  
   

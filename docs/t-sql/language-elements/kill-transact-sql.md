@@ -34,15 +34,15 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0eca253ab85302555b84e35a3118b1e8a0873402
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981925"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007347"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 セッション ID または作業単位 (UOW) に基づいてユーザーのプロセスを終了します。 指定したセッション ID または UOW に元に戻す作業が多く含まれている場合、KILL ステートメントは、完了するまで時間がかかる可能性があります。 特に、プロセスに長いトランザクションのロールバックが含まれている場合、このプロセスは完了するまで時間がかかります。  
   
@@ -78,7 +78,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 _UOW_  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
 分散トランザクションの作業単位 ID (UOW) を指定します。 _UOW_ は、sys.dm_tran_locks 動的管理ビューの request_owner_guid column から取得できる GUID です。 _UOW_ は、エラー ログや MS DTC モニターからも取得できます。 分散トランザクションの監視の詳細については、MS DTC のドキュメントを参照してください。  
   
