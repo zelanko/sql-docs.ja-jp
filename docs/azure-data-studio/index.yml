@@ -1,0 +1,77 @@
+### YamlMime:Landing
+title: Azure Data Studio
+summary: Azure Data Studio を使用して、SQL Server、Azure SQL Database、PostgreSQL、Jupyter Notebook などを実行する方法について説明します。
+metadata:
+  title: Azure Data Studio
+  summary: Azure Data Studio を使用して、SQL Server、Azure SQL Database、PostgreSQL、Jupyter Notebook などを実行する方法について説明します。
+  ms.prod: sql
+  ms.technology: azure-data-studio
+  ms.topic: landing-page
+  author: markingmyname
+  ms.author: maghan
+  ms.date: 05/09/2020
+  ms.openlocfilehash: b5020185efafd9e166c8d3dd627ee61a955a0d27
+  ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84112334"
+landingContent:
+- title: Azure Data Studio について
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure Data Studio とは
+      url: what-is.md
+  - linkListType: download
+    links:
+    - text: Azure Data Studio のダウンロード
+      url: download-azure-data-studio.md
+    - text: Azure Data Studio のリリース ノート
+      url: release-notes-azure-data-studio.md
+- title: クイックスタート
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: SQL Server に対する接続およびクエリ
+      url: quickstart-sql-server.md
+    - text: Azure SQL データベースに対する接続およびクエリ
+      url: quickstart-sql-database.md
+    - text: Azure SQL データ ウェアハウスのデータに対する接続およびクエリ
+      url: quickstart-sql-dw.md
+    - text: PostgreSQL のデータに対する接続およびクエリ
+      url: quickstart-postgres.md
+- title: Azure Data Studio の機能
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Kerberos を有効にする
+      url: enable-kerberos.md
+    - text: Azure Data Studio の分析情報ウィジェットを使用してサーバーとデータベースを管理する
+      url: insight-widgets.md
+    - text: ユーザーとワークスペースの設定を変更する
+      url: settings.md
+- title: ノートブック
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Azure Data Studio のノートブック
+      url: notebooks-guidance.md
+    - text: SQL Kernel の使用方法
+      url: notebooks-tutorial-sql-kernel.md
+    - text: Azure Data Studio でノートブックを管理する方法
+      url: notebooks-manage-sql-server.md
+    - text: Azure Data Studio の Kqlmagic 拡張機能
+      url: notebooks-kqlmagic.md
+- title: 拡張機能
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Azure Data Studio の機能の拡張
+      url: extensions.md
+    - text: Azure Data Studio 拡張機能を作成することで機能を拡張する
+      url: extension-authoring.md
+    - text: PostgreSQL の拡張機能
+      url: postgres-extension.md
+    - text: PowerShell エディターのサポート
+      url: powershell-extension.md

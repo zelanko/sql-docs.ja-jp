@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d94799898517b2d75ce6a1add308f0831b112ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b327105398388615aa507ceaf30734347fbf2683
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68132817"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882592"
 ---
 # <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ローカル トランザクションがアクティブ状態のときにリモート ストアド プロシージャを実行した場合、[!INCLUDE[tsql](../../includes/tsql-md.md)] 分散トランザクション コーディネーター (MS DTC) によって管理される [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクションを開始するように指定します。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68132817"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SET REMOTE_PROC_TRANSACTIONS { ON | OFF }   
 ```  
@@ -60,7 +60,7 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
   
  REMOTE_PROC_TRANSACTIONS が OFF の場合、ローカル トランザクションの一部としてリモート ストアド プロシージャは呼び出されません。 リモート ストアド プロシージャによる変更は、ストアド プロシージャの完了時にコミットまたはロールバックされます。 リモート ストアド プロシージャを呼び出した接続によって実行される後続の COMMIT TRANSACTION または ROLLBACK TRANSACTION ステートメントは、ストアド プロシージャによる処理に影響を与えません。  
   
- REMOTE_PROC_TRANSACTIONS オプションは互換性のためのオプションであり、**sp_addserver** でリモート サーバーとして定義された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対してリモート ストアド プロシージャを呼び出す場合にのみ、影響を及ぼします。 このオプションは、インスタンス上でストアド プロシージャを実行する分散クエリには適用されません。このインスタンスは、**sp_addlinkedserver** でリンク サーバーとして定義されたインスタンスです。  
+ REMOTE_PROC_TRANSACTIONS オプションは互換性のためのオプションであり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_addserver**でリモート サーバーとして定義された** のインスタンスに対してリモート ストアド プロシージャを呼び出す場合にのみ、影響を及ぼします。 このオプションは、インスタンス上でストアド プロシージャを実行する分散クエリには適用されません。このインスタンスは、**sp_addlinkedserver** でリンク サーバーとして定義されたインスタンスです。  
   
  SET REMOTE_PROC_TRANSACTIONS は、解析時ではなく実行時に設定されます。  
   

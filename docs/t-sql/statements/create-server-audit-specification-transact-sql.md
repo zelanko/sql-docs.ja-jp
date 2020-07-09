@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6060fdf1819750e0ec0faa00d0e82ab8f76fa52c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 54382ecc642f68570c4d4ffcb4156b32232da192
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77004659"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881952"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 機能を使用して、サーバー監査仕様オブジェクトを作成します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "77004659"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE SERVER AUDIT SPECIFICATION audit_specification_name  
 FOR SERVER AUDIT audit_name  
@@ -67,7 +67,7 @@ FOR SERVER AUDIT audit_name
  サーバー監査仕様の作成後は、CONTROL SERVER 権限または ALTER ANY SERVER AUDIT 権限を持つプリンシパル、sysadmin アカウント、またはその監査への明示的なアクセス権を持つプリンシパルがその仕様を表示できます。  
   
 ## <a name="examples"></a>例  
- 次の例では、失敗したログインを監査する `HIPAA_Audit_Specification` というサーバー監査仕様を、`HIPAA_Audit` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査に対して作成します。  
+ 次の例では、失敗したログインを監査する `HIPAA_Audit_Specification` というサーバー監査仕様を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という `HIPAA_Audit` 監査に対して作成します。  
   
 ```  
 CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  

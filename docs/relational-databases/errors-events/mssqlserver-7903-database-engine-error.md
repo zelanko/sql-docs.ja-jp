@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 991a86df-42cd-435e-85b3-f42e4cb13039
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3c3444c213d71f9062f1456471db5d71ba9e842b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0d07630414760e8d216365b3f836a24381c99c1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951512"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85793163"
 ---
 # <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|7903|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_ORPHANED_FILE|  
-|メッセージ テキスト|テーブル エラー : 孤立したファイル 'FILE' が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、列 ID C_ID の FileStream ディレクトリに見つかりました。|  
+|メッセージ テキスト|テーブル エラー:孤立したファイル 'FILE' が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、列 ID C_ID の Filestream ディレクトリに見つかりました。|  
   
 ## <a name="explanation"></a>説明  
 FILESTREAM 列ディレクトリ内で FILESTREAM ファイルが検出されましたが、パーティション内の対応する列値がありません。  

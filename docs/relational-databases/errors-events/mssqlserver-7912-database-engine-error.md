@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 8e6157c2-7e84-49f2-965a-c7426c2b23fa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: de9fed7a752c07eccf55c25442ed30aecef8ca9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 356046b073073dea8ff27d99850cd04de3edae8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951343"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85793118"
 ---
 # <a name="mssqlserver_7912"></a>MSSQLSERVER_7912
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|7912|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_REPAIR_EXTENT_ALLOCATED|  
-|メッセージ テキスト|修復: エクステント P_ID が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) に割り当てられました。|  
+|メッセージ テキスト|修復:エクステント P_ID が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) に割り当てられました。|  
   
 ## <a name="explanation"></a>説明  
 これは、REPAIR からの情報メッセージであり、指定のオブジェクトにエクステントが割り当てられたことを示しています。  

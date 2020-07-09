@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: abbd4cd516985dcebd28a5fd2fa28e9d83a413b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ee30e1ce318276d9cf5bd7af3d13e291bfa2ea06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907778"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781660"
 ---
 # <a name="monitor-data-tier-applications"></a>データ層アプリケーションの監視
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   データ層アプリケーション (DAC) は、システム ビューおよびシステム テーブルと共に **(SSMS) で** ユーティリティ エクスプローラー **および** オブジェクト エクスプローラー [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] から監視できます。 さらに、DAC に含まれるデータベース内のオブジェクトもすべて、データベースと [!INCLUDE[ssDE](../../includes/ssde-md.md)] の標準的な監視方法を使用して監視できます。  
   
 ## <a name="before-you-begin"></a>はじめに  

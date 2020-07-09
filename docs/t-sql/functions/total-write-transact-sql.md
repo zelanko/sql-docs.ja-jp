@@ -19,17 +19,17 @@ helpviewer_keywords:
 - disks [SQL Server], number of disk writes
 - total write [SQL Server]
 ms.assetid: cd528126-51ee-4aa4-a21f-f32ce5c80fac
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 295dbd375b099227fb29333a3af925649b1fb88e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 0464eec31fb138fd58f2e3c2a1efd09e2aafc254
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68098920"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858553"
 ---
 # <a name="x40x40total_write-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の前回の起動以降に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で行われたディスクへの書き込み数を返します。  
   

@@ -2,7 +2,7 @@
 title: トランザクション レプリケーションでエラーを見つける
 description: トランザクション レプリケーションでエラーを検索して特定する方法と、レプリケーションに関する問題に対応するためのトラブルシューティング方法について説明します。
 ms.custom: seo-lt-2019
-ms.date: 04/27/2018
+ms.date: 07/01/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -12,15 +12,15 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9a079838d343ba8de93e270d01d704eb32219ee9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7c818e48c916a8ad3da7dfda7eaad6230c16ebd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286991"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882279"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>トラブルシューティング ツール:トラブルシューティング ツール: SQL Server トランザクション レプリケーション エラーを検出する 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 トランザクション レプリケーションがどのように動作するのかを基本的に理解していないと、レプリケーション エラーのトラブルシューティングはフラストレーションを感じることがあります。 パブリケーション作成の最初のステップは、スナップショット エージェントでスナップショットを作成し、スナップショット フォルダーにそれを保存することです。 次に、ディストリビューション エージェントがサブスクライバーにスナップショットを適用します。 
 
@@ -77,8 +77,10 @@ ms.locfileid: "76286991"
 
     ![アクセス拒否のスナップショット エージェント エラー](media/troubleshooting-tran-repl-errors/snapshot-access-denied.png)
 
-        The replication agent had encountered an exception.
-        Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```console
+    The replication agent had encountered an exception.
+    Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```
 
 スナップショット フォルダーに Windows のアクセス許可が正しく構成されていない場合は、スナップショット エージェントに "アクセスが拒否されました" エラーが表示されます。 スナップショットが格納されているフォルダーへのアクセス許可を確認し、スナップショット エージェントの実行に使用しているアカウントに共有にアクセスするためのアクセス許可があることを確認する必要があります。  
 
@@ -108,10 +110,12 @@ ms.locfileid: "76286991"
     
     ![ログ リーダー エージェントのエラーの詳細](media/troubleshooting-tran-repl-errors/log-reader-error.png)
 
-       Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
-       The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
-       Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
-       Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```console
+    Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
+    The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
+    Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
+    Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```
 
 6. エラーは、通常、パブリッシャー データベースの所有者が正しく設定されていないときに発生します。 これは、データベースが復元されるときに発生することがあります。 これを確認するには、次のようにします。
 
@@ -127,7 +131,7 @@ ms.locfileid: "76286991"
 
     ```sql
     -- set the owner of the database to 'sa' or a specific user account, without the brackets. 
-    EXEC sp_changedbowner '<useraccount>'
+    EXECUTE sp_changedbowner '<useraccount>'
     -- example for sa: exec sp_changedbowner 'sa'
     -- example for user account: exec sp_changedbowner 'sqlrepro\administrator' 
     ```
@@ -158,9 +162,11 @@ ms.locfileid: "76286991"
 2. **[ディストリビューターからサブスクライバーまで]** 履歴ダイアログ ボックスが開き、エージェントで発生しているエラーの内容を明確にします。 
 
      ![ディストリビューション エージェントのエラーの詳細](media/troubleshooting-tran-repl-errors/dist-history-error.png)
-    
-        Error messages:
-        Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+
+    ```console
+    Error messages:
+    Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+    ```
 
 3. このエラーは、ディストリビューション エージェントが再試行していることを示します。 詳細情報を探すには、ディストリビューション エージェントのジョブ履歴を確認します。 
 
@@ -175,9 +181,11 @@ ms.locfileid: "76286991"
 5. いずれかのエラー エントリを選択し、ウィンドウの下部にエラー テキストを表示します。  
 
     ![ディストリビューション エージェントのパスワードが間違っていることを示すエラー テキスト](media/troubleshooting-tran-repl-errors/dist-pw-wrong.png)
-    
-        Message:
-        Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+
+    ```console
+    Message:
+    Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+    ```
 
 6. このエラーは、ディストリビューション エージェントで使用されたパスワードが正しくないことを示しています。 これを解決するには次のようにします。
 
@@ -194,11 +202,13 @@ ms.locfileid: "76286991"
     **[レプリケーション モニター]** でサブスクリプションを右クリックして **[詳細表示]** を選択し、 **[ディストリビューターからサブスクライバーまで]** の履歴を開きます。 ここでは、異なるエラーが表示されるようになります。 
 
     ![ディストリビューション エージェントが接続できないことを示すエラー](media/troubleshooting-tran-repl-errors/dist-agent-cant-connect.png)
-           
-        Connecting to Subscriber 'NODE2\SQL2016'        
-        Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
-        Number:  18456
-        Message: Login failed for user 'NODE2\repl_distribution'.
+
+    ```console
+    Connecting to Subscriber 'NODE2\SQL2016'        
+    Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
+    Number:  18456
+    Message: Login failed for user 'NODE2\repl_distribution'.
+    ```
 
 8. このエラーは、ユーザー **NODE2\repl_distribution** のログインが失敗したため、ディストリビューション エージェントがサブスクライバーに接続できなかったことを示しています。 さらに詳しく調べるには、サブスクライバーに接続して、オブジェクト エクスプローラーで **[管理]** ノードの下の*現在の* SQL Server エラー ログを開きます。 
 
@@ -234,8 +244,10 @@ ms.locfileid: "76286991"
 
 1. **[コマンド]** ボックスで新しい行を開始し、次のテキストを入力して、 **[OK]** を選択します。 
 
-       -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
-    
+    ```console
+    -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
+    ```
+
     必要に応じて、場所と詳細レベルを変更できます。
 
     ![ジョブ ステップのプロパティの詳細出力](media/troubleshooting-tran-repl-errors/verbose.png)

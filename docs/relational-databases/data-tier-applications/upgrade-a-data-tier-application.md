@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7030f40419850454e90978168e72846331b5e865
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed1b1698fb945d92fce7cb2a0d1a9d0e2713afb5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288046"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781623"
 ---
 # <a name="upgrade-a-data-tier-application"></a>データ層アプリケーションのアップグレード
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   データ層アプリケーションのアップグレード ウィザードまたは Windows PowerShell スクリプトを使用すると、現在配置されているデータ層アプリケーション (DAC) のスキーマとプロパティを、新しいバージョンの DAC で定義されているスキーマとプロパティに一致するように変更できます。  
   
 -   **作業を開始する準備:** [DAC アップグレード オプションの選択](#ChoseDACUpgOptions)、[制限事項と制約事項](#LimitationsRestrictions)、[前提条件](#Prerequisites)、[セキュリティ](#Security)、[権限](#Permissions)  

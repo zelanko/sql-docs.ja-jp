@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b7ec7d6142bae4a6a0ad21a7f68413b257764e06
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 595b14797becec29232c4e09ab3bbc6b702cb898
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091007"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787456"
 ---
 # <a name="monitor-memory-usage"></a>メモリ使用率の監視
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを定期的に監視し、メモリ使用率が通常の範囲内であることを確認します。  
   
  メモリの少ない状況を監視するには、次のオブジェクト カウンターを使用します。  

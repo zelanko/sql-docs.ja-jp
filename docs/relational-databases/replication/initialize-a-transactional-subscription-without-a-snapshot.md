@@ -16,15 +16,15 @@ ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: df4463bf1ebfcc981c2828966c58e7fd0193f19f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 992a95f793611094971e894c6a974b959bce8ca7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287970"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790804"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>スナップショットを使用しないトランザクション サブスクリプションの初期化
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   トランザクション パブリケーションへのサブスクリプションは、既定ではスナップショットを使用して初期化されます。このスナップショットはスナップショット エージェントによって生成され、ディストリビューション エージェントによって適用されます。 初期データセットが大規模な場合など、状況によっては、別の方法でサブスクリプションを初期化するのが望ましい場合があります。 サブスクライバーを初期化する他の方法としては、以下のものがあります。  
   
 -   バックアップを指定する方法。 サブスクライバー上でバックアップを復元してから、ディストリビューション エージェントにより、必要なレプリケーション メタデータとシステム プロシージャがコピーされます。 バックアップを使用した初期化は、サブスクライバーにデータを配信する最も高速な方法であり便利です。バックアップを使用した初期化をパブリケーションで有効にした後で取得したバックアップであれば、どのバックアップでも使用できます。  

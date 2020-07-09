@@ -11,16 +11,16 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4065dd97c2109a30c90f8de01c50c11894a91f68
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 7b32ac9e1d88953cd8c8fccf3e010d01d5a6bcc5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783498"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>クイック スタート:SQL Server の拡張イベント
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 拡張イベントは、SQL Server に関する問題の監視とトラブルシューティングを行うために必要なデータを収集できるようにする、軽量なパフォーマンス監視システムです。 拡張イベントのアーキテクチャについて詳しくは、「[拡張イベントの概要](extended-events.md)」をご覧ください。  この記事は、拡張イベントを初めて使用する SQL 開発者および数分でイベント セッションを作成したい SQL 開発者を対象としています。 拡張イベントを使用すると、SQL システムと自身のアプリケーションの内部処理に関する詳細を確認できます。 拡張イベント セッションを作成するときに、システムを以下のことを指示します。
 

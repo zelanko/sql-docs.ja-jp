@@ -12,15 +12,15 @@ ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c56cc6335bfb30d6edd82c2d4456603df1bab9a7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c62caf73029c60d6a683ca36333e14518de450c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68125147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790873"
 ---
 # <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   TM: Rollback Tran Completed イベント クラスは、ROLLBACK TRANSACTION 要求が完了したことを示します。 要求は、トランザクション管理のインターフェイスを使用してクライアントから送信されます。 EventSubClass 列は、現在のトランザクションがロールバックされた後に新しいトランザクションが開始されるかどうかを示します。  
   
 ## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>TM: Rollback Tran Completed イベント クラスのデータ列  

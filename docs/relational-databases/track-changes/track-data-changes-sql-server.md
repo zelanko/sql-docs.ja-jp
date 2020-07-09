@@ -20,15 +20,15 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94e1353d8fb3d49a71b98e53f6ec92a6db469e2b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095426"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786074"
 ---
 # <a name="track-data-changes-sql-server"></a>データ変更の追跡 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースのデータに対する変更を追跡する [変更データ キャプチャ](#Capture) および [変更の追跡](#Tracking)という 2 つの機能が用意されています。 これらの機能では、データベース内のユーザー テーブルに対して行われた DML の変更 (挿入操作、更新操作、および削除操作) をアプリケーションで特定できます。 変更データ キャプチャと変更の追跡は、同じデータベースに対して有効にすることができます。特別な配慮は必要ありません。 変更データ キャプチャと変更の追跡をサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションについては、「 [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。 変更の追跡は [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]でサポートされています。 変更データ キャプチャは、SQL Server および Azure SQL Database Managed Instance でのみサポートされています。
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>変更データ キャプチャまたは変更の追跡を使用する利点  

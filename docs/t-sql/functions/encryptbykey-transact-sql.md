@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 486a4f9e3a74bdcea59a92919fce285395c75eba
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 918890142acb736976d642161e2e7cc1f54e3533
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636329"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784589"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   対称キーを使用してデータを暗号化します。  
   
@@ -100,7 +100,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. 対称キーで文字列を暗号化する  
  次の例では、`Employee` テーブルに列を追加した後、`NationalIDNumber` 列に格納された社会保障番号の値を暗号化します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -123,7 +123,7 @@ GO
   
 ### <a name="b-encrypting-a-record-together-with-an-authentication-value"></a>B. レコードを認証値と共に暗号化する  
   
-```  
+```sql 
 USE AdventureWorks2012;  
   
 -- Create a column in which to store the encrypted data.  
