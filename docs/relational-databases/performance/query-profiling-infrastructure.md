@@ -17,15 +17,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: add476168eabf5255bb4cbdce59bd763d05faf4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77705907"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719553"
 ---
 # <a name="query-profiling-infrastructure"></a>クエリ プロファイリング インフラストラクチャ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] では、クエリ実行プランのランタイム情報にアクセスする機能を提供しています。 パフォーマンスの問題が発生したときに最も重要なアクションの 1 つは、実行中のワークロードとリソース使用量が促進される仕組みを正確に把握することです。 そのためには、[実際の実行プラン](../../relational-databases/performance/display-an-actual-execution-plan.md)にアクセスすることが重要です。
 
