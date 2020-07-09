@@ -19,18 +19,18 @@ helpviewer_keywords:
 - last time statistics updated
 - stats update date
 ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d6e0b563d7c75a46c8fd8ea0731c046d3159d94
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 22055e7e653ffd9be74ddc7c3c381af5de44f870
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843327"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85996094"
 ---
 # <a name="stats_date-transact-sql"></a>STATS_DATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   テーブルまたはインデックス付きビューの統計の最終更新日を返します。  
   
@@ -59,7 +59,7 @@ STATS_DATE ( object_id , stats_id )
  
  統計の更新日付は、メタデータではなく[統計 BLOB オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)に[ヒストグラム](../../relational-databases/statistics/statistics.md#histogram)および[密度ベクトル](../../relational-databases/statistics/statistics.md#density)と共に格納されます。 統計データを生成するためのデータが読み取られていない場合、統計 BLOB は作成されず、日付は使用できません。 これは、述語が行を返さないフィルター選択された統計情報や、新しい空のテーブルの場合です。
  
- 統計がインデックスに対応する場合、[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) カタログ ビューの *stats_id* の値は、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューの *index_id* の値と同一になります。
+ 統計がインデックスに対応する場合、*sys.stats* カタログ ビューの [stats_id](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) の値は、*sys.indexes* カタログ ビューの [index_id](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) の値と同一になります。
   
 ## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップか、テーブルまたはインデックス付きビューのメタデータを表示する権限が必要です。  
@@ -79,7 +79,7 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
- 統計がインデックスに対応する場合、[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) カタログ ビューの *stats_id* の値は、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューの *index_id* の値と同一になります。このため、次に示すクエリは上のクエリと同じ結果を返します。 統計がインデックスに対応しない場合、統計は sys.stats の結果には含まれますが、sys.indexes の結果には含まれません。  
+ 統計がインデックスに対応する場合、*sys.stats* カタログ ビューの [stats_id](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) の値は、*sys.indexes* カタログ ビューの [index_id](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) の値と同一になります。このため、次に示すクエリは上のクエリと同じ結果を返します。 統計がインデックスに対応しない場合、統計は sys.stats の結果には含まれますが、sys.indexes の結果には含まれません。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -140,7 +140,7 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
- 統計がインデックスに対応する場合、[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) カタログ ビューの *stats_id* の値は、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューの *index_id* の値と同一になります。このため、次に示すクエリは上のクエリと同じ結果を返します。 統計がインデックスに対応しない場合、統計は sys.stats の結果には含まれますが、sys.indexes の結果には含まれません。  
+ 統計がインデックスに対応する場合、*sys.stats* カタログ ビューの [stats_id](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) の値は、*sys.indexes* カタログ ビューの [index_id](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) の値と同一になります。このため、次に示すクエリは上のクエリと同じ結果を返します。 統計がインデックスに対応しない場合、統計は sys.stats の結果には含まれますが、sys.indexes の結果には含まれません。  
   
 ```sql  
 USE AdventureWorksPDW2012;  

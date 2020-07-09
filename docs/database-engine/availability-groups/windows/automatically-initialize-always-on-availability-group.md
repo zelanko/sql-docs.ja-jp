@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 38bbab7ea9ae6aa7ddd70ede2161988c01431573
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a563558f6b7d20dd4ca8d5f6573d1b16f598fa1f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254088"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900869"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>自動シード処理を使用して、Always On 可用性グループを初期化する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server 2016 には、可用性グループの自動シード処理が導入されています。 自動シード処理によって可用性グループを作成すると、グループの各データベースのセカンダリ レプリカが SQL Server で自動的に作成されます。 セカンダリ レプリカのバックアップと復元を手動で行う必要がありません。 自動シード処理を有効にするには、T-SQL を使用して可用性グループを作成するか、最新バージョンの SQL Server Management Studio を使用します。
 

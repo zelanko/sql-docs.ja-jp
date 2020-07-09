@@ -18,17 +18,17 @@ helpviewer_keywords:
 - viewing filegroup properties
 - displaying filegroup properties
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5563c65352713f3557e4c412607d1944f28f3a3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8804b058a851f6053f62ef8654f76edc5df3e980
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071434"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899014"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この関数は、指定した名前とファイル グループの値に対する、ファイル グループのプロパティ値を返します。  
   
@@ -42,7 +42,7 @@ FILEGROUPPROPERTY ( filegroup_name, property )
   
 ## <a name="arguments"></a>引数  
  *filegroup_name*  
-`FILEGROUPPROPERTY` によって名前付けされたプロパティ情報が返されるファイル グループの名前を表す、**sysname** 型の式を指定します。  
+**によって名前付けされたプロパティ情報が返されるファイル グループの名前を表す、** sysname`FILEGROUPPROPERTY` 型の式を指定します。  
   
  *property*  
 ファイル グループのプロパティの名前を返す **varchar(128)** 型の式を指定します。 *property* によって返される値は次のいずれかです。  
@@ -60,7 +60,7 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 *filegroup_name* は、**sys.filegroups** カタログ ビューの **name** 列に対応します。  
   
 ## <a name="examples"></a>例  
-この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内のプライマリ ファイル グループに対する `IsDefault` プロパティの設定値が返されます。  
+この例では、`IsDefault` データベース内のプライマリ ファイル グループに対する [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] プロパティの設定値が返されます。  
   
 ```  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bb3b19e67a4a85ef3f7a26d7ad792e7e39459302
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5749c942f5da62dee1cc1f4bb0345c6165bd649
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948037"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902210"
 ---
 # <a name="xml_schema_namespace"></a>xml_schema_namespace
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定された XML スキーマ コレクション内のすべてのスキーマまたは特定のスキーマを再構築します。 この関数は、 **xml** データ型のインスタンスを返します。  
   
@@ -55,7 +55,7 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
  **xml**  
   
 ## <a name="remarks"></a>解説  
- [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) または [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) を使用してデータベース内の XML スキーマ コンポーネントをインポートする場合、検証に使用されたスキーマの情報が保持されます。 したがって、再構築されたスキーマは、元のスキーマ ドキュメントとは構文的に同じにならない可能性があります。 特に、コメント、空白、注釈は失われ、暗黙的な型の情報が明示されます。 たとえば、\<xs:element name="e1" /> は \<xs:element name="e1" type="xs:anyType"/> になります。 また、名前空間プレフィックスは保持されません。  
+ [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) または [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) を使用してデータベース内の XML スキーマ コンポーネントをインポートする場合、検証に使用されたスキーマの情報が保持されます。 したがって、再構築されたスキーマは、元のスキーマ ドキュメントとは構文的に同じにならない可能性があります。 特に、コメント、空白、注釈は失われ、暗黙的な型の情報が明示されます。 たとえば、\<xs:element name="e1" /> を \<xs:element name="e1" type="xs:anyType"/> にします。 また、名前空間プレフィックスは保持されません。  
   
  名前空間のパラメーターを指定した場合、結果のスキーマ ドキュメントにはその名前空間内のすべてのスキーマ コンポーネントの定義が含まれます。それらのコンポーネントが異なるスキーマ ドキュメントまたは DDL のステップ、あるいはその両方に追加された場合であっても、同様です。  
   

@@ -21,16 +21,16 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: dbf87499f1bc5c23ae272daa393ef981a97e66d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72cba47c520749a2e78ae529d941b12ddcccf105
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892565"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900263"
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services のアップグレード
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   Analysis Services インスタンスを同じサーバー モードの SQL Server バージョンにアップグレードすると、「[Analysis Services の新機能](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)」で説明する、最新リリースで導入された機能を利用できます。  
   

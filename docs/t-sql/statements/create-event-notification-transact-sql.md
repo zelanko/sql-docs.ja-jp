@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f996ed5d086d263499214321c3f73bff39b805cd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67902814"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902277"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース イベントやサーバー イベントに関する情報を Service Broker サービスに送信するオブジェクトを作成します。 イベント通知は [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでのみ作成されます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67902814"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE EVENT NOTIFICATION event_notification_name   
 ON { SERVER | DATABASE | QUEUE queue_name }   
@@ -133,7 +133,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 >  これらの例をコピーして実行するには、この GUID をお使いのコンピューターおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの GUID に置き換える必要があります。 前述の「引数」セクションで説明したように、sys.databases カタログ ビューの service_broker_guid 列に対してクエリを実行することで **'** _broker\_instance\_specifier_ **'** を取得することができます。  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. サーバー スコープのイベント通知を作成する  
- 次の例では、[!INCLUDE[ssSB](../../includes/sssb-md.md)] を使用する対象サービスの設定で必要となるオブジェクトを作成します。 対象サービスでは、イベント通知専用の開始サービスのメッセージ型とコントラクトが参照されます。 作成後は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで `Object_Created` トレース イベントが発生するたびに通知を送信する対象サービスに対して、イベント通知が作成されます。  
+ 次の例では、[!INCLUDE[ssSB](../../includes/sssb-md.md)] を使用する対象サービスの設定で必要となるオブジェクトを作成します。 対象サービスでは、イベント通知専用の開始サービスのメッセージ型とコントラクトが参照されます。 作成後は、`Object_Created` インスタンスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トレース イベントが発生するたびに通知を送信する対象サービスに対して、イベント通知が作成されます。  
   
 ```sql  
 --Create a queue to receive messages.  
@@ -160,7 +160,7 @@ TO SERVICE 'NotifyService',
 ```  
   
 ### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>B. データベース スコープのイベント通知を作成する  
- 次の例では、前の例と同じターゲット サービスに対してイベント通知を作成します。 イベント通知は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースで `ALTER_TABLE` イベントが発生した後に行われます。  
+ 次の例では、前の例と同じターゲット サービスに対してイベント通知を作成します。 イベント通知は、`ALTER_TABLE` サンプル データベースで [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] イベントが発生した後に行われます。  
   
 ```sql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  

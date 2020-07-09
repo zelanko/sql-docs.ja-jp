@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 848ac8820ec5150c8c3fc058f77ffa4261ed8aa2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822677"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902366"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 可用性グループ ダッシュボードの使用 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   データベース管理者は Always On 可用性グループ ダッシュボードを使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の可用性グループとその可用性レプリカおよび可用性データベースの正常性をひとめで確認できるビューを取得します。 可用性グループ ダッシュボードの一般的な用途をいくつか以下に示します。  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 287e6cd2fd4f1004aaa79a69ec7388eb3b695a68
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251262"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898065"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性グループのデータベース レベルの正常性検出フェールオーバー オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 SQL Server 2016 以降、Always On 可用性グループを構成するときに、データベース レベルの正常性検出 (DB_FAILOVER) オプションを使用できます。 何らかの問題が発生し、データベースがオンライン状態でなくなると、このデータベース レベルの正常性検出によって検知され、可用性グループの自動フェールオーバーがトリガーされます。
 
 可用性グループのデータベース レベルの正常性検出は、可用性グループ全体に対して有効になるため、データベース レベルの正常性検出では可用性グループ内のすべてのデータベースが監視されます。 可用性グループ内の特定のデータベースを選択して有効にすることはできません。
