@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 0af6ff69-d75a-4c39-8da2-9bd0695277c6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b6f07d54fbc04d3ddd9ff6d0a25c2f940f0ca54
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f31350a9e8cc3751d79de7b4eefc4416e9291ac5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68103617"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780334"
 ---
 # <a name="mssqlserver_2537"></a>MSSQLSERVER_2537
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|2537|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_RECORD_CHECK_FAILED|  
-|メッセージ テキスト|テーブル エラー: オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE)、ページ P_ID、行 ROW_ID。 レコード チェック (CHECK_TEXT) が失敗しました。 値は VALUE1 および VALUE2 です。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE)、ページ P_ID、行 ROW_ID。 レコード チェック (CHECK_TEXT) が失敗しました。 値は VALUE1 および VALUE2 です。|  
   
 ## <a name="explanation"></a>説明  
 行 ROW_ID (または行内の列) が、CHECK_TEXT に記述されているテストまたは条件をクリアできませんでした。  

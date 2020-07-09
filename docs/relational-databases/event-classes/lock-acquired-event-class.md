@@ -12,15 +12,15 @@ ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bde8e1552b13f165d928f1e9275512e22426f9f4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91899bddfc872487d29866c3c854563f22353827
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780177"
 ---
 # <a name="lockacquired-event-class"></a>Lock:Acquired イベント クラス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Lock:Acquired イベント クラスは、データ ページなどのリソースのロックの取得を示します。  
   
  Lock:Acquired イベント クラスおよび Lock:Released イベント クラスを使用すると、オブジェクトがロックされている時点、取得するロックの種類、およびロックが保持されていた期間を監視できます。 長時間ロックが保持されると、競合の問題が発生する原因となり、調査が必要になることがあります。 たとえば、アプリケーションでは、テーブルの行のロックを取得して、ユーザー入力を待機できます。 ユーザー入力は行われるまでに長時間かかることがあるので、ロックによって他のユーザーがブロックされることがあります。 この場合、アプリケーションは、必要なときにだけロックを要求し、ロックが取得されている場合はユーザー入力を要求しないように再設計する必要があります。  
