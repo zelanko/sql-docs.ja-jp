@@ -18,17 +18,17 @@ helpviewer_keywords:
 - column testing [SQL Server]
 - updated columns
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ae6e3b08b3a29afb9282d28f33ec9406ab418b2c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5f0eca52b39980b3b4f97276be3dcd2289a0e527
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75721927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732617"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数は、テーブルまたはビューの挿入または更新された列を示す **varbinary** ビット パターンを返します。 `COLUMNS_UPDATED` は [!INCLUDE[tsql](../../includes/tsql-md.md)] の INSERT または UPDATE トリガーの内部のどこでも使用でき、そのトリガーが特定の動作を実行すべきかどうかをテストすることができます。
   
@@ -52,7 +52,7 @@ COLUMNS_UPDATED ( )
   
 `COLUMNS_UPDATED` は、[!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT または UPDATE トリガーの内部のどこでも使用できます。
   
-INFORMATION_SCHEMA.COLUMNS ビューの ORDINAL_POSITION 列には、`COLUMNS_UPDATED` から返される列のビット パターンとの互換性がありません。 `COLUMNS_UPDATED` と互換性のあるビット パターンを取得するには、次の例に示すように、`INFORMATION_SCHEMA.COLUMNS` ビューに対してクエリを実行する際に、`COLUMNPROPERTY` システム関数の `ColumnID` プロパティを参照します。
+INFORMATION_SCHEMA.COLUMNS ビューの ORDINAL_POSITION 列には、`COLUMNS_UPDATED` から返される列のビット パターンとの互換性がありません。 `COLUMNS_UPDATED` と互換性のあるビット パターンを取得するには、次の例に示すように、`ColumnID` ビューに対してクエリを実行する際に、`COLUMNPROPERTY` システム関数の `INFORMATION_SCHEMA.COLUMNS` プロパティを参照します。
   
 ```sql
 SELECT TABLE_NAME, COLUMN_NAME,  
@@ -184,7 +184,7 @@ GO
 ```  
   
 ### <a name="b-using-columns_updated-to-test-more-than-eight-columns"></a>B. COLUMNS_UPDATED を使用して、9 列以上をテストする  
-最初の 8 つのテーブル列以外の列に影響を与える更新をテストするには、`SUBSTRING` 関数を使用して、`COLUMNS_UPDATED` から返された正しいビットをテストします。 この例では、`AdventureWorks2012.Person.Person` テーブルの列 `3`、`5`、および `9` に影響を与える更新をテストしています。
+最初の 8 つのテーブル列以外の列に影響を与える更新をテストするには、`SUBSTRING` 関数を使用して、`COLUMNS_UPDATED` から返された正しいビットをテストします。 この例では、`3` テーブルの列 `5`、`9`、および `AdventureWorks2012.Person.Person` に影響を与える更新をテストしています。
   
 ```sql
 USE AdventureWorks2012;  

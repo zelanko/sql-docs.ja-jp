@@ -13,15 +13,15 @@ ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b8b61a52420752c2409edfd4ed580a07a79d492d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c44303cdfde6549c908e024a199f7b4635b46c7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288289"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730237"
 ---
 # <a name="ltagentnamegt-agent-location"></a>&lt;AgentName&gt; エージェントの場所
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   マージ エージェント (マージ サブスクリプション用) とディストリビューション エージェント (トランザクション サブスクリプションおよびスナップショット サブスクリプション用) は、ディストリビューターまたはサブスクライバーで実行します。 エージェントをディストリビューターで実行するとサブスクリプションはプッシュ サブスクリプションとして参照され、サブスクライバーで実行するとプル サブスクリプションとして参照されます。 プッシュ サブスクリプションとプル サブスクリプションの詳細については、「[パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)」を参照してください。 ウィザードの手順で作成されたすべてのサブスクリプションは、選択した種類になります。 両方の種類のサブスクリプションを作成するには、ウィザードを 2 回実行する必要があります。  
   
 > [!NOTE]  

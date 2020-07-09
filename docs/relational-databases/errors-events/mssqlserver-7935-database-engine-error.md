@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 45ab21a3-024a-4523-9bd9-1175d01f9c8a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 818eb89fb0e8ae68486e7ecf9a16c7da99dfb2a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74945f8becd458df17ee4753d06288d43a158720
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987758"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726346"
 ---
 # <a name="mssqlserver_7935"></a>MSSQLSERVER_7935
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|7935|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_MISSING_COLUMN|  
-|メッセージ テキスト|テーブル エラー: FILESTREAM ディレクトリ ID F_ID は、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の列に存在しますが、その列はパーティションに存在しません。|  
+|メッセージ テキスト|テーブル エラー:FILESTREAM ディレクトリ ID F_ID は、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の列に存在しますが、その列はパーティションに存在しません。|  
   
 ## <a name="explanation"></a>説明  
 DBCC CHECKDB の実行中に、指定されたオブジェクト内の列に対応する FILESTREAM ディレクトリが検出されましたが、この列はパーティションの対応するメタデータでは検出されませんでした。  
