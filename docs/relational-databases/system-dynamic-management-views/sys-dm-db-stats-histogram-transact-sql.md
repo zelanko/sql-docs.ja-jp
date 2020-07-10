@@ -20,13 +20,15 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50b5ae0a00161b00c432f0ea88c1cd08c45b4219
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a9346aa6dbf98bbc827b90423f02b5027481f956
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011882"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196480"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 現在のデータベース内の指定されたデータベースオブジェクト (テーブルまたはインデックス付きビュー) の統計ヒストグラムを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 `DBCC SHOW_STATISTICS WITH HISTOGRAM` と似ています。
@@ -60,7 +62,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |distinct_range_rows |**bigint** |ヒストグラム区間内 (上限は除く) にある個別の列値を持つ行の予測数。 |
 |average_range_rows |**real** |上限を除く、ヒストグラムのステップ内で重複する列値を持つ行の平均数 ( `RANGE_ROWS / DISTINCT_RANGE_ROWS` の場合 `DISTINCT_RANGE_ROWS > 0` )。 |
   
- ## <a name="remarks"></a>コメント  
+ ## <a name="remarks"></a>解説  
  
  の resultset は `sys.dm_db_stats_histogram` 、と同様の情報を返し `DBCC SHOW_STATISTICS WITH HISTOGRAM` ます。また、、、およびも含まれ `object_id` `stats_id` `step_number` ます。
 
@@ -74,7 +76,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  次の図は、6 つの区間があるヒストグラムを示しています。 最初の上限境界値の左側にある領域が最初の区間です。  
   
- ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram")  
+ ![ヒストグラム](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "ヒストグラム")  
   
  ヒストグラムの各区間は、以下のように表されます。  
   
@@ -143,7 +145,7 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
     AND sh.range_high_key = CAST('Canada' AS CHAR(8));
 ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [DBCC SHOW_STATISTICS (Transact-sql)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [オブジェクト関連の動的管理ビューおよび関数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

@@ -12,15 +12,15 @@ ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e5f295637db0e138caf324e3126707b9e0ea774
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43b471634efc60a2beb4abd982b04437bdebb2af
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899506"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197114"
 ---
 # <a name="sysdm_pdw_dms_workers-transact-sql"></a>dm_pdw_dms_workers (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   DMS ステップを完了するすべてのワーカーに関する情報を保持します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67899506"
 |pdw_node_id|**int**|ワーカーが実行されているノード。|『 [Transact-sql&#41;&#40;dm_pdw_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)の node_id を参照してください。|  
 |distribution_id|**Int**|ワーカーが実行されているディストリビューション (存在する場合)。|『 [Transact-sql&#41;&#40;pdw_distributions](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)の distribution_id を参照してください。|  
 |型|**nvarchar(32)**|このエントリが表す DMS ワーカースレッドの種類。|' DIRECT_CONVERTER '、' DIRECT_READER '、' FILE_READER '、' HASH_CONVERTER '、' HASH_READER '、' ROUNDROBIN_CONVERTER '、' EXPORT_READER '、' EXTERNAL_READER '、' EXTERNAL_WRITER '、' PARALLEL_COPY_READER '、' REJECT_WRITER '、' WRITER '|  
-|status|**nvarchar(32)**|DMS ワーカーの状態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|状態|**nvarchar(32)**|DMS ワーカーの状態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|最後の1秒間に読み取りまたは書き込みのスループット。|0以上。 ワーカーが実行される前にクエリが取り消されたか失敗した場合は NULL です。|  
 |bytes_processed|**bigint**|このワーカーによって処理された合計バイト数。|0以上。 ワーカーが実行される前にクエリが取り消されたか失敗した場合は NULL です。|  
 |rows_processed|**bigint**|このワーカーに対して読み取りまたは書き込みが行った行の数。|0以上。 ワーカーが実行される前にクエリが取り消されたか失敗した場合は NULL です。|  
@@ -50,7 +50,7 @@ ms.locfileid: "67899506"
   
  このビューで保持される最大行数の詳細については、「[容量制限](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)」トピックの「メタデータ」セクションを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

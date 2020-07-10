@@ -12,15 +12,15 @@ ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 201af9001703bb8f1dfbdaf2c41151697b945df3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b5e9e05e65a7121f30bfc0fc296229e943a8cd9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68059403"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197385"
 ---
 # <a name="syspdw_nodes_columns-transact-sql"></a>pdw_nodes_columns (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   ユーザー定義テーブルとユーザー定義ビューの列を表示します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68059403"
 |system_type_id|**tinyint**|列のシステム型の ID。||  
 |user_type_id|**int**|ユーザーが定義した列の型の ID。||  
 |max_length|**smallint**|列の最大長 (バイト単位) です。|サポートされていない列の型には-1 (無効) が含まれています。|  
-|precision|**tinyint**|数値ベースの場合は、列の有効桁数です。それ以外の場合は、0 です。||  
+|精度|**tinyint**|数値ベースの場合は、列の有効桁数です。それ以外の場合は、0 です。||  
 |scale|**tinyint**|数値ベースの場合の列の小数点以下桁数それ以外の場合は0です。||  
 |collation_name|**sysname**|文字ベースの場合は、列の照合順序の名前です。それ以外の場合は、NULL です。||  
 |is_nullable|**bit**|1 = 列で NULL 値を使用できます。||  
@@ -51,12 +51,12 @@ ms.locfileid: "68059403"
 |rule_object_id|**int**|列にバインドされているスタンドアロンルールの ID。 <br />0 = スタンドアロンルールはありません。|常に 0 です。|  
 |is_sparse|**bit**|1 = 列はスパース列です。|常に 0 です。|  
 |is_column_set|**bit**|1 = 列は列セットです。|常に 0 です。|  
-|pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノードの一意識別子。|NOT NULL|  
+|pdw_node_id|**int**|ノードの一意識別子 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|NOT NULL|  
   
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
   

@@ -12,15 +12,15 @@ ms.assetid: 572b5187-9753-4063-adf8-65dea87d11f8
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7deddb57cdc02410fe161728f45190492ac18a16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12a3318f88a719ab70043e2685a475e14cf24fdc
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127549"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197396"
 ---
 # <a name="syspdw_distributions-transact-sql"></a>pdw_distributions (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   アプライアンス上の分布に関する情報を保持します。 アプライアンスのディストリビューションごとに1つの行が表示されます。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68127549"
 |name|**nvarchar(32)**|分散テーブルでサフィックスとして使用される、ディストリビューションに関連付けられた文字列識別子です。|文字列は、' a-z '、' a-z '、' 0-9 '、' _ '、'-' で構成されます。|  
 |position|**int**|ノード内の他のディストリビューションに対して、ノード内の分布の位置。|1ノードあたりのディストリビューションの数。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

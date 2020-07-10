@@ -12,18 +12,19 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d91fdabce5350614d504b7dfdf990e2dd54b8b48
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 78af01169c643acfc82f7a3db035ae32518695bd
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999125"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196870"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>pdw_nodes_tables (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   プリンシパルが所有しているか、プリンシパルが権限を許可されている、テーブルオブジェクトごとに1行の値を格納します。  
   
-|列名|データ型|説明|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |\<inherited columns>||このビューが継承する列の一覧については、「 [sys. オブジェクト](../system-catalog-views/sys-objects-transact-sql.md)」を参照してください。||  
 |lob_data_space_id|**int**||常に 0 です。|  
@@ -43,7 +44,7 @@ ms.locfileid: "85999125"
 |lock_escalation_desc|**nvarchar(60)**|Lock_escalation オプションの説明テキスト。|常にꞌ AUTO ꞌです。|  
 |pdw_node_id|**int**|ノードの一意識別子 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|NOT NULL|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

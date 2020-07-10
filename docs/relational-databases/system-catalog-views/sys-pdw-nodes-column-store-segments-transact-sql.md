@@ -13,16 +13,16 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bea8e0d51b2918d7280f4afdb8b9d02f6b757827
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc1e04718ea9db16d3b0c2a1cc59b14f906c6f31
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401672"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197193"
 ---
 # <a name="syspdw_nodes_column_store_segments-transact-sql"></a>pdw_nodes_column_store_segments (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 列ストアインデックスの列ごとに1行の値を格納します。
 
@@ -44,7 +44,7 @@ ms.locfileid: "74401672"
 | **max_data_id**             | **bigint** | 列セグメントの最大データ ID。                       |
 | **null_value**              | **bigint** | NULL を表すために使用される値。                               |
 | **on_disk_size**            | **bigint** | セグメントのサイズ (バイト単位)。                                    |
-| **pdw_node_id**             | **int**    | [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノードの一意識別子。 |
+| **pdw_node_id**             | **int**    | ノードの一意識別子 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 |
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -84,7 +84,7 @@ ORDER BY    table_nm
 
 **VIEW SERVER STATE** アクセス許可が必要です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  

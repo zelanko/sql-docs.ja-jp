@@ -12,17 +12,17 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e65d2212dea9f8d2bbe9aad1854a2b8cd904dd3
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399872"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197352"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>pdw_nodes_column_store_row_groups (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  では、管理者がで[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]システム管理を決定できるように、セグメント単位でクラスター化列ストアインデックス情報が提供されます。 **pdw_nodes_column_store_row_groups**には、物理的に格納された行の合計数 (削除済みとしてマークされている行を含む) の列と、削除済みとしてマークされた行の数の列があります。 削除された行の割合が高く、再構築する必要がある行グループを確認するには、 **pdw_nodes_column_store_row_groups**を使用します。  
+  では、管理者がでシステム管理を決定できるように、セグメント単位でクラスター化列ストアインデックス情報が提供され [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ます。 **pdw_nodes_column_store_row_groups**には、物理的に格納された行の合計数 (削除済みとしてマークされている行を含む) の列と、削除済みとしてマークされた行の数の列があります。 削除された行の割合が高く、再構築する必要がある行グループを確認するには、 **pdw_nodes_column_store_row_groups**を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -31,15 +31,15 @@ ms.locfileid: "74399872"
 |**partition_number**|**int**|行グループ*row_group_id*を保持するテーブルパーティションの ID。 *Partition_number*を使用して、この DMV を sys パーティションに参加させることができます。|  
 |**row_group_id**|**int**|この行グループの ID。 これは、パーティション内で一意です。|  
 |**dellta_store_hobt_id**|**bigint**|デルタ行グループの hobt_id で、行グループの種類がデルタではない場合は NULL。 デルタ行グループとは、新しいレコードを受け入れる読み取り/書き込み行グループのことです。 デルタ行グループの状態は**OPEN**です。 デルタ行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。|  
-|**state**|**tinyint**|State_description に関連付けられている ID 番号。<br /><br /> 1 = OPEN <br /><br /> 2 = CLOSED <br /><br /> 3 = 圧縮|  
+|**状態**|**tinyint**|State_description に関連付けられている ID 番号。<br /><br /> 1 = OPEN <br /><br /> 2 = CLOSED <br /><br /> 3 = 圧縮|  
 |**state_desccription**|**nvarchar(60)**|行グループの永続的な状態の説明。<br /><br /> OPEN-新しいレコードを受け入れる読み取り/書き込み行グループ。 開いている行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> CLOSED-組ムーバープロセスによってまだ圧縮されていない、いっぱいになっている行グループ。<br /><br /> 圧縮-格納され、圧縮された行グループ。|  
 |**total_rows**|**bigint**|行グループに物理的に格納されている行の合計。 削除されたものの、まだ保存されているものもあります。 行グループ内の行の最大数は 1048576 (16 進数 FFFFF) です。|  
 |**deleted_rows**|**bigint**|削除対象としてマークされている行グループに物理的に格納されている行の数。<br /><br /> デルタ行グループの場合は常に0です。|  
 |**size_in_bytes**|**int**|この行グループ内のすべてのページの合計サイズ (バイト単位)。 このサイズには、メタデータまたは共有辞書を格納するために必要なサイズは含まれていません。|  
-|**pdw_node_id**|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノードの一意の id。|  
+|**pdw_node_id**|**int**|ノードの一意の id [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|  
 |**distribution_id**|**int**|ディストリビューションの一意の id。|
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  クラスター化または非クラスター化列ストアインデックスを持つ各テーブルの列ストア行グループごとに1行の値を返します。  
   
  行グループに含まれる行の数と行グループのサイズを決定するには、 **pdw_nodes_column_store_row_groups**を使用します。  
@@ -80,7 +80,7 @@ AND CSRowGroups.index_id = NI.index_id
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
-次[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]の例では、クラスター化列ストアのパーティションごとの行と、開いている、閉じた、または圧縮された行グループに含まれる行の数をカウントします。  
+次の例では、 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] クラスター化列ストアのパーティションごとの行と、開いている、閉じた、または圧縮された行グループに含まれる行の数をカウントします。  
 
 ```
 SELECT
@@ -104,7 +104,7 @@ GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [Transact-sql&#41;&#40;列ストアインデックスの作成](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [pdw_nodes_column_store_segments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   

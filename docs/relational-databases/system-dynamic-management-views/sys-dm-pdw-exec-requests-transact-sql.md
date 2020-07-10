@@ -12,24 +12,24 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 62dfd50adf25d3e203c2bbf50c58579c65332606
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: a377c33424ae589fa796b6f382e936426ead006d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440809"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197065"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>dm_pdw_exec_requests (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   現在または最近アクティブになっているすべての要求に関する情報を保持 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] します。 要求/クエリごとに1行が一覧表示されます。  
   
-|列名|データ型|説明|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|このビューのキー。 要求に関連付けられている一意の数値 ID。|システム内のすべての要求間で一意です。|  
 |session_id|**nvarchar(32)**|このクエリが実行されたセッションに関連付けられている一意の数値 ID。 「 [Sys. dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)」を参照してください。||  
-|status|**nvarchar(32)**|要求の現在の状態。|' Running '、' 中断 '、' Completed '、' Canceled '、' Failed '。|  
+|状態|**nvarchar(32)**|要求の現在の状態。|' Running '、' 中断 '、' Completed '、' Canceled '、' Failed '。|  
 |submit_time|**datetime**|要求が実行のために送信された時刻。|有効な**datetime**が、現在の時刻と start_time の値以下である。|  
 |start_time|**datetime**|要求の実行が開始された時刻。|キューに置かれた要求の場合は NULL です。それ以外の場合は、有効な**datetime**が現在の時刻以下であることを指定します。|  
 |end_compile_time|**datetime**|エンジンが要求のコンパイルを完了した時刻。|まだコンパイルされていない要求の場合は NULL です。それ以外の場合は、有効な**datetime**が start_time 未満で現在の時刻以下であることを指定します。|
@@ -47,7 +47,7 @@ ms.locfileid: "85440809"
 |result_cache_hit|**decimal**|完了したクエリで結果セットキャッシュが使用されたかどうかを詳細に表示します。  </br>適用対象: Azure SQL Data Warehouse| 1 = 結果セットのキャッシュヒット </br> 0 = 結果セットのキャッシュミス </br> 負の値 = 結果セットのキャッシュが使用されなかった理由。  詳細については、「解説」を参照してください。|
 ||||
   
-## <a name="remarks"></a>注釈 
+## <a name="remarks"></a>解説 
  このビューで保持される最大行数の詳細については、「[容量制限](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)」トピックの「メタデータ」セクションを参照してください。
 
  Result_cache_hit は、クエリが結果セットキャッシュを使用するビットマスクです。  この列は[|(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)次の1つまたは複数の値の積:  
@@ -69,7 +69,7 @@ ms.locfileid: "85440809"
 
  VIEW SERVER STATE 権限が必要です。  
   
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
  dm_pdw_exec_requests は、データベース固有のアクセス許可に従ってクエリ結果をフィルター処理しません。 VIEW SERVER STATE 権限を持つログインは、すべてのデータベースの結果のクエリ結果を取得できます。  
   

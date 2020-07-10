@@ -12,15 +12,15 @@ ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2d30ceadf292387900469fe99018ed7e2fdb361d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401645"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196640"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>dm_pdw_nodes_database_encryption_keys (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   データベースの暗号化の状態と、それに関連付けられているデータベース暗号化キーに関する情報を返します。 **dm_pdw_nodes_database_encryption_keys**は、各ノードにこの情報を提供します。 データベース暗号化の詳細については、「 [Transparent Data Encryption (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md)」を参照してください。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "74401645"
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例で`sys.dm_pdw_nodes_database_encryption_keys`は、他のシステムテーブルと結合して、tde で保護されたデータベースの各ノードの暗号化状態を示しています。  
+ 次の例では、 `sys.dm_pdw_nodes_database_encryption_keys` 他のシステムテーブルと結合して、TDE で保護されたデータベースの各ノードの暗号化状態を示しています。  
   
 ```  
 SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   
@@ -59,7 +59,7 @@ JOIN sys.databases AS D
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;データベース暗号化キーを作成する](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [Transact-sql&#41;&#40;データベース暗号化キーの変更](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
