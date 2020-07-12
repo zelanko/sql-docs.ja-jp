@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 418102c7573f27278282a67e3119d07a2c6d1342
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 7ce6c9e6032201f41eae058c9553f9bd61c4f079
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215620"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279576"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo 関数
 
@@ -71,11 +71,11 @@ SQLRETURN SQLGetInfo(
   
  他のすべての種類のデータについては、 *Bufferlength*の値は無視されます。ドライバーは、 \* *InfoType*に応じて、 *INFOVALUEPTR*のサイズが sqlus悪意のあるものであることを前提としています。  
   
-## <a name="return-value"></a>戻り値  
+## <a name="returns"></a>戻り値  
 
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
-## <a name="diagnostics"></a>診断  
+## <a name="diagnostics"></a>Diagnostics  
 
  **SQLGetInfo**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、関連付けられた SQLSTATE 値を取得するには、 *handletype* SQL_HANDLE_DBC および*connectionhandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLGetInfo**によって通常返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
@@ -534,7 +534,7 @@ else
  データソースのデータ型に関する情報を返す  
  [SQLGetTypeInfo 関数](sqlgettypeinfo-function.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
  [ODBC API リファレンス](odbc-api-reference.md)  
  [ODBC ヘッダー ファイル](../install/odbc-header-files.md)

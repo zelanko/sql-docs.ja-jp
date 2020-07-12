@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 086daab53f1863c019e0214b77096a5a00e8b25c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b53d4da153087e222c70711c847e010ca702f31
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764779"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279173"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>availability_groups (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,12 @@ ms.locfileid: "85764779"
 |**basic_features**|**bit**|これが基本的な可用性グループかどうかを指定します。 詳細については、「[基本的な可用性グループ &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)」を参照してください。|  
 |**dtc_support**|**bit**|この可用性グループに対して DTC サポートが有効になっているかどうかを指定します。 **CREATE AVAILABILITY GROUP**の**DTC_SUPPORT**オプションは、この設定を制御します。|  
 |**db_failover**|**bit**|可用性グループがデータベースの正常性状態のフェールオーバーをサポートするかどうかを指定します。 **CREATE AVAILABILITY GROUP**の**DB_FAILOVER**オプションは、この設定を制御します。|  
-|**is_distributed**|**bit**|分散型可用性グループかどうかを指定します。 詳細については、「[Distributed Availability Groups &#40;Always On Availability Groups&#41; (分散型可用性グループ (Always On 可用性グループ))](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)」を参照してください。|  
+|**is_distributed**|**bit**|分散型可用性グループかどうかを指定します。 詳細については、「[Distributed Availability Groups &#40;Always On Availability Groups&#41; (分散型可用性グループ (Always On 可用性グループ))](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)」を参照してください。|
+|**cluster_type**|**tinyint**|0: Windows Server フェールオーバークラスター <br/><br/>1: 外部クラスター (たとえば、Linux Pacemaker)<br/><br/>2: なし|
+|**cluster_type_desc**|**nvarchar(60)**|クラスターの種類の説明テキスト|
+|**required_synchronized_secondaries_to_commit**|**int**| コミットが完了するまで同期済みの状態になる必要があるセカンダリレプリカの数|
+|**sequence_number**|**bigint**|可用性グループの構成シーケンスを識別します。 可用性グループのプライマリレプリカがグループの構成を更新するたびに増分が増加します。|
+|**is_contained**|**bit**|1: ビッグデータクラスターマスターインスタンスが高可用性用に構成されている。 <br/><br/> 0: その他。|
   
 ## <a name="failure-condition-level--values"></a>エラー条件レベルの値  
  次の表では、 **failure_condition_level**列に対して考えられるエラー状態のレベルについて説明します。  
